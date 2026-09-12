@@ -1,0 +1,2690 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-saethwyr",
+  "revision": 3,
+  "updatedAt": "2026-09-12T10:48:26.131Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-saethwyr",
+      "title": "Haus Saethwyr",
+      "motto": "",
+      "description": "Die überlieferte Hauptlinie des Hauses Saethwyr von der Gründerüberlieferung Kynwrig Draigs und Sianwyn Gafyrs bis zur Generation von 1725.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+      "houseProfile": {
+        "rankId": "knight-prince",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "kynwrig-draig",
+        "worldPersonId": "person--haus-draig--kynwrig-draig",
+        "name": "Kynwrig Draig",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-gafyr/kynwrig-draig.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "married",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "sianwyn-gafyr",
+        "worldPersonId": "person--haus-gafyr--sianwyn-gafyr",
+        "name": "Sianwyn Gafyr",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "odyar-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--odyar-saethwyr",
+        "name": "Odyar",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1096",
+        "death": "1143",
+        "portrait": "assets/images/portraits/haus-saethwyr/odyar-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rhianwyn-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--rhianwyn-saethwyr",
+        "name": "Rhianwyn",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1099",
+        "death": "1166",
+        "portrait": "assets/images/portraits/haus-wyrm/rhianwyn-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Saethwyr-Tabelle nennt 1099–1166; die Wyrm-Überlieferung führt dieselbe Weltperson mit 1100–1177.",
+        "extensions": {}
+      },
+      {
+        "id": "morwenna-gwefrydd",
+        "worldPersonId": "person--haus-gwefrydd--morwenna-gwefrydd",
+        "name": "Morwenna Gwefrydd",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1100",
+        "death": "1184",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwefrydd",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "tryffin-draig",
+        "worldPersonId": "person--haus-draig--tryffin-draig",
+        "name": "Tryffin Draig",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1098",
+        "death": "1171",
+        "portrait": "assets/images/portraits/haus-wyrm/tryffin-draig.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "limwris-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--limwris-saethwyr",
+        "name": "Limwris",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1250",
+        "death": "1300",
+        "portrait": "assets/images/portraits/haus-gafyr/limwris-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "myfanwy-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--myfanwy-saethwyr",
+        "name": "Myfanwy",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1252",
+        "death": "1297",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "mairwyn-gafyr",
+        "worldPersonId": "person--haus-gafyr--mairwyn-gafyr",
+        "name": "Mairwyn Gafyr",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1251",
+        "death": "1312",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwastad-wyrm",
+        "worldPersonId": "person--haus-wyrm--gwastad-wyrm",
+        "name": "Gwastad Wyrm",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1249",
+        "death": "1311",
+        "portrait": "assets/images/portraits/haus-wyrm/gwastad-wyrm.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wyrm",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "llawvrodedd-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--llawvrodedd-saethwyr",
+        "name": "Llawvrodedd",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1578",
+        "death": "1644",
+        "portrait": "assets/images/portraits/haus-saethwyr/llawvrodedd-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "owena-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--owena-saethwyr",
+        "name": "Owena",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1583",
+        "death": "1683",
+        "portrait": "assets/images/portraits/haus-saethwyr/owena-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "elinor-grael",
+        "worldPersonId": "person--haus-grael--elinor-grael",
+        "name": "Elinor Grael",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1580",
+        "death": "1679",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-grael",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "bleddyn-draig",
+        "worldPersonId": "person--haus-draig--bleddyn-draig",
+        "name": "Bleddyn Draig",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1582",
+        "death": "1653",
+        "portrait": "assets/images/portraits/haus-saethwyr/bleddyn-draig.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "drudwas-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--drudwas-saethwyr",
+        "name": "Drudwas",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1604",
+        "death": "1674",
+        "portrait": "assets/images/portraits/haus-saethwyr/drudwas-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "ceridwyn-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--ceridwyn-saethwyr",
+        "name": "Ceridwyn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1606",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/ceridwyn-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "evaine-dinefwr",
+        "worldPersonId": "person--haus-dinefwr--evaine-dinefwr",
+        "name": "Evaine Dinefwr",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1607",
+        "death": "1681",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dinefwr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gruffyd-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--gruffyd-saethwyr",
+        "name": "Gruffyd",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1630",
+        "death": "1700",
+        "portrait": "assets/images/portraits/haus-saethwyr/gruffyd-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "venora-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--venora-saethwyr",
+        "name": "Venora",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1632",
+        "death": "1700",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "menna-coedwig",
+        "worldPersonId": "person--haus-coedwig--menna-coedwig",
+        "name": "Menna Coedwig",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1634",
+        "death": "1701",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-coedwig",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dyvynwal-gwyvern",
+        "worldPersonId": "person--haus-gwyvern--dyvynwal-gwyvern",
+        "name": "Dyvynwal Gwyvern",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1628",
+        "death": "1673",
+        "portrait": "assets/images/portraits/haus-saethwyr/dyvynwal-gwyvern.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwyvern",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gallgoid-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--gallgoid-saethwyr",
+        "name": "Gallgoid",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1648",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-saethwyr/gallgoid-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dolena-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--dolena-saethwyr",
+        "name": "Dolena",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1652",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwenllian-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--gwenllian-saethwyr",
+        "name": "Gwenllian",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1650",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-saethwyr/gwenllian-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "padrig-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--padrig-saethwyr",
+        "name": "Padrig",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1654",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-saethwyr/padrig-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "selyse-gwefrydd",
+        "worldPersonId": "person--haus-gwefrydd--selyse-gwefrydd",
+        "name": "Selyse Gwefrydd",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1651",
+        "death": "1705",
+        "portrait": "assets/images/portraits/haus-saethwyr/selyse-gwefrydd.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwefrydd",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "llywellyn-neidr",
+        "worldPersonId": "person--haus-neidr--llywellyn-neidr",
+        "name": "Llywellyn Neidr",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1650",
+        "death": "1734",
+        "portrait": "assets/images/portraits/haus-saethwyr/llywellyn-neidr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-neidr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gethin-draig",
+        "worldPersonId": "person--haus-draig--gethin-draig",
+        "name": "Gethin Draig",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1649",
+        "death": "1719",
+        "portrait": "assets/images/portraits/haus-saethwyr/gethin-draig.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "bricelyn-hwyaden",
+        "worldPersonId": "person--haus-hwyaden--bricelyn-hwyaden",
+        "name": "Bricelyn Hwyaden",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1654",
+        "death": "1700",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-hwyaden",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "huw-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--huw-saethwyr",
+        "name": "Huw",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1666",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/huw-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "wenna-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--wenna-saethwyr",
+        "name": "Wenna",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1666",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-saethwyr/wenna-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwalchgwyn-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--gwalchgwyn-saethwyr",
+        "name": "Gwalchgwyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "elaine-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--elaine-saethwyr",
+        "name": "Elaine",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1675",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-wyrm/elaine-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "breandan-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--breandan-saethwyr",
+        "name": "Breandan",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1670",
+        "death": "1730",
+        "portrait": "assets/images/portraits/haus-arwydd/breandan-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "morwenna-gwyvern",
+        "worldPersonId": "person--haus-gwyvern--morwenna-gwyvern",
+        "name": "Morwenna Gwyvern",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1672",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/morwenna-gwyvern.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwyvern",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "ercwlff-illyswen",
+        "worldPersonId": "person--haus-illyswen--ercwlff-illyswen",
+        "name": "Ercwlff Illyswen",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1661",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-saethwyr/ercwlff-illyswen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-illyswen",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "melyn-arth",
+        "worldPersonId": "person--haus-arth--melyn-arth",
+        "name": "Melyn Arth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1674",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/melyn-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              [
+                "Vollständiger Name",
+                "Melyn Arth"
+              ],
+              [
+                "Haus",
+                "Haus Arth"
+              ],
+              [
+                "Titel / Anrede",
+                "Lady"
+              ],
+              [
+                "Geboren",
+                "1674"
+              ],
+              [
+                "Geburtsort",
+                "Talgarth"
+              ],
+              [
+                "Gestorben",
+                "Lebend"
+              ],
+              [
+                "Alter im Jahr 1740",
+                "66 Jahre"
+              ],
+              [
+                "Geschlecht",
+                "weiblich"
+              ],
+              [
+                "Familienstand",
+                "verheiratet"
+              ],
+              [
+                "Rang / Stand",
+                "Ritter"
+              ],
+              [
+                "Tätigkeit",
+                "Kommandant der Saethwyr"
+              ],
+              [
+                "Wohnsitz",
+                "Gwynthor"
+              ]
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Biografie",
+              "biographyText": "<p>Lady Melyn Saethwyr wurde vor sechsundsechzig Jahren als <strong>Melyn Arth</strong> auf den Klaueninseln geboren. Ihr Vater war <strong>Graf Rhydderch Arth</strong>, Graf der Klaueninseln, ihre Mutter <strong>Talaith Arth, geborene Morfil</strong>, stammte aus der Grauen Weite.</p><br><p>Melyn wuchs in einem Haus auf, das seit Generationen den Norden Cenyrs gegen Überfälle der Nordmänner schützt. Die Arth gelten als rau, kräftig und kriegerisch; viele von ihnen sind große Seefahrer und Kapitäne. Melyn kannte dieses Leben, fühlte sich jedoch nie wirklich zum Meer hingezogen. Ihr Element war der Kampf an Land.&nbsp;Sie wuchs mit vier Geschwistern auf. Ihr ältester Bruder <strong>Run Arth</strong><br>folgte dem Vater später als Graf der Klaueninseln und wurde Vater des berühmten&nbsp;<strong>Sir Parzifal Arth</strong>. Ihre Brüder <strong>Domnall</strong> und <strong>Denawal</strong><br>sowie ihre Schwester <strong>Llewella</strong> sind ebenso wie Run inzwischen verstorben.</p><br><p>Melyn selbst zeigte früh die typische Körperkraft der Arth. Als Teulu erlernte sie den <strong>Drachentanz</strong>, wobei ihr besonders der <strong>Tanz<br>des brüllenden Drachen</strong> lag. Sie kämpft mit dem Schwert und nutzt ihre Stärke kompromisslos, ohne dabei auf Technik zu verzichten.&nbsp;Später wurde ihre Ehe mit <strong>Gwalchgwynn Saethwyr</strong> arrangiert. Ausgangspunkt war eine Verbindung zwischen Arth und Saethwyr, unter anderem im Zusammenhang mit Schiffbau und militärischer Unterstützung für die Klaueninseln.</p><br><p>Aus der politischen Ehe wurde allerdings eine erstaunlich harmonische Partnerschaft. Gwalchgwynn erdet sie. Melyn übernimmt für ihn das Grobe.&nbsp;Gemeinsam bekamen sie zwei Kinder: <strong>Anwyll Saethwyr</strong>, den Herold des Hauses, und <strong>Enora Saethwyr</strong>, die später auf die<br>Silberinsel verheiratet wurde.</p><p><span style=\"font-size: 0.82rem;\">Melyn blieb währenddessen Ritterin.&nbsp;Als sie eines Tages die junge </span><strong style=\"font-size: 0.82rem;\">Heledd Gafyr</strong><span style=\"font-size: 0.82rem;\"> beim Training&nbsp;</span><span style=\"font-size: 0.82rem;\">beobachtete, entschied sie offenbar sehr schnell, sie als Knappin zu nehmen.&nbsp;</span><span style=\"font-size: 0.82rem;\">Heledd wurde dadurch Teil einer Ausbildung, die hart, praktisch und wenig&nbsp;</span><span style=\"font-size: 0.82rem;\">sentimental war.&nbsp;Melyn erwartete Ausdauer, Aufmerksamkeit und die Bereitschaft, auch dann&nbsp;</span><span style=\"font-size: 0.82rem;\">weiterzumachen, wenn es unangenehm wurde. Sie wollte aus Heledd jedoch keine&nbsp;</span><span style=\"font-size: 0.82rem;\">zweite Melyn machen. Sie wollte eine gute Ritterin aus ihr machen.</span></p><br><p>Im <strong>Krieg gegen Ceitheach</strong> kämpften beide später gemeinsam. Während eines Gefechts fing Melyn einen Angriff ab, der Heledd galt, und wurde dabei schwer im Gesicht verletzt.&nbsp;Die markante Narbe trägt sie bis heute. Für Melyn selbst ist die Geschichte weniger heroisch, als andere sie erzählen würden. Der Schlag kam auf Heledd. Also ging sie dazwischen. Mit dem Kopf. Mehr gibt es für sie daran kaum zu<br>erklären.</p><br><p>Über die folgenden Jahrzehnte stieg Melyn innerhalb des Hauses Saethwyr weiter auf. Heute dient sie als <strong>Kommandantin der Saethwyr-Truppen&nbsp;</strong>direkt unter dem Marschall des Hauses.&nbsp;Mit sechsundsechzig Jahren führt sie häufiger von der Burg aus als früher, ist jedoch weiterhin aktiv und alles andere als eine ehemalige Kriegerin.</p><br><p>Auch privat bleibt Melyn eine harte Frau. Sie kann einschüchternd sein, spricht direkt und besitzt wenig Geduld für Gejammer.&nbsp;Ihre Zuneigung zeigt sie auf andere Weise. Sie versorgt Menschen. Sie kocht für Kinder und Enkel, sorgt dafür, dass Verletzungen behandelt werden und dass niemand friert oder hungrig bleibt.</p><br><p>Ein Teller wird hingestellt. <strong>„Da.“ </strong>Mehr braucht es bei Melyn oft nicht.</p>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [
+                {
+                  "title": "Hart",
+                  "detail": "Melyn erwartet Widerstandsfähigkeit von sich und anderen. Schwierigkeiten werden für sie zuerst bewältigt und erst danach beklagt.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Direkt",
+                  "detail": "Sie spricht klar und ohne große Umwege. Höfische Umschreibungen benutzt sie, wenn sie notwendig sind, nicht weil sie Freude daran hätte.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Kämpferisch",
+                  "detail": "Melyn ist auch mit sechsundsechzig im Kern Kriegerin. Kampf ist für sie Handwerk, Disziplin und Verantwortung.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Beschützend",
+                  "detail": "Hat sie Verantwortung für jemanden übernommen, nimmt sie diese sehr ernst. Dass sie sich im Krieg zwischen Heledd und einen Schlag stellte, entsprach für sie schlicht dieser Pflicht.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Fürsorglich",
+                  "detail": "Melyn zeigt Zuneigung durch Versorgung, nicht durch große Worte. Essen, warme Kleidung oder eine kontrollierte Wunde sagen bei ihr häufig mehr als eine Umarmung.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Fordernd",
+                  "detail": "Als Rittermutter und Kommandantin verlangt sie viel. Fehler sind erlaubt. Nachlässigkeit deutlich weniger.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Loyal",
+                  "detail": "Wer einmal zu den Ihren gehört, kann sich auf Melyn verlassen.",
+                  "icon": "✦"
+                }
+              ],
+              "extraSections": [],
+              "historyTitle": "Geschichte & Wirkung",
+              "historyText": "<p>Melyn gehört zu einer älteren Generation von Rittern, die Krieg nicht nur aus Erzählungen kennt.&nbsp;Als Tochter des Grafen der Klaueninseln wuchs sie an einer der härtesten Grenzen Cenyrs auf, kämpfte später gegen Ceitheach und verlor einen großen Teil<br>ihrer Geschwister.</p><p>Dennoch definiert sie sich nicht über Verlust. Sondern über Dienst.&nbsp;Sie besitzt keinen legendären Ruf wie ihr Neffe Parzifal, ist innerhalb<br>Celtigerns Wacht und besonders unter Rittern jedoch hoch angesehen.</p><p>Ihre vielleicht nachhaltigste Wirkung liegt in ihrer Rolle als Rittermutter. Aus einer Entscheidung auf einem Übungsplatz entstand damit über Jahrzehnte eine kleine ritterliche Lehrlinie.</p>",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [
+                "Obwohl sie auf den Klaueninseln aufwuchs, betrachtet Melyn sich selbst nicht als Seefahrerin.",
+                "Sie entschied offenbar sehr spontan, Heledd Gafyr als Knappin zu nehmen. Nachdem sie sie beim Training gesehen hatte, war die Sache für Melyn im Grunde entschieden.",
+                "Auf die Frage, was sie damals in Heledd gesehen habe, könnte ihre Antwort schlicht lauten: „Sie war gut.“",
+                "Melyn betrachtet ihre Gesichtsnarbe nicht als große Heldengeschichte. Heledd dürfte das deutlich anders sehen.",
+                "Ihr Neffe Parzifal Arth mag einer der berühmtesten Ritter seiner Generation sein. Für Melyn bleibt er trotzdem auch der Junge, den sie kannte, bevor irgendjemand Lieder über ihn sang.",
+                "Gwalchgwynn gehört zu den wenigen Menschen, die Melyn zuverlässig bremsen können.",
+                "Umgekehrt übernimmt Melyn zuverlässig jene Situationen, in denen Gwalchgwynn feststellen muss, dass Geduld allein nicht mehr reicht.",
+                "Sie kocht gelegentlich persönlich für Kinder, Enkel und Menschen, die sie als Familie betrachtet.",
+                "Ihr Essen ist schlicht, sättigend und zweckmäßig. Besonders ansprechend sieht es gewöhnlich nicht aus.",
+                "Melyn scheint darin allerdings kein Problem zu erkennen. Es ist warm. Es ist nahr-haft. Sie hat es gekocht. Was genau fehlt noch?",
+                "Ein hingestellter Teller und ein knappes „Da.“ gehören zu ihren zuverlässigsten Formen von Zuneigung.",
+                "Wer sich dafür überschwänglich bedankt, bekommt wahrscheinlich nur: „Iss.“ \tAuch wenn er es nicht mag.",
+                "Melyns letzte Knappin war Gwenna Crafanc, das Mündel Sir Egon Gafyrs.",
+                "Dass die Crafanc ein Kadettenhaus der Arth sind, dürfte Melyns Aufmerksamkeit ur-sprünglich geweckt haben. Geschont hat Gwenna das allerdings nicht.",
+                "Wer Melyn kennt, würde sogar vermuten, dass das genaue Gegenteil der Fall war.",
+                "Melyn bildete damit sowohl Heledd Gafyr als auch Gwenna Crafanc aus – zwei Ritterinnen, die später auf unterschiedliche Weise eng mit Haus Gafyr verbunden wurden.",
+                "Fragt man Melyn, weshalb sie Gwenna als Knappin nahm, dürfte die Antwort ähnlich ausfallen wie einst bei Heledd: „Sie konnte was.“"
+              ],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Verbindungen",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Heledd Gafyr",
+                  "detail": "frühere Knappin",
+                  "image": "https://i.imgur.com/L41oFjx.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Gwenna Crafanc",
+                  "detail": "frühere Knappin",
+                  "image": "https://64.media.tumblr.com/71edaefe89bab1e2d1433558a6b460c7/deb6c6d744f2a5cc-46/s250x400/4692b20898aff86fb937362df0edb32f1800d107.pnj",
+                  "imageFormat": "portrait"
+                }
+              ],
+              "documentsTitle": "Eigentum & Besitz",
+              "documents": [],
+              "footer": "Personenakte · Melyn Arth"
+            }
+          }
+        }
+      },
+      {
+        "id": "derwen-wyrm",
+        "worldPersonId": "person--haus-wyrm--derwen-wyrm",
+        "name": "Derwen Wyrm",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1674",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-wyrm/derwen-wyrm.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wyrm",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "imogen-arwydd",
+        "worldPersonId": "person--haus-arwydd--imogen-arwydd",
+        "name": "Imogen Arwydd",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1675",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arwydd/imogen-arwydd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arwydd",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marmaduke-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--marmaduke-saethwyr",
+        "name": "Marmaduke",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-wyrm/marmaduke-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwawr-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--gwawr-saethwyr",
+        "name": "Gwawr",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/gwawr-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "anwyll-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--anwyll-saethwyr",
+        "name": "Anwyll",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/anwyll-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "enora-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--enora-saethwyr",
+        "name": "Enora",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1703",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/enora-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "jeanne-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--jeanne-saethwyr",
+        "name": "Jeanne",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/jeanne-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "caradog-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--caradog-saethwyr",
+        "name": "Caradog",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/caradog-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "hafren-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--hafren-saethwyr",
+        "name": "Hafren",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/hafren-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "bronwyn-wyrm",
+        "worldPersonId": "person--haus-wyrm--bronwyn-wyrm",
+        "name": "Bronwyn Wyrm",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-wyrm/bronwyn-wyrm.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wyrm",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "sayres-illewod",
+        "worldPersonId": "person--haus-illewod--sayres-illewod",
+        "name": "Sayres Illewod",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/sayres-illewod.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-illewod",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "maelys-ceirwyn",
+        "worldPersonId": "person--haus-ceirwyn--maelys-ceirwyn",
+        "name": "Maelys Ceirwyn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/maelys-ceirwyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ceirwyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "maelron-saith",
+        "worldPersonId": "person--haus-saith--maelron-saith",
+        "name": "Maelron Saith",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1701",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/maelron-saith.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saith",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "uthred-gaeth",
+        "worldPersonId": "person--haus-gaeth--uthred-gaeth",
+        "name": "Uthred Gaeth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/uthred-gaeth.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gaeth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "jenniffer-marwolaeth",
+        "worldPersonId": "person--haus-marwolaeth--jenniffer-marwolaeth",
+        "name": "Jenniffer Marwolaeth",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/jenniffer-marwolaeth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marwolaeth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dillan-dyngwn",
+        "worldPersonId": "person--haus-dyngwn--dillan-dyngwn",
+        "name": "Dillan Dyngwn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/dillan-dyngwn.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dyngwn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "arian-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--arian-saethwyr",
+        "name": "Arian",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/arian-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "ened-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--ened-saethwyr",
+        "name": "Ened",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/ened-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "nudd-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--nudd-saethwyr",
+        "name": "Nudd",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/nudd-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "sian-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--sian-saethwyr",
+        "name": "Sian",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/sian-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cadoc-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--cadoc-saethwyr",
+        "name": "Cadoc",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/cadoc-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "nia-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--nia-saethwyr",
+        "name": "Nia",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/nia-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-kynwrig-sianwyn",
+        "participantIds": [
+          "kynwrig-draig",
+          "sianwyn-gafyr"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-odyar-morwenna",
+        "participantIds": [
+          "odyar-saethwyr",
+          "morwenna-gwefrydd"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rhianwyn-tryffin",
+        "participantIds": [
+          "rhianwyn-saethwyr",
+          "tryffin-draig"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-limwris-mairwyn",
+        "participantIds": [
+          "limwris-saethwyr",
+          "mairwyn-gafyr"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-myfanwy-gwastad",
+        "participantIds": [
+          "myfanwy-saethwyr",
+          "gwastad-wyrm"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-llawvrodedd-elinor",
+        "participantIds": [
+          "llawvrodedd-saethwyr",
+          "elinor-grael"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-owena-bleddyn",
+        "participantIds": [
+          "owena-saethwyr",
+          "bleddyn-draig"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-drudwas-evaine",
+        "participantIds": [
+          "drudwas-saethwyr",
+          "evaine-dinefwr"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gruffyd-menna",
+        "participantIds": [
+          "gruffyd-saethwyr",
+          "menna-coedwig"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1700",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-venora-dyvynwal",
+        "participantIds": [
+          "venora-saethwyr",
+          "dyvynwal-gwyvern"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gallgoid-selyse",
+        "participantIds": [
+          "gallgoid-saethwyr",
+          "selyse-gwefrydd"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-dolena-llywellyn",
+        "participantIds": [
+          "dolena-saethwyr",
+          "llywellyn-neidr"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gwenllian-gethin",
+        "participantIds": [
+          "gwenllian-saethwyr",
+          "gethin-draig"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-padrig-bricelyn",
+        "participantIds": [
+          "padrig-saethwyr",
+          "bricelyn-hwyaden"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-huw-morwenna",
+        "participantIds": [
+          "huw-saethwyr",
+          "morwenna-gwyvern"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-wenna-ercwlff",
+        "participantIds": [
+          "wenna-saethwyr",
+          "ercwlff-illyswen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gwalchgwyn-melyn",
+        "participantIds": [
+          "gwalchgwyn-saethwyr",
+          "melyn-arth"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-elaine-derwen",
+        "participantIds": [
+          "elaine-saethwyr",
+          "derwen-wyrm"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-breandan-imogen",
+        "participantIds": [
+          "breandan-saethwyr",
+          "imogen-arwydd"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-marmaduke-bronwyn",
+        "participantIds": [
+          "marmaduke-saethwyr",
+          "bronwyn-wyrm"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gwawr-sayres",
+        "participantIds": [
+          "gwawr-saethwyr",
+          "sayres-illewod"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-anwyll-maelys",
+        "participantIds": [
+          "anwyll-saethwyr",
+          "maelys-ceirwyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-enora-maelron",
+        "participantIds": [
+          "enora-saethwyr",
+          "maelron-saith"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-jeanne-uthred",
+        "participantIds": [
+          "jeanne-saethwyr",
+          "uthred-gaeth"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-caradog-jenniffer",
+        "participantIds": [
+          "caradog-saethwyr",
+          "jenniffer-marwolaeth"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-hafren-dillan",
+        "participantIds": [
+          "hafren-saethwyr",
+          "dillan-dyngwn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-odyar-saethwyr",
+        "childId": "odyar-saethwyr",
+        "parentIds": [
+          "kynwrig-draig",
+          "sianwyn-gafyr"
+        ],
+        "partnershipId": "marriage-kynwrig-sianwyn",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Die Vorlage führt diese Generation erst nach dem Gründerwappen und einer nicht bezifferten Überlieferungslücke.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhianwyn-saethwyr",
+        "childId": "rhianwyn-saethwyr",
+        "parentIds": [
+          "kynwrig-draig",
+          "sianwyn-gafyr"
+        ],
+        "partnershipId": "marriage-kynwrig-sianwyn",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Die Vorlage führt diese Generation erst nach dem Gründerwappen und einer nicht bezifferten Überlieferungslücke.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-limwris-saethwyr",
+        "childId": "limwris-saethwyr",
+        "parentIds": [
+          "odyar-saethwyr",
+          "morwenna-gwefrydd"
+        ],
+        "partnershipId": "marriage-odyar-morwenna",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Zwischen Odyars Generation und Limwris/Myfanwy fehlen einzelne Abstammungsglieder.",
+        "extensions": {
+          "timeJumpId": "gap-odyar-limwris"
+        }
+      },
+      {
+        "id": "parentage-myfanwy-saethwyr",
+        "childId": "myfanwy-saethwyr",
+        "parentIds": [
+          "odyar-saethwyr",
+          "morwenna-gwefrydd"
+        ],
+        "partnershipId": "marriage-odyar-morwenna",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Zwischen Odyars Generation und Limwris/Myfanwy fehlen einzelne Abstammungsglieder.",
+        "extensions": {
+          "timeJumpId": "gap-odyar-limwris"
+        }
+      },
+      {
+        "id": "parentage-llawvrodedd-saethwyr",
+        "childId": "llawvrodedd-saethwyr",
+        "parentIds": [
+          "limwris-saethwyr",
+          "mairwyn-gafyr"
+        ],
+        "partnershipId": "marriage-limwris-mairwyn",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Die belegte Linie setzt nach mehreren Jahrhunderten wieder ein.",
+        "extensions": {
+          "timeJumpId": "gap-limwris-llawvrodedd"
+        }
+      },
+      {
+        "id": "parentage-owena-saethwyr",
+        "childId": "owena-saethwyr",
+        "parentIds": [
+          "limwris-saethwyr",
+          "mairwyn-gafyr"
+        ],
+        "partnershipId": "marriage-limwris-mairwyn",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Die belegte Linie setzt nach mehreren Jahrhunderten wieder ein.",
+        "extensions": {
+          "timeJumpId": "gap-limwris-llawvrodedd"
+        }
+      },
+      {
+        "id": "parentage-drudwas-saethwyr",
+        "childId": "drudwas-saethwyr",
+        "parentIds": [
+          "llawvrodedd-saethwyr",
+          "elinor-grael"
+        ],
+        "partnershipId": "marriage-llawvrodedd-elinor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-ceridwyn-saethwyr",
+        "childId": "ceridwyn-saethwyr",
+        "parentIds": [
+          "llawvrodedd-saethwyr",
+          "elinor-grael"
+        ],
+        "partnershipId": "marriage-llawvrodedd-elinor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gruffyd-saethwyr",
+        "childId": "gruffyd-saethwyr",
+        "parentIds": [
+          "drudwas-saethwyr",
+          "evaine-dinefwr"
+        ],
+        "partnershipId": "marriage-drudwas-evaine",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-venora-saethwyr",
+        "childId": "venora-saethwyr",
+        "parentIds": [
+          "drudwas-saethwyr",
+          "evaine-dinefwr"
+        ],
+        "partnershipId": "marriage-drudwas-evaine",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gallgoid-saethwyr",
+        "childId": "gallgoid-saethwyr",
+        "parentIds": [
+          "gruffyd-saethwyr",
+          "menna-coedwig"
+        ],
+        "partnershipId": "marriage-gruffyd-menna",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-dolena-saethwyr",
+        "childId": "dolena-saethwyr",
+        "parentIds": [
+          "gruffyd-saethwyr",
+          "menna-coedwig"
+        ],
+        "partnershipId": "marriage-gruffyd-menna",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwenllian-saethwyr",
+        "childId": "gwenllian-saethwyr",
+        "parentIds": [
+          "gruffyd-saethwyr",
+          "menna-coedwig"
+        ],
+        "partnershipId": "marriage-gruffyd-menna",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-padrig-saethwyr",
+        "childId": "padrig-saethwyr",
+        "parentIds": [
+          "gruffyd-saethwyr",
+          "menna-coedwig"
+        ],
+        "partnershipId": "marriage-gruffyd-menna",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-huw-saethwyr",
+        "childId": "huw-saethwyr",
+        "parentIds": [
+          "gallgoid-saethwyr",
+          "selyse-gwefrydd"
+        ],
+        "partnershipId": "marriage-gallgoid-selyse",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-wenna-saethwyr",
+        "childId": "wenna-saethwyr",
+        "parentIds": [
+          "gallgoid-saethwyr",
+          "selyse-gwefrydd"
+        ],
+        "partnershipId": "marriage-gallgoid-selyse",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwalchgwyn-saethwyr",
+        "childId": "gwalchgwyn-saethwyr",
+        "parentIds": [
+          "gallgoid-saethwyr",
+          "selyse-gwefrydd"
+        ],
+        "partnershipId": "marriage-gallgoid-selyse",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-elaine-saethwyr",
+        "childId": "elaine-saethwyr",
+        "parentIds": [
+          "padrig-saethwyr",
+          "bricelyn-hwyaden"
+        ],
+        "partnershipId": "marriage-padrig-bricelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-breandan-saethwyr",
+        "childId": "breandan-saethwyr",
+        "parentIds": [
+          "padrig-saethwyr",
+          "bricelyn-hwyaden"
+        ],
+        "partnershipId": "marriage-padrig-bricelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-marmaduke-saethwyr",
+        "childId": "marmaduke-saethwyr",
+        "parentIds": [
+          "huw-saethwyr",
+          "morwenna-gwyvern"
+        ],
+        "partnershipId": "marriage-huw-morwenna",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwawr-saethwyr",
+        "childId": "gwawr-saethwyr",
+        "parentIds": [
+          "huw-saethwyr",
+          "morwenna-gwyvern"
+        ],
+        "partnershipId": "marriage-huw-morwenna",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-anwyll-saethwyr",
+        "childId": "anwyll-saethwyr",
+        "parentIds": [
+          "gwalchgwyn-saethwyr",
+          "melyn-arth"
+        ],
+        "partnershipId": "marriage-gwalchgwyn-melyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-enora-saethwyr",
+        "childId": "enora-saethwyr",
+        "parentIds": [
+          "gwalchgwyn-saethwyr",
+          "melyn-arth"
+        ],
+        "partnershipId": "marriage-gwalchgwyn-melyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-jeanne-saethwyr",
+        "childId": "jeanne-saethwyr",
+        "parentIds": [
+          "breandan-saethwyr",
+          "imogen-arwydd"
+        ],
+        "partnershipId": "marriage-breandan-imogen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-caradog-saethwyr",
+        "childId": "caradog-saethwyr",
+        "parentIds": [
+          "breandan-saethwyr",
+          "imogen-arwydd"
+        ],
+        "partnershipId": "marriage-breandan-imogen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-hafren-saethwyr",
+        "childId": "hafren-saethwyr",
+        "parentIds": [
+          "breandan-saethwyr",
+          "imogen-arwydd"
+        ],
+        "partnershipId": "marriage-breandan-imogen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-arian-saethwyr",
+        "childId": "arian-saethwyr",
+        "parentIds": [
+          "marmaduke-saethwyr",
+          "bronwyn-wyrm"
+        ],
+        "partnershipId": "marriage-marmaduke-bronwyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-ened-saethwyr",
+        "childId": "ened-saethwyr",
+        "parentIds": [
+          "marmaduke-saethwyr",
+          "bronwyn-wyrm"
+        ],
+        "partnershipId": "marriage-marmaduke-bronwyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-nudd-saethwyr",
+        "childId": "nudd-saethwyr",
+        "parentIds": [
+          "anwyll-saethwyr",
+          "maelys-ceirwyn"
+        ],
+        "partnershipId": "marriage-anwyll-maelys",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-sian-saethwyr",
+        "childId": "sian-saethwyr",
+        "parentIds": [
+          "anwyll-saethwyr",
+          "maelys-ceirwyn"
+        ],
+        "partnershipId": "marriage-anwyll-maelys",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cadoc-saethwyr",
+        "childId": "cadoc-saethwyr",
+        "parentIds": [
+          "caradog-saethwyr",
+          "jenniffer-marwolaeth"
+        ],
+        "partnershipId": "marriage-caradog-jenniffer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-nia-saethwyr",
+        "childId": "nia-saethwyr",
+        "parentIds": [
+          "caradog-saethwyr",
+          "jenniffer-marwolaeth"
+        ],
+        "partnershipId": "marriage-caradog-jenniffer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-saethwyr",
+        "name": "Haus Saethwyr",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+        "status": "active"
+      },
+      {
+        "id": "house-draig",
+        "name": "Haus Draig",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-draig.png",
+        "status": "active"
+      },
+      {
+        "id": "house-gafyr",
+        "name": "Haus Gafyr",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+        "status": "active"
+      },
+      {
+        "id": "house-gwefrydd",
+        "name": "Haus Gwefrydd",
+        "motto": "",
+        "emblem": "assets/images/houses/Artus Streben/haus-gwefrydd.png",
+        "status": "active"
+      },
+      {
+        "id": "house-wyrm",
+        "name": "Haus Wyrm",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-wyrm.png",
+        "status": "active"
+      },
+      {
+        "id": "house-grael",
+        "name": "Haus Grael",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-dinefwr",
+        "name": "Haus Dinefwr",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-coedwig",
+        "name": "Haus Coedwig",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/Achatsee/haus-coedwig.png",
+        "status": "active"
+      },
+      {
+        "id": "house-gwyvern",
+        "name": "Haus Gwyvern",
+        "motto": "",
+        "emblem": "assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png",
+        "status": "active"
+      },
+      {
+        "id": "house-neidr",
+        "name": "Haus Neidr",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-hwyaden",
+        "name": "Haus Hwyaden",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-illyswen",
+        "name": "Haus Illyswen",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-arth",
+        "name": "Haus Arth",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-arth.png",
+        "status": "active"
+      },
+      {
+        "id": "house-arwydd",
+        "name": "Haus Arwydd",
+        "motto": "",
+        "emblem": "assets/images/houses/Rhonwens Tränen/haus-arwydd.png",
+        "status": "active"
+      },
+      {
+        "id": "house-illewod",
+        "name": "Haus Illewod",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-ceirwyn",
+        "name": "Haus Ceirwyn",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-saith",
+        "name": "Haus Saith",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-gaeth",
+        "name": "Haus Gaeth",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-marwolaeth",
+        "name": "Haus Marwolaeth",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-dyngwn",
+        "name": "Haus Dyngwn",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-wyrm-rhianwyn",
+        "name": "Haus Wyrm",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-rhianwyn-tryffin",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-wyrm",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-wyrm.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-wyrm",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-wyrm-myfanwy",
+        "name": "Haus Wyrm",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-myfanwy-gwastad",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-wyrm",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-wyrm.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-wyrm",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-draig-owena",
+        "name": "Haus Draig",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-owena-bleddyn",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-draig",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-draig.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-draig",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-gwyvern-venora",
+        "name": "Haus Gwyvern",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-venora-dyvynwal",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-gwyvern",
+        "emblem": "assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-gwyvern",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-neidr-dolena",
+        "name": "Haus Neidr",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-dolena-llywellyn",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-neidr",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-neidr",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-draig-gwenllian",
+        "name": "Haus Draig",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-gwenllian-gethin",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-draig",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-draig.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-draig",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-illyswen-wenna",
+        "name": "Haus Illyswen",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-wenna-ercwlff",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-illyswen",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-illyswen",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-wyrm-elaine",
+        "name": "Haus Wyrm",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-elaine-derwen",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-wyrm",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-wyrm.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-wyrm",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-illewod-gwawr",
+        "name": "Haus Illewod",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-gwawr-sayres",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-illewod",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-illewod",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-saith-enora",
+        "name": "Haus Saith",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-enora-maelron",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-saith",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-saith",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-gaeth-jeanne",
+        "name": "Haus Gaeth",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-jeanne-uthred",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-gaeth",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-gaeth",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-dyngwn-hafren",
+        "name": "Haus Dyngwn",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-hafren-dillan",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-dyngwn",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-dyngwn",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-odyar-limwris",
+        "parentPartnershipId": "marriage-odyar-morwenna",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "limwris-saethwyr",
+          "myfanwy-saethwyr"
+        ],
+        "years": 66,
+        "fromYear": "1184",
+        "toYear": "1250",
+        "label": "Die belegte Linie setzt 1250 wieder ein",
+        "notes": "Die dazwischenliegenden Generationen werden in der Vorlage nicht einzeln genannt.",
+        "extensions": {}
+      },
+      {
+        "id": "gap-limwris-llawvrodedd",
+        "parentPartnershipId": "marriage-limwris-mairwyn",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "llawvrodedd-saethwyr",
+          "owena-saethwyr"
+        ],
+        "years": 266,
+        "fromYear": "1312",
+        "toYear": "1578",
+        "label": "Die belegte Linie setzt im 16. Jahrhundert wieder ein",
+        "notes": "Die dazwischenliegenden Generationen werden in der Vorlage nicht einzeln genannt.",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-kynwrig-sianwyn",
+      "houseId": "house-saethwyr",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.8,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": true,
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1096",
+        "label": "Die erste namentlich belegte Generation beginnt mit Odyar und Rhianwyn"
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "kynwrig-draig",
+      "orientation": "vertical",
+      "ancestorDepth": 12,
+      "descendantDepth": 12,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "sourceNote": "Beziehungen, Lebensdaten und Portraitzuordnungen nach der bereitgestellten Saethwyr-Tabelle und Stammbaumgrafik. Bereits in Arwydd, Gafyr oder Wyrm geführte Personen verwenden dieselben Weltpersonen-IDs und lokalen Portraitdateien.",
+      "blankFamily": false,
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Saethwyr O'Gwynthor",
+        "housePage": true,
+        "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Saethwyr/assets/ritter.png",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "description": "Haus Saethwyr ist ein Ritterfürstenhaus aus Gwynthor und ein Kadettenzweig der Draigs. Flotte, Seekampf und Küstenschutz bestimmen seine Stellung in Celtigerns Wacht.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Saethwyr O'Gwynthor"
+          ],
+          [
+            "Rang",
+            "Ritterfürst"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Huw Saethwyr"
+          ],
+          [
+            "Erbe",
+            "Marmaduke Saethwyr"
+          ],
+          [
+            "Lehnsherr",
+            "Graf Galahad Draig"
+          ],
+          [
+            "Ursprung",
+            "Kynwrig Draig, der Seefahrer"
+          ],
+          [
+            "Schutzpatronin",
+            "Die Dame der See, Die Seemaid"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Ein Haus im Zeichen der Seefahrt",
+          "biographyText": "Haus Saethwyr ist ein Ritterfürstenhaus aus Gwynthor und ein Kadettenzweig der Draigs. Flotte, Seekampf und Küstenschutz bestimmen seine Stellung in Celtigerns Wacht.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Ein Schiff gab dem Haus seinen Namen",
+          "historyText": "Kynwrig Draig, der Seefahrer, besiegte mit einer zahlenmäßig unterlegenen Mannschaft die Nordmänner. Dafür erhielt er den Ritterfürstentitel und das Recht auf ein eigenes Haus. Er benannte es nach seinem Schiff Saethwyr und nahm sich den Entdecker Sir Melwas zum Vorbild.",
+          "worksTitle": "Hausgeschichte",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Mut, Entschlossenheit und Seefahrertreue prägen das Haus. Werften, Fischerei und Küstenhandel tragen seinen Wohlstand. Die Dame der See und die Seemaid sind seine besonderen Patrone. Huw führt das Haus seit 1720; Marmaduke steht zuerst in der Erbfolge."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [
+            {
+              "name": "Haus Draig",
+              "detail": "Stammhaus und Lehnsherr",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+              "title": "Haus Saethwyr O'Gwynthor · vollständige Hausseite",
+              "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-saethwyr"
+            }
+          ],
+          "footer": ""
+        }
+      },
+      "sourceRevision": 4
+    }
+  }
+}

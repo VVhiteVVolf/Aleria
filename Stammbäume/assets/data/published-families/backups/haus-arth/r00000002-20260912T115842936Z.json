@@ -1,0 +1,5088 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-arth",
+  "revision": 2,
+  "updatedAt": "2026-09-12T11:58:42.936Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-arth",
+      "title": "Haus Arth O'Talgarth",
+      "motto": "Dros y rheng!",
+      "description": "Das volksnahe Grafengeschlecht von Talgarth auf den nördlichen Klaueninseln, geprägt durch Rittertum, Küstenverteidigung und Seefahrt.",
+      "emblem": "assets/images/houses/Klaueninsel/haus-arth.png",
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "caradoc-arth",
+        "worldPersonId": "person--haus-arth--caradoc-arth",
+        "name": "Caradoc Arth",
+        "title": "Stammvater des Hauses Arth",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwenhwyfar-dreigiau",
+        "worldPersonId": "person--haus-dreigiau--gwenhwyfar-dreigiau",
+        "name": "Gwenhwyfar Dreigiau",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/gwenhwyfar-dreigiau.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dreigiau",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rhun-arth",
+        "worldPersonId": "person--haus-arth--rhun-arth",
+        "name": "Rhun Arth",
+        "title": "Ehemaliger Graf von Talgarth",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/rhun-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rhodhri-arth",
+        "worldPersonId": "person--haus-arth--rhodhri-arth",
+        "name": "Rhodhri Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/rhodhri-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "hewet-arth",
+        "worldPersonId": "person--haus-arth--hewet-arth",
+        "name": "Hewet Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/hewet-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rhoslyn-ancient-aderyn",
+        "worldPersonId": "person--haus-aderyn--rhoslyn-ancient-aderyn",
+        "name": "Rhoslyn Aderyn",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aderyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dearbhla-follmhar",
+        "worldPersonId": "person--haus-follmhar--dearbhla-follmhar",
+        "name": "Dearbhla Follmhar",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-follmhar",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "teaganach-follmhar",
+        "worldPersonId": "person--haus-follmhar--teaganach-follmhar",
+        "name": "Teaganach Follmhar",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-follmhar",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "afanen-arth",
+        "worldPersonId": "person--haus-arth--afanen-arth",
+        "name": "Afanen Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cynwrig-ancient-pysgod",
+        "worldPersonId": "person--haus-pysgod--cynwrig-ancient-pysgod",
+        "name": "Cynwrig Pysgod",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-pysgod/cynwrig-ancient-pysgod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pysgod",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Arth-Tabelle nennt ihn Griflet; die Pysgod-Oberhauptfolge und Gegenakte identifizieren dieselbe Weltperson als Cynwrig.",
+        "extensions": {}
+      },
+      {
+        "id": "cadfael-ancient-arth",
+        "worldPersonId": "person--haus-arth--cadfael-ancient-arth",
+        "name": "Cadfael Arth",
+        "title": "Ehemaliger Graf von Talgarth",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/cadfael-ancient-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "oideach-diuid",
+        "worldPersonId": "person--haus-diuid--oideach-diuid",
+        "name": "Oideach Diuid",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-diuid",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "denawal-ancient-arth",
+        "worldPersonId": "person--haus-arth--denawal-ancient-arth",
+        "name": "Denawal Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/denawal-ancient-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "beileag-lockart",
+        "worldPersonId": "person--haus-lockart--beileag-lockart",
+        "name": "Beileag Lockart",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-lockart",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "lamorak-arth",
+        "worldPersonId": "person--haus-arth--lamorak-arth",
+        "name": "Lamorak Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/lamorak-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "mared-unknown",
+        "worldPersonId": "person--haus-unbekannt-mared--mared-unknown",
+        "name": "Mared",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-mared",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "tarrant-ancient-arth",
+        "worldPersonId": "person--haus-arth--tarrant-ancient-arth",
+        "name": "Tarrant Arth",
+        "title": "Ehemaliger Graf von Talgarth",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/tarrant-ancient-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "hadhbh-diuid",
+        "worldPersonId": "person--haus-diuid--hadhbh-diuid",
+        "name": "Hadhbh Diuid",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-diuid",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parzifal-ancient-arth",
+        "worldPersonId": "person--haus-arth--parzifal-ancient-arth",
+        "name": "Parzifal Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/parzifal-ancient-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "banbhin-haigh",
+        "worldPersonId": "person--haus-haigh--banbhin-haigh",
+        "name": "Banbhin Haigh",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-haigh",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "artgal-arth",
+        "worldPersonId": "person--haus-arth--artgal-arth",
+        "name": "Artgal Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/artgal-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "amdarch-unknown",
+        "worldPersonId": "person--haus-unbekannt-amdarch--amdarch-unknown",
+        "name": "Amdarch",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-amdarch",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "lynfa-ancient-arth",
+        "worldPersonId": "person--haus-arth--lynfa-ancient-arth",
+        "name": "Lynfa Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "faolan-armhair",
+        "worldPersonId": "person--haus-armhair--faolan-armhair",
+        "name": "Faolan Ardmhair",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-armhair",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "caradoc-line-arth",
+        "worldPersonId": "person--haus-arth--caradoc-line-arth",
+        "name": "Caradoc Arth",
+        "title": "Ehemaliger Graf von Talgarth",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/caradoc-line-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "glaodhach-lockart",
+        "worldPersonId": "person--haus-lockart--glaodhach-lockart",
+        "name": "Glaodhach Lockart",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-lockart",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "galeshin-ancient-arth",
+        "worldPersonId": "person--haus-arth--galeshin-ancient-arth",
+        "name": "Galeshin Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/galeshin-ancient-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "arianhrod-unknown",
+        "worldPersonId": "person--haus-unbekannt-arianhrod--arianhrod-unknown",
+        "name": "Arianhrod",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-arianhrod",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "traharyan-arth",
+        "worldPersonId": "person--haus-arth--traharyan-arth",
+        "name": "Traharyan Arth",
+        "title": "Graf von Talgarth 1620–1645",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1592",
+        "death": "1645",
+        "portrait": "assets/images/portraits/haus-pysgod/traharyan-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "1620 ist in der Oberhauptgalerie der Beginn seiner Amtszeit; die Personentabelle und Pysgod-Gegenakte nennen 1592 als Geburtsjahr.",
+        "extensions": {}
+      },
+      {
+        "id": "aranrhod-pysgod",
+        "worldPersonId": "person--haus-pysgod--aranrhod-pysgod",
+        "name": "Aranrhod Pysgod",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1593",
+        "death": "1669",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pysgod",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "trahaern-arth",
+        "worldPersonId": "person--haus-arth--trahaern-arth",
+        "name": "Trahaern Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1594",
+        "death": "1669",
+        "portrait": "assets/images/portraits/haus-arth/trahaern-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "ceridwen-pawen",
+        "worldPersonId": "person--haus-pawen--ceridwen-pawen",
+        "name": "Ceridwen Pawen",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1595",
+        "death": "1662",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwalchgwyn-arth",
+        "worldPersonId": "person--haus-arth--gwalchgwyn-arth",
+        "name": "Gwalchgwyn Arth",
+        "title": "Graf von Talgarth 1645–1660",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1612",
+        "death": "1660",
+        "portrait": "assets/images/portraits/haus-arth/gwalchgwyn-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "arglwyddes-aderyn",
+        "worldPersonId": "person--haus-aderyn--arglwyddes-aderyn",
+        "name": "Arglwyddes Aderyn",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1614",
+        "death": "1666",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aderyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "isobel-1614-arth",
+        "worldPersonId": "person--haus-arth--isobel-1614-arth",
+        "name": "Isobel Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1614",
+        "death": "1658",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "sadwrn-pawen",
+        "worldPersonId": "person--haus-pawen--sadwrn-pawen",
+        "name": "Sadwrn Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1614",
+        "death": "1670",
+        "portrait": "assets/images/portraits/haus-arth/sadwrn-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "wenonah-arth",
+        "worldPersonId": "person--haus-arth--wenonah-arth",
+        "name": "Wenonah Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1615",
+        "death": "1647",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cynwrig-crafanc",
+        "worldPersonId": "person--haus-crafanc--cynwrig-crafanc",
+        "name": "Cynwrig Crafanc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1617",
+        "death": "1677",
+        "portrait": "assets/images/portraits/haus-arth/cynwrig-crafanc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-crafanc",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dyngannon-arth",
+        "worldPersonId": "person--haus-arth--dyngannon-arth",
+        "name": "Dyngannon Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1620",
+        "death": "1670",
+        "portrait": "assets/images/portraits/haus-arth/dyngannon-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rhianedd-dienyddiwr",
+        "worldPersonId": "person--haus-dienyddiwr--rhianedd-dienyddiwr",
+        "name": "Rhianedd Dienyddiwr",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1621",
+        "death": "1669",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dienyddiwr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "haul-arth",
+        "worldPersonId": "person--haus-arth--haul-arth",
+        "name": "Haul Arth",
+        "title": "Graf von Talgarth 1660–1681",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1631",
+        "death": "1681",
+        "portrait": "assets/images/portraits/haus-arth/haul-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "fionnghuala-nuadat",
+        "worldPersonId": "person--haus-nuadat--fionnghuala-nuadat",
+        "name": "Fionnghuala Nuadat",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1632",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/fionnghuala-nuadat.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-nuadat",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "ffraid-arth",
+        "worldPersonId": "person--haus-arth--ffraid-arth",
+        "name": "Ffraid Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1633",
+        "death": "1688",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gareth-dianc",
+        "worldPersonId": "person--haus-dianc--gareth-dianc",
+        "name": "Gareth Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1635",
+        "death": "1700",
+        "portrait": "assets/images/portraits/haus-arth/gareth-dianc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "galahad-arth",
+        "worldPersonId": "person--haus-arth--galahad-arth",
+        "name": "Galahad Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1642",
+        "death": "1708",
+        "portrait": "assets/images/portraits/haus-arth/galahad-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dafyddwen-brithyll",
+        "worldPersonId": "person--haus-brithyll--dafyddwen-brithyll",
+        "name": "Dafyddwen Brithyll",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1642",
+        "death": "1719",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-brithyll",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "birth",
+            "death",
+            "status",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "heddwen-arth",
+        "worldPersonId": "person--haus-arth--heddwen-arth",
+        "name": "Heddwen Arth",
+        "title": "Wegverheiratet an Haus Morthwyll",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1642",
+        "death": "1701",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "sayres-morthwyll",
+        "worldPersonId": "person--haus-morthwyll--sayres-morthwyll",
+        "name": "Sayres Morthwyll",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1639",
+        "death": "1706",
+        "portrait": "assets/images/portraits/haus-arth/sayres-morthwyll.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morthwyll",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "madoc-arth",
+        "worldPersonId": "person--haus-arth--madoc-arth",
+        "name": "Madoc Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1643",
+        "death": "1722",
+        "portrait": "assets/images/portraits/haus-draig/madoc-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "hafwen-draig",
+        "worldPersonId": "person--haus-draig--hafwen-draig",
+        "name": "Hafwen Draig",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1644",
+        "death": "1708",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rhydderch-arth",
+        "worldPersonId": "person--haus-arth--rhydderch-arth",
+        "name": "Rhydderch Arth",
+        "title": "Graf von Talgarth 1681–1698",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1651",
+        "death": "1698",
+        "portrait": "assets/images/portraits/haus-arth/rhydderch-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "talaith-morfil",
+        "worldPersonId": "person--haus-morfil--talaith-morfil",
+        "name": "Talaith Morfil",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1651",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/talaith-morfil.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morfil",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rhys-arth",
+        "worldPersonId": "person--haus-arth--rhys-arth",
+        "name": "Rhys Arth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1653",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/rhys-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "blawd-blodyn",
+        "worldPersonId": "person--haus-blodyn--blawd-blodyn",
+        "name": "Blawd Blodyn",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1652",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-blodyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Quelle druckt unmöglich 1952; anhand der Generation wurde der offensichtliche Jahrhundertfehler zu 1652 berichtigt.",
+        "extensions": {}
+      },
+      {
+        "id": "rian-arth",
+        "worldPersonId": "person--haus-arth--rian-arth",
+        "name": "Rian Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1654",
+        "death": "1712",
+        "portrait": "assets/images/portraits/haus-arth/rian-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "sath-cwningod",
+        "worldPersonId": "person--haus-cwningod--sath-cwningod",
+        "name": "Sath Cwningod",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1652",
+        "death": "1713",
+        "portrait": "assets/images/portraits/haus-arth/sath-cwningod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rhynnon-arth",
+        "worldPersonId": "person--haus-arth--rhynnon-arth",
+        "name": "Rhynnon Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1655",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-arth/rhynnon-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "kyndra-crafanc",
+        "worldPersonId": "person--haus-crafanc--kyndra-crafanc",
+        "name": "Kyndra Crafanc",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1655",
+        "death": "1701",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-crafanc",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Quelle druckt unmöglich 1955; die Elterngeneration und das Todesjahr 1701 belegen 1655.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "birth",
+            "death",
+            "status",
+            "houseId"
+          ]
+        }
+      },
+      {
+        "id": "tarian-arth",
+        "worldPersonId": "person--haus-arth--tarian-arth",
+        "name": "Tarian Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1660",
+        "death": "1710",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "brac-pawen",
+        "worldPersonId": "person--haus-pawen--brac-pawen",
+        "name": "Brac Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1660",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/brac-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "afanen-1660-arth",
+        "worldPersonId": "person--haus-arth--afanen-1660-arth",
+        "name": "Afanen Arth",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1660",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "elisud-crafanc",
+        "worldPersonId": "person--haus-crafanc--elisud-crafanc",
+        "name": "Elisud Crafanc",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1661",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/elisud-crafanc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-crafanc",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "ffodor-arth",
+        "worldPersonId": "person--haus-arth--ffodor-arth",
+        "name": "Ffodor Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1662",
+        "death": "1723",
+        "portrait": "assets/images/portraits/haus-arth/ffodor-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "ffionwen-penderyn",
+        "worldPersonId": "person--haus-penderyn--ffionwen-penderyn",
+        "name": "Ffionwen Penderyn",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1662",
+        "death": "1733",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-penderyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "birth",
+            "death",
+            "status",
+            "houseId"
+          ]
+        }
+      },
+      {
+        "id": "run-arth",
+        "worldPersonId": "person--haus-arth--run-arth",
+        "name": "Run Arth",
+        "title": "Graf von Talgarth 1698–1720",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1669",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-arth/run-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "chartPartnerMirrorForPartnershipIds": [
+            "marriage-run-morfadd"
+          ]
+        }
+      },
+      {
+        "id": "morfadd-arth",
+        "worldPersonId": "person--haus-arth--morfadd-arth",
+        "name": "Morfadd Arth",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/morfadd-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "chartRepeatForPartnershipIds": [
+            "marriage-run-morfadd"
+          ]
+        }
+      },
+      {
+        "id": "domnall-arth",
+        "worldPersonId": "person--haus-arth--domnall-arth",
+        "name": "Domnall Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1672",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-arth/domnall-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwenfrewi-pawen",
+        "worldPersonId": "person--haus-pawen--gwenfrewi-pawen",
+        "name": "Gwenfrewi Pawen",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1678",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-arth/gwenfrewi-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "denawal-1680-arth",
+        "worldPersonId": "person--haus-arth--denawal-1680-arth",
+        "name": "Denawal Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1680",
+        "death": "1710",
+        "portrait": "assets/images/portraits/haus-arth/denawal-1680-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dolena-trachwyll",
+        "worldPersonId": "person--haus-trachwyll-talfronwyn--dolena-trachwyll",
+        "name": "Dolena Trachwyll",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1685",
+        "death": "1710",
+        "portrait": "assets/images/portraits/haus-arth/dolena-trachwyll.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-trachwyll-talfronwyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "llewella-arth",
+        "worldPersonId": "person--haus-arth--llewella-arth",
+        "name": "Llewella Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1675",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-pysgod/llewella-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gingalain-1671-pysgod",
+        "worldPersonId": "person--haus-pysgod--gingalain-1671-pysgod",
+        "name": "Gingalain Pysgod",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1671",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-pysgod/gingalain-1671-pysgod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pysgod",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "melyn-arth",
+        "worldPersonId": "person--haus-arth--melyn-arth",
+        "name": "Melyn Arth",
+        "title": "Lady",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1674",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/melyn-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Geschlecht, Ehe und Nachkommen folgen der bereits ausgearbeiteten Saethwyr-Gegenakte.",
+        "extensions": {
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              [
+                "Vollständiger Name",
+                "Melyn Arth"
+              ],
+              [
+                "Haus",
+                "Haus Arth"
+              ],
+              [
+                "Titel / Anrede",
+                "Lady"
+              ],
+              [
+                "Geboren",
+                "1674"
+              ],
+              [
+                "Geburtsort",
+                "Talgarth"
+              ],
+              [
+                "Gestorben",
+                "Lebend"
+              ],
+              [
+                "Alter im Jahr 1740",
+                "66 Jahre"
+              ],
+              [
+                "Geschlecht",
+                "Weiblich"
+              ],
+              [
+                "Familienstand",
+                "verheiratet"
+              ],
+              [
+                "Rang / Stand",
+                "Ritter"
+              ],
+              [
+                "Tätigkeit",
+                "Kommandantin der Saethwyr"
+              ],
+              [
+                "Wohnsitz",
+                "Gwynthor"
+              ]
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Biografie",
+              "biographyText": "<p>Lady Melyn Saethwyr wurde vor sechsundsechzig Jahren als <strong>Melyn Arth</strong> auf den Klaueninseln geboren. Ihr Vater war <strong>Graf Rhydderch Arth</strong>, Graf der Klaueninseln, ihre Mutter <strong>Talaith Arth, geborene Morfil</strong>, stammte aus der Grauen Weite.</p><p>Melyn wuchs in einem Haus auf, das seit Generationen den Norden Cenyrs gegen Überfälle der Nordmänner schützt. Die Arth gelten als rau, kräftig und kriegerisch; viele von ihnen sind große Seefahrer und Kapitäne. Melyn kannte dieses Leben, fühlte sich jedoch nie wirklich zum Meer hingezogen. Ihr Element war der Kampf an Land. Sie wuchs mit vier Geschwistern auf. Ihr ältester Bruder <strong>Run Arth</strong> folgte dem Vater später als Graf der Klaueninseln und wurde Vater des berühmten <strong>Sir Parzifal Arth</strong>. Ihre Brüder <strong>Domnall</strong> und <strong>Denawal</strong> sowie ihre Schwester <strong>Llewella</strong> sind ebenso wie Run inzwischen verstorben.</p><p>Melyn selbst zeigte früh die typische Körperkraft der Arth. Als Teulu erlernte sie den <strong>Drachentanz</strong>, wobei ihr besonders der <strong>Tanz des brüllenden Drachen</strong> lag. Sie kämpft mit dem Schwert und nutzt ihre Stärke kompromisslos, ohne dabei auf Technik zu verzichten. Später wurde ihre Ehe mit <strong>Gwalchgwynn Saethwyr</strong> arrangiert. Ausgangspunkt war eine Verbindung zwischen Arth und Saethwyr, unter anderem im Zusammenhang mit Schiffbau und militärischer Unterstützung für die Klaueninseln.</p><p>Aus der politischen Ehe wurde allerdings eine erstaunlich harmonische Partnerschaft. Gwalchgwynn erdet sie. Melyn übernimmt für ihn das Grobe. Gemeinsam bekamen sie zwei Kinder: <strong>Anwyll Saethwyr</strong>, den Herold des Hauses, und <strong>Enora Saethwyr</strong>, die später auf die Silberinsel verheiratet wurde.</p><p>Melyn blieb währenddessen Ritterin. Als sie eines Tages die junge <strong>Heledd Gafyr</strong> beim Training beobachtete, entschied sie offenbar sehr schnell, sie als Knappin zu nehmen. Heledd wurde dadurch Teil einer Ausbildung, die hart, praktisch und wenig sentimental war. Melyn erwartete Ausdauer, Aufmerksamkeit und die Bereitschaft, auch dann weiterzumachen, wenn es unangenehm wurde. Sie wollte aus Heledd jedoch keine zweite Melyn machen. Sie wollte eine gute Ritterin aus ihr machen.</p><p>Im <strong>Krieg gegen Ceitheach</strong> kämpften beide später gemeinsam. Während eines Gefechts fing Melyn einen Angriff ab, der Heledd galt, und wurde dabei schwer im Gesicht verletzt. Die markante Narbe trägt sie bis heute. Für Melyn selbst ist die Geschichte weniger heroisch, als andere sie erzählen würden. Der Schlag kam auf Heledd. Also ging sie dazwischen. Mit dem Kopf. Mehr gibt es für sie daran kaum zu erklären.</p><p>Über die folgenden Jahrzehnte stieg Melyn innerhalb des Hauses Saethwyr weiter auf. Heute dient sie als <strong>Kommandantin der Saethwyr-Truppen </strong>direkt unter dem Marschall des Hauses. Mit sechsundsechzig Jahren führt sie häufiger von der Burg aus als früher, ist jedoch weiterhin aktiv und alles andere als eine ehemalige Kriegerin.</p><p>Auch privat bleibt Melyn eine harte Frau. Sie kann einschüchternd sein, spricht direkt und besitzt wenig Geduld für Gejammer. Ihre Zuneigung zeigt sie auf andere Weise. Sie versorgt Menschen. Sie kocht für Kinder und Enkel, sorgt dafür, dass Verletzungen behandelt werden und dass niemand friert oder hungrig bleibt.</p><p>Ein Teller wird hingestellt. <strong>„Da.“ </strong>Mehr braucht es bei Melyn oft nicht.</p>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [
+                {
+                  "title": "Hart",
+                  "detail": "Melyn erwartet Widerstandsfähigkeit von sich und anderen. Schwierigkeiten werden für sie zuerst bewältigt und erst danach beklagt.",
+                  "icon": "../IconOrdner/Traits%20Icon/Stubborn.png"
+                },
+                {
+                  "title": "Direkt",
+                  "detail": "Sie spricht klar und ohne große Umwege. Höfische Umschreibungen benutzt sie, wenn sie notwendig sind, nicht weil sie Freude daran hätte.",
+                  "icon": "../IconOrdner/Traits%20Icon/Honest.png"
+                },
+                {
+                  "title": "Kämpferisch",
+                  "detail": "Melyn ist auch mit sechsundsechzig im Kern Kriegerin. Kampf ist für sie Handwerk, Disziplin und Verantwortung.",
+                  "icon": "../IconOrdner/Traits%20Icon/Duelist.png"
+                },
+                {
+                  "title": "Beschützend",
+                  "detail": "Hat sie Verantwortung für jemanden übernommen, nimmt sie diese sehr ernst. Dass sie sich im Krieg zwischen Heledd und einen Schlag stellte, entsprach für sie schlicht dieser Pflicht.",
+                  "icon": "../IconOrdner/Traits%20Icon/Defensive_leader.png"
+                },
+                {
+                  "title": "Fürsorglich",
+                  "detail": "Melyn zeigt Zuneigung durch Versorgung, nicht durch große Worte. Essen, warme Kleidung oder eine kontrollierte Wunde sagen bei ihr häufig mehr als eine Umarmung.",
+                  "icon": "../IconOrdner/Traits%20Icon/Kind.png"
+                },
+                {
+                  "title": "Fordernd",
+                  "detail": "Als Rittermutter und Kommandantin verlangt sie viel. Fehler sind erlaubt. Nachlässigkeit deutlich weniger.",
+                  "icon": "../IconOrdner/Traits%20Icon/Diligent.png"
+                },
+                {
+                  "title": "Loyal",
+                  "detail": "Wer einmal zu den Ihren gehört, kann sich auf Melyn verlassen.",
+                  "icon": "../IconOrdner/Traits%20Icon/Family_focus.png"
+                }
+              ],
+              "extraSections": [],
+              "historyTitle": "Geschichte & Wirkung",
+              "historyText": "<p>Melyn gehört zu einer älteren Generation von Rittern, die Krieg nicht nur aus Erzählungen kennt. Als Tochter des Grafen der Klaueninseln wuchs sie an einer der härtesten Grenzen Cenyrs auf, kämpfte später gegen Ceitheach und verlor einen großen Teil ihrer Geschwister.</p><p>Dennoch definiert sie sich nicht über Verlust. Sondern über Dienst. Sie besitzt keinen legendären Ruf wie ihr Neffe Parzifal, ist innerhalb Celtigerns Wacht und besonders unter Rittern jedoch hoch angesehen.</p><p>Ihre vielleicht nachhaltigste Wirkung liegt in ihrer Rolle als Rittermutter. Aus einer Entscheidung auf einem Übungsplatz entstand damit über Jahrzehnte eine kleine ritterliche Lehrlinie.</p>",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [
+                "Obwohl sie auf den Klaueninseln aufwuchs, betrachtet Melyn sich selbst nicht als Seefahrerin.",
+                "Sie entschied offenbar sehr spontan, Heledd Gafyr als Knappin zu nehmen. Nachdem sie sie beim Training gesehen hatte, war die Sache für Melyn im Grunde entschieden.",
+                "Auf die Frage, was sie damals in Heledd gesehen habe, könnte ihre Antwort schlicht lauten: „Sie war gut.“",
+                "Melyn betrachtet ihre Gesichtsnarbe nicht als große Heldengeschichte. Heledd dürfte das deutlich anders sehen.",
+                "Ihr Neffe Parzifal Arth mag einer der berühmtesten Ritter seiner Generation sein. Für Melyn bleibt er trotzdem auch der Junge, den sie kannte, bevor irgendjemand Lieder über ihn sang.",
+                "Gwalchgwynn gehört zu den wenigen Menschen, die Melyn zuverlässig bremsen können.",
+                "Umgekehrt übernimmt Melyn zuverlässig jene Situationen, in denen Gwalchgwynn feststellen muss, dass Geduld allein nicht mehr reicht.",
+                "Sie kocht gelegentlich persönlich für Kinder, Enkel und Menschen, die sie als Familie betrachtet.",
+                "Ihr Essen ist schlicht, sättigend und zweckmäßig. Besonders ansprechend sieht es gewöhnlich nicht aus.",
+                "Melyn scheint darin allerdings kein Problem zu erkennen. Es ist warm. Es ist nahrhaft. Sie hat es gekocht. Was genau fehlt noch?",
+                "Ein hingestellter Teller und ein knappes „Da.“ gehören zu ihren zuverlässigsten Formen von Zuneigung.",
+                "Wer sich dafür überschwänglich bedankt, bekommt wahrscheinlich nur: „Iss.“ Auch wenn er es nicht mag.",
+                "Melyns letzte Knappin war Gwenna Crafanc, das Mündel Sir Egon Gafyrs.",
+                "Dass die Crafanc ein Kadettenhaus der Arth sind, dürfte Melyns Aufmerksamkeit ursprünglich geweckt haben. Geschont hat Gwenna das allerdings nicht.",
+                "Wer Melyn kennt, würde sogar vermuten, dass das genaue Gegenteil der Fall war.",
+                "Melyn bildete damit sowohl Heledd Gafyr als auch Gwenna Crafanc aus – zwei Ritterinnen, die später auf unterschiedliche Weise eng mit Haus Gafyr verbunden wurden.",
+                "Fragt man Melyn, weshalb sie Gwenna als Knappin nahm, dürfte die Antwort ähnlich ausfallen wie einst bei Heledd: „Sie konnte was.“"
+              ],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Verbindungen",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Heledd Gafyr",
+                  "detail": "frühere Knappin",
+                  "image": "https://i.imgur.com/L41oFjx.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Gwenna Crafanc",
+                  "detail": "frühere Knappin",
+                  "image": "https://64.media.tumblr.com/71edaefe89bab1e2d1433558a6b460c7/deb6c6d744f2a5cc-46/s250x400/4692b20898aff86fb937362df0edb32f1800d107.pnj",
+                  "imageFormat": "portrait"
+                }
+              ],
+              "documentsTitle": "Eigentum & Besitz",
+              "documents": [],
+              "footer": "Personenakte · Melyn Arth"
+            }
+          }
+        }
+      },
+      {
+        "id": "gwalchgwyn-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--gwalchgwyn-saethwyr",
+        "name": "Gwalchgwyn Saethwyr",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "afal-arth",
+        "worldPersonId": "person--haus-arth--afal-arth",
+        "name": "Afal Arth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1675",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gwyvern/afal-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "chartCenterBetweenPartnerPersonIds": [
+            "delyth-gwyvern",
+            "ysbail-cenyr"
+          ],
+          "registryManagedExtensionFields": [
+            "chartCenterBetweenPartnerPersonIds"
+          ]
+        }
+      },
+      {
+        "id": "delyth-gwyvern",
+        "worldPersonId": "person--haus-gwyvern--delyth-gwyvern",
+        "name": "Delyth Gwyvern",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1675",
+        "death": "1705",
+        "portrait": "assets/images/portraits/haus-gwyvern/delyth-gwyvern.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwyvern",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "ysbail-cenyr",
+        "worldPersonId": "person--haus-cenyr--ysbail-cenyr",
+        "name": "Ysbail O'Cenyr",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1680",
+        "death": "1710",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cenyr",
+        "familyRole": "affair",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "tegwen-arth",
+        "worldPersonId": "person--haus-arth--tegwen-arth",
+        "name": "Tegwen Arth",
+        "title": "Wegverheiratet an Haus Sélwyn",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1676",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/tegwen-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "morgan-selwyn",
+        "worldPersonId": "person--haus-selwyn--morgan-selwyn",
+        "name": "Morgan Sélwyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1678",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/morgan-selwyn.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-selwyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "griff-arth",
+        "worldPersonId": "person--haus-arth--griff-arth",
+        "name": "Griff Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1680",
+        "death": "1696",
+        "portrait": "assets/images/portraits/haus-arth/griff-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "jowna-arfordir",
+        "worldPersonId": "person--haus-arfordir--jowna-arfordir",
+        "name": "Jowna Arfordir",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1680",
+        "death": "1696",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arfordir",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cadfael-1681-arth",
+        "worldPersonId": "person--haus-arth--cadfael-1681-arth",
+        "name": "Cadfael Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1681",
+        "death": "1740",
+        "portrait": "assets/images/portraits/haus-arth/cadfael-1681-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "death"
+          ]
+        }
+      },
+      {
+        "id": "gwendolen-marwolaeth",
+        "worldPersonId": "person--haus-marwolaeth--gwendolen-marwolaeth",
+        "name": "Gwendolen Marwolaeth",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1679",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/gwendolen-marwolaeth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marwolaeth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "birth"
+          ]
+        }
+      },
+      {
+        "id": "gwennan-arth",
+        "worldPersonId": "person--haus-arth--gwennan-arth",
+        "name": "Gwennan Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1678",
+        "death": "1700",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cerdd-wivern",
+        "worldPersonId": "person--haus-wivern--cerdd-wivern",
+        "name": "Cerdd Wivern",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1676",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/cerdd-wivern.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wivern",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parzifal-arth",
+        "worldPersonId": "person--haus-arth--parzifal-arth",
+        "name": "Parzifal Arth",
+        "title": "Graf von Talgarth seit 1720",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-grawn/parzifal-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "ceridwen-1700-grawn",
+        "worldPersonId": "person--haus-grawn--ceridwen-1700-grawn",
+        "name": "Ceridwen Grawn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-grawn/ceridwen-1700-grawn.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-grawn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "isolde-arth",
+        "worldPersonId": "person--haus-arth--isolde-arth",
+        "name": "Isolde Arth",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pendrag/isolde-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "tristan-pendrag",
+        "worldPersonId": "person--haus-pendrag--tristan-pendrag",
+        "name": "Tristan Pendrag",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pendrag/tristan-pendrag.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pendrag",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "esyllt-arth",
+        "worldPersonId": "person--haus-arth--esyllt-arth",
+        "name": "Esyllt Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1696",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-draig/esyllt-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "owain-draig",
+        "worldPersonId": "person--haus-draig--owain-draig",
+        "name": "Owain Draig",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-draig/owain-draig.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "affair",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "chartRepeatForPartnershipIds": [
+            "affair-owain-sylvia"
+          ]
+        }
+      },
+      {
+        "id": "olwen-arth",
+        "worldPersonId": "person--haus-arth--olwen-arth",
+        "name": "Olwen Arth",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/olwen-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "melwas-crafanc",
+        "worldPersonId": "person--haus-crafanc--melwas-crafanc",
+        "name": "Melwas Crafanc",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/melwas-crafanc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-crafanc",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "tarrant-1703-arth",
+        "worldPersonId": "person--haus-arth--tarrant-1703-arth",
+        "name": "Tarrant Arth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1703",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/tarrant-1703-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "talara-blodyn",
+        "worldPersonId": "person--haus-blodyn--talara-blodyn",
+        "name": "Talara Blodyn",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1704",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-blodyn/talara-blodyn.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-blodyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Name, Haus und Lebensdaten sind in der nun ausgewerteten Blodyn-Gegenakte belegt; die frühere Arth-Tabelle ließ diese Verlobtenzelle leer.",
+        "extensions": {
+          "registryManagedFields": [
+            "birth",
+            "death",
+            "status",
+            "portrait",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "gwrhyr-arth",
+        "worldPersonId": "person--haus-arth--gwrhyr-arth",
+        "name": "Gwrhyr Arth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/gwrhyr-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "findabair-mata",
+        "worldPersonId": "person--haus-mata--findabair-mata",
+        "name": "Findabair Mata",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/findabair-mata.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-mata",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "lynfa-1696-arth",
+        "worldPersonId": "person--haus-arth--lynfa-1696-arth",
+        "name": "Lynfa Arth",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/lynfa-1696-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "derwyn-dyngwn",
+        "worldPersonId": "person--haus-dyngwn--derwyn-dyngwn",
+        "name": "Derwyn Dyngwn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/derwyn-dyngwn.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dyngwn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "tiwlip-arth",
+        "worldPersonId": "person--haus-arth--tiwlip-arth",
+        "name": "Tiwlip Arth",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/tiwlip-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Quelle druckt unmöglich 1967; die Geschwister- und Partnergeneration belegt 1697.",
+        "extensions": {}
+      },
+      {
+        "id": "galeshin-cwningod",
+        "worldPersonId": "person--haus-cwningod--galeshin-cwningod",
+        "name": "Galeshin Cwningod",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/galeshin-cwningod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "aled-arth",
+        "worldPersonId": "person--haus-arth--aled-arth",
+        "name": "Aled Arth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/aled-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "hiolair-morgacht",
+        "worldPersonId": "person--haus-morgacht--hiolair-morgacht",
+        "name": "Hiolair Mórgacht",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1701",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/hiolair-morgacht.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morgacht",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "sylvia-cenyr",
+        "worldPersonId": "person--haus-cenyr--sylvia-cenyr",
+        "name": "Sylvia O'Cenyr",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1695",
+        "death": "1719",
+        "portrait": "assets/images/portraits/haus-draig/sylvia-cenyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cenyr",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "sieffre-arth",
+        "worldPersonId": "person--haus-arth--sieffre-arth",
+        "name": "Sieffre Arth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/sieffre-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cerridwyn-grael",
+        "worldPersonId": "person--haus-grael--cerridwyn-grael",
+        "name": "Cerridwyn Grael",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1706",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/cerridwyn-grael.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-grael",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rhydian-arth",
+        "worldPersonId": "person--haus-arth--rhydian-arth",
+        "name": "Rhydian Arth",
+        "title": "Erster in der Erbfolge des Hauses Arth",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/rhydian-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Die Erbfolge nennt Rhydian; eine untere Tabellenzeile verkürzt den Namen abweichend zu Rydian.",
+        "extensions": {}
+      },
+      {
+        "id": "lynne-arth",
+        "worldPersonId": "person--haus-arth--lynne-arth",
+        "name": "Lynne Arth",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/lynne-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "denawal-1724-arth",
+        "worldPersonId": "person--haus-arth--denawal-1724-arth",
+        "name": "Denawal Arth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/denawal-1724-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "hildegard-wargh",
+        "worldPersonId": "person--haus-wargh--hildegard-wargh",
+        "name": "Hildegard Wargh",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/hildegard-wargh.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wargh",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "amadia-draig",
+        "worldPersonId": "person--haus-draig--amadia-draig",
+        "name": "Amadia Draig",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-draig/amadia-draig.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwylim-arth",
+        "worldPersonId": "person--haus-arth--gwylim-arth",
+        "name": "Gwylim Arth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/gwylim-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "senara-arth",
+        "worldPersonId": "person--haus-arth--senara-arth",
+        "name": "Senara Arth",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/senara-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "bwlch-arth",
+        "worldPersonId": "person--haus-arth--bwlch-arth",
+        "name": "Bwlch Arth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/bwlch-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "siana-draig",
+        "worldPersonId": "person--haus-draig--siana-draig",
+        "name": "Siana Draig",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-draig/siana-draig.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "fflam-arth",
+        "worldPersonId": "person--haus-arth--fflam-arth",
+        "name": "Fflam Arth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/fflam-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-gwenhwyfar-caradoc",
+        "participantIds": [
+          "caradoc-arth",
+          "gwenhwyfar-dreigiau"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rhun-rhoslyn",
+        "participantIds": [
+          "rhun-arth",
+          "rhoslyn-ancient-aderyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rhodhri-dearbhla",
+        "participantIds": [
+          "rhodhri-arth",
+          "dearbhla-follmhar"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-hewet-teaganach",
+        "participantIds": [
+          "hewet-arth",
+          "teaganach-follmhar"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-cynwrig-afanen",
+        "participantIds": [
+          "afanen-arth",
+          "cynwrig-ancient-pysgod"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-cadfael-oideach",
+        "participantIds": [
+          "cadfael-ancient-arth",
+          "oideach-diuid"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-denawal-beileag",
+        "participantIds": [
+          "denawal-ancient-arth",
+          "beileag-lockart"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-lamorak-mared",
+        "participantIds": [
+          "lamorak-arth",
+          "mared-unknown"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-tarrant-hadhbh",
+        "participantIds": [
+          "tarrant-ancient-arth",
+          "hadhbh-diuid"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-parzifal-banbhin",
+        "participantIds": [
+          "parzifal-ancient-arth",
+          "banbhin-haigh"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-artgal-amdarch",
+        "participantIds": [
+          "artgal-arth",
+          "amdarch-unknown"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-lynfa-faolan",
+        "participantIds": [
+          "lynfa-ancient-arth",
+          "faolan-armhair"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-caradoc-glaodhach",
+        "participantIds": [
+          "caradoc-line-arth",
+          "glaodhach-lockart"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-galeshin-arianhrod",
+        "participantIds": [
+          "galeshin-ancient-arth",
+          "arianhrod-unknown"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-aranrhod-traharyan",
+        "participantIds": [
+          "traharyan-arth",
+          "aranrhod-pysgod"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-trahaern-ceridwen",
+        "participantIds": [
+          "trahaern-arth",
+          "ceridwen-pawen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gwalchgwyn-arglwyddes",
+        "participantIds": [
+          "gwalchgwyn-arth",
+          "arglwyddes-aderyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-isobel-sadwrn",
+        "participantIds": [
+          "isobel-1614-arth",
+          "sadwrn-pawen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-wenonah-cynwrig",
+        "participantIds": [
+          "wenonah-arth",
+          "cynwrig-crafanc"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-dyngannon-rhianedd",
+        "participantIds": [
+          "dyngannon-arth",
+          "rhianedd-dienyddiwr"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-haul-fionnghuala",
+        "participantIds": [
+          "haul-arth",
+          "fionnghuala-nuadat"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-ffraid-gareth",
+        "participantIds": [
+          "ffraid-arth",
+          "gareth-dianc"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-galahad-dafyddwen",
+        "participantIds": [
+          "galahad-arth",
+          "dafyddwen-brithyll"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1708",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "end"
+          ]
+        }
+      },
+      {
+        "id": "marriage-heddwen-sayres",
+        "participantIds": [
+          "heddwen-arth",
+          "sayres-morthwyll"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1701",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-hafwen-madoc",
+        "participantIds": [
+          "madoc-arth",
+          "hafwen-draig"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rhydderch-talaith",
+        "participantIds": [
+          "rhydderch-arth",
+          "talaith-morfil"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1698",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rhys-blawd",
+        "participantIds": [
+          "rhys-arth",
+          "blawd-blodyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rian-sath",
+        "participantIds": [
+          "rian-arth",
+          "sath-cwningod"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rhynnon-kyndra",
+        "participantIds": [
+          "rhynnon-arth",
+          "kyndra-crafanc"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-tarian-brac",
+        "participantIds": [
+          "tarian-arth",
+          "brac-pawen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-afanen-elisud",
+        "participantIds": [
+          "afanen-1660-arth",
+          "elisud-crafanc"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-ffodor-ffionwen",
+        "participantIds": [
+          "ffodor-arth",
+          "ffionwen-penderyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-run-morfadd",
+        "participantIds": [
+          "run-arth",
+          "morfadd-arth"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-domnall-gwenfrewi",
+        "participantIds": [
+          "domnall-arth",
+          "gwenfrewi-pawen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-denawal-dolena",
+        "participantIds": [
+          "denawal-1680-arth",
+          "dolena-trachwyll"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1710",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "end"
+          ]
+        }
+      },
+      {
+        "id": "marriage-gingalain1671-llewella",
+        "participantIds": [
+          "llewella-arth",
+          "gingalain-1671-pysgod"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gwalchgwyn-melyn",
+        "participantIds": [
+          "melyn-arth",
+          "gwalchgwyn-saethwyr"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-delyth-afal",
+        "participantIds": [
+          "afal-arth",
+          "delyth-gwyvern"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignPartnerOverChildrenPersonId": "delyth-gwyvern",
+          "registryManagedExtensionFields": [
+            "chartAlignPartnerOverChildrenPersonId"
+          ]
+        }
+      },
+      {
+        "id": "affair-afal-ysbail",
+        "participantIds": [
+          "afal-arth",
+          "ysbail-cenyr"
+        ],
+        "type": "affair",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignPartnerOverChildrenPersonId": "ysbail-cenyr",
+          "registryManagedExtensionFields": [
+            "chartAlignPartnerOverChildrenPersonId"
+          ]
+        }
+      },
+      {
+        "id": "marriage-tegwen-morgan",
+        "participantIds": [
+          "tegwen-arth",
+          "morgan-selwyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "engagement-griff-jowna",
+        "participantIds": [
+          "griff-arth",
+          "jowna-arfordir"
+        ],
+        "type": "engagement",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-cadfael-gwendolen",
+        "participantIds": [
+          "cadfael-1681-arth",
+          "gwendolen-marwolaeth"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gwennan-cerdd",
+        "participantIds": [
+          "gwennan-arth",
+          "cerdd-wivern"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1700",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "participantIds",
+            "type",
+            "status",
+            "end"
+          ]
+        }
+      },
+      {
+        "id": "marriage-ceridwen-parzifal",
+        "participantIds": [
+          "parzifal-arth",
+          "ceridwen-1700-grawn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-tristan-isolde",
+        "participantIds": [
+          "isolde-arth",
+          "tristan-pendrag"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "affair-owain-esyllt",
+        "participantIds": [
+          "esyllt-arth",
+          "owain-draig"
+        ],
+        "type": "affair",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-olwen-melwas",
+        "participantIds": [
+          "olwen-arth",
+          "melwas-crafanc"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "engagement-tarrant-talara",
+        "participantIds": [
+          "tarrant-1703-arth",
+          "talara-blodyn"
+        ],
+        "type": "engagement",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Die Verlobung ist ausschließlich in der eingebetteten Stammbaumgrafik eingezeichnet.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gwrhyr-findabair",
+        "participantIds": [
+          "gwrhyr-arth",
+          "findabair-mata"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-lynfa-derwyn",
+        "participantIds": [
+          "lynfa-1696-arth",
+          "derwyn-dyngwn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-tiwlip-galeshin",
+        "participantIds": [
+          "tiwlip-arth",
+          "galeshin-cwningod"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-aled-hiolair",
+        "participantIds": [
+          "aled-arth",
+          "hiolair-morgacht"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "affair-owain-sylvia",
+        "participantIds": [
+          "sylvia-cenyr",
+          "owain-draig"
+        ],
+        "type": "affair",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-sieffre-cerridwyn",
+        "participantIds": [
+          "sieffre-arth",
+          "cerridwyn-grael"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "engagement-denawal-hildegard",
+        "participantIds": [
+          "denawal-1724-arth",
+          "hildegard-wargh"
+        ],
+        "type": "engagement",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-rhun-arth",
+        "childId": "rhun-arth",
+        "parentIds": [
+          "caradoc-arth",
+          "gwenhwyfar-dreigiau"
+        ],
+        "partnershipId": "marriage-gwenhwyfar-caradoc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhodhri-arth",
+        "childId": "rhodhri-arth",
+        "parentIds": [
+          "caradoc-arth",
+          "gwenhwyfar-dreigiau"
+        ],
+        "partnershipId": "marriage-gwenhwyfar-caradoc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-hewet-arth",
+        "childId": "hewet-arth",
+        "parentIds": [
+          "caradoc-arth",
+          "gwenhwyfar-dreigiau"
+        ],
+        "partnershipId": "marriage-gwenhwyfar-caradoc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-afanen-arth",
+        "childId": "afanen-arth",
+        "parentIds": [
+          "rhun-arth",
+          "rhoslyn-ancient-aderyn"
+        ],
+        "partnershipId": "marriage-rhun-rhoslyn",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Quelle markiert zwischen diesem Paar und den genannten Nachkommen nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-rhun-cadfael"
+        }
+      },
+      {
+        "id": "parentage-cadfael-ancient-arth",
+        "childId": "cadfael-ancient-arth",
+        "parentIds": [
+          "rhun-arth",
+          "rhoslyn-ancient-aderyn"
+        ],
+        "partnershipId": "marriage-rhun-rhoslyn",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Quelle markiert zwischen diesem Paar und den genannten Nachkommen nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-rhun-cadfael"
+        }
+      },
+      {
+        "id": "parentage-denawal-ancient-arth",
+        "childId": "denawal-ancient-arth",
+        "parentIds": [
+          "rhodhri-arth",
+          "dearbhla-follmhar"
+        ],
+        "partnershipId": "marriage-rhodhri-dearbhla",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Seitenlinie ist durch die Quelle belegt; da Zeitsprünge absolute serielle Trenner sind, wird die parallele Auslassungsmarke nicht als eigener Diagrammknoten wiederholt.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-lamorak-arth",
+        "childId": "lamorak-arth",
+        "parentIds": [
+          "hewet-arth",
+          "teaganach-follmhar"
+        ],
+        "partnershipId": "marriage-hewet-teaganach",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Seitenlinie ist durch die Quelle belegt; da Zeitsprünge absolute serielle Trenner sind, wird die parallele Auslassungsmarke nicht als eigener Diagrammknoten wiederholt.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-tarrant-ancient-arth",
+        "childId": "tarrant-ancient-arth",
+        "parentIds": [
+          "cadfael-ancient-arth",
+          "oideach-diuid"
+        ],
+        "partnershipId": "marriage-cadfael-oideach",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Quelle markiert zwischen diesem Paar und den genannten Nachkommen nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-cadfael-tarrant"
+        }
+      },
+      {
+        "id": "parentage-parzifal-ancient-arth",
+        "childId": "parzifal-ancient-arth",
+        "parentIds": [
+          "cadfael-ancient-arth",
+          "oideach-diuid"
+        ],
+        "partnershipId": "marriage-cadfael-oideach",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Quelle markiert zwischen diesem Paar und den genannten Nachkommen nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-cadfael-tarrant"
+        }
+      },
+      {
+        "id": "parentage-artgal-arth",
+        "childId": "artgal-arth",
+        "parentIds": [
+          "denawal-ancient-arth",
+          "beileag-lockart"
+        ],
+        "partnershipId": "marriage-denawal-beileag",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Seitenlinie ist durch die Quelle belegt; da Zeitsprünge absolute serielle Trenner sind, wird die parallele Auslassungsmarke nicht als eigener Diagrammknoten wiederholt.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-lynfa-ancient-arth",
+        "childId": "lynfa-ancient-arth",
+        "parentIds": [
+          "tarrant-ancient-arth",
+          "hadhbh-diuid"
+        ],
+        "partnershipId": "marriage-tarrant-hadhbh",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Quelle markiert zwischen diesem Paar und den genannten Nachkommen nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-tarrant-caradoc"
+        }
+      },
+      {
+        "id": "parentage-caradoc-line-arth",
+        "childId": "caradoc-line-arth",
+        "parentIds": [
+          "tarrant-ancient-arth",
+          "hadhbh-diuid"
+        ],
+        "partnershipId": "marriage-tarrant-hadhbh",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Quelle markiert zwischen diesem Paar und den genannten Nachkommen nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-tarrant-caradoc"
+        }
+      },
+      {
+        "id": "parentage-galeshin-ancient-arth",
+        "childId": "galeshin-ancient-arth",
+        "parentIds": [
+          "parzifal-ancient-arth",
+          "banbhin-haigh"
+        ],
+        "partnershipId": "marriage-parzifal-banbhin",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Seitenlinie ist durch die Quelle belegt; da Zeitsprünge absolute serielle Trenner sind, wird die parallele Auslassungsmarke nicht als eigener Diagrammknoten wiederholt.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-traharyan-arth",
+        "childId": "traharyan-arth",
+        "parentIds": [
+          "caradoc-line-arth",
+          "glaodhach-lockart"
+        ],
+        "partnershipId": "marriage-caradoc-glaodhach",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Quelle markiert zwischen diesem Paar und den genannten Nachkommen nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-caradoc-traharyan"
+        }
+      },
+      {
+        "id": "parentage-trahaern-arth",
+        "childId": "trahaern-arth",
+        "parentIds": [
+          "caradoc-line-arth",
+          "glaodhach-lockart"
+        ],
+        "partnershipId": "marriage-caradoc-glaodhach",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Die Quelle markiert zwischen diesem Paar und den genannten Nachkommen nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-caradoc-traharyan"
+        }
+      },
+      {
+        "id": "parentage-gwalchgwyn-arth",
+        "childId": "gwalchgwyn-arth",
+        "parentIds": [
+          "traharyan-arth",
+          "aranrhod-pysgod"
+        ],
+        "partnershipId": "marriage-aranrhod-traharyan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-isobel-1614-arth",
+        "childId": "isobel-1614-arth",
+        "parentIds": [
+          "traharyan-arth",
+          "aranrhod-pysgod"
+        ],
+        "partnershipId": "marriage-aranrhod-traharyan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-wenonah-arth",
+        "childId": "wenonah-arth",
+        "parentIds": [
+          "traharyan-arth",
+          "aranrhod-pysgod"
+        ],
+        "partnershipId": "marriage-aranrhod-traharyan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-dyngannon-arth",
+        "childId": "dyngannon-arth",
+        "parentIds": [
+          "traharyan-arth",
+          "aranrhod-pysgod"
+        ],
+        "partnershipId": "marriage-aranrhod-traharyan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-haul-arth",
+        "childId": "haul-arth",
+        "parentIds": [
+          "gwalchgwyn-arth",
+          "arglwyddes-aderyn"
+        ],
+        "partnershipId": "marriage-gwalchgwyn-arglwyddes",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-ffraid-arth",
+        "childId": "ffraid-arth",
+        "parentIds": [
+          "gwalchgwyn-arth",
+          "arglwyddes-aderyn"
+        ],
+        "partnershipId": "marriage-gwalchgwyn-arglwyddes",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-galahad-arth",
+        "childId": "galahad-arth",
+        "parentIds": [
+          "dyngannon-arth",
+          "rhianedd-dienyddiwr"
+        ],
+        "partnershipId": "marriage-dyngannon-rhianedd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-heddwen-arth",
+        "childId": "heddwen-arth",
+        "parentIds": [
+          "dyngannon-arth",
+          "rhianedd-dienyddiwr"
+        ],
+        "partnershipId": "marriage-dyngannon-rhianedd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-madoc-arth",
+        "childId": "madoc-arth",
+        "parentIds": [
+          "dyngannon-arth",
+          "rhianedd-dienyddiwr"
+        ],
+        "partnershipId": "marriage-dyngannon-rhianedd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhydderch-arth",
+        "childId": "rhydderch-arth",
+        "parentIds": [
+          "haul-arth",
+          "fionnghuala-nuadat"
+        ],
+        "partnershipId": "marriage-haul-fionnghuala",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhys-arth",
+        "childId": "rhys-arth",
+        "parentIds": [
+          "haul-arth",
+          "fionnghuala-nuadat"
+        ],
+        "partnershipId": "marriage-haul-fionnghuala",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rian-arth",
+        "childId": "rian-arth",
+        "parentIds": [
+          "haul-arth",
+          "fionnghuala-nuadat"
+        ],
+        "partnershipId": "marriage-haul-fionnghuala",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhynnon-arth",
+        "childId": "rhynnon-arth",
+        "parentIds": [
+          "haul-arth",
+          "fionnghuala-nuadat"
+        ],
+        "partnershipId": "marriage-haul-fionnghuala",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-tarian-arth",
+        "childId": "tarian-arth",
+        "parentIds": [
+          "galahad-arth",
+          "dafyddwen-brithyll"
+        ],
+        "partnershipId": "marriage-galahad-dafyddwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-afanen-1660-arth",
+        "childId": "afanen-1660-arth",
+        "parentIds": [
+          "galahad-arth",
+          "dafyddwen-brithyll"
+        ],
+        "partnershipId": "marriage-galahad-dafyddwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-ffodor-arth",
+        "childId": "ffodor-arth",
+        "parentIds": [
+          "madoc-arth",
+          "hafwen-draig"
+        ],
+        "partnershipId": "marriage-hafwen-madoc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-run-arth",
+        "childId": "run-arth",
+        "parentIds": [
+          "rhydderch-arth",
+          "talaith-morfil"
+        ],
+        "partnershipId": "marriage-rhydderch-talaith",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-domnall-arth",
+        "childId": "domnall-arth",
+        "parentIds": [
+          "rhydderch-arth",
+          "talaith-morfil"
+        ],
+        "partnershipId": "marriage-rhydderch-talaith",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-denawal-1680-arth",
+        "childId": "denawal-1680-arth",
+        "parentIds": [
+          "rhydderch-arth",
+          "talaith-morfil"
+        ],
+        "partnershipId": "marriage-rhydderch-talaith",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-llewella-arth",
+        "childId": "llewella-arth",
+        "parentIds": [
+          "rhydderch-arth",
+          "talaith-morfil"
+        ],
+        "partnershipId": "marriage-rhydderch-talaith",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-melyn-arth",
+        "childId": "melyn-arth",
+        "parentIds": [
+          "rhydderch-arth",
+          "talaith-morfil"
+        ],
+        "partnershipId": "marriage-rhydderch-talaith",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-afal-arth",
+        "childId": "afal-arth",
+        "parentIds": [
+          "rhys-arth",
+          "blawd-blodyn"
+        ],
+        "partnershipId": "marriage-rhys-blawd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-morfadd-arth",
+        "childId": "morfadd-arth",
+        "parentIds": [
+          "rhys-arth",
+          "blawd-blodyn"
+        ],
+        "partnershipId": "marriage-rhys-blawd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-tegwen-arth",
+        "childId": "tegwen-arth",
+        "parentIds": [
+          "rhys-arth",
+          "blawd-blodyn"
+        ],
+        "partnershipId": "marriage-rhys-blawd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-griff-arth",
+        "childId": "griff-arth",
+        "parentIds": [
+          "rhys-arth",
+          "blawd-blodyn"
+        ],
+        "partnershipId": "marriage-rhys-blawd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cadfael-1681-arth",
+        "childId": "cadfael-1681-arth",
+        "parentIds": [
+          "ffodor-arth",
+          "ffionwen-penderyn"
+        ],
+        "partnershipId": "marriage-ffodor-ffionwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwennan-arth",
+        "childId": "gwennan-arth",
+        "parentIds": [
+          "ffodor-arth",
+          "ffionwen-penderyn"
+        ],
+        "partnershipId": "marriage-ffodor-ffionwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-parzifal-arth",
+        "childId": "parzifal-arth",
+        "parentIds": [
+          "run-arth",
+          "morfadd-arth"
+        ],
+        "partnershipId": "marriage-run-morfadd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-isolde-arth",
+        "childId": "isolde-arth",
+        "parentIds": [
+          "run-arth",
+          "morfadd-arth"
+        ],
+        "partnershipId": "marriage-run-morfadd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-esyllt-arth",
+        "childId": "esyllt-arth",
+        "parentIds": [
+          "run-arth",
+          "morfadd-arth"
+        ],
+        "partnershipId": "marriage-run-morfadd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-olwen-arth",
+        "childId": "olwen-arth",
+        "parentIds": [
+          "run-arth",
+          "morfadd-arth"
+        ],
+        "partnershipId": "marriage-run-morfadd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-tarrant-1703-arth",
+        "childId": "tarrant-1703-arth",
+        "parentIds": [
+          "run-arth",
+          "morfadd-arth"
+        ],
+        "partnershipId": "marriage-run-morfadd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwrhyr-arth",
+        "childId": "gwrhyr-arth",
+        "parentIds": [
+          "domnall-arth",
+          "gwenfrewi-pawen"
+        ],
+        "partnershipId": "marriage-domnall-gwenfrewi",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-lynfa-1696-arth",
+        "childId": "lynfa-1696-arth",
+        "parentIds": [
+          "domnall-arth",
+          "gwenfrewi-pawen"
+        ],
+        "partnershipId": "marriage-domnall-gwenfrewi",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-tiwlip-arth",
+        "childId": "tiwlip-arth",
+        "parentIds": [
+          "domnall-arth",
+          "gwenfrewi-pawen"
+        ],
+        "partnershipId": "marriage-domnall-gwenfrewi",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-aled-arth",
+        "childId": "aled-arth",
+        "parentIds": [
+          "afal-arth",
+          "delyth-gwyvern"
+        ],
+        "partnershipId": "marriage-delyth-afal",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-sylvia-cenyr",
+        "childId": "sylvia-cenyr",
+        "parentIds": [
+          "afal-arth",
+          "ysbail-cenyr"
+        ],
+        "partnershipId": "affair-afal-ysbail",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-sieffre-arth",
+        "childId": "sieffre-arth",
+        "parentIds": [
+          "cadfael-1681-arth",
+          "gwendolen-marwolaeth"
+        ],
+        "partnershipId": "marriage-cadfael-gwendolen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhydian-arth",
+        "childId": "rhydian-arth",
+        "parentIds": [
+          "parzifal-arth",
+          "ceridwen-1700-grawn"
+        ],
+        "partnershipId": "marriage-ceridwen-parzifal",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-lynne-arth",
+        "childId": "lynne-arth",
+        "parentIds": [
+          "parzifal-arth",
+          "ceridwen-1700-grawn"
+        ],
+        "partnershipId": "marriage-ceridwen-parzifal",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-denawal-1724-arth",
+        "childId": "denawal-1724-arth",
+        "parentIds": [
+          "parzifal-arth",
+          "ceridwen-1700-grawn"
+        ],
+        "partnershipId": "marriage-ceridwen-parzifal",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-amadia-draig",
+        "childId": "amadia-draig",
+        "parentIds": [
+          "esyllt-arth",
+          "owain-draig"
+        ],
+        "partnershipId": "affair-owain-esyllt",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwylim-arth",
+        "childId": "gwylim-arth",
+        "parentIds": [
+          "gwrhyr-arth",
+          "findabair-mata"
+        ],
+        "partnershipId": "marriage-gwrhyr-findabair",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-senara-arth",
+        "childId": "senara-arth",
+        "parentIds": [
+          "gwrhyr-arth",
+          "findabair-mata"
+        ],
+        "partnershipId": "marriage-gwrhyr-findabair",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-bwlch-arth",
+        "childId": "bwlch-arth",
+        "parentIds": [
+          "aled-arth",
+          "hiolair-morgacht"
+        ],
+        "partnershipId": "marriage-aled-hiolair",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-siana-draig",
+        "childId": "siana-draig",
+        "parentIds": [
+          "sylvia-cenyr",
+          "owain-draig"
+        ],
+        "partnershipId": "affair-owain-sylvia",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-fflam-arth",
+        "childId": "fflam-arth",
+        "parentIds": [
+          "sieffre-arth",
+          "cerridwyn-grael"
+        ],
+        "partnershipId": "marriage-sieffre-cerridwyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-arth",
+        "name": "Haus Arth",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-arth.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-dreigiau",
+        "name": "Haus Dreigiau",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-aderyn",
+        "name": "Haus Aderyn",
+        "motto": "",
+        "emblem": "assets/images/houses/Tal der Milane/haus-aderyn.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-follmhar",
+        "name": "Haus Follmhar",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-pysgod",
+        "name": "Haus Pysgod",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/haus-pysgod.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-diuid",
+        "name": "Haus Diuid",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-lockart",
+        "name": "Haus Lockart",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-mared",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-haigh",
+        "name": "Haus Haigh",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-amdarch",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-armhair",
+        "name": "Haus Ardmhair",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-arianhrod",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-pawen",
+        "name": "Haus Pawen",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-pawen.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-crafanc",
+        "name": "Haus Crafanc",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-crafanc.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-cwningod",
+        "name": "Haus Cwningod",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-unigol",
+        "name": "Haus Unigol",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-unigol.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-dienyddiwr",
+        "name": "Haus Dienyddiwr",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-nuadat",
+        "name": "Haus Nuadat",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-dianc",
+        "name": "Haus Dianc",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-dianc.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-brithyll",
+        "name": "Haus Brithyll",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/Schimmerküste/haus-brithyll.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-morthwyll",
+        "name": "Haus Morthwyl",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-morthwyll.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-draig",
+        "name": "Haus Draig",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-draig.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-morfil",
+        "name": "Haus Morfil",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/Grauküste/haus-morfil.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-blodyn",
+        "name": "Haus Blodyn",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-eirth",
+        "name": "Haus Eirth",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-eirth.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-penderyn",
+        "name": "Haus Penderyn",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-trachwyll-talfronwyn",
+        "name": "Haus Trachwyll O'Talfronwyn",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-saethwyr",
+        "name": "Haus Saethwyr",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-gwyvern",
+        "name": "Haus Gwyvern",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-cenyr",
+        "name": "Haus O'Cenyr",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-selwyn",
+        "name": "Haus Sélwyn",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-selwyn.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-arfordir",
+        "name": "Haus Arfordir",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-arfordir.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-marwolaeth",
+        "name": "Haus Marwolaeth",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-wivern",
+        "name": "Haus Wivern",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/Eichenlicht/haus-wivern.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-grawn",
+        "name": "Haus Grawn",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-pendrag",
+        "name": "Haus Pendrag",
+        "motto": "",
+        "emblem": "assets/images/houses/Vortigerns Ruh/haus-pendrag.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-mata",
+        "name": "Haus Mata",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-dyngwn",
+        "name": "Haus Dyngwn",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-morgacht",
+        "name": "Haus Mórgacht",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-grael",
+        "name": "Haus Grael",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-wargh",
+        "name": "Haus Wargh",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "cadet-pawen-lamorak",
+        "name": "Haus Pawen",
+        "subtitle": "Gegründetes Kadettenhaus",
+        "linkType": "cadet-house",
+        "parentPartnershipId": "marriage-lamorak-mared",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-pawen",
+        "emblem": "assets/images/houses/Klaueninsel/haus-pawen.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-pawen",
+        "notes": "Lamorak Arth und Mared begründen Haus Pawen; der Knoten hängt direkt unter ihrem Paar.",
+        "extensions": {}
+      },
+      {
+        "id": "cadet-crafanc-artgal",
+        "name": "Haus Crafanc",
+        "subtitle": "Gegründetes Kadettenhaus",
+        "linkType": "cadet-house",
+        "parentPartnershipId": "marriage-artgal-amdarch",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-crafanc",
+        "emblem": "assets/images/houses/Klaueninsel/haus-crafanc.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-crafanc",
+        "notes": "Artgal Arth und Amdarch begründen Haus Crafanc; der Knoten hängt direkt unter ihrem Paar.",
+        "extensions": {}
+      },
+      {
+        "id": "cadet-cwningod-galeshin",
+        "name": "Haus Cwningod",
+        "subtitle": "Gegründetes Kadettenhaus",
+        "linkType": "cadet-house",
+        "parentPartnershipId": "marriage-galeshin-arianhrod",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-cwningod",
+        "emblem": "assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-cwningod",
+        "notes": "Galeshin Arth und Arianhrod begründen Haus Cwningod; der Knoten hängt direkt unter ihrem Paar.",
+        "extensions": {}
+      },
+      {
+        "id": "cadet-unigol-trahaern",
+        "name": "Haus Unigol",
+        "subtitle": "Gegründetes Kadettenhaus",
+        "linkType": "cadet-house",
+        "parentPartnershipId": "marriage-trahaern-ceridwen",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unigol",
+        "emblem": "assets/images/houses/Klaueninsel/haus-unigol.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unigol",
+        "notes": "Trahaern Arth und Ceridwen Pawen begründen Haus Unigol; der Knoten hängt direkt unter ihrem Paar.",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-morthwyll-heddwen",
+        "name": "Haus Morthwyll",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-heddwen-sayres",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-morthwyll",
+        "emblem": "assets/images/houses/Klaueninsel/haus-morthwyll.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-morthwyll",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cadet-eirth-rhynnon",
+        "name": "Haus Eirth",
+        "subtitle": "Gegründetes Kadettenhaus",
+        "linkType": "cadet-house",
+        "parentPartnershipId": "marriage-rhynnon-kyndra",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-eirth",
+        "emblem": "assets/images/houses/Klaueninsel/haus-eirth.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-eirth",
+        "notes": "Rhynnon Arth und Kyndra Crafanc begründen Haus Eirth; der Knoten hängt direkt unter ihrem Paar.",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-selwyn-tegwen",
+        "name": "Haus Sélwyn",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-tegwen-morgan",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-selwyn",
+        "emblem": "assets/images/houses/Klaueninsel/haus-selwyn.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-selwyn",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-pysgod-afanen",
+        "name": "Haus Pysgod",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-cynwrig-afanen",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-pysgod",
+        "emblem": "assets/images/houses/Graue Weite/haus-pysgod.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-pysgod",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-armhair-lynfa",
+        "name": "Haus Ardmhair",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-lynfa-faolan",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-armhair",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-armhair",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-pawen-isobel",
+        "name": "Haus Pawen",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-isobel-sadwrn",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-pawen",
+        "emblem": "assets/images/houses/Klaueninsel/haus-pawen.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-pawen",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-crafanc-wenonah",
+        "name": "Haus Crafanc",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-wenonah-cynwrig",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-crafanc",
+        "emblem": "assets/images/houses/Klaueninsel/haus-crafanc.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-crafanc",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-dianc-ffraid",
+        "name": "Haus Dianc",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-ffraid-gareth",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-dianc",
+        "emblem": "assets/images/houses/Klaueninsel/haus-dianc.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-dianc",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-cwningod-rian",
+        "name": "Haus Cwningod",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-rian-sath",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-cwningod",
+        "emblem": "assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-cwningod",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-pawen-tarian",
+        "name": "Haus Pawen",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-tarian-brac",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-pawen",
+        "emblem": "assets/images/houses/Klaueninsel/haus-pawen.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-pawen",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-crafanc-afanen1660",
+        "name": "Haus Crafanc",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-afanen-elisud",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-crafanc",
+        "emblem": "assets/images/houses/Klaueninsel/haus-crafanc.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-crafanc",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-pysgod-llewella",
+        "name": "Haus Pysgod",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-gingalain1671-llewella",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-pysgod",
+        "emblem": "assets/images/houses/Graue Weite/haus-pysgod.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-pysgod",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-saethwyr-melyn",
+        "name": "Haus Saethwyr",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-gwalchgwyn-melyn",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-saethwyr",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-saethwyr",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-pendrag-isolde",
+        "name": "Haus Pendrag",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-tristan-isolde",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-pendrag",
+        "emblem": "assets/images/houses/Vortigerns Ruh/haus-pendrag.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-pendrag",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-crafanc-olwen",
+        "name": "Haus Crafanc",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-olwen-melwas",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-crafanc",
+        "emblem": "assets/images/houses/Klaueninsel/haus-crafanc.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-crafanc",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-dyngwn-lynfa1696",
+        "name": "Haus Dyngwn",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-lynfa-derwyn",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-dyngwn",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-dyngwn",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-cwningod-tiwlip",
+        "name": "Haus Cwningod",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-tiwlip-galeshin",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-cwningod",
+        "emblem": "assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-cwningod",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-wivern-gwennan",
+        "name": "Haus Wivern",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-gwennan-cerdd",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-wivern",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-wivern",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-rhun-cadfael",
+        "parentPartnershipId": "marriage-rhun-rhoslyn",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "afanen-arth",
+          "cadfael-ancient-arth"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "????",
+        "label": "Nicht einzeln überlieferte Generationen",
+        "notes": "Erster absoluter serieller Generationentrenner der Arth-Hauptlinie.",
+        "extensions": {}
+      },
+      {
+        "id": "gap-cadfael-tarrant",
+        "parentPartnershipId": "marriage-cadfael-oideach",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "tarrant-ancient-arth",
+          "parzifal-ancient-arth"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "????",
+        "label": "Nicht einzeln überlieferte Generationen",
+        "notes": "Zweiter absoluter serieller Generationentrenner der Arth-Hauptlinie.",
+        "extensions": {}
+      },
+      {
+        "id": "gap-tarrant-caradoc",
+        "parentPartnershipId": "marriage-tarrant-hadhbh",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "lynfa-ancient-arth",
+          "caradoc-line-arth"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "????",
+        "label": "Nicht einzeln überlieferte Generationen",
+        "notes": "Dritter absoluter serieller Generationentrenner der Arth-Hauptlinie.",
+        "extensions": {}
+      },
+      {
+        "id": "gap-caradoc-traharyan",
+        "parentPartnershipId": "marriage-caradoc-glaodhach",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "traharyan-arth",
+          "trahaern-arth"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1592",
+        "label": "Die datierte Überlieferung setzt 1592 wieder ein",
+        "notes": "Vierter absoluter serieller Generationentrenner der Arth-Hauptlinie.",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-gwenhwyfar-caradoc",
+      "houseId": "house-arth",
+      "crestSubtitle": "Grafengeschlecht",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "caradoc-arth",
+      "orientation": "vertical",
+      "ancestorDepth": 28,
+      "descendantDepth": 28,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "sourceNote": "Personen, Beziehungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Arth-Tabelle sowie ihrer eingebetteten Stammbaumgrafik. Vier Auslassungen bilden die eine strikt serielle Hauptlinie Rhun–Cadfael–Tarrant–Caradoc–Traharyan; parallele Auslassungszeichen der Seitenlinien werden gemäß der absoluten Zeitsprungregel als beanspruchte Abstammungen dokumentiert, aber nicht als konkurrierende Diagrammknoten wiederholt. Die ausdrücklich bestätigten Hausgründungen Pawen, Crafanc, Cwningod, Unigol und Eirth hängen jeweils direkt unter ihrem Gründerpaar. Haus Morthwyll und Haus Sélwyn sind dagegen eigenständige Vasallenhäuser der Arth: Heddwen Arth wird an Sayres Morthwyll und Tegwen Arth an Morgan Sélwyn wegverheiratet; beide Ehen erzeugen keinen Kadettenhausknoten. Sämtliche übrigen Arth-Linien, die durch Ehe in einem anderen Haus weiterlaufen, besitzen einen direkten Wegverheiratet-Knoten. Offensichtliche Jahrhundertfehler 1952/1955/1967 wurden zu 1652/1655/1697 berichtigt und direkt an den Personen notiert; 1620 bei Traharyan ist ein Amtsbeginn. Die Pysgod-Gegenakte löst den Widerspruch Griflet/Cynwrig zugunsten Cynwrigs, die Saethwyr-Gegenakte Melyns Geschlecht und Familie. Talara Blodyn ist nur in der eingebetteten Grafik benannt. Die Marwolaeth-Gegenakte ergänzt Gwendolens Geburtsjahr 1679 und Cadfaels Todesjahr 1740. Caradocs individuelle Tumblr-Quelle ist nicht mehr abrufbar und wird nicht durch das Portrait seines späteren Namensvetters ersetzt. Generische Silhouetten und unbenannte Abschlussplatzhalter wurden nicht als individuelle Portraits oder zusätzliche Ehen importiert.",
+      "blankFamily": false,
+      "sourceRevision": 12,
+      "registryManagedHouseProfileFields": [
+        "rankId",
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "liegeHouseId",
+        "liegeHouseName",
+        "secondarySeats",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ]
+    }
+  }
+}

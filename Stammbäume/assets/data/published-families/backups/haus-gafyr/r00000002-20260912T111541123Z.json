@@ -1,0 +1,2711 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-gafyr",
+  "revision": 2,
+  "updatedAt": "2026-09-12T11:15:41.123Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-gafyr",
+      "title": "Haus Gafyr",
+      "motto": "",
+      "description": "Die überlieferte Linie der Familie Gafyr O'Gwynthor von Garym dem Gehörnten bis zur Generation von 1724.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+      "houseProfile": {
+        "rankId": "knight-prince",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "garym-gafyr",
+        "worldPersonId": "person--haus-gafyr--garym-gafyr",
+        "name": "Garym der Gehörnte",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-gafyr/garym-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "fiodhna-talamh",
+        "worldPersonId": "person--haus-talamh--fiodhna-talamh",
+        "name": "Fíodhna Talamh",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-gafyr/fiodhna-talamh.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-talamh",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "kynwrig-gafyr",
+        "worldPersonId": "person--haus-gafyr--kynwrig-gafyr",
+        "name": "Kynwrig",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-gafyr/kynwrig-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "elinowyn-draig",
+        "worldPersonId": "person--haus-draig--elinowyn-draig",
+        "name": "Elinowyn Draig",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-gafyr/elinowyn-draig.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rheidwyn-gafyr",
+        "worldPersonId": "person--haus-gafyr--rheidwyn-gafyr",
+        "name": "Rheidwyn",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-gafyr/rheidwyn-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "sianwyn-gafyr",
+        "worldPersonId": "person--haus-gafyr--sianwyn-gafyr",
+        "name": "Sianwyn",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "heulwen-gwefrydd",
+        "worldPersonId": "person--haus-gwefrydd--heulwen-gwefrydd",
+        "name": "Heulwen Gwefrydd",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwefrydd",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "kynwrig-draig",
+        "worldPersonId": "person--haus-draig--kynwrig-draig",
+        "name": "Kynwrig Draig",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-gafyr/kynwrig-draig.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "maldwyn-gafyr",
+        "worldPersonId": "person--haus-gafyr--maldwyn-gafyr",
+        "name": "Maldwyn",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1249",
+        "death": "1312",
+        "portrait": "assets/images/portraits/haus-gafyr/maldwyn-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "mairwyn-gafyr",
+        "worldPersonId": "person--haus-gafyr--mairwyn-gafyr",
+        "name": "Mairwyn",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1251",
+        "death": "1312",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eurolwyn-draig",
+        "worldPersonId": "person--haus-draig--eurolwyn-draig",
+        "name": "Eurolwyn Draig",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1250",
+        "death": "1312",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "limwris-saethwyr",
+        "worldPersonId": "person--haus-saethwyr--limwris-saethwyr",
+        "name": "Limwris Saethwyr",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1250",
+        "death": "1300",
+        "portrait": "assets/images/portraits/haus-gafyr/limwris-saethwyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-saethwyr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "mathonwy-gafyr",
+        "worldPersonId": "person--haus-gafyr--mathonwy-gafyr",
+        "name": "Mathonwy",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1593",
+        "death": "1659",
+        "portrait": "assets/images/portraits/haus-wyrm/mathonwy-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "igraine-gafyr",
+        "worldPersonId": "person--haus-gafyr--igraine-gafyr",
+        "name": "Igraine",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1598",
+        "death": "1672",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "isotta-gafyr",
+        "worldPersonId": "person--haus-gafyr--isotta-gafyr",
+        "name": "Isotta",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1597",
+        "death": "1664",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "lynesse-wyrm-1598",
+        "worldPersonId": "person--haus-wyrm--lynesse-wyrm-1598",
+        "name": "Lynesse Wyrm",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1598",
+        "death": "1666",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-wyrm",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwrddnei-gwyvern",
+        "worldPersonId": "person--haus-gwyvern--gwrddnei-gwyvern",
+        "name": "Gwrddnei Gwyvern",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1600",
+        "death": "1667",
+        "portrait": "assets/images/portraits/haus-gafyr/gwrddnei-gwyvern.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwyvern",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "greidyawl-gwefrydd",
+        "worldPersonId": "person--haus-gwefrydd--greidyawl-gwefrydd",
+        "name": "Greidyawl Gwefrydd",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1598",
+        "death": "1661",
+        "portrait": "assets/images/portraits/haus-gafyr/greidyawl-gwefrydd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwefrydd",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "hwyvel-gafyr",
+        "worldPersonId": "person--haus-gafyr--hwyvel-gafyr",
+        "name": "Hwyvel",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1615",
+        "death": "1679",
+        "portrait": "assets/images/portraits/haus-gafyr/hwyvel-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rhiannon-gafyr",
+        "worldPersonId": "person--haus-gafyr--rhiannon-gafyr",
+        "name": "Rhiannon",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1625",
+        "death": "1702",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "olwen-draig",
+        "worldPersonId": "person--haus-draig--olwen-draig",
+        "name": "Olwen Draig",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1619",
+        "death": "1681",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "grippiud-creyr",
+        "worldPersonId": "person--haus-creyr--grippiud-creyr",
+        "name": "Grippiud Créyr",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1625",
+        "death": "1701",
+        "portrait": "assets/images/portraits/haus-gafyr/grippiud-creyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-creyr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gerwyn-gafyr",
+        "worldPersonId": "person--haus-gafyr--gerwyn-gafyr",
+        "name": "Gerwyn",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1644",
+        "death": "1708",
+        "portrait": "assets/images/portraits/haus-gafyr/gerwyn-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "braith-gafyr-1648",
+        "worldPersonId": "person--haus-gafyr--braith-gafyr-1648",
+        "name": "Braith",
+        "title": "",
+        "sex": "unknown",
+        "status": "dead",
+        "birth": "1648",
+        "death": "1702",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "uther-gafyr",
+        "worldPersonId": "person--haus-gafyr--uther-gafyr",
+        "name": "Uther",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1650",
+        "death": "1711",
+        "portrait": "assets/images/portraits/haus-gafyr/uther-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "siobhan-gallchobhair",
+        "worldPersonId": "person--haus-gallchobhair--siobhan-gallchobhair",
+        "name": "Siobhan Gallchobhair",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1648",
+        "death": "1711",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gallchobhair",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "carnedyr-aderyn",
+        "worldPersonId": "person--haus-aderyn--carnedyr-aderyn",
+        "name": "Carnedyr Aderyn",
+        "title": "",
+        "sex": "unknown",
+        "status": "dead",
+        "birth": "1647",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-gafyr/carnedyr-aderyn.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aderyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "owena-tir-addawol",
+        "worldPersonId": "person--haus-tir-addawol--owena-tir-addawol",
+        "name": "Owena Tir Addawol",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1652",
+        "death": "1729",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tir-addawol",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "duncan-gafyr",
+        "worldPersonId": "person--haus-gafyr--duncan-gafyr",
+        "name": "Duncan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/duncan-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "bronwyn-gafyr",
+        "worldPersonId": "person--haus-gafyr--bronwyn-gafyr",
+        "name": "Bronwyn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1672",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/bronwyn-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "ferydnand-gafyr",
+        "worldPersonId": "person--haus-gafyr--ferydnand-gafyr",
+        "name": "Ferydnand",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1674",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/ferydnand-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "hywell-gafyr",
+        "worldPersonId": "person--haus-gafyr--hywell-gafyr",
+        "name": "Hywell",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1677",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/hywell-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "morfudd-gwialen",
+        "worldPersonId": "person--haus-gwialen--morfudd-gwialen",
+        "name": "Morfudd Gwialen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1676",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/morfudd-gwialen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwialen",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "grufydd-aderyn",
+        "worldPersonId": "person--haus-aderyn--grufydd-aderyn",
+        "name": "Grufydd Aderyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/grufydd-aderyn.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aderyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "niniel-mwyalchen",
+        "worldPersonId": "person--haus-mwyalchen--niniel-mwyalchen",
+        "name": "Niniel Mwyalchen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1678",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/niniel-mwyalchen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-mwyalchen",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "tallula-eirce",
+        "worldPersonId": "person--haus-eirce--tallula-eirce",
+        "name": "Tallula Eirce",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1680",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-ua-eirce/tallula-eirce.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eirce",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "egon-gafyr",
+        "worldPersonId": "person--haus-gafyr--egon-gafyr",
+        "name": "Egon",
+        "title": "Marschall der Grafschaft Celtigerns Wacht",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [
+          "Almanach-Charakter"
+        ],
+        "notes": "Im AleriaAlmanach als Sir Egon Gafyr geführt.",
+        "extensions": {}
+      },
+      {
+        "id": "aerwyn-gafyr",
+        "worldPersonId": "person--haus-gafyr--aerwyn-gafyr",
+        "name": "Aerwyn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/aerwyn-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rheinallt-gafyr",
+        "worldPersonId": "person--haus-gafyr--rheinallt-gafyr",
+        "name": "Rheinallt",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/rheinallt-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "heledd-gafyr",
+        "worldPersonId": "person--haus-gafyr--heledd-gafyr",
+        "name": "Heledd",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/heledd-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              [
+                "Vollständiger Name",
+                "Heledd"
+              ],
+              [
+                "Haus",
+                "Haus Gafyr"
+              ],
+              [
+                "Titel / Anrede",
+                "Lady"
+              ],
+              [
+                "Geboren",
+                "1696"
+              ],
+              [
+                "Geburtsort",
+                "Gwynthor"
+              ],
+              [
+                "Gestorben",
+                "Lebend"
+              ],
+              [
+                "Alter im Jahr 1740",
+                "44 Jahre"
+              ],
+              [
+                "Geschlecht",
+                "Weiblich"
+              ],
+              [
+                "Familienstand",
+                "ledig"
+              ],
+              [
+                "Rang / Stand",
+                "Ritter"
+              ],
+              [
+                "Tätigkeit",
+                ""
+              ],
+              [
+                "Wohnsitz",
+                "Gwynthor"
+              ]
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Biografie",
+              "biographyText": "<p>Heledd Gafyr ist eine vierundvierzigjährige Ritterin des Hauses Gafyr und die mittlere der drei Kinder von <strong>Sir Ferdynand Gafyr und Lady Niniel Gafyr, geborene Mwyalchen</strong>.&nbsp;<span style=\"font-size: 0.82rem;\">Ihr Vater Ferdynand ist der jüngere Bruder des&nbsp;</span><span style=\"font-size: 0.82rem;\">berühmten Sir Duncan Gafyr und selbst einer der großen Ritter seines Hauses.&nbsp;</span><span style=\"font-size: 0.82rem;\">Dass sein Name außerhalb Celtigerns Wacht weniger Gewicht besitzt als der&nbsp;</span><span style=\"font-size: 0.82rem;\">seines älteren Bruders, liegt dabei weniger an mangelndem Können als an der&nbsp;</span><span style=\"font-size: 0.82rem;\">außergewöhnlichen Gestalt, neben der er sein Leben verbrachte. Ferdynand war&nbsp;</span><span style=\"font-size: 0.82rem;\">niemals Sir Duncan.&nbsp;</span><span style=\"font-size: 0.82rem;\">Er musste es allerdings auch nie sein.</span></p><p>Für Heledd war ihr Vater der erste Beweis dafür, dass ein Ritter keinen legendären Namen benötigt, um ein großer Ritter zu sein.</p><br><p>Ihre Mutter Niniel entstammt dem Haus <strong>Mwyalchen aus dem Tal der Milane</strong>, einem Kadettenhaus der Aderyn. Anders als ihr Gemahl besitzt sie wenig Leidenschaft für das klassische Ritterhandwerk. Niniels Welt sind Bogen, Jagd und Wildnis. Sie ist eine passionierte Jägerin und Bogenschützin und vermittelte ihrer Tochter dadurch Fähigkeiten, die nicht unbedingt zum üblichen Schwerpunkt einer jungen Gafyr gehörten.</p><br><p>Heledd wuchs zwischen zwei Brüdern auf.&nbsp;<span style=\"font-size: 0.82rem;\">Ihr zwei Jahre älterer Bruder </span><strong style=\"font-size: 0.82rem;\">Rheinallt Gafyr</strong><span style=\"font-size: 0.82rem;\"> kam ganz nach ihrem&nbsp;</span><span style=\"font-size: 0.82rem;\">Vater. Ehrenhaft, pflichtbewusst und mit ausgesprochen klaren Vorstellungen&nbsp;</span><span style=\"font-size: 0.82rem;\">davon, welches Verhalten einem Ritter angemessen ist, stieg er später zum&nbsp;</span><span style=\"font-size: 0.82rem;\">Marschall des Hauses Gafyr und damit des Ritterfürsten auf. Unehrliches oder </span><span style=\"font-size: 0.82rem;\">unehrenhaftes Verhalten duldet Rheinallt nur schwer.</span></p><p>Ihr jüngerer Bruder <strong>Roderic Gafyr</strong> entwickelte sich dagegen in eine deutlich andere Richtung. Roderic besitzt durchaus die Fähigkeiten und die Herkunft, um seinem Haus zuverlässig zu dienen. Sein größtes Hindernis ist allerdings Roderic selbst. Er trinkt gerne, arbeitet ungern und findet mit bemerkenswerter Zuverlässigkeit Gründe, weshalb eine Aufgabe auch von jemand anderem erledigt werden könnte.</p><p>Heledd liebt beide Brüder. N<span style=\"font-size: 0.82rem;\">ur bei einem von ihnen fällt es ihr erheblich&nbsp;</span><span style=\"font-size: 0.82rem;\">leichter.</span></p><br><p>Schon als junges Mädchen zeigte sich bei ihr wenig Interesse an den politischen Möglichkeiten ihres Namens. Verwaltung langweilte sie. Höfische Ämter reizten sie kaum. Diplomatie akzeptierte sie als notwendige Fähigkeit, ohne jemals Leidenschaft dafür zu entwickeln.</p><br><p>Dagegen faszinierte sie das Rittertum.&nbsp;<span style=\"font-size: 0.82rem;\">Nicht nur der Kampf.&nbsp;</span><strong style=\"font-size: 0.82rem;\">Die&nbsp;</strong><strong style=\"font-size: 0.82rem;\">Berufung.&nbsp;</strong><span style=\"font-size: 0.82rem;\">Heledd wuchs mit Männern wie ihrem Vater&nbsp;</span><span style=\"font-size: 0.82rem;\">Ferdynand und ihrem Onkel </span><strong style=\"font-size: 0.82rem;\">Sir Duncan&nbsp;</strong><strong style=\"font-size: 0.82rem;\">Gafyr</strong><span style=\"font-size: 0.82rem;\"> auf. Später gehörte auch der damalige Graf </span><strong style=\"font-size: 0.82rem;\">Rhodri Draig</strong><span style=\"font-size: 0.82rem;\">, Vater Galahads, zu jenen&nbsp;</span><span style=\"font-size: 0.82rem;\">Rittern, deren Beispiel ihr Bild vom eigenen Stand prägte.&nbsp;</span><span style=\"font-size: 0.82rem;\">Sie bewunderte Männer, die dort standen, wo&nbsp;</span><span style=\"font-size: 0.82rem;\">sie gebraucht wurden.</span></p><p>Entsprechend ernst nahm Heledd ihre eigene Ausbildung.&nbsp;<span style=\"font-size: 0.82rem;\">Als Knappin wurde sie schließlich </span><strong style=\"font-size: 0.82rem;\">Lady Melyn Saethwyr</strong><span style=\"font-size: 0.82rem;\">, geborene Arth,&nbsp;</span><span style=\"font-size: 0.82rem;\">anvertraut. Melyn stammte von den Klaueninseln und hatte bereits damals den Ruf&nbsp;</span><span style=\"font-size: 0.82rem;\">einer außergewöhnlich gefährlichen Kriegerin. Dass sie später die Gemahlin </span><strong style=\"font-size: 0.82rem;\">Gwalchgwynn Saethwyrs</strong><span style=\"font-size: 0.82rem;\">, des heutigen&nbsp;</span><span style=\"font-size: 0.82rem;\">Patriarchen, werden würde, ändert wenig daran, dass Heledd sie vor allem als&nbsp;</span><span style=\"font-size: 0.82rem;\">jene Frau kennenlernte, die ihr beibrachte, wie man kämpft.</span></p><br><p>Melyn war keine sanfte Rittermutter.&nbsp;<span style=\"font-size: 0.82rem;\">Heledd hätte vermutlich auch keine gewollt.&nbsp;</span><span style=\"font-size: 0.82rem;\">Unter ihr lernte sie, dass ein Ritter einen&nbsp;</span><span style=\"font-size: 0.82rem;\">Kampf nicht deshalb gewinnt, weil er schöner aussieht, den besseren Namen trägt&nbsp;</span><span style=\"font-size: 0.82rem;\">oder die ehrenvollere Absicht besitzt. Haltung, Ausdauer, Aufmerksamkeit und&nbsp;</span><span style=\"font-size: 0.82rem;\">die Bereitschaft, auch dann weiterzumachen, wenn der eigene Körper längst eine&nbsp;</span><span style=\"font-size: 0.82rem;\">andere Meinung vertritt, waren mindestens ebenso wichtig wie Talent.</span></p><p>Von ihrer Mutter hatte Heledd den Umgang mit dem Bogen und ein Gespür für das Leben außerhalb befestigter Höfe mitbekommen.&nbsp;<span style=\"font-size: 0.82rem;\">Von Melyn lernte sie, </span><strong style=\"font-size: 0.82rem;\">eine Kriegerin zu sein</strong><span style=\"font-size: 0.82rem;\">.&nbsp;</span><span style=\"font-size: 0.82rem;\">Von ihrer Familie lernte sie, </span><strong style=\"font-size: 0.82rem;\">eine Ritterin zu sein</strong><span style=\"font-size: 0.82rem;\">.</span></p><p><span style=\"font-size: 0.82rem;\"><br></span></p><p>Heledd erhielt schließlich ihren Ritterschlag und trat in den Dienst ihres Hauses. Ihre ersten Jahre als Ritterin sollten allerdings erheblich unruhiger werden, als es ihre Ausbildung vielleicht hatte erwarten lassen.</p><br><p>Als junge Frau kämpfte sie im <strong>Krieg gegen Ceitheach</strong>.&nbsp;<span style=\"font-size: 0.82rem;\">Es war keine romantische Bewährungsprobe und&nbsp;</span><span style=\"font-size: 0.82rem;\">Heledd spricht bis heute selten in jener verklärenden Weise über den Krieg, wie&nbsp;</span><span style=\"font-size: 0.82rem;\">es Menschen tun, die ihn nur aus Liedern kennen. Sie kämpfte, erfüllte Befehle,&nbsp;</span><span style=\"font-size: 0.82rem;\">verlor Gefährten und lernte sehr früh, dass die großen Tugenden des Rittertums&nbsp;</span><span style=\"font-size: 0.82rem;\">besonders dann Bedeutung besitzen, wenn ihre Einhaltung unbequem wird.</span></p><br><p>Der Krieg machte Heledd nicht berühmt.&nbsp;<span style=\"font-size: 0.82rem;\">Er machte sie erfahren. N</span><span style=\"font-size: 0.82rem;\">ach seinem Ende kehrte sie nicht mit dem&nbsp;</span><span style=\"font-size: 0.82rem;\">Wunsch zurück, aus ihren Leistungen ein Amt oder politischen Einfluss&nbsp;</span><span style=\"font-size: 0.82rem;\">abzuleiten.&nbsp;</span><span style=\"font-size: 0.82rem;\">Sie wollte weiterhin Ritterin sein. D</span><span style=\"font-size: 0.82rem;\">aran hat sich in mehr als zwei Jahrzehnten&nbsp;</span><span style=\"font-size: 0.82rem;\">erstaunlich wenig geändert.</span></p><p>Heledd besitzt bis heute kein bedeutendes Hofamt. Sie verwaltet keine große Herrschaft und kommandiert keine Armee. Nach außen führt sie inzwischen beinahe das Leben einer <strong>fahrenden Ritterin</strong>.</p><p>&nbsp;<span style=\"font-size: 0.82rem;\">Ganz zufällig sind ihre Reisen allerdings&nbsp;</span><span style=\"font-size: 0.82rem;\">nicht.&nbsp;</span><span style=\"font-size: 0.82rem;\">Heledd besitzt die bemerkenswerte&nbsp;</span><span style=\"font-size: 0.82rem;\">Angewohnheit, immer dort aufzutauchen, wo es gerade unangenehm wird.&nbsp;</span><span style=\"font-size: 0.82rem;\">Wenn Wege unsicher werden, eine abgelegene&nbsp;</span><span style=\"font-size: 0.82rem;\">Herrschaft zusätzliche erfahrene Schwerter benötigt, Räuber Probleme </span><span style=\"font-size: 0.82rem;\">verursachen, ein Dorf Schutz braucht, irgendwo Männer fehlen oder eine Aufgabe&nbsp;</span><span style=\"font-size: 0.82rem;\">ansteht, für die ein erfahrener Ritter benötigt wird, besteht eine nicht&nbsp;</span><span style=\"font-size: 0.82rem;\">geringe Wahrscheinlichkeit, dass irgendwann Heledd Gafyr auftaucht.&nbsp;</span></p><p><span style=\"font-size: 0.82rem;\">Manchmal aus eigenem Entschluss.&nbsp;</span><span style=\"font-size: 0.82rem;\">Manchmal aufgrund einer Nachricht ihres B</span><span style=\"font-size: 0.82rem;\">ruders </span><strong style=\"font-size: 0.82rem;\">Rheinallt</strong><span style=\"font-size: 0.82rem;\">. N</span><span style=\"font-size: 0.82rem;\">cht selten dürfte auch ihr Cousin </span><strong style=\"font-size: 0.82rem;\">Sir Egon Gafyr</strong><span style=\"font-size: 0.82rem;\"> sehr genau wissen, wo&nbsp;</span><span style=\"font-size: 0.82rem;\">Heledd sich gerade befindet und wo eine Ritterin ihres Schlages nützlich wäre.</span></p><p>So entstand über die Jahre eine Art unausgesprochene Arbeitsteilung.&nbsp;<span style=\"font-size: 0.82rem;\">Rheinallt und Egon wissen, wo es brennt.&nbsp;</span><strong style=\"font-size: 0.82rem;\">Heledd&nbsp;</strong><strong style=\"font-size: 0.82rem;\">reitet hin.</strong></p><br><p>Sie empfindet das keineswegs als Herumschieben. Im Gegenteil. Ein festes Amt würde sie vermutlich erheblich stärker einengen. Heledd kann dort dienen, wo ihr Können gerade gebraucht wird, ohne sich dauerhaft mit Verwaltungsaufgaben beschäftigen zu müssen, für die<br>andere Menschen ohnehin besser geeignet sind.&nbsp;<span style=\"font-size: 0.82rem;\">Innerhalb Celtigerns Wacht hat ihr dies einen&nbsp;</span><span style=\"font-size: 0.82rem;\">soliden Ruf eingebracht.</span></p><br><p>Heledd Gafyr ist keine Gestalt großer Heldensagen. Kinder spielen vermutlich nicht auf den Straßen ihre berühmtesten Kämpfe nach. Außerhalb der Grafschaft kennt man ihren Namen vielleicht überhaupt nicht.</p><br><p><strong>In Celtigerns Wacht kennt man ihn.&nbsp;</strong><span style=\"font-size: 0.82rem;\">Vor allem Ritter, Waffenknechte und Menschen,&nbsp;</span><span style=\"font-size: 0.82rem;\">die schon einmal in einer schwierigen Lage mit ihr gearbeitet haben, wissen,&nbsp;</span><span style=\"font-size: 0.82rem;\">was sie bekommen, wenn Heledd eintrifft.</span></p><br><p>Keine großen Reden.&nbsp;<span style=\"font-size: 0.82rem;\">Keine Heldengeschichten.&nbsp;</span><span style=\"font-size: 0.82rem;\">Eine erfahrene Ritterin, die ihre Ausrüstung&nbsp;</span><span style=\"font-size: 0.82rem;\">abstellt, sich erklären lässt, was passiert ist, und anschließend fragt:&nbsp;</span><strong style=\"font-size: 0.82rem;\">„Was muss getan werden?“</strong></p><br><p>Mit der Zeit übernahm Heledd selbst Knappen. Unter ihnen befand sich schließlich die junge <strong>Oweta Draig</strong>, Enkelin Sir Meurig Draigs.&nbsp;<span style=\"font-size: 0.82rem;\">Heledd behandelte Oweta dabei nicht wie ein kostbares Kind des Hauses Draig. Sie nahm sie mit.&nbsp;</span><span style=\"font-size: 0.82rem;\">Auf Straßen. In Dörfer. Auf Wachen. Zu </span><span style=\"font-size: 0.82rem;\">Geleitdiensten. In schlechtes Wetter und unbequeme Nachtlager.&nbsp;</span><span style=\"font-size: 0.82rem;\">Sie verlangte von ihrer Knappin zunehmend </span><span style=\"font-size: 0.82rem;\">eigene Entscheidungen und erwartete, dass Oweta erklären konnte, weshalb sie&nbsp;</span><span style=\"font-size: 0.82rem;\">diese getroffen hatte. Lob verteilte Heledd sparsam. Verantwortung wesentlich&nbsp;</span><span style=\"font-size: 0.82rem;\">großzügiger.</span></p><br><p>Als Oweta siebzehn Jahre alt war, stellte Heledd schließlich fest, dass sie ihre Knappin immer häufiger wie eine junge Ritterin behandelte.&nbsp;<span style=\"font-size: 0.82rem;\">Also zog sie die Konsequenz.&nbsp;</span><strong style=\"font-size: 0.82rem;\">Sie&nbsp;</strong><strong style=\"font-size: 0.82rem;\">empfahl Oweta zum Ritterschlag.&nbsp;</strong><span style=\"font-size: 0.82rem;\">Dass <span style=\"font-weight: normal;\">nur selten</span>&nbsp;zuvor eine Frau des Hauses Draig&nbsp;</span><span style=\"font-size: 0.82rem;\">in diesem Alter Ritterin geworden war, beeindruckte Heledd wenig. Für sie&nbsp;</span><span style=\"font-size: 0.82rem;\">existierte nur eine relevante Frage:&nbsp;</span><span style=\"font-size: 0.82rem;\">War Oweta bereit?&nbsp;</span><span style=\"font-size: 0.82rem;\">Heledds Antwort lautete ja.</span></p><p>Nach Owet as Ritterschlag nahm Heledd ihre frühere Knappin nicht weiter unter ihre Fittiche. Sie behandelte sie fortan als Ritterin und damit als Standesgenossin. Ihre enge Bindung blieb bestehen, doch&nbsp;<span style=\"font-weight: normal;\">Heledd kehrte zu ihrem fahrenden Leben zurück.&nbsp;</span></p><p><span style=\"font-size: 0.82rem;\"><br></span></p><p><span style=\"font-size: 0.82rem;\">Auch mit vierundvierzig Jahren ist Heledd&nbsp;</span><span style=\"font-size: 0.82rem;\">unverheiratet.&nbsp;</span><span style=\"font-size: 0.82rem;\">Nicht aus Verbitterung und nicht aufgrund&nbsp;</span><span style=\"font-size: 0.82rem;\">eines tragischen Gelübdes.&nbsp;</span><strong style=\"font-size: 0.82rem;\">Es hat&nbsp;</strong><strong style=\"font-size: 0.82rem;\">sich schlicht niemals ein Mann gefunden, für den sie ihr Leben lieber&nbsp;</strong><strong style=\"font-size: 0.82rem;\">aufgegeben hätte als ihr Leben mit ihm zu teilen.</strong></p><br><p>Heledd lehnt Liebe oder Ehe nicht grundsätzlich ab. Sie besitzt lediglich wenig Verständnis für die Vorstellung, eine Frau müsse irgendwann heiraten, weil dies eben der nächste vorgesehene Schritt ihres Lebens sei.</p><br><p>Vielleicht heiratet sie irgendwann.&nbsp;<span style=\"font-size: 0.82rem;\">Vielleicht nicht.&nbsp;</span><span style=\"font-size: 0.82rem;\">Bis dahin gibt es Straßen, auf denen Ritter&nbsp;</span><span style=\"font-size: 0.82rem;\">gebraucht werden. I</span><span style=\"font-size: 0.82rem;\">rgendwo in Celtigerns Wacht brennt&nbsp;</span><span style=\"font-size: 0.82rem;\">schließlich immer etwas.</span></p>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [
+                {
+                  "title": "Ernst",
+                  "detail": "Heledd besitzt ein ernstes Wesen und nimmt sowohl ihren Stand als auch ihre Aufgaben ausgesprochen wichtig. Sie ist nicht humorlos, aber selten albern. Wer sie gut kennt, erkennt ihren Humor häufig eher an einem kaum sichtbaren Zucken ihres Mundwinkels als an lautem Lachen.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Ritterlich",
+                  "detail": "Für Heledd ist Rittertum weder gesellschaftlicher Schmuck noch romantisches Ideal. Es ist ihr Beruf, ihre Verpflichtung und ein wesentlicher Teil ihrer Identität. Sie fragt weniger danach, was einem Ritter zusteht, als danach, was von einem Ritter verlangt werden darf.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Praktisch",
+                  "detail": "Heledd interessiert sich wenig für unnötige Umwege. Gibt es ein Problem, möchte sie wissen, worin es besteht, welche Mittel vorhanden sind und was getan werden muss. Menschen, die lange darüber sprechen, weshalb etwas schwierig ist, ohne irgendwann mit der Arbeit zu beginnen, strapazieren ihre Geduld.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Anspruchsvoll",
+                  "detail": "Von Knappen und jungen Rittern erwartet Heledd viel. Fehler akzeptiert sie, solange daraus gelernt wird. Nachlässigkeit akzeptiert sie erheblich schlechter. Wer unter ihr dient, bekommt selten überschwängliches Lob – weiß dafür aber, dass ein „Sehr gut“ tatsächlich etwas bedeutet.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Verlässlich",
+                  "detail": "Wenn Heledd zusagt, dass sie kommt, kommt sie. Wenn sie erklärt, dass sie bleibt, bis eine Aufgabe erledigt ist, bleibt sie. Diese Verlässlichkeit ist einer der Hauptgründe für ihren guten Ruf innerhalb Celtigerns Wacht.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Unabhängig",
+                  "detail": "Heledd besitzt weder große Sehnsucht nach einem Amt noch nach einem Ehemann, der ihrem Leben Richtung geben soll. Sie weiß sehr genau, was sie tun möchte, und hatte bislang wenig Grund, dieses Leben grundlegend zu verändern.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Unbeeindruckt von Rang",
+                  "detail": "Heledd respektiert Hierarchien und kennt ihre Pflichten gegenüber ihren Herren. Titel allein beeindrucken sie jedoch wenig. Ein guter Ritter verdient ihren Respekt wesentlich schneller als ein bedeutender Adliger, der seine Aufgaben anderen überlässt.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Fürsorglich auf ihre Weise",
+                  "detail": "Heledd ist keine besonders zärtliche Frau. Ihre Fürsorge äußert sich darin, dass Ausrüstung kontrolliert ist, jemand genug gegessen hat, ein Verwundeter nicht weiterreitet und eine junge Knappin eine Aufgabe erhält, an der sie wachsen kann. Wer auf große Worte wartet, könnte lange warten. Wer Hilfe braucht, meist erheblich kürzer.",
+                  "icon": "✦"
+                }
+              ],
+              "extraSections": [],
+              "historyTitle": "Geschichte & Wirkung",
+              "historyText": "<p>Heledd Gafyr gehört nicht zu den großen Namen Celtigerns Wacht. Genau darin liegt ein wesentlicher Teil ihrer Bedeutung.&nbsp;Sie steht für jene Ritter, auf denen eine Grafschaft im Alltag tatsächlich beruht. Männer und Frauen, die keine Lieder benötigen, keine großen Ämter bekleiden und dennoch seit Jahrzehnten dort erscheinen, wo ihre Fähigkeiten gebraucht werden.</p><br><p>Der Krieg gegen Ceitheach gab ihr früh Erfahrung. Die folgenden Jahrzehnte machten aus Erfahrung Routine, ohne sie gleichgültig werden zu lassen. I<span style=\"font-size: 0.82rem;\">nnerhalb des Hauses Gafyr steht sie dabei </span><span style=\"font-size: 0.82rem;\">zwischen bemerkenswerten Persönlichkeiten. Ihr Vater Ferdynand lebte teilweise </span><span style=\"font-size: 0.82rem;\">im Schatten seines berühmteren Bruders Duncan. Ihr älterer Bruder Rheinallt </span><span style=\"font-size: 0.82rem;\">besitzt als Marschall ein wichtiges Amt. Ihr Cousin Egon trägt Verantwortung </span><span style=\"font-size: 0.82rem;\">für weit größere militärische Zusammenhänge.</span></p><br><p>Heledd scheint dieser Vergleich kaum zu beschäftigen.&nbsp;<span style=\"font-size: 0.82rem;\">Sie wollte niemals Sir Duncan sein.&nbsp;</span><span style=\"font-size: 0.82rem;\">Sie wollte auch niemals Marschall sein.&nbsp;</span><strong style=\"font-size: 0.82rem;\">Sie&nbsp;</strong><strong style=\"font-size: 0.82rem;\">wollte eine gute Ritterin sein.&nbsp;</strong><span style=\"font-size: 0.82rem;\">Dass ausgerechnet sie später </span><strong style=\"font-size: 0.82rem;\">Oweta Draig</strong><span style=\"font-size: 0.82rem;\">, eine der jüngsten Ritterinen in&nbsp;</span><span style=\"font-size: 0.82rem;\">der Geschichte der Frauen des Hauses Draig, ausbildete, ist deshalb beinahe&nbsp;</span><span style=\"font-size: 0.82rem;\">folgerichtig.</span></p><br><p>Heledd gab ihrer Knappin keinen legendären Namen mit.&nbsp;<span style=\"font-size: 0.82rem;\">Sie gab ihr ein Handwerk.</span></p>",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [
+                "Heledd kämpfte bereits als junge Ritterin im Krieg gegen Ceitheach.",
+                "Heledd kann hervorragend mit dem Bogen umgehen, obwohl sie sich selbst in erster Linie als klassische Ritterin betrachtet. Dafür dürfte vor allem ihre Mutter Niniel verantwortlich sein.",
+                "Ein „Gut“ von Heledd ist echtes Lob. Ein „Sehr gut“ sollte man sich vermutlich im Kalender markieren.",
+                "Sie besitzt eine hohe Toleranz für Regen, Schlamm, schlechte Betten und schlechtes Essen. Eine erstaunlich niedrige besitzt sie für Jammern darüber.",
+                "Wenn Rheinallt ihr eine Nachricht schickt, dass irgendwo „ein kleines Problem“ besteht, geht Heledd inzwischen davon aus, dass sie mindestens mehrere Wochen fort sein wird.",
+                "Ähnliches gilt für Nachrichten ihres Cousins Egon.",
+                "Sie hat keinerlei Problem damit, unter freiem Himmel zu schlafen, obwohl sie sich inzwischen problemlos angenehmere Unterkünfte leisten könnte.",
+                "Von ihrer Rittermutter Melyn hat sie vermutlich einige Trainingsmethoden übernommen, für die ehemalige Knappen bis heute wenig Dankbarkeit empfinden.",
+                "Ihr Verhältnis zu ihrem Vater Ferdynand ist von großem Respekt geprägt. Dass andere ihn häu-fig zuerst als „Duncans jüngeren Bruder“ wahrnehmen, dürfte Heledd wesentlich mehr stören als Ferdynand selbst.",
+                "Rheinallt und Heledd verstehen sich aufgrund ihres ähnlichen Pflichtbewusstseins grundsätzlich gut. Heledd hält ihren Bruder allerdings gelegentlich für noch ernster als sich selbst, was ange-sichts Heledds Persönlichkeit eine bemerkenswerte Leistung darstellt.",
+                "Über Roderic kann sie sehr lange schweigen.",
+                "Dieses Schweigen wird innerhalb der Familie gewöhnlich als vollständiger Kommentar verstan-den.",
+                "Heledd besitzt keinen grundsätzlichen Widerwillen gegen eine Ehe. Sie hat bislang lediglich kei-nen überzeugenden Grund gefunden, ihr Leben für eine einzugehen.",
+                "Auf die Frage, weshalb sie mit vierundvierzig noch immer unverheiratet sei, könnte ihre voll-kommen ernst gemeinte Gegenfrage schlicht lauten: „Weshalb sollte ich verheiratet sein?“",
+                "Sie betrachtet Oweta mit stillem Stolz, würde das allerdings vermutlich eher dadurch ausdrü-cken, dass sie der jungen Ritterin eine schwierige Aufgabe zutraut, als ihr eine lange Rede dar-über zu halten.",
+                "Sollte jemand Oweta als „das Mädchen, das Heledd ausgebildet hat“ bezeichnen, würde Heledd vermutlich korrigieren: „Lady Oweta.“",
+                "Fragt man in Gwynthor nach Heledd Gafyr, lautet eine der treffendsten Beschreibungen vermutlich: Wenn irgendwo wirklich Arbeit anfällt, wird sie früher oder später dort auftauchen."
+              ],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Verbindungen",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Melyn Saethwyr",
+                  "detail": "Rittermutter",
+                  "image": "https://64.media.tumblr.com/3b78b941139bfb70af690c6c355db2c7/d637d5597cd1ad6d-d5/s250x400/e96325aa24fe3a084bed5cc7fab8d88aa5abb023.pnj",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Oweta Draig",
+                  "detail": "frühere Knappin",
+                  "image": "https://64.media.tumblr.com/fb9e2ea658858eb078b7a48e3cd06152/5009d73b71942c23-b5/s250x400/59f3b85638db303cf656a36d5d97b6aa5f898ea0.pnj",
+                  "imageFormat": "portrait"
+                }
+              ],
+              "documentsTitle": "Eigentum & Besitz",
+              "documents": [],
+              "footer": "Personenakte · Heledd"
+            }
+          }
+        }
+      },
+      {
+        "id": "roderic-gafyr",
+        "worldPersonId": "person--haus-gafyr--roderic-gafyr",
+        "name": "Roderic",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/roderic-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "kelyddon-gafyr",
+        "worldPersonId": "person--haus-gafyr--kelyddon-gafyr",
+        "name": "Kelyddon",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arwydd/kelyddon-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "alicyn-draig",
+        "worldPersonId": "person--haus-draig--alicyn-draig",
+        "name": "Alicyn Draig",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/alicyn-draig.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-draig",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "tudwallon-lwynog",
+        "worldPersonId": "person--haus-llwynog--tudwallon-lwynog",
+        "name": "Tudwallon Llwynog",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/tudwallon-lwynog.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-llwynog",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die historische technische ID bleibt zur Datenkompatibilität unverändert; Hausname und Weltidentität verwenden die kanonische Schreibweise Llwynog.",
+        "extensions": {}
+      },
+      {
+        "id": "ffion-gwefrydd",
+        "worldPersonId": "person--haus-gwefrydd--ffion-gwefrydd",
+        "name": "Ffion Gwefrydd",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/ffion-gwefrydd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwefrydd",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "eleri-marwolaeth",
+        "worldPersonId": "person--haus-marwolaeth--eleri-marwolaeth",
+        "name": "Eleri Marwolaeth",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/eleri-marwolaeth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marwolaeth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "izolda-arwydd",
+        "worldPersonId": "person--haus-arwydd--izolda-arwydd",
+        "name": "Izolda Arwydd",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1701",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arwydd/izolda-arwydd.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arwydd",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "alwyn-gafyr",
+        "worldPersonId": "person--haus-gafyr--alwyn-gafyr",
+        "name": "Alwyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/alwyn-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rhys-gafyr",
+        "worldPersonId": "person--haus-gafyr--rhys-gafyr",
+        "name": "Rhys",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/rhys-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "skywyn-gafyr",
+        "worldPersonId": "person--haus-gafyr--skywyn-gafyr",
+        "name": "Skywyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/skywyn-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwenna-crafanc",
+        "worldPersonId": "person--haus-crafanc--gwenna-crafanc",
+        "name": "Gwenna Crafanc",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/gwenna-crafanc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-crafanc",
+        "familyRole": "ward",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Mündel Egon Gafyrs.",
+        "extensions": {}
+      },
+      {
+        "id": "slevin-gafyr",
+        "worldPersonId": "person--haus-gafyr--slevin-gafyr",
+        "name": "Slevin",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/slevin-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "lefraye-gafyr",
+        "worldPersonId": "person--haus-gafyr--lefraye-gafyr",
+        "name": "Lefraye",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/lefraye-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "rheu-gafyr",
+        "worldPersonId": "person--haus-gafyr--rheu-gafyr",
+        "name": "Rheu",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/rheu-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "braith-gafyr-1724",
+        "worldPersonId": "person--haus-gafyr--braith-gafyr-1724",
+        "name": "Braith",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/braith-gafyr-1724.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gildas-gafyr",
+        "worldPersonId": "person--haus-gafyr--gildas-gafyr",
+        "name": "Gildas",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              [
+                "Vollständiger Name",
+                "Gildas"
+              ],
+              [
+                "Haus",
+                "Haus Gafyr"
+              ],
+              [
+                "Titel / Anrede",
+                "Sir"
+              ],
+              [
+                "Geboren",
+                "1722"
+              ],
+              [
+                "Geburtsort",
+                "Gwynthor"
+              ],
+              [
+                "Gestorben",
+                "Lebend"
+              ],
+              [
+                "Alter im Jahr 1740",
+                "18 Jahre"
+              ],
+              [
+                "Geschlecht",
+                "Männlich"
+              ],
+              [
+                "Familienstand",
+                "ledig"
+              ],
+              [
+                "Rang / Stand",
+                "Ritter"
+              ],
+              [
+                "Tätigkeit",
+                ""
+              ],
+              [
+                "Wohnsitz",
+                "Gwynthor"
+              ]
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Biografie",
+              "biographyText": "Gildas Gafyr ist ein achtzehnjähriger Ritter aus dem alten Rittergeschlecht Gafyr und gehört zu einem Seitenzweig jenes Hauses, das seit Generationen zu den treuesten Gefolgsleuten der Draigs zählt. Er ist der Enkel eines Vetters von Sir Duncan Gafyr und damit zwar mit dem Ritterfürst verwandt, gehört jedoch nicht dessen unmittelbarer Familie an.<br><br>Sein Vater Kelyddon Gafyr dient als Kämmerer der ritterlichen Herrschaft des Hauses Gafyr. Sein Großvater Hywell Gafyr bekleidet dort das Amt des Justiziars. Seine Mutter Izolda, geborene Arwydd, entstammt ebenfalls einem Rittergeschlecht Celtigerns Wacht.<br><br>Gildas wuchs dadurch in einer Familie auf, in der Rittertum niemals nur mit Waffen, Turnieren und Ruhm verbunden wurde. Sein Vater verwaltete Vorräte, Einkünfte und Ausgaben seines Hauses. Sein Großvater schlichtete Streitigkeiten, bereitete Urteile vor und wachte über Recht und Ordnung. Schon als Junge erlebte Gildas Männer, die hohe Ämter bekleideten und dennoch einen erheblichen Teil ihres Lebens mit Arbeiten verbrachten, die wenig heldenhaft erschienen.<br><br><p><span style=\"font-size: 0.82rem;\">Für ihn entstand daraus früh ein einfaches\nVerständnis von Adel:</span></p>\n\n<p data-start=\"1205\" data-end=\"1283\"><strong data-start=\"1205\" data-end=\"1283\">Ein\nhöherer Rang bedeutet nicht weniger Pflichten. Er bedeutet mehr davon.</strong><o:p></o:p></p><p data-start=\"1205\" data-end=\"1283\"><span style=\"font-size: 0.82rem;\">Während andere Jungen von großen Schlachten\nund ruhmreichen Abenteuern träumten, faszinierte Gildas vor allem die\nVorstellung des Ritters selbst. Ein Mann, dem andere vertrauen konnten. Der\nsein Wort hielt, Schwächere beschützte, seinem Herrn diente und bereit war,\nVerantwortung zu übernehmen, wenn andere sie lieber von sich schoben.</span></p>Zwei Männer prägten dieses Bild für ihn besonders: Sir Duncan Gafyr und Sir Egon Gafyr.<br><br>Gildas bewundert Sir Duncan seit seiner Kindheit. Nicht allein wegen dessen Fähigkeiten mit der Waffe, sondern wegen seiner Disziplin. Duncan muss niemandem erklären, dass er ein Ritter ist. Er zeigt es durch sein Verhalten, seine Pflichterfüllung und die Selbstverständlichkeit, mit der er Verantwortung übernimmt. Für Gildas&nbsp;<span style=\"font-size: 0.82rem;\">verkörpert der Waffenmeister beinahe alles, was einen vollkommenen Ritter&nbsp;</span><span style=\"font-size: 0.82rem;\">ausmacht: Können ohne Prahlerei, Härte ohne Grausamkeit und Autorität, die&nbsp;</span><span style=\"font-size: 0.82rem;\">nicht erst durch einen Titel geschaffen werden muss.</span><div><br>Sir Egon verkörpert für ihn eine andere Seite&nbsp;<span style=\"font-size: 0.82rem;\">desselben Ideals. Der Marschall Celtigerns Wacht ist für Gildas der Beweis,&nbsp;</span><span style=\"font-size: 0.82rem;\">dass Rittertum nicht beim Kämpfen endet. Egon führt Männer, kümmert sich um die<span style=\"font-weight: normal;\">&nbsp;</span></span><span style=\"font-size: 0.82rem;\">Sicherheit der Grafschaft, übernimmt Verantwortung für Untergebene und besitzt&nbsp;</span><span style=\"font-size: 0.82rem;\">trotz seines Ranges eine Bodenständigkeit, die Gildas ausgesprochen schätzt.</span></div><div><br>Wenn Gildas darüber nachdenkt, was für ein Ritter er eines Tages sein möchte, denkt er häufig an diese beiden Männer.<br><br>Von Duncan möchte er die Disziplin und Meisterschaft besitzen. Von Egon die Führungsstärke und Menschlichkeit.<br><br>Entsprechend ernst nahm Gildas seine eigene Ausbildung. Er war niemals der talentierteste junge Kämpfer seines Hauses und besitzt weder außergewöhnliche Körperkraft noch eine besondere Begabung, die ihn von anderen Rittern deutlich abhebt. Was ihm an natürlichem Talent fehlt, versucht er durch Disziplin auszugleichen. Übungen wiederholt er, bis er sie beherrscht. Fehler ärgern ihn vor allem dann, wenn er weiß, dass er sie durch bessere Vorbereitung hätte verhindern können.<br><br>Seinen Ritterschlag betrachtete Gildas deshalb niemals als selbstverständliches Recht seiner Geburt.<br><br>Für ihn war er etwas, das verdient werden musste.<br><br>Als er schließlich selbst zum Ritter geschlagen wurde, gehörte dieser Augenblick zu den stolzesten seines bisherigen<span style=\"font-weight: normal;\">&nbsp;</span>Lebens. Nicht weil er sich seitdem für bedeutender hält als andere, sondern<span style=\"font-weight: normal;\">&nbsp;&nbsp;</span>weil er darin die Bestätigung sieht, dass seine bisherigen Lehrer ihn für&nbsp;würdig hielten, den Stand zu tragen, dem er seit seiner Kindheit nacheiferte.<br><br>Gerade deshalb besitzt Gildas wenig Verständnis für junge Adlige, die Ritterwürde vor allem als Titel betrachten.<br><br>Kaum jemand verkörpert dieses Problem für ihn stärker als Gawain Draig.</div>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [
+                {
+                  "title": "Pflichtbewusst",
+                  "detail": "Gildas nimmt Aufgaben ernst und erledigt sie gewissenhaft. Hat er eine Verantwortung übernommen, betrachtet er sie nicht als beendet, bis sie tatsächlich erfüllt wurde.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Diszipliniert",
+                  "detail": "Er besitzt keine außergewöhnlichen natürlichen Talente und weiß das selbst. Deshalb verlässt er sich auf Übung, Vorbereitung und Beharrlichkeit. Was er heute nicht beherrscht, wird morgen erneut geübt.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Ritterstolz",
+                  "detail": "Sein Ritterschlag bedeutet Gildas ausgesprochen viel. Er betrachtet Ritterwürde nicht als gesellschaftlichen Rang, sondern als Verpflichtung und reagiert empfindlich auf Ritter, die seiner Ansicht nach deren Werte nicht ernst nehmen.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Streng mit sich selbst",
+                  "detail": "Gildas erwartet von sich mindestens ebenso viel wie von anderen. Eigene Fehler beschäftigen ihn lange, insbesondere wenn mangelnde Vorbereitung oder Nachlässigkeit dafür verantwortlich waren.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Urteilend",
+                  "detail": "Er beobachtet Menschen aufmerksam und bildet sich schnell eine Meinung über ihren Charakter. Dabei liegt er nicht immer falsch – aber häufig glaubt er bereits genug zu wissen, bevor er tatsächlich genug gesehen hat.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Unnachsichtig gegenüber Verwöhntheit",
+                  "detail": "Menschen, die Arbeit selbstverständlich anderen überlassen, ihren Rang ausnutzen oder Privilegien als natürliches Recht betrachten, gehen Gildas ausgesprochen schnell auf die Nerven. Gerade deshalb fällt ihm der Umgang mit Gawain schwer.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Verlässlich",
+                  "detail": "Wer Gildas einmal sein Vertrauen gewonnen hat, kann sich auf ihn verlassen. Er hält Absprachen ein, erscheint pünktlich und würde einen Gefährten nur äußerst ungern mit einer Aufgabe alleinlassen.",
+                  "icon": "✦"
+                },
+                {
+                  "title": "Ernst",
+                  "detail": "Gildas besitzt durchaus Humor, wirkt im Alltag jedoch häufig ernster als andere junge Männer seines Alters. Besonders während einer Aufgabe fällt es ihm schwer, Albernheiten einfach als Albernheiten stehenzulassen.",
+                  "icon": "✦"
+                }
+              ],
+              "extraSections": [],
+              "historyTitle": "Hintergrund",
+              "historyText": "Gildas befindet sich an einem interessanten Punkt seines Lebens. Seine Ausbildung ist abgeschlossen und der Ritterschlag erfolgt, doch eigentlich beginnt erst jetzt jener Teil, von dem seine Lehrer ihm immer erzählt haben.<br><br>Er muss beweisen, was für ein Ritter er tatsächlich sein wird.<br><br>Dabei besitzt er eine sehr klare Vorstellung davon, welchen Ansprüchen ein Ritter gerecht werden sollte. Noch fehlt ihm jedoch die Lebenserfahrung seines Großvaters Hywell oder seiner Vorbilder Duncan und Egon, um zu erkennen, dass Menschen diesen Ansprüchen auf sehr unterschiedliche Weise gerecht werden können.<br><br>Gerade seine Bewunderung für Sir Duncan und Sir Egon könnte deshalb irgendwann dazu führen, dass Gildas sein eigenes Ritterbild hinterfragen muss.",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [
+                "•\tSir Duncan Gafyr und Sir Egon Gafyr sind Gildas' große ritterliche Vorbilder. Er bewundert sie vor allem für deren Disziplin, Können und Pflichtbewusstsein, Führungsstärke, Verantwortungsgefühl und Bodenständigkeit.",
+                "•\tLob von Duncan oder Egon bedeutet Gildas erheblich mehr als die Anerkennung irgendeines hochrangigen Adeligen.",
+                "•\tGildas betrachtet seinen eigenen Ritterschlag als eine der größten Auszeichnungen seines bisherigen Lebens.",
+                "•\tDass Sir Duncan Gawain dennoch als Ritter anerkennt, bringt Gildas in einen gewissen inneren Konflikt: Er zweifelt an Gawain, möchte aber nicht an Duncan zweifeln.",
+                "•\tEr ist fast immer zu früh bei Übungen und empfindet „pünktlich“ insgeheim bereits als ein wenig verspätet.",
+                "•\tHat die unangenehme Angewohnheit, bei Ausreden kurz die Brauen zusammenzuziehen, wodurch jeder sofort erkennt, dass er kein Wort glaubt.",
+                "•\tBesitzt durchaus Humor, lacht aber wesentlich häufiger über trockene Bemerkungen als über offensichtliche Scherze.",
+                "•\tWürde niemals behaupten, dass eine Arbeit „unter seiner Würde“ sei. Dieser Satz dürfte einer der schnellsten Wege sein, ihn gegen sich aufzubringen.",
+                "•\tVersucht sich bei wichtigen Entscheidungen manchmal vorzustellen, was Sir Duncan oder Sir Egon an seiner Stelle tun würden."
+              ],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Verbindungen",
+              "connections": [],
+              "documentsTitle": "Eigentum & Besitz",
+              "documents": [],
+              "footer": "Personenakte · Gildas"
+            }
+          }
+        }
+      },
+      {
+        "id": "uthyr-gafyr",
+        "worldPersonId": "person--haus-gafyr--uthyr-gafyr",
+        "name": "Uthyr",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gafyr/uthyr-gafyr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gafyr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-garym-fiodhna",
+        "participantIds": [
+          "garym-gafyr",
+          "fiodhna-talamh"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-kynwrig-elinowyn",
+        "participantIds": [
+          "kynwrig-gafyr",
+          "elinowyn-draig"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rheidwyn-heulwen",
+        "participantIds": [
+          "rheidwyn-gafyr",
+          "heulwen-gwefrydd"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-sianwyn-kynwrig-draig",
+        "participantIds": [
+          "sianwyn-gafyr",
+          "kynwrig-draig"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-maldwyn-eurolwyn",
+        "participantIds": [
+          "maldwyn-gafyr",
+          "eurolwyn-draig"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-mairwyn-limwris",
+        "participantIds": [
+          "mairwyn-gafyr",
+          "limwris-saethwyr"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-mathonwy-lynesse",
+        "participantIds": [
+          "mathonwy-gafyr",
+          "lynesse-wyrm-1598"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-igraine-gwrddnei",
+        "participantIds": [
+          "igraine-gafyr",
+          "gwrddnei-gwyvern"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-isotta-greidyawl",
+        "participantIds": [
+          "isotta-gafyr",
+          "greidyawl-gwefrydd"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-hwyvel-olwen",
+        "participantIds": [
+          "hwyvel-gafyr",
+          "olwen-draig"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rhiannon-grippiud",
+        "participantIds": [
+          "rhiannon-gafyr",
+          "grippiud-creyr"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gerwyn-siobhan",
+        "participantIds": [
+          "gerwyn-gafyr",
+          "siobhan-gallchobhair"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-braith-carnedyr",
+        "participantIds": [
+          "braith-gafyr-1648",
+          "carnedyr-aderyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-uther-owena",
+        "participantIds": [
+          "uther-gafyr",
+          "owena-tir-addawol"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-duncan-morfudd",
+        "participantIds": [
+          "duncan-gafyr",
+          "morfudd-gwialen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-bronwyn-grufydd",
+        "participantIds": [
+          "bronwyn-gafyr",
+          "grufydd-aderyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-ferydnand-niniel",
+        "participantIds": [
+          "ferydnand-gafyr",
+          "niniel-mwyalchen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-hywell-tallula",
+        "participantIds": [
+          "hywell-gafyr",
+          "tallula-eirce"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-egon-alicyn",
+        "participantIds": [
+          "egon-gafyr",
+          "alicyn-draig"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-aerwyn-tudwallon",
+        "participantIds": [
+          "aerwyn-gafyr",
+          "tudwallon-lwynog"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rheinallt-ffion",
+        "participantIds": [
+          "rheinallt-gafyr",
+          "ffion-gwefrydd"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-roderic-eleri",
+        "participantIds": [
+          "roderic-gafyr",
+          "eleri-marwolaeth"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-kelyddon-izolda",
+        "participantIds": [
+          "kelyddon-gafyr",
+          "izolda-arwydd"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-kynwrig-gafyr",
+        "childId": "kynwrig-gafyr",
+        "parentIds": [
+          "garym-gafyr",
+          "fiodhna-talamh"
+        ],
+        "partnershipId": "marriage-garym-fiodhna",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rheidwyn-gafyr",
+        "childId": "rheidwyn-gafyr",
+        "parentIds": [
+          "kynwrig-gafyr",
+          "elinowyn-draig"
+        ],
+        "partnershipId": "marriage-kynwrig-elinowyn",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Zwischen Kynwrigs Generation und diesen Nachkommen fehlen einzelne Überlieferungsglieder.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-sianwyn-gafyr",
+        "childId": "sianwyn-gafyr",
+        "parentIds": [
+          "kynwrig-gafyr",
+          "elinowyn-draig"
+        ],
+        "partnershipId": "marriage-kynwrig-elinowyn",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Zwischen Kynwrigs Generation und diesen Nachkommen fehlen einzelne Überlieferungsglieder.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-maldwyn-gafyr",
+        "childId": "maldwyn-gafyr",
+        "parentIds": [
+          "rheidwyn-gafyr",
+          "heulwen-gwefrydd"
+        ],
+        "partnershipId": "marriage-rheidwyn-heulwen",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Die Vorlage markiert hier eine weitere nicht vollständig überlieferte Folge.",
+        "extensions": {
+          "timeJumpId": "gap-rheidwyn-maldwyn"
+        }
+      },
+      {
+        "id": "parentage-mairwyn-gafyr",
+        "childId": "mairwyn-gafyr",
+        "parentIds": [
+          "rheidwyn-gafyr",
+          "heulwen-gwefrydd"
+        ],
+        "partnershipId": "marriage-rheidwyn-heulwen",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Die Vorlage markiert hier eine weitere nicht vollständig überlieferte Folge.",
+        "extensions": {
+          "timeJumpId": "gap-rheidwyn-maldwyn"
+        }
+      },
+      {
+        "id": "parentage-mathonwy-gafyr",
+        "childId": "mathonwy-gafyr",
+        "parentIds": [
+          "maldwyn-gafyr",
+          "eurolwyn-draig"
+        ],
+        "partnershipId": "marriage-maldwyn-eurolwyn",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Die belegte Linie setzt nach mehreren Jahrhunderten wieder ein.",
+        "extensions": {
+          "timeJumpId": "gap-maldwyn-mathonwy"
+        }
+      },
+      {
+        "id": "parentage-igraine-gafyr",
+        "childId": "igraine-gafyr",
+        "parentIds": [
+          "maldwyn-gafyr",
+          "eurolwyn-draig"
+        ],
+        "partnershipId": "marriage-maldwyn-eurolwyn",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Die belegte Linie setzt nach mehreren Jahrhunderten wieder ein.",
+        "extensions": {
+          "timeJumpId": "gap-maldwyn-mathonwy"
+        }
+      },
+      {
+        "id": "parentage-isotta-gafyr",
+        "childId": "isotta-gafyr",
+        "parentIds": [
+          "maldwyn-gafyr",
+          "eurolwyn-draig"
+        ],
+        "partnershipId": "marriage-maldwyn-eurolwyn",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Die belegte Linie setzt nach mehreren Jahrhunderten wieder ein.",
+        "extensions": {
+          "timeJumpId": "gap-maldwyn-mathonwy"
+        }
+      },
+      {
+        "id": "parentage-hwyvel-gafyr",
+        "childId": "hwyvel-gafyr",
+        "parentIds": [
+          "mathonwy-gafyr",
+          "lynesse-wyrm-1598"
+        ],
+        "partnershipId": "marriage-mathonwy-lynesse",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhiannon-gafyr",
+        "childId": "rhiannon-gafyr",
+        "parentIds": [
+          "mathonwy-gafyr",
+          "lynesse-wyrm-1598"
+        ],
+        "partnershipId": "marriage-mathonwy-lynesse",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gerwyn-gafyr",
+        "childId": "gerwyn-gafyr",
+        "parentIds": [
+          "hwyvel-gafyr",
+          "olwen-draig"
+        ],
+        "partnershipId": "marriage-hwyvel-olwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-braith-gafyr-1648",
+        "childId": "braith-gafyr-1648",
+        "parentIds": [
+          "hwyvel-gafyr",
+          "olwen-draig"
+        ],
+        "partnershipId": "marriage-hwyvel-olwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-uther-gafyr",
+        "childId": "uther-gafyr",
+        "parentIds": [
+          "hwyvel-gafyr",
+          "olwen-draig"
+        ],
+        "partnershipId": "marriage-hwyvel-olwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-duncan-gafyr",
+        "childId": "duncan-gafyr",
+        "parentIds": [
+          "gerwyn-gafyr",
+          "siobhan-gallchobhair"
+        ],
+        "partnershipId": "marriage-gerwyn-siobhan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-bronwyn-gafyr",
+        "childId": "bronwyn-gafyr",
+        "parentIds": [
+          "gerwyn-gafyr",
+          "siobhan-gallchobhair"
+        ],
+        "partnershipId": "marriage-gerwyn-siobhan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-ferydnand-gafyr",
+        "childId": "ferydnand-gafyr",
+        "parentIds": [
+          "gerwyn-gafyr",
+          "siobhan-gallchobhair"
+        ],
+        "partnershipId": "marriage-gerwyn-siobhan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-hywell-gafyr",
+        "childId": "hywell-gafyr",
+        "parentIds": [
+          "uther-gafyr",
+          "owena-tir-addawol"
+        ],
+        "partnershipId": "marriage-uther-owena",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-egon-gafyr",
+        "childId": "egon-gafyr",
+        "parentIds": [
+          "duncan-gafyr",
+          "morfudd-gwialen"
+        ],
+        "partnershipId": "marriage-duncan-morfudd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-aerwyn-gafyr",
+        "childId": "aerwyn-gafyr",
+        "parentIds": [
+          "duncan-gafyr",
+          "morfudd-gwialen"
+        ],
+        "partnershipId": "marriage-duncan-morfudd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rheinallt-gafyr",
+        "childId": "rheinallt-gafyr",
+        "parentIds": [
+          "ferydnand-gafyr",
+          "niniel-mwyalchen"
+        ],
+        "partnershipId": "marriage-ferydnand-niniel",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-heledd-gafyr",
+        "childId": "heledd-gafyr",
+        "parentIds": [
+          "ferydnand-gafyr",
+          "niniel-mwyalchen"
+        ],
+        "partnershipId": "marriage-ferydnand-niniel",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-roderic-gafyr",
+        "childId": "roderic-gafyr",
+        "parentIds": [
+          "ferydnand-gafyr",
+          "niniel-mwyalchen"
+        ],
+        "partnershipId": "marriage-ferydnand-niniel",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-kelyddon-gafyr",
+        "childId": "kelyddon-gafyr",
+        "parentIds": [
+          "hywell-gafyr",
+          "tallula-eirce"
+        ],
+        "partnershipId": "marriage-hywell-tallula",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-alwyn-gafyr",
+        "childId": "alwyn-gafyr",
+        "parentIds": [
+          "egon-gafyr",
+          "alicyn-draig"
+        ],
+        "partnershipId": "marriage-egon-alicyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhys-gafyr",
+        "childId": "rhys-gafyr",
+        "parentIds": [
+          "egon-gafyr",
+          "alicyn-draig"
+        ],
+        "partnershipId": "marriage-egon-alicyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-skywyn-gafyr",
+        "childId": "skywyn-gafyr",
+        "parentIds": [
+          "egon-gafyr",
+          "alicyn-draig"
+        ],
+        "partnershipId": "marriage-egon-alicyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwenna-crafanc",
+        "childId": "gwenna-crafanc",
+        "parentIds": [
+          "egon-gafyr"
+        ],
+        "partnershipId": "",
+        "type": "foster",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gwenna Crafanc ist in der Quelle ausdrücklich als Egons Mündel verzeichnet.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-slevin-gafyr",
+        "childId": "slevin-gafyr",
+        "parentIds": [
+          "rheinallt-gafyr",
+          "ffion-gwefrydd"
+        ],
+        "partnershipId": "marriage-rheinallt-ffion",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-lefraye-gafyr",
+        "childId": "lefraye-gafyr",
+        "parentIds": [
+          "rheinallt-gafyr",
+          "ffion-gwefrydd"
+        ],
+        "partnershipId": "marriage-rheinallt-ffion",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rheu-gafyr",
+        "childId": "rheu-gafyr",
+        "parentIds": [
+          "roderic-gafyr",
+          "eleri-marwolaeth"
+        ],
+        "partnershipId": "marriage-roderic-eleri",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-braith-gafyr-1724",
+        "childId": "braith-gafyr-1724",
+        "parentIds": [
+          "roderic-gafyr",
+          "eleri-marwolaeth"
+        ],
+        "partnershipId": "marriage-roderic-eleri",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gildas-gafyr",
+        "childId": "gildas-gafyr",
+        "parentIds": [
+          "kelyddon-gafyr",
+          "izolda-arwydd"
+        ],
+        "partnershipId": "marriage-kelyddon-izolda",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-uthyr-gafyr",
+        "childId": "uthyr-gafyr",
+        "parentIds": [
+          "kelyddon-gafyr",
+          "izolda-arwydd"
+        ],
+        "partnershipId": "marriage-kelyddon-izolda",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-gafyr",
+        "name": "Haus Gafyr",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-talamh",
+        "name": "Haus Ui Talamh",
+        "motto": "",
+        "emblem": "assets/images/houses/Antike Crannath Clans/haus-ui-talamh.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-draig",
+        "name": "Haus Draig",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-draig.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-gwefrydd",
+        "name": "Haus Gwefrydd",
+        "motto": "",
+        "emblem": "assets/images/houses/Artus Streben/haus-gwefrydd.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-saethwyr",
+        "name": "Haus Saethwyr",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-wyrm",
+        "name": "Haus Wyrm",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-wyrm.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-gwyvern",
+        "name": "Haus Gwyvern",
+        "motto": "",
+        "emblem": "assets/images/houses/Gwendolyns Ufer/haus-gwyvern.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-creyr",
+        "name": "Haus Créyr",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-gallchobhair",
+        "name": "Haus Gallchobhair",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-aderyn",
+        "name": "Haus Aderyn",
+        "motto": "",
+        "emblem": "assets/images/houses/Tal der Milane/haus-aderyn.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-tir-addawol",
+        "name": "Haus Tir Addawol",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-gwialen",
+        "name": "Haus Gwialen",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/Schimmerküste/haus-gwialen.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-llwynog",
+        "name": "Haus Llwynog",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-mwyalchen",
+        "name": "Haus Mwyalchen",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-eirce",
+        "name": "Haus Eirce",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-marwolaeth",
+        "name": "Haus Marwolaeth",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-crafanc",
+        "name": "Haus Crafanc",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-arwydd",
+        "name": "Haus Arwydd",
+        "motto": "",
+        "emblem": "assets/images/houses/Rhonwens Tränen/haus-arwydd.png",
+        "status": "active",
+        "extensions": {}
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-draig-sianwyn",
+        "name": "Haus Draig",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-sianwyn-kynwrig-draig",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-draig",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-draig",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-saethwyr-mairwyn",
+        "name": "Haus Saethwyr",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-mairwyn-limwris",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-saethwyr",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-saethwyr",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-gwyvern",
+        "name": "Haus Gwyvern",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-igraine-gwrddnei",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-gwyvern",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-gwyvern",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-gwefrydd",
+        "name": "Haus Gwefrydd",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-isotta-greidyawl",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-gwefrydd",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-gwefrydd",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-creyr",
+        "name": "Haus Créyr",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-rhiannon-grippiud",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-creyr",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-creyr",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-aderyn-braith",
+        "name": "Haus Aderyn",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-braith-carnedyr",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-aderyn",
+        "emblem": "assets/images/houses/Tal der Milane/haus-aderyn.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-aderyn",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-aderyn-bronwyn",
+        "name": "Haus Aderyn",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-bronwyn-grufydd",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-aderyn",
+        "emblem": "assets/images/houses/Tal der Milane/haus-aderyn.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-aderyn",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-lwynog",
+        "name": "Haus Llwynog",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-aerwyn-tudwallon",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-llwynog",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-llwynog",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-rheidwyn-maldwyn",
+        "parentPartnershipId": "marriage-rheidwyn-heulwen",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "maldwyn-gafyr",
+          "mairwyn-gafyr"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1249",
+        "label": "Die nächste belegte Generation beginnt mit Maldwyn und Mairwyn",
+        "notes": "Die Vorlage kennzeichnet zwischen Rheidwyns Generation und Maldwyn/Mairwyn eine nicht einzeln benannte Folge.",
+        "extensions": {}
+      },
+      {
+        "id": "gap-maldwyn-mathonwy",
+        "parentPartnershipId": "marriage-maldwyn-eurolwyn",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "mathonwy-gafyr",
+          "igraine-gafyr",
+          "isotta-gafyr"
+        ],
+        "years": 281,
+        "fromYear": "1312",
+        "toYear": "1593",
+        "label": "Die belegte Linie setzt 1593 wieder ein",
+        "notes": "Die dazwischenliegenden Generationen sind in der Vorlage nicht einzeln benannt.",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-kynwrig-elinowyn",
+      "houseId": "house-gafyr",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.8,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "garym-gafyr",
+      "orientation": "vertical",
+      "ancestorDepth": 12,
+      "descendantDepth": 12,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "sourceNote": "Personen, Portraitzuordnungen, Lebensdaten und Beziehungen nach der bereitgestellten Gafyr-Tabelle und Stammbaumgrafik. Querverbindungen zu Wyrm, Arwydd, Llwynog und zum Almanach verwenden gemeinsame feste Personen-IDs. Tudwallons historische technische ID bleibt erhalten; sichtbarer Hausname, Haus-ID, Zielakte und Weltidentität sind auf Llwynog vereinheitlicht. Revision 3 ergänzt das belegte Gwialen-Wappen an der gemeinsamen Ehe Duncan/Morfudd. Revision 4 übernimmt Tallulas individuelles Porträt aus ihrer ausgearbeiteten Ua’Eirce-Gegenakte.",
+      "blankFamily": false,
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Gafyr O'Gwynthor",
+        "housePage": true,
+        "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gafyr/assets/ritter.png",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "description": "Haus Gafyr ist ein Ritterfürstenhaus aus Gwynthor und Vasall der Draigs. Es herrscht über nördliche Gebiete der Region. Ritterdienst, Ziegenzucht, Holz und Erz bilden die Grundlagen seiner Stellung.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Gafyr O'Gwynthor"
+          ],
+          [
+            "Rang",
+            "Ritterfürst"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Duncan Gafyr"
+          ],
+          [
+            "Erbe",
+            "Egon Gafyr"
+          ],
+          [
+            "Lehnsherr",
+            "Graf Galahad Draig"
+          ],
+          [
+            "Ursprung",
+            "Garym der Gehörnte und Fíodhna Ui Talamh"
+          ],
+          [
+            "Schutzpatronin",
+            "Die Dame der See, Der Streiter"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Treue unter dem gehörnten Helm",
+          "biographyText": "Haus Gafyr ist ein Ritterfürstenhaus aus Gwynthor und Vasall der Draigs. Es herrscht über nördliche Gebiete der Region. Ritterdienst, Ziegenzucht, Holz und Erz bilden die Grundlagen seiner Stellung.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Garyms Erbe und Kynwrigs Haus",
+          "historyText": "Garym, der Gehörnte, floh als einfacher Milwr mit Vortigern und Celtigern aus Avallorn. Celtigern schlug ihn zum Ritter. Nach Garyms tödlicher Verwundung wurde seinem Sohn Kynwrig die Gründung eines eigenen Hauses zugesagt. Garyms erbeuteter Hornhelm blieb das wichtigste Erbstück der Familie.",
+          "worksTitle": "Hausgeschichte",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Treue, Gerechtigkeit und Frömmigkeit bestimmen das Selbstverständnis der Gafyr. Junge Angehörige dienen häufig in der Teulu der Draigs. Duncan führt das Haus seit 1708; Egon steht an erster Stelle der Erbfolge."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [
+            {
+              "name": "Haus Draig",
+              "detail": "Lehnsherr",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+              "title": "Haus Gafyr O'Gwynthor · vollständige Hausseite",
+              "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=haus-gafyr"
+            }
+          ],
+          "footer": ""
+        }
+      },
+      "sourceRevision": 5,
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 4,
+        "toRevision": 5
+      }
+    }
+  }
+}
