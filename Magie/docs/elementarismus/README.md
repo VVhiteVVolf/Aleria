@@ -1,5 +1,7 @@
 # Elementarismus: Regelabgleich und gemeinsame Daten
 
+> **Historische Fassung 1.** Diese Dokumentation beschreibt die frühere Umsetzung. Die aktuelle Liste gehört zur gelehrten Schule **Elemente**, umfasst 120 Zauber und verwendet neue Balancewerte. Siehe [Elemente – Fassung 2](../elemente/README.md). Die hier dokumentierten alten Werte bleiben nur für bereits gelernte Fassung-1-Zauber gültig; ein druidisches Verzeichnis folgt später.
+
 Grundlage sind die 72 Zauber aus dem vom Nutzer bereitgestellten **Aleria_Elementarismus_Zauberkompendium_v1_1.pdf**, Arbeitsfassung vom 12. September 2026. Der Text des Dokuments wurde als Regelvorschlag behandelt. Seine externen Inspirationsquellen wurden nicht als neue Aleria-Regeln übernommen. Die extrahierten Originaleinträge mit Seitenzahlen stehen in `source-spells-v1_1.json`; die Entscheidung je Zauber steht in `RULE_REVIEW.md`.
 
 ## Bewusste Anpassungen

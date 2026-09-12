@@ -6,8 +6,8 @@ export function buildSpellCatalogArchiveEntries() {
     return {
       id: `catalog--${entry.id}--v${entry.revision}`, kind: 'spell', name: entry.name,
       description: data.description, data, icon: data.icon, iconAssignmentVersion: 1,
-      tags: ['Elementarismus', data.tags, `Grad ${entry.level}`, `Fassung ${entry.revision}`],
-      sources: [{ kind: 'spell-catalog', id: entry.id, name: 'Elementarismus · Zauberkatalog' }],
+      tags: [entry.school, data.tags, `Grad ${entry.level}`, `Fassung ${entry.revision}`],
+      sources: [{ kind: 'spell-catalog', id: entry.id, name: `${entry.school} · Zauberkatalog` }],
       builtin: true
     };
   });

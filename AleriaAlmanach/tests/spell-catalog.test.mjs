@@ -16,13 +16,13 @@ import { getRollIconSource } from '../modules/combat/combat-entry-icons.js';
 import { combatNarrationInternals } from '../modules/combat/combat-narration-service.js';
 import { getCharacterSpellPresentation } from '../modules/characters/character-spell-presentation.js';
 
-const entries = listSpellCatalogEntries();
+const entries = listSpellCatalogEntries({ revision: 1 });
 const referenceCharacter = JSON.parse(await readFile(new URL('../../Charakter%20Archiv%20Exporte/rhiannon-draig.json', import.meta.url), 'utf8')).character;
 function actorFor(slug, castLevel) {
   const character = structuredClone(referenceCharacter);
   character.id = 'catalog-test-caster'; character.name = 'Elementarist';
   character.combatProfile.progression.level = 20;
-  const spell = createCatalogSpell(`elementarismus-${slug}`);
+  const spell = createCatalogSpell(`elementarismus-${slug}`, { revision: 1 });
   assert.ok(spell, slug);
   character.combatProfile.magic.spells = [spell];
   const actor = resolveCombatProfile(character, { segmentKind: 'spell', actionId: `spell:${spell.id}`, castLevel });
@@ -59,7 +59,7 @@ test('all 72 source spells have distinct catalog identities, valid icons and exp
     if (entry.iconPath) await access(new URL(`../../${entry.iconPath}`, import.meta.url));
     assert.ok(entry.effect && entry.limits && entry.requirements, entry.name);
     for (const form of [entry, ...entry.forms]) {
-      const spell = createCatalogSpell(entry.id, { level: form.level });
+      const spell = createCatalogSpell(entry.id, { revision: entry.revision, level: form.level });
       assert.equal(spell.manaCost, getSpellManaCost(form.level));
       assert.equal(spell.costs.find(cost => cost.resourceId === 'mana-focus').amount, spell.manaCost);
       assert.deepEqual(spell.costs.filter(cost => cost.resourceId !== 'mana-focus').map(cost => cost.resourceId), form.actionIds);
@@ -69,9 +69,9 @@ test('all 72 source spells have distinct catalog identities, valid icons and exp
       for (const cost of spell.costs.filter(cost => cost.resourceId === 'special-action')) assert.equal(cost.scope, 'persistent');
     }
   }
-  assert.equal(createCatalogSpell('elementarismus-feuerball', { level: 9 }), null);
-  const mutable = getSpellCatalogEntry(entries[0].id); mutable.name = 'changed';
-  assert.equal(getSpellCatalogEntry(entries[0].id).name, entries[0].name);
+  assert.equal(createCatalogSpell('elementarismus-feuerball', { revision: 1, level: 9 }), null);
+  const mutable = getSpellCatalogEntry(entries[0].id, 1); mutable.name = 'changed';
+  assert.equal(getSpellCatalogEntry(entries[0].id, 1).name, entries[0].name);
 });
 
 test('archive, profile and serialized snapshots preserve references without merging old same-name spells', () => {
@@ -99,7 +99,7 @@ test('archive, profile and serialized snapshots preserve references without merg
 });
 
 test('Feuerball uses authored upcast damage and pays mana plus both actions; missing resources block it', async () => {
-  const card = getCharacterSpellPresentation(createCatalogSpell('elementarismus-feuerball'));
+  const card = getCharacterSpellPresentation(createCatalogSpell('elementarismus-feuerball', { revision: 1 }));
   assert.equal(card.costs, 'Aktion + Besondere Aktion · 5 Mana');
   assert.match(card.higherForms[1], /10W6/);
   const actor = actorFor('feuerball', 5);
@@ -120,7 +120,7 @@ test('Hagelsturm halves both typed components after a successful save, then appl
   const actor = actorFor('hagelsturm', 5);
   assert.deepEqual(actor.selectedAction.effects.filter(effect => effect.type === 'damage').map(effect => [effect.formula, effect.damageType]), [['5d6','Wucht'],['4d6','Kälte']]);
   assert.equal(getCombatDamagePreview(actor).average, 31.5);
-  assert.match(getCharacterSpellPresentation(createCatalogSpell('elementarismus-hagelsturm')).damage.label, /4W6 \+ 3W6/);
+  assert.match(getCharacterSpellPresentation(createCatalogSpell('elementarismus-hagelsturm', { revision: 1 })).damage.label, /4W6 \+ 3W6/);
   const victim = target(); victim.damageAffinities = [{ damageType: 'Kälte', response: 'resistant', magicScope: 'any' }];
   const result = await new CombatResolutionService(dice(true)).resolveAttack({ actor, target: victim });
   const damage = result.effectResults.filter(result => result.effect.type === 'damage');

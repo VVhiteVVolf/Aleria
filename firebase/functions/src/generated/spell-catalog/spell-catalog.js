@@ -1,4 +1,5 @@
 import { ELEMENTARISMUS_V1 } from './elementarismus-v1.js';
+import { ELEMENTE_V2 } from './elemente-v2/index.js';
 import { getDefaultActivationCosts } from '../combat/combat-action-economy.js';
 import { getSpellManaCost } from '../combat/combat-resource-progression.js';
 
@@ -14,7 +15,8 @@ export const SPELL_CATALOG_SECTIONS = Object.freeze([
 
 // Revisions are immutable editions, not timestamps. Add a new edition instead
 // of silently changing the rules of an already learned character spell.
-const editions = new Map(ELEMENTARISMUS_V1.map(spell => [`${spell.id}@${spell.revision}`, spell]));
+const editions = new Map([...ELEMENTARISMUS_V1, ...ELEMENTE_V2].map(spell => [`${spell.id}@${spell.revision}`, spell]));
+const currentEntries = new Map(ELEMENTE_V2.map(spell => [spell.id, spell]));
 const clone = value => JSON.parse(JSON.stringify(value));
 
 export function normalizeSpellCatalogReference(value) {
@@ -25,13 +27,13 @@ export function normalizeSpellCatalogReference(value) {
     ? { id, revision } : null;
 }
 
-export function getSpellCatalogEntry(id, revision = 1) {
-  const entry = editions.get(`${id}@${revision}`);
+export function getSpellCatalogEntry(id, revision) {
+  const entry = revision === undefined ? currentEntries.get(id) : editions.get(`${id}@${revision}`);
   return entry ? clone(entry) : null;
 }
 
-export function listSpellCatalogEntries() {
-  return ELEMENTARISMUS_V1.map(clone);
+export function listSpellCatalogEntries({ revision } = {}) {
+  return (revision === 1 ? ELEMENTARISMUS_V1 : revision === undefined || revision === 2 ? ELEMENTE_V2 : []).map(clone);
 }
 
 export function getSpellCatalogForm(entry, level = entry.level) {
@@ -58,7 +60,7 @@ function spellDescription(entry, form) {
   return [effect, entry.limits, changes].filter(Boolean).join('\n');
 }
 
-export function createCatalogSpell(id, { revision = 1, level, manaResourceId = 'mana-focus' } = {}) {
+export function createCatalogSpell(id, { revision, level, manaResourceId = 'mana-focus' } = {}) {
   const entry = getSpellCatalogEntry(id, revision);
   if (!entry) return null;
   const form = getSpellCatalogForm(entry, level ?? entry.level);

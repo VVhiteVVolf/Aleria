@@ -6,27 +6,32 @@ import { resolveCombatProfile } from '../src/generated/combat/combat-profile-res
 import { CombatResolutionService } from '../src/generated/combat/combat-resolution-service.js';
 
 test('all spell editions and authored grades are identical in browser and generated server mechanics', () => {
-  for (const entry of listSpellCatalogEntries()) {
+  for (const entry of [...listSpellCatalogEntries(), ...listSpellCatalogEntries({ revision: 1 })]) {
     for (const level of [entry.level, ...entry.forms.map(form => form.level)]) {
-      assert.deepEqual(createCatalogSpell(entry.id, { level }), browserSpell(entry.id, { level }));
+      assert.deepEqual(createCatalogSpell(entry.id, { revision: entry.revision, level }), browserSpell(entry.id, { revision: entry.revision, level }));
     }
   }
 });
 
 test('server resolves learned catalog references authoritatively and consumes the selected grade package', async () => {
-  const original = createCatalogSpell('elementarismus-hagelsturm');
+  for (const [revision, castLevel, formula, costs] of [
+    [1, 5, '5d6', [['action',1],['special-action',1],['mana-focus',7]]],
+    [2, 7, '4d6', [['action',1],['special-action',1],['reaction',1],['mana-focus',10]]]
+  ]) {
+  const original = createCatalogSpell('elementarismus-hagelsturm', { revision });
   const character = { id:'catalog-server-caster', name:'Elementarist', combatProfile: {
     progression:{level:20}, hitPoints:{current:100,maximumOverride:100},
     magic:{ enabled:true,casterTier:'full',manaResourceId:'mana-focus',spells:[{
       ...original,id:'learned-instance',rollFormula:'99d20',costs:[],manaCost:0
     }] }
   } };
-  const actor = resolveCombatProfile(character,{actionId:'spell:learned-instance',castLevel:5});
+  const actor = resolveCombatProfile(character,{actionId:'spell:learned-instance',castLevel});
   actor.resources = actor.resources.map(resource => ({...resource,current:resource.maximum}));
   const target = resolveCombatProfile({id:'catalog-server-target',name:'Ziel',combatProfile:{hitPoints:{current:100,maximumOverride:100},armorClass:{override:10}}});
   assert.equal(actor.selectedAction.catalogReference.id,original.catalogReference.id);
-  assert.equal(actor.weapon.damageFormula,'5d6');
-  assert.deepEqual(actor.resourceCosts.map(cost=>[cost.resourceId,cost.amount]),[['action',1],['special-action',1],['mana-focus',7]]);
+  assert.equal(actor.selectedAction.catalogReference.revision,revision);
+  assert.equal(actor.weapon.damageFormula,formula);
+  assert.deepEqual(actor.resourceCosts.map(cost=>[cost.resourceId,cost.amount]),costs);
   const dice = {
     async rollAttack() { return {natural:15,dice:[15],keptDice:[15],total:999}; },
     async rollDamage({damageFormula}) { return {notation:damageFormula,dice:[11],keptDice:[11],total:11,modifier:0}; }
@@ -37,5 +42,6 @@ test('server resolves learned catalog references authoritatively and consumes th
     const before=result.actorResourceSnapshot.before.find(resource=>resource.id===cost.resourceId).current;
     const after=result.actorResourceSnapshot.after.find(resource=>resource.id===cost.resourceId).current;
     assert.equal(before-after,cost.amount);
+  }
   }
 });

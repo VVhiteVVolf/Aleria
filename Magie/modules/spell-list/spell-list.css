@@ -9,6 +9,10 @@
 .spell-cover-sigil img { width:160px; height:160px; mix-blend-mode:multiply; }
 .spell-cover-sigil .arcane { font-size:22px; color:var(--magic-gold); letter-spacing:.25em; }
 .spell-cover-sigil small { font-size:9px; letter-spacing:.14em; color:var(--magic-muted); }
+.spell-edition-notice { margin-top:24px; padding:18px 22px; border-left:3px solid var(--magic-gold); background:#fffaf066; }
+.spell-edition-notice h2 { margin:0 0 8px; font-size:20px; }
+.spell-edition-notice p { max-width:90ch; font-size:13px; color:var(--magic-muted); }
+.spell-edition-notice a { margin-top:12px; }
 .spell-conventions { margin:22px 0 36px; border:1px solid var(--magic-line); background:#fffaf044; font-size:13px; }
 .spell-conventions > summary { display:flex; justify-content:space-between; gap:18px; padding:16px 22px; }
 .spell-conventions > summary::after { content:'+'; color:var(--magic-gold); }

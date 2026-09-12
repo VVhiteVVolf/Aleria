@@ -95,7 +95,10 @@ function getEntrySourceType(entry) {
 function getVisibleEntries() {
   const needle = normalizeArchiveSearchText(state.search);
   const allowedKinds = state.picker?.kind ? new Set([state.picker.kind]) : null;
+  const catalogEntry = getSpellCatalogEntry(state.search);
   const entries = getCharacterArchiveEntries().filter(entry => {
+    if (catalogEntry && (entry.data?.catalogReference?.id !== catalogEntry.id
+      || entry.data.catalogReference.revision !== catalogEntry.revision)) return false;
     if (allowedKinds && !allowedKinds.has(entry.kind)) return false;
     if (!allowedKinds && !matchesCharacterArchiveKind(entry, state.kind)) return false;
     if (state.source !== 'all' && getEntrySourceType(entry) !== state.source) return false;
@@ -140,7 +143,7 @@ function renderEntryCard(entry) {
     <div class="character-archive-card-topline"><span>${escapeHtml(kind.group)}</span><span>${escapeHtml(kind.label)}</span></div>
     <div class="character-archive-card-main">
       ${image.source ? `<span class="character-archive-card-icon" aria-hidden="true"><img src="${escapeHtml(image.source)}" data-fallback-src="${escapeHtml(image.fallbackSource)}" alt="" loading="lazy" decoding="async"><i>${escapeHtml(kind.symbol)}</i></span>` : ''}
-      <div><h3>${escapeHtml(entry.archiveDisplayName || entry.name)}</h3>${entry.data?.catalogReference ? `<small>Elementarismus · Fassung ${escapeHtml(entry.data.catalogReference.revision)}</small>` : ''}<p>${escapeHtml(entry.description || 'Noch keine Beschreibung hinterlegt.')}</p></div>
+      <div><h3>${escapeHtml(entry.archiveDisplayName || entry.name)}</h3>${entry.data?.catalogReference ? `<small>${escapeHtml(entry.data.school || 'Zauberkatalog')} · Fassung ${escapeHtml(entry.data.catalogReference.revision)}</small>` : ''}<p>${escapeHtml(entry.description || 'Noch keine Beschreibung hinterlegt.')}</p></div>
     </div>
     ${meta.length ? `<div class="character-archive-card-meta">${meta.map(item => `<span>${escapeHtml(item)}</span>`).join('')}</div>` : ''}
     ${renderSourceBadges(entry)}
@@ -541,8 +544,8 @@ queueMicrotask(() => {
 });
 
 const requestedCatalogSpell = new URLSearchParams(globalThis.location?.search || '').get('zauberkatalog');
-if (requestedCatalogSpell === 'elementarismus' || getSpellCatalogEntry(requestedCatalogSpell)) {
-  const openRequestedCatalog = () => openArchive({ kind: 'spell', search: requestedCatalogSpell });
+if (['elemente', 'elementarismus'].includes(requestedCatalogSpell) || getSpellCatalogEntry(requestedCatalogSpell)) {
+  const openRequestedCatalog = () => openArchive({ kind: 'spell', search: requestedCatalogSpell === 'elementarismus' ? 'elemente' : requestedCatalogSpell });
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', openRequestedCatalog, { once: true });
   else queueMicrotask(openRequestedCatalog);
 }

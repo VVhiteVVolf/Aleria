@@ -10,8 +10,9 @@ Statische Almanach-Seite: `Magie/index.html`. Erreichbar über das bestehende Se
 - `modules/catalog`: lokale Suche, Filter, Ankerauflösung und Druckzustand. Suchbegriffe kommen aus dem Inhalt und optionalen `data-keywords`; kein zweiter Inhaltskatalog.
 - `modules/lore`: Darstellung der erklärenden Kapitel.
 - `modules/domains`: Domänenzuordnung und Vorlage. Namen, Gruppen, Verweise und die Symbole aller 34 celestialen und infernalen Gottheiten stammen über das bestehende Inhaltsrepository aus `Religionen`; nur die magische Zuordnung gehört diesem Modul. Geweihte und Gefallene werden nicht als Haupt- oder Untergottheiten umgedeutet.
-- `elementarismus/index.html`: erzeugtes Verzeichnis mit 72 Zaubern, 120 höheren Formen und 42 passenden vorhandenen BG-Icons; fehlende Icons bleiben leer.
-- `modules/spell-list`: Darstellung, Suche, Filter und Direktlinks der Zauberlisten. Die Daten stammen aus `AleriaAlmanach/modules/spell-catalog`; Archiv, Charakterbogen und Kampf verwenden denselben versionierten Katalog. Regelabgleich, Grenzen der automatischen Auflösung und Mini-Tests stehen in [docs/elementarismus/README.md](docs/elementarismus/README.md).
+- `elemente/index.html`: aktuelles Verzeichnis der gelehrten Schule mit 120 Zaubern; sechs Ergänzungen je Element, bei Blitz und Donner jeweils zwölf. Großformen stehen auf höheren Graden. Vorhandene BG-Icons werden genutzt, fehlende bleiben leer.
+- `elementarismus/index.html`: gekennzeichnete Archivfassung der früheren 72 Zauber für bereits gelernte Charakterzauber; kein druidisches Verzeichnis.
+- `modules/spell-list`: Darstellung, Suche, Filter und Direktlinks der Zauberlisten. Die Daten stammen aus `AleriaAlmanach/modules/spell-catalog`; Archiv, Charakterbogen und Kampf verwenden denselben versionierten Katalog. Aktuelle Balance, Kompatibilität und Mini-Tests stehen in [docs/elemente/README.md](docs/elemente/README.md), der ursprüngliche PDF-Abgleich in [docs/elementarismus/README.md](docs/elementarismus/README.md).
 - `assets`: erzeugte Embleme, elf eigene Schulicons in `schools/`, sieben eigene Druidenicons in `druidic/` und die beiden Icons für sakrale und infernale Magie in `bound/`, jeweils im Oblivion-Stil. Die jeweiligen `image-prompts.json` dokumentieren die eingebauten Imagegen-Aufrufe.
 - `docs`: übergebene Altquelle und dokumentierte redaktionelle Entscheidungen.
 

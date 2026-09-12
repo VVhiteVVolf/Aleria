@@ -421,7 +421,7 @@ function render() {
   overlay.innerHTML = `<section class="combat-entry-editor-dialog" role="dialog" aria-modal="true" aria-labelledby="combat-entry-editor-title">
     <header><div><span>Kampfprofil · Detailwerkstatt</span><h2 id="combat-entry-editor-title">${kindTitle()}</h2></div><button type="button" data-entry-action="close" aria-label="Schließen">×</button></header>
     <div class="combat-entry-editor-body">
-      ${item.catalogReference ? `<p class="combat-entry-editor-hint">Elementarismus · Fassung ${escapeHtml(item.catalogReference.revision)}. <a href="${escapeHtml(getSpellCatalogPageHref(item.catalogReference))}" target="_blank" rel="noopener">Katalog öffnen</a>. Beim Übernehmen entsteht eine eigene Fassung ohne automatische Katalog-Verstärkungen; andere Charaktere behalten ihre Zauber.</p>` : ''}
+      ${item.catalogReference ? `<p class="combat-entry-editor-hint">${escapeHtml(item.school || 'Zauberkatalog')} · Fassung ${escapeHtml(item.catalogReference.revision)}. <a href="${escapeHtml(getSpellCatalogPageHref(item.catalogReference))}" target="_blank" rel="noopener">Katalog öffnen</a>. Beim Übernehmen entsteht eine eigene Fassung ohne automatische Katalog-Verstärkungen; andere Charaktere behalten ihre Zauber.</p>` : ''}
       <div class="combat-entry-editor-name-row"><label><span>Name</span><input data-entry-field="name" value="${escapeHtml(item.name)}" maxlength="140" autofocus></label><label class="check"><input type="checkbox" data-entry-field="active"${checked(item.active !== false)}> Aktiv</label></div>
       ${renderRegeneration(item)}${content}
       <p class="combat-entry-editor-error" data-entry-role="error" hidden></p>
