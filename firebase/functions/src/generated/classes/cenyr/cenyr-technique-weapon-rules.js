@@ -1,4 +1,5 @@
 import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
+import { hasEquippedCombatShield as hasEquippedShield } from '../../combat/combat-weapon-loadout.js';
 
 const WEAPON_PROFILE_ALIASES = Object.freeze([
   ['halberd', /hellebarde/],
@@ -61,13 +62,6 @@ function validateClassAndWeapon(definition, technique, weaponProfileId, weapon =
     : `Benötigt eine für diese Klassenfolge zugelassene Waffe (${allowedProfiles.join(', ')}).`;
 }
 
-function hasEquippedShield(profile = {}) {
-  const equippedArmorShield = (profile.armorItems || []).some(item => item?.equipped && item?.kind === 'shield');
-  if (equippedArmorShield) return true;
-  const offHandId = String(profile.combat?.offHandWeaponId || '');
-  return (profile.weapons || []).some(item => item?.weaponType === 'shield'
-    && (item?.equipped === true || String(item?.id || '') === offHandId));
-}
 
 // These modifiers are attached to the resolved action. Canonical techniques and
 // stored character attacks remain free of copied class/weapon bonuses.

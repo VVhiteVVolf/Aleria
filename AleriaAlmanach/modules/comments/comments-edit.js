@@ -41,6 +41,7 @@ function openEditComment(commentId) {
 }
 
 function closeEditComment() {
+  window.AleriaCombat?.releaseComposer?.(document.getElementById('ec-segment-list'));
   deactivateDialog('edit-comment-overlay');
   _editTargetId = null;
   _editCommentData = null;

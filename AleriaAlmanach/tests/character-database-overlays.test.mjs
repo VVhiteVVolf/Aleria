@@ -6,6 +6,38 @@ function merge(characters) {
   return buildCharacterDatabase({ characters, exportedAt: '2026-09-06T00:00:00.000Z' }, []).records[0].record.character;
 }
 
+test('Bestätigte Namenskorrekturen vereinigen alte Schreibweise und Stammbaumfigur verlustfrei', () => {
+  const old = { id: 'a-player', name: 'Arian Seathwyr', portrait: 'player.png', emotes: [{ img: 'smile.png' }], playerOwner: 'patrick' };
+  const tree = { id: 'person--arian', name: 'Arian Saethwyr', identity: { worldPersonId: 'person--arian' }, portrait: 'tree.png' };
+  const latest = markCharacterDatabaseOverlay({
+    ...old, name: 'Arian Saethwyr', identity: tree.identity, updatedAt: '2026-09-13T00:00:00.000Z',
+    imageSets: [{ id: 'standard', portrait: 'player.png', emotes: old.emotes }, { id: 'tree', portrait: 'tree.png', emotes: [] }]
+  }, { replaceExportedFields: true });
+  for (const characters of [[old, tree, latest], [latest, tree, old]]) {
+    const result = buildCharacterDatabase({ characters }, []).records;
+    assert.equal(result.length, 1);
+    assert.equal(result[0].record.character.id, old.id);
+    assert.equal(result[0].record.character.name, tree.name);
+    assert.equal(result[0].record.character.playerOwner, 'patrick');
+    assert.deepEqual(result[0].record.character.emotes, old.emotes);
+    assert.deepEqual(result[0].record.character.imageSets, latest.imageSets);
+    assert.ok(result[0].record.identity.aliases.includes(old.name));
+    assert.deepEqual(new Set(result[0].record.links.firestore.documentIds), new Set([old.id, tree.id]));
+    assert.equal(old.name, 'Arian Seathwyr');
+  }
+});
+
+test('Die neueste bestätigte Umbenennung gilt nur für ihre feste Dokument-ID', () => {
+  const old = { id: 'one', name: 'Alter Name' };
+  const namesake = { id: 'two', name: 'Alter Name' };
+  const earlier = markCharacterDatabaseOverlay({ id: 'one', name: 'Zwischenname', updatedAt: '2026-09-12T00:00:00.000Z' }, { replaceExportedFields: true });
+  const latest = markCharacterDatabaseOverlay({ id: 'one', name: 'Neuer Name', updatedAt: '2026-09-13T00:00:00.000Z' }, { replaceExportedFields: true });
+  const result = buildCharacterDatabase({ characters: [latest, old, namesake, earlier] }, []).records.map(item => item.record.character);
+  assert.equal(result.length, 2);
+  assert.equal(result.find(character => character.id === 'one').name, 'Neuer Name');
+  assert.equal(result.find(character => character.id === 'two').name, 'Alter Name');
+});
+
 test('Bestätigter Export übernimmt Inventar und Biografie ohne alte Begleiter oder gelöschte Einträge', () => {
   const archived = {
     id: 'idwal', name: 'Idwal Draig', profileLink: '/idwal',

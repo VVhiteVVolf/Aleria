@@ -82,6 +82,7 @@ function openCommentFormAfter(commentId) {
 
 function closeCommentForm() {
   _commentFormInitialRenderToken += 1;
+  window.AleriaCombat?.releaseComposer?.(document.getElementById('cf-segment-list'));
   deactivateDialog('comment-form-overlay');
   _commentInsertAfterId = null;
 }

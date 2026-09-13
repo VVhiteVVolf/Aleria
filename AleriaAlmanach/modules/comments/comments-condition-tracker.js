@@ -69,6 +69,11 @@ export function mountCommentConditionTracker(context, resolveProfile) {
   render(instance);
 }
 
+export function releaseCommentConditionTracker(list) {
+  instances.get(list)?.root.remove();
+  instances.delete(list);
+}
+
 function scheduleRefresh() {
   if (refreshQueued) return;
   refreshQueued = true;

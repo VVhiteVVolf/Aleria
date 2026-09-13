@@ -2,17 +2,17 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-09-12T13:56:03.107Z",
+  "sourceExportedAt": "2026-09-13T18:13:16.437Z",
   "summary": {
-    "sourceDocuments": 272,
+    "sourceDocuments": 274,
     "total": 236,
-    "mergedSameNameGroups": 28,
-    "familyLinked": 155,
+    "mergedSameNameGroups": 29,
+    "familyLinked": 156,
     "familyAmbiguous": 0,
-    "familyPending": 81,
-    "primaryFamily": 155,
+    "familyPending": 80,
+    "primaryFamily": 156,
     "primaryGroup": 26,
-    "primaryPlace": 19,
+    "primaryPlace": 18,
     "primaryUnassigned": 36,
     "duplicateWorldPeople": 0
   },
@@ -421,18 +421,6 @@
         "kind": "place",
         "id": "gaelan",
         "label": "Gaelan",
-        "source": "archive-tab"
-      },
-      "familyAlternatives": []
-    },
-    {
-      "recordId": "character--bFUmD1snc4TSIGLRPuSx",
-      "name": "Arian Seathwyr",
-      "status": "pending",
-      "primary": {
-        "kind": "place",
-        "id": "gwynthor",
-        "label": "Gwynthor",
         "source": "archive-tab"
       },
       "familyAlternatives": []
@@ -963,6 +951,18 @@
         "N8D8c9EMPigmAhYWPayO"
       ],
       "ages": []
+    },
+    {
+      "name": "Arian Saethwyr",
+      "canonicalDocumentId": "bFUmD1snc4TSIGLRPuSx",
+      "documentIds": [
+        "bFUmD1snc4TSIGLRPuSx",
+        "bFUmD1snc4TSIGLRPuSx",
+        "person--haus-saethwyr--arian-saethwyr"
+      ],
+      "ages": [
+        "Geburtsjahr 1721"
+      ]
     },
     {
       "name": "Armel Balchder",

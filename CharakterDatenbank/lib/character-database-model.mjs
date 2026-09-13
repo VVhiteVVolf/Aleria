@@ -382,9 +382,16 @@ function fillMissingValues(primary, fallback, path = '') {
 }
 
 function groupArchiveCharacters(characters = []) {
+  // A confirmed rename owns the name of its existing document. Grouping the
+  // historical spelling separately would otherwise recreate the old character.
+  const renamedDocuments = new Map();
+  characters
+    .filter(character => character?.[CHARACTER_SNAPSHOT_MARKER] === true && text(character.id) && text(character.name))
+    .sort((first, second) => (Date.parse(text(first.updatedAt)) || 0) - (Date.parse(text(second.updatedAt)) || 0))
+    .forEach(character => renamedDocuments.set(text(character.id), character));
   const byName = new Map();
   characters.forEach(character => {
-    const key = characterIdentityNameKey(character);
+    const key = characterIdentityNameKey(renamedDocuments.get(text(character.id)) || character);
     const clusters = byName.get(key) || [];
     const compatible = clusters.find(cluster => !cluster.some(existing => agesConflict(existing, character)));
     if (compatible) compatible.push(character);

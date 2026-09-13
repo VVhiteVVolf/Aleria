@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-12T13:56:03.107Z",
+    "sourceExportedAt": "2026-09-13T18:13:16.437Z",
     "sourceUpdatedAt": "2026-09-03T18:21:35.161Z",
     "sourceDocumentIds": [
       "person--haus-balchder--kamber-balchder"
     ],
-    "contentHash": "e06efa030c23a74febcae43b6cebb4e9debec1520c3c341d004112f194960e28"
+    "contentHash": "fd487617dfa7fba910d3dce2ed392b36fa8250e6c049e71a0ea7c0ff9088750d"
   },
   "local": {
     "notes": "",
@@ -531,8 +531,8 @@
           "personId": "kamber-balchder",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-12T13:56:03.107Z",
-          "lastSyncedAt": "2026-09-12T13:56:03.107Z",
+          "importedAt": "2026-09-13T18:13:16.437Z",
+          "lastSyncedAt": "2026-09-13T18:13:16.437Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-gelyn&mode=view&person=kamber-balchder",
           "fingerprint": "{\"name\":\"Kamber Balchder\",\"title\":\"\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-balchder\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gelyn/kamber-balchder.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"senara-gelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gelyn--senara-gelyn\",\"name\":\"Senara Gelyn\"}],\"children\":[]}}"
         }

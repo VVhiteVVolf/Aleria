@@ -1,0 +1,39 @@
+{
+  "mode": "before",
+  "rosterSize": 150,
+  "changes": 30,
+  "firstMountMs": 1479.4000000059605,
+  "meanChangeMs": 176.03333333333333,
+  "samples": [
+    {
+      "Documents": 1,
+      "JSEventListeners": 21,
+      "Nodes": 1673,
+      "JSHeapUsedSize": 8029636,
+      "JSHeapTotalSize": 8388608
+    },
+    {
+      "Documents": 1,
+      "JSEventListeners": 34,
+      "Nodes": 1679,
+      "JSHeapUsedSize": 9301680,
+      "JSHeapTotalSize": 10276864
+    },
+    {
+      "Documents": 1,
+      "JSEventListeners": 34,
+      "Nodes": 1679,
+      "JSHeapUsedSize": 9303632,
+      "JSHeapTotalSize": 10276864
+    },
+    {
+      "Documents": 1,
+      "JSEventListeners": 34,
+      "Nodes": 1679,
+      "JSHeapUsedSize": 9327068,
+      "JSHeapTotalSize": 10276864
+    }
+  ],
+  "overflow": false,
+  "errors": []
+}

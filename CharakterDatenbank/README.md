@@ -53,6 +53,8 @@ Der Sync entfernt ausschließlich veraltete `character.json`-Dateien, die eindeu
 
 Einzelfigurenexporte (`type: "aleria-character"`) im Exportverzeichnis ergänzen den vollständigen Archivexport. Für bestätigte Online-Stände kann der Export zusätzlich `mergeStrategy: "replace-exported-fields"` angeben: Seine gelieferten Profilfelder werden vollständig übernommen, einschließlich leerer Listen und `null`. Dadurch werden etwa entfernte Inventargegenstände, alte Biografieeinträge oder Begleiter nicht aus älteren Exporten erneut eingemischt. Nicht gelieferte Felder bleiben erhalten. Mehrere solche Exporte werden nach `character.updatedAt` angewendet, der neueste zuletzt. Ohne diese ausdrückliche Strategie gilt weiterhin die bisherige ergänzende Zusammenführung.
 
+Eine bestätigte Namenskorrektur gilt bereits beim Gruppieren für alle Exporte derselben Dokument-ID. Die alte Schreibweise bleibt als Alias und in den historischen Quellen erhalten, erzeugt aber keine zweite Figur. Gleichnamige Figuren mit anderen Dokument-IDs werden dadurch nicht pauschal umbenannt; widersprechende Lebensdaten bleiben weiterhin getrennt.
+
 ## Konfliktregel
 
 - Online gewinnt bei bearbeitbaren Profil- und Kampfwerten.

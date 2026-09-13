@@ -2,7 +2,7 @@ import { prepareCombatEquipment, reserveCombatEquipment } from './combat-equipme
 import { estimateCombatHitChance } from './combat-action-estimates.js?v=20260909-dragon-parent-v2';
 import { getActorsWithCombatPosts, normalizeCombatLoadout, isPairedCombatWeapon, canUseCombatOffHand } from './combat-weapon-loadout.js';
 import { CombatDiceAdapter } from './combat-dice-adapter.js?v=20260905-party-combat-v1';
-import { mountCommentConditionTracker } from '../comments/comments-condition-tracker.js?v=20260909-dragon-parent-v2';
+import { mountCommentConditionTracker, releaseCommentConditionTracker } from '../comments/comments-condition-tracker.js?v=20260909-dragon-parent-v2';
 import { prioritizeCombatTargets } from './ui/combat-target-picker.js?v=20260909-dragon-parent-v2';
 import { narrateCombatResolution } from './combat-narration-service.js?v=20260806-agency-v1';
 import {
@@ -54,11 +54,13 @@ import {
 } from './combat-trigger-rules.js?v=20260909-dragon-parent-v2';
 import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260909-dragon-parent-v2';
 import { getCombatSegmentMode, isCombatSegment, getEffectiveCombatSegmentKind } from './combat-segment-model.js';
+import { createCombatProfileCache } from './combat-profile-cache.js';
+import { getCombatPreviewActorIds, createCombatTargetSummary } from './combat-composer-roster.js';
 
 const profileResolver = new CombatProfileResolver();
 const resolutionService = new CombatResolutionService(new CombatDiceAdapter());
-const resolvedCombatProfileCache = new WeakMap();
-const resolvedCombatTargetCache = new WeakMap();
+const resolvedCombatProfileCache = createCombatProfileCache();
+let resolvedCombatTargetCache = new WeakMap();
 let latestComposerContext = null;
 
 function getProfileCacheOwner(character = {}) {
@@ -72,21 +74,16 @@ function getProfileOptionCacheKey(options = {}) {
     options.paymentMode || 'standard',
     options.weaponGrip || 'one-handed',
     options.castLevel || 0,
-    options.hostileOpponentCount ?? ''
+    options.hostileOpponentCount ?? '',
+    options.includeAiSnapshot !== false
   ].join('|');
 }
 
 function resolveCachedCombatProfile(character, options = {}) {
   const owner = getProfileCacheOwner(character);
   if (!owner || typeof owner !== 'object') return profileResolver.resolve(character, options);
-  let entries = resolvedCombatProfileCache.get(owner);
-  if (!entries) {
-    entries = new Map();
-    resolvedCombatProfileCache.set(owner, entries);
-  }
   const key = getProfileOptionCacheKey(options);
-  if (!entries.has(key)) entries.set(key, profileResolver.resolve(character, options));
-  return entries.get(key);
+  return resolvedCombatProfileCache.get(owner, key, () => profileResolver.resolve(character, options));
 }
 
 function resolveCachedCombatTarget(character) {
@@ -184,7 +181,8 @@ function buildCombatRuleOptions({ characters, actorCharacter, actor, targetChara
   if (!actorCharacter || !targetCharacter) return [];
   const selections = Array.isArray(segment?.combatRuleSelections) ? segment.combatRuleSelections : [];
   const actionKind = String(actor?.profileActionKind || 'weapon');
-  return characters.filter(hasStoredCombatRules).flatMap(character => {
+  return characters.filter(character => hasStoredCombatRules(character)
+    && !profileOverrides?.get(String(character.id))?.previewPending).flatMap(character => {
     const source = profileOverrides?.get(String(character.id)) || resolveActorProfile(character, {
       actorId: character.id,
       storedStates,
@@ -273,7 +271,8 @@ function resolveActorProfile(character, options = {}) {
     paymentMode: options.paymentMode,
     weaponGrip: options.weaponGrip,
     castLevel: options.castLevel,
-    hostileOpponentCount: options.hostileOpponentCount
+    hostileOpponentCount: options.hostileOpponentCount,
+    includeAiSnapshot: options.includeAiSnapshot
   });
   const resetActors = options.commentResourceResetActors;
   const shouldResetCommentResources = options.resetCommentResources && !resetActors?.has(actorId);
@@ -333,7 +332,7 @@ function mountComposers(context = {}) {
   const segments = Array.isArray(context.segments) ? context.segments : [];
   mountCommentConditionTracker(context, actorId => {
     const character = (context.sceneActors || []).find(actor => String(actor.id) === actorId) || getCharacterById(actorId);
-    return character ? resolveActorProfile(character, { actorId, storedStates: getStoredCombatStates(context.threadId || '') }) : null;
+    return character ? resolveActorProfile(character, { actorId, storedStates: getStoredCombatStates(context.threadId || ''), includeAiSnapshot: false }) : null;
   });
   if (!segments.some(isCombatSegment)) return;
   const cachedComments = globalThis.getCachedCommentsForThread?.(context.threadId || '') || [];
@@ -347,9 +346,12 @@ function mountComposers(context = {}) {
   const previewFrequencyKeys = deriveCombatRuleFrequencyKeys(cachedComments, previewRulePeriods);
   const composerResourceResets = new Set();
   const targetCharacters = characters;
+  const previewActorIds = getCombatPreviewActorIds({ segments, characters, selectedCharacterId: context.selectedCharacterId,
+    participantIds: activeEncounterPartyMap, states: storedStates });
   const targetProfiles = new Map(targetCharacters.map(character => [
     String(character.id || ''),
-    resolveTargetPickerProfile(character, { actorId: character.id, storedStates })
+    previewActorIds.has(String(character.id))
+      ? resolveTargetPickerProfile(character, { actorId: character.id, storedStates }) : createCombatTargetSummary(character)
   ]));
 
   segments.forEach(segment => {
@@ -373,6 +375,7 @@ function mountComposers(context = {}) {
       weaponGrip: segment.combatWeaponGrip,
       castLevel: segment.combatCastLevel,
       hostileOpponentCount: countActiveHostileOpponents(actorCharacter, characters, activeEncounterPartyMap),
+      includeAiSnapshot: false,
       recoveryDayKey
     }) : null;
     if (actor?.equipmentPreparation && !actor.equipmentPreparation.error) {
@@ -431,6 +434,7 @@ function mountComposers(context = {}) {
       .filter(character => actionAllowsSelfTarget(actor) || String(character.id || '') !== actorId)
       .map(character => {
         const target = previewProfiles.get(String(character.id || ''));
+        if (target?.previewPending) return target;
         const sources = actor && target ? buildCombatRuleSources({ characters, actorCharacter, targetCharacter: character, segment,
           stateContext: { storedStates, workingStates: composerStates, recoveryDayKey }, profileOverrides: previewProfiles }) : [];
         return target ? { ...target, hitChance: estimateCombatHitChance(actor, target, {
@@ -976,6 +980,14 @@ globalThis.AleriaCombat = Object.freeze({
       sceneActors: Array.isArray(context.sceneActors) ? context.sceneActors : [],
       threadId: String(context.threadId || '')
     });
+  },
+  releaseComposer(list) {
+    if (!list) return;
+    releaseCommentConditionTracker(list);
+    list.querySelectorAll('[data-combat-composer]').forEach(composer => composer.remove());
+    if (latestComposerContext?.list === list) latestComposerContext = null;
+    resolvedCombatProfileCache.clear();
+    resolvedCombatTargetCache = new WeakMap();
   },
   handleSubmission,
   narrateCommittedMechanics,

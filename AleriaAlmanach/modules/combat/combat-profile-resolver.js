@@ -26,6 +26,7 @@ import { getActiveCombatWeapon } from './combat-equipment-state.js?v=20260905-co
 import { getCombatWeaponLoadout, getCombatTechniqueWeapon, usesCharacterWeaponLoadout } from './combat-weapon-loadout.js';
 import { COMBAT_WAIT_ACTION, hasActionBlockingCondition } from './combat-wait-action.js';
 import { empowerAuraAttack } from './combat-aura-attack.js';
+import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
 
 let emptyCharacterTargetProfile = null;
 let emptyCreatureTargetProfile = null;
@@ -389,31 +390,9 @@ export function resolveCombatProfile(character = {}, options = {}) {
     || actions.find(action => action.default)
     || actions[0]
     || null;
-  const selectedAction = applySpellCastLevel(selectedActionBase, profile, options.castLevel);
-  const requestedWeaponGrip = String(options.weaponGrip || '').trim().toLowerCase();
-  const supportsVersatileGrip = ['weapon', 'technique'].includes(selectedAction?.kind)
-    && !getCombatWeaponLoadout(profile).dualWield
-    && Boolean(String(selectedAction?.weapon?.versatileDamageFormula || '').trim());
-  const weaponGrip = supportsVersatileGrip && requestedWeaponGrip === 'two-handed'
-    ? 'two-handed'
-    : 'one-handed';
-  const resolvedWeapon = selectedAction?.weapon
-    ? {
-        ...selectedAction.weapon,
-        damageFormula: weaponGrip === 'two-handed'
-          ? selectedAction.weapon.versatileDamageFormula
-          : selectedAction.weapon.damageFormula
-      }
-    : profile.weapon;
-  const resolvedSelectedAction = selectedAction
-    ? {
-        ...selectedAction,
-        baseDamageFormula: selectedAction.weapon?.damageFormula || selectedAction.formula,
-        weapon: { ...resolvedWeapon },
-        formula: resolvedWeapon?.damageFormula || selectedAction.formula
-      }
-    : null;
-  const empowered = empowerAuraAttack(resolvedSelectedAction, resolvedWeapon, options.paymentMode, profile);
+  const { action: selectedAction, weaponGrip, supportsVersatileGrip, weaponGripBlockedReason } = resolveCombatWeaponGrip(
+    applySpellCastLevel(selectedActionBase, profile, options.castLevel), profile, options.weaponGrip);
+  const empowered = empowerAuraAttack(selectedAction, selectedAction?.weapon || profile.weapon, options.paymentMode, profile);
   return {
     ...profile,
     characterId: String(effectiveCharacter.id || ''),
@@ -435,15 +414,16 @@ export function resolveCombatProfile(character = {}, options = {}) {
     selectedAction: empowered.action,
     weaponGrip,
     supportsVersatileGrip,
+    weaponGripBlockedReason,
     paymentMode: options.paymentMode || 'standard',
     actionResolutionMode: selectedAction?.resolutionMode || 'weapon-attack',
     actionSaveAttribute: selectedAction?.saveAttribute || 'dexterity',
     actionSpellSaveDc: selectedAction?.spellSaveDc ?? profile.spellSaveDc,
     actionHalfDamageOnSave: !!selectedAction?.halfDamageOnSave,
     forcedRollMode: selectedAction?.forcedRollMode || 'normal',
-    actions,
+    actions: actions.map(action => action.id === selectedAction?.id ? selectedAction : action),
     persistence: resolveCombatPersistence(effectiveCharacter),
-    aiSnapshot: buildCombatProfileAiSnapshot(effectiveCharacter)
+    aiSnapshot: options.includeAiSnapshot === false ? null : buildCombatProfileAiSnapshot(effectiveCharacter)
   };
 }
 

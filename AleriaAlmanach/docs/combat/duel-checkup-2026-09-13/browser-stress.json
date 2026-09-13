@@ -1,0 +1,46 @@
+{
+  "mode": "stress",
+  "rosterSize": 1000,
+  "changes": 120,
+  "firstMountMs": 156,
+  "meanChangeMs": 44.358333333333334,
+  "samples": [
+    {
+      "Documents": 1,
+      "JSEventListeners": 21,
+      "Nodes": 6767,
+      "JSHeapUsedSize": 4848080,
+      "JSHeapTotalSize": 6291456
+    },
+    {
+      "Documents": 1,
+      "JSEventListeners": 34,
+      "Nodes": 6767,
+      "JSHeapUsedSize": 6379560,
+      "JSHeapTotalSize": 6868992
+    },
+    {
+      "Documents": 1,
+      "JSEventListeners": 34,
+      "Nodes": 6779,
+      "JSHeapUsedSize": 6419756,
+      "JSHeapTotalSize": 7393280
+    },
+    {
+      "Documents": 1,
+      "JSEventListeners": 34,
+      "Nodes": 6773,
+      "JSHeapUsedSize": 6430196,
+      "JSHeapTotalSize": 6868992
+    }
+  ],
+  "afterRelease": {
+    "Documents": 1,
+    "JSEventListeners": 22,
+    "Nodes": 28,
+    "JSHeapUsedSize": 6108124,
+    "JSHeapTotalSize": 6868992
+  },
+  "overflow": false,
+  "errors": []
+}

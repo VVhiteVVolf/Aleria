@@ -5,7 +5,15 @@ export function isPairedCombatWeapon(weapon = {}) {
 
 export function canUseCombatOffHand(weapon = {}) {
   return !['unarmed', 'natural', 'bow', 'crossbow', 'firearm', 'shield', 'polearm', 'spear'].includes(weapon.weaponType)
-    && !/gro(?:ß|ss)(?:schwert|axt)|zweihänder|zweihändig|langbogen|kurzbogen|armbrust|hellebarde|lanze|partisane|dreizack/i.test(`${weapon.name || ''} ${weapon.properties || ''}`);
+    && !/gro(?:ß|ss)(?:schwert|axt)|zweihänder|langbogen|kurzbogen|armbrust|hellebarde|lanze|partisane|dreizack/i.test(`${weapon.name || ''} ${weapon.properties || ''}`)
+    && (Boolean(weapon.versatileDamageFormula) || !/zweihändig/i.test(`${weapon.name || ''} ${weapon.properties || ''}`));
+}
+
+export function hasEquippedCombatShield(profile = {}) {
+  return Number(profile.armorClass?.shieldBonus) > 0
+    || (profile.armorItems || []).some(item => item.equipped && item.kind === 'shield')
+    || (profile.weapons || []).some(item => item.weaponType === 'shield'
+      && (item.equipped || item.id === profile.combat?.offHandWeaponId));
 }
 
 export function getCombatWeaponLoadout(profile = {}) {

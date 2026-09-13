@@ -1,0 +1,85 @@
+{
+  "sources": [
+    {
+      "slug": "gildas-gafyr",
+      "sha256": "e77e46663473615df05fd55941a54a21b2a55d0b4f63b503737474c6722887fb",
+      "level": 6,
+      "hitPoints": 58,
+      "defense": 16,
+      "attack": 6,
+      "damageModifier": 3,
+      "initiative": 4
+    },
+    {
+      "slug": "gawain-draig",
+      "sha256": "dccf07ee3e1ecf103b52283404a66b1ba1eb9dc5bcf04fcffc4d29e41c028a4f",
+      "level": 5,
+      "hitPoints": 49,
+      "defense": 16,
+      "attack": 5,
+      "damageModifier": 2,
+      "initiative": 3
+    }
+  ],
+  "policy": "Ganze Kostenpakete: größtmögliche erwartete Schadenssumme aus bekannten Waffen/Techniken, pro Technik höchstens einmal je Gesamtbeitrag. Keine optionalen Reaktionen, keine Aura (beide haben 0), keine erfundenen Boni. Automatische Regeln und Zustände bleiben aktiv.",
+  "summary": [
+    {
+      "id": "both-one-handed",
+      "grips": [
+        "one-handed",
+        "one-handed"
+      ],
+      "count": 100,
+      "Gildas": 82,
+      "Gawain": 18,
+      "draws": 0,
+      "meanRounds": 3.09,
+      "firstGildas": 49,
+      "firstGawain": 51
+    },
+    {
+      "id": "both-two-handed",
+      "grips": [
+        "two-handed",
+        "two-handed"
+      ],
+      "count": 100,
+      "Gildas": 79,
+      "Gawain": 21,
+      "draws": 0,
+      "meanRounds": 3.09,
+      "firstGildas": 49,
+      "firstGawain": 51
+    },
+    {
+      "id": "gildas-two-handed",
+      "grips": [
+        "two-handed",
+        "one-handed"
+      ],
+      "count": 100,
+      "Gildas": 82,
+      "Gawain": 18,
+      "draws": 0,
+      "meanRounds": 3.13,
+      "firstGildas": 49,
+      "firstGawain": 51
+    },
+    {
+      "id": "gawain-two-handed",
+      "grips": [
+        "one-handed",
+        "two-handed"
+      ],
+      "count": 100,
+      "Gildas": 82,
+      "Gawain": 18,
+      "draws": 0,
+      "meanRounds": 3.03,
+      "firstGildas": 49,
+      "firstGawain": 51
+    }
+  ],
+  "totalDuels": 400,
+  "totalActions": 6251
+}

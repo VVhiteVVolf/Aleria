@@ -13,6 +13,7 @@ import { getActiveRollModes } from '../combat-profile-model.js?v=20260909-dragon
 import { renderAutomaticRollMode } from './combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
 import { bindActionPicker, renderActionPicker } from './combat-action-picker.js?v=20260909-dragon-parent-v2';
 import { bindTargetPortraitFallback, optionLabel, renderSelectedTargetPortraits, renderTargetOptions } from './combat-target-picker.js?v=20260909-dragon-parent-v2';
+import { renderCombatWeaponGrip } from './combat-weapon-grip-view.js';
 function escapeHtml(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -61,9 +62,6 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
   composer.classList.add(magic ? 'combat-composer--magic' : 'combat-composer--martial');
   composer.dataset.combatKind = magic ? 'magic' : 'martial';
   const paymentMode = actor.cheats?.enabled ? 'cheat' : (['aura', 'mana-substitute', 'cheat'].includes(segment?.combatPaymentMode) ? segment.combatPaymentMode : 'standard');
-  const weaponGrip = actor.supportsVersatileGrip && String(segment?.combatWeaponGrip || actor.weaponGrip) === 'two-handed'
-    ? 'two-handed'
-    : 'one-handed';
   const maximumTargets = Math.max(1, Number(actor.selectedAction?.maximumTargets) || 1);
   const supportsMultipleTargets = maximumTargets > 1
     || (actor.selectedAction?.effects || []).some(effect => ['selected', 'allies', 'enemies', 'all'].includes(String(effect?.target || '')));
@@ -134,12 +132,7 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
       <div class="combat-action-controls">
       ${magic && spellAction ? `<label>Wirkungsgrad<select data-combat-input="castLevel">${castLevelOptions}</select></label>` : ''}
       ${equipmentSwitch ? '' : renderAutomaticRollMode(rollModes || [...getActiveRollModes(actor), actor.forcedRollMode], { resolutionMode: actor.actionResolutionMode })}
-      ${!magic && !equipmentSwitch && actor.supportsVersatileGrip ? `<label>Führung
-        <select data-combat-input="weaponGrip">
-          <option value="one-handed"${weaponGrip === 'one-handed' ? ' selected' : ''}>Einhändig · ${escapeHtml(actor.weaponLoadout?.right?.damageFormula || actor.selectedAction?.baseDamageFormula || actor.weapon?.damageFormula || '')}</option>
-          <option value="two-handed"${weaponGrip === 'two-handed' ? ' selected' : ''}>Zweihändig · ${escapeHtml(actor.weaponLoadout?.right?.versatileDamageFormula || actor.selectedAction?.weapon?.versatileDamageFormula || '')}</option>
-        </select>
-      </label>` : ''}
+      ${!magic && !equipmentSwitch ? renderCombatWeaponGrip(actor) : ''}
       </div>
     </div>
     ${actorReady ? '' : `<p class="combat-composer-warning" role="status">${escapeHtml(actorProblem || actor.selectedAction?.disabledReason || 'Ergänze auf dem Charakter- oder Kreaturenbogen einen passenden Angriff mit Schadenswurf.')}</p>`}

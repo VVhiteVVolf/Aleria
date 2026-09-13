@@ -10,6 +10,7 @@ export function prioritizeCombatTargets(targets = [], participantIds = new Set()
 }
 
 export function optionLabel(target = {}) {
+  if (target.previewPending) return target.name;
   const ready = target.totalDefense != null && Number.isFinite(Number(target.totalDefense));
   const hp = target.currentHitPoints != null && target.maximumHitPoints != null ? ` · ${target.currentHitPoints}/${target.maximumHitPoints} TP` : '';
   const chance = formatCombatChance(target.hitChance);
@@ -22,7 +23,7 @@ export function renderTargetOptions(targets = [], selectedIds = new Set()) {
   return groups.map((group, index) => {
     if (!group.length) return '';
     const options = group.map(target => {
-      const ready = target.totalDefense != null && Number.isFinite(Number(target.totalDefense));
+      const ready = target.previewPending || (target.totalDefense != null && Number.isFinite(Number(target.totalDefense)));
       const label = optionLabel(target);
       return `<option value="${escapeHtml(target.characterId)}"${selectedIds.has(String(target.characterId)) ? ' selected' : ''}${ready ? '' : ' disabled'}>${escapeHtml(label)}</option>`;
     }).join('');

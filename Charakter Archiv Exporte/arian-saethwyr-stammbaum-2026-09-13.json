@@ -1,0 +1,62 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-09-12T12:41:00.453Z",
+  "note": "Gesicherte Stammbaumidentität vor der Zusammenführung. Die ursprüngliche Dokument-ID bleibt als Quellenverweis auf die vereinigte Figur erhalten.",
+  "character": {
+    "id": "person--haus-saethwyr--arian-saethwyr",
+    "name": "Arian Saethwyr",
+    "identity": {
+      "worldPersonId": "person--haus-saethwyr--arian-saethwyr"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-saethwyr--arian-saethwyr",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1721",
+      "death": "",
+      "houseId": "house-saethwyr",
+      "houseName": "Haus Saethwyr",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-saethwyr",
+          "personId": "arian-saethwyr",
+          "releaseId": "github-r4",
+          "publishedAt": "2026-09-12T11:58:42.936Z",
+          "importedAt": "2026-09-12T12:41:00.453Z",
+          "lastSyncedAt": "2026-09-12T12:41:00.453Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-saethwyr&mode=view&person=arian-saethwyr",
+          "fingerprint": "{\"name\":\"Arian Saethwyr\",\"title\":\"\",\"birth\":\"1721\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-saethwyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-saethwyr/arian-saethwyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"marmaduke-saethwyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-saethwyr--marmaduke-saethwyr\",\"name\":\"Marmaduke Saethwyr\"},{\"personId\":\"bronwyn-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--bronwyn-wyrm\",\"name\":\"Bronwyn Wyrm\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "marmaduke-saethwyr",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-saethwyr--marmaduke-saethwyr",
+            "name": "Marmaduke Saethwyr"
+          },
+          {
+            "personId": "bronwyn-wyrm",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wyrm--bronwyn-wyrm",
+            "name": "Bronwyn Wyrm"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "portrait": "../Stammbäume/assets/images/portraits/haus-saethwyr/arian-saethwyr.jpg",
+    "createdAt": "2026-09-12T12:41:00.453Z",
+    "updatedAt": "2026-09-12T12:41:00.453Z"
+  }
+}
