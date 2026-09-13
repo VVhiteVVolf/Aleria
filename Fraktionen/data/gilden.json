@@ -1,0 +1,1652 @@
+{
+  "groups": [
+    {
+      "id": "administrative-gilden",
+      "title": "Administrative Gilden"
+    },
+    {
+      "id": "subordinatoren-der-aufsehergilde",
+      "title": "Das Gefolge der Aufsehergilde",
+      "parentId": "wolken-der-daemmerung"
+    },
+    {
+      "id": "abenteurergilden",
+      "title": "Abenteurergilden",
+      "parentId": "wolken-der-daemmerung"
+    },
+    {
+      "id": "waechtergilden",
+      "title": "Wächtergilden",
+      "parentId": "wolken-der-daemmerung"
+    },
+    {
+      "id": "handelsgilden",
+      "title": "Handelsgilden",
+      "parentId": "wolken-der-daemmerung"
+    },
+    {
+      "id": "subordinatoren-des-marktes-der-fortuna",
+      "title": "Untergilden des Marktes der Fortuna",
+      "parentId": "markt-der-fortuna"
+    },
+    {
+      "id": "brauergilden",
+      "title": "Brauergilden",
+      "parentId": "wolken-der-daemmerung"
+    },
+    {
+      "id": "baenkersgilden",
+      "title": "Bankengilden",
+      "parentId": "wolken-der-daemmerung"
+    },
+    {
+      "id": "schmiedezuenfte",
+      "title": "Schmiedezünfte",
+      "parentId": "wolken-der-daemmerung",
+      "family": "Handwerksgilden"
+    },
+    {
+      "id": "handwerkszuenfte",
+      "title": "Handwerkszünfte",
+      "parentId": "wolken-der-daemmerung",
+      "family": "Handwerksgilden"
+    },
+    {
+      "id": "baumeister-zuenfte",
+      "title": "Baumeister-Zünfte",
+      "parentId": "wolken-der-daemmerung",
+      "family": "Handwerksgilden"
+    },
+    {
+      "id": "bergbau-zuenfte",
+      "title": "Bergbau Zünfte",
+      "parentId": "wolken-der-daemmerung",
+      "family": "Handwerksgilden"
+    },
+    {
+      "id": "alchemistische-zuenfte",
+      "title": "Alchemistische Zünfte",
+      "parentId": "wolken-der-daemmerung",
+      "family": "Handwerksgilden"
+    },
+    {
+      "id": "post-nachrichten-gilden",
+      "title": "Post- & Nachrichtengilden",
+      "parentId": "wolken-der-daemmerung"
+    },
+    {
+      "id": "zuechtergilden",
+      "title": "Züchtergilden",
+      "parentId": "wolken-der-daemmerung"
+    },
+    {
+      "id": "alerischer-wettkampfsverbund",
+      "title": "Alerischer Wettkampfsverbund",
+      "parentId": "wolken-der-daemmerung"
+    },
+    {
+      "id": "forschergilden",
+      "title": "Forschergilden",
+      "parentId": "wolken-der-daemmerung"
+    },
+    {
+      "id": "soeldnergilden",
+      "title": "Söldnergilden",
+      "parentId": "wolken-der-daemmerung",
+      "family": "Kriegergilden"
+    },
+    {
+      "id": "privatsoeldner",
+      "title": "Privatsöldner",
+      "parentId": "wolken-der-daemmerung",
+      "family": "Kriegergilden"
+    },
+    {
+      "id": "waldlaeufer-jaeger-gilden",
+      "title": "Waldläufer/ Jäger Gilden",
+      "parentId": "wolken-der-daemmerung",
+      "family": "Kriegergilden"
+    },
+    {
+      "id": "monsterschlaechter-gilden",
+      "title": "Monsterschlächter Gilden",
+      "parentId": "wolken-der-daemmerung",
+      "family": "Kriegergilden"
+    },
+    {
+      "id": "unterhaltungsgilden",
+      "title": "Unterhaltungsgilden",
+      "parentId": "wolken-der-daemmerung"
+    },
+    {
+      "id": "musen-untergilden",
+      "title": "Musen Untergilden",
+      "parentId": "musen-der-maid"
+    },
+    {
+      "id": "gelehrtengilden",
+      "title": "Gelehrtengilden",
+      "parentId": "wolken-der-daemmerung"
+    },
+    {
+      "id": "magiergilden",
+      "title": "Magiergilden",
+      "parentId": "wolken-der-daemmerung"
+    }
+  ],
+  "entries": [
+    {
+      "id": "wolken-der-daemmerung",
+      "name": "Wolken der Dämmerung",
+      "kind": "Aufseher Gilde",
+      "groupId": "administrative-gilden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 1,
+        "column": 0,
+        "name": "Wolken der Dämmerung",
+        "image": "https://i.imgur.com/GnT6P6f.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=774"
+      },
+      "symbol": "assets/emblems/gilden/wolken-der-daemmerung.webp"
+    },
+    {
+      "id": "die-beobachter",
+      "name": "Die Beobachter",
+      "kind": "",
+      "groupId": "subordinatoren-der-aufsehergilde",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 5,
+        "column": 0,
+        "name": "Die Beobachter",
+        "image": "https://i.imgur.com/xtFboGq.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1017"
+      },
+      "symbol": "assets/emblems/gilden/die-beobachter.webp"
+    },
+    {
+      "id": "ritter-der-tafelrunde",
+      "name": "Ritter der Tafelrunde",
+      "kind": "",
+      "groupId": "abenteurergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 9,
+        "column": 0,
+        "name": "Ritter der Tafelrunde",
+        "image": "https://i.imgur.com/DyMeZow.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=21"
+      },
+      "symbol": "assets/emblems/gilden/ritter-der-tafelrunde.webp"
+    },
+    {
+      "id": "drachenritter",
+      "name": "Drachenritter",
+      "kind": "",
+      "groupId": "abenteurergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 9,
+        "column": 1,
+        "name": "Drachenritter",
+        "image": "https://i.imgur.com/0Z9XKlJ.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=19"
+      },
+      "symbol": "assets/emblems/gilden/drachenritter.webp"
+    },
+    {
+      "id": "dornenritter",
+      "name": "Dornenritter",
+      "kind": "",
+      "groupId": "abenteurergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 9,
+        "column": 2,
+        "name": "Dornenritter",
+        "image": "https://i.imgur.com/HrNazNI.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1029"
+      },
+      "symbol": "assets/emblems/gilden/dornenritter.webp"
+    },
+    {
+      "id": "wintersonne",
+      "name": "Wintersonne",
+      "kind": "",
+      "groupId": "abenteurergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 9,
+        "column": 3,
+        "name": "Wintersonne",
+        "image": "https://i.imgur.com/HdhMjXz.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1449"
+      },
+      "status": "struck",
+      "symbol": "assets/emblems/gilden/wintersonne.webp"
+    },
+    {
+      "id": "dunstlichter",
+      "name": "Dunstlichter",
+      "kind": "",
+      "groupId": "abenteurergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 9,
+        "column": 4,
+        "name": "Dunstlichter",
+        "image": "https://i.imgur.com/syXBQQd.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1725"
+      },
+      "symbol": "assets/emblems/gilden/dunstlichter.webp"
+    },
+    {
+      "id": "unbenannt-abenteurergilden",
+      "name": "Name nicht überliefert",
+      "kind": "",
+      "groupId": "abenteurergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 12,
+        "column": 0,
+        "name": "???",
+        "image": "https://i.imgur.com/LqcDp8Z.png",
+        "href": ""
+      },
+      "status": "unnamed",
+      "symbol": "assets/emblems/gilden/unbenannt-abenteurergilden.webp",
+      "href": ""
+    },
+    {
+      "id": "runenkrieger",
+      "name": "Runenkrieger",
+      "kind": "",
+      "groupId": "abenteurergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 12,
+        "column": 1,
+        "name": "Runenkrieger",
+        "image": "https://i.imgur.com/estQUlS.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2193"
+      },
+      "status": "struck",
+      "symbol": "assets/emblems/gilden/runenkrieger.webp"
+    },
+    {
+      "id": "herdwaechter",
+      "name": "Herdwächter",
+      "kind": "",
+      "groupId": "waechtergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 16,
+        "column": 0,
+        "name": "Herdwächter",
+        "image": "https://i.imgur.com/rhzoxq0.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=51"
+      },
+      "symbol": "assets/emblems/gilden/herdwaechter.webp"
+    },
+    {
+      "id": "fianna",
+      "name": "Fianna",
+      "kind": "",
+      "groupId": "waechtergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 16,
+        "column": 1,
+        "name": "Fianna",
+        "image": "https://i.imgur.com/rGUqxIi.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=50"
+      },
+      "symbol": "assets/emblems/gilden/fianna.webp"
+    },
+    {
+      "id": "unbenannt-waechtergilden",
+      "name": "Name nicht überliefert",
+      "kind": "",
+      "groupId": "waechtergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 16,
+        "column": 2,
+        "name": "???",
+        "image": "https://i.imgur.com/pjOcYP3.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=271"
+      },
+      "status": "unnamed",
+      "symbol": "assets/emblems/gilden/unbenannt-waechtergilden.webp"
+    },
+    {
+      "id": "sperlingsfedern",
+      "name": "Sperlingsfedern",
+      "kind": "",
+      "groupId": "waechtergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 16,
+        "column": 3,
+        "name": "Sperlingsfedern",
+        "image": "https://i.imgur.com/kG5HIoy.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=158"
+      },
+      "symbol": "assets/emblems/gilden/sperlingsfedern.webp"
+    },
+    {
+      "id": "nimues-streiter",
+      "name": "Nimues Streiter",
+      "kind": "",
+      "groupId": "waechtergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 16,
+        "column": 4,
+        "name": "Nimues Streiter",
+        "image": "https://i.imgur.com/5LGL6nC.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=355"
+      },
+      "symbol": "assets/emblems/gilden/nimues-streiter.webp"
+    },
+    {
+      "id": "klingende-muenze",
+      "name": "Klingende Münze",
+      "kind": "",
+      "groupId": "handelsgilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 20,
+        "column": 0,
+        "name": "Klingende Münze",
+        "image": "https://i.imgur.com/jqR4FUw.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=42"
+      },
+      "symbol": "assets/emblems/gilden/klingende-muenze.webp"
+    },
+    {
+      "id": "markt-der-fortuna",
+      "name": "Markt der Fortuna",
+      "kind": "",
+      "groupId": "handelsgilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 20,
+        "column": 1,
+        "name": "Markt der Fortuna",
+        "image": "https://i.imgur.com/ZtwroqK.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=86"
+      },
+      "symbol": "assets/emblems/gilden/markt-der-fortuna.webp"
+    },
+    {
+      "id": "ost-kaiserliche-handelsgilde",
+      "name": "Ost-Kaiserliche Handelsgilde",
+      "kind": "",
+      "groupId": "handelsgilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 20,
+        "column": 2,
+        "name": "Ost-Kaiserliche Handelsgilde",
+        "image": "https://i.imgur.com/TzHeHyC.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1363"
+      },
+      "status": "struck",
+      "symbol": "assets/emblems/gilden/ost-kaiserliche-handelsgilde.webp"
+    },
+    {
+      "id": "meridaner-basar",
+      "name": "Meridaner Basar",
+      "kind": "",
+      "groupId": "handelsgilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 20,
+        "column": 3,
+        "name": "Meridaner Basar",
+        "image": "https://i.imgur.com/ZO987D3.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1210"
+      },
+      "symbol": "assets/emblems/gilden/meridaner-basar.webp"
+    },
+    {
+      "id": "magna-agora",
+      "name": "Magna Agora",
+      "kind": "",
+      "groupId": "handelsgilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 20,
+        "column": 4,
+        "name": "Magna Agora",
+        "image": "https://i.imgur.com/JeoZo2p.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1211"
+      },
+      "symbol": "assets/emblems/gilden/magna-agora.webp"
+    },
+    {
+      "id": "mariels-gabe",
+      "name": "Mariels Gabe",
+      "kind": "",
+      "groupId": "subordinatoren-des-marktes-der-fortuna",
+      "parentId": "markt-der-fortuna",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 24,
+        "column": 0,
+        "name": "Mariels Gabe",
+        "image": "https://i.imgur.com/0WfTvSC.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=656"
+      },
+      "symbol": "assets/emblems/gilden/mariels-gabe.webp"
+    },
+    {
+      "id": "geeinte-haende",
+      "name": "Geeinte Hände",
+      "kind": "",
+      "groupId": "subordinatoren-des-marktes-der-fortuna",
+      "parentId": "markt-der-fortuna",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 24,
+        "column": 1,
+        "name": "Geeinte Hände",
+        "image": "https://i.imgur.com/TtLV11y.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2445"
+      },
+      "symbol": "assets/emblems/gilden/geeinte-haende.webp"
+    },
+    {
+      "id": "teyrngarch-brauerei",
+      "name": "Teyrngarch Brauerei",
+      "kind": "",
+      "groupId": "brauergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 32,
+        "column": 0,
+        "name": "Teyrngarch Brauerei",
+        "image": "https://i.imgur.com/Ex9zSN4.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2113"
+      },
+      "symbol": "assets/emblems/gilden/teyrngarch-brauerei.webp"
+    },
+    {
+      "id": "schwarzdorn-brauerei",
+      "name": "Schwarzdorn Brauerei",
+      "kind": "",
+      "groupId": "brauergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 32,
+        "column": 1,
+        "name": "Schwarzdorn Brauerei",
+        "image": "https://i.imgur.com/q4sxt2b.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2194"
+      },
+      "symbol": "assets/emblems/gilden/schwarzdorn-brauerei.webp"
+    },
+    {
+      "id": "goldenglanz-brauerei",
+      "name": "Goldenglanz Brauerei",
+      "kind": "",
+      "groupId": "brauergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 32,
+        "column": 2,
+        "name": "Goldenglanz Brauerei",
+        "image": "https://i.imgur.com/5fEECK2.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2195"
+      },
+      "symbol": "assets/emblems/gilden/goldenglanz-brauerei.webp"
+    },
+    {
+      "id": "penderyn-destillerie",
+      "name": "Penderyn Destillerie",
+      "kind": "",
+      "groupId": "brauergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 32,
+        "column": 3,
+        "name": "Penderyn Destillerie",
+        "image": "https://i.imgur.com/8OwGQat.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2153"
+      },
+      "symbol": "assets/emblems/gilden/penderyn-destillerie.webp"
+    },
+    {
+      "id": "erzkelterbund-an-haeghra",
+      "name": "Erzkelterbund an'Haeghra",
+      "kind": "",
+      "groupId": "brauergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 32,
+        "column": 4,
+        "name": "Erzkelterbund an'Haeghra",
+        "image": "https://i.imgur.com/w4bS9wR.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2544"
+      },
+      "symbol": "assets/emblems/gilden/erzkelterbund-an-haeghra.webp"
+    },
+    {
+      "id": "eichenglanz-destillerie",
+      "name": "Eichenglanz Destillerie",
+      "kind": "",
+      "groupId": "brauergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 35,
+        "column": 0,
+        "name": "Eichenglanz Destillerie",
+        "image": "https://64.media.tumblr.com/373163fd1320586d9d0d444eee60de8b/d613d7b78e33ef36-af/s1280x1920/819b67ebc0ba72c483728e087014b3a547df32ab.pnj",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2609"
+      },
+      "symbol": "assets/emblems/gilden/eichenglanz-destillerie.webp"
+    },
+    {
+      "id": "die-loewenbank",
+      "name": "Die Löwenbank",
+      "kind": "",
+      "groupId": "baenkersgilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 39,
+        "column": 0,
+        "name": "Die Löwenbank",
+        "image": "https://i.imgur.com/C8Fvsog.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=740"
+      },
+      "symbol": "assets/emblems/gilden/die-loewenbank.webp"
+    },
+    {
+      "id": "die-goldmund-bank",
+      "name": "Die Goldmund Bank",
+      "kind": "",
+      "groupId": "baenkersgilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 39,
+        "column": 1,
+        "name": "Die Goldmund Bank",
+        "image": "https://i.imgur.com/V236nqV.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=741"
+      },
+      "symbol": "assets/emblems/gilden/die-goldmund-bank.webp"
+    },
+    {
+      "id": "die-weingold-bank",
+      "name": "Die Weingold Bank",
+      "kind": "",
+      "groupId": "baenkersgilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 39,
+        "column": 2,
+        "name": "Die Weingold Bank",
+        "image": "https://i.imgur.com/08C9e2p.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=743"
+      },
+      "symbol": "assets/emblems/gilden/die-weingold-bank.webp"
+    },
+    {
+      "id": "die-rote-bank",
+      "name": "Die Rote Bank",
+      "kind": "",
+      "groupId": "baenkersgilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 39,
+        "column": 3,
+        "name": "Die Rote Bank",
+        "image": "https://i.imgur.com/zAwJdmc.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=742"
+      },
+      "symbol": "assets/emblems/gilden/die-rote-bank.webp"
+    },
+    {
+      "id": "die-sand-bank",
+      "name": "Die Sand bank",
+      "kind": "",
+      "groupId": "baenkersgilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 39,
+        "column": 4,
+        "name": "Die Sand bank",
+        "image": "https://i.imgur.com/hfMWfsy.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1219"
+      },
+      "symbol": "assets/emblems/gilden/die-sand-bank.webp"
+    },
+    {
+      "id": "die-blaue-bank",
+      "name": "Die Blaue Bank",
+      "kind": "",
+      "groupId": "baenkersgilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 42,
+        "column": 0,
+        "name": "Die Blaue Bank",
+        "image": "https://i.imgur.com/TuHz3M8.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1705"
+      },
+      "symbol": "assets/emblems/gilden/die-blaue-bank.webp"
+    },
+    {
+      "id": "hnoss-kasse",
+      "name": "Hnoss' Kasse",
+      "kind": "",
+      "groupId": "baenkersgilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 42,
+        "column": 1,
+        "name": "Hnoss' Kasse",
+        "image": "https://i.imgur.com/DWOS7va.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2201"
+      },
+      "symbol": "assets/emblems/gilden/hnoss-kasse.webp"
+    },
+    {
+      "id": "seelenschmiede",
+      "name": "Seelenschmiede",
+      "kind": "",
+      "groupId": "schmiedezuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 47,
+        "column": 0,
+        "name": "Seelenschmiede",
+        "image": "https://i.imgur.com/NL6iKYX.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=85"
+      },
+      "symbol": "assets/emblems/gilden/seelenschmiede.webp"
+    },
+    {
+      "id": "regenbogenschmiede",
+      "name": "Regenbogenschmiede",
+      "kind": "",
+      "groupId": "schmiedezuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 47,
+        "column": 1,
+        "name": "Regenbogenschmiede",
+        "image": "https://i.imgur.com/qKa4LbC.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=903"
+      },
+      "symbol": "assets/emblems/gilden/regenbogenschmiede.webp"
+    },
+    {
+      "id": "himmelsschmiede",
+      "name": "Himmelsschmiede",
+      "kind": "",
+      "groupId": "schmiedezuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 47,
+        "column": 2,
+        "name": "Himmelsschmiede",
+        "image": "https://i.imgur.com/cHfMcDR.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1198"
+      },
+      "symbol": "assets/emblems/gilden/himmelsschmiede.webp"
+    },
+    {
+      "id": "tiefenschmiede",
+      "name": "Tiefenschmiede",
+      "kind": "",
+      "groupId": "schmiedezuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 47,
+        "column": 3,
+        "name": "Tiefenschmiede",
+        "image": "https://i.imgur.com/U3o0iKx.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1220"
+      },
+      "symbol": "assets/emblems/gilden/tiefenschmiede.webp"
+    },
+    {
+      "id": "erzbender",
+      "name": "Erzbender",
+      "kind": "",
+      "groupId": "schmiedezuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 47,
+        "column": 4,
+        "name": "Erzbender",
+        "image": "https://i.imgur.com/uOdMw3a.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2196"
+      },
+      "symbol": "assets/emblems/gilden/erzbender.webp"
+    },
+    {
+      "id": "gewand-der-lytheris",
+      "name": "Gewand der Lytheris",
+      "kind": "",
+      "groupId": "handwerkszuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 51,
+        "column": 0,
+        "name": "Gewand der Lytheris",
+        "image": "https://i.imgur.com/bW1C5PG.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1346"
+      },
+      "symbol": "assets/emblems/gilden/gewand-der-lytheris.webp"
+    },
+    {
+      "id": "glyphenformer",
+      "name": "Glyphenformer",
+      "kind": "",
+      "groupId": "handwerkszuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 51,
+        "column": 1,
+        "name": "Glyphenformer",
+        "image": "https://i.imgur.com/pYbdz8v.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2197"
+      },
+      "symbol": "assets/emblems/gilden/glyphenformer.webp"
+    },
+    {
+      "id": "gerdurs-meisterstich",
+      "name": "Gerdurs Meisterstich",
+      "kind": "",
+      "groupId": "handwerkszuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 51,
+        "column": 2,
+        "name": "Gerdurs Meisterstich",
+        "image": "https://i.imgur.com/EAVeUc7.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2200"
+      },
+      "symbol": "assets/emblems/gilden/gerdurs-meisterstich.webp"
+    },
+    {
+      "id": "immergruen",
+      "name": "Immergrün",
+      "kind": "",
+      "groupId": "handwerkszuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 51,
+        "column": 3,
+        "name": "Immergrün",
+        "image": "https://i.imgur.com/Ec4KPRu.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=542"
+      },
+      "symbol": "assets/emblems/gilden/immergruen.webp"
+    },
+    {
+      "id": "lichtformer",
+      "name": "Lichtformer",
+      "kind": "",
+      "groupId": "handwerkszuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 51,
+        "column": 4,
+        "name": "Lichtformer",
+        "image": "https://i.imgur.com/nX4RojC.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2444"
+      },
+      "symbol": "assets/emblems/gilden/lichtformer.webp"
+    },
+    {
+      "id": "fassbund-von-leith",
+      "name": "Fassbund von Leith",
+      "kind": "",
+      "groupId": "handwerkszuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 54,
+        "column": 0,
+        "name": "Fassbund von Leith",
+        "image": "https://i.imgur.com/eDMLnoc.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2443"
+      },
+      "symbol": "assets/emblems/gilden/fassbund-von-leith.webp"
+    },
+    {
+      "id": "knotenmeister",
+      "name": "Knotenmeister",
+      "kind": "",
+      "groupId": "handwerkszuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 54,
+        "column": 1,
+        "name": "Knotenmeister",
+        "image": "https://i.imgur.com/CKUKlHb.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2446"
+      },
+      "symbol": "assets/emblems/gilden/knotenmeister.webp"
+    },
+    {
+      "id": "erdenhaende",
+      "name": "Erdenhände",
+      "kind": "",
+      "groupId": "handwerkszuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 54,
+        "column": 2,
+        "name": "Erdenhände",
+        "image": "https://i.imgur.com/BgZHpQG.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2447"
+      },
+      "symbol": "assets/emblems/gilden/erdenhaende.webp"
+    },
+    {
+      "id": "kerzenmachergilde",
+      "name": "Kerzenmachergilde",
+      "kind": "",
+      "groupId": "handwerkszuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 54,
+        "column": 3,
+        "name": "Kerzenmachergilde",
+        "image": "https://i.imgur.com/vARVjdl.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2525"
+      },
+      "symbol": "assets/emblems/gilden/kerzenmachergilde.webp"
+    },
+    {
+      "id": "siegelmeister",
+      "name": "Siegelmeister",
+      "kind": "",
+      "groupId": "handwerkszuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 54,
+        "column": 4,
+        "name": "Siegelmeister",
+        "image": "https://i.imgur.com/VlUwYoV.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2548"
+      },
+      "symbol": "assets/emblems/gilden/siegelmeister.webp"
+    },
+    {
+      "id": "die-gebundene-schicht",
+      "name": "Die gebundene Schicht",
+      "kind": "",
+      "groupId": "handwerkszuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 57,
+        "column": 0,
+        "name": "Die gebundene Schicht",
+        "image": "https://64.media.tumblr.com/c7737824108b71bf96a925fa670435d4/c9313c9199e687f4-0f/s400x600/d7edec071a212b850be298efc2b9a6b2fc7db57f.pnj",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2611"
+      },
+      "symbol": "assets/emblems/gilden/die-gebundene-schicht.webp"
+    },
+    {
+      "id": "bedehaus-des-mardran",
+      "name": "Bedehaus des Mardran",
+      "kind": "",
+      "groupId": "baumeister-zuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 61,
+        "column": 0,
+        "name": "Bedehaus des Mardran",
+        "image": "https://i.imgur.com/3f5FsZF.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1345"
+      },
+      "symbol": "assets/emblems/gilden/bedehaus-des-mardran.webp"
+    },
+    {
+      "id": "baumeister-gilde",
+      "name": "Baumeister Gilde",
+      "kind": "",
+      "groupId": "baumeister-zuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 61,
+        "column": 1,
+        "name": "Baumeister Gilde",
+        "image": "https://i.imgur.com/SQB0jKR.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=951"
+      },
+      "symbol": "assets/emblems/gilden/baumeister-gilde.webp"
+    },
+    {
+      "id": "schiffsbauer-gilde",
+      "name": "Schiffsbauer Gilde",
+      "kind": "",
+      "groupId": "baumeister-zuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 61,
+        "column": 2,
+        "name": "Schiffsbauer Gilde",
+        "image": "https://i.imgur.com/jzHNHpD.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=748"
+      },
+      "symbol": "assets/emblems/gilden/schiffsbauer-gilde.webp"
+    },
+    {
+      "id": "spinnrad",
+      "name": "Spinnrad",
+      "kind": "",
+      "groupId": "baumeister-zuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 61,
+        "column": 3,
+        "name": "Spinnrad",
+        "image": "https://i.imgur.com/OKx7tZ6.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=901"
+      },
+      "symbol": "assets/emblems/gilden/spinnrad.webp"
+    },
+    {
+      "id": "kieselkratzer",
+      "name": "Kieselkratzer",
+      "kind": "",
+      "groupId": "bergbau-zuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 65,
+        "column": 0,
+        "name": "Kieselkratzer",
+        "image": "https://i.imgur.com/qCupPFp.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=906"
+      },
+      "symbol": "assets/emblems/gilden/kieselkratzer.webp"
+    },
+    {
+      "id": "pickende-spechte",
+      "name": "Pickende Spechte",
+      "kind": "",
+      "groupId": "bergbau-zuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 65,
+        "column": 1,
+        "name": "Pickende Spechte",
+        "image": "https://i.imgur.com/xX1KnI1.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=905"
+      },
+      "symbol": "assets/emblems/gilden/pickende-spechte.webp"
+    },
+    {
+      "id": "goldener-atem",
+      "name": "Goldener Atem",
+      "kind": "",
+      "groupId": "alchemistische-zuenfte",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 69,
+        "column": 0,
+        "name": "Goldener Atem",
+        "image": "https://64.media.tumblr.com/d547b67a7b35257975cf44d9d4f194d6/ed8f3257d1641b49-2c/s1280x1920/72efa50bf51313e9f6a87f5c245c5fa7855b9dd5.pnj",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2618"
+      },
+      "symbol": "assets/emblems/gilden/goldener-atem.webp"
+    },
+    {
+      "id": "federkiel",
+      "name": "Federkiel",
+      "kind": "",
+      "groupId": "post-nachrichten-gilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 73,
+        "column": 0,
+        "name": "Federkiel",
+        "image": "https://i.imgur.com/NqCFXVb.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=745"
+      },
+      "symbol": "assets/emblems/gilden/federkiel.webp"
+    },
+    {
+      "id": "schwarzbote",
+      "name": "Schwarzbote",
+      "kind": "",
+      "groupId": "post-nachrichten-gilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 73,
+        "column": 1,
+        "name": "Schwarzbote",
+        "image": "https://i.imgur.com/WqPs7b2.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=916"
+      },
+      "symbol": "assets/emblems/gilden/schwarzbote.webp"
+    },
+    {
+      "id": "flinke-fackellaeufer",
+      "name": "Flinke Fackelläufer",
+      "kind": "",
+      "groupId": "post-nachrichten-gilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 73,
+        "column": 2,
+        "name": "Flinke Fackelläufer",
+        "image": "https://i.imgur.com/bS8XGMQ.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1218"
+      },
+      "symbol": "assets/emblems/gilden/flinke-fackellaeufer.webp"
+    },
+    {
+      "id": "rhosmeres-roesser",
+      "name": "Rhosmeres Rösser",
+      "kind": "",
+      "groupId": "zuechtergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 77,
+        "column": 0,
+        "name": "Rhosmeres Rösser",
+        "image": "https://i.imgur.com/lra16Ih.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=866"
+      },
+      "symbol": "assets/emblems/gilden/rhosmeres-roesser.webp"
+    },
+    {
+      "id": "heldenhaftes-gestuet",
+      "name": "Heldenhaftes Gestüt",
+      "kind": "",
+      "groupId": "zuechtergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 77,
+        "column": 1,
+        "name": "Heldenhaftes Gestüt",
+        "image": "https://i.imgur.com/qcQjeBn.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=867"
+      },
+      "symbol": "assets/emblems/gilden/heldenhaftes-gestuet.webp"
+    },
+    {
+      "id": "steppenlaeufer",
+      "name": "Steppenläufer",
+      "kind": "",
+      "groupId": "zuechtergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 77,
+        "column": 2,
+        "name": "Steppenläufer",
+        "image": "https://i.imgur.com/I2FZKOs.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=892"
+      },
+      "symbol": "assets/emblems/gilden/steppenlaeufer.webp"
+    },
+    {
+      "id": "vogelhaus",
+      "name": "Vogelhaus",
+      "kind": "",
+      "groupId": "zuechtergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 77,
+        "column": 3,
+        "name": "Vogelhaus",
+        "image": "https://i.imgur.com/4oOTMkY.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=955"
+      },
+      "symbol": "assets/emblems/gilden/vogelhaus.webp"
+    },
+    {
+      "id": "viehzuechter-gilde",
+      "name": "Viehzüchter Gilde",
+      "kind": "",
+      "groupId": "zuechtergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 77,
+        "column": 4,
+        "name": "Viehzüchter Gilde",
+        "image": "https://i.imgur.com/EoUjyrn.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=978"
+      },
+      "symbol": "assets/emblems/gilden/viehzuechter-gilde.webp"
+    },
+    {
+      "id": "windlaeufer",
+      "name": "Windläufer",
+      "kind": "",
+      "groupId": "zuechtergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 80,
+        "column": 0,
+        "name": "Windläufer",
+        "image": "https://i.imgur.com/4N1R2Ew.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2151"
+      },
+      "symbol": "assets/emblems/gilden/windlaeufer.webp"
+    },
+    {
+      "id": "hochbund-des-herion",
+      "name": "Hochbund des Herion",
+      "kind": "Sportliches Gremium",
+      "groupId": "alerischer-wettkampfsverbund",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 84,
+        "column": 0,
+        "name": "Hochbund des Herion",
+        "image": "https://i.imgur.com/8ggDJZa.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2465"
+      },
+      "symbol": "assets/emblems/gilden/hochbund-des-herion.webp"
+    },
+    {
+      "id": "ruinenpforte",
+      "name": "Ruinenpforte",
+      "kind": "",
+      "groupId": "forschergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 89,
+        "column": 0,
+        "name": "Ruinenpforte",
+        "image": "https://i.imgur.com/96Mf4fd.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=88"
+      },
+      "symbol": "assets/emblems/gilden/ruinenpforte.webp"
+    },
+    {
+      "id": "weltenkeller",
+      "name": "Weltenkeller",
+      "kind": "",
+      "groupId": "forschergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 89,
+        "column": 1,
+        "name": "Weltenkeller",
+        "image": "https://i.imgur.com/36XZv3m.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=747"
+      },
+      "symbol": "assets/emblems/gilden/weltenkeller.webp"
+    },
+    {
+      "id": "moewensang",
+      "name": "Möwensang",
+      "kind": "",
+      "groupId": "forschergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 89,
+        "column": 2,
+        "name": "Möwensang",
+        "image": "https://i.imgur.com/IM7kjgM.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=746"
+      },
+      "symbol": "assets/emblems/gilden/moewensang.webp"
+    },
+    {
+      "id": "lebenszirkel",
+      "name": "Lebenszirkel",
+      "kind": "",
+      "groupId": "forschergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 89,
+        "column": 3,
+        "name": "Lebenszirkel",
+        "image": "https://i.imgur.com/orsZiKQ.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2345"
+      },
+      "symbol": "assets/emblems/gilden/lebenszirkel.webp"
+    },
+    {
+      "id": "blutbund",
+      "name": "Blutbund",
+      "kind": "",
+      "groupId": "soeldnergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 94,
+        "column": 0,
+        "name": "Blutbund",
+        "image": "https://i.imgur.com/MXy1AGO.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=163"
+      },
+      "symbol": "assets/emblems/gilden/blutbund.webp"
+    },
+    {
+      "id": "windreiter",
+      "name": "Windreiter",
+      "kind": "",
+      "groupId": "soeldnergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 94,
+        "column": 1,
+        "name": "Windreiter",
+        "image": "https://i.imgur.com/w4H6Nt4.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=95"
+      },
+      "symbol": "assets/emblems/gilden/windreiter.webp"
+    },
+    {
+      "id": "goldene-kompanie",
+      "name": "Goldene Kompanie",
+      "kind": "",
+      "groupId": "soeldnergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 94,
+        "column": 2,
+        "name": "Goldene Kompanie",
+        "image": "https://i.imgur.com/qRVZFYl.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=541"
+      },
+      "symbol": "assets/emblems/gilden/goldene-kompanie.webp"
+    },
+    {
+      "id": "heckenritter",
+      "name": "Heckenritter",
+      "kind": "",
+      "groupId": "soeldnergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 94,
+        "column": 3,
+        "name": "Heckenritter",
+        "image": "https://i.imgur.com/0834D7e.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=921"
+      },
+      "symbol": "assets/emblems/gilden/heckenritter.webp"
+    },
+    {
+      "id": "abtruennige",
+      "name": "Abtrünnige",
+      "kind": "",
+      "groupId": "soeldnergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 94,
+        "column": 4,
+        "name": "Abtrünnige",
+        "image": "https://i.imgur.com/kP24zfq.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=922"
+      },
+      "symbol": "assets/emblems/gilden/abtruennige.webp"
+    },
+    {
+      "id": "richter-des-reinen-butes",
+      "name": "Richter des Reinen Blutes",
+      "kind": "",
+      "groupId": "soeldnergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 97,
+        "column": 0,
+        "name": "Richter des Reinen Butes",
+        "image": "https://i.imgur.com/ZdtqCLV.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2497"
+      },
+      "aliases": [
+        "Richter des Reinen Butes"
+      ],
+      "symbol": "assets/emblems/gilden/richter-des-reinen-butes.webp"
+    },
+    {
+      "id": "blaue-kompanie",
+      "name": "Blaue Kompanie",
+      "kind": "",
+      "groupId": "privatsoeldner",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 101,
+        "column": 0,
+        "name": "Blaue Kompanie",
+        "image": "https://i.imgur.com/CqXYCrn.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2528"
+      },
+      "symbol": "assets/emblems/gilden/blaue-kompanie.webp"
+    },
+    {
+      "id": "rote-kompanie",
+      "name": "Rote Kompanie",
+      "kind": "",
+      "groupId": "privatsoeldner",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 101,
+        "column": 1,
+        "name": "Rote Kompanie",
+        "image": "https://i.imgur.com/QG4mL5M.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2527"
+      },
+      "symbol": "assets/emblems/gilden/rote-kompanie.webp"
+    },
+    {
+      "id": "saatkrieger",
+      "name": "Saatkrieger",
+      "kind": "",
+      "groupId": "privatsoeldner",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 101,
+        "column": 2,
+        "name": "Saatkrieger",
+        "image": "https://i.imgur.com/Xv1zW3O.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2198"
+      },
+      "symbol": "assets/emblems/gilden/saatkrieger.webp"
+    },
+    {
+      "id": "drakenschluck-soeldner",
+      "name": "Drakenschluck Söldner",
+      "kind": "",
+      "groupId": "privatsoeldner",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 101,
+        "column": 3,
+        "name": "Drakenschluck Söldner",
+        "image": "https://i.imgur.com/dSfU6yC.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2152"
+      },
+      "symbol": "assets/emblems/gilden/drakenschluck-soeldner.webp"
+    },
+    {
+      "id": "kelterklingen",
+      "name": "Kelterklingen",
+      "kind": "",
+      "groupId": "privatsoeldner",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 101,
+        "column": 4,
+        "name": "Kelterklingen",
+        "image": "https://i.imgur.com/oLDQbSl.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2545"
+      },
+      "symbol": "assets/emblems/gilden/kelterklingen.webp"
+    },
+    {
+      "id": "jagdklingen",
+      "name": "Jagdklingen",
+      "kind": "",
+      "groupId": "waldlaeufer-jaeger-gilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 105,
+        "column": 0,
+        "name": "Jagdklingen",
+        "image": "https://i.imgur.com/HFE9G0S.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=94"
+      },
+      "symbol": "assets/emblems/gilden/jagdklingen.webp"
+    },
+    {
+      "id": "titanenbrecher",
+      "name": "Titanenbrecher",
+      "kind": "",
+      "groupId": "monsterschlaechter-gilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 109,
+        "column": 0,
+        "name": "Titanenbrecher",
+        "image": "https://i.imgur.com/HJbGjz1.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2199"
+      },
+      "symbol": "assets/emblems/gilden/titanenbrecher.webp"
+    },
+    {
+      "id": "musen-der-maid",
+      "name": "Musen der Maid",
+      "kind": "",
+      "groupId": "unterhaltungsgilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 113,
+        "column": 2,
+        "name": "Musen der Maid",
+        "image": "https://i.imgur.com/tBFR86g.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=531"
+      },
+      "symbol": "assets/emblems/gilden/musen-der-maid.webp"
+    },
+    {
+      "id": "formwandler",
+      "name": "Formwandler",
+      "kind": "",
+      "groupId": "musen-untergilden",
+      "parentId": "musen-der-maid",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 117,
+        "column": 0,
+        "name": "Formwandler",
+        "image": "https://i.imgur.com/giSXAja.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1745"
+      },
+      "symbol": "assets/emblems/gilden/formwandler.webp"
+    },
+    {
+      "id": "gaumenfreude",
+      "name": "Gaumenfreude",
+      "kind": "",
+      "groupId": "musen-untergilden",
+      "parentId": "musen-der-maid",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 117,
+        "column": 1,
+        "name": "Gaumenfreude",
+        "image": "https://i.imgur.com/D3QRPmf.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1742"
+      },
+      "symbol": "assets/emblems/gilden/gaumenfreude.webp"
+    },
+    {
+      "id": "narrenzunft",
+      "name": "Narrenzunft",
+      "kind": "",
+      "groupId": "musen-untergilden",
+      "parentId": "musen-der-maid",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 120,
+        "column": 0,
+        "name": "Narrenzunft",
+        "image": "https://i.imgur.com/7wV9dD5.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=451"
+      },
+      "symbol": "assets/emblems/gilden/narrenzunft.webp"
+    },
+    {
+      "id": "rebstock",
+      "name": "Rebstock",
+      "kind": "",
+      "groupId": "musen-untergilden",
+      "parentId": "musen-der-maid",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 120,
+        "column": 1,
+        "name": "Rebstock",
+        "image": "https://i.imgur.com/cMQvBte.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=953"
+      },
+      "symbol": "assets/emblems/gilden/rebstock.webp"
+    },
+    {
+      "id": "schwarze-nachtigallen",
+      "name": "Schwarze Nachtigallen",
+      "kind": "",
+      "groupId": "musen-untergilden",
+      "parentId": "musen-der-maid",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 120,
+        "column": 2,
+        "name": "Schwarze Nachtigallen",
+        "image": "https://i.imgur.com/fIkE6Xh.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=390"
+      },
+      "symbol": "assets/emblems/gilden/schwarze-nachtigallen.webp"
+    },
+    {
+      "id": "rosenkelch",
+      "name": "Rosenkelch",
+      "kind": "",
+      "groupId": "musen-untergilden",
+      "parentId": "musen-der-maid",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 120,
+        "column": 3,
+        "name": "Rosenkelch",
+        "image": "https://i.imgur.com/n65mIsc.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=751"
+      },
+      "symbol": "assets/emblems/gilden/rosenkelch.webp"
+    },
+    {
+      "id": "indigotraun",
+      "name": "Indigotraun",
+      "kind": "",
+      "groupId": "musen-untergilden",
+      "parentId": "musen-der-maid",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 120,
+        "column": 4,
+        "name": "Indigotraun",
+        "image": "https://i.imgur.com/tSB46uT.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=749"
+      },
+      "symbol": "assets/emblems/gilden/indigotraun.webp"
+    },
+    {
+      "id": "silberschwur",
+      "name": "Silberschwur",
+      "kind": "",
+      "groupId": "gelehrtengilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 124,
+        "column": 0,
+        "name": "Silberschwur",
+        "image": "https://i.imgur.com/jPKOGau.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2332"
+      },
+      "symbol": "assets/emblems/gilden/silberschwur.webp"
+    },
+    {
+      "id": "die-magiergilde",
+      "name": "Die Magiergilde",
+      "kind": "",
+      "groupId": "magiergilden",
+      "parentId": "wolken-der-daemmerung",
+      "source": {
+        "document": "docs/sources/gilden.html",
+        "row": 128,
+        "column": 0,
+        "name": "Die Magiergilde",
+        "image": "https://i.imgur.com/KF6rKd0.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=497"
+      },
+      "symbol": "assets/emblems/gilden/die-magiergilde.webp"
+    }
+  ]
+}

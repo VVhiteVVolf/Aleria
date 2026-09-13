@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+  <defs>
+    <radialGradient id="paper"><stop stop-color="#ecd098"/><stop offset=".7" stop-color="#dabc80"/><stop offset="1" stop-color="#c8a162"/></radialGradient>
+    <linearGradient id="cloth" x1="95" y1="53" x2="163" y2="199" gradientUnits="userSpaceOnUse"><stop stop-color="#d1a35b"/><stop offset="1" stop-color="#aa7939"/></linearGradient>
+    <filter id="parchment" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="17" result="grain"/>
+      <feColorMatrix in="grain" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".2"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    <g id="corner" stroke="#896434" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 74V20h54M24 64c13-12 5-23 11-30s17 2 29-10M25 53c-1-13 15-16 16-25M53 25c-13-1-16 15-25 16"/>
+      <path d="M26 27c3 8 10 10 16 15-5-6-7-13-15-16Zm-3 41c15-12 19-17 21-26 7-1 17-8 24-19" fill="#a67f42" fill-opacity=".35"/>
+    </g>
+  </defs>
+  <path d="M0 0h256v256H0Z" fill="url(#paper)" filter="url(#parchment)"/>
+  <path d="M8 8h240v240H8Z" stroke="#896434" stroke-width="3"/>
+  <path d="M14 14h228v228H14Z" stroke="#aa854d" stroke-width="1.5"/>
+  <use href="#corner"/><use href="#corner" transform="rotate(90 128 128)"/><use href="#corner" transform="rotate(180 128 128)"/><use href="#corner" transform="rotate(270 128 128)"/>
+  <path d="M61 44Q128 14 195 44M30 87Q16 128 35 176M226 87Q240 128 221 176" stroke="#ad874b" stroke-width="1.5"/>
+  <g stroke="#6e4b23" stroke-width="4.5" stroke-linejoin="round">
+    <path d="M67 65v128m122-128v128M128 39v166" stroke-linecap="round"/>
+    <path d="m128 28 7 11-7 11-7-11Z" fill="#967037"/>
+    <path d="M42 76h59v87l-29 19-30-19Z" fill="#c29957"/>
+    <path d="M155 76h59v87l-30 19-29-19Z" fill="#c29957"/>
+    <path d="M90 57h76v124l-38 27-38-27Z" fill="url(#cloth)"/>
+  </g>
+  <path d="M97 65h62v112l-31 22-31-22Z" stroke="#efd093" stroke-width="1.5"/>
+  <path d="m128 89 23 9v27c0 18-12 31-23 38-11-7-23-20-23-38V98Z" fill="#e1bc76" stroke="#6e4b23" stroke-width="3.5"/>
+  <path d="m128 104 5 13 14 1-11 9 4 14-12-8-12 8 4-14-11-9 14-1Z" fill="#795023"/>
+  <path d="m69 103 11 15-11 15-11-15Zm118 0 11 15-11 15-11-15Z" fill="#815927"/>
+  <g stroke="#795528" stroke-width="3" stroke-linejoin="round">
+    <path d="m49 206 13-7 5 26-14 5 3-13Zm158 0-13-7-5 26 14 5-3-13Z" fill="#bd9453"/>
+    <path d="M61 198q67 16 134 0l-5 29q-62 14-124 0Z" fill="#e2c181"/>
+  </g>
+</svg>

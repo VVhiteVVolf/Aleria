@@ -4,20 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kontinent Estryll - Aleria</title>
-  <link rel="stylesheet" href="../assets/css/koenigreich.css?v=panels-20260911a">
-  <link rel="stylesheet" href="../assets/css/kontinente-overview.css?v=kontinente-pages-20260707c">
+  <meta name="description" content="Estryll im Aleria-Almanach: Königreiche, albische und nordische Fürstentümer, der Dunkelhain und die Reiche vergangener Zeiten.">
+  <link rel="stylesheet" href="../assets/css/kontinente-overview.css?v=atlas-20260913a">
   <script src="../kontinente.registry.js?v=administration-dialog-20260911b"></script>
   <script src="../assets/js/kontinente-loader.js?v=kontinente-loader-20260707c" data-default-id="kontinent-estryll"></script>
 </head>
-<body>
+<body class="continent-atlas">
   <main class="kingdom-page continent-page continent-detail-page" data-page-type="continent" data-kontinent-root data-orte-static-template data-default-id="kontinent-estryll">
     <section class="continent-parchment" aria-labelledby="estryll-title">
-      <header class="continent-page-header continent-page-header--detail">
-        <h1 id="estryll-title" data-kontinent-title data-orte-explicit-inline>Kontinent Estryll</h1>
+      <nav class="atlas-folio" aria-label="Brotkrumennavigation">
+        <a href="../index.html">← Alle Kontinente</a>
+        <span>Aleria / <span aria-current="page">Estryll</span></span>
+      </nav>
+      <header class="continent-page-header continent-page-header--detail" id="seitenanfang">
+        <div class="atlas-title-block">
+          <div class="atlas-eyebrow">Der Weltenalmanach · Kontinent I</div>
+          <h1 id="estryll-title" data-orte-explicit-inline>Estryll</h1>
+          <div class="atlas-ornament" aria-hidden="true">✦</div>
+          <div class="atlas-introduction">Von Königreichen und Fürstentümern.<br>Ein Blick auf die Reiche Estrylls und die Wappen vergangener Zeiten.</div>
+        </div>
         <span class="orte-image-slot continent-hero-slot" data-orte-image-key="estryll-kontinent-banner" data-orte-image-label="Banner Kontinent Estryll" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="260" aria-label="Banner Kontinent Estryll">
           <img src="../../IconOrdner/L%C3%A4nder%20Icons/Estryll%20Kontinent.png" alt="Banner Kontinent Estryll">
         </span>
       </header>
+
+      <nav class="atlas-chapter-index" aria-label="Kapitel auf Estryll">
+        <div class="atlas-index-label">In diesem Kapitel</div>
+        <div class="atlas-index-links">
+          <a href="#estryll-reiche"><span aria-hidden="true">I</span> Reiche</a>
+          <a href="#estryll-albisch"><span aria-hidden="true">II</span> Albische Fürstentümer</a>
+          <a href="#estryll-nordisch"><span aria-hidden="true">III</span> Nordische Fürstentümer</a>
+          <a href="#estryll-dunkelhain"><span aria-hidden="true">IV</span> Der Dunkelhain</a>
+          <a href="#estryll-ausgestorben"><span aria-hidden="true">V</span> Ausgestorbene Reiche</a>
+          <a href="#estryll-antike"><span aria-hidden="true">VI</span> Antike Reiche</a>
+        </div>
+      </nav>
 
       <section class="continent-realm-section" aria-labelledby="estryll-reiche">
         <h2 id="estryll-reiche" data-orte-explicit-inline>Reiche</h2>
@@ -25,10 +46,11 @@
           <article class="realm-card" role="listitem">
             <h3 data-orte-explicit-inline>K&ouml;nigreich Cenyr</h3>
             <span class="orte-image-slot realm-icon-slot" data-orte-image-key="estryll-koenigreich-cenyr" data-orte-image-label="Wappen Koenigreich Cenyr" data-orte-image-width="100" data-orte-image-format="square" data-orte-image-max-height="210" aria-label="Wappen Koenigreich Cenyr">
-              <a href="K%C3%B6nigreich%20Cenyr/K%C3%B6nigreich%20von%20Cenyr.html" aria-label="Zum K&ouml;nigreich von Cenyr">
+              <a class="realm-card-link" href="K%C3%B6nigreich%20Cenyr/K%C3%B6nigreich%20von%20Cenyr.html" aria-label="Zum K&ouml;nigreich von Cenyr">
                 <img src="../../IconOrdner/L%C3%A4nder%20Icons/Estryll/K%C3%B6nigreich%20Cenyr.png" alt="Wappen Koenigreich Cenyr">
               </a>
             </span>
+            <span class="atlas-entry-status" aria-hidden="true">Zum Königreich &nbsp;↗</span>
           </article>
 
           <article class="realm-card" role="listitem">
@@ -122,7 +144,7 @@
         </div>
       </section>
 
-      <section class="continent-realm-section" aria-labelledby="estryll-ausgestorben">
+      <section class="continent-realm-section continent-realm-section--historical" aria-labelledby="estryll-ausgestorben">
         <h2 id="estryll-ausgestorben" data-orte-explicit-inline>Ausgestorbene Reiche Estrylls</h2>
         <div class="realm-grid realm-grid--two" role="list">
           <article class="realm-card realm-card--faded" role="listitem">
@@ -141,7 +163,7 @@
         </div>
       </section>
 
-      <section class="continent-realm-section" aria-labelledby="estryll-antike">
+      <section class="continent-realm-section continent-realm-section--historical" aria-labelledby="estryll-antike">
         <h2 id="estryll-antike" data-orte-explicit-inline>Antike Reiche Estrylls</h2>
         <div class="realm-grid realm-grid--three" role="list">
           <article class="realm-card realm-card--ancient" role="listitem">
@@ -169,6 +191,10 @@
           </article>
         </div>
       </section>
+      <footer class="atlas-footer">
+        <a href="../index.html">← Zum Kontinentregister</a>
+        <a href="#seitenanfang">Zurück zum Seitenanfang ↑</a>
+      </footer>
     </section>
   </main>
 </body>

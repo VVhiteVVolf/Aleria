@@ -11,7 +11,7 @@ export function renderCalendarParticipants(people = []) {
   return people.map(person => `<span class="calendar-person"><img src="${safeCalendarUrl(person.portrait) || '../IconOrdner/Siluetten/Unbekannt.png'}" alt="" loading="lazy"><span>${e(person.name)}</span></span>`).join('');
 }
 
-export function renderCalendarPreview(event, { calendar = globalThis.AleriaCalendar, compact = false, link = false, collision = false } = {}) {
+export function renderCalendarPreview(event, { calendar = globalThis.AleriaCalendar, compact = false, link = false, collision = false, calendarHref = './kalender.html', articleBase = null } = {}) {
   const template = CALENDAR_TEMPLATES.find(item => item.id === event.type) || CALENDAR_TEMPLATES.at(-1);
   const delta = calendar.ordinal(event.start) - calendar.ordinal(calendar.current());
   const relative = delta === 0 ? 'Heute' : delta === 1 ? 'Morgen' : delta < 0 ? 'Läuft bereits' : `In ${delta} Tagen`;
@@ -19,7 +19,10 @@ export function renderCalendarPreview(event, { calendar = globalThis.AleriaCalen
     ? calendar.format(event.start, { withWeekday: false })
     : `${calendar.format(event.start, { withWeekday: false })} – ${calendar.format(event.end, { withWeekday: false })}`;
   const occurrenceDay = calendar.ordinal(event.start);
-  const title = link ? `<a href="./kalender.html?event=${encodeURIComponent(event.id)}&amp;day=${occurrenceDay}">${e(event.title)}</a>`
+  // Gespeicherte Dossierpfade beziehen sich auf die Kalenderseite, auch in fremden Übersichten.
+  const articleHref = safeCalendarUrl(event.articleHref) && (articleBase
+    ? safeCalendarUrl(new URL(event.articleHref, articleBase).href) : safeCalendarUrl(event.articleHref));
+  const title = link ? `<a href="${safeCalendarUrl(calendarHref) || './kalender.html'}?event=${encodeURIComponent(event.id)}&amp;day=${occurrenceDay}">${e(event.title)}</a>`
     : `<button type="button" data-calendar-open="${e(event.id)}" data-calendar-occurrence="${occurrenceDay}">${e(event.title)}</button>`;
   return `<article class="calendar-preview" data-calendar-type="${e(template.id)}">
     <img class="calendar-preview-icon" src="${safeCalendarUrl(event.icon) || `../IconOrdner/${e(template.icon)}`}" alt="" loading="lazy">
@@ -28,7 +31,7 @@ export function renderCalendarPreview(event, { calendar = globalThis.AleriaCalen
     ${event.summary ? `<p>${e(compact && event.summary.length > 160 ? `${event.summary.slice(0, 157)}…` : event.summary)}</p>` : ''}
     ${event.participants?.length ? `<div class="calendar-participants">${renderCalendarParticipants(compact ? event.participants.slice(0, 4) : event.participants)}${compact && event.participants.length > 4 ? `<span>+${event.participants.length - 4}</span>` : ''}</div>` : ''}
     ${collision ? '<small class="calendar-conflict">Zeitgleich mit einem weiteren Termin</small>' : ''}
-    ${safeCalendarUrl(event.articleHref) ? `<a href="${safeCalendarUrl(event.articleHref)}">Dossier öffnen →</a>` : ''}
+    ${articleHref ? `<a href="${articleHref}">Dossier öffnen →</a>` : ''}
     </div></article>`;
 }
 

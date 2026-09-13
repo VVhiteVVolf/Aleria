@@ -1,0 +1,145 @@
+.catalog-heading { margin-bottom: 24px; }
+.catalog-heading h2 { font-size: clamp(27px, 2.7vw, 37px); margin: 6px 0 11px; }
+.catalog-heading > p:last-child { color: var(--faction-muted); font-size: 14px; }
+.catalog-tools { margin-bottom: 25px; }
+.catalog-search { display: flex; align-items: center; gap: 14px; min-height: 53px; background: #fcf6e888; border: 1px solid var(--faction-line); padding: 0 17px; }
+.catalog-search > span:first-child { color: var(--faction-gold); font-size: 30px; line-height: 1; }
+.catalog-search input { width: 100%; min-width: 0; padding: 14px 0; border: 0; background: transparent; outline-offset: 3px; font-size: 14px; }
+.catalog-search input::placeholder { color: #82725c; }
+.catalog-results { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 7px; font-size: 12px; color: var(--faction-muted); min-height: 42px; }
+.faction-chapter { --chapter-accent: #735034; margin-bottom: 64px; scroll-margin-top: 30px; }
+.faction-chapter[data-faction-chapter="orden"] { --chapter-accent: #756031; }
+.faction-chapter[data-faction-chapter="organisationen"] { --chapter-accent: #3d6255; }
+.faction-chapter[data-faction-chapter="dunkle-gilden"] { --chapter-accent: #554055; }
+.faction-chapter[data-faction-chapter="kulte"] { --chapter-accent: #793e3b; }
+.chapter-heading { display: flex; align-items: center; gap: 22px; padding: 26px 0 18px; border-top: 3px double var(--faction-line); }
+.chapter-heading img { width: 72px; height: 72px; mix-blend-mode: multiply; }
+.chapter-heading h2 { font-size: 39px; color: var(--chapter-accent); margin-top: 3px; }
+.chapter-heading .eyebrow { font-size: 9px; }
+.chapter-heading .eyebrow > span { padding-inline: 6px; }
+.chapter-total { margin-left: auto; font-size: 42px; color: #9b7d485e; font-style: italic; }
+.chapter-intro { display: grid; grid-template-columns: minmax(140px, .62fr) 1fr; gap: 28px; padding-bottom: 23px; }
+.chapter-intro h3 { font-size: 21px; line-height: 1.45; max-width: 260px; color: var(--chapter-accent); }
+.chapter-intro p { font-size: 13px; line-height: 1.85; color: var(--faction-muted); }
+.authority-note { display: flex; align-items: center; gap: 16px; padding: 16px 20px; border: 1px solid var(--faction-line); border-left: 3px solid var(--chapter-accent); background: #d4bd9220; margin-bottom: 30px; }
+.authority-glyph { font-size: 30px; line-height: 1; color: var(--chapter-accent); }
+.authority-note .eyebrow { font-size: 8px; }
+.authority-note p { font-size: 19px; color: var(--chapter-accent); }
+.authority-note p a { text-decoration: none; }
+.authority-note a:hover { text-decoration: underline; }
+.authority-note > a { font-size: 11px; margin-left: auto; }
+.faction-group { margin-top: 32px; }
+.group-heading { display: flex; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--faction-line); margin-bottom: 15px; }
+.branch-mark { color: var(--faction-gold); font-size: 23px; flex: 0 0 24px; }
+.group-title { font-size: 22px; color: var(--chapter-accent); line-height: 1.4; }
+.group-title > span { font-size: 16px; font-style: italic; color: var(--faction-muted); }
+.group-lineage { color: var(--faction-muted); font-size: 10px; margin-bottom: 3px; }
+.group-lineage a { text-decoration: none; }
+.group-lineage a:hover { text-decoration: underline; }
+.group-lineage > span { margin-inline: 6px; color: var(--faction-gold); }
+.group-count { margin-left: auto; min-width: 25px; padding: 0 7px; text-align: center; color: var(--faction-muted); border: 1px solid var(--faction-line); border-radius: 2px; font-size: 11px; }
+.group-note { font-size: 11px; color: var(--faction-muted); margin-top: 4px; }
+.deity-symbol { flex: 0 0 70px; }
+.deity-symbol img { width: 70px; height: 70px; }
+.faction-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.faction-card { display: flex; flex-direction: column; position: relative; min-width: 0; padding: 20px 16px 16px; background: #fcf6e865; border: 1px solid #ccba975c; border-bottom-color: var(--faction-line); scroll-margin-top: 32px; }
+.faction-card:hover { background: #fff9edb0; border-color: var(--faction-line); }
+.faction-card:target { outline: 2px solid var(--faction-gold); outline-offset: 4px; }
+.faction-emblem { display: flex; align-items: center; justify-content: center; height: 115px; margin-bottom: 17px; }
+.faction-emblem img { width: 112px; height: 112px; filter: drop-shadow(0 2px 2px #523c171a); }
+.faction-copy { display: flex; flex: 1; flex-direction: column; align-items: center; text-align: center; min-width: 0; }
+.faction-name { font-size: 19px; line-height: 1.4; overflow-wrap: anywhere; }
+.faction-kind { color: var(--faction-muted); font-size: 11px; line-height: 1.6; margin-top: 7px; }
+.faction-summary { font-size: 12px; line-height: 1.8; color: var(--faction-muted); margin-top: 12px; }
+.faction-affiliation { margin-top: 9px; font-size: 10px; color: var(--chapter-accent); line-height: 1.7; }
+.faction-affiliation > span { padding-inline: 3px; }
+.faction-branches { margin-top: 9px; color: var(--faction-muted); font-size: 11px; font-style: italic; }
+.faction-source { display: inline-flex; align-items: center; gap: 12px; padding-top: 15px; margin-top: auto; font-size: 11px; text-decoration: none; color: var(--chapter-accent); }
+.faction-source:hover { text-decoration: underline; }
+.faction-source > span[aria-hidden] { color: var(--faction-gold); }
+.faction-status, .context-label { margin-bottom: 9px; color: #795644; border-bottom: 1px solid #baa08080; padding-bottom: 3px; font-size: 9px; letter-spacing: .02em; }
+.context-label { font-style: italic; color: var(--faction-muted); }
+.faction-grid:has(> .faction-card--wide) { grid-template-columns: 1fr; }
+.faction-card--wide { flex-direction: row; gap: 25px; padding: 23px 28px; align-items: center; }
+.faction-card--wide .faction-emblem { flex: 0 0 116px; margin-bottom: 0; }
+.faction-card--wide .faction-copy { align-items: flex-start; text-align: left; }
+.faction-card--wide .faction-name { font-size: 24px; }
+.faction-card--wide .faction-source { margin-top: 0; }
+.faction-group--cult .faction-card--wide { background: #efe0d345; }
+.faction-bundle { grid-column: 1 / -1; min-width: 0; border: 1px solid var(--faction-line); border-top: 3px solid var(--chapter-accent); background: #fcf6e850; }
+.faction-card--leader { border: 0; border-bottom: 1px solid var(--faction-line); background: #d4bd922b; }
+.faction-card--leader .faction-name { color: var(--chapter-accent); }
+.faction-bundle-content { padding: 20px; }
+.faction-bundle-content > .faction-group { margin-top: 26px; }
+.faction-bundle-content > .faction-group:first-child { margin-top: 0; }
+.faction-bundle-content .group-title { font-size: 19px; }
+.faction-bundle-content .branch-mark { font-size: 18px; flex-basis: 18px; }
+.faction-bundle--authority { border: 0; background: none; }
+.faction-bundle--authority > .faction-card--leader { border: 1px solid var(--faction-line); border-top: 3px solid var(--chapter-accent); }
+.faction-bundle--authority > .faction-bundle-content { padding: 28px 0 0; }
+.faction-bundle--authority > .faction-bundle-content > .faction-group { margin-top: 32px; }
+.faction-bundle--authority > .faction-bundle-content > .faction-group:first-child { margin-top: 0; }
+.catalog-empty { text-align: center; padding: 50px 20px; border-block: 1px solid var(--faction-line); }
+.catalog-empty > span { font-size: 42px; color: var(--faction-gold); }
+.catalog-empty h3 { font-size: 27px; margin: 10px 0; }
+.catalog-empty p { color: var(--faction-muted); font-size: 14px; margin-bottom: 24px; }
+.reading-note { padding: 14px 0; color: var(--faction-muted); font-size: 13px; }
+@media (min-width: 1440px) { .faction-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 1100px) {
+  .faction-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chapter-intro { grid-template-columns: 1fr; gap: 10px; }
+  .chapter-intro h3 { max-width: none; }
+  .chapter-heading { gap: 16px; }
+  .chapter-heading .eyebrow { max-width: 240px; }
+}
+@media (max-width: 580px) {
+  .catalog-results { align-items: flex-start; flex-direction: column; gap: 0; padding-top: 10px; }
+  .catalog-search { padding-inline: 12px; gap: 10px; }
+  .catalog-search input { font-size: 16px; }
+  .chapter-heading { gap: 12px; }
+  .chapter-heading img { width: 54px; height: 54px; }
+  .chapter-heading h2 { font-size: 31px; }
+  .chapter-heading .eyebrow { font-size: 8px; max-width: 210px; }
+  .chapter-total { font-size: 28px; }
+  .authority-note { padding: 14px; gap: 12px; flex-wrap: wrap; }
+  .authority-note p { font-size: 17px; }
+  .authority-note > a { margin-left: 36px; }
+  .group-title { font-size: 20px; }
+  .group-title > span { display: block; font-size: 14px; }
+  .deity-symbol { flex-basis: 54px; }
+  .deity-symbol img { width: 54px; height: 54px; }
+  .faction-grid { gap: 10px; }
+  .faction-card { padding: 16px 10px 14px; }
+  .faction-emblem { height: 95px; margin-bottom: 12px; }
+  .faction-emblem img { width: 92px; height: 92px; }
+  .faction-name { font-size: 17px; }
+  .faction-card--wide { padding: 20px 15px; gap: 17px; }
+  .faction-card--wide .faction-emblem { flex-basis: 80px; }
+  .faction-card--wide .faction-name { font-size: 21px; }
+  .faction-bundle-content { padding: 16px 12px; }
+  .faction-bundle-content .faction-grid { grid-template-columns: 1fr; }
+  .faction-bundle-content .faction-card { flex-direction: row; align-items: center; gap: 14px; }
+  .faction-bundle-content .faction-emblem { flex: 0 0 72px; height: 78px; margin-bottom: 0; }
+  .faction-bundle-content .faction-emblem img { width: 72px; height: 72px; }
+  .faction-bundle-content .faction-copy { align-items: flex-start; text-align: left; }
+}
+@media (max-width: 360px) {
+  .faction-grid { grid-template-columns: 1fr; }
+  .faction-card { flex-direction: row; gap: 15px; align-items: center; }
+  .faction-emblem { flex: 0 0 76px; margin: 0; }
+  .faction-copy { text-align: left; align-items: flex-start; }
+  .chapter-total { display: none; }
+}
+@media (min-width: 581px) {
+  .faction-grid--siblings { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+}
+@media print {
+  .site-header, .cover-heraldry, .category-tiles, .chapter-register, .catalog-tools, .back-to-top { display: none; }
+  .faction-book { width: 100%; }
+  .book-layout { display: block; }
+  .faction-cover { display: block; padding: 20px 0; }
+  .faction-card { break-inside: avoid; }
+  .faction-card--leader { break-after: avoid; }
+  .faction-group { break-inside: auto; }
+  .faction-chapter { break-before: page; }
+}

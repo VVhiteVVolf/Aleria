@@ -1,0 +1,12 @@
+import { weddingText as e } from './wedding-model.mjs';
+
+export function renderWeddingShell({ prefix = './', id = '', template = false, title = 'Hochzeiten von Aleria' } = {}) {
+  return `<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#243e33"><title>${e(title)}</title>
+<link rel="icon" href="${prefix}assets/icons/hochzeit.png"><link rel="stylesheet" href="${prefix}modules/weddings/wedding-page.css"><link rel="stylesheet" href="${prefix}modules/weddings/wedding-guests.css"><link rel="stylesheet" href="${prefix}modules/weddings/wedding-editor.css">
+<script defer src="${prefix}../AleriaAlmanach/modules/core/aleria-calendar.js"></script><script type="module" src="${prefix}modules/weddings/wedding-page.mjs"></script></head>
+<body class="wedding-page"><a class="wedding-skip" href="#wedding-content">Zum Festbuch</a><header class="wedding-site-header"><a href="${prefix}../AleriaAlmanach/AleriaAlmanach.html">← ALERIA <span>/</span> ALMANACH</a><nav aria-label="Weitere Seiten"><a href="${prefix}index.html">Ereignisse</a><a href="${prefix}hochzeit.html">Hochzeiten</a><a href="${prefix}../AleriaAlmanach/kalender.html">Kalender ↗</a></nav></header>
+<main class="wedding-page-root" data-wedding-page data-events-base="${prefix}" data-wedding-id="${e(id)}"${template ? ' data-wedding-template' : ''}><div class="wedding-notification" data-wedding-notification role="status" aria-live="polite" hidden></div><div id="wedding-content" data-wedding-content><div class="wedding-loading"><p class="wedding-eyebrow">Das Hochzeitsregister</p><h1>${e(title)}</h1><p>Das Festbuch wird geöffnet …</p><noscript><p>Bitte JavaScript aktivieren, um das gemeinsame Festbuch und seine bearbeitbaren Listen zu laden.</p></noscript></div></div><dialog class="wedding-dialog" data-wedding-dialog aria-labelledby="wedding-dialog-title"></dialog></main>
+<footer class="wedding-footer"><span aria-hidden="true">❧</span><p>Ein Festbuch aus Aleria<small>Von Häusern, Menschen und gemeinsamen Anfängen</small></p><a href="${prefix}index.html">Zur Ereignischronik ↗</a></footer></body></html>
+`;
+}

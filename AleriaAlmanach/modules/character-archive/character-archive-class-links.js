@@ -1,4 +1,4 @@
-import { getArchiveClassDefinition } from './character-archive-classification.js?v=20260909-dragon-parent-v2';
+import { getArchiveClassDefinition } from './character-archive-classification.js?v=20260913-morgorn-names-v1';
 
 // Only canonical repository paths are rendered as links; user-entered archive
 // JSON never supplies arbitrary link destinations.

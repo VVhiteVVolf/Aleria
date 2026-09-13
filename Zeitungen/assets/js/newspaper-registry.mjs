@@ -1,4 +1,5 @@
 import { getNewspaperDistributionPolicy } from "./newspaper-distribution-policy.mjs?v=20260904a";
+import { wyrmNewspaperEditions } from "./newspaper-wyrm-editions.mjs?v=20260913a";
 
 const CURRENT_ISSUE_ID = "1740-03-18";
 const CURRENT_PUBLICATION_DATE = Object.freeze({ day: 18, month: 3, year: 1740 });
@@ -111,7 +112,11 @@ const entries = Object.freeze([
     issues: [issueEntry("/Zeitungen/data/celtigerns-echo-rhosmere/edition.mjs?v=20260903a")]
   }),
   kronenspiegelEntry("rhosmere"),
-  kronenspiegelEntry("mathragon", ["kronenspiegel"])
+  kronenspiegelEntry("mathragon", ["kronenspiegel"]),
+  ...wyrmNewspaperEditions.map(({ dataModule, ...entry }) => publicationEntry({
+    ...entry,
+    issues: [issueEntry(dataModule)]
+  }))
 ]);
 
 export function findNewspaperEntry(requestedId) {

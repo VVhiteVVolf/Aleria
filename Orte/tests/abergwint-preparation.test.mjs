@@ -18,6 +18,10 @@ const baronyDataSource = fs.readFileSync(
   path.join(projectRoot, "Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Gwendolyns Ufer/baronie.data.js"),
   "utf8"
 );
+const governanceDataSource = fs.readFileSync(
+  path.join(projectRoot, "Kontinente/assets/js/herrschaft-data.js"),
+  "utf8"
+);
 
 function loadAbergwint() {
   const context = {
@@ -55,6 +59,7 @@ test("Abergwints Häusertabelle entspricht der Familienliste von Gwendolyns Ufer
   const cityHouses = loadAbergwint().houses.flatMap((group) => group.items);
   const baronyContext = { encodeURIComponent, window: {} };
   vm.createContext(baronyContext);
+  vm.runInContext(governanceDataSource, baronyContext);
   vm.runInContext(baronyDataSource, baronyContext);
   const baronyHouses = baronyContext.window.KONTINENTE_DATA.view.familySections
     .flatMap((section) => section.cards);

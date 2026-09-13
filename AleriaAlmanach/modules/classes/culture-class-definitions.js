@@ -1,7 +1,7 @@
 import { getCenyrClassDefinition } from './cenyr/cenyr-class-registry.js?v=20260909-dragon-parent-v2';
 import { getVennyrClassDefinition } from './vennyr/vennyr-class-registry.js?v=20260909-dragon-parent-v2';
 import { getAldrimarClassDefinition } from './aldrimar/aldrimar-class-registry.js';
-import { getMorgornClassDefinition } from './morgorn/morgorn-class-registry.js';
+import { getMorgornClassDefinition } from './morgorn/morgorn-class-registry.js?v=20260913-morgorn-names-v1';
 import { getVenalysClassDefinition } from './venalys/venalys-class-registry.js';
 
 export function getCultureClassDefinitions(classId, cultures = []) {

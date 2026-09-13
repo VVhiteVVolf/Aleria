@@ -8,6 +8,15 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const almanachRoot = path.resolve(__dirname, '..');
 const sources = [
+  '../Fonts/Rheunwaith-Font-1.000/rheunwaith.js',
+  '../Fonts/Karnrith-Font-2.000/karnrith.js',
+  'modules/language/language-script-display.js',
+  'modules/language/morgar/morgar-data.js',
+  'modules/language/morgar/morgar-tables.js',
+  'modules/language/morgar/morgar-entry.js',
+  'modules/language/morgar/morgar-terminology-migration.js',
+  'modules/language/morgar/morgar-migration.js',
+  'modules/module-store/module-entry-migrations.js',
   'modules/name-list/name-list-data.js',
   'modules/script-table/script-table-data.js',
   'modules/language/language-reference-entries.js',
@@ -344,6 +353,8 @@ const referenceChecks = vm.runInContext(`
       karnrithScriptSymbols: (karnrithPages[3]?.scriptTable?.rows || []).map(row => row.symbol),
       karnrithSyllableCount: karnrithPages[3]?.scriptTable?.syllables?.length || 0,
       karnrithScriptStyle: karnrithPages[3]?.scriptTable?.scriptStyle || '',
+      karnrithWordCount: karnrithPages[4]?.scriptTable?.rows?.length || 0,
+      karnrithWords: (karnrithPages[4]?.scriptTable?.rows || []).map(row => row.symbol),
       karnrithImages: [
         karnrith?.image,
         karnrithPages[0]?.image,
@@ -479,7 +490,7 @@ if (!referenceChecks.rheunwaithFound) failures.push('rheunwaith: Fester Eintrag 
 if (referenceChecks.rheunwaithPageCount !== 4) failures.push('rheunwaith: Das Modul besitzt nicht genau vier Seiten.');
 if (JSON.stringify(referenceChecks.rheunwaithPageTypes) !== JSON.stringify(['story', 'language', 'name-list', 'script-table'])) failures.push(`rheunwaith: Erwartete Seitentypen story/language/name-list/script-table fehlen (${referenceChecks.rheunwaithPageTypes.join(', ')}).`);
 if (referenceChecks.rheunwaithInfoCount !== 6) failures.push('rheunwaith: Die Story-Seite besitzt nicht genau sechs Infokarten.');
-if (referenceChecks.rheunwaithVisibleLayers !== 2) failures.push('rheunwaith: Die beiden vorhandenen lokalen Alphabetbilder werden nicht als Ebenen erkannt.');
+if (referenceChecks.rheunwaithVisibleLayers !== 3) failures.push('rheunwaith: Alphabet, Schriftprobe und erweiterter Zeichensatz werden nicht als Ebenen erkannt.');
 if (JSON.stringify(referenceChecks.rheunwaithNameCounts) !== JSON.stringify([200, 200])) failures.push(`rheunwaith: Erwartet werden je 200 Namen pro Geschlecht (${referenceChecks.rheunwaithNameCounts.join(', ')}).`);
 if (JSON.stringify(referenceChecks.rheunwaithUniqueNameCounts) !== JSON.stringify([200, 200])) failures.push('rheunwaith: Die Namenslisten enthalten Duplikate.');
 if (referenceChecks.rheunwaithScriptRowCount !== 30 || referenceChecks.rheunwaithScriptStyle !== 'rheunwaith') failures.push('rheunwaith: Die Zeichentabelle besitzt nicht 30 Rheunwaith-Zeichen.');
@@ -499,20 +510,21 @@ if (referenceChecks.oghamScriptRowCount !== 20 || referenceChecks.oghamScriptSty
 if (referenceChecks.oghamSyllableCount < 1) failures.push('ogham: Die ergänzende Silbentabelle fehlt.');
 if (!referenceChecks.karnrithFound) failures.push('karnrith: Fester Morgar-Eintrag im Sprachen-Reiter fehlt.');
 if (referenceChecks.karnrithTitle !== 'Morgar' || !referenceChecks.karnrithNativeName.includes('Morgar') || !referenceChecks.karnrithNativeName.includes('Karnrith')) failures.push('karnrith: Sprache Morgar und Schrift Karnrith werden nicht eindeutig unterschieden.');
-if (referenceChecks.karnrithPageCount !== 4) failures.push('karnrith: Das Modul besitzt nicht genau vier Seiten.');
-if (JSON.stringify(referenceChecks.karnrithPageTypes) !== JSON.stringify(['story', 'language', 'name-list', 'script-table'])) failures.push(`karnrith: Erwartete Seitentypen story/language/name-list/script-table fehlen (${referenceChecks.karnrithPageTypes.join(', ')}).`);
+if (referenceChecks.karnrithPageCount !== 5) failures.push('karnrith: Erwartet werden fünf Seiten mit dem Wörterverzeichnis auf Seite V.');
+if (JSON.stringify(referenceChecks.karnrithPageTypes) !== JSON.stringify(['story', 'language', 'name-list', 'script-table', 'script-table'])) failures.push(`karnrith: Erwartete Seitentypen fehlen (${referenceChecks.karnrithPageTypes.join(', ')}).`);
 if (referenceChecks.karnrithInfoCount !== 6) failures.push('karnrith: Die Story-Seite besitzt nicht genau sechs Infokarten.');
-if (referenceChecks.karnrithVisibleLayers !== 2) failures.push('karnrith: Zeichentafel und Schriftprobe werden nicht als zwei sichtbare Ebenen erkannt.');
-if (referenceChecks.karnrithLanguageSectionCount !== 8) failures.push(`karnrith: Die gründliche Sprachbeschreibung sollte acht Abschnitte besitzen (${referenceChecks.karnrithLanguageSectionCount}).`);
-if (JSON.stringify(referenceChecks.karnrithNameCounts) !== JSON.stringify([200, 200])) failures.push(`karnrith: Erwartet werden je 200 Namen pro Geschlecht (${referenceChecks.karnrithNameCounts.join(', ')}).`);
-if (JSON.stringify(referenceChecks.karnrithUniqueNameCounts) !== JSON.stringify([200, 200])) failures.push('karnrith: Die Namenslisten enthalten Duplikate.');
+if (referenceChecks.karnrithVisibleLayers !== 3) failures.push('karnrith: Zeichentafel, Schriftprobe und Tastaturzeichen fehlen.');
+if (referenceChecks.karnrithLanguageSectionCount !== 10) failures.push(`karnrith: Die zehn Abschnitte zur Sprachfassung 2.1 fehlen (${referenceChecks.karnrithLanguageSectionCount}).`);
+if (JSON.stringify(referenceChecks.karnrithNameCounts) !== JSON.stringify([500, 500, 100])) failures.push(`karnrith: Erwartet werden 500 männliche, 500 weibliche und 100 Unisex-Namen (${referenceChecks.karnrithNameCounts.join(', ')}).`);
+if (JSON.stringify(referenceChecks.karnrithUniqueNameCounts) !== JSON.stringify([500, 500, 100])) failures.push('karnrith: Die Namenslisten enthalten Duplikate.');
 if (referenceChecks.karnrithNameStyle !== 'karnrith') failures.push('karnrith: Die Namensverzierung verwendet nicht den Karnrith-Stil.');
-['Arkarn', 'Gortharn', 'Vetharn', 'Faurhelda', 'Gharthera'].forEach(name => {
+['Adrak', 'Kharun', 'Brana', 'Gendara', 'Toren'].forEach(name => {
   if (!referenceChecks.karnrithNames.includes(name)) failures.push(`karnrith: Kanonisch gebildeter Prüfnamens fehlt (${name}).`);
 });
 const expectedKarnrithSymbols = ['A', 'K', 'G', 'F', 'U', 'V', 'O', 'D', 'H', 'L', 'T', 'W', 'B', 'M', 'N', 'R', 'Y', 'NG', 'E', 'P', 'S', 'TH', 'KH', 'Z', 'I', 'GH', 'SH', 'CH', 'DH', 'Q'];
 if (referenceChecks.karnrithScriptRowCount !== 30 || JSON.stringify(referenceChecks.karnrithScriptSymbols) !== JSON.stringify(expectedKarnrithSymbols) || referenceChecks.karnrithScriptStyle !== 'karnrith') failures.push('karnrith: Die Zeichentabelle entspricht nicht den 30 kanonischen Karnrith-Zeichen.');
-if (referenceChecks.karnrithSyllableCount !== 39) failures.push(`karnrith: Präfixe, Suffixe und Vokalstufen sind unvollständig (${referenceChecks.karnrithSyllableCount}/39).`);
+if (referenceChecks.karnrithSyllableCount !== 72) failures.push(`karnrith: Silben, Endungen und Bindewörter sind unvollständig (${referenceChecks.karnrithSyllableCount}/72).`);
+if (referenceChecks.karnrithWordCount !== 371 || !referenceChecks.karnrithWords.includes('ziren')) failures.push('karnrith: Der Import hat das Wörterverzeichnis gekürzt.');
 (referenceChecks.karnrithImages || []).forEach(image => {
   if (!fs.existsSync(path.resolve(almanachRoot, image))) failures.push(`karnrith: Lokales Bild fehlt (${image}).`);
 });
@@ -680,9 +692,9 @@ validatePackagedLanguage({
 });
 
 [
-  '../Fonts/Rheunwaith-Font-1.000/Web/Rheunwaith-Regular.woff2',
+  '../Fonts/Rheunwaith-Font-1.000/fonts/Rheunwaith-Regular.woff2',
   '../Fonts/Noto-Historic-Scripts/NotoSansOgham-Regular.ttf',
-  '../Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff2',
+  '../Fonts/Karnrith-Font-2.000/fonts/KarnrithTiefenrunen-Regular.woff2',
   '../Fonts/Infernal-Font-1.000/fonts/Nharazim-Regular.woff2',
   '../Fonts/Noto-Historic-Scripts/NotoSansRunic-Regular.ttf',
   '../Fonts/Kanaanith-Gesamtpaket-1.000/Web/KanaanithMonumental-Regular.woff2',

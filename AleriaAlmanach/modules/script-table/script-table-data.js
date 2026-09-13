@@ -1,4 +1,5 @@
-const SCRIPT_TABLE_ROW_LIMIT = 160;
+// Also used for full language dictionaries; preserve their rows during import/edit.
+const SCRIPT_TABLE_ROW_LIMIT = 600;
 const SCRIPT_TABLE_SYLLABLE_LIMIT = 80;
 
 function sanitizeScriptTableStyle(value) {
@@ -172,93 +173,6 @@ function createOghamScriptTableData() {
       ['Onn', 'Hitze, Eifer, Verzehrung', 'Leidenschaft und Feuerkraft']
     ].map(([syllable, meaning, usage]) => ({ syllable, meaning, usage })),
     footer: 'Aleria Almanach · Ogham · Zeichen und Namensstämme'
-  });
-}
-
-function createKarnrithScriptTableData() {
-  return sanitizeScriptTableData({
-    archiveLabel: 'Karnrith · Vollständiges Register der fünf Klüfte',
-    title: 'Morgar · Karnrith',
-    subtitle: '30 Bedeutungszeichen der morgornischen Steinschrift',
-    ornamentText: 'MORGAR · KARNRITH · URORTHARN · GHAIRQARN',
-    scriptStyle: 'karnrith',
-    symbolHeader: 'Zeichen',
-    rows: [
-      ['A', 'Ard', 'A · [a]', 'Erde, Stoff, Grund — Ursprung, Boden und tragende Tatsache'],
-      ['K', 'Karn', 'K · [k]', 'Stein, Form, Dauer — Festigkeit, Bau und Widerstand'],
-      ['G', 'Gor', 'G · [g]', 'Erz, Metall, Wert — Werkzeugstoff, Gewicht und Besitz'],
-      ['F', 'Faurn', 'F · [f]', 'Feuer, Hitze, Schmiede — Herd, Licht und Wandlung durch Arbeit'],
-      ['U', 'Urd', 'U · [u]', 'Wasser, Masse, Fülle — Strom, Vorrat und Gemeinschaft'],
-      ['V', 'Veth', 'V · [v]', 'Luft, Wetter, Bewegung — Tempo, Ferne und ungebundene Kraft'],
-      ['O', 'Orn', 'O · [o]', 'Ganzes, Amt, Träger — Rang, Ordnung und vollendete Funktion'],
-      ['D', 'Dorn', 'D · [d]', 'Grenze, Mauer, Trennung — Tor, Rand und Schutz durch Scheidung'],
-      ['H', 'Hald', 'H · [h]', 'Haus, Halt, Obhut — Heim, Besitz und bewahrter Raum'],
-      ['L', 'Lann', 'L · [l]', 'Land, Feld, Gebiet — Heimat, Nutzung, Herrschaft und Ertrag'],
-      ['T', 'Targ', 'T · [t]', 'Weg, Richtung, Reise — Ziel, Befehl, Folge und Zugang'],
-      ['W', 'Warg', 'W · [w]', 'Tier, Wildnis, Herde — Jagd, Instinkt und ungezähmtes Land'],
-      ['B', 'Bram', 'B · [b]', 'Leib, Fleisch, Gewicht — Kraft, Hunger, Last und körperliche Grenze'],
-      ['M', 'Morn', 'M · [m]', 'Mensch, Volk, Arbeit — Gemeinwesen, Alltag und Pflicht'],
-      ['N', 'Nair', 'N · [n]', 'Atem, Leben, Stimme — Gesundheit, Ruf und belebende Kraft'],
-      ['R', 'Rann', 'R · [r]', 'Sippe, Bund, Versammlung — Treue, Rat und Gefolgschaft'],
-      ['Y', 'Yrn', 'Y · [y/ü]', 'Ahne, Saat, Fortgang — Abstammung, Kind, Erbe und Wiederkehr'],
-      ['NG', 'Ngrum', 'NG · [ŋ]', 'Tod, Schweigen, Ruhe — Grab, Schlaf und abgelegte Pflicht'],
-      ['E', 'Erd', 'E · [e]', 'Tat, Vorgang, Tausch — Handel, Schuld, Dienst und Veränderung'],
-      ['P', 'Parg', 'P · [p]', 'Hand, Werk, Machen — Handwerk, Bau und Verantwortung'],
-      ['S', 'Skar', 'S · [s]', 'Schnitt, Waffe, Streit — Entscheidung, Trennung und Angriff'],
-      ['TH', 'Tharn', 'TH · [θ]', 'Eid, Recht, Bindung — Gesetz, Vertrag und zugesagte Wahrheit'],
-      ['KH', 'Khorr', 'KH · [x]', 'Bruch, Wandel, Prüfung — Verlust, Krise und Bewährung'],
-      ['Z', 'Zarn', 'Z · [z]', 'Schirm, Wacht, Erhalt — Verteidigung, Pflege und Vorrat'],
-      ['I', 'Irin', 'I · [i]', 'Werkzeug, Teil, Genauigkeit — Maß, Feinarbeit und Einzelheit'],
-      ['GH', 'Ghair', 'GH · [ɣ]', 'Wort, Name, Wahrheit — Benennung, Zeugnis und ausgesprochene Wirklichkeit'],
-      ['SH', 'Shenn', 'SH · [ʃ]', 'Gedächtnis, Wissen, Erzählung — Lehre, Chronik und bewahrtes Können'],
-      ['CH', 'Chor', 'CH · [tʃ]', 'Wille, Ehre, Absicht — Ruf, Mut, Entscheidung und Würde'],
-      ['DH', 'Dhair', 'DH · [ð]', 'Gott, Schicksal, Jenseits — Vorsehung, Heiligkeit und Tabu'],
-      ['Q', 'Qarn', 'Q · [q]', 'Magie, Verborgenes, Geist — Zauber, Geheimnis und unsichtbare Ursache']
-    ].map(([symbol, name, sound, meaning]) => ({ symbol, name, sound, meaning })),
-    syllablesTitle: 'Produktive Wortbausteine & Vokalstufen',
-    syllablesSubtitle: 'Die vollständigen Präfixe, Suffixe und sechs Ableitungsstufen der Morgar-Sprachbibel',
-    syllables: [
-      ['ur-', 'groß, hoch, zahlreich', 'Steigert Rang oder Umfang: urortharn · Hochkönig'],
-      ['dun-', 'klein, nieder, nachgeordnet', 'Mindert Rang oder Ausdehnung: dunhald · Nebenhaus'],
-      ['an-', 'ohne, un-, entzogen', 'Negiert einen greifbaren Zustand: anzarn · unbewacht'],
-      ['bar-', 'oben, über, hochgelegen', 'Markiert Höhenlage: barkarn · Berg'],
-      ['dur-', 'unten, tief, unterirdisch', 'Markiert Tiefe: durkarn · Höhle'],
-      ['inn-', 'innen, innerhalb', 'Innerer Bereich oder Zugehörigkeit: inndorn · Innenmauer'],
-      ['dor-', 'außen, Rand, Grenze', 'Äußerer Bereich oder Grenzfunktion: dorzarn · Grenzwacht'],
-      ['ein-', 'einzeln, einzig', 'Einzelstück oder alleinige Stellung: einorn · Alleininhaber'],
-      ['dra-', 'drei, vollständige Gruppe', 'Rituelle oder handwerkliche Dreizahl: dratharn · Dreifacheid'],
-      ['sam-', 'zusammen, gemeinsam', 'Gemeinsames Handeln: samrann · Bündnis'],
-      ['fyr-', 'voran, erster, voraus', 'Zeitlicher oder ranglicher Vorrang: fyrtarg · Vorhutweg'],
-      ['ath-', 'danach, hinter, letzter', 'Nachfolge oder rückwärtige Lage: athorn · Amtsnachfolger'],
-      ['-ar', 'Gegenstand oder Stoff', 'Greifbares Einzelstück: gorar · Metallstück'],
-      ['-er', 'Handlung oder Verb', 'Tätigkeit: tharner · richten'],
-      ['-ir', 'Werkzeug, Teil, Präzisionsding', 'Mittel oder Instrument: skarir · Klinge'],
-      ['-or', 'Person, Träger, Amt', 'Handelnde und Ämter: qaror · Magier'],
-      ['-ur', 'Menge, Kollektiv, Gebiet', 'Sammelbegriff: morur · Bevölkerung'],
-      ['-yr', 'ahnisch, ererbt, geweiht', 'Fortbestand und Tradition: choryr · Ahnenehre'],
-      ['-en', 'zugehörig, aus, von', 'Adjektivische Beziehung: karnen · steinern'],
-      ['-in', 'hervorgegangen aus, Nachkomme', 'Herkunft oder Abstammung: rannin · Sippenkind'],
-      ['-ath', 'Ort, Stelle, Platz', 'Schauplatz: gorath · Mine'],
-      ['-dorn', 'ummauerter oder geschiedener Ort', 'Befestigung oder Bruchkante: khordorn · Bresche'],
-      ['-hald', 'Haus, Halle, bewahrter Raum', 'Gebäude oder Niederlassung: karhald · Steinhalle'],
-      ['-lann', 'Land, Flur, Herrschaftsraum', 'Gebiet oder Landschaft: durlann · Tal'],
-      ['-rann', 'Sippe, Bund, versammelte Gruppe', 'Sozialer Verband: halrann · Hausgemeinschaft'],
-      ['-targ', 'Weg, Zug, gerichtete Folge', 'Route oder Marsch: skartarg · Feldzug'],
-      ['-tharn', 'Eid, Recht, bindende Ordnung', 'Rechtsbegriff: lantharn · Landrecht'],
-      ['-zarn', 'Wacht, Schutz, Erhalt', 'Schutzobjekt oder -dienst: dorzarn · Grenzwacht'],
-      ['-ghair', 'Wort, Name, verkündeter Text', 'Gesprochenes oder bezeugtes Wissen: tharghair · Erlass'],
-      ['-shenn', 'Lehre, Erinnerung, Wissen', 'Fachwissen oder Überlieferung: qarshenn · Zauberkunde'],
-      ['-chor', 'Würde, Wille, ehrenhafter Zustand', 'Rang oder moralische Qualität: orchor · Amtswürde'],
-      ['-ngrum', 'Tod, Ruhe, Grabzustand', 'Ende oder Bestattung: yrngrum · Ahnengruft'],
-      ['-rith', 'geritztes Zeichen, Inschrift', 'Sichtbare Schnittspur: karnrith · Steinschrift'],
-      ['A-Stufe', 'Gegenstand, Stoff, Grundlage', 'Beantwortet: Was ist greifbar?'],
-      ['E-Stufe', 'Handlung, Vorgang, Tausch', 'Beantwortet: Was geschieht oder wird getan?'],
-      ['I-Stufe', 'Werkzeug, Einzelteil, Genauigkeit', 'Beantwortet: Womit oder in welchem Teil?'],
-      ['O-Stufe', 'Person, Träger, Amt', 'Beantwortet: Wer trägt die Funktion?'],
-      ['U-Stufe', 'Menge, Masse, Kollektiv, Gebiet', 'Beantwortet: Was bildet ein Ganzes aus vielen?'],
-      ['Y-Stufe', 'Ahne, Erbe, Weihung, Fortbestand', 'Beantwortet: Was wird weitergetragen?']
-    ].map(([syllable, meaning, usage]) => ({ syllable, meaning, usage })),
-    footer: 'Aleria Almanach · Morgar · Karnrith · Zeichen und Wortbildung'
   });
 }
 

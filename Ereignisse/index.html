@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#432d32">
+  <meta name="description" content="Die Ereignisse von Aleria: Kriege, Schlachten, Zeremonien, Reisen, Abenteuer und Tragödien. Eine Chronik mit Verbindungen zum Kalender.">
+  <title>Die Chronik · Ereignisse von Aleria</title>
+  <link rel="icon" href="../IconOrdner/ReiterIcons/Ereignisse.png">
+  <link rel="stylesheet" href="modules/book-shell/events-shell.css">
+  <link rel="stylesheet" href="modules/catalog/events-catalog.css">
+  <link rel="stylesheet" href="../AleriaAlmanach/modules/calendar/calendar-preview.css">
+  <link rel="stylesheet" href="modules/calendar/events-calendar.css">
+  <link rel="stylesheet" href="modules/weddings/wedding-preview.css">
+  <script defer src="../AleriaAlmanach/modules/core/aleria-calendar.js?v=20260911-jahrswend"></script>
+  <script defer src="../AleriaAlmanach/modules/world-date/world-date-model.js"></script>
+  <script defer src="../AleriaAlmanach/modules/world-date/world-date-store.js"></script>
+  <script type="module" src="../AleriaAlmanach/modules/auth/firebase-bootstrap.mjs?v=20260911-calendar-v2"></script>
+  <script type="module" src="modules/catalog/events-page.mjs"></script>
+  <script type="module" src="modules/calendar/events-calendar.mjs"></script>
+  <script type="module" src="modules/weddings/wedding-preview-page.mjs"></script>
+</head>
+<body class="events-page">
+  <a class="events-skip" href="#verzeichnis">Zum Ereignisverzeichnis</a>
+  <header class="events-header" id="anfang"><div class="events-header-inner">
+    <a class="events-brand" href="../AleriaAlmanach/AleriaAlmanach.html">← ALERIA <span>/</span> ALMANACH</a>
+    <nav aria-label="Weitere Sammlungen"><a href="../Religionen/index.html">Religionen</a><a href="../Bestiarium/index.html">Bestiarium</a><a href="index.html" aria-current="page">Ereignisse</a><a href="../AleriaAlmanach/kalender.html">Kalender ↗</a></nav>
+  </div></header>
+  <main class="events-book" data-events-page>
+    <section class="events-cover" aria-labelledby="events-title">
+      <div class="events-cover-copy"><p class="events-eyebrow">Das Gedächtnis einer Welt <span>/</span> Alerias Ereignisse</p>
+        <h1 id="events-title"><span>Was war.</span>Was bleibt.<em>Die Chronik von Aleria</em></h1>
+        <p class="events-cover-intro">Königreiche im Wandel. Geschlossene Bündnisse. Wege ins Ungewisse. Die Ereignisse einer Welt, deren Geschichte noch geschrieben wird.</p>
+        <div class="events-cover-actions"><a class="events-button" href="#verzeichnis">Die Chronik aufschlagen <span aria-hidden="true">↗</span></a><a class="events-text-link" href="../AleriaAlmanach/kalender.html">Zum Kalender →</a></div>
+        <p class="events-colophon">Sechs Kapitel <span>·</span> Eine wachsende Sammlung</p>
+      </div>
+      <figure class="events-cover-art">
+        <svg viewBox="0 0 400 430" role="img" aria-labelledby="hourglass-title"><title id="hourglass-title">Eine Sanduhr im Kreis der Geschichte</title>
+          <defs><path id="chronicle-arc" d="M 43,211 A 157,157 0 1,1 357,211"/><pattern id="chronicle-hatch" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M0 5L5 0" stroke="currentColor" stroke-width=".6"/></pattern></defs>
+          <g fill="none" stroke="currentColor"><circle cx="200" cy="211" r="185"/><circle cx="200" cy="211" r="179" stroke-width=".5"/><circle cx="200" cy="211" r="146" stroke-dasharray="1 9"/>
+            <path d="M200 12V66M200 356V410M0 211H55M345 211H400M62 73L88 99M312 323L339 350M62 350L88 323M312 99L339 73" opacity=".5"/>
+            <path d="M124 113H276V125H124ZM124 298H276V310H124ZM136 125V298M145 125V298M255 125V298M264 125V298" stroke-width="2"/>
+            <path d="M154 132C154 176 179 187 193 205V218C179 236 154 249 154 291H246C246 249 221 236 207 218V205C221 187 246 176 246 132Z" stroke-width="1.5"/>
+            <path d="M163 153H237C231 175 209 184 200 197C191 184 169 175 163 153ZM160 287C179 264 192 265 200 249C208 265 221 264 240 287Z" fill="url(#chronicle-hatch)"/>
+            <path d="M200 213V241" stroke-dasharray="2 4"/><path d="M117 105H283M117 318H283M166 326H234"/>
+          </g><g fill="currentColor"><path d="M200 31L203 39L211 42L203 45L200 53L197 45L189 42L197 39Z"/><circle cx="21" cy="211" r="3"/><circle cx="379" cy="211" r="3"/></g>
+          <text fill="currentColor" font-family="Georgia, serif" font-size="9" letter-spacing="3.2"><textPath href="#chronicle-arc" startOffset="50%" text-anchor="middle">KRONEN · SCHWÜRE · SCHICKSALSWEGE</textPath></text>
+          <text x="200" y="359" fill="currentColor" font-family="Georgia, serif" font-size="10" letter-spacing="3" text-anchor="middle">ZEIT &amp; ÜBERLIEFERUNG</text>
+        </svg><figcaption>Die Zeit vergeht. Die Spuren bleiben.</figcaption>
+      </figure>
+    </section>
+    <div class="events-bookmark"><span aria-hidden="true">✧</span><p>Vom ersten überlieferten Jahr bis zu den noch ungeschriebenen Geschichten.</p><a href="#kalenderfenster">Die nächsten Tage ↓</a></div>
+    <div class="events-layout">
+      <aside class="events-register" aria-label="Kapitelregister"><div class="events-register-sticky">
+        <a class="events-register-title" href="#anfang"><img src="../IconOrdner/ReiterIcons/Ereignisse.png" width="32" height="32" alt="">Das Ereignisarchiv</a>
+        <p class="events-eyebrow">In diesem Band</p>
+        <nav aria-label="Kapitel der Chronik" data-role="chapter-register">
+          <!-- events:register:start -->
+<a href="#kapitel-kriege" data-action="select-chapter" data-chapter="kriege"><span>I</span><strong>Kriege</strong><small>5</small></a><a href="#kapitel-schlachten" data-action="select-chapter" data-chapter="schlachten"><span>II</span><strong>Schlachten</strong><small>1</small></a><a href="#kapitel-zeremonien" data-action="select-chapter" data-chapter="zeremonien"><span>III</span><strong>Zeremonien</strong><small>1</small></a><a href="#kapitel-reisen" data-action="select-chapter" data-chapter="reisen"><span>IV</span><strong>Reisen</strong><small>—</small></a><a href="#kapitel-abenteuer" data-action="select-chapter" data-chapter="abenteuer"><span>V</span><strong>Abenteuer</strong><small>2</small></a><a href="#kapitel-tragoedien" data-action="select-chapter" data-chapter="tragoedien"><span>VI</span><strong>Tragödien</strong><small>1</small></a>
+<!-- events:register:end -->
+        </nav>
+        <button class="events-text-button" type="button" data-action="reset-events" hidden>Alle Kapitel anzeigen ↗</button>
+        <div class="events-register-note"><span aria-hidden="true">❧</span><p>Manche Geschichten<br>kennen wir erst beim Namen.</p><small>Weitere Dossiers zu Kriegen, Festen und anderen Ereignissen ergänzen diesen Band nach und nach.</small></div>
+        <a class="events-text-link" href="#anfang">Zur Titelseite ↑</a>
+      </div></aside>
+      <div class="events-content">
+        <section id="verzeichnis" aria-labelledby="catalog-title">
+          <header class="events-catalog-heading"><p class="events-eyebrow">Das Register der Ereignisse</p><h2 id="catalog-title">Jede Geschichte hinterlässt eine Spur.</h2><p>Folgt einem Namen, einem Kapitel oder einem Jahr durch Alerias Vergangenheit.</p></header>
+          <form class="events-tools" data-role="catalog-tools" role="search" hidden>
+            <label class="events-search"><span aria-hidden="true">⌕</span><span class="events-sr-only">Ereignisse durchsuchen</span><input type="search" data-role="search" placeholder="Ereignis, Reich oder Name suchen …" maxlength="200" autocomplete="off" aria-controls="events-catalog"></label>
+            <div class="events-tool-row"><label>Ansicht<select data-role="order" aria-controls="events-catalog"><option value="chapters">Nach Kapiteln</option><option value="oldest">Zeitfolge · älteste zuerst</option><option value="newest">Zeitfolge · neueste zuerst</option></select></label><label class="events-year-label">Im Jahr<input data-role="year" type="number" min="1" max="100000" step="1" placeholder="Alle" aria-controls="events-catalog"></label></div>
+            <div class="events-result-row"><p data-role="result-count" role="status" aria-live="polite" aria-atomic="true"></p><button class="events-text-button" type="button" data-action="reset-events" hidden>Filter zurücksetzen ↺</button></div>
+          </form>
+          <noscript><p class="events-reading-note">Die gesamte Chronik ist unten lesbar. Suche, Zeitfolge und die Terminvorschau stehen mit JavaScript zur Verfügung.</p></noscript>
+          <div id="events-catalog" data-role="catalog">
+            <!-- events:catalog:start -->
+<section class="events-chapter" id="kapitel-kriege" aria-labelledby="chapter-kriege"><header class="events-chapter-heading"><span aria-hidden="true">I</span><div><p class="events-eyebrow">Um Kronen und Königreiche</p><h2 id="chapter-kriege">Kriege</h2><p>Bürgerkriege, Invasionen und Raubzüge, die Aleria veränderten.</p></div><small>05</small></header><article class="event-card" id="ereignis-krieg-der-praetendenten" data-event-id="krieg-der-praetendenten" data-event-chapter="kriege" tabindex="-1">
+    <div class="event-date"><a class="event-icon-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2021" aria-label="Der Krieg der Prätendenten – Ereignisseite öffnen · Animexx"><img class="event-icon" src="./assets/icons/buergerkrieg.png" alt="" width="100" height="100" loading="lazy" decoding="async"></a><div class="event-dateline"><strong>1627–1647</strong><small>20 Jahre</small></div></div>
+    <div class="event-copy"><p class="events-eyebrow">Kriege <span aria-hidden="true">/</span> Bürgerkrieg</p><h3><a class="event-title-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2021">Der Krieg der Prätendenten</a></h3>
+      <p class="event-note">Erster Bürgerkrieg</p>
+      <p class="event-lead">Der Krieg der Prätendenten war der blutigste und längste Bürgerkrieg in der Geschichte Aldrimars.</p>
+      <details class="event-story"><summary>Überlieferung weiterlesen</summary><p>Über einen Zeitraum von zwanzig Jahren verwüstete er das Königreich und drohte, die Linie des Königshauses vollständig auszulöschen. Der verheerende Konflikt entflammte nach der brutalen Ermordung des frisch gekrönten Hochkönigs, die durch ein heimtückisches Mordkomplott zweier seiner Halbgeschwister inszeniert wurde. Diese Tat löste einen erbitterten Kampf um den Thron aus, bei dem verschiedene Fraktionen und Prätendenten um die Macht rangen, während das Land in Blut und Chaos versank.</p></details>
+      <footer class="event-actions"><a class="event-dossier-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2021">Ereignisseite öffnen · Animexx ↗</a>
+      <a href="../AleriaAlmanach/kalender.html?year=1627&amp;chronicle=krieg-der-praetendenten#chronik">Beginn im Kalender ↗</a><a href="../AleriaAlmanach/kalender.html?year=1647&amp;chronicle=krieg-der-praetendenten#chronik">Ende im Kalender ↗</a></footer>
+    </div>
+  </article><article class="event-card" id="ereignis-krieg-um-estryll" data-event-id="krieg-um-estryll" data-event-chapter="kriege" tabindex="-1">
+    <div class="event-date"><a class="event-icon-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2454" aria-label="Der Krieg um Estryll – Ereignisseite öffnen · Animexx"><img class="event-icon" src="./assets/icons/krieg.png" alt="" width="100" height="100" loading="lazy" decoding="async"></a><div class="event-dateline"><strong>1719–1720</strong><small>Ein Jahr</small></div></div>
+    <div class="event-copy"><p class="events-eyebrow">Kriege <span aria-hidden="true">/</span> Großer Krieg</p><h3><a class="event-title-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2454">Der Krieg um Estryll</a></h3>
+      <p class="event-note">Entstehung des Dunkelhains nach Kriegsende</p>
+      <p class="event-lead">Der Krieg um Estryll war ein großflächiger, politisch wie okkult motivierter Konflikt, ausgelöst im Jahr 1719 durch das machtgierige Fürstentum Ceitheach, das – getrieben von den Kulten der Erben der Morgenröte, des Blutmondes und dem Kreis der Dämmerung – die albische Krone an sich reißen wollte.</p>
+      <details class="event-story"><summary>Überlieferung weiterlesen</summary><p>Ein Bündnis aus Cenyr, Aldrimar, Leitheach, Blaitheach, Dunfal und Aislearneach stellte sich ihnen entgegen und konnte die Offensive aufhalten, doch der Sieg endete nicht ohne Preis, sondern im Verderben Ceitheachs und Umwandlung in den Dunkelhain. Einzig das Opfer einer Heldin konnte Schlimmeres unterbinden.</p></details>
+      <footer class="event-actions"><a class="event-dossier-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2454">Ereignisseite öffnen · Animexx ↗</a>
+      <a href="../AleriaAlmanach/kalender.html?year=1719&amp;chronicle=krieg-um-estryll#chronik">Beginn im Kalender ↗</a><a href="../AleriaAlmanach/kalender.html?year=1720&amp;chronicle=krieg-um-estryll#chronik">Ende im Kalender ↗</a></footer>
+    </div>
+  </article><article class="event-card" id="ereignis-invasion-von-vennyr" data-event-id="invasion-von-vennyr" data-event-chapter="kriege" tabindex="-1">
+    <div class="event-date"><a class="event-icon-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2178" aria-label="Die Invasion von Vennyr – Ereignisseite öffnen · Animexx"><img class="event-icon" src="./assets/icons/krieg.png" alt="" width="100" height="100" loading="lazy" decoding="async"></a><div class="event-dateline"><strong>1717–1720</strong><small>3 Jahre</small></div></div>
+    <div class="event-copy"><p class="events-eyebrow">Kriege <span aria-hidden="true">/</span> Invasion</p><h3><a class="event-title-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2178">Die Invasion von Vennyr</a></h3>
+      <p class="event-note">Vennyr wird zu Fjordheim</p>
+      <p class="event-lead">Die Invasion von Vennyr im Jahr 1717 markiert einen Wendepunkt in der Geschichte des Königreichs, als die Nordmänner des Hohen Nordens, angeführt von den mächtigen Clans der Nordmannen, einen erneuten Versuch unternahmen, das Land zu erobern, das sie als ihre angestammte Heimat betrachteten.</p>
+      
+      <footer class="event-actions"><a class="event-dossier-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2178">Ereignisseite öffnen · Animexx ↗</a>
+      <a href="../AleriaAlmanach/kalender.html?year=1717&amp;chronicle=invasion-von-vennyr#chronik">Beginn im Kalender ↗</a><a href="../AleriaAlmanach/kalender.html?year=1720&amp;chronicle=invasion-von-vennyr#chronik">Ende im Kalender ↗</a></footer>
+    </div>
+  </article><article class="event-card" id="ereignis-aufstieg-der-triarchie" data-event-id="aufstieg-der-triarchie" data-event-chapter="kriege" tabindex="-1">
+    <div class="event-date"><img class="event-icon" src="./assets/icons/krieg.png" alt="" width="100" height="100" loading="lazy" decoding="async"><div class="event-dateline"><strong>1717–1721</strong><small>4 Jahre</small></div></div>
+    <div class="event-copy"><p class="events-eyebrow">Kriege <span aria-hidden="true">/</span> Krieg</p><h3>Aufstieg der Triarchie</h3>
+      <p class="event-note">Unterwerfung vieler alerischer Reiche</p>
+      <p class="event-lead">Der Aufstieg der Triarchie beschreibt die gezielte Unterwerfung zahlreicher zentral gelegener Königreiche und Fürstentümer durch die Einführung einer tief okkulten Religion, welche sich auf die drei dunklen Götter Grimnar, Dagon und Bhaal stützt.</p>
+      <details class="event-story"><summary>Überlieferung weiterlesen</summary><p>Diese Religion wird durch ein fanatisches Triumvirat aus drei mächtigen Magiern – den sogenannten Triarchen – verkörpert, die als weltliche und geistige Führer agieren, um ein religiös-diktatorisches Regime über die eroberten Reiche zu errichten.</p></details>
+      <footer class="event-actions"><span class="event-dossier-note">Ereignisseite folgt</span>
+      <a href="../AleriaAlmanach/kalender.html?year=1717&amp;chronicle=aufstieg-der-triarchie#chronik">Beginn im Kalender ↗</a><a href="../AleriaAlmanach/kalender.html?year=1721&amp;chronicle=aufstieg-der-triarchie#chronik">Ende im Kalender ↗</a></footer>
+    </div>
+  </article><article class="event-card" id="ereignis-raubzug-durch-leitheach" data-event-id="raubzug-durch-leitheach" data-event-chapter="kriege" tabindex="-1">
+    <div class="event-date"><a class="event-icon-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2467" aria-label="Raubzug durch Leitheach – Ereignisseite öffnen · Animexx"><img class="event-icon" src="./assets/icons/raubzug.png" alt="" width="100" height="100" loading="lazy" decoding="async"></a><div class="event-dateline"><strong>Jahr 1733</strong><small>Ein Tag</small></div></div>
+    <div class="event-copy"><p class="events-eyebrow">Kriege <span aria-hidden="true">/</span> Raubzug</p><h3><a class="event-title-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2467">Raubzug durch Leitheach</a></h3>
+      <p class="event-note">Beinahe Auslöschung des Hauses Iomrach</p>
+      <p class="event-lead">Im Jahr 1733 wagte eine größere Gruppe der Schwarzblut Marodeure einen Raubzug an der Südküste Leitheachs.</p>
+      <details class="event-story"><summary>Überlieferung weiterlesen</summary><p>Die Piraten griffen im Schutz der Nacht die Burg Broch an Clais an und töteten oder verschleppten den gesamten Clan der Iomrach. Ohne den Schutz, den Broch an Clais an der Flussmündung bot, konnten die Schiffe der Piraten bis nach Dun Laog hinaufsegeln, um es direkt anzugreifen. Bei diesem Streifzug verschleppten, raubten und töteten die Piraten viele Alben, bevor Verstärkung aus Westen und Osten eintreffen konnte. Letztlich wurden die Piraten zwar zurückgeschlagen, jedoch waren zu jenem Zeitpunkt die meisten der Räuber bereits entkommen und mit ihnen auch viele der Alben.</p></details>
+      <footer class="event-actions"><a class="event-dossier-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2467">Ereignisseite öffnen · Animexx ↗</a>
+      <a href="../AleriaAlmanach/kalender.html?year=1733&amp;chronicle=raubzug-durch-leitheach#chronik">Jahr im Kalender ↗</a></footer>
+    </div>
+  </article></section><section class="events-chapter" id="kapitel-schlachten" aria-labelledby="chapter-schlachten"><header class="events-chapter-heading"><span aria-hidden="true">II</span><div><p class="events-eyebrow">Wo die Waffen aufeinandertreffen</p><h2 id="chapter-schlachten">Schlachten</h2><p>Einzelne Schlachten und ihre Überlieferungen.</p></div><small>01</small></header><article class="event-card" id="ereignis-seeschlacht-rhonwens-traenen" data-event-id="seeschlacht-rhonwens-traenen" data-event-chapter="schlachten" tabindex="-1">
+    <div class="event-date"><img class="event-icon" src="./assets/icons/seeschlacht.png" alt="" width="100" height="100" loading="lazy" decoding="async"><div class="event-dateline"><strong>Zeitpunkt offen</strong><small>Noch nicht datiert</small></div></div>
+    <div class="event-copy"><p class="events-eyebrow">Schlachten <span aria-hidden="true">/</span> Schlacht</p><h3>Seeschlacht um Rhonwens Tränen</h3>
+      
+      <p class="event-unwritten">Die ausführliche Überlieferung ist noch nicht niedergeschrieben.</p>
+      
+      <footer class="event-actions"><span class="event-dossier-note">Ereignisseite folgt</span>
+      <span>Kalenderverweis folgt mit der Datierung.</span></footer>
+    </div>
+  </article></section><section class="events-chapter" id="kapitel-zeremonien" aria-labelledby="chapter-zeremonien"><header class="events-chapter-heading"><span aria-hidden="true">III</span><div><p class="events-eyebrow">Von Bündnissen und Schwüren</p><h2 id="chapter-zeremonien">Zeremonien</h2><p>Hochzeiten und feierliche Zusammenkünfte.</p></div><small>01</small></header><article class="event-card" id="ereignis-hochzeit-bei-gwynthor" data-event-id="hochzeit-bei-gwynthor" data-event-chapter="zeremonien" tabindex="-1">
+    <div class="event-date"><a class="event-icon-link" href="./Hochzeiten/Haus-Draig-und-Penderyn.html" aria-label="Die Hochzeit bei Gwynthor – Ereignisseite öffnen"><img class="event-icon" src="./assets/icons/hochzeit.png" alt="" width="100" height="100" loading="lazy" decoding="async"></a><div class="event-dateline"><strong>Jahr 1740</strong><small>Ein Tag</small></div></div>
+    <div class="event-copy"><p class="events-eyebrow">Zeremonien <span aria-hidden="true">/</span> Hochzeit</p><h3><a class="event-title-link" href="./Hochzeiten/Haus-Draig-und-Penderyn.html">Die Hochzeit bei Gwynthor</a></h3>
+      <p class="event-note">Bevorstehendes Ehebündnis von Haus Draig und Haus Penderyn</p>
+      <p class="event-lead">Die Hochzeit von Prinz Tudwal Draig und Lady Revelyn Penderyn in Gwynthor.</p>
+      <details class="event-story"><summary>Überlieferung weiterlesen</summary><p>Den aktuellen Termin und Ablauf führt das gemeinsame Festbuch.</p></details>
+      <footer class="event-actions"><a class="event-dossier-link" href="./Hochzeiten/Haus-Draig-und-Penderyn.html">Ereignisseite öffnen ↗</a>
+      <a href="../AleriaAlmanach/kalender.html?year=1740&amp;chronicle=hochzeit-bei-gwynthor#chronik">Jahr im Kalender ↗</a></footer>
+    </div>
+  </article></section><section class="events-chapter" id="kapitel-reisen" aria-labelledby="chapter-reisen"><header class="events-chapter-heading"><span aria-hidden="true">IV</span><div><p class="events-eyebrow">Auf noch unbeschriebenen Wegen</p><h2 id="chapter-reisen">Reisen</h2><p>Dieser Teil der Chronik wartet noch auf seinen ersten benannten Reisebericht.</p></div><small>00</small></header><div class="events-unwritten"><img class="event-icon" src="./assets/icons/reise.png" alt="" width="100" height="100" loading="lazy" decoding="async"><div><h3>Der nächste Weg ist noch offen.</h3><p>Für Reisen ist ein Kapitel reserviert. Ein benannter Eintrag liegt bisher nicht vor.</p></div></div></section><section class="events-chapter" id="kapitel-abenteuer" aria-labelledby="chapter-abenteuer"><header class="events-chapter-heading"><span aria-hidden="true">V</span><div><p class="events-eyebrow">Geschichten auf langen Wegen</p><h2 id="chapter-abenteuer">Abenteuer</h2><p>Die Unternehmungen der Wintersonne und der Ritter der Tafelrunde.</p></div><small>02</small></header><article class="event-card" id="ereignis-abenteuer-der-wintersonne" data-event-id="abenteuer-der-wintersonne" data-event-chapter="abenteuer" tabindex="-1">
+    <div class="event-date"><img class="event-icon" src="./assets/icons/abenteuer.png" alt="" width="100" height="100" loading="lazy" decoding="async"><div class="event-dateline"><strong>1663–1689</strong><small>26 Jahre</small></div></div>
+    <div class="event-copy"><p class="events-eyebrow">Abenteuer <span aria-hidden="true">/</span> Abenteuer</p><h3>Abenteuer der Wintersonne</h3>
+      
+      <p class="event-unwritten">Die ausführliche Überlieferung ist noch nicht niedergeschrieben.</p>
+      
+      <footer class="event-actions"><span class="event-dossier-note">Ereignisseite folgt</span>
+      <a href="../AleriaAlmanach/kalender.html?year=1663&amp;chronicle=abenteuer-der-wintersonne#chronik">Beginn im Kalender ↗</a><a href="../AleriaAlmanach/kalender.html?year=1689&amp;chronicle=abenteuer-der-wintersonne#chronik">Ende im Kalender ↗</a></footer>
+    </div>
+  </article><article class="event-card" id="ereignis-ritter-der-tafelrunde" data-event-id="ritter-der-tafelrunde" data-event-chapter="abenteuer" tabindex="-1">
+    <div class="event-date"><img class="event-icon" src="./assets/icons/abenteuer.png" alt="" width="100" height="100" loading="lazy" decoding="async"><div class="event-dateline"><strong>1710–1720</strong><small>10 Jahre</small></div></div>
+    <div class="event-copy"><p class="events-eyebrow">Abenteuer <span aria-hidden="true">/</span> Abenteuer</p><h3>Abenteuer der Ritter der Tafelrunde</h3>
+      
+      <p class="event-unwritten">Die ausführliche Überlieferung ist noch nicht niedergeschrieben.</p>
+      
+      <footer class="event-actions"><span class="event-dossier-note">Ereignisseite folgt</span>
+      <a href="../AleriaAlmanach/kalender.html?year=1710&amp;chronicle=ritter-der-tafelrunde#chronik">Beginn im Kalender ↗</a><a href="../AleriaAlmanach/kalender.html?year=1720&amp;chronicle=ritter-der-tafelrunde#chronik">Ende im Kalender ↗</a></footer>
+    </div>
+  </article></section><section class="events-chapter" id="kapitel-tragoedien" aria-labelledby="chapter-tragoedien"><header class="events-chapter-heading"><span aria-hidden="true">VI</span><div><p class="events-eyebrow">Was nicht vergessen wird</p><h2 id="chapter-tragoedien">Tragödien</h2><p>Dunkle Ereignisse und die Spuren, die sie hinterließen.</p></div><small>01</small></header><article class="event-card" id="ereignis-schrecken-von-torrenheim" data-event-id="schrecken-von-torrenheim" data-event-chapter="tragoedien" tabindex="-1">
+    <div class="event-date"><a class="event-icon-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1442" aria-label="Das Schrecken von Torrenheim – Ereignisseite öffnen · Animexx"><img class="event-icon" src="./assets/icons/tragoedie.png" alt="" width="100" height="100" loading="lazy" decoding="async"></a><div class="event-dateline"><strong>Jahr 1730</strong><small>Dauer offen</small></div></div>
+    <div class="event-copy"><p class="events-eyebrow">Tragödien <span aria-hidden="true">/</span> Tragödie</p><h3><a class="event-title-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1442">Das Schrecken von Torrenheim</a></h3>
+      <p class="event-note">Rory wird als der Blutfürst bekannt</p>
+      <p class="event-lead">Das Ereignis um Torrenheim ist eine Geschichte von Machtkämpfen, Verbannten und Söldnern.</p>
+      <details class="event-story"><summary>Überlieferung weiterlesen</summary><p>Torrenheim ist ein Anwesen einer einstigen Edelfamilie, das aufgrund seiner Nähe zur Küste und der Grenze von Fjordheim verlassen und den Elementen überlassen wurde. Ein in Ungnade gefallener Hesir erhielt jedoch das Anwesen, um ihn vom Hofe zu verweisen. Dort baute der Hesir eine Bande von Räubern und Marodeuren auf, die mit den Nordmännern kooperierten, um dem König ans Bein zu pinkeln.</p></details>
+      <footer class="event-actions"><a class="event-dossier-link" href="https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1442">Ereignisseite öffnen · Animexx ↗</a>
+      <a href="../AleriaAlmanach/kalender.html?year=1730&amp;chronicle=schrecken-von-torrenheim#chronik">Jahr im Kalender ↗</a></footer>
+    </div>
+  </article></section>
+<!-- events:catalog:end -->
+          </div>
+        </section>
+        <section class="events-calendar-window" id="kalenderfenster" data-events-calendar aria-labelledby="calendar-window-title">
+          <header><div><p class="events-eyebrow">Von der Chronik in die Gegenwart</p><h2 id="calendar-window-title">Die nächsten Tage</h2></div><a class="events-text-link" href="../AleriaAlmanach/kalender.html">Kalender öffnen ↗</a></header>
+          <p class="events-calendar-today" data-role="calendar-today">Festtage, Zusammenkünfte und Aufbrüche im Kalender von Aleria.</p>
+          <div data-role="calendar-upcoming"><p>Die aktuellen Termine findet Ihr im <a href="../AleriaAlmanach/kalender.html">Kalender</a>.</p></div>
+          <p class="events-calendar-status" data-role="calendar-status" role="status"></p>
+        </section>
+        <section class="wedding-preview" data-wedding-register-preview aria-label="Bevorstehende Hochzeiten"><a href="hochzeit.html">Hochzeitsregister öffnen ↗</a></section>
+      </div>
+    </div>
+  </main>
+  <footer class="events-footer"><span aria-hidden="true">A</span><p>Die Chronik von Aleria<small>Ein Ereignisarchiv im Werden</small></p><a href="../AleriaAlmanach/AleriaAlmanach.html">Zurück zum Almanach ↗</a></footer>
+</body>
+</html>

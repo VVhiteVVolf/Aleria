@@ -1,0 +1,33 @@
+.wedding-dialog { width:min(760px,calc(100% - 32px)); max-height:calc(100dvh - 40px); padding:0; border:1px solid var(--w-gold); color:var(--w-ink); background:var(--w-cream); box-shadow:0 20px 70px #21151450; }
+.wedding-dialog::backdrop { background:#2118189c; }
+.wedding-dialog > form > header { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:23px 26px; background:var(--w-wine); color:#fff3db; }
+.wedding-dialog h2 { font-size:27px; }
+.wedding-dialog header button { background:none; border:0; color:inherit; font-size:26px; padding:0 4px; }
+.wedding-dialog-body { padding:24px 26px; }
+.wedding-form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:17px 20px; }
+.wedding-form-grid label { display:flex; flex-direction:column; gap:5px; font-size:12px; color:var(--w-muted); }
+.wedding-form-grid input,.wedding-form-grid textarea,.wedding-form-grid select { width:100%; min-width:0; border:1px solid var(--w-line); border-radius:2px; background:#fffefa; padding:10px 11px; color:var(--w-ink); font-size:14px; }
+.wedding-form-grid textarea { resize:vertical; min-height:100px; }
+.wedding-form-grid .wedding-form-wide { grid-column:1 / -1; }
+.wedding-form-grid h3 { grid-column:1 / -1; border-bottom:1px solid var(--w-line); padding-bottom:10px; margin-top:10px; color:var(--w-wine); font-size:20px; }
+.wedding-form-grid .wedding-checkbox-label { flex-direction:row; align-items:center; }
+.wedding-checkbox-label input { width:18px; height:18px; accent-color:var(--w-wine); }
+.wedding-portrait-fields { min-width:0; margin:6px 0 0; padding:18px; border:1px solid var(--w-line); }
+.wedding-portrait-fields legend { padding:0 8px; color:var(--w-wine); font-size:19px; }
+.wedding-portrait-field { display:grid; grid-template-columns:1fr 1fr; gap:14px; padding:17px 0; border-top:1px solid var(--w-line); }
+.wedding-portrait-field > button { justify-self:start; }
+.wedding-dialog footer { padding:18px 26px 23px; border-top:1px solid var(--w-line); }
+.wedding-dialog-actions { display:flex; justify-content:flex-end; align-items:center; gap:10px; flex-wrap:wrap; }
+.wedding-dialog-actions button { border:1px solid var(--w-line); background:transparent; padding:10px 15px; font-size:13px; }
+.wedding-dialog-actions .wedding-danger { margin-right:auto; color:#8a3735; border-color:#bd9a90; }
+.wedding-dialog-status { color:#8b3a36; font-size:13px; margin-bottom:12px; }
+.wedding-dialog-help { font-size:12px; color:var(--w-muted); margin:0 0 19px; }
+.wedding-publication-changes { padding-left:20px; font-size:14px; margin:14px 0 22px; }
+.wedding-publication-changes li { padding:4px 0; }
+@media(max-width:600px) {
+  .wedding-dialog { width:calc(100% - 20px); max-height:calc(100dvh - 20px); }
+  .wedding-dialog > form > header,.wedding-dialog-body,.wedding-dialog footer { padding:18px; }
+  .wedding-form-grid { grid-template-columns:1fr; }
+  .wedding-portrait-field { grid-template-columns:1fr; }
+  .wedding-dialog h2 { font-size:24px; }
+}

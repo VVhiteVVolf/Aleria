@@ -37,6 +37,99 @@
   status = 404
   force = true
 
+# Preserve Karnrith 2.000 links; the previous language source remains archived.
+[[redirects]]
+  from = "/Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff2"
+  to = "/Fonts/Karnrith-Font-2.000/fonts/KarnrithTiefenrunen-Regular.woff2"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff"
+  to = "/Fonts/Karnrith-Font-2.000/fonts/KarnrithTiefenrunen-Regular.woff"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.ttf"
+  to = "/Fonts/Karnrith-Font-2.000/fonts/KarnrithTiefenrunen-Regular.ttf"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Karnrith-Font-2.000/Fonts/KarnrithHochschnitt-Regular.ttf"
+  to = "/Fonts/Karnrith-Font-2.000/fonts/KarnrithTiefenrunen-Regular.ttf"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Karnrith-Font-2.000/Fonts/KarnrithHochschnitt-Regular.otf"
+  to = "/Fonts/Karnrith-Font-2.000/fonts/KarnrithTiefenrunen-Regular.otf"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Karnrith-Font-2.000/Web/karnrith-hochschnitt.css"
+  to = "/Fonts/Karnrith-Font-2.000/karnrith.css"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Karnrith-Font-2.000/Web/demo.html"
+  to = "/Fonts/Karnrith-Font-2.000/demo.html"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Karnrith-Font-2.000/Specimen/KarnrithHochschnitt_Zeichentafel_2.000.png"
+  to = "/Fonts/Karnrith-Font-2.000/Zeichentafel.png"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Karnrith-Font-2.000/Specimen/KarnrithHochschnitt_Schriftprobe_2.000.png"
+  to = "/Fonts/Karnrith-Font-2.000/Leseprobe.png"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Karnrith-Font-2.000/Specimen/KarnrithHochschnitt_Zeichentafel_2.000.svg"
+  to = "/Fonts/Karnrith-Font-2.000/Zeichentafel.png"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Karnrith-Font-2.000/Documentation/Morgar_Sprachbibel_1.0.docx"
+  to = "/Fonts/Karnrith-Font-2.000/source/original/Morgar_Sprachbibel_1.0.docx"
+  status = 301
+
+
+# Preserve stored document links and font URLs from Rheunwaith 1.000.
+[[redirects]]
+  from = "/Fonts/Rheunwaith-Font-1.000/Web/Rheunwaith-Regular.woff2"
+  to = "/Fonts/Rheunwaith-Font-1.000/fonts/Rheunwaith-Regular.woff2"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Rheunwaith-Font-1.000/Web/Rheunwaith-Regular.woff"
+  to = "/Fonts/Rheunwaith-Font-1.000/fonts/Rheunwaith-Regular.woff"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Rheunwaith-Font-1.000/Desktop/Rheunwaith-Regular.ttf"
+  to = "/Fonts/Rheunwaith-Font-1.000/fonts/Rheunwaith-Regular.ttf"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Rheunwaith-Font-1.000/Web/rheunwaith.css"
+  to = "/Fonts/Rheunwaith-Font-1.000/rheunwaith.css"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Rheunwaith-Font-1.000/Web/demo.html"
+  to = "/Fonts/Rheunwaith-Font-1.000/demo.html"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Rheunwaith-Font-1.000/Vorschau/Rheunwaith_Alphabet_1x1.png"
+  to = "/Fonts/Rheunwaith-Font-1.000/Zeichentafel.png"
+  status = 301
+
+[[redirects]]
+  from = "/Fonts/Rheunwaith-Font-1.000/Vorschau/Rheunwaith_Font_Render_Test.png"
+  to = "/Fonts/Rheunwaith-Font-1.000/Leseprobe.png"
+  status = 301
+
 # Preserve stored document links and font URLs from Nharazim 1.000.
 [[redirects]]
   from = "/Fonts/Infernal-Font-1.000/Web/Nharazim-Regular.woff2"

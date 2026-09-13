@@ -1,4 +1,4 @@
-import { getCultureClassProgression } from './culture-class-progression.js?v=20260911-venalys-v1';
+import { getCultureClassProgression } from './culture-class-progression.js?v=20260913-morgorn-names-v1';
 import { renderCultureClassTraining } from './culture-class-training-template.js?v=20260911-venalys-v1';
 import { describeTechniqueDamage } from '../../../AleriaAlmanach/modules/combat/combat-technique-damage.js?v=20260905-party-combat-v1';
 

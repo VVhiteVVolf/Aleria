@@ -139,48 +139,6 @@ function createOghamNameListData() {
   });
 }
 
-function combineMorgarNameParts(prefix, suffix) {
-  const left = String(prefix || '').trim();
-  const right = String(suffix || '').trim();
-  if (!left || !right) return `${left}${right}`;
-  // Im Morgar verschmilzt TH an einer Stammfuge: Veth + Tharn → Vetharn.
-  return left.toLocaleLowerCase('de').endsWith('th') && right.toLocaleLowerCase('de').startsWith('th')
-    ? `${left}${right.slice(2)}`
-    : `${left}${right}`;
-}
-
-function buildMorgarNameSuggestions(prefixes, endings) {
-  return prefixes
-    .flatMap(prefix => endings.map(ending => combineMorgarNameParts(prefix, ending)))
-    .filter((name, index, names) => names.indexOf(name) === index);
-}
-
-function createKarnrithNameListData() {
-  // Die 20 Anfangsstämme und zehn Endstämme entstammen der Morgar-Sprachbibel.
-  // Ihre vollständige Kreuzung erweitert die dort belegten 100 Namen auf je 200,
-  // ohne fremde Silben oder zufällige Lautfolgen einzuführen.
-  const firstRoots = [
-    'Ar', 'Kar', 'Gor', 'Faur', 'Veth', 'Or', 'Dor', 'Hal', 'Lan', 'Tar',
-    'War', 'Bra', 'Mor', 'Nai', 'Yr', 'Er', 'Par', 'Skar', 'Ghar', 'Shen'
-  ];
-  const masculineEndings = ['karn', 'hald', 'ran', 'tharn', 'chor', 'targ', 'skar', 'zarn', 'orn', 'gor'];
-  const feminineEndings = ['karna', 'helda', 'rena', 'thera', 'chora', 'terga', 'skara', 'zara', 'orna', 'gora'];
-  const masculineNames = buildMorgarNameSuggestions(firstRoots, masculineEndings);
-  const feminineNames = buildMorgarNameSuggestions(firstRoots, feminineEndings);
-
-  return sanitizeNameListData({
-    archiveLabel: 'Morgar · Karnrith-Namensarchiv',
-    introduction: 'Morgornische Traditionsnamen verbinden zwei Bedeutungswurzeln. Der erste Stamm trägt Wunsch oder Erinnerung der Sippe, der zweite benennt die bewahrende Eigenschaft. Die weiblichen Formen verwenden alte, weichere Endstämme. Alle Namen stehen in gewöhnlicher Schrift; Karnrith erscheint ausschließlich als Verzierung.',
-    ornamentText: 'MORGAR · KARNRITH · THARN · GHAIR',
-    ornamentStyle: 'karnrith',
-    groups: [
-      { label: 'Männliche Namen', subtitle: `${masculineNames.length} Vorschläge`, names: masculineNames },
-      { label: 'Weibliche Namen', subtitle: `${feminineNames.length} Vorschläge`, names: feminineNames }
-    ],
-    footer: 'Aleria Almanach · Morgar · 400 semantisch gebildete Namen'
-  });
-}
-
 function combineInfernalNameParts(root, ending) {
   const left = String(root || '').trim();
   const right = String(ending || '').trim();

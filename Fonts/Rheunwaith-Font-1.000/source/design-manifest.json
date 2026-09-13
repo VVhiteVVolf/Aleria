@@ -1,0 +1,610 @@
+[
+  {
+    "index": 0,
+    "glyph": "rune00",
+    "token": "A",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 0,
+    "bounds": [
+      0,
+      225,
+      256,
+      419
+    ],
+    "sourcePixels": [
+      116,
+      138
+    ],
+    "svg": "source/glyphs/01-Abael.svg",
+    "variant": null
+  },
+  {
+    "index": 1,
+    "glyph": "rune01",
+    "token": "B",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 1,
+    "bounds": [
+      256,
+      225,
+      512,
+      419
+    ],
+    "sourcePixels": [
+      122,
+      136
+    ],
+    "svg": "source/glyphs/02-Brenn.svg",
+    "variant": null
+  },
+  {
+    "index": 2,
+    "glyph": "rune02",
+    "token": "C",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 2,
+    "bounds": [
+      512,
+      225,
+      768,
+      419
+    ],
+    "sourcePixels": [
+      137,
+      137
+    ],
+    "svg": "source/glyphs/03-Cyrr.svg",
+    "variant": null
+  },
+  {
+    "index": 3,
+    "glyph": "rune03",
+    "token": "D",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 3,
+    "bounds": [
+      768,
+      225,
+      1024,
+      419
+    ],
+    "sourcePixels": [
+      115,
+      136
+    ],
+    "svg": "source/glyphs/04-Dynn.svg",
+    "variant": null
+  },
+  {
+    "index": 4,
+    "glyph": "rune04",
+    "token": "E",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 4,
+    "bounds": [
+      1024,
+      225,
+      1280,
+      419
+    ],
+    "sourcePixels": [
+      134,
+      137
+    ],
+    "svg": "source/glyphs/05-Ellin.svg",
+    "variant": null
+  },
+  {
+    "index": 5,
+    "glyph": "rune05",
+    "token": "F",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 5,
+    "bounds": [
+      1280,
+      225,
+      1536,
+      419
+    ],
+    "sourcePixels": [
+      117,
+      134
+    ],
+    "svg": "source/glyphs/06-Fira.svg",
+    "variant": null
+  },
+  {
+    "index": 6,
+    "glyph": "rune06",
+    "token": "G",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 6,
+    "bounds": [
+      0,
+      419,
+      256,
+      611
+    ],
+    "sourcePixels": [
+      123,
+      139
+    ],
+    "svg": "source/glyphs/07-Gwaed.svg",
+    "variant": null
+  },
+  {
+    "index": 7,
+    "glyph": "rune07",
+    "token": "H",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 7,
+    "bounds": [
+      256,
+      419,
+      512,
+      611
+    ],
+    "sourcePixels": [
+      116,
+      139
+    ],
+    "svg": "source/glyphs/08-Helyg.svg",
+    "variant": null
+  },
+  {
+    "index": 8,
+    "glyph": "rune08",
+    "token": "I",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 8,
+    "bounds": [
+      512,
+      419,
+      768,
+      611
+    ],
+    "sourcePixels": [
+      123,
+      140
+    ],
+    "svg": "source/glyphs/09-Iwr.svg",
+    "variant": null
+  },
+  {
+    "index": 9,
+    "glyph": "rune09",
+    "token": "J",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 9,
+    "bounds": [
+      768,
+      419,
+      1024,
+      611
+    ],
+    "sourcePixels": [
+      121,
+      136
+    ],
+    "svg": "source/glyphs/10-Jann.svg",
+    "variant": null
+  },
+  {
+    "index": 10,
+    "glyph": "rune10",
+    "token": "K",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 10,
+    "bounds": [
+      1024,
+      419,
+      1280,
+      611
+    ],
+    "sourcePixels": [
+      114,
+      137
+    ],
+    "svg": "source/glyphs/11-Kyrr.svg",
+    "variant": null
+  },
+  {
+    "index": 11,
+    "glyph": "rune11",
+    "token": "L",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 11,
+    "bounds": [
+      1280,
+      419,
+      1536,
+      611
+    ],
+    "sourcePixels": [
+      129,
+      135
+    ],
+    "svg": "source/glyphs/12-Lleu.svg",
+    "variant": null
+  },
+  {
+    "index": 12,
+    "glyph": "rune12",
+    "token": "M",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 12,
+    "bounds": [
+      0,
+      611,
+      256,
+      803
+    ],
+    "sourcePixels": [
+      103,
+      136
+    ],
+    "svg": "source/glyphs/13-Mwdd.svg",
+    "variant": null
+  },
+  {
+    "index": 13,
+    "glyph": "rune13",
+    "token": "N",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 14,
+    "bounds": [
+      627,
+      940,
+      940,
+      1254
+    ],
+    "sourcePixels": [
+      143,
+      183
+    ],
+    "svg": "source/glyphs/14-Nedd.svg",
+    "variant": null
+  },
+  {
+    "index": 14,
+    "glyph": "rune14",
+    "token": "O",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 15,
+    "bounds": [
+      940,
+      940,
+      1254,
+      1254
+    ],
+    "sourcePixels": [
+      186,
+      186
+    ],
+    "svg": "source/glyphs/15-Oen.svg",
+    "variant": null
+  },
+  {
+    "index": 15,
+    "glyph": "rune15",
+    "token": "P",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 15,
+    "bounds": [
+      768,
+      611,
+      1024,
+      803
+    ],
+    "sourcePixels": [
+      135,
+      137
+    ],
+    "svg": "source/glyphs/16-Perdd.svg",
+    "variant": null
+  },
+  {
+    "index": 16,
+    "glyph": "rune16",
+    "token": "R",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 16,
+    "bounds": [
+      1024,
+      611,
+      1280,
+      803
+    ],
+    "sourcePixels": [
+      126,
+      134
+    ],
+    "svg": "source/glyphs/17-Rhyd.svg",
+    "variant": null
+  },
+  {
+    "index": 17,
+    "glyph": "rune17",
+    "token": "S",
+    "reference": "Entwurf-II.png",
+    "sourceIndex": 17,
+    "bounds": [
+      1280,
+      611,
+      1536,
+      803
+    ],
+    "sourcePixels": [
+      108,
+      135
+    ],
+    "svg": "source/glyphs/18-Saith.svg",
+    "variant": null
+  },
+  {
+    "index": 18,
+    "glyph": "rune18",
+    "token": "Th",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 0,
+    "bounds": [
+      0,
+      0,
+      314,
+      314
+    ],
+    "sourcePixels": [
+      179,
+      198
+    ],
+    "svg": "source/glyphs/19-Thal.svg",
+    "variant": null
+  },
+  {
+    "index": 19,
+    "glyph": "rune19",
+    "token": "U",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 1,
+    "bounds": [
+      314,
+      0,
+      627,
+      314
+    ],
+    "sourcePixels": [
+      171,
+      222
+    ],
+    "svg": "source/glyphs/20-Uwch.svg",
+    "variant": null
+  },
+  {
+    "index": 20,
+    "glyph": "rune20",
+    "token": "V",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 2,
+    "bounds": [
+      627,
+      0,
+      940,
+      314
+    ],
+    "sourcePixels": [
+      229,
+      177
+    ],
+    "svg": "source/glyphs/21-Vann.svg",
+    "variant": null
+  },
+  {
+    "index": 21,
+    "glyph": "rune21",
+    "token": "W",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 3,
+    "bounds": [
+      940,
+      0,
+      1254,
+      314
+    ],
+    "sourcePixels": [
+      179,
+      207
+    ],
+    "svg": "source/glyphs/22-Wynn.svg",
+    "variant": null
+  },
+  {
+    "index": 22,
+    "glyph": "rune22",
+    "token": "X",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 4,
+    "bounds": [
+      0,
+      314,
+      314,
+      627
+    ],
+    "sourcePixels": [
+      157,
+      201
+    ],
+    "svg": "source/glyphs/23-Xeir.svg",
+    "variant": "rotate-90"
+  },
+  {
+    "index": 23,
+    "glyph": "rune23",
+    "token": "Y",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 5,
+    "bounds": [
+      314,
+      314,
+      627,
+      627
+    ],
+    "sourcePixels": [
+      197,
+      187
+    ],
+    "svg": "source/glyphs/24-Ydd.svg",
+    "variant": null
+  },
+  {
+    "index": 24,
+    "glyph": "rune24",
+    "token": "Z",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 6,
+    "bounds": [
+      627,
+      314,
+      940,
+      627
+    ],
+    "sourcePixels": [
+      156,
+      208
+    ],
+    "svg": "source/glyphs/25-Zarr.svg",
+    "variant": null
+  },
+  {
+    "index": 25,
+    "glyph": "rune25",
+    "token": "Ll",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 7,
+    "bounds": [
+      940,
+      314,
+      1254,
+      627
+    ],
+    "sourcePixels": [
+      199,
+      177
+    ],
+    "svg": "source/glyphs/26-Llwyd.svg",
+    "variant": null
+  },
+  {
+    "index": 26,
+    "glyph": "rune26",
+    "token": "Ng",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 8,
+    "bounds": [
+      0,
+      627,
+      314,
+      940
+    ],
+    "sourcePixels": [
+      168,
+      198
+    ],
+    "svg": "source/glyphs/27-Ngoll.svg",
+    "variant": "mirror-x"
+  },
+  {
+    "index": 27,
+    "glyph": "rune27",
+    "token": "Ch",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 9,
+    "bounds": [
+      314,
+      627,
+      627,
+      940
+    ],
+    "sourcePixels": [
+      176,
+      195
+    ],
+    "svg": "source/glyphs/28-Chwerw.svg",
+    "variant": null
+  },
+  {
+    "index": 28,
+    "glyph": "rune28",
+    "token": "Rh",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 10,
+    "bounds": [
+      627,
+      627,
+      940,
+      940
+    ],
+    "sourcePixels": [
+      160,
+      174
+    ],
+    "svg": "source/glyphs/29-Rhew.svg",
+    "variant": null
+  },
+  {
+    "index": 29,
+    "glyph": "rune29",
+    "token": "Ü",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 11,
+    "bounds": [
+      940,
+      627,
+      1254,
+      940
+    ],
+    "sourcePixels": [
+      146,
+      197
+    ],
+    "svg": "source/glyphs/30-Uffyr.svg",
+    "variant": null
+  },
+  {
+    "index": 30,
+    "glyph": "extraQ",
+    "token": "Q",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 12,
+    "bounds": [
+      0,
+      940,
+      314,
+      1254
+    ],
+    "sourcePixels": [
+      177,
+      175
+    ],
+    "svg": "source/glyphs/31-Q.svg",
+    "variant": null
+  },
+  {
+    "index": 31,
+    "glyph": "extraSharpS",
+    "token": "ß",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 13,
+    "bounds": [
+      314,
+      940,
+      627,
+      1254
+    ],
+    "sourcePixels": [
+      198,
+      184
+    ],
+    "svg": "source/glyphs/32-SharpS.svg",
+    "variant": "rotate-180"
+  }
+]

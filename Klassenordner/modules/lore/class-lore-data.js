@@ -142,18 +142,18 @@ export const CLASS_LORE = {
         name: 'Morgorn',
         subtitle: 'Hallen, Sippen und Eid',
         wappen: 'https://i.imgur.com/gXAED3v.png',
-        warriorhood: `Die traditionellen <strong>Kriegerkasten Morgorns</strong> beschreiben Ausbildung, Aufgabe und gesellschaftliche Funktion eines Kriegers. Karnach sichern Berge und Engstellen, Haldr schützen Anvertrautes, Zernach wachen über Tore und Festen, Wairg hüten Herden und Wildnis, Dornach halten die Grenzen, Skarrach führen den schweren Angriff, Rheach dienen der Erdgöttin Rhea und Garnach verbinden Schwarzpulver mit Handwerk und Alchemie.<br><br>
+        warriorhood: `Die traditionellen <strong>Kriegerkasten Morgorns</strong> beschreiben Ausbildung, Aufgabe und gesellschaftliche Funktion eines Kriegers. Grungar sichern Berge und Engstellen, Varor schützen Anvertrautes, Thalor wachen über Tore und Festen, Kuralan hüten Herden und Wildnis, Toran halten die Grenzen, Bragan führen den schweren Angriff, Rhean dienen der Erdgöttin Rhea und Falgar verbinden Schwarzpulver mit Handwerk und Alchemie.<br><br>
 
         Eine Kaste bildet keine zweite Adelshierarchie. Ihre Angehörigen können adelig sein, doch ihre Ausbildung und ihr Dienst verleihen allein weder Land noch Rang. Die Würde einer Kaste entsteht aus erfüllter Pflicht, bewahrtem Gut und gehaltenem Eid.`,
         society: `Morgorn versteht Herrschaft weniger als höfisches Privileg denn als <strong>getragene Verantwortung</strong>. Land, Halle, Sippe und Amt werden einem Menschen anvertraut; für ihren Fortbestand steht er mit seinem Namen ein. Die Sippe bestimmt Herkunft, Bindung und Verpflichtung. Die Halle ist der Ort, an dem diese Gemeinschaft Bestand erhält.<br><br>
 
         Rang beschreibt deshalb den Kreis der Verantwortung: Reich, Land, Feste, Halle und Sippe. Besitz begründet Pflicht, ein Amt gilt als Last und ein Name gewinnt Gewicht durch die Taten, die unter ihm vollbracht werden. <em>„Ein Wort gilt erst dann, wenn sein Träger es mit Tat, Stein oder Eid beschwert.“</em>`,
         hierarchy: [
-          { rank: 'Urortharn · Hochkönig Morgorns', desc: 'Oberster Herrscher und höchster Träger der Eide. Sein Name steht für die Ordnung des gesamten Reiches.' },
-          { rank: 'Lannach · Großer Territorialherr', desc: 'Herr weiter Berglande, Täler, Minengebiete und zahlreicher Hallen eines großen Landesverbandes.' },
-          { rank: 'Karnath · Festungsherr', desc: 'Regionaler Hochadel über bedeutende Bergfesten, befestigte Städte, Minenkomplexe oder verbundene Hallen.' },
-          { rank: 'Haldran · Hallen- und Lokalherr', desc: 'Lokaler Adel über einzelne Hallen, kleinere Festungen, Bergsiedlungen oder strategisch wichtige Anlagen.' },
-          { rank: 'Rannach · Sippenherr', desc: 'Herr einer bedeutenden Sippe. Sein Einfluss kann aus Abstammung, Gefolgschaft, Reichtum, Rat oder einem alten Namen erwachsen.' }
+          { rank: 'Ar Darak · Hochkönig Morgorns', desc: 'Oberster Herrscher und höchster Träger der Eide. Sein Name steht für die Ordnung des gesamten Reiches.' },
+          { rank: 'Taldar · Großer Territorialherr', desc: 'Herr weiter Berglande, Täler, Minengebiete und zahlreicher Hallen eines großen Landesverbandes.' },
+          { rank: 'Kardar · Festungsherr', desc: 'Regionaler Hochadel über bedeutende Bergfesten, befestigte Städte, Minenkomplexe oder verbundene Hallen.' },
+          { rank: 'Dundar · Hallen- und Lokalherr', desc: 'Lokaler Adel über einzelne Hallen, kleinere Festungen, Bergsiedlungen oder strategisch wichtige Anlagen.' },
+          { rank: 'Nardar · Sippenherr', desc: 'Herr einer bedeutenden Sippe. Sein Einfluss kann aus Abstammung, Gefolgschaft, Reichtum, Rat oder einem alten Namen erwachsen.' }
         ]
       },
       venalys: {

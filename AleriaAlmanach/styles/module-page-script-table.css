@@ -1,26 +1,6 @@
 @font-face {
-  font-family: "Rheunwaith Table";
-  src:
-    url("../../Fonts/Rheunwaith-Font-1.000/Web/Rheunwaith-Regular.woff2") format("woff2"),
-    url("../../Fonts/Rheunwaith-Font-1.000/Web/Rheunwaith-Regular.woff") format("woff");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Ogham Table";
   src: url("../../Fonts/Noto-Historic-Scripts/NotoSansOgham-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Karnrith Table";
-  src:
-    url("../../Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff2") format("woff2"),
-    url("../../Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -124,7 +104,11 @@
 }
 
 .script-style-rheunwaith {
-  font-family: "Rheunwaith Table", serif;
+  font-family: "Rheunwaith", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  letter-spacing: normal;
   font-variant-ligatures: common-ligatures;
   font-feature-settings: "liga" 1;
 }
@@ -135,9 +119,13 @@
 
 .script-style-karnrith {
   color: #70451f;
-  font-family: "Karnrith Table", serif;
+  font-family: "Karnrith Tiefenrunen", serif;
   font-variant-ligatures: common-ligatures;
   font-feature-settings: "liga" 1;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  letter-spacing: normal;
 }
 
 .script-style-infernal {
@@ -246,6 +234,14 @@
   font-size: 1.45rem;
   text-align: center;
 }
+
+/* Text dictionaries need room for words and spoken syllables in every column. */
+.script-table-text th:nth-child(1), .script-table-text td:nth-child(1) { width: 20%; }
+.script-table-text th:nth-child(2), .script-table-text td:nth-child(2) { width: 22%; }
+.script-table-text th:nth-child(3), .script-table-text td:nth-child(3) { width: 20%; }
+.script-table-text th:nth-child(4), .script-table-text td:nth-child(4) { width: 38%; }
+.script-table-text td { overflow-wrap: anywhere; }
+.script-table-text .script-table-symbol { font-size: 1.1rem; }
 
 .script-table-syllable-section > header {
   padding: 0.2rem 0 0.6rem;

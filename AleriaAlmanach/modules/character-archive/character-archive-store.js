@@ -1,4 +1,4 @@
-import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260909-dragon-parent-v2';
+import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260913-morgorn-names-v1';
 import { detachCatalogSpell } from '../spell-catalog/spell-catalog.js';
 import {
   cloneArchiveValue,
@@ -7,7 +7,7 @@ import {
   mergeCharacterArchiveEntries,
   normalizeCharacterArchiveEntry
 } from './character-archive-model.js?v=20260905-archive-order-v2';
-import { classifyCharacterArchiveEntries } from './character-archive-classification.js?v=20260909-dragon-parent-v2';
+import { classifyCharacterArchiveEntries } from './character-archive-classification.js?v=20260913-morgorn-names-v1';
 import { extractCurrentCharacterArchiveEntries, reconcileCharacterArchiveClassTraining } from './character-archive-class-training.js?v=20260909-dragon-parent-v2';
 
 const LOCAL_STORAGE_KEY = 'aleria-character-archive-v1';

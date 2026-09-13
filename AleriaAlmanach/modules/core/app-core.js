@@ -474,7 +474,10 @@ function sanitizeModulePage(page, fallbackTitle = '') {
 }
 
 function normalizeEntryForEditor(entry) {
-  const clone = deepClone(entry || {});
+  const source = typeof migrateModuleEntryContent === 'function'
+    ? migrateModuleEntryContent(entry || {})
+    : (entry || {});
+  const clone = deepClone(source);
   const pages = clone.multipage
     ? (clone.pages || []).filter(page => page && !page._commentsPage).map(page => sanitizeModulePage(page)).filter(Boolean)
     : [sanitizeModulePage({

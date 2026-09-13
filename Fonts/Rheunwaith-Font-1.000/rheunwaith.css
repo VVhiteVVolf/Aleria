@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Rheunwaith";
+  src: url("./fonts/Rheunwaith-Regular.woff2?v=2-gezeiten") format("woff2"),
+       url("./fonts/Rheunwaith-Regular.woff?v=2-gezeiten") format("woff"),
+       url("./fonts/Rheunwaith-Regular.ttf?v=2-gezeiten") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+.rheunwaith, .rheunwaith-water, .rheunwaith-text {
+  font-family: "Rheunwaith", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  line-height: 1.45;
+  letter-spacing: normal;
+}
+.rheunwaith, .rheunwaith-water {
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1;
+}
+.rheunwaith-water { color: #164b5a; }
+.rheunwaith-text, .rheunwaith-separated {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0;
+}
+/* Latin and new private-use input runs naturally left to right.
+   Convert old U+10C00 input with Rheunwaith.toPrivateUse() for stable order. */

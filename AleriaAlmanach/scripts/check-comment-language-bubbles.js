@@ -1,6 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const vm = require('vm');
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const almanachRoot = path.resolve(__dirname, '..');
 const failures = [];
@@ -28,6 +31,7 @@ const context = vm.createContext({
   sanitizeImageSrc: value => String(value ?? ''),
   getInitialChar: value => String(value || '?').slice(0, 1),
   getCommentShowcaseItem: () => null,
+  getCommentFazitItem: () => null,
   getCommentModuleInsertItem: () => null,
   getCommentAttachmentItem: () => null,
   normalizeSceneTimeDurationSeconds: value => Math.max(0, Number(value) || 0),
@@ -47,6 +51,7 @@ const context = vm.createContext({
   _selectedCharId: null,
   _editSelectedCharId: null,
   _selectedEmoteIdx: null,
+  _selectedImageSetId: '',
   _manualMode: true,
   _editManualMode: true,
   _portraitUrl: null,
@@ -61,6 +66,10 @@ function loadScript(relativePath) {
   vm.runInContext(fs.readFileSync(filename, 'utf8'), context, { filename });
 }
 
+loadScript('../Fonts/Rheunwaith-Font-1.000/rheunwaith.js');
+loadScript('../Fonts/Karnrith-Font-2.000/karnrith.js');
+loadScript('modules/language/language-script-display.js');
+loadScript('modules/comments/comments-markup.js');
 loadScript('modules/comments/comments-spell-fonts.js');
 loadScript('modules/comments/comments-render.js');
 loadScript('modules/comments/comments-segment-base.js');
@@ -147,11 +156,22 @@ assert(readerToggle.closed.expanded === 'false' && !readerToggle.closed.revealed
 
 const bubbleCssPath = path.resolve(almanachRoot, 'styles/comment-bubbles.css');
 const bubbleCss = fs.readFileSync(bubbleCssPath, 'utf8');
-const fontUrls = [...bubbleCss.matchAll(/url\("([^"?#]+)"\)/g)].map(match => match[1]);
-fontUrls.forEach(url => {
-  const resolved = path.resolve(path.dirname(bubbleCssPath), url);
-  assert(fs.existsSync(resolved), `Font-Asset fehlt: ${url}`);
-});
+const fontUrls = [];
+const checkedStyles = new Set();
+function checkStyleAssets(cssPath) {
+  if (checkedStyles.has(cssPath)) return;
+  checkedStyles.add(cssPath);
+  const css = fs.readFileSync(cssPath, 'utf8');
+  for (const [, url] of css.matchAll(/url\("([^"?#]+)(?:[?#][^"]*)?"\)/g)) {
+    const resolved = path.resolve(path.dirname(cssPath), url);
+    assert(fs.existsSync(resolved), `Font-Asset fehlt: ${url}`);
+    if (resolved.endsWith('.css') && fs.existsSync(resolved)) checkStyleAssets(resolved);
+    else fontUrls.push(url);
+  }
+}
+checkStyleAssets(bubbleCssPath);
+checkStyleAssets(path.resolve(almanachRoot, '../Fonts/Rheunwaith-Font-1.000/rheunwaith.css'));
+checkStyleAssets(path.resolve(almanachRoot, '../Fonts/Karnrith-Font-2.000/karnrith.css'));
 assert(bubbleCss.includes('.comment-language-toggle:hover .comment-language-plain'), 'Hover-Entschlüsselung fehlt im CSS.');
 assert(bubbleCss.includes('.comment-language-toggle.revealed .comment-language-plain'), 'Persistente Klick-Entschlüsselung fehlt im CSS.');
 

@@ -78,3 +78,13 @@ export function createGitHubClient(config, fetchRef = fetch) {
     },
   });
 }
+
+// Daten und Registry werden gemeinsam sichtbar. Kein Force-Push bei fremden Änderungen.
+export async function commitGitHubFiles(github, { branch, head, baseTree, files, message }) {
+  const post = (path, body, method = 'POST') => github.request(path, { method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  const blobs = await Promise.all(files.map(file => post('/git/blobs', { content: file.content, encoding: file.encoding || 'utf-8' })));
+  const tree = await post('/git/trees', { base_tree: baseTree, tree: files.map((file, index) => ({ path: file.path, mode: '100644', type: 'blob', sha: blobs[index].sha })) });
+  const created = await post('/git/commits', { message, tree: tree.sha, parents: [head] });
+  await post(`/git/refs/heads/${encodeURIComponent(branch)}`, { sha: created.sha, force: false }, 'PATCH');
+  return created;
+}

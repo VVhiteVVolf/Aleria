@@ -16,6 +16,7 @@ import { classifyCharacterArchiveEntries } from '../../AleriaAlmanach/modules/ch
 import { getCharacterArchiveClassLinks } from '../../AleriaAlmanach/modules/character-archive/character-archive-class-links.js';
 
 const root = new URL('../../', import.meta.url);
+const terminology = JSON.parse(await readFile(new URL('AleriaAlmanach/modules/language/morgar/reference/morgorn-terminology.json', root), 'utf8'));
 const expectedArt = Object.freeze({
   karnach: [1024, 1536],
   haldr: [1024, 1536],
@@ -44,7 +45,7 @@ test('Morgorn registry gives all eight castes the Cenyr-compatible 1–20 struct
   }
   const changed = getMorgornClassDefinition('karnach');
   changed.name = 'Geändert';
-  assert.equal(getMorgornClassDefinition('morgorn-karnach').name, 'Karnach');
+  assert.equal(getMorgornClassDefinition('morgorn-karnach').name, 'Grungar');
   assert.equal(getMorgornClassDefinition('Bergknecht').classId, 'karnach');
   assert.equal(getMorgornClassDefinition('Hüter').classId, 'haldr');
   assert.equal(getMorgornClassDefinition('Rheas Jünger').classId, 'rheach');
@@ -69,7 +70,7 @@ test('Morgorn progression projects twenty safe placeholder levels through the sh
 test('Morgorn culture data separates noble hierarchy from the warrior castes', async () => {
   const culture = JSON.parse(await readFile(new URL('Klassenordner/Morgorn/kultur.json', root), 'utf8'));
   const overview = validateCultureOrderOverview(culture.orderOverview);
-  assert.deepEqual(overview.hierarchy, ['Urortharn', 'Lannach', 'Karnath', 'Haldran', 'Rannach']);
+  assert.deepEqual(overview.hierarchy, ['Ar Darak', 'Taldar', 'Kardar', 'Dundar', 'Nardar']);
   assert.deepEqual(overview.nobleRanks.map(rank => rank.scope), ['Reich', 'Land', 'Feste', 'Halle', 'Sippe']);
   assert.deepEqual(overview.castes.map(caste => caste.id), MORGORN_CLASS_IDS);
   assert.match(overview.introduction, /ohne ihn dadurch automatisch zu adeln/);
@@ -103,10 +104,10 @@ test('Morgorn uses the shared catalog layout and collapsed lore module', async (
   assert.doesNotMatch(catalog, /morgorn-register\.css/);
   assert.equal(CLASS_LORE.morgorn.subtitle, 'Hallen, Sippen und Eid');
   assert.match(CLASS_LORE.morgorn.warriorhood, /Kriegerkasten Morgorns/);
-  assert.equal(CLASS_LORE.morgorn.hierarchy[0].rank, 'Urortharn · Hochkönig Morgorns');
+  assert.equal(CLASS_LORE.morgorn.hierarchy[0].rank, 'Ar Darak · Hochkönig Morgorns');
 });
 
-test('generated Morgorn pages expose hierarchy and the same safe training shell as Cenyr', async () => {
+test('generated Morgorn pages omit the repeated society block and keep the training shell', async () => {
   const catalog = await readFile(new URL('Klassenordner/Klassenseite.html', root), 'utf8');
   for (const id of MORGORN_CLASS_IDS) {
     const definition = getMorgornClassDefinition(id);
@@ -118,8 +119,9 @@ test('generated Morgorn pages expose hierarchy and the same safe training shell 
     assert.equal(getCultureClassPageHref('morgorn', id), `Morgorn/${id}/index.html`);
     assert(page.includes('data-culture="morgorn"'));
     assert(page.includes('morgorn-class-page.css'));
-    assert(page.includes('data-culture-order'));
-    assert(page.includes('id="gesellschaftsordnung"'));
+    assert(!page.includes('data-culture-order'));
+    assert(!page.includes('gesellschaftsordnung'));
+    assert(!page.includes('Rang bedeutet Last'));
     assert(page.includes(`href="../../Morgorn/${id}/index.html" aria-current="page"`));
     assert(page.includes('class-mobile-nav'));
     assert(page.includes('id="ausbildungsplan"'));
@@ -141,5 +143,31 @@ test('the character archive resolves every Morgorn lore page without premature c
     assert.equal(entry.data.cultureClassProfiles.length, 1, `${definition.name}: cultural profile`);
     assert.equal(entry.data.cultureClassProfiles[0].progressionStatus, 'structure-only');
     assert.deepEqual(entry.data.cultureClassProfiles[0].combatStyleGrants, [], `${definition.name}: no premature grants`);
+  }
+});
+
+test('accepted names agree across language, hierarchy, class sources, registry, catalog and legacy archive lookup', async () => {
+  const culture = JSON.parse(await readFile(new URL('Klassenordner/Morgorn/kultur.json', root), 'utf8'));
+  assert.deepEqual(culture.orderOverview.hierarchy, terminology.nobleTitles.map(term => term.name));
+  const words = await readFile(new URL('AleriaAlmanach/modules/language/morgar/reference/morgar-words.tsv', root), 'utf8');
+  for (const term of [...terminology.nobleTitles, ...terminology.classes]) assert(words.includes(`\t${term.name.toLowerCase()}\t`));
+  for (const term of terminology.classes) {
+    const source = JSON.parse(await readFile(new URL(`Klassenordner/Morgorn/${term.id}/klasse.json`, root), 'utf8'));
+    assert.equal(source.name, term.name);
+    assert(source.aliases.includes(term.previousName));
+    assert.equal(culture.orderOverview.castes.find(caste => caste.id === term.id).name, term.name);
+    for (const input of [term.id, term.name, term.previousName, `morgorn-${term.id}`, `morgorn-${term.name}`]) {
+      assert.equal(getMorgornClassDefinition(input)?.classId, term.id, input);
+      assert.equal(getMorgornClassDefinition(input)?.name, term.name, input);
+    }
+    for (const input of [{ name: term.previousName }, { name: term.name }, { name: 'Alter gespeicherter Titel', data: { id: `morgorn-${term.id}` } }]) {
+      const [entry] = classifyCharacterArchiveEntries([{ kind: 'class', ...input }]);
+      assert.equal(entry.name, term.name);
+      assert.equal(entry.data.cultureClassProfiles[0].classId, term.id);
+      assert(getCharacterArchiveClassLinks(entry).some(link => link.href.endsWith(`/Morgorn/${term.id}/index.html`)));
+    }
+    const page = await readFile(new URL(`Klassenordner/Morgorn/${term.id}/index.html`, root), 'utf8');
+    assert(page.includes(`<h1>Der ${term.name}</h1>`));
+    assert(!page.includes(term.previousName));
   }
 });

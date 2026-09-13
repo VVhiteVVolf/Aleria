@@ -1,0 +1,88 @@
+:root {
+  color-scheme: light;
+  --faction-paper: #f1e8d5;
+  --faction-light: #fcf6e8;
+  --faction-ink: #362e27;
+  --faction-muted: #71614c;
+  --faction-line: #cfbd99;
+  --faction-gold: #96743f;
+  --faction-burgundy: #492e32;
+  scroll-behavior: smooth;
+  scroll-padding-top: 26px;
+}
+.factions-page { margin: 0; color: var(--faction-ink); background: radial-gradient(ellipse at 45% 0, #fff9e9bb, transparent 900px), repeating-linear-gradient(96deg, #71604404 0 1px, transparent 1px 4px), var(--faction-paper); font: 16px/1.65 Georgia, 'Times New Roman', serif; }
+.factions-page *, .factions-page *::before, .factions-page *::after { box-sizing: border-box; }
+.factions-page :where(h1, h2, h3, h4, h5, h6, p, figure) { margin: 0; }
+.factions-page :where(h1, h2, h3, h4, h5, h6) { font-weight: normal; line-height: 1.2; }
+.factions-page a { color: inherit; text-underline-offset: 4px; }
+.factions-page :where(button, input) { font: inherit; color: inherit; }
+.factions-page button { cursor: pointer; }
+.factions-page img { display: block; max-width: 100%; object-fit: contain; }
+.factions-page [hidden] { display: none; }
+.factions-page :focus-visible { outline: 3px solid var(--faction-gold); outline-offset: 5px; }
+.factions-page ::selection { background: #d7bf91; color: #332825; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip-link { position: fixed; z-index: 20; top: -100px; left: 16px; padding: 12px 18px; background: var(--faction-light); }
+.skip-link:focus { top: 12px; }
+.site-header { background: var(--faction-burgundy); color: #f6ebd1; border-bottom: 3px solid var(--faction-gold); }
+.header-inner { width: min(1440px, 100% - 80px); min-height: 66px; margin: auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.site-brand { display: flex; gap: 20px; align-items: center; text-decoration: none; }
+.site-brand > span { text-transform: uppercase; font-size: 11px; letter-spacing: .16em; }
+.brand-divider { margin-inline: 13px; color: #c2a774; }
+.site-header nav { display: flex; gap: 30px; font-size: 12px; }
+.site-header nav a { padding-block: 18px; text-decoration: none; }
+.site-header nav a:hover { color: #e9cc8e; text-decoration: underline; }
+.faction-book { width: min(1400px, 100% - 96px); margin-inline: auto; }
+.eyebrow { color: var(--faction-muted); font-size: 10px; line-height: 1.8; text-transform: uppercase; letter-spacing: .14em; }
+.ink-button { display: inline-flex; align-items: center; justify-content: center; gap: 28px; min-height: 46px; padding: 12px 20px; border: 1px solid var(--faction-burgundy); background: var(--faction-burgundy); color: var(--faction-light); text-decoration: none; font-size: 13px; box-shadow: inset 0 0 0 3px #f9edca0d; }
+.factions-page .ink-button { color: var(--faction-light); }
+.ink-button:hover { background: #644247; }
+.text-button { min-height: 40px; padding: 8px 0; border: 0; background: none; font-size: 12px; text-decoration: underline; text-underline-offset: 4px; }
+.book-layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: clamp(28px, 4vw, 62px); margin-top: 58px; }
+.chapter-register { border-right: 1px solid var(--faction-line); padding-right: 24px; }
+.register-sticky { position: sticky; top: 24px; max-height: calc(100dvh - 48px); overflow-y: auto; scrollbar-width: thin; }
+.chapter-register h2 { margin: 8px 0 26px; font-size: 24px; }
+.chapter-register nav { display: grid; gap: 4px; }
+.register-link { display: flex; min-height: 48px; align-items: center; gap: 10px; padding: 7px 8px; border-left: 2px solid transparent; text-decoration: none; font-size: 13px; line-height: 1.35; }
+.register-link img { flex: 0 0 34px; width: 34px; height: 34px; border-radius: 2px; mix-blend-mode: multiply; }
+.register-link strong { font-weight: normal; }
+.register-link small { color: var(--faction-muted); font-size: 10px; margin-left: auto; }
+.register-link:hover, .register-link[aria-current] { color: var(--faction-burgundy); background: #ccb58925; border-color: var(--faction-gold); }
+.register-all { padding-block: 12px; border-bottom: 1px solid var(--faction-line); margin-bottom: 8px; }
+.all-mark { width: 34px; text-align: center; font-size: 24px; color: var(--faction-gold); }
+.register-note { margin-top: 26px; padding: 24px 8px 14px; border-top: 1px solid var(--faction-line); }
+.register-note > span { font-size: 28px; color: var(--faction-gold); }
+.register-note p { margin: 6px 0 14px; font-size: 19px; font-style: italic; line-height: 1.5; }
+.register-note small { display: block; color: var(--faction-muted); font-size: 12px; }
+.back-to-top { display: inline-block; padding: 12px 8px; font-size: 11px; color: var(--faction-muted); text-decoration: none; }
+.faction-footer { display: flex; align-items: center; gap: 20px; padding: 28px 0 36px; margin-top: 60px; border-top: 3px double var(--faction-line); font-size: 13px; }
+.faction-footer small { display: block; margin-top: 4px; font-size: 11px; color: var(--faction-muted); }
+.faction-footer > a { margin-left: auto; font-size: 12px; text-decoration: none; }
+@media (max-width: 1100px) {
+  .faction-book { width: calc(100% - 56px); }
+  .book-layout { grid-template-columns: 190px minmax(0, 1fr); gap: 28px; }
+  .chapter-register { padding-right: 15px; }
+  .register-link { gap: 7px; padding-left: 4px; font-size: 12px; }
+}
+@media (max-width: 800px) {
+  .faction-book, .header-inner { width: calc(100% - 36px); }
+  .book-layout { display: block; margin-top: 32px; }
+  .chapter-register { padding: 0 0 22px; margin-bottom: 28px; border-right: 0; border-bottom: 1px solid var(--faction-line); }
+  .register-sticky { position: static; max-height: none; overflow: visible; }
+  .chapter-register h2 { margin-bottom: 16px; }
+  .chapter-register nav { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .register-all { margin-bottom: 0; border-bottom: 0; padding-block: 7px; }
+  .register-link small, .register-note, .back-to-top { display: none; }
+  .site-header nav { gap: 18px; }
+  .brand-divider { margin-inline: 7px; }
+}
+@media (max-width: 480px) {
+  .header-inner { flex-wrap: wrap; justify-content: center; gap: 0; padding-top: 12px; }
+  .site-brand { justify-content: center; width: 100%; }
+  .site-header nav { gap: 28px; }
+  .site-header nav a { padding-block: 11px; }
+  .chapter-register nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .faction-footer { flex-wrap: wrap; gap: 12px; }
+  .faction-footer > a { margin-left: 56px; }
+}
+@media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } }

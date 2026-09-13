@@ -1,0 +1,952 @@
+[
+  {
+    "index": 0,
+    "glyph": "rune00",
+    "token": "A",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 0,
+    "bounds": [
+      0,
+      150,
+      256,
+      369
+    ],
+    "sourcePixels": [
+      93,
+      191
+    ],
+    "svg": "source/glyphs/00-rune00.svg",
+    "variant": null
+  },
+  {
+    "index": 1,
+    "glyph": "rune01",
+    "token": "K",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 1,
+    "bounds": [
+      256,
+      150,
+      512,
+      369
+    ],
+    "sourcePixels": [
+      132,
+      196
+    ],
+    "svg": "source/glyphs/01-rune01.svg",
+    "variant": null
+  },
+  {
+    "index": 2,
+    "glyph": "rune02",
+    "token": "G",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 2,
+    "bounds": [
+      512,
+      150,
+      768,
+      369
+    ],
+    "sourcePixels": [
+      97,
+      187
+    ],
+    "svg": "source/glyphs/02-rune02.svg",
+    "variant": null
+  },
+  {
+    "index": 3,
+    "glyph": "rune03",
+    "token": "F",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 3,
+    "bounds": [
+      768,
+      150,
+      1024,
+      369
+    ],
+    "sourcePixels": [
+      135,
+      189
+    ],
+    "svg": "source/glyphs/03-rune03.svg",
+    "variant": null
+  },
+  {
+    "index": 4,
+    "glyph": "rune04",
+    "token": "U",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 4,
+    "bounds": [
+      1024,
+      150,
+      1280,
+      369
+    ],
+    "sourcePixels": [
+      118,
+      174
+    ],
+    "svg": "source/glyphs/04-rune04.svg",
+    "variant": null
+  },
+  {
+    "index": 5,
+    "glyph": "rune05",
+    "token": "V",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 5,
+    "bounds": [
+      1280,
+      150,
+      1536,
+      369
+    ],
+    "sourcePixels": [
+      111,
+      190
+    ],
+    "svg": "source/glyphs/05-rune05.svg",
+    "variant": null
+  },
+  {
+    "index": 6,
+    "glyph": "rune06",
+    "token": "O",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 6,
+    "bounds": [
+      0,
+      369,
+      256,
+      592
+    ],
+    "sourcePixels": [
+      110,
+      190
+    ],
+    "svg": "source/glyphs/06-rune06.svg",
+    "variant": null
+  },
+  {
+    "index": 7,
+    "glyph": "rune07",
+    "token": "D",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 7,
+    "bounds": [
+      256,
+      369,
+      512,
+      592
+    ],
+    "sourcePixels": [
+      115,
+      188
+    ],
+    "svg": "source/glyphs/07-rune07.svg",
+    "variant": null
+  },
+  {
+    "index": 8,
+    "glyph": "rune08",
+    "token": "H",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 8,
+    "bounds": [
+      512,
+      369,
+      768,
+      592
+    ],
+    "sourcePixels": [
+      87,
+      190
+    ],
+    "svg": "source/glyphs/08-rune08.svg",
+    "variant": null
+  },
+  {
+    "index": 9,
+    "glyph": "rune09",
+    "token": "L",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 9,
+    "bounds": [
+      768,
+      369,
+      1024,
+      592
+    ],
+    "sourcePixels": [
+      89,
+      195
+    ],
+    "svg": "source/glyphs/09-rune09.svg",
+    "variant": null
+  },
+  {
+    "index": 10,
+    "glyph": "rune10",
+    "token": "T",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 10,
+    "bounds": [
+      1024,
+      369,
+      1280,
+      592
+    ],
+    "sourcePixels": [
+      141,
+      185
+    ],
+    "svg": "source/glyphs/10-rune10.svg",
+    "variant": null
+  },
+  {
+    "index": 11,
+    "glyph": "rune11",
+    "token": "W",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 11,
+    "bounds": [
+      1280,
+      369,
+      1536,
+      592
+    ],
+    "sourcePixels": [
+      73,
+      191
+    ],
+    "svg": "source/glyphs/11-rune11.svg",
+    "variant": null
+  },
+  {
+    "index": 12,
+    "glyph": "rune12",
+    "token": "B",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 12,
+    "bounds": [
+      0,
+      592,
+      256,
+      823
+    ],
+    "sourcePixels": [
+      87,
+      179
+    ],
+    "svg": "source/glyphs/12-rune12.svg",
+    "variant": null
+  },
+  {
+    "index": 13,
+    "glyph": "rune13",
+    "token": "M",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 13,
+    "bounds": [
+      256,
+      592,
+      512,
+      823
+    ],
+    "sourcePixels": [
+      98,
+      178
+    ],
+    "svg": "source/glyphs/13-rune13.svg",
+    "variant": null
+  },
+  {
+    "index": 14,
+    "glyph": "rune14",
+    "token": "N",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 14,
+    "bounds": [
+      512,
+      592,
+      768,
+      823
+    ],
+    "sourcePixels": [
+      101,
+      179
+    ],
+    "svg": "source/glyphs/14-rune14.svg",
+    "variant": null
+  },
+  {
+    "index": 15,
+    "glyph": "rune15",
+    "token": "R",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 15,
+    "bounds": [
+      768,
+      592,
+      1024,
+      823
+    ],
+    "sourcePixels": [
+      121,
+      183
+    ],
+    "svg": "source/glyphs/15-rune15.svg",
+    "variant": null
+  },
+  {
+    "index": 16,
+    "glyph": "rune16",
+    "token": "Y",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 16,
+    "bounds": [
+      1024,
+      592,
+      1280,
+      823
+    ],
+    "sourcePixels": [
+      130,
+      179
+    ],
+    "svg": "source/glyphs/16-rune16.svg",
+    "variant": null
+  },
+  {
+    "index": 17,
+    "glyph": "rune17",
+    "token": "NG",
+    "reference": "Tiefenrunen-II.png",
+    "sourceIndex": 17,
+    "bounds": [
+      1280,
+      592,
+      1536,
+      823
+    ],
+    "sourcePixels": [
+      101,
+      186
+    ],
+    "svg": "source/glyphs/17-rune17.svg",
+    "variant": null
+  },
+  {
+    "index": 18,
+    "glyph": "rune18",
+    "token": "E",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 0,
+    "bounds": [
+      0,
+      0,
+      314,
+      322
+    ],
+    "sourcePixels": [
+      109,
+      228
+    ],
+    "svg": "source/glyphs/18-rune18.svg",
+    "variant": null
+  },
+  {
+    "index": 19,
+    "glyph": "rune19",
+    "token": "P",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 1,
+    "bounds": [
+      314,
+      0,
+      627,
+      322
+    ],
+    "sourcePixels": [
+      114,
+      229
+    ],
+    "svg": "source/glyphs/19-rune19.svg",
+    "variant": null
+  },
+  {
+    "index": 20,
+    "glyph": "rune20",
+    "token": "S",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 2,
+    "bounds": [
+      627,
+      0,
+      940,
+      322
+    ],
+    "sourcePixels": [
+      145,
+      233
+    ],
+    "svg": "source/glyphs/20-rune20.svg",
+    "variant": null
+  },
+  {
+    "index": 21,
+    "glyph": "rune21",
+    "token": "TH",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 3,
+    "bounds": [
+      940,
+      0,
+      1254,
+      322
+    ],
+    "sourcePixels": [
+      179,
+      233
+    ],
+    "svg": "source/glyphs/21-rune21.svg",
+    "variant": null
+  },
+  {
+    "index": 22,
+    "glyph": "rune22",
+    "token": "KH",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 4,
+    "bounds": [
+      0,
+      322,
+      314,
+      621
+    ],
+    "sourcePixels": [
+      133,
+      231
+    ],
+    "svg": "source/glyphs/22-rune22.svg",
+    "variant": null
+  },
+  {
+    "index": 23,
+    "glyph": "rune23",
+    "token": "Z",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 5,
+    "bounds": [
+      314,
+      322,
+      627,
+      621
+    ],
+    "sourcePixels": [
+      136,
+      231
+    ],
+    "svg": "source/glyphs/23-rune23.svg",
+    "variant": null
+  },
+  {
+    "index": 24,
+    "glyph": "rune24",
+    "token": "I",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 6,
+    "bounds": [
+      627,
+      322,
+      940,
+      621
+    ],
+    "sourcePixels": [
+      109,
+      247
+    ],
+    "svg": "source/glyphs/24-rune24.svg",
+    "variant": null
+  },
+  {
+    "index": 25,
+    "glyph": "rune25",
+    "token": "GH",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 7,
+    "bounds": [
+      940,
+      322,
+      1254,
+      621
+    ],
+    "sourcePixels": [
+      176,
+      224
+    ],
+    "svg": "source/glyphs/25-rune25.svg",
+    "variant": null
+  },
+  {
+    "index": 26,
+    "glyph": "rune26",
+    "token": "SH",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 8,
+    "bounds": [
+      0,
+      621,
+      314,
+      914
+    ],
+    "sourcePixels": [
+      176,
+      221
+    ],
+    "svg": "source/glyphs/26-rune26.svg",
+    "variant": null
+  },
+  {
+    "index": 27,
+    "glyph": "rune27",
+    "token": "CH",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 9,
+    "bounds": [
+      314,
+      621,
+      627,
+      914
+    ],
+    "sourcePixels": [
+      178,
+      227
+    ],
+    "svg": "source/glyphs/27-rune27.svg",
+    "variant": null
+  },
+  {
+    "index": 28,
+    "glyph": "rune28",
+    "token": "DH",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 10,
+    "bounds": [
+      627,
+      621,
+      940,
+      914
+    ],
+    "sourcePixels": [
+      148,
+      226
+    ],
+    "svg": "source/glyphs/28-rune28.svg",
+    "variant": null
+  },
+  {
+    "index": 29,
+    "glyph": "rune29",
+    "token": "Q",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 11,
+    "bounds": [
+      940,
+      621,
+      1254,
+      914
+    ],
+    "sourcePixels": [
+      94,
+      232
+    ],
+    "svg": "source/glyphs/29-rune29.svg",
+    "variant": null
+  },
+  {
+    "index": 30,
+    "glyph": "extraC",
+    "token": "C",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 12,
+    "bounds": [
+      0,
+      914,
+      314,
+      1254
+    ],
+    "sourcePixels": [
+      133,
+      230
+    ],
+    "svg": "source/glyphs/30-extraC.svg",
+    "variant": null
+  },
+  {
+    "index": 31,
+    "glyph": "extraJ",
+    "token": "J",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 13,
+    "bounds": [
+      314,
+      914,
+      627,
+      1254
+    ],
+    "sourcePixels": [
+      144,
+      231
+    ],
+    "svg": "source/glyphs/31-extraJ.svg",
+    "variant": null
+  },
+  {
+    "index": 32,
+    "glyph": "extraX",
+    "token": "X",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 14,
+    "bounds": [
+      627,
+      914,
+      940,
+      1254
+    ],
+    "sourcePixels": [
+      133,
+      242
+    ],
+    "svg": "source/glyphs/32-extraX.svg",
+    "variant": null
+  },
+  {
+    "index": 33,
+    "glyph": "extraSharpS",
+    "token": "ß",
+    "reference": "Ergaenzung-16.png",
+    "sourceIndex": 15,
+    "bounds": [
+      940,
+      914,
+      1254,
+      1254
+    ],
+    "sourcePixels": [
+      122,
+      240
+    ],
+    "svg": "source/glyphs/33-extraSharpS.svg",
+    "variant": null
+  },
+  {
+    "index": 34,
+    "glyph": "digit0",
+    "token": "0",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 0,
+    "bounds": [
+      0,
+      0,
+      314,
+      322
+    ],
+    "sourcePixels": [
+      140,
+      248
+    ],
+    "svg": "source/glyphs/34-digit0.svg",
+    "variant": null
+  },
+  {
+    "index": 35,
+    "glyph": "digit1",
+    "token": "1",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 1,
+    "bounds": [
+      314,
+      0,
+      627,
+      322
+    ],
+    "sourcePixels": [
+      103,
+      248
+    ],
+    "svg": "source/glyphs/35-digit1.svg",
+    "variant": null
+  },
+  {
+    "index": 36,
+    "glyph": "digit2",
+    "token": "2",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 2,
+    "bounds": [
+      627,
+      0,
+      940,
+      322
+    ],
+    "sourcePixels": [
+      151,
+      247
+    ],
+    "svg": "source/glyphs/36-digit2.svg",
+    "variant": null
+  },
+  {
+    "index": 37,
+    "glyph": "digit3",
+    "token": "3",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 3,
+    "bounds": [
+      940,
+      0,
+      1254,
+      322
+    ],
+    "sourcePixels": [
+      142,
+      247
+    ],
+    "svg": "source/glyphs/37-digit3.svg",
+    "variant": null
+  },
+  {
+    "index": 38,
+    "glyph": "digit4",
+    "token": "4",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 4,
+    "bounds": [
+      0,
+      322,
+      314,
+      621
+    ],
+    "sourcePixels": [
+      150,
+      240
+    ],
+    "svg": "source/glyphs/38-digit4.svg",
+    "variant": null
+  },
+  {
+    "index": 39,
+    "glyph": "digit5",
+    "token": "5",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 5,
+    "bounds": [
+      314,
+      322,
+      627,
+      621
+    ],
+    "sourcePixels": [
+      145,
+      239
+    ],
+    "svg": "source/glyphs/39-digit5.svg",
+    "variant": null
+  },
+  {
+    "index": 40,
+    "glyph": "digit6",
+    "token": "6",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 6,
+    "bounds": [
+      627,
+      322,
+      940,
+      621
+    ],
+    "sourcePixels": [
+      143,
+      240
+    ],
+    "svg": "source/glyphs/40-digit6.svg",
+    "variant": null
+  },
+  {
+    "index": 41,
+    "glyph": "digit7",
+    "token": "7",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 7,
+    "bounds": [
+      940,
+      322,
+      1254,
+      621
+    ],
+    "sourcePixels": [
+      147,
+      240
+    ],
+    "svg": "source/glyphs/41-digit7.svg",
+    "variant": null
+  },
+  {
+    "index": 42,
+    "glyph": "digit8",
+    "token": "8",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 8,
+    "bounds": [
+      0,
+      621,
+      314,
+      914
+    ],
+    "sourcePixels": [
+      164,
+      241
+    ],
+    "svg": "source/glyphs/42-digit8.svg",
+    "variant": null
+  },
+  {
+    "index": 43,
+    "glyph": "digit9",
+    "token": "9",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 9,
+    "bounds": [
+      314,
+      621,
+      627,
+      914
+    ],
+    "sourcePixels": [
+      144,
+      241
+    ],
+    "svg": "source/glyphs/43-digit9.svg",
+    "variant": null
+  },
+  {
+    "index": 44,
+    "glyph": "ampersand",
+    "token": "&",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 10,
+    "bounds": [
+      627,
+      621,
+      940,
+      914
+    ],
+    "sourcePixels": [
+      186,
+      240
+    ],
+    "svg": "source/glyphs/44-ampersand.svg",
+    "variant": null
+  },
+  {
+    "index": 45,
+    "glyph": "at",
+    "token": "@",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 11,
+    "bounds": [
+      940,
+      621,
+      1254,
+      914
+    ],
+    "sourcePixels": [
+      208,
+      237
+    ],
+    "svg": "source/glyphs/45-at.svg",
+    "variant": null
+  },
+  {
+    "index": 46,
+    "glyph": "hash",
+    "token": "#",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 12,
+    "bounds": [
+      0,
+      914,
+      314,
+      1254
+    ],
+    "sourcePixels": [
+      160,
+      238
+    ],
+    "svg": "source/glyphs/46-hash.svg",
+    "variant": null
+  },
+  {
+    "index": 47,
+    "glyph": "dollar",
+    "token": "$",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 13,
+    "bounds": [
+      314,
+      914,
+      627,
+      1254
+    ],
+    "sourcePixels": [
+      139,
+      268
+    ],
+    "svg": "source/glyphs/47-dollar.svg",
+    "variant": null
+  },
+  {
+    "index": 48,
+    "glyph": "euro",
+    "token": "€",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 14,
+    "bounds": [
+      627,
+      914,
+      940,
+      1254
+    ],
+    "sourcePixels": [
+      182,
+      239
+    ],
+    "svg": "source/glyphs/48-euro.svg",
+    "variant": null
+  },
+  {
+    "index": 49,
+    "glyph": "section",
+    "token": "§",
+    "reference": "Tastatur-16.png",
+    "sourceIndex": 15,
+    "bounds": [
+      940,
+      914,
+      1254,
+      1254
+    ],
+    "sourcePixels": [
+      132,
+      255
+    ],
+    "svg": "source/glyphs/49-section.svg",
+    "variant": null
+  }
+]

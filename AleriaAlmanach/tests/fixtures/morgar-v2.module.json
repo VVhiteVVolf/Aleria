@@ -1,0 +1,4009 @@
+{
+  "id": "morgar-karnrith",
+  "title": "Morgar",
+  "subtitle": "Die Sprache der Morgorner · kurze Worte, schwer wie Stein",
+  "type": "Sprache · Bedeutungs- und Steinschrift",
+  "category": "Sprachen · Morgornisch",
+  "image": "./modules/language/morgar/assets/morgar-hallenrunde-v1.png",
+  "stamp": "MORGORN · KARNRITH · STEINGRATARCHIV",
+  "multipage": true,
+  "appendCommentsPage": false,
+  "locked": false,
+  "icon": "⛏️",
+  "symbol": null,
+  "pages": [
+    {
+      "image": "./modules/language/morgar/assets/morgar-hallenrunde-v1.png",
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "imageWidth": 46,
+      "pageTitle": "I. — Eine Stimme aus Stein",
+      "description": "<strong>Morgar</strong> ist die Sprache der Morgorner: kräftig genug für einen Befehl über dem Schlachtenlärm, aber flüssig genug für eine Geschichte am Herd. Der Klang sitzt in kurzen Silben — <strong>dar, mor, gar, dun, bran</strong>. Ein gerolltes R, klare Vokale und feste Anfangslaute geben den Wörtern Gewicht. Der Mund soll sie sprechen können, bevor der Meißel sie in Stein setzt.<br><br>Ein König heißt <strong>Darak</strong>, ein Vasall <strong>Baran</strong>, ein Krieger <strong>Garan</strong>. Die Burg ist die <strong>Duna</strong>, das Heer das <strong>Garum</strong>, die Schenke der <strong>Borun</strong>. Namen wie <strong>Adrak, Brana, Kharun</strong> und <strong>Toren</strong> tragen denselben Rhythmus: erst der kräftige Anschlag, dann ein klarer Ausklang.<br><br>Geschrieben wird Morgar in <strong>Karnrith</strong>. Seine dreißig Zeichen bewahren die alten Sinnbilder der fünf Klüfte. Ein Zeichenname ist eine Merkhilfe für die Schrift; die lebende Sprache verwendet eigene, kurze Wortstämme. Niemand muss eine Kette aus Runennamen sprechen, um Brot zu bestellen oder seinem Lehnsherrn Treue zu schwören.",
+      "stats": [
+        [
+          "Sprache",
+          "Morgar 2.0 · Sprache der Morgorner"
+        ],
+        [
+          "Schrift",
+          "Karnrith Tiefenrunen · 30 überlieferte Zeichen"
+        ],
+        [
+          "Klang",
+          "Erstsilbenbetonung · klare Vokale · kräftige Anlaute"
+        ],
+        [
+          "Wortbildung",
+          "60 kurze Stämme · 12 Endungen und Bindewörter"
+        ],
+        [
+          "Wortschatz",
+          "360 Wörter aus dreizehn Lebensbereichen · Seite V"
+        ],
+        [
+          "Namen",
+          "500 männlich · 500 weiblich · 100 unisex · A–Z"
+        ]
+      ],
+      "quote": "Ein gutes Wort muss durch die Zähne passen, ehe es durch den Stein geht.",
+      "quoteBy": "— Lehrspruch der morgornischen Hallen"
+    },
+    {
+      "pageTitle": "II. — Klang, Aussprache und Sprachgebrauch",
+      "languagePage": true,
+      "quote": "Duren! Ir garan, thalen tora!",
+      "quoteBy": "— Haltet stand! Krieger, bewacht die Grenze!",
+      "language": {
+        "archiveLabel": "Morgar 2.0 · Die gesprochene Sprache",
+        "nativeName": "Morgar · geschrieben in Karnrith",
+        "family": "Eigenständige Bergsprache · zwergische Wucht und gälisch angeregter Sprachfluss",
+        "speakers": "Morgorner · Hof und Sippe · Handwerker und Bauern · Krieger und Reisende",
+        "regions": "Bergreiche, Hallen, Marktstädte und Grenzfesten",
+        "scriptType": "30 Lautzeichen mit überlieferten Sinnbildern",
+        "writingDirection": "Links nach rechts; monumentale Inschriften auch von oben nach unten",
+        "introduction": "Morgar soll laut gesprochen tragen: zwei Silben für die meisten Alltagswörter, gelegentlich drei für längere Namen und präzise Begriffe. Der Klang orientiert sich an der Wucht einer zwergischen Fantasiesprache und am fließenden Wechsel von Vokalen und Konsonanten, den gälische Klangbilder anregen. Die Wörter und Regeln bilden eine eigenständige Sprache für Aleria.",
+        "alphabetTitle": "Karnrith · Schriftzeichen und Tastatureingabe",
+        "alphabetLayers": [
+          {
+            "label": "Zeichentafel",
+            "image": "../Fonts/Karnrith-Font-2.000/Zeichentafel.png",
+            "alt": "Die 30 Karnrith-Zeichen mit ihren überlieferten Merknamen",
+            "caption": "Schriftarchiv: Die alten Zeichennamen bezeichnen die Runen. Die heutigen Wortstämme stehen auf Seite IV."
+          },
+          {
+            "label": "Schriftprobe",
+            "image": "../Fonts/Karnrith-Font-2.000/Leseprobe.png",
+            "alt": "Technische Schriftprobe der Karnrith Tiefenrunen",
+            "caption": "Schriftprobe des Fontarchivs mit Beispielen aus der früheren Sprachfassung. Für den aktuellen Sprachgebrauch gilt das Wörterverzeichnis auf Seite V."
+          },
+          {
+            "label": "Tastaturzeichen",
+            "image": "../Fonts/Karnrith-Font-2.000/Tastaturzeichen.png",
+            "alt": "Buchstaben, Ziffern, Akzente und Satzzeichen der Schrift",
+            "caption": "Auch gewöhnliche lateinische Eingaben, Zahlen und Satzzeichen lassen sich mit Karnrith schreiben."
+          }
+        ],
+        "sections": [
+          {
+            "title": "Der Rhythmus: Anschlag und Ausklang",
+            "text": "Die <strong>erste Silbe</strong> trägt den Hauptdruck: <strong>DA·rak, BA·ran, GA·rum, KHA·run</strong>. Jede Silbe hat einen hörbaren Vokal. Ein Punkt in der Aussprachehilfe zeigt die Sprechgrenze, keine Pause. Sprich das Wort in einem Zug.<br><br>Häufige Anlaute sind b, d, g, k sowie br, dr, gr, kr und sk. Ein einzelnes gerolltes R genügt. Härte entsteht durch den festen Anschlag, nicht durch möglichst viele Konsonanten. Lange Titel bleiben getrennte Wörter: <strong>Ar Darak</strong>."
+          },
+          {
+            "title": "Vokale und leicht lesbare Schreibweise",
+            "text": "<strong>A, E, I, O, U</strong> bleiben klare Einzelvokale; ein E am Wortende wird nicht verschluckt. <strong>Y</strong> klingt wie deutsches ü. <strong>Ai und ei</strong> klingen wie in Stein, <strong>au</strong> wie in Haus. Andere benachbarte Vokale werden nacheinander gesprochen. Es gibt keine stummen Buchstaben und keine wechselnde Betonung durch Akzente.<br><br><strong>C</strong> klingt immer wie K, <strong>J</strong> wie in Jahr, <strong>Qu</strong> wie kw und <strong>X</strong> wie ks. Diese Schreibungen kommen vor allem in Namen vor. <strong>V</strong> klingt wie deutsches W; <strong>W</strong> wird mit gerundeten Lippen angesetzt. S bleibt stimmlos, Z ist ein stimmhaftes s."
+          },
+          {
+            "title": "Raue Laute ohne Zungenknoten",
+            "text": "<strong>Kh und ch</strong> klingen wie das ch in Bach. <strong>Th</strong> ist ein kräftiges, leicht behauchtes T; <strong>dh</strong> ein weiches D und <strong>gh</strong> ein tief im Mund angesetztes G. <strong>Sh</strong> klingt wie sch, <strong>ng</strong> wie in lange. Ein Doppelzeichen bildet eine Einheit: Das h wird darin nicht als eigene Silbe gesprochen.<br><br>Im heutigen Wortschatz bleiben diese Laute sparsam. Ein klar gesprochenes <strong>Darak</strong> wirkt stärker als eine Folge ineinander verkeilter Endkonsonanten. In Namen wie <strong>Gendara</strong> hält der mittlere Vokal den Fluss offen."
+          },
+          {
+            "title": "Wörter aus kurzen Bedeutungssilben",
+            "text": "<strong>dar</strong> trägt Herrschaft, <strong>bar</strong> das Lehen, <strong>mor</strong> die Gemeinschaft und <strong>gar</strong> den bewaffneten Schutz. Mit einer passenden Endung entsteht ein sprechbares Wort: <strong>dar + ak → Darak</strong>, <strong>bar + an → Baran</strong>, <strong>gar + um → Garum</strong>.<br><br><strong>-a</strong> bildet oft Dinge oder Vorgänge, <strong>-an</strong> Zugehörige, <strong>-or</strong> Berufe und Ämter, <strong>-un</strong> Orte, <strong>-en</strong> Tätigkeiten. Das sind Wortbildungsfamilien, keine Pflicht, jedes Wort vollständig zu zerlegen. Gewachsene Wörter stehen mit ihrer festen Bedeutung im Verzeichnis. Für neue Titel werden Wörter getrennt ergänzt, statt endlose Zusammensetzungen zu erzwingen."
+          },
+          {
+            "title": "Sätze, Mehrzahl und Zeit",
+            "text": "Die Grundfolge lautet <strong>Person – Tätigkeit – Sache</strong>: <strong>Mi selen duna.</strong> — Ich sehe die Burg. <strong>Mi</strong> heißt ich, <strong>ti</strong> du, <strong>da</strong> er/sie, <strong>mir</strong> wir, <strong>tir</strong> ihr, <strong>ri</strong> sie. Verben bleiben unverändert. <strong>Do</strong> vor dem Verb bezeichnet Vergangenes, <strong>va</strong> Zukünftiges: <strong>Mi do dalen.</strong> — Ich ging.<br><br><strong>Ir</strong> vor dem Hauptwort bildet die Mehrzahl: <strong>ir garan</strong> — Krieger; <strong>ir dora</strong> — Häuser. <strong>Na</strong> bedeutet von/aus, <strong>vi</strong> mit und <strong>an</strong> zu/für. <strong>Ne</strong> verneint: <strong>Mi ne varen.</strong> — Ich schwöre nicht. Die Satzfrage beginnt mit <strong>Ke</strong>: <strong>Ke ti selen duna?</strong> — Siehst du die Burg?"
+          },
+          {
+            "title": "Hof, Lehen und gesellschaftlicher Stand",
+            "text": "<strong>Darak</strong> ist die Krone, <strong>Ardor</strong> ein Herzog, <strong>Torak</strong> ein Markgraf, <strong>Barak</strong> ein Graf und <strong>Baror</strong> ein Baron. Ein <strong>Baran</strong> hält ein Lehen; <strong>Balor</strong> und <strong>Balan</strong> verwalten es. Die Titel gelten für jedes Geschlecht. <strong>Daran</strong> ist die allgemeine Anrede für Herr oder Herrin.<br><br><strong>Garan var</strong> bezeichnet den eidgebundenen Ritter. Handwerkliches Ansehen trägt <strong>Kelor</strong>, der Meister; ihm folgen <strong>Kelan</strong>, der Geselle, und <strong>Kelin</strong>, der Lehrling. Ein <strong>Barin</strong> ist hörig, ein <strong>Zorun</strong> leibeigen. Die Wörter unterscheiden Amt, ererbten Stand und persönliche Abhängigkeit."
+          },
+          {
+            "title": "Sätze für Spieltisch, Halle und Schlacht",
+            "text": "<strong>Sera an ti.</strong> — Friede sei dir.<br><strong>Mi varen vara na mora.</strong> — Ich schwöre den Eid des Volkes.<br><strong>Mir varen vi ti.</strong> — Wir schwören mit dir.<br><strong>Delen bera an mi.</strong> — Gib mir Brot.<br><strong>Mi velen bora.</strong> — Ich möchte Bier.<br><strong>Duren!</strong> — Haltet stand!<br><strong>Bragen!</strong> — Greift an!<br><strong>Ir garan, thalen tora!</strong> — Krieger, bewacht die Grenze!<br><br>Im Befehl steht das Verb allein oder vor seinem Gegenstand. Eigenschaften folgen dem Hauptwort: <strong>garan varal</strong> — ein treuer Krieger; <strong>duna garal</strong> — eine wehrhafte Burg."
+          },
+          {
+            "title": "Namen, Geschlecht und Anrede",
+            "text": "Seite III bietet <strong>500 männliche, 500 weibliche und 100 Unisex-Namen</strong>, jeweils von A bis Z. Männliche Formen enden häufig fest auf -ak, -an, -or oder -rik; weibliche Formen verbinden kräftige Anlaute mit offenen Endungen wie -a, -ara oder -una. Unisex-Namen verwenden oft -en, -in oder -el. Diese Vorlieben sind keine Standes- oder Wesensregeln.<br><br><strong>Adrak, Brana und Toren</strong> werden nach denselben Regeln gesprochen wie der übrige Wortschatz. Ein Titel steht getrennt vor dem Namen: <strong>Darak Brana</strong>, <strong>Kelor Toren</strong>. Herkunft kann mit na folgen: <strong>Adrak na Karun</strong> — Adrak aus der Feste."
+          },
+          {
+            "title": "Karnrith schreiben und in Sprechblasen verwenden",
+            "text": "Karnrith bleibt die Schrift; Morgar ist die Sprache. Die überlieferten Runennamen sind keine Vorgabe für die Aussprache neuer Alltagswörter. Auf Seite IV stehen die <strong>72 heutigen Wortbausteine</strong>, auf Seite V die <strong>360 aktuellen Wörter mit Sprechgliederung</strong>. Sie ersetzen die bisherigen Wörter- und Namenslisten des Sprachmoduls.<br><br>Für Fremdsprachblasen und Zauberformeln <strong>Morgar · Karnrith</strong> wählen. NG, TH, KH, GH, SH, CH und DH werden als Schriftligaturen dargestellt. Darüberfahren, Tastaturfokus oder Antippen zeigt den eingegebenen Klartext. Die Schriftwahl übersetzt einen deutschen Satz nicht automatisch."
+          }
+        ],
+        "footer": "Aleria Almanach · Morgar 2.0 · Klang und Sprachgebrauch"
+      }
+    },
+    {
+      "pageTitle": "III. — 1.100 Namen von A bis Z",
+      "nameListPage": true,
+      "nameList": {
+        "archiveLabel": "Morgar 2.0 · Namen von A bis Z",
+        "introduction": "500 männliche, 500 weibliche und 100 Unisex-Namen: Jede Liste reicht alphabetisch von A bis Z. Kurze Formen wie Adrak, Brana und Toren stehen neben kräftigen Dreisilbern wie Anarak, Kharuna und Gendara. Die erste Silbe trägt den Hauptdruck; alle Vokale werden gesprochen. C klingt wie K, J wie in Jahr, Qu wie kw, X wie ks und Y wie ü. KH klingt wie das ch in Bach; TH ist ein kräftiges, leicht behauchtes T. Die Namensformen sind Vorschläge für Figuren, keine verbindlichen Aussagen über Rang oder Charakter.",
+        "ornamentText": "MORGAR · KARNRITH · BRANA · KHARUN",
+        "ornamentStyle": "karnrith",
+        "groups": [
+          {
+            "label": "Männliche Namen",
+            "subtitle": "500 Namen · A–Z",
+            "names": [
+              "Adrak",
+              "Adran",
+              "Akar",
+              "Aldan",
+              "Aldor",
+              "Alrik",
+              "Amren",
+              "Anarak",
+              "Anvar",
+              "Ardan",
+              "Ardek",
+              "Argan",
+              "Arlok",
+              "Arnak",
+              "Arven",
+              "Askar",
+              "Atrek",
+              "Avar",
+              "Azdan",
+              "Azrak",
+              "Balak",
+              "Balar",
+              "Baldor",
+              "Balgar",
+              "Baran",
+              "Bardek",
+              "Barog",
+              "Beldan",
+              "Belrik",
+              "Berak",
+              "Berun",
+              "Bodran",
+              "Borgan",
+              "Borun",
+              "Bradan",
+              "Bragor",
+              "Branik",
+              "Brenak",
+              "Brogan",
+              "Brunor",
+              "Cadan",
+              "Cadren",
+              "Calbar",
+              "Caldan",
+              "Caldor",
+              "Calrik",
+              "Camor",
+              "Carad",
+              "Cargan",
+              "Carnik",
+              "Casren",
+              "Cedrak",
+              "Celgar",
+              "Cerak",
+              "Corgan",
+              "Corlak",
+              "Cormek",
+              "Corun",
+              "Culdan",
+              "Curag",
+              "Dagan",
+              "Dalbar",
+              "Dalken",
+              "Damar",
+              "Danrik",
+              "Darak",
+              "Dargan",
+              "Darok",
+              "Delgar",
+              "Delrik",
+              "Dermak",
+              "Doran",
+              "Dorgal",
+              "Dovan",
+              "Dragar",
+              "Drakan",
+              "Dremor",
+              "Drenak",
+              "Drumar",
+              "Dunor",
+              "Ebar",
+              "Ebran",
+              "Edan",
+              "Edrak",
+              "Egan",
+              "Egron",
+              "Eimar",
+              "Ekar",
+              "Eldan",
+              "Eldor",
+              "Elgar",
+              "Elrik",
+              "Embar",
+              "Endor",
+              "Erak",
+              "Erdan",
+              "Ergom",
+              "Erkan",
+              "Esrak",
+              "Evar",
+              "Fadan",
+              "Falbar",
+              "Faldor",
+              "Falken",
+              "Farak",
+              "Fargan",
+              "Farnor",
+              "Fedran",
+              "Felgar",
+              "Felrik",
+              "Fenak",
+              "Fendar",
+              "Ferag",
+              "Fergon",
+              "Firak",
+              "Fomran",
+              "Forak",
+              "Fornig",
+              "Fradan",
+              "Fronar",
+              "Gadar",
+              "Galbar",
+              "Galdor",
+              "Galor",
+              "Garan",
+              "Gargan",
+              "Garok",
+              "Gedran",
+              "Gelgar",
+              "Gendar",
+              "Gerun",
+              "Gordan",
+              "Gormak",
+              "Gorun",
+              "Gradan",
+              "Gragor",
+              "Grenak",
+              "Grigor",
+              "Grodan",
+              "Grumor",
+              "Hadar",
+              "Halbar",
+              "Haldor",
+              "Halgan",
+              "Harak",
+              "Hardan",
+              "Hargor",
+              "Harnak",
+              "Hedran",
+              "Helgar",
+              "Helrik",
+              "Hendak",
+              "Herag",
+              "Herun",
+              "Hildan",
+              "Hordak",
+              "Horgan",
+              "Hovan",
+              "Hulgar",
+              "Hurak",
+              "Ibar",
+              "Ibran",
+              "Idan",
+              "Idrak",
+              "Igan",
+              "Ikar",
+              "Ilbar",
+              "Ildan",
+              "Ildor",
+              "Ilgar",
+              "Ilrik",
+              "Imbar",
+              "Imrak",
+              "Indan",
+              "Ingar",
+              "Irak",
+              "Irdan",
+              "Irgom",
+              "Irkan",
+              "Ivar",
+              "Jadar",
+              "Jalbar",
+              "Jaldan",
+              "Jamor",
+              "Jarak",
+              "Jardek",
+              "Jargan",
+              "Jarnor",
+              "Jedrak",
+              "Jelbar",
+              "Jelgar",
+              "Jenak",
+              "Jerad",
+              "Jergon",
+              "Jodran",
+              "Jorgan",
+              "Jorun",
+              "Juldan",
+              "Junak",
+              "Jurag",
+              "Kadar",
+              "Kalbar",
+              "Kaldor",
+              "Kalen",
+              "Karam",
+              "Kardek",
+              "Kargan",
+              "Karnor",
+              "Keldan",
+              "Kelgar",
+              "Kerak",
+              "Kergon",
+              "Khadar",
+              "Kharun",
+              "Kodran",
+              "Korgan",
+              "Kradan",
+              "Krenak",
+              "Krogar",
+              "Krumor",
+              "Ladar",
+              "Lagor",
+              "Lakren",
+              "Laldan",
+              "Lamor",
+              "Laran",
+              "Lardek",
+              "Largan",
+              "Larnak",
+              "Ledran",
+              "Legar",
+              "Lekor",
+              "Lenak",
+              "Lergon",
+              "Limbar",
+              "Lodran",
+              "Lorgan",
+              "Lorken",
+              "Lumar",
+              "Lurag",
+              "Madar",
+              "Magor",
+              "Malbar",
+              "Maldor",
+              "Malken",
+              "Marak",
+              "Mardek",
+              "Margan",
+              "Marnor",
+              "Medran",
+              "Melgar",
+              "Mendak",
+              "Merun",
+              "Mirdan",
+              "Modrak",
+              "Mordan",
+              "Morgal",
+              "Morun",
+              "Mulgar",
+              "Murak",
+              "Nadar",
+              "Nagor",
+              "Nalbar",
+              "Naldan",
+              "Namor",
+              "Naran",
+              "Nardek",
+              "Nargan",
+              "Narnak",
+              "Nedran",
+              "Negar",
+              "Nelrik",
+              "Nendak",
+              "Nerag",
+              "Nirak",
+              "Nodran",
+              "Norgan",
+              "Norken",
+              "Numar",
+              "Nurag",
+              "Obar",
+              "Obran",
+              "Odan",
+              "Odrak",
+              "Ogan",
+              "Ogron",
+              "Okar",
+              "Olbar",
+              "Oldan",
+              "Oldor",
+              "Olgar",
+              "Olrik",
+              "Ombar",
+              "Onarak",
+              "Ongar",
+              "Orak",
+              "Ordan",
+              "Orgom",
+              "Orkan",
+              "Ovar",
+              "Padar",
+              "Pagor",
+              "Palbar",
+              "Paldan",
+              "Pamar",
+              "Parak",
+              "Pardek",
+              "Pargan",
+              "Parnor",
+              "Pedran",
+              "Pelgar",
+              "Pendak",
+              "Perag",
+              "Pirak",
+              "Podran",
+              "Porgan",
+              "Porken",
+              "Pradan",
+              "Prakor",
+              "Purag",
+              "Quadar",
+              "Qualbar",
+              "Qualdan",
+              "Quaram",
+              "Quardek",
+              "Quargan",
+              "Queldor",
+              "Querak",
+              "Quorgan",
+              "Quorun",
+              "Radan",
+              "Ragor",
+              "Ralbar",
+              "Raldor",
+              "Ramar",
+              "Ranik",
+              "Rardek",
+              "Rargan",
+              "Raskor",
+              "Redran",
+              "Regar",
+              "Relkan",
+              "Rendak",
+              "Rergon",
+              "Rigan",
+              "Rodrak",
+              "Rorgan",
+              "Rorken",
+              "Rumar",
+              "Runak",
+              "Sadar",
+              "Sagar",
+              "Salbar",
+              "Saldan",
+              "Samor",
+              "Sarak",
+              "Sardek",
+              "Sargan",
+              "Sarnor",
+              "Sedran",
+              "Selgar",
+              "Sendak",
+              "Serag",
+              "Sidran",
+              "Skadan",
+              "Skeldor",
+              "Skorak",
+              "Sorgal",
+              "Sovar",
+              "Surak",
+              "Tadar",
+              "Tagor",
+              "Talbar",
+              "Taldor",
+              "Tamar",
+              "Tarak",
+              "Tardek",
+              "Targan",
+              "Tarnor",
+              "Tedran",
+              "Telgar",
+              "Tendak",
+              "Terag",
+              "Thadar",
+              "Tharun",
+              "Thorgan",
+              "Todrak",
+              "Torgan",
+              "Torun",
+              "Turak",
+              "Ubar",
+              "Ubran",
+              "Udan",
+              "Udrak",
+              "Ugan",
+              "Ugron",
+              "Ukar",
+              "Ulbar",
+              "Uldan",
+              "Uldor",
+              "Ulgar",
+              "Ulrik",
+              "Umbar",
+              "Unarak",
+              "Ungar",
+              "Urak",
+              "Urdan",
+              "Urgom",
+              "Urkan",
+              "Uvar",
+              "Vadar",
+              "Vagor",
+              "Valbar",
+              "Valdan",
+              "Vamar",
+              "Varak",
+              "Vardek",
+              "Vargan",
+              "Varnor",
+              "Vedran",
+              "Velgar",
+              "Vendak",
+              "Verag",
+              "Vidran",
+              "Vildor",
+              "Vodrak",
+              "Vorgal",
+              "Vornak",
+              "Vuldan",
+              "Vurak",
+              "Wadar",
+              "Walbar",
+              "Waldan",
+              "Walrik",
+              "Wamar",
+              "Warak",
+              "Wardek",
+              "Wargan",
+              "Warnor",
+              "Wedran",
+              "Welgar",
+              "Wendak",
+              "Werag",
+              "Widran",
+              "Wilbar",
+              "Wodrak",
+              "Worgan",
+              "Wornak",
+              "Wuldan",
+              "Wurag",
+              "Xadar",
+              "Xalbar",
+              "Xaldan",
+              "Xaram",
+              "Xardek",
+              "Xargan",
+              "Xeldor",
+              "Xerak",
+              "Xorgan",
+              "Xurun",
+              "Ybar",
+              "Ybran",
+              "Ydan",
+              "Ydrak",
+              "Ygan",
+              "Ykar",
+              "Ylbar",
+              "Yldan",
+              "Yldor",
+              "Ylgar",
+              "Ylrik",
+              "Ymbar",
+              "Ynarak",
+              "Yngar",
+              "Yrak",
+              "Yrdan",
+              "Yrgom",
+              "Yrkan",
+              "Yskar",
+              "Yvar",
+              "Zadar",
+              "Zagor",
+              "Zalbar",
+              "Zaldan",
+              "Zamar",
+              "Zarak",
+              "Zardek",
+              "Zargan",
+              "Zarnor",
+              "Zedran",
+              "Zelgar",
+              "Zendak",
+              "Zerag",
+              "Zidran",
+              "Zildor",
+              "Zodrak",
+              "Zorgal",
+              "Zornak",
+              "Zuldan",
+              "Zurak"
+            ]
+          },
+          {
+            "label": "Weibliche Namen",
+            "subtitle": "500 Namen · A–Z",
+            "names": [
+              "Adra",
+              "Adruna",
+              "Akara",
+              "Alda",
+              "Aldora",
+              "Alrika",
+              "Amra",
+              "Anara",
+              "Anvara",
+              "Arda",
+              "Ardela",
+              "Argana",
+              "Arla",
+              "Arnara",
+              "Aruna",
+              "Aska",
+              "Atrela",
+              "Avara",
+              "Azda",
+              "Azruna",
+              "Balda",
+              "Balgara",
+              "Balina",
+              "Bara",
+              "Barduna",
+              "Barika",
+              "Belda",
+              "Belora",
+              "Berana",
+              "Berga",
+              "Bodra",
+              "Borgana",
+              "Borika",
+              "Borna",
+              "Brada",
+              "Braguna",
+              "Brana",
+              "Brena",
+              "Broga",
+              "Brunka",
+              "Cadora",
+              "Cadra",
+              "Calda",
+              "Calena",
+              "Calora",
+              "Calrika",
+              "Camra",
+              "Carada",
+              "Cargana",
+              "Carna",
+              "Casra",
+              "Cedra",
+              "Celga",
+              "Cerana",
+              "Corga",
+              "Corika",
+              "Corma",
+              "Coruna",
+              "Culda",
+              "Curana",
+              "Daga",
+              "Dalbara",
+              "Dalka",
+              "Damra",
+              "Danrika",
+              "Dara",
+              "Dargana",
+              "Daruna",
+              "Delga",
+              "Delrika",
+              "Derma",
+              "Dora",
+              "Dorgala",
+              "Dovra",
+              "Draga",
+              "Drakara",
+              "Drema",
+              "Drena",
+              "Druma",
+              "Duna",
+              "Ebara",
+              "Ebra",
+              "Eda",
+              "Edra",
+              "Egana",
+              "Egra",
+              "Eimra",
+              "Ekara",
+              "Elda",
+              "Eldora",
+              "Elga",
+              "Elrika",
+              "Emara",
+              "Enara",
+              "Era",
+              "Erdana",
+              "Ergala",
+              "Erkana",
+              "Eska",
+              "Evara",
+              "Fada",
+              "Falbara",
+              "Falda",
+              "Falka",
+              "Fara",
+              "Fargana",
+              "Farna",
+              "Fedra",
+              "Felga",
+              "Felrika",
+              "Fena",
+              "Fendara",
+              "Fera",
+              "Ferga",
+              "Fira",
+              "Fomra",
+              "Fora",
+              "Forna",
+              "Frada",
+              "Frona",
+              "Gada",
+              "Galbara",
+              "Galda",
+              "Galora",
+              "Gara",
+              "Gargana",
+              "Garuna",
+              "Gedra",
+              "Gelga",
+              "Gendara",
+              "Gera",
+              "Gorda",
+              "Gorma",
+              "Goruna",
+              "Grada",
+              "Graguna",
+              "Grena",
+              "Grika",
+              "Groda",
+              "Gruna",
+              "Hada",
+              "Halbara",
+              "Halda",
+              "Halgana",
+              "Hara",
+              "Harda",
+              "Hargana",
+              "Harna",
+              "Hedra",
+              "Helga",
+              "Helrika",
+              "Henda",
+              "Hera",
+              "Heruna",
+              "Hilda",
+              "Horda",
+              "Horgana",
+              "Hovra",
+              "Hulga",
+              "Hura",
+              "Ibara",
+              "Ibra",
+              "Ida",
+              "Idra",
+              "Igana",
+              "Ikara",
+              "Ilbara",
+              "Ilda",
+              "Ildora",
+              "Ilga",
+              "Ilrika",
+              "Imara",
+              "Imra",
+              "Inara",
+              "Ingara",
+              "Ira",
+              "Irdana",
+              "Irgala",
+              "Irkana",
+              "Ivara",
+              "Jada",
+              "Jalbara",
+              "Jalda",
+              "Jamra",
+              "Jara",
+              "Jarduna",
+              "Jargana",
+              "Jarna",
+              "Jedra",
+              "Jelbara",
+              "Jelga",
+              "Jena",
+              "Jera",
+              "Jerga",
+              "Jodra",
+              "Jorga",
+              "Joruna",
+              "Julda",
+              "Juna",
+              "Jurana",
+              "Kada",
+              "Kalbara",
+              "Kalda",
+              "Kalena",
+              "Karama",
+              "Karda",
+              "Kargana",
+              "Karna",
+              "Kelda",
+              "Kelga",
+              "Kera",
+              "Kerga",
+              "Khada",
+              "Kharuna",
+              "Kodra",
+              "Korga",
+              "Krada",
+              "Krena",
+              "Kroga",
+              "Kruna",
+              "Lada",
+              "Lagora",
+              "Lakra",
+              "Lalda",
+              "Lamra",
+              "Lara",
+              "Larduna",
+              "Largana",
+              "Larna",
+              "Ledra",
+              "Legara",
+              "Lekora",
+              "Lena",
+              "Lerga",
+              "Limara",
+              "Lodra",
+              "Lorga",
+              "Lorka",
+              "Lumra",
+              "Lurana",
+              "Mada",
+              "Magora",
+              "Malbara",
+              "Malda",
+              "Malka",
+              "Mara",
+              "Marduna",
+              "Margana",
+              "Marna",
+              "Medra",
+              "Melga",
+              "Menda",
+              "Mera",
+              "Mirda",
+              "Modra",
+              "Morda",
+              "Morgala",
+              "Moruna",
+              "Mulga",
+              "Mura",
+              "Nada",
+              "Nagora",
+              "Nalbara",
+              "Nalda",
+              "Namra",
+              "Nara",
+              "Narduna",
+              "Nargana",
+              "Narna",
+              "Nedra",
+              "Negara",
+              "Nelrika",
+              "Nenda",
+              "Nera",
+              "Nira",
+              "Nodra",
+              "Norga",
+              "Norka",
+              "Numra",
+              "Nurana",
+              "Obara",
+              "Obra",
+              "Oda",
+              "Odra",
+              "Ogana",
+              "Ogra",
+              "Okara",
+              "Olbara",
+              "Olda",
+              "Oldora",
+              "Olga",
+              "Olrika",
+              "Omara",
+              "Onara",
+              "Ongara",
+              "Ora",
+              "Ordana",
+              "Orgala",
+              "Orkana",
+              "Ovara",
+              "Pada",
+              "Pagora",
+              "Palbara",
+              "Palda",
+              "Pamra",
+              "Para",
+              "Parduna",
+              "Pargana",
+              "Parna",
+              "Pedra",
+              "Pelga",
+              "Penda",
+              "Pera",
+              "Pira",
+              "Podra",
+              "Porga",
+              "Porka",
+              "Prada",
+              "Prakara",
+              "Purana",
+              "Quada",
+              "Qualbara",
+              "Qualda",
+              "Quarama",
+              "Quarda",
+              "Quargana",
+              "Quelda",
+              "Quera",
+              "Quorga",
+              "Quoruna",
+              "Rada",
+              "Ragora",
+              "Ralbara",
+              "Ralda",
+              "Ramra",
+              "Ranika",
+              "Rarda",
+              "Rargana",
+              "Raska",
+              "Redra",
+              "Regara",
+              "Relka",
+              "Renda",
+              "Rerga",
+              "Riga",
+              "Rodra",
+              "Rorga",
+              "Rorka",
+              "Rumra",
+              "Runa",
+              "Sada",
+              "Sagara",
+              "Salbara",
+              "Salda",
+              "Samra",
+              "Sara",
+              "Sarduna",
+              "Sargana",
+              "Sarna",
+              "Sedra",
+              "Selga",
+              "Senda",
+              "Sera",
+              "Sidra",
+              "Skada",
+              "Skelda",
+              "Skora",
+              "Sorgala",
+              "Sovra",
+              "Sura",
+              "Tada",
+              "Tagora",
+              "Talbara",
+              "Talda",
+              "Tamra",
+              "Tara",
+              "Tarduna",
+              "Targana",
+              "Tarna",
+              "Tedra",
+              "Telga",
+              "Tenda",
+              "Tera",
+              "Thada",
+              "Tharuna",
+              "Thorgana",
+              "Todra",
+              "Torga",
+              "Toruna",
+              "Tura",
+              "Ubara",
+              "Ubra",
+              "Uda",
+              "Udra",
+              "Ugana",
+              "Ugra",
+              "Ukara",
+              "Ulbara",
+              "Ulda",
+              "Uldora",
+              "Ulga",
+              "Ulrika",
+              "Umara",
+              "Unara",
+              "Ungara",
+              "Ura",
+              "Urdana",
+              "Urgala",
+              "Urkana",
+              "Uvara",
+              "Vada",
+              "Vagora",
+              "Valbara",
+              "Valda",
+              "Vamra",
+              "Vara",
+              "Varduna",
+              "Vargana",
+              "Varna",
+              "Vedra",
+              "Velga",
+              "Venda",
+              "Vera",
+              "Vidra",
+              "Vilda",
+              "Vodra",
+              "Vorgala",
+              "Vorna",
+              "Vulga",
+              "Vura",
+              "Wada",
+              "Walbara",
+              "Walda",
+              "Walrika",
+              "Wamra",
+              "Wara",
+              "Warduna",
+              "Wargana",
+              "Warna",
+              "Wedra",
+              "Welga",
+              "Wenda",
+              "Wera",
+              "Widra",
+              "Wilbara",
+              "Wodra",
+              "Worga",
+              "Worna",
+              "Wulda",
+              "Wurana",
+              "Xada",
+              "Xalbara",
+              "Xalda",
+              "Xarama",
+              "Xarda",
+              "Xargana",
+              "Xelda",
+              "Xera",
+              "Xorga",
+              "Xuruna",
+              "Ybara",
+              "Ybra",
+              "Yda",
+              "Ydra",
+              "Ygana",
+              "Ykara",
+              "Ylbara",
+              "Ylda",
+              "Yldora",
+              "Ylga",
+              "Ylrika",
+              "Ymara",
+              "Ynara",
+              "Yngara",
+              "Yra",
+              "Yrdana",
+              "Yrgala",
+              "Yrkana",
+              "Yska",
+              "Yvara",
+              "Zada",
+              "Zagora",
+              "Zalbara",
+              "Zalda",
+              "Zamra",
+              "Zara",
+              "Zarduna",
+              "Zargana",
+              "Zarna",
+              "Zedra",
+              "Zelga",
+              "Zenda",
+              "Zera",
+              "Zidra",
+              "Zilda",
+              "Zodra",
+              "Zorgala",
+              "Zorna",
+              "Zulda",
+              "Zura"
+            ]
+          },
+          {
+            "label": "Unisex-Namen",
+            "subtitle": "100 Namen · A–Z",
+            "names": [
+              "Adren",
+              "Alen",
+              "Ardel",
+              "Asren",
+              "Balren",
+              "Barin",
+              "Belren",
+              "Brinel",
+              "Cadrin",
+              "Calenor",
+              "Caren",
+              "Corren",
+              "Dalren",
+              "Darin",
+              "Delren",
+              "Doren",
+              "Edren",
+              "Elen",
+              "Erdel",
+              "Esren",
+              "Falren",
+              "Farin",
+              "Felren",
+              "Frinel",
+              "Galren",
+              "Garin",
+              "Gelren",
+              "Grenel",
+              "Hadren",
+              "Halen",
+              "Hardel",
+              "Herin",
+              "Idren",
+              "Ilen",
+              "Irdel",
+              "Isren",
+              "Jadren",
+              "Jalen",
+              "Jardel",
+              "Jerin",
+              "Kalren",
+              "Karin",
+              "Kelren",
+              "Krenel",
+              "Ladren",
+              "Lalen",
+              "Lardel",
+              "Lerin",
+              "Malren",
+              "Marin",
+              "Melren",
+              "Moren",
+              "Nadren",
+              "Nalen",
+              "Nardel",
+              "Nerin",
+              "Odren",
+              "Olen",
+              "Ordel",
+              "Osren",
+              "Padren",
+              "Palen",
+              "Pardel",
+              "Perin",
+              "Qualen",
+              "Quaren",
+              "Ralren",
+              "Rarin",
+              "Relren",
+              "Roren",
+              "Sadren",
+              "Salen",
+              "Sardel",
+              "Serin",
+              "Talren",
+              "Tarin",
+              "Telren",
+              "Toren",
+              "Udren",
+              "Ulen",
+              "Urdel",
+              "Usren",
+              "Vadren",
+              "Valen",
+              "Vardel",
+              "Verin",
+              "Wadren",
+              "Walen",
+              "Wardel",
+              "Werin",
+              "Xalen",
+              "Xaren",
+              "Ydren",
+              "Ylen",
+              "Yrdel",
+              "Ysren",
+              "Zadren",
+              "Zalen",
+              "Zardel",
+              "Zerin"
+            ]
+          }
+        ],
+        "footer": "Aleria Almanach · Morgar 2.0 · 1.100 Namen"
+      }
+    },
+    {
+      "pageTitle": "IV. — Karnrith und 72 wichtige Wortbausteine",
+      "scriptTablePage": true,
+      "scriptTable": {
+        "archiveLabel": "Karnrith Tiefenrunen · Fels, Raum, Blut, Hand und Geist",
+        "title": "Karnrith-Zeichen und Morgar-Silben",
+        "subtitle": "30 überlieferte Schriftzeichen · 72 Bausteine für die heutige Sprache",
+        "ornamentText": "MORGAR · KARNRITH · GARUM · DARAK",
+        "scriptStyle": "karnrith",
+        "symbolHeader": "Zeichen",
+        "nameHeader": "Überlieferter Zeichenname",
+        "soundHeader": "Tastatureingabe",
+        "meaningHeader": "Sinnbild der Rune",
+        "rows": [
+          {
+            "symbol": "A",
+            "name": "Ard",
+            "sound": "A",
+            "meaning": "Erde, Stoff, Grund"
+          },
+          {
+            "symbol": "K",
+            "name": "Karn",
+            "sound": "K",
+            "meaning": "Stein, Form, Dauer"
+          },
+          {
+            "symbol": "G",
+            "name": "Gór",
+            "sound": "G",
+            "meaning": "Erz, Metall, Wert"
+          },
+          {
+            "symbol": "F",
+            "name": "Faurn",
+            "sound": "F",
+            "meaning": "Feuer, Hitze, Schmiede"
+          },
+          {
+            "symbol": "U",
+            "name": "Úrd",
+            "sound": "U",
+            "meaning": "Wasser, Masse, Fülle"
+          },
+          {
+            "symbol": "V",
+            "name": "Veth",
+            "sound": "V",
+            "meaning": "Luft, Wetter, Bewegung"
+          },
+          {
+            "symbol": "O",
+            "name": "Orn",
+            "sound": "O",
+            "meaning": "Ganzes, Amt, Träger"
+          },
+          {
+            "symbol": "D",
+            "name": "Dorn",
+            "sound": "D",
+            "meaning": "Grenze, Mauer, Trennung"
+          },
+          {
+            "symbol": "H",
+            "name": "Hald",
+            "sound": "H",
+            "meaning": "Haus, Halt, Obhut"
+          },
+          {
+            "symbol": "L",
+            "name": "Lann",
+            "sound": "L",
+            "meaning": "Land, Feld, Gebiet"
+          },
+          {
+            "symbol": "T",
+            "name": "Targ",
+            "sound": "T",
+            "meaning": "Weg, Richtung, Reise"
+          },
+          {
+            "symbol": "W",
+            "name": "Warg",
+            "sound": "W",
+            "meaning": "Tier, Wildnis, Herde"
+          },
+          {
+            "symbol": "B",
+            "name": "Bram",
+            "sound": "B",
+            "meaning": "Leib, Fleisch, Gewicht"
+          },
+          {
+            "symbol": "M",
+            "name": "Morn",
+            "sound": "M",
+            "meaning": "Mensch, Volk, Arbeit"
+          },
+          {
+            "symbol": "N",
+            "name": "Nair",
+            "sound": "N",
+            "meaning": "Atem, Leben, Stimme"
+          },
+          {
+            "symbol": "R",
+            "name": "Rann",
+            "sound": "R",
+            "meaning": "Sippe, Bund, Versammlung"
+          },
+          {
+            "symbol": "Y",
+            "name": "Yrn",
+            "sound": "Y",
+            "meaning": "Ahne, Saat, Fortgang"
+          },
+          {
+            "symbol": "NG",
+            "name": "Ungrum",
+            "sound": "NG",
+            "meaning": "Tod, Schweigen, Ruhe"
+          },
+          {
+            "symbol": "E",
+            "name": "Erd",
+            "sound": "E",
+            "meaning": "Tat, Vorgang, Tausch"
+          },
+          {
+            "symbol": "P",
+            "name": "Parg",
+            "sound": "P",
+            "meaning": "Hand, Werk, Machen"
+          },
+          {
+            "symbol": "S",
+            "name": "Skar",
+            "sound": "S",
+            "meaning": "Schnitt, Waffe, Streit"
+          },
+          {
+            "symbol": "TH",
+            "name": "Tharn",
+            "sound": "TH",
+            "meaning": "Eid, Recht, Bindung"
+          },
+          {
+            "symbol": "KH",
+            "name": "Khorr",
+            "sound": "KH",
+            "meaning": "Bruch, Wandel, Prüfung"
+          },
+          {
+            "symbol": "Z",
+            "name": "Zarn",
+            "sound": "Z",
+            "meaning": "Schirm, Wacht, Erhalt"
+          },
+          {
+            "symbol": "I",
+            "name": "Írin",
+            "sound": "I",
+            "meaning": "Werkzeug, Teil, Genauigkeit"
+          },
+          {
+            "symbol": "GH",
+            "name": "Ghair",
+            "sound": "GH",
+            "meaning": "Wort, Name, Wahrheit"
+          },
+          {
+            "symbol": "SH",
+            "name": "Shenn",
+            "sound": "SH",
+            "meaning": "Gedächtnis, Wissen, Erzählung"
+          },
+          {
+            "symbol": "CH",
+            "name": "Chor",
+            "sound": "CH",
+            "meaning": "Wille, Ehre, Absicht"
+          },
+          {
+            "symbol": "DH",
+            "name": "Dhair",
+            "sound": "DH",
+            "meaning": "Gott, Schicksal, Jenseits"
+          },
+          {
+            "symbol": "Q",
+            "name": "Qarn",
+            "sound": "Q",
+            "meaning": "Magie, Verborgenes, Geist"
+          }
+        ],
+        "syllablesTitle": "72 Silben, Endungen und freie Bindewörter",
+        "syllablesSubtitle": "Die folgenden kurzen Bausteine bilden Wörter. Die alten Zeichennamen darüber sind Merknamen der Schrift und werden nicht zu neuen Wortketten zusammengefügt.",
+        "syllableHeader": "Silbe",
+        "syllableMeaningHeader": "Bedeutung",
+        "syllableUsageHeader": "Verwendung",
+        "syllables": [
+          {
+            "syllable": "dar",
+            "meaning": "Herrschaft, Führung",
+            "usage": "Darak · König; Daran · Herr oder Herrin"
+          },
+          {
+            "syllable": "bar",
+            "meaning": "Lehen, geschuldeter Dienst",
+            "usage": "Baran · Vasall; Bara · Lehen"
+          },
+          {
+            "syllable": "tor",
+            "meaning": "Grenze, befestigter Übergang",
+            "usage": "Torak · Markgraf; Tora · Grenze"
+          },
+          {
+            "syllable": "bal",
+            "meaning": "Verwaltung, geordneter Bezirk",
+            "usage": "Balor · Vogt; Balan · Amtmann"
+          },
+          {
+            "syllable": "kel",
+            "meaning": "Können, anerkanntes Handwerk",
+            "usage": "Kelor · Meister; Kela · Fertigkeit"
+          },
+          {
+            "syllable": "gar",
+            "meaning": "Wehrkraft, bewaffneter Schutz",
+            "usage": "Garan · Krieger; Garum · Heer"
+          },
+          {
+            "syllable": "kar",
+            "meaning": "Stein, tragendes Mauerwerk",
+            "usage": "Kara · Stein; Karun · Feste"
+          },
+          {
+            "syllable": "gor",
+            "meaning": "Metall, geschmiedete Stärke",
+            "usage": "Gora · Eisen; Gorak · Stahl"
+          },
+          {
+            "syllable": "mor",
+            "meaning": "Volk, gemeinsame Zugehörigkeit",
+            "usage": "Mora · Volk; Moran · Angehöriger"
+          },
+          {
+            "syllable": "nar",
+            "meaning": "Sippe, Nähe, Blutsverwandtschaft",
+            "usage": "Nara · Sippe; Narin · Kind"
+          },
+          {
+            "syllable": "dor",
+            "meaning": "Haus, eigener Herd",
+            "usage": "Dora · Haus; Dorin · Zuhause"
+          },
+          {
+            "syllable": "dun",
+            "meaning": "Schutzhalle, umwehrter Wohnort",
+            "usage": "Duna · Burg; Dunor · Burghüter"
+          },
+          {
+            "syllable": "ran",
+            "meaning": "Rat, abgewogene Entscheidung",
+            "usage": "Rana · Rat; Ranor · Ratsherr"
+          },
+          {
+            "syllable": "kal",
+            "meaning": "Recht, verbindliche Ordnung",
+            "usage": "Kala · Recht; Kalor · Richter"
+          },
+          {
+            "syllable": "var",
+            "meaning": "Eid, zugesagte Treue",
+            "usage": "Vara · Eid; Varen · schwören"
+          },
+          {
+            "syllable": "bel",
+            "meaning": "Wert, Tausch, Handel",
+            "usage": "Bela · Geld; Belor · Händler"
+          },
+          {
+            "syllable": "tal",
+            "meaning": "Boden, Acker, nutzbares Land",
+            "usage": "Tala · Acker; Talor · Bauer"
+          },
+          {
+            "syllable": "fal",
+            "meaning": "Feuer, Hitze, Herdglut",
+            "usage": "Fala · Feuer; Falun · Esse"
+          },
+          {
+            "syllable": "dal",
+            "meaning": "Weg, Fortgang, Reise",
+            "usage": "Dala · Weg; Dalen · gehen"
+          },
+          {
+            "syllable": "mar",
+            "meaning": "Wasser, Fluss, Strömung",
+            "usage": "Mara · Wasser; Marun · Fluss"
+          },
+          {
+            "syllable": "brag",
+            "meaning": "Stoß, Angriff, wilde Entschlossenheit",
+            "usage": "Braga · Angriff; Bragen · angreifen"
+          },
+          {
+            "syllable": "drum",
+            "meaning": "Tritt, Marsch, gemeinsamer Takt",
+            "usage": "Druma · Marsch; Drumen · marschieren"
+          },
+          {
+            "syllable": "skel",
+            "meaning": "Schild, Abwehr, geschlossener Schutz",
+            "usage": "Skela · Schild; Skelum · Schildwall"
+          },
+          {
+            "syllable": "kren",
+            "meaning": "Klinge, Schnitt, Trennung",
+            "usage": "Krena · Schwert; Krenen · schneiden"
+          },
+          {
+            "syllable": "bran",
+            "meaning": "Banner, sichtbare Gefolgschaft",
+            "usage": "Brana · Banner; Branor · Bannerträger"
+          },
+          {
+            "syllable": "thal",
+            "meaning": "Wache, wachsamer Blick",
+            "usage": "Thala · Wache; Thalen · wachen"
+          },
+          {
+            "syllable": "gren",
+            "meaning": "Reiten, Pferd, schnelle Bewegung",
+            "usage": "Grena · Pferd; Grenor · Reiter"
+          },
+          {
+            "syllable": "dren",
+            "meaning": "Last, Zug, schweres Tragen",
+            "usage": "Drena · Last; Drenen · tragen"
+          },
+          {
+            "syllable": "dur",
+            "meaning": "Standhalten, Ausdauer",
+            "usage": "Dura · Ausdauer; Duren · ausharren"
+          },
+          {
+            "syllable": "rag",
+            "meaning": "Wunde, gewaltsamer Bruch",
+            "usage": "Raga · Wunde; Ragen · verwunden"
+          },
+          {
+            "syllable": "ren",
+            "meaning": "Heilung, Rückkehr der Kraft",
+            "usage": "Rena · Heilung; Renor · Heiler"
+          },
+          {
+            "syllable": "kun",
+            "meaning": "Wissen, Lernen, Erinnern",
+            "usage": "Kuna · Wissen; Kunor · Lehrer"
+          },
+          {
+            "syllable": "gan",
+            "meaning": "Stimme, Ruf, verkündetes Wort",
+            "usage": "Gana · Stimme; Ganen · sprechen"
+          },
+          {
+            "syllable": "sag",
+            "meaning": "Erzählung, erinnerte Tat",
+            "usage": "Saga · Geschichte; Sagor · Erzähler"
+          },
+          {
+            "syllable": "rul",
+            "meaning": "Zeichen, Schrift, festgehaltenes Wort",
+            "usage": "Rula · Schrift; Rulen · schreiben"
+          },
+          {
+            "syllable": "lir",
+            "meaning": "Lied, Klang, gesungene Erinnerung",
+            "usage": "Lira · Lied; Liren · singen"
+          },
+          {
+            "syllable": "ber",
+            "meaning": "Brot, sättigende Nahrung",
+            "usage": "Bera · Brot; Beren · essen"
+          },
+          {
+            "syllable": "mel",
+            "meaning": "Mehl, Mahlen, zerkleinertes Korn",
+            "usage": "Mela · Mehl; Melor · Müller"
+          },
+          {
+            "syllable": "dol",
+            "meaning": "Holz, Balken, tragender Baum",
+            "usage": "Dola · Holz; Dolor · Zimmermann"
+          },
+          {
+            "syllable": "kur",
+            "meaning": "Fell, Leder, wetterfeste Haut",
+            "usage": "Kura · Leder; Kuror · Gerber"
+          },
+          {
+            "syllable": "len",
+            "meaning": "Tuch, Faden, Gewebe",
+            "usage": "Lena · Tuch; Lenor · Weber"
+          },
+          {
+            "syllable": "bor",
+            "meaning": "Bier, Gärung, geselliges Trinken",
+            "usage": "Bora · Bier; Boror · Brauer"
+          },
+          {
+            "syllable": "kor",
+            "meaning": "Korn, Samen, Vorrat",
+            "usage": "Kora · Korn; Korun · Speicher"
+          },
+          {
+            "syllable": "lun",
+            "meaning": "Nacht, Dunkel, ruhende Stunden",
+            "usage": "Luna · Nacht; Lunen · schlafen"
+          },
+          {
+            "syllable": "sol",
+            "meaning": "Tag, Helligkeit, Sonnenwärme",
+            "usage": "Sola · Tag; Solin · Morgen"
+          },
+          {
+            "syllable": "grun",
+            "meaning": "Tiefe, Stollen, Erde unter den Füßen",
+            "usage": "Gruna · Stollen; Grunor · Bergmann"
+          },
+          {
+            "syllable": "tur",
+            "meaning": "Höhe, Turm, aufragende Form",
+            "usage": "Tura · Turm; Turak · Berg"
+          },
+          {
+            "syllable": "fer",
+            "meaning": "Freundschaft, freiwilliger Beistand",
+            "usage": "Fera · Freundschaft; Feran · Freund"
+          },
+          {
+            "syllable": "ser",
+            "meaning": "Stille, Frieden, ruhiger Atem",
+            "usage": "Sera · Frieden; Seren · ruhen"
+          },
+          {
+            "syllable": "vel",
+            "meaning": "Wollen, eigener Entschluss",
+            "usage": "Vela · Wille; Velen · wollen"
+          },
+          {
+            "syllable": "del",
+            "meaning": "Gabe, Überlassung",
+            "usage": "Dela · Geschenk; Delen · geben"
+          },
+          {
+            "syllable": "nem",
+            "meaning": "Nehmen, Empfangen",
+            "usage": "Nema · Anteil; Nemen · nehmen"
+          },
+          {
+            "syllable": "sel",
+            "meaning": "Sehen, erkennbares Licht",
+            "usage": "Sela · Auge; Selen · sehen"
+          },
+          {
+            "syllable": "rum",
+            "meaning": "Hören, Geräusch, Widerhall",
+            "usage": "Ruma · Ohr; Rumen · hören"
+          },
+          {
+            "syllable": "dag",
+            "meaning": "Hand, Griff, angepackte Arbeit",
+            "usage": "Daga · Hand; Dagen · tun"
+          },
+          {
+            "syllable": "bur",
+            "meaning": "Bauen, Errichten",
+            "usage": "Bura · Bau; Buren · bauen"
+          },
+          {
+            "syllable": "drek",
+            "meaning": "Brechen, Zerschlagen",
+            "usage": "Dreka · Bruch; Dreken · brechen"
+          },
+          {
+            "syllable": "kam",
+            "meaning": "Kommen, Ankunft",
+            "usage": "Kama · Ankunft; Kamen · kommen"
+          },
+          {
+            "syllable": "sul",
+            "meaning": "Salz, Haltbarmachen",
+            "usage": "Sula · Salz; Sulen · salzen"
+          },
+          {
+            "syllable": "zir",
+            "meaning": "Bindung, Ring, geschlossener Kreis",
+            "usage": "Zira · Ring; Ziren · binden"
+          },
+          {
+            "syllable": "-a",
+            "meaning": "Ding, Stoff oder Vorgang",
+            "usage": "kar → Kara · Stein; var → Vara · Eid"
+          },
+          {
+            "syllable": "-an",
+            "meaning": "Zugehörige Person",
+            "usage": "mor → Moran · Angehöriger; bar → Baran · Vasall"
+          },
+          {
+            "syllable": "-or",
+            "meaning": "Ausgeübtes Amt oder Handwerk",
+            "usage": "kal → Kalor · Richter; kel → Kelor · Meister"
+          },
+          {
+            "syllable": "-ak",
+            "meaning": "Gesteigerte oder besonders mächtige Form",
+            "usage": "dar → Darak · König; gor → Gorak · Stahl"
+          },
+          {
+            "syllable": "-in",
+            "meaning": "Vertraute, kleine oder innere Form",
+            "usage": "dor → Dorin · Zuhause; nar → Narin · Kind"
+          },
+          {
+            "syllable": "-um",
+            "meaning": "Geordnete Gemeinschaft oder Formation",
+            "usage": "gar → Garum · Heer; skel → Skelum · Schildwall"
+          },
+          {
+            "syllable": "-un",
+            "meaning": "Ort, Behältnis oder dauerhafte Anlage",
+            "usage": "kor → Korun · Speicher; fal → Falun · Esse"
+          },
+          {
+            "syllable": "-en",
+            "meaning": "Tätigkeit; unveränderte Verbgrundform",
+            "usage": "gan → Ganen · sprechen; bur → Buren · bauen"
+          },
+          {
+            "syllable": "-al",
+            "meaning": "Eigenschaft oder Zugehörigkeit",
+            "usage": "gar → Garal · wehrhaft; var → Varal · treu"
+          },
+          {
+            "syllable": "ar",
+            "meaning": "Hoch, vorrangig; frei vor einen Titel gesetzt",
+            "usage": "Ar Darak · Hochkönig; Ar Kelor · Obermeister"
+          },
+          {
+            "syllable": "na",
+            "meaning": "Von, aus, zugehörig zu",
+            "usage": "Darak na Karun · König der Feste"
+          },
+          {
+            "syllable": "ir",
+            "meaning": "Mehrzahl vor dem Hauptwort",
+            "usage": "ir Garan · Krieger; ir Dora · Häuser"
+          }
+        ],
+        "footer": "Aleria Almanach · Morgar 2.0 · Gesellschaft, Lehen, Heer und Alltag"
+      }
+    },
+    {
+      "pageTitle": "V. — Die 360 wichtigsten Wörter · A–Z",
+      "enableComments": false,
+      "scriptTablePage": true,
+      "scriptTable": {
+        "archiveLabel": "Morgar 2.0 · Wörter des täglichen Lebens",
+        "title": "360 Wörter für Halle, Lehen und Heer",
+        "subtitle": "A–Z · Dreizehn Lebensbereiche · Die GROSS geschriebene Silbe trägt den Hauptdruck. Ein Leerzeichen trennt eigenständige Wörter, ein Punkt trennt Sprechsilben.",
+        "ornamentText": "",
+        "scriptStyle": "plain",
+        "symbolHeader": "Morgar",
+        "nameHeader": "Deutsch",
+        "soundHeader": "So wird es gesprochen",
+        "meaningHeader": "Lebensbereich · Gebrauch",
+        "rows": [
+          {
+            "symbol": "an",
+            "name": "zu oder für",
+            "sound": "AN",
+            "meaning": "Kleine Wörter und Zahlen · Bezeichnet Empfänger oder Ziel."
+          },
+          {
+            "symbol": "ar darak",
+            "name": "Hochkönig oder Hochkönigin",
+            "sound": "AR DA·rak",
+            "meaning": "Feudalstand · Vorrang über mehrere anerkannte Kronen."
+          },
+          {
+            "symbol": "ar kelor",
+            "name": "Obermeister",
+            "sound": "AR KE·lor",
+            "meaning": "Handwerk · Sprecher mehrerer Meister einer Zunft."
+          },
+          {
+            "symbol": "aral",
+            "name": "groß",
+            "sound": "AR·al",
+            "meaning": "Natur und Zeit · Von erheblicher Größe oder weitem Umfang."
+          },
+          {
+            "symbol": "ardor",
+            "name": "Herzog oder Herzogin",
+            "sound": "AR·dor",
+            "meaning": "Feudalstand · Hoher Lehnsfürst über mehrere Grafschaften."
+          },
+          {
+            "symbol": "balan",
+            "name": "Amtmann",
+            "sound": "BA·lan",
+            "meaning": "Feudalstand · Führt die tägliche Verwaltung eines Bezirks."
+          },
+          {
+            "symbol": "balin",
+            "name": "Kupfer",
+            "sound": "BA·lin",
+            "meaning": "Handwerk · Weiches rötliches Gebrauchsmetall."
+          },
+          {
+            "symbol": "balor",
+            "name": "Vogt",
+            "sound": "BA·lor",
+            "meaning": "Feudalstand · Vertritt die Herrschaft vor Ort."
+          },
+          {
+            "symbol": "bara",
+            "name": "Lehen",
+            "sound": "BA·ra",
+            "meaning": "Feudalstand · Überlassenes Land, Recht oder Amt."
+          },
+          {
+            "symbol": "barad",
+            "name": "Frondienst",
+            "sound": "BA·rad",
+            "meaning": "Recht · Geschuldete Arbeit auf herrschaftlichem Grund."
+          },
+          {
+            "symbol": "barak",
+            "name": "Graf oder Gräfin",
+            "sound": "BA·rak",
+            "meaning": "Feudalstand · Lehnsherr über eine Grafschaft."
+          },
+          {
+            "symbol": "baran",
+            "name": "Vasall",
+            "sound": "BA·ran",
+            "meaning": "Feudalstand · Trägt ein Lehen gegen Eid und Dienst."
+          },
+          {
+            "symbol": "barin",
+            "name": "Höriger",
+            "sound": "BA·rin",
+            "meaning": "Gesellschaft · An ein Lehen gebundene, persönlich geschützte Person."
+          },
+          {
+            "symbol": "barla",
+            "name": "Ziege",
+            "sound": "BAR·la",
+            "meaning": "Versorgung · Genügsames Herdentier des Berglands."
+          },
+          {
+            "symbol": "baror",
+            "name": "Baron oder Baronin",
+            "sound": "BA·ror",
+            "meaning": "Feudalstand · Lehnsherr einer kleineren Herrschaft."
+          },
+          {
+            "symbol": "barun",
+            "name": "Lehnsgebiet",
+            "sound": "BA·run",
+            "meaning": "Feudalstand · Zum Lehen gehörige Ländereien."
+          },
+          {
+            "symbol": "bela",
+            "name": "Geld",
+            "sound": "BE·la",
+            "meaning": "Handel · Anerkanntes Zahlungsmittel."
+          },
+          {
+            "symbol": "belad",
+            "name": "Lohn",
+            "sound": "BE·lad",
+            "meaning": "Handel · Entgelt für geleistete Arbeit."
+          },
+          {
+            "symbol": "belak",
+            "name": "Preis",
+            "sound": "BE·lak",
+            "meaning": "Handel · Verlangter Gegenwert für eine Ware."
+          },
+          {
+            "symbol": "belan",
+            "name": "Bürger",
+            "sound": "BE·lan",
+            "meaning": "Gesellschaft · Freier Angehöriger einer Marktgemeinde."
+          },
+          {
+            "symbol": "belar",
+            "name": "Gewinn",
+            "sound": "BE·lar",
+            "meaning": "Handel · Verbleibender Überschuss nach einem Handel."
+          },
+          {
+            "symbol": "beldar",
+            "name": "Abgabe",
+            "sound": "BEL·dar",
+            "meaning": "Recht · Regelmäßig geschuldete Leistung an die Herrschaft."
+          },
+          {
+            "symbol": "belen",
+            "name": "handeln",
+            "sound": "BE·len",
+            "meaning": "Handlungen · Waren und Gegenwerte miteinander aushandeln."
+          },
+          {
+            "symbol": "belin",
+            "name": "Gebühr",
+            "sound": "BE·lin",
+            "meaning": "Recht · Zahlung für eine bestimmte Leistung oder Erlaubnis."
+          },
+          {
+            "symbol": "belir",
+            "name": "Münze",
+            "sound": "BE·lir",
+            "meaning": "Handel · Geprägtes Geldstück."
+          },
+          {
+            "symbol": "belkar",
+            "name": "Stadt",
+            "sound": "BEL·kar",
+            "meaning": "Orte · Befestigte Marktgemeinde mit eigenem Recht."
+          },
+          {
+            "symbol": "belor",
+            "name": "Händler",
+            "sound": "BE·lor",
+            "meaning": "Handel · Kauft und verkauft Waren als Beruf."
+          },
+          {
+            "symbol": "belor dar",
+            "name": "Kämmerer",
+            "sound": "BE·lor DAR",
+            "meaning": "Feudalstand · Verwaltet Schatz, Einkünfte und Ausgaben des Hofes."
+          },
+          {
+            "symbol": "belum",
+            "name": "Handelsbund",
+            "sound": "BE·lum",
+            "meaning": "Handel · Gemeinschaft von Händlern mit gemeinsamen Regeln."
+          },
+          {
+            "symbol": "belun",
+            "name": "Markt",
+            "sound": "BE·lun",
+            "meaning": "Orte · Ort des geregelten Handels."
+          },
+          {
+            "symbol": "belvar",
+            "name": "Schuld",
+            "sound": "BEL·var",
+            "meaning": "Recht · Noch zu erfüllende Zahlung oder Leistung."
+          },
+          {
+            "symbol": "bera",
+            "name": "Brot",
+            "sound": "BE·ra",
+            "meaning": "Versorgung · Gebackenes Grundnahrungsmittel."
+          },
+          {
+            "symbol": "beral",
+            "name": "Käse",
+            "sound": "BE·ral",
+            "meaning": "Versorgung · Fest gewordene, haltbare Milch."
+          },
+          {
+            "symbol": "beren",
+            "name": "essen",
+            "sound": "BE·ren",
+            "meaning": "Handlungen · Nahrung zu sich nehmen."
+          },
+          {
+            "symbol": "berin",
+            "name": "Bissen",
+            "sound": "BE·rin",
+            "meaning": "Versorgung · Kleine Portion einer Speise."
+          },
+          {
+            "symbol": "beror",
+            "name": "Bäcker",
+            "sound": "BE·ror",
+            "meaning": "Handwerk · Bereitet Brot und Backwaren."
+          },
+          {
+            "symbol": "berun",
+            "name": "Proviant",
+            "sound": "BE·run",
+            "meaning": "Versorgung · Für Reise oder Feldzug bereitgestellte Nahrung."
+          },
+          {
+            "symbol": "bora",
+            "name": "Bier",
+            "sound": "BO·ra",
+            "meaning": "Versorgung · Gegorenes Getränk aus Korn."
+          },
+          {
+            "symbol": "borak",
+            "name": "Starkbier",
+            "sound": "BO·rak",
+            "meaning": "Versorgung · Kräftiges Bier für Fest und Vorrat."
+          },
+          {
+            "symbol": "borin",
+            "name": "Dünnbier",
+            "sound": "BO·rin",
+            "meaning": "Versorgung · Leichtes Alltagsbier."
+          },
+          {
+            "symbol": "boror",
+            "name": "Brauer",
+            "sound": "BO·ror",
+            "meaning": "Handwerk · Stellt Bier und verwandte Getränke her."
+          },
+          {
+            "symbol": "borun",
+            "name": "Schenke",
+            "sound": "BO·run",
+            "meaning": "Orte · Öffentliches Haus für Bier und einfache Speisen."
+          },
+          {
+            "symbol": "braga",
+            "name": "Angriff",
+            "sound": "BRA·ga",
+            "meaning": "Militär · Vorgehen gegen eine gegnerische Stellung."
+          },
+          {
+            "symbol": "bragen",
+            "name": "angreifen",
+            "sound": "BRA·gen",
+            "meaning": "Handlungen · Im Kampf entschlossen vorgehen."
+          },
+          {
+            "symbol": "bragum",
+            "name": "Stoßtrupp",
+            "sound": "BRA·gum",
+            "meaning": "Militär · Kleine Einheit für einen entschlossenen Angriff."
+          },
+          {
+            "symbol": "braka",
+            "name": "Axt",
+            "sound": "BRA·ka",
+            "meaning": "Waffen · Werkzeug und Waffe mit querstehender Schneide."
+          },
+          {
+            "symbol": "brakin",
+            "name": "Beil",
+            "sound": "BRA·kin",
+            "meaning": "Waffen · Kurze, einhändig geführte Axt."
+          },
+          {
+            "symbol": "brakor",
+            "name": "Streitaxt",
+            "sound": "BRA·kor",
+            "meaning": "Waffen · Für den Kampf ausgewogene Axt."
+          },
+          {
+            "symbol": "brana",
+            "name": "Banner",
+            "sound": "BRA·na",
+            "meaning": "Militär · Sichtbares Zeichen einer Gefolgschaft."
+          },
+          {
+            "symbol": "branor",
+            "name": "Bannerträger",
+            "sound": "BRA·nor",
+            "meaning": "Militär · Trägt und schützt das Zeichen im Feld."
+          },
+          {
+            "symbol": "brena",
+            "name": "Herz",
+            "sound": "BRE·na",
+            "meaning": "Körper und Familie · Körperorgan; auch Sitz des Mutes."
+          },
+          {
+            "symbol": "bruna",
+            "name": "Blut",
+            "sound": "BRU·na",
+            "meaning": "Körper und Familie · Lebenssaft; in Schwüren Zeichen der Verwandtschaft."
+          },
+          {
+            "symbol": "bura",
+            "name": "Bau",
+            "sound": "BU·ra",
+            "meaning": "Handwerk · Arbeit am Errichten oder deren unfertiges Ergebnis."
+          },
+          {
+            "symbol": "buren",
+            "name": "bauen",
+            "sound": "BU·ren",
+            "meaning": "Handlungen · Ein Bauwerk oder Gerät errichten."
+          },
+          {
+            "symbol": "da",
+            "name": "er oder sie",
+            "sound": "DA",
+            "meaning": "Kleine Wörter und Zahlen · Dritte Person der Einzahl, ohne Geschlechtsunterscheidung."
+          },
+          {
+            "symbol": "daga",
+            "name": "Hand",
+            "sound": "DA·ga",
+            "meaning": "Körper und Familie · Greifendes Glied; Sinnbild tätiger Arbeit."
+          },
+          {
+            "symbol": "dagen",
+            "name": "tun",
+            "sound": "DA·gen",
+            "meaning": "Handlungen · Eine Handlung ausführen; allgemeines Tätigkeitswort."
+          },
+          {
+            "symbol": "dagin",
+            "name": "Finger",
+            "sound": "DA·gin",
+            "meaning": "Körper und Familie · Einzelnes Glied der Hand."
+          },
+          {
+            "symbol": "dagoskel",
+            "name": "Panzerhandschuh",
+            "sound": "DA·go·skel",
+            "meaning": "Waffen · Gegliederter Schutz der Waffenhand."
+          },
+          {
+            "symbol": "dala",
+            "name": "Weg",
+            "sound": "DA·la",
+            "meaning": "Handel · Begehbare Verbindung zwischen Orten."
+          },
+          {
+            "symbol": "dalad",
+            "name": "Reise",
+            "sound": "DA·lad",
+            "meaning": "Handel · Weg zu einem entfernten Ort mit bestimmtem Ziel."
+          },
+          {
+            "symbol": "dalak",
+            "name": "Heerstraße",
+            "sound": "DA·lak",
+            "meaning": "Handel · Breite, unterhaltene Fernverbindung."
+          },
+          {
+            "symbol": "dalen",
+            "name": "gehen",
+            "sound": "DA·len",
+            "meaning": "Handlungen · Sich zu Fuß fortbewegen."
+          },
+          {
+            "symbol": "dalgar",
+            "name": "Fußsoldat",
+            "sound": "DAL·gar",
+            "meaning": "Militär · Kämpfer, der zu Fuß ins Feld zieht."
+          },
+          {
+            "symbol": "dalin",
+            "name": "Pfad",
+            "sound": "DA·lin",
+            "meaning": "Handel · Schmaler Weg für einzelne Reisende."
+          },
+          {
+            "symbol": "dalmar",
+            "name": "Brücke",
+            "sound": "DAL·mar",
+            "meaning": "Orte · Gebauter Weg über Wasser oder eine Kluft."
+          },
+          {
+            "symbol": "dalor",
+            "name": "Wegführer",
+            "sound": "DA·lor",
+            "meaning": "Handel · Kennt und führt durch ein bestimmtes Gebiet."
+          },
+          {
+            "symbol": "dalun",
+            "name": "Rückzugsweg",
+            "sound": "DA·lun",
+            "meaning": "Militär · Gesicherter Weg aus einer gefährdeten Stellung."
+          },
+          {
+            "symbol": "darak",
+            "name": "König oder Königin",
+            "sound": "DA·rak",
+            "meaning": "Feudalstand · Oberste erbliche Herrschaft; Titel für jedes Geschlecht."
+          },
+          {
+            "symbol": "daran",
+            "name": "Herr oder Herrin",
+            "sound": "DA·ran",
+            "meaning": "Feudalstand · Anrede eines anerkannten Herrschaftsträgers."
+          },
+          {
+            "symbol": "darin",
+            "name": "Prinz oder Prinzessin",
+            "sound": "DA·rin",
+            "meaning": "Feudalstand · Kind des regierenden Hauses."
+          },
+          {
+            "symbol": "daror",
+            "name": "Seneschall",
+            "sound": "DA·ror",
+            "meaning": "Feudalstand · Leitet Haushalt und Hofverwaltung."
+          },
+          {
+            "symbol": "darum",
+            "name": "Hofstaat",
+            "sound": "DA·rum",
+            "meaning": "Feudalstand · Amtsträger und Haushalt um die Herrschaft."
+          },
+          {
+            "symbol": "darun",
+            "name": "Königreich",
+            "sound": "DA·run",
+            "meaning": "Feudalstand · Gebiet unter einer Krone."
+          },
+          {
+            "symbol": "dek",
+            "name": "zehn",
+            "sound": "DEK",
+            "meaning": "Kleine Wörter und Zahlen · Zahlwort vor dem Hauptwort."
+          },
+          {
+            "symbol": "dela",
+            "name": "Geschenk",
+            "sound": "DE·la",
+            "meaning": "Handel · Frei überlassene Gabe ohne Gegenforderung."
+          },
+          {
+            "symbol": "delen",
+            "name": "geben",
+            "sound": "DE·len",
+            "meaning": "Handlungen · Etwas einem anderen überlassen."
+          },
+          {
+            "symbol": "delin",
+            "name": "Page",
+            "sound": "DE·lin",
+            "meaning": "Feudalstand · Junger Dienstangehöriger des Hofes."
+          },
+          {
+            "symbol": "do",
+            "name": "Vergangenheitszeichen",
+            "sound": "DO",
+            "meaning": "Kleine Wörter und Zahlen · Steht vor dem unveränderten Verb."
+          },
+          {
+            "symbol": "dola",
+            "name": "Holz",
+            "sound": "DO·la",
+            "meaning": "Handwerk · Baustoff aus Stamm und Ästen."
+          },
+          {
+            "symbol": "dolin",
+            "name": "Ast",
+            "sound": "DO·lin",
+            "meaning": "Natur und Zeit · Seitlicher Wuchs eines Baumes."
+          },
+          {
+            "symbol": "dolor",
+            "name": "Zimmermann",
+            "sound": "DO·lor",
+            "meaning": "Handwerk · Errichtet Bauwerke aus Holz."
+          },
+          {
+            "symbol": "dolun",
+            "name": "Wald",
+            "sound": "DO·lun",
+            "meaning": "Natur und Zeit · Großer Bestand zusammenwachsender Bäume."
+          },
+          {
+            "symbol": "dora",
+            "name": "Haus",
+            "sound": "DO·ra",
+            "meaning": "Gesellschaft · Gebäude; auch ein anerkanntes Adelshaus."
+          },
+          {
+            "symbol": "doran",
+            "name": "Hausangehöriger",
+            "sound": "DO·ran",
+            "meaning": "Gesellschaft · Person im Schutz und Dienst eines Hauses."
+          },
+          {
+            "symbol": "dorbel",
+            "name": "Pacht",
+            "sound": "DOR·bel",
+            "meaning": "Recht · Entgelt für die zeitweilige Nutzung eines Besitzes."
+          },
+          {
+            "symbol": "dorin",
+            "name": "Zuhause",
+            "sound": "DO·rin",
+            "meaning": "Orte · Vertrauter Ort des eigenen Haushalts."
+          },
+          {
+            "symbol": "dorun",
+            "name": "Dorf",
+            "sound": "DO·run",
+            "meaning": "Orte · Kleine dauerhafte Siedlung."
+          },
+          {
+            "symbol": "dragun",
+            "name": "Amboss",
+            "sound": "DRA·gun",
+            "meaning": "Handwerk · Schwere Unterlage für Schmiedearbeit."
+          },
+          {
+            "symbol": "draka",
+            "name": "Hammer",
+            "sound": "DRA·ka",
+            "meaning": "Waffen · Schlagwerkzeug mit schwerem Kopf."
+          },
+          {
+            "symbol": "drakor",
+            "name": "Kriegshammer",
+            "sound": "DRA·kor",
+            "meaning": "Waffen · Hammer mit verstärkter Schlagfläche und Spitze."
+          },
+          {
+            "symbol": "dreka",
+            "name": "Bruch",
+            "sound": "DRE·ka",
+            "meaning": "Handwerk · Durch Gewalt oder Belastung entstandene Trennung."
+          },
+          {
+            "symbol": "dreken",
+            "name": "brechen",
+            "sound": "DRE·ken",
+            "meaning": "Handlungen · Etwas mit Kraft auseinandertrennen."
+          },
+          {
+            "symbol": "drena",
+            "name": "Last",
+            "sound": "DRE·na",
+            "meaning": "Handel · Zu tragende oder zu befördernde Güter."
+          },
+          {
+            "symbol": "drenen",
+            "name": "tragen",
+            "sound": "DRE·nen",
+            "meaning": "Handlungen · Eine Last halten und fortbewegen."
+          },
+          {
+            "symbol": "drenor",
+            "name": "Fuhrmann",
+            "sound": "DRE·nor",
+            "meaning": "Handel · Führt Wagen und Zugtiere."
+          },
+          {
+            "symbol": "drenun",
+            "name": "Wagen",
+            "sound": "DRE·nun",
+            "meaning": "Handel · Landfahrzeug für Menschen oder Lasten."
+          },
+          {
+            "symbol": "druma",
+            "name": "Marsch",
+            "sound": "DRU·ma",
+            "meaning": "Militär · Geordneter Fußweg eines Aufgebots."
+          },
+          {
+            "symbol": "drumen",
+            "name": "marschieren",
+            "sound": "DRU·men",
+            "meaning": "Handlungen · In geordnetem Takt vorangehen."
+          },
+          {
+            "symbol": "druna",
+            "name": "Fuß",
+            "sound": "DRU·na",
+            "meaning": "Körper und Familie · Trägt den Körper beim Stehen und Gehen."
+          },
+          {
+            "symbol": "drunan",
+            "name": "Ochse",
+            "sound": "DRU·nan",
+            "meaning": "Versorgung · Kräftiges Zugtier für Pflug und Wagen."
+          },
+          {
+            "symbol": "du",
+            "name": "zwei",
+            "sound": "DU",
+            "meaning": "Kleine Wörter und Zahlen · Zahlwort; ti bleibt das persönliche du."
+          },
+          {
+            "symbol": "duna",
+            "name": "Burg",
+            "sound": "DU·na",
+            "meaning": "Orte · Umwehrter Sitz eines Hauses."
+          },
+          {
+            "symbol": "dunin",
+            "name": "Wohnturm",
+            "sound": "DU·nin",
+            "meaning": "Orte · Kleiner befestigter Sitz mit Wohnräumen."
+          },
+          {
+            "symbol": "dunor",
+            "name": "Kastellan",
+            "sound": "DU·nor",
+            "meaning": "Feudalstand · Verwaltet und verteidigt eine Burg."
+          },
+          {
+            "symbol": "dura",
+            "name": "Ausdauer",
+            "sound": "DU·ra",
+            "meaning": "Körper und Familie · Kraft, unter Belastung weiterzumachen."
+          },
+          {
+            "symbol": "durak",
+            "name": "Sieg",
+            "sound": "DU·rak",
+            "meaning": "Militär · Behauptung des Feldes oder Erreichen des Kriegsziels."
+          },
+          {
+            "symbol": "dural",
+            "name": "ausdauernd",
+            "sound": "DU·ral",
+            "meaning": "Körper und Familie · Hält länger an als die gewöhnliche Kraft erlaubt."
+          },
+          {
+            "symbol": "duren",
+            "name": "ausharren",
+            "sound": "DU·ren",
+            "meaning": "Handlungen · Unter Belastung die Stellung halten."
+          },
+          {
+            "symbol": "e",
+            "name": "ja",
+            "sound": "E",
+            "meaning": "Kleine Wörter und Zahlen · Bejahende Antwort; klar gesprochenes e."
+          },
+          {
+            "symbol": "en",
+            "name": "eins",
+            "sound": "EN",
+            "meaning": "Kleine Wörter und Zahlen · Ein einzelnes Stück."
+          },
+          {
+            "symbol": "fala",
+            "name": "Feuer",
+            "sound": "FA·la",
+            "meaning": "Natur und Zeit · Brennende Flamme und ihre Wärme."
+          },
+          {
+            "symbol": "falak",
+            "name": "Brand",
+            "sound": "FA·lak",
+            "meaning": "Natur und Zeit · Großes, unkontrolliertes Feuer."
+          },
+          {
+            "symbol": "falber",
+            "name": "Eintopf",
+            "sound": "FAL·ber",
+            "meaning": "Versorgung · Im gemeinsamen Kessel gegarte Mahlzeit."
+          },
+          {
+            "symbol": "falen",
+            "name": "brennen",
+            "sound": "FA·len",
+            "meaning": "Handlungen · Feuer fangen oder in Flammen stehen."
+          },
+          {
+            "symbol": "falin",
+            "name": "Funke",
+            "sound": "FA·lin",
+            "meaning": "Natur und Zeit · Kleines glühendes Teilchen."
+          },
+          {
+            "symbol": "falun",
+            "name": "Esse",
+            "sound": "FA·lun",
+            "meaning": "Orte · Feuerstelle zum Erhitzen von Metall."
+          },
+          {
+            "symbol": "fera",
+            "name": "Freundschaft",
+            "sound": "FE·ra",
+            "meaning": "Gesellschaft · Beistand ohne Lehenspflicht."
+          },
+          {
+            "symbol": "feran",
+            "name": "Freund",
+            "sound": "FE·ran",
+            "meaning": "Gesellschaft · Frei gewählter Vertrauter."
+          },
+          {
+            "symbol": "gana",
+            "name": "Stimme",
+            "sound": "GA·na",
+            "meaning": "Körper und Familie · Hörbarer Ausdruck einer Person."
+          },
+          {
+            "symbol": "gana gar",
+            "name": "Befehl",
+            "sound": "GA·na GAR",
+            "meaning": "Militär · Verbindliche Anweisung im militärischen Dienst."
+          },
+          {
+            "symbol": "ganen",
+            "name": "sprechen",
+            "sound": "GA·nen",
+            "meaning": "Handlungen · Auch rufen; im Befehl: Ganen! · Sprich!"
+          },
+          {
+            "symbol": "ganin",
+            "name": "Mund",
+            "sound": "GA·nin",
+            "meaning": "Körper und Familie · Ort des Sprechens und Essens."
+          },
+          {
+            "symbol": "ganor",
+            "name": "Herold",
+            "sound": "GA·nor",
+            "meaning": "Gesellschaft · Öffentlicher Sprecher mit anerkanntem Geleit."
+          },
+          {
+            "symbol": "gar dal",
+            "name": "Geleitschutz",
+            "sound": "GAR DAL",
+            "meaning": "Handel · Bewaffnete Begleitung für Reisende oder Waren."
+          },
+          {
+            "symbol": "garak",
+            "name": "Hauptmann",
+            "sound": "GA·rak",
+            "meaning": "Militär · Führt eine selbständige Einheit."
+          },
+          {
+            "symbol": "garal",
+            "name": "wehrhaft",
+            "sound": "GA·ral",
+            "meaning": "Militär · Zur Verteidigung bereit und fähig."
+          },
+          {
+            "symbol": "garan",
+            "name": "Krieger",
+            "sound": "GA·ran",
+            "meaning": "Militär · Bewaffneter Kämpfer, unabhängig von Stand und Geschlecht."
+          },
+          {
+            "symbol": "garan var",
+            "name": "Ritter",
+            "sound": "GA·ran VAR",
+            "meaning": "Feudalstand · Eidgebundener, ausgerüsteter Krieger mit Standesrecht."
+          },
+          {
+            "symbol": "garin",
+            "name": "Knappe",
+            "sound": "GA·rin",
+            "meaning": "Feudalstand · Person in ritterlicher Ausbildung."
+          },
+          {
+            "symbol": "garinor",
+            "name": "Unterführer",
+            "sound": "GA·ri·nor",
+            "meaning": "Militär · Leitet eine kleine Gruppe im Auftrag des Hauptmanns."
+          },
+          {
+            "symbol": "garlen",
+            "name": "Rüstung",
+            "sound": "GAR·len",
+            "meaning": "Waffen · Getragener Schutz des Körpers im Kampf; wörtlich Wehrgewand."
+          },
+          {
+            "symbol": "garor",
+            "name": "Marschall",
+            "sound": "GA·ror",
+            "meaning": "Feudalstand · Verantwortet Heerführung und Aufgebot des Hofes."
+          },
+          {
+            "symbol": "garum",
+            "name": "Heer",
+            "sound": "GA·rum",
+            "meaning": "Militär · Geordnetes Aufgebot für einen Feldzug."
+          },
+          {
+            "symbol": "garun",
+            "name": "Lager",
+            "sound": "GA·run",
+            "meaning": "Militär · Gesicherter Aufenthaltsort des Heeres."
+          },
+          {
+            "symbol": "geral",
+            "name": "stark",
+            "sound": "GE·ral",
+            "meaning": "Körper und Familie · Besitzt große körperliche Kraft."
+          },
+          {
+            "symbol": "gora",
+            "name": "Eisen",
+            "sound": "GO·ra",
+            "meaning": "Handwerk · Gebräuchliches Schmiedemetall."
+          },
+          {
+            "symbol": "gorad",
+            "name": "Brustplatte",
+            "sound": "GO·rad",
+            "meaning": "Waffen · Starre Metallplatte vor dem Oberkörper."
+          },
+          {
+            "symbol": "gorak",
+            "name": "Stahl",
+            "sound": "GO·rak",
+            "meaning": "Handwerk · Gehärtetes oder härtbares Eisen für belastbare Teile."
+          },
+          {
+            "symbol": "goren",
+            "name": "schmieden",
+            "sound": "GO·ren",
+            "meaning": "Handlungen · Erhitztes Metall mit Schlägen formen."
+          },
+          {
+            "symbol": "goreth",
+            "name": "Erz",
+            "sound": "GO·reth",
+            "meaning": "Handwerk · Metallhaltiges Gestein vor der Verhüttung."
+          },
+          {
+            "symbol": "gorlen",
+            "name": "Kettenhemd",
+            "sound": "GOR·len",
+            "meaning": "Waffen · Aus Metallringen gefügter Körperschutz."
+          },
+          {
+            "symbol": "gorna",
+            "name": "Knochen",
+            "sound": "GOR·na",
+            "meaning": "Körper und Familie · Fester tragender Teil des Körpers."
+          },
+          {
+            "symbol": "goror",
+            "name": "Schmied",
+            "sound": "GO·ror",
+            "meaning": "Handwerk · Formt Metall durch Hitze und Schläge."
+          },
+          {
+            "symbol": "gorum",
+            "name": "Werkzeug",
+            "sound": "GO·rum",
+            "meaning": "Handwerk · Zum Arbeiten gefertigtes Gerät."
+          },
+          {
+            "symbol": "gorun",
+            "name": "Schmiede",
+            "sound": "GO·run",
+            "meaning": "Orte · Werkstatt für geschmiedetes Metall."
+          },
+          {
+            "symbol": "grena",
+            "name": "Pferd",
+            "sound": "GRE·na",
+            "meaning": "Versorgung · Reit- und Zugtier."
+          },
+          {
+            "symbol": "grenen",
+            "name": "reiten",
+            "sound": "GRE·nen",
+            "meaning": "Handlungen · Sich auf dem Rücken eines Reittiers fortbewegen."
+          },
+          {
+            "symbol": "grenor",
+            "name": "Reiter",
+            "sound": "GRE·nor",
+            "meaning": "Militär · Berittener Kämpfer oder Bote."
+          },
+          {
+            "symbol": "grenum",
+            "name": "Reiterei",
+            "sound": "GRE·num",
+            "meaning": "Militär · Berittene Kämpfer eines Aufgebots."
+          },
+          {
+            "symbol": "gruna",
+            "name": "Stollen",
+            "sound": "GRU·na",
+            "meaning": "Orte · Begehbarer Gang unter der Erde."
+          },
+          {
+            "symbol": "grunor",
+            "name": "Bergmann",
+            "sound": "GRU·nor",
+            "meaning": "Handwerk · Arbeitet beim Abbau unter Tage."
+          },
+          {
+            "symbol": "grunun",
+            "name": "Mine",
+            "sound": "GRU·nun",
+            "meaning": "Orte · Anlage zum Abbau von Erz oder Stein."
+          },
+          {
+            "symbol": "gural",
+            "name": "Fleisch",
+            "sound": "GU·ral",
+            "meaning": "Versorgung · Essbares Muskelgewebe von Tieren."
+          },
+          {
+            "symbol": "ir",
+            "name": "Mehrzahlzeichen",
+            "sound": "IR",
+            "meaning": "Kleine Wörter und Zahlen · Steht vor dem Hauptwort: ir dora · Häuser."
+          },
+          {
+            "symbol": "kala",
+            "name": "Recht",
+            "sound": "KA·la",
+            "meaning": "Recht · Anerkannte Ordnung und Anspruch."
+          },
+          {
+            "symbol": "kalgar",
+            "name": "Büttel",
+            "sound": "KAL·gar",
+            "meaning": "Recht · Vollzieht Anordnungen des Gerichts."
+          },
+          {
+            "symbol": "kalin",
+            "name": "Anspruch",
+            "sound": "KA·lin",
+            "meaning": "Recht · Eingefordertes Recht oder geschuldete Leistung."
+          },
+          {
+            "symbol": "kalor",
+            "name": "Richter",
+            "sound": "KA·lor",
+            "meaning": "Recht · Spricht Urteile im zuständigen Gericht."
+          },
+          {
+            "symbol": "kalun",
+            "name": "Gericht",
+            "sound": "KA·lun",
+            "meaning": "Recht · Ort und Körperschaft der Rechtsprechung."
+          },
+          {
+            "symbol": "kama",
+            "name": "Ankunft",
+            "sound": "KA·ma",
+            "meaning": "Handel · Erreichen des Zielortes einer Reise."
+          },
+          {
+            "symbol": "kamen",
+            "name": "kommen",
+            "sound": "KA·men",
+            "meaning": "Handlungen · Sich zum Sprecher oder vereinbarten Ort bewegen."
+          },
+          {
+            "symbol": "kara",
+            "name": "Stein",
+            "sound": "KA·ra",
+            "meaning": "Orte · Einzelner Stein oder bearbeitbarer Fels."
+          },
+          {
+            "symbol": "karad",
+            "name": "Urteil",
+            "sound": "KA·rad",
+            "meaning": "Recht · Abschließender Rechtsspruch."
+          },
+          {
+            "symbol": "karel",
+            "name": "Meißel",
+            "sound": "KA·rel",
+            "meaning": "Handwerk · Werkzeug zum gezielten Abtragen von Material."
+          },
+          {
+            "symbol": "karil",
+            "name": "Kiesel",
+            "sound": "KA·ril",
+            "meaning": "Natur und Zeit · Kleiner rundgeschliffener Stein."
+          },
+          {
+            "symbol": "karor",
+            "name": "Steinmetz",
+            "sound": "KA·ror",
+            "meaning": "Handwerk · Haut und setzt Werksteine."
+          },
+          {
+            "symbol": "karum",
+            "name": "Belagerung",
+            "sound": "KA·rum",
+            "meaning": "Militär · Einschließung einer befestigten Stellung."
+          },
+          {
+            "symbol": "karun",
+            "name": "Feste",
+            "sound": "KA·run",
+            "meaning": "Orte · Starke, dauerhaft bemannte Befestigung."
+          },
+          {
+            "symbol": "ke",
+            "name": "Fragezeichen im Satz",
+            "sound": "KE",
+            "meaning": "Kleine Wörter und Zahlen · Leitet eine Entscheidungsfrage ein."
+          },
+          {
+            "symbol": "kela",
+            "name": "Fertigkeit",
+            "sound": "KE·la",
+            "meaning": "Handwerk · Durch Übung erlangtes Können."
+          },
+          {
+            "symbol": "kelan",
+            "name": "Geselle",
+            "sound": "KE·lan",
+            "meaning": "Gesellschaft · Ausgelernter Handwerker ohne Meisteramt."
+          },
+          {
+            "symbol": "kelin",
+            "name": "Lehrling",
+            "sound": "KE·lin",
+            "meaning": "Gesellschaft · Person in handwerklicher Ausbildung."
+          },
+          {
+            "symbol": "kelor",
+            "name": "Meister",
+            "sound": "KE·lor",
+            "meaning": "Handwerk · Anerkannter Leiter eines Handwerks."
+          },
+          {
+            "symbol": "kelum",
+            "name": "Zunft",
+            "sound": "KE·lum",
+            "meaning": "Gesellschaft · Verbindlicher Handwerksverband."
+          },
+          {
+            "symbol": "ket",
+            "name": "vier",
+            "sound": "KET",
+            "meaning": "Kleine Wörter und Zahlen · Zahlwort vor dem Hauptwort."
+          },
+          {
+            "symbol": "kora",
+            "name": "Korn",
+            "sound": "KO·ra",
+            "meaning": "Versorgung · Getreide als Nahrung und Saatgut."
+          },
+          {
+            "symbol": "korad",
+            "name": "Ernte",
+            "sound": "KO·rad",
+            "meaning": "Versorgung · Eingebrachter Feldertrag oder dessen Einbringen."
+          },
+          {
+            "symbol": "korak",
+            "name": "Helm",
+            "sound": "KO·rak",
+            "meaning": "Waffen · Fester Schutz für Kopf und Gesicht."
+          },
+          {
+            "symbol": "koran",
+            "name": "Herbst",
+            "sound": "KO·ran",
+            "meaning": "Natur und Zeit · Zeit der Ernte und Vorräte."
+          },
+          {
+            "symbol": "koren",
+            "name": "ernten",
+            "sound": "KO·ren",
+            "meaning": "Handlungen · Reife Feldfrüchte einbringen."
+          },
+          {
+            "symbol": "korin",
+            "name": "Saat",
+            "sound": "KO·rin",
+            "meaning": "Versorgung · Zur Aussaat zurückbehaltene Körner."
+          },
+          {
+            "symbol": "korla",
+            "name": "Rübe",
+            "sound": "KOR·la",
+            "meaning": "Versorgung · Sättigende Wurzelfrucht."
+          },
+          {
+            "symbol": "korun",
+            "name": "Kornspeicher",
+            "sound": "KO·run",
+            "meaning": "Orte · Trockenes Lager für Getreide und Saat."
+          },
+          {
+            "symbol": "krena",
+            "name": "Schwert",
+            "sound": "KRE·na",
+            "meaning": "Waffen · Lange Hieb- und Stichklinge."
+          },
+          {
+            "symbol": "krenak",
+            "name": "Zweihänder",
+            "sound": "KRE·nak",
+            "meaning": "Waffen · Schwere Klinge für beide Hände."
+          },
+          {
+            "symbol": "krenel",
+            "name": "Schneide",
+            "sound": "KRE·nel",
+            "meaning": "Waffen · Geschärfte Kante einer Klinge."
+          },
+          {
+            "symbol": "krenen",
+            "name": "schneiden",
+            "sound": "KRE·nen",
+            "meaning": "Handlungen · Mit einer Schneide trennen."
+          },
+          {
+            "symbol": "krenin",
+            "name": "Messer",
+            "sound": "KRE·nin",
+            "meaning": "Waffen · Kurze Klinge für Arbeit und Selbstschutz."
+          },
+          {
+            "symbol": "kuna",
+            "name": "Wissen",
+            "sound": "KU·na",
+            "meaning": "Gesellschaft · Erlernte Kenntnisse und bewahrte Erfahrung."
+          },
+          {
+            "symbol": "kunen",
+            "name": "lernen",
+            "sound": "KU·nen",
+            "meaning": "Handlungen · Wissen oder Fertigkeiten erwerben."
+          },
+          {
+            "symbol": "kunor",
+            "name": "Lehrer",
+            "sound": "KU·nor",
+            "meaning": "Gesellschaft · Vermittelt Wissen oder Lesen und Schreiben."
+          },
+          {
+            "symbol": "kura",
+            "name": "Leder",
+            "sound": "KU·ra",
+            "meaning": "Handwerk · Gegerbte Haut für Kleidung und Ausrüstung."
+          },
+          {
+            "symbol": "kural",
+            "name": "Schaf",
+            "sound": "KU·ral",
+            "meaning": "Versorgung · Herdentier für Wolle, Milch und Fleisch."
+          },
+          {
+            "symbol": "kuren",
+            "name": "gerben",
+            "sound": "KU·ren",
+            "meaning": "Handlungen · Tierhäute zu haltbarem Leder verarbeiten."
+          },
+          {
+            "symbol": "kurna",
+            "name": "Haut",
+            "sound": "KUR·na",
+            "meaning": "Körper und Familie · Äußere Hülle des lebenden Körpers."
+          },
+          {
+            "symbol": "kuror",
+            "name": "Gerber",
+            "sound": "KU·ror",
+            "meaning": "Handwerk · Verarbeitet Häute zu haltbarem Leder."
+          },
+          {
+            "symbol": "kuroskel",
+            "name": "Lederrüstung",
+            "sound": "KU·ro·skel",
+            "meaning": "Waffen · Verstärkter Körperschutz aus Leder."
+          },
+          {
+            "symbol": "lena",
+            "name": "Tuch",
+            "sound": "LE·na",
+            "meaning": "Handwerk · Gewebter Stoff."
+          },
+          {
+            "symbol": "lenen",
+            "name": "weben",
+            "sound": "LE·nen",
+            "meaning": "Handlungen · Fäden zu einem Gewebe verbinden."
+          },
+          {
+            "symbol": "lenin",
+            "name": "Faden",
+            "sound": "LE·nin",
+            "meaning": "Handwerk · Feine gedrehte Faser zum Weben und Nähen."
+          },
+          {
+            "symbol": "lenor",
+            "name": "Weber",
+            "sound": "LE·nor",
+            "meaning": "Handwerk · Fertigt Tuch aus gespannten Fäden."
+          },
+          {
+            "symbol": "lira",
+            "name": "Lied",
+            "sound": "LI·ra",
+            "meaning": "Gesellschaft · Gesungene Folge aus Worten und Melodie."
+          },
+          {
+            "symbol": "liren",
+            "name": "singen",
+            "sound": "LI·ren",
+            "meaning": "Handlungen · Worte oder Laute melodisch führen."
+          },
+          {
+            "symbol": "luna",
+            "name": "Nacht",
+            "sound": "LU·na",
+            "meaning": "Natur und Zeit · Dunkle Zeit des Tageslaufs."
+          },
+          {
+            "symbol": "lunad",
+            "name": "Winter",
+            "sound": "LU·nad",
+            "meaning": "Natur und Zeit · Kalte, dunkle Jahreszeit."
+          },
+          {
+            "symbol": "lunen",
+            "name": "schlafen",
+            "sound": "LU·nen",
+            "meaning": "Handlungen · Im Schlaf ruhen."
+          },
+          {
+            "symbol": "lunin",
+            "name": "Mond",
+            "sound": "LU·nin",
+            "meaning": "Natur und Zeit · Helles wanderndes Gestirn der Nacht."
+          },
+          {
+            "symbol": "lunir",
+            "name": "Stern",
+            "sound": "LU·nir",
+            "meaning": "Natur und Zeit · Kleiner Lichtpunkt am Nachthimmel."
+          },
+          {
+            "symbol": "lura",
+            "name": "Schmerz",
+            "sound": "LU·ra",
+            "meaning": "Körper und Familie · Empfundene körperliche oder seelische Pein."
+          },
+          {
+            "symbol": "mara",
+            "name": "Wasser",
+            "sound": "MA·ra",
+            "meaning": "Versorgung · Trinkwasser oder Wasser als Stoff."
+          },
+          {
+            "symbol": "marad",
+            "name": "Regen",
+            "sound": "MA·rad",
+            "meaning": "Natur und Zeit · Wasser, das aus Wolken fällt."
+          },
+          {
+            "symbol": "marak",
+            "name": "Schiff",
+            "sound": "MA·rak",
+            "meaning": "Handel · Großes Wasserfahrzeug für Lasten und Reisen."
+          },
+          {
+            "symbol": "mardun",
+            "name": "Hafen",
+            "sound": "MAR·dun",
+            "meaning": "Orte · Geschützter Anlegeplatz mit Lager und Verwaltung."
+          },
+          {
+            "symbol": "maren",
+            "name": "trinken",
+            "sound": "MA·ren",
+            "meaning": "Handlungen · Flüssigkeit zu sich nehmen."
+          },
+          {
+            "symbol": "maril",
+            "name": "Quelle",
+            "sound": "MA·ril",
+            "meaning": "Natur und Zeit · Ort, an dem Wasser aus dem Boden tritt."
+          },
+          {
+            "symbol": "marin",
+            "name": "Boot",
+            "sound": "MA·rin",
+            "meaning": "Handel · Kleines Wasserfahrzeug."
+          },
+          {
+            "symbol": "maror",
+            "name": "Fährmann",
+            "sound": "MA·ror",
+            "meaning": "Handel · Setzt Menschen und Lasten über Wasser."
+          },
+          {
+            "symbol": "marun",
+            "name": "Fluss",
+            "sound": "MA·run",
+            "meaning": "Natur und Zeit · Dauerhaft fließendes Wasser."
+          },
+          {
+            "symbol": "mela",
+            "name": "Mehl",
+            "sound": "ME·la",
+            "meaning": "Versorgung · Fein gemahlenes Korn."
+          },
+          {
+            "symbol": "melen",
+            "name": "mahlen",
+            "sound": "ME·len",
+            "meaning": "Handlungen · Korn zwischen harten Flächen zerkleinern."
+          },
+          {
+            "symbol": "melor",
+            "name": "Müller",
+            "sound": "ME·lor",
+            "meaning": "Handwerk · Mahlt Korn zu Mehl und Schrot."
+          },
+          {
+            "symbol": "merad",
+            "name": "Tausch",
+            "sound": "ME·rad",
+            "meaning": "Handel · Vereinbarter Wechsel von Gütern oder Leistungen."
+          },
+          {
+            "symbol": "merak",
+            "name": "Ware",
+            "sound": "ME·rak",
+            "meaning": "Handel · Zum Tausch oder Verkauf bestimmtes Gut."
+          },
+          {
+            "symbol": "meral",
+            "name": "Gewicht",
+            "sound": "ME·ral",
+            "meaning": "Handel · Gemessene Schwere einer Ware."
+          },
+          {
+            "symbol": "meran",
+            "name": "Gast",
+            "sound": "ME·ran",
+            "meaning": "Gesellschaft · Für die Dauer des Besuchs unter Hausschutz."
+          },
+          {
+            "symbol": "merin",
+            "name": "Maß",
+            "sound": "ME·rin",
+            "meaning": "Handel · Anerkannte Einheit zum Abmessen."
+          },
+          {
+            "symbol": "merum",
+            "name": "Karawane",
+            "sound": "ME·rum",
+            "meaning": "Handel · Gemeinsam reisender Handelszug."
+          },
+          {
+            "symbol": "merun",
+            "name": "Herberge",
+            "sound": "ME·run",
+            "meaning": "Orte · Haus mit Schlafplätzen für Reisende."
+          },
+          {
+            "symbol": "mi",
+            "name": "ich",
+            "sound": "MI",
+            "meaning": "Kleine Wörter und Zahlen · Erste Person der Einzahl."
+          },
+          {
+            "symbol": "mir",
+            "name": "wir",
+            "sound": "MIR",
+            "meaning": "Kleine Wörter und Zahlen · Sprecher mit seiner Gruppe."
+          },
+          {
+            "symbol": "mora",
+            "name": "Volk",
+            "sound": "MO·ra",
+            "meaning": "Gesellschaft · Gemeinschaft über einzelne Sippen hinaus."
+          },
+          {
+            "symbol": "moran",
+            "name": "Volksangehöriger",
+            "sound": "MO·ran",
+            "meaning": "Gesellschaft · Mitglied des eigenen Volkes, jedes Geschlecht."
+          },
+          {
+            "symbol": "mordun",
+            "name": "Rathaus",
+            "sound": "MOR·dun",
+            "meaning": "Orte · Haus der öffentlichen Beratung und Verwaltung."
+          },
+          {
+            "symbol": "morgin",
+            "name": "Mensch oder Person",
+            "sound": "MOR·gin",
+            "meaning": "Körper und Familie · Einzelnes denkendes Gegenüber, unabhängig vom Volk."
+          },
+          {
+            "symbol": "morun",
+            "name": "Versammlungsplatz",
+            "sound": "MO·run",
+            "meaning": "Gesellschaft · Öffentlicher Ort der Gemeinschaft."
+          },
+          {
+            "symbol": "murna",
+            "name": "Milch",
+            "sound": "MUR·na",
+            "meaning": "Versorgung · Frische Nahrung von milchgebenden Herdentieren."
+          },
+          {
+            "symbol": "na",
+            "name": "von oder aus",
+            "sound": "NA",
+            "meaning": "Kleine Wörter und Zahlen · Bezeichnet Zugehörigkeit oder Herkunft."
+          },
+          {
+            "symbol": "nara",
+            "name": "Sippe",
+            "sound": "NA·ra",
+            "meaning": "Gesellschaft · Große Verwandtschaft mit gemeinsamem Namen."
+          },
+          {
+            "symbol": "naral",
+            "name": "Ahne",
+            "sound": "NA·ral",
+            "meaning": "Körper und Familie · Verstorbener Vorfahr der Sippe."
+          },
+          {
+            "symbol": "narel",
+            "name": "Mutter",
+            "sound": "NA·rel",
+            "meaning": "Körper und Familie · Elternteil und Verwandtschaftsbezeichnung."
+          },
+          {
+            "symbol": "naren",
+            "name": "umsorgen",
+            "sound": "NA·ren",
+            "meaning": "Handlungen · Für Nahrung, Schutz und Wohlergehen einer Person sorgen."
+          },
+          {
+            "symbol": "naril",
+            "name": "Enkelkind",
+            "sound": "NA·ril",
+            "meaning": "Körper und Familie · Kind eines eigenen Kindes."
+          },
+          {
+            "symbol": "narim",
+            "name": "Geschwister",
+            "sound": "NA·rim",
+            "meaning": "Körper und Familie · Bruder oder Schwester ohne Geschlechtsfestlegung."
+          },
+          {
+            "symbol": "narin",
+            "name": "Kind",
+            "sound": "NA·rin",
+            "meaning": "Körper und Familie · Junger Angehöriger einer Familie."
+          },
+          {
+            "symbol": "narin dar",
+            "name": "Thronerbe",
+            "sound": "NA·rin DAR",
+            "meaning": "Feudalstand · Bestimmte Nachfolge der Krone, unabhängig vom Alter."
+          },
+          {
+            "symbol": "narok",
+            "name": "Vater",
+            "sound": "NA·rok",
+            "meaning": "Körper und Familie · Elternteil und Verwandtschaftsbezeichnung."
+          },
+          {
+            "symbol": "naror",
+            "name": "Sippenoberhaupt",
+            "sound": "NA·ror",
+            "meaning": "Gesellschaft · Gewählte oder ererbte Führung einer Sippe."
+          },
+          {
+            "symbol": "narun",
+            "name": "Sippenhalle",
+            "sound": "NA·run",
+            "meaning": "Gesellschaft · Versammlungsort der Verwandtschaft."
+          },
+          {
+            "symbol": "nav",
+            "name": "neun",
+            "sound": "NAV",
+            "meaning": "Kleine Wörter und Zahlen · Zahlwort vor dem Hauptwort."
+          },
+          {
+            "symbol": "naval",
+            "name": "klein",
+            "sound": "NA·val",
+            "meaning": "Natur und Zeit · Von geringer Größe oder geringem Umfang."
+          },
+          {
+            "symbol": "ne",
+            "name": "nicht",
+            "sound": "NE",
+            "meaning": "Kleine Wörter und Zahlen · Verneint die unmittelbar folgende Tätigkeit."
+          },
+          {
+            "symbol": "nema",
+            "name": "Anteil",
+            "sound": "NE·ma",
+            "meaning": "Handel · Jemandem zustehender Teil eines gemeinsamen Gutes."
+          },
+          {
+            "symbol": "nemen",
+            "name": "nehmen",
+            "sound": "NE·men",
+            "meaning": "Handlungen · Etwas an sich bringen oder empfangen."
+          },
+          {
+            "symbol": "neral",
+            "name": "Honig",
+            "sound": "NE·ral",
+            "meaning": "Versorgung · Süßer Vorrat aus Bienenstöcken."
+          },
+          {
+            "symbol": "no",
+            "name": "nein",
+            "sound": "NO",
+            "meaning": "Kleine Wörter und Zahlen · Verneinende Antwort auf eine Frage."
+          },
+          {
+            "symbol": "nul",
+            "name": "null",
+            "sound": "NUL",
+            "meaning": "Kleine Wörter und Zahlen · Kein gezähltes Stück; leere Menge."
+          },
+          {
+            "symbol": "ok",
+            "name": "acht",
+            "sound": "OK",
+            "meaning": "Kleine Wörter und Zahlen · Zahlwort vor dem Hauptwort."
+          },
+          {
+            "symbol": "pen",
+            "name": "fünf",
+            "sound": "PEN",
+            "meaning": "Kleine Wörter und Zahlen · Zahlwort vor dem Hauptwort."
+          },
+          {
+            "symbol": "raga",
+            "name": "Wunde",
+            "sound": "RA·ga",
+            "meaning": "Körper und Familie · Verletzung des Körpers."
+          },
+          {
+            "symbol": "ragar",
+            "name": "Fehde",
+            "sound": "RA·gar",
+            "meaning": "Recht · Öffentlich erklärte Auseinandersetzung zwischen Häusern."
+          },
+          {
+            "symbol": "ragen",
+            "name": "verwunden",
+            "sound": "RA·gen",
+            "meaning": "Handlungen · Einem Körper eine Verletzung zufügen."
+          },
+          {
+            "symbol": "ragum",
+            "name": "Niederlage",
+            "sound": "RA·gum",
+            "meaning": "Militär · Verlust der Stellung oder Scheitern des Aufgebots."
+          },
+          {
+            "symbol": "rana",
+            "name": "Rat",
+            "sound": "RA·na",
+            "meaning": "Recht · Beratung oder wohlbedachter Vorschlag."
+          },
+          {
+            "symbol": "randun",
+            "name": "Ratshalle",
+            "sound": "RAN·dun",
+            "meaning": "Orte · Großer Raum für förmliche Beratungen."
+          },
+          {
+            "symbol": "ranor",
+            "name": "Ratsherr oder Ratsfrau",
+            "sound": "RA·nor",
+            "meaning": "Gesellschaft · Sitz und Stimme im Rat."
+          },
+          {
+            "symbol": "ranum",
+            "name": "Gemeinderat",
+            "sound": "RA·num",
+            "meaning": "Gesellschaft · Versammlung der örtlichen Sprecher."
+          },
+          {
+            "symbol": "rena",
+            "name": "Heilung",
+            "sound": "RE·na",
+            "meaning": "Körper und Familie · Wiederherstellung von Kraft und Gesundheit."
+          },
+          {
+            "symbol": "renal",
+            "name": "Frühling",
+            "sound": "RE·nal",
+            "meaning": "Natur und Zeit · Zeit des neuen Wachsens."
+          },
+          {
+            "symbol": "renen",
+            "name": "heilen",
+            "sound": "RE·nen",
+            "meaning": "Handlungen · Wunden behandeln oder Gesundheit wiedererlangen."
+          },
+          {
+            "symbol": "renor",
+            "name": "Heiler",
+            "sound": "RE·nor",
+            "meaning": "Körper und Familie · Kundige Person für Wunden und Krankheit."
+          },
+          {
+            "symbol": "renun",
+            "name": "Heilhaus",
+            "sound": "RE·nun",
+            "meaning": "Orte · Ort für Pflege und Behandlung."
+          },
+          {
+            "symbol": "ri",
+            "name": "sie, Mehrzahl",
+            "sound": "RI",
+            "meaning": "Kleine Wörter und Zahlen · Mehrere Personen außerhalb der Sprechergruppe."
+          },
+          {
+            "symbol": "rula",
+            "name": "Schrift",
+            "sound": "RU·la",
+            "meaning": "Recht · Geschriebenes Wort oder Schriftsystem."
+          },
+          {
+            "symbol": "rulak",
+            "name": "Gesetz",
+            "sound": "RU·lak",
+            "meaning": "Recht · Verkündete, allgemein bindende Regel."
+          },
+          {
+            "symbol": "rulan",
+            "name": "Urkunde",
+            "sound": "RU·lan",
+            "meaning": "Recht · Beweisstück mit anerkannten Zeugen oder Siegeln."
+          },
+          {
+            "symbol": "rulen",
+            "name": "schreiben",
+            "sound": "RU·len",
+            "meaning": "Handlungen · Worte in Zeichen festhalten."
+          },
+          {
+            "symbol": "rulor dar",
+            "name": "Kanzler",
+            "sound": "RU·lor DAR",
+            "meaning": "Feudalstand · Leitet die herrschaftliche Schreibstube."
+          },
+          {
+            "symbol": "rulun",
+            "name": "Schreibstube",
+            "sound": "RU·lun",
+            "meaning": "Orte · Raum für Urkunden, Listen und Abschriften."
+          },
+          {
+            "symbol": "ruma",
+            "name": "Ohr",
+            "sound": "RU·ma",
+            "meaning": "Körper und Familie · Organ des Hörens."
+          },
+          {
+            "symbol": "rumen",
+            "name": "hören",
+            "sound": "RU·men",
+            "meaning": "Handlungen · Ein Geräusch oder eine Stimme wahrnehmen."
+          },
+          {
+            "symbol": "saga",
+            "name": "Geschichte",
+            "sound": "SA·ga",
+            "meaning": "Gesellschaft · Erzählte Erinnerung an Personen und Ereignisse."
+          },
+          {
+            "symbol": "sagor",
+            "name": "Erzähler",
+            "sound": "SA·gor",
+            "meaning": "Gesellschaft · Bewahrt Taten und Familiengeschichten."
+          },
+          {
+            "symbol": "sek",
+            "name": "sechs",
+            "sound": "SEK",
+            "meaning": "Kleine Wörter und Zahlen · Zahlwort vor dem Hauptwort."
+          },
+          {
+            "symbol": "sela",
+            "name": "Auge",
+            "sound": "SE·la",
+            "meaning": "Körper und Familie · Organ des Sehens."
+          },
+          {
+            "symbol": "selan",
+            "name": "Fremder",
+            "sound": "SE·lan",
+            "meaning": "Gesellschaft · Person ohne bekannte örtliche Zugehörigkeit."
+          },
+          {
+            "symbol": "selen",
+            "name": "sehen",
+            "sound": "SE·len",
+            "meaning": "Handlungen · Mit den Augen wahrnehmen."
+          },
+          {
+            "symbol": "selor",
+            "name": "Zeuge",
+            "sound": "SE·lor",
+            "meaning": "Recht · Person, die einen Vorgang selbst wahrnahm."
+          },
+          {
+            "symbol": "selor gar",
+            "name": "Späher",
+            "sound": "SE·lor GAR",
+            "meaning": "Militär · Erkundet Wege, Feind und Gelände."
+          },
+          {
+            "symbol": "sen",
+            "name": "sieben",
+            "sound": "SEN",
+            "meaning": "Kleine Wörter und Zahlen · Zahlwort vor dem Hauptwort."
+          },
+          {
+            "symbol": "sera",
+            "name": "Frieden",
+            "sound": "SE·ra",
+            "meaning": "Gesellschaft · Sicheres Zusammenleben ohne bewaffneten Streit."
+          },
+          {
+            "symbol": "serad",
+            "name": "Begnadigung",
+            "sound": "SE·rad",
+            "meaning": "Recht · Erlass einer bereits ausgesprochenen Strafe."
+          },
+          {
+            "symbol": "seral",
+            "name": "Stille",
+            "sound": "SE·ral",
+            "meaning": "Natur und Zeit · Abwesenheit störenden Lärms und Unfriedens."
+          },
+          {
+            "symbol": "seren",
+            "name": "ruhen",
+            "sound": "SE·ren",
+            "meaning": "Handlungen · Arbeit und Anspannung unterbrechen."
+          },
+          {
+            "symbol": "serin",
+            "name": "Atem",
+            "sound": "SE·rin",
+            "meaning": "Körper und Familie · Einzelner Atemzug; Maß für einen kurzen Augenblick."
+          },
+          {
+            "symbol": "serum",
+            "name": "Waffenstillstand",
+            "sound": "SE·rum",
+            "meaning": "Militär · Vereinbarte Unterbrechung des Kampfes."
+          },
+          {
+            "symbol": "skela",
+            "name": "Schild",
+            "sound": "SKE·la",
+            "meaning": "Militär · Getragener Schutz gegen Hiebe und Geschosse."
+          },
+          {
+            "symbol": "skelak",
+            "name": "Setzschild",
+            "sound": "SKE·lak",
+            "meaning": "Waffen · Großer Schild zum Decken einer Stellung."
+          },
+          {
+            "symbol": "skelin",
+            "name": "Buckler",
+            "sound": "SKE·lin",
+            "meaning": "Waffen · Kleiner, in der Faust geführter Schild."
+          },
+          {
+            "symbol": "skelum",
+            "name": "Schildwall",
+            "sound": "SKE·lum",
+            "meaning": "Militär · Geschlossene Front aus aneinandergefügten Schilden."
+          },
+          {
+            "symbol": "sola",
+            "name": "Tag",
+            "sound": "SO·la",
+            "meaning": "Natur und Zeit · Helle Zeit zwischen Morgen und Abend."
+          },
+          {
+            "symbol": "solad",
+            "name": "Sommer",
+            "sound": "SO·lad",
+            "meaning": "Natur und Zeit · Warme, helle Jahreszeit."
+          },
+          {
+            "symbol": "solan",
+            "name": "Abend",
+            "sound": "SO·lan",
+            "meaning": "Natur und Zeit · Ende des Tages vor der Nacht."
+          },
+          {
+            "symbol": "solin",
+            "name": "Morgen",
+            "sound": "SO·lin",
+            "meaning": "Natur und Zeit · Beginn des Tages."
+          },
+          {
+            "symbol": "solor",
+            "name": "Mittag",
+            "sound": "SO·lor",
+            "meaning": "Natur und Zeit · Mitte des hellen Tages."
+          },
+          {
+            "symbol": "solum",
+            "name": "Jahr",
+            "sound": "SO·lum",
+            "meaning": "Natur und Zeit · Vollständiger Wechsel der Jahreszeiten."
+          },
+          {
+            "symbol": "sula",
+            "name": "Salz",
+            "sound": "SU·la",
+            "meaning": "Versorgung · Würzstoff und Mittel zum Haltbarmachen."
+          },
+          {
+            "symbol": "sulen",
+            "name": "salzen",
+            "sound": "SU·len",
+            "meaning": "Handlungen · Speisen würzen oder für den Vorrat haltbar machen."
+          },
+          {
+            "symbol": "sura",
+            "name": "Bogen",
+            "sound": "SU·ra",
+            "meaning": "Waffen · Waffe mit biegsamem Stab und Sehne."
+          },
+          {
+            "symbol": "surak",
+            "name": "Armbrust",
+            "sound": "SU·rak",
+            "meaning": "Waffen · Bogenwaffe mit Schaft und Spannmechanik."
+          },
+          {
+            "symbol": "surin",
+            "name": "Pfeil",
+            "sound": "SU·rin",
+            "meaning": "Waffen · Befiedertes Geschoss für den Bogen."
+          },
+          {
+            "symbol": "surun",
+            "name": "Köcher",
+            "sound": "SU·run",
+            "meaning": "Waffen · Behälter für Pfeile oder Bolzen."
+          },
+          {
+            "symbol": "tala",
+            "name": "Acker",
+            "sound": "TA·la",
+            "meaning": "Versorgung · Bebautes Land für Nahrung und Saat."
+          },
+          {
+            "symbol": "talan",
+            "name": "Landbewohner",
+            "sound": "TA·lan",
+            "meaning": "Gesellschaft · Freie Person außerhalb der Stadt."
+          },
+          {
+            "symbol": "talen",
+            "name": "pflügen",
+            "sound": "TA·len",
+            "meaning": "Handlungen · Ackerboden für die Saat aufbrechen."
+          },
+          {
+            "symbol": "talin",
+            "name": "Garten",
+            "sound": "TA·lin",
+            "meaning": "Versorgung · Kleines gepflegtes Stück Land für Gemüse und Kräuter."
+          },
+          {
+            "symbol": "talor",
+            "name": "Bauer",
+            "sound": "TA·lor",
+            "meaning": "Versorgung · Bewirtschaftet Land und versorgt Tiere."
+          },
+          {
+            "symbol": "terak",
+            "name": "Lanze",
+            "sound": "TE·rak",
+            "meaning": "Waffen · Schwerer Speer der Reiterei."
+          },
+          {
+            "symbol": "teran",
+            "name": "Speer",
+            "sound": "TE·ran",
+            "meaning": "Waffen · Lange Stangenwaffe mit Stoßspitze."
+          },
+          {
+            "symbol": "terin",
+            "name": "Spitze",
+            "sound": "TE·rin",
+            "meaning": "Waffen · Verjüngtes Ende einer Stichwaffe."
+          },
+          {
+            "symbol": "thala",
+            "name": "Wache",
+            "sound": "THA·la",
+            "meaning": "Militär · Wachdienst oder dessen Besatzung."
+          },
+          {
+            "symbol": "thalen",
+            "name": "wachen",
+            "sound": "THA·len",
+            "meaning": "Handlungen · Auf einen Ort oder eine Person aufpassen."
+          },
+          {
+            "symbol": "thalor",
+            "name": "Wachtposten",
+            "sound": "THA·lor",
+            "meaning": "Militär · Bewacht einen zugewiesenen Ort."
+          },
+          {
+            "symbol": "ti",
+            "name": "du",
+            "sound": "TI",
+            "meaning": "Kleine Wörter und Zahlen · Direkte Anrede einer einzelnen Person."
+          },
+          {
+            "symbol": "tir",
+            "name": "ihr",
+            "sound": "TIR",
+            "meaning": "Kleine Wörter und Zahlen · Direkte Anrede mehrerer Personen."
+          },
+          {
+            "symbol": "tora",
+            "name": "Grenze",
+            "sound": "TO·ra",
+            "meaning": "Orte · Anerkannte Trennlinie zwischen Herrschaften."
+          },
+          {
+            "symbol": "torak",
+            "name": "Markgraf oder Markgräfin",
+            "sound": "TO·rak",
+            "meaning": "Feudalstand · Lehnsherr einer wehrhaften Grenzmark."
+          },
+          {
+            "symbol": "torbel",
+            "name": "Zoll",
+            "sound": "TOR·bel",
+            "meaning": "Handel · Abgabe beim Überschreiten eines kontrollierten Übergangs."
+          },
+          {
+            "symbol": "torun",
+            "name": "Grenztor",
+            "sound": "TO·run",
+            "meaning": "Orte · Bewachter Durchgang an einer Grenze."
+          },
+          {
+            "symbol": "tri",
+            "name": "drei",
+            "sound": "TRI",
+            "meaning": "Kleine Wörter und Zahlen · Zahlwort vor dem Hauptwort."
+          },
+          {
+            "symbol": "tura",
+            "name": "Turm",
+            "sound": "TU·ra",
+            "meaning": "Orte · Hohes, freistehendes oder angebautes Bauwerk."
+          },
+          {
+            "symbol": "turak",
+            "name": "Berg",
+            "sound": "TU·rak",
+            "meaning": "Orte · Deutlich aufragende natürliche Höhe."
+          },
+          {
+            "symbol": "tural",
+            "name": "Gebirge",
+            "sound": "TU·ral",
+            "meaning": "Natur und Zeit · Zusammenhängende Gruppe hoher Berge."
+          },
+          {
+            "symbol": "u",
+            "name": "und",
+            "sound": "U",
+            "meaning": "Kleine Wörter und Zahlen · Verbindet gleichrangige Wörter oder Aussagen."
+          },
+          {
+            "symbol": "va",
+            "name": "Zukunftszeichen",
+            "sound": "VA",
+            "meaning": "Kleine Wörter und Zahlen · Steht vor dem unveränderten Verb."
+          },
+          {
+            "symbol": "vala",
+            "name": "Dienst",
+            "sound": "VA·la",
+            "meaning": "Feudalstand · Übernommene Aufgabe für Haus, Amt oder Gemeinschaft."
+          },
+          {
+            "symbol": "var dal",
+            "name": "Geleitbrief",
+            "sound": "VAR DAL",
+            "meaning": "Handel · Urkunde über zugesicherten Schutz auf einer Reise."
+          },
+          {
+            "symbol": "var dar",
+            "name": "Lehnseid",
+            "sound": "VAR DAR",
+            "meaning": "Feudalstand · Schwur auf den anerkannten Lehnsherrn."
+          },
+          {
+            "symbol": "vara",
+            "name": "Eid",
+            "sound": "VA·ra",
+            "meaning": "Recht · Persönliche, öffentlich bindende Zusage."
+          },
+          {
+            "symbol": "varak",
+            "name": "Vertrag",
+            "sound": "VA·rak",
+            "meaning": "Recht · Förmlich vereinbarte gegenseitige Pflichten."
+          },
+          {
+            "symbol": "varal",
+            "name": "treu",
+            "sound": "VA·ral",
+            "meaning": "Recht · Hält gegebene Zusagen und bestehende Bindungen."
+          },
+          {
+            "symbol": "varan",
+            "name": "Eidgenosse",
+            "sound": "VA·ran",
+            "meaning": "Gesellschaft · Durch einen persönlichen Schwur verbunden."
+          },
+          {
+            "symbol": "varan gar",
+            "name": "Waffenbruder oder Waffenschwester",
+            "sound": "VA·ran GAR",
+            "meaning": "Militär · Durch gemeinsamen Dienst verbundener Kämpfer."
+          },
+          {
+            "symbol": "varen",
+            "name": "schwören",
+            "sound": "VA·ren",
+            "meaning": "Handlungen · Eine verbindliche persönliche Zusage geben."
+          },
+          {
+            "symbol": "varin",
+            "name": "Versprechen",
+            "sound": "VA·rin",
+            "meaning": "Recht · Persönliche Zusage ohne förmlichen Eid."
+          },
+          {
+            "symbol": "varnar",
+            "name": "Ehepartner",
+            "sound": "VAR·nar",
+            "meaning": "Körper und Familie · Durch Ehe verbundene Person."
+          },
+          {
+            "symbol": "varuk",
+            "name": "Sturm",
+            "sound": "VA·ruk",
+            "meaning": "Natur und Zeit · Heftiger, gefährlicher Wind."
+          },
+          {
+            "symbol": "varum",
+            "name": "Bündnis",
+            "sound": "VA·rum",
+            "meaning": "Recht · Gemeinschaft mit gegenseitigen Pflichten."
+          },
+          {
+            "symbol": "varun",
+            "name": "Wind",
+            "sound": "VA·run",
+            "meaning": "Natur und Zeit · Bewegte Luft."
+          },
+          {
+            "symbol": "vela",
+            "name": "Wille",
+            "sound": "VE·la",
+            "meaning": "Gesellschaft · Eigener Wunsch oder gefasster Entschluss."
+          },
+          {
+            "symbol": "velen",
+            "name": "wollen",
+            "sound": "VE·len",
+            "meaning": "Handlungen · Einen eigenen Entschluss oder Wunsch haben."
+          },
+          {
+            "symbol": "vi",
+            "name": "mit",
+            "sound": "VI",
+            "meaning": "Kleine Wörter und Zahlen · Bezeichnet Begleitung und gemeinsame Handlung."
+          },
+          {
+            "symbol": "zarak",
+            "name": "Gold",
+            "sound": "ZA·rak",
+            "meaning": "Handwerk · Gelbes Edelmetall für hohen Wert und Würde."
+          },
+          {
+            "symbol": "zira",
+            "name": "Ring",
+            "sound": "ZI·ra",
+            "meaning": "Recht · Geschlossener Ring; auch Amtszeichen."
+          },
+          {
+            "symbol": "zirak",
+            "name": "Siegel",
+            "sound": "ZI·rak",
+            "meaning": "Recht · Kennzeichnet die verbindliche Herkunft einer Urkunde."
+          },
+          {
+            "symbol": "ziran",
+            "name": "Silber",
+            "sound": "ZI·ran",
+            "meaning": "Handwerk · Helles Edelmetall für Münzen und Schmuck."
+          },
+          {
+            "symbol": "ziren",
+            "name": "binden",
+            "sound": "ZI·ren",
+            "meaning": "Handlungen · Mit Band, Seil oder gemeinsamem Versprechen verbinden."
+          },
+          {
+            "symbol": "zirun",
+            "name": "Kette",
+            "sound": "ZI·run",
+            "meaning": "Waffen · Folge ineinanderhängender Metallglieder."
+          },
+          {
+            "symbol": "zorad",
+            "name": "Bann",
+            "sound": "ZO·rad",
+            "meaning": "Recht · Rechtlicher Ausschluss oder herrschaftliches Verbot."
+          },
+          {
+            "symbol": "zorun",
+            "name": "Leibeigener",
+            "sound": "ZO·run",
+            "meaning": "Gesellschaft · Unfreie Person unter persönlicher Herrengewalt."
+          }
+        ],
+        "syllablesTitle": "Wichtige Silben & Wortbausteine",
+        "syllablesSubtitle": "",
+        "syllableHeader": "Silbe",
+        "syllableMeaningHeader": "Bedeutung",
+        "syllableUsageHeader": "Verwendung",
+        "syllables": [],
+        "footer": "Aleria Almanach · Morgar 2.0 · Kurze Wörter, klare Silben, kräftige Stimme"
+      }
+    }
+  ]
+}

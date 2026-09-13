@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "neue-hochzeit",
+  "revision": 0,
+  "updatedAt": null,
+  "wedding": {
+    "title": "Eine neue Hochzeit",
+    "subtitle": "Zwei Häuser. Ein gemeinsamer Anfang.",
+    "status": "planning",
+    "location": "",
+    "region": "",
+    "intro": "",
+    "background": "",
+    "notes": "",
+    "date": {
+      "year": null,
+      "month": null,
+      "day": null,
+      "time": ""
+    },
+    "image": "",
+    "couple": [
+      {
+        "id": "person-1",
+        "name": "Brautperson 1",
+        "title": "",
+        "house": "",
+        "crest": ""
+      },
+      {
+        "id": "person-2",
+        "name": "Brautperson 2",
+        "title": "",
+        "house": "",
+        "crest": ""
+      }
+    ],
+    "guests": [],
+    "schedule": [],
+    "tasks": []
+  }
+}

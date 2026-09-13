@@ -1,6 +1,7 @@
 {
   "id": "morgorn",
   "name": "Morgorn",
+  "classPage": { "showOrderOverview": false },
   "emblem": "https://i.imgur.com/gXAED3v.png",
   "pageLabels": {
     "brand": "Klassen Morgorns",
@@ -23,91 +24,91 @@
     "nobleTitle": "Der morgornische Adel",
     "nobleRanks": [
       {
-        "title": "Urortharn",
+        "title": "Ar Darak",
         "subtitle": "Hochkönig Morgorns",
         "scope": "Reich",
         "description": "Oberster Herrscher und höchster Träger der Eide, der die großen Herren, Hallen und Sippen des Reiches verbindet."
       },
       {
-        "title": "Lannach",
+        "title": "Taldar",
         "subtitle": "Großer Territorialherr",
         "scope": "Land",
         "description": "Herr weiter Berglande, Täler, Minengebiete und zahlreicher Hallen innerhalb eines großen Landesverbandes."
       },
       {
-        "title": "Karnath",
+        "title": "Kardar",
         "subtitle": "Regionaler Hochadel und Festungsherr",
         "scope": "Feste",
         "description": "Herr bedeutender Bergfesten, befestigter Städte, großer Minenkomplexe oder verbundener Hallen."
       },
       {
-        "title": "Haldran",
+        "title": "Dundar",
         "subtitle": "Hallen- und Lokalherr",
         "scope": "Halle",
         "description": "Lokaler Land- und Hallenadel über einzelne Hallen, kleinere Festungen, Bergsiedlungen oder wichtige Anlagen."
       },
       {
-        "title": "Rannach",
+        "title": "Nardar",
         "subtitle": "Sippenherr",
         "scope": "Sippe",
         "description": "Herr einer bedeutenden Sippe, dessen Gewicht aus Abstammung, Gefolgschaft, Reichtum, Rat oder altem Namen erwächst."
       }
     ],
     "hierarchy": [
-      "Urortharn",
-      "Lannach",
-      "Karnath",
-      "Haldran",
-      "Rannach"
+      "Ar Darak",
+      "Taldar",
+      "Kardar",
+      "Dundar",
+      "Nardar"
     ],
     "castesTitle": "Die Kriegerkasten",
     "castesIntroduction": "Kaste bezeichnet Aufgabe und Ausbildung. Adel bezeichnet den Kreis der Verantwortung. Beides kann sich in einer Person verbinden, bleibt aber rechtlich und gesellschaftlich getrennt.",
     "castes": [
       {
         "id": "karnach",
-        "name": "Karnach",
+        "name": "Grungar",
         "designation": "Bergknechte",
         "function": "Gebirgs- und Bergkrieger für felsiges Gelände, Engstellen und unterirdische Kampfplätze."
       },
       {
         "id": "haldr",
-        "name": "Haldr",
+        "name": "Varor",
         "designation": "Hüter",
         "function": "Persönlich verpflichtete Beschützer anvertrauter Menschen, Orte und Dinge."
       },
       {
         "id": "zernach",
-        "name": "Zernach",
+        "name": "Thalor",
         "designation": "Wächter",
         "function": "Schwer gerüstete Wachen für Tore, Mauern, Wege, Festungen und militärische Anlagen."
       },
       {
         "id": "wairg",
-        "name": "Wairg",
+        "name": "Kuralan",
         "designation": "Hirten",
         "function": "Kriegerische Hüter von Herden, Tieren, Wildnis und abgelegenen Nutzgebieten."
       },
       {
         "id": "dornach",
-        "name": "Dornach",
+        "name": "Toran",
         "designation": "Grenzer",
         "function": "Patrouillen und Waldläufer für Pässe, Außengebiete und schwer zugängliche Grenzräume."
       },
       {
         "id": "skarrach",
-        "name": "Skarrach",
+        "name": "Bragan",
         "designation": "Stürmer",
         "function": "Offensive Stoßkrieger und Widderreiter für Durchbruch, Anritt und schweren Nahkampf."
       },
       {
         "id": "rheach",
-        "name": "Rheach",
+        "name": "Rhean",
         "designation": "Diener Rheas",
         "function": "Gesalbte Ritter und Geistliche im Dienst Rheas, der Göttin der Erde."
       },
       {
         "id": "garnach",
-        "name": "Garnach",
+        "name": "Falgar",
         "designation": "Luntierer",
         "function": "Schwarzpulverkrieger, Schützen, Tüftler und Alchemisten für neue Waffentechnik."
       }

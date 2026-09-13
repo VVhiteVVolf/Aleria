@@ -1546,7 +1546,7 @@ const SECTIONS = [
         subtitle: "Die Wassersprache der Avallornier",
         type: "Sprache · Runenschrift",
         category: "Sprachen · Avallornisch",
-        image: "../Fonts/Rheunwaith-Font-1.000/Vorschau/Rheunwaith_Alphabet_1x1.png",
+        image: "../Fonts/Rheunwaith-Font-1.000/Zeichentafel.png",
         stamp: "AVALLORN · WESTVOLK · SPRACHARCHIV",
         multipage: true,
         appendCommentsPage: false,
@@ -1555,7 +1555,7 @@ const SECTIONS = [
         symbol: null,
         pages: [
           {
-            image: "../Fonts/Rheunwaith-Font-1.000/Vorschau/Rheunwaith_Font_Render_Test.png",
+            image: "../Fonts/Rheunwaith-Font-1.000/Leseprobe.png",
             imageFit: "contain",
             imagePosition: "center",
             imageWidth: 42,
@@ -1590,21 +1590,21 @@ const SECTIONS = [
               alphabetLayers: [
                 {
                   label: "Alphabet",
-                  image: "../Fonts/Rheunwaith-Font-1.000/Vorschau/Rheunwaith_Alphabet_1x1.png",
+                  image: "../Fonts/Rheunwaith-Font-1.000/Zeichentafel.png",
                   alt: "Das vollständige Rheunwaith-Alphabet mit 30 Zeichen, Lauten und Zeichennamen",
-                  caption: "Die 30 überlieferten Zeichen des Rheunwaith mit ihrer Lautzuordnung und ihren avallornischen Namen."
+                  caption: "Die 30 überlieferten Zeichen in der Gestaltung Gezeitenrunen mit Eingabe, Runennamen und direkten Runencodes."
                 },
                 {
                   label: "Schriftprobe",
-                  image: "../Fonts/Rheunwaith-Font-1.000/Vorschau/Rheunwaith_Font_Render_Test.png",
-                  alt: "Eine Schriftprobe des Rheunwaith mit einzelnen Runen, Wörtern und vollständigem Alphabet",
-                  caption: "Eine moderne Schriftprobe: Einzelzeichen, verbundene Wörter und die vollständige Zeichenfolge."
+                  image: "../Fonts/Rheunwaith-Font-1.000/Leseprobe.png",
+                  alt: "Rheunwaith Gezeitenrunen: Leseprobe mit Namen, Doppelzeichen und erweiterten Schriftzeichen",
+                  caption: "Gezeitenrunen in Anwendung: Namen, Doppelzeichen und Fließtext mit Umlauten, Zahlen und Satzzeichen."
                 },
                 {
-                  label: "Ebene 3",
-                  image: "",
-                  alt: "",
-                  caption: "Für eine weitere Fassung oder historische Variante vorbereitet."
+                  label: "Erweiterter Zeichensatz",
+                  image: "../Fonts/Rheunwaith-Font-1.000/Erweiterter-Zeichensatz.png",
+                  alt: "Erweiterte Rheunwaith-Zeichen für lateinische Buchstaben, Akzente, Zahlen und Sonderzeichen",
+                  caption: "Technische Ergänzungen zur Schrift: Q, Ä, Ö, ß, Akzente und Sonderzeichen erweitern die Darstellung; das überlieferte Alphabet behält seine 30 Runen."
                 }
               ],
               sections: [
@@ -1631,6 +1631,10 @@ const SECTIONS = [
                 {
                   title: "Rituale & Überlieferung",
                   text: "Rituelle Texte werden bevorzugt vertikal oder spiralförmig geschrieben; weltliche Dokumente verlaufen häufig diagonal von links unten nach rechts oben. Diese Bewegung symbolisiert den Aufstieg aus der Tiefe.<br><br>Die älteste rituelle Verwendung war den <strong>Llifweir</strong> vorbehalten — den »Hütern des Stromes«, einer avallornischen Kaste aus Gezeitenpriestern und Bewahrern des Schriftwissens. Sie nutzten Rheunwaith für Lieder, Verträge, Namen, Segnungen und Prophezeiungen."
+                },
+                {
+                  title: "Gezeitenrunen schreiben",
+                  text: "Die erneuerte Schrift bewahrt alle 30 Runennamen und ihre Eingaben. Groß- und Kleinbuchstaben zeigen dieselbe Rune. <strong>Ch, Ll, Ng, Rh und Th</strong> bilden jeweils ein Doppelzeichen; <strong>T</strong> allein steht ebenfalls für Thal. Ein Leerzeichen trennt die Zeichen: <em>C H</em> bleibt getrennt, <em>Ch</em> verbindet sich.<br><br>Für Zauberformeln und Fremdsprachblasen der interaktiven Szene <strong>Rheunwaith · Avallornisch</strong> wählen. Die lesbare Eingabe erscheint beim Darüberfahren, beim Tastaturfokus oder durch Antippen der Blase. Die Schrift verändert das Zeichenbild; eine sprachliche Übersetzung erfolgt dadurch nicht.<br><br>Q, Ä, Ö und ß sowie weitere lateinische Buchstaben, Akzente, Zahlen und Satzzeichen sind jetzt darstellbar. Diese Ergänzungen erhalten keine neuen Runennamen oder Bedeutungen; Ü bleibt Uffyr."
                 }
               ],
               footer: "Aleria Almanach · Rheunwaith · Avallornisches Spracharchiv"
@@ -1738,122 +1742,7 @@ const SECTIONS = [
           }
         ]
       },
-      {
-        id: "morgar-karnrith",
-        title: "Morgar",
-        subtitle: "Die Sprache der Morgorner · gemeißelt in Karnrith",
-        type: "Sprache · Bedeutungs- und Steinschrift",
-        category: "Sprachen · Morgornisch",
-        image: "../Fonts/Karnrith-Font-2.000/Specimen/KarnrithHochschnitt_Zeichentafel_2.000.png",
-        stamp: "MORGORN · KARNRITH · STEINGRATARCHIV",
-        multipage: true,
-        appendCommentsPage: false,
-        locked: false,
-        icon: "⛏️",
-        symbol: null,
-        pages: [
-          {
-            image: "../Fonts/Karnrith-Font-2.000/Specimen/KarnrithHochschnitt_Schriftprobe_2.000.png",
-            imageFit: "contain",
-            imagePosition: "center",
-            imageWidth: 46,
-            pageTitle: "I. — Die Rede des morgornischen Volkes",
-            description: "<strong>Morgar</strong> ist die bodenständige Gebirgssprache der Morgorner: kurz, hart und auf sichtbare Folgen ausgerichtet. Ihre Wörter benennen keine losgelösten Ideen, sondern Dinge und Handlungen — tragen, bauen, brechen, wachen, schwören und erinnern. Selbst Ehre wird als sichtbarer Wille verstanden, Recht als gehaltener Eid und Magie als verborgene Ursache.<br><br>Geschrieben wird Morgar in <strong>Karnrith</strong>, der »in Stein geritzten Schrift«. Dreißig Zeichen verbinden Laut und Bedeutungskeim. Ein einzelnes gerahmtes Zeichen kann als Sinnbild stehen; in einer fortlaufenden Zeichenkette trägt es seinen Lautwert. So bleibt jede Inschrift zugleich lesbarer Satz und verdichtete Aussage.<br><br>Germanische Anfangsbetonung und klare Zusammensetzungen geben Morgar sein Gewicht. Raue, gälisch anmutende Reibelaute wie <em>gh, dh, th</em> und <em>kh</em> halten die Sprache dennoch beweglich. Das Ergebnis ist für Hammer, Meißel, Knochenstichel und die Erinnerung eines Bergvolkes geschaffen.",
-            stats: [
-              ["Sprache", "Morgar · aus MOR + GHAIR · Rede des Volkes"],
-              ["Schrift", "Karnrith · aus KARN + -RITH · Steinschrift"],
-              ["Sprecher", "Morgorner · Sippen, Hallen und Bergreiche"],
-              ["Grundzeichen", "30 Zeichen · fünf Klüfte zu je sechs Stufen"],
-              ["Wortbildung", "Bedeutungsstämme · 12 Präfixe · 21 Suffixe"],
-              ["Schreibrichtung", "Alltag links nach rechts · monumental vertikal"]
-            ],
-            quote: "Ein Wort gilt erst dann, wenn sein Träger es mit Tat, Stein oder Eid beschwert.",
-            quoteBy: "— Morgornischer Lehrsatz"
-          },
-          {
-            pageTitle: "II. — Morgar, Karnrith & die fünf Klüfte",
-            languagePage: true,
-            quote: "Der letzte Stamm sagt, was ein Ding ist. Alles davor sagt, welche Last es trägt.",
-            quoteBy: "— Regel morgornischer Wortfügung",
-            language: {
-              archiveLabel: "Sprachkunde · Morgornisches Steingratarchiv",
-              nativeName: "Morgar · geschrieben in Karnrith",
-              family: "Eigenständige Gebirgssprache · germanische Härte und gälische Lautbewegung",
-              speakers: "Morgorner · Sippenräte · Handwerker · Rechts- und Erinnerungsbewahrer",
-              regions: "Morgornische Bergreiche · Hallen · Minen · Grenzfesten",
-              scriptType: "Monumentale Bedeutungs- und Lautschrift · 30 Zeichen in fünf Klüften",
-              writingDirection: "Alltag links nach rechts · Monumental von oben nach unten an Pfeilern und Türstürzen",
-              introduction: "Morgar und Karnrith sind zwei Seiten derselben Überlieferung: Morgar ist die gesprochene Sprache, Karnrith ihr geschnittenes Zeichensystem. Jeder der 30 Buchstaben besitzt Lautwert, Namen, Bedeutungsfeld und einen produktiven Wortstamm. Dadurch können Wörter gesprochen, zerlegt und zugleich als semantische Inschrift gelesen werden.",
-              alphabetTitle: "Karnrith Hochschnitt · 30 Zeichen",
-              alphabetLayers: [
-                {
-                  label: "Zeichentafel",
-                  image: "../Fonts/Karnrith-Font-2.000/Specimen/KarnrithHochschnitt_Zeichentafel_2.000.png",
-                  alt: "Vollständige Zeichentafel des Karnrith Hochschnitt mit 30 Zeichen, Lauten, Namen und Kernbedeutungen",
-                  caption: "Die fünf Klüfte des Karnrith: Fels, Raum, Blut, Hand und Geist — jeweils mit sechs Kerbstufen."
-                },
-                {
-                  label: "Schriftprobe",
-                  image: "../Fonts/Karnrith-Font-2.000/Specimen/KarnrithHochschnitt_Schriftprobe_2.000.png",
-                  alt: "Karnrith-Schriftprobe mit Morgar, Karnrith, Urortharn, Faurpargor, Gharqarn und Yrngrum",
-                  caption: "Schriftprobe mit Grundwörtern, Zusammensetzungen und den sieben kanonischen Ligaturzeichen."
-                },
-                {
-                  label: "Historischer Schnitt",
-                  image: "",
-                  alt: "",
-                  caption: "Für eine spätere historische oder regionale Schnittvariante vorbereitet."
-                }
-              ],
-              sections: [
-                {
-                  title: "Sprache und Schrift",
-                  text: "Der Eigenname <strong>Morgar</strong> ist aus <em>mor-</em> »Mensch, Volk, Arbeit« und <em>ghar-</em> »Wort, Name, Wahrheit« entstanden; die ältere Fuge wurde im schnellen Sprechen zu Morgar zusammengezogen. <strong>Karnrith</strong> verbindet <em>karn</em> »Stein, Form, Dauer« mit <em>-rith</em> »geritztes Zeichen, Inschrift«.<br><br>Ein freistehendes, gerahmtes KARN-Zeichen kann Stein, Dauer oder Festigkeit bedeuten. In einer fortlaufenden Kette wird dasselbe Zeichen als K gelesen. Diese Doppelfunktion macht Karnrith zugleich alphabetisch und ideographisch."
-                },
-                {
-                  title: "Lautung, Silben & Betonung",
-                  text: "Morgar bevorzugt die Silbenformen <strong>CV, CVC, CCVC und CVCC</strong>; drei Konsonanten am Wortanfang werden vermieden. Die Vokale <em>a, e, i, o, u</em> bleiben kurz und voll, <em>y</em> klingt wie deutsches Ü und markiert häufig Ahnisches oder Ererbtes. Das R wird auch in Gruppen wie <em>kr, gr</em> und <em>rn</em> gerollt.<br><br>Die Betonung liegt gewöhnlich auf dem ersten Bedeutungsstamm: <strong>KÁR-hald</strong>, <strong>THÁR-ghair</strong>, <strong>FÁUR-par-gor</strong>. Die Digraphen NG, TH, KH, GH, SH, CH und DH zählen jeweils als ein Zeichen; Q bezeichnet einen tiefen, seltenen Laut des Magischen und Verborgenen."
-                },
-                {
-                  title: "Wortbau & Kopfregel",
-                  text: "Morgar bildet Wörter nach der Folge <strong>[Lage oder Menge] + [bestimmender Stamm] + [Hauptstamm] + [Ableitung]</strong>. Der letzte Stamm ist der Kopf und sagt, was ein Ding grundsätzlich ist: <em>Lanorn</em> ist ein ORN, also ein Amtsträger, der zum Land gehört; <em>Dorzarn</em> ist ein ZARN, also eine Wacht an der Grenze.<br><br>Treffen drei harte Konsonanten aufeinander, kann ein unbetontes Fugen-<em>a</em> eingeschoben werden; vor Endungen der Feinarbeit erscheint bisweilen <em>i</em>. Gleiche Fugenlaute verschmelzen, und nach einem vokalischen Stamm können b, d, g, k, s oder t in der Alltagssprache zu v, dh, gh, kh, sh oder th erweichen."
-                },
-                {
-                  title: "Die sechs Vokalstufen",
-                  text: "Der Vokal einer Ableitung zeigt ihre Funktion. Die <strong>A-Stufe</strong> bezeichnet Gegenstand, Stoff oder greifbare Grundlage; <strong>E</strong> Handlung, Vorgang oder Tausch; <strong>I</strong> Werkzeug, Einzelteil und Genauigkeit; <strong>O</strong> Person, Träger oder Amt; <strong>U</strong> Menge, Kollektiv oder Gebiet; <strong>Y</strong> Ahne, Erbe, Weihung und Fortbestand.<br><br>Darum ist <em>Pargor</em> die Person des Werkes, <em>Morur</em> die Menge der Menschen und <em>Choryr</em> die weitergetragene Ahnenehre. Die Stufen ersetzen keine Grammatik, sondern machen Ableitungen sichtbar und merkbar."
-                },
-                {
-                  title: "Die fünf Klüfte des Karnrith",
-                  text: "Die Zeichen folgen einer gedachten Felsrippe und einer strengen 5×7-Schnittmatrix. Jede der fünf <strong>Klüfte</strong> besitzt einen Grundgrat und sechs Kerbstufen: eine Kerbe links, zwei links, eine rechts, zwei rechts, eine Kreuzkerbe und schließlich einen gespaltenen Kopf.<br><br><strong>Felskluft:</strong> Stoff, Element, Naturkraft. <strong>Raumkluft:</strong> Ort, Grenze, Haus, Land und Weg. <strong>Blutkluft:</strong> Leib, Mensch, Sippe, Fortgang und Tod. <strong>Handkluft:</strong> Tat, Werk, Schnitt, Recht, Bruch und Schutz. <strong>Geistkluft:</strong> Maß, Wort, Wissen, Wille, Gott und Magie."
-                },
-                {
-                  title: "Schnitt, Leserichtung & Ligaturen",
-                  text: "Karnrith wurde für Hammer und Meißel, Knochenstichel und gekerbtes Holz entworfen. Rundungen fehlen; volle schmale Stämme, 30- bis 45-gradige Äste, Spiegelungen, gebrochene Achsen und Bindungsrauten geben dem Hochschnitt seine monumentale Form. Im Alltag läuft die Schrift links nach rechts. An Pfeilern und Türstürzen kann sie monumental von oben nach unten geführt werden.<br><br>Die sieben Digraphen besitzen eigene Ligaturen: <strong>NG · Ngrum</strong>, <strong>TH · Tharn</strong>, <strong>KH · Khorr</strong>, <strong>GH · Ghair</strong>, <strong>SH · Shenn</strong>, <strong>CH · Chor</strong> und <strong>DH · Dhair</strong>. Sie bleiben beim Zerlegen eines Wortes stets ein Zeichen."
-                },
-                {
-                  title: "Kultur, Namen & Prüfung neuer Wörter",
-                  text: "Morgornische Sprache bevorzugt Amt, Sippe, Arbeit, Land, Schutz und Erinnerung. Ein Traditionsname verbindet zwei Wurzeln: Die Familie spricht damit Wunsch oder Gedenken aus, keine unabwendbare Prophezeiung. Weibliche Namen verwenden alte weichere Endformen wie <em>-karna, -helda, -rena, -thera, -terga</em> und <em>-chora</em>.<br><br>Ein neues Wort gilt nur dann als stimmig, wenn jeder Stamm im Zeichen- oder Affixbestand erklärbar ist, der letzte Stamm den Wortkopf bildet, die Abstraktion körperlich oder sozial nachvollziehbar bleibt, die Lautung ohne Vierfachcluster auskommt und die Form eindeutig in Karnrith zerlegt werden kann."
-                },
-                {
-                  title: "Belegte Bildungen",
-                  text: "<strong>Urortharn</strong> — UR + OR + THARN: oberster Amtsträger des Eides, Hochkönig.<br><strong>Faurpargor</strong> — FAUR + PARG + OR: Person des Feuerwerks, Schmied.<br><strong>Gharqarn</strong> — GHAR + QARN: Magie des wahren Namens, Namenszauber.<br><strong>Yrngrum</strong> — YR + NGRUM: Ruhe der Ahnenlinie, Ahnengruft.<br><strong>Karhald</strong> — KAR + HALD: Steinhaus oder dauerhafte Steinhalle.<br><strong>Tharghair</strong> — THAR + GHAIR: Eidwort, Erlass oder verkündeter Gesetzestext."
-                }
-              ],
-              footer: "Aleria Almanach · Morgar · Karnrith · Morgornisches Spracharchiv"
-            }
-          },
-          {
-            pageTitle: "III. — 400 Namen aus dem Morgar",
-            nameListPage: true,
-            nameList: createKarnrithNameListData()
-          },
-          {
-            pageTitle: "IV. — Zeichen, Wortstämme & Ableitungen",
-            scriptTablePage: true,
-            scriptTable: createKarnrithScriptTableData()
-          }
-        ]
-      },
+      createMorgarLanguageEntry(),
       {
         id: "infernal-nharazim",
         title: "Infernal",

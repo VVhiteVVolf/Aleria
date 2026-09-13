@@ -55,6 +55,7 @@ function collectScriptTableModuleEditorPage(card, page) {
   const block = card.querySelector('[data-page-type="script-table"]') || card;
   page.scriptTablePage = true;
   page.scriptTable = sanitizeScriptTableData({
+    ...sanitizeScriptTableData(page.scriptTable || {}),
     archiveLabel: getTrimmedFormValue(block, '.me-script-table-archive'),
     title: getTrimmedFormValue(block, '.me-script-table-title'),
     subtitle: getTrimmedFormValue(block, '.me-script-table-subtitle'),

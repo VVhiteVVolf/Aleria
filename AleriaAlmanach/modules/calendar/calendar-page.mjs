@@ -3,6 +3,9 @@ import { createCalendarEventModel } from './calendar-events-model.mjs';
 import { renderCalendarMonth, escapeCalendarText as e } from './calendar-date-picker.mjs';
 import { renderCalendarPreview, bindCalendarImageFallback } from './calendar-preview.mjs';
 import { createCalendarEditor } from './calendar-editor.mjs';
+import { renderCalendarChronicle } from './calendar-chronicle.mjs';
+import { calendarChronicleSelection } from '../../../Ereignisse/modules/catalog/events-model.mjs';
+import { createWeddingPreview } from '../../../Ereignisse/modules/weddings/wedding-preview.mjs';
 
 function initializeCalendarPage() {
   const root = document.querySelector('[data-calendar-page]');
@@ -11,8 +14,11 @@ function initializeCalendarPage() {
   const calendar = globalThis.AleriaCalendar;
   const store = getCalendarStore(), model = createCalendarEventModel(calendar);
   const editor = createCalendarEditor({ store, calendar });
-  let selected = calendar.current(), filter = '', navigated = false, initialEvent = new URL(location.href).searchParams.get('event');
+  const params = new URL(location.href).searchParams;
+  const initialChronicle = calendarChronicleSelection(params, calendar.current());
+  let selected = initialChronicle.selected, filter = '', navigated = initialChronicle.navigated, initialEvent = params.get('event');
   const $ = selector => root.querySelector(selector);
+  const weddings = createWeddingPreview({ root: $('[data-calendar-weddings]'), eventsBase: new URL('../Ereignisse/',location.href), calendar });
   bindCalendarImageFallback(root);
 
   function entriesInMonth() {
@@ -25,6 +31,8 @@ function initializeCalendarPage() {
     const state = store.getState(), today = calendar.current();
     $('[data-calendar-today]').textContent = calendar.format(today);
     $('[data-calendar-heading]').textContent = calendar.monthLabel(selected.month);
+    weddings.render(selected.year);
+    $('[data-calendar-chronicle]').innerHTML = renderCalendarChronicle(selected.year, initialChronicle.focusId);
     $('[data-calendar-year]').value = selected.year;
     $('[data-calendar-months]').innerHTML = calendar.months.map((name, index) => `<button type="button" data-calendar-month="${index + 1}" aria-pressed="${selected.month === index + 1}"><small>${String(index + 1).padStart(2, '0')}</small>${e(name)}</button>`).join('');
     const entries = entriesInMonth(), counts = new Map();

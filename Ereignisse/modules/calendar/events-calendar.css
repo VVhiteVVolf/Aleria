@@ -1,0 +1,13 @@
+.events-calendar-window { margin-top: 56px; padding: 27px 30px; background: #e6dcc77d; border: 1px solid var(--events-line); border-top: 3px solid var(--events-wine); }
+.events-calendar-window > header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+.events-calendar-window h2 { font-size: 31px; margin-top: 4px; }
+.events-calendar-today { margin: 17px 0 15px; padding-bottom: 17px; border-bottom: 1px solid var(--events-line); color: var(--events-muted); font-size: 12px; }
+.events-calendar-empty { font-size: 14px; color: #65584b; line-height: 1.85; padding: 10px 0 16px; }
+.events-calendar-status { color: var(--events-muted); margin-top: 12px; font: 10px/1.7 system-ui, sans-serif; }
+.events-calendar-window .calendar-preview { --gold-dark: #60482c; --parchment: #fcf8ef; }
+.events-calendar-window .calendar-preview h3 { font-size: 20px; }
+.events-calendar-window .calendar-preview-copy { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 500px) {
+  .events-calendar-window { padding: 22px 18px; margin-top: 35px; }
+  .events-calendar-window h2 { font-size: 28px; }
+}

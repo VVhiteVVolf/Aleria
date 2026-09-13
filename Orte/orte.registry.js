@@ -49,7 +49,7 @@ window.ORTE_REGISTRY = [
     name: "Llysfaen",
     status: "draft",
     type: "bauernsiedlung",
-    data: "data/llamreis-mapped-place.data.js?v=llamreis-maps-20260902a",
+    data: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/ort.data.js?v=wyrm-import-20260913a",
     hierarchy: [
       { type: "Königreich", name: "Cenyr", slug: "cenyr" },
       { type: "Grafschaft", name: "Celtigerns Wacht", slug: "celtigerns-wacht" },

@@ -1,0 +1,82 @@
+.faction-cover { display: grid; grid-template-columns: 1.08fr 1fr; align-items: center; gap: clamp(30px, 4vw, 64px); padding: 64px 0 56px; }
+.cover-kicker { letter-spacing: .18em; margin-bottom: 32px; }
+.cover-kicker > span { padding-inline: 10px; color: var(--faction-gold); }
+.cover-pretitle { color: var(--faction-muted); font-size: 17px; font-style: italic; margin-bottom: 14px; }
+.cover-copy h1 { font-size: clamp(62px, 6.7vw, 100px); letter-spacing: -.055em; color: var(--faction-burgundy); line-height: 1; }
+.cover-copy h1 em { display: block; margin-top: 6px; font-weight: normal; font-size: .6em; letter-spacing: -.025em; }
+.cover-intro { max-width: 430px; margin: 30px 0 26px; font-size: 16px; color: #63543f; line-height: 1.85; }
+.cover-intro br { display: block; }
+.cover-colophon { margin-top: 20px; font-size: 11px; color: var(--faction-muted); letter-spacing: .02em; }
+.cover-colophon > span { padding-inline: 8px; color: var(--faction-gold); }
+.cover-heraldry { align-self: stretch; display: flex; flex-direction: column; justify-content: center; padding: 25px 0 12px; }
+.heraldry-heading { display: flex; justify-content: center; align-items: center; gap: 20px; font-size: 10px; letter-spacing: .17em; text-transform: uppercase; color: var(--faction-gold); margin-bottom: 22px; }
+.heraldry-heading > span:first-child, .heraldry-heading > span:last-child { font-size: 22px; }
+.heraldic-standards { display: flex; align-items: flex-start; justify-content: center; gap: 12px; position: relative; padding-top: 18px; }
+.heraldic-standards::before { content: ''; position: absolute; top: 12px; left: -1%; width: 102%; height: 7px; border: 1px solid #84663f; background: linear-gradient(#dac391, #ac8d53); border-radius: 5px; box-shadow: 0 2px 4px #5a41221a; }
+.heraldic-standard { position: relative; display: flex; flex: 1 1 0; min-width: 0; flex-direction: column; align-items: center; min-height: 250px; padding: 33px 12px 42px; background: linear-gradient(90deg, #bfa77930, transparent 15%, #fff7de48 50%, transparent 85%, #bfa77930), #e9dabe; clip-path: polygon(0 0, 100% 0, 100% 87%, 50% 100%, 0 87%); border-inline: 1px solid #baa173; }
+.heraldic-standard::before { content: ''; position: absolute; inset: 0 6px 0; border-inline: 1px solid #b4976659; pointer-events: none; }
+.standard-pin { position: absolute; top: 12px; width: 7px; height: 7px; background: #98753e; border-radius: 50%; box-shadow: 0 0 0 3px #ccb17d50; }
+.heraldic-standard img { width: 100%; max-width: 160px; height: 140px; margin-bottom: 15px; filter: drop-shadow(0 4px 4px #50392122); }
+.heraldic-standard > span:not(.standard-pin) { text-align: center; font-size: 12px; line-height: 1.5; position: relative; }
+.heraldic-standard--center { min-height: 308px; padding-top: 37px; background-color: #d9bf8c; flex-grow: 1.14; }
+.heraldic-standard--center img { height: 166px; }
+.heraldic-standard--right { background-color: #d8cabc; }
+.standard-star { color: var(--faction-gold); margin-top: 13px; }
+.heraldry-caption { text-align: center; font-size: 13px; color: var(--faction-muted); font-style: italic; margin-top: 28px; }
+.category-tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-block: 3px double var(--faction-line); padding-block: 16px; }
+.category-tile { display: flex; align-items: center; gap: 12px; position: relative; padding: 13px 16px; text-decoration: none; border-right: 1px solid var(--faction-line); }
+.category-tile:first-child { padding-left: 0; }
+.category-tile:last-child { border-right: 0; padding-right: 0; }
+.category-tile img { width: clamp(42px, 4.4vw, 64px); height: auto; flex-shrink: 0; border-radius: 2px; mix-blend-mode: multiply; }
+.category-tile small { display: block; font-size: 9px; color: var(--faction-muted); letter-spacing: .05em; margin-bottom: 5px; white-space: nowrap; }
+.category-tile small > span { padding-inline: 3px; }
+.category-tile strong { display: block; font-size: clamp(13px, 1.2vw, 17px); line-height: 1.35; font-weight: normal; }
+.tile-arrow { color: var(--faction-gold); font-size: 14px; margin-left: auto; }
+.category-tile:hover, .category-tile[aria-current] { background: #ccb58925; color: var(--faction-burgundy); }
+@media (max-width: 1100px) {
+  .faction-cover { gap: 32px; padding-top: 45px; }
+  .cover-kicker { font-size: 9px; letter-spacing: .1em; }
+  .cover-pretitle { font-size: 15px; }
+  .heraldic-standards { gap: 8px; }
+  .heraldic-standard { padding-inline: 8px; min-height: 226px; }
+  .heraldic-standard img { height: 115px; }
+  .heraldic-standard--center { min-height: 280px; }
+  .heraldic-standard--center img { height: 147px; }
+  .category-tile { gap: 8px; padding-inline: 10px; }
+  .tile-arrow { display: none; }
+}
+@media (max-width: 800px) {
+  .faction-cover { grid-template-columns: 1fr 1fr; gap: 24px; padding: 36px 0; }
+  .cover-copy h1 { font-size: clamp(52px, 8vw, 68px); }
+  .cover-kicker { margin-bottom: 22px; }
+  .cover-intro { font-size: 14px; margin: 24px 0; }
+  .cover-colophon { line-height: 1.8; }
+  .heraldry-heading { font-size: 8px; gap: 10px; }
+  .heraldic-standard { min-height: 202px; padding-inline: 6px; }
+  .heraldic-standard img { height: 90px; }
+  .heraldic-standard--center { min-height: 245px; }
+  .heraldic-standard--center img { height: 120px; }
+  .heraldic-standard > span:not(.standard-pin) { font-size: 10px; }
+  .category-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
+  .category-tile { border-right: 0; padding: 12px 8px; }
+  .category-tile:first-child { padding-left: 8px; }
+  .category-tile strong { font-size: 14px; }
+}
+@media (max-width: 580px) {
+  .faction-cover { display: block; padding-top: 30px; }
+  .cover-copy h1 { font-size: clamp(56px, 14vw, 78px); }
+  .cover-intro { max-width: 430px; }
+  .cover-heraldry { max-width: 400px; margin: 26px auto 0; padding-top: 0; }
+  .heraldry-heading { margin-bottom: 8px; }
+  .heraldic-standard { min-height: 200px; }
+  .heraldic-standard--center { min-height: 240px; }
+  .heraldry-caption { margin-top: 18px; }
+  .category-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .category-tile:last-child { grid-column: 1 / -1; }
+  .category-tile img { width: 46px; }
+}
+@media (max-width: 360px) {
+  .category-tile img { width: 34px; }
+  .category-tile strong { font-size: 12px; }
+  .category-tile small { font-size: 8px; }
+}

@@ -1,0 +1,777 @@
+{
+  "groups": [
+    {
+      "id": "magische-organisationen",
+      "title": "Magische Organisationen"
+    },
+    {
+      "id": "fianna-alben-administration",
+      "title": "Fianna (Alben) Administration"
+    },
+    {
+      "id": "musikalische-organisationen",
+      "title": "Musikalische Organisationen"
+    },
+    {
+      "id": "zunftbezogene-organisationen",
+      "title": "Zunftbezogene Organisationen"
+    },
+    {
+      "id": "institutionen-des-kaisereiches-argentum",
+      "title": "Institutionen des Kaisereiches Argentum"
+    },
+    {
+      "id": "militaerische-institutionen-organisationen",
+      "title": "Militärische Institutionen/ Organisationen"
+    },
+    {
+      "id": "irregulaere-organisationen-und-gruppierungen",
+      "title": "Irreguläre Organisationen und Gruppierungen"
+    },
+    {
+      "id": "gruppen-der-blauschwingen",
+      "title": "Gruppen der Blauschwingen",
+      "parentId": "die-blauschwingen"
+    },
+    {
+      "id": "fremde-organisationen",
+      "title": "Fremde Organisationen"
+    },
+    {
+      "id": "sonstige-organisationen",
+      "title": "Sonstige Organisationen"
+    }
+  ],
+  "entries": [
+    {
+      "id": "daemmerwacht",
+      "name": "Dämmerwacht",
+      "kind": "Magische Loge",
+      "groupId": "magische-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 5,
+        "column": 0,
+        "name": "Dämmerwacht",
+        "image": "https://i.imgur.com/z9QwdPn.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1712"
+      },
+      "symbol": "assets/emblems/organisationen/daemmerwacht.webp"
+    },
+    {
+      "id": "arkanum-von-avallorn",
+      "name": "Arkanum von Avallorn",
+      "kind": "Magische Loge",
+      "groupId": "magische-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 5,
+        "column": 1,
+        "name": "Arkanum von Avallorn",
+        "image": "https://i.imgur.com/JnUHz8S.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2129"
+      },
+      "symbol": "assets/emblems/organisationen/arkanum-von-avallorn.webp"
+    },
+    {
+      "id": "naffatun-institut",
+      "name": "Naffatun Institut",
+      "kind": "Alchemistisches Institut",
+      "groupId": "magische-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 5,
+        "column": 2,
+        "name": "Naffatun Institut",
+        "image": "https://i.imgur.com/YuCuk5Q.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=968"
+      },
+      "symbol": "assets/emblems/organisationen/naffatun-institut.webp"
+    },
+    {
+      "id": "shifa-madraza",
+      "name": "Shifa Madraza",
+      "kind": "Medizinisches Institut",
+      "groupId": "magische-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 5,
+        "column": 3,
+        "name": "Shifa Madraza",
+        "image": "https://i.imgur.com/ABo3PP8.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=970"
+      },
+      "symbol": "assets/emblems/organisationen/shifa-madraza.webp"
+    },
+    {
+      "id": "sahar-madraza",
+      "name": "Sahar Madraza",
+      "kind": "Magisches Institut",
+      "groupId": "magische-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 5,
+        "column": 4,
+        "name": "Sahar Madraza",
+        "image": "https://i.imgur.com/jorx4eW.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=971"
+      },
+      "symbol": "assets/emblems/organisationen/sahar-madraza.webp"
+    },
+    {
+      "id": "kammer-der-fuersten",
+      "name": "Kammer der Fürsten",
+      "kind": "Handelskammer",
+      "groupId": "fianna-alben-administration",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 9,
+        "column": 0,
+        "name": "Kammer der Fürsten",
+        "image": "https://i.imgur.com/Dp0MiSa.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2493"
+      },
+      "affiliations": [
+        {
+          "label": "Fianna · albenische Administration",
+          "entryId": "fianna"
+        }
+      ],
+      "symbol": "assets/emblems/organisationen/kammer-der-fuersten.webp"
+    },
+    {
+      "id": "schatten-der-fuersten",
+      "name": "Schatten der Fürsten",
+      "kind": "Spionage",
+      "groupId": "fianna-alben-administration",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 9,
+        "column": 1,
+        "name": "Schatten der Fürsten",
+        "image": "https://i.imgur.com/EXKax3k.png",
+        "href": ""
+      },
+      "affiliations": [
+        {
+          "label": "Fianna · albenische Administration",
+          "entryId": "fianna"
+        }
+      ],
+      "symbol": "assets/emblems/organisationen/schatten-der-fuersten.webp",
+      "href": ""
+    },
+    {
+      "id": "speer-der-fuersten",
+      "name": "Speer der Fürsten",
+      "kind": "Militärinstitut",
+      "groupId": "fianna-alben-administration",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 9,
+        "column": 2,
+        "name": "Speer der Fürsten",
+        "image": "https://i.imgur.com/iNENrdz.png",
+        "href": ""
+      },
+      "affiliations": [
+        {
+          "label": "Fianna · albenische Administration",
+          "entryId": "fianna"
+        }
+      ],
+      "symbol": "assets/emblems/organisationen/speer-der-fuersten.webp",
+      "href": ""
+    },
+    {
+      "id": "recht-der-fuersten",
+      "name": "Recht der Fürsten",
+      "kind": "Justiz & Recht",
+      "groupId": "fianna-alben-administration",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 9,
+        "column": 3,
+        "name": "Recht der Fürsten",
+        "image": "https://i.imgur.com/pr5VcoX.png",
+        "href": ""
+      },
+      "affiliations": [
+        {
+          "label": "Fianna · albenische Administration",
+          "entryId": "fianna"
+        }
+      ],
+      "symbol": "assets/emblems/organisationen/recht-der-fuersten.webp",
+      "href": ""
+    },
+    {
+      "id": "wort-der-fuersten",
+      "name": "Wort der Fürsten",
+      "kind": "Diplomatie",
+      "groupId": "fianna-alben-administration",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 9,
+        "column": 4,
+        "name": "Wort der Fürsten",
+        "image": "https://i.imgur.com/TrR4fVn.png",
+        "href": ""
+      },
+      "affiliations": [
+        {
+          "label": "Fianna · albenische Administration",
+          "entryId": "fianna"
+        }
+      ],
+      "symbol": "assets/emblems/organisationen/wort-der-fuersten.webp",
+      "href": ""
+    },
+    {
+      "id": "daemmerwacht-12",
+      "name": "Dämmerwacht · gestrichener Eintrag",
+      "kind": "Magische Loge",
+      "groupId": "magische-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 12,
+        "column": 0,
+        "name": "Dämmerwacht",
+        "image": "https://i.imgur.com/LUxq8Cs.png",
+        "href": ""
+      },
+      "status": "struck",
+      "aliases": [
+        "Dämmerwacht"
+      ],
+      "affiliations": [
+        {
+          "label": "Weiterer Eintrag: Dämmerwacht",
+          "entryId": "daemmerwacht"
+        }
+      ],
+      "symbol": "assets/emblems/organisationen/daemmerwacht-12.webp",
+      "href": ""
+    },
+    {
+      "id": "bewahrer-von-avallorn",
+      "name": "Bewahrer von Avallorn",
+      "kind": "Akademisches Institut",
+      "groupId": "musikalische-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 16,
+        "column": 0,
+        "name": "Bewahrer von Avallorn",
+        "image": "https://i.imgur.com/TOPWUlj.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1592"
+      },
+      "symbol": "assets/emblems/organisationen/bewahrer-von-avallorn.webp"
+    },
+    {
+      "id": "hochlied-von-leith",
+      "name": "Hochlied von Leith",
+      "kind": "Akademisches Institut",
+      "groupId": "musikalische-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 16,
+        "column": 1,
+        "name": "Hochlied von Leith",
+        "image": "https://i.imgur.com/t1VIguw.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2441"
+      },
+      "symbol": "assets/emblems/organisationen/hochlied-von-leith.webp"
+    },
+    {
+      "id": "bardenakademie",
+      "name": "Bardenakademie",
+      "kind": "Akademisches Institut",
+      "groupId": "musikalische-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 16,
+        "column": 2,
+        "name": "Bardenakademie",
+        "image": "https://i.imgur.com/GSpUKuw.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=530"
+      },
+      "symbol": "assets/emblems/organisationen/bardenakademie.webp"
+    },
+    {
+      "id": "orchester-von-lichthain",
+      "name": "Orchester von Lichthain",
+      "kind": "Akademisches Institut",
+      "groupId": "musikalische-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 16,
+        "column": 3,
+        "name": "Orchester von Lichthain",
+        "image": "https://i.imgur.com/dLSZqYx.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=655"
+      },
+      "symbol": "assets/emblems/organisationen/orchester-von-lichthain.webp"
+    },
+    {
+      "id": "brauerzirkel-von-leith",
+      "name": "Brauerzirkel von Leith",
+      "kind": "Handelskammer",
+      "groupId": "zunftbezogene-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 20,
+        "column": 0,
+        "name": "Brauerzirkel von Leith",
+        "image": "https://i.imgur.com/ZFR7O5a.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2440"
+      },
+      "symbol": "assets/emblems/organisationen/brauerzirkel-von-leith.webp"
+    },
+    {
+      "id": "eiserne-kette",
+      "name": "Eiserne Kette",
+      "kind": "Sklaven Institut",
+      "groupId": "zunftbezogene-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 20,
+        "column": 1,
+        "name": "Eiserne Kette",
+        "image": "https://i.imgur.com/JMK0La1.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=969"
+      },
+      "symbol": "assets/emblems/organisationen/eiserne-kette.webp"
+    },
+    {
+      "id": "judikatur-des-othorin",
+      "name": "Judikatur des Othorin",
+      "kind": "Kaiserliche Judikative",
+      "groupId": "institutionen-des-kaisereiches-argentum",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 24,
+        "column": 0,
+        "name": "Judikatur des Othorin",
+        "image": "https://i.imgur.com/xOcDXSU.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1392"
+      },
+      "symbol": "assets/emblems/organisationen/judikatur-des-othorin.webp"
+    },
+    {
+      "id": "hetaeren-der-lytheris",
+      "name": "Hetären der Lytheris · klerikal",
+      "kind": "Klerikale Institution",
+      "groupId": "institutionen-des-kaisereiches-argentum",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 24,
+        "column": 1,
+        "name": "Hetären der Lytheris",
+        "image": "https://i.imgur.com/KCyOTYN.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1382"
+      },
+      "aliases": [
+        "Hetären der Lytheris"
+      ],
+      "symbol": "assets/emblems/organisationen/hetaeren-der-lytheris.webp"
+    },
+    {
+      "id": "forum-des-tharistos",
+      "name": "Forum des Tharistos",
+      "kind": "Kaiserliche Handelskammer",
+      "groupId": "institutionen-des-kaisereiches-argentum",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 24,
+        "column": 2,
+        "name": "Forum des Tharistos",
+        "image": "https://i.imgur.com/eB1DWJF.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1383"
+      },
+      "symbol": "assets/emblems/organisationen/forum-des-tharistos.webp"
+    },
+    {
+      "id": "kaiserliche-universitaet",
+      "name": "Kaiserliche Universität",
+      "kind": "Akademische Institution",
+      "groupId": "institutionen-des-kaisereiches-argentum",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 24,
+        "column": 3,
+        "name": "Kaiserliche Universität",
+        "image": "https://i.imgur.com/2DReMtO.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1374"
+      },
+      "symbol": "assets/emblems/organisationen/kaiserliche-universitaet.webp"
+    },
+    {
+      "id": "venaim-rogare-thedros",
+      "name": "Venaim Rogare Thedros",
+      "kind": "Klerikale Institution",
+      "groupId": "institutionen-des-kaisereiches-argentum",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 24,
+        "column": 4,
+        "name": "Venaim Rogare Thedros",
+        "image": "https://i.imgur.com/RknKg8D.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1399"
+      },
+      "symbol": "assets/emblems/organisationen/venaim-rogare-thedros.webp"
+    },
+    {
+      "id": "sepulcretum-kharos",
+      "name": "Sepulcretum Kharos",
+      "kind": "Klerikale Institution",
+      "groupId": "institutionen-des-kaisereiches-argentum",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 27,
+        "column": 0,
+        "name": "Sepulcretum Kharos",
+        "image": "https://i.imgur.com/CU4zveD.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1402"
+      },
+      "symbol": "assets/emblems/organisationen/sepulcretum-kharos.webp"
+    },
+    {
+      "id": "mardrans-contubernium",
+      "name": "Mardrans Contubernium · Argentum",
+      "kind": "Militärische Institution",
+      "groupId": "institutionen-des-kaisereiches-argentum",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 27,
+        "column": 1,
+        "name": "Mardrans Contubernium",
+        "image": "https://i.imgur.com/musDDwE.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1397"
+      },
+      "aliases": [
+        "Mardrans Contubernium"
+      ],
+      "symbol": "assets/emblems/organisationen/mardrans-contubernium.webp"
+    },
+    {
+      "id": "avrum-divanas",
+      "name": "Avrum Divanas",
+      "kind": "Wirtschaftliche Institution",
+      "groupId": "institutionen-des-kaisereiches-argentum",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 27,
+        "column": 2,
+        "name": "Avrum Divanas",
+        "image": "https://i.imgur.com/2oIwX3e.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1398"
+      },
+      "symbol": "assets/emblems/organisationen/avrum-divanas.webp"
+    },
+    {
+      "id": "auspicium-ordeus",
+      "name": "Auspicium Ordeus",
+      "kind": "Klerikale Institution",
+      "groupId": "institutionen-des-kaisereiches-argentum",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 27,
+        "column": 3,
+        "name": "Auspicium Ordeus",
+        "image": "https://i.imgur.com/LACAMS9.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1401"
+      },
+      "symbol": "assets/emblems/organisationen/auspicium-ordeus.webp"
+    },
+    {
+      "id": "hetaeren-der-lytheris-1400",
+      "name": "Hetären der Lytheris · karitativ",
+      "kind": "Karitative Institution",
+      "groupId": "institutionen-des-kaisereiches-argentum",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 27,
+        "column": 4,
+        "name": "Hetären der Lytheris",
+        "image": "https://i.imgur.com/viWqPkC.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1400"
+      },
+      "aliases": [
+        "Hetären der Lytheris"
+      ],
+      "symbol": "assets/emblems/organisationen/hetaeren-der-lytheris-1400.webp"
+    },
+    {
+      "id": "mardrans-contubernium-724",
+      "name": "Mardrans Contubernium · Militärregister",
+      "kind": "Militärische Institution",
+      "groupId": "militaerische-institutionen-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 31,
+        "column": 0,
+        "name": "Mardrans Contubernium",
+        "image": "https://i.imgur.com/Q8ask17.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=724"
+      },
+      "aliases": [
+        "Mardrans Contubernium"
+      ],
+      "symbol": "assets/emblems/organisationen/mardrans-contubernium-724.webp"
+    },
+    {
+      "id": "die-blauschwingen",
+      "name": "Die Blauschwingen",
+      "kind": "Widerstandsbewegung",
+      "groupId": "irregulaere-organisationen-und-gruppierungen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 35,
+        "column": 0,
+        "name": "Die Blauschwingen",
+        "image": "https://i.imgur.com/1NmAagn.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1357"
+      },
+      "symbol": "assets/emblems/organisationen/die-blauschwingen.webp"
+    },
+    {
+      "id": "blauschwingen",
+      "name": "Blauschwingen",
+      "kind": "Primäres Banner",
+      "groupId": "gruppen-der-blauschwingen",
+      "parentId": "die-blauschwingen",
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 39,
+        "column": 0,
+        "name": "Blauschwingen",
+        "image": "https://i.imgur.com/1NmAagn.png",
+        "href": ""
+      },
+      "symbol": "assets/emblems/organisationen/blauschwingen.webp",
+      "href": ""
+    },
+    {
+      "id": "eichhoernchen",
+      "name": "Eichhörnchen",
+      "kind": "Banner",
+      "groupId": "gruppen-der-blauschwingen",
+      "parentId": "die-blauschwingen",
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 39,
+        "column": 1,
+        "name": "Eichhörnchen",
+        "image": "https://i.imgur.com/AFNwWWe.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1719"
+      },
+      "symbol": "assets/emblems/organisationen/eichhoernchen.webp"
+    },
+    {
+      "id": "trabanten",
+      "name": "Trabanten",
+      "kind": "Banner",
+      "groupId": "gruppen-der-blauschwingen",
+      "parentId": "die-blauschwingen",
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 39,
+        "column": 2,
+        "name": "Trabanten",
+        "image": "https://i.imgur.com/3LWfNz9.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1720"
+      },
+      "symbol": "assets/emblems/organisationen/trabanten.webp"
+    },
+    {
+      "id": "wellenbrecher",
+      "name": "Wellenbrecher",
+      "kind": "Banner",
+      "groupId": "gruppen-der-blauschwingen",
+      "parentId": "die-blauschwingen",
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 39,
+        "column": 3,
+        "name": "Wellenbrecher",
+        "image": "https://i.imgur.com/sx4wPbR.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1721"
+      },
+      "symbol": "assets/emblems/organisationen/wellenbrecher.webp"
+    },
+    {
+      "id": "nachtsaenger",
+      "name": "Nachtsänger",
+      "kind": "Banner",
+      "groupId": "gruppen-der-blauschwingen",
+      "parentId": "die-blauschwingen",
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 39,
+        "column": 4,
+        "name": "Nachtsänger",
+        "image": "https://i.imgur.com/Nad2png.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1722"
+      },
+      "symbol": "assets/emblems/organisationen/nachtsaenger.webp"
+    },
+    {
+      "id": "sturmrufer",
+      "name": "Sturmrufer",
+      "kind": "Banner",
+      "groupId": "gruppen-der-blauschwingen",
+      "parentId": "die-blauschwingen",
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 42,
+        "column": 0,
+        "name": "Sturmrufer",
+        "image": "https://i.imgur.com/37v9hyn.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1723"
+      },
+      "symbol": "assets/emblems/organisationen/sturmrufer.webp"
+    },
+    {
+      "id": "akatsuki-no-saburai",
+      "name": "Akatsuki no Saburai",
+      "kind": "Söldnergilde",
+      "groupId": "fremde-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 46,
+        "column": 0,
+        "name": "Akatsuki no Saburai",
+        "image": "https://i.imgur.com/C888nBa.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1025"
+      },
+      "symbol": "assets/emblems/organisationen/akatsuki-no-saburai.webp"
+    },
+    {
+      "id": "kamoku-no-yume",
+      "name": "Kamoku no Yume",
+      "kind": "Kaufmanns Organisation",
+      "groupId": "fremde-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 46,
+        "column": 1,
+        "name": "Kamoku no Yume",
+        "image": "https://i.imgur.com/loW6Gdj.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1016"
+      },
+      "symbol": "assets/emblems/organisationen/kamoku-no-yume.webp"
+    },
+    {
+      "id": "inkarnate-kurtisanen",
+      "name": "Inkarnate Kurtisanen",
+      "kind": "Unterhaltungs Organisation",
+      "groupId": "sonstige-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 50,
+        "column": 0,
+        "name": "Inkarnate Kurtisanen",
+        "image": "https://i.imgur.com/peNN5Ym.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1285"
+      },
+      "symbol": "assets/emblems/organisationen/inkarnate-kurtisanen.webp"
+    },
+    {
+      "id": "zawiya-schule",
+      "name": "Zawiya Schule",
+      "kind": "Philosophisches Institut",
+      "groupId": "sonstige-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 50,
+        "column": 1,
+        "name": "Zawiya Schule",
+        "image": "https://i.imgur.com/ULQffVa.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=753"
+      },
+      "symbol": "assets/emblems/organisationen/zawiya-schule.webp"
+    },
+    {
+      "id": "drachenstreuner",
+      "name": "Drachenstreuner",
+      "kind": "Spionage Zweig",
+      "groupId": "sonstige-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 50,
+        "column": 2,
+        "name": "Drachenstreuner",
+        "image": "https://i.imgur.com/j8QpNSY.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2170"
+      },
+      "symbol": "assets/emblems/organisationen/drachenstreuner.webp"
+    },
+    {
+      "id": "cenyrs-ehrengarde",
+      "name": "Cenyrs Ehrengarde",
+      "kind": "Ehrengarde",
+      "groupId": "sonstige-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 50,
+        "column": 3,
+        "name": "Cenyrs Ehrengarde",
+        "image": "https://i.imgur.com/huODTAk.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1280"
+      },
+      "symbol": "assets/emblems/organisationen/cenyrs-ehrengarde.webp"
+    },
+    {
+      "id": "naraths-maertyrer",
+      "name": "Naraths Märtyrer",
+      "kind": "Märtyrer Institut",
+      "groupId": "sonstige-organisationen",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/organisationen.html",
+        "row": 50,
+        "column": 4,
+        "name": "Naraths Märtyrer",
+        "image": "https://i.imgur.com/lmk1Qt2.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=528"
+      },
+      "symbol": "assets/emblems/organisationen/naraths-maertyrer.webp"
+    }
+  ]
+}

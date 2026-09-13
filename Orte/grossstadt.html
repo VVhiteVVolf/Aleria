@@ -12,18 +12,21 @@
   <link rel="stylesheet" href="/Orte/assets/css/orte-place-merchants.css?v=gwynthor-merchants-20260902a">
   <link rel="stylesheet" href="/Orte/assets/css/orte-place-press.css?v=fluesterfaecher-layout-20260904b">
   <link rel="stylesheet" href="/Orte/assets/css/orte-place-content.css?v=newspaper-scroll-20260904a">
-  <link rel="stylesheet" href="/Orte/modules/military/military-entry.css?v=20260904a">
-  <script src="/js/world-content/celtigerns-wacht-places.js?v=celtigerns-cities-20260904c"></script>
-  <script src="/Orte/orte.registry.js?v=llamreis-maps-20260902a"></script>
+  <link rel="stylesheet" href="/Orte/modules/personalities/place-personalities.css?v=20260913a">
+  <link rel="stylesheet" href="/Orte/modules/introduction/place-introduction.css?v=20260913a">
+  <link rel="stylesheet" href="/Orte/modules/military/military-entry.css?v=20260913a">
+  <script src="/js/world-content/celtigerns-wacht-places.js?v=celtigerns-cities-20260904c&content=wyrm-20260913b"></script>
+  <script src="/Orte/orte.registry.js?v=llamreis-maps-20260902a&content=wyrm-20260913a"></script>
   <script src="/Orte/assets/js/orte-loader.js?v=celtigerns-orte-20260901a"></script>
   <script src="/Orte/assets/js/orte-place-media.js?v=celtigerns-orte-20260901a" defer></script>
-  <script src="/Orte/assets/js/orte-place-houses.js?v=gwynthor-houses-20260901a" defer></script>
+  <script src="/Orte/assets/js/orte-place-houses.js?v=commoner-placeholder-20260913a" defer></script>
   <script src="/Orte/assets/js/orte-map-embed.js?v=gwynthor-board-20260902a" defer></script>
   <script src="/Orte/assets/js/orte-notice-board.js?v=notice-board-placeholder-20260904a" defer></script>
   <script src="/Orte/assets/js/orte-region-map.js?v=gwynthor-map-embed-20260902a" defer></script>
-  <script src="/Orte/assets/js/orte-place-merchants.js?v=gwynthor-merchants-20260901d" defer></script>
-  <script type="module" src="/Orte/assets/js/orte-place-press.mjs?v=fluesterfaecher-20260904a"></script>
+  <script src="/Orte/assets/js/orte-place-merchants.js?v=merchant-shields-20260913a" defer></script>
+  <script type="module" src="/Orte/assets/js/orte-place-press.mjs?v=fluesterfaecher-20260904a&content=wyrm-20260913a"></script>
   <script type="module" src="/Orte/modules/military/military-entry.mjs?v=20260904a"></script>
+  <script src="/Orte/modules/personalities/place-personalities.js?v=20260913b" defer></script>
   <script src="/Orte/assets/js/orte-place-content.js?v=gwynthor-content-20260902b" defer></script>
   <script src="/Orte/assets/js/orte-grossstadt.js?v=llamreis-maps-20260902a" defer></script>
 </head>
@@ -54,21 +57,13 @@
 	<tbody>
 		<tr>
 			<td class="pt-s-0007" colspan="5">
+			<div class="orte-introduction-panel">
 			<h2>Einleitung</h2>
-
-			<div data-orte-content="introduction"><p>...</p></div>
-
-			<hr /><p>&nbsp;</p>
-			<!-- Gesprächsvorlage 1 -->
-
-
-			<p class="pt-s-0003">&nbsp;</p>
+			<div data-orte-content="introduction" tabindex="0" role="region" aria-label="Einleitung"><p>...</p></div>
+			</div>
 			</td>
-			<td class="pt-s-0016" colspan="3"><p>&nbsp;</p>
-
-			<p>&nbsp;</p>
-
-			<p><span class="orte-image-slot" data-orte-image-key="karten-bild-png" data-orte-image-label="Stadtbild oder Stadtkarte" data-orte-image-format="landscape" data-orte-image-max-height="360" aria-label="Stadtbild oder Stadtkarte"></span></p>
+			<td class="pt-s-0016" colspan="3">
+			<p class="orte-introduction-map"><span class="orte-image-slot" data-orte-image-key="karten-bild-png" data-orte-image-label="Stadtbild oder Stadtkarte" data-orte-image-format="landscape" data-orte-image-max-height="360" aria-label="Stadtbild oder Stadtkarte"></span></p>
 			</td>
 		</tr>
 		<tr>
@@ -231,6 +226,7 @@
 		<tr>
 			<td class="pt-s-0039" colspan="8">
 			<h2>Aristokratie/ H&auml;user</h2>
+			<div data-orte-content="houses"></div>
 			</td>
 		</tr>
 		<tr>
@@ -782,14 +778,12 @@
 		</tr>
 		<tr>
 			<td class="pt-s-0064" colspan="6">
+			<div class="orte-military-text-panel">
 			<h2>Milit&auml;r</h2>
-
-			<div data-orte-content="military"><p>...</p></div>
+			<div data-orte-content="military" tabindex="0" role="region" aria-label="Militär"><p>...</p></div>
+			</div>
 			</td>
-			<td class="pt-s-0065" colspan="2"><p>&nbsp;</p>
-
-			<p>&nbsp;</p>
-
+			<td class="pt-s-0065" colspan="2">
 			<p class="orte-military-entry" data-orte-military-entry><span class="orte-image-slot" data-orte-image-key="bild-einer-stadtwache-png" data-orte-image-label="Militärbild" data-orte-image-format="landscape" data-orte-image-max-height="360" aria-label="Militärbild"></span><a class="orte-military-entry__link" data-orte-military-link href="/Orte/militaer.html"><span>Militäransicht</span><strong>Aufstellung öffnen</strong></a></p>
 			</td>
 		</tr>
@@ -938,7 +932,7 @@
 		</tr>
 		<tr data-orte-personalities-content>
 			<td class="pt-s-0039" colspan="8">
-			<table class="pt-s-0067" border="5">
+			<table class="pt-s-0067" border="5" data-orte-personalities>
 				<tbody>
 					<tr>
 						<th class="pt-s-0068" colspan="4">Pers&ouml;nlichkeiten von Relevanz</th>

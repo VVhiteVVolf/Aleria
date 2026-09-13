@@ -34,6 +34,16 @@
       regionPins: "TwrRhewgornBannkreisMarker.webp",
     },
     {
+      slug: "craithglyn",
+      title: "Craithglyn",
+      mapPrefix: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-craithglyn",
+      folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/craithglyn-bannkreis",
+      lordship: { slug: "herrschaft-der-wyrm", title: "Herrschaft der Wyrm" },
+      rulingHouse: "Haus Wyrm",
+      regionNormal: "CraithglynBannkreisNormal.webp",
+      regionPins: "CraithglynBannkreisMarker.webp",
+    },
+    {
       slug: "mwyncreig",
       title: "Mwyncreig",
       mapPrefix: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-mwyncreig",

@@ -47,7 +47,8 @@ export function renderCultureClassPage(document, documents, culture, plan) {
   const written = document.sections.filter(section => section.status === 'written');
   const pending = document.sections.filter(section => section.status === 'pending');
   const hasProgression = Boolean(plan);
-  const orderContents = getCultureOrderContentsEntry(culture);
+  const showOrderOverview = culture.classPage?.showOrderOverview !== false;
+  const orderContents = showOrderOverview ? getCultureOrderContentsEntry(culture) : null;
   const loreContents = [written[0], ...(orderContents ? [orderContents] : []), ...written.slice(1)];
   const contents = hasProgression
     ? [loreContents[0], { id: 'ausbildungsplan', title: 'Ausbildung · Stufe 1–20' }, ...loreContents.slice(1)]
@@ -57,6 +58,7 @@ export function renderCultureClassPage(document, documents, culture, plan) {
   const next = documents[(index + 1) % documents.length];
   const companion = document.companionArtwork;
   const structureOnly = plan?.progressionStatus === 'structure-only';
+  const runtimeVersion = culture.id === 'morgorn' ? '20260913-morgorn-names-v1' : structureOnly ? STRUCTURE_ONLY_VERSION : VERSION;
   const styleName = hasProgression
     ? structureOnly ? 'Ausbildungsrahmen' : document.id === 'derwyn' ? 'Wyrmtanz' : plan.styles[0]?.name || 'Skaldisches Repertoire'
     : '';
@@ -66,7 +68,8 @@ export function renderCultureClassPage(document, documents, culture, plan) {
   const focus = hasProgression ? plan.focus : document.subtitle;
   const affiliation = hasProgression ? plan.affiliation : `${document.subtitle} · ${culture.name}`;
   const progressionAttribute = hasProgression ? ` data-culture-class="${escape(plan.id)}"` : '';
-  const orderOverview = renderCultureOrderOverview(culture, { currentClassId: document.id, classHref: classId => pageHref({ cultureId: culture.id, id: classId }) });
+  const orderOverview = showOrderOverview
+    ? renderCultureOrderOverview(culture, { currentClassId: document.id, classHref: classId => pageHref({ cultureId: culture.id, id: classId }) }) : '';
   const cultureStyle = ['vennyr', 'aldrimar', 'alben', 'nordmaenner', 'morgorn', 'venalys'].includes(culture.id)
     ? `<link rel="stylesheet" href="../../modules/culture/${culture.id}-class-page.css?v=${VERSION}">`
     : '';
@@ -81,7 +84,7 @@ export function renderCultureClassPage(document, documents, culture, plan) {
   <link rel="stylesheet" href="../../modules/culture/culture-class-page.css?v=${VERSION}">
   ${hasProgression && ['vennyr', 'aldrimar'].includes(culture.id) ? `<link rel="stylesheet" href="../../modules/culture/culture-training-controls.css?v=${VERSION}">` : ''}${cultureStyle}
   <script type="module" src="../../modules/pages/class-page.js?v=20260905-universal-v1"></script>
-  ${hasProgression ? `<script type="module" src="../../modules/culture/culture-class-page.js?v=${structureOnly ? STRUCTURE_ONLY_VERSION : VERSION}"></script>` : ''}
+  ${hasProgression ? `<script type="module" src="../../modules/culture/culture-class-page.js?v=${runtimeVersion}"></script>` : ''}
 </head><body class="classes-page class-document-page cenyr-class-page ${escape(culture.id)}-class-page" data-class-document="${document.id}" data-culture="${escape(culture.id)}"${progressionAttribute} data-class-theme="sand" id="top">
   <a class="skip-link" href="#einfuehrung">Zum Klasseninhalt</a>
   <header class="site-header"><a href="../../Klassenseite.html#${escape(culture.id)}">← Zum Klassenregister</a><span class="site-brand">Aleria / ${escape(labels.brand)}</span><a class="class-almanach-link" href="../../../AleriaAlmanach/AleriaAlmanach.html">Zum Almanach</a></header>

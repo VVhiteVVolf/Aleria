@@ -28,7 +28,9 @@ function collectClasses(html, culture = '') {
       continue;
     }
     classes.set(name, {
-      id: slug(name), name, baseClass: !culture, cultures: culture ? [culture] : [],
+      // Morgorn's display names changed with Morgar 2.1; saved class identities stay stable.
+      id: (culture === 'Morgorn' && attr(match[0], 'data-class-id')) || slug(name),
+      name, baseClass: !culture, cultures: culture ? [culture] : [],
       order: classes.size, description: attr(match[0], 'data-tooltip'),
       icon: attr(match[1].match(/<img\b[^>]*>/)?.[0] || '', 'src'),
       sourcePage: 'Klassenordner/Klassenseite.html', pageLinks

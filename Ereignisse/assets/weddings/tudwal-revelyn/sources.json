@@ -1,0 +1,319 @@
+{
+  "source": "Hochzeitsvorlage des Nutzers vom 13. September 2026",
+  "sourceYear": 1720,
+  "dateNote": "Die alte Vorlage nennt 1720. Der Nutzer hat den aktuellen Termin auf zwei Wochen nach dem 09.03.1740 festgelegt: Bei neun Tagen je Aleria-Woche ergibt das den 27.03.1740 (27. Lichtkehr). Der geplante Beginn um 14:00 Uhr stammt aus dem vorläufigen Ablaufentwurf.",
+  "guestRows": 39,
+  "images": {
+    "hochzeitsmotiv.png": "https://i.imgur.com/iEBa9Hw.png",
+    "haus-draig.png": "https://i.imgur.com/Ok6Zdpl.png",
+    "haus-penderyn.png": "https://i.imgur.com/7NnZnFX.png"
+  },
+  "guestPortraits": [
+    {
+      "guestId": "ceremony-yvain",
+      "familyId": "haus-neidr",
+      "personId": "yvain-neidr",
+      "sourceName": "Yvain Neidr",
+      "image": "../Stammbäume/assets/images/portraits/haus-neidr/yvain-neidr.jpg"
+    },
+    {
+      "guestId": "ceremony-gwalchgwyn",
+      "familyId": "haus-saethwyr",
+      "personId": "gwalchgwyn-saethwyr",
+      "sourceName": "Gwalchgwyn",
+      "image": "../Stammbäume/assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg"
+    },
+    {
+      "guestId": "ceremony-arwal",
+      "familyId": "haus-grawn",
+      "personId": "arwal-grawn",
+      "sourceName": "Arwal Grawn",
+      "image": "../Stammbäume/assets/images/portraits/haus-grawn/arwal-grawn.jpg"
+    },
+    {
+      "guestId": "ceremony-elinor",
+      "familyId": "haus-pendrag",
+      "personId": "elinor-pendrag",
+      "sourceName": "Elinor Pendrag",
+      "image": "../Stammbäume/assets/images/portraits/haus-pendrag/elinor-pendrag.jpg"
+    },
+    {
+      "guestId": "ceremony-merin",
+      "familyId": "haus-illewod",
+      "personId": "merwin-illewod",
+      "sourceName": "Merwin Illewod",
+      "image": "../Stammbäume/assets/images/portraits/haus-illewod/merwin-illewod.jpg"
+    },
+    {
+      "guestId": "ceremony-freya",
+      "familyId": "haus-skald",
+      "personId": "freya-skald",
+      "sourceName": "Freya Skald",
+      "image": "../Stammbäume/assets/images/portraits/haus-skald/freya-skald.png"
+    },
+    {
+      "guestId": "ceremony-mairwen",
+      "familyId": "haus-ceirwyn",
+      "personId": "mairwen-ceirwyn",
+      "sourceName": "Mairwen Ceirwyn",
+      "image": "../Stammbäume/assets/images/portraits/haus-ceirwyn/mairwen-ceirwyn.png"
+    },
+    {
+      "guestId": "ceremony-myrddin",
+      "familyId": "haus-draig",
+      "personId": "myrddin-draig",
+      "sourceName": "Myrddin",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/myrddin-draig.jpg"
+    },
+    {
+      "guestId": "ceremony-isolde",
+      "familyId": "haus-arwydd",
+      "personId": "isolde-arwydd",
+      "sourceName": "Isolde",
+      "image": "../Stammbäume/assets/images/portraits/haus-arwydd/isolde-arwydd.jpg"
+    },
+    {
+      "guestId": "house-one-galahad",
+      "familyId": "haus-draig",
+      "personId": "galahad-draig",
+      "sourceName": "Galahad",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg"
+    },
+    {
+      "guestId": "house-one-gwendolyn",
+      "familyId": "haus-draig",
+      "personId": "gwendolyn-aderyn",
+      "sourceName": "Gwendolyn Aderyn",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/gwendolyn-aderyn.jpg"
+    },
+    {
+      "guestId": "house-one-tudwal",
+      "familyId": "haus-draig",
+      "personId": "tudwal-draig",
+      "sourceName": "Tudwal",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/tudwal-draig.jpg"
+    },
+    {
+      "guestId": "house-one-neithon",
+      "familyId": "haus-draig",
+      "personId": "neithon-1718-draig",
+      "sourceName": "Neithon",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/neithon-1718-draig.jpg"
+    },
+    {
+      "guestId": "house-one-gawain",
+      "familyId": "haus-draig",
+      "personId": "gawain-draig",
+      "sourceName": "Gawain",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/gawain-draig.jpg"
+    },
+    {
+      "guestId": "house-one-idwal",
+      "familyId": "haus-draig",
+      "personId": "idwal-draig",
+      "sourceName": "Idwal",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/idwal-draig.jpg"
+    },
+    {
+      "guestId": "house-one-rhiannon",
+      "familyId": "haus-draig",
+      "personId": "rhiannon-draig",
+      "sourceName": "Rhiannon",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/rhiannon-draig.jpg"
+    },
+    {
+      "guestId": "house-one-isobel",
+      "familyId": "haus-draig",
+      "personId": "isobel-1719-draig",
+      "sourceName": "Isobel",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/isobel-1719-draig.jpg"
+    },
+    {
+      "guestId": "house-one-owain",
+      "familyId": "haus-draig",
+      "personId": "owain-draig",
+      "sourceName": "Owain Draig",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg"
+    },
+    {
+      "guestId": "house-two-aneurin",
+      "familyId": "haus-penderyn",
+      "personId": "aneurin-penderyn",
+      "sourceName": "Aneurin Penderyn",
+      "image": "../Stammbäume/assets/images/portraits/haus-penderyn/aneurin-penderyn.png"
+    },
+    {
+      "guestId": "house-two-meinir",
+      "familyId": "haus-penderyn",
+      "personId": "meinir-sgwarnog",
+      "sourceName": "Meinir Sgwarnog",
+      "image": "../Stammbäume/assets/images/portraits/haus-penderyn/meinir-sgwarnog.jpg"
+    },
+    {
+      "guestId": "house-two-revelyn",
+      "familyId": "haus-penderyn",
+      "personId": "revelyn-penderyn",
+      "sourceName": "Revelyn Penderyn",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/revelyn-penderyn.jpg"
+    },
+    {
+      "guestId": "house-two-talfryn",
+      "familyId": "haus-penderyn",
+      "personId": "talfryn-penderyn",
+      "sourceName": "Talfryn Penderyn",
+      "image": "../Stammbäume/assets/images/portraits/haus-penderyn/talfryn-penderyn.png"
+    },
+    {
+      "guestId": "house-two-jinell",
+      "familyId": "haus-penderyn",
+      "personId": "jinell-penderyn",
+      "sourceName": "Jinell Penderyn",
+      "image": "../Stammbäume/assets/images/portraits/haus-penderyn/jinell-penderyn.png"
+    },
+    {
+      "guestId": "house-two-rhon",
+      "familyId": "haus-penderyn",
+      "personId": "rhon-penderyn",
+      "sourceName": "Rhon Penderyn",
+      "image": "../Stammbäume/assets/images/portraits/haus-penderyn/rhon-penderyn.png"
+    },
+    {
+      "guestId": "house-two-dwnn",
+      "familyId": "haus-penderyn",
+      "personId": "dwnn-penderyn",
+      "sourceName": "Dwnn Penderyn",
+      "image": "../Stammbäume/assets/images/portraits/haus-penderyn/dwnn-penderyn.png"
+    },
+    {
+      "guestId": "individual-idris",
+      "familyId": "haus-arwydd",
+      "personId": "idris-arwydd",
+      "sourceName": "Idris",
+      "image": "../Stammbäume/assets/images/portraits/haus-arwydd/idris-arwydd.jpg"
+    },
+    {
+      "guestId": "individual-mailgwyn",
+      "familyId": "haus-wyrm",
+      "personId": "mailgwin-wyrm",
+      "sourceName": "Mailgwin",
+      "image": "../Stammbäume/assets/images/portraits/haus-wyrm/mailgwin-wyrm.jpg"
+    },
+    {
+      "guestId": "individual-duncan",
+      "familyId": "haus-gafyr",
+      "personId": "duncan-gafyr",
+      "sourceName": "Duncan",
+      "image": "../Stammbäume/assets/images/portraits/haus-gafyr/duncan-gafyr.jpg"
+    },
+    {
+      "guestId": "individual-huw",
+      "familyId": "haus-saethwyr",
+      "personId": "huw-saethwyr",
+      "sourceName": "Huw",
+      "image": "../Stammbäume/assets/images/portraits/haus-saethwyr/huw-saethwyr.jpg"
+    },
+    {
+      "guestId": "individual-stennis",
+      "familyId": "haus-gwefrydd",
+      "personId": "stennis-gwefrydd",
+      "sourceName": "Stennis",
+      "image": "../Stammbäume/assets/images/portraits/haus-gwefrydd/stennis-gwefrydd.jpg"
+    },
+    {
+      "guestId": "individual-mervyn",
+      "familyId": "haus-gwyvern",
+      "personId": "mervyn-gwyvern",
+      "sourceName": "Mervyn",
+      "image": "../Stammbäume/assets/images/portraits/haus-gwyvern/mervyn-gwyvern.jpg"
+    },
+    {
+      "guestId": "individual-gareth",
+      "familyId": "haus-aderyn",
+      "personId": "gareth-aderyn",
+      "sourceName": "Gareth Aderyn",
+      "image": "../Stammbäume/assets/images/portraits/haus-aderyn/gareth-aderyn.jpg"
+    },
+    {
+      "guestId": "individual-mordred",
+      "familyId": "haus-grawn",
+      "personId": "mordred-grawn",
+      "sourceName": "Mordred Grawn",
+      "image": "../Stammbäume/assets/images/portraits/haus-grawn/mordred-grawn.jpg"
+    },
+    {
+      "guestId": "individual-fionn",
+      "familyId": "haus-mac-ard-cumhaill",
+      "personId": "fionn-1686-cumhail",
+      "sourceName": "Fionn Cumhail",
+      "image": "../Stammbäume/assets/images/portraits/haus-mac-ard-cumhaill/fionn-1686-cumhail.jpg"
+    },
+    {
+      "guestId": "individual-tristan-isolde",
+      "familyId": "haus-pendrag",
+      "personId": "tristan-pendrag",
+      "sourceName": "Tristan Pendrag",
+      "image": "../Stammbäume/assets/images/portraits/haus-pendrag/tristan-pendrag.jpg"
+    },
+    {
+      "guestId": "individual-tristan-isolde",
+      "familyId": "haus-pendrag",
+      "personId": "isolde-arth",
+      "sourceName": "Isolde Arth",
+      "image": "../Stammbäume/assets/images/portraits/haus-pendrag/isolde-arth.jpg"
+    },
+    {
+      "guestId": "individual-morgana-guinevere",
+      "familyId": "haus-neidr",
+      "personId": "morgana-wylan",
+      "sourceName": "Morgana Wylan",
+      "image": "../Stammbäume/assets/images/portraits/haus-neidr/morgana-wylan.jpg"
+    },
+    {
+      "guestId": "individual-morgana-guinevere",
+      "familyId": "haus-neidr",
+      "personId": "guinevere-neidr",
+      "sourceName": "Guinevere Neidr",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/guinevere-neidr.jpg"
+    },
+    {
+      "guestId": "individual-rhydian-lynne",
+      "familyId": "haus-arth",
+      "personId": "rhydian-arth",
+      "sourceName": "Rhydian Arth",
+      "image": "../Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg"
+    },
+    {
+      "guestId": "individual-rhydian-lynne",
+      "familyId": "haus-arth",
+      "personId": "lynne-arth",
+      "sourceName": "Lynne Arth",
+      "image": "../Stammbäume/assets/images/portraits/haus-arth/lynne-arth.jpg"
+    },
+    {
+      "guestId": "individual-fenrir-skalli-slepinir",
+      "familyId": "haus-varulv",
+      "personId": "fenrir-varulv",
+      "sourceName": "Fenrir Varulv",
+      "image": "../Stammbäume/assets/images/portraits/haus-varulv/fenrir-varulv.png"
+    },
+    {
+      "guestId": "individual-fenrir-skalli-slepinir",
+      "familyId": "haus-varulv",
+      "personId": "skalli-varulv",
+      "sourceName": "Skalli Varulv",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/skalli-varulv.jpg"
+    },
+    {
+      "guestId": "individual-fenrir-skalli-slepinir",
+      "familyId": "haus-varulv",
+      "personId": "sleipnir-varulv",
+      "sourceName": "Sleipnir Varulv",
+      "image": "../Stammbäume/assets/images/portraits/haus-varulv/sleipnir-varulv.png"
+    }
+  ],
+  "portraitNameVariants": {
+    "Merin": "Merwin Illewod, regierender Graf",
+    "Mailgwyn": "Mailgwin Wyrm",
+    "Slepinir": "Sleipnir Varulv"
+  }
+}

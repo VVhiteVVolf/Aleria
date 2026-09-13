@@ -72,7 +72,7 @@ test("Ausgaben- und Artikellinks bewahren den gewählten Archivstand", () => {
 
 test("Jede vorbereitete Großstadt besitzt ihre vorgeschriebenen Blätter mit eindeutigem Standardblatt", () => {
   const entries = getNewspaperEntries();
-  assert.equal(entries.length, 14);
+  assert.equal(entries.length, 24);
   for (const placeId of ["gwynthor", "abergwint", "castellbryn", "rhosmere"]) {
     const placeEntries = getNewspaperEntriesForPlace(placeId);
     assert.equal(placeEntries.filter((entry) => entry.isDefaultForPlace).length, 1);

@@ -1,0 +1,1006 @@
+{
+  "schemaVersion": 1,
+  "id": "tudwal-revelyn",
+  "revision": 1,
+  "updatedAt": null,
+  "wedding": {
+    "title": "Die Hochzeit von Haus Draig & Penderyn",
+    "subtitle": "Ein Bündnis in Gwynthor",
+    "status": "scheduled",
+    "location": "Gwynthor",
+    "region": "Estryll",
+    "intro": "Prinz Tudwal Draig und Lady Revelyn Penderyn schließen den Bund der Ehe. In Gwynthor kommen ihre Häuser, Angehörigen und Gäste zu diesem Anlass zusammen.",
+    "background": "Mit der Hochzeit verbinden sich Haus Draig und Haus Penderyn durch ein Ehebündnis. Yvain Neidr leitet die Trauung, unterstützt von Gwalchgwyn Saethwyr. Arwal Grawn und Elinor Pendrag sind als Trauzeugen vorgesehen.",
+    "notes": "Der Hochzeitstermin steht fest: 27. Lichtkehr 1740 (27.03.1740), zwei Aleria-Wochen nach dem 09.03.1740. Eine Aleria-Woche hat neun Tage; der Abstand beträgt somit 18 Tage.\n\nErster Ablaufentwurf: Die Trauung ist für 14:00 Uhr vorgeschlagen, der gemeinsame Abschluss gegen 23:00 Uhr. Alle Uhrzeiten sind Richtwerte; zwischen den Programmpunkten bleibt Raum für Gespräche und kleine Verzögerungen. Die konkreten Orte für Trauung und Feier in Gwynthor werden noch abgestimmt.\n\nMöge das Bündnis der Häuser Draig und Penderyn in Gwynthor gesegnet sein.",
+    "date": {
+      "year": 1740,
+      "month": 3,
+      "day": 27,
+      "time": "14:00"
+    },
+    "image": "assets/weddings/tudwal-revelyn/hochzeitsmotiv.png",
+    "couple": [
+      {
+        "id": "person-one",
+        "name": "Tudwal",
+        "title": "Prinz",
+        "house": "Draig",
+        "crest": "assets/weddings/tudwal-revelyn/haus-draig.png"
+      },
+      {
+        "id": "person-two",
+        "name": "Revelyn",
+        "title": "Lady",
+        "house": "Penderyn",
+        "crest": "assets/weddings/tudwal-revelyn/haus-penderyn.png"
+      }
+    ],
+    "guests": [
+      {
+        "id": "ceremony-yvain",
+        "group": "ceremony",
+        "name": "Yvain",
+        "role": "Erzpatriarch",
+        "house": "Neidr",
+        "rank": "Graf & Erzpatriarch",
+        "task": "Leitet die Zeremonie und traut das Brautpaar",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "yvain-neidr",
+            "name": "Yvain Neidr",
+            "image": "../Stammbäume/assets/images/portraits/haus-neidr/yvain-neidr.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "ceremony-gwalchgwyn",
+        "group": "ceremony",
+        "name": "Gwalchgwyn",
+        "role": "Patriarch",
+        "house": "Saethwyr",
+        "rank": "Patriarch",
+        "task": "Assistiert Yvain",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "gwalchgwyn-saethwyr",
+            "name": "Gwalchgwyn Saethwyr",
+            "image": "../Stammbäume/assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "ceremony-arwal",
+        "group": "ceremony",
+        "name": "Arwal",
+        "role": "Trauzeuge",
+        "house": "Grawn",
+        "rank": "Ritter",
+        "task": "",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "arwal-grawn",
+            "name": "Arwal Grawn",
+            "image": "../Stammbäume/assets/images/portraits/haus-grawn/arwal-grawn.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "ceremony-elinor",
+        "group": "ceremony",
+        "name": "Elinor",
+        "role": "Trauzeugin",
+        "house": "Pendrag",
+        "rank": "Kronprinzessin",
+        "task": "",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "elinor-pendrag",
+            "name": "Elinor Pendrag",
+            "image": "../Stammbäume/assets/images/portraits/haus-pendrag/elinor-pendrag.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "ceremony-merin",
+        "group": "ceremony",
+        "name": "Merin",
+        "role": "Dirigent / Barde",
+        "house": "Illewod",
+        "rank": "Graf",
+        "task": "",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "merwin-illewod",
+            "name": "Merin Illewod",
+            "image": "../Stammbäume/assets/images/portraits/haus-illewod/merwin-illewod.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "ceremony-freya",
+        "group": "ceremony",
+        "name": "Freya",
+        "role": "Barde",
+        "house": "Skald",
+        "rank": "Prinzessin",
+        "task": "",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "freya-skald",
+            "name": "Freya Skald",
+            "image": "../Stammbäume/assets/images/portraits/haus-skald/freya-skald.png",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "ceremony-mairwen",
+        "group": "ceremony",
+        "name": "Mairwen",
+        "role": "Barde",
+        "house": "Ceirwyn",
+        "rank": "Prinzessin",
+        "task": "",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "mairwen-ceirwyn",
+            "name": "Mairwen Ceirwyn",
+            "image": "../Stammbäume/assets/images/portraits/haus-ceirwyn/mairwen-ceirwyn.png",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "ceremony-myrddin",
+        "group": "ceremony",
+        "name": "Myrddin",
+        "role": "Künstler",
+        "house": "Draig",
+        "rank": "Ritterherr",
+        "task": "Ein Porträt des Brautpaars",
+        "gift": "Das Porträt!",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "myrddin-draig",
+            "name": "Myrddin Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/myrddin-draig.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "ceremony-isolde",
+        "group": "ceremony",
+        "name": "Isolde",
+        "role": "Blumenmädchen",
+        "house": "Arwydd",
+        "rank": "Prinzessin",
+        "task": "Wirft Blumen!",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "isolde-arwydd",
+            "name": "Isolde Arwydd",
+            "image": "../Stammbäume/assets/images/portraits/haus-arwydd/isolde-arwydd.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-one-galahad",
+        "group": "house-one",
+        "name": "Galahad",
+        "role": "Gastgeber",
+        "house": "Draig",
+        "rank": "Graf",
+        "task": "",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "galahad-draig",
+            "name": "Galahad Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-one-gwendolyn",
+        "group": "house-one",
+        "name": "Gwendolyn",
+        "role": "Gastgeberin",
+        "house": "Draig",
+        "rank": "Gräfin",
+        "task": "",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "gwendolyn-aderyn",
+            "name": "Gwendolyn Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/gwendolyn-aderyn.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-one-tudwal",
+        "group": "house-one",
+        "name": "Tudwal",
+        "role": "Bräutigam",
+        "house": "Draig",
+        "rank": "Prinz",
+        "task": "Heiratet die Braut",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "tudwal-draig",
+            "name": "Tudwal Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/tudwal-draig.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-one-neithon",
+        "group": "house-one",
+        "name": "Neithon",
+        "role": "Bruder",
+        "house": "Draig",
+        "rank": "Prinz",
+        "task": "",
+        "gift": "Bücher aus der Blutstadt",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "neithon-1718-draig",
+            "name": "Neithon Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/neithon-1718-draig.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-one-gawain",
+        "group": "house-one",
+        "name": "Gawain",
+        "role": "Bruder",
+        "house": "Draig",
+        "rank": "Prinz",
+        "task": "",
+        "gift": "Ein Lethin Kätzchen",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "gawain-draig",
+            "name": "Gawain Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/gawain-draig.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-one-idwal",
+        "group": "house-one",
+        "name": "Idwal",
+        "role": "Bruder",
+        "house": "Draig",
+        "rank": "Prinz",
+        "task": "",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "idwal-draig",
+            "name": "Idwal Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/idwal-draig.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-one-rhiannon",
+        "group": "house-one",
+        "name": "Rhiannon",
+        "role": "Schwester",
+        "house": "Draig",
+        "rank": "Prinzessin",
+        "task": "",
+        "gift": "Magischer Abakus",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "rhiannon-draig",
+            "name": "Rhiannon Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/rhiannon-draig.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-one-isobel",
+        "group": "house-one",
+        "name": "Isobel",
+        "role": "Schwester",
+        "house": "Draig",
+        "rank": "Prinzessin",
+        "task": "Musiker",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "isobel-1719-draig",
+            "name": "Isobel Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/isobel-1719-draig.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-one-owain",
+        "group": "house-one",
+        "name": "Owain",
+        "role": "Onkel",
+        "house": "Draig",
+        "rank": "Erzritter",
+        "task": "",
+        "gift": "Das Erlenglanz (gem. mit Mailgwynn Wyrm)",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "owain-draig",
+            "name": "Owain Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-two-aneurin",
+        "group": "house-two",
+        "name": "Aneurin",
+        "role": "Vater",
+        "house": "Penderyn",
+        "rank": "Sir",
+        "task": "",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "aneurin-penderyn",
+            "name": "Aneurin Penderyn",
+            "image": "../Stammbäume/assets/images/portraits/haus-penderyn/aneurin-penderyn.png",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-two-meinir",
+        "group": "house-two",
+        "name": "Meinir",
+        "role": "Mutter",
+        "house": "Penderyn",
+        "rank": "Lady",
+        "task": "",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "meinir-sgwarnog",
+            "name": "Meinir Penderyn",
+            "image": "../Stammbäume/assets/images/portraits/haus-penderyn/meinir-sgwarnog.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-two-revelyn",
+        "group": "house-two",
+        "name": "Revelyn",
+        "role": "Braut",
+        "house": "Penderyn",
+        "rank": "Lady",
+        "task": "Heiratet den Bräutigam",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "revelyn-penderyn",
+            "name": "Revelyn Penderyn",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/revelyn-penderyn.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-two-talfryn",
+        "group": "house-two",
+        "name": "Talfryn",
+        "role": "Großvater",
+        "house": "Penderyn",
+        "rank": "Ritterfürst",
+        "task": "",
+        "gift": "Neue Penderyn Brennerei in Gwynthor",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "talfryn-penderyn",
+            "name": "Talfryn Penderyn",
+            "image": "../Stammbäume/assets/images/portraits/haus-penderyn/talfryn-penderyn.png",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-two-jinell",
+        "group": "house-two",
+        "name": "Jinell",
+        "role": "Schwester",
+        "house": "Penderyn",
+        "rank": "",
+        "task": "",
+        "gift": "Halskette aus Kristallen des Lichthains",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "jinell-penderyn",
+            "name": "Jinell Penderyn",
+            "image": "../Stammbäume/assets/images/portraits/haus-penderyn/jinell-penderyn.png",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-two-rhon",
+        "group": "house-two",
+        "name": "Rhon",
+        "role": "Bruder",
+        "house": "Penderyn",
+        "rank": "",
+        "task": "",
+        "gift": "Ein Fass Penderyn „Tudwal & Revelyn Edition\"",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "rhon-penderyn",
+            "name": "Rhon Penderyn",
+            "image": "../Stammbäume/assets/images/portraits/haus-penderyn/rhon-penderyn.png",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "house-two-dwnn",
+        "group": "house-two",
+        "name": "Dwnn",
+        "role": "Bruder",
+        "house": "Penderyn",
+        "rank": "",
+        "task": "",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "dwnn-penderyn",
+            "name": "Dwnn Penderyn",
+            "image": "../Stammbäume/assets/images/portraits/haus-penderyn/dwnn-penderyn.png",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-idris",
+        "group": "individual",
+        "name": "Idris",
+        "role": "Gast",
+        "house": "Arwydd",
+        "rank": "Ritterfürst",
+        "task": "",
+        "gift": "Ausstattung für das Schiff",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "idris-arwydd",
+            "name": "Idris Arwydd",
+            "image": "../Stammbäume/assets/images/portraits/haus-arwydd/idris-arwydd.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-mailgwyn",
+        "group": "individual",
+        "name": "Mailgwyn",
+        "role": "Großonkel / Gast",
+        "house": "Wyrm",
+        "rank": "Ritterfürst",
+        "task": "",
+        "gift": "Das verschwundene Erlenglanz",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "mailgwin-wyrm",
+            "name": "Mailgwyn Wyrm",
+            "image": "../Stammbäume/assets/images/portraits/haus-wyrm/mailgwin-wyrm.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-duncan",
+        "group": "individual",
+        "name": "Duncan",
+        "role": "Lehrmeister / Gast",
+        "house": "Gafyr",
+        "rank": "Ritterfürst",
+        "task": "Lehrmeister Schwertkunst",
+        "gift": "Eine besondere Waffe (passend für Tudwal)",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "duncan-gafyr",
+            "name": "Duncan Gafyr",
+            "image": "../Stammbäume/assets/images/portraits/haus-gafyr/duncan-gafyr.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-huw",
+        "group": "individual",
+        "name": "Huw",
+        "role": "Gast",
+        "house": "Saethwyr",
+        "rank": "Ritterfürst",
+        "task": "",
+        "gift": "Ein Schiff der Prenfael Werft in Glasdraith",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "huw-saethwyr",
+            "name": "Huw Saethwyr",
+            "image": "../Stammbäume/assets/images/portraits/haus-saethwyr/huw-saethwyr.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-stennis",
+        "group": "individual",
+        "name": "Stennis",
+        "role": "Gast",
+        "house": "Gwefrydd",
+        "rank": "Baron",
+        "task": "",
+        "gift": "Ein Cefyl für die Braut",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "stennis-gwefrydd",
+            "name": "Stennis Gwefrydd",
+            "image": "../Stammbäume/assets/images/portraits/haus-gwefrydd/stennis-gwefrydd.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-mervyn",
+        "group": "individual",
+        "name": "Mervyn",
+        "role": "Gast",
+        "house": "Gwyvern",
+        "rank": "Baron",
+        "task": "",
+        "gift": "Ein Schiff der Prenfael Werft in Glasdraith",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "mervyn-gwyvern",
+            "name": "Mervyn Gwyvern",
+            "image": "../Stammbäume/assets/images/portraits/haus-gwyvern/mervyn-gwyvern.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-gareth",
+        "group": "individual",
+        "name": "Gareth",
+        "role": "Gast",
+        "house": "Aderyn",
+        "rank": "Graf",
+        "task": "",
+        "gift": "Sponsert eine Jagdgesellschaft",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "gareth-aderyn",
+            "name": "Gareth Aderyn",
+            "image": "../Stammbäume/assets/images/portraits/haus-aderyn/gareth-aderyn.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-mordred",
+        "group": "individual",
+        "name": "Mordred",
+        "role": "Rittervater / Gast",
+        "house": "Grawn",
+        "rank": "Erzritter",
+        "task": "",
+        "gift": "Irgendwas mit der Klingenden Münze",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "mordred-grawn",
+            "name": "Mordred Grawn",
+            "image": "../Stammbäume/assets/images/portraits/haus-grawn/mordred-grawn.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-fionn",
+        "group": "individual",
+        "name": "Fionn",
+        "role": "Gast",
+        "house": "Cumhaill",
+        "rank": "Fürst",
+        "task": "",
+        "gift": "Eine Antike Albische Münzsammlung!",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "fionn-1686-cumhail",
+            "name": "Fionn Cumhaill",
+            "image": "../Stammbäume/assets/images/portraits/haus-mac-ard-cumhaill/fionn-1686-cumhail.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-tristan-isolde",
+        "group": "individual",
+        "name": "Tristan & Isolde",
+        "role": "Gäste",
+        "house": "Pendrag",
+        "rank": "Königspaar",
+        "task": "",
+        "gift": "Edle Gewänder & Schmuck (Imperium Argentum)",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "tristan-pendrag",
+            "name": "Tristan Pendrag",
+            "image": "../Stammbäume/assets/images/portraits/haus-pendrag/tristan-pendrag.jpg",
+            "position": "top"
+          },
+          {
+            "id": "isolde-arth",
+            "name": "Isolde Pendrag",
+            "image": "../Stammbäume/assets/images/portraits/haus-pendrag/isolde-arth.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-morgana-guinevere",
+        "group": "individual",
+        "name": "Morgana & Guinevere",
+        "role": "Gäste",
+        "house": "Neidr",
+        "rank": "Gräfin / Prinzessin",
+        "task": "",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "morgana-wylan",
+            "name": "Morgana Neidr",
+            "image": "../Stammbäume/assets/images/portraits/haus-neidr/morgana-wylan.jpg",
+            "position": "top"
+          },
+          {
+            "id": "guinevere-neidr",
+            "name": "Guinevere Neidr",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/guinevere-neidr.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-rhydian-lynne",
+        "group": "individual",
+        "name": "Rhydian & Lynne",
+        "role": "Gäste",
+        "house": "Arth",
+        "rank": "Sir / Lady",
+        "task": "",
+        "gift": "⏳ Besondere Skulptur — wird nachgereicht! (falsches Schiff)",
+        "giftStatus": "later",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "rhydian-arth",
+            "name": "Rhydian Arth",
+            "image": "../Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
+            "position": "top"
+          },
+          {
+            "id": "lynne-arth",
+            "name": "Lynne Arth",
+            "image": "../Stammbäume/assets/images/portraits/haus-arth/lynne-arth.jpg",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-fenrir-skalli-slepinir",
+        "group": "individual",
+        "name": "Fenrir, Skalli & Slepinir",
+        "role": "Gäste",
+        "house": "Varulv",
+        "rank": "Thane / Prinz / Prinzessin",
+        "task": "",
+        "gift": "Heimische Raritäten!",
+        "giftStatus": "planned",
+        "attendance": "planned",
+        "count": null,
+        "portraits": [
+          {
+            "id": "fenrir-varulv",
+            "name": "Fenrir Varulv",
+            "image": "../Stammbäume/assets/images/portraits/haus-varulv/fenrir-varulv.png",
+            "position": "top"
+          },
+          {
+            "id": "skalli-varulv",
+            "name": "Skalli Varulv",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/skalli-varulv.jpg",
+            "position": "top"
+          },
+          {
+            "id": "sleipnir-varulv",
+            "name": "Slepinir Varulv",
+            "image": "../Stammbäume/assets/images/portraits/haus-varulv/sleipnir-varulv.png",
+            "position": "top"
+          }
+        ]
+      },
+      {
+        "id": "individual-noch-nicht-benannter-gast",
+        "group": "individual",
+        "name": "Noch nicht benannter Gast",
+        "role": "Gast",
+        "house": "",
+        "rank": "",
+        "task": "Unbekannt",
+        "gift": "",
+        "giftStatus": "open",
+        "attendance": "planned",
+        "count": null,
+        "portraits": []
+      }
+    ],
+    "schedule": [
+      {
+        "id": "trauung",
+        "title": "Die Trauung",
+        "time": "14:00",
+        "location": "Trauungsort in Gwynthor",
+        "description": "Auftakt des vorgeschlagenen Tagesablaufs. Yvain Neidr leitet die Zeremonie, unterstützt von Gwalchgwyn Saethwyr. Tudwal und Revelyn sprechen ihren Ehebund vor den versammelten Häusern aus; Arwal Grawn und Elinor Pendrag stehen ihnen als Trauzeugen zur Seite. Musik und der abschließende Segen rahmen die Trauung ein. Die Uhrzeiten dieses Ablaufs sind vorläufig."
+      },
+      {
+        "id": "auszug-glueckwuensche",
+        "title": "Auszug & erste Glückwünsche",
+        "time": "14:45",
+        "location": "Vor dem Trauungsort",
+        "description": "Das Brautpaar zieht gemeinsam aus, begleitet von Musik und Isoldes Blumen. Angehörige und die engsten Weggefährten überbringen ihre Glückwünsche. Anschließend macht sich die Gesellschaft auf den Weg zum Feierort; für den Übergang ist bewusst Zeit vorgesehen."
+      },
+      {
+        "id": "empfang-portraet",
+        "title": "Empfang & Brautpaarporträt",
+        "time": "15:15",
+        "location": "Feierort in Gwynthor",
+        "description": "Getränke und kleine Speisen empfangen die Gäste. Während sich die Gesellschaft versammelt und miteinander ins Gespräch kommt, erhält Myrddin Gelegenheit für eine erste Porträtsitzung oder vorbereitende Skizzen des Brautpaars. Tudwal und Revelyn sollen dabei genügend Zeit für ihre Gäste behalten."
+      },
+      {
+        "id": "begruessung",
+        "title": "Die Feier wird eröffnet",
+        "time": "16:00",
+        "location": "Feierort in Gwynthor",
+        "description": "Galahad und Gwendolyn begrüßen als Gastgeber die versammelten Häuser. Die Gesellschaft erhebt gemeinsam das Glas auf Tudwal und Revelyn. Danach nehmen die Gäste ihre Plätze für das Festmahl ein; die längeren Ansprachen folgen später."
+      },
+      {
+        "id": "festmahl",
+        "title": "Das Festmahl",
+        "time": "16:30",
+        "location": "Festtafel",
+        "description": "Das gemeinsame Mahl bildet den ruhigen Mittelpunkt des Nachmittags. Mehrere Gänge, Tischgespräche und dezente musikalische Begleitung lassen Zeit für Begegnungen zwischen den Häusern. Für Speisefolgen, Bedienung und kurze Pausen sind etwa anderthalb Stunden vorgesehen."
+      },
+      {
+        "id": "ansprachen",
+        "title": "Worte der Familien & Trauzeugen",
+        "time": "18:00",
+        "location": "Festtafel",
+        "description": "Die Familien Draig und Penderyn sowie die beiden Trauzeugen richten kurze Ansprachen an das Brautpaar. Erinnerungen, gute Wünsche und ein gemeinsamer Trinkspruch würdigen das neue Ehebündnis. Wer sprechen möchte, wird vorher abgestimmt, damit die Runde überschaubar bleibt."
+      },
+      {
+        "id": "gabenuebergabe",
+        "title": "Die Gaben der Gäste",
+        "time": "18:30",
+        "location": "Feierort in Gwynthor",
+        "description": "Die vorgemerkten Geschenke werden in einer geordneten Runde vorgestellt und, soweit möglich, überreicht. Große Gaben wie Schiffe oder die neue Brennerei können durch Urkunden oder symbolische Zeichen vertreten werden. Die nachzureichende Skulptur von Rhydian und Lynne wird angekündigt; ihr ausstehender Status bleibt im Gästebuch vermerkt."
+      },
+      {
+        "id": "hochzeitstanz",
+        "title": "Der erste Tanz",
+        "time": "19:15",
+        "location": "Tanzfläche",
+        "description": "Tudwal und Revelyn eröffnen den Tanz. Anschließend gesellen sich Angehörige, Trauzeugen und weitere Gäste hinzu. Merin stimmt die musikalische Begleitung mit Freya, Mairwen und Isobel ab; die konkrete Liedwahl bleibt Teil der Vorbereitung."
+      },
+      {
+        "id": "abendfeier",
+        "title": "Musik, Tanz & Begegnungen",
+        "time": "19:45",
+        "location": "Feierort in Gwynthor",
+        "description": "Der Abend gehört der freien Feier: Tanzrunden, Lieder und Geschichten wechseln sich mit Gesprächen ab. Die Barden können eigene Beiträge einbringen. Ruhigere Sitzplätze bieten Raum für persönliche Begegnungen und Absprachen, während das Fest weitergeht."
+      },
+      {
+        "id": "spaete-tafel",
+        "title": "Süße Tafel & später Imbiss",
+        "time": "21:30",
+        "location": "Festtafel",
+        "description": "Süße Speisen, ein kleiner später Imbiss und frische Getränke stärken die Gesellschaft. Die Musik wird für eine Weile ruhiger; das Brautpaar kann sich nochmals einzelnen Gästen zuwenden. Danach bleibt Zeit für weitere Tänze und einen entspannten Ausklang."
+      },
+      {
+        "id": "letzter-tanz",
+        "title": "Letzter Tanz & Dank des Brautpaars",
+        "time": "22:30",
+        "location": "Tanzfläche",
+        "description": "Ein letzter gemeinsamer Tanz sammelt die Gesellschaft noch einmal. Tudwal und Revelyn danken ihren Familien, Gästen und allen, die das Fest ermöglicht haben. Ein abschließender Trinkspruch beschließt das gemeinsame Programm."
+      },
+      {
+        "id": "verabschiedung",
+        "title": "Verabschiedung & Abschluss",
+        "time": "23:00",
+        "location": "Feierort in Gwynthor",
+        "description": "Der offizielle Teil des Hochzeitsfestes endet. Die Gäste verabschieden sich und werden bei Bedarf zu ihren Quartieren begleitet. Wer noch bleiben möchte, kann den Abend in kleiner, ruhiger Runde ausklingen lassen; weitere feste Programmpunkte sind nicht vorgesehen."
+      }
+    ],
+    "tasks": [
+      {
+        "id": "termin",
+        "title": "Ablaufzeiten und Veranstaltungsorte bestätigen",
+        "owner": "",
+        "notes": "Das Hochzeitsdatum ist der 27. Lichtkehr 1740. Der erste Entwurf reicht von der Trauung um 14:00 Uhr bis zum offiziellen Abschluss gegen 23:00 Uhr. Uhrzeiten, konkrete Veranstaltungsorte und Wegezeiten noch gemeinsam abstimmen.",
+        "done": false
+      },
+      {
+        "id": "zeremonie",
+        "title": "Trauung, Schwur und Musik abstimmen",
+        "owner": "",
+        "notes": "",
+        "done": false
+      },
+      {
+        "id": "sitzordnung",
+        "title": "Sitzordnung und Begegnungen planen",
+        "owner": "",
+        "notes": "",
+        "done": false
+      },
+      {
+        "id": "geschenke",
+        "title": "Geschenkübergaben vorbereiten",
+        "owner": "",
+        "notes": "",
+        "done": false
+      },
+      {
+        "id": "nachklang",
+        "title": "Folgen des Ehebündnisses festhalten",
+        "owner": "",
+        "notes": "",
+        "done": false
+      }
+    ]
+  }
+}

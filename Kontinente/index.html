@@ -4,18 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kontinente - Aleria</title>
-  <link rel="stylesheet" href="assets/css/koenigreich.css?v=panels-20260911a">
-  <link rel="stylesheet" href="assets/css/kontinente-overview.css?v=kontinente-pages-20260707d">
+  <meta name="description" content="Das Kontinentregister des Aleria-Almanachs: acht Kontinente, ihre Banner und die Reiche Estrylls.">
+  <link rel="stylesheet" href="assets/css/kontinente-overview.css?v=atlas-20260913a">
   <script src="kontinente.registry.js?v=administration-dialog-20260911b"></script>
   <script src="assets/js/kontinente-loader.js?v=kontinente-loader-20260707c" data-default-id="kontinente-startseite"></script>
 </head>
-<body>
+<body class="continent-atlas">
   <main class="kingdom-page continent-page continent-start-page" data-page-type="continent-overview" data-kontinent-root data-orte-static-template data-default-id="kontinente-startseite">
     <section class="continent-parchment continent-parchment--centered" aria-labelledby="kontinente-title">
-      <header class="continent-page-header">
+      <div class="atlas-folio">
+        <span>Aleria · Weltenalmanach</span>
+        <span>Geographie / Register</span>
+      </div>
+      <header class="continent-page-header" id="seitenanfang">
+        <div class="atlas-eyebrow">Von den Ländern der Welt</div>
         <h1 id="kontinente-title" data-kontinent-title data-orte-explicit-inline>Kontinente</h1>
+        <div class="atlas-ornament" aria-hidden="true">✦</div>
+        <div class="atlas-introduction">Acht Kontinente, verewigt unter ihren Bannern.<br>Ein Verzeichnis der Länder und ihrer Reiche.</div>
       </header>
 
+      <div class="atlas-register-heading">
+        <span>Das Kontinentregister</span>
+        <span>VIII Kontinente</span>
+      </div>
       <div class="continent-grid continent-grid--overview" role="list">
         <article class="continent-card" role="listitem">
           <h2 data-orte-explicit-inline>Estryll</h2>
@@ -24,6 +35,7 @@
               <img src="../IconOrdner/L%C3%A4nder%20Icons/Estryll%20Kontinent.png" alt="Banner Estryll">
             </a>
           </span>
+          <span class="atlas-entry-status" aria-hidden="true">Reiche erkunden &nbsp;↗</span>
         </article>
 
         <article class="continent-card" role="listitem">
@@ -31,6 +43,7 @@
           <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-lothir-banner" data-orte-image-label="Banner Lothir" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Lothir">
             <img src="../IconOrdner/L%C3%A4nder%20Icons/Lothir%20Kontinent.png" alt="Banner Lothir">
           </span>
+          <span class="atlas-entry-status">Noch kein Eintrag</span>
         </article>
 
         <article class="continent-card" role="listitem">
@@ -38,6 +51,7 @@
           <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-tirnara-banner" data-orte-image-label="Banner Tirnara" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Tirnara">
             <img src="../IconOrdner/L%C3%A4nder%20Icons/Tirnara%20Kontinent.png" alt="Banner Tirnara">
           </span>
+          <span class="atlas-entry-status">Noch kein Eintrag</span>
         </article>
 
         <article class="continent-card" role="listitem">
@@ -45,6 +59,7 @@
           <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-aldervan-banner" data-orte-image-label="Banner Aldervan" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Aldervan">
             <img src="../IconOrdner/L%C3%A4nder%20Icons/Aldervan%20Kontinent.png" alt="Banner Aldervan">
           </span>
+          <span class="atlas-entry-status">Noch kein Eintrag</span>
         </article>
 
         <article class="continent-card" role="listitem">
@@ -52,6 +67,7 @@
           <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-sundara-banner" data-orte-image-label="Banner Sundara" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Sundara">
             <img src="../IconOrdner/L%C3%A4nder%20Icons/Sundara%20Kontinent.png" alt="Banner Sundara">
           </span>
+          <span class="atlas-entry-status">Noch kein Eintrag</span>
         </article>
 
         <article class="continent-card" role="listitem">
@@ -59,6 +75,7 @@
           <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-emberon-banner" data-orte-image-label="Banner Emberon" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Emberon">
             <img src="../IconOrdner/L%C3%A4nder%20Icons/Emberon%20Kontinent.png" alt="Banner Emberon">
           </span>
+          <span class="atlas-entry-status">Noch kein Eintrag</span>
         </article>
 
         <article class="continent-card" role="listitem">
@@ -66,6 +83,7 @@
           <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-yrmandrall-banner" data-orte-image-label="Banner Yrmandrall" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Yrmandrall">
             <img src="../IconOrdner/L%C3%A4nder%20Icons/Yrmandrall%20Kontinent.png" alt="Banner Yrmandrall">
           </span>
+          <span class="atlas-entry-status">Noch kein Eintrag</span>
         </article>
 
         <article class="continent-card" role="listitem">
@@ -73,8 +91,13 @@
           <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-yanokuro-banner" data-orte-image-label="Banner Yanokuro" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Yanokuro">
             <img src="../IconOrdner/L%C3%A4nder%20Icons/Yanokuro%20Kontinent.png" alt="Banner Yanokuro">
           </span>
+          <span class="atlas-entry-status">Noch kein Eintrag</span>
         </article>
       </div>
+      <footer class="atlas-footer">
+        <span>Aleria · Länder, Wappen &amp; Überlieferungen</span>
+        <span>Das Register der Kontinente</span>
+      </footer>
     </section>
   </main>
 </body>

@@ -1,0 +1,567 @@
+{
+  "groups": [
+    {
+      "id": "nicht-zugeordnete-kulte",
+      "title": "Nicht zugeordnete Kulte"
+    },
+    {
+      "id": "kulte-des-ursurpators",
+      "title": "Kulte des Usurpators",
+      "deityId": "dagon"
+    },
+    {
+      "id": "kulte-des-pluenderers",
+      "title": "Kulte des Plünderers",
+      "deityId": "grimnar"
+    },
+    {
+      "id": "kulte-der-witwe",
+      "title": "Kulte der Witwe",
+      "deityId": "lunara"
+    },
+    {
+      "id": "kulte-des-schaenders",
+      "title": "Kulte des Schänders",
+      "deityId": "bhaal"
+    },
+    {
+      "id": "kulte-des-hedonisten",
+      "title": "Kulte des Hedonisten",
+      "deityId": "sanguine"
+    },
+    {
+      "id": "kulte-des-jaegers",
+      "title": "Kulte des Jägers",
+      "deityId": "zatrach"
+    },
+    {
+      "id": "kulte-des-intriganten",
+      "title": "Kulte des Intriganten",
+      "deityId": "amon"
+    },
+    {
+      "id": "kulte-der-schicksalsweberin",
+      "title": "Kulte der Schicksalsweberin",
+      "deityId": "hela"
+    },
+    {
+      "id": "kulte-nyxara",
+      "title": "Kultgemeinschaften",
+      "deityId": "nyxara"
+    },
+    {
+      "id": "kulte-adar",
+      "title": "Kultgemeinschaften",
+      "deityId": "adar"
+    },
+    {
+      "id": "kulte-thraal",
+      "title": "Kultgemeinschaften",
+      "deityId": "thraal"
+    },
+    {
+      "id": "kulte-nemsara",
+      "title": "Kultgemeinschaften",
+      "deityId": "nemsara"
+    },
+    {
+      "id": "kulte-azrath-morvath",
+      "title": "Kultgemeinschaften",
+      "deityId": "azrath-morvath"
+    },
+    {
+      "id": "kulte-migdal",
+      "title": "Kultgemeinschaften",
+      "deityId": "migdal"
+    },
+    {
+      "id": "kulte-nergaloth",
+      "title": "Kultgemeinschaften",
+      "deityId": "nergaloth"
+    },
+    {
+      "id": "kulte-syressa",
+      "title": "Kultgemeinschaften",
+      "deityId": "syressa"
+    },
+    {
+      "id": "kulte-nhaera",
+      "title": "Kultgemeinschaften",
+      "deityId": "nhaera"
+    },
+    {
+      "id": "kulte-nymhra",
+      "title": "Kultgemeinschaften",
+      "deityId": "nymhra"
+    },
+    {
+      "id": "kulte-maelach",
+      "title": "Kultgemeinschaften",
+      "deityId": "maelach"
+    }
+  ],
+  "entries": [
+    {
+      "id": "der-zarakim-kult",
+      "name": "Der Zarakim Kult",
+      "kind": "Antiker Kult",
+      "groupId": "nicht-zugeordnete-kulte",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 3,
+        "column": 0,
+        "name": "Der Zarakim Kult",
+        "image": "https://i.imgur.com/oMwY2lR.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2466"
+      },
+      "symbol": "assets/emblems/kulte/der-zarakim-kult.webp"
+    },
+    {
+      "id": "totensaat",
+      "name": "Totensaat",
+      "kind": "Nekromantischer Kult",
+      "groupId": "nicht-zugeordnete-kulte",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 3,
+        "column": 1,
+        "name": "Totensaat",
+        "image": "https://i.imgur.com/uENzHYo.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=565"
+      },
+      "symbol": "assets/emblems/kulte/totensaat.webp"
+    },
+    {
+      "id": "orden-des-zerissenen-geistes",
+      "name": "Orden des Zerrissenen Geistes",
+      "kind": "Spöttischer \"Ritterorden\"",
+      "groupId": "nicht-zugeordnete-kulte",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 3,
+        "column": 2,
+        "name": "Orden des Zerissenen Geistes",
+        "image": "https://i.imgur.com/fT2uNaZ.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1556"
+      },
+      "aliases": [
+        "Orden des Zerissenen Geistes"
+      ],
+      "symbol": "assets/emblems/kulte/orden-des-zerissenen-geistes.webp"
+    },
+    {
+      "id": "die-erben-der-morgenroete",
+      "name": "Die Erben der Morgenröte",
+      "kind": "Teil der Dämmerwacht",
+      "groupId": "kulte-des-ursurpators",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 8,
+        "column": 0,
+        "name": "Die Erben der Morgenröte",
+        "image": "https://i.imgur.com/aMG27HF.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=564"
+      },
+      "affiliations": [
+        {
+          "label": "Teil der Dämmerwacht",
+          "entryId": "daemmerwacht"
+        }
+      ],
+      "symbol": "assets/emblems/kulte/die-erben-der-morgenroete.webp"
+    },
+    {
+      "id": "dagons-saeule",
+      "name": "Dagons Säule",
+      "kind": "Teil der Triarchie",
+      "groupId": "kulte-des-ursurpators",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 8,
+        "column": 1,
+        "name": "Dagons Säule",
+        "image": "https://i.imgur.com/obmaaBC.png",
+        "href": ""
+      },
+      "affiliations": [
+        {
+          "label": "Triarchie",
+          "entryIds": [
+            "dagons-saeule",
+            "grimnars-saeule",
+            "bhaals-saeule"
+          ]
+        }
+      ],
+      "symbol": "assets/emblems/kulte/dagons-saeule.webp",
+      "href": ""
+    },
+    {
+      "id": "baltharrim",
+      "name": "Baltharrim",
+      "kind": "Nordischer \"Orden\"",
+      "groupId": "kulte-des-pluenderers",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 13,
+        "column": 0,
+        "name": "Baltharrim",
+        "image": "https://i.imgur.com/bF0wuGp.png",
+        "href": ""
+      },
+      "symbol": "assets/emblems/kulte/baltharrim.webp",
+      "href": ""
+    },
+    {
+      "id": "grimnars-pluenderer",
+      "name": "Grimnars Plünderer",
+      "kind": "Ketzerischer Kult",
+      "groupId": "kulte-des-pluenderers",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 13,
+        "column": 1,
+        "name": "Grimnars Plünderer",
+        "image": "https://i.imgur.com/VRWVvXm.png",
+        "href": ""
+      },
+      "symbol": "assets/emblems/kulte/grimnars-pluenderer.webp",
+      "href": ""
+    },
+    {
+      "id": "grimnars-saeule",
+      "name": "Grimnars Säule",
+      "kind": "Teil der Triarchie",
+      "groupId": "kulte-des-pluenderers",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 13,
+        "column": 2,
+        "name": "Grimnars Säule",
+        "image": "https://i.imgur.com/Bhe10iK.png",
+        "href": ""
+      },
+      "affiliations": [
+        {
+          "label": "Triarchie",
+          "entryIds": [
+            "dagons-saeule",
+            "grimnars-saeule",
+            "bhaals-saeule"
+          ]
+        }
+      ],
+      "symbol": "assets/emblems/kulte/grimnars-saeule.webp",
+      "href": ""
+    },
+    {
+      "id": "zethnars-kult",
+      "name": "Zethnars Kult",
+      "kind": "Kemetara Pantheon",
+      "groupId": "kulte-des-pluenderers",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 13,
+        "column": 3,
+        "name": "Zethnars Kult",
+        "image": "https://i.imgur.com/4eBFDx1.png",
+        "href": ""
+      },
+      "symbol": "assets/emblems/kulte/zethnars-kult.webp",
+      "href": ""
+    },
+    {
+      "id": "beynar",
+      "name": "Beynar",
+      "kind": "Ketzerische Fanatiker",
+      "groupId": "kulte-des-pluenderers",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 13,
+        "column": 4,
+        "name": "Beynar",
+        "image": "https://i.imgur.com/ReBssm1.png",
+        "href": ""
+      },
+      "symbol": "assets/emblems/kulte/beynar.webp",
+      "href": ""
+    },
+    {
+      "id": "lunariten",
+      "name": "Lunariten",
+      "kind": "Okkulter Zirkel",
+      "groupId": "kulte-der-witwe",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 18,
+        "column": 0,
+        "name": "Lunariten",
+        "image": "https://i.imgur.com/SVSgyY4.png",
+        "href": ""
+      },
+      "symbol": "assets/emblems/kulte/lunariten.webp",
+      "href": ""
+    },
+    {
+      "id": "die-blutschwingen",
+      "name": "Die Blutschwingen",
+      "kind": "Okkulter Vampirkult",
+      "groupId": "kulte-des-schaenders",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 23,
+        "column": 0,
+        "name": "Die Blutschwingen",
+        "image": "https://i.imgur.com/c21qpOt.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=552"
+      },
+      "symbol": "assets/emblems/kulte/die-blutschwingen.webp"
+    },
+    {
+      "id": "bhaals-saeule",
+      "name": "Bhaals Säule",
+      "kind": "Teil der Triarchie",
+      "groupId": "kulte-des-schaenders",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 23,
+        "column": 1,
+        "name": "Bhaals Säule",
+        "image": "https://i.imgur.com/w6zMlkY.png",
+        "href": ""
+      },
+      "affiliations": [
+        {
+          "label": "Triarchie",
+          "entryIds": [
+            "dagons-saeule",
+            "grimnars-saeule",
+            "bhaals-saeule"
+          ]
+        }
+      ],
+      "symbol": "assets/emblems/kulte/bhaals-saeule.webp",
+      "href": ""
+    },
+    {
+      "id": "sanguinare-zecher",
+      "name": "Sanguinare Zecher",
+      "kind": "Hedonistische Loge",
+      "groupId": "kulte-des-hedonisten",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 28,
+        "column": 0,
+        "name": "Sanguinare Zecher",
+        "image": "https://i.imgur.com/f1JeKGS.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=567"
+      },
+      "symbol": "assets/emblems/kulte/sanguinare-zecher.webp"
+    },
+    {
+      "id": "die-blutmond-gefaehrten",
+      "name": "Die Blutmond Gefährten",
+      "kind": "Ketzerischer Kult",
+      "groupId": "kulte-des-jaegers",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 33,
+        "column": 0,
+        "name": "Die Blutmond Gefährten",
+        "image": "https://i.imgur.com/qy3S8rr.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=568"
+      },
+      "symbol": "assets/emblems/kulte/die-blutmond-gefaehrten.webp"
+    },
+    {
+      "id": "amons-sucher",
+      "name": "Amons Sucher",
+      "kind": "Ketzerischer Kult",
+      "groupId": "kulte-des-intriganten",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 38,
+        "column": 0,
+        "name": "Amons Sucher",
+        "image": "https://i.imgur.com/n4Az7DC.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=563"
+      },
+      "symbol": "assets/emblems/kulte/amons-sucher.webp"
+    },
+    {
+      "id": "helas-verzehrer",
+      "name": "Helas Verzehrer",
+      "kind": "Kannibalistischer Kult",
+      "groupId": "kulte-der-schicksalsweberin",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/kulte.html",
+        "row": 43,
+        "column": 0,
+        "name": "Helas Verzehrer",
+        "image": "https://i.imgur.com/ZXfUubC.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=566"
+      },
+      "symbol": "assets/emblems/kulte/helas-verzehrer.webp"
+    },
+    {
+      "id": "die-schleier-der-nacht",
+      "name": "Die Schleier der Nacht",
+      "kind": "Infernaler Kult",
+      "summary": "Verborgene Zirkel, die Nyxaras Nacht, Schatten und geheime Pfade verehren.",
+      "groupId": "kulte-nyxara",
+      "parentId": null,
+      "deityId": "nyxara",
+      "source": {
+        "kind": "user-directed-addition",
+        "note": "Kultname und Kurzprofil im beauftragten Fraktionsausbau ergänzt; Grundlage ist die vorhandene Überlieferung der Gottheit."
+      }
+    },
+    {
+      "id": "kinder-des-spalts",
+      "name": "Kinder des Spalts",
+      "kind": "Infernaler Kult",
+      "summary": "Eigenständige Gemeinschaften um Adar, den Zweifel und die Geheimnisse des Großen Spalts.",
+      "groupId": "kulte-adar",
+      "parentId": null,
+      "deityId": "adar",
+      "source": {
+        "kind": "user-directed-addition",
+        "note": "Kultname und Kurzprofil im beauftragten Fraktionsausbau ergänzt; Grundlage ist die vorhandene Überlieferung der Gottheit."
+      }
+    },
+    {
+      "id": "der-ertrunkene-chor",
+      "name": "Der Ertrunkene Chor",
+      "kind": "Infernaler Kult",
+      "summary": "Kultisten der Meerestiefen, der Ertrunkenen und der verlorenen Seelen im Namen Thraals.",
+      "groupId": "kulte-thraal",
+      "parentId": null,
+      "deityId": "thraal",
+      "source": {
+        "kind": "user-directed-addition",
+        "note": "Kultname und Kurzprofil im beauftragten Fraktionsausbau ergänzt; Grundlage ist die vorhandene Überlieferung der Gottheit."
+      }
+    },
+    {
+      "id": "die-dornen-der-vergeltung",
+      "name": "Die Dornen der Vergeltung",
+      "kind": "Infernaler Kult",
+      "summary": "Verschwiegene Gemeinschaften, die Nemsaras Rache und Hinterlist zu ihrem Glaubensweg machen.",
+      "groupId": "kulte-nemsara",
+      "parentId": null,
+      "deityId": "nemsara",
+      "source": {
+        "kind": "user-directed-addition",
+        "note": "Kultname und Kurzprofil im beauftragten Fraktionsausbau ergänzt; Grundlage ist die vorhandene Überlieferung der Gottheit."
+      }
+    },
+    {
+      "id": "kinder-des-zerrissenen-spiegels",
+      "name": "Kinder des Zerrissenen Spiegels",
+      "kind": "Infernaler Kult",
+      "summary": "Getrennte Zirkel zwischen entfesselter Freude und tiefer Verzweiflung; vereint allein in der Verehrung des Zweigesichtigen.",
+      "groupId": "kulte-azrath-morvath",
+      "parentId": null,
+      "deityId": "azrath-morvath",
+      "source": {
+        "kind": "user-directed-addition",
+        "note": "Kultname und Kurzprofil im beauftragten Fraktionsausbau ergänzt; Grundlage ist die vorhandene Überlieferung der Gottheit."
+      }
+    },
+    {
+      "id": "bund-der-letzten-wuensche",
+      "name": "Bund der letzten Wünsche",
+      "kind": "Infernaler Kult",
+      "summary": "Kultgemeinschaften um Migdals Verheißungen, Sehnsüchte und den Preis eines Wunsches.",
+      "groupId": "kulte-migdal",
+      "parentId": null,
+      "deityId": "migdal",
+      "source": {
+        "kind": "user-directed-addition",
+        "note": "Kultname und Kurzprofil im beauftragten Fraktionsausbau ergänzt; Grundlage ist die vorhandene Überlieferung der Gottheit."
+      }
+    },
+    {
+      "id": "bruderschaft-des-fahlen-keims",
+      "name": "Bruderschaft des Fahlen Keims",
+      "kind": "Infernaler Kult",
+      "summary": "Zirkel des Verseuchers, die Krankheit und Verderbnis als Zeichen Nergaloths verehren.",
+      "groupId": "kulte-nergaloth",
+      "parentId": null,
+      "deityId": "nergaloth",
+      "source": {
+        "kind": "user-directed-addition",
+        "note": "Kultname und Kurzprofil im beauftragten Fraktionsausbau ergänzt; Grundlage ist die vorhandene Überlieferung der Gottheit."
+      }
+    },
+    {
+      "id": "hueter-der-verschlossenen-zuflucht",
+      "name": "Hüter der Verschlossenen Zuflucht",
+      "kind": "Infernaler Kult",
+      "summary": "Abgeschlossene Gemeinschaften im Zeichen Syressas, der steinernen Gefolgschaft und der verweigerten Zuflucht.",
+      "groupId": "kulte-syressa",
+      "parentId": null,
+      "deityId": "syressa",
+      "source": {
+        "kind": "user-directed-addition",
+        "note": "Kultname und Kurzprofil im beauftragten Fraktionsausbau ergänzt; Grundlage ist die vorhandene Überlieferung der Gottheit."
+      }
+    },
+    {
+      "id": "die-heimkehrlosen",
+      "name": "Die Heimkehrlosen",
+      "kind": "Infernaler Kult",
+      "summary": "Lose Kultgemeinschaften um Nhaera, die Einsamkeit und das Preisgeben der eigenen Heimkehr.",
+      "groupId": "kulte-nhaera",
+      "parentId": null,
+      "deityId": "nhaera",
+      "source": {
+        "kind": "user-directed-addition",
+        "note": "Kultname und Kurzprofil im beauftragten Fraktionsausbau ergänzt; Grundlage ist die vorhandene Überlieferung der Gottheit."
+      }
+    },
+    {
+      "id": "der-sanfte-schleier",
+      "name": "Der Sanfte Schleier",
+      "kind": "Infernaler Kult",
+      "summary": "Traumzirkel, die Nymhra im sanften Schlaf und im Vergessen schmerzlicher Erinnerungen suchen.",
+      "groupId": "kulte-nymhra",
+      "parentId": null,
+      "deityId": "nymhra",
+      "source": {
+        "kind": "user-directed-addition",
+        "note": "Kultname und Kurzprofil im beauftragten Fraktionsausbau ergänzt; Grundlage ist die vorhandene Überlieferung der Gottheit."
+      }
+    },
+    {
+      "id": "stimmen-der-tausend-muender",
+      "name": "Stimmen der Tausend Münder",
+      "kind": "Infernaler Kult",
+      "summary": "Eigenständige Zirkel, die Gerüchte und veränderte Geschichten als Maelachs Offenbarungen verbreiten.",
+      "groupId": "kulte-maelach",
+      "parentId": null,
+      "deityId": "maelach",
+      "source": {
+        "kind": "user-directed-addition",
+        "note": "Kultname und Kurzprofil im beauftragten Fraktionsausbau ergänzt; Grundlage ist die vorhandene Überlieferung der Gottheit."
+      }
+    }
+  ]
+}

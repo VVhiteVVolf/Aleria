@@ -1,0 +1,350 @@
+{
+  "groups": [
+    {
+      "id": "dunkle-loge",
+      "title": "Die Unterweltsgilde"
+    },
+    {
+      "id": "loge-gefolge",
+      "title": "Das Gefolge der Loge",
+      "parentId": "loge-der-daemmerung"
+    },
+    {
+      "id": "piraten",
+      "title": "Piraten",
+      "parentId": "loge-der-daemmerung"
+    },
+    {
+      "id": "piraten-gefolge",
+      "title": "Unterbanner der Blutsegel",
+      "parentId": "blutsegel-marodeure"
+    },
+    {
+      "id": "raeuber-verbrecher-banditen",
+      "title": "Räuber, Verbrecher & Banditen",
+      "parentId": "loge-der-daemmerung"
+    },
+    {
+      "id": "unabhaengige-lokale-banditen",
+      "title": "Eigenständige & lokale Banditen",
+      "note": "Örtlich eigenständig; eingeordnet in die übergeordnete Unterweltstruktur der Loge.",
+      "parentId": "loge-der-daemmerung"
+    },
+    {
+      "id": "syndikate-organisiertes-verbrechen",
+      "title": "Syndikate & organisiertes Verbrechen",
+      "parentId": "loge-der-daemmerung"
+    },
+    {
+      "id": "diebe",
+      "title": "Diebe",
+      "parentId": "loge-der-daemmerung"
+    }
+  ],
+  "entries": [
+    {
+      "id": "loge-der-daemmerung",
+      "name": "Loge der Dämmerung",
+      "kind": "",
+      "groupId": "dunkle-loge",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 1,
+        "column": 0,
+        "name": "Loge der Dämmerung",
+        "image": "https://i.imgur.com/XKPPhgL.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=333"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/loge-der-daemmerung.webp"
+    },
+    {
+      "id": "eidbrecher",
+      "name": "Eidbrecher",
+      "kind": "Söldner der Loge",
+      "groupId": "loge-gefolge",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 5,
+        "column": 0,
+        "name": "Eidbrecher",
+        "image": "https://i.imgur.com/CGSQ6zM.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1157"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/eidbrecher.webp"
+    },
+    {
+      "id": "der-dunkle-griff",
+      "name": "Der Dunkle Griff",
+      "kind": "Meuchler der Dunklen Loge",
+      "groupId": "loge-gefolge",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 5,
+        "column": 2,
+        "name": "Der Dunkle Griff",
+        "image": "https://i.imgur.com/JxApTzA.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=93"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/der-dunkle-griff.webp"
+    },
+    {
+      "id": "schwarzer-krug",
+      "name": "Schwarzer Krug",
+      "kind": "Markt der Loge",
+      "groupId": "loge-gefolge",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 5,
+        "column": 4,
+        "name": "Schwarzer Krug",
+        "image": "https://i.imgur.com/Iigl9OY.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1156"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/schwarzer-krug.webp"
+    },
+    {
+      "id": "blutsegel-marodeure",
+      "name": "Blutsegel Marodeure",
+      "kind": "",
+      "groupId": "piraten",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 13,
+        "column": 0,
+        "name": "Blutsegel Marodeure",
+        "image": "https://i.imgur.com/siRgG2e.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=537"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/blutsegel-marodeure.webp"
+    },
+    {
+      "id": "klauen-des-leviathan",
+      "name": "Klauen des Leviathan",
+      "kind": "",
+      "groupId": "piraten-gefolge",
+      "parentId": "blutsegel-marodeure",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 17,
+        "column": 0,
+        "name": "Klauen des Leviathan",
+        "image": "https://i.imgur.com/WNDuxOy.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=540"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/klauen-des-leviathan.webp"
+    },
+    {
+      "id": "schwarzblut-marodeure",
+      "name": "Schwarzblut Marodeure",
+      "kind": "",
+      "groupId": "piraten-gefolge",
+      "parentId": "blutsegel-marodeure",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 17,
+        "column": 2,
+        "name": "Schwarzblut Marodeure",
+        "image": "https://i.imgur.com/8EWayPB.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=538"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/schwarzblut-marodeure.webp"
+    },
+    {
+      "id": "sirenenzahn",
+      "name": "Sirenenzahn",
+      "kind": "",
+      "groupId": "piraten-gefolge",
+      "parentId": "blutsegel-marodeure",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 17,
+        "column": 4,
+        "name": "Sirenenzahn",
+        "image": "https://i.imgur.com/7Wp1ESJ.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=539"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/sirenenzahn.webp"
+    },
+    {
+      "id": "raeubergilde",
+      "name": "Räubergilde",
+      "kind": "",
+      "groupId": "raeuber-verbrecher-banditen",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 21,
+        "column": 0,
+        "name": "Räubergilde",
+        "image": "https://i.imgur.com/ItpA3dm.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1534"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/raeubergilde.webp"
+    },
+    {
+      "id": "silberzahn-banditen",
+      "name": "Silberzahn Banditen",
+      "kind": "Zentrales Aldrimar (Todesfenn)",
+      "groupId": "unabhaengige-lokale-banditen",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 25,
+        "column": 0,
+        "name": "Silberzahn Banditen",
+        "image": "https://i.imgur.com/zUkukCL.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2355"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/silberzahn-banditen.webp"
+    },
+    {
+      "id": "zitteraal-raubritter",
+      "name": "Zitteraal Raubritter",
+      "kind": "Celtigerns Wacht",
+      "groupId": "unabhaengige-lokale-banditen",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 25,
+        "column": 1,
+        "name": "Zitteraal Raubritter",
+        "image": "https://i.imgur.com/7xm4uZA.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2549"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/zitteraal-raubritter.webp"
+    },
+    {
+      "id": "goldglanz-syndikat",
+      "name": "Goldglanz Syndikat",
+      "kind": "West Aldrimar (Silberquell)",
+      "groupId": "syndikate-organisiertes-verbrechen",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 29,
+        "column": 0,
+        "name": "Goldglanz Syndikat",
+        "image": "https://i.imgur.com/zVvClHp.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1737"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/goldglanz-syndikat.webp"
+    },
+    {
+      "id": "cuinne-bruderschaft",
+      "name": "Cuinne Bruderschaft",
+      "kind": "Dunfal",
+      "groupId": "syndikate-organisiertes-verbrechen",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 29,
+        "column": 1,
+        "name": "Cuinne Bruderschaft",
+        "image": "https://i.imgur.com/0ZFFgaB.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1295"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/cuinne-bruderschaft.webp"
+    },
+    {
+      "id": "die-ertrunkenen",
+      "name": "Die Ertrunkenen",
+      "kind": "Leitheach",
+      "groupId": "syndikate-organisiertes-verbrechen",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 29,
+        "column": 2,
+        "name": "Die Ertrunkenen",
+        "image": "https://i.imgur.com/7qPPiQa.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1545"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/die-ertrunkenen.webp"
+    },
+    {
+      "id": "dal-arbhair-syndikat",
+      "name": "Dal Arbhair Syndikat",
+      "kind": "Uathneach",
+      "groupId": "syndikate-organisiertes-verbrechen",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 29,
+        "column": 3,
+        "name": "Dal Arbhair Syndikat",
+        "image": "https://i.imgur.com/5zRQb2q.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1740"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/dal-arbhair-syndikat.webp"
+    },
+    {
+      "id": "an-caengail-fola",
+      "name": "An'Caengail Fola",
+      "kind": "Silberquell",
+      "groupId": "syndikate-organisiertes-verbrechen",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 29,
+        "column": 4,
+        "name": "An'Caengail Fola",
+        "image": "https://i.imgur.com/t84wGOi.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1739"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/an-caengail-fola.webp"
+    },
+    {
+      "id": "die-strandknaben",
+      "name": "Die Strandknaben",
+      "kind": "Aislaerneach",
+      "groupId": "syndikate-organisiertes-verbrechen",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 32,
+        "column": 0,
+        "name": "Die Strandknaben",
+        "image": "https://i.imgur.com/wocsVju.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1732"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/die-strandknaben.webp"
+    },
+    {
+      "id": "die-gleissende-hand",
+      "name": "Die Gleißende Hand",
+      "kind": "Gwendolyns Ufer",
+      "groupId": "syndikate-organisiertes-verbrechen",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 32,
+        "column": 1,
+        "name": "Die Gleißende Hand",
+        "image": "https://i.imgur.com/D5NHzX6.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2571"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/die-gleissende-hand.webp"
+    },
+    {
+      "id": "die-nachtfluegel",
+      "name": "Die Nachtflügel",
+      "kind": "",
+      "groupId": "diebe",
+      "parentId": "loge-der-daemmerung",
+      "source": {
+        "document": "docs/sources/dunkle-gilden.html",
+        "row": 36,
+        "column": 0,
+        "name": "Die Nachtflügel",
+        "image": "https://i.imgur.com/yt2bgov.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=544"
+      },
+      "symbol": "assets/emblems/dunkle-gilden/die-nachtfluegel.webp"
+    }
+  ]
+}

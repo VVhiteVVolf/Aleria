@@ -1,0 +1,718 @@
+{
+  "groups": [
+    {
+      "id": "die-alerische-kirche",
+      "title": "Die Alerische Kirche"
+    },
+    {
+      "id": "subordinatoren-der-kirche",
+      "title": "Die Zweige der Kirche",
+      "parentId": "die-alerische-kirche"
+    },
+    {
+      "id": "autonome-klerikale-orden",
+      "title": "Autonome Klerikale Orden"
+    },
+    {
+      "id": "autonome-monastische-orden",
+      "title": "Autonome Monastische Orden"
+    },
+    {
+      "id": "autonome-ritter-orden",
+      "title": "Autonome Ritter Orden"
+    },
+    {
+      "id": "lokale-unterorden",
+      "title": "Lokale Unterorden",
+      "parentId": "erben-des-ersten-schwurs"
+    },
+    {
+      "id": "lokale-unterorden-der-schwaene",
+      "title": "Lokale Unterorden der Schwäne",
+      "parentId": "der-schwanen-orden"
+    },
+    {
+      "id": "weltliche-ritterorden",
+      "title": "Weltliche Ritterorden"
+    },
+    {
+      "id": "druiden-orden",
+      "title": "Druiden Orden"
+    },
+    {
+      "id": "druidische-orden",
+      "title": "Druidische Orden"
+    },
+    {
+      "id": "magier-orden",
+      "title": "Magier Orden"
+    },
+    {
+      "id": "magier-logen-zirkel",
+      "title": "Magier Logen/ Zirkel"
+    }
+  ],
+  "entries": [
+    {
+      "id": "die-alerische-kirche",
+      "name": "Die Alerische Kirche",
+      "kind": "Kirchliche Gewalt",
+      "groupId": "die-alerische-kirche",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 1,
+        "column": 0,
+        "name": "Die Alerische Kirche",
+        "image": "https://i.imgur.com/WHG8KKJ.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=410"
+      },
+      "href": "../Religionen/religionen/alerische-kirche/index.html",
+      "symbol": "../Religionen/assets/symbols/alerische-kirche.webp"
+    },
+    {
+      "id": "alerischer-moenchsorden",
+      "name": "Alerischer Mönchsorden",
+      "kind": "Monastischer Zweig",
+      "groupId": "subordinatoren-der-kirche",
+      "parentId": "die-alerische-kirche",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 5,
+        "column": 0,
+        "name": "Alerischer Mönchsorden",
+        "image": "https://i.imgur.com/w2LG6Lm.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1026"
+      },
+      "symbol": "assets/emblems/orden/alerischer-moenchsorden.webp"
+    },
+    {
+      "id": "die-ahnenmoenche",
+      "name": "Die Ahnenmönche",
+      "kind": "Akademischer Zweig",
+      "groupId": "subordinatoren-der-kirche",
+      "parentId": "die-alerische-kirche",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 5,
+        "column": 1,
+        "name": "Die Ahnenmönche",
+        "image": "https://i.imgur.com/dW80wIk.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=554"
+      },
+      "symbol": "assets/emblems/orden/die-ahnenmoenche.webp"
+    },
+    {
+      "id": "sanktoren-orden",
+      "name": "Sanktoren Orden",
+      "kind": "Militärischer Zweig",
+      "groupId": "subordinatoren-der-kirche",
+      "parentId": "die-alerische-kirche",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 5,
+        "column": 2,
+        "name": "Sanktoren Orden",
+        "image": "https://i.imgur.com/tDy6EDe.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=553"
+      },
+      "symbol": "assets/emblems/orden/sanktoren-orden.webp"
+    },
+    {
+      "id": "die-gelaeuterten",
+      "name": "Die Geläuterten",
+      "kind": "Buß-Zweig",
+      "groupId": "subordinatoren-der-kirche",
+      "parentId": "die-alerische-kirche",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 5,
+        "column": 3,
+        "name": "Die Geläuterten",
+        "image": "https://i.imgur.com/qfUEs49.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=598"
+      },
+      "symbol": "assets/emblems/orden/die-gelaeuterten.webp"
+    },
+    {
+      "id": "alerischer-nonnenorden",
+      "name": "Alerischer Nonnenorden",
+      "kind": "Monastischer Zweig",
+      "groupId": "subordinatoren-der-kirche",
+      "parentId": "die-alerische-kirche",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 5,
+        "column": 4,
+        "name": "Alerischer Nonnenorden",
+        "image": "https://i.imgur.com/S3xoMA8.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1164"
+      },
+      "symbol": "assets/emblems/orden/alerischer-nonnenorden.webp"
+    },
+    {
+      "id": "die-zwillingspirscher",
+      "name": "Die Zwillingspirscher",
+      "kind": "Missionar & Anti-Sklaverei Orden",
+      "groupId": "autonome-klerikale-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 9,
+        "column": 0,
+        "name": "Die Zwillingspirscher",
+        "image": "https://i.imgur.com/4MO1DdH.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=577"
+      },
+      "symbol": "assets/emblems/orden/die-zwillingspirscher.webp"
+    },
+    {
+      "id": "orden-des-lachenden-kleeblatts",
+      "name": "Orden des lachenden Kleeblatts",
+      "kind": "Karitativer Orden",
+      "groupId": "autonome-klerikale-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 9,
+        "column": 1,
+        "name": "Orden des lachenden Kleeblatts",
+        "image": "https://i.imgur.com/uAUNLXs.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2020"
+      },
+      "symbol": "assets/emblems/orden/orden-des-lachenden-kleeblatts.webp"
+    },
+    {
+      "id": "die-graukutten",
+      "name": "Die Graukutten",
+      "kind": "Inquisitions Orden",
+      "groupId": "autonome-monastische-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 13,
+        "column": 0,
+        "name": "Die Graukutten",
+        "image": "https://i.imgur.com/KFxV5ys.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1286"
+      },
+      "symbol": "assets/emblems/orden/die-graukutten.webp"
+    },
+    {
+      "id": "der-asket-der-krone",
+      "name": "Der Asket der Krone",
+      "kind": "Kampfmönch Orden",
+      "groupId": "autonome-monastische-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 13,
+        "column": 1,
+        "name": "Der Asket der Krone",
+        "image": "https://i.imgur.com/jyy9Emz.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2492"
+      },
+      "symbol": "assets/emblems/orden/der-asket-der-krone.webp"
+    },
+    {
+      "id": "tempelritter-der-ordnung",
+      "name": "Tempelritter der Ordnung",
+      "kind": "Mathringischer Ritter Orden",
+      "groupId": "autonome-ritter-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 17,
+        "column": 0,
+        "name": "Tempelritter der Ordnung",
+        "image": "https://i.imgur.com/dPohIWR.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=705"
+      },
+      "symbol": "assets/emblems/orden/tempelritter-der-ordnung.webp"
+    },
+    {
+      "id": "orden-der-lilie",
+      "name": "Orden der Lilie",
+      "kind": "Weiblicher Ritter Orden",
+      "groupId": "autonome-ritter-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 17,
+        "column": 2,
+        "name": "Orden der Lilie",
+        "image": "https://i.imgur.com/KYWaLd6.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=706"
+      },
+      "symbol": "assets/emblems/orden/orden-der-lilie.webp"
+    },
+    {
+      "id": "orden-der-neun",
+      "name": "Orden der Neun",
+      "kind": "Globaler Ritter Orden",
+      "groupId": "autonome-ritter-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 17,
+        "column": 4,
+        "name": "Orden der Neun",
+        "image": "https://i.imgur.com/Uc1KpHH.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1190"
+      },
+      "status": "struck",
+      "symbol": "assets/emblems/orden/orden-der-neun.webp"
+    },
+    {
+      "id": "erben-des-ersten-schwurs",
+      "name": "Erben des ersten Schwurs",
+      "kind": "Geistlich-weltlicher Ritterorden der Alben",
+      "groupId": "autonome-ritter-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 20,
+        "column": 0,
+        "name": "Erben des ersten Schwurs",
+        "image": "https://i.imgur.com/qTbhGTY.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2442"
+      },
+      "symbol": "assets/emblems/orden/erben-des-ersten-schwurs.webp"
+    },
+    {
+      "id": "die-abkoemmlinge",
+      "name": "Die Abkömmlinge",
+      "kind": "Leitheach",
+      "groupId": "lokale-unterorden",
+      "parentId": "erben-des-ersten-schwurs",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 25,
+        "column": 0,
+        "name": "Die Abkömmlinge",
+        "image": "https://i.imgur.com/nJWRqSh.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1775"
+      },
+      "symbol": "assets/emblems/orden/die-abkoemmlinge.webp"
+    },
+    {
+      "id": "die-ahnenschilde",
+      "name": "Die Ahnenschilde",
+      "kind": "Aislearneach",
+      "groupId": "lokale-unterorden",
+      "parentId": "erben-des-ersten-schwurs",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 25,
+        "column": 1,
+        "name": "Die Ahnenschilde",
+        "image": "https://i.imgur.com/hHAg5Tg.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2526"
+      },
+      "symbol": "assets/emblems/orden/die-ahnenschilde.webp"
+    },
+    {
+      "id": "die-rindenwache",
+      "name": "Die Rindenwache",
+      "kind": "Dunfal",
+      "groupId": "lokale-unterorden",
+      "parentId": "erben-des-ersten-schwurs",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 25,
+        "column": 2,
+        "name": "Die Rindenwache",
+        "image": "https://i.imgur.com/pXovlZy.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1918"
+      },
+      "symbol": "assets/emblems/orden/die-rindenwache.webp"
+    },
+    {
+      "id": "die-sturmseher",
+      "name": "Die Sturmseher",
+      "kind": "Blaithneach",
+      "groupId": "lokale-unterorden",
+      "parentId": "erben-des-ersten-schwurs",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 25,
+        "column": 3,
+        "name": "Die Sturmseher",
+        "image": "https://i.imgur.com/NSah2Wo.png",
+        "href": ""
+      },
+      "symbol": "assets/emblems/orden/die-sturmseher.webp",
+      "href": ""
+    },
+    {
+      "id": "die-hainsprecher",
+      "name": "Die Hainsprecher",
+      "kind": "Uathneach",
+      "groupId": "lokale-unterorden",
+      "parentId": "erben-des-ersten-schwurs",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 25,
+        "column": 4,
+        "name": "Die Hainsprecher",
+        "image": "https://i.imgur.com/b6xdXV2.png",
+        "href": ""
+      },
+      "symbol": "assets/emblems/orden/die-hainsprecher.webp",
+      "href": ""
+    },
+    {
+      "id": "der-schwanen-orden",
+      "name": "Der Schwanen Orden",
+      "kind": "Ritterlicher Zweig der Kirche",
+      "groupId": "autonome-ritter-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 28,
+        "column": 0,
+        "name": "Der Schwanen Orden",
+        "image": "https://i.imgur.com/w71FqJX.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=496"
+      },
+      "symbol": "assets/emblems/orden/der-schwanen-orden.webp"
+    },
+    {
+      "id": "liga-der-felsprediger",
+      "name": "Liga der Felsprediger",
+      "kind": "Morgorn",
+      "groupId": "lokale-unterorden-der-schwaene",
+      "parentId": "der-schwanen-orden",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 33,
+        "column": 0,
+        "name": "Liga der Felsprediger",
+        "image": "https://i.imgur.com/dSzkx3i.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=909"
+      },
+      "symbol": "assets/emblems/orden/liga-der-felsprediger.webp"
+    },
+    {
+      "id": "ritter-der-kornaehren",
+      "name": "Ritter der Kornähren",
+      "kind": "Weisenfluh",
+      "groupId": "lokale-unterorden-der-schwaene",
+      "parentId": "der-schwanen-orden",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 33,
+        "column": 1,
+        "name": "Ritter der Kornähren",
+        "image": "https://i.imgur.com/k90J26y.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=700"
+      },
+      "symbol": "assets/emblems/orden/ritter-der-kornaehren.webp"
+    },
+    {
+      "id": "helden-des-gefluegelten-hengstes",
+      "name": "Helden des geflügelten Hengstes",
+      "kind": "Kent",
+      "groupId": "lokale-unterorden-der-schwaene",
+      "parentId": "der-schwanen-orden",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 33,
+        "column": 2,
+        "name": "Helden des geflügelten Hengstes",
+        "image": "https://i.imgur.com/jRee754.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=701"
+      },
+      "symbol": "assets/emblems/orden/helden-des-gefluegelten-hengstes.webp"
+    },
+    {
+      "id": "orden-des-heiligen-feuers",
+      "name": "Orden des Heiligen Feuers",
+      "kind": "Baldreska",
+      "groupId": "lokale-unterorden-der-schwaene",
+      "parentId": "der-schwanen-orden",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 33,
+        "column": 3,
+        "name": "Orden des Heiligen Feuers",
+        "image": "https://i.imgur.com/XLv0UMG.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=702"
+      },
+      "symbol": "assets/emblems/orden/orden-des-heiligen-feuers.webp"
+    },
+    {
+      "id": "balthors-soehne",
+      "name": "Balthors Söhne",
+      "kind": "Aldrimar",
+      "groupId": "lokale-unterorden-der-schwaene",
+      "parentId": "der-schwanen-orden",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 33,
+        "column": 4,
+        "name": "Balthors Söhne",
+        "image": "https://i.imgur.com/944gCnm.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=703"
+      },
+      "symbol": "assets/emblems/orden/balthors-soehne.webp"
+    },
+    {
+      "id": "juenger-des-st-septimus",
+      "name": "Jünger des St. Septimus",
+      "kind": "Kaisereich Argentum",
+      "groupId": "lokale-unterorden-der-schwaene",
+      "parentId": "der-schwanen-orden",
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 36,
+        "column": 0,
+        "name": "Jünger des St. Septimus",
+        "image": "https://i.imgur.com/KI6NcjE.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=704"
+      },
+      "symbol": "assets/emblems/orden/juenger-des-st-septimus.webp"
+    },
+    {
+      "id": "orden-der-kristallritter",
+      "name": "Orden der Kristallritter",
+      "kind": "Lichthain",
+      "groupId": "weltliche-ritterorden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 40,
+        "column": 0,
+        "name": "Orden der Kristallritter",
+        "image": "https://i.imgur.com/JwqX9J0.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=708"
+      },
+      "symbol": "assets/emblems/orden/orden-der-kristallritter.webp"
+    },
+    {
+      "id": "purpurne-kavaliere",
+      "name": "Purpurne Kavaliere",
+      "kind": "Fahrende Ritter",
+      "groupId": "weltliche-ritterorden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 40,
+        "column": 1,
+        "name": "Purpurne Kavaliere",
+        "image": "https://i.imgur.com/MXZcIxd.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1191"
+      },
+      "symbol": "assets/emblems/orden/purpurne-kavaliere.webp"
+    },
+    {
+      "id": "silberschwingen",
+      "name": "Silberschwingen",
+      "kind": "Lokaler Ritterorden",
+      "groupId": "weltliche-ritterorden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 40,
+        "column": 2,
+        "name": "Silberschwingen",
+        "image": "https://i.imgur.com/yswprHg.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=927"
+      },
+      "symbol": "assets/emblems/orden/silberschwingen.webp"
+    },
+    {
+      "id": "scharlachrote-loewen",
+      "name": "Scharlachrote Löwen",
+      "kind": "Lokaler Ritterorden",
+      "groupId": "weltliche-ritterorden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 40,
+        "column": 3,
+        "name": "Scharlachrote Löwen",
+        "image": "https://i.imgur.com/yWb764s.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=928"
+      },
+      "symbol": "assets/emblems/orden/scharlachrote-loewen.webp"
+    },
+    {
+      "id": "druidischer-orden",
+      "name": "Druidischer Orden",
+      "kind": "",
+      "groupId": "druiden-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 44,
+        "column": 0,
+        "name": "Druidischer Orden",
+        "image": "https://i.imgur.com/cxEP3AD.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=98"
+      },
+      "symbol": "assets/emblems/orden/druidischer-orden.webp"
+    },
+    {
+      "id": "der-chridhe-orden",
+      "name": "Der Chridhe Orden",
+      "kind": "Antiker Orden",
+      "groupId": "druidische-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 48,
+        "column": 0,
+        "name": "Der Chridhe Orden",
+        "image": "https://i.imgur.com/ykInnja.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=278"
+      },
+      "symbol": "assets/emblems/orden/der-chridhe-orden.webp"
+    },
+    {
+      "id": "der-rubin-orden",
+      "name": "Der Rubin Orden",
+      "kind": "Magier Orden",
+      "groupId": "magier-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 52,
+        "column": 0,
+        "name": "Der Rubin Orden",
+        "image": "https://i.imgur.com/JgdXXQs.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=96"
+      },
+      "symbol": "assets/emblems/orden/der-rubin-orden.webp"
+    },
+    {
+      "id": "der-smaragd-orden",
+      "name": "Der Smaragd Orden",
+      "kind": "Magier Orden",
+      "groupId": "magier-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 52,
+        "column": 1,
+        "name": "Der Smaragd Orden",
+        "image": "https://i.imgur.com/Nbv8p4F.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=97"
+      },
+      "symbol": "assets/emblems/orden/der-smaragd-orden.webp"
+    },
+    {
+      "id": "der-saphir-orden",
+      "name": "Der Saphir Orden",
+      "kind": "Magier Orden",
+      "groupId": "magier-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 52,
+        "column": 2,
+        "name": "Der Saphir Orden",
+        "image": "https://i.imgur.com/rXFUO7s.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=744"
+      },
+      "symbol": "assets/emblems/orden/der-saphir-orden.webp"
+    },
+    {
+      "id": "der-achat-orden",
+      "name": "Der Achat Orden",
+      "kind": "Magier Orden",
+      "groupId": "magier-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 52,
+        "column": 3,
+        "name": "Der Achat Orden",
+        "image": "https://i.imgur.com/Qm0IDqg.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=919"
+      },
+      "symbol": "assets/emblems/orden/der-achat-orden.webp"
+    },
+    {
+      "id": "der-beryll-orden",
+      "name": "Der Beryll Orden",
+      "kind": "Magier Orden",
+      "groupId": "magier-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 52,
+        "column": 4,
+        "name": "Der Beryll Orden",
+        "image": "https://i.imgur.com/teXKHRY.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=920"
+      },
+      "symbol": "assets/emblems/orden/der-beryll-orden.webp"
+    },
+    {
+      "id": "der-obsidian-orden",
+      "name": "Der Obsidian Orden",
+      "kind": "Magier Orden",
+      "groupId": "magier-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 55,
+        "column": 0,
+        "name": "Der Obsidian Orden",
+        "image": "https://i.imgur.com/cS016K5.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=1312"
+      },
+      "symbol": "assets/emblems/orden/der-obsidian-orden.webp"
+    },
+    {
+      "id": "der-amethyst-orden",
+      "name": "Der Amethyst Orden",
+      "kind": "Magier Orden",
+      "groupId": "magier-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 55,
+        "column": 1,
+        "name": "Der Amethyst Orden",
+        "image": "https://i.imgur.com/XLChCeh.png",
+        "href": ""
+      },
+      "symbol": "assets/emblems/orden/der-amethyst-orden.webp",
+      "href": ""
+    },
+    {
+      "id": "die-winterwacht",
+      "name": "Die Winterwacht",
+      "kind": "Magier Orden Aldrimars",
+      "groupId": "magier-orden",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 55,
+        "column": 2,
+        "name": "Die Winterwacht",
+        "image": "https://i.imgur.com/Z2fbLU5.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2333"
+      },
+      "symbol": "assets/emblems/orden/die-winterwacht.webp"
+    },
+    {
+      "id": "die-10-magier-alerias",
+      "name": "Die 10 Magier Alerias",
+      "kind": "Magierzirkel/ Loge",
+      "groupId": "magier-logen-zirkel",
+      "parentId": null,
+      "source": {
+        "document": "docs/sources/orden.html",
+        "row": 59,
+        "column": 0,
+        "name": "Die 10 Magier Alerias",
+        "image": "https://i.imgur.com/fucdAvv.png",
+        "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=202"
+      },
+      "symbol": "assets/emblems/orden/die-10-magier-alerias.webp"
+    }
+  ]
+}

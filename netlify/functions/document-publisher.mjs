@@ -1,4 +1,4 @@
-import { json, secureEqual, bearerToken, repositoryConfig, createGitHubClient } from './shared/github-publishing.mjs';
+import { json, secureEqual, bearerToken, repositoryConfig, createGitHubClient, commitGitHubFiles } from './shared/github-publishing.mjs';
 import { validateRecord, ID_PATTERN, MAX_BATCH_BYTES, IMAGE_DATA, FONT_DATA } from '../../AleriaAlmanach/DokumentenWerkstatt/js/document-schema.js';
 
 const ROOT = 'Dokumente aus der Werkstatt';
@@ -84,11 +84,7 @@ export async function publish(records, config, fetchRef = fetch) {
   });
   const files = prepared.flatMap(record => record.files);
   files.push({ path: REGISTRY_PATH, content: JSON.stringify({ schemaVersion: 2, documents: [...entries.values()].sort((a, b) => a.title.localeCompare(b.title, 'de')) }, null, 2) + '\n', encoding: 'utf-8' });
-  const post = (path, body, method = 'POST') => github.request(path, { method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
-  const blobs = await Promise.all(files.map(file => post('/git/blobs', { content: file.content, encoding: file.encoding })));
-  const tree = await post('/git/trees', { base_tree: commit.tree.sha, tree: files.map((file, index) => ({ path: file.path, mode: '100644', type: 'blob', sha: blobs[index].sha })) });
-  const created = await post('/git/commits', { message: `${records.length} Dokument(e) aus der Werkstatt veröffentlichen`, tree: tree.sha, parents: [head] });
-  await post(`/git/refs/heads/${encodeURIComponent(config.branch)}`, { sha: created.sha, force: false }, 'PATCH');
+  const created = await commitGitHubFiles(github, { branch: config.branch, head, baseTree: commit.tree.sha, files, message: `${records.length} Dokument(e) aus der Werkstatt veröffentlichen` });
   return { records: prepared.map(record => record.saved), commitSha: created.sha, commitUrl: `https://github.com/${config.repository}/commit/${created.sha}` };
 }
 

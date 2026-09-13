@@ -16,7 +16,8 @@ function buildNameListPage(page, entry, pageIndex, total) {
   const data = sanitizeNameListData(page.nameList || {});
   const inlineCommentThread = getInlineCommentThreadForPage(page, entry, pageIndex);
   const embeddedComments = inlineCommentThread ? buildOrganicCommentsContinuation(inlineCommentThread) : '';
-  const ornament = data.ornamentText ? `<div class="name-list-ornament ornament-${escapeHtml(data.ornamentStyle)}" aria-hidden="true">${escapeHtml(data.ornamentText)}</div>` : '';
+  const ornamentText = getLanguageScriptDisplayText(data.ornamentText, data.ornamentStyle);
+  const ornament = ornamentText ? `<div class="name-list-ornament ornament-${escapeHtml(data.ornamentStyle)}" aria-hidden="true">${escapeHtml(ornamentText)}</div>` : '';
 
   return `
     ${nav}

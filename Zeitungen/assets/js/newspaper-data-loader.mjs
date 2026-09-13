@@ -1,4 +1,4 @@
-import { findNewspaperEntry } from "./newspaper-registry.mjs?v=20260904c";
+import { findNewspaperEntry } from "./newspaper-registry.mjs?v=20260904c&content=wyrm-20260913a";
 import { findIssueEntry } from "./newspaper-archive.mjs?v=20260903a";
 import {
   isValidPublicationDate,

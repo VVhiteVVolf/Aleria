@@ -19,7 +19,7 @@ test("Ortsseite und Vorlage binden den optionalen Militärzugang ein", async () 
   ]);
 
   for (const html of [page, template]) {
-    assert.match(html, /military-entry\.css\?v=20260904a/);
+    assert.match(html, /military-entry\.css\?v=20260913a/);
     assert.match(html, /military-entry\.mjs\?v=20260904a/);
     assert.match(html, /data-orte-military-entry/);
     assert.match(html, /data-orte-military-link/);
@@ -30,7 +30,7 @@ test("Ortsseite und Vorlage binden den optionalen Militärzugang ein", async () 
   assert.match(entryModule, /militaer\.html\?id=/);
   assert.doesNotMatch(entryModule, /onclick\s*=|onchange\s*=/i);
   assert.match(entryStyles, /\.orte-military-entry__link/);
-  assert.match(entryStyles, /position:\s*absolute/);
+  assert.doesNotMatch(entryStyles, /position:\s*absolute/);
 });
 
 test("alle registrierten Orte erhalten standardmäßig eine eigene Militäransicht", async () => {

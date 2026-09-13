@@ -16,12 +16,12 @@ const COMMENT_LANGUAGES = Object.freeze({
   rheunwaith: {
     label: 'Rheunwaith · Avallornisch',
     cssFamily: 'Rheunwaith',
-    transliterator: identityCommentLanguageText
+    transliterator: text => getLanguageScriptDisplayText(text, 'rheunwaith')
   },
   karnrith: {
     label: 'Morgar · Karnrith',
-    cssFamily: 'Karnrith Hochschnitt',
-    transliterator: identityCommentLanguageText
+    cssFamily: 'Karnrith Tiefenrunen',
+    transliterator: text => getLanguageScriptDisplayText(text, 'karnrith')
   },
   infernal: {
     label: 'Infernal · Nharazim',

@@ -1,7 +1,7 @@
 import { getCenyrClassProgression } from '../../../AleriaAlmanach/modules/classes/cenyr/cenyr-class-progression.js?v=20260909-dragon-parent-v2';
 import { getVennyrClassProgression } from '../../../AleriaAlmanach/modules/classes/vennyr/vennyr-class-progression.js?v=20260909-dragon-parent-v2';
 import { getAldrimarClassProgression } from '../../../AleriaAlmanach/modules/classes/aldrimar/aldrimar-class-progression.js?v=20260909-dragon-parent-v2';
-import { getMorgornClassProgression } from '../../../AleriaAlmanach/modules/classes/morgorn/morgorn-class-progression.js?v=20260910-morgorn-structure-v1';
+import { getMorgornClassProgression } from '../../../AleriaAlmanach/modules/classes/morgorn/morgorn-class-progression.js?v=20260913-morgorn-names-v1';
 import { getVenalysClassProgression } from '../../../AleriaAlmanach/modules/classes/venalys/venalys-class-progression.js?v=20260911-venalys-v1';
 
 export function getCultureClassProgression(id, level = 1, options = {}) {

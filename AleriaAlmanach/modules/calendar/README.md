@@ -33,6 +33,8 @@ weiterhin die Monatsnummer; spätere Umbenennungen verändern keine Termine.
 - `calendar-preview.mjs`: kleine Terminkarten, später erweiterbar um einen Artikelverweis.
 - `calendar-editor.mjs`: Termine bearbeiten; Icon-Verzeichnis und Personenwahl.
 - `calendar-page.mjs` / `.css`: eigenständige Kalenderseite, Monats- und Tagesansicht.
+- `calendar-chronicle.mjs` / `.css`: historische Ereignisse im ausgewählten Jahr,
+  gelesen aus der gemeinsamen Ereignischronik unter `../../../Ereignisse/`.
 - `calendar-dashboard.mjs`: Vorschau auf der Almanach-Übersicht.
 
 ## Daten und zukünftige Artikel
@@ -41,6 +43,15 @@ Termine speichern Start-/Enddatum, optionale Uhrzeiten, Kategorie, Kurztext, Ort
 Icon, Teilnehmerreferenzen (ID, Name und kleines Porträt), Wiederholung und Revision.
 Ein optionales `articleHref` ist für spätere Dossiers vorgesehen. Ohne Artikel
 öffnet ein Termin seine kleine Vorschau mit Bearbeitungsmöglichkeit.
+
+Die eigenständige Ereignisübersicht (`Ereignisse/index.html`) zeigt die nächsten
+Kalendertermine über denselben Store. Ihre historischen Einträge führen mit
+`?year=…&chronicle=…#chronik` zum Jahreskontext des Kalenders; Rückverweise öffnen
+den betreffenden Chronikeintrag. Jahresangaben erzeugen keine Tages-Termine und
+ändern nicht die Weltzeit. Mehrjährige Ereignisse erscheinen in jedem betroffenen
+Jahr einschließlich Beginn und Ende. Undatierte Einträge bleiben in der Chronik.
+Die gemeinsame Terminvorschau unterstützt dazu einen abweichenden `calendarHref`
+und eine `articleBase`, damit gespeicherte relative Dossierverweise korrekt bleiben.
 Jährliche Wiederholungen gelten ab dem eingetragenen Startjahr; Wochen umfassen
 neun Tage. Überschneidungen beziehen sich auf Zeiträume, nicht auf das Systemdatum.
 

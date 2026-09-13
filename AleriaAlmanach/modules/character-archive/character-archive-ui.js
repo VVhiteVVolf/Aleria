@@ -5,9 +5,9 @@ import { getSpellCatalogEntry, getSpellCatalogPageHref } from '../spell-catalog/
 import { getSpellCatalogSchool } from '../spell-catalog/spell-catalog-schools.js';
 import { getCharacterArchiveEntryIconPresentation } from './character-archive-icons.js?v=20260905-cenyr-v2';
 import { getCharacterArchiveWeaponGroups } from './character-archive-weapon-groups.js?v=20260905-cenyr-character-training-v1';
-import { getCharacterArchiveClassGroups, getCharacterArchiveHorseGroups } from './character-archive-classification.js?v=20260909-dragon-parent-v2';
+import { getCharacterArchiveClassGroups, getCharacterArchiveHorseGroups } from './character-archive-classification.js?v=20260913-morgorn-names-v1';
 import { countArchiveGroupEntries } from './character-archive-group-tree.js?v=20260905-cenyr-character-training-v1';
-import { getCharacterArchiveClassLinks } from './character-archive-class-links.js?v=20260909-dragon-parent-v2';
+import { getCharacterArchiveClassLinks } from './character-archive-class-links.js?v=20260913-morgorn-names-v1';
 import { ARCHIVE_PLACEMENT_FIELDS, readArchivePlacement, getArchivePlacementChoices } from './character-archive-placement.js';
 import { describeTechniqueDamage } from '../combat/combat-technique-damage.js?v=20260905-party-combat-v1';
 import { getCombatFormPresentation } from '../combat-styles/combat-form-presentation.js?v=20260909-dragon-parent-v2';
@@ -25,7 +25,7 @@ import {
   getCharacterArchiveEntries,
   saveCharacterArchiveEntry,
   setCharacterArchiveLiveRecords
-} from './character-archive-store.js?v=20260912-register-refresh-v1';
+} from './character-archive-store.js?v=20260913-morgorn-names-v1';
 
 const DEFAULT_RESOURCE_OPTIONS = [
   { id: 'action', name: 'Aktion', scope: 'comment' },

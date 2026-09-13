@@ -80,14 +80,17 @@
     cell.dataset.label = "Wappen";
     const href = houseHref(house);
 
-    if (!house.emblem) {
-      cell.textContent = "…";
-      return cell;
-    }
+    const rank = String(house.rank || "");
+    const isCommoner = /^bürgerlich$/i.test(rank);
+    const emblem = house.emblem || (isCommoner || !rank
+      ? "/IconOrdner/Neutrale Wappen/Neutrales Bürgerwappen.png"
+      : "/IconOrdner/Neutrale Wappen/Neutrales Adelswappen.png");
 
     const image = document.createElement("img");
-    image.src = String(house.emblem);
-    image.alt = `Wappen ${house.name || "des Hauses"}`;
+    image.src = String(emblem);
+    image.alt = house.emblem
+      ? `Wappen ${house.name || "des Hauses"}`
+      : `${isCommoner ? "Bürgerwappen" : "Schild"} als Platzhalter für ${house.name || "die Familie"}`;
     image.loading = "lazy";
     image.decoding = "async";
 

@@ -2,12 +2,16 @@ function getScriptTableStyleClass(style) {
   return `script-style-${sanitizeScriptTableStyle(style)}`;
 }
 
+function getScriptTableDisplayText(text, style) {
+  return getLanguageScriptDisplayText(text, style);
+}
+
 function buildScriptTableMainTable(data) {
   return `
     <div class="script-table-scroll">
-      <table class="script-table-grid">
+      <table class="script-table-grid${data.scriptStyle === 'plain' ? ' script-table-text' : ''}">
         <thead><tr><th>${escapeHtml(data.symbolHeader)}</th><th>${escapeHtml(data.nameHeader)}</th><th>${escapeHtml(data.soundHeader)}</th><th>${escapeHtml(data.meaningHeader)}</th></tr></thead>
-        <tbody>${data.rows.map(row => `<tr><td class="script-table-symbol ${getScriptTableStyleClass(data.scriptStyle)}">${escapeHtml(row.symbol)}</td><td>${escapeHtml(row.name)}</td><td>${escapeHtml(row.sound)}</td><td>${escapeHtml(row.meaning)}</td></tr>`).join('')}</tbody>
+        <tbody>${data.rows.map(row => `<tr><td class="script-table-symbol ${getScriptTableStyleClass(data.scriptStyle)}">${escapeHtml(getScriptTableDisplayText(row.symbol, data.scriptStyle))}</td><td>${escapeHtml(row.name)}</td><td>${escapeHtml(row.sound)}</td><td>${escapeHtml(row.meaning)}</td></tr>`).join('')}</tbody>
       </table>
     </div>`;
 }
@@ -36,7 +40,7 @@ function buildScriptTablePage(page, entry, pageIndex, total) {
     <article class="script-table-page">
       <header class="script-table-header">
         <div class="script-table-archive-label">${escapeHtml(data.archiveLabel)}</div>
-        ${data.ornamentText ? `<div class="script-table-ornament ${getScriptTableStyleClass(data.scriptStyle)}" aria-hidden="true">${escapeHtml(data.ornamentText)}</div>` : ''}
+        ${data.ornamentText ? `<div class="script-table-ornament ${getScriptTableStyleClass(data.scriptStyle)}" aria-hidden="true">${escapeHtml(getScriptTableDisplayText(data.ornamentText, data.scriptStyle))}</div>` : ''}
         <h2>${escapeHtml(data.title)}</h2>
         ${data.subtitle ? `<p>${escapeHtml(data.subtitle)}</p>` : ''}
       </header>

@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
+import { buildMorgarReference, copyMorgarAssets } from './modules/language/morgar/morgar-build.mjs';
 import { listSpellCatalogSchools } from './modules/spell-catalog/spell-catalog-schools.js';
 import { copyCalendarIconAssets } from './modules/calendar/calendar-build-assets.mjs';
+import { copyWeddingAssets } from '../Ereignisse/modules/weddings/wedding-build-assets.mjs';
 import { getReligionPageInputs } from '../Religionen/modules/content/content-repository.mjs';
 import { getClergyPageInputs } from '../Religionen/modules/clergy/clergy-repository.mjs';
 import { cp, copyFile, mkdir } from 'node:fs/promises';
@@ -53,6 +55,9 @@ function preserveClassicAlmanachScripts() {
   let outputDirectory = buildRoot;
   return {
     name: 'preserve-classic-almanach-scripts',
+    async buildStart() {
+      await buildMorgarReference({ check: true });
+    },
     configResolved(config) {
       outputDirectory = resolve(config.root, config.build.outDir);
     },
@@ -60,6 +65,7 @@ function preserveClassicAlmanachScripts() {
       const buildRoot = outputDirectory;
       const buildAlmanachRoot = resolve(buildRoot, 'AleriaAlmanach');
       await copyCalendarIconAssets({ workspaceRoot, almanachRoot, buildRoot });
+      await copyMorgarAssets({ buildRoot });
       await Promise.all(classicDirectories.map(directory => (
         cp(resolve(almanachRoot, directory), resolve(buildAlmanachRoot, directory), { recursive: true, force: true })
       )));
@@ -68,6 +74,10 @@ function preserveClassicAlmanachScripts() {
       await Promise.all([
         'Fonts/Arkanes-Alphabet/arcane.js',
         'Fonts/Arkanes-Alphabet/Schriftuebersicht.png',
+        'Fonts/Rheunwaith-Font-1.000/rheunwaith.js',
+        'Fonts/Rheunwaith-Font-1.000/Zeichentafel.png',
+        'Fonts/Rheunwaith-Font-1.000/Leseprobe.png',
+        'Fonts/Rheunwaith-Font-1.000/Erweiterter-Zeichensatz.png',
         'Fonts/Infernal-Font-1.000/Zeichentafel.png',
         'Fonts/Infernal-Font-1.000/Leseprobe.png'
       ].map(async file => {
@@ -76,6 +86,7 @@ function preserveClassicAlmanachScripts() {
         await copyFile(resolve(workspaceRoot, file), target);
       }));
       await Promise.all(classicRootFiles.map(file => copyFile(resolve(almanachRoot, file), resolve(buildAlmanachRoot, file))));
+      await copyWeddingAssets({ workspaceRoot, buildRoot });
       await cp(
         resolve(almanachRoot, 'public/assets'),
         resolve(buildAlmanachRoot, 'public/assets'),
@@ -120,8 +131,13 @@ export default defineConfig({
       input: {
         almanach: resolve(almanachRoot, 'AleriaAlmanach.html'),
         kalender: resolve(almanachRoot, 'kalender.html'),
+        ereignisse: resolve(workspaceRoot, 'Ereignisse/index.html'),
+        hochzeitDraigPenderyn: resolve(workspaceRoot, 'Ereignisse/Hochzeiten/Haus-Draig-und-Penderyn.html'),
+        hochzeiten: resolve(workspaceRoot, 'Ereignisse/hochzeit.html'),
+        hochzeitsvorlage: resolve(workspaceRoot, 'Ereignisse/Hochzeitsevent.html'),
         astrologie: resolve(workspaceRoot, 'Astrologie/index.html'),
         magie: resolve(workspaceRoot, 'Magie/index.html'),
+        fraktionen: resolve(workspaceRoot, 'Fraktionen/index.html'),
         ...Object.fromEntries(listSpellCatalogSchools().map(school => [school.id, resolve(workspaceRoot, `Magie/${school.id}/index.html`)])),
         elementarismusArchiv: resolve(workspaceRoot, 'Magie/elementarismus/index.html'),
         ...getReligionPageInputs(),

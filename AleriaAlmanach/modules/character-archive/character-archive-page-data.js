@@ -936,7 +936,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
   },
   {
     "id": "karnach",
-    "name": "Karnach",
+    "name": "Grungar",
     "baseClass": false,
     "cultures": [
       "Morgorn"
@@ -954,7 +954,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
   },
   {
     "id": "haldr",
-    "name": "Haldr",
+    "name": "Varor",
     "baseClass": false,
     "cultures": [
       "Morgorn"
@@ -972,7 +972,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
   },
   {
     "id": "zernach",
-    "name": "Zernach",
+    "name": "Thalor",
     "baseClass": false,
     "cultures": [
       "Morgorn"
@@ -990,7 +990,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
   },
   {
     "id": "wairg",
-    "name": "Wairg",
+    "name": "Kuralan",
     "baseClass": false,
     "cultures": [
       "Morgorn"
@@ -1008,7 +1008,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
   },
   {
     "id": "dornach",
-    "name": "Dornach",
+    "name": "Toran",
     "baseClass": false,
     "cultures": [
       "Morgorn"
@@ -1026,7 +1026,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
   },
   {
     "id": "skarrach",
-    "name": "Skarrach",
+    "name": "Bragan",
     "baseClass": false,
     "cultures": [
       "Morgorn"
@@ -1044,7 +1044,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
   },
   {
     "id": "rheach",
-    "name": "Rheach",
+    "name": "Rhean",
     "baseClass": false,
     "cultures": [
       "Morgorn"
@@ -1062,7 +1062,7 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
   },
   {
     "id": "garnach",
-    "name": "Garnach",
+    "name": "Falgar",
     "baseClass": false,
     "cultures": [
       "Morgorn"

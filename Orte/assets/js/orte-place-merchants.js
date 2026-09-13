@@ -69,7 +69,8 @@
   function createSymbolCell(merchant) {
     const cell = document.createElement("td");
     cell.className = "orte-merchants-table__symbol";
-    const source = merchant?.icon || merchant?.image || "";
+    const source = merchant?.icon || merchant?.image
+      || (merchant?.symbol ? "" : "/IconOrdner/Neutrale Wappen/Neutrales Bürgerwappen.png");
 
     if (source) {
       const image = document.createElement("img");

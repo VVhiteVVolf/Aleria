@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Karnrith Tiefenrunen";
+  src: url("fonts/KarnrithTiefenrunen-Regular.woff2?v=3") format("woff2"),
+       url("fonts/KarnrithTiefenrunen-Regular.woff?v=3") format("woff"),
+       url("fonts/KarnrithTiefenrunen-Regular.ttf?v=3") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+.karnrith, .morgar, .karnrith-text {
+  font-family: "Karnrith Tiefenrunen", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-synthesis: none;
+  line-height: 1.45;
+  letter-spacing: normal;
+}
+.karnrith, .morgar {
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1;
+}
+.karnrith-text {
+  font-variant-ligatures: no-common-ligatures;
+  font-feature-settings: "liga" 0;
+}

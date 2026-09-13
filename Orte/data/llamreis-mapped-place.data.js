@@ -13,24 +13,6 @@
       "cenyr-celtigerns-wacht-llamrais-ankunft-twr-rhewgorn",
       "Cenyr/celtigerns-wacht/llamrais-ankunft/twr-rhewgorn-bannkreis",
       "TwrRhewgornStadt.webp"
-    ),
-    mwyncreig: mapConfig(
-      "Mwyncreig",
-      "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-mwyncreig",
-      "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/mwyncreig-bannkreis",
-      "MwyncreigStadt.webp"
-    ),
-    lysfaen: mapConfig(
-      "Llysfaen",
-      "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen",
-      "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis",
-      "LlysfaenStadt.webp"
-    ),
-    bronhir: mapConfig(
-      "Bronhir",
-      "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-bronhir",
-      "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/bronhir-bannkreis",
-      "BronhirStadt.webp"
     )
   });
 

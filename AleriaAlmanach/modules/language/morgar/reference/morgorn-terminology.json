@@ -1,0 +1,20 @@
+{
+  "revision": "2.1",
+  "nobleTitles": [
+    { "name": "Ar Darak", "previousName": "Urortharn", "introduced": false },
+    { "name": "Taldar", "previousName": "Lannach", "introduced": true },
+    { "name": "Kardar", "previousName": "Karnath", "introduced": true },
+    { "name": "Dundar", "previousName": "Haldran", "introduced": true },
+    { "name": "Nardar", "previousName": "Rannach", "introduced": true }
+  ],
+  "classes": [
+    { "id": "karnach", "name": "Grungar", "previousName": "Karnach", "introduced": true },
+    { "id": "haldr", "name": "Varor", "previousName": "Haldr", "introduced": true },
+    { "id": "zernach", "name": "Thalor", "previousName": "Zernach", "introduced": false },
+    { "id": "wairg", "name": "Kuralan", "previousName": "Wairg", "introduced": true },
+    { "id": "dornach", "name": "Toran", "previousName": "Dornach", "introduced": true },
+    { "id": "skarrach", "name": "Bragan", "previousName": "Skarrach", "introduced": true },
+    { "id": "rheach", "name": "Rhean", "previousName": "Rheach", "introduced": true },
+    { "id": "garnach", "name": "Falgar", "previousName": "Garnach", "introduced": true }
+  ]
+}

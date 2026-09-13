@@ -254,7 +254,7 @@
 }
 
 .comment-kind-spell[data-comment-language="rheunwaith"], .comment-kind-foreign[data-comment-language="rheunwaith"] { --language-script-font: "Rheunwaith", serif; }
-.comment-kind-spell[data-comment-language="karnrith"], .comment-kind-foreign[data-comment-language="karnrith"] { --language-script-font: "Karnrith Hochschnitt", serif; }
+.comment-kind-spell[data-comment-language="karnrith"], .comment-kind-foreign[data-comment-language="karnrith"] { --language-script-font: "Karnrith Tiefenrunen", serif; }
 .comment-kind-spell[data-comment-language="infernal"], .comment-kind-foreign[data-comment-language="infernal"] { --language-script-font: "Nharazim", serif; }
 .comment-kind-spell[data-comment-language="kanaanith"], .comment-kind-foreign[data-comment-language="kanaanith"] { --language-script-font: "Kanaanith Monumental", serif; }
 .comment-kind-spell[data-comment-language="argenti"], .comment-kind-foreign[data-comment-language="argenti"] { --language-script-font: "Lingua Argenti", serif; }
@@ -287,6 +287,13 @@
 }
 
 .comment-language-plain { display: none; }
+.comment-language-toggle[data-comment-language="rheunwaith"] .comment-language-script,
+.comment-language-toggle[data-comment-language="karnrith"] .comment-language-script {
+  /* Explicit spacing can disable OpenType digraphs in browsers. */
+  letter-spacing: normal;
+  font-synthesis: none;
+}
+
 .comment-language-toggle:hover .comment-language-script,
 .comment-language-toggle:focus-visible .comment-language-script,
 .comment-language-toggle.revealed .comment-language-script { display: none; }
@@ -344,6 +351,14 @@
 .comment-live-preview-body.comment-kind-spell::before {
   content: 'RHEUNWAITH  ALERIA  RHEUNWAITH  ALERIA';
   top: 0.42rem;
+}
+
+.comment-kind-spell[data-comment-language="rheunwaith"]::before,
+.comment-kind-spell[data-comment-language="rheunwaith"]::after,
+.comment-kind-spell[data-comment-language="karnrith"]::before,
+.comment-kind-spell[data-comment-language="karnrith"]::after {
+  letter-spacing: normal;
+  font-synthesis: none;
 }
 .comment-body.comment-kind-spell::after,
 .comment-live-preview-body.comment-kind-spell::after {
@@ -710,16 +725,6 @@
   }
 }
 @font-face {
-  font-family: "Rheunwaith";
-  src:
-    url("../../Fonts/Rheunwaith-Font-1.000/Web/Rheunwaith-Regular.woff2") format("woff2"),
-    url("../../Fonts/Rheunwaith-Font-1.000/Web/Rheunwaith-Regular.woff") format("woff");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Noto Sans Runic";
   src: url("../../Fonts/Noto-Historic-Scripts/NotoSansRunic-Regular.ttf") format("truetype");
   font-style: normal;
@@ -758,16 +763,6 @@
   src:
     url("../../Fonts/Infernal-Font-1.000/fonts/Nharazim-Regular.woff2?v=2-abgrund") format("woff2"),
     url("../../Fonts/Infernal-Font-1.000/fonts/Nharazim-Regular.woff?v=2-abgrund") format("woff");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Karnrith Hochschnitt";
-  src:
-    url("../../Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff2") format("woff2"),
-    url("../../Fonts/Karnrith-Font-2.000/Web/KarnrithHochschnitt-Regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;

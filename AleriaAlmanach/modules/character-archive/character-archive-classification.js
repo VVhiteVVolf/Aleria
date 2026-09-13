@@ -1,15 +1,21 @@
-import { ARCHIVE_PAGE_CLASSES, ARCHIVE_PAGE_MOUNTS } from './character-archive-page-data.js?v=20260911-venalys-v1';
+import { ARCHIVE_PAGE_CLASSES, ARCHIVE_PAGE_MOUNTS } from './character-archive-page-data.js?v=20260913-morgorn-names-v1';
 import { getClassPageIcon } from '../classes/class-icon-registry.js?v=20260911-venalys-v1';
 import { normalizeArchiveSearchText, normalizeCharacterArchiveEntry } from './character-archive-model.js?v=20260905-archive-order-v2';
-import { getCultureClassDefinitions } from '../classes/culture-class-definitions.js?v=20260911-venalys-v1';
+import { getCultureClassDefinitions } from '../classes/culture-class-definitions.js?v=20260913-morgorn-names-v1';
 
 const classByName = new Map(ARCHIVE_PAGE_CLASSES.map(entry => [normalizeArchiveSearchText(entry.name), entry]));
+const classById = new Map(ARCHIVE_PAGE_CLASSES.flatMap(entry => [
+  [entry.id, entry],
+  ...entry.cultures.map(culture => [normalizeArchiveSearchText(`${culture}-${entry.id}`), entry])
+]));
 const mountByName = new Map(ARCHIVE_PAGE_MOUNTS.map(entry => [normalizeArchiveSearchText(entry.name), entry]));
 const genericHumanNames = new Set(['mensch', 'menschen', 'human']);
 
 export function getArchiveClassDefinition(entry = {}) {
   const pageName = (getClassPageIcon(entry.data?.id) || getClassPageIcon(entry.name))?.pageName;
-  return classByName.get(normalizeArchiveSearchText(pageName || entry.name)) || null;
+  return classById.get(normalizeArchiveSearchText(entry.data?.id))
+    || classByName.get(normalizeArchiveSearchText(pageName || entry.name))
+    || classById.get(normalizeArchiveSearchText(entry.name)) || null;
 }
 
 export function createArchiveMountEntry(mount) {

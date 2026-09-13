@@ -10,8 +10,8 @@ const worldContentSource = fs.readFileSync(
   path.join(projectRoot, "js/world-content/celtigerns-wacht-places.js"),
   "utf8"
 );
-const mappedPlaceSource = fs.readFileSync(
-  path.join(projectRoot, "Orte/data/llamreis-mapped-place.data.js"),
+const registrySource = fs.readFileSync(
+  path.join(projectRoot, "Orte/orte.registry.js"),
   "utf8"
 );
 
@@ -53,7 +53,10 @@ function loadPlace(id) {
   };
   vm.createContext(context);
   vm.runInContext(worldContentSource, context);
-  vm.runInContext(mappedPlaceSource, context);
+  vm.runInContext(registrySource, context);
+  const entry = context.window.ORTE_REGISTRY.find((item) => item.id === id);
+  const dataPath = entry.data.split("?")[0];
+  vm.runInContext(fs.readFileSync(path.join(projectRoot, "Orte", dataPath), "utf8"), context);
   return context.window.ORT_DATA;
 }
 
@@ -63,7 +66,7 @@ for (const place of places) {
     assert.ok(data);
     assert.equal(data.meta.id, place.id);
     assert.equal(data.features.districts, false);
-    assert.equal(data.features.noticeBoard, false);
+    assert.equal(data.features.noticeBoard, ["mwyncreig", "lysfaen", "bronhir"].includes(place.id));
     assert.equal(data.presentation.images["karten-bild-png"].src, place.cityImage);
     assert.match(data.presentation.images["karten-bild-png"].href, new RegExp(`${place.mapPrefix}-stadtkarte$`));
     assert.equal(data.regionMap.mapId, `${place.mapPrefix}-bannkreis`);

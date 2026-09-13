@@ -1,7 +1,7 @@
 import {
   findDefaultNewspaperEntryForPlace,
   getNewspaperEntriesForPlace
-} from "/Zeitungen/assets/js/newspaper-registry.mjs?v=20260904c";
+} from "/Zeitungen/assets/js/newspaper-registry.mjs?v=20260904c&content=wyrm-20260913a";
 import {
   buildIssueHref,
   getLatestIssueEntry

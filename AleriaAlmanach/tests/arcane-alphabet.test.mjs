@@ -16,6 +16,7 @@ function loadArcane() {
   context.window = context;
   for (const path of [
     '../../Fonts/Arkanes-Alphabet/arcane.js',
+    '../modules/language/language-script-display.js',
     '../modules/script-table/script-table-data.js',
     '../modules/script-table/script-table-module-editor.js',
     '../modules/script-table/script-table-renderer.js',
