@@ -278,7 +278,8 @@ function buildSceneTimeline(comments = []) {
 
 // Liefert den Aleria-Kalendertag am Ende der vorhandenen Zeitlinie. Ein optionaler
 // spaeterer Uhrentag wird nur um die tatsaechlich noch vergehenden Tage addiert.
-// So verwenden Anzeige, Rast und Tagesressourcen dieselbe Tagesdefinition.
+// Mechanische Erholungsperioden verwenden separat scene-recovery-day.js,
+// damit Kalenderbeschriftungen keine gespeicherten Ressourcen auffuellen.
 function getSceneAleriaDayIndex(comments = [], targetClockDay = null) {
   const timeline = buildSceneTimeline(comments);
   const lastTimedEntry = [...timeline].reverse().find(entry => Number.isFinite(entry?.endSeconds));

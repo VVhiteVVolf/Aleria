@@ -40,6 +40,7 @@ import {
   resetCommentScopedResources
 } from './combat-action-economy.js?v=20260905-resource-balance-v2';
 import { applyCombatAbilityUse } from './combat-ability-uses.js?v=20260803-action-economy-v1';
+import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
 import { previewZornkappeSegment } from '../inventory-use/zornkappe-effects.js';
 import {
   ensureCombatResolutionDialog,
@@ -167,10 +168,7 @@ function getStoredCombatStates(threadId = '', position = {}) {
 
 function getCombatRecoveryDayKey(threadId = '') {
   const comments = globalThis.getCachedCommentsForThread?.(threadId) || [];
-  const day = typeof globalThis.getSceneAleriaDayIndex === 'function'
-    ? globalThis.getSceneAleriaDayIndex(comments)
-    : 1;
-  return `scene:${String(threadId || 'unknown')}:day-${day}`;
+  return getSceneRecoveryDayKey(threadId, comments);
 }
 
 function relationMatchesRule(rule, relation) {

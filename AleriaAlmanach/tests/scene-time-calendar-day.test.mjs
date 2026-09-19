@@ -69,7 +69,7 @@ test('ein Beitrag, der Mitternacht überschreitet, schreibt den Folgetag fest', 
   assert.equal(timeline[1].aleriaEndDayIndex, 2);
 });
 
-test('Rast und Tagesressourcen verwenden denselben Kalendertag wie die Anzeige', () => {
+test('Kalenderfortschritt berücksichtigt nur zusätzlich vergehende Uhrentage', () => {
   const { getSceneAleriaDayIndex } = loadSceneTimeState();
   const comments = [{
     commentMode: 'scene-time',

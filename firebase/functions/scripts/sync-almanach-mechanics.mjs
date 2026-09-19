@@ -94,6 +94,7 @@ const files = [
   'loot/loot-model.js',
   'scene-inventory/scene-inventory-transfer-model.js',
   'scene-rest/scene-rest-model.js',
+  'scene-time/scene-recovery-day.js',
   'skill-checks/skill-check-model.js',
   'skill-checks/skill-resolution-service.js'
 ];

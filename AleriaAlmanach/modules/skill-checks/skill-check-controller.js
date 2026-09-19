@@ -1,6 +1,7 @@
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20260802-dice-audio-v2';
 import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260909-dragon-parent-v2';
 import { createSceneSkillProfileResolver } from './skill-scene-profile.js?v=20260909-dragon-parent-v2';
+import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
 import {
   SKILL_DEFINITIONS,
   buildSkillRollNotation,
@@ -575,15 +576,10 @@ async function handleSubmission(submission = {}) {
   const actors = mergeActors(latestComposerContext?.sceneActors || []);
   const challenges = getComposerChallenges(submission.threadId || '');
   const comments = globalThis.getCachedCommentsForThread?.(submission.threadId || '') || [];
-  const timeline = typeof globalThis.buildSceneTimeline === 'function' ? globalThis.buildSceneTimeline(comments) : [];
-  const lastTimedEntry = [...timeline].reverse().find(entry => Number.isFinite(entry?.endSeconds));
-  const day = typeof globalThis.getSceneDayFromSeconds === 'function'
-    ? globalThis.getSceneDayFromSeconds(lastTimedEntry?.endSeconds || 0)
-    : 1;
   const rulePeriods = {
     comment: `draft:${String(submission.threadId || '')}:${Date.now()}`,
     scene: String(submission.threadId || ''),
-    day: `scene:${String(submission.threadId || '')}:day-${day}`
+    day: getSceneRecoveryDayKey(submission.threadId, comments)
   };
   const resolutionContext = {
     rulePeriods,

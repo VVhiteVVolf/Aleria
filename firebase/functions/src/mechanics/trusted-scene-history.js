@@ -1,3 +1,6 @@
+import { isTrustedSceneTimeComment } from '../generated/scene-time/scene-recovery-day.js';
+export { isTrustedSceneTimeComment, getSceneRecoveryDay as getTrustedSceneDay } from '../generated/scene-time/scene-recovery-day.js';
+
 function isImportedHistory(comment = {}) {
   return comment?.importedHistoricalMechanics === true;
 }
@@ -20,21 +23,6 @@ export function isTrustedSkillChallengeComment(comment = {}) {
 export function isTrustedHerausforderungComment(comment = {}) {
   if (isImportedHistory(comment) || comment?.serverValidatedMechanics !== true) return false;
   return !!(comment?.herausforderung && Array.isArray(comment.herausforderung.approaches) && comment.herausforderung.approaches.length);
-}
-
-export function isTrustedSceneTimeComment(comment = {}) {
-  if (isImportedHistory(comment) || !comment?.sceneTimeEvent || typeof comment.sceneTimeEvent !== 'object') return false;
-  return comment.serverValidatedMechanics === true
-    || (comment.serverCommitted === true && comment.mechanicalAudit === true);
-}
-
-export function getTrustedSceneDay(comments = [], fallbackDay = 1) {
-  return (Array.isArray(comments) ? comments : [])
-    .filter(isTrustedSceneTimeComment)
-    .reduce((day, comment) => {
-      const candidate = Number(comment.sceneTimeEvent?.anchorDay);
-      return Number.isInteger(candidate) && candidate >= 1 ? Math.max(day, candidate) : day;
-    }, Math.max(1, Number(fallbackDay) || 1));
 }
 
 export function getTrustedSceneCursorSeconds(comments = [], fallbackDay = 1, fallbackSeconds = 0) {

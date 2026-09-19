@@ -1,4 +1,5 @@
 import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260909-dragon-parent-v2';
+import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260909-dragon-parent-v2';
 import {
   buildSceneRestParticipant,
@@ -183,15 +184,7 @@ function getDialogTimeRange() {
 
 function getRecoveryDayKey(threadId, day) {
   const comments = globalThis.getCachedCommentsForThread?.(threadId) || [];
-  const aleriaDay = typeof globalThis.getSceneAleriaDayIndex === 'function'
-    ? globalThis.getSceneAleriaDayIndex(comments, day)
-    : day;
-  const date = typeof globalThis.getSceneTimeSegmentAleriaDate === 'function'
-    ? globalThis.getSceneTimeSegmentAleriaDate(aleriaDay)
-    : null;
-  return date?.year && date?.month && date?.day
-    ? `aleria:${date.year}-${date.month}-${date.day}`
-    : `scene:${String(threadId || 'unknown')}:day-${aleriaDay}`;
+  return getSceneRecoveryDayKey(threadId, comments, day);
 }
 
 function getSelectedActorIds() {

@@ -1,6 +1,7 @@
 import { prepareCombatEquipment, reserveCombatEquipment } from '../../../../AleriaAlmanach/modules/combat/combat-equipment-preparation.js';
 import { getActorsWithCombatPosts } from '../../../../AleriaAlmanach/modules/combat/combat-weapon-loadout.js';
 import { randomUUID } from 'node:crypto';
+import { getSceneRecoveryDayKey } from '../../../../AleriaAlmanach/modules/scene-time/scene-recovery-day.js';
 import { combatCommentInternals } from '../../src/mechanics/commit-combat-comment.js';
 import { resolveCombatProfile } from '../../../../AleriaAlmanach/modules/combat/combat-profile-resolver.js';
 import { CombatResolutionService } from '../../../../AleriaAlmanach/modules/combat/combat-resolution-service.js';
@@ -45,7 +46,7 @@ export async function prepareTestAction({ entryId, actorRecord, targetRecords, c
     charName: actorRecord.name, sceneActorSourceId: actorRecord.sourceCreatureId || '', text, combatDistanceMeters: distanceMeters,
     combatAction: { encounterId: getActiveCombatEncounter(comments)?.encounterId || '', profileActionId: actionId, rollMode: 'normal', paymentMode, weaponGrip, castLevel, loadout } };
   const resolutions = [];
-  const rulePeriods = { comment: 'pending', scene: entryId, day: `scene:${entryId}:day-1` };
+  const rulePeriods = { comment: 'pending', scene: entryId, day: getSceneRecoveryDayKey(entryId, comments) };
   let usedRuleFrequencyKeys = deriveCombatRuleFrequencyKeys([...comments, { commentSegments: priorSegments }]);
   for (const [index, targetRecord] of targetRecords.entries()) {
     const partial = { ...segment, combatResolution: resolutions[0], combatResolutions: resolutions };
@@ -56,7 +57,7 @@ export async function prepareTestAction({ entryId, actorRecord, targetRecords, c
     const actorBase = resolveCombatProfile(prepared.character, { actionId, segmentKind, paymentMode, weaponGrip, castLevel });
     if (actionId && actorBase.profileActionId !== actionId) throw Error(`Die Testattacke ${actionId} ist nicht im Bogen von ${actorRecord.name} vorhanden.`);
     let actor = overlayCombatHitPointState(actorBase, actorState);
-    actor.resources = combatCommentInternals.getEffectiveCommentResources(actorBase.resources, actorState?.resources, `scene:${entryId}:day-1`);
+    actor.resources = combatCommentInternals.getEffectiveCommentResources(actorBase.resources, actorState?.resources, rulePeriods.day);
     actor = reserveCombatEquipment(actor, prepared.preparation);
     const targetState = states.get(targetRecord.id);
     const target = overlayCombatHitPointState(resolveCombatProfile(withEquippedCombatWeapon(targetRecord, targetState?.equippedWeaponId, targetState?.offHandWeaponId)), targetState);
