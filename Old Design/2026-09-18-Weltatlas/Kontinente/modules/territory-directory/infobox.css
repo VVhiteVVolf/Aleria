@@ -1,0 +1,54 @@
+/* Same table and sidebar position, with a quiet ledger appearance. */
+.kingdom-frame .kingdom-infobox {
+  width: 360px;
+  border: 1px solid #c9b794;
+  border-top: 3px solid #9b7952;
+  background: #fffbf3;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: #30281f;
+  box-shadow: 0 4px 15px #30281f0c;
+  font: 0.8rem/1.5 Verdana, Arial, sans-serif;
+}
+.kingdom-infobox td {
+  padding: 0.4rem 0.7rem;
+  border: 0;
+  border-bottom: 1px solid #e5dac7;
+  vertical-align: top;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+.kingdom-infobox .kingdom-infobox-title {
+  padding: 0.8rem 0.9rem;
+  background: #f3e7d1;
+  font: 700 1.4rem/1.2 Georgia, 'Times New Roman', serif;
+  text-align: center;
+}
+.kingdom-infobox .kingdom-infobox-section {
+  padding: 0.55rem 0.7rem;
+  border-top: 1px solid #d9cbb0;
+  background: #f7f0e2;
+  color: #775541;
+  font: 700 0.95rem/1.3 Georgia, 'Times New Roman', serif;
+  text-align: left;
+}
+.kingdom-infobox .kingdom-infobox-label {
+  width: 38%;
+  color: #786c5c;
+  font-size: 0.76rem;
+}
+.kingdom-infobox col:first-child { width: 38%; }
+.kingdom-infobox col:last-child { width: 62%; }
+.kingdom-infobox .kingdom-infobox-value { background: #fffbf3; }
+.kingdom-infobox b,
+.kingdom-infobox strong { font-weight: inherit; color: inherit; }
+.kingdom-infobox .kingdom-infobox-map { padding: 0.8rem; }
+.kingdom-infobox td[colspan='2'] img {
+  display: block;
+  max-width: min(100%, 310px);
+  height: auto !important; /* Saved exports give maps an inline pixel height. */
+  margin: 0 auto;
+  border: 1px solid #d9cbb0;
+}
+.kingdom-infobox a { color: #694b37; text-underline-offset: 3px; text-decoration-color: #c5ae8b; }
+.kingdom-infobox a:focus-visible { outline: 2px solid #804737; outline-offset: 2px; }

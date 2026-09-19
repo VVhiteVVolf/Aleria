@@ -27,7 +27,7 @@ test('divine register preserves 9 + 5 + 5 deities and eight named saints', () =>
 
 test('nested discovery searches domains and alternate names without duplicating the main catalog', () => {
   const root = rootCatalogEntries(catalog);
-  assert.equal(root.length, 18);
+  assert.equal(root.length, 19);
   for (const query of ['Auron', 'Arvendil', 'Siomhrach']) {
     assert.deepEqual(filterEntries(searchable(root), { query }).map(entry => entry.id), query === 'Arvendil' ? ['neun-goettliche', 'alter-pantheon'] : ['neun-goettliche']);
   }

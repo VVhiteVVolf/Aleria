@@ -1,0 +1,20 @@
+.orte-flavor-scene {
+  margin: 1rem 0;
+  border: 1px solid #ad9670;
+  border-left: 4px solid #7b4636;
+  background: #e5d9be;
+}
+.orte-flavor-scene > summary {
+  padding: 12px 16px;
+  color: #69372b;
+  font-weight: 700;
+  cursor: pointer;
+}
+.orte-flavor-scene > summary::marker { color: #69372b; }
+.orte-flavor-scene > summary:hover { background: #dcccac; }
+.orte-flavor-scene > summary:focus-visible { outline: 2px solid #7b4636; outline-offset: -3px; }
+.orte-flavor-scene[open] > summary { border-bottom: 1px solid #ad9670; }
+.orte-flavor-scene__body { padding: 4px 18px 12px; background: #f4eddb; }
+.orte-flavor-scene__body > p { margin: 14px 0; line-height: 1.7; }
+.orte-flavor-scene__speaker { color: #70372e; }
+.orte-flavor-scene__action { color: #485c50; font-style: italic; }

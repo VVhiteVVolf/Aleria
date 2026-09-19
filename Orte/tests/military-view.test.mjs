@@ -23,7 +23,7 @@ test("Ortsseite und Vorlage binden den optionalen Militärzugang ein", async () 
     assert.match(html, /military-entry\.mjs\?v=20260904a/);
     assert.match(html, /data-orte-military-entry/);
     assert.match(html, /data-orte-military-link/);
-    assert.match(html, /celtigerns-wacht-places\.js\?v=celtigerns-cities-20260904c/);
+    assert.match(html, /celtigerns-wacht-places\.js\?v=20260918b/);
   }
 
   assert.match(entryModule, /features\?\.militaryView !== false/);

@@ -1,14 +1,16 @@
-import { REGISTER_CATEGORIES, canManageCharacter } from './item-register-model.js';
-import { moneyTotal, formatCopper, localizedNumber } from './item-register-money.js';
-import { resalePrice } from './item-register-trade.js';
-import { escape, field, textarea, select } from './item-register-view.js';
+import { REGISTER_CATEGORIES, canManageCharacter } from './item-register-model.js?v=20260919-shop-v1';
+import { moneyTotal, formatCopper, localizedNumber } from './item-register-money.js?v=20260919-shop-v1';
+import { resalePrice } from './item-register-trade.js?v=20260919-shop-v1';
+import { escape, field, textarea, select } from './item-register-view.js?v=20260919-shop-v1';
 
 export function createForm(kind, item, snapshot, access) {
   const id = crypto.randomUUID();
   if (kind === 'buy' || kind === 'sell') {
     const characters = snapshot.characters.filter(character => canManageCharacter(character, access));
     const character = kind === 'sell' ? snapshot.characters.find(entry => entry.id === item.ownerCharacterId) : characters[0];
-    const product = kind === 'sell' ? snapshot.offers.find(entry => entry.id === item.rawItem.offerId) || snapshot.standards.find(entry => entry.id === item.templateId) : item;
+    const product = kind === 'sell' ? snapshot.offers.find(entry => entry.id === item.rawItem.offerId)
+      || (item.rawItem.offerId?.startsWith('module:') ? { id: item.rawItem.offerId, section: 'offer', moduleId: item.rawItem.purchase?.moduleId } : null)
+      || snapshot.standards.find(entry => entry.id === item.templateId) : item;
     if (!character) throw new Error('Es ist keine Figur mit deiner Firebase-Besitzberechtigung verfügbar. Die Spielleitung kann Figuren ebenfalls verwalten.');
     if (!product) throw new Error('Die Herkunft dieses Gegenstands ist noch nicht mit einer Standardvorlage oder einem Angebot verbunden.');
     const price = kind === 'buy' ? product.priceRange?.minCopper : resalePrice(item.rawItem, product);
@@ -54,6 +56,7 @@ export function collectOperation(form, values) {
     const character = form.characters.find(entry => entry.id === values.characterId) || form.character;
     return { ...common, action: form.kind, characterId: character.id, expectedRevision: character.inventory?.revision || 0,
       productId: form.product.id, offerRevision: form.product.revision || 0,
+      ...(form.product.moduleId ? { moduleId: form.product.moduleId, sourceRevision: form.product.sourceRevision || '' } : {}),
       inventoryItemId: form.kind === 'sell' ? form.item.inventoryItemId : '', quantity: Number(values.quantity), unitCopper: Number(values.unitCopper) };
   }
   if (['customize', 'link-creature'].includes(form.kind)) return { ...common, action: form.kind,

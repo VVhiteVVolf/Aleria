@@ -39,7 +39,8 @@
         "Llysfaen ist eine Bauernsiedlung unter der Herrschaft des Hauses Wyrm, die sich auf die Zucht von Pferden und anderen Tieren spezialisiert hat. Die Siedlung ist außerdem für den Anbau von Futterpflanzen bekannt, die für die Versorgung der Tiere unerlässlich sind. Llysfaen spielt eine zentrale Rolle in der regionalen Landwirtschaft, da sowohl die Tiere als auch das Futter für die umliegenden Gebiete von großer Bedeutung sind. Die enge Verbindung zwischen Tierzucht und Ackerbau macht Llysfaen zu einem wichtigen Bestandteil der Wirtschaft der Herrschaft Wyrm.",
         {
           "type": "subheading",
-          "text": "Sorgen am Tresen"
+          "text": "Sorgen am Tresen",
+          "flavor": true
         },
         "Der Rauch hängt schwer unter der Balkendecke, ein letzter Krug steht zwischen ihnen. Brinthan Argall sitzt schwer atmend auf der Bank, den Mantel halb geöffnet, die Stirn glänzt. Maldwyn wischt in aller Ruhe den Tresen, wirft seinem alten Freund dann einen Blick zu.",
         "Maldwyn: „Du siehst aus, als hätte dich der Rat mit Mist beworfen. Wieder.“",

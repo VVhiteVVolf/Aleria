@@ -1,0 +1,608 @@
+:root {
+  --military-bg: #1b140d;
+  --military-paper: #ead7aa;
+  --military-paper-light: #f8eccd;
+  --military-paper-dark: #c4a464;
+  --military-ink: #281b0e;
+  --military-muted: #6a5233;
+  --military-border: #5d3d18;
+  --military-gold: #cda33f;
+  --military-dark: #3d2812;
+  --military-dark-strong: #24170b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--military-ink);
+  background:
+    radial-gradient(circle at 50% -10%, rgba(205, 163, 63, 0.2), transparent 42rem),
+    repeating-linear-gradient(135deg, rgba(255, 241, 202, 0.025) 0 9px, transparent 9px 18px),
+    var(--military-bg);
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.military-view {
+  width: min(calc(100% - 28px), 1180px);
+  margin: 22px auto 56px;
+}
+
+.military-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 10px;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(205, 163, 63, 0.48);
+  color: #ead8aa;
+  background: rgba(36, 23, 11, 0.9);
+}
+
+.military-back {
+  color: #fff0c7;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  text-decoration-color: rgba(255, 240, 199, 0.45);
+  text-underline-offset: 0.18em;
+}
+
+.military-back:hover,
+.military-back:focus-visible {
+  color: #fff8e4;
+  text-decoration-color: var(--military-gold);
+}
+
+.military-archive-label {
+  color: #cfb77d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.military-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+  min-height: 390px;
+  overflow: hidden;
+  border: 2px solid var(--military-border);
+  background:
+    linear-gradient(115deg, rgba(255, 248, 224, 0.82), rgba(211, 180, 113, 0.72)),
+    var(--military-paper);
+  box-shadow: 0 24px 58px rgba(0, 0, 0, 0.44);
+}
+
+.military-hero__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(1.5rem, 5vw, 4rem);
+}
+
+.military-hero__heading {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.military-hero__crest {
+  flex: 0 0 104px;
+  width: 104px;
+  height: 104px;
+  object-fit: contain;
+  filter: drop-shadow(0 9px 8px rgba(44, 27, 9, 0.28));
+}
+
+.military-media-fallback {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(76, 49, 18, 0.5);
+  border-radius: 50%;
+  color: #5a3917;
+  background: rgba(255, 248, 220, 0.54);
+  font-size: 42px;
+}
+
+.military-eyebrow {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #77511d;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.military-hero h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 4.1rem);
+  line-height: 0.98;
+}
+
+.military-subtitle {
+  max-width: 43rem;
+  margin: 0.8rem 0 0;
+  color: var(--military-muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.12rem;
+}
+
+.military-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.military-tag {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(79, 49, 16, 0.48);
+  color: #543313;
+  background: rgba(255, 246, 214, 0.5);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.military-hero__visual {
+  position: relative;
+  min-height: 390px;
+  margin: 0;
+  overflow: hidden;
+  border-left: 1px solid rgba(74, 47, 17, 0.65);
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 240, 193, 0.7), transparent 52%),
+    linear-gradient(145deg, #d0b170, #9b7437);
+}
+
+.military-hero__visual::after {
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(79, 50, 17, 0.38);
+  content: "";
+  pointer-events: none;
+}
+
+.military-hero__visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  padding: 1.25rem;
+}
+
+.military-hero__symbol {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(67, 42, 15, 0.62);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5rem, 18vw, 10rem);
+}
+
+.military-hero__visual:empty::before,
+.military-unit-card__visual:empty::before,
+.military-force-card__emblem:empty::before {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: rgba(70, 43, 14, 0.56);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.military-hero__visual:empty::before {
+  content: "⚔";
+  font-size: clamp(5rem, 18vw, 10rem);
+}
+
+.military-unit-card__visual:empty::before {
+  content: "♞";
+  font-size: 5.5rem;
+}
+
+.military-force-card__emblem:empty::before {
+  content: "◆";
+  font-size: 2.5rem;
+}
+
+.military-placeholder,
+.military-section,
+.military-summary,
+.military-note {
+  border: 1px solid var(--military-border);
+  background:
+    linear-gradient(180deg, rgba(255, 249, 226, 0.66), rgba(218, 188, 124, 0.52)),
+    var(--military-paper);
+}
+
+.military-placeholder {
+  padding: clamp(2rem, 6vw, 4.75rem);
+  text-align: center;
+}
+
+.military-placeholder__mark {
+  display: block;
+  color: #8a5b1c;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+}
+
+.military-placeholder h2,
+.military-section h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.65rem, 4vw, 2.4rem);
+}
+
+.military-placeholder > p {
+  max-width: 650px;
+  margin: 0.55rem auto 2rem;
+  color: var(--military-muted);
+}
+
+.military-placeholder__fields {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.military-placeholder__field {
+  display: grid;
+  gap: 0.15rem;
+  min-height: 150px;
+  align-content: center;
+  padding: 1rem;
+  border: 1px dashed rgba(90, 57, 20, 0.54);
+  background: rgba(255, 247, 218, 0.42);
+}
+
+.military-placeholder__empty {
+  color: #b4893e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.3rem;
+}
+
+.military-placeholder__field strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+}
+
+.military-placeholder__field small {
+  color: var(--military-muted);
+}
+
+.military-details {
+  display: grid;
+  gap: 10px;
+}
+
+.military-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.military-stat {
+  display: grid;
+  place-items: center;
+  min-height: 120px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.military-stat + .military-stat {
+  border-left: 1px solid rgba(83, 51, 17, 0.42);
+}
+
+.military-stat strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1;
+}
+
+.military-stat span {
+  margin-top: 0.35rem;
+  color: var(--military-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.military-section {
+  padding: clamp(1rem, 4vw, 2.2rem);
+}
+
+.military-section__heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(86, 53, 17, 0.42);
+}
+
+.military-section__heading p {
+  margin: 0;
+  color: var(--military-muted);
+  text-align: right;
+}
+
+.military-composition {
+  display: flex;
+  height: 22px;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(63, 38, 13, 0.74);
+  background: #8e744b;
+}
+
+.military-composition__segment {
+  min-width: 3px;
+  background: var(--military-force-color);
+}
+
+.military-composition__segment + .military-composition__segment {
+  border-left: 1px solid rgba(255, 248, 222, 0.62);
+}
+
+.military-force-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.military-force-card {
+  display: grid;
+  grid-template-columns: 94px minmax(0, 1fr);
+  min-height: 126px;
+  border: 1px solid rgba(74, 45, 15, 0.52);
+  border-left: 5px solid var(--military-force-color);
+  background: rgba(255, 248, 222, 0.5);
+}
+
+.military-force-card__emblem {
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  padding: 0.65rem;
+  border-right: 1px solid rgba(74, 45, 15, 0.34);
+  background: rgba(154, 116, 54, 0.12);
+}
+
+.military-force-card__emblem img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.military-force-card__symbol {
+  color: var(--military-force-color);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.5rem;
+}
+
+.military-force-card__copy {
+  align-self: center;
+  padding: 0.8rem 1rem;
+}
+
+.military-force-card small,
+.military-unit-card small {
+  color: var(--military-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.military-force-card h3,
+.military-unit-card h3 {
+  margin: 0.1rem 0 0.35rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  line-height: 1.15;
+}
+
+.military-force-card__strength {
+  color: #5c3512;
+  font-size: 0.92rem;
+}
+
+.military-force-card p,
+.military-unit-card p {
+  margin: 0.45rem 0 0;
+  color: var(--military-muted);
+  font-size: 0.84rem;
+}
+
+.military-unit-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.military-unit-card {
+  overflow: hidden;
+  border: 1px solid rgba(74, 45, 15, 0.58);
+  background: rgba(255, 248, 222, 0.5);
+}
+
+.military-unit-card__visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 310px;
+  margin: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle, rgba(255, 240, 193, 0.72), transparent 64%),
+    #b9995d;
+}
+
+.military-unit-card__visual img {
+  width: 100%;
+  height: 310px;
+  padding: 0.7rem;
+}
+
+.military-unit-card__symbol {
+  color: rgba(70, 43, 14, 0.56);
+  font-size: 5.5rem;
+}
+
+.military-unit-card__copy {
+  min-height: 120px;
+  padding: 1rem;
+  border-top: 1px solid rgba(74, 45, 15, 0.44);
+}
+
+.military-note {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  color: var(--military-muted);
+}
+
+.military-load-state {
+  display: grid;
+  place-items: center;
+  min-height: min(620px, calc(100vh - 44px));
+  padding: 2rem;
+  border: 1px solid rgba(205, 163, 63, 0.48);
+  color: #f4e1b1;
+  text-align: center;
+  background: rgba(36, 23, 11, 0.9);
+}
+
+.military-load-state span {
+  color: var(--military-gold);
+  font-size: 4rem;
+}
+
+.military-load-state h1 {
+  margin: 0.5rem 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.military-load-state p {
+  margin: 0;
+  color: #cdbb90;
+}
+
+@media (max-width: 780px) {
+  .military-view {
+    width: min(calc(100% - 16px), 1180px);
+    margin-top: 8px;
+  }
+
+  .military-navigation,
+  .military-section__heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .military-archive-label {
+    display: none;
+  }
+
+  .military-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .military-hero__visual {
+    min-height: 330px;
+    border-top: 1px solid rgba(74, 47, 17, 0.65);
+    border-left: 0;
+  }
+
+  .military-hero__visual img {
+    min-height: 330px;
+  }
+
+  .military-hero__heading {
+    align-items: flex-start;
+  }
+
+  .military-hero__crest {
+    flex-basis: 74px;
+    width: 74px;
+    height: 74px;
+  }
+
+  .military-placeholder__fields,
+  .military-force-grid,
+  .military-unit-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .military-section__heading p {
+    text-align: left;
+  }
+
+  .military-unit-card__visual,
+  .military-unit-card__visual img {
+    min-height: 360px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  .military-hero__copy,
+  .military-placeholder,
+  .military-section {
+    padding: 1rem;
+  }
+
+  .military-hero__heading {
+    gap: 0.75rem;
+  }
+
+  .military-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .military-stat {
+    min-height: 92px;
+  }
+
+  .military-stat + .military-stat {
+    border-top: 1px solid rgba(83, 51, 17, 0.42);
+    border-left: 0;
+  }
+
+  .military-force-card {
+    grid-template-columns: 76px minmax(0, 1fr);
+  }
+
+  .military-force-card__emblem img {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+}

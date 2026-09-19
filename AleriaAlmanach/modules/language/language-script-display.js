@@ -4,5 +4,6 @@ function getLanguageScriptDisplayText(text, style) {
   const value = String(text ?? '');
   if (style === 'rheunwaith') return Rheunwaith.toPrivateUse(value);
   if (style === 'karnrith') return Karnrith.fromLegacy(value);
+  if (style === 'laerelis') return Laerelis.toPrivateUse(value);
   return value;
 }

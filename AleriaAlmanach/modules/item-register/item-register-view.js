@@ -1,6 +1,6 @@
-import { REGISTER_CATEGORIES, REGISTER_SECTIONS, categoryLabel, canManageCharacter } from './item-register-model.js';
-import { formatCopper, formatPrice, moneyTotal } from './item-register-money.js';
-import { resalePrice } from './item-register-trade.js';
+import { REGISTER_CATEGORIES, REGISTER_SECTIONS, categoryLabel, canManageCharacter } from './item-register-model.js?v=20260919-shop-v1';
+import { formatCopper, formatPrice, moneyTotal } from './item-register-money.js?v=20260919-shop-v1';
+import { resalePrice } from './item-register-trade.js?v=20260919-shop-v1';
 
 export const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 export function safeImage(value) {
@@ -29,10 +29,13 @@ export function shell() {
 }
 
 export function navigation(snapshot, state) {
+  const providers = [...new Map(snapshot.offers.filter(item => !item.archived).map(item => [item.listId, item.listName])).entries()]
+    .sort((a, b) => a[1].localeCompare(b[1], 'de'));
   return `<div class="ir-nav-intro"><p class="ir-kicker">Register entdecken</p><p>Vom Standard bis zum Einzelstück.</p></div>` + REGISTER_SECTIONS.map((section, index) => {
     const count = snapshot.items.filter(item => item.section === section.id && !item.archived).length;
     return `<section class="ir-nav-section"><button type="button" data-ir-action="section" data-id="${section.id}" class="ir-nav-section-button ${state.section === section.id ? 'is-active' : ''}" aria-pressed="${state.section === section.id}"><span class="ir-nav-number">0${index + 1}</span><span>${section.label}<small>${section.id === 'owned' ? amountLabel(count, 'Besitztum', 'Besitztümer') : amountLabel(count, 'Eintrag', 'Einträge')}</small></span></button>
-      ${state.section === section.id && section.id === 'standard' ? `<div class="ir-categories">${REGISTER_CATEGORIES.map(category => `<button type="button" data-ir-action="category" data-id="${category.id}" class="${state.category === category.id ? 'is-active' : ''}" aria-pressed="${state.category === category.id}"><span>${category.label}</span><small>${snapshot.standards.filter(item => item.category === category.id).length}</small></button>`).join('')}</div>` : ''}</section>`;
+      ${state.section === section.id && section.id === 'standard' ? `<div class="ir-categories">${REGISTER_CATEGORIES.map(category => `<button type="button" data-ir-action="category" data-id="${category.id}" class="${state.category === category.id ? 'is-active' : ''}" aria-pressed="${state.category === category.id}"><span>${category.label}</span><small>${snapshot.standards.filter(item => item.category === category.id).length}</small></button>`).join('')}</div>` : ''}
+      ${section.id === 'offer' && providers.length ? `<nav class="ir-provider-tabs" aria-label="Anbieter-Reiter">${providers.map(([id, title]) => `<button type="button" data-ir-action="list" data-section="offer" data-id="${attr(id)}" aria-pressed="${state.listId === id}" class="${state.listId === id ? 'is-active' : ''}">${escape(title)}<small>${snapshot.offers.filter(item => item.listId === id && !item.archived).length} Angebote</small></button>`).join('')}</nav>` : ''}</section>`;
   }).join('') + `<div class="ir-nav-note">Standardgüter bleiben der Maßstab. Varianten und persönlicher Besitz haben eigene Einträge.</div>`;
 }
 
@@ -67,7 +70,7 @@ export function results(snapshot, state, items) {
 export function detail(item, snapshot, access) {
   if (!item) return '';
   const owner = snapshot.characters.find(character => character.id === item.ownerCharacterId);
-  const canEdit = item.section === 'owned' ? canManageCharacter(owner, access) : access.canEditSharedContent;
+  const canEdit = item.section === 'owned' ? canManageCharacter(owner, access) : access.canEditSharedContent && !item.moduleSource;
   const owners = snapshot.owned.filter(owned => owned.templateId === (item.templateId || item.id));
   const source = snapshot.items.find(entry => entry.id === item.rawItem?.offerId) || snapshot.standards.find(entry => entry.id === item.templateId);
   const sale = item.section === 'owned' ? resalePrice(item.rawItem, source) : null;
@@ -79,6 +82,8 @@ export function detail(item, snapshot, access) {
     <dl class="ir-facts">${fact('Kategorie', categoryLabel(item.category))}${fact(item.section === 'owned' ? 'Besitzer' : 'Herkunft', item.ownerCharacterName || item.listName || 'Standardgüter')}${fact('Gewicht', item.hiddenMeta?.weight ? `${item.hiddenMeta.weight} kg` : '')}${fact('Zustand', item.section === 'owned' ? item.equipped ? 'Angelegt' : 'Im Besitz' : item.section === 'standard' ? 'Geschützte Vorlage' : item.legacy ? 'Bisheriger Eintrag' : 'Angebot')}</dl>
     ${['waffen', 'ruestungen'].includes(item.category) ? `<div class="ir-detail-block"><h3>Spielwerte</h3><p>${combat?.damageFormula ? `Schaden: <strong>${escape(combat.damageFormula)}</strong> ${escape(combat.damageType || '')}` : combat?.baseArmorClass != null ? `Rüstungsklasse: <strong>${combat.baseArmorClass}</strong>` : 'Spielwerte noch nicht hinterlegt.'}</p><small>${combat ? 'Wird mit der Ausrüstung im Charakterbogen verbunden.' : 'Die bisherigen Warenquellen enthalten hierfür keine verbindliche Kampfdefinition.'}</small></div>` : ''}
     <div class="ir-detail-block"><h3>Beschreibung</h3><p class="ir-prose">${escape([item.description, item.details].filter(Boolean).join('\n\n') || 'Noch keine Beschreibung vorhanden.')}</p></div>
+    ${item.attributes?.length ? `<div class="ir-detail-block"><h3>Eigenschaften</h3><dl class="ir-facts">${item.attributes.map(attribute => fact(escape(attribute.label), attribute.value == null ? '' : String(attribute.value))).join('')}</dl></div>` : ''}
+    ${item.moduleSource ? `<div class="ir-detail-block"><h3>Warenregister des Hauses</h3><p>${escape(item.listName)} · ${escape(item.sourceRefs[0]?.pageTitle)}</p>${button('open-source', 'Zum Anbietermodul', `data-id="${attr(item.moduleId)}"`)}</div>` : ''}
     ${item.templateId && item.templateId !== item.id ? `<div class="ir-detail-block"><h3>Standardvorlage</h3>${button('reference', escape(snapshot.standards.find(template => template.id === item.templateId)?.title || item.templateName || 'Vorlage öffnen'), `data-id="${attr(item.templateId)}"`)}</div>` : ''}
     <div class="ir-detail-actions">${item.section === 'owned' ? `${canEdit ? button('customize', 'Besitz bearbeiten', '', true) + button('sell', 'Verkaufen', sale == null ? 'disabled title="Der Kaufpreis fehlt"' : '') : ''}${item.creatureId ? button('open-creature', 'Im Bestiarium öffnen') : canEdit && ['pferde', 'vieh'].includes(item.category) ? button('link-creature', 'Als Begleiter anlegen') : ''}${button('open-character', 'Charakterbogen öffnen')}` : `${button('buy', 'Für eine Figur kaufen', !item.priceRange || item.legacy ? 'disabled' : '', true)}${access.canEditSharedContent ? button('variant', 'Eigene Variante anlegen') : ''}${canEdit && item.section === 'offer' ? button('edit-offer', item.legacy ? 'Als Angebot übernehmen' : 'Angebot bearbeiten') : ''}`}</div>
     ${item.section !== 'owned' && owners.length ? `<div class="ir-detail-block"><h3>Im Besitz von</h3>${owners.map(owned => button('select', `${escape(owned.ownerCharacterName)} · ${escape(owned.title)}${owned.equipped ? ' · Angelegt' : ''}`, `data-id="${attr(owned.id)}"`)).join('')}</div>` : ''}`;

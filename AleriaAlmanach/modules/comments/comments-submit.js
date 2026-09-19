@@ -28,7 +28,7 @@ async function submitComment() {
       errEl.style.display='block';
       return;
     }
-    const presentation = c.entityType === 'creature' ? c : getSelectedCommentCharacterPresentation(c);
+    const presentation = getSelectedCommentCharacterPresentation(c);
     name = c.name; title = c.title || '';
     const actorMetadata = c.entityType === 'creature'
       ? { actorType: 'creature', creatureId: _selectedCharId }

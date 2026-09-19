@@ -21,6 +21,9 @@ export function renderLoreSections(entry, sharedLore = {}) {
     const blocks = section.blocks || section.paragraphs.map(text => ({ type: 'paragraph', text }));
     const shared = section.sharedLore ? sharedLore[section.sharedLore] : null;
     const doctrine = shared ? renderLoreBlocks(shared.blocks) : '';
+    if (section.disclosure) {
+      return `<section class="profile-section" id="${h(section.id)}"><h2>${h(section.title)}</h2><details class="lore-disclosure"><summary>${h(section.disclosure)}</summary><div>${doctrine}${renderLoreBlocks(blocks)}</div></details></section>`;
+    }
     return `<section class="profile-section" id="${h(section.id)}"><h2>${h(section.title)}</h2>${shared && blocks.length ? `<details class="shared-doctrine"><summary>Zur Lehre: ${h(shared.title)}</summary><div>${doctrine}</div></details>` : doctrine}${renderLoreBlocks(blocks)}</section>`;
   }).join('');
 }

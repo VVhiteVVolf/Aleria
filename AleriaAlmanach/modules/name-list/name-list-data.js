@@ -1,5 +1,6 @@
 const NAME_LIST_GROUP_LIMIT = 6;
-const NAME_LIST_NAMES_PER_GROUP_LIMIT = 500;
+// Laerelis supplies 600 names in each of its three groups.
+const NAME_LIST_NAMES_PER_GROUP_LIMIT = 600;
 
 function sanitizeNameListNames(value) {
   const source = Array.isArray(value)
@@ -39,7 +40,7 @@ function sanitizeNameListData(data = {}) {
     archiveLabel: String(data.archiveLabel || 'Namensarchiv').trim(),
     introduction: String(data.introduction || '').trim(),
     ornamentText: String(data.ornamentText || 'Rheunwaith').trim(),
-    ornamentStyle: ['rheunwaith', 'ogham', 'karnrith', 'infernal', 'futhark', 'kanaanith', 'argenti', 'stoicheia', 'plain'].includes(ornamentStyle) ? ornamentStyle : 'plain',
+    ornamentStyle: ['rheunwaith', 'ogham', 'karnrith', 'laerelis', 'infernal', 'futhark', 'kanaanith', 'argenti', 'stoicheia', 'plain'].includes(ornamentStyle) ? ornamentStyle : 'plain',
     groups: sanitizeNameListGroups(data.groups),
     footer: String(data.footer || 'Aleria Almanach · Namensarchiv').trim()
   };

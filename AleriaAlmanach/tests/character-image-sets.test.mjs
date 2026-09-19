@@ -16,10 +16,10 @@ function loadImageSetModel() {
     }
   };
   vm.runInNewContext(
-    fs.readFileSync(new URL('../modules/characters/character-image-sets.js', import.meta.url), 'utf8'),
+    fs.readFileSync(new URL('../modules/image-library/image-library-model.js', import.meta.url), 'utf8'),
     context
   );
-  return context.window.AleriaCharacterImageSets;
+  return context.AleriaCharacterImageSets;
 }
 
 test('alte Portrait- und Emotedaten werden als kompatibles Standard-Set gelesen', () => {

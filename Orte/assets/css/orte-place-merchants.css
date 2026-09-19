@@ -1,24 +1,37 @@
+.orte-merchants-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-color: #80654c #dfd3b9;
+}
+.orte-merchants-scroll:focus-visible { outline: 2px solid #74502c; outline-offset: 2px; }
+
 .grossstadt-template .orte-merchants-table {
   width: 100% !important;
   max-width: 100%;
+  min-width: 1140px;
   border-collapse: collapse;
   table-layout: fixed;
-  background: linear-gradient(180deg, #f5e7c0, #e2c98b);
+  background: #f2ead6;
+  font-size: 15px;
 }
 
 .orte-merchants-table th,
 .orte-merchants-table td {
-  padding: 0.55rem 0.45rem;
-  border: 1px solid var(--place-border-dark);
+  padding: 0.75rem 0.65rem;
+  border: 1px solid #ae9873;
   text-align: center;
   vertical-align: middle;
-  overflow-wrap: break-word;
+  overflow-wrap: normal;
+  hyphens: none;
 }
+.orte-merchants-table tr:nth-child(odd):not(.orte-merchants-table__header) { background: #e8ddc3; }
+.orte-merchants-table td:nth-child(2) { font-weight: 700; color: #683e2c; }
+.orte-merchants-table td:last-child { text-align: left; }
 
 .orte-merchants-table__header th {
   color: var(--place-text-light);
-  background: linear-gradient(180deg, #755420, #3f2a11);
-  font-size: 0.9rem;
+  background: #59432d;
+  font-size: 1rem;
   white-space: nowrap;
   overflow-wrap: normal;
   hyphens: none;
@@ -26,16 +39,15 @@
 
 .orte-merchants-table__header th:first-child,
 .orte-merchants-table__symbol {
-  width: 8%;
+  width: 88px;
 }
 
-.orte-merchants-table__header th:nth-child(2) { width: 13%; }
+.orte-merchants-table__header th:nth-child(2) { width: 15%; }
 .orte-merchants-table__header th:nth-child(3) { width: 14%; }
-.orte-merchants-table__header th:nth-child(4) { width: 15%; }
-.orte-merchants-table__header th:nth-child(5) { width: 10%; }
-.orte-merchants-table__header th:nth-child(6) { width: 7%; }
-.orte-merchants-table__header th:nth-child(7) { width: 9%; }
-.orte-merchants-table__header th:nth-child(8) { width: 24%; }
+.orte-merchants-table__header th:nth-child(4) { width: 13%; }
+.orte-merchants-table__header th:nth-child(5),
+.orte-merchants-table__header th:nth-child(6),
+.orte-merchants-table__header th:nth-child(7) { width: 140px; }
 
 .orte-merchants-table__symbol img {
   display: block;
@@ -53,22 +65,10 @@
   background: rgba(255, 248, 223, 0.62);
 }
 
-@media (max-width: 760px) {
-  .orte-merchants-table {
-    font-size: 0.78rem;
-  }
-
-  .orte-merchants-table th,
-  .orte-merchants-table td {
-    padding: 0.4rem 0.3rem;
-  }
-
-  .orte-merchants-table__header th {
-    white-space: normal;
-  }
-
-  .orte-merchants-table__symbol img {
-    width: 58px !important;
-    height: 58px !important;
-  }
-}
+.merchant-rating { display: inline-flex; align-items: center; gap: 2px; white-space: nowrap; }
+.merchant-rating--wealth { color: #80581c; }
+.merchant-rating--reputation { color: #3b6556; }
+.merchant-rating--influence { color: #773d35; }
+.merchant-rating svg { width: 17px; height: 20px; flex: 0 0 17px; fill: currentColor; }
+.merchant-rating svg.is-empty { fill: none; stroke: currentColor; stroke-width: 0.85; opacity: 0.48; }
+.merchant-rating--text { gap: 6px; white-space: normal; line-height: 1.4; }

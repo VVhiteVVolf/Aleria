@@ -81,7 +81,7 @@ function renderCharPickerInForm() {
 }
 
 function getSelectedCommentCharacterPresentation(character) {
-  if (!character || character.entityType === 'creature') return character;
+  if (!character) return character;
   return applyCharacterImageSetPresentation(character, _selectedImageSetId);
 }
 
@@ -108,13 +108,13 @@ function selectCharForComment(id, options = {}) {
   _selectedCharId = id;
   _selectedEmoteIdx = null;
   const requestedImageSetId = String(options.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
-  _selectedImageSetId = c?.entityType !== 'creature' && normalizeCharacterImageSets(c).some(set => set.id === requestedImageSetId)
+  _selectedImageSetId = normalizeCharacterImageSets(c).some(set => set.id === requestedImageSetId)
     ? requestedImageSetId
     : CHARACTER_IMAGE_SET_DEFAULT_ID;
   if (Array.isArray(_commentSegments) && characterChanged && !options.preserveSegmentImageSets) {
     _commentSegments.forEach(segment => {
       if (segment.kind !== 'action') {
-        segment.imageSetId = c?.entityType === 'creature' ? '' : _selectedImageSetId;
+        segment.imageSetId = _selectedImageSetId;
         segment.emoteIndex = null;
       }
     });

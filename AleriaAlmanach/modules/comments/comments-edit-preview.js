@@ -11,9 +11,7 @@ function getEditPreviewState() {
   if (_editSelectedCharId) {
     const char = getAvailableCommentCharacterById(_editSelectedCharId);
     if (char) {
-      const presentation = char.entityType === 'creature'
-        ? char
-        : applyCharacterImageSetPresentation(char, _editSelectedImageSetId);
+      const presentation = applyCharacterImageSetPresentation(char, _editSelectedImageSetId);
       return {
         narrator: false,
         commentKind: _editCommentKind,

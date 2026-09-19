@@ -1,0 +1,93 @@
+.territory-council {
+  display: grid;
+  gap: 1rem;
+  width: min(100%, 900px);
+  margin: 0 auto;
+  color: #30281f;
+}
+.is-council-source-wrapper { display: none; }
+.herrschaft-person-group {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid #d9cbb0;
+  border-radius: 4px;
+  background: #f7f0e2;
+}
+.herrschaft-person-group h3 {
+  margin: 0 0 0.85rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid #d9cbb0;
+  color: #30281f;
+  font: 600 1.4rem/1.2 Georgia, 'Times New Roman', serif;
+}
+.herrschaft-person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 0.6rem;
+}
+.herrschaft-person-card {
+  display: grid;
+  grid-template-rows: minmax(2.25rem, auto) 180px auto;
+  align-content: start;
+  gap: 0.45rem;
+  min-width: 0;
+  padding: 0.65rem;
+  border: 1px solid #ded2bd;
+  border-radius: 3px;
+  background: #fffbf3;
+  text-align: center;
+}
+.herrschaft-person-card.is-featured {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 230px);
+  border-top: 3px solid #9b7952;
+  background: #f3e7d1;
+}
+.herrschaft-person-office {
+  display: grid;
+  align-items: center;
+  color: #775541;
+  font: 600 0.78rem/1.3 Verdana, Arial, sans-serif;
+}
+.herrschaft-person-portrait,
+.herrschaft-person-portrait a {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  height: 180px;
+}
+.territory-council .herrschaft-person-portrait img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+.herrschaft-person-card .herrschaft-person-name {
+  margin: 0.15rem 0 0;
+  color: #30281f;
+  font: 700 1.05rem/1.2 Georgia, 'Times New Roman', serif;
+  overflow-wrap: anywhere;
+}
+.herrschaft-family-link { color: inherit; text-decoration: none; }
+.herrschaft-family-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.herrschaft-family-link:focus-visible { outline: 2px solid #804737; outline-offset: 3px; }
+.herrschaft-person-seat,
+.herrschaft-person-note { color: #786c5c; font: 0.72rem/1.4 Verdana, Arial, sans-serif; }
+.council-section-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #694b37;
+  text-underline-offset: 3px;
+}
+.territory-council .council-section-link img { width: 72px; height: 72px; object-fit: contain; }
+@media (max-width: 560px) {
+  .herrschaft-person-group { padding: 0.65rem; }
+  .herrschaft-person-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .herrschaft-person-card { padding: 0.5rem; grid-template-rows: minmax(2.25rem, auto) 155px auto; }
+  .herrschaft-person-portrait,
+  .herrschaft-person-portrait a,
+  .territory-council .herrschaft-person-portrait img { height: 155px; }
+}

@@ -1,0 +1,146 @@
+/* Shared document structure for places, houses and guilds. Source nodes stay in place for editors. */
+.world-codex .grossstadt-template-frame {
+  display: block;
+  width: 100% !important; /* Replaces fixed widths in the original table exports. */
+  max-width: 100%;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.world-codex .grossstadt-template-frame > :is(thead, tbody) { display: block; }
+.world-codex .grossstadt-template-frame > :is(thead, tbody) > tr {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 0 32px;
+  align-items: start;
+  border: 0;
+}
+.world-codex .grossstadt-template-frame > :is(thead, tbody) > tr > :is(td, th) {
+  width: auto !important;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.world-codex .grossstadt-template-frame > :is(thead, tbody) > tr > :is(td, th):only-child { grid-column: 1 / -1; }
+/* Preserve the application state when grid/block styles replace native table display. */
+.world-codex [hidden]:not([hidden='until-found']) { display: none !important; }
+.world-codex .grossstadt-template-frame > thead > tr > th {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-content: center;
+  column-gap: 32px;
+  min-height: 290px;
+  padding: 32px 0;
+  border-bottom: 3px double var(--codex-line);
+  text-align: left;
+  font-weight: 400;
+}
+.world-codex .grossstadt-template-frame > thead p { grid-column: 1; align-self: center; margin: 0 0 10px; }
+.world-codex .grossstadt-template-frame > thead > tr > th > p:first-child::before {
+  content: 'SIEDLUNGEN · FELDER, WEGE & MAUERN';
+  display: block;
+  margin-bottom: 20px;
+  color: var(--codex-muted);
+  font: 10px/1.5 var(--codex-label);
+  letter-spacing: 0.16em;
+}
+.world-codex .grossstadt-template-frame > thead :is(.pt-s-0004, .haeuser-title) {
+  color: var(--codex-rubric);
+  font: 700 clamp(34px, 4vw, 54px)/1.1 var(--codex-serif);
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+.world-codex .grossstadt-template-frame > thead :is(.pt-s-0005, .haeuser-quote, .zunft-quote) { color: var(--codex-muted); font: italic 17px/1.5 var(--codex-serif); }
+.world-codex .orte-heraldic-stage {
+  grid-column: 2;
+  grid-row: 1 / span 5;
+  align-self: center;
+  width: 100%;
+  grid-template-columns: minmax(0, 68px) minmax(0, 150px) minmax(0, 68px);
+  gap: 7px;
+  margin: 0;
+}
+.world-codex .orte-heraldic-stage:not(:has(.orte-heraldic-supporter.has-image)) { grid-template-columns: minmax(0, 175px); }
+.world-codex .orte-heraldic-main-crest img { max-height: 190px; }
+.world-codex .orte-heraldic-supporter img { max-height: 145px; }
+.world-codex .place-context-nav {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 14px 0;
+  border: 0;
+  border-bottom: 1px solid var(--codex-rule);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--codex-muted);
+  font: 11px/1.6 var(--codex-label);
+}
+.world-codex .place-context-nav a { color: var(--codex-rubric); }
+.world-codex .grossstadt-template .orte-balanced-text-panel--conflicts {
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+}
+.world-codex .orte-introduction-map { height: auto; margin: 28px 0; padding: 9px; border: 1px solid var(--codex-line); background: var(--codex-light); box-shadow: 4px 4px 0 #b6a17c26; }
+.world-codex .orte-introduction-map .orte-image-slot { min-height: 0; }
+.world-codex .grossstadt-template .pt-s-0024 { margin: 26px 0; border: 1px solid var(--codex-line); background: var(--codex-light); font: 12px/1.6 var(--codex-label); }
+.world-codex .grossstadt-template .pt-s-0024 td { padding: 9px 11px; border: 0; border-bottom: 1px solid var(--codex-rule); background: none; }
+.world-codex .grossstadt-template .pt-s-0024 td[colspan] { background: #e8ddc5; color: var(--codex-rubric); font: 700 17px/1.4 var(--codex-serif); text-align: left; }
+.world-codex .grossstadt-template .pt-s-0024 td[colspan] :is(span, b) { color: inherit; }
+.world-codex .grossstadt-template .pt-s-0024 .pt-s-0032 { color: var(--codex-muted); }
+.world-codex .grossstadt-template .pt-s-0024 .pt-s-0033 { font-weight: 400; }
+.world-codex .grossstadt-template .pt-s-0024 td:has(.orte-image-slot) { background: var(--codex-light); }
+.world-codex .grossstadt-template .pt-s-0024 [data-orte-image-key] img { max-height: 160px; }
+.world-codex .grossstadt-template-frame > tbody > tr > td { margin-bottom: 20px; }
+.world-codex .place-template-toc-toggle { top: auto; bottom: 18px; left: 18px; border-radius: 0; border: 1px solid var(--codex-line); background: #332c22; color: #f3e7cc; }
+.world-codex .place-template-toc { top: auto; bottom: 66px; left: 18px; max-height: calc(100dvh - 100px); border-radius: 0; border-color: var(--codex-line); background: var(--codex-light); }
+.world-codex .place-template-toc h2 { color: var(--codex-rubric); }
+.world-codex .grossstadt-template :is(.haeuser-genealogy-table, .haeuser-historical-table, .zunft-hierarchy-table) { max-width: 100%; }
+.world-codex .grossstadt-template .orte-house-table { width: 100% !important; min-width: 0; table-layout: fixed; background: var(--codex-light); font: 13px/1.65 var(--codex-label); }
+.world-codex .orte-house-table :is(td, th) { border-color: var(--codex-rule); }
+.world-codex .orte-house-table > tbody > tr:first-child > th,
+.world-codex .orte-house-table .orte-house-group > th { color: var(--codex-rubric); background: #e8ddc5; font-family: var(--codex-serif); }
+.world-codex .grossstadt-template :is(.orte-image-placeholder, .orte-image-slot:empty)::before,
+.world-codex .grossstadt-template .orte-image-placeholder { background: #e8dfca; color: var(--codex-muted); border-color: var(--codex-line); }
+.world-codex .grossstadt-template table.pt-s-0067 { width: 100% !important; min-width: 0; table-layout: fixed; background: var(--codex-light); }
+.world-codex .grossstadt-template .pt-s-0067 .pt-s-0077 { width: auto !important; }
+.world-codex .grossstadt-template .pt-s-0067 :is(td, th) { border-color: var(--codex-rule); }
+.world-codex .orte-region-table td { background: var(--codex-light); border-color: var(--codex-rule); }
+.world-codex .orte-region-table tr:nth-child(2) td { color: var(--codex-rubric); background: #e8ddc5; }
+.world-codex .orte-region-table tr:nth-child(2) :is(span, b) { color: inherit; background: none; }
+
+@media (max-width: 1050px) {
+  .world-codex .grossstadt-template-frame > :is(thead, tbody) > tr { grid-template-columns: minmax(0, 1fr) minmax(260px, 34%); gap: 0 24px; }
+}
+@media (max-width: 800px) {
+  .world-codex .grossstadt-template-frame > :is(thead, tbody) > tr { display: block; }
+  .world-codex .grossstadt-template-frame > :is(thead, tbody) > tr > :is(td, th) { display: block; overflow-x: auto; }
+  .world-codex .grossstadt-template-frame > thead > tr > th { display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 0 14px; }
+  .world-codex .grossstadt-template .pt-s-0024 { max-width: 500px; margin-inline: auto; }
+  .world-codex .orte-introduction-map { max-width: 520px; margin-inline: auto; }
+  .world-codex .grossstadt-template .pt-s-0067 .portrait-cell { width: 30%; }
+  .world-codex .grossstadt-template .pt-s-0067 img { max-width: 100%; height: auto; }
+  .world-codex .grossstadt-template .pt-s-0067 .pt-s-0077 { font-size: 15px; }
+  .world-codex .orte-region-table { font: 11px/1.6 var(--codex-label); }
+  .world-codex .orte-region-table :is(span, b) { font-size: inherit; overflow-wrap: anywhere; }
+  .world-codex .orte-region-table { display: block; overflow-x: auto; }
+  .world-codex .orte-region-table > tbody { display: block; width: 100%; }
+  .world-codex .orte-region-table > tbody > tr { display: grid; grid-template-columns: 54px 130px 130px 100px 110px 110px minmax(180px, 1fr); min-width: 920px; }
+  .world-codex .orte-region-table > tbody > tr:first-child { display: block; min-width: 0; width: 100%; }
+  .world-codex .orte-region-table > tbody > tr > td { display: block; width: auto; }
+  .world-codex .orte-region-table td[colspan='8'] { grid-column: 1 / -1; }
+  .world-codex .orte-region-table .region-map-cell { width: 100%; }
+}
+@media (max-width: 520px) {
+  .world-codex .grossstadt-template-frame > thead > tr > th { grid-template-columns: minmax(0, 1fr); text-align: center; padding: 26px 0; }
+  .world-codex .grossstadt-template-frame > thead > tr > th > p:first-child::before { font-size: 8px; margin-bottom: 14px; }
+  .world-codex .orte-heraldic-stage { grid-column: 1; grid-row: auto; margin: 14px auto; }
+  .world-codex .orte-heraldic-main-crest img { max-height: 150px; }
+  .world-codex .grossstadt-template .pt-s-0024 td { padding: 8px; }
+}

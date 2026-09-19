@@ -1,5 +1,5 @@
-import { normalizeOffer } from './item-register-model.js';
-import { parsePrice } from './item-register-money.js';
+import { normalizeOffer } from './item-register-model.js?v=20260919-shop-v1';
+import { parsePrice } from './item-register-money.js?v=20260919-shop-v1';
 
 function legacyId(key) {
   const encoded = Array.from(String(key)).map(char => char.codePointAt(0).toString(16)).join('-');
@@ -30,7 +30,7 @@ export function legacyOffers(payload = {}, standards = []) {
         templateId: template?.id || '', listId: source?.moduleId || 'legacy',
         listName: source?.moduleTitle || 'Bisherige eigene Einträge',
         priceRange: parsePrice(value.price, value.currency), stock: null }, standards),
-        aliases: [key], legacy: true, revision: 0 });
+        aliases: [key], legacy: true, moduleScan: !override && !(payload.customItems || []).some(custom => custom.canonicalKey === key), revision: 0 });
     } catch { /* A malformed historic entry stays in its original export. */ }
   }
   return [...rows.values()];

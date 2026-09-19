@@ -1,3 +1,11 @@
+function buildNameListStyleOptions(selected) {
+  return [['rheunwaith', 'Rheunwaith'], ['ogham', 'Ogham'], ['karnrith', 'Karnrith'],
+    ['laerelis', 'Laerelis · Lichtfluss'], ['infernal', 'Infernal · Nharazim'],
+    ['futhark', 'Futhark'], ['kanaanith', 'Kana’anith'], ['argenti', 'Lingua Argenti'],
+    ['stoicheia', 'Stoicheia'], ['plain', 'Normal']]
+    .map(([value, label]) => `<option value="${value}"${selected === value ? ' selected' : ''}>${label}</option>`).join('');
+}
+
 function buildNameListModuleGroupRows(groups = []) {
   return sanitizeNameListGroups(groups).map((group, index) => `
     <section class="trade-editor-item name-list-module-group-row">
@@ -28,7 +36,7 @@ function buildNameListModuleEditorFields(page) {
         </div>
         <div class="module-editor-field"><label>Archivzeile</label><input class="me-name-list-archive-label" type="text" value="${escapeHtml(data.archiveLabel)}"></div>
         <div class="module-editor-field"><label>Runen-Verzierung</label><input class="me-name-list-ornament" type="text" value="${escapeHtml(data.ornamentText)}"></div>
-        <div class="module-editor-field"><label>Verzierungsstil</label><select class="me-name-list-ornament-style"><option value="rheunwaith"${data.ornamentStyle === 'rheunwaith' ? ' selected' : ''}>Rheunwaith</option><option value="ogham"${data.ornamentStyle === 'ogham' ? ' selected' : ''}>Ogham</option><option value="karnrith"${data.ornamentStyle === 'karnrith' ? ' selected' : ''}>Karnrith</option><option value="infernal"${data.ornamentStyle === 'infernal' ? ' selected' : ''}>Infernal · Nharazim</option><option value="futhark"${data.ornamentStyle === 'futhark' ? ' selected' : ''}>Futhark</option><option value="kanaanith"${data.ornamentStyle === 'kanaanith' ? ' selected' : ''}>Kana’anith</option><option value="plain"${data.ornamentStyle === 'plain' ? ' selected' : ''}>Normal</option></select></div>
+        <div class="module-editor-field"><label>Verzierungsstil</label><select class="me-name-list-ornament-style">${buildNameListStyleOptions(data.ornamentStyle)}</select></div>
         <div class="module-editor-field wide"><label>Einleitung</label><textarea class="me-name-list-introduction">${escapeHtml(data.introduction)}</textarea></div>
         <div class="module-editor-field wide">
           <div class="module-editor-inline" style="justify-content:space-between;"><label>Namensgruppen</label><button class="module-editor-mini-btn" type="button" data-name-list-module-action="add-group">+ Gruppe</button></div>

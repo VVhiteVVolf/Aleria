@@ -11,8 +11,10 @@
   <script src="haeuser.registry.js?v=gwendolyn-20260911h"></script>
   <script src="assets/js/haeuser-loader.js?v=kleinehaeuser-vorlage-20260706a"></script>
   <script type="module" src="assets/js/haeuser-page.js?v=ritterhaeuser-20260911f"></script>
+  <link rel="stylesheet" href="/modules/world-codex/world-codex.css?v=20260919a">
+  <script type="module" src="/modules/world-codex/codex-navigation.mjs?v=20260918a"></script>
 </head>
-<body>
+<body class="world-codex">
   <main class="haeuser-page grossstadt-template kleinehaeuser-template" data-haeuser-root data-orte-static-template data-default-id="kleinehaeuser-vorlage">
     <div class="haeuser-document place-document">
       <table class="haeuser-template-frame grossstadt-template-frame" border="1" cellspacing="1">
@@ -39,12 +41,20 @@
           </tr>
 
           <tr>
-            <td class="haeuser-main-cell" colspan="6">
+            <td class="haeuser-main-cell haeuser-history-cell" colspan="6">
+              <div class="haeuser-history-scroll" tabindex="0" role="region" aria-label="Geschichte und Hauskultur">
               <h2 id="geschichte">2. Geschichte</h2>
               <p data-section="history">Entstehung, Ahnherren, Gründungsmythen, Kriege, Heiratsbündnisse, Stürze, Exile und prägende Wendepunkte.</p>
               <hr>
               <h2 id="traditionen">3. Traditionen</h2>
               <p data-section="traditions">Riten, Schwoere, Feste, Erziehungsformen, Bestattungen, Namensregeln und andere wiederkehrende Gewohnheiten des Hauses.</p>
+              <hr>
+              <h2 id="besitztum">4. Besitztum</h2>
+              <p data-section="holdings">Besitz, Stammsitze, Land, Rechte, Pachthoefe, Handelsanteile, Weiderechte, Schiffe, Minen oder andere wirtschaftliche Grundlagen.</p>
+              <hr>
+              <h2 id="kultur-religion">5. Kultur / Religion</h2>
+              <p data-section="cultureReligion">Sprache, Kleidung, Speisen, Hausriten, Patronatskulte, Grabkultur, Tabus, Feiertage und der Umgang mit Fremden.</p>
+              </div>
             </td>
             <td class="haeuser-infobox-cell" colspan="4">
               <table class="haeuser-info-table" border="1" cellspacing="1">
@@ -81,20 +91,6 @@
                   <tr><td class="haeuser-info-label">Feinde</td><td class="haeuser-info-value" data-profile-field="enemies">Feinde, Fehden oder Rivalen</td></tr>
                 </tbody>
               </table>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="haeuser-section-cell" colspan="10">
-              <h2 id="besitztum">4. Besitztum</h2>
-              <p data-section="holdings">Besitz, Stammsitze, Land, Rechte, Pachthoefe, Handelsanteile, Weiderechte, Schiffe, Minen oder andere wirtschaftliche Grundlagen.</p>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="haeuser-section-cell" colspan="10">
-              <h2 id="kultur-religion">5. Kultur / Religion</h2>
-              <p data-section="cultureReligion">Sprache, Kleidung, Speisen, Hausriten, Patronatskulte, Grabkultur, Tabus, Feiertage und der Umgang mit Fremden.</p>
             </td>
           </tr>
 

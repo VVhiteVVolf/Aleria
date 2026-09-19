@@ -1,6 +1,6 @@
 # Items und Güter – Architektur und Veröffentlichung
 
-Stand: 12. September 2026. Implementierung und lokale Prüfungen abgeschlossen; Firebase-Funktion, Regeln und Frontend wurden in dieser Arbeit **nicht veröffentlicht**.
+Stand: 19. September 2026. Implementierung und lokale Prüfungen abgeschlossen; die hier beschriebenen Änderungen an Firebase-Funktion und Frontend wurden in dieser Arbeit **nicht veröffentlicht**.
 
 ## Verantwortlichkeiten
 
@@ -8,6 +8,7 @@ Stand: 12. September 2026. Implementierung und lokale Prüfungen abgeschlossen; 
 | --- | --- | --- |
 | Standardgüter | Versionierte Marktquellen im Repository | Geschützte Vorlagen, reproduzierbar für Browser und Server erzeugt. Änderungen erfolgen über eine neue Datenversion. |
 | Anbieter und Sortimente | Firestore `item_register_offers` | Ein Dokument je Angebot mit eigener ID, Standardreferenz, Preis, Ankaufspreis, Bestand und Revision. |
+| Modulsortimente | Vorhandener Modulstore (`module_store_entries`) | Direkte Projektion der Waren- und Handelsregister; keine zusätzlichen Angebotsdokumente. |
 | Individuelle Listen | `characters/{id}.inventory.items` | Abgeleitete Ansicht des tatsächlichen Besitzes. Keine zweite Inventarkopie. |
 | Begleiter | `creatures/{id}` mit `itemOrigin` | Name, Bild und Beschreibung werden mit dem zugehörigen Inventargegenstand abgeglichen. |
 | Handelsbelege | `item_register_transactions` | Vorgangs-ID und Preisbeleg verhindern doppelte Buchungen bei Wiederholungen. |
@@ -18,7 +19,7 @@ Das Feature liegt in `modules/item-register/`: Modelle und Geldrechnung sind rei
 
 ## Daten und Bilder
 
-`node scripts/build-item-register.mjs` erzeugt 215 Standardgüter sowie dieselbe Datenversion im Frontend und in den Firebase Functions. `--check` prüft beide Kopien und das Versionsmanifest ohne Änderungen.
+`node scripts/build-item-register.mjs` erzeugt 212 Standardgüter sowie dieselbe Datenversion im Frontend und in den Firebase Functions. `--check` prüft beide Kopien und das Versionsmanifest ohne Änderungen. Der Abgleich vom 19. September 2026 führt die drei doppelten Vorlagen für Heiltrank, Manatrank und Ahnenbaumsaft zusammen. Bisherige IDs bleiben als Aliase gültig, sämtliche Quellen und Beschreibungen bleiben erhalten. Gebinde und Material stehen in den Metadaten; als Beschreibung wird der tatsächliche Markttext verwendet.
 
 Der Rossmarkt wird direkt aus `Markt/Rossmarkt/Rossmarkt.html` gelesen. Archiv und Register verwenden dafür denselben Parser in `scripts/source-pages/rossmarkt-source.mjs`. Alle 31 Reittiere behalten ihre vorhandenen Bild-URLs, Beschreibungen, Herkunft und Preisspannen. 27 sind Rösser oder Ponys, vier weitere Reittiere erscheinen unter Vieh. Der Arbeitsgaul aus dem Viehmarkt ist eine weitere eigene Pferdevorlage. Goldstück-Preise werden korrekt in Kupfer umgerechnet. Bestehende Pferde-IDs einschließlich der älteren Pony-Endungen bleiben stabil.
 
@@ -39,6 +40,14 @@ Die bisherigen Marktquellen enthalten für viele Standardwaffen und Rüstungen k
 
 ## Aktualisierung und Altbestände
 
+Die Anbieter-Reiter lesen Warenregister (`goodsTablePage`) und Handelsgutregister (`tradeCatalogPage`) aus den wirksamen Almanach-Modulen. `item-register-module-catalog.js` projiziert die Waren ohne Schreibzugriffe. `item-register-module-sync.js` reagiert auf `almanach:modules-changed`; der Modulstore meldet sowohl lokale Änderungen als auch eingelesene Fernstände. Auch eigene Module und eingebaute Module werden berücksichtigt, versteckte Module und Vorlagen nicht. Ungefüllte Editor-Platzhalter sind kein Sortiment.
+
+Der Quellenabgleich ergab 152 ausgefüllte Angebote bei sechs Anbietern: Celtigerns Letzte Rast (48), Zum Roten Drachen – Taverne (39), Die Lachende Nixe (21), Herberge bei Owains Anwesen (21), Die Krumme Kanne (21), Owains Anwesen & Gestüt (2). Bei letzterem bleiben 15 unbenannte Platzhalter im ursprünglichen Editor erhalten. 105 Angebote verwenden eine vorhandene Standardvorlage. Empfehlungen in der Randspalte werden dem passenden Gericht zugeordnet; Hausgerichte, lange Texte, Portionsgrößen, Eigenschaften und Kaufbedingungen bleiben sichtbar. Die Reiterzahl wächst automatisch mit weiteren echten Modulsortimenten.
+
+Identische Waren werden innerhalb eines Anbieters zusammengeführt. Unterschiedliche Portionen und Preise bleiben getrennt; derselbe Gegenstand darf bei mehreren Anbietern erhältlich sein. Alte reine Scankopien werden bei vorhandener Modulquelle ausgespart, redaktionell bearbeitete Varianten bleiben erhalten. Der Registerexport umfasst weiterhin selbst angelegte Angebote; die Modulregister werden über die vorhandene Modulsicherung exportiert.
+
+Modulkäufe lesen das Quellmodul und sein Sichtbarkeitsmanifest innerhalb der serverseitigen Transaktion. Der Server erzeugt das Angebot mit derselben Projektion neu, prüft Quellrevision und Preis und bucht anschließend das Inventar. Es entstehen keine Kopien in `item_register_offers`. Preisangaben wie `1 KT 10 Pfennig` oder `1 Kupfertaler & 20 Pfennig` werden exakt umgerechnet; bedingte oder unbekannte Preise werden nicht geschätzt. Der gespeicherte Kaufpreis erlaubt auch nach späteren Menüänderungen einen Verkauf.
+
 Firestore-Listener aktualisieren Sortimente, Besitz und Begleiter für alle Leser. Gecachte oder unvollständige Verbindungen werden sichtbar markiert; Handel erfordert einen bestätigten Serverstand. Geöffnete Formulare behalten ihre Eingaben und Revision, damit ein inzwischen geänderter Datensatz beim Speichern erkannt wird.
 
 Ein kleines Manifest prüft bei sichtbarer Seite alle 60 Sekunden sowie bei Rückkehr ins Fenster/Netz neue Standardversionen. Es hat eine feste URL auch im Produktionsbuild. Veraltete Standardversionen werden beim Handel serverseitig abgewiesen.
@@ -56,10 +65,13 @@ node scripts/build-item-register.mjs --check
 node scripts/sync-character-archive-pages.mjs --check
 node tests/item-register.test.mjs
 node tests/item-register-integration.test.mjs
+node tests/item-register-modules.test.mjs
 cd ../firebase/functions
 node tests/item-register.test.js
 ```
 
-24 gezielte Registertests prüfen Preise, reale Rossmarkt-Bilder, Archiveinordnung, Besitzmetadaten, Käufe, Verkäufe, Wiederholungen, konkurrierenden Bestand, Rechte, Sperren, Übergaben und Änderungen verknüpfter Kreaturen. Zusätzlich wurden 63 bestehende Tests für Inventar, Ausrüstung, Speicherschutz, Kreaturen und Archiv ausgeführt. Die Transaktionstests verwenden einen lokalen Testadapter, keinen produktiven Firebase-Speicher.
+32 gezielte Registertests prüfen zusätzlich Modulsortimente, Duplikate, alte Vorlagen-IDs, gemischte Münzangaben, Aktualisierungen und serverseitig abgewiesene Quellenänderungen. Die Transaktionstests verwenden einen lokalen Testadapter, keinen produktiven Firebase-Speicher. Beim ersten Registerausbau wurden außerdem 63 bestehende Tests für Inventar, Ausrüstung, Speicherschutz, Kreaturen und Archiv ausgeführt.
+
+Der Abgleich vom 19. September wurde an einer lesend bezogenen Momentaufnahme aller 42 gespeicherten Module geprüft: Browser-Sanitizer und rohe Serverquellen ergeben für alle 152 Angebote identische Inhalte und Quellrevisionen. Ein lokaler Browserlauf prüft die sechs Reiter bei 1440, 1024, 760 und 390 Pixeln sowie einen Testkauf mit Mischpreis und den Rücksprung zum Anbietermodul. Prüfdaten und Bilder liegen in `.codex-temp/item-register-reconciliation/`. Die Firebase-Daten wurden dabei nicht verändert.
 
 Der versteckte lokale Browsertest prüft Kategorien als Startansicht, standardmäßig eingeklappte individuelle Listen, Suchfokus, Kauf, mehrfaches Absenden, Umbenennung, Begleiter, Varianten, Dialogtastatur und Ansichten mit 390, 760, 1280 und 1680 Pixeln. Das vorhandene Afol-Bild wird tatsächlich geladen und mit vollständiger Silhouette dargestellt. Bildschirmaufnahmen liegen unter `.tmp/item-register-review/` im Workspace. Der Produktionsbuild läuft mit den bestehenden Vite-Hinweisen zu klassischen Skripten und großen Bundles durch.

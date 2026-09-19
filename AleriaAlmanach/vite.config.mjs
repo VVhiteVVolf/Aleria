@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite';
 import { buildMorgarReference, copyMorgarAssets } from './modules/language/morgar/morgar-build.mjs';
+import { buildLaerelisReference } from './modules/language/laerelis/laerelis-build.mjs';
 import { listSpellCatalogSchools } from './modules/spell-catalog/spell-catalog-schools.js';
 import { copyCalendarIconAssets } from './modules/calendar/calendar-build-assets.mjs';
 import { copyWeddingAssets } from '../Ereignisse/modules/weddings/wedding-build-assets.mjs';
 import { getReligionPageInputs } from '../Religionen/modules/content/content-repository.mjs';
+import { buildReligionModules, copyReligionModuleAssets } from '../Religionen/modules/almanach/religion-module-build.mjs';
 import { getClergyPageInputs } from '../Religionen/modules/clergy/clergy-repository.mjs';
 import { cp, copyFile, mkdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
@@ -57,6 +59,8 @@ function preserveClassicAlmanachScripts() {
     name: 'preserve-classic-almanach-scripts',
     async buildStart() {
       await buildMorgarReference({ check: true });
+      await buildLaerelisReference({ check: true });
+      await buildReligionModules({ check: true });
     },
     configResolved(config) {
       outputDirectory = resolve(config.root, config.build.outDir);
@@ -66,6 +70,7 @@ function preserveClassicAlmanachScripts() {
       const buildAlmanachRoot = resolve(buildRoot, 'AleriaAlmanach');
       await copyCalendarIconAssets({ workspaceRoot, almanachRoot, buildRoot });
       await copyMorgarAssets({ buildRoot });
+      await copyReligionModuleAssets({ buildRoot });
       await Promise.all(classicDirectories.map(directory => (
         cp(resolve(almanachRoot, directory), resolve(buildAlmanachRoot, directory), { recursive: true, force: true })
       )));

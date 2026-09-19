@@ -1,0 +1,26 @@
+/* Opt-in for data-backed house pages; legacy template widths stay available. */
+.haeuser-page[data-haeuser-layout="responsive"] {
+  --haeuser-frame-width: 100%;
+}
+.haeuser-page[data-haeuser-layout="responsive"] .haeuser-template-frame { table-layout: fixed; }
+.haeuser-page[data-haeuser-layout="responsive"] .haeuser-historical-table { max-width: 100%; margin-inline: auto; }
+.haeuser-page[data-haeuser-layout="responsive"] .haeuser-main-cell { width: 62%; }
+.haeuser-page[data-haeuser-layout="responsive"] :is(.haeuser-side-cell, .haeuser-infobox-cell) { width: 38%; }
+.haeuser-page[data-haeuser-layout="responsive"] .haeuser-landscape-slot { height: 380px; min-height: 0; }
+.haeuser-page[data-haeuser-layout="responsive"] .haeuser-landscape-slot img { max-height: 380px; }
+.haeuser-page[data-haeuser-layout="responsive"] .haeuser-banner-slot { width: min(100%, 240px); min-height: 0; }
+.haeuser-page[data-haeuser-layout="responsive"] .house-image-pending { height: auto; min-height: 0; aspect-ratio: auto; padding-block: 2rem; }
+.house-scene { margin-block: 1rem; padding: 1rem; border: 1px solid #b89a61; background: #f8efd4; }
+.house-scene summary { cursor: pointer; font-weight: bold; color: #702b38; }
+@media (max-width: 760px) {
+  .haeuser-page[data-haeuser-layout="responsive"] .haeuser-template-frame,
+  .haeuser-page[data-haeuser-layout="responsive"] .haeuser-template-frame > :is(thead, tbody),
+  .haeuser-page[data-haeuser-layout="responsive"] .haeuser-template-frame > :is(thead, tbody) > tr {
+    display: block;
+  }
+  .haeuser-page[data-haeuser-layout="responsive"] :is(.haeuser-main-cell, .haeuser-side-cell, .haeuser-infobox-cell, .haeuser-section-cell, .haeuser-hero) {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+  }
+}

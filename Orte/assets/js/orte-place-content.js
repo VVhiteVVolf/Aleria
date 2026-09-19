@@ -1,3 +1,5 @@
+import { createFlavorScene, groupFlavorBlocks } from '../../modules/flavor/place-flavor.mjs?v=20260918b';
+
 (function () {
   "use strict";
 
@@ -26,7 +28,7 @@
     if (!Array.isArray(blocks) || blocks.length === 0) return;
 
     const fragment = document.createDocumentFragment();
-    blocks.forEach((block) => {
+    groupFlavorBlocks(blocks).forEach((block) => {
       const element = createBlock(block);
       if (element) fragment.append(element);
     });
@@ -38,6 +40,8 @@
   function createBlock(block) {
     if (typeof block === "string") return createParagraph(block);
     if (!block || typeof block !== "object") return null;
+
+    if (block.type === "scene") return createFlavorScene(block, page.ownerDocument);
 
     if (block.type === "subheading") {
       const heading = document.createElement("h3");

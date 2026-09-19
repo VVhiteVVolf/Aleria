@@ -1,0 +1,82 @@
+@import url("./administration-dialog.css?v=administration-dialog-20260911b");
+
+.administration-grid,
+.herrschaft-administration-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(124px, 1fr);
+  grid-template-rows: 1fr;
+  gap: 0.5rem;
+  width: min(100%, 1120px);
+  min-width: 0;
+  contain: inline-size;
+  margin: 0.8rem auto;
+  padding: 4px 4px 10px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: #b6a17c #f7f0e2;
+}
+
+.administration-card,
+.herrschaft-administration-card {
+  appearance: none;
+  display: grid;
+  grid-template-rows: 54px minmax(2.2em, auto) auto;
+  place-items: center;
+  gap: 0.2rem;
+  min-width: 0;
+  padding: 0.55rem 0.4rem;
+  border: 1px solid #d9cbb0;
+  border-radius: 3px;
+  color: #30281f;
+  background: #fffbf3;
+  font: 0.8rem/1.3 Verdana, Arial, sans-serif;
+  text-align: center;
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.administration-card:hover,
+.herrschaft-administration-card:hover {
+  border-color: #a58963;
+  background: #f3e7d1;
+}
+
+.administration-card:focus-visible,
+.herrschaft-administration-card:focus-visible,
+.administration-dialog-close:focus-visible {
+  outline: 2px solid #804737;
+  outline-offset: 3px;
+}
+
+.administration-grid .administration-card img,
+.herrschaft-administration-grid .herrschaft-administration-card img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.administration-card strong,
+.herrschaft-administration-card strong {
+  color: #30281f;
+  font: 700 0.92rem/1.2 Georgia, 'Times New Roman', serif;
+  overflow-wrap: normal;
+  hyphens: auto;
+}
+
+.administration-card > span,
+.herrschaft-administration-card > span {
+  color: #786c5c;
+  font-size: 0.68rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .administration-card,
+  .herrschaft-administration-card {
+    transition: none;
+  }
+}

@@ -18,7 +18,7 @@ function getCommentPreviewState() {
   if (_selectedCharId) {
     const char = getAvailableCommentCharacterById(_selectedCharId);
     if (char) {
-      const presentation = char.entityType === 'creature' ? char : getSelectedCommentCharacterPresentation(char);
+      const presentation = getSelectedCommentCharacterPresentation(char);
       return {
         narrator: false,
         commentKind: _commentKind,

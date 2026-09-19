@@ -137,9 +137,7 @@ async function verifyEditCode() {
       const match = directMatch || getAvailableCommentCharacterByName(data.charName);
       if (match && commentActorMatchesComposerMode(match, actorMode)) {
         _editSelectedCharId = match.id;
-        const presentation = match.entityType === 'creature'
-          ? match
-          : applyCharacterImageSetPresentation(match, _editSelectedImageSetId);
+        const presentation = applyCharacterImageSetPresentation(match, _editSelectedImageSetId);
         _editSelectedImageSetId = presentation?.selectedImageSetId || '';
         if (data.portrait && Array.isArray(presentation?.emotes)) {
           const emoteIdx = presentation.emotes.findIndex(emote => String(emote?.img || '') === String(data.portrait || ''));

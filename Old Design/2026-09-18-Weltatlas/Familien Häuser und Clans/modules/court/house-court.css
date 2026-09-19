@@ -1,0 +1,59 @@
+.house-court {
+  --court-line: #b69b62;
+  --court-ink: #742a2c;
+  container-type: inline-size;
+}
+.house-court-group { margin-block: 1.5rem; }
+.house-court-heading {
+  padding: .65rem 1rem;
+  border-block: 1px solid var(--court-line);
+  color: var(--court-ink);
+  background: rgba(182, 155, 98, .13);
+  text-align: center;
+}
+.house-court-note { text-align: center; }
+.house-court-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+.house-court-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: .8rem;
+  border: 1px solid var(--court-line);
+  border-top: 3px solid var(--court-line);
+  background: rgba(255, 252, 238, .4);
+  text-align: center;
+}
+.house-court-role { min-height: 3em; margin: 0 0 .6rem; color: var(--court-ink); }
+.haeuser-template-frame .house-court-image { width: 100%; height: 210px; min-height: 0; }
+.haeuser-template-frame .house-court-image img { width: 100%; height: 210px; object-fit: contain; }
+.house-court-unassigned {
+  display: grid;
+  place-items: center;
+  flex: 1;
+  min-height: 210px;
+  color: #756950;
+  font-style: italic;
+}
+.house-court-name { display: block; margin: .7rem 0 .25rem; font-weight: bold; color: var(--court-ink); }
+.house-court-detail { margin: 0; font-size: .9em; }
+.house-court-card a:focus-visible { outline: 3px solid var(--court-ink); outline-offset: 4px; }
+.house-court-group[data-court-group="founder"] .house-court-grid { max-width: 240px; margin-inline: auto; grid-template-columns: 1fr; }
+.house-court-group[data-court-group="cadets"] .house-court-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@container (max-width: 800px) {
+  .house-court-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@container (max-width: 520px) {
+  .house-court-grid,
+  .house-court-group[data-court-group="cadets"] .house-court-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+}
+@container (max-width: 310px) {
+  .house-court-grid,
+  .house-court-group[data-court-group="cadets"] .house-court-grid { grid-template-columns: 1fr; }
+}

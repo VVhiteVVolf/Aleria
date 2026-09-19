@@ -1,0 +1,53 @@
+.creature-dossier {
+  --dossier-ink: #36271c;
+  --dossier-muted: #6e5135;
+  --dossier-line: #c8aa75;
+  margin-bottom: 1rem;
+  border: 1px solid var(--dossier-line);
+  background: linear-gradient(115deg, #f9efd5, #eee0bb);
+  color: var(--dossier-ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  box-shadow: 0 5px 18px #291b1526;
+}
+.creature-dossier-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.3rem 1.5rem; background: linear-gradient(110deg, #634327, #8a653c); color: #fff5db; border-bottom: 3px solid #b18a4c; }
+.creature-dossier-heading h2 { margin: .3rem 0; color: inherit; font: 700 clamp(1.6rem, 3vw, 2.6rem) Georgia, serif; }
+.creature-dossier-heading p { margin: .25rem 0 0; font-size: .85rem; }
+.creature-dossier-heading small { letter-spacing: .13em; text-transform: uppercase; }
+.creature-dossier-heading > strong { flex: 0 0 auto; padding: .8rem; border: 1px solid #e1cda1; font-size: 1.25rem; }
+.creature-dossier-body { display: grid; grid-template-columns: minmax(160px, .7fr) minmax(0, 2fr); gap: 1.3rem; padding: 1.25rem; }
+.creature-dossier-body:not(:has(> figure)) { grid-template-columns: 1fr; }
+.creature-dossier-body figure { margin: 0; min-width: 0; }
+.creature-dossier-body figure img { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: contain; background: #493d2d; border: 1px solid #ac895a; box-sizing: border-box; }
+.creature-dossier-body figcaption { margin-top: .5rem; font-size: .8rem; color: var(--dossier-muted); line-height: 1.5; }
+.creature-dossier-content { min-width: 0; }
+.creature-dossier-vitals { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .5rem; }
+.creature-dossier-vitals > span { display: grid; gap: .4rem; padding: .7rem; border: 1px solid var(--dossier-line); background: #fff9e9; }
+.creature-dossier-vitals small { font-size: .7rem; color: var(--dossier-muted); }
+.creature-dossier-vitals b { font-size: 1.25rem; color: #813537; }
+.creature-dossier-attributes, .creature-dossier-resources { display: flex; flex-wrap: wrap; gap: .5rem; margin: .7rem 0; }
+.creature-dossier-attributes span { font-size: .8rem; padding: .35rem .5rem; border-bottom: 1px solid var(--dossier-line); }
+.creature-dossier-resources span { display: inline-flex; align-items: center; gap: .35rem; padding: .45rem; border: 1px solid var(--dossier-line); font-size: .8rem; background: #fbf3df; }
+.creature-dossier-resources img { width: 18px; height: 18px; object-fit: contain; }
+.creature-dossier-source { color: var(--dossier-muted); font-size: .75rem; line-height: 1.5; }
+.creature-dossier h3 { margin: 1rem 0 .55rem; color: #80383a; font-size: 1rem; }
+.creature-dossier-attacks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+.creature-dossier-attacks section { padding: .8rem; border: 1px solid var(--dossier-line); background: #fff8e6; }
+.creature-dossier-attacks section > div { display: flex; justify-content: space-between; gap: .6rem; }
+.creature-dossier-attacks section > div b { flex-shrink: 0; font-size: .8rem; color: #813537; }
+.creature-dossier-attacks p, .creature-dossier-trait p, .creature-dossier-notes p { margin: .5rem 0; line-height: 1.6; font-size: .88rem; }
+.creature-dossier-attacks small { color: var(--dossier-muted); line-height: 1.5; }
+.creature-dossier-trait { margin-top: .9rem; padding: .25rem .9rem .6rem; border-left: 3px solid #805237; background: #e6d4ac; }
+.creature-dossier-notes summary, .creature-sheet-editor > summary { padding: .8rem; margin: .9rem 0; color: #fff4da; background: #6b4a2e; cursor: pointer; }
+.creature-sheet-editor > .creature-sheet-section, .creature-sheet-editor > .creature-sheet-primary, .creature-sheet-editor > .creature-sheet-columns { margin-bottom: .75rem; }
+.creature-dossier :focus-visible, .creature-sheet-editor > summary:focus-visible { outline: 3px solid #a64b40; outline-offset: 3px; }
+@media (max-width: 800px) {
+  .creature-dossier-body { grid-template-columns: 1fr; padding: .8rem; }
+  .creature-dossier-body figure { width: min(100%, 240px); margin-inline: auto; }
+  .creature-dossier-heading { padding: 1rem; }
+  .creature-dossier-vitals { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .creature-dossier-attacks { grid-template-columns: 1fr; }
+}
+@media print {
+  .creature-sheet-editor { display: none; }
+  .creature-dossier { break-inside: avoid; box-shadow: none; }
+}

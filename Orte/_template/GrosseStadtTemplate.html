@@ -9,28 +9,32 @@
   <link rel="stylesheet" href="/Orte/assets/css/orte-regionstabelle.css?v=gwynthor-map-embed-20260902a">
   <link rel="stylesheet" href="/Orte/assets/css/orte-notice-board.css?v=notice-board-placeholder-20260904a">
   <link rel="stylesheet" href="/Orte/assets/css/orte-houses.css?v=gwynthor-houses-20260901a">
-  <link rel="stylesheet" href="/Orte/assets/css/orte-place-merchants.css?v=gwynthor-merchants-20260902a">
+  <link rel="stylesheet" href="/Orte/assets/css/orte-place-merchants.css?v=20260918b">
   <link rel="stylesheet" href="/Orte/assets/css/orte-place-press.css?v=fluesterfaecher-layout-20260904b">
   <link rel="stylesheet" href="/Orte/assets/css/orte-place-content.css?v=newspaper-scroll-20260904a">
-  <link rel="stylesheet" href="/Orte/modules/personalities/place-personalities.css?v=20260913a">
+  <link rel="stylesheet" href="/Orte/modules/personalities/place-personalities.css?v=20260918b">
   <link rel="stylesheet" href="/Orte/modules/introduction/place-introduction.css?v=20260913a">
   <link rel="stylesheet" href="/Orte/modules/military/military-entry.css?v=20260913a">
-  <script src="/js/world-content/celtigerns-wacht-places.js?v=celtigerns-cities-20260904c&content=wyrm-20260913b"></script>
-  <script src="/Orte/orte.registry.js?v=llamreis-maps-20260902a&content=wyrm-20260913a"></script>
+  <script src="/js/world-content/celtigerns-wacht-places.js?v=20260918b"></script>
+  <script src="/Orte/orte.registry.js?v=20260918b"></script>
   <script src="/Orte/assets/js/orte-loader.js?v=celtigerns-orte-20260901a"></script>
   <script src="/Orte/assets/js/orte-place-media.js?v=celtigerns-orte-20260901a" defer></script>
   <script src="/Orte/assets/js/orte-place-houses.js?v=commoner-placeholder-20260913a" defer></script>
   <script src="/Orte/assets/js/orte-map-embed.js?v=gwynthor-board-20260902a" defer></script>
   <script src="/Orte/assets/js/orte-notice-board.js?v=notice-board-placeholder-20260904a" defer></script>
   <script src="/Orte/assets/js/orte-region-map.js?v=gwynthor-map-embed-20260902a" defer></script>
-  <script src="/Orte/assets/js/orte-place-merchants.js?v=merchant-shields-20260913a" defer></script>
+  <script type="module" src="/Orte/assets/js/orte-place-merchants.js?v=20260918b"></script>
   <script type="module" src="/Orte/assets/js/orte-place-press.mjs?v=fluesterfaecher-20260904a&content=wyrm-20260913a"></script>
   <script type="module" src="/Orte/modules/military/military-entry.mjs?v=20260904a"></script>
-  <script src="/Orte/modules/personalities/place-personalities.js?v=20260913b" defer></script>
-  <script src="/Orte/assets/js/orte-place-content.js?v=gwynthor-content-20260902b" defer></script>
+  <script src="/Orte/modules/personalities/place-personalities.js?v=20260918b" defer></script>
+  <script type="module" src="/Orte/assets/js/orte-place-content.js?v=20260918b"></script>
   <script src="/Orte/assets/js/orte-grossstadt.js?v=llamreis-maps-20260902a" defer></script>
+  <link rel="stylesheet" href="/Orte/modules/layout/place-paired-panels.css?v=20260918b">
+  <link rel="stylesheet" href="/Orte/modules/flavor/place-flavor.css?v=20260918b">
+  <link rel="stylesheet" href="/modules/world-codex/world-codex.css?v=20260919a">
+  <script type="module" src="/modules/world-codex/codex-navigation.mjs?v=20260918a"></script>
 </head>
-<body>
+<body class="world-codex">
   <main class="place-page grossstadt-template" data-orte-static-template>
     <div class="place-document">
       <table class="grossstadt-template-frame pt-s-0001" border="1" cellspacing="1">
@@ -56,10 +60,10 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td class="pt-s-0007" colspan="5">
-			<div class="orte-introduction-panel">
+			<td class="pt-s-0007 orte-paired-copy" colspan="5">
+			<div class="orte-introduction-panel orte-paired-panel">
 			<h2>Einleitung</h2>
-			<div data-orte-content="introduction" tabindex="0" role="region" aria-label="Einleitung"><p>...</p></div>
+			<div class="orte-paired-scroll" data-orte-content="introduction" tabindex="0" role="region" aria-label="Einleitung"><p>...</p></div>
 			</div>
 			</td>
 			<td class="pt-s-0016" colspan="3">
@@ -67,10 +71,11 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="pt-s-0007" colspan="5">
-			<div class="orte-balanced-text-panel orte-balanced-text-panel--background">
+			<td class="pt-s-0007 orte-paired-copy" colspan="5">
+			<div class="orte-balanced-text-panel orte-balanced-text-panel--background orte-paired-panel">
 			<h2>Hintergrund</h2>
 
+			<div class="orte-paired-scroll" tabindex="0" role="region" aria-label="Hintergrund, Lage und Verwaltung">
 			<div data-orte-content="background"><p>...</p></div>
 
 			<hr class="pt-s-0018" />
@@ -82,6 +87,7 @@
 			<hr class="pt-s-0018" /><p class="pt-s-0003"><span class="pt-s-0019"><b>Verwaltung</b></span></p>
 
 			<div data-orte-content="administration"><p>...</p></div>
+			</div>
 			</div>
 			</td>
 			<td class="pt-s-0023" colspan="3" rowspan="1">
@@ -759,10 +765,12 @@
 			</td>
 		</tr>
 		<tr data-orte-feature="districts">
-			<td class="pt-s-0064" colspan="6">
+			<td class="pt-s-0064 orte-paired-copy" colspan="6">
+			<div class="orte-paired-panel">
 			<h2>Bezirke</h2>
 
-			<div data-orte-content="districts"><p>...</p></div>
+			<div class="orte-paired-scroll" data-orte-content="districts" tabindex="0" role="region" aria-label="Bezirke"><p>...</p></div>
+			</div>
 			</td>
 			<td class="pt-s-0065" colspan="2"><p>&nbsp;</p>
 

@@ -1,0 +1,94 @@
+/* Only the outer legacy layout table becomes a grid; content tables retain their semantics. */
+.world-codex .kingdom-frame {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  width: 100%;
+  max-width: 100%;
+  gap: 0 32px;
+  margin: 0;
+  border: 0;
+  border-spacing: 0;
+  background: none;
+  box-shadow: none;
+}
+.world-codex .kingdom-frame > tbody { display: contents; }
+.world-codex .kingdom-frame > tbody > tr {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 0 32px;
+  min-width: 0;
+  align-items: start;
+}
+.world-codex .kingdom-frame > tbody > tr > td {
+  width: auto !important; /* Original exports carry inline pixel widths. */
+  min-width: 0;
+  max-width: 100%;
+  padding: 0;
+}
+.world-codex .kingdom-frame > tbody > tr > td:only-child { grid-column: 1 / -1; }
+.world-codex .kingdom-frame > tbody > tr:first-child { grid-column: 2; grid-row: 1; display: block; padding: 30px 0; align-self: center; }
+.world-codex .kingdom-title {
+  display: block;
+  align-self: center;
+  grid-column: 1;
+  grid-row: 1;
+  padding: 32px 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  color: var(--codex-rubric);
+  font: 700 clamp(32px, 3.6vw, 52px)/1.12 var(--codex-serif);
+  letter-spacing: -0.045em;
+  text-align: left;
+  text-shadow: none;
+}
+.world-codex .kingdom-title::before { content: 'ALERISCHE LANDE · ATLAS & CHRONIK'; display: block; margin-bottom: 20px; color: var(--codex-muted); font: 10px/1.5 var(--codex-label); letter-spacing: 0.18em; }
+.world-codex .kingdom-title * { font: inherit !important; }
+.world-codex .kingdom-crest-stage { grid-template-columns: minmax(0, 85px) minmax(0, 145px) minmax(0, 85px); gap: 8px; align-items: center; width: 100%; margin: 0 auto; }
+.world-codex :is(.herrschaft-crest-stage, .kingdom-crest-stage--solo) { grid-template-columns: minmax(0, 150px); }
+.world-codex .kingdom-main-crest { width: 145px; height: 160px !important; filter: drop-shadow(2px 5px 3px #33271930); }
+.world-codex .kingdom-heraldic-figure { width: 85px; max-height: 140px; filter: none; }
+.world-codex .herrschaft-breadcrumbs { margin: 0 0 12px; color: var(--codex-muted); font: 11px/1.6 var(--codex-label); }
+.world-codex .herrschaft-breadcrumbs a { color: var(--codex-rubric); }
+.world-codex .herrschaft-kicker { margin: 12px 0 0 !important; color: var(--codex-muted); font: italic 15px/1.5 var(--codex-serif); }
+.world-codex .herrschaft-copy { text-align: start; }
+.world-codex .kingdom-toc-scroll { width: 100%; margin: 0; }
+.world-codex .kingdom-frame .kingdom-toc {
+  width: 100% !important;
+  height: auto !important;
+  min-width: 0;
+  border: 0;
+  border-top: 3px double var(--codex-line);
+  border-bottom: 3px double var(--codex-line);
+  border-collapse: collapse;
+  background: #fbf5e53d;
+}
+.world-codex .kingdom-toc td { padding: 16px 0 !important; }
+.world-codex .kingdom-toc-title { color: var(--codex-rubric); font: 10px/1.5 var(--codex-label); letter-spacing: 0.17em; }
+.world-codex .kingdom-toc ol { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px 22px; padding-left: 1.5rem; font: 14px/1.65 var(--codex-serif); }
+.world-codex .kingdom-toc li::marker { color: #99704e; font-style: italic; }
+.world-codex .kingdom-toc a { border: 0; }
+.world-codex .kingdom-frame .kingdom-infobox { background: var(--codex-light); border-color: var(--codex-line); box-shadow: 4px 4px 0 #b6a17c26; }
+.world-codex .kingdom-infobox .kingdom-infobox-title { color: var(--codex-rubric); background: #e7dcc3; font-family: var(--codex-serif); }
+.world-codex .kingdom-infobox .kingdom-infobox-section { color: var(--codex-rubric); background: #eee5d0; }
+.world-codex .kingdom-frame > tbody > tr:not(:first-child) > td > section { margin-bottom: 2rem; }
+.world-codex .kingdom-table-scroll:has(> .kingdom-frame) { overflow: visible; }
+
+@media (max-width: 960px) {
+  .world-codex .kingdom-frame { grid-template-columns: minmax(0, 1fr) 260px; gap: 0 20px; }
+  .world-codex .kingdom-frame > tbody > tr { grid-template-columns: minmax(0, 1fr); }
+  .world-codex .kingdom-sidebar-column { justify-self: center; margin: 20px 0; }
+  .world-codex .kingdom-title { font-size: 36px; }
+}
+@media (max-width: 600px) {
+  .world-codex .kingdom-frame { display: block; }
+  .world-codex .kingdom-title { padding: 28px 0 10px; font-size: 34px; text-align: center; }
+  .world-codex .kingdom-title::before { font-size: 8px; margin-bottom: 14px; }
+  .world-codex .kingdom-frame > tbody > tr:first-child { padding: 12px 0 26px; }
+  .world-codex .kingdom-heraldic-figure { display: block; width: 64px; }
+  .world-codex .kingdom-main-crest { grid-row: auto; height: 130px !important; }
+  .world-codex .kingdom-frame .kingdom-infobox { width: 100% !important; max-width: 100% !important; }
+  .world-codex .kingdom-toc ol { gap: 7px 20px; font-size: 13px; }
+  .world-codex .kingdom-frame > tbody > tr > td { overflow-x: auto; }
+}

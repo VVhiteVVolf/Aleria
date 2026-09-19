@@ -49,13 +49,17 @@
       fragment.append(row);
       return;
     }
-    people.forEach((person) => appendPerson(fragment, person));
+    people.forEach((person, index) => appendPerson(fragment, person, index));
   }
 
-  function appendPerson(fragment, person) {
+  function appendPerson(fragment, person, index) {
     const roleRow = document.createElement("tr");
     const portraitRow = document.createElement("tr");
     const nameRow = document.createElement("tr");
+    [roleRow, portraitRow, nameRow].forEach((row) => {
+      row.dataset.personalityTone = ["sage", "ochre", "slate"][index % 3];
+    });
+    roleRow.className = "orte-personality-start";
     const role = createCell("portrait-cell pt-s-0076", person.role || "…");
     const description = createCell("desc-cell pt-s-0077");
     description.colSpan = 3;

@@ -1,3 +1,8 @@
+import { CREATURE_SHEET_PAGES, renderCreaturePages, renderCreaturePageTabs, creaturePageFromKey } from './creature-sheet-pages.js?v=20260919-creature-pages-v1';
+import { renderCreatureImages } from './creature-images-view.js?v=20260919-creature-pages-v1';
+import { createCreatureImagesEditor, collectCreatureImages } from './creature-images-editor.js?v=20260919-creature-pages-v1';
+import { normalizeCreatureImages } from './creature-images-model.js?v=20260919-creature-pages-v1';
+import { createImageLibraryAutosave } from '../image-library/image-library-autosave.js?v=20260919-creature-pages-v1';
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   COMBAT_WEAPON_TYPE_OPTIONS,
@@ -25,19 +30,18 @@ import {
 import {
   CREATURE_ARCHIVE_EXPORT_TYPE,
   CREATURE_SCHEMA_VERSION,
-  MAX_CREATURE_AVATARS,
   createCreatureDraft,
   createCreatureDuplicate,
   makeCreatureSceneActor,
   makeCreatureExportPayload,
   normalizeCreatureImportPayload,
   sanitizeCreature
-} from './creature-model.js?v=20260909-dragon-parent-v2';
+} from './creature-model.js?v=20260919-creature-pages-v1';
 import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
   isBuiltinCreatureId
-} from './creature-catalog.js?v=20260909-dragon-parent-v2';
+} from './creature-catalog.js?v=20260919-creature-pages-v1';
 import { selectChangedSections } from '../characters/character-save-guard.js?v=20260808-character-storage-audit-v1';
 
 const state = {
@@ -45,8 +49,59 @@ const state = {
   loaded: false,
   loading: false,
   editingId: '',
-  draft: null
+  draft: null,
+  activePage: 'overview',
+  session: 0
 };
+
+const mediaEditor = createCreatureImagesEditor({
+  getRoot: () => document.getElementById('creature-sheet-root'),
+  getDraft: () => state.draft,
+  collect: collectDraftFromForm,
+  render: renderSheet,
+  onChange: scheduleCreatureImages
+});
+
+const imageAutosave = createImageLibraryAutosave({
+  async write(snapshot) {
+    const backend = await ensureBackend();
+    await backend.saveCreature(snapshot.recordId, { ...snapshot.images, updatedAt: new Date().toISOString() });
+  },
+  onQueued() { setStatus('Bilder und Sets werden gespeichert …'); },
+  onSaved(snapshot, { isLatest }) {
+    const stored = state.creatures.find(creature => creature.id === snapshot.recordId);
+    if (stored) Object.assign(stored, clone(snapshot.images));
+    renderLibrary();
+    dispatchChanged();
+    if (isLatest && state.session === snapshot.session) setStatus('Bilder und Sets online gespeichert.', 'success');
+  },
+  onError(error, snapshot) {
+    if (state.session === snapshot.session) setStatus(`Bilder noch nicht gespeichert: ${error.message} Mit „Online speichern“ erneut versuchen.`, 'error');
+  }
+});
+
+function scheduleCreatureImages() {
+  if (!state.draft) return;
+  if (state.saving) { state.pendingImages = true; return; }
+  if (!state.editingId || !state.creatures.some(item => item.id === state.editingId && !item._builtin)) {
+    setStatus('Bilder im Entwurf übernommen. Die Kreatur zuerst mit „Online speichern“ anlegen.');
+    return;
+  }
+  imageAutosave.schedule({
+    recordId: state.editingId,
+    session: state.session,
+    images: clone({ ...normalizeCreatureImages(state.draft), portraitCaption: state.draft.portraitCaption })
+  });
+}
+
+function switchCreaturePage(page) {
+  if (!state.draft || !CREATURE_SHEET_PAGES.some(item => item.id === page)) return;
+  collectDraftFromForm();
+  state.activePage = page;
+  renderSheet();
+  document.getElementById('creature-sheet-root').scrollTop = 0;
+  document.getElementById(`creature-tab-${page}`)?.focus({ preventScroll: true });
+}
 
 function renderCreatureSpellLevelOptions(value = 0) {
   return Array.from({ length: 11 }, (_entry, level) => `<option value="${level}"${Number(value) === level ? ' selected' : ''}>${escapeHtml(getSpellLevelLabel(level))}</option>`).join('');
@@ -313,16 +368,14 @@ function renderSheet() {
   const creature = sanitizeCreature(state.draft);
   state.draft = clone(creature);
   const profile = creature.combatProfile;
-  const portrait = safeImageUrl(creature.portrait);
   const maximumHp = getMaximumHitPoints(profile);
   const armorClass = getArmorClass(profile);
   const proficiency = getProficiencyBonus(profile);
   const passivePerception = getPassivePerception(profile);
-  const editorOpen = root.querySelector('.creature-sheet-editor')?.open === true;
-  root.innerHTML = `
-    ${renderCreatureDossier(creature)}
-    <details class="creature-sheet-editor"${editorOpen ? ' open' : ''}><summary>Bogen bearbeiten · Werte, Angriffe, Ressourcen &amp; Zustände</summary>
-    <section class="creature-sheet-section creature-identity-section">
+  const scrollTop = root.scrollTop;
+  const contents = {
+    overview: renderCreatureDossier(creature),
+    profile: `    <section class="creature-sheet-section creature-identity-section">
       <div class="creature-section-title"><span>1</span> Kopfleiste / Identität</div>
       <div class="creature-identity-grid">
         ${renderField('Name', 'name', creature.name)}
@@ -335,17 +388,12 @@ function renderSheet() {
       </div>
       <p class="creature-level-guideline"><strong>Stufenorientierung:</strong> ${CREATURE_LEVEL_GUIDELINES.map(formatLevelGuideline).join(' · ')}</p>
     </section>
-    <div class="creature-sheet-primary">
-      <section class="creature-sheet-section creature-portrait-section">
-        <div class="creature-section-title"><span>2</span> Erscheinung</div>
-        <div class="creature-portrait-frame">
-          ${portrait ? `<img src="${escapeHtml(portrait)}" alt="${escapeHtml(creature.name)}" referrerpolicy="no-referrer">` : '<div class="creature-portrait-placeholder">☠<small>Portrait-URL eintragen</small></div>'}
-        </div>
-        ${renderField('Portrait-URL', 'portrait', creature.portrait, { type: 'url' })}
-        ${renderField('Bildunterschrift', 'portraitCaption', creature.portraitCaption)}
-      </section>
-      <div class="creature-sheet-core">
-        <section class="creature-sheet-section">
+    <section class="creature-sheet-section">
+      <div class="creature-section-title"><span>9</span> Spielleitungsnotizen</div>
+      <textarea class="creature-textarea" rows="4" data-creature-field="notes" placeholder="Taktik, Verhalten, Geheimnisse und besondere Regeln …">${escapeHtml(creature.notes)}</textarea>
+    </section>
+`,
+    combat: `<div class="creature-sheet-columns">        <section class="creature-sheet-section">
           <div class="creature-section-title"><span>3</span> Abgeleitete Kampfwerte</div>
           <div class="creature-derived-grid">
             <label><span>TP aktuell</span><input type="number" min="0" max="9999" data-combat-field="hp-current" value="${escapeHtml(profile.hitPoints.current ?? maximumHp)}"><b>♥ ${escapeHtml(profile.hitPoints.current ?? maximumHp)} / ${maximumHp}</b></label>
@@ -370,31 +418,27 @@ function renderSheet() {
             }).join('')}</div>
           </div>
         </section>
-      </div>
-    </div>
-    ${renderAttacks(profile)}
-    ${renderCreatureResources(profile)}
-    <div class="creature-sheet-columns">
-      ${renderCreatureDetailSection(profile, 'techniques', 'T', 'Techniken & Formen', 'technique', 'Technik', item => !['reaction', 'bonus-action'].includes(item.activationType), 'action')}
-      ${renderCreatureDetailSection(profile, 'techniques', 'B', 'Reaktionen & Bonusaktionen', 'technique', 'Reaktion / Bonusaktion', item => ['reaction', 'bonus-action'].includes(item.activationType), 'bonus-action')}
-    </div>
-    ${renderCreatureAura(profile)}
-    <div class="creature-sheet-columns">
-      ${renderAbilities(profile)}
-      ${renderSkillsAndSaves(profile)}
-    </div>
-    <div class="creature-sheet-columns">
-      ${renderCreatureDetailSection(profile, 'quirks', 'E', 'Marotten & Eigenschaften', 'quirk', 'Marotte')}
-      ${renderCreatureMagic(profile)}
-    </div>
-    ${renderConditions(profile)}
+</div>
+      ${renderCreatureResources(profile)}
+      <div class="creature-sheet-columns">${renderSkillsAndSaves(profile)}${renderConditions(profile)}</div>
     <section class="creature-sheet-section creature-cheat-section"><div class="creature-section-title"><span>!</span> Spielleiter-Cheat</div><label class="creature-active-toggle"><input type="checkbox" data-creature-profile-path="cheats.enabled"${profile.cheats.enabled ? ' checked' : ''}> Kosten entfallen und Angriffe gelingen automatisch</label><label class="creature-active-toggle"><input type="checkbox" data-creature-profile-path="cheats.automaticCritical"${profile.cheats.automaticCritical ? ' checked' : ''}> automatische kritische Treffer</label></section>
-    ${renderLoot(creature)}
-    <section class="creature-sheet-section">
-      <div class="creature-section-title"><span>9</span> Spielleitungsnotizen</div>
-      <textarea class="creature-textarea" rows="4" data-creature-field="notes" placeholder="Taktik, Verhalten, Geheimnisse und besondere Regeln …">${escapeHtml(creature.notes)}</textarea>
-    </section>
-    ${renderAvatars(creature)}</details>`;
+`,
+    abilities: `${renderAttacks(profile)}
+      <div class="creature-sheet-columns">
+        ${renderCreatureDetailSection(profile, 'techniques', 'T', 'Techniken & Formen', 'technique', 'Technik', item => !['reaction', 'bonus-action'].includes(item.activationType), 'action')}
+        ${renderCreatureDetailSection(profile, 'techniques', 'B', 'Reaktionen & Bonusaktionen', 'technique', 'Reaktion / Bonusaktion', item => ['reaction', 'bonus-action'].includes(item.activationType), 'bonus-action')}
+      </div>
+      <div class="creature-sheet-columns">${renderAbilities(profile)}${renderCreatureDetailSection(profile, 'quirks', 'E', 'Marotten & Eigenschaften', 'quirk', 'Marotte')}</div>`,
+    magic: `${renderCreatureMagic(profile)}${renderCreatureAura(profile)}`,
+    loot: renderLoot(creature),
+    images: renderCreatureImages(creature, escapeHtml, mediaEditor.viewState())
+  };
+  root.innerHTML = renderCreaturePages(contents, state.activePage);
+  root.scrollTop = scrollTop;
+  const tabs = document.getElementById('creature-page-tabs');
+  if (tabs) tabs.innerHTML = renderCreaturePageTabs(state.activePage);
+  const title = document.getElementById('creature-profile-title');
+  if (title) title.textContent = creature.name;
   root.querySelectorAll('.creature-resource-icon').forEach(image => {
     const markFailed = () => image.closest('.creature-resource-icon-frame')?.classList.add('is-missing');
     if (image.complete && image.naturalWidth === 0) markFailed();
@@ -510,7 +554,7 @@ function renderConditions(profile) {
 
 function renderLoot(creature) {
   return `<section class="creature-sheet-section creature-loot-section">
-    <div class="creature-section-head"><div class="creature-section-title"><span>☒</span> Mini-Lootbox</div><button type="button" data-creature-action="add-loot">+ Beute</button></div>
+    <div class="creature-section-head"><div class="creature-section-title"><span>☒</span> Lootbox · mögliche Beute</div><button type="button" data-creature-action="add-loot">+ Beute</button></div>
     <div class="creature-loot-meta">
       ${renderField('Münzen / Währung', 'loot.currency', creature.loot.currency, { placeholder: '12 Silber, 2 Gold …' })}
       <label class="creature-field"><span>Loot-Notiz</span><input data-creature-field="loot.notes" value="${escapeHtml(creature.loot.notes)}" placeholder="Besondere Bergungsregel …"></label>
@@ -525,39 +569,6 @@ function renderLoot(creature) {
   </section>`;
 }
 
-function renderAvatars(creature) {
-  const avatars = Array.isArray(creature.avatars) ? creature.avatars : [];
-  const canAdd = avatars.length < MAX_CREATURE_AVATARS;
-  return `<section class="creature-sheet-section creature-avatar-section">
-    <div class="creature-section-head">
-      <div>
-        <div class="creature-section-title"><span>10</span> Avatar-Galerie</div>
-        <p class="creature-avatar-help">Bis zu ${MAX_CREATURE_AVATARS} zusätzliche Ausdrücke für Auftritte im Kommentarbereich. Das große Portrait bleibt die Standardauswahl.</p>
-      </div>
-      <strong class="creature-avatar-count">${avatars.length} / ${MAX_CREATURE_AVATARS}</strong>
-    </div>
-    <div class="creature-avatar-grid">
-      ${avatars.map((avatar, index) => {
-        const image = safeImageUrl(avatar.img);
-        return `<article class="creature-avatar-card" data-avatar-index="${index}">
-          <div class="creature-avatar-preview">
-            ${image ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(avatar.label || `Avatar ${index + 1}`)}" loading="lazy" decoding="async">` : '<span>☠</span>'}
-          </div>
-          <label><span>Bezeichnung</span><input data-avatar-field="label" value="${escapeHtml(avatar.label)}" maxlength="80" placeholder="z. B. zornig"></label>
-          <label><span>Bild-URL</span><input type="url" data-avatar-field="img" value="${escapeHtml(avatar.img)}" placeholder="https://i.imgur.com/..."></label>
-          <button type="button" class="creature-row-remove" data-creature-action="remove-avatar" data-index="${index}" aria-label="Avatar entfernen">×</button>
-        </article>`;
-      }).join('') || '<div class="creature-table-empty creature-avatar-empty">Noch keine zusätzlichen Avatare eingetragen.</div>'}
-      ${canAdd ? `<div class="creature-avatar-add-card">
-        <strong>Avatar hinzufügen</strong>
-        <input type="text" data-new-avatar-field="label" maxlength="80" placeholder="Bezeichnung, z. B. verwundet">
-        <input type="url" data-new-avatar-field="img" placeholder="https://i.imgur.com/...">
-        <button type="button" data-creature-action="add-avatar">+ Avatar übernehmen</button>
-      </div>` : '<div class="creature-avatar-limit">Alle zehn Avatarplätze sind belegt.</div>'}
-    </div>
-  </section>`;
-}
-
 function readNumber(element, fallback = 0) {
   const parsed = Number(element?.value);
   return Number.isFinite(parsed) ? parsed : fallback;
@@ -566,7 +577,8 @@ function readNumber(element, fallback = 0) {
 function collectDraftFromForm() {
   if (!state.draft) return null;
   const next = clone(state.draft);
-  document.querySelectorAll('#creature-sheet-root [data-creature-field]').forEach(element => {
+  const root = document.getElementById('creature-sheet-root');
+  root.querySelectorAll('[data-creature-field]').forEach(element => {
     const path = element.dataset.creatureField;
     const value = element.type === 'number' ? readNumber(element) : element.value;
     if (path === 'loot.currency') next.loot.currency = value;
@@ -574,34 +586,34 @@ function collectDraftFromForm() {
     else next[path] = value;
   });
   const profile = clone(next.combatProfile);
-  document.querySelectorAll('#creature-sheet-root [data-creature-profile-path]').forEach(element => {
+  root.querySelectorAll('[data-creature-profile-path]').forEach(element => {
     const value = element.type === 'checkbox' ? element.checked : (element.type === 'number' ? readNumber(element) : element.value);
     setAtPath(profile, element.dataset.creatureProfilePath, value);
   });
-  profile.progression.level = Math.min(20, Math.max(1, readNumber(document.querySelector('[data-creature-field="level"]'), next.level)));
+  profile.progression.level = Math.min(20, Math.max(1, readNumber(root.querySelector('[data-creature-field="level"]'), next.level)));
   profile.progression.specialLevels = Math.max(0, Math.min(10, next.level - 20));
-  profile.hitPoints.current = readNumber(document.querySelector('[data-combat-field="hp-current"]'), 0);
-  profile.hitPoints.maximumOverride = readNumber(document.querySelector('[data-combat-field="hp-maximum"]'), 10);
-  profile.armorClass.override = readNumber(document.querySelector('[data-combat-field="armor-class"]'), 10);
-  profile.combat.movement = readNumber(document.querySelector('[data-combat-field="movement"]'), 9);
-  const enteredProficiency = readNumber(document.querySelector('[data-combat-field="proficiency"]'), getProficiencyBonus(profile));
+  profile.hitPoints.current = readNumber(root.querySelector('[data-combat-field="hp-current"]'), 0);
+  profile.hitPoints.maximumOverride = readNumber(root.querySelector('[data-combat-field="hp-maximum"]'), 10);
+  profile.armorClass.override = readNumber(root.querySelector('[data-combat-field="armor-class"]'), 10);
+  profile.combat.movement = readNumber(root.querySelector('[data-combat-field="movement"]'), 9);
+  const enteredProficiency = readNumber(root.querySelector('[data-combat-field="proficiency"]'), getProficiencyBonus(profile));
   if (enteredProficiency !== getProficiencyBonus(profile)) profile.progression.proficiencyBonusOverride = enteredProficiency;
-  profile.combat.passivePerceptionBonus = readNumber(document.querySelector('[data-combat-field="passive-perception"]'), 0);
-  document.querySelectorAll('[data-attribute-key]').forEach(element => {
+  profile.combat.passivePerceptionBonus = readNumber(root.querySelector('[data-combat-field="passive-perception"]'), 0);
+  root.querySelectorAll('[data-attribute-key]').forEach(element => {
     const attribute = profile.attributes.find(item => item.key === element.dataset.attributeKey);
     if (attribute) attribute.score = readNumber(element, 10);
   });
-  document.querySelectorAll('[data-save-key]').forEach(element => {
+  root.querySelectorAll('[data-save-key]').forEach(element => {
     const save = profile.savingThrows.find(item => item.attributeKey === element.dataset.saveKey);
     if (save) save.proficient = element.checked;
   });
-  document.querySelectorAll('[data-creature-resource-id]').forEach(row => {
+  root.querySelectorAll('[data-creature-resource-id]').forEach(row => {
     const resource = profile.resources.find(item => item.id === row.dataset.creatureResourceId);
     if (!resource) return;
     resource.current = readNumber(row.querySelector('[data-resource-field="current"]'), resource.current);
     resource.maximum = readNumber(row.querySelector('[data-resource-field="maximum"]'), resource.maximum);
   });
-  profile.weapons = Array.from(document.querySelectorAll('[data-attack-index]')).map((row, index) => ({
+  profile.weapons = Array.from(root.querySelectorAll('[data-attack-index]')).map((row, index) => ({
     ...(profile.weapons[index] || {}),
     id: profile.weapons[index]?.id || makeId('attack'),
     name: row.querySelector('[data-attack-field="name"]')?.value || '',
@@ -615,13 +627,13 @@ function collectDraftFromForm() {
     equipped: profile.weapons[index]?.equipped ?? index === 0,
     proficient: profile.weapons[index]?.proficient ?? true
   }));
-  const abilityRows = Array.from(document.querySelectorAll('[data-ability-index]'));
+  const abilityRows = Array.from(root.querySelectorAll('[data-ability-index]'));
   if (abilityRows.length) profile.abilities = abilityRows.map((row, index) => ({
     ...(profile.abilities[index] || {}), id: profile.abilities[index]?.id || makeId('ability'),
     name: row.querySelector('[data-ability-field="name"]')?.value || '',
     description: row.querySelector('[data-ability-field="description"]')?.value || '', active: true
   }));
-  const spellRows = Array.from(document.querySelectorAll('[data-spell-index]'));
+  const spellRows = Array.from(root.querySelectorAll('[data-spell-index]'));
   profile.magic.spells = spellRows.map((row, index) => {
     const existing = profile.magic.spells[index] || {};
     const level = Math.max(0, Math.min(10, readNumber(row.querySelector('[data-spell-field="level"]'), existing.level || 0)));
@@ -640,38 +652,36 @@ function collectDraftFromForm() {
       prepared: true
     };
   });
-  profile.skills = Array.from(document.querySelectorAll('[data-skill-index]')).map((row, index) => ({
+  profile.skills = Array.from(root.querySelectorAll('[data-skill-index]')).map((row, index) => ({
     ...(profile.skills[index] || {}), id: profile.skills[index]?.id || makeId('skill'),
     name: row.querySelector('[data-skill-field="name"]')?.value || '',
     attributeKey: row.querySelector('[data-skill-field="attributeKey"]')?.value || 'dexterity',
     proficiency: row.querySelector('[data-skill-field="proficiency"]')?.value || 'none'
   }));
-  profile.conditions = Array.from(document.querySelectorAll('[data-condition-index]')).map((row, index) => ({
+  profile.conditions = Array.from(root.querySelectorAll('[data-condition-index]')).map((row, index) => ({
     ...(profile.conditions[index] || {}), id: profile.conditions[index]?.id || makeId('condition'),
     name: row.querySelector('[data-condition-field="name"]')?.value || '',
     duration: row.querySelector('[data-condition-field="duration"]')?.value || '',
     description: row.querySelector('[data-condition-field="description"]')?.value || '',
     active: !!row.querySelector('[data-condition-field="active"]')?.checked
   }));
-  next.loot.items = Array.from(document.querySelectorAll('[data-loot-index]')).map((row, index) => ({
+  next.loot.items = Array.from(root.querySelectorAll('[data-loot-index]')).map((row, index) => ({
     ...(next.loot.items[index] || {}), id: next.loot.items[index]?.id || makeId('loot'),
     name: row.querySelector('[data-loot-field="name"]')?.value || '',
     quantity: readNumber(row.querySelector('[data-loot-field="quantity"]'), 1),
     chance: readNumber(row.querySelector('[data-loot-field="chance"]'), 100),
     notes: row.querySelector('[data-loot-field="notes"]')?.value || ''
   }));
-  next.avatars = Array.from(document.querySelectorAll('[data-avatar-index]')).map((row, index) => ({
-    ...(next.avatars[index] || {}),
-    id: next.avatars[index]?.id || makeId('avatar'),
-    label: row.querySelector('[data-avatar-field="label"]')?.value || '',
-    img: row.querySelector('[data-avatar-field="img"]')?.value || ''
-  })).filter(avatar => String(avatar.img || '').trim()).slice(0, MAX_CREATURE_AVATARS);
+  collectCreatureImages(document.getElementById('creature-sheet-root'), next);
   next.combatProfile = profile;
   state.draft = sanitizeCreature(next);
   return state.draft;
 }
 
 function openSheet(id = '') {
+  state.session += 1;
+  state.activePage = id ? 'overview' : 'profile';
+  mediaEditor.reset();
   state.editingId = String(id || '');
   const source = state.editingId ? state.creatures.find(item => item.id === state.editingId) : null;
   state.draft = source ? clone(source) : createCreatureDraft();
@@ -690,6 +700,14 @@ function openSheet(id = '') {
 }
 
 function closeSheet() {
+  if (state.draft) {
+    const previousImages = JSON.stringify(normalizeCreatureImages(state.draft));
+    collectCreatureImages(document.getElementById('creature-sheet-root'), state.draft);
+    if (JSON.stringify(normalizeCreatureImages(state.draft)) !== previousImages) scheduleCreatureImages();
+  }
+  state.session += 1;
+  mediaEditor.reset();
+  void imageAutosave.flush();
   const overlay = getOverlay();
   overlay?.classList.remove('open');
   overlay?.setAttribute('aria-hidden', 'true');
@@ -699,12 +717,19 @@ function closeSheet() {
 }
 
 async function saveCurrent() {
+  if (state.saving) return;
   const creature = collectDraftFromForm();
   if (!creature?.name) {
     setStatus('Bitte gib der Kreatur einen Namen.', 'error');
     return;
   }
+  const session = state.session;
+  const editingId = state.editingId;
+  const baseline = clone(state.draftLoadedSnapshot);
+  state.saving = true;
+  state.pendingImages = false;
   try {
+    await imageAutosave.flush(editingId);
     setStatus('Wird dauerhaft online gespeichert …');
     const backend = await ensureBackend();
     const now = new Date().toISOString();
@@ -713,26 +738,29 @@ async function saveCurrent() {
     // Kampfprofil/Loot nur mitschicken, wenn sie sich seit dem Öffnen des Bogens wirklich
     // geändert haben - sonst würde jede Kleinigkeit (z. B. eine Notiz) das komplette, evtl.
     // veraltete Kampfprofil zurückschreiben. Siehe character-save-guard.js/selectChangedSections.
-    const changedSections = new Set(selectChangedSections(data, state.draftLoadedSnapshot, ['combatProfile', 'loot']));
-    if (state.draftLoadedSnapshot && !changedSections.has('combatProfile')) delete data.combatProfile;
-    if (state.draftLoadedSnapshot && !changedSections.has('loot')) delete data.loot;
-    const id = await backend.saveCreature(state.editingId || null, data);
-    state.editingId = id;
-    // data kann combatProfile/loot bewusst auslassen (siehe oben) - state.draft und der lokale
-    // Zwischenspeicher brauchen trotzdem den vollständigen, zuvor bekannten Datensatz.
+    const changedSections = new Set(selectChangedSections(data, baseline, ['combatProfile', 'loot']));
+    if (baseline && !changedSections.has('combatProfile')) delete data.combatProfile;
+    if (baseline && !changedSections.has('loot')) delete data.loot;
+    const id = await backend.saveCreature(editingId || null, data);
     const previous = state.creatures.find(item => item.id === id) || {};
-    state.draft = { ...previous, ...data, id };
-    state.draftLoadedSnapshot = { combatProfile: state.draft.combatProfile, loot: state.draft.loot };
+    const saved = sanitizeCreature({ ...previous, ...data, id });
     const index = state.creatures.findIndex(item => item.id === id);
-    if (index >= 0) state.creatures[index] = state.draft;
-    else state.creatures.push(state.draft);
+    if (index >= 0) state.creatures[index] = saved;
+    else state.creatures.push(saved);
     state.creatures.sort((a, b) => a.name.localeCompare(b.name, 'de'));
-    setStatus('Online gespeichert.', 'success');
+    if (state.session === session && state.draft) {
+      collectDraftFromForm();
+      state.editingId = id;
+      state.draft.id = id;
+      state.draft.createdAt = saved.createdAt;
+      state.draftLoadedSnapshot = { combatProfile: clone(saved.combatProfile), loot: clone(saved.loot) };
+      setStatus('Online gespeichert.', 'success');
+      renderSheet();
+    }
     renderLibrary();
-    renderSheet();
     dispatchChanged();
     try {
-      await window.AleriaCharacterArchive?.archiveRecord?.({ ...state.draft, entityType: 'creature' }, 'creature');
+      await window.AleriaCharacterArchive?.archiveRecord?.({ ...saved, entityType: 'creature' }, 'creature');
     } catch (archiveError) {
       console.info('Kreatur wurde gespeichert; der Online-Abgleich des Charakterbogen-Archivs folgt später.', archiveError);
       notify('Kreatur gespeichert. Das Charakterbogen-Archiv wurde vorerst lokal ergänzt.', 'info');
@@ -740,7 +768,10 @@ async function saveCurrent() {
     notify(`${creature.name} wurde gespeichert.`, 'success');
   } catch (error) {
     console.error('save creature failed:', error);
-    setStatus(error?.message || 'Kreatur konnte nicht gespeichert werden.', 'error');
+    if (state.session === session) setStatus(error?.message || 'Kreatur konnte nicht gespeichert werden.', 'error');
+  } finally {
+    state.saving = false;
+    if (state.pendingImages) { state.pendingImages = false; scheduleCreatureImages(); }
   }
 }
 
@@ -770,6 +801,8 @@ async function deleteCurrent() {
   if (!confirm(`„${state.draft.name}“ dauerhaft aus dem Kreaturenregister löschen?`)) return;
   try {
     const backend = await ensureBackend();
+    imageAutosave.cancel(state.editingId);
+    await imageAutosave.flush(state.editingId);
     await backend.deleteCreature(state.editingId);
     state.creatures = state.creatures.filter(item => item.id !== state.editingId);
     closeSheet();
@@ -818,6 +851,7 @@ function importCurrent() {
       const imported = normalizeCreatureImportPayload(payload);
       if (imported.length !== 1) throw new Error('Bitte wähle für den geöffneten Bogen genau eine Kreatur aus.');
       const preservedId = state.editingId;
+      mediaEditor.reset();
       state.draft = { ...imported[0], id: preservedId || undefined };
       renderSheet();
       setStatus('Importiert. Mit „Online speichern“ dauerhaft übernehmen.', 'success');
@@ -851,25 +885,6 @@ function importArchive() {
 }
 
 function addRow(kind) {
-  if (kind === 'avatar') {
-    collectDraftFromForm();
-    const avatars = Array.isArray(state.draft.avatars) ? state.draft.avatars : [];
-    if (avatars.length >= MAX_CREATURE_AVATARS) {
-      setStatus(`Maximal ${MAX_CREATURE_AVATARS} Avatare pro Kreatur.`, 'error');
-      return;
-    }
-    const label = String(document.querySelector('[data-new-avatar-field="label"]')?.value || '').trim() || `Avatar ${avatars.length + 1}`;
-    const img = safeImageUrl(document.querySelector('[data-new-avatar-field="img"]')?.value || '');
-    if (!img) {
-      setStatus('Bitte eine gültige http(s)-Bild-URL für den Avatar angeben.', 'error');
-      return;
-    }
-    avatars.push({ id: makeId('avatar'), label, img });
-    state.draft.avatars = avatars;
-    renderSheet();
-    setStatus('Avatar ergänzt. Mit „Online speichern“ dauerhaft übernehmen.', 'success');
-    return;
-  }
   collectDraftFromForm();
   const profile = state.draft.combatProfile;
   if (kind === 'attack') { const id = makeId('attack'); profile.weapons.push({ id, name: '', weaponType: 'natural', training: 'simple', damageFormula: '', damageType: 'physisch', attackAttribute: 'strength', proficient: true, range: 'Nahkampf', activationType: 'action', costs: [{ id: `${id}-cost`, resourceId: 'action', name: 'Aktion', amount: 1, scope: 'comment' }], auraBypass: { allowed: true, cost: 1 }, equipped: profile.weapons.length === 0 }); }
@@ -983,12 +998,15 @@ function removeCreatureDetail(collection, itemId) {
 
 function removeRow(kind, index) {
   collectDraftFromForm();
-  const mapping = { attack: state.draft.combatProfile.weapons, ability: state.draft.combatProfile.abilities, spell: state.draft.combatProfile.magic.spells, skill: state.draft.combatProfile.skills, condition: state.draft.combatProfile.conditions, loot: state.draft.loot.items, avatar: state.draft.avatars };
+  const mapping = { attack: state.draft.combatProfile.weapons, ability: state.draft.combatProfile.abilities, spell: state.draft.combatProfile.magic.spells, skill: state.draft.combatProfile.skills, condition: state.draft.combatProfile.conditions, loot: state.draft.loot.items };
   mapping[kind]?.splice(index, 1);
   renderSheet();
 }
 
 function handleClick(event) {
+  const page = event.target.closest('[data-creature-page]');
+  if (page) { switchCreaturePage(page.dataset.creaturePage); return; }
+  mediaEditor.handleClick(event);
   const trigger = event.target.closest('[data-creature-action]');
   if (!trigger) return;
   const action = trigger.dataset.creatureAction;
@@ -1014,15 +1032,18 @@ function handleClick(event) {
 }
 
 function handleInput(event) {
+  mediaEditor.handleInput(event);
   if (!event.target.closest('#creature-sheet-root')) return;
-  if (event.type === 'change' && (event.target.matches('[data-attribute-key], [data-combat-field], [data-save-key], [data-creature-field="level"], [data-avatar-field="img"]'))) {
+  if (event.type === 'change' && (event.target.matches('[data-attribute-key], [data-combat-field], [data-save-key], [data-creature-field="level"]'))) {
     collectDraftFromForm();
     renderSheet();
   }
 }
 
 function handleKeydown(event) {
-  if (event.key === 'Escape' && getOverlay()?.classList.contains('open')) closeSheet();
+  const page = creaturePageFromKey(event);
+  if (page) { switchCreaturePage(page); document.getElementById(`creature-tab-${page}`)?.focus(); return; }
+  if (event.key === 'Escape' && getOverlay()?.classList.contains('open') && getOverlay().contains(event.target)) closeSheet();
 }
 
 function handleCommittedCreatureCombatProfile(event) {
@@ -1094,6 +1115,7 @@ document.addEventListener('click', handleClick);
 document.addEventListener('input', handleInput);
 document.addEventListener('change', handleInput);
 document.addEventListener('keydown', handleKeydown);
+['dragover', 'dragleave', 'drop'].forEach(type => document.addEventListener(type, mediaEditor.handleDrag));
 document.addEventListener('aleria:combat-profile-committed', handleCommittedCreatureCombatProfile);
 document.addEventListener('aleria:item-register-records', event => {
   if (!event.detail?.creaturesReady) return;

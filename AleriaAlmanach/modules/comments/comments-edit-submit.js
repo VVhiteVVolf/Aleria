@@ -26,9 +26,7 @@ async function submitEditComment() {
       ? { actorType: 'creature', creatureId: _editSelectedCharId }
       : { actorType: 'character', creatureId: '' };
     const actorCommentMode = c.entityType === 'creature' ? 'creature' : 'character';
-    const presentation = c.entityType === 'creature'
-      ? c
-      : applyCharacterImageSetPresentation(c, _editSelectedImageSetId);
+    const presentation = applyCharacterImageSetPresentation(c, _editSelectedImageSetId);
     const selectedImageSetId = presentation.selectedImageSetId || '';
     const imageSetChanged = _editImageSetChangedByUser;
     if (_editSelectedEmoteIdx !== null && presentation.emotes && presentation.emotes[_editSelectedEmoteIdx]) {

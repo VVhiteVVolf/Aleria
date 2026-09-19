@@ -32,6 +32,9 @@ function loadImporter() {
   });
   context.normalizeCharacterImageSetImageUrl = context.normalizeImageUrlForStorage;
   context.getActiveCharacterImageSet = () => context.activeSet;
+  for (const name of ['image-library-model', 'image-library-import']) {
+    vm.runInContext(fs.readFileSync(new URL(`../modules/image-library/${name}.js`, import.meta.url), 'utf8'), context);
+  }
   for (const name of ['character-avatar-import', 'character-album-import', 'character-profile-events']) {
     vm.runInContext(fs.readFileSync(new URL(`../modules/characters/${name}.js`, import.meta.url), 'utf8'), context);
   }

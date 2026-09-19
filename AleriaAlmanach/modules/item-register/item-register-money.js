@@ -43,8 +43,22 @@ export function formatCopper(value) {
 }
 
 export function parsePrice(price, currency = '') {
-  const source = String(price ?? '').trim();
+  const source = String(price ?? '').replace(/[\u200b-\u200d\ufeff]/g, '').trim();
   if (!source || /unbekannt|unbezahlbar|ausgestorben|nicht.*(?:handel|käuflich)/i.test(source)) return null;
+  // Module menus also use mixed denominations, e.g. "1 KT 10 Pfennig".
+  // Require the entire expression to match; never invent a price from prose.
+  const parts = [...source.matchAll(/(\d[\d.,]*)\s*([a-zäöü]+)/gi)];
+  if (parts.length > 1 && /^(?:\s*(?:&|\+|und)?\s*)*$/.test(source.replace(/\d[\d.,]*\s*[a-zäöü]+/gi, ''))) {
+    let minor = 0;
+    for (const [, value, label] of parts) {
+      const unit = label.toLowerCase();
+      const amount = localizedNumber(value);
+      if (!Object.hasOwn(UNITS, unit) || amount == null) return null;
+      minor += toMinor(amount * UNITS[unit]);
+    }
+    if (!Number.isSafeInteger(minor)) return null;
+    return { minCopper: minor / 100, maxCopper: minor / 100 };
+  }
   const match = source.match(/^(\d[\d.,]*)(?:\s*[-–—]\s*(\d[\d.,]*))?\s*([a-zäöü]+)?$/i);
   if (!match) return null;
   const unit = String(match[3] || currency || 'K').trim().toLowerCase();

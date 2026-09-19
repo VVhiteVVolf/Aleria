@@ -6,9 +6,11 @@ import { renderReligionEntry } from '../modules/content/page-template.mjs';
 import { readClergyCatalog } from '../modules/clergy/clergy-repository.mjs';
 import { renderClergyPages } from '../modules/clergy/clergy-pages.mjs';
 import { renderEntryRedirect } from '../modules/content/redirect-template.mjs';
+import { buildReligionModules } from '../modules/almanach/religion-module-build.mjs';
 
 const catalog = readReligionCatalog();
 const check = process.argv.includes('--check');
+const moduleCount = await buildReligionModules({ check, catalog });
 const pages = [
   ['Religionen/index.html', renderCatalog(catalog)],
   ...catalog.entries.filter(entry => entry.page).map(entry => [entryPagePath(entry), renderReligionEntry(catalog, entry)]),
@@ -32,4 +34,4 @@ for (const [path, content] of pages) {
 if (outdated.length) {
   console.error(`Religionsseiten nicht aktuell:\n${outdated.join('\n')}`);
   process.exitCode = 1;
-} else console.log(`${pages.length} Religionsseiten ${check ? 'geprüft' : 'erzeugt'}.`);
+} else console.log(`${pages.length} Religionsseiten und ${moduleCount} Almanach-Religionsmodule ${check ? 'geprüft' : 'erzeugt'}.`);

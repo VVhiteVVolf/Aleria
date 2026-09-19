@@ -1,0 +1,27 @@
+.world-codex .zunft-template-frame > thead > tr > th > p:first-child::before { content: 'ZUNFTREGISTER · HANDWERK & HANDEL'; }
+.world-codex .zunft-template-frame > thead p:has([data-orte-image-key='zunft-symbol']) { grid-column: 2; grid-row: 1 / span 5; align-self: center; }
+.world-codex .zunft-template-frame [data-orte-image-key='zunft-symbol'] { max-width: 180px; }
+.world-codex .zunft-template-frame .zunft-side-image-cell > .orte-image-slot { margin: 26px 0; padding: 10px; border: 1px solid var(--codex-line); background: var(--codex-light); }
+.world-codex .zunft-template .zunft-info-table { margin: 26px 0; border: 1px solid var(--codex-line); background: var(--codex-light); font: 12px/1.65 var(--codex-label); }
+.world-codex .zunft-template .zunft-info-table td { padding: 9px 11px; border: 0; border-bottom: 1px solid var(--codex-rule); background: none; }
+.world-codex .zunft-template .zunft-info-table td:first-child:not([colspan]) { color: var(--codex-muted); background: none; font-weight: 400; }
+.world-codex .zunft-template :is(.zunft-table-title, .zunft-subhead, .zunft-section-row) { background: #e8ddc5; color: var(--codex-rubric); font-family: var(--codex-serif); text-align: left; }
+.world-codex .zunft-template .zunft-info-table td[colspan] { background: #e8ddc5; color: var(--codex-rubric); font: 700 17px/1.4 var(--codex-serif); }
+.world-codex .zunft-template .zunft-logo-cell { background: var(--codex-light); }
+.world-codex .zunft-main-cell details { padding: 12px 16px; border: 1px solid var(--codex-line); border-left: 3px solid var(--codex-rubric); background: #f8f2e399; }
+.world-codex .zunft-main-cell summary { color: var(--codex-rubric); font-weight: 700; }
+.world-codex .zunft-template .zunft-people-table { width: 100% !important; table-layout: fixed; background: var(--codex-light); }
+.world-codex .zunft-template .zunft-people-table :is(td, th) { border-color: var(--codex-rule); }
+.world-codex .zunft-template .zunft-people-table .pt-s-0077 { width: auto !important; background: var(--codex-light); }
+.world-codex .zunft-template .zunft-people-table .pt-s-0076 { width: 30%; color: var(--codex-rubric); background: #e8ddc5; }
+@media (max-width: 800px) {
+  .world-codex .zunft-template .zunft-people-table,
+  .world-codex .zunft-people-table > tbody,
+  .world-codex .zunft-people-table > tbody > tr,
+  .world-codex .zunft-people-table > tbody > tr > td { display: block; width: 100% !important; min-width: 0; }
+  .world-codex .zunft-template .zunft-people-table .pt-s-0077,
+  .world-codex .zunft-template .zunft-people-table .pt-s-0077 > p { height: auto !important; max-height: none; overflow: visible; }
+}
+@media (max-width: 520px) {
+  .world-codex .zunft-template-frame > thead p:has([data-orte-image-key='zunft-symbol']) { grid-column: 1; grid-row: auto; margin: 12px 0; }
+}

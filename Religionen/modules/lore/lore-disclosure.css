@@ -1,0 +1,27 @@
+.lore-disclosure {
+  border: 1px solid #a48a5266;
+  border-radius: 4px;
+  background: #c3ac7910;
+}
+
+.lore-disclosure > summary {
+  padding: 18px 22px;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.lore-disclosure > summary:focus-visible {
+  outline: 2px solid #957642;
+  outline-offset: 4px;
+}
+
+.lore-disclosure > div {
+  padding: 0 22px 8px;
+}
+
+.lore-disclosure > div > p {
+  font-size: 16px;
+  line-height: 1.9;
+  margin: 0 0 20px;
+}

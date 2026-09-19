@@ -1,0 +1,20 @@
+/* Nur die beiden Einstiege auf der bestehenden Königreichsseite. */
+.cenyr-court-entry {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  min-width: 180px;
+  max-width: 100%;
+  padding: 14px 24px;
+  border: 1px solid #a17d45;
+  border-radius: 5px;
+  color: #702b30;
+  background: #f5e8cd;
+  text-decoration: none;
+  font: 700 14px/1.5 Georgia, serif;
+}
+.cenyr-court-entry img { border-radius: 8px; mix-blend-mode: multiply; }
+.cenyr-court-entry:hover { background: #fff3d9; border-color: #702b30; }
+.cenyr-court-entry:focus-visible { outline: 3px solid #702b30; outline-offset: 4px; }
+.cenyr-court-entry-hint { color: #705335; font: 11px/1.5 Verdana, sans-serif; }

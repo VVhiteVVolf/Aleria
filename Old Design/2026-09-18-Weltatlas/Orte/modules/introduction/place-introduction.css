@@ -1,0 +1,27 @@
+.orte-introduction-panel {
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  overflow: hidden;
+}
+
+.orte-introduction-panel > h2 {
+  flex: none;
+}
+
+.orte-introduction-panel > [data-orte-content="introduction"] {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 8px;
+  scrollbar-gutter: stable;
+  scrollbar-color: rgba(77, 45, 14, 0.72) rgba(255, 246, 218, 0.42);
+}
+
+.orte-introduction-map {
+  margin: 0;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

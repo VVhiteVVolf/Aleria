@@ -1,4 +1,4 @@
-import { parsePrice, formatPrice, moneyState } from './item-register-money.js';
+import { parsePrice, formatPrice, moneyState } from './item-register-money.js?v=20260919-shop-v1';
 
 export const REGISTER_SECTIONS = Object.freeze([
   { id: 'standard', label: 'Standardgüter', text: 'Verbindliche Vorlagen und Preismaßstäbe.' },
@@ -26,7 +26,7 @@ export function canManageCharacter(character, access = {}) {
   return !!access.authenticated && (access.canModerate === true || character?.ownerUid === access.uid);
 }
 export function normalizeOffer(input = {}, baseline = []) {
-  const standard = baseline.find(item => item.id === input.templateId);
+  const standard = baseline.find(item => item.id === input.templateId || item.aliases?.includes(input.templateId));
   const price = input.priceRange || parsePrice(input.price, input.currency);
   if (!String(input.id || '').trim() || !String(input.title || '').trim()) throw new Error('Ein Angebot braucht eine ID und einen Namen.');
   if (!String(input.listId || '').trim() || !String(input.listName || '').trim()) throw new Error('Bitte ein Sortiment benennen.');
@@ -87,7 +87,7 @@ export function createOwnedItem(template, { id, characterId, characterName, quan
     image: template.image || '', quantity: String(quantity), weight: String(template.hiddenMeta?.weight || ''),
     tags: (template.tags || []).join(', '), combatDefinition: template.combatDefinition || null, equipped: false,
     value: moneyState(unitCopper), valuation: template.priceRange || null,
-    purchase: { unitCopper, quantity, sourceId: template.id, at: now },
+    purchase: { unitCopper, quantity, sourceId: template.id, at: now, ...(template.moduleId ? { moduleId: template.moduleId } : {}) },
     infoRows: [], attributes: template.attributes || [] };
 }
 

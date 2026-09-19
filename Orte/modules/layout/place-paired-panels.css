@@ -1,0 +1,39 @@
+/* A paired row takes its height from the map/fact sheet. Long prose scrolls inside it.
+   Size containment avoids measuring images in JS and responds to their loading/resizing. */
+.world-codex .grossstadt-template-frame .orte-paired-copy {
+  contain: size;
+  align-self: stretch;
+  min-height: 300px;
+}
+.world-codex .grossstadt-template .orte-paired-panel {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+.world-codex .orte-paired-panel > h2 { flex: none; }
+.world-codex .orte-paired-panel > .orte-paired-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 0 12px 8px 0;
+  scrollbar-gutter: stable;
+  scrollbar-color: #80654c #dfd3b9;
+}
+.orte-paired-scroll:focus-visible { outline: 2px solid #74502c; outline-offset: -2px; }
+
+@media (max-width: 800px) {
+  .world-codex .grossstadt-template-frame .orte-paired-copy { contain: none; min-height: 0; }
+  .world-codex .grossstadt-template .orte-paired-panel { height: auto; max-height: none; }
+  .world-codex .orte-paired-panel > .orte-paired-scroll { flex: none; max-height: 65svh; }
+}
+
+@media print {
+  .world-codex .grossstadt-template-frame .orte-paired-copy { contain: none; }
+  .world-codex .grossstadt-template .orte-paired-panel,
+  .world-codex .orte-paired-panel > .orte-paired-scroll { height: auto; max-height: none; overflow: visible; }
+}

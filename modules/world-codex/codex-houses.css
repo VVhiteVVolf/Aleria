@@ -1,0 +1,61 @@
+.world-codex .haeuser-template-frame > thead > tr > th > p:first-child::before { content: 'WAPPENBUCH · HÄUSER & GESCHLECHTER'; }
+.world-codex .haeuser-template-frame > thead p:has(.haeuser-crest-slot) { grid-column: 2; grid-row: 1 / span 5; align-self: center; }
+.world-codex .haeuser-template-frame .haeuser-crest-slot { width: 180px; min-height: 0; }
+.world-codex .haeuser-crest-slot img { max-height: 205px; }
+.world-codex .haeuser-subtitle { color: var(--codex-muted); font: 11px/1.7 var(--codex-label); letter-spacing: 0.08em; }
+.world-codex .haeuser-quote-source { font-size: 13px; }
+.world-codex .haeuser-page .haeuser-landscape-slot { height: 310px; aspect-ratio: auto; margin: 26px 0; padding: 10px; border: 1px solid var(--codex-line); background: var(--codex-light); }
+.world-codex .haeuser-page[data-haeuser-layout='responsive'] .haeuser-landscape-slot { height: 310px; }
+.world-codex .haeuser-template-frame .haeuser-info-table { margin: 26px 0; border: 1px solid var(--codex-line); background: var(--codex-light); font: 12px/1.65 var(--codex-label); }
+.world-codex .haeuser-info-table td { padding: 9px 11px; border: 0; border-bottom: 1px solid var(--codex-rule); background: none; }
+.world-codex .haeuser-info-table :is(.haeuser-info-title, .haeuser-info-subhead) { color: var(--codex-rubric); background: #e8ddc5; text-align: left; font: 700 17px/1.4 var(--codex-serif); }
+.world-codex .haeuser-info-table .haeuser-info-label { color: var(--codex-muted); font-weight: 400; }
+.world-codex .haeuser-info-table .haeuser-info-value { color: var(--codex-ink); }
+.world-codex .haeuser-info-table td:has(.haeuser-banner-slot) { background: var(--codex-light); }
+.world-codex .haeuser-template-frame .haeuser-banner-slot {
+  width: 100%;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: auto;
+}
+.world-codex .haeuser-info-table .haeuser-banner-slot > :is(a, img) {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.world-codex .haeuser-info-table .haeuser-banner-slot img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+/* The fact sheet sets the height; chapters 2–5 share its left column. */
+.world-codex .haeuser-template-frame .haeuser-history-cell {
+  contain: size;
+  align-self: stretch;
+  min-height: 300px;
+}
+.world-codex .haeuser-history-scroll {
+  height: 100%;
+  overflow: auto;
+  padding-right: 12px;
+  scrollbar-gutter: stable;
+  scrollbar-color: #80654c #dfd3b9;
+}
+.world-codex .haeuser-history-scroll:focus-visible { outline: 2px solid var(--codex-rubric); outline-offset: -2px; }
+.world-codex .haeuser-history-scroll > h2 { scroll-margin-top: 20px; }
+.world-codex .house-scene { border: 1px solid var(--codex-line); border-left: 3px solid var(--codex-rubric); background: #f8f2e399; }
+.world-codex .house-scene summary { color: var(--codex-rubric); }
+@media (max-width: 800px) {
+  .world-codex .haeuser-template-frame .haeuser-history-cell { contain: none; min-height: 0; }
+  .world-codex .haeuser-history-scroll { height: auto; max-height: 65svh; }
+}
+@media (max-width: 520px) {
+  .world-codex .haeuser-template-frame > thead p:has(.haeuser-crest-slot) { grid-column: 1; grid-row: auto; margin: 12px 0; }
+  .world-codex .haeuser-crest-slot img { max-height: 155px; }
+}
+@media print {
+  .world-codex .haeuser-template-frame .haeuser-history-cell { contain: none; }
+  .world-codex .haeuser-history-scroll { height: auto; max-height: none; overflow: visible; }
+}

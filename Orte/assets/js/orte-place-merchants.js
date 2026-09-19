@@ -1,9 +1,19 @@
+import { createMerchantRating } from '../../modules/merchants/merchant-ratings.mjs?v=20260918b';
+
 (function () {
   "use strict";
 
   const page = document.querySelector("[data-orte-static-template]");
   const table = page?.querySelector("[data-orte-merchants]");
   if (!page || !table) return;
+
+  const viewport = document.createElement("div");
+  viewport.className = "orte-merchants-scroll";
+  viewport.tabIndex = 0;
+  viewport.setAttribute("role", "region");
+  viewport.setAttribute("aria-label", "Händler und Etablissements – Tabelle seitlich scrollbar");
+  table.before(viewport);
+  viewport.append(table);
 
   document.addEventListener("aleria:orte:data-ready", (event) => {
     renderMerchants(event.detail?.data || window.ORT_DATA);
@@ -57,12 +67,18 @@
     [
       merchant?.name,
       merchant?.owner || merchant?.besitzer,
-      merchant?.trade || merchant?.gewerbe || merchant?.type,
-      merchant?.wealth || merchant?.wohlstand,
-      merchant?.reputation || merchant?.ruf,
-      merchant?.influence || merchant?.einfluss,
-      merchant?.description || merchant?.beschreibung
+      merchant?.trade || merchant?.gewerbe || merchant?.type
     ].forEach((value) => row.append(createTextCell(value)));
+    [
+      ["wealth", merchant?.wealth ?? merchant?.wohlstand],
+      ["reputation", merchant?.reputation ?? merchant?.ruf],
+      ["influence", merchant?.influence ?? merchant?.einfluss]
+    ].forEach(([kind, value]) => {
+      const cell = document.createElement("td");
+      cell.append(createMerchantRating(value, kind, page.ownerDocument));
+      row.append(cell);
+    });
+    row.append(createTextCell(merchant?.description || merchant?.beschreibung));
     return row;
   }
 

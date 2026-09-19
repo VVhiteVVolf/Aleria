@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { commitItemRegisterOperation } from '../src/mechanics/commit-item-register.js';
 import { STANDARD_ITEMS, STANDARD_VERSION } from '../src/generated/item-register/item-register-standard.js';
+import { buildModuleOffers } from '../src/generated/item-register/item-register-module-catalog.js';
 
 const clone = value => value == null ? value : structuredClone(value);
 // Transaction harness rejects reads after writes and publishes only successful
@@ -35,6 +36,41 @@ const auth = { uid: 'owner', token: { aleriaRole: 'player' } };
 const record = () => ({ id: 'gawain', name: 'Gawain', ownerUid: 'owner', inventory: { revision: 1, items: [], moneyState: { totalCopper: 3000 } }, combatProfile: {} });
 const purchase = (overrides = {}) => ({ action: 'buy', operationId: 'purchase-1', standardVersion: STANDARD_VERSION,
   characterId: 'gawain', expectedRevision: 1, productId: horse.id, quantity: 1, unitCopper: 400, ...overrides });
+
+const menu = () => ({ id:'taverne',title:'Taverne',pages:[{goodsTablePage:true,goodsTable:{tables:[{id:'angebot',categories:[{id:'speisen',label:'Speisen'}],columns:[],rows:[{category:'speisen',values:{name:'Haussuppe',kind:'Speise',description:'Kräftige Brühe.',price:'1 KT 20 Pfennig'}}]}]}}] });
+function moduleDatabase(entry = menu()) {
+  return database({ 'characters/gawain': record(), 'module_store_entries/taverne': {entryJson:JSON.stringify(entry)},
+    'char_tabs/config': {moduleStoreManifest:{customSections:[{tab:'Kultur',entryIds:['taverne']}],entryOverrideIds:[],hiddenModuleIds:{}}} });
+}
+
+test('module purchases use the authoritative menu, do not write a second catalogue, and allow later resale', async () => {
+  const db = moduleDatabase();
+  const offer = buildModuleOffers([menu()], STANDARD_ITEMS)[0];
+  const input = purchase({ productId:offer.id,moduleId:offer.moduleId,sourceRevision:offer.sourceRevision,unitCopper:1.2 });
+  const result = await commitItemRegisterOperation(db,auth,input);
+  assert.equal(result.character.inventory.moneyState.totalCopper, 2998.8);
+  assert.equal(result.character.inventory.items[0].description, 'Kräftige Brühe.');
+  assert.equal([...db.data.keys()].some(key=>key.startsWith('item_register_offers/')),false);
+  db.data.delete('module_store_entries/taverne');
+  const sold = await commitItemRegisterOperation(db,auth,{...input,action:'sell',operationId:'sell-menu',expectedRevision:result.character.inventory.revision,inventoryItemId:result.receipt.itemId,unitCopper:.6});
+  assert.equal(sold.character.inventory.items.length,0);
+  assert.equal(sold.character.inventory.moneyState.totalCopper,2999.4);
+});
+
+test('module purchases reject forged prices, stale source, hidden providers and templates without writes', async () => {
+  const db = moduleDatabase();
+  const offer = buildModuleOffers([menu()], STANDARD_ITEMS)[0];
+  const input = purchase({productId:offer.id,moduleId:offer.moduleId,sourceRevision:offer.sourceRevision,unitCopper:1.2});
+  await assert.rejects(commitItemRegisterOperation(db,auth,{...input,unitCopper:0}), /Preisspanne/);
+  await assert.rejects(commitItemRegisterOperation(db,auth,{...input,sourceRevision:'forged'}), /zwischenzeitlich/);
+  db.data.get('char_tabs/config').moduleStoreManifest.hiddenModuleIds.taverne = true;
+  await assert.rejects(commitItemRegisterOperation(db,auth,input), /nicht mehr.*verfügbar/);
+  db.data.get('char_tabs/config').moduleStoreManifest.hiddenModuleIds = {};
+  db.data.set('module_store_entries/taverne', {entryJson:JSON.stringify({...menu(),title:'Vorlage - Taverne'})});
+  await assert.rejects(commitItemRegisterOperation(db,auth,input), /nicht gefunden/);
+  assert.equal(db.data.get('characters/gawain').inventory.moneyState.totalCopper,3000);
+  assert.equal([...db.data.keys()].some(key=>key.startsWith('item_register_transactions/')),false);
+});
 
 test('backend commits inventory and wallet exactly once on a retried purchase', async () => {
   const db = database({ 'characters/gawain': record() });

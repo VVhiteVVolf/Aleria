@@ -1,12 +1,14 @@
+import { normalizeCreatureImages, MAX_CREATURE_AVATARS } from './creature-images-model.js?v=20260919-creature-pages-v1';
+export { MAX_CREATURE_AVATARS };
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   sanitizeCharacterCombatProfile
 } from '../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
 
-export const CREATURE_SCHEMA_VERSION = 3;
+export const CREATURE_SCHEMA_VERSION = 4;
 export const CREATURE_EXPORT_TYPE = 'aleria-creature';
 export const CREATURE_ARCHIVE_EXPORT_TYPE = 'aleria-creature-archive';
-export const MAX_CREATURE_AVATARS = 10;
+
 
 const ROMAN_DIGITS = Object.freeze([
   [1000, 'M'], [900, 'CM'], [500, 'D'], [400, 'CD'],
@@ -35,15 +37,6 @@ function sanitizeLootItem(item = {}, index = 0) {
     quantity: normalizeNumber(item.quantity, 1, 0, 9999),
     chance: normalizeNumber(item.chance, 100, 0, 100),
     notes: normalizeText(item.notes, 800)
-  };
-}
-
-function sanitizeCreatureAvatar(avatar = {}, index = 0) {
-  const source = avatar && typeof avatar === 'object' ? avatar : {};
-  return {
-    id: normalizeId(source.id, `avatar-${index + 1}`),
-    img: normalizeText(source.img || source.url || source.image, 4000),
-    label: normalizeText(source.label || source.name, 80)
   };
 }
 
@@ -119,12 +112,8 @@ export function sanitizeCreature(value = {}) {
     challengeRating: normalizeNumber(source.challengeRating, 1, 0, 30),
     size: normalizeText(source.size || 'Mittel', 60),
     level,
-    portrait: normalizeText(source.portrait, 4000),
+    ...normalizeCreatureImages(source),
     portraitCaption: normalizeText(source.portraitCaption, 500),
-    avatars: (Array.isArray(source.avatars) ? source.avatars : (Array.isArray(source.emotes) ? source.emotes : []))
-      .slice(0, MAX_CREATURE_AVATARS)
-      .map(sanitizeCreatureAvatar)
-      .filter(avatar => avatar.img),
     templateId: normalizeText(source.templateId, 120),
     instanceOrdinal: normalizeNumber(source.instanceOrdinal, 0, 0, 3999),
     combatProfile,

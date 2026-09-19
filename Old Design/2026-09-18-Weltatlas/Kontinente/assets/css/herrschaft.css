@@ -1,0 +1,261 @@
+:root {
+  --herrschaft-sea-deep: #15343b;
+  --herrschaft-sea: #2e6871;
+  --herrschaft-sea-light: #79a7a7;
+  --herrschaft-foam: #e3eee6;
+  --herrschaft-gold: #c49a46;
+}
+
+body.herrschaft-body {
+  background:
+    radial-gradient(circle at 50% -8rem, rgba(116, 169, 171, 0.32), transparent 36rem),
+    linear-gradient(155deg, rgba(255, 244, 210, 0.035), transparent 34%),
+    var(--herrschaft-sea-deep);
+}
+
+body.herrschaft-theme-gafyr {
+  --herrschaft-sea-deep: #26382a;
+  --herrschaft-sea: #49694a;
+  --herrschaft-sea-light: #8eaa78;
+  --herrschaft-foam: #e7ecdb;
+  --herrschaft-gold: #c19a50;
+}
+
+body.herrschaft-theme-wyrm {
+  --herrschaft-sea-deep: #412416;
+  --herrschaft-sea: #8a4a24;
+  --herrschaft-sea-light: #c38b4a;
+  --herrschaft-foam: #f1e2c6;
+  --herrschaft-gold: #d4a43f;
+}
+
+body.herrschaft-theme-saethwyr {
+  --herrschaft-sea-deep: #172f46;
+  --herrschaft-sea: #315e7a;
+  --herrschaft-sea-light: #76a6b7;
+  --herrschaft-foam: #e0edf0;
+  --herrschaft-gold: #c7a95f;
+}
+
+body.herrschaft-theme-arthus {
+  --herrschaft-sea-deep: #291b15;
+  --herrschaft-sea: #6f3025;
+  --herrschaft-sea-light: #ac7452;
+  --herrschaft-foam: #eee0c8;
+  --herrschaft-gold: #c69a48;
+  background:
+    radial-gradient(circle at 18% 5rem, rgba(173, 117, 72, 0.22), transparent 28rem),
+    radial-gradient(circle at 82% 14rem, rgba(82, 108, 67, 0.18), transparent 30rem),
+    linear-gradient(155deg, rgba(255, 237, 193, 0.05), transparent 42%),
+    #291b15;
+}
+
+body.herrschaft-theme-rhonwen {
+  --herrschaft-sea-deep: #171525;
+  --herrschaft-sea: #583665;
+  --herrschaft-sea-light: #9b76a5;
+  --herrschaft-foam: #eee4f0;
+  --herrschaft-gold: #c9aa62;
+  background:
+    radial-gradient(circle at 18% 8rem, rgba(116, 83, 132, 0.28), transparent 30rem),
+    radial-gradient(circle at 82% 18rem, rgba(66, 108, 124, 0.2), transparent 34rem),
+    linear-gradient(155deg, rgba(238, 228, 240, 0.045), transparent 42%),
+    #171525;
+}
+
+body.herrschaft-theme-camruisge {
+  --herrschaft-sea-deep: #172629;
+  --herrschaft-sea: #486f70;
+  --herrschaft-sea-light: #89aaa0;
+  --herrschaft-foam: #e5ece2;
+  --herrschaft-gold: #c7a45d;
+  background:
+    radial-gradient(circle at 20% 8rem, rgba(76, 119, 119, 0.3), transparent 30rem),
+    radial-gradient(circle at 82% 17rem, rgba(124, 67, 58, 0.2), transparent 34rem),
+    linear-gradient(155deg, rgba(236, 228, 205, 0.05), transparent 42%),
+    #172629;
+}
+
+.herrschaft-page[data-herrschaft-shell]:empty {
+  min-height: 100vh;
+}
+
+.herrschaft-page .kingdom-frame {
+  background:
+    linear-gradient(180deg, rgba(246, 244, 222, 0.72), rgba(206, 214, 184, 0.42)),
+    repeating-linear-gradient(-45deg, rgba(31, 83, 89, 0.028), rgba(31, 83, 89, 0.028) 1px, transparent 1px, transparent 18px),
+    var(--kingdom-paper);
+}
+
+.herrschaft-page .kingdom-title {
+  color: #f9efd3;
+  background: linear-gradient(180deg, #477d82, #244e56);
+  border-color: rgba(196, 154, 70, 0.82);
+  text-shadow: 0 1px 1px rgba(5, 20, 22, 0.7);
+}
+
+.herrschaft-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0.2rem auto 0.75rem;
+  color: #516260;
+  font-size: 0.82rem;
+}
+
+.herrschaft-breadcrumbs a {
+  color: #244e56;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.herrschaft-breadcrumbs a:hover,
+.herrschaft-breadcrumbs a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.herrschaft-crest-stage {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+}
+
+.herrschaft-intro-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 370px;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  align-items: start;
+}
+
+.herrschaft-intro-row > .kingdom-content-column,
+.herrschaft-intro-row > .kingdom-sidebar-column {
+  display: block;
+  width: auto !important;
+  min-width: 0;
+}
+
+.herrschaft-intro-row > .kingdom-sidebar-column {
+  justify-self: end;
+}
+
+.herrschaft-intro-row .kingdom-infobox {
+  margin: 0 0 0 auto !important;
+}
+
+.herrschaft-page .kingdom-main-crest {
+  width: 190px;
+  height: 190px !important;
+}
+
+.herrschaft-kicker {
+  margin: -0.2rem auto 0.85rem !important;
+  color: #36565a;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.herrschaft-copy {
+  text-align: justify;
+}
+
+.herrschaft-page .kingdom-section-heading {
+  border-left-color: var(--herrschaft-sea);
+  background:
+    linear-gradient(90deg, rgba(71, 125, 130, 0.24), rgba(196, 154, 70, 0.08) 72%, transparent),
+    rgba(255, 246, 219, 0.46) !important;
+}
+
+.herrschaft-subheading {
+  margin: 1.1rem 0 0.55rem;
+  color: #27484d;
+  font: 700 1.05rem Georgia, 'Times New Roman', serif;
+}
+
+.herrschaft-source-note {
+  padding: 0.65rem 0.8rem;
+  color: #4f4a3b;
+  border-left: 3px solid var(--herrschaft-sea-light);
+  background: rgba(227, 238, 230, 0.56);
+}
+
+.herrschaft-person-root {
+  display: grid;
+  gap: 1rem;
+}
+
+.herrschaft-page .kingdom-county-map-panel,
+.herrschaft-page .kingdom-domain-card,
+.herrschaft-page .kingdom-family-section {
+  border-color: rgba(40, 85, 91, 0.44);
+}
+
+.herrschaft-page .kingdom-domain-title h3,
+.herrschaft-page .kingdom-family-section h3 {
+  color: #1f484f;
+}
+
+.herrschaft-page .kingdom-place-separator {
+  color: #28555b;
+}
+
+.herrschaft-page .kingdom-county-map-panel > a {
+  display: block;
+}
+
+.herrschaft-page .kingdom-county-map-panel img {
+  max-height: 620px;
+  object-fit: contain;
+}
+
+.herrschaft-empty-copy {
+  padding: 0.75rem 0.9rem;
+  color: #625b48;
+  border: 1px dashed rgba(40, 85, 91, 0.42);
+  border-radius: 6px;
+  background: rgba(227, 238, 230, 0.42);
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .herrschaft-intro-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .herrschaft-intro-row > td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .herrschaft-page .kingdom-infobox {
+    width: min(100%, 620px) !important;
+    margin: 0.8rem auto 0 !important;
+  }
+}
+
+.herrschaft-infobox-house-group,
+.herrschaft-infobox-house-title,
+.herrschaft-infobox-house-list {
+  display: block;
+}
+
+.herrschaft-infobox-house-group + .herrschaft-infobox-house-group {
+  margin-top: 0.65rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(95, 63, 24, 0.24);
+}
+
+.herrschaft-infobox-house-title {
+  margin-bottom: 0.18rem;
+  color: #66461f;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.85rem;
+}
+
+.herrschaft-infobox-house-list {
+  line-height: 1.45;
+}

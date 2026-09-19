@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "preview": "vite preview --host 127.0.0.1",
-    "build:languages": "node modules/language/morgar/morgar-build.mjs",
-    "check:languages": "node modules/language/morgar/morgar-build.mjs --check",
+    "build:languages": "node modules/language/morgar/morgar-build.mjs && node modules/language/laerelis/laerelis-build.mjs",
+    "check:languages": "node modules/language/morgar/morgar-build.mjs --check && node modules/language/laerelis/laerelis-build.mjs --check",
     "build:events": "node ../Ereignisse/scripts/build-events.mjs && node ../Ereignisse/scripts/build-weddings.mjs",
     "check:events": "node ../Ereignisse/scripts/build-events.mjs --check && node ../Ereignisse/scripts/build-weddings.mjs --check",
     "test:events": "node --test ../Ereignisse/tests/*.test.mjs",

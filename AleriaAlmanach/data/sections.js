@@ -1064,6 +1064,7 @@ const SECTIONS = [
   {
     key: "Religion", desc: "Glaube, Orden & Kirche", tab: "Religion",
     entries: [
+      createNimuitenReligionEntry(),
       {
         id: "sanktoren",
         multipage: true,
@@ -1743,6 +1744,7 @@ const SECTIONS = [
         ]
       },
       createMorgarLanguageEntry(),
+      createLaerelisLanguageEntry(),
       {
         id: "infernal-nharazim",
         title: "Infernal",

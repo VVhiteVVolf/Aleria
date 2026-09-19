@@ -1,0 +1,159 @@
+/* Regionstabelle für Orte/Großstadt. Styles aus der Regionalvorlage extrahiert und an den Pergamentstil angepasst. */
+.orte-region-table {
+  width: 100% !important;
+  max-width: 100%;
+  margin: 0.75rem auto 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: linear-gradient(180deg, #f1dfb5, #e2c98b);
+  border: 1px solid var(--place-border-dark);
+}
+
+.orte-region-table td,
+.orte-region-table th {
+  border-color: var(--place-border-dark);
+}
+
+.orte-region-table h2 {
+  margin: 0;
+  color: var(--place-text-light);
+  background: transparent;
+  border: 0;
+}
+
+.orte-region-table td:not(.region-map-cell) img {
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: contain;
+}
+
+.orte-region-table .region-map-slot img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none;
+  object-fit: contain;
+}
+
+.orte-region-table .region-map-slot[data-orte-image-fit="cover"] img {
+  object-fit: cover;
+}
+
+.grossstadt-template .pt-s-0023 {
+  padding-right: 0 !important;
+}
+
+.grossstadt-template .pt-s-0023 > table,
+.grossstadt-template .pt-s-0023 .pt-s-0024 {
+  width: 100% !important;
+  margin-right: 0 !important;
+}
+
+.orte-region-table.region-s-0001 { border-collapse:collapse; font-family:verdana,arial,helvetica,serif; margin-left:auto; margin-right:auto; table-layout:fixed; width:1177px; }
+.orte-region-table .region-s-0003 { padding: 6px; vertical-align: middle; border: 1px solid var(--place-border-dark); width: 112px; text-align: center; background: linear-gradient(180deg, #755420, #3f2a11); }
+.orte-region-table .region-s-0004 { color:var(--place-text-light); }
+.orte-region-table .region-s-0005 { padding: 6px; vertical-align: middle; border: 1px solid var(--place-border-dark); width: 112px; text-align: center; background: linear-gradient(180deg, #f1dfb5, #e2c98b); }
+.orte-region-table .region-s-0006 { vertical-align: top; }
+.orte-region-table .region-s-0007 { padding: 6px; vertical-align: middle; border: 1px solid var(--place-border-dark); width: 8%; text-align: center; background: linear-gradient(180deg, #755420, #3f2a11); }
+.orte-region-table .region-s-0008 { font-size:16px; }
+.orte-region-table .region-s-0009 { background: linear-gradient(180deg, #f1dfb5, #e2c98b); font-size:14px; font-weight:700; }
+.orte-region-table .region-s-0010 { background: linear-gradient(180deg, #755420, #3f2a11); }
+.orte-region-table .region-s-0011 { padding: 6px; vertical-align: middle; border: 1px solid var(--place-border-dark); width: 13%; text-align: center; background: linear-gradient(180deg, #755420, #3f2a11); }
+.orte-region-table .region-s-0012 { padding: 6px; vertical-align: middle; border: 1px solid var(--place-border-dark); width: 14%; text-align: center; background: linear-gradient(180deg, #755420, #3f2a11); }
+.orte-region-table .region-s-0013 { padding: 6px; vertical-align: middle; border: 1px solid var(--place-border-dark); width: 11%; text-align: center; background: linear-gradient(180deg, #755420, #3f2a11); }
+.orte-region-table .region-s-0014 { padding: 6px; vertical-align: middle; border: 1px solid var(--place-border-dark); width: 12%; text-align: center; background: linear-gradient(180deg, #755420, #3f2a11); }
+.orte-region-table .region-s-0015 { padding: 6px; vertical-align: middle; border: 1px solid var(--place-border-dark); width: 11%; text-align: center; background: linear-gradient(180deg, #755420, #3f2a11); }
+.orte-region-table .region-s-0016 { padding: 6px; vertical-align: middle; border: 1px solid var(--place-border-dark); width: 31%; text-align: center; background: linear-gradient(180deg, #755420, #3f2a11); }
+.orte-region-table .region-s-0017 { padding: 6px; vertical-align: middle; border: 1px solid var(--place-border-dark); width: 8%; text-align: center; background: linear-gradient(180deg, #f1dfb5, #e2c98b); }
+.orte-region-table .region-s-0018 { font-family:verdana,arial,helvetica,serif; height:40px; text-align:center; width:40px; }
+.orte-region-table .region-s-0019 { padding: 6px; vertical-align: top; border: 1px solid var(--place-border-dark); width: 13%; text-align: center; background: linear-gradient(180deg, #f1dfb5, #e2c98b); }
+.orte-region-table .region-s-0021 { padding: 6px; vertical-align: top; border: 1px solid var(--place-border-dark); width: 14%; text-align: center; background: linear-gradient(180deg, #f1dfb5, #e2c98b); }
+.orte-region-table .region-s-0022 { font-family:verdana,arial,helvetica,serif; text-align:center; }
+.orte-region-table .region-s-0023 { padding: 6px; vertical-align: top; border: 1px solid var(--place-border-dark); width: 11%; text-align: center; background: linear-gradient(180deg, #f1dfb5, #e2c98b); }
+.orte-region-table .region-s-0024 { padding: 6px; vertical-align: top; border: 1px solid var(--place-border-dark); width: 12%; text-align: center; background: linear-gradient(180deg, #f1dfb5, #e2c98b); }
+.orte-region-table .region-s-0025 { color:#8f1f16; }
+.orte-region-table .region-s-0026 { padding: 6px; vertical-align: top; border: 1px solid var(--place-border-dark); width: 11%; text-align: center; background: linear-gradient(180deg, #f1dfb5, #e2c98b); }
+.orte-region-table .region-s-0027 { padding: 6px; vertical-align: top; border: 1px solid var(--place-border-dark); width: 31%; text-align: center; background: linear-gradient(180deg, #f1dfb5, #e2c98b); }
+.orte-region-table .region-s-0028 { height:40px; width:40px; }
+
+.orte-region-table tr:nth-child(2) td {
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.orte-region-table tr:nth-child(2) .region-s-0008,
+.orte-region-table tr:nth-child(2) .region-s-0009,
+.orte-region-table tr:nth-child(2) .region-s-0010 {
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.orte-map-embed {
+  display: grid;
+  gap: 0.55rem;
+  width: 100%;
+}
+
+.orte-map-iframe {
+  display: block;
+  width: 100%;
+  height: clamp(720px, 74vw, 960px);
+  min-height: 720px;
+  border: 1px solid var(--place-border-dark);
+  background: #cbb989;
+}
+
+.orte-map-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0.2rem 0.15rem;
+}
+
+.orte-map-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--place-line);
+  background: linear-gradient(180deg, #f7e8bd, #d7b970);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.orte-region-poi > td {
+  padding: 0.45rem 0.5rem;
+  vertical-align: middle;
+  text-align: center;
+  background: linear-gradient(180deg, #f1dfb5, #e2c98b);
+}
+
+.orte-region-poi__icon img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .orte-map-iframe {
+    height: 70vh;
+    min-height: 560px;
+  }
+}
+
+.grossstadt-template .orte-notice-board-cell {
+  padding: 10px !important;
+}
+
+.grossstadt-template [data-orte-notice-board-map] {
+  width: 100%;
+}
+
+.grossstadt-template .orte-notice-board-spacer {
+  height: 34px !important;
+  min-height: 34px !important;
+  padding: 0 !important;
+  background: linear-gradient(180deg, #e5c987, #efdca9) !important;
+}

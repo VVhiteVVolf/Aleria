@@ -1,0 +1,95 @@
+.orte-military-text-panel,
+.orte-military-entry {
+  box-sizing: border-box;
+  height: 420px;
+}
+
+.orte-military-text-panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.orte-military-text-panel > h2 {
+  flex: none;
+}
+
+.grossstadt-template .orte-military-text-panel > [data-orte-content="military"] {
+  flex: 1;
+  min-height: 0;
+  max-height: none;
+  overflow-y: auto;
+  padding-right: 8px;
+  scrollbar-gutter: stable;
+}
+
+.orte-military-entry {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  width: min(100%, 480px);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #79551f;
+  border-radius: 3px;
+  background: radial-gradient(ellipse at 50% 35%, #f6e9bd, #c3a366 85%);
+  box-shadow: inset 0 0 0 3px rgba(255, 244, 207, 0.38), 0 2px 5px rgba(59, 35, 12, 0.15);
+}
+
+.orte-military-entry > .orte-image-slot {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  aspect-ratio: auto;
+}
+
+.orte-military-entry .orte-image-slot img {
+  box-sizing: border-box;
+  padding: 14px 18px 8px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 5px rgba(52, 34, 12, 0.23));
+}
+
+.orte-military-entry__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 16px;
+  border-top: 1px solid #99743a;
+  color: #fff3d2;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(180deg, #62451f, #3d2a15);
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.orte-military-entry__link span {
+  color: #e6c575;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.orte-military-entry__link strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+}
+
+.orte-military-entry__link:hover,
+.orte-military-entry__link:focus-visible {
+  color: #fff9e8;
+  background: #775426;
+  outline: 2px solid #d2a63c;
+  outline-offset: -4px;
+}
+
+.orte-military-entry.is-disabled .orte-military-entry__link {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orte-military-entry__link {
+    transition: none;
+  }
+}

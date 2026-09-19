@@ -6,6 +6,7 @@ import { normalizeOffer, canManageCharacter } from '../generated/item-register/i
 import { applyRegisterTrade, customizeOwnedItem } from '../generated/item-register/item-register-trade.js';
 import { toMinor } from '../generated/item-register/item-register-money.js';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
+import { resolveModuleProduct } from './item-register-module-source.js';
 
 const cleanId = value => {
   const id = String(value || '');
@@ -84,7 +85,9 @@ export async function commitItemRegisterOperation(database, auth, input) {
         const productId = cleanId(input.productId);
         const offerRef = productId.startsWith('offer:') ? database.collection('item_register_offers').doc(productId) : null;
         const offerSnapshot = offerRef ? await transaction.get(offerRef) : null;
-        const product = offerRef ? offerSnapshot.data() : STANDARD_ITEMS.find(item => item.id === productId);
+        const product = productId.startsWith('module:')
+          ? await resolveModuleProduct({ database, transaction, input, standards: STANDARD_ITEMS, existingItem })
+          : offerRef ? offerSnapshot.data() : STANDARD_ITEMS.find(item => item.id === productId || item.aliases?.includes(productId));
         if (!product) throw new HttpsError('not-found', 'Das Angebot wurde nicht gefunden.');
         if (offerRef) assertRevision(product.revision, input.offerRevision);
         const trade = applyRegisterTrade(character, product, { ...input, direction: action }, { instanceId, now });

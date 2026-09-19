@@ -25,6 +25,7 @@ export function validateEntryLore(entry, sharedLore = {}) {
     }
   }
   for (const section of entry.sections) {
+    if (section.disclosure !== undefined) text(section.disclosure, `${entry.id}.${section.id}.disclosure`);
     if (section.blocks !== undefined) {
       if (section.paragraphs !== undefined) throw new Error(`Doppelte Textquelle: ${entry.id}.${section.id}`);
       validateLoreBlocks(section.blocks, `${entry.id}.${section.id}`);

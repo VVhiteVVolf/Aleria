@@ -25,7 +25,7 @@ function parseScriptTableSyllables(value) {
 }
 
 function buildScriptTableStyleOptions(selected) {
-  return [['rheunwaith', 'Rheunwaith'], ['ogham', 'Ogham'], ['karnrith', 'Karnrith'],
+  return [['rheunwaith', 'Rheunwaith'], ['ogham', 'Ogham'], ['karnrith', 'Karnrith'], ['laerelis', 'Laerelis · Lichtfluss'],
     ['infernal', 'Infernal · Nharazim'], ['futhark', 'Futhark'], ['kanaanith', 'Kana’anith'],
     ['argenti', 'Lingua Argenti'], ['stoicheia', 'Stoicheia'], ['arcane', 'Arkanes Alphabet · Alte Zunge'], ['plain', 'Normal']]
     .map(([value, label]) => `<option value="${value}"${selected === value ? ' selected' : ''}>${label}</option>`).join('');

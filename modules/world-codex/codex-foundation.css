@@ -1,0 +1,139 @@
+/* The world atlas is opt-in. Editors, maps and other applications keep their own styles. */
+body.world-codex {
+  --codex-ink: #30291f;
+  --codex-muted: #746451;
+  --codex-rubric: #74372d;
+  --codex-line: #b6a17c;
+  --codex-rule: #d7c9ad;
+  --codex-paper: #eee5ce;
+  --codex-light: #f8f2e3;
+  --codex-serif: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  --codex-label: Verdana, Arial, sans-serif;
+  --codex-width: 1280px;
+  margin: 0;
+  color: var(--codex-ink);
+  background: radial-gradient(ellipse at 50% 0, #42392b, transparent 65rem), #201e19;
+  font: 17px/1.75 var(--codex-serif);
+}
+
+.world-codex :is(.kingdom-page, .place-page, .haeuser-page) {
+  width: min(calc(100% - 64px), var(--codex-width));
+  margin: 0 auto 64px;
+  padding: 0 clamp(20px, 3.5vw, 48px) 48px;
+  border: 1px solid #b7a27b;
+  border-top: 4px solid var(--codex-rubric);
+  background:
+    radial-gradient(ellipse at 10% 0, #fff9e980, transparent 50rem),
+    linear-gradient(90deg, #b7a07515, transparent 8%, transparent 92%, #b7a07515),
+    var(--codex-paper);
+  box-shadow: 0 18px 65px #0005, inset 5px 0 0 #f8f1df, inset -5px 0 0 #f8f1df;
+}
+
+.world-codex :is(.place-document, .haeuser-document) { overflow: visible; padding: 0; }
+.world-codex :is(.kingdom-frame, .grossstadt-template-frame) { color: var(--codex-ink); }
+.world-codex :is(.kingdom-frame, .grossstadt-template-frame) p { margin-bottom: 0.9em; }
+.world-codex :is(.kingdom-frame, .grossstadt-template-frame) a {
+  text-underline-offset: 0.2em;
+  text-decoration-color: #99785880;
+}
+.world-codex :is(.kingdom-frame, .grossstadt-template-frame) a:hover { color: var(--codex-rubric); }
+.world-codex :is(a, button, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--codex-rubric);
+  outline-offset: 4px;
+}
+.world-codex :is(.kingdom-frame, .grossstadt-template-frame) :is(h2, .kingdom-section-heading, .codex-section-heading) {
+  position: relative;
+  margin: 1.65rem 0 1rem !important;
+  padding: 0 0 0.55rem !important;
+  border: 0;
+  border-bottom: 1px solid var(--codex-line);
+  background: none !important;
+  color: var(--codex-rubric) !important;
+  font: 700 clamp(23px, 2vw, 29px)/1.25 var(--codex-serif) !important;
+  letter-spacing: -0.025em;
+  scroll-margin-top: 85px;
+  text-align: left;
+}
+.world-codex :is(.kingdom-frame, .grossstadt-template-frame) :is(h2, .kingdom-section-heading, .codex-section-heading)::after {
+  content: '◆';
+  position: absolute;
+  right: 0;
+  bottom: -0.48em;
+  padding-left: 0.6em;
+  color: var(--codex-rubric);
+  background: var(--codex-paper);
+  font-size: 10px;
+}
+.world-codex :is(.kingdom-frame, .grossstadt-template-frame) h3 {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--codex-rubric);
+  font: 700 20px/1.4 var(--codex-serif);
+}
+.world-codex .kingdom-frame :is(.kingdom-section-heading, .codex-section-heading) * {
+  color: inherit !important;
+  font: inherit !important;
+}
+.world-codex :is(.kingdom-frame, .grossstadt-template-frame) hr { border-color: var(--codex-rule); }
+.world-codex :is(.kingdom-frame, .grossstadt-template-frame) hr + hr { margin-top: -0.65rem; }
+.world-codex :is(.kingdom-back-top, .place-back-top) {
+  border: 1px solid #aa936e;
+  border-radius: 0;
+  background: #332c22;
+  color: #f3e7cc;
+}
+
+.codex-masthead {
+  position: sticky;
+  top: 0;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(calc(100% - 64px), var(--codex-width));
+  min-height: 76px;
+  margin: auto;
+  color: #cbb998;
+  background: #2c281f;
+}
+.codex-brand { color: #eee2c7; font: 700 24px/1 var(--codex-serif); letter-spacing: 0.18em; text-decoration: none; }
+.codex-brand span { margin-left: 1rem; color: #b9a585; font: 10px var(--codex-label); letter-spacing: 0.16em; }
+.codex-chapters { position: relative; font: 12px/1.5 var(--codex-label); }
+.codex-chapters > summary { padding: 12px 0 12px 16px; cursor: pointer; letter-spacing: 0.06em; }
+.codex-chapters[open] > summary { color: #fff3d8; }
+.codex-chapter-list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: min(350px, calc(100vw - 32px));
+  max-height: min(70vh, 620px);
+  overflow-y: auto;
+  margin: 0;
+  padding: 16px 16px 16px 42px;
+  border: 1px solid var(--codex-line);
+  border-top: 3px solid var(--codex-rubric);
+  background: var(--codex-light);
+  box-shadow: 0 12px 28px #0004;
+  color: var(--codex-muted);
+}
+.codex-chapter-list a { display: block; padding: 9px 4px; color: var(--codex-ink); text-decoration: none; border-bottom: 1px solid var(--codex-rule); }
+.codex-chapter-list a:hover { color: var(--codex-rubric); background: #e5d7ba; }
+
+@media (max-width: 760px) {
+  body.world-codex { font-size: 16px; }
+  .world-codex :is(.kingdom-page, .place-page, .haeuser-page) { width: calc(100% - 20px); padding: 0 18px 32px; margin-bottom: 20px; }
+  .codex-masthead { width: calc(100% - 36px); min-height: 64px; }
+  .codex-brand { font-size: 20px; }
+  .codex-brand span { display: block; margin: 7px 0 0; font-size: 8px; }
+  .codex-chapters { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:has(body.world-codex) { scroll-behavior: auto; }
+}
+@media print {
+  body.world-codex { background: white; }
+  .world-codex :is(.kingdom-page, .place-page, .haeuser-page) { width: 100%; margin: 0; padding: 0; border: 0; box-shadow: none; background: white; }
+  .world-codex :is(.codex-masthead, .place-template-toc-toggle, .place-template-toc, .kingdom-back-top, .place-back-top) { display: none; }
+}

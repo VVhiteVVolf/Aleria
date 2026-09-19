@@ -231,20 +231,20 @@ function getSegmentTypeButtons(segment, edit = false) {
 
 function getCommentSegmentActor(segment, edit = false) {
   const sceneActor = window.AleriaCommentSceneCast?.getActor?.(segment?.actorId, edit);
-  if (sceneActor) return sceneActor;
+  if (sceneActor) return applyCharacterImageSetPresentation(sceneActor, segment?.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
   const selectedId = edit ? _editSelectedCharId : _selectedCharId;
   const character = selectedId ? getAvailableCommentCharacterById(selectedId) : null;
-  if (!character || character.entityType === 'creature') return character;
+  if (!character) return character;
   const selectedSetId = edit ? _editSelectedImageSetId : _selectedImageSetId;
   return applyCharacterImageSetPresentation(character, segment?.imageSetId || selectedSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
 }
 
 function getCommentSegmentImageSetContext(segment, edit = false) {
   const mode = edit ? _editMode : _commentMode;
-  if (mode !== 'charakter' || normalizeCommentKind(segment?.kind) === 'action') return null;
+  if (!['charakter', 'creature'].includes(mode) || normalizeCommentKind(segment?.kind) === 'action') return null;
 
   const character = getCommentSegmentActor(segment, edit);
-  if (!character || character.entityType === 'creature') return null;
+  if (!character) return null;
 
   const imageSets = normalizeCharacterImageSets(character);
   const fallbackSetId = edit ? _editSelectedImageSetId : _selectedImageSetId;

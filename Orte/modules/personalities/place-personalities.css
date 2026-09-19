@@ -1,9 +1,46 @@
-.grossstadt-template [data-orte-personalities] th,
-.grossstadt-template [data-orte-personalities] .pt-s-0076 {
-  color: var(--place-text-light, #fff2cf);
-  font-weight: 700;
+.grossstadt-template [data-orte-personalities] .sub-header > th {
+  padding: 15px 18px;
+  background: #3e4d48;
+  color: #fff4dc;
+  font: 700 21px/1.4 Georgia, "Times New Roman", serif;
+  text-align: left;
 }
 
+.grossstadt-template [data-orte-personalities] [data-personality-group] > th {
+  padding: 14px 18px;
+  background: #d9c7a5;
+  color: #592c24;
+  font: 700 19px/1.4 Georgia, "Times New Roman", serif;
+  text-align: left;
+  border-top: 3px double #866d4b;
+}
+.grossstadt-template [data-personality-tone='sage'] {
+  --personality-paper: #e8ecdf;
+  --personality-panel: #d8dfcc;
+  --personality-ink: #334d3e;
+}
+.grossstadt-template [data-personality-tone='ochre'] {
+  --personality-paper: #f2e6d1;
+  --personality-panel: #e5d2ae;
+  --personality-ink: #6c4625;
+}
+.grossstadt-template [data-personality-tone='slate'] {
+  --personality-paper: #e5e9e8;
+  --personality-panel: #d1dcdb;
+  --personality-ink: #354e58;
+}
+.grossstadt-template [data-orte-personalities] .desc-cell { background: var(--personality-paper); }
+.grossstadt-template [data-orte-personalities] .portrait-cell {
+  background: var(--personality-panel);
+  color: var(--personality-ink);
+}
+.grossstadt-template [data-orte-personalities] .orte-personality-start > td {
+  border-top: 3px solid var(--personality-ink);
+}
+.grossstadt-template [data-orte-personalities] :is(.pt-s-0076, .pt-s-0080) {
+  padding: 13px 12px;
+  font: 700 18px/1.4 Georgia, "Times New Roman", serif;
+}
 .grossstadt-template [data-orte-personalities] .pt-s-0079 {
   display: block;
   width: 200px;
@@ -13,8 +50,19 @@
   object-fit: contain;
 }
 
-.grossstadt-template .orte-personality-spacer > td {
-  height: 18px;
+.grossstadt-template [data-orte-personalities] .orte-personality-spacer > td {
+  height: 24px;
   padding: 0;
-  background: rgba(255, 247, 221, 0.48);
+  border: 0;
+  background: var(--codex-paper, #eee5ce);
+}
+
+@media (max-width: 520px) {
+  .grossstadt-template [data-orte-personalities] .sub-header > th { padding: 12px 8px; font-size: 17px; }
+  .grossstadt-template [data-orte-personalities] :is(.pt-s-0076, .pt-s-0080) { padding: 10px 6px; font-size: 16px; }
+}
+.grossstadt-template [data-orte-personalities] {
+  --personality-paper: #e8ecdf;
+  --personality-panel: #d8dfcc;
+  --personality-ink: #334d3e;
 }

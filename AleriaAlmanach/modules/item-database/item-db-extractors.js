@@ -1,6 +1,10 @@
 function itemDbGetModuleEntries() {
   try {
-    return Object.values(_entryOverrides || {}).filter(entry => entry && typeof entry === 'object');
+    const entries = typeof getValidSections === 'function'
+      ? getValidSections().flatMap(section => section.entries || [])
+      : Object.values(_entryOverrides || {});
+    return [...new Map(entries.filter(entry => entry?.id &&
+      (typeof isModuleEntryHidden !== 'function' || !isModuleEntryHidden(entry.id))).map(entry => [entry.id, entry])).values()];
   } catch (error) {
     console.warn('Item database could not read module entries:', error);
     return [];
@@ -200,8 +204,8 @@ function itemDbExtractMarketItems(data, config = {}) {
     category: config.category || item.category || item.type,
     categoryLabel: config.categoryLabel || '',
     type: item.type || item.subtitle || item.rarity || item.category || '',
-    description: item.kind || item.role || item.material || item.unit || '',
-    details: item.detailDesc || item.desc || item.description || '',
+    description: item.desc || item.description || item.detailDesc || item.kind || item.role || '',
+    details: item.detailDesc && item.detailDesc !== (item.desc || item.description) ? item.detailDesc : '',
     price: itemDbFormatMarketPrice(item.price),
     currency: item.price?.unit || '',
     image: item.image || data.defaultImage || '',
@@ -217,7 +221,8 @@ function itemDbExtractMarketItems(data, config = {}) {
       weight: item.weight || '',
       material: item.material || '',
       requirement: item.requirement || '',
-      magical: item.magical || ''
+      magical: item.magical || '',
+      kind: item.kind || '', role: item.role || ''
     }
   })).filter(item => item.title);
 }

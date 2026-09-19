@@ -1,76 +1,7 @@
 const CHARACTER_AVATAR_LIMIT = 80;
-
-function extractCharacterAvatarUrls(rawValue, normalizeUrl = normalizeImageUrlForStorage) {
-  const raw = String(rawValue || '').trim();
-  if (!raw) return [];
-
-  const tokens = raw.match(/(?<![\w:])https?:\/\/[^\s<>"']+/gi)
-    || raw.split(/[\r\n]+/).map(value => value.trim()).filter(Boolean);
-  const seen = new Set();
-  return tokens.reduce((urls, token) => {
-    const candidate = String(token || '').replace(/[),.;]+$/, '');
-    const normalized = normalizeUrl(candidate);
-    if (!normalized || seen.has(normalized)) return urls;
-    seen.add(normalized);
-    urls.push(normalized);
-    return urls;
-  }, []);
-}
-
-function deriveCharacterAvatarLabel(url, fallbackIndex = 0) {
-  try {
-    const pathname = new URL(url).pathname;
-    const fileName = decodeURIComponent(pathname.split('/').filter(Boolean).at(-1) || '');
-    const label = fileName
-      .replace(/\.[a-z0-9]{2,5}$/i, '')
-      .replace(/[-_]+/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-    if (label) return label.slice(0, 20);
-  } catch {
-    // Der normalisierte Link kann auch projekt-relativ sein. Dann greift das
-    // neutrale Label, statt den Import wegen der Beschriftung abzubrechen.
-  }
-  return `Avatar ${fallbackIndex + 1}`;
-}
-
-// Store valid links immediately. Preview loading belongs to the grid and must
-// neither block an import nor discard a link during a temporary host failure.
-function buildCharacterAvatarImport({
-  rawValue,
-  slots,
-  normalizeUrl = normalizeImageUrlForStorage,
-  limit = CHARACTER_AVATAR_LIMIT
-}) {
-  const nextSlots = Array.from({ length: limit }, (_, index) => slots?.[index] ? { ...slots[index] } : null);
-  const occupiedUrls = new Set(nextSlots
-    .filter(slot => slot?.img)
-    .map(slot => normalizeUrl(slot.img))
-    .filter(Boolean));
-  const parsedUrls = extractCharacterAvatarUrls(rawValue, normalizeUrl);
-  const uniqueUrls = parsedUrls.filter(url => !occupiedUrls.has(url));
-  const duplicateCount = parsedUrls.length - uniqueUrls.length;
-  const availableIndices = nextSlots
-    .map((slot, index) => slot ? -1 : index)
-    .filter(index => index >= 0);
-  const candidateUrls = uniqueUrls.slice(0, availableIndices.length);
-  const skippedCapacityCount = uniqueUrls.length - candidateUrls.length;
-  candidateUrls.forEach((url, index) => {
-    const slotIndex = availableIndices[index];
-    nextSlots[slotIndex] = {
-      img: url,
-      label: deriveCharacterAvatarLabel(url, slotIndex)
-    };
-  });
-
-  return {
-    slots: nextSlots,
-    parsedCount: parsedUrls.length,
-    addedCount: candidateUrls.length,
-    duplicateCount,
-    skippedCapacityCount
-  };
-}
+function extractCharacterAvatarUrls(rawValue, normalizeUrl = normalizeImageUrlForStorage) { return globalThis.AleriaAvatarImport.extractUrls(rawValue, normalizeUrl); }
+function deriveCharacterAvatarLabel(...args) { return globalThis.AleriaAvatarImport.deriveLabel(...args); }
+function buildCharacterAvatarImport(options) { return globalThis.AleriaAvatarImport.merge({ normalizeUrl: normalizeImageUrlForStorage, ...options }); }
 
 function setCharacterAvatarImportStatus(message, isError = false) {
   const status = document.getElementById('cp-avatar-import-status');
@@ -167,23 +98,7 @@ async function pasteCharacterPortraitLink() {
   }
 }
 
-function readCharacterAvatarDropText(dataTransfer) {
-  if (!dataTransfer) return '';
-  // Dragging a linked image often supplies the surrounding page as uri-list.
-  // Prefer the actual image source carried by the browser's HTML fragment.
-  const html = dataTransfer.getData('text/html');
-  if (html) {
-    const fragment = new DOMParser().parseFromString(html, 'text/html');
-    const images = Array.from(fragment.querySelectorAll('img[src]'))
-      .map(image => normalizeImageUrlForStorage(image.getAttribute('src')))
-      .filter(Boolean);
-    if (images.length) return images.join('\n');
-  }
-  const uriList = dataTransfer.getData('text/uri-list')
-    .split(/\r?\n/).filter(line => line.trim() && !line.trim().startsWith('#')).join('\n');
-  return uriList || dataTransfer.getData('text/plain')
-    || dataTransfer.getData('text/x-moz-url').split(/\r?\n/)[0] || '';
-}
+function readCharacterAvatarDropText(dataTransfer) { return globalThis.AleriaAvatarImport.readDrop(dataTransfer, normalizeImageUrlForStorage); }
 
 function setCharacterAvatarDropActive(active) {
   document.getElementById('cp-avatar-import-zone')?.classList.toggle('is-dragging', active);

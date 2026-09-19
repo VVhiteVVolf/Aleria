@@ -3,9 +3,10 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 
-function loadSegmentEditors() {
+function loadSegmentEditors({ creature = false } = {}) {
   const character = {
     id: 'char-1',
+    entityType: creature ? 'creature' : 'character',
     name: 'Testfigur',
     portrait: 'https://i.imgur.com/standard.png',
     emotes: [{ img: 'https://i.imgur.com/standard-emote.png', label: 'Standard' }],
@@ -73,6 +74,7 @@ function loadSegmentEditors() {
   `, context);
 
   for (const relativePath of [
+    '../modules/image-library/image-library-model.js',
     '../modules/characters/character-image-sets.js',
     '../modules/comments/comments-segment-base.js',
     '../modules/comments/comments-segments.js',
@@ -146,4 +148,34 @@ test('Abschnittsauswahl rendert alle Sets und markiert nur das aktive', () => {
   assert.match(markup, /data-image-set-id="standard"/);
   assert.match(markup, /data-image-set-id="kampf"/);
   assert.equal((markup.match(/aria-pressed="true"/g) || []).length, 1);
+});
+
+test('Kreaturen wählen Bildersets und Avatare in neuen und bearbeiteten Kommentaren', () => {
+  const context = loadSegmentEditors({ creature: true });
+  vm.runInContext("_commentMode = 'creature'; _editMode = 'creature';", context);
+  vm.runInContext("setCommentSegmentImageSet('create-a', 'kampf'); setCommentSegmentEmote('create-a', '0');", context);
+  vm.runInContext("setEditCommentSegmentImageSet('edit-b', 'kampf'); setEditCommentSegmentEmote('edit-b', '0');", context);
+  for (const expression of ['getCommentSegmentActor(_commentSegments[0], false)', 'getCommentSegmentActor(_editCommentSegments[1], true)']) {
+    const actor = vm.runInContext(expression, context);
+    assert.equal(actor.selectedImageSetId, 'kampf');
+    assert.equal(actor.emotes[0].img, 'https://i.imgur.com/kampf-emote.png');
+    assert.equal(actor.entityType, 'creature');
+  }
+  assert.match(vm.runInContext('getCommentSegmentImageSetPicker(_commentSegments[0])', context), /data-image-set-id="kampf"/);
+});
+
+test('Szeneninstanzen von Kreaturen verwenden das Set ihres eigenen Kommentarabschnitts', () => {
+  const context = loadSegmentEditors({ creature: true });
+  vm.runInContext(`
+    _commentMode = 'creature';
+    window.AleriaCommentSceneCast.getActor = () => ({ ...getAvailableCommentCharacterById('char-1'), id: 'scene-owl-2', name: 'Eule II.' });
+    _commentSegments[0].actorId = 'scene-owl-2';
+    setCommentSegmentImageSet('create-a', 'kampf');
+    setCommentSegmentEmote('create-a', '0');
+  `, context);
+  const actor = vm.runInContext('getCommentSegmentActor(_commentSegments[0])', context);
+  assert.equal(actor.id, 'scene-owl-2');
+  assert.equal(actor.name, 'Eule II.');
+  assert.equal(actor.portrait, 'https://i.imgur.com/kampf.png');
+  assert.equal(actor.emotes[0].img, 'https://i.imgur.com/kampf-emote.png');
 });

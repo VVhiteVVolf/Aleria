@@ -1,4 +1,4 @@
-import { getBuiltinCreatureTemplates } from '../creatures/creature-catalog.js?v=20260909-dragon-parent-v2';
+import { getBuiltinCreatureTemplates } from '../creatures/creature-catalog.js?v=20260919-creature-pages-v1';
 import { resolveCombatProfile } from './combat-profile-resolver.js?v=20260909-dragon-parent-v2';
 import { CombatResolutionService } from './combat-resolution-service.js?v=20260909-dragon-parent-v2';
 import { getResolutionHitPointState, overlayCombatHitPointState } from './combat-state-model.js?v=20260909-dragon-parent-v2';

@@ -1,10 +1,11 @@
-import { registerStore } from './item-register-store.js';
-import { queryRegister, normalizeOffer, toLegacyItem } from './item-register-model.js';
-import { shell, navigation, overview, results, detail, escape, safeImage } from './item-register-view.js';
-import { createForm, collectOperation, quote } from './item-register-forms.js';
-import { moneyState, moneyTotal, parsePrice, formatPrice } from './item-register-money.js';
-import { adaptItemImage } from './item-register-images.js';
-import { watchStandardReleases } from './item-register-updates.js';
+import { registerStore } from './item-register-store.js?v=20260919-shop-v1';
+import { queryRegister, normalizeOffer, toLegacyItem } from './item-register-model.js?v=20260919-shop-v1';
+import { shell, navigation, overview, results, detail, escape, safeImage } from './item-register-view.js?v=20260919-shop-v1';
+import { createForm, collectOperation, quote } from './item-register-forms.js?v=20260919-shop-v1';
+import { moneyState, moneyTotal, parsePrice, formatPrice } from './item-register-money.js?v=20260919-shop-v1';
+import { adaptItemImage } from './item-register-images.js?v=20260919-shop-v1';
+import { watchStandardReleases } from './item-register-updates.js?v=20260919-shop-v1';
+import { watchModuleCatalog } from './item-register-module-sync.js?v=20260919-shop-v1';
 
 const state = { open: false, section: 'standard', category: '', listId: '', search: '', sort: 'name', selectedId: '', limit: 48, equippedOnly: false, ownedExpanded: false };
 let panel, editor, form = null, busy = false, pendingOperation = null;
@@ -129,7 +130,7 @@ async function submitForm(event) {
 }
 function exportRegister() {
   const data = snapshot();
-  const payload = { schema: 'aleria-item-register-v2', standardVersion: data.version, exportedAt: new Date().toISOString(), offers: data.offers.filter(offer => !offer.legacy) };
+  const payload = { schema: 'aleria-item-register-v2', standardVersion: data.version, exportedAt: new Date().toISOString(), offers: data.offers.filter(offer => !offer.legacy && !offer.moduleSource) };
   const url = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' }));
   const link = document.createElement('a'); link.href = url; link.download = 'aleria-gueter-sortimente.json'; link.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -142,7 +143,7 @@ async function importOffers(file) {
   if (payload.offers.length > 500) throw new Error('Bitte höchstens 500 Angebote gleichzeitig importieren.');
   const offers = payload.offers.map(offer => normalizeOffer(offer, snapshot().standards));
   if (new Set(offers.map(offer => offer.id)).size !== offers.length) throw new Error('Die Datei enthält doppelte Angebots-IDs.');
-  const current = new Map(snapshot().offers.filter(offer => !offer.legacy).map(offer => [offer.id, offer]));
+  const current = new Map(snapshot().offers.filter(offer => !offer.legacy && !offer.moduleSource).map(offer => [offer.id, offer]));
   busy = true; let saved = 0;
   try {
     for (const offer of offers) {
@@ -170,6 +171,7 @@ async function handleClick(event) {
     else if (action === 'import') return roles('import').click();
     else if (action === 'open-creature') { await globalThis.AleriaCreatures?.reload?.(); return globalThis.AleriaCreatures?.open?.(selected()?.creatureId); }
     else if (action === 'open-character') return globalThis.openCharProfile?.(selected()?.ownerCharacterId);
+    else if (action === 'open-source') { closeItemRegister(); return globalThis.openEntryById?.(trigger.dataset.id); }
     else if (['new-offer', 'variant', 'edit-offer', 'buy', 'sell', 'customize', 'link-creature'].includes(action)) return openForm(action, action === 'new-offer' ? {} : selected());
     render();
   } catch (error) { notice(error.message, true); }
@@ -189,6 +191,7 @@ function connect() { registerStore.connect(globalThis._fb?.itemRegister, globalT
 
 if (typeof globalThis.itemDbExportDatabasePayload === 'function') registerStore.setLocalLegacy(globalThis.itemDbExportDatabasePayload());
 registerStore.subscribe(render);
+watchModuleCatalog(registerStore);
 window.addEventListener('fb-ready', connect);
 window.addEventListener('fb-load-error', connect);
 window.addEventListener('online', () => { registerStore.stop(); connect(); });

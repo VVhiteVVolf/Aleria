@@ -40,6 +40,9 @@
 .ir-categories { margin-top: 10px; }
 .ir-categories button { display: flex; justify-content: space-between; width: 100%; border: none; background: transparent; text-align: left; font: 14px/1.5 'EB Garamond', Georgia, serif; padding: 7px 14px 7px 36px; }
 .ir-categories small { margin: 0; }
+.ir-provider-tabs { display: grid; gap: 5px; margin-top: 12px; }
+.ir-provider-tabs button { text-align: left; border-left: 3px solid #a88b59; padding: 10px 12px; overflow-wrap: anywhere; }
+.ir-provider-tabs .is-active { border-left-color: var(--ir-green); box-shadow: inset 0 0 0 1px #a0ac9a; }
 .ir-nav-note { border-top: 1px solid var(--ir-line); padding: 18px 12px; color: var(--ir-muted); font-size: 13px; }
 .ir-main { padding: 25px 30px 40px; min-width: 0; }
 .ir-toolbar { display: flex; gap: 14px; align-items: end; margin-bottom: 28px; }
@@ -157,8 +160,10 @@
   .ir-layout, .ir-layout.has-detail { display: block; }
   .ir-navigation { padding: 8px; border-right: 0; border-bottom: 1px solid var(--ir-line); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; }
   .ir-nav-intro, .ir-nav-note, .ir-categories, .ir-nav-number { display: none; }
-  .ir-nav-section { padding: 0; border: 0; }
-  .ir-navigation .ir-nav-section-button { padding: 7px; font-size: 10px; height: 100%; }
+  .ir-nav-section { display: contents; }
+  .ir-navigation .ir-nav-section-button { padding: 7px; font-size: 10px; height: auto; }
+  .ir-provider-tabs { grid-column: 1 / -1; grid-row: 2; display: flex; gap: 6px; overflow-x: auto; margin-top: 6px; padding-bottom: 5px; }
+  .ir-provider-tabs button { flex: 0 0 170px; font-size: 11px; }
   .ir-navigation small { font-size: 10px; }
   .ir-main { padding: 20px 13px; }
   .ir-toolbar { gap: 9px; flex-wrap: wrap; margin-bottom: 22px; }

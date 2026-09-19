@@ -1,6 +1,7 @@
-import { STANDARD_ITEMS, STANDARD_VERSION } from './item-register-standard.js';
-import { buildOwnedItems, toLegacyItem } from './item-register-model.js';
-import { legacyOffers } from './item-register-migration.js';
+import { STANDARD_ITEMS, STANDARD_VERSION } from './item-register-standard.js?v=20260919-shop-v1';
+import { buildOwnedItems, toLegacyItem } from './item-register-model.js?v=20260919-shop-v1';
+import { legacyOffers } from './item-register-migration.js?v=20260919-shop-v1';
+import { buildModuleOffers, isModuleScanDuplicate } from './item-register-module-catalog.js?v=20260919-shop-v1';
 
 export function createRegisterStore({ standards = STANDARD_ITEMS, version = STANDARD_VERSION, notify = () => {} } = {}) {
   let backend = null;
@@ -12,11 +13,12 @@ export function createRegisterStore({ standards = STANDARD_ITEMS, version = STAN
   const listeners = new Set();
   let localLegacy = [];
   let remoteDeletedKeys = new Set();
+  let modules = [], moduleOffers = [];
   function snapshot() {
     const remoteIds = new Set(state.offers.map(item => item.id));
     const legacyIds = new Set(state.legacy.map(item => item.id));
     const remainingLocal = localLegacy.filter(item => !legacyIds.has(item.id) && !item.aliases.some(key => remoteDeletedKeys.has(key)));
-    const offers = [...state.offers, ...[...state.legacy, ...remainingLocal].filter(item => !remoteIds.has(item.id))];
+    const offers = [...moduleOffers, ...state.offers, ...[...state.legacy, ...remainingLocal].filter(item => !remoteIds.has(item.id) && !isModuleScanDuplicate(item, moduleOffers))];
     const owned = buildOwnedItems(state.characters, [...standards, ...offers], state.creatures);
     return { ...state, ready: undefined, charactersReady: state.ready.has('characters'), creaturesReady: state.ready.has('creatures'), standards, offers, owned, items: [...standards, ...offers, ...owned], version };
   }
@@ -31,6 +33,11 @@ export function createRegisterStore({ standards = STANDARD_ITEMS, version = STAN
     changed();
   }
   function setLocalLegacy(payload) { localLegacy = legacyOffers(payload || {}, standards); changed(); }
+  function setModules(entries) {
+    modules = entries;
+    moduleOffers = buildModuleOffers(modules, standards);
+    changed();
+  }
   function stop() {
     unsubscribes.forEach(unsubscribe => unsubscribe());
     unsubscribes = [];
@@ -72,9 +79,9 @@ export function createRegisterStore({ standards = STANDARD_ITEMS, version = STAN
   }
   function replaceStandards(next, nextVersion) {
     if (!Array.isArray(next) || !next.length || next.some(item => item.section !== 'standard' || !item.id?.startsWith('standard:')) || new Set(next.map(item => item.id)).size !== next.length) throw new Error('Die Standarddaten sind ungültig.');
-    standards = next; version = nextVersion; changed();
+    standards = next; version = nextVersion; moduleOffers = buildModuleOffers(modules, standards); changed();
   }
-  return Object.freeze({ snapshot, connect, stop, commit, setLegacy, setLocalLegacy, replaceStandards,
+  return Object.freeze({ snapshot, connect, stop, commit, setLegacy, setLocalLegacy, setModules, replaceStandards,
     subscribe(listener) { listeners.add(listener); listener(snapshot()); return () => listeners.delete(listener); },
     legacyIndex() { return snapshot().items.map(toLegacyItem); },
     getByKey(key) { return snapshot().items.find(item => item.id === key || item.aliases?.includes(key)) || null; }

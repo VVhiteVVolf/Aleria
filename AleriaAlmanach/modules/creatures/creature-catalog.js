@@ -1,4 +1,4 @@
-import { sanitizeCreature } from './creature-model.js?v=20260909-dragon-parent-v2';
+import { sanitizeCreature } from './creature-model.js?v=20260919-creature-pages-v1';
 import { TROLL_CREATURE_SOURCE } from './catalog/troll.js';
 
 export const CREATURE_LEVEL_GUIDELINES = Object.freeze([

@@ -36,17 +36,17 @@ test('creature defaults use the compact combat schema without character skill bl
   assert.deepEqual(creature.avatars, []);
 });
 
-test('creature avatars are capped at ten and exposed as comment emotes', () => {
-  const avatars = Array.from({ length: 12 }, (_, index) => ({
+test('creature avatars support eighty expressions and exposed as comment emotes', () => {
+  const avatars = Array.from({ length: 82 }, (_, index) => ({
     img: `https://example.com/avatar-${index + 1}.png`,
     label: `Ausdruck ${index + 1}`
   }));
   const creature = sanitizeCreature({ id: 'wolf', name: 'Wolf', avatars });
   const actor = makeCreatureSceneActor(creature);
 
-  assert.equal(creature.avatars.length, 10);
+  assert.equal(creature.avatars.length, 80);
   assert.equal(actor.entityType, 'creature');
-  assert.equal(actor.emotes.length, 10);
+  assert.equal(actor.emotes.length, 80);
   assert.deepEqual(actor.emotes[0], {
     img: 'https://example.com/avatar-1.png',
     label: 'Ausdruck 1'

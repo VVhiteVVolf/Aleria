@@ -399,6 +399,7 @@ function applyModuleStorePayload(payload) {
   });
   _builtinLibraryCharactersCache = null;
   invalidateArchiveSearchCache();
+  window.dispatchEvent(new CustomEvent('almanach:modules-changed'));
   return normalized;
 }
 
@@ -483,6 +484,7 @@ function saveModuleStore(options = {}) {
     const payload = getModuleStorePayload(options.updatedAtClient || Date.now());
     writeLocalModuleStorePayload(payload);
     _builtinLibraryCharactersCache = null;
+    window.dispatchEvent(new CustomEvent('almanach:modules-changed'));
     warnIfModuleStoreSizeIsHigh(payload);
     updateFirebaseSyncStatus('local', 'Moduländerung im Browser gesichert.');
     if (options.remote !== false) scheduleRemoteModuleStoreSave(payload);

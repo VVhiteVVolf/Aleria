@@ -23,6 +23,11 @@ const COMMENT_LANGUAGES = Object.freeze({
     cssFamily: 'Karnrith Tiefenrunen',
     transliterator: text => getLanguageScriptDisplayText(text, 'karnrith')
   },
+  laerelis: {
+    label: 'Laerelis · Lichtfluss',
+    cssFamily: 'Laerelis Lichtfluss',
+    transliterator: text => getLanguageScriptDisplayText(text, 'laerelis')
+  },
   infernal: {
     label: 'Infernal · Nharazim',
     cssFamily: 'Nharazim',

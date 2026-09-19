@@ -1,0 +1,307 @@
+{
+  "id": "nimuiten",
+  "title": "Die Nimuiten",
+  "epithet": "Die Gemeinschaft der Heimkehr nach Avallorn",
+  "kind": "Verbotene Sekte",
+  "summary": "Eine in Cenyr verbotene Gemeinschaft, die Nimue als Führerin der erhofften Heimkehr nach Avallorn verehrt.",
+  "symbol": "kulte/nimuiten/assets/nimuiten-symbol-v2.png",
+  "page": true,
+  "portrait": {
+    "src": "kulte/nimuiten/assets/nimuiten-nimue-vision-v1.png",
+    "alt": "Abstraktes Glasbild Nimues: ihr Gesicht liegt halb im Schatten, ihr Gewand wird zu Wellen über einer versunkenen Stadt.",
+    "caption": "Nimue im Bild der Heimkehrhoffnung. Eine symbolische Vision, keine Bestätigung der Sektenlehre durch die Göttin.",
+    "width": 1024,
+    "height": 1536
+  },
+  "tags": [
+    "Cenyr",
+    "Nimue",
+    "Avallorn",
+    "Heimkehr",
+    "Häresie"
+  ],
+  "searchAliases": [
+    "Gemeinschaft der Heimkehr",
+    "Heimkehrende",
+    "Iorwerth Prys",
+    "Mathragon"
+  ],
+  "relations": [
+    "alerische-kirche",
+    "nimue",
+    "neun-goettliche"
+  ],
+  "facts": [
+    {
+      "label": "Eigenname",
+      "value": "Gemeinschaft der Heimkehr"
+    },
+    {
+      "label": "Herkunft",
+      "value": "Cenyr · entstanden während einer Hungersnot"
+    },
+    {
+      "label": "Glaubensumfeld",
+      "value": "Abspaltung aus dem Umfeld der Alerischen Kirche"
+    },
+    {
+      "label": "Hauptverehrung",
+      "value": "Nimue · die übrigen Göttlichen bleiben wichtig"
+    },
+    {
+      "label": "Führung",
+      "value": "Iorwerth Prys · Zauberer aus Mathragon · über vierhundert Jahre alt"
+    },
+    {
+      "label": "Verheißung",
+      "value": "Die noch ausstehende Heimkehr der Lebenden nach Avallorn"
+    },
+    {
+      "label": "Rechtslage",
+      "value": "In Cenyr verboten; Überstellung an die kirchliche Gerichtsbarkeit"
+    }
+  ],
+  "sections": [
+    {
+      "id": "verlorene-heimat",
+      "title": "Die verlorene Heimat",
+      "paragraphs": [
+        "Die Nimuiten sind eine in Cenyr verbotene Glaubensgemeinschaft, deren Hoffnung nicht auf einer Verbesserung des gegenwärtigen Königreiches, sondern auf der Heimkehr nach Avallorn ruht. Sie verehren die Göttlichen der Alerischen Kirche, richten ihre Gebete und Erwartungen jedoch vor allem an Nimue. Wie der Glaube an die Dame des Sees einst den Weg aus dem untergehenden Avallorn wies, so soll sie ihre Getreuen eines Tages zurückführen.",
+        "Für die Gemeinschaft ist Avallorn mehr als ein verlorener Ort. Es ist eine Heimat, die ihre Vorfahren durch Hochmut und Dekadenz verwirkten und die nur ein geläutertes Volk wieder bewohnen dürfe. Die Nimuiten betrachten ihr gegenwärtiges Leben deshalb als eine Zeit des Wartens, der Bewährung und der Vorbereitung auf eine noch ausstehende Rückkehr.",
+        "Unter den Armen findet diese Verheißung Gehör, weil sie nicht nur Erlösung nach dem Tod verspricht. Sie verheißt auch eine andere Zukunft für die Lebenden: ein erneuertes Königreich jenseits jener Herrschaften, deren Versagen die Gemeinschaft beklagt. Zugleich verbindet sich diese Hoffnung mit einer Opferpraxis und einer Verehrung gefährlicher Meeresgeschöpfe, die den Glauben von Nimues tatsächlichem Wesen entfernen."
+      ]
+    },
+    {
+      "id": "herkunft",
+      "title": "Avallorn, Oseneach und die Herkunft der Cenyri",
+      "paragraphs": [
+        "Die Vorfahren der Cenyri stammten aus Avallorn. Dessen Untergang folgte einer Zeit der Dekadenz und des Hochmuts. In dieser Epoche führte der Glaube an Nimue Avallornier aus ihrer alten Heimat fort. Ihre Wanderung steht mit Estryll und Oseneach, dem antiken Cenyr, in Verbindung. Aus ihrer Verschmelzung mit dem Volk der Crannath-Alben gingen die Cenyri hervor.",
+        "Die Nimuiten deuten diese Herkunft als eine unvollendete Geschichte. Die Rettung aus Avallorn war nach ihrer Auffassung kein endgültiger Abschied, sondern der Beginn einer langen Zeit fern der verlorenen Heimat. Nimue habe die Vorfahren bewahrt, damit ihre Nachkommen eines Tages als erneuertes Volk zurückkehren könnten.",
+        "Die Sekte will nicht die Ausschweifungen des alten Avallorn wiederherstellen. Sie unterscheidet zwischen dem verlorenen Königreich und der Lebensweise, durch die es zugrunde ging. Das künftige Avallorn soll gerade nicht wiederholen, was das alte zerstörte. Diese Unterscheidung erlaubt es den Nimuiten, den Untergang als gerechtes Warnzeichen zu betrachten und dennoch die Heimkehr zu ersehnen.",
+        "Diese Herkunft schließt das Erbe der Crannath-Alben ein. Die Heimkehrlehre begründet weder Blutreinheit noch eine Ablehnung dieses albischen Erbes."
+      ]
+    },
+    {
+      "id": "hungersnot",
+      "title": "Entstehung in der Hungersnot",
+      "paragraphs": [
+        "Die Gemeinschaft entstand während einer Hungersnot aus tiefer Unzufriedenheit mit Adel und Klerus. Menschen, die von ihren weltlichen Beschützern und geistlichen Hirten Hilfe erwartet hatten, erlebten stattdessen Mangel und Enttäuschung. In dieser Lage trat ein freier Prediger und Zauberer aus Mathragon hervor: Iorwerth Prys.",
+        "Prys verband die gegenwärtige Not mit der alten Erzählung von Avallorns Untergang. Er predigte, Cenyr sei nicht gegen jene Versuchungen gefeit, an denen die Vorfahren gescheitert waren. Besitz, Ansehen und ritterliche Herkunft schützten niemanden vor Hochmut. Eine Herrschaft, die ihre Schutzbefohlenen im Elend zurückließ, konnte nach seiner Auslegung keinen sicheren Weg in die Zukunft weisen.",
+        "Seine Botschaft bot den Enttäuschten eine religiöse Deutung ihres Leidens. Sie seien nicht vergessen, sondern Teil einer Gemeinschaft, die sich auf Nimues kommende Führung vorbereiten müsse. Aus dem Kreis um den Prediger entwickelte sich eine eigenständige Bewegung mit eigenen Auslegungen, Opferbräuchen und Erwartungen.",
+        "Die Gründung gehört in die spätere Hungersnot in Cenyr, nicht in die Zeit von Avallorns Untergang. Ein genaues Gründungsjahr ist nicht überliefert; das hohe Alter des Propheten allein bestimmt nicht das Alter der Gemeinschaft."
+      ]
+    },
+    {
+      "id": "iorwerth-prys",
+      "title": "Iorwerth Prys, Prophet der Heimkehr",
+      "paragraphs": [
+        "Iorwerth Prys ist der lebende Gründer und Anführer der Nimuiten. Der aus Mathragon stammende Zauberer ist über vierhundert Jahre alt und wird von seinen Anhängern als Prophet Nimues geehrt. Seine fortdauernde Gegenwart verbindet die Gemeinschaft mit ihrem Ursprung: Während Generationen von Gläubigen kommen und gehen, bleibt der Mann, dessen Verkündigung die Bewegung begründete.",
+        "Für die Anhänger sind sein Alter, seine magische Begabung und sein Auftreten Zeichen einer besonderen Sendung. Seine Worte besitzen mehr Gewicht als die Auslegung eines gewöhnlichen Predigers. Er deutet vermeintliche Offenbarungen, beurteilt Zeichen und beansprucht maßgeblichen Einfluss auf jene Entscheidungen, die als Nimues Wille gelten.",
+        "Prys ist nicht automatisch der angekündigte Gemahl. Der Prophet verkündet die kommende Erwählung; die Göttin soll den Auserwählten selbst bestimmen. Gerade diese Unterscheidung lässt seine Autorität bestehen, obwohl die große Verheißung noch nicht erfüllt ist.",
+        "Seine Anhänger halten ihn für von Nimue bewahrt. Die tatsächliche Ursache seiner Langlebigkeit ist jedoch unbekannt."
+      ]
+    },
+    {
+      "id": "heimkehr",
+      "title": "Nimue und die Erwartung der Heimkehr",
+      "paragraphs": [
+        "Nimue steht im Mittelpunkt der Gebete, weil die Nimuiten in ihr die Führerin der Auswanderung und der künftigen Rückkehr sehen. Die übrigen Göttlichen werden dadurch nicht bedeutungslos. Sie gehören weiterhin zur vertrauten religiösen Welt der Gemeinschaft, während die entscheidende Verheißung mit der Dame des Sees verbunden wird.",
+        "Die Ordnung der Neun Göttlichen, der fünf Souveräne und der fünf Untergötter bleibt bestehen. Nimues besondere Verehrung begründet keine neue Rangordnung und macht sie nicht zu einer zehnten Celestialen.",
+        "Die Nimuiten behaupten nicht notwendig, Nimue stehe ihrem Wesen nach über den Neun. Ihr Vorrang liegt in der gelebten Frömmigkeit: An sie richten sich die Hoffnung auf Avallorn, die Deutung der Meereszeichen und die Erwartung einer persönlichen Erscheinung.",
+        "Nach ihrer Lehre wird Nimue eines Tages vor ihren Jüngern erscheinen und einen Auserwählten zum Gemahl nehmen. Diese Vermählung soll den Beginn der großen Heimkehr anzeigen. Unter der Führung des Erwählten werden die Gläubigen nach Avallorn segeln und dort das Königreich neu begründen.",
+        "Die angekündigte Überfahrt der Lebenden ist von den Meeresbestattungen zu unterscheiden. Die Sekte erwartet eine wirkliche gemeinsame Ausfahrt und eine Erneuerung des Königreiches, nicht lediglich ein anderes Wort für den Tod. Wie das untergegangene Avallorn erneut erreichbar und bewohnbar werden soll, gehört zur unerfüllten Verheißung und ist keine bereits gesicherte geografische Tatsache.",
+        "Die Erscheinung, die Erwählung und die Heimkehr stehen noch aus. Einen gesicherten Termin oder eine bekannte Überfahrt gibt es nicht. Die Bezeichnung „Auserwählter“ meint den erhofften Gemahl; sie bezeichnet nicht das jährliche Menschenopfer."
+      ]
+    },
+    {
+      "id": "cenyr",
+      "title": "Cenyr und das Versagen der Herrschaft",
+      "paragraphs": [
+        "Cenyr ist ein Königreich mit der Alerischen Kirche als Staatsreligion und gilt als Begründer und Vorbild des Rittertums. Gerade dieser Anspruch verleiht der Kritik der Nimuiten Gewicht. Sie stellen nicht irgendeiner Herrschaft ein fernes Ideal entgegen, sondern messen das Land an den Schutz- und Tugendversprechen, auf die es selbst stolz ist.",
+        "In den Augen der Gemeinschaft hat der Adel bereits versagt oder befindet sich auf einem Weg, der früher oder später erneut in Dekadenz münden wird. Die Erinnerung an die Hungersnot gilt ihr als Warnung: Auch ehrwürdige Geschlechter und ritterliche Gelübde verhindern nicht, dass Wohlstand und Rang die Sorge um die Schutzbefohlenen verdrängen.",
+        "Die Sekte muss dafür nicht jeden einzelnen Ritter für schlecht halten. Ein rechtschaffener Herr kann nach ihrer Auffassung bestehen und dennoch Teil einer Ordnung sein, die auf lange Sicht dieselben Fehler wiederholt. Ihre Hoffnung richtet sich deshalb nicht vorrangig auf einen besseren Grafen oder eine neue Regierung, sondern auf den Auszug unter Nimues Führung."
+      ]
+    },
+    {
+      "id": "gemeinschaft",
+      "title": "Gemeinschaft und religiöse Autorität",
+      "paragraphs": [
+        "Die Anhänger sind größtenteils arme Bauern, Außenseiter, Exzentriker oder Menschen, die bereits in nimuitischen Familien aufgewachsen sind. Für Letztere ist der Glaube nicht erst das Ergebnis einer bewussten Abkehr von der Staatskirche. Er ist die Religion ihrer Eltern, ihrer Trauerfeiern und ihrer Vorstellung von Herkunft und Zukunft.",
+        "Die Verheißung Avallorns verbindet persönliche Not mit einer gemeinsamen Geschichte. Wer wenig besitzt oder von bestehenden Institutionen enttäuscht ist, erhält einen Platz unter den künftigen Heimkehrenden. Zugehörigkeit beruht dabei nicht auf einer neu festgelegten Beschränkung auf bestimmte Abstammungslinien.",
+        "An der Spitze steht Iorwerth Prys. Unter ihm können örtliche Prediger und erfahrene Gemeindemitglieder die Lehre weitergeben, Versammlungen führen und Begräbnisse begleiten.",
+        "Nicht jeder Anhänger ist ein Zauberer, Opfernder oder mit sämtlichen Vorgängen vertraut. Die Gemeinschaft umfasst ehrliche Frömmigkeit, familiäre Bindung, Furcht, Zweifel und die Autorität eines jahrhundertealten Propheten. Armut und Außenseitertum sagen für sich genommen nichts über den Verstand eines Menschen aus."
+      ]
+    },
+    {
+      "id": "gabe-des-jahres",
+      "title": "Opfer und die Gabe des Jahres",
+      "paragraphs": [
+        "Die Nimuiten bringen Nimue Opfer dar. Dazu gehören Tiere und Menschen. Die Menschenopfer werden innerhalb der Gemeinschaft als freiwillige Hingabe verstanden: Ein Mitglied stellt sein Leben in den Dienst jener Verheißung, die für alle gelten soll.",
+        "Jährlich wird eine Person für diese besondere Opfergabe bestimmt. Die Auswahl erfolgt unter denjenigen, die ihre Bereitschaft erklärt haben. Sie kann durch ein als heilig verstandenes Los geschehen oder durch eine Benennung des Propheten, die er als Offenbarung von Nimues Willen auslegt. In beiden Fällen gilt der Gemeinschaft nicht menschliche Willkür, sondern die Göttin als eigentliche Urheberin der Wahl.",
+        "Die Bezeichnung „Gabe des Jahres“ trennt diese Person sprachlich vom künftigen Gemahl Nimues. Die Opferung erfüllt nicht automatisch die Heimkehrprophezeiung. Sie gilt den Gläubigen vielmehr als Hingabe während der noch andauernden Erwartung.",
+        "Dass ein Opfer als freiwillig gilt, bedeutet nicht, dass alle Beteiligten frei von Erwartungen, Furcht oder religiösem Druck sind. Die erklärte Bereitschaft kann mit der Angst verbunden sein, die Gemeinschaft oder die Göttin zu enttäuschen. Die Auswahl ist deshalb weder mit einer heimlichen Entführung gleichzusetzen noch jede Losziehung als Betrug erwiesen. Prys besitzt jedoch erheblichen Einfluss darauf, welche Entscheidung als göttlicher Wille verstanden wird.",
+        "Die Gabe des Jahres ist ein jährliches Ritual. Daneben stehen Tieropfer und die Begleittode im Bestattungsbrauch; die Zahl eins begrenzt deshalb nicht sämtliche möglichen Todesfälle eines Jahres."
+      ]
+    },
+    {
+      "id": "meereswesen",
+      "title": "Die Geschöpfe am Strand",
+      "paragraphs": [
+        "Die Nimuiten legen Opfergaben an Stränden nieder, wo sie auf Sirenen und Thraalkin treffen oder deren Nähe vermuten. Diese Wesen gelten ihnen als Geschöpfe Nimues. Ihre Erscheinung ist in der Auslegung der Sekte kein Beweis einer infernalen Nähe, sondern ein Zeichen dafür, dass die Dame des Sees ihre Gemeinschaft wahrnimmt.",
+        "Die Sirenen werden mit den Meerjungfrauen Nimues verwechselt. Die Thraalkin, amphibische Echsenwesen und wirkliche Kinder Thraals, erscheinen den Gläubigen ebenfalls als Angehörige von Nimues verborgenem Meeresvolk. Die Gemeinschaft deutet beide nach ihrem eigenen Glauben, statt deren wirkliche Herkunft zu erkennen.",
+        "Das Interesse dieser Wesen an den Gaben kann die Erwartung weiterer Begegnungen verstärken. Ihr Verhalten muss dabei nicht gutartig werden. Eine Sirene wird durch Verehrung nicht zu einer Meerjungfrau, und Thraalkin bleiben Thraals Geschöpfe. Gefährliche Begegnungen können innerhalb der Sekte als Prüfung oder als Reaktion auf vermeintliche Unreinheit ausgelegt werden."
+      ]
+    },
+    {
+      "id": "totenlehre",
+      "title": "Die Toten und das Leben unter dem Meer",
+      "paragraphs": [
+        "Stirbt ein Nimuit, erhält er nach dem Brauch der Gemeinschaft ein Meeresbegräbnis. Die Angehörigen fahren mit dem Leichnam hinaus und begleiten die Übergabe an das Wasser mit Klageliedern. Der Körper wird beschwert und dem Meeresgrund überlassen.",
+        "Die Gläubigen verbinden mit dieser Bestattung eine besondere Hoffnung. Sie glauben, Nimue nehme würdige Verstorbene auf und mache sie zu Meerjungfern oder Meermännern. Jene Wesen, denen sie an den Küsten begegnen und die andere als Sirenen oder Thraalkin bezeichnen, gelten ihnen als Erscheinungsformen solcher Verwandelten.",
+        "Damit erscheinen die Meerwesen nicht nur als Diener der Göttin. In ihnen können die Nimuiten auch Angehörige ihrer eigenen Gemeinschaft vermuten, die ihnen in ein anderes Dasein vorausgegangen sind. Die Gaben am Strand erhalten dadurch eine Verbindung zur Erinnerung an die Toten.",
+        "Die Sekte fürchtet jedoch ein anderes Schicksal. Verdorbene Seelen würden nach ihrer Vorstellung nicht in Nimues Meeresvolk aufgenommen, sondern zu Versunkenen: rastlosen Wasserleichen, die als untote Überreste zurückkehren können. Diese Unterscheidung erlaubt es den Gläubigen, ihre Hoffnung auf Verwandlung mit der wirklichen Gefahr der Versunkenen zu vereinbaren.",
+        "Diese Lehre ist nicht die tatsächliche Entstehungsgeschichte von Sirenen, Thraalkin oder Versunkenen. Insbesondere wird aus dem Auftreten eines Versunkenen kein objektiver Beweis der moralischen Verdorbenheit seines früheren Lebens."
+      ]
+    },
+    {
+      "id": "trauernde",
+      "title": "Die Beschwerung und das Folgen der Trauernden",
+      "paragraphs": [
+        "Die Beschwerung des Leichnams hat innerhalb der Sektenlehre zwei miteinander vereinbare Bedeutungen. Sie übergibt den Toten dem Reich, in dem die erhoffte Verwandlung stattfinden soll, und soll zugleich verhindern, dass ein verworfener Leib als Versunkener zu den Lebenden zurückkehrt.",
+        "Die Nimuiten erklären den scheinbaren Widerspruch damit, dass die Beschwerung nur den sterblichen Leib festhalte. Wen Nimue tatsächlich verwandle, dem werde sie auch die Kraft oder die neue Gestalt verleihen, sich davon zu lösen. Ein bloß wiedererwachter, unreiner Körper besitze diese Befreiung nicht.",
+        "Dies ist die Erklärung der Gläubigen, kein verlässliches Prüfverfahren. Ein versenkter Körper, der nicht wiedergefunden wird, beweist keine Verwandlung. Ebenso garantiert eine Beschwerung keinen Schutz vor jedem Untoten.",
+        "Bei manchen Begräbnissen wird darüber hinaus erwartet oder ausdrücklich begrüßt, dass Freiwillige das Schicksal des Verstorbenen teilen und ihm in den Tod folgen. Die Gemeinschaft deutet diese zusätzliche Hingabe als Begleitung des Toten und als Vertrauen auf Nimues versprochene Aufnahme.",
+        "Der gewöhnliche Tote, der bestattet wird, und die Lebenden, die ihm folgen, haben dabei unterschiedliche Rollen. Das Folgen wird nicht bei jedem Begräbnis verlangt und ist nicht mit der Gabe des Jahres identisch. Wo die Gemeinschaft eine solche Begleitung erwartet, kann sich religiöse Hoffnung mit erheblichem Druck auf die Trauernden verbinden."
+      ]
+    },
+    {
+      "id": "verbot",
+      "title": "Verbot, Überstellung und die Sanktoren",
+      "paragraphs": [
+        "Die Nimuiten sind in Cenyr verboten. Aufgegriffene Mitglieder werden der Alerischen Kirche überstellt, die ihre Zugehörigkeit, Lehre und Beteiligung an konkreten Handlungen untersucht und darüber richtet. Der Adel ist verpflichtet, die Häretiker der kirchlichen Gerichtsbarkeit zuzuführen.",
+        "Das Verbot richtet sich nicht gegen gewöhnliche Nimueverehrung. Die Dame des Sees gehört selbst zur anerkannten göttlichen Ordnung. Gegenstand des Konflikts sind die eigenmächtige Offenbarungsautorität, die Opferpraxis, die gefährliche Verwechslung der Meereswesen und die Lehren, die unter Nimues Namen verbreitet werden.",
+        "Von Zeit zu Zeit entsendet die Alerische Kirche Sanktoren aus der Blutstadt. Sie unterstützen die örtlichen Geistlichen, untersuchen schwerwiegende Fälle und helfen, vermeintliche Offenbarungen und mögliche infernale Einflüsse zu prüfen.",
+        "Die Überstellung bedeutet nicht automatisch die Hinrichtung jedes Mitglieds. Ein in der Gemeinschaft aufgewachsener Angehöriger, ein Prediger und jemand, der unmittelbar an Opferungen beteiligt ist, besitzen unterschiedliche Verantwortlichkeiten. Untersuchung und gerichtliche Entscheidung liegen bei der Kirche. Das Verbot ermächtigt den Adel nicht zu willkürlicher Selbstjustiz."
+      ]
+    },
+    {
+      "id": "kirchlicher-bruch",
+      "title": "Der Bruch mit der Alerischen Kirche",
+      "paragraphs": [
+        "Die Nimuiten lösen sich nicht deshalb von der Alerischen Kirche, weil sie plötzlich alle anderen Göttlichen leugnen. Ihr Bruch entsteht daraus, dass sie eine besondere Rückkehrerwartung und die Auslegung eines lebenden Propheten über die Prüfung durch die überlieferte Lehre stellen.",
+        "Nimues Hilfe bei der Flucht aus Avallorn wird zur behaupteten Zusage einer Heimkehr. Die Hoffnung auf ihre Gnade wird zur Erwartung einer bestimmten Verwandlung nach dem Tod. Verehrung wird mit Menschenopfern verbunden, und infernale Geschöpfe werden als Angehörige ihres Meeresvolkes angesprochen.",
+        "Für die Alerische Kirche widerspricht dieser Zusammenhang dem Wesen der Göttin, in deren Namen die Gemeinschaft handelt. Ein Prophet kann Nimues Güte nicht dadurch neu bestimmen, dass er eine grausame Forderung als höhere Offenbarung ausgibt. Die Frage ist deshalb nicht, ob Nimue verehrt werden darf, sondern ob die angebliche Stimme tatsächlich ihre Stimme ist.",
+        "Die Nimuiten halten dem entgegen, dass die etablierte Kirche ihre Enttäuschung nicht überwunden und die Verheißung der Heimkehr nicht verstanden habe. So kann eine Untersuchung als weiterer Beweis jener geistlichen Blindheit erscheinen, von der Prys seit der Hungersnot spricht.",
+        "Die Tragik der Gemeinschaft liegt darin, dass Menschen nach Rettung suchen und ihre gefährlichsten Irrtümer gerade durch wirkliche übernatürliche Erfahrungen bestätigt sehen. Nicht jede Hoffnung ist gelogen; nicht jede antwortende Macht ist die, deren Namen sie trägt."
+      ]
+    },
+    {
+      "id": "hinter-dem-glauben",
+      "title": "Spielleitungswissen · Hinter dem Glauben",
+      "paragraphs": [
+        "Die Macht, die einen entscheidenden Teil der Opfer und Verehrung der Nimuiten entgegennimmt, ist Thraal. Die Gemeinschaft nennt Nimue, richtet aber Handlungen und Erwartungen auf eine vermeintliche Göttin, deren grausame Forderungen nicht zu Nimues tatsächlichem Wesen passen. Thraal benötigt keine korrekte Anrede, um diese Verirrung auszunutzen.",
+        "Er nimmt die Verehrung an, fördert die Bindung an seine Geschöpfe und verleiht tatsächliche Gaben. Solche Wirkungen bestätigen für die Betroffenen ausgerechnet den Glauben, von Nimue erhört worden zu sein. Dass eine Erscheinung wirksam ist, beantwortet für sie nicht die entscheidende Frage nach ihrem Ursprung.",
+        "Die Täuschung wird dadurch erleichtert, dass Nimue und Thraal beide mit Wasser verbunden sind und verwandte äußere Wirkungen hervorrufen können. Eine verbesserte Fähigkeit, unter Wasser zu atmen, ist für sich genommen kein eindeutiger Herkunftsnachweis. Hinzu kommt die eigene arkane Begabung von Iorwerth Prys, die ebenfalls nicht mit göttlicher Bestätigung gleichgesetzt werden darf.",
+        "Das bedeutet nicht, dass jedes Gebet eines Nimuiten ins Leere geht oder ausschließlich Thraal erreicht. Einzelne aufrichtige Anhänger handeln in echter Güte, beten ehrlich zu Nimue und werden tatsächlich von ihr berührt. Solche Erfahrungen können Trost oder Mahnung enthalten und dennoch durch die Lehre des Propheten fehlgedeutet werden. Echte Nähe zur Göttin bestätigt weder die Opferpraxis noch die ganze Gemeinschaft.",
+        "Nimue und Thraal arbeiten dabei nicht zusammen. Die Vermischung liegt in Wahrnehmung und Deutung der Gläubigen. Ein von Thraal gewährtes Zeichen macht ihn nicht zum Ursprung aller Güte; ein echter Trost Nimues rechtfertigt keine Menschenopfer in ihrem Namen.",
+        "Thraal ist weder Nimue noch ihre verborgene zweite Persönlichkeit. Er besetzt ihre Rolle im religiösen Erleben der Getäuschten, nicht ihren wirklichen Platz unter den Göttlichen. Wie viel Iorwerth Prys davon weiß, bleibt offen. Ebenso unbekannt sind der Ursprung jeder einzelnen Vision und das endgültige Schicksal jeder verstorbenen Seele."
+      ],
+      "disclosure": "Spielleitungswissen anzeigen · Thraals Einfluss"
+    }
+  ],
+  "links": [
+    {
+      "label": "Das Königreich Cenyr",
+      "href": "Kontinente/Estryll/Königreich Cenyr/Königreich von Cenyr.html",
+      "note": "Heimat der Gemeinschaft und ihrer unerfüllten Rückkehrhoffnung"
+    },
+    {
+      "label": "Der Alerische Klerus",
+      "href": "Religionen/klerus/index.html",
+      "note": "Die bestehenden geistlichen Ämter der Kirche"
+    },
+    {
+      "label": "Sirenen",
+      "href": "Bestiarium/wesen/nautiloiden/sirenen/index.html",
+      "note": "Die gefährlichen Meereswesen, die die Sekte mit Nimues Meerjungfrauen verwechselt"
+    },
+    {
+      "label": "Thraalkin",
+      "href": "Bestiarium/wesen/nautiloiden/thraalkin/index.html",
+      "note": "Die wirkliche Herkunft der amphibischen Echsenwesen"
+    },
+    {
+      "label": "Versunkene",
+      "href": "Bestiarium/wesen/nekrophagen/versunkener/index.html",
+      "note": "Wasserleichen und die Grenzen nimuitischer Totendeutung"
+    }
+  ],
+  "almanach": {
+    "factory": "createNimuitenReligionEntry",
+    "output": "AleriaAlmanach/modules/religion/nimuiten/nimuiten-entry.js",
+    "pages": [
+      {
+        "title": "I. — Die verlorene Heimat",
+        "sections": [
+          "verlorene-heimat",
+          "herkunft"
+        ],
+        "scene": "kulte/nimuiten/assets/nimuiten-kuestenwache-v1.png"
+      },
+      {
+        "title": "II. — Der Prophet der Heimkehr",
+        "sections": [
+          "hungersnot",
+          "iorwerth-prys"
+        ],
+        "scene": "kulte/nimuiten/assets/nimuiten-prys-predigt-v1.png"
+      },
+      {
+        "title": "III. — Nimues unerfüllte Verheißung",
+        "sections": [
+          "heimkehr",
+          "cenyr"
+        ],
+        "scene": "kulte/nimuiten/assets/nimuiten-versunkener-tempel-v1.png"
+      },
+      {
+        "title": "IV. — Gemeinschaft und Opfer",
+        "sections": [
+          "gemeinschaft",
+          "gabe-des-jahres"
+        ],
+        "scene": "kulte/nimuiten/assets/nimuiten-stille-opferstaette-v1.png"
+      },
+      {
+        "title": "V. — Das vermeintliche Meeresvolk",
+        "sections": [
+          "meereswesen",
+          "totenlehre"
+        ],
+        "scene": "kulte/nimuiten/assets/nimuiten-meeresvolk-v1.png"
+      },
+      {
+        "title": "VI. — Die Toten und die Trauernden",
+        "sections": [
+          "trauernde"
+        ],
+        "scene": "kulte/nimuiten/assets/nimuiten-trauer-am-meer-v1.png"
+      },
+      {
+        "title": "VII. — Verbot und kirchlicher Bruch",
+        "sections": [
+          "verbot",
+          "kirchlicher-bruch"
+        ],
+        "scene": "kulte/nimuiten/assets/nimuiten-sanktoren-untersuchung-v1.png"
+      },
+      {
+        "title": "VIII. — Spielleitungswissen: Hinter dem Glauben",
+        "sections": [
+          "hinter-dem-glauben"
+        ],
+        "scene": "kulte/nimuiten/assets/nimuiten-thraals-tiefe-v1.png"
+      }
+    ]
+  }
+}

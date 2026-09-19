@@ -10,6 +10,7 @@ const files = [
   'item-register/item-register-model.js',
   'item-register/item-register-trade.js',
   'item-register/item-register-standard.js',
+  'item-register/item-register-module-catalog.js',
   'character-equipment/character-equipment-sync.js',
   'character-equipment/character-equipment-registration.js',
   'classes/aldrimar/skjaldr-berserk-progression.js',
