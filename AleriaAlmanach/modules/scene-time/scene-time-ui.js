@@ -19,7 +19,9 @@ function renderSceneTimePresetMark(preset) {
 function renderSceneTimeEventBlock(eventInput, options = {}) {
   const event = getSceneTimeSafeEvent(eventInput);
   const title = escapeHtml(event.title);
-  const dayLabel = event.dayLabel ? `<span>${escapeHtml(event.dayLabel)}</span>` : '';
+  const playDayLabel = event.calendarDate ? formatAleriaPlayDay(event.calendarDate) : '';
+  const dateLabel = [playDayLabel, event.dayLabel].filter(Boolean).join(' · ');
+  const dayLabel = dateLabel ? `<span>${escapeHtml(dateLabel)}</span>` : '';
   const timeLabel = event.timeLabel ? `<span>${escapeHtml(event.timeLabel)}</span>` : '';
   const body = event.body ? `<div class="scene-time-event-body">${parseCommentMarkup(event.body)}</div>` : '';
   const actions = options.commentId && !options.hideActions
@@ -57,7 +59,7 @@ function buildSceneClockControl(threadId, page = {}) {
   const dateAttrs = hasStart
     ? ` data-scene-aleria-year="${startDate.year}" data-scene-aleria-month="${startDate.month}" data-scene-aleria-day="${startDate.day}"`
     : '';
-  const dateLabel = hasStart ? formatAleriaDate(startDate) : '';
+  const dateLabel = hasStart ? formatAleriaDate(startDate, { withPlayDay: true }) : '';
   return `<div class="scene-clock" data-scene-clock data-scene-thread-id="${escapeHtml(threadId)}"${dateAttrs} title="Zeit dieser Szenenseite"><span class="scene-clock-icon" aria-hidden="true"><img src="../IconOrdner/Etablissement Icons/Sanduhr.PNG" alt="" decoding="async"></span><span class="scene-clock-copy"><span class="scene-clock-label">Szenenzeit</span><strong data-scene-clock-value>Zeit nicht gesetzt</strong>${hasStart ? `<span class="scene-clock-date" data-scene-clock-date>${escapeHtml(dateLabel)}</span>` : ''}</span><button type="button" data-scene-time-action="open-event-dialog" aria-label="Szenenzeit einstellen" title="Szenenzeit einstellen">✎</button></div>`;
 }
 
@@ -77,11 +79,22 @@ function syncSceneClockStartDate(clockRoot, value) {
   label.textContent = formatAleriaDate(date);
 }
 
+function updateSceneClockTimeline(clockRoot, startDate, lastTimedEntry) {
+  if (!clockRoot) return;
+  const currentDate = getSceneTimelineAleriaDate(startDate, lastTimedEntry?.aleriaEndDayIndex);
+  const clockValue = clockRoot.querySelector('[data-scene-clock-value]');
+  if (clockValue) clockValue.textContent = lastTimedEntry
+    ? formatSceneClock(lastTimedEntry.endSeconds, true, currentDate)
+    : [currentDate ? formatAleriaPlayDay(currentDate) : '', 'Zeit nicht gesetzt'].filter(Boolean).join(' · ');
+  const dateValue = clockRoot.querySelector('[data-scene-clock-date]');
+  if (dateValue && currentDate) dateValue.textContent = formatAleriaDateRange(startDate, currentDate);
+}
+
 function renderSceneCommentTime(entry) {
   if (!entry || !Number.isFinite(entry.startSeconds)) return '';
   const end = Number.isFinite(entry.endSeconds) ? entry.endSeconds : entry.startSeconds;
   const hasAleria = !!entry.aleriaDate;
-  const prefix = hasAleria ? `${formatAleriaDate(entry.aleriaDate)} · Seite ${entry.aleriaPageInDay} · ` : '';
+  const prefix = hasAleria ? `${formatAleriaDate(entry.aleriaDate, { withPlayDay: true })} · Seite ${entry.aleriaPageInDay} · ` : '';
   const text = `${prefix}${formatSceneClock(entry.startSeconds, !hasAleria)}${end !== entry.startSeconds ? ` → ${formatSceneClock(end, false)}` : ''}`;
   return `<div class="scene-comment-time" title="Dauer dieses Beitrags: ${entry.durationSeconds || 0} Sekunden">${escapeHtml(text)}</div>`;
 }

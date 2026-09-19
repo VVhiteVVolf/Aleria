@@ -19,3 +19,7 @@ Die Pakete sind Gestaltungsregeln, keine automatische Schadensstaffel. Mana und 
 Am 12. September 2026 wurden die Manakosten aller Zaubergrade um 15 % erhöht, auf ganze Punkte aufgerundet. Die zentrale Staffel für Grad 0–10 lautet **2, 3, 4, 6, 7, 9, 11, 12, 13, 15, 18**. Sie gilt auch für ältere Katalogfassungen und bereits gelernte Zauber. `getSpellManaCost` bleibt die gemeinsame Quelle; gespeicherte Kosten niemals erneut mit 1,15 multiplizieren. Manavorräte, Regeneration und Aktionskosten werden durch diese Erhöhung nicht verändert.
 
 Die aktuelle Zuordnung aller 23 Rhiannon-Zauber steht in [SPELL_ACTION_ECONOMY.md](AleriaAlmanach/docs/combat/SPELL_ACTION_ECONOMY.md). Rhiannons Schadenszauber verwenden ihren aktuellen INT-Modifikator; dieser muss in Schadenswurf, Durchschnitt und sichtbarer Formel berücksichtigt werden.
+
+# Play-Chronologie
+
+Der **9. Lichtkehr 1740 (09.03.1740)** ist unveränderlich **Tag 1 des Plays**. Der 10. Lichtkehr ist Tag 2, der 11. Tag 3; frühere Daten werden als **Vergangenheit** bezeichnet. Die Zählung gilt szenenübergreifend und verwendet den Aleria-Kalender mit 36 Tagen pro Monat und 13 Monaten pro Jahr. `AleriaCalendar.playStartDate`, `playDay` und `playDayLabel` sind die gemeinsame Quelle. Aktuelles Weltdatum und Szenenbeginn dürfen den Playbeginn nicht verschieben. Gespeicherte relative Szenenuhren und mechanische Erholungsschlüssel dürfen nicht zur Korrektur einer Play-Tagesanzeige umnummeriert werden.

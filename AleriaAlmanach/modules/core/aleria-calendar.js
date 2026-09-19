@@ -8,6 +8,7 @@ const ALERIA_CALENDAR = Object.freeze({
   daysPerMonth: 36,
   monthsPerYear: 13,
   daysPerYear: 468,
+  playStartDate: Object.freeze({ year: 1740, month: 3, day: 9 }),
   currentYear: 1740,
   currentMonth: 3,
   currentDay: 9
@@ -57,6 +58,19 @@ function compareAleriaDates(a, b) {
   return ordinalA - ordinalB;
 }
 
+// The play epoch is fixed. Advancing today's world date or opening a scene
+// with a different start date must never renumber the play's chronology.
+function getAleriaPlayDay(value) {
+  const ordinal = getAleriaDayOrdinal(value);
+  return ordinal === null ? null : ordinal - getAleriaDayOrdinal(ALERIA_CALENDAR.playStartDate) + 1;
+}
+
+function formatAleriaPlayDay(value) {
+  const day = getAleriaPlayDay(value);
+  if (day === null) return '';
+  return day < 1 ? 'Vergangenheit' : `Tag ${day}`;
+}
+
 function getAleriaCurrentDate() {
   const sharedDate = globalThis.AleriaWorldDateStore?.getState?.().date;
   if (sharedDate && hasAleriaDate(sharedDate)) return sanitizeAleriaDate(sharedDate);
@@ -70,19 +84,21 @@ function getAleriaCurrentDate() {
 function getAleriaDateEra(value) {
   const date = sanitizeAleriaDate(value);
   if (!hasAleriaDate(date)) return '';
+  if (getAleriaPlayDay(date) < 1) return 'past';
   const delta = compareAleriaDates(date, getAleriaCurrentDate());
   if (delta < 0) return 'past';
   if (delta > 0) return 'future';
   return 'present';
 }
 
-function formatAleriaDate(value, { withWeekday = true, numeric = false } = {}) {
+function formatAleriaDate(value, { withWeekday = true, numeric = false, withPlayDay = false } = {}) {
   const date = sanitizeAleriaDate(value);
   if (!hasAleriaDate(date)) return '';
   const weekday = withWeekday ? `${getAleriaWeekdayName(date.day)}, ` : '';
   const dd = String(date.day).padStart(2, '0');
   const mm = String(date.month).padStart(2, '0');
-  return numeric ? `${weekday}${dd}.${mm} Jahr ${date.year}` : `${weekday}${date.day}. ${getAleriaMonthLabel(date.month)} ${date.year}`;
+  const formatted = numeric ? `${weekday}${dd}.${mm} Jahr ${date.year}` : `${weekday}${date.day}. ${getAleriaMonthLabel(date.month)} ${date.year}`;
+  return withPlayDay ? `${formatAleriaPlayDay(date)} · ${formatted}` : formatted;
 }
 
 function aleriaDateFromOrdinal(ordinal) {
@@ -118,7 +134,7 @@ function buildAleriaDateBadge(value, className = 'aleria-date-badge') {
   if (!hasAleriaDate(date)) return '';
   const era = getAleriaDateEra(date);
   const eraClass = era && era !== 'present' ? ` ${className}-${era}` : '';
-  return `<span class="${className}${eraClass}">${escapeHtml(formatAleriaDate(date))}</span>`;
+  return `<span class="${className}${eraClass}">${escapeHtml(formatAleriaDate(date, { withPlayDay: true }))}</span>`;
 }
 
 // Gemeinsamer, unveränderlicher Zugang für gekapselte Kalender-Module.
@@ -128,6 +144,8 @@ globalThis.AleriaCalendar = Object.freeze({
   normalize: sanitizeAleriaDate,
   isValid: hasAleriaDate,
   ordinal: getAleriaDayOrdinal,
+  playDay: getAleriaPlayDay,
+  playDayLabel: formatAleriaPlayDay,
   fromOrdinal: aleriaDateFromOrdinal,
   shift: addAleriaDays,
   format: formatAleriaDate,

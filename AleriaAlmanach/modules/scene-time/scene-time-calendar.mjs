@@ -1,4 +1,4 @@
-import { mountCalendarDatePicker } from '../calendar/calendar-date-picker.mjs';
+import { mountCalendarDatePicker } from '../calendar/calendar-date-picker.mjs?v=20260919-play-days-v1';
 
 // Adapter zwischen Weltkalender und bestehender, relativer Szenenuhr.
 export function createSceneTimeCalendar(overlay, { comments, thread, afterId = null, editingId = null } = {}) {

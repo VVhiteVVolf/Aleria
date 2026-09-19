@@ -1,8 +1,8 @@
 import { getCalendarStore } from './calendar-store.mjs';
 import { createCalendarEventModel } from './calendar-events-model.mjs';
-import { renderCalendarMonth, escapeCalendarText as e } from './calendar-date-picker.mjs';
+import { renderCalendarMonth, escapeCalendarText as e } from './calendar-date-picker.mjs?v=20260919-play-days-v1';
 import { renderCalendarPreview, bindCalendarImageFallback } from './calendar-preview.mjs';
-import { createCalendarEditor } from './calendar-editor.mjs';
+import { createCalendarEditor } from './calendar-editor.mjs?v=20260919-play-days-v1';
 import { renderCalendarChronicle } from './calendar-chronicle.mjs';
 import { calendarChronicleSelection } from '../../../Ereignisse/modules/catalog/events-model.mjs';
 import { createWeddingPreview } from '../../../Ereignisse/modules/weddings/wedding-preview.mjs';
@@ -29,7 +29,8 @@ function initializeCalendarPage() {
   }
   function render() {
     const state = store.getState(), today = calendar.current();
-    $('[data-calendar-today]').textContent = calendar.format(today);
+    $('[data-calendar-today]').textContent = calendar.format(today, { withPlayDay: true });
+    $('[data-calendar-play-start]').textContent = `Tag 1 des Plays: ${calendar.format(calendar.playStartDate, { withWeekday: false })}. Frühere Daten gehören zur Vergangenheit.`;
     $('[data-calendar-heading]').textContent = calendar.monthLabel(selected.month);
     weddings.render(selected.year);
     $('[data-calendar-chronicle]').innerHTML = renderCalendarChronicle(selected.year, initialChronicle.focusId);
@@ -41,7 +42,7 @@ function initializeCalendarPage() {
       counts.set(day, entries.filter(event => calendar.ordinal(event.start) <= ordinal && calendar.ordinal(event.end) >= ordinal).length);
     }
     $('[data-calendar-grid]').innerHTML = renderCalendarMonth(selected, { calendar, today, counts });
-    $('[data-calendar-day-title]').textContent = `${selected.day}. ${calendar.monthLabel(selected.month)}`;
+    $('[data-calendar-day-title]').textContent = calendar.format(selected, { withWeekday: false, withPlayDay: true });
     const dayEntries = model.occurrences(state.events, selected);
     $('[data-calendar-agenda]').innerHTML = cards(dayEntries) || `<div class="calendar-empty"><span aria-hidden="true">✧</span><p>Dieser Tag ist noch frei.</p><small>Eine Zusammenkunft, ein Fest oder den nächsten Aufbruch vormerken.</small><button type="button" data-calendar-action="new">Ersten Termin eintragen</button></div>`;
     const filtered = entries.filter(event => [event.title, event.location, ...event.participants.map(person => person.name)].join(' ').toLocaleLowerCase('de').includes(filter));

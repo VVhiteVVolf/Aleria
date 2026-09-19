@@ -1,5 +1,5 @@
 import { CALENDAR_TEMPLATES, createCalendarEventModel } from './calendar-events-model.mjs';
-import { mountCalendarDatePicker, escapeCalendarText as e } from './calendar-date-picker.mjs';
+import { mountCalendarDatePicker, escapeCalendarText as e } from './calendar-date-picker.mjs?v=20260919-play-days-v1';
 import { renderCalendarPreview, renderCalendarParticipants, safeCalendarUrl, bindCalendarImageFallback } from './calendar-preview.mjs';
 
 export function createCalendarEditor({ store, calendar = globalThis.AleriaCalendar }) {

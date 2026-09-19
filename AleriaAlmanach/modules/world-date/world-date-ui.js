@@ -20,7 +20,7 @@ function getRenderableWorldDate() {
 function renderWorldDateSidebar() {
   const state = AleriaWorldDateStore.getState();
   const date = getRenderableWorldDate();
-  const formattedDate = formatAleriaDate(date) || 'Datum nicht gesetzt';
+  const formattedDate = formatAleriaDate(date, { withPlayDay: true }) || 'Datum nicht gesetzt';
   const sidebar = document.querySelector('[data-world-date-sidebar]');
   const label = document.querySelector('[data-world-date-label]');
   const sync = document.querySelector('[data-world-date-sync]');
@@ -64,13 +64,14 @@ function renderWorldDateDialog() {
         <button type="button" data-world-date-action="close-editor" aria-label="Datumsfenster schließen">×</button>
       </header>
       <p>Undatierte interaktive Szenen übernehmen dieses Datum mit ihrem ersten Beitrag als festes Startdatum.</p>
+      <p>Tag 1 des Plays ist der ${escapeHtml(formatAleriaDate(ALERIA_CALENDAR.playStartDate, { withWeekday: false }))}. Frühere Daten gehören zur Vergangenheit.</p>
       <div data-world-date-calendar></div>
       <div class="world-date-fields" hidden>
         <label><span>Jahr</span><input type="number" min="1" required value="${date.year}" data-world-date-field="year"></label>
         <label><span>Monat</span><select required data-world-date-field="month">${getWorldDateMonthOptions(date.month)}</select></label>
         <label><span>Tag</span><select required data-world-date-field="day">${getWorldDateDayOptions(date.day)}</select></label>
       </div>
-      <div class="world-date-preview"><small>Gewählter Tag</small><strong data-world-date-preview>${escapeHtml(formatAleriaDate(date))}</strong></div>
+      <div class="world-date-preview"><small>Gewählter Tag</small><strong data-world-date-preview>${escapeHtml(formatAleriaDate(date, { withPlayDay: true }))}</strong></div>
       <footer>
         <span data-world-date-status role="status"></span>
         <button type="button" data-world-date-action="close-editor">Abbrechen</button>
@@ -82,7 +83,7 @@ function renderWorldDateDialog() {
 
 async function openWorldDateDialog() {
   const overlay = renderWorldDateDialog();
-  const { mountCalendarDatePicker } = await import('../calendar/calendar-date-picker.mjs');
+  const { mountCalendarDatePicker } = await import('../calendar/calendar-date-picker.mjs?v=20260919-play-days-v1');
   overlay.worldDatePicker?.destroy();
   overlay.worldDatePicker = mountCalendarDatePicker(overlay.querySelector('[data-world-date-calendar]'), {
     value: getRenderableWorldDate(),
@@ -110,7 +111,7 @@ function renderWorldDatePreview(form) {
   const preview = form?.querySelector('[data-world-date-preview]');
   if (!preview) return;
   const date = getWorldDateFormValue(form);
-  preview.textContent = AleriaWorldDateModel.isValid(date) ? formatAleriaDate(date) : 'Unvollständiges Datum';
+  preview.textContent = AleriaWorldDateModel.isValid(date) ? formatAleriaDate(date, { withPlayDay: true }) : 'Unvollständiges Datum';
 }
 
 function setWorldDateDialogStatus(message = '', status = 'info') {

@@ -9,7 +9,8 @@ export function renderCalendarMonth(date, { calendar = globalThis.AleriaCalendar
       const day = index + 1;
       const current = day === today.day && date.month === today.month && date.year === today.year;
       const count = counts.get(day) || 0;
-      return `<button type="button" data-calendar-day="${day}" aria-label="${e(calendar.format({ ...date, day }))}${count ? `, ${count} Termine` : ''}" aria-pressed="${day === selected}"${current ? ' aria-current="date"' : ''}><span>${day}</span>${count ? `<small>${count}</small>` : ''}</button>`;
+      const label = calendar.format({ ...date, day }, { withPlayDay: true });
+      return `<button type="button" data-calendar-day="${day}" title="${e(label)}" aria-label="${e(label)}${count ? `, ${count} Termine` : ''}" aria-pressed="${day === selected}"${current ? ' aria-current="date"' : ''}><span>${day}</span>${count ? `<small>${count}</small>` : ''}</button>`;
     }).join('')}</div>`;
 }
 
@@ -26,7 +27,7 @@ export function mountCalendarDatePicker(host, { value, onChange = () => {}, cale
     <div data-picker-grid></div><button type="button" data-picker-today>Heute in Aleria</button></div></details>`;
   const details = host.querySelector('details');
   function render() {
-    host.querySelector('summary').textContent = calendar.format(selected);
+    host.querySelector('summary').textContent = calendar.format(selected, { withPlayDay: true });
     host.querySelector('[data-picker-month]').value = displayed.month;
     host.querySelector('[data-picker-year]').value = displayed.year;
     host.querySelector('[data-picker-grid]').innerHTML = renderCalendarMonth(displayed, {

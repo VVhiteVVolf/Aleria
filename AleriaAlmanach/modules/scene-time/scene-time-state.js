@@ -115,9 +115,7 @@ function getSceneTimeSegmentAleriaDate(segmentIndex = 1) {
   const thread = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread() : null;
   const resolved = globalThis.AleriaSceneDateDefaults?.resolve?.(thread);
   const startDate = resolved || (thread?.page ? sanitizeAleriaDate(thread.page.sessionDateAleria) : null);
-  if (!startDate || !hasAleriaDate(startDate)) return null;
-  const index = Math.max(1, Math.floor(Number(segmentIndex) || 1));
-  return index > 1 ? addAleriaDays(startDate, index - 1) : startDate;
+  return getSceneTimelineAleriaDate(startDate, segmentIndex);
 }
 
 // Voreingestellte Tagesbeschriftung: bevorzugt den echten Aleria-Wochentagsnamen
@@ -126,14 +124,16 @@ function getSceneTimeSegmentAleriaDate(segmentIndex = 1) {
 function getSceneTimeDefaultSegmentLabel(segmentIndex = 1) {
   const date = getSceneTimeSegmentAleriaDate(segmentIndex);
   const weekday = date ? getAleriaWeekdayName(date.day) : '';
-  return weekday || `Tag ${formatSceneTimeRomanNumeral(segmentIndex)}`;
+  return weekday ? `${formatAleriaPlayDay(date)} · ${weekday}` : `Szenentag ${formatSceneTimeRomanNumeral(segmentIndex)}`;
 }
 
 function getSceneTimeEventSegmentLabel(eventInput = {}, segmentIndex = 1) {
   const event = normalizeSceneTimeEvent(eventInput);
   return normalizeSceneTimeText(
     event.segmentLabel || event.dayLabel,
-    getSceneTimeDefaultSegmentLabel(segmentIndex)
+    event.calendarDate
+      ? formatAleriaDate(event.calendarDate, { withPlayDay: true })
+      : getSceneTimeDefaultSegmentLabel(event.calendarDay || segmentIndex)
   );
 }
 
@@ -212,14 +212,20 @@ function getSceneDayFromSeconds(totalSeconds) {
   return Math.floor(totalSeconds / 86400) + 1;
 }
 
-function formatSceneClock(totalSeconds, includeDay = true) {
+function formatSceneClock(totalSeconds, includeDay = true, aleriaDate = null) {
   if (!Number.isFinite(totalSeconds)) return 'Zeit nicht gesetzt';
   const day = getSceneDayFromSeconds(totalSeconds);
   const seconds = ((Math.floor(totalSeconds) % 86400) + 86400) % 86400;
   const hh = String(Math.floor(seconds / 3600)).padStart(2, '0');
   const mm = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
   const ss = String(seconds % 60).padStart(2, '0');
-  return `${includeDay ? `Tag ${day} · ` : ''}${hh}:${mm}:${ss}`;
+  const dayLabel = aleriaDate ? formatAleriaPlayDay(aleriaDate) : `Szenentag ${day}`;
+  return `${includeDay ? `${dayLabel} · ` : ''}${hh}:${mm}:${ss}`;
+}
+
+function getSceneTimelineAleriaDate(startDate, dayIndex = 1) {
+  if (!hasAleriaDate(startDate)) return null;
+  return addAleriaDays(startDate, Math.max(1, Math.floor(Number(dayIndex) || 1)) - 1);
 }
 
 function buildSceneTimeline(comments = []) {

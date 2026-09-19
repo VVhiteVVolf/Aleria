@@ -275,24 +275,12 @@ function renderCommentsToScroll(scroll, comments) {
       pageCounter = dayIndex === dayCursor ? pageCounter + 1 : 1;
       dayCursor = dayIndex;
       entry.aleriaPageInDay = pageCounter;
-      const aleriaDayIndex = Math.max(1, Math.floor(Number(entry.aleriaDayIndex) || 1));
-      entry.aleriaDate = aleriaDayIndex > 1
-        ? addAleriaDays(sceneStartDate, aleriaDayIndex - 1)
-        : sceneStartDate;
+      entry.aleriaDate = getSceneTimelineAleriaDate(sceneStartDate, entry.aleriaDayIndex);
     });
   }
   const sceneTimelineById = new Map(sceneTimeline.map(entry => [String(entry.comment?.id || ''), entry]));
-  const clockValue = clockRoot?.querySelector('[data-scene-clock-value]');
   const lastTimedEntry = sceneTimeline.slice().reverse().find(entry => Number.isFinite(entry.endSeconds));
-  if (clockValue) clockValue.textContent = lastTimedEntry ? formatSceneClock(lastTimedEntry.endSeconds) : 'Zeit nicht gesetzt';
-  const dateValue = clockRoot?.querySelector('[data-scene-clock-date]');
-  if (dateValue && sceneStartDate) {
-    const aleriaDayIndex = Math.max(1, Math.floor(Number(lastTimedEntry?.aleriaEndDayIndex) || 1));
-    const currentDate = aleriaDayIndex > 1
-      ? addAleriaDays(sceneStartDate, aleriaDayIndex - 1)
-      : sceneStartDate;
-    dateValue.textContent = formatAleriaDateRange(sceneStartDate, currentDate);
-  }
+  updateSceneClockTimeline(clockRoot, sceneStartDate, lastTimedEntry);
   const paginationTop = renderCommentPaginationControls(threadId, pageInfo);
   const paginationBottom = renderCommentPaginationControls(threadId, pageInfo);
   if (sortedComments.length === 0) {

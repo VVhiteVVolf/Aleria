@@ -8,7 +8,7 @@ let _sceneTimeDialogRequest = 0;
 async function mountSceneTimeCalendarDialog(thread, options = {}) {
   const request = ++_sceneTimeDialogRequest;
   const overlay = ensureSceneTimeEventDialog();
-  const { createSceneTimeCalendar } = await import('./scene-time-calendar.mjs');
+  const { createSceneTimeCalendar } = await import('./scene-time-calendar.mjs?v=20260919-play-days-v1');
   if (request !== _sceneTimeDialogRequest) return;
   overlay.sceneCalendar?.destroy();
   overlay.sceneCalendar = createSceneTimeCalendar(overlay, {
