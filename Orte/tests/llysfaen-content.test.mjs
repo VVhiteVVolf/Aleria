@@ -45,7 +45,7 @@ test("Stadtkarte bietet 24 Platzhalter auf den Symbolen der Markierungen-Ebene",
     assert.ok(categories.has(pin.cat), pin.title);
     assert.ok(pin.title);
     assert.equal(pin.pinMarker, "", "Keine doppelten Symbolbilder über der beschrifteten Karte");
-    assert.equal(pin.text, "", "Die Pins sind zunächst reine Platzhalter mit Überschrift");
+    assert.equal(pin.text, "", "Vorbereitete Tabellen benötigen keine erfundenen Beschreibungstexte");
   }
   assetExists(`Karten/${map.images.normal}`);
   assetExists(`Karten/${map.images.pins}`);

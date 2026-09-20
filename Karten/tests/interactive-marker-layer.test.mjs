@@ -11,7 +11,7 @@ const renderLayers = app.slice(app.indexOf('function renderLayerButtons(){'), ap
 function node() {
   const classes = new Set();
   return {
-    style: {}, dataset: {}, children: [], listeners: {}, hidden: false,
+    style: { setProperty(key, value) { this[key] = value; } }, dataset: {}, children: [], listeners: {}, hidden: false,
     classList: {
       add: value => classes.add(value), remove: value => classes.delete(value),
       contains: value => classes.has(value),
@@ -32,6 +32,7 @@ test('Llysfaens 24 interaktive Marker sind ohne Markerbild einschaltbar und öff
     createElement: node,
     getElementById: id => elements[id] || null,
     querySelector: () => null,
+    addEventListener() {},
     querySelectorAll: selector => ['regions', 'pins'].map(layer => elements[`lb-${layer}`])
       .filter(button => !selector.includes('.on') || button.classList.contains('on'))
   };
@@ -45,8 +46,8 @@ test('Llysfaens 24 interaktive Marker sind ohne Markerbild einschaltbar und öff
     esc: value => value,
     openPin: (id, mode) => opened.push({ id, mode })
   };
-  const window = { KartoRuntime: runtime };
-  const context = vm.createContext({ window, document, URL, S: state, KARTO_CONFIG: { images: { normal: 'map.webp' } } });
+  const window = { KartoRuntime: runtime, addEventListener() {} };
+  const context = vm.createContext({ window, document, URL, S: state, editMode: false, KARTO_CONFIG: { images: { normal: 'map.webp' } } });
   vm.runInContext(read('../assets/js/map/map-image-sources.js'), context);
   vm.runInContext(renderLayers, context);
   vm.runInContext('renderLayerButtons()', context);

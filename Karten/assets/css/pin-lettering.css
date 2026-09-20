@@ -1,0 +1,26 @@
+.pin-text::before,
+.pin-text::after { content: none; }
+.pin-text { pointer-events: none; }
+.pin-lettering { display: block; overflow: visible; transform-origin: center; pointer-events: none; }
+.pin-lettering text {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 600;
+  paint-order: stroke fill;
+  stroke: rgba(255, 255, 255, .85);
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 5px white);
+  pointer-events: visiblePainted;
+  cursor: pointer;
+  user-select: none;
+}
+.pin-text.edit-mode text { cursor: grab; }
+.pin-text.dragging text { cursor: grabbing; }
+.pin-text.selected .pin-lettering { outline: 2px dashed var(--gold); }
+.pin-lettering-editor { border: 1px solid var(--border); padding: 1rem; min-width: 0; }
+.pin-lettering-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+.pin-lettering-preview { margin-top: 1rem; padding: 1rem; min-height: 140px; background: var(--p1); overflow: auto; }
+.pin-lettering-preview svg { max-width: 100%; height: auto; }
+@media (max-width: 550px) {
+  .pin-lettering-fields { grid-template-columns: 1fr; }
+}

@@ -1,5 +1,31 @@
 /* Opacity preserves the marker's hit area and existing tooltip/click events. */
-#pl:not(.show-view-markers) .pin:not(.edit-mode) { opacity: 0; }
+#pl:not(.show-view-markers) .pin:not(.edit-mode) .pin-dot,
+#pl:not(.show-view-markers) .pin:not(.edit-mode) .pin-marker-img { opacity: 0; }
+.map-marker-visibility-control,
+.map-text-pin-control { display: none; }
+.map-edit-mode .map-marker-visibility-control { display: flex; align-items: center; gap: .4rem; }
+.map-edit-mode .map-text-pin-control { display: inline-block; }
+.map-marker-visibility-control { font: .9rem 'EB Garamond', serif; cursor: pointer; }
+.pin { isolation: isolate; }
+.pin::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--pin-bloom-size, 130px);
+  height: var(--pin-bloom-size, 130px);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0 0 24px 10px rgba(255,255,255,.8), inset 0 0 14px 5px rgba(255,255,255,.5);
+  opacity: .4;
+  transition: opacity .15s;
+  pointer-events: none;
+  z-index: -1;
+}
+.pin:hover::after,
+.pin.selected::after { opacity: 1; }
+.pin-marker-img { filter: drop-shadow(0 0 8px white) drop-shadow(0 0 18px rgba(255,255,255,.75)); }
+.pin.dragging { will-change: left, top; }
 .map-view-settings { position: relative; }
 .map-view-settings > summary { list-style: none; }
 .map-view-settings > summary::-webkit-details-marker { display: none; }

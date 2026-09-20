@@ -19,6 +19,7 @@
     'add-dominion': () => window.addDominion(),
     'delete-dominion': el => window.deleteDominion(el.dataset.dominionId),
     'start-add-pin': () => window.startAdd(),
+    'start-add-text-pin': () => window.startAdd('text'),
     'select-pin-template': el => window.selectTpl(el.dataset.templateId),
     'apply-pin-template': () => window.tplApply(),
     'cancel-pin-template': () => {

@@ -5,6 +5,10 @@
   let dragOffsetY = 0;
   let dragStartX = null;
   let dragStartY = null;
+  let dragElement = null;
+  let dragFrame = null;
+  let dragMoved = false;
+  let dragClientStart = null;
   let tooltipHideTimer = null;
   // Ctrl/Cmd+click toggles pin membership here - session-only, not saved.
   // Bulk actions (Kategorie ändern / Löschen) act on whatever's in here,
@@ -48,10 +52,19 @@
       element.style.left = (pin.x * image.width) + 'px';
       element.style.top = (pin.y * image.height) + 'px';
 
+      if (pin.kind === 'text' && window.KartoPinLettering) {
+        element.classList.add('pin-text');
+        element.appendChild(window.KartoPinLettering.create(pin));
+        attachPinEvents(element, pin);
+        layer.appendChild(element);
+        return;
+      }
+
       const category = runtime.categoryForPin(pin);
       const color = category.color || '#8a6510';
       const iconUrl = pin.pinMarker || category.marker || '';
       const labelGap = Math.round(options.dotSize * .3);
+      element.style.setProperty('--pin-bloom-size', Math.round(options.dotSize * 2.4) + 'px');
 
       let markerHtml;
       if(iconUrl){
@@ -61,7 +74,7 @@
         // graphics - the tip, not the visual center, belongs on the coordinate).
         // Falls back to the plain dot if the image 404s.
         const size = Math.round(options.dotSize * 2.2 * (pin.pinMarkerScale || 1));
-        markerHtml = `<img class="pin-marker-img" src="${runtime.esc(iconUrl)}" alt="" width="${size}" height="${size}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'pin-dot',style:'width:${options.dotSize}px;height:${options.dotSize}px;background:${color};border-color:#fff;display:block;opacity:1;'}))"/>`;
+        markerHtml = `<img class="pin-marker-img" src="${runtime.esc(iconUrl)}" alt="" draggable="false" width="${size}" height="${size}"/>`;
       } else {
         markerHtml = `<div class="pin-dot" style="width:${options.dotSize}px;height:${options.dotSize}px;background:${color};border-color:#fff;"></div>`;
       }
@@ -69,6 +82,12 @@
       element.innerHTML = `
         ${markerHtml}
         <div class="pin-label" style="font-size:${options.labelSize}px;top:calc(100% + ${labelGap}px);">${runtime.esc(pin.title)}${pin.secret ? ' 🔒' : ''}</div>`;
+      element.querySelector?.('.pin-marker-img')?.addEventListener('error', event => {
+        const dot = document.createElement('div');
+        dot.className = 'pin-dot';
+        Object.assign(dot.style, { width: options.dotSize + 'px', height: options.dotSize + 'px', background: color });
+        event.target.replaceWith(dot);
+      }, { once: true });
       attachPinEvents(element, pin);
       layer.appendChild(element);
     });
@@ -78,6 +97,7 @@
   function attachPinEvents(element, pin){
     let pinDownX = 0;
     let pinDownY = 0;
+    element.addEventListener('dragstart', event => event.preventDefault());
 
     element.addEventListener('mouseenter', event => {
       if(runtime.isEditMode()) return;
@@ -97,8 +117,12 @@
       pinDownX = event.clientX;
       pinDownY = event.clientY;
       if(!runtime.isEditMode()) return;
+      event.preventDefault();
 
       dragId = pin.id;
+      dragElement = element;
+      dragMoved = false;
+      dragClientStart = { x: event.clientX, y: event.clientY };
       dragStartX = pin.x;
       dragStartY = pin.y;
       const image = runtime.mapImageSize();
@@ -112,7 +136,9 @@
       if(event.button !== 0) return;
       event.stopPropagation();
       const distance = Math.hypot(event.clientX - pinDownX, event.clientY - pinDownY);
-      if(distance < 5){
+      const shouldOpen = distance < 5 && !dragMoved;
+      if(isDragging()) stopDrag({save:true, rerender:true});
+      if(shouldOpen){
         if(runtime.isEditMode() && (event.ctrlKey || event.metaKey)){
           toggleSelection(pin.id);
         } else if(window.KartoStampOverwrite?.isOverwriteActive()){
@@ -122,7 +148,6 @@
           runtime.openPin(pin.id, runtime.isEditMode() ? 'edit' : 'view');
         }
       }
-      if(isDragging()) stopDrag({save:true, rerender:true});
     });
   }
 
@@ -137,16 +162,30 @@
     const image = runtime.mapImageSize();
     if(!image.width || !image.height) return false;
     const point = runtime.mapPointFromClient(clientX, clientY);
+    if (!dragMoved && Math.hypot(clientX - dragClientStart.x, clientY - dragClientStart.y) < 5) return true;
+    dragMoved = true;
     pin.x = Math.max(0, Math.min(1, (point.x - dragOffsetX) / image.width));
     pin.y = Math.max(0, Math.min(1, (point.y - dragOffsetY) / image.height));
-    renderPins();
+    if (dragFrame === null) dragFrame = requestAnimationFrame(paintDrag);
     return true;
+  }
+
+  function paintDrag() {
+    dragFrame = null;
+    const pin = state().pins.find(item => item.id === dragId);
+    if (!pin || !dragElement) return;
+    const image = runtime.mapImageSize();
+    dragElement.style.left = (pin.x * image.width) + 'px';
+    dragElement.style.top = (pin.y * image.height) + 'px';
   }
 
   function stopDrag(options = {}){
     if(!dragId) return;
+    if (dragFrame !== null) cancelAnimationFrame(dragFrame);
+    dragFrame = null;
     const pin = state().pins.find(item => item.id === dragId);
-    if(pin && dragStartX !== null && (pin.x !== dragStartX || pin.y !== dragStartY)){
+    const changed = pin && dragStartX !== null && (pin.x !== dragStartX || pin.y !== dragStartY);
+    if(changed){
       const id = dragId, fromX = dragStartX, fromY = dragStartY;
       runtime.pushUndo('Pin verschoben: ' + pin.title, () => {
         const target = state().pins.find(item => item.id === id);
@@ -156,7 +195,11 @@
     dragId = null;
     dragStartX = null;
     dragStartY = null;
-    if(options.save) runtime.save();
+    dragElement?.classList.remove('dragging');
+    dragElement = null;
+    dragMoved = false;
+    dragClientStart = null;
+    if(options.save && changed) runtime.save();
     if(options.rerender) renderPins();
   }
 
@@ -312,4 +355,11 @@
     bulkSetCategory,
     bulkDeleteSelected,
   };
+  window.addEventListener('blur', () => stopDrag({ save: true, rerender: true }));
+  document.addEventListener('mousemove', event => {
+    if (isDragging()) moveDrag(event.clientX, event.clientY);
+  });
+  document.addEventListener('mouseup', event => {
+    if (event.button === 0) stopDrag({ save: true, rerender: true });
+  });
 })();

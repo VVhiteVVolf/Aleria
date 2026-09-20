@@ -154,12 +154,20 @@
             <input class="e-inp" id="sb-title-inp" value="${esc(pin.title)}" maxlength="80" placeholder="Name des Ortes …"/>
           </div>
           <div class="e-row">
+            <label class="e-lbl" for="sb-pin-kind">Darstellung auf der Karte</label>
+            <select class="e-sel" id="sb-pin-kind">
+              <option value="place"${pin.kind !== 'text' ? ' selected' : ''}>Ort / Symbol</option>
+              <option value="text"${pin.kind === 'text' ? ' selected' : ''}>Nur Schriftzug</option>
+            </select>
+          </div>
+          ${pin.kind === 'text' ? window.KartoPinLettering.editorMarkup(pin) : ''}
+          <div class="e-row">
             <label class="e-lbl" for="sb-cat">Kategorie</label>
             <select class="e-sel" id="sb-cat">
               ${state().cats.map(cat => `<option value="${esc(cat.id)}"${(pin.cat || state().cats[0]?.id) === cat.id ? ' selected' : ''}>${esc(cat.label)}</option>`).join('')}
             </select>
           </div>
-          <div class="pin-editor-media-field">
+          <div class="pin-editor-media-field"${pin.kind === 'text' ? ' hidden' : ''}>
             <div class="pin-editor-media-preview">${imagePreview(pin.pinMarker, '📍')}</div>
             <div class="pin-editor-media-content">
               <span class="e-lbl">Kartenzeichen / Map-Pin</span>
@@ -253,6 +261,7 @@
       <button type="button" class="s-btn s-save" data-action="save-pin-editor" data-pin-id="${pin.id}">✓ Pin übernehmen</button>`;
 
     bindFormEvents(body);
+    if (pin.kind === 'text') window.KartoPinLettering.updatePreview(body, pin);
     setHeader();
     runtime.renderEditorPreview?.(pin);
   }
@@ -263,6 +272,11 @@
     const update = event => {
       if (!event.target.matches('input, textarea, select')) return;
       syncFromForm();
+      if (event.target.id === 'sb-pin-kind') {
+        renderSidebarEdit();
+        return;
+      }
+      if (currentPin()?.kind === 'text') window.KartoPinLettering.updatePreview(body, currentPin());
       updateStatus();
       runtime.renderEditorPreview?.(currentPin());
     };
@@ -282,6 +296,10 @@
     if (!pin) return null;
     const value = (id, previous = '') => document.getElementById(id)?.value ?? previous;
     pin.title = value('sb-title-inp', pin.title);
+    pin.kind = value('sb-pin-kind', pin.kind) === 'text' ? 'text' : 'place';
+    if (pin.kind === 'text') {
+      pin.lettering = window.KartoPinLettering.readEditor(document.getElementById('sb-body'), pin.lettering);
+    }
     pin.cat = value('sb-cat', pin.cat);
     pin.img = value('sb-img', pin.img);
     pin.imgLink = value('sb-imglink', pin.imgLink);
@@ -423,6 +441,7 @@
     const template = (window.PIN_TEMPLATES || []).find(item => item.id === templateId);
     const pin = syncFromForm();
     if (!template || !pin) return;
+    pin.templateId = template.id;
     const existing = Object.fromEntries((pin.table || []).filter(row => row.k).map(row => [row.k.toLocaleLowerCase('de').trim(), row.v]));
     pin.table = template.table.map(row => ({ k: row.k, v: existing[row.k.toLocaleLowerCase('de').trim()] ?? '' }));
     renderSidebarEdit();

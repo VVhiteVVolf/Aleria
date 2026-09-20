@@ -2,8 +2,22 @@
   const runtime = window.KartoRuntime;
   let pendingPin = null;
   let selectedTemplate = null;
+  let pendingKind = 'place';
 
   const PIN_TEMPLATES = [
+    ...[
+      ['orden', '⚜', 'Orden / Zunft / Gilde', 'Gemeinschaften und organisierte Berufsstände', ['Ausrichtung', 'Leitung', 'Zugehörigkeit', 'Mitglieder', 'Aufgaben', 'Aufnahmebedingungen']],
+      ['institution', '🏛', 'Institution / Heiligtum', 'Kirche, Schule, Archiv und öffentliche Einrichtungen', ['Träger', 'Leitung', 'Zuständigkeit', 'Angebote', 'Zugang', 'Bekannte Angehörige']],
+      ['verwaltung', '📜', 'Verwaltung / Amt', 'Rathaus, Verwaltung, Aushänge und Zoll', ['Zuständigkeit', 'Leitung', 'Übergeordnete Stelle', 'Ansprechpartner', 'Dienstzeiten', 'Gebühren / Abgaben']],
+      ['militaer', '⚔', 'Militär / Wachposten', 'Garnisonen, Burgen und Wachen', ['Befehlshaber', 'Unterstellung', 'Besatzung', 'Aufgaben', 'Ausrüstung', 'Befestigung']],
+      ['handwerk', '⚒', 'Handwerk / Werkstatt', 'Gemeinsame Vorlage für produzierende Gewerbe', ['Gewerbe', 'Besitzer', 'Meister / Leitung', 'Erzeugnisse', 'Dienstleistungen', 'Rohstoffe', 'Beschäftigte']],
+      ['gastbetrieb', '🍺', 'Taverne / Gastbetrieb', 'Schenke, Taverne und Herberge', ['Betreiber', 'Speisen / Getränke', 'Unterkunft', 'Preislage', 'Öffnungszeiten', 'Stammgäste']],
+      ['landwirtschaft', '🌾', 'Landwirtschaft / Zucht', 'Höfe, Plantagen und Tierhaltung', ['Besitzer', 'Bewirtschaftung', 'Anbau / Tierbestand', 'Erzeugnisse', 'Arbeitskräfte', 'Versorgung / Abnehmer', 'Bewachung']],
+      ['handel', '⚖', 'Handel / Markt', 'Marktplatz, Laden und Handelsniederlassung', ['Betreiber', 'Waren / Angebot', 'Markt- / Öffnungszeiten', 'Lieferanten', 'Kundschaft', 'Gebühren / Abgaben']]
+    ].map(([id, icon, label, desc, fields]) => ({
+      id, icon, label, desc,
+      table: ['Name', 'Typ', ...fields, 'Zustand', 'Gerüchte', 'Besonderheiten'].map(k => ({ k, v: '' }))
+    })),
     {
       id:'siedlung', icon:'🏘', label:'Siedlung / Ort',
       desc:'Stadt, Dorf, Weiler…',
@@ -56,8 +70,10 @@
     }
   ];
 
-  function startAdd(){
+  function startAdd(kind = 'place'){
     if(!runtime.isEditMode()) return;
+    pendingKind = kind === 'text' ? 'text' : 'place';
+    window.activateLayer?.('pins');
     runtime.setAddingPin(true);
     window.KartoMapInteraction.showPlacementCursor();
     window.hint('Klicken = Pin setzen  ·  ESC = Abbrechen');
@@ -88,7 +104,10 @@
   function tplApply(){
     if(!pendingPin || !selectedTemplate) return;
     const template = PIN_TEMPLATES.find(item => item.id === selectedTemplate);
-    if(template) pendingPin.table = template.table.map(row => ({...row}));
+    if(template) {
+      pendingPin.table = template.table.map(row => ({...row}));
+      pendingPin.templateId = template.id;
+    }
     runtime.closeModal('pin-tpl-mo');
     runtime.addPin(pendingPin);
     const newPinId = pendingPin.id;
@@ -102,6 +121,7 @@
   function cancelAdd(){
     pendingPin = null;
     selectedTemplate = null;
+    pendingKind = 'place';
     runtime.setAddingPin(false);
     window.KartoMapInteraction.resetCursor();
     window.KartoMapInteraction.hidePlacementCursor();
@@ -133,7 +153,17 @@
       text: '',
       secret: false
     };
-    openTplPicker(pin);
+    if (pendingKind === 'text') {
+      pin.kind = 'text';
+      pin.title = 'Neuer Schriftzug';
+      pin.lettering = window.KartoPinLettering.normalize({ fontSize: runtime.state().lblSize });
+      runtime.addPin(pin);
+      runtime.renderPins();
+      window.KartoPinEditor?.open(pin.id, { isNew: true });
+    } else {
+      openTplPicker(pin);
+    }
+    pendingKind = 'place';
   }
 
   window.PIN_TEMPLATES = PIN_TEMPLATES;

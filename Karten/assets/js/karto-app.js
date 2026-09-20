@@ -97,8 +97,9 @@ function cleanDominions(list){
 let S = {
   pins: [],
   cats: JSON.parse(JSON.stringify(KARTO_CONFIG.defaultCats || DEFAULT_CATS)),
-  dotSize: 18,
-  lblSize: 13,
+  dotSize: 80,
+  lblSize: 40,
+  showMarkers: false,
   regionIcon: KARTO_CONFIG.regionIcon || '',
   regionTitle: KARTO_CONFIG.title || 'Karten-Vorlage',
   mapImages: cleanMapImages(KARTO_CONFIG.images || {}),
@@ -271,7 +272,7 @@ function renderLayerButtons(){
     pins:true,
   };
   // Interactive pins form a marker layer even without a raster overlay.
-  const availability = {...imageAvailability, pins: imageAvailability.pins || S.pins.length > 0};
+  const availability = {...imageAvailability, pins: imageAvailability.pins || S.pins.length > 0 || editMode};
   Object.keys(fixed).forEach(key=>{
     const btn=document.getElementById('lb-'+key);
     if(!btn) return;
@@ -285,6 +286,7 @@ function renderLayerButtons(){
   });
   const container=document.getElementById('layer-btns');
   if(!container) return;
+  const activeExtraLayers = new Set([...container.querySelectorAll('.lbtn[data-extra-layer].on')].map(btn => btn.dataset.extraLayer));
   container.querySelectorAll('.lbtn[data-extra-layer]').forEach(btn=>btn.remove());
   S.extraLayers.forEach(layer=>{
     const btn=document.createElement('button');
@@ -293,6 +295,7 @@ function renderLayerButtons(){
     btn.dataset.action='set-layer';
     btn.dataset.layer='extra-'+layer.id;
     btn.dataset.extraLayer=layer.id;
+    if (activeExtraLayers.has(layer.id)) btn.classList.add('on');
     btn.textContent=layer.name;
     container.appendChild(btn);
   });
@@ -498,6 +501,7 @@ function applyState(remote){
   if(remote.cats)       S.cats=remote.cats;
   if(remote.dotSize)    S.dotSize=remote.dotSize;
   if(remote.lblSize)    S.lblSize=remote.lblSize;
+  S.showMarkers = remote.showMarkers === true;
   if(remote.regionIcon!==undefined) S.regionIcon=remote.regionIcon;
   if(remote.regionTitle) S.regionTitle=remote.regionTitle;
   if(remote.mapImages) S.mapImages=cleanMapImages(remote.mapImages);
@@ -565,6 +569,8 @@ function togglePresentationMode(){
 function toggleEdit(){editMode?exitEdit():enterEdit();}
 function exitEdit(){
   editMode=false;addingPin=false;
+  document.body.classList.remove('map-edit-mode');
+  renderLayerButtons();
   document.getElementById('btn-edit').textContent='🔒 Bearbeiten';
   document.getElementById('btn-edit').classList.remove('on');
   document.getElementById('lock-lbl').textContent='gesperrt';
@@ -588,6 +594,8 @@ function exitEdit(){
 }
 function enterEdit(){
   editMode=true;
+  document.body.classList.add('map-edit-mode');
+  renderLayerButtons();
   document.getElementById('btn-edit').textContent='🔓 Editormodus';
   document.getElementById('btn-edit').classList.add('on');
   document.getElementById('lock-lbl').textContent='aktiv';
@@ -935,7 +943,6 @@ mapWrap.addEventListener('mousemove',e=>{
   if(addingPin) window.KartoMapInteraction.movePlacementCursor(e.clientX,e.clientY);
   if(window.KartoStampOverwrite?.isStamping()) window.KartoMapInteraction.moveStampCursor(e.clientX,e.clientY);
   if(window.KartoPinRenderer?.isDragging()){
-    window.KartoPinRenderer.moveDrag(e.clientX,e.clientY);
     return;
   }
   if(window.KartoPanning.isActive()) window.KartoPanning.move(e.clientX,e.clientY);

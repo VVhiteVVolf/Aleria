@@ -9,6 +9,9 @@ bleibt ausschließlich als Weiterleitung auf diese zentrale Ansicht erhalten.
 
 Der Zukunftsplan liegt in `ZUKUNFTSPLAN.md`.
 
+Infotabellen, Anzeigeoptionen und formbare Schriftzug-Pins sind in
+[PIN_EDITOR.md](docs/PIN_EDITOR.md) beschrieben.
+
 Die geplanten Grafschaftskarten von Cenyr liegen als Linkliste unter `Cenyr/GRAFSCHAFTEN-LINKS.md`.
 
 Neue Karten werden langfristig nicht durch eigene HTML-Dateien angelegt. Stattdessen werden sie ueber `karte.html` und `karten.registry.js` geladen.

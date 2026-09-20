@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis/llysfaen/data.json",
-  "revision": 2,
+  "revision": 3,
   "updatedAt": "2026-09-20T00:00:00.000Z",
   "state": {
     "pins": [
@@ -13,7 +13,58 @@
         "cat": "landwirtschaft",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "landwirtschaft",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bauer – Westhof"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernhof"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Bewirtschaftung",
+            "v": ""
+          },
+          {
+            "k": "Anbau / Tierbestand",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Arbeitskräfte",
+            "v": ""
+          },
+          {
+            "k": "Versorgung / Abnehmer",
+            "v": ""
+          },
+          {
+            "k": "Bewachung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-bauer-nordwest",
@@ -23,7 +74,58 @@
         "cat": "landwirtschaft",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "landwirtschaft",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bauer – Nordwesthof"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernhof"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Bewirtschaftung",
+            "v": ""
+          },
+          {
+            "k": "Anbau / Tierbestand",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Arbeitskräfte",
+            "v": ""
+          },
+          {
+            "k": "Versorgung / Abnehmer",
+            "v": ""
+          },
+          {
+            "k": "Bewachung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-bauer-nord",
@@ -33,7 +135,58 @@
         "cat": "landwirtschaft",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "landwirtschaft",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bauer – Nordhof"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernhof"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Bewirtschaftung",
+            "v": ""
+          },
+          {
+            "k": "Anbau / Tierbestand",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Arbeitskräfte",
+            "v": ""
+          },
+          {
+            "k": "Versorgung / Abnehmer",
+            "v": ""
+          },
+          {
+            "k": "Bewachung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-bauer-nordost",
@@ -43,7 +196,58 @@
         "cat": "landwirtschaft",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "landwirtschaft",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bauer – Nordosthof"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernhof"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Bewirtschaftung",
+            "v": ""
+          },
+          {
+            "k": "Anbau / Tierbestand",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Arbeitskräfte",
+            "v": ""
+          },
+          {
+            "k": "Versorgung / Abnehmer",
+            "v": ""
+          },
+          {
+            "k": "Bewachung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-mueller",
@@ -53,7 +257,58 @@
         "cat": "handwerk",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "handwerk",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Müller"
+          },
+          {
+            "k": "Typ",
+            "v": "Mühle"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Müllerei"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Meister / Leitung",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": "Mehl"
+          },
+          {
+            "k": "Dienstleistungen",
+            "v": ""
+          },
+          {
+            "k": "Rohstoffe",
+            "v": ""
+          },
+          {
+            "k": "Beschäftigte",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-schenke",
@@ -63,7 +318,54 @@
         "cat": "gesellschaft",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "gastbetrieb",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Schenke"
+          },
+          {
+            "k": "Typ",
+            "v": "Schenke"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-schneider",
@@ -73,7 +375,58 @@
         "cat": "handwerk",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "handwerk",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Schneider"
+          },
+          {
+            "k": "Typ",
+            "v": "Schneiderei"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Schneiderhandwerk"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Meister / Leitung",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Dienstleistungen",
+            "v": ""
+          },
+          {
+            "k": "Rohstoffe",
+            "v": ""
+          },
+          {
+            "k": "Beschäftigte",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-rathaus",
@@ -83,7 +436,54 @@
         "cat": "verwaltung",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "verwaltung",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Rathaus"
+          },
+          {
+            "k": "Typ",
+            "v": "Rathaus"
+          },
+          {
+            "k": "Zuständigkeit",
+            "v": ""
+          },
+          {
+            "k": "Leitung",
+            "v": ""
+          },
+          {
+            "k": "Übergeordnete Stelle",
+            "v": ""
+          },
+          {
+            "k": "Ansprechpartner",
+            "v": ""
+          },
+          {
+            "k": "Dienstzeiten",
+            "v": ""
+          },
+          {
+            "k": "Gebühren / Abgaben",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-garnison",
@@ -93,7 +493,54 @@
         "cat": "verwaltung",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "militaer",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Garnison"
+          },
+          {
+            "k": "Typ",
+            "v": "Garnison"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": "Ritter Gwydion Rhyddid"
+          },
+          {
+            "k": "Unterstellung",
+            "v": "Haus Wyrm"
+          },
+          {
+            "k": "Besatzung",
+            "v": "15 Ortswachen, 10 Waffenknechte und 1 Ritter"
+          },
+          {
+            "k": "Aufgaben",
+            "v": "Schutz von Llysfaen und seinem Bannkreis"
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-anzeigetafel",
@@ -103,7 +550,54 @@
         "cat": "verwaltung",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "verwaltung",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Anzeigetafel"
+          },
+          {
+            "k": "Typ",
+            "v": "Öffentliche Anzeigetafel"
+          },
+          {
+            "k": "Zuständigkeit",
+            "v": ""
+          },
+          {
+            "k": "Leitung",
+            "v": ""
+          },
+          {
+            "k": "Übergeordnete Stelle",
+            "v": ""
+          },
+          {
+            "k": "Ansprechpartner",
+            "v": ""
+          },
+          {
+            "k": "Dienstzeiten",
+            "v": ""
+          },
+          {
+            "k": "Gebühren / Abgaben",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-administration",
@@ -113,7 +607,54 @@
         "cat": "verwaltung",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "verwaltung",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Administration"
+          },
+          {
+            "k": "Typ",
+            "v": "Verwaltungsgebäude"
+          },
+          {
+            "k": "Zuständigkeit",
+            "v": ""
+          },
+          {
+            "k": "Leitung",
+            "v": ""
+          },
+          {
+            "k": "Übergeordnete Stelle",
+            "v": ""
+          },
+          {
+            "k": "Ansprechpartner",
+            "v": ""
+          },
+          {
+            "k": "Dienstzeiten",
+            "v": ""
+          },
+          {
+            "k": "Gebühren / Abgaben",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-pfeilmacher",
@@ -123,7 +664,58 @@
         "cat": "handwerk",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "handwerk",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Pfeilmacher"
+          },
+          {
+            "k": "Typ",
+            "v": "Werkstatt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Pfeilmacherei"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Meister / Leitung",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": "Pfeile"
+          },
+          {
+            "k": "Dienstleistungen",
+            "v": ""
+          },
+          {
+            "k": "Rohstoffe",
+            "v": ""
+          },
+          {
+            "k": "Beschäftigte",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-rosszuechter",
@@ -133,7 +725,58 @@
         "cat": "landwirtschaft",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "landwirtschaft",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Rosszüchter"
+          },
+          {
+            "k": "Typ",
+            "v": "Pferdezucht"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Bewirtschaftung",
+            "v": "Pferdezucht"
+          },
+          {
+            "k": "Anbau / Tierbestand",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Arbeitskräfte",
+            "v": ""
+          },
+          {
+            "k": "Versorgung / Abnehmer",
+            "v": ""
+          },
+          {
+            "k": "Bewachung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-schmied",
@@ -143,7 +786,58 @@
         "cat": "handwerk",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "handwerk",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Schmied"
+          },
+          {
+            "k": "Typ",
+            "v": "Schmiede"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Schmiedehandwerk"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Meister / Leitung",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Dienstleistungen",
+            "v": ""
+          },
+          {
+            "k": "Rohstoffe",
+            "v": ""
+          },
+          {
+            "k": "Beschäftigte",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-klerus",
@@ -153,7 +847,54 @@
         "cat": "gesellschaft",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "institution",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Klerus"
+          },
+          {
+            "k": "Typ",
+            "v": "Geistliche Einrichtung"
+          },
+          {
+            "k": "Träger",
+            "v": ""
+          },
+          {
+            "k": "Leitung",
+            "v": ""
+          },
+          {
+            "k": "Zuständigkeit",
+            "v": ""
+          },
+          {
+            "k": "Angebote",
+            "v": ""
+          },
+          {
+            "k": "Zugang",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Angehörige",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-marktplatz",
@@ -163,7 +904,54 @@
         "cat": "gesellschaft",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "handel",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Marktplatz"
+          },
+          {
+            "k": "Typ",
+            "v": "Marktplatz"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Waren / Angebot",
+            "v": ""
+          },
+          {
+            "k": "Markt- / Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Lieferanten",
+            "v": ""
+          },
+          {
+            "k": "Kundschaft",
+            "v": ""
+          },
+          {
+            "k": "Gebühren / Abgaben",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-taverne",
@@ -173,7 +961,54 @@
         "cat": "gesellschaft",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "gastbetrieb",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Taverne"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-aufsehergilde",
@@ -183,7 +1018,54 @@
         "cat": "gesellschaft",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "orden",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Aufsehergilde"
+          },
+          {
+            "k": "Typ",
+            "v": "Gilde"
+          },
+          {
+            "k": "Ausrichtung",
+            "v": ""
+          },
+          {
+            "k": "Leitung",
+            "v": ""
+          },
+          {
+            "k": "Zugehörigkeit",
+            "v": ""
+          },
+          {
+            "k": "Mitglieder",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Aufnahmebedingungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-baumeister",
@@ -193,7 +1075,58 @@
         "cat": "handwerk",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "handwerk",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Baumeister"
+          },
+          {
+            "k": "Typ",
+            "v": "Baubetrieb"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Bauhandwerk"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Meister / Leitung",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Dienstleistungen",
+            "v": ""
+          },
+          {
+            "k": "Rohstoffe",
+            "v": ""
+          },
+          {
+            "k": "Beschäftigte",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-baecker",
@@ -203,7 +1136,58 @@
         "cat": "handwerk",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "handwerk",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bäcker"
+          },
+          {
+            "k": "Typ",
+            "v": "Bäckerei"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Bäckerhandwerk"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Meister / Leitung",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": "Brot und Backwaren"
+          },
+          {
+            "k": "Dienstleistungen",
+            "v": ""
+          },
+          {
+            "k": "Rohstoffe",
+            "v": ""
+          },
+          {
+            "k": "Beschäftigte",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-federkiel",
@@ -213,7 +1197,54 @@
         "cat": "gesellschaft",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "orden",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Federkiel"
+          },
+          {
+            "k": "Typ",
+            "v": "Gildenstandort"
+          },
+          {
+            "k": "Ausrichtung",
+            "v": ""
+          },
+          {
+            "k": "Leitung",
+            "v": ""
+          },
+          {
+            "k": "Zugehörigkeit",
+            "v": ""
+          },
+          {
+            "k": "Mitglieder",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Aufnahmebedingungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-gerberei",
@@ -223,7 +1254,58 @@
         "cat": "handwerk",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "handwerk",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gerberei"
+          },
+          {
+            "k": "Typ",
+            "v": "Gerberei"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Gerberhandwerk"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Meister / Leitung",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": "Leder"
+          },
+          {
+            "k": "Dienstleistungen",
+            "v": ""
+          },
+          {
+            "k": "Rohstoffe",
+            "v": ""
+          },
+          {
+            "k": "Beschäftigte",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-holzverarbeitung",
@@ -233,7 +1315,58 @@
         "cat": "handwerk",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "handwerk",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Holzverarbeitung"
+          },
+          {
+            "k": "Typ",
+            "v": "Holzverarbeitung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": "Holzverarbeitung"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Meister / Leitung",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Dienstleistungen",
+            "v": ""
+          },
+          {
+            "k": "Rohstoffe",
+            "v": "Holz"
+          },
+          {
+            "k": "Beschäftigte",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       },
       {
         "id": "llysfaen-erlenglanz",
@@ -243,11 +1376,62 @@
         "cat": "landwirtschaft",
         "pinMarker": "",
         "secret": false,
-        "text": ""
+        "text": "",
+        "templateId": "landwirtschaft",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Erlenglanz"
+          },
+          {
+            "k": "Typ",
+            "v": "Pferdezucht"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Bewirtschaftung",
+            "v": "Pferdezucht"
+          },
+          {
+            "k": "Anbau / Tierbestand",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Arbeitskräfte",
+            "v": ""
+          },
+          {
+            "k": "Versorgung / Abnehmer",
+            "v": ""
+          },
+          {
+            "k": "Bewachung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ]
       }
     ],
-    "dotSize": 18,
-    "lblSize": 13,
+    "dotSize": 80,
+    "lblSize": 40,
     "regionIcon": "",
     "regionTitle": "Llysfaen – Stadtkarte",
     "layerNames": {
@@ -283,6 +1467,7 @@
         "color": "#8f3328"
       }
     ],
-    "extraLayers": []
+    "extraLayers": [],
+    "showMarkers": false
   }
 }

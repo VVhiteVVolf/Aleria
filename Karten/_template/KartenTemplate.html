@@ -7,12 +7,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="../assets/css/karto-map.css?v=20260911b">
 <link rel="stylesheet" href="../assets/css/pin-card.css?v=20260911b">
-<link rel="stylesheet" href="../assets/css/pin-visibility.css?v=20260911b">
+<link rel="stylesheet" href="../assets/css/pin-visibility.css?v=20260920-pin-tools">
 <link rel="stylesheet" href="../assets/css/pin-editor.css?v=20260911b">
 <link rel="stylesheet" href="../assets/css/media-library.css?v=20260901c">
 
 <script src="./template.config.js"></script>
 <script src="../assets/js/karto-storage.js?v=20260911a"></script>
+<link rel="stylesheet" href="../assets/css/pin-lettering.css?v=20260920a">
 </head>
 <body>
 <div style="display:flex;flex-direction:column;height:100%;">
@@ -41,13 +42,7 @@
   </div>
   <div class="sep"></div>
 
-  <details class="map-view-settings">
-    <summary class="tbtn">⚙ Ansicht</summary>
-    <div class="map-view-settings-panel">
-      <label><input type="checkbox" data-role="show-view-markers"/>Markierungspunkte auch in der Ansicht anzeigen</label>
-      <p>Unsichtbare Punkte bleiben anklickbar. Im Bearbeitungsmodus sind sie immer sichtbar.</p>
-    </div>
-  </details>
+  <label class="map-marker-visibility-control"><input type="checkbox" data-role="show-view-markers"/>Dots dauerhaft anzeigen</label>
 
   <!-- Search -->
   <div id="search-wrap">
@@ -64,6 +59,7 @@
   <button class="tbtn" data-action="load-published-map" title="Veröffentlichte Karte laden; dein Entwurf wird zuvor im Backup-Verlauf gesichert." hidden disabled>↻ Aktuelle Karte laden</button>
 
   <!-- Edit-mode controls -->
+  <button class="tbtn map-text-pin-control" data-action="start-add-text-pin">Aa Schriftzug setzen</button>
   <button class="tbtn" id="btn-add" data-action="start-add-pin" style="display:none">📍 Pin setzen</button>
   <button class="tbtn" id="btn-undo" data-action="undo-last" title="Strg+Z" style="display:none">↩ Rückgängig</button>
   <button class="tbtn" id="btn-stamp" data-action="open-stamp-picker" style="display:none">🔖 Kopieren &amp; stempeln</button>
@@ -86,14 +82,14 @@
   <!-- Dot size slider -->
   <div class="sl-wrap" id="dot-sl-wrap">
     <span class="sl-lbl">Dot</span>
-    <input type="range" class="sl-inp" id="dot-sl" min="8" max="80" value="18" data-input-action="set-dot-size"/>
-    <span class="sl-val" id="dot-sl-val">18</span>
+    <input type="range" class="sl-inp" id="dot-sl" min="8" max="240" value="80" data-input-action="set-dot-size"/>
+    <span class="sl-val" id="dot-sl-val">80</span>
   </div>
   <!-- Label size slider -->
   <div class="sl-wrap" id="lbl-sl-wrap">
     <span class="sl-lbl">Text</span>
-    <input type="range" class="sl-inp" id="lbl-sl" min="9" max="60" value="13" data-input-action="set-label-size"/>
-    <span class="sl-val" id="lbl-sl-val">13</span>
+    <input type="range" class="sl-inp" id="lbl-sl" min="9" max="160" value="40" data-input-action="set-label-size"/>
+    <span class="sl-val" id="lbl-sl-val">40</span>
   </div>
 
   <div class="sp"></div>
@@ -699,7 +695,7 @@
 <script src="../assets/js/pins/pin-placeholder-images.js?v=20260902a"></script>
 <script src="../assets/js/media/media-assets.registry.js?v=20260901a"></script>
 <script src="../assets/js/pins/pin-card-renderer.js?v=20260911b"></script>
-<script src="../assets/js/karto-app.js?v=20260911b"></script>
+<script src="../assets/js/karto-app.js?v=20260920-pin-tools"></script>
 <script src="../assets/js/media/media-library.js?v=20260901b"></script>
 <script src="../assets/js/lsb/lsb-groups.js"></script>
 <script src="../assets/js/lsb/lsb-modals.js"></script>
@@ -711,16 +707,17 @@
 <script src="../assets/js/map/map-view.js?v=20260901b"></script>
 <script src="../assets/js/pins/marker-catalog.js"></script>
 <script src="../assets/js/pins/categories.js"></script>
-<script src="../assets/js/pins/pin-templates.js?v=20260901a"></script>
-<script src="../assets/js/pins/stamp-overwrite.js"></script>
-<script src="../assets/js/pins/pin-renderer.js"></script>
-<script src="../assets/js/pins/pin-visibility.js?v=20260911b"></script>
+<script src="../assets/js/pins/pin-templates.js?v=20260920-pin-tools"></script>
+<script src="../assets/js/pins/stamp-overwrite.js?v=20260920a"></script>
+<script src="../assets/js/pins/pin-lettering.js?v=20260920a"></script>
+<script src="../assets/js/pins/pin-renderer.js?v=20260920a"></script>
+<script src="../assets/js/pins/pin-visibility.js?v=20260920-pin-tools"></script>
 <script src="../assets/js/pins/pin-detail-view.js?v=20260911b"></script>
 <script src="../assets/js/pins/pin-editor-draft.js?v=20260901a"></script>
-<script src="../assets/js/pins/pin-editor.js?v=20260911b"></script>
+<script src="../assets/js/pins/pin-editor.js?v=20260920-pin-tools"></script>
 <script src="../assets/js/pins/search.js"></script>
 <script src="../assets/js/core/karto-load-published-ui.js?v=20260911a"></script>
-<script src="../assets/js/core/karto-actions.js?v=20260911b"></script>
+<script src="../assets/js/core/karto-actions.js?v=20260920-pin-tools"></script>
 <script src="../assets/js/core/karto-bootstrap.js"></script>
 </body>
 </html>
