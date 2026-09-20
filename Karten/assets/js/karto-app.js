@@ -265,11 +265,13 @@ function applyExtraLayerImages(){
 }
 function renderLayerButtons(){
   const fixed={normal:S.layerNames.normal, regions:S.layerNames.regions, pins:S.layerNames.pins};
-  const availability=window.KartoMapImageSources?.availability(S.mapImages,KARTO_CONFIG.images)||{
+  const imageAvailability=window.KartoMapImageSources?.availability(S.mapImages,KARTO_CONFIG.images)||{
     normal:true,
     regions:true,
     pins:true,
   };
+  // Interactive pins form a marker layer even without a raster overlay.
+  const availability = {...imageAvailability, pins: imageAvailability.pins || S.pins.length > 0};
   Object.keys(fixed).forEach(key=>{
     const btn=document.getElementById('lb-'+key);
     if(!btn) return;
