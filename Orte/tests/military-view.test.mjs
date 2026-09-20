@@ -117,7 +117,7 @@ test("die eigenständige Militärseite lädt Ortsregister und Renderer", async (
   ]);
 
   assert.match(page, /data-military-view/);
-  assert.match(page, /military-view\.mjs\?v=20260904a/);
+  assert.match(page, /military-view\.mjs\?v=20260920a/);
   assert.match(page, /orte\.registry\.js/);
   assert.match(viewModule, /normalizeMilitaryProfile/);
   assert.match(viewModule, /data\?\.militaryView/);

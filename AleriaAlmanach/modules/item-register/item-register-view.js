@@ -1,6 +1,7 @@
 import { REGISTER_CATEGORIES, REGISTER_SECTIONS, categoryLabel, canManageCharacter } from './item-register-model.js?v=20260919-shop-v1';
 import { formatCopper, formatPrice, moneyTotal } from './item-register-money.js?v=20260919-shop-v1';
 import { resalePrice } from './item-register-trade.js?v=20260919-shop-v1';
+import { registerLists } from './item-register-providers.js?v=20260919-provider-crests-v2';
 
 export const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 export function safeImage(value) {
@@ -10,6 +11,11 @@ export function safeImage(value) {
 const attr = escape;
 const amountLabel = (count, singular, plural) => `${count} ${count === 1 ? singular : plural}`;
 const categoryIcon = id => `./public/assets/item-register/categories/${id === 'ruestungen' ? 'ruestungen-v3' : id}.png`;
+function listEmblem(list, { fallback = true } = {}) {
+  const image = (list?.images || []).map(safeImage).find(Boolean);
+  if (image) return `<span class="ir-provider-emblem" aria-hidden="true"><img src="${attr(image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span>`;
+  return fallback ? `<span class="ir-list-initial" aria-hidden="true">${escape(list?.title?.[0] || '◇')}</span>` : '';
+}
 export function itemImage(item, large = false) {
   const image = safeImage(item.image);
   return `<span class="ir-image${large ? ' ir-image-large' : ''}">${image ? `<img src="${attr(image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : `<span aria-hidden="true">${escape(REGISTER_CATEGORIES.find(category => category.id === item.category)?.icon || '◈')}</span>`}</span>`;
@@ -29,30 +35,25 @@ export function shell() {
 }
 
 export function navigation(snapshot, state) {
-  const providers = [...new Map(snapshot.offers.filter(item => !item.archived).map(item => [item.listId, item.listName])).entries()]
-    .sort((a, b) => a[1].localeCompare(b[1], 'de'));
+  const providers = registerLists(snapshot.offers, snapshot.providers);
   return `<div class="ir-nav-intro"><p class="ir-kicker">Register entdecken</p><p>Vom Standard bis zum Einzelstück.</p></div>` + REGISTER_SECTIONS.map((section, index) => {
     const count = snapshot.items.filter(item => item.section === section.id && !item.archived).length;
     return `<section class="ir-nav-section"><button type="button" data-ir-action="section" data-id="${section.id}" class="ir-nav-section-button ${state.section === section.id ? 'is-active' : ''}" aria-pressed="${state.section === section.id}"><span class="ir-nav-number">0${index + 1}</span><span>${section.label}<small>${section.id === 'owned' ? amountLabel(count, 'Besitztum', 'Besitztümer') : amountLabel(count, 'Eintrag', 'Einträge')}</small></span></button>
       ${state.section === section.id && section.id === 'standard' ? `<div class="ir-categories">${REGISTER_CATEGORIES.map(category => `<button type="button" data-ir-action="category" data-id="${category.id}" class="${state.category === category.id ? 'is-active' : ''}" aria-pressed="${state.category === category.id}"><span>${category.label}</span><small>${snapshot.standards.filter(item => item.category === category.id).length}</small></button>`).join('')}</div>` : ''}
-      ${section.id === 'offer' && providers.length ? `<nav class="ir-provider-tabs" aria-label="Anbieter-Reiter">${providers.map(([id, title]) => `<button type="button" data-ir-action="list" data-section="offer" data-id="${attr(id)}" aria-pressed="${state.listId === id}" class="${state.listId === id ? 'is-active' : ''}">${escape(title)}<small>${snapshot.offers.filter(item => item.listId === id && !item.archived).length} Angebote</small></button>`).join('')}</nav>` : ''}</section>`;
+      ${section.id === 'offer' && providers.length ? `<nav class="ir-provider-tabs" aria-label="Anbieter-Reiter">${providers.map(list => `<button type="button" data-ir-action="list" data-section="offer" data-id="${attr(list.id)}" aria-pressed="${state.listId === list.id}" class="${state.listId === list.id ? 'is-active' : ''}">${listEmblem(list)}<span class="ir-provider-label">${escape(list.title)}<small>${list.count} Angebote</small></span></button>`).join('')}</nav>` : ''}</section>`;
   }).join('') + `<div class="ir-nav-note">Standardgüter bleiben der Maßstab. Varianten und persönlicher Besitz haben eigene Einträge.</div>`;
 }
 
-function listCards(items, section, empty) {
-  const lists = new Map();
-  items.filter(item => !item.archived).forEach(item => {
-    const list = lists.get(item.listId) || { id: item.listId, title: item.listName, count: 0 };
-    list.count++; lists.set(list.id, list);
-  });
-  if (!lists.size) return `<div class="ir-empty-small">${empty}</div>`;
-  return `<div class="ir-list-cards">${[...lists.values()].sort((a, b) => a.title.localeCompare(b.title, 'de')).map(list => `<button type="button" data-ir-action="list" data-section="${section}" data-id="${attr(list.id)}"><span class="ir-list-initial">${escape(list.title?.[0] || '◇')}</span><span><strong>${escape(list.title)}</strong><small>${section === 'owned' ? amountLabel(list.count, 'Besitztum', 'Besitztümer') : amountLabel(list.count, 'Angebot', 'Angebote')}</small></span><span aria-hidden="true">→</span></button>`).join('')}</div>`;
+function listCards(items, section, empty, providers = []) {
+  const lists = registerLists(items, providers);
+  if (!lists.length) return `<div class="ir-empty-small">${empty}</div>`;
+  return `<div class="ir-list-cards">${lists.map(list => `<button type="button" data-ir-action="list" data-section="${section}" data-id="${attr(list.id)}">${listEmblem(list)}<span><strong>${escape(list.title)}</strong><small>${section === 'owned' ? amountLabel(list.count, 'Besitztum', 'Besitztümer') : amountLabel(list.count, 'Angebot', 'Angebote')}</small></span><span aria-hidden="true">→</span></button>`).join('')}</div>`;
 }
 
 export function overview(snapshot, state, access) {
   const standard = `<section class="ir-overview-section"><div class="ir-section-heading"><div><p class="ir-kicker">01 / Der Maßstab</p><h2>Standardgüter</h2><p>Wähle eine Warengruppe. Diese Vorlagen bilden die unveränderliche Grundlage.</p></div><span class="ir-count">${snapshot.standards.length} Vorlagen</span></div>
     <div class="ir-category-grid">${REGISTER_CATEGORIES.map(category => `<button type="button" data-ir-action="category" data-id="${category.id}"><img class="ir-category-icon" src="${categoryIcon(category.id)}" alt="" loading="lazy" decoding="async" width="88" height="88"><strong>${category.label}</strong><span>${snapshot.standards.filter(item => item.category === category.id).length} Güter <b aria-hidden="true">↗</b></span></button>`).join('')}</div></section>`;
-  const offers = `<section class="ir-overview-section"><div class="ir-section-heading"><div><p class="ir-kicker">02 / Händler und Handwerk</p><h2>Anbieter & Sortimente</h2><p>Eigene Warenlisten mit besonderen Ausführungen, Preisen und Beständen.</p></div>${access.canEditSharedContent ? button('new-offer', '+ Sortiment anlegen') : ''}</div>${listCards(snapshot.offers, 'offer', 'Noch kein Sortiment angelegt. Besondere Waren erscheinen hier getrennt von den Standardgütern.')}</section>`;
+  const offers = `<section class="ir-overview-section"><div class="ir-section-heading"><div><p class="ir-kicker">02 / Händler und Handwerk</p><h2>Anbieter & Sortimente</h2><p>Eigene Warenlisten mit besonderen Ausführungen, Preisen und Beständen.</p></div>${access.canEditSharedContent ? button('new-offer', '+ Sortiment anlegen') : ''}</div>${listCards(snapshot.offers, 'offer', 'Noch kein Sortiment angelegt. Besondere Waren erscheinen hier getrennt von den Standardgütern.', snapshot.providers)}</section>`;
   const owned = `<details class="ir-overview-section ir-owned-lists" ${state.ownedExpanded ? 'open' : ''}><summary data-ir-action="toggle-owned"><span><span class="ir-kicker">03 / Persönliche Geschichten</span><span class="ir-owned-heading">Individuelle Listen</span><span class="ir-owned-description">Besitz, Ausrüstung und Begleiter der Figuren</span></span><span class="ir-count">${new Set(snapshot.owned.map(item => item.ownerCharacterId)).size} Figuren <b aria-hidden="true">⌄</b></span></summary><div class="ir-owned-content">${listCards(snapshot.owned, 'owned', 'Noch kein gespeicherter Besitz vorhanden. Gekaufte Gegenstände erscheinen direkt im Inventar der gewählten Figur.')}</div></details>`;
   return state.section === 'offer' ? offers : state.section === 'owned' ? owned : standard + offers + owned;
 }
@@ -60,7 +61,8 @@ export function overview(snapshot, state, access) {
 export function results(snapshot, state, items) {
   const label = state.listId ? snapshot.items.find(item => item.listId === state.listId)?.listName : state.category ? categoryLabel(state.category) : REGISTER_SECTIONS.find(section => section.id === state.section)?.label;
   const visible = items.slice(0, state.limit);
-  return `<div class="ir-results-heading"><div><p class="ir-kicker">${escape(REGISTER_SECTIONS.find(section => section.id === state.section)?.label)}</p><h2>${escape(label || 'Suchergebnisse')}</h2><p>${items.length} ${items.length === 1 ? 'Eintrag' : 'Einträge'}${state.search ? ` für „${escape(state.search)}“` : ''}</p></div>${button('reset', 'Zur Übersicht')}</div>
+  const provider = state.section === 'offer' ? snapshot.providers?.find(list => list.id === state.listId) : null;
+  return `<div class="ir-results-heading"><div class="ir-provider-heading">${listEmblem(provider, { fallback: false })}<div><p class="ir-kicker">${escape(REGISTER_SECTIONS.find(section => section.id === state.section)?.label)}</p><h2>${escape(label || 'Suchergebnisse')}</h2><p>${items.length} ${items.length === 1 ? 'Eintrag' : 'Einträge'}${state.search ? ` für „${escape(state.search)}“` : ''}</p></div></div>${button('reset', 'Zur Übersicht')}</div>
     ${state.section === 'owned' ? `<label class="ir-equipped-filter"><input type="checkbox" data-ir-field="equippedOnly" ${state.equippedOnly ? 'checked' : ''}> Nur angelegte Ausrüstung</label>` : ''}
     ${items.length ? `<div class="ir-table" role="table" aria-label="Güterliste"><div class="ir-table-head" role="row"><span role="columnheader">Gegenstand</span><span role="columnheader">Art / Sortiment</span><span role="columnheader">Preis / Wert</span><span role="columnheader">${state.section === 'owned' ? 'Besitz' : 'Bestand'}</span></div>
       ${visible.map(item => `<button type="button" role="row" class="ir-row ${state.selectedId === item.id ? 'is-selected' : ''}" data-ir-action="select" data-id="${attr(item.id)}" aria-label="${attr(item.title)}, Details öffnen" aria-pressed="${state.selectedId === item.id}"><span role="cell" class="ir-item-name">${itemImage(item)}<span><strong>${escape(item.title)}</strong><small>${escape(item.type || categoryLabel(item.category))}</small></span></span><span role="cell" class="ir-row-category">${escape(item.listName || categoryLabel(item.category))}</span><span role="cell" class="ir-row-price">${escape(formatPrice(item.priceRange))}</span><span role="cell" class="ir-row-stock">${item.section === 'owned' ? `${item.quantity} ×${item.equipped ? '<small>Angelegt</small>' : ''}` : item.section === 'standard' ? 'Vorlage' : item.stock == null ? 'Offen' : item.stock}</span></button>`).join('')}</div>` : `<div class="ir-empty"><h3>Keine passenden Güter</h3><p>Passe die Suche an oder öffne eine andere Warengruppe.</p>${button('reset', 'Auswahl zurücksetzen')}</div>`}

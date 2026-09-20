@@ -601,6 +601,28 @@ img {
   }
 }
 
+.military-article p {
+  max-width: 85ch;
+  line-height: 1.75;
+}
+
+.military-article__figure {
+  margin: 1.5rem 0 0;
+}
+
+.military-article__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #e6d7ad;
+  border-radius: 8px;
+}
+
+.military-article__figure figcaption {
+  margin-top: 0.75rem;
+  line-height: 1.5;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto;

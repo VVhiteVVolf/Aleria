@@ -47,3 +47,13 @@ militaryView: {
 ```
 
 Unterstützte Kontingentarten sind `house`, `vassal`, `cityWatch`, `localWatch`, `fleet`, `militia` und `other`. Fehlende Prozentwerte werden aus `count` und `total` berechnet; alternativ können ausschließlich Prozentwerte gepflegt werden.
+
+Für ausgearbeitete Artikel unterstützt `militaryView.sections` Abschnitte mit
+`title`, `paragraphs` (Textliste), optionalem `image` (`src`, `alt`, `fit`) und
+`caption`. Abschnittsbilder werden vollständig und über die Inhaltsbreite
+angezeigt; ein Bildlink öffnet die große Darstellung. So können auch breite
+Ausrüstungsvergleiche eingebunden werden, ohne sie in Einheitenkarten zu schneiden.
+
+Llysfaens `total: 26` bezeichnet ausdrücklich nur die Ortsbesatzung. Die variablen
+Stärken des Bannkreises stehen in den Artikelabschnitten und fließen nicht in die
+prozentuale Verteilung der Ortsbesatzung ein.

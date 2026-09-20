@@ -41,7 +41,10 @@
 .ir-categories button { display: flex; justify-content: space-between; width: 100%; border: none; background: transparent; text-align: left; font: 14px/1.5 'EB Garamond', Georgia, serif; padding: 7px 14px 7px 36px; }
 .ir-categories small { margin: 0; }
 .ir-provider-tabs { display: grid; gap: 5px; margin-top: 12px; }
-.ir-provider-tabs button { text-align: left; border-left: 3px solid #a88b59; padding: 10px 12px; overflow-wrap: anywhere; }
+.ir-provider-tabs button { display: flex; align-items: center; gap: 10px; text-align: left; border-left: 3px solid #a88b59; padding: 10px 12px; overflow-wrap: anywhere; }
+.ir-provider-label { min-width: 0; flex: 1; }
+.ir-provider-tabs .ir-provider-emblem { width: 32px; height: 40px; }
+.ir-provider-tabs .ir-list-initial { width: 32px; height: 32px; }
 .ir-provider-tabs .is-active { border-left-color: var(--ir-green); box-shadow: inset 0 0 0 1px #a0ac9a; }
 .ir-nav-note { border-top: 1px solid var(--ir-line); padding: 18px 12px; color: var(--ir-muted); font-size: 13px; }
 .ir-main { padding: 25px 30px 40px; min-width: 0; }
@@ -65,6 +68,10 @@
 .ir-list-cards button > span:nth-child(2) { flex: 1; min-width: 0; overflow-wrap: anywhere; }
 .ir-list-cards small { display: block; font: 13px/1.5 'EB Garamond', Georgia, serif; color: var(--ir-muted); margin-top: 5px; }
 .ir-list-initial { display: grid; place-items: center; width: 36px; height: 36px; flex-shrink: 0; background: var(--ir-soft); color: var(--ir-green); font-size: 20px; border-radius: 50%; }
+.ir-provider-emblem { display: grid; place-items: center; width: 58px; height: 66px; flex-shrink: 0; }
+.ir-provider-emblem img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.ir-provider-heading { display: flex; align-items: center; gap: 16px; min-width: 0; }
+.ir-provider-heading > div { min-width: 0; }
 .ir-empty-small { border: 1px dashed var(--ir-line); padding: 20px 22px; color: var(--ir-muted); background: #f8f5eb; }
 .ir-owned-lists > summary { display: flex; justify-content: space-between; gap: 18px; align-items: center; cursor: pointer; list-style: none; }
 .ir-owned-lists > summary::-webkit-details-marker { display: none; }

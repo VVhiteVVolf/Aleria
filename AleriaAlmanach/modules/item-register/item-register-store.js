@@ -2,6 +2,7 @@ import { STANDARD_ITEMS, STANDARD_VERSION } from './item-register-standard.js?v=
 import { buildOwnedItems, toLegacyItem } from './item-register-model.js?v=20260919-shop-v1';
 import { legacyOffers } from './item-register-migration.js?v=20260919-shop-v1';
 import { buildModuleOffers, isModuleScanDuplicate } from './item-register-module-catalog.js?v=20260919-shop-v1';
+import { moduleProviders } from './item-register-providers.js?v=20260919-provider-crests-v2';
 
 export function createRegisterStore({ standards = STANDARD_ITEMS, version = STANDARD_VERSION, notify = () => {} } = {}) {
   let backend = null;
@@ -13,14 +14,14 @@ export function createRegisterStore({ standards = STANDARD_ITEMS, version = STAN
   const listeners = new Set();
   let localLegacy = [];
   let remoteDeletedKeys = new Set();
-  let modules = [], moduleOffers = [];
+  let modules = [], moduleOffers = [], providers = [];
   function snapshot() {
     const remoteIds = new Set(state.offers.map(item => item.id));
     const legacyIds = new Set(state.legacy.map(item => item.id));
     const remainingLocal = localLegacy.filter(item => !legacyIds.has(item.id) && !item.aliases.some(key => remoteDeletedKeys.has(key)));
     const offers = [...moduleOffers, ...state.offers, ...[...state.legacy, ...remainingLocal].filter(item => !remoteIds.has(item.id) && !isModuleScanDuplicate(item, moduleOffers))];
     const owned = buildOwnedItems(state.characters, [...standards, ...offers], state.creatures);
-    return { ...state, ready: undefined, charactersReady: state.ready.has('characters'), creaturesReady: state.ready.has('creatures'), standards, offers, owned, items: [...standards, ...offers, ...owned], version };
+    return { ...state, ready: undefined, charactersReady: state.ready.has('characters'), creaturesReady: state.ready.has('creatures'), standards, offers, providers, owned, items: [...standards, ...offers, ...owned], version };
   }
   function changed() {
     const current = snapshot();
@@ -36,6 +37,7 @@ export function createRegisterStore({ standards = STANDARD_ITEMS, version = STAN
   function setModules(entries) {
     modules = entries;
     moduleOffers = buildModuleOffers(modules, standards);
+    providers = moduleProviders(modules);
     changed();
   }
   function stop() {

@@ -1,7 +1,7 @@
-import { registerStore } from './item-register-store.js?v=20260919-shop-v1';
+import { registerStore } from './item-register-store.js?v=20260919-provider-crests-v2';
 import { queryRegister, normalizeOffer, toLegacyItem } from './item-register-model.js?v=20260919-shop-v1';
-import { shell, navigation, overview, results, detail, escape, safeImage } from './item-register-view.js?v=20260919-shop-v1';
-import { createForm, collectOperation, quote } from './item-register-forms.js?v=20260919-shop-v1';
+import { shell, navigation, overview, results, detail, escape, safeImage } from './item-register-view.js?v=20260919-provider-crests-v2';
+import { createForm, collectOperation, quote } from './item-register-forms.js?v=20260919-provider-crests-v2';
 import { moneyState, moneyTotal, parsePrice, formatPrice } from './item-register-money.js?v=20260919-shop-v1';
 import { adaptItemImage } from './item-register-images.js?v=20260919-shop-v1';
 import { watchStandardReleases } from './item-register-updates.js?v=20260919-shop-v1';

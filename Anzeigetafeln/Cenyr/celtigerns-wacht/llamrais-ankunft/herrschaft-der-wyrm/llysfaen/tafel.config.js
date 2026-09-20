@@ -5,7 +5,9 @@ window.TAFEL_CONFIG = {
   boardId: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel",
   title: "Anzeigetafel — Llysfaen",
   documentTitle: "Llysfaens Anzeigetafel - Aleria",
-  images: {},
+  images: {
+    board: "Bilder/LlysfaenTafel.webp",
+  },
   firebase: {
     collection: "anzeigetafeln",
     docId: "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel",

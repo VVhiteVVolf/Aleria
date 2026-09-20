@@ -60,7 +60,9 @@
       ],
       folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen",
       config: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/tafel.config.js",
-      images: {},
+      images: {
+        board: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/Bilder/LlysfaenTafel.webp",
+      },
       dataPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/data.json",
       firebase: {
         collection: "anzeigetafeln",
@@ -69,7 +71,7 @@
       link: "tafel.html?tafel=cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel",
       legacyLink: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/Llysfaens-Anzeigetafel.html",
       editableDraft: true,
-      notes: "Konkrete Anzeigetafel fuer Llysfaen. Tafelbilder koennen im Editor als Bildlinks hinterlegt werden.",
+      notes: "Llysfaens Anzeigetafel mit lokalem Tafelbild und bearbeitbaren Aushängen.",
     },
     {
       id: "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel",

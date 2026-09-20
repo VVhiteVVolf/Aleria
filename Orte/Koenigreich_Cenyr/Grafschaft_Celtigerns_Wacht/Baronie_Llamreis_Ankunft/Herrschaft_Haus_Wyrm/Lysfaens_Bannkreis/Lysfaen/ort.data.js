@@ -17,8 +17,8 @@
       "map": "/Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-stadtkarte",
       "images": {
         "bild-einer-stadtwache-png": {
-          "src": "/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/assets/wache.png",
-          "alt": "Wache von Llysfaen",
+          "src": "/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/assets/militaer.webp",
+          "alt": "Gwydion Rhyddid und die Wachen von Llysfaen",
           "fit": "contain"
         },
         "karten-bild-png": {
@@ -141,7 +141,7 @@
         "Die Familie Rhyddid stammt ursprünglich aus dem kleinen Adelshaus Gwynthor, das treu dem Haus Wyrm dient. Ihr bekanntester Vertreter ist Sir Gwydion Rhyddid, der Ritter und Hauptmann von Llysfaen. Obwohl ihre Familie in Llysfaen kein Gut besitzt, gelten sie als standesfest, stolz und ehrenhaft. Ihr Einfluss ist direkt an den militärischen Schutz der Region geknüpft – und damit von nicht zu unterschätzender Bedeutung."
       ],
       "population": [
-        "Die Siedlung Llysfaen zählt derzeit etwa 900 Seelen, die sich über das Dorf selbst und die umliegenden Höfe und Weiler verteilen. Die soziale Struktur ist, wie in den meisten ländlichen Regionen des Lehens, klar gegliedert – geprägt von harter Arbeit, bäuerlicher Tradition und einer schlichten, aber zähen Lebensweise.",
+        "Llysfaen selbst zählt 900 Einwohner. Die Bewohner der umliegenden Höfe und Weiler kommen hinzu; die Gesamtbevölkerung des Bannkreises ist noch nicht beziffert. Die soziale Struktur ist, wie in den meisten ländlichen Regionen des Lehens, klar gegliedert – geprägt von harter Arbeit, bäuerlicher Tradition und einer schlichten, aber zähen Lebensweise.",
         "Der Großteil der Bevölkerung besteht aus Bauern, Viehzüchtern und Angehörigen der Unterschicht, die tagein, tagaus auf den Feldern schuften, Tiere versorgen und Vorräte für die kalten Monate einlagern. Ihre Hände sind schwielig, ihre Gesichter wettergezeichnet – aber ihr Herz schlägt fest für Llysfaen und seine Erde.",
         "Besonders hervorzuheben ist die kleine, aber renommierte Kaste der Pferdezüchter, die über Generationen hinweg im edle Reit- und Zugtiere herangezogen haben. Die Familie Jernigan genießt in diesem Bereich hohes Ansehen und beliefert nicht nur den Ritterfürsten, sondern gelegentlich auch königliche Boten oder feine Herren mit ihren Tieren.",
         "Vereinzelt findet sich in Llysfaen auch Handwerkerschaft, darunter Hufschmiede, Gerber, Tischler, Flicker, sowie zwei Bäcker und eine Kräuterfrau, die zugleich als Hebamme dient. Diese Berufe zählen zur unteren Mittelschicht, die sich in Llysfaen jedoch nur zaghaft herausbildet. Wohlstand ist hier selten, und wer ihn besitzt, zeigt ihn meist nur in Form eines gemauerten Kellers oder eines zweiten Pferdes im Stall.",
@@ -158,11 +158,10 @@
         "So ist die Kultur von Llysfaen nicht laut oder prunkvoll – aber sie ist reich an Können, Wissen und Rhythmus. In jedem Spatenstich, jedem Melkvorgang und jedem geflochtenen Zaun steckt gelebtes Erbe – fest verwurzelt, wie die uralten Hecken, die die Felder seit Generationen säumen."
       ],
       "military": [
-        "Die Sicherheit von Llysfaen liegt in den Händen einer kleinen, aber disziplinierten Garnison, die dem Schutz der Siedlung, der umliegenden Höfe und der Interessen des Hauses Wyrm dient. Die militärische Struktur ist übersichtlich, jedoch fest in das dörfliche Gefüge eingebettet – eine Mischung aus ritterlicher Autorität, bäuerlicher Pflichterfüllung und pragmatischer Wacht.",
-        "Das Kontingent umfasst derzeit etwa 10 bis 15 Milwr – einfache Fußsoldaten, meist aus der Region stammend. Sie sind junge Männer, oft Bauernsöhne oder zweite Söhne größerer Familien, die sich durch ihren Dienst ein Auskommen, Ehre oder schlicht eine warme Mahlzeit sichern wollen. Ihre Ausrüstung ist schlicht: Gambeson, Speer, ein Rundschild und, sofern es das Budget erlaubt, ein einfaches Seitenmesser. Trotz mangelnder Ausbildung zeigen viele von ihnen Herzblut, wenn es um die Verteidigung ihres Heimatortes geht.",
-        "Ergänzt werden sie durch 8 bis 10 Waffenknechte, meist älter, erfahrener, gelegentlich ehemalige Söldner oder Abenteurer, die sesshaft geworden sind. Sie tragen oft eigene Waffen – Hellebarden, Äxte oder schwere Keulen – und übernehmen innerhalb der Garnison die Rollen von Ausbildern, Torwachen oder Patrouillenführern. Viele dieser Männer sind rau, wortkarg und haben bereits außerhalb der Grenzen Llysfaens Blut gesehen – was ihnen unter den Jüngeren einen gewissen Respekt verschafft.",
-        "Angeführt wird die Truppe von keinem Geringeren als dem Ritter Sir Gwydion Rhyddid, einem Vertreter des niederen Adels, der vom Haus Wyrm entsandt wurde, um als Hauptmann von Llysfaen über Recht, Ordnung und militärische Angelegenheiten zu wachen. Sir Gwydion ist eine stattliche Erscheinung: hochgewachsen, stets in polierter Rüstung, und mit einem Blick, der ebenso scharf ist wie seine Klinge.",
-        "In Summe mag die militärische Präsenz von Llysfaen bescheiden wirken – doch sie ist funktional, lokal verwurzelt und unter kluger Führung mehr als nur eine Zierde. Sollte Gefahr nahen, wird man sehen, dass Mut nicht immer aus glänzender Rüstung besteht."
+        "Llysfaen ist ein kleiner, landwirtschaftlich geprägter Ort mit 900 Einwohnern. Ackerbau, Futterpflanzen und Vieh- und Pferdezucht bestimmen seinen Alltag. Mit den Höfen und weiteren Wohnstätten des Bannkreises steigt die Einwohnerzahl; eine Gesamtzahl für das Umland ist bislang nicht festgelegt.",
+        "Llysfaen selbst wird von 15 Ortswachen, 10 Waffenknechten und einem Ritter geschützt. Ritter Gwydion Rhyddid führt als Hauptmann die Ortsbesatzung und die Streitkräfte des Bannkreises.",
+        "Zum Bannkreis gehören drei kleine Burganlagen unter je einem Festungsleutnant mit 10 bis 20 unterstellten Mann, ohne Burgangestellte. Die Leutnante unterstehen Gwydion. Drei Zoll- und Grenzstationen sind mit jeweils 5 bis 8 Wachleuten besetzt.",
+        "Zwischen den Bauernhöfen pendeln Gruppen von 2 bis 4 Ortswachen; einige Höfe stellen zusätzliche eigene Wachen. Holzfällerlager, Minen, Jagd- und Fischereistätten sowie Plantagen werden je nach Bedarf unterschiedlich bemannt. Die Gesamtstärke des Bannkreises ist noch nicht vollständig erfasst."
       ],
       "newspaper": [
         {
@@ -181,18 +180,105 @@
 
   window.ORT_DATA = Object.freeze({
     ...base,
+    "militaryView": {
+      "status": "ready",
+      "title": "Streitkräfte von Llysfaen",
+      "subtitle": "Ortsbesatzung und Wachdienst im Bannkreis unter Gwydion Rhyddid",
+      "total": 26,
+      "totalLabel": "Ortsbesatzung einschließlich Hauptmann",
+      "heroImage": {
+        "src": "/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/assets/militaer.webp",
+        "alt": "Gwydion Rhyddid mit den Wachen von Llysfaen",
+        "fit": "contain"
+      },
+      "note": "Die Zahlenübersicht erfasst nur die Besatzung des Ortes. Burgen, Zollstationen und Patrouillen des Bannkreises sind im Artikel gesondert beschrieben.",
+      "forces": [
+        {
+          "id": "ortswachen",
+          "name": "Ortswachen",
+          "kind": "localWatch",
+          "count": 15,
+          "note": "Täglicher Wach- und Streifendienst im Ort."
+        },
+        {
+          "id": "waffenknechte",
+          "name": "Waffenknechte",
+          "kind": "house",
+          "count": 10,
+          "note": "Der kampferfahrenere Kern der Ortsbesatzung."
+        },
+        {
+          "id": "hauptmann",
+          "name": "Ritter Gwydion Rhyddid",
+          "kind": "other",
+          "kindLabel": "Hauptmann",
+          "count": 1,
+          "note": "Befehlshaber von Llysfaen und seinem Bannkreis."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Auftrag und Führung",
+          "paragraphs": [
+            "Llysfaen ist ein kleiner, landwirtschaftlich geprägter Ort mit 900 Einwohnern. Ackerbau, Futterpflanzen und Vieh- und Pferdezucht bestimmen seinen Alltag. Mit den Höfen und weiteren Wohnstätten des Bannkreises steigt die Einwohnerzahl; eine Gesamtzahl für das Umland ist bislang nicht festgelegt.",
+            "Ritter Gwydion Rhyddid ist Hauptmann von Llysfaen und dessen Bannkreis. Ihm unterstehen die Ortsbesatzung und die Festungsleutnanten der drei kleinen Burganlagen. Der Schutz der Ernte, der Menschen und der Wege verbindet die verstreuten Wachposten zu einer gemeinsamen Aufgabe."
+          ]
+        },
+        {
+          "title": "Die Besatzung des Ortes",
+          "paragraphs": [
+            "Im Ort selbst dienen 15 Ortswachen und 10 Waffenknechte unter einem Ritter: Gwydion Rhyddid. Damit umfasst die Ortsbesatzung 26 Personen einschließlich ihres Hauptmanns. Diese Zahl bezeichnet ausschließlich die Besatzung Llysfaens, nicht sämtliche Kräfte des Bannkreises.",
+            "Die Ortswachen übernehmen den täglichen Wach- und Streifendienst. Die Waffenknechte bilden den kampferfahreneren Kern, unterstützen gefährlichere Einsätze und die Ausbildung. Die kleine Besatzung muss ihre Kräfte zwischen dem Schutz des Ortes und dringender Hilfe im Umland einteilen."
+          ]
+        },
+        {
+          "title": "Drei Burgen im Bannkreis",
+          "paragraphs": [
+            "Drei kleine befestigte Burganlagen sichern das Umland. Jede wird von einem Festungsleutnant befehligt, der Gwydion Rhyddid unterstellt ist. Jedem Leutnant unterstehen 10 bis 20 Mann; Burgangestellte sind darin nicht mitgezählt.",
+            "Die drei unterstellten Burgbesatzungen umfassen zusammen 30 bis 60 Mann. Die drei kommandierenden Leutnante werden gesondert geführt. Die kleinen Anlagen dienen als örtliche Stützpunkte und können Hilfe in ihre Umgebung entsenden."
+          ]
+        },
+        {
+          "title": "Höfe, Arbeitsstätten und Patrouillen",
+          "paragraphs": [
+            "Zum Bannkreis gehören kleine Bauernhöfe, Holzfällerlager, Minen, Jagd- und Fischereistätten sowie Plantagen. Je nach Lage und Bedeutung sind diese Orte unterschiedlich stark mit Ortswachen und Waffenknechten besetzt.",
+            "Bei den Bauernhöfen pendeln Wachgruppen von 2 bis 4 Ortswachen zwischen mehreren Höfen. Diese Zahl beschreibt eine Patrouille, keine ständige Besatzung jedes einzelnen Hofes. Einige Höfe organisieren ergänzend eigene Wachen. Für die übrigen Arbeitsstätten sind noch keine festen Mannschaftszahlen festgelegt."
+          ]
+        },
+        {
+          "title": "Drei Zoll- und Grenzstationen",
+          "paragraphs": [
+            "Die drei Zoll- und Grenzstationen verfügen jeweils über 5 bis 8 Wachleute. Zusammen sind dies 15 bis 24 Wachleute an den Stationen. Sie sichern die Übergänge und unterstützen die Kontrolle des Warenverkehrs.",
+            "Eine Gesamtstärke des Bannkreises bleibt offen: Die Anzahl der Hofpatrouillen, die Besetzung der Arbeitsstätten und die privaten Hofwachen sind noch nicht vollständig erfasst. Auch die Verteilung von Ortswachen und Waffenknechten auf die Außenposten ist nicht im Einzelnen festgelegt."
+          ]
+        },
+        {
+          "title": "Von der Ortswache zum gerüsteten Krieger",
+          "paragraphs": [
+            "Die Darstellung veranschaulicht vier Ausrüstungsbilder: Dorfwache, bewaffneter Knecht, geharnischter Knecht und Ritter. Gelbe Wappenröcke und Schilde verbinden die Figuren optisch; Helm, Kettenzeug und zusätzliche Plattenteile zeigen den zunehmenden Schutz.",
+            "Die Abbildung dient dem Vergleich von Ausrüstung und militärischer Rolle. Die beiden Knechtsdarstellungen teilen die 10 Waffenknechte nicht in zusätzliche Kontingente auf. Der Ritterstand ist eine eigene Stellung und keine automatische Beförderungsstufe jeder Ortswache."
+          ],
+          "image": {
+            "src": "/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/assets/kriegerentwicklung.webp",
+            "alt": "Vier Ausrüstungsstufen: Dorfwache, bewaffneter Knecht, geharnischter Knecht und Ritter",
+            "fit": "contain"
+          },
+          "caption": "Kriegerentwicklung und Ausrüstungsvergleich der Llysfaener Truppen."
+        }
+      ]
+    },
     "structure": {
       "vorherrschender adel": "Keiner",
       "regierungstyp": "Feudale Amtsverwaltung",
-      "gewerbe": "Viehhaltung, Stoff & Leder Verarbeitung",
+      "gewerbe": "Ackerbau, Vieh- und Pferdezucht, Stoff- und Lederverarbeitung",
       "lehnsherr": "Haus Wyrm",
       "stände": "Unterschicht, Mittelschicht",
-      "einwohnerzahl": "etwa 900",
-      "ritter": "Ein Ritter der Wyrm",
-      "waffenknechte": "8 bis 10",
+      "einwohnerzahl": "900 im Ort; Umland zusätzlich",
+      "ritter": "1 – Gwydion Rhyddid",
+      "waffenknechte": "10 im Ort",
       "flotte": "Keine",
       "ressourcen": "Vieh, Wolle, Fleisch, Leder, Futterpflanzen, Pferde",
-      "ortswache": "10 - 15",
+      "ortswache": "15 im Ort",
       "land": "Königreich Cenyr",
       "provinz": "Celtigerns Wacht",
       "region": "Baronie Llamreis Ankunft",
@@ -471,7 +557,7 @@
               "Oder zu schüchtern, um überhaupt etwas zu sagen. Oder – was viele im Dorf glauben – er hat es einfach noch nicht gemerkt.",
               "Brizio ist kein Held. Aber wenn man ihn braucht, ist er da. Mit schiefem Helm, zu kurzem Speer, einem freundlichen Grinsen – und der unbeirrbaren Überzeugung, dass Gutes tun immer richtig ist, selbst wenn man dabei stolpert."
             ],
-            "portrait": "/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/assets/brizio-dwl.png"
+            "portrait": "/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/assets/brizio-dwl.webp"
           }
         ]
       },
@@ -491,6 +577,12 @@
         ]
       }
     ],
+    "noticeBoardMap": {
+      "mapId": "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel",
+      "title": "Llysfaens Anzeigetafel",
+      "embedHref": "/Anzeigetafeln/tafel.html?tafel=cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel",
+      "fullHref": "/Anzeigetafeln/tafel.html?tafel=cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel"
+    },
     "regionMap": {
       "mapId": "cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-bannkreis",
       "title": "Llysfaen – Bannkreis",

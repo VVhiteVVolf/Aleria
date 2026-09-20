@@ -3,7 +3,7 @@ import {
   formatPercentage,
   getForceKind,
   normalizeMilitaryProfile
-} from "./military-profile.mjs?v=20260904a";
+} from "./military-profile.mjs?v=20260920a";
 
 const root = document.querySelector("[data-military-view]");
 
@@ -149,7 +149,25 @@ function renderDetails(profile) {
   if (profile.forces.length) content.append(renderForces(profile));
   if (profile.units.length) content.append(renderUnits(profile));
   if (profile.note) content.append(element("p", "military-note", profile.note));
+  profile.sections.forEach((section) => content.append(renderArticleSection(section)));
   return content;
+}
+
+function renderArticleSection(section) {
+  const article = element("section", "military-section military-article");
+  if (section.title) article.append(element("h2", "", section.title));
+  section.paragraphs.forEach((text) => article.append(element("p", "", text)));
+  if (section.image.src) {
+    const figure = element("figure", "military-article__figure");
+    const link = element("a");
+    link.href = section.image.src;
+    link.setAttribute("aria-label", `${section.image.alt || section.title} – Bild öffnen`);
+    link.append(renderImage(section.image, section.title));
+    figure.append(link);
+    if (section.caption) figure.append(element("figcaption", "", section.caption));
+    article.append(figure);
+  }
+  return article;
 }
 
 function renderSummary(profile) {
@@ -158,7 +176,9 @@ function renderSummary(profile) {
   summary.append(
     stat(profile.total === null ? "–" : formatNumber(profile.total), profile.totalLabel),
     stat(formatNumber(profile.forces.length), "Kontingente"),
-    stat(formatNumber(profile.units.length), "Truppengattungen")
+    profile.units.length
+      ? stat(formatNumber(profile.units.length), "Truppengattungen")
+      : stat(formatNumber(profile.sections.length), "Artikelabschnitte")
   );
   return summary;
 }

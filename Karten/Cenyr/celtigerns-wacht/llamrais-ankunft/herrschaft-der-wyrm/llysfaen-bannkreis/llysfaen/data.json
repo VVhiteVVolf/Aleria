@@ -1,10 +1,275 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis/llysfaen/data.json",
-  "revision": 0,
-  "updatedAt": "2026-09-02T00:00:00.000Z",
+  "revision": 1,
+  "updatedAt": "2026-09-20T00:00:00.000Z",
   "state": {
-    "pins": [],
+    "pins": [
+      {
+        "id": "llysfaen-bauer-west",
+        "title": "Bauer – Westhof",
+        "x": 0.099947,
+        "y": 0.245536,
+        "cat": "landwirtschaft",
+        "pinMarker": "assets/icons/orte/bauer.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Bauer – Westhof in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-bauer-nordwest",
+        "title": "Bauer – Nordwesthof",
+        "x": 0.227539,
+        "y": 0.210565,
+        "cat": "landwirtschaft",
+        "pinMarker": "assets/icons/orte/bauer.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Bauer – Nordwesthof in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-bauer-nord",
+        "title": "Bauer – Nordhof",
+        "x": 0.517278,
+        "y": 0.174851,
+        "cat": "landwirtschaft",
+        "pinMarker": "assets/icons/orte/bauer.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Bauer – Nordhof in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-bauer-nordost",
+        "title": "Bauer – Nordosthof",
+        "x": 0.689527,
+        "y": 0.172619,
+        "cat": "landwirtschaft",
+        "pinMarker": "assets/icons/orte/bauer.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Bauer – Nordosthof in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-mueller",
+        "title": "Müller",
+        "x": 0.84051,
+        "y": 0.105655,
+        "cat": "handwerk",
+        "pinMarker": "assets/icons/orte/m-hlepin.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Müller in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-schenke",
+        "title": "Schenke",
+        "x": 0.313131,
+        "y": 0.320685,
+        "cat": "gesellschaft",
+        "pinMarker": "assets/icons/orte/schenkepin.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Schenke in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-schneider",
+        "title": "Schneider",
+        "x": 0.148857,
+        "y": 0.415923,
+        "cat": "handwerk",
+        "pinMarker": "assets/icons/orte/schneider.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Schneider in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-rathaus",
+        "title": "Rathaus",
+        "x": 0.283892,
+        "y": 0.395089,
+        "cat": "verwaltung",
+        "pinMarker": "assets/icons/orte/hauptstadt.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Rathaus in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-garnison",
+        "title": "Garnison",
+        "x": 0.335991,
+        "y": 0.466518,
+        "cat": "verwaltung",
+        "pinMarker": "assets/icons/orte/burgoderlehnswartodergarnison.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Sitz der Ortsbesatzung: 15 Ortswachen, 10 Waffenknechte und Ritter Gwydion Rhyddid, Hauptmann von Llysfaen und seinem Bannkreis."
+      },
+      {
+        "id": "llysfaen-anzeigetafel",
+        "title": "Anzeigetafel",
+        "x": 0.383838,
+        "y": 0.46131,
+        "cat": "verwaltung",
+        "pinMarker": "assets/icons/orte/anschlagbrett.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Anzeigetafel in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-administration",
+        "title": "Administration",
+        "x": 0.483785,
+        "y": 0.46875,
+        "cat": "verwaltung",
+        "pinMarker": "assets/icons/orte/officepin.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Administration in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-pfeilmacher",
+        "title": "Pfeilmacher",
+        "x": 0.651249,
+        "y": 0.362351,
+        "cat": "handwerk",
+        "pinMarker": "assets/icons/orte/pfeilmacher.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Pfeilmacher in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-rosszuechter",
+        "title": "Rosszüchter",
+        "x": 0.849548,
+        "y": 0.366071,
+        "cat": "landwirtschaft",
+        "pinMarker": "assets/icons/orte/rosszucht.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Rosszüchter in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-schmied",
+        "title": "Schmied",
+        "x": 0.787347,
+        "y": 0.395833,
+        "cat": "handwerk",
+        "pinMarker": "assets/icons/orte/normalschmied.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Schmied in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-klerus",
+        "title": "Klerus",
+        "x": 0.124402,
+        "y": 0.559524,
+        "cat": "gesellschaft",
+        "pinMarker": "assets/icons/orte/kleruspin.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Klerus in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-marktplatz",
+        "title": "Marktplatz",
+        "x": 0.668262,
+        "y": 0.533482,
+        "cat": "gesellschaft",
+        "pinMarker": "assets/icons/orte/marktpin.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Marktplatz in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-taverne",
+        "title": "Taverne",
+        "x": 0.383838,
+        "y": 0.667411,
+        "cat": "gesellschaft",
+        "pinMarker": "assets/icons/orte/tavernepin.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Taverne in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-aufsehergilde",
+        "title": "Aufsehergilde",
+        "x": 0.660819,
+        "y": 0.671131,
+        "cat": "gesellschaft",
+        "pinMarker": "assets/icons/orte/gilde.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Aufsehergilde in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-baumeister",
+        "title": "Baumeister",
+        "x": 0.71983,
+        "y": 0.677083,
+        "cat": "handwerk",
+        "pinMarker": "assets/icons/orte/baumeister.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Baumeister in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-baecker",
+        "title": "Bäcker",
+        "x": 0.833599,
+        "y": 0.676339,
+        "cat": "handwerk",
+        "pinMarker": "assets/icons/orte/b-cker.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Bäcker in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-federkiel",
+        "title": "Federkiel",
+        "x": 0.943647,
+        "y": 0.65997,
+        "cat": "gesellschaft",
+        "pinMarker": "assets/icons/gilden-orden/federkielpin.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Federkiel in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-gerberei",
+        "title": "Gerberei",
+        "x": 0.043594,
+        "y": 0.790179,
+        "cat": "handwerk",
+        "pinMarker": "assets/icons/orte/gerber.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Gerberei in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-holzverarbeitung",
+        "title": "Holzverarbeitung",
+        "x": 0.328017,
+        "y": 0.853423,
+        "cat": "handwerk",
+        "pinMarker": "assets/icons/orte/s-gewerk.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Holzverarbeitung in Llysfaen. Lage gemäß der Ortskarte."
+      },
+      {
+        "id": "llysfaen-erlenglanz",
+        "title": "Erlenglanz",
+        "x": 0.848485,
+        "y": 0.924107,
+        "cat": "landwirtschaft",
+        "pinMarker": "assets/icons/orte/rosszucht.png",
+        "pinMarkerScale": 1,
+        "secret": false,
+        "text": "Erlenglanz in Llysfaen. Lage gemäß der Ortskarte."
+      }
+    ],
     "dotSize": 18,
     "lblSize": 13,
     "regionIcon": "",
@@ -14,7 +279,40 @@
       "regions": "Regionen",
       "pins": "Markierungen"
     },
-    "dm": { "sessions": [], "notes": "", "groupStatus": {} },
-    "markerCatalog": []
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    },
+    "markerCatalog": [],
+    "cats": [
+      {
+        "id": "landwirtschaft",
+        "label": "Landwirtschaft & Pferdezucht",
+        "color": "#527348"
+      },
+      {
+        "id": "handwerk",
+        "label": "Handwerk",
+        "color": "#a06c2b"
+      },
+      {
+        "id": "verwaltung",
+        "label": "Verwaltung & Wache",
+        "color": "#355d70"
+      },
+      {
+        "id": "gesellschaft",
+        "label": "Dorfleben & Gilden",
+        "color": "#8f3328"
+      }
+    ],
+    "extraLayers": [
+      {
+        "id": "llysfaen-markervorlage",
+        "name": "Marker-Vorlage",
+        "url": "/Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis/llysfaen/Kartenbilder/LlysfaenStadtMarker.webp"
+      }
+    ]
   }
 }
