@@ -62,6 +62,7 @@
       lordship: { slug: "herrschaft-der-wyrm", title: "Herrschaft der Wyrm" },
       rulingHouse: "Haus Wyrm",
       cityImage: "LlysfaenStadt.webp",
+      cityPins: "LlysfaenStadtMarker.webp",
       regionNormal: "LlysfaenBannkreisNormal.webp",
       regionPins: "LlysfaenBannkreisMarker.webp",
       cityLegacyLink: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen-bannkreis/llysfaen/Llysfaens-Stadtkarte.html",
@@ -157,6 +158,7 @@
         folder: cityFolder,
         images: {
           normal: `${cityFolder}/Kartenbilder/${place.cityImage}`,
+          ...(place.cityPins ? { pins: `${cityFolder}/Kartenbilder/${place.cityPins}` } : {}),
         },
         layerNames: {
           normal: "Stadtkarte",

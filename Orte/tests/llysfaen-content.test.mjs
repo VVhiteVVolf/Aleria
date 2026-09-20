@@ -33,7 +33,7 @@ test("Llysfaens Ortsbesatzung bleibt von den variablen Außenposten getrennt", (
   assetExists(progression.image.src);
 });
 
-test("Stadtkarte bietet 24 gültige Ortsmarker und eine separate Bildvorlage", () => {
+test("Stadtkarte bietet 24 Platzhalter auf den Symbolen der Markierungen-Ebene", () => {
   vm.runInContext(read("Karten/karten.registry.js"), context);
   const map = context.window.KartoMapRegistry.byId("cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-stadtkarte");
   const { state } = JSON.parse(read(`Karten/${map.dataPath}`));
@@ -43,14 +43,22 @@ test("Stadtkarte bietet 24 gültige Ortsmarker und eine separate Bildvorlage", (
   for (const pin of state.pins) {
     assert.ok(pin.x > 0 && pin.x < 1 && pin.y > 0 && pin.y < 1, pin.title);
     assert.ok(categories.has(pin.cat), pin.title);
-    assetExists(`Karten/${pin.pinMarker}`);
+    assert.ok(pin.title);
+    assert.equal(pin.pinMarker, "", "Keine doppelten Symbolbilder über der beschrifteten Karte");
+    assert.equal(pin.text, "", "Die Pins sind zunächst reine Platzhalter mit Überschrift");
   }
   assetExists(`Karten/${map.images.normal}`);
-  assetExists(state.extraLayers[0].url);
-  assert.equal(map.images.pins, undefined, "Die Bildvorlage darf nicht mit den interaktiven Markern gekoppelt sein");
+  assetExists(`Karten/${map.images.pins}`);
+  assert.deepEqual(Object.keys(map.images), ["normal", "pins"]);
+  assert.deepEqual(state.extraLayers, [], "Keine dritte Ebene für die Vorlage");
   const garrison = state.pins.find((pin) => pin.id === "llysfaen-garnison");
   assert.ok(Math.abs(garrison.x - 632 / 1881) < 0.000001);
-  assert.ok(Math.abs(garrison.y - 627 / 1344) < 0.000001);
+  assert.ok(Math.abs(garrison.y - 571 / 1344) < 0.000001);
+  for (const [id, x, y] of [["klerus", 234, 681], ["schneider", 280, 490], ["gerberei", 82, 1003]]) {
+    const pin = state.pins.find((entry) => entry.id === `llysfaen-${id}`);
+    assert.ok(Math.abs(pin.x - x / 1881) < 0.000001);
+    assert.ok(Math.abs(pin.y - y / 1344) < 0.000001);
+  }
 });
 
 test("Llysfaens Ortsseite bindet die eigene Tafel mit vorhandenem Bild ein", () => {

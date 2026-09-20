@@ -52,7 +52,7 @@ test('Llysfaens 24 interaktive Marker sind ohne Markerbild einschaltbar und öff
   vm.runInContext('renderLayerButtons()', context);
   assert.equal(elements['lb-pins'].hidden, false);
   assert.equal(elements['lb-regions'].hidden, true);
-  assert.equal(elements['layer-btns'].children[0].textContent, 'Marker-Vorlage');
+  assert.equal(elements['layer-btns'].children.length, 0);
 
   vm.runInContext(read('../assets/js/map/map-view.js'), context);
   window.resetLayers();
