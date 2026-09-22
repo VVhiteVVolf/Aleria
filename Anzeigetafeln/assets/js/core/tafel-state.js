@@ -66,10 +66,15 @@
 
   function save() {
     clearTimeout(saveTimer);
-    saveTimer = window.setTimeout(() => {
-      window._fb?.saveAll(snapshot());
-      window.dispatchEvent(new CustomEvent('aleria:tafel:state-saved'));
-    }, 250);
+    saveTimer = window.setTimeout(saveNow, 250);
+  }
+
+  async function saveNow() {
+    clearTimeout(saveTimer);
+    const saved = await window._fb?.saveAll(snapshot());
+    if (saved !== true) return false;
+    window.dispatchEvent(new CustomEvent('aleria:tafel:state-saved'));
+    return true;
   }
 
   function readBackups() {
@@ -110,6 +115,7 @@
     snapshot,
     apply,
     save,
+    saveNow,
     backup,
     backups: readBackups,
     restoreBackup,

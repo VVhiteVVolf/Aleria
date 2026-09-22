@@ -284,28 +284,6 @@
 .medieval-info-table td { padding: .35rem .4rem; font: .9rem/1.3 'EB Garamond', serif; }
 .medieval-empty { color: #775728; font-style: italic; }
 
-.medieval-notice--wanted { overflow: hidden; border: 4px double #6f281d; background: #ead5a2; box-shadow: inset 0 0 70px rgba(93, 36, 18, .16); }
-.wanted-header { padding: 1.15rem 1.4rem 1rem; text-align: center; border-bottom: 3px double #7d3023; background: linear-gradient(180deg, rgba(124, 38, 27, .19), rgba(124, 38, 27, .04)); }
-.wanted-authority { display: block; color: #6f281d; font: 700 .58rem/1 'Cinzel', serif; letter-spacing: .18em; text-transform: uppercase; }
-.wanted-header h2 { margin: .35rem 0 .18rem; color: #701f16; font: 900 clamp(2rem, 5vw, 3.5rem)/.95 'Cinzel Decorative', serif; letter-spacing: .14em; text-transform: uppercase; }
-.wanted-header strong { display: block; font: 700 1.15rem/1.25 'Cinzel', serif; letter-spacing: .06em; }
-.wanted-header p { margin-top: .18rem; color: #714725; font: italic 1rem/1.3 'EB Garamond', serif; }
-.wanted-layout { display: grid; grid-template-columns: minmax(220px, 31%) 1fr; min-height: 320px; }
-.wanted-portrait { position: relative; min-height: 320px; margin: 0; overflow: hidden; background: #cfb67e; border-right: 3px double #795121; }
-.wanted-portrait img { width: 100%; height: 100%; display: block; filter: sepia(.28) contrast(.97); }
-.wanted-portrait figcaption { position: absolute; inset: auto 0 0; padding: .55rem .6rem; color: #f4e4b7; background: rgba(55, 24, 6, .82); text-align: center; font: 700 .62rem/1.35 'Cinzel', serif; text-transform: uppercase; }
-.wanted-portrait--empty { display: grid; place-items: center; }
-.wanted-portrait--empty span { color: rgba(89, 55, 20, .42); font: 900 6rem/1 'Cinzel Decorative', serif; }
-.wanted-record { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 34%); }
-.wanted-copy { padding: 1.15rem 1.3rem; font: 1.04rem/1.72 'EB Garamond', serif; }
-.wanted-copy p { margin-bottom: .6rem; }
-.medieval-info-table--wanted { align-self: stretch; border-left: 1px solid #a47d3d; background: rgba(129, 75, 25, .08); }
-.medieval-info-table--wanted th,
-.medieval-info-table--wanted td { padding: .5rem .55rem; }
-.wanted-reward { padding: .8rem 1rem; text-align: center; color: #f2ddaa; background: linear-gradient(90deg, #5a1c14, #872c20 48%, #5a1c14); border-top: 2px solid #3e110c; border-bottom: 2px solid #3e110c; }
-.wanted-reward span { display: block; font: .58rem/1 'Cinzel', serif; letter-spacing: .18em; text-transform: uppercase; }
-.wanted-reward strong { display: block; margin-top: .25rem; font: 700 1.25rem/1.2 'Cinzel Decorative', serif; }
-.wanted-footer { padding: .55rem 1rem; color: #714725; text-align: center; font: italic .92rem/1.4 'EB Garamond', serif; }
 .wanted-pages { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .55rem 1rem; }
 .wanted-pages button { padding: .3rem .85rem; cursor: pointer; color: #602117; background: #e0c68e; border: 1px solid #8b4b33; font: 700 .65rem/1.2 'Cinzel', serif; }
 .wanted-pages button:disabled { cursor: default; opacity: .35; }
@@ -315,8 +293,6 @@
   .tafel-mode-plaque, #lock-lbl { display: none; }
   .tafel-data-manager { grid-template-columns: 1fr; }
   .notice-type-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .quest-layout, .wanted-layout { grid-template-columns: 1fr; }
-  .quest-docket, .wanted-portrait { border-right: 0; border-bottom: 1px solid #a98543; }
-  .wanted-record { grid-template-columns: 1fr; }
-  .medieval-info-table--wanted { border-left: 0; border-top: 1px solid #a47d3d; }
+  .quest-layout { grid-template-columns: 1fr; }
+  .quest-docket { border-right: 0; border-bottom: 1px solid #a98543; }
 }

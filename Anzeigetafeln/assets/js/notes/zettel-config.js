@@ -31,10 +31,25 @@
       table:[{k:'Veranstaltung',v:''},{k:'Datum',v:''},{k:'Ort',v:''},{k:'Veranstalter',v:''}]
     },
     {
-      id:'notiz', icon:'📝', color:'#60a060', label:'Freie Notiz',
+      id:'notiz', icon:'📝', color:'#587366', label:'Mitteilung / Notiz',
       desc:'Gerücht, Info, Sonstiges…',
       fields:['text'],
       table:[{k:'Kategorie',v:''},{k:'Quelle',v:''},{k:'Datum',v:''}]
+    },
+    {
+      id:'handel', icon:'⚖', color:'#927047', label:'Handel / Angebot',
+      desc:'Waren, Gesuche und Dienstleistungen', fields:['bild','text'],
+      table:[{k:'Angebot',v:''},{k:'Preis',v:''},{k:'Ort',v:''},{k:'Kontakt',v:''}]
+    },
+    {
+      id:'erlass', icon:'⚜', color:'#7c4340', label:'Amtlicher Erlass',
+      desc:'Verordnungen, Warnungen und Bekanntmachungen', fields:['bild','text'],
+      table:[{k:'Ausgestellt von',v:''},{k:'Gültig ab',v:''},{k:'Geltungsbereich',v:''}]
+    },
+    {
+      id:'einladung', icon:'✧', color:'#786483', label:'Einladung',
+      desc:'Feierlichkeiten, Zusammenkünfte und Feste', fields:['bild','text'],
+      table:[{k:'Anlass',v:''},{k:'Wann',v:''},{k:'Wo',v:''},{k:'Gastgeber',v:''},{k:'Rückmeldung',v:''}]
     }
   ];
 
@@ -71,11 +86,11 @@
     },
     renderTypeCards(esc){
       return window.ZETTEL_TYPES.map(type => `
-        <div class="tpl-card" id="ztplc-${type.id}" data-action="select-zettel-type" data-zettel-type="${type.id}" style="border-color:${type.color || window.ZETTEL_BORDER[type.id] || '#c8a040'}55">
+        <button type="button" class="tpl-card" id="ztplc-${type.id}" data-action="select-zettel-type" data-zettel-type="${type.id}" style="border-color:${type.color || window.ZETTEL_BORDER[type.id] || '#c8a040'}55">
           <span class="tpl-icon">${type.icon}</span>
           <span class="tpl-label">${type.label}</span>
           <span class="tpl-desc">${type.desc}</span>
-        </div>`).join('');
+        </button>`).join('');
     },
     createDraft(typeId, position, uid){
       const type = this.typeById(typeId);
@@ -91,12 +106,16 @@
         portrait: '',
         verfasser: '',
         verfasserName: '',
+        emblem: '',
+        siegel: '',
+        unterschrift: '',
+        media: {},
         sideWidth: typeId === 'zeitung' ? 220 : 160,
         imageFit: 'cover',
         imagePosition: 'center',
         table: type ? type.table.map(row => ({...row})) : [],
         artikel: [{titel:'Artikel 1', text:''}],
-        personen: [{portrait:'', title:'', untertitel:'', text:'', imageFit:'cover', imagePosition:'center', table:[]}],
+        personen: typeId === 'steckbrief' ? [{portrait:'', title:'', untertitel:'', text:'', imageFit:'cover', imagePosition:'center', table:type.table.map(row => ({...row}))}] : [],
         comments: [],
         secret: false,
       };

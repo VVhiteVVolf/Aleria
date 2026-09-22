@@ -1,5 +1,6 @@
 (function(){
   'use strict';
+  const selectedAvatars = new WeakMap();
 
   function rt(){ return window.TafelRuntime; }
   function state(){ return rt().state(); }
@@ -15,8 +16,7 @@
   }
 
   function normalizeUrl(value){
-    const url = String(value || '').trim();
-    return /^https?:\/\//i.test(url) ? url : '';
+    return window.TafelNoticeMediaModel.imageUrl(value);
   }
 
   function cssEscape(value){
@@ -26,8 +26,8 @@
 
   function renderAvatar(comment){
     const avatar = normalizeUrl(comment.avatar);
-    if(avatar){
-      return `<img src="${esc(avatar)}" alt="" loading="lazy" decoding="async" data-image-fallback="hide-self">`;
+    if(avatar || comment.media?.avatar?.kind === 'character'){
+      return window.TafelNoticeMediaModel.render(comment, 'avatar', {label:comment.name || 'Avatar'});
     }
     const name = String(comment.name || '').trim();
     return `<span>${esc(name ? name.slice(0, 1).toUpperCase() : '?')}</span>`;
@@ -64,7 +64,7 @@
           : '<p class="zettel-comments-empty">Noch keine Kommentare vorhanden.</p>'}
       </div>
       <div class="zettel-comment-compose">
-        <input type="url" class="e-inp" data-zettel-comment-avatar placeholder="Avatarbild-URL, optional">
+        <div class="notice-comment-image"><input type="url" class="e-inp" data-zettel-comment-avatar placeholder="Avatarbild-URL, optional"><button type="button" class="s-btn s-cancel" data-action="zettel-comment-image" data-zettel-id="${esc(zettel.id)}">Bild wählen</button></div>
         <input type="text" class="e-inp" data-zettel-comment-name placeholder="Name, optional">
         <textarea class="e-ta" rows="3" data-zettel-comment-text placeholder="Kommentar hinterlassen..."></textarea>
         <button type="button" class="s-btn s-save" data-action="zettel-comment-add" data-zettel-id="${esc(zettel.id)}">Kommentar eintragen</button>
@@ -77,6 +77,18 @@
     if(node) node.outerHTML = render(zettel);
   }
 
+  function chooseImage(zettelId){
+    const root = document.querySelector(`[data-zettel-comments="${cssEscape(zettelId)}"]`);
+    if(!root) return;
+    const input = root.querySelector('[data-zettel-comment-avatar]');
+    window.TafelNoticeMediaPicker.open({value:input.value, title:'Kommentarbild wählen', onSelect:item => {
+      if(!root.isConnected) return;
+      input.value = item?.src || '';
+      selectedAvatars.set(root, item);
+      if(item?.kind === 'character') root.querySelector('[data-zettel-comment-name]').value = item.name;
+    }});
+  }
+
   function add(zettelId){
     const zettel = zettelById(zettelId);
     if(!zettel) return;
@@ -87,13 +99,16 @@
       rt().toast('Kommentartext fehlt');
       return;
     }
-    commentsOf(zettel).push({
+    const comment = {
       id: rt().uid(),
       avatar: normalizeUrl(root.querySelector('[data-zettel-comment-avatar]')?.value),
       name: String(root.querySelector('[data-zettel-comment-name]')?.value || '').trim(),
       text,
       createdAt: Date.now()
-    });
+    };
+    const avatar = selectedAvatars.get(root);
+    if(avatar && normalizeUrl(avatar.src) === comment.avatar) window.TafelNoticeMediaModel.apply(comment, 'avatar', avatar);
+    commentsOf(zettel).push(comment);
     rt().save();
     refresh(zettel);
     rt().toast('Kommentar gespeichert');
@@ -110,6 +125,7 @@
 
   window.TafelZettelComments = {
     render,
+    chooseImage,
     add,
     remove
   };

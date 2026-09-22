@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anzeigetafel – Aleria</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/tafel.css?v=single-board-20260902b">
-  <link rel="stylesheet" href="assets/css/notice-board.css?v=single-board-20260902b">
+  <link rel="stylesheet" href="assets/css/tafel.css?v=20260923">
+  <link rel="stylesheet" href="assets/css/notice-board.css?v=20260923">
+  <link rel="stylesheet" href="assets/css/notice-documents.css?v=20260923">
+  <link rel="stylesheet" href="assets/css/notice-media.css?v=20260923">
+  <link rel="stylesheet" href="assets/css/notice-theme.css?v=20260923">
 
   <script src="tafeln.registry.js"></script>
   <script>
@@ -68,8 +71,8 @@
     }
   })();
   </script>
-  <script src="assets/js/tafel-storage.js?v=single-board-20260902b"></script>
-  <script src="assets/js/notes/zettel-config.js?v=single-board-20260902b"></script>
+  <script src="assets/js/tafel-storage.js?v=20260923"></script>
+  <script src="assets/js/notes/zettel-config.js?v=20260923"></script>
 </head>
 <body>
   <div class="tafel-app-shell">
@@ -135,6 +138,7 @@
         <div id="icon-preview" class="tafel-icon-preview">📜</div>
         <label class="lml" for="icon-url-inp">Bild-URL</label>
         <input class="e-inp" id="icon-url-inp" placeholder="https://…" data-input-action="preview-region-icon">
+        <button class="s-btn s-cancel" type="button" data-action="choose-region-icon">Icon, Charakter oder eigenes Bild wählen</button>
       </div>
       <footer class="lmb-footer">
         <button class="s-btn s-del" type="button" data-action="clear-region-icon">Entfernen</button>
@@ -244,18 +248,24 @@
   <div id="hint"></div>
   <div id="toast"></div>
 
-  <script src="assets/js/core/tafel-state.js?v=single-board-20260902b"></script>
-  <script src="assets/js/board/notice-board.js?v=single-board-20260902b"></script>
-  <script src="assets/js/tafel-app.js?v=single-board-20260902b"></script>
-  <script src="assets/js/notes/zettel-rich-text.js?v=single-board-20260902b"></script>
-  <script src="assets/js/notes/zettel-comments.js?v=single-board-20260902b"></script>
-  <script src="assets/js/notes/zettel-scroll-views.js?v=single-board-20260902b"></script>
-  <script src="assets/js/notes/zettel-editor.js?v=single-board-20260902b"></script>
-  <script src="assets/js/notes/zettel-board.js?v=single-board-20260902b"></script>
-  <script src="assets/js/data/notice-data-manager.js?v=single-board-20260902b"></script>
-  <script src="assets/js/editor/notice-editor.js?v=single-board-20260902b"></script>
-  <script src="assets/js/core/tafel-publish-ui.js?v=single-board-20260902b"></script>
-  <script src="assets/js/core/tafel-actions.js?v=single-board-20260902b"></script>
-  <script src="assets/js/core/tafel-bootstrap.js?v=single-board-20260902b"></script>
+  <script src="assets/js/core/tafel-state.js?v=20260923"></script>
+  <script src="assets/js/board/notice-board.js?v=20260923"></script>
+  <script src="assets/js/tafel-app.js?v=20260923"></script>
+  <script src="assets/js/notes/zettel-rich-text.js?v=20260923"></script>
+  <script src="assets/js/notes/zettel-comments.js?v=20260923"></script>
+  <script src="../AleriaAlmanach/modules/icon-directory/icon-directory-data.js"></script>
+  <script src="../Karten/assets/js/media/media-assets.registry.js"></script>
+  <script src="assets/js/media/notice-media-model.js?v=20260923"></script>
+  <script src="assets/js/media/notice-media-upload.js?v=20260923"></script>
+  <script src="assets/js/media/notice-media-picker.js?v=20260923"></script>
+  <script src="assets/js/notes/zettel-document-views.js?v=20260923"></script>
+  <script src="assets/js/notes/zettel-scroll-views.js?v=20260923"></script>
+  <script src="assets/js/notes/zettel-editor.js?v=20260923"></script>
+  <script src="assets/js/notes/zettel-board.js?v=20260923"></script>
+  <script src="assets/js/data/notice-data-manager.js?v=20260923"></script>
+  <script src="assets/js/editor/notice-editor.js?v=20260923"></script>
+  <script src="assets/js/core/tafel-publish-ui.js?v=20260923"></script>
+  <script src="assets/js/core/tafel-actions.js?v=20260923"></script>
+  <script src="assets/js/core/tafel-bootstrap.js?v=20260923"></script>
 </body>
 </html>

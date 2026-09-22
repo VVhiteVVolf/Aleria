@@ -34,15 +34,37 @@
     return `<option value="${esc(value)}" ${String(selected || '') === value ? 'selected' : ''}>${esc(label)}</option>`;
   }
 
-  function zettelLayoutControls(z){
-    const sideWidth = Number(z.sideWidth) || (z.typ === 'zeitung' ? 220 : 160);
-    return `<div class="zettel-layout-controls">
-      <label class="lml">Trenner: Info-/Bildspalte</label>
-      <div class="zettel-range-row">
-        <input type="range" min="120" max="420" step="10" value="${sideWidth}" data-input-action="zettel-field" data-field="sideWidth"/>
-        <span>${sideWidth}px</span>
+  function mediaFields(z){
+    const picker = window.TafelNoticeMediaPicker;
+    return `<details class="notice-media-section" open><summary>Bilder & Zeichen</summary>
+      <div class="notice-media-fields">
+        ${picker.field(z, 'bild', 'Illustration / Titelbild')}
+        ${z.typ !== 'steckbrief' ? picker.field(z, 'portrait', 'Portrait / Motiv') : ''}
+        ${picker.field(z, 'verfasser', 'Verfasser / Auftraggeber')}
+        ${picker.field(z, 'emblem', 'Emblem')}
+        ${picker.field(z, 'siegel', 'Wachssiegel')}
+        ${picker.field(z, 'unterschrift', 'Unterschrift')}
       </div>
-    </div>`;
+    </details>`;
+  }
+
+  function openMedia(element){
+    const z = currentZettel();
+    if(!z) return;
+    const index = element.dataset.personIndex;
+    const source = index === undefined ? z : z.personen?.[Number(index)];
+    const field = element.dataset.mediaField;
+    if(!source || !['bild','portrait','verfasser','emblem','siegel','unterschrift'].includes(field)) return;
+    window.TafelNoticeMediaPicker.open({value:source[field], onSelect:item => {
+      if(currentZettel() !== z) return;
+      window.TafelNoticeMediaModel.apply(source, field, item);
+      if(item?.kind === 'character') {
+        if(field === 'verfasser' && !z.verfasserName) z.verfasserName = item.name;
+        if(index !== undefined && !source.title) source.title = item.name;
+      }
+      renderZettelSidebarEdit(z);
+      renderBoard();
+    }});
   }
 
   function zettelImageControls(z){
@@ -92,7 +114,10 @@
   }
 
   function renderZettelSidebarEdit(z){
-    const tdef = typeById(z.typ);
+    const tdef = typeById(z.typ) || typeById('notiz');
+    if(z.typ === 'steckbrief' && !z.personen?.length){
+      z.personen = [{portrait:z.portrait || '', title:z.title, untertitel:z.untertitel, text:z.text, table:(z.table || []).map(row => ({...row})), media:z.media?.portrait ? {portrait:{...z.media.portrait}} : {}}];
+    }
     const brd = window.ZETTEL_BORDER[z.typ] || '#c8a040';
     const tblRows = (z.table || []).map((r, i) => {
       const isSt = r.type === 'stars';
@@ -126,21 +151,16 @@
   <div id="sb-body">
     <div class="e-group"><label class="lml">Titel</label>
       <input class="e-inp" value="${esc(z.title || '')}" placeholder="${tdef.label}…" data-input-action="zettel-field" data-field="title"/></div>
-    ${z.typ !== 'zeitung' ? `<div class="e-group"><label class="lml">Untertitel</label>
-      <input class="e-inp" value="${esc(z.untertitel || '')}" placeholder="Zusatz, Datum…" data-input-action="zettel-field" data-field="untertitel"/></div>` : ''}
-    ${['quest','ankuendigung','vermisst','notiz'].includes(z.typ) ? `<div class="e-group"><label class="lml">Bild-URL</label>
-      <input class="e-inp" value="${esc(z.bild || '')}" placeholder="https://i.imgur.com/…" data-input-action="zettel-field" data-field="bild"/></div>` : ''}
-    ${['vermisst','quest'].includes(z.typ) ? `<div class="e-group"><label class="lml">Portrait (URL)</label>
-      <input class="e-inp" value="${esc(z.portrait || '')}" placeholder="https://i.imgur.com/…" data-input-action="zettel-field" data-field="portrait"/></div>` : ''}
-    ${z.typ === 'quest' ? `<div class="e-group"><label class="lml">Verfasser Portrait (Kreis, URL)</label>
-      <input class="e-inp" value="${esc(z.verfasser || '')}" placeholder="https://i.imgur.com/…" data-input-action="zettel-field" data-field="verfasser"/></div>
-    <div class="e-group"><label class="lml">Verfasser Name (Unterschrift)</label>
-      <input class="e-inp" value="${esc(z.verfasserName || '')}" placeholder="Bürgermeister der Stadt…" data-input-action="zettel-field" data-field="verfasserName"/></div>` : ''}
+    <div class="e-group"><label class="lml">Untertitel</label>
+      <input class="e-inp" value="${esc(z.untertitel || '')}" placeholder="Zusatz, Datum…" data-input-action="zettel-field" data-field="untertitel"/></div>
+    ${mediaFields(z)}
+    ${['vermisst','steckbrief'].includes(z.typ) ? `<div class="zettel-layout-controls"><label class="lml">Porträtbreite</label><div class="zettel-range-row"><input type="range" min="120" max="320" step="10" value="${Number(z.sideWidth) || 180}" data-input-action="zettel-field" data-field="sideWidth"><span>${Number(z.sideWidth) || 180}px</span></div></div>` : ''}
+    <div class="e-group"><label class="lml">Verfasser / Unterschrift</label>
+      <input class="e-inp" value="${esc(z.verfasserName || '')}" placeholder="Name des Verfassers" data-input-action="zettel-field" data-field="verfasserName"/></div>
     ${z.typ === 'zeitung' ? `<div class="e-group"><label class="lml">Verlags-Name / Zeitungstitel</label>
       <input class="e-inp" value="${esc(z.verlag || '')}" placeholder="Der Stadtbote" data-input-action="zettel-field" data-field="verlag"/></div>
     <div class="e-group"><label class="lml">Ausgaben-Datum</label>
       <input class="e-inp" value="${esc(z.datum || '')}" placeholder="3. Herbstmond 1423" data-input-action="zettel-field" data-field="datum"/></div>` : ''}
-    ${zettelLayoutControls(z)}
     ${zettelImageControls(z)}
     ${z.typ !== 'zeitung' ? `<div class="e-group"><label class="lml">Text</label>
       ${richTextEditor('zettel-main-text', 'zettel-rich-field', 'data-field="text"', z.text || '')}</div>` : ''}
@@ -257,8 +277,7 @@
     <input class="e-inp" value="${esc(p.title || '')}" placeholder="Name…" data-input-action="person-field" data-person-index="${i}" data-field="title"/>
     <label class="lml" style="margin-top:.3rem;">Untertitel / Alias</label>
     <input class="e-inp" value="${esc(p.untertitel || '')}" placeholder="Alias, Beinamen…" data-input-action="person-field" data-person-index="${i}" data-field="untertitel"/>
-    <label class="lml" style="margin-top:.3rem;">Portrait-URL</label>
-    <input class="e-inp" value="${esc(p.portrait || '')}" placeholder="https://i.imgur.com/…" data-input-action="person-field" data-person-index="${i}" data-field="portrait"/>
+    ${window.TafelNoticeMediaPicker.field(p, 'portrait', 'Portrait', i)}
     ${personImageControls(i, p)}
     <label class="lml" style="margin-top:.3rem;">Beschreibungstext</label>
     ${richTextEditor(`zettel-person-${i}-text`, 'person-rich-field', `data-person-index="${i}" data-field="text"`, p.text || '')}
@@ -294,6 +313,7 @@
       s.textContent = on ? '\u2605' : '\u2606';
     });
     renderBoard();
+    preview();
   }
   function sbStarHover(pi, ri, val){
     const sp = document.getElementById(`sp-${pi}-${ri}`);
@@ -320,6 +340,7 @@
     if(!z?.personen?.[pi]) return;
     z.personen[pi].table.splice(ri, 1);
     document.getElementById('sb-pers-tbl-' + pi).innerHTML = renderPersonTable(z.personen[pi], pi);
+    preview();
   }
   function sbPersonTableTemplate(pi){
     const z = currentZettel();
@@ -338,6 +359,7 @@
       if(!z.personen[pi].table.some(r => r.k === row.k)) z.personen[pi].table.push({...row});
     });
     document.getElementById('sb-pers-tbl-' + pi).innerHTML = renderPersonTable(z.personen[pi], pi);
+    preview();
   }
   function sbPersonTableAdd(pi){
     const z = currentZettel();
@@ -345,6 +367,7 @@
     if(!z.personen[pi].table) z.personen[pi].table = [];
     z.personen[pi].table.push({k:'', v:''});
     document.getElementById('sb-pers-tbl-' + pi).innerHTML = renderPersonTable(z.personen[pi], pi);
+    preview();
   }
   function sbPersonAdd(){
     const z = currentZettel();
@@ -352,15 +375,17 @@
     if(!z.personen) z.personen = [];
     z.personen.push({portrait:'', title:'', untertitel:'', text:'', imageFit:'cover', imagePosition:'center', table:[]});
     document.getElementById('sb-personen-list').innerHTML = renderPersonenList(z);
+    preview();
   }
   function sbPersonRemove(pi){
     const z = currentZettel();
     if(!z?.personen || pi === 0) return;
     z.personen.splice(pi, 1);
     document.getElementById('sb-personen-list').innerHTML = renderPersonenList(z);
+    preview();
   }
-  function zettelSaveAndClose(){
-    save();
+  async function zettelSaveAndClose(){
+    if(!await window.TafelState.saveNow()) return;
     renderBoard();
     rt().closeSidebar();
     activeZettelId = null;
@@ -393,7 +418,8 @@
   window.TafelZettelEditor = {
     open: openZettelSidebar,
     render: renderZettelSidebarEdit,
-    clearActive
+    clearActive,
+    openMedia
   };
 
   Object.assign(window, {

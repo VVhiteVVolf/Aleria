@@ -1,0 +1,92 @@
+/* Detail documents own their layout; the quest keeps its established parchment. */
+.notice-document {
+  --notice-accent: #49655b;
+  --notice-tint: #e8ece4;
+  --notice-line: #d2ccbc;
+  container-type: inline-size;
+  color: #302f29;
+  background: #f7f3e8;
+  border-top: 5px solid var(--notice-accent);
+  font: 1.08rem/1.7 'EB Garamond', Georgia, serif;
+  overflow-wrap: anywhere;
+}
+.notice-document--vermisst { --notice-accent: #5c647e; --notice-tint: #e8e8ed; }
+.notice-document--steckbrief { --notice-accent: #843d35; --notice-tint: #eee0d6; background: #f4ead8; }
+.notice-document--zeitung { --notice-accent: #3e4446; --notice-tint: #e9e7df; background: #f4f2e9; }
+.notice-document--ankuendigung { --notice-accent: #356567; --notice-tint: #e3edE8; }
+.notice-document--handel { --notice-accent: #84613e; --notice-tint: #eee5d6; }
+.notice-document--erlass { --notice-accent: #793e38; --notice-tint: #eee2da; }
+.notice-document--einladung { --notice-accent: #77617a; --notice-tint: #eee5ec; background: #f8f1eb; }
+.notice-heading { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 1.1rem; align-items: center; padding: 2rem 3rem 1.55rem; border-bottom: 1px solid var(--notice-line); position: relative; }
+.notice-eyebrow { display: block; color: var(--notice-accent, #68624e); font: 600 .61rem/1.5 'Cinzel', serif; letter-spacing: .15em; text-transform: uppercase; }
+.notice-heading h2 { margin: .35rem 0 0; color: var(--notice-accent); font: 600 clamp(1.45rem, 3.6cqi, 2.5rem)/1.2 'Cinzel', Georgia, serif; text-wrap: balance; }
+.notice-subtitle { margin-top: .45rem; color: #6e695f; font-style: italic; line-height: 1.5; }
+.notice-edition { grid-column: 2; color: #777366; font: .58rem/1.4 'Cinzel', serif; letter-spacing: .12em; text-transform: uppercase; }
+.notice-document-body { padding: 1.65rem 3rem 2rem; }
+.notice-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr)); margin: 0 0 1.6rem; background: var(--notice-tint); border-block: 1px solid var(--notice-line); }
+.notice-fact { padding: .8rem 1rem; min-width: 0; border-bottom: 1px solid color-mix(in srgb, var(--notice-line) 60%, transparent); }
+.notice-fact dt { margin-bottom: .28rem; color: var(--notice-accent); font: 700 .59rem/1.35 'Cinzel', serif; letter-spacing: .06em; text-transform: uppercase; }
+.notice-fact dd { font-size: 1rem; line-height: 1.45; white-space: pre-wrap; }
+.notice-stars { color: var(--notice-accent); letter-spacing: .09em; }
+.notice-copy { max-width: 76ch; margin-inline: auto; font-size: 1.11rem; line-height: 1.78; }
+.notice-copy p { margin: 0 0 .8em; }
+.notice-copy > :last-child { margin-bottom: 0; }
+.notice-copy ul, .notice-copy ol { padding-left: 1.4em; margin-bottom: .85em; }
+.notice-copy blockquote { border-left: 3px solid var(--notice-accent); margin: 1em 0; padding: .3em 1em; color: #635e51; font-style: italic; }
+.notice-empty { color: #827c6b; font-style: italic; }
+.notice-subject { display: grid; grid-template-columns: var(--notice-portrait-width, 180px) minmax(0, 1fr); gap: 1.7rem; align-items: start; margin-bottom: 1.6rem; }
+.notice-subject > div { min-width: 0; }
+.notice-subject .notice-facts { margin: .65rem 0 0; }
+.notice-subject-portrait { margin: 0; padding: .4rem; background: #fffcf5; border: 1px solid var(--notice-line); box-shadow: 2px 4px 0 #00000008; transform: rotate(-1deg); }
+.notice-subject-portrait > .notice-media { aspect-ratio: 4 / 5; width: 100%; background: var(--notice-tint); font-size: 3.5rem; }
+.notice-subject-portrait figcaption { text-align: center; padding: .55rem .25rem .2rem; color: var(--notice-accent); font: italic .95rem/1.35 'EB Garamond', serif; }
+.notice-person-name { font: 600 1.6rem/1.3 'Cinzel', serif; color: var(--notice-accent); }
+.notice-illustration { margin: 0 0 1.6rem; }
+.notice-illustration > .notice-media { width: 100%; height: clamp(160px, 32cqi, 360px); background: var(--notice-tint); }
+.notice-signoff { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 0 3rem; padding: 1rem 0 1.4rem; border-top: 1px solid var(--notice-line); }
+.notice-author { display: flex; align-items: center; gap: .8rem; flex: 1 1 180px; min-width: 0; }
+.notice-author strong { display: block; font: italic 1.02rem/1.35 'EB Garamond', serif; margin-top: .12rem; }
+.notice-author-portrait { width: 44px; height: 44px; flex-shrink: 0; border: 1px solid var(--notice-line); border-radius: 50%; background: var(--notice-tint); font-size: 1.35rem; }
+.notice-signature { width: 110px; height: 46px; color: #8b816b; font-size: 1.8rem; }
+.notice-seal { width: 48px; height: 48px; border: 3px double #cba58e; border-radius: 50%; background: #853e32; color: #f7dec0; box-shadow: 1px 2px 3px #422a2526; font-size: 1.35rem; }
+.notice-emblem { width: 58px; height: 58px; color: var(--notice-accent); border: 1px solid var(--notice-line); border-radius: 50%; background: var(--notice-tint); font-size: 1.85rem; }
+.notice-reward { padding: .8rem 1rem; margin-top: 1.7rem; text-align: center; border: 3px double var(--notice-accent); color: var(--notice-accent); }
+.notice-reward strong { font: 700 1.35rem/1.4 'Cinzel', serif; }
+.notice-news-date { text-align: center; margin-bottom: 1rem; font-style: italic; }
+.notice-news-articles { columns: 2 290px; column-gap: 2.25rem; column-rule: 1px solid var(--notice-line); }
+.notice-news-article { break-inside: avoid-column; margin-bottom: 1.75rem; }
+.notice-news-article h3 { font: 700 1.55rem/1.2 'EB Garamond', serif; margin: .5rem 0 .8rem; }
+.notice-document--zeitung .notice-heading h2 { color: #303638; font-family: 'Cinzel Decorative', serif; }
+.notice-document--zeitung .notice-heading { border-bottom: 3px double #565850; }
+.notice-document--zeitung .notice-copy { line-height: 1.6; }
+.notice-document--erlass .notice-heading { border-bottom: 3px double var(--notice-accent); }
+.notice-document--erlass .notice-copy > p:first-child::first-letter { float: left; font: 3.5rem/.9 'Cinzel', serif; padding: .16rem .35rem 0 0; color: var(--notice-accent); }
+.notice-document--einladung .notice-heading, .notice-document--ankuendigung .notice-heading { display: flex; flex-direction: column; text-align: center; gap: .8rem; background: linear-gradient(0deg, transparent, var(--notice-tint)); }
+.notice-document--einladung .notice-copy { text-align: center; max-width: 60ch; }
+.notice-document--einladung .notice-heading h2 { font-family: 'Cinzel Decorative', serif; }
+.notice-document--steckbrief .notice-heading h2 { text-transform: uppercase; font-size: clamp(2rem, 5cqi, 3.6rem); letter-spacing: .12em; font-weight: 700; }
+.notice-document .wanted-pages { border-top: 1px solid var(--notice-line); }
+.quest-emblem { width: 36px; height: 36px; margin: 0 auto; }
+.quest-patron.notice-media { display: grid; font-size: 2rem; }
+.quest-footer .quest-seal .notice-media-placeholder, .quest-footer .quest-seal .notice-media-placeholder > span { font-size: 1.15rem; line-height: 1; color: #e2bd73; }
+.quest-subject { width: 130px; height: 160px; float: right; margin: 0 0 1rem 1rem; }
+.quest-scene > .notice-media { width: 100%; height: 100%; }
+.quest-footer > .quest-seal { display: grid; place-items: center; flex-shrink: 0; }
+.quest-footer .quest-seal .notice-media-placeholder { display: grid; place-items: center; }
+.quest-footer .notice-media-placeholder { padding: 0; border: 0; font: inherit; color: inherit; }
+@container (max-width: 620px) {
+  .notice-heading { padding: 1.6rem 1.2rem 1.2rem; gap: .8rem; grid-template-columns: 44px minmax(0, 1fr); }
+  .notice-emblem { width: 44px; height: 44px; }
+  .notice-document-body { padding: 1.25rem; }
+  .notice-signoff { margin-inline: 1.25rem; gap: .8rem; }
+  .notice-subject { gap: 1rem; grid-template-columns: 110px minmax(0, 1fr); }
+  .notice-facts { grid-template-columns: repeat(auto-fit, minmax(min(100%, 135px), 1fr)); }
+  .notice-subject .notice-facts { grid-template-columns: 1fr; }
+  .notice-fact { padding: .65rem .75rem; }
+}
+@container (max-width: 380px) {
+  .notice-subject { grid-template-columns: 1fr; }
+  .notice-subject-portrait { width: min(180px, 65%); margin-inline: auto; }
+  .notice-subject .notice-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .notice-signature { width: 70px; }
+}

@@ -31,6 +31,16 @@
     'jump-to-notice': element => editor().jumpToNotice(element.dataset.noticeId),
     'close-sidebar': () => editor().closeSidebar(),
     'close-scroll': () => editor().closeScroll(),
+    'notice-media-open': element => window.TafelZettelEditor.openMedia(element),
+    'zettel-comment-image': element => window.TafelZettelComments.chooseImage(element.dataset.zettelId),
+    'choose-region-icon': () => window.TafelNoticeMediaPicker.open({
+      value: document.getElementById('icon-url-inp').value,
+      title: 'Tafelsymbol wählen',
+      onSelect: item => {
+        document.getElementById('icon-url-inp').value = item?.src || '';
+        editor().previewIcon();
+      },
+    }),
     'zettel-open-edit': element => {
       editor().closeScroll();
       window.openZettelSidebar(element.dataset.zettelId, 'edit');

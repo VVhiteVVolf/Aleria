@@ -34,8 +34,10 @@
     try {
       localStorage.setItem(draftKey, JSON.stringify({ basedOnRevision: publishedRevision, savedAt: new Date().toISOString(), state }));
       window.dispatchEvent(new CustomEvent('aleria:tafel:draft-status', { detail: { hasDraft: true } }));
+      return true;
     } catch (error) {
       console.warn('[tafel-storage] Lokaler Entwurf konnte nicht gespeichert werden:', error);
+      return false;
     }
   }
 
@@ -95,8 +97,13 @@
   window._fb = {
     async saveAll(state) {
       setStatus('sv');
-      writeDraft(state);
+      if (!writeDraft(state)) {
+        setStatus('er');
+        window.TafelRuntime?.toast('Speichern fehlgeschlagen: Der lokale Speicher ist voll. Bilder verkleinern oder Bildlinks verwenden; den Entwurf bei Bedarf als JSON sichern.');
+        return false;
+      }
       setTimeout(() => setStatus(''), 250);
+      return true;
     },
     sub(callback) {
       (async () => {

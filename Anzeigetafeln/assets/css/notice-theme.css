@@ -1,0 +1,48 @@
+/* The board shell, editor and comments share a muted ink-and-paper palette. */
+:root { --p1: #212b26; --p2: #17211c; --p3: #2a362d; --p4: #374238; --ink: #ece6d2; --ink2: #c9c6ae; --ink3: #a6ac96; --gold: #a89970; --goldl: #c0b48b; --goldb: #dad0aa; --border: #656b54; --border2: #a6a58a40; }
+#topbar { background: #222f27; border-bottom: 1px solid #767b60; padding-block: .65rem; }
+.notice-board-viewport { background: radial-gradient(ellipse at top, #3b4232, #151c18 80%); }
+.tafel-mode-plaque { background: #d4d0b811; border-color: #a0a08766; }
+.tafel-publish-button { color: #eee7c8; border-color: #b3b58d; }
+.tafel-dialog .lmh { background: #344b3c; color: #f4efde; }
+.tafel-dialog, .tafel-dialog .lmb-body { background: #f1eddf; }
+.tafel-dialog .lmb-footer { background: #e4dfce; border-top-color: #c8c1ac; }
+#scroll-card { background: #f5f0e3; border: 1px solid #b0aa94; border-radius: 3px; box-shadow: 0 24px 90px #0008; container-type: inline-size; }
+#scroll-card::before, #scroll-card::after { height: 8px; background: #4b5948; border: 0; }
+#scroll-actions { padding: .7rem 1.25rem; border-top-color: #d0c8b4; background: #e9e3d4; }
+.scroll-close { top: 15px; right: 12px; width: 28px; height: 28px; border-color: #bcb8a4; background: #f8f5eccc; color: #4a5547; border-radius: 50%; }
+.zettel-comments { margin: 0; border: 0; border-top: 1px solid #d0c8b4; background: #eee9dc; color: #454438; }
+.zettel-comments-head { padding: .8rem 1.5rem; background: #e7e3d5; border-color: #d0c8b4; }
+.zettel-comments-head h3 { font-size: .77rem; letter-spacing: .1em; color: #4f5e4e; }
+.zettel-comments-head span, .zettel-comments-empty, .zettel-comment-meta { color: #78725f; }
+.zettel-comments-list { padding: .9rem 1.5rem; }
+.zettel-comment-compose { padding: .8rem 1.5rem 1.2rem; background: #eee9dc; border-top-color: #d0c8b4; }
+.zettel-comment-compose .e-inp, .zettel-comment-compose .e-ta { background: #fcfaf3; border-color: #bdb9a6; color: #373b32; }
+.zettel-comment-compose .s-save { background: #445e4b; border-color: #445e4b; color: #fff9e8; padding: .6rem; }
+.zettel-comment-body { border-color: #d4cebc; background: #f8f4e9; }
+.zettel-comment-avatar { background: #e6e8dc; border-color: #9ea18a; color: #56664f; }
+.zettel-comment-avatar > .notice-media { width: 100%; height: 100%; }
+.notice-comment-image { display: flex; gap: .4rem; min-width: 0; }
+.notice-comment-image .e-inp { min-width: 0; }
+.notice-comment-image .s-btn { flex: 0 0 auto; padding: .4rem .6rem; }
+.notice-type-grid .tpl-card { background: #f8f4e9; text-align: center; padding: 1.1rem .7rem; }
+.notice-type-grid .tpl-card.on { background: #e0e7d9; outline: 2px solid #5a745c; }
+.notice-type-grid .tpl-label { color: #3e4c3e; }
+.notice-type-grid .tpl-desc { color: #79735f; }
+#sidebar { background: #f1eddf; }
+#sb-header { background: #354a3b; border-bottom-color: #73816a; }
+#sb-body { background: #f1eddf; }
+#sb-footer { background: #e3decb; }
+#sidebar.editor-fullscreen #sb-preview { background: #798171; }
+#sb-preview-head { background: #354a3b; color: #f4efde; }
+.editor-preview-card { container-type: inline-size; }
+.notice-document :focus-visible, .notice-media:focus-visible { outline: 2px solid #496b54; outline-offset: 3px; }
+@media (max-width: 600px) {
+  .zettel-comment-compose { grid-template-columns: minmax(0, 1fr); }
+  .zettel-comments-head, .zettel-comments-list, .zettel-comment-compose { padding-inline: 1rem; }
+  .quest-header { padding-inline: 2rem; }
+  .quest-layout { margin-inline: .8rem; }
+  .quest-copy { padding: 1rem; }
+  .quest-footer { margin-inline: .8rem; grid-template-columns: 1fr 52px 1fr; }
+  .quest-footer strong { font-size: .78rem; }
+}
