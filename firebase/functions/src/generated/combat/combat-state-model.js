@@ -195,7 +195,8 @@ export function getResolutionActorInventoryState(resolution = {}) {
 
 export function getResolutionActorLoadoutState(resolution = {}) {
   const snapshot = resolution.actorEquippedWeaponSnapshot;
-  return snapshot?.after ? { equippedWeaponId: String(snapshot.after), offHandWeaponId: snapshot.offHandAfter } : {};
+  return snapshot?.after ? { equippedWeaponId: String(snapshot.after), offHandWeaponId: snapshot.offHandAfter,
+    ...(snapshot.supportAfter ? { supportEquipment: { ...snapshot.supportAfter } } : {}) } : {};
 }
 
 export function getResolutionActorEquippedWeaponState(resolution = {}) {

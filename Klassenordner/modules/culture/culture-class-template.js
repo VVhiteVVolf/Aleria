@@ -2,6 +2,7 @@ import { escapeClassHtml as escape } from '../pages/class-page-content.js';
 import { renderContents, renderIllustration, renderFacts, renderSection, renderPending } from '../pages/class-page-sections.js';
 import { renderCultureClassTraining } from './culture-class-training-template.js?v=20260909-dragon-parent-v2';
 import { getCultureOrderContentsEntry, renderCultureOrderOverview } from './culture-order-overview.js';
+import { getClassSpecialSection } from '../sheets/class-special-section.js';
 
 const VERSION = '20260911-venalys-v1';
 const STRUCTURE_ONLY_VERSION = '20260911-structure-only-v1';
@@ -45,6 +46,8 @@ function sharedCultureNote(document) {
 
 export function renderCultureClassPage(document, documents, culture, plan) {
   const written = document.sections.filter(section => section.status === 'written');
+  const specialSection = getClassSpecialSection(document.id);
+  if (specialSection) written.push(specialSection);
   const pending = document.sections.filter(section => section.status === 'pending');
   const hasProgression = Boolean(plan);
   const showOrderOverview = culture.classPage?.showOrderOverview !== false;

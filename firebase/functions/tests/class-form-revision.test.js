@@ -30,7 +30,7 @@ test('both Derwyn foundations materialize the same legal scene actions on browse
     const server = serverProfile(character);
     assert.deepEqual(server.actions, client.actions, foundation);
     const actions = server.actions.filter(action => action.kind === 'technique');
-    assert.equal(actions.length, 3, foundation);
+    assert.equal(actions.length, 6, foundation);
     assert(server.techniques.every(technique => technique.combatStyleFormId === foundation), foundation);
   }
 });

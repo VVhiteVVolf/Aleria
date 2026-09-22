@@ -27,6 +27,11 @@
 .combat-weapon-active,
 .combat-weapon-alternatives { min-width: 0; }
 .combat-weapon-slots { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+.combat-support-equipment { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 1rem; }
+.combat-support-group { flex: 1 1 18rem; min-width: 0; }
+.combat-support-slot[data-state="stowed"] .combat-weapon-slot-icon { filter: grayscale(1); opacity: 0.65; }
+.combat-support-slot[data-state="active"] { box-shadow: 0 0 0 2px #668f5e, 0 0 12px #668f5e40; }
+.combat-support-slot:disabled { opacity: 0.45; cursor: not-allowed; }
 
 .combat-dual-toggle { display: flex; align-items: center; gap: 0.45rem; margin-bottom: 0.5rem; color: #543e26; font: 0.85rem/1.4 "EB Garamond", Georgia, serif; }
 .combat-dual-toggle input { accent-color: #526b42; width: 1rem; height: 1rem; }

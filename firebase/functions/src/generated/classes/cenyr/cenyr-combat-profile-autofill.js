@@ -1,4 +1,5 @@
 import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
+import { reconcileCultureFormArsenal } from '../class-form-arsenal.js';
 import { reconcileCenyrTrainingForLevel } from './cenyr-technique-selection.js?v=20260909-dragon-parent-v2';
 import { migrateDrachentanzTechniqueResources } from '../../combat-styles/drachentanz/drachentanz-training-migration.js?v=20260909-dragon-parent-v2';
 
@@ -40,7 +41,7 @@ function trainingSignature(profile = {}) {
 export function getAutofilledCenyrCombatProfile(profile = {}) {
   if (!profile || typeof profile !== 'object') return profile;
   const definition = getCenyrClassDefinitionForProfile(profile);
-  if (!definition) return profile;
+  if (!definition) return reconcileCultureFormArsenal(profile);
 
   const signature = trainingSignature(profile);
   const cached = autofillCache.get(profile);

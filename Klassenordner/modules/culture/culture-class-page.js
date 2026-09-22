@@ -26,10 +26,8 @@ function initializeCultureTraining(root) {
     const available = new Set(plan.attackCatalog
       .filter(attack => attack.minimumLevel <= plan.selectedLevel)
       .map(attack => attack.id));
-    const slots = plan.earnedTechniqueSlots.length;
-    const confirmed = plan.availableAttacks.length;
     const attacksById = new Map(plan.attackCatalog.map(attack => [attack.id, attack]));
-    summary.textContent = `Stufe ${plan.selectedLevel} · ${slots} ${slots === 1 ? 'Attackenslot' : 'Attackenslots'} verdient · ${available.size} ${available.size === 1 ? 'Katalogoption' : 'Katalogoptionen'} bis hier · ${plan.status === 'draft' ? 'Ausbildungsentwurf' : `${confirmed} bestätigt`}`;
+    summary.textContent = `Stufe ${plan.selectedLevel} · ${available.size} Formtechniken bis hier · innerhalb zugänglicher Formen automatisch erlernt`;
     if (plan.progressionStatus === 'structure-only') {
       summary.textContent = `Stufe ${plan.selectedLevel} · Ausbildungsinhalt offen · keine automatische Kampfvergabe`;
     }

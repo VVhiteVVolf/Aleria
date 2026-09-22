@@ -1,4 +1,5 @@
 import { isTechniqueCompatibleWithWeapon } from '../../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
+import { materializeClassFormArsenal, reconcileCultureFormArsenal } from '../class-form-arsenal.js';
 import {
   DRACHENTANZ_FORM_IDS as FORM_IDS
 } from '../../combat-styles/drachentanz/drachentanz-ids.js?v=20260909-dragon-parent-v2';
@@ -175,7 +176,7 @@ export function synchronizeCenyrSelectedTechniques(profile = {}, options = {}) {
     options.preserveExisting !== false
   ));
   next.techniques = [...retained, ...learned];
-  return migrateDrachentanzTechniqueResources(next);
+  return migrateDrachentanzTechniqueResources(materializeClassFormArsenal(next, progression, options));
 }
 
 export function selectCenyrTechniqueForSlot(profile = {}, selection = {}, options = {}) {
@@ -255,7 +256,7 @@ function pruneTrainingForLevel(profile, definition, level) {
 
 export function reconcileCenyrTrainingForLevel(profile = {}, targetLevelValue = null, options = {}) {
   const definition = getCenyrClassDefinitionForProfile(profile);
-  if (!definition) return { profile: clone(profile), added: [], pending: [] };
+  if (!definition) return { profile: reconcileCultureFormArsenal(clone(profile), targetLevelValue ?? profile.progression?.level), added: [], pending: [] };
   const level = normalizeLevel(targetLevelValue ?? profile.progression?.level);
   let next = pruneTrainingForLevel(profile, definition, level);
   const added = [];
@@ -305,7 +306,7 @@ export function reconcileCenyrTrainingForLevel(profile = {}, targetLevelValue = 
         slotId: group.slotId,
         techniqueId: candidate.id,
         selectedAtLevel: Math.max(group.slot.level, candidate.minimumLevel)
-      }, { preserveExisting: options.preserveExisting });
+      }, { preserveExisting: options.preserveExisting, targetLevel: level });
       if (!selected.ok) break;
       next = selected.profile;
       added.push({ slotId: group.slotId, technique: selected.technique });

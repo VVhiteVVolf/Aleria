@@ -30,7 +30,7 @@ const definitions = getCenyrClassDefinitions();
 const root = new URL('../', import.meta.url);
 const culture = JSON.parse(await readFile(new URL('Cenyr/kultur.json', root), 'utf8'));
 const sourcePassages = { milwr: 'Fundament des cenyrischen Heeres', teulu: 'Vom Becher und vom Durst', cantref: 'Hundertschaft des Landes', uchelwyr: 'Ritter des hohen Sattels', helwyr: 'Offiziere, Bannerträger, Engstellen', arthwyr: 'Tanz der Bärenklaue', barddwyr: 'Haus Ceirwyn O’Calon' };
-const trainingPassages = { milwr: '9 Slots bis Stufe 20', teulu: '24 Slots bis Stufe 20', cantref: 'Hellebarde', uchelwyr: 'Tanz des stürmenden Drachens', helwyr: 'Langbogenfolge', arthwyr: 'Großschwert', barddwyr: 'Tanz des kreischenden Drachens' };
+const trainingPassages = { milwr: 'Alle freigeschalteten Formtechniken', teulu: 'Alle freigeschalteten Formtechniken', cantref: 'Hellebarde', uchelwyr: 'Tanz des stürmenden Drachens', helwyr: 'Langbogenfolge', arthwyr: 'Großschwert', barddwyr: 'Tanz des kreischenden Drachens' };
 
 test('seven cultural pages preserve supplied lore, artwork proportions and local navigation', async () => {
   for (const definition of definitions) {
@@ -68,7 +68,7 @@ test('class curricula separate foundation, free training and selectable paths wi
   assert.equal(canonical.forms.at(-2).shortName, 'Tanz des trällernden Drachens');
   assert.equal(canonical.forms.at(-1).shortName, 'Tanz des kreischenden Drachens');
   const expectedBudgets = { milwr: 9, teulu: 24, cantref: 14, uchelwyr: 16, helwyr: 12, arthwyr: 14, barddwyr: 8 };
-  const expectedCatalogSizes = { milwr: 9, teulu: 95, cantref: 38, uchelwyr: 65, helwyr: 145, arthwyr: 98, barddwyr: 48 };
+  const expectedCatalogSizes = { milwr: 9, teulu: 95, cantref: 42, uchelwyr: 69, helwyr: 145, arthwyr: 102, barddwyr: 48 };
   for (const definition of definitions) {
     const plan = getCenyrClassProgression(definition.id, 20);
     assert.equal(plan.levels.length, 20);
@@ -102,7 +102,7 @@ test('class curricula separate foundation, free training and selectable paths wi
 
 test('all registered attack designs are complete, level-valid and safely kept in draft', () => {
   const techniques = getCombatStyle('drachentanz').forms.flatMap(form => form.techniques);
-  assert.equal(techniques.length, 297);
+  assert.equal(techniques.length, 309);
   assert.equal(new Set(techniques.map(technique => technique.id)).size, techniques.length);
   for (const technique of techniques) {
     assert(technique.name && technique.description && technique.effect && technique.requirements, technique.id);
@@ -125,7 +125,7 @@ test('all registered attack designs are complete, level-valid and safely kept in
     }
   }
   const drafts = techniques.filter(technique => technique.status === 'draft');
-  assert.equal(drafts.length, 281);
+  assert.equal(drafts.length, 293);
   const experts = drafts.filter(technique => technique.minimumLevel >= 13 && technique.cenyrTraining.slotBands.includes('expert'));
   assert(experts.some(technique => technique.costs.every(cost => ['action', 'bonus-action', 'reaction'].includes(cost.resourceId))), 'Auch erfahrene Figuren behalten erneuerbare Expertenattacken');
   assert(experts.filter(technique => technique.minimumLevel === 20).every(technique => technique.costs.some(cost => cost.resourceId === 'special-action')), 'Meisterabschlüsse benötigen Tagesressourcen');
@@ -238,8 +238,10 @@ test('each Cenyr template follows its curriculum through actual creation and eve
     assert.equal(profile.classTraining.curriculumId, definition.id);
     for (let level = 1; level <= 20; level += 1) {
       const selected = profile.classTraining.techniqueSelections;
-      assert.equal(profile.techniques.length, selected.length, `${definition.id}: ausgewählte Attacken auf Stufe ${level}`);
-      assert.deepEqual(profile.techniques.map(attack => attack.id), selected.map(selection => selection.techniqueId));
+      const trained = profile.techniques.filter(attack => !attack.id.startsWith('class-special-'));
+      assert(selected.every(selection=>trained.some(attack=>attack.id===selection.techniqueId)), `${definition.id}: historische Auswahl bleibt erlernt`);
+      assert.equal(new Set(trained.map(attack=>attack.id)).size,trained.length);
+      assert(trained.every(attack=>attack.minimumLevel<=level));
       assert(profile.techniques.every(attack => attack.status === 'confirmed' && attack.minimumLevel <= level));
       if (definition.classId === 'barddwyr') assert.equal(profile.magic.enabled, level >= 6, `Barddwyr magic at level ${level}`);
       if (level === 20) break;
@@ -359,11 +361,8 @@ test('Pfad- und Barddwyr-Zweigwahlen verwenden das gemeinsame Attackenbudget', (
   assert.equal(previewCharacterLevelUp(levelEight, requiredPlan).ready, false);
   requiredPlan.classTrainingChoices.path = 'drachentanz-form-iii-abwartender-drache';
   let selectedPreview = previewCharacterLevelUp(levelEight, requiredPlan);
-  assert.equal(selectedPreview.ready, false);
-  assert.equal(selectedPreview.classTechniqueChoiceGroups.length, 1);
-  const [techniqueGroup] = selectedPreview.classTechniqueChoiceGroups;
-  requiredPlan.cenyrTechniqueChoices[techniqueGroup.slotId] = techniqueGroup.options[0].id;
-  selectedPreview = previewCharacterLevelUp(levelEight, requiredPlan);
+  assert.equal(selectedPreview.classTechniqueChoiceGroups.length, 0);
+  assert(selectedPreview.profile.techniques.some(technique=>technique.combatStyleFormId===requiredPlan.classTrainingChoices.path));
   assert.equal(selectedPreview.ready, true);
   assert.equal(selectedPreview.profile.classTraining.selections[0].selectionId, requiredPlan.classTrainingChoices.path);
 });
@@ -423,7 +422,7 @@ test('archive links and character summaries preserve cultural identity without m
     assert(summary.href.includes('stufe=5#ausbildungsplan'));
     assert.equal(new URL(summary.href, 'https://example.test/preview/AleriaAlmanach/AleriaAlmanach.html').pathname, `/preview/${definition.pagePath}`);
     assert.equal(summary.learnedTechniqueCount, 0);
-    assert.equal(summary.pendingTechniqueSlotCount, summary.earnedTechniqueSlots);
+    assert.equal(summary.pendingTechniqueSlotCount, 0);
     assert.deepEqual(profile, before);
   }
 });

@@ -143,7 +143,7 @@ function makeCharacter(record, persistence, actorId) {
 }
 
 function makeCharacterWithCombatState(record, persistence, actorId, state = null) {
-  return withEquippedCombatWeapon(makeCharacter(record, persistence, actorId), state?.equippedWeaponId, state?.offHandWeaponId);
+  return withEquippedCombatWeapon(makeCharacter(record, persistence, actorId), state?.equippedWeaponId, state?.offHandWeaponId, state?.supportEquipment);
 }
 
 function relationshipBetween(first = {}, second = {}) {

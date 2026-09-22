@@ -53,14 +53,14 @@ export async function prepareTestAction({ entryId, actorRecord, targetRecords, c
     const draft = { id: 'pending', commentSegments: [...priorSegments, partial] };
     const states = deriveCombatStateFromComments([...comments, draft], { commentId: 'pending', segmentIndex: priorSegments.length + 1 });
     const actorState = states.get(actorRecord.id);
-    const prepared = prepareCombatEquipment(withEquippedCombatWeapon(actorRecord, actorState?.equippedWeaponId, actorState?.offHandWeaponId), index === 0 ? loadout : null, { free: !getActorsWithCombatPosts(comments).has(String(actorRecord.id)) });
+    const prepared = prepareCombatEquipment(withEquippedCombatWeapon(actorRecord, actorState?.equippedWeaponId, actorState?.offHandWeaponId, actorState?.supportEquipment), index === 0 ? loadout : null, { free: !getActorsWithCombatPosts(comments).has(String(actorRecord.id)) });
     const actorBase = resolveCombatProfile(prepared.character, { actionId, segmentKind, paymentMode, weaponGrip, castLevel });
     if (actionId && actorBase.profileActionId !== actionId) throw Error(`Die Testattacke ${actionId} ist nicht im Bogen von ${actorRecord.name} vorhanden.`);
     let actor = overlayCombatHitPointState(actorBase, { ...(actorState || {}),
       resources: combatCommentInternals.getEffectiveCommentResources(actorBase.resources, actorState?.resources, rulePeriods.day) });
     actor = reserveCombatEquipment(actor, prepared.preparation);
     const targetState = states.get(targetRecord.id);
-    const target = overlayCombatHitPointState(resolveCombatProfile(withEquippedCombatWeapon(targetRecord, targetState?.equippedWeaponId, targetState?.offHandWeaponId)), targetState);
+    const target = overlayCombatHitPointState(resolveCombatProfile(withEquippedCombatWeapon(targetRecord, targetState?.equippedWeaponId, targetState?.offHandWeaponId, targetState?.supportEquipment)), targetState);
     const resolution = await new CombatResolutionService(dice).resolveAttack({ actor, target, description: text, rollMode: 'normal' }, {
       relationship: actorRecord.id === targetRecord.id ? 'self' : actorRecord.combatTeam && actorRecord.combatTeam === targetRecord.combatTeam ? 'ally' : 'enemy',
       distanceMeters, rulePeriods, usedRuleFrequencyKeys, startedAction: resolutions[0],

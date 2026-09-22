@@ -1,6 +1,7 @@
 import { prepareCombatEquipment, reserveCombatEquipment } from './combat-equipment-preparation.js?v=20260909-dragon-parent-v2';
 import { estimateCombatHitChance } from './combat-action-estimates.js?v=20260909-dragon-parent-v2';
 import { getActorsWithCombatPosts, normalizeCombatLoadout, isPairedCombatWeapon, canUseCombatOffHand } from './combat-weapon-loadout.js';
+import { canCarryCombatShield } from './combat-support-equipment.js';
 import { CombatDiceAdapter } from './combat-dice-adapter.js?v=20260905-party-combat-v1';
 import { mountCommentConditionTracker, releaseCommentConditionTracker } from '../comments/comments-condition-tracker.js?v=20260909-dragon-parent-v2';
 import { prioritizeCombatTargets } from './ui/combat-target-picker.js?v=20260909-dragon-parent-v2';
@@ -59,6 +60,7 @@ import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-enco
 import { getCombatSegmentMode, isCombatSegment, getEffectiveCombatSegmentKind } from './combat-segment-model.js';
 import { createCombatProfileCache } from './combat-profile-cache.js';
 import { getCombatPreviewActorIds, createCombatTargetSummary } from './combat-composer-roster.js';
+import { actionAllowsSelfTarget, getCombatTargetSelection, isSelfTargetAction } from './combat-action-targeting.js';
 
 const profileResolver = new CombatProfileResolver();
 const resolutionService = new CombatResolutionService(new CombatDiceAdapter());
@@ -262,7 +264,7 @@ function resolveActorProfile(character, options = {}) {
   // Ein späterer "Ausrüstung wechseln"-Kommentar bestimmt, welche Waffe/welches Instrument
   // ab jetzt als aktiv gilt - muss vor der Profilauflösung angewendet werden, weil aktiveWeapon
   // und Technik-Kompatibilität bereits innerhalb von profileResolver.resolve entschieden werden.
-  const equippedCharacter = withEquippedCombatWeapon(character, state?.equippedWeaponId, state?.offHandWeaponId);
+  const equippedCharacter = withEquippedCombatWeapon(character, state?.equippedWeaponId, state?.offHandWeaponId, state?.supportEquipment);
   const prepared = prepareCombatEquipment(equippedCharacter, options.loadout, { free: options.freeEquipment });
   const effectiveCharacter = prepared.character;
   const profile = resolveCachedCombatProfile(effectiveCharacter, {
@@ -289,14 +291,16 @@ function resolveActorProfile(character, options = {}) {
 function resolveTargetPickerProfile(character, options = {}) {
   const actorId = String(options.actorId || character?.id || '');
   const state = options.workingStates?.get(actorId) || options.storedStates?.get(actorId) || null;
-  const equippedCharacter = withEquippedCombatWeapon(character, state?.equippedWeaponId, state?.offHandWeaponId);
+  const equippedCharacter = withEquippedCombatWeapon(character, state?.equippedWeaponId, state?.offHandWeaponId, state?.supportEquipment);
   return overlayCombatHitPointState(resolveCachedCombatTarget(equippedCharacter), state);
 }
 
-function actionAllowsSelfTarget(actor) {
-  if (actor?.selectedAction?.kind === 'equipment-switch') return true;
-  const effects = Array.isArray(actor?.selectedAction?.effects) ? actor.selectedAction.effects : [];
-  return effects.length > 0 && !effects.some(effect => ['damage', 'debuff'].includes(String(effect?.type || '')));
+function synchronizeSegmentTargets(segment, actor) {
+  if (!actor) return;
+  segment.combatTargetIds = getCombatTargetSelection(actor.selectedAction, actor.characterId,
+    segment.combatTargetIds?.length ? segment.combatTargetIds : [segment.combatTargetId]);
+  segment.combatTargetId = segment.combatTargetIds[0] || '';
+  if (isSelfTargetAction(actor.selectedAction)) segment.combatDistanceMeters = 0;
 }
 
 function activateResolutionDialog() {
@@ -402,7 +406,8 @@ function mountComposers(context = {}) {
     if (actor?.equipmentPreparation && !actor.equipmentPreparation.error) {
       const previous = composerStates.get(actorId) || storedStates.get(actorId) || {};
       composerStates.set(actorId, { ...previous, resources: actor.resources,
-        equippedWeaponId: actor.equipmentPreparation.after.rightWeaponId, offHandWeaponId: actor.equipmentPreparation.after.leftWeaponId });
+        equippedWeaponId: actor.equipmentPreparation.after.rightWeaponId, offHandWeaponId: actor.equipmentPreparation.after.leftWeaponId,
+        supportEquipment: { shieldId: actor.equipmentPreparation.after.shieldId, mountId: actor.equipmentPreparation.after.mountId } });
     }
     const actorValidation = actor ? profileResolver.validateActor(actor) : { ready: false, missingFields: [] };
     const abilityReservation = actor
@@ -440,10 +445,7 @@ function mountComposers(context = {}) {
         ...(equippedWeaponId ? { equippedWeaponId } : {})
       });
     }
-    if (actor?.selectedAction?.kind === 'equipment-switch') {
-      segment.combatTargetId = actorId;
-      segment.combatTargetIds = [actorId];
-    }
+    synchronizeSegmentTargets(segment, actor);
     const previewProfiles = new Map(targetProfiles);
     for (const character of targetCharacters) {
       if (composerStates.has(String(character.id))) previewProfiles.set(String(character.id), resolveTargetPickerProfile(character, {
@@ -452,7 +454,9 @@ function mountComposers(context = {}) {
     }
     if (actor) previewProfiles.set(actorId, actor);
     const targets = prioritizeCombatTargets(targetCharacters
-      .filter(character => actionAllowsSelfTarget(actor) || String(character.id || '') !== actorId)
+      .filter(character => isSelfTargetAction(actor?.selectedAction)
+        ? String(character.id || '') === actorId
+        : actionAllowsSelfTarget(actor?.selectedAction) || String(character.id || '') !== actorId)
       .map(character => {
         const target = previewProfiles.get(String(character.id || ''));
         if (target?.previewPending) return target;
@@ -514,6 +518,9 @@ function updateEquipmentSelection(segmentId, field, value, composer) {
   const view = composer.querySelector('[data-current-right]');
   let rightWeaponId = view?.dataset.currentRight || '';
   let leftWeaponId = view?.dataset.currentLeft || '';
+  const supportView = composer.querySelector('[data-current-shield]');
+  let shieldId = supportView?.dataset.currentShield || '';
+  let mountId = supportView?.dataset.currentMount || '';
   if (field === 'right') {
     rightWeaponId = value;
     const right = weapons.find(weapon => weapon.id === rightWeaponId);
@@ -526,7 +533,10 @@ function updateEquipmentSelection(segmentId, field, value, composer) {
     leftWeaponId = value ? (isPairedCombatWeapon(right || {}) ? rightWeaponId
       : weapons.find(weapon => weapon.id !== rightWeaponId && canUseCombatOffHand(weapon))?.id || '') : '';
   }
-  segment.combatLoadout = field === 'cancel' ? null : { rightWeaponId, leftWeaponId };
+  if (field === 'shield') { shieldId = shieldId === value ? '' : String(value); leftWeaponId = ''; }
+  if (field === 'mount') mountId = mountId === value ? '' : String(value);
+  if (leftWeaponId || !canCarryCombatShield(weapons.find(weapon => weapon.id === rightWeaponId))) shieldId = '';
+  segment.combatLoadout = field === 'cancel' ? null : { rightWeaponId, leftWeaponId, shieldId, mountId };
   segment.combatActionId = '';
   segment.combatWeaponGrip = 'one-handed';
   segment.combatPaymentConfirmed = false;
@@ -546,16 +556,8 @@ function updateSegmentSetting(segmentId, field, value) {
     segment.combatTargetId = segment.combatTargetIds[0] || '';
   }
   if (field === 'actionId') {
-    const previousActionId = String(segment.combatActionId || '');
     segment.combatActionId = String(value || '');
-    const actorId = String(segment.actorId || latestComposerContext?.selectedCharacterId || '');
-    if (segment.combatActionId.startsWith('equip:')) {
-      segment.combatTargetId = actorId;
-      segment.combatTargetIds = actorId ? [actorId] : [];
-    } else {
-      if (previousActionId.startsWith('equip:') && String(segment.combatTargetId || '') === actorId) segment.combatTargetId = '';
-      segment.combatTargetIds = segment.combatTargetId ? [segment.combatTargetId] : [];
-    }
+    segment.combatTargetIds = segment.combatTargetId ? [segment.combatTargetId] : [];
     segment.combatWeaponGrip = 'one-handed';
     segment.combatCastLevel = 0;
     segment.combatPaymentConfirmed = false;
@@ -571,8 +573,8 @@ function updateSegmentSetting(segmentId, field, value) {
     segment.combatPaymentMode = ['aura', 'mana-substitute', 'cheat'].includes(value) ? value : 'standard';
     segment.combatPaymentConfirmed = false;
   }
-  globalThis.persistCommentDraft?.();
   if (['actionId', 'paymentMode', 'weaponGrip', 'castLevel', 'targetId', 'targetIds', 'distanceMeters'].includes(field)) mountComposers(latestComposerContext || {});
+  globalThis.persistCommentDraft?.();
 }
 
 function setSegmentPaymentConfirmation(segmentId, confirmed) {
@@ -818,6 +820,13 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
 }
 
 async function resolveCombatSegment(segment, characters, index, total, fallbackActorId = '', stateContext = {}) {
+  const actorId = String(segment.sceneActorId || segment.actorId || segment.characterId || fallbackActorId || '');
+  const character = characters.find(entry => String(entry.id || '') === actorId);
+  if (character) synchronizeSegmentTargets(segment, resolveActorProfile(character, {
+    actionId: segment.combatActionId, actorId, segmentKind: getEffectiveCombatSegmentKind(segment),
+    castLevel: segment.combatCastLevel, weaponGrip: segment.combatWeaponGrip,
+    storedStates: stateContext.storedStates, workingStates: stateContext.workingStates, includeAiSnapshot: false
+  }));
   const targetIds = [...new Set((Array.isArray(segment.combatTargetIds) && segment.combatTargetIds.length
     ? segment.combatTargetIds
     : [segment.combatTargetId]).map(String).filter(Boolean))].slice(0, 20);
@@ -964,6 +973,8 @@ document.addEventListener('click', event => {
   const segmentId = composer?.dataset.combatSegmentId || '';
   if (trigger.dataset.combatControllerAction === 'choose-payment') chooseSegmentPayment(segmentId, trigger.dataset.paymentMode);
   if (trigger.dataset.combatControllerAction === 'select-weapon') updateEquipmentSelection(segmentId, 'right', trigger.dataset.weaponId, composer);
+  if (trigger.dataset.combatControllerAction === 'select-shield') updateEquipmentSelection(segmentId, 'shield', trigger.dataset.equipmentId, composer);
+  if (trigger.dataset.combatControllerAction === 'select-mount') updateEquipmentSelection(segmentId, 'mount', trigger.dataset.equipmentId, composer);
   if (trigger.dataset.combatControllerAction === 'cancel-equipment') updateEquipmentSelection(segmentId, 'cancel', '', composer);
   if (trigger.dataset.combatControllerAction === 'confirm-payment') setSegmentPaymentConfirmation(segmentId, true);
   if (trigger.dataset.combatControllerAction === 'release-payment') setSegmentPaymentConfirmation(segmentId, false);

@@ -18,8 +18,8 @@ const load = async slug => JSON.parse(await readFile(new URL(`../../Charakter%20
 const average = formula => formula ? averageDamageFormula(formula) : 0;
 
 test('all three catalogues remain affordable at unlock and older training never loses damage', () => {
-  assert.equal(catalog.length, 788);
-  assert.equal(new Set(catalog.map(technique => technique.id)).size, 788);
+  assert.equal(catalog.length, 800);
+  assert.equal(new Set(catalog.map(technique => technique.id)).size, 800);
   for (const technique of catalog) {
     const economy = { ...getCombatActionEconomy(technique.minimumLevel), 'aura-focus': getAuraFocusMaximum(technique.minimumLevel) };
     for (const cost of technique.costs) assert(cost.amount <= economy[cost.resourceId], technique.id);
@@ -55,14 +55,14 @@ test('existing attacks receive a modest increase and support remains damage-free
 
 test('Teulu level four has special attacks; ten level-six choices survive migration and downlevelling', async () => {
   const character = await load('gildas-gafyr');
-  for (const [level, count] of [[4, 7], [6, 10], [20, 24], [3, 5], [6, 10]]) {
+  for (const [level, count, historicalSlots = count] of [[4, 7], [6, 10], [20, 26, 24], [3, 5], [6, 10]]) {
     character.combatProfile = applyManualCharacterLevel(character.combatProfile, level).profile;
     const profile = resolveCombatProfile(character);
-    assert.equal(profile.techniques.length, count);
+    assert.equal(profile.techniques.filter(entry => !entry.id.startsWith('class-special-')).length, count);
     assert(profile.techniques.every(technique => technique.minimumLevel <= level));
     if (level === 4) assert(profile.techniques.some(technique => technique.costs.some(cost => cost.resourceId === 'special-action')));
-    assert.equal(profile.classTraining.techniqueSelections.length, count);
-    assert.equal(new Set(profile.techniques.map(technique => technique.id)).size, count);
+    assert.equal(profile.classTraining.techniqueSelections.length, historicalSlots);
+    assert.equal(new Set(profile.techniques.map(technique => technique.id)).size, profile.techniques.length);
   }
 });
 

@@ -29,7 +29,9 @@ export function getCombatWeaponLoadout(profile = {}) {
 
 export function normalizeCombatLoadout(value) {
   if (!value || typeof value !== 'object') return null;
-  return { rightWeaponId: String(value.rightWeaponId || '').trim().slice(0, 180), leftWeaponId: String(value.leftWeaponId || '').trim().slice(0, 180) };
+  return { rightWeaponId: String(value.rightWeaponId || '').trim().slice(0, 180), leftWeaponId: String(value.leftWeaponId || '').trim().slice(0, 180),
+    ...(value.shieldId != null ? { shieldId: String(value.shieldId).trim().slice(0, 180) } : {}),
+    ...(value.mountId != null ? { mountId: String(value.mountId).trim().slice(0, 180) } : {}) };
 }
 
 export function validateCombatLoadout(profile, value) {

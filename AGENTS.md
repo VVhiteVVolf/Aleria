@@ -20,6 +20,12 @@ Am 12. September 2026 wurden die Manakosten aller Zaubergrade um 15 % erhöht, a
 
 Die aktuelle Zuordnung aller 23 Rhiannon-Zauber steht in [SPELL_ACTION_ECONOMY.md](AleriaAlmanach/docs/combat/SPELL_ACTION_ECONOMY.md). Rhiannons Schadenszauber verwenden ihren aktuellen INT-Modifikator; dieser muss in Schadenswurf, Durchschnitt und sichtbarer Formel berücksichtigt werden.
 
+# Automatisch erlernte Kampfform-Techniken
+
+Alle Techniken einer zugänglichen Kampfform werden beim Erreichen ihrer Mindeststufe automatisch ins Arsenal übernommen, auch bei bestehenden Bögen. Historische Attackenslots dürfen die Anzahl erlernter Techniken nicht begrenzen; Pfadwahl, Klassenzugang sowie Waffen-, Schild- und Reitvoraussetzungen bleiben verbindlich. Gemeinsame Vergabe: `modules/classes/class-form-arsenal.js` mit Cenyr-Ausbildungsabgleich; Browser und generierte Servermechanik müssen übereinstimmen.
+
+Jede ausgearbeitete Klasse erhält spätestens auf Stufe 5 eine schwächere und eine stärkere besondere Option, jeweils mit 1 Besonderen Aktion plus mindestens einer weiteren Ressource. Weitere Optionen folgen auf 8, 12, 16 und 20; zentrale Quelle: `class-special-maneuvers.js`. Gais bleibt Uchelwyr. Selbstfähigkeiten wählen automatisch die eigene Figur. Schild- und Reittierwechsel verwenden die gemeinsame Ausrüstungs- und Kostenlogik und dürfen keine alten Kampfauswertungen verändern.
+
 # Play-Chronologie
 
 Der **9. Lichtkehr 1740 (09.03.1740)** ist unveränderlich **Tag 1 des Plays**. Der 10. Lichtkehr ist Tag 2, der 11. Tag 3; frühere Daten werden als **Vergangenheit** bezeichnet. Die Zählung gilt szenenübergreifend und verwendet den Aleria-Kalender mit 36 Tagen pro Monat und 13 Monaten pro Jahr. `AleriaCalendar.playStartDate`, `playDay` und `playDayLabel` sind die gemeinsame Quelle. Aktuelles Weltdatum und Szenenbeginn dürfen den Playbeginn nicht verschieben. Gespeicherte relative Szenenuhren und mechanische Erholungsschlüssel dürfen nicht zur Korrektur einer Play-Tagesanzeige umnummeriert werden.

@@ -1,7 +1,6 @@
 import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
 import { getCenyrClassProgression } from './cenyr-class-progression.js?v=20260909-dragon-parent-v2';
 import { getCenyrTrainingState } from './cenyr-class-training.js?v=20260909-dragon-parent-v2';
-import { getCenyrTechniqueChoiceGroups } from './cenyr-technique-selection.js?v=20260909-dragon-parent-v2';
 
 export function getCenyrCharacterClassSummary(profile = {}) {
   // An explicit template wins; never reinterpret a different selected class from
@@ -11,7 +10,8 @@ export function getCenyrCharacterClassSummary(profile = {}) {
   const plan = getCenyrClassProgression(definition.id, profile.progression?.level, { classTraining: profile.classTraining });
   const state = getCenyrTrainingState(profile, definition);
   const spentSlots = new Set(state.selections.map(selection => selection.spentTechniqueSlotId).filter(Boolean));
-  const learnedTechniqueIds = new Set(state.techniqueSelections.map(selection => selection.techniqueId));
+  const catalogIds = new Set(plan.attackCatalog.map(technique => technique.id));
+  const learnedTechniqueIds = new Set((profile.techniques || []).filter(technique => catalogIds.has(technique.id) && technique.active).map(technique => technique.id));
   const filledTechniqueSlots = state.techniqueSelections.filter(selection => (
     plan.earnedTechniqueSlots.some(slot => slot.id === selection.slotId) && !spentSlots.has(selection.slotId)
   ));
@@ -19,7 +19,7 @@ export function getCenyrCharacterClassSummary(profile = {}) {
     .filter(form => form.available)
     .filter(form => form.kind !== 'path' || plan.selectedPathIds.includes(form.id))
     .map(form => form.shortName);
-  const pending = getCenyrTechniqueChoiceGroups(profile, plan.selectedLevel, { allEarned: true });
+  const pending = [];
   // The sheet lives in AleriaAlmanach.html; bundle locations are not page roots.
   const href = `../${definition.pagePath}?stufe=${plan.selectedLevel}#ausbildungsplan`;
   return { id: definition.id, name: definition.name, culture: definition.culture,

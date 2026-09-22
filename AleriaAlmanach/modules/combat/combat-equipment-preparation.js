@@ -1,6 +1,7 @@
 import { applyCombatResourceCosts } from './combat-state-model.js?v=20260909-dragon-parent-v2';
 import { getCombatWeaponLoadout, normalizeCombatLoadout, validateCombatLoadout, usesCharacterWeaponLoadout } from './combat-weapon-loadout.js';
 import { withEquippedCombatWeapon } from './combat-equipment-state.js';
+import { getCombatMounts, getCombatSupportEquipment, canCarryCombatShield, withCombatSupportEquipment } from './combat-support-equipment.js';
 
 export function prepareCombatEquipment(character, requested, { free = false } = {}) {
   // A creature's named attacks are validated against its authoritative sheet.
@@ -10,14 +11,23 @@ export function prepareCombatEquipment(character, requested, { free = false } = 
   if (!loadout) return { character, preparation: null };
   const profile = character.combatProfile || {};
   const before = getCombatWeaponLoadout(profile);
-  const error = validateCombatLoadout(profile, loadout);
+  const support = getCombatSupportEquipment(profile);
+  const right = (profile.weapons || []).find(weapon => weapon.id === loadout.rightWeaponId);
+  const shieldId = loadout.shieldId ?? (loadout.leftWeaponId || !canCarryCombatShield(right) ? '' : support.shieldId);
+  const mountId = loadout.mountId ?? support.mountId;
+  const shieldError = shieldId && (!(profile.armorItems || []).some(item => item.kind === 'shield' && item.id === shieldId)
+    || loadout.leftWeaponId || !canCarryCombatShield(right)) ? 'Der Schild ist nicht verfügbar oder die linke Hand ist bereits belegt.' : '';
+  const mountError = mountId && !getCombatMounts(character).some(mount => mount.id === mountId)
+    ? 'Dieses Reittier gehört nicht zur verfügbaren Ausrüstung der Figur.' : '';
+  const error = validateCombatLoadout(profile, loadout) || shieldError || mountError;
   if (error) return { character, preparation: { error, costs: [] } };
-  const changed = before.rightWeaponId !== loadout.rightWeaponId || before.leftWeaponId !== loadout.leftWeaponId;
+  const supportChanged = support.shieldId !== shieldId || support.mountId !== mountId;
+  const changed = before.rightWeaponId !== loadout.rightWeaponId || before.leftWeaponId !== loadout.leftWeaponId || supportChanged;
   if (!changed) return { character, preparation: null };
   return {
-    character: withEquippedCombatWeapon(character, loadout.rightWeaponId, loadout.leftWeaponId),
+    character: withCombatSupportEquipment(withEquippedCombatWeapon(character, loadout.rightWeaponId, loadout.leftWeaponId), { shieldId, mountId }),
     preparation: {
-      before: { rightWeaponId: before.rightWeaponId, leftWeaponId: before.leftWeaponId }, after: loadout,
+      before: { rightWeaponId: before.rightWeaponId, leftWeaponId: before.leftWeaponId, ...support }, after: { ...loadout, shieldId, mountId },
       free, error: '', costs: free ? [] : [{ id: 'equipment-preparation', resourceId: 'bonus-action', name: 'Bonusaktion', amount: 1, scope: 'comment' }]
     }
   };
@@ -39,7 +49,9 @@ export function attachCombatEquipmentPreparation(resolution, actor) {
     actorResourceSnapshot: { after: actor.resources, ...resolution.actorResourceSnapshot, before: preparation.resourcesBefore },
     actorEquippedWeaponSnapshot: {
       before: preparation.before.rightWeaponId, after: preparation.after.rightWeaponId,
-      offHandBefore: preparation.before.leftWeaponId, offHandAfter: preparation.after.leftWeaponId
+      offHandBefore: preparation.before.leftWeaponId, offHandAfter: preparation.after.leftWeaponId,
+      supportBefore: { shieldId: preparation.before.shieldId, mountId: preparation.before.mountId },
+      supportAfter: { shieldId: preparation.after.shieldId, mountId: preparation.after.mountId }
     }
   };
 }

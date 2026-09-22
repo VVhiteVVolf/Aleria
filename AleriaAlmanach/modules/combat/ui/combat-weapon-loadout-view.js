@@ -1,4 +1,6 @@
 import { canUseCombatOffHand, isPairedCombatWeapon, getCombatWeaponLoadout } from '../combat-weapon-loadout.js';
+import { getCombatSupportEquipment } from '../combat-support-equipment.js';
+import { renderCombatSupportEquipment } from './combat-support-equipment-view.js';
 
 const glyphs = Object.freeze({ unarmed: '✦', sword: '⚔', dagger: '†', axe: '⚒', mace: '◆', spear: '↟', polearm: 'Ψ', bow: '➳', crossbow: '⌖', staff: '⌇', shield: '⬙' });
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[char]);
@@ -21,16 +23,19 @@ export function renderWeaponLoadout(actor = {}, { freeEquipment = false, request
     && (weapon.id !== loadout.rightWeaponId || isPairedCombatWeapon(weapon)));
   const canPair = canUseCombatOffHand(loadout.right || {}) && leftOptions.length > 0;
   const preparation = actor.equipmentPreparation;
+  const support = getCombatSupportEquipment(actor);
+  const shield = !loadout.dualWield && (actor.armorItems || []).find(item => item.id === support.shieldId);
   return `<section class="combat-weapon-loadout" aria-label="Waffenführung" data-current-right="${escape(loadout.rightWeaponId)}" data-current-left="${escape(loadout.leftWeaponId)}">
     <div class="combat-weapon-active"><span class="combat-field-caption">Geführte Waffen</span>
       <label class="combat-dual-toggle"><input type="checkbox" data-combat-loadout="dual"${loadout.dualWield ? ' checked' : ''}${canPair ? '' : ' disabled'}> Zwei Waffen · rechts und links</label>
-      <div class="combat-active-hands">${loadout.right ? weaponSlot(loadout.right, { hand: 'Rechts', active: true }) : ''}${loadout.left ? weaponSlot(loadout.left, { hand: 'Links', active: true }) : ''}</div>
+      <div class="combat-active-hands">${loadout.right ? weaponSlot(loadout.right, { hand: 'Rechts', active: true }) : ''}${loadout.left ? weaponSlot(loadout.left, { hand: 'Links', active: true }) : shield ? weaponSlot({ ...shield, weaponType: 'shield' }, { hand: 'Links · Schild', active: true }) : ''}</div>
       ${loadout.dualWield ? `<label class="combat-offhand-choice">Linke Hand<select data-combat-loadout="left">${leftOptions.map(weapon => `<option value="${escape(weapon.id)}"${weapon.id === loadout.leftWeaponId ? ' selected' : ''}>${escape(weapon.name)}</option>`).join('')}</select></label><small class="combat-loadout-hint">Jeder Angriff behält seine eigenen Kosten. Kein zusätzlicher Angriff durch das Waffenpaar; die zweite Hand ersetzt einen geführten Schild.</small>` : ''}
     </div>
     <div class="combat-weapon-alternatives"><span class="combat-field-caption">Waffenwechsel <small>· ${freeEquipment ? 'Startausrüstung kostenlos' : '1 Bonusaktion'}</small></span>
       <div class="combat-weapon-slots">${weapons.filter(weapon => weapon.id !== loadout.rightWeaponId).map(weapon => weaponSlot(weapon, { free: freeEquipment })).join('')}</div>
       ${requestedLoadout ? `<div class="combat-equipment-preparation" role="status"><span>${escape(preparation?.error || (preparation?.free ? 'Startausrüstung gewählt · kostenlos' : preparation ? 'Waffe gewechselt · 1 Bonusaktion im Entwurf verbraucht' : 'Ausrüstung entspricht der vorherigen Auswahl'))}</span><button type="button" data-combat-controller-action="cancel-equipment">Wechsel aufheben</button></div>` : ''}
     </div>
+    ${renderCombatSupportEquipment(actor, loadout)}
   </section>`;
 }
 

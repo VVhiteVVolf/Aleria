@@ -150,7 +150,7 @@ test('server mechanics materialize Cenyr class attacks for an unmigrated Teulu p
     }]
   });
   const profile = resolveCombatProfile(source, { segmentKind: 'combataction' });
-  const names = profile.actions.filter(action => action.kind === 'technique').map(action => action.name);
+  const names = profile.actions.filter(action => action.kind === 'technique' && !action.sourceId.startsWith('class-special-')).map(action => action.name);
   assert.deepEqual(names, [
     'Erster Hieb des Jungdrachens',
     'Biss des Jungdrachens',

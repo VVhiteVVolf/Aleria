@@ -289,6 +289,7 @@ export function getCombatRollContext(actor, target = {}, options = {}) {
     profileRollModes, profileRollMode, auraRollMode, safeRollMode, ruleCache };
 }
 
+
 export class CombatResolutionService {
   constructor(diceAdapter) {
     this.dice = diceAdapter;
@@ -341,7 +342,7 @@ export class CombatResolutionService {
     }
 
     const weapon = actor.weapon;
-    const ammunition = options.skipAmmunition
+    const ammunition = options.skipAmmunition || actor.actionResolutionMode === 'automatic'
       ? { changed: false, before: actor.inventory || { items: [] }, after: actor.inventory || { items: [] }, use: null }
       : consumeCombatAmmunition(actor.inventory || { items: [] }, weapon?.ammunition || null);
     const effectiveResourceCosts = options.skipResourceCosts ? [] : (actor.resourceCosts || []);

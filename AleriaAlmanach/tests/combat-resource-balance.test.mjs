@@ -70,8 +70,8 @@ test('Gildas erhält keine veraltete zweite Reaktion oder Aura aus Profil und Sz
   assert.equal(applyCombatResourceCosts(first.after, getActionPaymentCosts(claws, 'standard', overlaid)).sufficient, false);
 });
 
-test('alle 297 Drachentanz-Attacken sind bei Freischaltung regulär bezahlbar, die Mehrheit ohne Tagesressourcen', () => {
-  assert.equal(attacks.length, 297);
+test('alle 309 Drachentanz-Attacken sind bei Freischaltung regulär bezahlbar, die Mehrheit ohne Tagesressourcen', () => {
+  assert.equal(attacks.length, 309);
   let renewable = 0;
   for (const attack of attacks) {
     const profile = sanitizeCharacterCombatProfile({ progression: { level: attack.minimumLevel } });

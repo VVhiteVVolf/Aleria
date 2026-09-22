@@ -14,6 +14,7 @@ import { renderAutomaticRollMode } from './combat-roll-mode-view.js?v=20260906-e
 import { bindActionPicker, renderActionPicker } from './combat-action-picker.js?v=20260909-dragon-parent-v2';
 import { bindTargetPortraitFallback, optionLabel, renderSelectedTargetPortraits, renderTargetOptions } from './combat-target-picker.js?v=20260909-dragon-parent-v2';
 import { renderCombatWeaponGrip } from './combat-weapon-grip-view.js';
+import { isSelfTargetAction } from '../combat-action-targeting.js';
 function escapeHtml(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -99,8 +100,8 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
     actorReady,
     payment
   });
-  const targetField = equipmentSwitch
-    ? `<div class="combat-composer-field-static"><span>Wirkung</span><strong>Eigene Ausrüstung</strong><small>Der Wechsel gilt für alle folgenden Kampfhandlungen.</small></div>`
+  const targetField = isSelfTargetAction(actor.selectedAction)
+    ? `<div class="combat-composer-field-static" data-combat-self-target="${escapeHtml(actor.characterId)}"><span>Ziel</span><strong>${escapeHtml(actor.name)} · Eigene Figur</strong><small>${equipmentSwitch ? 'Der Wechsel gilt für alle folgenden Kampfhandlungen.' : 'Wird automatisch auf dich angewandt.'}</small></div>`
     : `<label class="combat-target-field">${supportsMultipleTargets ? 'Ziele' : 'Ziel'}
         <input type="search" data-combat-target-search placeholder="Ziel suchen …" autocomplete="off" aria-label="Ziele durchsuchen">
         <select data-combat-input="${supportsMultipleTargets ? 'targetIds' : 'targetId'}" aria-label="${supportsMultipleTargets ? 'Ziele wählen' : 'Ziel wählen'}"${supportsMultipleTargets ? ' multiple size="4"' : ''}>

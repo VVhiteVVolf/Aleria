@@ -1,6 +1,7 @@
 import { renderContents, renderIllustration, renderFacts, renderSection, renderPending } from './class-page-sections.js';
 import { escapeClassHtml as escape } from './class-page-content.js';
 import { getArmorRoutine } from '../../../AleriaAlmanach/modules/classes/armor-routine.js';
+import { getClassSpecialSection } from '../sheets/class-special-section.js';
 
 const ASSET_VERSION = '20260905-universal-v1';
 const FALLBACK_ICON = '../../../IconOrdner/ReiterIcons/Klassen.png';
@@ -13,6 +14,8 @@ export function renderUniversalClassPage(document, documents) {
   const previous = documents[(index + documents.length - 1) % documents.length];
   const next = documents[(index + 1) % documents.length];
   const written = document.sections.filter(section => section.status === 'written');
+  const specialSection = getClassSpecialSection(document.id);
+  if (specialSection) written.push(specialSection);
   const armorRoutine = getArmorRoutine({ templateSelections: { classId: document.id } });
   if (armorRoutine) written.push({ id: 'ruestungsroutine', title: `${armorRoutine.name} · Stufe 12`,
     html: `<p>${escape(armorRoutine.description)}</p>` });

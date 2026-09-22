@@ -27,16 +27,12 @@ function formKind(form) {
   return 'Pfad';
 }
 
-function slotBandLabel(band) {
-  return ({ foundation: 'Grundform', advanced: 'Aufbauform', militia: 'Küstenwache', duelist: 'Freie Vertiefung', expert: 'Expertenpfad', drachling: 'Drachling', earlyRoaring: 'Brüllender Drache' })[band] || band;
-}
-
 function renderTrainingProfile(plan) {
   const weapons = [...plan.weaponTraining.primary, ...plan.weaponTraining.secondary].join(' · ');
   return `<div class="cenyr-training-profile">
-    <article><span>Attackenbudget</span><strong>${plan.techniqueBudget.total} Slots bis Stufe 20</strong><small>${escape(plan.techniquePool.description)}</small></article>
+    <article><span>Techniken erlernen</span><strong>Alle freigeschalteten Formtechniken</strong><small>Beim Erreichen der erforderlichen Stufe werden sämtliche Techniken zugänglicher Formen automatisch ins Arsenal übernommen. Waffen- und Reitvoraussetzungen gelten weiterhin beim Einsatz.</small></article>
     <article><span>Waffenführung</span><strong>${escape(weapons)}</strong><small>${escape(plan.weaponTraining.note)}</small></article>
-    <article><span>Pfadregel</span><strong>${escape(plan.pathSelection.rule)}</strong><small>${plan.pathSelection.multiplePathsAllowed ? 'Mehrere Pfade erlaubt · gemeinsames Attackenbudget' : 'Ein festgelegter Pfad'}</small></article>
+    <article><span>Pfadregel</span><strong>${escape(plan.pathSelection.rule)}</strong><small>${plan.pathSelection.multiplePathsAllowed ? 'Die Pfadwahl öffnet Formen; innerhalb der gewählten Form werden alle Techniken ihrer Stufe erlernt.' : 'Alle Techniken des festen Ausbildungswegs nach Stufe.'}</small></article>
   </div>`;
 }
 
@@ -58,7 +54,6 @@ function renderLevelTraining(row, plan) {
     ...row.pathOptions.map(form => form.accessStatus === 'eligibility-pending'
       ? `${escape(form.shortName)}: Klassenzugang noch offen`
       : `${escape(form.shortName)} wird wählbar`),
-    ...row.techniqueSlots.map(slot => `Attackenslot · ${escape(slot.band === 'militia' && plan.cultureId === 'aldrimar' ? 'Hirdwacht' : slotBandLabel(slot.band))}`),
     row.level === plan.pathSelection?.minimumLevel && plan.pathSelection?.firstSelectionRequired ? 'Ersten Expertenpfad ohne Slotkosten wählen' : '',
     ...row.attacks.map(attack => escape(attack.name)),
     row.level === 6 && !plan.skaldReference ? 'Aura-Ausbildung beginnt' : ''

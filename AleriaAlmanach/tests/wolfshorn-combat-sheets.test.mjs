@@ -32,7 +32,8 @@ for (const [character, classId, hp, ac, count] of [[ylva,'skytte',75,12,5],[asge
     assert.equal(getMaximumHitPoints(profile), hp);
     assert.equal(profile.hitPoints.current, hp);
     assert.equal(getArmorClass(profile), ac, 'GES erst mit bestehender Rüstungsroutine ab Stufe 12');
-    assert.equal(profile.techniques.length, count);
+    assert.equal(profile.techniques.filter(entry => !entry.id.startsWith('class-special-')).length, count);
+    assert.equal(profile.techniques.filter(entry => entry.id.startsWith('class-special-')).length, 1);
     const slots = getAldrimarClassDefinition(classId).techniqueBudget.slots.filter(slot => slot.level <= 7);
     assert.deepEqual(profile.classTraining.techniqueSelections.map(selection => selection.slotId), slots.map(slot => slot.id));
     assert.ok(profile.techniques.every(technique => technique.active && technique.status === 'confirmed' && technique.minimumLevel <= 7));

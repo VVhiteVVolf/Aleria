@@ -20,9 +20,7 @@ import {
   selectCenyrTrainingOption
 } from '../classes/cenyr/cenyr-class-training.js?v=20260909-dragon-parent-v2';
 import {
-  getCenyrTechniqueChoiceGroups,
-  reconcileCenyrTrainingForLevel,
-  selectCenyrTechniqueForSlot
+  reconcileCenyrTrainingForLevel
 } from '../classes/cenyr/cenyr-technique-selection.js?v=20260909-dragon-parent-v2';
 
 import { getActionPoolChoiceGroups, fillActionPoolChoices, normalizeActionPoolChoices, ACTION_POOL_LABELS } from './combat-action-progression.js?v=20260905-resource-balance-v2';
@@ -351,40 +349,12 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
     });
   });
 
-  const classTechniqueChoiceGroups = cenyrDefinition
-    ? getCenyrTechniqueChoiceGroups(selectedTrainingProfile, nextProgression.level).map(group => ({
-      ...group,
-      options: group.options.filter(option => !Object.entries(plan.cenyrTechniqueChoices)
-        .some(([slotId, techniqueId]) => slotId !== group.slotId && techniqueId === option.id))
-    }))
-    : [];
-  classTechniqueChoiceGroups.forEach(group => {
-    const techniqueId = plan.cenyrTechniqueChoices[group.slotId];
-    if (!techniqueId) {
-      classTrainingErrors.push(`Wähle eine Attacke für ${group.label}.`);
-      return;
-    }
-    const result = selectCenyrTechniqueForSlot(selectedTrainingProfile, {
-      slotId: group.slotId,
-      techniqueId,
-      selectedAtLevel: nextProgression.level
-    });
-    if (!result.ok) {
-      classTrainingErrors.push(...result.errors);
-      return;
-    }
-    selectedTrainingProfile = result.profile;
-    changes.push({
-      key: `class-technique-${group.slotId}`,
-      label: 'Neue Klassenattacke',
-      before: '—',
-      after: result.technique.name
-    });
-  });
-
-  if (cenyrDefinition) {
-    selectedTrainingProfile = reconcileCenyrTrainingForLevel(selectedTrainingProfile, nextProgression.level).profile;
-  }
+  const classTechniqueChoiceGroups = [];
+  selectedTrainingProfile = reconcileCenyrTrainingForLevel(selectedTrainingProfile, nextProgression.level, { autoFill: true }).profile;
+  const previousTechniqueIds = new Set((beforeProfile.techniques || []).map(technique => technique.id));
+  selectedTrainingProfile.techniques.filter(technique => !previousTechniqueIds.has(technique.id)).forEach(technique => changes.push({
+    key: `class-technique-${technique.id}`, label: 'Automatisch erlernte Formtechnik', before: '—', after: technique.name
+  }));
   const classProgression = applyCenyrClassLevelProgression(selectedTrainingProfile, nextProgression.level);
   classProgression.unlockedFeatures.forEach(feature => changes.push({
     key: `class-feature-${feature.id}`,
@@ -471,7 +441,7 @@ export function applyManualCharacterLevel(profile = {}, targetLevelValue = 1) {
     reconciled = { profile: next, added: progression.added, pending: [] };
   }
 
-  const normalized = sanitizeCharacterCombatProfile(reconciled.profile);
+  const normalized = sanitizeCharacterCombatProfile(reconcileCenyrTrainingForLevel(reconciled.profile, targetLevel, { autoFill: true }).profile);
   const maximumHitPoints = getMaximumHitPoints(normalized);
   if (normalized.hitPoints.current != null) {
     normalized.hitPoints.current = normalized.hitPoints.vitality

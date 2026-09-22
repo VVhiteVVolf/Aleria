@@ -5,7 +5,7 @@ import { getBalanceCatalog } from './support/technique-balance-catalog.mjs';
 import { getActionGroups, renderActionOptions } from '../modules/combat/ui/combat-action-card.js';
 import { renderActionPicker } from '../modules/combat/ui/combat-action-picker.js';
 
-test('alle 788 Katalogtechniken verwenden stabile Formschlüssel und dieselben Namen unabhängig von gespeicherten Alttexten', () => {
+test('alle 800 Katalogtechniken verwenden stabile Formschlüssel und dieselben Namen unabhängig von gespeicherten Alttexten', () => {
   const entries = getBalanceCatalog();
   const before = structuredClone(entries);
   const labels = new Map();
@@ -17,7 +17,7 @@ test('alle 788 Katalogtechniken verwenden stabile Formschlüssel und dieselben N
     labels.set(form.key, form.label);
     assert.deepEqual(getCombatFormPresentation({ ...entry, trainingForm: 'Überholte Bezeichnung' }), form);
   }
-  assert.equal(entries.length, 788);
+  assert.equal(entries.length, 800);
   assert.equal(labels.size, 36);
   assert.deepEqual(entries, before, 'Anzeige verändert keine Regeln oder gespeicherten Texte');
 });

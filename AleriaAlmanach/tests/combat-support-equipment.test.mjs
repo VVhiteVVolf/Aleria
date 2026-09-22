@@ -1,0 +1,46 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import { readFile } from 'node:fs/promises';
+import { prepareCombatEquipment, reserveCombatEquipment } from '../modules/combat/combat-equipment-preparation.js';
+import { resolveCombatProfile } from '../modules/combat/combat-profile-resolver.js';
+import { getCombatMounts } from '../modules/combat/combat-support-equipment.js';
+import { withEquippedCombatWeapon } from '../modules/combat/combat-equipment-state.js';
+import { deriveCombatStateFromComments } from '../modules/combat/combat-state-model.js';
+import { renderWeaponLoadout } from '../modules/combat/ui/combat-weapon-loadout-view.js';
+import { CombatResolutionService } from '../modules/combat/combat-resolution-service.js';
+const asgeir=JSON.parse(await readFile(new URL('../../Charakter%20Archiv%20Exporte/asgeir-wolfshorn.json',import.meta.url),'utf8')).character;
+const dice={async rollAttack({modifier=0}){return{natural:15,dice:[15],keptDice:[15],total:15+modifier}},async rollDamage(){return{dice:[3],keptDice:[3],total:3,modifier:0}}};
+const selection={rightWeaponId:'asgeir-axt-rechts',leftWeaponId:'',shieldId:'asgeir-rundschild'};
+test('Schild ersetzt zweite Axt, erscheint mit Bild und gibt nur tatsächlich geführt seine RK und Techniken frei',()=>{
+  const prepared=prepareCombatEquipment(asgeir,selection,{free:true});assert.equal(prepared.preparation.error,'');
+  const profile=resolveCombatProfile(prepared.character,{actionId:'technique:combat-style-huskarl-skjaldr-grund-5'});
+  assert.equal(profile.totalDefense,16);assert.equal(profile.selectedAction.compatible,true);
+  assert.match(renderWeaponLoadout(profile),/Wolfshorn-Rundschild/);assert.match(renderWeaponLoadout(profile),/XpGJAGz/);
+  const paired=prepareCombatEquipment(prepared.character,{rightWeaponId:'asgeir-axt-rechts',leftWeaponId:'asgeir-axt-links'},{free:true});
+  assert.equal(resolveCombatProfile(paired.character).totalDefense,14);
+  assert.equal(paired.character.combatProfile.armorItems.find(a=>a.kind==='shield').equipped,false);
+  assert.match(prepareCombatEquipment(asgeir,{...selection,leftWeaponId:'asgeir-axt-links'}).preparation.error,/linke Hand/);
+  assert.match(prepareCombatEquipment(asgeir,{...selection,rightWeaponId:'asgeir-grossaxt'}).preparation.error,/linke Hand/);
+});
+test('Reittierauswahl verlangt eigenen echten Inventareintrag und schließt den Wolfsgefährten aus',()=>{
+  const rider={...asgeir,inventory:{companions:[{id:'wolf',name:'Freki',role:'Jagdgefährte'},{id:'horse',name:'Prüfross',role:'Reittier'}]}};
+  assert.deepEqual(getCombatMounts(rider).map(m=>m.id),['horse']);
+  const mounted=prepareCombatEquipment(rider,{...selection,mountId:'horse'},{free:true});
+  assert.equal(mounted.character.combatProfile.combat.mounted,true);
+  assert.match(prepareCombatEquipment(rider,{...selection,mountId:'foreign'}).preparation.error,/Reittier/);
+  const dismounted=prepareCombatEquipment(mounted.character,{...selection,mountId:''});
+  assert.equal(dismounted.character.combatProfile.combat.mounted,false);
+  assert.deepEqual(dismounted.preparation.costs.map(c=>c.resourceId),['bonus-action']);
+});
+test('Schild und Berittenstatus überstehen serverfähige Ergebnissnapshots und Neuladen ohne erneute Kosten',async()=>{
+  const rider={...asgeir,inventory:{...asgeir.inventory,companions:[{id:'horse',name:'Prüfross',role:'Reittier'}]}};
+  const prepared=prepareCombatEquipment(rider,{...selection,mountId:'horse'},{free:false});
+  const actor=reserveCombatEquipment(resolveCombatProfile(prepared.character,{actionId:'combat:wait'}),prepared.preparation);
+  const resolution=await new CombatResolutionService(dice).resolveAttack({actor,target:actor});
+  assert.equal(resolution.actorResourceSnapshot.after.find(r=>r.id==='bonus-action').current,0);
+  const state=deriveCombatStateFromComments([{id:'mount',serverValidatedMechanics:true,commentSegments:[{combatResolution:resolution}]}]).get(asgeir.id);
+  const restored=withEquippedCombatWeapon(rider,state.equippedWeaponId,state.offHandWeaponId,state.supportEquipment);
+  assert.equal(restored.combatProfile.combat.mounted,true);
+  assert.equal(resolveCombatProfile(restored).totalDefense,16);
+  assert.equal(prepareCombatEquipment(restored,{...selection,mountId:'horse'}).preparation,null);
+});

@@ -1,6 +1,7 @@
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
 import { normalizeSpellCatalogReference, resolveCatalogSpellSnapshot } from '../spell-catalog/spell-catalog.js';
 import { reconcileSkjaldrCombatProfile } from '../classes/aldrimar/skjaldr-combat-profile.js';
+import { reconcileClassSpecialManeuvers } from '../classes/class-special-maneuvers.js';
 import { getAldrimarWeaponAttackBonus } from '../classes/aldrimar/aldrimar-combat-rules.js';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { normalizeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
@@ -809,7 +810,7 @@ function getLegacyArmor(source) {
 }
 
 export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
-  const source = reconcileSkjaldrCombatProfile(reconcileClassDamageRevisions(value && typeof value === 'object' ? value : {}));
+  const source = reconcileClassSpecialManeuvers(reconcileSkjaldrCombatProfile(reconcileClassDamageRevisions(value && typeof value === 'object' ? value : {})));
   const sourceAttributes = new Map((Array.isArray(source.attributes) ? source.attributes : [])
     .map(attribute => [getAttributeKey(attribute?.key, ''), attribute]));
   const sourceSaves = new Map((Array.isArray(source.savingThrows) ? source.savingThrows : [])
@@ -951,6 +952,8 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
       passivePerceptionBonus: normalizeNumber(combat.passivePerceptionBonus, 0, -99, 99),
       canActAtZeroHitPoints: normalizeBoolean(combat.canActAtZeroHitPoints),
       mounted: normalizeBoolean(combat.mounted),
+      ...(combat.mountId != null ? { mountId: normalizeText(combat.mountId, 180) } : {}),
+      ...(combat.shieldId != null ? { shieldId: normalizeText(combat.shieldId, 180) } : {}),
       ...(combat.offHandWeaponId != null ? { offHandWeaponId: String(combat.offHandWeaponId).trim().slice(0, 180) } : {})
     },
     savingThrows: COMBAT_ATTRIBUTE_DEFINITIONS.map(definition =>

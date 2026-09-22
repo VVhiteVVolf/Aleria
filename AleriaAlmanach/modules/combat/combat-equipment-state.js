@@ -1,3 +1,5 @@
+import { withCombatSupportEquipment } from './combat-support-equipment.js';
+
 function text(value) {
   return String(value || '').trim();
 }
@@ -7,7 +9,8 @@ export function getActiveCombatWeapon(weapons = []) {
   return available.find(weapon => weapon?.equipped) || available[0] || null;
 }
 
-export function withEquippedCombatWeapon(character = {}, weaponId = '', offHandWeaponId) {
+export function withEquippedCombatWeapon(character = {}, weaponId = '', offHandWeaponId, supportEquipment) {
+  if (supportEquipment) character = withCombatSupportEquipment(character, supportEquipment);
   const requestedId = text(weaponId);
   const weapons = character?.combatProfile?.weapons;
   if (!requestedId || !Array.isArray(weapons) || !weapons.some(weapon => text(weapon?.id) === requestedId)) return character;

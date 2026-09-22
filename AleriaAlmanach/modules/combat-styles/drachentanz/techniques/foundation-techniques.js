@@ -1,4 +1,5 @@
 import { DRACHENTANZ_FORM_IDS } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
+import { getFoundationSupplements } from './foundation-supplements.js';
 import {
   createDrachentanzTechnique,
   movementEffect,
@@ -18,6 +19,7 @@ function foundation(spec) {
 }
 
 export const CANTREF_FOUNDATION_TECHNIQUES = Object.freeze([
+  ...getFoundationSupplements('cantref'),
   foundation({
     slug: 'cantref-jungdrache-kuss-der-speerspitze', name: 'Kuss der Speerspitze', minimumLevel: 1,
     description: 'Ein kurzer gerader Stich prüft Abstand und Deckung, ohne die Linie des Cantref zu öffnen.',
@@ -64,6 +66,7 @@ export const CANTREF_FOUNDATION_TECHNIQUES = Object.freeze([
 ]);
 
 export const UCHELWYR_FOUNDATION_TECHNIQUES = Object.freeze([
+  ...getFoundationSupplements('uchelwyr'),
   foundation({ slug: 'uchelwyr-jungdrache-hoher-grusshieb', name: 'Hoher Grußhieb', minimumLevel: 1,
     description: 'Die Klinge sinkt aus der hohen Reiterwacht in einen knappen, sicheren Lehrhieb.', effect: 'Verursacht Technikschaden.',
     activationType: 'bonus-action', costs: ['bonus-action'], allowedClassIds: ['uchelwyr'], classWeaponProfiles: UCHELWYR_WEAPONS, weaponTypes: ['sword', 'spear'] }),
@@ -88,6 +91,7 @@ export const UCHELWYR_FOUNDATION_TECHNIQUES = Object.freeze([
 ]);
 
 export const ARTHWYR_FOUNDATION_TECHNIQUES = Object.freeze([
+  ...getFoundationSupplements('arthwyr'),
   foundation({ slug: 'arthwyr-jungdrache-tatze-des-jungdrachen', name: 'Tatze des Jungdrachens', minimumLevel: 1,
     description: 'Ein kurzer, schwerer Schlag ersetzt die feine Lehrlinie durch unmittelbare Wucht.', effect: 'Verursacht Technikschaden.', activationType: 'bonus-action', costs: ['bonus-action'], attackBonus: -1,
     allowedClassIds: ['arthwyr'], classWeaponProfiles: ARTHWYR_WEAPONS, weaponTypes: ['sword', 'axe', 'mace'] }),

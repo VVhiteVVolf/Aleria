@@ -97,7 +97,7 @@ test('die interaktive Kampfszene füllt ein altes Gawain-Profil automatisch aus 
   const legacyGawain = record.sources.firestoreExports[0];
   const resolved = resolveCombatProfile(legacyGawain, { segmentKind: 'combataction' });
   const techniqueNames = resolved.actions
-    .filter(action => action.kind === 'technique')
+    .filter(action => action.kind === 'technique' && !action.sourceId.startsWith('class-special-'))
     .map(action => action.name);
 
   assert.deepEqual(techniqueNames, [

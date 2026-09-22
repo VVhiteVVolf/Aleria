@@ -31,11 +31,9 @@ function assertLegalTraining(profile) {
   const plan = getCenyrClassProgression(definition.id, profile.progression.level, { classTraining: profile.classTraining });
   const availableForms = new Set(plan.styles.flatMap(style => style.forms).filter(form => form.available).map(form => form.id));
   const selections = new Map(profile.classTraining.techniqueSelections.map(selection => [selection.techniqueId, selection]));
-  for (const technique of profile.techniques) {
-    const selection = selections.get(technique.id);
-    assert.ok(selection, technique.id);
+  for (const technique of profile.techniques.filter(entry => !entry.id.startsWith('class-special-'))) {
     assert.ok(availableForms.has(technique.combatStyleFormId), technique.name);
-    assert.ok(technique.minimumLevel <= selection.selectedAtLevel, technique.name);
+    assert.ok(technique.minimumLevel <= profile.progression.level, technique.name);
     assert.ok(!technique.cenyrTraining.allowedClassIds.length || technique.cenyrTraining.allowedClassIds.includes(definition.classId));
   }
   return plan;
@@ -81,7 +79,8 @@ test('both Derwyn foundations are exclusive, persist through serialization and s
     assert.equal(plan.foundationFormId, foundation);
     assert.equal(plan.styles.flatMap(style => style.forms).filter(form => form.isFoundationChoice && form.available).length, 1);
     assert.equal(sanitizeCharacterCombatProfile(result).classTraining.selections.find(item => item.kind === 'foundation').selectionId, foundation);
-    assert.equal(result.techniques.filter(technique => [D.jungdrache, W.foundation].includes(technique.combatStyleFormId)).length, 3);
+    const foundationPool = plan.styles.flatMap(style => style.forms).find(form => form.id === foundation);
+    assert.equal(result.techniques.filter(technique => technique.combatStyleFormId === foundation).length, foundationPool.techniques.length);
     const other = foundation === D.jungdrache ? W.foundation : D.jungdrache;
     const changed = reconcileCenyrTrainingForLevel(select(result, 'foundation', other, 1), 20, { autoFill: true }).profile;
     assertLegalTraining(changed);

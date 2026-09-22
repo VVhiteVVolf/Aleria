@@ -4,7 +4,7 @@ import test from 'node:test';
 import { getAutofilledCenyrCombatProfile } from '../modules/classes/cenyr/cenyr-combat-profile-autofill.js';
 import { getCenyrTechniqueChoiceGroups } from '../modules/classes/cenyr/cenyr-technique-selection.js';
 
-test('eine geänderte Attackenwahl im bestehenden Profil ersetzt sofort die zwischengespeicherte Ausbildung', async () => {
+test('geänderte historische Slotwahl aktualisiert den Cache und entfernt keine freigeschaltete Formtechnik', async () => {
   const { character } = JSON.parse(await readFile(new URL('../../Charakter%20Archiv%20Exporte/duncan-gafyr.json', import.meta.url), 'utf8'));
   const profile = character.combatProfile;
   const first = getAutofilledCenyrCombatProfile(profile);
@@ -22,7 +22,7 @@ test('eine geänderte Attackenwahl im bestehenden Profil ersetzt sofort die zwis
   const refreshed = getAutofilledCenyrCombatProfile(profile);
   assert.ok(first.techniques.some(technique => technique.id === previous.techniqueId));
   assert.ok(refreshed.techniques.some(technique => technique.id === alternative.id));
-  assert.ok(!refreshed.techniques.some(technique => technique.id === previous.techniqueId));
+  assert.ok(refreshed.techniques.some(technique => technique.id === previous.techniqueId));
   assert.equal(refreshed.techniques.length, first.techniques.length);
   assert.deepEqual(refreshed.classTraining.techniqueSelections, profile.classTraining.techniqueSelections);
 });
