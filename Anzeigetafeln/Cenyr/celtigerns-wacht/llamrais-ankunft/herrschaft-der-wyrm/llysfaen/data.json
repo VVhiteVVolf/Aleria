@@ -2,7 +2,488 @@
   "schemaVersion": 1,
   "scope": "anzeigetafeln",
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/data.json",
-  "revision": 0,
-  "updatedAt": null,
-  "state": null
+  "revision": 1,
+  "updatedAt": "2026-09-22T01:16:56.533Z",
+  "state": {
+    "schemaVersion": 2,
+    "zettel": [
+      {
+        "id": "llysfaen-schwarzer-zitteraal",
+        "typ": "steckbrief",
+        "x": 0.463,
+        "y": 0.421,
+        "title": "Kopfgeld – Der Schwarze Zitteraal",
+        "untertitel": "",
+        "text": "<p>Der sogenannte „<strong>Schwarze Zitteraal</strong>“ wütet weiterhin auf unseren Straßen – zuletzt gesichtet nahe Rhonwens Tränen sowie im Umland von Gwendolyns Ufer. Er gilt als abtrünniger Vasall des vor zwanzig Jahren verfallenen Hauses Illysywen.</p><p>Seit über einem Jahrzehnt sammeln sich um ihn Abschaum, Deserteure und Landesverräter. Sein Verbleib ist unklar – manche berichten von einem Schiff, andere vermuten ihn getarnt unter gewöhnlichem Volk.</p><p>Die Grafschaft zahlt <strong>10 Kupferstücke</strong> für glaubhafte Hinweise, <strong>10 Goldmünzen</strong> für seinen Kopf. Für jeden identifizierten Schergen <strong>50 Kupferstücke</strong>. Verdienste mögen mit Stahl belohnt, oder mit Ritterschlag gekrönt werden.</p><p>– Egon Gyfar, Marshall des Grafen zu Celtigerns Wacht, in Gwynthor</p>",
+        "bild": "",
+        "portrait": "",
+        "verfasser": "",
+        "verfasserName": "",
+        "sideWidth": 160,
+        "imageFit": "cover",
+        "imagePosition": "center",
+        "table": [
+          {
+            "k": "Alias",
+            "v": "Der Schwarze Zitteraal"
+          },
+          {
+            "k": "Kopfgeld",
+            "v": "10 Goldmünzen für seinen Kopf"
+          },
+          {
+            "k": "Hinweise",
+            "v": "10 Kupferstücke"
+          },
+          {
+            "k": "Identifizierter Scherge",
+            "v": "50 Kupferstücke"
+          },
+          {
+            "k": "Zuletzt gesehen",
+            "v": "Nahe Rhonwens Tränen und im Umland von Gwendolyns Ufer"
+          },
+          {
+            "k": "Ausgestellt von",
+            "v": "Egon Gyfar, Marshall des Grafen zu Celtigerns Wacht"
+          }
+        ],
+        "artikel": [],
+        "personen": [
+          {
+            "portrait": "",
+            "title": "Kopfgeld – Der Schwarze Zitteraal",
+            "untertitel": "",
+            "text": "<p>Der sogenannte „<strong>Schwarze Zitteraal</strong>“ wütet weiterhin auf unseren Straßen – zuletzt gesichtet nahe Rhonwens Tränen sowie im Umland von Gwendolyns Ufer. Er gilt als abtrünniger Vasall des vor zwanzig Jahren verfallenen Hauses Illysywen.</p><p>Seit über einem Jahrzehnt sammeln sich um ihn Abschaum, Deserteure und Landesverräter. Sein Verbleib ist unklar – manche berichten von einem Schiff, andere vermuten ihn getarnt unter gewöhnlichem Volk.</p><p>Die Grafschaft zahlt <strong>10 Kupferstücke</strong> für glaubhafte Hinweise, <strong>10 Goldmünzen</strong> für seinen Kopf. Für jeden identifizierten Schergen <strong>50 Kupferstücke</strong>. Verdienste mögen mit Stahl belohnt, oder mit Ritterschlag gekrönt werden.</p><p>– Egon Gyfar, Marshall des Grafen zu Celtigerns Wacht, in Gwynthor</p>",
+            "imageFit": "cover",
+            "imagePosition": "center",
+            "table": [
+              {
+                "k": "Alias",
+                "v": "Der Schwarze Zitteraal"
+              },
+              {
+                "k": "Kopfgeld",
+                "v": "10 Goldmünzen für seinen Kopf"
+              },
+              {
+                "k": "Hinweise",
+                "v": "10 Kupferstücke"
+              },
+              {
+                "k": "Identifizierter Scherge",
+                "v": "50 Kupferstücke"
+              },
+              {
+                "k": "Zuletzt gesehen",
+                "v": "Nahe Rhonwens Tränen und im Umland von Gwendolyns Ufer"
+              },
+              {
+                "k": "Ausgestellt von",
+                "v": "Egon Gyfar, Marshall des Grafen zu Celtigerns Wacht"
+              }
+            ]
+          }
+        ],
+        "comments": [],
+        "secret": false
+      },
+      {
+        "id": "llysfaen-feuerstollen",
+        "typ": "notiz",
+        "x": 0.631,
+        "y": 0.467,
+        "title": "Vorsicht beim Feuerstollen",
+        "untertitel": "",
+        "text": "<p>Hütet euch vor dem Feuerstollen. Man sagt, dort nisten nun Bären, Wölfe – oder gar Gnolle. Was einst heiß war, ist nun nur noch Gefahr.</p><p>Der Stollen und seine Quelle sind seit Jahrhunderten versiegt – dort gibt es nichts mehr zu holen. Kein Erz, kein Ruhm, kein Recht.</p><p>Eltern, haltet eure Kinder fern. Und ihr Halbstarken, die dort ihren Mut beweisen wollen – lasst es bleiben.</p><p>Ihr wurdet gewarnt. – Hauptmann und Ritter Sir Cenwyn Annwyl</p>",
+        "bild": "",
+        "portrait": "",
+        "verfasser": "",
+        "verfasserName": "",
+        "sideWidth": 160,
+        "imageFit": "cover",
+        "imagePosition": "center",
+        "table": [
+          {
+            "k": "Kategorie",
+            "v": "Warnung"
+          },
+          {
+            "k": "Ort",
+            "v": "Feuerstollen"
+          },
+          {
+            "k": "Quelle",
+            "v": "Hauptmann und Ritter Sir Cenwyn Annwyl"
+          }
+        ],
+        "artikel": [],
+        "personen": [],
+        "comments": [],
+        "secret": false
+      },
+      {
+        "id": "llysfaen-mabli",
+        "typ": "vermisst",
+        "x": 0.638,
+        "y": 0.23,
+        "title": "Vermisst – Hat jemand Mabli gesehen?",
+        "untertitel": "",
+        "text": "<p><strong>Vermisst: Meine Katze Mabli</strong></p><p>Meine kleine graue Katze Mabli ist seit gestern verschwunden. Sie hat weiße Pfoten und ein weißes Fleckchen auf der Stirn. Ich habe sie zuletzt in der Nähe des Marktplatzes gesehen, aber sie könnte überall in Morddyn sein. Wenn jemand sie findet, bekommt er <strong>2 Kupfertaler</strong> als Finderlohn. Bitte helft mir, sie zu finden!</p><p>— Efa, 12</p>",
+        "bild": "",
+        "portrait": "",
+        "verfasser": "",
+        "verfasserName": "",
+        "sideWidth": 160,
+        "imageFit": "cover",
+        "imagePosition": "center",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mabli"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Kleine graue Katze, weiße Pfoten und weißes Fleckchen auf der Stirn"
+          },
+          {
+            "k": "Zuletzt gesehen",
+            "v": "In der Nähe des Marktplatzes"
+          },
+          {
+            "k": "Belohnung",
+            "v": "2 Kupfertaler"
+          },
+          {
+            "k": "Kontakt",
+            "v": "Efa, 12"
+          }
+        ],
+        "artikel": [],
+        "personen": [],
+        "comments": [],
+        "secret": false
+      },
+      {
+        "id": "llysfaen-hoher-besuch",
+        "typ": "ankuendigung",
+        "x": 0.478,
+        "y": 0.226,
+        "title": "ACHTUNG! ACHTUNG!",
+        "untertitel": "Hoher Besuch im Anmarsch!",
+        "text": "<p><strong>HOHER BESUCH IM ANMARSCH!</strong></p><p>Im Zuge der bevorstehenden Hochzeit von Prinz Tudwal Draig hat sich Sir Owain Draig, Onkel des Bräutigams, Ritter von Gwynthor, Ehrenmitglied des königlichen Reiterordens und – das sage ich mit allem Respekt – berüchtigter Schürzenjäger erster Güte für einen Besuch in Llysfaen angekündigt.</p><p>Er wird voraussichtlich in den kommenden Tagen das Gestüt der Familie Jernigan inspizieren, um – ich zitiere – „den Zustand der königlichen Zuchtlinien mit eigenen Augen zu prüfen.“ Was er mit den Augen sonst noch prüft, wissen einige Tavernen in Gwynthor sehr genau.</p><p>Daher hiermit folgende Hinweise:</p><p>Töchter, Ehefrauen und Dienstmägde mögen in diesen Tagen bitte nicht alleine durch den Hof wandeln, besonders nicht in Nähe des Gestüts oder der Taverne. Wer Sir Owain kennt, weiß: Ein freundliches Lächeln reicht, und er fragt nach dem Heiratsstand.</p><p>Ich bitte um höflichen Umgang, aber gesunde Distanz. Llysfaen ist ein ehrbares Dorf. Wir möchten das auch bleiben. Für Fragen oder Beschwerden steht mein Büro – wie immer – offen. Leider.</p><p>– Brinthan Argall, Bürgermeister von Llysfaen</p><p><em>Darunter hat jemand hinzugefügt: „Wetten Sir Owain ist Iolo’s Vater?“</em></p>",
+        "bild": "",
+        "portrait": "",
+        "verfasser": "",
+        "verfasserName": "",
+        "sideWidth": 160,
+        "imageFit": "cover",
+        "imagePosition": "center",
+        "table": [
+          {
+            "k": "Veranstaltung",
+            "v": "Besuch von Sir Owain Draig"
+          },
+          {
+            "k": "Datum",
+            "v": "In den kommenden Tagen"
+          },
+          {
+            "k": "Ort",
+            "v": "Llysfaen, Gestüt der Familie Jernigan"
+          },
+          {
+            "k": "Bekanntgegeben von",
+            "v": "Brinthan Argall, Bürgermeister"
+          }
+        ],
+        "artikel": [],
+        "personen": [],
+        "comments": [],
+        "secret": false
+      },
+      {
+        "id": "llysfaen-hof-glyn",
+        "typ": "quest",
+        "x": 0.18,
+        "y": 0.21,
+        "title": "ARBEIT ZU VERGEBEN",
+        "untertitel": "",
+        "text": "<p><strong>HOF GLYN sucht kräftige Hände.</strong></p><p>Gesucht werden:</p><p>• Frühaufsteher.<br>• Keine Redseligen.<br>• Schweigen ist kein Nachteil.<br>Bezahlung über Durchschnitt.</p><p>Wer faul ist, braucht nicht kommen.</p><p>– Meurig Glyn</p><p><em>Darunter hat jemand mit Kohle dazugeschrieben: „Mit Glück brüllt er dich erst nach dem zweiten Tag an.“</em></p><p><em>Darunter ein zweiter Kommentar in anderer Schrift:</em></p><p><em>„Dafür gibt’s auch Brot, das noch warm ist.“</em></p>",
+        "bild": "",
+        "portrait": "",
+        "verfasser": "",
+        "verfasserName": "Meurig Glyn",
+        "sideWidth": 160,
+        "imageFit": "cover",
+        "imagePosition": "center",
+        "table": [
+          {
+            "k": "Auftraggeber",
+            "v": "Meurig Glyn"
+          },
+          {
+            "k": "Belohnung",
+            "v": "Bezahlung über Durchschnitt"
+          },
+          {
+            "k": "Zielort",
+            "v": "Hof Glyn"
+          }
+        ],
+        "artikel": [],
+        "personen": [],
+        "comments": [],
+        "secret": false
+      },
+      {
+        "id": "llysfaen-pferdediebstahl",
+        "typ": "quest",
+        "x": 0.18,
+        "y": 0.392,
+        "title": "Pferdediebstahl!!",
+        "untertitel": "",
+        "text": "<p><strong>Mithilfe erbeten!</strong></p><p>In der letzten Nacht sind mehrere Pferde aus den Ställen von Llysfaen entwendet worden. Betroffen sind Pferde des Gestüts der Jernigan.</p><p>Unter den gestohlenen Tieren befindet sich ein besonders wertvolles Reitross, bestimmt für die Hochzeit von Prinz Tudwal Draig, Sohn des ehrenwerten Grafen von Celtigerns Wacht, Galahad Draig. Dies ist ein direkter Affront gegen das Haus Wyrm und wird nicht geduldet.</p><p>Zur Wiederbeschaffung der Tiere sowie zur Ergreifung der Täter wird die folgende Belohnung ausgesetzt:</p><p>Für sachdienliche Hinweise zum Verbleib der gestohlenen Pferde wird eine Belohnung in Höhe von <strong>10 Kupfermünzen</strong> ausgesetzt. Wer darüber hinaus namentlich Täter benennen kann, erhält <strong>1 Silbermünze</strong>.</p><p>Für die Ergreifung der Täter (lebendig) wird pro Person eine Belohnung in Höhe von <strong>25 Silbermünzen</strong> gezahlt.</p><p>Die Rückführung gestohlener Pferde wird ebenfalls entlohnt: <strong>25 Silbermünzen pro Tier</strong>. Für das besonders gekennzeichnete Braune mit der Stallmarke „JG“ aus dem Jernigan-Gestüt – bestimmt für die Hochzeit Prinz Tudwal Draigs – wird eine Belohnung von <strong>1 Goldmünze</strong> ausgesetzt.</p><p>Hinweise bitte an das Bürgermeisteramt oder direkt an Hauptmann Sir Gwydion Rhyddid.</p><p>Alle Hinweise werden vertraulich behandelt. Falschaussagen werden nicht vergütet und können bestraft werden.</p><p>Für Ordnung und Recht in Llysfaen,</p><p>– Brinthan Argall, Bürgermeister</p>",
+        "bild": "",
+        "portrait": "",
+        "verfasser": "",
+        "verfasserName": "Brinthan Argall",
+        "sideWidth": 160,
+        "imageFit": "cover",
+        "imagePosition": "center",
+        "table": [
+          {
+            "k": "Auftraggeber",
+            "v": "Brinthan Argall, Bürgermeister"
+          },
+          {
+            "k": "Belohnung",
+            "v": "Gestaffelt nach Hinweis, Ergreifung und Rückführung; siehe Aushang"
+          },
+          {
+            "k": "Hinweise zum Verbleib",
+            "v": "10 Kupfermünzen"
+          },
+          {
+            "k": "Täter namentlich benennen",
+            "v": "1 Silbermünze"
+          },
+          {
+            "k": "Täter lebendig ergreifen",
+            "v": "25 Silbermünzen pro Person"
+          },
+          {
+            "k": "Rückführung",
+            "v": "25 Silbermünzen pro Pferd"
+          },
+          {
+            "k": "Braunes Pferd mit Stallmarke JG",
+            "v": "1 Goldmünze"
+          },
+          {
+            "k": "Kontakt",
+            "v": "Bürgermeisteramt oder Hauptmann Sir Gwydion Rhyddid"
+          }
+        ],
+        "artikel": [],
+        "personen": [],
+        "comments": [],
+        "secret": false
+      },
+      {
+        "id": "llysfaen-brogars-hilfe",
+        "typ": "quest",
+        "x": 0.735,
+        "y": 0.217,
+        "title": "Ehre wem Ehre gebührt –",
+        "untertitel": "",
+        "text": "<p><strong>…und Bier dem, der Bobi hilft!</strong></p><p>Wie ihr alle wisst, sucht unser junger Stallbursche Bobi noch immer nach dem verschwundenen Erlenglanz – und trägt Schuld und Sorgen wie ein Ochse den Pflug.</p><p>Wer ihn bei der Suche unterstützt, mit Rat, Spürsinn oder tatkräftiger Hilfe, bekommt von uns, den Brogars:</p><p>Ein warmes Abendessen (nicht der Eintopf von vorgestern!)</p><p>Zwei Krüge vom Guten – aufs Haus</p><p>Und wenn’s hilft: ein stilles Wort von Marve oder ein Lied von Nadya.</p><p>Denn wer hilft, ein Ross heimzubringen, verdient mehr als Silber – er verdient Dank, Brot und Beifall.</p><p>Meldet euch bei Bobi, oder kommt einfach in die Drachin und sagt Bescheid.</p><p>– Malwyn &amp; Marve Brogar</p><p><em>Darunter hat jemand ergänzt: „Wenn ich das Pferd finde, will ich Tilly UND den Eintopf.“</em></p><p><em>Marves Handschrift (in schärferer Tinte):</em><br><em>„Du bekommst nur Suppe. Und wenn du weiter so redest, ohne Brot.“</em></p>",
+        "bild": "",
+        "portrait": "",
+        "verfasser": "",
+        "verfasserName": "Malwyn & Marve Brogar",
+        "sideWidth": 160,
+        "imageFit": "cover",
+        "imagePosition": "center",
+        "table": [
+          {
+            "k": "Auftraggeber",
+            "v": "Malwyn & Marve Brogar"
+          },
+          {
+            "k": "Belohnung",
+            "v": "Warmes Abendessen und zwei Krüge; ein stilles Wort von Marve oder ein Lied von Nadya"
+          },
+          {
+            "k": "Kontakt",
+            "v": "Bobi oder die Drachin"
+          },
+          {
+            "k": "Ziel",
+            "v": "Bobi bei der Suche nach Erlenglanz unterstützen"
+          }
+        ],
+        "artikel": [],
+        "personen": [],
+        "comments": [],
+        "secret": false
+      },
+      {
+        "id": "llysfaen-bobi-erlenglanz",
+        "typ": "vermisst",
+        "x": 0.292,
+        "y": 0.213,
+        "title": "Bitte um Hilfe!",
+        "untertitel": "",
+        "text": "<p>Ich bin Bobi, Stallbursche auf dem Jernigan-Hof. Erlenglanz, das große braune Pferd, ist mir entwischt oder gestohlen worden – ich weiß es nicht mehr genau. Es war meine Wache. Ich hab’s nicht geschafft, ihn zu halten.</p><p>Ich weiß, ich bin nur ein Knecht. Kein Hofherr, kein Ritter. Aber Erlenglanz war mein Freund. Und mein Fehler.</p><p>Ich bitte um Hilfe bei der Suche. Wer mitkommt, mitdenkt oder mit den richtigen Leuten spricht, soll auch was kriegen. Ich hab <strong>7 Silbermünzen</strong> gespart. Mehr nicht. Aber ich geb sie gern dafür her, wenn das Pferd wieder heimkommt.</p><p>Bitte helft. Ich weiß nicht, was ich sonst tun soll.</p><p>– Bobi, Stalljunge mit schlechtem Gewissen und grauenhafter Schrift</p>",
+        "bild": "",
+        "portrait": "",
+        "verfasser": "",
+        "verfasserName": "",
+        "sideWidth": 160,
+        "imageFit": "cover",
+        "imagePosition": "center",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Erlenglanz"
+          },
+          {
+            "k": "Beschreibung",
+            "v": "Großes braunes Pferd"
+          },
+          {
+            "k": "Herkunft",
+            "v": "Jernigan-Hof"
+          },
+          {
+            "k": "Belohnung",
+            "v": "7 Silbermünzen – Bobis Ersparnisse"
+          },
+          {
+            "k": "Kontakt",
+            "v": "Bobi, Stallbursche auf dem Jernigan-Hof"
+          }
+        ],
+        "artikel": [],
+        "personen": [],
+        "comments": [],
+        "secret": false
+      },
+      {
+        "id": "llysfaen-crewe-hof",
+        "typ": "quest",
+        "x": 0.828,
+        "y": 0.222,
+        "title": "Hände gesucht – Herz willkommen",
+        "untertitel": "",
+        "text": "<p><strong>für den Crewe-Hof</strong></p><p>Unsere Anwen arbeitet von früh bis spät, doch ein Hof trägt sich nicht allein.</p><p>Gesucht werden:</p><p>Hände für Stall, Feld und Herd.</p><p>Menschen mit Rücken, die anpacken, und einem Herzen, das nicht zählt, was fehlt.</p><p>Bezahlung nach Kraft. Wertschätzung nach Haltung. Wer helfen will, ist willkommen. Wer nur fragt, was es bringt – möge weitergehen.</p><p>Meldet euch bei Gareth Talfryn oder direkt bei Anwen Crewe, wenn sie gerade nicht mit der Gabel in der Erde steckt.</p><p>– Gareth Talfryn</p><p><em>Darunter jemand mit schwungvoller Handschrift: „Wer für Anwen arbeitet, bekommt nicht nur Brot – sondern Ruhe im Gewissen.“</em></p><p><em>Und ein zweiter Kommentar in kleiner Schrift: „Und manchmal Suppe von Marve Brogar.“</em></p>",
+        "bild": "",
+        "portrait": "",
+        "verfasser": "",
+        "verfasserName": "Gareth Talfryn",
+        "sideWidth": 160,
+        "imageFit": "cover",
+        "imagePosition": "center",
+        "table": [
+          {
+            "k": "Auftraggeber",
+            "v": "Gareth Talfryn"
+          },
+          {
+            "k": "Belohnung",
+            "v": "Bezahlung nach Kraft; Wertschätzung nach Haltung"
+          },
+          {
+            "k": "Zielort",
+            "v": "Crewe-Hof"
+          },
+          {
+            "k": "Tätigkeit",
+            "v": "Stall, Feld und Herd"
+          },
+          {
+            "k": "Kontakt",
+            "v": "Gareth Talfryn oder Anwen Crewe"
+          }
+        ],
+        "artikel": [],
+        "personen": [],
+        "comments": [],
+        "secret": false
+      },
+      {
+        "id": "llysfaen-gemeinschaft",
+        "typ": "ankuendigung",
+        "x": 0.766,
+        "y": 0.422,
+        "title": "AN ALLE BÜRGER LLYSFAENS",
+        "untertitel": "",
+        "text": "<p>In Zeiten, in denen das Korn wächst, das Vieh blökt und die Sonne scheint, ist Gemeinschaft leicht. In Zeiten, in denen Arbeit schwer wird, Schultern müde und Pfade einsam, zeigt sich, wer wir wirklich sind.</p><p>Nach dem Tod von Urien Crewe haben viele den Hof seiner Tochter Anwen verlassen – aus Angst, aus Unsicherheit, vielleicht auch aus Bequemlichkeit. Doch die, die geblieben sind – sie tragen nun doppelt, was vorher viele teilten.</p><p>Ich sage dies nicht als Ritter. Ich sage dies als Mensch, der dieses Dorf schützt.</p><p>Llysfaen ist kein Ort für Einzelne. Nicht für Einzelkämpfer, nicht für Zuschauer. Es ist ein Ort für Hände, die zupacken. Für Worte, die tragen. Für Schultern, die einander stützen.</p><p>Wenn eine von uns fällt, reichen wir die Hand. Nicht, weil es uns nützt – sondern weil es uns ehrt.</p><p>Ich rufe dazu auf, nicht nur Anwen, sondern einander beizustehen – in Arbeit, in Wort, in Haltung.</p><p>Denn ein Dorf, das nur lebt, solange es leicht ist, ist kein Dorf – sondern ein Haufen Dächer.</p><p>– Sir Gwydion Rhyddid, Hauptmann von Llysfaen</p>",
+        "bild": "",
+        "portrait": "",
+        "verfasser": "",
+        "verfasserName": "",
+        "sideWidth": 160,
+        "imageFit": "cover",
+        "imagePosition": "center",
+        "table": [
+          {
+            "k": "Anlass",
+            "v": "Aufruf zum Zusammenhalt und zur Unterstützung Anwen Crewes"
+          },
+          {
+            "k": "Ort",
+            "v": "Llysfaen"
+          },
+          {
+            "k": "Verfasser",
+            "v": "Sir Gwydion Rhyddid, Hauptmann von Llysfaen"
+          }
+        ],
+        "artikel": [],
+        "personen": [],
+        "comments": [],
+        "secret": false
+      },
+      {
+        "id": "llysfaen-wasserloch",
+        "typ": "notiz",
+        "x": 0.292,
+        "y": 0.603,
+        "title": "ÖFFENTLICHE MITTEILUNG",
+        "untertitel": "",
+        "text": "<p>An alle Eltern, Erziehungsberechtigten und sonstige Verantwortliche kleiner Unruhestifter:</p><p>Es wird erneut darauf hingewiesen, dass das Wasserloch südlich des Dorfes <strong>KEIN Abenteuerspielplatz</strong> ist.</p><p>Kinder wurden mehrfach dabei beobachtet, dort zu baden, kämpfen, fischen, planschen, schreien und zuletzt – man glaubt es kaum – einen alten Karren vollständig darin zu versenken.</p><p>Das Wasserloch ist tief. Der Boden ist rutschig. Es ist gefährlich. Außerdem ist der Karren noch immer dort. Er gehörte der Kirche.</p><p>Ich bitte daher:</p><p>Lasst das Loch in Ruhe.</p><p>Haltet eure Kinder im Zaum.</p><p>Werft <strong>NICHTS</strong> hinein.</p><p>Und nein, es ist nicht lustig, Frösche zu „bewachen“, „Schlachten“ dort nachzustellen oder „Brücken aus Mistgabeln“ zu bauen.</p><p>Bei weiteren Verstößen drohen:</p><p>Gemeinnützige Arbeiten, Wasserschöpfdienst bei trockenem Wetter und eine persönliche Ansprache durch meine Frau, die niemand hören möchte.</p><p>Mit wenig verbleibender Geduld,<br>– Brinthan Argall, Bürgermeister</p>",
+        "bild": "",
+        "portrait": "",
+        "verfasser": "",
+        "verfasserName": "",
+        "sideWidth": 160,
+        "imageFit": "cover",
+        "imagePosition": "center",
+        "table": [
+          {
+            "k": "Kategorie",
+            "v": "Öffentliche Warnung"
+          },
+          {
+            "k": "Ort",
+            "v": "Wasserloch südlich des Dorfes"
+          },
+          {
+            "k": "Quelle",
+            "v": "Brinthan Argall, Bürgermeister"
+          }
+        ],
+        "artikel": [],
+        "personen": [],
+        "comments": [],
+        "secret": false
+      }
+    ],
+    "regionIcon": "",
+    "regionTitle": "Llysfaens Anzeigetafel",
+    "boardImages": {},
+    "cardWidth": 1100
+  }
 }
