@@ -40,11 +40,18 @@ function buildCharacterInventoryCompanionModal(companion, options = {}) {
     <button class="ci-modal-close" type="button" data-ci-action="close-profile" aria-label="Gefährtenkarte schließen">×</button>
     <div class="ci-item-card ci-card-companion">
       <header class="ci-card-heading"><span class="ci-card-kicker">♞ Gefährte</span><span>${escapeHtml(companion.status || companion.role || 'Begleiter')}</span></header>
-      <div class="ci-card-image">${buildCharacterInventoryImage(companion.image, companion.name, 'ci-card-art', '♞', { format: 'landscape', fit: 'contain' })}</div>
-      <div class="ci-card-title"><h3>${escapeHtml(companion.name)}</h3><p>${escapeHtml(companion.species || '')}</p></div>
-      <div class="ci-card-description">${buildInventoryCardFacts(companion.infoRows || [])}<div class="ci-card-lore"><span class="ci-card-kicker">Wesen & Bindung</span><p>${characterInventoryText(companion.personality || companion.summary || companion.description || 'Dieser Gefährte wartet auf seine Geschichte.')}</p></div></div>
-      ${companion.attributes?.length ? `<div class="ci-card-diagram">${buildCharacterInventoryRadar(companion.attributes, 'ci-card-radar')}</div>` : ''}
-      ${companion.abilities?.length ? `<section class="ci-card-rules"><h4>Fähigkeiten</h4>${companion.abilities.map(ability => `<div><strong>${escapeHtml(ability.name)}</strong><p>${characterInventoryText(ability.description)}</p></div>`).join('')}</section>` : ''}
+      <div class="ci-companion-layout">
+        <div class="ci-companion-portrait-column">
+          <div class="ci-card-image">${buildCharacterInventoryImage(companion.image, companion.name, 'ci-card-art', '♞', { format: 'landscape', fit: 'contain' })}</div>
+          ${companion.attributes?.length ? `<div class="ci-card-diagram">${buildCharacterInventoryRadar(companion.attributes, 'ci-card-radar')}</div>` : ''}
+        </div>
+        <div class="ci-companion-details">
+          <div class="ci-card-title"><h3>${escapeHtml(companion.name)}</h3><p>${escapeHtml(companion.species || '')}</p></div>
+          ${buildInventoryCardFacts(companion.infoRows || [])}
+          <div class="ci-card-lore"><span class="ci-card-kicker">Wesen & Bindung</span><p>${characterInventoryText(companion.personality || companion.summary || companion.description || 'Dieser Gefährte wartet auf seine Geschichte.')}</p></div>
+          ${companion.abilities?.length ? `<section class="ci-card-rules"><h4>Fähigkeiten</h4>${companion.abilities.map(ability => `<div><strong>${escapeHtml(ability.name)}</strong><p>${characterInventoryText(ability.description)}</p></div>`).join('')}</section>` : ''}
+        </div>
+      </div>
     </div>
     <footer class="ci-card-footer">${companion.creatureId
       ? `<button type="button" data-ci-action="open-creature" data-ci-creature-id="${escapeHtml(companion.creatureId)}">Kreaturbogen öffnen ↗</button>`

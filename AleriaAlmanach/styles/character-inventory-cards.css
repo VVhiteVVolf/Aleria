@@ -145,6 +145,37 @@
 .ci-card-footer button { flex: 1 1 145px; padding: .7rem .65rem; color: #415746; background: #eef0e5; border: 1px solid #b9c3ae; border-radius: 4px; }
 .ci-profile-overlay::backdrop { background: #101d16a8; backdrop-filter: blur(3px); }
 
+/* Companions and mounts share a wide dossier; ordinary item cards stay compact. */
+.ci-profile-overlay:has(.ci-companion-modal) { width: min(1040px, calc(100% - 2rem)); }
+.ci-companion-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 1.75rem; padding-top: 1.1rem; }
+.ci-companion-portrait-column, .ci-companion-details { min-width: 0; }
+.ci-companion-modal .ci-card-image { margin-top: 0; background: radial-gradient(ellipse at top, #f7f8f1, #e4ebe5); }
+.ci-companion-modal .ci-card-art { height: 300px; padding: .85rem; }
+.ci-companion-modal .ci-card-diagram { margin: 1rem 0 0; }
+.ci-companion-modal .ci-card-title { padding: .15rem 0 1rem; text-align: left; }
+.ci-companion-modal .ci-card-title h3 { font-size: 1.6rem; }
+.ci-companion-modal .ci-card-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.25rem; padding-top: .2rem; border-top: 1px solid #dfddcf; }
+.ci-companion-modal .ci-card-facts > div { padding: .5rem 0; }
+.ci-companion-modal .ci-card-lore { margin-top: 1.1rem; }
+.ci-companion-modal .ci-card-rules { margin-top: 1rem; border-radius: 0 5px 5px 0; }
+.ci-companion-modal .ci-card-footer { justify-content: flex-end; padding-top: 1rem; border-top: 1px solid #dfddcf; background: #f0f2e9; }
+.ci-companion-modal .ci-card-footer button { flex: 0 1 320px; }
+
+@media (max-width: 740px) {
+  .ci-profile-overlay:has(.ci-companion-modal) { width: min(560px, calc(100% - 1.5rem)); }
+  .ci-companion-layout { grid-template-columns: minmax(0, 1fr); gap: 1.1rem; }
+  .ci-companion-portrait-column { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .5rem; align-items: center; }
+  .ci-companion-modal .ci-card-art { height: 220px; padding: .5rem; }
+  .ci-companion-modal .ci-card-diagram { margin: 0; }
+  .ci-companion-modal .ci-card-radar svg { height: auto; }
+  .ci-companion-modal .ci-card-footer button { flex: 1 1 180px; }
+}
+@media (max-width: 420px) {
+  .ci-companion-portrait-column { grid-template-columns: minmax(0, 1fr); }
+  .ci-companion-modal .ci-card-diagram { margin-top: .4rem; }
+  .ci-companion-modal .ci-card-radar svg { max-width: 205px; }
+}
+
 @container character-inventory (max-width: 1000px) {
   .ci-layout { grid-template-columns: minmax(0, 1fr) minmax(285px, 40%); gap: .8rem; }
   .ci-center, .ci-money-panel, .ci-companions { padding: .8rem; }
