@@ -90,15 +90,15 @@ test('Gildas kann Gawain mit seinem stärksten einhändigen Jungritterangriff se
   assert.equal(target.currentHitPoints, 49);
   const actor = resolveCombatProfile(gildas, { actionId: 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb' });
   assert.equal(actor.weapon.damageFormula, '2d8+2');
-  assert.equal(actor.damageModifier, 5);
+  assert.equal(actor.damageModifier, 6);
   for (const critical of [false, true]) {
     const result = await new CombatResolutionService(new MaximumDice(critical)).resolveAttack({ actor, target });
-    assert.equal(result.damage.total, critical ? 39 : 23);
+    assert.equal(result.damage.total, critical ? 38 : 22);
     assert.ok(result.targetSnapshot.hitPointsAfter > 0);
   }
 });
 
-test('Gildas stärkster Abschluss plus Reaktionsangriff lässt Gawain bei normalen Maximalwürfen noch 12 TP', async () => {
+test('Gildas stärkster Abschluss plus Reaktionsangriff lässt Gawain mit den neuen Ausrüstungseffekten noch 14 TP', async () => {
   const character = await load('gildas-gafyr');
   const target = resolveCombatProfile(await load('gawain-draig'));
   const first = resolveCombatProfile(character, { actionId: 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb' });
@@ -109,8 +109,8 @@ test('Gildas stärkster Abschluss plus Reaktionsangriff lässt Gawain bei normal
   const resolver = new CombatResolutionService(new MaximumDice());
   const result = await resolver.resolveAttack({ actor: first, target });
   const follow = await resolver.resolveAttack({ actor: response, target: { ...target, currentHitPoints: result.targetSnapshot.hitPointsAfter } });
-  assert.equal(result.damage.total + follow.damage.total, 37);
-  assert.equal(follow.targetSnapshot.hitPointsAfter, 12);
+  assert.equal(result.damage.total + follow.damage.total, 35);
+  assert.equal(follow.targetSnapshot.hitPointsAfter, 14);
 });
 
 test('zweihändige Waffenführung und manuelle Stufenwechsel berechnen die Technik neu ohne gespeicherte Zusatzwürfel zu stapeln', async () => {

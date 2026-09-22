@@ -34,7 +34,7 @@ function slotBandLabel(band) {
 function renderTrainingProfile(plan) {
   const weapons = [...plan.weaponTraining.primary, ...plan.weaponTraining.secondary].join(' · ');
   return `<div class="cenyr-training-profile">
-    <article><span>${plan.skaldReference ? 'Repertoire' : 'Attackenbudget'}</span><strong>${plan.skaldReference ? 'Acht Lieder · ein besonderer Schrei' : `${plan.techniqueBudget.total} Slots bis Stufe 20`}</strong><small>${escape(plan.techniquePool.description)}</small></article>
+    <article><span>Attackenbudget</span><strong>${plan.techniqueBudget.total} Slots bis Stufe 20</strong><small>${escape(plan.techniquePool.description)}</small></article>
     <article><span>Waffenführung</span><strong>${escape(weapons)}</strong><small>${escape(plan.weaponTraining.note)}</small></article>
     <article><span>Pfadregel</span><strong>${escape(plan.pathSelection.rule)}</strong><small>${plan.pathSelection.multiplePathsAllowed ? 'Mehrere Pfade erlaubt · gemeinsames Attackenbudget' : 'Ein festgelegter Pfad'}</small></article>
   </div>`;

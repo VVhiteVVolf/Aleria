@@ -149,7 +149,9 @@ function entryCollections(profile = {}) {
     ['quirk', profile.quirks],
     ['condition', profile.conditions],
     ['ability', profile.abilities],
-    ['technique', profile.techniques]
+    ['technique', profile.techniques],
+    ['weapon', profile.weapons],
+    ['armor', profile.armorItems]
   ];
 }
 
@@ -186,6 +188,7 @@ export function collectCombatTriggerRules(profile = {}) {
   entryCollections(profile).forEach(([entryKind, entries]) => {
     (Array.isArray(entries) ? entries : []).forEach((entry, entryIndex) => {
       if (entry?.active === false) return;
+      if (['weapon', 'armor'].includes(entryKind) && entry?.equipped !== true) return;
       normalizeRules(entry).forEach((rule, ruleIndex) => {
         if (!rule.enabled) return;
         const entryId = text(entry?.id, 120) || `${entryKind}-${entryIndex + 1}`;
@@ -198,6 +201,8 @@ export function collectCombatTriggerRules(profile = {}) {
           entryName: text(entry?.name, 140) || rule.name || 'Unbenannte Regel',
           actionScope,
           requiredActionId: actionScope === 'entry' ? entryActionId : '',
+          requiredWeaponId: entryKind === 'weapon' ? entryId : '',
+          requiredInventoryItemId: entryKind === 'weapon' ? text(entry.inventoryItemId, 120) : '',
           ruleIndex,
           costs: getReactionCosts(rule, entry?.costs),
           abilityUsesCurrent: entryKind === 'ability' ? number(entry?.usesCurrent, 0, 0, 999) : null,
@@ -230,6 +235,12 @@ function conditionAllows(rule, state = {}) {
 }
 
 function actionAllows(rule, actionKind, profileActionId = '', state = {}) {
+  if (rule.requiredWeaponId) {
+    if (!['weapon', 'technique'].includes(actionKind)) return false;
+    const weapon = state.actorProfile?.weapon;
+    if (weapon?.id !== rule.requiredWeaponId
+      && !(rule.requiredInventoryItemId && weapon?.inventoryItemId === rule.requiredInventoryItemId)) return false;
+  }
   if (rule.actionKinds.length && !rule.actionKinds.includes(actionKind)) return false;
   if (rule.skillIds.length && (actionKind !== 'skill' || !rule.skillIds.includes(String(state.skillId || '').toLocaleLowerCase('de')))) return false;
   if (rule.actionScope === 'entry' && !rule.requiredActionId) return false;

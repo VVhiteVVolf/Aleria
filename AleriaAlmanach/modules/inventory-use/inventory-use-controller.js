@@ -1,10 +1,13 @@
+import { renderInventoryUseComposer, inventoryUseSelection } from './inventory-use-composer.js';
+import { deriveSceneItems, applySceneItemEvent } from '../scene-items/scene-items-model.js';
+import { applySceneItemInteraction } from '../scene-items/scene-item-interaction.js';
+import { resolveCombatProfile } from '../combat/combat-profile-resolver.js';
+import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js';
+import { resetCommentScopedResources } from '../combat/combat-action-economy.js';
+import { renderSceneItemEvent } from '../scene-items/scene-items-ui.js';
 import {
   applyInventoryUseToInventory,
-  getCharacterInventoryItems,
-  getInventoryItemQuantity,
-  inferInventoryUseMode,
-  prepareInventoryUse,
-  resolveInventoryUseMode
+  prepareInventoryUse
 } from './inventory-use-model.js?v=20260803-gawain-level4-v1';
 
 let latestComposerContext = null;
@@ -39,64 +42,17 @@ function getSafeImageSource(value) {
     : String(value || '');
 }
 
-function renderItemOption(item, selectedId) {
-  const quantity = getInventoryItemQuantity(item);
-  return `<option value="${escapeHtml(item.id)}"${String(item.id) === String(selectedId) ? ' selected' : ''}>${escapeHtml(item.name || 'Gegenstand')} · ${quantity}× · ${escapeHtml(item.type || item.category || 'Gegenstand')}</option>`;
-}
-
-function renderComposer(segment, actor, edit = false) {
-  if (String(segment?.kind || '') !== 'consume') return '';
-  if (segment.storedInventoryUse) {
-    const use = segment.storedInventoryUse;
-    return `<section class="inventory-use-composer is-locked" data-inventory-use-composer>
-      <div><span>Inventarvorgang</span><strong>${escapeHtml(use.item?.name || 'Gegenstand')}</strong></div>
-      <p>Dieser bereits gespeicherte Vorgang bleibt beim Bearbeiten unverändert.</p>
-    </section>`;
-  }
-  if (edit) {
-    return `<section class="inventory-use-composer is-warning" data-inventory-use-composer><p>Neue Inventarvorgänge können nur in einem neuen Beitrag angelegt werden.</p></section>`;
-  }
-  if (!actor) {
-    return `<section class="inventory-use-composer is-warning" data-inventory-use-composer><p>Wähle zuerst die Figur, die einen Gegenstand benutzt.</p></section>`;
-  }
-  const items = getCharacterInventoryItems(actor).filter(item => getInventoryItemQuantity(item) > 0);
-  if (!items.length) {
-    return `<section class="inventory-use-composer is-warning" data-inventory-use-composer><p>${escapeHtml(actor.name || 'Die Figur')} hat keine verfügbaren Gegenstände im Inventar.</p></section>`;
-  }
-  if (!items.some(item => String(item.id) === String(segment.inventoryItemId || ''))) {
-    segment.inventoryItemId = String(items[0].id || '');
-  }
-  const item = items.find(candidate => String(candidate.id) === String(segment.inventoryItemId)) || items[0];
-  const requestedMode = ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto';
-  const effectiveMode = resolveInventoryUseMode(item, requestedMode);
-  const image = getSafeImageSource(item.image);
-  const automaticLabel = inferInventoryUseMode(item) === 'consume' ? 'verbrauchen' : 'nur benutzen';
-  return `<section class="inventory-use-composer" data-inventory-use-composer>
-    <div class="inventory-use-composer-head">
-      ${image ? `<img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async">` : '<span aria-hidden="true">◆</span>'}
-      <div><span>Inventarvorgang</span><strong>${escapeHtml(effectiveMode === 'consume' ? 'Wird verbraucht' : 'Wird benutzt')}</strong></div>
-    </div>
-    <div class="inventory-use-composer-fields">
-      <label>Gegenstand<select data-inventory-use-input="itemId">${items.map(candidate => renderItemOption(candidate, item.id)).join('')}</select></label>
-      <label>Verhalten<select data-inventory-use-input="mode"><option value="auto"${requestedMode === 'auto' ? ' selected' : ''}>Automatisch · ${automaticLabel}</option><option value="consume"${requestedMode === 'consume' ? ' selected' : ''}>1 Stück verbrauchen</option><option value="use"${requestedMode === 'use' ? ' selected' : ''}>Nur benutzen</option></select></label>
-    </div>
-    <p>${effectiveMode === 'consume'
-      ? `Beim Eintragen wird der Online-Bestand von ${getInventoryItemQuantity(item)} auf ${Math.max(0, getInventoryItemQuantity(item) - 1)} gesetzt.`
-      : 'Der Gegenstand bleibt im Inventar und seine Benutzung wird im Abschnitt protokolliert.'}</p>
-  </section>`;
-}
-
 function mountComposers(context = {}) {
   latestComposerContext = context;
   const segments = Array.isArray(context.segments) ? context.segments : [];
-  const needsInventoryComposer = segments.some(segment => String(segment.kind || '') === 'consume');
+  const needsInventoryComposer = segments.some(segment => ['consume', 'interact'].includes(String(segment.kind || '')));
   const actors = needsInventoryComposer ? mergeActors(context.sceneActors || []) : [];
   segments.forEach(segment => {
     const card = context.list?.querySelector?.(`[data-segment-id="${CSS.escape(String(segment.id || ''))}"]`);
     card?.querySelector?.('[data-inventory-use-composer]')?.remove();
-    if (!card || String(segment.kind || '') !== 'consume') return;
+    if (!card || !['consume', 'interact'].includes(String(segment.kind || ''))) return;
     const actor = getActorForSegment(segment, context.selectedCharacterId, actors);
-    card.insertAdjacentHTML('beforeend', renderComposer(segment, actor, context.edit === true));
+    card.insertAdjacentHTML('beforeend', renderInventoryUseComposer(segment, actor, deriveSceneItems(globalThis.getCachedCommentsForThread?.(context.threadId) || []), context.edit === true));
   });
 }
 
@@ -108,6 +64,7 @@ function findComposerSegment(trigger) {
 function remount() {
   if (!latestComposerContext) return;
   mountComposers(latestComposerContext);
+  document.dispatchEvent(new CustomEvent('aleria:inventory-use-selection-changed'));
   globalThis.persistCommentDraft?.();
 }
 
@@ -116,17 +73,45 @@ function handleInput(field) {
   if (!segment || segment.storedInventoryUse) return;
   if (field.dataset.inventoryUseInput === 'itemId') segment.inventoryItemId = String(field.value || '');
   if (field.dataset.inventoryUseInput === 'mode') segment.inventoryUseMode = ['consume', 'use'].includes(field.value) ? field.value : 'auto';
+  if (field.dataset.inventoryUseInput === 'selection') {
+    const value=String(field.value || '');
+    const split=value.indexOf('|');
+    segment.inventorySource=split >= 0 ? value.slice(0,split) : 'inventory';
+    segment.inventoryItemId=segment.inventorySource === 'inventory' && split >= 0 ? value.slice(split+1) : '';
+    segment.sceneItemId=segment.inventorySource === 'scene' ? value.slice(split+1) : '';
+    segment.inventoryOperation='use';
+  }
+  if (field.dataset.inventoryUseInput === 'operation') segment.inventoryOperation=field.value;
+  if (field.dataset.inventoryUseInput === 'payment') segment.inventoryPaymentResource=field.value;
   remount();
 }
 
-function buildUsageSegment(segment, actor, workingInventories) {
+function buildUsageSegment(segment, actor, workingInventories, sceneItems, states, actors) {
   const actorKey = String(actor.id || '');
   const currentInventory = workingInventories.get(actorKey) || actor.inventory || {};
   const workingActor = { ...actor, inventory: currentInventory };
+  const consuming = (segment.kind || segment.commentKind) === 'consume';
+  if (segment.inventorySource === 'scene') {
+    const entry=sceneItems.get(segment.sceneItemId);
+    const profile=resolveCombatProfile(workingActor);
+    const state=states.get(actorKey) || {};
+    const resolved=overlayCombatHitPointState(profile, {...state, inventory:currentInventory,
+      resources:state.resources || resetCommentScopedResources(profile.resources)});
+    const applied=applySceneItemInteraction({entry,actor:resolved,
+      sourceActor:actors.find(actor=>actor.id === entry?.sourceActorId),
+      operation:consuming ? 'consume' : entry?.operation === 'drop' ? 'pickup' : segment.inventoryOperation || 'use',
+      paymentResource:segment.inventoryPaymentResource,usageId:'scene-use:'+Date.now()+':'+segment.clientSegmentId});
+    workingInventories.set(actorKey,applied.inventory);
+    states.set(actorKey,{...state,resources:applied.resources});
+    applySceneItemEvent(sceneItems,applied.inventoryUse.sceneItemEvent);
+    return applied.inventoryUse;
+  }
+  if ([...sceneItems.values()].some(entry=>entry.sourceActorId === actorKey && entry.item?.id === segment.inventoryItemId
+    && (entry.available || entry.claimedBy && entry.claimedBy !== actorKey))) throw new Error('Diese Waffe liegt nicht in der Hand. Zuerst aufheben.');
   const inventoryUse = prepareInventoryUse({
     character: workingActor,
     itemId: segment.inventoryItemId,
-    requestedMode: segment.inventoryUseMode,
+    requestedMode: consuming ? 'consume' : 'use',
     quantity: 1
   });
   if (inventoryUse.mode === 'consume' && inventoryUse.actorPersistence.kind !== 'character') {
@@ -139,15 +124,19 @@ function buildUsageSegment(segment, actor, workingInventories) {
 
 async function handleSubmission(submission = {}) {
   const segments = Array.isArray(submission.commentSegments) ? submission.commentSegments : [];
-  const consumeSegments = segments.filter(segment => String(segment?.kind || segment?.commentKind || '') === 'consume');
+  const consumeSegments = segments.filter(segment => ['consume','interact'].includes(String(segment?.kind || segment?.commentKind || '')) && (segment.inventoryItemId || segment.sceneItemId));
   if (!consumeSegments.length) return { handled: false };
   const actors = mergeActors(latestComposerContext?.sceneActors || []);
   const workingInventories = new Map();
+  const history=globalThis.getCachedCommentsForThread?.(submission.threadId) || [];
+  const sceneItems=deriveSceneItems(history);
+  const states=deriveCombatStateFromComments(history);
+  for (const [id,state] of states) if (state.resources) states.set(id,{...state,resources:resetCommentScopedResources(state.resources)});
   const usages = new Map();
   consumeSegments.forEach(segment => {
     const actor = getActorForSegment(segment, submission.characterId, actors);
     if (!actor) throw new Error('Für „Konsumieren“ ist keine Figur mit Inventar ausgewählt.');
-    usages.set(segment, buildUsageSegment(segment, actor, workingInventories));
+    usages.set(segment, buildUsageSegment(segment, actor, workingInventories, sceneItems, states, actors));
   });
   const enhancedSegments = segments.map(segment => {
     const { clientSegmentId, ...storedSegment } = segment;
@@ -159,6 +148,7 @@ async function handleSubmission(submission = {}) {
 function renderUsage(segment = {}) {
   const use = segment.inventoryUse;
   if (!use?.item?.name) return '';
+  if (use.sceneItemEvent) return renderSceneItemEvent(use.sceneItemEvent);
   const consumed = use.mode === 'consume';
   const image = getSafeImageSource(use.item.image);
   const quantity = consumed && use.quantityBefore != null && use.quantityAfter != null
@@ -191,6 +181,7 @@ globalThis.AleriaInventoryUse = Object.freeze({
       edit: context.edit === true
     });
   },
+  serializeSelection: inventoryUseSelection,
   handleSubmission,
   renderUsage
 });

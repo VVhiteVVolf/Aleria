@@ -16,6 +16,7 @@
           <div class="comment-segment-types">${getSegmentTypeButtons(segment)}</div>
           ${canRemove ? `<button type="button" class="comment-segment-remove" data-action="remove-comment-segment" data-segment-id="${escapeHtml(segment.id)}" title="Abschnitt entfernen">x</button>` : ''}
         </div>
+        ${segment.kind === 'sceneitem' ? window.AleriaSceneItems?.renderComposer?.(segment) || '' : `
         ${getCommentSegmentActorControl(segment, false)}
         ${getSegmentSideControl(segment, false)}
         ${getCommentLanguageControls(segment, false)}
@@ -26,8 +27,11 @@
         <div class="comment-segment-mechanics-host" data-segment-mechanics-host></div>
         ${buildCommentSegmentFormatToolbar(textareaId)}
         <textarea id="${textareaId}" class="comment-segment-textarea" rows="3" placeholder="${getCommentSegmentPlaceholder(segment.kind)}" data-action="set-comment-segment-text" data-segment-id="${escapeHtml(segment.id)}">${escapeHtml(segment.text)}</textarea>
+        `}
       </div>`;
   }).join('') + renderCommentDurationTotal(false);
+  window.AleriaSceneItems?.mountComposer?.(list, { segments: _commentSegments, onRender: renderCommentSegmentList,
+    onChange() { syncCommentSegmentsToLegacyText(); scheduleCommentFormPreviewUpdate(); persistCommentDraft(); } });
   window.AleriaSkillChecks?.mountComposer?.(list, {
     segments: _commentSegments,
     selectedCharacterId: _selectedCharId || '',
@@ -93,7 +97,7 @@ function setCommentSegmentKind(id, kind) {
     segment.combatPaymentMode = 'standard';
     segment.combatPaymentConfirmed = false;
   }
-  if (segment.kind !== 'consume') {
+  if (!['consume', 'interact'].includes(segment.kind)) {
     segment.inventoryItemId = '';
     segment.inventoryUseMode = 'auto';
   }
@@ -251,8 +255,9 @@ function buildCommentSegmentsForSave() {
   const base = getBaseCommentActorState();
   return _commentSegments
     .map(segment => ({ ...segment, text: String(segment.text || '').trim() }))
-    .filter(segment => segment.text)
+    .filter(segment => segment.text || segment.kind === 'sceneitem')
     .map(segment => {
+      if (_commentMode === 'narrator' && segment.kind === 'sceneitem') return window.AleriaSceneItems.serializeSegment(segment);
       if (_commentMode === 'narrator' || segment.kind === 'action') {
         return {
           clientSegmentId: segment.id,
@@ -312,8 +317,9 @@ function buildCommentSegmentsForSave() {
         skillChallengeDefenseMode: segment.skillChallengeDefenseMode === 'fixed' ? 'fixed' : 'passive',
         skillChallengeDefenseSkillId: String(segment.skillChallengeDefenseSkillId || 'deception'),
         skillRuleSelections: Array.isArray(segment.skillRuleSelections) ? segment.skillRuleSelections.map(selection => ({ ...selection })) : [],
-        inventoryItemId: segment.kind === 'consume' ? String(segment.inventoryItemId || '') : '',
-        inventoryUseMode: segment.kind === 'consume' && ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto',
+        ...(window.AleriaInventoryUse?.serializeSelection?.(segment) || {}),
+        inventoryItemId: ['consume', 'interact'].includes(segment.kind) ? String(segment.inventoryItemId || '') : '',
+        inventoryUseMode: ['consume', 'interact'].includes(segment.kind) && ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto',
         ...(commentSegmentUsesCombatResolution(segment) ? {
           combatTargetId: String(segment.combatTargetId || ''),
           combatTargetIds: [...new Set((segment.combatTargetIds || [segment.combatTargetId]).map(String).filter(Boolean))],

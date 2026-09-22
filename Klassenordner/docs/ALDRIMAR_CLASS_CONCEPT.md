@@ -18,7 +18,7 @@ Als Arbeitsbezeichnung dient **Huskarl-Waffenlehre**. Die Vorlage beschreibt die
 | 7–8 | Schritt des Huskarls | Verbindung der klassenüblichen Waffenwege |
 | 9–20 | Pfad des Schildwalls | Abwehr und Zusammenhalt |
 | 9–20 | Pfad des Vorstoßes | Druck und Raumgewinn |
-| 6–15, Hird/Maid | Hirdwacht | Praktische Milizfortsetzung; spätere Entwicklung offen |
+| 6–20, Hird/Maid | Hirdwacht | Praktische Milizfortsetzung mit erfahrenen Wachtmanövern |
 
 Die beiden Expertenpfade erhalten Merkmale auf 9, 13 und 17. Weitere Pfade kosten einen bereits verdienten Experten-Attackenslot; der erste ist ohne zusätzliche Slotkosten wählbar. Mehrfachqualifikation erhöht weder Budget noch Aktionen. Höhere Boni derselben Art ersetzen niedrigere. Jede Ritterklasse findet auch in nur einem Expertenpfad genügend Optionen für ihr Expertenbudget.
 
@@ -27,9 +27,11 @@ Die beiden Expertenpfade erhalten Merkmale auf 9, 13 und 17. Weitere Pfade koste
 - **Skeidr:** Axt, Hammer, Kolben, Sax und vorhandene Wurfwaffen. Kein automatischer Schaden an Schiffen, Tauen oder fremder Ausrüstung.
 - **Skjaldr:** bevorzugt zwei Äxte oder lange Streitaxt; Schildführung bleibt möglich. Zwei Äxte bedeuten zwei geführte Waffen, aber keinen doppelten Formel- oder Bonusansatz.
 - **Skytte:** Langbogen/Jagdbogen; vorhandener Kurzbogen bleibt nutzbar. Bereits die Grundauswahl soll einen Schuss, einen Speerstoß und eine Seitenwaffenfolge enthalten. Beide Expertenpfade enthalten echte Nahkampfangriffe.
-- **Hird/Maid:** Speer, Axt, Schwert und Rundschild. Die Milizfolge endet auf 15; kein automatischer Aufstieg in den Adel.
+- **Hird/Maid:** Speer, Axt, Schwert und Rundschild. Die Milizfolge reicht bis 20; kein automatischer Aufstieg in den Adel. Die vorhandene Schadenssteigerung älterer Milizattacken bleibt auf 15 begrenzt.
 
 Alle Optionen mit Würfeln, Kosten und Voraussetzungen stehen im [generierten Attackenkatalog](ALDRIMAR_ATTACK_CATALOG.md).
+
+Erweiterung vom 22. September 2026: **303 statt 111 Optionen**. Hird/Maid besitzt 35, Skjoldr, Thegnar, Skeidr, Skjaldr und Skytte je 48, Skalde 28. Jede Klasse erhält zwei zusätzliche Optionen auf jeder Stufe von 1 bis 8. Die fünf bisherigen Huskarl-Expertenklassen erhalten je sechs zusätzliche Optionen pro Expertenpfad; die Hirdwacht acht weitere Optionen bis Stufe 20. Alle Optionen behalten unterschiedliche Aktionspakete und strukturierte Effekte. Mehr Auswahl vergibt bestehenden Figuren keine Fähigkeiten automatisch. Die bisherigen Lernbudgets bleiben erhalten; Hird/Maid erhält für die neue späte Ausbildung je einen weiteren Platz auf 18 und 20, der Skalde ein eigenes Budget für nichtmagische Manöver.
 
 ## Ressourcen, Schaden und Zustände
 
@@ -72,11 +74,11 @@ Referenz ist `Charakter Archiv Exporte/freya-skald.json`, Stufe 5. Der auf relev
 | 3 | Person bezaubern, Person beruhigen |
 | 4 | Person wütend machen |
 | 5 | Stille, Arkaner Schrei |
-| 6–20 | **Offen** |
+| 6–20 | Weitere magische Lieder offen; nichtmagische Manöver und Waffenpfade ausgearbeitet |
 
 Die frühere Lernverteilung ist ein Vorschlag, kein behaupteter historischer Verlauf Freyas. Zaubergrade sind separat von Klassenstufen geführt. Kosten umfassen Aktion, Mana und bei Gradzaubern den vorhandenen Zauberplatz. Spottvers besitzt bereits einen strukturierten Malus; Bezaubern, Beruhigen, Zorn und Stille enthalten bislang überwiegend erzählerische Auswertung. Die Klassenseite behauptet dafür keine neue automatische Steuerung.
 
-Der Arkane Schrei bleibt die bestehende erschöpfende Referenz mit 3W6 Wucht bei misslungenem KON-Rettungswurf und 1W6 Eigenschaden; 39 Mana und eine Besondere Aktion. Anwendungserholung erfolgt bisher manuell. Die bekannte gruppenbezogene Eigenschadensauswertung und eine allgemeine dynamische Manakostenregel sind nicht mit dieser Seitenübernahme gelöst. Stufe 6–20 erhält keine neuen Skaldenboni, Zauber, Schadenssteigerungen oder Grants.
+Der Arkane Schrei bleibt die bestehende erschöpfende Referenz mit 3W6 Wucht bei misslungenem KON-Rettungswurf und 1W6 Eigenschaden; 39 Mana und eine Besondere Aktion. Anwendungserholung erfolgt bisher manuell. Die bekannte gruppenbezogene Eigenschadensauswertung und eine allgemeine dynamische Manakostenregel sind nicht mit dieser Seitenübernahme gelöst. Die Erweiterung ergänzt nichtmagische Stimm- und Waffenmanöver mit regulären Aktionskosten bis Stufe 20. Sie erzeugt weder neue Zauber noch automatische Grants und verändert Freyas gespeicherten Bogen nicht.
 
 ## Pflege und Prüfungen
 

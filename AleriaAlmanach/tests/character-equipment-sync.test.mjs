@@ -15,6 +15,21 @@ function baseProfile(overrides = {}) {
   return { weapons: [], armorItems: [], ...overrides };
 }
 
+test('aufgenommene Ausrüstung wird einmal ergänzt und ihr Ausrüstungszustand zurückgespiegelt', () => {
+  const item = { id: 'found', name: 'Gefundene Klinge', category: 'weapon', equipped: false,
+    equipmentLink: { kind: 'weapon', combatEntryId: 'found-blade' },
+    combatDefinition: { kind: 'weapon', damageFormula: '1d8', triggerRules: [{ id: 'blade-trait', effects: { damageModifier: 2 } }] } };
+  const input = { inventory: { items: [item] }, combatProfile: baseProfile(), addMissingEquipment: true };
+  const first = synchronizeEquipmentFromInventory(input);
+  assert.equal(first.combatProfile.weapons.length, 1);
+  assert.equal(first.combatProfile.weapons[0].triggerRules[0].id, 'blade-trait');
+  assert.equal(first.combatProfile.weapons[0].equipped, false);
+  first.inventory.items[0].equipped = true;
+  const repeated = synchronizeEquipmentFromInventory({ ...first, addMissingEquipment: true });
+  assert.equal(repeated.combatProfile.weapons.length, 1);
+  assert.equal(repeated.combatProfile.weapons[0].equipped, true);
+});
+
 test('direkt im Kampfbogen angelegte Waffen erzeugen genau einen stabil verknuepften Inventargegenstand', () => {
   const first = synchronizeEquipmentFromCombat({
     inventory: { items: [] },

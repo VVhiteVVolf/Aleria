@@ -1078,6 +1078,8 @@ test('zeigt auch ohne KI-Antwort eine vollstaendige Kampfauswertung', () => {
   );
   assert.equal(combatUiInternals.getNarrationSourceMeta({ source: 'aleria-gpt' }).key, 'aleria-gpt');
   assert.equal(combatUiInternals.getNarrationSourceMeta({ source: 'deterministic' }).key, 'system');
+  assert.equal(combatUiInternals.getNarrationSourceMeta({}).label, 'Regelauswertung');
+  assert.equal(combatUiInternals.getNarrationSourceMeta({ text: 'Alter Text' }).key, 'stored');
 });
 
 test('ruft AleriaGPT fuer eine neue Kampfauswertung tatsaechlich auf', async () => {

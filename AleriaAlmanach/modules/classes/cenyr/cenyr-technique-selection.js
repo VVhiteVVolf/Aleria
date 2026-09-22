@@ -13,7 +13,7 @@ import {
   selectCenyrTrainingOption
 } from './cenyr-class-training.js?v=20260909-dragon-parent-v2';
 import { getCenyrWeaponProfileId } from './cenyr-technique-weapon-rules.js?v=20260909-dragon-parent-v2';
-import { isDrachentanzCanonicalTechniqueId } from '../../combat-styles/drachentanz/drachentanz-training-migration.js?v=20260909-dragon-parent-v2';
+import { isDrachentanzCanonicalTechniqueId, migrateDrachentanzTechniqueResources } from '../../combat-styles/drachentanz/drachentanz-training-migration.js?v=20260909-dragon-parent-v2';
 
 const RECOMMENDED_EXPERT_PATHS = Object.freeze({
   teulu: FORM_IDS.ausgeglichener,
@@ -175,7 +175,7 @@ export function synchronizeCenyrSelectedTechniques(profile = {}, options = {}) {
     options.preserveExisting !== false
   ));
   next.techniques = [...retained, ...learned];
-  return next;
+  return migrateDrachentanzTechniqueResources(next);
 }
 
 export function selectCenyrTechniqueForSlot(profile = {}, selection = {}, options = {}) {

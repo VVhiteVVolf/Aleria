@@ -3,6 +3,7 @@
 const COMMENT_KIND_LABELS = {
   speech: 'Rede',
   action: 'Handlung',
+  sceneitem: 'Gegenstand Einfügen',
   interact: 'Interagieren',
   consume: 'Konsumieren',
   thought: 'Gedanke',
@@ -197,6 +198,11 @@ function splitCommentByEmoteMarkers(c) {
 }
 
 function renderCommentBubble(c, idx) {
+  if (c.sceneItemDraft && window.AleriaSceneItems) return window.AleriaSceneItems.renderDraft(c.sceneItemDraft);
+  if (c.sceneItemEvent && window.AleriaSceneItems) {
+    const actions = c._hideActions ? '' : c.serverValidatedMechanics ? renderMechanicalUndoButton(c.id) : renderCommentTransactionLock(c);
+    return `<div data-comment-id="${escapeHtml(c.id)}">${window.AleriaSceneItems.renderEvent(c.sceneItemEvent)}${actions}</div>`;
+  }
   if (c.combatStatus && window.AleriaCommentCombatMiniProfile?.renderStatusComment) {
     return window.AleriaCommentCombatMiniProfile.renderStatusComment(c);
   }
@@ -244,7 +250,7 @@ function renderCommentBubble(c, idx) {
     // Inventory changes are captured alongside hitPoints/resources in the server's undo snapshot, so a
     // combat+inventory-use comment is safely deletable too. Skill checks are not (separate claim record).
     const hasUnsupportedMechanics = c.commentSegments.some(segment => segment?.skillResolution || segment?.skillChallenge);
-    const mechanicalUndoEligible = mechanicalKinds.includes('combat')
+    const mechanicalUndoEligible = c.serverValidatedMechanics === true && mechanicalKinds.some(kind => kind === 'combat' || kind === 'inventory')
       && mechanicalKinds.every(kind => kind === 'combat' || kind === 'inventory')
       && !hasUnsupportedMechanics;
     return cleanSegments.map((segment, segmentIdx) => {
@@ -287,7 +293,8 @@ function renderCommentBubble(c, idx) {
       const inventoryUse = segment.inventoryUse
         ? (window.AleriaInventoryUse?.renderUsage?.(segment) || '')
         : '';
-      return `${bubble}${inventoryUse}${combatEvaluation}${skillEvaluation}${challengeStatus}`;
+      const droppedItems = combatResolutions.map(result => window.AleriaSceneItems?.renderEvent?.(result.criticalConsequence?.sceneItemEvent || {}) || '').join('');
+      return `${bubble}${inventoryUse}${combatEvaluation}${droppedItems}${skillEvaluation}${challengeStatus}`;
     }).join('');
   }
 

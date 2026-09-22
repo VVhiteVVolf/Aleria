@@ -5,6 +5,7 @@ import {
 } from './combat-encounter-aura.js?v=20260909-dragon-parent-v2';
 import { normalizeEncounterSnapshot, normalizeCombatEncounterSummary, getEncounterResolutionGroups } from './combat-encounter-summary.js';
 import { ENCOUNTER_TYPE_LABELS, ENCOUNTER_OUTCOME_LABELS, ENCOUNTER_REASON_LABELS } from './combat-encounter-outcome.js';
+import { getCombatRulesRelease } from './combat-rules-release.js';
 
 export const COMBAT_ENCOUNTER_EVENT_KIND = 'combat-encounter-event';
 export const COMBAT_ENCOUNTER_SCHEMA_VERSION = 2;
@@ -50,6 +51,7 @@ export function normalizeCombatEncounterEvent(value = {}) {
   return {
     kind: COMBAT_ENCOUNTER_EVENT_KIND,
     schemaVersion: COMBAT_ENCOUNTER_SCHEMA_VERSION,
+    criticalEffectsVersion: source.criticalEffectsVersion === 1 ? 1 : 0,
     encounterId: text(source.encounterId, 180),
     operation: OPERATIONS.has(operation) ? operation : 'add',
     title: text(source.title || 'Kampfankündigung', 180),
@@ -124,6 +126,15 @@ function applyCombatResolutionToEncounters(encounters, resolution = {}) {
 export function deriveCombatEncounterState(comments = []) {
   const encounters = new Map();
   (Array.isArray(comments) ? comments : []).forEach(comment => {
+    const release = getCombatRulesRelease(comment);
+    if (release) {
+      const encounter = encounters.get(String(release.encounterId));
+      if (encounter?.active) {
+        encounter.criticalEffectsVersion = 1;
+        encounter.revision = String(comment.id || encounter.revision);
+      }
+      return;
+    }
     if (isCombatEncounterComment(comment)) {
       const event = normalizeCombatEncounterEvent(comment.combatEncounter || comment);
       if (event.encounterId) {
@@ -138,6 +149,7 @@ export function deriveCombatEncounterState(comments = []) {
           events: []
         };
         if (event.operation === 'start') {
+          current.criticalEffectsVersion = event.criticalEffectsVersion;
           current.active = true;
           current.title = event.title;
           current.startedBy = text(comment.createdBy, 180);

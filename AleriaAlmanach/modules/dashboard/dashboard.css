@@ -93,7 +93,7 @@
 .archive-dashboard-panel-count { color: var(--almanach-muted); font-size: 0.8rem; }
 .archive-dashboard-panel-count[hidden] { display: none; }
 .archive-dashboard-panel-mark { color: var(--almanach-brass); font-size: 1.2rem; }
-.archive-dashboard-sections { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.65rem; }
+.archive-dashboard-sections { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: clamp(0.65rem, 1vw, 1rem); }
 .archive-dashboard-section {
   display: grid;
   grid-template-columns: 3rem minmax(0, 1fr) auto;
@@ -115,8 +115,8 @@
 .archive-dashboard-section-icon, .archive-dashboard-section-mark { display: grid; place-items: center; width: 3rem; height: 3rem; object-fit: contain; }
 .archive-dashboard-section-mark { color: var(--almanach-brass); border: 1px solid var(--almanach-line); }
 .archive-dashboard-section-copy { min-width: 0; display: grid; gap: 0.3rem; }
-.archive-dashboard-section-name { color: var(--almanach-ink); font: 600 0.77rem/1.4 'Cinzel', serif; overflow-wrap: normal; }
-.archive-dashboard-section-meta { color: var(--almanach-muted); font: 0.8rem/1.3 'EB Garamond', serif; }
+.archive-dashboard-section-name { color: var(--almanach-ink); font: 600 0.85rem/1.4 'Cinzel', serif; overflow-wrap: anywhere; }
+.archive-dashboard-section-meta { color: var(--almanach-muted); font: 0.95rem/1.4 'EB Garamond', serif; }
 .archive-dashboard-section-arrow { color: var(--almanach-brass); font-size: 1.1rem; }
 .archive-dashboard-section:hover .archive-dashboard-section-arrow { color: var(--almanach-green); }
 

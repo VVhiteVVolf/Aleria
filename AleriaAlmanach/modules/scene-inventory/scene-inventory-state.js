@@ -1,6 +1,6 @@
 // Inventory transfer calculations shared by the scene dialog and persistence flow.
 const SCENE_INVENTORY_EVENT_KIND = 'scene-inventory-transfer-event';
-const SCENE_INVENTORY_CURRENCY_VALUES = { gold: 1000, silver: 100, copper: 1 };
+const SCENE_INVENTORY_CURRENCY_VALUES = { gold: 1000, silver: 100, copper: 1, pfennig: 0.01 };
 let _sceneInventoryRegisterItem = null;
 
 function setSceneInventoryRegisterItem(item = null) {
@@ -41,7 +41,7 @@ function buildSceneMoneyTransfer(giver, receiver, currency, amount) {
   giverInventory.money = CharacterInventoryMoney.format(giverInventory.moneyState);
   receiverInventory.moneyState = CharacterInventoryMoney.splitCopper(CharacterInventoryMoney.getTotalCopper(receiverInventory.moneyState) + transferCopper);
   receiverInventory.money = CharacterInventoryMoney.format(receiverInventory.moneyState);
-  const labels = { gold: 'Gold', silver: 'Silber', copper: 'Kupfer' };
+  const labels = { gold: 'Gold', silver: 'Silber', copper: 'Kupfer', pfennig: 'Eisenpfennig' };
   return {
     giverInventory,
     receiverInventory,

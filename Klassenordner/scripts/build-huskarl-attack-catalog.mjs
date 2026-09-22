@@ -7,7 +7,7 @@ const plans = ALDRIMAR_CLASS_IDS.map(id => getAldrimarClassProgression(id, 20));
 const count = plans.reduce((sum, plan) => sum + plan.attackCatalog.length, 0);
 const lines = ['# Aldrimar · Waffenlehre und Klassenkatalog', '',
   '> Generiert aus `modules/classes/aldrimar/` und `modules/combat-styles/huskarl/`.', '',
-  `**${count} Waffenoptionen**, zwei Expertenpfade und sieben Klassenprofile. Neue Ausbildungen sind Entwürfe ohne automatische Vergabe. Skalde: ausschließlich Grundrepertoire nach Freya, Stufe 6–20 offen.`, '',
+  `**${count} Waffen- und Fähigkeitsoptionen**, zwei Expertenpfade und sieben Klassenprofile. Neue Ausbildungen sind Entwürfe ohne automatische Vergabe. Alle Klassen besitzen zusätzliche Optionen auf jeder Stufe von 1 bis 8. Skalde: nichtmagische Stimm- und Waffenmanöver bis Stufe 20, zusätzlich zum magischen Referenzrepertoire nach Freya.`, '',
   'Schadensvergleich: Referenzwaffe 1W10, ohne Attribut-, Ausrüstungs- oder Klassenboni. Echte Würfel stammen aus der aktiven Waffe; zwei Waffen verdoppeln nicht die Formel. Alte Formen wachsen nach dem begrenzten gemeinsamen Budget. Reine Vorbereitungen bleiben schadenslos.', '',
   '| Klasse | Waffen-Slots | Katalogoptionen |', '| --- | ---: | ---: |',
   ...plans.map(plan => `| ${plan.name} | ${plan.techniqueBudget.total} | ${plan.attackCatalog.length} |`), '',

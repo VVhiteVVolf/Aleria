@@ -244,6 +244,9 @@ function getEvaluationFallback(resolution) {
 }
 
 function getNarrationSourceMeta(narration = {}) {
+  if (!narration?.source && !String(narration?.text || '').trim()) {
+    return { key: 'system', label: 'Regelauswertung', title: 'Das Kampfergebnis steht fest. Eine erg\u00e4nzende Erz\u00e4hlung kann nachtr\u00e4glich erscheinen.' };
+  }
   const source = String(narration?.source || '').trim();
   if (source === 'aleria-gpt') {
     return { key: 'aleria-gpt', label: 'AleriaGPT-Erz\u00e4hlung', title: 'Diese Beschreibung wurde von AleriaGPT formuliert.' };
@@ -279,7 +282,9 @@ function renderEffectResult(result = {}) {
   if (effect.type === 'damage' && result.applied) {
     const response = result.applied.damageResponse?.response;
     const responseLabel = { resistant: 'Resistenz', vulnerable: 'Verwundbarkeit', immune: 'Immunität' }[response] || '';
-    return `<span>${recipient}<b>${escapeHtml(result.applied.incoming ?? result.amount ?? 0)} ${escapeHtml(effect.damageType || 'Schaden')}</b>${responseLabel ? ` · ${responseLabel} (roh ${escapeHtml(result.applied.rawIncoming ?? result.amount ?? 0)})` : ''}${result.applied.survival ? ' · Ungebrochener Berserker: 1 LP verbleibt; Rettung verbraucht' : ''}</span>`;
+    const protection = result.applied.equipmentProtection;
+    const protectionLabel = protection?.reduction ? ` · ${escapeHtml(protection.sources.map(source => source.armorName || source.name).join(', '))}: −${escapeHtml(protection.reduction)} Schaden` : '';
+    return `<span>${recipient}<b>${escapeHtml(result.applied.incoming ?? result.amount ?? 0)} ${escapeHtml(effect.damageType || 'Schaden')}</b>${responseLabel ? ` · ${responseLabel} (roh ${escapeHtml(result.applied.rawIncoming ?? result.amount ?? 0)})` : ''}${protectionLabel}${result.applied.survival ? ' · Ungebrochener Berserker: 1 LP verbleibt; Rettung verbraucht' : ''}</span>`;
   }
   if (effect.type === 'healing' && result.applied) return `<span>${recipient}Heilung: <b>+${escapeHtml(result.applied.restored ?? 0)} TP</b> · ${escapeHtml(result.applied.before?.current ?? 0)} → ${escapeHtml(result.applied.after?.current ?? 0)}</span>`;
   if (effect.type === 'temporary-hit-points' && result.applied) return `<span>${recipient}Temporäre TP: <b>+${escapeHtml(result.applied.granted ?? 0)}</b> · ${escapeHtml(result.applied.before?.temporary ?? 0)} → ${escapeHtml(result.applied.after?.temporary ?? 0)}</span>`;
@@ -400,6 +405,7 @@ export function renderCombatEvaluation(source = {}) {
           <strong>${escapeHtml(getEvaluationLabel(resolution))}</strong>
         </div>
         ${narration ? `<p>${escapeHtml(narration)}</p>` : ''}
+        ${resolution.criticalConsequence ? `<p class="combat-critical-consequence"><strong>W10 · ${escapeHtml(resolution.criticalConsequence.roll)} · ${escapeHtml(resolution.criticalConsequence.name)}</strong><br>${escapeHtml(resolution.criticalConsequence.actorName)}: ${escapeHtml(resolution.criticalConsequence.description)}</p>` : ''}
         <div class="combat-evaluation-mechanics">
           <span><b>${escapeHtml(attack.total)}</b> ${rollLabel} · ${escapeHtml(attack.notation || '')}</span>
           <span>gegen <b>${escapeHtml(attack.targetDefense)}</b> ${defenseLabel}</span>

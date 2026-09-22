@@ -5,6 +5,7 @@ import { deriveCombatEncounterState } from '../generated/combat/combat-encounter
 import { isTrustedSceneContributionComment, sortSceneHistory } from './trusted-scene-history.js';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 import { findLaterMechanicalDependency } from './mechanical-comment-dependencies.js';
+import { getCombatRulesRelease } from '../generated/combat/combat-rules-release.js';
 
 function fail(code, message) {
   throw new HttpsError(code, message);
@@ -70,6 +71,8 @@ async function verifyAndRevertMechanicalUndo(transaction, database, mechanicalUn
     if (entry.before?.abilities !== undefined) values['combatProfile.abilities'] = entry.before.abilities;
     if (entry.before?.progression !== undefined) values['combatProfile.progression'] = entry.before.progression;
     if (entry.before?.inventory !== undefined) values.inventory = entry.before.inventory;
+    if (entry.before?.weapons !== undefined) values['combatProfile.weapons'] = entry.before.weapons;
+    if (entry.before?.armorItems !== undefined) values['combatProfile.armorItems'] = entry.before.armorItems;
     values['combatProfile.lastMechanicalCommentId'] = entry.previousMechanicalCommentId || FieldValue.delete();
     const changedSections = ['combatProfile'];
     if (entry.before?.inventory !== undefined) changedSections.push('inventory');
@@ -91,20 +94,13 @@ function hasUnsupportedMechanics(comment = {}) {
   return segments.some(segment => segment?.skillResolution || segment?.skillChallenge);
 }
 
-export const commitUndoMechanicalComment = onCall({
-  region: 'europe-west1',
-  maxInstances: 10,
-  concurrency: 20,
-  enforceAppCheck: false,
-  timeoutSeconds: 30
-}, async request => {
+export async function undoMechanicalCommentOperation(request, { database = getFirestore() } = {}) {
   if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   const entryId = clean(request.data?.entryId, 240);
   const commentId = clean(request.data?.commentId, 240);
   const force = request.data?.force === true;
   if (!entryId || !commentId) fail('invalid-argument', 'Szene und Beitrag sind erforderlich.');
 
-  const database = getFirestore();
   const commentRef = database.collection('comments').doc(commentId);
   let skippedReversal = [];
 
@@ -126,6 +122,10 @@ export const commitUndoMechanicalComment = onCall({
     const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const history = sortSceneHistory(threadSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
       .filter(isTrustedSceneContributionComment);
+    const commentIndex = history.findIndex(entry => entry.id === commentId);
+    if (getCombatRulesRelease(comment) || (commentIndex >= 0 && history.slice(commentIndex + 1).some(getCombatRulesRelease))) {
+      fail('failed-precondition', 'Dieser Beitrag liegt vor einer veröffentlichten Regelumstellung. Eine automatische Rücknahme würde alte Ausrüstungsdaten wiederherstellen; der bisherige Kampfverlauf bleibt erhalten.');
+    }
     const dependent = findLaterMechanicalDependency(history, commentId);
     if (!force && dependent) fail('failed-precondition', `Eine neuere Handlung hängt von diesem Kampfstand ab: ${describeComment(dependent)}. Nimm zuerst den neueren Beitrag zurück.`);
     if (comment.commentKind === 'combat-encounter-event') {
@@ -163,7 +163,11 @@ export const commitUndoMechanicalComment = onCall({
   });
 
   return { id: commentId, deleted: true, skippedReversal };
-});
+}
+
+export const commitUndoMechanicalComment = onCall({
+  region: 'europe-west1', maxInstances: 10, concurrency: 20, enforceAppCheck: false, timeoutSeconds: 30
+}, request => undoMechanicalCommentOperation(request));
 
 export const undoMechanicalCommentInternals = Object.freeze({
   describeComment,

@@ -456,31 +456,6 @@
     cursor: default;
   }
 
-  #comment-form-overlay .comment-form-card {
-    width: 100vw !important;
-    height: 100vh !important;
-    height: 100dvh !important;
-    max-height: none !important;
-  }
-
-  #comment-form-overlay .cf-char-picker {
-    grid-template-columns: repeat(auto-fill, minmax(124px, 1fr)) !important;
-    max-height: 292px !important;
-  }
-
-  #comment-form-overlay .cf-char-option img,
-  #comment-form-overlay .cf-char-option-placeholder {
-    width: 90px !important;
-    height: 90px !important;
-  }
-
-  #comment-form-overlay .cf-emote-picker {
-    grid-template-columns: repeat(auto-fill, minmax(152px, 1fr)) !important;
-    max-height: 495px !important;
-  }
-
-  #comment-form-overlay .cf-emote-option img {
-    min-height: 152px !important;
-  }
+  /* Dimensions inside the new-comment dialog belong to comment-composer.css. */
 
 

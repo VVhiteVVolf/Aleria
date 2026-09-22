@@ -3,6 +3,8 @@
 // replaying stored combat resolutions into the current scene state.
 
 import { resetCommentScopedResources } from './combat-action-economy.js?v=20260905-resource-balance-v2';
+import { applyCriticalConsequencesForComment, capCriticalResources } from '../combat-critical/combat-critical-model.js';
+import { sceneItemEvents, applySceneItemEvent, applyDroppedWeaponsToStates } from '../scene-items/scene-items-model.js';
 import { preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import { reconcileClassDamageCondition } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
 import { applySceneRestCommentToStateMap } from '../scene-rest/scene-rest-model.js?v=20260906-character-vitality-v1';
@@ -237,12 +239,21 @@ function getStoredResolutions(comment = {}) {
   return comment.combatResolution?.targetId ? [comment.combatResolution] : [];
 }
 
+import { getCombatRulesRelease, applyCombatRulesReleaseToStates } from './combat-rules-release.js';
+
 export function deriveCombatStateFromComments(comments = [], position = {}) {
   const states = new Map();
+  const sceneItems = new Map();
   let sceneDay = 1;
   const stopCommentId = String(position.commentId || '');
   const stopSegmentIndex = Number.isInteger(position.segmentIndex) ? position.segmentIndex : null;
   for (const comment of (Array.isArray(comments) ? comments : [])) {
+    const release = getCombatRulesRelease(comment);
+    if (release) {
+      if (stopCommentId && String(comment.id || '') === stopCommentId) break;
+      applyCombatRulesReleaseToStates(states, release);
+      continue;
+    }
     // Administrative status changes are not a turn: no resource recovery or duration tick.
     if (comment.combatStatus) {
       if (stopCommentId && String(comment.id || '') === stopCommentId) break;
@@ -267,8 +278,11 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
           const resolutions = Array.isArray(segment?.combatResolutions) && segment.combatResolutions.length
             ? segment.combatResolutions
             : [segment?.combatResolution];
-          const inventoryCondition = segment?.inventoryUse?.conditionSnapshot ? {
-            actorId: segment.inventoryUse.actorId, actorConditionSnapshot: segment.inventoryUse.conditionSnapshot
+          const inventoryCondition = segment?.inventoryUse ? {
+            actorId: segment.inventoryUse.actorId, actorConditionSnapshot: segment.inventoryUse.conditionSnapshot,
+            actorResourceSnapshot: segment.inventoryUse.resourceSnapshot,
+            actorInventorySnapshot: segment.inventoryUse.inventorySnapshot,
+            sceneItemEvent: segment.inventoryUse.sceneItemEvent
           } : null;
           return resolutions.concat(segment?.skillResolution || [], inventoryCondition || [])
             .filter(Boolean)
@@ -278,6 +292,10 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
     for (const entry of entries) {
       if (isStopComment && stopSegmentIndex != null && entry.index >= stopSegmentIndex) break;
       const resolution = entry.resolution;
+      if (resolution.sceneItemEvent) {
+        applySceneItemEvent(sceneItems, resolution.sceneItemEvent);
+        applyDroppedWeaponsToStates(states, sceneItems);
+      }
       const state = getResolutionHitPointState(resolution);
       if (state) {
         const previous = states.get(String(resolution.targetId)) || {};
@@ -356,6 +374,9 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
     // All contribution kinds advance clocks. Conditions remain active for the
     // complete contribution and expire only after its final segment.
     advanceTemporaryConditionsForComment(states, comment, { conditionIdsByActor: conditionIdsBeforeComment });
+    applyCriticalConsequencesForComment(states, comment);
+    for (const event of sceneItemEvents(comment)) applySceneItemEvent(sceneItems, event);
+    applyDroppedWeaponsToStates(states, sceneItems);
     applySceneRestCommentToStateMap(states, comment);
     applyCombatEncounterCommentToStateMap(states, comment);
     const nextDay = Number(comment.sceneTimeEvent?.anchorDay) || sceneDay;
@@ -380,7 +401,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     normalized.maximum = profile.maximumHitPoints;
   }
   const storedResources = Array.isArray(state.resources) ? normalizeCombatResources(state.resources) : null;
-  const resources = storedResources
+  let resources = storedResources
     ? normalizeCombatResources(profile.resources).map(resource => {
         const stored = storedResources.find(item => item.id === resource.id);
         return stored ? {
@@ -409,6 +430,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
   const temporaryConditions = Array.isArray(state.temporaryConditions)
     ? state.temporaryConditions.map(reconcileClassDamageCondition).map(normalizeRuntimeCondition).filter(condition => condition.active !== false)
     : [];
+  resources = capCriticalResources(resources, temporaryConditions);
   const temporaryMechanics = temporaryConditions.reduce((result, condition) => {
     const mechanics = condition?.mechanics || {};
     ['attack', 'damage', 'armorClass', 'savingThrow', 'skill', 'spellAttack', 'spellSaveDc', 'passivePerception', 'movement', 'initiative'].forEach(key => {
@@ -472,6 +494,10 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
   } : profile.aiSnapshot;
   return {
     ...profile,
+    droppedWeapons: state.droppedWeapons || [],
+    weaponUnavailable: ['weapon', 'technique'].includes(profile.profileActionKind)
+      && (state.droppedWeapons || []).some(entry => entry.weaponId === profile.weapon?.id
+        || (profile.weapon?.inventoryItemId && entry.item?.id === profile.weapon.inventoryItemId)),
     currentHitPoints: normalized.current,
     maximumHitPoints: normalized.maximum || profile.maximumHitPoints,
     temporaryHitPoints: normalized.temporary,

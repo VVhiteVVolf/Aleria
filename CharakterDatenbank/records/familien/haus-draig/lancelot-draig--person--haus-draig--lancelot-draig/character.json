@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-13T18:13:16.437Z",
+    "sourceExportedAt": "2026-09-22T12:00:00.000Z",
     "sourceUpdatedAt": "2026-09-03T23:41:36.356Z",
     "sourceDocumentIds": [
       "person--haus-draig--lancelot-draig"
     ],
-    "contentHash": "20128c9080a60f5ad58517c9ca1cd2dc7f2cc858ff96c3f2f11fda9e7e4575f6"
+    "contentHash": "a3fb2a920d41501ea5c49baf5d0c58d2c881ed2a6ec7c38aa99f88178e07c833"
   },
   "local": {
     "notes": "",
@@ -287,8 +287,8 @@
           "personId": "lancelot-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-13T18:13:16.437Z",
-          "lastSyncedAt": "2026-09-13T18:13:16.437Z",
+          "importedAt": "2026-09-22T12:00:00.000Z",
+          "lastSyncedAt": "2026-09-22T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-neidr&mode=view&person=lancelot-draig",
           "fingerprint": "{\"name\":\"Lancelot Draig\",\"title\":\"\",\"birth\":\"1411\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/lancelot-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwyneth-neidr\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--gwyneth-neidr\",\"name\":\"Gwyneth Neidr\"}],\"children\":[]}}"
         }

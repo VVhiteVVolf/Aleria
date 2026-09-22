@@ -23,3 +23,13 @@ Die aktuelle Zuordnung aller 23 Rhiannon-Zauber steht in [SPELL_ACTION_ECONOMY.m
 # Play-Chronologie
 
 Der **9. Lichtkehr 1740 (09.03.1740)** ist unveränderlich **Tag 1 des Plays**. Der 10. Lichtkehr ist Tag 2, der 11. Tag 3; frühere Daten werden als **Vergangenheit** bezeichnet. Die Zählung gilt szenenübergreifend und verwendet den Aleria-Kalender mit 36 Tagen pro Monat und 13 Monaten pro Jahr. `AleriaCalendar.playStartDate`, `playDay` und `playDayLabel` sind die gemeinsame Quelle. Aktuelles Weltdatum und Szenenbeginn dürfen den Playbeginn nicht verschieben. Gespeicherte relative Szenenuhren und mechanische Erholungsschlüssel dürfen nicht zur Korrektur einer Play-Tagesanzeige umnummeriert werden.
+
+# Freigegebene Veröffentlichung während des Gildas–Gawain-Duells
+
+Ylva Wolfshorn (Skytte 7), Asgeir Wolfshorn/Bleiddorn (Skjaldr 7) und Ylvas Gramnir Freki (4) gehören zur freigegebenen Veröffentlichung. Bestehende Online-IDs erhalten; Release- und Verknüpfungsdetails: [Wolfshorn-Kampfbögen](AleriaAlmanach/docs/combat/WOLFSHORN_COMBAT_SHEETS.md).
+
+Die Aldrimar-Erweiterung umfasst 303 Katalogoptionen (zuvor 111), mindestens zwei zusätzliche Möglichkeiten pro Klasse und Stufe 1–8 sowie weitere Pfadoptionen. Freki erhält sechs aktive Manöver und einmalig 15 % mehr TP: 33 → **38**, aufgerundet. Bei späteren Importen diesen Aufschlag nicht erneut anwenden.
+
+Die zuletzt festgelegten Ausrüstungswerte stehen in der unten verlinkten Übernahme-Liste: Silberschuppe −2 Schaden gegen Hieb/Stich, Gafyr-Plattenrüstung −2 gegen alles außer Stich; beide ohne zusätzlichen RK-Bonus. Drachenzahn +1 Schaden und +2 bei kritischem Treffer (nicht nochmals verdoppelt); Pflichtschwur +1 Angriff/+1 Schaden ohne kritischen Zusatzeffekt. Frühere Vorschläge wie Schuppenpolster oder Wachtstellung sind ersetzt.
+
+Am 22. September 2026 hat der Nutzer die vorherige Veröffentlichungssperre ausdrücklich aufgehoben: **sämtliche Änderungen auf master pushen, veröffentlichen und online einsatzbereit machen.** Der bisherige Gildas–Gawain-Kampfverlauf einschließlich aller Würfe und Effekte muss unverändert bleiben; kommende Handlungen verwenden die neuen Regeln. Bestehende Beiträge niemals neu auswerten oder überschreiben. Die administrative `combat-rules-release`-Grenze aktiviert kritische Nebeneffekte für kommende Handlungen, gleicht Inventarsnapshots ab und darf weder Aktionsressourcen auffüllen noch Zustandsdauern fortschreiben. Automatische Rücknahmen über diese Grenze sind gesperrt, damit alte Ausrüstungsdaten nicht wiederhergestellt werden. Live-TP, Ressourcen, Zustände, Besitz und Online-IDs erhalten. Details: [Ausrüstungsübernahme](AleriaAlmanach/docs/inventory/PENDING_DUEL_EQUIPMENT_RELEASE.md).

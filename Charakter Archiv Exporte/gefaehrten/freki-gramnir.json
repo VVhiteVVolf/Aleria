@@ -1,0 +1,1629 @@
+{
+  "type": "aleria-creature",
+  "version": 4,
+  "exportedAt": "2026-09-22T04:57:21.983Z",
+  "creature": {
+    "schemaVersion": 4,
+    "entityType": "creature",
+    "itemOrigin": {
+      "instanceId": "ylva-freki",
+      "inventoryItemId": "ylva-freki",
+      "templateId": "gramnir",
+      "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO",
+      "ownerCharacterName": "Ylva Wolfshorn",
+      "disposition": "owned"
+    },
+    "needsStatReview": false,
+    "name": "Freki",
+    "type": "Wolfsgefährte",
+    "species": "Gramnir · Nordwolf",
+    "habitat": "Hornhall, Dämmergrund · Clan Wolfshorn",
+    "challengeRating": 4,
+    "size": "Mittel",
+    "level": 4,
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://i.imgur.com/jO6WUgH.png",
+        "emotes": [],
+        "createdAt": "",
+        "updatedAt": ""
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "https://i.imgur.com/jO6WUgH.png",
+    "avatars": [],
+    "portraitCaption": "Freki, Ylva Wolfshorns Gramnir-Gefährte.",
+    "templateId": "",
+    "instanceOrdinal": 0,
+    "combatProfile": {
+      "schemaVersion": 11,
+      "revision": 0,
+      "identity": {
+        "ancestry": "Gramnir · Nordwolf",
+        "archetype": "Wolfsgefährte",
+        "background": "Hornhall, Dämmergrund · Clan Wolfshorn"
+      },
+      "templateSelections": {
+        "schemaVersion": 1,
+        "ancestryId": "",
+        "backgroundId": "",
+        "classId": "",
+        "attributeMethod": "",
+        "appliedAt": ""
+      },
+      "proficiencies": {
+        "armor": [],
+        "weapons": [],
+        "tools": [],
+        "languages": [],
+        "notes": ""
+      },
+      "progression": {
+        "level": 4,
+        "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [],
+        "experience": 0,
+        "nextLevelExperience": null,
+        "experienceReward": null,
+        "proficiencyBonusOverride": null
+      },
+      "attributes": [
+        {
+          "key": "strength",
+          "label": "Kraft",
+          "shortLabel": "KRF",
+          "score": 14,
+          "modifierOverride": null
+        },
+        {
+          "key": "dexterity",
+          "label": "Geschick",
+          "shortLabel": "GES",
+          "score": 14,
+          "modifierOverride": null
+        },
+        {
+          "key": "constitution",
+          "label": "Konstitution",
+          "shortLabel": "KON",
+          "score": 14,
+          "modifierOverride": null
+        },
+        {
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "shortLabel": "INT",
+          "score": 3,
+          "modifierOverride": null
+        },
+        {
+          "key": "wisdom",
+          "label": "Weisheit",
+          "shortLabel": "WEI",
+          "score": 14,
+          "modifierOverride": null
+        },
+        {
+          "key": "charisma",
+          "label": "Charisma",
+          "shortLabel": "CHA",
+          "score": 8,
+          "modifierOverride": null
+        }
+      ],
+      "hitPoints": {
+        "current": 38,
+        "temporary": 0,
+        "hitDie": 8,
+        "averagePerLevelOverride": null,
+        "maximumOverride": 38
+      },
+      "armorClass": {
+        "base": 11,
+        "dexterityMode": "full",
+        "dexterityCap": 2,
+        "shieldBonus": 0,
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "override": null,
+        "overrideMode": "total"
+      },
+      "combat": {
+        "movement": 12,
+        "initiativeBonus": 0,
+        "attackBonus": 0,
+        "damageBonus": 0,
+        "passivePerceptionBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "mounted": false
+      },
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "dexterity",
+          "proficient": true,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "constitution",
+          "proficient": true,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "intelligence",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "wisdom",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "charisma",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        }
+      ],
+      "skills": [
+        {
+          "id": "freki-wahrnehmung",
+          "name": "Wahrnehmung",
+          "attributeKey": "wisdom",
+          "proficiency": "trained",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "freki-faehrte",
+          "name": "Überleben",
+          "attributeKey": "wisdom",
+          "proficiency": "trained",
+          "bonus": 0,
+          "notes": "Fährten über Geruch und Bodenzeichen verfolgen."
+        },
+        {
+          "id": "freki-heimlichkeit",
+          "name": "Heimlichkeit",
+          "attributeKey": "dexterity",
+          "proficiency": "trained",
+          "bonus": 0,
+          "notes": ""
+        }
+      ],
+      "weapons": [
+        {
+          "id": "freki-biss",
+          "inventoryItemId": "",
+          "name": "Biss",
+          "image": "",
+          "weaponProfileId": "",
+          "triggerRules": [],
+          "weaponType": "natural",
+          "training": "simple",
+          "damageFormula": "1d6",
+          "versatileDamageFormula": "",
+          "damageType": "Stich",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf · 1,5 m",
+          "properties": "Naturwaffe",
+          "notes": "Ein einzelner gezielter Biss. Keine zusätzlichen Rudelattacken.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": true
+        },
+        {
+          "id": "default-unarmed-melee",
+          "inventoryItemId": "",
+          "name": "Nahkampf",
+          "image": "",
+          "weaponProfileId": "",
+          "triggerRules": [],
+          "weaponType": "unarmed",
+          "training": "simple",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
+        }
+      ],
+      "armorItems": [],
+      "resources": [
+        {
+          "id": "inspiration",
+          "name": "Inspiration",
+          "current": 0,
+          "maximum": 1,
+          "recovery": "manual",
+          "scope": "persistent",
+          "category": "",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "mana-focus",
+          "name": "Mana",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "magic",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "focus",
+          "name": "Fokus",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "focus",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "celestial-points",
+          "name": "Celestiale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "celestial",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "infernal-points",
+          "name": "Infernale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "infernal",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "pact-points",
+          "name": "Paktpunkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "pact",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "action",
+          "name": "Aktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "bonus-action",
+          "name": "Bonusaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "reaction",
+          "name": "Reaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "special-action",
+          "name": "Besondere Aktion",
+          "current": 2,
+          "maximum": 2,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "notes": ""
+        },
+        {
+          "id": "aura-focus",
+          "name": "Aura-Fokuspunkt",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "paymentRole": "universal-substitute",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "notes": ""
+        }
+      ],
+      "techniques": [
+        {
+          "id": "freki-schnappen",
+          "name": "Schneller Fang",
+          "status": "confirmed",
+          "trainingForm": "Gramnir · Jagdausbildung",
+          "minimumLevel": 4,
+          "category": "technique",
+          "description": "Ein kurzer Schnapper verursacht 1W4 + KRF Stichschaden. Ein einzelner Angriff ohne zusätzliche Wirkung.",
+          "effect": "Ein kurzer Schnapper verursacht 1W4 + KRF Stichschaden. Ein einzelner Angriff ohne zusätzliche Wirkung.",
+          "activationType": "bonus-action",
+          "weaponTypes": [
+            "natural"
+          ],
+          "compatibleWeaponIds": [
+            "freki-biss"
+          ],
+          "damageFormula": "1d4",
+          "damageModel": {
+            "mode": "fixed",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
+          "damageType": "Stich",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "range": "Nahkampf · 1,5 m",
+          "target": "Ein Gegner",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "mechanicNotes": [],
+          "effects": [
+            {
+              "id": "freki-schnappen-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "costs": [
+            {
+              "id": "freki-schnappen-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "classWeaponProfiles": {},
+            "slotBands": [],
+            "designNotes": "",
+            "assignedSlotId": "",
+            "selectedAtLevel": null,
+            "sourceStatus": ""
+          }
+        },
+        {
+          "id": "freki-fesselbiss",
+          "name": "Fesselbiss",
+          "status": "confirmed",
+          "trainingForm": "Gramnir · Jagdausbildung",
+          "minimumLevel": 4,
+          "category": "technique",
+          "description": "1W6 + KRF Stichschaden. Nach Treffer KRF-Rettungswurf gegen SG 12; bei Fehlschlag −2 m Bewegung für einen eigenen Beitrag. Keine vollständige Fesselung.",
+          "effect": "1W6 + KRF Stichschaden. Nach Treffer KRF-Rettungswurf gegen SG 12; bei Fehlschlag −2 m Bewegung für einen eigenen Beitrag. Keine vollständige Fesselung.",
+          "activationType": "action",
+          "weaponTypes": [
+            "natural"
+          ],
+          "compatibleWeaponIds": [
+            "freki-biss"
+          ],
+          "damageFormula": "1d6",
+          "damageModel": {
+            "mode": "fixed",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
+          "damageType": "Stich",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "range": "Nahkampf · 1,5 m",
+          "target": "Ein Gegner",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "mechanicNotes": [],
+          "effects": [
+            {
+              "id": "freki-fesselbiss-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "costs": [
+            {
+              "id": "freki-fesselbiss-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "freki-fesselbiss-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "freki-fesselbiss-failed-save",
+              "name": "Verbissener Schritt",
+              "duration": "1 eigener Beitrag",
+              "description": "−2 m Bewegung für einen eigenen Beitrag.",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": -2,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "classWeaponProfiles": {},
+            "slotBands": [],
+            "designNotes": "",
+            "assignedSlotId": "",
+            "selectedAtLevel": null,
+            "sourceStatus": ""
+          }
+        },
+        {
+          "id": "freki-jagdsprung",
+          "name": "Wuchtiger Jagdsprung",
+          "status": "confirmed",
+          "trainingForm": "Gramnir · Jagdausbildung",
+          "minimumLevel": 4,
+          "category": "technique",
+          "description": "Ein kraftvoller Biss verursacht 2W6 + KRF Stichschaden. Kein automatisches Umwerfen, kein zweiter Angriff und keine zusätzliche Bewegung.",
+          "effect": "Ein kraftvoller Biss verursacht 2W6 + KRF Stichschaden. Kein automatisches Umwerfen, kein zweiter Angriff und keine zusätzliche Bewegung.",
+          "activationType": "action",
+          "weaponTypes": [
+            "natural"
+          ],
+          "compatibleWeaponIds": [
+            "freki-biss"
+          ],
+          "damageFormula": "2d6",
+          "damageModel": {
+            "mode": "fixed",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
+          "damageType": "Stich",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "range": "Nahkampf · 1,5 m",
+          "target": "Ein Gegner",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "mechanicNotes": [],
+          "effects": [
+            {
+              "id": "freki-jagdsprung-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "costs": [
+            {
+              "id": "freki-jagdsprung-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "freki-jagdsprung-special-action-2",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false,
+            "attributeKey": "constitution",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "technique-save-condition",
+              "name": "",
+              "duration": "",
+              "description": "",
+              "mechanics": {
+                "attack": 0,
+                "damage": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "skill": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "spellSaveDc": 0,
+                "movement": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "passivePerception": 0,
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": []
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false,
+            "sameTarget": true,
+            "damageFormula": "",
+            "damageType": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "inheritDamageModifier": true,
+            "inheritBonusDamage": true,
+            "repeatCount": 1,
+            "triggerReactions": true,
+            "repeatPerAttackRules": true,
+            "triggerFurtherEffects": false
+          },
+          "cenyrTraining": {
+            "branchId": "",
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "classWeaponProfiles": {},
+            "slotBands": [],
+            "designNotes": "",
+            "assignedSlotId": "",
+            "selectedAtLevel": null,
+            "sourceStatus": ""
+          }
+        }
+      ],
+      "classTraining": {
+        "schemaVersion": 2,
+        "curriculumId": "",
+        "selections": [],
+        "techniqueSelections": []
+      },
+      "quirks": [
+        {
+          "id": "freki-eigensinn",
+          "name": "Wachsamer Eigensinn",
+          "type": "quirk",
+          "description": "Treue muss verdient werden. Freki vertraut Ylva, beobachtet Fremde auf Abstand und duldet keine Behandlung als Spielzeug.",
+          "appliesWhen": "",
+          "trigger": "",
+          "target": "self",
+          "duration": "",
+          "stacking": "normal",
+          "tags": "",
+          "limitations": "",
+          "aiInstructions": "",
+          "priority": 0,
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": []
+        }
+      ],
+      "conditions": [],
+      "damageAffinities": [],
+      "abilities": [
+        {
+          "id": "freki-flankenlauf",
+          "name": "Flankenlauf",
+          "description": "+3 m Bewegungsbudget für einen eigenen Beitrag. Keine freie Bewegung und kein automatisches Entkommen aus einer Bindung.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "bonus-action",
+          "delivery": "ability",
+          "resolutionType": "automatic",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": true,
+          "target": "Selbst",
+          "range": "Selbst",
+          "duration": "Ein eigener Gesamtbeitrag; temporäre TP gemäß Kampfregeln",
+          "requirements": "",
+          "tags": "Gramnir · Jagdausbildung",
+          "aiInstructions": "",
+          "effects": [
+            {
+              "id": "freki-flankenlauf-condition",
+              "type": "buff",
+              "target": "self",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": false,
+              "magical": false,
+              "on": "always",
+              "resourceId": "",
+              "condition": {
+                "id": "freki-flankenlauf-condition",
+                "name": "Flankenlauf",
+                "description": "+3 m Bewegung für einen eigenen Beitrag.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": "1 eigener Beitrag"
+                },
+                "tags": "Drachentanz",
+                "mechanics": {
+                  "movement": 3
+                },
+                "active": true,
+                "remainingActorComments": 1,
+                "remainingSceneComments": 0,
+                "ward": {
+                  "enabled": false,
+                  "charges": 0,
+                  "deflectChance": 100,
+                  "breaksOnCriticalHit": false
+                }
+              },
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": "+3 m Bewegung für einen eigenen Beitrag."
+            }
+          ],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [
+            {
+              "id": "freki-flankenlauf-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "freki-flankenlauf-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        },
+        {
+          "id": "freki-ducken",
+          "name": "Geduckte Wacht",
+          "description": "+2 RK für einen eigenen Beitrag. Muss vor einem späteren Angriff eingesetzt werden; verändert keine bereits ausgewerteten Treffer.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "reaction",
+          "delivery": "ability",
+          "resolutionType": "automatic",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": true,
+          "target": "Selbst",
+          "range": "Selbst",
+          "duration": "Ein eigener Gesamtbeitrag; temporäre TP gemäß Kampfregeln",
+          "requirements": "",
+          "tags": "Gramnir · Jagdausbildung",
+          "aiInstructions": "",
+          "effects": [
+            {
+              "id": "freki-ducken-condition",
+              "type": "buff",
+              "target": "self",
+              "amount": 0,
+              "formula": "",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": false,
+              "magical": false,
+              "on": "always",
+              "resourceId": "",
+              "condition": {
+                "id": "freki-ducken-condition",
+                "name": "Geduckte Wacht",
+                "description": "+2 RK für einen eigenen Beitrag.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": "1 eigener Beitrag"
+                },
+                "tags": "Drachentanz",
+                "mechanics": {
+                  "armorClass": 2
+                },
+                "active": true,
+                "remainingActorComments": 1,
+                "remainingSceneComments": 0,
+                "ward": {
+                  "enabled": false,
+                  "charges": 0,
+                  "deflectChance": 100,
+                  "breaksOnCriticalHit": false
+                }
+              },
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": "+2 RK für einen eigenen Beitrag."
+            }
+          ],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [
+            {
+              "id": "freki-ducken-reaction-1",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        },
+        {
+          "id": "freki-durchhalten",
+          "name": "Zäher Nordwolf",
+          "description": "Freki erhält 1W6 + KON temporäre TP. Ein vorhandener höherer Vorrat bleibt bestehen; keine Heilung und kein Wiederbeleben.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "bonus-action",
+          "delivery": "ability",
+          "resolutionType": "automatic",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": true,
+          "target": "Selbst",
+          "range": "Selbst",
+          "duration": "Ein eigener Gesamtbeitrag; temporäre TP gemäß Kampfregeln",
+          "requirements": "",
+          "tags": "Gramnir · Jagdausbildung",
+          "aiInstructions": "",
+          "effects": [
+            {
+              "id": "freki-durchhalten-tp",
+              "type": "temporary-hit-points",
+              "target": "self",
+              "amount": 0,
+              "bonusAttribute": "constitution",
+              "formula": "1d6",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": false,
+              "magical": false,
+              "on": "always",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": ""
+            }
+          ],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [
+            {
+              "id": "freki-durchhalten-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "freki-durchhalten-special-action-2",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        },
+        {
+          "id": "freki-spuernase",
+          "name": "Spürnase",
+          "description": "Kann bekannte Gerüche aufnehmen und Fährten verfolgen. Bei unsicherer Spur wird Überleben gewürfelt; Wind, Regen und fremde Gerüche bleiben relevant.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "passive",
+          "delivery": "ability",
+          "resolutionType": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": false,
+          "target": "",
+          "range": "",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "effects": [],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        },
+        {
+          "id": "freki-handzeichen",
+          "name": "Vertraute Handzeichen",
+          "description": "Kennt Ylvas Zeichen für Folgen, Warten, Suchen und Rückruf. Kämpft nur bei tatsächlicher Anwesenheit und mit seinen eigenen Aktionsressourcen.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "passive",
+          "delivery": "ability",
+          "resolutionType": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": false,
+          "target": "",
+          "range": "",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "effects": [],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        },
+        {
+          "id": "freki-winterfell",
+          "name": "Wetterfestes Winterfell",
+          "description": "Dichtes Fell und hohe Ausdauer ermöglichen lange Jagden in Kälte und Nässe. Keine pauschale Resistenz gegen Kälteschaden.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "passive",
+          "delivery": "ability",
+          "resolutionType": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": false,
+          "target": "",
+          "range": "",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "effects": [],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        }
+      ],
+      "magic": {
+        "enabled": false,
+        "casterTier": "full",
+        "bypassResourceId": "",
+        "focusEnabled": false,
+        "focusResourceId": "focus",
+        "castingAttribute": "intelligence",
+        "spellAttackOverride": null,
+        "spellSaveDcOverride": null,
+        "manaResourceId": "mana-focus",
+        "slotResourceIds": [],
+        "notes": "",
+        "spells": []
+      },
+      "aura": {
+        "enabled": false,
+        "name": "Aura",
+        "domain": "",
+        "focusResourceId": "aura-focus",
+        "focusBypassCost": 1,
+        "notes": "",
+        "activeForm": {
+          "enabled": false,
+          "active": false,
+          "name": "Aktive Form",
+          "description": "",
+          "radius": "",
+          "target": "Selbst und gewählte Ziele",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        },
+        "latentPresence": {
+          "enabled": true,
+          "active": true,
+          "name": "Latente Präsenz",
+          "description": "",
+          "radius": "",
+          "target": "Umgebung, Verbündete und Gegner",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        }
+      },
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "notes": "Vom Clan Wolfshorn seit dem Welpenalter domestiziert und von Ylva zum Jagd- und Wachgefährten ausgebildet. Freki prüft Fremde schweigend, hält im Lager die windzugewandte Seite und folgt Ylvas knappen Handzeichen. Vertrauten begegnet er mit ruhiger Nähe; aufdringliche Hände weist er mit einem tiefen Knurren zurück. Er ist ausdauernd und eigensinnig, kein zahmes Schoßtier. In der Szene wird er als eigene Kreatur mit eigenen Aktionen geführt; seine Anwesenheit gibt Ylva keinen kostenlosen Zusatzangriff."
+    },
+    "loot": {
+      "currency": "",
+      "notes": "Ylvas lebender Gefährte; kein Handels- oder Beutegegenstand.",
+      "items": [],
+      "revision": 0
+    },
+    "notes": "Vom Clan Wolfshorn seit dem Welpenalter domestiziert und von Ylva zum Jagd- und Wachgefährten ausgebildet. Freki prüft Fremde schweigend, hält im Lager die windzugewandte Seite und folgt Ylvas knappen Handzeichen. Vertrauten begegnet er mit ruhiger Nähe; aufdringliche Hände weist er mit einem tiefen Knurren zurück. Er ist ausdauernd und eigensinnig, kein zahmes Schoßtier. In der Szene wird er als eigene Kreatur mit eigenen Aktionen geführt; seine Anwesenheit gibt Ylva keinen kostenlosen Zusatzangriff.",
+    "id": "companion-ylva-freki"
+  }
+}

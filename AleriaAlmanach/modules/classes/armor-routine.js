@@ -23,7 +23,8 @@ export const ARMOR_ROUTINE_CLASS_IDS = Object.freeze([
 ]);
 const fighterClasses = new Set(ARMOR_ROUTINE_CLASS_IDS);
 const aliases = Object.freeze({ krieger: 'kampfer', fighter: 'kampfer', paladin: 'eidgeschworener', monch: 'asket',
-  ceidwynr: 'ceidwyn', rhiddwyrr: 'rhiddwyr', saerinc: 's-rinc' });
+  ceidwynr: 'ceidwyn', rhiddwyrr: 'rhiddwyr', saerinc: 's-rinc', grungar: 'karnach',
+  varor: 'haldr', thalor: 'zernach', kuralan: 'wairg', toran: 'dornach', bragan: 'skarrach', rhean: 'rheach', falgar: 'garnach' });
 
 export function hasArmorRoutineClass(profile = {}) {
   // An explicit class selection takes precedence over a legacy text label.

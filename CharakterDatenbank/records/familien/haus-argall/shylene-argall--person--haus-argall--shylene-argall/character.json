@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-13T18:13:16.437Z",
+    "sourceExportedAt": "2026-09-22T12:00:00.000Z",
     "sourceUpdatedAt": "2026-09-03T23:42:19.933Z",
     "sourceDocumentIds": [
       "person--haus-argall--shylene-argall"
     ],
-    "contentHash": "e0ea23b3680bd9dc5c46cd01075c44ffb268d3b2f7623d59ca527a38debc1be7"
+    "contentHash": "7b9c0df4376bd55944b3ddfe4d5cdd0cd3bf1362e1c1e3c8475e3c04d0ab5580"
   },
   "local": {
     "notes": "",
@@ -289,8 +289,8 @@
           "personId": "shylene-argall",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-13T18:13:16.437Z",
-          "lastSyncedAt": "2026-09-13T18:13:16.437Z",
+          "importedAt": "2026-09-22T12:00:00.000Z",
+          "lastSyncedAt": "2026-09-22T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=shylene-argall",
           "fingerprint": "{\"name\":\"Shylene Argall\",\"title\":\"\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/shylene-argall.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"owain-draig\",\"type\":\"affair\",\"status\":\"secret\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"}],\"children\":[{\"personId\":\"iolo-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--iolo-draig\",\"name\":\"Iolo Argall\"}]}}"
         }

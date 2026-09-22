@@ -1,5 +1,6 @@
 import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
 import { reconcileCenyrTrainingForLevel } from './cenyr-technique-selection.js?v=20260909-dragon-parent-v2';
+import { migrateDrachentanzTechniqueResources } from '../../combat-styles/drachentanz/drachentanz-training-migration.js?v=20260909-dragon-parent-v2';
 
 const autofillCache = new WeakMap();
 
@@ -43,7 +44,7 @@ export function getAutofilledCenyrCombatProfile(profile = {}) {
 
   const signature = trainingSignature(profile);
   const cached = autofillCache.get(profile);
-  if (cached?.signature === signature) return { ...profile, ...cached.training };
+  if (cached?.signature === signature) return migrateDrachentanzTechniqueResources({ ...profile, ...cached.training });
 
   const reconciled = reconcileCenyrTrainingForLevel(profile, profile.progression?.level, {
     autoFill: true,
@@ -52,7 +53,8 @@ export function getAutofilledCenyrCombatProfile(profile = {}) {
   }).profile;
   const training = { classTraining: reconciled.classTraining, techniques: reconciled.techniques };
   autofillCache.set(profile, { signature, training });
-  return { ...profile, ...training };
+  // Resource balances and custom references remain live even when training is cached.
+  return migrateDrachentanzTechniqueResources({ ...profile, ...training });
 }
 
 export const cenyrCombatProfileAutofillInternals = Object.freeze({ trainingSignature });

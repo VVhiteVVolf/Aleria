@@ -4,6 +4,10 @@ import test from 'node:test';
 
 import { buildCombatProfileAiSnapshot } from '../modules/combat/combat-profile-context.js';
 import { resolveCombatProfile } from '../modules/combat/combat-profile-resolver.js';
+import { getAutofilledCenyrCombatProfile } from '../modules/classes/cenyr/cenyr-combat-profile-autofill.js';
+import { overlayCombatHitPointState } from '../modules/combat/combat-state-model.js';
+import { renderMiniCombatProfile } from '../modules/comments/comments-combat-mini-profile-view.js';
+import { resolveCombatProfile as resolveServerCombatProfile } from '../../firebase/functions/src/generated/combat/combat-profile-resolver.js';
 
 const exportUrl = new URL('../../Charakter%20Archiv%20Exporte/gawain-draig.json', import.meta.url);
 
@@ -105,4 +109,35 @@ test('die interaktive Kampfszene füllt ein altes Gawain-Profil automatisch aus 
   ]);
   assert.equal(techniqueNames.includes('Biss des Drachen'), false);
   assert.equal(resolved.classTraining.techniqueSelections.length, 8);
+  const sheet = getAutofilledCenyrCombatProfile(legacyGawain.combatProfile);
+  assert.equal(sheet.resources.some(resource => resource.id.startsWith('gawain-technique-')), false);
+  assert.deepEqual(resolveServerCombatProfile(legacyGawain).resources, resolved.resources);
+  // Historical balances must not resurrect counters absent from the current sheet.
+  const live = overlayCombatHitPointState(resolved, { resources: legacyGawain.combatProfile.resources });
+  const html = renderMiniCombatProfile(live, 'Gawain');
+  for (const name of ['Klaue des Drachen', 'Tanz der Silbernen Schuppe', 'Schweif des Drachen']) {
+    assert.ok(!html.includes(name));
+  }
+  assert.ok(html.includes('Liebt Düfte'));
+  assert.equal(live.resources.find(resource => resource.id === 'special-action').current,
+    resolved.resources.find(resource => resource.id === 'special-action').current);
+});
+
+test('bereinigte Technikvorräte erhalten eigene Ressourcen und aktuelle Werte auch bei Cache-Treffern', async () => {
+  const character = await loadGawain();
+  const profile = character.combatProfile;
+  const resourceId = 'gawain-technique-claw-uses';
+  profile.resources.push({ id: resourceId, name: 'Alter Zähler', current: 1, maximum: 2 });
+  profile.resources.push({ id: 'own-reserve', name: 'Klaue des Drachen', category: 'technique-use', current: 1, maximum: 3 });
+  const before = structuredClone(profile);
+  const initial = getAutofilledCenyrCombatProfile(profile);
+  assert.deepEqual(profile, before);
+  assert.ok(!initial.resources.some(resource => resource.id === resourceId));
+  assert.ok(initial.resources.some(resource => resource.id === 'own-reserve'));
+  // Training stays cached, but an added custom trigger still owns its counter.
+  profile.abilities.push({ id: 'own-rule', triggerRules: [{ costs: [{ resourceId, amount: 1 }] }] });
+  profile.resources.find(resource => resource.id === resourceId).current = 0;
+  const refreshed = getAutofilledCenyrCombatProfile(profile);
+  assert.equal(refreshed.resources.find(resource => resource.id === resourceId).current, 0);
+  assert.equal(refreshed.abilities.find(ability => ability.id === 'gawain-liebt-duefte').usesMaximum, 1);
 });

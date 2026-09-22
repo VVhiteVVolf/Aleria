@@ -31,9 +31,10 @@ const CHARACTER_INVENTORY_DEFAULT_CATEGORIES = [
 ];
 
 const CHARACTER_INVENTORY_CURRENCIES = [
-  { id: 'gold', label: 'Goldtaler', short: 'GT', value: 1000, icon: 'https://i.imgur.com/kH2Ry56.png' },
-  { id: 'silver', label: 'Silbertaler', short: 'ST', value: 100, icon: 'https://i.imgur.com/SqqS6XQ.png' },
-  { id: 'copper', label: 'Kupfertaler', short: 'KT', value: 1, icon: 'https://i.imgur.com/j2khSBE.png' }
+  { id: 'gold', label: 'Goldtaler', short: 'GT', value: 1000, icon: 'public/assets/inventory/coins/goldtaler.png' },
+  { id: 'silver', label: 'Silbertaler', short: 'ST', value: 100, icon: 'public/assets/inventory/coins/silbertaler.png' },
+  { id: 'copper', label: 'Kupfertaler', short: 'KT', value: 1, icon: 'public/assets/inventory/coins/kupfertaler.png' },
+  { id: 'pfennig', label: 'Eisenpfennig', short: 'Pf', value: 0.01, icon: 'public/assets/inventory/coins/eisenpfennig.png' }
 ];
 
 const CHARACTER_INVENTORY_EQUIPMENT_QUIZ_QUESTIONS = [
@@ -125,25 +126,26 @@ function parseCharacterInventoryInt(value, fallback = 0) {
 
 function splitCharacterInventoryCopper(totalCopper = 0) {
   if (window.AleriaItemRegister?.moneyState) return window.AleriaItemRegister.moneyState(Number(totalCopper) || 0);
-  let rest = Math.round(Math.max(0, Number(totalCopper) || 0) * 100) / 100;
-  const gold = Math.floor(rest / 1000);
-  rest %= 1000;
-  const silver = Math.floor(rest / 100);
-  const copper = rest % 100;
+  const minor = Math.round(Math.max(0, Number(totalCopper) || 0) * 100);
+  const gold = Math.floor(minor / 100000);
+  const silver = Math.floor((minor % 100000) / 10000);
+  const copper = Math.floor((minor % 10000) / 100);
   return {
     gold,
     silver,
     copper,
-    totalCopper: gold * 1000 + silver * 100 + copper
+    pfennig: minor % 100,
+    totalCopper: minor / 100
   };
 }
 
 function getCharacterInventoryMoneyTotal(money = {}) {
   if (!money || typeof money !== 'object') return 0;
   if (window.AleriaItemRegister?.moneyTotal) return window.AleriaItemRegister.moneyTotal(money);
-  return CHARACTER_INVENTORY_CURRENCIES.reduce((sum, currency) => (
-    sum + parseCharacterInventoryInt(money[currency.id]) * currency.value
-  ), 0);
+  if (money.totalCopper != null) return Math.round(Math.max(0, Number(money.totalCopper) || 0) * 100) / 100;
+  return Math.round(CHARACTER_INVENTORY_CURRENCIES.reduce((sum, currency) => (
+    sum + Math.max(0, Number(money[currency.id]) || 0) * Math.round(currency.value * 100)
+  ), 0)) / 100;
 }
 
 function parseCharacterInventoryMoneyText(text = '') {
@@ -152,12 +154,15 @@ function parseCharacterInventoryMoneyText(text = '') {
   const readUnit = units => {
     const pattern = new RegExp(`(\\d[\\d\\.,]*)\\s*(?:${units.join('|')})`, 'i');
     const match = source.match(pattern);
-    return match ? parseCharacterInventoryInt(match[1]) : 0;
+    if (!match) return 0;
+    const amount = match[1].includes(',') ? match[1].replace(/\./g, '').replace(',', '.') : match[1].replace(/\.(?=\d{3}(?:\D|$))/g, '');
+    return Math.max(0, Number(amount) || 0);
   };
   const gold = readUnit(['goldtaler', 'gold', 'gt', 'gm']);
   const silver = readUnit(['silbertaler', 'silber', 'st', 'sm']);
   const copper = readUnit(['kupfertaler', 'kupfer', 'kt', 'km']);
-  if (gold || silver || copper) return splitCharacterInventoryCopper(gold * 1000 + silver * 100 + copper);
+  const pfennig = readUnit(['eisenpfennig', 'pfennig', 'pf']);
+  if (gold || silver || copper || pfennig) return splitCharacterInventoryCopper(gold * 1000 + silver * 100 + copper + pfennig / 100);
   return splitCharacterInventoryCopper(0);
 }
 
@@ -170,7 +175,7 @@ function sanitizeCharacterInventoryMoney(value = {}) {
 
 function formatCharacterInventoryMoney(value = {}) {
   const money = sanitizeCharacterInventoryMoney(value);
-  return `${money.gold} Gold, ${money.silver} Silber, ${money.copper} Kupfer`;
+  return `${money.gold} Gold, ${money.silver} Silber, ${money.copper} Kupfer, ${money.pfennig} Eisenpfennig`;
 }
 
 function sanitizeCharacterInventoryEquipmentQuiz(data = {}) {
@@ -199,6 +204,9 @@ function sanitizeCharacterInventoryCombatDefinition(value = {}) {
   if (!hasWeaponDefinition && !hasArmorDefinition) return null;
   return {
     kind: hasArmorDefinition && !hasWeaponDefinition ? 'armor' : 'weapon',
+    damageProtection: source.damageProtection && typeof source.damageProtection === 'object'
+      && JSON.stringify(source.damageProtection).length <= 4000 ? JSON.parse(JSON.stringify(source.damageProtection)) : null,
+    triggerRules: Array.isArray(source.triggerRules) ? JSON.parse(JSON.stringify(source.triggerRules.slice(0, 20))) : [],
     weaponType: String(source.weaponType || '').trim().slice(0, 40),
     training: String(source.training || '').trim().slice(0, 40),
     damageFormula,
@@ -237,6 +245,14 @@ function sanitizeCharacterInventoryEquipmentLink(value = {}) {
   };
 }
 
+function collectCharacterInventoryPrice(minimum, maximum) {
+  if (minimum == null || String(minimum).trim() === '') return null;
+  const minCopper = Math.round(Number(String(minimum).replace(',', '.')) * 100) / 100;
+  const maxCopper = maximum == null || String(maximum).trim() === '' ? minCopper : Math.round(Number(String(maximum).replace(',', '.')) * 100) / 100;
+  if (!Number.isFinite(minCopper) || !Number.isFinite(maxCopper) || minCopper < 0 || maxCopper < minCopper) return null;
+  return { minCopper, maxCopper };
+}
+
 function sanitizeCharacterInventoryItems(items = []) {
   return (Array.isArray(items) ? items : [])
     .map((item, index) => ({
@@ -248,6 +264,7 @@ function sanitizeCharacterInventoryItems(items = []) {
       registerCategory: String(item?.registerCategory || '').trim(),
       creatureId: String(item?.creatureId || '').trim(),
       valuation: item?.valuation && typeof item.valuation === 'object' ? { ...item.valuation } : null,
+      valuationNote: String(item?.valuationNote || '').trim().slice(0, 800),
       purchase: item?.purchase && typeof item.purchase === 'object' ? { ...item.purchase } : null,
       itemDbKey: String(item?.itemDbKey || '').trim(),
       originItemDbKey: String(item?.originItemDbKey || '').trim(),
@@ -277,8 +294,10 @@ function sanitizeCharacterInventoryItems(items = []) {
       name: String(item?.name || `Gegenstand ${index + 1}`).trim(),
       type: String(item?.type || '').trim(),
       description: String(item?.description || '').trim(),
+      flavorText: String(item?.flavorText || '').trim().slice(0, 1600),
+      inventoryUseMode: ['auto', 'consume', 'use'].includes(item?.inventoryUseMode) ? item.inventoryUseMode : 'auto',
       weight: String(item?.weight || '').trim(),
-      quantity: String(item?.quantity || '1').trim(),
+      quantity: String(item?.quantity ?? '1').trim(),
       tags: String(item?.tags || '').trim(),
       value: sanitizeCharacterInventoryMoney(item?.value),
       equipped: item?.equipped === true,
@@ -305,6 +324,9 @@ function sanitizeCharacterInventoryCompanions(items = []) {
   return (Array.isArray(items) ? items : [])
     .map((item, index) => ({
       id: String(item?.id || '').trim() || makeCharacterInventoryId('companion', index),
+      creatureId: String(item?.creatureId || '').trim(),
+      inventoryItemId: String(item?.inventoryItemId || '').trim(),
+      personality: String(item?.personality || '').trim().slice(0, 1600),
       image: String(item?.image || '').trim(),
       imageFormat: sanitizeCharacterInventoryImageSettings({
         format: item?.imageFormat || 'landscape',
@@ -568,7 +590,7 @@ function buildCharacterInventoryItemEditor(item, index, categories) {
   return `
     <section class="ci-editor-card" data-ci-item-row>
       <input type="hidden" class="me-ci-item-id" value="${escapeHtml(item.id)}">
-      <input type="hidden" class="me-ci-item-register-data" value="${escapeHtml(JSON.stringify({ instanceId: item.instanceId, templateId: item.templateId, templateName: item.templateName, offerId: item.offerId, registerCategory: item.registerCategory, creatureId: item.creatureId, valuation: item.valuation, purchase: item.purchase, value: item.value, equipped: item.equipped }))}">
+      <input type="hidden" class="me-ci-item-register-data" value="${escapeHtml(JSON.stringify({ instanceId: item.instanceId, templateId: item.templateId, templateName: item.templateName, offerId: item.offerId, registerCategory: item.registerCategory, creatureId: item.creatureId, valuation: item.valuation, purchase: item.purchase, value: item.value, equipped: item.equipped, combatDefinition: item.combatDefinition, equipmentLink: item.equipmentLink, flavorText: item.flavorText, inventoryUseMode: item.inventoryUseMode }))}">
       <input type="hidden" class="me-ci-item-db-key" value="${escapeHtml(item.itemDbKey || '')}">
       <input type="hidden" class="me-ci-item-origin-db-key" value="${escapeHtml(item.originItemDbKey || '')}">
       <input type="hidden" class="me-ci-item-storage-mode" value="${escapeHtml(item.itemStorageMode || 'character')}">
@@ -597,6 +619,9 @@ function buildCharacterInventoryItemEditor(item, index, categories) {
         ${buildCharacterInventoryInput('Gewicht', 'me-ci-item-weight', item.weight)}
         ${buildCharacterInventoryInput('Anzahl', 'me-ci-item-quantity', item.quantity)}
         ${buildCharacterInventoryInput('Tags', 'me-ci-item-tags', item.tags)}
+        <label><span>Handelspreis je Stück · KT</span><input type="number" min="0" step="0.01" class="me-ci-item-price-min" data-module-editor-action="refresh-ci-preview" value="${escapeHtml(item.valuation?.minCopper ?? '')}" placeholder="Preis offen"></label>
+        <label><span>Bis · KT (optional)</span><input type="number" min="0" step="0.01" class="me-ci-item-price-max" data-module-editor-action="refresh-ci-preview" value="${escapeHtml(item.valuation?.maxCopper ?? '')}"></label>
+        ${buildCharacterInventoryTextarea('Preisgrundlage', 'me-ci-item-valuation-note', item.valuationNote || '')}
         ${buildCharacterInventoryTextarea('Beschreibung', 'me-ci-item-description', item.description)}
       </div>
       <div class="ci-nested-editor">
@@ -617,6 +642,7 @@ function buildCharacterInventoryCompanionEditor(companion, index) {
   return `
     <section class="ci-editor-card" data-ci-companion-row>
       <input type="hidden" class="me-ci-companion-id" value="${escapeHtml(companion.id)}">
+      <input type="hidden" class="me-ci-companion-item-id" value="${escapeHtml(companion.inventoryItemId || '')}">
       <div class="ci-editor-card-head">
         <strong>Gefährte ${index + 1}</strong>
         <div class="ci-editor-card-actions">
@@ -628,6 +654,7 @@ function buildCharacterInventoryCompanionEditor(companion, index) {
       </div>
       <div class="ci-editor-grid">
         ${buildCharacterInventoryInput('Name', 'me-ci-companion-name', companion.name)}
+        <label class="wide"><span>Kreaturbogen</span><select class="me-ci-companion-creature-id"><option value="">Noch nicht verknüpft</option>${(window.AleriaCreatures?.getAll?.() || []).map(creature => `<option value="${escapeHtml(creature.id)}"${creature.id === companion.creatureId ? ' selected' : ''}>${escapeHtml(creature.name)}</option>`).join('')}${companion.creatureId && !window.AleriaCreatures?.getById?.(companion.creatureId) ? `<option selected value="${escapeHtml(companion.creatureId)}">Verknüpfter Bogen · wird geladen</option>` : ''}</select></label>
         ${buildCharacterInventoryInput('Art / Spezies', 'me-ci-companion-species', companion.species)}
         ${buildCharacterInventoryInput('Rolle', 'me-ci-companion-role', companion.role)}
         ${buildCharacterInventoryInput('Status', 'me-ci-companion-status', companion.status)}
@@ -635,6 +662,7 @@ function buildCharacterInventoryCompanionEditor(companion, index) {
         ${buildCharacterInventoryInput('Bild', 'me-ci-companion-image', companion.image, 'url')}
         ${buildCharacterInventoryImageControls('companion-image', imageSettings)}
         ${buildCharacterInventoryTextarea('Kurztext', 'me-ci-companion-summary', companion.summary)}
+        ${buildCharacterInventoryTextarea('Wesen & Bindung', 'me-ci-companion-personality', companion.personality || '')}
         ${buildCharacterInventoryTextarea('Profilbeschreibung', 'me-ci-companion-description', companion.description)}
       </div>
       <div class="ci-nested-editor">
@@ -791,6 +819,8 @@ function collectCharacterInventoryModuleEditorPage(card, page) {
       const individualized = itemDbKey && isCharacterInventoryEditorItemModified(row, draftItem);
       return {
         ...collectCharacterInventoryJsonField(row, '.me-ci-item-register-data', {}),
+        valuation: collectCharacterInventoryPrice(row.querySelector('.me-ci-item-price-min')?.value, row.querySelector('.me-ci-item-price-max')?.value),
+        valuationNote: getTrimmedFormValue(row, '.me-ci-item-valuation-note'),
         id: getTrimmedFormValue(row, '.me-ci-item-id'),
         itemDbKey: individualized ? '' : itemDbKey,
         originItemDbKey: individualized ? itemDbKey : originItemDbKey,
@@ -826,6 +856,9 @@ function collectCharacterInventoryModuleEditorPage(card, page) {
     }),
     companions: collectCharacterInventoryRows(block, '[data-ci-companion-row]', row => ({
       id: getTrimmedFormValue(row, '.me-ci-companion-id'),
+      creatureId: getTrimmedFormValue(row, '.me-ci-companion-creature-id'),
+      inventoryItemId: getTrimmedFormValue(row, '.me-ci-companion-item-id'),
+      personality: getTrimmedFormValue(row, '.me-ci-companion-personality'),
       image: getTrimmedFormValue(row, '.me-ci-companion-image'),
       imageFormat: getTrimmedFormValue(row, '.me-ci-companion-image-format'),
       imageFit: getTrimmedFormValue(row, '.me-ci-companion-image-fit'),

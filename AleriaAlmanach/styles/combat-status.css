@@ -2,9 +2,9 @@
 .comment-combat-profile-context,
 .comment-combat-profile-section-head,
 .comment-combat-profile-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.72rem; color: #d2b780; }
-.comment-combat-profile-panel { display: flex; flex-direction: column; gap: 0.6rem; overflow: auto; scrollbar-width: thin; scrollbar-color: #94723d #251b16; overscroll-behavior: contain; }
+.comment-combat-profile-panel { display: flex; flex-direction: column; gap: 0.75rem; overflow: auto; scrollbar-width: thin; scrollbar-color: #889477 #20332f; overscroll-behavior: contain; }
 .comment-combat-profile-panel > * { flex-shrink: 0; }
-.comment-combat-profile-panel button { border: 1px solid #94723d; border-radius: 4px; padding: 0.3rem 0.45rem; color: #f3ddb0; background: #3a291b; font: inherit; cursor: pointer; }
+.comment-combat-profile-panel button { border: 1px solid #8d8564; border-radius: 4px; padding: 0.4rem 0.65rem; color: var(--mini-profile-gold); background: #34483d; font: inherit; cursor: pointer; }
 .comment-combat-profile-panel button:disabled { opacity: 0.55; cursor: not-allowed; }
 .comment-combat-profile-panel button:focus-visible,
 .combat-status-dialog :is(button, input, textarea, select):focus-visible { outline: 2px solid #e1b666; outline-offset: 2px; }

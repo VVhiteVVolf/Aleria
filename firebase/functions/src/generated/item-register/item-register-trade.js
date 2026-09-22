@@ -1,5 +1,5 @@
 import { createOwnedItem } from './item-register-model.js?v=20260919-shop-v1';
-import { moneyState, moneyTotal, toMinor } from './item-register-money.js?v=20260919-shop-v1';
+import { moneyState, moneyTotal, toMinor, formatMoney } from './item-register-money.js?v=20260919-shop-v1';
 import { synchronizeEquipmentFromInventory } from '../character-equipment/character-equipment-sync.js';
 
 import { attachInventoryEquipment } from '../character-equipment/character-equipment-registration.js';
@@ -19,8 +19,7 @@ export function resalePrice(item, product = null) {
 
 function setWallet(inventory, minor) {
   inventory.moneyState = moneyState(minor / 100);
-  const money = inventory.moneyState;
-  inventory.money = `${money.gold} Gold, ${money.silver} Silber, ${money.copper} Kupfer`;
+  inventory.money = formatMoney(inventory.moneyState);
 }
 /** Pure, shared validation. The caller must supply authoritative server records. */
 export function applyRegisterTrade(character, product, input, { instanceId, now } = {}) {

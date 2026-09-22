@@ -68,9 +68,24 @@ export function classifyCharacterArchiveEntries(entries = []) {
       return onlyCreatureSources ? [] : [entry];
     }
     if (entry.kind === 'register-pferde' && mount) {
-      if (entry.builtin && registeredMounts.has(mount.id)) {
+      // Older archive saves lost `builtin`, but kept their Rossmarkt provenance.
+      // Give these breed projections the current register identity as well; a
+      // name-only merge would swallow independent offers and individual horses.
+      const legacyBreed = entry.builtin || entry.archivedFromProfile
+        || entry.id === `rossmarkt--${mount.id}`
+        || (entry.sources || []).some(source => source.kind === 'item-register'
+          && (source.id === `rossmarkt:${mount.id}` || source.id === mount.id));
+      if (legacyBreed && registeredMounts.has(mount.id)) {
         const canonical = mountEntry(mount);
-        return [{ ...canonical, sources: [...canonical.sources, ...(entry.sources || [])] }];
+        return [{ ...canonical,
+          builtin: entry.builtin,
+          updatedAt: entry.updatedAt,
+          description: !entry.builtin && entry.description ? entry.description : canonical.description,
+          icon: entry.iconOverride || canonical.icon,
+          iconOverride: entry.iconOverride || canonical.iconOverride,
+          tags: [...(canonical.tags || []), ...(entry.tags || [])],
+          sources: [...canonical.sources, ...(entry.sources || [])]
+        }];
       }
       // The current market page replaces older markdown-table prices and origins.
       const canonical = createArchiveMountEntry(mount);

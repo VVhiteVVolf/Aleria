@@ -16,7 +16,7 @@ const rules = [
   [/zweifel/, 'Cynical'],
   [/trockener humor/, 'Brooding'],
   [/scharfsinnig/, 'Shrewd'],
-  [/jagerauge/, 'Hunter'],
+  [/jagerauge|auge des jagers/, 'Hunter'],
   [/gewissen|vorbereitung|fleiss|fleiß|handwerk/, 'Diligent'],
   [/schutzpflicht|beschutzer|gefog|gefolgschaft|treue|loyal/, 'Defensive_leader'],
   [/mutters|familie/, 'Family_focus'],

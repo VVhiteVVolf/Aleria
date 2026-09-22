@@ -74,6 +74,7 @@ async function submitComment() {
   let backend = null;
 
   try {
+    window.AleriaSceneItems?.validateSubmission?.(commentSegments);
     if (window.AleriaSkillChecks?.handleSubmission) {
       const skillResult = await window.AleriaSkillChecks.handleSubmission({
         threadId,
@@ -143,7 +144,12 @@ async function submitComment() {
       .some(segment => segment?.combatResolution?.resolutionId || segment?.inventoryUse?.usageId);
     const hasSkillTransaction = (commentMetadata.commentSegments || [])
       .some(segment => segment?.skillResolution?.resolutionId);
-    const saveResult = hasProfileTransaction && typeof backend.addCombatComment === 'function'
+    const hasSceneItems = commentSegments.some(segment => segment.kind === 'sceneitem');
+    if (hasSceneItems && (!backend?.placeSceneItem || backend._localFallback)) throw new Error('Gegenstände können nur mit der gemeinsamen Online-Szene gespeichert werden. Bitte Verbindung und Veröffentlichung prüfen.');
+    const saveResult = hasSceneItems
+      ? await backend.placeSceneItem(threadId, { operationId: commentSegments.find(segment => segment.kind === 'sceneitem').sceneItemOperationId,
+        commentSegments: commentMetadata.commentSegments })
+      : hasProfileTransaction && typeof backend.addCombatComment === 'function'
       ? await backend.addCombatComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata)
       : (hasSkillTransaction && typeof backend.addSkillComment === 'function'
         ? await backend.addSkillComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata)
@@ -174,7 +180,7 @@ async function submitComment() {
       || (segment?.inventoryUse?.actorPersistence?.kind === 'character'
         && segment?.inventoryUse?.actorPersistence?.recordId)
     ));
-    if (backend && !backend._localFallback && !hasPersistentCombatTransaction) {
+    if (backend && !backend._localFallback && !hasPersistentCombatTransaction && !commentSegments.some(segment => segment.kind === 'sceneitem')) {
       try {
         const localBackend = getLocalCommentBackend();
         const hasProfileTransaction = (commentMetadata.commentSegments || [])

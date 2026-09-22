@@ -39,6 +39,8 @@
     ) kinds.add('combat');
     if (
       isObject(comment.inventoryTransaction)
+      || isObject(comment.sceneItemEvent)
+      || segments.some(segment => isObject(segment.sceneItemEvent))
       || isObject(comment.sceneInventoryTransfer)
       || String(comment.commentMode || '') === 'scene-inventory-transfer'
       || segments.some(segment => hasResolutionId(segment?.inventoryUse, 'usageId'))

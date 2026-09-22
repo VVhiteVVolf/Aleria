@@ -6,14 +6,16 @@
     align-items: flex-start;
     margin: 0 auto;
     gap: 0;
-    max-width: 1920px;
+    /* Fill wide windows while retaining a small parchment border. */
+    width: calc(100% - clamp(0px, 3vw - 33px, 96px));
+    max-width: 200rem;
     background: var(--almanach-paper);
   }
 
   /* ── LEFT REGISTER SIDEBAR ── */
   #left-sidebar {
-    width: 230px;
-    flex: 0 0 230px;
+    width: clamp(15rem, 11vw, 20rem);
+    flex: 0 0 clamp(15rem, 11vw, 20rem);
     position: sticky;
     overflow-x: hidden;
     overflow-y: auto;
@@ -58,7 +60,7 @@
 
   .almanach-left-sidebar-head span {
     color: var(--ink-faded);
-    font-size: 0.48rem;
+    font-size: 0.65rem;
     letter-spacing: 0.16em;
   }
 
@@ -130,7 +132,8 @@
 
   .almanach-left-register-copy strong {
     overflow: hidden;
-    font: 600 0.62rem/1.25 'Cinzel', serif;
+    font: 600 0.75rem/1.35 'Cinzel', serif;
+    overflow-wrap: anywhere;
     letter-spacing: 0.04em;
     text-overflow: ellipsis;
     text-transform: uppercase;
@@ -138,7 +141,7 @@
   }
 
   .almanach-left-register-copy small {
-    font: 0.58rem/1.25 'EB Garamond', serif;
+    font: 0.85rem/1.35 'EB Garamond', serif;
     color: var(--almanach-muted);
   }
 
@@ -148,8 +151,8 @@
 
   @media (max-width: 1450px) {
     #left-sidebar {
-      width: 102px;
-      flex-basis: 102px;
+      width: 8rem;
+      flex-basis: 8rem;
     }
 
     .almanach-left-sidebar-head {
@@ -175,8 +178,8 @@
     }
 
     .almanach-left-register-copy strong {
-      max-width: 5rem;
-      font-size: 0.48rem;
+      max-width: 6.5rem;
+      font-size: 0.65rem;
       white-space: normal;
     }
 
@@ -233,7 +236,7 @@
 
     .almanach-left-register[data-archive-register-tab] .almanach-left-register-copy strong {
       max-width: none;
-      font-size: 0.54rem;
+      font-size: 0.75rem;
       white-space: normal;
     }
 
@@ -244,7 +247,7 @@
   #main-content {
     flex: 1;
     min-width: 0;
-    max-width: 1400px;
+    max-width: none;
     margin: 0 auto;
     padding: 1.7rem clamp(1rem, 2.4vw, 2.6rem) 3rem;
   }
@@ -257,7 +260,7 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    width: 260px;
+    width: clamp(16.25rem, 12vw, 22rem);
     top: 3.75rem;
     max-height: calc(100dvh - 3.75rem);
     padding: 1.4rem 1rem;
@@ -515,6 +518,11 @@
     #main-content {
       width: 100%;
       padding: 2rem 1rem 1.25rem;
+    }
+
+    #left-sidebar {
+      flex: none;
+      min-width: 0;
     }
 
     #sidebar {

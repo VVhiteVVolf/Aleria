@@ -65,6 +65,11 @@ function preserveOnlineCombatState(localProfile, onlineProfile) {
     onlineProfile.abilities,
     ['usesCurrent', 'recoveryDayKey']
   );
+  // A newer local class curriculum must not resurrect sold/dropped equipment
+  // or hide an item acquired through the shared scene/inventory transaction.
+  for (const field of ['weapons', 'armorItems']) {
+    if (Array.isArray(onlineProfile[field])) merged[field] = clone(onlineProfile[field], []);
+  }
   merged.revision = Math.max(0, Number(merged.revision) || 0, Number(onlineProfile.revision) || 0);
   return merged;
 }

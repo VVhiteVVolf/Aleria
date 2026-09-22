@@ -10,8 +10,8 @@ const clone = value => JSON.parse(JSON.stringify(value));
 function moduleStore() {
   const storage = new Map();
   const context = vm.createContext({
-    console, TextEncoder, setTimeout, clearTimeout,
-    addEventListener() {},
+    console, TextEncoder, setTimeout, clearTimeout, CustomEvent,
+    addEventListener() {}, dispatchEvent() {},
     document: { addEventListener() {}, getElementById: () => null, querySelectorAll: () => [] },
     localStorage: { getItem: key => storage.get(key) || null, setItem: (key, value) => storage.set(key, value) },
     normalizeSearchText: value => String(value || '').toLowerCase(),

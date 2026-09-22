@@ -2,7 +2,7 @@
 // records keep totalCopper for compatibility with existing character sheets.
 const UNITS = Object.freeze({ g: 1000, gt: 1000, gold: 1000, goldtaler: 1000, goldstück: 1000,
   s: 100, st: 100, silber: 100, silbertaler: 100, silberstück: 100, k: 1, kt: 1, ks: 1,
-  kupfer: 1, kupfertaler: 1, kupferstück: 1, taler: 1, p: 0.01, pf: 0.01, pfennig: 0.01 });
+  kupfer: 1, kupfertaler: 1, kupferstück: 1, taler: 1, p: 0.01, pf: 0.01, pfennig: 0.01, eisenpfennig: 0.01 });
 
 export function localizedNumber(value) {
   if (typeof value === 'number') return Number.isFinite(value) ? value : null;
@@ -26,16 +26,21 @@ export function moneyState(copper = 0) {
   const minor = toMinor(copper);
   const gold = Math.floor(minor / 100000);
   const silver = Math.floor((minor % 100000) / 10000);
-  return { gold, silver, copper: (minor % 10000) / 100, totalCopper: minor / 100 };
+  return { gold, silver, copper: Math.floor((minor % 10000) / 100), pfennig: minor % 100, totalCopper: minor / 100 };
 }
 
 export function moneyTotal(value = {}) {
   if (typeof value === 'string') {
-    const parts = [...value.matchAll(/(\d[\d.,]*)\s*(Gold(?:taler)?|Silber(?:taler)?|Kupfer(?:taler)?|Pfennig)/gi)];
+    const parts = [...value.matchAll(/(\d[\d.,]*)\s*(Gold(?:taler)?|Silber(?:taler)?|Kupfer(?:taler)?|(?:Eisen)?Pfennig)/gi)];
     return parts.reduce((sum, part) => sum + (localizedNumber(part[1]) || 0) * UNITS[part[2].toLowerCase()], 0);
   }
   if (value?.totalCopper != null) return toMinor(value.totalCopper) / 100;
-  return toMinor((Number(value?.gold) || 0) * 1000 + (Number(value?.silver) || 0) * 100 + (Number(value?.copper) || 0)) / 100;
+  return toMinor((Number(value?.gold) || 0) * 1000 + (Number(value?.silver) || 0) * 100 + (Number(value?.copper) || 0) + (Number(value?.pfennig) || 0) / 100) / 100;
+}
+
+export function formatMoney(value = {}) {
+  const money = moneyState(moneyTotal(value));
+  return `${money.gold} Gold, ${money.silver} Silber, ${money.copper} Kupfer, ${money.pfennig} Eisenpfennig`;
 }
 
 export function formatCopper(value) {

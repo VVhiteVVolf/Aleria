@@ -1,0 +1,185 @@
+/* Inventory reading view, wallet and item cards. Editor controls live in
+   module-page-character-inventory.css. All surfaces share this local palette. */
+.character-inventory-page {
+  container: character-inventory / inline-size;
+  --ci-ink: #30382f;
+  --ci-muted: #73776a;
+  --ci-line: #d7d4c7;
+  --ci-paper: #faf8f1;
+  --ci-accent: #486253;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  padding: 1.2rem;
+  background: #efede3;
+  color: var(--ci-ink);
+  overflow: auto;
+}
+.character-inventory-page :where(button, input) { font: inherit; }
+.character-inventory-page button { cursor: pointer; }
+.character-inventory-page :where(button, input):focus-visible { outline: 2px solid #8e703b; outline-offset: 3px; }
+.ci-header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; padding: .2rem 0 1.2rem; margin-bottom: 1.2rem; border-bottom: 1px solid var(--ci-line); }
+.ci-owner { display: flex; align-items: center; gap: .9rem; min-width: 0; }
+.ci-owner-avatar { flex: 0 0 52px; width: 52px; height: 52px; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid #b6a47c; background: #e1ddcd; }
+.ci-header h2 { margin: .2rem 0; font: 600 clamp(1.15rem, 2cqi, 1.8rem) 'Cinzel', serif; letter-spacing: .02em; }
+.ci-header p { margin: 0; color: var(--ci-muted); font-size: .84rem; }
+.ci-section-kicker { color: #7d765c; font-size: .64rem; text-transform: uppercase; letter-spacing: .14em; }
+.ci-overview { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; color: var(--ci-muted); font-size: .8rem; }
+.ci-overview strong { color: var(--ci-accent); font-size: 1rem; }
+.ci-overview button, .ci-register-action { padding: .65rem .8rem; border: 1px solid #c6c9bb; border-radius: 5px; background: #f9f8f2; color: #415746; }
+.ci-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 36%); align-items: start; gap: 1.25rem; }
+.ci-main-column { display: grid; gap: 1.15rem; min-width: 0; }
+.ci-center, .ci-companions, .ci-money-panel { min-width: 0; padding: 1.1rem; border: 1px solid var(--ci-line); border-radius: 9px; background: var(--ci-paper); }
+.ci-item-tools, .ci-section-heading { display: flex; justify-content: space-between; align-items: center; gap: .75rem; margin-bottom: 1rem; }
+.ci-item-tools h3, .ci-section-heading h3, .ci-money-head h3 { margin: .3rem 0 0; font: 600 1.08rem 'Cinzel', serif; }
+.ci-search { display: flex; align-items: center; gap: .5rem; padding: .2rem .7rem; border: 1px solid #d0d3c7; background: #f2f3ed; border-radius: 5px; margin-bottom: .85rem; }
+.ci-search > span { font-size: 1.3rem; color: #73816d; }
+.ci-search input { width: 100%; min-width: 0; padding: .5rem 0; border: 0; background: transparent; color: var(--ci-ink); }
+.ci-tabs { display: flex; flex-wrap: wrap; gap: .35rem; padding-bottom: .9rem; }
+.ci-tabs button { display: flex; align-items: center; gap: .25rem; min-height: 32px; padding: .3rem .5rem; background: transparent; border: 1px solid transparent; border-radius: 4px; color: #69705f; font-size: .75rem; }
+.ci-tabs :is(img, button > span) { width: 17px; height: 17px; object-fit: contain; }
+.ci-tabs button.active { background: #415b4b; color: #fffdf3; border-color: #415b4b; }
+.ci-tabs button:hover:not(.active) { background: #e9ecdf; }
+.ci-tab-count { font-style: normal; font-size: .65rem; opacity: .75; }
+.ci-item-head, .ci-item-row { display: grid; grid-template-columns: minmax(0, 1fr) 90px 88px 35px 30px; align-items: center; gap: .5rem; }
+.ci-item-head { padding: .4rem .5rem .55rem; border-bottom: 1px solid var(--ci-line); color: var(--ci-muted); font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; }
+.ci-item-list { display: grid; gap: .35rem; margin-top: .4rem; }
+.ci-item-row { min-height: 75px; padding: .3rem .45rem; border: 1px solid transparent; border-radius: 5px; transition: background .12s; }
+.ci-item-row[hidden], .ci-item-empty[hidden] { display: none; }
+.ci-item-row:hover { background: #f0f1e9; }
+.ci-item-row.is-selected { background: #e7eddf; border-color: #a9b69b; box-shadow: inset 3px 0 #4a6351; }
+.ci-item-select { display: flex; gap: .7rem; align-items: center; width: 100%; min-width: 0; padding: 0; border: 0; color: inherit; background: none; text-align: left; }
+.ci-item-icon { width: 52px; height: 58px; flex: 0 0 52px; object-fit: contain; background: #eeece2; border-radius: 4px; }
+.ci-item-select strong { display: block; font-size: .94rem; line-height: 1.3; font-weight: 600; overflow-wrap: anywhere; }
+.ci-item-select small { display: block; margin-top: .22rem; color: var(--ci-muted); font-size: .76rem; }
+.ci-item-state { font-size: .68rem; color: #7d806e; text-align: center; }
+.ci-item-state.is-equipped { padding: .25rem; background: #dce7d4; border: 1px solid #c8d6be; border-radius: 4px; color: #3d5a3e; }
+.ci-item-quantity { text-align: center; font-size: .82rem; font-variant-numeric: tabular-nums; }
+.ci-item-price { color: #897043; font-size: .76rem; font-variant-numeric: tabular-nums; }
+.ci-item-card-button { width: 30px; height: 32px; background: transparent; border: 1px solid #d3d7c9; border-radius: 4px; color: #56715b; }
+.ci-item-empty, .ci-companion-empty { padding: 1.5rem .5rem; color: var(--ci-muted); text-align: center; }
+.ci-live-preview { position: sticky; top: 0; min-width: 0; max-height: calc(100dvh - 15rem); border: 1px solid #b9bba9; border-radius: 9px; background: #faf8f1; overflow: auto; scrollbar-width: thin; scrollbar-color: #abb39e transparent; box-shadow: 0 8px 26px #2933230c; }
+.ci-live-head { display: flex; justify-content: space-between; padding: .7rem 1rem; background: #394c40; color: #edead7; font-size: .68rem; letter-spacing: .13em; text-transform: uppercase; }
+.ci-live-empty { min-height: 330px; padding: 2rem; text-align: center; color: var(--ci-muted); }
+.ci-live-empty > span { display: block; margin-top: 3rem; font-size: 3rem; color: #a8ae98; }
+.ci-card-open { display: flex; justify-content: space-between; width: calc(100% - 2rem); margin: 0 1rem 1rem; padding: .8rem 1rem; border: 1px solid #526653; border-radius: 5px; background: #465d4d; color: #fffdf4; }
+
+/* A small treasury in its own darker surface, including the iron penny. */
+.ci-money-panel { color: #e9e4d0; border-color: #556255; background: #202b28; }
+.ci-money-head { display: flex; align-items: center; justify-content: space-between; gap: .7rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.ci-money-head h3 { color: #e5d3a5; }
+.ci-money-head p, .ci-money-status { margin: .4rem 0 0; font-size: .72rem; color: #b6c0ac; }
+.ci-money-head > strong { font-size: .85rem; color: #d9c7a0; font-variant-numeric: tabular-nums; }
+.ci-money-grid, .ci-money-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .55rem; }
+.ci-money-control, .ci-money-summary-item { display: grid; justify-items: center; gap: .4rem; min-width: 0; padding: .7rem .25rem; background: #26332e; border: 1px solid #435345; border-radius: 6px; }
+.ci-money-control img, .ci-money-summary-item img { width: 46px; height: 46px; object-fit: contain; border-radius: 50%; }
+.ci-money-control span, .ci-money-summary-item span { color: #c7cbb7; font-size: .65rem; text-align: center; }
+.ci-money-summary-item strong { font-size: 1.3rem; color: #f2edda; }
+.ci-money-control input, .ci-money-transaction input { box-sizing: border-box; min-width: 0; width: 100%; padding: .35rem; background: #18221f; color: #f2edda; border: 1px solid #53604e; border-radius: 3px; text-align: center; }
+.ci-money-control input { max-width: 70px; }
+.ci-money-transaction { display: grid; gap: .7rem; margin-top: 1rem; }
+.ci-money-transaction-fields { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem; }
+.ci-money-transaction label { display: grid; gap: .3rem; font-size: .7rem; color: #c4c5ae; }
+.ci-money-actions { display: flex; justify-content: flex-end; gap: .5rem; }
+.ci-money-actions button { padding: .5rem .8rem; background: #34463a; color: #eee7d0; border: 1px solid #687358; border-radius: 4px; }
+.ci-section-count { min-width: 1.7rem; padding: .25rem; text-align: center; border: 1px solid #c7ccbd; border-radius: 50%; font-size: .75rem; color: var(--ci-accent); }
+.ci-companion-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 215px), 1fr)); gap: .7rem; }
+.ci-companion-card { display: flex; align-items: center; gap: .75rem; min-width: 0; padding: .65rem; text-align: left; border: 1px solid #d0d2c5; background: #f0f2e8; border-radius: 6px; color: var(--ci-ink); }
+.ci-companion-card:hover { background: #e4eadc; border-color: #a2b08f; }
+.ci-companion-image { flex: 0 0 65px; width: 65px; height: 76px; border-radius: 5px; object-fit: contain; }
+.ci-companion-heading { display: grid; gap: .3rem; overflow-wrap: anywhere; }
+.ci-companion-heading strong { font: 600 .85rem 'Cinzel', serif; }
+.ci-companion-heading span { font-size: .78rem; color: var(--ci-muted); }
+.ci-companion-heading small { font-size: .65rem; color: #577252; }
+.ci-equipment-quiz { margin-top: 1rem; padding: .75rem; border: 1px solid var(--ci-line); }
+.ci-equipment-quiz-head { display: flex; gap: .75rem; justify-content: space-between; }
+.ci-equipment-quiz h3 { margin: 0; font-size: .9rem; }
+.ci-equipment-quiz p { font-size: .78rem; color: var(--ci-muted); }
+.ci-equipment-question { display: grid; gap: .5rem; }
+.ci-equipment-question textarea { min-height: 90px; width: 100%; box-sizing: border-box; }
+.ci-equipment-quiz-actions { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .5rem; }
+
+/* Category templates: common anatomy, distinct material and accent. */
+.ci-item-card { --card-accent: #637154; --card-wash: #eff0e4; padding: 1rem; color: #373a30; background: #faf8f1; }
+.ci-card-weapon { --card-accent: #855247; --card-wash: #f1e9df; }
+.ci-card-armor { --card-accent: #526977; --card-wash: #e9edef; }
+.ci-card-consumable { --card-accent: #677b46; --card-wash: #eef0e1; }
+.ci-card-artifact { --card-accent: #746083; --card-wash: #efebf1; }
+.ci-card-document { --card-accent: #90703c; --card-wash: #f3eddf; }
+.ci-card-companion { --card-accent: #55756d; --card-wash: #e9efea; }
+.ci-card-heading { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: 0 0 .65rem; border-bottom: 1px solid var(--card-accent); font-size: .7rem; color: var(--card-accent); }
+.ci-card-kicker { font-size: .63rem; text-transform: uppercase; letter-spacing: .12em; color: var(--card-accent); }
+.ci-card-status { font-size: .63rem; }
+.ci-card-image { margin-top: .85rem; display: grid; place-items: center; min-width: 0; border: 1px solid #dcd9ce; border-radius: 4px; background: radial-gradient(ellipse, #fffdf7 0, var(--card-wash) 100%); overflow: hidden; }
+.ci-card-art { display: block; width: 100%; height: 250px; padding: 1rem; box-sizing: border-box; object-fit: contain; }
+.ci-card-title { padding: 1rem .25rem .6rem; text-align: center; }
+.ci-card-title h3 { margin: 0; color: var(--card-accent); font: 600 1.3rem/1.3 'Cinzel', serif; overflow-wrap: anywhere; }
+.ci-card-title p { margin: .35rem 0 0; font-size: .73rem; color: #85836f; }
+.ci-card-diagram { text-align: center; margin: .2rem 0 .8rem; }
+.ci-card-diagram > small { font-size: .6rem; color: #8b8876; }
+.ci-card-radar svg { width: min(100%, 230px); height: 205px; overflow: visible; }
+.ci-card-radar text { font-size: 9px; fill: #706c56; }
+.ci-card-radar .ci-radar-bars { display: none; }
+.ci-card-radar polygon:last-of-type { stroke: var(--card-accent); fill: var(--card-wash); fill-opacity: .6; }
+.ci-card-radar circle { fill: var(--card-accent); }
+.ci-card-description { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; padding-top: .8rem; border-top: 1px solid #dfddcf; }
+.ci-card-facts { margin: 0; font-size: .78rem; }
+.ci-card-facts > div { padding: .4rem 0; border-bottom: 1px solid #e7e4d8; }
+.ci-card-facts dt { color: #82816f; font-size: .65rem; margin-bottom: .15rem; }
+.ci-card-facts dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.ci-card-lore p { margin: .45rem 0; font: italic .87rem/1.6 Georgia, serif; color: #6a695a; overflow-wrap: anywhere; }
+.ci-card-rules { margin-top: 1rem; padding: 1rem; border-left: 3px solid var(--card-accent); background: var(--card-wash); }
+.ci-card-rules h4 { margin: 0 0 .8rem; font: 600 .85rem 'Cinzel', serif; color: var(--card-accent); }
+.ci-card-rules > div + div { margin-top: .7rem; }
+.ci-card-rules strong { font-size: .87rem; }
+.ci-card-rules p { margin: .25rem 0 0; font-size: .84rem; line-height: 1.5; }
+.ci-card-compact .ci-card-art { height: 185px; }
+.ci-card-compact .ci-card-title h3 { font-size: 1.08rem; }
+.ci-card-compact .ci-card-description { gap: .8rem; }
+.ci-profile-overlay:has(.ci-card-modal) { width: min(620px, calc(100% - 1.5rem)); }
+.ci-card-modal { display: block; width: 100%; padding: 0; box-sizing: border-box; max-height: none; border: 1px solid #a79c7e; border-radius: 9px; background: #faf8f1; overflow: hidden; }
+.ci-card-modal .ci-item-card { padding: 1.3rem; }
+.ci-card-modal .ci-card-heading { padding-right: 2rem; }
+.ci-card-modal .ci-modal-close { z-index: 1; background: #faf8f1; color: #6c6859; border-radius: 4px; }
+.ci-card-footer { display: flex; justify-content: center; flex-wrap: wrap; gap: .5rem; padding: 0 1.3rem 1.2rem; font-size: .78rem; }
+.ci-card-footer button { flex: 1 1 145px; padding: .7rem .65rem; color: #415746; background: #eef0e5; border: 1px solid #b9c3ae; border-radius: 4px; }
+.ci-profile-overlay::backdrop { background: #101d16a8; backdrop-filter: blur(3px); }
+
+@container character-inventory (max-width: 1000px) {
+  .ci-layout { grid-template-columns: minmax(0, 1fr) minmax(285px, 40%); gap: .8rem; }
+  .ci-center, .ci-money-panel, .ci-companions { padding: .8rem; }
+  .ci-item-head, .ci-item-row { grid-template-columns: minmax(0, 1fr) 70px 30px 28px; gap: .35rem; }
+  .ci-item-state, .ci-item-head > span:nth-child(3) { display: none; }
+  .ci-item-icon { width: 42px; flex-basis: 42px; }
+  .ci-item-select { gap: .5rem; }
+  .ci-item-tools { flex-wrap: wrap; }
+}
+@container character-inventory (max-width: 700px) {
+  .ci-layout { grid-template-columns: minmax(0, 1fr); }
+  .ci-live-preview { position: static; max-height: none; }
+  .ci-money-grid, .ci-money-summary { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .ci-owner-avatar { flex-basis: 40px; width: 40px; height: 40px; }
+  .ci-header h2 { font-size: 1.05rem; }
+  .ci-overview { justify-content: space-between; width: 100%; }
+}
+@container character-inventory (max-width: 420px) {
+  .ci-item-row { grid-template-columns: minmax(0, 1fr) 30px 28px; }
+  .ci-item-head { display: none; }
+  .ci-item-select { grid-column: 1; grid-row: 1; }
+  .ci-item-price { grid-column: 1; grid-row: 2; padding-left: 50px; text-align: left; }
+  .ci-item-quantity { grid-column: 2; grid-row: 1 / 3; }
+  .ci-item-card-button { grid-column: 3; grid-row: 1 / 3; }
+  .ci-money-grid, .ci-money-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ci-tabs { gap: .15rem; }
+  .ci-tabs button { padding: .25rem; font-size: .68rem; }
+}
+@media (max-width: 600px) {
+  .character-inventory-page { padding: .65rem; }
+  .ci-card-modal .ci-item-card { padding: .85rem; }
+  .ci-profile-modal-editing { grid-template-columns: minmax(0, 1fr); }
+  .ci-card-art { height: 200px; }
+}
+@container module-content (max-width: 1180px) {
+  .ci-profile-modal-editing, .ci-full-editor { grid-template-columns: minmax(0, 1fr); }
+  .ci-editor-splitter { display: none; }
+}

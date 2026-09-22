@@ -11,9 +11,41 @@ import { ARCHIVE_PAGE_CLASSES } from '../../AleriaAlmanach/modules/character-arc
 import { resolveTechniqueDamageFormula } from '../../AleriaAlmanach/modules/combat/combat-technique-damage.js';
 import { parseDamageFormula } from '../../AleriaAlmanach/modules/combat/rules/combat-mvp-rules.js';
 import { resolveCultureClassDocument } from '../modules/culture/culture-class-content.js';
+import { refreshRuntimeCondition } from '../../AleriaAlmanach/modules/combat/combat-condition-lifecycle.js';
 
 const plans = ALDRIMAR_CLASS_IDS.map(id => getAldrimarClassProgression(id, 20));
 const root = new URL('../../', import.meta.url);
+
+test('alternative preparations from the same fighter refresh instead of adding bonuses', () => {
+  const guards = getAldrimarClassProgression('skytte',8).attackCatalog
+    .flatMap(attack => attack.effects).filter(effect => effect.condition?.name === 'Feste Deckung');
+  assert.ok(guards.length >= 3);
+  let conditions = [];
+  for (const effect of guards) conditions = refreshRuntimeCondition(conditions,{
+    ...effect.condition,sourceConditionId:effect.condition.id,sourceActorId:'skytte'
+  });
+  assert.equal(conditions.length,1);
+  assert.ok(conditions[0].mechanics.armorClass <= 2);
+});
+
+test('each Aldrimar class offers additional choices on every early level and varied structured costs', () => {
+  for (const plan of plans) {
+    for (let level = 1; level <= 8; level++) {
+      assert.ok(plan.attackCatalog.filter(attack => attack.minimumLevel === level && /-wahl-\d+$/.test(attack.id)).length >= 2,`${plan.name} Stufe ${level}`);
+    }
+    assert.ok(plan.attackCatalog.some(attack => attack.minimumLevel >= 17),plan.name);
+    assert.ok(plan.attackCatalog.some(attack => attack.costs.some(cost => cost.resourceId === 'special-action')),plan.name);
+    assert.ok(plan.attackCatalog.some(attack => !attack.effects.some(effect => effect.type === 'damage')),plan.name);
+    assert.ok(new Set(plan.attackCatalog.map(attack => attack.costs.map(cost => cost.resourceId).sort().join(','))).size >= 7,plan.name);
+    for (const attack of plan.attackCatalog) {
+      assert.ok(attack.effects.length,attack.name);
+      for (const cost of attack.costs) {
+        assert.equal(cost.amount,1);
+        assert.equal(cost.scope,['special-action','aura-focus'].includes(cost.resourceId) ? 'persistent' : 'comment');
+      }
+    }
+  }
+});
 function maximum(attack, level) {
   const parsed = parseDamageFormula(resolveTechniqueDamageFormula(attack, { damageFormula: '1d10' }, { progression: { level } }));
   return (parsed.terms || [parsed]).reduce((sum, term) => sum + term.diceCount * term.sides, parsed.fixedModifier);
@@ -32,6 +64,7 @@ test('Aldrimar separates Skjoldr and Skjaldr and connects all seven pages to arc
     const page = await readFile(new URL(`Klassenordner/${href}`, root), 'utf8');
     assert(page.includes(`data-culture-class="aldrimar-${plan.classId}"`));
     assert(!/animexx|Titel hier|Dialog von Figur|onclick=/i.test(page));
+    for (const attack of plan.attackCatalog) assert.ok(page.includes(`data-training-attack="${attack.id}"`),`${plan.name}: ${attack.name} fehlt auf der Seite`);
     assert(ARCHIVE_PAGE_CLASSES.find(entry => entry.id === plan.classId).pageLinks.some(link => link.path.endsWith(href)));
     assert.equal(getCultureClassDefinitions(plan.classId, ['Aldrimar'])[0].classId, plan.classId);
   }
@@ -42,7 +75,7 @@ test('Aldrimar separates Skjoldr and Skjaldr and connects all seven pages to arc
 test('class training stays read-only with coherent budgets, paths and level boundaries', () => {
   const attacks = plans.flatMap(plan => plan.attackCatalog);
   assert.equal(new Set(attacks.map(attack => attack.id)).size, attacks.length);
-  assert.equal(attacks.length, 111);
+  assert.equal(attacks.length, 303);
   for (const plan of plans) {
     assert.equal(plan.levels.length, 20);
     assert.deepEqual(plan.combatStyleGrants, []);
@@ -134,13 +167,13 @@ test('foundation damage is bounded, older attacks grow and guards never gain dam
     }
   }
   const militia = getAldrimarClassProgression('hird-maid', 20);
-  assert(militia.attackCatalog.every(attack => attack.minimumLevel <= 15));
+  assert(militia.attackCatalog.some(attack => attack.minimumLevel === 20));
   assert.equal(militia.pathOptions.length, 0);
   const hit = militia.attackCatalog.find(attack => attack.effects.some(effect => effect.type === 'damage'));
   assert.equal(maximum(hit, 15), maximum(hit, 20));
 });
 
-test('Skalde mirrors Freyas repertoire without personal traits or invented progression after five', async () => {
+test('Skalde retains Freyas spell reference alongside separate nonmagical training through twenty', async () => {
   const plan = getAldrimarClassProgression('skalde', 20);
   const snapshot = JSON.parse(await readFile(new URL('Klassenordner/Aldrimar/skalde/referenz-freya.json', root), 'utf8'));
   assert.equal(plan.skaldReference.sourceProfileHash, snapshot.sourceProfileHash);
@@ -148,12 +181,12 @@ test('Skalde mirrors Freyas repertoire without personal traits or invented progr
   assert.deepEqual(plan.skaldReference.repertoire, snapshot.repertoire);
   assert.equal(plan.skaldReference.repertoire.length, 9);
   assert.deepEqual(plan.skaldReference.repertoire.map(entry => entry.sourceId), ['freya-spottvers', 'freya-magische-hand', 'freya-kleine-illusion', 'freya-licht', 'freya-charm-person', 'freya-calm-person', 'freya-enrage-person', 'freya-silence', 'freya-arkaner-schrei']);
-  assert.equal(plan.authoredThroughLevel, 5);
-  assert.equal(plan.attackCatalog.length, 0);
-  assert.equal(plan.styles.length, 0);
+  assert.equal(plan.authoredThroughLevel, 20);
+  assert.equal(plan.attackCatalog.length, 28);
+  assert.equal(plan.styles[0].forms.length, 4);
   assert.equal(plan.multiclass.sharedActionPools, true);
   assert.equal(plan.multiclass.additionalManaPool, false);
-  assert(plan.levels.slice(5).every(row => row.status === 'pending' && row.resources === null && row.features.length === 0 && row.attacks.length === 0 && row.techniqueSlots.length === 0));
+  assert(plan.levels.slice(5).every(row => row.status === 'draft' && row.resources));
   assert(!JSON.stringify(plan.classFeatures).match(/Busenwunder|Frohnatur|Gutmensch|Künstlerische Ausbildung/));
   const spell = plan.skaldReference.repertoire.find(entry => entry.sourceId === 'freya-charm-person');
   assert(spell.costs.some(cost => cost.resourceId === 'spell-slot-1' && cost.amount === 1));

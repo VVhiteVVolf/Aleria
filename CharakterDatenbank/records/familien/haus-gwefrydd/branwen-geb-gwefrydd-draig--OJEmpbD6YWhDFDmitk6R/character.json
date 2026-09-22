@@ -109,12 +109,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-13T18:13:16.437Z",
+    "sourceExportedAt": "2026-09-22T12:00:00.000Z",
     "sourceUpdatedAt": "",
     "sourceDocumentIds": [
       "OJEmpbD6YWhDFDmitk6R"
     ],
-    "contentHash": "162547d6337c9a9d6fea6b125be4a4f32b1004d22a6382ae07ad16318b25fe8a"
+    "contentHash": "eb2d786734e73ae2f18d79a92d1889f619841cce8946f308b5e8f11afbda2221"
   },
   "local": {
     "notes": "",
@@ -1207,8 +1207,8 @@
           "personId": "branwen-gwefrydd",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-13T18:13:16.437Z",
-          "lastSyncedAt": "2026-09-13T18:13:16.437Z",
+          "importedAt": "2026-09-22T12:00:00.000Z",
+          "lastSyncedAt": "2026-09-22T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-gwefrydd&mode=view&person=branwen-gwefrydd",
           "fingerprint": "{\"name\":\"Branwen Gwefrydd\",\"title\":\"\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwefrydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/branwen-gwefrydd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"stennis-gwefrydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--stennis-gwefrydd\",\"name\":\"Stennis Gwefrydd\"},{\"personId\":\"morwen-dyngwn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dyngwn--morwen-dyngwn\",\"name\":\"Morwen Dyngwn\"}],\"partners\":[{\"personId\":\"steffan-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--steffan-draig\",\"name\":\"Steffan Draig\"}],\"children\":[]}}"
         },
@@ -1217,8 +1217,8 @@
           "personId": "branwen-gwefrydd",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-13T18:13:16.437Z",
-          "lastSyncedAt": "2026-09-13T18:13:16.437Z",
+          "importedAt": "2026-09-22T12:00:00.000Z",
+          "lastSyncedAt": "2026-09-22T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=branwen-gwefrydd",
           "fingerprint": "{\"name\":\"Branwen Gwefrydd\",\"title\":\"\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwefrydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/branwen-gwefrydd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"steffan-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--steffan-draig\",\"name\":\"Steffan Draig\"}],\"children\":[{\"personId\":\"gethin-1722-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--gethin-1722-draig\",\"name\":\"Gethin Draig\"},{\"personId\":\"tegan-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--tegan-draig\",\"name\":\"Tegan Draig\"}]}}"
         }

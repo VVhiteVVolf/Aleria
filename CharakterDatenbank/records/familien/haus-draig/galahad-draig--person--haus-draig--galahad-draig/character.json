@@ -124,12 +124,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-13T18:13:16.437Z",
+    "sourceExportedAt": "2026-09-22T12:00:00.000Z",
     "sourceUpdatedAt": "2026-09-03T23:41:58.678Z",
     "sourceDocumentIds": [
       "person--haus-draig--galahad-draig"
     ],
-    "contentHash": "f4592ad5503ee0e1a002f7b9e00cc529ab4c950436923a20ee76f83017e7c97f"
+    "contentHash": "9a3e77cc792230994a4d20a3ec7aac1d77d6cea81b6351d0b7303935977f5527"
   },
   "local": {
     "notes": "",
@@ -424,8 +424,8 @@
           "personId": "galahad-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-13T18:13:16.437Z",
-          "lastSyncedAt": "2026-09-13T18:13:16.437Z",
+          "importedAt": "2026-09-22T12:00:00.000Z",
+          "lastSyncedAt": "2026-09-22T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-neidr&mode=view&person=galahad-draig",
           "fingerprint": "{\"name\":\"Galahad Draig\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwendolyn-aderyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"children\":[{\"personId\":\"guinevere-neidr\",\"type\":\"foster\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--guinevere-neidr\",\"name\":\"Guinevere Neidr\"}]}}"
         },
@@ -434,8 +434,8 @@
           "personId": "galahad-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-13T18:13:16.437Z",
-          "lastSyncedAt": "2026-09-13T18:13:16.437Z",
+          "importedAt": "2026-09-22T12:00:00.000Z",
+          "lastSyncedAt": "2026-09-22T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-aderyn&mode=view&person=galahad-draig",
           "fingerprint": "{\"name\":\"Galahad Draig\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwendolyn-aderyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"children\":[]}}"
         }

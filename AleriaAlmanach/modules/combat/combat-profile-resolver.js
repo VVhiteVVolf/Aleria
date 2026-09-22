@@ -27,6 +27,7 @@ import { getCombatWeaponLoadout, getCombatTechniqueWeapon, usesCharacterWeaponLo
 import { COMBAT_WAIT_ACTION, hasActionBlockingCondition } from './combat-wait-action.js';
 import { empowerAuraAttack } from './combat-aura-attack.js';
 import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
+import { getHuskarlTechniqueUnavailableReason } from '../classes/aldrimar/aldrimar-combat-rules.js';
 
 let emptyCharacterTargetProfile = null;
 let emptyCreatureTargetProfile = null;
@@ -99,7 +100,8 @@ function buildCombatProfileActions(character, profile, options = {}) {
       const weaponCompatible = !!activeWeapon && isTechniqueCompatibleWithWeapon(technique, activeWeapon);
       const levelCompatible = getEffectiveCombatLevel(profile) >= Number(technique.minimumLevel || 1);
       const weaponRules = resolveCenyrTechniqueWeaponRules(profile, technique, activeWeapon || {});
-      const compatible = weaponCompatible && levelCompatible && weaponRules.compatible;
+      const huskarlError = getHuskarlTechniqueUnavailableReason(profile, technique);
+      const compatible = weaponCompatible && levelCompatible && weaponRules.compatible && !huskarlError;
       const formula = resolveTechniqueDamageFormula(technique, activeWeapon || {}, profile);
       const scaling = getTechniqueDamageScaling(technique, profile);
       const versatileFormula = technique.damageModel?.mode === 'weapon-dice' && activeWeapon?.versatileDamageFormula
@@ -163,7 +165,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
           ? ''
           : (!levelCompatible
               ? `Wird ab Stufe ${technique.minimumLevel} freigeschaltet.`
-              : (weaponRules.disabledReason || `Benötigt eine passende Waffenart; aktiv ist ${activeWeapon?.name || 'keine Waffe'}.`)),
+              : (huskarlError || weaponRules.disabledReason || `Benötigt eine passende Waffenart; aktiv ist ${activeWeapon?.name || 'keine Waffe'}.`)),
         default: false
       };
     });
@@ -490,11 +492,13 @@ export function validateCombatActorProfile(profile = {}, { startedAction = null 
     && startedAction.profileActionId === profile.profileActionId;
   const missingFields = getCombatActorProblems(profile)
     .filter(problem => problem !== 'incapacitated' || !continuingAction);
+  if (profile.weaponUnavailable) missingFields.push('disarmed');
   return { ready: missingFields.length === 0, missingFields };
 }
 
 export function getCombatActorValidationMessage(profile = {}, validation = validateCombatActorProfile(profile)) {
   if (validation.ready) return '';
+  if (validation.missingFields.includes('disarmed')) return `${profile.weapon?.name || 'Waffe'}: Entwaffnet. Erst über „Interagieren“ aufheben oder eine andere Waffe führen.`;
   if (validation.missingFields.includes('equipmentPreparation')) return profile.equipmentPreparation.error;
   if (validation.missingFields.includes('conditionBlocksActions')) return `${profile.name || 'Die Figur'} ist betäubt und muss diesen Zug aussetzen.`;
   if (validation.missingFields.includes('incapacitated')) {

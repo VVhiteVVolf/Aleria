@@ -8,6 +8,6 @@ export function getBalanceCatalog() {
   return [...getCombatStyle('drachentanz').forms.flatMap(form => form.techniques),
     ...['morwyr', 'rhyfelwyr', 'ceidwyn', 'rhiddwyr', 'derwyn', 'milwr']
       .flatMap(id => [...getSirenentanzBasicTechniques(id), ...getSirenentanzExpertTechniques(id)]),
-    ...['hird-maid', 'skjoldr', 'skytte', 'thegnar', 'skeidr', 'skjaldr']
+    ...['hird-maid', 'skjoldr', 'skytte', 'thegnar', 'skeidr', 'skjaldr', 'skalde']
       .flatMap(id => [...getHuskarlBasicTechniques(id), ...getHuskarlExpertTechniques(id)])];
 }

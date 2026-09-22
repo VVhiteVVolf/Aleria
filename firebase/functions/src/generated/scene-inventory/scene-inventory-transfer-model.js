@@ -1,7 +1,7 @@
-import { moneyTotal, moneyState as splitMoney } from '../item-register/item-register-money.js';
+import { moneyTotal, moneyState as splitMoney, formatMoney } from '../item-register/item-register-money.js';
 import { attachInventoryEquipment } from '../character-equipment/character-equipment-registration.js';
 import { synchronizeEquipmentFromInventory } from '../character-equipment/character-equipment-sync.js';
-const CURRENCY_VALUES = Object.freeze({ gold: 1000, silver: 100, copper: 1 });
+const CURRENCY_VALUES = Object.freeze({ gold: 1000, silver: 100, copper: 1, pfennig: 0.01 });
 
 function clone(value) {
   if (value == null || typeof value !== 'object') return value;
@@ -16,7 +16,7 @@ function quantity(value, fallback = 1) {
 
 function setMoney(inventory, totalCopper) {
   inventory.moneyState = splitMoney(totalCopper);
-  inventory.money = `${inventory.moneyState.gold} Gold, ${inventory.moneyState.silver} Silber, ${inventory.moneyState.copper} Kupfer`;
+  inventory.money = formatMoney(inventory.moneyState);
 }
 
 function normalizedInventory(record = {}) {
@@ -47,7 +47,7 @@ export function applySceneInventoryTransfer(giverRecord = {}, receiverRecord = {
     if (giverCopper < copper) throw new Error(`${giverRecord.name || 'Der Geber'} besitzt nicht genug Geld.`);
     setMoney(giverInventory, giverCopper - copper);
     setMoney(receiverInventory, moneyTotal(receiverInventory.moneyState || receiverInventory.money) + copper);
-    const labels = { gold: 'Gold', silver: 'Silber', copper: 'Kupfer' };
+    const labels = { gold: 'Gold', silver: 'Silber', copper: 'Kupfer', pfennig: 'Eisenpfennig' };
     canonicalObject = { kind, currency, quantity: requestedQuantity, totalCopper: copper, name: `${requestedQuantity} ${labels[currency]}`, description: `${requestedQuantity} ${labels[currency]}` };
   } else if (kind === 'item') {
     const itemId = String(transfer.itemId || '');

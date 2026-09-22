@@ -152,7 +152,7 @@
           "imagePosition": "center",
           "name": "Pflichtschwur · Draig-Ritterschwert",
           "type": "Ritterschwert",
-          "description": "Vielseitiges Draig-Ritterschwert. Einhändig 1W8, zweihändig 1W10; Wert: 5 Goldtaler.",
+          "description": "Gildas hält die schlichte Klinge gewissenhaft in Schuss. Ihr sauberer Kerbenschliff trägt keine Magie, nur die Sorgfalt eines Ritters, der sich auf sein Werkzeug verlassen muss.",
           "weight": "1,5 kg",
           "quantity": "1",
           "tags": "Schwert, Draig, Ritterschwert, vielseitig, Drachentanz, ritterlich",
@@ -165,15 +165,16 @@
             "versatileDamageFormula": "1d10",
             "attackAttribute": "strength",
             "proficient": true,
-            "attackBonus": 0,
-            "damageBonus": 0,
+            "attackBonus": 1,
+            "damageBonus": 1,
             "damageType": "Hieb",
             "rangeType": "melee",
             "range": "Nahkampf",
             "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
-            "notes": "Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
+            "notes": "Ausgewogene Klinge: +1 auf Waffenangriff und Waffenschaden. Kein zusätzlicher kritischer Ausrüstungseffekt.",
             "requirements": "",
-            "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung."
+            "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
+            "triggerRules": []
           },
           "equipmentLink": {
             "schemaVersion": 1,
@@ -184,26 +185,37 @@
             {
               "icon": "◈",
               "label": "Wert",
-              "value": "5 Goldtaler"
+              "value": "5 Goldtaler, 5 Silbertaler"
             },
             {
               "icon": "⚔",
               "label": "Schaden",
-              "value": "1W8 · vielseitig 1W10"
+              "value": "1W8+1 · vielseitig 1W10+1"
             },
             {
               "icon": "◆",
               "label": "Status",
               "value": "Aktiv geführt"
+            },
+            {
+              "label": "Qualität",
+              "value": "Ausgewogene Klinge: +1 Angriff und +1 Schaden."
             }
           ],
           "attributes": [],
           "value": {
             "gold": 5,
-            "silver": 0,
+            "silver": 5,
             "copper": 0,
-            "totalCopper": 5000
-          }
+            "pfennig": 0,
+            "totalCopper": 5500
+          },
+          "flavorText": "Gildas hält die schlichte Klinge gewissenhaft in Schuss. Ihr sauberer Kerbenschliff trägt keine Magie, nur die Sorgfalt eines Ritters, der sich auf sein Werkzeug verlassen muss.",
+          "valuation": {
+            "minCopper": 5500,
+            "maxCopper": 5500
+          },
+          "valuationNote": "Draig-Ausführung; gleicher Handelswert wie Gawains entsprechendem Ausrüstungsstück."
         },
         {
           "id": "gildas-gafyr-watch-armor-item",
@@ -220,9 +232,9 @@
           "imageFormat": "square",
           "imageFit": "contain",
           "imagePosition": "center",
-          "name": "Wachtpanzer · Draig-Jungritter-Plattenrüstung",
-          "type": "Draig-Jungritter-Plattenrüstung",
-          "description": "Plattenrüstung der Draig-Jungritter mit Wappenrock und geschlossenem Helm. Basis-RK 16; ab Stufe 12 zählt der Geschicklichkeitsmodifikator durch Rüstungsroutine.",
+          "name": "Gafyr-Plattenrüstung",
+          "type": "Gafyr-Plattenrüstung",
+          "description": "Unter dem Wappenrock greifen sorgsam angepasste Platten ineinander. Abgenutzte Riemen werden ersetzt, lose Nieten nachgezogen: Dieser Harnisch ist für lange Wachen gebaut, nicht für Bewunderung.",
           "weight": "24 kg",
           "quantity": "1",
           "tags": "Rüstung, Platte, Draig, Jungritter, Wappenrock, Helm",
@@ -236,8 +248,17 @@
             "dexterityMode": "full",
             "dexterityCap": 2,
             "dexterityUnlockLevel": 12,
-            "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
-            "notes": "Rüstungsroutine: Der Geschicklichkeitsmodifikator zählt erst ab Stufe 12."
+            "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
+            "notes": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus. Rüstungsroutine: Geschicklichkeit zählt erst ab Stufe 12.",
+            "triggerRules": [],
+            "damageProtection": {
+              "name": "Gafyr-Plattenschutz",
+              "amount": 2,
+              "damageTypes": [],
+              "excludedDamageTypes": [
+                "stich"
+              ]
+            }
           },
           "equipmentLink": {
             "schemaVersion": 1,
@@ -248,20 +269,37 @@
             {
               "icon": "⬙",
               "label": "Rüstungsklasse",
-              "value": "Basis-RK 16"
+              "value": "Basis-RK 16; kein zusätzlicher RK-Bonus"
             },
             {
               "icon": "✦",
               "label": "Ausführung",
-              "value": "Draig-Jungritter"
+              "value": "Haus Gafyr"
             },
             {
               "icon": "◆",
               "label": "Status",
               "value": "Angelegt"
+            },
+            {
+              "label": "Qualität",
+              "value": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus."
             }
           ],
-          "attributes": []
+          "attributes": [],
+          "flavorText": "Unter dem Wappenrock greifen sorgsam angepasste Platten ineinander. Abgenutzte Riemen werden ersetzt, lose Nieten nachgezogen: Dieser Harnisch ist für lange Wachen gebaut, nicht für Bewunderung.",
+          "valuation": {
+            "minCopper": 8800,
+            "maxCopper": 8800
+          },
+          "valuationNote": "Draig-Ausführung; gleicher Handelswert wie Gawains entsprechendem Ausrüstungsstück.",
+          "value": {
+            "gold": 8,
+            "silver": 8,
+            "copper": 0,
+            "pfennig": 0,
+            "totalCopper": 8800
+          }
         },
         {
           "id": "gildas-gafyr-dagger-item",
@@ -836,11 +874,11 @@
           "damageType": "Hieb",
           "attackAttribute": "strength",
           "proficient": true,
-          "attackBonus": 0,
-          "damageBonus": 0,
+          "attackBonus": 1,
+          "damageBonus": 1,
           "range": "Nahkampf",
           "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
-          "notes": "Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
+          "notes": "Ausgewogene Klinge: +1 auf Waffenangriff und Waffenschaden. Kein zusätzlicher kritischer Ausrüstungseffekt.",
           "requirements": "",
           "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
           "effects": [],
@@ -860,7 +898,8 @@
             "resourceId": "aura-focus",
             "cost": 1
           },
-          "equipped": true
+          "equipped": true,
+          "triggerRules": []
         },
         {
           "id": "gildas-gafyr-dagger",
@@ -906,7 +945,7 @@
         {
           "id": "gildas-gafyr-watch-armor",
           "inventoryItemId": "gildas-gafyr-watch-armor-item",
-          "name": "Wachtpanzer · Draig-Jungritter-Plattenrüstung",
+          "name": "Gafyr-Plattenrüstung",
           "image": "https://i.imgur.com/7siJPXG.png",
           "kind": "armor",
           "baseArmorClass": 16,
@@ -914,9 +953,18 @@
           "dexterityMode": "full",
           "dexterityCap": 2,
           "dexterityUnlockLevel": 12,
-          "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
-          "notes": "Rüstungsroutine: Der Geschicklichkeitsmodifikator zählt erst ab Stufe 12.",
-          "equipped": true
+          "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
+          "notes": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus. Rüstungsroutine: Geschicklichkeit zählt erst ab Stufe 12.",
+          "equipped": true,
+          "triggerRules": [],
+          "damageProtection": {
+            "name": "Gafyr-Plattenschutz",
+            "amount": 2,
+            "damageTypes": [],
+            "excludedDamageTypes": [
+              "stich"
+            ]
+          }
         }
       ],
       "resources": [
@@ -3992,5 +4040,6 @@
         "footer": "Personenakte · Gildas Gafyr"
       }
     }
-  }
+  },
+  "mergeStrategy": "replace-exported-fields"
 }

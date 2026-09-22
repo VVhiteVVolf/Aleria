@@ -1,90 +1,76 @@
-.character-inventory-page {
-  container: character-inventory / inline-size;
-  --ci-ink: var(--ink);
-  --ci-muted: var(--ink-faded);
-  --ci-line: var(--module-line, var(--parchment-deeper));
-  --ci-paper: var(--module-paper-raised, var(--parchment));
-  position: relative;
-  min-height: 0;
-  padding: 1rem;
-  border: 1px solid rgba(139,105,20,0.36);
-  background: var(--module-paper, var(--parchment-dark));
-  color: var(--ink);
-  min-width: 0;
-  flex: 1 1 auto;
-  overflow: auto;
+.ci-img-portrait {
+  aspect-ratio: 3 / 4;
 }
 
-.ci-header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  min-height: 0;
-  padding: 1rem 1.2rem;
-  text-align: left;
-  background: var(--module-paper-raised, var(--parchment));
-  border: 1px solid var(--ci-line);
-  margin-bottom: 0.9rem;
+.ci-img-square {
+  aspect-ratio: 1 / 1;
 }
 
-.ci-header::after {
+.ci-img-landscape {
+  aspect-ratio: 4 / 3;
+}
+
+.ci-img-wide {
+  aspect-ratio: 16 / 9;
+}
+
+.ci-fit-cover {
+  object-fit: cover;
+}
+
+.ci-fit-contain {
+  object-fit: contain;
+}
+
+.ci-pos-top {
+  object-position: center top;
+}
+
+.ci-pos-center {
+  object-position: center center;
+}
+
+.ci-pos-bottom {
+  object-position: center bottom;
+}
+
+.ci-pos-left {
+  object-position: left center;
+}
+
+.ci-pos-right {
+  object-position: right center;
+}
+
+.ci-placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--gold-dark);
+  background: rgba(255,255,255,0.18);
+}
+
+.ci-character-portrait.ci-placeholder,
+.ci-companion-image.ci-placeholder,
+.ci-profile-image.ci-placeholder {
+  position: relative;
+  background:
+    repeating-linear-gradient(45deg, rgba(139,105,20,0.05) 0 12px, transparent 12px 24px),
+    rgba(255,250,232,0.4);
+  color: rgba(139,105,20,0.6);
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+}
+
+.ci-character-portrait.ci-placeholder::after,
+.ci-companion-image.ci-placeholder::after,
+.ci-profile-image.ci-placeholder::after {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: min(340px, 55%);
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold), rgba(139,105,20,0));
+  inset: 0.45rem;
+  border: 1px dashed rgba(139,105,20,0.35);
+  pointer-events: none;
 }
 
-.ci-header h2 {
-  margin: 0;
-  font-family: 'Cinzel', serif;
-  font-size: 1.4rem;
-  letter-spacing: 0.03em;
-}
-
-.ci-header p {
-  margin: 0.2rem 0 0;
-  color: var(--ci-muted);
-  font-family: 'Cinzel', serif;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.ci-layout {
-  display: grid;
-  grid-template-columns: minmax(190px, 240px) minmax(0, 1fr);
-  grid-template-areas: 'character items' 'character companions';
-  gap: 0.8rem;
-  align-items: start;
-}
-
-.ci-character { grid-area: character; }
-.ci-center { grid-area: items; }
-.ci-companions { grid-area: companions; }
-
-.ci-overview {
-  display: flex;
-  gap: 1rem;
-  color: var(--ci-muted);
-  font-size: 0.85rem;
-}
-
-.ci-overview strong {
-  color: #713a2e;
-  font-size: 1.15rem;
-  margin-right: 0.2rem;
-}
-
-.ci-character,
-.ci-center,
-.ci-companions,
 .ci-box {
   border: 1px solid var(--ci-line);
   background: var(--ci-paper);
@@ -287,627 +273,6 @@
 
 .ci-attribute-chip strong {
   font-size: 0.95rem;
-}
-
-.ci-carry-row {
-  display: grid;
-  gap: 0.25rem;
-}
-
-.ci-item-tools {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem;
-  margin-bottom: 0.75rem;
-  padding: 0.65rem;
-  border: 1px solid rgba(139,105,20,0.2);
-  background: rgba(255,250,232,0.32);
-}
-
-.ci-item-tools h3 {
-  margin: 0;
-  color: var(--gold-dark);
-  font-family: 'Cinzel', serif;
-  font-size: 0.74rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.ci-item-tools p {
-  margin: 0.16rem 0 0;
-  color: var(--ink-faded);
-  font-size: 0.78rem;
-  font-style: italic;
-  line-height: 1.35;
-}
-
-.ci-register-action {
-  flex: 0 0 auto;
-  min-width: min(15rem, 100%);
-  min-height: 2.7rem;
-  display: inline-grid;
-  grid-template-columns: 1.75rem minmax(0, 1fr);
-  align-items: center;
-  gap: 0.55rem;
-  border: 1px solid rgba(44,26,8,0.72);
-  background: linear-gradient(135deg, #2c1a08, #5c3a12);
-  color: var(--gold-light);
-  cursor: pointer;
-  padding: 0.42rem 0.7rem;
-  text-align: left;
-}
-
-.ci-register-action-icon {
-  display: grid;
-  place-items: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  border: 1px solid rgba(221,184,106,0.56);
-  font-family: 'Cinzel', serif;
-  font-size: 1rem;
-  line-height: 1;
-}
-
-.ci-register-action strong,
-.ci-register-action small {
-  display: block;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.ci-register-action strong {
-  font-family: 'Cinzel', serif;
-  font-size: 0.62rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.ci-register-action small {
-  margin-top: 0.08rem;
-  color: rgba(245,225,174,0.78);
-  font-size: 0.68rem;
-  font-style: italic;
-}
-
-.ci-tabs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-  gap: 0.45rem;
-  margin-bottom: 0.85rem;
-  padding: 0 0 0.75rem;
-  border-bottom: 1px solid var(--ci-line);
-}
-
-.ci-tabs button,
-.ci-item-row,
-.ci-companion-card {
-  border: 1px solid rgba(139,105,20,0.26);
-  background: rgba(255,255,255,0.2);
-  color: var(--ink);
-  cursor: pointer;
-}
-
-.ci-tabs button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.42rem;
-  min-height: 2.7rem;
-  padding: 0.48rem 0.6rem;
-  border-radius: 0;
-  color: var(--ci-muted);
-  font-family: 'Cinzel', serif;
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.ci-tabs button:hover {
-  border-color: rgba(139,105,20,0.5);
-  background: rgba(255,255,255,0.38);
-}
-
-.ci-tabs button.active {
-  border-color: rgba(44,26,8,0.8);
-  background: linear-gradient(135deg, #2c1a08, #5c3a12);
-  color: #fff2cf;
-  box-shadow: inset 0 -2px 0 rgba(221,184,106,0.55);
-}
-
-.ci-tab-count {
-  display: inline-grid;
-  place-items: center;
-  min-width: 1.3rem;
-  height: 1.3rem;
-  margin-left: auto;
-  padding: 0 0.28rem;
-  border: 1px solid rgba(139,105,20,0.36);
-  background: rgba(255,255,255,0.3);
-  color: var(--gold-dark);
-  font-size: 0.58rem;
-  font-style: normal;
-  line-height: 1;
-}
-
-.ci-tabs button.active .ci-tab-count {
-  border-color: rgba(221,184,106,0.55);
-  background: rgba(221,184,106,0.16);
-  color: #fff2cf;
-}
-
-.ci-tabs span,
-.ci-tabs img {
-  display: inline-grid;
-  place-items: center;
-  width: 1.2rem;
-  height: 1.2rem;
-  font-size: 0.72rem;
-  line-height: 1;
-}
-
-.ci-tabs span {
-  border: 1px solid currentColor;
-}
-
-.ci-tabs img {
-  object-fit: contain;
-}
-
-.ci-item-table {
-  overflow-x: auto;
-  overflow-y: hidden;
-  border: 1px solid rgba(139,105,20,0.22);
-}
-
-.ci-item-head,
-.ci-item-row {
-  display: grid;
-  grid-template-columns: minmax(140px, 1.25fr) minmax(90px, 0.65fr) minmax(160px, 1.8fr) minmax(4.8rem, 0.45fr) minmax(3.5rem, 0.36fr);
-  gap: 0;
-  align-items: center;
-  min-width: 0;
-}
-
-.ci-item-head {
-  background: #e9d8b1;
-  color: #594024;
-  font-family: 'Cinzel', serif;
-  font-size: 0.55rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.ci-item-head span,
-.ci-item-row > span {
-  min-width: 0;
-  border-right: 1px solid rgba(139,105,20,0.14);
-  padding: 0.55rem;
-  overflow-wrap: anywhere;
-}
-
-.ci-item-list {
-  max-height: min(26rem, 42vh);
-  overflow-y: auto;
-  overflow-x: hidden;
-  overscroll-behavior: contain;
-}
-
-.ci-item-quantity {
-  font-weight: 700;
-  text-align: center;
-}
-
-.ci-item-row {
-  width: 100%;
-  min-height: 3.7rem;
-  border-width: 0 0 1px;
-  text-align: left;
-  font: inherit;
-}
-
-.character-inventory-page .ci-item-row[hidden] {
-  display: none !important;
-}
-
-.ci-item-list .ci-item-row:nth-child(even of .ci-item-row:not([hidden])) {
-  background: rgba(255,250,232,0.44);
-}
-
-.ci-item-list .ci-item-row:hover {
-  background: rgba(139,105,20,0.1);
-}
-
-.ci-item-empty {
-  padding: 1.6rem 1rem;
-  color: var(--ink-faded);
-  font-style: italic;
-  text-align: center;
-}
-
-.ci-item-empty::before {
-  content: '✦';
-  display: block;
-  margin-bottom: 0.35rem;
-  color: rgba(139,105,20,0.5);
-  font-style: normal;
-}
-
-.ci-item-empty[hidden] {
-  display: none;
-}
-
-.ci-item-row:focus-visible,
-.ci-tabs button:focus-visible,
-.ci-companion-card:focus-visible {
-  outline: 2px solid rgba(139,105,20,0.62);
-  outline-offset: -2px;
-}
-
-.ci-item-name {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  min-width: 0;
-}
-
-.ci-item-name strong {
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-
-.ci-item-icon {
-  flex: 0 0 2.3rem;
-  width: 2.3rem;
-  height: 2.3rem;
-  border: 1px solid rgba(139,105,20,0.22);
-}
-
-.ci-money-panel,
-.ci-equipment-quiz {
-  margin-top: 0.85rem;
-  border: 1px solid rgba(139,105,20,0.24);
-  background: rgba(255,250,232,0.34);
-  padding: 0.75rem;
-}
-
-.ci-money-head,
-.ci-equipment-quiz-head {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.8rem;
-  align-items: center;
-}
-
-.ci-money-head h3,
-.ci-equipment-quiz-head h3 {
-  margin: 0;
-  color: var(--gold-dark);
-  font-family: 'Cinzel', serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.ci-money-head p,
-.ci-equipment-quiz-head p,
-.ci-money-status,
-.ci-equipment-quiz-status {
-  margin: 0.18rem 0 0;
-  color: var(--ink-faded);
-  font-size: 0.78rem;
-  font-style: italic;
-}
-
-.ci-money-head > strong {
-  white-space: nowrap;
-  border: 1px solid rgba(44,26,8,0.7);
-  background: linear-gradient(135deg, #2c1a08, #5c3a12);
-  color: #fff2cf;
-  font-family: 'Cinzel', serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  padding: 0.4rem 0.72rem;
-}
-
-.ci-money-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.55rem;
-  margin-top: 0.7rem;
-}
-
-.ci-money-summary {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.55rem;
-  margin-top: 0.7rem;
-}
-
-.ci-money-control {
-  display: grid;
-  grid-template-columns: 2.5rem minmax(0, 1fr);
-  gap: 0.15rem 0.55rem;
-  align-items: center;
-  border: 1px solid rgba(139,105,20,0.18);
-  background: rgba(255,255,255,0.18);
-  padding: 0.45rem;
-}
-
-.ci-money-summary-item {
-  display: grid;
-  grid-template-columns: 2.35rem minmax(0, 1fr);
-  gap: 0.1rem 0.55rem;
-  align-items: center;
-  min-width: 0;
-  border: 1px solid rgba(139,105,20,0.18);
-  background: rgba(255,255,255,0.18);
-  padding: 0.45rem;
-}
-
-.ci-money-control img {
-  grid-row: span 2;
-  width: 2.35rem;
-  height: 2.35rem;
-  object-fit: contain;
-}
-
-.ci-money-summary-item img {
-  grid-row: span 2;
-  width: 2.35rem;
-  height: 2.35rem;
-  object-fit: contain;
-}
-
-.ci-coin-gold {
-  border-color: rgba(178,141,52,0.46);
-  background: linear-gradient(135deg, rgba(221,184,106,0.34), rgba(255,255,255,0.16));
-}
-
-.ci-coin-silver {
-  border-color: rgba(122,122,128,0.42);
-  background: linear-gradient(135deg, rgba(164,164,170,0.3), rgba(255,255,255,0.16));
-}
-
-.ci-coin-copper {
-  border-color: rgba(139,74,32,0.44);
-  background: linear-gradient(135deg, rgba(155,90,44,0.28), rgba(255,255,255,0.16));
-}
-
-.ci-money-control span,
-.ci-money-summary-item span,
-.ci-money-transaction span,
-.ci-equipment-question span {
-  color: var(--gold);
-  font-family: 'Cinzel', serif;
-  font-size: 0.56rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.ci-money-summary-item strong {
-  min-width: 0;
-  color: var(--ink);
-  font-family: 'EB Garamond', serif;
-  font-size: 1rem;
-}
-
-.ci-money-control input,
-.ci-money-transaction input,
-.ci-equipment-question textarea {
-  width: 100%;
-  border: 1px solid rgba(139,105,20,0.28);
-  background: rgba(255,250,232,0.72);
-  color: var(--ink);
-  font: inherit;
-}
-
-.ci-money-control input,
-.ci-money-transaction input {
-  min-width: 0;
-  padding: 0.34rem 0.45rem;
-}
-
-.ci-money-transaction {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 0.65rem;
-  align-items: end;
-  margin-top: 0.7rem;
-}
-
-.ci-money-transaction-fields {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.45rem;
-}
-
-.ci-money-transaction label {
-  display: grid;
-  gap: 0.2rem;
-}
-
-.ci-money-actions,
-.ci-equipment-quiz-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-
-.ci-money-actions button,
-.ci-equipment-quiz-head button,
-.ci-equipment-quiz-actions button {
-  min-height: 2rem;
-  border: 1px solid rgba(139,105,20,0.34);
-  background: rgba(255,250,232,0.7);
-  color: var(--ink);
-  cursor: pointer;
-  font-family: 'Cinzel', serif;
-  font-size: 0.58rem;
-  letter-spacing: 0.09em;
-  padding: 0.38rem 0.7rem;
-  text-transform: uppercase;
-}
-
-.ci-money-actions button:last-child,
-.ci-equipment-quiz-actions button:last-child {
-  border-color: rgba(44,26,8,0.7);
-  background: #2c1a08;
-  color: var(--gold-light);
-}
-
-.ci-equipment-quiz-body {
-  display: grid;
-  gap: 0.65rem;
-  margin-top: 0.75rem;
-}
-
-.ci-equipment-question {
-  display: grid;
-  gap: 0.35rem;
-}
-
-.ci-equipment-question strong {
-  font-family: 'Cinzel', serif;
-  letter-spacing: 0.03em;
-}
-
-.ci-equipment-question textarea {
-  min-height: 5.8rem;
-  padding: 0.55rem;
-  resize: vertical;
-  line-height: 1.45;
-}
-
-.ci-equipment-quiz-result {
-  max-height: 14rem;
-  overflow-y: auto;
-  border: 1px solid rgba(139,105,20,0.18);
-  background: rgba(255,255,255,0.16);
-  padding: 0.65rem;
-  line-height: 1.5;
-}
-
-.ci-companion-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
-  gap: 0.75rem;
-}
-
-.ci-companion-card {
-  display: grid;
-  grid-template-columns: 100px minmax(0, 1fr);
-  grid-template-rows: auto auto 1fr auto;
-  column-gap: 0.85rem;
-  width: 100%;
-  min-width: 0;
-  row-gap: 0.4rem;
-  padding: 0.7rem;
-  text-align: left;
-  font: inherit;
-  background: linear-gradient(135deg, #fffaf0, #f0e1be);
-}
-
-.ci-companion-card:hover {
-  border-color: rgba(139,105,20,0.48);
-  background: rgba(255,250,232,0.4);
-}
-
-.ci-companion-card strong,
-.ci-companion-card span,
-.ci-companion-card dd {
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-
-.ci-companion-image {
-  grid-column: 1;
-  grid-row: 1 / 5;
-  align-self: start;
-  display: block;
-  width: 100%;
-  aspect-ratio: 2 / 3;
-  object-fit: contain;
-  background: #e5d3ab;
-  border: 1px solid rgba(139,105,20,0.24);
-}
-
-.ci-companion-heading {
-  display: grid;
-  gap: 0.15rem;
-  align-content: start;
-}
-
-.ci-companion-heading strong {
-  font-family: 'Cinzel', serif;
-  font-size: 0.9rem;
-}
-
-.ci-companion-heading span { font-size: 0.85rem; }
-
-.ci-companion-summary {
-  grid-column: 2;
-  margin: 0;
-  font-size: 0.88rem;
-  line-height: 1.4;
-  overflow-wrap: anywhere;
-}
-
-.ci-companion-link {
-  grid-column: 2;
-  align-self: end;
-  color: #713a2e;
-  font-size: 0.75rem;
-}
-
-.ci-companion-empty {
-  color: var(--ci-muted);
-  font-style: italic;
-  margin: 0.5rem 0;
-}
-
-.ci-section-count {
-  display: inline-block;
-  margin-left: 0.35rem;
-  padding: 0.1rem 0.4rem;
-  border: 1px solid var(--ci-line);
-  background: #eee0be;
-}
-
-.ci-companion-card dl {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 0.25rem 0.5rem;
-  margin: 0;
-}
-
-.ci-companion-card dt {
-  color: var(--ci-muted);
-  font-size: 0.8rem;
-}
-
-.ci-companion-card dd {
-  margin: 0;
-  text-align: right;
-}
-
-.ci-companion-card dd[style] {
-  color: var(--ci-status);
-  font-weight: 700;
-}
-
-.ci-companion-card dd[style]::before {
-  content: '';
-  display: inline-block;
-  width: 0.4rem;
-  height: 0.4rem;
-  margin-right: 0.32rem;
-  background: var(--ci-status);
-  transform: rotate(45deg);
 }
 
 .ci-profile-overlay {
@@ -1355,86 +720,4 @@
 .ci-preview-frame .character-inventory-page {
   min-height: auto;
   transform-origin: top left;
-}
-
-@container module-content (max-width: 1180px) {
-  .ci-profile-modal,
-  .ci-full-editor {
-    grid-template-columns: 1fr;
-  }
-  .ci-item-tools {
-    align-items: stretch;
-    flex-direction: column;
-  }
-  .ci-editor-quick-actions {
-    align-items: stretch;
-    flex-direction: column;
-  }
-  .ci-register-action {
-    width: 100%;
-  }
-  .ci-editor-register-btn {
-    width: 100%;
-  }
-  .ci-money-transaction,
-  .ci-money-transaction-fields {
-    grid-template-columns: 1fr;
-  }
-  .ci-editor-splitter {
-    display: none;
-  }
-}
-
-/* Respond to the inventory's own width, including the split editor preview. */
-@container character-inventory (max-width: 1000px) {
-  .ci-layout {
-    grid-template-columns: minmax(155px, 190px) minmax(0, 1fr);
-    grid-template-areas: 'character items' 'companions companions';
-  }
-  .ci-item-head { display: none; }
-  .ci-item-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 0.45rem;
-  }
-  .ci-item-name,
-  .ci-item-description { grid-column: 1 / -1; }
-  .ci-item-row > span { border: 0; padding: 0.25rem; }
-  .ci-item-row [data-label]::before {
-    content: attr(data-label) ' · ';
-    font-size: 0.75rem;
-    color: var(--ci-muted);
-  }
-  .ci-item-type { grid-column: 1 / -1; }
-  .ci-item-quantity { text-align: right; }
-}
-
-@container character-inventory (max-width: 600px) {
-  .ci-layout {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: 'character' 'items' 'companions';
-  }
-  .ci-character {
-    display: grid;
-    grid-template-columns: 76px minmax(0, 1fr);
-    gap: 0.7rem;
-    align-items: start;
-  }
-  .ci-character-portrait { grid-column: 1; grid-row: 1; }
-  .ci-character-head {
-    grid-column: 2;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: none;
-  }
-  .ci-character .ci-box { grid-column: 1 / -1; }
-  .ci-header { padding: 0.75rem; }
-  .ci-header h2 { font-size: 1.15rem; }
-  .ci-header p { letter-spacing: 0.04em; }
-  .ci-money-grid,
-  .ci-money-summary { grid-template-columns: 1fr; }
-  .ci-money-head { flex-wrap: wrap; }
-  .ci-profile-modal,
-  .ci-profile-modal-editing { grid-template-columns: minmax(0, 1fr); }
-  .ci-companion-card { grid-template-columns: 80px minmax(0, 1fr); }
 }

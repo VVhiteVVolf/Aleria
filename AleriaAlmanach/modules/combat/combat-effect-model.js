@@ -1,5 +1,6 @@
 import { applyCombatDamage, normalizeCombatHitPointState } from './combat-state-model.js?v=20260909-dragon-parent-v2';
 import { applyBerserkSurvival } from './combat-berserk-state.js';
+import { resolveEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
 import { applyRegenerationFireExposure } from './combat-creature-traits.js';
 import { normalizeConditionDuration, normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 
@@ -113,8 +114,11 @@ export function applyTypedCombatDamage(state = {}, amount = 0, profile = {}, opt
     ? Math.floor(Math.max(0, Number(amount) || 0) / 2)
     : (damageResponse.response === 'vulnerable' ? Math.max(0, Number(amount) || 0) * 2
       : (damageResponse.response === 'immune' ? 0 : Math.max(0, Number(amount) || 0)));
-  const applied = applyBerserkSurvival(applyCombatDamage(state, adjusted), options.conditions || profile.temporaryConditions || []);
-  return { ...applied, conditions: applyRegenerationFireExposure(applied.conditions, profile, options.damageType, adjusted),
+  const equipmentProtection = resolveEquipmentDamageProtection(profile, options.damageType, adjusted);
+  const protectedAmount = Math.max(0, adjusted - equipmentProtection.reduction);
+  const applied = applyBerserkSurvival(applyCombatDamage(state, protectedAmount), options.conditions || profile.temporaryConditions || []);
+  return { ...applied, ...(equipmentProtection.reduction > 0 ? { equipmentProtection } : {}),
+    conditions: applyRegenerationFireExposure(applied.conditions, profile, options.damageType, protectedAmount),
     rawIncoming: Math.max(0, Number(amount) || 0), damageResponse };
 }
 

@@ -1,6 +1,9 @@
 import { prepareCombatEquipment, reserveCombatEquipment } from '../generated/combat/combat-equipment-preparation.js';
 import { getActorsWithCombatPosts } from '../generated/combat/combat-weapon-loadout.js';
-import { randomUUID } from 'node:crypto';
+import { randomUUID, randomInt } from 'node:crypto';
+import { createCriticalConsequence } from '../generated/combat-critical/combat-critical-model.js';
+import { deriveSceneItems, applySceneItemEvent, applyDroppedWeaponsToStates } from '../generated/scene-items/scene-items-model.js';
+import { applySceneItemInteraction } from '../generated/scene-items/scene-item-interaction.js';
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
@@ -19,6 +22,7 @@ import { getEffectiveCombatSegmentKind } from '../generated/combat/combat-segmen
 import {
   applyInventoryUseAbilityEffects,
   applyInventoryUseToInventory,
+  inferInventoryUseMode,
   normalizeInventoryUse
 } from '../generated/inventory-use/inventory-use-model.js';
 import { ProvidedDiceAdapter } from './provided-dice-adapter.js';
@@ -196,28 +200,24 @@ function consumeRuleAbilityUse(sourceAbilities, application, recoveryDayKey = ''
   }, recoveryDayKey);
 }
 
-export const commitCombatComment = onCall({
-  region: 'europe-west1',
-  maxInstances: 20,
-  concurrency: 20,
-  enforceAppCheck: false,
-  timeoutSeconds: 30
-}, async request => {
+export async function commitCombatCommentOperation(request, {
+  database = getFirestore(), rollCritical = () => randomInt(1, 11), nowClient = Date.now()
+} = {}) {
   if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   const payload = clonePayload(request.data);
   const entryId = cleanText(payload.entryId, 240);
   const text = cleanText(payload.text);
   const metadata = clonePayload(payload.metadata);
   const entries = combatSegments(metadata);
+  // Stable across Firestore retries, never chosen by the submitting browser.
+  const criticalRolls = new Map(entries.map(entry => [`${entry.index}:${entry.targetIndex}`, rollCritical()]));
   const inventoryEntries = inventorySegments(metadata);
   const skillEntries = skillSegments(metadata);
   if (!entryId || !text || (!entries.length && !inventoryEntries.length && !skillEntries.length)) {
     fail('invalid-argument', 'Beitrag und mindestens ein mechanischer Vorgang sind erforderlich.');
   }
 
-  const database = getFirestore();
   const commentRef = database.collection('comments').doc();
-  const nowClient = Date.now();
   let committedComment;
   let profileUpdates = [];
   let responseSegments = [];
@@ -227,6 +227,7 @@ export const commitCombatComment = onCall({
     const allHistory = sortSceneHistory(threadSnapshot.docs.map(snapshot => ({ id: snapshot.id, ...snapshot.data() })));
     const trustedHistory = allHistory.filter(isTrustedMechanicalComment);
     const encounter = getActiveCombatEncounter(trustedHistory);
+    const sceneItems = deriveSceneItems(trustedHistory);
     const actorsWithPosts = getActorsWithCombatPosts(trustedHistory);
     for (const { segment, submitted } of entries) {
       const error = getEncounterActionValidationError({ ...segment.combatAction, actorId: submitted.actorId }, encounter);
@@ -243,6 +244,11 @@ export const commitCombatComment = onCall({
       { role: 'actor', actorId: submitted.actorId, persistence: normalizePersistence(submitted.actorPersistence, submitted.actorId) },
       { role: 'target', actorId: submitted.targetId, persistence: normalizePersistence(submitted.targetPersistence, submitted.targetId) }
     ]).concat(entries.flatMap(ruleSelectionDescriptors), inventoryEntries.map(inventoryDescriptor));
+    inventoryEntries.forEach(({ submitted }) => {
+      const item = sceneItems.get(submitted.sceneItemId);
+      if (submitted.source === 'scene' && item?.sourceActorId) descriptors.push({ role: 'item-source', actorId: item.sourceActorId,
+        persistence: normalizePersistence(item.sourcePersistence, item.sourceActorId) });
+    });
     const uniqueRecords = new Map();
     descriptors.forEach(descriptor => {
       const key = `${descriptor.persistence.kind}:${descriptor.persistence.recordId}`;
@@ -267,7 +273,14 @@ export const commitCombatComment = onCall({
     const workingInventories = new Map();
     const persistentUpdates = new Map();
     const combatResolutionsBySegment = new Map();
-    let enhancedSegments = metadata.commentSegments.map(segment => ({ ...segment }));
+    let enhancedSegments = metadata.commentSegments.map(segment => {
+      const clean = { ...segment };
+      delete clean.sceneItemEvent;
+      delete clean.combatResolution;
+      delete clean.combatResolutions;
+      delete clean.inventoryUse;
+      return clean;
+    });
     const validatedSkills = await validateSkillCommentSegments({
       database,
       transaction,
@@ -290,6 +303,10 @@ export const commitCombatComment = onCall({
       const record = records.get(recordKey);
       const submittedUse = normalizeInventoryUse({
         ...entry.submitted,
+        sceneItemEvent: null,
+        resourceSnapshot: null,
+        inventorySnapshot: null,
+        conditionSnapshot: null,
         usageId: randomUUID(),
         actorId: descriptor.actorId,
         actorName: cleanText(entry.segment?.charName || entry.submitted?.actorName || record?.name, 160),
@@ -298,29 +315,69 @@ export const commitCombatComment = onCall({
           : { kind: 'scene-actor', actorId: descriptor.actorId }
       });
       const currentInventory = workingInventories.get(recordKey) || record?.inventory || {};
-      const applied = applyInventoryUseToInventory(currentInventory, submittedUse);
-      workingInventories.set(recordKey, applied.inventory);
       const actorState = workingStates.get(String(descriptor.actorId));
-      const actorBase = resolveCombatProfile(makeCharacterWithCombatState(record, descriptor.persistence, descriptor.actorId, actorState));
+      const actorBase = resolveCombatProfile(makeCharacterWithCombatState({ ...record, inventory: currentInventory }, descriptor.persistence, descriptor.actorId, actorState));
       const actorResources = getEffectiveCommentResources(actorBase.resources, actorState?.resources, recoveryDayKey);
       const actorProfile = applyStoredState(actorBase, { ...(actorState || {}), resources: actorResources });
+      actorProfile.inventory = currentInventory;
+      const sceneItem = submittedUse.source === 'scene' ? sceneItems.get(submittedUse.sceneItemId) : null;
+      const sourceDescriptor = sceneItem?.sourceActorId ? descriptors.find(candidate => candidate.role === 'item-source' && candidate.actorId === sceneItem.sourceActorId) : null;
+      const sourceKey = sourceDescriptor ? `${sourceDescriptor.persistence.kind}:${sourceDescriptor.persistence.recordId}` : '';
+      const sourceRecord = sourceKey ? records.get(sourceKey) : null;
+      let applied;
+      const kind = entry.segment.commentKind || entry.segment.kind;
+      if (submittedUse.source === 'scene') {
+        if (!descriptor.persistence.persistent) fail('failed-precondition', 'Aufheben benötigt einen gespeicherten Charakter.');
+        if (submittedUse.operation === 'consume' && kind !== 'consume') fail('invalid-argument', 'Verbrauchsgüter gehören in die Konsumieren-Blase.');
+        if (submittedUse.operation !== 'consume' && kind !== 'interact') fail('invalid-argument', 'Benutzen und Aufheben gehören in die Interagieren-Blase.');
+        applied = applySceneItemInteraction({ entry: sceneItem, actor: actorProfile,
+          sourceActor: sourceRecord ? { ...sourceRecord, id: sceneItem.sourceActorId, inventory: workingInventories.get(sourceKey) || sourceRecord.inventory } : null,
+          operation: submittedUse.operation, paymentResource: submittedUse.paymentResource, usageId: submittedUse.usageId });
+        applySceneItemEvent(sceneItems, applied.inventoryUse.sceneItemEvent);
+        applyDroppedWeaponsToStates(workingStates, sceneItems);
+        actorProfile.resources = applied.resources;
+        if (applied.sourceInventory) {
+          workingInventories.set(sourceKey, applied.sourceInventory);
+          const sourceUpdate = persistentUpdates.get(sourceKey) || { entry: uniqueRecords.get(sourceKey), record: sourceRecord };
+          sourceUpdate.inventory = applied.sourceInventory;
+          sourceUpdate.equipment = applied.sourceCombatProfile;
+          if (sourceDescriptor.persistence.persistent) {
+            persistentUpdates.set(sourceKey, sourceUpdate);
+            records.set(sourceKey, { ...sourceRecord, inventory: applied.sourceInventory, combatProfile: applied.sourceCombatProfile });
+          }
+          const sourceState = workingStates.get(sceneItem.sourceActorId) || {};
+          workingStates.set(sceneItem.sourceActorId, { ...sourceState, inventory: applied.sourceInventory });
+        }
+      } else {
+        if ((actorState?.droppedWeapons || []).some(drop => drop.item.id === submittedUse.item.id)) fail('failed-precondition', 'Diese Waffe liegt in der Szene. Zuerst aufheben.');
+        const item = (currentInventory.items || []).find(item => item.id === submittedUse.item.id);
+        if (item && (inferInventoryUseMode(item) === 'consume') !== (kind === 'consume')) fail('invalid-argument', 'Verbrauchsgüter gehören unter „Konsumieren“, andere Gegenstände unter „Interagieren“.');
+        if (kind === 'interact') submittedUse.mode = submittedUse.requestedMode = 'use';
+        if (kind === 'consume') submittedUse.mode = submittedUse.requestedMode = 'consume';
+        applied = applyInventoryUseToInventory(currentInventory, submittedUse);
+      }
+      workingInventories.set(recordKey, applied.inventory);
       const triggered = applyInventoryUseAbilityEffects(actorProfile, applied.inventoryUse, recoveryDayKey);
       enhancedSegments[entry.index] = { ...enhancedSegments[entry.index], inventoryUse: triggered.inventoryUse };
-      if (triggered.changed) {
+      if (triggered.changed || applied.resources) {
         workingStates.set(String(descriptor.actorId), {
-          ...(actorState || {}),
+          ...(workingStates.get(String(descriptor.actorId)) || actorState || {}),
           resources: triggered.resources,
           abilities: triggered.abilities,
           temporaryConditions: triggered.conditions,
           inventory: applied.inventory
         });
       }
-      if (descriptor.persistence.persistent && submittedUse.mode === 'consume') {
+      if (descriptor.persistence.persistent && (submittedUse.mode === 'consume' && submittedUse.source !== 'scene' || applied.inventoryChanged)) {
         const existing = persistentUpdates.get(recordKey) || { entry: uniqueRecords.get(recordKey), record };
         existing.inventory = applied.inventory;
+        if (applied.combatProfile) {
+          existing.equipment = applied.combatProfile;
+          records.set(recordKey, { ...record, inventory: applied.inventory, combatProfile: applied.combatProfile });
+        }
         persistentUpdates.set(recordKey, existing);
       }
-      if (descriptor.persistence.persistent && triggered.changed) {
+      if (descriptor.persistence.persistent && (triggered.changed || applied.resources)) {
         const existing = persistentUpdates.get(recordKey) || { entry: uniqueRecords.get(recordKey), record };
         existing.resources = getPersistentCombatResources(actorBase.resources, triggered.resources);
         existing.abilities = triggered.abilities;
@@ -329,6 +386,8 @@ export const commitCombatComment = onCall({
     };
 
     const startedAreaActions = new Map();
+    const pendingWeaponDrops = new Set();
+    const dropKey = profile => `${profile.characterId}:${profile.weapon?.inventoryItemId || `weapon:${profile.weapon?.id}`}`;
     let nextInventoryEntry = 0;
     for (const { index, segment, submitted, targetIndex, targetCount, primary } of entries) {
       while (nextInventoryEntry < inventoryEntries.length && inventoryEntries[nextInventoryEntry].index <= index) {
@@ -424,6 +483,12 @@ export const commitCombatComment = onCall({
       resolution.multiTargetCount = targetCount;
       usedRuleFrequencyKeys = new Set(resolution.usedRuleFrequencyKeys || []);
       resolution.resolutionId = randomUUID();
+      const consequence = createCriticalConsequence(resolution, { encounter,
+        roll: criticalRolls.get(`${index}:${targetIndex}`), id: `${commentRef.id}:${index}:${targetIndex}`,
+        actor: { ...actor, weaponUnavailable: actor.weaponUnavailable || pendingWeaponDrops.has(dropKey(actor)) },
+        target: { ...target, weaponUnavailable: target.weaponUnavailable || pendingWeaponDrops.has(dropKey(target)) } });
+      if (consequence) resolution.criticalConsequence = consequence;
+      if (consequence?.sceneItemEvent) pendingWeaponDrops.add(`${consequence.sceneItemEvent.sourceActorId}:${consequence.sceneItemEvent.item.id}`);
       resolution.serverValidated = true;
       resolution.validatedAt = new Date(nowClient).toISOString();
       resolution.narration = null;
@@ -523,7 +588,7 @@ export const commitCombatComment = onCall({
       segmentResolutions.push(resolution);
       combatResolutionsBySegment.set(index, segmentResolutions);
       enhancedSegments[index] = {
-        ...segment,
+        ...enhancedSegments[index],
         combatResolution: segmentResolutions[0],
         ...(targetCount > 1 ? { combatResolutions: segmentResolutions } : {})
       };
@@ -568,6 +633,12 @@ export const commitCombatComment = onCall({
         before.inventory = update.record?.inventory || null;
         values.inventory = update.inventory;
       }
+      if (update.equipment) {
+        before.weapons = update.record?.combatProfile?.weapons || [];
+        before.armorItems = update.record?.combatProfile?.armorItems || [];
+        values['combatProfile.weapons'] = update.equipment.weapons || [];
+        values['combatProfile.armorItems'] = update.equipment.armorItems || [];
+      }
       values['combatProfile.lastMechanicalCommentId'] = commentRef.id;
       mechanicalUndo[update.entry.key] = {
         kind: update.entry.kind,
@@ -587,7 +658,8 @@ export const commitCombatComment = onCall({
         hitPoints: update.hitPoints || null,
         resources: update.resources || null,
         abilities: update.abilities || null,
-        inventory: update.inventory || null
+        inventory: update.inventory || null,
+        equipment: update.equipment ? { weapons: update.equipment.weapons || [], armorItems: update.equipment.armorItems || [] } : null
       };
     });
 
@@ -656,6 +728,9 @@ export const commitCombatComment = onCall({
         : null
     }
   };
-});
+}
+
+export const commitCombatComment = onCall({ region: 'europe-west1', maxInstances: 20, concurrency: 20,
+  enforceAppCheck: false, timeoutSeconds: 30 }, request => commitCombatCommentOperation(request));
 
 export const combatCommentInternals = Object.freeze({ consumeAbilityUse, getEffectiveCommentResources });

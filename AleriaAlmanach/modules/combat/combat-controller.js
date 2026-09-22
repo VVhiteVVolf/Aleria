@@ -42,6 +42,8 @@ import {
 import { applyCombatAbilityUse } from './combat-ability-uses.js?v=20260803-action-economy-v1';
 import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
 import { previewZornkappeSegment } from '../inventory-use/zornkappe-effects.js';
+import { deriveSceneItems, applySceneItemEvent, applyDroppedWeaponsToStates } from '../scene-items/scene-items-model.js';
+import { applySceneItemInteraction } from '../scene-items/scene-item-interaction.js';
 import {
   ensureCombatResolutionDialog,
   mountCombatComposer,
@@ -316,12 +318,31 @@ function closeResolutionDialog() {
   overlay.setAttribute('aria-hidden', 'true');
 }
 
-function previewConsumedItem(segment, characters, fallbackActorId, workingStates, storedStates) {
-  if (String(segment.kind || segment.commentKind) !== 'consume') return;
+function previewConsumedItem(segment, characters, fallbackActorId, workingStates, storedStates, options = {}) {
+  if (!['consume', 'interact'].includes(String(segment.kind || segment.commentKind))) return;
   const actorId = String(segment.actorId || segment.sceneActorId || segment.inventoryUse?.actorId || fallbackActorId || '');
   const character = characters.find(entry => String(entry.id) === actorId);
   if (!character) return;
   const state = workingStates.get(actorId) || storedStates.get(actorId) || {};
+  if (segment.inventorySource === 'scene' || segment.inventoryUse?.source === 'scene') {
+    const sceneItems = options.sceneItems;
+    const entry = sceneItems?.get(segment.sceneItemId || segment.inventoryUse?.sceneItemId);
+    if (!entry) return;
+    const actor = resolveActorProfile(character, { actorId, storedStates, workingStates, resetCommentResources: true,
+      commentResourceResetActors: options.resourceResetActors, recoveryDayKey: options.recoveryDayKey });
+    const applied = applySceneItemInteraction({ entry, actor,
+      sourceActor: characters.find(source => source.id === entry.sourceActorId),
+      operation: (segment.kind || segment.commentKind) === 'consume' ? 'consume' : entry.operation === 'drop' ? 'pickup' : segment.inventoryOperation || 'use',
+      paymentResource: segment.inventoryPaymentResource, usageId: segment.inventoryUse?.usageId || `preview:${segment.id}` });
+    workingStates.set(actorId, { ...state, inventory: applied.inventory, resources: applied.resources });
+    applySceneItemEvent(sceneItems, applied.inventoryUse.sceneItemEvent);
+    for (const item of sceneItems.values()) if (item.sourceActorId && !workingStates.has(item.sourceActorId)) {
+      workingStates.set(item.sourceActorId, { ...(storedStates.get(item.sourceActorId) || {}) });
+    }
+    applyDroppedWeaponsToStates(workingStates, sceneItems);
+    return;
+  }
+  if (String(segment.kind || segment.commentKind) !== 'consume') return;
   workingStates.set(actorId, previewZornkappeSegment(segment, character, state));
 }
 
@@ -343,6 +364,7 @@ function mountComposers(context = {}) {
   const previewRulePeriods = { comment: `draft:${context.threadId || ''}`, scene: context.threadId || '', day: recoveryDayKey };
   const previewFrequencyKeys = deriveCombatRuleFrequencyKeys(cachedComments, previewRulePeriods);
   const composerResourceResets = new Set();
+  const composerSceneItems = deriveSceneItems(cachedComments);
   const targetCharacters = characters;
   const previewActorIds = getCombatPreviewActorIds({ segments, characters, selectedCharacterId: context.selectedCharacterId,
     participantIds: activeEncounterPartyMap, states: storedStates });
@@ -353,7 +375,8 @@ function mountComposers(context = {}) {
   ]));
 
   segments.forEach(segment => {
-    try { previewConsumedItem(segment, characters, context.selectedCharacterId, composerStates, storedStates); }
+    try { previewConsumedItem(segment, characters, context.selectedCharacterId, composerStates, storedStates,
+      { sceneItems: composerSceneItems, resourceResetActors: composerResourceResets, recoveryDayKey }); }
     catch { /* Invalid consumption is rejected explicitly during submission. */ }
     if (!isCombatSegment(segment)) return;
     segment.combatRollMode = 'normal';
@@ -827,6 +850,7 @@ async function handleSubmission(submission = {}) {
     cachedComments
   );
   const stateContext = {
+    sceneItems: deriveSceneItems(cachedComments),
     storedStates: getStoredCombatStates(submission.threadId || ''),
     workingStates: new Map(),
     commentResourceResetActors: new Set(),
@@ -848,7 +872,8 @@ async function handleSubmission(submission = {}) {
   try {
     const resolutionGroups = [];
     for (const segment of segments) {
-      previewConsumedItem(segment, characters, submission.characterId, stateContext.workingStates, stateContext.storedStates);
+      previewConsumedItem(segment, characters, submission.characterId, stateContext.workingStates, stateContext.storedStates,
+        { sceneItems: stateContext.sceneItems, resourceResetActors: stateContext.commentResourceResetActors, recoveryDayKey: stateContext.recoveryDayKey });
       if (!isCombatSegment(segment)) continue;
       resolutionGroups.push(await resolveCombatSegment(
         segment,
@@ -951,7 +976,7 @@ document.addEventListener('input', event => {
 });
 
 let composerRefreshQueued = false;
-for (const name of ['aleria:comments-updated', 'aleria:combat-profile-committed', 'aleria:characters-changed']) document.addEventListener(name, () => {
+for (const name of ['aleria:comments-updated', 'aleria:combat-profile-committed', 'aleria:characters-changed', 'aleria:inventory-use-selection-changed']) document.addEventListener(name, () => {
   if (composerRefreshQueued || !latestComposerContext?.list?.isConnected || latestComposerContext.list.closest('[aria-hidden="true"]')) return;
   composerRefreshQueued = true;
   requestAnimationFrame(() => {

@@ -56,8 +56,8 @@ export async function prepareTestAction({ entryId, actorRecord, targetRecords, c
     const prepared = prepareCombatEquipment(withEquippedCombatWeapon(actorRecord, actorState?.equippedWeaponId, actorState?.offHandWeaponId), index === 0 ? loadout : null, { free: !getActorsWithCombatPosts(comments).has(String(actorRecord.id)) });
     const actorBase = resolveCombatProfile(prepared.character, { actionId, segmentKind, paymentMode, weaponGrip, castLevel });
     if (actionId && actorBase.profileActionId !== actionId) throw Error(`Die Testattacke ${actionId} ist nicht im Bogen von ${actorRecord.name} vorhanden.`);
-    let actor = overlayCombatHitPointState(actorBase, actorState);
-    actor.resources = combatCommentInternals.getEffectiveCommentResources(actorBase.resources, actorState?.resources, rulePeriods.day);
+    let actor = overlayCombatHitPointState(actorBase, { ...(actorState || {}),
+      resources: combatCommentInternals.getEffectiveCommentResources(actorBase.resources, actorState?.resources, rulePeriods.day) });
     actor = reserveCombatEquipment(actor, prepared.preparation);
     const targetState = states.get(targetRecord.id);
     const target = overlayCombatHitPointState(resolveCombatProfile(withEquippedCombatWeapon(targetRecord, targetState?.equippedWeaponId, targetState?.offHandWeaponId)), targetState);

@@ -86,14 +86,14 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-13T18:13:16.437Z",
+    "sourceExportedAt": "2026-09-22T12:00:00.000Z",
     "sourceUpdatedAt": "2026-09-03T19:30:00.000Z",
     "sourceDocumentIds": [
       "gildas-gafyr",
       "gildas-gafyr",
       "person--haus-gafyr--gildas-gafyr"
     ],
-    "contentHash": "a62fce5496cae9c7d2ed772546b4a495aeec4a5b510e884e3d73804ba0ee4631"
+    "contentHash": "554ac66ac6802ca90efffd93fd24fbb32174f3ae1ccd50cec5b9936aeae19648"
   },
   "local": {
     "notes": "",
@@ -2844,7 +2844,7 @@
               "imagePosition": "center",
               "name": "Pflichtschwur · Draig-Ritterschwert",
               "type": "Ritterschwert",
-              "description": "Vielseitiges Draig-Ritterschwert. Einhändig 1W8, zweihändig 1W10; Wert: 5 Goldtaler.",
+              "description": "Gildas hält die schlichte Klinge gewissenhaft in Schuss. Ihr sauberer Kerbenschliff trägt keine Magie, nur die Sorgfalt eines Ritters, der sich auf sein Werkzeug verlassen muss.",
               "weight": "1,5 kg",
               "quantity": "1",
               "tags": "Schwert, Draig, Ritterschwert, vielseitig, Drachentanz, ritterlich",
@@ -2857,15 +2857,16 @@
                 "versatileDamageFormula": "1d10",
                 "attackAttribute": "strength",
                 "proficient": true,
-                "attackBonus": 0,
-                "damageBonus": 0,
+                "attackBonus": 1,
+                "damageBonus": 1,
                 "damageType": "Hieb",
                 "rangeType": "melee",
                 "range": "Nahkampf",
                 "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
-                "notes": "Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
+                "notes": "Ausgewogene Klinge: +1 auf Waffenangriff und Waffenschaden. Kein zusätzlicher kritischer Ausrüstungseffekt.",
                 "requirements": "",
-                "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung."
+                "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
+                "triggerRules": []
               },
               "equipmentLink": {
                 "schemaVersion": 1,
@@ -2876,26 +2877,37 @@
                 {
                   "icon": "◈",
                   "label": "Wert",
-                  "value": "5 Goldtaler"
+                  "value": "5 Goldtaler, 5 Silbertaler"
                 },
                 {
                   "icon": "⚔",
                   "label": "Schaden",
-                  "value": "1W8 · vielseitig 1W10"
+                  "value": "1W8+1 · vielseitig 1W10+1"
                 },
                 {
                   "icon": "◆",
                   "label": "Status",
                   "value": "Aktiv geführt"
+                },
+                {
+                  "label": "Qualität",
+                  "value": "Ausgewogene Klinge: +1 Angriff und +1 Schaden."
                 }
               ],
               "attributes": [],
               "value": {
                 "gold": 5,
-                "silver": 0,
+                "silver": 5,
                 "copper": 0,
-                "totalCopper": 5000
-              }
+                "pfennig": 0,
+                "totalCopper": 5500
+              },
+              "flavorText": "Gildas hält die schlichte Klinge gewissenhaft in Schuss. Ihr sauberer Kerbenschliff trägt keine Magie, nur die Sorgfalt eines Ritters, der sich auf sein Werkzeug verlassen muss.",
+              "valuation": {
+                "minCopper": 5500,
+                "maxCopper": 5500
+              },
+              "valuationNote": "Draig-Ausführung; gleicher Handelswert wie Gawains entsprechendem Ausrüstungsstück."
             },
             {
               "id": "gildas-gafyr-watch-armor-item",
@@ -2912,9 +2924,9 @@
               "imageFormat": "square",
               "imageFit": "contain",
               "imagePosition": "center",
-              "name": "Wachtpanzer · Draig-Jungritter-Plattenrüstung",
-              "type": "Draig-Jungritter-Plattenrüstung",
-              "description": "Plattenrüstung der Draig-Jungritter mit Wappenrock und geschlossenem Helm. Basis-RK 16; ab Stufe 12 zählt der Geschicklichkeitsmodifikator durch Rüstungsroutine.",
+              "name": "Gafyr-Plattenrüstung",
+              "type": "Gafyr-Plattenrüstung",
+              "description": "Unter dem Wappenrock greifen sorgsam angepasste Platten ineinander. Abgenutzte Riemen werden ersetzt, lose Nieten nachgezogen: Dieser Harnisch ist für lange Wachen gebaut, nicht für Bewunderung.",
               "weight": "24 kg",
               "quantity": "1",
               "tags": "Rüstung, Platte, Draig, Jungritter, Wappenrock, Helm",
@@ -2928,8 +2940,17 @@
                 "dexterityMode": "full",
                 "dexterityCap": 2,
                 "dexterityUnlockLevel": 12,
-                "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
-                "notes": "Rüstungsroutine: Der Geschicklichkeitsmodifikator zählt erst ab Stufe 12."
+                "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
+                "notes": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus. Rüstungsroutine: Geschicklichkeit zählt erst ab Stufe 12.",
+                "triggerRules": [],
+                "damageProtection": {
+                  "name": "Gafyr-Plattenschutz",
+                  "amount": 2,
+                  "damageTypes": [],
+                  "excludedDamageTypes": [
+                    "stich"
+                  ]
+                }
               },
               "equipmentLink": {
                 "schemaVersion": 1,
@@ -2940,20 +2961,37 @@
                 {
                   "icon": "⬙",
                   "label": "Rüstungsklasse",
-                  "value": "Basis-RK 16"
+                  "value": "Basis-RK 16; kein zusätzlicher RK-Bonus"
                 },
                 {
                   "icon": "✦",
                   "label": "Ausführung",
-                  "value": "Draig-Jungritter"
+                  "value": "Haus Gafyr"
                 },
                 {
                   "icon": "◆",
                   "label": "Status",
                   "value": "Angelegt"
+                },
+                {
+                  "label": "Qualität",
+                  "value": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus."
                 }
               ],
-              "attributes": []
+              "attributes": [],
+              "flavorText": "Unter dem Wappenrock greifen sorgsam angepasste Platten ineinander. Abgenutzte Riemen werden ersetzt, lose Nieten nachgezogen: Dieser Harnisch ist für lange Wachen gebaut, nicht für Bewunderung.",
+              "valuation": {
+                "minCopper": 8800,
+                "maxCopper": 8800
+              },
+              "valuationNote": "Draig-Ausführung; gleicher Handelswert wie Gawains entsprechendem Ausrüstungsstück.",
+              "value": {
+                "gold": 8,
+                "silver": 8,
+                "copper": 0,
+                "pfennig": 0,
+                "totalCopper": 8800
+              }
             },
             {
               "id": "gildas-gafyr-dagger-item",
@@ -3528,11 +3566,11 @@
               "damageType": "Hieb",
               "attackAttribute": "strength",
               "proficient": true,
-              "attackBonus": 0,
-              "damageBonus": 0,
+              "attackBonus": 1,
+              "damageBonus": 1,
               "range": "Nahkampf",
               "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
-              "notes": "Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
+              "notes": "Ausgewogene Klinge: +1 auf Waffenangriff und Waffenschaden. Kein zusätzlicher kritischer Ausrüstungseffekt.",
               "requirements": "",
               "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
               "effects": [],
@@ -3552,7 +3590,8 @@
                 "resourceId": "aura-focus",
                 "cost": 1
               },
-              "equipped": true
+              "equipped": true,
+              "triggerRules": []
             },
             {
               "id": "gildas-gafyr-dagger",
@@ -3598,7 +3637,7 @@
             {
               "id": "gildas-gafyr-watch-armor",
               "inventoryItemId": "gildas-gafyr-watch-armor-item",
-              "name": "Wachtpanzer · Draig-Jungritter-Plattenrüstung",
+              "name": "Gafyr-Plattenrüstung",
               "image": "https://i.imgur.com/7siJPXG.png",
               "kind": "armor",
               "baseArmorClass": 16,
@@ -3606,9 +3645,18 @@
               "dexterityMode": "full",
               "dexterityCap": 2,
               "dexterityUnlockLevel": 12,
-              "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
-              "notes": "Rüstungsroutine: Der Geschicklichkeitsmodifikator zählt erst ab Stufe 12.",
-              "equipped": true
+              "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
+              "notes": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus. Rüstungsroutine: Geschicklichkeit zählt erst ab Stufe 12.",
+              "equipped": true,
+              "triggerRules": [],
+              "damageProtection": {
+                "name": "Gafyr-Plattenschutz",
+                "amount": 2,
+                "damageTypes": [],
+                "excludedDamageTypes": [
+                  "stich"
+                ]
+              }
             }
           ],
           "resources": [
@@ -7264,346 +7312,11 @@
         "emotes": [],
         "createdAt": "2026-09-03T19:30:00.000Z",
         "updatedAt": "2026-09-03T19:30:00.000Z"
-      },
-      {
-        "createdAt": "2026-08-08T03:52:09.244Z",
-        "emotes": [
-          {
-            "img": "https://i.imgur.com/09Jw3Np.png",
-            "label": "09Jw3Np"
-          },
-          {
-            "img": "https://i.imgur.com/jL0iEsW.png",
-            "label": "jL0iEsW"
-          },
-          {
-            "img": "https://i.imgur.com/wTRCaFd.png",
-            "label": "wTRCaFd"
-          },
-          {
-            "img": "https://i.imgur.com/84M3tVt.png",
-            "label": "84M3tVt"
-          },
-          {
-            "img": "https://i.imgur.com/ogi3SoQ.png",
-            "label": "ogi3SoQ"
-          },
-          {
-            "img": "https://i.imgur.com/wYRPB4i.png",
-            "label": "wYRPB4i"
-          },
-          {
-            "img": "https://i.imgur.com/6SD6k4k.png",
-            "label": "6SD6k4k"
-          },
-          {
-            "img": "https://i.imgur.com/NYz2N8p.png",
-            "label": "NYz2N8p"
-          },
-          {
-            "img": "https://i.imgur.com/3DNho9p.png",
-            "label": "3DNho9p"
-          },
-          {
-            "img": "https://i.imgur.com/JTfrGpq.png",
-            "label": "JTfrGpq"
-          },
-          {
-            "img": "https://i.imgur.com/0KOQiWc.png",
-            "label": "0KOQiWc"
-          },
-          {
-            "img": "https://i.imgur.com/xDbAfVK.png",
-            "label": "xDbAfVK"
-          },
-          {
-            "img": "https://i.imgur.com/z2fpm8o.png",
-            "label": "z2fpm8o"
-          },
-          {
-            "img": "https://i.imgur.com/XQWsMiG.png",
-            "label": "XQWsMiG"
-          },
-          {
-            "img": "https://i.imgur.com/PWwEU0j.png",
-            "label": "PWwEU0j"
-          },
-          {
-            "img": "https://i.imgur.com/Vyp7iOi.png",
-            "label": "Vyp7iOi"
-          },
-          {
-            "img": "https://i.imgur.com/hz0tWaL.png",
-            "label": "hz0tWaL"
-          },
-          {
-            "img": "https://i.imgur.com/epGquCQ.png",
-            "label": "epGquCQ"
-          },
-          {
-            "img": "https://i.imgur.com/irSZdTp.png",
-            "label": "irSZdTp"
-          },
-          {
-            "img": "https://i.imgur.com/aobwrZG.png",
-            "label": "aobwrZG"
-          },
-          {
-            "img": "https://i.imgur.com/vdlknOF.png",
-            "label": "vdlknOF"
-          },
-          {
-            "img": "https://i.imgur.com/6EsomVZ.png",
-            "label": "6EsomVZ"
-          },
-          {
-            "img": "https://i.imgur.com/PB08rzI.png",
-            "label": "PB08rzI"
-          },
-          {
-            "img": "https://i.imgur.com/jDyEItp.png",
-            "label": "jDyEItp"
-          },
-          {
-            "img": "https://i.imgur.com/REmgYTz.png",
-            "label": "REmgYTz"
-          },
-          {
-            "img": "https://i.imgur.com/Qmp7Fde.png",
-            "label": "Qmp7Fde"
-          },
-          {
-            "img": "https://i.imgur.com/TuVQyAL.png",
-            "label": "TuVQyAL"
-          },
-          {
-            "img": "https://i.imgur.com/NIQJxSg.png",
-            "label": "NIQJxSg"
-          },
-          {
-            "img": "https://i.imgur.com/OjIsAw7.png",
-            "label": "OjIsAw7"
-          },
-          {
-            "img": "https://i.imgur.com/jrcBWFI.png",
-            "label": "jrcBWFI"
-          },
-          {
-            "img": "https://i.imgur.com/nkFfwNF.png",
-            "label": "nkFfwNF"
-          },
-          {
-            "img": "https://i.imgur.com/6jWAh4v.png",
-            "label": "6jWAh4v"
-          },
-          {
-            "img": "https://i.imgur.com/5e1KczA.png",
-            "label": "5e1KczA"
-          },
-          {
-            "img": "https://i.imgur.com/x6NEqjb.png",
-            "label": "x6NEqjb"
-          }
-        ],
-        "id": "standard",
-        "name": "Standard",
-        "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
-        "updatedAt": "2026-08-08T03:52:09.244Z"
-      },
-      {
-        "createdAt": "2026-09-03T17:17:39.852Z",
-        "emotes": [
-          {
-            "img": "https://i.imgur.com/zx1qemN.png",
-            "label": "zx1qemN"
-          },
-          {
-            "img": "https://i.imgur.com/jleeYUH.png",
-            "label": "jleeYUH"
-          },
-          {
-            "img": "https://i.imgur.com/0Aldfc6.png",
-            "label": "0Aldfc6"
-          },
-          {
-            "img": "https://i.imgur.com/xDp5g08.png",
-            "label": "xDp5g08"
-          },
-          {
-            "img": "https://i.imgur.com/23cUM95.png",
-            "label": "23cUM95"
-          },
-          {
-            "img": "https://i.imgur.com/TlcfFSj.png",
-            "label": "TlcfFSj"
-          },
-          {
-            "img": "https://i.imgur.com/iPAvAgT.png",
-            "label": "iPAvAgT"
-          },
-          {
-            "img": "https://i.imgur.com/Aj0Je9E.png",
-            "label": "Aj0Je9E"
-          },
-          {
-            "img": "https://i.imgur.com/yuyP3Sz.png",
-            "label": "yuyP3Sz"
-          },
-          {
-            "img": "https://i.imgur.com/XWOTiBS.png",
-            "label": "XWOTiBS"
-          },
-          {
-            "img": "https://i.imgur.com/cJhu1Dx.png",
-            "label": "cJhu1Dx"
-          }
-        ],
-        "id": "kampf-set",
-        "name": "Kampf - Set",
-        "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
-        "updatedAt": "2026-09-03T17:17:44.106Z"
       }
     ],
     "activeImageSetId": "standard",
     "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg",
-    "emotes": [
-      {
-        "img": "https://i.imgur.com/09Jw3Np.png",
-        "label": "09Jw3Np"
-      },
-      {
-        "img": "https://i.imgur.com/jL0iEsW.png",
-        "label": "jL0iEsW"
-      },
-      {
-        "img": "https://i.imgur.com/wTRCaFd.png",
-        "label": "wTRCaFd"
-      },
-      {
-        "img": "https://i.imgur.com/84M3tVt.png",
-        "label": "84M3tVt"
-      },
-      {
-        "img": "https://i.imgur.com/ogi3SoQ.png",
-        "label": "ogi3SoQ"
-      },
-      {
-        "img": "https://i.imgur.com/wYRPB4i.png",
-        "label": "wYRPB4i"
-      },
-      {
-        "img": "https://i.imgur.com/6SD6k4k.png",
-        "label": "6SD6k4k"
-      },
-      {
-        "img": "https://i.imgur.com/NYz2N8p.png",
-        "label": "NYz2N8p"
-      },
-      {
-        "img": "https://i.imgur.com/3DNho9p.png",
-        "label": "3DNho9p"
-      },
-      {
-        "img": "https://i.imgur.com/JTfrGpq.png",
-        "label": "JTfrGpq"
-      },
-      {
-        "img": "https://i.imgur.com/0KOQiWc.png",
-        "label": "0KOQiWc"
-      },
-      {
-        "img": "https://i.imgur.com/xDbAfVK.png",
-        "label": "xDbAfVK"
-      },
-      {
-        "img": "https://i.imgur.com/z2fpm8o.png",
-        "label": "z2fpm8o"
-      },
-      {
-        "img": "https://i.imgur.com/XQWsMiG.png",
-        "label": "XQWsMiG"
-      },
-      {
-        "img": "https://i.imgur.com/PWwEU0j.png",
-        "label": "PWwEU0j"
-      },
-      {
-        "img": "https://i.imgur.com/Vyp7iOi.png",
-        "label": "Vyp7iOi"
-      },
-      {
-        "img": "https://i.imgur.com/hz0tWaL.png",
-        "label": "hz0tWaL"
-      },
-      {
-        "img": "https://i.imgur.com/epGquCQ.png",
-        "label": "epGquCQ"
-      },
-      {
-        "img": "https://i.imgur.com/irSZdTp.png",
-        "label": "irSZdTp"
-      },
-      {
-        "img": "https://i.imgur.com/aobwrZG.png",
-        "label": "aobwrZG"
-      },
-      {
-        "img": "https://i.imgur.com/vdlknOF.png",
-        "label": "vdlknOF"
-      },
-      {
-        "img": "https://i.imgur.com/6EsomVZ.png",
-        "label": "6EsomVZ"
-      },
-      {
-        "img": "https://i.imgur.com/PB08rzI.png",
-        "label": "PB08rzI"
-      },
-      {
-        "img": "https://i.imgur.com/jDyEItp.png",
-        "label": "jDyEItp"
-      },
-      {
-        "img": "https://i.imgur.com/REmgYTz.png",
-        "label": "REmgYTz"
-      },
-      {
-        "img": "https://i.imgur.com/Qmp7Fde.png",
-        "label": "Qmp7Fde"
-      },
-      {
-        "img": "https://i.imgur.com/TuVQyAL.png",
-        "label": "TuVQyAL"
-      },
-      {
-        "img": "https://i.imgur.com/NIQJxSg.png",
-        "label": "NIQJxSg"
-      },
-      {
-        "img": "https://i.imgur.com/OjIsAw7.png",
-        "label": "OjIsAw7"
-      },
-      {
-        "img": "https://i.imgur.com/jrcBWFI.png",
-        "label": "jrcBWFI"
-      },
-      {
-        "img": "https://i.imgur.com/nkFfwNF.png",
-        "label": "nkFfwNF"
-      },
-      {
-        "img": "https://i.imgur.com/6jWAh4v.png",
-        "label": "6jWAh4v"
-      },
-      {
-        "img": "https://i.imgur.com/5e1KczA.png",
-        "label": "5e1KczA"
-      },
-      {
-        "img": "https://i.imgur.com/x6NEqjb.png",
-        "label": "x6NEqjb"
-      }
-    ],
+    "emotes": [],
     "emotesOverride": true,
     "imageSetsOverride": true,
     "inventory": {
@@ -7721,7 +7434,7 @@
           "imagePosition": "center",
           "name": "Pflichtschwur · Draig-Ritterschwert",
           "type": "Ritterschwert",
-          "description": "Vielseitiges Draig-Ritterschwert. Einhändig 1W8, zweihändig 1W10; Wert: 5 Goldtaler.",
+          "description": "Gildas hält die schlichte Klinge gewissenhaft in Schuss. Ihr sauberer Kerbenschliff trägt keine Magie, nur die Sorgfalt eines Ritters, der sich auf sein Werkzeug verlassen muss.",
           "weight": "1,5 kg",
           "quantity": "1",
           "tags": "Schwert, Draig, Ritterschwert, vielseitig, Drachentanz, ritterlich",
@@ -7734,15 +7447,16 @@
             "versatileDamageFormula": "1d10",
             "attackAttribute": "strength",
             "proficient": true,
-            "attackBonus": 0,
-            "damageBonus": 0,
+            "attackBonus": 1,
+            "damageBonus": 1,
             "damageType": "Hieb",
             "rangeType": "melee",
             "range": "Nahkampf",
             "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
-            "notes": "Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
+            "notes": "Ausgewogene Klinge: +1 auf Waffenangriff und Waffenschaden. Kein zusätzlicher kritischer Ausrüstungseffekt.",
             "requirements": "",
-            "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung."
+            "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
+            "triggerRules": []
           },
           "equipmentLink": {
             "schemaVersion": 1,
@@ -7753,26 +7467,37 @@
             {
               "icon": "◈",
               "label": "Wert",
-              "value": "5 Goldtaler"
+              "value": "5 Goldtaler, 5 Silbertaler"
             },
             {
               "icon": "⚔",
               "label": "Schaden",
-              "value": "1W8 · vielseitig 1W10"
+              "value": "1W8+1 · vielseitig 1W10+1"
             },
             {
               "icon": "◆",
               "label": "Status",
               "value": "Aktiv geführt"
+            },
+            {
+              "label": "Qualität",
+              "value": "Ausgewogene Klinge: +1 Angriff und +1 Schaden."
             }
           ],
           "attributes": [],
           "value": {
             "gold": 5,
-            "silver": 0,
+            "silver": 5,
             "copper": 0,
-            "totalCopper": 5000
-          }
+            "pfennig": 0,
+            "totalCopper": 5500
+          },
+          "flavorText": "Gildas hält die schlichte Klinge gewissenhaft in Schuss. Ihr sauberer Kerbenschliff trägt keine Magie, nur die Sorgfalt eines Ritters, der sich auf sein Werkzeug verlassen muss.",
+          "valuation": {
+            "minCopper": 5500,
+            "maxCopper": 5500
+          },
+          "valuationNote": "Draig-Ausführung; gleicher Handelswert wie Gawains entsprechendem Ausrüstungsstück."
         },
         {
           "id": "gildas-gafyr-watch-armor-item",
@@ -7789,9 +7514,9 @@
           "imageFormat": "square",
           "imageFit": "contain",
           "imagePosition": "center",
-          "name": "Wachtpanzer · Draig-Jungritter-Plattenrüstung",
-          "type": "Draig-Jungritter-Plattenrüstung",
-          "description": "Plattenrüstung der Draig-Jungritter mit Wappenrock und geschlossenem Helm. Basis-RK 16; ab Stufe 12 zählt der Geschicklichkeitsmodifikator durch Rüstungsroutine.",
+          "name": "Gafyr-Plattenrüstung",
+          "type": "Gafyr-Plattenrüstung",
+          "description": "Unter dem Wappenrock greifen sorgsam angepasste Platten ineinander. Abgenutzte Riemen werden ersetzt, lose Nieten nachgezogen: Dieser Harnisch ist für lange Wachen gebaut, nicht für Bewunderung.",
           "weight": "24 kg",
           "quantity": "1",
           "tags": "Rüstung, Platte, Draig, Jungritter, Wappenrock, Helm",
@@ -7805,8 +7530,17 @@
             "dexterityMode": "full",
             "dexterityCap": 2,
             "dexterityUnlockLevel": 12,
-            "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
-            "notes": "Rüstungsroutine: Der Geschicklichkeitsmodifikator zählt erst ab Stufe 12."
+            "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
+            "notes": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus. Rüstungsroutine: Geschicklichkeit zählt erst ab Stufe 12.",
+            "triggerRules": [],
+            "damageProtection": {
+              "name": "Gafyr-Plattenschutz",
+              "amount": 2,
+              "damageTypes": [],
+              "excludedDamageTypes": [
+                "stich"
+              ]
+            }
           },
           "equipmentLink": {
             "schemaVersion": 1,
@@ -7817,20 +7551,37 @@
             {
               "icon": "⬙",
               "label": "Rüstungsklasse",
-              "value": "Basis-RK 16"
+              "value": "Basis-RK 16; kein zusätzlicher RK-Bonus"
             },
             {
               "icon": "✦",
               "label": "Ausführung",
-              "value": "Draig-Jungritter"
+              "value": "Haus Gafyr"
             },
             {
               "icon": "◆",
               "label": "Status",
               "value": "Angelegt"
+            },
+            {
+              "label": "Qualität",
+              "value": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus."
             }
           ],
-          "attributes": []
+          "attributes": [],
+          "flavorText": "Unter dem Wappenrock greifen sorgsam angepasste Platten ineinander. Abgenutzte Riemen werden ersetzt, lose Nieten nachgezogen: Dieser Harnisch ist für lange Wachen gebaut, nicht für Bewunderung.",
+          "valuation": {
+            "minCopper": 8800,
+            "maxCopper": 8800
+          },
+          "valuationNote": "Draig-Ausführung; gleicher Handelswert wie Gawains entsprechendem Ausrüstungsstück.",
+          "value": {
+            "gold": 8,
+            "silver": 8,
+            "copper": 0,
+            "pfennig": 0,
+            "totalCopper": 8800
+          }
         },
         {
           "id": "gildas-gafyr-dagger-item",
@@ -8011,144 +7762,6 @@
           "combatDefinition": null,
           "infoRows": [],
           "attributes": []
-        },
-        {
-          "id": "gildas-gafyr-duty-sword-item",
-          "itemDbKey": "",
-          "originItemDbKey": "",
-          "itemStorageMode": "character",
-          "ownerCharacterId": "gildas-gafyr",
-          "ownerCharacterName": "Gildas Gafyr",
-          "acquiredAt": "",
-          "individualizedAt": "",
-          "category": "weapon",
-          "icon": "*",
-          "image": "",
-          "imageFormat": "square",
-          "imageFit": "contain",
-          "imagePosition": "center",
-          "name": "Pflichtschwur · Gafyr-Ritterschwert",
-          "type": "Ritterschwert",
-          "description": "Ein ausgewogenes Ritterschwert des Hauses Gafyr. Gildas hält Klinge, Griff und Scheide peinlich genau in Ordnung.",
-          "weight": "1,5 kg",
-          "quantity": "1",
-          "tags": "Schwert, Gafyr, vielseitig, Drachentanz, ritterlich",
-          "equipped": true,
-          "combatDefinition": {
-            "kind": "weapon",
-            "weaponType": "sword",
-            "training": "martial",
-            "damageFormula": "1d8",
-            "versatileDamageFormula": "1d10",
-            "attackAttribute": "strength",
-            "proficient": true,
-            "attackBonus": 0,
-            "damageBonus": 0,
-            "damageType": "Hieb",
-            "rangeType": "melee",
-            "range": "Nahkampf",
-            "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
-            "notes": "Sorgfältig gepflegte Hauswaffe eines Gafyr-Ritters.",
-            "requirements": "",
-            "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung."
-          },
-          "equipmentLink": {
-            "schemaVersion": 1,
-            "kind": "weapon",
-            "combatEntryId": "gildas-gafyr-duty-sword"
-          },
-          "infoRows": [],
-          "attributes": []
-        },
-        {
-          "id": "gildas-gafyr-watch-armor-item",
-          "itemDbKey": "",
-          "originItemDbKey": "",
-          "itemStorageMode": "character",
-          "ownerCharacterId": "gildas-gafyr",
-          "ownerCharacterName": "Gildas Gafyr",
-          "acquiredAt": "",
-          "individualizedAt": "",
-          "category": "armor",
-          "icon": "*",
-          "image": "",
-          "imageFormat": "square",
-          "imageFit": "contain",
-          "imagePosition": "center",
-          "name": "Wachtpanzer · Gafyr-Rüstung",
-          "type": "Plattenrüstung mit Wappenrock und Helm",
-          "description": "Zweckmäßige Gafyr-Plattenrüstung, für die beweglichen Grundlinien des Drachentanzes angepasst.",
-          "weight": "24 kg",
-          "quantity": "1",
-          "tags": "Rüstung, Platte, Gafyr, Wappenrock, Helm",
-          "equipped": true,
-          "combatDefinition": {
-            "kind": "armor",
-            "armorKind": "armor",
-            "damageFormula": "",
-            "baseArmorClass": 16,
-            "armorClassBonus": 0,
-            "dexterityMode": "full",
-            "dexterityCap": 2,
-            "dexterityUnlockLevel": 6,
-            "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
-            "notes": "Ab Stufe 6 wird der Geschicklichkeitsmodifikator berücksichtigt."
-          },
-          "equipmentLink": {
-            "schemaVersion": 1,
-            "kind": "armor",
-            "combatEntryId": "gildas-gafyr-watch-armor"
-          },
-          "infoRows": [],
-          "attributes": []
-        },
-        {
-          "id": "gildas-gafyr-dagger-item",
-          "itemDbKey": "",
-          "originItemDbKey": "",
-          "itemStorageMode": "character",
-          "ownerCharacterId": "gildas-gafyr",
-          "ownerCharacterName": "Gildas Gafyr",
-          "acquiredAt": "",
-          "individualizedAt": "",
-          "category": "weapon",
-          "icon": "*",
-          "image": "",
-          "imageFormat": "square",
-          "imageFit": "contain",
-          "imagePosition": "center",
-          "name": "Gafyr-Seitendolch",
-          "type": "Dolch",
-          "description": "Robuste Seitenwaffe für enge Räume und den Notfall.",
-          "weight": "0,5 kg",
-          "quantity": "1",
-          "tags": "Dolch, Gafyr, leicht, Finesse",
-          "equipped": false,
-          "combatDefinition": {
-            "kind": "weapon",
-            "weaponType": "dagger",
-            "training": "simple",
-            "damageFormula": "1d4",
-            "versatileDamageFormula": "",
-            "attackAttribute": "dexterity",
-            "proficient": true,
-            "attackBonus": 0,
-            "damageBonus": 0,
-            "damageType": "Stich",
-            "rangeType": "melee",
-            "range": "Nahkampf",
-            "properties": "Finesse · leicht · Wurfwaffe",
-            "notes": "Schlichte Seitenwaffe ohne Zierde.",
-            "requirements": "",
-            "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick."
-          },
-          "equipmentLink": {
-            "schemaVersion": 1,
-            "kind": "weapon",
-            "combatEntryId": "gildas-gafyr-dagger"
-          },
-          "infoRows": [],
-          "attributes": []
         }
       ],
       "companions": [],
@@ -8156,6 +7769,15 @@
         "open": false,
         "step": 0,
         "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
           ""
         ],
         "resultText": "",
@@ -8534,11 +8156,11 @@
           "damageType": "Hieb",
           "attackAttribute": "strength",
           "proficient": true,
-          "attackBonus": 0,
-          "damageBonus": 0,
+          "attackBonus": 1,
+          "damageBonus": 1,
           "range": "Nahkampf",
           "properties": "Vielseitig · 1W10 bei zweihändiger Führung",
-          "notes": "Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
+          "notes": "Ausgewogene Klinge: +1 auf Waffenangriff und Waffenschaden. Kein zusätzlicher kritischer Ausrüstungseffekt.",
           "requirements": "",
           "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
           "effects": [],
@@ -8558,7 +8180,8 @@
             "resourceId": "aura-focus",
             "cost": 1
           },
-          "equipped": true
+          "equipped": true,
+          "triggerRules": []
         },
         {
           "id": "gildas-gafyr-dagger",
@@ -8604,7 +8227,7 @@
         {
           "id": "gildas-gafyr-watch-armor",
           "inventoryItemId": "gildas-gafyr-watch-armor-item",
-          "name": "Wachtpanzer · Draig-Jungritter-Plattenrüstung",
+          "name": "Gafyr-Plattenrüstung",
           "image": "https://i.imgur.com/7siJPXG.png",
           "kind": "armor",
           "baseArmorClass": 16,
@@ -8612,9 +8235,18 @@
           "dexterityMode": "full",
           "dexterityCap": 2,
           "dexterityUnlockLevel": 12,
-          "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
-          "notes": "Rüstungsroutine: Der Geschicklichkeitsmodifikator zählt erst ab Stufe 12.",
-          "equipped": true
+          "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
+          "notes": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus. Rüstungsroutine: Geschicklichkeit zählt erst ab Stufe 12.",
+          "equipped": true,
+          "triggerRules": [],
+          "damageProtection": {
+            "name": "Gafyr-Plattenschutz",
+            "amount": 2,
+            "damageTypes": [],
+            "excludedDamageTypes": [
+              "stich"
+            ]
+          }
         }
       ],
       "resources": [
@@ -11552,32 +11184,32 @@
       "sources": [
         {
           "familyId": "haus-gafyr",
-          "fingerprint": "{\"name\":\"Gildas Gafyr\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gafyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"kelyddon-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--kelyddon-gafyr\",\"name\":\"Kelyddon Gafyr\"},{\"personId\":\"izolda-arwydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arwydd--izolda-arwydd\",\"name\":\"Izolda Arwydd\"}],\"partners\":[],\"children\":[]}}",
-          "importedAt": "2026-08-08T03:52:02.274Z",
-          "lastSyncedAt": "2026-08-08T03:52:02.274Z",
           "personId": "gildas-gafyr",
-          "publishedAt": "",
           "releaseId": "",
-          "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=gildas-gafyr"
+          "publishedAt": "",
+          "importedAt": "2026-09-22T12:00:00.000Z",
+          "lastSyncedAt": "2026-09-22T12:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=gildas-gafyr",
+          "fingerprint": "{\"name\":\"Gildas Gafyr\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gafyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/gildas-gafyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"kelyddon-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--kelyddon-gafyr\",\"name\":\"Kelyddon Gafyr\"},{\"personId\":\"izolda-arwydd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arwydd--izolda-arwydd\",\"name\":\"Izolda Arwydd\"}],\"partners\":[],\"children\":[]}}"
         }
       ],
       "relationships": {
         "parents": [
           {
-            "certainty": "confirmed",
-            "legitimacy": "legitimate",
-            "name": "Kelyddon Gafyr",
             "personId": "kelyddon-gafyr",
             "type": "biological",
-            "worldPersonId": "person--haus-gafyr--kelyddon-gafyr"
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gafyr--kelyddon-gafyr",
+            "name": "Kelyddon Gafyr"
           },
           {
-            "certainty": "confirmed",
-            "legitimacy": "legitimate",
-            "name": "Izolda Arwydd",
             "personId": "izolda-arwydd",
             "type": "biological",
-            "worldPersonId": "person--haus-arwydd--izolda-arwydd"
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-arwydd--izolda-arwydd",
+            "name": "Izolda Arwydd"
           }
         ],
         "partners": [],
@@ -11633,60 +11265,15 @@
         [
           "Wohnsitz",
           "Gwynthor"
-        ],
-        {
-          "label": "Vollständiger Name",
-          "value": "Gildas"
-        },
-        {
-          "label": "Haus",
-          "value": "Haus Gafyr"
-        },
-        {
-          "label": "Titel / Anrede",
-          "value": "Sir"
-        },
-        {
-          "label": "Geboren",
-          "value": "1722"
-        },
-        {
-          "label": "Geburtsort",
-          "value": "Gwynthor"
-        },
-        {
-          "label": "Gestorben",
-          "value": "Lebend"
-        },
-        {
-          "label": "Alter im Jahr 1740",
-          "value": "18 Jahre"
-        },
-        {
-          "label": "Geschlecht",
-          "value": "Männlich"
-        },
-        {
-          "label": "Familienstand",
-          "value": "ledig"
-        },
-        {
-          "label": "Rang / Stand",
-          "value": "Ritter"
-        },
-        {
-          "label": "Tätigkeit",
-          "value": ""
-        },
-        {
-          "label": "Wohnsitz",
-          "value": "Gwynthor"
-        }
+        ]
       ],
       "quote": "",
       "quoteBy": "",
       "biography": {
         "portraitStages": [
+          "",
+          "",
+          "",
           ""
         ],
         "sideWidth": 100,
@@ -11735,46 +11322,6 @@
             "title": "Ernst",
             "detail": "Gildas besitzt durchaus Humor, wirkt im Alltag jedoch häufig ernster als andere junge Männer seines Alters. Besonders während einer Aufgabe fällt es ihm schwer, Albernheiten einfach als Albernheiten stehenzulassen.",
             "icon": "✦"
-          },
-          {
-            "detail": "Gildas nimmt Aufgaben ernst und erledigt sie gewissenhaft. Hat er eine Verantwortung übernommen, betrachtet er sie nicht als beendet, bis sie tatsächlich erfüllt wurde.",
-            "icon": "✦",
-            "title": "Pflichtbewusst"
-          },
-          {
-            "detail": "Er besitzt keine außergewöhnlichen natürlichen Talente und weiß das selbst. Deshalb verlässt er sich auf Übung, Vorbereitung und Beharrlichkeit. Was er heute nicht beherrscht, wird morgen erneut geübt.",
-            "icon": "✦",
-            "title": "Diszipliniert"
-          },
-          {
-            "detail": "Sein Ritterschlag bedeutet Gildas ausgesprochen viel. Er betrachtet Ritterwürde nicht als gesellschaftlichen Rang, sondern als Verpflichtung und reagiert empfindlich auf Ritter, die seiner Ansicht nach deren Werte nicht ernst nehmen.",
-            "icon": "✦",
-            "title": "Ritterstolz"
-          },
-          {
-            "detail": "Gildas erwartet von sich mindestens ebenso viel wie von anderen. Eigene Fehler beschäftigen ihn lange, insbesondere wenn mangelnde Vorbereitung oder Nachlässigkeit dafür verantwortlich waren.",
-            "icon": "✦",
-            "title": "Streng mit sich selbst"
-          },
-          {
-            "detail": "Er beobachtet Menschen aufmerksam und bildet sich schnell eine Meinung über ihren Charakter. Dabei liegt er nicht immer falsch – aber häufig glaubt er bereits genug zu wissen, bevor er tatsächlich genug gesehen hat.",
-            "icon": "✦",
-            "title": "Urteilend"
-          },
-          {
-            "detail": "Menschen, die Arbeit selbstverständlich anderen überlassen, ihren Rang ausnutzen oder Privilegien als natürliches Recht betrachten, gehen Gildas ausgesprochen schnell auf die Nerven. Gerade deshalb fällt ihm der Umgang mit Gawain schwer.",
-            "icon": "✦",
-            "title": "Unnachsichtig gegenüber Verwöhntheit"
-          },
-          {
-            "detail": "Wer Gildas einmal sein Vertrauen gewonnen hat, kann sich auf ihn verlassen. Er hält Absprachen ein, erscheint pünktlich und würde einen Gefährten nur äußerst ungern mit einer Aufgabe alleinlassen.",
-            "icon": "✦",
-            "title": "Verlässlich"
-          },
-          {
-            "detail": "Gildas besitzt durchaus Humor, wirkt im Alltag jedoch häufig ernster als andere junge Männer seines Alters. Besonders während einer Aufgabe fällt es ihm schwer, Albernheiten einfach als Albernheiten stehenzulassen.",
-            "icon": "✦",
-            "title": "Ernst"
           }
         ],
         "extraSections": [],
@@ -11801,9 +11348,7 @@
         "documentsTitle": "Eigentum & Besitz",
         "documents": [],
         "footer": "Personenakte · Gildas Gafyr"
-      },
-      "schema": "aleria.biography-module",
-      "schemaVersion": 1
+      }
     }
   }
 }

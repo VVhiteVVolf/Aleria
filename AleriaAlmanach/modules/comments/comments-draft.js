@@ -15,6 +15,8 @@ function getCommentDraftPayload() {
     segments: _commentSegments.map(segment => ({
       kind: segment.kind,
       text: segment.text,
+      sceneItemDraft: segment.sceneItemDraft || null,
+      sceneItemOperationId: segment.sceneItemOperationId || '',
       emoteIndex: Number.isInteger(segment.emoteIndex) ? segment.emoteIndex : null,
       imageSetId: String(segment.imageSetId || ''),
       side: commentSegmentUsesSide(segment.kind, false) ? normalizeCommentSegmentSide(segment.side) : '',
@@ -40,8 +42,9 @@ function getCommentDraftPayload() {
       skillChallengeDefenseMode: segment.skillChallengeDefenseMode === 'fixed' ? 'fixed' : 'passive',
       skillChallengeDefenseSkillId: String(segment.skillChallengeDefenseSkillId || 'deception'),
       skillRuleSelections: Array.isArray(segment.skillRuleSelections) ? segment.skillRuleSelections.map(selection => ({ ...selection })) : [],
-      inventoryItemId: segment.kind === 'consume' ? String(segment.inventoryItemId || '') : '',
-      inventoryUseMode: segment.kind === 'consume' && ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto',
+      ...(window.AleriaInventoryUse?.serializeSelection?.(segment) || {}),
+      inventoryItemId: ['consume', 'interact'].includes(segment.kind) ? String(segment.inventoryItemId || '') : '',
+      inventoryUseMode: ['consume', 'interact'].includes(segment.kind) && ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto',
       combatTargetId: commentSegmentUsesCombatResolution(segment) ? String(segment.combatTargetId || '') : '',
       combatTargetIds: commentSegmentUsesCombatResolution(segment) ? [...new Set((segment.combatTargetIds || [segment.combatTargetId]).map(String).filter(Boolean))] : [],
       combatLoadout: commentSegmentUsesCombatResolution(segment) ? segment.combatLoadout || null : null,
@@ -67,7 +70,7 @@ function persistCommentDraft(immediate = false) {
       const key = getCommentDraftKey();
       if (!key) return;
       const payload = getCommentDraftPayload();
-      if (!payload.text && !payload.name && !payload.title && !payload.selectedCharId && !payload.manualMode) {
+      if (!payload.text && !payload.name && !payload.title && !payload.selectedCharId && !payload.manualMode && !payload.segments.some(segment => segment.sceneItemDraft)) {
         localStorage.removeItem(key);
         showCommentDraftNote('');
         return;
@@ -147,6 +150,8 @@ function restoreCommentDraft(options = {}) {
         segment.languageColor,
         {
           mechanicMode: segment.mechanicMode,
+          sceneItemDraft: segment.sceneItemDraft,
+          sceneItemOperationId: segment.sceneItemOperationId,
           imageSetId: segment.imageSetId,
           skillId: segment.skillId,
           skillCustomModifier: segment.skillCustomModifier,
@@ -162,6 +167,7 @@ function restoreCommentDraft(options = {}) {
           skillChallengePreferredSkills: segment.skillChallengePreferredSkills,
           skillChallengePreferredModifier: segment.skillChallengePreferredModifier,
           skillChallengeAlternativeModifier: segment.skillChallengeAlternativeModifier,
+          ...(window.AleriaInventoryUse?.serializeSelection?.(segment) || {}),
           inventoryItemId: segment.inventoryItemId,
           inventoryUseMode: segment.inventoryUseMode,
           targetId: segment.combatTargetId,

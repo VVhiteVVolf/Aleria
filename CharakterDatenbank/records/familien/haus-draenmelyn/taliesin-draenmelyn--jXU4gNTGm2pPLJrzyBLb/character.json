@@ -82,12 +82,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-13T18:13:16.437Z",
+    "sourceExportedAt": "2026-09-22T12:00:00.000Z",
     "sourceUpdatedAt": "",
     "sourceDocumentIds": [
       "jXU4gNTGm2pPLJrzyBLb"
     ],
-    "contentHash": "986712768c6c2a20a705abff188668c7002c34fa36ac6e59981a7c94c7e0f9f1"
+    "contentHash": "505eccd471f55b4792c88a72551caf4777351c4b3cfe214daeb79f72f9e75055"
   },
   "local": {
     "notes": "",
@@ -1174,8 +1174,8 @@
           "personId": "taliesin-draenmelyn",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-13T18:13:16.437Z",
-          "lastSyncedAt": "2026-09-13T18:13:16.437Z",
+          "importedAt": "2026-09-22T12:00:00.000Z",
+          "lastSyncedAt": "2026-09-22T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=taliesin-draenmelyn",
           "fingerprint": "{\"name\":\"Taliesin Draenmelyn\",\"title\":\"Bediensteter des Hauses Draig\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draenmelyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draenmelyn/taliesin-draenmelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"18 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"afan-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--afan-draenmelyn\",\"name\":\"Afan Draenmelyn\"},{\"personId\":\"elen-spouse-draenmelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--elen-spouse-draenmelyn\",\"name\":\"Elen\"}],\"partners\":[],\"children\":[]}}"
         }

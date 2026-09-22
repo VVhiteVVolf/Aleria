@@ -96,7 +96,7 @@ function setEditCommentSegmentKind(id, kind) {
     segment.combatPaymentMode = 'standard';
     segment.combatPaymentConfirmed = false;
   }
-  if (segment.kind !== 'consume' && !segment.storedInventoryUse) {
+  if (!['consume', 'interact'].includes(segment.kind) && !segment.storedInventoryUse) {
     segment.inventoryItemId = '';
     segment.inventoryUseMode = 'auto';
   }
@@ -306,8 +306,9 @@ function buildEditCommentSegmentsForSave() {
         skillRuleSelections: Array.isArray(segment.skillRuleSelections) ? segment.skillRuleSelections.map(selection => ({ ...selection })) : [],
         storedSkillResolution: segment.storedSkillResolution || null,
         storedSkillChallenge: segment.storedSkillChallenge || null,
-        inventoryItemId: segment.kind === 'consume' ? String(segment.inventoryItemId || '') : '',
-        inventoryUseMode: segment.kind === 'consume' && ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto',
+        ...(window.AleriaInventoryUse?.serializeSelection?.(segment) || {}),
+        inventoryItemId: ['consume', 'interact'].includes(segment.kind) ? String(segment.inventoryItemId || '') : '',
+        inventoryUseMode: ['consume', 'interact'].includes(segment.kind) && ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto',
         storedInventoryUse: segment.storedInventoryUse || null,
         ...(commentSegmentUsesCombatResolution(segment) ? {
           combatTargetId: String(segment.combatTargetId || ''),

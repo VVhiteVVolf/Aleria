@@ -1,4 +1,5 @@
 import { parsePrice, formatPrice, moneyState } from './item-register-money.js?v=20260919-shop-v1';
+import { indexInventoryTemplates, resolveInventoryItem } from '../character-inventory/character-inventory-identity.js';
 
 export const REGISTER_SECTIONS = Object.freeze([
   { id: 'standard', label: 'Standardgüter', text: 'Verbindliche Vorlagen und Preismaßstäbe.' },
@@ -44,22 +45,24 @@ export function normalizeOffer(input = {}, baseline = []) {
 }
 
 export function buildOwnedItems(characters = [], templates = [], creatures = []) {
-  const byKey = new Map(templates.flatMap(item => [item.id, item.canonicalKey, ...(item.aliases || [])].filter(Boolean).map(key => [key, item])));
+  const byKey = indexInventoryTemplates(templates);
   const creatureByItem = new Map(creatures.filter(creature => creature.itemOrigin?.instanceId).map(creature => [creature.itemOrigin.instanceId, creature]));
   return characters.flatMap(character => (character.inventory?.items || []).map(item => {
+    const resolved = resolveInventoryItem(item, { character, templates: byKey, creatures });
     const reference = item.templateId || item.originItemDbKey || item.itemDbKey;
     const template = byKey.get(reference);
     const instanceId = item.instanceId || item.id;
     const linkedCreature = creatureByItem.get(instanceId);
     const creature = linkedCreature?.itemOrigin?.ownerCharacterId === character.id && linkedCreature.id === item.creatureId ? linkedCreature : null;
-    const category = template?.category || registerCategory(item);
+      const category = item.registerCategory || template?.category || registerCategory(item);
     return { ...template, id: `owned:${character.id}:${item.id}`, canonicalKey: `owned:${character.id}:${item.id}`,
       section: 'owned', title: creature?.name || item.name, category, categoryLabel: categoryLabel(category),
       type: creature?.species || item.type || template?.type || '',
-      description: item.description || '', details: '', image: creature?.portrait || item.image || item.icon || template?.image || '',
+        description: resolved.description, details: '', image: resolved.image,
+        attributes: resolved.attributes, infoRows: item.infoRows || [], weight: item.weight || '',
       templateId: template?.templateId || template?.id || reference || '', templateName: template?.title || item.templateName || '',
       instanceId, inventoryItemId: item.id, ownerCharacterId: character.id, ownerCharacterName: character.name,
-      listId: character.id, listName: character.name, priceRange: item.valuation || template?.priceRange || null,
+      listId: character.id, listName: character.name, priceRange: resolved.valuation,
       quantity: Number(item.quantity ?? 1), equipped: item.equipped === true ||
         (character.combatProfile?.weapons || []).some(weapon => weapon.inventoryItemId === item.id && weapon.equipped) ||
         (character.combatProfile?.armorItems || []).some(armor => armor.inventoryItemId === item.id && armor.equipped),

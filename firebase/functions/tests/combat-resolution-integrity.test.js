@@ -8,6 +8,26 @@ import { ProvidedDiceAdapter } from '../src/mechanics/provided-dice-adapter.js';
 import { getEffectiveCombatSegmentKind } from '../src/generated/combat/combat-segment-model.js';
 import { withEquippedCombatWeapon } from '../src/generated/combat/combat-equipment-state.js';
 
+test('server computes Drachenkerbe and typed armor protection from equipment and raw dice, ignoring submitted damage', async () => {
+  const gawain = JSON.parse(await readFile(new URL('../../../Charakter%20Archiv%20Exporte/gawain-draig.json', import.meta.url), 'utf8')).character;
+  const opponent = character('target', { hitPoints: { current: 100, maximumOverride: 100 } });
+  const submitted = { attack: { naturalRoll: 20, diceResults: [20] }, damage: { diceResults: [4, 4], total: 999, modifier: 999 } };
+  const resolve = (actor, target) => new CombatResolutionService(new ProvidedDiceAdapter(submitted))
+    .resolveAttack({ actor, target }, { rulePeriods: { comment: 'equipment-test' } });
+  const actor = resolveCombatProfile(gawain, { actionId: 'weapon:gawain-draig-knightly-sword' });
+  const strike = await resolve(actor, resolveCombatProfile(opponent));
+  assert.equal(strike.damage.total, 8 + actor.damageModifier + 2);
+  assert.ok(strike.ruleApplications.some(rule => rule.ruleId === 'drachenzahn-drachenkerbe'));
+  opponent.combatProfile.weapons[0].damageType = 'Hieb';
+  const attacker = resolveCombatProfile(opponent);
+  const protectedHit = await resolve(attacker, resolveCombatProfile(gawain));
+  const baseline = structuredClone(gawain);
+  baseline.combatProfile.armorItems.forEach(item => { item.damageProtection = null; });
+  const normalHit = await resolve(attacker, resolveCombatProfile(baseline));
+  assert.equal(normalHit.damage.total - protectedHit.damage.total, 2);
+  assert.equal(protectedHit.damage.damageReduction, 2);
+});
+
 test('server recalculates Rhiannon INT damage and action packages from an old profile and raw dice', async () => {
   const source = JSON.parse(await readFile(new URL('../../../Charakter%20Archiv%20Exporte/rhiannon-draig.json', import.meta.url), 'utf8')).character;
   for (const spell of source.combatProfile.magic.spells) {

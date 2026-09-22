@@ -1,0 +1,1003 @@
+{
+  "date": "2026-09-22",
+  "environment": "local Firestore emulator demo-aleria-item-duels",
+  "characters": [
+    {
+      "name": "Gais Wyrm",
+      "hasCombatSheet": false
+    },
+    {
+      "name": "Nudd Saethwyr",
+      "hasCombatSheet": false
+    },
+    {
+      "name": "Gildas Gafyr",
+      "hasCombatSheet": true
+    },
+    {
+      "name": "Gawain Draig",
+      "hasCombatSheet": true
+    }
+  ],
+  "checks": [
+    "Archive/inventory/equipment/card identity and traits",
+    "Weapon normal/critical/technique and armor first-hit/new-post: client/server/stored bubble parity",
+    "hit:1:Aus dem Takt",
+    "hit:2:Zurückgedrängt",
+    "hit:3:Unsicherer Griff",
+    "hit:4:Offene Deckung",
+    "hit:5:Tauber Waffenarm",
+    "hit:6:Kurzer Stolperer",
+    "hit:7:Die Initiative ergriffen",
+    "hit:8:Günstige Stellung",
+    "hit:9:Lücke erkannt",
+    "hit:10:Entwaffnet",
+    "failure:1:Überstreckt",
+    "failure:2:Verheddert",
+    "failure:3:Griff verrutscht",
+    "failure:4:Flanke geöffnet",
+    "failure:5:Verkrampfter Arm",
+    "failure:6:Schlechter Stand",
+    "failure:7:Schwung verloren",
+    "failure:8:Gegner gewarnt",
+    "failure:9:Konterfenster",
+    "failure:10:Waffe entglitten",
+    "pickup:bonus-action:undo",
+    "pickup:action:undo",
+    "pickup:reaction:undo",
+    "pickup:special-action:undo",
+    "Foreign pickup preserves unique item and weapon trait, undo both inventories",
+    "Pickup+attack same post, unavailable Aura payment rejected, disarmed technique blocked, dagger remains usable",
+    "Inventory unequip removes armor protection in server evaluation",
+    "Neutral concurrent consumption and dependencies, real inventory consume/undo",
+    "Legacy encounter unchanged"
+  ],
+  "duels": [
+    {
+      "seed": 11,
+      "winner": "Gildas Gafyr",
+      "hitPoints": [
+        10,
+        0
+      ],
+      "trace": [
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 12,
+          "damage": 9,
+          "remainingHP": 40,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 20,
+          "damage": 21,
+          "remainingHP": 37,
+          "effect": "Günstige Stellung",
+          "equipment": [
+            "Drachenkerbe"
+          ]
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 18,
+          "damage": 5,
+          "remainingHP": 35,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 10,
+          "damage": 0,
+          "remainingHP": 37,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 17,
+          "damage": 9,
+          "remainingHP": 26,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 20,
+          "damage": 14,
+          "remainingHP": 23,
+          "effect": "Lücke erkannt",
+          "equipment": [
+            "Drachenkerbe"
+          ]
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 13,
+          "damage": 5,
+          "remainingHP": 21,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 10,
+          "damage": 0,
+          "remainingHP": 23,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 5,
+          "damage": 0,
+          "remainingHP": 21,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 5,
+          "damage": 0,
+          "remainingHP": 23,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 15,
+          "damage": 10,
+          "remainingHP": 11,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 5,
+          "damage": 0,
+          "remainingHP": 23,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 10,
+          "damage": 0,
+          "remainingHP": 11,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 11,
+          "damage": 8,
+          "remainingHP": 15,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 13,
+          "damage": 10,
+          "remainingHP": 1,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 18,
+          "damage": 5,
+          "remainingHP": 10,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 20,
+          "damage": 15,
+          "remainingHP": 0,
+          "effect": "Die Initiative ergriffen",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "winner": "Gawain Draig",
+      "hitPoints": [
+        0,
+        12
+      ],
+      "trace": [
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 9,
+          "damage": 0,
+          "remainingHP": 49,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 17,
+          "damage": 8,
+          "remainingHP": 50,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 1,
+          "damage": 0,
+          "remainingHP": 49,
+          "effect": "Verkrampfter Arm",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 20,
+          "damage": 16,
+          "remainingHP": 34,
+          "effect": "Tauber Waffenarm",
+          "equipment": [
+            "Drachenkerbe"
+          ]
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 9,
+          "damage": 0,
+          "remainingHP": 49,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 2,
+          "damage": 0,
+          "remainingHP": 34,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 1,
+          "damage": 0,
+          "remainingHP": 49,
+          "effect": "Verheddert",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 8,
+          "damage": 0,
+          "remainingHP": 34,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 14,
+          "damage": 6,
+          "remainingHP": 43,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 7,
+          "damage": 0,
+          "remainingHP": 34,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 20,
+          "damage": 15,
+          "remainingHP": 28,
+          "effect": "Unsicherer Griff",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 18,
+          "damage": 6,
+          "remainingHP": 28,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 1,
+          "damage": 0,
+          "remainingHP": 28,
+          "effect": "Verkrampfter Arm",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 10,
+          "damage": 0,
+          "remainingHP": 28,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 2,
+          "damage": 0,
+          "remainingHP": 28,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 6,
+          "damage": 0,
+          "remainingHP": 28,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 5,
+          "damage": 0,
+          "remainingHP": 28,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 1,
+          "damage": 0,
+          "remainingHP": 28,
+          "effect": "Griff verrutscht",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 9,
+          "damage": 0,
+          "remainingHP": 28,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 12,
+          "damage": 11,
+          "remainingHP": 17,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 8,
+          "damage": 0,
+          "remainingHP": 28,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 2,
+          "damage": 0,
+          "remainingHP": 17,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 13,
+          "damage": 6,
+          "remainingHP": 22,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 14,
+          "damage": 9,
+          "remainingHP": 8,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 19,
+          "damage": 7,
+          "remainingHP": 15,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 3,
+          "damage": 0,
+          "remainingHP": 8,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 14,
+          "damage": 3,
+          "remainingHP": 12,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 1,
+          "damage": 0,
+          "remainingHP": 8,
+          "effect": "Verheddert",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 10,
+          "damage": 0,
+          "remainingHP": 12,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 18,
+          "damage": 10,
+          "remainingHP": 0,
+          "effect": "",
+          "equipment": []
+        }
+      ]
+    },
+    {
+      "seed": 77,
+      "winner": "Gawain Draig",
+      "hitPoints": [
+        0,
+        14
+      ],
+      "trace": [
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 6,
+          "damage": 0,
+          "remainingHP": 49,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 1,
+          "damage": 0,
+          "remainingHP": 58,
+          "effect": "Schwung verloren",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 4,
+          "damage": 0,
+          "remainingHP": 49,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 12,
+          "damage": 5,
+          "remainingHP": 53,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 2,
+          "damage": 0,
+          "remainingHP": 49,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 3,
+          "damage": 0,
+          "remainingHP": 53,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 11,
+          "damage": 0,
+          "remainingHP": 49,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 6,
+          "damage": 0,
+          "remainingHP": 53,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 2,
+          "damage": 0,
+          "remainingHP": 49,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 8,
+          "damage": 0,
+          "remainingHP": 53,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 17,
+          "damage": 4,
+          "remainingHP": 45,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 17,
+          "damage": 10,
+          "remainingHP": 43,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 9,
+          "damage": 0,
+          "remainingHP": 45,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 8,
+          "damage": 0,
+          "remainingHP": 43,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 18,
+          "damage": 11,
+          "remainingHP": 34,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 9,
+          "damage": 0,
+          "remainingHP": 43,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 1,
+          "damage": 0,
+          "remainingHP": 34,
+          "effect": "Griff verrutscht",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 4,
+          "damage": 0,
+          "remainingHP": 43,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 17,
+          "damage": 12,
+          "remainingHP": 22,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 8,
+          "damage": 0,
+          "remainingHP": 43,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 4,
+          "damage": 0,
+          "remainingHP": 22,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 12,
+          "damage": 8,
+          "remainingHP": 35,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 15,
+          "damage": 8,
+          "remainingHP": 14,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 19,
+          "damage": 10,
+          "remainingHP": 25,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 8,
+          "damage": 0,
+          "remainingHP": 14,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 16,
+          "damage": 13,
+          "remainingHP": 12,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 10,
+          "damage": 0,
+          "remainingHP": 14,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 7,
+          "damage": 0,
+          "remainingHP": 12,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 3,
+          "damage": 0,
+          "remainingHP": 14,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 7,
+          "damage": 0,
+          "remainingHP": 12,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 11,
+          "damage": 0,
+          "remainingHP": 14,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 3,
+          "damage": 0,
+          "remainingHP": 12,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 1,
+          "damage": 0,
+          "remainingHP": 14,
+          "effect": "Schlechter Stand",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 10,
+          "damage": 0,
+          "remainingHP": 12,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 5,
+          "damage": 0,
+          "remainingHP": 14,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 11,
+          "damage": 0,
+          "remainingHP": 12,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 4,
+          "damage": 0,
+          "remainingHP": 14,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 16,
+          "damage": 13,
+          "remainingHP": 0,
+          "effect": "",
+          "equipment": []
+        }
+      ]
+    },
+    {
+      "seed": 99,
+      "winner": "Gildas Gafyr",
+      "hitPoints": [
+        1,
+        0
+      ],
+      "trace": [
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 1,
+          "damage": 0,
+          "remainingHP": 49,
+          "effect": "Waffe entglitten",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 10,
+          "damage": 0,
+          "remainingHP": 58,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "event": "pickup"
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 17,
+          "damage": 10,
+          "remainingHP": 39,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 8,
+          "damage": 0,
+          "remainingHP": 58,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 6,
+          "damage": 0,
+          "remainingHP": 39,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 16,
+          "damage": 7,
+          "remainingHP": 51,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 13,
+          "damage": 4,
+          "remainingHP": 35,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 20,
+          "damage": 18,
+          "remainingHP": 33,
+          "effect": "Kurzer Stolperer",
+          "equipment": [
+            "Drachenkerbe"
+          ]
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 6,
+          "damage": 0,
+          "remainingHP": 35,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 11,
+          "damage": 7,
+          "remainingHP": 26,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 20,
+          "damage": 12,
+          "remainingHP": 23,
+          "effect": "Günstige Stellung",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 17,
+          "damage": 4,
+          "remainingHP": 22,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 16,
+          "damage": 5,
+          "remainingHP": 18,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 13,
+          "damage": 10,
+          "remainingHP": 12,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 9,
+          "damage": 0,
+          "remainingHP": 18,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 6,
+          "damage": 0,
+          "remainingHP": 12,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 12,
+          "damage": 3,
+          "remainingHP": 15,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 7,
+          "damage": 0,
+          "remainingHP": 12,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 17,
+          "damage": 8,
+          "remainingHP": 7,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        },
+        {
+          "actor": "Gawain Draig",
+          "roll": 13,
+          "damage": 11,
+          "remainingHP": 1,
+          "effect": "",
+          "equipment": []
+        },
+        {
+          "actor": "Gildas Gafyr",
+          "roll": 14,
+          "damage": 9,
+          "remainingHP": 0,
+          "effect": "",
+          "equipment": [
+            "Schuppenpolster"
+          ]
+        }
+      ]
+    }
+  ]
+}

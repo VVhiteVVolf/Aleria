@@ -2,11 +2,11 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-09-13T18:13:16.437Z",
+  "sourceExportedAt": "2026-09-22T12:00:00.000Z",
   "summary": {
-    "sourceDocuments": 274,
+    "sourceDocuments": 276,
     "total": 236,
-    "mergedSameNameGroups": 29,
+    "mergedSameNameGroups": 31,
     "familyLinked": 156,
     "familyAmbiguous": 0,
     "familyPending": 80,
@@ -976,6 +976,17 @@
       ]
     },
     {
+      "name": "Asgeir Wolfshorn",
+      "canonicalDocumentId": "oUlhJyX6C4Q69mtLS9u1",
+      "documentIds": [
+        "oUlhJyX6C4Q69mtLS9u1",
+        "oUlhJyX6C4Q69mtLS9u1"
+      ],
+      "ages": [
+        "Geburtsjahr 1712"
+      ]
+    },
+    {
       "name": "Cederic Chwedonol",
       "canonicalDocumentId": "03d4RFlsrtZmobcmryW5",
       "documentIds": [
@@ -1234,6 +1245,17 @@
       ],
       "ages": [
         "Geburtsjahr 1719"
+      ]
+    },
+    {
+      "name": "Ylva Wolfshorn",
+      "canonicalDocumentId": "bSYZYAEOwiRgy44f6OmO",
+      "documentIds": [
+        "bSYZYAEOwiRgy44f6OmO",
+        "bSYZYAEOwiRgy44f6OmO"
+      ],
+      "ages": [
+        "Geburtsjahr 1710"
       ]
     },
     {

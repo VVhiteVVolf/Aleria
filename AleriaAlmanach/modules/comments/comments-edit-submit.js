@@ -130,14 +130,14 @@ async function submitEditComment() {
     const storedUse = original.inventoryUse;
     const { storedInventoryUse, ...cleanSegment } = segment;
     if (storedUse) {
-      const sameItem = String(segment.commentKind || segment.kind || '') === 'consume'
+      const sameItem = String(segment.commentKind || segment.kind || '') === String(original.commentKind || original.kind || 'consume')
         && String(segment.inventoryItemId || storedInventoryUse?.item?.id || '') === String(storedUse.item?.id || '');
       if (!sameItem) {
         inventoryUseError = 'Ein bereits gespeicherter Inventarvorgang und sein Gegenstand sind unveränderlich. Erstelle für eine neue Benutzung einen neuen Beitrag.';
       }
       return { ...cleanSegment, inventoryUse: storedUse };
     }
-    if (String(segment.commentKind || segment.kind || '') === 'consume') {
+    if (['consume', 'interact'].includes(String(segment.commentKind || segment.kind || '')) && (segment.inventoryItemId || segment.sceneItemId)) {
       inventoryUseError = 'Neue Inventarvorgänge können nur beim Eintragen eines neuen Beitrags erzeugt werden.';
     }
     return cleanSegment;

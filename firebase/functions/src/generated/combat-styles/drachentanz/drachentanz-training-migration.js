@@ -28,6 +28,30 @@ const LEGACY_CHARACTER_TECHNIQUE_IDS = new Set([
   'gawain-dragon-tail', 'gawain-dragon-whirl', 'legacy-dragon-bite'
 ]);
 
+// These managed counters belonged to the pre-registry Gawain techniques above.
+// Never infer ownership from a display name or the generic technique-use category.
+const LEGACY_TECHNIQUE_RESOURCE_IDS = new Set([
+  'gawain-technique-claw-uses',
+  'gawain-technique-silver-scale-uses',
+  'gawain-technique-tail-uses'
+]);
+
+export function migrateDrachentanzTechniqueResources(profile = {}) {
+  if (!profile.resources?.some(resource => LEGACY_TECHNIQUE_RESOURCE_IDS.has(resource.id))) return profile;
+  const referenced = new Set();
+  const collectReferences = value => {
+    if (!value || typeof value !== 'object') return;
+    if (value.resourceId) referenced.add(value.resourceId);
+    Object.values(value).forEach(collectReferences);
+  };
+  // Check retained attacks, abilities, triggers and other rules before retiring a
+  // counter. Custom rules may deliberately still spend an old resource.
+  const { resources, ...rules } = profile;
+  collectReferences(rules);
+  return { ...profile, resources: resources.filter(resource =>
+    !LEGACY_TECHNIQUE_RESOURCE_IDS.has(resource.id) || referenced.has(resource.id)) };
+}
+
 /** The reserved catalog namespace and these pre-registry IDs are managed data.
  * A user's ordinary class-tagged attack is never identified by name or category.
  */

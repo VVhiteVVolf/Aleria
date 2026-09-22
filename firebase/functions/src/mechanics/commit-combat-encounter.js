@@ -287,7 +287,8 @@ export const commitCombatEncounter = onCall({
       experience = { total: awardPlan.totalExperience, awards };
     }
 
-    committedEvent = normalizeCombatEncounterEvent({ ...requested, experience });
+    committedEvent = normalizeCombatEncounterEvent({ ...requested, experience,
+      criticalEffectsVersion: requested.operation === 'start' ? 1 : 0 });
     transaction.create(commentRef, {
       entryId,
       charName: 'Erzähler',

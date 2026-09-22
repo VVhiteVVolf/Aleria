@@ -7,7 +7,6 @@ export function renderPathFeatures(form) {
 
 export function renderCultureTrainingTools(plan) {
   if (!['vennyr', 'aldrimar'].includes(plan.cultureId)) return '';
-  if (plan.skaldReference) return '<p class="culture-resource-summary" data-training-resources>Grundrepertoire bis Stufe 5; weitere Entwicklung offen.</p>';
   const weapons = [...new Set(plan.attackCatalog.map(attack => attack.weaponLabel))];
   return `<div class="culture-training-tools" data-training-controls hidden><label>Waffenweg <select data-role="training-weapon"><option value="">Alle Waffenwege</option>${weapons.map(name => `<option value="${escape(name)}">${escape(name)}</option>`).join('')}</select></label><label class="culture-training-toggle"><input type="checkbox" data-role="training-earned-only"> Nur Optionen bis zur gewählten Stufe</label></div>
     <p class="culture-resource-summary" data-training-resources>Besondere Aktionen 2 · Aura-Fokuspunkte 0 · Aktion 1 / Bonusaktion 1 / Reaktion 1</p>`;
@@ -20,7 +19,7 @@ export function renderFoundationSelection(plan) {
 
 export function trainingIntro(plan) {
   if (plan.cultureId === 'aldrimar') return plan.skaldReference
-    ? 'Der Skalde ist ein Kampfbarde und möglicher Begleiter einer zweiten Klassenausbildung. Das Grundrepertoire folgt Freyas bestehendem Stand; Stufe 6–20 bleibt ausdrücklich offen.'
+    ? 'Der Skalde verbindet nichtmagische Stimm- und Waffenmanöver bis Stufe 20 mit einem gesondert erlernten magischen Repertoire. Freyas vorhandene Lieder bleiben als Referenz erhalten; neue Manöver teilen sich das normale Aktions- und Lernbudget.'
     : 'Die Huskarl-Waffenlehre verbindet nordische Standfestigkeit mit bewusster Führung von Klinge, Axt, Schild und Speer. Diese Klassenfolgen, Boni und Expertenpfade sind ein Ausbildungsentwurf für die spätere Vergabe an Figuren.';
   return plan.cultureId === 'vennyr'
     ? plan.classId === 'derwyn'

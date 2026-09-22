@@ -35,6 +35,8 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     id: `seg-${Date.now().toString(36)}-${_commentSegmentSeq}`,
     kind: normalizedKind,
     text: String(text || ''),
+    sceneItemDraft: combatSettings.sceneItemDraft ? JSON.parse(JSON.stringify(combatSettings.sceneItemDraft)) : null,
+    sceneItemOperationId: String(combatSettings.sceneItemOperationId || ''),
     emoteIndex: Number.isInteger(emoteIndex) ? emoteIndex : null,
     imageSetId: String(combatSettings?.imageSetId || ''),
     side: normalizedKind === 'action' ? '' : normalizeCommentSegmentSide(side),
@@ -99,6 +101,7 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     storedCombatResolution: usesCombatResolution && combatSettings?.storedCombatResolution
       ? combatSettings.storedCombatResolution
       : null,
+    ...(window.AleriaInventoryUse?.serializeSelection?.(combatSettings) || {}),
     inventoryItemId: String(combatSettings?.inventoryItemId || combatSettings?.storedInventoryUse?.item?.id || ''),
     inventoryUseMode: ['consume', 'use'].includes(combatSettings?.inventoryUseMode) ? combatSettings.inventoryUseMode : 'auto',
     storedInventoryUse: combatSettings?.storedInventoryUse || null
@@ -119,7 +122,7 @@ function renderCommentDurationTotal(edit = false) {
 function getAllowedCommentSegmentKinds(edit = false) {
   const mode = edit ? _editMode : _commentMode;
   return mode === 'narrator'
-    ? ['action']
+    ? (edit ? ['action'] : ['action', 'sceneitem'])
     : ['speech', 'action', 'interact', 'consume', 'thought', 'whisper', 'shout', 'performance', 'combataction', 'foreign', 'song', 'telepathy', 'animal', 'spell', 'prayer', 'flirt', 'madness', 'secretaction'];
 }
 

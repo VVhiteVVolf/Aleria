@@ -26,6 +26,7 @@ function actorIds(comment = {}) {
   for (const segment of comment.commentSegments || []) {
     add(segment.actorId || segment.characterId);
     add(segment.inventoryUse?.actorId);
+    add(segment.inventoryUse?.sceneItemEvent?.sourceActorId);
   }
   for (const resolution of getEncounterResolutionGroups(comment).flat()) {
     add(resolution.actorId); add(resolution.targetId);
@@ -41,9 +42,15 @@ export function findLaterMechanicalDependency(history = [], commentId) {
   const index = history.findIndex(comment => comment.id === commentId);
   if (index < 0) return null;
   const affected = actorIds(history[index]);
+  const sceneIds = new Set([
+    history[index].sceneItemEvent?.sceneItemId,
+    ...(history[index].commentSegments || []).flatMap(segment => [segment.sceneItemEvent?.sceneItemId, segment.inventoryUse?.sceneItemId,
+      ...(segment.combatResolutions || [segment.combatResolution]).map(result => result?.criticalConsequence?.sceneItemEvent?.sceneItemId)])
+  ].filter(Boolean));
   // Breaking or removing concentration can change a third participant's
   // state. Their later contribution also prevents an unsafe partial undo.
   const links = concentrationLinks(deriveCombatStateFromComments(history.slice(0, index)));
   for (const actorId of affected) for (const linked of links.get(actorId) || []) affected.add(linked);
-  return history.slice(index + 1).find(comment => [...actorIds(comment)].some(id => affected.has(id))) || null;
+  return history.slice(index + 1).find(comment => [...actorIds(comment)].some(id => affected.has(id))
+    || (comment.commentSegments || []).some(segment => sceneIds.has(segment.inventoryUse?.sceneItemId))) || null;
 }

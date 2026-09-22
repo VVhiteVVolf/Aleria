@@ -38,7 +38,7 @@ function dispatchCharactersChanged() {
 
 function loadLocalCharacterDatabaseState() {
   if (!_localCharacterDatabaseRequest) {
-    _localCharacterDatabaseRequest = import('../../../CharakterDatenbank/assets/js/character-database-client.mjs?v=20260906-character-vitality-v2')
+    _localCharacterDatabaseRequest = import('../../../CharakterDatenbank/assets/js/character-database-client.mjs?v=20260922-scene-items-v2')
       .then(async repository => ({ repository, database: await repository.loadLocalCharacterDatabase() }))
       .catch(error => {
         console.info('Lokale Charakterdatenbank konnte nicht initialisiert werden.', error);
@@ -189,6 +189,7 @@ function applyCommittedCharacterCombatProfile(event) {
         : _characters[index].inventory,
       combatProfile: {
         ...currentCombatProfile,
+        ...(update.equipment ? { weapons: update.equipment.weapons, armorItems: update.equipment.armorItems } : {}),
         hitPoints: hitPoints ? {
           ...(currentCombatProfile.hitPoints || {}),
           current: Math.max(0, Number(hitPoints.current) || 0),

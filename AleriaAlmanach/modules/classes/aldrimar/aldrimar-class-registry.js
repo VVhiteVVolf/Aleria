@@ -8,10 +8,10 @@ const configs = [
   { classId: 'hird-maid', name: 'Hird/Maid', focus: 'Schildwall, Speer, Axt und Schwert', title: 'Wehrhafte Clansleute Aldrimars',
     primary: ['Speer', 'Axt', 'Schwert', 'Rundschild'], secondary: [],
     note: 'Praktische Ausbildung für Hirdmann und Schildmaid. Schildlose Angriffe bleiben möglich; Schildmanöver verlangen einen geführten Schild.',
-    bands: { foundation: [1, 2, 3, 4, 5], militia: [6, 10, 12, 15] },
+    bands: { foundation: [1, 2, 3, 4, 5], militia: [6, 10, 12, 15, 18, 20] },
     features: [feature('hird-clan', 'Schulter an Schulter', 1, '+1 auf KRF-Proben gegen Umwerfen, wenn ein kampffähiger Verbündeter in höchstens 2 m steht.'),
       feature('hird-wacht', 'Geübte Hofwacht', 10, 'Schulter an Schulter steigt auf +2 und ersetzt +1; keine automatische Schildwall-RK.')],
-    pending: ['Weiterentwicklung Stufe 16–20; keine automatische Erhebung in den Huskarlstand'] },
+    pending: ['Keine automatische Erhebung in den Huskarlstand durch erfahrene Hirdwacht'] },
   { classId: 'skjoldr', name: 'Skjoldr', focus: 'Vielseitiger Frontkämpfer mit Schild oder freien Waffenwegen', title: 'Das Rückgrat der Huskarle',
     primary: ['Schwert', 'Axt', 'Streitkolben'], secondary: ['Schild', 'Langschwert', 'Zwei Waffen'],
     note: 'Schild, Zweihandwaffe und zwei Einhandwaffen sind alternative Führungen. Nur tatsächlich freie Hände und aktive Waffen zählen.',
@@ -50,13 +50,13 @@ const configs = [
   { classId: 'skalde', name: 'Skalde', focus: 'Kampfbarde mit Stimme, Instrument, Schwert und Schild', title: 'Stimme der Halle · nach Freyas bestehendem Aufbau',
     primary: ['Stimme', 'Laute oder anderes Instrument'], secondary: ['Schwert', 'Sax', 'Schild'],
     note: 'Freyas Referenz führt Laute 1W4, Schwert 1W8 und Schildstoß 1W4. Das sind Ausrüstungswerte ihres Bogens, keine universellen Waffenboni des Skalden.',
-    bands: {}, authoredThroughLevel: 5,
+    bands: { foundation: [1, 2, 3, 4, 5, 6], advanced: [7, 8], expert: [9, 11, 13, 15, 17, 20] }, authoredThroughLevel: 20,
     features: [feature('skalde-stimme', 'Stimme und Instrument', 1, 'Skaldische Magie verwendet Charisma. Begonnen wird mit Spottvers und Magischer Hand; frühe Lernreihenfolge als Vorschlag.'),
       feature('skalde-trugbilder', 'Licht und Trugbild', 2, 'Kleine Illusion und Licht ergänzen das Repertoire. Beide sind Nutzzauber ohne automatischen Kampfschaden.'),
       feature('skalde-gemuet', 'Verse des Gemüts', 3, 'Person bezaubern und Person beruhigen entsprechen Freyas Grad-I-Liedern. Sonderwirkungen bleiben erzählerisch auszuwerten.'),
       feature('skalde-zorn', 'Aufpeitschender Vers', 4, 'Person wütend machen folgt Freyas Grad-II-Lied; keine automatische KI-Steuerung des Ziels.'),
-      feature('skalde-freya', 'Freyas Ausbildungsstand', 5, 'Stille und der erschöpfende Arkane Schrei vervollständigen den vorhandenen Stand. Ab Stufe 6 sind neue Lieder, Boni und Zauberentwicklung ausdrücklich offen.')],
-    pending: ['Skalde Stufe 6–20', 'Verbindliche Mehrklassenregeln und gemeinsame Zauberressourcen', 'Allgemeine Fassung des Arkanen Schreis statt Freyas persönlicher Mana-Festzahl'] }
+      feature('skalde-freya', 'Freyas Ausbildungsstand', 5, 'Stille und der erschöpfende Arkane Schrei vervollständigen den magischen Referenzstand. Nichtmagische Stimm- und Waffenmanöver werden aus der erweiterten Waffenlehre gewählt; neue Zauberlieder bleiben gesonderte Ausbildung.')],
+    pending: ['Neue magische Lieder nach Freyas Referenzstand; die nichtmagische Waffen- und Stimmführung ist bis Stufe 20 ausgearbeitet', 'Verbindliche Mehrklassenregeln und gemeinsame Zauberressourcen', 'Allgemeine Fassung des Arkanen Schreis statt Freyas persönlicher Mana-Festzahl'] }
 ];
 
 function createDefinition(config) {
@@ -64,22 +64,20 @@ function createDefinition(config) {
   const skald = config.classId === 'skalde';
   const bands = config.bands || { foundation: [1, 2, 3, 4, 5, 6], advanced: [7, 8], expert: [9, 11, 13, 15, 17, 20] };
   const slots = Object.entries(bands).flatMap(([band, levels]) => levels.map((level, index) => ({ id: `${band}-${index + 1}`, band, level })));
-  const phases = skald
-    ? [{ id: 'foundation', name: 'Grundrepertoire nach Freya', minimumLevel: 1, maximumLevel: 5 }, { id: 'open', name: 'Weitere Skaldenausbildung offen', minimumLevel: 6, maximumLevel: 20, kind: 'pending' }]
-    : [{ id: 'foundation', name: 'Stand des Schildes', minimumLevel: 1, maximumLevel: 6 },
-      ...(militia ? [{ id: 'militia', name: 'Hirdwacht', minimumLevel: 6, maximumLevel: 15 }, { id: 'open', name: 'Weitere Klassenentwicklung', minimumLevel: 16, maximumLevel: 20, kind: 'pending' }]
+  const phases = [{ id: 'foundation', name: skald ? 'Stimme und Klinge' : 'Stand des Schildes', minimumLevel: 1, maximumLevel: militia ? 5 : 6 },
+      ...(militia ? [{ id: 'militia', name: 'Hirdwacht', minimumLevel: 6, maximumLevel: 20 }]
         : [{ id: 'advanced', name: 'Schritt des Huskarls', minimumLevel: 7, maximumLevel: 8 }, { id: 'expert', name: 'Schildwall oder Vorstoß', minimumLevel: 9, maximumLevel: 20, kind: 'path-selection' }])];
   return { schemaVersion: 2, id: `aldrimar-${config.classId}`, classId: config.classId, name: config.name,
     templateId: config.classId, cultureId: 'aldrimar', culture: 'Aldrimar', cultures: ['Aldrimar'], status: 'draft',
     pagePath: `Klassenordner/Aldrimar/${config.classId}/index.html`, minimumLevel: 1, maximumLevel: 20, authoredThroughLevel: config.authoredThroughLevel || 20,
     affiliation: config.title, focus: config.focus, trainingFocus: config.title, trainingPhases: phases,
-    formIds: skald ? [] : militia ? [F.foundation, F.militia] : [F.foundation, F.advanced, F.wall, F.advance],
-    pathSelection: { minimumLevel: skald ? null : militia ? 6 : 9, multiplePathsAllowed: !skald && !militia,
-      sharedTechniqueBudget: true, firstSelectionRequired: !skald && !militia, firstSelectionCost: 0, additionalSelectionCost: 1,
-      allowedFormIds: skald ? [] : militia ? [F.militia] : [F.wall, F.advance],
-      rule: skald ? 'Grundrepertoire bis Stufe 5; die spätere Verbindung mit einer zweiten Klasse bleibt offen.' : militia ? 'Auf die Grundausbildung folgt die Hirdwacht bis Stufe 15.' : 'Ab Stufe 9 erster Expertenpfad frei; ein weiterer Pfad kostet einen Experten-Attackenslot.' },
+    formIds: militia ? [F.foundation, F.militia] : [F.foundation, F.advanced, F.wall, F.advance],
+    pathSelection: { minimumLevel: militia ? 6 : 9, multiplePathsAllowed: !militia,
+      sharedTechniqueBudget: true, firstSelectionRequired: !militia, firstSelectionCost: 0, additionalSelectionCost: 1,
+      allowedFormIds: militia ? [F.militia] : [F.wall, F.advance],
+      rule: militia ? 'Auf die Grundausbildung folgt die Hirdwacht bis Stufe 20.' : 'Ab Stufe 9 erster Expertenpfad frei; ein weiterer Pfad kostet einen Experten-Attackenslot.' },
     techniqueBudget: { total: slots.length, slots, bands: Object.fromEntries(Object.entries(bands).map(([band, levels]) => [band, { levels, count: levels.length }])) },
-    techniquePool: { totalSlots: slots.length, description: skald ? 'Acht vorhandene Lieder und ein besonderer Schrei als Referenz, keine zusätzlichen Waffenattackenslots.' : `${slots.length} erlernbare Optionen aus einem gemeinsamen Budget. Kataloggröße und Zahl erlernter Attacken sind verschieden.` },
+    techniquePool: { totalSlots: slots.length, description: `${slots.length} erlernbare Optionen aus einem gemeinsamen Budget. Kataloggröße und Zahl erlernter Attacken sind verschieden.${skald ? ' Nichtmagische Stimm- und Waffenmanöver; magische Lieder werden gesondert erlernt.' : ''}` },
     weaponTraining: { primary: config.primary, secondary: config.secondary, note: config.note }, weaponVariants: [], trainingBranches: [],
     classFeatures: [...config.features, ...(skald ? [] : [ARMOR_ROUTINE])], combatStyleGrants: [],
     pendingFeatures: config.pending.map(name => ({ name, minimumLevel: null, status: 'pending' })),

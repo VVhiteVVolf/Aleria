@@ -1,7 +1,9 @@
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
 import { normalizeSpellCatalogReference, resolveCatalogSpellSnapshot } from '../spell-catalog/spell-catalog.js';
 import { reconcileSkjaldrCombatProfile } from '../classes/aldrimar/skjaldr-combat-profile.js';
+import { getAldrimarWeaponAttackBonus } from '../classes/aldrimar/aldrimar-combat-rules.js';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
+import { normalizeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
 import { sanitizeRegeneration, getBurningArmorPenalty } from './combat-creature-traits.js';
 import { getArmorRoutine, isArmorDexterityUnlocked } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
 import { mergeRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
@@ -265,6 +267,7 @@ function sanitizeWeapon(value = {}, index = 0) {
     name: normalizeText(source.name, 120),
     image: normalizeText(source.image || source.icon, 1000),
     weaponProfileId: normalizeText(source.weaponProfileId, 80).toLowerCase(),
+    triggerRules: sanitizeCombatTriggerRules(source.triggerRules),
     weaponType: WEAPON_TYPES.has(weaponType) ? weaponType : (source.rangeType === 'ranged' ? 'bow' : 'unarmed'),
     training: WEAPON_TRAINING.has(training) ? training : 'simple',
     damageFormula: normalizeCombatDamageFormula(source.damageFormula),
@@ -320,6 +323,8 @@ function sanitizeArmor(value = {}, index = 0) {
     name: normalizeText(source.name, 120),
     image: normalizeText(source.image || source.icon, 1000),
     kind: ['armor', 'shield', 'ward'].includes(kind) ? kind : 'armor',
+    damageProtection: normalizeEquipmentDamageProtection(source.damageProtection),
+    triggerRules: sanitizeCombatTriggerRules(source.triggerRules),
     baseArmorClass: normalizeOptionalNumber(source.baseArmorClass, 0, 99),
     armorClassBonus: normalizeNumber(source.armorClassBonus ?? source.defenseBonus, 0, -99, 99),
     dexterityMode: DEXTERITY_MODES.has(dexterityMode) ? dexterityMode : 'full',
@@ -1270,6 +1275,7 @@ export function getWeaponAttackModifier(profile = {}, weaponOrId = {}) {
   return getAttributeModifier(getAttribute(normalized, weapon.attackAttribute))
     + (weapon.proficient ? getProficiencyBonus(normalized) : 0)
     + weapon.attackBonus
+    + getAldrimarWeaponAttackBonus(normalized, weapon)
     + normalized.combat.attackBonus
     + sumMechanicalModifier(normalized, 'attack');
 }
@@ -1356,6 +1362,7 @@ export function getCharacterCombatInventoryOptions(character = {}, kind = 'weapo
         name: item.name,
         image: item.image || item.icon,
         kind: combat.kind,
+        damageProtection: combat.damageProtection,
           baseArmorClass: combat.baseArmorClass,
           armorClassBonus: combat.armorClassBonus ?? combat.defenseBonus ?? readNamedAttribute(item, /schutz|verteidigung|r[uü]stung/i),
           dexterityMode: combat.dexterityMode,

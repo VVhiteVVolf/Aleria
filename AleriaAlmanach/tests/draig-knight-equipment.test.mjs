@@ -5,10 +5,11 @@ import test from 'node:test';
 import { collectCombatTriggerRules } from '../modules/combat/combat-trigger-rules.js';
 import { resolveCombatProfile } from '../modules/combat/combat-profile-resolver.js';
 import { SkillResolutionService } from '../modules/skill-checks/skill-resolution-service.js';
+import { inventoryValuation, formatInventoryPrice } from '../modules/character-inventory/character-inventory-valuation.js';
 
 const CASES = Object.freeze([
-  { file: 'gawain-draig.json', slug: 'gawain-draig' },
-  { file: 'gildas-gafyr.json', slug: 'gildas-gafyr' }
+  { file: 'gawain-draig.json', slug: 'gawain-draig', swordValue: 5500, swordPrice: '5 GT 5 ST' },
+  { file: 'gildas-gafyr.json', slug: 'gildas-gafyr', swordValue: 5500, swordPrice: '5 GT 5 ST' }
 ]);
 
 async function loadCharacter(file) {
@@ -27,13 +28,13 @@ for (const definition of CASES) {
     const character = await loadCharacter(definition.file);
     const items = character.inventory.items;
     const sword = items.find(item => /Draig-Ritterschwert/.test(item.name));
-    const armor = items.find(item => /Draig-Jungritter-Plattenrüstung/.test(item.name));
+    const armor = items.find(item => item.equipmentLink?.kind === 'armor');
     const dagger = items.find(item => item.name === 'Draig-Dolch');
     const ring = items.find(item => item.id === `${definition.slug}-draig-knight-signet-item`);
 
     assert.equal(sword.image, 'https://i.imgur.com/38Na5EY.png');
-    assert.equal(sword.value.totalCopper, 5000);
-    assert.equal(sword.infoRows.find(row => row.label === 'Wert')?.value, '5 Goldtaler');
+    assert.equal(sword.value.totalCopper, definition.swordValue);
+    assert.equal(formatInventoryPrice(inventoryValuation(sword)), definition.swordPrice);
     assert.equal(armor.image, 'https://i.imgur.com/7siJPXG.png');
     assert.equal(dagger.image, 'https://i.imgur.com/caR593j.png');
     assert.equal(ring.image, 'https://i.imgur.com/mwP2vjq.png');

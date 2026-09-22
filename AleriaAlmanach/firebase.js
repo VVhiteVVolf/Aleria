@@ -9,6 +9,8 @@
       from "./modules/auth/firebase-auth-session.js?v=20260803-auth-v1";
     import { compactMechanicalMetadata }
       from "./modules/combat/combat-resolution-storage.js?v=20260804-referee-v1";
+    import { finalizeCommittedCommentNarration }
+      from "./modules/comments/comments-narration-finalization.js";
     import { detectStaleCharacterFields, prepareCharacterDocumentWrite, sanitizeCharacterBiographyForFirestore, shouldBlockCharacterWriteDuringEncounter, stampFreshRevisions }
       from "./modules/characters/character-save-guard.js?v=20260903-genealogy-portrait-sync-v1";
 
@@ -35,6 +37,7 @@
     const commitSkillCommentCallable = httpsCallable(functions, 'commitSkillComment', { timeout: 30000 });
     const commitSceneRestCallable = httpsCallable(functions, 'commitSceneRest', { timeout: 30000 });
     const commitCombatEncounterCallable = httpsCallable(functions, 'commitCombatEncounter', { timeout: 30000 });
+    const commitSceneItemCallable = httpsCallable(functions, 'commitSceneItem', { timeout: 30000 });
     const commitUndoMechanicalCommentCallable = httpsCallable(functions, 'commitUndoMechanicalComment', { timeout: 30000 });
     const commitResetCombatParticipantsCallable = httpsCallable(functions, 'commitResetCombatParticipants', { timeout: 30000 });
     const commitCombatStatusCallable = httpsCallable(functions, 'commitCombatStatus', { timeout: 30000 });
@@ -624,6 +627,10 @@
         });
         return committed.data;
       },
+      async placeSceneItem(entryId, item) {
+        await requireFirebaseUser();
+        return (await commitSceneItemCallable({ ...item, entryId })).data;
+      },
       async undoMechanicalComment(entryId, commentId, options = {}) {
         await requireFirebaseUser();
         const result = await commitUndoMechanicalCommentCallable({ entryId, commentId, force: options.force === true });
@@ -687,22 +694,19 @@
           narrator: narrator === true,
           metadata: cloneSerializableValue(compactMechanicalMetadata(normalizeCommentModuleInsertForFirestore(metadata)))
         });
-        try {
-          const combatNarrations = typeof window.AleriaCombat?.narrateCommittedMechanics === 'function'
-            ? await window.AleriaCombat.narrateCommittedMechanics(committed.data?.mechanics || {})
-            : [];
-          const skillNarrations = typeof window.AleriaSkillChecks?.narrateCommittedMechanics === 'function'
-            ? await window.AleriaSkillChecks.narrateCommittedMechanics(committed.data?.mechanics || {})
-            : [];
-          const narrations = [...combatNarrations, ...skillNarrations];
-          if (narrations.length) {
-            await finalizeCombatNarrationCallable({ commentId: committed.data.id, narrations });
-          }
-        } catch (narrationError) {
+        // Firestore's comment subscription delivers the later prose update.
+        // Do not hold the successful mechanical commit behind text generation.
+        void finalizeCommittedCommentNarration({
+          committed: committed.data,
+          narrators: [
+            mechanics => window.AleriaCombat?.narrateCommittedMechanics?.(mechanics) || [],
+            mechanics => window.AleriaSkillChecks?.narrateCommittedMechanics?.(mechanics) || []
+          ],
+          finalize: finalizeCombatNarrationCallable
+        }).catch(narrationError => {
           console.warn('combat narration finalization failed after committed mechanics:', narrationError);
           notifyAppStatus('Der Kampfzustand ist sicher gespeichert; nur die erzählerische Auswertung konnte noch nicht ergänzt werden.', 'error');
-          committed.data.narrationPending = true;
-        }
+        });
         return committed.data;
 
 
@@ -720,16 +724,14 @@
           narrator: narrator === true,
           metadata: cloneSerializableValue(compactMechanicalMetadata(normalizeCommentModuleInsertForFirestore(metadata)))
         });
-        try {
-          const narrations = typeof window.AleriaSkillChecks?.narrateCommittedMechanics === 'function'
-            ? await window.AleriaSkillChecks.narrateCommittedMechanics(committed.data?.mechanics || {})
-            : [];
-          if (narrations.length) await finalizeCombatNarrationCallable({ commentId: committed.data.id, narrations });
-        } catch (narrationError) {
+        void finalizeCommittedCommentNarration({
+          committed: committed.data,
+          narrators: [mechanics => window.AleriaSkillChecks?.narrateCommittedMechanics?.(mechanics) || []],
+          finalize: finalizeCombatNarrationCallable
+        }).catch(narrationError => {
           console.warn('skill narration finalization failed after committed mechanics:', narrationError);
           notifyAppStatus('Die Fertigkeitsauswertung ist sicher gespeichert; nur ihre Erz\u00e4hlung konnte noch nicht erg\u00e4nzt werden.', 'error');
-          committed.data.narrationPending = true;
-        }
+        });
         return committed.data;
       },
       async addSceneTransition(sourceThreadId, targetThreadId, text, deleteCode, metadata = {}) {

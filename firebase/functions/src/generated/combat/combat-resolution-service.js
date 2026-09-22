@@ -1017,7 +1017,7 @@ export class CombatResolutionService {
         total: totalDamageApplied,
         primaryTotal: summaryDamageRoll.primaryTotal == null ? Number(summaryDamageRoll.total) : Number(summaryDamageRoll.primaryTotal),
         rawTotal: rawDamageRolled,
-        damageReduction: Number(summaryDamageRoll.damageReduction || 0),
+        damageReduction: Number(summaryDamageRoll.damageReduction || 0) + damageEffectResults.reduce((sum, result) => sum + Number(result.applied?.equipmentProtection?.reduction || 0), 0),
         halvedBySave: !!summaryDamageRoll.halvedBySave,
         damageType: primaryDamageEffect?.damageType || firstDamageResult?.effect?.damageType || weapon.damageType || 'physisch',
         damageResponse: damageEffectResults[0]?.applied?.damageResponse || null,

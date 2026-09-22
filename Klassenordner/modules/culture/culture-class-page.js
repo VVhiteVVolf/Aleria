@@ -34,13 +34,13 @@ function initializeCultureTraining(root) {
       summary.textContent = `Stufe ${plan.selectedLevel} · Ausbildungsinhalt offen · keine automatische Kampfvergabe`;
     }
     const resources = root.querySelector('[data-training-resources]');
-    if (plan.skaldReference) {
+    if (plan.skaldReference && !plan.attackCatalog.length) {
       summary.textContent = plan.selectedLevel > 5 ? `Stufe ${plan.selectedLevel} · Weitere Skaldenausbildung offen; Referenz bis Stufe 5`
         : `Stufe ${plan.selectedLevel} · ${plan.skaldReference.repertoire.filter(entry => entry.minimumLevel <= plan.selectedLevel).length} Repertoireeinträge · Ausbildungsentwurf nach Freya`;
       if (resources) resources.textContent = plan.selectedLevel > 5 ? 'Stufe 6–20: Skaldenentwicklung und Mehrklassenregeln noch offen.'
         : 'Gemeinsame Grundpools: Aktion 1 / Bonusaktion 1 / Reaktion 1 · Besondere Aktionen 2 · Aura-Fokuspunkte 0. Mana und Zauberplätze nach dem eigenen Bogen.';
     }
-    if (resources && !plan.skaldReference && plan.levels[plan.selectedLevel - 1]?.resources) {
+    if (resources && plan.levels[plan.selectedLevel - 1]?.resources) {
       const pools = plan.levels[plan.selectedLevel - 1].resources;
       resources.textContent = `Besondere Aktionen ${pools['special-action']} · Aura-Fokuspunkte ${pools['aura-focus']} · ${plan.selectedLevel < 10 ? 'Aktion 1 / Bonusaktion 1 / Reaktion 1' : plan.selectedLevel < 15 ? 'Einen Grundpool auf 2 wählen' : plan.selectedLevel < 20 ? 'Zwei Grundpools auf 2 wählen' : 'Aktion 2 / Bonusaktion 2 / Reaktion 2'}`;
     }

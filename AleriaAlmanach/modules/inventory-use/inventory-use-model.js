@@ -86,6 +86,13 @@ export function normalizeInventoryUse(value = {}) {
     : { kind: 'scene-actor', actorId: cleanText(source.actorId, 240) };
   return {
     schemaVersion: 1,
+    source: source.source === 'scene' ? 'scene' : 'inventory',
+    sceneItemId: cleanText(source.sceneItemId, 240),
+    operation: ['pickup', 'use', 'consume'].includes(source.operation) ? source.operation : mode,
+    paymentResource: cleanText(source.paymentResource, 80),
+    ...(source.sceneItemEvent ? { sceneItemEvent: clone(source.sceneItemEvent) } : {}),
+    ...(source.resourceSnapshot ? { resourceSnapshot: clone(source.resourceSnapshot) } : {}),
+    ...(source.inventorySnapshot ? { inventorySnapshot: clone(source.inventorySnapshot) } : {}),
     usageId: cleanText(source.usageId, 240),
     actorId: cleanText(source.actorId, 240),
     actorName: cleanText(source.actorName || 'Unbekannt', 160),
