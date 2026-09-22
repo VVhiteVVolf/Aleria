@@ -145,7 +145,7 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
       <div class="combat-rule-options">${ruleOptions.map(renderRuleOption).join('')}</div>
     </div>` : ''}`;
   card.appendChild(composer);
-  bindActionPicker(composer);
+  bindActionPicker(composer, actor);
   restoreComposerViewState(composer, viewState);
 }
 

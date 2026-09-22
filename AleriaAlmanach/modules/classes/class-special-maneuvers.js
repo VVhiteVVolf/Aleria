@@ -22,7 +22,7 @@ const curricula = {
   skeidr: ['Skeidr', 'Atem an der Reling', 'Hieb des Enterführers'],
   skjaldr: ['Skjaldr', 'Gezügelter Kampfatem', 'Wolfskeil'],
   skytte: ['Skytte', 'Ruhe des Fährtenlesers', 'Entschlossener Jagdangriff'],
-  skalde: ['Skalde', 'Strophe des Durchhaltens', 'Betonter Schlusshieb'],
+  skalde: ['Skalde', 'Strophe des Durchhaltens', 'Klinge im Heldenvers'],
   kern: ['Kern', 'Atem der Heide', 'Hieb des Freien'],
   cateran: ['Cateran', 'Ruhe der Klinge', 'Entschlossener Klingengang'],
   mormaer: ['Mormaer', 'Atem des Bannerreiters', 'Schlag des Hochlands'],

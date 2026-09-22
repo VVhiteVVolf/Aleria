@@ -1,0 +1,38 @@
+.combat-action-picker-views { display: flex; justify-content: space-between; align-items: center; gap: .75rem; margin-bottom: .35rem; }
+.combat-action-picker-views > span { color: #76654e; font-size: .75rem; }
+.combat-action-picker-views button { padding: .35rem .65rem; border: 1px solid #a7b3b3; border-radius: 4px; background: #edf1ef; color: #39535a; font: 600 .78rem Georgia, serif; cursor: pointer; }
+.combat-action-table { width: min(1500px, 96vw); max-width: 96vw; max-height: 90dvh; box-sizing: border-box; margin: auto; padding: 0; border: 1px solid #a0acab; border-radius: 10px; background: #f7f4eb; color: #3e392e; box-shadow: 0 20px 80px #15252655; font: 400 1rem/1.45 "EB Garamond", Georgia, serif; }
+.combat-action-table[open] { display: flex; flex-direction: column; }
+.combat-action-table::backdrop { background: #172b32a6; }
+.combat-action-table [hidden], .combat-action-table [data-combat-action-option][hidden] { display: none; }
+.combat-action-table-header { display: flex; justify-content: space-between; gap: 1rem; padding: 1.2rem 1.5rem; background: #344c52; color: #fcf6e5; }
+.combat-action-table-header small { color: #c7d5d0; letter-spacing: .14em; text-transform: uppercase; font-size: .68rem; }
+.combat-action-table-header h2 { margin: .15rem 0; font: 600 1.3rem "Cinzel", Georgia, serif; }
+.combat-action-table-header p { margin: .2rem 0 0; color: #d9e1d9; font-size: .9rem; }
+.combat-action-table-header button { align-self: start; border: 1px solid #94a7a6; border-radius: 4px; width: 2.2rem; height: 2.2rem; color: #fcf6e5; background: transparent; font-size: 1.4rem; cursor: pointer; }
+.combat-action-table-tools { display: flex; align-items: end; flex-wrap: wrap; gap: 1rem 2rem; padding: .8rem 1.5rem; border-bottom: 1px solid #d7d8cc; }
+.combat-action-table-tools > label:first-child { flex: 1; min-width: 12rem; font-size: .8rem; color: #52635f; }
+.combat-action-table-tools input[type="search"] { display: block; box-sizing: border-box; width: 100%; margin-top: .2rem; padding: .55rem .7rem; border: 1px solid #b6beb5; border-radius: 4px; background: #fffdf6; color: #39392e; font: inherit; font-size: 1rem; }
+.combat-action-table-filter { display: flex; gap: .4rem; align-items: center; padding-bottom: .45rem; font-size: .85rem; }
+.combat-action-table-scroll { overflow: auto; overscroll-behavior: contain; min-height: 0; padding: 0 .75rem .75rem; }
+.combat-action-table table { width: 100%; table-layout: fixed; border-collapse: separate; border-spacing: .6rem 0; }
+.combat-action-table caption { text-align: left; padding: .6rem; font-size: .8rem; color: #727564; }
+.combat-action-table th { position: sticky; top: 0; z-index: 1; width: 14rem; min-width: 14rem; padding: .8rem; border-bottom: 2px solid #aebcb1; text-align: left; background: #e4eae1; color: #3d554e; font: 600 .77rem/1.5 "Cinzel", Georgia, serif; overflow-wrap: anywhere; }
+.combat-action-table th span { display: inline-block; margin-left: .3rem; font: 500 .75rem Georgia, serif; }
+.combat-action-table td { vertical-align: top; padding-top: .5rem; }
+.combat-action-table [data-combat-action-option] { display: flex; flex-direction: column; gap: .5rem; width: 100%; box-sizing: border-box; margin: 0 0 .5rem; padding: .8rem; border: 1px solid #d9d6c6; border-radius: 5px; text-align: left; background: #fffdf6; color: #3e392e; font: inherit; cursor: pointer; }
+.combat-action-table [data-combat-action-option] > span:first-child { font-weight: 600; overflow-wrap: anywhere; }
+.combat-action-table [data-combat-action-option] small { display: block; margin-top: .3rem; font-size: .8rem; line-height: 1.4; font-weight: 400; color: #746c5b; }
+.combat-action-table .combat-action-choice-description { font-style: italic; }
+.combat-action-table [data-combat-action-option][aria-pressed="true"] { border-color: #547463; box-shadow: inset 3px 0 #547463; background: #edf2e6; }
+.combat-action-table [data-combat-action-option]:hover:not(:disabled) { background: #f0f3eb; border-color: #809689; }
+.combat-action-table [data-combat-action-option]:disabled { background: #eeede7; color: #817b71; cursor: default; }
+.combat-action-table button:focus-visible, .combat-action-table input:focus-visible, .combat-action-table-scroll:focus-visible { outline: 2px solid #52776f; outline-offset: 2px; }
+.combat-action-table footer, .combat-action-table > [role="status"] { margin: 0; padding: .75rem 1.5rem; font-size: .8rem; color: #657168; }
+.combat-action-table footer { border-top: 1px solid #d7d8cc; }
+@media (max-width: 600px) {
+  .combat-action-table { width: 96vw; max-height: 94dvh; }
+  .combat-action-table-header, .combat-action-table-tools { padding: .8rem; }
+  .combat-action-table-header h2 { font-size: 1.05rem; }
+  .combat-action-table th { width: 15rem; min-width: 15rem; }
+}

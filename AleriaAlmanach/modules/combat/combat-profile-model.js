@@ -964,7 +964,9 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     weapons: sanitizeWeaponsWithDefault(getLegacyWeapons(source)),
     armorItems: sanitizeList(getLegacyArmor(source), sanitizeArmor),
     resources: sanitizedResources,
-    techniques: sanitizeList(source.techniques, sanitizeTechnique),
+    // Complete learned form arsenals exceed the default 60-entry list limit.
+    // Keep a separate bounded budget for class techniques and personal moves.
+    techniques: sanitizeList(source.techniques, sanitizeTechnique, 256),
     classTraining: sanitizeClassTraining(source.classTraining),
     quirks: sanitizeList(source.quirks || source.traits, sanitizeQuirk),
     conditions: sanitizeList(source.conditions, sanitizeCondition),
