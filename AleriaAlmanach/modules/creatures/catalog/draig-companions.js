@@ -1,5 +1,5 @@
 // Persönliche Gefährten, Stand 25.09.2026. Texte und Bilder aus den vorhandenen Online-Karten.
-// Kampfwerte sind individuelle Stufenprofile; die alten 1–10-Eigenschaften bleiben im Steckbrief.
+// Kampfwerte sind individuelle Stufenprofile; die 1–10-Eigenschaften bleiben im Gefährten-Diagramm.
 export const DRAIG_COMPANION_SOURCES = [
   {
     "id": "companion-idwal-distry",
@@ -32,30 +32,6 @@ export const DRAIG_COMPANION_SOURCES = [
         {
           "label": "Rolle",
           "value": "Haustier"
-        },
-        {
-          "label": "Schnelligkeit",
-          "value": "8 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Ausdauer",
-          "value": "8 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Staerke",
-          "value": "2 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Agilitaet",
-          "value": "7 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Sozialverhalten",
-          "value": "3 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Robustheit",
-          "value": "1 / 10 (Gefährtenkarte)"
         }
       ],
       "sections": []
@@ -192,30 +168,6 @@ export const DRAIG_COMPANION_SOURCES = [
         {
           "label": "Rolle",
           "value": "Reittier"
-        },
-        {
-          "label": "Schnelligkeit",
-          "value": "7 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Ausdauer",
-          "value": "6 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Staerke",
-          "value": "8 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Agilitaet",
-          "value": "6 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Sozialverhalten",
-          "value": "3 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Robustheit",
-          "value": "8 / 10 (Gefährtenkarte)"
         }
       ],
       "sections": []
@@ -352,30 +304,6 @@ export const DRAIG_COMPANION_SOURCES = [
         {
           "label": "Rolle",
           "value": "Anarauts Reittier"
-        },
-        {
-          "label": "Schnelligkeit",
-          "value": "9 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Ausdauer",
-          "value": "8 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Staerke",
-          "value": "8 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Agilitaet",
-          "value": "9 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Sozialverhalten",
-          "value": "9 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Robustheit",
-          "value": "8 / 10 (Gefährtenkarte)"
         }
       ],
       "sections": []
@@ -512,30 +440,6 @@ export const DRAIG_COMPANION_SOURCES = [
         {
           "label": "Rolle",
           "value": "Gefährte"
-        },
-        {
-          "label": "Schnelligkeit",
-          "value": "7 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Ausdauer",
-          "value": "7 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Stärke",
-          "value": "5 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Agilität",
-          "value": "8 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Sozialverhalten",
-          "value": "9 / 10 (Gefährtenkarte)"
-        },
-        {
-          "label": "Robustheit",
-          "value": "5 / 10 (Gefährtenkarte)"
         }
       ],
       "sections": []
