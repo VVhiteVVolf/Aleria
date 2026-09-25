@@ -161,13 +161,21 @@ function renderIconDirectory() {
   renderIconDirectoryGrid();
 }
 
-function openIconDirectory() {
+function openIconDirectory({ anchor = document.activeElement } = {}) {
   renderIconDirectory();
+  const overlay = document.getElementById('icon-directory-overlay');
+  const parent = anchor?.closest?.('[role="dialog"]');
+  overlay.style.removeProperty('z-index');
+  if (parent && parent !== overlay) overlay.style.zIndex = String(Math.max(
+    Number(getComputedStyle(overlay).zIndex) || 0,
+    (Number(getComputedStyle(parent).zIndex) || 0) + 1
+  ));
   activateDialog('icon-directory-overlay', { initialFocus: '#icon-directory-search' });
 }
 
 function closeIconDirectory() {
   deactivateDialog('icon-directory-overlay');
+  document.dispatchEvent(new CustomEvent('almanach-icon-directory-closed'));
 }
 
 async function copyIconDirectoryPath(src) {

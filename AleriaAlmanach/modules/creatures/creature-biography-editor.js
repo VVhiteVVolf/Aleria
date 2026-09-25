@@ -1,5 +1,6 @@
-import { normalizeCreatureBiography } from './creature-biography-model.js?v=20260925-creature-biography-v1';
-import { renderCreatureBiography, renderCreatureBiographyDossier } from './creature-biography-view.js?v=20260925-creature-biography-v1';
+import { normalizeCreatureBiography } from './creature-biography-model.js?v=20260925-creature-biography-v2';
+import { renderCreatureBiography, renderCreatureBiographyDossier } from './creature-biography-view.js?v=20260925-creature-biography-v2';
+import { collectCreatureBiographyCards, updateCreatureBiographyCards } from './creature-biography-card-editor.js?v=20260925-creature-biography-v2';
 
 export function collectCreatureBiography(root, fallback) {
   const fields = root?.querySelectorAll('[data-creature-biography-field]');
@@ -12,10 +13,11 @@ export function collectCreatureBiography(root, fallback) {
   biography.sections = [...root.querySelectorAll('[data-creature-biography-section]')].map(row => ({
     title: row.querySelector('[data-bio-title]').value, text: row.querySelector('[data-bio-text]').value
   }));
+  Object.assign(biography, collectCreatureBiographyCards(root));
   return normalizeCreatureBiography(biography);
 }
 
-export function createCreatureBiographyEditor({ getRoot, getDraft, collect, render, escape }) {
+export function createCreatureBiographyEditor({ getRoot, getDraft, collect, render, escape, pickIcon }) {
   let editing = false;
   return {
     reset() { editing = false; },
@@ -23,6 +25,10 @@ export function createCreatureBiographyEditor({ getRoot, getDraft, collect, rend
     handleClick(event) {
       const trigger = event.target.closest('[data-creature-biography-action]');
       if (!trigger || !getRoot()?.contains(trigger)) return false;
+      if (trigger.dataset.creatureBiographyAction === 'pick-icon') {
+        pickIcon?.(trigger);
+        return true;
+      }
       collect();
       const biography = getDraft().biography;
       const action = trigger.dataset.creatureBiographyAction;
@@ -34,6 +40,7 @@ export function createCreatureBiographyEditor({ getRoot, getDraft, collect, rend
         const index = Number(trigger.dataset.index);
         if (Number.isInteger(index) && index >= 0) biography[action === 'remove-fact' ? 'facts' : 'sections'].splice(index, 1);
       }
+      else updateCreatureBiographyCards(biography, trigger);
       render();
       return true;
     },

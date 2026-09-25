@@ -1,5 +1,5 @@
 import { CREATURE_SHEET_PAGES, renderCreaturePages, renderCreaturePageTabs, creaturePageFromKey } from './creature-sheet-pages.js?v=20260925-creature-biography-v1';
-import { createCreatureBiographyEditor, collectCreatureBiography } from './creature-biography-editor.js?v=20260925-creature-biography-v1';
+import { createCreatureBiographyEditor, collectCreatureBiography } from './creature-biography-editor.js?v=20260925-creature-biography-v2';
 import { renderCreatureImages } from './creature-images-view.js?v=20260919-creature-pages-v1';
 import { createCreatureImagesEditor, collectCreatureImages } from './creature-images-editor.js?v=20260919-creature-pages-v1';
 import { normalizeCreatureImages } from './creature-images-model.js?v=20260919-creature-pages-v1';
@@ -37,12 +37,12 @@ import {
   makeCreatureExportPayload,
   normalizeCreatureImportPayload,
   sanitizeCreature
-} from './creature-model.js?v=20260925-creature-biography-v1';
+} from './creature-model.js?v=20260925-creature-biography-v2';
 import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
   isBuiltinCreatureId
-} from './creature-catalog.js?v=20260925-creature-biography-v1';
+} from './creature-catalog.js?v=20260925-creature-biography-v2';
 import { selectChangedSections } from '../characters/character-save-guard.js?v=20260808-character-storage-audit-v1';
 
 const state = {
@@ -68,7 +68,8 @@ const biographyEditor = createCreatureBiographyEditor({
   getDraft: () => state.draft,
   collect: collectDraftFromForm,
   render: renderSheet,
-  escape: escapeHtml
+  escape: escapeHtml,
+  pickIcon: trigger => window.openSchemaIconPicker(trigger)
 });
 
 const imageAutosave = createImageLibraryAutosave({

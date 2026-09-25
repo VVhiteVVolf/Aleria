@@ -29,7 +29,7 @@ function openSchemaIconPicker(button) {
   if (!target) return;
   _schemaIconPickerTarget = target;
   if (typeof openIconDirectory === 'function') {
-    openIconDirectory();
+    openIconDirectory({ anchor: target });
     return;
   }
   _schemaIconPickerTarget = null;
@@ -57,3 +57,4 @@ function handleSchemaIconSelected(event) {
 }
 
 document.addEventListener('almanach-icon-selected', handleSchemaIconSelected);
+document.addEventListener('almanach-icon-directory-closed', () => { _schemaIconPickerTarget = null; });

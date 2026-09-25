@@ -1,5 +1,5 @@
 import { normalizeCreatureImages, MAX_CREATURE_AVATARS } from './creature-images-model.js?v=20260919-creature-pages-v1';
-import { normalizeCreatureBiography } from './creature-biography-model.js?v=20260925-creature-biography-v1';
+import { normalizeCreatureBiography } from './creature-biography-model.js?v=20260925-creature-biography-v2';
 export { MAX_CREATURE_AVATARS };
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,

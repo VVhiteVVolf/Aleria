@@ -519,30 +519,15 @@ function buildBiographyExtraSections(items = [], position = 'afterIntro') {
 }
 
 function buildBiographyConnectionItem(item) {
-  if (item?.type === 'heading') {
-    return `
-        <div class="biography-connection-heading">
-          <strong>${escapeHtml(item.title || '')}</strong>
-          ${item.detail ? `<span>${escapeHtml(item.detail)}</span>` : ''}
-        </div>`;
-  }
-  const format = ['landscape', 'square'].includes(item?.imageFormat) ? item.imageFormat : 'portrait';
-  return `
-        <div class="biography-connection ${format}">
-          ${item.image
-            ? `<img class="${format}" src="${sanitizeImageSrc(item.image)}" alt="" loading="lazy" decoding="async">`
-            : `<div class="biography-connection-placeholder ${format}">${getInitialChar(item.name)}</div>`}
-          <div><strong>${escapeHtml(item.name || '')}</strong><span>${escapeHtml(item.detail || '')}</span></div>
-        </div>`;
+  return AleriaBiographyCards.renderConnection(item, { escape: escapeHtml, imageSource: sanitizeImageSrc });
 }
 
 function renderBiographyAbilityIcon(icon) {
-  const value = String(icon || '').trim();
-  const image = sanitizeImageSrc(value);
-  if (image) {
-    return `<img src="${image}" alt="" loading="lazy" decoding="async">`;
-  }
-  return value ? escapeHtml(value) : '&#10022;';
+  return AleriaBiographyCards.renderIcon(icon, { escape: escapeHtml, imageSource: sanitizeImageSrc });
+}
+
+function buildBiographyTraitList(items = []) {
+  return items.length ? `<div class="biography-ability-list">${items.map(item => AleriaBiographyCards.renderTrait(item, { escape: escapeHtml, imageSource: sanitizeImageSrc })).join('')}</div>` : '';
 }
 
 function buildBiographyPage(page, entry, pageIndex, total) {
@@ -558,14 +543,7 @@ function buildBiographyPage(page, entry, pageIndex, total) {
       <div>${sanitizeContentHtml(page.quote)}</div>
       ${page.quoteBy ? `<span>${escapeHtml(page.quoteBy)}</span>` : ''}
     </div>` : '';
-  const abilities = data.abilities.length ? `
-    <div class="biography-ability-list">
-      ${data.abilities.map(item => `
-        <div class="biography-ability">
-          <div class="biography-ability-icon">${renderBiographyAbilityIcon(item.icon)}</div>
-          <div><strong>${escapeHtml(item.title || '')}</strong><span>${escapeHtml(item.detail || '')}</span></div>
-        </div>`).join('')}
-    </div>` : '';
+  const abilities = buildBiographyTraitList(data.abilities);
   const connections = data.connections.length ? `
     <div class="biography-connections">
       ${data.connections.map(buildBiographyConnectionItem).join('')}
@@ -655,14 +633,7 @@ function buildGuildPage(page, entry, pageIndex, total) {
   const connectionPortraitHeight = Math.max(44, Math.min(140, Number(data.connectionPortraitHeight) || 68));
   const connectionTextOffset = Math.max(0, Math.min(80, Number(data.connectionTextOffset) || 0));
   const header = buildHouseHeader(page, entry, data);
-  const abilities = data.abilities.length ? `
-    <div class="biography-ability-list">
-      ${data.abilities.map(item => `
-        <div class="biography-ability">
-          <div class="biography-ability-icon">${renderBiographyAbilityIcon(item.icon)}</div>
-          <div><strong>${escapeHtml(item.title || '')}</strong><span>${escapeHtml(item.detail || '')}</span></div>
-        </div>`).join('')}
-    </div>` : '';
+  const abilities = buildBiographyTraitList(data.abilities);
   const connections = data.connections.length ? `
     <div class="biography-connections">
       ${data.connections.map(buildBiographyConnectionItem).join('')}

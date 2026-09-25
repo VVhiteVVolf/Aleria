@@ -93,14 +93,7 @@ function buildCharacterBiographyReadView(page, entry) {
       <div>${sanitizeContentHtml(page.quote)}</div>
       ${page.quoteBy ? `<span>${escapeHtml(page.quoteBy)}</span>` : ''}
     </div>` : '';
-  const abilities = data.abilities.length ? `
-    <div class="biography-ability-list">
-      ${data.abilities.map(item => `
-        <div class="biography-ability">
-          <div class="biography-ability-icon">${renderBiographyAbilityIcon(item.icon)}</div>
-          <div><strong>${escapeHtml(item.title || '')}</strong><span>${escapeHtml(item.detail || '')}</span></div>
-        </div>`).join('')}
-    </div>` : '';
+  const abilities = buildBiographyTraitList(data.abilities);
   const connections = data.connections.length ? `
     <div class="biography-connections">
       ${data.connections.map(buildBiographyConnectionItem).join('')}

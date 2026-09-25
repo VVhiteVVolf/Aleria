@@ -182,6 +182,10 @@ function handleBiographyDocumentIconSelected(event) {
 }
 
 document.addEventListener('almanach-icon-selected', handleBiographyDocumentIconSelected);
+document.addEventListener('almanach-icon-directory-closed', () => {
+  _biographyAbilityIconTarget = null;
+  _biographyDocumentIconTarget = null;
+});
 
 function buildBiographyDocumentRows(documents = [], mode = 'module') {
   const rows = (Array.isArray(documents) && documents.length ? documents : [{ icon: '', title: '', text: '', link: '' }]);
