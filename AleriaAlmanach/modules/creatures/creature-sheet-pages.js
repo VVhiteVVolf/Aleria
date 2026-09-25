@@ -1,6 +1,7 @@
 export const CREATURE_SHEET_PAGES = Object.freeze([
   { id: 'overview', label: 'Übersicht', subtitle: 'Das Wesen auf einen Blick' },
   { id: 'profile', label: 'Profil', subtitle: 'Identität, Lebensraum & Spielleitungsnotizen' },
+  { id: 'biography', label: 'Biographie', subtitle: 'Steckbrief, Wesen, Herkunft & Bindungen' },
   { id: 'combat', label: 'Kampfwerte', subtitle: 'Attribute, Ressourcen & Zustände' },
   { id: 'abilities', label: 'Angriffe & Kräfte', subtitle: 'Waffen, Techniken & besondere Eigenschaften' },
   { id: 'magic', label: 'Magie & Aura', subtitle: 'Zauber, Zauberplätze & magischer Schutz' },

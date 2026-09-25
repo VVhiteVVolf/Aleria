@@ -1,4 +1,5 @@
-import { sanitizeCreature } from './creature-model.js?v=20260919-creature-pages-v1';
+import { sanitizeCreature } from './creature-model.js?v=20260925-creature-biography-v1';
+import { DRAIG_COMPANION_SOURCES } from './catalog/draig-companions.js?v=20260925-creature-biography-v1';
 import { TROLL_CREATURE_SOURCE } from './catalog/troll.js';
 import { FREKI_CREATURE_SOURCE } from './catalog/freki.js';
 
@@ -545,10 +546,10 @@ const BUILTIN_CREATURE_SOURCES = Object.freeze([
   }
 ]);
 
-const BUILTIN_CREATURE_IDS = new Set([...BUILTIN_CREATURE_SOURCES, TROLL_CREATURE_SOURCE, FREKI_CREATURE_SOURCE].map(creature => creature.id));
+const BUILTIN_CREATURE_IDS = new Set([...BUILTIN_CREATURE_SOURCES, TROLL_CREATURE_SOURCE, FREKI_CREATURE_SOURCE, ...DRAIG_COMPANION_SOURCES].map(creature => creature.id));
 
 export function getBuiltinCreatureTemplates() {
-  return [...BUILTIN_CREATURE_SOURCES, TROLL_CREATURE_SOURCE, FREKI_CREATURE_SOURCE].map(source => sanitizeCreature(source));
+  return [...BUILTIN_CREATURE_SOURCES, TROLL_CREATURE_SOURCE, FREKI_CREATURE_SOURCE, ...DRAIG_COMPANION_SOURCES].map(source => sanitizeCreature(source));
 }
 
 export function isBuiltinCreatureId(id) {

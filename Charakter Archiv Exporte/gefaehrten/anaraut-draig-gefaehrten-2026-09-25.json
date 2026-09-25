@@ -1,0 +1,551 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-09-25T04:50:24.024Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourceNote": "Gezielter, online bestätigter Inventarabgleich: bestehende Gefährtenkarten und Besitzdaten erhalten; je zwei Kreaturbögen verknüpft. Kein Kampfprofil und keine Charakterbiographie enthalten.",
+  "character": {
+    "id": "fq586i4k2gj5Lg30dUwW",
+    "name": "Anaraut Draig",
+    "inventory": {
+      "carryValue": "Noch festlegen",
+      "portraitPosition": "top",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "portraitFormat": "portrait",
+      "title": "Charakter-Inventar",
+      "moneyState": {
+        "silver": 0,
+        "gold": 0,
+        "copper": 0,
+        "totalCopper": 0
+      },
+      "showInfoTable": false,
+      "characterId": "fq586i4k2gj5Lg30dUwW",
+      "status": "Gesund",
+      "carryLabel": "Traglast",
+      "healthColor": "#5c7f20",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente",
+          "id": "documents"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "name": "Anaraut Draig",
+      "portrait": "https://i.imgur.com/BuQJtjk.png",
+      "portraitFit": "cover",
+      "role": "Kronprinz von Celtigerns Wacht, Adjutant des Marschalls des Grafen,  Gwynthor",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "equipmentQuiz": {
+        "resultText": "",
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false,
+        "step": 0,
+        "status": ""
+      },
+      "moneyNotice": "",
+      "infoRows": [],
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "companions": [
+        {
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 9
+            },
+            {
+              "label": "Ausdauer",
+              "value": 8
+            },
+            {
+              "value": 8,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 9
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 9
+            },
+            {
+              "value": 8,
+              "label": "Robustheit"
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "imageFormat": "landscape",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "status": "Gesund",
+          "imagePosition": "top",
+          "infoRows": [],
+          "species": "Ceffyl Hengst",
+          "role": "Anarauts Reittier",
+          "summary": "Das Edle Pferd von Anaraut Draig",
+          "description": "",
+          "imageFit": "cover",
+          "name": "Merfyn",
+          "image": "https://i.imgur.com/f5WHZkS.png",
+          "creatureId": "companion-anaraut-merfyn",
+          "inventoryItemId": "anaraut-merfyn"
+        },
+        {
+          "summary": "Anarauts treuer Haushund",
+          "species": "Pontar Wachhund",
+          "description": "",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 7
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Stärke"
+            },
+            {
+              "label": "Agilität",
+              "value": 8
+            },
+            {
+              "value": 9,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "imagePosition": "center",
+          "image": "https://i.imgur.com/vLuaqiC.png",
+          "role": "Gefährte",
+          "imageFit": "cover",
+          "statusColor": "#5c7f20",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "infoRows": [],
+          "name": "Gwrgi",
+          "creatureId": "companion-anaraut-gwrgi",
+          "inventoryItemId": "anaraut-gwrgi"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "items": [
+        {
+          "itemDbKey": "",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "image": "",
+          "name": "Hauptwaffe",
+          "itemStorageMode": "character",
+          "id": "item-mqu1vat1-0-w8ef",
+          "individualizedAt": "",
+          "category": "weapon",
+          "weight": "Noch festlegen",
+          "acquiredAt": "",
+          "ownerCharacterName": "",
+          "tags": "",
+          "imageFit": "contain",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "ownerCharacterId": "",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "originItemDbKey": "",
+          "type": "Waffe",
+          "icon": "*",
+          "infoRows": []
+        },
+        {
+          "name": "Rüstung / Schutz",
+          "image": "",
+          "infoRows": [],
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "category": "armor",
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-1-exvo",
+          "imagePosition": "center",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "quantity": "1",
+          "acquiredAt": "",
+          "type": "Rüstung",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "individualizedAt": "",
+          "ownerCharacterName": "",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "tags": "",
+          "itemDbKey": "",
+          "itemStorageMode": "character"
+        },
+        {
+          "category": "equipment",
+          "quantity": "1",
+          "icon": "*",
+          "type": "Ausrüstung",
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-2-0fx2",
+          "individualizedAt": "",
+          "imagePosition": "center",
+          "itemStorageMode": "character",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "tags": "",
+          "infoRows": [],
+          "image": "",
+          "ownerCharacterId": "",
+          "name": "Reiseausrüstung",
+          "ownerCharacterName": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "originItemDbKey": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "itemDbKey": "",
+          "acquiredAt": ""
+        },
+        {
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "acquiredAt": "",
+          "id": "item-mqu1vat1-3-2lgm",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "weight": "Noch festlegen",
+          "name": "Heil- oder Verbrauchsgut",
+          "imagePosition": "center",
+          "category": "potions",
+          "imageFormat": "square",
+          "icon": "*",
+          "imageFit": "contain",
+          "itemStorageMode": "character",
+          "type": "Trinktur",
+          "quantity": "1",
+          "image": "",
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "infoRows": [],
+          "tags": "",
+          "ownerCharacterName": ""
+        },
+        {
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "type": "Dokument",
+          "individualizedAt": "",
+          "icon": "*",
+          "tags": "",
+          "itemDbKey": "",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "imageFit": "contain",
+          "name": "Dokumente / Urkunden",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "category": "documents",
+          "image": "",
+          "ownerCharacterName": "",
+          "infoRows": [],
+          "acquiredAt": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "ownerCharacterId": "",
+          "id": "item-mqu1vat1-4-ajrj",
+          "weight": "Noch festlegen"
+        },
+        {
+          "name": "Persönlicher Gegenstand",
+          "image": "",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "infoRows": [],
+          "type": "Sonstiges",
+          "icon": "*",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "imagePosition": "center",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "imageFit": "contain",
+          "tags": "",
+          "quantity": "2",
+          "category": "other",
+          "ownerCharacterName": "",
+          "id": "item-mqu1vat1-5-5kao"
+        },
+        {
+          "id": "anaraut-merfyn",
+          "instanceId": "anaraut-merfyn",
+          "creatureId": "companion-anaraut-merfyn",
+          "name": "Merfyn",
+          "image": "https://i.imgur.com/f5WHZkS.png",
+          "description": "Das edle Pferd von Anaraut Draig.",
+          "type": "Ceffyl Hengst",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Ceffyl Hengst",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "fq586i4k2gj5Lg30dUwW",
+          "ownerCharacterName": "Anaraut Draig",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-09-25T04:50:25.054Z"
+        },
+        {
+          "id": "anaraut-gwrgi",
+          "instanceId": "anaraut-gwrgi",
+          "creatureId": "companion-anaraut-gwrgi",
+          "name": "Gwrgi",
+          "image": "https://i.imgur.com/vLuaqiC.png",
+          "description": "Anarauts treuer Haushund.",
+          "type": "Pontar Wachhund",
+          "category": "companion",
+          "registerCategory": "vieh",
+          "templateId": "",
+          "templateName": "Pontar Wachhund",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "fq586i4k2gj5Lg30dUwW",
+          "ownerCharacterName": "Anaraut Draig",
+          "imageFormat": "portrait",
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-09-25T04:50:25.185Z"
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "revision": 1790311825188
+    },
+    "updatedAt": "2026-09-25T04:50:24.024Z"
+  }
+}

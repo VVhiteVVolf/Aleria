@@ -1,4 +1,5 @@
-import { CREATURE_SHEET_PAGES, renderCreaturePages, renderCreaturePageTabs, creaturePageFromKey } from './creature-sheet-pages.js?v=20260919-creature-pages-v1';
+import { CREATURE_SHEET_PAGES, renderCreaturePages, renderCreaturePageTabs, creaturePageFromKey } from './creature-sheet-pages.js?v=20260925-creature-biography-v1';
+import { createCreatureBiographyEditor, collectCreatureBiography } from './creature-biography-editor.js?v=20260925-creature-biography-v1';
 import { renderCreatureImages } from './creature-images-view.js?v=20260919-creature-pages-v1';
 import { createCreatureImagesEditor, collectCreatureImages } from './creature-images-editor.js?v=20260919-creature-pages-v1';
 import { normalizeCreatureImages } from './creature-images-model.js?v=20260919-creature-pages-v1';
@@ -36,12 +37,12 @@ import {
   makeCreatureExportPayload,
   normalizeCreatureImportPayload,
   sanitizeCreature
-} from './creature-model.js?v=20260919-creature-pages-v1';
+} from './creature-model.js?v=20260925-creature-biography-v1';
 import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
   isBuiltinCreatureId
-} from './creature-catalog.js?v=20260919-creature-pages-v1';
+} from './creature-catalog.js?v=20260925-creature-biography-v1';
 import { selectChangedSections } from '../characters/character-save-guard.js?v=20260808-character-storage-audit-v1';
 
 const state = {
@@ -60,6 +61,14 @@ const mediaEditor = createCreatureImagesEditor({
   collect: collectDraftFromForm,
   render: renderSheet,
   onChange: scheduleCreatureImages
+});
+
+const biographyEditor = createCreatureBiographyEditor({
+  getRoot: () => document.getElementById('creature-sheet-root'),
+  getDraft: () => state.draft,
+  collect: collectDraftFromForm,
+  render: renderSheet,
+  escape: escapeHtml
 });
 
 const imageAutosave = createImageLibraryAutosave({
@@ -375,6 +384,7 @@ function renderSheet() {
   const scrollTop = root.scrollTop;
   const contents = {
     overview: renderCreatureDossier(creature),
+    biography: biographyEditor.render(creature),
     profile: `    <section class="creature-sheet-section creature-identity-section">
       <div class="creature-section-title"><span>1</span> Kopfleiste / Identität</div>
       <div class="creature-identity-grid">
@@ -578,6 +588,7 @@ function collectDraftFromForm() {
   if (!state.draft) return null;
   const next = clone(state.draft);
   const root = document.getElementById('creature-sheet-root');
+  next.biography = collectCreatureBiography(root, next.biography);
   root.querySelectorAll('[data-creature-field]').forEach(element => {
     const path = element.dataset.creatureField;
     const value = element.type === 'number' ? readNumber(element) : element.value;
@@ -592,9 +603,12 @@ function collectDraftFromForm() {
   });
   profile.progression.level = Math.min(20, Math.max(1, readNumber(root.querySelector('[data-creature-field="level"]'), next.level)));
   profile.progression.specialLevels = Math.max(0, Math.min(10, next.level - 20));
-  profile.hitPoints.current = readNumber(root.querySelector('[data-combat-field="hp-current"]'), 0);
-  profile.hitPoints.maximumOverride = readNumber(root.querySelector('[data-combat-field="hp-maximum"]'), 10);
-  profile.armorClass.override = readNumber(root.querySelector('[data-combat-field="armor-class"]'), 10);
+  const currentHp = readNumber(root.querySelector('[data-combat-field="hp-current"]'), 0);
+  const maximumHp = readNumber(root.querySelector('[data-combat-field="hp-maximum"]'), getMaximumHitPoints(profile));
+  const armorClass = readNumber(root.querySelector('[data-combat-field="armor-class"]'), getArmorClass(profile));
+  if (currentHp !== (profile.hitPoints.current ?? getMaximumHitPoints(profile))) profile.hitPoints.current = currentHp;
+  if (maximumHp !== getMaximumHitPoints(profile)) profile.hitPoints.maximumOverride = maximumHp;
+  if (armorClass !== getArmorClass(profile)) profile.armorClass.override = armorClass;
   profile.combat.movement = readNumber(root.querySelector('[data-combat-field="movement"]'), 9);
   const enteredProficiency = readNumber(root.querySelector('[data-combat-field="proficiency"]'), getProficiencyBonus(profile));
   if (enteredProficiency !== getProficiencyBonus(profile)) profile.progression.proficiencyBonusOverride = enteredProficiency;
@@ -679,6 +693,7 @@ function collectDraftFromForm() {
 }
 
 function openSheet(id = '') {
+  biographyEditor.reset();
   state.session += 1;
   state.activePage = id ? 'overview' : 'profile';
   mediaEditor.reset();
@@ -687,7 +702,7 @@ function openSheet(id = '') {
   state.draft = source ? clone(source) : createCreatureDraft();
   // Schnappschuss des beim Öffnen geladenen Kampfprofils/Loots - siehe Speichersystem-Checkup bei
   // Charakteren. Ohne Baseline (neue Kreatur) gilt beim Speichern automatisch alles als geändert.
-  state.draftLoadedSnapshot = source ? { combatProfile: clone(source).combatProfile, loot: clone(source).loot } : null;
+  state.draftLoadedSnapshot = source ? { combatProfile: clone(source).combatProfile, loot: clone(source).loot, biography: clone(source).biography } : null;
   renderSheet();
   setStatus(isBuiltinCreatureId(state.editingId)
     ? 'Versionierte Grundvorlage. Duplizieren erzeugt eine eigene Online-Instanz; Speichern legt eine Online-Fassung dieser Vorlage an.'
@@ -738,12 +753,14 @@ async function saveCurrent() {
     // Kampfprofil/Loot nur mitschicken, wenn sie sich seit dem Öffnen des Bogens wirklich
     // geändert haben - sonst würde jede Kleinigkeit (z. B. eine Notiz) das komplette, evtl.
     // veraltete Kampfprofil zurückschreiben. Siehe character-save-guard.js/selectChangedSections.
-    const changedSections = new Set(selectChangedSections(data, baseline, ['combatProfile', 'loot']));
+    const changedSections = new Set(selectChangedSections(data, baseline, ['combatProfile', 'loot', 'biography']));
     if (baseline && !changedSections.has('combatProfile')) delete data.combatProfile;
     if (baseline && !changedSections.has('loot')) delete data.loot;
-    const id = await backend.saveCreature(editingId || null, data);
+    if (baseline && !changedSections.has('biography')) delete data.biography;
+    const persisted = await backend.saveCreature(editingId || null, data, { returnRecord: true });
+    const id = persisted.id;
     const previous = state.creatures.find(item => item.id === id) || {};
-    const saved = sanitizeCreature({ ...previous, ...data, id });
+    const saved = sanitizeCreature({ ...previous, ...persisted, id });
     const index = state.creatures.findIndex(item => item.id === id);
     if (index >= 0) state.creatures[index] = saved;
     else state.creatures.push(saved);
@@ -753,7 +770,11 @@ async function saveCurrent() {
       state.editingId = id;
       state.draft.id = id;
       state.draft.createdAt = saved.createdAt;
-      state.draftLoadedSnapshot = { combatProfile: clone(saved.combatProfile), loot: clone(saved.loot) };
+      for (const field of ['combatProfile', 'loot', 'biography']) {
+        if (JSON.stringify(state.draft[field]) === JSON.stringify(creature[field])) state.draft[field] = clone(saved[field]);
+        else if (Object.hasOwn(data, field)) state.draft[field].revision = saved[field].revision;
+      }
+      state.draftLoadedSnapshot = { combatProfile: clone(saved.combatProfile), loot: clone(saved.loot), biography: clone(saved.biography) };
       setStatus('Online gespeichert.', 'success');
       renderSheet();
     }
@@ -1004,6 +1025,7 @@ function removeRow(kind, index) {
 }
 
 function handleClick(event) {
+  if (biographyEditor.handleClick(event)) return;
   const page = event.target.closest('[data-creature-page]');
   if (page) { switchCreaturePage(page.dataset.creaturePage); return; }
   mediaEditor.handleClick(event);
@@ -1032,6 +1054,7 @@ function handleClick(event) {
 }
 
 function handleInput(event) {
+  biographyEditor.handleInput(event);
   mediaEditor.handleInput(event);
   if (!event.target.closest('#creature-sheet-root')) return;
   if (event.type === 'change' && (event.target.matches('[data-attribute-key], [data-combat-field], [data-save-key], [data-creature-field="level"]'))) {

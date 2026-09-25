@@ -1,0 +1,551 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-09-25T04:50:24.024Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourceNote": "Gezielter, online bestätigter Inventarabgleich: bestehende Gefährtenkarten und Besitzdaten erhalten; je zwei Kreaturbögen verknüpft. Kein Kampfprofil und keine Charakterbiographie enthalten.",
+  "character": {
+    "id": "kJss0DGF1RLuVrrVCBQT",
+    "name": "Idwal Draig",
+    "inventory": {
+      "hitpoints": "TP / Zustand",
+      "moneyNotice": "",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "moneyState": {
+        "totalCopper": 0,
+        "gold": 0,
+        "copper": 0,
+        "silver": 0
+      },
+      "infoRows": [],
+      "status": "Gesund",
+      "characterId": "kJss0DGF1RLuVrrVCBQT",
+      "role": "Adjutant des Seemarschalls, Gwynthor",
+      "portraitFormat": "portrait",
+      "portraitPosition": "top",
+      "showInfoTable": false,
+      "carryValue": "Noch festlegen",
+      "title": "Charakter-Inventar",
+      "name": "Idwal Draig",
+      "portrait": "https://i.imgur.com/RNqIIO0.png",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "equipmentQuiz": {
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "updatedAt": "",
+        "step": 0,
+        "open": false,
+        "status": ""
+      },
+      "carryLabel": "Traglast",
+      "items": [
+        {
+          "ownerCharacterName": "",
+          "originItemDbKey": "",
+          "image": "",
+          "type": "Waffe",
+          "itemDbKey": "",
+          "icon": "*",
+          "acquiredAt": "",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "category": "weapon",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "quantity": "1",
+          "id": "item-mqu1vat1-0-w8ef",
+          "name": "Hauptwaffe",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterId": "",
+          "infoRows": [],
+          "individualizedAt": "",
+          "itemStorageMode": "character",
+          "imageFit": "contain"
+        },
+        {
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "name": "Rüstung / Schutz",
+          "imagePosition": "center",
+          "tags": "",
+          "id": "item-mqu1vat1-1-exvo",
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "infoRows": [],
+          "imageFormat": "square",
+          "ownerCharacterId": "",
+          "image": "",
+          "weight": "Noch festlegen",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "ownerCharacterName": "",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "originItemDbKey": "",
+          "type": "Rüstung",
+          "icon": "*",
+          "category": "armor",
+          "acquiredAt": ""
+        },
+        {
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "infoRows": [],
+          "icon": "*",
+          "imageFit": "contain",
+          "type": "Ausrüstung",
+          "image": "",
+          "itemDbKey": "",
+          "quantity": "1",
+          "ownerCharacterName": "",
+          "originItemDbKey": "",
+          "id": "item-mqu1vat1-2-0fx2",
+          "weight": "Noch festlegen",
+          "individualizedAt": "",
+          "imageFormat": "square",
+          "ownerCharacterId": "",
+          "acquiredAt": "",
+          "itemStorageMode": "character",
+          "category": "equipment",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "name": "Reiseausrüstung",
+          "imagePosition": "center",
+          "tags": ""
+        },
+        {
+          "type": "Trinktur",
+          "id": "item-mqu1vat1-3-2lgm",
+          "icon": "*",
+          "image": "",
+          "itemStorageMode": "character",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "itemDbKey": "",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "category": "potions",
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "ownerCharacterName": "",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "acquiredAt": "",
+          "tags": "",
+          "infoRows": [],
+          "originItemDbKey": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "imageFit": "contain"
+        },
+        {
+          "ownerCharacterId": "",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-4-ajrj",
+          "individualizedAt": "",
+          "itemStorageMode": "character",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "weight": "Noch festlegen",
+          "type": "Dokument",
+          "ownerCharacterName": "",
+          "icon": "*",
+          "category": "documents",
+          "quantity": "1",
+          "tags": "",
+          "image": "",
+          "name": "Dokumente / Urkunden",
+          "imagePosition": "center",
+          "acquiredAt": "",
+          "infoRows": [],
+          "originItemDbKey": "",
+          "itemDbKey": "",
+          "imageFit": "contain"
+        },
+        {
+          "ownerCharacterName": "",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "id": "item-mqu1vat1-5-5kao",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "acquiredAt": "",
+          "imagePosition": "center",
+          "infoRows": [],
+          "type": "Sonstiges",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "itemDbKey": "",
+          "individualizedAt": "",
+          "image": "",
+          "name": "Persönlicher Gegenstand",
+          "ownerCharacterId": "",
+          "tags": "",
+          "category": "other",
+          "itemStorageMode": "character",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "idwal-distry",
+          "instanceId": "idwal-distry",
+          "creatureId": "companion-idwal-distry",
+          "name": "Distry",
+          "image": "https://i.imgur.com/HN7olKF.png",
+          "description": "Distry ist der ebenso freche wie ungewöhnlich kluge Rabe des Piraten Idwal und weicht seinem Herrn kaum jemals von der Seite. Mit schiefgelegtem Kopf, funkelnden Augen und einem geradezu spöttischen Krächzen beobachtet er jede Unterhaltung aufmerksam. Wer Idwals Missfallen auf sich zieht, muss jederzeit damit rechnen, von Distry unvermittelt in Ohr, Finger oder Hinterkopf gepickt zu werden, als hätte der Vogel jedes beleidigte Wort persönlich genommen. Besonders eifersüchtig reagiert er auf Menschen, die Idwal zu viel Aufmerksamkeit schenken oder ihm zu nahe kommen, sodass selbst Verbündete gelegentlich Opfer seiner kleinen Angriffe werden. Trotz seines respektlosen Wesens ist Distry seinem Herrn bedingungslos ergeben und scheint dessen Stimmung oft zu erkennen, noch bevor Idwal selbst ein Wort sagt.",
+          "type": "Rabe",
+          "category": "companion",
+          "registerCategory": "vieh",
+          "templateId": "",
+          "templateName": "Rabe",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "kJss0DGF1RLuVrrVCBQT",
+          "ownerCharacterName": "Idwal Draig",
+          "imageFormat": "portrait",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-09-25T04:50:24.578Z"
+        },
+        {
+          "id": "idwal-drecksack",
+          "instanceId": "idwal-drecksack",
+          "creatureId": "companion-idwal-drecksack",
+          "name": "Drecksack",
+          "image": "https://i.imgur.com/ilnbcSh.png",
+          "description": "Drecksack ist ein mächtiger schwarzer Equo-Hengst und Idwals bevorzugtes Reittier, auch wenn sein Herr ihn nur selten sattelt, da er die meiste Zeit auf seinem eigenen Schiff verbringt. Wann immer Idwal jedoch an Land kämpft, wartet Drecksack bereits ungeduldig auf ihn, als wolle er nichts lieber, als durch die Reihen der Gefallenen zu pflügen und auf den Leichen seiner Feinde herumzutrampeln. Anders als die meisten Equos, die mit eiserner Disziplin für den Krieg erzogen werden, blieb Drecksack aufgrund der seltenen Anwesenheit seines Reiters vergleichsweise unzureichend geführt. Aus dieser Vernachlässigung entwickelte sich ein aufbrausendes, dominantes Wesen, das er vor allem an anderen Pferden auslässt. Mehrfach geriet der Hengst außer Kontrolle, deckte Stuten gegen den Willen ihrer Besitzer und sorgte so für unerwünschte Fohlen oder schwere Verletzungen, die einzelne Tiere dauerhaft unfruchtbar machten. Da Idwal nur selten auf der Burg weilt und der Stallmeister mit zahllosen anderen Aufgaben ausgelastet ist, gilt Drecksack gemeinsam mit Tanor, dem arroganten Rhyfel des Prinzen Gawain, als das größte Ärgernis der Stallungen von Burg Draig.",
+          "type": "Equo Pferd",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Equo Pferd",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "kJss0DGF1RLuVrrVCBQT",
+          "ownerCharacterName": "Idwal Draig",
+          "imageFormat": "portrait",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-09-25T04:50:24.720Z"
+        }
+      ],
+      "categories": [
+        {
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment",
+          "label": "Ausrüstung"
+        },
+        {
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents",
+          "label": "Dokumente"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "healthColor": "#5c7f20",
+      "companions": [
+        {
+          "species": "Rabe",
+          "summary": "",
+          "status": "Gesund",
+          "role": "Haustier",
+          "imageFit": "cover",
+          "image": "https://i.imgur.com/HN7olKF.png",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 8
+            },
+            {
+              "value": 2,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 7
+            },
+            {
+              "value": 3,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 1,
+              "label": "Robustheit"
+            }
+          ],
+          "infoRows": [],
+          "name": "Distry",
+          "description": "Distry ist der ebenso freche wie ungewöhnlich kluge Rabe des Piraten Idwal und weicht seinem Herrn kaum jemals von der Seite. Mit schiefgelegtem Kopf, funkelnden Augen und einem geradezu spöttischen Krächzen beobachtet er jede Unterhaltung aufmerksam. Wer Idwals Missfallen auf sich zieht, muss jederzeit damit rechnen, von Distry unvermittelt in Ohr, Finger oder Hinterkopf gepickt zu werden, als hätte der Vogel jedes beleidigte Wort persönlich genommen. Besonders eifersüchtig reagiert er auf Menschen, die Idwal zu viel Aufmerksamkeit schenken oder ihm zu nahe kommen, sodass selbst Verbündete gelegentlich Opfer seiner kleinen Angriffe werden. Trotz seines respektlosen Wesens ist Distry seinem Herrn bedingungslos ergeben und scheint dessen Stimmung oft zu erkennen, noch bevor Idwal selbst ein Wort sagt.",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "statusColor": "#5c7f20",
+          "imageFormat": "portrait",
+          "imagePosition": "top",
+          "creatureId": "companion-idwal-distry",
+          "inventoryItemId": "idwal-distry"
+        },
+        {
+          "imageFit": "cover",
+          "role": "Reittier",
+          "infoRows": [],
+          "image": "https://i.imgur.com/ilnbcSh.png",
+          "attributes": [
+            {
+              "value": 7,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 6,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 8
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 3
+            },
+            {
+              "label": "Robustheit",
+              "value": 8
+            }
+          ],
+          "imagePosition": "top",
+          "species": "Equo Pferd",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "description": "Drecksack ist ein mächtiger schwarzer Equo-Hengst und Idwals bevorzugtes Reittier, auch wenn sein Herr ihn nur selten sattelt, da er die meiste Zeit auf seinem eigenen Schiff verbringt. Wann immer Idwal jedoch an Land kämpft, wartet Drecksack bereits ungeduldig auf ihn, als wolle er nichts lieber, als durch die Reihen der Gefallenen zu pflügen und auf den Leichen seiner Feinde herumzutrampeln. Anders als die meisten Equos, die mit eiserner Disziplin für den Krieg erzogen werden, blieb Drecksack aufgrund der seltenen Anwesenheit seines Reiters vergleichsweise unzureichend geführt. Aus dieser Vernachlässigung entwickelte sich ein aufbrausendes, dominantes Wesen, das er vor allem an anderen Pferden auslässt. Mehrfach geriet der Hengst außer Kontrolle, deckte Stuten gegen den Willen ihrer Besitzer und sorgte so für unerwünschte Fohlen oder schwere Verletzungen, die einzelne Tiere dauerhaft unfruchtbar machten. Da Idwal nur selten auf der Burg weilt und der Stallmeister mit zahllosen anderen Aufgaben ausgelastet ist, gilt Drecksack gemeinsam mit Tanor, dem arroganten Rhyfel des Prinzen Gawain, als das größte Ärgernis der Stallungen von Burg Draig.",
+          "status": "Immer breit!",
+          "statusColor": "#5c7f20",
+          "imageFormat": "portrait",
+          "name": "Drecksack",
+          "creatureId": "companion-idwal-drecksack",
+          "inventoryItemId": "idwal-drecksack"
+        }
+      ],
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "portraitFit": "cover",
+      "revision": 1790311824730
+    },
+    "updatedAt": "2026-09-25T04:50:24.024Z"
+  }
+}

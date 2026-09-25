@@ -16,7 +16,7 @@
 
     import { createCalendarRepository } from './modules/calendar/calendar-repository.mjs';
     import { createItemRegisterFirebase } from './modules/item-register/item-register-firebase.js';
-    import { prepareInventoryCompanionWrites, saveLinkedCreature } from './modules/item-register/item-register-companion-firebase.js';
+    import { prepareInventoryCompanionWrites, saveLinkedCreature } from './modules/item-register/item-register-companion-firebase.js?v=20260925-creature-biography-v1';
 
     const firebaseConfig = {
       apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
@@ -1218,29 +1218,32 @@
           void ignoredCreatedBy;
           const existing = await getDoc(ref);
           if (existing.data()?.itemOrigin?.ownerCharacterId) {
-            return saveLinkedCreature({ db, doc, runTransaction, id, data: safeData, forceOverwrite: options.forceOverwrite });
+            return saveLinkedCreature({ db, doc, runTransaction, id, data: safeData, forceOverwrite: options.forceOverwrite, returnRecord: options.returnRecord });
           }
           if (existing.data()?.itemOrigin) safeData.itemOrigin = existing.data().itemOrigin;
           // Derselbe Schutz gegen veraltete Browser-Tabs wie bei saveCharacter() - siehe dort für
           // die ausführliche Begründung. Kreaturen haben statt inventory ein loot-Feld. Ein
           // expliziter Import (forceOverwrite) setzt sich immer durch.
-          if ((safeData.combatProfile || safeData.loot) && !options.forceOverwrite && existing.exists()) {
-            const staleFields = detectStaleCharacterFields(existing.data(), safeData, { combatProfile: 'Kampfprofil', loot: 'Beute' });
+          if ((safeData.combatProfile || safeData.loot || safeData.biography) && !options.forceOverwrite && existing.exists()) {
+            const staleFields = detectStaleCharacterFields(existing.data(), safeData, { combatProfile: 'Kampfprofil', loot: 'Beute', biography: 'Biographie' });
             if (staleFields.length) {
               throw new Error(`Diese Kreatur wurde zwischenzeitlich anderswo aktualisiert (${staleFields.join(' und ')}, z. B. durch einen Import) und dein geöffneter Bogen ist veraltet. Bitte die Seite neu laden und den Bogen erneut öffnen, bevor du speicherst - sonst würde die neuere Version überschrieben.`);
             }
           }
-          const stamped = stampFreshRevisions(safeData, ['combatProfile', 'loot']);
+          const fields = ['combatProfile', 'loot', 'biography'];
+          const revision = Math.max(Date.now(), ...fields.map(field => Number(existing.data()?.[field]?.revision || 0) + 1));
+          const stamped = stampFreshRevisions(safeData, fields, revision);
           const payload = existing.exists() ? stamped : { ...stamped, ownerUid: user.uid, createdBy: user.uid };
           await setDoc(ref, payload, { merge: true });
-          return id;
+          return options.returnRecord ? { ...existing.data(), ...payload, id } : id;
         }
-        const ref = await addDoc(collection(db, 'creatures'), {
-          ...stampFreshRevisions(data || {}, ['combatProfile', 'loot']),
+        const payload = {
+          ...stampFreshRevisions(data || {}, ['combatProfile', 'loot', 'biography']),
           ownerUid: user.uid,
           createdBy: user.uid
-        });
-        return ref.id;
+        };
+        const ref = await addDoc(collection(db, 'creatures'), payload);
+        return options.returnRecord ? { ...payload, id: ref.id } : ref.id;
       },
       async deleteCreature(id) {
         await requireFirebaseUser();

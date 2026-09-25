@@ -1,4 +1,4 @@
-import { indexInventoryTemplates, resolveInventoryItem, inventoryCompanionViews, isInventoryCompanion } from './character-inventory-identity.js';
+import { indexInventoryTemplates, resolveInventoryItem, inventoryCompanionViews, isInventoryCompanion } from './character-inventory-identity.js?v=20260925-creature-biography-v1';
 import { inventoryCardModel } from './character-inventory-card-model.js';
 
 function context(data) {

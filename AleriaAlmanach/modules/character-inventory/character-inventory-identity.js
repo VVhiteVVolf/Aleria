@@ -61,7 +61,7 @@ export function inventoryCompanionViews(data = {}, creatures = []) {
       image: inventoryImage(creature?.portrait, entry.image),
       species: creature?.species || entry.species,
       summary: creature?.notes || entry.summary || entry.description,
-      personality: entry.personality || creature?.personality || (profile.quirks || []).map(quirk => [quirk.name, quirk.description].filter(Boolean).join(' — ')).join('\n') || '',
+      personality: creature?.biography?.personality || entry.personality || creature?.personality || (profile.quirks || []).map(quirk => [quirk.name, quirk.description].filter(Boolean).join(' — ')).join('\n') || '',
       infoRows: [
         { label: 'Art', value: creature?.species || entry.species || 'Gefährte' },
         { label: 'Rolle', value: entry.role || 'Begleiter' },

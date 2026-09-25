@@ -30,14 +30,14 @@ export async function prepareInventoryCompanionWrites({ transaction, db, doc, ch
   return writes;
 }
 
-export async function saveLinkedCreature({ db, doc, runTransaction, id, data, forceOverwrite = false }) {
+export async function saveLinkedCreature({ db, doc, runTransaction, id, data, forceOverwrite = false, returnRecord = false }) {
   return runTransaction(db, async transaction => {
     const ref = doc(db, 'creatures', id);
     const snap = await transaction.get(ref);
     const current = snap.data();
     const lock = await transaction.get(doc(db, 'combat_profile_locks', 'creatures', 'records', id));
     if (lock.data()?.activeEncounterKeys?.length) throw new Error('Der Begleiter nimmt gerade an einem Kampf teil.');
-    if (!forceOverwrite && detectStaleCharacterFields(current, data, { combatProfile: 'Kampfprofil', loot: 'Beute' }).length) throw new Error('Der Kreaturenbogen wurde zwischenzeitlich geändert. Bitte neu öffnen.');
+    if (!forceOverwrite && detectStaleCharacterFields(current, data, { combatProfile: 'Kampfprofil', loot: 'Beute', biography: 'Biographie' }).length) throw new Error('Der Kreaturenbogen wurde zwischenzeitlich geändert. Bitte neu öffnen.');
     const origin = current?.itemOrigin;
     if (!origin?.ownerCharacterId) throw new Error('Die Besitzerzuordnung wurde geändert. Bitte den Kreaturenbogen neu öffnen.');
     const characterRef = doc(db, 'characters', origin.ownerCharacterId);
@@ -47,9 +47,14 @@ export async function saveLinkedCreature({ db, doc, runTransaction, id, data, fo
     if (characterLock.data()?.activeEncounterKeys?.length) throw new Error('Die Besitzerfigur nimmt gerade an einem Kampf teil.');
     const next = { ...current, ...data, itemOrigin: origin, id };
     const inventory = inventoryWithCreatureIdentity(character || {}, next);
-    const revision = Math.max(Date.now(), Number(character.inventory?.revision || 0) + 1);
-    transaction.update(characterRef, { inventory: { ...inventory, revision }, updatedAt: new Date().toISOString() });
-    transaction.set(ref, { ...stampFreshRevisions(data, ['combatProfile', 'loot']), itemOrigin: origin }, { merge: true });
-    return id;
+    if (['name', 'portrait', 'notes'].some(field => next[field] !== current[field])) {
+      const revision = Math.max(Date.now(), Number(character.inventory?.revision || 0) + 1);
+      transaction.update(characterRef, { inventory: { ...inventory, revision }, updatedAt: new Date().toISOString() });
+    }
+    const fields = ['combatProfile', 'loot', 'biography'];
+    const revision = Math.max(Date.now(), ...fields.map(field => Number(current?.[field]?.revision || 0) + 1));
+    const stamped = stampFreshRevisions(data, fields, revision);
+    transaction.set(ref, { ...stamped, itemOrigin: origin }, { merge: true });
+    return returnRecord ? { ...current, ...stamped, itemOrigin: origin, id } : id;
   });
 }

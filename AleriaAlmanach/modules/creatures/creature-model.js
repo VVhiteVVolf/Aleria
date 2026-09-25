@@ -1,11 +1,12 @@
 import { normalizeCreatureImages, MAX_CREATURE_AVATARS } from './creature-images-model.js?v=20260919-creature-pages-v1';
+import { normalizeCreatureBiography } from './creature-biography-model.js?v=20260925-creature-biography-v1';
 export { MAX_CREATURE_AVATARS };
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   sanitizeCharacterCombatProfile
 } from '../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
 
-export const CREATURE_SCHEMA_VERSION = 4;
+export const CREATURE_SCHEMA_VERSION = 5;
 export const CREATURE_EXPORT_TYPE = 'aleria-creature';
 export const CREATURE_ARCHIVE_EXPORT_TYPE = 'aleria-creature-archive';
 
@@ -112,6 +113,7 @@ export function sanitizeCreature(value = {}) {
     challengeRating: normalizeNumber(source.challengeRating, 1, 0, 30),
     size: normalizeText(source.size || 'Mittel', 60),
     level,
+    biography: normalizeCreatureBiography(source.biography, source),
     ...normalizeCreatureImages(source),
     portraitCaption: normalizeText(source.portraitCaption, 500),
     templateId: normalizeText(source.templateId, 120),

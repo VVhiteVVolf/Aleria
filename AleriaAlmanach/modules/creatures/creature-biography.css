@@ -1,0 +1,27 @@
+.creature-biography { color: #393a30; }
+.creature-biography-toolbar { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1.2rem; }
+.creature-biography button { padding: .6rem .9rem; }
+.creature-biography-toolbar span { font-size: .8rem; color: #676650; }
+.creature-biography-dossier { display: grid; grid-template-columns: minmax(160px, 25%) minmax(0, 1fr); gap: clamp(1rem, 3vw, 2.5rem); background: #faf8ef; border: 1px solid #c9c6b2; border-radius: 5px; padding: clamp(1rem, 3vw, 2rem); }
+.creature-biography-aside { min-width: 0; }
+.creature-biography-portrait { width: 100%; max-height: 360px; object-fit: cover; object-position: top; border-radius: 3px; }
+.creature-biography h4 { font: small-caps 600 1rem Georgia, serif; color: #635330; margin: 1rem 0 .7rem; }
+.creature-biography dl { margin: 0; }
+.creature-biography dl > div { padding: .65rem 0; border-bottom: 1px solid #dedccb; }
+.creature-biography dt { font-size: .72rem; color: #72735e; }
+.creature-biography dd { margin: .2rem 0 0; font: .9rem/1.5 Georgia, serif; overflow-wrap: anywhere; white-space: pre-wrap; }
+.creature-biography-copy { min-width: 0; }
+.creature-biography-copy h3 { font: small-caps 500 1.8rem Georgia, serif; margin: 0 0 1rem; }
+.creature-biography-copy p { font: 1rem/1.8 Georgia, serif; white-space: pre-wrap; overflow-wrap: anywhere; }
+.creature-biography-section + .creature-biography-section { border-top: 1px solid #dedccb; margin-top: 1.2rem; padding-top: .4rem; }
+.creature-biography-workbench { display: grid; grid-template-columns: minmax(280px, 1fr) minmax(0, 1.2fr); gap: 1.5rem; align-items: start; }
+.creature-biography-form { display: grid; gap: 1rem; }
+.creature-biography-form input, .creature-biography-form textarea { box-sizing: border-box; width: 100%; min-width: 0; padding: .65rem; border: 1px solid #b9b6a3; background: #fffdf7; color: #393a30; font: .95rem/1.5 Georgia, serif; }
+.creature-biography-form textarea { resize: vertical; }
+.creature-biography-fact { display: grid; grid-template-columns: 1fr 1fr auto; gap: .4rem; }
+.creature-biography-custom { display: grid; gap: .5rem; padding: .7rem; background: #eeeee3; }
+.creature-biography-workbench .creature-biography-dossier { grid-template-columns: 1fr; }
+.creature-biography-workbench .creature-biography-portrait { max-width: 180px; }
+@media (max-width: 900px) { .creature-biography-workbench { grid-template-columns: 1fr; } }
+@media (max-width: 580px) { .creature-biography-dossier { grid-template-columns: 1fr; } .creature-biography-portrait { max-width: 240px; } }
+@media print { .creature-biography-toolbar, .creature-biography-form { display: none; } .creature-biography-workbench { display: block; } }
