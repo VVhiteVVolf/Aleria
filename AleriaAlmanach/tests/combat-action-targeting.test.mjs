@@ -27,35 +27,23 @@ test('Angriffe entfernen das vorherige Selbstziel, Heilung und gemischte Wirkung
   assert.deepEqual(getCombatTargetSelection(mixed, 'own', ['enemy']), ['enemy']);
   assert.equal(isSelfTargetAction({ effects: [{ type: 'damage', target: 'self' }] }), true);
 });
-for (const classId of CLASS_SPECIAL_IDS) test(`${classId}: zwei Sonderoptionen ab 5, weitere auf 8/12/16/20, keine kostenlosen oder doppelten Grants`, () => {
-  const count = level => { const pool = getClassSpecialManeuvers(classId, level); return [...pool.abilities, ...pool.techniques]; };
-  assert.equal(count(4).length, 0);
-  for (const [level, expected] of [[5,2],[7,2],[8,3],[12,4],[16,5],[20,6]]) {
-    const pool = count(level);
-    assert.equal(pool.length, expected);
-    for (const action of pool) {
-      assert.equal(action.costs.find(c=>c.resourceId==='special-action').amount,1);
-      assert.ok(action.costs.some(c=>c.resourceId!=='special-action'));
-      assert.equal(action.auraBypass.allowed,false);
-    }
-  }
-  const profile = sanitizeCharacterCombatProfile({ templateSelections:{classId}, progression:{level:7} });
-  const twice = sanitizeCharacterCombatProfile(profile);
-  assert.deepEqual(twice.abilities, profile.abilities);
-  assert.deepEqual(twice.techniques, profile.techniques);
+for (const classId of CLASS_SPECIAL_IDS) test(`${classId}: retired generic maneuvers never return at any level`, () => {
+  for (const level of [1, 5, 8, 12, 16, 20]) assert.deepEqual(getClassSpecialManeuvers(classId, level), { abilities: [], techniques: [] });
 });
-test('Ylvas Selbstvorbereitung verbraucht Sonder- und Bonusaktion, aber keinen Pfeil; Angriff verbraucht Munition', async () => {
+
+test('Ylvas Durchschnaufen verbraucht nur die Bonusaktion, aber keinen Pfeil; Angriff verbraucht Munition', async () => {
   const base = resolveCombatProfile(ylva);
-  const selfAction = base.actions.find(a=>a.id==='ability:class-special-skytte-reserve');
-  const attack = base.actions.find(a=>a.id==='technique:class-special-skytte-strike');
+  const selfAction = base.actions.find(a=>a.id==='ability:martial-durchschnaufen');
+  const attack = base.actions.find(a=>a.id==='weapon:ylva-langbogen');
   assert.equal(selfAction.compatible,true); assert.equal(attack.compatible,true);
   const dice={rollDamage:async()=>({natural:3,keptDice:[3],dice:[3],total:3,modifier:0}),rollAttack:async({modifier=0})=>({natural:15,dice:[15],keptDice:[15],total:15+modifier})};
   const actor=resolveCombatProfile(ylva,{actionId:selfAction.id});
   const result=await new CombatResolutionService(dice).resolveAttack({actor,target:actor});
   assert.equal(result.actorInventorySnapshot,null);
-  assert.equal(result.actorResourceSnapshot.after.find(r=>r.id==='special-action').current,1);
+  assert.equal(result.actorResourceSnapshot.after.find(r=>r.id==='special-action').current,2);
   assert.equal(result.actorResourceSnapshot.after.find(r=>r.id==='bonus-action').current,0);
-  assert.equal(result.targetSnapshot.temporaryHitPointsAfter,3);
+  assert.equal(result.targetSnapshot.temporaryHitPointsAfter,0);
+  assert.ok(result.effectResults.some(r=>r.effect.type==='healing'));
   const shot=await new CombatResolutionService(dice).resolveAttack({actor:resolveCombatProfile(ylva,{actionId:attack.id}),target:resolveCombatProfile(asgeir)});
   assert.ok(shot.actorInventorySnapshot?.ammunitionUse);
 });

@@ -65,6 +65,7 @@ function weaponCombatDefinition(entry = {}) {
 function armorCombatDefinition(entry = {}) {
   return {
     kind: 'armor',
+    mechanics: clone(entry.mechanics || {}),
     damageProtection: normalizeEquipmentDamageProtection(entry.damageProtection),
     triggerRules: clone(entry.triggerRules || []),
     armorKind: text(entry.kind, 'armor'),
@@ -169,6 +170,7 @@ function combatEntryFromInventory(item, entry, kind) {
     name: text(item.name, entry.name),
     image: text(item.image || item.icon, entry.image),
     kind: text(definition.armorKind, entry.kind),
+    mechanics: clone(definition.mechanics ?? entry.mechanics ?? {}),
     damageProtection: normalizeEquipmentDamageProtection(definition.damageProtection === undefined ? entry.damageProtection : definition.damageProtection),
     triggerRules: clone(definition.triggerRules ?? entry.triggerRules ?? []),
     baseArmorClass: definition.baseArmorClass == null ? entry.baseArmorClass : Number(definition.baseArmorClass),

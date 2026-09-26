@@ -51,7 +51,7 @@ export function applyOutcome(attack, outcome, savingThrowMode) {
 export function getCombatAttackNumbers(actor, target, context) {
   const { savingThrowMode, actorAuraOnTarget, targetAuraOnActor, preRollEffects, actionKind } = context;
     const attackModifier = savingThrowMode
-      ? getSavingThrowTotal(target, actor.actionSaveAttribute) + Number(actorAuraOnTarget.savingThrow || 0) + preRollEffects.savingThrowModifier
+      ? getSavingThrowTotal(target, actor.actionSaveAttribute, actor.selectedAction) + Number(actorAuraOnTarget.savingThrow || 0) + preRollEffects.savingThrowModifier
       : Number(actor.attackModifier || 0)
         + Number(targetAuraOnActor.attack || 0)
         + (['spell', 'prayer', 'song'].includes(actionKind) ? Number(targetAuraOnActor.spellAttack || 0) : 0)

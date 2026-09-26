@@ -51,6 +51,7 @@
       "collection": "characters",
       "documentId": "person--haus-saethwyr--nudd-saethwyr",
       "documentIds": [
+        "person--haus-saethwyr--nudd-saethwyr",
         "person--haus-saethwyr--nudd-saethwyr"
       ],
       "documents": [
@@ -58,6 +59,11 @@
           "documentId": "person--haus-saethwyr--nudd-saethwyr",
           "createdAt": "2026-09-03T17:37:29.197Z",
           "updatedAt": "2026-09-03T17:37:29.197Z"
+        },
+        {
+          "documentId": "person--haus-saethwyr--nudd-saethwyr",
+          "createdAt": "",
+          "updatedAt": "2026-09-26T12:00:00.000Z"
         }
       ]
     },
@@ -74,12 +80,13 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-22T12:00:00.000Z",
-    "sourceUpdatedAt": "2026-09-03T17:37:29.197Z",
+    "sourceExportedAt": "2026-09-26T12:00:00.000Z",
+    "sourceUpdatedAt": "2026-09-26T12:00:00.000Z",
     "sourceDocumentIds": [
+      "person--haus-saethwyr--nudd-saethwyr",
       "person--haus-saethwyr--nudd-saethwyr"
     ],
-    "contentHash": "5307c5dc6ea029dd8bd309369a4acb8a8a68655e685eda1efcf0f8b011252c60"
+    "contentHash": "690902f59198bcc191258f7a0c68ce583edfcd78e36edd6ed02fa174148b8ae9"
   },
   "local": {
     "notes": "",
@@ -166,10 +173,4762 @@
         "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
         "title": "",
         "updatedAt": "2026-09-03T17:37:29.197Z"
+      },
+      {
+        "id": "person--haus-saethwyr--nudd-saethwyr",
+        "name": "Nudd Saethwyr",
+        "combatProfile": {
+          "revision": 1790044540932,
+          "resources": [
+            {
+              "current": 0,
+              "icon": "",
+              "name": "Inspiration",
+              "recovery": "manual",
+              "scope": "persistent",
+              "maximum": 1,
+              "category": "",
+              "id": "inspiration",
+              "notes": ""
+            },
+            {
+              "category": "magic",
+              "name": "Mana",
+              "icon": "",
+              "maximum": 0,
+              "notes": "",
+              "current": 0,
+              "id": "mana-focus",
+              "recovery": "day",
+              "scope": "persistent"
+            },
+            {
+              "current": 0,
+              "recovery": "day",
+              "icon": "",
+              "name": "Fokus",
+              "notes": "",
+              "id": "focus",
+              "category": "focus",
+              "scope": "persistent",
+              "maximum": 0
+            },
+            {
+              "id": "celestial-points",
+              "notes": "",
+              "maximum": 0,
+              "recovery": "day",
+              "category": "celestial",
+              "scope": "persistent",
+              "icon": "",
+              "name": "Celestiale Punkte",
+              "current": 0
+            },
+            {
+              "maximum": 0,
+              "notes": "",
+              "category": "infernal",
+              "recovery": "day",
+              "icon": "",
+              "name": "Infernale Punkte",
+              "scope": "persistent",
+              "id": "infernal-points",
+              "current": 0
+            },
+            {
+              "category": "pact",
+              "icon": "",
+              "name": "Paktpunkte",
+              "notes": "",
+              "maximum": 0,
+              "current": 0,
+              "scope": "persistent",
+              "id": "pact-points",
+              "recovery": "day"
+            },
+            {
+              "name": "Aktion",
+              "icon": "./public/assets/combat-profile-icons/action.png",
+              "category": "action",
+              "maximum": 1,
+              "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+              "current": 1,
+              "id": "action",
+              "recovery": "scene",
+              "scope": "comment"
+            },
+            {
+              "category": "action",
+              "name": "Bonusaktion",
+              "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+              "maximum": 1,
+              "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+              "id": "bonus-action",
+              "current": 1,
+              "scope": "comment",
+              "recovery": "scene"
+            },
+            {
+              "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+              "id": "reaction",
+              "current": 1,
+              "recovery": "scene",
+              "scope": "comment",
+              "category": "action",
+              "name": "Reaktion",
+              "icon": "./public/assets/combat-profile-icons/reaction.png",
+              "maximum": 1
+            },
+            {
+              "recovery": "day",
+              "maximum": 2,
+              "icon": "./public/assets/combat-profile-icons/special-action.png",
+              "name": "Besondere Aktion",
+              "notes": "",
+              "id": "special-action",
+              "scope": "persistent",
+              "category": "action",
+              "current": 2
+            },
+            {
+              "current": 0,
+              "scope": "persistent",
+              "paymentRole": "universal-substitute",
+              "recovery": "day",
+              "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+              "name": "Aura-Fokuspunkt",
+              "category": "action",
+              "notes": "",
+              "maximum": 0,
+              "id": "aura-focus"
+            },
+            {
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "maximum": 0,
+              "name": "Zauberplatz I",
+              "id": "spell-slot-1",
+              "icon": "",
+              "current": 0,
+              "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "category": "spell-slot",
+              "spellLevel": 1
+            },
+            {
+              "name": "Zauberplatz II",
+              "icon": "",
+              "recovery": "long-rest",
+              "id": "spell-slot-2",
+              "current": 0,
+              "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "maximum": 0,
+              "category": "spell-slot",
+              "spellLevel": 2,
+              "scope": "persistent"
+            },
+            {
+              "id": "spell-slot-3",
+              "current": 0,
+              "scope": "persistent",
+              "spellLevel": 3,
+              "category": "spell-slot",
+              "recovery": "long-rest",
+              "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "name": "Zauberplatz III",
+              "icon": "",
+              "maximum": 0
+            },
+            {
+              "current": 0,
+              "spellLevel": 4,
+              "scope": "persistent",
+              "category": "spell-slot",
+              "id": "spell-slot-4",
+              "icon": "",
+              "name": "Zauberplatz IV",
+              "recovery": "long-rest",
+              "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "maximum": 0
+            },
+            {
+              "category": "spell-slot",
+              "maximum": 0,
+              "icon": "",
+              "name": "Zauberplatz V",
+              "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "id": "spell-slot-5",
+              "recovery": "long-rest",
+              "scope": "persistent",
+              "current": 0,
+              "spellLevel": 5
+            },
+            {
+              "category": "spell-slot",
+              "spellLevel": 6,
+              "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "maximum": 0,
+              "icon": "",
+              "name": "Zauberplatz VI",
+              "id": "spell-slot-6",
+              "current": 0,
+              "scope": "persistent",
+              "recovery": "long-rest"
+            },
+            {
+              "scope": "persistent",
+              "current": 0,
+              "spellLevel": 7,
+              "category": "spell-slot",
+              "id": "spell-slot-7",
+              "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "recovery": "long-rest",
+              "maximum": 0,
+              "icon": "",
+              "name": "Zauberplatz VII"
+            },
+            {
+              "maximum": 0,
+              "scope": "persistent",
+              "recovery": "long-rest",
+              "id": "spell-slot-8",
+              "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "category": "spell-slot",
+              "spellLevel": 8,
+              "icon": "",
+              "name": "Zauberplatz VIII",
+              "current": 0
+            },
+            {
+              "category": "spell-slot",
+              "maximum": 0,
+              "scope": "persistent",
+              "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "icon": "",
+              "name": "Zauberplatz IX",
+              "id": "spell-slot-9",
+              "current": 0,
+              "recovery": "long-rest",
+              "spellLevel": 9
+            },
+            {
+              "maximum": 0,
+              "scope": "persistent",
+              "category": "spell-slot",
+              "id": "spell-slot-10",
+              "icon": "",
+              "name": "Zauberplatz X",
+              "spellLevel": 10,
+              "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+              "recovery": "long-rest",
+              "current": 0
+            }
+          ],
+          "techniques": [
+            {
+              "costs": [
+                {
+                  "scope": "comment",
+                  "resourceId": "reaction",
+                  "amount": 1,
+                  "name": "Reaktion",
+                  "id": "combat-style-drachentanz-cantref-grund-wacht-reaction-1"
+                }
+              ],
+              "maximumTargets": 1,
+              "category": "technique",
+              "target": "Selbst",
+              "followUpAttack": {
+                "enabled": false
+              },
+              "effect": "+1 RK für einen eigenen Beitrag; kein Angriff.",
+              "weaponTypes": [
+                "spear",
+                "polearm"
+              ],
+              "effects": [
+                {
+                  "on": "always",
+                  "id": "cantref-grund-wacht-condition",
+                  "type": "buff",
+                  "condition": {
+                    "durationModel": {
+                      "kind": "actor-comments",
+                      "remainingActorComments": 1
+                    },
+                    "mechanics": {
+                      "armorClass": 1
+                    },
+                    "id": "cantref-grund-wacht-condition",
+                    "description": "+1 RK für einen eigenen Beitrag; kein Angriff.",
+                    "duration": "1 eigener Beitrag",
+                    "name": "Geschlossene Speerwacht",
+                    "tags": "Drachentanz"
+                  },
+                  "notes": "+1 RK für einen eigenen Beitrag; kein Angriff.",
+                  "target": "self"
+                }
+              ],
+              "combatStyleId": "drachentanz",
+              "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+              "minimumLevel": 2,
+              "name": "Geschlossene Speerwacht",
+              "activationType": "reaction",
+              "status": "confirmed",
+              "damageBonus": 0,
+              "combatStyleFormId": "drachentanz-form-i-jungdrache",
+              "attackBonus": 0,
+              "active": true,
+              "damageFormula": "",
+              "targetDefenseModifier": 0,
+              "triggerRules": [],
+              "secondarySave": {
+                "enabled": false
+              },
+              "id": "combat-style-drachentanz-cantref-grund-wacht",
+              "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+              "auraBypass": {
+                "resourceId": "aura-focus",
+                "cost": 1,
+                "allowed": true
+              },
+              "range": "Waffenreichweite",
+              "criticalThreshold": 20,
+              "mechanics": {
+                "armorClass": 1
+              },
+              "compatibleWeaponIds": [],
+              "mechanicNotes": [],
+              "damageType": "",
+              "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+              "aiInstructions": "+1 RK für einen eigenen Beitrag; kein Angriff. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+              "rollMode": "normal",
+              "description": "Die Waffe deckt die eigene Mitte, bevor der nächste Gegner angreift.",
+              "damageModel": {
+                "scalingSteps": [],
+                "mode": "fixed"
+              },
+              "live": true,
+              "cenyrTraining": {
+                "designNotes": "",
+                "slotBands": [
+                  "foundation"
+                ],
+                "requiresShield": false,
+                "uchelwyrCompatible": false,
+                "requiresDualWield": false,
+                "classWeaponProfiles": {
+                  "cantref": [
+                    "spear",
+                    "lance",
+                    "partisan",
+                    "trident",
+                    "halberd"
+                  ]
+                },
+                "branchId": "",
+                "singleTargetOnly": false,
+                "weaponRuleSetId": "",
+                "selectedAtLevel": 2,
+                "requiresMounted": false,
+                "allowedClassIds": [
+                  "cantref"
+                ],
+                "sourceStatus": "draft"
+              },
+              "grantedLevel": null,
+              "duration": "Sofort"
+            },
+            {
+              "description": "Ein kurzer, kontrollierter Einzelangriff nutzt die freie Waffenlinie.",
+              "category": "technique",
+              "targetDefenseModifier": 0,
+              "damageFormula": "",
+              "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+              "damageModel": {
+                "weaponDiceMultiplier": 1,
+                "bonusWeaponDice": 1,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "formula": "1d6",
+                    "level": 9
+                  },
+                  {
+                    "level": 13,
+                    "formula": "1d8"
+                  },
+                  {
+                    "level": 17,
+                    "formula": "1d10"
+                  }
+                ],
+                "bonusFormula": "",
+                "bonusWeaponDieCap": 6,
+                "mode": "weapon-dice"
+              },
+              "grantedLevel": null,
+              "costs": [
+                {
+                  "id": "combat-style-drachentanz-cantref-grund-linie-action-1",
+                  "resourceId": "action",
+                  "scope": "comment",
+                  "name": "Aktion",
+                  "amount": 1
+                }
+              ],
+              "name": "Stoß an der Schaftlinie",
+              "criticalThreshold": 20,
+              "combatStyleId": "drachentanz",
+              "aiInstructions": "Technikschaden mit +1 auf den Angriffswurf. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+              "effect": "Technikschaden mit +1 auf den Angriffswurf.",
+              "minimumLevel": 3,
+              "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+              "attackBonus": 1,
+              "target": "Ein Gegner",
+              "followUpAttack": {
+                "enabled": false
+              },
+              "live": true,
+              "damageBonus": 0,
+              "mechanicNotes": [],
+              "damageType": "",
+              "cenyrTraining": {
+                "classWeaponProfiles": {
+                  "cantref": [
+                    "spear",
+                    "lance",
+                    "partisan",
+                    "trident",
+                    "halberd"
+                  ]
+                },
+                "sourceStatus": "draft",
+                "requiresMounted": false,
+                "singleTargetOnly": false,
+                "designNotes": "",
+                "allowedClassIds": [
+                  "cantref"
+                ],
+                "slotBands": [
+                  "foundation"
+                ],
+                "uchelwyrCompatible": false,
+                "requiresDualWield": false,
+                "branchId": "",
+                "weaponRuleSetId": "",
+                "selectedAtLevel": 3,
+                "requiresShield": false
+              },
+              "combatStyleFormId": "drachentanz-form-i-jungdrache",
+              "mechanics": {},
+              "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+              "maximumTargets": 1,
+              "triggerRules": [],
+              "compatibleWeaponIds": [],
+              "range": "Waffenreichweite",
+              "active": true,
+              "id": "combat-style-drachentanz-cantref-grund-linie",
+              "secondarySave": {
+                "enabled": false
+              },
+              "rollMode": "normal",
+              "status": "confirmed",
+              "activationType": "action",
+              "effects": [
+                {
+                  "inheritWeaponDamageType": true,
+                  "on": "hit",
+                  "type": "damage",
+                  "formula": "",
+                  "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+                  "magical": false,
+                  "id": "combat-style-drachentanz-cantref-grund-linie-weapon-damage",
+                  "damageType": "",
+                  "target": "target"
+                }
+              ],
+              "weaponTypes": [
+                "spear",
+                "polearm"
+              ],
+              "auraBypass": {
+                "cost": 1,
+                "allowed": true,
+                "resourceId": "aura-focus"
+              },
+              "duration": "Sofort"
+            },
+            {
+              "name": "Schritt hinter der Spitze",
+              "criticalThreshold": 20,
+              "damageFormula": "",
+              "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+              "category": "technique",
+              "aiInstructions": "+2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+              "id": "combat-style-drachentanz-cantref-grund-schritt",
+              "description": "Die Figur ordnet ihren Stand und hält einen Weg zur Seite offen.",
+              "grantedLevel": null,
+              "mechanics": {
+                "movement": 2
+              },
+              "combatStyleId": "drachentanz",
+              "range": "Waffenreichweite",
+              "damageModel": {
+                "scalingSteps": [],
+                "mode": "fixed"
+              },
+              "effects": [
+                {
+                  "target": "self",
+                  "type": "buff",
+                  "notes": "+2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung.",
+                  "condition": {
+                    "mechanics": {
+                      "movement": 2
+                    },
+                    "id": "cantref-grund-schritt-condition",
+                    "duration": "1 eigener Beitrag",
+                    "description": "+2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung.",
+                    "durationModel": {
+                      "kind": "actor-comments",
+                      "remainingActorComments": 1
+                    },
+                    "name": "Schritt hinter der Spitze",
+                    "tags": "Drachentanz"
+                  },
+                  "id": "cantref-grund-schritt-condition",
+                  "on": "always"
+                }
+              ],
+              "cenyrTraining": {
+                "uchelwyrCompatible": false,
+                "selectedAtLevel": 4,
+                "requiresShield": false,
+                "weaponRuleSetId": "",
+                "slotBands": [
+                  "foundation"
+                ],
+                "allowedClassIds": [
+                  "cantref"
+                ],
+                "classWeaponProfiles": {
+                  "cantref": [
+                    "spear",
+                    "lance",
+                    "partisan",
+                    "trident",
+                    "halberd"
+                  ]
+                },
+                "requiresMounted": false,
+                "sourceStatus": "draft",
+                "singleTargetOnly": false,
+                "requiresDualWield": false,
+                "designNotes": "",
+                "branchId": ""
+              },
+              "minimumLevel": 4,
+              "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+              "auraBypass": {
+                "cost": 1,
+                "allowed": true,
+                "resourceId": "aura-focus"
+              },
+              "weaponTypes": [
+                "spear",
+                "polearm"
+              ],
+              "mechanicNotes": [],
+              "activationType": "reaction",
+              "effect": "+2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung.",
+              "target": "Selbst",
+              "followUpAttack": {
+                "enabled": false
+              },
+              "attackBonus": 0,
+              "live": true,
+              "duration": "Sofort",
+              "triggerRules": [],
+              "status": "confirmed",
+              "damageBonus": 0,
+              "compatibleWeaponIds": [],
+              "secondarySave": {
+                "enabled": false
+              },
+              "rollMode": "normal",
+              "damageType": "",
+              "combatStyleFormId": "drachentanz-form-i-jungdrache",
+              "targetDefenseModifier": 0,
+              "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+              "maximumTargets": 1,
+              "active": true,
+              "costs": [
+                {
+                  "name": "Bonusaktion",
+                  "scope": "comment",
+                  "amount": 1,
+                  "resourceId": "bonus-action",
+                  "id": "combat-style-drachentanz-cantref-grund-schritt-bonus-action-1"
+                },
+                {
+                  "id": "combat-style-drachentanz-cantref-grund-schritt-reaction-2",
+                  "amount": 1,
+                  "name": "Reaktion",
+                  "resourceId": "reaction",
+                  "scope": "comment"
+                }
+              ]
+            },
+            {
+              "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+              "damageModel": {
+                "weaponDiceMultiplier": 1,
+                "bonusWeaponDieCap": 8,
+                "bonusFormula": "",
+                "mode": "weapon-dice",
+                "bonusWeaponDice": 1,
+                "bonusModifier": 1,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "formula": "1d6",
+                    "level": 9
+                  },
+                  {
+                    "formula": "1d8",
+                    "level": 13
+                  },
+                  {
+                    "level": 17,
+                    "formula": "1d10"
+                  }
+                ]
+              },
+              "secondarySave": {
+                "enabled": false
+              },
+              "duration": "Sofort",
+              "description": "Die ganze Waffenführung bündelt sich in einem entschlossenen Einzelangriff.",
+              "rollMode": "normal",
+              "range": "Waffenreichweite",
+              "mechanicNotes": [],
+              "mechanics": {},
+              "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+              "grantedLevel": null,
+              "cenyrTraining": {
+                "uchelwyrCompatible": false,
+                "weaponRuleSetId": "",
+                "selectedAtLevel": 5,
+                "sourceStatus": "draft",
+                "classWeaponProfiles": {
+                  "cantref": [
+                    "spear",
+                    "lance",
+                    "partisan",
+                    "trident",
+                    "halberd"
+                  ]
+                },
+                "allowedClassIds": [
+                  "cantref"
+                ],
+                "requiresShield": false,
+                "requiresMounted": false,
+                "designNotes": "",
+                "slotBands": [
+                  "foundation"
+                ],
+                "branchId": "",
+                "singleTargetOnly": false,
+                "requiresDualWield": false
+              },
+              "aiInstructions": "Verstärkter Technikschaden aus der gemeinsamen Schadensstaffel; kein kostenloser Folgeangriff. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+              "criticalThreshold": 20,
+              "live": true,
+              "followUpAttack": {
+                "enabled": false
+              },
+              "combatStyleFormId": "drachentanz-form-i-jungdrache",
+              "damageType": "",
+              "target": "Ein Gegner",
+              "minimumLevel": 5,
+              "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+              "combatStyleId": "drachentanz",
+              "attackBonus": 0,
+              "effect": "Verstärkter Technikschaden aus der gemeinsamen Schadensstaffel; kein kostenloser Folgeangriff.",
+              "name": "Durchbruch des Grenzwächters",
+              "maximumTargets": 1,
+              "damageBonus": 0,
+              "costs": [
+                {
+                  "id": "combat-style-drachentanz-cantref-grund-durchbruch-action-1",
+                  "name": "Aktion",
+                  "resourceId": "action",
+                  "scope": "comment",
+                  "amount": 1
+                },
+                {
+                  "id": "combat-style-drachentanz-cantref-grund-durchbruch-special-action-2",
+                  "resourceId": "special-action",
+                  "amount": 1,
+                  "scope": "persistent",
+                  "name": "Besondere Aktion"
+                }
+              ],
+              "weaponTypes": [
+                "spear",
+                "polearm"
+              ],
+              "auraBypass": {
+                "resourceId": "aura-focus",
+                "allowed": true,
+                "cost": 1
+              },
+              "status": "confirmed",
+              "triggerRules": [],
+              "damageFormula": "",
+              "activationType": "action",
+              "active": true,
+              "id": "combat-style-drachentanz-cantref-grund-durchbruch",
+              "targetDefenseModifier": 0,
+              "compatibleWeaponIds": [],
+              "category": "technique",
+              "effects": [
+                {
+                  "damageType": "",
+                  "on": "hit",
+                  "type": "damage",
+                  "magical": false,
+                  "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+                  "target": "target",
+                  "id": "combat-style-drachentanz-cantref-grund-durchbruch-weapon-damage",
+                  "formula": "",
+                  "inheritWeaponDamageType": true
+                }
+              ]
+            },
+            {
+              "name": "Kuss der Speerspitze",
+              "description": "Ein kurzer gerader Stich prüft Abstand und Deckung, ohne die Linie des Cantref zu öffnen.",
+              "costs": [
+                {
+                  "scope": "comment",
+                  "amount": 1,
+                  "id": "combat-style-drachentanz-cantref-jungdrache-kuss-der-speerspitze-bonus-action-1",
+                  "resourceId": "bonus-action",
+                  "name": "Bonusaktion"
+                }
+              ],
+              "mechanics": {},
+              "grantedLevel": null,
+              "compatibleWeaponIds": [],
+              "effects": [
+                {
+                  "damageType": "",
+                  "type": "damage",
+                  "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+                  "magical": false,
+                  "id": "combat-style-drachentanz-cantref-jungdrache-kuss-der-speerspitze-weapon-damage",
+                  "inheritWeaponDamageType": true,
+                  "target": "target",
+                  "formula": "",
+                  "on": "hit"
+                },
+                {
+                  "on": "hit",
+                  "id": "cantref-kuss-move-movement",
+                  "type": "move",
+                  "movementMeters": 1,
+                  "target": "self",
+                  "notes": "Kontrollierter Schritt nach dem Stich.",
+                  "movementKind": "move"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "damageFormula": "1d6",
+              "damageModel": {
+                "scalingSteps": [
+                  {
+                    "formula": "1d4",
+                    "level": 7
+                  },
+                  {
+                    "level": 9,
+                    "formula": "1d6"
+                  },
+                  {
+                    "formula": "1d8",
+                    "level": 13
+                  },
+                  {
+                    "formula": "1d10",
+                    "level": 17
+                  }
+                ],
+                "bonusWeaponDice": 0,
+                "mode": "fixed",
+                "bonusFormula": "",
+                "bonusWeaponDieCap": 6,
+                "weaponDiceMultiplier": 1
+              },
+              "aiInstructions": "Verursacht Technikschaden und erlaubt danach einen Schritt von 1 Meter, ohne die Speerspitze vom Ziel zu lösen. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+              "criticalThreshold": 20,
+              "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+              "damageType": "",
+              "combatStyleId": "drachentanz",
+              "category": "technique",
+              "attackBonus": 0,
+              "range": "Waffenreichweite",
+              "active": true,
+              "maximumTargets": 1,
+              "mechanicNotes": [],
+              "duration": "Sofort",
+              "damageBonus": 0,
+              "combatStyleFormId": "drachentanz-form-i-jungdrache",
+              "triggerRules": [],
+              "status": "confirmed",
+              "id": "combat-style-drachentanz-cantref-jungdrache-kuss-der-speerspitze",
+              "followUpAttack": {
+                "enabled": false
+              },
+              "rollMode": "normal",
+              "cenyrTraining": {
+                "classWeaponProfiles": {
+                  "cantref": [
+                    "spear",
+                    "lance",
+                    "partisan",
+                    "trident",
+                    "halberd"
+                  ],
+                  "uchelwyr": [
+                    "lance"
+                  ]
+                },
+                "designNotes": "",
+                "sourceStatus": "draft",
+                "requiresShield": false,
+                "singleTargetOnly": false,
+                "selectedAtLevel": 1,
+                "weaponRuleSetId": "cantref-polearm",
+                "requiresDualWield": false,
+                "slotBands": [
+                  "foundation"
+                ],
+                "branchId": "",
+                "uchelwyrCompatible": true,
+                "allowedClassIds": [
+                  "cantref",
+                  "uchelwyr"
+                ],
+                "requiresMounted": false
+              },
+              "effect": "Verursacht Technikschaden und erlaubt danach einen Schritt von 1 Meter, ohne die Speerspitze vom Ziel zu lösen.",
+              "secondarySave": {
+                "enabled": false
+              },
+              "live": true,
+              "target": "Ein Gegner",
+              "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+              "minimumLevel": 1,
+              "activationType": "bonus-action",
+              "targetDefenseModifier": 0,
+              "weaponTypes": [
+                "spear",
+                "polearm"
+              ],
+              "tags": "Drachentanz · Tanz des Jungdrachens · Grundform"
+            },
+            {
+              "combatStyleId": "drachentanz",
+              "weaponTypes": [
+                "spear",
+                "polearm"
+              ],
+              "live": true,
+              "rollMode": "normal",
+              "aiInstructions": "Verursacht Technikschaden. Misslingt ein Stärkerettungswurf, erhält das Ziel −1 Angriff bis zu seinem nächsten Beitrag. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+              "mechanics": {},
+              "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+              "duration": "Sofort",
+              "grantedLevel": null,
+              "damageFormula": "",
+              "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+              "id": "combat-style-drachentanz-cantref-jungdrache-haken-des-jungdrachen",
+              "effects": [
+                {
+                  "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+                  "damageType": "",
+                  "formula": "",
+                  "target": "target",
+                  "id": "combat-style-drachentanz-cantref-jungdrache-haken-des-jungdrachen-weapon-damage",
+                  "type": "damage",
+                  "magical": false,
+                  "on": "hit",
+                  "inheritWeaponDamageType": true
+                }
+              ],
+              "damageBonus": 0,
+              "costs": [
+                {
+                  "scope": "comment",
+                  "resourceId": "action",
+                  "amount": 1,
+                  "name": "Aktion",
+                  "id": "combat-style-drachentanz-cantref-jungdrache-haken-des-jungdrachen-action-1"
+                },
+                {
+                  "scope": "comment",
+                  "amount": 1,
+                  "resourceId": "reaction",
+                  "id": "combat-style-drachentanz-cantref-jungdrache-haken-des-jungdrachen-reaction-2",
+                  "name": "Reaktion"
+                }
+              ],
+              "combatStyleFormId": "drachentanz-form-i-jungdrache",
+              "attackBonus": 0,
+              "criticalThreshold": 20,
+              "targetDefenseModifier": 0,
+              "effect": "Verursacht Technikschaden. Misslingt ein Stärkerettungswurf, erhält das Ziel −1 Angriff bis zu seinem nächsten Beitrag.",
+              "target": "Ein Gegner",
+              "auraBypass": {
+                "cost": 1,
+                "resourceId": "aura-focus",
+                "allowed": true
+              },
+              "secondarySave": {
+                "attributeKey": "strength",
+                "enabled": true,
+                "dcAttributeKey": "strength",
+                "addProficiency": true,
+                "failureCondition": {
+                  "name": "Verhakte Haltung",
+                  "duration": "1 eigener Beitrag",
+                  "tags": "Drachentanz",
+                  "mechanics": {
+                    "attack": -1
+                  },
+                  "description": "Die verhakte Haltung erschwert den nächsten Angriff.",
+                  "id": "cantref-haken-failed-save"
+                },
+                "dcBase": 8
+              },
+              "activationType": "action",
+              "triggerRules": [],
+              "damageModel": {
+                "bonusFormula": "",
+                "mode": "weapon-dice",
+                "weaponDiceMultiplier": 1,
+                "bonusWeaponDice": 1,
+                "bonusWeaponDieCap": 8,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "level": 9,
+                    "formula": "1d6"
+                  },
+                  {
+                    "formula": "1d8",
+                    "level": 13
+                  },
+                  {
+                    "level": 17,
+                    "formula": "1d10"
+                  }
+                ]
+              },
+              "cenyrTraining": {
+                "uchelwyrCompatible": true,
+                "slotBands": [
+                  "foundation"
+                ],
+                "singleTargetOnly": false,
+                "weaponRuleSetId": "cantref-polearm",
+                "selectedAtLevel": 2,
+                "requiresMounted": false,
+                "classWeaponProfiles": {
+                  "cantref": [
+                    "spear",
+                    "lance",
+                    "partisan",
+                    "trident",
+                    "halberd"
+                  ],
+                  "uchelwyr": [
+                    "lance"
+                  ]
+                },
+                "allowedClassIds": [
+                  "cantref",
+                  "uchelwyr"
+                ],
+                "requiresDualWield": false,
+                "branchId": "",
+                "requiresShield": false,
+                "designNotes": "",
+                "sourceStatus": "draft"
+              },
+              "compatibleWeaponIds": [],
+              "category": "technique",
+              "followUpAttack": {
+                "enabled": false
+              },
+              "active": true,
+              "name": "Haken des Jungdrachens",
+              "range": "Waffenreichweite",
+              "maximumTargets": 1,
+              "damageType": "",
+              "status": "confirmed",
+              "mechanicNotes": [],
+              "description": "Schaft und Blatt greifen Waffe, Arm oder Bein des Gegners und reißen dessen Haltung auf.",
+              "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+              "minimumLevel": 2
+            },
+            {
+              "aiInstructions": "Reaktionsangriff mit Technikschaden. Bis zum nächsten eigenen Beitrag steigt die Rüstungsklasse um 1. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+              "compatibleWeaponIds": [],
+              "combatStyleFormId": "drachentanz-form-i-jungdrache",
+              "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+              "minimumLevel": 3,
+              "secondarySave": {
+                "enabled": false
+              },
+              "name": "Wacht der langen Schuppe",
+              "damageType": "",
+              "id": "combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe",
+              "description": "Der Cantref fängt einen Vorstoß an der äußersten Reichweite ab und antwortet aus sicherer Linie.",
+              "cenyrTraining": {
+                "weaponRuleSetId": "cantref-polearm",
+                "selectedAtLevel": 3,
+                "singleTargetOnly": false,
+                "designNotes": "",
+                "slotBands": [
+                  "foundation"
+                ],
+                "requiresShield": false,
+                "allowedClassIds": [
+                  "cantref",
+                  "uchelwyr"
+                ],
+                "classWeaponProfiles": {
+                  "cantref": [
+                    "spear",
+                    "lance",
+                    "partisan",
+                    "trident",
+                    "halberd"
+                  ],
+                  "uchelwyr": [
+                    "lance"
+                  ]
+                },
+                "uchelwyrCompatible": true,
+                "requiresMounted": false,
+                "requiresDualWield": false,
+                "sourceStatus": "draft",
+                "branchId": ""
+              },
+              "triggerRules": [],
+              "mechanicNotes": [],
+              "range": "Waffenreichweite",
+              "auraBypass": {
+                "cost": 1,
+                "allowed": true,
+                "resourceId": "aura-focus"
+              },
+              "category": "technique",
+              "damageModel": {
+                "bonusModifier": 1,
+                "bonusWeaponDieCap": 4,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "formula": "1d6",
+                    "level": 9
+                  },
+                  {
+                    "formula": "1d8",
+                    "level": 13
+                  },
+                  {
+                    "level": 17,
+                    "formula": "1d10"
+                  }
+                ],
+                "bonusFormula": "",
+                "mode": "weapon-dice",
+                "weaponDiceMultiplier": 1,
+                "bonusWeaponDice": 0
+              },
+              "activationType": "reaction",
+              "combatStyleId": "drachentanz",
+              "duration": "Sofort",
+              "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+              "weaponTypes": [
+                "spear",
+                "polearm"
+              ],
+              "rollMode": "normal",
+              "target": "Ein Gegner",
+              "effect": "Reaktionsangriff mit Technikschaden. Bis zum nächsten eigenen Beitrag steigt die Rüstungsklasse um 1.",
+              "targetDefenseModifier": 0,
+              "attackBonus": 0,
+              "maximumTargets": 1,
+              "damageBonus": 0,
+              "grantedLevel": null,
+              "damageFormula": "",
+              "status": "confirmed",
+              "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+              "costs": [
+                {
+                  "id": "combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe-reaction-1",
+                  "resourceId": "reaction",
+                  "scope": "comment",
+                  "name": "Reaktion",
+                  "amount": 1
+                }
+              ],
+              "followUpAttack": {
+                "enabled": false
+              },
+              "effects": [
+                {
+                  "id": "combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe-weapon-damage",
+                  "damageType": "",
+                  "magical": false,
+                  "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+                  "on": "hit",
+                  "inheritWeaponDamageType": true,
+                  "target": "target",
+                  "formula": "",
+                  "type": "damage"
+                },
+                {
+                  "type": "buff",
+                  "notes": "Die Stangenwaffe hält die Angriffslinie geschlossen.",
+                  "id": "cantref-wacht-condition",
+                  "on": "always",
+                  "target": "self",
+                  "condition": {
+                    "duration": "1 eigener Beitrag",
+                    "id": "cantref-wacht-condition",
+                    "mechanics": {
+                      "armorClass": 1
+                    },
+                    "name": "Lange Wacht",
+                    "durationModel": {
+                      "kind": "actor-comments",
+                      "remainingActorComments": 1
+                    },
+                    "tags": "Drachentanz",
+                    "description": "Die Stangenwaffe hält die Angriffslinie geschlossen."
+                  }
+                }
+              ],
+              "active": true,
+              "mechanics": {},
+              "live": true,
+              "criticalThreshold": 20
+            },
+            {
+              "duration": "Sofort",
+              "grantedLevel": null,
+              "id": "combat-style-drachentanz-cantref-jungdrache-kreisender-dorn",
+              "combatStyleId": "drachentanz",
+              "range": "Waffenreichweite",
+              "weaponTypes": [
+                "spear",
+                "polearm"
+              ],
+              "rollMode": "normal",
+              "aiInstructions": "Trifft bis zu zwei Gegner in Waffenreichweite mit je Technikschaden; jeder Treffer wird einzeln gewürfelt. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+              "damageBonus": 0,
+              "attackBonus": 0,
+              "damageFormula": "",
+              "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+              "name": "Kreisender Dorn",
+              "criticalThreshold": 20,
+              "combatStyleFormId": "drachentanz-form-i-jungdrache",
+              "compatibleWeaponIds": [],
+              "secondarySave": {
+                "enabled": false
+              },
+              "target": "Bis zu zwei Gegner",
+              "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+              "triggerRules": [],
+              "effect": "Trifft bis zu zwei Gegner in Waffenreichweite mit je Technikschaden; jeder Treffer wird einzeln gewürfelt.",
+              "costs": [
+                {
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "id": "combat-style-drachentanz-cantref-jungdrache-kreisender-dorn-action-1",
+                  "scope": "comment"
+                },
+                {
+                  "resourceId": "bonus-action",
+                  "scope": "comment",
+                  "id": "combat-style-drachentanz-cantref-jungdrache-kreisender-dorn-bonus-action-2",
+                  "name": "Bonusaktion",
+                  "amount": 1
+                },
+                {
+                  "amount": 1,
+                  "resourceId": "reaction",
+                  "name": "Reaktion",
+                  "scope": "comment",
+                  "id": "combat-style-drachentanz-cantref-jungdrache-kreisender-dorn-reaction-3"
+                }
+              ],
+              "damageType": "",
+              "activationType": "action",
+              "mechanics": {},
+              "live": true,
+              "targetDefenseModifier": 0,
+              "followUpAttack": {
+                "enabled": false
+              },
+              "mechanicNotes": [],
+              "active": true,
+              "description": "Ein weiter Griffwechsel führt Spitze oder Blatt in einem kontrollierten Halbkreis durch die Front.",
+              "minimumLevel": 4,
+              "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+              "auraBypass": {
+                "allowed": true,
+                "cost": 1,
+                "resourceId": "aura-focus"
+              },
+              "effects": [
+                {
+                  "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+                  "id": "combat-style-drachentanz-cantref-jungdrache-kreisender-dorn-weapon-damage",
+                  "formula": "",
+                  "inheritWeaponDamageType": true,
+                  "type": "damage",
+                  "magical": false,
+                  "on": "hit",
+                  "damageType": "",
+                  "target": "target"
+                }
+              ],
+              "cenyrTraining": {
+                "singleTargetOnly": false,
+                "requiresDualWield": false,
+                "sourceStatus": "draft",
+                "uchelwyrCompatible": false,
+                "requiresShield": false,
+                "slotBands": [
+                  "foundation"
+                ],
+                "branchId": "",
+                "weaponRuleSetId": "cantref-polearm",
+                "selectedAtLevel": 4,
+                "requiresMounted": false,
+                "designNotes": "",
+                "classWeaponProfiles": {
+                  "cantref": [
+                    "spear",
+                    "lance",
+                    "partisan",
+                    "trident",
+                    "halberd"
+                  ]
+                },
+                "allowedClassIds": [
+                  "cantref"
+                ]
+              },
+              "damageModel": {
+                "bonusFormula": "",
+                "weaponDiceMultiplier": 1,
+                "bonusModifier": 1,
+                "mode": "weapon-dice",
+                "bonusWeaponDice": 1,
+                "bonusWeaponDieCap": 6,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "formula": "1d6",
+                    "level": 9
+                  },
+                  {
+                    "level": 13,
+                    "formula": "1d8"
+                  },
+                  {
+                    "formula": "1d10",
+                    "level": 17
+                  }
+                ]
+              },
+              "category": "technique",
+              "status": "confirmed",
+              "maximumTargets": 2
+            },
+            {
+              "maximumTargets": 1,
+              "id": "combat-style-drachentanz-cantref-jungdrache-durchstossende-spur",
+              "effect": "Verursacht Technikschaden und behandelt die Zielverteidigung als 1 Punkt niedriger.",
+              "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+              "name": "Durchstoßende Spur",
+              "target": "Ein Gegner",
+              "secondarySave": {
+                "enabled": false
+              },
+              "damageModel": {
+                "weaponDiceMultiplier": 1,
+                "scalingSteps": [
+                  {
+                    "formula": "1d4",
+                    "level": 7
+                  },
+                  {
+                    "formula": "1d6",
+                    "level": 9
+                  },
+                  {
+                    "level": 13,
+                    "formula": "1d8"
+                  },
+                  {
+                    "formula": "1d10",
+                    "level": 17
+                  }
+                ],
+                "bonusFormula": "",
+                "bonusWeaponDieCap": 8,
+                "mode": "weapon-dice",
+                "bonusWeaponDice": 1,
+                "bonusModifier": 1
+              },
+              "description": "Der Cantref setzt den ganzen Körper hinter einen geraden Vorstoß und treibt die Spitze durch die Deckung.",
+              "criticalThreshold": 20,
+              "damageType": "",
+              "followUpAttack": {
+                "enabled": false
+              },
+              "duration": "Sofort",
+              "activationType": "action",
+              "active": true,
+              "mechanicNotes": [],
+              "grantedLevel": null,
+              "targetDefenseModifier": -1,
+              "cenyrTraining": {
+                "classWeaponProfiles": {
+                  "cantref": [
+                    "spear",
+                    "lance",
+                    "partisan",
+                    "trident",
+                    "halberd"
+                  ]
+                },
+                "requiresShield": false,
+                "designNotes": "",
+                "slotBands": [
+                  "foundation"
+                ],
+                "weaponRuleSetId": "cantref-polearm",
+                "selectedAtLevel": 5,
+                "requiresDualWield": false,
+                "requiresMounted": false,
+                "branchId": "",
+                "singleTargetOnly": false,
+                "allowedClassIds": [
+                  "cantref"
+                ],
+                "uchelwyrCompatible": false,
+                "sourceStatus": "draft"
+              },
+              "status": "confirmed",
+              "auraBypass": {
+                "cost": 1,
+                "allowed": true,
+                "resourceId": "aura-focus"
+              },
+              "costs": [
+                {
+                  "resourceId": "action",
+                  "id": "combat-style-drachentanz-cantref-jungdrache-durchstossende-spur-action-1",
+                  "amount": 1,
+                  "scope": "comment",
+                  "name": "Aktion"
+                },
+                {
+                  "id": "combat-style-drachentanz-cantref-jungdrache-durchstossende-spur-bonus-action-2",
+                  "name": "Bonusaktion",
+                  "resourceId": "bonus-action",
+                  "amount": 1,
+                  "scope": "comment"
+                },
+                {
+                  "amount": 1,
+                  "scope": "comment",
+                  "name": "Reaktion",
+                  "id": "combat-style-drachentanz-cantref-jungdrache-durchstossende-spur-reaction-3",
+                  "resourceId": "reaction"
+                }
+              ],
+              "rollMode": "normal",
+              "mechanics": {},
+              "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+              "minimumLevel": 5,
+              "effects": [
+                {
+                  "magical": false,
+                  "on": "hit",
+                  "damageType": "",
+                  "type": "damage",
+                  "target": "target",
+                  "inheritWeaponDamageType": true,
+                  "id": "combat-style-drachentanz-cantref-jungdrache-durchstossende-spur-weapon-damage",
+                  "formula": "",
+                  "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+                }
+              ],
+              "attackBonus": 0,
+              "combatStyleId": "drachentanz",
+              "category": "technique",
+              "damageBonus": 0,
+              "weaponTypes": [
+                "spear",
+                "polearm"
+              ],
+              "aiInstructions": "Verursacht Technikschaden und behandelt die Zielverteidigung als 1 Punkt niedriger. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+              "combatStyleFormId": "drachentanz-form-i-jungdrache",
+              "live": true,
+              "triggerRules": [],
+              "range": "Waffenreichweite",
+              "damageFormula": "",
+              "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+              "compatibleWeaponIds": []
+            },
+            {
+              "name": "Sechszackige Linie",
+              "auraBypass": {
+                "allowed": true,
+                "cost": 1,
+                "resourceId": "aura-focus"
+              },
+              "maximumTargets": 1,
+              "attackBonus": 0,
+              "followUpAttack": {
+                "enabled": false
+              },
+              "secondarySave": {
+                "dcAttributeKey": "strength",
+                "dcBase": 8,
+                "attributeKey": "dexterity",
+                "failureCondition": {
+                  "tags": "Drachentanz",
+                  "duration": "1 eigener Beitrag",
+                  "name": "Gebrochene Linie",
+                  "mechanics": {
+                    "armorClass": -1
+                  },
+                  "id": "cantref-sechszackig-failed-save",
+                  "description": "Der Zielstand wird durch die Folge der Stöße aufgebrochen."
+                },
+                "addProficiency": true,
+                "enabled": true
+              },
+              "damageBonus": 0,
+              "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+              "cenyrTraining": {
+                "sourceStatus": "draft",
+                "branchId": "",
+                "slotBands": [
+                  "foundation"
+                ],
+                "classWeaponProfiles": {
+                  "cantref": [
+                    "spear",
+                    "lance",
+                    "partisan",
+                    "trident",
+                    "halberd"
+                  ]
+                },
+                "designNotes": "",
+                "singleTargetOnly": false,
+                "allowedClassIds": [
+                  "cantref"
+                ],
+                "uchelwyrCompatible": false,
+                "requiresMounted": false,
+                "selectedAtLevel": 6,
+                "weaponRuleSetId": "cantref-polearm",
+                "requiresDualWield": false,
+                "requiresShield": false
+              },
+              "grantedLevel": null,
+              "weaponTypes": [
+                "spear",
+                "polearm"
+              ],
+              "duration": "Sofort",
+              "activationType": "action",
+              "damageType": "",
+              "rollMode": "normal",
+              "combatStyleFormId": "drachentanz-form-i-jungdrache",
+              "compatibleWeaponIds": [],
+              "range": "Waffenreichweite",
+              "mechanicNotes": [],
+              "minimumLevel": 6,
+              "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+              "combatStyleId": "drachentanz",
+              "effects": [
+                {
+                  "type": "damage",
+                  "id": "combat-style-drachentanz-cantref-jungdrache-sechszackige-linie-weapon-damage",
+                  "target": "target",
+                  "inheritWeaponDamageType": true,
+                  "magical": false,
+                  "formula": "",
+                  "on": "hit",
+                  "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+                  "damageType": ""
+                }
+              ],
+              "mechanics": {},
+              "criticalThreshold": 20,
+              "damageModel": {
+                "bonusModifier": 2,
+                "scalingSteps": [
+                  {
+                    "level": 7,
+                    "formula": "1d4"
+                  },
+                  {
+                    "level": 9,
+                    "formula": "1d6"
+                  },
+                  {
+                    "level": 13,
+                    "formula": "1d8"
+                  },
+                  {
+                    "formula": "1d10",
+                    "level": 17
+                  }
+                ],
+                "bonusWeaponDieCap": 8,
+                "mode": "weapon-dice",
+                "weaponDiceMultiplier": 1,
+                "bonusWeaponDice": 1,
+                "bonusFormula": ""
+              },
+              "description": "Sechs Lehrstöße wechseln Höhe, Seite und Griff, bis die gegnerische Linie keine sichere Öffnung mehr kennt.",
+              "category": "technique",
+              "effect": "Verursacht Technikschaden. Misslingt ein Geschicklichkeitsrettungswurf, wird das Ziel 2 Meter zurückgedrängt.",
+              "target": "Ein Gegner",
+              "damageFormula": "",
+              "triggerRules": [],
+              "live": true,
+              "status": "confirmed",
+              "aiInstructions": "Verursacht Technikschaden. Misslingt ein Geschicklichkeitsrettungswurf, wird das Ziel 2 Meter zurückgedrängt. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+              "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+              "targetDefenseModifier": 0,
+              "active": true,
+              "costs": [
+                {
+                  "scope": "comment",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "id": "combat-style-drachentanz-cantref-jungdrache-sechszackige-linie-action-1"
+                },
+                {
+                  "resourceId": "bonus-action",
+                  "id": "combat-style-drachentanz-cantref-jungdrache-sechszackige-linie-bonus-action-2",
+                  "scope": "comment",
+                  "name": "Bonusaktion",
+                  "amount": 1
+                },
+                {
+                  "name": "Besondere Aktion",
+                  "resourceId": "special-action",
+                  "scope": "persistent",
+                  "id": "combat-style-drachentanz-cantref-jungdrache-sechszackige-linie-special-action-3",
+                  "amount": 1
+                }
+              ],
+              "id": "combat-style-drachentanz-cantref-jungdrache-sechszackige-linie"
+            }
+          ],
+          "proficiencies": {
+            "notes": "",
+            "armor": [
+              "medium",
+              "heavy"
+            ],
+            "languages": [],
+            "weapons": [
+              "simple",
+              "martial",
+              "spear",
+              "polearm"
+            ],
+            "tools": [
+              "Heraldik und höfische Etikette"
+            ]
+          },
+          "conditions": [],
+          "hitPoints": {
+            "temporary": 0,
+            "current": 73,
+            "hitDie": 10,
+            "vitality": {
+              "version": 1,
+              "legacyIncrease": 2,
+              "overrideAnchor": null
+            },
+            "maximumOverride": null,
+            "averagePerLevelOverride": null
+          },
+          "armorClass": {
+            "shieldBonus": 0,
+            "otherModifier": 0,
+            "magicModifier": 0,
+            "dexterityCap": 2,
+            "base": 10,
+            "dexterityMode": "full",
+            "overrideMode": "total",
+            "override": null
+          },
+          "savingThrows": [
+            {
+              "bonus": 0,
+              "expertise": false,
+              "proficient": true,
+              "attributeKey": "strength"
+            },
+            {
+              "proficient": false,
+              "bonus": 0,
+              "attributeKey": "dexterity",
+              "expertise": false
+            },
+            {
+              "proficient": true,
+              "attributeKey": "constitution",
+              "expertise": false,
+              "bonus": 0
+            },
+            {
+              "bonus": 0,
+              "attributeKey": "intelligence",
+              "proficient": false,
+              "expertise": false
+            },
+            {
+              "expertise": false,
+              "bonus": 0,
+              "proficient": false,
+              "attributeKey": "wisdom"
+            },
+            {
+              "proficient": false,
+              "expertise": false,
+              "attributeKey": "charisma",
+              "bonus": 0
+            }
+          ],
+          "classTraining": {
+            "schemaVersion": 2,
+            "techniqueSelections": [
+              {
+                "selectedAtLevel": 1,
+                "techniqueId": "combat-style-drachentanz-cantref-jungdrache-kuss-der-speerspitze",
+                "slotId": "foundation-01"
+              },
+              {
+                "techniqueId": "combat-style-drachentanz-cantref-jungdrache-haken-des-jungdrachen",
+                "selectedAtLevel": 2,
+                "slotId": "foundation-02"
+              },
+              {
+                "selectedAtLevel": 3,
+                "slotId": "foundation-03",
+                "techniqueId": "combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe"
+              },
+              {
+                "techniqueId": "combat-style-drachentanz-cantref-jungdrache-kreisender-dorn",
+                "slotId": "foundation-04",
+                "selectedAtLevel": 4
+              },
+              {
+                "techniqueId": "combat-style-drachentanz-cantref-jungdrache-durchstossende-spur",
+                "slotId": "foundation-05",
+                "selectedAtLevel": 5
+              },
+              {
+                "slotId": "foundation-06",
+                "selectedAtLevel": 6,
+                "techniqueId": "combat-style-drachentanz-cantref-jungdrache-sechszackige-linie"
+              }
+            ],
+            "selections": [],
+            "curriculumId": "cenyr-cantref"
+          },
+          "identity": {
+            "archetype": "Cantref",
+            "ancestry": "Cenyr",
+            "background": "Ritter"
+          },
+          "armorItems": [
+            {
+              "kind": "armor",
+              "notes": "Startausrüstung der gewählten Klasse",
+              "image": "",
+              "id": "starter-cantref-chainmail",
+              "properties": "Startausrüstung der gewählten Klasse",
+              "dexterityUnlockLevel": 0,
+              "triggerRules": [],
+              "equipped": true,
+              "armorClassBonus": 0,
+              "dexterityCap": 2,
+              "baseArmorClass": 16,
+              "inventoryItemId": "equipment-armor-starter-cantref-chainmail",
+              "name": "Saethwyr Plattenrüstung",
+              "dexterityMode": "none"
+            }
+          ],
+          "cheats": {
+            "automaticCritical": false,
+            "enabled": false
+          },
+          "combat": {
+            "damageBonus": 0,
+            "passivePerceptionBonus": 0,
+            "mounted": false,
+            "canActAtZeroHitPoints": false,
+            "movement": 9,
+            "initiativeBonus": 0,
+            "attackBonus": 0
+          },
+          "damageAffinities": [],
+          "schemaVersion": 11,
+          "attributes": [
+            {
+              "label": "Kraft",
+              "key": "strength",
+              "shortLabel": "KRF",
+              "score": 14,
+              "modifierOverride": null
+            },
+            {
+              "label": "Geschick",
+              "modifierOverride": null,
+              "key": "dexterity",
+              "score": 14,
+              "shortLabel": "GES"
+            },
+            {
+              "score": 16,
+              "modifierOverride": null,
+              "key": "constitution",
+              "label": "Konstitution",
+              "shortLabel": "KON"
+            },
+            {
+              "shortLabel": "INT",
+              "label": "Intelligenz",
+              "modifierOverride": null,
+              "key": "intelligence",
+              "score": 9
+            },
+            {
+              "label": "Weisheit",
+              "key": "wisdom",
+              "shortLabel": "WEI",
+              "modifierOverride": null,
+              "score": 14
+            },
+            {
+              "key": "charisma",
+              "score": 9,
+              "shortLabel": "CHA",
+              "label": "Charisma",
+              "modifierOverride": null
+            }
+          ],
+          "skills": [
+            {
+              "attributeKey": "strength",
+              "name": "Athletik",
+              "bonus": 0,
+              "id": "default-skill-1",
+              "proficiency": "none",
+              "notes": ""
+            },
+            {
+              "id": "default-skill-2",
+              "proficiency": "none",
+              "notes": "",
+              "name": "Akrobatik",
+              "attributeKey": "dexterity",
+              "bonus": 0
+            },
+            {
+              "name": "Fingerfertigkeit",
+              "proficiency": "none",
+              "id": "default-skill-3",
+              "bonus": 0,
+              "attributeKey": "dexterity",
+              "notes": ""
+            },
+            {
+              "attributeKey": "dexterity",
+              "notes": "",
+              "bonus": 0,
+              "proficiency": "none",
+              "name": "Heimlichkeit",
+              "id": "default-skill-4"
+            },
+            {
+              "proficiency": "none",
+              "attributeKey": "intelligence",
+              "id": "default-skill-5",
+              "notes": "",
+              "bonus": 0,
+              "name": "Arkane Kunde"
+            },
+            {
+              "name": "Geschichte",
+              "attributeKey": "intelligence",
+              "proficiency": "trained",
+              "id": "default-skill-6",
+              "bonus": 0,
+              "notes": "Geübt durch Stufe-1-Vorlage"
+            },
+            {
+              "proficiency": "none",
+              "notes": "",
+              "id": "default-skill-7",
+              "bonus": 0,
+              "name": "Nachforschungen",
+              "attributeKey": "intelligence"
+            },
+            {
+              "bonus": 0,
+              "id": "default-skill-8",
+              "notes": "",
+              "name": "Naturkunde",
+              "proficiency": "none",
+              "attributeKey": "intelligence"
+            },
+            {
+              "attributeKey": "intelligence",
+              "name": "Religion",
+              "id": "default-skill-9",
+              "notes": "Geübt durch Stufe-1-Vorlage",
+              "proficiency": "trained",
+              "bonus": 0
+            },
+            {
+              "proficiency": "none",
+              "id": "default-skill-10",
+              "notes": "",
+              "name": "Heilkunde",
+              "bonus": 0,
+              "attributeKey": "wisdom"
+            },
+            {
+              "notes": "",
+              "bonus": 0,
+              "attributeKey": "wisdom",
+              "proficiency": "none",
+              "id": "default-skill-11",
+              "name": "Mit Tieren umgehen"
+            },
+            {
+              "proficiency": "trained",
+              "id": "default-skill-12",
+              "attributeKey": "wisdom",
+              "name": "Motiv erkennen",
+              "bonus": 0,
+              "notes": "Geübt durch Stufe-1-Vorlage"
+            },
+            {
+              "proficiency": "none",
+              "attributeKey": "wisdom",
+              "name": "Überleben",
+              "notes": "",
+              "bonus": 0,
+              "id": "default-skill-13"
+            },
+            {
+              "bonus": 0,
+              "name": "Wahrnehmung",
+              "notes": "",
+              "id": "default-skill-14",
+              "attributeKey": "wisdom",
+              "proficiency": "none"
+            },
+            {
+              "name": "Auftreten",
+              "proficiency": "trained",
+              "bonus": 0,
+              "notes": "Geübt durch Stufe-1-Vorlage",
+              "id": "default-skill-15",
+              "attributeKey": "charisma"
+            },
+            {
+              "id": "default-skill-16",
+              "attributeKey": "charisma",
+              "notes": "",
+              "bonus": 0,
+              "proficiency": "none",
+              "name": "Einschüchtern"
+            },
+            {
+              "bonus": 0,
+              "name": "Täuschen",
+              "notes": "",
+              "attributeKey": "charisma",
+              "id": "default-skill-17",
+              "proficiency": "none"
+            },
+            {
+              "id": "default-skill-18",
+              "notes": "Geübt durch Stufe-1-Vorlage",
+              "bonus": 0,
+              "proficiency": "trained",
+              "attributeKey": "charisma",
+              "name": "Überreden"
+            },
+            {
+              "id": "default-skill-19",
+              "notes": "",
+              "name": "Flirten",
+              "bonus": 0,
+              "proficiency": "none",
+              "attributeKey": "charisma"
+            },
+            {
+              "id": "default-skill-20",
+              "attributeKey": "constitution",
+              "bonus": 0,
+              "notes": "",
+              "proficiency": "none",
+              "name": "Körperbeherrschung"
+            }
+          ],
+          "progression": {
+            "level": 6,
+            "experienceReward": null,
+            "nextLevelExperience": null,
+            "experience": 0,
+            "actionPoolChoices": [],
+            "specialLevels": 0,
+            "resourceRulesVersion": 2,
+            "proficiencyBonusOverride": null
+          },
+          "notes": "",
+          "abilities": [
+            {
+              "id": "martial-durchschnaufen",
+              "name": "Durchschnaufen",
+              "active": true,
+              "combatUsable": true,
+              "minimumLevel": 1,
+              "activationType": "bonus-action",
+              "delivery": "ability",
+              "resolutionType": "automatic",
+              "target": "Selbst",
+              "range": "Selbst",
+              "recovery": "long-rest",
+              "usesMaximum": 1,
+              "usesCurrent": 1,
+              "description": "Regeneriere 1 eigenen Klassen-Trefferwürfel + 10 % der maximalen TP (aufgerundet), höchstens bis zum TP-Maximum. Kein KON-Bonus. Einmal pro langer Rast.",
+              "costs": [
+                {
+                  "id": "second-wind-bonus",
+                  "resourceId": "bonus-action",
+                  "name": "Bonusaktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "auraBypass": {
+                "allowed": false
+              },
+              "tags": "Erholung · Lange Rast",
+              "effects": [
+                {
+                  "id": "second-wind-heal",
+                  "type": "healing",
+                  "target": "self",
+                  "on": "always",
+                  "formula": "1d8",
+                  "scaling": "hit-die-and-tenth-maximum"
+                }
+              ]
+            }
+          ],
+          "aura": {
+            "name": "Aura",
+            "latentPresence": {
+              "allyMechanics": {
+                "attack": 0,
+                "maximumHitPoints": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "savingThrowAdvantageAttributes": [],
+                "attackRollMode": "normal",
+                "passivePerception": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "bonusDamageFormula": "",
+                "spellAttack": 0,
+                "movement": 0,
+                "savingThrow": 0,
+                "armorClass": 0,
+                "skill": 0,
+                "spellSaveDc": 0,
+                "initiative": 0,
+                "damage": 0
+              },
+              "radius": "",
+              "target": "Umgebung, Verbündete und Gegner",
+              "duration": "",
+              "trigger": "",
+              "requirements": "",
+              "name": "Latente Präsenz",
+              "active": true,
+              "selfMechanics": {
+                "damage": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "skill": 0,
+                "movement": 0,
+                "attackRollMode": "normal",
+                "passivePerception": 0,
+                "armorClass": 0,
+                "savingThrowAdvantageAttributes": [],
+                "combatStartTemporaryHitPoints": 0,
+                "bonusDamageFormula": "",
+                "attack": 0,
+                "maximumHitPoints": 0,
+                "initiative": 0,
+                "spellSaveDc": 0
+              },
+              "enemyMechanics": {
+                "initiative": 0,
+                "savingThrow": 0,
+                "spellAttack": 0,
+                "damage": 0,
+                "maximumHitPoints": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "bonusDamageFormula": "",
+                "armorClass": 0,
+                "passivePerception": 0,
+                "movement": 0,
+                "attackRollMode": "normal",
+                "spellSaveDc": 0,
+                "skill": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "attack": 0,
+                "savingThrowAdvantageAttributes": []
+              },
+              "description": "",
+              "aiInstructions": "",
+              "enabled": true
+            },
+            "activeForm": {
+              "trigger": "",
+              "active": false,
+              "selfMechanics": {
+                "spellAttack": 0,
+                "passivePerception": 0,
+                "savingThrow": 0,
+                "damage": 0,
+                "maximumHitPoints": 0,
+                "bonusDamageFormula": "",
+                "attackRollMode": "normal",
+                "combatStartTemporaryHitPoints": 0,
+                "attack": 0,
+                "spellSaveDc": 0,
+                "skill": 0,
+                "movement": 0,
+                "armorClass": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "savingThrowAdvantageAttributes": [],
+                "initiative": 0
+              },
+              "name": "Aktive Form",
+              "enabled": false,
+              "duration": "",
+              "radius": "",
+              "target": "Selbst und gewählte Ziele",
+              "allyMechanics": {
+                "spellSaveDc": 0,
+                "damage": 0,
+                "skill": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "attackRollMode": "normal",
+                "savingThrowAdvantageAttributes": [],
+                "spellAttack": 0,
+                "savingThrow": 0,
+                "attack": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "initiative": 0,
+                "armorClass": 0,
+                "bonusDamageFormula": "",
+                "passivePerception": 0,
+                "maximumHitPoints": 0,
+                "movement": 0
+              },
+              "aiInstructions": "",
+              "enemyMechanics": {
+                "movement": 0,
+                "armorClass": 0,
+                "initiative": 0,
+                "attackRollMode": "normal",
+                "spellAttack": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "damage": 0,
+                "savingThrow": 0,
+                "attack": 0,
+                "bonusDamageFormula": "",
+                "skill": 0,
+                "spellSaveDc": 0,
+                "passivePerception": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "savingThrowAdvantageAttributes": [],
+                "maximumHitPoints": 0
+              },
+              "description": "",
+              "requirements": ""
+            },
+            "enabled": false,
+            "focusBypassCost": 1,
+            "focusResourceId": "aura-focus",
+            "notes": "",
+            "domain": ""
+          },
+          "magic": {
+            "focusResourceId": "focus",
+            "spellSaveDcOverride": null,
+            "notes": "",
+            "casterTier": "full",
+            "spellAttackOverride": null,
+            "spells": [],
+            "bypassResourceId": "",
+            "manaResourceId": "mana-focus",
+            "slotResourceIds": [
+              "spell-slot-1",
+              "spell-slot-2",
+              "spell-slot-3",
+              "spell-slot-4",
+              "spell-slot-5",
+              "spell-slot-6",
+              "spell-slot-7",
+              "spell-slot-8",
+              "spell-slot-9",
+              "spell-slot-10"
+            ],
+            "enabled": false,
+            "focusEnabled": false,
+            "castingAttribute": "intelligence"
+          },
+          "weapons": [
+            {
+              "inventoryItemId": "",
+              "proficient": true,
+              "training": "simple",
+              "effects": [],
+              "image": "",
+              "requirements": "",
+              "aiInstructions": "",
+              "weaponProfileId": "",
+              "damageFormula": "1d4",
+              "costs": [
+                {
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment",
+                  "resourceId": "action",
+                  "id": "activation-action"
+                }
+              ],
+              "triggerRules": [],
+              "attackAttribute": "strength",
+              "id": "default-unarmed-melee",
+              "notes": "Grundlegender waffenloser Nahkampfangriff.",
+              "versatileDamageFormula": "",
+              "properties": "Schlicht · simpel · immer verfügbar",
+              "damageBonus": 0,
+              "equipped": false,
+              "attackBonus": 0,
+              "damageType": "Wucht",
+              "activationType": "action",
+              "ammunition": null,
+              "range": "Nahkampf",
+              "weaponType": "unarmed",
+              "name": "Nahkampf",
+              "auraBypass": {
+                "cost": 1,
+                "allowed": true,
+                "resourceId": ""
+              }
+            },
+            {
+              "ammunition": null,
+              "versatileDamageFormula": "",
+              "damageType": "Stich",
+              "properties": "Vielseitig · Startausrüstung der gewählten Klasse",
+              "name": "Speer",
+              "image": "",
+              "triggerRules": [],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "aura-focus",
+                "cost": 1
+              },
+              "weaponType": "spear",
+              "damageFormula": "1d6",
+              "activationType": "action",
+              "costs": [
+                {
+                  "scope": "comment",
+                  "id": "starter-cantref-spear-action",
+                  "amount": 1,
+                  "resourceId": "action",
+                  "name": "Aktion"
+                }
+              ],
+              "equipped": true,
+              "requirements": "",
+              "effects": [],
+              "attackAttribute": "strength",
+              "notes": "Vielseitig · Startausrüstung der gewählten Klasse",
+              "proficient": true,
+              "id": "starter-cantref-spear",
+              "aiInstructions": "",
+              "damageBonus": 0,
+              "weaponProfileId": "spear",
+              "attackBonus": 0,
+              "inventoryItemId": "equipment-weapon-starter-cantref-spear",
+              "training": "martial",
+              "range": "Nahkampf"
+            }
+          ],
+          "quirks": [
+            {
+              "limitations": "",
+              "type": "trait",
+              "appliesWhen": "Dauerhafte kulturelle Prägung",
+              "active": true,
+              "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+              "duration": "",
+              "tags": "Volk · Cenyr",
+              "aiInstructions": "",
+              "priority": 0,
+              "id": "starter-ancestry-cenyr-trait-1",
+              "name": "Cenyri Kultur",
+              "target": "self",
+              "stacking": "normal",
+              "trigger": "",
+              "mechanics": {
+                "movement": 0,
+                "attack": 0,
+                "skill": 0,
+                "spellAttack": 0,
+                "passivePerception": 0,
+                "savingThrow": 0,
+                "savingThrowAdvantageAttributes": [],
+                "maximumHitPoints": 0,
+                "spellSaveDc": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "bonusDamageFormula": "",
+                "initiative": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "attackRollMode": "normal",
+                "damage": 0,
+                "armorClass": 0
+              },
+              "triggerRules": []
+            },
+            {
+              "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+              "tags": "Volk · Cenyr",
+              "priority": 0,
+              "limitations": "",
+              "appliesWhen": "Dauerhafte kulturelle Prägung",
+              "active": true,
+              "type": "trait",
+              "duration": "",
+              "mechanics": {
+                "movement": 0,
+                "damage": 0,
+                "spellAttack": 0,
+                "savingThrow": 0,
+                "attackRollMode": "normal",
+                "savingThrowAdvantageAttributes": [],
+                "bonusDamageFormula": "",
+                "maximumHitPoints": 0,
+                "passivePerception": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "spellSaveDc": 0,
+                "armorClass": 0,
+                "savingThrowDisadvantageAttributes": [],
+                "skill": 0,
+                "attack": 0,
+                "initiative": 0
+              },
+              "triggerRules": [],
+              "name": "Höfische und religiöse Prägung",
+              "target": "self",
+              "aiInstructions": "",
+              "trigger": "",
+              "id": "starter-ancestry-cenyr-trait-2",
+              "stacking": "normal"
+            },
+            {
+              "tags": "Hintergrund · Ritter",
+              "mechanics": {
+                "attackRollMode": "normal",
+                "bonusDamageFormula": "",
+                "attack": 0,
+                "spellSaveDc": 0,
+                "combatStartTemporaryHitPoints": 0,
+                "movement": 0,
+                "skill": 0,
+                "savingThrowAdvantageAttributes": [],
+                "savingThrowDisadvantageAttributes": [],
+                "initiative": 0,
+                "damage": 0,
+                "maximumHitPoints": 0,
+                "passivePerception": 0,
+                "spellAttack": 0,
+                "armorClass": 0,
+                "savingThrow": 0
+              },
+              "active": true,
+              "stacking": "normal",
+              "trigger": "",
+              "type": "trait",
+              "triggerRules": [],
+              "id": "starter-background-ritter-trait-1",
+              "target": "self",
+              "duration": "",
+              "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+              "name": "Ritterliche Herkunft und Standespflicht",
+              "aiInstructions": "",
+              "limitations": "",
+              "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+              "priority": 0
+            }
+          ],
+          "templateSelections": {
+            "ancestryId": "cenyr",
+            "appliedAt": "2026-09-22T02:30:46.551Z",
+            "attributeMethod": "point-buy",
+            "classId": "cantref",
+            "schemaVersion": 1,
+            "backgroundId": "ritter"
+          }
+        },
+        "updatedAt": "2026-09-26T12:00:00.000Z"
       }
     ]
   },
   "character": {
+    "id": "person--haus-saethwyr--nudd-saethwyr",
+    "name": "Nudd Saethwyr",
+    "combatProfile": {
+      "revision": 1790044540932,
+      "resources": [
+        {
+          "current": 0,
+          "icon": "",
+          "name": "Inspiration",
+          "recovery": "manual",
+          "scope": "persistent",
+          "maximum": 1,
+          "category": "",
+          "id": "inspiration",
+          "notes": ""
+        },
+        {
+          "category": "magic",
+          "name": "Mana",
+          "icon": "",
+          "maximum": 0,
+          "notes": "",
+          "current": 0,
+          "id": "mana-focus",
+          "recovery": "day",
+          "scope": "persistent"
+        },
+        {
+          "current": 0,
+          "recovery": "day",
+          "icon": "",
+          "name": "Fokus",
+          "notes": "",
+          "id": "focus",
+          "category": "focus",
+          "scope": "persistent",
+          "maximum": 0
+        },
+        {
+          "id": "celestial-points",
+          "notes": "",
+          "maximum": 0,
+          "recovery": "day",
+          "category": "celestial",
+          "scope": "persistent",
+          "icon": "",
+          "name": "Celestiale Punkte",
+          "current": 0
+        },
+        {
+          "maximum": 0,
+          "notes": "",
+          "category": "infernal",
+          "recovery": "day",
+          "icon": "",
+          "name": "Infernale Punkte",
+          "scope": "persistent",
+          "id": "infernal-points",
+          "current": 0
+        },
+        {
+          "category": "pact",
+          "icon": "",
+          "name": "Paktpunkte",
+          "notes": "",
+          "maximum": 0,
+          "current": 0,
+          "scope": "persistent",
+          "id": "pact-points",
+          "recovery": "day"
+        },
+        {
+          "name": "Aktion",
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "category": "action",
+          "maximum": 1,
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "current": 1,
+          "id": "action",
+          "recovery": "scene",
+          "scope": "comment"
+        },
+        {
+          "category": "action",
+          "name": "Bonusaktion",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "maximum": 1,
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "id": "bonus-action",
+          "current": 1,
+          "scope": "comment",
+          "recovery": "scene"
+        },
+        {
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "id": "reaction",
+          "current": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "name": "Reaktion",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "maximum": 1
+        },
+        {
+          "recovery": "day",
+          "maximum": 2,
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "name": "Besondere Aktion",
+          "notes": "",
+          "id": "special-action",
+          "scope": "persistent",
+          "category": "action",
+          "current": 2
+        },
+        {
+          "current": 0,
+          "scope": "persistent",
+          "paymentRole": "universal-substitute",
+          "recovery": "day",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "name": "Aura-Fokuspunkt",
+          "category": "action",
+          "notes": "",
+          "maximum": 0,
+          "id": "aura-focus"
+        },
+        {
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "maximum": 0,
+          "name": "Zauberplatz I",
+          "id": "spell-slot-1",
+          "icon": "",
+          "current": 0,
+          "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "category": "spell-slot",
+          "spellLevel": 1
+        },
+        {
+          "name": "Zauberplatz II",
+          "icon": "",
+          "recovery": "long-rest",
+          "id": "spell-slot-2",
+          "current": 0,
+          "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "maximum": 0,
+          "category": "spell-slot",
+          "spellLevel": 2,
+          "scope": "persistent"
+        },
+        {
+          "id": "spell-slot-3",
+          "current": 0,
+          "scope": "persistent",
+          "spellLevel": 3,
+          "category": "spell-slot",
+          "recovery": "long-rest",
+          "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "name": "Zauberplatz III",
+          "icon": "",
+          "maximum": 0
+        },
+        {
+          "current": 0,
+          "spellLevel": 4,
+          "scope": "persistent",
+          "category": "spell-slot",
+          "id": "spell-slot-4",
+          "icon": "",
+          "name": "Zauberplatz IV",
+          "recovery": "long-rest",
+          "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "maximum": 0
+        },
+        {
+          "category": "spell-slot",
+          "maximum": 0,
+          "icon": "",
+          "name": "Zauberplatz V",
+          "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "id": "spell-slot-5",
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "current": 0,
+          "spellLevel": 5
+        },
+        {
+          "category": "spell-slot",
+          "spellLevel": 6,
+          "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "maximum": 0,
+          "icon": "",
+          "name": "Zauberplatz VI",
+          "id": "spell-slot-6",
+          "current": 0,
+          "scope": "persistent",
+          "recovery": "long-rest"
+        },
+        {
+          "scope": "persistent",
+          "current": 0,
+          "spellLevel": 7,
+          "category": "spell-slot",
+          "id": "spell-slot-7",
+          "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "maximum": 0,
+          "icon": "",
+          "name": "Zauberplatz VII"
+        },
+        {
+          "maximum": 0,
+          "scope": "persistent",
+          "recovery": "long-rest",
+          "id": "spell-slot-8",
+          "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "category": "spell-slot",
+          "spellLevel": 8,
+          "icon": "",
+          "name": "Zauberplatz VIII",
+          "current": 0
+        },
+        {
+          "category": "spell-slot",
+          "maximum": 0,
+          "scope": "persistent",
+          "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "icon": "",
+          "name": "Zauberplatz IX",
+          "id": "spell-slot-9",
+          "current": 0,
+          "recovery": "long-rest",
+          "spellLevel": 9
+        },
+        {
+          "maximum": 0,
+          "scope": "persistent",
+          "category": "spell-slot",
+          "id": "spell-slot-10",
+          "icon": "",
+          "name": "Zauberplatz X",
+          "spellLevel": 10,
+          "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "current": 0
+        }
+      ],
+      "techniques": [
+        {
+          "costs": [
+            {
+              "scope": "comment",
+              "resourceId": "reaction",
+              "amount": 1,
+              "name": "Reaktion",
+              "id": "combat-style-drachentanz-cantref-grund-wacht-reaction-1"
+            }
+          ],
+          "maximumTargets": 1,
+          "category": "technique",
+          "target": "Selbst",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "effect": "+1 RK für einen eigenen Beitrag; kein Angriff.",
+          "weaponTypes": [
+            "spear",
+            "polearm"
+          ],
+          "effects": [
+            {
+              "on": "always",
+              "id": "cantref-grund-wacht-condition",
+              "type": "buff",
+              "condition": {
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "mechanics": {
+                  "armorClass": 1
+                },
+                "id": "cantref-grund-wacht-condition",
+                "description": "+1 RK für einen eigenen Beitrag; kein Angriff.",
+                "duration": "1 eigener Beitrag",
+                "name": "Geschlossene Speerwacht",
+                "tags": "Drachentanz"
+              },
+              "notes": "+1 RK für einen eigenen Beitrag; kein Angriff.",
+              "target": "self"
+            }
+          ],
+          "combatStyleId": "drachentanz",
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "minimumLevel": 2,
+          "name": "Geschlossene Speerwacht",
+          "activationType": "reaction",
+          "status": "confirmed",
+          "damageBonus": 0,
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "attackBonus": 0,
+          "active": true,
+          "damageFormula": "",
+          "targetDefenseModifier": 0,
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false
+          },
+          "id": "combat-style-drachentanz-cantref-grund-wacht",
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "cost": 1,
+            "allowed": true
+          },
+          "range": "Waffenreichweite",
+          "criticalThreshold": 20,
+          "mechanics": {
+            "armorClass": 1
+          },
+          "compatibleWeaponIds": [],
+          "mechanicNotes": [],
+          "damageType": "",
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+          "aiInstructions": "+1 RK für einen eigenen Beitrag; kein Angriff. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "rollMode": "normal",
+          "description": "Die Waffe deckt die eigene Mitte, bevor der nächste Gegner angreift.",
+          "damageModel": {
+            "scalingSteps": [],
+            "mode": "fixed"
+          },
+          "live": true,
+          "cenyrTraining": {
+            "designNotes": "",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "uchelwyrCompatible": false,
+            "requiresDualWield": false,
+            "classWeaponProfiles": {
+              "cantref": [
+                "spear",
+                "lance",
+                "partisan",
+                "trident",
+                "halberd"
+              ]
+            },
+            "branchId": "",
+            "singleTargetOnly": false,
+            "weaponRuleSetId": "",
+            "selectedAtLevel": 2,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "cantref"
+            ],
+            "sourceStatus": "draft"
+          },
+          "grantedLevel": null,
+          "duration": "Sofort"
+        },
+        {
+          "description": "Ein kurzer, kontrollierter Einzelangriff nutzt die freie Waffenlinie.",
+          "category": "technique",
+          "targetDefenseModifier": 0,
+          "damageFormula": "",
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "damageModel": {
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 1,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "bonusFormula": "",
+            "bonusWeaponDieCap": 6,
+            "mode": "weapon-dice"
+          },
+          "grantedLevel": null,
+          "costs": [
+            {
+              "id": "combat-style-drachentanz-cantref-grund-linie-action-1",
+              "resourceId": "action",
+              "scope": "comment",
+              "name": "Aktion",
+              "amount": 1
+            }
+          ],
+          "name": "Stoß an der Schaftlinie",
+          "criticalThreshold": 20,
+          "combatStyleId": "drachentanz",
+          "aiInstructions": "Technikschaden mit +1 auf den Angriffswurf. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "effect": "Technikschaden mit +1 auf den Angriffswurf.",
+          "minimumLevel": 3,
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "attackBonus": 1,
+          "target": "Ein Gegner",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "live": true,
+          "damageBonus": 0,
+          "mechanicNotes": [],
+          "damageType": "",
+          "cenyrTraining": {
+            "classWeaponProfiles": {
+              "cantref": [
+                "spear",
+                "lance",
+                "partisan",
+                "trident",
+                "halberd"
+              ]
+            },
+            "sourceStatus": "draft",
+            "requiresMounted": false,
+            "singleTargetOnly": false,
+            "designNotes": "",
+            "allowedClassIds": [
+              "cantref"
+            ],
+            "slotBands": [
+              "foundation"
+            ],
+            "uchelwyrCompatible": false,
+            "requiresDualWield": false,
+            "branchId": "",
+            "weaponRuleSetId": "",
+            "selectedAtLevel": 3,
+            "requiresShield": false
+          },
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "mechanics": {},
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+          "maximumTargets": 1,
+          "triggerRules": [],
+          "compatibleWeaponIds": [],
+          "range": "Waffenreichweite",
+          "active": true,
+          "id": "combat-style-drachentanz-cantref-grund-linie",
+          "secondarySave": {
+            "enabled": false
+          },
+          "rollMode": "normal",
+          "status": "confirmed",
+          "activationType": "action",
+          "effects": [
+            {
+              "inheritWeaponDamageType": true,
+              "on": "hit",
+              "type": "damage",
+              "formula": "",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "magical": false,
+              "id": "combat-style-drachentanz-cantref-grund-linie-weapon-damage",
+              "damageType": "",
+              "target": "target"
+            }
+          ],
+          "weaponTypes": [
+            "spear",
+            "polearm"
+          ],
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": "aura-focus"
+          },
+          "duration": "Sofort"
+        },
+        {
+          "name": "Schritt hinter der Spitze",
+          "criticalThreshold": 20,
+          "damageFormula": "",
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "category": "technique",
+          "aiInstructions": "+2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "id": "combat-style-drachentanz-cantref-grund-schritt",
+          "description": "Die Figur ordnet ihren Stand und hält einen Weg zur Seite offen.",
+          "grantedLevel": null,
+          "mechanics": {
+            "movement": 2
+          },
+          "combatStyleId": "drachentanz",
+          "range": "Waffenreichweite",
+          "damageModel": {
+            "scalingSteps": [],
+            "mode": "fixed"
+          },
+          "effects": [
+            {
+              "target": "self",
+              "type": "buff",
+              "notes": "+2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung.",
+              "condition": {
+                "mechanics": {
+                  "movement": 2
+                },
+                "id": "cantref-grund-schritt-condition",
+                "duration": "1 eigener Beitrag",
+                "description": "+2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung.",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "name": "Schritt hinter der Spitze",
+                "tags": "Drachentanz"
+              },
+              "id": "cantref-grund-schritt-condition",
+              "on": "always"
+            }
+          ],
+          "cenyrTraining": {
+            "uchelwyrCompatible": false,
+            "selectedAtLevel": 4,
+            "requiresShield": false,
+            "weaponRuleSetId": "",
+            "slotBands": [
+              "foundation"
+            ],
+            "allowedClassIds": [
+              "cantref"
+            ],
+            "classWeaponProfiles": {
+              "cantref": [
+                "spear",
+                "lance",
+                "partisan",
+                "trident",
+                "halberd"
+              ]
+            },
+            "requiresMounted": false,
+            "sourceStatus": "draft",
+            "singleTargetOnly": false,
+            "requiresDualWield": false,
+            "designNotes": "",
+            "branchId": ""
+          },
+          "minimumLevel": 4,
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": "aura-focus"
+          },
+          "weaponTypes": [
+            "spear",
+            "polearm"
+          ],
+          "mechanicNotes": [],
+          "activationType": "reaction",
+          "effect": "+2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung.",
+          "target": "Selbst",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "attackBonus": 0,
+          "live": true,
+          "duration": "Sofort",
+          "triggerRules": [],
+          "status": "confirmed",
+          "damageBonus": 0,
+          "compatibleWeaponIds": [],
+          "secondarySave": {
+            "enabled": false
+          },
+          "rollMode": "normal",
+          "damageType": "",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "targetDefenseModifier": 0,
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+          "maximumTargets": 1,
+          "active": true,
+          "costs": [
+            {
+              "name": "Bonusaktion",
+              "scope": "comment",
+              "amount": 1,
+              "resourceId": "bonus-action",
+              "id": "combat-style-drachentanz-cantref-grund-schritt-bonus-action-1"
+            },
+            {
+              "id": "combat-style-drachentanz-cantref-grund-schritt-reaction-2",
+              "amount": 1,
+              "name": "Reaktion",
+              "resourceId": "reaction",
+              "scope": "comment"
+            }
+          ]
+        },
+        {
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "damageModel": {
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDieCap": 8,
+            "bonusFormula": "",
+            "mode": "weapon-dice",
+            "bonusWeaponDice": 1,
+            "bonusModifier": 1,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "secondarySave": {
+            "enabled": false
+          },
+          "duration": "Sofort",
+          "description": "Die ganze Waffenführung bündelt sich in einem entschlossenen Einzelangriff.",
+          "rollMode": "normal",
+          "range": "Waffenreichweite",
+          "mechanicNotes": [],
+          "mechanics": {},
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+          "grantedLevel": null,
+          "cenyrTraining": {
+            "uchelwyrCompatible": false,
+            "weaponRuleSetId": "",
+            "selectedAtLevel": 5,
+            "sourceStatus": "draft",
+            "classWeaponProfiles": {
+              "cantref": [
+                "spear",
+                "lance",
+                "partisan",
+                "trident",
+                "halberd"
+              ]
+            },
+            "allowedClassIds": [
+              "cantref"
+            ],
+            "requiresShield": false,
+            "requiresMounted": false,
+            "designNotes": "",
+            "slotBands": [
+              "foundation"
+            ],
+            "branchId": "",
+            "singleTargetOnly": false,
+            "requiresDualWield": false
+          },
+          "aiInstructions": "Verstärkter Technikschaden aus der gemeinsamen Schadensstaffel; kein kostenloser Folgeangriff. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "criticalThreshold": 20,
+          "live": true,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "damageType": "",
+          "target": "Ein Gegner",
+          "minimumLevel": 5,
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "combatStyleId": "drachentanz",
+          "attackBonus": 0,
+          "effect": "Verstärkter Technikschaden aus der gemeinsamen Schadensstaffel; kein kostenloser Folgeangriff.",
+          "name": "Durchbruch des Grenzwächters",
+          "maximumTargets": 1,
+          "damageBonus": 0,
+          "costs": [
+            {
+              "id": "combat-style-drachentanz-cantref-grund-durchbruch-action-1",
+              "name": "Aktion",
+              "resourceId": "action",
+              "scope": "comment",
+              "amount": 1
+            },
+            {
+              "id": "combat-style-drachentanz-cantref-grund-durchbruch-special-action-2",
+              "resourceId": "special-action",
+              "amount": 1,
+              "scope": "persistent",
+              "name": "Besondere Aktion"
+            }
+          ],
+          "weaponTypes": [
+            "spear",
+            "polearm"
+          ],
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "allowed": true,
+            "cost": 1
+          },
+          "status": "confirmed",
+          "triggerRules": [],
+          "damageFormula": "",
+          "activationType": "action",
+          "active": true,
+          "id": "combat-style-drachentanz-cantref-grund-durchbruch",
+          "targetDefenseModifier": 0,
+          "compatibleWeaponIds": [],
+          "category": "technique",
+          "effects": [
+            {
+              "damageType": "",
+              "on": "hit",
+              "type": "damage",
+              "magical": false,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "target": "target",
+              "id": "combat-style-drachentanz-cantref-grund-durchbruch-weapon-damage",
+              "formula": "",
+              "inheritWeaponDamageType": true
+            }
+          ]
+        },
+        {
+          "name": "Kuss der Speerspitze",
+          "description": "Ein kurzer gerader Stich prüft Abstand und Deckung, ohne die Linie des Cantref zu öffnen.",
+          "costs": [
+            {
+              "scope": "comment",
+              "amount": 1,
+              "id": "combat-style-drachentanz-cantref-jungdrache-kuss-der-speerspitze-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion"
+            }
+          ],
+          "mechanics": {},
+          "grantedLevel": null,
+          "compatibleWeaponIds": [],
+          "effects": [
+            {
+              "damageType": "",
+              "type": "damage",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "magical": false,
+              "id": "combat-style-drachentanz-cantref-jungdrache-kuss-der-speerspitze-weapon-damage",
+              "inheritWeaponDamageType": true,
+              "target": "target",
+              "formula": "",
+              "on": "hit"
+            },
+            {
+              "on": "hit",
+              "id": "cantref-kuss-move-movement",
+              "type": "move",
+              "movementMeters": 1,
+              "target": "self",
+              "notes": "Kontrollierter Schritt nach dem Stich.",
+              "movementKind": "move"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageFormula": "1d6",
+          "damageModel": {
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "mode": "fixed",
+            "bonusFormula": "",
+            "bonusWeaponDieCap": 6,
+            "weaponDiceMultiplier": 1
+          },
+          "aiInstructions": "Verursacht Technikschaden und erlaubt danach einen Schritt von 1 Meter, ohne die Speerspitze vom Ziel zu lösen. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "criticalThreshold": 20,
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "damageType": "",
+          "combatStyleId": "drachentanz",
+          "category": "technique",
+          "attackBonus": 0,
+          "range": "Waffenreichweite",
+          "active": true,
+          "maximumTargets": 1,
+          "mechanicNotes": [],
+          "duration": "Sofort",
+          "damageBonus": 0,
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "triggerRules": [],
+          "status": "confirmed",
+          "id": "combat-style-drachentanz-cantref-jungdrache-kuss-der-speerspitze",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "rollMode": "normal",
+          "cenyrTraining": {
+            "classWeaponProfiles": {
+              "cantref": [
+                "spear",
+                "lance",
+                "partisan",
+                "trident",
+                "halberd"
+              ],
+              "uchelwyr": [
+                "lance"
+              ]
+            },
+            "designNotes": "",
+            "sourceStatus": "draft",
+            "requiresShield": false,
+            "singleTargetOnly": false,
+            "selectedAtLevel": 1,
+            "weaponRuleSetId": "cantref-polearm",
+            "requiresDualWield": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "branchId": "",
+            "uchelwyrCompatible": true,
+            "allowedClassIds": [
+              "cantref",
+              "uchelwyr"
+            ],
+            "requiresMounted": false
+          },
+          "effect": "Verursacht Technikschaden und erlaubt danach einen Schritt von 1 Meter, ohne die Speerspitze vom Ziel zu lösen.",
+          "secondarySave": {
+            "enabled": false
+          },
+          "live": true,
+          "target": "Ein Gegner",
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "minimumLevel": 1,
+          "activationType": "bonus-action",
+          "targetDefenseModifier": 0,
+          "weaponTypes": [
+            "spear",
+            "polearm"
+          ],
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform"
+        },
+        {
+          "combatStyleId": "drachentanz",
+          "weaponTypes": [
+            "spear",
+            "polearm"
+          ],
+          "live": true,
+          "rollMode": "normal",
+          "aiInstructions": "Verursacht Technikschaden. Misslingt ein Stärkerettungswurf, erhält das Ziel −1 Angriff bis zu seinem nächsten Beitrag. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "mechanics": {},
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+          "duration": "Sofort",
+          "grantedLevel": null,
+          "damageFormula": "",
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "id": "combat-style-drachentanz-cantref-jungdrache-haken-des-jungdrachen",
+          "effects": [
+            {
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "damageType": "",
+              "formula": "",
+              "target": "target",
+              "id": "combat-style-drachentanz-cantref-jungdrache-haken-des-jungdrachen-weapon-damage",
+              "type": "damage",
+              "magical": false,
+              "on": "hit",
+              "inheritWeaponDamageType": true
+            }
+          ],
+          "damageBonus": 0,
+          "costs": [
+            {
+              "scope": "comment",
+              "resourceId": "action",
+              "amount": 1,
+              "name": "Aktion",
+              "id": "combat-style-drachentanz-cantref-jungdrache-haken-des-jungdrachen-action-1"
+            },
+            {
+              "scope": "comment",
+              "amount": 1,
+              "resourceId": "reaction",
+              "id": "combat-style-drachentanz-cantref-jungdrache-haken-des-jungdrachen-reaction-2",
+              "name": "Reaktion"
+            }
+          ],
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "attackBonus": 0,
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "effect": "Verursacht Technikschaden. Misslingt ein Stärkerettungswurf, erhält das Ziel −1 Angriff bis zu seinem nächsten Beitrag.",
+          "target": "Ein Gegner",
+          "auraBypass": {
+            "cost": 1,
+            "resourceId": "aura-focus",
+            "allowed": true
+          },
+          "secondarySave": {
+            "attributeKey": "strength",
+            "enabled": true,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "name": "Verhakte Haltung",
+              "duration": "1 eigener Beitrag",
+              "tags": "Drachentanz",
+              "mechanics": {
+                "attack": -1
+              },
+              "description": "Die verhakte Haltung erschwert den nächsten Angriff.",
+              "id": "cantref-haken-failed-save"
+            },
+            "dcBase": 8
+          },
+          "activationType": "action",
+          "triggerRules": [],
+          "damageModel": {
+            "bonusFormula": "",
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 8,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "cenyrTraining": {
+            "uchelwyrCompatible": true,
+            "slotBands": [
+              "foundation"
+            ],
+            "singleTargetOnly": false,
+            "weaponRuleSetId": "cantref-polearm",
+            "selectedAtLevel": 2,
+            "requiresMounted": false,
+            "classWeaponProfiles": {
+              "cantref": [
+                "spear",
+                "lance",
+                "partisan",
+                "trident",
+                "halberd"
+              ],
+              "uchelwyr": [
+                "lance"
+              ]
+            },
+            "allowedClassIds": [
+              "cantref",
+              "uchelwyr"
+            ],
+            "requiresDualWield": false,
+            "branchId": "",
+            "requiresShield": false,
+            "designNotes": "",
+            "sourceStatus": "draft"
+          },
+          "compatibleWeaponIds": [],
+          "category": "technique",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "active": true,
+          "name": "Haken des Jungdrachens",
+          "range": "Waffenreichweite",
+          "maximumTargets": 1,
+          "damageType": "",
+          "status": "confirmed",
+          "mechanicNotes": [],
+          "description": "Schaft und Blatt greifen Waffe, Arm oder Bein des Gegners und reißen dessen Haltung auf.",
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "minimumLevel": 2
+        },
+        {
+          "aiInstructions": "Reaktionsangriff mit Technikschaden. Bis zum nächsten eigenen Beitrag steigt die Rüstungsklasse um 1. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "compatibleWeaponIds": [],
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "minimumLevel": 3,
+          "secondarySave": {
+            "enabled": false
+          },
+          "name": "Wacht der langen Schuppe",
+          "damageType": "",
+          "id": "combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe",
+          "description": "Der Cantref fängt einen Vorstoß an der äußersten Reichweite ab und antwortet aus sicherer Linie.",
+          "cenyrTraining": {
+            "weaponRuleSetId": "cantref-polearm",
+            "selectedAtLevel": 3,
+            "singleTargetOnly": false,
+            "designNotes": "",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "allowedClassIds": [
+              "cantref",
+              "uchelwyr"
+            ],
+            "classWeaponProfiles": {
+              "cantref": [
+                "spear",
+                "lance",
+                "partisan",
+                "trident",
+                "halberd"
+              ],
+              "uchelwyr": [
+                "lance"
+              ]
+            },
+            "uchelwyrCompatible": true,
+            "requiresMounted": false,
+            "requiresDualWield": false,
+            "sourceStatus": "draft",
+            "branchId": ""
+          },
+          "triggerRules": [],
+          "mechanicNotes": [],
+          "range": "Waffenreichweite",
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": "aura-focus"
+          },
+          "category": "technique",
+          "damageModel": {
+            "bonusModifier": 1,
+            "bonusWeaponDieCap": 4,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "bonusFormula": "",
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 0
+          },
+          "activationType": "reaction",
+          "combatStyleId": "drachentanz",
+          "duration": "Sofort",
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "weaponTypes": [
+            "spear",
+            "polearm"
+          ],
+          "rollMode": "normal",
+          "target": "Ein Gegner",
+          "effect": "Reaktionsangriff mit Technikschaden. Bis zum nächsten eigenen Beitrag steigt die Rüstungsklasse um 1.",
+          "targetDefenseModifier": 0,
+          "attackBonus": 0,
+          "maximumTargets": 1,
+          "damageBonus": 0,
+          "grantedLevel": null,
+          "damageFormula": "",
+          "status": "confirmed",
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+          "costs": [
+            {
+              "id": "combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe-reaction-1",
+              "resourceId": "reaction",
+              "scope": "comment",
+              "name": "Reaktion",
+              "amount": 1
+            }
+          ],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "effects": [
+            {
+              "id": "combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe-weapon-damage",
+              "damageType": "",
+              "magical": false,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "on": "hit",
+              "inheritWeaponDamageType": true,
+              "target": "target",
+              "formula": "",
+              "type": "damage"
+            },
+            {
+              "type": "buff",
+              "notes": "Die Stangenwaffe hält die Angriffslinie geschlossen.",
+              "id": "cantref-wacht-condition",
+              "on": "always",
+              "target": "self",
+              "condition": {
+                "duration": "1 eigener Beitrag",
+                "id": "cantref-wacht-condition",
+                "mechanics": {
+                  "armorClass": 1
+                },
+                "name": "Lange Wacht",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Drachentanz",
+                "description": "Die Stangenwaffe hält die Angriffslinie geschlossen."
+              }
+            }
+          ],
+          "active": true,
+          "mechanics": {},
+          "live": true,
+          "criticalThreshold": 20
+        },
+        {
+          "duration": "Sofort",
+          "grantedLevel": null,
+          "id": "combat-style-drachentanz-cantref-jungdrache-kreisender-dorn",
+          "combatStyleId": "drachentanz",
+          "range": "Waffenreichweite",
+          "weaponTypes": [
+            "spear",
+            "polearm"
+          ],
+          "rollMode": "normal",
+          "aiInstructions": "Trifft bis zu zwei Gegner in Waffenreichweite mit je Technikschaden; jeder Treffer wird einzeln gewürfelt. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "damageBonus": 0,
+          "attackBonus": 0,
+          "damageFormula": "",
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "name": "Kreisender Dorn",
+          "criticalThreshold": 20,
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "compatibleWeaponIds": [],
+          "secondarySave": {
+            "enabled": false
+          },
+          "target": "Bis zu zwei Gegner",
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+          "triggerRules": [],
+          "effect": "Trifft bis zu zwei Gegner in Waffenreichweite mit je Technikschaden; jeder Treffer wird einzeln gewürfelt.",
+          "costs": [
+            {
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "id": "combat-style-drachentanz-cantref-jungdrache-kreisender-dorn-action-1",
+              "scope": "comment"
+            },
+            {
+              "resourceId": "bonus-action",
+              "scope": "comment",
+              "id": "combat-style-drachentanz-cantref-jungdrache-kreisender-dorn-bonus-action-2",
+              "name": "Bonusaktion",
+              "amount": 1
+            },
+            {
+              "amount": 1,
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "scope": "comment",
+              "id": "combat-style-drachentanz-cantref-jungdrache-kreisender-dorn-reaction-3"
+            }
+          ],
+          "damageType": "",
+          "activationType": "action",
+          "mechanics": {},
+          "live": true,
+          "targetDefenseModifier": 0,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanicNotes": [],
+          "active": true,
+          "description": "Ein weiter Griffwechsel führt Spitze oder Blatt in einem kontrollierten Halbkreis durch die Front.",
+          "minimumLevel": 4,
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "effects": [
+            {
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "id": "combat-style-drachentanz-cantref-jungdrache-kreisender-dorn-weapon-damage",
+              "formula": "",
+              "inheritWeaponDamageType": true,
+              "type": "damage",
+              "magical": false,
+              "on": "hit",
+              "damageType": "",
+              "target": "target"
+            }
+          ],
+          "cenyrTraining": {
+            "singleTargetOnly": false,
+            "requiresDualWield": false,
+            "sourceStatus": "draft",
+            "uchelwyrCompatible": false,
+            "requiresShield": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "branchId": "",
+            "weaponRuleSetId": "cantref-polearm",
+            "selectedAtLevel": 4,
+            "requiresMounted": false,
+            "designNotes": "",
+            "classWeaponProfiles": {
+              "cantref": [
+                "spear",
+                "lance",
+                "partisan",
+                "trident",
+                "halberd"
+              ]
+            },
+            "allowedClassIds": [
+              "cantref"
+            ]
+          },
+          "damageModel": {
+            "bonusFormula": "",
+            "weaponDiceMultiplier": 1,
+            "bonusModifier": 1,
+            "mode": "weapon-dice",
+            "bonusWeaponDice": 1,
+            "bonusWeaponDieCap": 6,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ]
+          },
+          "category": "technique",
+          "status": "confirmed",
+          "maximumTargets": 2
+        },
+        {
+          "maximumTargets": 1,
+          "id": "combat-style-drachentanz-cantref-jungdrache-durchstossende-spur",
+          "effect": "Verursacht Technikschaden und behandelt die Zielverteidigung als 1 Punkt niedriger.",
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "name": "Durchstoßende Spur",
+          "target": "Ein Gegner",
+          "secondarySave": {
+            "enabled": false
+          },
+          "damageModel": {
+            "weaponDiceMultiplier": 1,
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ],
+            "bonusFormula": "",
+            "bonusWeaponDieCap": 8,
+            "mode": "weapon-dice",
+            "bonusWeaponDice": 1,
+            "bonusModifier": 1
+          },
+          "description": "Der Cantref setzt den ganzen Körper hinter einen geraden Vorstoß und treibt die Spitze durch die Deckung.",
+          "criticalThreshold": 20,
+          "damageType": "",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "duration": "Sofort",
+          "activationType": "action",
+          "active": true,
+          "mechanicNotes": [],
+          "grantedLevel": null,
+          "targetDefenseModifier": -1,
+          "cenyrTraining": {
+            "classWeaponProfiles": {
+              "cantref": [
+                "spear",
+                "lance",
+                "partisan",
+                "trident",
+                "halberd"
+              ]
+            },
+            "requiresShield": false,
+            "designNotes": "",
+            "slotBands": [
+              "foundation"
+            ],
+            "weaponRuleSetId": "cantref-polearm",
+            "selectedAtLevel": 5,
+            "requiresDualWield": false,
+            "requiresMounted": false,
+            "branchId": "",
+            "singleTargetOnly": false,
+            "allowedClassIds": [
+              "cantref"
+            ],
+            "uchelwyrCompatible": false,
+            "sourceStatus": "draft"
+          },
+          "status": "confirmed",
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": "aura-focus"
+          },
+          "costs": [
+            {
+              "resourceId": "action",
+              "id": "combat-style-drachentanz-cantref-jungdrache-durchstossende-spur-action-1",
+              "amount": 1,
+              "scope": "comment",
+              "name": "Aktion"
+            },
+            {
+              "id": "combat-style-drachentanz-cantref-jungdrache-durchstossende-spur-bonus-action-2",
+              "name": "Bonusaktion",
+              "resourceId": "bonus-action",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "amount": 1,
+              "scope": "comment",
+              "name": "Reaktion",
+              "id": "combat-style-drachentanz-cantref-jungdrache-durchstossende-spur-reaction-3",
+              "resourceId": "reaction"
+            }
+          ],
+          "rollMode": "normal",
+          "mechanics": {},
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "minimumLevel": 5,
+          "effects": [
+            {
+              "magical": false,
+              "on": "hit",
+              "damageType": "",
+              "type": "damage",
+              "target": "target",
+              "inheritWeaponDamageType": true,
+              "id": "combat-style-drachentanz-cantref-jungdrache-durchstossende-spur-weapon-damage",
+              "formula": "",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "attackBonus": 0,
+          "combatStyleId": "drachentanz",
+          "category": "technique",
+          "damageBonus": 0,
+          "weaponTypes": [
+            "spear",
+            "polearm"
+          ],
+          "aiInstructions": "Verursacht Technikschaden und behandelt die Zielverteidigung als 1 Punkt niedriger. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "live": true,
+          "triggerRules": [],
+          "range": "Waffenreichweite",
+          "damageFormula": "",
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+          "compatibleWeaponIds": []
+        },
+        {
+          "name": "Sechszackige Linie",
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "maximumTargets": 1,
+          "attackBonus": 0,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "secondarySave": {
+            "dcAttributeKey": "strength",
+            "dcBase": 8,
+            "attributeKey": "dexterity",
+            "failureCondition": {
+              "tags": "Drachentanz",
+              "duration": "1 eigener Beitrag",
+              "name": "Gebrochene Linie",
+              "mechanics": {
+                "armorClass": -1
+              },
+              "id": "cantref-sechszackig-failed-save",
+              "description": "Der Zielstand wird durch die Folge der Stöße aufgebrochen."
+            },
+            "addProficiency": true,
+            "enabled": true
+          },
+          "damageBonus": 0,
+          "trainingForm": "Drachentanz · Tanz des Jungdrachens",
+          "cenyrTraining": {
+            "sourceStatus": "draft",
+            "branchId": "",
+            "slotBands": [
+              "foundation"
+            ],
+            "classWeaponProfiles": {
+              "cantref": [
+                "spear",
+                "lance",
+                "partisan",
+                "trident",
+                "halberd"
+              ]
+            },
+            "designNotes": "",
+            "singleTargetOnly": false,
+            "allowedClassIds": [
+              "cantref"
+            ],
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "selectedAtLevel": 6,
+            "weaponRuleSetId": "cantref-polearm",
+            "requiresDualWield": false,
+            "requiresShield": false
+          },
+          "grantedLevel": null,
+          "weaponTypes": [
+            "spear",
+            "polearm"
+          ],
+          "duration": "Sofort",
+          "activationType": "action",
+          "damageType": "",
+          "rollMode": "normal",
+          "combatStyleFormId": "drachentanz-form-i-jungdrache",
+          "compatibleWeaponIds": [],
+          "range": "Waffenreichweite",
+          "mechanicNotes": [],
+          "minimumLevel": 6,
+          "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
+          "combatStyleId": "drachentanz",
+          "effects": [
+            {
+              "type": "damage",
+              "id": "combat-style-drachentanz-cantref-jungdrache-sechszackige-linie-weapon-damage",
+              "target": "target",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "formula": "",
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "damageType": ""
+            }
+          ],
+          "mechanics": {},
+          "criticalThreshold": 20,
+          "damageModel": {
+            "bonusModifier": 2,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ],
+            "bonusWeaponDieCap": 8,
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 1,
+            "bonusFormula": ""
+          },
+          "description": "Sechs Lehrstöße wechseln Höhe, Seite und Griff, bis die gegnerische Linie keine sichere Öffnung mehr kennt.",
+          "category": "technique",
+          "effect": "Verursacht Technikschaden. Misslingt ein Geschicklichkeitsrettungswurf, wird das Ziel 2 Meter zurückgedrängt.",
+          "target": "Ein Gegner",
+          "damageFormula": "",
+          "triggerRules": [],
+          "live": true,
+          "status": "confirmed",
+          "aiInstructions": "Verursacht Technikschaden. Misslingt ein Geschicklichkeitsrettungswurf, wird das Ziel 2 Meter zurückgedrängt. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
+          "targetDefenseModifier": 0,
+          "active": true,
+          "costs": [
+            {
+              "scope": "comment",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "id": "combat-style-drachentanz-cantref-jungdrache-sechszackige-linie-action-1"
+            },
+            {
+              "resourceId": "bonus-action",
+              "id": "combat-style-drachentanz-cantref-jungdrache-sechszackige-linie-bonus-action-2",
+              "scope": "comment",
+              "name": "Bonusaktion",
+              "amount": 1
+            },
+            {
+              "name": "Besondere Aktion",
+              "resourceId": "special-action",
+              "scope": "persistent",
+              "id": "combat-style-drachentanz-cantref-jungdrache-sechszackige-linie-special-action-3",
+              "amount": 1
+            }
+          ],
+          "id": "combat-style-drachentanz-cantref-jungdrache-sechszackige-linie"
+        }
+      ],
+      "proficiencies": {
+        "notes": "",
+        "armor": [
+          "medium",
+          "heavy"
+        ],
+        "languages": [],
+        "weapons": [
+          "simple",
+          "martial",
+          "spear",
+          "polearm"
+        ],
+        "tools": [
+          "Heraldik und höfische Etikette"
+        ]
+      },
+      "conditions": [],
+      "hitPoints": {
+        "temporary": 0,
+        "current": 73,
+        "hitDie": 10,
+        "vitality": {
+          "version": 1,
+          "legacyIncrease": 2,
+          "overrideAnchor": null
+        },
+        "maximumOverride": null,
+        "averagePerLevelOverride": null
+      },
+      "armorClass": {
+        "shieldBonus": 0,
+        "otherModifier": 0,
+        "magicModifier": 0,
+        "dexterityCap": 2,
+        "base": 10,
+        "dexterityMode": "full",
+        "overrideMode": "total",
+        "override": null
+      },
+      "savingThrows": [
+        {
+          "bonus": 0,
+          "expertise": false,
+          "proficient": true,
+          "attributeKey": "strength"
+        },
+        {
+          "proficient": false,
+          "bonus": 0,
+          "attributeKey": "dexterity",
+          "expertise": false
+        },
+        {
+          "proficient": true,
+          "attributeKey": "constitution",
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "bonus": 0,
+          "attributeKey": "intelligence",
+          "proficient": false,
+          "expertise": false
+        },
+        {
+          "expertise": false,
+          "bonus": 0,
+          "proficient": false,
+          "attributeKey": "wisdom"
+        },
+        {
+          "proficient": false,
+          "expertise": false,
+          "attributeKey": "charisma",
+          "bonus": 0
+        }
+      ],
+      "classTraining": {
+        "schemaVersion": 2,
+        "techniqueSelections": [
+          {
+            "selectedAtLevel": 1,
+            "techniqueId": "combat-style-drachentanz-cantref-jungdrache-kuss-der-speerspitze",
+            "slotId": "foundation-01"
+          },
+          {
+            "techniqueId": "combat-style-drachentanz-cantref-jungdrache-haken-des-jungdrachen",
+            "selectedAtLevel": 2,
+            "slotId": "foundation-02"
+          },
+          {
+            "selectedAtLevel": 3,
+            "slotId": "foundation-03",
+            "techniqueId": "combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe"
+          },
+          {
+            "techniqueId": "combat-style-drachentanz-cantref-jungdrache-kreisender-dorn",
+            "slotId": "foundation-04",
+            "selectedAtLevel": 4
+          },
+          {
+            "techniqueId": "combat-style-drachentanz-cantref-jungdrache-durchstossende-spur",
+            "slotId": "foundation-05",
+            "selectedAtLevel": 5
+          },
+          {
+            "slotId": "foundation-06",
+            "selectedAtLevel": 6,
+            "techniqueId": "combat-style-drachentanz-cantref-jungdrache-sechszackige-linie"
+          }
+        ],
+        "selections": [],
+        "curriculumId": "cenyr-cantref"
+      },
+      "identity": {
+        "archetype": "Cantref",
+        "ancestry": "Cenyr",
+        "background": "Ritter"
+      },
+      "armorItems": [
+        {
+          "kind": "armor",
+          "notes": "Startausrüstung der gewählten Klasse",
+          "image": "",
+          "id": "starter-cantref-chainmail",
+          "properties": "Startausrüstung der gewählten Klasse",
+          "dexterityUnlockLevel": 0,
+          "triggerRules": [],
+          "equipped": true,
+          "armorClassBonus": 0,
+          "dexterityCap": 2,
+          "baseArmorClass": 16,
+          "inventoryItemId": "equipment-armor-starter-cantref-chainmail",
+          "name": "Saethwyr Plattenrüstung",
+          "dexterityMode": "none"
+        }
+      ],
+      "cheats": {
+        "automaticCritical": false,
+        "enabled": false
+      },
+      "combat": {
+        "damageBonus": 0,
+        "passivePerceptionBonus": 0,
+        "mounted": false,
+        "canActAtZeroHitPoints": false,
+        "movement": 9,
+        "initiativeBonus": 0,
+        "attackBonus": 0
+      },
+      "damageAffinities": [],
+      "schemaVersion": 11,
+      "attributes": [
+        {
+          "label": "Kraft",
+          "key": "strength",
+          "shortLabel": "KRF",
+          "score": 14,
+          "modifierOverride": null
+        },
+        {
+          "label": "Geschick",
+          "modifierOverride": null,
+          "key": "dexterity",
+          "score": 14,
+          "shortLabel": "GES"
+        },
+        {
+          "score": 16,
+          "modifierOverride": null,
+          "key": "constitution",
+          "label": "Konstitution",
+          "shortLabel": "KON"
+        },
+        {
+          "shortLabel": "INT",
+          "label": "Intelligenz",
+          "modifierOverride": null,
+          "key": "intelligence",
+          "score": 9
+        },
+        {
+          "label": "Weisheit",
+          "key": "wisdom",
+          "shortLabel": "WEI",
+          "modifierOverride": null,
+          "score": 14
+        },
+        {
+          "key": "charisma",
+          "score": 9,
+          "shortLabel": "CHA",
+          "label": "Charisma",
+          "modifierOverride": null
+        }
+      ],
+      "skills": [
+        {
+          "attributeKey": "strength",
+          "name": "Athletik",
+          "bonus": 0,
+          "id": "default-skill-1",
+          "proficiency": "none",
+          "notes": ""
+        },
+        {
+          "id": "default-skill-2",
+          "proficiency": "none",
+          "notes": "",
+          "name": "Akrobatik",
+          "attributeKey": "dexterity",
+          "bonus": 0
+        },
+        {
+          "name": "Fingerfertigkeit",
+          "proficiency": "none",
+          "id": "default-skill-3",
+          "bonus": 0,
+          "attributeKey": "dexterity",
+          "notes": ""
+        },
+        {
+          "attributeKey": "dexterity",
+          "notes": "",
+          "bonus": 0,
+          "proficiency": "none",
+          "name": "Heimlichkeit",
+          "id": "default-skill-4"
+        },
+        {
+          "proficiency": "none",
+          "attributeKey": "intelligence",
+          "id": "default-skill-5",
+          "notes": "",
+          "bonus": 0,
+          "name": "Arkane Kunde"
+        },
+        {
+          "name": "Geschichte",
+          "attributeKey": "intelligence",
+          "proficiency": "trained",
+          "id": "default-skill-6",
+          "bonus": 0,
+          "notes": "Geübt durch Stufe-1-Vorlage"
+        },
+        {
+          "proficiency": "none",
+          "notes": "",
+          "id": "default-skill-7",
+          "bonus": 0,
+          "name": "Nachforschungen",
+          "attributeKey": "intelligence"
+        },
+        {
+          "bonus": 0,
+          "id": "default-skill-8",
+          "notes": "",
+          "name": "Naturkunde",
+          "proficiency": "none",
+          "attributeKey": "intelligence"
+        },
+        {
+          "attributeKey": "intelligence",
+          "name": "Religion",
+          "id": "default-skill-9",
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "proficiency": "trained",
+          "bonus": 0
+        },
+        {
+          "proficiency": "none",
+          "id": "default-skill-10",
+          "notes": "",
+          "name": "Heilkunde",
+          "bonus": 0,
+          "attributeKey": "wisdom"
+        },
+        {
+          "notes": "",
+          "bonus": 0,
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "id": "default-skill-11",
+          "name": "Mit Tieren umgehen"
+        },
+        {
+          "proficiency": "trained",
+          "id": "default-skill-12",
+          "attributeKey": "wisdom",
+          "name": "Motiv erkennen",
+          "bonus": 0,
+          "notes": "Geübt durch Stufe-1-Vorlage"
+        },
+        {
+          "proficiency": "none",
+          "attributeKey": "wisdom",
+          "name": "Überleben",
+          "notes": "",
+          "bonus": 0,
+          "id": "default-skill-13"
+        },
+        {
+          "bonus": 0,
+          "name": "Wahrnehmung",
+          "notes": "",
+          "id": "default-skill-14",
+          "attributeKey": "wisdom",
+          "proficiency": "none"
+        },
+        {
+          "name": "Auftreten",
+          "proficiency": "trained",
+          "bonus": 0,
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "id": "default-skill-15",
+          "attributeKey": "charisma"
+        },
+        {
+          "id": "default-skill-16",
+          "attributeKey": "charisma",
+          "notes": "",
+          "bonus": 0,
+          "proficiency": "none",
+          "name": "Einschüchtern"
+        },
+        {
+          "bonus": 0,
+          "name": "Täuschen",
+          "notes": "",
+          "attributeKey": "charisma",
+          "id": "default-skill-17",
+          "proficiency": "none"
+        },
+        {
+          "id": "default-skill-18",
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "bonus": 0,
+          "proficiency": "trained",
+          "attributeKey": "charisma",
+          "name": "Überreden"
+        },
+        {
+          "id": "default-skill-19",
+          "notes": "",
+          "name": "Flirten",
+          "bonus": 0,
+          "proficiency": "none",
+          "attributeKey": "charisma"
+        },
+        {
+          "id": "default-skill-20",
+          "attributeKey": "constitution",
+          "bonus": 0,
+          "notes": "",
+          "proficiency": "none",
+          "name": "Körperbeherrschung"
+        }
+      ],
+      "progression": {
+        "level": 6,
+        "experienceReward": null,
+        "nextLevelExperience": null,
+        "experience": 0,
+        "actionPoolChoices": [],
+        "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "proficiencyBonusOverride": null
+      },
+      "notes": "",
+      "abilities": [
+        {
+          "id": "martial-durchschnaufen",
+          "name": "Durchschnaufen",
+          "active": true,
+          "combatUsable": true,
+          "minimumLevel": 1,
+          "activationType": "bonus-action",
+          "delivery": "ability",
+          "resolutionType": "automatic",
+          "target": "Selbst",
+          "range": "Selbst",
+          "recovery": "long-rest",
+          "usesMaximum": 1,
+          "usesCurrent": 1,
+          "description": "Regeneriere 1 eigenen Klassen-Trefferwürfel + 10 % der maximalen TP (aufgerundet), höchstens bis zum TP-Maximum. Kein KON-Bonus. Einmal pro langer Rast.",
+          "costs": [
+            {
+              "id": "second-wind-bonus",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false
+          },
+          "tags": "Erholung · Lange Rast",
+          "effects": [
+            {
+              "id": "second-wind-heal",
+              "type": "healing",
+              "target": "self",
+              "on": "always",
+              "formula": "1d8",
+              "scaling": "hit-die-and-tenth-maximum"
+            }
+          ]
+        }
+      ],
+      "aura": {
+        "name": "Aura",
+        "latentPresence": {
+          "allyMechanics": {
+            "attack": 0,
+            "maximumHitPoints": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrowAdvantageAttributes": [],
+            "attackRollMode": "normal",
+            "passivePerception": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "bonusDamageFormula": "",
+            "spellAttack": 0,
+            "movement": 0,
+            "savingThrow": 0,
+            "armorClass": 0,
+            "skill": 0,
+            "spellSaveDc": 0,
+            "initiative": 0,
+            "damage": 0
+          },
+          "radius": "",
+          "target": "Umgebung, Verbündete und Gegner",
+          "duration": "",
+          "trigger": "",
+          "requirements": "",
+          "name": "Latente Präsenz",
+          "active": true,
+          "selfMechanics": {
+            "damage": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "skill": 0,
+            "movement": 0,
+            "attackRollMode": "normal",
+            "passivePerception": 0,
+            "armorClass": 0,
+            "savingThrowAdvantageAttributes": [],
+            "combatStartTemporaryHitPoints": 0,
+            "bonusDamageFormula": "",
+            "attack": 0,
+            "maximumHitPoints": 0,
+            "initiative": 0,
+            "spellSaveDc": 0
+          },
+          "enemyMechanics": {
+            "initiative": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "damage": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "bonusDamageFormula": "",
+            "armorClass": 0,
+            "passivePerception": 0,
+            "movement": 0,
+            "attackRollMode": "normal",
+            "spellSaveDc": 0,
+            "skill": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attack": 0,
+            "savingThrowAdvantageAttributes": []
+          },
+          "description": "",
+          "aiInstructions": "",
+          "enabled": true
+        },
+        "activeForm": {
+          "trigger": "",
+          "active": false,
+          "selfMechanics": {
+            "spellAttack": 0,
+            "passivePerception": 0,
+            "savingThrow": 0,
+            "damage": 0,
+            "maximumHitPoints": 0,
+            "bonusDamageFormula": "",
+            "attackRollMode": "normal",
+            "combatStartTemporaryHitPoints": 0,
+            "attack": 0,
+            "spellSaveDc": 0,
+            "skill": 0,
+            "movement": 0,
+            "armorClass": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrowAdvantageAttributes": [],
+            "initiative": 0
+          },
+          "name": "Aktive Form",
+          "enabled": false,
+          "duration": "",
+          "radius": "",
+          "target": "Selbst und gewählte Ziele",
+          "allyMechanics": {
+            "spellSaveDc": 0,
+            "damage": 0,
+            "skill": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attackRollMode": "normal",
+            "savingThrowAdvantageAttributes": [],
+            "spellAttack": 0,
+            "savingThrow": 0,
+            "attack": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "initiative": 0,
+            "armorClass": 0,
+            "bonusDamageFormula": "",
+            "passivePerception": 0,
+            "maximumHitPoints": 0,
+            "movement": 0
+          },
+          "aiInstructions": "",
+          "enemyMechanics": {
+            "movement": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "attackRollMode": "normal",
+            "spellAttack": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "damage": 0,
+            "savingThrow": 0,
+            "attack": 0,
+            "bonusDamageFormula": "",
+            "skill": 0,
+            "spellSaveDc": 0,
+            "passivePerception": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrowAdvantageAttributes": [],
+            "maximumHitPoints": 0
+          },
+          "description": "",
+          "requirements": ""
+        },
+        "enabled": false,
+        "focusBypassCost": 1,
+        "focusResourceId": "aura-focus",
+        "notes": "",
+        "domain": ""
+      },
+      "magic": {
+        "focusResourceId": "focus",
+        "spellSaveDcOverride": null,
+        "notes": "",
+        "casterTier": "full",
+        "spellAttackOverride": null,
+        "spells": [],
+        "bypassResourceId": "",
+        "manaResourceId": "mana-focus",
+        "slotResourceIds": [
+          "spell-slot-1",
+          "spell-slot-2",
+          "spell-slot-3",
+          "spell-slot-4",
+          "spell-slot-5",
+          "spell-slot-6",
+          "spell-slot-7",
+          "spell-slot-8",
+          "spell-slot-9",
+          "spell-slot-10"
+        ],
+        "enabled": false,
+        "focusEnabled": false,
+        "castingAttribute": "intelligence"
+      },
+      "weapons": [
+        {
+          "inventoryItemId": "",
+          "proficient": true,
+          "training": "simple",
+          "effects": [],
+          "image": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "weaponProfileId": "",
+          "damageFormula": "1d4",
+          "costs": [
+            {
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment",
+              "resourceId": "action",
+              "id": "activation-action"
+            }
+          ],
+          "triggerRules": [],
+          "attackAttribute": "strength",
+          "id": "default-unarmed-melee",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "versatileDamageFormula": "",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "damageBonus": 0,
+          "equipped": false,
+          "attackBonus": 0,
+          "damageType": "Wucht",
+          "activationType": "action",
+          "ammunition": null,
+          "range": "Nahkampf",
+          "weaponType": "unarmed",
+          "name": "Nahkampf",
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": ""
+          }
+        },
+        {
+          "ammunition": null,
+          "versatileDamageFormula": "",
+          "damageType": "Stich",
+          "properties": "Vielseitig · Startausrüstung der gewählten Klasse",
+          "name": "Speer",
+          "image": "",
+          "triggerRules": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "weaponType": "spear",
+          "damageFormula": "1d6",
+          "activationType": "action",
+          "costs": [
+            {
+              "scope": "comment",
+              "id": "starter-cantref-spear-action",
+              "amount": 1,
+              "resourceId": "action",
+              "name": "Aktion"
+            }
+          ],
+          "equipped": true,
+          "requirements": "",
+          "effects": [],
+          "attackAttribute": "strength",
+          "notes": "Vielseitig · Startausrüstung der gewählten Klasse",
+          "proficient": true,
+          "id": "starter-cantref-spear",
+          "aiInstructions": "",
+          "damageBonus": 0,
+          "weaponProfileId": "spear",
+          "attackBonus": 0,
+          "inventoryItemId": "equipment-weapon-starter-cantref-spear",
+          "training": "martial",
+          "range": "Nahkampf"
+        }
+      ],
+      "quirks": [
+        {
+          "limitations": "",
+          "type": "trait",
+          "appliesWhen": "Dauerhafte kulturelle Prägung",
+          "active": true,
+          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+          "duration": "",
+          "tags": "Volk · Cenyr",
+          "aiInstructions": "",
+          "priority": 0,
+          "id": "starter-ancestry-cenyr-trait-1",
+          "name": "Cenyri Kultur",
+          "target": "self",
+          "stacking": "normal",
+          "trigger": "",
+          "mechanics": {
+            "movement": 0,
+            "attack": 0,
+            "skill": 0,
+            "spellAttack": 0,
+            "passivePerception": 0,
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "spellSaveDc": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "bonusDamageFormula": "",
+            "initiative": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attackRollMode": "normal",
+            "damage": 0,
+            "armorClass": 0
+          },
+          "triggerRules": []
+        },
+        {
+          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+          "tags": "Volk · Cenyr",
+          "priority": 0,
+          "limitations": "",
+          "appliesWhen": "Dauerhafte kulturelle Prägung",
+          "active": true,
+          "type": "trait",
+          "duration": "",
+          "mechanics": {
+            "movement": 0,
+            "damage": 0,
+            "spellAttack": 0,
+            "savingThrow": 0,
+            "attackRollMode": "normal",
+            "savingThrowAdvantageAttributes": [],
+            "bonusDamageFormula": "",
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "spellSaveDc": 0,
+            "armorClass": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "attack": 0,
+            "initiative": 0
+          },
+          "triggerRules": [],
+          "name": "Höfische und religiöse Prägung",
+          "target": "self",
+          "aiInstructions": "",
+          "trigger": "",
+          "id": "starter-ancestry-cenyr-trait-2",
+          "stacking": "normal"
+        },
+        {
+          "tags": "Hintergrund · Ritter",
+          "mechanics": {
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "attack": 0,
+            "spellSaveDc": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "movement": 0,
+            "skill": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": [],
+            "initiative": 0,
+            "damage": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "spellAttack": 0,
+            "armorClass": 0,
+            "savingThrow": 0
+          },
+          "active": true,
+          "stacking": "normal",
+          "trigger": "",
+          "type": "trait",
+          "triggerRules": [],
+          "id": "starter-background-ritter-trait-1",
+          "target": "self",
+          "duration": "",
+          "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+          "name": "Ritterliche Herkunft und Standespflicht",
+          "aiInstructions": "",
+          "limitations": "",
+          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+          "priority": 0
+        }
+      ],
+      "templateSelections": {
+        "ancestryId": "cenyr",
+        "appliedAt": "2026-09-22T02:30:46.551Z",
+        "attributeMethod": "point-buy",
+        "classId": "cantref",
+        "schemaVersion": 1,
+        "backgroundId": "ritter"
+      }
+    },
+    "updatedAt": "2026-09-26T12:00:00.000Z",
     "activeImageSetId": "",
     "aliases": [],
     "archived": false,
@@ -226,7 +4985,6 @@
       "tags": [],
       "worldPersonId": "person--haus-saethwyr--nudd-saethwyr"
     },
-    "id": "person--haus-saethwyr--nudd-saethwyr",
     "identity": {
       "worldPersonId": "person--haus-saethwyr--nudd-saethwyr"
     },
@@ -234,7 +4992,6 @@
     "imageSetSchemaVersion": 0,
     "imageSetsOverride": false,
     "inventory": null,
-    "name": "Nudd Saethwyr",
     "origin": "",
     "playerOwner": "",
     "plotNode": "",
@@ -244,7 +5001,6 @@
     "role": "",
     "status": "active",
     "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
-    "title": "",
-    "updatedAt": "2026-09-03T17:37:29.197Z"
+    "title": ""
   }
 }

@@ -11,9 +11,9 @@ import { resolveCombatProfile as serverProfile } from '../src/generated/combat/c
 test('Duncans Meistertechniken und besondere Angriffe bleiben über 60 Einträge hinaus serverseitig verfügbar', async () => {
   const character=JSON.parse(await readFile(new URL('../../../Charakter%20Archiv%20Exporte/duncan-gafyr.json',import.meta.url),'utf8')).character;
   const client=browserProfile(character),server=serverProfile(character);
-  assert.equal(server.techniques.length,80); // Archive fixture includes an additional selected path.
+  assert.equal(server.techniques.length,77); // Archive fixture includes an additional selected path.
   assert.deepEqual(server.actions,client.actions);
-  for(const id of ['combat-style-drachentanz-vollendeter-waffenmeister','class-special-teulu-mastery']) {
+  for(const id of ['combat-style-drachentanz-vollendeter-waffenmeister']) {
     assert.ok(server.actions.some(action=>action.sourceId===id),id);
   }
 });

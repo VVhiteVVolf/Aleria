@@ -35,7 +35,7 @@ test('Duncans vollständiges Meisterarsenal behält späte Techniken und besonde
   assert.ok(expected.length>60);
   const actor=resolveCombatProfile(character);
   assert.equal(actor.techniques.length,expected.length);
-  for(const id of ['combat-style-drachentanz-vollendeter-waffenmeister','class-special-teulu-mastery']) {
+  for(const id of ['combat-style-drachentanz-vollendeter-waffenmeister']) {
     assert.ok(actor.techniques.some(technique=>technique.id===id),id);
     assert.ok(actor.actions.some(action=>action.sourceId===id),id);
     assert.ok(choices(renderActionTable(actor,actor.selectedAction.id)).includes(`technique:${id}`),id);

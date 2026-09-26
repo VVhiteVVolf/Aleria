@@ -2,11 +2,11 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-09-22T12:00:00.000Z",
+  "sourceExportedAt": "2026-09-26T12:00:00.000Z",
   "summary": {
-    "sourceDocuments": 276,
+    "sourceDocuments": 287,
     "total": 236,
-    "mergedSameNameGroups": 31,
+    "mergedSameNameGroups": 32,
     "familyLinked": 156,
     "familyAmbiguous": 0,
     "familyPending": 80,
@@ -1022,6 +1022,7 @@
       "canonicalDocumentId": "tmfBA2zPTc88EMMGkyyA",
       "documentIds": [
         "tmfBA2zPTc88EMMGkyyA",
+        "tmfBA2zPTc88EMMGkyyA",
         "tmfBA2zPTc88EMMGkyyA"
       ],
       "ages": [
@@ -1032,6 +1033,7 @@
       "name": "Fenrir Varulv",
       "canonicalDocumentId": "FKiXsSWVoV74rTgmpPip",
       "documentIds": [
+        "FKiXsSWVoV74rTgmpPip",
         "FKiXsSWVoV74rTgmpPip",
         "FKiXsSWVoV74rTgmpPip"
       ],
@@ -1044,6 +1046,7 @@
       "canonicalDocumentId": "ksJQe8Ai4KbRE9jOAvb7",
       "documentIds": [
         "ksJQe8Ai4KbRE9jOAvb7",
+        "ksJQe8Ai4KbRE9jOAvb7",
         "ksJQe8Ai4KbRE9jOAvb7"
       ],
       "ages": [
@@ -1054,6 +1057,7 @@
       "name": "Gais Wyrm",
       "canonicalDocumentId": "person--haus-wyrm--gais-wyrm",
       "documentIds": [
+        "person--haus-wyrm--gais-wyrm",
         "person--haus-wyrm--gais-wyrm",
         "person--haus-wyrm--gais-wyrm"
       ],
@@ -1066,6 +1070,7 @@
       "canonicalDocumentId": "q1QtSIug74FzzwUAqWrs",
       "documentIds": [
         "q1QtSIug74FzzwUAqWrs",
+        "q1QtSIug74FzzwUAqWrs",
         "q1QtSIug74FzzwUAqWrs"
       ],
       "ages": [
@@ -1077,6 +1082,7 @@
       "canonicalDocumentId": "6atOllMA637Z2VNAZAxf",
       "documentIds": [
         "6atOllMA637Z2VNAZAxf",
+        "6atOllMA637Z2VNAZAxf",
         "6atOllMA637Z2VNAZAxf"
       ],
       "ages": []
@@ -1087,6 +1093,7 @@
       "documentIds": [
         "gildas-gafyr",
         "gildas-gafyr",
+        "person--haus-gafyr--gildas-gafyr",
         "person--haus-gafyr--gildas-gafyr"
       ],
       "ages": [
@@ -1097,6 +1104,7 @@
       "name": "Guinevere Neidr",
       "canonicalDocumentId": "person--haus-neidr--guinevere-neidr",
       "documentIds": [
+        "person--haus-neidr--guinevere-neidr",
         "person--haus-neidr--guinevere-neidr",
         "person--haus-neidr--guinevere-neidr"
       ],
@@ -1146,6 +1154,7 @@
       "name": "Kane Draig",
       "canonicalDocumentId": "HjDXMMexahez1G0rJrBE",
       "documentIds": [
+        "HjDXMMexahez1G0rJrBE",
         "HjDXMMexahez1G0rJrBE",
         "HjDXMMexahez1G0rJrBE"
       ],
@@ -1206,6 +1215,17 @@
       ]
     },
     {
+      "name": "Nudd Saethwyr",
+      "canonicalDocumentId": "person--haus-saethwyr--nudd-saethwyr",
+      "documentIds": [
+        "person--haus-saethwyr--nudd-saethwyr",
+        "person--haus-saethwyr--nudd-saethwyr"
+      ],
+      "ages": [
+        "Geburtsjahr 1721"
+      ]
+    },
+    {
       "name": "Oweta Draig",
       "canonicalDocumentId": "vk0xAa3ZcEhVvGC1CzNq",
       "documentIds": [
@@ -1218,6 +1238,7 @@
       "name": "Rhiannon Draig",
       "canonicalDocumentId": "y7MBxDiAaesbWHBtmw5Q",
       "documentIds": [
+        "y7MBxDiAaesbWHBtmw5Q",
         "y7MBxDiAaesbWHBtmw5Q",
         "y7MBxDiAaesbWHBtmw5Q"
       ],

@@ -1,3 +1,4 @@
+import { conditionalWeaponModifier, conditionalSkillModifier, conditionalSaveModifier, personalWeaponAttribute } from './combat-personal-modifiers.js';
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
 import { normalizeSpellCatalogReference, resolveCatalogSpellSnapshot } from '../spell-catalog/spell-catalog.js';
 import { reconcileSkjaldrCombatProfile } from '../classes/aldrimar/skjaldr-combat-profile.js';
@@ -55,7 +56,7 @@ const ATTRIBUTE_KEYS = new Set(COMBAT_ATTRIBUTE_DEFINITIONS.map(attribute => att
 const DEXTERITY_MODES = new Set(['full', 'capped', 'none']);
 const PROFICIENCY_LEVELS = new Set(['none', 'trained', 'expertise']);
 const ROLL_MODES = new Set(['normal', 'advantage', 'disadvantage']);
-const RECOVERY_TYPES = new Set(['none', 'short-rest', 'long-rest', 'scene', 'day', 'manual']);
+const RECOVERY_TYPES = new Set(['none', 'short-rest', 'long-rest', 'scene', 'combat', 'day', 'manual']);
 const RESOURCE_SCOPES = new Set(['persistent', 'comment']);
 const WEAPON_TYPES = new Set(['unarmed', 'sword', 'dagger', 'axe', 'mace', 'spear', 'polearm', 'bow', 'crossbow', 'firearm', 'staff', 'shield', 'improvised', 'natural', 'arcane', 'other']);
 const WEAPON_TRAINING = new Set(['simple', 'martial', 'special']);
@@ -156,6 +157,11 @@ function sanitizeMechanicalModifiers(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
   const rollMode = normalizeText(source.attackRollMode || source.rollMode, 20);
   return {
+    ...(source.dexterityWeaponTypes ? { dexterityWeaponTypes: source.dexterityWeaponTypes.filter(t => WEAPON_TYPES.has(t)) } : {}),
+    ...(source.weaponModifiers ? { weaponModifiers: sanitizeList(source.weaponModifiers, m => ({
+      weaponTypes: (m.weaponTypes || []).filter(t => WEAPON_TYPES.has(t)), attack: normalizeNumber(m.attack), damage: normalizeNumber(m.damage) })) } : {}),
+    ...(source.skillModifiers ? { skillModifiers: sanitizeList(source.skillModifiers, m => ({ name: normalizeText(m.name), bonus: normalizeNumber(m.bonus) })) } : {}),
+    ...(source.saveModifiers ? { saveModifiers: sanitizeList(source.saveModifiers, m => ({ kind: normalizeText(m.kind), bonus: normalizeNumber(m.bonus) })) } : {}),
     attack: normalizeNumber(source.attack, 0, -99, 99),
     ...(source.blocksActions === true ? { blocksActions: true } : {}),
     ...(Number(source.strength) ? { strength: normalizeNumber(source.strength, 0, -30, 30) } : {}),
@@ -290,6 +296,7 @@ function sanitizeWeapon(value = {}, index = 0) {
       reloadAfter: normalizeNumber(source.ammunition.reloadAfter, 0, 0, 999),
       required: normalizeBoolean(source.ammunition.required)
     } : null,
+    ...(source.spendAllRegularActions ? { spendAllRegularActions: true } : {}),
     activationType: ACTIVATION_TYPES.has(activationType) ? activationType : 'action',
     costs: normalizeCombatResourceCosts(source.costs?.length ? source.costs : getDefaultActivationCosts(activationType || 'action')),
     auraBypass: {
@@ -319,6 +326,7 @@ function sanitizeArmor(value = {}, index = 0) {
   const kind = normalizeText(source.kind, 20);
   const dexterityMode = normalizeText(source.dexterityMode, 20);
   return {
+    ...(source.mechanics ? { mechanics: sanitizeMechanicalModifiers(source.mechanics) } : {}),
     id: normalizeId(source.id, `armor-${index + 1}`),
     inventoryItemId: normalizeText(source.inventoryItemId, 120),
     name: normalizeText(source.name, 120),
@@ -498,6 +506,7 @@ function sanitizeAbility(value = {}, index = 0) {
     recoveryDayKey: normalizeText(source.recoveryDayKey, 160),
     rollFormula: normalizeCombatDamageFormula(source.rollFormula),
     damageType: normalizeText(source.damageType || 'physisch', 80),
+    ...(source.spendAllRegularActions ? { spendAllRegularActions: true } : {}),
     activationType: ACTIVATION_TYPES.has(activationType) ? activationType : 'action',
     delivery: ABILITY_DELIVERIES.has(delivery) ? delivery : 'ability',
     // Erlaubt Fähigkeiten wie Spells eine Rettungswurf-Auflösung (z.B. Arkaner Schrei gegen
@@ -554,6 +563,7 @@ function sanitizeSpell(value = {}, index = 0, manaResourceId = 'mana-focus') {
     slotResourceId: cantrip ? '' : normalizeText(source.slotResourceId, 120),
     slotCost: cantrip ? 0 : normalizeNumber(source.slotCost, 1, 1, 99),
     presentationKind: SPELL_PRESENTATION_KINDS.has(normalizeText(source.presentationKind, 20)) ? normalizeText(source.presentationKind, 20) : 'spell',
+    ...(source.spendAllRegularActions ? { spendAllRegularActions: true } : {}),
     activationType: ACTIVATION_TYPES.has(activationType) ? activationType : 'action',
     resolutionType: SPELL_RESOLUTION_TYPES.has(resolutionType) ? resolutionType : 'spell-attack',
     saveAttribute: getAttributeKey(source.saveAttribute, 'dexterity'),
@@ -595,6 +605,7 @@ function sanitizeTechniqueSecondarySave(value = {}) {
     enabled: normalizeBoolean(source.enabled),
     attributeKey: getAttributeKey(source.attributeKey, 'constitution'),
     dcBase: normalizeNumber(source.dcBase, 8, 0, 99),
+    ...(source.fixedDc != null ? { fixedDc: normalizeNumber(source.fixedDc, 15, 1, 99) } : {}),
     dcAttributeKey: getAttributeKey(source.dcAttributeKey, 'strength'),
     addProficiency: normalizeBoolean(source.addProficiency, true),
     failureCondition: {
@@ -611,6 +622,11 @@ function sanitizeTechniqueFollowUp(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
   return {
     enabled: normalizeBoolean(source.enabled),
+    ...(source.afterMiss ? { afterMiss: true } : {}),
+    ...(source.inheritWeapon ? { inheritWeapon: true } : {}),
+    ...(source.alternateHands ? { alternateHands: true } : {}),
+    ...(source.saveFailureBonus ? { saveFailureBonus: true } : {}),
+    ...(source.allHitsStun ? { allHitsStun: true } : {}),
     sameTarget: normalizeBoolean(source.sameTarget, true),
     damageFormula: normalizeCombatDamageFormula(source.damageFormula),
     damageType: normalizeText(source.damageType, 80),
@@ -720,6 +736,7 @@ function sanitizeTechnique(value = {}, index = 0) {
       : 'technique',
     description: normalizeText(source.description, 2000),
     effect: normalizeText(source.effect, 1600),
+    ...(source.spendAllRegularActions ? { spendAllRegularActions: true } : {}),
     activationType: ACTIVATION_TYPES.has(activationType) ? activationType : 'action',
     weaponTypes: [...new Set(weaponTypes)].slice(0, 20),
     compatibleWeaponIds: sanitizeList(source.compatibleWeaponIds, item => normalizeText(item, 120), 40).filter(Boolean),
@@ -1191,7 +1208,7 @@ export function getArmorClass(profile = {}) {
     - getBurningArmorPenalty(normalized);
 }
 
-export function getSavingThrowTotal(profile = {}, attributeKey) {
+export function getSavingThrowTotal(profile = {}, attributeKey, context = {}) {
   const normalized = sanitizeCharacterCombatProfile(profile);
   const key = getAttributeKey(attributeKey);
   const save = normalized.savingThrows.find(entry => entry.attributeKey === key);
@@ -1199,7 +1216,7 @@ export function getSavingThrowTotal(profile = {}, attributeKey) {
   return getAttributeModifier(getAttribute(normalized, key))
     + proficiencyMultiplier * getProficiencyBonus(normalized)
     + Number(save?.bonus || 0)
-    + sumMechanicalModifier(normalized, 'savingThrow');
+    + sumMechanicalModifier(normalized, 'savingThrow') + conditionalSaveModifier(normalized, context);
 }
 
 export function getSkillTotal(profile = {}, skillOrId = {}) {
@@ -1211,7 +1228,7 @@ export function getSkillTotal(profile = {}, skillOrId = {}) {
   const proficiencyMultiplier = skill.proficiency === 'expertise' ? 2 : (skill.proficiency === 'trained' ? 1 : 0);
   return getAttributeModifier(getAttribute(normalized, skill.attributeKey))
     + proficiencyMultiplier * getProficiencyBonus(normalized)
-    + skill.bonus
+    + skill.bonus + conditionalSkillModifier(normalized, skill)
     + sumMechanicalModifier(normalized, 'skill');
 }
 
@@ -1277,9 +1294,9 @@ export function getWeaponAttackModifier(profile = {}, weaponOrId = {}) {
     ? normalized.weapons.find(entry => entry.id === weaponOrId)
     : sanitizeWeapon(weaponOrId);
   if (!weapon) return 0;
-  return getAttributeModifier(getAttribute(normalized, weapon.attackAttribute))
+  return getAttributeModifier(getAttribute(normalized, personalWeaponAttribute(normalized, weapon)))
     + (weapon.proficient ? getProficiencyBonus(normalized) : 0)
-    + weapon.attackBonus
+    + weapon.attackBonus + conditionalWeaponModifier(normalized, weapon, 'attack')
     + getAldrimarWeaponAttackBonus(normalized, weapon)
     + normalized.combat.attackBonus
     + sumMechanicalModifier(normalized, 'attack');
@@ -1291,8 +1308,8 @@ export function getWeaponDamageModifier(profile = {}, weaponOrId = {}) {
     ? normalized.weapons.find(entry => entry.id === weaponOrId)
     : sanitizeWeapon(weaponOrId);
   if (!weapon) return 0;
-  return getAttributeModifier(getAttribute(normalized, weapon.attackAttribute))
-    + weapon.damageBonus
+  return getAttributeModifier(getAttribute(normalized, personalWeaponAttribute(normalized, weapon)))
+    + weapon.damageBonus + conditionalWeaponModifier(normalized, weapon, 'damage')
     + normalized.combat.damageBonus
     + sumMechanicalModifier(normalized, 'damage');
 }
@@ -1389,6 +1406,7 @@ export function resolveCharacterCombatProfile(character = {}) {
     .map(item => [String(item?.id || ''), item])
     .filter(([id]) => id));
   profile.weapons = profile.weapons.map(weapon => {
+    weapon = { ...weapon, attackAttribute: personalWeaponAttribute(profile, weapon) };
     const item = inventoryById.get(String(weapon.inventoryItemId || ''));
     return item && !weapon.image
       ? { ...weapon, image: normalizeText(item.image || item.icon, 1000) }

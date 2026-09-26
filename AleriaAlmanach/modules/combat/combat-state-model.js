@@ -2,7 +2,7 @@
 // This module is the single source of truth for damage application and for
 // replaying stored combat resolutions into the current scene state.
 
-import { resetCommentScopedResources } from './combat-action-economy.js?v=20260905-resource-balance-v2';
+import { resetCommentScopedResources, getActionPaymentCosts } from './combat-action-economy.js?v=20260905-resource-balance-v2';
 import { applyCriticalConsequencesForComment, capCriticalResources } from '../combat-critical/combat-critical-model.js';
 import { sceneItemEvents, applySceneItemEvent, applyDroppedWeaponsToStates } from '../scene-items/scene-items-model.js';
 import { preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
@@ -503,11 +503,12 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     maximumHitPoints: normalized.maximum || profile.maximumHitPoints,
     temporaryHitPoints: normalized.temporary,
     resources,
+    ...(profile.selectedAction?.spendAllRegularActions ? { resourceCosts: getActionPaymentCosts(profile.selectedAction, profile.paymentMode, { ...profile, resources }) } : {}),
     abilities,
     conditions: [...(Array.isArray(profile.conditions) ? profile.conditions : []), ...temporaryConditions],
     temporaryConditions,
     concentration: state.concentration || null,
-    selectedAction: profile.selectedAction?.secondarySave?.dcAttributeKey === 'strength' ? {
+    selectedAction: profile.selectedAction?.secondarySave?.fixedDc == null && profile.selectedAction?.secondarySave?.dcAttributeKey === 'strength' ? {
       ...profile.selectedAction, secondarySave: { ...profile.selectedAction.secondarySave,
         dc: Number(profile.selectedAction.secondarySave.dc || 0) + strengthDelta }
     } : profile.selectedAction,

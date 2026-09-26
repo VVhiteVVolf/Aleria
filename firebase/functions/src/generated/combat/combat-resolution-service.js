@@ -1,3 +1,5 @@
+import { resolveFollowUpAttacks } from './combat-follow-up-resolution.js';
+import { getActionPaymentCosts } from './combat-action-economy.js';
 import { getCombatAttackNumbers, evaluateCombatAttackRoll, evaluateSavingThrowRoll, applyOutcome } from './combat-attack-evaluation.js?v=20260909-dragon-parent-v2';
 import { validateSpellCatalogTarget } from '../spell-catalog/spell-catalog-targets.js';
 import { buildAttackNotation, buildDamageNotation, combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
@@ -312,7 +314,8 @@ export class CombatResolutionService {
     const targetCheck = validateCombatTargetProfile(target);
     if (!targetCheck.ready) throw new Error('Für das Ziel fehlt die Verteidigung in den Kampfdaten.');
     validateSpellCatalogTarget(actor.selectedAction, target);
-    const structuredEffects = normalizeCombatEffects(actor.selectedAction?.effects || []);
+    const structuredEffects = normalizeCombatEffects(actor.selectedAction?.effects || []).map(effect => effect.scaling === 'hit-die-and-tenth-maximum'
+      ? { ...effect, formula: `1d${actor.hitPoints?.hitDie || 8}+${Math.ceil(actor.maximumHitPoints / 10)}` } : effect);
     const actionEffects = structuredEffects.length ? structuredEffects : normalizeCombatEffects([{
       id: 'implicit-weapon-damage',
       type: 'damage',
@@ -345,7 +348,8 @@ export class CombatResolutionService {
     const ammunition = options.skipAmmunition || actor.actionResolutionMode === 'automatic'
       ? { changed: false, before: actor.inventory || { items: [] }, after: actor.inventory || { items: [] }, use: null }
       : consumeCombatAmmunition(actor.inventory || { items: [] }, weapon?.ammunition || null);
-    const effectiveResourceCosts = options.skipResourceCosts ? [] : (actor.resourceCosts || []);
+    const effectiveResourceCosts = options.skipResourceCosts ? [] : (actor.selectedAction?.spendAllRegularActions
+      ? getActionPaymentCosts(actor.selectedAction, actor.paymentMode, actor) : (actor.resourceCosts || []));
     const resourceCheck = patchResolutionResourceState({ resourceCosts: effectiveResourceCosts }, actor.resources || []);
     if (!resourceCheck.applied.sufficient) {
       const missing = resourceCheck.applied.missing;
@@ -476,7 +480,7 @@ export class CombatResolutionService {
     }
     const secondarySave = actor.selectedAction?.secondarySave;
     if (attack.hit && secondarySave?.enabled && typeof this.dice.rollSavingThrow === 'function') {
-      const savingThrowModifier = getSavingThrowTotal(target, secondarySave.attributeKey);
+      const savingThrowModifier = getSavingThrowTotal(target, secondarySave.attributeKey, secondarySave);
       const savingThrowRoll = await this.dice.rollSavingThrow({
         modifier: savingThrowModifier,
         rollMode: resolveSavingThrowRollMode(target, secondarySave.attributeKey),
@@ -512,109 +516,20 @@ export class CombatResolutionService {
         };
       }
     }
-    const followUp = actor.selectedAction?.followUpAttack;
-    const followUpRepeatCount = Math.max(1, Math.min(5, Number(followUp?.repeatCount) || 1));
-    if (attack.hit && followUp?.enabled && followUp.damageFormula) {
-    for (let followUpIndex = 0; followUpIndex < followUpRepeatCount; followUpIndex += 1) {
-      const followSources = followUp.triggerReactions === false
-        ? ruleSources.map(source => ({ ...source, selectedRuleIds: [] }))
-        : ruleSources;
-      const followProfileState = { ...ruleProfileState, followUp: true };
-      const collectFollowRules = (phase, state = {}) => {
-        if (followUp.repeatPerAttackRules === false && ['pre-roll', 'post-roll', 'post-hit', 'pre-damage'].includes(phase)) return [];
-        const applications = collectApplicableCombatRules({
-          phase, actionKind, profileActionId, sources: followSources, periods: rulePeriods,
-          usedFrequencyKeys: usedRuleFrequencyKeys, state: { ...followProfileState, ...state }
-        });
-        markCombatRuleApplications(applications, usedRuleFrequencyKeys);
-        return applications;
-      };
-      const followPreApplications = collectFollowRules('pre-roll');
-      const followPreEffects = mergeCombatRuleEffects(followPreApplications);
-      const followRollMode = mergeRollModes(profileRollModes, auraRollMode, followPreApplications.map(application => application.effects?.rollMode));
-      const followAttackModifier = Number(actor.attackModifier || 0) + Number(followUp.attackBonus || 0)
-        + Number(targetAuraOnActor.attack || 0)
-        + (['spell', 'prayer', 'song'].includes(actionKind) ? Number(targetAuraOnActor.spellAttack || 0) : 0)
-        + followPreEffects.attackModifier;
-      let followDefense = Number(target.totalDefense) + Number(actorAuraOnTarget.armorClass || 0) + followPreEffects.defenseModifier;
-      const followAttackRoll = await this.dice.rollAttack({
-        modifier: followAttackModifier,
-        rollMode: followRollMode,
-        actorName: actor.name,
-        targetName: target.name,
-        container: options.container
-      });
-      let followAttack = evaluateAttackRoll(followAttackRoll, followDefense, actor.selectedAction?.criticalThreshold);
-      const followPostApplications = collectFollowRules('post-roll', followAttack);
-      const followPostEffects = mergeCombatRuleEffects(followPostApplications);
-      if (followPostEffects.attackModifier || followPostEffects.defenseModifier) {
-        followAttack = evaluateAttackRoll({ ...followAttackRoll, total: Number(followAttackRoll.total) + followPostEffects.attackModifier }, followDefense + followPostEffects.defenseModifier, actor.selectedAction?.criticalThreshold);
-      }
-      followAttack = applyOutcome(followAttack, followPostEffects.outcome, false);
-      followDefense += followPostEffects.defenseModifier;
-      const followPostHitApplications = collectFollowRules('post-hit', followAttack);
-      const followPostHitEffects = mergeCombatRuleEffects(followPostHitApplications);
-      followAttack = applyOutcome(followAttack, followPostHitEffects.outcome, false);
-      const followPreDamageApplications = collectFollowRules('pre-damage', followAttack);
-      const followPreDamageEffects = mergeCombatRuleEffects(followPreDamageApplications);
-      followAttack = applyOutcome(followAttack, followPreDamageEffects.outcome, false);
-      const followApplications = [followPreApplications, followPostApplications, followPostHitApplications, followPreDamageApplications].flat();
-      allRuleApplications = allRuleApplications.concat(followApplications);
-      [
-        ['follow-up/pre-roll', followPreEffects.conflicts], ['follow-up/post-roll', followPostEffects.conflicts],
-        ['follow-up/post-hit', followPostHitEffects.conflicts], ['follow-up/pre-damage', followPreDamageEffects.conflicts]
-      ].forEach(([phase, conflicts]) => {
-        if (Array.isArray(conflicts) && conflicts.length) followRuleConflicts.push({ phase, applications: conflicts });
-      });
-      const followWard = await resolveCombatWard({
-        attack: followAttack, conditions: preWardTargetConditions, dice: this.dice,
-        actor, target, container: options.container
-      });
-      followAttack = followWard.attack;
-      preWardTargetConditions = followWard.conditions;
-      let followDamage = null;
-      if (followAttack.hit) {
-        const followBonusDamageFormulas = followUp.damageFormula && followUp.inheritBonusDamage !== false ? getBonusDamageFormulas(actor) : [];
-        followDamage = await this.dice.rollDamage({
-          damageFormula: combineDamageFormulas([followUp.damageFormula, ...followBonusDamageFormulas]),
-          bonus: (followUp.inheritDamageModifier === false ? getUniversalDamageBonus(actor) : Number(actor.damageModifier || 0)) + Number(followUp.damageBonus || 0)
-            + Number(targetAuraOnActor.damage || 0)
-            + followPostHitEffects.damageModifier + followPreDamageEffects.damageModifier,
-          critical: followAttack.criticalSuccess,
-          actorName: actor.name,
-          targetName: target.name,
-          container: options.container
-        });
-        const reduction = Math.max(0, followPostHitEffects.damageReduction + followPreDamageEffects.damageReduction);
-        if (reduction > 0) followDamage = { ...followDamage, rawTotal: Number(followDamage.total), total: Math.max(0, Number(followDamage.total) - reduction), damageReduction: reduction };
-      }
-      followUpAttacks.push({
-        sameTarget: followUp.sameTarget !== false,
-        triggerFurtherEffects: followUp.triggerFurtherEffects === true,
-        wardResolution: followWard.wardResolution,
-        attack: {
-          naturalRoll: Number(followAttackRoll.natural),
-          diceResults: Array.isArray(followAttackRoll.dice) ? followAttackRoll.dice.slice() : [],
-          modifier: followAttackModifier + followPostEffects.attackModifier,
-          total: Number(followAttackRoll.total) + followPostEffects.attackModifier,
-          targetDefense: followDefense,
-          hit: followAttack.hit,
-          criticalSuccess: followAttack.criticalSuccess,
-          criticalFailure: followAttack.criticalFailure,
-          rollMode: followRollMode,
-          rollId: followAttackRoll.id || ''
-        },
-        damage: followDamage ? {
-          notation: followDamage.notation,
-          diceResults: Array.isArray(followDamage.keptDice) ? followDamage.keptDice.slice() : [],
-          modifier: Number(followDamage.modifier) || 0,
-          total: Number(followDamage.total),
-          damageType: followUp.damageType || weapon.damageType || 'physisch',
-          rollId: followDamage.id || ''
-        } : null
-      });
+    const followResult = await resolveFollowUpAttacks({ dice: this.dice, actor, target, weapon, attack, secondarySaves,
+      ruleSources, ruleProfileState, actionKind, profileActionId, rulePeriods, usedRuleFrequencyKeys,
+      profileRollModes, auraRollMode, targetAuraOnActor, actorAuraOnTarget, targetConditions: preWardTargetConditions, options });
+    followUpAttacks.push(...followResult.attacks);
+    followRuleConflicts.push(...followResult.conflicts);
+    allRuleApplications.push(...followResult.applications);
+    preWardTargetConditions = followResult.conditions;
+    if (actor.selectedAction?.followUpAttack?.allHitsStun && attack.hit && followUpAttacks.length === 3
+      && followUpAttacks.every(result => result.attack.hit)) {
+      appliedTemporaryCondition = { id: `four-fangs-${actor.characterId}`, sourceConditionId: 'four-fangs-stun',
+        sourceActorId: actor.characterId, name: 'Benommen', description: 'Im naechsten eigenen Beitrag keine Aktion; Bonusaktion und Reaktion bleiben verfuegbar.',
+        active: true, blockedResource: 'action', durationModel: { kind: 'actor-comments', remainingActorComments: 1 } };
     }
-    }
+
     let targetHitPoints = {
       current: target.currentHitPoints,
       maximum: target.maximumHitPoints,

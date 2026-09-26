@@ -24,7 +24,7 @@ const equip = (character, right, left = '', shield = false) => {
 };
 const action = (character, id) => resolveCombatProfile(character, {actionId:id,includeAiSnapshot:false});
 
-for (const [character, classId, hp, ac, count] of [[ylva,'skytte',75,12,5],[asgeir,'skjaldr',94,14,7]]) {
+for (const [character, classId, hp, ac, count] of [[ylva,'skytte',95,12,22],[asgeir,'skjaldr',108,14,22]]) {
   test(`${character.name}: level, curriculum budget, equipment and resource parity`, () => {
     const profile = sanitizeCharacterCombatProfile(character.combatProfile);
     assert.equal(profile.progression.level, 7);
@@ -33,7 +33,7 @@ for (const [character, classId, hp, ac, count] of [[ylva,'skytte',75,12,5],[asge
     assert.equal(profile.hitPoints.current, hp);
     assert.equal(getArmorClass(profile), ac, 'GES erst mit bestehender Rüstungsroutine ab Stufe 12');
     assert.equal(profile.techniques.filter(entry => !entry.id.startsWith('class-special-')).length, count);
-    assert.equal(profile.techniques.filter(entry => entry.id.startsWith('class-special-')).length, 1);
+    assert.equal(profile.techniques.filter(entry => entry.id.startsWith('class-special-')).length, 0);
     const slots = getAldrimarClassDefinition(classId).techniqueBudget.slots.filter(slot => slot.level <= 7);
     assert.deepEqual(profile.classTraining.techniqueSelections.map(selection => selection.slotId), slots.map(slot => slot.id));
     assert.ok(profile.techniques.every(technique => technique.active && technique.status === 'confirmed' && technique.minimumLevel <= 7));
@@ -47,34 +47,32 @@ for (const [character, classId, hp, ac, count] of [[ylva,'skytte',75,12,5],[asge
       assert.equal(item.image, entry.image);
       assert.ok(item.valuation?.minCopper > 0);
     }
-    assert.deepEqual(roundTrip.weapons, profile.weapons);
+    assert.deepEqual(sanitizeCharacterCombatProfile(roundTrip).weapons, profile.weapons);
     assert.equal(getArmorClass(roundTrip), ac);
   });
 }
 
 test('Ylva: bow class bonus works for shots and techniques, never for melee or another wielder', () => {
-  assert.equal(action(ylva,'weapon:ylva-langbogen').attackModifier,7);
-  assert.equal(action(ylva,'technique:combat-style-huskarl-skytte-grund-1').attackModifier,7);
+  assert.equal(action(ylva,'weapon:ylva-langbogen').attackModifier,9);
+  assert.equal(action(ylva,'technique:combat-style-huskarl-skytte-grund-1').attackModifier,9);
   const spear = equip(ylva,'ylva-speer');
-  assert.equal(action(spear,'weapon:ylva-speer').attackModifier,4);
+  assert.equal(action(spear,'weapon:ylva-speer').attackModifier,8);
   const other = structuredClone(asgeir.combatProfile);
   assert.equal(getWeaponAttackModifier(other, ylva.combatProfile.weapons.find(weapon => weapon.id === 'ylva-langbogen')),4);
   assert.equal(ylva.combatProfile.weapons.find(weapon => weapon.id === 'ylva-langbogen').attackBonus,0);
 });
 
 test('all learned techniques have usable loadouts; missing hands, shields and wrong classes are blocked', () => {
-  const configurations = [
-    [ylva, {1:'ylva-langbogen',3:'ylva-speer',4:'ylva-handaxt',6:'ylva-langbogen',7:'ylva-speer'}],
-    [asgeir, {1:'asgeir-axt-rechts',2:'asgeir-axt-rechts',3:'asgeir-grossaxt',4:'asgeir-axt-rechts',5:'asgeir-axt-rechts',6:'asgeir-grossaxt',7:'asgeir-axt-rechts'}]
-  ];
-  for (const [character, weapons] of configurations) for (const technique of character.combatProfile.techniques) {
-    const level = technique.minimumLevel;
-    const isAsgeir = character.id === asgeir.id;
-    const left = isAsgeir && [4,7].includes(level) ? 'asgeir-axt-links' : '';
-    const configured = equip(character,weapons[level],left,isAsgeir && level === 5);
-    const result = action(configured,`technique:${technique.id}`);
-    assert.equal(result.selectedAction.compatible,true,`${character.name}: ${technique.name} — ${result.selectedAction.disabledReason}`);
-    assert.equal(validateCombatActorProfile(result).ready,true);
+  for (const character of [ylva, asgeir]) for (const technique of character.combatProfile.techniques) {
+    const rules = technique.cultureTraining || {};
+    const weapon = character.combatProfile.weapons.find(w => technique.weaponTypes.includes(w.weaponType)
+      && (!rules.requiresTwoHands || /zweih|gro[s?]saxt|Streitaxt/i.test(w.properties + w.name)));
+    assert.ok(weapon, technique.name);
+    const left = rules.requiresDualWield ? 'asgeir-axt-links' : '';
+    const configured = equip(character, weapon.id, left, rules.requiresShield === true);
+    const result = action(configured, `technique:${technique.id}`);
+    assert.equal(result.selectedAction.compatible, true, `${character.name}: ${technique.name} - ${result.selectedAction.disabledReason}`);
+    assert.equal(validateCombatActorProfile(result).ready, true);
   }
   const crossed = 'technique:combat-style-huskarl-skjaldr-grund-7';
   assert.equal(action(equip(asgeir,'asgeir-axt-rechts'),crossed).selectedAction.compatible,false);

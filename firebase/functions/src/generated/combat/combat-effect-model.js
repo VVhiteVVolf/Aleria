@@ -59,6 +59,7 @@ export function normalizeCombatEffect(value = {}, index = 0) {
     type: EFFECT_TYPES.has(type) ? type : 'damage',
     target: TARGETS.has(target) ? target : 'target',
     amount: number(source.amount, 0, 0),
+    ...(source.scaling === 'hit-die-and-tenth-maximum' ? { scaling: source.scaling } : {}),
     ...(['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'].includes(source.bonusAttribute) ? { bonusAttribute: source.bonusAttribute } : {}),
     formula: text(source.formula || source.amountFormula || source.damageFormula, 80),
     damageType: text(source.damageType || 'physisch', 100),

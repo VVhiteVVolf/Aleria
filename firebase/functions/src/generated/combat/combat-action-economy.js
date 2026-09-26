@@ -222,7 +222,8 @@ export function getActionPaymentCosts(action = {}, paymentMode = 'standard', pro
       ? { ...cost, id: `${cost.id}-substitute`, resourceId: substituteResourceId, name: substituteResource.name || cost.name }
       : cost));
   }
-  const explicit = normalizeCombatResourceCosts(action?.costs);
+  const explicit = normalizeCombatResourceCosts(action?.costs).map(cost => action.spendAllRegularActions && COMMENT_SCOPED_ACTION_RESOURCE_IDS.has(cost.resourceId)
+    ? { ...cost, amount: Math.max(1, Number(profile.resources?.find(r => r.id === cost.resourceId)?.current) || 0) } : cost);
   return explicit.length ? explicit : getDefaultActivationCosts(action?.activationType || 'action');
 }
 

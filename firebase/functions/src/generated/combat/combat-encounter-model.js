@@ -224,7 +224,14 @@ export function applyCombatEncounterCommentToStateMap(states, comment = {}) {
         ...(snapshot.temporary == null ? {} : { temporary: snapshot.temporary }),
         ...(snapshot.resources.length ? { resources: snapshot.resources } : {})
       } : {};
+      const combatRecoveryEncounterIds = previous?.combatRecoveryEncounterIds || [];
+      if (!combatRecoveryEncounterIds.includes(event.encounterId)) {
+        const resources = initial.resources || previous?.resources || snapshot?.resources;
+        if (resources) initial.resources = resources.map(resource => resource.recovery === 'combat'
+          ? { ...resource, current: resource.maximum } : resource);
+      }
       states.set(participant.actorId, { ...previous, ...initial,
+        combatRecoveryEncounterIds: [...new Set([...combatRecoveryEncounterIds, event.encounterId])],
         encounterIds: [...new Set([...(previous?.encounterIds || []), event.encounterId])], encounterStatus: participant.status });
     });
   }

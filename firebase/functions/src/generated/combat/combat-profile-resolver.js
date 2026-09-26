@@ -100,7 +100,8 @@ function buildCombatProfileActions(character, profile, options = {}) {
       const weaponCompatible = !!activeWeapon && isTechniqueCompatibleWithWeapon(technique, activeWeapon);
       const levelCompatible = getEffectiveCombatLevel(profile) >= Number(technique.minimumLevel || 1);
       const weaponRules = resolveCenyrTechniqueWeaponRules(profile, technique, activeWeapon || {});
-      const huskarlError = getHuskarlTechniqueUnavailableReason(profile, technique);
+      const huskarlError = getHuskarlTechniqueUnavailableReason(profile, technique)
+        || (technique.followUpAttack?.alternateHands && (!loadout.dualWield || loadout.left?.weaponType !== 'axe' || loadout.right?.weaponType !== 'axe') ? 'Benoetigt zwei gleichzeitig gefuehrte Aexte.' : '');
       const compatible = weaponCompatible && levelCompatible && weaponRules.compatible && !huskarlError;
       const formula = resolveTechniqueDamageFormula(technique, activeWeapon || {}, profile);
       const scaling = getTechniqueDamageScaling(technique, profile);
@@ -108,9 +109,9 @@ function buildCombatProfileActions(character, profile, options = {}) {
         ? resolveTechniqueDamageFormula(technique, { ...activeWeapon, damageFormula: activeWeapon.versatileDamageFormula }, profile) : '';
       const saveAttribute = getEffectiveCombatAttribute(profile, technique.secondarySave?.dcAttributeKey);
       const secondarySaveDc = technique.secondarySave?.enabled
-        ? Number(technique.secondarySave.dcBase || 8)
+        ? technique.secondarySave.fixedDc ?? (Number(technique.secondarySave.dcBase || 8)
           + (technique.secondarySave.addProficiency ? getProficiencyBonus(profile) : 0)
-          + getAttributeModifier(saveAttribute)
+          + getAttributeModifier(saveAttribute))
         : null;
       const classModifiers = getCenyrClassActionModifiers(profile, {
         technique,
@@ -152,6 +153,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
           ...(scaling ? [`Ausbildungsbonus ab Stufe ${scaling.level}: +${scaling.formula.toUpperCase().replace(/D/g, 'W')} (bereits im Schadenswurf enthalten).`] : [])])].slice(0, 8),
         activationType: technique.activationType,
         costs: normalizeCombatResourceCosts(technique.costs),
+        spendAllRegularActions: technique.spendAllRegularActions === true,
         auraBypass: technique.auraBypass,
         resolutionMode: !formula && technique.effects?.length && technique.effects.every(effect => effect.target === 'self' && effect.type !== 'damage')
           ? 'automatic' : 'weapon-attack',

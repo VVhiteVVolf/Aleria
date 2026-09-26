@@ -50,6 +50,9 @@ export function inventoryCardModel(item = {}) {
   const effects = (item.infoRows || []).filter(row => /effekt|wirkung|qualität|verbesserung/i.test(row.label));
   const protection = describeEquipmentDamageProtection(definition.damageProtection);
   if (protection) effects.push({ label: definition.damageProtection.name || 'Rüstungsschutz', value: protection });
+  const saveLabels = { poison: 'Gift', fear: 'Furcht', prone: 'Niederwerfen', 'forced-movement': 'erzwungene Bewegung' };
+  effects.push(...(definition.mechanics?.saveModifiers || []).filter(m => saveLabels[m.kind] && m.bonus)
+    .map(m => ({ label: 'Widerstand', value: `${signed(m.bonus)} auf Rettungswürfe gegen ${saveLabels[m.kind]}, solange angelegt.` })));
   effects.push(...(definition.triggerRules || []).filter(rule => rule.enabled !== false && rule.description)
     .map(rule => ({ label: rule.name || 'Ausrüstungseffekt', value: rule.description })));
   return { kind, label: labels[kind][0], symbol: labels[kind][1], rows, actions, effects,

@@ -121,6 +121,7 @@ export function sanitizeCombatTriggerRule(value = {}, index = 0) {
     costs: normalizeCombatResourceCosts(source.costs),
     actionKinds: [...new Set(actionKinds)].slice(0, 12),
     skillIds: normalizedList(source.skillIds),
+    ...(source.damageTypes ? { damageTypes: normalizedList(source.damageTypes) } : {}),
     requiredTargetTags: normalizedList(source.requiredTargetTags),
     radiusMeters: optionalNumber(source.radiusMeters, 0, 9999),
     priority: number(source.priority, 0, -99, 99),
@@ -235,6 +236,7 @@ function conditionAllows(rule, state = {}) {
 }
 
 function actionAllows(rule, actionKind, profileActionId = '', state = {}) {
+  if (rule.damageTypes?.length && !rule.damageTypes.includes(String(state.actorProfile?.weapon?.damageType || '').toLowerCase())) return false;
   if (rule.requiredWeaponId) {
     if (!['weapon', 'technique'].includes(actionKind)) return false;
     const weapon = state.actorProfile?.weapon;

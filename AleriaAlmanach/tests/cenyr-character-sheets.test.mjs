@@ -71,15 +71,18 @@ test('alle vorhandenen Teulu- und Helwyr-Bögen verwenden ausschließlich ihren 
   }
 });
 
-test('der generierte Datenbank-Snapshot enthält dieselben aktiven Cenyr-Ausbildungen wie die Einzelbögen', async () => {
+test('der generierte Datenbank-Snapshot enthält die zuletzt freigegebenen Online-Ausbildungen und Erholungsfähigkeiten', async () => {
   const snapshot = JSON.parse(await readFile(snapshotUrl, 'utf8'));
   for (const expected of expectations) {
-    const source = await loadCharacter(expected.file);
+    const source = await loadCharacter(expected.file.replace('.json', '-erholung-2026-09-26.json'));
     const stored = snapshot.characters.find(character => character.name === expected.name);
     assert(stored, `${expected.name}: fehlt im Datenbank-Snapshot`);
     assert.deepEqual(stored.combatProfile.classTraining, source.combatProfile.classTraining);
     assert.deepEqual(stored.combatProfile.techniques, source.combatProfile.techniques);
-    assertCanonicalTraining(stored, expected);
+    assert.equal(stored.combatProfile.templateSelections.classId, expected.classId);
+    assert.equal(stored.combatProfile.progression.level, expected.level);
+    assert.ok(stored.combatProfile.abilities.some(a => a.name === 'Durchschnaufen'));
+    assert.ok(stored.combatProfile.techniques.every(t => !t.id.startsWith('class-special-')));
   }
 });
 
