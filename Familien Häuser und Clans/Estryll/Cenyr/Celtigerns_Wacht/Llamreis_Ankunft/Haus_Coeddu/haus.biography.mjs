@@ -4,10 +4,10 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Coeddu",
   "housePage": true,
-  "image": "",
+  "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Coeddu/assets/coeddu-krieger.png",
   "imageWidth": 30,
   "imageSquare": true,
-  "description": "Haus Coeddu ist eine kleine bürgerliche Familie aus Gwynthor. Brenric diente im Großen Krieg unter Sir Maredudd und ist wegen wiederkehrender Gelenk- und Fußbeschwerden im Ruhestand. Sein Sohn Llywelyn dient als Waffenknecht und ist mit Catrin Craigddu verheiratet.",
+  "description": "Haus Coeddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Die Familie stellt Wachen und Waffenknechte; einzelne Angehörige haben auch den Ritterschlag erhalten. Neben dem Waffendienst unterhalten die Coeddu eine beliebte Waffenschmiede in Gwynthor. Ihr Name steht in der Stadt damit sowohl für die Männer und Frauen im Dienst der Draig als auch für das Waffenhandwerk.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -42,7 +42,7 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Ursprung",
-      ""
+      "Gwynthor · Waffendienst und Waffenschmiede"
     ],
     [
       "Schutzpatronin",
@@ -55,11 +55,11 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Coeddu ist eine kleine bürgerliche Familie aus Gwynthor. Brenric diente im Großen Krieg unter Sir Maredudd und ist wegen wiederkehrender Gelenk- und Fußbeschwerden im Ruhestand. Sein Sohn Llywelyn dient als Waffenknecht und ist mit Catrin Craigddu verheiratet.",
+    "biographyText": "Haus Coeddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Die Familie stellt Wachen und Waffenknechte; einzelne Angehörige haben auch den Ritterschlag erhalten. Neben dem Waffendienst unterhalten die Coeddu eine beliebte Waffenschmiede in Gwynthor. Ihr Name steht in der Stadt damit sowohl für die Männer und Frauen im Dienst der Draig als auch für das Waffenhandwerk.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
+    "historyText": "Die Namen des ursprünglichen Gründerpaares und die frühen Generationen sind nicht überliefert. Der Dienst für Haus Draig gehört seit Generationen zur Geschichte der Familie. Mit Brenric wird die jüngere Linie greifbar: Er kämpfte im Großen Krieg unter Sir Maredudd und trat wegen wiederkehrender Gelenkbeschwerden, besonders am Fuß, in den Ruhestand. Sein Sohn Llywelyn dient als Waffenknecht. Durch dessen Ehe mit Catrin Craigddu sind die Coeddu mit einer weiteren kriegerischen Bürgerfamilie Gwynthors verbunden.",
     "worksTitle": "Hausgeschichte",
     "works": [],
     "extraSections": [
@@ -67,7 +67,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Das Wappen zeigt eine gepanzerte Hand mit Speer und Zinnen in Rostrot, Knochenweiß und Kohlegrau."
+        "text": "Waffendienst und Waffenschmiede prägen das Haus gleichermaßen. Die beliebte Schmiede verankert die Coeddu im städtischen Handwerk, während ihre Wachen, Waffenknechte und gelegentlichen Ritter für Haus Draig einstehen. Das Haus bleibt bürgerlich; der Ritterschlag einzelner Angehöriger macht nicht die ganze Familie zu einem Adelshaus."
       }
     ],
     "triviaTitle": "Besonderheiten",

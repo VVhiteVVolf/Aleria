@@ -9,7 +9,7 @@ const EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coed
 const BASE = createFounderTimeJumpPlaceholderHouseFamily({
   id: 'haus-coeddu', title: 'Haus Coeddu', emblem: EMBLEM,
   houseProfile: GWYNTHOR_COMMONER_HOUSE_PROFILES.coeddu,
-  description: 'Kleine bürgerliche Familie aus Gwynthor. Brenric diente im Großen Krieg unter Sir Maredudd; sein Sohn Llywelyn ist Waffenknecht im Dienst von Haus Draig.',
+  description: 'Kriegerisches Bürgerhaus aus Gwynthor mit einer beliebten Waffenschmiede. Die Coeddu dienen Haus Draig seit Generationen als Wachen, Waffenknechte und vereinzelt als Ritter. Brenric ist Veteran des Großen Krieges; sein Sohn Llywelyn dient als Waffenknecht.',
   toYear: '1682', timeJumpLabel: 'Nicht einzeln überlieferte Generationen bis Brenric',
   pendingDescendantReview: false
 });
@@ -69,7 +69,8 @@ export const HOUSE_COEDDU_FAMILY = Object.freeze({
   }],
   view: { ...BASE.view, limitGenerations: false },
   extensions: {
-    blankFamily: false, sourceRevision: 1,
+    blankFamily: false, sourceRevision: 2,
+    registryManagedDocumentFields: ['description'],
     sourceNote: 'Benutzervorgaben vom 27.09.2026. Llywelyn ist 1740 dreißig Jahre alt; Catrin, ihre Lebensdaten und die Ehe stammen aus der bestehenden Craigddu-Akte. Ergänzte Namen Brenric, Gweneth, Rhydian, Maelwen, Thalor und Ellian folgen dem Rheunwaith-Namensarchiv. Ihre Lebensjahre sind erzählerische Ergänzungen. Der historische Ursprung bleibt ausdrücklich unbekannt.'
   }
 });

@@ -79,7 +79,7 @@ window.HAEUSER_DATA = {
     "wealth": "",
     "religion": "",
     "patronDeities": "",
-    "origin": "",
+    "origin": "Gwynthor · Baumeisterfamilie",
     "cadetBranches": "",
     "allies": "",
     "enemies": ""
@@ -90,18 +90,18 @@ window.HAEUSER_DATA = {
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Craigddu ist eine bürgerliche Familie aus Gwynthor. Die bestehende Familienakte führt Iestyn und Mared, ihre Kinder Hywel und Catrin sowie Hywels Familie mit Eleri und sieben Töchtern. Catrins Ehe mit Llywelyn verbindet das Haus mit der Familie Coeddu.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
-    "knighthood": "Folgt …",
+    "overview": "Haus Craigddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Aus einer Baumeisterfamilie gingen zunehmend Wachen, Waffenknechte und vereinzelt auch Ritter hervor. Das Bauwesen blieb dennoch Teil des Familienlebens: Mehrere Angehörige arbeiten weiterhin in Gwynthors örtlicher Baumeistergilde.",
+    "history": "Die Craigddu stammen aus dem Bauhandwerk. Über Generationen gewann der Waffendienst für Haus Draig innerhalb der Familie an Bedeutung, bis das Haus ebenso mit seinen Kriegern wie mit seinen Baumeistern verbunden wurde. Namen und Lebensdaten des ursprünglichen Gründerpaares sind unbekannt. Nach der Überlieferungslücke setzt der Stammbaum bei den Brüdern Brenwyn, Iestyn und Cyran ein. Iestyn und Mared sind die Eltern von Hywel und Catrin. Hywel dient als Waffenknecht; Catrins Ehe mit Llywelyn Coeddu verbindet die Craigddu mit dem Haus der Gwynthorer Waffenschmiede.",
+    "traditions": "Die Verbindung zur örtlichen Baumeistergilde besteht trotz des wachsenden Gewichts des Waffendienstes fort. In den verschiedenen Familienzweigen werden sowohl Baumeister als auch Wachen und Waffenknechte ausgebildet.",
+    "knighthood": "Seit Generationen dienen Angehörige der Craigddu Haus Draig als Wachen und Waffenknechte. Einige haben den Ritterschlag erhalten. Diese persönlichen Ritterwürden ändern den bürgerlichen Rang des Hauses nicht.",
     "succession": "Folgt …",
-    "holdings": "Folgt …",
+    "holdings": "Der familiäre Mittelpunkt liegt in Gwynthor. Die Craigddu sind weiterhin im Bauwesen tätig; mehrere Mitglieder gehören der lokalen Baumeistergilde an, darunter Brenwyn und sein Sohn Rhydric.",
     "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
+    "conflictsAlliances": "Der generationslange Dienst bindet das Haus an die Draig. Über Catrins Ehe mit Llywelyn Coeddu besteht außerdem eine enge Familienverbindung zu den Coeddu. Hywel Craigddu und Llywelyn sind beste Freunde.",
+    "values": "Der Dienst für Haus Draig und die Arbeit im Bauwesen bestehen in dieser Familie nebeneinander fort. Brenwyn Craigddu und sein Sohn Rhydric sind in der örtlichen Baumeistergilde tätig; Cyran sowie die jüngeren Angehörigen Hywel, Maelor und Thalwyn vertreten die kriegerische Seite des Hauses. Einzelne Ritter stammen aus der Familie, doch die Craigddu bleiben ein Bürgerhaus.",
     "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "familyTree": "Ein unbekanntes Gründerpaar steht vor Hauswappen und Zeitsprung. Die jüngere Familie beginnt mit Iestyn, Hywels Vater, und dessen Brüdern Brenwyn und Cyran. Brenwyns Söhne Rhydric und Maelor sowie Cyrans Sohn Thalwyn sind Hywels Vettern und haben eigene Kinder. Hywels Familie mit Eleri und ihren sieben Töchtern sowie Catrins Ehe mit Llywelyn Coeddu sind ebenfalls verzeichnet.",
+    "historicalFigures": "Brenwyn und Rhydric Craigddu führen die Baumeistertradition in Gwynthors Gilde fort. Hywel Craigddu dient als Waffenknecht im Umfeld von Haus Draig."
   },
   "sectionTitles": {
     "knighthood": "4. Rittertum"
@@ -113,11 +113,10 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "",
-      "alt": "Ritter von Haus Craigddu",
+      "src": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Craigddu/assets/craigddu-krieger.png",
+      "alt": "Krieger des Hauses Craigddu mit Speer und blauem Waffenrock mit Burgwappen",
       "format": "portrait",
-      "maxHeight": 580,
-      "emptyLabel": "Illustration folgt …"
+      "maxHeight": 580
     },
     "haus-banner": {
       "src": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/gwynthor.png",
@@ -154,6 +153,7 @@ window.HAEUSER_DATA = {
     "title": "Stammbaum von Haus Craigddu"
   },
   "trivia": [
+    "Die Craigddu waren ursprünglich eine Baumeisterfamilie und sind noch heute in Gwynthors Baumeistergilde vertreten.",
     "Das Wappen zeigt eine Burg auf dunklem Gebirge in Schieferblau, Kohlegrau und Elfenbein."
   ]
 };
