@@ -9,6 +9,8 @@ import { HOUSE_PENDRWN_FAMILY } from './house-pendrwn-family.js';
 import { HOUSE_SWYLL_FAMILY } from './house-swyll-family.js';
 import { HOUSE_TONNARTH_FAMILY } from './house-tonnarth-family.js';
 import { HOUSE_YSGRIF_FAMILY } from './house-ysgrif-family.js';
+import { HOUSE_COEDDU_FAMILY } from './house-coeddu-family.js';
+import { HOUSE_CRAIGDDU_FAMILY } from './house-craigddu-family.js';
 
 const EMBLEM_ROOT = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor';
 
@@ -21,7 +23,9 @@ export const GWYNTHOR_COMMONER_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'braglas', title: 'Braglas', file: 'Braglas.png' }),
   Object.freeze({ slug: 'tonnarth', title: 'Tonnarth', file: 'Tonnarth.png' }),
   Object.freeze({ slug: 'ysgrif', title: 'Ysgrif', file: 'Ysgrif.png' }),
-  Object.freeze({ slug: 'falchdyn', title: 'Falchdyn', file: 'Falchdyn.png' })
+  Object.freeze({ slug: 'falchdyn', title: 'Falchdyn', file: 'Falchdyn.png' }),
+  Object.freeze({ slug: 'coeddu', title: 'Coeddu', file: 'Coeddu.png' }),
+  Object.freeze({ slug: 'craigddu', title: 'Craigddu', file: 'Craigddu.png' })
 ]);
 
 const DEVELOPED_FAMILIES = Object.freeze({
@@ -33,7 +37,9 @@ const DEVELOPED_FAMILIES = Object.freeze({
   pendrwn: HOUSE_PENDRWN_FAMILY,
   swyll: HOUSE_SWYLL_FAMILY,
   tonnarth: HOUSE_TONNARTH_FAMILY,
-  ysgrif: HOUSE_YSGRIF_FAMILY
+  ysgrif: HOUSE_YSGRIF_FAMILY,
+  coeddu: HOUSE_COEDDU_FAMILY,
+  craigddu: HOUSE_CRAIGDDU_FAMILY
 });
 
 export const GWYNTHOR_COMMONER_HOUSE_FAMILIES = Object.freeze(

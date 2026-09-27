@@ -2,18 +2,18 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-09-26T12:00:00.000Z",
+  "sourceExportedAt": "2026-09-27T20:33:20.104Z",
   "summary": {
-    "sourceDocuments": 287,
+    "sourceDocuments": 289,
     "total": 236,
-    "mergedSameNameGroups": 32,
-    "familyLinked": 156,
+    "mergedSameNameGroups": 34,
+    "familyLinked": 158,
     "familyAmbiguous": 0,
-    "familyPending": 80,
-    "primaryFamily": 156,
+    "familyPending": 78,
+    "primaryFamily": 158,
     "primaryGroup": 26,
     "primaryPlace": 18,
-    "primaryUnassigned": 36,
+    "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
   },
   "pending": [
@@ -843,28 +843,6 @@
       "familyAlternatives": []
     },
     {
-      "recordId": "character--ExQDi0xrpkmXAXUL1Ukh",
-      "name": "Namenloser Draig Waffenknecht II.",
-      "status": "pending",
-      "primary": {
-        "kind": "unassigned",
-        "id": "unassigned",
-        "label": "Unzugeordnet"
-      },
-      "familyAlternatives": []
-    },
-    {
-      "recordId": "character--XVeiNvgFfsmtomLuIjcA",
-      "name": "Namenloser Draig Waffenknecht III.",
-      "status": "pending",
-      "primary": {
-        "kind": "unassigned",
-        "id": "unassigned",
-        "label": "Unzugeordnet"
-      },
-      "familyAlternatives": []
-    },
-    {
       "recordId": "character--person--family-tree--nest-spouse-draenmelyn",
       "name": "Nest",
       "status": "pending",
@@ -1212,6 +1190,28 @@
       ],
       "ages": [
         "Geburtsjahr 1716"
+      ]
+    },
+    {
+      "name": "Llywelyn Coeddu",
+      "canonicalDocumentId": "ExQDi0xrpkmXAXUL1Ukh",
+      "documentIds": [
+        "ExQDi0xrpkmXAXUL1Ukh",
+        "ExQDi0xrpkmXAXUL1Ukh"
+      ],
+      "ages": [
+        "Geburtsjahr 1710"
+      ]
+    },
+    {
+      "name": "Hywel Craigddu",
+      "canonicalDocumentId": "XVeiNvgFfsmtomLuIjcA",
+      "documentIds": [
+        "XVeiNvgFfsmtomLuIjcA",
+        "XVeiNvgFfsmtomLuIjcA"
+      ],
+      "ages": [
+        "Geburtsjahr 1708"
       ]
     },
     {

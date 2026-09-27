@@ -1,0 +1,1592 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--ExQDi0xrpkmXAXUL1Ukh",
+  "slug": "llywelyn-coeddu",
+  "identity": {
+    "name": "Llywelyn Coeddu",
+    "aliases": [
+      "Namenloser Draig Waffenknecht II."
+    ],
+    "worldPersonId": "person--craigddu--person-d189ca4a"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-coeddu",
+      "label": "Haus Coeddu"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-coeddu",
+        "familyTitle": "Haus Coeddu",
+        "personId": "llywelyn-coeddu",
+        "worldPersonId": "person--craigddu--person-d189ca4a",
+        "houseId": "house-coeddu",
+        "houseName": "Haus Coeddu",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-coeddu&mode=view&person=llywelyn-coeddu",
+        "fingerprint": "{\"name\":\"Llywelyn Coeddu\",\"title\":\"Waffenknecht in Gwynthor\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-coeddu\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-coeddu/llywelyn-coeddu.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"brenric-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--brenric-coeddu\",\"name\":\"Brenric Coeddu\"},{\"personId\":\"gweneth-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--gweneth-coeddu\",\"name\":\"Gweneth Coeddu\"}],\"partners\":[{\"personId\":\"catrin-craigddu\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-bc7dd4e8\",\"name\":\"Catrin Craigddu\"}],\"children\":[{\"personId\":\"ellian-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--ellian-coeddu\",\"name\":\"Ellian Coeddu\"}]}}",
+        "score": 265
+      },
+      {
+        "familyId": "craigddu",
+        "familyTitle": "Haus Craigddu",
+        "personId": "person-d189ca4a",
+        "worldPersonId": "person--craigddu--person-d189ca4a",
+        "houseId": "house-coeddu",
+        "houseName": "Haus Coeddu",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=craigddu&mode=view&person=person-d189ca4a",
+        "fingerprint": "{\"name\":\"Llywelyn Coeddu\",\"title\":\"Waffenknecht in Gwynthor\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-coeddu\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-coeddu/llywelyn-coeddu.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-bc7dd4e8\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-bc7dd4e8\",\"name\":\"Catrin Craigddu\"}],\"children\":[]}}",
+        "score": 220
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Noch nicht in Gebrauch!"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "ExQDi0xrpkmXAXUL1Ukh",
+      "documentIds": [
+        "ExQDi0xrpkmXAXUL1Ukh",
+        "ExQDi0xrpkmXAXUL1Ukh"
+      ],
+      "documents": [
+        {
+          "documentId": "ExQDi0xrpkmXAXUL1Ukh",
+          "createdAt": "",
+          "updatedAt": ""
+        },
+        {
+          "documentId": "ExQDi0xrpkmXAXUL1Ukh",
+          "createdAt": "",
+          "updatedAt": "2026-09-27T20:33:20.104Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-coeddu",
+        "personId": "llywelyn-coeddu",
+        "worldPersonId": "person--craigddu--person-d189ca4a",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-coeddu&mode=view&person=llywelyn-coeddu"
+      },
+      {
+        "familyId": "craigddu",
+        "personId": "person-d189ca4a",
+        "worldPersonId": "person--craigddu--person-d189ca4a",
+        "url": "../Stammbäume/Stammbaum.html?family=craigddu&mode=view&person=person-d189ca4a"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-09-27T20:33:20.104Z",
+    "sourceUpdatedAt": "2026-09-27T20:33:20.104Z",
+    "sourceDocumentIds": [
+      "ExQDi0xrpkmXAXUL1Ukh",
+      "ExQDi0xrpkmXAXUL1Ukh"
+    ],
+    "contentHash": "cfc4bc50574ffdaaaad15da8ef4bf1ed03be4e119d2e6b2ea8039de208bf27d3"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "ExQDi0xrpkmXAXUL1Ukh",
+        "profileLink": "",
+        "title": "Waffenknecht, Gwynthor",
+        "archived": false,
+        "inventory": {
+          "role": "Waffenknecht, Gwynthor",
+          "infoRows": [],
+          "level": "Haus Draig, Celtigerns Wacht",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "value": 6,
+              "label": "Ges"
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "moneyNotice": "",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "name": "Namenloser Draig Waffenknecht II.",
+          "portraitPosition": "top",
+          "portrait": "https://i.imgur.com/7rTmKk9.png",
+          "status": "Gesund",
+          "portraitFormat": "portrait",
+          "carryValue": "Noch festlegen",
+          "companions": [
+            {
+              "description": "",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "value": 4,
+                  "label": "Sozialverhalten"
+                },
+                {
+                  "value": 5,
+                  "label": "Robustheit"
+                }
+              ],
+              "image": "",
+              "statusColor": "#5c7f20",
+              "imagePosition": "top",
+              "status": "Gesund",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "imageFormat": "landscape",
+              "species": "Tier oder Begleiter",
+              "imageFit": "cover",
+              "name": "Reittier / Gefährte",
+              "role": "Begleiter",
+              "infoRows": []
+            },
+            {
+              "name": "Treuer Begleiter",
+              "image": "",
+              "description": "",
+              "species": "Tier / Person",
+              "imagePosition": "top",
+              "role": "Gefährte",
+              "statusColor": "#5c7f20",
+              "status": "Noch festlegen",
+              "id": "companion-mqu1vat2-1-5e7l",
+              "imageFormat": "landscape",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "value": 7,
+                  "label": "Ausdauer"
+                },
+                {
+                  "label": "Staerke",
+                  "value": 5
+                },
+                {
+                  "label": "Agilitaet",
+                  "value": 6
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "imageFit": "cover",
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "infoRows": []
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "moneyState": {
+            "silver": 0,
+            "gold": 0,
+            "copper": 0,
+            "totalCopper": 0
+          },
+          "carryLabel": "Traglast",
+          "title": "Charakter-Inventar",
+          "hitpoints": "TP / Zustand",
+          "equipmentQuiz": {
+            "resultText": "",
+            "status": "",
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "open": false,
+            "updatedAt": ""
+          },
+          "categories": [
+            {
+              "id": "weapon",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen"
+            },
+            {
+              "label": "Rüstung",
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung",
+              "id": "equipment"
+            },
+            {
+              "id": "potions",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen"
+            },
+            {
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges",
+              "id": "other"
+            }
+          ],
+          "items": [
+            {
+              "type": "Waffe",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "tags": "",
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "name": "Hauptwaffe",
+              "id": "item-mqu1vat1-0-w8ef",
+              "image": "",
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "quantity": "1",
+              "icon": "*",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "category": "weapon"
+            },
+            {
+              "infoRows": [],
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "icon": "*",
+              "weight": "Noch festlegen",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "image": "",
+              "imageFormat": "square",
+              "type": "Rüstung",
+              "tags": "",
+              "name": "Rüstung / Schutz",
+              "quantity": "1",
+              "id": "item-mqu1vat1-1-exvo",
+              "category": "armor"
+            },
+            {
+              "imageFit": "contain",
+              "tags": "",
+              "infoRows": [],
+              "type": "Ausrüstung",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "name": "Reiseausrüstung",
+              "imagePosition": "center",
+              "image": "",
+              "id": "item-mqu1vat1-2-0fx2",
+              "icon": "*",
+              "imageFormat": "square",
+              "category": "equipment",
+              "quantity": "1",
+              "weight": "Noch festlegen"
+            },
+            {
+              "imagePosition": "center",
+              "tags": "",
+              "type": "Trinktur",
+              "id": "item-mqu1vat1-3-2lgm",
+              "imageFormat": "square",
+              "category": "potions",
+              "quantity": "1",
+              "image": "",
+              "weight": "Noch festlegen",
+              "name": "Heil- oder Verbrauchsgut",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "imageFit": "contain",
+              "icon": "*",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "infoRows": []
+            },
+            {
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "name": "Dokumente / Urkunden",
+              "type": "Dokument",
+              "imageFit": "contain",
+              "tags": "",
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "category": "documents",
+              "imageFormat": "square",
+              "quantity": "1",
+              "imagePosition": "center",
+              "image": "",
+              "id": "item-mqu1vat1-4-ajrj",
+              "icon": "*",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "type": "Sonstiges",
+              "quantity": "1",
+              "tags": "",
+              "imageFormat": "square",
+              "category": "other",
+              "id": "item-mqu1vat1-5-5kao",
+              "name": "Persönlicher Gegenstand",
+              "image": "",
+              "imagePosition": "center",
+              "icon": "*",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "weight": "Noch festlegen",
+              "infoRows": [],
+              "imageFit": "contain"
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "portraitFit": "cover"
+        },
+        "aliases": [],
+        "playerOwner": "",
+        "fraktion": "Haus Draig, Celtigerns Wacht",
+        "portrait": "https://i.imgur.com/7rTmKk9.png",
+        "name": "Namenloser Draig Waffenknecht II.",
+        "bio": "",
+        "emotes": [],
+        "emotesOverride": true
+      },
+      {
+        "id": "ExQDi0xrpkmXAXUL1Ukh",
+        "name": "Llywelyn Coeddu",
+        "title": "Waffenknecht, Gwynthor",
+        "fraktion": "Haus Draig, Celtigerns Wacht",
+        "role": "Waffenknecht im Dienst von Haus Draig",
+        "status": "",
+        "relevance": "",
+        "taxonomyPath": "",
+        "currentLocation": "",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Llywelyn Coeddu ist ein dreißigjähriger Waffenknecht aus Gwynthor im Dienst von Haus Draig. Pflichtbewusst und zugleich gemütlich, nimmt er das Leben gelassen. Sein Vater Brenric, ein Veteran des Großen Krieges unter Sir Maredudd, ist wegen Gelenk- und besonders Fußbeschwerden im Ruhestand. Mit Catrin Craigddu hat Llywelyn den jungen Sohn Ellian. Catrins Bruder Hywel ist sein bester Freund und für ihn beinahe ein großer Bruder.",
+        "aliases": [],
+        "archived": false,
+        "portrait": "https://i.imgur.com/7rTmKk9.png",
+        "identity": {
+          "worldPersonId": "person--craigddu--person-d189ca4a"
+        },
+        "genealogy": {
+          "worldPersonId": "person--craigddu--person-d189ca4a",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1710",
+          "death": "",
+          "houseId": "house-coeddu",
+          "houseName": "Haus Coeddu",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "craigddu",
+              "personId": "person-d189ca4a",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-09-27T20:33:20.104Z",
+              "lastSyncedAt": "2026-09-27T20:33:20.104Z",
+              "url": "../Stammbäume/Stammbaum.html?family=craigddu&mode=view&person=person-d189ca4a",
+              "fingerprint": "{\"name\":\"Llywelyn Coeddu\",\"title\":\"Waffenknecht in Gwynthor\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-coeddu\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-coeddu/llywelyn-coeddu.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-bc7dd4e8\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-bc7dd4e8\",\"name\":\"Catrin Craigddu\"}],\"children\":[]}}"
+            },
+            {
+              "familyId": "haus-coeddu",
+              "personId": "llywelyn-coeddu",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-09-27T20:33:20.104Z",
+              "lastSyncedAt": "2026-09-27T20:33:20.104Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-coeddu&mode=view&person=llywelyn-coeddu",
+              "fingerprint": "{\"name\":\"Llywelyn Coeddu\",\"title\":\"Waffenknecht in Gwynthor\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-coeddu\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-coeddu/llywelyn-coeddu.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"brenric-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--brenric-coeddu\",\"name\":\"Brenric Coeddu\"},{\"personId\":\"gweneth-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--gweneth-coeddu\",\"name\":\"Gweneth Coeddu\"}],\"partners\":[{\"personId\":\"catrin-craigddu\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-bc7dd4e8\",\"name\":\"Catrin Craigddu\"}],\"children\":[{\"personId\":\"ellian-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--ellian-coeddu\",\"name\":\"Ellian Coeddu\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "brenric-coeddu",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-coeddu--brenric-coeddu",
+                "name": "Brenric Coeddu"
+              },
+              {
+                "personId": "gweneth-coeddu",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-coeddu--gweneth-coeddu",
+                "name": "Gweneth Coeddu"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "catrin-craigddu",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--craigddu--person-bc7dd4e8",
+                "name": "Catrin Craigddu"
+              }
+            ],
+            "children": [
+              {
+                "personId": "ellian-coeddu",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-coeddu--ellian-coeddu",
+                "name": "Ellian Coeddu"
+              }
+            ]
+          }
+        },
+        "updatedAt": "2026-09-27T20:33:20.104Z",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Llywelyn Coeddu"
+            },
+            {
+              "label": "Geboren",
+              "value": "1710"
+            },
+            {
+              "label": "Alter im Jahr 1740",
+              "value": "30 Jahre"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Coeddu · bürgerlich"
+            },
+            {
+              "label": "Heimat",
+              "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Waffenknecht im Dienst von Haus Draig"
+            },
+            {
+              "label": "Eltern",
+              "value": "Brenric Coeddu und Gweneth"
+            },
+            {
+              "label": "Geschwister",
+              "value": "Rhydian, Maelwen und Thalor Coeddu"
+            },
+            {
+              "label": "Familienstand",
+              "value": "Verheiratet mit Catrin Craigddu"
+            },
+            {
+              "label": "Kind",
+              "value": "Ellian Coeddu · fünf Jahre alt"
+            }
+          ],
+          "quote": "Wir machen das ordentlich. Hetzen hilft uns dabei auch nicht.",
+          "quoteBy": "Llywelyn Coeddu",
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "sideWidth": 100,
+            "connectionPortraitHeight": 78,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Llywelyn Coeddu – Pflicht mit einer ruhigen Hand",
+            "biographyText": "<p><strong>Llywelyn Coeddu</strong> ist dreißig Jahre alt, Waffenknecht in <strong>Gwynthor</strong> und ein Mann, der dem Leben gewöhnlich mit mehr Gelassenheit begegnet, als sein Dienst vermuten ließe. Unter dem roten Haar blickt er aufmerksam genug in die Welt; nur sieht er selten einen Grund, sich über jede ihrer Unzulänglichkeiten aufzuregen. Er versieht seinen Dienst, steht zu seinen Zusagen und freut sich darauf, anschließend wieder nach Hause zu kommen.</p><p>Llywelyn ist <strong>pflichtbewusst, aber gemütlich</strong>. Wenn eine Aufgabe erledigt werden muss, erledigt er sie. Er hat lediglich wenig Verständnis dafür, weshalb man schon beim Anfangen aussehen sollte, als hinge das ganze Reich davon ab. Solange nichts drängt, gönnt er sich einen ruhigen Schritt, einen kurzen Plausch und die Zeit, die eine ordentliche Arbeit braucht. Das macht ihn angenehm im Umgang, kann ungeduldige Kameraden aber durchaus auf die Probe stellen.</p><p>Sein Lebensmittelpunkt liegt zwischen dem Dienst für <strong>Haus Draig</strong> und seiner Familie. Mit <strong>Catrin Craigddu</strong> hat er einen jungen Sohn, <strong>Ellian</strong>. Catrins Bruder <strong>Hywel</strong> ist sein bester Freund und für ihn beinahe ein großer Bruder. Die beiden Männer trennen nur zwei Jahre; der Unterschied liegt für Llywelyn vor allem darin, wie selbstverständlich Hywel Verantwortung übernimmt und den Überblick behält.</p>",
+            "abilitiesTitle": "Persönlichkeit",
+            "abilities": [
+              {
+                "title": "Pflichtbewusst",
+                "icon": "../IconOrdner/Traits%20Icon/Conscientious.png",
+                "detail": "Seine Zusagen gelten. Llywelyn möchte, dass Kameraden und Familie sich auf ihn verlassen können. Hinter seinem gemächlichen Auftreten steht kein Wunsch, anderen die eigene Arbeit aufzubürden."
+              },
+              {
+                "title": "Gelassen",
+                "icon": "../IconOrdner/Traits%20Icon/Content.png",
+                "detail": "Er nimmt das Leben locker und braucht nicht aus jedem Ärgernis eine Grundsatzfrage zu machen. Ein geregelter Dienst, ein gutes Zuhause und Menschen, mit denen er gern zusammen ist, bedeuten ihm viel."
+              },
+              {
+                "title": "Gemütlich",
+                "icon": "../IconOrdner/Traits%20Icon/Slothful.png",
+                "detail": "Wo keine Eile geboten ist, lässt Llywelyn sie auch nicht entstehen. Gelegentlich braucht es einen zweiten Hinweis, bis aus „gleich“ wirklich eine Bewegung wird. In einer dringlichen Situation soll diese Bequemlichkeit jedoch nicht auf Kosten seiner Pflicht gehen."
+              },
+              {
+                "title": "Gesellig",
+                "icon": "../IconOrdner/Traits%20Icon/Gregarious.png",
+                "detail": "Llywelyn mag unkomplizierte Gesellschaft und die vertrauten Stimmen seiner Kameraden. Ein gemeinsamer Feierabend oder ein gutes Gespräch genügen ihm meist; er muss dabei nicht im Mittelpunkt stehen."
+              },
+              {
+                "title": "Wohlwollend",
+                "icon": "../IconOrdner/Traits%20Icon/Kind.png",
+                "detail": "Er begegnet anderen ohne unnötige Schärfe. Besonders bei seiner Familie und bei Hywel zeigt sich seine Zuneigung im alltäglichen Dasein, im Zuhören und darin, eine Aufgabe gemeinsam zu tragen."
+              },
+              {
+                "title": "Geduldig",
+                "icon": "../IconOrdner/Traits%20Icon/Patient.png",
+                "detail": "Warten bringt ihn nicht sofort aus der Fassung. Er kann einen langen Dienst aushalten und seinem Sohn etwas ein zweites Mal erklären. Manchmal unterschätzt er dabei, wie dringend ein anderer bereits auf seine Antwort wartet."
+              }
+            ],
+            "historyTitle": "Der Sohn eines Kriegsveteranen",
+            "historyText": "<p>Llywelyn stammt aus dem <strong>bürgerlichen Haus Coeddu</strong> in Gwynthor. Seine Eltern sind <strong>Brenric Coeddu</strong> und <strong>Gweneth</strong>. Mit seinem älteren Bruder <strong>Rhydian</strong>, seiner jüngeren Schwester <strong>Maelwen</strong> und dem jüngsten Bruder <strong>Thalor</strong> wuchs er in einer Familie auf, der bewaffneter Dienst keineswegs fremd war.</p><p>Brenric kämpfte im <strong>Großen Krieg unter Sir Maredudd</strong>. Für Llywelyn war der Krieg damit nie ausschließlich eine Sache aus Liedern und Erzählungen über große Ritter. Er kannte einen der Männer, die tatsächlich gedient hatten, als seinen Vater. Brenrics Erfahrung gab dem Waffenhandwerk einen sehr alltäglichen Hintergrund: Pflichten, Kameraden, lange Tage auf den Beinen und die Frage, ob man danach wieder heimkam.</p><p>Inzwischen ist Brenric im <strong>Ruhestand</strong>. Seine Gelenke machen ihm immer wieder Beschwerden, besonders der Fuß. Das erschwert ihm den Dienst so sehr, dass er ihn aufgegeben hat. Für Llywelyn gehört die Rücksicht auf den Vater heute ebenso zum Familienleben wie dessen Erinnerungen an frühere Dienstjahre.</p><p>Llywelyn selbst wurde ebenfalls <strong>Waffenknecht</strong>. Sein Alltag führt ihn in den Dienst von Haus Draig in Gwynthor. Er trägt diese Aufgabe ohne große Worte über Ruhm oder besondere Bestimmung. Dass ein Mann eine Waffe führt, bedeutet für ihn zunächst, dass andere darauf vertrauen dürfen, dass er seine Arbeit beherrscht und an seinem Platz bleibt.</p>",
+            "worksTitle": "Können & Dienst",
+            "works": [
+              "Wach- und Garnisonsdienst · Vertraut mit dem Alltag eines Waffenknechts in Gwynthor, mit Wachen, Ablösungen und gemeinsamen Aufgaben. Er kennt seine Pflichten und ist Teil einer Mannschaft.",
+              "Waffenhandwerk · Im bewaffneten Dienst ausgebildet. Llywelyn wird als verlässlicher Waffenknecht geführt; seine Stärke liegt im verlässlichen gemeinsamen Dienst.",
+              "Ruhiger Umgang · Lässt sich von kleinen Reibereien nicht leicht anstecken und kann bei einer unangenehmen Aufgabe einen ruhigen Ton bewahren.",
+              "Familienalltag · Ehemann, Vater und Sohn eines pensionierten Veteranen. Die Verantwortung zu Hause besitzt für ihn denselben praktischen Stellenwert wie sein Dienst."
+            ],
+            "extraSections": [
+              {
+                "title": "Catrin und Ellian",
+                "position": "afterWorks",
+                "mode": "text",
+                "text": "<p>Llywelyn ist mit <strong>Catrin Craigddu</strong> verheiratet, Hywels jüngerer Schwester. Die Ehe verbindet die beiden Gwynthorer Bürgerfamilien unmittelbar miteinander. Zu ihrem Haushalt gehört der fünfjährige <strong>Ellian</strong>, dessen Welt noch wesentlich kleiner ist als die Mauern und Pflichten, mit denen sein Vater täglich zu tun hat.</p><p>Zu Hause kommt Llywelyns gelassene Art besonders zur Geltung. Er bringt die Bereitschaft mit, zuzuhören und sich Zeit zu nehmen. Natürlich macht das aus ihm keinen stets vollkommen aufmerksamen Ehemann oder Vater. Nach einem langen Dienst sitzt er auch gern erst einmal, und eine kleine häusliche Aufgabe kann in seiner Vorstellung etwas länger warten, als Catrin es für nötig hält. Seine Familie ist ihm dennoch wichtiger als ein besonders eindrucksvoller Auftritt nach außen.</p>"
+              },
+              {
+                "title": "Hywel – Freund und beinahe großer Bruder",
+                "position": "afterWorks",
+                "mode": "text",
+                "text": "<p><strong>Hywel Craigddu</strong> ist Llywelyns bester Freund und durch Catrin zugleich sein Schwager. Ihre Nähe lässt sich damit allerdings nur unvollständig beschreiben. Für Llywelyn ist Hywel jemand, an den er sich ganz selbstverständlich hält: ein vertrauter Kamerad, dessen Urteil Gewicht besitzt und bei dem er nicht erst erklären muss, weshalb ihn etwas beschäftigt.</p><p>Obwohl Hywel nur zwei Jahre älter ist, nimmt er für Llywelyn häufig die Stellung eines <strong>großen Bruders</strong> ein. Llywelyn kann einen Rat von ihm annehmen, ohne darin eine Bevormundung zu sehen. Umgekehrt muss Hywel bei ihm nicht unentwegt den Vernünftigen spielen. Sie können zusammen Dienst tun, reden oder schweigen und sich auch über die kleinen Dinge des Alltags amüsieren. Llywelyns lockere Art findet bei ihm ein vertrautes Gegenüber.</p>"
+              }
+            ],
+            "triviaTitle": "Marotten & Eigenarten",
+            "trivia": [
+              "Sein „Ich komme ja schon“ klingt oft etwas entschlossener, als die unmittelbar folgende Bewegung ausfällt.",
+              "Lässt sich von Hywel eher zu einer zügigen Entscheidung bewegen als von einer langen Ansprache über die Vorzüge der Eile.",
+              "Kann nach einem langen Dienst mit einem freien Sitzplatz und vertrauter Gesellschaft ausgesprochen zufrieden sein.",
+              "Unterscheidet deutlich zwischen einer dringenden Aufgabe und einer Aufgabe, bei der jemand lediglich ungeduldig geworden ist.",
+              "Nimmt die Beschwerden seines Vaters ernst, auch wenn Brenric selbst sie möglicherweise lieber beiseiteschieben würde."
+            ],
+            "quotesTitle": "In eigenen Worten",
+            "quotes": [
+              "„Ich habe gesagt, dass ich es mache. Und ich mache es auch.“",
+              "„Wenn Hywel sagt, wir sollten los, sollten wir vermutlich los.“",
+              "„Ein ruhiger Tag ist ein guter Tag. Ich weiß nicht, warum manche daran etwas ändern wollen.“"
+            ],
+            "connectionsTitle": "Familie & Freundschaft",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Brenric Coeddu",
+                "image": "../Stammbäume/assets/images/placeholders/male.png",
+                "imageFormat": "portrait",
+                "detail": "Vater und Veteran des Großen Krieges unter Sir Maredudd. Wiederkehrende Gelenk- und besonders Fußbeschwerden haben ihn in den Ruhestand geführt."
+              },
+              {
+                "type": "connection",
+                "name": "Gweneth",
+                "image": "../Stammbäume/assets/images/placeholders/female.png",
+                "imageFormat": "portrait",
+                "detail": "Mutter von Llywelyn, Rhydian, Maelwen und Thalor."
+              },
+              {
+                "type": "connection",
+                "name": "Catrin Craigddu",
+                "image": "../Stammbäume/assets/images/placeholders/female.png",
+                "imageFormat": "portrait",
+                "detail": "Seine Ehefrau, Ellians Mutter und Hywels jüngere Schwester."
+              },
+              {
+                "type": "connection",
+                "name": "Ellian Coeddu",
+                "image": "../Stammbäume/assets/images/placeholders/male.png",
+                "imageFormat": "portrait",
+                "detail": "Sein junger Sohn, geboren 1735 und im Jahr 1740 fünf Jahre alt."
+              },
+              {
+                "type": "connection",
+                "name": "Hywel Craigddu",
+                "image": "../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png",
+                "imageFormat": "portrait",
+                "detail": "Bester Freund, Kamerad und Schwager. Für Llywelyn nimmt der zwei Jahre ältere Hywel beinahe die Rolle eines großen Bruders ein."
+              }
+            ],
+            "documentsTitle": "Häuser & Herkunft",
+            "documents": [
+              {
+                "title": "Haus Coeddu",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-coeddu&mode=view&person=llywelyn-coeddu",
+                "text": "Die bürgerliche Familie Llywelyns aus Gwynthor."
+              },
+              {
+                "title": "Haus Craigddu",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Craigddu.png",
+                "link": "../Stammbäume/Stammbaum.html?family=craigddu&mode=view&person=person-bc7dd4e8",
+                "text": "Catrins und Hywels Familie; über die Ehe mit Haus Coeddu verbunden."
+              }
+            ],
+            "footer": "Personenakte · Llywelyn Coeddu · Haus Coeddu"
+          }
+        }
+      }
+    ]
+  },
+  "character": {
+    "id": "ExQDi0xrpkmXAXUL1Ukh",
+    "name": "Llywelyn Coeddu",
+    "title": "Waffenknecht, Gwynthor",
+    "fraktion": "Haus Draig, Celtigerns Wacht",
+    "role": "Waffenknecht im Dienst von Haus Draig",
+    "status": "",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Llywelyn Coeddu ist ein dreißigjähriger Waffenknecht aus Gwynthor im Dienst von Haus Draig. Pflichtbewusst und zugleich gemütlich, nimmt er das Leben gelassen. Sein Vater Brenric, ein Veteran des Großen Krieges unter Sir Maredudd, ist wegen Gelenk- und besonders Fußbeschwerden im Ruhestand. Mit Catrin Craigddu hat Llywelyn den jungen Sohn Ellian. Catrins Bruder Hywel ist sein bester Freund und für ihn beinahe ein großer Bruder.",
+    "aliases": [
+      "Namenloser Draig Waffenknecht II."
+    ],
+    "archived": false,
+    "portrait": "https://i.imgur.com/7rTmKk9.png",
+    "identity": {
+      "worldPersonId": "person--craigddu--person-d189ca4a"
+    },
+    "genealogy": {
+      "worldPersonId": "person--craigddu--person-d189ca4a",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1710",
+      "death": "",
+      "houseId": "house-coeddu",
+      "houseName": "Haus Coeddu",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "craigddu",
+          "personId": "person-d189ca4a",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-27T20:33:20.104Z",
+          "lastSyncedAt": "2026-09-27T20:33:20.104Z",
+          "url": "../Stammbäume/Stammbaum.html?family=craigddu&mode=view&person=person-d189ca4a",
+          "fingerprint": "{\"name\":\"Llywelyn Coeddu\",\"title\":\"Waffenknecht in Gwynthor\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-coeddu\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-coeddu/llywelyn-coeddu.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-bc7dd4e8\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-bc7dd4e8\",\"name\":\"Catrin Craigddu\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-coeddu",
+          "personId": "llywelyn-coeddu",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-27T20:33:20.104Z",
+          "lastSyncedAt": "2026-09-27T20:33:20.104Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-coeddu&mode=view&person=llywelyn-coeddu",
+          "fingerprint": "{\"name\":\"Llywelyn Coeddu\",\"title\":\"Waffenknecht in Gwynthor\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-coeddu\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-coeddu/llywelyn-coeddu.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"brenric-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--brenric-coeddu\",\"name\":\"Brenric Coeddu\"},{\"personId\":\"gweneth-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--gweneth-coeddu\",\"name\":\"Gweneth Coeddu\"}],\"partners\":[{\"personId\":\"catrin-craigddu\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-bc7dd4e8\",\"name\":\"Catrin Craigddu\"}],\"children\":[{\"personId\":\"ellian-coeddu\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-coeddu--ellian-coeddu\",\"name\":\"Ellian Coeddu\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "brenric-coeddu",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-coeddu--brenric-coeddu",
+            "name": "Brenric Coeddu"
+          },
+          {
+            "personId": "gweneth-coeddu",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-coeddu--gweneth-coeddu",
+            "name": "Gweneth Coeddu"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "catrin-craigddu",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--craigddu--person-bc7dd4e8",
+            "name": "Catrin Craigddu"
+          }
+        ],
+        "children": [
+          {
+            "personId": "ellian-coeddu",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-coeddu--ellian-coeddu",
+            "name": "Ellian Coeddu"
+          }
+        ]
+      }
+    },
+    "updatedAt": "2026-09-27T20:33:20.104Z",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Llywelyn Coeddu"
+        },
+        {
+          "label": "Geboren",
+          "value": "1710"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "30 Jahre"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Coeddu · bürgerlich"
+        },
+        {
+          "label": "Heimat",
+          "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Waffenknecht im Dienst von Haus Draig"
+        },
+        {
+          "label": "Eltern",
+          "value": "Brenric Coeddu und Gweneth"
+        },
+        {
+          "label": "Geschwister",
+          "value": "Rhydian, Maelwen und Thalor Coeddu"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Verheiratet mit Catrin Craigddu"
+        },
+        {
+          "label": "Kind",
+          "value": "Ellian Coeddu · fünf Jahre alt"
+        }
+      ],
+      "quote": "Wir machen das ordentlich. Hetzen hilft uns dabei auch nicht.",
+      "quoteBy": "Llywelyn Coeddu",
+      "biography": {
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 78,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Llywelyn Coeddu – Pflicht mit einer ruhigen Hand",
+        "biographyText": "<p><strong>Llywelyn Coeddu</strong> ist dreißig Jahre alt, Waffenknecht in <strong>Gwynthor</strong> und ein Mann, der dem Leben gewöhnlich mit mehr Gelassenheit begegnet, als sein Dienst vermuten ließe. Unter dem roten Haar blickt er aufmerksam genug in die Welt; nur sieht er selten einen Grund, sich über jede ihrer Unzulänglichkeiten aufzuregen. Er versieht seinen Dienst, steht zu seinen Zusagen und freut sich darauf, anschließend wieder nach Hause zu kommen.</p><p>Llywelyn ist <strong>pflichtbewusst, aber gemütlich</strong>. Wenn eine Aufgabe erledigt werden muss, erledigt er sie. Er hat lediglich wenig Verständnis dafür, weshalb man schon beim Anfangen aussehen sollte, als hinge das ganze Reich davon ab. Solange nichts drängt, gönnt er sich einen ruhigen Schritt, einen kurzen Plausch und die Zeit, die eine ordentliche Arbeit braucht. Das macht ihn angenehm im Umgang, kann ungeduldige Kameraden aber durchaus auf die Probe stellen.</p><p>Sein Lebensmittelpunkt liegt zwischen dem Dienst für <strong>Haus Draig</strong> und seiner Familie. Mit <strong>Catrin Craigddu</strong> hat er einen jungen Sohn, <strong>Ellian</strong>. Catrins Bruder <strong>Hywel</strong> ist sein bester Freund und für ihn beinahe ein großer Bruder. Die beiden Männer trennen nur zwei Jahre; der Unterschied liegt für Llywelyn vor allem darin, wie selbstverständlich Hywel Verantwortung übernimmt und den Überblick behält.</p>",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Pflichtbewusst",
+            "icon": "../IconOrdner/Traits%20Icon/Conscientious.png",
+            "detail": "Seine Zusagen gelten. Llywelyn möchte, dass Kameraden und Familie sich auf ihn verlassen können. Hinter seinem gemächlichen Auftreten steht kein Wunsch, anderen die eigene Arbeit aufzubürden."
+          },
+          {
+            "title": "Gelassen",
+            "icon": "../IconOrdner/Traits%20Icon/Content.png",
+            "detail": "Er nimmt das Leben locker und braucht nicht aus jedem Ärgernis eine Grundsatzfrage zu machen. Ein geregelter Dienst, ein gutes Zuhause und Menschen, mit denen er gern zusammen ist, bedeuten ihm viel."
+          },
+          {
+            "title": "Gemütlich",
+            "icon": "../IconOrdner/Traits%20Icon/Slothful.png",
+            "detail": "Wo keine Eile geboten ist, lässt Llywelyn sie auch nicht entstehen. Gelegentlich braucht es einen zweiten Hinweis, bis aus „gleich“ wirklich eine Bewegung wird. In einer dringlichen Situation soll diese Bequemlichkeit jedoch nicht auf Kosten seiner Pflicht gehen."
+          },
+          {
+            "title": "Gesellig",
+            "icon": "../IconOrdner/Traits%20Icon/Gregarious.png",
+            "detail": "Llywelyn mag unkomplizierte Gesellschaft und die vertrauten Stimmen seiner Kameraden. Ein gemeinsamer Feierabend oder ein gutes Gespräch genügen ihm meist; er muss dabei nicht im Mittelpunkt stehen."
+          },
+          {
+            "title": "Wohlwollend",
+            "icon": "../IconOrdner/Traits%20Icon/Kind.png",
+            "detail": "Er begegnet anderen ohne unnötige Schärfe. Besonders bei seiner Familie und bei Hywel zeigt sich seine Zuneigung im alltäglichen Dasein, im Zuhören und darin, eine Aufgabe gemeinsam zu tragen."
+          },
+          {
+            "title": "Geduldig",
+            "icon": "../IconOrdner/Traits%20Icon/Patient.png",
+            "detail": "Warten bringt ihn nicht sofort aus der Fassung. Er kann einen langen Dienst aushalten und seinem Sohn etwas ein zweites Mal erklären. Manchmal unterschätzt er dabei, wie dringend ein anderer bereits auf seine Antwort wartet."
+          }
+        ],
+        "historyTitle": "Der Sohn eines Kriegsveteranen",
+        "historyText": "<p>Llywelyn stammt aus dem <strong>bürgerlichen Haus Coeddu</strong> in Gwynthor. Seine Eltern sind <strong>Brenric Coeddu</strong> und <strong>Gweneth</strong>. Mit seinem älteren Bruder <strong>Rhydian</strong>, seiner jüngeren Schwester <strong>Maelwen</strong> und dem jüngsten Bruder <strong>Thalor</strong> wuchs er in einer Familie auf, der bewaffneter Dienst keineswegs fremd war.</p><p>Brenric kämpfte im <strong>Großen Krieg unter Sir Maredudd</strong>. Für Llywelyn war der Krieg damit nie ausschließlich eine Sache aus Liedern und Erzählungen über große Ritter. Er kannte einen der Männer, die tatsächlich gedient hatten, als seinen Vater. Brenrics Erfahrung gab dem Waffenhandwerk einen sehr alltäglichen Hintergrund: Pflichten, Kameraden, lange Tage auf den Beinen und die Frage, ob man danach wieder heimkam.</p><p>Inzwischen ist Brenric im <strong>Ruhestand</strong>. Seine Gelenke machen ihm immer wieder Beschwerden, besonders der Fuß. Das erschwert ihm den Dienst so sehr, dass er ihn aufgegeben hat. Für Llywelyn gehört die Rücksicht auf den Vater heute ebenso zum Familienleben wie dessen Erinnerungen an frühere Dienstjahre.</p><p>Llywelyn selbst wurde ebenfalls <strong>Waffenknecht</strong>. Sein Alltag führt ihn in den Dienst von Haus Draig in Gwynthor. Er trägt diese Aufgabe ohne große Worte über Ruhm oder besondere Bestimmung. Dass ein Mann eine Waffe führt, bedeutet für ihn zunächst, dass andere darauf vertrauen dürfen, dass er seine Arbeit beherrscht und an seinem Platz bleibt.</p>",
+        "worksTitle": "Können & Dienst",
+        "works": [
+          "Wach- und Garnisonsdienst · Vertraut mit dem Alltag eines Waffenknechts in Gwynthor, mit Wachen, Ablösungen und gemeinsamen Aufgaben. Er kennt seine Pflichten und ist Teil einer Mannschaft.",
+          "Waffenhandwerk · Im bewaffneten Dienst ausgebildet. Llywelyn wird als verlässlicher Waffenknecht geführt; seine Stärke liegt im verlässlichen gemeinsamen Dienst.",
+          "Ruhiger Umgang · Lässt sich von kleinen Reibereien nicht leicht anstecken und kann bei einer unangenehmen Aufgabe einen ruhigen Ton bewahren.",
+          "Familienalltag · Ehemann, Vater und Sohn eines pensionierten Veteranen. Die Verantwortung zu Hause besitzt für ihn denselben praktischen Stellenwert wie sein Dienst."
+        ],
+        "extraSections": [
+          {
+            "title": "Catrin und Ellian",
+            "position": "afterWorks",
+            "mode": "text",
+            "text": "<p>Llywelyn ist mit <strong>Catrin Craigddu</strong> verheiratet, Hywels jüngerer Schwester. Die Ehe verbindet die beiden Gwynthorer Bürgerfamilien unmittelbar miteinander. Zu ihrem Haushalt gehört der fünfjährige <strong>Ellian</strong>, dessen Welt noch wesentlich kleiner ist als die Mauern und Pflichten, mit denen sein Vater täglich zu tun hat.</p><p>Zu Hause kommt Llywelyns gelassene Art besonders zur Geltung. Er bringt die Bereitschaft mit, zuzuhören und sich Zeit zu nehmen. Natürlich macht das aus ihm keinen stets vollkommen aufmerksamen Ehemann oder Vater. Nach einem langen Dienst sitzt er auch gern erst einmal, und eine kleine häusliche Aufgabe kann in seiner Vorstellung etwas länger warten, als Catrin es für nötig hält. Seine Familie ist ihm dennoch wichtiger als ein besonders eindrucksvoller Auftritt nach außen.</p>"
+          },
+          {
+            "title": "Hywel – Freund und beinahe großer Bruder",
+            "position": "afterWorks",
+            "mode": "text",
+            "text": "<p><strong>Hywel Craigddu</strong> ist Llywelyns bester Freund und durch Catrin zugleich sein Schwager. Ihre Nähe lässt sich damit allerdings nur unvollständig beschreiben. Für Llywelyn ist Hywel jemand, an den er sich ganz selbstverständlich hält: ein vertrauter Kamerad, dessen Urteil Gewicht besitzt und bei dem er nicht erst erklären muss, weshalb ihn etwas beschäftigt.</p><p>Obwohl Hywel nur zwei Jahre älter ist, nimmt er für Llywelyn häufig die Stellung eines <strong>großen Bruders</strong> ein. Llywelyn kann einen Rat von ihm annehmen, ohne darin eine Bevormundung zu sehen. Umgekehrt muss Hywel bei ihm nicht unentwegt den Vernünftigen spielen. Sie können zusammen Dienst tun, reden oder schweigen und sich auch über die kleinen Dinge des Alltags amüsieren. Llywelyns lockere Art findet bei ihm ein vertrautes Gegenüber.</p>"
+          }
+        ],
+        "triviaTitle": "Marotten & Eigenarten",
+        "trivia": [
+          "Sein „Ich komme ja schon“ klingt oft etwas entschlossener, als die unmittelbar folgende Bewegung ausfällt.",
+          "Lässt sich von Hywel eher zu einer zügigen Entscheidung bewegen als von einer langen Ansprache über die Vorzüge der Eile.",
+          "Kann nach einem langen Dienst mit einem freien Sitzplatz und vertrauter Gesellschaft ausgesprochen zufrieden sein.",
+          "Unterscheidet deutlich zwischen einer dringenden Aufgabe und einer Aufgabe, bei der jemand lediglich ungeduldig geworden ist.",
+          "Nimmt die Beschwerden seines Vaters ernst, auch wenn Brenric selbst sie möglicherweise lieber beiseiteschieben würde."
+        ],
+        "quotesTitle": "In eigenen Worten",
+        "quotes": [
+          "„Ich habe gesagt, dass ich es mache. Und ich mache es auch.“",
+          "„Wenn Hywel sagt, wir sollten los, sollten wir vermutlich los.“",
+          "„Ein ruhiger Tag ist ein guter Tag. Ich weiß nicht, warum manche daran etwas ändern wollen.“"
+        ],
+        "connectionsTitle": "Familie & Freundschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Brenric Coeddu",
+            "image": "../Stammbäume/assets/images/placeholders/male.png",
+            "imageFormat": "portrait",
+            "detail": "Vater und Veteran des Großen Krieges unter Sir Maredudd. Wiederkehrende Gelenk- und besonders Fußbeschwerden haben ihn in den Ruhestand geführt."
+          },
+          {
+            "type": "connection",
+            "name": "Gweneth",
+            "image": "../Stammbäume/assets/images/placeholders/female.png",
+            "imageFormat": "portrait",
+            "detail": "Mutter von Llywelyn, Rhydian, Maelwen und Thalor."
+          },
+          {
+            "type": "connection",
+            "name": "Catrin Craigddu",
+            "image": "../Stammbäume/assets/images/placeholders/female.png",
+            "imageFormat": "portrait",
+            "detail": "Seine Ehefrau, Ellians Mutter und Hywels jüngere Schwester."
+          },
+          {
+            "type": "connection",
+            "name": "Ellian Coeddu",
+            "image": "../Stammbäume/assets/images/placeholders/male.png",
+            "imageFormat": "portrait",
+            "detail": "Sein junger Sohn, geboren 1735 und im Jahr 1740 fünf Jahre alt."
+          },
+          {
+            "type": "connection",
+            "name": "Hywel Craigddu",
+            "image": "../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png",
+            "imageFormat": "portrait",
+            "detail": "Bester Freund, Kamerad und Schwager. Für Llywelyn nimmt der zwei Jahre ältere Hywel beinahe die Rolle eines großen Bruders ein."
+          }
+        ],
+        "documentsTitle": "Häuser & Herkunft",
+        "documents": [
+          {
+            "title": "Haus Coeddu",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-coeddu&mode=view&person=llywelyn-coeddu",
+            "text": "Die bürgerliche Familie Llywelyns aus Gwynthor."
+          },
+          {
+            "title": "Haus Craigddu",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Craigddu.png",
+            "link": "../Stammbäume/Stammbaum.html?family=craigddu&mode=view&person=person-bc7dd4e8",
+            "text": "Catrins und Hywels Familie; über die Ehe mit Haus Coeddu verbunden."
+          }
+        ],
+        "footer": "Personenakte · Llywelyn Coeddu · Haus Coeddu"
+      }
+    },
+    "inventory": {
+      "role": "Waffenknecht, Gwynthor",
+      "infoRows": [],
+      "level": "Haus Draig, Celtigerns Wacht",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "moneyNotice": "",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "name": "Namenloser Draig Waffenknecht II.",
+      "portraitPosition": "top",
+      "portrait": "https://i.imgur.com/7rTmKk9.png",
+      "status": "Gesund",
+      "portraitFormat": "portrait",
+      "carryValue": "Noch festlegen",
+      "companions": [
+        {
+          "description": "",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "image": "",
+          "statusColor": "#5c7f20",
+          "imagePosition": "top",
+          "status": "Gesund",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "imageFormat": "landscape",
+          "species": "Tier oder Begleiter",
+          "imageFit": "cover",
+          "name": "Reittier / Gefährte",
+          "role": "Begleiter",
+          "infoRows": []
+        },
+        {
+          "name": "Treuer Begleiter",
+          "image": "",
+          "description": "",
+          "species": "Tier / Person",
+          "imagePosition": "top",
+          "role": "Gefährte",
+          "statusColor": "#5c7f20",
+          "status": "Noch festlegen",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "imageFormat": "landscape",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "imageFit": "cover",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "infoRows": []
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "moneyState": {
+        "silver": 0,
+        "gold": 0,
+        "copper": 0,
+        "totalCopper": 0
+      },
+      "carryLabel": "Traglast",
+      "title": "Charakter-Inventar",
+      "hitpoints": "TP / Zustand",
+      "equipmentQuiz": {
+        "resultText": "",
+        "status": "",
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false,
+        "updatedAt": ""
+      },
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung",
+          "id": "equipment"
+        },
+        {
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "items": [
+        {
+          "type": "Waffe",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": "",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "name": "Hauptwaffe",
+          "id": "item-mqu1vat1-0-w8ef",
+          "image": "",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "quantity": "1",
+          "icon": "*",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "category": "weapon"
+        },
+        {
+          "infoRows": [],
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "image": "",
+          "imageFormat": "square",
+          "type": "Rüstung",
+          "tags": "",
+          "name": "Rüstung / Schutz",
+          "quantity": "1",
+          "id": "item-mqu1vat1-1-exvo",
+          "category": "armor"
+        },
+        {
+          "imageFit": "contain",
+          "tags": "",
+          "infoRows": [],
+          "type": "Ausrüstung",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "name": "Reiseausrüstung",
+          "imagePosition": "center",
+          "image": "",
+          "id": "item-mqu1vat1-2-0fx2",
+          "icon": "*",
+          "imageFormat": "square",
+          "category": "equipment",
+          "quantity": "1",
+          "weight": "Noch festlegen"
+        },
+        {
+          "imagePosition": "center",
+          "tags": "",
+          "type": "Trinktur",
+          "id": "item-mqu1vat1-3-2lgm",
+          "imageFormat": "square",
+          "category": "potions",
+          "quantity": "1",
+          "image": "",
+          "weight": "Noch festlegen",
+          "name": "Heil- oder Verbrauchsgut",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "icon": "*",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "infoRows": []
+        },
+        {
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "name": "Dokumente / Urkunden",
+          "type": "Dokument",
+          "imageFit": "contain",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "category": "documents",
+          "imageFormat": "square",
+          "quantity": "1",
+          "imagePosition": "center",
+          "image": "",
+          "id": "item-mqu1vat1-4-ajrj",
+          "icon": "*",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "type": "Sonstiges",
+          "quantity": "1",
+          "tags": "",
+          "imageFormat": "square",
+          "category": "other",
+          "id": "item-mqu1vat1-5-5kao",
+          "name": "Persönlicher Gegenstand",
+          "image": "",
+          "imagePosition": "center",
+          "icon": "*",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "imageFit": "contain"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitFit": "cover"
+    },
+    "emotes": [],
+    "emotesOverride": true
+  }
+}

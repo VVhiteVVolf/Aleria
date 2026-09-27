@@ -8176,9 +8176,11 @@ test('createFounderTimeJumpPlaceholderHouseFamily setzt einen leeren Zeitsprung 
   assert.deepEqual(timeJump.rels.children, []);
 });
 
-test('registriert neun Bürgerhäuser aus Gwynthor mit lokalen Wappen und Grafschaftslinks', async () => {
+test('bewahrt die ursprünglichen neun Bürgerhäuser aus Gwynthor mit lokalen Wappen und Grafschaftslinks', async () => {
   const expectedSlugs = ['draenmelyn', 'pendrwn', 'swyll', 'aelmor', 'maerllys', 'braglas', 'tonnarth', 'ysgrif', 'falchdyn'];
   const expectedTitles = ['Draenmelyn', 'Pendrwn', 'Swyll', 'Aelmor', 'Maerllys', 'Braglas', 'Tonnarth', 'Ysgrif', 'Falchdyn'];
+  const originalDefinitions = GWYNTHOR_COMMONER_HOUSE_DEFINITIONS.filter(entry => expectedSlugs.includes(entry.slug));
+  const originalFamilies = GWYNTHOR_COMMONER_HOUSE_FAMILIES.filter(family => expectedSlugs.some(slug => family.document.id === 'haus-' + slug));
   const placeholderSlugs = new Set();
   const sourceManifest = JSON.parse(await readFile(
     new URL('../assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/wappen-sources.json', import.meta.url),
@@ -8189,13 +8191,13 @@ test('registriert neun Bürgerhäuser aus Gwynthor mit lokalen Wappen und Grafsc
     'utf8'
   );
 
-  assert.equal(GWYNTHOR_COMMONER_HOUSE_DEFINITIONS.length, 9);
-  assert.equal(GWYNTHOR_COMMONER_HOUSE_FAMILIES.length, 9);
-  assert.deepEqual(GWYNTHOR_COMMONER_HOUSE_DEFINITIONS.map(definition => definition.slug), expectedSlugs);
-  assert.deepEqual(GWYNTHOR_COMMONER_HOUSE_DEFINITIONS.map(definition => definition.title), expectedTitles);
+  assert.equal(originalDefinitions.length, 9);
+  assert.equal(originalFamilies.length, 9);
+  assert.deepEqual(originalDefinitions.map(definition => definition.slug), expectedSlugs);
+  assert.deepEqual(originalDefinitions.map(definition => definition.title), expectedTitles);
   assert.deepEqual(Object.keys(sourceManifest), expectedSlugs);
 
-  await Promise.all(GWYNTHOR_COMMONER_HOUSE_FAMILIES.map(async (family, index) => {
+  await Promise.all(originalFamilies.map(async (family, index) => {
     const slug = expectedSlugs[index];
     const validated = assertValidFamily(family).family;
     const converted = toFamilyChartData(validated);

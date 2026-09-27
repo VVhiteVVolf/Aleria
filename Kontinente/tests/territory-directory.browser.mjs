@@ -36,7 +36,7 @@ try {
   }
 
   for (const [path, count] of [
-    ['Grafschaft Celtigerns Wacht.html', 37],
+    ['Grafschaft Celtigerns Wacht.html', 39],
     ['Baronie Gwendolyns Ufer/Baronie Gwendolyns Ufer.html', 18],
     ['Baronie Arthus Streben/Baronie Arthus Streben.html', 15],
     ['Herrschaft Rhonwens Tränen/Herrschaft Rhonwens Tränen.html', 9],

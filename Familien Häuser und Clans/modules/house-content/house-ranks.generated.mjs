@@ -47,6 +47,8 @@ export const HOUSE_RANKS = Object.freeze({
   "haus-braglas": "Bürgerlich",
   "haus-chwedlonol": "Ritterherr",
   "haus-cludwyr": "Ritterherr",
+  "haus-coeddu": "Bürgerlich",
+  "craigddu": "Bürgerlich",
   "haus-cymrath-o-traethlan": "Ritterherr",
   "haus-draenmelyn": "Bürgerlich",
   "haus-dubhan-gwynthor": "Ritterherr",

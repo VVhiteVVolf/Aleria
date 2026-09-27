@@ -21,8 +21,8 @@ for (const record of families) {
   sources.set(record.id, (await import(source)).HOUSE_CONTENT);
 }
 
-test('Jede der 77 Familien besitzt eine erreichbare Hausseite und eine kurze, korrekt verlinkte Bio', async () => {
-  assert.equal(families.length, 77);
+test('Jede der 79 Familien besitzt eine erreichbare Hausseite und eine kurze, korrekt verlinkte Bio', async () => {
+  assert.equal(families.length, 79);
   for (const record of families) {
     const entry = registry.byId(record.id);
     assert.equal(entry.status, 'active', record.id);
@@ -41,13 +41,13 @@ test('Jede der 77 Familien besitzt eine erreichbare Hausseite und eine kurze, ko
   }
 });
 
-test('Grafschaft führt ihre 37 ausgewählten Häuser mit direkten Hausseitenlinks und lokalen Wappen', async () => {
+test('Grafschaft führt ihre 39 ausgewählten Häuser mit direkten Hausseitenlinks und lokalen Wappen', async () => {
   const context = { window: {} };
   vm.runInNewContext(await readFile(new URL('Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js', project), 'utf8'), context);
   const sections = context.window.KONTINENTE_DATA.view.familySections;
   const cards = sections.flatMap(section => section.cards);
-  assert.equal(cards.length, 37);
-  assert.equal(new Set(cards.map(c => c.id)).size, 37);
+  assert.equal(cards.length, 39);
+  assert.equal(new Set(cards.map(c => c.id)).size, 39);
   for (const card of cards) {
     assert.ok(families.some(record => record.id === card.id), card.id);
     assert.equal(card.href, '/Familien%20H%C3%A4user%20und%20Clans/' + registry.linkFor(card.id));
@@ -56,10 +56,10 @@ test('Grafschaft führt ihre 37 ausgewählten Häuser mit direkten Hausseitenlin
   assert.equal(sections.at(-1).title, 'Ausgestorbene Häuser');
 });
 
-test('33 Originale sind archiviert; 36 übrige Vorbereitungen enthalten keine erfundenen Chroniken', async () => {
+test('33 Originale sind archiviert; 38 übrige Vorbereitungen enthalten keine erfundenen Chroniken', async () => {
   const added = [...sources.values()].filter(c => c.registerPage);
-  assert.equal(added.length, 69);
-  assert.equal(added.filter(c => c.prepared).length, 36);
+  assert.equal(added.length, 71);
+  assert.equal(added.filter(c => c.prepared).length, 38);
   assert.equal(added.filter(c => !c.prepared).length, 33);
   for (const content of added) {
     if (content.prepared) {

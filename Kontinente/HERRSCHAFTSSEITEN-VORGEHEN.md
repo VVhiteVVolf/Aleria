@@ -85,7 +85,7 @@ Prüfung: `tests/administration-dialog.browser.mjs` gleicht sämtliche 316 Perso
 
 Morveth und Skellor erscheinen unter **Ausgestorbene Häuser auf Rhonwens Tränen**. Illysywen bleibt sowohl dort als auch in der ausdrücklich gewünschten historischen Gruppe der Grafschaft sichtbar. Ard Conbhróns Einordnung in diese Anzeige bedeutet nicht, dass seine überlebenden Angehörigen aus dem Stammbaum entfernt oder als verstorben markiert werden.
 
-Alle **77 angelegten Hausseiten und Bios bleiben erhalten**. Auf der Grafschaft erscheinen **37 Karten**: sieben große Häuser, 14 örtliche Ritterhäuser, 13 örtliche Bürgerhäuser und drei historische Häuser. Die übrigen Häuser stehen auf ihren eigenen Herrschaftsseiten. Von Hochreuth wird wegen der ungeklärten Zuordnung Goldmund / Haus Roden nicht länger als örtliches Haus angezeigt; seine Hausseite bleibt verfügbar.
+Alle **79 angelegten Hausseiten und Bios bleiben erhalten**. Auf der Grafschaft erscheinen **39 Karten**: sieben große Häuser, 14 örtliche Ritterhäuser, 15 örtliche Bürgerhäuser und drei historische Häuser. Die übrigen Häuser stehen auf ihren eigenen Herrschaftsseiten. Von Hochreuth wird wegen der ungeklärten Zuordnung Goldmund / Haus Roden nicht länger als örtliches Haus angezeigt; seine Hausseite bleibt verfügbar.
 
 | Herrschaft | Hausübersicht |
 | --- | --- |

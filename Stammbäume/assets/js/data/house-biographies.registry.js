@@ -42,6 +42,8 @@ import { HOUSE_BIOGRAPHY as haus_bleiddorn } from "../../../../Familien Häuser 
 import { HOUSE_BIOGRAPHY as haus_braglas } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Braglas/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_chwedlonol } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Chwedonol/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_cludwyr } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cludwyr/haus.biography.mjs?v=gwendolyn-20260911h";
+import { HOUSE_BIOGRAPHY as haus_coeddu } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Coeddu/haus.biography.mjs?v=gwendolyn-20260911h";
+import { HOUSE_BIOGRAPHY as craigddu } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Craigddu/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_cymrath_o_traethlan } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cymrath_OTraethlan/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_draenmelyn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Draenmelyn/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_dubhan_gwynthor } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Dubhan/haus.biography.mjs?v=gwendolyn-20260911h";
@@ -111,6 +113,8 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-braglas": Object.freeze({ sourceRevision: 2, biography: haus_braglas, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-chwedlonol": Object.freeze({ sourceRevision: 4, biography: haus_chwedlonol, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-cludwyr": Object.freeze({ sourceRevision: 4, biography: haus_cludwyr, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-coeddu": Object.freeze({ sourceRevision: 1, biography: haus_coeddu, replacedDefaultFingerprints: Object.freeze([]) }),
+  "craigddu": Object.freeze({ sourceRevision: 2, biography: craigddu, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-cymrath-o-traethlan": Object.freeze({ sourceRevision: 2, biography: haus_cymrath_o_traethlan, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-draenmelyn": Object.freeze({ sourceRevision: 9, biography: haus_draenmelyn, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-dubhan-gwynthor": Object.freeze({ sourceRevision: 4, biography: haus_dubhan_gwynthor, replacedDefaultFingerprints: Object.freeze(["1994:dc650542:ef5cf150","2101:f2d15aee:dcb6a848"]) }),
