@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { renderActionPicker } from '../modules/combat/ui/combat-action-picker.js';
 import { renderActionTable } from '../modules/combat/ui/combat-action-table.js';
+import { renderArsenalDetail } from '../modules/combat/ui/combat-arsenal-view.js';
+import { matchesArsenalChoice, arsenalFavorites } from '../modules/combat/ui/combat-arsenal-model.js';
 import { getActionGroups } from '../modules/combat/ui/combat-action-card.js';
 import { resolveCombatProfile } from '../modules/combat/combat-profile-resolver.js';
 import { planCharacterArsenalRelease } from '../../firebase/functions/scripts/character-arsenal-release-model.mjs';
@@ -10,12 +12,13 @@ import { planCharacterArsenalRelease } from '../../firebase/functions/scripts/ch
 const load = async slug => JSON.parse(await readFile(new URL(`../../Charakter%20Archiv%20Exporte/${slug}.json`, import.meta.url),'utf8')).character;
 const choices = html => [...html.matchAll(/data-combat-action-option="([^"]+)"/g)].map(match => match[1]);
 
-test('Liste und Tabelle enthalten dieselben Handlungen und eine Spalte pro Bereich', async () => {
+test('Liste und Arsenal enthalten dieselben Handlungen und eine Navigation pro Bereich', async () => {
   for (const slug of ['asgeir-wolfshorn','ylva-wolfshorn','gildas-gafyr']) {
     const actor = resolveCombatProfile(await load(slug));
     const table = renderActionTable(actor, actor.selectedAction.id);
     assert.deepEqual(choices(table),choices(renderActionPicker(actor,actor.selectedAction.id)));
-    assert.equal((table.match(/<th scope="col"/g)||[]).length,getActionGroups(actor).size);
+    assert.equal((table.match(/data-arsenal-section=/g)||[]).length,getActionGroups(actor).size + 2);
+    assert.doesNotMatch(table, /<table|<th scope/);
     assert.ok(table.includes('data-action="available-actions-only"'));
     assert.doesNotMatch(table,/onclick=|oninput=/);
   }
@@ -24,8 +27,33 @@ test('Liste und Tabelle enthalten dieselben Handlungen und eine Spalte pro Berei
 test('Popup schützt Freitext und sperrt dieselben unzulässigen Handlungen', () => {
   const action={id:'blocked',name:'<Angriff>',kind:'technique',compatible:false,disabledReason:'Schild <fehlt>',costs:[{resourceId:'action',amount:1}]};
   const table=renderActionTable({name:'<Figur>',actions:[action]},'blocked');
-  assert.match(table,/&lt;Angriff&gt;/);assert.match(table,/&lt;Figur&gt;/);assert.match(table,/Schild &lt;fehlt&gt;/);
-  assert.match(table,/aria-pressed="true" disabled/);
+  assert.match(table,/&lt;Angriff&gt;/);assert.match(table,/&lt;Figur&gt;/);
+  assert.match(table,/data-unavailable/);
+  const detail=renderArsenalDetail({actions:[action]}, {action,label:action.name,group:'Kampftechniken'});
+  assert.match(detail,/Schild &lt;fehlt&gt;/);
+  assert.match(detail,/data-action="choose-arsenal-action" disabled/);
+});
+
+test('Arsenalsuche überschreitet Bereiche, Filter und Favoriten verändern keine Handlung', () => {
+  const choice={action:{id:'spear',kind:'technique',formula:'1d8',costs:[{resourceId:'special-action',amount:1}],compatible:false},group:'Speerkunst',groupKey:'spear-form',label:'Fallender Dorn',entry:{effect:'Bringt aus dem Gleichgewicht'}};
+  const before=structuredClone(choice);
+  assert.equal(matchesArsenalChoice(choice,{section:'other'}),false);
+  assert.equal(matchesArsenalChoice(choice,{section:'other',query:'GLEICHGEWICHT'}),true);
+  assert.equal(matchesArsenalChoice(choice,{section:'favorites',favorites:new Set(['spear'])}),true);
+  assert.equal(matchesArsenalChoice(choice,{filter:'attack'}),true);
+  assert.equal(matchesArsenalChoice(choice,{filter:'support'}),false);
+  assert.equal(matchesArsenalChoice(choice,{filter:'special'}),true);
+  assert.equal(matchesArsenalChoice(choice,{onlyAvailable:true}),false);
+  assert.deepEqual(choice,before);
+});
+
+test('Favoriten bleiben je Figur getrennt und funktionieren ohne verfügbaren Speicher', () => {
+  const data=new Map(), storage={getItem:key=>data.get(key),setItem:(key,value)=>data.set(key,value)};
+  const first=arsenalFavorites({characterId:'ylva'},storage);first.ids.add('spear');first.save();
+  assert.ok(arsenalFavorites({characterId:'ylva'},storage).ids.has('spear'));
+  assert.equal(arsenalFavorites({characterId:'asgeir'},storage).ids.size,0);
+  const blocked=arsenalFavorites({}, {getItem(){throw Error('blocked');},setItem(){throw Error('blocked');}});
+  blocked.ids.add('move');assert.doesNotThrow(()=>blocked.save());
 });
 
 test('Duncans vollständiges Meisterarsenal behält späte Techniken und besondere Angriffe jenseits von 60 Einträgen', async () => {
