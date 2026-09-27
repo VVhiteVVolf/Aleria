@@ -54,11 +54,17 @@ test("Gwynthor besitzt vollständige, strukturierte Ortsinhalte", async () => {
   assert.match(content, /Flüsterfächer/);
   assert.match(content, /Samt & Sünde/);
   const commonerHouses = data.houses.find(group => group.title === "Bürgerliche Häuser")?.items || [];
-  const falchdyn = commonerHouses.find(house => house.familyId === "haus-falchdyn");
-  assert.ok(falchdyn, "Haus Falchdyn fehlt bei den Gwynthorer Bürgerhäusern");
-  assert.equal(falchdyn.seat, "Gwynthor");
-  assert.equal(falchdyn.liege, "Haus Draig");
-  assert.match(decodeURI(falchdyn.emblem), /Bürgerliche\/Gwynthor\/Falchdyn\.png$/);
+  for (const [familyId, name] of [["haus-falchdyn", "Falchdyn"], ["haus-coeddu", "Coeddu"], ["craigddu", "Craigddu"]]) {
+    const matches = commonerHouses.filter(house => house.familyId === familyId);
+    assert.equal(matches.length, 1, `Haus ${name} muss genau einmal bei den Gwynthorer Bürgerhäusern stehen`);
+    const house = matches[0];
+    assert.equal(house.name, `Haus ${name}`);
+    assert.equal(house.rank, "Bürgerliches Haus");
+    assert.equal(house.seat, "Gwynthor");
+    assert.equal(house.liege, "Haus Draig");
+    assert.ok(decodeURI(house.emblem).endsWith(`Bürgerliche/Gwynthor/${name}.png`));
+    await access(resolve(root, decodeURI(house.emblem).slice(1)));
+  }
   assert.doesNotMatch(content, /im alten (?:Code|Quellcode)/i);
 });
 

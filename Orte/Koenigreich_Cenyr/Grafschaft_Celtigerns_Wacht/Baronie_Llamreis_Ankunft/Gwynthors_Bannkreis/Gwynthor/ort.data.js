@@ -29,8 +29,8 @@
     `${houseRoot}/haus-${id}.png`
   );
 
-  const commonerHouse = (id, name) => house(
-    `haus-${id}`,
+  const commonerHouse = (id, name, familyId = `haus-${id}`) => house(
+    familyId,
     `Haus ${name}`,
     "Bürgerliches Haus",
     "Gwynthor",
@@ -211,7 +211,9 @@
           commonerHouse("braglas", "Braglas"),
           commonerHouse("tonnarth", "Tonnarth"),
           commonerHouse("ysgrif", "Ysgrif"),
-          commonerHouse("falchdyn", "Falchdyn")
+          commonerHouse("falchdyn", "Falchdyn"),
+          commonerHouse("coeddu", "Coeddu"),
+          commonerHouse("craigddu", "Craigddu", "craigddu")
         ])
       })
     ]),
