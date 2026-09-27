@@ -1,7 +1,7 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import { createFamilyPerson, createMarriage, createParentages } from './family-record-builders.js';
-import { BRADRHITH_EMBLEM, BRADRHITH_HOUSE_BIOGRAPHY } from './house-bradrhith-biography.js';
+import { BRADRHITH_EMBLEM, BRADRHITH_HOUSE_BIOGRAPHY, BRADRHITH_HOUSE_TEXT } from './house-bradrhith-biography.js';
 import { HOUSE_BRADRHITH_PORTRAITS } from './house-bradrhith-portraits.js';
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
 
@@ -36,7 +36,7 @@ function person(id, name, sex, options = {}) {
     ...options,
     extensions: {
       ...options.extensions,
-      registryManagedFields: ['name', 'birth', 'death', 'status', 'portrait', 'portraitPlaceholder', 'notes']
+      registryManagedFields: ['name', 'birth', 'death', 'status', 'portrait', 'portraitPlaceholder', 'notes', ...(options.extensions?.registryManagedFields || [])]
     }
   });
 }
@@ -49,7 +49,7 @@ export const HOUSE_BRADRHITH_FAMILY = Object.freeze({
     id: 'haus-bradrhith',
     title: 'Haus Bradrhith',
     motto: '',
-    description: 'Bürgerliche Pferdezüchterfamilie auf dem Bradrhith Hof im nördlichen Bannkreis Gwynthors. Familienstand nach der Anhörung in Celtigerns Wacht.',
+    description: BRADRHITH_HOUSE_TEXT.overview,
     emblem: BRADRHITH_EMBLEM,
     houseProfile: GWYNTHOR_COMMONER_HOUSE_PROFILES.bradrhith
   },
@@ -62,8 +62,9 @@ export const HOUSE_BRADRHITH_FAMILY = Object.freeze({
     ...base.persons,
     person('ceredig-bradrhith', 'Ceredig Bradrhith', 'male', {
       birth: '1672', death: '1739',
-      status: 'dead', lineageRole: 'head', title: 'Verstorbener Hofherr',
-      notes: 'Nachfahre des unbenannten Stallmeisters, der den Hof vor über einem Jahrhundert begründete. Starb nach längerer Krankheit vor dem Überfall. Vater von drei verstorbenen Söhnen, Arianwen und Mairwen. Das Gericht erkennt Hinweise auf ein Testament zugunsten Mairwens und Llyrs an; die Urkunde wird in der Anhörung nicht vorgelegt.'
+      status: 'dead', lineageRole: 'head', title: 'Verstorbener Hofherr · Stall- und Zuchtmeister der Draig',
+      notes: 'War Stall- und Zuchtmeister des Hauses Draig. Erhielt als Dank einen Hof und Startkapital, um eine Rosszucht zur Versorgung Gwynthors aufzubauen. Starb nach längerer Krankheit vor dem Überfall. Vater von drei verstorbenen Söhnen, Arianwen und Mairwen. Das Testament wird in der Anhörung nicht vorgelegt; die Nachfolge ist ungeklärt.',
+      extensions: { registryManagedFields: ['title'] }
     }),
     person('ceredig-sohn-krieg-1', 'Cynddelig Bradrhith', 'male', {
       birth: '1695', death: '1719',
@@ -85,7 +86,7 @@ export const HOUSE_BRADRHITH_FAMILY = Object.freeze({
       worldPersonId: 'person--almanach--nliylooqslgwjusa1fpi',
       status: 'alive', lineageRole: 'mainline', title: 'Ältere Tochter · in kirchlicher Buße',
       tags: ['Almanach-Charakter', 'Orden der Geläuterten'],
-      notes: 'Ältere Tochter Ceredigs und Ehefrau Gruffudd Gwregysdus. Überlebte den Überfall mit ihrem Gemahl und ihren Kindern. Billigte die Einschüchterung Mairwens und Llyrs; das Gericht unterschied ihre Schuld von Gruffudds vorsätzlichem Mordkomplott. Büßt als Schweigende unter persönlicher Aufsicht Gwalchgwyn Saethwyrs. Nach Llyrs Erbverzicht erhalten ihre Kinder den Hof.',
+      notes: 'Ältere Tochter Ceredigs und Ehefrau Gruffudd Gwregysdus. Überlebte den Überfall mit ihrem Gemahl und ihren Kindern. Billigte die Einschüchterung Mairwens und Llyrs; das Gericht unterschied ihre Schuld von Gruffudds vorsätzlichem Mordkomplott. Büßt als Schweigende unter persönlicher Aufsicht Gwalchgwyn Saethwyrs. Ob ihre Kinder den Hof weiterführen oder dieser an Llyr Dewrdd ergeht, ist noch ungeklärt.',
       extensions: { sourceCharacterId: 'nLIylooQSlgWjUsA1fpI' }
     }),
     person('gruffudd-gwregysdu', 'Gruffudd Gwregysdu', 'male', {
@@ -99,22 +100,22 @@ export const HOUSE_BRADRHITH_FAMILY = Object.freeze({
     person('mairwen-bradrhith', 'Mairwen Dewrdd (geb. Bradrhith)', 'female', {
       birth: '1705', death: '1740',
       status: 'dead', title: 'Jüngere Tochter · beim Überfall getötet',
-      notes: 'Jüngere Tochter Ceredigs und Ehefrau Llyr Dewrdds; im Schlusswort auch Mairwen Dewrdd genannt. Führte mit Llyr während der Krankheit ihres Vaters den Hof. Wurde beim Überfall zusammen mit ihren Kindern getötet. Das Gericht erkennt die Nachfolge über sie zugunsten Llyrs an.'
+      notes: 'Jüngere Tochter Ceredigs und Ehefrau Llyr Dewrdds; im Schlusswort auch Mairwen Dewrdd genannt. Führte mit Llyr während der Krankheit ihres Vaters den Hof. Wurde beim Überfall zusammen mit ihren Kindern getötet. Ob ihr Witwer den Hof übernimmt, bleibt ungeklärt.'
     }),
     person('llyr-dewrdd', 'Llyr Dewrdd', 'male', {
       birth: '1701',
       worldPersonId: 'person--almanach--wjnuopliifgduhjqkjhu',
       houseId: 'house-dewrdd', familyRole: 'married', status: 'alive', title: 'Pferdemeister · Mairwens Witwer',
       tags: ['Almanach-Charakter'],
-      notes: 'Arbeitete sein Leben lang auf dem Bradrhith Hof. Heiratete Mairwen mit Ceredigs Segen und führte mit ihr den Betrieb in dessen letzten Jahren. Überlebte den Überfall, bei dem seine Frau und Kinder starben. Lehnt das ihm zugesprochene Erbe ausdrücklich ab und bleibt zunächst als Gast der Draig zur Erholung in Gwynthor. Ein Gespräch mit Owain Draig ist vorgesehen; eine neue Anstellung, ein neuer Hof oder eine Vormundschaft über Arianwens Kinder sind noch nicht beschlossen.',
+      notes: 'Arbeitete sein Leben lang auf dem Bradrhith Hof. Heiratete Mairwen mit Ceredigs Segen und führte mit ihr den Betrieb in dessen letzten Jahren. Überlebte den Überfall, bei dem seine Frau und Kinder starben. Bleibt zunächst als Gast der Draig zur Erholung in Gwynthor. Ob er den Hof übernimmt oder Arianwens Kinder ihn weiterführen, ist ungeklärt. Ein Gespräch mit Owain Draig ist vorgesehen; eine neue Anstellung, ein neuer Hof oder eine Vormundschaft sind noch nicht beschlossen.',
       extensions: { sourceCharacterId: 'WjNUoPlIiFgdUHJQkJhU' }
     }),
     ...ARIANWEN_CHILD_IDS.map((id, index) => person(id, ARIANWEN_CHILDREN[index].name, index < 2 ? 'male' : 'female', {
       birth: ARIANWEN_CHILDREN[index].birth,
       houseId: 'house-gwregysdu', status: 'alive', lineageRole: 'mainline', portraitPlaceholder: index === 0 ? 'auto' : 'child',
-      title: 'Kind Arianwens · erbt den Hof',
-      notes: `Kind Arianwens und Gruffudds; überlebte mit den Eltern den Überfall. Trägt nach Aussage Gwendolyns den Namen des Vaters. Erhält mit den Geschwistern den Hof nach Llyrs Verzicht, unter Aufsicht der Awenydd. ${CHILD_SOURCE_NOTE}`,
-      extensions: { sourceCountIsMinimum: index < 2 }
+      title: 'Kind Arianwens · Hofnachfolge offen',
+      notes: `Kind Arianwens und Gruffudds; überlebte mit den Eltern den Überfall. Trägt nach Aussage Gwendolyns den Namen des Vaters. Kommt mit den Geschwistern für eine Weiterführung des Hofes infrage; die Entscheidung zwischen ihnen und Llyr Dewrdd ist noch offen. ${CHILD_SOURCE_NOTE}`,
+      extensions: { sourceCountIsMinimum: index < 2, registryManagedFields: ['title'] }
     })),
     ...MAIRWEN_CHILD_IDS.map((id, index) => person(id, MAIRWEN_CHILDREN[index].name, index < 2 ? 'male' : 'female', {
       birth: MAIRWEN_CHILDREN[index].birth, death: '1740',
@@ -154,8 +155,8 @@ export const HOUSE_BRADRHITH_FAMILY = Object.freeze({
   cadetBranches: [],
   timeJumps: base.timeJumps.map(jump => ({
     ...jump, childIds: ['ceredig-bradrhith'],
-    notes: 'Vom unbekannten Stallmeister der Draig und seiner unbekannten Partnerin über nicht überlieferte Generationen zu Ceredig Bradrhith.',
-    extensions: { preparedPlaceholder: false }
+    notes: 'Vom unbekannten Gründerpaar der Familie über nicht überlieferte Generationen zu Ceredig Bradrhith. Ceredig selbst begründete später die Rosszucht mit Unterstützung der Draig.',
+    extensions: { preparedPlaceholder: false, registryManagedFields: ['notes'] }
   })),
   lineage: {
     founderPartnershipId: base.lineage.founderPartnershipId, houseId: HOUSE_ID,
@@ -169,11 +170,13 @@ export const HOUSE_BRADRHITH_FAMILY = Object.freeze({
     ancestorDepth: 12, descendantDepth: 12, limitGenerations: false, showSiblings: true
   },
   extensions: {
-    blankFamily: false, sourceRevision: 2, chartLayoutPolicy: 'strict-v1',
+    blankFamily: false, sourceRevision: 3, chartLayoutPolicy: 'strict-v1',
     houseBiographyModule: BRADRHITH_HOUSE_BIOGRAPHY,
     sourceModule: 'Die Anhörung — Celtigerns Wacht · Sitzung 3',
     sourceNote: 'Kommentarthread vom 05.09.2026, celtigerns-wacht-anhoerung::session:3. Verwandtschaft: Beiträge 8, 10, 12, 14, 80, 232, 239; Ergebnis: 231–237, 244, 249. Revision 2 auf ausdrücklichen Autorenwunsch: unbekanntes Gründerpaar, Hausknoten und serieller Zeitsprung zu Ceredig; neun ergänzte Namen und Lebensdaten um Arianwen (40) und ihre Kinder (19, 16, 14) im Weltjahr 1740. Je zwei Söhne und eine Tochter pro Schwester sind ausgearbeitet; die Quelle nennt nur eine Mindestzahl. Ceredigs Kinder erhalten weiterhin nur den belegten Vater. Neue Namen stammen aus dem Welsh Classical Dictionary nach Ausschluss der ersten 400 verschiedenen Listophile-Namen, keine statistische Seltenheitsrangliste. Almanach-Weltidentitäten bleiben erhalten. Llyrs Porträt folgt der ausdrücklichen Korrektur p4ivSxG.png. Einzelheiten im Quellenprotokoll.',
-    registryManagedExtensionFields: ['sourceNote', 'houseBiographyModule', 'chartLayoutPolicy'],
+    authorAmendment: '28.09.2026: Ceredig selbst war Stall- und Zuchtmeister der Draig und erhielt Hof sowie Startkapital für seine Rosszucht. Die Nachfolge zwischen Llyr Dewrdd und Arianwens Kindern bleibt ausdrücklich ungeklärt. Diese Festlegung ersetzt die ältere Darstellung zur Hofgründung und abgeschlossenen Erbfolge; Familienbeziehungen und Lebensdaten bleiben erhalten.',
+    registryManagedExtensionFields: ['sourceNote', 'authorAmendment', 'houseBiographyModule', 'chartLayoutPolicy'],
+    registryManagedDocumentFields: ['description'],
     registryManagedLineageFields: ['founderPartnershipId', 'houseId', 'crestSubtitle', 'crestFrame', 'timeGap'],
     registryManagedViewFields: ['focusPersonId', 'limitGenerations']
   }

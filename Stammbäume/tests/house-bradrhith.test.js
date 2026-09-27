@@ -57,19 +57,24 @@ test('revision 1 upgrades names, dates, portrait and founder links while preserv
   old.document.motto = 'Eine eigene Randnotiz';
   old.persons.find(person => person.id === 'arianwen-bradrhith').extensions.personalNote = 'Behalten';
   const upgraded = resolveRegisteredFamilyUpgrade(family, old);
-  assert.equal(upgraded.extensions.sourceRevision, 2);
+  assert.equal(upgraded.extensions.sourceRevision, 3);
   assert.equal(upgraded.persons.length, 16);
   assert.equal(upgraded.document.motto, old.document.motto);
   for (const prior of old.persons) {
     const person = upgraded.persons.find(item => item.id === prior.id);
     const expected = family.persons.find(item => item.id === prior.id);
     assert.equal(person.worldPersonId, prior.worldPersonId);
-    for (const field of ['name', 'birth', 'death', 'portrait']) assert.equal(person[field], expected[field]);
+    for (const field of ['name', 'birth', 'death', 'portrait', 'title', 'notes']) assert.equal(person[field], expected[field]);
   }
   assert.equal(upgraded.persons.find(person => person.id === 'arianwen-bradrhith').extensions.personalNote, 'Behalten');
   assert.equal(upgraded.lineage.founderPartnershipId, family.lineage.founderPartnershipId);
   assert.equal(upgraded.view.focusPersonId, family.view.focusPersonId);
   assert.ok(upgraded.extensions.houseBiographyModule.house.extraSections.some(section => section.text.includes('Eiludd')));
+  assert.match(upgraded.persons.find(person => person.id === 'ceredig-bradrhith').notes, /Stall- und Zuchtmeister.*Startkapital/s);
+  assert.match(upgraded.persons.find(person => person.id === 'llyr-dewrdd').notes, /ungeklärt/);
+  for (const id of ['arianwen-sohn-1', 'arianwen-sohn-2', 'arianwen-tochter']) {
+    assert.match(upgraded.persons.find(person => person.id === id).title, /Hofnachfolge offen/);
+  }
   assert.deepEqual(assertValidFamily(upgraded).diagnostics, []);
   assert.deepEqual(auditFamilyChartLayoutPolicy(upgraded).issues, []);
 });

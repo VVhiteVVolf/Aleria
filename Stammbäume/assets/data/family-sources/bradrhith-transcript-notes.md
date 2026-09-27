@@ -1,5 +1,19 @@
 # Haus Bradrhith – Quellenabgleich
 
+## Aktuelle Autorenfestlegung · 28.09.2026 · Revision 3
+
+Die jüngste Nutzervorgabe ersetzt zwei Aussagen der älteren Transkriptauswertung: **Ceredig selbst** war Stall- und Zuchtmeister des Hauses Draig und erhielt als Dank **einen Hof und Startkapital**, um eine Rosszucht zur Versorgung Gwynthors aufzubauen. Die **Nachfolge bleibt ungeklärt**: Der Hof könnte an den angeheirateten Llyr Dewrdd ergehen oder durch Arianwens Kinder weitergeführt werden. Es wird kein abgeschlossener Erbverzicht und keine bereits erfolgte Zuweisung an die Kinder mehr als aktueller Hausstand dargestellt.
+
+Diese Korrektur ist eine ausdrückliche Autorenfestlegung, kein nachträglich behauptetes Ergebnis des unten dokumentierten Transkripts. Der historische Quellenbericht und die bisherigen Prüfungsergebnisse bleiben zur Nachvollziehbarkeit erhalten. Gerichtliche Beiträge und bestehende Personenprofile werden nicht umgeschrieben. Die Aufsicht der Awenydd, die übrigen Folgen des Überfalls, Familienbeziehungen, Namen, Weltpersonen-IDs und Lebensdaten bleiben erhalten.
+
+Die vorhandene Hausbio liefert über `BRADRHITH_HOUSE_TEXT` die gemeinsame Geschichte für Hausseite und Stammbaum. Die Hausseite enthält nun Ceredigs Rosszucht, Familie, Überfall, Besitz, offene Nachfolge und verlinkte Persönlichkeiten. Das vom Nutzer bereitgestellte [Hausbild](https://i.imgur.com/qWKXlot.png) wird unverändert unter `Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Bradrhith/assets/bradrhith-hausbild.png` gespeichert und in beiden Ansichten verwendet. Die bestehenden individuellen Porträts bleiben unverändert.
+
+Die Hausakte verwendet Quellrevision 3. Verwaltete Hinweise und die betroffenen Titel werden auch in gespeicherten Akten aktualisiert; die Familienstruktur mit 16 Personen bleibt unverändert. Eine separate veröffentlichte Bradrhith-JSON-Akte lag vor dieser Ergänzung nicht vor; die Hausakte wird weiterhin über das bestehende Familienregister bereitgestellt.
+
+Prüfung: 25 bestehende Familien- und Hausseitentests bestanden, einschließlich der aktualisierten Migration aus Revision 1. Gegenüber dem vorherigen Git-Stand sind alle 16 Identitäten, Namen, Lebensdaten, Porträts, Partnerschaften und Elternbeziehungen unverändert. Hausseite und Wappenbiografie wurden bei 1440 und 390 Pixeln Browserbreite geprüft; das neue Bild lädt in beiden Ansichten, die drei Kinder tragen die offene Hofnachfolge. Der bestehende Archivabgleich erzeugt keine Änderungen an Personeninhalten. Erzeugte Hausdaten bestehen `--check`.
+
+## Historischer Quellenstand · Revisionen 1 und 2
+
 Quelle: Nutzertranskript „Die Anhörung — Celtigerns Wacht“, Thread `celtigerns-wacht-anhoerung::session:3`, exportiert am 05.09.2026. Die Nummern beziehen sich auf `threadOrder`.
 
 ## Personen und Beziehungen
