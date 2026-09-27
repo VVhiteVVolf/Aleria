@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "familyId": "craigddu",
+  "revision": 1,
+  "updatedAt": "2026-09-27T16:05:17.713Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "craigddu",
+      "title": "Craigddu",
+      "motto": "",
+      "description": "",
+      "emblem": "assets/images/placeholders/neutral-crest.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": "",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "craigddu-gruender",
+        "worldPersonId": "person--craigddu--craigddu-gruender",
+        "name": "Iestyn Craigddu",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1680",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-craigddu",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "craigddu-gruenderin",
+        "worldPersonId": "person--craigddu--craigddu-gruenderin",
+        "name": "Mared",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1683",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-craigddu",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-28b0e0a3",
+        "worldPersonId": "person--craigddu--person-28b0e0a3",
+        "name": "Hywel",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1708",
+        "death": "",
+        "portrait": "https://i.imgur.com/8Y1N3SA.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-craigddu",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-bc7dd4e8",
+        "worldPersonId": "person--craigddu--person-bc7dd4e8",
+        "name": "Catrin",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1712",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-craigddu",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-0774c56b",
+        "worldPersonId": "person--craigddu--person-0774c56b",
+        "name": "Eleri",
+        "title": "??",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1708",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-36234a87",
+        "worldPersonId": "person--craigddu--person-36234a87",
+        "name": "Lowri",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-abdbd916",
+        "worldPersonId": "person--craigddu--person-abdbd916",
+        "name": "Carys",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1728",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-650808a6",
+        "worldPersonId": "person--craigddu--person-650808a6",
+        "name": "Nerys",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-f54eea82",
+        "worldPersonId": "person--craigddu--person-f54eea82",
+        "name": "Ffion",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1732",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-70f41f8d",
+        "worldPersonId": "person--craigddu--person-70f41f8d",
+        "name": "Anwen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1733",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-c5e97e4f",
+        "worldPersonId": "person--craigddu--person-c5e97e4f",
+        "name": "Eirlys",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-9be71788",
+        "worldPersonId": "person--craigddu--person-9be71788",
+        "name": "Mali",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "female",
+        "houseId": "",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-d189ca4a",
+        "worldPersonId": "person--craigddu--person-d189ca4a",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "??",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-craigddu-founders",
+        "participantIds": [
+          "craigddu-gruender",
+          "craigddu-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1705",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-8ce5d0c5",
+        "participantIds": [
+          "person-28b0e0a3",
+          "person-0774c56b"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-0f65c1d1",
+        "participantIds": [
+          "person-bc7dd4e8",
+          "person-d189ca4a"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-8b9ecbe3",
+        "childId": "person-28b0e0a3",
+        "parentIds": [
+          "craigddu-gruender",
+          "craigddu-gruenderin"
+        ],
+        "partnershipId": "marriage-craigddu-founders",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-3ba743cd",
+        "childId": "person-bc7dd4e8",
+        "parentIds": [
+          "craigddu-gruender",
+          "craigddu-gruenderin"
+        ],
+        "partnershipId": "marriage-craigddu-founders",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-506a2c5f",
+        "childId": "person-36234a87",
+        "parentIds": [
+          "person-28b0e0a3",
+          "person-0774c56b"
+        ],
+        "partnershipId": "partnership-8ce5d0c5",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-ccb75498",
+        "childId": "person-abdbd916",
+        "parentIds": [
+          "person-28b0e0a3",
+          "person-0774c56b"
+        ],
+        "partnershipId": "partnership-8ce5d0c5",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-7151685d",
+        "childId": "person-650808a6",
+        "parentIds": [
+          "person-28b0e0a3",
+          "person-0774c56b"
+        ],
+        "partnershipId": "partnership-8ce5d0c5",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-9dd20cb1",
+        "childId": "person-f54eea82",
+        "parentIds": [
+          "person-28b0e0a3",
+          "person-0774c56b"
+        ],
+        "partnershipId": "partnership-8ce5d0c5",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-bb51296c",
+        "childId": "person-70f41f8d",
+        "parentIds": [
+          "person-28b0e0a3",
+          "person-0774c56b"
+        ],
+        "partnershipId": "partnership-8ce5d0c5",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-f2ae4cc1",
+        "childId": "person-c5e97e4f",
+        "parentIds": [
+          "person-28b0e0a3",
+          "person-0774c56b"
+        ],
+        "partnershipId": "partnership-8ce5d0c5",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-6b0659db",
+        "childId": "person-9be71788",
+        "parentIds": [
+          "person-28b0e0a3",
+          "person-0774c56b"
+        ],
+        "partnershipId": "partnership-8ce5d0c5",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-craigddu",
+        "name": "Craigddu",
+        "motto": "",
+        "emblem": "assets/images/placeholders/neutral-crest.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-craigddu-founders",
+      "houseId": "house-craigddu",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "craigddu-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "registry": {
+        "folderPath": [],
+        "unclassified": true
+      },
+      "generatorProfile": {
+        "origin": "Gwynthor",
+        "culture": "",
+        "religion": "Alerische Kirche",
+        "governance": "",
+        "foundingYear": "1680",
+        "founderHouseName": "",
+        "houseColors": "",
+        "specialTraits": ""
+      },
+      "registryTombstones": {
+        "persons": [
+          "person-314f2418"
+        ],
+        "parentages": [
+          "parentage-cf802205"
+        ]
+      }
+    }
+  }
+}
