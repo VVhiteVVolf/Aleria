@@ -8,11 +8,11 @@ import { getClassPageIconSource } from '../classes/class-icon-registry.js?v=2026
 import {
   mergeCharacterArchiveEntries,
   normalizeCharacterArchiveEntry
-} from './character-archive-model.js?v=20260928-equipment-art-v3';
+} from './character-archive-model.js?v=20260928-equipment-art-v4';
 import { FIRE_SPELL_ARSENAL } from './fire-spell-arsenal.js?v=20260810-fire-spell-arsenal-v1';
 import { buildSpellCatalogArchiveEntries } from '../spell-catalog/spell-catalog-archive.js';
 import { ARCHIVE_PAGE_CLASSES, ARCHIVE_PAGE_MOUNTS } from './character-archive-page-data.js?v=20260913-morgorn-names-v1';
-import { classifyCharacterArchiveEntries, createArchiveMountEntry } from './character-archive-classification.js?v=20260928-equipment-art-v3';
+import { classifyCharacterArchiveEntries, createArchiveMountEntry } from './character-archive-classification.js?v=20260928-equipment-art-v4';
 
 const SPELL_ATTACK_LIBRARY_URL = new URL('../../data/spell-attack-library.json', import.meta.url);
 

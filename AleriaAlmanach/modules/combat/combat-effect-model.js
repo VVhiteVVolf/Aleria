@@ -1,4 +1,4 @@
-import { applyCombatDamage, normalizeCombatHitPointState } from './combat-state-model.js?v=20260928-equipment-art-v3';
+import { applyCombatDamage, normalizeCombatHitPointState } from './combat-state-model.js?v=20260928-equipment-art-v4';
 import { applyBerserkSurvival } from './combat-berserk-state.js';
 import { resolveEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
 import { applyRegenerationFireExposure } from './combat-creature-traits.js';

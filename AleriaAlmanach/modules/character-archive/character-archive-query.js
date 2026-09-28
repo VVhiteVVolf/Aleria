@@ -1,5 +1,5 @@
-import { getCharacterArchiveEntrySearchText, getCharacterArchiveKind, normalizeArchiveSearchText } from './character-archive-model.js?v=20260928-equipment-art-v3';
-import { matchesCharacterArchiveKind } from './character-archive-attack-groups.js?v=20260928-equipment-art-v3';
+import { getCharacterArchiveEntrySearchText, getCharacterArchiveKind, normalizeArchiveSearchText } from './character-archive-model.js?v=20260928-equipment-art-v4';
+import { matchesCharacterArchiveKind } from './character-archive-attack-groups.js?v=20260928-equipment-art-v4';
 
 const collator = new Intl.Collator('de', { sensitivity: 'base', numeric: true });
 

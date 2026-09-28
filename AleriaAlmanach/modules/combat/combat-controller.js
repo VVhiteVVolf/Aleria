@@ -1,16 +1,16 @@
-import { prepareCombatEquipment, reserveCombatEquipment } from './combat-equipment-preparation.js?v=20260928-equipment-art-v3';
-import { estimateCombatHitChance } from './combat-action-estimates.js?v=20260928-equipment-art-v3';
+import { prepareCombatEquipment, reserveCombatEquipment } from './combat-equipment-preparation.js?v=20260928-equipment-art-v4';
+import { estimateCombatHitChance } from './combat-action-estimates.js?v=20260928-equipment-art-v4';
 import { getActorsWithCombatPosts, normalizeCombatLoadout, isPairedCombatWeapon, canUseCombatOffHand } from './combat-weapon-loadout.js';
 import { canCarryCombatShield } from './combat-support-equipment.js';
 import { CombatDiceAdapter } from './combat-dice-adapter.js?v=20260905-party-combat-v1';
-import { mountCommentConditionTracker, releaseCommentConditionTracker } from '../comments/comments-condition-tracker.js?v=20260928-equipment-art-v3';
-import { prioritizeCombatTargets } from './ui/combat-target-picker.js?v=20260928-equipment-art-v3';
+import { mountCommentConditionTracker, releaseCommentConditionTracker } from '../comments/comments-condition-tracker.js?v=20260928-equipment-art-v4';
+import { prioritizeCombatTargets } from './ui/combat-target-picker.js?v=20260928-equipment-art-v4';
 import { narrateCombatResolution } from './combat-narration-service.js?v=20260806-agency-v1';
 import {
   CombatProfileResolver,
   getCombatActorValidationMessage
-} from './combat-profile-resolver.js?v=20260928-equipment-art-v3';
-import { CombatResolutionService, getCombatRollContext } from './combat-resolution-service.js?v=20260928-equipment-art-v3';
+} from './combat-profile-resolver.js?v=20260928-equipment-art-v4';
+import { CombatResolutionService, getCombatRollContext } from './combat-resolution-service.js?v=20260928-equipment-art-v4';
 import {
   applyCombatResourceCosts,
   deriveCombatStateFromComments,
@@ -28,7 +28,7 @@ import {
   getResolutionTargetConcentrationState,
   getResolutionTargetResourceState,
   overlayCombatHitPointState
-} from './combat-state-model.js?v=20260928-equipment-art-v3';
+} from './combat-state-model.js?v=20260928-equipment-art-v4';
 import {
   getReservedEquipmentSwitchWeaponId,
   withEquippedCombatWeapon
@@ -44,22 +44,22 @@ import { applyCombatAbilityUse } from './combat-ability-uses.js?v=20260803-actio
 import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
 import { previewZornkappeSegment } from '../inventory-use/zornkappe-effects.js';
 import { deriveSceneItems, applySceneItemEvent, applyDroppedWeaponsToStates } from '../scene-items/scene-items-model.js';
-import { applySceneItemInteraction } from '../scene-items/scene-item-interaction.js?v=20260928-equipment-art-v3';
+import { applySceneItemInteraction } from '../scene-items/scene-item-interaction.js?v=20260928-equipment-art-v4';
 import {
   ensureCombatResolutionDialog,
   mountCombatComposer,
   renderCombatEvaluation,
   setCombatResolutionStatus
-} from './ui/combat-ui.js?v=20260928-equipment-art-v3';
-import { filterCombatTargets } from './ui/combat-composer-view-state.js?v=20260928-equipment-art-v3';
+} from './ui/combat-ui.js?v=20260928-equipment-art-v4';
+import { filterCombatTargets } from './ui/combat-composer-view-state.js?v=20260928-equipment-art-v4';
 import {
   collectCombatTriggerRules,
   deriveCombatRuleFrequencyKeys
-} from './combat-trigger-rules.js?v=20260928-equipment-art-v3';
-import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260928-equipment-art-v3';
+} from './combat-trigger-rules.js?v=20260928-equipment-art-v4';
+import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260928-equipment-art-v4';
 import { getCombatSegmentMode, isCombatSegment, getEffectiveCombatSegmentKind } from './combat-segment-model.js';
 import { createCombatProfileCache } from './combat-profile-cache.js';
-import { getCombatPreviewActorIds, createCombatTargetSummary } from './combat-composer-roster.js?v=20260928-equipment-art-v3';
+import { getCombatPreviewActorIds, createCombatTargetSummary } from './combat-composer-roster.js?v=20260928-equipment-art-v4';
 import { actionAllowsSelfTarget, getCombatTargetSelection, isSelfTargetAction } from './combat-action-targeting.js';
 
 const profileResolver = new CombatProfileResolver();

@@ -1,5 +1,5 @@
 import { SCENE_ITEM_KINDS, SCENE_ITEM_AXES, sceneItemDraftFromTemplate, buildSceneItemDefinition } from './scene-item-definition.js';
-import { REGISTER_CATEGORIES } from '../item-register/item-register-model.js?v=20260928-equipment-art-v3';
+import { REGISTER_CATEGORIES } from '../item-register/item-register-model.js?v=20260928-equipment-art-v4';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const categories = Object.fromEntries(REGISTER_CATEGORIES.map(category => [category.id, category.label]));
 const bindings = new WeakMap();

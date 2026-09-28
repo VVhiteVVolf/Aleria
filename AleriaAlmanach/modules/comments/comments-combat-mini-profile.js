@@ -1,6 +1,6 @@
 ﻿import { renderMiniCombatProfile, escapeCombatMarkup as e } from './comments-combat-mini-profile-view.js?v=20260906-effect-rolls-v1';
-import { openCombatStatusDialog } from '../combat-status/combat-status-controller.js?v=20260928-equipment-art-v3';
-import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260928-equipment-art-v3';
+import { openCombatStatusDialog } from '../combat-status/combat-status-controller.js?v=20260928-equipment-art-v4';
+import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260928-equipment-art-v4';
 
 const ROOT_SELECTOR = '[data-comment-combat-profile]';
 let activeRoot = null;

@@ -13,18 +13,18 @@ import {
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260928-equipment-art-v3';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260928-equipment-art-v3';
-import { getCharacterSpellPresentation } from './character-spell-presentation.js?v=20260928-equipment-art-v3';
-import { renderEquipmentArtwork } from '../character-equipment/equipment-artwork-view.js?v=20260928-equipment-art-v3';
-import { projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v3';
-import { updateCharacterSpellPresentations } from './character-spell-view.js?v=20260928-equipment-art-v3';
+} from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260928-equipment-art-v4';
+import { getCharacterSpellPresentation } from './character-spell-presentation.js?v=20260928-equipment-art-v4';
+import { renderEquipmentArtwork } from '../character-equipment/equipment-artwork-view.js?v=20260928-equipment-art-v4';
+import { projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
+import { updateCharacterSpellPresentations } from './character-spell-view.js?v=20260928-equipment-art-v4';
 import {
   applyManualCharacterLevel,
   createCharacterLevelUpPlan,
   getLevelUpAttributePointAllowance,
   previewCharacterLevelUp
-} from '../combat/combat-level-up-model.js?v=20260928-equipment-art-v3';
+} from '../combat/combat-level-up-model.js?v=20260928-equipment-art-v4';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import { renderActionPoolProgression, renderLevelUpActionPools } from '../combat/ui/combat-action-progression-ui.js?v=20260905-resource-balance-v2';
 import { describeTechniqueDamage, resolveTechniqueDamageFormula } from '../combat/combat-technique-damage.js?v=20260905-party-combat-v1';
@@ -35,7 +35,7 @@ import {
   getResolutionIconSource,
   getRollIconSource
 } from '../combat/combat-entry-icons.js?v=20260810-zauberkarten-icons-v1';
-import { getCharacterSheetEntryIconPresentation } from '../character-archive/character-archive-icons.js?v=20260928-equipment-art-v3';
+import { getCharacterSheetEntryIconPresentation } from '../character-archive/character-archive-icons.js?v=20260928-equipment-art-v4';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
@@ -43,17 +43,17 @@ import {
   getSpellSlotLevel,
   isSpellSlotResource
 } from '../combat/combat-spell-slots.js?v=20260803-character-creation-v1';
-import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260928-equipment-art-v3';
+import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260928-equipment-art-v4';
 import { getCenyrCharacterClassSummary } from '../classes/cenyr/cenyr-class-sheet.js?v=20260909-dragon-parent-v2';
-import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260928-equipment-art-v3';
+import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260928-equipment-art-v4';
 import { selectCenyrTrainingOption } from '../classes/cenyr/cenyr-class-training.js?v=20260909-dragon-parent-v2';
-import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260928-equipment-art-v3';
+import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260928-equipment-art-v4';
 import {
   synchronizeEquipmentFromCombat,
   synchronizeEquipmentFromInventory
 } from '../character-equipment/character-equipment-sync.js?v=20260905-draig-equipment-v1';
 
-import { mountCharacterCombatStatus } from './character-combat-status.js?v=20260928-equipment-art-v3';
+import { mountCharacterCombatStatus } from './character-combat-status.js?v=20260928-equipment-art-v4';
 
 let activeCharacter = null;
 let draftProfile = sanitizeCharacterCombatProfile({});

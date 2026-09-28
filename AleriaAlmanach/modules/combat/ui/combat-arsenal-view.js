@@ -1,5 +1,5 @@
 import { escapeActionHtml as escape, renderActionCosts } from './combat-action-choice.js';
-import { renderActionDetails, renderCombatValueStrip } from './combat-action-card.js?v=20260928-equipment-art-v3';
+import { renderActionDetails, renderCombatValueStrip } from './combat-action-card.js?v=20260928-equipment-art-v4';
 import { actionDescription } from './combat-arsenal-model.js';
 import { getCombatResourceIconPresentation } from '../combat-resource-icons.js?v=20260803-composer-design-v1';
 

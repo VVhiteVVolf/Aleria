@@ -1,5 +1,5 @@
 import { getSpellLevelLabel } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
-import { getCombatDamagePreview } from '../combat-action-estimates.js?v=20260928-equipment-art-v3';
+import { getCombatDamagePreview } from '../combat-action-estimates.js?v=20260928-equipment-art-v4';
 import { getCombatFormPresentation } from '../../combat-styles/combat-form-presentation.js?v=20260909-dragon-parent-v2';
 
 function escapeHtml(value) {
@@ -7,7 +7,7 @@ function escapeHtml(value) {
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-export { renderWeaponLoadout, bindWeaponImageFallback } from './combat-weapon-loadout-view.js?v=20260928-equipment-art-v3';
+export { renderWeaponLoadout, bindWeaponImageFallback } from './combat-weapon-loadout-view.js?v=20260928-equipment-art-v4';
 
 function signedNumber(value) {
   const number = Number(value) || 0;

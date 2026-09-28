@@ -1,8 +1,8 @@
 // Shared read projection for inventory, register and archive. Ownership, quantities
 // and individual rules stay on the inventory instance; lookups never write it back.
-import { getMaximumHitPoints, getArmorClass } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v3';
+import { getMaximumHitPoints, getArmorClass } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 import { inventoryValuation } from './character-inventory-valuation.js';
-import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v3';
+import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
 export function inventoryImage(...candidates) {
   return candidates.map(value => String(value || '').trim()).find(value =>
     /^(?:https?:\/\/|data:image\/(?:png|jpeg|webp|gif);|\.{0,2}\/|[\w-]+\/)/i.test(value)

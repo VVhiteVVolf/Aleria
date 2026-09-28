@@ -1,6 +1,6 @@
 import { canUseCombatOffHand, isPairedCombatWeapon, getCombatWeaponLoadout } from '../combat-weapon-loadout.js';
 import { getCombatSupportEquipment } from '../combat-support-equipment.js';
-import { renderCombatSupportEquipment } from './combat-support-equipment-view.js?v=20260928-equipment-art-v3';
+import { renderCombatSupportEquipment } from './combat-support-equipment-view.js?v=20260928-equipment-art-v4';
 
 const glyphs = Object.freeze({ unarmed: '✦', sword: '⚔', dagger: '†', axe: '⚒', mace: '◆', spear: '↟', polearm: 'Ψ', bow: '➳', crossbow: '⌖', staff: '⌇', shield: '⬙' });
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[char]);

@@ -8,7 +8,7 @@ import {
   setCharacterHitPointMaximum,
   getProficiencyBonus,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260928-equipment-art-v3';
+} from './combat-profile-model.js?v=20260928-equipment-art-v4';
 import { preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import { getArmorRoutine } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
 import { getCharacterCreationTemplate } from './character-creation-templates.js?v=20260909-dragon-parent-v2';
@@ -21,7 +21,7 @@ import {
 } from '../classes/cenyr/cenyr-class-training.js?v=20260909-dragon-parent-v2';
 import {
   reconcileCenyrTrainingForLevel
-} from '../classes/cenyr/cenyr-technique-selection.js?v=20260928-equipment-art-v3';
+} from '../classes/cenyr/cenyr-technique-selection.js?v=20260928-equipment-art-v4';
 
 import { getActionPoolChoiceGroups, fillActionPoolChoices, normalizeActionPoolChoices, ACTION_POOL_LABELS } from './combat-action-progression.js?v=20260905-resource-balance-v2';
 const HIT_POINT_MODES = new Set(['recommended', 'manual', 'unchanged']);

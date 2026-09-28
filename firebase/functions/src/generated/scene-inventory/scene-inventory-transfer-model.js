@@ -1,7 +1,7 @@
 import { moneyTotal, moneyState as splitMoney, formatMoney } from '../item-register/item-register-money.js';
 import { attachInventoryEquipment } from '../character-equipment/character-equipment-registration.js';
 import { synchronizeEquipmentFromInventory } from '../character-equipment/character-equipment-sync.js';
-import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v3';
+import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
 const CURRENCY_VALUES = Object.freeze({ gold: 1000, silver: 100, copper: 1, pfennig: 0.01 });
 
 function clone(value) {

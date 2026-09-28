@@ -1,4 +1,4 @@
-import { EQUIPMENT_ARTWORK } from './equipment-artwork-catalog.js?v=20260928-equipment-art-v3';
+import { EQUIPMENT_ARTWORK } from './equipment-artwork-catalog.js?v=20260928-equipment-art-v4';
 
 // A read projection only: no changes to ownership, equipment rules or snapshots.
 // Historical generic images are replaced; deliberate custom images take precedence.

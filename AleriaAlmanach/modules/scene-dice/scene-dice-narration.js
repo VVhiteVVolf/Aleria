@@ -3,7 +3,7 @@ import {
   cleanSceneDiceNarration,
   enrichSceneDiceNarrationRetrieval,
   getSceneDiceOutcomeProfile
-} from './scene-dice-narration-core.js?v=20260928-equipment-art-v3';
+} from './scene-dice-narration-core.js?v=20260928-equipment-art-v4';
 import {
   createSceneDiceStandardNarration,
   findSceneDiceMechanicsLeaks,

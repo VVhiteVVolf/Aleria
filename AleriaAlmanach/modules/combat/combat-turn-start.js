@@ -1,4 +1,4 @@
-import { getAttributeModifier, getEffectiveCombatAttribute } from './combat-profile-model.js?v=20260928-equipment-art-v3';
+import { getAttributeModifier, getEffectiveCombatAttribute } from './combat-profile-model.js?v=20260928-equipment-art-v4';
 import { getRegenerationTrait, isBurning } from './combat-creature-traits.js';
 
 // A comment-scoped charge provides the existing replay/undo machinery with an

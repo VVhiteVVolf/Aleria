@@ -1,6 +1,6 @@
 import { ARCHIVE_PAGE_CLASSES, ARCHIVE_PAGE_MOUNTS } from './character-archive-page-data.js?v=20260913-morgorn-names-v1';
 import { getClassPageIcon } from '../classes/class-icon-registry.js?v=20260911-venalys-v1';
-import { normalizeArchiveSearchText, normalizeCharacterArchiveEntry } from './character-archive-model.js?v=20260928-equipment-art-v3';
+import { normalizeArchiveSearchText, normalizeCharacterArchiveEntry } from './character-archive-model.js?v=20260928-equipment-art-v4';
 import { getCultureClassDefinitions } from '../classes/culture-class-definitions.js?v=20260913-morgorn-names-v1';
 
 const classByName = new Map(ARCHIVE_PAGE_CLASSES.map(entry => [normalizeArchiveSearchText(entry.name), entry]));

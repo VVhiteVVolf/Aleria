@@ -684,7 +684,7 @@ export const EQUIPMENT_ARTWORK = [
   },
   {
     "key": "rhiannon-amethyst-zauberstab",
-    "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v2.png",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v3.png",
     "bindings": [
       {
         "characterId": "y7MBxDiAaesbWHBtmw5Q",
@@ -695,7 +695,8 @@ export const EQUIPMENT_ARTWORK = [
       }
     ],
     "legacyImages": [
-      "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png"
+      "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png",
+      "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v2.png"
     ]
   },
   {

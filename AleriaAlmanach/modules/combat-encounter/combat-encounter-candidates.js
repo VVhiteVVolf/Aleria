@@ -1,6 +1,6 @@
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v3';
-import { getEffectiveCombatLevel } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v3';
-import { deriveCombatStateFromComments } from '../combat/combat-state-model.js?v=20260928-equipment-art-v3';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v4';
+import { getEffectiveCombatLevel } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
+import { deriveCombatStateFromComments } from '../combat/combat-state-model.js?v=20260928-equipment-art-v4';
 import { captureEncounterSnapshot } from '../combat/combat-encounter-summary.js';
 
 const resolver = new CombatProfileResolver();

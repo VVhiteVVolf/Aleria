@@ -29,6 +29,8 @@ Neun Motive wurden auf Nutzerwunsch neu erstellt: Guineveres Lang- und Kurzbogen
 
 Die neuen Dateien ersetzen ihre Vorgänger über den gemeinsamen Bildkatalog. Bekannte veröffentlichte Projektbilder werden auch bei bereits übertragenen Gegenständen auf die aktuelle Fassung aufgelöst; geteilte externe Platzhalter bleiben an die jeweilige Figur gebunden. Alte veröffentlichte Dateien bleiben erreichbar. Die Korrektur verändert keine gespeicherten Spielstände oder Kampfwerte.
 
+Anschließend wurde Rhiannons Amethyst-Zauberstab auf ausdrücklichen Wunsch erneut vereinfacht: durchgehender Holzschaft ohne abgesetzte Griffzone, Wicklungen oder Metallbeschläge; ein violetter Amethyst in einer kleinen Holzfassung. Der Nutzer hat die zunächst genannte Zuordnung zu Guinevere ausdrücklich auf Rhiannon korrigiert. Beide bisherigen veröffentlichten Stabbilder werden über `legacyImages` auf die neue Fassung aufgelöst.
+
 ## Prüfung
 
 Alle 41 ausgewählten Dateien wurden visuell und per Alphakanal geprüft: 1:1, RGBA, vollständig transparente Ecken und transparente Außenflächen. Gemalte Schachbrett-Hintergründe wurden durch erneute Bildbearbeitung ersetzt. Integrationstests prüfen gemeinsame Bildpfade, eigene Bilder, Figurenabgrenzung, Schild/Schildstoß, Weitergabe, Unveränderlichkeit und wiederholte Projektion. Bestehende Charakter- und Ausrüstungsregeltests bleiben Teil der Freigabeprüfung.

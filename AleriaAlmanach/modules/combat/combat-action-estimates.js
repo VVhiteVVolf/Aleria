@@ -1,7 +1,7 @@
-import { getCombatRollContext } from './combat-resolution-service.js?v=20260928-equipment-art-v3';
-import { getCombatAttackNumbers, evaluateCombatAttackRoll } from './combat-attack-evaluation.js?v=20260928-equipment-art-v3';
+import { getCombatRollContext } from './combat-resolution-service.js?v=20260928-equipment-art-v4';
+import { getCombatAttackNumbers, evaluateCombatAttackRoll } from './combat-attack-evaluation.js?v=20260928-equipment-art-v4';
 import { parseDamageFormula, combineDamageFormulas, buildDamageNotation } from './rules/combat-mvp-rules.js';
-import { getBonusDamageFormulas, getUniversalDamageBonus, getCombatEffectAttributeModifier } from './combat-profile-model.js?v=20260928-equipment-art-v3';
+import { getBonusDamageFormulas, getUniversalDamageBonus, getCombatEffectAttributeModifier } from './combat-profile-model.js?v=20260928-equipment-art-v4';
 
 export function estimateCombatHitChance(actor, target, options = {}) {
   if (!actor || !target || actor.selectedAction?.compatible === false || actor.equipmentPreparation?.error

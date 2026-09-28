@@ -1140,7 +1140,7 @@
       "key": "rhiannon-amethyst-zauberstab",
       "owner": "Rhiannon Draig",
       "title": "Amethyst-Zauberstab",
-      "file": "rhiannon-amethyst-zauberstab-v2.png",
+      "file": "rhiannon-amethyst-zauberstab-v3.png",
       "bindings": [
         {
           "characterId": "y7MBxDiAaesbWHBtmw5Q",
@@ -1151,7 +1151,8 @@
         }
       ],
       "legacyImages": [
-        "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png"
+        "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png",
+        "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v2.png"
       ],
       "prompt": "Create one square 1:1 transparent PNG fantasy item illustration for Aleria. Use the first reference for the existing hand-painted simplified item style: bold dark contours, warm restrained colors, gentle brush shading, clear small-size silhouette, not realistic. The second reference is the owner's portrait and defines teal, brown and antique gold accents. Isolated object only, no person, no scenery, no text, no frame. Transparent background with a real alpha channel. Complete object, centered with generous clear margins. Subject: Rhiannon Draig's amethyst magic wand: a slender dark walnut wand with a small faceted violet amethyst point held in an understated antique-gold claw fitting, short deep-teal leather grip, thin golden collar. A hand-held mage's wand, not a walking staff. Diagonal, handle lower left, crystal tip upper right. No aura or smoke.",
       "referenceImages": [
@@ -1161,14 +1162,27 @@
       "status": "validated",
       "revision": {
         "date": "2026-09-28",
-        "purpose": "User-requested visual correction",
-        "previousFile": "rhiannon-amethyst-zauberstab-v1.png",
-        "prompt": "Use case: stylized-concept. Produce a NEW corrected Aleria inventory illustration based on the references. Square 1:1 composition, real transparent PNG alpha background. Preserve the established hand-painted fantasy item style with clear dark contours, restrained colors, illustrated highlights and readable silhouette, not photorealistic or 3D. One complete isolated item, no person or mannequin, no lettering or frame, no background or cast shadow. Leave transparent margin around all edges. Subject: Design a completely NEW unmistakeable AMETHYST WIZARD'S STAFF for Rhiannon Draig. Elegant slender carved dark wood, a naturally flowing asymmetric shaft that grows into an OPEN CIRCULAR CROWN of curling wooden dragon forms and delicate antique-gold filigree. A substantial softly luminous faceted purple amethyst is suspended INSIDE that open crown, held by three small curved golden talons. The head is a rounded magical focus, NOT a pointed spearhead and NOT a crystal stuck straight on a plain stick. Small deep-teal leather grip and restrained golden bands echo the portrait. Clear ornamental mage-staff silhouette, graceful tapering foot, a subtle contained violet light within the crystal only. No broad aura, smoke or scattered particles. Complete staff diagonally, head upper right, foot lower left, transparent margin.",
+        "purpose": "Simpler continuous wooden shaft without a grip section, purple amethyst",
+        "previousFile": "rhiannon-amethyst-zauberstab-v2.png",
+        "prompt": "Use case: stylized-concept. Asset type: Aleria fantasy inventory item illustration. Create a NEW original simple wooden magic staff. The attached reference is inspiration ONLY for the restrained natural-wood silhouette and crystal at the top, not a target to clean up or reproduce. User changes: use a VIOLET AMETHYST instead of the blue stone; make the whole shaft a continuous uniform piece of wood with absolutely NO distinct grip area. Subject: one slender dark walnut/brown wooden staff, gently organic but nearly straight, subtly tapering toward a plain rounded lower end. Consistent wood material and narrow thickness along its entire length; only fine natural wood grain, very restrained shallow winding grain. At the upper end, three small simple wooden prongs grow directly out of the shaft and cradle one medium-sized faceted purple amethyst crystal. Very simple compact setting with most of the amethyst visible, no large ring or ornamental crown. NO handle wrapping, NO leather grip, NO rope, NO bands, NO collars, NO contrasting grip color, NO thicker hand-hold section, NO metal fittings, NO gold ornament, NO dragon heads. Established Aleria item-art style: hand-painted simplified fantasy illustration, clean fine dark contours, quiet brush texture, restrained colors, soft illustrated highlights, readable silhouette, not photorealistic and not 3D. Entire staff diagonally from lower-left foot to upper-right crystal with comfortable 7% margins. Square 1:1 canvas, genuinely transparent PNG alpha background. One isolated complete object, no hand, person, scenery, shadows, text, branding, decorative frame, white background or painted checkerboard.",
+        "backgroundPrompt": "Make the background transparent. Keep only the illustrated item. Return a transparent PNG, square aspect ratio.",
         "referenceImages": [
-          "E:/Aleria/.tmp/equipment-art/rhiannon.png",
-          "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png"
+          "User attachment: simple wooden crystal staff, 2026-09-28"
         ]
-      }
+      },
+      "revisionHistory": [
+        {
+          "file": "rhiannon-amethyst-zauberstab-v2.png",
+          "date": "2026-09-28",
+          "purpose": "User-requested visual correction",
+          "previousFile": "rhiannon-amethyst-zauberstab-v1.png",
+          "prompt": "Use case: stylized-concept. Produce a NEW corrected Aleria inventory illustration based on the references. Square 1:1 composition, real transparent PNG alpha background. Preserve the established hand-painted fantasy item style with clear dark contours, restrained colors, illustrated highlights and readable silhouette, not photorealistic or 3D. One complete isolated item, no person or mannequin, no lettering or frame, no background or cast shadow. Leave transparent margin around all edges. Subject: Design a completely NEW unmistakeable AMETHYST WIZARD'S STAFF for Rhiannon Draig. Elegant slender carved dark wood, a naturally flowing asymmetric shaft that grows into an OPEN CIRCULAR CROWN of curling wooden dragon forms and delicate antique-gold filigree. A substantial softly luminous faceted purple amethyst is suspended INSIDE that open crown, held by three small curved golden talons. The head is a rounded magical focus, NOT a pointed spearhead and NOT a crystal stuck straight on a plain stick. Small deep-teal leather grip and restrained golden bands echo the portrait. Clear ornamental mage-staff silhouette, graceful tapering foot, a subtle contained violet light within the crystal only. No broad aura, smoke or scattered particles. Complete staff diagonally, head upper right, foot lower left, transparent margin.",
+          "referenceImages": [
+            "E:/Aleria/.tmp/equipment-art/rhiannon.png",
+            "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png"
+          ]
+        }
+      ]
     },
     {
       "key": "rhiannon-dolch",

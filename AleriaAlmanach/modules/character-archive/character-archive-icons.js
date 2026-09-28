@@ -1,7 +1,7 @@
 import { getClassPageIconSource } from '../classes/class-icon-registry.js?v=20260911-venalys-v1';
 import { getCombatEntryIconPresentation } from '../combat/combat-entry-icons.js?v=20260810-zauberkarten-icons-v1';
-import { normalizeCharacterArchiveEntry } from './character-archive-model.js?v=20260928-equipment-art-v3';
-import { getArchiveTraitIconSource } from './character-archive-trait-icons.js?v=20260928-equipment-art-v3';
+import { normalizeCharacterArchiveEntry } from './character-archive-model.js?v=20260928-equipment-art-v4';
+import { getArchiveTraitIconSource } from './character-archive-trait-icons.js?v=20260928-equipment-art-v4';
 
 const PLACEHOLDER_ICON = new URL('../../../IconOrdner/ReiterIcons/Platzhalter.png', import.meta.url).href;
 const COMBAT_ICON_KIND_BY_ARCHIVE_KIND = Object.freeze({

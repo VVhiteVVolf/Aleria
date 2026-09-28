@@ -6,7 +6,7 @@ import { reconcileClassSpecialManeuvers } from '../classes/class-special-maneuve
 import { getAldrimarWeaponAttackBonus } from '../classes/aldrimar/aldrimar-combat-rules.js';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { normalizeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
-import { resolveEquipmentImage, projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v3';
+import { resolveEquipmentImage, projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
 import { sanitizeRegeneration, getBurningArmorPenalty } from './combat-creature-traits.js';
 import { getArmorRoutine, isArmorDexterityUnlocked } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
 import { mergeRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
@@ -23,11 +23,11 @@ import {
   getOrderedSpellSlotResources,
   getSpellSlotLevel
 } from './combat-spell-slots.js?v=20260803-character-creation-v1';
-import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260928-equipment-art-v3';
+import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260928-equipment-art-v4';
 import {
   normalizeCombatEffects,
   normalizeDamageAffinity
-} from './combat-effect-model.js?v=20260928-equipment-art-v3';
+} from './combat-effect-model.js?v=20260928-equipment-art-v4';
 import {
   CASTER_TIERS,
   MANA_BYPASS_RESOURCE_IDS,

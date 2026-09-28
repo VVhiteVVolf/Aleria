@@ -1,4 +1,4 @@
-import { normalizeArchiveSearchText } from './character-archive-model.js?v=20260928-equipment-art-v3';
+import { normalizeArchiveSearchText } from './character-archive-model.js?v=20260928-equipment-art-v4';
 
 // Existing CK2 assets; explicit archive assignments always take precedence.
 const rules = [
