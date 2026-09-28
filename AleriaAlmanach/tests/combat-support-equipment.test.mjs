@@ -15,7 +15,7 @@ test('Schild ersetzt zweite Axt, erscheint mit Bild und gibt nur tatsächlich ge
   const prepared=prepareCombatEquipment(asgeir,selection,{free:true});assert.equal(prepared.preparation.error,'');
   const profile=resolveCombatProfile(prepared.character,{actionId:'technique:combat-style-huskarl-skjaldr-grund-5'});
   assert.equal(profile.totalDefense,16);assert.equal(profile.selectedAction.compatible,true);
-  assert.match(renderWeaponLoadout(profile),/Wolfshorn-Rundschild/);assert.match(renderWeaponLoadout(profile),/XpGJAGz/);
+  assert.match(renderWeaponLoadout(profile),/Wolfshorn-Rundschild/);assert.match(renderWeaponLoadout(profile),/asgeir-rundschild-v1\.png/);
   const paired=prepareCombatEquipment(prepared.character,{rightWeaponId:'asgeir-axt-rechts',leftWeaponId:'asgeir-axt-links'},{free:true});
   assert.equal(resolveCombatProfile(paired.character).totalDefense,14);
   assert.equal(paired.character.combatProfile.armorItems.find(a=>a.kind==='shield').equipped,false);

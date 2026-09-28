@@ -1,5 +1,5 @@
 import { renderSceneItemEvent } from './scene-items-ui.js';
-import { renderSceneItemComposer, mountSceneItemComposer, serializeSceneItemSegment, previewSceneItem, getSceneItemDraftForEditor, refreshSceneItemTemplates } from './scene-items-composer.js';
+import { renderSceneItemComposer, mountSceneItemComposer, serializeSceneItemSegment, previewSceneItem, getSceneItemDraftForEditor, refreshSceneItemTemplates } from './scene-items-composer.js?v=20260928-equipment-art-v1';
 window.addEventListener('item-db-store-updated', refreshSceneItemTemplates);
 let dialog;
 function openCard(item, status = 'In der Szene') {

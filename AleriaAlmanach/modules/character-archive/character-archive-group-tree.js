@@ -1,4 +1,4 @@
-import { normalizeArchiveSearchText } from './character-archive-model.js?v=20260905-archive-order-v2';
+import { normalizeArchiveSearchText } from './character-archive-model.js?v=20260928-equipment-art-v1';
 
 const labels = { class: 'Klasse', style: 'Kampftechnik', form: 'Form', persons: 'Sammlung', person: 'Person', creature: 'Kreatur', attacks: 'Attacken', weapon: 'Waffe', general: 'Sammlung' };
 

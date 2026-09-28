@@ -1,4 +1,4 @@
-import { applyCombatResourceCosts } from './combat-state-model.js?v=20260909-dragon-parent-v2';
+import { applyCombatResourceCosts } from './combat-state-model.js?v=20260928-equipment-art-v1';
 
 export function consumeCombatRuleResources(applications = [], sources = [], options = {}) {
   const relevant = (Array.isArray(applications) ? applications : [])

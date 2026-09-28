@@ -1,8 +1,8 @@
 import { renderInventoryUseComposer, inventoryUseSelection } from './inventory-use-composer.js';
 import { deriveSceneItems, applySceneItemEvent } from '../scene-items/scene-items-model.js';
-import { applySceneItemInteraction } from '../scene-items/scene-item-interaction.js';
-import { resolveCombatProfile } from '../combat/combat-profile-resolver.js';
-import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js';
+import { applySceneItemInteraction } from '../scene-items/scene-item-interaction.js?v=20260928-equipment-art-v1';
+import { resolveCombatProfile } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v1';
+import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260928-equipment-art-v1';
 import { resetCommentScopedResources } from '../combat/combat-action-economy.js';
 import { renderSceneItemEvent } from '../scene-items/scene-items-ui.js';
 import {

@@ -1,6 +1,7 @@
 import { moneyTotal, moneyState as splitMoney, formatMoney } from '../item-register/item-register-money.js';
 import { attachInventoryEquipment } from '../character-equipment/character-equipment-registration.js';
 import { synchronizeEquipmentFromInventory } from '../character-equipment/character-equipment-sync.js';
+import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v1';
 const CURRENCY_VALUES = Object.freeze({ gold: 1000, silver: 100, copper: 1, pfennig: 0.01 });
 
 function clone(value) {
@@ -53,7 +54,10 @@ export function applySceneInventoryTransfer(giverRecord = {}, receiverRecord = {
     const itemId = String(transfer.itemId || '');
     const index = giverInventory.items.findIndex((item, itemIndex) => String(item?.id || itemIndex) === itemId);
     if (index < 0) throw new Error('Der Gegenstand wurde im Inventar nicht gefunden.');
-    const source = giverInventory.items[index];
+    const storedSource = giverInventory.items[index];
+    // Materialize the displayed art when ownership changes, so the receiving
+    // character keeps the same item image without depending on the former owner.
+    const source = { ...storedSource, image: resolveEquipmentImage(storedSource, { characterId: giverRecord.id }) };
     if (source.equipped || ['weapons', 'armorItems'].some(key => (giverRecord.combatProfile?.[key] || []).some(entry => entry.inventoryItemId === source.id && entry.equipped))) throw new Error('Bitte die Ausrüstung vor der Übergabe ablegen.');
     const available = Math.max(0, quantity(source.quantity, 1));
     if (requestedQuantity > available) throw new Error(`Nur ${available} Stück verfügbar.`);

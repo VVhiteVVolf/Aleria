@@ -1,4 +1,4 @@
-import { isTechniqueCompatibleWithWeapon } from '../../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
+import { isTechniqueCompatibleWithWeapon } from '../../combat/combat-profile-model.js?v=20260928-equipment-art-v1';
 import { materializeClassFormArsenal, reconcileCultureFormArsenal } from '../class-form-arsenal.js';
 import {
   DRACHENTANZ_FORM_IDS as FORM_IDS

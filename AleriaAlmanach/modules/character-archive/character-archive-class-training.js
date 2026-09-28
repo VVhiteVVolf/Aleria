@@ -1,7 +1,7 @@
-import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260909-dragon-parent-v2';
+import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260928-equipment-art-v1';
 import { getCombatStyleRegistry } from '../combat-styles/combat-style-registry.js?v=20260909-dragon-parent-v2';
 import { isDrachentanzCanonicalTechniqueId } from '../combat-styles/drachentanz/drachentanz-training-migration.js?v=20260909-dragon-parent-v2';
-import { extractCharacterArchiveEntries, normalizeCharacterArchiveEntry } from './character-archive-model.js?v=20260909-class-forms-v1';
+import { extractCharacterArchiveEntries, normalizeCharacterArchiveEntry } from './character-archive-model.js?v=20260928-equipment-art-v1';
 
 const styles = getCombatStyleRegistry().styles;
 const canonicalTechniques = new Map(styles.flatMap(style => style.forms.flatMap(form => form.techniques)).map(technique => [technique.id, technique]));

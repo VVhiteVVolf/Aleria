@@ -1,7 +1,7 @@
-﻿import { getActionGroups } from './combat-action-card.js?v=20260909-dragon-parent-v2';
+﻿import { getActionGroups } from './combat-action-card.js?v=20260928-equipment-art-v1';
 import { escapeActionHtml as escape } from './combat-action-choice.js';
 import { arsenalFavorites, matchesArsenalChoice } from './combat-arsenal-model.js';
-import { renderArsenalCard, renderArsenalDetail, renderArsenalResources } from './combat-arsenal-view.js';
+import { renderArsenalCard, renderArsenalDetail, renderArsenalResources } from './combat-arsenal-view.js?v=20260928-equipment-art-v1';
 
 export function renderActionTable(actor, selectedId, groups = getActionGroups(actor)) {
   const sections = [...groups.entries()].filter(([, actions]) => actions.length);

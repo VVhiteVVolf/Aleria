@@ -1,7 +1,7 @@
-import { getSavingThrowTotal, resolveSavingThrowRollMode } from './combat-profile-model.js';
-import { normalizeCombatEffects } from './combat-effect-model.js';
+import { getSavingThrowTotal, resolveSavingThrowRollMode } from './combat-profile-model.js?v=20260928-equipment-art-v1';
+import { normalizeCombatEffects } from './combat-effect-model.js?v=20260928-equipment-art-v1';
 import { getConditionConcentrationOwnerId } from './combat-condition-lifecycle.js';
-import { collectApplicableCombatRules, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js';
+import { collectApplicableCombatRules, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js?v=20260928-equipment-art-v1';
 
 // Resolve one affected participant, including the acting figure when a health
 // cost or reflected effect hits them. The caller owns the final state snapshots.

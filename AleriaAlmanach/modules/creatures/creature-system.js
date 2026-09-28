@@ -17,9 +17,9 @@ import {
   getWeaponAttackModifier,
   isTechniqueCompatibleWithWeapon,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260912-archive-dialogs-v1';
-import { renderCreatureDossier } from './creature-dossier.js?v=20260909-dragon-parent-v2';
+} from '../combat/combat-profile-model.js?v=20260928-equipment-art-v1';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260928-equipment-art-v1';
+import { renderCreatureDossier } from './creature-dossier.js?v=20260928-equipment-art-v1';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import {
   findSpellSlotResourceId,
@@ -37,12 +37,12 @@ import {
   makeCreatureExportPayload,
   normalizeCreatureImportPayload,
   sanitizeCreature
-} from './creature-model.js?v=20260925-creature-biography-v2';
+} from './creature-model.js?v=20260928-equipment-art-v1';
 import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
   isBuiltinCreatureId
-} from './creature-catalog.js?v=20260925-companion-facts-v1';
+} from './creature-catalog.js?v=20260928-equipment-art-v1';
 import { selectChangedSections } from '../characters/character-save-guard.js?v=20260808-character-storage-audit-v1';
 
 const state = {

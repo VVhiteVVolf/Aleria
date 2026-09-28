@@ -12,7 +12,7 @@ import {
   renderHerausforderungComment,
   setHerausforderungStatus,
   setHerausforderungSubmitting
-} from './herausforderung-ui.js?v=20260909-dragon-parent-v2';
+} from './herausforderung-ui.js?v=20260928-equipment-art-v1';
 
 let activeThreadId = '';
 let draftApproaches = [];

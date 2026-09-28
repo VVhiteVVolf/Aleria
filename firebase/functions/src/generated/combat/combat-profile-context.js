@@ -7,7 +7,7 @@ import {
   getWeaponDamageModifier,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260909-dragon-parent-v2';
+} from './combat-profile-model.js?v=20260928-equipment-art-v1';
 import { getOrderedSpellSlotResources, getSpellLevelLabel } from './combat-spell-slots.js?v=20260803-character-creation-v1';
 import { getSpellManaCost } from './combat-resource-progression.js?v=20260905-resource-balance-v2';
 

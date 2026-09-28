@@ -10,6 +10,8 @@ const files = [
   'combat/combat-personal-modifiers.js',
   'combat/combat-follow-up-resolution.js',
   'character-equipment/equipment-damage-protection.js',
+  'character-equipment/equipment-artwork.js',
+  'character-equipment/equipment-artwork-catalog.js',
   'scene-items/scene-item-definition.js',
   'scene-items/scene-item-interaction.js',
   'item-register/item-register-money.js',

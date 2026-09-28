@@ -13,16 +13,18 @@ import {
   isTechniqueCompatibleWithWeapon,
   resolveCharacterCombatProfile,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260912-archive-dialogs-v1';
-import { getCharacterSpellPresentation } from './character-spell-presentation.js';
-import { updateCharacterSpellPresentations } from './character-spell-view.js';
+} from '../combat/combat-profile-model.js?v=20260928-equipment-art-v1';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260928-equipment-art-v1';
+import { getCharacterSpellPresentation } from './character-spell-presentation.js?v=20260928-equipment-art-v1';
+import { renderEquipmentArtwork } from '../character-equipment/equipment-artwork-view.js?v=20260928-equipment-art-v1';
+import { projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v1';
+import { updateCharacterSpellPresentations } from './character-spell-view.js?v=20260928-equipment-art-v1';
 import {
   applyManualCharacterLevel,
   createCharacterLevelUpPlan,
   getLevelUpAttributePointAllowance,
   previewCharacterLevelUp
-} from '../combat/combat-level-up-model.js?v=20260909-dragon-parent-v2';
+} from '../combat/combat-level-up-model.js?v=20260928-equipment-art-v1';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import { renderActionPoolProgression, renderLevelUpActionPools } from '../combat/ui/combat-action-progression-ui.js?v=20260905-resource-balance-v2';
 import { describeTechniqueDamage, resolveTechniqueDamageFormula } from '../combat/combat-technique-damage.js?v=20260905-party-combat-v1';
@@ -33,7 +35,7 @@ import {
   getResolutionIconSource,
   getRollIconSource
 } from '../combat/combat-entry-icons.js?v=20260810-zauberkarten-icons-v1';
-import { getCharacterSheetEntryIconPresentation } from '../character-archive/character-archive-icons.js?v=20260905-cenyr-v2';
+import { getCharacterSheetEntryIconPresentation } from '../character-archive/character-archive-icons.js?v=20260928-equipment-art-v1';
 import {
   findSpellSlotResourceId,
   getOrderedSpellSlotResources,
@@ -41,17 +43,17 @@ import {
   getSpellSlotLevel,
   isSpellSlotResource
 } from '../combat/combat-spell-slots.js?v=20260803-character-creation-v1';
-import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260909-dragon-parent-v2';
+import { openCharacterCombatSetup } from './character-combat-setup.js?v=20260928-equipment-art-v1';
 import { getCenyrCharacterClassSummary } from '../classes/cenyr/cenyr-class-sheet.js?v=20260909-dragon-parent-v2';
-import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260909-dragon-parent-v2';
+import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260928-equipment-art-v1';
 import { selectCenyrTrainingOption } from '../classes/cenyr/cenyr-class-training.js?v=20260909-dragon-parent-v2';
-import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260909-dragon-parent-v2';
+import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260928-equipment-art-v1';
 import {
   synchronizeEquipmentFromCombat,
   synchronizeEquipmentFromInventory
 } from '../character-equipment/character-equipment-sync.js?v=20260905-draig-equipment-v1';
 
-import { mountCharacterCombatStatus } from './character-combat-status.js?v=20260909-dragon-parent-v2';
+import { mountCharacterCombatStatus } from './character-combat-status.js?v=20260928-equipment-art-v1';
 
 let activeCharacter = null;
 let draftProfile = sanitizeCharacterCombatProfile({});
@@ -557,6 +559,7 @@ function renderWeapons(profile) {
     <div class="cp-sheet-section-head"><div><span>Inventar als Vorlage · danach frei</span><h4>Waffen</h4></div><div class="cp-sheet-head-actions"><select data-combat-inventory-picker="weapon">${renderInventoryOptions('weapon')}</select><button type="button" data-combat-action="copy-inventory" data-combat-kind="weapon">Übernehmen</button><button type="button" data-combat-action="add-item" data-combat-collection="weapons">+ Waffe</button></div></div>
     <div class="cp-sheet-item-list">${profile.weapons.length ? profile.weapons.map(weapon => `<article class="cp-sheet-item ${weapon.equipped ? 'equipped' : ''}">
       <div class="cp-sheet-item-title"><label class="cp-sheet-equipped"><input type="radio" name="cp-equipped-weapon" data-combat-action="equip-weapon" data-combat-item-id="${escapeMarkup(weapon.id)}"${checked(weapon.equipped)}> aktiv</label><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="name" value="${escapeMarkup(weapon.name)}" maxlength="120" placeholder="Waffenname">${weapon.inventoryItemId ? '<span class="cp-sheet-equipment-link">Inventar verknüpft</span>' : '<span class="cp-sheet-equipment-link is-system">Grundangriff</span>'}<button type="button" data-combat-action="edit-action-rules" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-entry-kind="weapon">Einsatz &amp; Kosten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}">×</button></div>
+      ${renderEquipmentArtwork(weapon, { characterId: activeCharacter?.id })}
       <div class="cp-sheet-fields weapon">
         <label><span>Schadenswurf</span><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="damageFormula" value="${escapeMarkup(weapon.damageFormula.toUpperCase().replace(/D/g, 'W'))}" maxlength="40" placeholder="1W8"></label>
         <label><span>Zweihändig / vielseitig</span><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="versatileDamageFormula" value="${escapeMarkup(String(weapon.versatileDamageFormula || '').toUpperCase().replace(/D/g, 'W'))}" maxlength="40" placeholder="z. B. 1W10"></label>
@@ -581,6 +584,7 @@ function renderArmor(profile) {
     <div class="cp-sheet-section-head"><div><span>Mehrere Schutzquellen kombinierbar</span><h4>Rüstung &amp; Schutz</h4></div><div class="cp-sheet-head-actions"><select data-combat-inventory-picker="armor">${renderInventoryOptions('armor')}</select><button type="button" data-combat-action="copy-inventory" data-combat-kind="armor">Übernehmen</button><button type="button" data-combat-action="add-item" data-combat-collection="armorItems">+ Schutz</button></div></div>
     <div class="cp-sheet-item-list">${profile.armorItems.length ? profile.armorItems.map(armor => `<article class="cp-sheet-item ${armor.equipped ? 'equipped' : ''}">
       <div class="cp-sheet-item-title"><label class="cp-sheet-equipped"><input type="checkbox" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="equipped"${checked(armor.equipped)}> angelegt</label><input data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="name" value="${escapeMarkup(armor.name)}" maxlength="120" placeholder="Rüstung / Schild / Schutz">${armor.inventoryItemId ? '<span class="cp-sheet-equipment-link">Inventar verknüpft</span>' : ''}<button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}">×</button></div>
+      ${renderEquipmentArtwork(armor, { characterId: activeCharacter?.id })}
       <div class="cp-sheet-fields armor">
         <label><span>Art</span><select data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="kind"><option value="armor"${selected(armor.kind, 'armor')}>Rüstung</option><option value="shield"${selected(armor.kind, 'shield')}>Schild</option><option value="ward"${selected(armor.kind, 'ward')}>Schutz / Magie</option></select></label>
         <label><span>Basis-RK</span><input type="number" min="0" max="99" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="baseArmorClass" value="${armor.baseArmorClass ?? ''}" placeholder="keine"></label>
@@ -897,7 +901,9 @@ function renderNotes(profile) {
 function renderSheet() {
   const root = document.getElementById('cp-combat-sheet-root');
   if (!root) return;
-  const profile = sanitizeCharacterCombatProfile(draftProfile);
+  const profile = projectEquipmentArtwork({
+    ...(activeCharacter || {}), combatProfile: sanitizeCharacterCombatProfile(draftProfile)
+  }).combatProfile;
   root.innerHTML = `<div class="cp-combat-profile">
     <details class="cp-combat-status"><summary>Aktueller Kampfstand <small>LP, Ressourcen &amp; Zustände</small></summary><section data-character-combat-status aria-label="Aktueller Kampfstand"></section></details>
     ${renderIdentityAndProgression(profile)}

@@ -1,7 +1,8 @@
 // Shared read projection for inventory, register and archive. Ownership, quantities
 // and individual rules stay on the inventory instance; lookups never write it back.
-import { getMaximumHitPoints, getArmorClass } from '../combat/combat-profile-model.js';
+import { getMaximumHitPoints, getArmorClass } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v1';
 import { inventoryValuation } from './character-inventory-valuation.js';
+import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v1';
 export function inventoryImage(...candidates) {
   return candidates.map(value => String(value || '').trim()).find(value =>
     /^(?:https?:\/\/|data:image\/(?:png|jpeg|webp|gif);|\.{0,2}\/|[\w-]+\/)/i.test(value)
@@ -25,7 +26,10 @@ export function resolveInventoryItem(item, { character = {}, templates = new Map
   return {
     ...item,
     name: creature?.name || item.name || template?.title || 'Gegenstand',
-    image: inventoryImage(creature?.portrait, item.image, equipment?.image, item.icon, template?.image),
+    image: inventoryImage(creature?.portrait, resolveEquipmentImage(item, {
+      characterId: character.id, combatEntryId: equipment?.id,
+      fallback: inventoryImage(equipment?.image, template?.image)
+    }), equipment?.image, template?.image),
     description: creature?.notes || item.description || template?.description || template?.details || '',
     type: creature?.species || item.type || template?.type || '',
     registerCategory: item.registerCategory || template?.category || '',

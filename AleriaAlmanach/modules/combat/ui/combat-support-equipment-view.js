@@ -1,7 +1,7 @@
 import { canCarryCombatShield, getCombatMounts, getCombatSupportEquipment } from '../combat-support-equipment.js';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[char]);
 function slot(item, kind, selected, disabled = false) {
-  const image = /^(?:https?:\/\/|\.\.?\/)/i.test(item.image || '') ? item.image : '';
+  const image = /^(?:https?:\/\/|\/(?!\/)|\.\.?\/)/i.test(item.image || '') ? item.image : '';
   const label = kind === 'mount' ? (selected ? 'Beritten' : 'Unberitten · Aufsteigen') : (selected ? 'Links · Schild geführt' : 'Schild + Einhandwaffe');
   return `<button type="button" class="combat-weapon-slot combat-support-slot" data-state="${selected ? 'active' : 'stowed'}" data-combat-controller-action="select-${kind}" data-equipment-id="${escape(item.id)}" aria-pressed="${selected}"${disabled ? ' disabled' : ''}>
     <span class="combat-weapon-slot-icon" aria-hidden="true"><span>${kind === 'mount' ? '♞' : '⬙'}</span>${image ? `<img src="${escape(image)}" data-combat-weapon-image alt="" decoding="async">` : ''}</span>

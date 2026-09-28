@@ -1,31 +1,31 @@
-import { createCharacterArchiveIndex, queryCharacterArchive } from './character-archive-query.js?v=20260912-v1';
-import { renderArchiveShell, renderKindNavigation, renderStats, renderEntryDescription } from './character-archive-view.js?v=20260912-v1';
-import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260912-archive-dialogs-v1';
+import { createCharacterArchiveIndex, queryCharacterArchive } from './character-archive-query.js?v=20260928-equipment-art-v1';
+import { renderArchiveShell, renderKindNavigation, renderStats, renderEntryDescription } from './character-archive-view.js?v=20260928-equipment-art-v1';
+import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260928-equipment-art-v1';
 import { getSpellCatalogEntry, getSpellCatalogPageHref } from '../spell-catalog/spell-catalog.js';
 import { getSpellCatalogSchool } from '../spell-catalog/spell-catalog-schools.js';
-import { getCharacterArchiveEntryIconPresentation } from './character-archive-icons.js?v=20260905-cenyr-v2';
-import { getCharacterArchiveWeaponGroups } from './character-archive-weapon-groups.js?v=20260905-cenyr-character-training-v1';
-import { getCharacterArchiveClassGroups, getCharacterArchiveHorseGroups } from './character-archive-classification.js?v=20260913-morgorn-names-v1';
-import { countArchiveGroupEntries } from './character-archive-group-tree.js?v=20260905-cenyr-character-training-v1';
-import { getCharacterArchiveClassLinks } from './character-archive-class-links.js?v=20260913-morgorn-names-v1';
+import { getCharacterArchiveEntryIconPresentation } from './character-archive-icons.js?v=20260928-equipment-art-v1';
+import { getCharacterArchiveWeaponGroups } from './character-archive-weapon-groups.js?v=20260928-equipment-art-v1';
+import { getCharacterArchiveClassGroups, getCharacterArchiveHorseGroups } from './character-archive-classification.js?v=20260928-equipment-art-v1';
+import { countArchiveGroupEntries } from './character-archive-group-tree.js?v=20260928-equipment-art-v1';
+import { getCharacterArchiveClassLinks } from './character-archive-class-links.js?v=20260928-equipment-art-v1';
 import { ARCHIVE_PLACEMENT_FIELDS, readArchivePlacement, getArchivePlacementChoices } from './character-archive-placement.js';
 import { describeTechniqueDamage } from '../combat/combat-technique-damage.js?v=20260905-party-combat-v1';
 import { getCombatFormPresentation } from '../combat-styles/combat-form-presentation.js?v=20260909-dragon-parent-v2';
-import { getCharacterArchiveAttackGroups } from './character-archive-attack-groups.js?v=20260909-dragon-parent-v2';
+import { getCharacterArchiveAttackGroups } from './character-archive-attack-groups.js?v=20260928-equipment-art-v1';
 import {
   CHARACTER_ARCHIVE_KINDS,
   cloneArchiveValue,
   createCharacterArchiveProfileItem,
   getCharacterArchiveKind,
   normalizeCharacterArchiveEntry
-} from './character-archive-model.js?v=20260905-archive-order-v2';
+} from './character-archive-model.js?v=20260928-equipment-art-v1';
 import {
   archiveCharacterRecord,
   ensureCharacterArchiveLoaded,
   getCharacterArchiveEntries,
   saveCharacterArchiveEntry,
   setCharacterArchiveLiveRecords
-} from './character-archive-store.js?v=20260913-morgorn-names-v1';
+} from './character-archive-store.js?v=20260928-equipment-art-v1';
 
 const DEFAULT_RESOURCE_OPTIONS = [
   { id: 'action', name: 'Aktion', scope: 'comment' },

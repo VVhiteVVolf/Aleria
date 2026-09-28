@@ -1,6 +1,6 @@
-import { getActionGroups } from './combat-action-card.js?v=20260909-dragon-parent-v2';
+import { getActionGroups } from './combat-action-card.js?v=20260928-equipment-art-v1';
 import { escapeActionHtml as escapeHtml, renderActionCosts as renderCosts, renderActionChoice, filterActionChoices } from './combat-action-choice.js';
-import { bindActionTable } from './combat-action-table.js';
+import { bindActionTable } from './combat-action-table.js?v=20260928-equipment-art-v1';
 export { getActionCostPresentation } from './combat-action-choice.js';
 
 export function renderActionPicker(actor = {}, selectedId = '', groups = getActionGroups(actor)) {

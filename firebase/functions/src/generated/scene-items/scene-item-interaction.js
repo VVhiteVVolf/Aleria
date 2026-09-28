@@ -1,8 +1,8 @@
 import { choosePickupResource } from './scene-items-model.js';
-import { applyCombatResourceCosts } from '../combat/combat-state-model.js';
+import { applyCombatResourceCosts } from '../combat/combat-state-model.js?v=20260928-equipment-art-v1';
 import { inferInventoryUseMode, normalizeInventoryUse, getInventoryItemQuantity } from '../inventory-use/inventory-use-model.js';
 import { synchronizeEquipmentFromInventory } from '../character-equipment/character-equipment-sync.js';
-import { sanitizeCharacterCombatProfile } from '../combat/combat-profile-model.js';
+import { sanitizeCharacterCombatProfile } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v1';
 
 const clone = value => JSON.parse(JSON.stringify(value || {}));
 

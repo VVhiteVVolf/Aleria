@@ -1,13 +1,13 @@
 import { canUseCombatOffHand, isPairedCombatWeapon, getCombatWeaponLoadout } from '../combat-weapon-loadout.js';
 import { getCombatSupportEquipment } from '../combat-support-equipment.js';
-import { renderCombatSupportEquipment } from './combat-support-equipment-view.js';
+import { renderCombatSupportEquipment } from './combat-support-equipment-view.js?v=20260928-equipment-art-v1';
 
 const glyphs = Object.freeze({ unarmed: '✦', sword: '⚔', dagger: '†', axe: '⚒', mace: '◆', spear: '↟', polearm: 'Ψ', bow: '➳', crossbow: '⌖', staff: '⌇', shield: '⬙' });
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[char]);
 
 function weaponSlot(weapon, { hand = '', active = false, free = false } = {}) {
   const source = String(weapon.image || '');
-  const image = /^(?:https?:\/\/|data:image\/|\.\.?\/)/i.test(source) ? source : '';
+  const image = /^(?:https?:\/\/|data:image\/|\/(?!\/)|\.\.?\/)/i.test(source) ? source : '';
   const label = active ? `${hand} · Aktiv geführt` : free ? 'Als Startwaffe wählen · kostenlos' : 'Wechseln · 1 Bonusaktion';
   return `<button type="button" class="combat-weapon-slot" data-state="${active ? 'active' : 'stowed'}" data-weapon-id="${escape(weapon.id)}" data-combat-controller-action="${active ? 'keep-weapon' : 'select-weapon'}" aria-pressed="${active}" title="${escape(`${weapon.name} · ${label}`)}">
     <span class="combat-weapon-slot-icon" aria-hidden="true"><span>${glyphs[weapon.weaponType] || '•'}</span>${image ? `<img src="${escape(image)}" data-combat-weapon-image alt="" decoding="async">` : ''}</span>

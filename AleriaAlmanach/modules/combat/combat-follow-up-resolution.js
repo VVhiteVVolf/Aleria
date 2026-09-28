@@ -1,9 +1,9 @@
-import { collectApplicableCombatRules, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js';
-import { getBonusDamageFormulas, getUniversalDamageBonus, getWeaponAttackModifier, getWeaponDamageModifier } from './combat-profile-model.js';
+import { collectApplicableCombatRules, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js?v=20260928-equipment-art-v1';
+import { getBonusDamageFormulas, getUniversalDamageBonus, getWeaponAttackModifier, getWeaponDamageModifier } from './combat-profile-model.js?v=20260928-equipment-art-v1';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { mergeRollModes } from './combat-roll-mode.js';
 import { combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js';
-import { applyOutcome } from './combat-attack-evaluation.js';
+import { applyOutcome } from './combat-attack-evaluation.js?v=20260928-equipment-art-v1';
 import { resolveCombatWard } from './combat-ward-resolution.js';
 
 // Each follow-up has its own attack, damage, defenses and per-attack equipment rules.

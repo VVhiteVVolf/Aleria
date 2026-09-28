@@ -1,5 +1,6 @@
 import { normalizeSpellCatalogReference } from '../spell-catalog/spell-catalog.js';
-import { normalizeCombatSpell } from '../combat/combat-profile-model.js';
+import { normalizeCombatSpell } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v1';
+import { resolveEquipmentImage, projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v1';
 
 export const CHARACTER_ARCHIVE_SCHEMA_VERSION = 2;
 export const CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION = 1;
@@ -117,7 +118,14 @@ export function normalizeCharacterArchiveEntry(value = {}) {
   const resetSpellIcon = kind === 'spell' && !iconAssignmentVersion;
   if (resetSpellIcon) delete data.icon;
   const iconOverride = resetSpellIcon ? '' : String(value.iconOverride || '').trim();
-  const dataIcon = String(data.icon || '').trim();
+  const equipmentKind = ['attack', 'register-waffen', 'register-ruestungen'].includes(kind);
+  let equipmentIcon = '';
+  if (equipmentKind) {
+    const characterId = data.ownerCharacterId || (value.sources || []).find(source => source.kind === 'character')?.id || '';
+    data.image = resolveEquipmentImage(data, { characterId });
+    equipmentIcon = resolveEquipmentImage({ ...data, image: value.icon || data.icon || data.image }, { characterId });
+  }
+  const dataIcon = String(data.icon || (equipmentKind ? data.image : '') || '').trim();
   const updatedAt = String(value.updatedAt || '').trim();
   return {
     schemaVersion: CHARACTER_ARCHIVE_SCHEMA_VERSION,
@@ -132,7 +140,7 @@ export function normalizeCharacterArchiveEntry(value = {}) {
     kind,
     name,
     description: getDescription(data, kind === 'spell' ? data.description || value.description : value.description),
-    icon: resetSpellIcon ? '' : iconOverride || String(value.icon || dataIcon).trim(),
+    icon: resetSpellIcon ? '' : iconOverride || equipmentIcon || String(value.icon || dataIcon).trim(),
     iconOverride,
     iconAssignmentVersion,
     tags: normalizeTags(value.tags?.length ? value.tags : data.tags),
@@ -222,7 +230,8 @@ export function extractCharacterArchiveEntries(record = {}, sourceKind = '') {
     id: String(record.id || '').trim(),
     name: String(record.name || record.displayName || '').trim()
   };
-  const profile = record.combatProfile && typeof record.combatProfile === 'object' ? record.combatProfile : {};
+  const profile = record.combatProfile && typeof record.combatProfile === 'object'
+    ? projectEquipmentArtwork(record).combatProfile : {};
   const entries = [];
 
   PROFILE_COLLECTIONS.forEach(([kind, collection]) => {

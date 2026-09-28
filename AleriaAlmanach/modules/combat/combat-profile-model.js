@@ -6,6 +6,7 @@ import { reconcileClassSpecialManeuvers } from '../classes/class-special-maneuve
 import { getAldrimarWeaponAttackBonus } from '../classes/aldrimar/aldrimar-combat-rules.js';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { normalizeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
+import { resolveEquipmentImage, projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v1';
 import { sanitizeRegeneration, getBurningArmorPenalty } from './combat-creature-traits.js';
 import { getArmorRoutine, isArmorDexterityUnlocked } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
 import { mergeRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
@@ -22,11 +23,11 @@ import {
   getOrderedSpellSlotResources,
   getSpellSlotLevel
 } from './combat-spell-slots.js?v=20260803-character-creation-v1';
-import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260909-dragon-parent-v2';
+import { sanitizeCombatTriggerRules } from './combat-trigger-rules.js?v=20260928-equipment-art-v1';
 import {
   normalizeCombatEffects,
   normalizeDamageAffinity
-} from './combat-effect-model.js?v=20260909-dragon-parent-v2';
+} from './combat-effect-model.js?v=20260928-equipment-art-v1';
 import {
   CASTER_TIERS,
   MANA_BYPASS_RESOURCE_IDS,
@@ -1361,7 +1362,7 @@ export function getCharacterCombatInventoryOptions(character = {}, kind = 'weapo
           id: `inventory-weapon-${index + 1}`,
           inventoryItemId: item.id,
           name: item.name,
-          image: item.image || item.icon,
+          image: resolveEquipmentImage(item, { characterId: character.id }),
           damageFormula: combat.damageFormula,
           versatileDamageFormula: combat.versatileDamageFormula,
           weaponType: combat.weaponType,
@@ -1382,7 +1383,7 @@ export function getCharacterCombatInventoryOptions(character = {}, kind = 'weapo
         id: `inventory-armor-${index + 1}`,
         inventoryItemId: item.id,
         name: item.name,
-        image: item.image || item.icon,
+        image: resolveEquipmentImage(item, { characterId: character.id }),
         kind: combat.kind,
         damageProtection: combat.damageProtection,
           baseArmorClass: combat.baseArmorClass,
@@ -1398,26 +1399,14 @@ export function getCharacterCombatInventoryOptions(character = {}, kind = 'weapo
 }
 
 export function resolveCharacterCombatProfile(character = {}) {
-  const profile = sanitizeCharacterCombatProfile(character.combatProfile, {
+  const sanitized = sanitizeCharacterCombatProfile(character.combatProfile, {
     ensureRequiredSkills: character.entityType !== 'creature',
     ensureSpellSlots: character.entityType !== 'creature'
   });
-  const inventoryById = new Map(getInventoryItems(character)
-    .map(item => [String(item?.id || ''), item])
-    .filter(([id]) => id));
-  profile.weapons = profile.weapons.map(weapon => {
-    weapon = { ...weapon, attackAttribute: personalWeaponAttribute(profile, weapon) };
-    const item = inventoryById.get(String(weapon.inventoryItemId || ''));
-    return item && !weapon.image
-      ? { ...weapon, image: normalizeText(item.image || item.icon, 1000) }
-      : weapon;
-  });
-  profile.armorItems = profile.armorItems.map(armor => {
-    const item = inventoryById.get(String(armor.inventoryItemId || ''));
-    return item && !armor.image
-      ? { ...armor, image: normalizeText(item.image || item.icon, 1000) }
-      : armor;
-  });
+  const profile = projectEquipmentArtwork({ ...character, combatProfile: sanitized }).combatProfile;
+  profile.weapons = profile.weapons.map(weapon => ({
+    ...weapon, attackAttribute: personalWeaponAttribute(profile, weapon)
+  }));
   const activeWeapon = profile.weapons.find(weapon => weapon.equipped) || profile.weapons[0] || sanitizeWeapon({});
   const equippedArmor = profile.armorItems.filter(item => item.equipped);
   const primaryArmor = equippedArmor[0] || profile.armorItems[0] || sanitizeArmor({});

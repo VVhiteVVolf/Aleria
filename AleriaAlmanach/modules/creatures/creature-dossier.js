@@ -1,5 +1,5 @@
-import { resolveCombatProfile } from '../combat/combat-profile-resolver.js?v=20260909-dragon-parent-v2';
-import { getAttributeModifier, getEffectiveCombatAttribute } from '../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
+import { resolveCombatProfile } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v1';
+import { getAttributeModifier, getEffectiveCombatAttribute } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v1';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));

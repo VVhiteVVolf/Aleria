@@ -1,0 +1,12 @@
+.cp-equipment-art {
+  width: clamp(104px, 18vw, 160px);
+  aspect-ratio: 1;
+  margin: 12px auto;
+}
+
+.cp-equipment-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

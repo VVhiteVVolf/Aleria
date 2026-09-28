@@ -1,8 +1,8 @@
-import { getCombatDamagePreview } from '../combat/combat-action-estimates.js';
-import { getUniversalDamageBonus } from '../combat/combat-profile-model.js';
+import { getCombatDamagePreview } from '../combat/combat-action-estimates.js?v=20260928-equipment-art-v1';
+import { getUniversalDamageBonus } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v1';
 import { getDefaultActivationCosts, normalizeCombatResourceCosts } from '../combat/combat-action-economy.js';
 import { createCatalogSpell, getSpellCatalogEntry, getSpellCatalogPageHref } from '../spell-catalog/spell-catalog.js';
-import { getHealingSpellPresentation } from '../spell-catalog/spell-catalog-presentation.js';
+import { getHealingSpellPresentation } from '../spell-catalog/spell-catalog-presentation.js?v=20260928-equipment-art-v1';
 
 const dice = value => String(value || '').toUpperCase().replaceAll('D', 'W');
 

@@ -4,7 +4,7 @@ export { MAX_CREATURE_AVATARS };
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   sanitizeCharacterCombatProfile
-} from '../combat/combat-profile-model.js?v=20260909-dragon-parent-v2';
+} from '../combat/combat-profile-model.js?v=20260928-equipment-art-v1';
 
 export const CREATURE_SCHEMA_VERSION = 5;
 export const CREATURE_EXPORT_TYPE = 'aleria-creature';

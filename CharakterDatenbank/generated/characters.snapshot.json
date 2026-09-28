@@ -68939,52 +68939,27 @@
             "itemDbKey": "",
             "originItemDbKey": "",
             "itemStorageMode": "character",
-            "ownerCharacterId": "",
-            "ownerCharacterName": "",
+            "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+            "ownerCharacterName": "Rhiannon Draig",
             "acquiredAt": "",
             "individualizedAt": "",
             "category": "weapon",
-            "icon": "*",
-            "image": "",
+            "icon": "",
+            "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png",
             "imageFormat": "square",
             "imageFit": "contain",
             "imagePosition": "center",
-            "name": "Hauptwaffe",
-            "type": "Waffe",
-            "description": "Beschreibe Material, Zustand und besondere Merkmale.",
-            "weight": "Noch festlegen",
+            "name": "Amethyst-Zauberstab",
+            "type": "Zauberstab",
+            "description": "Zauberstab mit einem Amethyst an der Spitze.",
+            "weight": "",
             "quantity": "1",
             "tags": "",
             "equipped": false,
             "combatDefinition": null,
             "equipmentLink": null,
             "infoRows": [],
-            "attributes": [
-              {
-                "label": "Schaden",
-                "value": 5
-              },
-              {
-                "label": "Schutz",
-                "value": 3
-              },
-              {
-                "label": "Wert",
-                "value": 4
-              },
-              {
-                "label": "Seltenheit",
-                "value": 2
-              },
-              {
-                "label": "Zuverlaessigkeit",
-                "value": 6
-              },
-              {
-                "label": "Handhabung",
-                "value": 5
-              }
-            ]
+            "attributes": []
           },
           {
             "id": "item-mqu1vat1-1-exvo",
@@ -69160,6 +69135,109 @@
             "name": "Dokumente / Urkunden",
             "type": "Dokument",
             "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+            "weight": "Noch festlegen",
+            "quantity": "1",
+            "tags": "",
+            "equipped": false,
+            "combatDefinition": null,
+            "equipmentLink": null,
+            "infoRows": [],
+            "attributes": [
+              {
+                "label": "Schaden",
+                "value": 5
+              },
+              {
+                "label": "Schutz",
+                "value": 3
+              },
+              {
+                "label": "Wert",
+                "value": 4
+              },
+              {
+                "label": "Seltenheit",
+                "value": 2
+              },
+              {
+                "label": "Zuverlaessigkeit",
+                "value": 6
+              },
+              {
+                "label": "Handhabung",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "id": "item-mqu1vat1-5-5kao",
+            "itemDbKey": "",
+            "originItemDbKey": "",
+            "itemStorageMode": "character",
+            "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+            "ownerCharacterName": "Rhiannon Draig",
+            "acquiredAt": "",
+            "individualizedAt": "",
+            "category": "other",
+            "icon": "",
+            "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amulett-v1.png",
+            "imageFormat": "square",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "name": "Amulett",
+            "type": "Amulett",
+            "description": "Rhiannons persönliches Amulett.",
+            "weight": "",
+            "quantity": "1",
+            "tags": "",
+            "equipped": false,
+            "combatDefinition": null,
+            "equipmentLink": null,
+            "infoRows": [],
+            "attributes": []
+          },
+          {
+            "quantity": "1",
+            "equipped": false,
+            "combatDefinition": null,
+            "equipmentLink": null,
+            "infoRows": [],
+            "itemDbKey": "",
+            "originItemDbKey": "",
+            "id": "rhiannon-draig-dagger-item",
+            "name": "Dolch",
+            "type": "Dolch",
+            "category": "weapon",
+            "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-dolch-v1.png",
+            "description": "Rhiannons Dolch.",
+            "imageFormat": "square",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "icon": "",
+            "attributes": [],
+            "weight": "",
+            "itemStorageMode": "character",
+            "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+            "ownerCharacterName": "Rhiannon Draig"
+          },
+          {
+            "id": "item-mqu1vat1-0-w8ef",
+            "itemDbKey": "",
+            "originItemDbKey": "",
+            "itemStorageMode": "character",
+            "ownerCharacterId": "",
+            "ownerCharacterName": "",
+            "acquiredAt": "",
+            "individualizedAt": "",
+            "category": "weapon",
+            "icon": "*",
+            "image": "",
+            "imageFormat": "square",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "name": "Hauptwaffe",
+            "type": "Waffe",
+            "description": "Beschreibe Material, Zustand und besondere Merkmale.",
             "weight": "Noch festlegen",
             "quantity": "1",
             "tags": "",
@@ -71965,7 +72043,7 @@
         "recordId": "character--y7MBxDiAaesbWHBtmw5Q",
         "path": "records/familien/haus-draig/rhiannon-draig--y7MBxDiAaesbWHBtmw5Q/character.json",
         "schemaVersion": 1,
-        "contentHash": "786edbc99ca61bd6bbc18f59f982d4350e71b8dac7ecd539b1cd5cce5671bcdf",
+        "contentHash": "f7c259044185cdd95754caecbcd3e844deeb6410c56bb8f9091485a5efa81513",
         "firestoreDocumentIds": [
           "y7MBxDiAaesbWHBtmw5Q",
           "y7MBxDiAaesbWHBtmw5Q",

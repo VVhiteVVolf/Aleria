@@ -1,4 +1,4 @@
-import { getCharacterSpellPresentation } from './character-spell-presentation.js';
+import { getCharacterSpellPresentation } from './character-spell-presentation.js?v=20260928-equipment-art-v1';
 import { getSpellLevelLabel } from '../combat/combat-spell-slots.js';
 
 // Update derived labels in place so editing an attribute preserves open cards,

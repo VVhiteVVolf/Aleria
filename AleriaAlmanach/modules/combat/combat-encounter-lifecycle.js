@@ -1,4 +1,4 @@
-import { mergeEncounterParticipantUpdates } from './combat-encounter-model.js?v=20260909-dragon-parent-v2';
+import { mergeEncounterParticipantUpdates } from './combat-encounter-model.js?v=20260928-equipment-art-v1';
 import { captureEncounterSnapshot } from './combat-encounter-summary.js';
 import { getDefeatExperienceReward } from './combat-progression.js';
 
