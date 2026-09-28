@@ -2,11 +2,11 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-09-27T20:33:20.104Z",
+  "sourceExportedAt": "2026-09-28T15:05:59.250Z",
   "summary": {
-    "sourceDocuments": 289,
+    "sourceDocuments": 290,
     "total": 236,
-    "mergedSameNameGroups": 34,
+    "mergedSameNameGroups": 35,
     "familyLinked": 158,
     "familyAmbiguous": 0,
     "familyPending": 78,
@@ -1255,6 +1255,17 @@
       ],
       "ages": [
         "Geburtsjahr 1725"
+      ]
+    },
+    {
+      "name": "Trahern Draig",
+      "canonicalDocumentId": "CJFC3INTycaqn3tOwZHB",
+      "documentIds": [
+        "CJFC3INTycaqn3tOwZHB",
+        "CJFC3INTycaqn3tOwZHB"
+      ],
+      "ages": [
+        "Geburtsjahr 1645"
       ]
     },
     {

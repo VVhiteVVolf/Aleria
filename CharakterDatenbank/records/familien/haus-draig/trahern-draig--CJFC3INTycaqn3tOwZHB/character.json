@@ -32,8 +32,8 @@
           "Gwynthor"
         ],
         "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=trahern-draig",
-        "fingerprint": "{\"name\":\"Trahern Draig\",\"title\":\"\",\"birth\":\"1645\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/trahern-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiwallon-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhiwallon-draig\",\"name\":\"Rhiwallon Draig\"},{\"personId\":\"fidelma-airt\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-airt--fidelma-airt\",\"name\":\"Fidelma Airt\"}],\"partners\":[{\"personId\":\"cerys-marwolaeth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marwolaeth--cerys-marwolaeth\",\"name\":\"Cerys Marwolaeth\"}],\"children\":[{\"personId\":\"maredudd-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--maredudd-draig\",\"name\":\"Maredudd Draig\"}]}}",
-        "score": 195
+        "fingerprint": "{\"name\":\"Trahern Draig\",\"title\":\"Archivar des Hauses Draig · ehemaliger Herold\",\"birth\":\"1645\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/trahern-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiwallon-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhiwallon-draig\",\"name\":\"Rhiwallon Draig\"},{\"personId\":\"fidelma-airt\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-airt--fidelma-airt\",\"name\":\"Fidelma Airt\"}],\"partners\":[{\"personId\":\"cerys-marwolaeth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marwolaeth--cerys-marwolaeth\",\"name\":\"Cerys Marwolaeth\"}],\"children\":[{\"personId\":\"maredudd-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--maredudd-draig\",\"name\":\"Maredudd Draig\"}]}}",
+        "score": 275
       },
       {
         "familyId": "haus-marwolaeth",
@@ -52,7 +52,7 @@
         ],
         "url": "../Stammbäume/Stammbaum.html?family=haus-marwolaeth&mode=view&person=trahern-draig",
         "fingerprint": "{\"name\":\"Trahern Draig\",\"title\":\"\",\"birth\":\"1645\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/trahern-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"cerys-marwolaeth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marwolaeth--cerys-marwolaeth\",\"name\":\"Cerys Marwolaeth\"}],\"children\":[]}}",
-        "score": 150
+        "score": 230
       }
     ],
     "familyAlternatives": [],
@@ -80,6 +80,7 @@
       "collection": "characters",
       "documentId": "CJFC3INTycaqn3tOwZHB",
       "documentIds": [
+        "CJFC3INTycaqn3tOwZHB",
         "CJFC3INTycaqn3tOwZHB"
       ],
       "documents": [
@@ -87,6 +88,11 @@
           "documentId": "CJFC3INTycaqn3tOwZHB",
           "createdAt": "",
           "updatedAt": "2026-09-03T17:56:00.221Z"
+        },
+        {
+          "documentId": "CJFC3INTycaqn3tOwZHB",
+          "createdAt": "",
+          "updatedAt": "2026-09-28T15:05:59.250Z"
         }
       ]
     },
@@ -109,12 +115,13 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-27T20:33:20.104Z",
-    "sourceUpdatedAt": "2026-09-03T17:56:00.221Z",
+    "sourceExportedAt": "2026-09-28T15:05:59.250Z",
+    "sourceUpdatedAt": "2026-09-28T15:05:59.250Z",
     "sourceDocumentIds": [
+      "CJFC3INTycaqn3tOwZHB",
       "CJFC3INTycaqn3tOwZHB"
     ],
-    "contentHash": "5d190966f0dae7514b5f1b726543017eee66c88627c80235451b36fa1663ab62"
+    "contentHash": "f262aea643130164658abd5ae3d41c1672ea1673e6989b527a109665cd372c22"
   },
   "local": {
     "notes": "",
@@ -736,12 +743,384 @@
         "imageSetSchemaVersion": 1,
         "imageSetsOverride": true,
         "updatedAt": "2026-09-03T17:56:00.221Z"
+      },
+      {
+        "id": "CJFC3INTycaqn3tOwZHB",
+        "name": "Trahern Draig",
+        "portrait": "https://64.media.tumblr.com/37c66441f58e920f9b4a7a62d5727208/5009d73b71942c23-93/s250x400/04efef38d41ddf413e62d8a1ab613fdf6d37b47f.pnj",
+        "fraktion": "Haus Draig, Celtigerns Wacht",
+        "title": "Archivar des Hauses Draig, ehemaliger Herold von Celtigerns Wacht",
+        "role": "Archivar · ehemaliger oberster Würdenträger der Grafschaft",
+        "bio": "Sir Trahern Draig ist der fünfundneunzigjährige Archivar des Hauses Draig und Vater des Feldmarschalls Maredudd. Sein Großvater Cadfael bildete ihn als Uchelwyr und Herold aus. Nach Jahrzehnten als oberster Würdenträger von Celtigerns Wacht übergab Trahern das Amt an seinen Enkel Cadfan. Der leidenschaftliche Heraldiker, Maler und Pferdeliebhaber bewahrt sein außergewöhnliches Wissen über Häuser und Stammbäume, während eine beginnende Altersdemenz seinen persönlichen Alltag zunehmend berührt. Seit dem Tod seiner Frau Cerys Marwolaeth im Jahr 1733 ist er Witwer.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Trahern Draig"
+            },
+            {
+              "label": "Titel / Anrede",
+              "value": "Sir · Archivar des Hauses Draig"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Draig · Celtigerns Wacht"
+            },
+            {
+              "label": "Geboren",
+              "value": "1645 · 95 Jahre im Jahr 1740"
+            },
+            {
+              "label": "Stand / Ausbildung",
+              "value": "Ritter · Uchelwyr"
+            },
+            {
+              "label": "Früheres Amt",
+              "value": "Herold des Grafen von Celtigerns Wacht"
+            },
+            {
+              "label": "Wohnsitz",
+              "value": "Gwynthor"
+            },
+            {
+              "label": "Eltern",
+              "value": "Rhiwallon Draig und Fidelma Airt"
+            },
+            {
+              "label": "Familienstand",
+              "value": "Witwer · Cerys Marwolaeth (1646–1733)"
+            },
+            {
+              "label": "Kind",
+              "value": "Sir Maredudd Draig · Feldmarschall"
+            },
+            {
+              "label": "Rittervater",
+              "value": "Cadfael Draig (1602–1669) · sein Großvater"
+            }
+          ],
+          "quote": "Es wurd mal Zeit für junges Blut!",
+          "quoteBy": "Trahern Draig über die Übergabe seines Amtes",
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "sideWidth": 100,
+            "connectionPortraitHeight": 78,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Sir Trahern Draig",
+            "biographyText": "<p><strong>Sir Trahern Draig</strong> ist fünfundneunzig Jahre alt, Vater des Feldmarschalls <strong>Maredudd Draig</strong> und heute <strong>Archivar des Hauses Draig</strong>. Über Jahrzehnte diente er mehreren Grafen von Celtigerns Wacht als Herold. Wer darunter lediglich einen Mann versteht, der Namen ausruft und Wappen erkennt, unterschätzt dieses Amt erheblich: Der <strong>Herold des Grafen ist der oberste Würdenträger der Grafschaft</strong>. Trahern hat diese Stellung lange genug ausgefüllt, dass es ihm schwerfällt, sich im Umgang mit seinem Nachfolger auf die Aufgaben eines Archivars zu beschränken.</p><p>Den Nachfolger hat er selbst herangezogen. Sein Enkel <strong>Cadfan</strong> lernte das Amt bei ihm und übernahm es vor einigen Jahren. Trahern erzählt darüber gewöhnlich: <strong>„Es wurd mal Zeit für junges Blut!“</strong> Dass er bei einer Entscheidung des neuen Herolds noch etwas anzumerken hat, kommt trotzdem häufig vor. Er kennt die Häuser, die Rangfolgen und die alten Verbindungen; also wird er doch wohl sagen dürfen, wenn Cadfan etwas übersieht.</p><p>Für seine heutige Arbeit bringt Trahern einen außergewöhnlichen Wissensschatz mit. Die Stammbäume der Häuser hat er mit geradezu <strong>eidetischer Genauigkeit</strong> im Gedächtnis. Wird bei Tisch ein ihm fremder Mensch erwähnt, kann Trahern ihn oft schon anhand seines Namens und seiner Herkunft in die richtige Familie einordnen. Die Häuser Cenyrs kennt er samt ihrer Rangordnung, jene Estrylls wie den Inhalt seiner Westentasche. Im Archiv bleibt er deshalb ein gefragter Ansprechpartner.</p><p>Im persönlichen Alltag zeigen sich dagegen erste, schleichende Zeichen einer <strong>Altersdemenz</strong>. Sie treten bislang selten genug hervor, dass längst nicht jede Begegnung Fragen aufwirft. Trahern selbst bemerkt das Nachlassen seines Geistes, würde aber den Infernalen tun, es zuzugeben. Darin liegt der eigentliche Grund für seinen Rückzug aus dem Heroldsamt. Seine Sicherheit bei alten Stammbäumen und Wappen kann darüber hinwegtäuschen, wie unsicher für ihn mitunter das gegenwärtige Jahr, ein vertrautes Gesicht oder der Tod eines geliebten Menschen geworden ist.</p>",
+            "abilitiesTitle": "Persönlichkeit",
+            "abilities": [
+              {
+                "title": "Unermüdlich",
+                "icon": "../IconOrdner/Traits%20Icon/Diligent.png",
+                "detail": "Trahern arbeitet weit über das hinaus, was sein Amt verlangt. Hat er eine Aufgabe begonnen, kniet er sich hinein; eine Pause gönnt er sich gewöhnlich erst, wenn die Arbeit erledigt ist. Auch mit fünfundneunzig fällt ihm das Aufhören schwer."
+              },
+              {
+                "title": "Stolz",
+                "icon": "../IconOrdner/Traits%20Icon/Proud.png",
+                "detail": "Sein Wissen und seine jahrzehntelange Amtsführung sind ein wesentlicher Teil seines Selbstverständnisses. Ein Irrtum fällt ihm schwerer zuzugeben als eine weitere Stunde Arbeit. Hinweise auf seine nachlassenden Kräfte wehrt er besonders entschieden ab."
+              },
+              {
+                "title": "Eigensinnig",
+                "icon": "../IconOrdner/Traits%20Icon/Stubborn.png",
+                "detail": "Er lässt sich ungern von einem Vorhaben oder Urteil abbringen. Cadfan bekommt seine Einwände auch ungefragt zu hören, und seine Ablehnung von Wynonna oder Myrddin legt er nicht aus Rücksicht auf den Familienfrieden beiseite."
+              },
+              {
+                "title": "Gelehrt",
+                "icon": "../IconOrdner/Traits%20Icon/Scholar.png",
+                "detail": "Häusergeschichte, Genealogie und Heraldik beschäftigen ihn aus eigenem Interesse. Er kennt die Verbindungen zwischen den Familien ebenso wie ihre Rangfolge und kann sein Wissen beim Entwurf neuer Wappen praktisch einsetzen."
+              },
+              {
+                "title": "Großzügig",
+                "icon": "../IconOrdner/Traits%20Icon/Charitable.png",
+                "detail": "Guten Dienst weiß er zu würdigen. In Celtigerns Letzten Rast hinterlässt er stets ein großzügiges Trinkgeld, wenn man ihm sein Fischgericht und einen ungestörten Abend im privaten Raum ermöglicht."
+              },
+              {
+                "title": "Aufbrausend",
+                "icon": "../IconOrdner/Traits%20Icon/Wroth.png",
+                "detail": "Wenn er sich übergangen fühlt oder überzeugt ist, dass etwas nicht stimmen kann, wird aus einem Einwand rasch ein Streit. Besonders der Stallmeister bekommt das zu spüren, wenn Trahern nach Artus verlangt und dessen Box leer bleibt."
+              }
+            ],
+            "historyTitle": "Vom Knappen zum obersten Würdenträger",
+            "historyText": "<p>Trahern wurde <strong>1645</strong> als Sohn von <strong>Rhiwallon Draig und Fidelma Airt</strong> geboren. Er entstammt jener Seitenlinie, die über seinen Großvater <strong>Cadfael</strong> auf Graf Cadwalladar Draig zurückgeht. Sein Vater Rhiwallon diente den Grafen lange als Kämmerer. Die Arbeit für das Grafenhaus gehörte somit schon vor Traherns eigener Laufbahn zum Leben seiner Familie.</p><p><strong>Cadfael Draig</strong> war sein Rittervater und Mentor. Er bildete seinen Enkel in der Weise der <strong>Uchelwyr</strong> aus und führte ihn zugleich in die Aufgaben des Herolds ein, ein Amt, das Cadfael selbst vor ihm bekleidete. Der Großvater lebte bis 1669; Trahern war bei seinem Tod vierundzwanzig. Seine ritterliche und höfische Ausbildung konnte er damit noch persönlich begleiten.</p><p>Der junge Trahern begeisterte sich für <strong>Pferde und Turniere</strong>. Die Arbeit am Hof nahm ihm weder die Freude an einem guten Ross noch das Interesse an den Leistungen anderer Ritter. Mit zunehmendem Alter gingen diese Freuden in andere Formen über. Heute verfolgt er Pferde und Turniergeschehen vor allem in der monatlichen Ausgabe von <strong>„Ross &amp; Sporn“</strong>.</p><p>Mit <strong>Cerys Marwolaeth</strong>, einer hochrangigen Priesterin aus <strong>Mathragon</strong>, hatte er sein einziges Kind: <strong>Maredudd</strong>, geboren 1670. Dessen Ausbildung vertraute die Familie <strong>Cahir Draig</strong> an, Traherns bestem Freund. Maredudd kam mit sieben Jahren als Page in Cahirs Haushalt, wurde sein Knappe und erhielt von ihm mit achtzehn den Ritterschlag. Traherns Sohn fand seinen Weg als Teulu und später als Feldmarschall, während Trahern selbst über Jahrzehnte im Heroldsamt blieb.</p><p>Den Tod seiner Frau im Jahr <strong>1733</strong> überlebte Trahern als alter Mann. Mit diesem Verlust begann auch das allmähliche Nachlassen seines Gedächtnisses. Er arbeitete weiter und bereitete Cadfan auf die Nachfolge vor. Vor einigen Jahren übergab er dem Enkel schließlich das Amt und wandte sich als Archivar den Überlieferungen seines Hauses zu. Seine Gewohnheit, in Angelegenheiten des Herolds mitzureden, behielt er bei.</p>",
+            "worksTitle": "Können & Dienst",
+            "works": [
+              "Heroldsamt · Jahrzehntelange Erfahrung als oberster Würdenträger von Celtigerns Wacht. Trahern kennt Rangordnung, Häuser und verwandtschaftliche Verbindungen und hat seinen Enkel Cadfan persönlich für das Amt ausgebildet.",
+              "Archiv und Genealogie · Sein außerordentliches Gedächtnis für Stammbäume ist weiterhin eine seiner größten Stärken. Auch weit verzweigte Linien und fremde Personen kann er zuverlässig in den überlieferten Familienzusammenhang einordnen.",
+              "Heraldik · Trahern hat für mehrere junge Ritterhäuser Embleme und Wappen entworfen. Herkunft, Familiengeschichte und heraldische Darstellung gehören für ihn zusammen.",
+              "Malerei · Ein ausgezeichneter Maler und Künstler. Obwohl die Feinmotorik nachgelassen hat, gelingt es ihm noch immer, ein Wappen selbst zu fertigen.",
+              "Uchelwyr-Ausbildung · Ritterliche Ausbildung bei Cadfael Draig und eine lebenslange Begeisterung für Pferde und Turniere. Heute erlauben seine Knie das Reiten nicht mehr; ein eigenes lebendes Ross besitzt er nicht."
+            ],
+            "extraSections": [
+              {
+                "title": "Erinnerungen, die nicht mit der Gegenwart Schritt halten",
+                "position": "afterWorks",
+                "mode": "text",
+                "text": "<p>Manchmal nennt Trahern das falsche Jahr oder spricht davon, seinen längst verstorbenen Großvater Cadfael aufzusuchen. Seinen Sohn <strong>Maredudd</strong> verwechselt er gelegentlich mit <strong>Merfyn Draig</strong>, dem Vetter seines Vaters Rhiwallon. In <strong>Cadfan</strong> sieht er mitunter seinen Sohn. Wird er darauf aufmerksam gemacht, winkt er mit einem <strong>„Papperlapapp“</strong> ab und fährt fort, als wäre nichts gewesen.</p><p>Besonders hartnäckig hält er an seiner alten Lieblingskneipe auf dem Land fest. <strong>1735, vor fünf Jahren, wurde sie von Banditen niedergebrannt.</strong> An ihrer Stelle befindet sich inzwischen etwas völlig anderes. Dennoch will Trahern wieder dorthin. Auch der Hinweis auf den Brand bringt ihn nicht unbedingt von seinem Vorhaben ab. Steht er schließlich vor einem Ort, der seiner Erinnerung widerspricht, erklärt er nüchtern: <strong>„Ich wollte mal die Beine vertreten!“</strong></p><p>Im Stall wird diese Unsicherheit schmerzhafter. <strong>Artus</strong>, sein dritter Hengst, war einst ein prächtiger <strong>Ceffyl</strong>. Das Tier starb <strong>1734</strong>, sechs Jahre vor der Gegenwart. Trahern besitzt inzwischen kein eigenes Ross mehr und kann wegen seiner Knie kaum noch ans Reiten denken. Trotzdem verlangt er manchmal, seinen alten Kumpanen zu sehen, und wundert sich über dessen Abwesenheit. Aus der Nachfrage kann ein heftiger Streit mit dem Stall- oder Zuchtmeister werden. Dass Artus tot ist, weist er zurück: Sein Hengst sei fit und wohlauf. Etwas könne hier nicht stimmen.</p><p>Auch <strong>Cahir „der Schwarze“</strong> ist für ihn nicht an jedem Tag ein Verstorbener. Sein bester Freund starb bereits <strong>1702</strong>, vor achtunddreißig Jahren. Gelegentlich verwechselt Trahern zudem Cahirs ebenfalls verstorbenen Nachfolger <strong>Rhodri</strong> mit dessen Sohn <strong>Galahad</strong>, dem heutigen Grafen. Zwischen solchen Momenten kann er über alte Häuser und deren Stammbäume mit einer Genauigkeit sprechen, die Zuhörer seine vorherige Verwechslung beinahe wieder vergessen lässt.</p>"
+              },
+              {
+                "title": "Lieblingsurenkel und ungeliebte Verbindungen",
+                "position": "afterWorks",
+                "mode": "text",
+                "text": "<p>Traherns Enkelin <strong>Dwynwen Grael, geborene Draig</strong>, lebt mit <strong>Caswallon Grael</strong> und ihren drei Kindern in Mathragon. Als Herold verbrachte Trahern dort viel Zeit. <strong>Gwalchmei, Tylwyth und Medrawd</strong> sind ihm dabei besonders ans Herz gewachsen. Es sind seine liebsten Urenkel, und wie gut sie geraten seien, erzählt er auch Menschen, die eigentlich von etwas anderem sprechen wollten.</p><p>Für <strong>Einion und Carys</strong>, die Kinder Cadfans, bringt er kaum vergleichbare Zuneigung auf. Werden sie erwähnt, fragt er bisweilen nur <strong>„Wer?“</strong> oder winkt beiläufig ab. Mitunter folgt sogleich ein ungünstiger Vergleich mit Dwynwens Kindern. Darin zeigt sich eine deutliche Bevorzugung innerhalb der Familie. Ausgerechnet jene beiden Enkel, denen Maredudd besonders nahesteht, finden bei dessen Vater wenig Beachtung.</p><p>Mit <strong>Wynonna, geborene Fiachrach</strong>, versteht Trahern sich ebenfalls nicht. Cadfans Ehe mit ihr hält er nach wie vor für einen Fehler. Seine persönliche Meinung lässt er dabei ebenso ungern ruhen wie seine Einwände gegen Entscheidungen des neuen Herolds.</p><p>Ganz anders spricht er über seinen Neffen <strong>Kimball Crefyddol</strong>. Der Sohn seiner Schwester <strong>Mairwen Draig</strong> und <strong>Lywelyn Crefyddol</strong> ist amtierender Ritterfürst des Hauses Crefyddol. Auf ihn ist Trahern ausgesprochen stolz. Einmal im Jahr besucht er die <strong>Silberinsel</strong>; während seiner Zeit als Herold führten ihn seine Wege noch häufiger dorthin.</p>"
+              },
+              {
+                "title": "Alte Freunde, Banausen und ein erklärter Gegner",
+                "position": "afterWorks",
+                "mode": "text",
+                "text": "<p><strong>Cahir der Schwarze</strong> war Traherns bester Freund und wurde zugleich zum Rittervater seines einzigen Sohnes. Die Bindung zwischen beiden Männern reicht damit tief in Maredudds Lebensgeschichte hinein. Cahirs Tod liegt lange zurück; für Trahern fühlt sich diese Entfernung nicht immer gleich an.</p><p>Maredudd, <strong>Meurig</strong> und <strong>Odyar</strong> sind inzwischen selbst alte, gestandene Männer. Der Feldmarschall, der Justiziar und der Kämmerer verbindet eine jahrzehntelange Freundschaft mit Whisky, Karten, Schach und gemeinsamen Angelausflügen. Trahern nennt insbesondere die beiden Freunde seines Sohnes gern <strong>Banausen, die nur Unsinn treiben</strong>. Dass er selbst eine Angelstelle außerhalb Gwynthors aufsucht, hindert ihn nicht an diesem Urteil.</p><p>Seine schärfste Gegnerschaft in Celtigerns Wacht gilt <strong>Myrddin Draig</strong>, dem Zauberer des Hauses und Ratszauberer des Königreiches Cenyr. Trahern hält ihn für einen arroganten Wichtigtuer. Dessen magische Kunst bezeichnet er als <strong>„Geißel für Cenyr“</strong>. Diese Abneigung gehört zu seinen festen Überzeugungen; gegenüber Myrddin besitzt der alte Archivar wenig Bereitschaft zur Nachsicht.</p>"
+              }
+            ],
+            "triviaTitle": "Marotten & Eigenarten",
+            "trivia": [
+              "Geht zu Fuß zu einer geheimen Angelstelle unweit von Gwynthor. Dafür kleidet er sich wie ein einfacher Fischer: Dort möchte er seine Ruhe haben und weder als ehemaliger Herold erkannt noch mit Anliegen behelligt werden.",
+              "Bestellt in „Celtigerns Letzten Rast“ am liebsten Fisch mit Gemüse. Man stellt ihm einen privaten Raum zur Verfügung, in dem er ungestört dinieren kann. Sein Trinkgeld fällt jedes Mal großzügig aus.",
+              "Liest jeden Monat „Ross & Sporn“. Pferde und Turniere verfolgt er inzwischen auf dem Papier, seit seine Knie das Reiten nicht mehr mitmachen.",
+              "Will eine begonnene Arbeit unbedingt fertig bekommen, bevor er sich Ruhe gönnt. Aus dem geplanten Feierabend wird deshalb regelmäßig noch eine weitere Aufgabe im Archiv.",
+              "Grätscht Cadfan in Entscheidungen hinein, obwohl er ihm das Heroldsamt selbst übergeben hat. Dass er heute Archivar ist, versteht er keineswegs als Grund, seine Meinung für sich zu behalten.",
+              "Will noch immer seine vor fünf Jahren niedergebrannte Lieblingskneipe besuchen. Erweist sich die Erinnerung vor Ort als falsch, war der Weg nach seiner Darstellung lediglich zum Beinevertreten gedacht.",
+              "Fragt im Stall nach Artus und kann ausgesprochen ärgerlich werden, wenn man ihm erklärt, dass der Hengst seit sechs Jahren tot ist. Er besteht darauf, dass sein alter Kumpan gesund sei.",
+              "Bringt ein Gespräch über Einion oder Carys rasch auf die Kinder Dwynwens und deren Vorzüge. Auf die Namen von Cadfans Kindern folgt manchmal nur ein beiläufiges „Wer?“.",
+              "Besucht seinen Neffen Kimball einmal im Jahr auf der Silberinsel. Dessen Stellung als Ritterfürst erfüllt ihn mit deutlich mehr Stolz, als er für viele andere jüngere Verwandte aufbringt."
+            ],
+            "quotesTitle": "In eigenen Worten",
+            "quotes": [
+              "„Es wurd mal Zeit für junges Blut!“",
+              "„Papperlapapp.“",
+              "„Ich wollte mal die Beine vertreten!“",
+              "„Artus? Dem fehlt nichts. Der ist fit und wohlauf!“",
+              "„Wer? Ach. Ihr solltet Dwynwens Kinder sehen.“"
+            ],
+            "connectionsTitle": "Familie, Freunde & Gegnerschaft",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Cadfael Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/cadfael-draig.jpg",
+                "imageFormat": "portrait",
+                "detail": "Großvater, Rittervater und Mentor (1602–1669). Früherer Herold, der Trahern sowohl als Uchelwyr als auch für das Amt ausbildete."
+              },
+              {
+                "type": "connection",
+                "name": "Cerys Marwolaeth",
+                "image": "../Stammbäume/assets/images/placeholders/female.png",
+                "imageFormat": "portrait",
+                "detail": "Verstorbene Ehefrau (1646–1733), hochrangige Priesterin aus Mathragon und Mutter seines einzigen Sohnes. Mit ihrem Tod begann sein schleichender geistiger Abbau."
+              },
+              {
+                "type": "connection",
+                "name": "Sir Maredudd Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/maredudd-draig.jpg",
+                "imageFormat": "portrait",
+                "detail": "Einziger Sohn, siebzigjähriger Feldmarschall und einst Cahirs Knappe. Trahern verwechselt ihn gelegentlich mit Merfyn, dem Vetter seines Vaters."
+              },
+              {
+                "type": "connection",
+                "name": "Sir Cadfan Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg",
+                "imageFormat": "portrait",
+                "detail": "Enkel und persönlich ausgebildeter Nachfolger als Herold. Trahern redet ihm weiterhin in Entscheidungen hinein und hält ihn gelegentlich für seinen Sohn."
+              },
+              {
+                "type": "connection",
+                "name": "Dwynwen Grael, geb. Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/dwynwen-draig.jpg",
+                "imageFormat": "portrait",
+                "detail": "Enkelin in Mathragon, verheiratet mit Caswallon Grael. Ihre Kinder Gwalchmei, Tylwyth und Medrawd sind Traherns bevorzugte Urenkel."
+              },
+              {
+                "type": "connection",
+                "name": "Wynonna Draig, geb. Fiachrach",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/wynonna-fiachrach.jpg",
+                "imageFormat": "portrait",
+                "detail": "Cadfans Frau. Trahern versteht sich nicht mit ihr und hält die Ehe seines Enkels weiterhin für einen Fehler."
+              },
+              {
+                "type": "connection",
+                "name": "Einion Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/einion-draig.jpg",
+                "imageFormat": "portrait",
+                "detail": "Urenkel, Cadfans Sohn und Maredudds Knappe. Trahern bringt ihm wenig Aufmerksamkeit entgegen und vergleicht ihn ungünstig mit Dwynwens Kindern."
+              },
+              {
+                "type": "connection",
+                "name": "Carys Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/carys-draig.jpg",
+                "imageFormat": "portrait",
+                "detail": "Urenkelin und Cadfans Tochter. Maredudds Augapfel erfährt von Trahern kaum Beachtung."
+              },
+              {
+                "type": "connection",
+                "name": "Cahir „der Schwarze“ Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/cahir-draig.jpg",
+                "imageFormat": "portrait",
+                "detail": "Bester Freund, früherer Graf und Maredudds Rittervater. Seit 1702 tot; Trahern vergisst mitunter, dass sie sich nicht mehr begegnen können."
+              },
+              {
+                "type": "connection",
+                "name": "Rhodri Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/rhodri-draig.jpg",
+                "imageFormat": "portrait",
+                "detail": "Cahirs Sohn und Nachfolger als Graf (1662–1720). Trahern verwechselt ihn gelegentlich mit dessen Sohn Galahad."
+              },
+              {
+                "type": "connection",
+                "name": "Graf Galahad Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg",
+                "imageFormat": "portrait",
+                "detail": "Amtierender Graf von Celtigerns Wacht und Rhodris Sohn. Traherns heutiger Dienst als Archivar gilt seinem Haus."
+              },
+              {
+                "type": "connection",
+                "name": "Sir Meurig Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/meurig-draig.jpg",
+                "imageFormat": "portrait",
+                "detail": "Justiziar, Cahirs Sohn und enger Freund Maredudds. Für Trahern trotz seiner zweiundsiebzig Jahre noch immer einer der Banausen, die mit seinem Sohn Unsinn treiben."
+              },
+              {
+                "type": "connection",
+                "name": "Sir Odyar Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/odyar-draig.jpg",
+                "imageFormat": "portrait",
+                "detail": "Kämmerer und enger Freund Maredudds, ebenfalls zweiundsiebzig. Trahern schließt ihn in sein wenig schmeichelhaftes Urteil über die alte Freundesrunde ein."
+              },
+              {
+                "type": "connection",
+                "name": "Myrddin Draig",
+                "image": "../Stammbäume/assets/images/portraits/haus-draig/myrddin-draig.jpg",
+                "imageFormat": "portrait",
+                "detail": "Zauberer des Hauses und Ratszauberer Cenyrs. Trahern ist sein entschiedener Gegner in Celtigerns Wacht, hält ihn für einen arroganten Wichtigtuer und seine Kunst für eine Geißel des Reiches."
+              },
+              {
+                "type": "connection",
+                "name": "Mairwen Draig",
+                "image": "../Stammbäume/assets/images/placeholders/female.png",
+                "imageFormat": "portrait",
+                "detail": "Jüngere Schwester (1654–1731), Gemahlin Lywelyn Crefyddols und Mutter seines Neffen Kimball."
+              },
+              {
+                "type": "connection",
+                "name": "Kimball Crefyddol",
+                "image": "../Stammbäume/assets/images/portraits/haus-wylan/kimball-crefydoll.jpg",
+                "imageFormat": "portrait",
+                "detail": "Neffe über Mairwen und amtierender Ritterfürst des Hauses Crefyddol. Trahern ist sehr stolz auf ihn und besucht ihn jährlich auf der Silberinsel."
+              }
+            ],
+            "documentsTitle": "Herkunft & Familienzweige",
+            "documents": [
+              {
+                "title": "Haus Draig",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=trahern-draig",
+                "text": "Traherns Herkunft, seine Ehe mit Cerys und die Nachkommen seines Sohnes Maredudd."
+              },
+              {
+                "title": "Dwynwens Familie in Mathragon",
+                "icon": "../IconOrdner/Traits%20Icon/Family_focus.png",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-grael&mode=view&person=dwynwen-draig",
+                "text": "Dwynwen und Caswallon Grael mit Gwalchmei, Tylwyth und Medrawd."
+              },
+              {
+                "title": "Kimball und Haus Crefyddol",
+                "icon": "../IconOrdner/Traits%20Icon/Family_focus.png",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-crefyddol&mode=view&person=kimball-crefydoll",
+                "text": "Die Familie seiner Schwester Mairwen und seines Neffen auf der Silberinsel."
+              }
+            ],
+            "footer": "Personenakte · Sir Trahern Draig · Haus Draig"
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-draig--trahern-draig"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-draig--trahern-draig",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1645",
+          "death": "",
+          "houseId": "house-draig",
+          "houseName": "Haus Draig",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-marwolaeth",
+              "personId": "trahern-draig",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-09-28T15:05:59.250Z",
+              "lastSyncedAt": "2026-09-28T15:05:59.250Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-marwolaeth&mode=view&person=trahern-draig",
+              "fingerprint": "{\"name\":\"Trahern Draig\",\"title\":\"\",\"birth\":\"1645\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/trahern-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"cerys-marwolaeth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marwolaeth--cerys-marwolaeth\",\"name\":\"Cerys Marwolaeth\"}],\"children\":[]}}"
+            },
+            {
+              "familyId": "haus-draig",
+              "personId": "trahern-draig",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-09-28T15:05:59.250Z",
+              "lastSyncedAt": "2026-09-28T15:05:59.250Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=trahern-draig",
+              "fingerprint": "{\"name\":\"Trahern Draig\",\"title\":\"Archivar des Hauses Draig · ehemaliger Herold\",\"birth\":\"1645\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/trahern-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiwallon-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhiwallon-draig\",\"name\":\"Rhiwallon Draig\"},{\"personId\":\"fidelma-airt\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-airt--fidelma-airt\",\"name\":\"Fidelma Airt\"}],\"partners\":[{\"personId\":\"cerys-marwolaeth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marwolaeth--cerys-marwolaeth\",\"name\":\"Cerys Marwolaeth\"}],\"children\":[{\"personId\":\"maredudd-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--maredudd-draig\",\"name\":\"Maredudd Draig\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "rhiwallon-draig",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-draig--rhiwallon-draig",
+                "name": "Rhiwallon Draig"
+              },
+              {
+                "personId": "fidelma-airt",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-airt--fidelma-airt",
+                "name": "Fidelma Airt"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "cerys-marwolaeth",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-marwolaeth--cerys-marwolaeth",
+                "name": "Cerys Marwolaeth"
+              }
+            ],
+            "children": [
+              {
+                "personId": "maredudd-draig",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-draig--maredudd-draig",
+                "name": "Maredudd Draig"
+              }
+            ]
+          }
+        },
+        "updatedAt": "2026-09-28T15:05:59.250Z"
       }
     ]
   },
   "character": {
     "id": "CJFC3INTycaqn3tOwZHB",
-    "bio": "",
+    "bio": "Sir Trahern Draig ist der fünfundneunzigjährige Archivar des Hauses Draig und Vater des Feldmarschalls Maredudd. Sein Großvater Cadfael bildete ihn als Uchelwyr und Herold aus. Nach Jahrzehnten als oberster Würdenträger von Celtigerns Wacht übergab Trahern das Amt an seinen Enkel Cadfan. Der leidenschaftliche Heraldiker, Maler und Pferdeliebhaber bewahrt sein außergewöhnliches Wissen über Häuser und Stammbäume, während eine beginnende Altersdemenz seinen persönlichen Alltag zunehmend berührt. Seit dem Tod seiner Frau Cerys Marwolaeth im Jahr 1733 ist er Witwer.",
     "name": "Trahern Draig",
     "archived": false,
     "emotesOverride": true,
@@ -1263,7 +1642,7 @@
       "portraitPosition": "top"
     },
     "portrait": "https://64.media.tumblr.com/37c66441f58e920f9b4a7a62d5727208/5009d73b71942c23-93/s250x400/04efef38d41ddf413e62d8a1ab613fdf6d37b47f.pnj",
-    "title": "Archivar des Hauses Draig, Gwynthor",
+    "title": "Archivar des Hauses Draig, ehemaliger Herold von Celtigerns Wacht",
     "activeImageSetId": "standard",
     "imageSets": [
       {
@@ -1350,7 +1729,293 @@
     ],
     "imageSetSchemaVersion": 1,
     "imageSetsOverride": true,
-    "updatedAt": "2026-09-03T17:56:00.221Z",
+    "updatedAt": "2026-09-28T15:05:59.250Z",
+    "role": "Archivar · ehemaliger oberster Würdenträger der Grafschaft",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Trahern Draig"
+        },
+        {
+          "label": "Titel / Anrede",
+          "value": "Sir · Archivar des Hauses Draig"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Draig · Celtigerns Wacht"
+        },
+        {
+          "label": "Geboren",
+          "value": "1645 · 95 Jahre im Jahr 1740"
+        },
+        {
+          "label": "Stand / Ausbildung",
+          "value": "Ritter · Uchelwyr"
+        },
+        {
+          "label": "Früheres Amt",
+          "value": "Herold des Grafen von Celtigerns Wacht"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Gwynthor"
+        },
+        {
+          "label": "Eltern",
+          "value": "Rhiwallon Draig und Fidelma Airt"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Witwer · Cerys Marwolaeth (1646–1733)"
+        },
+        {
+          "label": "Kind",
+          "value": "Sir Maredudd Draig · Feldmarschall"
+        },
+        {
+          "label": "Rittervater",
+          "value": "Cadfael Draig (1602–1669) · sein Großvater"
+        }
+      ],
+      "quote": "Es wurd mal Zeit für junges Blut!",
+      "quoteBy": "Trahern Draig über die Übergabe seines Amtes",
+      "biography": {
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 78,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Sir Trahern Draig",
+        "biographyText": "<p><strong>Sir Trahern Draig</strong> ist fünfundneunzig Jahre alt, Vater des Feldmarschalls <strong>Maredudd Draig</strong> und heute <strong>Archivar des Hauses Draig</strong>. Über Jahrzehnte diente er mehreren Grafen von Celtigerns Wacht als Herold. Wer darunter lediglich einen Mann versteht, der Namen ausruft und Wappen erkennt, unterschätzt dieses Amt erheblich: Der <strong>Herold des Grafen ist der oberste Würdenträger der Grafschaft</strong>. Trahern hat diese Stellung lange genug ausgefüllt, dass es ihm schwerfällt, sich im Umgang mit seinem Nachfolger auf die Aufgaben eines Archivars zu beschränken.</p><p>Den Nachfolger hat er selbst herangezogen. Sein Enkel <strong>Cadfan</strong> lernte das Amt bei ihm und übernahm es vor einigen Jahren. Trahern erzählt darüber gewöhnlich: <strong>„Es wurd mal Zeit für junges Blut!“</strong> Dass er bei einer Entscheidung des neuen Herolds noch etwas anzumerken hat, kommt trotzdem häufig vor. Er kennt die Häuser, die Rangfolgen und die alten Verbindungen; also wird er doch wohl sagen dürfen, wenn Cadfan etwas übersieht.</p><p>Für seine heutige Arbeit bringt Trahern einen außergewöhnlichen Wissensschatz mit. Die Stammbäume der Häuser hat er mit geradezu <strong>eidetischer Genauigkeit</strong> im Gedächtnis. Wird bei Tisch ein ihm fremder Mensch erwähnt, kann Trahern ihn oft schon anhand seines Namens und seiner Herkunft in die richtige Familie einordnen. Die Häuser Cenyrs kennt er samt ihrer Rangordnung, jene Estrylls wie den Inhalt seiner Westentasche. Im Archiv bleibt er deshalb ein gefragter Ansprechpartner.</p><p>Im persönlichen Alltag zeigen sich dagegen erste, schleichende Zeichen einer <strong>Altersdemenz</strong>. Sie treten bislang selten genug hervor, dass längst nicht jede Begegnung Fragen aufwirft. Trahern selbst bemerkt das Nachlassen seines Geistes, würde aber den Infernalen tun, es zuzugeben. Darin liegt der eigentliche Grund für seinen Rückzug aus dem Heroldsamt. Seine Sicherheit bei alten Stammbäumen und Wappen kann darüber hinwegtäuschen, wie unsicher für ihn mitunter das gegenwärtige Jahr, ein vertrautes Gesicht oder der Tod eines geliebten Menschen geworden ist.</p>",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Unermüdlich",
+            "icon": "../IconOrdner/Traits%20Icon/Diligent.png",
+            "detail": "Trahern arbeitet weit über das hinaus, was sein Amt verlangt. Hat er eine Aufgabe begonnen, kniet er sich hinein; eine Pause gönnt er sich gewöhnlich erst, wenn die Arbeit erledigt ist. Auch mit fünfundneunzig fällt ihm das Aufhören schwer."
+          },
+          {
+            "title": "Stolz",
+            "icon": "../IconOrdner/Traits%20Icon/Proud.png",
+            "detail": "Sein Wissen und seine jahrzehntelange Amtsführung sind ein wesentlicher Teil seines Selbstverständnisses. Ein Irrtum fällt ihm schwerer zuzugeben als eine weitere Stunde Arbeit. Hinweise auf seine nachlassenden Kräfte wehrt er besonders entschieden ab."
+          },
+          {
+            "title": "Eigensinnig",
+            "icon": "../IconOrdner/Traits%20Icon/Stubborn.png",
+            "detail": "Er lässt sich ungern von einem Vorhaben oder Urteil abbringen. Cadfan bekommt seine Einwände auch ungefragt zu hören, und seine Ablehnung von Wynonna oder Myrddin legt er nicht aus Rücksicht auf den Familienfrieden beiseite."
+          },
+          {
+            "title": "Gelehrt",
+            "icon": "../IconOrdner/Traits%20Icon/Scholar.png",
+            "detail": "Häusergeschichte, Genealogie und Heraldik beschäftigen ihn aus eigenem Interesse. Er kennt die Verbindungen zwischen den Familien ebenso wie ihre Rangfolge und kann sein Wissen beim Entwurf neuer Wappen praktisch einsetzen."
+          },
+          {
+            "title": "Großzügig",
+            "icon": "../IconOrdner/Traits%20Icon/Charitable.png",
+            "detail": "Guten Dienst weiß er zu würdigen. In Celtigerns Letzten Rast hinterlässt er stets ein großzügiges Trinkgeld, wenn man ihm sein Fischgericht und einen ungestörten Abend im privaten Raum ermöglicht."
+          },
+          {
+            "title": "Aufbrausend",
+            "icon": "../IconOrdner/Traits%20Icon/Wroth.png",
+            "detail": "Wenn er sich übergangen fühlt oder überzeugt ist, dass etwas nicht stimmen kann, wird aus einem Einwand rasch ein Streit. Besonders der Stallmeister bekommt das zu spüren, wenn Trahern nach Artus verlangt und dessen Box leer bleibt."
+          }
+        ],
+        "historyTitle": "Vom Knappen zum obersten Würdenträger",
+        "historyText": "<p>Trahern wurde <strong>1645</strong> als Sohn von <strong>Rhiwallon Draig und Fidelma Airt</strong> geboren. Er entstammt jener Seitenlinie, die über seinen Großvater <strong>Cadfael</strong> auf Graf Cadwalladar Draig zurückgeht. Sein Vater Rhiwallon diente den Grafen lange als Kämmerer. Die Arbeit für das Grafenhaus gehörte somit schon vor Traherns eigener Laufbahn zum Leben seiner Familie.</p><p><strong>Cadfael Draig</strong> war sein Rittervater und Mentor. Er bildete seinen Enkel in der Weise der <strong>Uchelwyr</strong> aus und führte ihn zugleich in die Aufgaben des Herolds ein, ein Amt, das Cadfael selbst vor ihm bekleidete. Der Großvater lebte bis 1669; Trahern war bei seinem Tod vierundzwanzig. Seine ritterliche und höfische Ausbildung konnte er damit noch persönlich begleiten.</p><p>Der junge Trahern begeisterte sich für <strong>Pferde und Turniere</strong>. Die Arbeit am Hof nahm ihm weder die Freude an einem guten Ross noch das Interesse an den Leistungen anderer Ritter. Mit zunehmendem Alter gingen diese Freuden in andere Formen über. Heute verfolgt er Pferde und Turniergeschehen vor allem in der monatlichen Ausgabe von <strong>„Ross &amp; Sporn“</strong>.</p><p>Mit <strong>Cerys Marwolaeth</strong>, einer hochrangigen Priesterin aus <strong>Mathragon</strong>, hatte er sein einziges Kind: <strong>Maredudd</strong>, geboren 1670. Dessen Ausbildung vertraute die Familie <strong>Cahir Draig</strong> an, Traherns bestem Freund. Maredudd kam mit sieben Jahren als Page in Cahirs Haushalt, wurde sein Knappe und erhielt von ihm mit achtzehn den Ritterschlag. Traherns Sohn fand seinen Weg als Teulu und später als Feldmarschall, während Trahern selbst über Jahrzehnte im Heroldsamt blieb.</p><p>Den Tod seiner Frau im Jahr <strong>1733</strong> überlebte Trahern als alter Mann. Mit diesem Verlust begann auch das allmähliche Nachlassen seines Gedächtnisses. Er arbeitete weiter und bereitete Cadfan auf die Nachfolge vor. Vor einigen Jahren übergab er dem Enkel schließlich das Amt und wandte sich als Archivar den Überlieferungen seines Hauses zu. Seine Gewohnheit, in Angelegenheiten des Herolds mitzureden, behielt er bei.</p>",
+        "worksTitle": "Können & Dienst",
+        "works": [
+          "Heroldsamt · Jahrzehntelange Erfahrung als oberster Würdenträger von Celtigerns Wacht. Trahern kennt Rangordnung, Häuser und verwandtschaftliche Verbindungen und hat seinen Enkel Cadfan persönlich für das Amt ausgebildet.",
+          "Archiv und Genealogie · Sein außerordentliches Gedächtnis für Stammbäume ist weiterhin eine seiner größten Stärken. Auch weit verzweigte Linien und fremde Personen kann er zuverlässig in den überlieferten Familienzusammenhang einordnen.",
+          "Heraldik · Trahern hat für mehrere junge Ritterhäuser Embleme und Wappen entworfen. Herkunft, Familiengeschichte und heraldische Darstellung gehören für ihn zusammen.",
+          "Malerei · Ein ausgezeichneter Maler und Künstler. Obwohl die Feinmotorik nachgelassen hat, gelingt es ihm noch immer, ein Wappen selbst zu fertigen.",
+          "Uchelwyr-Ausbildung · Ritterliche Ausbildung bei Cadfael Draig und eine lebenslange Begeisterung für Pferde und Turniere. Heute erlauben seine Knie das Reiten nicht mehr; ein eigenes lebendes Ross besitzt er nicht."
+        ],
+        "extraSections": [
+          {
+            "title": "Erinnerungen, die nicht mit der Gegenwart Schritt halten",
+            "position": "afterWorks",
+            "mode": "text",
+            "text": "<p>Manchmal nennt Trahern das falsche Jahr oder spricht davon, seinen längst verstorbenen Großvater Cadfael aufzusuchen. Seinen Sohn <strong>Maredudd</strong> verwechselt er gelegentlich mit <strong>Merfyn Draig</strong>, dem Vetter seines Vaters Rhiwallon. In <strong>Cadfan</strong> sieht er mitunter seinen Sohn. Wird er darauf aufmerksam gemacht, winkt er mit einem <strong>„Papperlapapp“</strong> ab und fährt fort, als wäre nichts gewesen.</p><p>Besonders hartnäckig hält er an seiner alten Lieblingskneipe auf dem Land fest. <strong>1735, vor fünf Jahren, wurde sie von Banditen niedergebrannt.</strong> An ihrer Stelle befindet sich inzwischen etwas völlig anderes. Dennoch will Trahern wieder dorthin. Auch der Hinweis auf den Brand bringt ihn nicht unbedingt von seinem Vorhaben ab. Steht er schließlich vor einem Ort, der seiner Erinnerung widerspricht, erklärt er nüchtern: <strong>„Ich wollte mal die Beine vertreten!“</strong></p><p>Im Stall wird diese Unsicherheit schmerzhafter. <strong>Artus</strong>, sein dritter Hengst, war einst ein prächtiger <strong>Ceffyl</strong>. Das Tier starb <strong>1734</strong>, sechs Jahre vor der Gegenwart. Trahern besitzt inzwischen kein eigenes Ross mehr und kann wegen seiner Knie kaum noch ans Reiten denken. Trotzdem verlangt er manchmal, seinen alten Kumpanen zu sehen, und wundert sich über dessen Abwesenheit. Aus der Nachfrage kann ein heftiger Streit mit dem Stall- oder Zuchtmeister werden. Dass Artus tot ist, weist er zurück: Sein Hengst sei fit und wohlauf. Etwas könne hier nicht stimmen.</p><p>Auch <strong>Cahir „der Schwarze“</strong> ist für ihn nicht an jedem Tag ein Verstorbener. Sein bester Freund starb bereits <strong>1702</strong>, vor achtunddreißig Jahren. Gelegentlich verwechselt Trahern zudem Cahirs ebenfalls verstorbenen Nachfolger <strong>Rhodri</strong> mit dessen Sohn <strong>Galahad</strong>, dem heutigen Grafen. Zwischen solchen Momenten kann er über alte Häuser und deren Stammbäume mit einer Genauigkeit sprechen, die Zuhörer seine vorherige Verwechslung beinahe wieder vergessen lässt.</p>"
+          },
+          {
+            "title": "Lieblingsurenkel und ungeliebte Verbindungen",
+            "position": "afterWorks",
+            "mode": "text",
+            "text": "<p>Traherns Enkelin <strong>Dwynwen Grael, geborene Draig</strong>, lebt mit <strong>Caswallon Grael</strong> und ihren drei Kindern in Mathragon. Als Herold verbrachte Trahern dort viel Zeit. <strong>Gwalchmei, Tylwyth und Medrawd</strong> sind ihm dabei besonders ans Herz gewachsen. Es sind seine liebsten Urenkel, und wie gut sie geraten seien, erzählt er auch Menschen, die eigentlich von etwas anderem sprechen wollten.</p><p>Für <strong>Einion und Carys</strong>, die Kinder Cadfans, bringt er kaum vergleichbare Zuneigung auf. Werden sie erwähnt, fragt er bisweilen nur <strong>„Wer?“</strong> oder winkt beiläufig ab. Mitunter folgt sogleich ein ungünstiger Vergleich mit Dwynwens Kindern. Darin zeigt sich eine deutliche Bevorzugung innerhalb der Familie. Ausgerechnet jene beiden Enkel, denen Maredudd besonders nahesteht, finden bei dessen Vater wenig Beachtung.</p><p>Mit <strong>Wynonna, geborene Fiachrach</strong>, versteht Trahern sich ebenfalls nicht. Cadfans Ehe mit ihr hält er nach wie vor für einen Fehler. Seine persönliche Meinung lässt er dabei ebenso ungern ruhen wie seine Einwände gegen Entscheidungen des neuen Herolds.</p><p>Ganz anders spricht er über seinen Neffen <strong>Kimball Crefyddol</strong>. Der Sohn seiner Schwester <strong>Mairwen Draig</strong> und <strong>Lywelyn Crefyddol</strong> ist amtierender Ritterfürst des Hauses Crefyddol. Auf ihn ist Trahern ausgesprochen stolz. Einmal im Jahr besucht er die <strong>Silberinsel</strong>; während seiner Zeit als Herold führten ihn seine Wege noch häufiger dorthin.</p>"
+          },
+          {
+            "title": "Alte Freunde, Banausen und ein erklärter Gegner",
+            "position": "afterWorks",
+            "mode": "text",
+            "text": "<p><strong>Cahir der Schwarze</strong> war Traherns bester Freund und wurde zugleich zum Rittervater seines einzigen Sohnes. Die Bindung zwischen beiden Männern reicht damit tief in Maredudds Lebensgeschichte hinein. Cahirs Tod liegt lange zurück; für Trahern fühlt sich diese Entfernung nicht immer gleich an.</p><p>Maredudd, <strong>Meurig</strong> und <strong>Odyar</strong> sind inzwischen selbst alte, gestandene Männer. Der Feldmarschall, der Justiziar und der Kämmerer verbindet eine jahrzehntelange Freundschaft mit Whisky, Karten, Schach und gemeinsamen Angelausflügen. Trahern nennt insbesondere die beiden Freunde seines Sohnes gern <strong>Banausen, die nur Unsinn treiben</strong>. Dass er selbst eine Angelstelle außerhalb Gwynthors aufsucht, hindert ihn nicht an diesem Urteil.</p><p>Seine schärfste Gegnerschaft in Celtigerns Wacht gilt <strong>Myrddin Draig</strong>, dem Zauberer des Hauses und Ratszauberer des Königreiches Cenyr. Trahern hält ihn für einen arroganten Wichtigtuer. Dessen magische Kunst bezeichnet er als <strong>„Geißel für Cenyr“</strong>. Diese Abneigung gehört zu seinen festen Überzeugungen; gegenüber Myrddin besitzt der alte Archivar wenig Bereitschaft zur Nachsicht.</p>"
+          }
+        ],
+        "triviaTitle": "Marotten & Eigenarten",
+        "trivia": [
+          "Geht zu Fuß zu einer geheimen Angelstelle unweit von Gwynthor. Dafür kleidet er sich wie ein einfacher Fischer: Dort möchte er seine Ruhe haben und weder als ehemaliger Herold erkannt noch mit Anliegen behelligt werden.",
+          "Bestellt in „Celtigerns Letzten Rast“ am liebsten Fisch mit Gemüse. Man stellt ihm einen privaten Raum zur Verfügung, in dem er ungestört dinieren kann. Sein Trinkgeld fällt jedes Mal großzügig aus.",
+          "Liest jeden Monat „Ross & Sporn“. Pferde und Turniere verfolgt er inzwischen auf dem Papier, seit seine Knie das Reiten nicht mehr mitmachen.",
+          "Will eine begonnene Arbeit unbedingt fertig bekommen, bevor er sich Ruhe gönnt. Aus dem geplanten Feierabend wird deshalb regelmäßig noch eine weitere Aufgabe im Archiv.",
+          "Grätscht Cadfan in Entscheidungen hinein, obwohl er ihm das Heroldsamt selbst übergeben hat. Dass er heute Archivar ist, versteht er keineswegs als Grund, seine Meinung für sich zu behalten.",
+          "Will noch immer seine vor fünf Jahren niedergebrannte Lieblingskneipe besuchen. Erweist sich die Erinnerung vor Ort als falsch, war der Weg nach seiner Darstellung lediglich zum Beinevertreten gedacht.",
+          "Fragt im Stall nach Artus und kann ausgesprochen ärgerlich werden, wenn man ihm erklärt, dass der Hengst seit sechs Jahren tot ist. Er besteht darauf, dass sein alter Kumpan gesund sei.",
+          "Bringt ein Gespräch über Einion oder Carys rasch auf die Kinder Dwynwens und deren Vorzüge. Auf die Namen von Cadfans Kindern folgt manchmal nur ein beiläufiges „Wer?“.",
+          "Besucht seinen Neffen Kimball einmal im Jahr auf der Silberinsel. Dessen Stellung als Ritterfürst erfüllt ihn mit deutlich mehr Stolz, als er für viele andere jüngere Verwandte aufbringt."
+        ],
+        "quotesTitle": "In eigenen Worten",
+        "quotes": [
+          "„Es wurd mal Zeit für junges Blut!“",
+          "„Papperlapapp.“",
+          "„Ich wollte mal die Beine vertreten!“",
+          "„Artus? Dem fehlt nichts. Der ist fit und wohlauf!“",
+          "„Wer? Ach. Ihr solltet Dwynwens Kinder sehen.“"
+        ],
+        "connectionsTitle": "Familie, Freunde & Gegnerschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Cadfael Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/cadfael-draig.jpg",
+            "imageFormat": "portrait",
+            "detail": "Großvater, Rittervater und Mentor (1602–1669). Früherer Herold, der Trahern sowohl als Uchelwyr als auch für das Amt ausbildete."
+          },
+          {
+            "type": "connection",
+            "name": "Cerys Marwolaeth",
+            "image": "../Stammbäume/assets/images/placeholders/female.png",
+            "imageFormat": "portrait",
+            "detail": "Verstorbene Ehefrau (1646–1733), hochrangige Priesterin aus Mathragon und Mutter seines einzigen Sohnes. Mit ihrem Tod begann sein schleichender geistiger Abbau."
+          },
+          {
+            "type": "connection",
+            "name": "Sir Maredudd Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/maredudd-draig.jpg",
+            "imageFormat": "portrait",
+            "detail": "Einziger Sohn, siebzigjähriger Feldmarschall und einst Cahirs Knappe. Trahern verwechselt ihn gelegentlich mit Merfyn, dem Vetter seines Vaters."
+          },
+          {
+            "type": "connection",
+            "name": "Sir Cadfan Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg",
+            "imageFormat": "portrait",
+            "detail": "Enkel und persönlich ausgebildeter Nachfolger als Herold. Trahern redet ihm weiterhin in Entscheidungen hinein und hält ihn gelegentlich für seinen Sohn."
+          },
+          {
+            "type": "connection",
+            "name": "Dwynwen Grael, geb. Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/dwynwen-draig.jpg",
+            "imageFormat": "portrait",
+            "detail": "Enkelin in Mathragon, verheiratet mit Caswallon Grael. Ihre Kinder Gwalchmei, Tylwyth und Medrawd sind Traherns bevorzugte Urenkel."
+          },
+          {
+            "type": "connection",
+            "name": "Wynonna Draig, geb. Fiachrach",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/wynonna-fiachrach.jpg",
+            "imageFormat": "portrait",
+            "detail": "Cadfans Frau. Trahern versteht sich nicht mit ihr und hält die Ehe seines Enkels weiterhin für einen Fehler."
+          },
+          {
+            "type": "connection",
+            "name": "Einion Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/einion-draig.jpg",
+            "imageFormat": "portrait",
+            "detail": "Urenkel, Cadfans Sohn und Maredudds Knappe. Trahern bringt ihm wenig Aufmerksamkeit entgegen und vergleicht ihn ungünstig mit Dwynwens Kindern."
+          },
+          {
+            "type": "connection",
+            "name": "Carys Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/carys-draig.jpg",
+            "imageFormat": "portrait",
+            "detail": "Urenkelin und Cadfans Tochter. Maredudds Augapfel erfährt von Trahern kaum Beachtung."
+          },
+          {
+            "type": "connection",
+            "name": "Cahir „der Schwarze“ Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/cahir-draig.jpg",
+            "imageFormat": "portrait",
+            "detail": "Bester Freund, früherer Graf und Maredudds Rittervater. Seit 1702 tot; Trahern vergisst mitunter, dass sie sich nicht mehr begegnen können."
+          },
+          {
+            "type": "connection",
+            "name": "Rhodri Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/rhodri-draig.jpg",
+            "imageFormat": "portrait",
+            "detail": "Cahirs Sohn und Nachfolger als Graf (1662–1720). Trahern verwechselt ihn gelegentlich mit dessen Sohn Galahad."
+          },
+          {
+            "type": "connection",
+            "name": "Graf Galahad Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg",
+            "imageFormat": "portrait",
+            "detail": "Amtierender Graf von Celtigerns Wacht und Rhodris Sohn. Traherns heutiger Dienst als Archivar gilt seinem Haus."
+          },
+          {
+            "type": "connection",
+            "name": "Sir Meurig Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/meurig-draig.jpg",
+            "imageFormat": "portrait",
+            "detail": "Justiziar, Cahirs Sohn und enger Freund Maredudds. Für Trahern trotz seiner zweiundsiebzig Jahre noch immer einer der Banausen, die mit seinem Sohn Unsinn treiben."
+          },
+          {
+            "type": "connection",
+            "name": "Sir Odyar Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/odyar-draig.jpg",
+            "imageFormat": "portrait",
+            "detail": "Kämmerer und enger Freund Maredudds, ebenfalls zweiundsiebzig. Trahern schließt ihn in sein wenig schmeichelhaftes Urteil über die alte Freundesrunde ein."
+          },
+          {
+            "type": "connection",
+            "name": "Myrddin Draig",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/myrddin-draig.jpg",
+            "imageFormat": "portrait",
+            "detail": "Zauberer des Hauses und Ratszauberer Cenyrs. Trahern ist sein entschiedener Gegner in Celtigerns Wacht, hält ihn für einen arroganten Wichtigtuer und seine Kunst für eine Geißel des Reiches."
+          },
+          {
+            "type": "connection",
+            "name": "Mairwen Draig",
+            "image": "../Stammbäume/assets/images/placeholders/female.png",
+            "imageFormat": "portrait",
+            "detail": "Jüngere Schwester (1654–1731), Gemahlin Lywelyn Crefyddols und Mutter seines Neffen Kimball."
+          },
+          {
+            "type": "connection",
+            "name": "Kimball Crefyddol",
+            "image": "../Stammbäume/assets/images/portraits/haus-wylan/kimball-crefydoll.jpg",
+            "imageFormat": "portrait",
+            "detail": "Neffe über Mairwen und amtierender Ritterfürst des Hauses Crefyddol. Trahern ist sehr stolz auf ihn und besucht ihn jährlich auf der Silberinsel."
+          }
+        ],
+        "documentsTitle": "Herkunft & Familienzweige",
+        "documents": [
+          {
+            "title": "Haus Draig",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=trahern-draig",
+            "text": "Traherns Herkunft, seine Ehe mit Cerys und die Nachkommen seines Sohnes Maredudd."
+          },
+          {
+            "title": "Dwynwens Familie in Mathragon",
+            "icon": "../IconOrdner/Traits%20Icon/Family_focus.png",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-grael&mode=view&person=dwynwen-draig",
+            "text": "Dwynwen und Caswallon Grael mit Gwalchmei, Tylwyth und Medrawd."
+          },
+          {
+            "title": "Kimball und Haus Crefyddol",
+            "icon": "../IconOrdner/Traits%20Icon/Family_focus.png",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-crefyddol&mode=view&person=kimball-crefydoll",
+            "text": "Die Familie seiner Schwester Mairwen und seines Neffen auf der Silberinsel."
+          }
+        ],
+        "footer": "Personenakte · Sir Trahern Draig · Haus Draig"
+      }
+    },
     "identity": {
       "worldPersonId": "person--haus-draig--trahern-draig"
     },
@@ -1362,29 +2027,29 @@
       "death": "",
       "houseId": "house-draig",
       "houseName": "Haus Draig",
-      "familyRole": "core",
+      "familyRole": "married",
       "portraitPlaceholder": "auto",
       "tags": [],
       "sources": [
-        {
-          "familyId": "haus-draig",
-          "personId": "trahern-draig",
-          "releaseId": "",
-          "publishedAt": "",
-          "importedAt": "2026-09-27T20:33:20.104Z",
-          "lastSyncedAt": "2026-09-27T20:33:20.104Z",
-          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=trahern-draig",
-          "fingerprint": "{\"name\":\"Trahern Draig\",\"title\":\"\",\"birth\":\"1645\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/trahern-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiwallon-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhiwallon-draig\",\"name\":\"Rhiwallon Draig\"},{\"personId\":\"fidelma-airt\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-airt--fidelma-airt\",\"name\":\"Fidelma Airt\"}],\"partners\":[{\"personId\":\"cerys-marwolaeth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marwolaeth--cerys-marwolaeth\",\"name\":\"Cerys Marwolaeth\"}],\"children\":[{\"personId\":\"maredudd-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--maredudd-draig\",\"name\":\"Maredudd Draig\"}]}}"
-        },
         {
           "familyId": "haus-marwolaeth",
           "personId": "trahern-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-27T20:33:20.104Z",
-          "lastSyncedAt": "2026-09-27T20:33:20.104Z",
+          "importedAt": "2026-09-28T15:05:59.250Z",
+          "lastSyncedAt": "2026-09-28T15:05:59.250Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-marwolaeth&mode=view&person=trahern-draig",
           "fingerprint": "{\"name\":\"Trahern Draig\",\"title\":\"\",\"birth\":\"1645\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/trahern-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"cerys-marwolaeth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marwolaeth--cerys-marwolaeth\",\"name\":\"Cerys Marwolaeth\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-draig",
+          "personId": "trahern-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-28T15:05:59.250Z",
+          "lastSyncedAt": "2026-09-28T15:05:59.250Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=trahern-draig",
+          "fingerprint": "{\"name\":\"Trahern Draig\",\"title\":\"Archivar des Hauses Draig · ehemaliger Herold\",\"birth\":\"1645\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/trahern-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"rhiwallon-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhiwallon-draig\",\"name\":\"Rhiwallon Draig\"},{\"personId\":\"fidelma-airt\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-airt--fidelma-airt\",\"name\":\"Fidelma Airt\"}],\"partners\":[{\"personId\":\"cerys-marwolaeth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marwolaeth--cerys-marwolaeth\",\"name\":\"Cerys Marwolaeth\"}],\"children\":[{\"personId\":\"maredudd-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--maredudd-draig\",\"name\":\"Maredudd Draig\"}]}}"
         }
       ],
       "relationships": {

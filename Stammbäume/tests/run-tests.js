@@ -7275,8 +7275,8 @@ test('ergänzt eine ältere lokale Draig-Fassung bis zur jüngsten Generation', 
   assert.equal(loaded.source, 'registry-upgrade');
   assert.equal(loaded.family.persons.length, 177);
   assert.equal(loaded.family.view.descendantDepth, 20);
-  assert.equal(loaded.family.extensions.sourceRevision, 10);
-  assert.deepEqual(loaded.family.extensions.registryUpgrade, { fromRevision: 2, toRevision: 10 });
+  assert.equal(loaded.family.extensions.sourceRevision, 11);
+  assert.deepEqual(loaded.family.extensions.registryUpgrade, { fromRevision: 2, toRevision: 11 });
   assert.equal(loaded.family.lineage.originHouse.enabled, true);
   assert.equal(
     loaded.family.parentages.find(parentage => parentage.childId === 'mairwen-draig').legitimacy,
@@ -29684,7 +29684,7 @@ test('synchronisiert Penderyns gemeinsame Personen und Beziehungen mit allen vor
   assert.deepEqual([arthFfionwen.birth, arthFfionwen.death], ['1662', '1733']);
   assert.equal(draigRevelyn.houseId, 'house-penderyn');
   assert.equal(HOUSE_ARTH_FAMILY.extensions.sourceRevision, 13);
-  assert.equal(HOUSE_DRAIG_FAMILY.extensions.sourceRevision, 10);
+  assert.equal(HOUSE_DRAIG_FAMILY.extensions.sourceRevision, 11);
 
   [
     ['gwales-illewod', HOUSE_ILLEWOD_PORTRAITS],

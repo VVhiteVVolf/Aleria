@@ -11,6 +11,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
 import { OWETA_DRAIG_BIOGRAPHY } from './person-biographies/oweta-draig.js';
+import { TRAHERN_DRAIG_BIOGRAPHY } from './person-biographies/trahern-draig.js';
 import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.biography.mjs?v=20260911b';
 
 const HOUSE_EMBLEMS = Object.freeze({
@@ -308,7 +309,14 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     person('elenydd-draig', 'Elenydd', 'female', '1651', '1723'),
     person('gethin-draig', 'Gethin', 'male', '1649', '1719'),
     person('arianwen-draig', 'Arianwen', 'female', '1653', '1703'),
-    person('trahern-draig', 'Trahern', 'male', '1645', ''),
+    person('trahern-draig', 'Trahern', 'male', '1645', '', DRAIG_HOUSE_ID, {
+      title: 'Archivar des Hauses Draig · ehemaliger Herold',
+      extensions: {
+        biographyModule: TRAHERN_DRAIG_BIOGRAPHY,
+        registryManagedFields: ['title'],
+        registryManagedExtensionFields: ['biographyModule']
+      }
+    }),
     person('mairwen-draig', 'Mairwen', 'female', '1654', '1731'),
     person('alawen-cumhail', 'Alawen Cumhail', 'female', '1645', '1705', 'house-cumhail'),
     person('selwyn-illewod', 'Selwyn Illewod', 'male', '1643', '1707', 'house-illewod'),
@@ -715,7 +723,7 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Draig-Tabelle und den vier ergänzenden Stammbaumgrafiken. Namens- und jahresgleiche Personen aus Arwydd, Gafyr, Saethwyr und Wyrm verwenden dieselben Weltpersonen-IDs und Portraitdateien.',
     blankFamily: false,
-    sourceRevision: 10,
+    sourceRevision: 11,
     houseBiographyModule: HOUSE_BIOGRAPHY
   }
 });
