@@ -641,6 +641,33 @@
       "status": "validated"
     },
     {
+      "key": "ylva-saex",
+      "owner": "Ylva Wolfshorn",
+      "title": "Wolfshorn-Saex",
+      "file": "ylva-saex-v2.png",
+      "bindings": [
+        {
+          "characterId": "bSYZYAEOwiRgy44f6OmO",
+          "itemIds": [
+            "equipment-weapon-ylva-saex"
+          ],
+          "combatEntryIds": [
+            "ylva-saex"
+          ]
+        }
+      ],
+      "legacyImages": [],
+      "prompt": "Use case: stylized-concept. Asset type: Aleria fantasy inventory weapon illustration. Input image: the user's attached seax photograph is the SHAPE AND ORNAMENT reference only. Create Ylva Wolfshorn's Saex: ONE beautiful one-handed long single-edged northern fighting knife, recognizably a seax like the reference. Dark warm carved wooden grip, small dark metal pommel, compact antique-gold ferrule without a projecting sword crossguard. Long tapered single-edged silver-grey steel blade with a nearly straight spine and an angled taper toward a sharp point; an elegant narrow band of antique-gold interlaced vine engraving along the spine. A subtle small wolf-head knot motif in the grip fitting fits Ylva. Follow the reference proportions: blade roughly twice the grip length, sturdy yet elegant, not a dagger with symmetrical double edges, not an axe and not a longsword. Established Aleria item-art style: hand-painted simplified medieval fantasy illustration, clear fine dark contour, restrained colors, readable silhouette, stylized soft metal highlights and light brush texture. NOT photorealistic and NOT a 3D render. Whole weapon diagonally from lower-left grip to upper-right point, centered with 7% margin, one item only. Square 1:1 composition. Genuinely transparent PNG alpha background; no white backdrop, no painted checkerboard, no ground, no cast shadow, no hands, no person, no sheath, no lettering, no watermark or border.",
+      "referenceImages": [
+        "User attachment: decorated seax with carved wooden grip, 2026-09-28"
+      ],
+      "revision": {
+        "purpose": "background-extraction",
+        "prompt": "Make the background transparent. Keep only the illustrated item. Return a transparent PNG, square aspect ratio."
+      },
+      "status": "validated"
+    },
+    {
       "key": "ylva-jagdleder",
       "owner": "Ylva Wolfshorn",
       "file": "ylva-jagdleder-v1.png",

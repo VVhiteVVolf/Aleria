@@ -537,6 +537,29 @@ window.ARMORY_DATA = {
       image: 'https://i.imgur.com/lAB8NU4.png',
       tags: ['Schild', 'Fernkampf', 'Belagerung'],
       desc: 'Die Pavese ist ein grosser, aufstellbarer Schild fuer Armbrustschuetzen, Bogner und Belagerungstruppen. Im Nahkampf unhandlich, hinter der Linie Gold wert.'
+    },
+    {
+      id: 'saex',
+      category: 'Waffen',
+      type: 'Saex · einschneidiges Langmesser',
+      name: 'Saex',
+      rarity: 'Gewoehnlich',
+      weight: 0.8,
+      enchantment: 'Keine',
+      mana: '-',
+      material: 'Stahl, Holz',
+      price: { min: 400, max: 400, unit: 'K' },
+      image: '/AleriaAlmanach/public/assets/character-equipment/ylva-saex-v2.png',
+      tags: ['Einhändig', 'Nordisch', '1W8 Hieb', 'Sax', 'Seax'],
+      desc: 'Ein nordisches Langmesser mit einer Schneide, kräftigem Klingenrücken und kurzem Holzgriff. Die Saex wird einhändig geführt und verursacht standardmäßig 1W8 Hiebschaden. Der Grundangriff verwendet Kraft und kostet eine Aktion.',
+      combatDefinition: {
+        kind: 'weapon', weaponType: 'dagger', training: 'simple',
+        damageFormula: '1d8', versatileDamageFormula: '', damageType: 'Hieb',
+        attackAttribute: 'strength', proficient: true, attackBonus: 0, damageBonus: 0,
+        range: 'Nahkampf · 1,5 m', properties: 'Einhändig',
+        notes: 'Nordisches einschneidiges Langmesser. 1W8 Grundschaden, einhändig geführt.',
+        requirements: '', aiInstructions: '', triggerRules: []
+      }
     }
   ],
   ores: [

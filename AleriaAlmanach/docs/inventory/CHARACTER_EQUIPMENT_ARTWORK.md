@@ -1,6 +1,6 @@
 # Persönliche Ausrüstungsbilder · 28. September 2026
 
-40 quadratische PNG-Illustrationen mit echtem Alphakanal bilden die konkret vorhandene Ausrüstung von Gawain, Freya, Guinevere, Gildas, Ylva, Asgeir, Rhiannon, Gais, Nudd und Fenrir ab. Der Bestand wurde mit den lokalen Bögen und lesend mit den zehn Online-Dokumenten abgeglichen. Rhiannons Amethyst-Zauberstab, Dolch und Amulett wurden während der Arbeit ausdrücklich vom Nutzer benannt. Die leeren Vorlagen „Hauptwaffe“ und „Persönlicher Gegenstand“ werden unter ihren vorhandenen IDs konkretisiert; der Dolch erhält eine eigene Inventar-ID. Es werden keine Kampfwerte oder magischen Boni ergänzt.
+41 quadratische PNG-Illustrationen mit echtem Alphakanal bilden die konkret vorhandene Ausrüstung von Gawain, Freya, Guinevere, Gildas, Ylva, Asgeir, Rhiannon, Gais, Nudd und Fenrir ab. Der Bestand wurde mit den lokalen Bögen und lesend mit den zehn Online-Dokumenten abgeglichen. Rhiannons Amethyst-Zauberstab, Dolch und Amulett wurden während der Arbeit ausdrücklich vom Nutzer benannt. Die leeren Vorlagen „Hauptwaffe“ und „Persönlicher Gegenstand“ werden unter ihren vorhandenen IDs konkretisiert; der Dolch erhält eine eigene Inventar-ID. Es werden keine Kampfwerte oder magischen Boni ergänzt.
 
 [Galerie](../../public/assets/character-equipment/index.html) · [Prompts, Referenzen und Zuordnungen](../../public/assets/character-equipment/image-prompts.json)
 
@@ -31,6 +31,6 @@ Die neuen Dateien ersetzen ihre Vorgänger über den gemeinsamen Bildkatalog. Be
 
 ## Prüfung
 
-Alle 40 ausgewählten Dateien wurden visuell und per Alphakanal geprüft: 1:1, RGBA, vollständig transparente Ecken und transparente Außenflächen. Gemalte Schachbrett-Hintergründe wurden durch erneute Bildbearbeitung ersetzt. Integrationstests prüfen gemeinsame Bildpfade, eigene Bilder, Figurenabgrenzung, Schild/Schildstoß, Weitergabe, Unveränderlichkeit und wiederholte Projektion. Bestehende Charakter- und Ausrüstungsregeltests bleiben Teil der Freigabeprüfung.
+Alle 41 ausgewählten Dateien wurden visuell und per Alphakanal geprüft: 1:1, RGBA, vollständig transparente Ecken und transparente Außenflächen. Gemalte Schachbrett-Hintergründe wurden durch erneute Bildbearbeitung ersetzt. Integrationstests prüfen gemeinsame Bildpfade, eigene Bilder, Figurenabgrenzung, Schild/Schildstoß, Weitergabe, Unveränderlichkeit und wiederholte Projektion. Bestehende Charakter- und Ausrüstungsregeltests bleiben Teil der Freigabeprüfung.
 
-Lokaler Chromium-Check: alle 40 Galeriebilder dekodiert, Galerie bei 1440 und 390 Pixeln geprüft; tatsächliche Renderer für Inventar, Markt, Kampfbogen, Charakterbogenarchiv und Kommentarausrüstung mit bestehenden Figuren geladen. Keine JavaScript-Fehler. Dabei wurden keine Online-Schreibvorgänge ausgeführt.
+Lokaler Chromium-Check: alle 41 Galeriebilder dekodiert, Galerie bei 1441 und 390 Pixeln geprüft; tatsächliche Renderer für Inventar, Markt, Kampfbogen, Charakterbogenarchiv und Kommentarausrüstung mit bestehenden Figuren geladen. Keine JavaScript-Fehler. Dabei wurden keine Online-Schreibvorgänge ausgeführt.

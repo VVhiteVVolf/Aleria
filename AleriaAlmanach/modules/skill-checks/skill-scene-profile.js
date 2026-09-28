@@ -1,5 +1,5 @@
-import { resolveCombatProfile } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v2';
-import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260928-equipment-art-v2';
+import { resolveCombatProfile } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v3';
+import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260928-equipment-art-v3';
 import { recoverDailyCombatResources } from '../combat/combat-action-economy.js';
 import { withEquippedCombatWeapon } from '../combat/combat-equipment-state.js';
 

@@ -1,13 +1,13 @@
-import { deriveCombatEncounterState, getActiveCombatEncounter, normalizeCombatEncounterEvent, buildEncounterExperienceAwards } from '../combat/combat-encounter-model.js?v=20260928-equipment-art-v2';
-import { getEncounterValidationError, prepareEncounterParticipants } from '../combat/combat-encounter-lifecycle.js?v=20260928-equipment-art-v2';
+import { deriveCombatEncounterState, getActiveCombatEncounter, normalizeCombatEncounterEvent, buildEncounterExperienceAwards } from '../combat/combat-encounter-model.js?v=20260928-equipment-art-v3';
+import { getEncounterValidationError, prepareEncounterParticipants } from '../combat/combat-encounter-lifecycle.js?v=20260928-equipment-art-v3';
 import { buildCombatEncounterSummary } from '../combat/combat-encounter-summary.js';
 import { suggestEncounterOutcome } from '../combat/combat-encounter-outcome.js';
-import { collectSceneActorIds, buildEncounterCandidates, readEncounterParticipants, captureEncounterCandidateDraft } from './combat-encounter-candidates.js?v=20260928-equipment-art-v2';
-import { renderActiveEncounterPanel } from './combat-encounter-panel.js?v=20260928-equipment-art-v2';
-import { commitSceneCombatStatus } from '../combat-status/combat-status-controller.js?v=20260928-equipment-art-v2';
+import { collectSceneActorIds, buildEncounterCandidates, readEncounterParticipants, captureEncounterCandidateDraft } from './combat-encounter-candidates.js?v=20260928-equipment-art-v3';
+import { renderActiveEncounterPanel } from './combat-encounter-panel.js?v=20260928-equipment-art-v3';
+import { commitSceneCombatStatus } from '../combat-status/combat-status-controller.js?v=20260928-equipment-art-v3';
 import { ensureCombatEncounterDialog, filterEncounterCandidates, renderCombatEncounterComment, renderEncounterCandidates,
   renderOperationButtons, setEncounterEndControls, setEncounterStatus, setEncounterSubmitting, updateEncounterCount,
-  setEncounterMode, setEncounterPreview } from './combat-encounter-ui.js?v=20260928-equipment-art-v2';
+  setEncounterMode, setEncounterPreview } from './combat-encounter-ui.js?v=20260928-equipment-art-v3';
 
 // This dialog owns its draft; changing tabs never rewrites encounter history.
 let dialog = null;

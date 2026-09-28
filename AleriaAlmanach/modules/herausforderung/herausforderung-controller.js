@@ -12,7 +12,7 @@ import {
   renderHerausforderungComment,
   setHerausforderungStatus,
   setHerausforderungSubmitting
-} from './herausforderung-ui.js?v=20260928-equipment-art-v2';
+} from './herausforderung-ui.js?v=20260928-equipment-art-v3';
 
 let activeThreadId = '';
 let draftApproaches = [];

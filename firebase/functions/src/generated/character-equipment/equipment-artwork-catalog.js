@@ -395,6 +395,22 @@ export const EQUIPMENT_ARTWORK = [
     ]
   },
   {
+    "key": "ylva-saex",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/ylva-saex-v2.png",
+    "bindings": [
+      {
+        "characterId": "bSYZYAEOwiRgy44f6OmO",
+        "itemIds": [
+          "equipment-weapon-ylva-saex"
+        ],
+        "combatEntryIds": [
+          "ylva-saex"
+        ]
+      }
+    ],
+    "legacyImages": []
+  },
+  {
     "key": "ylva-jagdleder",
     "image": "/AleriaAlmanach/public/assets/character-equipment/ylva-jagdleder-v1.png",
     "bindings": [

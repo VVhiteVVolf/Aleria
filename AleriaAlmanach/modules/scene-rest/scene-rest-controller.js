@@ -1,6 +1,6 @@
-import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v2';
+import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v3';
 import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
-import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260928-equipment-art-v2';
+import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260928-equipment-art-v3';
 import {
   buildSceneRestParticipant,
   getSceneRestType,

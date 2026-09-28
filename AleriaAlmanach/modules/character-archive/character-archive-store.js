@@ -1,4 +1,4 @@
-import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260928-equipment-art-v2';
+import { loadBuiltinCharacterArchiveEntries } from './character-archive-catalog.js?v=20260928-equipment-art-v3';
 import { detachCatalogSpell } from '../spell-catalog/spell-catalog.js';
 import {
   cloneArchiveValue,
@@ -6,9 +6,9 @@ import {
   extractItemRegisterArchiveEntries,
   mergeCharacterArchiveEntries,
   normalizeCharacterArchiveEntry
-} from './character-archive-model.js?v=20260928-equipment-art-v2';
-import { classifyCharacterArchiveEntries } from './character-archive-classification.js?v=20260928-equipment-art-v2';
-import { extractCurrentCharacterArchiveEntries, reconcileCharacterArchiveClassTraining } from './character-archive-class-training.js?v=20260928-equipment-art-v2';
+} from './character-archive-model.js?v=20260928-equipment-art-v3';
+import { classifyCharacterArchiveEntries } from './character-archive-classification.js?v=20260928-equipment-art-v3';
+import { extractCurrentCharacterArchiveEntries, reconcileCharacterArchiveClassTraining } from './character-archive-class-training.js?v=20260928-equipment-art-v3';
 
 const LOCAL_STORAGE_KEY = 'aleria-character-archive-v1';
 

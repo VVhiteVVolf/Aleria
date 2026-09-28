@@ -1,4 +1,4 @@
-import { indexInventoryTemplates, resolveInventoryItem, inventoryCompanionViews, isInventoryCompanion } from './character-inventory-identity.js?v=20260928-equipment-art-v2';
+import { indexInventoryTemplates, resolveInventoryItem, inventoryCompanionViews, isInventoryCompanion } from './character-inventory-identity.js?v=20260928-equipment-art-v3';
 import { inventoryCardModel } from './character-inventory-card-model.js';
 
 function context(data) {

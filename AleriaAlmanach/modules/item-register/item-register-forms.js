@@ -1,7 +1,7 @@
-import { REGISTER_CATEGORIES, canManageCharacter } from './item-register-model.js?v=20260928-equipment-art-v2';
+import { REGISTER_CATEGORIES, canManageCharacter } from './item-register-model.js?v=20260928-equipment-art-v3';
 import { moneyTotal, formatCopper, localizedNumber } from './item-register-money.js?v=20260919-shop-v1';
-import { resalePrice } from './item-register-trade.js?v=20260928-equipment-art-v2';
-import { escape, field, textarea, select } from './item-register-view.js?v=20260928-equipment-art-v2';
+import { resalePrice } from './item-register-trade.js?v=20260928-equipment-art-v3';
+import { escape, field, textarea, select } from './item-register-view.js?v=20260928-equipment-art-v3';
 
 export function createForm(kind, item, snapshot, access) {
   const id = crypto.randomUUID();

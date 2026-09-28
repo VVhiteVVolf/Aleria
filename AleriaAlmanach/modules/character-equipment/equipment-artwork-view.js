@@ -1,4 +1,4 @@
-import { resolveEquipmentImage } from './equipment-artwork.js?v=20260928-equipment-art-v2';
+import { resolveEquipmentImage } from './equipment-artwork.js?v=20260928-equipment-art-v3';
 
 const escape = value => String(value || '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 

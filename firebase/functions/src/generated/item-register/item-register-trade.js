@@ -1,4 +1,4 @@
-import { createOwnedItem } from './item-register-model.js?v=20260928-equipment-art-v2';
+import { createOwnedItem } from './item-register-model.js?v=20260928-equipment-art-v3';
 import { moneyState, moneyTotal, toMinor, formatMoney } from './item-register-money.js?v=20260919-shop-v1';
 import { synchronizeEquipmentFromInventory } from '../character-equipment/character-equipment-sync.js';
 

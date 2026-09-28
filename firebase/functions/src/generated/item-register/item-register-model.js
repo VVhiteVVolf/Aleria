@@ -1,5 +1,5 @@
 import { parsePrice, formatPrice, moneyState } from './item-register-money.js?v=20260919-shop-v1';
-import { indexInventoryTemplates, resolveInventoryItem } from '../character-inventory/character-inventory-identity.js?v=20260928-equipment-art-v2';
+import { indexInventoryTemplates, resolveInventoryItem } from '../character-inventory/character-inventory-identity.js?v=20260928-equipment-art-v3';
 
 export const REGISTER_SECTIONS = Object.freeze([
   { id: 'standard', label: 'Standardgüter', text: 'Verbindliche Vorlagen und Preismaßstäbe.' },

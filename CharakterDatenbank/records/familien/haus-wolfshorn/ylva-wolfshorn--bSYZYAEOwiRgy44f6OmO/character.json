@@ -119,7 +119,7 @@
       "bSYZYAEOwiRgy44f6OmO",
       "bSYZYAEOwiRgy44f6OmO"
     ],
-    "contentHash": "8816fa9ce27ab132491e4a2ecadc5252d76c57bd476c05c5bc59dac62213f184"
+    "contentHash": "b8bce268a5c3fa70157209eebaee93b23a3f00109e4417f786094dd026116a7d"
   },
   "local": {
     "notes": "",
@@ -889,7 +889,7 @@
             "totalCopper": 0,
             "copper": 0
           },
-          "revision": 1790197347790,
+          "revision": 1790629200000,
           "carryValue": "Siehe Einzelgewichte",
           "showInfoTable": false,
           "level": "Stufe 7",
@@ -1252,6 +1252,62 @@
               "name": "Freki",
               "creatureId": "companion-ylva-freki",
               "id": "ylva-freki"
+            },
+            {
+              "id": "equipment-weapon-ylva-saex",
+              "itemDbKey": "",
+              "originItemDbKey": "standard:waffen-rustungen:saex",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO",
+              "ownerCharacterName": "Ylva Wolfshorn",
+              "acquiredAt": "2026-09-28T21:00:00.000Z",
+              "individualizedAt": "",
+              "category": "weapon",
+              "icon": "",
+              "image": "/AleriaAlmanach/public/assets/character-equipment/ylva-saex-v2.png",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "name": "Wolfshorn-Saex",
+              "type": "Saex · einschneidiges Langmesser",
+              "description": "Ylvas einschneidiges Langmesser mit dunklem, geschnitztem Holzgriff, goldenen Ranken entlang des Klingenrückens und einem kleinen Wolfsmotiv am Griffabschluss.",
+              "weight": "0,8 kg",
+              "quantity": "1",
+              "tags": "Einhändig",
+              "equipped": false,
+              "combatDefinition": {
+                "kind": "weapon",
+                "triggerRules": [],
+                "weaponType": "dagger",
+                "training": "simple",
+                "damageFormula": "1d8",
+                "versatileDamageFormula": "",
+                "damageType": "Hieb",
+                "attackAttribute": "strength",
+                "proficient": true,
+                "attackBonus": 0,
+                "damageBonus": 0,
+                "range": "Nahkampf · 1,5 m",
+                "properties": "Einhändig",
+                "notes": "Nordisches einschneidiges Langmesser. 1W8 Grundschaden, einhändig geführt.",
+                "requirements": "",
+                "aiInstructions": ""
+              },
+              "equipmentLink": {
+                "schemaVersion": 1,
+                "kind": "weapon",
+                "combatEntryId": "ylva-saex"
+              },
+              "infoRows": [],
+              "attributes": [],
+              "instanceId": "equipment-weapon-ylva-saex",
+              "templateId": "standard:waffen-rustungen:saex",
+              "templateName": "Saex",
+              "registerCategory": "waffen",
+              "valuation": {
+                "minCopper": 400,
+                "maxCopper": 400
+              }
             }
           ],
           "portraitFormat": "portrait",
@@ -2218,7 +2274,7 @@
               "active": true
             }
           ],
-          "revision": 1790054758405,
+          "revision": 1790629200000,
           "weapons": [
             {
               "damageFormula": "1d8",
@@ -2420,6 +2476,46 @@
               "damageFormula": "1d4",
               "properties": "Schlicht · simpel · immer verfügbar",
               "effects": []
+            },
+            {
+              "id": "ylva-saex",
+              "inventoryItemId": "equipment-weapon-ylva-saex",
+              "name": "Wolfshorn-Saex",
+              "image": "/AleriaAlmanach/public/assets/character-equipment/ylva-saex-v2.png",
+              "weaponProfileId": "",
+              "triggerRules": [],
+              "weaponType": "dagger",
+              "training": "simple",
+              "damageFormula": "1d8",
+              "versatileDamageFormula": "",
+              "damageType": "Hieb",
+              "attackAttribute": "strength",
+              "proficient": true,
+              "attackBonus": 0,
+              "damageBonus": 0,
+              "range": "Nahkampf · 1,5 m",
+              "properties": "Einhändig",
+              "notes": "Nordisches einschneidiges Langmesser. 1W8 Grundschaden, einhändig geführt.",
+              "requirements": "",
+              "aiInstructions": "",
+              "effects": [],
+              "ammunition": null,
+              "activationType": "action",
+              "costs": [
+                {
+                  "id": "activation-action",
+                  "resourceId": "action",
+                  "name": "Aktion",
+                  "amount": 1,
+                  "scope": "comment"
+                }
+              ],
+              "auraBypass": {
+                "allowed": true,
+                "resourceId": "",
+                "cost": 1
+              },
+              "equipped": false
             }
           ],
           "skills": [
@@ -5318,7 +5414,7 @@
         "totalCopper": 0,
         "copper": 0
       },
-      "revision": 1790197347790,
+      "revision": 1790629200000,
       "carryValue": "Siehe Einzelgewichte",
       "showInfoTable": false,
       "level": "Stufe 7",
@@ -5681,6 +5777,62 @@
           "name": "Freki",
           "creatureId": "companion-ylva-freki",
           "id": "ylva-freki"
+        },
+        {
+          "id": "equipment-weapon-ylva-saex",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:waffen-rustungen:saex",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO",
+          "ownerCharacterName": "Ylva Wolfshorn",
+          "acquiredAt": "2026-09-28T21:00:00.000Z",
+          "individualizedAt": "",
+          "category": "weapon",
+          "icon": "",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/ylva-saex-v2.png",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Wolfshorn-Saex",
+          "type": "Saex · einschneidiges Langmesser",
+          "description": "Ylvas einschneidiges Langmesser mit dunklem, geschnitztem Holzgriff, goldenen Ranken entlang des Klingenrückens und einem kleinen Wolfsmotiv am Griffabschluss.",
+          "weight": "0,8 kg",
+          "quantity": "1",
+          "tags": "Einhändig",
+          "equipped": false,
+          "combatDefinition": {
+            "kind": "weapon",
+            "triggerRules": [],
+            "weaponType": "dagger",
+            "training": "simple",
+            "damageFormula": "1d8",
+            "versatileDamageFormula": "",
+            "damageType": "Hieb",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "range": "Nahkampf · 1,5 m",
+            "properties": "Einhändig",
+            "notes": "Nordisches einschneidiges Langmesser. 1W8 Grundschaden, einhändig geführt.",
+            "requirements": "",
+            "aiInstructions": ""
+          },
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "weapon",
+            "combatEntryId": "ylva-saex"
+          },
+          "infoRows": [],
+          "attributes": [],
+          "instanceId": "equipment-weapon-ylva-saex",
+          "templateId": "standard:waffen-rustungen:saex",
+          "templateName": "Saex",
+          "registerCategory": "waffen",
+          "valuation": {
+            "minCopper": 400,
+            "maxCopper": 400
+          }
         }
       ],
       "portraitFormat": "portrait",
@@ -6647,7 +6799,7 @@
           "active": true
         }
       ],
-      "revision": 1790054758405,
+      "revision": 1790629200000,
       "weapons": [
         {
           "damageFormula": "1d8",
@@ -6849,6 +7001,46 @@
           "damageFormula": "1d4",
           "properties": "Schlicht · simpel · immer verfügbar",
           "effects": []
+        },
+        {
+          "id": "ylva-saex",
+          "inventoryItemId": "equipment-weapon-ylva-saex",
+          "name": "Wolfshorn-Saex",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/ylva-saex-v2.png",
+          "weaponProfileId": "",
+          "triggerRules": [],
+          "weaponType": "dagger",
+          "training": "simple",
+          "damageFormula": "1d8",
+          "versatileDamageFormula": "",
+          "damageType": "Hieb",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf · 1,5 m",
+          "properties": "Einhändig",
+          "notes": "Nordisches einschneidiges Langmesser. 1W8 Grundschaden, einhändig geführt.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
         }
       ],
       "skills": [

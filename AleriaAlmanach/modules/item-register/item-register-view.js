@@ -1,6 +1,6 @@
-import { REGISTER_CATEGORIES, REGISTER_SECTIONS, categoryLabel, canManageCharacter } from './item-register-model.js?v=20260928-equipment-art-v2';
+import { REGISTER_CATEGORIES, REGISTER_SECTIONS, categoryLabel, canManageCharacter } from './item-register-model.js?v=20260928-equipment-art-v3';
 import { formatCopper, formatPrice, moneyTotal } from './item-register-money.js?v=20260919-shop-v1';
-import { resalePrice } from './item-register-trade.js?v=20260928-equipment-art-v2';
+import { resalePrice } from './item-register-trade.js?v=20260928-equipment-art-v3';
 import { registerLists } from './item-register-providers.js?v=20260919-provider-crests-v2';
 import { describeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
 

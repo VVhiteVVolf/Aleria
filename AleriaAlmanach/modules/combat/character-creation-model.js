@@ -3,14 +3,14 @@ import {
   getMaximumHitPoints,
   upgradeCharacterHitPoints,
   sanitizeCharacterCombatProfile
-} from './combat-profile-model.js?v=20260928-equipment-art-v2';
+} from './combat-profile-model.js?v=20260928-equipment-art-v3';
 import {
   CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION,
   getCharacterCreationTemplate
 } from './character-creation-templates.js?v=20260909-dragon-parent-v2';
 import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260909-dragon-parent-v2';
 import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260909-dragon-parent-v2';
-import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260928-equipment-art-v2';
+import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260928-equipment-art-v3';
 import { getCenyrClassDefinition } from '../classes/cenyr/cenyr-class-registry.js?v=20260909-dragon-parent-v2';
 import { selectCenyrTrainingOption } from '../classes/cenyr/cenyr-class-training.js?v=20260909-dragon-parent-v2';
 

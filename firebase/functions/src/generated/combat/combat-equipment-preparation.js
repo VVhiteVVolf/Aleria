@@ -1,4 +1,4 @@
-import { applyCombatResourceCosts } from './combat-state-model.js?v=20260928-equipment-art-v2';
+import { applyCombatResourceCosts } from './combat-state-model.js?v=20260928-equipment-art-v3';
 import { getCombatWeaponLoadout, normalizeCombatLoadout, validateCombatLoadout, usesCharacterWeaponLoadout } from './combat-weapon-loadout.js';
 import { withEquippedCombatWeapon } from './combat-equipment-state.js';
 import { getCombatMounts, getCombatSupportEquipment, canCarryCombatShield, withCombatSupportEquipment } from './combat-support-equipment.js';
