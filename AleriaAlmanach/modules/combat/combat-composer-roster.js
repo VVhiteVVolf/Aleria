@@ -1,4 +1,4 @@
-import { collectCombatTriggerRules } from './combat-trigger-rules.js?v=20260928-equipment-art-v1';
+import { collectCombatTriggerRules } from './combat-trigger-rules.js?v=20260928-equipment-art-v2';
 
 // Keep every character selectable without resolving every archived character's
 // combat sheet and twenty attack trials on each editor change.

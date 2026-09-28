@@ -1,5 +1,5 @@
-import { CHARACTER_ARCHIVE_KINDS } from './character-archive-model.js?v=20260928-equipment-art-v1';
-import { matchesCharacterArchiveKind } from './character-archive-attack-groups.js?v=20260928-equipment-art-v1';
+import { CHARACTER_ARCHIVE_KINDS } from './character-archive-model.js?v=20260928-equipment-art-v2';
+import { matchesCharacterArchiveKind } from './character-archive-attack-groups.js?v=20260928-equipment-art-v2';
 
 const navigationGroups = [
   { label: 'Figur & Herkunft', kinds: ['ancestry', 'background', 'origin', 'class', 'trait'] },

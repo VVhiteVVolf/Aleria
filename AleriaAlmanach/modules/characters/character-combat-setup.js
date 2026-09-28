@@ -14,14 +14,14 @@ import {
   rollAttributeSet,
   setCreationAttributeMethod,
   validateCharacterCreationDraft
-} from '../combat/character-creation-model.js?v=20260928-equipment-art-v1';
+} from '../combat/character-creation-model.js?v=20260928-equipment-art-v2';
 import {
   CHARACTER_ANCESTRY_TEMPLATES,
   CHARACTER_BACKGROUND_TEMPLATES,
   getCharacterCreationTemplate,
   getGroupedCharacterClassTemplates
 } from '../combat/character-creation-templates.js?v=20260909-dragon-parent-v2';
-import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v2';
 
 let activeSetup = null;
 

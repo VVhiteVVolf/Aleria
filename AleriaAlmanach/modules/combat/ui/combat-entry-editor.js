@@ -1,4 +1,4 @@
-import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS, normalizeCombatSpell } from '../combat-profile-model.js?v=20260928-equipment-art-v1';
+import { COMBAT_ATTRIBUTE_DEFINITIONS, COMBAT_WEAPON_TYPE_OPTIONS, normalizeCombatSpell } from '../combat-profile-model.js?v=20260928-equipment-art-v2';
 import { getSpellManaCost } from '../combat-resource-progression.js';
 import { detachCatalogSpell, getSpellCatalogPageHref } from '../../spell-catalog/spell-catalog.js';
 import { COMBAT_ACTIVATION_TYPES } from '../combat-action-economy.js?v=20260905-resource-balance-v2';

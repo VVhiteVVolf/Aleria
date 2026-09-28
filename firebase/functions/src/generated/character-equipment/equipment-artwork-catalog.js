@@ -20,7 +20,7 @@ export const EQUIPMENT_ARTWORK = [
   },
   {
     "key": "gawain-silberschuppe",
-    "image": "/AleriaAlmanach/public/assets/character-equipment/gawain-silberschuppe-v1.png",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/gawain-silberschuppe-v4.png",
     "bindings": [
       {
         "characterId": "q1QtSIug74FzzwUAqWrs",
@@ -33,7 +33,8 @@ export const EQUIPMENT_ARTWORK = [
       }
     ],
     "legacyImages": [
-      "https://i.imgur.com/7siJPXG.png"
+      "https://i.imgur.com/7siJPXG.png",
+      "/AleriaAlmanach/public/assets/character-equipment/gawain-silberschuppe-v1.png"
     ]
   },
   {
@@ -101,7 +102,7 @@ export const EQUIPMENT_ARTWORK = [
   },
   {
     "key": "gildas-gafyr-plattenruestung",
-    "image": "/AleriaAlmanach/public/assets/character-equipment/gildas-gafyr-plattenruestung-v1.png",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/gildas-gafyr-plattenruestung-v3.png",
     "bindings": [
       {
         "characterId": "gildas-gafyr",
@@ -123,7 +124,8 @@ export const EQUIPMENT_ARTWORK = [
       }
     ],
     "legacyImages": [
-      "https://i.imgur.com/7siJPXG.png"
+      "https://i.imgur.com/7siJPXG.png",
+      "/AleriaAlmanach/public/assets/character-equipment/gildas-gafyr-plattenruestung-v1.png"
     ]
   },
   {
@@ -194,7 +196,7 @@ export const EQUIPMENT_ARTWORK = [
   },
   {
     "key": "guinevere-langbogen",
-    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-langbogen-v2.png",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-langbogen-v4.png",
     "bindings": [
       {
         "characterId": "person--haus-neidr--guinevere-neidr",
@@ -210,11 +212,13 @@ export const EQUIPMENT_ARTWORK = [
         ]
       }
     ],
-    "legacyImages": []
+    "legacyImages": [
+      "/AleriaAlmanach/public/assets/character-equipment/guinevere-langbogen-v2.png"
+    ]
   },
   {
     "key": "guinevere-kurzbogen",
-    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-kurzbogen-v1.png",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-kurzbogen-v3.png",
     "bindings": [
       {
         "characterId": "person--haus-neidr--guinevere-neidr",
@@ -228,7 +232,9 @@ export const EQUIPMENT_ARTWORK = [
         ]
       }
     ],
-    "legacyImages": []
+    "legacyImages": [
+      "/AleriaAlmanach/public/assets/character-equipment/guinevere-kurzbogen-v1.png"
+    ]
   },
   {
     "key": "guinevere-schwert",
@@ -354,7 +360,7 @@ export const EQUIPMENT_ARTWORK = [
   },
   {
     "key": "ylva-dornwacht",
-    "image": "/AleriaAlmanach/public/assets/character-equipment/ylva-dornwacht-v1.png",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/ylva-dornwacht-v2.png",
     "bindings": [
       {
         "characterId": "bSYZYAEOwiRgy44f6OmO",
@@ -366,7 +372,9 @@ export const EQUIPMENT_ARTWORK = [
         ]
       }
     ],
-    "legacyImages": []
+    "legacyImages": [
+      "/AleriaAlmanach/public/assets/character-equipment/ylva-dornwacht-v1.png"
+    ]
   },
   {
     "key": "ylva-handaxt",
@@ -576,7 +584,7 @@ export const EQUIPMENT_ARTWORK = [
   },
   {
     "key": "gais-lanze",
-    "image": "/AleriaAlmanach/public/assets/character-equipment/gais-lanze-v2.png",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/gais-lanze-v4.png",
     "bindings": [
       {
         "characterId": "person--haus-wyrm--gais-wyrm",
@@ -588,7 +596,9 @@ export const EQUIPMENT_ARTWORK = [
         ]
       }
     ],
-    "legacyImages": []
+    "legacyImages": [
+      "/AleriaAlmanach/public/assets/character-equipment/gais-lanze-v2.png"
+    ]
   },
   {
     "key": "gais-langschwert",
@@ -640,7 +650,7 @@ export const EQUIPMENT_ARTWORK = [
   },
   {
     "key": "nudd-plattenruestung",
-    "image": "/AleriaAlmanach/public/assets/character-equipment/nudd-plattenruestung-v3.png",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/nudd-plattenruestung-v5.png",
     "bindings": [
       {
         "characterId": "person--haus-saethwyr--nudd-saethwyr",
@@ -652,11 +662,13 @@ export const EQUIPMENT_ARTWORK = [
         ]
       }
     ],
-    "legacyImages": []
+    "legacyImages": [
+      "/AleriaAlmanach/public/assets/character-equipment/nudd-plattenruestung-v3.png"
+    ]
   },
   {
     "key": "rhiannon-amethyst-zauberstab",
-    "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v2.png",
     "bindings": [
       {
         "characterId": "y7MBxDiAaesbWHBtmw5Q",
@@ -666,11 +678,13 @@ export const EQUIPMENT_ARTWORK = [
         "combatEntryIds": []
       }
     ],
-    "legacyImages": []
+    "legacyImages": [
+      "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png"
+    ]
   },
   {
     "key": "rhiannon-dolch",
-    "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-dolch-v1.png",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-dolch-v2.png",
     "bindings": [
       {
         "characterId": "y7MBxDiAaesbWHBtmw5Q",
@@ -680,7 +694,9 @@ export const EQUIPMENT_ARTWORK = [
         "combatEntryIds": []
       }
     ],
-    "legacyImages": []
+    "legacyImages": [
+      "/AleriaAlmanach/public/assets/character-equipment/rhiannon-dolch-v1.png"
+    ]
   },
   {
     "key": "rhiannon-amulett",

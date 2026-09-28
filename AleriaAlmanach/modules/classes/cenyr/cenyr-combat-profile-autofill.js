@@ -1,6 +1,6 @@
 import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
 import { reconcileCultureFormArsenal } from '../class-form-arsenal.js';
-import { reconcileCenyrTrainingForLevel } from './cenyr-technique-selection.js?v=20260928-equipment-art-v1';
+import { reconcileCenyrTrainingForLevel } from './cenyr-technique-selection.js?v=20260928-equipment-art-v2';
 import { migrateDrachentanzTechniqueResources } from '../../combat-styles/drachentanz/drachentanz-training-migration.js?v=20260909-dragon-parent-v2';
 
 const autofillCache = new WeakMap();

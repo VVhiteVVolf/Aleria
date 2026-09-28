@@ -39,7 +39,7 @@
     {
       "key": "gawain-silberschuppe",
       "owner": "Gawain Draig",
-      "file": "gawain-silberschuppe-v1.png",
+      "file": "gawain-silberschuppe-v4.png",
       "bindings": [
         {
           "characterId": "q1QtSIug74FzzwUAqWrs",
@@ -52,7 +52,8 @@
         }
       ],
       "legacyImages": [
-        "https://i.imgur.com/7siJPXG.png"
+        "https://i.imgur.com/7siJPXG.png",
+        "/AleriaAlmanach/public/assets/character-equipment/gawain-silberschuppe-v1.png"
       ],
       "prompt": "Use case: stylized-concept. Asset type: Aleria fantasy inventory item illustration. Create ONE 1:1 square PNG with a genuinely TRANSPARENT alpha background. Reference 1 defines the existing item-art style: hand-painted simplified fantasy illustration, clean dark contours, warm muted colors, subtle brush texture, readable silhouette, soft illustrated highlights. Not photorealistic, not a 3D render. Other references define the owner's colors, heraldry and clothing construction only. No person, skin, face, hands, mannequin or scenery. No frame, letters, watermark, checkerboard, background or cast shadow. Entire object centered, completely inside frame with 8% transparent margin, large and readable at small inventory-card size. For armor: present ONE empty wearable outfit with sleeves naturally at its sides, visible hollow neck, slight three-quarter front view, never a human. For weapons: a single complete weapon diagonally from lower-left handle to upper-right tip unless a pair is specified. Do not add weapons to armor or armor to weapons. Subject: Silberschuppe, complete Draig junior knight plate armor. Follow the portrait and house warrior: charcoal-silver plates, red piping on rounded layered pauldrons, red scarf and short red cape, dark dragon heraldry on breast/tabard, overlapping scale skirt, articulated gauntlets and greaves. Closed helmet with restrained pointed dragon-ridge crest. Empty armor only.",
       "referenceImages": [
@@ -61,7 +62,17 @@
         "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/draig-ritter.png"
       ],
       "title": "Silberschuppe · Draig-Jungritter-Plattenrüstung",
-      "status": "validated"
+      "status": "validated",
+      "revision": {
+        "date": "2026-09-28",
+        "purpose": "User-requested visual correction",
+        "previousFile": "gawain-silberschuppe-v1.png",
+        "prompt": "Use case: stylized-concept. Produce a NEW corrected Aleria inventory illustration based on the references. Square 1:1 composition, real transparent PNG alpha background. Preserve the established hand-painted fantasy item style with clear dark contours, restrained colors, illustrated highlights and readable silhouette, not photorealistic or 3D. One complete isolated item, no person or mannequin, no lettering or frame, no background or cast shadow. Leave transparent margin around all edges. Subject: Replace the FULL SUIT in the reference with ONLY Gawain Draig's Silberschuppe TORSO CUIRASS / HARNISCH. One empty sleeveless steel breastplate and attached backplate ending at the waist, slight three-quarter front view, obvious hollow neck and open armholes. Dark silver-steel, restrained red edge trim, the same bold black heraldic dragon centered on the chest, subtle overlapping small scale-shaped plates only at the short waist rim, leather side straps. ONLY CHEST ARMOR. NO helmet, no head, no pauldrons, no arms, no gloves, no scarf, no cape, no long skirt, no legs, no boots. The standalone cuirass occupies about 75% of square with transparent margin; whole object visible. Preserve illustrated style and Draig identity.",
+        "referenceImages": [
+          "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/gawain-silberschuppe-v1.png"
+        ],
+        "backgroundPrompt": "Make the background transparent. Keep only the illustrated item. Return a transparent PNG, square aspect ratio."
+      }
     },
     {
       "key": "draig-dolch",
@@ -147,7 +158,7 @@
     {
       "key": "gildas-gafyr-plattenruestung",
       "owner": "Gildas Gafyr",
-      "file": "gildas-gafyr-plattenruestung-v1.png",
+      "file": "gildas-gafyr-plattenruestung-v3.png",
       "bindings": [
         {
           "characterId": "gildas-gafyr",
@@ -169,7 +180,8 @@
         }
       ],
       "legacyImages": [
-        "https://i.imgur.com/7siJPXG.png"
+        "https://i.imgur.com/7siJPXG.png",
+        "/AleriaAlmanach/public/assets/character-equipment/gildas-gafyr-plattenruestung-v1.png"
       ],
       "prompt": "Use case: stylized-concept. Asset type: Aleria fantasy inventory item illustration. Create ONE 1:1 square PNG with a genuinely TRANSPARENT alpha background. Reference 1 defines the existing item-art style: hand-painted simplified fantasy illustration, clean dark contours, warm muted colors, subtle brush texture, readable silhouette, soft illustrated highlights. Not photorealistic, not a 3D render. Other references define the owner's colors, heraldry and clothing construction only. No person, skin, face, hands, mannequin or scenery. No frame, letters, watermark, checkerboard, background or cast shadow. Entire object centered, completely inside frame with 8% transparent margin, large and readable at small inventory-card size. For armor: present ONE empty wearable outfit with sleeves naturally at its sides, visible hollow neck, slight three-quarter front view, never a human. For weapons: a single complete weapon diagonally from lower-left handle to upper-right tip unless a pair is specified. Do not add weapons to armor or armor to weapons. Subject: Complete Gafyr plate armor: very dark charcoal steel with restrained antique gold edges, rounded pauldrons from portrait, articulated plates, leather belt, muted gold short tabard with black ram heraldry, closed narrow-slitted helmet with compact curled ram horns echoing house warrior. Empty complete wearable armor, no sword.",
       "referenceImages": [
@@ -178,7 +190,17 @@
         "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gafyr/assets/ritter.png"
       ],
       "title": "Gafyr-Plattenrüstung",
-      "status": "validated"
+      "status": "validated",
+      "revision": {
+        "date": "2026-09-28",
+        "purpose": "User-requested visual correction",
+        "previousFile": "gildas-gafyr-plattenruestung-v1.png",
+        "prompt": "Use case: stylized-concept. Produce a NEW corrected Aleria inventory illustration based on the references. Square 1:1 composition, real transparent PNG alpha background. Preserve the established hand-painted fantasy item style with clear dark contours, restrained colors, illustrated highlights and readable silhouette, not photorealistic or 3D. One complete isolated item, no person or mannequin, no lettering or frame, no background or cast shadow. Leave transparent margin around all edges. Subject: Replace the FULL SUIT in the reference with ONLY Gildas Gafyr's TORSO CUIRASS / HARNISCH. One empty sleeveless breastplate and attached backplate ending at the waist, slight three-quarter front view, hollow neck and open armholes. Charcoal-black steel with the same strong antique-gold edging and elegant angular central gold reinforcement; small restrained ram-head emblem worked into the breastplate, short articulated waist rim, brown leather side straps. ONLY CHEST ARMOR. NO helmet, no head, no horns projecting from neck, no pauldrons, no arms, no gloves, no cloth tabard, no leg plates, no legs, no boots. Standalone cuirass fills roughly 75% of square. Preserve the Gafyr black/gold identity and hand-painted illustrated style.",
+        "referenceImages": [
+          "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/gildas-gafyr-plattenruestung-v1.png"
+        ],
+        "backgroundPrompt": "Make the background transparent. Keep only the illustrated item. Return a transparent PNG, square aspect ratio."
+      }
     },
     {
       "key": "freya-laute",
@@ -285,7 +307,7 @@
     {
       "key": "guinevere-langbogen",
       "owner": "Guinevere Neidr",
-      "file": "guinevere-langbogen-v2.png",
+      "file": "guinevere-langbogen-v4.png",
       "bindings": [
         {
           "characterId": "person--haus-neidr--guinevere-neidr",
@@ -301,7 +323,9 @@
           ]
         }
       ],
-      "legacyImages": [],
+      "legacyImages": [
+        "/AleriaAlmanach/public/assets/character-equipment/guinevere-langbogen-v2.png"
+      ],
       "prompt": "Use case: stylized-concept. Asset type: Aleria fantasy inventory item illustration. Create ONE 1:1 square PNG with a genuinely TRANSPARENT alpha background. Reference 1 defines the existing item-art style: hand-painted simplified fantasy illustration, clean dark contours, warm muted colors, subtle brush texture, readable silhouette, soft illustrated highlights. Not photorealistic, not a 3D render. Other references define the owner's colors, heraldry and clothing construction only. No person, skin, face, hands, mannequin or scenery. No frame, letters, watermark, checkerboard, background or cast shadow. Entire object centered, completely inside frame with 8% transparent margin, large and readable at small inventory-card size. For armor: present ONE empty wearable outfit with sleeves naturally at its sides, visible hollow neck, slight three-quarter front view, never a human. For weapons: a single complete weapon diagonally from lower-left handle to upper-right tip unless a pair is specified. Do not add weapons to armor or armor to weapons. Subject: Guinevere's Helwyr longbow: tall slender dark yew bow, elegant long limbs, tan taut string, brown wrapped grip with small gold intertwined serpent accent matching her portrait, practical and nonmagical. Only bow, no arrow or quiver.",
       "referenceImages": [
         "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/ChatGPT_Image_1._Juni_2025__01_04_48-removebg-preview.png",
@@ -310,14 +334,27 @@
       "title": "Helwyr Langbogen",
       "status": "validated",
       "revision": {
-        "purpose": "bowstring correction",
-        "prompt": "Edit only the bowstring in this inventory longbow illustration. The existing string hangs loose at the lower end. Remove that incorrect string completely and replace it with ONE straight taut thin tan string connecting the actual upper-right wooden bow tip to the actual lower-left wooden bow tip, securely looped into both nocks. Both ends of the string MUST physically touch the two wooden tips. No loose ends or extra strings. Keep the wooden bow, serpent ornament, hand-painted item style, colors, framing and square size unchanged. Preserve a genuinely transparent alpha background. Do not add arrows, text, hands or any other objects."
-      }
+        "date": "2026-09-28",
+        "purpose": "User-requested visual correction",
+        "previousFile": "guinevere-langbogen-v2.png",
+        "prompt": "Use case: stylized-concept. Produce a NEW corrected Aleria inventory illustration based on the references. Square 1:1 composition, real transparent PNG alpha background. Preserve the established hand-painted fantasy item style with clear dark contours, restrained colors, illustrated highlights and readable silhouette, not photorealistic or 3D. One complete isolated item, no person or mannequin, no lettering or frame, no background or cast shadow. Leave transparent margin around all edges. Subject: Redesign Guinevere's dark walnut longbow with subtle gold serpent ornament at the grip. CRITICAL bow geometry: draw it upright in a clean SIDE ELEVATION, like a clear capital D. The bowed wooden stave curves far to the LEFT; the central grip is at x=32%, y=50%. The upper limb tip/string nock is at x=66%, y=9%; the lower tip/nock at x=66%, y=91%. EXACTLY ONE taut perfectly STRAIGHT VERTICAL tan bowstring runs at x=66%, from the actual upper tip/nock all the way to the actual lower tip/nock. This creates a large empty transparent D-shaped space between wood and string. The string must NOT follow the wood, bend, split, touch the grip, hang loose or end in midair. Both attachment points must be clearly visible. No arrow. Slender long limbs; dark leather grip with small gold serpent emblem.",
+        "referenceImages": [
+          "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/guinevere-langbogen-v2.png"
+        ],
+        "backgroundPrompt": "Make the background transparent. Keep only the illustrated item. Return a transparent PNG, square aspect ratio."
+      },
+      "revisionHistory": [
+        {
+          "file": "guinevere-langbogen-v2.png",
+          "purpose": "bowstring correction",
+          "prompt": "Edit only the bowstring in this inventory longbow illustration. The existing string hangs loose at the lower end. Remove that incorrect string completely and replace it with ONE straight taut thin tan string connecting the actual upper-right wooden bow tip to the actual lower-left wooden bow tip, securely looped into both nocks. Both ends of the string MUST physically touch the two wooden tips. No loose ends or extra strings. Keep the wooden bow, serpent ornament, hand-painted item style, colors, framing and square size unchanged. Preserve a genuinely transparent alpha background. Do not add arrows, text, hands or any other objects."
+        }
+      ]
     },
     {
       "key": "guinevere-kurzbogen",
       "owner": "Guinevere Neidr",
-      "file": "guinevere-kurzbogen-v1.png",
+      "file": "guinevere-kurzbogen-v3.png",
       "bindings": [
         {
           "characterId": "person--haus-neidr--guinevere-neidr",
@@ -331,14 +368,26 @@
           ]
         }
       ],
-      "legacyImages": [],
+      "legacyImages": [
+        "/AleriaAlmanach/public/assets/character-equipment/guinevere-kurzbogen-v1.png"
+      ],
       "prompt": "Use case: stylized-concept. Asset type: Aleria fantasy inventory item illustration. Create ONE 1:1 square PNG with a genuinely TRANSPARENT alpha background. Reference 1 defines the existing item-art style: hand-painted simplified fantasy illustration, clean dark contours, warm muted colors, subtle brush texture, readable silhouette, soft illustrated highlights. Not photorealistic, not a 3D render. Other references define the owner's colors, heraldry and clothing construction only. No person, skin, face, hands, mannequin or scenery. No frame, letters, watermark, checkerboard, background or cast shadow. Entire object centered, completely inside frame with 8% transparent margin, large and readable at small inventory-card size. For armor: present ONE empty wearable outfit with sleeves naturally at its sides, visible hollow neck, slight three-quarter front view, never a human. For weapons: a single complete weapon diagonally from lower-left handle to upper-right tip unless a pair is specified. Do not add weapons to armor or armor to weapons. Subject: Guinevere's Helwyr SHORT bow: distinctly compact recurved dark yew limbs, tan taut string, dark leather grip and small aged-gold serpent ornament. Lighter compact silhouette than a longbow, only bow.",
       "referenceImages": [
         "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/ChatGPT_Image_1._Juni_2025__01_04_48-removebg-preview.png",
         "E:\\Aleria\\.tmp\\equipment-art\\guinevere.jpg"
       ],
       "title": "Helwyr Kurzbogen",
-      "status": "validated"
+      "status": "validated",
+      "revision": {
+        "date": "2026-09-28",
+        "purpose": "User-requested visual correction",
+        "previousFile": "guinevere-kurzbogen-v1.png",
+        "prompt": "Use case: stylized-concept. Produce a NEW corrected Aleria inventory illustration based on the references. Square 1:1 composition, real transparent PNG alpha background. Preserve the established hand-painted fantasy item style with clear dark contours, restrained colors, illustrated highlights and readable silhouette, not photorealistic or 3D. One complete isolated item, no person or mannequin, no lettering or frame, no background or cast shadow. Leave transparent margin around all edges. Subject: Redesign Guinevere's compact hunting shortbow, dark walnut, restrained antique-gold serpent fittings, brown leather center grip. Clean UPRIGHT SIDE ELEVATION of a simple strongly arched D-shaped shortbow. The bowed stave is on the LEFT and its grip is at x=30%, y=50%. The two actual outermost limb tips are vertically aligned on the RIGHT at x=65%, y=17% and x=65%, y=83%. EXACTLY ONE perfectly STRAIGHT VERTICAL taut tan bowstring joins the actual uppermost tip nock to the actual lowermost tip nock, along x=65%. Visible tiny loops seated in nocks at both ends. Large transparent gap between string and central grip. String must attach at BOTH ACTUAL EXTREME TIPS, not an inner collar or somewhere along the wood. No second string, no dangling ends, no arrow. Compact broader limbs distinguish it from a longbow.",
+        "referenceImages": [
+          "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/guinevere-kurzbogen-v1.png"
+        ],
+        "backgroundPrompt": "Make the background transparent. Keep only the illustrated item. Return a transparent PNG, square aspect ratio."
+      }
     },
     {
       "key": "guinevere-schwert",
@@ -530,7 +579,7 @@
     {
       "key": "ylva-dornwacht",
       "owner": "Ylva Wolfshorn",
-      "file": "ylva-dornwacht-v1.png",
+      "file": "ylva-dornwacht-v2.png",
       "bindings": [
         {
           "characterId": "bSYZYAEOwiRgy44f6OmO",
@@ -542,7 +591,9 @@
           ]
         }
       ],
-      "legacyImages": [],
+      "legacyImages": [
+        "/AleriaAlmanach/public/assets/character-equipment/ylva-dornwacht-v1.png"
+      ],
       "prompt": "Use case: stylized-concept. Asset type: Aleria fantasy inventory item illustration. Create ONE 1:1 square PNG with a genuinely TRANSPARENT alpha background. Reference 1 defines the existing item-art style: hand-painted simplified fantasy illustration, clean dark contours, warm muted colors, subtle brush texture, readable silhouette, soft illustrated highlights. Not photorealistic, not a 3D render. Other references define the owner's colors, heraldry and clothing construction only. No person, skin, face, hands, mannequin or scenery. No frame, letters, watermark, checkerboard, background or cast shadow. Entire object centered, completely inside frame with 8% transparent margin, large and readable at small inventory-card size. For armor: present ONE empty wearable outfit with sleeves naturally at its sides, visible hollow neck, slight three-quarter front view, never a human. For weapons: a single complete weapon diagonally from lower-left handle to upper-right tip unless a pair is specified. Do not add weapons to armor or armor to weapons. Subject: Dornwacht, Wolfshorn hunting spear: long straight ash shaft, broad leaf-shaped iron spearhead, dark leather binding immediately below head, modest ferrule at butt. Robust balanced nonmagical border-hunter tool, whole spear fits diagonally.",
       "referenceImages": [
         "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/ChatGPT_Image_1._Juni_2025__01_04_48-removebg-preview.png",
@@ -550,7 +601,17 @@
         "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Bleiddorn/assets/krieger-g850v6f.png"
       ],
       "title": "Dornwacht · Wolfshorn-Jagdspeer",
-      "status": "validated"
+      "status": "validated",
+      "revision": {
+        "date": "2026-09-28",
+        "purpose": "User-requested visual correction",
+        "previousFile": "ylva-dornwacht-v1.png",
+        "prompt": "Use case: stylized-concept. Produce a NEW corrected Aleria inventory illustration based on the references. Square 1:1 composition, real transparent PNG alpha background. Preserve the established hand-painted fantasy item style with clear dark contours, restrained colors, illustrated highlights and readable silhouette, not photorealistic or 3D. One complete isolated item, no person or mannequin, no lettering or frame, no background or cast shadow. Leave transparent margin around all edges. Subject: Completely redesign Ylva Wolfshorn's Dornwacht as a remarkably elegant and impressive noble huntress's SPEAR. Long slim tapered ashwood shaft, beautifully balanced and graceful. Refined elongated leaf-shaped silver-steel spearhead with narrow central ridge, fine flowing thorn-and-vine engravings inlaid along its base; artistic swept taper with a sharply pointed tip. Sculpted small silver wolf-head socket whose ears blend into the blade shoulders, dark forest-green leather grip, discreet silver vine inlays running along portions of the wood, elegant faceted silver butt cap. Silhouette should feel expensive, master-crafted and formidable, never a plain peasant spear, thick stick, axe or oversized fantasy slab. Diagonal lower-left butt to upper-right head, full weapon in frame. No hanging ribbons or effects.",
+        "referenceImages": [
+          "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/ylva-dornwacht-v1.png",
+          "E:/Aleria/.tmp/equipment-art/ylva.png"
+        ]
+      }
     },
     {
       "key": "ylva-handaxt",
@@ -876,7 +937,7 @@
     {
       "key": "gais-lanze",
       "owner": "Gais Wyrm",
-      "file": "gais-lanze-v2.png",
+      "file": "gais-lanze-v4.png",
       "bindings": [
         {
           "characterId": "person--haus-wyrm--gais-wyrm",
@@ -888,7 +949,9 @@
           ]
         }
       ],
-      "legacyImages": [],
+      "legacyImages": [
+        "/AleriaAlmanach/public/assets/character-equipment/gais-lanze-v2.png"
+      ],
       "prompt": "Use case: stylized-concept. Asset type: Aleria fantasy inventory item illustration. Create ONE 1:1 square PNG with a genuinely TRANSPARENT alpha background. Reference 1 defines the existing item-art style: hand-painted simplified fantasy illustration, clean dark contours, warm muted colors, subtle brush texture, readable silhouette, soft illustrated highlights. Not photorealistic, not a 3D render. Other references define the owner's colors, heraldry and clothing construction only. No person, skin, face, hands, mannequin or scenery. No frame, letters, watermark, checkerboard, background or cast shadow. Entire object centered, completely inside frame with 8% transparent margin, large and readable at small inventory-card size. For armor: present ONE empty wearable outfit with sleeves naturally at its sides, visible hollow neck, slight three-quarter front view, never a human. For weapons: a single complete weapon diagonally from lower-left handle to upper-right tip unless a pair is specified. Do not add weapons to armor or armor to weapons. Subject: Gais Wyrm's mounted knight lance: long tapered wood shaft painted dark ochre and charcoal, steel spear-point, modest flared hand guard and leather grip, restrained black dragon medallion near grip. Functional medieval cavalry lance, whole lance fits diagonally, no flag or rider.",
       "referenceImages": [
         "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/ChatGPT_Image_1._Juni_2025__01_04_48-removebg-preview.png",
@@ -898,9 +961,22 @@
       "title": "Lanze",
       "status": "validated",
       "revision": {
-        "purpose": "transparent background extraction",
-        "prompt": "Remove the entire background from this item image. Deliver the isolated item as a transparent PNG with a real alpha channel. Keep the item itself exactly unchanged. Square 1:1 image."
-      }
+        "date": "2026-09-28",
+        "purpose": "User-requested visual correction",
+        "previousFile": "gais-lanze-v2.png",
+        "prompt": "Use case: stylized-concept. Produce a NEW corrected Aleria inventory illustration based on the references. Square 1:1 composition, real transparent PNG alpha background. Preserve the established hand-painted fantasy item style with clear dark contours, restrained colors, illustrated highlights and readable silhouette, not photorealistic or 3D. One complete isolated item, no person or mannequin, no lettering or frame, no background or cast shadow. Leave transparent margin around all edges. Subject: Completely redesign Gais Wyrm's lance as an ornate KNIGHT'S WAR SPEAR. A long slender straight dark wooden shaft of nearly uniform diameter, elongated double-edged leaf-shaped silver-steel spearhead, intricate antique-gold dragon filigree at the socket, discreet small black dragon emblem, narrow golden ring bands and dark leather handgrip. Regal black, muted gold and steel palette. Elegant practical pointed foot-spear silhouette. REMOVE EVERY TOURNAMENT-LANCE FEATURE: no conical shaft, no striped spirals, no bell-shaped vamplate, no funnel-shaped handguard, no thick tapered cone. This must unmistakably look like a finely decorated spear, suitable for a mounted knight. Diagonal full weapon with margin.",
+        "referenceImages": [
+          "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/gais-lanze-v2.png"
+        ],
+        "backgroundPrompt": "Make the background transparent. Keep only the illustrated item. Return a transparent PNG, square aspect ratio."
+      },
+      "revisionHistory": [
+        {
+          "file": "gais-lanze-v2.png",
+          "purpose": "transparent background extraction",
+          "prompt": "Remove the entire background from this item image. Deliver the isolated item as a transparent PNG with a real alpha channel. Keep the item itself exactly unchanged. Square 1:1 image."
+        }
+      ]
     },
     {
       "key": "gais-langschwert",
@@ -992,7 +1068,7 @@
     {
       "key": "nudd-plattenruestung",
       "owner": "Nudd Saethwyr",
-      "file": "nudd-plattenruestung-v3.png",
+      "file": "nudd-plattenruestung-v5.png",
       "bindings": [
         {
           "characterId": "person--haus-saethwyr--nudd-saethwyr",
@@ -1004,7 +1080,9 @@
           ]
         }
       ],
-      "legacyImages": [],
+      "legacyImages": [
+        "/AleriaAlmanach/public/assets/character-equipment/nudd-plattenruestung-v3.png"
+      ],
       "prompt": "Use case: stylized-concept. Asset type: Aleria fantasy inventory item illustration. Create ONE 1:1 square PNG with a genuinely TRANSPARENT alpha background. Reference 1 defines the existing item-art style: hand-painted simplified fantasy illustration, clean dark contours, warm muted colors, subtle brush texture, readable silhouette, soft illustrated highlights. Not photorealistic, not a 3D render. Other references define the owner's colors, heraldry and clothing construction only. No person, skin, face, hands, mannequin or scenery. No frame, letters, watermark, checkerboard, background or cast shadow. Entire object centered, completely inside frame with 8% transparent margin, large and readable at small inventory-card size. For armor: present ONE empty wearable outfit with sleeves naturally at its sides, visible hollow neck, slight three-quarter front view, never a human. For weapons: a single complete weapon diagonally from lower-left handle to upper-right tip unless a pair is specified. Do not add weapons to armor or armor to weapons. Subject: Nudd Saethwyr's complete PLATE armor: light warm silver steel with gold edges following portrait, articulated rounded pauldrons, golden chest/tabard field bearing the black dragon-like heraldic beast from house warrior, ochre scale-shaped skirt panel, closed gold-edged slit helmet with short upward heraldic crests. Hollow wearable armor only, no spear or sword.",
       "referenceImages": [
         "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/ChatGPT_Image_1._Juni_2025__01_04_48-removebg-preview.png",
@@ -1014,15 +1092,28 @@
       "title": "Saethwyr Plattenrüstung",
       "status": "validated",
       "revision": {
-        "purpose": "transparent background extraction",
-        "prompt": "Make the background transparent. Keep only the illustrated item. Return a transparent PNG, square aspect ratio."
-      }
+        "date": "2026-09-28",
+        "purpose": "User-requested visual correction",
+        "previousFile": "nudd-plattenruestung-v3.png",
+        "prompt": "Use case: stylized-concept. Produce a NEW corrected Aleria inventory illustration based on the references. Square 1:1 composition, real transparent PNG alpha background. Preserve the established hand-painted fantasy item style with clear dark contours, restrained colors, illustrated highlights and readable silhouette, not photorealistic or 3D. One complete isolated item, no person or mannequin, no lettering or frame, no background or cast shadow. Leave transparent margin around all edges. Subject: Replace the FULL SUIT in the reference with ONLY Nudd Saethwyr's TORSO CUIRASS / HARNISCH. An empty sleeveless breastplate and attached backplate ending at the waist, slight three-quarter front view, obvious hollow neck and open armholes. Ivory-silver polished plates, rich gold edging, the same black heraldic lion on a golden round chest medallion, narrow gold waist plates and leather side straps. ONLY CHEST ARMOR. NO helmet, no head, no pauldrons, no arms, no gloves, no cloak, no long tabard, no thigh armor, no legs, no boots. Make the standalone cuirass fill about 75% of the square; fully visible with transparent margins. Maintain exact house palette and hand-painted style.",
+        "referenceImages": [
+          "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/nudd-plattenruestung-v3.png"
+        ],
+        "backgroundPrompt": "Make the background transparent. Keep only the illustrated item. Return a transparent PNG, square aspect ratio."
+      },
+      "revisionHistory": [
+        {
+          "file": "nudd-plattenruestung-v3.png",
+          "purpose": "transparent background extraction",
+          "prompt": "Make the background transparent. Keep only the illustrated item. Return a transparent PNG, square aspect ratio."
+        }
+      ]
     },
     {
       "key": "rhiannon-amethyst-zauberstab",
       "owner": "Rhiannon Draig",
       "title": "Amethyst-Zauberstab",
-      "file": "rhiannon-amethyst-zauberstab-v1.png",
+      "file": "rhiannon-amethyst-zauberstab-v2.png",
       "bindings": [
         {
           "characterId": "y7MBxDiAaesbWHBtmw5Q",
@@ -1032,19 +1123,31 @@
           "combatEntryIds": []
         }
       ],
-      "legacyImages": [],
+      "legacyImages": [
+        "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png"
+      ],
       "prompt": "Create one square 1:1 transparent PNG fantasy item illustration for Aleria. Use the first reference for the existing hand-painted simplified item style: bold dark contours, warm restrained colors, gentle brush shading, clear small-size silhouette, not realistic. The second reference is the owner's portrait and defines teal, brown and antique gold accents. Isolated object only, no person, no scenery, no text, no frame. Transparent background with a real alpha channel. Complete object, centered with generous clear margins. Subject: Rhiannon Draig's amethyst magic wand: a slender dark walnut wand with a small faceted violet amethyst point held in an understated antique-gold claw fitting, short deep-teal leather grip, thin golden collar. A hand-held mage's wand, not a walking staff. Diagonal, handle lower left, crystal tip upper right. No aura or smoke.",
       "referenceImages": [
         "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/ChatGPT_Image_1._Juni_2025__01_04_48-removebg-preview.png",
         "E:/Aleria/.tmp/equipment-art/rhiannon.png"
       ],
-      "status": "validated"
+      "status": "validated",
+      "revision": {
+        "date": "2026-09-28",
+        "purpose": "User-requested visual correction",
+        "previousFile": "rhiannon-amethyst-zauberstab-v1.png",
+        "prompt": "Use case: stylized-concept. Produce a NEW corrected Aleria inventory illustration based on the references. Square 1:1 composition, real transparent PNG alpha background. Preserve the established hand-painted fantasy item style with clear dark contours, restrained colors, illustrated highlights and readable silhouette, not photorealistic or 3D. One complete isolated item, no person or mannequin, no lettering or frame, no background or cast shadow. Leave transparent margin around all edges. Subject: Design a completely NEW unmistakeable AMETHYST WIZARD'S STAFF for Rhiannon Draig. Elegant slender carved dark wood, a naturally flowing asymmetric shaft that grows into an OPEN CIRCULAR CROWN of curling wooden dragon forms and delicate antique-gold filigree. A substantial softly luminous faceted purple amethyst is suspended INSIDE that open crown, held by three small curved golden talons. The head is a rounded magical focus, NOT a pointed spearhead and NOT a crystal stuck straight on a plain stick. Small deep-teal leather grip and restrained golden bands echo the portrait. Clear ornamental mage-staff silhouette, graceful tapering foot, a subtle contained violet light within the crystal only. No broad aura, smoke or scattered particles. Complete staff diagonally, head upper right, foot lower left, transparent margin.",
+        "referenceImages": [
+          "E:/Aleria/.tmp/equipment-art/rhiannon.png",
+          "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png"
+        ]
+      }
     },
     {
       "key": "rhiannon-dolch",
       "owner": "Rhiannon Draig",
       "title": "Dolch",
-      "file": "rhiannon-dolch-v1.png",
+      "file": "rhiannon-dolch-v2.png",
       "bindings": [
         {
           "characterId": "y7MBxDiAaesbWHBtmw5Q",
@@ -1054,13 +1157,26 @@
           "combatEntryIds": []
         }
       ],
-      "legacyImages": [],
+      "legacyImages": [
+        "/AleriaAlmanach/public/assets/character-equipment/rhiannon-dolch-v1.png"
+      ],
       "prompt": "Create one square 1:1 transparent PNG fantasy item illustration for Aleria. Use the first reference for the existing hand-painted simplified item style: bold dark contours, warm restrained colors, gentle brush shading, clear small-size silhouette, not realistic. The second reference is the owner's portrait and defines teal, brown and antique gold accents. Isolated object only, no person, no scenery, no text, no frame. Transparent background with a real alpha channel. Complete object, centered with generous clear margins. Subject: Rhiannon Draig's practical dagger: short pointed double-edged steel blade, small antique-gold crossguard, deep-teal leather grip, modest brass pommel. Elegant but simple, a secondary weapon for a young mage. Diagonal, handle lower left, point upper right.",
       "referenceImages": [
         "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/ChatGPT_Image_1._Juni_2025__01_04_48-removebg-preview.png",
         "E:/Aleria/.tmp/equipment-art/rhiannon.png"
       ],
-      "status": "validated"
+      "status": "validated",
+      "revision": {
+        "date": "2026-09-28",
+        "purpose": "User-requested visual correction",
+        "previousFile": "rhiannon-dolch-v1.png",
+        "prompt": "Use case: stylized-concept. Produce a NEW corrected Aleria inventory illustration based on the references. Square 1:1 composition, real transparent PNG alpha background. Preserve the established hand-painted fantasy item style with clear dark contours, restrained colors, illustrated highlights and readable silhouette, not photorealistic or 3D. One complete isolated item, no person or mannequin, no lettering or frame, no background or cast shadow. Leave transparent margin around all edges. Subject: Completely redesign Rhiannon Draig's dagger as an exquisite elegant noblewoman mage's dagger with clear DRAIG DRAGON HERALDRY. A slender graceful polished silver-steel double-edged leaf blade, fine gold engraved dragon-scale tracery close to the spine and base. Small sweeping antique-gold crossguard shaped like two delicate dragon wings, deep-teal leather handle wrapped with a narrow gold spiral, sculpted dragon-head pommel and a tiny deep-red inset gemstone. Restrained refined craftsmanship, the dragon motif is unmistakable but not bulky. This is a short elegant dagger with a delicate blade, not a broad short sword. Preserve the illustrated Aleria item style. Complete weapon diagonally, point upper-right, grip lower-left.",
+        "referenceImages": [
+          "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/rhiannon-dolch-v1.png",
+          "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/gawain-silberschuppe-v1.png",
+          "E:/Aleria/.tmp/equipment-art/rhiannon.png"
+        ]
+      }
     },
     {
       "key": "rhiannon-amulett",

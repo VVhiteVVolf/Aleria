@@ -1,4 +1,4 @@
-import { normalizeOffer } from './item-register-model.js?v=20260928-equipment-art-v1';
+import { normalizeOffer } from './item-register-model.js?v=20260928-equipment-art-v2';
 import { parsePrice } from './item-register-money.js?v=20260919-shop-v1';
 
 function legacyId(key) {

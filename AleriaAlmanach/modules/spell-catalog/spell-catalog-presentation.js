@@ -1,4 +1,4 @@
-import { averageDamageFormula } from '../combat/combat-action-estimates.js?v=20260928-equipment-art-v1';
+import { averageDamageFormula } from '../combat/combat-action-estimates.js?v=20260928-equipment-art-v2';
 
 const dice = value => String(value || '').toUpperCase().replaceAll('D', 'W');
 const kindLabels = { healing: 'Heilung', 'temporary-hit-points': 'Temporäre TP', protection: 'Schutz' };

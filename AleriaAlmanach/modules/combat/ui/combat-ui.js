@@ -7,12 +7,12 @@ import {
 import {
   activationLabel, getCombatDisplayStats, getMagicDisplayStats, renderWeaponLoadout, bindWeaponImageFallback,
   getActionGroups, renderActionOptions, renderActionMetadata, renderActionDetails, renderCombatValueStrip, renderMagicValueStrip
-} from './combat-action-card.js?v=20260928-equipment-art-v1';
-import { captureComposerViewState, restoreComposerViewState } from './combat-composer-view-state.js?v=20260928-equipment-art-v1';
-import { getActiveRollModes } from '../combat-profile-model.js?v=20260928-equipment-art-v1';
+} from './combat-action-card.js?v=20260928-equipment-art-v2';
+import { captureComposerViewState, restoreComposerViewState } from './combat-composer-view-state.js?v=20260928-equipment-art-v2';
+import { getActiveRollModes } from '../combat-profile-model.js?v=20260928-equipment-art-v2';
 import { renderAutomaticRollMode } from './combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
-import { bindActionPicker, renderActionPicker } from './combat-action-picker.js?v=20260928-equipment-art-v1';
-import { bindTargetPortraitFallback, optionLabel, renderSelectedTargetPortraits, renderTargetOptions } from './combat-target-picker.js?v=20260928-equipment-art-v1';
+import { bindActionPicker, renderActionPicker } from './combat-action-picker.js?v=20260928-equipment-art-v2';
+import { bindTargetPortraitFallback, optionLabel, renderSelectedTargetPortraits, renderTargetOptions } from './combat-target-picker.js?v=20260928-equipment-art-v2';
 import { renderCombatWeaponGrip } from './combat-weapon-grip-view.js';
 import { isSelfTargetAction } from '../combat-action-targeting.js';
 function escapeHtml(value) {

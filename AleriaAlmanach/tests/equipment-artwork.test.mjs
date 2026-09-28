@@ -110,3 +110,12 @@ test('Rhiannon has the three confirmed possessions without invented combat rules
     assert.equal(item.equipmentLink, null);
   }
 });
+
+test('revised published artwork follows transferred items while shared external placeholders remain scoped', () => {
+  const source = { id: 'transferred-instance', ownerCharacterId: 'new-owner', image: '/AleriaAlmanach/public/assets/character-equipment/rhiannon-dolch-v1.png' };
+  assert.notEqual(source.image, expected('rhiannon-dolch'));
+  assert.equal(resolveEquipmentImage(source), expected('rhiannon-dolch'));
+  assert.equal(source.image, '/AleriaAlmanach/public/assets/character-equipment/rhiannon-dolch-v1.png');
+  assert.equal(resolveEquipmentImage({image:'https://i.imgur.com/38Na5EY.png'}), 'https://i.imgur.com/38Na5EY.png');
+  assert.equal(resolveEquipmentImage({...source,image:'/personal/own-dagger.png'}), '/personal/own-dagger.png');
+});

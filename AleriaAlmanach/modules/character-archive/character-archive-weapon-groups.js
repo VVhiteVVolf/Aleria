@@ -1,5 +1,5 @@
-import { normalizeArchiveSearchText } from './character-archive-model.js?v=20260928-equipment-art-v1';
-import { ensureArchiveGroup, addArchiveGroupEntry, sortArchiveGroups } from './character-archive-group-tree.js?v=20260928-equipment-art-v1';
+import { normalizeArchiveSearchText } from './character-archive-model.js?v=20260928-equipment-art-v2';
+import { ensureArchiveGroup, addArchiveGroupEntry, sortArchiveGroups } from './character-archive-group-tree.js?v=20260928-equipment-art-v2';
 
 export function isArchiveWeapon(entry = {}) {
   if (entry.kind !== 'attack') return false;

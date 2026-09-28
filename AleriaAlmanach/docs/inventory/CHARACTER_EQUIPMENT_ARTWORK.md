@@ -23,6 +23,12 @@ Das Manifest erzeugt mit `npm run build:equipment-artwork` den kleinen Laufzeitk
 
 Für die vorhandene Ausrüstung erfolgt keine Bildmigration in Firestore. Ausschließlich Rhiannons drei nachbenannte Gegenstände werden einmalig über einen bedingten Patch auf `inventory.items` und `inventory.revision` eingetragen, mit Prüfung des aktuellen Dokumentzeitstempels und unveränderten übrigen Feldern. TP, Aktionsressourcen, Ausrüstungsregeln, bestehende Besitzzuordnungen und alte Kommentar-/Kampfsnapshots bleiben erhalten. Die Cache-Versionen der betroffenen Importketten sind gemeinsam erhöht.
 
+## Bildkorrekturen vom 28. September 2026
+
+Neun Motive wurden auf Nutzerwunsch neu erstellt: Guineveres Lang- und Kurzbogen mit gerader, an beiden Enden befestigter Sehne; Ylvas Dornwacht als eleganter Speer mit Wolfskopf-Fassung; Gais' Lanze als verzierter Speer; Rhiannons Amethyst-Zauberstab mit Drachenkrone und ihr schlanker Dolch mit Draig-Symbolik. Nudd, Gawain und Gildas erhalten ausschließlich den Harnisch mit offenen Hals- und Armausschnitten.
+
+Die neuen Dateien ersetzen ihre Vorgänger über den gemeinsamen Bildkatalog. Bekannte veröffentlichte Projektbilder werden auch bei bereits übertragenen Gegenständen auf die aktuelle Fassung aufgelöst; geteilte externe Platzhalter bleiben an die jeweilige Figur gebunden. Alte veröffentlichte Dateien bleiben erreichbar. Die Korrektur verändert keine gespeicherten Spielstände oder Kampfwerte.
+
 ## Prüfung
 
 Alle 40 ausgewählten Dateien wurden visuell und per Alphakanal geprüft: 1:1, RGBA, vollständig transparente Ecken und transparente Außenflächen. Gemalte Schachbrett-Hintergründe wurden durch erneute Bildbearbeitung ersetzt. Integrationstests prüfen gemeinsame Bildpfade, eigene Bilder, Figurenabgrenzung, Schild/Schildstoß, Weitergabe, Unveränderlichkeit und wiederholte Projektion. Bestehende Charakter- und Ausrüstungsregeltests bleiben Teil der Freigabeprüfung.

@@ -1,6 +1,6 @@
 import { normalizeSpellCatalogReference } from '../spell-catalog/spell-catalog.js';
-import { normalizeCombatSpell } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v1';
-import { resolveEquipmentImage, projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v1';
+import { normalizeCombatSpell } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v2';
+import { resolveEquipmentImage, projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v2';
 
 export const CHARACTER_ARCHIVE_SCHEMA_VERSION = 2;
 export const CHARACTER_ARCHIVE_ICON_ASSIGNMENT_VERSION = 1;

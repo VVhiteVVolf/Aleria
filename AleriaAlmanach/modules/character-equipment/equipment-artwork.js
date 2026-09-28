@@ -1,9 +1,17 @@
-import { EQUIPMENT_ARTWORK } from './equipment-artwork-catalog.js?v=20260928-equipment-art-v1';
+import { EQUIPMENT_ARTWORK } from './equipment-artwork-catalog.js?v=20260928-equipment-art-v2';
 
 // A read projection only: no changes to ownership, equipment rules or snapshots.
 // Historical generic images are replaced; deliberate custom images take precedence.
 const byCharacter = new Map();
+// Only our versioned illustrations are globally identifiable. Generic external
+// placeholders stay character-scoped because several owners used the same URL.
+const publishedRevisions = new Map();
 for (const artwork of EQUIPMENT_ARTWORK) {
+  for (const image of artwork.legacyImages) {
+    if (image.startsWith('/AleriaAlmanach/public/assets/character-equipment/')) {
+      publishedRevisions.set(image, artwork.image);
+    }
+  }
   for (const binding of artwork.bindings) {
     if (!byCharacter.has(binding.characterId)) byCharacter.set(binding.characterId, new Map());
     const index = byCharacter.get(binding.characterId);
@@ -13,7 +21,8 @@ for (const artwork of EQUIPMENT_ARTWORK) {
 
 export function resolveEquipmentImage(item = {}, { characterId = '', combatEntryId = '', fallback = '' } = {}) {
   const candidates = [item.image, item.icon, fallback].map(value => String(value || '').trim())
-    .filter(value => /^(?:https?:\/\/|data:image\/|\/(?!\/)|\.\.?\/|[\w-]+\/)/i.test(value) && !/[<>"']/.test(value));
+    .filter(value => /^(?:https?:\/\/|data:image\/|\/(?!\/)|\.\.?\/|[\w-]+\/)/i.test(value) && !/[<>"']/.test(value))
+    .map(value => publishedRevisions.get(value) || value);
   const current = candidates[0] || '';
   const index = byCharacter.get(characterId || item.ownerCharacterId);
   if (!index) return current;

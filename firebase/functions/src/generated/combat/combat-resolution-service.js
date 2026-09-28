@@ -1,6 +1,6 @@
-import { resolveFollowUpAttacks } from './combat-follow-up-resolution.js?v=20260928-equipment-art-v1';
+import { resolveFollowUpAttacks } from './combat-follow-up-resolution.js?v=20260928-equipment-art-v2';
 import { getActionPaymentCosts } from './combat-action-economy.js';
-import { getCombatAttackNumbers, evaluateCombatAttackRoll, evaluateSavingThrowRoll, applyOutcome } from './combat-attack-evaluation.js?v=20260928-equipment-art-v1';
+import { getCombatAttackNumbers, evaluateCombatAttackRoll, evaluateSavingThrowRoll, applyOutcome } from './combat-attack-evaluation.js?v=20260928-equipment-art-v2';
 import { validateSpellCatalogTarget } from '../spell-catalog/spell-catalog-targets.js';
 import { buildAttackNotation, buildDamageNotation, combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 import {
@@ -14,41 +14,41 @@ import {
   getActiveRollModes,
   getSavingThrowRollModes,
   resolveSavingThrowRollMode
-} from './combat-profile-model.js?v=20260928-equipment-art-v1';
+} from './combat-profile-model.js?v=20260928-equipment-art-v2';
 import { mergeRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
 import {
   getCombatActorValidationMessage,
   validateCombatActorProfile,
   validateCombatTargetProfile
-} from './combat-profile-resolver.js?v=20260928-equipment-art-v1';
+} from './combat-profile-resolver.js?v=20260928-equipment-art-v2';
 import {
   patchResolutionResourceState
-} from './combat-state-model.js?v=20260928-equipment-art-v1';
+} from './combat-state-model.js?v=20260928-equipment-art-v2';
 import {
   applyCombatHealing,
   applyTemporaryHitPoints,
   applyTypedCombatDamage,
   normalizeCombatEffect,
   normalizeCombatEffects
-} from './combat-effect-model.js?v=20260928-equipment-art-v1';
+} from './combat-effect-model.js?v=20260928-equipment-art-v2';
 import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 import { hasActiveBerserk, markBerserkActivity } from './combat-berserk-state.js';
 import { isSkjaldrBerserkAbility } from '../classes/aldrimar/skjaldr-combat-profile.js';
 import { consumeCombatAmmunition } from './combat-ammunition.js?v=20260804-referee-v2';
-import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260928-equipment-art-v1';
+import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260928-equipment-art-v2';
 import { resolveCombatWard } from './combat-ward-resolution.js?v=20260906-character-vitality-v1';
 import { refreshRuntimeCondition } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
-import { resolveCombatConcentration } from './combat-concentration-resolution.js?v=20260928-equipment-art-v1';
+import { resolveCombatConcentration } from './combat-concentration-resolution.js?v=20260928-equipment-art-v2';
 import {
   collectApplicableCombatRules,
   markCombatRuleApplications,
   mergeCombatRuleEffects,
   sanitizeCombatRuleEffects
-} from './combat-trigger-rules.js?v=20260928-equipment-art-v1';
+} from './combat-trigger-rules.js?v=20260928-equipment-art-v2';
 
-import { attachCombatEquipmentPreparation } from './combat-equipment-preparation.js?v=20260928-equipment-art-v1';
+import { attachCombatEquipmentPreparation } from './combat-equipment-preparation.js?v=20260928-equipment-art-v2';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
-import { prepareCombatTurnStart, attachCombatTurnStart } from './combat-turn-start.js?v=20260928-equipment-art-v1';
+import { prepareCombatTurnStart, attachCombatTurnStart } from './combat-turn-start.js?v=20260928-equipment-art-v2';
 
 export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-8';
 
