@@ -18,7 +18,7 @@ Alle folgenden Dateien liegen in `AleriaAlmanach/public/assets/draig-leibgarde/`
 - Idwalladr: `Stammbäume/assets/images/portraits/haus-arwydd/idwalladr-arwydd.jpg` und Stammbau-Datensatz `house-arwydd-family.js` (1653–1720).
 - Brenric Coeddu: `Stammbäume/assets/js/data/house-coeddu-family.js`, Llywelyns Vater und pensionierter Waffenknecht; kein Porträt im bestehenden Datensatz.
 
-Die Namensplätze sind keine Festlegung der Sollstärke. Vorläufige Auslegung der Waffenknechtreihen: zwei Reihen à fünf Plätze. Alle Ränge nutzen die vorhandene editierbare Hierarchievorlage, Ehemalige stehen in einem parallelen Baum. Bestehende Charakter-, Kampf- und Firebase-Daten werden durch die Registrierung des redaktionellen Moduls nicht verändert.
+Die Namensplätze sind keine Festlegung der Sollstärke. Vorläufige Auslegung der Waffenknechtreihen: zwei Reihen à fünf Plätze. Alle Ränge nutzen die vorhandene editierbare Hierarchievorlage. Auf Wunsch des Nutzers stehen die Bäume in zwei Reitern auf „Dienstordnung & Namen“: „Draig Leibgarde“ und „Ehemalige Leibgardisten“. Bestehende Charakter-, Kampf- und Firebase-Daten werden durch die Registrierung des redaktionellen Moduls nicht verändert.
 
 ## Verwendete Prompts
 

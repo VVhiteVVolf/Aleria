@@ -84,7 +84,7 @@
         pageTitle: 'IV. — Dienstordnung & Namen', hierarchyPage: true,
         image: `${assetRoot}/waffenkammer-v1.png`,
         hierarchy: {
-          layoutMode: 'vertical', treeDisplayMode: 'parallel',
+          layoutMode: 'vertical', treeDisplayMode: 'tabs',
           cardFontScale: 100, portraitScale: 85, chartScale: 75,
           eyebrow: 'Haus Draig', subtitle: 'Leibgarde · Dienstordnung',
           centerLabel: 'Draig Leibgarde', emblem,
