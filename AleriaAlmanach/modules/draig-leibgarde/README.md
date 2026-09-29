@@ -1,0 +1,43 @@
+# Draig Leibgarde – Bilder und Quellen
+
+Stand: 30. September 2026.
+
+Modul: `draig-leibgarde`, Pfad: Gruppen > Cenyr > Celtigerns Wacht > Haus Draig.
+
+Vier Szenen im Format 1024 × 1536 (2:3). Erzeugt mit dem integrierten Bildwerkzeug (`image_gen`), ohne CLI/API-Fallback. Das Gardewappen wurde für die Anzeige auf einen hellen Elfenbeingrund gesetzt; die Originalvorlagen bleiben separat erhalten.
+
+Alle folgenden Dateien liegen in `AleriaAlmanach/public/assets/draig-leibgarde/`.
+
+## Quellen
+
+- Rüstung und Gardewappen: vom Nutzer vorgegeben, `C:/Users/fhg_r/Downloads/Bildchen/Drachengarde Krieger.png` und `Drachengarde.png`; lokale Kopien `drachengarde-krieger.png`, `drachengarde-wappen.png`.
+- Steffan: `Stammbäume/assets/images/portraits/haus-draig/steffan-draig.jpg`.
+- Llywelyn: `Stammbäume/assets/images/portraits/haus-coeddu/llywelyn-coeddu.png`.
+- Hywel: `Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png`.
+- Mathon: bestehender Charakter `HWUuhs0eUIaWLQ5IwdE2`, Porträt `https://i.imgur.com/gZ2rI4I.png`; lokale Kopie `mathon-curiad.png`.
+- Idwalladr: `Stammbäume/assets/images/portraits/haus-arwydd/idwalladr-arwydd.jpg` und Stammbau-Datensatz `house-arwydd-family.js` (1653–1720).
+- Brenric Coeddu: `Stammbäume/assets/js/data/house-coeddu-family.js`, Llywelyns Vater und pensionierter Waffenknecht; kein Porträt im bestehenden Datensatz.
+
+Die Namensplätze sind keine Festlegung der Sollstärke. Vorläufige Auslegung der Waffenknechtreihen: zwei Reihen à fünf Plätze. Alle Ränge nutzen die vorhandene editierbare Hierarchievorlage, Ehemalige stehen in einem parallelen Baum. Bestehende Charakter-, Kampf- und Firebase-Daten werden durch die Registrierung des redaktionellen Moduls nicht verändert.
+
+## Verwendete Prompts
+
+### steffan-burghof-v1.png
+
+Create a new finished fantasy anime illustration for an Aleria encyclopedia module. Portrait aspect ratio exactly 2:3. Scene: Steffan Draig stands prominently in the foreground of his medieval castle's inner courtyard, in front of an orderly straight line of six household bodyguards at attention. Reference 1 is the mandatory armor design for the guards: charcoal-black plate armor with restrained gold edging, red tabards showing a black wyvern around a pale castle, closed helmets with small dragon fins. Reference 2 is the guard heraldic emblem, use its black wyvern, pale castle and red colors on tabards or courtyard standard; ignore the magenta background completely. Reference 3 is Steffan's identity: preserve his recognizable short russet-red hair, neatly trimmed red full beard, blue eyes, strong angular face, mature adult proportions, dark armor and rust-red cloak. Steffan is unhelmeted, composed and authoritative, three-quarter full figure in foreground left, his line of guards clearly visible behind him across the courtyard. Tall grey stone keep and a hanging red standard with black wyvern in background. Daylight. STRICT Tales of Symphonia default anime art style: distinctive exaggerated anime facial features and proportions, expressive faces, crisp confident anime lineart, clean flat cel shading, soft simple anime surfaces for skin fabric metal wood stone and background. Do NOT imitate the reference armor image's parchment or watercolor surface: translate its design into clean anime. No realistic textures, no photorealism, no painterly rendering, no parchment, no writing, no captions, no collage. One coherent illustration.
+
+### bergfried-gang-v1.png
+
+Create a finished illustration, portrait aspect ratio exactly 2:3, for a medieval fantasy household guard encyclopedia. Scene: an empty quiet corridor inside the keep of Castell Draig. Repeated grey stone arches lead toward heavy closed oak double doors of the throne room. Narrow side passage to the private chambers, slender high windows cast bands of cool daylight onto flagstones; a small bench and a bronze key ring on an oak side table suggest a discreet household watch. One deep red hanging banner shows the black wyvern curled around a pale castle, based on the reference emblem; ignore its magenta background completely. No people. Intimate restrained inhabited atmosphere, medieval rather than monumental cathedral, layered depth, readable composition. STRICT Tales of Symphonia default anime art style: crisp clear anime lineart, clean flat cel shading, soft simple anime surfaces for fabric wood stone metal and background. No realistic textures, no photorealism, no painterly rendering, no parchment, no noise, no writing or caption. The attached emblem is only a heraldic design reference, not an edit target.
+
+### gefolge-v1.png
+
+Create one new finished medieval fantasy anime illustration, portrait ratio exactly 2:3. Scene: three recognizable named household guards preparing to escort their lord's household on a journey, just inside the open stone gate of Castell Draig, a saddled horse and modest covered travelling carriage farther behind, forest road visible beyond. Reference 1 is Llywelyn Coeddu: short tousled bright copper hair, youthful clean-shaven face, green eyes, calm open earnest expression. Reference 2 is Hywel Craigddu: reddish brown hair swept back into a short low ponytail, close reddish beard, distinctive small scars on cheek and forehead, watchful mature expression. Reference 3 is Mathon Curiad: shoulder-length loose dark brown hair, thick dark eyebrows, broad angular face and full dark beard, stern look. All three recognizable faces unobscured, no helmets on heads. Llywelyn foreground left holds a spear upright and glances toward Hywel center; Hywel checks a leather travel strap; Mathon right stands with halberd upright watching the gate. Reference 4 is their REQUIRED guard armor design: charcoal-black plate with restrained gold trim, dark red tabards emblazoned with black wyvern curled around a pale castle, helmets with short red-black dragon fins may be carried or placed on a bench. Preserve face identity from refs 1-3 but dress all three in the guard uniform of ref 4. Characters are ordinary trusted men-at-arms, not ornate high nobles. Clear readable three-person composition, hands correct and weapons separated. STRICT default Tales of Symphonia anime art style: distinctive expressive exaggerated anime features, clear confident lineart, clean cel shading, simple softly colored anime surfaces for skin fabric wood stone metal and background. No realistic surface textures, no grain, no photorealism, no painterly finish, no parchment, no text, no collage. References are design and identity guides, not edit targets.
+
+### waffenkammer-v1.png
+
+Create one finished fantasy anime environment illustration for the hierarchy page of the Draig household guard encyclopedia. Exact portrait aspect ratio 2:3. No people. Intimate castle keep armory in orderly daily use: in the foreground on an oak workbench a charcoal-black closed guard helmet with red dragon-fin crest and restrained gold edging, matching black gauntlets, folded deep red tabard displaying a black wyvern around a pale castle, sword in a scabbard. Behind, wooden racks hold spears, halberds and two matching black plate suits with red tabards, all inspired faithfully by the provided guard armor reference. On the back wall hangs a red black-wyvern standard. Narrow stone window admits soft cool morning daylight contrasting with a single warm lamp. Everything cared for, practical rather than royal treasure. Strong composition leading from large foreground helmet toward small ranks of armor, enough breathing space. STRICT default Tales of Symphonia anime art style, crisp expressive lineart, clean cel shading, soft simple anime textures for cloth metal wood stone and background. Translate the armor reference design into clean anime, do not retain the reference's parchment texture. No photorealism, no realistic material textures, no painterly rendering, no film grain, no parchment, no writing, no captions, no collage. Reference is for equipment design only.
+
+### drachengarde-wappen-elfenbein-v1.png
+
+Edit this reference emblem. Keep the circular badge with its black outer ring, pale runes, gold trim, red field, black wyvern and pale castle. Change ONLY the flat bright magenta color OUTSIDE the circular black outer rim to one uniform solid warm ivory color #f4e8cc. This is NOT a transparency request. The entire area outside the round badge must be a perfectly plain ivory field with no checkerboard, no tiles, no pattern, no grid, no texture, no shadow. Preserve the badge design and colors. Square image, entire circle fits with a very small ivory margin. No added text or symbols.
