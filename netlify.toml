@@ -13,6 +13,22 @@
   status = 301
   force = true
 
+# Preserve Gwynthor image links stored in existing map drafts.
+[[redirects]]
+  from = "/Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreis.png"
+  to = "/Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreis.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreisZonen.png"
+  to = "/Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreisZonen.webp"
+  status = 301
+
+[[redirects]]
+  from = "/Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreisMarker.png"
+  to = "/Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreisMarker.webp"
+  status = 301
+
 [[redirects]]
   from = "/karten-v2/assets/*"
   to = "/karten-v2/dist/assets/:splat"
