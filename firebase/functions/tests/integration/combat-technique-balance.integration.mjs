@@ -12,11 +12,12 @@ const partyDefinitions = [
 const lesson = 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb';
 const profile = async (party, key) => (await party.snapshot()).profiles.get(key);
 
-test('aura empowers the highest die once, pays only focus and undo restores the complete post', async () => {
+test('aura adds two main-weapon dice, pays only focus and undo restores the complete post', async () => {
   const party = await createCombatParty(partyDefinitions);
   const before = await profile(party, 'gildas');
   const prepared = await party.prepare({ actor: 'gildas', targets: ['gawain'], actionId: lesson, paymentMode: 'aura' });
-  assert.equal(prepared.segment.combatResolution.damage.diceResults.length, 4);
+  const standard = await party.prepare({ actor: 'gildas', targets: ['gawain'], actionId: lesson });
+  assert.equal(prepared.segment.combatResolution.damage.diceResults.length, standard.segment.combatResolution.damage.diceResults.length + 2);
   const posted = await party.commit(prepared);
   const after = await profile(party, 'gildas');
   for (const id of ['action', 'reaction', 'bonus-action', 'special-action']) {
@@ -44,11 +45,13 @@ test('server rejects missing aura dice and recalculates forged totals from valid
 
 test('aura area attack empowers both target rolls while focus is consumed once', async () => {
   const party = await createCombatParty(partyDefinitions);
+  const standard = await party.prepare({ actor: 'gildas', targets: ['gawain', 'fenrir'],
+    actionId: 'technique:combat-style-drachentanz-jungdrache-04-schweifkreis' });
   const result = await party.commit(await party.prepare({ actor: 'gildas', targets: ['gawain', 'fenrir'],
     actionId: 'technique:combat-style-drachentanz-jungdrache-04-schweifkreis', paymentMode: 'aura' }));
   const attacks = result.mechanics.commentSegments[0].combatResolutions;
   assert.equal(attacks.length, 2);
-  assert(attacks.every(attack => attack.damage.diceResults.length === 4));
+  assert(attacks.every((attack, index) => attack.damage.diceResults.length === standard.segment.combatResolutions[index].damage.diceResults.length + 2));
   assert.equal(attacks.flatMap(attack => attack.resourceCosts).filter(cost => cost.resourceId === 'aura-focus').length, 1);
   assert.equal((await profile(party, 'gildas')).resources.find(resource => resource.id === 'special-action').current, 3);
 });

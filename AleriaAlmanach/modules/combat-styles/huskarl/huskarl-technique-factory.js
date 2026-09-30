@@ -1,4 +1,5 @@
 import { createDrachentanzDamageProfile } from '../drachentanz/drachentanz-damage-progression.js';
+import { hasWeaponTechniqueControl } from '../weapon-technique-budget.js';
 import { techniqueCost, weaponDamageEffect, temporaryCondition, secondarySave } from '../drachentanz/techniques/drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 import { getHuskarlForms, HUSKARL_FORM_IDS as F } from './huskarl-forms.js';
 
@@ -52,7 +53,7 @@ export function createHuskarlTechnique(classId, formId, spec) {
   }
   const band = formId === F.foundation ? 'foundation' : formId === F.advanced ? 'advanced' : formId === F.militia ? 'militia' : 'expert';
   const requirements = [weapon.name, weapon.shield ? 'Schild aktiv geführt.' : '',
-    weapon.dualWield ? 'Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert.' : '',
+    weapon.dualWield ? 'Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Trefferwurf mit beiden Waffenwürfeln; feste Boni einmal.' : '',
     weapon.twoHanded ? 'Beide Hände für eine Waffe frei; kein zugleich geführter Schild.' : '',
     weapon.ranged ? 'Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.' : '',
     spec.mounted ? 'Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen.' : '', spec.requirement || ''].filter(Boolean).join(' ');
@@ -62,7 +63,7 @@ export function createHuskarlTechnique(classId, formId, spec) {
     weaponLabel: weapon.name, weaponTypes: weapon.types, compatibleWeaponIds: [],
     activationType: costIds[0], costs, auraBypass: { allowed: true, resourceId: 'aura-focus', cost: 1 },
     ...(spec.noDamage ? { damageFormula: '', damageModel: { mode: 'fixed', scalingSteps: [] } }
-      : createDrachentanzDamageProfile({ minimumLevel: spec.level, allowedClassIds: classId === 'hird-maid' ? ['milwr'] : [classId], maximumTargets: 1 }, costs)),
+      : createDrachentanzDamageProfile({ minimumLevel: spec.level, allowedClassIds: classId === 'hird-maid' ? ['milwr'] : [classId], maximumTargets: 1, damageControl: hasWeaponTechniqueControl(spec) }, costs)),
     attackBonus: spec.attackBonus || 0, damageBonus: 0, damageType: '', criticalThreshold: 20,
     targetDefenseModifier: 0, maximumTargets: 1, target: spec.noDamage ? 'Selbst' : 'Ein Gegner', range: 'Waffenreichweite', requirements,
     effects, secondarySave: spec.slow ? secondarySave(id, 'Gehemmter Schritt', '−2 m Bewegung für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.', { movement: -2 }, { tags: 'Huskarl-Waffenlehre' })

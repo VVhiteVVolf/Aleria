@@ -29,7 +29,7 @@ test('verpflichtende Zweihand-Techniken können den größeren Würfel und Angri
     assert.equal(actor.selectedAction.compatible, true);
     assert.equal(actor.selectedAction.requiresTwoHands, true);
     assert.equal(actor.weaponGrip, 'two-handed');
-    assert.equal(actor.weapon.damageFormula, '1d10+1d6+1d4');
+    assert.equal(actor.weapon.damageFormula, '1d10+1d4');
     assert.match(renderCombatWeaponGrip(actor), /value="one-handed" disabled/);
   }
 });
@@ -52,11 +52,11 @@ test('größerer Waffenwürfel verliert einen Angriffspunkt; Auswahl, Vorschau u
 test('Waffentechniken skalieren den Waffenwürfel und behalten Ausbildungswürfel sowie Teilkosten', () => {
   const options = { actionId: 'technique:combat-style-drachentanz-jungdrache-02-drachenbiss' };
   const two = resolve('two-handed', options);
-  assert.equal(two.weapon.damageFormula, '1d10+1d8');
+  assert.equal(two.weapon.damageFormula, '1d10+1d6');
   assert.deepEqual(costs(two), [['action', 1], ['reaction', 1]]);
   assert.equal(two.attackModifier, resolve('one-handed', options).attackModifier - 1);
-  assert.match(renderCombatWeaponGrip(two), /Einhändig · 2d8/);
-  assert.match(renderCombatWeaponGrip(two), /Zweihändig · 1d10\+1d8/);
+  assert.match(renderCombatWeaponGrip(two), /Einhändig · 1d8\+1d6/);
+  assert.match(renderCombatWeaponGrip(two), /Zweihändig · 1d10\+1d6/);
 });
 
 test('bestehende Kostenpakete werden durch die Führung weder erhöht noch ermäßigt', () => {

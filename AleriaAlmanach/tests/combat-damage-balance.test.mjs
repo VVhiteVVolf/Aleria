@@ -34,7 +34,8 @@ test('alle 325 Drachentanz-Attacken bleiben mit jeder regulären Waffengröße i
   assert.equal(attacks.length, 325);
   for (const attack of attacks) for (const formula of ['1d4', '1d6', '1d8', '1d10', '1d12', '2d6']) {
     const stats = totals(resolveTechniqueDamageFormula(attack, { damageFormula: formula }, { progression: { level: attack.minimumLevel } }));
-    const ceiling = attack.minimumLevel <= 6 ? 22 : (attack.minimumLevel <= 8 ? 26 : (attack.minimumLevel < 13 ? 34 : (attack.minimumLevel < 17 ? 38 : 53)));
+    const points = attack.costs.reduce((sum, cost) => sum + cost.amount * (cost.resourceId === 'aura-focus' ? 2 : 1), 0);
+    const ceiling = totals(formula).maximum + Math.max(0, points - 1) * Number(formula.split('d')[1]) + (attack.minimumLevel >= 6 ? 10 : 0);
     assert.ok(stats.maximum <= ceiling, `${attack.name} mit ${formula}: ${stats.maximum} > ${ceiling}`);
     let last = stats.average;
     for (let level = attack.minimumLevel + 1; level <= 20; level++) {
@@ -49,9 +50,9 @@ test('alte Grundformen erhalten genau einen wachsenden Bonus; zusätzliche Pfadw
   const attack = attacks.find(attack => attack.name === 'Sechsfacher Lehrhieb');
   const weapon = { damageFormula: '1d8' };
   assert.deepEqual([6, 7, 8, 9, 12, 13, 16, 17, 20].map(level => resolveTechniqueDamageFormula(attack, weapon, { progression: { level } })),
-    ['2d8+2', '2d8+1d4+2', '2d8+1d4+2', '2d8+1d6+2', '2d8+1d6+2', '3d8+2', '3d8+2', '2d8+1d10+2', '2d8+1d10+2']);
+    ['2d8+1d4', '2d8+2d4', '2d8+2d4', '2d8+1d4+1d6', '2d8+1d4+1d6', '3d8+1d4', '3d8+1d4', '2d8+1d4+1d10', '2d8+1d4+1d10']);
   const manyPaths = { progression: { level: 16 }, classTraining: { selections: attacks.slice(0, 5).map((entry, index) => ({ kind: 'path', selectionId: entry.id, selectedAtLevel: 9 + index })) } };
-  assert.equal(resolveTechniqueDamageFormula(attack, weapon, manyPaths), '3d8+2');
+  assert.equal(resolveTechniqueDamageFormula(attack, weapon, manyPaths), '3d8+1d4');
   assert.equal(getTechniqueDamageScaling(attack, { progression: { level: 1 } }), null);
 });
 
@@ -74,9 +75,9 @@ test('sämtliche Klassen-Grundwaffen und ausgearbeiteten Schadenszauber bleiben 
 });
 
 test('Barddwyr, Milwr und Arthwyr behalten ihre unterschiedlichen Ausbildungsabschnitte', () => {
-  const milwr = attacks.find(attack => attack.name === 'Erster Soldhieb');
-  const bard = attacks.find(attack => attack.name === 'Auftaktstich');
-  const early = attacks.find(attack => attack.name === 'Welpengebrüll');
+  const milwr = attacks.find(attack => attack.cenyrTraining?.allowedClassIds.includes('milwr') && attack.minimumLevel <= 6 && attack.damageModel.scalingSteps.length);
+  const bard = attacks.find(attack => attack.cenyrTraining?.allowedClassIds.includes('barddwyr') && attack.minimumLevel <= 6 && attack.damageModel.scalingSteps.length);
+  const early = attacks.find(attack => attack.cenyrTraining?.allowedClassIds.includes('arthwyr') && attack.minimumLevel <= 6 && attack.damageModel.scalingSteps.length);
   assert.equal(getTechniqueDamageScaling(milwr, { progression: { level: 6 } }).formula, '1d4');
   assert.equal(getTechniqueDamageScaling(milwr, { progression: { level: 20 } }).formula, '1d8');
   assert.equal(getTechniqueDamageScaling(bard, { progression: { level: 7 } }).formula, '1d4');
@@ -89,16 +90,16 @@ test('Gildas kann Gawain mit seinem stärksten einhändigen Jungritterangriff se
   const target = resolveCombatProfile(await load('gawain-draig'));
   assert.equal(target.currentHitPoints, 49);
   const actor = resolveCombatProfile(gildas, { actionId: 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb' });
-  assert.equal(actor.weapon.damageFormula, '2d8+2');
+  assert.equal(actor.weapon.damageFormula, '2d8+1d4');
   assert.equal(actor.damageModifier, 6);
   for (const critical of [false, true]) {
     const result = await new CombatResolutionService(new MaximumDice(critical)).resolveAttack({ actor, target });
-    assert.equal(result.damage.total, critical ? 38 : 22);
+    assert.equal(result.damage.total, critical ? 44 : 24);
     assert.ok(result.targetSnapshot.hitPointsAfter > 0);
   }
 });
 
-test('Gildas stärkster Abschluss plus Reaktionsangriff lässt Gawain mit den neuen Ausrüstungseffekten noch 14 TP', async () => {
+test('Gildas Abschluss plus Reaktionsangriff verbraucht gültige Kosten und lässt Gawain bei maximalem Normalschaden 13 TP', async () => {
   const character = await load('gildas-gafyr');
   const target = resolveCombatProfile(await load('gawain-draig'));
   const first = resolveCombatProfile(character, { actionId: 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb' });
@@ -109,20 +110,20 @@ test('Gildas stärkster Abschluss plus Reaktionsangriff lässt Gawain mit den ne
   const resolver = new CombatResolutionService(new MaximumDice());
   const result = await resolver.resolveAttack({ actor: first, target });
   const follow = await resolver.resolveAttack({ actor: response, target: { ...target, currentHitPoints: result.targetSnapshot.hitPointsAfter } });
-  assert.equal(result.damage.total + follow.damage.total, 35);
-  assert.equal(follow.targetSnapshot.hitPointsAfter, 14);
+  assert.equal(result.damage.total + follow.damage.total, 36);
+  assert.equal(follow.targetSnapshot.hitPointsAfter, 13);
 });
 
 test('zweihändige Waffenführung und manuelle Stufenwechsel berechnen die Technik neu ohne gespeicherte Zusatzwürfel zu stapeln', async () => {
   const character = await load('gildas-gafyr');
   const actionId = 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb';
-  assert.equal(resolveCombatProfile(character, { actionId, weaponGrip: 'two-handed' }).weapon.damageFormula, '1d10+1d8+2');
+  assert.equal(resolveCombatProfile(character, { actionId, weaponGrip: 'two-handed' }).weapon.damageFormula, '2d10+1d4');
   character.combatProfile = applyManualCharacterLevel(character.combatProfile, 16).profile;
-  assert.equal(resolveCombatProfile(character, { actionId }).weapon.damageFormula, '3d8+2');
+  assert.equal(resolveCombatProfile(character, { actionId }).weapon.damageFormula, '3d8+1d4');
   character.combatProfile = sanitizeCharacterCombatProfile(character.combatProfile);
-  assert.equal(resolveCombatProfile(character, { actionId }).weapon.damageFormula, '3d8+2');
+  assert.equal(resolveCombatProfile(character, { actionId }).weapon.damageFormula, '3d8+1d4');
   character.combatProfile = applyManualCharacterLevel(character.combatProfile, 6).profile;
-  assert.equal(resolveCombatProfile(character, { actionId }).weapon.damageFormula, '2d8+2');
+  assert.equal(resolveCombatProfile(character, { actionId }).weapon.damageFormula, '2d8+1d4');
 });
 
 test('Flächenschaden verwendet ebenfalls die aktuelle Waffen- und Ausbildungsformel', async () => {
@@ -135,17 +136,19 @@ test('Flächenschaden verwendet ebenfalls die aktuelle Waffen- und Ausbildungsfo
   assert.equal(actor.selectedAction.effects.find(effect => effect.type === 'damage').formula, '');
 });
 
-test('Fenrirs Doppelhieb addiert Attribut und Berserkerwürfel nur beim Hauptangriff', async () => {
+test('Fenrirs gemeinsamer Doppelhieb addiert Attribut und Berserkerwürfel genau einmal', async () => {
   const character = await load('fenrir-varulv');
+  character.combatProfile.weapons.forEach(weapon => { weapon.equipped = weapon.id === 'fenrir-handaxe-pair'; });
+  character.combatProfile.combat.offHandWeaponId = 'fenrir-handaxe-pair';
   const rage = character.combatProfile.abilities.find(ability => ability.id === 'fenrir-berserkergang').effects.find(effect => effect.type === 'apply-condition').condition;
   character.combatProfile.conditions.push({ ...rage, active: true });
   const actor = resolveCombatProfile(character, { actionId: 'technique:fenrir-twin-axe-flurry' });
   const dice = new MaximumDice();
   const result = await new CombatResolutionService(dice).resolveAttack({ actor, target: resolveCombatProfile(await load('gawain-draig')) });
-  assert.equal(result.followUpAttacks.length, 1);
-  assert.equal(dice.damageCalls[0].damageFormula, '1d6+1d4+1');
-  assert.equal(dice.damageCalls[1].damageFormula, '1d4');
-  assert.equal(dice.damageCalls[1].bonus, 0);
+  assert.equal(result.followUpAttacks.length, 0);
+  assert.equal(dice.damageCalls.length, 1);
+  assert.equal(dice.damageCalls[0].damageFormula, '2d6+1d4');
+  assert.equal(dice.damageCalls[0].bonus, actor.damageModifier);
 });
 
 test('alte Magier- und Skjaldr-Kopien werden idempotent aktualisiert; Utility und Freyas begrenzter Schrei bleiben erhalten', async () => {

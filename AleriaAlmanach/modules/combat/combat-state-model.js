@@ -1,4 +1,5 @@
 // Pure combat-state helpers.
+import { getLightAttackDamageModifier } from './combat-technique-damage.js';
 // This module is the single source of truth for damage application and for
 // replaying stored combat resolutions into the current scene state.
 
@@ -507,6 +508,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     droppedWeapons: state.droppedWeapons || [],
     weaponUnavailable: ['weapon', 'technique'].includes(profile.profileActionKind)
       && (state.droppedWeapons || []).some(entry => entry.weaponId === profile.weapon?.id
+        || profile.weapon?.pairedWeaponIds?.includes(entry.weaponId)
         || (profile.weapon?.inventoryItemId && entry.item?.id === profile.weapon.inventoryItemId)),
     currentHitPoints: normalized.current,
     maximumHitPoints: normalized.maximum || profile.maximumHitPoints,
@@ -530,7 +532,10 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     actionSpellSaveDc: Number(profile.actionSpellSaveDc ?? profile.spellSaveDc ?? 10) + Number(temporaryMechanics.spellSaveDc || 0),
     movement: Math.max(0, Number(profile.movement || 0) + Number(temporaryMechanics.movement || 0)),
     initiative: Number(profile.initiative || 0) + Number(temporaryMechanics.initiative || 0),
-    damageModifier: Number(profile.damageModifier || 0) + temporaryDamageBonus + weaponStrengthDelta,
+    ...(profile.selectedAction?.lightAttack ? {
+      unscaledDamageModifier: Number(profile.unscaledDamageModifier ?? profile.selectedAction.unscaledDamageModifier ?? 0) + temporaryDamageBonus + weaponStrengthDelta,
+      damageModifier: getLightAttackDamageModifier(Number(profile.unscaledDamageModifier ?? profile.selectedAction.unscaledDamageModifier ?? 0) + temporaryDamageBonus + weaponStrengthDelta, profile.selectedAction)
+    } : { damageModifier: Number(profile.damageModifier || 0) + temporaryDamageBonus + weaponStrengthDelta }),
     totalDefense: Number(profile.totalDefense || 0) + Number(temporaryMechanics.armorClass || 0),
     spellAttackModifier: Number(profile.spellAttackModifier || 0) + temporarySpellAttackBonus,
     spellSaveDc: Number(profile.spellSaveDc || 0) + Number(temporaryMechanics.spellSaveDc || 0),

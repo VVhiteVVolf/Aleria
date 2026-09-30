@@ -112,14 +112,14 @@ test('Wyrmtanz uses bounded weapon dice, one replacement scaling die and no auto
     assert.equal(attack.damageModel.weaponDiceMultiplier, 1);
     assert.equal(attack.maximumTargets, 1);
     assert.equal(attack.followUpAttack.enabled, false);
-    if (attack.minimumLevel <= 6) assert(damageBounds(attack, attack.minimumLevel).maximum <= 20, attack.name);
-    if (attack.costs.length === 1 && attack.costs[0].resourceId === 'bonus-action') assert.equal(attack.damageFormula, '1d6');
+    if (attack.minimumLevel <= 6) assert(damageBounds(attack, attack.minimumLevel).maximum <= 10 * attack.costs.length + (attack.minimumLevel === 6 ? 4 : 0), attack.name);
+    if (attack.costs.length === 1 && attack.costs[0].resourceId === 'bonus-action') assert.equal(attack.damageModel.baseDieCap, 4);
     for (let level = attack.minimumLevel; level < 20; level++) assert(damageBounds(attack, level + 1).mean >= damageBounds(attack, level).mean, attack.name);
   }
   const first = getVennyrClassProgression('morwyr').attackCatalog.find(attack => attack.minimumLevel === 2);
   assert.equal(getTechniqueDamageScaling(first, { progression: { level: 7 } }).formula, '1d4');
   assert.equal(getTechniqueDamageScaling(first, { progression: { level: 17 } }).formula, '1d10');
-  assert.equal(resolveTechniqueDamageFormula(first, { damageFormula: '1d10' }, { progression: { level: 17 } }), '2d10+1d6');
+  assert.equal(resolveTechniqueDamageFormula(first, { damageFormula: '1d10' }, { progression: { level: 17 } }), '2d10');
   for (const attack of attacks.filter(attack => !attack.effects.some(effect => effect.type === 'damage'))) {
     assert.equal(attack.damageFormula, '');
     assert.deepEqual(attack.damageModel.scalingSteps, []);

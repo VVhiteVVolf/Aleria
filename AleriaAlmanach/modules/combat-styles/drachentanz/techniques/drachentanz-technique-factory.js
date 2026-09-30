@@ -1,5 +1,6 @@
 import { DRACHENTANZ_FORM_NAMES } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
 import { createDrachentanzDamageProfile } from '../drachentanz-damage-progression.js?v=20260905-damage-balance-v1';
+import { hasWeaponTechniqueControl } from '../../weapon-technique-budget.js';
 
 const RESOURCE_NAMES = Object.freeze({
   action: 'Aktion',
@@ -115,7 +116,7 @@ export function createDrachentanzTechnique(spec) {
     activationType: ['action', 'reaction', 'bonus-action'].find(id => costs.some(cost => cost.resourceId === id)) || spec.activationType || 'action',
     weaponTypes: spec.weaponTypes || DEFAULT_WEAPON_TYPES,
     compatibleWeaponIds: [],
-    ...createDrachentanzDamageProfile(spec, costs),
+    ...createDrachentanzDamageProfile({ ...spec, damageControl: hasWeaponTechniqueControl(spec) }, costs),
     damageType: '',
     attackBonus: Number(spec.attackBonus) || 0,
     damageBonus: Number(spec.damageBonus) || 0,

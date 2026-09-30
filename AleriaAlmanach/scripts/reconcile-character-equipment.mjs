@@ -49,13 +49,17 @@ function itemRows(...rows) {
 function updateRequiredItem(character, itemId, changes) {
   const index = character.inventory.items.findIndex(item => item.id === itemId);
   if (index < 0) throw new Error(`${character.name}: Inventargegenstand ${itemId} fehlt.`);
+  const existing = character.inventory.items[index];
+  // The authored item is authoritative. Template defaults must not remove
+  // released quality bonuses, armor protection, prices or later descriptions.
   character.inventory.items[index] = {
-    ...character.inventory.items[index],
     ...changes,
-    icon: changes.image,
-    imageFormat: 'square',
-    imageFit: 'contain',
-    imagePosition: 'center'
+    ...existing,
+    combatDefinition: { ...changes.combatDefinition, ...existing.combatDefinition },
+    icon: existing.icon || changes.image,
+    imageFormat: existing.imageFormat || 'square',
+    imageFit: existing.imageFit || 'contain',
+    imagePosition: existing.imagePosition || 'center'
   };
 }
 

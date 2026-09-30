@@ -27,12 +27,12 @@ class FixedDice {
   async rollDamage() { return { total: 1, dice: [1], keptDice: [1], modifier: 0 }; }
 }
 
-test('Guineveres vorhandenes Paar belegt zwei Hände, ohne Formel oder Attackenpool zu verdoppeln', () => {
+test('Guineveres vorhandenes Paar benutzt beide Waffenwürfel ohne zusätzliche Handlung', () => {
   const original = JSON.stringify(guinevere);
   const actor = preparedActor();
   assert.equal(actor.weaponLoadout.dualWield, true);
   assert.equal(actor.weaponLoadout.left.id, daggers.id);
-  assert.equal(actor.weapon.damageFormula.toLowerCase(), '1d4');
+  assert.equal(actor.weapon.damageFormula.toLowerCase(), '2d4');
   assert.equal(actor.techniques.length, resolveCombatProfile(guinevere).techniques.length);
   const markup = renderWeaponLoadout(actor, { requestedLoadout: loadout });
   assert.equal((markup.match(/data-state="active"/g) || []).length, 2);

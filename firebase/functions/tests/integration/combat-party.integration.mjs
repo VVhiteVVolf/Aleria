@@ -66,12 +66,13 @@ test('Fenrirs Berserkergang und Doppelhieb werden mit echten Würfelbelegen serv
     { key: 'fenrir', slug: 'fenrir-varulv', team: 'Nord' },
     { key: 'ritter', creature: 'catalog-schwarzer-zitteraal-raubritter', team: 'Gegner' }
   ]);
-  await party.commit(await party.prepare({ actor: 'fenrir', targets: ['fenrir'], actionId: 'ability:fenrir-berserkergang' }));
+  await party.commit(await party.prepare({ actor: 'fenrir', targets: ['fenrir'], actionId: 'ability:fenrir-berserkergang',
+    loadout: { rightWeaponId: 'fenrir-handaxe-pair', leftWeaponId: 'fenrir-handaxe-pair', shieldId: '' } }));
   const hit = await party.commit(await party.prepare({ actor: 'fenrir', targets: ['ritter'], actionId: 'technique:fenrir-twin-axe-flurry' }));
   const resolution = hit.mechanics.commentSegments[0].combatResolution;
-  assert.equal(resolution.followUpAttacks.length, 1);
-  assert.equal(resolution.followUpAttacks[0].damage.modifier, 0);
-  assert.equal(resolution.followUpAttacks[0].damage.diceResults.length, 1);
+  assert.equal(resolution.weapon.damageFormula, '2d6');
+  assert.equal(resolution.followUpAttacks.length, 0);
+  assert.equal(resolution.damage.diceResults.length, 3, 'two axe dice plus one rage die');
 });
 
 test('Freya trifft mehrere Gegner mit dem Schrei: Eigenschaden und Fähigkeitsverbrauch fallen einmal an', async () => {

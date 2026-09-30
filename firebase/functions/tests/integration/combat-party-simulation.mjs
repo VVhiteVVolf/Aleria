@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import { createCombatParty } from './combat-party-context.mjs';
 import { CheckupDice } from './combat-test-actions.mjs';
-import { active, encounter, threadId } from './combat-test-context.mjs';
+import { active, encounter, threadId, commitAction } from './combat-test-context.mjs';
+import { itemSegment } from './combat-test-inventory-actions.mjs';
 import { getActionPaymentCosts, resetCommentScopedResources } from '../../../../AleriaAlmanach/modules/combat/combat-action-economy.js';
 import { parseDamageFormula } from '../../../../AleriaAlmanach/modules/combat/rules/combat-mvp-rules.js';
 import { capCriticalResources } from '../../../../AleriaAlmanach/modules/combat-critical/combat-critical-model.js';
@@ -74,6 +75,15 @@ export async function simulateCombatParty(scenario, seed) {
     for (const actor of initiative) {
       const profile = snapshot.profiles.get(actor.testKey);
       if (profile.currentHitPoints <= 0 || aliveTeams().size < 2) continue;
+      if (profile.droppedWeapons?.length && !actor.sourceCreatureId) {
+        // The simple test player uses its own contribution to retrieve a lost
+        // weapon through the real interaction/cost path, then attacks next turn.
+        const segment = itemSegment(actor.id, profile.droppedWeapons[0]);
+        await commitAction({ entryId: threadId, charName: actor.name, text: segment.text,
+          metadata: { characterId: actor.id, commentSegments: [segment] } });
+        snapshot = await party.assertConsistent();
+        continue;
+      }
       let enemies = party.actors.filter(candidate => candidate.combatTeam !== actor.combatTeam && snapshot.profiles.get(candidate.testKey).currentHitPoints > 0);
       const selected = new Set();
       const segments = [];

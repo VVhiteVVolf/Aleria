@@ -8,7 +8,7 @@ const count = plans.reduce((sum, plan) => sum + plan.attackCatalog.length, 0);
 const lines = ['# Aldrimar · Waffenlehre und Klassenkatalog', '',
   '> Generiert aus `modules/classes/aldrimar/` und `modules/combat-styles/huskarl/`.', '',
   `**${count} Waffen- und Fähigkeitsoptionen**, zwei Expertenpfade und sieben Klassenprofile. Neue Ausbildungen sind Entwürfe ohne automatische Vergabe. Alle Klassen besitzen zusätzliche Optionen auf jeder Stufe von 1 bis 8. Skalde: nichtmagische Stimm- und Waffenmanöver bis Stufe 20, zusätzlich zum magischen Referenzrepertoire nach Freya.`, '',
-  'Schadensvergleich: Referenzwaffe 1W10, ohne Attribut-, Ausrüstungs- oder Klassenboni. Echte Würfel stammen aus der aktiven Waffe; zwei Waffen verdoppeln nicht die Formel. Alte Formen wachsen nach dem begrenzten gemeinsamen Budget. Reine Vorbereitungen bleiben schadenslos.', '',
+  'Schadensvergleich: Referenzwaffe 1W10, ohne Attribut-, Ausrüstungs- oder Klassenboni. Ausgebildete Zweiwaffenangriffe verwenden die Würfel beider Waffen; feste Boni und Ausbildungswürfel einmal. Bonusangriffe: höchstens W4 je Waffenwürfel, halbe positive feste Boni, kein Ausbildungswürfel. Weitere reguläre Aktionspunkte, Besondere Aktionen und Aura kaufen Zusatzwürfel. Reine Vorbereitungen bleiben schadenslos.', '',
   '| Klasse | Waffen-Slots | Katalogoptionen |', '| --- | ---: | ---: |',
   ...plans.map(plan => `| ${plan.name} | ${plan.techniqueBudget.total} | ${plan.attackCatalog.length} |`), '',
   'Wirkungsgrenzen, Berserkergang und Skaldenaufbau: [Konzept](ALDRIMAR_CLASS_CONCEPT.md).',

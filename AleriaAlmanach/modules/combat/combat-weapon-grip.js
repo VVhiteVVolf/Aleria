@@ -18,6 +18,7 @@ export function resolveCombatWeaponGrip(action, profile = {}, requestedGrip = ''
     weaponGrip, supportsVersatileGrip, weaponGripBlockedReason,
     action: {
       ...action,
+      auraWeaponFormula: weaponGrip === 'two-handed' ? action.versatileWeaponFormula : action.baseWeaponFormula,
       baseDamageFormula: action.weapon?.damageFormula || action.formula,
       weapon,
       formula: weapon.damageFormula || action.formula,

@@ -13,6 +13,7 @@ import { compactMechanicalMetadata } from '../../../../AleriaAlmanach/modules/co
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../../../../AleriaAlmanach/modules/combat/combat-state-model.js';
 import { resolveCombatProfile } from '../../../../AleriaAlmanach/modules/combat/combat-profile-resolver.js';
 import { deriveSceneItems } from '../../../../AleriaAlmanach/modules/scene-items/scene-items-model.js';
+export { itemSegment } from './combat-test-inventory-actions.mjs';
 
 const projectId = 'demo-aleria-item-duels';
 if (process.env.FIRESTORE_EMULATOR_HOST !== '127.0.0.1:8182') throw Error('Only the dedicated local Firestore emulator at 127.0.0.1:8182 is allowed.');
@@ -69,12 +70,6 @@ export async function strike({ attacker = ids[0], target = ids[1], actionId = ''
   assert.equal(actual.targetSnapshot.hitPointsAfter, expected.targetSnapshot.hitPointsAfter, 'Client/server HP parity');
   assert.deepEqual(actual.actorResourceSnapshot.after.map(resource => [resource.id, resource.current]), expected.actorResourceSnapshot.after.map(resource => [resource.id, resource.current]), 'Client/server resource parity');
   return { saved, actual, expected, prepared };
-}
-
-export function itemSegment(actorId, entry, { operation = 'pickup', paymentResource = '' } = {}) {
-  return { kind: operation === 'consume' ? 'consume' : 'interact', commentKind: operation === 'consume' ? 'consume' : 'interact', actorId, characterId: actorId, text: 'Gegenstandsaktion im Test',
-    inventorySource: 'scene', sceneItemId: entry.sceneItemId, inventoryOperation: operation, inventoryPaymentResource: paymentResource,
-    inventoryUse: { actorId, actorPersistence: { kind: 'character', recordId: actorId }, item: entry.item, source: 'scene', sceneItemId: entry.sceneItemId, operation, paymentResource } };
 }
 
 export async function useItem(actorId, segment) {

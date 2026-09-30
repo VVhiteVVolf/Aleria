@@ -111,8 +111,8 @@ test('all registered attack designs are complete, level-valid and safely kept in
     if (technique.status === 'draft') {
       const light = technique.costs.length === 1 && technique.costs[0].resourceId === 'bonus-action';
       const support = !technique.effects.some(effect => effect.type === 'damage');
-      assert.equal(technique.damageModel.mode, light || support ? 'fixed' : 'weapon-dice', technique.id);
-      if (light) assert.equal(technique.damageFormula, '1d6', technique.id);
+      assert.equal(technique.damageModel.mode, support ? 'fixed' : 'weapon-dice', technique.id);
+      if (light && !support) assert.equal(technique.damageModel.baseDieCap, 4, technique.id);
       assert(technique.cenyrTraining.allowedClassIds.length > 0, technique.id);
     }
     const economy = getCombatActionEconomy(technique.minimumLevel);
@@ -331,7 +331,7 @@ test('confirmed class bonuses remain conditional on class, level, style and weap
   const teuluProfile = sanitizeCharacterCombatProfile({ templateSelections: { classId: 'teulu' }, progression: { level: 6 },
     weapons: [teuluWeapon], techniques: [technique] });
   const teuluAction = resolveCombatProfile({ id: 'teulu-test', name: 'Teulu', combatProfile: teuluProfile }, { actionId: `technique:${technique.id}` });
-  assert.equal(teuluAction.damageModifier, getWeaponDamageModifier(teuluProfile, teuluProfile.weapons[0]) + 2);
+  assert.equal(teuluAction.damageModifier, Math.floor((getWeaponDamageModifier(teuluProfile, teuluProfile.weapons[0]) + 2) / 2));
 
   const helwyrWeapon = getCharacterCreationTemplate('class', 'helwyr').weapons[0];
   const helwyrProfile = sanitizeCharacterCombatProfile({ templateSelections: { classId: 'helwyr' }, progression: { level: 1 }, weapons: [helwyrWeapon] });
@@ -390,7 +390,7 @@ test('Waffenwürfel und Cenyr-Waffenprofile werden erst bei der Kampfhandlung au
   assert.deepEqual(sanitized.techniques[0].cenyrTraining.allowedClassIds, ['cantref', 'uchelwyr']);
   assert.equal(sanitized.techniques[0].effects[0].inheritWeaponDamageType, true);
   const resolved = resolveCombatProfile({ id: 'cantref-test', name: 'Cantref', combatProfile: sanitized }, { actionId: `technique:${haken.id}` });
-  assert.equal(resolved.selectedAction.formula, '1d12+1d8');
+  assert.equal(resolved.selectedAction.formula, '1d12');
   assert.equal(resolved.selectedAction.targetDefenseModifier, -1);
 });
 

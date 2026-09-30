@@ -32,24 +32,23 @@ test('all three catalogues remain affordable at unlock and older training never 
         const formula = resolveTechniqueDamageFormula(technique, { damageFormula }, { progression: { level } });
         const damage = average(formula);
         assert(damage >= last, `${technique.id} / ${damageFormula} / ${level}`);
-        if (formula) assert(parseDamageFormula(formula).diceCount <= 8, technique.id);
+        const extraPoints = technique.costs.reduce((sum, cost) => sum + cost.amount * (cost.resourceId === 'aura-focus' ? 2 : 1), 0);
+        if (formula) assert(parseDamageFormula(formula).diceCount <= parseDamageFormula(damageFormula).diceCount + extraPoints, technique.id);
         last = damage;
       }
     }
   }
 });
 
-test('existing attacks receive a modest increase and support remains damage-free', async () => {
-  const before = new Map(JSON.parse(await readFile(new URL('../docs/combat/technique-balance/before.json', import.meta.url), 'utf8')).map(row => [row.id, row]));
+test('catalog damage budgets survive profile storage and support remains damage-free', () => {
   for (const technique of catalog) {
-    const previous = before.get(technique.id);
-    if (!previous) continue;
-    const damage = resolveTechniqueDamageFormula(technique, { damageFormula: '1d10' }, { progression: { level: technique.minimumLevel } });
-    if (!previous.damage) { assert.equal(damage, '', technique.id); continue; }
-    const increase = average(damage) - average(previous.damage);
-    assert(increase >= 0, technique.id);
-    const elite = technique.costs.some(cost => cost.resourceId === 'aura-focus');
-    assert(increase <= (elite ? 10 : 6.5), `${technique.id}: +${increase}`);
+    const profile = sanitizeCharacterCombatProfile({ progression: { level: 20 }, techniques: [technique] });
+    const stored = profile.techniques.find(entry => entry.id === technique.id);
+    assert.ok(stored, technique.id);
+    const weapon = { damageFormula: '1d10' };
+    assert.equal(resolveTechniqueDamageFormula(stored, weapon, profile), resolveTechniqueDamageFormula(technique, weapon, profile), technique.id);
+    if (technique.damageModel.mode === 'fixed' && !technique.damageFormula && technique.effects.length
+      && !technique.effects.some(effect => effect.type === 'damage')) assert.equal(resolveTechniqueDamageFormula(stored, weapon, profile), '', technique.id);
   }
 });
 
@@ -78,7 +77,7 @@ test('new defensive techniques apply automatically without attack or damage roll
   assert.equal(result.actorResourceSnapshot.after.find(resource => resource.id === 'reaction').current, 0);
 });
 
-test('aura adds one highest die after grip selection, never a full pool or a permanent edit', async () => {
+test('aura adds two real weapon dice after grip selection, never a full pool or a permanent edit', async () => {
   const character = await load('gildas-gafyr');
   character.combatProfile = applyManualCharacterLevel(character.combatProfile, 8).profile;
   const original = structuredClone(character);
@@ -87,8 +86,8 @@ test('aura adds one highest die after grip selection, never a full pool or a per
     const regular = resolveCombatProfile(character, { actionId, weaponGrip });
     const aura = resolveCombatProfile(character, { actionId, weaponGrip, paymentMode: 'aura' });
     const die = weaponGrip === 'two-handed' ? 10 : 8;
-    assert.equal(aura.selectedAction.auraDamageBonus, `1d${die}`);
-    assert.equal(estimateCombatDamage(aura) - estimateCombatDamage(regular), (die + 1) / 2);
+    assert.equal(aura.selectedAction.auraDamageBonus, `2d${die}`);
+    assert.equal(estimateCombatDamage(aura) - estimateCombatDamage(regular), die + 1);
     assert.deepEqual(aura.resourceCosts.map(cost => [cost.resourceId, cost.amount]), [['aura-focus', 1]]);
     assert.equal(resolveCombatProfile(character, { actionId, weaponGrip }).weapon.damageFormula, regular.weapon.damageFormula);
   }
@@ -102,7 +101,7 @@ test('aura preserves elite, healing, self damage and secondary effects; ordinary
   const weapon = { damageFormula: '2d8+1d4+3' };
   const action = { costs: [{ resourceId: 'action', amount: 1 }], effects: [] };
   const result = empowerAuraAttack(action, weapon, 'aura', profile);
-  assert.equal(result.weapon.damageFormula, '3d8+1d4+3');
+  assert.equal(result.weapon.damageFormula, '4d8+1d4+3');
   for (const unchanged of [
     { ...action, costs: [{ resourceId: 'aura-focus', amount: 1 }] },
     { ...action, effects: [{ type: 'heal', formula: '2d8', target: 'target' }] },
@@ -111,7 +110,7 @@ test('aura preserves elite, healing, self damage and secondary effects; ordinary
   ]) assert.equal(empowerAuraAttack(unchanged, weapon, 'aura', profile).weapon, weapon);
   const spell = { ...action, effects: [{ type: 'damage', formula: '2d6+1', target: 'target', on: 'hit' }, { type: 'damage', formula: '1d4', target: 'self' }] };
   const empowered = empowerAuraAttack(spell, weapon, 'aura', profile);
-  assert.equal(empowered.action.effects[0].formula, '3d6+1');
+  assert.equal(empowered.action.effects[0].formula, '4d6+1');
   assert.equal(empowered.action.effects[1].formula, '1d4');
 });
 
@@ -122,8 +121,8 @@ test('aura damage is rolled and consumes only focus; criticals double dice but n
   const dice = new SeededCombatDice(7);
   dice.rollAttack = async ({ modifier }) => ({ natural: 20, total: 20 + modifier, keptDice: [20] });
   const result = await new CombatResolutionService(dice).resolveAttack({ actor, target: resolveCombatProfile(await load('gawain-draig')) });
-  assert.equal(result.damage.diceResults.length, 8);
-  assert.equal(result.damage.modifier, 2 + actor.damageModifier);
+  assert.equal(result.damage.diceResults.length, 12);
+  assert.equal(result.damage.modifier, actor.damageModifier);
   assert.equal(result.actorResourceSnapshot.after.find(resource => resource.id === 'aura-focus').current, 0);
   assert.equal(result.actorResourceSnapshot.after.find(resource => resource.id === 'action').current, 1);
 });

@@ -32,12 +32,14 @@ test('Gawains Waffen und Rüstung bleiben mit dem Inventar verknüpft', async ()
   assert.equal(armor.dexterityUnlockLevel, 12);
 });
 
-test('Gawain verwendet auf Stufe 5 acht Teulu-Jungdrachen-Techniken', async () => {
+test('Gawain verwendet auf Stufe 5 alle 22 zugänglichen Jungdrachen-Techniken', async () => {
   const gawain = await loadGawain();
   const profile = gawain.combatProfile;
   assert.equal(profile.progression.level, 5);
   assert.equal(profile.templateSelections.classId, 'teulu');
-  assert.deepEqual(profile.techniques.map(technique => technique.name), [
+  assert.equal(profile.techniques.length, 22);
+  assert.ok(profile.techniques.every(technique => technique.minimumLevel <= 5));
+  assert.deepEqual(profile.techniques.slice(0, 8).map(technique => technique.name), [
     'Erster Hieb des Jungdrachens',
     'Biss des Jungdrachens',
     'Gekreuzte Klauen',
@@ -61,7 +63,7 @@ test('Gawains Teulu-Attacken werden mit Drachenzahn und ihrer Klassenökonomie a
   assert.equal(bite.selectedAction.name, 'Biss des Jungdrachens');
   assert.equal(bite.weapon.inventoryItemId, 'item-mqu1vat1-0-w8ef');
   assert.equal(bite.weapon.weaponType, 'sword');
-  assert.equal(bite.selectedAction.formula, '2d8');
+  assert.equal(bite.selectedAction.formula, '1d8+1d6');
   assert.deepEqual(bite.resourceCosts.map(cost => [cost.resourceId, cost.amount]), [
     ['action', 1], ['reaction', 1]
   ]);

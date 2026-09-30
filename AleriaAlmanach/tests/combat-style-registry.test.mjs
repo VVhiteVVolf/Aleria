@@ -71,10 +71,11 @@ test('Teulu erlernen beim Stufenaufstieg alle neu freigeschalteten Formtechniken
   assert.ok(leveled.changes.some(change => change.label === 'Automatisch erlernte Formtechnik' && change.after === 'Biss des Jungdrachens'));
 });
 
-test('Duncans Export nutzt zehn Grund-, zwei Vertiefungs- und acht Expertenattacken aus dem Register', async () => {
+test('Duncans Export enthält alle 93 Techniken seiner zugänglichen Formen, unabhängig von historischen Slots', async () => {
   const payload = JSON.parse(await fs.readFile(new URL('../../Charakter Archiv Exporte/duncan-gafyr.json', import.meta.url), 'utf8'));
   const techniques = payload.character.combatProfile.techniques;
-  assert.equal(techniques.length, 20);
+  assert.equal(techniques.length, 93);
+  assert.equal(new Set(techniques.map(technique => technique.id)).size, 93);
   assert.deepEqual(techniques.slice(0, 6).map(technique => technique.costs.map(cost => cost.resourceId)), EXPECTED_COSTS);
   assert.ok(techniques.every(technique => technique.combatStyleId === 'drachentanz'));
   assert.equal(new Set(techniques.filter(technique => technique.minimumLevel >= 9).map(technique => technique.combatStyleFormId)).size, 5);

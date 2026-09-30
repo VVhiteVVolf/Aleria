@@ -1381,8 +1381,8 @@
           "trainingForm": "Berserkerweg · Ausbildungsform",
           "minimumLevel": 2,
           "category": "technique",
-          "description": "Ein wuchtiger Überkopfhieb, der Rüstung und Knochen gleichermaßen bricht.",
-          "effect": "Bei einem Treffer verursacht die Großaxt 1W12 normalen Waffenschaden und zusätzlich 1W4 Wucht durch die schiere Wucht des Hiebs.",
+          "description": "Ein schwerer Axthieb. Schaden der geführten Axt plus erreichter Ausbildungswürfel; ein Trefferwurf.",
+          "effect": "Ein schwerer Axthieb. Schaden der geführten Axt plus erreichter Ausbildungswürfel; ein Trefferwurf.",
           "activationType": "action",
           "weaponTypes": [
             "axe"
@@ -1390,14 +1390,32 @@
           "compatibleWeaponIds": [
             "fenrir-greataxe"
           ],
-          "damageFormula": "1d12+1d6",
+          "damageFormula": "",
           "damageModel": {
-            "mode": "fixed",
+            "mode": "weapon-dice",
             "weaponDiceMultiplier": 1,
             "bonusFormula": "",
+            "weaponBonuses": [],
             "bonusWeaponDice": 0,
             "bonusWeaponDieCap": 12,
-            "scalingSteps": []
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
           },
           "damageType": "Hieb + Wucht",
           "attackBonus": 0,
@@ -1411,7 +1429,7 @@
           "duration": "Sofort",
           "requirements": "Die Großaxt muss aktiv geführt werden.",
           "tags": "Berserkerweg · Großaxt · Wucht",
-          "aiInstructions": "Der bestätigte Gesamtschaden enthält bereits 1W12 und zusätzlich 1W4; nichts doppelt addieren.",
+          "aiInstructions": "Ein schwerer Axthieb. Schaden der geführten Axt plus erreichter Ausbildungswürfel; ein Trefferwurf.",
           "mechanicNotes": [],
           "effects": [],
           "costs": [
@@ -1514,8 +1532,8 @@
           "trainingForm": "Berserkerweg · Ausbildungsform",
           "minimumLevel": 3,
           "category": "technique",
-          "description": "Der Rundschild kracht mit voller Wucht ins Ziel.",
-          "effect": "Bei einem Treffer 1W6 Wucht. Das Ziel muss danach einen Stärke-Rettungswurf bestehen oder gerät bis zu seinem nächsten Gesamtkommentar ins Taumeln (-2 auf Angriffswürfe).",
+          "description": "Ein kurzer Schildstoß: höchstens W4 und halbe positive feste Schadensboni; kein Ausbildungswürfel.",
+          "effect": "Ein kurzer Schildstoß: höchstens W4 und halbe positive feste Schadensboni; kein Ausbildungswürfel.",
           "activationType": "bonus-action",
           "weaponTypes": [
             "shield"
@@ -1523,11 +1541,14 @@
           "compatibleWeaponIds": [
             "fenrir-roundshield-bash"
           ],
-          "damageFormula": "1d6",
+          "damageFormula": "",
           "damageModel": {
-            "mode": "fixed",
+            "mode": "weapon-dice",
             "weaponDiceMultiplier": 1,
             "bonusFormula": "",
+            "baseDieCap": 4,
+            "lightAttack": true,
+            "weaponBonuses": [],
             "bonusWeaponDice": 0,
             "bonusWeaponDieCap": 12,
             "scalingSteps": []
@@ -1544,7 +1565,7 @@
           "duration": "Sofort",
           "requirements": "Der Huskarl-Rundschild muss ausgerüstet sein.",
           "tags": "Berserkerweg · Schild · Kontrolle",
-          "aiInstructions": "Rettungswurf, Fehlschlag und temporärer Angriffsabzug werden serverseitig protokolliert. Nur das bestätigte Ergebnis erzählen.",
+          "aiInstructions": "Ein kurzer Schildstoß: höchstens W4 und halbe positive feste Schadensboni; kein Ausbildungswürfel.",
           "mechanicNotes": [],
           "effects": [],
           "costs": [
@@ -1647,8 +1668,8 @@
           "trainingForm": "Berserkerweg · Ausbildungsform",
           "minimumLevel": 4,
           "category": "technique",
-          "description": "Zwei getrennte Hiebe: ein Hauptangriff und bei dessen Treffer ein kurzer Folgeangriff mit der zweiten Axt.",
-          "effect": "Hauptangriff: 1W6 +1 plus die üblichen Boni. Ein Folgeangriff: 1W4 ohne erneuten Attribut-, Waffen- oder Berserker-Schadensbonus. Jeder Hieb hat einen eigenen Trefferwurf.",
+          "description": "Ein gemeinsamer Angriff mit beiden Einhandäxten: beide Waffenwürfel (gewöhnlich 2W6) plus erreichter Ausbildungswürfel. Ein Trefferwurf, feste Boni einmal.",
+          "effect": "Ein gemeinsamer Angriff mit beiden Einhandäxten: beide Waffenwürfel (gewöhnlich 2W6) plus erreichter Ausbildungswürfel. Ein Trefferwurf, feste Boni einmal.",
           "activationType": "action",
           "weaponTypes": [
             "axe"
@@ -1656,14 +1677,32 @@
           "compatibleWeaponIds": [
             "fenrir-handaxe-pair"
           ],
-          "damageFormula": "1d6+1",
+          "damageFormula": "",
           "damageModel": {
-            "mode": "fixed",
+            "mode": "weapon-dice",
             "weaponDiceMultiplier": 1,
             "bonusFormula": "",
+            "weaponBonuses": [],
             "bonusWeaponDice": 0,
             "bonusWeaponDieCap": 12,
-            "scalingSteps": []
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
           },
           "damageType": "Hieb",
           "attackBonus": 0,
@@ -1677,7 +1716,7 @@
           "duration": "Sofort",
           "requirements": "Beide Einhandäxte müssen gemeinsam geführt werden.",
           "tags": "Berserkerweg · Zwillingsäxte · Mehrfachangriff",
-          "aiInstructions": "Genau zwei Trefferwürfe insgesamt; der Folgeangriff erfolgt nur nach einem Haupttreffer. Feste eigene Schadensboni und zusätzliche Schadenswürfel gelten nur beim Hauptangriff.",
+          "aiInstructions": "Ein gemeinsamer Angriff mit beiden Einhandäxten: beide Waffenwürfel (gewöhnlich 2W6) plus erreichter Ausbildungswürfel. Ein Trefferwurf, feste Boni einmal.",
           "mechanicNotes": [],
           "effects": [],
           "costs": [
@@ -1746,18 +1785,7 @@
             }
           },
           "followUpAttack": {
-            "enabled": true,
-            "sameTarget": true,
-            "damageFormula": "1d4",
-            "damageType": "Hieb",
-            "attackBonus": 0,
-            "damageBonus": 0,
-            "inheritDamageModifier": false,
-            "inheritBonusDamage": false,
-            "repeatCount": 1,
-            "triggerReactions": true,
-            "repeatPerAttackRules": false,
-            "triggerFurtherEffects": false
+            "enabled": false
           },
           "cenyrTraining": {
             "branchId": "",
@@ -1771,7 +1799,8 @@
             "assignedSlotId": "",
             "selectedAtLevel": null,
             "sourceStatus": ""
-          }
+          },
+          "requiresDualWield": true
         },
         {
           "id": "fenrir-spinning-throw",
@@ -1780,8 +1809,8 @@
           "trainingForm": "Berserkerweg · Ausbildungsform",
           "minimumLevel": 6,
           "category": "technique",
-          "description": "Die Wurfaxt dreht sich schwirrend durch die Luft, ehe sie mit voller Wucht einschlägt.",
-          "effect": "Ein gezielter, kraftvoller Wurf: +1 auf den Angriffswurf, bei einem Treffer 1W6 normaler Wurfaxtschaden und zusätzlich 1W4 durch den Schwung des Wurfs.",
+          "description": "Ein verstärkter Wurf mit der geführten Wurfaxt: Waffenbasis plus ein Waffenwürfel für die Besondere Aktion und erreichter Ausbildungswürfel.",
+          "effect": "Ein verstärkter Wurf mit der geführten Wurfaxt: Waffenbasis plus ein Waffenwürfel für die Besondere Aktion und erreichter Ausbildungswürfel.",
           "activationType": "reaction",
           "weaponTypes": [
             "axe"
@@ -1789,14 +1818,37 @@
           "compatibleWeaponIds": [
             "fenrir-throwing-axe"
           ],
-          "damageFormula": "2d6+1",
+          "damageFormula": "",
           "damageModel": {
-            "mode": "fixed",
+            "mode": "weapon-dice",
             "weaponDiceMultiplier": 1,
             "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 12
+              }
+            ],
             "bonusWeaponDice": 0,
             "bonusWeaponDieCap": 12,
-            "scalingSteps": []
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
           },
           "damageType": "Hieb",
           "attackBonus": 1,
@@ -1810,19 +1862,17 @@
           "duration": "Sofort",
           "requirements": "Verbraucht eine mitgeführte Wurfaxt.",
           "tags": "Berserkerweg · Wurfaxt · Distanz",
-          "aiInstructions": "Der Angriffswurf enthält den Technikbonus +1 bereits. Der Gesamtschaden enthält 1W6 und zusätzlich 1W4; nicht doppelt addieren.",
+          "aiInstructions": "Ein verstärkter Wurf mit der geführten Wurfaxt: Waffenbasis plus ein Waffenwürfel für die Besondere Aktion und erreichter Ausbildungswürfel.",
           "mechanicNotes": [],
           "effects": [],
           "costs": [
             {
-              "id": "fenrir-throw-reaction",
               "resourceId": "reaction",
               "name": "Reaktion",
               "amount": 1,
               "scope": "comment"
             },
             {
-              "id": "fenrir-throw-special",
               "resourceId": "special-action",
               "name": "Besondere Aktion",
               "amount": 1,

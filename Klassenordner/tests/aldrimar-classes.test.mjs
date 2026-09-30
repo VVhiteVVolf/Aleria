@@ -159,9 +159,12 @@ test('foundation damage is bounded, older attacks grow and guards never gain dam
         continue;
       }
       if (attack.minimumLevel <= 6) {
-        assert(maximum(attack, 6) <= 20, attack.name);
-        assert(maximum(attack, 7) > maximum(attack, 6), attack.name);
-        assert(maximum(attack, 20) > maximum(attack, 7), attack.name);
+        assert(maximum(attack, 6) <= 10 * attack.costs.reduce((sum, cost) => sum + cost.amount, 0), attack.name);
+        if (attack.damageModel.lightAttack) assert.equal(maximum(attack, 20), maximum(attack, 6), attack.name);
+        else {
+          assert(maximum(attack, 7) > maximum(attack, 6), attack.name);
+          assert(maximum(attack, 20) > maximum(attack, 7), attack.name);
+        }
       }
       assert(attack.maximumTargets === 1 && !attack.followUpAttack.enabled);
     }

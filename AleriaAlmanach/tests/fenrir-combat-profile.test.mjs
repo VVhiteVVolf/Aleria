@@ -89,26 +89,29 @@ test('Fenrirs Rüstungsklasse und Aura-Fokus ergeben sich korrekt aus Schuppenpa
   assert.equal(auraFocus.maximum, 0, 'Aura-Fokus beginnt erst ab Stufe 8');
 });
 
-test('Doppelhieb der Zwillingsäxte würfelt zwei getrennte Angriffe in einer Handlung', async () => {
+test('Doppelhieb der Zwillingsäxte würfelt beide Waffen gemeinsam in einer Handlung', async () => {
   const fenrir = await loadFenrir();
+  fenrir.combatProfile.weapons.forEach(weapon => { weapon.equipped = weapon.id === 'fenrir-handaxe-pair'; });
+  fenrir.combatProfile.combat.offHandWeaponId = 'fenrir-handaxe-pair';
   const actor = resolveCombatProfile(fenrir, { actionId: 'technique:fenrir-twin-axe-flurry', segmentKind: 'combataction' });
   const target = trainingTarget();
   const result = await new CombatResolutionService(new TechniqueDiceAdapter({ attacks: [15, 16], damages: [4, 5] }))
     .resolveAttack({ actor, target });
   assert.equal(result.attack.hit, true);
-  assert.equal(result.followUpAttacks.length, 1, 'ein Folgeangriff zusätzlich zum Hauptangriff');
-  assert.equal(result.followUpAttacks[0].attack.hit, true);
+  assert.equal(actor.weapon.damageFormula, '2d6');
+  assert.equal(result.followUpAttacks.length, 0);
   assert.equal(result.damage.primaryTotal, 4);
-  assert.equal(result.damage.total, 4 + 5);
+  assert.equal(result.damage.total, 4);
 });
 
 test('Zerschmetternder Hieb und Kreiselwurf rechnen ihre Zusatzwürfel und Boni korrekt ein', async () => {
   const fenrir = await loadFenrir();
   const crush = resolveCombatProfile(fenrir, { actionId: 'technique:fenrir-crushing-blow', segmentKind: 'combataction' });
-  assert.equal(crush.weapon.damageFormula, '1d12+1d6');
+  assert.equal(crush.weapon.damageFormula, '1d12');
+  fenrir.combatProfile.weapons.forEach(weapon => { weapon.equipped = weapon.id === 'fenrir-throwing-axe'; });
   const throwTechnique = resolveCombatProfile(fenrir, { actionId: 'technique:fenrir-spinning-throw', segmentKind: 'combataction' });
-  assert.equal(throwTechnique.weapon.damageFormula, '2d6+1');
-  assert.equal(throwTechnique.attackModifier, crush.attackModifier + 1);
+  assert.equal(throwTechnique.weapon.damageFormula, '2d6');
+  assert.equal(throwTechnique.selectedAction.compatible, true);
 });
 
 test('Schildstoß legt bei misslungenem Rettungswurf einen echten temporären Angriffsabzug an', async () => {
@@ -158,8 +161,8 @@ test('Während des Berserkergangs erhält der Hauptangriff einen Rage-Bonuswürf
   };
   const result = await new CombatResolutionService(dice).resolveAttack({ actor, target });
   assert.equal(result.attack.hit, true);
-  // Zerschmetternder Hieb (1w12+1w6) plus Rage-Bonuswürfel (1w4) werden in einem Wurf zusammengeführt.
-  assert.equal(capturedFormula, '1d12+1d6+1d4');
+  // Hauptwaffe W12 plus genau ein Rage-W4.
+  assert.equal(capturedFormula, '1d12+1d4');
   assert.equal(result.damage.total, 21);
 });
 

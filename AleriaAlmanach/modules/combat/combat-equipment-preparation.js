@@ -2,6 +2,9 @@ import { applyCombatResourceCosts } from './combat-state-model.js?v=20260928-equ
 import { getCombatWeaponLoadout, normalizeCombatLoadout, validateCombatLoadout, usesCharacterWeaponLoadout } from './combat-weapon-loadout.js';
 import { withEquippedCombatWeapon } from './combat-equipment-state.js';
 import { getCombatMounts, getCombatSupportEquipment, canCarryCombatShield, withCombatSupportEquipment } from './combat-support-equipment.js';
+import { hasPairedCombatTraining } from './combat-paired-weapons.js';
+import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js';
+import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js';
 
 export function prepareCombatEquipment(character, requested, { free = false } = {}) {
   // A creature's named attacks are validated against its authoritative sheet.
@@ -19,7 +22,10 @@ export function prepareCombatEquipment(character, requested, { free = false } = 
     || loadout.leftWeaponId || !canCarryCombatShield(right)) ? 'Der Schild ist nicht verfügbar oder die linke Hand ist bereits belegt.' : '';
   const mountError = mountId && !getCombatMounts(character).some(mount => mount.id === mountId)
     ? 'Dieses Reittier gehört nicht zur verfügbaren Ausrüstung der Figur.' : '';
-  const error = validateCombatLoadout(profile, loadout) || shieldError || mountError;
+  const left = (profile.weapons || []).find(weapon => weapon.id === loadout.leftWeaponId);
+  const pairError = left && !hasPairedCombatTraining(getAutofilledCenyrCombatProfile(reconcileClassDamageRevisions(profile)), right, left)
+    ? 'Für den Kampf mit zwei Waffen fehlt eine passende erlernte Zweiwaffentechnik.' : '';
+  const error = validateCombatLoadout(profile, loadout) || pairError || shieldError || mountError;
   if (error) return { character, preparation: { error, costs: [] } };
   const supportChanged = support.shieldId !== shieldId || support.mountId !== mountId;
   const changed = before.rightWeaponId !== loadout.rightWeaponId || before.leftWeaponId !== loadout.leftWeaponId || supportChanged;

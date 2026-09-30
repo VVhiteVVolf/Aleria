@@ -1,4 +1,9 @@
 import { parseDamageFormula, formatDamageFormula as formatFormula } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
+import { getPairedAttackWeapon, requiresPairedCombatWeapons } from './combat-paired-weapons.js';
+
+export function getLightAttackDamageModifier(modifier, model = {}) {
+  return model.lightAttack ? Math.min(0, modifier) + Math.floor(Math.max(0, modifier) / 2) : modifier;
+}
 
 function getFormulaParts(formula) {
   if (!String(formula || '').trim()) return { terms: [], fixedModifier: 0 };
@@ -21,10 +26,10 @@ export function getTechniqueDamageScaling(technique = {}, profile = {}) {
 export function describeTechniqueDamage(technique = {}, profile = {}) {
   const model = technique.damageModel || {};
   const base = model.mode === 'weapon-dice'
-    ? `${model.weaponDiceMultiplier || 1}× Waffenwürfel${model.bonusWeaponDice ? ` + ${model.bonusWeaponDice} Waffen-Zusatzwürfel (je höchstens W${model.bonusWeaponDieCap})` : ''}${model.bonusFormula ? ` + ${model.bonusFormula}` : ''}`
+    ? `${requiresPairedCombatWeapons(technique) ? 'Würfel beider Waffen' : `${model.weaponDiceMultiplier || 1}× Waffenwürfel`}${model.baseDieCap ? ` (je höchstens W${model.baseDieCap})` : ''}${model.bonusWeaponDice ? ` + ${model.bonusWeaponDice} Waffen-Zusatzwürfel (je höchstens W${model.bonusWeaponDieCap})` : ''}${(model.weaponBonuses || []).map(group => ` + ${group.diceCount} Waffen-Zusatzwürfel (je höchstens W${group.dieCap})`).join('')}${model.bonusFormula ? ` + ${model.bonusFormula}` : ''}`
     : technique.damageFormula || 'Kein direkter Schaden';
   const scaling = getTechniqueDamageScaling(technique, profile);
-  return `${base}${model.bonusModifier ? ` + ${model.bonusModifier} Technikbonus` : ''}${scaling ? ` + ${scaling.formula} Ausbildungsbonus` : ''}`.replace(/(\d)d(\d)/g, '$1W$2');
+  return `${base}${model.bonusModifier ? ` + ${model.bonusModifier} Technikbonus` : ''}${scaling ? ` + ${scaling.formula} Ausbildungsbonus` : ''}${model.lightAttack ? ' · halbe positive feste Schadensboni (abgerundet)' : ''}`.replace(/(\d)d(\d)/g, '$1W$2');
 }
 
 export function resolveTechniqueDamageFormula(technique = {}, weapon = {}, profile = {}) {
@@ -37,7 +42,8 @@ export function resolveTechniqueDamageFormula(technique = {}, weapon = {}, profi
     const base = getFormulaParts(formula);
     return formatFormula([...base.terms, ...scaling.terms], base.fixedModifier + scaling.fixedModifier);
   }
-  const base = getFormulaParts(weapon.damageFormula);
+  const pairedWeapon = getPairedAttackWeapon(weapon, profile, technique);
+  const base = getFormulaParts(pairedWeapon.damageFormula);
   if (!base.terms.length) return '';
   const multiplier = Math.max(1, Math.min(6, Math.trunc(Number(model.weaponDiceMultiplier) || 1)));
   const bonus = getFormulaParts(model.bonusFormula);
@@ -45,8 +51,11 @@ export function resolveTechniqueDamageFormula(technique = {}, weapon = {}, profi
   // A two-die greatsword adds one die per bonus, rather than duplicating both dice.
   const extraSides = Math.min(base.terms[0].sides, Number(model.bonusWeaponDieCap) || 12);
   return formatFormula([
-    ...base.terms.map(term => ({ ...term, diceCount: term.diceCount * multiplier })),
+    ...base.terms.map(term => ({ ...term, diceCount: term.diceCount * multiplier,
+      sides: Math.min(term.sides, Number(model.baseDieCap) || 12) })),
     ...(extraDice ? [{ diceCount: extraDice, sides: extraSides }] : []),
+    ...(model.weaponBonuses || []).map(group => ({ diceCount: group.diceCount,
+      sides: Math.min(base.terms[0].sides, group.dieCap) })),
     ...bonus.terms, ...scaling.terms
   ], base.fixedModifier + bonus.fixedModifier + scaling.fixedModifier + (Number(model.bonusModifier) || 0));
 }

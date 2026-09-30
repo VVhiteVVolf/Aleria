@@ -1,5 +1,6 @@
 import { conditionalWeaponModifier, conditionalSkillModifier, conditionalSaveModifier, personalWeaponAttribute } from './combat-personal-modifiers.js';
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
+import { reconcileFrekiTechniques } from '../creatures/catalog/freki-actions.js';
 import { normalizeSpellCatalogReference, resolveCatalogSpellSnapshot } from '../spell-catalog/spell-catalog.js';
 import { reconcileSkjaldrCombatProfile } from '../classes/aldrimar/skjaldr-combat-profile.js';
 import { reconcileClassSpecialManeuvers } from '../classes/class-special-maneuvers.js';
@@ -656,6 +657,12 @@ function sanitizeTechniqueDamageModel(value = {}) {
     ...(source.bonusModifier != null ? { bonusModifier: normalizeNumber(source.bonusModifier, 0, -20, 20) } : {}),
     bonusWeaponDice: normalizeNumber(source.bonusWeaponDice, 0, 0, 3),
     bonusWeaponDieCap: [4, 6, 8, 10, 12].includes(Number(source.bonusWeaponDieCap)) ? Number(source.bonusWeaponDieCap) : 12,
+    ...(source.baseDieCap ? { baseDieCap: normalizeNumber(source.baseDieCap, 4, 4, 12) } : {}),
+    ...(source.lightAttack ? { lightAttack: true } : {}),
+    ...(Array.isArray(source.weaponBonuses) ? { weaponBonuses: sanitizeList(source.weaponBonuses, group => ({
+      diceCount: normalizeNumber(group?.diceCount, 0, 0, 12),
+      dieCap: [4, 6, 8, 10, 12].includes(Number(group?.dieCap)) ? Number(group.dieCap) : 12
+    }), 5).filter(group => group.diceCount > 0) } : {}),
     scalingSteps: sanitizeList(source.scalingSteps, step => ({
       level: normalizeNumber(step?.level, 1, 1, 20),
       formula: normalizeCombatDamageFormula(step?.formula)
@@ -746,6 +753,8 @@ function sanitizeTechnique(value = {}, index = 0) {
     compatibleWeaponIds: sanitizeList(source.compatibleWeaponIds, item => normalizeText(item, 120), 40).filter(Boolean),
     damageFormula: normalizeCombatDamageFormula(source.damageFormula),
     damageModel: sanitizeTechniqueDamageModel(source.damageModel),
+    ...((source.requiresDualWield || source.cultureTraining?.requiresDualWield) ? { requiresDualWield: true } : {}),
+    ...((source.requiresTwoHands || source.cultureTraining?.requiresTwoHands) ? { requiresTwoHands: true } : {}),
     damageType: normalizeText(source.damageType, 80),
     attackBonus: normalizeNumber(source.attackBonus, 0, -99, 99),
     damageBonus: normalizeNumber(source.damageBonus, 0, -99, 99),
@@ -831,7 +840,7 @@ function getLegacyArmor(source) {
 }
 
 export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
-  const source = reconcileClassSpecialManeuvers(reconcileSkjaldrCombatProfile(reconcileClassDamageRevisions(value && typeof value === 'object' ? value : {})));
+  const source = reconcileFrekiTechniques(reconcileClassSpecialManeuvers(reconcileSkjaldrCombatProfile(reconcileClassDamageRevisions(value && typeof value === 'object' ? value : {}))));
   const sourceAttributes = new Map((Array.isArray(source.attributes) ? source.attributes : [])
     .map(attribute => [getAttributeKey(attribute?.key, ''), attribute]));
   const sourceSaves = new Map((Array.isArray(source.savingThrows) ? source.savingThrows : [])

@@ -34,11 +34,12 @@ test('Duncan beherrscht Grundform, freie Vertiefung und fünf gewählte Experten
   assert.equal(combatProfile.abilities.some(ability => ability.id.startsWith('duncan-drachentanz-form-')), false);
 });
 
-test('Duncans 24 Slots ergeben wegen vier zusätzlicher Pfade zwanzig Klassentechniken', async () => {
+test('Duncans historische Slots bleiben erhalten, alle 93 zugänglichen Techniken werden gelernt', async () => {
   const { combatProfile } = await loadDuncan();
   assert.equal(combatProfile.classTraining.techniqueSelections.length, 20);
-  assert.equal(combatProfile.techniques.length, 20);
-  assert.deepEqual(combatProfile.techniques.slice(0, 12).map(technique => technique.name), [
+  assert.equal(combatProfile.techniques.length, 93);
+  const selected = combatProfile.classTraining.techniqueSelections.map(selection => combatProfile.techniques.find(technique => technique.id === selection.techniqueId));
+  assert.deepEqual(selected.slice(0, 12).map(technique => technique.name), [
     'Erster Hieb des Jungdrachens',
     'Biss des Jungdrachens',
     'Gekreuzte Klauen',
@@ -58,7 +59,7 @@ test('Duncans Expertenrepertoire deckt jeden gewählten Pfad mit regulären Kata
   const expertForms = new Set(combatProfile.techniques.filter(technique => technique.minimumLevel >= 9).map(technique => technique.combatStyleFormId));
   assert.equal(expertForms.size, 5);
   assert.ok(combatProfile.techniques.some(technique => technique.name === 'Vollendeter Waffenmeister'));
-  assert.match(combatProfile.notes, /acht Expertentechniken/);
+  assert.match(combatProfile.notes, /sämtliche stufengerecht zugänglichen Techniken/);
 });
 
 test('Duncans latente Waffenmeister-Präsenz bleibt unabhängig vom Angriffskatalog erhalten', async () => {

@@ -57,7 +57,7 @@ test('Server erzwingt den vorgeschriebenen Zweihandgriff und protokolliert die g
   const saved = await party.commit(prepared);
   const result = saved.mechanics.commentSegments[0].combatResolution;
   assert.equal(result.weaponGrip, 'two-handed');
-  assert.equal(result.weapon.damageFormula, '1d10+1d6+1d4');
+  assert.equal(result.weapon.damageFormula, '1d10+1d4');
   assert.equal(result.damage.damageType, 'Hieb');
   assert.equal(result.effectResults.find(entry => entry.effect.type === 'damage').effect.damageType, 'Hieb');
   await undo(saved.id);

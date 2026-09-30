@@ -32,19 +32,21 @@ test('Gildas ist als robuster Stufe-6-Teulu mit biografisch passenden Attributen
   });
 });
 
-test('Gildas beherrscht auf Stufe 6 alle zehn Techniken des Tanzes des Jungdrachens', async () => {
+test('Gildas beherrscht auf Stufe 6 alle 26 zugänglichen Techniken des Jungdrachens', async () => {
   const { combatProfile } = await loadGildas();
 
-  assert.deepEqual(combatProfile.techniques.map(technique => technique.minimumLevel), [1, 2, 3, 4, 5, 6, 2, 3, 4, 6]);
+  assert.equal(combatProfile.techniques.length, 26);
+  assert.ok(combatProfile.techniques.every(technique => technique.minimumLevel <= 6));
+  assert.deepEqual(combatProfile.techniques.slice(0, 10).map(technique => technique.minimumLevel), [1, 2, 3, 4, 5, 6, 2, 3, 4, 6]);
   assert.equal(combatProfile.techniques.every(technique => technique.combatStyleId === 'drachentanz'), true);
-  assert.equal(combatProfile.techniques.every(technique => (
-    technique.cenyrTraining.classWeaponProfiles.teulu.length === 1
-      && technique.cenyrTraining.classWeaponProfiles.teulu[0] === 'sword'
-  )), true);
+  assert.equal(combatProfile.techniques.every(technique => {
+    const weapons = technique.cenyrTraining.classWeaponProfiles.teulu || [];
+    return !weapons.length || weapons.includes('sword');
+  }), true);
   assert.deepEqual(combatProfile.classTraining.techniqueSelections.map(selection => selection.slotId), [
     'foundation-01', 'foundation-02', 'foundation-03', 'foundation-04', 'foundation-05', 'foundation-06', 'foundation-07', 'foundation-08', 'foundation-09', 'foundation-10'
   ]);
-  assert.equal(combatProfile.techniques.at(-1).name, 'Ruhiger Drachenatem');
+  assert.equal(combatProfile.techniques[9].name, 'Ruhiger Drachenatem');
 });
 
 test('Passiva, Marotten und Schutzreaktion bilden Gildas Biografie regeltechnisch ab', async () => {

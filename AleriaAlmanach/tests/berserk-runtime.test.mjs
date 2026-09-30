@@ -128,7 +128,7 @@ test('Zornkappe consumes inventory, scales damage/armor, keeps hit chance and pe
   assert.equal(deriveCombatStateFromComments([]).get(base.characterId), undefined, 'removing the post removes its temporary effect');
 });
 
-test('Pilzbonus also reaches a weak follow-up, while Berserk dice never repeat on it', async () => {
+test('joint axe damage includes mushroom and Berserk bonuses once', async () => {
   const character = structuredClone(fenrir);
   const paired = character.combatProfile.weapons.find(weapon => weapon.name.includes('(Paar)'));
   character.combatProfile.weapons.forEach(weapon => { weapon.equipped = weapon.id === paired.id; });
@@ -138,10 +138,10 @@ test('Pilzbonus also reaches a weak follow-up, while Berserk dice never repeat o
   const target = resolveCombatProfile({ id: 'dummy', combatProfile: { hitPoints: { current: 100, maximumOverride: 100 }, armorClass: { override: 1 } } });
   const dice = new Dice();
   const result = await new CombatResolutionService(dice).resolveAttack({ actor, target });
-  assert.equal(result.followUpAttacks.length, 1);
-  assert.equal(dice.requests[1].damageFormula, '1d4');
-  assert.equal(dice.requests[1].bonus, 2);
-  assert.equal(result.followUpAttacks[0].damage.total, 8);
+  assert.equal(result.followUpAttacks.length, 0);
+  assert.equal(dice.requests.length, 1);
+  assert.equal(dice.requests[0].damageFormula, '2d6+1d4');
+  assert.equal(dice.requests[0].bonus, selected.damageModifier + 1 + 2);
 });
 
 test('Kraftbonus raises a strength-based technique save DC and the visible damage formula', async () => {

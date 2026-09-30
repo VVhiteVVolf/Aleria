@@ -1,4 +1,5 @@
-// Two occupied hands are equipment, never an additional attack or a doubled die.
+// Occupied hands describe equipment. Training decides joint damage; holding
+// two weapons alone never grants an extra attack.
 export function isPairedCombatWeapon(weapon = {}) {
   return /^dual-/.test(weapon.weaponProfileId || '') || /\bpaar\b|beidhändig/i.test(`${weapon.name || ''} ${weapon.properties || ''}`);
 }

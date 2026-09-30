@@ -35,7 +35,6 @@ function assertCanonicalTraining(character, expected) {
   assert.equal(profile.progression.level, expected.level);
   assert.equal(profile.classTraining.schemaVersion, 2);
   assert.equal(profile.classTraining.curriculumId, definition.id);
-  assert.equal(profile.techniques.length, expected.techniques);
   assert.equal(profile.classTraining.techniqueSelections.length, expected.techniques);
   assert.equal(profile.classTraining.selections.filter(selection => selection.kind === 'path').length, expected.paths);
 
@@ -46,18 +45,19 @@ function assertCanonicalTraining(character, expected) {
   const selections = new Map(profile.classTraining.techniqueSelections.map(selection => [selection.techniqueId, selection]));
   const earnedSlots = new Set(progression.earnedTechniqueSlots.map(slot => slot.id));
   assert.equal(selections.size, expected.techniques);
+  const available = progression.styles.flatMap(style => style.forms).filter(form => form.available)
+    .flatMap(form => form.techniques).filter(technique => technique.minimumLevel <= expected.level);
+  assert.deepEqual(new Set(profile.techniques.map(technique => technique.id)), new Set(available.map(technique => technique.id)));
 
   for (const technique of profile.techniques) {
     const canonical = catalog.get(technique.id);
     const selection = selections.get(technique.id);
     assert(canonical, `${expected.name}: ${technique.id} fehlt im Klassenkatalog`);
-    assert(selection, `${expected.name}: ${technique.id} besitzt keinen Slot`);
-    assert(earnedSlots.has(selection.slotId), `${expected.name}: ${selection.slotId} ist auf der Stufe nicht verdient`);
     assert.equal(technique.status, 'confirmed');
-    assert.equal(technique.cenyrTraining.assignedSlotId, selection.slotId);
-    assert.equal(technique.cenyrTraining.selectedAtLevel, selection.selectedAtLevel);
+    if (selection) assert(earnedSlots.has(selection.slotId), `${expected.name}: ${selection.slotId} ist auf der Stufe nicht verdient`);
+    assert.equal(technique.cenyrTraining.selectedAtLevel, technique.minimumLevel);
     assert.equal(technique.cenyrTraining.sourceStatus, canonical.status);
-    assert(technique.minimumLevel <= selection.selectedAtLevel);
+    assert(technique.minimumLevel <= profile.progression.level);
   }
 
   if (expected.classId === 'teulu') {
@@ -74,7 +74,7 @@ test('alle vorhandenen Teulu- und Helwyr-Bögen verwenden ausschließlich ihren 
 test('der generierte Datenbank-Snapshot enthält die zuletzt freigegebenen Online-Ausbildungen und Erholungsfähigkeiten', async () => {
   const snapshot = JSON.parse(await readFile(snapshotUrl, 'utf8'));
   for (const expected of expectations) {
-    const source = await loadCharacter(expected.file.replace('.json', '-jungdrache-2026-09-30.json'));
+    const source = await loadCharacter(expected.file.replace('.json', '-weapon-economy-2026-09-30.json'));
     const stored = snapshot.characters.find(character => character.name === expected.name);
     assert(stored, `${expected.name}: fehlt im Datenbank-Snapshot`);
     assert.deepEqual(stored.combatProfile.classTraining, source.combatProfile.classTraining);

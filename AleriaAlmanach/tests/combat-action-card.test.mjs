@@ -190,7 +190,7 @@ test('kompakte Kampfwerte behalten die ausgewerteten Treffer- und Schadensmodifi
   const actor = await gawainAction();
   const markup = renderCombatValueStrip(actor);
   assert.match(markup, />\s*\+5\s*</);
-  assert.match(markup, /2W8\s*\+3/);
+  assert.match(markup, /1W8\+1W6\s*\+3/);
   assert.match(markup, /Hieb/);
 });
 

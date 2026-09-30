@@ -130,8 +130,9 @@ test('archive contains both original IDs and Asgeir Bleiddorn as an alias withou
     const rows = registry.records.filter(record => record.firestoreDocumentId === character.id);
     assert.equal(rows.length,1);
     const record = await read(`../../CharakterDatenbank/${rows[0].path}`);
-    assert.deepEqual(record.character.combatProfile,character.combatProfile);
-    assert.deepEqual(record.character.inventory,character.inventory);
+    const current = (await read(`../../Charakter%20Archiv%20Exporte/${character === ylva ? 'ylva' : 'asgeir'}-wolfshorn-weapon-economy-2026-09-30.json`)).character;
+    assert.deepEqual(record.character.combatProfile,current.combatProfile);
+    assert.deepEqual(record.character.inventory,current.inventory);
   }
   assert.ok(asgeir.aliases.includes('Asgeir Bleiddorn'));
 });

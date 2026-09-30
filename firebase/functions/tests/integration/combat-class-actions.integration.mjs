@@ -78,6 +78,7 @@ test('Shield switch, repeated attacks and undo restore the actual hand configura
 
 test('Mounted attacks reject unmounted and foreign mounts, accept owned mount, persist and charge dismount',async()=>{
  const actor=structuredClone(named('Gais')),enemy=named('Gawain');
+ actor.inventory ||= {};
  actor.inventory.companions=[{id:'test-warhorse',name:'Isoliertes Prüfross',role:'Reittier'}];
  // An existing canonical mounted technique at level 5 is exercised without
  // changing the production character or inventing a mounted attack payload.

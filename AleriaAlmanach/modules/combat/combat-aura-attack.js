@@ -15,8 +15,8 @@ export function empowerAuraAttack(action, weapon, paymentMode, profile = {}) {
   const primary = effects[primaryIndex];
   const formula = primary?.formula || (primary?.amount > 0 ? '' : weapon?.damageFormula);
   if (!formula) return unchanged;
-  const parsed = parseDamageFormula(formula);
-  const bonus = `1d${Math.max(...(parsed.terms || [parsed]).map(term => term.sides))}`;
+  const parsed = parseDamageFormula(action.auraWeaponFormula || action.baseWeaponFormula || formula);
+  const bonus = `2d${Math.max(...(parsed.terms || [parsed]).map(term => term.sides))}`;
   const empoweredFormula = combineDamageFormulas([formula, bonus]);
   const empoweredWeapon = { ...weapon, damageFormula: empoweredFormula };
   return { weapon: empoweredWeapon,

@@ -145,9 +145,9 @@ function reconcileDuncan(character) {
   profile.notes = [
     'ENDGAME-ANKERFIGUR · DUNCAN GAFYR',
     '',
-    'Kampfstil: Drachentanz. Duncan beherrscht Grundform, freie Vertiefung und fünf Teulu-Expertenpfade. Vier seiner zwölf Expertenslots sind für die zusätzlichen Pfade gebunden; acht Expertentechniken bilden sein persönliches Meisterrepertoire.',
+    'Kampfstil: Drachentanz. Duncan beherrscht sämtliche stufengerecht zugänglichen Techniken seiner Grundform, freien Vertiefung und fünf Teulu-Expertenpfade. Die historischen Slots dokumentieren seine Ausbildung, begrenzen aber nicht sein Arsenal.',
     '',
-    'Seine ausgewählten Attacken betonen Waffenmeisterschaft, Gegenwehr, Beweglichkeit und kontrollierte Kraft. Persönliche Aura-Angriffe und doppelte Form-Fähigkeiten wurden zugunsten des gemeinsamen Klassenkatalogs entfernt.',
+    'Seine Attacken betonen Waffenmeisterschaft, Gegenwehr, Beweglichkeit und kontrollierte Kraft. Persönliche Aura-Angriffe und doppelte Form-Fähigkeiten wurden zugunsten des gemeinsamen Klassenkatalogs entfernt.',
     '',
     'Aktionsökonomie Stufe 20: 2 Aktionen / 2 Bonusaktionen / 2 Reaktionen / 6 Besondere Aktionen. Aura-Fokus: 4.'
   ].join('\n');

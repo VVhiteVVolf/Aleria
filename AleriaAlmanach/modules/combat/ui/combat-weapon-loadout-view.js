@@ -1,6 +1,7 @@
 import { canUseCombatOffHand, isPairedCombatWeapon, getCombatWeaponLoadout } from '../combat-weapon-loadout.js';
 import { getCombatSupportEquipment } from '../combat-support-equipment.js';
 import { renderCombatSupportEquipment } from './combat-support-equipment-view.js?v=20260928-equipment-art-v4';
+import { hasPairedCombatTraining } from '../combat-paired-weapons.js';
 
 const glyphs = Object.freeze({ unarmed: '✦', sword: '⚔', dagger: '†', axe: '⚒', mace: '◆', spear: '↟', polearm: 'Ψ', bow: '➳', crossbow: '⌖', staff: '⌇', shield: '⬙' });
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[char]);
@@ -20,16 +21,18 @@ export function renderWeaponLoadout(actor = {}, { freeEquipment = false, request
   const loadout = actor.weaponLoadout || getCombatWeaponLoadout(actor);
   const weapons = (actor.weapons || []).filter(weapon => weapon.name);
   const leftOptions = weapons.filter(weapon => canUseCombatOffHand(weapon)
-    && (weapon.id !== loadout.rightWeaponId || isPairedCombatWeapon(weapon)));
+    && (weapon.id !== loadout.rightWeaponId || isPairedCombatWeapon(weapon))
+    && hasPairedCombatTraining(actor, loadout.right, weapon));
   const canPair = canUseCombatOffHand(loadout.right || {}) && leftOptions.length > 0;
   const preparation = actor.equipmentPreparation;
   const support = getCombatSupportEquipment(actor);
   const shield = !loadout.dualWield && (actor.armorItems || []).find(item => item.id === support.shieldId);
   return `<section class="combat-weapon-loadout" aria-label="Waffenführung" data-current-right="${escape(loadout.rightWeaponId)}" data-current-left="${escape(loadout.leftWeaponId)}">
     <div class="combat-weapon-active"><span class="combat-field-caption">Geführte Waffen</span>
-      <label class="combat-dual-toggle"><input type="checkbox" data-combat-loadout="dual"${loadout.dualWield ? ' checked' : ''}${canPair ? '' : ' disabled'}> Zwei Waffen · rechts und links</label>
+      <label class="combat-dual-toggle"><input type="checkbox" data-combat-loadout="dual"${loadout.dualWield ? ' checked' : ''}${canPair || loadout.dualWield ? '' : ' disabled'}> Zwei Waffen · rechts und links</label>
+      ${!canPair && !loadout.dualWield ? '<small class="combat-loadout-hint">Zwei passende Waffen und eine erlernte Zweiwaffentechnik erforderlich.</small>' : ''}
       <div class="combat-active-hands">${loadout.right ? weaponSlot(loadout.right, { hand: 'Rechts', active: true }) : ''}${loadout.left ? weaponSlot(loadout.left, { hand: 'Links', active: true }) : shield ? weaponSlot({ ...shield, weaponType: 'shield' }, { hand: 'Links · Schild', active: true }) : ''}</div>
-      ${loadout.dualWield ? `<label class="combat-offhand-choice">Linke Hand<select data-combat-loadout="left">${leftOptions.map(weapon => `<option value="${escape(weapon.id)}"${weapon.id === loadout.leftWeaponId ? ' selected' : ''}>${escape(weapon.name)}</option>`).join('')}</select></label><small class="combat-loadout-hint">Jeder Angriff behält seine eigenen Kosten. Kein zusätzlicher Angriff durch das Waffenpaar; die zweite Hand ersetzt einen geführten Schild.</small>` : ''}
+      ${loadout.dualWield ? `<label class="combat-offhand-choice">Linke Hand<select data-combat-loadout="left">${leftOptions.map(weapon => `<option value="${escape(weapon.id)}"${weapon.id === loadout.leftWeaponId ? ' selected' : ''}>${escape(weapon.name)}</option>`).join('')}</select></label><small class="combat-loadout-hint">${canPair ? 'Gemeinsame Angriffe verwenden beide Waffenwürfel und feste Boni einmal. Ausdrückliche Angriffsfolgen würfeln jeden Hieb einzeln.' : 'Keine passende Zweiwaffenausbildung: kein gemeinsamer Angriff.'} Die zweite Waffe ersetzt den Schild.</small>` : ''}
     </div>
     <div class="combat-weapon-alternatives"><span class="combat-field-caption">Waffenwechsel <small>· ${freeEquipment ? 'Startausrüstung kostenlos' : '1 Bonusaktion'}</small></span>
       <div class="combat-weapon-slots">${weapons.filter(weapon => weapon.id !== loadout.rightWeaponId).map(weapon => weaponSlot(weapon, { free: freeEquipment })).join('')}</div>

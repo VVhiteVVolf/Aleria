@@ -20,7 +20,7 @@ import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=2026
 import { parseDamageFormula, combineDamageFormulas } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 import { getCenyrClassActionModifiers, getCenyrPathActionEffects } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260909-dragon-parent-v2';
 import { resolveCenyrTechniqueWeaponRules } from '../classes/cenyr/cenyr-technique-weapon-rules.js?v=20260909-dragon-parent-v2';
-import { getTechniqueDamageScaling, resolveTechniqueDamageFormula } from './combat-technique-damage.js?v=20260905-party-combat-v1';
+import { getTechniqueDamageScaling, resolveTechniqueDamageFormula, getLightAttackDamageModifier } from './combat-technique-damage.js?v=20260905-party-combat-v1';
 import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260928-equipment-art-v4';
 import { getActiveCombatWeapon } from './combat-equipment-state.js?v=20260905-combat-weapon-slots-v1';
 import { getCombatWeaponLoadout, getCombatTechniqueWeapon, usesCharacterWeaponLoadout } from './combat-weapon-loadout.js';
@@ -28,6 +28,7 @@ import { COMBAT_WAIT_ACTION, hasActionBlockingCondition } from './combat-wait-ac
 import { empowerAuraAttack } from './combat-aura-attack.js';
 import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
 import { getHuskarlTechniqueUnavailableReason, getHuskarlTechniqueRequirements } from '../classes/aldrimar/aldrimar-combat-rules.js';
+import { getPairedAttackWeapon, requiresPairedCombatWeapons } from './combat-paired-weapons.js';
 
 let emptyCharacterTargetProfile = null;
 let emptyCreatureTargetProfile = null;
@@ -73,14 +74,18 @@ function buildCombatProfileActions(character, profile, options = {}) {
       const classModifiers = getCenyrClassActionModifiers(profile, { weapon });
       const equipped = weapon.id === activeWeapon?.id;
       const available = !usesWeaponLoadout || equipped || weapon.id === loadout.leftWeaponId;
+      const attackWeapon = getPairedAttackWeapon(weapon, profile);
       return {
       id: `weapon:${weapon.id}`,
       sourceId: weapon.id,
       kind: 'weapon',
       kindLabel: weaponKind,
       name: weapon.name,
-      formula: weapon.damageFormula,
-      weapon: { ...weapon },
+      formula: attackWeapon.damageFormula,
+      weapon: { ...attackWeapon },
+      baseWeaponFormula: weapon.damageFormula,
+      versatileWeaponFormula: weapon.versatileDamageFormula,
+      mechanicNotes: attackWeapon.pairedAttack ? ['Gemeinsamer Angriff: beide Waffenwürfel, feste Boni einmal; Schadensart der führenden Waffe.'] : [],
       attackModifier: getWeaponAttackModifier(profile, weapon) + classModifiers.attackBonus,
       damageModifier: getWeaponDamageModifier(profile, weapon) + classModifiers.damageBonus,
       activationType: weapon.activationType,
@@ -101,8 +106,10 @@ function buildCombatProfileActions(character, profile, options = {}) {
       const levelCompatible = getEffectiveCombatLevel(profile) >= Number(technique.minimumLevel || 1);
       const weaponRules = resolveCenyrTechniqueWeaponRules(profile, technique, activeWeapon || {});
       const huskarlError = getHuskarlTechniqueUnavailableReason(profile, technique)
+        || (requiresPairedCombatWeapons(technique) && !loadout.dualWield ? 'Benötigt zwei gleichzeitig geführte Waffen.' : '')
         || (technique.followUpAttack?.alternateHands && (!loadout.dualWield || loadout.left?.weaponType !== 'axe' || loadout.right?.weaponType !== 'axe') ? 'Benoetigt zwei gleichzeitig gefuehrte Aexte.' : '');
       const compatible = weaponCompatible && levelCompatible && weaponRules.compatible && !huskarlError;
+      const damageWeapon = getPairedAttackWeapon(activeWeapon || {}, profile, technique);
       const formula = resolveTechniqueDamageFormula(technique, activeWeapon || {}, profile);
       const scaling = getTechniqueDamageScaling(technique, profile);
       const versatileFormula = technique.damageModel?.mode === 'weapon-dice' && activeWeapon?.versatileDamageFormula
@@ -120,6 +127,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
         charge: options.charge === true
       });
       const pathAction = getCenyrPathActionEffects(profile, { technique, weapon: activeWeapon });
+      const unscaledDamageModifier = getWeaponDamageModifier(profile, activeWeapon || {}) + Number(technique.damageBonus || 0) + classModifiers.damageBonus + weaponRules.damageBonus;
       const techniqueEffects = (technique.effects || []).map(effect => (
         pathAction.movementBonus && effect.type === 'move' && effect.target === 'self'
           ? { ...effect, movementMeters: Number(effect.movementMeters || 0) + pathAction.movementBonus }
@@ -129,12 +137,16 @@ function buildCombatProfileActions(character, profile, options = {}) {
         id: `technique:${technique.id}`,
         sourceId: technique.id,
         kind: 'technique',
-        requiresTwoHands: !!(technique.cenyrTraining?.requiresTwoHands || getHuskarlTechniqueRequirements(technique).requiresTwoHands),
+        requiresTwoHands: !!(technique.requiresTwoHands || technique.cenyrTraining?.requiresTwoHands || getHuskarlTechniqueRequirements(technique).requiresTwoHands),
         kindLabel: technique.activationType === 'reaction' ? 'Reaktion' : (technique.activationType === 'bonus-action' ? 'Bonusaktion' : 'Technik'),
         name: technique.name,
         formula,
+        baseWeaponFormula: activeWeapon?.damageFormula,
+        versatileWeaponFormula: activeWeapon?.versatileDamageFormula,
+        lightAttack: !!technique.damageModel?.lightAttack,
+        unscaledDamageModifier,
         weapon: {
-          ...(activeWeapon || {}),
+          ...damageWeapon,
           id: technique.id,
           name: technique.name,
           damageFormula: formula,
@@ -145,11 +157,13 @@ function buildCombatProfileActions(character, profile, options = {}) {
           notes: [technique.description, technique.effect, technique.requirements].filter(Boolean).join('\n')
         },
         attackModifier: getWeaponAttackModifier(profile, activeWeapon || {}) + Number(technique.attackBonus || 0) + classModifiers.attackBonus + weaponRules.attackBonus,
-        damageModifier: getWeaponDamageModifier(profile, activeWeapon || {}) + Number(technique.damageBonus || 0) + classModifiers.damageBonus + weaponRules.damageBonus,
+        damageModifier: getLightAttackDamageModifier(unscaledDamageModifier, technique.damageModel),
         criticalThreshold: Math.min(Number(technique.criticalThreshold) || 20, classModifiers.criticalThreshold || 20, weaponRules.criticalThreshold || 20),
         targetDefenseModifier: weaponRules.targetDefenseModifier + Number(classModifiers.targetDefenseModifier || 0),
         maximumTargets: weaponRules.maximumTargets,
         mechanicNotes: [...new Set([...(technique.mechanicNotes || []), ...weaponRules.mechanicNotes,
+          ...(getPairedAttackWeapon(activeWeapon || {}, profile, technique).pairedAttack ? ['Gemeinsamer Angriff: beide Waffenwürfel, feste Boni einmal; Schadensart der führenden Waffe.'] : []),
+          ...(technique.damageModel?.lightAttack ? ['Leichter Angriff: höchstens W4 je Waffenwürfel, halbe positive feste Schadensboni, kein Ausbildungswürfel.'] : []),
           ...classModifiers.sources.map(source => `Klassen- oder Pfadbonus: ${source.name}.`),
           ...(scaling ? [`Ausbildungsbonus ab Stufe ${scaling.level}: +${scaling.formula.toUpperCase().replace(/D/g, 'W')} (bereits im Schadenswurf enthalten).`] : [])])].slice(0, 8),
         activationType: technique.activationType,
