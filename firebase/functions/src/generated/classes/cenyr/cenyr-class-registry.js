@@ -49,7 +49,8 @@ function feature(id, name, minimumLevel, description, mechanics = null, status =
 
 function jungdracheGrant(levels = []) {
   return { styleId: 'drachentanz', formId: FORM_IDS.jungdrache, minimumLevel: 1,
-    techniqueUnlockLevels: Object.fromEntries(ATTACK_IDS.map((id, index) => [id, levels[index] ?? null])) };
+    techniqueUnlockLevels: { ...Object.fromEntries(ATTACK_IDS.map((id, index) => [id, levels[index] ?? null])),
+      'combat-style-drachentanz-jungdrache-geschlossene-schuppe': 3 } };
 }
 
 function curriculum(config) {

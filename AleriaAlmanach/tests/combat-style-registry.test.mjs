@@ -27,7 +27,7 @@ test('das Kampfstilregister trennt Grundform, freie Vertiefung und Expertenpfade
   assert.equal(getCombatStyle('sirenentanz').name, 'Wyrmtanz');
   assert.equal(style.forms.length, 20);
   assert.deepEqual(style.forms.map(form => form.number), [1, null, 2, 3, 4, null, 5, 6, null, null, null, null, null, null, null, null, null, null, null, null]);
-  assert.deepEqual(style.forms.map(form => form.techniques.length), [72, 24, 24, 18, 18, 6, 22, 18, 12, 12, 8, 8, 6, 12, 14, 8, 6, 5, 4, 12]);
+  assert.deepEqual(style.forms.map(form => form.techniques.length), [88, 24, 24, 18, 18, 6, 22, 18, 12, 12, 8, 8, 6, 12, 14, 8, 6, 5, 4, 12]);
   assert.equal(style.forms[1].minimumLevel, 7);
   assert.equal(style.forms[1].techniqueLevelBand.maximum, 8);
   assert.ok(style.forms.slice(2, -3).every(form => form.kind === 'path' && form.minimumLevel === 9 && form.techniqueLevelBand.maximum === 20));
@@ -35,9 +35,9 @@ test('das Kampfstilregister trennt Grundform, freie Vertiefung und Expertenpfade
   assert.equal(style.forms.at(-2).shortName, 'Tanz des trällernden Drachens');
   assert.equal(style.forms.at(-1).shortName, 'Tanz des kreischenden Drachens');
   const techniques = style.forms.flatMap(form => form.techniques);
-  assert.equal(techniques.length, 309);
-  assert.equal(new Set(techniques.map(technique => technique.id)).size, 309);
-  assert.equal(techniques.filter(technique => technique.status === 'confirmed').length, 16);
+  assert.equal(techniques.length, 325);
+  assert.equal(new Set(techniques.map(technique => technique.id)).size, 325);
+  assert.equal(techniques.filter(technique => technique.status === 'confirmed').length, 32);
   assert.equal(techniques.filter(technique => technique.status === 'draft').length, 293);
 });
 
@@ -48,10 +48,10 @@ test('die Jungdrachenform erweitert den Kernlehrgang um vier ergänzende Technik
   ]);
   for (let level = 1; level <= 6; level += 1) {
     const techniques = getCombatStyleTechniquesForGrants(teulu.combatStyleGrants, level);
-    assert.equal(techniques.length, [1, 3, 5, 7, 8, 10][level - 1]);
+    assert.equal(techniques.length, [3, 9, 14, 19, 22, 26][level - 1]);
     assert.deepEqual(techniques[level - 1].costs.map(cost => cost.resourceId), EXPECTED_COSTS[level - 1]);
   }
-  assert.equal(getCombatStyleTechniquesForGrants(teulu.combatStyleGrants, 20).length, 10, 'Entwürfe werden vor ihrer Freigabe nicht automatisch vergeben');
+  assert.equal(getCombatStyleTechniquesForGrants(teulu.combatStyleGrants, 20).length, 26, 'Entwürfe werden vor ihrer Freigabe nicht automatisch vergeben');
 });
 
 test('Teulu erlernen beim Stufenaufstieg alle neu freigeschalteten Formtechniken ohne Slotwahl', () => {
@@ -61,13 +61,13 @@ test('Teulu erlernen beim Stufenaufstieg alle neu freigeschalteten Formtechniken
   draft.baseAttributes = { strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10 };
   const created = applyCharacterCreationDraft({}, draft, { now: '2026-08-08T00:00:00.000Z' });
   assert.equal(created.ok, true);
-  assert.deepEqual(created.profile.techniques.map(technique => technique.minimumLevel), [1]);
+  assert.deepEqual(created.profile.techniques.map(technique => technique.minimumLevel), [1, 1, 1]);
 
   const plan = createCharacterLevelUpPlan(created.profile);
   let leveled = previewCharacterLevelUp(created.profile, plan);
   assert.equal(leveled.classTechniqueChoiceGroups.length, 0);
   assert.equal(leveled.ready, true);
-  assert.deepEqual(leveled.profile.techniques.map(technique => technique.minimumLevel), [1, 2, 2]);
+  assert.deepEqual(leveled.profile.techniques.map(technique => technique.minimumLevel).sort(), [1, 1, 1, 2, 2, 2, 2, 2, 2]);
   assert.ok(leveled.changes.some(change => change.label === 'Automatisch erlernte Formtechnik' && change.after === 'Biss des Jungdrachens'));
 });
 

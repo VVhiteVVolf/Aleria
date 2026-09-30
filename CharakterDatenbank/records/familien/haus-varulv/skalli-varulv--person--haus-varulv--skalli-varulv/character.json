@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-28T15:05:59.250Z",
+    "sourceExportedAt": "2026-09-30T12:00:00.000Z",
     "sourceUpdatedAt": "2026-09-03T23:44:07.313Z",
     "sourceDocumentIds": [
       "person--haus-varulv--skalli-varulv"
     ],
-    "contentHash": "7fe2bdf8e325879e2309cd1c1d78f3545f02fc5c72d4d868d8cf77456b5bc857"
+    "contentHash": "adc42ffd92899e1b9b0b370d39309d1b77abc582696cf6c7eee46508b3159c2c"
   },
   "local": {
     "notes": "",
@@ -272,8 +272,8 @@
           "personId": "skalli-varulv",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-28T15:05:59.250Z",
-          "lastSyncedAt": "2026-09-28T15:05:59.250Z",
+          "importedAt": "2026-09-30T12:00:00.000Z",
+          "lastSyncedAt": "2026-09-30T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=skalli-varulv",
           "fingerprint": "{\"name\":\"Skalli Varulv\",\"title\":\"\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-varulv\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/skalli-varulv.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"anaraut-draig\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--anaraut-draig\",\"name\":\"Anaraut Draig\"}],\"children\":[]}}"
         }

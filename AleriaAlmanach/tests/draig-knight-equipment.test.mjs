@@ -41,8 +41,8 @@ for (const definition of CASES) {
     assert.equal(ring.equipped, true);
 
     const profile = resolveCombatProfile(character, { segmentKind: 'combataction' });
-    assert.equal(profile.weapon.image, sword.image);
-    assert.equal(profile.armor.image, armor.image);
+    assert.match(profile.weapon.image, /^\/AleriaAlmanach\/public\/assets\/character-equipment\//, 'Current weapon artwork replaces the historical export image');
+    assert.match(profile.armor.image, /^\/AleriaAlmanach\/public\/assets\/character-equipment\//, 'Current armor artwork replaces the historical export image');
     const ringRule = collectCombatTriggerRules(profile)
       .find(rule => rule.id === `${definition.slug}-draig-knight-signet-persuasion`);
     assert.deepEqual(ringRule?.skillIds, ['persuasion']);

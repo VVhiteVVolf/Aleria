@@ -610,6 +610,9 @@ function sanitizeTechniqueSecondarySave(value = {}) {
     dcAttributeKey: getAttributeKey(source.dcAttributeKey, 'strength'),
     addProficiency: normalizeBoolean(source.addProficiency, true),
     failureCondition: {
+      ...(failure.disarm === true ? { disarm: true } : {}),
+      ...(['action', 'bonus-action', 'reaction'].includes(failure.blockedResource) ? { blockedResource: failure.blockedResource } : {}),
+      ...(failure.triggerRules?.length ? { triggerRules: sanitizeCombatTriggerRules(failure.triggerRules) } : {}),
       id: normalizeId(failure.id, 'technique-save-condition'),
       name: normalizeText(failure.name, 120),
       duration: normalizeText(failure.duration, 160),

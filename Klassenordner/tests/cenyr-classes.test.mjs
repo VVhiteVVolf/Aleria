@@ -68,12 +68,12 @@ test('class curricula separate foundation, free training and selectable paths wi
   assert.equal(canonical.forms.at(-2).shortName, 'Tanz des trällernden Drachens');
   assert.equal(canonical.forms.at(-1).shortName, 'Tanz des kreischenden Drachens');
   const expectedBudgets = { milwr: 9, teulu: 24, cantref: 14, uchelwyr: 16, helwyr: 12, arthwyr: 14, barddwyr: 8 };
-  const expectedCatalogSizes = { milwr: 9, teulu: 95, cantref: 42, uchelwyr: 69, helwyr: 145, arthwyr: 102, barddwyr: 48 };
+  const expectedCatalogSizes = { milwr: 26, teulu: 111, cantref: 59, uchelwyr: 86, helwyr: 162, arthwyr: 119, barddwyr: 65 };
   for (const definition of definitions) {
     const plan = getCenyrClassProgression(definition.id, 20);
     assert.equal(plan.levels.length, 20);
     assert(plan.availableAttacks.every(attack => attack.minimumLevel <= 6));
-    assert.equal(plan.availableAttacks.length, definition.classId === 'teulu' ? 10 : 0);
+    assert.equal(plan.availableAttacks.length, definition.classId === 'teulu' ? 26 : 17);
     assert(plan.pendingFeatures.every(feature => feature.minimumLevel === null));
     assert.equal(plan.levels[5].level, 6);
     assert.equal(plan.techniqueBudget.total, expectedBudgets[definition.classId]);
@@ -97,12 +97,12 @@ test('class curricula separate foundation, free training and selectable paths wi
     assert.equal(paths[0].shortName, 'Tanz des Speerdrachens');
     assert.equal(paths.some(path => path.id === FORM_IDS.schwertdrache), false);
   }
-  assert.equal(getCenyrClassProgression('teulu', 6).availableAttacks.length, 10);
+  assert.equal(getCenyrClassProgression('teulu', 6).availableAttacks.length, 26);
 });
 
 test('all registered attack designs are complete, level-valid and safely kept in draft', () => {
   const techniques = getCombatStyle('drachentanz').forms.flatMap(form => form.techniques);
-  assert.equal(techniques.length, 309);
+  assert.equal(techniques.length, 325);
   assert.equal(new Set(techniques.map(technique => technique.id)).size, techniques.length);
   for (const technique of techniques) {
     assert(technique.name && technique.description && technique.effect && technique.requirements, technique.id);
@@ -307,7 +307,7 @@ test('unplanned attacks fail closed and repeated grants preserve individual char
   assert.equal(addMissingCombatStyleTechniques([], [{ styleId: 'drachentanz', formId: draft.combatStyleFormId, minimumLevel: 7 }], 20).added.length, 0);
   const existing = [{ ...attack, damageFormula: '1d4', name: 'Meine Variante' }];
   const updated = addMissingCombatStyleTechniques(existing, [grant, grant], 20);
-  assert.equal(updated.techniques.length, 10);
+  assert.equal(updated.techniques.length, 26);
   assert.equal(updated.techniques[0].damageFormula, '1d4');
   assert.deepEqual(existing, [{ ...attack, damageFormula: '1d4', name: 'Meine Variante' }]);
   assert.equal(addMissingCombatStyleTechniques(updated.techniques, [grant], 20).added.length, 0);

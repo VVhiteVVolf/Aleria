@@ -12,8 +12,8 @@ test('raw live characters use the same current class attacks in the archive and 
   const entries = extractCurrentCharacterArchiveEntries(character);
   assert.deepEqual(character, before);
   const attacks = entries.filter(entry => entry.kind === 'technique');
-  assert.equal(attacks.length, 9);
-  assert.equal(attacks.filter(entry => entry.data.id.startsWith('combat-style-drachentanz-')).length, 8);
+  assert.equal(attacks.length, 23);
+  assert.equal(attacks.filter(entry => entry.data.id.startsWith('combat-style-drachentanz-')).length, 22);
   assert.ok(attacks.some(entry => entry.data.id === 'my-personal-dragon'));
   assert.ok(!attacks.some(entry => entry.data.id.startsWith('gawain-dragon-')));
 });

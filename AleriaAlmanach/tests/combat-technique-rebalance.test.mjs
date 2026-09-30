@@ -18,8 +18,8 @@ const load = async slug => JSON.parse(await readFile(new URL(`../../Charakter%20
 const average = formula => formula ? averageDamageFormula(formula) : 0;
 
 test('all three catalogues remain affordable at unlock and older training never loses damage', () => {
-  assert.equal(catalog.length, 800);
-  assert.equal(new Set(catalog.map(technique => technique.id)).size, 800);
+  assert.equal(catalog.length, 816);
+  assert.equal(new Set(catalog.map(technique => technique.id)).size, 816);
   for (const technique of catalog) {
     const economy = { ...getCombatActionEconomy(technique.minimumLevel), 'aura-focus': getAuraFocusMaximum(technique.minimumLevel) };
     for (const cost of technique.costs) assert(cost.amount <= economy[cost.resourceId], technique.id);
@@ -53,9 +53,9 @@ test('existing attacks receive a modest increase and support remains damage-free
   }
 });
 
-test('Teulu level four has special attacks; ten level-six choices survive migration and downlevelling', async () => {
+test('Teulu level four has special attacks; 26 level-six choices survive migration and downlevelling', async () => {
   const character = await load('gildas-gafyr');
-  for (const [level, count, historicalSlots = count] of [[4, 7], [6, 10], [20, 26, 24], [3, 5], [6, 10]]) {
+  for (const [level, count, historicalSlots = count] of [[4, 19, 7], [6, 26, 10], [20, 42, 24], [3, 14, 5], [6, 26, 10]]) {
     character.combatProfile = applyManualCharacterLevel(character.combatProfile, level).profile;
     const profile = resolveCombatProfile(character);
     assert.equal(profile.techniques.filter(entry => !entry.id.startsWith('class-special-')).length, count);
@@ -74,7 +74,7 @@ test('new defensive techniques apply automatically without attack or damage roll
   assert.equal(estimateCombatDamage(actor), null);
   const result = await new CombatResolutionService({ rollAttack: fail, rollDamage: fail }).resolveAttack({ actor, target: actor });
   assert.equal(result.damage, null);
-  assert(result.targetConditionSnapshot.after.some(condition => condition.mechanics.armorClass === 2));
+  assert(result.targetConditionSnapshot.after.some(condition => condition.mechanics.armorClass === 1));
   assert.equal(result.actorResourceSnapshot.after.find(resource => resource.id === 'reaction').current, 0);
 });
 

@@ -56,6 +56,7 @@ export function temporaryCondition(id, name, description, mechanics = {}, option
       duration: options.duration || `${comments} eigener Beitrag`,
       durationModel: { kind: 'actor-comments', remainingActorComments: comments },
       tags: options.tags || 'Drachentanz',
+      ...(options.stanceGroup ? { stanceGroup: options.stanceGroup } : {}),
       mechanics
     },
     notes: description

@@ -1,4 +1,6 @@
 import { resolveFollowUpAttacks } from './combat-follow-up-resolution.js?v=20260928-equipment-art-v4';
+import { attachPreparedCounter } from './combat-counter-resolution.js';
+import { attachTechniqueDisarm } from './combat-technique-disarm.js';
 import { getActionPaymentCosts } from './combat-action-economy.js';
 import { getCombatAttackNumbers, evaluateCombatAttackRoll, evaluateSavingThrowRoll, applyOutcome } from './combat-attack-evaluation.js?v=20260928-equipment-art-v4';
 import { validateSpellCatalogTarget } from '../spell-catalog/spell-catalog-targets.js';
@@ -50,7 +52,7 @@ import { attachCombatEquipmentPreparation } from './combat-equipment-preparation
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { prepareCombatTurnStart, attachCombatTurnStart } from './combat-turn-start.js?v=20260928-equipment-art-v4';
 
-export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-8';
+export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-9';
 
 function normalizeRollMode(value) {
   return ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
@@ -284,7 +286,7 @@ export function getCombatRollContext(actor, target = {}, options = {}) {
     : getActiveRollModes(actor))];
   const profileRollMode = mergeRollModes(profileRollModes);
   const auraRollMode = savingThrowMode ? actorAuraOnTarget.attackRollMode : targetAuraOnActor.attackRollMode;
-  const safeRollMode = mergeRollModes(profileRollModes, auraRollMode, preRollApplications.map(application => application.effects?.rollMode));
+  const safeRollMode = options.counterAttack ? 'advantage' : mergeRollModes(profileRollModes, auraRollMode, preRollApplications.map(application => application.effects?.rollMode));
   return { relationship, distanceMeters, auraContext, actorAuraOnTarget, targetAuraOnActor,
     resolutionMode, savingThrowMode, automaticMode, ruleSources, usedRuleFrequencyKeys, rulePeriods,
     actionKind, profileActionId, ruleProfileState, preRollApplications, preRollEffects,
@@ -953,7 +955,15 @@ export class CombatResolutionService {
       },
       resolvedAt: new Date().toISOString()
     };
-    return baseResolution;
+    attachTechniqueDisarm(baseResolution, target);
+    return attachPreparedCounter(baseResolution, actor, target, options, (counterActor, counterTarget) => {
+      const dice = this.dice.forCounter?.(0) || this.dice;
+      return new CombatResolutionService(dice).resolvePreparedAttack({ actor: counterActor, target: counterTarget }, {
+        counterAttack: true, skipResourceCosts: true, skipChanneling: true,
+        relationship: options.relationship, distanceMeters: options.distanceMeters,
+        rulePeriods: options.rulePeriods, usedRuleFrequencyKeys: new Set(baseResolution.usedRuleFrequencyKeys)
+      });
+    });
   }
 }
 

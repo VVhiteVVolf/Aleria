@@ -1,3 +1,4 @@
+import { JUNGDRACHE_SHARED_TECHNIQUES } from '../modules/combat-styles/drachentanz/techniques/jungdrache-shared-techniques.js';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
@@ -100,7 +101,7 @@ test('die interaktive Kampfszene füllt ein altes Gawain-Profil automatisch aus 
     .filter(action => action.kind === 'technique' && !action.sourceId.startsWith('class-special-'))
     .map(action => action.name);
 
-  assert.deepEqual(techniqueNames, [
+  assert.deepEqual(techniqueNames.filter(name => !JUNGDRACHE_SHARED_TECHNIQUES.some(t => t.name === name)), [
     'Erster Hieb des Jungdrachens',
     'Biss des Jungdrachens',
     'Gekreuzte Klauen',
@@ -108,6 +109,7 @@ test('die interaktive Kampfszene füllt ein altes Gawain-Profil automatisch aus 
     'Stürmende Drachenspur', 'Schuppenschnitt', 'Geschlossene Schuppe', 'Flügelschritt des Jungdrachens'
   ]);
   assert.equal(techniqueNames.includes('Biss des Drachen'), false);
+  assert.equal(techniqueNames.length, 22);
   assert.equal(resolved.classTraining.techniqueSelections.length, 8);
   const sheet = getAutofilledCenyrCombatProfile(legacyGawain.combatProfile);
   assert.equal(sheet.resources.some(resource => resource.id.startsWith('gawain-technique-')), false);

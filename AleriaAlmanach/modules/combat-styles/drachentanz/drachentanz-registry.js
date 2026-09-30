@@ -2,6 +2,7 @@ import { DRACHENTANZ_FORM_IDS as FORM_IDS } from './drachentanz-ids.js?v=2026090
 import { getDrachentanzPathFeatures } from './drachentanz-path-features.js?v=20260909-dragon-parent-v2';
 import { createDrachentanzDamageProfile } from './drachentanz-damage-progression.js?v=20260905-damage-balance-v1';
 import { TEULU_FOUNDATION_ADDITIONS } from './techniques/teulu-foundation-techniques.js?v=20260909-dragon-parent-v2';
+import { JUNGDRACHE_SHARED_TECHNIQUES } from './techniques/jungdrache-shared-techniques.js';
 import { CLASS_FOUNDATION_TECHNIQUES } from './techniques/foundation-techniques.js?v=20260909-dragon-parent-v2';
 import { DUELIST_TECHNIQUES } from './techniques/duelist-techniques.js?v=20260909-dragon-parent-v2';
 import { SCHWERTDRACHEN_PATH_TECHNIQUES } from './techniques/schwertdrachen-path-techniques.js?v=20260909-dragon-parent-v2';
@@ -22,7 +23,7 @@ import { SPEERDRACHEN_TECHNIQUES, SPEAR_SPECIALIST_TECHNIQUES } from './techniqu
 import { BAERENKLAUEN_TECHNIQUES, JAGENDER_TECHNIQUES, LAUERNDER_SWORD_TECHNIQUES, SCHWEIFENDER_FOOT_TECHNIQUES } from './techniques/class-specialist-techniques.js?v=20260909-dragon-parent-v2';
 import { getDerwynCenyrFoundationTechniques } from '../sirenentanz/sirenentanz-basic-techniques.js?v=20260909-dragon-parent-v2';
 
-export const DRACHENTANZ_REGISTRY_SCHEMA_VERSION = 9;
+export const DRACHENTANZ_REGISTRY_SCHEMA_VERSION = 10;
 
 const FORM_I_NAME = 'Drachentanz Form I · Tanz des Jungdrachens';
 
@@ -263,7 +264,7 @@ export const DRACHENTANZ_COMBAT_STYLE = Object.freeze({
       minimumLevel: 1,
       unlockRule: 'Teulu schalten auf jeder Stufe von 1 bis 6 genau eine weitere Technik frei.',
       techniqueLevelBand: { minimum: 1, maximum: 6 },
-      techniques: [...JUNGDRACHE_TECHNIQUES, ...TEULU_FOUNDATION_ADDITIONS, ...techniquesForForm(FORM_IDS.jungdrache), ...getDerwynCenyrFoundationTechniques()]
+      techniques: [...JUNGDRACHE_TECHNIQUES, ...TEULU_FOUNDATION_ADDITIONS, ...JUNGDRACHE_SHARED_TECHNIQUES, ...techniquesForForm(FORM_IDS.jungdrache), ...getDerwynCenyrFoundationTechniques()]
     },
     plannedForm(null, 'freie-vertiefung', 'Freie Vertiefung', 'duelist', 7, 8,
       'Pufferzone für eigene Techniken oder die vier bewährten Übergangsangriffe der Klassenfolge.',

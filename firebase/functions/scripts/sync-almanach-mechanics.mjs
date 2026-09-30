@@ -6,6 +6,11 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 const sourceRoot = resolve(root, 'AleriaAlmanach/modules');
 const targetRoot = resolve(root, 'firebase/functions/src/generated');
 const files = [
+  'combat/combat-counter-resolution.js',
+  'combat/combat-technique-disarm.js',
+  'combat/combat-damage-guard.js',
+  'combat/combat-stance-presentation.js',
+  'combat-styles/drachentanz/techniques/jungdrache-shared-techniques.js',
   'classes/martial-recovery.js',
   'combat/combat-personal-modifiers.js',
   'combat/combat-follow-up-resolution.js',

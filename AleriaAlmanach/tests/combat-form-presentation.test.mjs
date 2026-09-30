@@ -5,7 +5,7 @@ import { getBalanceCatalog } from './support/technique-balance-catalog.mjs';
 import { getActionGroups, renderActionOptions } from '../modules/combat/ui/combat-action-card.js';
 import { renderActionPicker } from '../modules/combat/ui/combat-action-picker.js';
 
-test('alle 800 Katalogtechniken verwenden stabile Formschlüssel und dieselben Namen unabhängig von gespeicherten Alttexten', () => {
+test('alle 816 Katalogtechniken verwenden stabile Formschlüssel und dieselben Namen unabhängig von gespeicherten Alttexten', () => {
   const entries = getBalanceCatalog();
   const before = structuredClone(entries);
   const labels = new Map();
@@ -17,19 +17,19 @@ test('alle 800 Katalogtechniken verwenden stabile Formschlüssel und dieselben N
     labels.set(form.key, form.label);
     assert.deepEqual(getCombatFormPresentation({ ...entry, trainingForm: 'Überholte Bezeichnung' }), form);
   }
-  assert.equal(entries.length, 800);
+  assert.equal(entries.length, 816);
   assert.equal(labels.size, 36);
   assert.deepEqual(entries, before, 'Anzeige verändert keine Regeln oder gespeicherten Texte');
 });
 
 test('alte und neue Jungdrachen-Techniken erscheinen in beiden Auswahlansichten genau einmal unter einer Form', () => {
   const techniques = getBalanceCatalog().filter(entry => entry.combatStyleFormId === 'drachentanz-form-i-jungdrache'
-    && entry.cenyrTraining?.allowedClassIds?.includes('teulu'));
-  assert.equal(techniques.length, 10);
+    && (!entry.cenyrTraining?.allowedClassIds?.length || entry.cenyrTraining.allowedClassIds.includes('teulu')));
+  assert.equal(techniques.length, 26);
   const actor = { techniques, actions: techniques.map(entry => ({ id: `technique:${entry.id}`, sourceId: entry.id, kind: 'technique', name: entry.name })) };
   const groups = getActionGroups(actor);
   assert.equal(groups.size, 1);
-  assert.equal([...groups.values()][0].length, 10);
+  assert.equal([...groups.values()][0].length, 26);
   assert.equal((renderActionOptions(actor).match(/<optgroup /g) || []).length, 1);
   const picker = renderActionPicker(actor);
   assert.equal((picker.match(/data-combat-action-group>/g) || []).length, 1);

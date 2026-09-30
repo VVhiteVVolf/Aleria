@@ -1,0 +1,425 @@
+{
+  "environment": "demo-aleria-combat-checkup, localhost:8180",
+  "productionWrites": false,
+  "techniques": [
+    {
+      "name": "Sicherer Drachenhieb",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Geschuppte Deckung",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Verwurzelte Schuppe",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Gesammelter Blick",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Täuschende Klaue",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Stäubende Schwinge",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Gebundene Klaue",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Unruhiger Griff",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Gleitende Schuppe",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Lauernde Klaue",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Entwaffnende Klaue",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Fallende Schwinge",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Erstickte Antwort",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Drachenklammer",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Brechender Widerhall",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    },
+    {
+      "name": "Kurze Drachenspur",
+      "stored": true,
+      "replay": true,
+      "undo": true
+    }
+  ],
+  "duel": [
+    {
+      "actor": "Asgeir",
+      "target": "Gawain",
+      "counterDamage": 3
+    },
+    {
+      "round": 1,
+      "actor": "asgeir",
+      "target": "gildas",
+      "damage": 2,
+      "hitPointsAfter": 56
+    },
+    {
+      "round": 1,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 102
+    },
+    {
+      "round": 1,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 98
+    },
+    {
+      "round": 2,
+      "actor": "asgeir",
+      "target": "gawain",
+      "damage": 6,
+      "hitPointsAfter": 43
+    },
+    {
+      "round": 2,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 95
+    },
+    {
+      "round": 2,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 91
+    },
+    {
+      "round": 3,
+      "actor": "asgeir",
+      "target": "gildas",
+      "damage": 6,
+      "hitPointsAfter": 50
+    },
+    {
+      "round": 3,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 88
+    },
+    {
+      "round": 3,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 84
+    },
+    {
+      "round": 4,
+      "actor": "asgeir",
+      "target": "gawain",
+      "damage": 6,
+      "hitPointsAfter": 37
+    },
+    {
+      "round": 4,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 81
+    },
+    {
+      "round": 4,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 77
+    },
+    {
+      "round": 5,
+      "actor": "asgeir",
+      "target": "gildas",
+      "damage": 6,
+      "hitPointsAfter": 44
+    },
+    {
+      "round": 5,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 74
+    },
+    {
+      "round": 5,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 70
+    },
+    {
+      "round": 6,
+      "actor": "asgeir",
+      "target": "gawain",
+      "damage": 6,
+      "hitPointsAfter": 31
+    },
+    {
+      "round": 6,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 67
+    },
+    {
+      "round": 6,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 63
+    },
+    {
+      "round": 7,
+      "actor": "asgeir",
+      "target": "gildas",
+      "damage": 6,
+      "hitPointsAfter": 38
+    },
+    {
+      "round": 7,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 60
+    },
+    {
+      "round": 7,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 56
+    },
+    {
+      "round": 8,
+      "actor": "asgeir",
+      "target": "gawain",
+      "damage": 6,
+      "hitPointsAfter": 25
+    },
+    {
+      "round": 8,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 53
+    },
+    {
+      "round": 8,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 49
+    },
+    {
+      "round": 9,
+      "actor": "asgeir",
+      "target": "gildas",
+      "damage": 6,
+      "hitPointsAfter": 32
+    },
+    {
+      "round": 9,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 46
+    },
+    {
+      "round": 9,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 42
+    },
+    {
+      "round": 10,
+      "actor": "asgeir",
+      "target": "gawain",
+      "damage": 6,
+      "hitPointsAfter": 19
+    },
+    {
+      "round": 10,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 39
+    },
+    {
+      "round": 10,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 35
+    },
+    {
+      "round": 11,
+      "actor": "asgeir",
+      "target": "gildas",
+      "damage": 6,
+      "hitPointsAfter": 26
+    },
+    {
+      "round": 11,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 32
+    },
+    {
+      "round": 11,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 28
+    },
+    {
+      "round": 12,
+      "actor": "asgeir",
+      "target": "gawain",
+      "damage": 6,
+      "hitPointsAfter": 13
+    },
+    {
+      "round": 12,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 25
+    },
+    {
+      "round": 12,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 21
+    },
+    {
+      "round": 13,
+      "actor": "asgeir",
+      "target": "gildas",
+      "damage": 6,
+      "hitPointsAfter": 20
+    },
+    {
+      "round": 13,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 18
+    },
+    {
+      "round": 13,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 14
+    },
+    {
+      "round": 14,
+      "actor": "asgeir",
+      "target": "gawain",
+      "damage": 6,
+      "hitPointsAfter": 7
+    },
+    {
+      "round": 14,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 11
+    },
+    {
+      "round": 14,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 7
+    },
+    {
+      "round": 15,
+      "actor": "asgeir",
+      "target": "gildas",
+      "damage": 6,
+      "hitPointsAfter": 14
+    },
+    {
+      "round": 15,
+      "actor": "gawain",
+      "target": "asgeir",
+      "damage": 3,
+      "hitPointsAfter": 4
+    },
+    {
+      "round": 15,
+      "actor": "gildas",
+      "target": "asgeir",
+      "damage": 4,
+      "hitPointsAfter": 0
+    }
+  ],
+  "winner": "Cenyri"
+}

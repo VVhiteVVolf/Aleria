@@ -1,3 +1,4 @@
+import { JUNGDRACHE_SHARED_TECHNIQUES } from '../../AleriaAlmanach/modules/combat-styles/drachentanz/techniques/jungdrache-shared-techniques.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
@@ -33,7 +34,7 @@ test('Vennyr plans contain coherent 1–20 progression and class-specific expert
     assert.equal(new Set(plan.techniqueBudget.slots.map(slot => slot.id)).size, plan.techniqueBudget.total);
     assert.equal(plan.pathOptions.length, plan.classId === 'milwr' ? 0 : plan.classId === 'derwyn' ? 4 : 3);
     for (const slot of plan.techniqueBudget.slots) {
-      assert(plan.attackCatalog.some(attack => attack.minimumLevel <= slot.level && attack.cultureTraining.slotBands.includes(slot.band)), `${plan.name} ${slot.id}`);
+      assert(plan.attackCatalog.some(attack => attack.minimumLevel <= slot.level && (attack.cultureTraining || attack.cenyrTraining).slotBands.includes(slot.band)), `${plan.name} ${slot.id}`);
     }
     for (const form of plan.styles.flatMap(style => style.forms)) {
       assert(form.techniques.length > 0);
@@ -135,7 +136,7 @@ test('resources and short-lived conditions match the existing combat contract', 
   for (const attack of attacks) {
     assert(attack.costs.length > 0 && attack.costs.every(cost => cost.amount === 1));
     assert.equal(attack.auraBypass.cost, 1);
-    assert.equal(attack.auraBypass.allowed, true);
+    assert.equal(attack.auraBypass.allowed, !JUNGDRACHE_SHARED_TECHNIQUES.some(t => t.id === attack.id));
     if (attack.minimumLevel < 8) assert(!attack.costs.some(cost => cost.resourceId === 'aura-focus'));
     if (attack.costs.some(cost => cost.resourceId === 'special-action')) assert(attack.costs.length >= 2);
     if (attack.costs.length === 1 && attack.costs[0].resourceId === 'reaction') assert(!attack.effects.some(effect => effect.type === 'damage'));

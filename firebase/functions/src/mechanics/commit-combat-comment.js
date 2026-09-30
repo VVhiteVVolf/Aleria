@@ -13,7 +13,7 @@ import { reconcileConcentrationConditions } from '../generated/combat/combat-con
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { withEquippedCombatWeapon } from '../generated/combat/combat-equipment-state.js';
 import { CombatResolutionService } from '../generated/combat/combat-resolution-service.js';
-import { deriveCombatStateFromComments, getResolutionActorChannelingState, getResolutionActorConcentrationState, getResolutionActorConditionState, getResolutionActorEquippedWeaponState, getResolutionActorLoadoutState, getResolutionActorHitPointState, getResolutionActorInventoryState, getResolutionActorResourceState, getResolutionHitPointState, getResolutionTargetChannelingState, getResolutionTargetConditionState, getResolutionTargetConcentrationState, getResolutionTargetResourceState, overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
+import { deriveCombatStateFromComments, getResolutionActorChannelingState, getResolutionActorConcentrationState, getResolutionActorConditionState, getResolutionActorEquippedWeaponState, getResolutionActorLoadoutState, getResolutionActorHitPointState, getResolutionActorInventoryState, getResolutionTargetInventoryState, getResolutionActorResourceState, getResolutionHitPointState, getResolutionTargetChannelingState, getResolutionTargetConditionState, getResolutionTargetConcentrationState, getResolutionTargetResourceState, overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
 import { deriveCombatRuleFrequencyKeys } from '../generated/combat/combat-trigger-rules.js';
 import { getActiveCombatPartyMap, getActiveCombatEncounter } from '../generated/combat/combat-encounter-model.js';
 import { getEncounterActionValidationError } from '../generated/combat/combat-encounter-lifecycle.js';
@@ -506,6 +506,7 @@ export async function commitCombatCommentOperation(request, {
         };
       }
 
+      const targetInventory = getResolutionTargetInventoryState(resolution);
       const targetNext = getResolutionHitPointState(resolution);
       const targetConditions = getResolutionTargetConditionState(resolution);
       const targetResources = getResolutionTargetResourceState(resolution);
@@ -518,9 +519,10 @@ export async function commitCombatCommentOperation(request, {
       const actorNextEquippedWeaponId = getResolutionActorEquippedWeaponState(resolution);
       const actorChanneling = getResolutionActorChannelingState(resolution);
       const actorConcentration = getResolutionActorConcentrationState(resolution);
-      if (targetNext || targetConditions || targetResources || targetConcentration !== undefined || targetChanneling !== undefined) workingStates.set(String(submitted.targetId), {
+      if (targetInventory || targetNext || targetConditions || targetResources || targetConcentration !== undefined || targetChanneling !== undefined) workingStates.set(String(submitted.targetId), {
         ...(targetState || {}),
         ...(targetNext || {}),
+        ...(targetInventory ? { inventory: targetInventory } : {}),
         ...(targetConditions ? { temporaryConditions: targetConditions } : {}),
         ...(targetResources ? { resources: targetResources } : {}),
         ...(targetConcentration !== undefined ? { concentration: targetConcentration } : {}),
@@ -538,6 +540,8 @@ export async function commitCombatCommentOperation(request, {
         ...(actorConcentration !== undefined ? { concentration: actorConcentration } : {})
       });
 
+      for (const event of resolution.sceneItemEvents || []) applySceneItemEvent(sceneItems, event);
+      if (resolution.sceneItemEvents?.length) applyDroppedWeaponsToStates(workingStates, sceneItems);
       reconcileConcentrationConditions(workingStates);
       const ruleAbilitySnapshots = [];
       (Array.isArray(resolution.ruleApplications) ? resolution.ruleApplications : [])
@@ -596,6 +600,7 @@ export async function commitCombatCommentOperation(request, {
       if (targetPersistence.persistent) {
         const existing = persistentUpdates.get(targetRecordKey) || { entry: uniqueRecords.get(targetRecordKey), record: targetRecord };
         existing.hitPoints = targetNext;
+        if (targetInventory) { existing.inventory = targetInventory; workingInventories.set(targetRecordKey, targetInventory); }
         if (targetResources) existing.resources = getPersistentCombatResources(targetBase.resources,
           workingStates.get(String(submitted.targetId))?.resources || targetResources);
         persistentUpdates.set(targetRecordKey, existing);

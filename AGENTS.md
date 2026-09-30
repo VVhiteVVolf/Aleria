@@ -28,6 +28,8 @@ Am 26. September 2026 wurden die generischen **Besonderen Klassenmanöver vollst
 
 Ylvas und Asgeirs am 26. September freigegebene Grenzer-Passiven, Ausrüstung und persönliche Angriffsfolgen sind in [Wolfshorn-Verstärkung und Durchschnaufen](AleriaAlmanach/docs/combat/WOLFSHORN_RECOVERY_RELEASE.md) festgehalten. Ylva erhält keinen Schild. Persönliche Ausbildung darf nicht als übertragbarer Gegenstandsbonus gespeichert werden.
 
+Jungdrachen-Balancing vom 30. September 2026: Geschlossene Schuppe gibt +1 RK. Gemeinsame Waffenart-unabhängige Techniken stehen allen Klassen mit Jungdrachen-Zugang entsprechend ihrer Stufe offen. **Liegend kostet die Bonusaktion im nächsten eigenen Beitrag**, ohne Bewegungsabzug oder Angriffsnachteil. **Lauernde Klaue kostet nur Bonusaktion + Reaktion**, keine Besondere Aktion. Einmalige Vorbereitungen dürfen nicht durch automatische Selbsthaltungen verbraucht werden. Details und Testgrenzen: [Jungdrachen-Balancing](AleriaAlmanach/docs/combat/JUNGDRACHE_BALANCING.md).
+
 # Play-Chronologie
 
 Der **9. Lichtkehr 1740 (09.03.1740)** ist unveränderlich **Tag 1 des Plays**. Der 10. Lichtkehr ist Tag 2, der 11. Tag 3; frühere Daten werden als **Vergangenheit** bezeichnet. Die Zählung gilt szenenübergreifend und verwendet den Aleria-Kalender mit 36 Tagen pro Monat und 13 Monaten pro Jahr. `AleriaCalendar.playStartDate`, `playDay` und `playDayLabel` sind die gemeinsame Quelle. Aktuelles Weltdatum und Szenenbeginn dürfen den Playbeginn nicht verschieben. Gespeicherte relative Szenenuhren und mechanische Erholungsschlüssel dürfen nicht zur Korrektur einer Play-Tagesanzeige umnummeriert werden.

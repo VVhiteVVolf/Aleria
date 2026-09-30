@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-28T15:05:59.250Z",
+    "sourceExportedAt": "2026-09-30T12:00:00.000Z",
     "sourceUpdatedAt": "2026-09-03T23:41:14.371Z",
     "sourceDocumentIds": [
       "person--haus-arwydd--ianto-arwydd"
     ],
-    "contentHash": "f3c702ca63e91b2cab2efbcf499aca6c5774b5119043bd2bd53037c9966b0a66"
+    "contentHash": "74be8e2449dad2d8427b00ad2075cc8db34fc21d488af2499468595b4781f467"
   },
   "local": {
     "notes": "",
@@ -335,8 +335,8 @@
           "personId": "ianto-arwydd",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-28T15:05:59.250Z",
-          "lastSyncedAt": "2026-09-28T15:05:59.250Z",
+          "importedAt": "2026-09-30T12:00:00.000Z",
+          "lastSyncedAt": "2026-09-30T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=ianto-arwydd",
           "fingerprint": "{\"name\":\"Ianto Arwydd\",\"title\":\"\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-arwydd\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-arwydd/ianto-arwydd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"tecwyn-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arwydd--tecwyn-draig\",\"name\":\"Tecwyn Draig\"}],\"children\":[]}}"
         }

@@ -33,6 +33,7 @@ export function createManualCombatCondition(value = {}, { id, encounterId = '' }
     id: clean(id, 180), name, active: true, source: clean(value.source || 'Manuell vergeben'),
     presetId: preset?.id || '', statusKind: ['buff', 'debuff', 'condition'].includes(value.kind) ? value.kind : preset?.kind || 'condition',
     description: clean(value.description || preset?.description, 1600), mechanics, manual: true,
+    ...(preset?.blockedResource ? { blockedResource: preset.blockedResource } : {}),
     durationModel: { kind, amount, encounterId: kind === 'combat' ? encounterId : '' }
   });
 }

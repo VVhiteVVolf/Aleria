@@ -1,3 +1,4 @@
+import { JUNGDRACHE_SHARED_TECHNIQUES } from '../src/generated/combat-styles/drachentanz/techniques/jungdrache-shared-techniques.js';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFile } from 'node:fs/promises';
@@ -151,7 +152,7 @@ test('server mechanics materialize Cenyr class attacks for an unmigrated Teulu p
   });
   const profile = resolveCombatProfile(source, { segmentKind: 'combataction' });
   const names = profile.actions.filter(action => action.kind === 'technique' && !action.sourceId.startsWith('class-special-')).map(action => action.name);
-  assert.deepEqual(names, [
+  assert.deepEqual(names.filter(name => !JUNGDRACHE_SHARED_TECHNIQUES.some(t => t.name === name)), [
     'Erster Hieb des Jungdrachens',
     'Biss des Jungdrachens',
     'Gekreuzte Klauen',
@@ -159,6 +160,7 @@ test('server mechanics materialize Cenyr class attacks for an unmigrated Teulu p
     'Stürmende Drachenspur', 'Schuppenschnitt', 'Geschlossene Schuppe', 'Flügelschritt des Jungdrachens'
   ]);
   assert.equal(names.includes('Biss des Drachen'), false);
+  assert.equal(names.length, 22);
 });
 
 test('server mechanics reject spells whose configured slot resource does not exist', () => {

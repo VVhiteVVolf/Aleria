@@ -72,6 +72,8 @@ function enrichCombatNarrationRetrieval(retrieval = {}, facts = {}) {
         ruleAbilitySnapshots: facts.ruleAbilitySnapshots || [],
         secondarySaves: facts.secondarySaves || [],
         followUpAttacks: facts.followUpAttacks || [],
+        counterAttacks: facts.counterAttacks || [],
+        sceneItemEvents: facts.sceneItemEvents || [],
         targetConditionSnapshot: facts.targetConditionSnapshot || null,
         targetResourceSnapshot: facts.targetResourceSnapshot || null,
         effectResults: facts.effectResults || [],
@@ -132,6 +134,7 @@ function buildCombatNarrationQuery(facts = {}) {
       total: Number(save.total) || 0,
       succeeded: !!save.succeeded
     })),
+    counterAttacks: (facts.counterAttacks || []).map(c => ({ name: c.actorName, stance: c.stance, hit: c.resolution?.attack?.hit, damage: c.resolution?.damage?.total || 0 })),
     followUps: (facts.followUpAttacks || []).map(followUp => ({
       hit: !!followUp.attack?.hit,
       critical: !!followUp.attack?.criticalSuccess,
@@ -178,12 +181,19 @@ function buildCombatNarrationQuery(facts = {}) {
       appliedRules: payload.appliedRules,
       secondarySaves: payload.secondarySaves,
       followUps: payload.followUps,
+      ...(payload.counterAttacks.length ? { counterAttacks: payload.counterAttacks } : {}),
       conditionsAfter: payload.conditionsAfter,
       effects: payload.effects,
       defeat: payload.defeat,
       originalDescription: ''
     };
     query = `${prefix}${JSON.stringify(compactPayload)}`;
+    if (query.length > 1180) {
+      // Complete mechanics remain in the mandatory retrieval context. Never truncate JSON.
+      const essential = { actor: String(payload.actor || '').slice(0, 80), target: String(payload.target || '').slice(0, 80),
+        hit: payload.hit, damage: payload.damage, critical: payload.critical, counter: payload.counterAttacks.length > 0 };
+      query = `${prefix}${JSON.stringify(essential)}`;
+    }
   }
   return query;
 }

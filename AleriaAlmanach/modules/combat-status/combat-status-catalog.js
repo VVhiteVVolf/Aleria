@@ -10,7 +10,7 @@ export const COMBAT_STATUS_PRESETS = Object.freeze([
   { id: 'burning', name: 'Brennend', kind: 'debuff', icon: 'Burning_Condition_Icon.webp', description: 'Die Figur brennt. Folgeschaden und Löschbedingungen nach Quelle berücksichtigen.' },
   { id: 'bleeding', name: 'Blutend', kind: 'debuff', icon: 'Bleeding_Condition_Icon.webp', description: 'Eine blutende Wunde. Folgeschaden und Versorgung nach Quelle berücksichtigen.' },
   { id: 'blinded', name: 'Geblendet', kind: 'condition', icon: 'Blinded_Condition_Icon.webp', description: 'Die Sicht ist beeinträchtigt. Einschränkungen nach Quelle berücksichtigen.' },
-  { id: 'prone', name: 'Liegend', kind: 'condition', icon: 'Prone_Condition_Icon.webp', description: 'Die Figur liegt am Boden. Aufstehen und Reichweiten berücksichtigen.' },
+  { id: 'prone', name: 'Liegend', kind: 'condition', icon: 'Prone_Condition_Icon.webp', blockedResource: 'bonus-action', description: 'Die Figur liegt am Boden und verliert im nächsten eigenen Beitrag ihre Bonusaktion. Kein Bewegungsabzug und kein Angriffsnachteil.' },
   { id: 'restrained', name: 'Festgesetzt', kind: 'condition', icon: 'Restrained_Condition_Icon.webp', description: 'Die Figur ist festgesetzt. Befreiungsbedingungen nach Quelle berücksichtigen.' },
   { id: 'stunned', name: 'Betäubt', kind: 'condition', icon: 'Stunned_Condition_Icon.webp', description: 'Die Figur kann keine Kampfhandlungen ausführen. Mit „Abwarten / Zug aussetzen“ vergeht ihr eigener Kampfpost.', mechanics: { blocksActions: true } },
   { id: 'sleeping', name: 'Schlafend', kind: 'condition', icon: 'Sleeping_Condition_Icon.webp', description: 'Die Figur schläft. Aufweckbedingungen nach Quelle berücksichtigen.' },

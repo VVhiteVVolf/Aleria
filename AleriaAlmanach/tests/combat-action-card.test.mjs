@@ -86,8 +86,10 @@ test('Gawains Attacken werden aus ihren Quelldaten nach der erlernten Form grupp
   const options = renderActionOptions(actor, actor.selectedAction.id);
   const foundation = [...getActionGroups(actor).values()].filter(group => group[0].group.includes('Tanz des Jungdrachens'));
   assert.equal(foundation.length, 1, 'Historische und ergänzte Techniken gehören unter dieselbe Formüberschrift');
-  assert.equal(foundation[0].length, 8);
-  assert.deepEqual(foundation[0].map(row => row.minimumLevel), [1, 2, 2, 3, 3, 4, 4, 5]);
+  assert.equal(foundation[0].length, 22);
+  const levels = foundation[0].map(row => row.minimumLevel);
+  assert.ok(levels.every(level => level <= 5));
+  assert.deepEqual(levels, levels.toSorted((a, b) => a - b));
   assert.match(options, /<optgroup\b[^>]*label="[^"]*Tanz des Jungdrachens[^"]*"/);
   const biteOption = options.match(/<option\b[^>]*value="technique:combat-style-drachentanz-jungdrache-02-drachenbiss"[^>]*>[\s\S]*?<\/option>/)?.[0];
   assert.ok(biteOption);

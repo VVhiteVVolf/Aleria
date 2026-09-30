@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-28T15:05:59.250Z",
+    "sourceExportedAt": "2026-09-30T12:00:00.000Z",
     "sourceUpdatedAt": "2026-09-03T23:42:59.212Z",
     "sourceDocumentIds": [
       "person--haus-draig--amadia-draig"
     ],
-    "contentHash": "042e70a53121ec5f34bb5ff58901e9a8afa49f33aa728023ad366037d1b92443"
+    "contentHash": "845365bbb49fd28d78c362806757d85af34a8edf766a225fad49345be9987118"
   },
   "local": {
     "notes": "",
@@ -251,8 +251,8 @@
           "personId": "amadia-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-28T15:05:59.250Z",
-          "lastSyncedAt": "2026-09-28T15:05:59.250Z",
+          "importedAt": "2026-09-30T12:00:00.000Z",
+          "lastSyncedAt": "2026-09-30T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-arth&mode=view&person=amadia-draig",
           "fingerprint": "{\"name\":\"Amadia Draig\",\"title\":\"\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/amadia-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"esyllt-arth\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-arth--esyllt-arth\",\"name\":\"Esyllt Arth\"},{\"personId\":\"owain-draig\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--owain-draig\",\"name\":\"Owain Draig\"}],\"partners\":[],\"children\":[]}}"
         }

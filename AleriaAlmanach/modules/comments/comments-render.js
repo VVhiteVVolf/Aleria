@@ -293,7 +293,8 @@ function renderCommentBubble(c, idx) {
       const inventoryUse = segment.inventoryUse
         ? (window.AleriaInventoryUse?.renderUsage?.(segment) || '')
         : '';
-      const droppedItems = combatResolutions.map(result => window.AleriaSceneItems?.renderEvent?.(result.criticalConsequence?.sceneItemEvent || {}) || '').join('');
+      const droppedItems = combatResolutions.flatMap(result => [result.criticalConsequence?.sceneItemEvent, ...(result.sceneItemEvents || [])]).filter(Boolean)
+        .map(event => window.AleriaSceneItems?.renderEvent?.(event) || '').join('');
       return `${bubble}${inventoryUse}${combatEvaluation}${droppedItems}${skillEvaluation}${challengeStatus}`;
     }).join('');
   }

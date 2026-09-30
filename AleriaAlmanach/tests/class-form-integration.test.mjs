@@ -96,11 +96,11 @@ test('Derwyn creation requires an explicit foundation and grants only its own at
     const chosen = { ...draft, foundationFormId: foundation };
     const shown = getCreationStartingTechniques(chosen);
     assert.ok(shown.length > 0);
-    assert.ok(shown.every(technique => technique.combatStyleFormId === foundation && technique.cenyrTraining.allowedClassIds.includes('derwyn')));
+    assert.ok(shown.every(technique => technique.combatStyleFormId === foundation && (!technique.cenyrTraining.allowedClassIds.length || technique.cenyrTraining.allowedClassIds.includes('derwyn'))));
     const created = applyCharacterCreationDraft(profileFor('derwyn', 1), chosen);
     assert.equal(created.ok, true, created.errors.join(' '));
     assertLegalTraining(created.profile);
-    assert.equal(created.profile.techniques.length, 1);
+    assert.equal(created.profile.techniques.length, foundation === D.jungdrache ? 3 : 1);
   }
 });
 

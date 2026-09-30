@@ -21,6 +21,7 @@ import {
   getResolutionActorLoadoutState,
   getResolutionActorHitPointState,
   getResolutionActorInventoryState,
+  getResolutionTargetInventoryState,
   getResolutionActorResourceState,
   getResolutionHitPointState,
   getResolutionTargetConditionState,
@@ -649,6 +650,8 @@ function buildNarrationFacts(resolution) {
     ruleAbilitySnapshots: resolution.ruleAbilitySnapshots || [],
     secondarySaves: resolution.secondarySaves || [],
     followUpAttacks: resolution.followUpAttacks || [],
+    counterAttacks: resolution.counterAttacks || [],
+    sceneItemEvents: resolution.sceneItemEvents || [],
     mechanicNotes: resolution.mechanicNotes || [],
     targetConditionSnapshot: resolution.targetConditionSnapshot || null,
     targetResourceSnapshot: resolution.targetResourceSnapshot || null,
@@ -770,16 +773,18 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
     };
   }
   setCombatResolutionStatus('Würfelbeleg erfasst …', 'Der Server prüft Profilwerte und endgültigen Zustand beim Speichern.');
+  const nextTargetInventory = getResolutionTargetInventoryState(resolution);
   const nextTargetState = getResolutionHitPointState(resolution);
   const nextTargetConditions = getResolutionTargetConditionState(resolution);
   const nextTargetResources = getResolutionTargetResourceState(resolution);
   const nextTargetConcentration = getResolutionTargetConcentrationState(resolution);
   const nextTargetChanneling = getResolutionTargetChannelingState(resolution);
-  if (nextTargetState || nextTargetConditions || nextTargetResources || nextTargetConcentration !== undefined || nextTargetChanneling !== undefined) {
+  if (nextTargetInventory || nextTargetState || nextTargetConditions || nextTargetResources || nextTargetConcentration !== undefined || nextTargetChanneling !== undefined) {
     const previous = stateContext.workingStates?.get(targetId) || stateContext.storedStates?.get(targetId) || {};
     stateContext.workingStates?.set(targetId, {
       ...previous,
       ...(nextTargetState || {}),
+      ...(nextTargetInventory ? { inventory: nextTargetInventory } : {}),
       ...(nextTargetConditions ? { temporaryConditions: nextTargetConditions } : {}),
       ...(nextTargetResources ? { resources: nextTargetResources } : {}),
       ...(nextTargetConcentration !== undefined ? { concentration: nextTargetConcentration } : {}),
@@ -813,6 +818,8 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
     const previous = stateContext.workingStates?.get(String(snapshot.sourceActorId)) || stateContext.storedStates?.get(String(snapshot.sourceActorId)) || {};
     stateContext.workingStates?.set(String(snapshot.sourceActorId), { ...previous, resources: snapshot.after });
   });
+  for (const event of resolution.sceneItemEvents || []) applySceneItemEvent(stateContext.sceneItems, event);
+  if (resolution.sceneItemEvents?.length) applyDroppedWeaponsToStates(stateContext.workingStates, stateContext.sceneItems);
   stateContext.usedRuleFrequencyKeys = new Set(resolution.usedRuleFrequencyKeys || []);
   resolution.multiTargetIndex = Math.max(0, Number(resolutionOptions.targetIndex) || 0);
   resolution.multiTargetCount = Math.max(1, Number(resolutionOptions.targetCount) || 1);

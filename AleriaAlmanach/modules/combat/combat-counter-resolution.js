@@ -1,0 +1,89 @@
+import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
+import { getWeaponAttackModifier, getWeaponDamageModifier } from './combat-profile-model.js';
+import { consumeCombatAmmunition } from './combat-ammunition.js';
+import { validateCombatActorProfile } from './combat-profile-resolver.js';
+import { compactCombatResolution } from './combat-resolution-storage.js';
+
+function afterProfile(profile, result, role) {
+  const conditions = result[`${role}ConditionSnapshot`]?.after || profile.temporaryConditions || [];
+  const oldTemporary = new Set((profile.temporaryConditions || []).map(condition => condition.id));
+  const beforeArmor = (profile.temporaryConditions || []).reduce((sum, c) => sum + Number(c.mechanics?.armorClass || 0), 0);
+  const afterArmor = conditions.reduce((sum, c) => sum + Number(c.mechanics?.armorClass || 0), 0);
+  const hp = role === 'target' ? { current: result.targetSnapshot.hitPointsAfter, temporary: result.targetSnapshot.temporaryHitPointsAfter }
+    : result.actorHitPointSnapshot?.after;
+  return { ...profile, currentHitPoints: hp?.current ?? profile.currentHitPoints, temporaryHitPoints: hp?.temporary ?? profile.temporaryHitPoints,
+    conditions: (profile.conditions || []).filter(c => !oldTemporary.has(c.id)).concat(conditions), temporaryConditions: conditions,
+    totalDefense: profile.totalDefense - beforeArmor + afterArmor,
+    resources: result[`${role}ResourceSnapshot`]?.after || profile.resources,
+    inventory: result[`${role}InventorySnapshot`]?.after || profile.inventory,
+    concentration: result[`${role}ConcentrationSnapshot`] ? result[`${role}ConcentrationSnapshot`].after : profile.concentration,
+    channeling: result[`${role}ChannelingSnapshot`] ? result[`${role}ChannelingSnapshot`].after : profile.channeling };
+}
+
+function counterProfile(defender, stance) {
+  const weapon = getCombatWeaponLoadout(defender).right;
+  if (!weapon) return null;
+  const unavailable = (defender.droppedWeapons || []).some(item => item.weaponId === weapon.id
+    || weapon.inventoryItemId && item.item?.id === weapon.inventoryItemId);
+  if (unavailable) return null;
+  const action = { id: `weapon:${weapon.id}`, kind: 'weapon', name: weapon.name, weapon,
+    compatible: true, costs: [], auraBypass: { allowed: false }, resolutionMode: 'weapon-attack',
+    criticalThreshold: 20, effects: [], secondarySave: stance.counterAttack.secondarySave
+      ? { ...stance.counterAttack.secondarySave, dc: stance.counterAttack.secondarySave.fixedDc || 13 } : null };
+  return { ...defender, weapon, activeWeaponId: weapon.id, selectedAction: action, profileActionId: action.id,
+    profileActionKind: 'weapon', actionResolutionMode: 'weapon-attack', resourceCosts: [], actionCosts: [],
+    attackModifier: getWeaponAttackModifier(defender, weapon), damageModifier: getWeaponDamageModifier(defender, weapon),
+    equipmentPreparation: null, weaponUnavailable: false, forcedRollMode: 'advantage', paymentMode: 'standard' };
+}
+
+function mergeCounterResult(result, counter, originalActor) {
+  const hpBefore = result.actorHitPointSnapshot?.before || { current: originalActor.currentHitPoints, maximum: originalActor.maximumHitPoints, temporary: originalActor.temporaryHitPoints || 0 };
+  result.actorHitPointSnapshot = { before: hpBefore, after: { current: counter.targetSnapshot.hitPointsAfter,
+    maximum: counter.targetSnapshot.maximumHitPoints, temporary: counter.targetSnapshot.temporaryHitPointsAfter } };
+  if (counter.actorHitPointSnapshot) {
+    result.targetSnapshot.hitPointsAfter = counter.actorHitPointSnapshot.after.current;
+    result.targetSnapshot.temporaryHitPointsAfter = counter.actorHitPointSnapshot.after.temporary;
+  }
+  for (const [outer, inner] of [['actor', 'target'], ['target', 'actor']]) {
+    for (const kind of ['Condition', 'Resource', 'Inventory', 'Concentration', 'Channeling']) {
+      const snapshot = counter[`${inner}${kind}Snapshot`];
+      if (!snapshot) continue;
+      const key = `${outer}${kind}Snapshot`;
+      result[key] = { ...snapshot, before: result[key]?.before ?? snapshot.before };
+    }
+  }
+  // Counter rules have their own actor/target orientation and remain nested in their receipt.
+  result.usedRuleFrequencyKeys = [...new Set([...(result.usedRuleFrequencyKeys || []), ...(counter.usedRuleFrequencyKeys || [])])];
+  for (const kind of ['ruleResourceSnapshots', 'ruleAbilitySnapshots']) {
+    result[kind] = [...(result[kind] || []), ...(counter[kind] || [])];
+  }
+  result.sceneItemEvents = [...(result.sceneItemEvents || []), ...(counter.sceneItemEvents || [])];
+}
+
+/** One prepaid stance, one response; resolve uses the ordinary combat pipeline without recursion. */
+export async function attachPreparedCounter(result, actor, target, options, resolve) {
+  if (options.counterAttack || !['weapon', 'technique'].includes(result.profileActionKind)
+    || result.resolutionMode !== 'weapon-attack' || actor.characterId === target.characterId) return result;
+  const missed = [result.attack, ...(result.followUpAttacks || []).map(entry => entry.attack)].some(attack => attack?.hit === false);
+  if (!missed) return result;
+  const targetAfter = afterProfile(target, result, 'target');
+  const stance = targetAfter.temporaryConditions.find(condition => condition.active !== false && condition.counterAttack?.enabled);
+  if (!stance) return result;
+  const actorAfter = afterProfile(actor, result, 'actor');
+  targetAfter.temporaryConditions = targetAfter.temporaryConditions.filter(condition => condition.id !== stance.id);
+  targetAfter.conditions = targetAfter.conditions.filter(condition => condition.id !== stance.id);
+  result.targetConditionSnapshot = { before: result.targetConditionSnapshot?.before || target.temporaryConditions || [], after: targetAfter.temporaryConditions };
+  const counterActor = counterProfile(targetAfter, stance);
+  let unavailable = !counterActor ? 'Keine geführte, verfügbare Waffe.' : '';
+  if (counterActor && !validateCombatActorProfile(counterActor).ready) unavailable = 'Die Figur kann nicht mehr gegenangreifen.';
+  if (actorAfter.currentHitPoints <= 0) unavailable = 'Das angreifende Ziel ist bereits kampfunfähig.';
+  if (!unavailable) {
+    try { consumeCombatAmmunition(counterActor.inventory, counterActor.weapon.ammunition); }
+    catch (error) { unavailable = error.message; }
+  }
+  if (unavailable) { result.counterAttacks = [{ stance: stance.name, actorName: target.name, skipped: unavailable }]; return result; }
+  const counter = await resolve(counterActor, actorAfter);
+  mergeCounterResult(result, counter, actor);
+  result.counterAttacks = [{ stance: stance.name, actorName: target.name, targetName: actor.name, resolution: compactCombatResolution(counter) }];
+  return result;
+}

@@ -11,7 +11,7 @@ import { resolveCombatProfile as serverProfile } from '../src/generated/combat/c
 test('Duncans Meistertechniken und besondere Angriffe bleiben über 60 Einträge hinaus serverseitig verfügbar', async () => {
   const character=JSON.parse(await readFile(new URL('../../../Charakter%20Archiv%20Exporte/duncan-gafyr.json',import.meta.url),'utf8')).character;
   const client=browserProfile(character),server=serverProfile(character);
-  assert.equal(server.techniques.length,77); // Archive fixture includes an additional selected path.
+  assert.equal(server.techniques.length,93); // Archive fixture includes an additional selected path.
   assert.deepEqual(server.actions,client.actions);
   for(const id of ['combat-style-drachentanz-vollendeter-waffenmeister']) {
     assert.ok(server.actions.some(action=>action.sourceId===id),id);
@@ -41,7 +41,7 @@ test('both Derwyn foundations materialize the same legal scene actions on browse
     const server = serverProfile(character);
     assert.deepEqual(server.actions, client.actions, foundation);
     const actions = server.actions.filter(action => action.kind === 'technique');
-    assert.equal(actions.length, 6, foundation);
+    assert.equal(actions.length, foundation === 'drachentanz-form-i-jungdrache' ? 23 : 6, foundation);
     assert(server.techniques.every(technique => technique.combatStyleFormId === foundation), foundation);
   }
 });

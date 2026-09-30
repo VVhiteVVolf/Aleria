@@ -120,6 +120,7 @@ export function sanitizeCombatTriggerRule(value = {}, index = 0) {
     consumeReaction: boolean(source.consumeReaction, true),
     costs: normalizeCombatResourceCosts(source.costs),
     actionKinds: [...new Set(actionKinds)].slice(0, 12),
+    ...(source.weaponAttackOnly === true ? { weaponAttackOnly: true } : {}),
     skillIds: normalizedList(source.skillIds),
     ...(source.damageTypes ? { damageTypes: normalizedList(source.damageTypes) } : {}),
     requiredTargetTags: normalizedList(source.requiredTargetTags),
@@ -236,6 +237,7 @@ function conditionAllows(rule, state = {}) {
 }
 
 function actionAllows(rule, actionKind, profileActionId = '', state = {}) {
+  if (rule.weaponAttackOnly && state.actorProfile?.actionResolutionMode !== 'weapon-attack') return false;
   if (rule.damageTypes?.length && !rule.damageTypes.includes(String(state.actorProfile?.weapon?.damageType || '').toLowerCase())) return false;
   if (rule.requiredWeaponId) {
     if (!['weapon', 'technique'].includes(actionKind)) return false;

@@ -98,12 +98,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-28T15:05:59.250Z",
+    "sourceExportedAt": "2026-09-30T12:00:00.000Z",
     "sourceUpdatedAt": "2026-09-03T23:47:19.270Z",
     "sourceDocumentIds": [
       "person--haus-laidir--padraigin-laidir"
     ],
-    "contentHash": "c33b97b181f5e79ee2cf17662fb96fbb71895e2848911153c333696845227e42"
+    "contentHash": "137423d3a290e8fcd7e06f3a5162f8312406463ebe47b3028a771c4c43e9e09b"
   },
   "local": {
     "notes": "",
@@ -302,8 +302,8 @@
           "personId": "padraigin-laidir",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-28T15:05:59.250Z",
-          "lastSyncedAt": "2026-09-28T15:05:59.250Z",
+          "importedAt": "2026-09-30T12:00:00.000Z",
+          "lastSyncedAt": "2026-09-30T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-dal-t-saor&mode=view&person=padraigin-laidir",
           "fingerprint": "{\"name\":\"Pádraigin Laidir\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-laidir\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-ruin-laidir/padraigin-laidir.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"junaid-tsaoir\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dal-t-saor--junaid-tsaoir\",\"name\":\"Junaid T’Saoir\"}],\"children\":[]}}"
         }

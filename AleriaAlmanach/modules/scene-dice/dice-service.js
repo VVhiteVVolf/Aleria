@@ -105,6 +105,14 @@ class SceneDiceService {
     }
   }
 
+  async rollSilent(notation, context = {}) {
+    this.validate(notation);
+    const result = applyRollContext(await this.parser.execute(notation, this.fallbackEngine), context);
+    result.visualMode = 'silent';
+    result.id = this.history.add(result).id;
+    return result;
+  }
+
   clear() {
     this.audio.cancelRoll();
     this.engine?.clear();

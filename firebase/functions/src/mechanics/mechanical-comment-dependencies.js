@@ -1,6 +1,7 @@
 import { getEncounterResolutionGroups } from '../generated/combat/combat-encounter-summary.js';
 import { getConditionConcentrationOwnerId } from '../generated/combat/combat-condition-lifecycle.js';
 import { deriveCombatStateFromComments } from '../generated/combat/combat-state-model.js';
+import { sceneItemEvents } from '../generated/scene-items/scene-items-model.js';
 
 function concentrationLinks(states) {
   const links = new Map();
@@ -42,11 +43,10 @@ export function findLaterMechanicalDependency(history = [], commentId) {
   const index = history.findIndex(comment => comment.id === commentId);
   if (index < 0) return null;
   const affected = actorIds(history[index]);
-  const sceneIds = new Set([
-    history[index].sceneItemEvent?.sceneItemId,
-    ...(history[index].commentSegments || []).flatMap(segment => [segment.sceneItemEvent?.sceneItemId, segment.inventoryUse?.sceneItemId,
-      ...(segment.combatResolutions || [segment.combatResolution]).map(result => result?.criticalConsequence?.sceneItemEvent?.sceneItemId)])
-  ].filter(Boolean));
+  const sceneIds = new Set(sceneItemEvents(history[index]).map(event => event.sceneItemId));
+  for (const segment of history[index].commentSegments || []) {
+    if (segment.inventoryUse?.sceneItemId) sceneIds.add(segment.inventoryUse.sceneItemId);
+  }
   // Breaking or removing concentration can change a third participant's
   // state. Their later contribution also prevents an unsafe partial undo.
   const links = concentrationLinks(deriveCombatStateFromComments(history.slice(0, index)));

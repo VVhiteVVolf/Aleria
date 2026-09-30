@@ -15,6 +15,7 @@ import { bindActionPicker, renderActionPicker } from './combat-action-picker.js?
 import { bindTargetPortraitFallback, optionLabel, renderSelectedTargetPortraits, renderTargetOptions } from './combat-target-picker.js?v=20260928-equipment-art-v4';
 import { renderCombatWeaponGrip } from './combat-weapon-grip-view.js';
 import { isSelfTargetAction } from '../combat-action-targeting.js';
+import { renderCounterConsequences } from './combat-counter-view.js';
 function escapeHtml(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -397,7 +398,7 @@ export function renderCombatEvaluation(source = {}) {
     <details class="combat-evaluation" data-state="${state}" data-narration-source="${narrationSource.key}" aria-label="Kampfauswertung">
       <summary class="combat-evaluation-summary">
         ${renderEvaluationActors(resolution.actorId, resolution.actorName, resolution.targetId, resolution.targetName)}
-        <strong class="combat-evaluation-summary-label">${escapeHtml(getEvaluationLabel(resolution))}</strong>
+        <strong class="combat-evaluation-summary-label">${escapeHtml(getEvaluationLabel(resolution))}${resolution.counterAttacks?.some(counter => counter.resolution) ? ' · Konter' : ''}</strong>
         <span class="combat-evaluation-toggle-icon" aria-hidden="true"></span>
       </summary>
       <div class="combat-evaluation-body">
@@ -406,6 +407,7 @@ export function renderCombatEvaluation(source = {}) {
           <strong>${escapeHtml(getEvaluationLabel(resolution))}</strong>
         </div>
         ${narration ? `<p>${escapeHtml(narration)}</p>` : ''}
+        ${renderCounterConsequences(resolution, { renderEffectResult, summarizeRuleEffects })}
         ${resolution.criticalConsequence ? `<p class="combat-critical-consequence"><strong>W10 · ${escapeHtml(resolution.criticalConsequence.roll)} · ${escapeHtml(resolution.criticalConsequence.name)}</strong><br>${escapeHtml(resolution.criticalConsequence.actorName)}: ${escapeHtml(resolution.criticalConsequence.description)}</p>` : ''}
         <div class="combat-evaluation-mechanics">
           <span><b>${escapeHtml(attack.total)}</b> ${rollLabel} · ${escapeHtml(attack.notation || '')}</span>

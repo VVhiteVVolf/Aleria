@@ -37,13 +37,15 @@ export function getCombatStyleForm(styleId, formId) {
   return form ? clone(form) : null;
 }
 
-// null means deliberately unscheduled. An explicit class map never falls back
-// to the canonical level for an unlisted attack (including future additions).
+// null remains deliberately unscheduled. Shared confirmed form additions also
+// reach older explicit class maps; class-specific entries still need their grant.
 export function getCombatStyleTechniqueUnlockLevel(grant, technique) {
   const form = findForm(findStyle(grant?.styleId), grant?.formId);
   if (!form || form.minimumLevel == null || grant?.minimumLevel === null) return null;
   const override = grant?.techniqueUnlockLevels;
-  const value = override == null ? technique.minimumLevel : override[technique.id];
+  const shared = technique.status === 'confirmed' && technique.cenyrTraining?.allowedClassIds?.length === 0;
+  const value = override == null || shared && !Object.hasOwn(override, technique.id)
+    ? technique.minimumLevel : override[technique.id];
   if (value == null || !Number.isInteger(value) || value < 1 || value > 30) return null;
   return Math.max(normalizedLevel(grant.minimumLevel), form.minimumLevel, value);
 }

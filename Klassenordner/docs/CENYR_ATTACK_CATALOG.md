@@ -2,7 +2,7 @@
 
 > Diese Datei wird aus dem Drachentanz-Register erzeugt. Änderungen gehören in die jeweiligen Technikmodule unter `AleriaAlmanach/modules/combat-styles/drachentanz/techniques/`.
 
-Der Katalog enthält **297 Attacken** in **20 Formen und Pfaden**. Davon sind **16 historisch bestätigt** und **281 Balanceentwürfe**. Cenyr-Charakterbögen wählen passende Einträge automatisch nach Klasse, Stufe, Waffen und verfügbaren Slots; der redaktionelle Entwurfsstatus bleibt erhalten.
+Der Katalog enthält **325 Attacken** in **20 Formen und Pfaden**. Davon sind **32 historisch bestätigt** und **293 Balanceentwürfe**. Cenyr-Charakterbögen wählen passende Einträge automatisch nach Klasse, Stufe, Waffen und verfügbaren Slots; der redaktionelle Entwurfsstatus bleibt erhalten.
 
 Die Vergleichsspalten verwenden einheitlich eine Waffe mit 1W10. Sie zeigen reine Schadenswürfel ohne Attribut-, Waffen- und Klassenboni. In der Szene gilt die tatsächliche Waffe. Ältere Formen erhalten genau einen wachsenden Ausbildungswürfel. Details: [Schadensbalance](COMBAT_DAMAGE_BALANCE.md).
 
@@ -10,19 +10,19 @@ Die Vergleichsspalten verwenden einheitlich eine Waffe mit 1W10. Sie zeigen rein
 
 | Klasse | Lernbudget | Katalogoptionen | Bestätigt und automatisch vergeben |
 | --- | ---: | ---: | ---: |
-| Milwr | 9 | 9 | 0 |
-| Teulu | 24 | 95 | 10 |
-| Cantref | 14 | 38 | 0 |
-| Uchelwyr | 16 | 65 | 0 |
-| Helwyr | 12 | 145 | 0 |
-| Arthwyr | 14 | 98 | 0 |
-| Barddwyr | 8 | 48 | 0 |
+| Milwr | 9 | 26 | 17 |
+| Teulu | 24 | 111 | 26 |
+| Cantref | 14 | 59 | 17 |
+| Uchelwyr | 16 | 86 | 17 |
+| Helwyr | 12 | 162 | 17 |
+| Arthwyr | 14 | 119 | 17 |
+| Barddwyr | 8 | 65 | 17 |
 
 ## Formen und Attacken
 
 ### Tanz des Jungdrachens
 
-Grundform · Ausbildung Stufe 1–6 · 60 Attacken im Gesamtpool.
+Grundform · Ausbildung Stufe 1–6 · 88 Attacken im Gesamtpool.
 
 | Stufe | Attacke | Klassen | Waffenprofile | Schadensmodell | Mit 1W10 bei Freigabe | Mit 1W10 auf Stufe 20 | Kosten | Wirkung | Stand |
 | ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -32,31 +32,48 @@ Grundform · Ausbildung Stufe 1–6 · 60 Attacken im Gesamtpool.
 | 1 | Erster Soldhieb | Milwr | sword, spear, axe, battleaxe, club, mace | 1W6 | 1W6 | 1W6+1W8 | 1 Bonusaktion | Verursacht Technikschaden. | Entwurf |
 | 1 | Federblick | Helwyr | longbow | 1W6 | 1W6 | 1W6+1W10 | 1 Bonusaktion | Der Schuss verursacht Technikschaden und erhält +1 Angriff. | Entwurf |
 | 1 | Hoher Grußhieb | Uchelwyr | sword, lance | 1W6 | 1W6 | 1W6+1W10 | 1 Bonusaktion | Verursacht Technikschaden. | Entwurf |
+| 1 | Kurze Drachenspur | Alle berechtigten Cenyr-Klassen |  | 1W6 | 1W6 | 1W6+1W10 | 1 Bonusaktion | Leichter Einzelangriff mit dem Schaden einer schnellen Grundtechnik; kein kostenloser Folgeangriff. | Bestätigt |
 | 1 | Kuss der Speerspitze | Cantref, Uchelwyr | spear, lance, partisan, trident, halberd | 1W6 | 1W6 | 1W6+1W10 | 1 Bonusaktion | Verursacht Technikschaden und erlaubt danach einen Schritt von 1 Meter, ohne die Speerspitze vom Ziel zu lösen. | Entwurf |
 | 1 | Laufender Schuss | Helwyr | shortbow | 1W6 | 1W6 | 1W6+1W10 | 1 Bonusaktion | Verursacht Technikschaden und erlaubt 2 Meter Eigenbewegung. | Entwurf |
+| 1 | Sicherer Drachenhieb | Alle berechtigten Cenyr-Klassen |  | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) | 1W10+1W6 | 2W10+1W6 | 1 Aktion | Einzelangriff mit gewöhnlichem Technikschaden, ohne weiteren Zusatzeffekt. | Bestätigt |
 | 1 | Tatze des Jungdrachens | Arthwyr | greatsword, axe, battleaxe, club, mace | 1W6 | 1W6 | 1W6+1W10 | 1 Bonusaktion | Verursacht Technikschaden. | Entwurf |
 | 1 | Vershieb | Barddwyr | sword | 1W6 | 1W6 | 1W6+1W10 | 1 Bonusaktion | Verursacht Technikschaden. | Entwurf |
 | 1 | Waldwacht | Helwyr | sword | 1W6 | 1W6 | 1W6+1W10 | 1 Bonusaktion | Verursacht Technikschaden und erlaubt 1 Meter Eigenbewegung. | Entwurf |
 | 1 | Zwei Fänge | Helwyr | dual-swords, dual-daggers | 1W6 | 1W6 | 1W6+1W10 | 1 Bonusaktion | Verursacht Technikschaden. | Entwurf |
 | 2 | Biss des Jungdrachens | Teulu | sword | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) | 1W10+1W8 | 2W10+1W8 | 1 Aktion + 1 Reaktion | Bei einem Treffer verursacht die geführte Schwertwaffe den aktuellen Technikschaden. | Bestätigt |
 | 2 | Brechender Biss | Arthwyr | greatsword, axe, battleaxe, club, mace | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) | 1W10+1W8 | 2W10+1W8 | 1 Aktion + 1 Reaktion | Verursacht Technikschaden; misslingt ein Stärkerettungswurf, erhält das Ziel −1 Rüstungsklasse. | Entwurf |
+| 2 | Gesammelter Blick | Alle berechtigten Cenyr-Klassen |  | Kein direkter Schaden |  |  | 1 Bonusaktion + 1 Reaktion | +2 auf den nächsten Waffen- oder Technikangriff; auch ein Fehlschlag verbraucht die Vorbereitung. | Bestätigt |
+| 2 | Geschlossene Bärenhut | Arthwyr | greatsword, axe, battleaxe, club, mace | Kein direkter Schaden |  |  | 1 Reaktion | +1 RK für einen eigenen Beitrag; kein Angriff. | Entwurf |
+| 2 | Geschlossene Speerwacht | Cantref | spear, lance, partisan, trident, halberd | Kein direkter Schaden |  |  | 1 Reaktion | +1 RK für einen eigenen Beitrag; kein Angriff. | Entwurf |
+| 2 | Geschuppte Deckung | Alle berechtigten Cenyr-Klassen |  | Kein direkter Schaden |  |  | 1 Reaktion + 1 Bonusaktion | +2 RK bis zum Ende des nächsten eigenen Beitrags. Ersetzt andere Jungdrachen-Schutzhaltungen. | Bestätigt |
 | 2 | Haken des Jungdrachens | Cantref, Uchelwyr | spear, lance, partisan, trident, halberd | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) | 1W10+1W8 | 2W10+1W8 | 1 Aktion + 1 Reaktion | Verursacht Technikschaden. Misslingt ein Stärkerettungswurf, erhält das Ziel −1 Angriff bis zu seinem nächsten Beitrag. | Entwurf |
+| 2 | Hut des Wappenträgers | Uchelwyr | sword, lance | Kein direkter Schaden |  |  | 1 Reaktion | +1 RK für einen eigenen Beitrag; kein Angriff. | Entwurf |
 | 2 | Nagel des Jungdrachens | Helwyr | longbow | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) | 1W10+1W6 | 2W10+1W6 | 1 Aktion | Verursacht Technikschaden. | Entwurf |
 | 2 | Ruhige Klaue | derwyn | sword | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) | 1W10+1W6 | 2W10+1W6 | 1 Aktion | Ein regulärer Treffer mit Waffenwürfeln und begrenztem Technikbonus. | Bestätigt |
 | 2 | Sattelantritt | Uchelwyr | sword, lance | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) | 1W10+1W6 | 2W10+1W6 | 1 Aktion | Verursacht Technikschaden und erlaubt 3 Meter Eigenbewegung. | Entwurf |
 | 2 | Schildlückenstoß | Milwr | sword, spear, axe, battleaxe, club, mace | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) | 1W10+1W6 | 1W10+1W6+1W8 | 1 Aktion | Verursacht Technikschaden und erhält +1 Angriff. | Entwurf |
 | 2 | Schuppenschnitt | Teulu | sword | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) | 1W10+1W6 | 2W10+1W6 | 1 Aktion | Ein kräftiger Einzelhieb mit Technikschaden. Bonusaktion und Reaktion bleiben verfügbar. | Bestätigt |
 | 2 | Synkope der Klinge | Barddwyr | rapier | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) | 1W10+1W6 | 2W10+1W6 | 1 Aktion | Verursacht Technikschaden und erhält +1 Angriff. | Entwurf |
+| 2 | Täuschende Klaue | Alle berechtigten Cenyr-Klassen |  | 1× Waffenwürfel | 1W10 | 1W10 | 1 Aktion + 1 Bonusaktion | Normaler Waffenschaden. Bei Treffer erhält der eigene nächste Waffen- oder Technikangriff Vorteil; einmalig. | Bestätigt |
+| 2 | Verwurzelte Schuppe | Alle berechtigten Cenyr-Klassen |  | Kein direkter Schaden |  |  | 1 Bonusaktion | Der nächste schädigende Treffer verursacht 4 Schaden weniger. Einmalig; ersetzt andere Jungdrachen-Schutzhaltungen. | Bestätigt |
 | 2 | Zügelhand | Uchelwyr | sword, lance | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) | 1W10+1W8 | 2W10+1W8 | 1 Aktion + 1 Reaktion | Verursacht Technikschaden und gibt bis zum nächsten eigenen Beitrag +1 Rüstungsklasse. | Entwurf |
 | 2 | Zweiter Flügelschlag | Helwyr | shortbow | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) | 1W10+1W6 | 2W10+1W6 | 1 Aktion | Verursacht Technikschaden. | Entwurf |
+| 3 | Gebundene Klaue | Alle berechtigten Cenyr-Klassen |  | 1× Waffenwürfel | 1W10 | 1W10 | 1 Aktion + 1 Bonusaktion | Normaler Waffenschaden; STÄ-Rettung SG 13, bei Scheitern keine Reaktion im nächsten eigenen Beitrag. | Bestätigt |
 | 3 | Gekreuzte Klauen | Teulu | sword | 1× Waffenwürfel + 1 Technikbonus | 1W10+1 | 2W10+1 | 1 Reaktion | Die kurze Antwort aus der Deckung verursacht bei einem Treffer den aktuellen Technikschaden. | Bestätigt |
 | 3 | Gekreuzter Fang | Helwyr | dual-swords, dual-daggers | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) | 1W10+1W6 | 2W10+1W6 | 1 Aktion | Verursacht Technikschaden; ein misslungener Geschicklichkeitsrettungswurf erschwert den nächsten Angriff. | Entwurf |
 | 3 | Geschlossene Hut | derwyn | sword | Kein direkter Schaden |  |  | 1 Reaktion | Kein Schaden; +1 RK für einen eigenen Beitrag. | Bestätigt |
-| 3 | Geschlossene Schuppe | Teulu | sword | Kein direkter Schaden |  |  | 1 Reaktion | Kein Schaden. +2 RK bis zum Ende des nächsten eigenen Kampfposts. Erneutes Anwenden erneuert nur die Dauer. | Bestätigt |
+| 3 | Geschlossene Schuppe | Alle berechtigten Cenyr-Klassen |  | Kein direkter Schaden |  |  | 1 Reaktion | Kein Schaden. +1 RK bis zum Ende des nächsten eigenen Kampfposts. Ersetzt andere Jungdrachen-Schutzhaltungen; nicht stapelbar. | Bestätigt |
+| 3 | Kurzer Prankenhieb | Arthwyr | greatsword, axe, battleaxe, club, mace | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) | 1W10+1W6 | 2W10+1W6 | 1 Aktion | Technikschaden mit +1 auf den Angriffswurf. | Entwurf |
+| 3 | Lauernde Klaue | Alle berechtigten Cenyr-Klassen |  | Kein direkter Schaden |  |  | 1 Bonusaktion + 1 Reaktion | Lauert auf den nächsten verfehlten Waffen- oder Technikangriff: ein automatischer Gegenangriff mit Vorteil und normalem Schaden der aktuell geführten Waffe. Einmalig, bis zum Ende des nächsten eigenen Beitrags; keine Konterketten. Treffer des Gegners lösen den Konter nicht aus. | Bestätigt |
+| 3 | Schnitt über die Flanke | Uchelwyr | sword, lance | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) | 1W10+1W6 | 2W10+1W6 | 1 Aktion | Technikschaden mit +1 auf den Angriffswurf. | Entwurf |
 | 3 | Schulter des Bären | Arthwyr | greatsword, axe, battleaxe, club, mace | 1× Waffenwürfel + 1 Technikbonus | 1W10+1 | 2W10+1 | 1 Reaktion | Reaktionsangriff mit Technikschaden; bis zum nächsten eigenen Beitrag +1 Rüstungsklasse. | Entwurf |
+| 3 | Stäubende Schwinge | Alle berechtigten Cenyr-Klassen |  | 1× Waffenwürfel | 1W10 | 1W10 | 1 Aktion + 1 Reaktion | Normaler Waffenschaden; GES-Rettung SG 13, bei Scheitern Liegend: keine Bonusaktion im nächsten eigenen Beitrag. | Bestätigt |
 | 3 | Steigbügelkonter | Uchelwyr | sword, lance | 1× Waffenwürfel + 1 Technikbonus | 1W10+1 | 2W10+1 | 1 Reaktion | Reaktionsangriff mit Technikschaden. | Entwurf |
+| 3 | Stoß an der Schaftlinie | Cantref | spear, lance, partisan, trident, halberd | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) | 1W10+1W6 | 2W10+1W6 | 1 Aktion | Technikschaden mit +1 auf den Angriffswurf. | Entwurf |
 | 3 | Wacht der langen Schuppe | Cantref, Uchelwyr | spear, lance, partisan, trident, halberd | 1× Waffenwürfel + 1 Technikbonus | 1W10+1 | 2W10+1 | 1 Reaktion | Reaktionsangriff mit Technikschaden. Bis zum nächsten eigenen Beitrag steigt die Rüstungsklasse um 1. | Entwurf |
+| 4 | Entwaffnende Klaue | Alle berechtigten Cenyr-Klassen |  | Kein direkter Schaden |  |  | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | Lauert auf den nächsten verfehlten Waffen- oder Technikangriff: ein automatischer Gegenangriff mit Vorteil und normalem Schaden der aktuell geführten Waffe. Bei Treffer: STÄ-Rettungswurf SG 13; bei Scheitern Die geführte Waffe wird entwaffnet und liegt aufnehmbar in der Szene. Einmalig, bis zum Ende des nächsten eigenen Beitrags; keine Konterketten. Treffer des Gegners lösen den Konter nicht aus. | Bestätigt |
 | 4 | Flügelschritt des Jungdrachens | Teulu | sword | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) + 1 Technikbonus | 1W10+1W6+1 | 2W10+1W6+1 | 1 Bonusaktion + 1 Besondere Aktion | Technikschaden; bei Treffer bis zu 2 m Eigenbewegung im verfügbaren Bewegungsbudget und +1 RK bis zum Ende des nächsten eigenen Kampfposts. | Bestätigt |
+| 4 | Gleitende Schuppe | Alle berechtigten Cenyr-Klassen |  | Kein direkter Schaden |  |  | 1 Reaktion + 1 Besondere Aktion | Der nächste gegen dich gerichtete Waffen- oder Technikangriff hat Nachteil. Einmalig; ersetzt andere Jungdrachen-Schutzhaltungen. | Bestätigt |
 | 4 | Grüner Halbkreis | Helwyr | sword | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) | 1W10+1W6 | 2W10+1W6 | 1 Aktion + 1 Bonusaktion | Trifft bis zu zwei Gegner mit je Technikschaden. | Entwurf |
 | 4 | Klaffender Kreis | Arthwyr | greatsword, axe, battleaxe, club, mace | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) + 1 Technikbonus | 1W10+1W6+1 | 2W10+1W6+1 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | Trifft bis zu drei Gegner mit je Technikschaden. | Entwurf |
 | 4 | Kleine Wende | derwyn | sword | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) | 1W10+1W8 | 2W10+1W8 | 1 Aktion + 1 Bonusaktion | Ein Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. | Bestätigt |
@@ -66,15 +83,26 @@ Grundform · Ausbildung Stufe 1–6 · 60 Attacken im Gesamtpool.
 | 4 | Kreisflug | Helwyr | shortbow | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) | 1W10+1W8 | 2W10+1W8 | 1 Aktion + 1 Bonusaktion | Verursacht Technikschaden und gibt bis zum nächsten Beitrag +1 Rüstungsklasse. | Entwurf |
 | 4 | Nachsetzen der Reihe | Milwr | sword, spear, axe, battleaxe, club, mace | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) | 1W10+1W8 | 1W10+2W8 | 1 Aktion + 1 Bonusaktion | Verursacht Technikschaden. | Entwurf |
 | 4 | Refrain der Spitze | Barddwyr | rapier | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) | 1W10+1W8 | 2W10+1W8 | 1 Aktion + 1 Bonusaktion | Verursacht Technikschaden; bis zum nächsten eigenen Beitrag +1 Rüstungsklasse. | Entwurf |
+| 4 | Schritt des Seebären | Arthwyr | greatsword, axe, battleaxe, club, mace | Kein direkter Schaden |  |  | 1 Bonusaktion + 1 Reaktion | +2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung. | Entwurf |
+| 4 | Schritt hinter der Spitze | Cantref | spear, lance, partisan, trident, halberd | Kein direkter Schaden |  |  | 1 Bonusaktion + 1 Reaktion | +2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung. | Entwurf |
+| 4 | Schritt neben dem Ross | Uchelwyr | sword, lance | Kein direkter Schaden |  |  | 1 Bonusaktion + 1 Reaktion | +2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung. | Entwurf |
 | 4 | Schweifkreis des Jungdrachens | Teulu | sword | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W6) + 1 Technikbonus | 1W10+1W6+1 | 2W10+1W6+1 | 1 Aktion + 1 Besondere Aktion | Alle ausgewählten Gegner im Umkreis von 3 Metern erleiden bei einem Treffer jeweils den aktuellen Technikschaden. | Bestätigt |
+| 4 | Unruhiger Griff | Alle berechtigten Cenyr-Klassen |  | 1× Waffenwürfel | 1W10 | 1W10 | 1 Aktion + 1 Reaktion | Normaler Waffenschaden; STÄ-Rettung SG 13, bei Scheitern keine Bonusaktion im nächsten eigenen Beitrag. | Bestätigt |
 | 4 | Weite Schuppe | Helwyr | longbow | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) | 1W10+1W8 | 2W10+1W8 | 1 Aktion + 1 Bonusaktion | Verursacht Technikschaden. | Entwurf |
+| 5 | Brechende Bärenklaue | Arthwyr | greatsword, axe, battleaxe, club, mace | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) + 1 Technikbonus | 1W10+1W8+1 | 2W10+1W8+1 | 1 Aktion + 1 Besondere Aktion | Verstärkter Technikschaden aus der gemeinsamen Schadensstaffel; kein kostenloser Folgeangriff. | Entwurf |
+| 5 | Durchbruch des Grenzwächters | Cantref | spear, lance, partisan, trident, halberd | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) + 1 Technikbonus | 1W10+1W8+1 | 2W10+1W8+1 | 1 Aktion + 1 Besondere Aktion | Verstärkter Technikschaden aus der gemeinsamen Schadensstaffel; kein kostenloser Folgeangriff. | Entwurf |
 | 5 | Durchstoßende Spur | Cantref | spear, lance, partisan, trident, halberd | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) + 1 Technikbonus | 1W10+1W8+1 | 2W10+1W8+1 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | Verursacht Technikschaden und behandelt die Zielverteidigung als 1 Punkt niedriger. | Entwurf |
+| 5 | Entschlossener Wappenhieb | Uchelwyr | sword, lance | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) + 1 Technikbonus | 1W10+1W8+1 | 2W10+1W8+1 | 1 Aktion + 1 Besondere Aktion | Verstärkter Technikschaden aus der gemeinsamen Schadensstaffel; kein kostenloser Folgeangriff. | Entwurf |
+| 5 | Erstickte Antwort | Alle berechtigten Cenyr-Klassen |  | Kein direkter Schaden |  |  | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | Lauert auf den nächsten verfehlten Waffen- oder Technikangriff: ein automatischer Gegenangriff mit Vorteil und normalem Schaden der aktuell geführten Waffe. Bei Treffer: STÄ-Rettungswurf SG 13; bei Scheitern Im nächsten eigenen Beitrag ist die Reaktion gesperrt. Einmalig, bis zum Ende des nächsten eigenen Beitrags; keine Konterketten. Treffer des Gegners lösen den Konter nicht aus. | Bestätigt |
+| 5 | Fallende Schwinge | Alle berechtigten Cenyr-Klassen |  | Kein direkter Schaden |  |  | 1 Aktion + 1 Bonusaktion + 1 Besondere Aktion | Lauert auf den nächsten verfehlten Waffen- oder Technikangriff: ein automatischer Gegenangriff mit Vorteil und normalem Schaden der aktuell geführten Waffe. Bei Treffer: GES-Rettungswurf SG 13; bei Scheitern Liegend: Die Bonusaktion entfällt im nächsten eigenen Beitrag. Kein Bewegungsabzug und kein Angriffsnachteil. Einmalig, bis zum Ende des nächsten eigenen Beitrags; keine Konterketten. Treffer des Gegners lösen den Konter nicht aus. | Bestätigt |
 | 5 | Niedrige Lanzenbahn | Uchelwyr | sword, lance | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) + 1 Technikbonus | 1W10+1W8+1 | 2W10+1W8+1 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | Verursacht Technikschaden und behandelt die Zielverteidigung als 1 Punkt niedriger. | Entwurf |
 | 5 | Ruhiger Biss | derwyn | sword | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) | 1W10+1W8 | 2W10+1W8 | 1 Aktion + 1 Reaktion | Technikschaden; nach misslungenem KRF-Rettungswurf −1 Angriff für einen eigenen Beitrag. | Bestätigt |
 | 5 | Schattenpaar | Helwyr | dual-swords, dual-daggers | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) + 1 Technikbonus | 1W10+1W8+1 | 2W10+1W8+1 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | Verursacht Technikschaden. | Entwurf |
 | 5 | Stürmende Drachenspur | Teulu | sword | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) + 1 Technikbonus | 1W10+1W8+1 | 2W10+1W8+1 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | Bei einem Treffer verursacht die geführte Schwertwaffe den aktuellen Technikschaden. | Bestätigt |
 | 5 | Sturmpranke | Arthwyr | greatsword, axe, battleaxe, club, mace | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) + 1 Technikbonus | 1W10+1W8+1 | 2W10+1W8+1 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | Verursacht Technikschaden und drängt das Ziel bei misslungenem Stärkerettungswurf 3 Meter zurück. | Entwurf |
 | 5 | Vorstoß des hohen Sitzes | Uchelwyr | sword, lance | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) + 1 Technikbonus | 1W10+1W8+1 | 2W10+1W8+1 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | Verursacht Technikschaden und schiebt das Ziel bei misslungenem Stärkerettungswurf 2 Meter zurück. | Entwurf |
+| 6 | Brechender Widerhall | Alle berechtigten Cenyr-Klassen |  | Kein direkter Schaden |  |  | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion | Lauert auf den nächsten verfehlten Waffen- oder Technikangriff: ein automatischer Gegenangriff mit Vorteil und normalem Schaden der aktuell geführten Waffe. Bei Treffer: KON-Rettungswurf SG 13; bei Scheitern Im nächsten eigenen Beitrag ist die Aktion gesperrt. Einmalig, bis zum Ende des nächsten eigenen Beitrags; keine Konterketten. Treffer des Gegners lösen den Konter nicht aus. | Bestätigt |
+| 6 | Drachenklammer | Alle berechtigten Cenyr-Klassen |  | 1× Waffenwürfel | 1W10 | 1W10 | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | Normaler Waffenschaden; KON-Rettung SG 13, bei Scheitern Benommen: im nächsten eigenen Beitrag keine Aktion. Bonusaktion und Reaktion bleiben verfügbar. | Bestätigt |
 | 6 | Gesammelter Atem | derwyn | sword | Kein direkter Schaden |  |  | 1 Reaktion + 1 Bonusaktion | Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag. | Bestätigt |
 | 6 | Letzte Sehne | Helwyr | sword | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) + 1 Technikbonus | 1W10+1W8+1 | 2W10+1W8+1 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | Verursacht Technikschaden. | Entwurf |
 | 6 | Regen des Jungdrachens | Helwyr | shortbow | 1× Waffenwürfel + 1 Waffen-Zusatzwürfel (je höchstens W8) + 1 Technikbonus | 1W10+1W8+1 | 2W10+1W8+1 | 1 Aktion + 1 Bonusaktion + 1 Reaktion | Verursacht Technikschaden. | Entwurf |

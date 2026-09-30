@@ -84,12 +84,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-28T15:05:59.250Z",
+    "sourceExportedAt": "2026-09-30T12:00:00.000Z",
     "sourceUpdatedAt": "",
     "sourceDocumentIds": [
       "9hurPRtv2yMJTYkAARkl"
     ],
-    "contentHash": "d6b8f1f4174f7560d2c575a39c0d8784b37e6dcd9a34c7c9ab0c101496773e0b"
+    "contentHash": "f1878c32484715e4c231a403f4b7e85b92f7552699f62abe3a3cebed63c8f971"
   },
   "local": {
     "notes": "",
@@ -1060,8 +1060,8 @@
           "personId": "rhys-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-28T15:05:59.250Z",
-          "lastSyncedAt": "2026-09-28T15:05:59.250Z",
+          "importedAt": "2026-09-30T12:00:00.000Z",
+          "lastSyncedAt": "2026-09-30T12:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=rhys-draig",
           "fingerprint": "{\"name\":\"Rhys Draig\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/rhys-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"meurig-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--meurig-draig\",\"name\":\"Meurig Draig\"},{\"personId\":\"heledd-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--heledd-gwyvern\",\"name\":\"Heledd Gwyvern\"}],\"partners\":[{\"personId\":\"brona-eisenherz\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-eisenherz--brona-eisenherz\",\"name\":\"Brona Eisenherz\"}],\"children\":[{\"personId\":\"kane-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--kane-draig\",\"name\":\"Kane Draig\"},{\"personId\":\"oweta-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--oweta-draig\",\"name\":\"Oweta Draig\"}]}}"
         }

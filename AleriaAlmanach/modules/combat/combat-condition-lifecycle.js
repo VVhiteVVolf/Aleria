@@ -6,9 +6,11 @@ export function getConditionConcentrationOwnerId(condition = {}) {
 export function refreshRuntimeCondition(conditions = [], incoming) {
   // Recasting one effect by the same caster refreshes it. Manual effects have
   // independent identities and remain explicitly managed by the player.
-  return conditions.filter(condition => !incoming.sourceConditionId
-    || condition.sourceConditionId !== incoming.sourceConditionId
-    || condition.sourceActorId !== incoming.sourceActorId).concat(incoming);
+  return conditions.filter(condition => {
+    if (incoming.stanceGroup && condition.stanceGroup === incoming.stanceGroup) return false;
+    return !incoming.sourceConditionId || condition.sourceConditionId !== incoming.sourceConditionId
+      || condition.sourceActorId !== incoming.sourceActorId;
+  }).concat(incoming);
 }
 
 export function reconcileConcentrationConditions(states, { pruneEmpty = false } = {}) {

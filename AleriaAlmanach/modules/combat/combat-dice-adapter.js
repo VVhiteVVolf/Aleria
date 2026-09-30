@@ -6,6 +6,10 @@ export class CombatDiceAdapter {
     this.service = service;
   }
 
+  forCounter() {
+    return new CombatDiceAdapter({ roll: (notation, _container, context) => this.service.rollSilent(notation, context) });
+  }
+
   async rollAttack({ modifier = 0, rollMode = 'normal', actorName = '', targetName = '', container = null } = {}) {
     const notation = buildAttackNotation(modifier, rollMode);
     return this.service.roll(notation, container, {

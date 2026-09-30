@@ -51,7 +51,7 @@ test('canonical Drachentanz keeps every Cenyr attack under class, style and form
   assert.equal(style.children.length, 8);
   assert.deepEqual(style.children.slice(0, 6).map(group => group.parentEntry.data.number), [1, null, 2, 3, 4, 5]);
   assert.equal(style.children.filter(group => group.parentEntry.data.number === 6).length, 1);
-  assert.equal(style.children[0].entries.length, 10);
+  assert.equal(style.children[0].entries.length, 26);
   assert.ok(!style.children.some(group => group.parentEntry.data.id === 'drachentanz-pfad-lauernder-drache'), 'Klassenfremde Pfade werden nicht unter Teulu einsortiert');
   assert.ok(!style.children.some(group => /(?:bogendrache|satteldrache|lanzendrache)$/.test(group.parentEntry.data.id)), 'Abgelöste Pfade erscheinen nicht mehr');
   const people = groups.find(group => group.name === 'Personen');

@@ -193,6 +193,11 @@ export function getResolutionActorInventoryState(resolution = {}) {
   return inventory && typeof inventory === 'object' ? JSON.parse(JSON.stringify(inventory)) : null;
 }
 
+export function getResolutionTargetInventoryState(resolution = {}) {
+  const inventory = resolution?.targetInventorySnapshot?.after;
+  return inventory && typeof inventory === 'object' ? JSON.parse(JSON.stringify(inventory)) : null;
+}
+
 export function getResolutionActorLoadoutState(resolution = {}) {
   const snapshot = resolution.actorEquippedWeaponSnapshot;
   return snapshot?.after ? { equippedWeaponId: String(snapshot.after), offHandWeaponId: snapshot.offHandAfter,
@@ -327,6 +332,8 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
         states.set(targetId, { ...previous, resources: targetResources });
       }
       const targetConditions = getResolutionTargetConditionState(resolution);
+      const targetInventory = getResolutionTargetInventoryState(resolution);
+      if (targetInventory) states.set(String(resolution.targetId), { ...(states.get(String(resolution.targetId)) || {}), inventory: targetInventory });
       if (targetConditions) {
         const targetId = String(resolution.targetId || '');
         const previous = states.get(targetId) || {};
@@ -368,6 +375,8 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
         states.set(sourceId, { ...previous, abilities: snapshot.after.map(ability => ({ ...ability })) });
       });
       reconcileConcentrationConditions(states);
+      for (const event of resolution.sceneItemEvents || []) applySceneItemEvent(sceneItems, event);
+      if (resolution.sceneItemEvents?.length) applyDroppedWeaponsToStates(states, sceneItems);
     }
     // A historical segment stops before the rest of its contribution. Its
     // clocks and end-of-comment rest/encounter effects have not happened yet.

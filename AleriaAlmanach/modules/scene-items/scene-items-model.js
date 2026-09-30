@@ -5,7 +5,7 @@ export function sceneItemEvents(comment = {}) {
   return [comment.sceneItemEvent, ...(comment.commentSegments || []).flatMap(segment => [
     segment.sceneItemEvent,
     segment.inventoryUse?.sceneItemEvent,
-    ...(segment.combatResolutions || [segment.combatResolution]).map(result => result?.criticalConsequence?.sceneItemEvent)
+    ...(segment.combatResolutions || [segment.combatResolution]).flatMap(result => [result?.criticalConsequence?.sceneItemEvent, ...(result?.sceneItemEvents || [])])
   ])].filter(Boolean);
 }
 export function applySceneItemEvent(items, event) {

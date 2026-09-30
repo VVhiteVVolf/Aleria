@@ -64,6 +64,12 @@ export class ProvidedDiceAdapter {
     };
   }
 
+  forCounter(index = 0) {
+    const receipt = this.submitted.counterAttacks?.[index]?.resolution;
+    if (!receipt) invalid('Der Würfelbeleg des vorbereiteten Gegenangriffs fehlt.');
+    return new ProvidedDiceAdapter(receipt);
+  }
+
   async rollSkill({ modifier = 0, rollMode = 'normal' } = {}) {
     const source = this.submitted;
     const expectedCount = rollMode === 'normal' ? 1 : 2;
