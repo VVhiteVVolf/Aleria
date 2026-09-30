@@ -15,6 +15,19 @@ const page = createHousePageData(HOUSE_CONTENT);
 const sourceDirectory = new URL('../Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/', import.meta.url);
 const pageUrl = new URL('../haus.html', import.meta.url);
 
+test('Die Hausgalerie umfasst alle gelieferten Hauskrieger und die beiden Ergänzungen', async () => {
+  const entries = page.warriorGallery.entries;
+  assert.equal(entries.length, 13);
+  assert.equal(new Set(entries.map(entry => entry.image)).size, 13);
+  for (const name of ['Uchelwyr', 'Helwyr', 'Teulu', 'Cantref', 'Barddwyr', 'Derwyn', 'Leibgardist', 'Knappe', 'Page']) {
+    assert.ok(entries.some(entry => entry.name === name), name);
+  }
+  assert.ok(!entries.some(entry => /Cochllamwyr|Ortswache/.test(entry.name)));
+  for (const entry of entries) await access(new URL(entry.image, pageUrl));
+  assert.match(page.sections.knighthood, /Milwr sind die professionellen Waffenknechte/);
+  assert.doesNotMatch(page.sections.cultureReligion, /Paladinen unterhält das Haus nicht/);
+});
+
 test('Das Herrschaftsbanner führt zur vorhandenen Seite von Celtigerns Wacht', async () => {
   const target = new URL(page.images['haus-banner'].href, pageUrl);
   assert.ok(decodeURI(target.pathname).endsWith('/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html'));
@@ -87,7 +100,7 @@ test('Bestehende Draig-Snapshots erhalten die Bio ohne Änderungen am Familiengr
   old.extensions.sourceRevision = 7;
   delete old.extensions.houseBiographyModule;
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_DRAIG_FAMILY, old);
-  assert.equal(upgraded.extensions.sourceRevision, 9);
+  assert.equal(upgraded.extensions.sourceRevision, HOUSE_DRAIG_FAMILY.extensions.sourceRevision);
   assert.deepEqual(upgraded.extensions.houseBiographyModule, HOUSE_BIOGRAPHY);
   const normalized = normalizeFamily(old);
   for (const key of ['persons', 'partnerships', 'parentages', 'houses', 'cadetBranches', 'timeJumps']) {

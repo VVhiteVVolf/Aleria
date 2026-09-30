@@ -57,3 +57,17 @@ Ausrüstungsvergleiche eingebunden werden, ohne sie in Einheitenkarten zu schnei
 Llysfaens `total: 26` bezeichnet ausdrücklich nur die Ortsbesatzung. Die variablen
 Stärken des Bannkreises stehen in den Artikelabschnitten und fließen nicht in die
 prozentuale Verteilung der Ortsbesatzung ein.
+
+## Qualitative Aufstellungen
+
+`presentationMode: "qualitative"` zeigt Aufgaben und Befehlsgewalt ohne
+Zahlenübersicht und ohne prozentuale Verteilung. Der Normalisierer verwirft in
+diesem Modus Gesamtstärken und Anteile, auch wenn ältere Daten noch `total`,
+`count` oder `share` enthalten. Pro Kontingent ersetzt `strengthLabel` die
+numerische Stärke, zum Beispiel `Bis zu 600 Mann` für eine Obergrenze. Solche
+Obergrenzen nie als `count` speichern oder zu einer Gesamtstärke addieren.
+
+Optional stehen `introduction`, `unitsTitle` und `unitsSubtitle` zur Verfügung.
+Gwynthor verwendet diesen Modus; die Leibgarde ist Teil der Draig-Hausmacht
+und kein separat addiertes Kontingent. Die Ortsdaten sind die gemeinsame Quelle
+für die eigenständige Militäransicht und die kurze Übersicht auf der Ortsseite.

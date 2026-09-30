@@ -10,6 +10,7 @@
   const houseRoot = "/Stammbäume/assets/images/houses/Llamreis Ankunft";
   const commonerRoot = `${houseRoot}/Bürgerliche/Gwynthor`;
   const establishmentAssetRoot = "/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Gwynthors_Bannkreis/Gwynthor/assets/etablissements";
+  const militaryAssetRoot = "/Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Gwynthors_Bannkreis/Gwynthor/assets";
 
   const house = (familyId, name, rank, seat, liege, emblem) => Object.freeze({
     familyId,
@@ -53,6 +54,105 @@
     }),
 
     name: "Gwynthor",
+    militaryView: {
+      status: "ready",
+      presentationMode: "qualitative",
+      title: "Streitkräfte von Gwynthor",
+      subtitle: "Unter dem Wyvern · Hausmacht, Vasallen und die Wachen der Stadt",
+      heroImage: {
+        src: "/AleriaAlmanach/public/assets/draig-leibgarde/steffan-burghof-v1.png",
+        alt: "Steffan Draig vor den aufgereihten Leibgardisten im Burghof",
+        fit: "contain"
+      },
+      introduction: "Über Gwynthor weht das Banner der Grafen von Celtigerns Wacht. Doch die Hände, die seine Mauern, Höfe und Wege schützen, leisten unterschiedliche Eide. Neben der Hausmacht der Draigs stehen die Gefolge ihrer Vasallen und die Wachen der Stadt: verbunden durch den Schutz ihrer Heimat, unterschieden durch Auftrag und Befehlsgewalt.",
+      forces: [
+        {
+          id: "draig-hausmacht", name: "Hausmacht der Draigs", kind: "house",
+          strengthLabel: "Im persönlichen Dienst des Grafenhauses",
+          crest: encodeURI(`${houseRoot}/haus-draig.png`),
+          note: "Unter Steffan Draig als Kommandant der Hausmacht dienen Hausritter, professionelle Waffenknechte und niedere Soldaten. Die Leibgarde gehört zu dieser Hausmacht. Burg, Garnisonen und unmittelbar verwaltete Besitzungen sind ihre Wirkungsstätten."
+        },
+        {
+          id: "vasallen", name: "Hausmächte der Vasallen", kind: "vassal",
+          strengthLabel: "Eigene Gefolge unter eigenen Herren",
+          note: "Gafyr, Saethwyr, Wyrm und weitere Häuser unterhalten Ritter, Waffenknechte und persönliche Garden. Ihre Truppen schützen die jeweiligen Häuser und Lehen und erfüllen deren Dienstpflichten gegenüber den Draigs."
+        },
+        {
+          id: "cochllamwyr", name: "Cochllamwyr", kind: "cityWatch",
+          strengthLabel: "Bis zu 600 Mann · ausschließlich Gwynthor Stadt",
+          crest: encodeURI("/Stammbäume/assets/images/regions/gwynthor.png"),
+          note: "Die städtische Elite gehört nicht zur Draig-Hausmacht. Ihr Dienst gilt der Verteidigung Gwynthors. Die Befehlsgewalt liegt beim Stadtwachenkommandanten beziehungsweise beim Marschall."
+        },
+        {
+          id: "ortswachen", name: "Ortswachen des Bannkreises", kind: "localWatch",
+          strengthLabel: "Wachdienst auf Höfen, Straßen und Grenzwegen",
+          note: "Die einfachsten und militärisch schwächsten Kräfte dieser Ordnung sichern das Umland. Sie folgen derselben städtischen Befehlskette wie die Cochllamwyr, bleiben aber eine eigene Wache mit anderem Einsatzgebiet."
+        }
+      ],
+      unitsTitle: "Die Wachen Gwynthors",
+      unitsSubtitle: "Städtische Elite und Wachdienst im Bannkreis",
+      units: [
+        {
+          id: "cochllamwyr", name: "Cochllamwyr", branch: "Stadtwache · Rotmäntel",
+          tier: "Elite der Stadtverteidigung",
+          image: { src: `${militaryAssetRoot}/cochllamwyr-v1.png`, alt: "Cochllamwyr in reich ausgestatteter Rüstung, rotem Mantel und mit Gwynthors Stadtwappen" },
+          note: "Tore, Mauern, Märkte, Kais und Straßen innerhalb Gwynthors sind ihr Auftrag. Edlere Rüstung und das stolze Rot der Mäntel zeichnen sie aus; auf ihrem Schild steht das Wappen der Stadt."
+        },
+        {
+          id: "ortswache", name: "Ortswache", branch: "Bannkreis · örtlicher Wachdienst",
+          tier: "Einfache Wachtruppe",
+          image: { src: `${militaryAssetRoot}/gwynthor-stadtwache.png?v=20260901a`, alt: "Einfacher Ortswächter mit Speer, rotem Mantel und dem Wappen Gwynthors" },
+          note: "Abseits der Stadt schützen Ortswachen Bauernhöfe, Straßen und Grenzwege. Ihr Dienst ist weniger angesehen, ihre Ausbildung und Ausrüstung bescheidener als die der Cochllamwyr."
+        }
+      ],
+      sections: [
+        {
+          title: "Eine Hauptstadt, viele Verpflichtungen",
+          paragraphs: [
+            "Gwynthor ist Stammsitz der Draigs, Heimat ihrer ansässigen Vasallen und Hauptstadt der Grafschaft Celtigerns Wacht. Der Graf kann diese Lande weder aus einem einzigen Saal regieren noch allein mit seinen eigenen Leuten bewachen. Barone, Ritterfürsten und Ritterherren tragen deshalb einen Teil der Herrschaft und des Schutzes; unter ihnen versehen Waffenknechte, Soldaten und örtliche Wachen ihren Dienst.",
+            "Dabei macht der gemeinsame Lehnsherr aus den verschiedenen Gefolgen keine einzige Hausmacht. Ein Ritter der Gafyr dient seinem Haus, ein Draig-Waffenknecht dem Grafenhaus und ein Cochllamwyr der Stadt. Erst ihre jeweiligen Pflichten bestimmen, wer sie führt und wohin sie befohlen werden dürfen."
+          ]
+        },
+        {
+          title: "Die Hausmacht unter dem schwarzen Wyvern",
+          paragraphs: [
+            "Die Hausmacht umfasst sämtliche hauseigenen Streitkräfte der Draigs: Ritter aus der Familie und aus anderen Reihen, professionelle Waffenknechte, die Leibgarde sowie einfachere niedere Soldaten. Steffan Draig steht ihr als Kommandant vor. Milwr bezeichnet dabei den ausgebildeten Waffenknecht, dessen beständiger Waffendienst das Rückgrat des Hauses bildet.",
+            "Zweck, Leistung und Eignung entscheiden über den Einsatz. Ein Teil steht als dauerhafte Besatzung in Castell Draig, in Gwynthor, in umliegenden Festungen und auf Besitzungen, welche die Draigs selbst verwalten. Andere versehen den gewöhnlichen Burgdienst. Aus besonders vertrauenswürdigen Waffenknechten und Hausrittern wird die Leibgarde handverlesen: eine persönliche Schutzgarde innerhalb der Hausmacht, keine zusätzliche Armee neben ihr.",
+            "Die meist weniger als fünfzig Leibgardisten bewachen den Bergfried und die persönlichen Räume des Hauses, begleiten Schutzbefohlene und sichern Reisen und Ausritte. Ihr besonderer Rang beruht auf Nähe, Zuverlässigkeit und Vertrauen. Im Krieg begleitet ein Teil von ihnen das ranghöchste oder kommandierende Familienmitglied auf das Schlachtfeld."
+          ]
+        },
+        {
+          title: "Ritter des Blutes und Ritter des Hauses",
+          paragraphs: [
+            "Uchelwyr, Helwyr, Teulu, Cantref, Barddwyr und Derwyn finden sich unter den Rittern der Draigs. Diese cenyrischen Klassen beschreiben unterschiedliche Wege ritterlichen Dienstes. Unter ihnen stehen auch die Derwyn, heilige Ritter und Paladine im Zeichen des Grals. Aufgaben und Führungsämter werden einzelnen Rittern anvertraut; sie können die Waffenknechte des Hauses führen.",
+            "Die Draigs erziehen ihre eigenen Angehörigen zu Staatsmännern und Rittern. Doch der Weg in ihre Dienste beginnt nicht immer in einer adeligen Wiege. Bürgerliche werden als Knappen aufgenommen und zu Hausrittern ausgebildet. Ihr Ritterschlag bindet sie an das Grafenhaus, ohne sie zu Angehörigen der Familie Draig zu machen.",
+            "Mancher Hausritter hofft, durch treuen Dienst eines Tages ein eigenes Ritterhaus zu begründen. Nur wenigen wird dies zuteil – grob einem Zehntel, womöglich noch weniger. Für die meisten bleibt der Dienst unter dem Wyvern die dauerhafte Lebensaufgabe."
+          ]
+        },
+        {
+          title: "Die Vasallen und ihre eigenen Banner",
+          paragraphs: [
+            "Was für die Draigs im Großen gilt, wiederholt sich bei Gafyr, Saethwyr und Wyrm in kleinerem Maßstab. Auch sie besitzen eine Hausmacht und eine persönliche Leibgarde. Ihre Burgen liegen in Gwynthor, doch die Stadt erhält deshalb keine gesonderte Stadtwache für jedes Adelshaus. Alle profitieren vom gemeinsamen städtischen Wachdienst. Für die Grafen ist vor allem bedeutsam, welche hauseigenen Kräfte ihre Vasallen für den Lehnsdienst bereithalten.",
+            "Die Gafyr etwa wohnen in ihrer Burg in Gwynthor und verwalten zugleich mehrere Bannkreise im Norden von Llamreis Ankunft. Dort bestehen eigene örtliche Wachen. Das Haus ergänzt deren Schutz nach Lage und Ermessen durch Kräfte seiner Hausmacht. Ein Wohnsitz in der Hauptstadt entbindet einen Lehnsherrn nicht von der Sorge um seine entfernteren Lande."
+          ]
+        },
+        {
+          title: "Morddwr als Beispiel der Lehnsordnung",
+          paragraphs: [
+            "An Morddwr lässt sich das Zusammenspiel auf zwei mögliche Arten erklären: Verwalten die Gafyr den Ort unmittelbar, ohne ihn einer Ritterfamilie anzuvertrauen, steht neben Morddwrs eigener Stadtwache eine nach Bedarf entsandte Besatzung des Hauses Gafyr.",
+            "Wäre Morddwr dagegen einem niederen Ritterhaus als Lehen zugewiesen, das den Gafyr dient, müsste dieses Haus seine eigene Hausmacht beisteuern. Gemeinsam mit der örtlichen Stadtwache hätte es für den Ort und dessen Bannkreis zu sorgen. Beide Fälle veranschaulichen die Ordnung; sie legen nicht fest, welcher davon gegenwärtig für Morddwr gilt."
+          ]
+        },
+        {
+          title: "Rotmäntel und Ortswachen",
+          paragraphs: [
+            "Die Cochllamwyr, auch Rotmäntel oder Llamreis Garde genannt, bewahren eine eigene städtische Tradition. Ihr Name erinnert an Llamrei, Celtigerns zweiten Sohn und Begründer der ersten Stadtwache. Aus Veteranen des Krieges gegen die Norrnaigh erwuchs die Einheit, deren Dienst bis heute Gwynthor gilt.",
+            "Bis zu sechshundert Mann bilden diese hohe Elite der Stadt. Ihr Auftrag endet bei der Verteidigung Gwynthors selbst; sie sind weder Leibgarde der Draigs noch ein Teil ihrer Hausmacht. Stadtwachenkommandant und Marschall bilden die zuständige städtische Führung.",
+            "Jenseits der Stadt versehen Ortswachen den Schutz der Höfe, Straßen und Grenzwege. Sie sind die schwächsten Kräfte innerhalb dieser militärischen Ordnung, gehören aber derselben Befehlskette an. So bleibt der Schutz des Bannkreises mit der Stadt verbunden, ohne seine einfachen Wächter zu Cochllamwyr zu machen."
+          ]
+        }
+      ]
+    },
     canonicalPath: "Königreich Cenyr > Grafschaft Celtigerns Wacht > Baronie Llamreis Ankunft > Gwynthors Bannkreis > Gwynthor",
 
     hierarchy: Object.freeze([
@@ -94,7 +194,7 @@
       einwohnerzahl: "Etwa 30.000",
       ritter: "Haus Draig und Vasallen",
       waffenknechte: "Haus Draig und Vasallen",
-      ortswache: "Cochllamwyr – 400 bis 600 Rotmäntel",
+      ortswache: "Cochllamwyr – bis zu 600 Rotmäntel; Ortswachen im Bannkreis",
       flotte: "Cantref und Helwyr",
       "sonstiges aufgebot": "Städtische Rekruten und Lehnsaufgebote",
       bedrohungen: "Schwarze Zitteraale, Piraterie, Sirenen und Ungeheuer",
@@ -340,13 +440,14 @@
       ),
 
       military: section(
-        paragraph("Gwynthor verfügt trotz der schweren Verluste des Krieges gegen Ceitheach über eine bedeutende Streitmacht. Das Haus Draig stellt innerhalb der Stadt ungefähr siebzig Prozent der Ritter, Waffenknechte, Stadtwachen und Rekruten; die übrigen dreißig Prozent werden von seinen Vasallen getragen. Im weiteren Bannkreis gewinnen die Aufgebote der unterstellten Häuser noch stärker an Gewicht."),
+        paragraph("Gwynthors Schutz ruht auf mehreren eigenständigen Kräften: der Hausmacht der Draigs, den Hausmächten ihrer Vasallen sowie der Stadtwache und den Ortswachen des Bannkreises. Die Draigs herrschen als Grafen über Celtigerns Wacht; Barone, Ritterfürsten und Ritterherren tragen Verantwortung für die ihnen anvertrauten Lehen. Ihre persönlichen Gefolge und die allgemeinen Wachen bleiben nach Aufgabe und Befehlsgewalt voneinander getrennt."),
         subheading("Die Cochllamwyr"),
         paragraph("Die Cochllamwyr, auch Rotmäntel oder Llamreis Garde genannt, bilden Gwynthors eigene Stadtwache. Ihr Name erinnert an Llamrei, den zweiten Sohn Celtigerns und Begründer der ersten Wache der Stadt. Deren ursprünglicher Kern bestand aus Veteranen des Krieges gegen die Norrnaigh; aus ihren Nachkommen erwuchs die bis heute bestehende Einheit."),
-        paragraph("Zwischen 400 und 600 Cochllamwyr sichern Tore, Märkte, Kais und Straßen innerhalb Gwynthors. Die Dorf- und Ortswachen des Hinterlandes gehören ausdrücklich nicht zu dieser Einheit. Ein Cochllamwyr gilt als besonders verlässlicher Waffenknecht, trägt das Rot mit Stolz und erhält für seinen Dienst einen höheren Sold als ein gewöhnlicher Waffenknecht."),
-        paragraph("Die Garde untersteht dem Ritterfürsten und während der Vakanz des Amtes dem Baron, dem Grafen und dem gräflichen Marschall."),
-        subheading("Hausgarde der Draig"),
-        paragraph("Die Hausgarde der Draig wird von Steffan Draig befehligt. Ihre Ritter und Waffenknechte bemannen Castell Draig und weitere Wehranlagen des Hauses. Den größten Teil bilden Fußritter, die Teulu-Ritter und Schwertwaffenknechte. Cantref und Helwyr stellen einen weiteren bedeutenden Anteil, besonders im Umfeld der Flotte; hinzu kommen Lanzenritter, Bogenschützen und die entsprechenden Waffenknechte. Berittene Uchelwyr-Ritter sind zahlenmäßig seltener, bilden jedoch gemeinsam mit berittenen Waffenknechten eine weiterhin beachtliche Truppe.")
+        paragraph("Bis zu 600 Cochllamwyr sichern Tore, Märkte, Kais und Straßen innerhalb Gwynthors. Sie bilden die städtische Elite und dienen ausschließlich der Verteidigung der Stadt. Sie gehören nicht zur Hausmacht der Draigs, sondern unterstehen dem Stadtwachenkommandanten beziehungsweise dem Marschall."),
+        subheading("Ortswachen des Bannkreises"),
+        paragraph("Die einfacheren Ortswachen sichern Bauernhöfe, Straßen und Grenzwege im Umland. Sie stehen unter derselben städtischen Befehlsgewalt, gehören aber nicht zu den Cochllamwyr."),
+        subheading("Hausmacht der Draigs und ihrer Vasallen"),
+        paragraph("Steffan Draig führt die Hausmacht des Grafenhauses: Ritter der Klassen Uchelwyr, Helwyr, Teulu, Cantref, Barddwyr und Derwyn, professionelle Milwr-Waffenknechte sowie niedere Soldaten. Ihre Kräfte stehen in Castell Draig, in Gwynthor und auf unmittelbar verwalteten Besitzungen. Die handverlesene Leibgarde ist ein Teil dieser Hausmacht. Die Vasallen unterhalten eigene kleinere Hausmächte und Garden; der gemeinsame städtische Wachdienst schützt alle ansässigen Häuser.")
       ),
 
       economy: section(

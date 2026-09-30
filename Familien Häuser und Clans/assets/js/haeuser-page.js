@@ -1,5 +1,6 @@
 import { renderHouseCourt } from '../../modules/court/house-court.js';
 import { renderHouseScenes } from '../../modules/house-content/house-scenes.js';
+import { renderHouseWarriorGallery } from '../../modules/warrior-gallery/house-warrior-gallery.js?v=20260930a';
 
 (function () {
   "use strict";
@@ -56,6 +57,7 @@ import { renderHouseScenes } from '../../modules/house-content/house-scenes.js';
     renderContentTargets(data.contentTargets || {});
     renderFamilyTreeEmbed(data.familyTreeEmbed || null);
     renderTrivia(data.trivia || []);
+    renderHouseWarriorGallery(root, data.warriorGallery);
   }
 
   function renderProfile(profile) {

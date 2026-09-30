@@ -2,6 +2,7 @@ import { HOUSE_DRAIG_PORTRAITS } from '../../../../../Stammbäume/assets/js/data
 import { HOUSE_BALCHDER_PORTRAITS } from '../../../../../Stammbäume/assets/js/data/house-balchder-portraits.js';
 import { HOUSE_GAFYR_PORTRAITS } from '../../../../../Stammbäume/assets/js/data/house-gafyr-portraits.js';
 import { PORTRAIT_PLACEHOLDERS } from '../../../../../Stammbäume/assets/js/config/portrait-placeholders.js';
+import { DRAIG_WARRIOR_GALLERY } from './warriors.content.mjs';
 
 // Redaktionelle Quelle für beide Ansichten. Ausgabe mit scripts/build-house-content.mjs.
 const houseAssets = 'Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets';
@@ -17,6 +18,7 @@ const member = (id, name, detail = '') => ({
 export const HOUSE_CONTENT = {
   id: 'haus-draig',
   name: "Haus Draig O'Gwynthor",
+  warriorGallery: DRAIG_WARRIOR_GALLERY,
   type: 'Grafenhaus',
   county: 'Celtigerns Wacht',
   liege: 'König Tristan Pendrag',
@@ -53,8 +55,8 @@ export const HOUSE_CONTENT = {
   profile: {
     highestTitle: 'Graf', houseType: 'Grafschaft', motto: 'Nicht überliefert', quoteAuthor: '',
     seat: 'Gwynthor', affiliation: 'Königreich Cenyr · König Tristan Pendrag',
-    troopStrength: 'Sehr stark', tiarna: 'Vor allem Uchelwyr und Teulu; außerdem Cantref',
-    kerns: 'Zahlreiche Infanteristen und Seekrieger', fleet: '30–50 Kriegsschiffe',
+    troopStrength: 'Sehr stark', tiarna: 'Uchelwyr, Helwyr, Teulu, Cantref, Barddwyr und Derwyn',
+    kerns: 'Professionelle Milwr-Waffenknechte; daneben niedere Soldaten', fleet: '30–50 Kriegsschiffe',
     founding: 'Nach dem Untergang Avallorns; Jahr unbekannt',
     milestoneOne: 'Celtigern gründet Haus Draig und lässt sich an der Südküste Cenyrs nieder.',
     milestoneTwo: 'Galahad übernimmt 1720 die Führung des Hauses.',
@@ -81,9 +83,11 @@ export const HOUSE_CONTENT = {
     ],
     knighthood: [
       'Die Schwertleite findet traditionell an einem See, am Trident oder an der Küste statt. Manche Knappen reisen dafür nach Llanforwyn. Der Ritterschlag verbindet den Dienst am Haus mit dem Glauben und der Verpflichtung, die Schutzbedürftigen zu verteidigen.',
-      'Cantref führen vor allem die Lanze, Teulu das Schwert; die Uchelwyr stehen für den berittenen Kampf. Gemeinsam verleihen sie dem Haus seine besondere militärische Schlagkraft.',
+      'Uchelwyr, Helwyr, Teulu, Cantref, Barddwyr und Derwyn dienen unter dem Wyvern. Cantref führen vor allem die Lanze, Teulu das Schwert; Uchelwyr stehen für den berittenen Kampf. Derwyn verbinden als heilige Ritter und Paladine ihren Dienst mit dem Zeichen des Heiligen Grals.',
+      'Das Haus erzieht seine Angehörigen zu Staatsmännern und Rittern. Daneben nimmt es Bürgerliche als Knappen auf und bildet sie zu Hausrittern aus. Diese dienen den Draigs, ohne der Familie anzugehören; sie übernehmen Aufgaben und führen Waffenknechte. Ein eigenes Ritterhaus zu begründen bleibt eine seltene Auszeichnung – vielleicht einem Zehntel, womöglich weniger, wird sie zuteil.',
       'Die charakteristische Drachenschuppen-Rüstung ahmt den Schuppenpanzer eines Drachen nach. Dazu gehört ein roter Helm in Form eines Drachenkopfes: Sein Oberkiefer bildet das hochklappbare Visier. Ein Kamm aus gefärbtem Rosshaar oder Federn sowie die Hausfarben machen die Ritter der Draigs weithin erkennbar.',
-      'Auch die Milwr, die Miliz und Waffenknechte des Hauses, tragen seine Zeichen auf ihren Wappenröcken. Die Stadtwache führt dagegen das Wappen Gwynthors. So bleiben das Gefolge der Draigs und die städtischen Wächter voneinander zu unterscheiden.',
+      'Milwr sind die professionellen Waffenknechte des Hauses. Gemeinsam mit den Rittern und niederen Soldaten gehören sie zur Hausmacht unter Steffan Draig. Nach Zweck, Leistung und Eignung dienen sie in der Burg, in Gwynthor, in umliegenden Festungen oder auf unmittelbar verwalteten Besitzungen. Die persönliche Leibgarde wird aus besonders vertrauenswürdigen Waffenknechten und Hausrittern ausgewählt und bleibt Teil dieser Hausmacht.',
+      'Die Hauskräfte tragen die Zeichen der Draigs. Die Cochllamwyr und Ortswachen führen dagegen das Wappen Gwynthors und unterstehen der städtischen Führung aus Stadtwachenkommandant und Marschall. Der gemeinsame Wachdienst schützt alle ansässigen Häuser, ohne ihren persönlichen Gefolgen anzugehören.',
     ],
     succession: [
       'Galahad Draig führt das Haus seit 1720. Die überlieferte Erbfolge nennt Anaraut, Idwal, Tudwal, Neithon und Gawain in dieser Reihenfolge. Weitergehende Regeln für Sonderfälle der Nachfolge sind nicht überliefert.',
@@ -97,7 +101,7 @@ export const HOUSE_CONTENT = {
       'Bergbau, Abgaben und Handel ermöglichen ein großes, gut ausgerüstetes Heer und eine Flotte von 30 bis 50 Kriegsschiffen. Wirtschaftlicher Wohlstand und militärische Stärke stützen einander.',
     ],
     cultureReligion: [
-      'Die Draigs bekennen sich zur Alerischen Kirche, zu den Neun Göttlichen und zur Dame der See. Ihre Rittereide gelten als ernsthafte religiöse Verpflichtung. Eine eigene Ausbildung von Klerikern oder Paladinen unterhält das Haus nicht.',
+      'Die Draigs bekennen sich zur Alerischen Kirche, zu den Neun Göttlichen und zur Dame der See. Ihre Rittereide gelten als ernsthafte religiöse Verpflichtung. Unter ihren Rittern dienen auch Derwyn, Paladine im Zeichen des Heiligen Grals.',
       'Kulturelle Feste, die Pflege der eigenen Sprache und die Bewahrung albischer Überlieferungen gehören zum Hausleben. Die Draigs sind stolz auf ihre Herkunft und verteidigen ihre kulturelle Identität. Zugleich zeigen sie sich anderen Kulturen und Religionen gegenüber offen.',
     ],
     conflictsAlliances: [
@@ -152,7 +156,7 @@ export const HOUSE_CONTENT = {
   offices: [
     { role: 'Vogt', id: 'dalvin-balchder', name: 'Dalvin Balchder', familyId: 'haus-balchder', image: portrait('dalvin-balchder', HOUSE_BALCHDER_PORTRAITS) },
     { role: 'Schatzmeister', ...member('odyar-draig', 'Odyar Draig') },
-    { role: 'Kommandant der Garde', ...member('steffan-draig', 'Steffan Draig') },
+    { role: 'Kommandant der Hausmacht', ...member('steffan-draig', 'Steffan Draig') },
     { role: 'Zeremonienmeister', silhouette: 'male' },
     { role: 'Mundschenk', ...member('gawain-draig', 'Gawain Draig') },
     { role: 'Waffenmeister', id: 'duncan-gafyr', name: 'Duncan Gafyr', familyId: 'haus-gafyr', image: portrait('duncan-gafyr', HOUSE_GAFYR_PORTRAITS) },

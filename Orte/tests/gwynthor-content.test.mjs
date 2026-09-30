@@ -47,7 +47,7 @@ test("Gwynthor besitzt vollständige, strukturierte Ortsinhalte", async () => {
   assert.match(content, /Áinmardh/);
   assert.match(content, /Schwarzen Zitteraale/);
   assert.match(content, /Cochllamwyr/);
-  assert.match(content, /400 und 600/);
+  assert.match(content, /Bis zu 600/);
   assert.match(content, /Celtigerns Echo/);
   assert.match(content, /Kronenspiegel/);
   assert.match(content, /Mathragon/);
@@ -72,7 +72,7 @@ test("Gwynthors Infobox und erste Etablissements beruhen auf belegten Angaben", 
   const data = await loadGwynthorData();
 
   assert.equal(data.structure.einwohnerzahl, "Etwa 30.000");
-  assert.equal(data.structure.ortswache, "Cochllamwyr – 400 bis 600 Rotmäntel");
+  assert.equal(data.structure.ortswache, "Cochllamwyr – bis zu 600 Rotmäntel; Ortswachen im Bannkreis");
   assert.equal(data.features.personalitiesCollapsed, true);
   assert.deepEqual(
     Array.from(data.merchants, (merchant) => merchant.name),

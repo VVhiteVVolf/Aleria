@@ -43,6 +43,7 @@ export function createHousePageData(content) {
     sections: Object.fromEntries(Object.entries(content.sections).map(([key, value]) => [key, paragraphs(value)])),
     sectionTitles: { knighthood: content.type === 'Clan' ? '4. Tiarnatum' : '4. Rittertum' },
     ...(content.scenes?.length ? { scenes: content.scenes } : {}),
+    ...(content.warriorGallery?.entries?.length ? { warriorGallery: content.warriorGallery } : {}),
     images, court: { groups, cadets },
     figures: { heading: content.page === 'kleinehaeuser.html' ? '11. Historische Figuren' : '12. Historische Figuren', tableTitle: content.figuresTitle, entries: figures },
     familyTreeEmbed: { src: treeLink(content.id), title: `Stammbaum von ${content.name}` },

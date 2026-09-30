@@ -427,7 +427,7 @@
       name: "Haus Draig O'Gwynthor",
       status: HOUSE_STATUS.ACTIVE,
       type: HOUSE_TYPES.HOUSE,
-      data: "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.data.js?v=20260911b",
+      data: "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.data.js?v=draig-krieger-20260930a",
       hierarchy: [
         { type: "Sammlung", name: "Familien Häuser und Clans", slug: "familien-haeuser-und-clans" },
         { type: "Kontinent", name: "Estryll", slug: "estryll" },

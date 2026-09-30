@@ -23,7 +23,7 @@ test("Ortsseite und Vorlage binden den optionalen Militärzugang ein", async () 
     assert.match(html, /military-entry\.mjs\?v=20260904a/);
     assert.match(html, /data-orte-military-entry/);
     assert.match(html, /data-orte-military-link/);
-    assert.match(html, /celtigerns-wacht-places\.js\?v=20260918b/);
+    assert.match(html, /celtigerns-wacht-places\.js\?v=20260930a/);
   }
 
   assert.match(entryModule, /features\?\.militaryView !== false/);
@@ -117,7 +117,7 @@ test("die eigenständige Militärseite lädt Ortsregister und Renderer", async (
   ]);
 
   assert.match(page, /data-military-view/);
-  assert.match(page, /military-view\.mjs\?v=20260920a/);
+  assert.match(page, /military-view\.mjs\?v=20260930a/);
   assert.match(page, /orte\.registry\.js/);
   assert.match(viewModule, /normalizeMilitaryProfile/);
   assert.match(viewModule, /data\?\.militaryView/);
@@ -127,4 +127,22 @@ test("die eigenständige Militärseite lädt Ortsregister und Renderer", async (
   assert.match(styles, /@media \(max-width: 780px\)/);
   assert.match(documentation, /features\.militaryView: false/);
   assert.match(documentation, /kind: "vassal"/);
+});
+
+test("qualitative Profile leiten weder Gesamtstärken noch Anteile ab", () => {
+  const profile = normalizeMilitaryProfile({
+    presentationMode: "qualitative",
+    total: 1000,
+    forces: [
+      { name: "Stadtwache", count: 600, share: 60, strengthLabel: "Bis zu 600 Mann" },
+      { name: "Hausmacht", strengthLabel: "Im Dienst des Hauses" }
+    ]
+  });
+  assert.equal(profile.total, null);
+  assert.ok(profile.forces.every(force => force.share === null));
+  assert.equal(formatForceStrength(profile.forces[0]), "Bis zu 600 Mann");
+  assert.equal(formatForceStrength(profile.forces[1]), "Im Dienst des Hauses");
+  const quantitative = normalizeMilitaryProfile({ forces: [{ name: "Besatzung", count: 26 }] });
+  assert.equal(quantitative.total, 26);
+  assert.equal(quantitative.forces[0].share, 100);
 });

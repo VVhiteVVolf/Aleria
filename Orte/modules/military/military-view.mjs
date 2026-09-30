@@ -3,7 +3,7 @@ import {
   formatPercentage,
   getForceKind,
   normalizeMilitaryProfile
-} from "./military-profile.mjs?v=20260920a";
+} from "./military-profile.mjs?v=20260930a";
 
 const root = document.querySelector("[data-military-view]");
 
@@ -82,8 +82,9 @@ function renderHero(profile) {
   copy.append(headingRow);
 
   const tags = element("div", "military-hero__tags");
+  const readyLabel = profile.presentationMode === "qualitative" ? "Aufgaben & Zuständigkeiten" : "Aufstellung erfasst";
   tags.append(
-    tag(profile.status === "ready" ? "Aufstellung erfasst" : "In Vorbereitung"),
+    tag(profile.status === "ready" ? readyLabel : "In Vorbereitung"),
     tag(profile.placeName)
   );
   copy.append(tags);
@@ -145,7 +146,8 @@ function renderDisabled(placeName) {
 
 function renderDetails(profile) {
   const content = element("div", "military-details");
-  content.append(renderSummary(profile));
+  if (profile.presentationMode !== "qualitative") content.append(renderSummary(profile));
+  if (profile.introduction) content.append(element("p", "military-introduction", profile.introduction));
   if (profile.forces.length) content.append(renderForces(profile));
   if (profile.units.length) content.append(renderUnits(profile));
   if (profile.note) content.append(element("p", "military-note", profile.note));
@@ -185,7 +187,7 @@ function renderSummary(profile) {
 
 function renderForces(profile) {
   const section = element("section", "military-section");
-  section.append(sectionHeading("Verteilung der Streitkräfte", "Hausmacht, Wachen und Vasallen"));
+  section.append(sectionHeading(profile.presentationMode === "qualitative" ? "Aufgaben und Befehlsgewalt" : "Verteilung der Streitkräfte", "Hausmacht, Wachen und Vasallen"));
 
   const measurableForces = profile.forces.filter((force) => force.share !== null && force.share > 0);
   if (measurableForces.length) {
@@ -233,14 +235,19 @@ function renderForceCard(force) {
 
 function renderUnits(profile) {
   const section = element("section", "military-section");
-  section.append(sectionHeading("Truppengattungen", "Vom einfachen Aufgebot bis zu den Eliterittern"));
+  section.append(sectionHeading(profile.unitsTitle, profile.unitsSubtitle));
 
   const gallery = element("div", "military-unit-gallery");
+  if (profile.units.length === 2) gallery.classList.add("military-unit-gallery--pair");
   profile.units.forEach((unit) => {
     const card = element("article", "military-unit-card");
     const visual = element("figure", "military-unit-card__visual");
     if (unit.image.src) {
-      visual.append(renderImage(unit.image, `${unit.name} – Darstellung`));
+      const link = element("a", "military-unit-card__image-link");
+      link.href = unit.image.src;
+      link.setAttribute("aria-label", `${unit.name} – Bild öffnen`);
+      link.append(renderImage(unit.image, `${unit.name} – Darstellung`));
+      visual.append(link);
     } else {
       visual.classList.add("is-missing");
       visual.append(element("span", "military-unit-card__symbol", "♞"));

@@ -14,22 +14,27 @@ export function normalizeMilitaryProfile(rawProfile, context = {}) {
   const forces = asArray(raw.forces).map(normalizeForce).filter(Boolean);
   const units = asArray(raw.units).map(normalizeUnit).filter(Boolean);
   const sections = asArray(raw.sections).filter(isRecord).map(normalizeSection);
-  const total = resolveTotal(raw.total, forces);
+  const qualitative = raw.presentationMode === "qualitative";
+  const total = qualitative ? null : resolveTotal(raw.total, forces);
   const normalizedForces = forces.map((force) => Object.freeze({
     ...force,
-    share: force.share ?? calculateShare(force.count, total)
+    share: qualitative ? null : force.share ?? calculateShare(force.count, total)
   }));
   const hasDetails = normalizedForces.length > 0 || units.length > 0 || sections.length > 0;
 
   return Object.freeze({
     placeId: cleanText(context.placeId),
     placeName,
+    presentationMode: qualitative ? "qualitative" : "quantitative",
     status: raw.status === "ready" || hasDetails ? "ready" : "placeholder",
     title: cleanText(raw.title, `Streitkräfte von ${placeName}`),
     subtitle: cleanText(raw.subtitle, "Aufstellung, Kontingente und Truppengattungen"),
     total,
     totalLabel: cleanText(raw.totalLabel, "Gesamtstärke"),
     note: cleanText(raw.note),
+    introduction: cleanText(raw.introduction),
+    unitsTitle: cleanText(raw.unitsTitle, "Truppengattungen"),
+    unitsSubtitle: cleanText(raw.unitsSubtitle, "Vom einfachen Aufgebot bis zu den Eliterittern"),
     crest: normalizeImage(raw.crest || context.crest),
     heroImage: normalizeImage(raw.heroImage || context.heroImage),
     forces: Object.freeze(normalizedForces),
@@ -39,6 +44,7 @@ export function normalizeMilitaryProfile(rawProfile, context = {}) {
 }
 
 export function formatForceStrength(force) {
+  if (force?.strengthLabel) return force.strengthLabel;
   const values = [];
   if (force?.count !== null && force?.count !== undefined) {
     values.push(new Intl.NumberFormat("de-DE").format(force.count));
@@ -69,6 +75,7 @@ function normalizeForce(value, index) {
     kind: kindId,
     kindLabel: cleanText(value.kindLabel, kind.label),
     count: normalizeNonNegativeNumber(value.count),
+    strengthLabel: cleanText(value.strengthLabel),
     share: normalizePercentage(value.share),
     color: normalizeColor(value.color, kind.color),
     crest: normalizeImage(value.crest),
