@@ -30,6 +30,7 @@ import {
   applyCombatHealing,
   applyTemporaryHitPoints,
   applyTypedCombatDamage,
+  resolveCombatEffectDamageType,
   normalizeCombatEffect,
   normalizeCombatEffects
 } from './combat-effect-model.js?v=20260928-equipment-art-v4';
@@ -159,7 +160,7 @@ function effectApplies(effect, attack, savingThrowMode, halfDamageOnSave = false
   // Ein 'hit'-Schadenseffekt greift regulär bei misslungenem Rettungswurf. Ist die Aktion als
   // "halber Schaden bei bestandenem Rettungswurf" markiert, muss derselbe Effekt auch beim
   // bestandenen Rettungswurf gefunden und angewendet werden (dann später halbiert).
-  if (savingThrowMode && halfDamageOnSave && effect.type === 'damage' && attack.hit === false) return true;
+  if (savingThrowMode && halfDamageOnSave && effect.type === 'damage' && effect.target !== 'self' && attack.hit === false) return true;
   return attack.hit === true;
 }
 
@@ -437,24 +438,29 @@ export class CombatResolutionService {
     attack = primaryWard.attack;
     let preWardTargetConditions = primaryWard.conditions;
     const wardResolution = primaryWard.wardResolution;
-    const primaryDamageEffect = effectiveEffects.find(effect => effect.type === 'damage' && effectApplies(effect, attack, savingThrowMode, actor.actionHalfDamageOnSave)) || null;
+    const applicableDamageEffects = effectiveEffects.filter(effect => effect.type === 'damage'
+      && effectApplies(effect, attack, savingThrowMode, actor.actionHalfDamageOnSave));
+    // A health cost is independent of the hostile hit, including when authored first.
+    const primaryDamageEffect = applicableDamageEffects.find(effect => effect.target !== 'self')
+      || applicableDamageEffects[0] || null;
 
     if (primaryDamageEffect && (attack.hit || (savingThrowMode && actor.actionHalfDamageOnSave))) {
       const baseEffectFormula = primaryDamageEffect.formula || (primaryDamageEffect.amount > 0 ? '' : weapon.damageFormula);
       // Aktive Boni wie Rage-Schaden hängen einen echten Extrawürfel an, statt einen festen
       // Zahlenbonus zu addieren - nur wenn es überhaupt eine Würfelformel zum Anhängen gibt.
-      const bonusDamageFormulas = (attack.hit && baseEffectFormula && primaryDamageEffect.target !== 'self') ? getBonusDamageFormulas(actor) : [];
+      const bonusDamageFormulas = (baseEffectFormula && primaryDamageEffect.target !== 'self') ? getBonusDamageFormulas(actor) : [];
       const effectFormula = combineDamageFormulas([baseEffectFormula, ...bonusDamageFormulas]);
       const primaryDamageBonus = (primaryDamageEffect.target === 'self' ? 0 : damageBonus)
         + getCombatEffectAttributeModifier(actor, primaryDamageEffect);
       const fixedDamageBonus = getCombatEffectAttributeModifier(actor, primaryDamageEffect)
         + (primaryDamageEffect.target === 'self' ? 0 : getUniversalDamageBonus(actor));
-      const damageNotation = effectFormula ? buildDamageNotation(effectFormula, primaryDamageBonus, attack.criticalSuccess) : '';
+      const criticalDamage = primaryDamageEffect.target !== 'self' && attack.criticalSuccess;
+      const damageNotation = effectFormula ? buildDamageNotation(effectFormula, primaryDamageBonus, criticalDamage) : '';
       options.onPhase?.({ phase: 'damage', notation: damageNotation, actor, target, weapon });
       damageRoll = effectFormula ? await this.dice.rollDamage({
         damageFormula: effectFormula,
         bonus: primaryDamageBonus,
-        critical: attack.criticalSuccess,
+        critical: criticalDamage,
         actorName: actor.name,
         targetName: target.name,
         container: options.container
@@ -466,10 +472,11 @@ export class CombatResolutionService {
         id: '',
         visualMode: 'automatic'
       };
-      if (!attack.hit && actor.actionHalfDamageOnSave) {
+      if (primaryDamageEffect.target !== 'self' && !attack.hit && actor.actionHalfDamageOnSave) {
         damageRoll = { ...damageRoll, rawTotal: Number(damageRoll.total), total: Math.floor(Number(damageRoll.total) / 2), halvedBySave: true };
       }
-      const reduction = Math.max(0, postHitEffects.damageReduction + preDamageEffects.damageReduction);
+      const reduction = primaryDamageEffect.target === 'self' ? 0
+        : Math.max(0, postHitEffects.damageReduction + preDamageEffects.damageReduction);
       if (reduction > 0) {
         const beforeReduction = Number(damageRoll.total) || 0;
         damageRoll = {
@@ -566,11 +573,11 @@ export class CombatResolutionService {
       const recipient = appliesToActor ? 'actor' : 'target';
       let amount = Math.max(0, (Number(effect.amount) || 0) + getCombatEffectAttributeModifier(actor, effect));
       let roll = null;
-      if (effect.formula && !(effect.type === 'damage' && !consumedPrimaryDamage && damageRoll)) {
+      if (effect.formula && !(effect === primaryDamageEffect && !consumedPrimaryDamage && damageRoll)) {
         roll = await this.dice.rollDamage({
           damageFormula: effect.formula,
           bonus: getCombatEffectAttributeModifier(actor, effect),
-          critical: effect.type === 'damage' && attack.criticalSuccess,
+          critical: effect.type === 'damage' && effect.target !== 'self' && attack.criticalSuccess,
           actorName: actor.name,
           targetName: target.name,
           container: options.container
@@ -578,25 +585,26 @@ export class CombatResolutionService {
         amount = Number(roll.total) || 0;
       }
       if (effect.type === 'damage') {
-        if (!consumedPrimaryDamage && damageRoll) {
+        if (effect === primaryDamageEffect && !consumedPrimaryDamage && damageRoll) {
           amount = Number(damageRoll.total) || 0;
           roll = damageRoll;
           consumedPrimaryDamage = true;
         } else if (effect.target !== 'self') amount = Math.max(0, amount + getUniversalDamageBonus(actor));
         // Every typed component shares the successful save, not only the first
         // damage roll (e.g. hail's bludgeoning and cold components).
-        if (roll !== damageRoll && savingThrowMode && !attack.hit && actor.actionHalfDamageOnSave) {
+        if (effect.target !== 'self' && roll !== damageRoll && savingThrowMode && !attack.hit && actor.actionHalfDamageOnSave) {
           const rawTotal = amount;
           amount = Math.floor(amount / 2);
           if (roll) roll = { ...roll, rawTotal, total: amount, halvedBySave: true };
         }
+        const damageType = resolveCombatEffectDamageType(effect, weapon);
         const applied = applyTypedCombatDamage(recipientHitPoints, amount, appliesToActor ? actor : target, {
-          damageType: effect.inheritWeaponDamageType ? weapon.damageType : (effect.damageType || weapon.damageType),
+          damageType,
           magical: effect.magical, conditions: recipientConditions
         });
         if (appliesToActor) { actorHitPoints = applied.after; actorConditions = applied.conditions; }
         else { targetHitPoints = applied.after; targetConditions = applied.conditions; }
-        effectResults.push({ effect, amount, roll, applied, recipient });
+        effectResults.push({ effect: { ...effect, damageType }, amount, roll, applied, recipient });
         continue;
       }
       if (effect.type === 'healing') {
@@ -937,7 +945,7 @@ export class CombatResolutionService {
         rawTotal: rawDamageRolled,
         damageReduction: Number(summaryDamageRoll.damageReduction || 0) + damageEffectResults.reduce((sum, result) => sum + Number(result.applied?.equipmentProtection?.reduction || 0), 0),
         halvedBySave: !!summaryDamageRoll.halvedBySave,
-        damageType: primaryDamageEffect?.damageType || firstDamageResult?.effect?.damageType || weapon.damageType || 'physisch',
+        damageType: resolveCombatEffectDamageType(primaryDamageEffect || firstDamageResult?.effect, weapon),
         damageResponse: damageEffectResults[0]?.applied?.damageResponse || null,
         visualMode: summaryDamageRoll.visualMode || 'text',
         rollId: summaryDamageRoll.id || ''

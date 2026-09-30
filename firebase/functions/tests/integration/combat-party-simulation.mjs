@@ -4,6 +4,7 @@ import { CheckupDice } from './combat-test-actions.mjs';
 import { active, encounter, threadId } from './combat-test-context.mjs';
 import { getActionPaymentCosts, resetCommentScopedResources } from '../../../../AleriaAlmanach/modules/combat/combat-action-economy.js';
 import { parseDamageFormula } from '../../../../AleriaAlmanach/modules/combat/rules/combat-mvp-rules.js';
+import { capCriticalResources } from '../../../../AleriaAlmanach/modules/combat-critical/combat-critical-model.js';
 
 export const PARTY_SCENARIOS = [
   { id: 'magier-und-ritter', title: 'Rhiannon + Gawain gegen Gildas + Plünderer', actors: [
@@ -76,7 +77,7 @@ export async function simulateCombatParty(scenario, seed) {
       let enemies = party.actors.filter(candidate => candidate.combatTeam !== actor.combatTeam && snapshot.profiles.get(candidate.testKey).currentHitPoints > 0);
       const selected = new Set();
       const segments = [];
-      let resources = resetCommentScopedResources(profile.resources);
+      let resources = capCriticalResources(resetCommentScopedResources(profile.resources), profile.temporaryConditions);
       while (selected.size < 12 && enemies.length) {
         const action = chooseAction(profile, actor.testKey, round, selected, enemies, resources, scenario.openingActionIds);
         if (!action) break;
@@ -94,6 +95,12 @@ export async function simulateCombatParty(scenario, seed) {
         }
       }
       assert.ok(selected.size < 12, 'Die Ressourcen beenden den Testzug, kein künstliches Aktionslimit');
+      if (!segments.length) {
+        // A resource lock can leave no attack. The own contribution still has
+        // to happen so temporary conditions can expire through normal replay.
+        const waited = await party.prepare({ actor: actor.testKey, targets: [actor.testKey], actionId: 'combat:wait', dice });
+        segments.push(waited.segment);
+      }
       if (segments.length) {
         const last = segments.at(-1);
         await party.commit({ payload: { entryId: threadId,

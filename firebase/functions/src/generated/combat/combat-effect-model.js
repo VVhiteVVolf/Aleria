@@ -15,6 +15,10 @@ const TARGETS = new Set(['self', 'target', 'allies', 'enemies', 'all', 'selected
 const DAMAGE_RESPONSES = new Set(['normal', 'resistant', 'vulnerable', 'immune']);
 const MAGIC_SCOPES = new Set(['any', 'magical', 'nonmagical']);
 
+export function resolveCombatEffectDamageType(effect = {}, weapon = {}) {
+  return (effect?.inheritWeaponDamageType ? weapon.damageType : (effect?.damageType || weapon.damageType)) || 'physisch';
+}
+
 function text(value, maximum = 240) {
   return String(value || '').trim().slice(0, maximum);
 }

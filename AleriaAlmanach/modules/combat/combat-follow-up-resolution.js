@@ -49,7 +49,8 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
         + Number(targetAuraOnActor.attack || 0)
         + (['spell', 'prayer', 'song'].includes(actionKind) ? Number(targetAuraOnActor.spellAttack || 0) : 0)
         + followPreEffects.attackModifier;
-      let followDefense = Number(target.totalDefense) + Number(actorAuraOnTarget.armorClass || 0) + followPreEffects.defenseModifier;
+      let followDefense = Number(target.totalDefense) + Number(actor.selectedAction?.targetDefenseModifier || 0)
+        + Number(actorAuraOnTarget.armorClass || 0) + followPreEffects.defenseModifier;
       const followAttackRoll = await dice.rollAttack({
         modifier: followAttackModifier,
         rollMode: followRollMode,

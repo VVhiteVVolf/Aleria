@@ -8,7 +8,7 @@ export function resolveCombatWeaponGrip(action, profile = {}, requestedGrip = ''
     && !loadout.dualWield && Boolean(action?.weapon?.versatileDamageFormula?.trim());
   const weaponGripBlockedReason = supportsVersatileGrip && hasEquippedCombatShield(profile)
     ? 'Zweihändige Führung benötigt eine freie zweite Hand. Lege zuerst den Schild ab.' : '';
-  const weaponGrip = supportsVersatileGrip && String(requestedGrip).trim().toLowerCase() === 'two-handed'
+  const weaponGrip = supportsVersatileGrip && (action.requiresTwoHands || String(requestedGrip).trim().toLowerCase() === 'two-handed')
     ? 'two-handed' : 'one-handed';
   if (!action) return { action, weaponGrip, supportsVersatileGrip, weaponGripBlockedReason };
 

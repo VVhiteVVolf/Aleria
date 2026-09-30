@@ -16,6 +16,24 @@ const resolve = (weaponGrip, options = {}, character = gawain) => resolveCombatP
 const costs = actor => actor.resourceCosts.map(cost => [cost.resourceId, cost.amount]);
 const attack = actor => new CombatResolutionService(new SeededCombatDice(1, 15)).resolveAttack({ actor, target: resolveCombatProfile(gildas) });
 
+test('verpflichtende Zweihand-Techniken können den größeren Würfel und Angriffsmalus nicht durch Einhand-Auswahl umgehen', () => {
+  const character = { id: 'huskarl-grip', name: 'Huskarl', combatProfile: {
+    templateSelections: { classId: 'skjaldr' }, progression: { level: 7 },
+    weapons: [{ id: 'versatile-axe', name: 'Streitaxt', weaponType: 'axe', damageType: 'Hieb', equipped: true,
+      damageFormula: '1d8', versatileDamageFormula: '1d10', properties: 'Vielseitig' }]
+  } };
+  const actionId = 'technique:combat-style-huskarl-skjaldr-grund-3';
+  for (const weaponGrip of ['', 'one-handed', 'two-handed']) {
+    const actor = resolveCombatProfile(character, { actionId, weaponGrip });
+    assert.equal(actor.profileActionId, actionId);
+    assert.equal(actor.selectedAction.compatible, true);
+    assert.equal(actor.selectedAction.requiresTwoHands, true);
+    assert.equal(actor.weaponGrip, 'two-handed');
+    assert.equal(actor.weapon.damageFormula, '1d10+1d6+1d4');
+    assert.match(renderCombatWeaponGrip(actor), /value="one-handed" disabled/);
+  }
+});
+
 test('größerer Waffenwürfel verliert einen Angriffspunkt; Auswahl, Vorschau und Kosten stimmen überein', () => {
   const original = JSON.stringify(gawain);
   const one = resolve('one-handed'), two = resolve('two-handed');

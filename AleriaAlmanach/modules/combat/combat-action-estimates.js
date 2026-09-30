@@ -2,6 +2,7 @@ import { getCombatRollContext } from './combat-resolution-service.js?v=20260928-
 import { getCombatAttackNumbers, evaluateCombatAttackRoll } from './combat-attack-evaluation.js?v=20260928-equipment-art-v4';
 import { parseDamageFormula, combineDamageFormulas, buildDamageNotation } from './rules/combat-mvp-rules.js';
 import { getBonusDamageFormulas, getUniversalDamageBonus, getCombatEffectAttributeModifier } from './combat-profile-model.js?v=20260928-equipment-art-v4';
+import { resolveCombatEffectDamageType } from './combat-effect-model.js';
 
 export function estimateCombatHitChance(actor, target, options = {}) {
   if (!actor || !target || actor.selectedAction?.compatible === false || actor.equipmentPreparation?.error
@@ -44,7 +45,7 @@ function getPrimaryDamagePreview(actor = {}, selectedEffect = null, secondary = 
   const effects = actor.selectedAction?.effects || [];
   const primary = selectedEffect || effects.find(effect => effect.type === 'damage' && !['miss', 'save-success'].includes(effect.on) && effect.target !== 'self');
   if (effects.length && !primary) return null;
-  const damageType = primary?.damageType || actor.weapon?.damageType || '';
+  const damageType = resolveCombatEffectDamageType(primary, actor.weapon);
   if (primary?.amount > 0 && !primary.formula) {
     const modifier = getUniversalDamageBonus(actor) + getCombatEffectAttributeModifier(actor, primary);
     const average = Math.max(0, Number(primary.amount) + modifier);

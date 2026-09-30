@@ -23,6 +23,47 @@ const partyWith = (actorAbilities, targetAbilities = []) => createCombatParty([
 ]);
 const pool = record => record.combatProfile.resources.find(resource => resource.id === 'test-pool').current;
 
+for (const [mode, natural, expectedDamage] of [['saving-throw', 20, 2], ['saving-throw', 1, 5], ['spell-attack', 20, 10]]) {
+  test(`Schadensvertrag mit Speicherung: ${mode}, W20=${natural}, Eigenschaden bleibt unabhängig`, async () => {
+    const party = await partyWith([
+      ability('mixed-damage', [
+        { type: 'damage', target: 'self', formula: '1d6', on: 'always' },
+        { type: 'damage', target: 'target', formula: '1d6', on: 'hit' }
+      ], { delivery: 'spell', resolutionType: mode, halfDamageOnSave: true }),
+      ability('extra-die', [], { combatUsable: false, mechanics: { bonusDamageFormula: '1d4' } })
+    ]);
+    const before = await party.snapshot();
+    const saved = await party.commit(await party.prepare({ actor: 'a', targets: ['b'], actionId: 'ability:mixed-damage', natural }));
+    const result = saved.mechanics.commentSegments[0].combatResolution;
+    assert.equal(result.damage.total, expectedDamage);
+    assert.equal(result.effectResults.find(entry => entry.recipient === 'actor').amount, 3);
+    assert.equal((await party.record('a')).combatProfile.hitPoints.current, before.profiles.get('a').currentHitPoints - 3);
+    assert.equal((await party.record('b')).combatProfile.hitPoints.current, before.profiles.get('b').currentHitPoints - expectedDamage);
+    await undo(saved.id);
+    assert.equal((await party.record('a')).combatProfile.hitPoints.current, before.profiles.get('a').currentHitPoints);
+    assert.equal((await party.record('b')).combatProfile.hitPoints.current, before.profiles.get('b').currentHitPoints);
+    await party.assertConsistent();
+  });
+}
+
+test('Server erzwingt den vorgeschriebenen Zweihandgriff und protokolliert die geerbte Schadensart', async () => {
+  const actor = sample('two-handed-actor');
+  actor.combatProfile.templateSelections = { classId: 'skjaldr' };
+  actor.combatProfile.progression.level = 7;
+  actor.combatProfile.weapons = [{ id: 'versatile-axe', name: 'Streitaxt', weaponType: 'axe', damageType: 'Hieb',
+    equipped: true, damageFormula: '1d8', versatileDamageFormula: '1d10', properties: 'Vielseitig' }];
+  const party = await createCombatParty([{ key: 'a', actor, team: 'a' }, { key: 'b', actor: sample('target'), team: 'b' }]);
+  const prepared = await party.prepare({ actor: 'a', targets: ['b'], actionId: 'technique:combat-style-huskarl-skjaldr-grund-3', weaponGrip: 'one-handed' });
+  const saved = await party.commit(prepared);
+  const result = saved.mechanics.commentSegments[0].combatResolution;
+  assert.equal(result.weaponGrip, 'two-handed');
+  assert.equal(result.weapon.damageFormula, '1d10+1d6+1d4');
+  assert.equal(result.damage.damageType, 'Hieb');
+  assert.equal(result.effectResults.find(entry => entry.effect.type === 'damage').effect.damageType, 'Hieb');
+  await undo(saved.id);
+  await party.assertConsistent();
+});
+
 test('fester Schaden und nachfolgender Würfel werden gespeichert und vollständig zurückgenommen', async () => {
   const party = await partyWith([ability('mixed', [
     { type: 'damage', amount: 8, bonusAttribute: 'intelligence', on: 'always' },

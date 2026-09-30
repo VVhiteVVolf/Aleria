@@ -26,7 +26,17 @@ export const characters = await Promise.all(['Gais Wyrm', 'Nudd Saethwyr', 'Gild
   assert.ok(row, `${name}: character entry exists`);
   return JSON.parse(await readFile(new URL('../../../../CharakterDatenbank/' + row.path, import.meta.url), 'utf8')).character;
 }));
-export const fighters = characters.filter(character => character.combatProfile);
+// These item scenarios specifically exercise Gildas and Gawain. Other figures
+// gaining a combat sheet must never change the meaning of ids[0] and ids[1].
+export const fighters = ['Gildas Gafyr', 'Gawain Draig'].map(name => {
+  const character = structuredClone(characters.find(character => character.name === name));
+  assert.ok(character?.combatProfile, `${name}: combat fixture exists`);
+  const profile = resolveCombatProfile(character);
+  character.combatProfile.hitPoints.current = profile.maximumHitPoints;
+  character.combatProfile.hitPoints.temporary = 0;
+  character.combatProfile.resources = profile.resources.map(resource => ({ ...resource, current: resource.maximum }));
+  return character;
+});
 export const ids = fighters.map(character => character.id);
 export const record = async id => (await database.collection('characters').doc(id).get()).data();
 export const history = async () => sortSceneHistory((await database.collection('comments').where('entryId', '==', threadId).get()).docs.map(doc => ({ id: doc.id, ...doc.data() })));

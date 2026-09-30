@@ -22,11 +22,12 @@ after(async () => {
 for (const character of characters) test(`${character.name}: actual combat sheet available`, t => {
   if (!character.combatProfile) return t.skip('Character entry only; no combat sheet. No invented substitute stats.');
   const profile = resolveCombatProfile(character);
-  assert.ok(profile.currentHitPoints > 0 && profile.weapons.some(weapon => weapon.weaponType !== 'unarmed'));
+  assert.ok(profile.maximumHitPoints > 0 && profile.weapons.some(weapon => weapon.weaponType !== 'unarmed'));
 });
 
 test('Gawain archive, sheet, inventory and cards share one set of items and equipment effects', async () => {
-  const exported = JSON.parse(await readFile(new URL('../../../../Charakter%20Archiv%20Exporte/gawain-draig.json', import.meta.url), 'utf8')).character;
+  const archive = JSON.parse(await readFile(new URL('../../../../CharakterDatenbank/generated/characters.snapshot.json', import.meta.url), 'utf8'));
+  const exported = archive.characters.find(character => character.id === fighters[1].id);
   const gawain = fighters[1];
   assert.deepEqual(gawain.inventory.items, exported.inventory.items);
   assert.equal(new Set(gawain.inventory.items.map(item => item.id)).size, gawain.inventory.items.length);

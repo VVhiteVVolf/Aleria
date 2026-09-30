@@ -27,7 +27,7 @@ import { getCombatWeaponLoadout, getCombatTechniqueWeapon, usesCharacterWeaponLo
 import { COMBAT_WAIT_ACTION, hasActionBlockingCondition } from './combat-wait-action.js';
 import { empowerAuraAttack } from './combat-aura-attack.js';
 import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
-import { getHuskarlTechniqueUnavailableReason } from '../classes/aldrimar/aldrimar-combat-rules.js';
+import { getHuskarlTechniqueUnavailableReason, getHuskarlTechniqueRequirements } from '../classes/aldrimar/aldrimar-combat-rules.js';
 
 let emptyCharacterTargetProfile = null;
 let emptyCreatureTargetProfile = null;
@@ -129,6 +129,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
         id: `technique:${technique.id}`,
         sourceId: technique.id,
         kind: 'technique',
+        requiresTwoHands: !!(technique.cenyrTraining?.requiresTwoHands || getHuskarlTechniqueRequirements(technique).requiresTwoHands),
         kindLabel: technique.activationType === 'reaction' ? 'Reaktion' : (technique.activationType === 'bonus-action' ? 'Bonusaktion' : 'Technik'),
         name: technique.name,
         formula,

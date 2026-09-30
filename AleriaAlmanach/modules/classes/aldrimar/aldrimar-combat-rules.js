@@ -13,11 +13,15 @@ export function getAldrimarWeaponAttackBonus(profile = {}, weapon = {}) {
 }
 
 // Read requirements from the authored curriculum, even after profile sanitization.
+export function getHuskarlTechniqueRequirements(technique = {}) {
+  return technique.combatStyleId === 'huskarl-waffenlehre' ? techniques.get(technique.id)?.cultureTraining || {} : {};
+}
+
 export function getHuskarlTechniqueUnavailableReason(profile = {}, technique = {}) {
   if (technique.combatStyleId !== 'huskarl-waffenlehre') return '';
   const source = techniques.get(technique.id);
   if (!source) return 'Diese Huskarl-Technik ist nicht im Ausbildungskatalog enthalten.';
-  const rules = source.cultureTraining;
+  const rules = getHuskarlTechniqueRequirements(technique);
   if (!rules.allowedClassIds.includes(classId(profile))) return 'Diese Technik gehört zu einer anderen Huskarl-Klasse.';
   if (Number(profile.progression?.level || 1) < source.minimumLevel) return `Wird ab Stufe ${source.minimumLevel} freigeschaltet.`;
   const loadout = getCombatWeaponLoadout(profile);

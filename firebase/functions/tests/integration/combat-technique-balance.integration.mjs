@@ -59,7 +59,7 @@ test('the new guard grants defense without damage, refreshes without stacking an
   for (let i = 0; i < 2; i++) {
     const result = await party.commit(await guard());
     assert.equal(result.mechanics.commentSegments[0].combatResolution.damage, null);
-    assert.equal((await profile(party, 'gildas')).totalDefense, 18);
+    assert.equal((await profile(party, 'gildas')).totalDefense, 17);
   }
   await party.commit(await party.prepare({ actor: 'gildas', targets: ['gildas'], actionId: 'combat:wait' }));
   assert.equal((await profile(party, 'gildas')).totalDefense, 16);

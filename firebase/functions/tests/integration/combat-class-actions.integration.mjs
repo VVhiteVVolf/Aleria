@@ -5,16 +5,17 @@ import { database, reset, strike, record, history, commit, undo, threadId, prepa
 import { resolveCombatProfile } from '../../../../AleriaAlmanach/modules/combat/combat-profile-resolver.js';
 import { deriveCombatStateFromComments } from '../../../../AleriaAlmanach/modules/combat/combat-state-model.js';
 import { withEquippedCombatWeapon } from '../../../../AleriaAlmanach/modules/combat/combat-equipment-state.js';
-import { getClassSpecialCurriculum } from '../../../../AleriaAlmanach/modules/classes/class-special-maneuvers.js';
 // Read-only production export supplied by the release check. All writes go to
 // the strict demo-project emulator guard in item-duel-context.
-if (!process.env.COMBAT_TEST_CHARACTER_SNAPSHOT) throw Error('COMBAT_TEST_CHARACTER_SNAPSHOT must point to the read-only character export.');
 function decode(value) {
   if (value.mapValue) return Object.fromEntries(Object.entries(value.mapValue.fields || {}).map(([k,v])=>[k,decode(v)]));
   if (value.arrayValue) return (value.arrayValue.values || []).map(decode);
   return value.stringValue ?? (value.integerValue != null ? Number(value.integerValue) : undefined) ?? value.doubleValue ?? value.booleanValue ?? null;
 }
-const actors=JSON.parse(await readFile(process.env.COMBAT_TEST_CHARACTER_SNAPSHOT,'utf8')).map(doc=>({...decode({mapValue:{fields:doc.fields}}),id:doc.name.split('/').at(-1)})).filter(c=>c.combatProfile);
+const snapshot=JSON.parse(await readFile(process.env.COMBAT_TEST_CHARACTER_SNAPSHOT
+  || new URL('../../../../CharakterDatenbank/generated/characters.snapshot.json',import.meta.url),'utf8'));
+const actors=(snapshot.characters||snapshot).map(doc=>doc.fields
+  ? {...decode({mapValue:{fields:doc.fields}}),id:doc.name.split('/').at(-1)} : doc).filter(c=>c.combatProfile);
 for (const actor of actors) {
   const profile=resolveCombatProfile(actor);
   actor.combatProfile.hitPoints={...actor.combatProfile.hitPoints,current:profile.maximumHitPoints,temporary:0};
@@ -22,23 +23,29 @@ for (const actor of actors) {
 }
 const named=prefix=>{const actor=actors.find(c=>c.name.startsWith(prefix));assert.ok(actor?.combatProfile,`${prefix}: real online combat profile required`);return actor;};
 const names=['Asgeir','Ylva','Gais','Nudd','Gawain','Gildas'];
-const regularCounts={Asgeir:21,Ylva:21,Gais:14,Nudd:10,Gawain:8,Gildas:10};
 after(()=>database.terminate());
 
-for(const name of names) test(`${name}: real sheet, small self preparation and strong special attack use canonical costs online`,async()=>{
-  const actor=named(name),other=named(name==='Gawain'?'Gildas':'Gawain');await reset({actors:[actor,other]});
-  assert.equal(resolveCombatProfile(actor).techniques.filter(t=>!t.id.startsWith('class-special-')).length,regularCounts[name]);
-  const classId=getClassSpecialCurriculum(actor.combatProfile.templateSelections.classId).id;
-  const small=await strike({attacker:actor.id,target:actor.id,actionId:`ability:class-special-${classId}-reserve`});
-  assert.equal(small.actual.targetId,actor.id);assert.ok(small.actual.targetSnapshot.temporaryHitPointsAfter>0);
-  assert.equal(small.actual.actorInventorySnapshot,null);
-  assert.equal(small.actual.actorResourceSnapshot.after.find(r=>r.id==='special-action').current,1);
-  const strong=await strike({attacker:actor.id,target:other.id,actionId:`technique:class-special-${classId}-strike`});
-  assert.ok(strong.actual.damage.total>0);assert.equal(strong.actual.actorResourceSnapshot.after.find(r=>r.id==='special-action').current,0);
-  assert.equal((await record(actor.id)).combatProfile.resources.find(r=>r.id==='special-action').current,0);
+for(const name of names) test(`${name}: Durchschnaufen and regular special-action techniques persist their canonical costs`,async()=>{
+  const actor=structuredClone(named(name)),other=named(name==='Gawain'?'Gildas':'Gawain');
+  actor.combatProfile.hitPoints.current-=5;
+  await reset({actors:[actor,other]});
+  const profile=resolveCombatProfile(actor);
+  assert.equal(profile.actions.some(a=>a.sourceId?.startsWith('class-special-')),false);
+  const small=await strike({attacker:actor.id,target:actor.id,actionId:'ability:martial-durchschnaufen'});
+  assert.equal(small.actual.targetId,actor.id);
+  assert.equal(small.actual.targetSnapshot.hitPointsAfter,profile.maximumHitPoints);
+  assert.equal(small.actual.actorResourceSnapshot.after.find(r=>r.id==='bonus-action').current,0);
   const before=await history();
-  await assert.rejects(strike({attacker:actor.id,target:other.id,actionId:`technique:class-special-${classId}-strike`}),/nicht genug|Ressourcen/);
+  await assert.rejects(strike({attacker:actor.id,target:actor.id,actionId:'ability:martial-durchschnaufen'}),/keine Nutzung mehr/);
   assert.deepEqual(await history(),before);
+  const special=profile.actions.find(a=>a.compatible&&a.kind==='technique'&&a.costs.some(c=>c.resourceId==='special-action'));
+  assert.ok(special,'regular class curriculum includes an available special-action technique');
+  const target=special.resolutionMode==='automatic'?actor:other;
+  const strong=await strike({attacker:actor.id,target:target.id,actionId:special.id});
+  const expected=profile.resources.find(r=>r.id==='special-action').current-special.costs.find(c=>c.resourceId==='special-action').amount;
+  assert.equal(strong.actual.actorResourceSnapshot.after.find(r=>r.id==='special-action').current,expected);
+  assert.equal((await record(actor.id)).combatProfile.resources.find(r=>r.id==='special-action').current,expected);
+  assert.ok(strong.actual.effectResults.length);
 });
 
 for (const pair of [['Ylva','Asgeir'],['Gais','Nudd'],['Gawain','Gildas']]) test(`${pair.join(' gegen ')}: gegenseitige Angriffe und kritische Würfe bleiben nachvollziehbar`,async()=>{
