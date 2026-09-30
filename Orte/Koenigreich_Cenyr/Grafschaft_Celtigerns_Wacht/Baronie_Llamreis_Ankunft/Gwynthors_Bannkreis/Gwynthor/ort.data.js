@@ -95,7 +95,7 @@
         {
           id: "cochllamwyr", name: "Cochllamwyr", branch: "Stadtwache · Rotmäntel",
           tier: "Elite der Stadtverteidigung",
-          image: { src: `${militaryAssetRoot}/cochllamwyr-v1.png`, alt: "Cochllamwyr in reich ausgestatteter Rüstung, rotem Mantel und mit Gwynthors Stadtwappen" },
+          image: { src: `${militaryAssetRoot}/cochllamwyr-v1.png?v=20260930-transparent`, alt: "Cochllamwyr in reich ausgestatteter Rüstung, rotem Mantel und mit Gwynthors Stadtwappen" },
           note: "Tore, Mauern, Märkte, Kais und Straßen innerhalb Gwynthors sind ihr Auftrag. Edlere Rüstung und das stolze Rot der Mäntel zeichnen sie aus; auf ihrem Schild steht das Wappen der Stadt."
         },
         {

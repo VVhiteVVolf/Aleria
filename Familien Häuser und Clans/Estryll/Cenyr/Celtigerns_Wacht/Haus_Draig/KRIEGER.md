@@ -10,6 +10,8 @@ Elf vorhandene Draig-Bilder stammen unverändert aus `D:\0-KI Generierte\01 Bild
 
 ## Finale Bildprompts und Projektdateien
 
+Nachtrag am selben Tag: Der Nutzer hat die drei neuen Kriegerbilder selbst freigestellt und die Originalausgaben ersetzt. Die eingebundenen Projektdateien wurden durch diese gelieferten RGBA-Fassungen ersetzt; Bildverweise tragen `?v=20260930-transparent`. Die folgenden Prompts dokumentieren die ursprüngliche Erzeugung vor der Freistellung.
+
 ### Cochllamwyr
 
 Projektdatei: `Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Gwynthors_Bannkreis/Gwynthor/assets/cochllamwyr-v1.png`

@@ -129,7 +129,7 @@ window.HAEUSER_DATA = {
       {
         "name": "Derwyn",
         "description": "Heiliger Ritter und Paladin im Zeichen des Heiligen Grals.",
-        "image": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-derwyn-v1.png"
+        "image": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-derwyn-v1.png?v=20260930-transparent"
       },
       {
         "name": "Ritter zur See",
@@ -154,7 +154,7 @@ window.HAEUSER_DATA = {
       {
         "name": "Leibgardist",
         "description": "Handverlesener persönlicher Wächter · Teil der Draig-Hausmacht.",
-        "image": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-leibgardist-v1.png"
+        "image": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-leibgardist-v1.png?v=20260930-transparent"
       },
       {
         "name": "Knappe",
