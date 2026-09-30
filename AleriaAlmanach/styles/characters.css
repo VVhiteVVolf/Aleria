@@ -226,7 +226,7 @@
   .char-register-view-toolbar {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: minmax(12rem, 1fr) minmax(20rem, 2fr) minmax(10rem, auto);
+    grid-template-columns: minmax(0, 1fr) minmax(10rem, auto);
     align-items: center;
     gap: 0.8rem;
     padding: 0.78rem 0.85rem;
@@ -237,6 +237,7 @@
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.28);
   }
   .char-register-view-copy {
+    grid-column: 1 / -1;
     min-width: 0;
     display: grid;
     gap: 0.18rem;
@@ -398,11 +399,12 @@
   }
   .char-dashboard-metrics {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.48rem;
   }
   .char-dashboard-metric {
-    min-height: 4.3rem;
+    min-height: 5.3rem;
+    gap: .4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -420,7 +422,7 @@
   }
   .char-dashboard-metric span {
     color: var(--ink-faded);
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     line-height: 1.3;
   }
   .char-dashboard-metric strong {

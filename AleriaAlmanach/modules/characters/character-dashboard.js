@@ -3,7 +3,7 @@ let _characterDashboardFilter = '';
 const CHARACTER_DASHBOARD_FILTER_LABELS = {
   'missing-portrait': 'Kein Portrait',
   'missing-bio': 'Keine Beschreibung',
-  'missing-group': 'Unsortiert',
+  'missing-group': 'Noch zuordnen',
   important: 'Wichtige aktive Figuren',
   inactive: 'Tot / verschollen',
   plot: 'Plot-Knoten',
@@ -12,8 +12,7 @@ const CHARACTER_DASHBOARD_FILTER_LABELS = {
 };
 
 function getCharacterDateTimestamp(value) {
-  const time = Date.parse(value || '');
-  return Number.isFinite(time) ? time : 0;
+  return getCharacterRegisterDateTimestamp(value);
 }
 
 function sortCharactersByDate(chars, field) {
@@ -28,13 +27,13 @@ function characterHasDescription(char) {
 }
 
 function characterHasGroup(char) {
-  return !!getCharacterAssignedTab(char?.id);
+  return AleriaCharacterCategories.classify(char).kind !== 'unsorted';
 }
 
 function isCharacterImportant(char) {
   const relevance = getCharacterRelevanceValue(char?.relevance);
   const status = getCharacterStatusValue(char?.status);
-  return (relevance === 'important' || relevance === 'plot') && status !== 'dead' && status !== 'missing';
+  return (relevance === 'important' || isCharacterPlotNode(char)) && status !== 'dead' && status !== 'missing' && status !== 'inactive';
 }
 
 function isCharacterInactiveOrGone(char) {
@@ -48,9 +47,6 @@ function isCharacterPlotNode(char) {
 
 function filterCharactersForDashboard(chars, activeTab) {
   if (activeTab !== 'Alle' || !_characterDashboardFilter) return chars;
-  const recentIds = new Set(sortCharactersByDate(chars, 'updatedAt').slice(0, 12).map(char => String(char.id || '')));
-  const newIds = new Set(sortCharactersByDate(chars, 'createdAt').slice(0, 12).map(char => String(char.id || '')));
-
   return chars.filter(char => {
     if (_characterDashboardFilter === 'missing-portrait') return !sanitizeImageSrc(char?.portrait);
     if (_characterDashboardFilter === 'missing-bio') return !characterHasDescription(char);
@@ -58,18 +54,19 @@ function filterCharactersForDashboard(chars, activeTab) {
     if (_characterDashboardFilter === 'important') return isCharacterImportant(char);
     if (_characterDashboardFilter === 'inactive') return isCharacterInactiveOrGone(char);
     if (_characterDashboardFilter === 'plot') return isCharacterPlotNode(char);
-    if (_characterDashboardFilter === 'recent') return recentIds.has(String(char.id || ''));
-    if (_characterDashboardFilter === 'new') return newIds.has(String(char.id || ''));
+    if (_characterDashboardFilter === 'recent') return !!getCharacterDateTimestamp(char.updatedAt);
+    if (_characterDashboardFilter === 'new') return !!getCharacterDateTimestamp(char.createdAt);
     return true;
   });
 }
 
 function showUnsortedCharacters() {
+  resetCharacterRegisterFilters();
   _activeCharTab = 'Alle';
   _activeCharSubtab = 'Alle';
   _characterDashboardFilter = 'missing-group';
   if (typeof setCharacterRegisterViewMode === 'function') {
-    setCharacterRegisterViewMode('collections', { render: false });
+    setCharacterRegisterViewMode('categories', { render: false });
   }
   renderCharSubtabs();
   renderCharGrid();
@@ -92,23 +89,19 @@ function buildCharacterDashboardSummary(chars) {
 }
 
 function buildCharacterDashboardGroups(chars) {
-  const byGroup = new Map();
-  chars.forEach(char => {
-    const group = getCharacterAssignedTab(char.id) || 'Unsortiert';
-    byGroup.set(group, (byGroup.get(group) || 0) + 1);
-  });
-  return Array.from(byGroup.entries())
-    .map(([label, count]) => ({ label, count }))
+  return AleriaCharacterCategories.buildBuckets(chars)
+    .map(bucket => ({ key: bucket.key, label: bucket.label, count: bucket.chars.length }))
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'de', { sensitivity: 'base' }));
 }
 
-function renderCharacterDashboardMetric(label, count, filter) {
+function renderCharacterDashboardMetric(label, count, filter, hint = 'Figuren anzeigen') {
   const active = _characterDashboardFilter === filter;
   return `
     <button class="char-dashboard-metric${active ? ' active' : ''}" type="button"
-      data-character-dashboard-action="set-filter" data-filter="${escapeHtml(filter)}">
+      data-character-dashboard-action="set-filter" data-filter="${escapeHtml(filter)}" aria-pressed="${active}">
       <span>${escapeHtml(label)}</span>
       <strong>${count}</strong>
+      <small>${escapeHtml(hint)} <span aria-hidden="true">→</span></small>
     </button>`;
 }
 
@@ -118,7 +111,7 @@ function renderCharacterDashboardMiniList(chars, emptyText) {
     <button class="char-dashboard-character" type="button"
       data-character-grid-action="open-character" data-char-id="${escapeHtml(char.id || '')}">
       <span class="char-dashboard-character-name">${escapeHtml(char.name || 'Unbenannt')}</span>
-      <span class="char-dashboard-character-meta">${escapeHtml(getCharacterAssignedTab(char.id) || getCharacterStatusLabel(char.status) || 'Unsortiert')}</span>
+      <span class="char-dashboard-character-meta">${escapeHtml(AleriaCharacterCategories.classify(char).label)}</span>
     </button>`).join('');
 }
 
@@ -126,14 +119,14 @@ function renderCharacterDashboardGroups(groups) {
   if (!groups.length) return '<div class="char-dashboard-empty">Noch keine Gruppen belegt.</div>';
   return groups.map(group => `
     <button class="char-dashboard-group" type="button"
-      data-character-dashboard-action="select-group" data-group="${escapeHtml(group.label === 'Unsortiert' ? '' : group.label)}">
+      data-character-dashboard-action="select-group" data-category-key="${escapeHtml(group.key)}">
       <span>${escapeHtml(group.label)}</span>
       <strong>${group.count}</strong>
     </button>`).join('');
 }
 
 function renderCharacterDashboard(grid, chars) {
-  if (!grid || _activeCharTab !== 'Alle' || _archiveSearchNeedle) return;
+  if (!grid || _activeCharTab !== 'Alle' || _archiveSearchNeedle || _charOrganizeMode) return;
   const summary = buildCharacterDashboardSummary(chars);
   const activeFilterLabel = CHARACTER_DASHBOARD_FILTER_LABELS[_characterDashboardFilter] || '';
   const dashboard = document.createElement('section');
@@ -141,8 +134,8 @@ function renderCharacterDashboard(grid, chars) {
   dashboard.innerHTML = `
     <div class="char-dashboard-head">
       <div>
-        <div class="char-dashboard-kicker">Charakter-Dashboard</div>
-        <div class="char-dashboard-title">${summary.total} aktive Figuren im Register</div>
+        <div class="char-dashboard-kicker">Schnellzugriff</div>
+        <div class="char-dashboard-title">${summary.total} Figuren im Register</div>
       </div>
       ${activeFilterLabel ? `
         <button class="char-dashboard-clear" type="button" data-character-dashboard-action="clear-filter">
@@ -150,33 +143,30 @@ function renderCharacterDashboard(grid, chars) {
         </button>` : ''}
     </div>
     <div class="char-dashboard-metrics">
+      ${renderCharacterDashboardMetric('Zuletzt bearbeitet', '↻', 'recent', 'Nach letzter Änderung')}
+      ${renderCharacterDashboardMetric('Neue Charaktere', '+', 'new', 'Neueste zuerst')}
+      ${renderCharacterDashboardMetric('Noch zuordnen', summary.unsorted.length, 'missing-group')}
+      ${renderCharacterDashboardMetric('Wichtig aktiv', summary.important.length, 'important')}
       ${renderCharacterDashboardMetric('Kein Portrait', summary.missingPortrait.length, 'missing-portrait')}
       ${renderCharacterDashboardMetric('Keine Beschreibung', summary.missingBio.length, 'missing-bio')}
-      ${renderCharacterDashboardMetric('Unsortiert', summary.unsorted.length, 'missing-group')}
-      ${renderCharacterDashboardMetric('Wichtig aktiv', summary.important.length, 'important')}
       ${renderCharacterDashboardMetric('Tot / verschollen', summary.inactive.length, 'inactive')}
       ${renderCharacterDashboardMetric('Plot-Knoten', summary.plot.length, 'plot')}
     </div>
+    <details class="char-dashboard-preview"><summary>Letzte Figuren & häufige Kategorien</summary>
     <div class="char-dashboard-columns">
       <div class="char-dashboard-panel">
-        <div class="char-dashboard-panel-head">
-          <span>Zuletzt bearbeitet</span>
-          <button type="button" data-character-dashboard-action="set-filter" data-filter="recent">Anzeigen</button>
-        </div>
+        <button class="char-dashboard-panel-head char-dashboard-panel-link" type="button" data-character-dashboard-action="set-filter" data-filter="recent">Zuletzt bearbeitet <span aria-hidden="true">→</span></button>
         ${renderCharacterDashboardMiniList(summary.recent, 'Noch keine Bearbeitungsdaten.')}
       </div>
       <div class="char-dashboard-panel">
-        <div class="char-dashboard-panel-head">
-          <span>Neue Charaktere</span>
-          <button type="button" data-character-dashboard-action="set-filter" data-filter="new">Anzeigen</button>
-        </div>
+        <button class="char-dashboard-panel-head char-dashboard-panel-link" type="button" data-character-dashboard-action="set-filter" data-filter="new">Neue Charaktere <span aria-hidden="true">→</span></button>
         ${renderCharacterDashboardMiniList(summary.newCharacters, 'Noch keine Erstellungsdaten.')}
       </div>
       <div class="char-dashboard-panel">
-        <div class="char-dashboard-panel-head"><span>Meistgenutzte Gruppen</span></div>
+        <div class="char-dashboard-panel-head"><span>Häufige Kategorien</span></div>
         ${renderCharacterDashboardGroups(summary.groups)}
       </div>
-    </div>`;
+    </div></details>`;
   grid.appendChild(dashboard);
 }
 
@@ -190,26 +180,28 @@ function handleCharacterDashboardClick(event) {
   event.stopPropagation();
 
   if (action === 'set-filter') {
-    _characterDashboardFilter = trigger.dataset.filter || '';
+    const next = trigger.dataset.filter || '';
+    const previous = _characterDashboardFilter;
+    resetCharacterRegisterFilters();
+    _characterDashboardFilter = previous === next ? '' : next;
+    if (_characterDashboardFilter === 'recent' || _characterDashboardFilter === 'new') {
+      setCharacterRegisterSortMode(_characterDashboardFilter === 'recent' ? 'updated-desc' : 'created-desc', { render: false });
+    }
+    renderCharSubtabs();
     renderCharGrid();
+    AleriaCharacterCategoryBrowser.focusResults();
     return;
   }
   if (action === 'clear-filter') {
     _characterDashboardFilter = '';
+    renderCharSubtabs();
     renderCharGrid();
     return;
   }
   if (action === 'select-group') {
-    const group = trigger.dataset.group || '';
-    _characterDashboardFilter = '';
-    if (group) selectCharacterTab(group);
-    else {
-      _activeCharTab = 'Alle';
-      _activeCharSubtab = 'Alle';
-      _characterDashboardFilter = 'missing-group';
-      renderCharSubtabs();
-      renderCharGrid();
-    }
+    resetCharacterRegisterFilters();
+    setCharacterRegisterViewMode('categories', { render: false });
+    AleriaCharacterCategoryBrowser.select(trigger.dataset.categoryKey);
   }
 }
 

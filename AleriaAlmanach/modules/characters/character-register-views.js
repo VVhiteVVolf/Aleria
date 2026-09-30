@@ -1,4 +1,5 @@
 const CHARACTER_REGISTER_VIEW_OPTIONS = [
+  { value: 'categories', label: 'Übersicht' },
   { value: 'families', label: 'Stammbäume' },
   { value: 'collections', label: 'Eigene Gruppen' },
   { value: 'relevance', label: 'Relevanz' },
@@ -20,7 +21,7 @@ const CHARACTER_REGISTER_FIXED_BUCKET_ORDER = {
   status: ['Aktiv', 'Inaktiv', 'Verschollen', 'Tot', 'Unklar', 'Ohne Status']
 };
 
-let _characterRegisterViewMode = 'families';
+let _characterRegisterViewMode = 'categories';
 let _characterRegisterSortMode = 'name-asc';
 let _characterRegisterSearch = '';
 
@@ -29,12 +30,19 @@ function getCharacterRegisterViewMode() {
 }
 
 function isCharacterRegisterFacetView(mode = _characterRegisterViewMode) {
-  return mode !== 'collections';
+  return mode !== 'collections' && mode !== 'categories';
+}
+
+function resetCharacterRegisterFilters() {
+  _characterRegisterSearch = '';
+  if (typeof _characterDashboardFilter !== 'undefined') _characterDashboardFilter = '';
+  if (typeof AleriaCharacterCategoryBrowser !== 'undefined') AleriaCharacterCategoryBrowser.reset();
 }
 
 function setCharacterRegisterViewMode(mode, options = {}) {
   const isKnownMode = CHARACTER_REGISTER_VIEW_OPTIONS.some(option => option.value === mode);
-  _characterRegisterViewMode = isKnownMode ? mode : 'families';
+  _characterRegisterViewMode = isKnownMode ? mode : 'categories';
+  if (typeof AleriaCharacterCategoryBrowser !== 'undefined') AleriaCharacterCategoryBrowser.reset();
   if (options.render !== false && typeof renderCharGrid === 'function') renderCharGrid();
 }
 
@@ -45,7 +53,9 @@ function setCharacterRegisterSortMode(mode, options = {}) {
 }
 
 function getCharacterRegisterDateTimestamp(value) {
-  const timestamp = Date.parse(value || '');
+  const timestamp = value && typeof value === 'object' && ('seconds' in value || '_seconds' in value)
+    ? Number(value.seconds ?? value._seconds) * 1000
+    : typeof value === 'number' ? value : Date.parse(value || '');
   return Number.isFinite(timestamp) ? timestamp : 0;
 }
 
@@ -105,8 +115,7 @@ function getCharacterRegisterFacetLabel(char, mode = _characterRegisterViewMode)
 }
 
 function getCharacterRegisterSearchText(char) {
-  if (typeof buildCharacterSearchText === 'function') return buildCharacterSearchText(char);
-  return [
+  const base = typeof buildCharacterSearchText === 'function' ? buildCharacterSearchText(char) : [
     char?.name,
     char?.title,
     char?.fraktion,
@@ -115,7 +124,9 @@ function getCharacterRegisterSearchText(char) {
     char?.currentLocation,
     char?.genealogy?.houseName,
     ...(char?.aliases || [])
-  ].join(' ').toLocaleLowerCase('de');
+  ].join(' ');
+  const category = typeof AleriaCharacterCategories !== 'undefined' ? AleriaCharacterCategories.classify(char).label : '';
+  return `${base} ${category}`.toLocaleLowerCase('de');
 }
 
 function hasCharacterRegisterSearch() {
@@ -226,6 +237,9 @@ function getCharacterRegisterFacetKey(label, bucket = null) {
 }
 
 function getCharacterRegisterViewDescription() {
+  if (_characterRegisterViewMode === 'categories') {
+    return 'Eigene Gruppen zuerst. Weitere Figuren ordnen sich automatisch nach Haus, Stammbaum, Fraktion oder Ort ein.';
+  }
   if (_characterRegisterViewMode === 'families') {
     return 'Automatisch aus den Stammbäumen. Angeheiratete können in mehreren Häusern erscheinen, öffnen aber immer dasselbe Profil.';
   }
@@ -274,10 +288,10 @@ function renderCharacterRegisterViewToolbar(grid) {
         <span>Figur finden</span>
         <input type="search" data-character-register-action="search" value="${escapeCharacterRegisterMarkup(_characterRegisterSearch)}" placeholder="Name, Haus, Rolle, Ort oder Alias">
       </label>
-      <div class="char-register-group-controls" aria-label="Gruppen ein- oder ausklappen">
+      ${_charOrganizeMode ? `<div class="char-register-group-controls" aria-label="Gruppen ein- oder ausklappen">
         <button type="button" data-character-grid-action="collapse-all-groups">Alle einklappen</button>
         <button type="button" data-character-grid-action="expand-all-groups">Alle aufklappen</button>
-      </div>
+      </div>` : ''}
     </div>`;
   grid.appendChild(toolbar);
 }

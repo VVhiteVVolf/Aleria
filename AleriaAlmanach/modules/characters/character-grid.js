@@ -9,6 +9,7 @@ function setCharacterSubgroupFromSelect(selectEl, charId) {
 
 function toggleCharacterOrganizeMode() {
   _charOrganizeMode = !_charOrganizeMode;
+  if (typeof AleriaCharacterCategoryBrowser !== 'undefined') AleriaCharacterCategoryBrowser.reset();
   if (_charOrganizeMode && typeof setCharacterRegisterViewMode === 'function') {
     setCharacterRegisterViewMode('collections', { render: false });
   }
@@ -156,7 +157,8 @@ function createCharacterCard(c, options = {}) {
   const playerOwnerLabel = getCharacterPlayerOwnerLabel(playerOwner);
   const assignedTab = getCharacterAssignedTab(c.id);
   const assignedSubtab = getCharacterAssignedSubtab(c.id, assignedTab);
-  const groupLabel = assignedTab || 'Unsortiert';
+  const category = typeof AleriaCharacterCategories !== 'undefined' ? AleriaCharacterCategories.classify(c) : null;
+  const groupLabel = assignedTab || category?.label || 'Unsortiert';
   const showGroupSelect = !!options.organizeMode;
   const showBulkSelect = showGroupSelect && typeof getSelectedCharacterIds === 'function';
   const bulkSelected = showBulkSelect && getSelectedCharacterIds().includes(String(c.id || ''));
@@ -199,7 +201,7 @@ function createCharacterCard(c, options = {}) {
       ${showGroupSelect
         ? `<select class="char-card-group-select" title="Gruppe wählen" aria-label="Gruppe für ${safeName} wählen">${groupOptions}</select>
            ${assignedTab ? `<select class="char-card-subgroup-select" title="Untergruppe wählen" aria-label="Untergruppe für ${safeName} wählen" data-parent-tab="${escapeHtml(assignedTab)}">${subgroupOptions}</select>` : ''}`
-        : `<span class="char-card-group-badge">${escapeHtml(groupLabel)}${assignedSubtab ? ` / ${escapeHtml(assignedSubtab)}` : ''}</span>`}
+        : `<span class="char-card-group-badge" title="${category?.automatic ? 'Automatisch aus dem Profil eingeordnet' : 'Eigene Gruppe'}">${escapeHtml(groupLabel)}${assignedSubtab ? ` / ${escapeHtml(assignedSubtab)}` : ''}</span>`}
     </div>`;
 
   if (showGroupSelect) {
@@ -285,9 +287,11 @@ function getCharacterGridFilteredEntries() {
   const registerFiltered = typeof filterCharacterRegisterEntries === 'function'
     ? filterCharacterRegisterEntries(archiveFiltered)
     : archiveFiltered;
-  return typeof filterCharactersForDashboard === 'function'
+  const dashboardFiltered = typeof filterCharactersForDashboard === 'function'
     ? filterCharactersForDashboard(registerFiltered, _activeCharTab)
     : registerFiltered;
+  return typeof AleriaCharacterCategoryBrowser !== 'undefined'
+    ? AleriaCharacterCategoryBrowser.filterEntries(dashboardFiltered) : dashboardFiltered;
 }
 
 function renderCharGrid() {
@@ -304,9 +308,11 @@ function renderCharGrid() {
   actions.className = 'char-archive-actions';
   actions.innerHTML = `
     <button type="button" class="${_charOrganizeMode ? 'active' : ''}" data-character-grid-action="toggle-organize">${_charOrganizeMode ? 'Ordnen beenden' : 'Mehrere einordnen'}</button>
+    <details class="char-register-management"><summary>Import & Export</summary><div>
     <button type="button" data-character-grid-action="export-archive">Charakterarchiv exportieren</button>
     <button type="button" data-character-grid-action="open-import-file">Charaktere importieren</button>
-    <button type="button" class="char-genealogy-import-action" data-character-genealogy-action="open-import">Aus Stammbaum übernehmen</button>`;
+    <button type="button" class="char-genealogy-import-action" data-character-genealogy-action="open-import">Aus Stammbaum übernehmen</button>
+    </div></details>`;
   grid.appendChild(actions);
 
   if (typeof renderCharacterRegisterViewToolbar === 'function') {
@@ -327,6 +333,7 @@ function renderCharGrid() {
     toolbar.className = 'char-group-toolbar';
     toolbar.innerHTML = `
       <div class="char-group-toolbar-title">${escapeHtml(_activeCharTab)}${_activeCharSubtab !== 'Alle' ? ` / ${escapeHtml(_activeCharSubtab)}` : ''}</div>
+      <button type="button" data-character-grid-action="back-to-overview">← Zur Übersicht</button>
       ${_charOrganizeMode ? `
         <button type="button" data-character-grid-action="rename-active-tab">Umbenennen</button>
         <button type="button" data-character-grid-action="clear-active-group">Leeren</button>` : ''}`;
@@ -337,7 +344,7 @@ function renderCharGrid() {
   const unfilteredChars = typeof filterCharacterRegisterEntries === 'function'
     ? filterCharacterRegisterEntries(archiveFilteredChars)
     : archiveFilteredChars;
-  if (typeof renderCharacterDashboard === 'function') renderCharacterDashboard(grid, unfilteredChars);
+  if (typeof renderCharacterDashboard === 'function') renderCharacterDashboard(grid, getVisibleCharacterRecords());
   const filteredChars = typeof filterCharactersForDashboard === 'function'
     ? filterCharactersForDashboard(unfilteredChars, _activeCharTab)
     : unfilteredChars;
@@ -345,7 +352,11 @@ function renderCharGrid() {
     ? sortCharacterRegisterEntries(filteredChars)
     : filteredChars;
   if (typeof renderCharacterBulkToolbar === 'function') renderCharacterBulkToolbar(grid, chars);
-  if (facetView && typeof buildCharacterRegisterFacetBuckets === 'function') {
+  const categoryBrowserRendered = typeof AleriaCharacterCategoryBrowser !== 'undefined'
+    && AleriaCharacterCategoryBrowser.render(grid, chars);
+  if (categoryBrowserRendered) {
+    // The category browser renders its directory or the focused result cards.
+  } else if (facetView && typeof buildCharacterRegisterFacetBuckets === 'function') {
     const buckets = buildCharacterRegisterFacetBuckets(chars);
     const isLargeFamilyView = typeof getCharacterRegisterViewMode === 'function'
       && getCharacterRegisterViewMode() === 'families'
@@ -404,7 +415,7 @@ function renderCharGrid() {
     appendCharacterEmptyHint(grid, `Keine Charaktere passen zu "${_archiveSearch.trim()}".`);
   }
 
-  if (_activeCharTab === 'Alle' && narratorMatches) {
+  if (_activeCharTab === 'Alle' && narratorMatches && !categoryBrowserRendered) {
     const narratorCard = document.createElement('div');
     narratorCard.className = 'char-card';
     narratorCard.style.cssText = 'opacity:0.75;cursor:default;';
@@ -456,12 +467,18 @@ function handleCharacterGridActionClick(event) {
   if (action === 'bulk-target-group') return;
   if (action === 'bulk-target-subgroup') return;
   if (action === 'toggle-bulk-character') return;
-  if (action === 'open-character' && isCharacterGridControlTarget(event.target)) return;
+  if (action === 'open-character' && isCharacterGridControlTarget(event.target)
+    && event.target.closest('button, select, input, textarea, a') !== trigger) return;
 
   event.preventDefault();
 
   if (action === 'open-character') {
     openCharProfile(trigger.dataset.charId);
+    return;
+  }
+  if (action === 'back-to-overview') {
+    setCharacterRegisterViewMode('categories', { render: false });
+    selectCharacterTab('Alle');
     return;
   }
   if (action === 'open-new-character') {
@@ -528,6 +545,7 @@ function handleCharacterGridActionKeydown(event) {
 
   const action = trigger.dataset.characterGridAction;
   if (action !== 'open-character' && action !== 'open-new-character') return;
+  if (isCharacterGridControlTarget(event.target)) return; // Native buttons handle Enter/Space themselves.
 
   event.preventDefault();
   if (action === 'open-character') openCharProfile(trigger.dataset.charId);

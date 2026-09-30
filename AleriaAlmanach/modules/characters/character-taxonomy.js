@@ -186,12 +186,13 @@ function createCharacterTaxonomyNavigator() {
   tools.appendChild(createCharacterTabButton('Alle'));
 
   const unsortedCount = getVisibleCharacterRecords()
-    .filter(char => !getCharacterAssignedTab(char.id)).length;
+    .filter(char => !characterHasGroup(char)).length;
   const unsorted = document.createElement('button');
-  unsorted.className = 'char-subtab-btn';
+  unsorted.className = 'char-subtab-btn' + (_characterDashboardFilter === 'missing-group' ? ' active' : '');
   unsorted.type = 'button';
   unsorted.dataset.charTabAction = 'select-unsorted';
-  unsorted.innerHTML = `<span>Unsortiert (${unsortedCount})</span>`;
+  unsorted.innerHTML = `<span>Noch zuordnen (${unsortedCount})</span>`;
+  unsorted.setAttribute('aria-pressed', String(_characterDashboardFilter === 'missing-group'));
   tools.appendChild(unsorted);
   tools.appendChild(createCharacterArchiveTabButton());
 
@@ -201,6 +202,8 @@ function createCharacterTaxonomyNavigator() {
   addBtn.dataset.charTabAction = 'add';
   tools.appendChild(addBtn);
   shell.appendChild(tools);
+
+  if (!_charOrganizeMode && (_activeCharTab === 'Alle' || _activeCharTab === CHARACTER_ARCHIVE_TAB)) return shell;
 
   const drawer = document.createElement('details');
   drawer.className = 'char-taxonomy-drawer';

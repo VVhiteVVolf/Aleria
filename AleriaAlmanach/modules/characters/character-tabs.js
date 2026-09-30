@@ -344,6 +344,7 @@ function renameCharTab(tab) {
 function selectCharacterTab(tab) {
   if (!tab) return;
   if (tab !== CHARACTER_ARCHIVE_TAB && !_charTabs.includes(tab)) return;
+  if (typeof resetCharacterRegisterFilters === 'function') resetCharacterRegisterFilters();
   _activeCharTab = tab;
   _activeCharSubtab = 'Alle';
   if (tab !== 'Alle' && typeof setCharacterRegisterViewMode === 'function') {
@@ -354,6 +355,7 @@ function selectCharacterTab(tab) {
 }
 
 function selectCharacterSubtab(subtab) {
+  if (typeof resetCharacterRegisterFilters === 'function') resetCharacterRegisterFilters();
   const next = getCharacterSubtabs(_activeCharTab).includes(subtab) ? subtab : 'Alle';
   _activeCharSubtab = next;
   renderCharSubtabs();
