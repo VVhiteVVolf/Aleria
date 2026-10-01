@@ -202,7 +202,7 @@
     const s = state();
     const d = importParsed;
     if(d.pins) s.pins = d.pins.map(normalizePin);
-    if(d.cats) s.cats = d.cats;
+    if(d.cats) Object.assign(s, window.KartoCategoryCatalog.upgrade(d));
     if(d.regionTitle) s.regionTitle = d.regionTitle;
     runtime.save();
     runtime.applyState(s);
@@ -233,13 +233,16 @@
     const s = state();
     const out = { exportedAt: new Date().toISOString(), version: 1 };
     if(document.getElementById('exp-pins').checked) out.pins = s.pins;
-    if(document.getElementById('exp-cats').checked) out.cats = s.cats;
+    if(document.getElementById('exp-cats').checked){
+      out.cats = s.cats;
+      out.categoryCatalogVersion = s.categoryCatalogVersion;
+    }
     if(document.getElementById('exp-mcat').checked) out.markerCatalog = s.markerCatalog || [];
     if(document.getElementById('exp-lsb').checked) out.lsb = s.lsb;
     if(document.getElementById('exp-dm').checked) out.dm = s.dm;
     if(document.getElementById('exp-meta').checked){ out.regionTitle = s.regionTitle; out.regionIcon = s.regionIcon; }
 
-    const sections = Object.keys(out).filter(k => !['exportedAt','version'].includes(k));
+    const sections = Object.keys(out).filter(k => !['exportedAt','version','categoryCatalogVersion'].includes(k));
     if(!sections.length){ runtime.toast('⚠ Nichts ausgewählt'); return; }
 
     const fname = (s.regionTitle || 'Karte').replace(/\s+/g, '-')
@@ -307,7 +310,7 @@
     const applied = [];
 
     if(document.getElementById('imp-pins')?.checked && d.pins){ s.pins = d.pins.map(normalizePin); applied.push('Pins'); }
-    if(document.getElementById('imp-cats')?.checked && d.cats){ s.cats = d.cats; applied.push('Kategorien'); }
+    if(document.getElementById('imp-cats')?.checked && d.cats){ Object.assign(s, window.KartoCategoryCatalog.upgrade(d)); applied.push('Kategorien'); }
     if(document.getElementById('imp-mcat')?.checked && d.markerCatalog){
       const mode = document.getElementById('imp-mcat-mode')?.value || 'replace';
       if(mode === 'merge'){

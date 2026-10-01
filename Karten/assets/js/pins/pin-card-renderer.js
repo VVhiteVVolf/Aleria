@@ -41,7 +41,7 @@
         </div>
         ${pin.banner ? `<div class="sv-banner">${media(`<img src="${esc(pin.banner)}" alt="Regionsbanner" data-card-image/>`, pin.bannerLink)}</div>` : ''}
       </header>
-      <div class="sv-body${rows.length < 4 ? ' sv-body--compact' : ''}" data-image-position="${imagePosition(pin.imgPosition)}">
+      <div class="sv-body${rows.length < 4 ? ' sv-body--compact' : ''}${!rows.length && image.isPlaceholder ? ' sv-body--placeholder-only' : ''}" data-image-position="${imagePosition(pin.imgPosition)}">
         <div class="sv-img-wrap">
           ${image.src ? media(`<img class="sv-location-image" src="${esc(image.src)}" alt="Ansicht von ${esc(title)}" data-card-image/>`, image.link) : ''}
           <div class="sv-img-ph"${image.src ? ' hidden' : ''}>Kein Ortsbild vorhanden</div>

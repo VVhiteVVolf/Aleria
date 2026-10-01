@@ -1,0 +1,227 @@
+{
+  "tool": "image_gen (built-in)",
+  "reference": "default-siedlung.webp",
+  "style": "Use case: illustration-story / style-transfer. Create ONE standalone square 1:1 illustration for a medieval fantasy atlas location card. Input image: STYLE REFERENCE ONLY. Closely match its gentle playful comic storybook watercolor and colored-pencil illustration, visibly grainy cream watercolor paper, softly irregular painted edges, sunny yellow-green hills, pale turquoise sky, warm ochre roofs, delicate pencil grain and simple charming forms. Calm uninhabited scenic still life, harmonious handmade illustration. Keep the subject clearly readable at small card size, with generous foreground and sky. The final canvas must be exactly square (1:1). No people, no living creatures, no text, no letters, no labels, no watermark, no UI, no collage, no grid, no photorealism, no 3D, no heavy black outlines. Primary subject: ",
+  "jobs": [
+    {
+      "id": "location-bauernhof",
+      "label": "Bauernhof",
+      "subject": "A single small thatched farmhouse and timber barn, fenced vegetable beds, a hay cart and gentle wheat fields."
+    },
+    {
+      "id": "location-landgut",
+      "label": "Landgut",
+      "subject": "A modest rural estate farmhouse, old stone well, garden, orchard tree and winding country lane."
+    },
+    {
+      "id": "location-anwesen",
+      "label": "Anwesen",
+      "subject": "An elegant symmetrical medieval manor house with small formal garden, hedges, gravel path and green rolling landscape."
+    },
+    {
+      "id": "location-rittergut",
+      "label": "Rittergut",
+      "subject": "A small fortified knightly manor with square stone watchtower, timber farmhouse, low palisade and grassy courtyard."
+    },
+    {
+      "id": "location-weingut",
+      "label": "Weingut",
+      "subject": "A warm ochre-roofed vineyard estate, orderly rows of purple grape vines, wooden barrels and a sunny hillside path."
+    },
+    {
+      "id": "location-obstplantage",
+      "label": "Obstplantage",
+      "subject": "A peaceful orchard of round apple and pear trees laden with fruit, a small wooden shed, baskets and golden-green meadow."
+    },
+    {
+      "id": "location-viehweide",
+      "label": "Viehweide",
+      "subject": "A quiet fenced grassy pasture with wooden gates, hay bales, an empty drinking trough and a little field shelter; no animals."
+    },
+    {
+      "id": "location-gestuet",
+      "label": "Gestüt",
+      "subject": "A charming timber stud farm with long stable building, empty fenced paddocks, hay loft and saddle hanging by an open door; no horses."
+    },
+    {
+      "id": "location-muehle",
+      "label": "Mühle",
+      "subject": "One rustic timber windmill with four wooden sails, a little stone mill house, sacks of grain and a curving path through green and golden fields."
+    },
+    {
+      "id": "location-mine",
+      "label": "Mine",
+      "subject": "A clearly visible timber-supported mine entrance in a rocky green hillside, short cart rails, a small ore wagon, picks and pale stone heaps."
+    },
+    {
+      "id": "location-steinbruch",
+      "label": "Steinbruch",
+      "subject": "A small open stone quarry with stepped pale limestone faces, square cut blocks, wooden lifting crane, wheelbarrow and grass along its edges."
+    },
+    {
+      "id": "location-schmiede",
+      "label": "Schmiede",
+      "subject": "A cozy rural blacksmith workshop with open timber front, brick forge glowing gently, iron anvil, hammer and horseshoes; no smith."
+    },
+    {
+      "id": "location-brauerei",
+      "label": "Brauerei",
+      "subject": "A small medieval brewery with copper kettle visible through a wide doorway, wooden beer barrels, hop trellis and warm tiled roof."
+    },
+    {
+      "id": "location-fischerei",
+      "label": "Fischerei",
+      "subject": "A thatched fisher hut beside a gentle river, simple timber dock, empty rowing boat, drying fishing nets and woven fish traps."
+    },
+    {
+      "id": "location-holzfaellerlager",
+      "label": "Holzfällerlager",
+      "subject": "A quiet woodland logging camp with neatly stacked cut logs, a low canvas shelter, chopping stump and hand saw beside spruce trees."
+    },
+    {
+      "id": "location-koehlerei",
+      "label": "Köhlerei",
+      "subject": "A traditional round earth-covered charcoal kiln in a forest clearing, a thin curl of smoke, stacked logs, shovel and a small timber shelter."
+    },
+    {
+      "id": "location-imkerei",
+      "label": "Imkerei",
+      "subject": "A little rural apiary with several golden straw skeps on wooden stands, flower beds, fruit trees and a tiny thatched shed; no visible insects."
+    },
+    {
+      "id": "location-handelskontor",
+      "label": "Handelskontor",
+      "subject": "A prosperous half-timbered medieval trading office with a small warehouse, covered entry, crates, rolled cloth and barrels by a cobbled lane."
+    },
+    {
+      "id": "location-burg",
+      "label": "Burg",
+      "subject": "A compact fairytale stone castle with rounded red-roofed towers, a crenellated gate, small empty courtyard and green hill; playful peaceful proportions."
+    },
+    {
+      "id": "location-turm",
+      "label": "Turm",
+      "subject": "A solitary slender stone watchtower with a little red pointed roof and blank fluttering pennant, standing beside a winding hillside footpath."
+    },
+    {
+      "id": "location-leuchtturm",
+      "label": "Leuchtturm",
+      "subject": "One charming white stone lighthouse on a grassy coastal headland, warm lamp room, low keeper cottage and soft turquoise sea."
+    },
+    {
+      "id": "location-aussenposten",
+      "label": "Außenposten",
+      "subject": "A tiny fortified border outpost with timber palisade, squat stone lookout tower, wooden gate and grassy hillside track."
+    },
+    {
+      "id": "location-grenzposten",
+      "label": "Grenzposten",
+      "subject": "A small half-timbered roadside toll house with a raised wooden barrier, blank pennant, empty road and soft green hills."
+    },
+    {
+      "id": "location-heerlager",
+      "label": "Heerlager",
+      "subject": "An orderly quiet medieval military camp with two canvas tents, blank pennants, a wooden weapon rack, stacked shields and an unlit fire pit."
+    },
+    {
+      "id": "location-lagerplatz",
+      "label": "Lagerplatz",
+      "subject": "A peaceful campsite in a green forest clearing with a small blue canvas tent, stone-ringed campfire, a kettle, rolled blanket and wood pile."
+    },
+    {
+      "id": "location-jaegerlager",
+      "label": "Jägerlager",
+      "subject": "A woodland hunting camp with a tan canvas tent, two circular straw archery targets, a bow leaning against a tree and quiet forest path."
+    },
+    {
+      "id": "location-jagdhaus",
+      "label": "Jagdhaus",
+      "subject": "A cozy little timber hunting lodge beneath pine trees, steep ochre roof, stacked firewood, wooden bench and empty forest clearing."
+    },
+    {
+      "id": "location-druidenhuette",
+      "label": "Druidenhütte",
+      "subject": "A rounded earth-and-timber druid cottage with a mossy roof, small stone-lined doorway, fern garden and ancient trees in a peaceful clearing."
+    },
+    {
+      "id": "location-hexenhuette",
+      "label": "Hexenhütte",
+      "subject": "A whimsical crooked timber witches cottage with a mossy thatched roof, brick chimney, little cauldron outside, herb bundles and twisting orchard trees; cheerful not scary."
+    },
+    {
+      "id": "location-schrein",
+      "label": "Schrein",
+      "subject": "A little wayside stone shrine with a pitched timber roof, a simple unlettered carved stone centerpiece, wildflowers and a quiet countryside path."
+    },
+    {
+      "id": "location-friedhof",
+      "label": "Friedhof",
+      "subject": "A serene small medieval churchyard with rounded unlettered gravestones, low stone wall, cypress trees and wildflowers in soft sunlight."
+    },
+    {
+      "id": "location-grabstaette",
+      "label": "Grabstätte",
+      "subject": "An old grassy burial mound with a small stone doorway, a weathered dolmen beside it, scattered flowers and rolling green hills; peaceful archaeological still life."
+    },
+    {
+      "id": "location-ausgrabung",
+      "label": "Ausgrabung",
+      "subject": "A modest archaeological excavation in a grassy field, shallow square trenches, exposed ancient stones, wooden hoist, brushes, pottery fragments and rope fencing."
+    },
+    {
+      "id": "location-hoehle",
+      "label": "Höhle",
+      "subject": "A dark but inviting natural cave mouth between rounded pale rocks at the foot of a grassy hill, ferns, stepping stones and a tiny stream."
+    },
+    {
+      "id": "location-ahnenbaum",
+      "label": "Ahnenbaum",
+      "subject": "A magnificent ancient oak with rounded golden-green canopy, thick twisting trunk and visible roots, standing alone on a grassy hill surrounded by tiny wildflowers."
+    },
+    {
+      "id": "location-quelle",
+      "label": "Quelle",
+      "subject": "A clear spring bubbling between mossy stones into a shallow turquoise pool, reeds, ferns, little stepping stones and soft woodland sunlight."
+    },
+    {
+      "id": "location-berggipfel",
+      "label": "Berggipfel",
+      "subject": "A graceful rocky mountain peak above green foothills, pale blue distance, a narrow winding mountain path and alpine wildflowers in the foreground."
+    },
+    {
+      "id": "location-banditenlager",
+      "label": "Banditenlager",
+      "subject": "A hidden rough woodland camp with patched canvas lean-to, timber lookout, crates, empty barrels and a concealed path through thick shrubs; no bandits."
+    },
+    {
+      "id": "location-hafen",
+      "label": "Hafen / Steg",
+      "subject": "A small peaceful wooden river landing with mooring posts, one empty rowing ferry, coiled rope, reeds and a short path to the green bank."
+    },
+    {
+      "id": "location-werft",
+      "label": "Werft",
+      "subject": "A small medieval riverside shipyard with a half-built wooden boat hull on timber supports, simple crane, planks, barrels and calm water."
+    },
+    {
+      "id": "location-poststation",
+      "label": "Poststation",
+      "subject": "A charming roadside coaching and post station with half-timbered house, empty wooden carriage, stable door, blank hanging sign and a winding country road."
+    },
+    {
+      "id": "location-schule",
+      "label": "Schule",
+      "subject": "A small medieval village schoolhouse with modest bell turret, a welcoming open door, wooden bench, slate board without writing and flowering garden."
+    },
+    {
+      "id": "location-zirkus",
+      "label": "Zirkus",
+      "subject": "A cheerful small medieval traveling circus with a red-and-gold striped round tent, blank flags, a painted wooden wagon and an empty sunny meadow."
+    },
+    {
+      "id": "location-wohnhaus",
+      "label": "Wohnhaus",
+      "subject": "A single charming small rural half-timbered home with a low thatched roof, a wooden door, flower pots, a tiny vegetable patch and a quiet winding lane."
+    }
+  ]
+}

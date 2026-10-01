@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import vm from 'node:vm';
 
+await import('../assets/js/pins/category-catalog.js');
 await import('../assets/js/pins/pin-placeholder-images.js');
 
 const placeholders = globalThis.KartoPinPlaceholders;
@@ -89,4 +90,16 @@ test('unknown templates and categories have a predictable square village fallbac
   assert.equal(placeholders.select({ templateId: 'unknown' }, { label: 'Hafenfest' }), asset('template-siedlung'));
   assert.equal(placeholders.select({ templateId: 'unknown' }, { label: 'Hafensiedlung' }), asset('settlement-hafensiedlung'));
   assert.equal(placeholders.select({ id: 'one', title: 'A' }), placeholders.select({ id: 'two', title: 'B', x: 1 }));
+});
+
+test('smaller location categories and saved aliases choose their matching art', () => {
+  for(const category of globalThis.KartoCategoryCatalog.definitions){
+    const expected = asset(category.asset);
+    assert.equal(placeholders.select({}, category), expected);
+    for(const label of category.aliases){
+      assert.equal(placeholders.select({templateId:'siedlung'}, {id:'map-specific',label}), expected);
+    }
+  }
+  assert.equal(placeholders.select({}, {label:'Einfacher Hof'}), asset('location-bauernhof'));
+  assert.equal(placeholders.select({templateId:'militaer'}, {label:'Mine'}), asset('template-militaer'));
 });

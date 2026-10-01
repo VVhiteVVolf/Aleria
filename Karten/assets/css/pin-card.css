@@ -125,6 +125,8 @@
 .pin-card [hidden] { display: none; }
 .sv-body--compact { grid-template-columns: minmax(0, 1fr); }
 .sv-body--compact .sv-img-wrap { height: clamp(180px, 32cqi, 320px); }
+/* Unfilled place cards show the entire square illustration. */
+.sv-body--placeholder-only .sv-img-wrap { width: min(100%, 480px); height: auto; aspect-ratio: 1; justify-self: center; }
 .sv-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
 .sv-table th,
 .sv-table td { padding: 9px 16px; border-bottom: 1px solid #dfcf9f; vertical-align: top; overflow-wrap: anywhere; }

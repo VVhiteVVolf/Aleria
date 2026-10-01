@@ -11,6 +11,8 @@ bleiben leer. Die 24 Llysfaener Orte besitzen bereits passende Tabellen.
 
 Für alle 20 Siedlungskategorien und 14 Pin-/Stempelvorlagen gibt es eigene
 quadratische Aquarell-/Buntstiftbilder in `assets/images/pin-placeholders/`.
+Der gemeinsame Katalog ergänzt 51 allgemeine und kleinere Ortstypen mit
+44 weiteren Bildern; sieben passende Motive werden aus den Vorlagen wiederverwendet.
 `pin-placeholder-images.js` wählt das Motiv gemeinsam für Detailansicht,
 Editorvorschau und Medienvorschau:
 
@@ -30,6 +32,35 @@ Die 34 Motive wurden mit dem integrierten Imagegen-Werkzeug anhand von
 `default-siedlung.webp` erzeugt. Das Promptset liegt als
 `assets/images/pin-placeholders/generation-prompts.json` bei. Die ursprünglichen
 drei Bilder bleiben für bestehende direkte Verweise verfügbar.
+
+Die zusätzlichen Bilder wurden ebenfalls mit dem integrierten Imagegen-Werkzeug
+und derselben Stilreferenz erzeugt. Ihre Prompts stehen in
+`assets/images/pin-placeholders/location-generation-prompts.json`.
+
+## Gemeinsame Ortskategorien und Gwynthor
+
+`pins/category-catalog.js` besitzt die Standardkategorien, Bildzuordnung und
+Namensvarianten. `upgrade()` ergänzt fehlende neue Typen beim Laden alter Karten,
+lokaler Entwürfe und Kategorienimporte. Vorhandene IDs, Farben, Marker und Namen
+bleiben erhalten. Beispielsweise werden „Einfacher Hof“, „Castell/ Burg“, „Heim“
+und „Lager“ wiederverwendet. Die gespeicherte `categoryCatalogVersion` verhindert,
+dass später bewusst gelöschte Kategorien beim nächsten Laden erneut auftauchen.
+Exporte mit Kategorien enthalten diese Versionskennung ebenfalls.
+
+Die Gwynthor-Markierungsebene wurde am 1. Oktober 2026 mit 170 Symbolen abgeglichen:
+12 vorhandene Pins bleiben unverändert, 158 neue Pins besitzen Typnamen, leere
+Details und die gewünschten Gwynthor-/Llamreis-Medien. Das geprüfte Inventar
+`Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/markings.inventory.json`
+dokumentiert die Symbolgrenzen im 8192 × 6300 großen Originalbild.
+`tools/merge-marking-pins.mjs` führt solche Inventare anhand von ID/Position
+additiv zusammen und erhält alle bestehenden Pin-Daten. Die Zusammenführung
+läuft nicht automatisch im Browser; die ergänzten Pins stehen in `data.json`.
+
+Ein älterer lokaler Entwurf bleibt gemäß der bestehenden Speicherlogik erhalten.
+Mit **Aktuelle Karte laden** lässt sich die veröffentlichte Version übernehmen;
+die bestehende Sicherung schützt dabei den vorherigen Entwurf.
+
+## Pin-Darstellung und Schriftzüge
 
 **Dots dauerhaft anzeigen** ist eine gespeicherte Karteneinstellung
 (`showMarkers`, standardmäßig `false`). Im Bearbeitungsmodus bleiben die

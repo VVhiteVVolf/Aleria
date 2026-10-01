@@ -1,27 +1,6 @@
 (function(root){
   const BASE = '/Karten/assets/images/pin-placeholders/';
-  const SETTLEMENTS = new Map([
-    ['Hauptstadt', 'settlement-hauptstadt'],
-    ['Bauernsiedlung', 'settlement-bauernsiedlung'],
-    ['Hafensiedlung', 'settlement-hafensiedlung'],
-    ['Burgsiedlung', 'settlement-burgsiedlung'],
-    ['Handelssiedlung', 'settlement-handelssiedlung'],
-    ['Brückensiedlung', 'settlement-brueckensiedlung'],
-    ['Bergbausiedlung', 'settlement-bergbausiedlung'],
-    ['Waldsiedlung', 'settlement-waldsiedlung'],
-    ['Kirchensiedlung', 'settlement-kirchensiedlung'],
-    ['Leuchtturmsiedlung', 'settlement-leuchtturmsiedlung'],
-    ['Festungssiedlung', 'settlement-festungssiedlung'],
-    ['Taverne', 'settlement-taverne'],
-    ['Siedlungsruine', 'settlement-siedlungsruine'],
-    ['Stadtruine', 'settlement-stadtruine'],
-    ['Bardensiedlung', 'settlement-bardensiedlung'],
-    ['Stadt', 'settlement-stadt'],
-    ['Turmruine', 'settlement-turmruine'],
-    ['Schiffswrack', 'settlement-schiffswrack'],
-    ['Turnierplatz', 'settlement-turnierplatz'],
-    ['Besondere Orte', 'settlement-besondere-orte'],
-  ].map(([label, asset]) => [normalize(label), BASE + asset + '.webp']));
+  const catalog = root.KartoCategoryCatalog;
   const TEMPLATES = new Map([
     ['orden', 'template-orden'],
     ['institution', 'template-institution'],
@@ -38,25 +17,19 @@
     ['monsterhort', 'template-monsterhort'],
     ['dungeon', 'template-dungeon'],
   ].map(([id, asset]) => [id, BASE + asset + '.webp']));
-  const SOURCES = Object.freeze([...SETTLEMENTS.values(), ...TEMPLATES.values()]);
+  const SOURCES = Object.freeze([...new Set([...catalog.sources, ...TEMPLATES.values()])]);
   const BUILT_IN_PATHS = new Set([
     ...SOURCES,
     ...['default-hafensiedlung', 'default-siedlung', 'default-waldsiedlung']
       .map(name => BASE + name + '.webp'),
   ]);
 
-  function normalize(value){
-    return String(value || '').trim().toLocaleLowerCase('de')
-      .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue')
-      .replace(/ß/g, 'ss').replace(/[\s_-]+/g, ' ');
-  }
-
   // The caller supplies the map's category, so selection has no state/DOM dependency.
   // A specific template wins; the generic settlement template uses the category.
   function select(pin = {}, category = {}){
     const template = TEMPLATES.get(pin.templateId);
     if(template && pin.templateId !== 'siedlung') return template;
-    return SETTLEMENTS.get(normalize(category.label))
+    return catalog.placeholder(category)
       || template
       || TEMPLATES.get('siedlung');
   }

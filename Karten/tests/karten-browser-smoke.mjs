@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 
 const devtoolsPort = Number(process.argv[2] || 9223);
 const targetUrl = process.argv[3] || 'http://127.0.0.1:4173/Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis';
@@ -58,6 +58,10 @@ const loaded = waitForEvent('Page.loadEventFired');
 await command('Page.navigate', { url: targetUrl });
 await loaded;
 await new Promise(resolve => setTimeout(resolve, 1500));
+
+// Large raster maps can defer compositor animation frames in headless Chrome.
+// These assertions test layer state; transition timing is not under test.
+await evaluate(`document.querySelectorAll('.ml, #pl').forEach(element => { element.style.transition = 'none'; })`);
 
 const initialLayers = await evaluate(`(() => ({
   normal: document.getElementById('lb-normal').classList.contains('on'),
@@ -134,6 +138,9 @@ const placeholderResult = await evaluate(`(async () => {
   const harbor = [...document.getElementById('sb-cat').options].find(option => option.textContent === 'Hafensiedlung');
   change('sb-cat', harbor.value);
   const category = sources();
+  const mine = [...document.getElementById('sb-cat').options].find(option => option.textContent === 'Mine');
+  change('sb-cat', mine.value);
+  const location = sources();
   change('sb-tpl-sel', 'militaer');
   const template = sources();
   change('sb-img', '/Karten/assets/icons/welt/bardensiedlung.png');
@@ -150,16 +157,18 @@ const placeholderResult = await evaluate(`(async () => {
     await image.decode();
     dimensions.push({ src, width: image.naturalWidth, height: image.naturalHeight });
   }
-  return { category, template, own, cleared, settlement, dimensions,
+  return { category, location, template, own, cleared, settlement, dimensions,
     storedImage: KartoRuntime.state().pins.find(pin => pin.id === 'codex-smoke-pin').img || '' };
 })()`);
 const expectedImage = name => `/Karten/assets/images/pin-placeholders/${name}.webp`;
-for (const [step, name] of [['category', 'settlement-hafensiedlung'], ['template', 'template-militaer'], ['cleared', 'template-militaer'], ['settlement', 'settlement-hauptstadt']]) {
+for (const [step, name] of [['category', 'settlement-hafensiedlung'], ['location', 'location-mine'], ['template', 'template-militaer'], ['cleared', 'template-militaer'], ['settlement', 'settlement-hauptstadt']]) {
   assert.deepEqual(placeholderResult[step], { card: expectedImage(name), media: expectedImage(name) });
 }
 assert.deepEqual(placeholderResult.own, { card: '/Karten/assets/icons/welt/bardensiedlung.png', media: '/Karten/assets/icons/welt/bardensiedlung.png' });
 assert.equal(placeholderResult.storedImage, '');
-assert.equal(placeholderResult.dimensions.length, 34);
+const promptSets = await Promise.all(['generation-prompts.json', 'location-generation-prompts.json']
+  .map(name => readFile(new URL(`../assets/images/pin-placeholders/${name}`, import.meta.url), 'utf8').then(JSON.parse)));
+assert.equal(placeholderResult.dimensions.length, promptSets.reduce((sum, set) => sum + set.jobs.length, 0));
 assert.ok(placeholderResult.dimensions.every(image => image.width > 0 && image.width === image.height));
 
 if (screenshotPath) {

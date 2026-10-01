@@ -3,29 +3,6 @@
 // ═══════════════════════════════════════════
 const KARTO_CONFIG = window.KARTO_CONFIG || {};
 
-const DEFAULT_CATS = [
-  {id:'mmflrbzxydg7', label:'Hauptstadt',        color:'#ff0000'},
-  {id:'mmflrqajby8b', label:'Bauernsiedlung',     color:'#6060b0'},
-  {id:'mmflry5furso', label:'Hafensiedlung',      color:'#b03030'},
-  {id:'mmfls5afqqpr', label:'Burgsiedlung',       color:'#9050b0'},
-  {id:'mmflsfqh3sft', label:'Handelssiedlung',    color:'#3a8a3a'},
-  {id:'mmflsrndeiee', label:'Brückensiedlung',    color:'#2a7aaa'},
-  {id:'mmflt1x3v22o', label:'Bergbausiedlung',    color:'#7a6040'},
-  {id:'mmflt7uj831y', label:'Waldsiedlung',       color:'#c07030'},
-  {id:'mmflteurd4n5', label:'Kirchensiedlung',    color:'#508080'},
-  {id:'mmfltia1m3s7', label:'Leuchtturmsiedlung', color:'#c49a20'},
-  {id:'mmfltullsctk', label:'Festungssiedlung',   color:'#6060b0'},
-  {id:'mmflvj37jbh2', label:'Taverne',            color:'#b03030'},
-  {id:'mmflvquv2rr3', label:'Siedlungsruine',     color:'#9050b0'},
-  {id:'mmflw1z5ko6e', label:'Stadtruine',         color:'#3a8a3a'},
-  {id:'mmflw73t2e8v', label:'Bardensiedlung',     color:'#2a7aaa'},
-  {id:'mmflwdjfl6ah', label:'Stadt',              color:'#7a6040'},
-  {id:'mmflwmdfcyua', label:'Turmruine',          color:'#c07030'},
-  {id:'mmflwxad8w1j', label:'Schiffswrack',       color:'#508080'},
-  {id:'mmflx4731uj6', label:'Turnierplatz',       color:'#c49a20'},
-  {id:'mmflxnnhbh4g', label:'Besondere Orte',     color:'#6060b0'},
-];
-
 // DEFAULT_MARKER_CATALOG now lives in assets/js/data/default-marker-catalog.js
 // (336 entries: the original 74 Imgur markers + 262 local icons from IconOrdner/,
 // loaded as window.KARTO_DEFAULT_MARKER_CATALOG before this script runs).
@@ -96,7 +73,7 @@ function cleanDominions(list){
 // ═══════════════════════════════════════════
 let S = {
   pins: [],
-  cats: JSON.parse(JSON.stringify(KARTO_CONFIG.defaultCats || DEFAULT_CATS)),
+  ...window.KartoCategoryCatalog.upgrade({cats:KARTO_CONFIG.defaultCats}),
   dotSize: 80,
   lblSize: 40,
   showMarkers: false,
@@ -140,7 +117,7 @@ function mediaLink(html, href){
   const url=(href||'').trim();
   return url?`<a class="sv-linked-media" href="${esc(url)}">${html}</a>`:html;
 }
-function catOf(p){return S.cats.find(c=>c.id===p.cat)||S.cats[S.cats.length-1]||{id:'other',label:'Sonstiges',color:'#7a6040'};}
+function catOf(p){return S.cats.find(c=>c.id===p.cat)||S.cats.find(c=>c.id==='mmflxnnhbh4g')||{id:'other',label:'Sonstiges',color:'#7a6040'};}
 function dominionOf(p){return S.dominions.find(d=>d.id===p.dominionId)||null;}
 // [topmost ancestor, ..., dominion] - e.g. [Baronie Gwendolyns Ufer, Herrschaft der Wyrm].
 // Capped at 10 hops as a cheap cycle guard (real nesting never goes beyond 2-3).
@@ -498,7 +475,7 @@ window.KartoRuntime = {
 
 function applyState(remote){
   if(remote.pins)       S.pins=remote.pins;
-  if(remote.cats)       S.cats=remote.cats;
+  if(remote.cats)       Object.assign(S, window.KartoCategoryCatalog.upgrade(remote));
   if(remote.dotSize)    S.dotSize=remote.dotSize;
   if(remote.lblSize)    S.lblSize=remote.lblSize;
   S.showMarkers = remote.showMarkers === true;
