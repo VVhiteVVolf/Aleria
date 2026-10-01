@@ -146,6 +146,7 @@
     if(!template) return;
     overwriteTemplate = {
       title: template.label,
+      templateId: template.id,
       table: template.table.map(row => ({...row})),
       cat: null,
       region: '',
@@ -217,7 +218,11 @@
     if(!target) return;
     const before = JSON.parse(JSON.stringify(target));
     const source = overwriteTemplate;
-    if(overwriteFields.table) target.table = JSON.parse(JSON.stringify(source.table || []));
+    if(overwriteFields.table){
+      target.table = JSON.parse(JSON.stringify(source.table || []));
+      if(source.templateId) target.templateId = source.templateId;
+      else delete target.templateId;
+    }
     if(overwriteFields.cat && source.cat) target.cat = source.cat;
     if(overwriteFields.region) target.region = source.region || '';
     if(overwriteFields.house) target.house = source.house || '';
@@ -233,7 +238,10 @@
     runtime.pushUndo('Überschreiben: ' + target.title, () => {
       const s = runtime.state();
       const pin = s.pins.find(item => item.id === targetId);
-      if(pin) Object.assign(pin, before);
+      if(pin){
+        if(!Object.hasOwn(before, 'templateId')) delete pin.templateId;
+        Object.assign(pin, before);
+      }
     });
     runtime.save();
     runtime.renderPins();

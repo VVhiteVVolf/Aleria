@@ -52,6 +52,7 @@ async function evaluate(expression) {
 
 await command('Page.enable');
 await command('Runtime.enable');
+await command('Page.bringToFront');
 await command('Emulation.setDeviceMetricsOverride', { width: 1720, height: 1050, deviceScaleFactor: 1, mobile: false });
 const loaded = waitForEvent('Page.loadEventFired');
 await command('Page.navigate', { url: targetUrl });
@@ -120,6 +121,47 @@ assert.deepEqual(editorResult, {
   tabs: 5,
 });
 
+const placeholderResult = await evaluate(`(async () => {
+  const change = (id, value) => {
+    const field = document.getElementById(id);
+    field.value = value;
+    field.dispatchEvent(new Event('change', { bubbles: true }));
+  };
+  const sources = () => ({
+    card: document.querySelector('.editor-preview-card .sv-location-image')?.getAttribute('src'),
+    media: document.querySelector('[data-media-preview="img"] img')?.getAttribute('src'),
+  });
+  const harbor = [...document.getElementById('sb-cat').options].find(option => option.textContent === 'Hafensiedlung');
+  change('sb-cat', harbor.value);
+  const category = sources();
+  change('sb-tpl-sel', 'militaer');
+  const template = sources();
+  change('sb-img', '/Karten/assets/icons/welt/bardensiedlung.png');
+  change('sb-cat', KartoRuntime.firstCategoryId());
+  const own = sources();
+  change('sb-img', '');
+  const cleared = sources();
+  change('sb-tpl-sel', 'siedlung');
+  const settlement = sources();
+  const dimensions = [];
+  for (const src of KartoPinPlaceholders.sources) {
+    const image = new Image();
+    image.src = src;
+    await image.decode();
+    dimensions.push({ src, width: image.naturalWidth, height: image.naturalHeight });
+  }
+  return { category, template, own, cleared, settlement, dimensions,
+    storedImage: KartoRuntime.state().pins.find(pin => pin.id === 'codex-smoke-pin').img || '' };
+})()`);
+const expectedImage = name => `/Karten/assets/images/pin-placeholders/${name}.webp`;
+for (const [step, name] of [['category', 'settlement-hafensiedlung'], ['template', 'template-militaer'], ['cleared', 'template-militaer'], ['settlement', 'settlement-hauptstadt']]) {
+  assert.deepEqual(placeholderResult[step], { card: expectedImage(name), media: expectedImage(name) });
+}
+assert.deepEqual(placeholderResult.own, { card: '/Karten/assets/icons/welt/bardensiedlung.png', media: '/Karten/assets/icons/welt/bardensiedlung.png' });
+assert.equal(placeholderResult.storedImage, '');
+assert.equal(placeholderResult.dimensions.length, 34);
+assert.ok(placeholderResult.dimensions.every(image => image.width > 0 && image.width === image.height));
+
 if (screenshotPath) {
   await new Promise(resolve => setTimeout(resolve, 400));
   const shot = await command('Page.captureScreenshot', { format: 'png', fromSurface: true });
@@ -164,4 +206,4 @@ assert.deepEqual(editorLifecycle, { afterCancel: 'Prüfpin', afterCommit: 'Über
 assert.deepEqual(browserErrors, [], `Browserfehler: ${browserErrors.join('; ')}`);
 
 socket.close();
-console.log(JSON.stringify({ initialLayers, layerSwitch, editorResult, mediaResult, editorLifecycle }, null, 2));
+console.log(JSON.stringify({ initialLayers, layerSwitch, editorResult, placeholderResult, mediaResult, editorLifecycle }, null, 2));

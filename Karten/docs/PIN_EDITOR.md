@@ -7,6 +7,30 @@ Die Vorlagen liegen in `assets/js/pins/pin-templates.js`. Im Pin-Editor können
 weitere Zeilen ergänzt und vorhandene Vorlagen geladen werden. Unbekannte Werte
 bleiben leer. Die 24 Llysfaener Orte besitzen bereits passende Tabellen.
 
+## Automatische Ortsbilder
+
+Für alle 20 Siedlungskategorien und 14 Pin-/Stempelvorlagen gibt es eigene
+quadratische Aquarell-/Buntstiftbilder in `assets/images/pin-placeholders/`.
+`pin-placeholder-images.js` wählt das Motiv gemeinsam für Detailansicht,
+Editorvorschau und Medienvorschau:
+
+1. Eigene Bilder samt Bildlink haben Vorrang.
+2. Eine spezifische Vorlage (z. B. Handwerk oder Militär) bestimmt das Motiv.
+3. Bei „Siedlung / Ort“ oder ohne bekannte Vorlage bestimmt der Kategoriename
+   das Motiv, unabhängig von der Kategorie-ID der jeweiligen Karte.
+4. Unbekannte Kategorien ohne passende Vorlage erhalten das allgemeine Ortsbild.
+
+Die Auswahl wird bei der Darstellung berechnet und nicht in `pin.img` gespeichert.
+Damit folgen auch vorhandene Pins und Stempelkopien automatisch Änderungen.
+Früher gespeicherte integrierte Platzhalter werden ebenfalls neu zugeordnet.
+Ein Vorlagen-Overwrite übernimmt mit der Infotabelle auch `templateId`; Undo
+stellt die vorherige Zuordnung wieder her. Eigene Bilder bleiben erhalten.
+
+Die 34 Motive wurden mit dem integrierten Imagegen-Werkzeug anhand von
+`default-siedlung.webp` erzeugt. Das Promptset liegt als
+`assets/images/pin-placeholders/generation-prompts.json` bei. Die ursprünglichen
+drei Bilder bleiben für bestehende direkte Verweise verfügbar.
+
 **Dots dauerhaft anzeigen** ist eine gespeicherte Karteneinstellung
 (`showMarkers`, standardmäßig `false`). Im Bearbeitungsmodus bleiben die
 Platzierungspunkte sichtbar. Schriftzüge sind von dieser Einstellung unabhängig.

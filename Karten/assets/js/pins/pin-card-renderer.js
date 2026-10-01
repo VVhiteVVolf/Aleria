@@ -11,7 +11,7 @@
     const color = /^#[\da-f]{3}([\da-f]{3})?$/i.test(category.color) ? category.color : '#8a6510';
     const title = pin.title || 'Unbekannter Ort';
     const media = (html, href) => runtime.mediaLink(html, href);
-    const image = window.KartoPinPlaceholders?.resolve(pin) || { src: pin.img, link: pin.imgLink };
+    const image = window.KartoPinPlaceholders?.resolve(pin, category) || { src: pin.img, link: pin.imgLink };
     const rows = (pin.table || []).filter(row => row.k || row.v);
     const affiliations = [];
     const dominion = runtime.dominionForPin(pin);

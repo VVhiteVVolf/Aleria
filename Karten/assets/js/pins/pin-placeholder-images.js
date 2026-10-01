@@ -1,33 +1,79 @@
 (function(root){
-  const SOURCES = Object.freeze([
-    '/Karten/assets/images/pin-placeholders/default-hafensiedlung.webp',
-    '/Karten/assets/images/pin-placeholders/default-siedlung.webp',
-    '/Karten/assets/images/pin-placeholders/default-waldsiedlung.webp',
+  const BASE = '/Karten/assets/images/pin-placeholders/';
+  const SETTLEMENTS = new Map([
+    ['Hauptstadt', 'settlement-hauptstadt'],
+    ['Bauernsiedlung', 'settlement-bauernsiedlung'],
+    ['Hafensiedlung', 'settlement-hafensiedlung'],
+    ['Burgsiedlung', 'settlement-burgsiedlung'],
+    ['Handelssiedlung', 'settlement-handelssiedlung'],
+    ['Brückensiedlung', 'settlement-brueckensiedlung'],
+    ['Bergbausiedlung', 'settlement-bergbausiedlung'],
+    ['Waldsiedlung', 'settlement-waldsiedlung'],
+    ['Kirchensiedlung', 'settlement-kirchensiedlung'],
+    ['Leuchtturmsiedlung', 'settlement-leuchtturmsiedlung'],
+    ['Festungssiedlung', 'settlement-festungssiedlung'],
+    ['Taverne', 'settlement-taverne'],
+    ['Siedlungsruine', 'settlement-siedlungsruine'],
+    ['Stadtruine', 'settlement-stadtruine'],
+    ['Bardensiedlung', 'settlement-bardensiedlung'],
+    ['Stadt', 'settlement-stadt'],
+    ['Turmruine', 'settlement-turmruine'],
+    ['Schiffswrack', 'settlement-schiffswrack'],
+    ['Turnierplatz', 'settlement-turnierplatz'],
+    ['Besondere Orte', 'settlement-besondere-orte'],
+  ].map(([label, asset]) => [normalize(label), BASE + asset + '.webp']));
+  const TEMPLATES = new Map([
+    ['orden', 'template-orden'],
+    ['institution', 'template-institution'],
+    ['verwaltung', 'template-verwaltung'],
+    ['militaer', 'template-militaer'],
+    ['handwerk', 'template-handwerk'],
+    ['gastbetrieb', 'template-gastbetrieb'],
+    ['landwirtschaft', 'template-landwirtschaft'],
+    ['handel', 'template-handel'],
+    ['siedlung', 'template-siedlung'],
+    ['gebaeude', 'template-gebaeude'],
+    ['natur', 'template-natur'],
+    ['ruine', 'template-ruine'],
+    ['monsterhort', 'template-monsterhort'],
+    ['dungeon', 'template-dungeon'],
+  ].map(([id, asset]) => [id, BASE + asset + '.webp']));
+  const SOURCES = Object.freeze([...SETTLEMENTS.values(), ...TEMPLATES.values()]);
+  const BUILT_IN_PATHS = new Set([
+    ...SOURCES,
+    ...['default-hafensiedlung', 'default-siedlung', 'default-waldsiedlung']
+      .map(name => BASE + name + '.webp'),
   ]);
 
-  function stableHash(value){
-    let hash = 2166136261;
-    const text = String(value || 'unbenannter-ort');
-    for(let index = 0; index < text.length; index += 1){
-      hash ^= text.charCodeAt(index);
-      hash = Math.imul(hash, 16777619);
+  function normalize(value){
+    return String(value || '').trim().toLocaleLowerCase('de')
+      .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue')
+      .replace(/ß/g, 'ss').replace(/[\s_-]+/g, ' ');
+  }
+
+  // The caller supplies the map's category, so selection has no state/DOM dependency.
+  // A specific template wins; the generic settlement template uses the category.
+  function select(pin = {}, category = {}){
+    const template = TEMPLATES.get(pin.templateId);
+    if(template && pin.templateId !== 'siedlung') return template;
+    return SETTLEMENTS.get(normalize(category.label))
+      || template
+      || TEMPLATES.get('siedlung');
+  }
+
+  function isBuiltIn(source){
+    try {
+      return BUILT_IN_PATHS.has(new URL(source, 'https://karto.invalid/').pathname);
+    } catch {
+      return false;
     }
-    return hash >>> 0;
   }
 
-  function identityFor(pin = {}){
-    return [pin.id, pin.title, pin.x, pin.y].map(value => String(value ?? '')).join('|');
-  }
-
-  function select(pin = {}){
-    return SOURCES[stableHash(identityFor(pin)) % SOURCES.length];
-  }
-
-  function resolve(pin = {}){
+  function resolve(pin = {}, category = {}){
     const explicitSource = String(pin.img || '').trim();
-    const isPlaceholder = !explicitSource;
+    const isPlaceholder = !explicitSource || isBuiltIn(explicitSource);
     return {
-      src: explicitSource || select(pin),
+      src: isPlaceholder ? select(pin, category) : explicitSource,
       link: isPlaceholder ? '' : String(pin.imgLink || '').trim(),
       isPlaceholder,
     };

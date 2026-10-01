@@ -215,6 +215,43 @@ test('Dauerhafte Dots sind standardmäßig aus und nur im Editor als Karteneinst
   assert.equal(f.saves(), 1);
 });
 
+test('Vorlagen-Overwrite führt das Platzhaltermotiv mit und Undo stellt die vorherige Zuordnung wieder her', () => {
+  for (const previousTemplate of [undefined, 'siedlung']) {
+    const target = { id: 'one', title: 'Werkstatt', img: '/eigene-werkstatt.webp', table: [] };
+    if (previousTemplate) target.templateId = previousTemplate;
+    const before = JSON.parse(JSON.stringify(target));
+    const f = fixture([target]);
+    f.context.document.getElementById = id => ({ ...element(), checked: id === 'owf-table' });
+    f.context.document.querySelectorAll = () => [];
+    Object.assign(f.window.KartoRuntime, { closeModal() {}, renderPins() {}, toast() {} });
+    f.window.KartoMapInteraction = { setCursor() {} };
+    f.window.hint = () => {};
+    f.load('pin-templates');
+    f.load('stamp-overwrite');
+    f.window.startOverwriteFromTemplate('handwerk');
+    f.window.KartoStampOverwrite.applyOverwrite('one');
+    assert.equal(target.templateId, 'handwerk');
+    assert.equal(target.img, '/eigene-werkstatt.webp');
+    f.undo[0]();
+    assert.deepEqual(JSON.parse(JSON.stringify(target)), before);
+  }
+});
+
+test('Stempelkopien behalten die Vorlagenzuordnung, aber speichern kein abgeleitetes Platzhalterbild', () => {
+  const f = fixture([{ id: 'one', title: 'Werkstatt', cat: 'custom', templateId: 'handwerk', img: '', table: [] }]);
+  Object.assign(f.window.KartoRuntime, {
+    uid: () => 'copy', addPin: pin => f.state.pins.push(pin), renderPins() {}, closeModal() {}, toast() {}
+  });
+  f.context.document.getElementById = () => element();
+  f.window.KartoMapInteraction = { showStampCursor() {} };
+  f.window.hint = () => {};
+  f.load('stamp-overwrite');
+  f.window.startStamp('one');
+  f.window.placeStamp(600, 700);
+  assert.equal(f.state.pins[1].templateId, 'handwerk');
+  assert.equal(f.state.pins[1].img, '');
+});
+
 test('Llysfaens Tabellen verwenden gemeinsame Fachvorlagen und die neuen Anzeigevorgaben', () => {
   const f = fixture();
   f.load('pin-templates');

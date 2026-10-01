@@ -1,0 +1,177 @@
+{
+  "tool": "image_gen (built-in)",
+  "reference": "default-siedlung.webp",
+  "style": "Use case: illustration-story / style-transfer. Create ONE standalone square 1:1 illustration for a medieval fantasy atlas location card. Input image: STYLE REFERENCE ONLY. Closely match its gentle playful comic storybook watercolor and colored-pencil illustration, visibly grainy cream watercolor paper, softly irregular painted edges, sunny yellow-green hills, pale turquoise sky, warm ochre roofs, delicate pencil grain and simple charming forms. Calm uninhabited scenic still life, harmonious handmade illustration. Keep the subject clearly readable at small card size, with generous foreground and sky. The final canvas must be exactly square (1:1). No people, no living creatures, no text, no letters, no labels, no watermark, no UI, no collage, no grid, no photorealism, no 3D, no heavy black outlines. Primary subject: ",
+  "jobs": [
+    {
+      "id": "settlement-hauptstadt",
+      "label": "Hauptstadt",
+      "subject": "A large compact walled medieval capital on a gentle hill, a central royal castle with slender towers, ochre roofs, an arched city gate and a winding sandy path."
+    },
+    {
+      "id": "settlement-bauernsiedlung",
+      "label": "Bauernsiedlung",
+      "subject": "A tiny farming village with thatched cottages and a wooden windmill, patchwork golden wheat fields, a hay cart and a winding sandy path."
+    },
+    {
+      "id": "settlement-hafensiedlung",
+      "label": "Hafensiedlung",
+      "subject": "A cozy medieval fishing port beside calm turquoise water, small colorful timber houses, wooden jetties, two moored little sailing boats and fishing baskets."
+    },
+    {
+      "id": "settlement-burgsiedlung",
+      "label": "Burgsiedlung",
+      "subject": "A small village of ochre roof cottages nestled immediately beneath a rounded stone hilltop castle, a winding road leading to the castle gate."
+    },
+    {
+      "id": "settlement-handelssiedlung",
+      "label": "Handelssiedlung",
+      "subject": "A medieval merchant settlement around a small trading square, timber warehouses, pastel canvas market stalls, stacked barrels, crates and an empty covered trade wagon."
+    },
+    {
+      "id": "settlement-brueckensiedlung",
+      "label": "Brückensiedlung",
+      "subject": "A village on both banks of a gentle turquoise river, connected by a prominent old three-arched stone bridge, warm roofed houses and reeds."
+    },
+    {
+      "id": "settlement-bergbausiedlung",
+      "label": "Bergbausiedlung",
+      "subject": "A friendly medieval mining hamlet against a rocky hillside, a timber-framed mine entrance, a tiny ore cart, ore baskets and simple miners cottages."
+    },
+    {
+      "id": "settlement-waldsiedlung",
+      "label": "Waldsiedlung",
+      "subject": "A woodland hamlet with three moss-roofed timber cottages in a sunny clearing, rounded leafy trees, ferns, stacked firewood and a winding sandy trail."
+    },
+    {
+      "id": "settlement-kirchensiedlung",
+      "label": "Kirchensiedlung",
+      "subject": "A peaceful village clustered around a prominent stone abbey church with a slender bell tower, ochre roof, cloister garden, low walls and flower beds; no religious symbols."
+    },
+    {
+      "id": "settlement-leuchtturmsiedlung",
+      "label": "Leuchtturmsiedlung",
+      "subject": "A small coastal village beneath a prominent pale stone lighthouse on a grassy sea cliff, warm cottage roofs, a curving footpath and a calm turquoise bay."
+    },
+    {
+      "id": "settlement-festungssiedlung",
+      "label": "Festungssiedlung",
+      "subject": "A compact medieval fortified settlement with broad thick stone curtain walls, sturdy square defensive towers, a gatehouse, timber barracks and a quiet grassy approach; no armies."
+    },
+    {
+      "id": "settlement-taverne",
+      "label": "Taverne",
+      "subject": "A charming roadside half-timbered tavern with a warm ochre roof, a hanging blank wooden sign, barrels, empty outdoor benches, flower pots and a sandy lane."
+    },
+    {
+      "id": "settlement-siedlungsruine",
+      "label": "Siedlungsruine",
+      "subject": "The quiet overgrown ruins of a small rural village, three roofless cottages, broken low stone walls, one old well, wildflowers and a grassy winding path; gentle not grim."
+    },
+    {
+      "id": "settlement-stadtruine",
+      "label": "Stadtruine",
+      "subject": "The peaceful remains of an abandoned medieval city, a broken city gate and wide crumbling walls, roofless rows of houses, ivy and meadow flowers, pale hills beyond."
+    },
+    {
+      "id": "settlement-bardensiedlung",
+      "label": "Bardensiedlung",
+      "subject": "A whimsical village with a small open-air wooden music pavilion, an unattended lute resting on a stool, warm cottage roofs, colorful cloth bunting and flowering gardens."
+    },
+    {
+      "id": "settlement-stadt",
+      "label": "Stadt",
+      "subject": "A modest medieval town with clustered half-timbered houses and ochre roofs, a cobbled square with a fountain and a simple town gate; no royal castle."
+    },
+    {
+      "id": "settlement-turmruine",
+      "label": "Turmruine",
+      "subject": "One tall partly collapsed round stone tower on a grassy knoll, broken crenellations, ivy, a few fallen stones, wildflowers and a gentle winding footpath."
+    },
+    {
+      "id": "settlement-schiffswrack",
+      "label": "Schiffswrack",
+      "subject": "An old wooden sailing-ship wreck resting on a quiet sandy shore, a tilted broken mast, weathered planks, beach grass and calm pale turquoise shallow water; no people or bones."
+    },
+    {
+      "id": "settlement-turnierplatz",
+      "label": "Turnierplatz",
+      "subject": "An empty medieval jousting tournament field with a central wooden tilt barrier, two colorful striped tents, small wooden spectator stands and fluttering pennants, sunny grass."
+    },
+    {
+      "id": "settlement-besondere-orte",
+      "label": "Besondere Orte",
+      "subject": "An enchanting quiet landmark in a flower meadow: a small ancient standing-stone circle around a clear spring and one graceful old tree, soft rolling green hills; no glowing effects."
+    },
+    {
+      "id": "template-orden",
+      "label": "Orden / Zunft / Gilde",
+      "subject": "A cozy medieval guildhall with a timber facade, a carved blank shield over the entrance, rolled parchment, a wax seal and folded cloth banners beside the steps; no writing."
+    },
+    {
+      "id": "template-institution",
+      "label": "Institution / Heiligtum",
+      "subject": "A peaceful medieval sanctuary and scholarly institution, a small pale-stone building with an arched doorway, a bell niche, a cloister herb garden and a closed book on a stone bench; no religious symbols."
+    },
+    {
+      "id": "template-verwaltung",
+      "label": "Verwaltung / Amt",
+      "subject": "A charming small medieval town hall with a modest clockless tower, broad front steps, a blank noticeboard, rolled scrolls and an inkpot on a small outdoor clerk table; no writing."
+    },
+    {
+      "id": "template-militaer",
+      "label": "Militär / Wachposten",
+      "subject": "A quiet medieval guard post, a squat stone watchtower and wooden palisade gate, an empty sentry shelter, a spear rack and plain shields leaning on the wall; no soldiers."
+    },
+    {
+      "id": "template-handwerk",
+      "label": "Handwerk / Werkstatt",
+      "subject": "A cozy open-front medieval craftsman's workshop, wooden workbench with mallet and hand tools, an anvil, stacked wood, small pottery vessels, warm roof and stone chimney; no artisan."
+    },
+    {
+      "id": "template-gastbetrieb",
+      "label": "Taverne / Gastbetrieb",
+      "subject": "A welcoming medieval inn courtyard with a half-timbered guesthouse, flower boxes, an empty wooden table with a ceramic mug and loaf, stacked barrels and a blank hanging sign."
+    },
+    {
+      "id": "template-landwirtschaft",
+      "label": "Landwirtschaft / Zucht",
+      "subject": "A peaceful medieval farmstead, a thatched barn, fenced vegetable beds, golden hay bales, an empty wicker harvest basket and a wooden wheelbarrow; no animals or people."
+    },
+    {
+      "id": "template-handel",
+      "label": "Handel / Markt",
+      "subject": "A close picturesque medieval market corner, two pastel fabric canopy stalls, baskets of apples and grain, small balance scales on a counter, folded cloth and wooden crates; no merchants."
+    },
+    {
+      "id": "template-siedlung",
+      "label": "Siedlung / Ort",
+      "subject": "A small generic medieval village of four warm-roofed cottages around an old stone well, flowering cottage gardens, soft rolling hills and a winding sandy path."
+    },
+    {
+      "id": "template-gebaeude",
+      "label": "Einzelnes Gebäude",
+      "subject": "One standalone charming medieval half-timbered house with a steep ochre tiled roof, stone doorstep, small leaded windows, flower pots and a little garden fence."
+    },
+    {
+      "id": "template-natur",
+      "label": "Naturgebiet / POI",
+      "subject": "An untouched woodland glade with a clear spring flowing between rounded mossy rocks, an old leafy tree, ferns, tiny meadow flowers and distant soft hills; no buildings."
+    },
+    {
+      "id": "template-ruine",
+      "label": "Ruine",
+      "subject": "A secluded ancient ruined stone sanctuary: three weathered arches, a broken column, mossy steps, ivy and wildflowers in a peaceful grassy clearing; no buildings intact."
+    },
+    {
+      "id": "template-monsterhort",
+      "label": "Monsterhort",
+      "subject": "A quiet unoccupied fantastical creature lair in a grassy rocky hillside, a broad cave mouth, a nest of twigs with three speckled eggs, a few shed scales and a small half-open treasure chest; no creature, no bones, no horror."
+    },
+    {
+      "id": "template-dungeon",
+      "label": "Dungeon",
+      "subject": "A charming storybook ancient dungeon entrance, a moss-covered stone arch built into a grassy mound, broad worn steps descending into cool blue shadow, a lantern, an iron-bound wooden door and a small chest; no horror or creatures."
+    }
+  ]
+}
