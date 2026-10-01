@@ -137,7 +137,7 @@
       event.stopPropagation();
       const distance = Math.hypot(event.clientX - pinDownX, event.clientY - pinDownY);
       const shouldOpen = distance < 5 && !dragMoved;
-      if(isDragging()) stopDrag({save:true, rerender:true});
+      if(isDragging()) stopDrag({save:true});
       if(shouldOpen){
         if(runtime.isEditMode() && (event.ctrlKey || event.metaKey)){
           toggleSelection(pin.id);
@@ -185,6 +185,7 @@
     dragFrame = null;
     const pin = state().pins.find(item => item.id === dragId);
     const changed = pin && dragStartX !== null && (pin.x !== dragStartX || pin.y !== dragStartY);
+    if (changed) paintDrag();
     if(changed){
       const id = dragId, fromX = dragStartX, fromY = dragStartY;
       runtime.pushUndo('Pin verschoben: ' + pin.title, () => {
@@ -200,7 +201,6 @@
     dragMoved = false;
     dragClientStart = null;
     if(options.save && changed) runtime.save();
-    if(options.rerender) renderPins();
   }
 
   // ═══════════════════════════════════════════
@@ -210,15 +210,21 @@
   function toggleSelection(id){
     if(selection.has(id)) selection.delete(id);
     else selection.add(id);
-    renderPins();
+    renderSelection();
     updateBulkBar();
   }
 
   function clearSelection(){
     if(!selection.size) return;
     selection.clear();
-    renderPins();
+    renderSelection();
     updateBulkBar();
+  }
+
+  function renderSelection(){
+    for(const element of runtime.pinLayer().children){
+      element.classList.toggle('selected', selection.has(element.dataset.id));
+    }
   }
 
   function selectedPins(){
@@ -279,6 +285,7 @@
       });
     });
     clearSelection();
+    renderPins();
     runtime.save();
     runtime.toast(count + (count === 1 ? ' Pin gelöscht' : ' Pins gelöscht'));
   }
@@ -355,11 +362,11 @@
     bulkSetCategory,
     bulkDeleteSelected,
   };
-  window.addEventListener('blur', () => stopDrag({ save: true, rerender: true }));
+  window.addEventListener('blur', () => stopDrag({ save: true }));
   document.addEventListener('mousemove', event => {
     if (isDragging()) moveDrag(event.clientX, event.clientY);
   });
   document.addEventListener('mouseup', event => {
-    if (event.button === 0) stopDrag({ save: true, rerender: true });
+    if (event.button === 0) stopDrag({ save: true });
   });
 })();

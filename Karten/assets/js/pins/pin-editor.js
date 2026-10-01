@@ -89,8 +89,8 @@
   function togglePreview() {
     syncFromForm();
     previewVisible = !previewVisible;
-    runtime.renderEditorPreview?.(currentPin());
     renderPreviewMode();
+    runtime.renderEditorPreview?.(currentPin());
   }
 
   function tabButton(id, label) {
@@ -271,6 +271,7 @@
     body.dataset.pinEditorBound = 'true';
     const update = event => {
       if (!event.target.matches('input, textarea, select')) return;
+      if (event.target.dataset.inputAction) return;
       const pin = currentPin();
       const updateTable = event.target.id === 'sb-cat' && pin?.kind !== 'text'
         && window.KartoPinTablePresets.isDefaultTable(pin, runtime.categoryForPin(pin));
@@ -287,7 +288,8 @@
       if (currentPin()?.kind === 'text') window.KartoPinLettering.updatePreview(body, currentPin());
       updateLocationPreview(body, currentPin());
       updateStatus();
-      runtime.renderEditorPreview?.(currentPin());
+      if (event.type === 'input') window.KartoPinEditorPreview.schedule(currentPin());
+      else runtime.renderEditorPreview?.(currentPin());
     };
     body.addEventListener('input', update);
     body.addEventListener('change', update);

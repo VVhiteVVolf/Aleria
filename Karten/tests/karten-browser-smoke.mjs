@@ -100,7 +100,7 @@ assert.ok(Number(layerSwitch.enabled.opacity) > .99);
 assert.equal(layerSwitch.enabled.pins, 'block');
 assert.deepEqual(layerSwitch.reset, { button: false, opacity: '0', pins: 'none' });
 
-const editorResult = await evaluate(`(() => {
+const editorResult = await evaluate(`(async () => {
   document.getElementById('btn-edit').click();
   const pin = { id: 'codex-smoke-pin', x: .5, y: .5, title: 'Prüfpin', cat: KartoRuntime.firstCategoryId(), table: [], text: '', secret: false };
   KartoRuntime.state().pins.push(pin);
@@ -109,6 +109,7 @@ const editorResult = await evaluate(`(() => {
   const input = document.getElementById('sb-title-inp');
   input.value = 'Nur im Entwurf';
   input.dispatchEvent(new Event('input', { bubbles: true }));
+  await new Promise(resolve => requestAnimationFrame(resolve));
   return {
     stateTitle: KartoRuntime.state().pins.find(item => item.id === pin.id).title,
     previewTitle: document.querySelector('.editor-preview-card .sv-title')?.textContent,
@@ -124,6 +125,24 @@ assert.deepEqual(editorResult, {
   publishVisible: true,
   tabs: 5,
 });
+
+const previewEfficiency = await evaluate(`(async () => {
+  const image = document.querySelector('.editor-preview-card .sv-location-image');
+  const field = document.getElementById('sb-title-inp');
+  const originalRender = KartoRuntime.renderEditorPreview;
+  let renders = 0;
+  KartoRuntime.renderEditorPreview = (...args) => { renders++; return originalRender(...args); };
+  for(let index = 0; index < 30; index++) {
+    field.value = 'Entwurf ' + index;
+    field.dispatchEvent(new Event('input', {bubbles:true}));
+  }
+  await new Promise(resolve => requestAnimationFrame(resolve));
+  KartoRuntime.renderEditorPreview = originalRender;
+  return {renders, sameImage:image === document.querySelector('.editor-preview-card .sv-location-image'),
+    title:document.querySelector('.editor-preview-card .sv-title').textContent,
+    original:KartoRuntime.state().pins.find(pin => pin.id === 'codex-smoke-pin').title};
+})()`);
+assert.deepEqual(previewEfficiency, {renders:1, sameImage:true, title:'Entwurf 29', original:'Prüfpin'});
 
 const placeholderResult = await evaluate(`(async () => {
   const change = (id, value) => {
@@ -184,6 +203,23 @@ const promptSets = await Promise.all(['generation-prompts.json', 'location-gener
 assert.equal(placeholderResult.dimensions.length, promptSets.reduce((sum, set) => sum + set.jobs.length, 0));
 assert.ok(placeholderResult.dimensions.every(image => image.width > 0 && image.width === image.height));
 
+const previewChanges = await evaluate(`(async () => {
+  const change = (id,value) => { const field=document.getElementById(id); field.value=value; field.dispatchEvent(new Event('change',{bubbles:true})); };
+  change('sb-img','/Karten/assets/images/pin-placeholders/location-mine.webp');
+  const image = document.querySelector('.editor-preview-card .sv-location-image');
+  image.dispatchEvent(new Event('error'));
+  change('sb-title-inp','Bild bleibt geladen');
+  const errorPreserved = image.hidden;
+  change('sb-cat',[...document.getElementById('sb-cat').options].find(option=>option.textContent==='Mine').value);
+  const errorCleared = !image.hidden && document.querySelector('.editor-preview-card .sv-img-ph').hidden;
+  change('sb-text','**Beschreibung** mit Text');
+  const description = document.querySelector('.editor-preview-card .sv-text strong')?.textContent;
+  change('sb-text','');
+  return {sameImage:image===document.querySelector('.editor-preview-card .sv-location-image'),errorPreserved,errorCleared,description,
+    descriptionRemoved:!document.querySelector('.editor-preview-card .sv-lore')};
+})()`);
+assert.deepEqual(previewChanges,{sameImage:true,errorPreserved:true,errorCleared:true,description:'Beschreibung',descriptionRemoved:true});
+
 if (screenshotPath) {
   await new Promise(resolve => setTimeout(resolve, 400));
   const shot = await command('Page.captureScreenshot', { format: 'png', fromSurface: true });
@@ -225,6 +261,40 @@ const editorLifecycle = await evaluate(`(async () => {
   return { afterCancel, afterCommit, editorOpen: KartoPinEditor.isOpen() };
 })()`);
 assert.deepEqual(editorLifecycle, { afterCancel: 'Prüfpin', afterCommit: 'Übernommener Prüfpin', editorOpen: false });
+
+await command('Emulation.setDeviceMetricsOverride', {width:640,height:900,deviceScaleFactor:1,mobile:false});
+const mobilePreview = await evaluate(`(async () => {
+  const pins=KartoRuntime.state().pins;
+  const before=JSON.stringify(pins);
+  KartoPinEditor.open(pins[0].id);
+  const originalRender=KartoRuntime.renderEditorPreview;
+  let renders=0;
+  KartoRuntime.renderEditorPreview=(...args)=>{renders++;return originalRender(...args);};
+  const field=document.getElementById('sb-title-inp');
+  field.value='Mobile Vorschau';
+  field.dispatchEvent(new Event('input',{bubbles:true}));
+  await new Promise(resolve=>requestAnimationFrame(resolve));
+  const hiddenRenders=renders;
+  KartoPinEditor.togglePreview();
+  const title=document.querySelector('.editor-preview-card .sv-title').textContent;
+  const shown=getComputedStyle(document.getElementById('sb-preview')).display!=='none';
+  KartoPinEditor.close({discard:true});
+  KartoPinEditor.open(pins[0].id);
+  document.getElementById('sb-title-inp').value='Verworfene Vorschau';
+  document.getElementById('sb-title-inp').dispatchEvent(new Event('input',{bubbles:true}));
+  KartoPinEditor.close({discard:true});
+  KartoPinEditor.open(pins[1].id);
+  await new Promise(resolve=>requestAnimationFrame(resolve));
+  const nextTitle=document.querySelector('.editor-preview-card .sv-title').textContent;
+  KartoPinEditor.close({discard:true});
+  KartoRuntime.renderEditorPreview=originalRender;
+  return {hiddenRenders,title,shown,nextTitle,expectedNext:pins[1].title,unchanged:before===JSON.stringify(pins)};
+})()`);
+assert.equal(mobilePreview.hiddenRenders,0);
+assert.equal(mobilePreview.title,'Mobile Vorschau');
+assert.equal(mobilePreview.shown,true);
+assert.equal(mobilePreview.nextTitle,mobilePreview.expectedNext);
+assert.equal(mobilePreview.unchanged,true);
 assert.deepEqual(browserErrors, [], `Browserfehler: ${browserErrors.join('; ')}`);
 
 socket.close();

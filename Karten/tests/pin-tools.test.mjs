@@ -81,6 +81,9 @@ test('Ziehen behält DOM-Knoten, bündelt Frames und speichert die letzte Positi
   assert.equal(renderer.isDragging(), false);
   assert.equal(f.state.pins[0].x, .55);
   assert.equal(f.state.pins[0].y, .6);
+  assert.equal(f.layer.children[0], marker);
+  assert.equal(marker.style.left, '550px');
+  assert.equal(marker.style.top, '600px');
   assert.equal(f.saves(), 1);
   assert.equal(f.undo.length, 1);
   assert.equal(f.opened.length, 0);
@@ -100,6 +103,37 @@ test('Kleine Mausbewegungen bleiben Klicks und erzeugen weder Speicherung noch U
   assert.equal(f.saves(), 0);
   assert.equal(f.undo.length, 0);
   assert.deepEqual(f.opened, [['one', 'edit']]);
+  assert.equal(f.layer.children[0], marker);
+});
+
+test('Mehrfachauswahl erhält die bestehenden Marker und Bildknoten', () => {
+  const f = fixture();
+  f.load('pin-renderer');
+  const renderer = f.window.KartoPinRenderer;
+  renderer.renderPins();
+  const marker = f.layer.children[0];
+  renderer.toggleSelection('one');
+  assert.equal(f.layer.children[0], marker);
+  assert.equal(marker.classList.contains('selected'), true);
+  renderer.clearSelection();
+  assert.equal(f.layer.children[0], marker);
+  assert.equal(marker.classList.contains('selected'), false);
+});
+
+test('Sammellöschen entfernt die gewählten Marker und Undo erhält ihre Daten', () => {
+  const pins=[{id:'one',title:'Erster',x:.2,y:.3},{id:'two',title:'Zweiter',x:.4,y:.5}];
+  const f=fixture([...pins]);
+  f.context.confirm=()=>true;
+  f.window.KartoRuntime.toast=()=>{};
+  f.load('pin-renderer');
+  const renderer=f.window.KartoPinRenderer;
+  renderer.renderPins();
+  renderer.toggleSelection('one');
+  renderer.bulkDeleteSelected();
+  assert.deepEqual(f.state.pins,[pins[1]]);
+  assert.deepEqual(f.layer.children.map(element=>element.dataset.id),['two']);
+  f.undo[0]();
+  assert.deepEqual(JSON.parse(JSON.stringify(f.state.pins)),pins);
 });
 
 test('Verlassen des Fensters beendet Ziehen und begrenzt Pins auf die Karte', () => {

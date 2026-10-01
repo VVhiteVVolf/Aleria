@@ -1025,10 +1025,10 @@ function openEditorShell(kind,id){
   sidebar.classList.add('editor-fullscreen');
   sidebar.dataset.editorKind=kind;
   sidebar.dataset.editorId=id;
-  renderEditorPreview();
 }
 
 function closeEditorShell(){
+  window.KartoPinEditorPreview?.reset();
   const sidebar=document.getElementById('sidebar');
   sidebar.classList.remove('open','editor-fullscreen');
   delete sidebar.dataset.editorKind;
@@ -1042,8 +1042,7 @@ function renderEditorPreview(pinOverride){
   if(!sidebar||!content||!sidebar.classList.contains('editor-fullscreen'))return;
   const id=sidebar.dataset.editorId;
   const pin=pinOverride || S.pins.find(item=>item.id===id);
-  if(!pin){content.innerHTML='<div class="editor-preview-empty">Kein Pin gewaehlt.</div>';return;}
-  content.innerHTML = `<div class="editor-preview-card">${window.KartoPinCard.render(pin, { titleId: 'pin-preview-title' })}</div>`;
+  window.KartoPinEditorPreview?.render(pin);
 }
 
 function openSidebar(id, mode){

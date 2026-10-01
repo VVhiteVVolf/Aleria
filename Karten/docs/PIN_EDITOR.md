@@ -17,6 +17,26 @@ Eine ausdrücklich gewählte fachfremde Vorlage behält ihre eigenen Felder.
 Bild und Tabelle teilen sich in der Desktopkarte dieselbe Grid-Zeile und Höhe;
 auf schmalen Bildschirmen stehen sie untereinander.
 
+## Reaktionsgeschwindigkeit beim Bearbeiten
+
+Die Live-Vorschau liegt in `pin-editor-preview.js`. Eingaben werden pro
+Animationsframe gebündelt; nur geänderte Texte, Attribute und Tabellenknoten
+werden angepasst. Geladene Bilder bleiben im DOM. Eine unsichtbare mobile
+Vorschau wird erst beim Einblenden aktualisiert. Schließen oder Übernehmen
+verwirft ausstehende Vorschauarbeiten, ohne die synchron erfassten Eingaben zu verlieren.
+
+Pin-Klicks, abgeschlossene Verschiebungen und Auswahlwechsel erhalten bestehende
+Marker. Nur Änderungen am Karteninhalt bauen die Pin-Liste neu auf. Der dauerhafte
+weiße Schimmer verwendet einen Farbverlauf; aufwendige Schattenfilter werden
+nur für hervorgehobene Marker benötigt.
+
+Vergleich vom 1. Oktober 2026: Gwynthor mit 170 Pins, Chrome im Headless-Modus,
+vierfache CPU-Drosselung, 60 Texteingaben. Pin-Öffnen: ca. 163 → 63 ms;
+Median der Eingabeverarbeitung: 2,2 → 0,7 ms. Marker-Neuaufbauten beim Klick:
+170 → 0; entfernte Vorschaubilder beim Tippen: 240 → 0. Zeitwerte sind
+umgebungsabhängig; Browser-Smoke-Tests sichern Bündelung, Knotenerhalt,
+Bildfehlerbehandlung, mobile Vorschau und Entwurfswechsel ab.
+
 ## Automatische Ortsbilder
 
 Für alle 20 Siedlungskategorien und 14 Pin-/Stempelvorlagen gibt es eigene
