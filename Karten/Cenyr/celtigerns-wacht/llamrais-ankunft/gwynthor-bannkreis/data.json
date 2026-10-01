@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
-  "revision": 5,
-  "updatedAt": "2026-10-01T04:05:22.367Z",
+  "revision": 6,
+  "updatedAt": "2026-10-01T18:55:16.075Z",
   "state": {
     "pins": [
       {
@@ -95,56 +95,60 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Gwynthor",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Draig O'Gwynthor",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Castell Draig"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Gräflicher Familiensitz und Hofhaltung"
           },
           {
-            "k": "Befehlshaber",
-            "v": ""
+            "k": "Oberhaupt",
+            "v": "Graf Galahad Draig, seit 1720"
           },
           {
             "k": "Unterstellung",
-            "v": ""
+            "v": "Königreich Cenyr; König Tristan Pendrag"
           },
           {
-            "k": "Besatzung",
-            "v": ""
+            "k": "Bewohner / Gefolge",
+            "v": "Haus Draig, Hausritter, Milwr-Waffenknechte und Hofbedienstete"
           },
           {
             "k": "Aufgaben",
-            "v": ""
+            "v": "Gräfliche Verwaltung, Hausführung, Audienzen und ritterliche Ausbildung"
           },
           {
-            "k": "Ausrüstung",
-            "v": ""
+            "k": "Hausmacht",
+            "v": "Kommandant Steffan Draig; persönliche Leibgarde aus ausgewählten Hausrittern und Waffenknechten"
           },
           {
-            "k": "Befestigung",
-            "v": ""
+            "k": "Hofämter",
+            "v": "Vogt Dalvin Balchder; Schatzmeister Odyar Draig; Herold Cadfan Draig; Archivar Trahern Draig"
           },
           {
-            "k": "Zustand",
-            "v": ""
+            "k": "Einkünfte",
+            "v": "Bergbau, Seehandel sowie Abgaben von Vasallen und Bürgern"
           },
           {
-            "k": "Gerüchte",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Anaraut Draig, danach Idwal, Tudwal, Neithon und Gawain"
+          },
+          {
+            "k": "Traditionen",
+            "v": "Ritterlichkeit, familiärer Zusammenhalt und Verehrung der Dame der See"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Bruderhaus der königlichen Pendrag; Saethwyr, Wyrm und Gwyvern sind Kadettenhäuser"
           }
         ],
-        "text": "",
+        "text": "**Castell Draig** ist das Heim des Grafenhauses Draig und der Mittelpunkt seiner gräflichen Hofhaltung. Hier verbinden sich das Familienleben unter Graf Galahad, die Verwaltung von Celtigerns Wacht und der Dienst des eigenen Gefolges. Ritterliche Ausbildung, die Bewahrung der Hausüberlieferung und die Treue zur Krone prägen den Sitz. Die Arbeit von Hausrittern, Waffenknechten und Hofbeamten trägt den Alltag eines Hauses, das sich als Schild und Schwert Cenyrs versteht.",
         "secret": false,
         "templateId": "militaer",
         "kind": "place",
@@ -162,56 +166,60 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Llamreis Ankunft",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Gafyr",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Castell Gafyr"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Ritterfürstlicher Familiensitz"
           },
           {
-            "k": "Befehlshaber",
-            "v": ""
+            "k": "Oberhaupt",
+            "v": "Ritterfürst Duncan Gafyr, seit 1708"
           },
           {
             "k": "Unterstellung",
-            "v": ""
+            "v": "Haus Draig; Graf Galahad Draig"
           },
           {
-            "k": "Besatzung",
-            "v": ""
+            "k": "Bewohner / Gefolge",
+            "v": "Haus Gafyr, seine Ritter, Waffenknechte und Hofbediensteten"
           },
           {
             "k": "Aufgaben",
-            "v": ""
+            "v": "Verwaltung der Herrschaft und ihrer Vasallen; ritterlicher Dienst für die Draigs"
           },
           {
-            "k": "Ausrüstung",
-            "v": ""
+            "k": "Militärische Führung",
+            "v": "Rheinallt Gafyr, Marschall des Hauses"
           },
           {
-            "k": "Befestigung",
-            "v": ""
+            "k": "Ritterdienst",
+            "v": "Vor allem Uchelwyr und Teulu; junge Angehörige dienen häufig in der Teulu der Draigs"
           },
           {
-            "k": "Zustand",
-            "v": ""
+            "k": "Einkünfte",
+            "v": "Ziegenzucht und Käsehandel, weitere Viehhaltung, Holz und Erzabbau"
           },
           {
-            "k": "Gerüchte",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Egon Gafyr, danach Alwyn und Rhys"
+          },
+          {
+            "k": "Traditionen",
+            "v": "Treue, Gerechtigkeit und Frömmigkeit; Dame der See und Streiter als Patrone"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Garyms Hornhelm ist das bedeutende Erbstück der Hausgeschichte"
           }
         ],
-        "text": "",
+        "text": "**Castell Gafyr** ist der Familiensitz des Ritterfürstenhauses Gafyr unter Duncan Gafyr. Das Heim der Familie steht für den treuen Dienst an den Draigs und ein bodenständiges Verständnis ritterlicher Verantwortung. Von hier aus werden die Angelegenheiten des Hauses und seiner Vasallen betreut. Die Erinnerung an Garym den Gehörnten und seinen überlieferten Hornhelm verbindet die heutige Hofhaltung mit dem Ursprung der Familie.",
         "secret": false,
         "templateId": "militaer",
         "kind": "place",
@@ -229,56 +237,60 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Baronie von Llamreis Ankunft",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Rhyddid",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Castell Rhyddid"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Familiensitz eines Ritterhauses"
           },
           {
-            "k": "Befehlshaber",
-            "v": ""
+            "k": "Oberhaupt",
+            "v": "Ritterherr Taran Rhyddid"
           },
           {
             "k": "Unterstellung",
-            "v": ""
+            "v": "Haus Wyrm; Ritterfürst Mailgwin Wyrm; darüber Haus Draig"
           },
           {
-            "k": "Besatzung",
-            "v": ""
+            "k": "Bewohner / Gefolge",
+            "v": "Haus Rhyddid mit seinen Angehörigen und Bediensteten"
           },
           {
             "k": "Aufgaben",
-            "v": ""
+            "v": "Hausführung; Hauptmanns-, Aufseher- und Verwaltungsdienste für die Wyrm"
           },
           {
-            "k": "Ausrüstung",
-            "v": ""
+            "k": "Besonderer Dienst",
+            "v": "Das Haus stellt seit Langem den Hauptmann von Mwyncreig"
           },
           {
-            "k": "Befestigung",
-            "v": ""
+            "k": "Einkünfte",
+            "v": "Entlohnung für Dienste, Grundstückspachten und ein Anteil an den Abgaben Mwyncreigs"
           },
           {
-            "k": "Zustand",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Arian Rhyddid als erster Erbe"
           },
           {
-            "k": "Gerüchte",
-            "v": ""
+            "k": "Traditionen",
+            "v": "Eidzeugen bei bedeutenden Anlässen des Hauses Wyrm; sorgfältige ritterliche Ausbildung"
+          },
+          {
+            "k": "Glaube",
+            "v": "Alerische Kirche; besondere Verehrung von Nimue, Streiter und Knecht"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "„Der Eid endet nicht.“; die Treue zu den Wyrm gründet auf Gwilyms Dankesschwur"
           }
         ],
-        "text": "",
+        "text": "**Castell Rhyddid** ist das Heim des Ritterhauses Rhyddid unter Taran Rhyddid. Der Familiensitz ist von jenem Pflichtverständnis geprägt, das die Rhyddid seit der Rettung ihres Gründers Gwilym an die Wyrm bindet. Angehörige des Hauses dienen als Hauptleute, Aufseher und Verwalter; Verlässlichkeit zählt ihnen mehr als höfischer Glanz. Ihr Leitspruch „Der Eid endet nicht.“ beschreibt auch das Selbstverständnis dieses Hauses und seiner Hofhaltung.",
         "secret": false,
         "templateId": "militaer",
         "kind": "place",
@@ -298,7 +310,7 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Baronie von Llamreis Ankunft",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Gostyn",
         "faction": "",
         "pinMarker": "",
@@ -306,50 +318,54 @@
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Castell Gostyn"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Ritterlicher Familiensitz"
           },
           {
-            "k": "Befehlshaber",
-            "v": ""
+            "k": "Oberhaupt",
+            "v": "Ritterherr Eifion Gostyn, seit 1720"
           },
           {
             "k": "Unterstellung",
-            "v": ""
+            "v": "Haus Gafyr; Ritterfürst Duncan Gafyr; darüber Haus Draig"
           },
           {
-            "k": "Besatzung",
-            "v": ""
+            "k": "Bewohner",
+            "v": "Angehörige und Bedienstete des Hauses Gostyn"
           },
           {
             "k": "Aufgaben",
-            "v": ""
+            "v": "Verwaltung des Hausbesitzes, Dienst für die Gafyr und Unterstützung Bedürftiger"
           },
           {
-            "k": "Ausrüstung",
-            "v": ""
+            "k": "Besonderer Dienst",
+            "v": "Lehenswarten-Aufgaben in Bronfelen"
           },
           {
-            "k": "Befestigung",
-            "v": ""
+            "k": "Einkünfte",
+            "v": "Pachten aus Mühlen und Bäckereien"
           },
           {
-            "k": "Zustand",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Gruffydd Gostyn, danach Heddwyn Gostyn"
           },
           {
-            "k": "Gerüchte",
-            "v": ""
+            "k": "Traditionen",
+            "v": "Bäckerwettbewerbe zugunsten Bedürftiger; Überschüsse an Waisenhäuser, Witwen und Kirche"
+          },
+          {
+            "k": "Glaube",
+            "v": "Alerische Kirche; besondere Verehrung von Mutter und Hüter"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "„Wer dient, steht höher als er glaubt.“; Roderics Demut gilt als Vorbild"
           }
         ],
-        "text": "",
+        "text": "**Castell Gostyn** ist das Heim des Ritterhauses Gostyn unter Eifion Gostyn. Die Familie versteht ihren Besitz als Verantwortung gegenüber den Menschen, die von ihm leben. Mühlen, Bäckereien und die Versorgung Bedürftiger prägen ihre Aufgaben ebenso wie der Dienst an den Gafyr. Der Familiensitz steht damit für die volksnahe, fromme und bewusst zurückhaltende Lebensweise eines Hauses, das Pflicht und tätige Nächstenliebe über persönlichen Ehrgeiz stellt.",
         "secret": false,
         "dominionId": "cw-haus-gostyn"
       },
@@ -367,7 +383,7 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Baronie von Llamreis Ankunft",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Chwedonol",
         "faction": "",
         "pinMarker": "",
@@ -375,50 +391,54 @@
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Castell Chwedonol"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Familiensitz eines maritim geprägten Ritterhauses"
           },
           {
-            "k": "Befehlshaber",
-            "v": ""
+            "k": "Oberhaupt",
+            "v": "Gwenhwyfar Chwedonol"
           },
           {
             "k": "Unterstellung",
-            "v": ""
+            "v": "Haus Saethwyr; Ritterfürst Huw Saethwyr; darüber Haus Draig"
           },
           {
-            "k": "Besatzung",
-            "v": ""
+            "k": "Bewohner / Gefolge",
+            "v": "Angehörige des Hauses Chwedonol und seine Hofbediensteten"
           },
           {
             "k": "Aufgaben",
-            "v": ""
+            "v": "Hausführung, Dienst zur See und Küstenschutz für die Saethwyr"
           },
           {
-            "k": "Ausrüstung",
-            "v": ""
+            "k": "Hofämter",
+            "v": "Hofmeister Carantec; Vogt Kathleen; Kämmerin Shylene"
           },
           {
-            "k": "Befestigung",
-            "v": ""
+            "k": "Einkünfte",
+            "v": "Fischereibeteiligungen, Segelmacherei, Tauwerk und Schiffbau"
           },
           {
-            "k": "Zustand",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Niniane Chwedonol, danach Morgaine und Eleyne"
           },
           {
-            "k": "Gerüchte",
-            "v": ""
+            "k": "Traditionen",
+            "v": "Weibliche Hausführung und die maritime Rittertradition der Gründerin Meredithe"
+          },
+          {
+            "k": "Glaube",
+            "v": "Alerische Kirche; Nimue und die Seemaid"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "„Pflicht kennt keine Flaute“; Morgaine versieht das Lehenswartenamt in Glastraeth"
           }
         ],
-        "text": "",
+        "text": "**Castell Chwedonol** ist das Heim des von Frauen geführten Ritterhauses Chwedonol und seiner Herrin Gwenhwyfar. Der Familiensitz bündelt die Angelegenheiten eines Hauses, dessen Kapitäne und Ritter zur See seit Generationen den Saethwyr dienen. Die Gründerin Meredithe gilt dabei als Vorbild für Disziplin, Durchsetzungsvermögen und seemännische Verantwortung. „Pflicht kennt keine Flaute“ ist für die Familie ein Anspruch an den täglichen Dienst.",
         "secret": false,
         "dominionId": "cw-haus-chwedlonol"
       },
@@ -436,58 +456,62 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Baronie von Llamreis Ankunft",
-        "house": "Haus Rhyddid",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
+        "house": "Haus Eneiniog",
         "faction": "",
         "pinMarker": "",
         "pinMarkerScale": 1,
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Castell Eneiniog"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Ritterlicher Familiensitz mit Verwaltungsaufgaben"
           },
           {
-            "k": "Befehlshaber",
-            "v": ""
+            "k": "Oberhaupt",
+            "v": "Ritterherr Maredog Eneiniog"
           },
           {
             "k": "Unterstellung",
-            "v": ""
+            "v": "Haus Saethwyr; Ritterfürst Huw Saethwyr; darüber Haus Draig"
           },
           {
-            "k": "Besatzung",
-            "v": ""
+            "k": "Bewohner",
+            "v": "Angehörige und Bedienstete des Hauses Eneiniog"
           },
           {
             "k": "Aufgaben",
-            "v": ""
+            "v": "Hausverwaltung, Ritterdienst und Vermittlung zwischen geistlichen und weltlichen Aufgaben"
           },
           {
-            "k": "Ausrüstung",
-            "v": ""
+            "k": "Versorgung / Einkünfte",
+            "v": "Minen, Schmieden, Werkstätten sowie Gold- und Schmuckschmieden"
           },
           {
-            "k": "Befestigung",
-            "v": ""
+            "k": "Handwerk",
+            "v": "Reliquienfassungen, liturgische Geräte, Siegel und Weihezeichen für den Klerus"
           },
           {
-            "k": "Zustand",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Owain Eneiniog, danach Meriadog Eneiniog"
           },
           {
-            "k": "Gerüchte",
-            "v": ""
+            "k": "Traditionen",
+            "v": "Pflicht, Maß und Menschlichkeit nach dem Vorbild des Gründers Tyrnog"
+          },
+          {
+            "k": "Glaube",
+            "v": "Alerische Kirche; keine gemeinsame besondere Patronatsvorgabe"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Das Haus verbindet die Verwaltungspraxis der Saethwyr mit kirchlicher Verantwortung"
           }
         ],
-        "text": "",
+        "text": "**Castell Eneiniog** ist das Heim des Ritterhauses Eneiniog unter Maredog Eneiniog. Die Familie verbindet den Dienst an den Saethwyr mit Verwaltung, Glauben und einem ausgeprägten Sinn für Maß. Ihr Sitz dient diesen Aufgaben und dem Zusammenleben der Familie. Die Erinnerung an Tyrnog, der sich für überforderte Schuldner einsetzte, prägt das Haus ebenso wie seine Unterstützung kirchlicher Arbeit durch Handwerk und verantwortungsvolle Amtsführung.",
         "secret": false,
         "dominionId": "cw-haus-eneiniog"
       },
@@ -503,56 +527,60 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Baronie von Gwendolyns Ufer",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Wyrm",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Castell Wyrm"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Ritterfürstlicher Familiensitz"
           },
           {
-            "k": "Befehlshaber",
-            "v": ""
+            "k": "Oberhaupt",
+            "v": "Ritterfürst Mailgwin Wyrm, seit 1717"
           },
           {
             "k": "Unterstellung",
-            "v": ""
+            "v": "Haus Draig; Graf Galahad Draig"
           },
           {
-            "k": "Besatzung",
-            "v": ""
+            "k": "Bewohner / Gefolge",
+            "v": "Haus Wyrm, seine Ritter und Hofbediensteten"
           },
           {
             "k": "Aufgaben",
-            "v": ""
+            "v": "Hausführung, Verwaltung der Herrschaft und ihrer Vasallen sowie Ritterdienst"
           },
           {
-            "k": "Ausrüstung",
-            "v": ""
+            "k": "Ritterdienst",
+            "v": "Vor allem Cantref und Uchelwyr; ausgeprägte Reit- und Kavallerietradition"
           },
           {
-            "k": "Befestigung",
-            "v": ""
+            "k": "Einkünfte",
+            "v": "Bergbau, Pferdezucht und Holzverarbeitung"
           },
           {
-            "k": "Zustand",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Shan Wyrm, danach Gavin Wyrm"
           },
           {
-            "k": "Gerüchte",
-            "v": ""
+            "k": "Traditionen",
+            "v": "Fahrende Ritter, höfische Romantik, Reitkunst und Etikette"
+          },
+          {
+            "k": "Glaube",
+            "v": "Alerische Kirche; besondere Verehrung der Dame der See"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Kadettenhaus der Draigs, begründet von Tryffin Draig und Rhianwyn Saethwyr"
           }
         ],
-        "text": "",
+        "text": "**Castell Wyrm** ist das Heim des Ritterfürstenhauses Wyrm unter Mailgwin Wyrm. Als Kadettenhaus der Draigs pflegt die Familie das Erbe ihres Gründers Tryffin: Ritterlichkeit, Abenteuerlust und höfische Romantik gehören zu ihrem Selbstverständnis. Im Familiensitz treffen Hausführung, die Angelegenheiten der Vasallen und die Erziehung der nächsten Generation zusammen. Reitkunst, Disziplin und gepflegte Umgangsformen haben dabei einen festen Platz.",
         "secret": false,
         "templateId": "militaer",
         "kind": "place",
@@ -572,7 +600,7 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Baronie von Gwendolyns Ufer",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Saethwyr",
         "faction": "",
         "pinMarker": "",
@@ -580,50 +608,54 @@
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Castell Saethwyr"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Ritterfürstlicher Familiensitz"
           },
           {
-            "k": "Befehlshaber",
-            "v": ""
+            "k": "Oberhaupt",
+            "v": "Ritterfürst Huw Saethwyr, seit 1720"
           },
           {
             "k": "Unterstellung",
-            "v": ""
+            "v": "Haus Draig; Graf Galahad Draig"
           },
           {
-            "k": "Besatzung",
-            "v": ""
+            "k": "Bewohner / Gefolge",
+            "v": "Haus Saethwyr, seine Ritter und Hofbediensteten"
           },
           {
             "k": "Aufgaben",
-            "v": ""
+            "v": "Hausführung, Herrschaftsverwaltung und Organisation des Küsten- und Seedienstes"
           },
           {
-            "k": "Ausrüstung",
-            "v": ""
+            "k": "Militärische Führung",
+            "v": "Lady Melyn Saethwyr, geborene Arth, als Kommandantin unter dem Hausmarschall"
           },
           {
-            "k": "Befestigung",
-            "v": ""
+            "k": "Herold",
+            "v": "Sir Anwyll Saethwyr; Repräsentation, Verhandlungen und Heraldik"
           },
           {
-            "k": "Zustand",
-            "v": ""
+            "k": "Einkünfte",
+            "v": "Fischerei, Werften, Küstenhandel, Segelmacherei und Tauwerk"
           },
           {
-            "k": "Gerüchte",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Marmaduke Saethwyr, danach Arian Saethwyr"
+          },
+          {
+            "k": "Traditionen",
+            "v": "Seefahrt und Seekampf; Verehrung der Dame der See und der Seemaid"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Kadettenhaus der Draigs; die Flotte hat größeres Gewicht als das Landheer"
           }
         ],
-        "text": "",
+        "text": "**Castell Saethwyr** ist das Heim des Ritterfürstenhauses Saethwyr unter Huw Saethwyr. Hier werden die Angelegenheiten einer Familie betreut, deren Geschichte eng mit Seefahrt, Seekampf und dem Dienst an den Draigs verbunden ist. Die Erinnerung an Kynwrig den Seefahrer prägt die Erziehung und das Pflichtverständnis des Hauses. Zur Hofhaltung gehören neben der militärischen Führung auch die Verhandlungen und die Repräsentation, die Herold Anwyll für die Familie übernimmt.",
         "secret": false,
         "dominionId": "msa3c53vz3k80p"
       },
@@ -641,7 +673,7 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Baronie von Gwendolyns Ufer",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Awenor",
         "faction": "",
         "pinMarker": "",
@@ -649,50 +681,54 @@
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Castell Awenor"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Familiensitz eines militärisch geprägten Ritterhauses"
           },
           {
-            "k": "Befehlshaber",
-            "v": ""
+            "k": "Oberhaupt",
+            "v": "Ritterherr Ffraid Awenor"
           },
           {
             "k": "Unterstellung",
-            "v": ""
+            "v": "Haus Draig; Graf Galahad Draig"
           },
           {
-            "k": "Besatzung",
-            "v": ""
+            "k": "Bewohner / Gefolge",
+            "v": "Haus Awenor und seine Bediensteten"
           },
           {
             "k": "Aufgaben",
-            "v": ""
+            "v": "Hausführung, militärische Kommandos und Sicherung anvertrauter Gebiete"
           },
           {
-            "k": "Ausrüstung",
-            "v": ""
+            "k": "Dienste",
+            "v": "Lehenswarte, Statthalter, Hauptmänner und Kommandanten im Dienst der Draigs"
           },
           {
-            "k": "Befestigung",
-            "v": ""
+            "k": "Versorgung / Einkünfte",
+            "v": "Eigene Minen und Schmieden; Erz, Waffen, Werkzeuge und Nachschub"
           },
           {
-            "k": "Zustand",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Derwain Awenor, danach Urfael und Isgar"
           },
           {
-            "k": "Gerüchte",
-            "v": ""
+            "k": "Traditionen",
+            "v": "Pflicht, Disziplin, Standhaftigkeit und verlässlicher Gehorsam"
+          },
+          {
+            "k": "Glaube",
+            "v": "Alerische Kirche"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Das Haus übernimmt regelmäßig militärische Aufgaben unter dem gräflichen Marschall"
           }
         ],
-        "text": "",
+        "text": "**Castell Awenor** ist das Heim des Ritterhauses Awenor unter Ffraid Awenor. Die Familie dient den Draigs vor allem durch militärische Führung, verlässliche Verwaltung und die Sicherung anvertrauter Besitzungen. Der Sitz gehört zum Alltag eines Hauses, das Disziplin und beständigen Dienst höher bewertet als Ruhm. Eigene Minen und Schmieden unterstützen diese Verpflichtungen und verbinden die Hauswirtschaft eng mit der Versorgung seiner Kräfte.",
         "secret": false,
         "dominionId": "cw-haus-awenor"
       },
@@ -710,7 +746,7 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Baronie von Gwendolyns Ufer",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Awenydd",
         "faction": "",
         "pinMarker": "",
@@ -718,50 +754,54 @@
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Castell Awenydd"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Familiensitz eines Ritterhauses"
           },
           {
-            "k": "Befehlshaber",
-            "v": ""
+            "k": "Oberhaupt",
+            "v": "Ritterherr Derfel Awenydd"
           },
           {
             "k": "Unterstellung",
-            "v": ""
+            "v": "Haus Draig; Graf Galahad Draig"
           },
           {
-            "k": "Besatzung",
-            "v": ""
+            "k": "Bewohner",
+            "v": "Angehörige und Bedienstete des Hauses Awenydd"
           },
           {
             "k": "Aufgaben",
-            "v": ""
+            "v": "Hausführung, Ritterdienst, Verwaltung und Gesandtschaftsdienste"
           },
           {
-            "k": "Ausrüstung",
-            "v": ""
+            "k": "Versorgung / Einkünfte",
+            "v": "Pachten zugehöriger Höfe und ein traditionsreiches Gestüt"
           },
           {
-            "k": "Befestigung",
-            "v": ""
+            "k": "Pferdezucht",
+            "v": "Zusammenarbeit mit Rhosmeres Rösser; Betrieb durch Bedienstete und beauftragte Verwalter"
           },
           {
-            "k": "Zustand",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Gildas Awenydd als erster Erbe"
           },
           {
-            "k": "Gerüchte",
-            "v": ""
+            "k": "Traditionen",
+            "v": "Beständigkeit, Maß und generationenlange Loyalität zu den Draigs"
+          },
+          {
+            "k": "Glaube",
+            "v": "Alerische Kirche"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Solide, begrenzte Mittel für Unterhalt und Dienst; kein aufwendiger Prunk"
           }
         ],
-        "text": "",
+        "text": "**Castell Awenydd** ist das Heim des Ritterhauses Awenydd unter Derfel Awenydd. Die Familie dient den Draigs seit Generationen als verlässlicher Vasall und verbindet Ritterdienst mit Verwaltungs- und Gesandtschaftsaufgaben. Der Sitz spiegelt ein Haus wider, dessen Mittel für seine Verpflichtungen reichen, ohne großen Prunk zu tragen. Höfe und ein traditionsreiches Gestüt sichern die wirtschaftliche Grundlage; Beständigkeit und Loyalität bestimmen das Selbstverständnis der Familie.",
         "secret": false,
         "dominionId": "cw-haus-awenydd"
       },
@@ -7126,60 +7166,60 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Baronie von Llamreis Ankunft",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Balchder",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Anwesen der Balchder"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Herrenhaus und Familiensitz"
           },
           {
-            "k": "Besitzer",
-            "v": ""
+            "k": "Haus",
+            "v": "Haus Balchder"
+          },
+          {
+            "k": "Oberhaupt",
+            "v": "Ritterherr Dalvin Balchder, seit 1730"
+          },
+          {
+            "k": "Unterstellung",
+            "v": "Haus Draig; Graf Galahad Draig"
           },
           {
             "k": "Bewohner",
-            "v": ""
+            "v": "Angehörige und Bedienstete des Hauses Balchder"
           },
           {
-            "k": "Nutzung",
-            "v": ""
+            "k": "Aufgaben",
+            "v": "Hausführung sowie Verwaltungs-, Rechts- und Bildungsaufgaben im Dienst der Draigs"
           },
           {
-            "k": "Gebäude / Räume",
-            "v": ""
+            "k": "Hofdienst",
+            "v": "Dalvin ist Vogt der Draigs; das Haus bildet traditionell Amtsträger aus"
           },
           {
-            "k": "Nebengebäude",
-            "v": ""
+            "k": "Einkünfte",
+            "v": "Buchbinderei, Papier- und Tintenherstellung sowie das Schreiberhaus"
           },
           {
-            "k": "Versorgung",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Avan Balchder, danach Armel und Owen"
           },
           {
-            "k": "Zugang",
-            "v": ""
-          },
-          {
-            "k": "Zustand",
-            "v": ""
-          },
-          {
-            "k": "Gefahren",
-            "v": ""
+            "k": "Traditionen",
+            "v": "„Feder und Pflicht.“; Wahrheitstreue, Besonnenheit und Verantwortung"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Aufsicht über die von den Draigs gestiftete Universität; Armel wirkt als Geschäftspartner Tudwal Draigs"
           }
         ],
-        "text": "",
+        "text": "**Das Anwesen der Balchder** ist das Heim eines Ritterhauses, dessen Bedeutung vor allem in Verwaltung, Recht und Gelehrsamkeit liegt. Unter Dalvin Balchder verbindet die Familie den Dienst an den Draigs mit der Ausbildung verantwortungsvoller Amtsträger und der Bewahrung von Wissen. Buchbinderei, Papier- und Tintenherstellung tragen ihre wirtschaftlichen Aufgaben. Das Herrenhaus steht damit für jene Verbindung von Bildung und Pflicht, die auch den Wahlspruch „Feder und Pflicht.“ bestimmt.",
         "secret": false,
         "templateId": "gebaeude",
         "dominionId": "cw-haus-balchder"
@@ -8071,60 +8111,60 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Baronie von Llamreis Ankunft",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Cludwyr",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Anwesen der Cludwyr"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Herrenhaus als zeitweilige Familienunterkunft"
           },
           {
-            "k": "Besitzer",
-            "v": ""
+            "k": "Nutzendes Haus",
+            "v": "Haus Cludwyr; von den Wyrm zur Verfügung gestellt"
+          },
+          {
+            "k": "Oberhaupt",
+            "v": "Ritterherr Rhain Cludwyr, seit 1720"
+          },
+          {
+            "k": "Unterstellung",
+            "v": "Haus Wyrm; Ritterfürst Mailgwin Wyrm; darüber Haus Draig"
           },
           {
             "k": "Bewohner",
-            "v": ""
+            "v": "Meist dauerhaftes Hauspersonal; Familienangehörige während ihrer Aufenthalte"
           },
           {
             "k": "Nutzung",
-            "v": ""
+            "v": "Unterkunft bei Hofdiensten und geschäftlichen Angelegenheiten"
           },
           {
-            "k": "Gebäude / Räume",
-            "v": ""
+            "k": "Hausaufgaben",
+            "v": "Verwaltung Bronhirs, Schutzdienst und Unterstützung der Landwirtschaft"
           },
           {
-            "k": "Nebengebäude",
-            "v": ""
+            "k": "Einkünfte des Hauses",
+            "v": "Anteil an Bronhirs Abgaben, Familienhöfe und die Burg-Taverne in Bronhir"
           },
           {
-            "k": "Versorgung",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Slevin Cludwyr, danach Aled Cludwyr"
           },
           {
-            "k": "Zugang",
-            "v": ""
-          },
-          {
-            "k": "Zustand",
-            "v": ""
-          },
-          {
-            "k": "Gefahren",
-            "v": ""
+            "k": "Traditionen",
+            "v": "„Der Boden lügt nicht.“; Volksnähe, Arbeit und Verehrung des Knechts"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Als „Geisterhaus“ bekannt; der eigentliche Familiensitz befindet sich in Bronhir"
           }
         ],
-        "text": "",
+        "text": "**Das Anwesen der Cludwyr** dient der Familie als Unterkunft bei Hofdiensten und anderen Angelegenheiten in Gwynthor. Es wurde den Cludwyr von den Wyrm zur Verfügung gestellt; den Alltag bestreiten gewöhnlich die dauerhaft angestellten Bediensteten. Der eigentliche Lebensmittelpunkt der Familie bleibt Bronhir. Der alte Spitzname „Geisterhaus“ erinnert an frühere längere Leerstände und die Mutproben von Kindern, nicht an einen belegten Spuk.",
         "secret": false,
         "templateId": "gebaeude",
         "dominionId": "cw-haus-cludwyr"
@@ -8690,60 +8730,60 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Baronie von Llamreis Ankunft",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Gelyn",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Anwesen Gelyn"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Herrenhaus als Unterkunft und familiärer Rückzugsort"
           },
           {
-            "k": "Besitzer",
-            "v": ""
+            "k": "Nutzendes Haus",
+            "v": "Haus Gelyn; von den Draigs zur Verfügung gestellt"
+          },
+          {
+            "k": "Oberhaupt",
+            "v": "Ritterherr Cadoc Gelyn; Gründer des Hauses im Jahr 1720"
+          },
+          {
+            "k": "Unterstellung",
+            "v": "Haus Draig; Graf Galahad Draig"
           },
           {
             "k": "Bewohner",
-            "v": ""
+            "v": "Angehörige des Hauses während ihrer Aufenthalte; insbesondere Frauen vor einer Geburt"
           },
           {
             "k": "Nutzung",
-            "v": ""
+            "v": "Übernachtung bei Aufenthalten und geschützter Aufenthalt vor der Entbindung"
           },
           {
-            "k": "Gebäude / Räume",
-            "v": ""
+            "k": "Hausaufgaben",
+            "v": "Lehenswarten- und Schutzdienst von Twr Gwynthstorm aus"
           },
           {
-            "k": "Nebengebäude",
-            "v": ""
+            "k": "Einkünfte des Hauses",
+            "v": "Minen und angeschlossene Schmieden zur Versorgung der Garnison"
           },
           {
-            "k": "Versorgung",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Brannoc Gelyn, danach Rhon und Fflam"
           },
           {
-            "k": "Zugang",
-            "v": ""
-          },
-          {
-            "k": "Zustand",
-            "v": ""
-          },
-          {
-            "k": "Gefahren",
-            "v": ""
+            "k": "Traditionen",
+            "v": "„Im Feuer geprüft.“; Tapferkeit, Loyalität und Feuerprobe vor dem Ritterschlag"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Kein Mittelpunkt regelmäßiger Hofhaltung; die Familie lebt und wirkt überwiegend in Twr Gwynthstorm"
           }
         ],
-        "text": "",
+        "text": "**Das Anwesen Gelyn** ist die Gwynthorer Unterkunft des jungen Ritterhauses Gelyn. Die Draigs stellten es der Familie zur Verfügung, deren täglicher Dienst und Lebensmittelpunkt gewöhnlich mit Twr Gwynthstorm verbunden sind. Bei Aufenthalten dient das Haus vor allem als ruhige Unterkunft. Eine besondere Rolle hat es für schwangere Frauen der Familie, die hier die letzten Wochen vor einer Geburt in Sicherheit verbringen können.",
         "secret": false,
         "templateId": "gebaeude",
         "dominionId": "cw-haus-gelyn"
@@ -8901,60 +8941,60 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Baronie von Llamreis Ankunft",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Loer",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Anwesen der Loer"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Repräsentatives Herrenhaus als Aufenthaltsresidenz"
           },
           {
-            "k": "Besitzer",
-            "v": ""
+            "k": "Haus",
+            "v": "Haus Loer"
+          },
+          {
+            "k": "Oberhaupt",
+            "v": "Ritterherr Eurgain Loer"
+          },
+          {
+            "k": "Unterstellung",
+            "v": "Haus Wyrm; Ritterfürst Mailgwin Wyrm; darüber Haus Draig"
           },
           {
             "k": "Bewohner",
-            "v": ""
+            "v": "Angehörige des Hauses Loer während ihrer Aufenthalte am Grafenhof"
           },
           {
             "k": "Nutzung",
-            "v": ""
+            "v": "Familienunterkunft und Repräsentation"
           },
           {
-            "k": "Gebäude / Räume",
-            "v": ""
+            "k": "Wirtschaft",
+            "v": "Edelsteinhandel, Schmuckherstellung und Verarbeitung kostbarer Metalle"
           },
           {
-            "k": "Nebengebäude",
-            "v": ""
+            "k": "Besitz / Verbindungen",
+            "v": "Edelsteinminen, Erzbergwerke, Gold- und Silberschmieden, Juweliere und Regenbogenschmiede"
           },
           {
-            "k": "Versorgung",
-            "v": ""
+            "k": "Erbfolge",
+            "v": "Ynyrion Loer, danach Aeron Loer"
           },
           {
-            "k": "Zugang",
-            "v": ""
-          },
-          {
-            "k": "Zustand",
-            "v": ""
-          },
-          {
-            "k": "Gefahren",
-            "v": ""
+            "k": "Hauscharakter",
+            "v": "Geschäftstüchtig, zurückhaltend und handwerklicher Meisterschaft verpflichtet"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Gwynthorer Nebenresidenz; der Stammsitz des Hauses ist mit Craithglyn verbunden"
           }
         ],
-        "text": "",
+        "text": "**Das Anwesen der Loer** ist die repräsentative Gwynthorer Residenz des Ritterhauses Loer. Die Angehörigen nutzen es während ihrer Aufenthalte am Grafenhof, während der eigentliche Stammsitz des Hauses mit Craithglyn verbunden bleibt. Unter Eurgain Loer gründet sich die Stellung der Familie besonders auf Edelsteine, kostbare Metalle und anspruchsvolles Handwerk. Das Anwesen vertritt damit ein wohlhabendes, zurückhaltendes und geschäftstüchtiges Haus im Dienst der Wyrm.",
         "secret": false,
         "templateId": "gebaeude",
         "dominionId": "cw-haus-loer"
@@ -10358,63 +10398,63 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "Baronie von Llamreis Ankunft",
+        "region": "Llamreis Ankunft · Celtigerns Wacht",
         "house": "Haus Gwyllach",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Anwesen der Gwyllach"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Familiensitz eines bürgerlichen Hauses"
           },
           {
-            "k": "Besitzer",
-            "v": ""
+            "k": "Haus",
+            "v": "Haus Gwyllach"
+          },
+          {
+            "k": "Oberhaupt",
+            "v": "Rhovan Gwyllach"
+          },
+          {
+            "k": "Zugehörigkeit",
+            "v": "Gräfischer Hof und Haus Draig; Graf Galahad Draig"
           },
           {
             "k": "Bewohner",
-            "v": ""
+            "v": "Angehörige des Hauses Gwyllach"
           },
           {
             "k": "Nutzung",
-            "v": ""
+            "v": "Familienheim und Verwaltung der eigenen Angelegenheiten"
           },
           {
-            "k": "Gebäude / Räume",
-            "v": ""
+            "k": "Hofdienst",
+            "v": "Schreibwesen, Verwaltung, Botendienste und verschiedene höfische Ämter"
           },
           {
-            "k": "Nebengebäude",
-            "v": ""
+            "k": "Einkünfte",
+            "v": "Kutscher- und Fuhrmannszunft; Bau, Reparatur und Verwaltung von Wagen und Kutschen"
           },
           {
-            "k": "Versorgung",
-            "v": ""
+            "k": "Nachfolge",
+            "v": "Drystan Gwyllach, danach Meirion Gwyllach"
           },
           {
-            "k": "Zugang",
-            "v": ""
-          },
-          {
-            "k": "Zustand",
-            "v": ""
-          },
-          {
-            "k": "Gefahren",
-            "v": ""
+            "k": "Hauscharakter",
+            "v": "Verschwiegenheit, Geduld, Loyalität und gute Kontakte zu Reisenden und Händlern"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Die Krähe mit Schriftrolle steht für Nachrichten; über die Reichweite des Kontaktnetzes wird gemunkelt"
           }
         ],
-        "text": "",
+        "text": "**Das Anwesen der Gwyllach** ist das Heim einer bürgerlichen Familie im Dienst der Draigs. Unter Rhovan Gwyllach verbinden sich Hof- und Schreiberdienste mit dem Geschäft der Kutscher, Fuhrleute und Wagenbauer. Die Familie pflegt eine zurückhaltende Lebensweise und weitreichende Kontakte, ohne ihren Einfluss offen zur Schau zu stellen. Über die Nachrichten, die neben Reisenden und Waren ihren Weg zu den Gwyllach finden, spricht man am Hof meist nur hinter vorgehaltener Hand.",
         "secret": false,
         "templateId": "gebaeude",
-        "dominionId": ""
+        "dominionId": "cw-haus-gwyllach"
       },
       {
         "id": "gwynthor-marking-152",
@@ -12448,9 +12488,9 @@
       },
       {
         "id": "cw-haus-chwedlonol",
-        "name": "Haus Chwedlonol",
+        "name": "Haus Chwedonol",
         "type": "Ritterhaus",
-        "ruler": "Haus Chwedlonol",
+        "ruler": "Haus Chwedonol",
         "seat": "Gwynthor, Glastraeth",
         "note": "",
         "parentId": "msa3c53vz3k80p"
@@ -12463,6 +12503,15 @@
         "seat": "Gwynthor",
         "note": "",
         "parentId": "msa3c53vz3k80p"
+      },
+      {
+        "id": "cw-haus-gwyllach",
+        "name": "Haus Gwyllach",
+        "type": "Bürgerliches Haus",
+        "ruler": "Haus Gwyllach",
+        "seat": "Gwynthor",
+        "note": "Bürgerliche Familie im Dienst der Draigs",
+        "parentId": "msa3c53vo1h89v"
       }
     ],
     "dm": {

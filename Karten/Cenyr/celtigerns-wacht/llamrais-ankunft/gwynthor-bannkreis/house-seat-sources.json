@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "mapId": "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis",
+  "dataRevision": 6,
+  "reviewedAt": "2026-10-01T18:55:16.075Z",
+  "scope": "15 zuvor leere, benannte Haussitze: zehn Castells und fünf Anwesen. Castell Tlawd und alle anderen Pins vollständig erhalten.",
+  "editorialPolicy": "Kurze Beschreibungen ohne geografische Lagebehauptungen oder erfundene Burgdetails. Hausaufgaben und Einkünfte sind keine Angaben zur Größe einer Burgbesatzung. Nebenresidenzen der Cludwyr, Gelyn und Loer bleiben von ihren eigentlichen Sitzen unterschieden.",
+  "corrections": [
+    "Eneiniog statt Rhyddid im Hausfeld von Castell Eneiniog",
+    "Llamreis Ankunft als Region der bearbeiteten Sitze",
+    "Sichtbarer Hausname Chwedonol bei erhaltener historischer Herrschafts-ID",
+    "Bürgerliches Haus Gwyllach unter den Draigs ergänzt"
+  ],
+  "pins": [
+    {
+      "pinId": "muos3qam395u",
+      "title": "Castell Draig",
+      "houseId": "haus-draig",
+      "headId": "galahad-draig",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-draig-family.js",
+        "Stammbäume/assets/js/data/person-biographies/trahern-draig.js"
+      ]
+    },
+    {
+      "pinId": "muos7vubkfbt",
+      "title": "Castell Gafyr",
+      "houseId": "haus-gafyr",
+      "headId": "duncan-gafyr",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gafyr/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gafyr/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-gafyr-family.js",
+        "Stammbäume/assets/js/data/person-biographies/heledd-gafyr.js"
+      ]
+    },
+    {
+      "pinId": "muosfghvgpqg",
+      "title": "Castell Rhyddid",
+      "houseId": "haus-rhyddid",
+      "headId": "taran-rhyddid",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Rhyddid/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Rhyddid/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-rhyddid-family.js"
+      ]
+    },
+    {
+      "pinId": "muoshr0dxkjs",
+      "title": "Castell Gostyn",
+      "houseId": "haus-gostyn",
+      "headId": "eifion-gostyn",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gostyn/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gostyn/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-gostyn-family.js"
+      ]
+    },
+    {
+      "pinId": "muoshw6frb01",
+      "title": "Castell Chwedonol",
+      "houseId": "haus-chwedlonol",
+      "headId": "gwenhwyfar-chwedlonol",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Chwedonol/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Chwedonol/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-chwedlonol-family.js"
+      ]
+    },
+    {
+      "pinId": "muoshxrtfdti",
+      "title": "Castell Eneiniog",
+      "houseId": "haus-eneiniog",
+      "headId": "maredog-eneiniog",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Eneiniog/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Eneiniog/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-eneiniog-family.js"
+      ]
+    },
+    {
+      "pinId": "muosmuzhl7re",
+      "title": "Castell Wyrm",
+      "houseId": "haus-wyrm",
+      "headId": "mailgwin-wyrm",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Wyrm/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Wyrm/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-wyrm-family.js",
+        "Stammbäume/assets/js/data/person-biographies/gais-wyrm.js"
+      ]
+    },
+    {
+      "pinId": "muoso4abb62h",
+      "title": "Castell Saethwyr",
+      "houseId": "haus-saethwyr",
+      "headId": "huw-saethwyr",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Saethwyr/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Saethwyr/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-saethwyr-family.js",
+        "Stammbäume/assets/js/data/person-biographies/melyn-arth.js",
+        "Stammbäume/assets/js/data/person-biographies/anwyll-saethwyr.js"
+      ]
+    },
+    {
+      "pinId": "muosoghjijjg",
+      "title": "Castell Awenor",
+      "houseId": "haus-awenor",
+      "headId": "ffraid-awenor",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenor/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenor/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-awenor-family.js"
+      ]
+    },
+    {
+      "pinId": "muosoi8jiiyc",
+      "title": "Castell Awenydd",
+      "houseId": "haus-awenydd",
+      "headId": "derfel-awenydd",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenydd/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenydd/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-awenydd-family.js"
+      ]
+    },
+    {
+      "pinId": "gwynthor-marking-097",
+      "title": "Anwesen der Balchder",
+      "houseId": "haus-balchder",
+      "headId": "dalvin-balchder",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Balchder/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Balchder/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-balchder-family.js",
+        "Stammbäume/assets/js/data/person-biographies/armel-balchder.js"
+      ]
+    },
+    {
+      "pinId": "gwynthor-marking-112",
+      "title": "Anwesen der Cludwyr",
+      "houseId": "haus-cludwyr",
+      "headId": "rhain-cludwyr",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cludwyr/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cludwyr/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-cludwyr-family.js"
+      ]
+    },
+    {
+      "pinId": "gwynthor-marking-123",
+      "title": "Anwesen Gelyn",
+      "houseId": "haus-gelyn",
+      "headId": "cadoc-gelyn",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gelyn/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gelyn/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-gelyn-family.js"
+      ]
+    },
+    {
+      "pinId": "gwynthor-marking-127",
+      "title": "Anwesen der Loer",
+      "houseId": "haus-loer",
+      "headId": "eurgain-loer",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Loer/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Loer/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-loer-family.js"
+      ]
+    },
+    {
+      "pinId": "gwynthor-marking-151",
+      "title": "Anwesen der Gwyllach",
+      "houseId": "haus-gwyllach",
+      "headId": "rhovan-gwyllach",
+      "sourceFiles": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gwyllach/haus.content.mjs",
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gwyllach/haus.biography.mjs",
+        "Stammbäume/assets/js/data/house-gwyllach-family.js"
+      ]
+    }
+  ]
+}
