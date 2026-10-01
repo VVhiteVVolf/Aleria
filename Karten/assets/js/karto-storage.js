@@ -20,7 +20,6 @@
   const PUBLISH_ENDPOINT = '/.netlify/functions/karten-publisher';
 
   let publishedRevision = 0;
-  let publishSessionKey = '';
   let ready = false;
   let hasPublishedState = false;
 
@@ -122,7 +121,6 @@
     isConfigured: () => !!dataPath,
     isReady: () => ready,
     hasPublishedState: () => hasPublishedState,
-    hasSession: () => !!publishSessionKey,
     hasLocalDraft: () => !!readDraft(),
     publishedRevision: () => publishedRevision,
 
@@ -163,29 +161,11 @@
       });
     },
 
-    async authenticate(key) {
-      const candidate = String(key || '').trim();
-      if (!candidate) throw new Error('Bitte den Veröffentlichungsschlüssel eingeben.');
-      const response = await fetch(PUBLISH_ENDPOINT, {
-        method: 'GET',
-        headers: { Authorization: `Bearer ${candidate}` },
-      });
-      const payload = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(payload.message || 'Anmeldung fehlgeschlagen.');
-      publishSessionKey = candidate;
-      return payload; // { repository, branch }
-    },
-
-    clearSession() {
-      publishSessionKey = '';
-    },
-
     async publish(state) {
-      if (!publishSessionKey) throw new Error('Bitte zuerst den Veröffentlichungsschlüssel eingeben.');
       if (!dataPath) throw new Error('Diese Karte hat noch keinen dataPath in der Registry/Config hinterlegt.');
       const response = await fetch(PUBLISH_ENDPOINT, {
         method: 'POST',
-        headers: { Authorization: `Bearer ${publishSessionKey}`, 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ dataPath, state, expectedRevision: publishedRevision }),
       });
       const payload = await response.json().catch(() => ({}));

@@ -69,7 +69,6 @@
     'start-overwrite-template': el => window.startOverwriteFromTemplate(el.dataset.templateId),
     'start-overwrite-pin': el => window.startOverwriteFromPin(el.dataset.pinId),
     'open-publish-modal': () => window.openPublishModal(),
-    'submit-publish-key': () => window.submitPublishKey(),
     'publish-online': () => window.publishOnline(),
     'open-data-manager': el => {
       window.openDataMgr();
@@ -225,9 +224,6 @@
     },
     'save-travel-group-name': (el, event) => {
       if(event.key === 'Enter') window.KartoLsbModals.saveGroup();
-    },
-    'submit-publish-key': (el, event) => {
-      if(event.key === 'Enter') window.submitPublishKey();
     },
   };
 

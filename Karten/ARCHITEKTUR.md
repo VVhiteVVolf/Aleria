@@ -96,11 +96,14 @@ Geraete-Synchronisation mehr. Solange "Online speichern" nicht geklickt wurde,
 bleiben Aenderungen nur im aktuellen Browser. Wer an mehreren Geraeten
 arbeitet, muss bewusst veroeffentlichen.
 
-Der "Online speichern"-Dialog fragt nach einem Veroeffentlichungsschluessel
-(`ALERIA_GITHUB_PUBLISH_KEY`, als Netlify-Umgebungsvariable gesetzt - dieselbe
-Variable, die auch `netlify/functions/family-publisher.mjs` fuer die
-Stammbäume-Veroeffentlichung nutzt). Ohne gueltigen Schluessel lehnt die
-Funktion die Anfrage ab (401).
+Die Kartenveroeffentlichung funktioniert seit 2026-10-01 ausdruecklich ohne
+Anmeldung oder Veroeffentlichungsschluessel: Der Dialog bietet direkt
+„Jetzt veröffentlichen“ an, und `karten-publisher.mjs` akzeptiert die Anfrage
+ohne Authorization-Header. `ALERIA_GITHUB_TOKEN` bleibt ausschliesslich auf
+dem Netlify-Server fuer den GitHub-Zugriff hinterlegt. Ein etwaiger
+`ALERIA_GITHUB_PUBLISH_KEY` ist fuer Karten ohne Bedeutung; die Zugangsregeln
+anderer Publisher bleiben unveraendert. Datenpfad-, Bild-, Groessen- und
+Revisionspruefungen gelten weiterhin.
 
 ### Lokale Bild-Uploads (Icons, Ebenenbilder)
 

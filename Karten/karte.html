@@ -109,7 +109,7 @@
 </script>
 <script>
 if (window.KARTO_BOOT_STATUS === 'active') {
-  document.write('<script src="assets/js/karto-storage.js?v=20260911a"><\/script>');
+  document.write('<script src="assets/js/karto-storage.js?v=20261001-publish"><\/script>');
 }
 </script>
   <link rel="stylesheet" href="assets/css/pin-lettering.css?v=20260920a">
@@ -252,23 +252,16 @@ if (window.KARTO_BOOT_STATUS === 'active') {
     <div class="lmh"><span>🌐 Kartenstand veröffentlichen</span><button data-action="close-modal" data-modal-id="publish-mo">✕</button></div>
     <div class="lmb-body">
       <div style="font-family:'EB Garamond',serif;font-size:.9rem;color:var(--ink2);line-height:1.6;">
-        Übernommene Änderungen liegen zunächst als lokaler Entwurf in diesem Browser. „Jetzt veröffentlichen“ überträgt den vollständigen Kartenstand in das GitHub-Repository — danach sehen ihn auch andere Geräte, sobald Netlify neu deployt hat.
+        Deine Änderungen sind als Entwurf in diesem Browser gespeichert. Mit „Jetzt veröffentlichen“ speicherst du den vollständigen Kartenstand online. Sobald die Website aktualisiert ist, sehen ihn auch andere Geräte.
       </div>
-      <div id="publish-key-row">
-        <label class="lml">Veröffentlichungsschlüssel</label>
-        <input class="e-inp" id="publish-key-inp" type="password" placeholder="············" data-keydown-action="submit-publish-key"/>
-        <div id="publish-key-err" style="display:none;color:var(--red);font-family:'Cinzel',serif;font-size:var(--fs-sm);margin-top:.3rem;"></div>
-      </div>
-      <div id="publish-confirm-row" style="display:none;">
-        <div style="font-family:'Cinzel',serif;font-size:var(--fs-sm);color:var(--ink3);margin-bottom:.4rem;">Repository: <span id="publish-repo-info"></span></div>
+      <div id="publish-confirm-row">
         <div style="font-family:'EB Garamond',serif;font-size:.85rem;color:var(--ink2);">Aktuelle Karte: <strong id="publish-map-title"></strong></div>
       </div>
       <div id="publish-result" style="display:none;font-family:'Cinzel',serif;font-size:var(--fs-sm);"></div>
     </div>
     <div class="lmb-footer">
       <button class="s-btn s-cancel" data-action="close-modal" data-modal-id="publish-mo">Schließen</button>
-      <button class="s-btn s-save" id="publish-key-submit-btn" data-action="submit-publish-key">Anmelden</button>
-      <button class="s-btn s-save" id="publish-confirm-btn" data-action="publish-online" style="display:none;">🌐 Jetzt veröffentlichen</button>
+      <button class="s-btn s-save" id="publish-confirm-btn" data-action="publish-online">🌐 Jetzt veröffentlichen</button>
     </div>
   </div>
 </div>
@@ -891,9 +884,9 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 <script src="assets/js/pins/pin-editor.js?v=20260920-pin-tools"></script>
 <script src="assets/js/pins/search.js"></script>
 <script src="assets/js/integrations/orte-poi-bridge.js"></script>
-<script src="assets/js/core/karto-publish-ui.js?v=20260911a"></script>
+<script src="assets/js/core/karto-publish-ui.js?v=20261001-publish"></script>
 <script src="assets/js/core/karto-load-published-ui.js?v=20260911a"></script>
-<script src="assets/js/core/karto-actions.js?v=20260920-pin-tools"></script>
+<script src="assets/js/core/karto-actions.js?v=20261001-publish"></script>
 <script>
 (function(){
   const status = window.KARTO_BOOT_STATUS;

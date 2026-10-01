@@ -3,13 +3,11 @@
 // but "Online speichern" commits the map's data.json straight onto the
 // master branch via the GitHub API instead of writing to a database.
 //
-// Deliberately mirrors netlify/functions/family-publisher.mjs (same repo,
-// same env vars, same GitHub blob/tree/commit approach, same
-// bearer-publish-key gate) so both features share one Netlify
-// configuration - if ALERIA_GITHUB_TOKEN / ALERIA_GITHUB_PUBLISH_KEY are
-// already set for the Stammbäume publisher, this works without any new
-// Netlify setup.
-import { json, secureEqual, bearerToken, repositoryConfig, createGitHubClient } from './shared/github-publishing.mjs';
+// Uses the shared server-side GitHub configuration and commit client.
+// Map publishing intentionally needs no browser login or publish key.
+// ALERIA_GITHUB_TOKEN stays on the server; other publishers retain their
+// own authentication rules.
+import { json, repositoryConfig, createGitHubClient } from './shared/github-publishing.mjs';
 
 // Netlify/Lambda synchronous functions cap request bodies well under this,
 // so this is really about failing fast with a clear message rather than
@@ -199,9 +197,6 @@ async function publish({ dataPath, state, expectedRevision }, config, fetchRef =
 export async function handler(event) {
   try {
     const config = repositoryConfig();
-    if (!config.publishKey || !secureEqual(bearerToken(event.headers), config.publishKey)) {
-      return json(401, { code: 'unauthorized', message: 'Der Veröffentlichungsschlüssel ist nicht korrekt.' });
-    }
     if (event.httpMethod === 'GET') {
       return json(200, { repository: config.repository, branch: config.branch });
     }
@@ -241,7 +236,6 @@ export async function handler(event) {
 }
 
 export const __testables = Object.freeze({
-  secureEqual,
   validateDataPath,
   validateState,
   decodeContent,

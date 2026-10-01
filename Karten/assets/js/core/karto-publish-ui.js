@@ -7,32 +7,7 @@
     mo.classList.add('open');
     document.getElementById('publish-map-title').textContent = window.KartoRuntime?.state()?.regionTitle || '';
     document.getElementById('publish-result').style.display = 'none';
-    setView(window.KartoPublish?.hasSession() ? 'ready' : 'need-key');
-    if (!window.KartoPublish?.hasSession()) {
-      setTimeout(() => document.getElementById('publish-key-inp')?.focus(), 60);
-    }
-  }
-
-  function setView(mode) {
-    document.getElementById('publish-key-row').style.display = mode === 'need-key' ? 'block' : 'none';
-    document.getElementById('publish-key-submit-btn').style.display = mode === 'need-key' ? 'inline-block' : 'none';
-    document.getElementById('publish-confirm-row').style.display = mode === 'ready' ? 'block' : 'none';
-    document.getElementById('publish-confirm-btn').style.display = mode === 'ready' ? 'inline-block' : 'none';
-  }
-
-  async function submitPublishKey() {
-    const input = document.getElementById('publish-key-inp');
-    const errorEl = document.getElementById('publish-key-err');
-    errorEl.style.display = 'none';
-    try {
-      const info = await window.KartoPublish.authenticate(input.value);
-      input.value = '';
-      document.getElementById('publish-repo-info').textContent = `${info.repository} @ ${info.branch}`;
-      setView('ready');
-    } catch (error) {
-      errorEl.textContent = error.message;
-      errorEl.style.display = 'block';
-    }
+    document.getElementById('publish-confirm-btn').focus();
   }
 
   async function publishOnline() {
@@ -63,6 +38,5 @@
   }
 
   window.openPublishModal = openPublishModal;
-  window.submitPublishKey = submitPublishKey;
   window.publishOnline = publishOnline;
 })();
