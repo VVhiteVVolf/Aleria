@@ -6,6 +6,8 @@ import test from 'node:test';
 import vm from 'node:vm';
 
 await import('../assets/js/pins/category-catalog.js');
+await import('../assets/js/pins/pin-template-catalog.js');
+await import('../assets/js/pins/pin-table-presets.js');
 await import('../assets/js/pins/pin-placeholder-images.js');
 
 const placeholders = globalThis.KartoPinPlaceholders;
@@ -103,4 +105,42 @@ test('smaller location categories and saved aliases choose their matching art', 
   }
   assert.equal(placeholders.select({}, {label:'Einfacher Hof'}), asset('location-bauernhof'));
   assert.equal(placeholders.select({templateId:'militaer'}, {label:'Mine'}), asset('template-militaer'));
+});
+
+test('matching template families use the specific location artwork for every category and alias', () => {
+  for(const category of KartoCategoryCatalog.definitions){
+    const templateId = KartoPinTablePresets.forCategory(category).templateId;
+    const pin = {templateId, table:KartoPinTablePresets.createTable(templateId,category)};
+    const original = structuredClone(pin);
+    assert.equal(placeholders.resolve(pin,category).src,asset(category.asset),category.label);
+    for(const label of category.aliases){
+      assert.equal(placeholders.resolve(pin,{id:'custom-category',label}).src,asset(category.asset),label);
+    }
+    assert.deepEqual(pin,original);
+  }
+});
+
+test('previously saved generic artwork is corrected while uploaded images and links stay intact', () => {
+  const category = {label:'Mine'};
+  for(const img of ['',asset('template-handwerk'),asset('default-siedlung')]){
+    assert.equal(placeholders.resolve({templateId:'handwerk',img},category).src,asset('location-mine'));
+  }
+  assert.deepEqual(placeholders.resolve({templateId:'handwerk',img:'/my-mine.jpg',imgLink:'/my-mine'},category),{
+    src:'/my-mine.jpg',link:'/my-mine',isPlaceholder:false,
+  });
+  assert.equal(placeholders.resolve({templateId:'militaer'},category).src,asset('template-militaer'));
+});
+
+test('every imported Gwynthor pin uses its reviewed location motif without changing map data', () => {
+  const state = JSON.parse(read('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json')).state;
+  const inventory = JSON.parse(read('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/markings.inventory.json'));
+  const original = structuredClone(state);
+  const imported = state.pins.filter(pin => pin.id.startsWith('gwynthor-marking-'));
+  assert.equal(imported.length,158);
+  for(const pin of imported){
+    const marking = inventory.markings.find(item => item.id === pin.id);
+    const expected = KartoCategoryCatalog.placeholder({id:marking.categoryId});
+    assert.equal(placeholders.resolve(pin,state.cats.find(cat => cat.id === pin.cat)).src,expected,pin.id);
+  }
+  assert.deepEqual(state,original);
 });

@@ -141,6 +141,8 @@ const placeholderResult = await evaluate(`(async () => {
   const mine = [...document.getElementById('sb-cat').options].find(option => option.textContent === 'Mine');
   change('sb-cat', mine.value);
   const location = sources();
+  change('sb-tpl-sel', 'handwerk');
+  const matchingTemplate = sources();
   change('sb-tpl-sel', 'militaer');
   const template = sources();
   change('sb-img', '/Karten/assets/icons/welt/bardensiedlung.png');
@@ -164,11 +166,11 @@ const placeholderResult = await evaluate(`(async () => {
     await image.decode();
     dimensions.push({ src, width: image.naturalWidth, height: image.naturalHeight });
   }
-  return { category, location, template, own, cleared, settlement, dimensions, selectedTemplate, locationFields, settlementFields, heights,
+  return { category, location, matchingTemplate, template, own, cleared, settlement, dimensions, selectedTemplate, locationFields, settlementFields, heights,
     storedImage: KartoRuntime.state().pins.find(pin => pin.id === 'codex-smoke-pin').img || '' };
 })()`);
 const expectedImage = name => `/Karten/assets/images/pin-placeholders/${name}.webp`;
-for (const [step, name] of [['category', 'settlement-hafensiedlung'], ['location', 'location-mine'], ['template', 'template-militaer'], ['cleared', 'template-militaer'], ['settlement', 'settlement-hauptstadt']]) {
+for (const [step, name] of [['category', 'settlement-hafensiedlung'], ['location', 'location-mine'], ['matchingTemplate', 'location-mine'], ['template', 'template-militaer'], ['cleared', 'template-militaer'], ['settlement', 'settlement-hauptstadt']]) {
   assert.deepEqual(placeholderResult[step], { card: expectedImage(name), media: expectedImage(name) });
 }
 assert.deepEqual(placeholderResult.own, { card: '/Karten/assets/icons/welt/bardensiedlung.png', media: '/Karten/assets/icons/welt/bardensiedlung.png' });

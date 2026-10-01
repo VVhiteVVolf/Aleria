@@ -1,6 +1,7 @@
 (function(root){
   const BASE = '/Karten/assets/images/pin-placeholders/';
   const catalog = root.KartoCategoryCatalog;
+  const locationProfiles = root.KartoPinTablePresets;
   const TEMPLATES = new Map([
     ['orden', 'template-orden'],
     ['institution', 'template-institution'],
@@ -25,10 +26,12 @@
   ]);
 
   // The caller supplies the map's category, so selection has no state/DOM dependency.
-  // A specific template wins; the generic settlement template uses the category.
+  // A matching location refines its template (Mine + Handwerk -> mine artwork).
+  // An unrelated explicit template still wins (Hauptstadt + Militär -> military).
   function select(pin = {}, category = {}){
     const template = TEMPLATES.get(pin.templateId);
-    if(template && pin.templateId !== 'siedlung') return template;
+    const matchesLocation = locationProfiles.forCategory(category)?.templateId === pin.templateId;
+    if(template && pin.templateId !== 'siedlung' && !matchesLocation) return template;
     return catalog.placeholder(category)
       || template
       || TEMPLATES.get('siedlung');

@@ -31,8 +31,11 @@ zugeordnet. Die geprüften Bezeichnungen stehen in `location-symbol-types.json`.
 Editorvorschau und Medienvorschau:
 
 1. Eigene Bilder samt Bildlink haben Vorrang.
-2. Eine spezifische Vorlage (z. B. Handwerk oder Militär) bestimmt das Motiv.
-3. Bei „Siedlung / Ort“ oder ohne bekannte Vorlage bestimmt der Kategoriename
+2. Gehört der Ortstyp zur gewählten Vorlage, erscheint sein genaueres Ortsmotiv:
+   Mine + Handwerk zeigt die Mine, Höhle + Natur die Höhle. Die Zuordnung folgt
+   demselben Ortsprofil in `pin-table-presets.js` wie die Infotabelle.
+3. Eine abweichende spezifische Vorlage bestimmt weiterhin das Motiv, etwa
+   Militär bei Hauptstadt. Bei „Siedlung / Ort“ oder ohne bekannte Vorlage bestimmt der Kategoriename
    das Motiv, unabhängig von der Kategorie-ID der jeweiligen Karte.
 4. Unbekannte Kategorien ohne passende Vorlage erhalten das allgemeine Ortsbild.
 
@@ -69,8 +72,8 @@ Die Gwynthor-Markierungsebene wurde am 1. Oktober 2026 mit 170 Symbolen abgeglic
 12 vorhandene Pins bleiben unverändert, 158 neue Pins besitzen Typnamen, passende
 Templates mit leeren Tabellenwerten und die gewünschten Gwynthor-/Llamreis-Medien.
 Höfe verwenden Landwirtschaft, Gewerbe Handwerk, Türme und Rittergüter
-Militär, Tavernen Gastbetrieb und Naturorte Natur/POI. Die festgelegte Priorität
-der Vorlage bei der Bildauswahl gilt auch für diese Pins. Die Symbole für
+Militär, Tavernen Gastbetrieb und Naturorte Natur/POI. Die Bilder entsprechen
+dem jeweiligen Ortstyp innerhalb dieser Vorlagen. Die Symbole für
 Rosszucht- und Brauersiedlungen verwenden ihre eigenen Kategorien und die Vorlage
 Siedlung/Ort; dadurch bleibt auch ihr spezifisches Siedlungsbild erhalten.
 Das geprüfte Inventar
