@@ -135,10 +135,3 @@
 .grossstadt-template [data-orte-notice-board-map] {
   width: 100%;
 }
-
-.grossstadt-template .orte-notice-board-spacer {
-  height: 34px !important;
-  min-height: 34px !important;
-  padding: 0 !important;
-  background: linear-gradient(180deg, #e5c987, #efdca9) !important;
-}
