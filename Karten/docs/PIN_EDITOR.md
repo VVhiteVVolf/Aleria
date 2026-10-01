@@ -3,9 +3,19 @@
 Im Bearbeitungsmodus legt **Pin setzen** einen Ort mit einer Infotabellen-Vorlage
 an. Neben den bisherigen Vorlagen gibt es gemeinsame Gruppen für Orden/Zünfte,
 Institutionen, Verwaltung, Militär, Handwerk, Gastbetriebe, Landwirtschaft und Handel.
-Die Vorlagen liegen in `assets/js/pins/pin-templates.js`. Im Pin-Editor können
+Die Vorlagendaten liegen in `assets/js/pins/pin-template-catalog.js`; der Picker
+in `pin-templates.js` und der Kartenimport verwenden dieselbe Quelle. Im Pin-Editor können
 weitere Zeilen ergänzt und vorhandene Vorlagen geladen werden. Unbekannte Werte
 bleiben leer. Die 24 Llysfaener Orte besitzen bereits passende Tabellen.
+
+`pin-table-presets.js` ergänzt passende Feldgruppen für alle 100 Ortstypen, etwa
+Abbauweise, Rohstoffe und Tiefe für Minen oder Wasserqualität und Ergiebigkeit
+für Quellen. Platzierung, Vorlagenwechsel und Import verwenden denselben Katalog.
+Beim Kategorienwechsel folgen nur unveränderte leere Standardtabellen dem neuen
+Ortstyp; ausgefüllte, angepasste oder ausdrücklich geleerte Tabellen bleiben erhalten.
+Eine ausdrücklich gewählte fachfremde Vorlage behält ihre eigenen Felder.
+Bild und Tabelle teilen sich in der Desktopkarte dieselbe Grid-Zeile und Höhe;
+auf schmalen Bildschirmen stehen sie untereinander.
 
 ## Automatische Ortsbilder
 
@@ -13,6 +23,10 @@ Für alle 20 Siedlungskategorien und 14 Pin-/Stempelvorlagen gibt es eigene
 quadratische Aquarell-/Buntstiftbilder in `assets/images/pin-placeholders/`.
 Der gemeinsame Katalog ergänzt 51 allgemeine und kleinere Ortstypen mit
 44 weiteren Bildern; sieben passende Motive werden aus den Vorlagen wiederverwendet.
+Der vollständige Symbolbogen-Abgleich ergänzt weitere 29 eigenständige Typen
+mit 27 neuen Motiven und zwei passenden vorhandenen Bildern. Damit umfasst
+der Standardkatalog 100 Kategorien; gleichbedeutende Varianten sind als Aliasse
+zugeordnet. Die geprüften Bezeichnungen stehen in `location-symbol-types.json`.
 `pin-placeholder-images.js` wählt das Motiv gemeinsam für Detailansicht,
 Editorvorschau und Medienvorschau:
 
@@ -36,6 +50,8 @@ drei Bilder bleiben für bestehende direkte Verweise verfügbar.
 Die zusätzlichen Bilder wurden ebenfalls mit dem integrierten Imagegen-Werkzeug
 und derselben Stilreferenz erzeugt. Ihre Prompts stehen in
 `assets/images/pin-placeholders/location-generation-prompts.json`.
+Die Ergänzungen aus dem vollständigen Symbolbogen stehen in
+`assets/images/pin-placeholders/symbol-types-generation-prompts.json`.
 
 ## Gemeinsame Ortskategorien und Gwynthor
 
@@ -46,12 +62,22 @@ bleiben erhalten. Beispielsweise werden „Einfacher Hof“, „Castell/ Burg“
 und „Lager“ wiederverwendet. Die gespeicherte `categoryCatalogVersion` verhindert,
 dass später bewusst gelöschte Kategorien beim nächsten Laden erneut auftauchen.
 Exporte mit Kategorien enthalten diese Versionskennung ebenfalls.
+Version 2 ergänzt unter anderem Sumpf-/Unterwasser-/Brauersiedlungen, Magierturm,
+Diebesgilde, Schiff, Fährstelle, Kultstätte, Münzprägestätte und einzelne Ruinentypen.
 
 Die Gwynthor-Markierungsebene wurde am 1. Oktober 2026 mit 170 Symbolen abgeglichen:
-12 vorhandene Pins bleiben unverändert, 158 neue Pins besitzen Typnamen, leere
-Details und die gewünschten Gwynthor-/Llamreis-Medien. Das geprüfte Inventar
+12 vorhandene Pins bleiben unverändert, 158 neue Pins besitzen Typnamen, passende
+Templates mit leeren Tabellenwerten und die gewünschten Gwynthor-/Llamreis-Medien.
+Höfe verwenden Landwirtschaft, Gewerbe Handwerk, Türme und Rittergüter
+Militär, Tavernen Gastbetrieb und Naturorte Natur/POI. Die festgelegte Priorität
+der Vorlage bei der Bildauswahl gilt auch für diese Pins. Die Symbole für
+Rosszucht- und Brauersiedlungen verwenden ihre eigenen Kategorien und die Vorlage
+Siedlung/Ort; dadurch bleibt auch ihr spezifisches Siedlungsbild erhalten.
+Das geprüfte Inventar
 `Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/markings.inventory.json`
-dokumentiert die Symbolgrenzen im 8192 × 6300 großen Originalbild.
+dokumentiert die Symbolgrenzen im 8192 × 6300 großen Originalbild sowie die
+jeweilige `templateId`. Neue Importpins benötigen eine gültige Vorlage;
+ihre Tabellen werden aus dem gemeinsamen Vorlagenkatalog erzeugt.
 `tools/merge-marking-pins.mjs` führt solche Inventare anhand von ID/Position
 additiv zusammen und erhält alle bestehenden Pin-Daten. Die Zusammenführung
 läuft nicht automatisch im Browser; die ergänzten Pins stehen in `data.json`.

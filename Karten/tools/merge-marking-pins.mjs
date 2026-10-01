@@ -1,4 +1,6 @@
 import '../assets/js/pins/category-catalog.js';
+import '../assets/js/pins/pin-template-catalog.js';
+import '../assets/js/pins/pin-table-presets.js';
 
 const catalog = globalThis.KartoCategoryCatalog;
 
@@ -30,11 +32,13 @@ export function mergeMarkingPins(state, inventory){
     const category = next.cats.find(item => item.id === marking.categoryId)
       || next.cats.find(item => catalog.definition(item)?.id === marking.categoryId);
     if(!category) throw new Error(`Missing category for ${marking.id}: ${marking.categoryId}`);
+    if(!globalThis.KartoPinTemplateCatalog.get(marking.templateId)) throw new Error(`Unknown pin template: ${marking.templateId}`);
+    const table = globalThis.KartoPinTablePresets.createTable(marking.templateId, category);
     const pin = {
       id:marking.id, x, y, title:marking.title, cat:category.id, kind:'place',
       img:'', imgLink:'', crest:inventory.crest, crestLink:'',
       banner:inventory.banner, bannerLink:'', region:'', house:'', faction:'',
-      table:[], text:'', secret:false,
+      templateId:marking.templateId, table, text:'', secret:false,
     };
     pins.push(pin);
     matches.push({marking:marking.id, pin:pin.id, added:true});

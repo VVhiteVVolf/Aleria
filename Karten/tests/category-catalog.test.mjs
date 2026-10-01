@@ -47,12 +47,31 @@ test('all default types have unique identities, canonical names, and local marke
   }
 });
 
+test('every named type from the supplied symbol sheet is represented', () => {
+  const labels = JSON.parse(readFileSync(new URL('../docs/location-symbol-types.json',import.meta.url),'utf8'));
+  for(const label of labels) assert.ok(catalog.definition({label}),label);
+  for(const [general,specific] of [
+    ['Brauerei','Brauersiedlung'],['Gestüt','Rosszucht Siedlung'],['Turm','Magierturm'],
+    ['Quelle','Heiße Quellen'],['Burg','Festung'],['Hain','Verwunschener Wald'],
+  ]) assert.notEqual(catalog.definition({label:general}).id,catalog.definition({label:specific}).id);
+});
+
+test('previously upgraded maps receive only the new symbol types', () => {
+  const earlier = catalog.defaults().filter(item => catalog.definition(item).addedIn < 2 && item.id !== 'location-mine');
+  const state = {cats:earlier,categoryCatalogVersion:1};
+  const upgraded = catalog.upgrade(state);
+  assert.ok(upgraded.cats.some(item => item.id === 'location-magierturm'));
+  assert.equal(upgraded.cats.some(item => item.id === 'location-mine'),false);
+  assert.deepEqual(upgraded.cats.slice(0,earlier.length),earlier);
+  assert.deepEqual(catalog.upgrade(upgraded),upgraded);
+});
+
 test('marking import preserves existing pins and media, matches by position, and stays idempotent', () => {
   const existing = {id:'user-pin',title:'Mein Name',x:.15,y:.15,cat:'mine-custom',crest:'/own-crest.png',extra:{keep:true}};
   const state = {cats:[{id:'mine-custom',label:'Mine',color:'#123456'}],pins:[existing],dm:{notes:'keep'}};
   const inventory = {imageSize:[1000,1000],crest:'/crest.png',banner:'/banner.png',markings:[
-    {id:'a',title:'Mine',categoryId:'location-mine',bounds:[100,100,200,200]},
-    {id:'b',title:'Mine',categoryId:'location-mine',bounds:[700,700,800,800]},
+    {id:'a',title:'Mine',categoryId:'location-mine',templateId:'handwerk',bounds:[100,100,200,200]},
+    {id:'b',title:'Mine',categoryId:'location-mine',templateId:'handwerk',bounds:[700,700,800,800]},
   ]};
   const result = mergeMarkingPins(state,inventory);
   assert.deepEqual(result.state.pins[0],existing);
@@ -62,7 +81,9 @@ test('marking import preserves existing pins and media, matches by position, and
   assert.equal(result.state.pins[1].cat,'mine-custom');
   assert.equal(result.state.pins[1].crest,inventory.crest);
   assert.equal(result.state.pins[1].banner,inventory.banner);
-  assert.deepEqual(result.state.pins[1].table,[]);
+  assert.equal(result.state.pins[1].templateId,'handwerk');
+  assert.deepEqual(result.state.pins[1].table,globalThis.KartoPinTablePresets.createTable('handwerk',{label:'Mine'}));
+  assert.ok(result.state.pins[1].table.every(row => row.v === ''));
   assert.equal(result.state.pins[1].img,'');
   assert.deepEqual(mergeMarkingPins(result.state,inventory).state,result.state);
 });
@@ -76,4 +97,24 @@ test('every reviewed Gwynthor symbol has one corresponding pin', () => {
   assert.equal(result.matches.filter(match => match.added).length,0);
   assert.equal(new Set(result.matches.map(match => match.pin)).size,inventory.markings.length);
   assert.deepEqual(result.state,state);
+  for(const marking of inventory.markings){
+    assert.ok(globalThis.KartoPinTemplateCatalog.get(marking.templateId), marking.id);
+    const pin = state.pins.find(item => item.id === marking.id);
+    if(!pin) continue;
+    assert.equal(pin.templateId,marking.templateId,pin.id);
+    assert.deepEqual(pin.table,globalThis.KartoPinTablePresets.createTable(marking.templateId,catalog.definition({id:marking.categoryId})));
+  }
+});
+
+test('template tables are independent copies and unknown templates cannot create bare pins', () => {
+  const templates = globalThis.KartoPinTemplateCatalog;
+  const first = templates.createTable('landwirtschaft');
+  const second = templates.createTable('landwirtschaft');
+  first[0].v = 'Edited farm';
+  assert.equal(second[0].v,'');
+  assert.equal(templates.get('landwirtschaft').table[0].v,'');
+  const inventory = {imageSize:[100,100],markings:[
+    {id:'unassigned',title:'Farm',categoryId:'location-bauernhof',bounds:[10,10,20,20]},
+  ]};
+  assert.throws(() => mergeMarkingPins({pins:[]},inventory),/Unknown pin template/);
 });

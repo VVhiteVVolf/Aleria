@@ -48,6 +48,9 @@ function fixture(pins = [{ id: 'one', title: 'Klerus', x: .25, y: .3 }]) {
     cancelAnimationFrame: id => frames.delete(id)
   });
   const load = name => vm.runInContext(read(`../assets/js/pins/${name}.js`), context);
+  load('category-catalog');
+  load('pin-template-catalog');
+  load('pin-table-presets');
   load('pin-lettering');
   return { context, window, state, layer, checkbox, events, windowEvents, frames, undo, opened, load,
     editing: value => { editing = value; }, saves: () => saves,

@@ -150,6 +150,13 @@ const placeholderResult = await evaluate(`(async () => {
   const cleared = sources();
   change('sb-tpl-sel', 'siedlung');
   const settlement = sources();
+  const selectedTemplate = document.getElementById('sb-tpl-sel').value;
+  change('sb-cat', mine.value);
+  const locationFields = [...document.querySelectorAll('#sb-tbl [data-c="k"]')].map(input => input.value);
+  change('sb-cat', KartoRuntime.firstCategoryId());
+  const settlementFields = [...document.querySelectorAll('#sb-tbl [data-c="k"]')].map(input => input.value);
+  const card = document.querySelector('.editor-preview-card');
+  const heights = [card.querySelector('.sv-img-wrap'), card.querySelector('.sv-table')].map(element => element.getBoundingClientRect().height);
   const dimensions = [];
   for (const src of KartoPinPlaceholders.sources) {
     const image = new Image();
@@ -157,7 +164,7 @@ const placeholderResult = await evaluate(`(async () => {
     await image.decode();
     dimensions.push({ src, width: image.naturalWidth, height: image.naturalHeight });
   }
-  return { category, location, template, own, cleared, settlement, dimensions,
+  return { category, location, template, own, cleared, settlement, dimensions, selectedTemplate, locationFields, settlementFields, heights,
     storedImage: KartoRuntime.state().pins.find(pin => pin.id === 'codex-smoke-pin').img || '' };
 })()`);
 const expectedImage = name => `/Karten/assets/images/pin-placeholders/${name}.webp`;
@@ -166,7 +173,11 @@ for (const [step, name] of [['category', 'settlement-hafensiedlung'], ['location
 }
 assert.deepEqual(placeholderResult.own, { card: '/Karten/assets/icons/welt/bardensiedlung.png', media: '/Karten/assets/icons/welt/bardensiedlung.png' });
 assert.equal(placeholderResult.storedImage, '');
-const promptSets = await Promise.all(['generation-prompts.json', 'location-generation-prompts.json']
+assert.equal(placeholderResult.selectedTemplate, 'siedlung');
+assert.ok(placeholderResult.locationFields.includes('Abbauweise'));
+assert.ok(placeholderResult.settlementFields.includes('Bevölkerung'));
+assert.ok(Math.abs(placeholderResult.heights[0] - placeholderResult.heights[1]) < 1);
+const promptSets = await Promise.all(['generation-prompts.json', 'location-generation-prompts.json', 'symbol-types-generation-prompts.json']
   .map(name => readFile(new URL(`../assets/images/pin-placeholders/${name}`, import.meta.url), 'utf8').then(JSON.parse)));
 assert.equal(placeholderResult.dimensions.length, promptSets.reduce((sum, set) => sum + set.jobs.length, 0));
 assert.ok(placeholderResult.dimensions.every(image => image.width > 0 && image.width === image.height));

@@ -1,0 +1,142 @@
+{
+  "tool": "image_gen (built-in)",
+  "reference": "default-siedlung.webp",
+  "style": "Use case: illustration-story / style-transfer. Create ONE standalone square 1:1 illustration for a medieval fantasy atlas location card. Input image: STYLE REFERENCE ONLY. Closely match its gentle playful comic storybook watercolor and colored-pencil illustration, visibly grainy cream watercolor paper, softly irregular painted edges, sunny yellow-green hills, pale turquoise sky, warm ochre roofs, delicate pencil grain and simple charming forms. Calm uninhabited scenic still life, harmonious handmade illustration. Keep the subject clearly readable at small card size, with generous foreground and sky. The final canvas must be exactly square (1:1). No people, no living creatures, no text, no letters, no labels, no watermark, no UI, no collage, no grid, no photorealism, no 3D, no heavy black outlines. Primary subject: ",
+  "jobs": [
+    {
+      "id": "location-brauersiedlung",
+      "label": "Brauersiedlung",
+      "subject": "A little medieval brewing village of several cozy houses around a brewery, hop gardens, barley fields, copper kettle and barrels."
+    },
+    {
+      "id": "location-klostersiedlung",
+      "label": "Klostersiedlung",
+      "subject": "A quiet medieval monastery village: a small abbey church, cloister garden, surrounding cottages, orchard and low stone walls."
+    },
+    {
+      "id": "location-rosszuchtsiedlung",
+      "label": "Rosszuchtsiedlung",
+      "subject": "A small medieval horse-breeding village with several cottages, two large stable barns, empty fenced paddocks, hay carts and a countryside lane; no animals."
+    },
+    {
+      "id": "location-sumpfsiedlung",
+      "label": "Sumpfsiedlung",
+      "subject": "A charming small marshland hamlet of timber cottages on short stilts, plank walkways over shallow turquoise water, reeds and willow trees."
+    },
+    {
+      "id": "location-unterwasserstadt",
+      "label": "Unterwasserstadt",
+      "subject": "A whimsical submerged medieval city seen beneath clear turquoise water, graceful stone towers, archways, water plants and sunbeams from the surface, a calm underwater still life without creatures."
+    },
+    {
+      "id": "location-festung",
+      "label": "Festung",
+      "subject": "A compact medieval military fortress with broad solid square stone ramparts, crenellations, a sturdy central keep, gate and green hillside road."
+    },
+    {
+      "id": "location-magierturm",
+      "label": "Magierturm",
+      "subject": "A whimsical solitary wizard tower with pale stone walls, a blue conical roof, tiny observatory window, star-shaped wind vane without letters, herb garden and green rolling hills."
+    },
+    {
+      "id": "location-diebesgilde",
+      "label": "Diebesgilde",
+      "subject": "A discreet medieval thieves guild hideout in a crooked half-timbered house beside a narrow cobbled alley, shuttered windows, a concealed small side door and stacked crates; cheerful mysterious storybook setting."
+    },
+    {
+      "id": "location-piratenversteck",
+      "label": "Piratenversteck",
+      "subject": "A hidden pirate cove with an empty weathered rowing boat, timber shack, treasure chest, ropes and barrels beneath coastal trees; no people, no skull symbols or text."
+    },
+    {
+      "id": "location-schmugglerversteck",
+      "label": "Schmugglerversteck",
+      "subject": "A discreet coastal smugglers landing with a canvas shelter, a concealed stash of crates, barrels, rope and a small empty rowboat in a reed-lined inlet."
+    },
+    {
+      "id": "location-verwunschener-wald",
+      "label": "Verwunschener Wald",
+      "subject": "A whimsical enchanted grove of curving ancient trees forming a leafy archway, a mossy winding path, ferns, oversized mushrooms and soft golden-green light; no beings."
+    },
+    {
+      "id": "location-wahrzeichen",
+      "label": "Wahrzeichen",
+      "subject": "A single tall weathered unlettered standing stone on a gentle grassy mound beside a forked countryside path, wildflowers and distant yellow-green hills; no runes or text."
+    },
+    {
+      "id": "location-dimensionaler-riss",
+      "label": "Dimensionaler Riss",
+      "subject": "A slender shimmering turquoise magical rift suspended between mossy stones in a peaceful grassy clearing, a soft glow, tiny floating specks of light and gentle hills; storybook watercolor magic."
+    },
+    {
+      "id": "location-galgen",
+      "label": "Galgen",
+      "subject": "An old empty medieval wooden gallows frame with a single hanging rope on a low timber platform beside a quiet grassy country road; no people, no bodies, no violence."
+    },
+    {
+      "id": "location-muenzpraegestaette",
+      "label": "Münzprägestätte",
+      "subject": "A small medieval coin mint workshop with an open wooden doorway, a sturdy hand-operated screw press, coin dies, unlettered coin stacks and metal ingots on a bench."
+    },
+    {
+      "id": "location-bogenschiessstand",
+      "label": "Bogenschießstand",
+      "subject": "A quiet grassy medieval archery range with three round straw targets, a wooden rack with bows and quivers, simple fence and green trees."
+    },
+    {
+      "id": "location-ziegelei",
+      "label": "Ziegelei",
+      "subject": "A small medieval brickworks with a rounded brick kiln, a low timber drying shed, neat stacks of red clay bricks, a wheelbarrow and a grassy track."
+    },
+    {
+      "id": "location-schiff",
+      "label": "Schiff",
+      "subject": "One intact small medieval wooden merchant sailing ship resting on calm turquoise water, furled cream sail, curved wooden hull, neatly coiled ropes and green shoreline; no crew."
+    },
+    {
+      "id": "location-kreaturenlager",
+      "label": "Kreaturenlager",
+      "subject": "A quiet empty fantasy creature encampment in a conifer clearing: several rough pointed hide huts, uneven palisade stakes, crude wooden racks, barrels and a cold fire ring; no creatures or bones."
+    },
+    {
+      "id": "location-heisse-quellen",
+      "label": "Heiße Quellen",
+      "subject": "A tranquil natural hot spring in rounded mineral stones, gentle wisps of steam over pale turquoise pools, ferns and soft green hillside grasses."
+    },
+    {
+      "id": "location-brueckenruine",
+      "label": "Brückenruine",
+      "subject": "An old broken medieval stone bridge across a gentle stream, two surviving mossy arches and a collapsed central span, rounded stones, reeds and grassy banks."
+    },
+    {
+      "id": "location-kirchenruine",
+      "label": "Kirchenruine",
+      "subject": "The quiet ruins of a small medieval church with a roofless nave, one remaining bell tower, crumbling arched windows, ivy and a meadow of wildflowers."
+    },
+    {
+      "id": "location-hausruine",
+      "label": "Hausruine",
+      "subject": "A modest ruined rural cottage with a partly fallen thatched roof, old stone chimney, exposed timber beams, ivy, wildflowers and a quiet grassy path."
+    },
+    {
+      "id": "location-plantage",
+      "label": "Plantage",
+      "subject": "A quiet cultivated plantation with long tidy rows of leafy crop plants, irrigation channels, a small farmhouse, a wooden tool shed and rolling green hills; no orchard trees."
+    },
+    {
+      "id": "location-kultstaette",
+      "label": "Kultstätte",
+      "subject": "A mysterious but gentle fantasy ritual site with three unlettered standing stones around a small empty stone altar, candles, ivy and soft ochre light in a forest clearing; no gore or beings."
+    },
+    {
+      "id": "location-faehrstelle",
+      "label": "Fährstelle",
+      "subject": "A small medieval river ferry crossing with an empty flat-bottomed ferry boat, a guide rope between wooden posts, short landing docks and reed-lined grassy banks."
+    },
+    {
+      "id": "location-schlachtfeld",
+      "label": "Schlachtfeld",
+      "subject": "A peaceful long-abandoned battlefield in a sunny meadow, an old discarded shield, rusted unlettered helmet, broken cart wheel, weathered blank pennant and wildflowers; no people, bodies or gore."
+    }
+  ]
+}

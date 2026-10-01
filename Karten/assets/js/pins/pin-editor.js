@@ -233,7 +233,7 @@
             <div class="pin-editor-media-actions">
               <select class="e-sel" id="sb-tpl-sel" data-input-action="apply-pin-template-preset">
                 <option value="">Vorlage laden …</option>
-                ${(window.PIN_TEMPLATES || []).map(template => `<option value="${template.id}">${template.icon} ${template.label}</option>`).join('')}
+                ${(window.PIN_TEMPLATES || []).map(template => `<option value="${template.id}"${pin.templateId === template.id ? ' selected' : ''}>${template.icon} ${template.label}</option>`).join('')}
               </select>
               <button type="button" class="pin-editor-media-button" data-action="clear-pin-table">Tabelle leeren</button>
             </div>
@@ -271,7 +271,15 @@
     body.dataset.pinEditorBound = 'true';
     const update = event => {
       if (!event.target.matches('input, textarea, select')) return;
+      const pin = currentPin();
+      const updateTable = event.target.id === 'sb-cat' && pin?.kind !== 'text'
+        && window.KartoPinTablePresets.isDefaultTable(pin, runtime.categoryForPin(pin));
       syncFromForm();
+      if (updateTable) {
+        pin.table = window.KartoPinTablePresets.createTable(pin.templateId, runtime.categoryForPin(pin));
+        renderSidebarEdit();
+        return;
+      }
       if (event.target.id === 'sb-pin-kind') {
         renderSidebarEdit();
         return;
@@ -454,7 +462,8 @@
     if (!template || !pin) return;
     pin.templateId = template.id;
     const existing = Object.fromEntries((pin.table || []).filter(row => row.k).map(row => [row.k.toLocaleLowerCase('de').trim(), row.v]));
-    pin.table = template.table.map(row => ({ k: row.k, v: existing[row.k.toLocaleLowerCase('de').trim()] ?? '' }));
+    pin.table = window.KartoPinTablePresets.createTable(template.id, runtime.categoryForPin(pin))
+      .map(row => ({ k: row.k, v: existing[row.k.toLocaleLowerCase('de').trim()] ?? '' }));
     renderSidebarEdit();
   }
 

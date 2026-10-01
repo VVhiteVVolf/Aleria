@@ -58,6 +58,7 @@ test('every settlement category has its own image regardless of its map-specific
 
 test('every actual stamp template has its own image, with specific templates taking priority', () => {
   const context = vm.createContext({ window: { KartoRuntime: {} } });
+  vm.runInContext(read('../assets/js/pins/pin-template-catalog.js'), context);
   vm.runInContext(read('../assets/js/pins/pin-templates.js'), context);
   const templates = context.window.PIN_TEMPLATES;
   assert.equal(templates.length, 14);
