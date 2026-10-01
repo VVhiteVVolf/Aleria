@@ -2,6 +2,7 @@
   const runtime = window.KartoRuntime;
   const BACKUP_KEY = 'karto-backups-v1';
   const BACKUP_MAX = 10;
+  const VIEW_FIELDS = ['showMarkers', 'showPinLabels', 'alwaysShowLettering'];
 
   const FIELD_NORM = {
     'type':'Typ', 'Type':'Typ',
@@ -240,7 +241,11 @@
     if(document.getElementById('exp-mcat').checked) out.markerCatalog = s.markerCatalog || [];
     if(document.getElementById('exp-lsb').checked) out.lsb = s.lsb;
     if(document.getElementById('exp-dm').checked) out.dm = s.dm;
-    if(document.getElementById('exp-meta').checked){ out.regionTitle = s.regionTitle; out.regionIcon = s.regionIcon; }
+    if(document.getElementById('exp-meta').checked){
+      out.regionTitle = s.regionTitle;
+      out.regionIcon = s.regionIcon;
+      VIEW_FIELDS.forEach(field => { out[field] = s[field] === true; });
+    }
 
     const sections = Object.keys(out).filter(k => !['exportedAt','version','categoryCatalogVersion'].includes(k));
     if(!sections.length){ runtime.toast('⚠ Nichts ausgewählt'); return; }
@@ -276,7 +281,7 @@
           lsb:   {el:'imp-chk-lsb',   cnt:null,            val: d.lsb},
           dm:    {el:'imp-chk-dm',    cnt:null,            val: d.dm},
           frame: {el:'imp-chk-frame', cnt:null,            val: d.frame},
-          meta:  {el:'imp-chk-meta',  cnt:null,            val: d.regionTitle || d.regionIcon},
+          meta:  {el:'imp-chk-meta',  cnt:null,            val: d.regionTitle || d.regionIcon || VIEW_FIELDS.some(field => field in d)},
         };
         let found = 0;
         Object.values(secs).forEach(s => {
@@ -327,6 +332,7 @@
     if(document.getElementById('imp-meta')?.checked){
       if(d.regionTitle) s.regionTitle = d.regionTitle;
       if(d.regionIcon !== undefined) s.regionIcon = d.regionIcon;
+      VIEW_FIELDS.forEach(field => { if(field in d) s[field] = d[field] === true; });
       applied.push('Meta');
     }
 

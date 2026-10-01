@@ -22,7 +22,7 @@ function createFixture() {
     classList: classList("lbtn", "on"),
   }));
   const overlays = new Map(["regions", "pins"].map((layer) => [layer, { style: { opacity: "1" } }]));
-  const pinLayer = { style: { display: "block", opacity: "1" } };
+  const pinLayer = { style: { display: "block", opacity: "1" }, classList: classList() };
 
   const document = {
     getElementById(id) {
@@ -67,6 +67,25 @@ test("the default layer is the normal map without zone or marker overlays", () =
   assert.equal(fixture.overlays.get("regions").style.opacity, "0");
   assert.equal(fixture.overlays.get("pins").style.opacity, "0");
   assert.equal(fixture.pinLayer.style.display, "none");
+});
+
+test("persistent lettering keeps only its interactive layer above the base map and restores full opacity", () => {
+  const f = createFixture();
+  const state = { alwaysShowLettering: true };
+  f.window.KartoRuntime.state = () => state;
+  f.window.applyLayerOpacities();
+  assert.equal(f.pinLayer.style.opacity, '0.7');
+  f.window.resetLayers();
+  assert.equal(f.pinLayer.style.display, 'block');
+  assert.equal(f.pinLayer.style.opacity, '1');
+  assert.equal(f.pinLayer.classList.contains('marker-layer-active'), false);
+  assert.equal(f.overlays.get('pins').style.opacity, '0');
+  f.window.activateLayer('pins');
+  assert.equal(f.pinLayer.classList.contains('marker-layer-active'), true);
+  f.window.resetLayers();
+  state.alwaysShowLettering = false;
+  f.window.updatePinLayerVisibility();
+  assert.equal(f.pinLayer.style.display, 'none');
 });
 
 test("marker overlay can be enabled and normal resets it again", () => {

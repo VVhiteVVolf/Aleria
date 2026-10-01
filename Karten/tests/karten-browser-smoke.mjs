@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
+import { verifyMapSearch, verifyMapViewSettings } from './map-search-view-browser.mjs';
 
 const devtoolsPort = Number(process.argv[2] || 9223);
 const targetUrl = process.argv[3] || 'http://127.0.0.1:4173/Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis';
@@ -46,11 +47,14 @@ function waitForEvent(method) {
 
 async function evaluate(expression) {
   const result = await command('Runtime.evaluate', { expression, awaitPromise: true, returnByValue: true });
-  if (result.exceptionDetails) throw new Error(result.exceptionDetails.text || 'Auswertung im Browser fehlgeschlagen.');
+  if (result.exceptionDetails) throw new Error(result.exceptionDetails.exception?.description || result.exceptionDetails.text || 'Auswertung im Browser fehlgeschlagen.');
   return result.result.value;
 }
 
 await command('Page.enable');
+await command('Network.enable');
+await command('Network.setCacheDisabled', { cacheDisabled: true });
+await command('Network.setBypassServiceWorker', { bypass: true });
 await command('Runtime.enable');
 await command('Page.bringToFront');
 await command('Emulation.setDeviceMetricsOverride', { width: 1720, height: 1050, deviceScaleFactor: 1, mobile: false });
@@ -99,6 +103,8 @@ assert.equal(layerSwitch.enabled.button, true);
 assert.ok(Number(layerSwitch.enabled.opacity) > .99);
 assert.equal(layerSwitch.enabled.pins, 'block');
 assert.deepEqual(layerSwitch.reset, { button: false, opacity: '0', pins: 'none' });
+
+const searchResult = await verifyMapSearch({ command, evaluate });
 
 const editorResult = await evaluate(`(async () => {
   document.getElementById('btn-edit').click();
@@ -262,6 +268,8 @@ const editorLifecycle = await evaluate(`(async () => {
 })()`);
 assert.deepEqual(editorLifecycle, { afterCancel: 'Prüfpin', afterCommit: 'Übernommener Prüfpin', editorOpen: false });
 
+const viewSettingsResult = await verifyMapViewSettings({ command, evaluate });
+await evaluate('if(!KartoRuntime.isEditMode()) document.getElementById("btn-edit").click();');
 await command('Emulation.setDeviceMetricsOverride', {width:640,height:900,deviceScaleFactor:1,mobile:false});
 const mobilePreview = await evaluate(`(async () => {
   const pins=KartoRuntime.state().pins;
@@ -298,4 +306,4 @@ assert.equal(mobilePreview.unchanged,true);
 assert.deepEqual(browserErrors, [], `Browserfehler: ${browserErrors.join('; ')}`);
 
 socket.close();
-console.log(JSON.stringify({ initialLayers, layerSwitch, editorResult, placeholderResult, mediaResult, editorLifecycle }, null, 2));
+console.log(JSON.stringify({ initialLayers, layerSwitch, searchResult, viewSettingsResult, editorResult, mediaResult, editorLifecycle }, null, 2));

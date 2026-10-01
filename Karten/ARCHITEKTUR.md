@@ -48,9 +48,11 @@ Karten/
         pin-detail-view.js      # Pin-Detailansicht im Lesemodus
         pin-editor.js           # Pin-Editor, Tabellenfelder und Pin-Marker-Picker
         pin-renderer.js         # Pin-Dot-Rendering, Tooltip und Pin-Dragging
+        pin-navigation.js       # Zentrieren, Filterfreigabe und Hervorheben von Suchtreffern/Ortsverweisen
+        pin-visibility.js       # Gespeicherte Schriftzug-, Namens- und Symbolanzeige
         pin-templates.js        # Pin-Vorlagen und neue Pin-Platzierung
         stamp-overwrite.js      # Pin-Kopieren per Stempel und Feld-Overwrite
-        search.js               # Pinsuche und Suchergebnis-Navigation
+        search.js               # Pinsuche, Trefferliste, Fokus und Tastaturbedienung
     css/
       karto-map.css             # gemeinsames Karten-Styling, spaeter featureweise teilbar
   _template/

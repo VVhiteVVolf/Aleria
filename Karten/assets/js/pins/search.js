@@ -1,6 +1,11 @@
 (function(){
   const runtime = window.KartoRuntime;
   const COMBINING_DIACRITICS = /[̀-ͯ]/g;
+  const wrap = document.getElementById('search-wrap');
+  const input = document.getElementById('search-inp');
+  const results = document.getElementById('search-results');
+  const clearButton = document.getElementById('search-clear');
+  let activeIndex = -1;
 
   function normalize(value){
     return String(value || '').toLowerCase().normalize('NFD').replace(COMBINING_DIACRITICS, '');
@@ -44,45 +49,87 @@
   }
 
   function onSearch(value){
-    const clearButton = document.getElementById('search-clear');
-    const results = document.getElementById('search-results');
     clearButton.style.display = value ? 'block' : 'none';
-    if(!value){
-      results.style.display = 'none';
+    activeIndex = -1;
+    input.removeAttribute('aria-activedescendant');
+    if(!value.trim()){
+      hideSearch();
       return;
     }
 
     const matches = rankPins(runtime.visiblePins(), value).slice(0, 12);
-    if(!matches.length){
-      results.style.display = 'none';
-      return;
-    }
-
     const esc = runtime.esc;
-    results.innerHTML = matches.map(pin => {
+    results.innerHTML = matches.map((pin, index) => {
       const category = runtime.categoryForPin(pin);
-      return `<div class="sr-item" data-action="jump-to-search-result" data-pin-id="${esc(pin.id)}">
-        <span class="sr-dot" style="background:${category.color}"></span>${esc(pin.title)}
-      </div>`;
-    }).join('');
+      return `<button type="button" class="sr-item" id="pin-search-result-${index}" role="option" aria-selected="false" tabindex="-1" data-action="jump-to-search-result" data-pin-id="${esc(pin.id)}">
+        <span class="sr-dot" style="background:${esc(category.color)}"></span>
+        <span class="sr-copy">${esc(pin.title)}<small>${esc(category.label || '')}</small></span>
+      </button>`;
+    }).join('') || '<div class="sr-empty" role="status">Kein Ort gefunden.</div>';
     results.style.display = 'block';
+    input.setAttribute('aria-expanded', 'true');
   }
 
   function hideSearch(){
-    document.getElementById('search-results').style.display = 'none';
+    results.style.display = 'none';
+    input.setAttribute('aria-expanded', 'false');
+    input.removeAttribute('aria-activedescendant');
+    activeIndex = -1;
   }
 
   function clearSearch(){
-    document.getElementById('search-inp').value = '';
-    document.getElementById('search-clear').style.display = 'none';
+    input.value = '';
+    clearButton.style.display = 'none';
     hideSearch();
   }
 
   function jumpTo(id){
+    if(!runtime.jumpToPin(id)) return;
     clearSearch();
-    runtime.jumpToPin(id);
-    setTimeout(() => runtime.openPin(id, 'view'), 350);
+    input.blur();
+    runtime.openPin(id, 'view');
   }
+
+  function onKeydown(event){
+    if(event.key === 'Escape'){
+      hideSearch();
+      event.stopPropagation();
+      return;
+    }
+    if(!['ArrowDown', 'ArrowUp', 'Enter'].includes(event.key)) return;
+    if(results.style.display === 'none'){
+      if(event.key === 'Enter') return;
+      onSearch(input.value);
+    }
+    const items = [...results.querySelectorAll('.sr-item')];
+    if(!items.length) return;
+    event.preventDefault();
+    if(event.key === 'Enter'){
+      jumpTo(items[Math.max(0, activeIndex)].dataset.pinId);
+      return;
+    }
+    const next = activeIndex < 0 ? (event.key === 'ArrowDown' ? 0 : items.length - 1)
+      : (activeIndex + (event.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length;
+    activeIndex = next;
+    items.forEach((item, index) => {
+      item.classList.toggle('is-active', index === next);
+      item.setAttribute('aria-selected', String(index === next));
+    });
+    input.setAttribute('aria-activedescendant', items[next].id);
+    items[next].scrollIntoView({ block: 'nearest' });
+  }
+
+  // Keep result nodes alive from pointer-down through click. A timed blur
+  // handler or a second render on input change can remove the clicked target.
+  input.addEventListener('input', () => onSearch(input.value));
+  input.addEventListener('focus', () => onSearch(input.value));
+  input.addEventListener('keydown', onKeydown);
+  wrap.addEventListener('focusout', event => {
+    if(event.relatedTarget && !wrap.contains(event.relatedTarget)) hideSearch();
+  });
+  document.addEventListener('pointerdown', event => {
+    if(!wrap.contains(event.target)) hideSearch();
+  });
 
   window.onSearch = onSearch;
   window.hideSearch = hideSearch;

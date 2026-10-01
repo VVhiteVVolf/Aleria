@@ -1,18 +1,30 @@
-// Map-owned visibility preference; editing always reveals placement handles.
+// Map-owned preferences are saved with the draft and published with the map.
 (function () {
-  const checkbox = document.querySelector('[data-role="show-view-markers"]');
-  const layer = window.KartoRuntime?.pinLayer();
-  if (!checkbox || !layer) return;
+  const runtime = window.KartoRuntime;
+  const layer = runtime?.pinLayer();
+  if (!layer) return;
+  const controls = [
+    { field: 'showMarkers', role: 'show-view-markers', className: 'show-view-markers' },
+    { field: 'showPinLabels', role: 'show-pin-labels', className: 'show-pin-labels' },
+    { field: 'alwaysShowLettering', role: 'always-show-lettering' },
+  ].map(control => ({ ...control, input: document.querySelector(`[data-role="${control.role}"]`) }));
+
   function render() {
-    checkbox.checked = window.KartoRuntime.state().showMarkers === true;
-    layer.classList.toggle('show-view-markers', checkbox.checked);
+    for (const control of controls) {
+      const enabled = runtime.state()[control.field] === true;
+      if (control.input) control.input.checked = enabled;
+      if (control.className) layer.classList.toggle(control.className, enabled);
+    }
+    window.updatePinLayerVisibility?.();
   }
-  checkbox.addEventListener('change', () => {
-    if (!window.KartoRuntime.isEditMode()) return;
-    window.KartoRuntime.state().showMarkers = checkbox.checked;
-    render();
-    window.KartoRuntime.save();
-  });
+  for (const { input, field } of controls) {
+    input?.addEventListener('change', () => {
+      if (!runtime.isEditMode()) { render(); return; }
+      runtime.state()[field] = input.checked;
+      render();
+      runtime.save();
+    });
+  }
   window.addEventListener('aleria:karto:state-changed', render);
   render();
 })();

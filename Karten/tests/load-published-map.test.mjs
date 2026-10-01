@@ -6,11 +6,15 @@ import vm from 'node:vm';
 const sources = ['karto-storage.js', 'data/data-manager.js', 'core/karto-load-published-ui.js']
   .map(path => fs.readFileSync(new URL(`../assets/js/${path}`, import.meta.url), 'utf8'));
 const draftKey = 'karto.draft.test-map';
-const published = { revision: 2, state: { pins: [], regionTitle: 'Aktuelle Karte' } };
+const published = { revision: 2, state: { pins: [], regionTitle: 'Aktuelle Karte',
+  showMarkers: false, showPinLabels: true, alwaysShowLettering: true } };
 const draftState = {
   pins: [{ id: 'local-pin', title: 'Lokaler Ort' }],
   regionTitle: 'Mein Entwurf',
   regionIcon: 'crest.png',
+  showMarkers: true,
+  showPinLabels: false,
+  alwaysShowLettering: false,
   mapImages: { normal: 'map.png' },
   extraLayers: [{ id: 'layer', url: 'overlay.png' }],
   markerCatalog: [{ id: 'marker', url: 'marker.png' }],

@@ -25,11 +25,12 @@ function fixture(pins = [{ id: 'one', title: 'Klerus', x: .25, y: .3 }]) {
   const state = { pins, cats: [], dotSize: 80, lblSize: 40, showMarkers: false };
   const layer = element();
   const checkbox = element('input');
+  const visibilityControls = { 'show-view-markers': checkbox, 'show-pin-labels': element('input'), 'always-show-lettering': element('input') };
   const events = {}, windowEvents = {}, frames = new Map(), undo = [], opened = [];
   let frameId = 0, saves = 0, editing = true;
   const document = {
     createElement: element, createElementNS: (_, tag) => element(tag),
-    querySelector: selector => selector.includes('show-view-markers') ? checkbox : null,
+    querySelector: selector => visibilityControls[selector.match(/data-role="([^"]+)"/)?.[1]] || null,
     getElementById: () => null,
     addEventListener: (type, handler) => { events[type] = handler; }
   };
@@ -52,7 +53,7 @@ function fixture(pins = [{ id: 'one', title: 'Klerus', x: .25, y: .3 }]) {
   load('pin-template-catalog');
   load('pin-table-presets');
   load('pin-lettering');
-  return { context, window, state, layer, checkbox, events, windowEvents, frames, undo, opened, load,
+  return { context, window, state, layer, checkbox, visibilityControls, events, windowEvents, frames, undo, opened, load,
     editing: value => { editing = value; }, saves: () => saves,
     tick() { const callbacks = [...frames.values()]; frames.clear(); callbacks.forEach(fn => fn()); }
   };
@@ -250,6 +251,33 @@ test('Dauerhafte Dots sind standardmäßig aus und nur im Editor als Karteneinst
   f.checkbox.listeners.change();
   assert.equal(f.state.showMarkers, false);
   assert.equal(f.saves(), 1);
+});
+
+test('Schriftzug- und Namensanzeige werden unabhängig gespeichert und bei Zustandswechsel synchronisiert', () => {
+  const f = fixture();
+  f.load('pin-visibility');
+  const labels = f.visibilityControls['show-pin-labels'];
+  const lettering = f.visibilityControls['always-show-lettering'];
+  labels.checked = true;
+  labels.listeners.change();
+  lettering.checked = true;
+  lettering.listeners.change();
+  assert.equal(f.state.showPinLabels, true);
+  assert.equal(f.state.alwaysShowLettering, true);
+  assert.equal(f.state.showMarkers, false);
+  assert.equal(f.saves(), 2);
+  assert.ok(f.layer.classList.contains('show-pin-labels'));
+  f.state.showPinLabels = false;
+  f.windowEvents['aleria:karto:state-changed']();
+  assert.equal(labels.checked, false);
+  assert.equal(lettering.checked, true);
+  assert.equal(f.layer.classList.contains('show-pin-labels'), false);
+  f.editing(false);
+  lettering.checked = false;
+  lettering.listeners.change();
+  assert.equal(f.state.alwaysShowLettering, true);
+  assert.equal(lettering.checked, true);
+  assert.equal(f.saves(), 2);
 });
 
 test('Vorlagen-Overwrite führt das Platzhaltermotiv mit und Undo stellt die vorherige Zuordnung wieder her', () => {

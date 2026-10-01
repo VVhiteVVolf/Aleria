@@ -111,9 +111,22 @@ die bestehende Sicherung schützt dabei den vorherigen Entwurf.
 
 ## Pin-Darstellung und Schriftzüge
 
-**Dots dauerhaft anzeigen** ist eine gespeicherte Karteneinstellung
-(`showMarkers`, standardmäßig `false`). Im Bearbeitungsmodus bleiben die
-Platzierungspunkte sichtbar. Schriftzüge sind von dieser Einstellung unabhängig.
+Unter **Bearbeiten → Anzeige** werden drei unabhängige Karteneinstellungen gespeichert:
+
+- **Schriftzüge immer aktiv** (`alwaysShowLettering`) zeigt Schriftzug-Pins auch
+  auf der Grundkarte ohne Markierungsebene. Die normalen Pins und ihre Klickflächen
+  bleiben dort ausgeblendet; geheime Schriftzüge bleiben Besuchern verborgen.
+- **Ortsnamen über Pins immer anzeigen** (`showPinLabels`) hält die Namen auf der
+  aktiven Markierungsebene sichtbar, auch ohne Überfahren mit der Maus.
+- **Pin-Symbole dauerhaft anzeigen** (`showMarkers`, bisher „Dots dauerhaft anzeigen“)
+  zeigt die Symbole auf der aktiven Markierungsebene. Im Bearbeitungsmodus bleiben
+  die Platzierungspunkte unabhängig davon sichtbar.
+
+Alle drei Optionen sind bei älteren Karten zunächst ausgeschaltet. Sie werden im
+Entwurf, Backup und Metadaten-Export erhalten und mit **Online speichern** für
+Besucher veröffentlicht. `pin-visibility.js` verwaltet die Schalter;
+`map-view.js` steuert die gemeinsame Ebene und deren Deckkraft.
+
 Dots starten bei 80 (Bereich 8–240), die Beschriftung bei 40 (9–160). Bereits
 gespeicherte Größen anderer Karten bleiben erhalten. Llysfaens Kartendaten
 verwenden die neuen Standardwerte.
@@ -141,3 +154,19 @@ Mausposition auch bei noch ausstehendem Frame. Erst beim Loslassen werden
 die Darstellung neu aufgebaut, eine Sicherung ausgelöst und ein einzelner
 Rückgängig-Schritt angelegt. Mausbewegungen und Loslassen außerhalb der
 Kartenfläche werden über dokumentweite Listener erfasst.
+
+## Ortssuche
+
+Ein Suchtreffer aktiviert die Markierungsebene, zentriert den Ort bei unverändertem
+Zoom, hebt seinen Pin hervor und öffnet die Infokarte. Ein Kategorienfilter wird
+nur dann auf **Alle** zurückgesetzt, wenn er den gefundenen Ort ausblenden würde.
+Pfeiltasten wählen einen Treffer; Enter öffnet ihn, Escape schließt die Trefferliste.
+Ohne Treffer erscheint eine ausdrückliche Rückmeldung. Geheime Pins bleiben in der
+Besucheransicht ausgeschlossen.
+
+`search.js` besitzt Eingabe, Fokus und Tastaturbedienung. Die Liste wird während
+eines Klicks weder durch einen Blur-Timer noch durch ein zusätzliches Change-Event
+entfernt. `pin-navigation.js` kapselt die gemeinsame Navigation für Suche und
+eingebettete Ortsverweise. Die Browserprüfung in `map-search-view-browser.mjs`
+verwendet native Maus- und Tastatureingaben, einschließlich eines länger gehaltenen
+Klicks, und prüft die Anzeigeoptionen auch nach einem Neuladen.

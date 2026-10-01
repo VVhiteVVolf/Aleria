@@ -35,7 +35,19 @@
     button.classList.toggle('on', active);
     const img = document.querySelector(`.ml[data-overlay="${layer}"]`);
     if(img) img.style.opacity = active ? '1' : '0';
-    if(layer === 'pins') document.getElementById('pl').style.display = active ? 'block' : 'none';
+    if(layer === 'pins') updatePinLayerVisibility();
+  }
+
+  // Lettering can remain above the base map without enabling its raster
+  // marker overlay or the ordinary pins' invisible hit areas.
+  function updatePinLayerVisibility(){
+    const layer = document.getElementById('pl');
+    if(!layer) return;
+    const active = document.getElementById('lb-pins')?.classList.contains('on') === true;
+    const lettering = runtime.state?.().alwaysShowLettering === true;
+    layer.classList?.toggle('marker-layer-active', active);
+    layer.style.display = active || lettering ? 'block' : 'none';
+    if(!active) layer.style.opacity = '1';
   }
 
   function activeLayerButtons(){
@@ -88,6 +100,7 @@
   }
 
   window.onImgLoad = onImgLoad;
+  window.updatePinLayerVisibility = updatePinLayerVisibility;
   window.onImgErr = onImgErr;
   window.toggleLayer = toggleLayer;
   window.activateLayer = activateLayer;

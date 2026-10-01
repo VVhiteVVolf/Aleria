@@ -77,6 +77,8 @@ let S = {
   dotSize: 80,
   lblSize: 40,
   showMarkers: false,
+  showPinLabels: false,
+  alwaysShowLettering: false,
   regionIcon: KARTO_CONFIG.regionIcon || '',
   regionTitle: KARTO_CONFIG.title || 'Karten-Vorlage',
   mapImages: cleanMapImages(KARTO_CONFIG.images || {}),
@@ -337,12 +339,7 @@ window.KartoRuntime = {
   orderedDominions,
   setLayer(layer){ window.toggleLayer(layer); },
   jumpToPin(id){
-    const p=S.pins.find(x=>x.id===id);if(!p||!imgW)return;
-    const ww=mapWrap.clientWidth,wh=mapWrap.clientHeight;
-    vx=ww/2-p.x*imgW*vz;vy=wh/2-p.y*imgH*vz;this.applyMapTransform();
-    window.activateLayer('pins');
-    const el=pl.querySelector(`[data-id="${id}"]`);
-    if(el){el.style.transition='none';el.style.transform='translate(-50%,-50%) scale(2)';setTimeout(()=>{el.style.transition='';el.style.transform='';},300);}
+    return window.KartoPinNavigation.focus(id);
   },
   openPin(id, mode='view'){
     openSidebar(id, mode);
@@ -479,6 +476,8 @@ function applyState(remote){
   if(remote.dotSize)    S.dotSize=remote.dotSize;
   if(remote.lblSize)    S.lblSize=remote.lblSize;
   S.showMarkers = remote.showMarkers === true;
+  S.showPinLabels = remote.showPinLabels === true;
+  S.alwaysShowLettering = remote.alwaysShowLettering === true;
   if(remote.regionIcon!==undefined) S.regionIcon=remote.regionIcon;
   if(remote.regionTitle) S.regionTitle=remote.regionTitle;
   if(remote.mapImages) S.mapImages=cleanMapImages(remote.mapImages);

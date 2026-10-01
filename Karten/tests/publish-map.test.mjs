@@ -8,7 +8,8 @@ const storageSource = fs.readFileSync(new URL('../assets/js/karto-storage.js', i
 const uiSource = fs.readFileSync(new URL('../assets/js/core/karto-publish-ui.js', import.meta.url), 'utf8');
 const dataPath = 'test-map/data.json';
 const draftKey = 'karto.draft.test-map';
-const state = { regionTitle: 'Testkarte', pins: [{ id: 'pin', x: 12, y: 34 }], cats: [] };
+const state = { regionTitle: 'Testkarte', pins: [{ id: 'pin', x: 12, y: 34 }], cats: [],
+  showMarkers: false, showPinLabels: true, alwaysShowLettering: true };
 
 function githubFixture(t, { publishKey, revision = 2 } = {}) {
   const env = {

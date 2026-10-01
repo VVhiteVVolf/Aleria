@@ -174,7 +174,6 @@
   };
 
   const inputActions = {
-    'search-pins': el => window.onSearch(el.value),
     'render-stamp-list': el => window.renderStampList(el.value),
     'render-overwrite-pin-list': el => window.renderOverwritePinList(el.value),
     'set-dot-size': el => window.onDotSl(el.value),
@@ -210,7 +209,6 @@
 
   const blurActions = {
     'save-title-edit': () => window.saveTitleEdit(),
-    'hide-search-results': () => setTimeout(window.hideSearch, 180),
     'rename-travel-group': el => window.lsbRenGrp(el.dataset.groupId, el.value),
   };
 

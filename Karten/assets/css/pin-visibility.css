@@ -2,7 +2,9 @@
 #pl:not(.show-view-markers) .pin:not(.edit-mode) .pin-dot,
 #pl:not(.show-view-markers) .pin:not(.edit-mode) .pin-marker-img { opacity: 0; }
 .map-marker-visibility-control,
-.map-text-pin-control { display: none; }
+.map-text-pin-control,
+.map-view-settings { display: none; }
+.map-edit-mode .map-view-settings { display: block; }
 .map-edit-mode .map-marker-visibility-control { display: flex; align-items: center; gap: .4rem; }
 .map-edit-mode .map-text-pin-control { display: inline-block; }
 .map-marker-visibility-control { font: .9rem 'EB Garamond', serif; cursor: pointer; }
@@ -27,6 +29,15 @@
 .pin-marker-img { filter: none; }
 .pin:not(.selected):hover .pin-marker-img { filter: drop-shadow(0 0 8px white); }
 .pin.dragging { will-change: left, top; }
+#pl:not(.marker-layer-active) .pin:not(.pin-text) { display: none; }
+#pl.show-pin-labels .pin-label,
+#pl .pin.navigation-target .pin-label { opacity: 1; }
+#pl .pin.navigation-target .pin-dot,
+#pl .pin.navigation-target .pin-marker-img { opacity: 1; }
+.pin.navigation-target { z-index: 1; }
+.pin.navigation-target::after { opacity: 1; }
+.pin.navigation-target .pin-label { border-color: var(--gold); }
+.pin-text.navigation-target text { stroke: #ffe3a0; }
 .map-view-settings { position: relative; }
 .map-view-settings > summary { list-style: none; }
 .map-view-settings > summary::-webkit-details-marker { display: none; }
@@ -44,6 +55,7 @@
   box-shadow: 0 8px 24px var(--shadow);
 }
 .map-view-settings-panel label { display: flex; align-items: flex-start; gap: .6rem; font: 1rem/1.35 'EB Garamond', serif; cursor: pointer; }
+.map-view-settings-panel label + label { margin-top: .7rem; }
 .map-view-settings-panel input { margin-top: .25rem; accent-color: #8a641f; }
 .map-view-settings-panel p { margin: .6rem 0 0; font: .9rem/1.35 'EB Garamond', serif; color: var(--ink3); }
 
