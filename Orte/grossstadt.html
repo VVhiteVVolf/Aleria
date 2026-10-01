@@ -6,7 +6,8 @@
   <title>Großstadt-Vorlage - Aleria</title>
   <link rel="stylesheet" href="/Orte/assets/css/orte-grossstadt.css?v=orte-heraldry-20260901a">
   <link rel="stylesheet" href="/Orte/assets/css/orte-grossstadt-template-map.css?v=orte-info-width-20260701a">
-  <link rel="stylesheet" href="/Orte/assets/css/orte-regionstabelle.css?v=gwynthor-map-embed-20260902a">
+  <link rel="stylesheet" href="/Orte/assets/css/orte-regionstabelle.css?v=20261001a">
+  <link rel="stylesheet" href="/Orte/modules/poi-search/place-poi-search.css?v=20261001a">
   <link rel="stylesheet" href="/Orte/assets/css/orte-notice-board.css?v=notice-board-placeholder-20260904a">
   <link rel="stylesheet" href="/Orte/assets/css/orte-houses.css?v=gwynthor-houses-20260901a">
   <link rel="stylesheet" href="/Orte/assets/css/orte-place-merchants.css?v=20260918b">
@@ -20,9 +21,10 @@
   <script src="/Orte/assets/js/orte-loader.js?v=celtigerns-orte-20260901a"></script>
   <script src="/Orte/assets/js/orte-place-media.js?v=celtigerns-orte-20260901a" defer></script>
   <script src="/Orte/assets/js/orte-place-houses.js?v=commoner-placeholder-20260913a" defer></script>
-  <script src="/Orte/assets/js/orte-map-embed.js?v=gwynthor-board-20260902a" defer></script>
-  <script src="/Orte/assets/js/orte-notice-board.js?v=notice-board-placeholder-20260904a" defer></script>
-  <script src="/Orte/assets/js/orte-region-map.js?v=gwynthor-map-embed-20260902a" defer></script>
+  <script src="/Orte/modules/poi-search/place-poi-search.js?v=20261001a" defer></script>
+  <script src="/Orte/assets/js/orte-map-embed.js?v=20261001a" defer></script>
+  <script src="/Orte/assets/js/orte-notice-board.js?v=20261001a" defer></script>
+  <script src="/Orte/assets/js/orte-region-map.js?v=20261001a" defer></script>
   <script type="module" src="/Orte/assets/js/orte-place-merchants.js?v=20260918b"></script>
   <script type="module" src="/Orte/assets/js/orte-place-press.mjs?v=fluesterfaecher-20260904a&content=wyrm-20260913a"></script>
   <script type="module" src="/Orte/modules/military/military-entry.mjs?v=20260904a"></script>
@@ -538,219 +540,6 @@
 					<tr class="region-s-0002">
 						<td class="region-s-0005 region-map-cell" colspan="8"><span class="orte-image-slot region-map-slot" data-orte-image-key="regionen-karte-png" data-orte-image-label="Regionskarte" data-orte-image-format="landscape" data-orte-image-max-height="520" aria-label="Regionskarte"></span>
 						</td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0007"><span class="region-s-0008"><span class="region-s-0004"><b class="region-s-0009"><span class="region-s-0010">Symbol</span></b></span></span></td>
-						<td class="region-s-0011"><span class="region-s-0008"><span class="region-s-0004"><b class="region-s-0009"><span class="region-s-0010">Name</span></b></span></span></td>
-						<td class="region-s-0012"><span class="region-s-0008"><span class="region-s-0004"><b class="region-s-0009"><span class="region-s-0010">Zugeh&ouml;rigkeit</span></b></span></span></td>
-						<td class="region-s-0013"><span class="region-s-0008"><span class="region-s-0004"><b class="region-s-0009"><span class="region-s-0010">Typ</span></b></span></span></td>
-						<td class="region-s-0014"><span class="region-s-0008"><span class="region-s-0004"><b class="region-s-0009"><span class="region-s-0010">Gefahrenstufe</span></b></span></span></td>
-						<td class="region-s-0015"><span class="region-s-0008"><span class="region-s-0004"><b class="region-s-0009"><span class="region-s-0010">Entfernung&nbsp;</span></b></span></span></td>
-						<td class="region-s-0016" colspan="2"><span class="region-s-0008"><span class="region-s-0004"><b class="region-s-0009"><span class="region-s-0010">Kurzbeschreibung</span></b></span></span></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0005" colspan="8">&nbsp;</td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">Name des Ortes</b></td>
-						<td class="region-s-0021"><b class="region-s-0022">Zugeh&ouml;rigkeit</b></td>
-						<td class="region-s-0023"><b class="region-s-0020">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">Wie weit entfernt vom Hauptort</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">Kurze beschreibung des ortes</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✤✤✤✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✤✤✤✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✤✤✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2" rowspan="1"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2" rowspan="1"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0028" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0022">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0022">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0022">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2" rowspan="1"><b class="region-s-0022">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✤✤✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✤✤✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✤✤</span></b><b class="region-s-0020"><span class="region-s-0025">✤</span></b><b class="region-s-0020"><span class="region-s-0025">✤</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2" rowspan="1"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✤✤</span></b><b class="region-s-0020"><span class="region-s-0025">✤</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2" rowspan="1"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✤✤</span></b><b class="region-s-0020"><span class="region-s-0025">✤✤</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0020">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧</span></b><b class="region-s-0020"><span class="region-s-0025">✧✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0017"><img class="region-s-0018" alt="W5reRk3.png" src="https://i.imgur.com/W5reRk3.png" /></td>
-						<td class="region-s-0019"><b class="region-s-0022">....</b></td>
-						<td class="region-s-0021"><b class="region-s-0022">〈???〉</b></td>
-						<td class="region-s-0023"><b class="region-s-0022">Typ</b></td>
-						<td class="region-s-0024"><b class="region-s-0020"><span class="region-s-0025">✤✤✤✧✧</span></b></td>
-						<td class="region-s-0026"><b class="region-s-0020">〈???〉</b></td>
-						<td class="region-s-0027" colspan="2"><b class="region-s-0020">〈???〉</b></td>
-					</tr>
-					<tr class="region-s-0002">
-						<td class="wappen region-s-0005" colspan="8">&nbsp;</td>
 					</tr>
 				</tbody>
 			</table>

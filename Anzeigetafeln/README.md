@@ -15,6 +15,14 @@ Stabile Links laufen über die gemeinsame Shell:
 tafel.html?tafel=<tafel-id>
 ```
 
+Unter einer in Ortsseiten eingebetteten Tafel steht dieselbe kompakte Suche
+wie unter den Regionskarten (`Orte/modules/poi-search`). Die Liste ist zunächst
+geschlossen und bleibt beim Aufklappen scrollbar. Öffentliche Aushänge lassen
+sich nach Titel, Typ, Text, Tabellenangaben, Artikeln und Steckbriefpersonen
+finden und in der Tafel öffnen. `assets/js/integrations/orte-notice-bridge.js`
+überträgt dafür nur öffentliche Einträge an die eigene übergeordnete Seite;
+Änderungen werden über die bestehenden Tafelereignisse übernommen.
+
 ## Gemeinsame Module
 
 ```txt

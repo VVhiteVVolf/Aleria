@@ -32,10 +32,17 @@
       defaultTitle: data.name ? `Anzeigetafel von ${data.name}` : "Anzeigetafel",
       frameTitlePrefix: "Anzeigetafel",
       variant: "notice-board",
+      search: {
+        label: "Aushänge der Anzeigetafel",
+        placeholder: "Aushänge durchsuchen …",
+        emptyText: "Keine öffentlichen Aushänge vorhanden.",
+        openLabel: "Aushang öffnen",
+      },
     });
   }
 
   function renderPlaceholder(data) {
+    window.AleriaPlaceMapEmbed?.destroy(container);
     const placeName = String(data?.name || "diesem Ort");
     const placeholder = document.createElement("div");
     placeholder.className = "orte-notice-board-placeholder";

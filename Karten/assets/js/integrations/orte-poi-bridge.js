@@ -14,8 +14,14 @@
 
   function handleRequest(event) {
     if (event.source !== window.parent || !isSameOrigin(event.origin)) return;
-    if (event.data?.type !== REQUEST_TYPE || event.data.mapId !== mapId) return;
-    publishPois();
+    if (event.data?.mapId !== mapId) return;
+    if (event.data.type === REQUEST_TYPE) publishPois();
+    if (event.data.type === "aleria:map-poi-open") {
+      const pin = (runtime.state().pins || []).find(pin => String(pin.id) === event.data.id && !pin.secret);
+      if (!pin) return;
+      runtime.jumpToPin(pin.id);
+      runtime.openPin(pin.id, "view");
+    }
   }
 
   function publishPois() {

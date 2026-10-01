@@ -101,6 +101,15 @@ Die Anzeige rechts unterscheidet `ENTWURF` und `VERÖFFENTLICHT`.
 
 ## Ortsansicht und Markierungspunkte
 
+Ortsseiten zeigen unter eingebetteten Karten eine kompakte Suche statt der
+langen Pin-Tabelle. Die Trefferliste ist zunächst geschlossen und beim Öffnen
+höhenbegrenzt scrollbar. Name, Typ, Zugehörigkeit und Beschreibung sind
+durchsuchbar; Details und die vollständige Kartenansicht bleiben erreichbar.
+Die gemeinsame Komponente `Orte/modules/poi-search` wird auch für Aushänge
+unter eingebetteten Anzeigetafeln verwendet. Die Einbettung verwaltet je Frame
+eine eigene Suche und übernimmt nur Nachrichten der zugehörigen Karte.
+Geheime Pins werden weder übermittelt noch über die Liste geöffnet.
+
 Die Ortskarte nutzt bis zu 1180 px Breite. Bild und Infotabelle schließen bündig
 ab; auf schmalen Flächen stehen sie untereinander. Lesemodus und Editorvorschau
 verwenden denselben Renderer (`assets/js/pins/pin-card-renderer.js`) und die
