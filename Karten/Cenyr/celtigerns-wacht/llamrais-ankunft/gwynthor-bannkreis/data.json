@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
-  "revision": 3,
-  "updatedAt": "2026-10-01T02:00:27.778Z",
+  "revision": 4,
+  "updatedAt": "2026-10-01T04:05:11.348Z",
   "state": {
     "pins": [
       {
@@ -357,10 +357,10 @@
         "id": "muoshw6frb01",
         "x": 0.5189527688547946,
         "y": 0.7170124964026214,
-        "title": "Castell Rhyddid",
+        "title": "Castell Chwedonol",
         "kind": "place",
         "templateId": "militaer",
-        "cat": "mmfls5afqqpr",
+        "cat": "location-rittergut",
         "img": "",
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
@@ -368,7 +368,7 @@
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
         "region": "Baronie von Llamreis Ankunft",
-        "house": "Haus Rhyddid",
+        "house": "Haus Chwedonol",
         "faction": "",
         "pinMarker": "",
         "pinMarkerScale": 1,
@@ -419,7 +419,8 @@
           }
         ],
         "text": "",
-        "secret": false
+        "secret": false,
+        "dominionId": "cw-haus-chwedlonol"
       },
       {
         "id": "muoshxrtfdti",
@@ -630,10 +631,10 @@
         "id": "muosoghjijjg",
         "x": 0.18061484589422944,
         "y": 0.0703724739598968,
-        "title": "Castell Wyrm",
+        "title": "Castell Awenor",
         "kind": "place",
         "templateId": "militaer",
-        "cat": "mmfls5afqqpr",
+        "cat": "location-rittergut",
         "img": "",
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
@@ -641,7 +642,7 @@
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
         "region": "Baronie von Gwendolyns Ufer",
-        "house": "Haus Wyrm",
+        "house": "Haus Awenor",
         "faction": "",
         "pinMarker": "",
         "pinMarkerScale": 1,
@@ -692,16 +693,17 @@
           }
         ],
         "text": "",
-        "secret": false
+        "secret": false,
+        "dominionId": "cw-haus-awenor"
       },
       {
         "id": "muosoi8jiiyc",
         "x": 0.36478578028317765,
         "y": 0.08795671981670641,
-        "title": "Castell Wyrm",
+        "title": "Castell Awenydd",
         "kind": "place",
         "templateId": "militaer",
-        "cat": "mmfls5afqqpr",
+        "cat": "location-rittergut",
         "img": "",
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
@@ -709,7 +711,7 @@
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
         "region": "Baronie von Gwendolyns Ufer",
-        "house": "Haus Wyrm",
+        "house": "Haus Awenydd",
         "faction": "",
         "pinMarker": "",
         "pinMarkerScale": 1,
@@ -760,16 +762,17 @@
           }
         ],
         "text": "",
-        "secret": false
+        "secret": false,
+        "dominionId": "cw-haus-awenydd"
       },
       {
         "id": "muosoo81765w",
         "x": 0.4320083815118327,
         "y": 0.3238777587678859,
-        "title": "Castell Wyrm",
+        "title": "Castell Tlawd",
         "kind": "place",
         "templateId": "militaer",
-        "cat": "mmfls5afqqpr",
+        "cat": "location-rittergut",
         "img": "",
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
@@ -777,58 +780,59 @@
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
         "region": "Baronie von Gwendolyns Ufer",
-        "house": "Haus Wyrm",
+        "house": "Haus Tlawd",
         "faction": "",
         "pinMarker": "",
         "pinMarkerScale": 1,
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Castell Tlawd"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Rittergut / befestigter Rittersitz"
           },
           {
             "k": "Befehlshaber",
-            "v": ""
+            "v": "Haus Tlawd"
           },
           {
             "k": "Unterstellung",
-            "v": ""
+            "v": "Haus Gafyr, unter Ritterfürst Duncan Gafyr"
           },
           {
             "k": "Besatzung",
-            "v": ""
+            "v": "Angehörige und Gefolgsleute des Hauses Tlawd"
           },
           {
             "k": "Aufgaben",
-            "v": ""
+            "v": "Verwaltung der eigenen Güter und Vasallen; ritterlicher Dienst für Haus Gafyr"
           },
           {
             "k": "Ausrüstung",
-            "v": ""
+            "v": "Waffen und Rüstungen aus den eigenen beziehungsweise unterhaltenen Schmieden"
           },
           {
             "k": "Befestigung",
-            "v": ""
+            "v": "Befestigter Rittersitz mit Wehrturm und Palisade"
           },
           {
             "k": "Zustand",
-            "v": ""
+            "v": "Bewohnt, wohlhabend und gut unterhalten"
           },
           {
             "k": "Gerüchte",
-            "v": ""
+            "v": "Jüngst leidet der Ruf des Hauses unter der Affäre Roderic Gafyrs mit drei Rittern der Tlawd"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Wohlhabendes Rittergut; Haus Tlawd besitzt eine Erzmine und unterhält zahlreiche Handwerker, Waffen- und Rüstungsschmiede"
           }
         ],
-        "text": "",
-        "secret": false
+        "text": "**Castell Tlawd **ist der befestigte Stammsitz des wohlhabenden Ritterhauses Tlawd im Umland Gwynthors. Obwohl die Tlawd für ihre schlichte Lebensart und vor allem für ihren Kriegsdienst bekannt sind, haben die Erträge ihrer Erzmine sowie die von ihnen unterhaltenen Handwerker, Waffen- und Rüstungsschmiede dem Haus beträchtlichen Wohlstand eingebracht. Von Castell Tlawd aus verwaltet die Familie ihre Güter und die ihr unterstehenden Höfe, darunter jene der Familien Gwerfil und Afelwyn, deren jahrzehntelange Fehde den Tlawd inzwischen vor allem als lästige Pflichtangelegenheit gilt.",
+        "secret": false,
+        "dominionId": "cw-haus-tlawd"
       },
       {
         "id": "gwynthor-marking-001",
@@ -974,7 +978,7 @@
         "id": "gwynthor-marking-003",
         "x": 0.670654296875,
         "y": 0.020273015873015873,
-        "title": "Rosszuchtsiedlung",
+        "title": "Der Bradrhith-Hof",
         "cat": "location-rosszuchtsiedlung",
         "kind": "place",
         "img": "",
@@ -983,58 +987,59 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
-        "faction": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Familie Bradrhith",
+        "faction": "Rosszucht",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Der Bradrhith-Hof"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Gutshof / Pferdegestüt"
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Pferdezucht und Pferdehandel"
           },
           {
             "k": "Regierungstyp",
-            "v": ""
+            "v": "Privatbesitz"
           },
           {
             "k": "Führung",
-            "v": ""
+            "v": "Derzeit ungeklärt"
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Awenydd"
           },
           {
             "k": "Bevölkerung",
-            "v": ""
+            "v": "Familie Bradrhith und Hofpersonal"
           },
           {
             "k": "Einwohnerzahl",
-            "v": ""
+            "v": "Unbekannt"
           },
           {
             "k": "Bekannte Familien",
-            "v": ""
+            "v": "Haus Bradrhith"
           },
           {
             "k": "Gefahren",
-            "v": ""
+            "v": "Folgen des Überfalls der Schwarzen Zitteraale"
           },
           {
             "k": "Ressourcen",
-            "v": ""
+            "v": "Pferde und Rösser"
           }
         ],
-        "text": "",
+        "text": "Der** Bradrhith-Hof **liegt außerhalb Gwynthors und ist seit Generationen Sitz der Familie Bradrhith, die hier Pferdezucht und Pferdehandel betreibt und Tiere für Feldarbeit, Alltag und Krieg aufzieht. Noch vor Kurzem war der Hof ein gut geführtes Gestüt, bis ein Überfall der Schwarzen Zitteraale schwere Verwüstungen hinterließ: Teile des Anwesens wurden niedergebrannt und Maerwen Bradrhith sowie ihre Kinder getötet. Seitdem befindet sich der Hof im Wiederaufbau, während zugleich ungeklärt bleibt, wer ihn künftig übernehmen und weiterführen wird.",
         "secret": false,
-        "templateId": "siedlung"
+        "templateId": "siedlung",
+        "dominionId": "cw-haus-awenydd"
       },
       {
         "id": "gwynthor-marking-004",
@@ -3932,7 +3937,7 @@
         "id": "gwynthor-marking-048",
         "x": 0.468017578125,
         "y": 0.1986857142857143,
-        "title": "Rosszuchtsiedlung",
+        "title": "Owains Pferdehof",
         "cat": "location-rosszuchtsiedlung",
         "kind": "place",
         "img": "",
@@ -3941,58 +3946,59 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Baronie von Gwendolyns Ufer",
+        "house": "Erzritter Owain Draig",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Owains Pferdehof"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Pferdehof / Gestüt"
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Pferdezucht"
           },
           {
             "k": "Regierungstyp",
-            "v": ""
+            "v": "Privatbesitz"
           },
           {
             "k": "Führung",
-            "v": ""
+            "v": "Erzritter Sir Owain Draig"
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Draig"
           },
           {
             "k": "Bevölkerung",
-            "v": ""
+            "v": "Familie, Knechte und Hofpersonal"
           },
           {
             "k": "Einwohnerzahl",
-            "v": ""
+            "v": "Unbekannt"
           },
           {
             "k": "Bekannte Familien",
-            "v": ""
+            "v": "Unbekannt"
           },
           {
             "k": "Gefahren",
-            "v": ""
+            "v": "Keine besonderen bekannt"
           },
           {
             "k": "Ressourcen",
-            "v": ""
+            "v": "Beste Pferde und Rösser der Grafschaft"
           }
         ],
-        "text": "",
+        "text": "Unweit von Gwynthor liegt der große Pferdehof des Erzritters Sir Owain Draig, Bruder des Grafen und einer der angesehensten Pferdezüchter der Region. Auf dem weitläufigen und prestigeträchtigen Anwesen werden einige der besten Rösser Celtigerns Wachts gezüchtet, wobei der Hof besonders für die hohe Qualität seiner Tiere bekannt ist. Als Besitz eines Draig und Sitz eines Erzritters zählt er zu den bedeutendsten Pferdehöfen im Umland der Hauptstadt.",
         "secret": false,
-        "templateId": "siedlung"
+        "templateId": "siedlung",
+        "dominionId": "msa3c53vo1h89v"
       },
       {
         "id": "gwynthor-marking-049",
@@ -4616,7 +4622,7 @@
         "id": "gwynthor-marking-058",
         "x": 0.4716796875,
         "y": 0.25283809523809525,
-        "title": "Bauernhof",
+        "title": "Der Gwerfil-Hof",
         "cat": "muosqiyl9n1p",
         "kind": "place",
         "img": "",
@@ -4625,62 +4631,63 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Haus Gwerfil",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Der Gwerfil-Hof"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Großer Bauernhof"
           },
           {
             "k": "Besitzer",
-            "v": ""
+            "v": "Familie Gwerfil"
           },
           {
             "k": "Bewirtschaftung",
-            "v": ""
+            "v": "Ackerbau und Viehzucht"
           },
           {
             "k": "Anbau",
-            "v": ""
+            "v": "Weizen und Tierfutter"
           },
           {
             "k": "Erzeugnisse",
-            "v": ""
+            "v": "Getreide, Futter, Ziegen, Schafe und Rinder"
           },
           {
             "k": "Fläche",
-            "v": ""
+            "v": "Großer Hof entlang der nördlichen Hauptstraße"
           },
           {
             "k": "Arbeitskräfte",
-            "v": ""
+            "v": "Familie Gwerfil und Hofarbeiter"
           },
           {
             "k": "Versorgung / Abnehmer",
-            "v": ""
+            "v": "Gwynthor und umliegende Höfe"
           },
           {
             "k": "Zustand",
-            "v": ""
+            "v": "Bewirtschaftet und ertragreich"
           },
           {
             "k": "Gefahren",
-            "v": ""
+            "v": "Anhaltende Fehde mit der Familie Afelwyn"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Beide Familien unterstehen dem Ritterhaus Tlawd"
           }
         ],
-        "text": "",
+        "text": "Der **Gwerfil-Hof** ist ein großer Bauernhof entlang der nördlichen Hauptstraße und wird von der Familie Gwerfil bewirtschaftet. Seine Felder dienen vor allem dem Anbau von Weizen und Tierfutter, während auf dem Hof Ziegen, Schafe und Rinder gehalten werden. Seit Jahrzehnten führen die Gwerfil eine Fehde mit der benachbarten Familie Afelwyn, deren ursprünglicher Anlass inzwischen selbst den heutigen Familienmitgliedern kaum noch bekannt ist. Beide Familien unterstehen dem westlich gelegenen Ritterhaus Tlawd, das sich nur äußerst ungern mit dem alten Streit seiner beiden Untergebenen befasst.",
         "secret": false,
-        "templateId": "landwirtschaft"
+        "templateId": "landwirtschaft",
+        "dominionId": "cw-haus-tlawd"
       },
       {
         "id": "gwynthor-marking-059",
@@ -5517,8 +5524,8 @@
       {
         "id": "gwynthor-marking-071",
         "x": 0.4814453125,
-        "y": 0.32323174603174604,
-        "title": "Obstplantage",
+        "y": 0.3314660670534092,
+        "title": "Die Afelwyn-Obstplantage",
         "cat": "location-obstplantage",
         "kind": "place",
         "img": "",
@@ -5527,62 +5534,63 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Familie Afelwyn",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Die Afelwyn-Obstplantage"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Obstplantage und Imkerei"
           },
           {
             "k": "Besitzer",
-            "v": ""
+            "v": "Familie Afelwyn"
           },
           {
             "k": "Bewirtschaftung",
-            "v": ""
+            "v": "Obstbau und Imkerei"
           },
           {
             "k": "Anbau",
-            "v": ""
+            "v": "Vorwiegend Äpfel und Birnen sowie weitere verbreitete Obstsorten"
           },
           {
             "k": "Erzeugnisse",
-            "v": ""
+            "v": "Frisches Obst und Honig"
           },
           {
             "k": "Fläche",
-            "v": ""
+            "v": "Große Plantage entlang der Hauptstraße nach Norden"
           },
           {
             "k": "Arbeitskräfte",
-            "v": ""
+            "v": "Familie Afelwyn und Arbeitskräfte des Hofes"
           },
           {
             "k": "Versorgung / Abnehmer",
-            "v": ""
+            "v": "Vorwiegend Gwynthor, Haus Tlawd"
           },
           {
             "k": "Zustand",
-            "v": ""
+            "v": "Bewirtschaftet und ertragreich"
           },
           {
             "k": "Gefahren",
-            "v": ""
+            "v": "Keine besonderen bekannt"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Bedeutender Lieferant für frisches Obst in Gwynthor; eigene Imkerei"
           }
         ],
-        "text": "",
+        "text": "Die **Afelwyn-Obstplantage** ist ein großer, von der Familie Afelwyn bewirtschafteter Obsthof im Umland Gwynthors. Auf den ausgedehnten Pflanzungen wachsen verschiedene verbreitete Obstsorten, allen voran Äpfel und Birnen. Ein Großteil der Ernte wird nach Gwynthor gebracht und dort als frisches Obst verkauft, wodurch der Hof einen bedeutenden Anteil an der Versorgung der Stadt übernimmt. Neben dem Obstbau betreiben die Afelwyn eine eigene Imkerei und liefern auch Honig nach Gwynthor.",
         "secret": false,
-        "templateId": "landwirtschaft"
+        "templateId": "landwirtschaft",
+        "dominionId": "cw-haus-tlawd"
       },
       {
         "id": "gwynthor-marking-073",
@@ -6070,7 +6078,7 @@
         "id": "gwynthor-marking-080",
         "x": 0.4755859375,
         "y": 0.382,
-        "title": "Gasthof",
+        "title": "Gasthof - Zum Roten Tor",
         "cat": "mmflvj37jbh2",
         "kind": "place",
         "img": "",
@@ -6079,58 +6087,59 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Haus Penry",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Gasthof „Zum Roten Tor“"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Gasthof und Herberge"
           },
           {
             "k": "Betreiber",
-            "v": ""
+            "v": "Familie Penry"
           },
           {
             "k": "Speisen / Getränke",
-            "v": ""
+            "v": "Einfache warme Mahlzeiten, Bier, Wein und übliche Schankgetränke"
           },
           {
             "k": "Unterkunft",
-            "v": ""
+            "v": "Gästezimmer sowie Unterbringung für Pferde und Wagen"
           },
           {
             "k": "Preislage",
-            "v": ""
+            "v": "Einfach bis mittel"
           },
           {
             "k": "Öffnungszeiten",
-            "v": ""
+            "v": "Täglich"
           },
           {
             "k": "Stammgäste",
-            "v": ""
+            "v": "Fuhrleute, Händler, Reisende und Besucher Gwynthors"
           },
           {
             "k": "Zustand",
-            "v": ""
+            "v": "Gut geführt und rege besucht"
           },
           {
             "k": "Gerüchte",
-            "v": ""
+            "v": "Der namensgebende Penry habe einst nach einer durchzechten Nacht das Nordtor Gwynthors rot gestrichen"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Unmittelbar vor dem Nordtor gelegen; wichtiger Übernachtungsplatz für Reisende vor dem Betreten oder nach dem Verlassen Gwynthors"
           }
         ],
-        "text": "",
+        "text": "Die **Herberge „Zum Roten Tor“** wird seit mehreren Generationen von der Familie Penry unmittelbar vor dem Nordtor Gwynthors betrieben. Sie bietet vor allem Reisenden, Händlern und Fuhrleuten Unterkunft, einfache Mahlzeiten und einen Platz für Pferde und Wagen. Ihren Namen verdankt sie allerdings nicht dem Nordtor selbst, sondern einer alten Familiengeschichte: Ein früher Penry soll nach einer durchzechten Nacht das Nordtor vollständig rot gestrichen haben, weil er überzeugt gewesen sei, der damalige Graf habe genau dies angeordnet. Als die Stadtwache ihn am Morgen zur Rede stellte, soll er lediglich gefragt haben, warum sie ihm dann die ganze Nacht beim Streichen zugesehen habe. Das Tor wurde längst wieder überstrichen, doch die Penrys machten aus der Geschichte ein Geschäft und benannten ihre Herberge danach.",
         "secret": false,
-        "templateId": "gastbetrieb"
+        "templateId": "gastbetrieb",
+        "dominionId": ""
       },
       {
         "id": "gwynthor-marking-081",
@@ -7108,7 +7117,7 @@
         "id": "gwynthor-marking-097",
         "x": 0.54296875,
         "y": 0.4557396825396825,
-        "title": "Anwesen",
+        "title": "Anwesen der Balchder",
         "cat": "muosqfkvnxxj",
         "kind": "place",
         "img": "",
@@ -7117,8 +7126,8 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Haus Balchder",
         "faction": "",
         "table": [
           {
@@ -7172,7 +7181,8 @@
         ],
         "text": "",
         "secret": false,
-        "templateId": "gebaeude"
+        "templateId": "gebaeude",
+        "dominionId": "cw-haus-balchder"
       },
       {
         "id": "gwynthor-marking-098",
@@ -8052,7 +8062,7 @@
         "id": "gwynthor-marking-112",
         "x": 0.3359375,
         "y": 0.5351047619047619,
-        "title": "Anwesen",
+        "title": "Anwesen der Cludwyr",
         "cat": "muosqfkvnxxj",
         "kind": "place",
         "img": "",
@@ -8061,8 +8071,8 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Haus Cludwyr",
         "faction": "",
         "table": [
           {
@@ -8116,7 +8126,8 @@
         ],
         "text": "",
         "secret": false,
-        "templateId": "gebaeude"
+        "templateId": "gebaeude",
+        "dominionId": "cw-haus-cludwyr"
       },
       {
         "id": "gwynthor-marking-113",
@@ -8670,7 +8681,7 @@
         "id": "gwynthor-marking-123",
         "x": 0.435546875,
         "y": 0.5912507936507937,
-        "title": "Anwesen",
+        "title": "Anwesen Gelyn",
         "cat": "muosqfkvnxxj",
         "kind": "place",
         "img": "",
@@ -8679,8 +8690,8 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Haus Gelyn",
         "faction": "",
         "table": [
           {
@@ -8734,7 +8745,8 @@
         ],
         "text": "",
         "secret": false,
-        "templateId": "gebaeude"
+        "templateId": "gebaeude",
+        "dominionId": "cw-haus-gelyn"
       },
       {
         "id": "gwynthor-marking-124",
@@ -8880,7 +8892,7 @@
         "id": "gwynthor-marking-127",
         "x": 0.38427734375,
         "y": 0.5969650793650794,
-        "title": "Anwesen",
+        "title": "Anwesen der Loer",
         "cat": "muosqfkvnxxj",
         "kind": "place",
         "img": "",
@@ -8889,8 +8901,8 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Haus Loer",
         "faction": "",
         "table": [
           {
@@ -8944,7 +8956,8 @@
         ],
         "text": "",
         "secret": false,
-        "templateId": "gebaeude"
+        "templateId": "gebaeude",
+        "dominionId": "cw-haus-loer"
       },
       {
         "id": "gwynthor-marking-128",
@@ -9158,8 +9171,8 @@
       },
       {
         "id": "gwynthor-marking-132",
-        "x": 0.4765625,
-        "y": 0.6297460317460317,
+        "x": 0.47737996907608454,
+        "y": 0.6350608783105433,
         "title": "Heiligtum",
         "cat": "location-heiligtum",
         "kind": "place",
@@ -9580,7 +9593,7 @@
         "id": "gwynthor-marking-138",
         "x": 0.9609375,
         "y": 0.6537460317460319,
-        "title": "Fischerhütte",
+        "title": "Twyllod-Hof",
         "cat": "location-fischerei",
         "kind": "place",
         "img": "",
@@ -9589,62 +9602,63 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Familie Twyllod",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Der Twyllod-Hof"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Fischerei"
           },
           {
             "k": "Betreiber",
-            "v": ""
+            "v": "Familie Twyllod"
           },
           {
             "k": "Fanggebiet",
-            "v": ""
+            "v": "Umliegende Gewässer"
           },
           {
             "k": "Fischarten",
-            "v": ""
+            "v": "Verschiedene örtliche Fischarten"
           },
           {
             "k": "Boote / Gerät",
-            "v": ""
+            "v": "Eine Fischkogge, mehrere kleine Fischerboote, Netze und Fanggerät"
           },
           {
             "k": "Fangzeiten",
-            "v": ""
+            "v": "Je nach Fang und Bedingungen"
           },
           {
             "k": "Verarbeitung",
-            "v": ""
+            "v": "Frischverkauf und Räuchern"
           },
           {
             "k": "Abnehmer",
-            "v": ""
+            "v": "Umliegende Bauernhöfe, Tavernen, Reisende und Händler"
           },
           {
             "k": "Zustand",
-            "v": ""
+            "v": "Bewirtschaftet"
           },
           {
             "k": "Gefahren",
-            "v": ""
+            "v": "Keine besonderen bekannt"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Mehrere Fischerhäuser und eigener Steg für die Fischkogge und kleinere Boote"
           }
         ],
-        "text": "",
+        "text": "Der** Twyllod-Hof **besteht aus einigen Fischerhäusern sowie einem eigenen Steg, an dem eine Fischkogge und mehrere kleinere Boote liegen. Die Familie Twyllod lebt vom Fischfang und verkauft ihren Fang frisch oder geräuchert an die umliegenden Bauernhöfe und Tavernen sowie direkt an vorbeiziehende Bürger und Händler. Da in Gwynthor selbst bereits umfangreicher Fischfang betrieben wird, bleibt ihr Handel vergleichsweise klein und vorwiegend auf das Umland ausgerichtet. Große Gewinne wirft der Hof nicht ab, doch die Familie kann von ihrem Gewerbe gut leben.",
         "secret": false,
-        "templateId": "handwerk"
+        "templateId": "handwerk",
+        "dominionId": "msa3c53vo1h89v"
       },
       {
         "id": "gwynthor-marking-139",
@@ -9790,7 +9804,7 @@
         "id": "gwynthor-marking-141",
         "x": 0.222900390625,
         "y": 0.6695238095238095,
-        "title": "Brauersiedlung",
+        "title": "Der Dyfgraig-Hof",
         "cat": "location-brauersiedlung",
         "kind": "place",
         "img": "",
@@ -9799,58 +9813,59 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
-        "faction": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Haus Draig",
+        "faction": "Penderyn Destillerie",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Der Dyfgraig-Hof"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Brauer- und Destillierhof"
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Brauerei, Destillerie, Böttcherei, Glaserei, Taverne und Handel"
           },
           {
             "k": "Regierungstyp",
-            "v": ""
+            "v": "Gutshof unter adliger Verwaltung"
           },
           {
             "k": "Führung",
-            "v": ""
+            "v": "Prinz Tudwal Draig"
           },
           {
             "k": "Lehensherr",
-            "v": ""
+            "v": "Haus Draig"
           },
           {
             "k": "Bevölkerung",
-            "v": ""
+            "v": "Handwerker, Brauer, Brenner, Händler und Hofpersonal"
           },
           {
             "k": "Einwohnerzahl",
-            "v": ""
+            "v": "Unbekannt"
           },
           {
             "k": "Bekannte Familien",
-            "v": ""
+            "v": "Unbekannt"
           },
           {
             "k": "Gefahren",
-            "v": ""
+            "v": "Keine besonderen bekannt"
           },
           {
             "k": "Ressourcen",
-            "v": ""
+            "v": "Bier, Destillate, Fässer, Glaswaren und landwirtschaftliche Erzeugnisse"
           }
         ],
-        "text": "",
+        "text": "Der **Dyfgraig-Hof **ist kein besonders großes Anwesen, doch durch die Vielzahl seiner Gewerbe herrscht hier reger Betrieb. Brauerei und Destillerie bilden den Kern des Hofes, ergänzt durch Böttcher, Glaser, Händler und eine eigene Taverne. Die Verwaltung wurde Prinz Tudwal Draig übertragen und ist Teil der Abmachungen um seine bevorstehende Heirat mit Haus Penderyn aus Mathragon. Die Penderyn beteiligen sich am Ausbau des Hofes und errichten hier eine Brauerei und Destillerie, für deren Betrieb Tudwal als Bräutigam ihres Hauses und Beteiligter des Unternehmens Verantwortung übernehmen soll.",
         "secret": false,
-        "templateId": "siedlung"
+        "templateId": "siedlung",
+        "dominionId": "msa3c53vo1h89v"
       },
       {
         "id": "gwynthor-marking-142",
@@ -10334,7 +10349,7 @@
         "id": "gwynthor-marking-151",
         "x": 0.46044921875,
         "y": 0.7423619047619048,
-        "title": "Anwesen",
+        "title": "Anwesen der Gwyllach",
         "cat": "muosqfkvnxxj",
         "kind": "place",
         "img": "",
@@ -10343,8 +10358,8 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Haus Gwyllach",
         "faction": "",
         "table": [
           {
@@ -10398,7 +10413,8 @@
         ],
         "text": "",
         "secret": false,
-        "templateId": "gebaeude"
+        "templateId": "gebaeude",
+        "dominionId": ""
       },
       {
         "id": "gwynthor-marking-152",
@@ -11492,7 +11508,7 @@
         "id": "gwynthor-marking-168",
         "x": 0.017333984375,
         "y": 0.8931174603174604,
-        "title": "Heiligtum",
+        "title": "Kirche der  Heiligen Gwenfrewi",
         "cat": "location-heiligtum",
         "kind": "place",
         "img": "",
@@ -11501,68 +11517,69 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
+        "region": "Baronie von Gwendolyns Ufer",
         "house": "",
-        "faction": "",
+        "faction": "Kirche von Cenyr",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Kirche der Heiligen Gwenfrewi"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Kirche, Schwesternschaft und Waisenheim"
           },
           {
             "k": "Gottheit / Verehrung",
-            "v": ""
+            "v": "Jovelyn „Die Glücksmaid“ und die Heilige Gwenfrewi"
           },
           {
             "k": "Hüter",
-            "v": ""
+            "v": "Diakonin - ???"
           },
           {
             "k": "Gemeinschaft",
-            "v": ""
+            "v": "Nonnen, Waisenkinder und Schutzbefohlene"
           },
           {
             "k": "Riten",
-            "v": ""
+            "v": "Gottesdienste und Gebete zu Ehren Jovelyns und der Heiligen Gwenfrewi"
           },
           {
             "k": "Opfergaben",
-            "v": ""
+            "v": "Spenden und Almosen"
           },
           {
             "k": "Reliquien",
-            "v": ""
+            "v": "Lanze der Heiligen Gwenfrewi"
           },
           {
             "k": "Zugang",
-            "v": ""
+            "v": "Offen für Gläubige und Hilfesuchende"
           },
           {
             "k": "Zustand",
-            "v": ""
+            "v": "Bewohnt und in Betrieb, jedoch überlastet"
           },
           {
             "k": "Gefahren",
-            "v": ""
+            "v": "Keine besonderen bekannt"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Waisenheim und karitative Einrichtung"
           }
         ],
-        "text": "",
+        "text": "Die **Kirche der Heiligen Gwenfrewi **liegt auf einer Anhöhe nahe der unteren Grenze des Bannkreises von Gwynthor, rund 15,69 Kilometer Wegstrecke von der Stadt entfernt, beziehungsweise etwa 10 Kilometer Luftlinie. Das Heiligtum ist der Schutzheiligen Gwenfrewi sowie Jovelyn, der „Glücksmaid“, geweiht und wird von einer Schwesternschaft von Nonnen geführt. Neben ihren geistlichen Aufgaben unterhalten die Schwestern hier ein Waisenheim und widmen sich karitativer Arbeit. Die Gemeinschaft nimmt diese Aufgabe ernst, ist mit der Versorgung ihrer Schutzbefohlenen jedoch zunehmend überfordert.",
         "secret": false,
-        "templateId": "institution"
+        "templateId": "institution",
+        "dominionId": ""
       },
       {
         "id": "gwynthor-marking-169",
         "x": 0.08203125,
         "y": 0.896647619047619,
-        "title": "Bauernhof",
+        "title": "Der Cyffiniau-Hof",
         "cat": "muosqiyl9n1p",
         "kind": "place",
         "img": "",
@@ -11571,62 +11588,63 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Familie Cyffiniau",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Der Cyffiniau-Hof"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Einfacher Bauernhof"
           },
           {
             "k": "Besitzer",
-            "v": ""
+            "v": "Familie Cyffiniau"
           },
           {
             "k": "Bewirtschaftung",
-            "v": ""
+            "v": "Ackerbau, Tierhaltung und einfache Seilherstellung"
           },
           {
             "k": "Anbau",
-            "v": ""
+            "v": "Flachs, Tierfutter sowie Feld- und Gartenerzeugnisse für den Eigenbedarf"
           },
           {
             "k": "Erzeugnisse",
-            "v": ""
+            "v": "Flachs, Seile, Tierfutter und Schweine"
           },
           {
             "k": "Fläche",
-            "v": ""
+            "v": "Kleiner Hof"
           },
           {
             "k": "Arbeitskräfte",
-            "v": ""
+            "v": "Familie Cyffiniau"
           },
           {
             "k": "Versorgung / Abnehmer",
-            "v": ""
+            "v": "Vorwiegend Haus Wyrm aus Gwynthor"
           },
           {
             "k": "Zustand",
-            "v": ""
+            "v": "Bewirtschaftet"
           },
           {
             "k": "Gefahren",
-            "v": ""
+            "v": "Keine besonderen bekannt"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Direkter Zulieferer des Hauses Wyrm"
           }
         ],
         "text": "",
         "secret": false,
-        "templateId": "landwirtschaft"
+        "templateId": "landwirtschaft",
+        "dominionId": "msa3c53viyll7z"
       },
       {
         "id": "gwynthor-marking-170",
@@ -12275,6 +12293,7 @@
         "color": "#6060b0"
       }
     ],
+    "categoryCatalogVersion": 2,
     "dotSize": 92,
     "lblSize": 94,
     "showMarkers": false,
@@ -12451,7 +12470,6 @@
       "notes": "",
       "groupStatus": {}
     },
-    "markerCatalog": [],
-    "categoryCatalogVersion": 2
+    "markerCatalog": []
   }
 }
