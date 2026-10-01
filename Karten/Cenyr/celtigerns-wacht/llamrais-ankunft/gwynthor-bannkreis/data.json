@@ -1,19 +1,1134 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
-  "revision": 0,
-  "updatedAt": "2026-09-01T00:00:00.000Z",
+  "revision": 1,
+  "updatedAt": "2026-10-01T00:53:35.202Z",
   "state": {
-    "pins": [],
-    "dotSize": 18,
-    "lblSize": 13,
+    "pins": [
+      {
+        "id": "muoru8isnrnm",
+        "x": 0.23192548710907493,
+        "y": 0.5354369488957008,
+        "title": "Twyr Arwydd",
+        "cat": "mmfltullsctk",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Rhonwens%20Tr%C3%A4nen/haus-arwydd.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Celtigerns Wacht",
+        "house": "Haus Arwydd",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "templateId": "militaer",
+        "kind": "place",
+        "lettering": {
+          "width": 600,
+          "fontSize": 40,
+          "rotation": 0,
+          "spacing": 2,
+          "x1": 33,
+          "y1": 0,
+          "x2": 67,
+          "y2": 0,
+          "color": "#382714"
+        },
+        "dominionId": ""
+      },
+      {
+        "id": "muos3qam395u",
+        "x": 0.36528312042065786,
+        "y": 0.455033583102403,
+        "title": "Castell Draig",
+        "cat": "mmflrbzxydg7",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Gwynthor",
+        "house": "Haus Draig O'Gwynthor",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "templateId": "militaer",
+        "kind": "place",
+        "dominionId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "muos7vubkfbt",
+        "x": 0.4304404008349313,
+        "y": 0.44161957564376014,
+        "title": "Castell Gafyr",
+        "cat": "mmfls5afqqpr",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Llamreis Ankunft",
+        "house": "Haus Gafyr",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "templateId": "militaer",
+        "kind": "place",
+        "dominionId": "msa3c53vomlanj"
+      },
+      {
+        "id": "muosfghvgpqg",
+        "x": 0.308292340360119,
+        "y": 0.5948756408022654,
+        "title": "Castell Rhyddid",
+        "cat": "mmfls5afqqpr",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Haus Rhyddid",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "templateId": "militaer",
+        "kind": "place",
+        "dominionId": "cw-haus-rhyddid"
+      },
+      {
+        "id": "muoshr0dxkjs",
+        "x": 0.502664591393866,
+        "y": 0.5320422295396546,
+        "title": "Castell Gostyn",
+        "kind": "place",
+        "templateId": "militaer",
+        "cat": "mmfls5afqqpr",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Haus Gostyn",
+        "faction": "",
+        "pinMarker": "",
+        "pinMarkerScale": 1,
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "cw-haus-gostyn"
+      },
+      {
+        "id": "muoshw6frb01",
+        "x": 0.5189527688547946,
+        "y": 0.7170124964026214,
+        "title": "Castell Rhyddid",
+        "kind": "place",
+        "templateId": "militaer",
+        "cat": "mmfls5afqqpr",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Haus Rhyddid",
+        "faction": "",
+        "pinMarker": "",
+        "pinMarkerScale": 1,
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false
+      },
+      {
+        "id": "muoshxrtfdti",
+        "x": 0.6926933284380321,
+        "y": 0.6118194820416212,
+        "title": "Castell Eneiniog",
+        "kind": "place",
+        "templateId": "militaer",
+        "cat": "mmfls5afqqpr",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Baronie von Llamreis Ankunft",
+        "house": "Haus Rhyddid",
+        "faction": "",
+        "pinMarker": "",
+        "pinMarkerScale": 1,
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "cw-haus-eneiniog"
+      },
+      {
+        "id": "muosmuzhl7re",
+        "x": 0.5569585162636278,
+        "y": 0.5765198127929634,
+        "title": "Castell Wyrm",
+        "cat": "mmfls5afqqpr",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Baronie von Gwendolyns Ufer",
+        "house": "Haus Wyrm",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "templateId": "militaer",
+        "kind": "place",
+        "dominionId": "msa3c53viyll7z"
+      },
+      {
+        "id": "muoso4abb62h",
+        "x": 0.7095244451476583,
+        "y": 0.7092465691679167,
+        "title": "Castell Saethwyr",
+        "kind": "place",
+        "templateId": "militaer",
+        "cat": "mmfls5afqqpr",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Baronie von Gwendolyns Ufer",
+        "house": "Haus Saethwyr",
+        "faction": "",
+        "pinMarker": "",
+        "pinMarkerScale": 1,
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "msa3c53vz3k80p"
+      },
+      {
+        "id": "muosoghjijjg",
+        "x": 0.18061484589422944,
+        "y": 0.0703724739598968,
+        "title": "Castell Wyrm",
+        "kind": "place",
+        "templateId": "militaer",
+        "cat": "mmfls5afqqpr",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Baronie von Gwendolyns Ufer",
+        "house": "Haus Wyrm",
+        "faction": "",
+        "pinMarker": "",
+        "pinMarkerScale": 1,
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false
+      },
+      {
+        "id": "muosoi8jiiyc",
+        "x": 0.36478578028317765,
+        "y": 0.08795671981670641,
+        "title": "Castell Wyrm",
+        "kind": "place",
+        "templateId": "militaer",
+        "cat": "mmfls5afqqpr",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Baronie von Gwendolyns Ufer",
+        "house": "Haus Wyrm",
+        "faction": "",
+        "pinMarker": "",
+        "pinMarkerScale": 1,
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false
+      },
+      {
+        "id": "muosoo81765w",
+        "x": 0.4320083815118327,
+        "y": 0.3238777587678859,
+        "title": "Castell Wyrm",
+        "kind": "place",
+        "templateId": "militaer",
+        "cat": "mmfls5afqqpr",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Baronie von Gwendolyns Ufer",
+        "house": "Haus Wyrm",
+        "faction": "",
+        "pinMarker": "",
+        "pinMarkerScale": 1,
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#ff0000"
+      },
+      {
+        "id": "mmflrqajby8b",
+        "label": "Bauernsiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflry5furso",
+        "label": "Hafensiedlung",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmfls5afqqpr",
+        "label": "Burgsiedlung",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflsfqh3sft",
+        "label": "Handelssiedlung",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflsrndeiee",
+        "label": "Brückensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflt1x3v22o",
+        "label": "Bergbausiedlung",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflt7uj831y",
+        "label": "Waldsiedlung",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflteurd4n5",
+        "label": "Kirchensiedlung",
+        "color": "#508080"
+      },
+      {
+        "id": "mmfltia1m3s7",
+        "label": "Leuchtturmsiedlung",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmfltullsctk",
+        "label": "Festungssiedlung",
+        "color": "#6060b0"
+      },
+      {
+        "id": "mmflvj37jbh2",
+        "label": "Taverne",
+        "color": "#b03030"
+      },
+      {
+        "id": "mmflvquv2rr3",
+        "label": "Siedlungsruine",
+        "color": "#9050b0"
+      },
+      {
+        "id": "mmflw1z5ko6e",
+        "label": "Stadtruine",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "mmflw73t2e8v",
+        "label": "Bardensiedlung",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#7a6040"
+      },
+      {
+        "id": "mmflwmdfcyua",
+        "label": "Turmruine",
+        "color": "#c07030"
+      },
+      {
+        "id": "mmflwxad8w1j",
+        "label": "Schiffswrack",
+        "color": "#508080"
+      },
+      {
+        "id": "mmflx4731uj6",
+        "label": "Turnierplatz",
+        "color": "#c49a20"
+      },
+      {
+        "id": "mmflxnnhbh4g",
+        "label": "Besondere Orte",
+        "color": "#6060b0"
+      },
+      {
+        "id": "muosq5jpanvg",
+        "label": "Castell/ Burg",
+        "color": "#b03030"
+      },
+      {
+        "id": "muosqfkvnxxj",
+        "label": "Anwesen",
+        "color": "#9050b0"
+      },
+      {
+        "id": "muosqiyl9n1p",
+        "label": "Einfacher Hof",
+        "color": "#3a8a3a"
+      },
+      {
+        "id": "muosqx3lgp3t",
+        "label": "Heim",
+        "color": "#2a7aaa"
+      },
+      {
+        "id": "muosr1ipbqja",
+        "label": "Lager",
+        "color": "#7a6040"
+      }
+    ],
+    "dotSize": 92,
+    "lblSize": 94,
+    "showMarkers": false,
     "regionIcon": "",
     "regionTitle": "Gwynthor – Bannkreis",
+    "mapImages": {
+      "normal": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreis.jpg",
+      "regions": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreisZonen.webp",
+      "pins": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreisMarker.webp"
+    },
     "layerNames": {
       "normal": "Normal",
       "regions": "Zonen",
       "pins": "Markierungen"
     },
+    "extraLayers": [],
+    "dominions": [
+      {
+        "id": "msa3c53vo1h89v",
+        "name": "Gräfische Baronie Gwynthor – Llamreis Ankunft",
+        "type": "Gräfische Baronie",
+        "ruler": "Haus Draig O'Gwynthor",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": ""
+      },
+      {
+        "id": "msa3c53vz3k80p",
+        "name": "Herrschaft der Saethwyr",
+        "type": "Herrschaft",
+        "ruler": "Haus Saethwyr",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "msa3c53vomlanj",
+        "name": "Herrschaft der Gafyr",
+        "type": "Herrschaft",
+        "ruler": "Haus Gafyr",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "msa3c53viyll7z",
+        "name": "Herrschaft der Wyrm",
+        "type": "Herrschaft",
+        "ruler": "Haus Wyrm",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-gelyn",
+        "name": "Haus Gelyn",
+        "type": "Ritterhaus",
+        "ruler": "Haus Gelyn",
+        "seat": "Gwynthor, Gwynthstorm",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-balchder",
+        "name": "Haus Balchder",
+        "type": "Ritterhaus",
+        "ruler": "Haus Balchder",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-awenydd",
+        "name": "Haus Awenydd",
+        "type": "Ritterhaus",
+        "ruler": "Haus Awenydd",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-awenor",
+        "name": "Haus Awenor",
+        "type": "Ritterhaus",
+        "ruler": "Haus Awenor",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-dubhan-gwynthor",
+        "name": "Haus Dubhan-Gwynthor",
+        "type": "Ritterhaus",
+        "ruler": "Haus Dubhan-Gwynthor",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-bleiddorn",
+        "name": "Haus Bleiddorn",
+        "type": "Ritterhaus",
+        "ruler": "Haus Bleiddorn",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vo1h89v"
+      },
+      {
+        "id": "cw-haus-tlawd",
+        "name": "Haus Tlawd",
+        "type": "Ritterhaus",
+        "ruler": "Haus Tlawd",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vomlanj"
+      },
+      {
+        "id": "cw-haus-gostyn",
+        "name": "Haus Gostyn",
+        "type": "Ritterhaus",
+        "ruler": "Haus Gostyn",
+        "seat": "Gwynthor, Bronfelen",
+        "note": "",
+        "parentId": "msa3c53vomlanj"
+      },
+      {
+        "id": "cw-haus-rhyddid",
+        "name": "Haus Rhyddid",
+        "type": "Ritterhaus",
+        "ruler": "Haus Rhyddid",
+        "seat": "Gwynthor, Mwyncraig",
+        "note": "",
+        "parentId": "msa3c53viyll7z"
+      },
+      {
+        "id": "cw-haus-cludwyr",
+        "name": "Haus Cludwyr",
+        "type": "Ritterhaus",
+        "ruler": "Haus Cludwyr",
+        "seat": "Gwynthor, Bronhir",
+        "note": "",
+        "parentId": "msa3c53viyll7z"
+      },
+      {
+        "id": "cw-haus-loer",
+        "name": "Haus Loer",
+        "type": "Ritterhaus",
+        "ruler": "Haus Loer",
+        "seat": "Gwynthor, Craithglyn",
+        "note": "",
+        "parentId": "msa3c53viyll7z"
+      },
+      {
+        "id": "cw-haus-chwedlonol",
+        "name": "Haus Chwedlonol",
+        "type": "Ritterhaus",
+        "ruler": "Haus Chwedlonol",
+        "seat": "Gwynthor, Glastraeth",
+        "note": "",
+        "parentId": "msa3c53vz3k80p"
+      },
+      {
+        "id": "cw-haus-eneiniog",
+        "name": "Haus Eneiniog",
+        "type": "Ritterhaus",
+        "ruler": "Haus Eneiniog",
+        "seat": "Gwynthor",
+        "note": "",
+        "parentId": "msa3c53vz3k80p"
+      }
+    ],
     "dm": {
       "sessions": [],
       "notes": "",
