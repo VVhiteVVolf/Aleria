@@ -1,0 +1,93 @@
+{
+  "generator": "OpenAI built-in image_gen",
+  "date": "2026-10-02",
+  "purpose": "Illustrated notice-template picker icons",
+  "size": {
+    "width": 384,
+    "height": 384
+  },
+  "transparentBackground": true,
+  "stylePrompt": "Use case: stylized-concept. Asset type: one illustrated icon for a medieval D&D fantasy notice-board template picker. Create a SINGLE standalone icon, not a sheet, not a webpage. Style: playful, funny, charming hand-drawn adventure-manga cartoon with a light One Piece anime influence: lively exaggerated shapes, cheeky expressive details, confident imperfect dark-sepia ink contours, a little whimsical motion, soft matte watercolor washes. Mostly monochrome parchment colors: warm ivory, aged cream, tan, ochre, walnut brown, with only extremely subtle muted earthy accents. Flat painted illustration with delicate paper-grain texture INSIDE the objects, no glossy 3D, no bright saturated colors, no neon, no modern objects, no existing anime characters. Composition: large readable central silhouette, square canvas, fills about 80% of canvas with generous clear margin, few bold objects, legible at 96px. Background MUST be genuinely transparent alpha; no paper rectangle, no beige background, no checkerboard drawn into art, no sticker outline, no enclosing badge, no drop shadow around the whole asset. No typography, no letters, no numbers, no watermark. ",
+  "referenceInstruction": "Use quest as a style reference only for whimsical manga ink linework, parchment palette and matte watercolor. Draw only the new subject.",
+  "preparation": "Full-size generated PNG originals retained in .tmp/notice-icon-originals. Resized without cropping, exported as transparent WebP at quality 0.93.",
+  "assets": [
+    {
+      "id": "quest",
+      "subject": "Quest / Auftrag: a cheerful unfurled parchment adventure scroll with a bold winding treasure-map trail and a tiny X mark, crossed with one chunky short adventurer sword with a wrapped leather hilt. The parchment has jauntily curled corners; a tiny expressive smiling compass rose makes this feel like an eager invitation to adventure. Warm sepia and washed-out ochre only.",
+      "file": "quest-v1.webp",
+      "reference": null
+    },
+    {
+      "id": "steckbrief",
+      "subject": "Wanted / Steckbrief: a crumpled and curled wanted poster pinned by a bent iron nail, with a big comically grinning original rogue face sketched inside: a crooked tricorn hat, one raised eyebrow, tiny moustache. It must read as a funny medieval bounty poster. No words or lettering, only a few abstract ink strokes beneath the face. Parchment beige and faint rusty watercolor accents.",
+      "file": "steckbrief-v1.webp",
+      "reference": "quest"
+    },
+    {
+      "id": "zeitung",
+      "subject": "Newspaper / Zeitungsartikel: a jaunty folded old broadsheet with a fat quill tucked across it, a few neat abstract sepia column strokes and a tiny woodcut sailing-ship vignette. The folded paper has lively curling corners as if fresh news just arrived. No readable writing or letterforms. Cream parchment and soft gray-brown ink.",
+      "file": "zeitung-v1.webp",
+      "reference": "quest"
+    },
+    {
+      "id": "vermisst",
+      "subject": "Missing / Vermisst: a little parchment notice with a sweet comically puzzled original small fluffy dog portrait, one ear up and one ear down, paired with an oversized old brass magnifying glass inspecting a single paw print. A little ink question-mark-like curl above the dog conveys searching, but no text. A warm kind expression. Cream, tan and faded brown watercolor only.",
+      "file": "vermisst-v1.webp",
+      "reference": "quest"
+    },
+    {
+      "id": "ankuendigung",
+      "subject": "Announcement / Ankündigung: an exuberant old brass town-crier bell tilting as it rings, tied with a short fluttering parchment ribbon, with a tiny festive pennant and three energetic curved ink sound lines. Chubby exaggerated shapes with lively comic timing. Faded ochre brass and a tiny muted sage accent, predominantly parchment brown.",
+      "file": "ankuendigung-v1.webp",
+      "reference": "quest"
+    },
+    {
+      "id": "notiz",
+      "subject": "Note / Mitteilung: a small loosely folded parchment note with two bold scribbly ink lines, with a delightfully oversized scruffy goose-feather quill leaning across a squat ceramic inkpot. One tiny mischievous ink splat. Handmade, cozy, playful fantasy stationery. Cream and dark brown only.",
+      "file": "notiz-v1.webp",
+      "reference": "quest"
+    },
+    {
+      "id": "handel",
+      "subject": "Trade / Handel: an amusingly overstuffed medieval coin purse tied with cord, smiling through a whimsical curved seam, three chunky old coins tumbling beside a tiny uneven balance scale. Simple large clear shapes, comic abundance without lots of tiny detail. Matte faded ochre coins and tan leather, sepia ink.",
+      "file": "handel-v1.webp",
+      "reference": "quest"
+    },
+    {
+      "id": "erlass",
+      "subject": "Royal decree / Amtlicher Erlass: an officious rolled parchment proclamation held open with an enormous round wax seal, a slightly askew small medieval crown balanced on its top edge, and two short hanging ribbon tails. Charming pompous comic proportions. No words, only sparse abstract ink strokes. Cream parchment, brown-gold crown and subdued terracotta wax.",
+      "file": "erlass-v1.webp",
+      "reference": "quest"
+    },
+    {
+      "id": "einladung",
+      "subject": "Invitation / Einladung: a charming half-open parchment envelope with a small wax heart seal, from which two little leaves and a folded invitation card peek out, with a jauntily tied cloth ribbon. A playful curling edge and two tiny ink sparkles. Warm cream, light tan, extremely muted dusty rose and sage watercolor.",
+      "file": "einladung-v1.webp",
+      "reference": "quest"
+    },
+    {
+      "id": "warnung",
+      "subject": "Danger warning / Gefahrenwarnung: a funny but clearly cautionary little monster skull with very large surprised hollow eye sockets, one lopsided tooth, small stubby horns and two crossed weathered bones behind it. An expressive comic alarm silhouette, adventurous not gory or genuinely frightening. Bone-ivory and sepia with one faint terracotta watercolor mark.",
+      "file": "warnung-v1.webp",
+      "reference": "quest"
+    },
+    {
+      "id": "reise",
+      "subject": "Travel and escort / Reise & Geleit: a tiny comically overloaded covered medieval wagon with two large chunky wooden wheels, a rolled map sticking out and a floppy travel hat hanging off its side, a jaunty directional arrow-shaped wooden sign beside it. Dynamic tilted silhouette suggesting cheerful departure, very few details. Cream wagon canvas, washed brown wood and dusty sage cloth.",
+      "file": "reise-v1.webp",
+      "reference": "quest"
+    },
+    {
+      "id": "gilde",
+      "subject": "Guild call / Gildenaufruf: a chunky little smith's hammer crossed with an oversized worn quill behind a small simple medieval shield, the shield decorated with a friendly pair of clasped gloved hands. A proud comic guild emblem with a slightly crooked leather strap. No text, no ornate background frame. Warm sepia, muted iron gray and ochre watercolor.",
+      "file": "gilde-v1.webp",
+      "reference": "quest"
+    },
+    {
+      "id": "fund",
+      "subject": "Found property / Fundanzeige: a large ornate but simple old iron key with a comically large round bow, tied to a small blank parchment tag, resting beside one silver signet ring; two small lively ink sparkle marks suggest a lucky find. Strong readable chunky silhouette. Cream parchment, warm gray metal and faded tan cord; very restrained watercolor.",
+      "file": "fund-v1.webp",
+      "reference": "quest"
+    }
+  ]
+}

@@ -79,9 +79,18 @@ try {
   await page.locator('#btn-add-zettel').click();
   await page.locator('#board-viewport').click({ position: { x: 35, y: 35 } });
   assert.equal(await page.locator('#zettel-type-grid .tpl-card').count(), 13);
+  await page.locator('#zettel-type-grid .tpl-artwork img').evaluateAll(images => Promise.all(images.map(image => image.decode())));
+  assert.equal(await page.locator('#zettel-type-grid .tpl-artwork img').count(), 13);
   await page.locator('[data-zettel-type="reise"]').click();
   assert.match(await page.locator('#notice-template-detail').innerText(), /Aufbruch.*Ziel/);
   await shot('template-picker');
+  await page.setViewportSize({ width: 390, height: 844 });
+  assert.equal(await page.locator('#zettel-type-grid').evaluate(element => element.scrollWidth <= element.clientWidth + 1), true, 'mobile template picker overflow');
+  await shot('template-picker-mobile');
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.locator('[data-zettel-type="quest"] img').evaluate(image => { image.src = 'data:image/png;base64,broken'; });
+  await page.locator('[data-zettel-type="quest"] .tpl-artwork:not(.has-image)').waitFor();
+  assert.equal(await page.locator('[data-zettel-type="quest"] .tpl-icon-fallback').isVisible(), true, 'failed artwork retains a readable symbol');
   await page.locator('#zettel-tpl-apply-btn').click();
   await page.locator('#sidebar.open').waitFor();
   await page.locator('#sb-body [data-field="title"]').click();
