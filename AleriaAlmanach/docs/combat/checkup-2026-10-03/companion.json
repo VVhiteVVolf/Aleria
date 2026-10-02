@@ -1,0 +1,136 @@
+[
+  {
+    "name": "Freki",
+    "hp": 50,
+    "ownContribution": true,
+    "mode": "regular",
+    "budget": {
+      "inspiration": 0,
+      "mana-focus": 0,
+      "focus": 0,
+      "celestial-points": 0,
+      "infernal-points": 0,
+      "pact-points": 0,
+      "action": 1,
+      "bonus-action": 1,
+      "reaction": 1,
+      "special-action": 0,
+      "aura-focus": 0
+    },
+    "plan": [
+      {
+        "id": "technique:freki-schnappen",
+        "name": "Schneller Fang",
+        "paymentMode": "standard",
+        "costs": {
+          "bonus-action": 1
+        },
+        "score": 1.0416666666666667,
+        "formula": "1d4+1"
+      },
+      {
+        "id": "technique:freki-fesselbiss",
+        "name": "Fesselbiss",
+        "paymentMode": "standard",
+        "costs": {
+          "action": 1,
+          "reaction": 1
+        },
+        "score": 3.6041666666666665,
+        "formula": "2d6+2"
+      }
+    ],
+    "errors": [],
+    "reference": {
+      "samples": 512,
+      "mean": 4.638671875,
+      "mean95HalfWidth": 0.4115675910627442,
+      "median": 3,
+      "p90": 11,
+      "maximum": 25,
+      "defeatProbability": 0,
+      "hpFraction": 0.09466677295918367,
+      "hpOverMean": 10.563368421052632,
+      "meanAttackRolls": 2
+    },
+    "versusAsgeir": {
+      "samples": 512,
+      "mean": 7.65625,
+      "mean95HalfWidth": 0.5148626005367906,
+      "median": 8,
+      "p90": 15,
+      "maximum": 29,
+      "defeatProbability": 0,
+      "hpFraction": 0.0708912037037037,
+      "hpOverMean": 14.106122448979592,
+      "meanAttackRolls": 2
+    }
+  },
+  {
+    "name": "Freki",
+    "hp": 50,
+    "ownContribution": true,
+    "mode": "burst",
+    "budget": {
+      "inspiration": 1,
+      "mana-focus": 0,
+      "focus": 0,
+      "celestial-points": 0,
+      "infernal-points": 0,
+      "pact-points": 0,
+      "action": 1,
+      "bonus-action": 1,
+      "reaction": 1,
+      "special-action": 2,
+      "aura-focus": 0
+    },
+    "plan": [
+      {
+        "id": "technique:freki-schnappen",
+        "name": "Schneller Fang",
+        "paymentMode": "standard",
+        "costs": {
+          "bonus-action": 1
+        },
+        "score": 1.0416666666666667,
+        "formula": "1d4+1"
+      },
+      {
+        "id": "technique:freki-fesselbiss",
+        "name": "Fesselbiss",
+        "paymentMode": "standard",
+        "costs": {
+          "action": 1,
+          "reaction": 1
+        },
+        "score": 3.6041666666666665,
+        "formula": "2d6+2"
+      }
+    ],
+    "errors": [],
+    "reference": {
+      "samples": 512,
+      "mean": 4.638671875,
+      "mean95HalfWidth": 0.4115675910627442,
+      "median": 3,
+      "p90": 11,
+      "maximum": 25,
+      "defeatProbability": 0,
+      "hpFraction": 0.09466677295918367,
+      "hpOverMean": 10.563368421052632,
+      "meanAttackRolls": 2
+    },
+    "versusAsgeir": {
+      "samples": 512,
+      "mean": 7.65625,
+      "mean95HalfWidth": 0.5148626005367906,
+      "median": 8,
+      "p90": 15,
+      "maximum": 29,
+      "defeatProbability": 0,
+      "hpFraction": 0.0708912037037037,
+      "hpOverMean": 14.106122448979592,
+      "meanAttackRolls": 2
+    }
+  }
+]

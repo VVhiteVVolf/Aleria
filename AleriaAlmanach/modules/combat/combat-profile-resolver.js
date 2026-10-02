@@ -29,6 +29,7 @@ import { empowerAuraAttack } from './combat-aura-attack.js';
 import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
 import { getHuskarlTechniqueUnavailableReason, getHuskarlTechniqueRequirements } from '../classes/aldrimar/aldrimar-combat-rules.js';
 import { getPairedAttackWeapon, requiresPairedCombatWeapons } from './combat-paired-weapons.js';
+import { getCombatWeaponAttackValues } from './combat-weapon-attack-values.js';
 
 let emptyCharacterTargetProfile = null;
 let emptyCreatureTargetProfile = null;
@@ -71,10 +72,10 @@ function buildCombatProfileActions(character, profile, options = {}) {
   const weaponActions = profile.weapons
     .filter(weapon => weapon.name && weapon.damageFormula)
     .map(weapon => {
-      const classModifiers = getCenyrClassActionModifiers(profile, { weapon });
+      const values = getCombatWeaponAttackValues(profile, weapon);
       const equipped = weapon.id === activeWeapon?.id;
       const available = !usesWeaponLoadout || equipped || weapon.id === loadout.leftWeaponId;
-      const attackWeapon = getPairedAttackWeapon(weapon, profile);
+      const attackWeapon = values.weapon;
       return {
       id: `weapon:${weapon.id}`,
       sourceId: weapon.id,
@@ -86,8 +87,8 @@ function buildCombatProfileActions(character, profile, options = {}) {
       baseWeaponFormula: weapon.damageFormula,
       versatileWeaponFormula: weapon.versatileDamageFormula,
       mechanicNotes: attackWeapon.pairedAttack ? ['Gemeinsamer Angriff: beide Waffenwürfel, feste Boni einmal; Schadensart der führenden Waffe.'] : [],
-      attackModifier: getWeaponAttackModifier(profile, weapon) + classModifiers.attackBonus,
-      damageModifier: getWeaponDamageModifier(profile, weapon) + classModifiers.damageBonus,
+      attackModifier: values.attackModifier,
+      damageModifier: values.damageModifier,
       activationType: weapon.activationType,
       costs: normalizeCombatResourceCosts(weapon.costs),
       effects: weapon.effects || [],

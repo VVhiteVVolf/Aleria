@@ -1,0 +1,478 @@
+{
+  "date": "2026-10-03",
+  "productionWrites": false,
+  "variants": [
+    {
+      "name": "Ylva Wolfshorn",
+      "loadout": "Speer",
+      "weapon": "Dornwacht · Wolfshorn-Jagdspeer",
+      "formula": "1d8",
+      "mode": "regular",
+      "budget": {
+        "inspiration": 0,
+        "mana-focus": 0,
+        "focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "pact-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 0,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0
+      },
+      "plan": [
+        {
+          "id": "technique:combat-style-huskarl-skytte-wahl-7",
+          "name": "Speer gegen den Schritt",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "reaction": 1
+          },
+          "score": 10.104166666666666,
+          "formula": "1d8+1d6+1d4+5"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 10.9609375,
+        "mean95HalfWidth": 0.7561241413228263,
+        "median": 14,
+        "p90": 20,
+        "maximum": 34,
+        "defeatProbability": 0,
+        "hpFraction": 0.0010962033703370336,
+        "hpOverMean": 912.2394868139701,
+        "meanAttackRolls": 1
+      },
+      "versusGawain": {
+        "samples": 512,
+        "mean": 9.65625,
+        "mean95HalfWidth": 0.6811409677735234,
+        "median": 12,
+        "p90": 18,
+        "maximum": 32,
+        "defeatProbability": 0,
+        "hpFraction": 0.19706632653061223,
+        "hpOverMean": 5.074433656957929,
+        "meanAttackRolls": 1
+      }
+    },
+    {
+      "name": "Ylva Wolfshorn",
+      "loadout": "Speer",
+      "weapon": "Dornwacht · Wolfshorn-Jagdspeer",
+      "formula": "1d8",
+      "mode": "burst",
+      "budget": {
+        "inspiration": 1,
+        "mana-focus": 0,
+        "focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "pact-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 2,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0
+      },
+      "plan": [
+        {
+          "id": "technique:ylva-fallender-dorn",
+          "name": "Der fallende Dorn",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "reaction": 1,
+            "special-action": 1
+          },
+          "score": 15.270833333333334,
+          "formula": "1d8+5"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 15.484375,
+        "mean95HalfWidth": 0.8658147818762457,
+        "median": 16,
+        "p90": 28,
+        "maximum": 41,
+        "defeatProbability": 0,
+        "hpFraction": 0.0015485923592359237,
+        "hpOverMean": 645.7477295660949,
+        "meanAttackRolls": 2
+      },
+      "versusGawain": {
+        "samples": 512,
+        "mean": 12.169921875,
+        "mean95HalfWidth": 0.7195982148465068,
+        "median": 11,
+        "p90": 23,
+        "maximum": 37,
+        "defeatProbability": 0,
+        "hpFraction": 0.24836575255102042,
+        "hpOverMean": 4.02632001283903,
+        "meanAttackRolls": 2
+      }
+    },
+    {
+      "name": "Fenrir Varulv",
+      "loadout": "Doppeläxte",
+      "weapon": "Einhandäxte (Paar)",
+      "formula": "2d6",
+      "mode": "regular",
+      "budget": {
+        "inspiration": 0,
+        "mana-focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 0,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0
+      },
+      "plan": [
+        {
+          "id": "technique:combat-style-huskarl-skjaldr-grund-1",
+          "name": "Kurzer Axthieb",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 4.1875,
+          "formula": "2d4+2"
+        },
+        {
+          "id": "technique:combat-style-huskarl-skjaldr-wahl-7",
+          "name": "Axtbart zur Fessel",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "reaction": 1
+          },
+          "score": 8.291666666666666,
+          "formula": "3d6+4"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 13.306640625,
+        "mean95HalfWidth": 0.7897077146924839,
+        "median": 14,
+        "p90": 25,
+        "maximum": 42,
+        "defeatProbability": 0,
+        "hpFraction": 0.0013307971422142214,
+        "hpOverMean": 751.4293262879788,
+        "meanAttackRolls": 2
+      },
+      "versusGawain": {
+        "samples": 512,
+        "mean": 10.958984375,
+        "mean95HalfWidth": 0.6884594041902743,
+        "median": 12,
+        "p90": 21,
+        "maximum": 38,
+        "defeatProbability": 0,
+        "hpFraction": 0.22365274234693877,
+        "hpOverMean": 4.4712172518267685,
+        "meanAttackRolls": 2
+      }
+    },
+    {
+      "name": "Fenrir Varulv",
+      "loadout": "Doppeläxte",
+      "weapon": "Einhandäxte (Paar)",
+      "formula": "2d6",
+      "mode": "burst",
+      "budget": {
+        "inspiration": 1,
+        "mana-focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 2,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0
+      },
+      "plan": [
+        {
+          "id": "weapon:fenrir-handaxe-pair",
+          "name": "Einhandäxte (Paar)",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1
+          },
+          "score": 6.270833333333333,
+          "formula": "2d6+4"
+        },
+        {
+          "id": "technique:fenrir-spinning-throw",
+          "name": "Kreiselwurf",
+          "paymentMode": "standard",
+          "costs": {
+            "reaction": 1,
+            "special-action": 1
+          },
+          "score": 9.104166666666666,
+          "formula": "3d6+4"
+        },
+        {
+          "id": "technique:combat-style-huskarl-skjaldr-grund-1",
+          "name": "Kurzer Axthieb",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 4.1875,
+          "formula": "2d4+2"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 20.845703125,
+        "mean95HalfWidth": 0.9356887987732612,
+        "median": 21,
+        "p90": 34,
+        "maximum": 58,
+        "defeatProbability": 0,
+        "hpFraction": 0.002084778790379038,
+        "hpOverMean": 479.66719760142416,
+        "meanAttackRolls": 3
+      },
+      "versusGawain": {
+        "samples": 512,
+        "mean": 17.208984375,
+        "mean95HalfWidth": 0.8116024828004721,
+        "median": 17,
+        "p90": 29,
+        "maximum": 52,
+        "defeatProbability": 0.001953125,
+        "hpFraction": 0.35120376275510207,
+        "hpOverMean": 2.847349903529679,
+        "meanAttackRolls": 3
+      }
+    },
+    {
+      "name": "Guinevere Neidr",
+      "loadout": "Doppeldolche",
+      "weapon": "Helwyr Jagddolche (Paar)",
+      "formula": "2d4",
+      "mode": "regular",
+      "budget": {
+        "inspiration": 0,
+        "mana-focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 0,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0
+      },
+      "plan": [
+        {
+          "id": "weapon:guinevere-hunting-daggers",
+          "name": "Helwyr Jagddolche (Paar)",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1
+          },
+          "score": 5.375,
+          "formula": "2d4+4"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-kurze-drachenspur",
+          "name": "Kurze Drachenspur",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 4.25,
+          "formula": "2d4+2"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 10.375,
+        "mean95HalfWidth": 0.5569803001853122,
+        "median": 9,
+        "p90": 19,
+        "maximum": 26,
+        "defeatProbability": 0,
+        "hpFraction": 0.0010376037603760375,
+        "hpOverMean": 963.7590361445783,
+        "meanAttackRolls": 2
+      },
+      "versusGawain": {
+        "samples": 512,
+        "mean": 7.91015625,
+        "mean95HalfWidth": 0.45066211018476554,
+        "median": 7,
+        "p90": 15,
+        "maximum": 22,
+        "defeatProbability": 0,
+        "hpFraction": 0.16143176020408162,
+        "hpOverMean": 6.194567901234568,
+        "meanAttackRolls": 2
+      }
+    },
+    {
+      "name": "Guinevere Neidr",
+      "loadout": "Doppeldolche",
+      "weapon": "Helwyr Jagddolche (Paar)",
+      "formula": "2d4",
+      "mode": "burst",
+      "budget": {
+        "inspiration": 1,
+        "mana-focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 2,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0
+      },
+      "plan": [
+        {
+          "id": "weapon:guinevere-hunting-daggers",
+          "name": "Helwyr Jagddolche (Paar)",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1
+          },
+          "score": 5.375,
+          "formula": "2d4+4"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-kurze-drachenspur",
+          "name": "Kurze Drachenspur",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 4.25,
+          "formula": "2d4+2"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 10.375,
+        "mean95HalfWidth": 0.5569803001853122,
+        "median": 9,
+        "p90": 19,
+        "maximum": 26,
+        "defeatProbability": 0,
+        "hpFraction": 0.0010376037603760375,
+        "hpOverMean": 963.7590361445783,
+        "meanAttackRolls": 2
+      },
+      "versusGawain": {
+        "samples": 512,
+        "mean": 7.91015625,
+        "mean95HalfWidth": 0.45066211018476554,
+        "median": 7,
+        "p90": 15,
+        "maximum": 22,
+        "defeatProbability": 0,
+        "hpFraction": 0.16143176020408162,
+        "hpOverMean": 6.194567901234568,
+        "meanAttackRolls": 2
+      }
+    }
+  ],
+  "armor": [
+    {
+      "name": "Ylva Wolfshorn",
+      "worn": 12,
+      "withoutBodyArmor": 13,
+      "note": "Comparison only. Removing armor also removes its damage protection and other item effects."
+    },
+    {
+      "name": "Guinevere Neidr",
+      "worn": 11,
+      "withoutBodyArmor": 14,
+      "note": "Comparison only. Removing armor also removes its damage protection and other item effects."
+    },
+    {
+      "name": "Asgeir Wolfshorn",
+      "worn": 14,
+      "withoutBodyArmor": 11,
+      "note": "Comparison only. Removing armor also removes its damage protection and other item effects."
+    }
+  ],
+  "errors": []
+}

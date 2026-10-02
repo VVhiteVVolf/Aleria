@@ -1,8 +1,9 @@
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
-import { getWeaponAttackModifier, getWeaponDamageModifier } from './combat-profile-model.js';
+import { getCombatWeaponAttackValues } from './combat-weapon-attack-values.js';
 import { consumeCombatAmmunition } from './combat-ammunition.js';
 import { validateCombatActorProfile } from './combat-profile-resolver.js';
 import { compactCombatResolution } from './combat-resolution-storage.js';
+import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
 
 function afterProfile(profile, result, role) {
   const conditions = result[`${role}ConditionSnapshot`]?.after || profile.temporaryConditions || [];
@@ -21,18 +22,24 @@ function afterProfile(profile, result, role) {
 }
 
 function counterProfile(defender, stance) {
-  const weapon = getCombatWeaponLoadout(defender).right;
-  if (!weapon) return null;
+  const heldWeapon = getCombatWeaponLoadout(defender).right;
+  if (!heldWeapon) return null;
+  const values = getCombatWeaponAttackValues(defender, heldWeapon);
+  const weapon = values.weapon;
   const unavailable = (defender.droppedWeapons || []).some(item => item.weaponId === weapon.id
+    || weapon.pairedWeaponIds?.includes(item.weaponId)
     || weapon.inventoryItemId && item.item?.id === weapon.inventoryItemId);
   if (unavailable) return null;
-  const action = { id: `weapon:${weapon.id}`, kind: 'weapon', name: weapon.name, weapon,
+  const baseAction = { id: `weapon:${weapon.id}`, kind: 'weapon', name: weapon.name, weapon,
+    attackModifier: values.attackModifier, damageModifier: values.damageModifier,
+    baseWeaponFormula: heldWeapon.damageFormula, versatileWeaponFormula: heldWeapon.versatileDamageFormula,
     compatible: true, costs: [], auraBypass: { allowed: false }, resolutionMode: 'weapon-attack',
-    criticalThreshold: 20, effects: [], secondarySave: stance.counterAttack.secondarySave
+    criticalThreshold: 20, effects: weapon.effects || [], secondarySave: stance.counterAttack.secondarySave
       ? { ...stance.counterAttack.secondarySave, dc: stance.counterAttack.secondarySave.fixedDc || 13 } : null };
-  return { ...defender, weapon, activeWeaponId: weapon.id, selectedAction: action, profileActionId: action.id,
+  const { action, weaponGrip } = resolveCombatWeaponGrip(baseAction, defender, defender.weaponGrip);
+  return { ...defender, weapon: action.weapon, weaponGrip, activeWeaponId: weapon.id, selectedAction: action, profileActionId: action.id,
     profileActionKind: 'weapon', actionResolutionMode: 'weapon-attack', resourceCosts: [], actionCosts: [],
-    attackModifier: getWeaponAttackModifier(defender, weapon), damageModifier: getWeaponDamageModifier(defender, weapon),
+    attackModifier: action.attackModifier, damageModifier: action.damageModifier,
     equipmentPreparation: null, weaponUnavailable: false, forcedRollMode: 'advantage', paymentMode: 'standard' };
 }
 

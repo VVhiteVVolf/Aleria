@@ -131,7 +131,10 @@ test('vollständiges Duell bis null TP: Speicher und Replay stimmen nach jedem B
   for (let turn = 0; turn < 30; turn++) {
     const actorIndex = turn % 2;
     const action = await prepareAction({ actorIndex, natural: turn % 4 === 0 ? 20 : 15, kind: turn % 2 ? 'action' : 'speech' });
-    await commitAction(action.payload);
+    // This test follows a fixed damage/replay sequence, without an item-pickup
+    // turn planner. Keep critical side effects deterministic as well as dice.
+    // Disarm and all twenty consequence cases have their own item-duel tests.
+    await commitAction(action.payload, undefined, { criticalRoll: 6 });
     actionCount++;
     const states = deriveCombatStateFromComments(await history());
     for (let index = 0; index < 2; index++) {

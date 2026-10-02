@@ -1,0 +1,231 @@
+{
+  "date": "2026-10-03",
+  "productionWrites": false,
+  "attacker": "Gawain Draig",
+  "mode": "burst",
+  "samplesPerCase": 512,
+  "hitPoints": [
+    {
+      "maximumHp": 25,
+      "samples": 512,
+      "mean": 22.068359375,
+      "mean95HalfWidth": 0.6291108079142748,
+      "median": 23,
+      "p90": 30,
+      "maximum": 47,
+      "defeatProbability": 0.421875,
+      "hpFraction": 0.882734375,
+      "hpOverMean": 1.1328436144791574,
+      "meanAttackRolls": 2.912109375
+    },
+    {
+      "maximumHp": 30,
+      "samples": 512,
+      "mean": 22.5390625,
+      "mean95HalfWidth": 0.6787192698223381,
+      "median": 23,
+      "p90": 32,
+      "maximum": 47,
+      "defeatProbability": 0.19140625,
+      "hpFraction": 0.7513020833333334,
+      "hpOverMean": 1.3310225303292895,
+      "meanAttackRolls": 2.974609375
+    },
+    {
+      "maximumHp": 35,
+      "samples": 512,
+      "mean": 22.673828125,
+      "mean95HalfWidth": 0.6991510124575248,
+      "median": 23,
+      "p90": 32,
+      "maximum": 47,
+      "defeatProbability": 0.0703125,
+      "hpFraction": 0.6478236607142858,
+      "hpOverMean": 1.5436299422861572,
+      "meanAttackRolls": 2.99609375
+    },
+    {
+      "maximumHp": 40,
+      "samples": 512,
+      "mean": 22.697265625,
+      "mean95HalfWidth": 0.704252011602094,
+      "median": 23,
+      "p90": 32,
+      "maximum": 49,
+      "defeatProbability": 0.021484375,
+      "hpFraction": 0.567431640625,
+      "hpOverMean": 1.7623268221323467,
+      "meanAttackRolls": 3
+    },
+    {
+      "maximumHp": 45,
+      "samples": 512,
+      "mean": 22.697265625,
+      "mean95HalfWidth": 0.704252011602094,
+      "median": 23,
+      "p90": 32,
+      "maximum": 49,
+      "defeatProbability": 0.005859375,
+      "hpFraction": 0.5043836805555556,
+      "hpOverMean": 1.98261767489889,
+      "meanAttackRolls": 3
+    }
+  ],
+  "defenses": [
+    {
+      "name": "Schild",
+      "costs": [
+        {
+          "id": "activation-reaction",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "resource-mana-focus",
+          "resourceId": "mana-focus",
+          "name": "Mana",
+          "amount": 3,
+          "scope": "persistent"
+        }
+      ],
+      "temporaryHitPoints": 0,
+      "conditions": [
+        {
+          "name": "Schild",
+          "ward": {
+            "enabled": true,
+            "charges": 1,
+            "deflectChance": 100,
+            "breaksOnCriticalHit": true
+          },
+          "mechanics": {
+            "damage": 0,
+            "armorClass": 0,
+            "attack": 0,
+            "initiative": 0,
+            "skill": 0,
+            "spellSaveDc": 0,
+            "attackRollMode": "normal",
+            "maximumHitPoints": 0,
+            "savingThrow": 0,
+            "passivePerception": 0,
+            "spellAttack": 0,
+            "movement": 0
+          }
+        }
+      ],
+      "samples": 512,
+      "mean": 14.37109375,
+      "mean95HalfWidth": 0.7510217874233812,
+      "median": 14,
+      "p90": 25,
+      "maximum": 46,
+      "defeatProbability": 0.130859375,
+      "hpFraction": 0.57484375,
+      "hpOverMean": 1.7396031530307148,
+      "meanAttackRolls": 2.955078125
+    },
+    {
+      "name": "Spiegelbilder",
+      "costs": [
+        {
+          "id": "activation-action",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "activation-reaction",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "resource-mana-focus",
+          "resourceId": "mana-focus",
+          "name": "Mana",
+          "amount": 4,
+          "scope": "persistent"
+        }
+      ],
+      "temporaryHitPoints": 0,
+      "conditions": [
+        {
+          "name": "Spiegelbilder",
+          "ward": {
+            "enabled": true,
+            "charges": 2,
+            "deflectChance": 67,
+            "breaksOnCriticalHit": false
+          },
+          "mechanics": {
+            "movement": 0,
+            "passivePerception": 0,
+            "spellAttack": 0,
+            "initiative": 0,
+            "armorClass": 0,
+            "skill": 0,
+            "damage": 0,
+            "attackRollMode": "normal",
+            "attack": 0,
+            "maximumHitPoints": 0,
+            "spellSaveDc": 0,
+            "savingThrow": 0
+          }
+        }
+      ],
+      "samples": 512,
+      "mean": 9.296875,
+      "mean95HalfWidth": 0.6347600980396894,
+      "median": 9,
+      "p90": 20,
+      "maximum": 38,
+      "defeatProbability": 0.029296875,
+      "hpFraction": 0.371875,
+      "hpOverMean": 2.689075630252101,
+      "meanAttackRolls": 2.9921875
+    },
+    {
+      "name": "Magierrüstung",
+      "costs": [
+        {
+          "id": "activation-action",
+          "resourceId": "action",
+          "name": "Aktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "activation-reaction",
+          "resourceId": "reaction",
+          "name": "Reaktion",
+          "amount": 1,
+          "scope": "comment"
+        },
+        {
+          "id": "resource-mana-focus",
+          "resourceId": "mana-focus",
+          "name": "Mana",
+          "amount": 3,
+          "scope": "persistent"
+        }
+      ],
+      "temporaryHitPoints": 9,
+      "conditions": [],
+      "samples": 512,
+      "mean": 22.619140625,
+      "mean95HalfWidth": 0.6895738714408595,
+      "median": 23,
+      "p90": 32,
+      "maximum": 47,
+      "defeatProbability": 0.080078125,
+      "hpFraction": 0.904765625,
+      "hpOverMean": 1.1052586132458337,
+      "meanAttackRolls": 2.98828125
+    }
+  ]
+}

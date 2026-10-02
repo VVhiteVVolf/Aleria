@@ -3,7 +3,7 @@ import { randomUUID } from 'node:crypto';
 import { initializeApp } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 import { commitCombatEncounter } from '../../src/mechanics/commit-combat-encounter.js';
-import { commitCombatComment } from '../../src/mechanics/commit-combat-comment.js';
+import { commitCombatComment, commitCombatCommentOperation } from '../../src/mechanics/commit-combat-comment.js';
 import { commitUndoMechanicalComment } from '../../src/mechanics/commit-undo-mechanical-comment.js';
 import { getActiveCombatEncounter } from '../../../../AleriaAlmanach/modules/combat/combat-encounter-model.js';
 import { sortSceneHistory } from '../../src/mechanics/trusted-scene-history.js';
@@ -48,4 +48,8 @@ export async function prepareAction({ actorIndex = 0, ...options } = {}) {
   return prepareTestAction({ entryId: threadId, actorRecord: await record(ids[actorIndex]), targetRecords: [await record(ids[1 - actorIndex])], comments: await history(), ...options });
 }
 
-export const commitAction = (payload, uid) => commitCombatComment.run(request({ ...payload, metadata: compactMechanicalMetadata(payload.metadata) }, uid));
+export function commitAction(payload, uid, { criticalRoll } = {}) {
+  const input = request({ ...payload, metadata: compactMechanicalMetadata(payload.metadata) }, uid);
+  return criticalRoll == null ? commitCombatComment.run(input)
+    : commitCombatCommentOperation(input, { database, rollCritical: () => criticalRoll });
+}

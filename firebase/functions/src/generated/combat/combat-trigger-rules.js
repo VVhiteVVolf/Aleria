@@ -393,7 +393,11 @@ export function deriveCombatRuleFrequencyKeys(comments = []) {
         ? segment.combatResolutions
         : [segment?.combatResolution];
       resolutions.forEach(resolution => {
-        const applications = resolution?.ruleApplications;
+        // Prepaid counter receipts own their rule ledger. Their once-per-scene/
+        // day uses must survive replay just like the initiating attack's uses.
+        // Counter chains are prohibited, so one explicit nested level suffices.
+        const applications = [resolution, ...(resolution?.counterAttacks || []).map(counter => counter.resolution)]
+          .flatMap(entry => Array.isArray(entry?.ruleApplications) ? entry.ruleApplications : []);
         (Array.isArray(applications) ? applications : []).forEach(application => {
           const storedKey = text(application.usedKey, 500);
           if (storedKey) keys.add(storedKey);
