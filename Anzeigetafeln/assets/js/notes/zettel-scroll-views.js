@@ -24,7 +24,7 @@
   }
 
   function infoRows(rows){
-    return (rows || []).filter(row => row.k || row.v).map(row => `<tr>
+    return (rows || []).filter(row => String(row.v ?? '').trim()).map(row => `<tr>
       <th>${esc(row.k)}</th>
       <td>${row.type === 'stars' ? starValue(row) : esc(row.v)}</td>
     </tr>`).join('');

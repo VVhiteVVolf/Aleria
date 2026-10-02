@@ -62,6 +62,7 @@
     if (config.documentTitle) document.title = config.documentTitle;
     window.TafelBoard.init();
     window.TafelEditor.init();
+    window.TafelNoticeRegister.init();
     window.TafelZettelBoard.attachDragListeners();
 
     const loadPublishedOrDraft = () => window._fb.sub(remote => {

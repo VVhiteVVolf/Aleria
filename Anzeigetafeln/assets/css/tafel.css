@@ -1,4 +1,4 @@
-﻿:root{
+:root{
   --fs-xs:0.70rem;
   --fs-sm:0.80rem;
   --fs-md:0.84rem;
@@ -774,38 +774,38 @@ body.editor-resizing *{
   gap:.45rem;
 }
 .zettel-rich-editor p,
-.zettel-rich-content p{
+:where(.notice-copy, .quest-copy) p{
   margin:.35rem 0 .75rem;
 }
 .zettel-rich-editor h2,
 .zettel-rich-editor h3,
-.zettel-rich-content h2,
-.zettel-rich-content h3{
+:where(.notice-copy, .quest-copy) h2,
+:where(.notice-copy, .quest-copy) h3{
   font-family:'Cinzel',serif;
   color:#1f1608;
   line-height:1.25;
   margin:.7rem 0 .35rem;
 }
 .zettel-rich-editor h2,
-.zettel-rich-content h2{
+:where(.notice-copy, .quest-copy) h2{
   font-size:1.18rem;
   text-transform:uppercase;
   letter-spacing:.04em;
 }
 .zettel-rich-editor h3,
-.zettel-rich-content h3{
+:where(.notice-copy, .quest-copy) h3{
   font-size:1rem;
   letter-spacing:.03em;
 }
 .zettel-rich-editor ul,
 .zettel-rich-editor ol,
-.zettel-rich-content ul,
-.zettel-rich-content ol{
+:where(.notice-copy, .quest-copy) ul,
+:where(.notice-copy, .quest-copy) ol{
   margin:.35rem 0 .75rem 1.2rem;
   padding-left:1rem;
 }
 .zettel-rich-editor blockquote,
-.zettel-rich-content blockquote{
+:where(.notice-copy, .quest-copy) blockquote{
   margin:.55rem 0;
   padding:.35rem .75rem;
   border-left:3px solid #b89131;

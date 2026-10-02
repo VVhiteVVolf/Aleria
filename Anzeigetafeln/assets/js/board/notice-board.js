@@ -37,6 +37,17 @@
   function applyTransform() {
     const element = stage();
     if (element) element.style.transform = `translate(${translateX}px, ${translateY}px) scale(${zoom})`;
+    const readout = document.getElementById('board-zoom');
+    if (readout) readout.textContent = `${Math.round(zoom * 100)} %`;
+  }
+
+  function zoomBy(factor, screenX = viewport().clientWidth / 2, screenY = viewport().clientHeight / 2) {
+    const nextZoom = Math.max(0.05, Math.min(8, zoom * factor));
+    const actualFactor = nextZoom / zoom;
+    translateX = screenX - (screenX - translateX) * actualFactor;
+    translateY = screenY - (screenY - translateY) * actualFactor;
+    zoom = nextZoom;
+    applyTransform();
   }
 
   function fit() {
@@ -105,12 +116,7 @@
       const screenX = event.clientX - rect.left;
       const screenY = event.clientY - rect.top;
       const factor = event.deltaY < 0 ? 1.1 : 0.91;
-      const nextZoom = Math.max(0.05, Math.min(8, zoom * factor));
-      const actualFactor = nextZoom / zoom;
-      translateX = screenX - (screenX - translateX) * actualFactor;
-      translateY = screenY - (screenY - translateY) * actualFactor;
-      zoom = nextZoom;
-      applyTransform();
+      zoomBy(factor, screenX, screenY);
     }, { passive: false });
 
     wrap.addEventListener('pointerdown', event => {
@@ -174,6 +180,7 @@
   window.TafelBoard = Object.freeze({
     init,
     fit,
+    zoomBy,
     applyImage,
     startPlacement,
     cancelPlacement,

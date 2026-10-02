@@ -1,38 +1,38 @@
 (function(){
   window.ZETTEL_TYPES = [
     {
-      id:'quest', icon:'📜', color:'#1a1200', label:'Quest / Auftrag',
-      desc:'Mission, Bounty, Auftrag…',
+      id:'quest', icon:'⚔', color:'#765125', label:'Quest / Auftrag',
+      desc:'Botengänge, Jagdaufträge und Abenteuer',
       fields:['bild','text','portrait','verfasser'],
       table:[{k:'Auftraggeber',v:''},{k:'Belohnung',v:''},{k:'Frist',v:''},{k:'Zielort',v:''},{k:'Schwierigkeit',v:''}]
     },
     {
-      id:'steckbrief', icon:'🚨', color:'#c06060', label:'Steckbrief',
-      desc:'Gesucht, Kopfgeld…',
+      id:'steckbrief', icon:'⚔', color:'#843d35', label:'Steckbrief',
+      desc:'Gesuchte Personen und ausgesetzte Kopfgelder',
       fields:['skizze','text','daten'],
       table:[{k:'Alias',v:''},{k:'Kopfgeld',v:''},{k:'Vergehen',v:''},{k:'Zuletzt gesehen',v:''},{k:'Merkmale',v:''},{k:'Ausgestellt von',v:''}]
     },
     {
-      id:'zeitung', icon:'📰', color:'#8090b0', label:'Zeitungsartikel',
-      desc:'Pamphlet, Artikel, Nachrichten…',
+      id:'zeitung', icon:'❦', color:'#464037', label:'Zeitungsartikel',
+      desc:'Stadtboten, Pamphlete und Neuigkeiten',
       fields:['bild','artikel'],
       table:[{k:'Herausgeber',v:''},{k:'Datum',v:''},{k:'Ausgabe Nr.',v:''}]
     },
     {
-      id:'vermisst', icon:'❓', color:'#9060c8', label:'Vermisst',
-      desc:'Person, Tier, Gegenstand…',
+      id:'vermisst', icon:'♙', color:'#5c647e', label:'Vermisst',
+      desc:'Verschwundene Personen und vermisste Tiere',
       fields:['portrait','text'],
       table:[{k:'Name',v:''},{k:'Beschreibung',v:''},{k:'Zuletzt gesehen',v:''},{k:'Belohnung',v:''},{k:'Kontakt',v:''}]
     },
     {
-      id:'ankuendigung', icon:'📣', color:'#60a0c8', label:'Ankündigung',
-      desc:'Fest, Markt, Turnier…',
+      id:'ankuendigung', icon:'✧', color:'#426454', label:'Ankündigung',
+      desc:'Märkte, Turniere und öffentliche Feste',
       fields:['bild','text'],
       table:[{k:'Veranstaltung',v:''},{k:'Datum',v:''},{k:'Ort',v:''},{k:'Veranstalter',v:''}]
     },
     {
-      id:'notiz', icon:'📝', color:'#587366', label:'Mitteilung / Notiz',
-      desc:'Gerücht, Info, Sonstiges…',
+      id:'notiz', icon:'❧', color:'#587366', label:'Mitteilung / Notiz',
+      desc:'Kleine Botschaften, Gerüchte und Nachbarschaft',
       fields:['text'],
       table:[{k:'Kategorie',v:''},{k:'Quelle',v:''},{k:'Datum',v:''}]
     },
@@ -50,6 +50,26 @@
       id:'einladung', icon:'✧', color:'#786483', label:'Einladung',
       desc:'Feierlichkeiten, Zusammenkünfte und Feste', fields:['bild','text'],
       table:[{k:'Anlass',v:''},{k:'Wann',v:''},{k:'Wo',v:''},{k:'Gastgeber',v:''},{k:'Rückmeldung',v:''}]
+    },
+    {
+      id:'warnung', icon:'☠', color:'#833a2c', label:'Gefahrenwarnung',
+      desc:'Ungeheuer, gesperrte Wege und drohendes Unheil', fields:['bild','text'],
+      table:[{k:'Gefahr',v:''},{k:'Gebiet',v:''},{k:'Gesichtet am',v:''},{k:'Verhaltensregel',v:''},{k:'Meldestelle',v:''}]
+    },
+    {
+      id:'reise', icon:'✥', color:'#476063', label:'Reise & Geleit',
+      desc:'Karawanen, Weggefährten und bewaffnetes Geleit', fields:['bild','text'],
+      table:[{k:'Aufbruch',v:''},{k:'Ziel',v:''},{k:'Abreise',v:''},{k:'Treffpunkt',v:''},{k:'Gesucht',v:''},{k:'Entlohnung',v:''},{k:'Kontakt',v:''}]
+    },
+    {
+      id:'gilde', icon:'⚒', color:'#705336', label:'Gildenaufruf',
+      desc:'Lehrlinge, freie Stellen und neue Mitglieder', fields:['bild','text'],
+      table:[{k:'Gilde',v:''},{k:'Gesucht',v:''},{k:'Voraussetzungen',v:''},{k:'Geboten wird',v:''},{k:'Meldestelle',v:''},{k:'Frist',v:''}]
+    },
+    {
+      id:'fund', icon:'🗝︎', color:'#68613c', label:'Fundanzeige',
+      desc:'Verlorene Kleinode und wiedergefundene Schätze', fields:['bild','text'],
+      table:[{k:'Fundstück',v:''},{k:'Fundort',v:''},{k:'Gefunden am',v:''},{k:'Abzuholen bei',v:''},{k:'Eigentumsnachweis',v:''}]
     }
   ];
 
@@ -86,8 +106,8 @@
     },
     renderTypeCards(esc){
       return window.ZETTEL_TYPES.map(type => `
-        <button type="button" class="tpl-card" id="ztplc-${type.id}" data-action="select-zettel-type" data-zettel-type="${type.id}" style="border-color:${type.color || window.ZETTEL_BORDER[type.id] || '#c8a040'}55">
-          <span class="tpl-icon">${type.icon}</span>
+        <button type="button" class="tpl-card tpl-card--${type.id}" id="ztplc-${type.id}" data-action="select-zettel-type" data-zettel-type="${type.id}" aria-pressed="false" style="--template-ink:${type.color}">
+          <span class="tpl-specimen" aria-hidden="true"><span class="tpl-icon">${type.icon}</span><span class="tpl-specimen-rule"></span><span class="tpl-specimen-rule"></span></span>
           <span class="tpl-label">${type.label}</span>
           <span class="tpl-desc">${type.desc}</span>
         </button>`).join('');

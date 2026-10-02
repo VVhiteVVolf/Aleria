@@ -6,6 +6,7 @@
   let editMode = false;
   let pendingPosition = null;
   let selectedType = null;
+  let scrollOpener = null;
 
   const rt = () => window.TafelRuntime;
   const state = () => window.TafelState.get();
@@ -29,14 +30,14 @@
     if (!icon) return;
     icon.replaceChildren();
     if (!current.regionIcon) {
-      icon.textContent = '📜';
+      icon.textContent = '⚜';
       return;
     }
     const image = document.createElement('img');
     image.src = current.regionIcon;
     image.alt = '';
     image.addEventListener('error', () => {
-      icon.textContent = '📜';
+      icon.textContent = '⚜';
     }, { once: true });
     icon.append(image);
   }
@@ -69,7 +70,7 @@
 
   function enterEdit() {
     editMode = true;
-    document.getElementById('btn-edit').textContent = '🔓 Editormodus';
+    document.getElementById('btn-edit').textContent = '✓ Editormodus';
     document.getElementById('btn-edit').classList.add('on');
     document.getElementById('lock-lbl').textContent = 'aktiv';
     document.getElementById('edit-tools').hidden = false;
@@ -77,6 +78,7 @@
     document.getElementById('title').classList.add('editable');
     document.getElementById('region-icon-wrap').classList.add('editable');
     rt().renderZettel();
+    window.dispatchEvent(new CustomEvent('aleria:tafel:edit-mode'));
     rt().toast('Editormodus aktiviert');
   }
 
@@ -84,13 +86,14 @@
     editMode = false;
     cancelPlacement();
     closeSidebar();
-    document.getElementById('btn-edit').textContent = '🔒 Bearbeiten';
+    document.getElementById('btn-edit').textContent = '✎ Bearbeiten';
     document.getElementById('btn-edit').classList.remove('on');
     document.getElementById('lock-lbl').textContent = 'gesperrt';
     document.getElementById('edit-tools').hidden = true;
     document.getElementById('title').classList.remove('editable');
     document.getElementById('region-icon-wrap').classList.remove('editable');
     rt().renderZettel();
+    window.dispatchEvent(new CustomEvent('aleria:tafel:edit-mode'));
   }
 
   function editTitle() {
@@ -202,14 +205,22 @@
     selectedType = null;
     document.getElementById('zettel-type-grid').innerHTML = window.TafelZettelConfig.renderTypeCards(rt().esc);
     document.getElementById('zettel-tpl-apply-btn').disabled = true;
+    document.getElementById('notice-template-detail').textContent = 'Jede Vorlage bietet eigene Angaben, Bilder und Platz für deinen Wortlaut.';
     setHint('');
     modal('zettel-tpl-mo', true);
+    document.querySelector('#zettel-type-grid .tpl-card')?.focus();
   }
 
   function selectType(typeId) {
+    const template = window.TafelZettelConfig.typeById(typeId);
+    if (!template) return;
     selectedType = typeId;
-    document.querySelectorAll('#zettel-type-grid .tpl-card').forEach(card => card.classList.remove('on'));
-    document.getElementById(`ztplc-${typeId}`)?.classList.add('on');
+    document.querySelectorAll('#zettel-type-grid .tpl-card').forEach(card => {
+      const selected = card.dataset.zettelType === typeId;
+      card.classList.toggle('on', selected);
+      card.setAttribute('aria-pressed', String(selected));
+    });
+    document.getElementById('notice-template-detail').textContent = `${template.label} · ${template.table.map(row => row.k).join(' · ')}`;
     document.getElementById('zettel-tpl-apply-btn').disabled = false;
   }
 
@@ -233,56 +244,34 @@
     setHint('');
   }
 
-  function search(value) {
-    const results = document.getElementById('search-results');
-    const clear = document.getElementById('search-clear');
-    const query = String(value || '').trim().toLocaleLowerCase('de');
-    clear.style.display = query ? 'block' : 'none';
-    if (!query) {
-      results.style.display = 'none';
-      return;
-    }
-    const matches = state().zettel.filter(notice => {
-      if (notice.secret && !editMode) return false;
-      const type = window.TafelZettelConfig.typeById(notice.typ)?.label || '';
-      return `${notice.title || ''} ${notice.untertitel || ''} ${type}`.toLocaleLowerCase('de').includes(query);
-    }).slice(0, 12);
-    results.innerHTML = matches.length
-      ? matches.map(notice => {
-          const type = window.TafelZettelConfig.typeById(notice.typ);
-          return `<button type="button" class="sr-item" data-action="jump-to-notice" data-notice-id="${rt().esc(notice.id)}"><span>${type?.icon || '📜'}</span><span>${rt().esc(notice.title || type?.label || 'Aushang')}</span></button>`;
-        }).join('')
-      : '<div class="tafel-search-empty">Kein Aushang gefunden.</div>';
-    results.style.display = 'block';
-  }
-
-  function clearSearch() {
-    const input = document.getElementById('search-inp');
-    input.value = '';
-    search('');
-  }
-
   function jumpToNotice(id) {
     const notice = state().zettel.find(item => item.id === id);
     if (!notice) return;
-    clearSearch();
+
     window.TafelBoard.focusNotice(notice);
     window.setTimeout(() => openZettelScroll(id), 220);
   }
 
   function openZettelScroll(id) {
     const notice = state().zettel.find(item => item.id === id);
-    if (!notice) return;
+    if (!notice || (notice.secret && !editMode)) return;
+    if (!document.getElementById('scroll-mo').classList.contains('open')) scrollOpener = document.activeElement;
     document.getElementById('scroll-content').innerHTML = window.TafelZettelViews.renderLive(notice);
     document.getElementById('scroll-actions').innerHTML = editMode
       ? `<button class="s-btn s-edit" type="button" data-action="zettel-open-edit" data-zettel-id="${rt().esc(id)}">Bearbeiten</button><button class="s-btn s-cancel" type="button" data-action="close-scroll">Schließen</button>`
       : '<button class="s-btn s-cancel" type="button" data-action="close-scroll">Schließen</button>';
     document.getElementById('scroll-card').style.width = `min(${notice.cardWidth || state().cardWidth || 1100}px, calc(100vw - 32px))`;
+    document.getElementById('scroll-card').setAttribute('aria-label', notice.title || 'Aushang');
+    document.getElementById('scroll-content').scrollTop = 0;
     modal('scroll-mo', true);
+    document.querySelector('#scroll-card .scroll-close').focus();
   }
 
   function closeScroll() {
+    const wasOpen = document.getElementById('scroll-mo').classList.contains('open');
     modal('scroll-mo', false);
+    if (wasOpen && scrollOpener?.isConnected) scrollOpener.focus();
+    scrollOpener = null;
   }
 
   function clampEditorWidth(value) {
@@ -397,6 +386,14 @@
     document.getElementById('title-input').hidden = true;
     document.getElementById('notice-placement-cursor').hidden = true;
     window.addEventListener('keydown', event => {
+      if (document.querySelector('dialog[open]')) return;
+      if (event.key === 'Tab' && document.getElementById('scroll-mo').classList.contains('open')) {
+        const focusable = [...document.querySelectorAll('#scroll-card button, #scroll-card a[href], #scroll-card input, #scroll-card textarea, #scroll-card summary')].filter(element => !element.disabled && element.getClientRects().length);
+        const first = focusable[0];
+        const last = focusable.at(-1);
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+        if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+      }
       if (event.key === 'Escape') {
         cancelPlacement();
         closeScroll();
@@ -431,8 +428,6 @@
     selectType,
     applyTemplate,
     cancelPlacement,
-    search,
-    clearSearch,
     jumpToNotice,
     openZettelScroll,
     closeScroll,

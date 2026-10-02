@@ -15,13 +15,6 @@
   height: 100%;
 }
 
-.tafel-topbar {
-  flex-wrap: nowrap !important;
-  gap: .42rem !important;
-  overflow-x: auto;
-  overflow-y: visible;
-}
-
 .tafel-place-mark {
   padding: 0;
 }

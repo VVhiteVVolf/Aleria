@@ -20,9 +20,9 @@ function feature() {
   return { ...context.window, events };
 }
 
-test('all nine templates render entered facts, text and six media slots without changing the saved notice', () => {
+test('all thirteen templates render entered facts, text and six media slots without changing the saved notice', () => {
   const app = feature();
-  assert.equal(app.ZETTEL_TYPES.length, 9);
+  assert.equal(app.ZETTEL_TYPES.length, 13);
   for (const type of app.ZETTEL_TYPES) {
     const notice = app.TafelZettelConfig.createDraft(type.id, {x:.3,y:.5}, () => 'notice');
     notice.text = '<p>Ein vorhandener Text</p>';
@@ -46,6 +46,33 @@ test('empty facts do not create empty rows; star values are bounded and labels e
   assert.match(html, /5 von 5/);
   assert.match(html, /&lt;unsafe&gt;/);
   assert.doesNotMatch(html, /<script>|<img>/);
+});
+
+test('prominent template facts are rendered once, preserve custom rows and escape their values', () => {
+  const app = feature();
+  for (const [type, key] of [['handel', 'Preis'], ['reise', 'Aufbruch'], ['warnung', 'Gefahr'], ['gilde', 'Gesucht'], ['fund', 'Fundstück']]) {
+    const notice = app.TafelZettelConfig.createDraft(type, {x:0,y:0}, () => type);
+    notice.table = [{ k: key, v: '<Besonderer Wert>' }, { k: 'Eigene Angabe', v: 'Bleibt erhalten' }];
+    const html = app.TafelZettelViews.renderByType(notice);
+    assert.match(html, /notice-highlight/);
+    assert.equal(html.split('&lt;Besonderer Wert&gt;').length - 1, 1, type);
+    assert.match(html, /Bleibt erhalten/);
+  }
+});
+
+test('drafts do not share mutable template fields and new types survive the saved-state roundtrip', () => {
+  const app = feature();
+  for (const type of ['warnung', 'reise', 'gilde', 'fund']) {
+    const first = app.TafelZettelConfig.createDraft(type, {x:.4,y:.7}, () => type);
+    const second = app.TafelZettelConfig.createDraft(type, {x:.5,y:.5}, () => 'second');
+    first.table[0].v = 'Ausgefüllt';
+    assert.equal(second.table[0].v, '');
+    assert.equal(app.TafelZettelConfig.typeById(type).table[0].v, '');
+    app.TafelState.apply({zettel:[first]});
+    app.TafelState.apply(JSON.parse(JSON.stringify(app.TafelState.snapshot())));
+    assert.equal(app.TafelState.get().zettel[0].typ, type);
+    assert.equal(app.TafelState.get().zettel[0].table[0].v, 'Ausgefüllt');
+  }
 });
 
 test('media sources normalize Imgur single links and reject executable URLs and albums', () => {

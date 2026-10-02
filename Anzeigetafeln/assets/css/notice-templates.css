@@ -1,0 +1,25 @@
+/* The writing-room catalogue shows a small print specimen for every template. */
+#zettel-tpl-mo .tafel-dialog--wide { width: min(1060px, calc(100vw - 32px)); }
+.notice-type-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .8rem; }
+.notice-type-grid .tpl-card { position: relative; min-width: 0; padding: 1rem .8rem .9rem; gap: .4rem; border: 1px solid #baa276; border-radius: 1px; background: var(--parch), #f7eccf; color: var(--template-ink); box-shadow: 1px 3px 0 #74542112; }
+.notice-type-grid .tpl-card:hover { transform: translateY(-2px); border-color: var(--template-ink); background-color: #fff5dd; }
+.notice-type-grid .tpl-card.on { outline: 2px solid var(--template-ink); outline-offset: 2px; border-color: var(--template-ink); background-color: #eddfbf; }
+.notice-type-grid .tpl-card.on::after { content: '✓'; position: absolute; top: .3rem; right: .5rem; font-size: 1rem; }
+.tpl-specimen { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .35rem; width: 75px; height: 83px; padding: .6rem; border: 3px double currentColor; color: var(--template-ink); margin-bottom: .2rem; opacity: .85; }
+.tpl-specimen .tpl-icon { font-size: 1.75rem; line-height: 1; margin-bottom: .3rem; }
+.tpl-specimen-rule { width: 100%; height: 1px; background: currentColor; opacity: .45; }
+.tpl-specimen-rule:last-child { width: 70%; }
+.tpl-card--notiz .tpl-specimen { border: 0; transform: rotate(-5deg); background: #dfd3b5; }
+.tpl-card--zeitung .tpl-specimen { width: 90px; border-width: 1px; background: repeating-linear-gradient(0deg, transparent 0 6px, #5c54351a 6px 7px); }
+.tpl-card--steckbrief .tpl-specimen { border-width: 4px; background: #ddc9a580; }
+.tpl-card--einladung .tpl-specimen { border-radius: 40px 40px 0 0; }
+.tpl-card--warnung .tpl-specimen { border-width: 5px 1px; border-style: solid; }
+.tpl-card--reise .tpl-specimen { border-style: dashed; border-width: 1px; }
+.tpl-card--gilde .tpl-specimen { border-radius: 0 0 40% 40%; }
+.tpl-card--fund .tpl-specimen { border-width: 1px; transform: rotate(3deg); }
+.notice-type-grid .tpl-label { color: var(--template-ink); font-size: .76rem; }
+.notice-type-grid .tpl-desc { color: #7c6749; font-size: .92rem; line-height: 1.3; }
+.notice-template-detail { min-height: 2.7rem; color: #6c5334; font: .85rem/1.5 'EB Garamond', serif; border-top: 1px solid #c3ac7e; padding-top: .8rem; }
+@media (max-width: 800px) { .notice-type-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 540px) { .notice-type-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (prefers-reduced-motion: reduce) { .notice-type-grid .tpl-card { transition: none; } }

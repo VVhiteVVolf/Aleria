@@ -61,6 +61,19 @@
         if(!rt().isEditMode()) moveTooltip(e.clientX, e.clientY);
       });
       el.addEventListener('mouseleave', hideTooltip);
+      el.addEventListener('focus', () => {
+        if (!rt().isEditMode()) {
+          const rect = el.getBoundingClientRect();
+          showTooltip(z, rect.right, rect.top + rect.height / 2);
+        }
+      });
+      el.addEventListener('blur', hideTooltip);
+      el.addEventListener('click', event => {
+        if (event.detail !== 0) return;
+        hideTooltip();
+        if (rt().canEditZettel()) window.openZettelSidebar(z.id, 'edit');
+        else window.openZettelScroll(z.id);
+      });
       el.addEventListener('mousedown', e => {
         if(e.button !== 0) return;
         e.stopPropagation();
@@ -79,6 +92,7 @@
         e.stopPropagation();
         const dist = Math.hypot(e.clientX - downX, e.clientY - downY);
         if(dist < 5){
+          hideTooltip();
           if(rt().canEditZettel()) window.openZettelSidebar(z.id, 'edit');
           else window.openZettelScroll(z.id);
         }

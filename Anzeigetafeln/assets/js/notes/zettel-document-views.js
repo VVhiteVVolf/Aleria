@@ -12,6 +12,10 @@
     erlass: { kicker: 'Kund und zu wissen', label: 'Amtlicher Erlass', symbol: '⚜' },
     einladung: { kicker: 'In guter Gesellschaft', label: 'Einladung', symbol: '✧' },
     steckbrief: { kicker: 'Im Namen von Recht und Krone', label: 'Gesucht', symbol: '⚔' },
+    warnung: { kicker: 'Reisende, seid gewarnt', label: 'Gefahrenwarnung', symbol: '☠' },
+    reise: { kicker: 'Auf den Straßen Alerias', label: 'Reise & Geleit', symbol: '✥' },
+    gilde: { kicker: 'Handwerk, Ehre und Gemeinschaft', label: 'Gildenaufruf', symbol: '⚒' },
+    fund: { kicker: 'Dem rechtmäßigen Eigentümer', label: 'Fundanzeige', symbol: '🗝︎' },
   };
 
   function facts(rows) {
@@ -25,12 +29,12 @@
   }
 
   function footer(z) {
-    const author = z.verfasserName || (z.table || []).find(row => /^(quelle|kontakt|ausgestellt von|veranstalter|herausgeber|gastgeber)$/i.test(row.k) && row.v)?.v;
+    const author = z.verfasserName || (z.table || []).find(row => /^(quelle|kontakt|ausgestellt von|veranstalter|herausgeber|gastgeber|gilde|meldestelle|abzuholen bei)$/i.test(row.k) && row.v)?.v;
     return `<footer class="notice-signoff">
-      <div class="notice-author">${media(z, 'verfasser', { className: 'notice-author-portrait', label: 'Verfasser', symbol: '♙' })}
-        <div><span class="notice-eyebrow">Ausgegeben von</span><strong>${esc(author || 'Unbekannter Verfasser')}</strong></div></div>
-      ${media(z, 'unterschrift', { className: 'notice-signature', label: 'Unterschrift', symbol: '✒︎', fit: 'contain' })}
-      ${media(z, 'siegel', { className: 'notice-seal', label: 'Siegel', symbol: '⚜', fit: 'contain' })}
+      <div class="notice-author">${hasMedia(z, 'verfasser') ? media(z, 'verfasser', { className: 'notice-author-portrait', label: 'Verfasser', symbol: '♙' }) : ''}
+        <div><span class="notice-eyebrow">${author ? 'Ausgegeben von' : 'Am schwarzen Brett'}</span><strong>${esc(author || 'Ohne Namenszeichen')}</strong></div></div>
+      ${hasMedia(z, 'unterschrift') ? media(z, 'unterschrift', { className: 'notice-signature', label: 'Unterschrift', fit: 'contain' }) : ''}
+      ${hasMedia(z, 'siegel') || ['erlass','steckbrief','gilde'].includes(z.typ) ? media(z, 'siegel', { className: 'notice-seal', label: 'Siegel', symbol: '⚜', fit: 'contain' }) : '<span class="notice-endmark" aria-hidden="true">❦</span>'}
     </footer>`;
   }
 
@@ -38,7 +42,7 @@
     return `<header class="notice-heading">
       ${media(z, 'emblem', { className: 'notice-emblem', label: 'Emblem', symbol: style.symbol, fit: 'contain' })}
       <div><span class="notice-eyebrow">${style.kicker}</span><h2>${esc(title || z.title || style.label)}</h2>${z.untertitel ? `<p class="notice-subtitle">${esc(z.untertitel)}</p>` : ''}</div>
-      <span class="notice-edition">${style.label}</span>
+      <span class="notice-edition"><span aria-hidden="true">◆</span> ${esc(style.label)} <span aria-hidden="true">◆</span></span>
     </header>`;
   }
 
@@ -49,6 +53,25 @@
   function illustration(z, field = 'bild') {
     if (!z[field] && !z.media?.[field]) return '';
     return `<figure class="notice-illustration">${media(z, field, { label: 'Illustration' })}</figure>`;
+  }
+
+  function hasMedia(z, field) { return Boolean(z[field] || z.media?.[field]); }
+
+  // Emphasize a template's defining facts without duplicating or discarding custom rows.
+  function proclamation(z) {
+    const keyFields = {
+      handel: ['Preis'], warnung: ['Gefahr', 'Gebiet'], reise: ['Aufbruch', 'Ziel'],
+      gilde: ['Gesucht'], fund: ['Fundstück'], einladung: ['Wann', 'Wo'],
+      ankuendigung: ['Datum', 'Ort'], erlass: ['Gültig ab', 'Geltungsbereich'],
+    }[z.typ] || [];
+    const prominent = row => keyFields.some(key => key.toLocaleLowerCase('de') === String(row.k).trim().toLocaleLowerCase('de'));
+    const rows = z.table || [];
+    const highlight = facts(rows.filter(prominent));
+    return `${highlight ? `<div class="notice-highlight">${highlight}</div>` : ''}
+      <div class="notice-proclamation${hasMedia(z, 'bild') || hasMedia(z, 'portrait') ? ' has-illustration' : ''}">
+        ${hasMedia(z, 'bild') || hasMedia(z, 'portrait') ? `<div class="notice-artwork">${illustration(z)}${illustration(z, 'portrait')}</div>` : ''}
+        <div class="notice-wording">${copy(z.text)}${facts(rows.filter(row => !prominent(row)))}</div>
+      </div>`;
   }
 
   function missing(z) {
@@ -70,7 +93,7 @@
     const style = styles[type];
     const title = type === 'zeitung' ? z.verlag || z.verfasserName || z.title : z.title;
     const body = type === 'vermisst' ? missing(z) : type === 'zeitung' ? newspaper(z)
-      : `${facts(z.table)}${illustration(z)}${illustration(z, 'portrait')}${copy(z.text)}`;
+      : proclamation(z);
     return `<article class="zettel-rich-content notice-document notice-document--${type}" style="--notice-portrait-width:${portraitWidth(z)}px">
       ${header(z, style, title)}<div class="notice-document-body">${body}</div>${footer(z)}</article>`;
   }

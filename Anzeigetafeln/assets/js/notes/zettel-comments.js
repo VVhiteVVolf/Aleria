@@ -55,20 +55,22 @@
     const comments = commentsOf(zettel);
     return `<section class="zettel-comments" data-zettel-comments="${esc(zettel.id)}">
       <div class="zettel-comments-head">
-        <h3>Kommentare</h3>
+        <h3>Randnotizen & Antworten</h3>
         <span>${comments.length} Eintrag${comments.length === 1 ? '' : 'e'}</span>
       </div>
       <div class="zettel-comments-list">
         ${comments.length
           ? comments.map(comment => renderComment(comment, zettel.id)).join('')
-          : '<p class="zettel-comments-empty">Noch keine Kommentare vorhanden.</p>'}
+          : '<p class="zettel-comments-empty">Noch hat niemand eine Antwort hinterlassen.</p>'}
       </div>
-      <div class="zettel-comment-compose">
-        <div class="notice-comment-image"><input type="url" class="e-inp" data-zettel-comment-avatar placeholder="Avatarbild-URL, optional"><button type="button" class="s-btn s-cancel" data-action="zettel-comment-image" data-zettel-id="${esc(zettel.id)}">Bild wählen</button></div>
-        <input type="text" class="e-inp" data-zettel-comment-name placeholder="Name, optional">
-        <textarea class="e-ta" rows="3" data-zettel-comment-text placeholder="Kommentar hinterlassen..."></textarea>
-        <button type="button" class="s-btn s-save" data-action="zettel-comment-add" data-zettel-id="${esc(zettel.id)}">Kommentar eintragen</button>
-      </div>
+      <details class="notice-reply"><summary>Eine Antwort hinterlassen</summary>
+        <div class="zettel-comment-compose">
+          <label>Dein Name <input type="text" class="e-inp" data-zettel-comment-name placeholder="Ohne Namen bleibt die Antwort anonym"></label>
+          <div><label for="comment-avatar-${esc(zettel.id)}">Bild oder Charakter (optional)</label><div class="notice-comment-image"><input id="comment-avatar-${esc(zettel.id)}" type="url" class="e-inp" data-zettel-comment-avatar placeholder="Bildadresse …"><button type="button" class="s-btn s-cancel" data-action="zettel-comment-image" data-zettel-id="${esc(zettel.id)}">Wählen</button></div></div>
+          <label class="notice-comment-message">Deine Nachricht <textarea class="e-ta" rows="3" data-zettel-comment-text placeholder="Setze deine Worte unter den Aushang …"></textarea></label>
+          <button type="button" class="s-btn s-save" data-action="zettel-comment-add" data-zettel-id="${esc(zettel.id)}">Antwort anschlagen</button>
+        </div>
+      </details>
     </section>`;
   }
 

@@ -7,6 +7,9 @@
     'edit-title': () => editor().editTitle(),
     'toggle-edit': () => editor().toggleEdit(),
     'fit-board': () => window.TafelBoard.fit(),
+    'toggle-notice-register': () => window.TafelNoticeRegister.toggle(),
+    'zoom-board-in': () => window.TafelBoard.zoomBy(1.2),
+    'zoom-board-out': () => window.TafelBoard.zoomBy(1 / 1.2),
     'start-add-zettel': () => editor().startAddZettel(),
     'open-board-images': () => editor().openBoardImages(),
     'save-board-images': () => editor().saveBoardImages(),
@@ -27,7 +30,7 @@
     'select-zettel-type': element => editor().selectType(element.dataset.zettelType),
     'apply-zettel-template': () => editor().applyTemplate(),
     'cancel-zettel-placement': () => editor().cancelPlacement(),
-    'clear-search': () => editor().clearSearch(),
+    'clear-search': () => window.TafelNoticeRegister.clearSearch(),
     'jump-to-notice': element => editor().jumpToNotice(element.dataset.noticeId),
     'close-sidebar': () => editor().closeSidebar(),
     'close-scroll': () => editor().closeScroll(),
@@ -66,7 +69,7 @@
   };
 
   const inputActions = {
-    'search-notices': element => editor().search(element.value),
+    'search-notices': element => window.TafelNoticeRegister.search(element.value),
     'preview-region-icon': () => editor().previewIcon(),
     'preview-board-image': () => editor().previewBoardImage(),
     'zettel-field': element => window.zettelField(element.dataset.field, element.type === 'checkbox' ? element.checked : element.value),

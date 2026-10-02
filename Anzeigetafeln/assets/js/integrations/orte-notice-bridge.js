@@ -28,11 +28,7 @@
       name: String(notice.title || "Ohne Titel"),
       type: String(window.TafelZettelConfig.typeById(notice.typ)?.label || "Aushang"),
       description: text(notice.text),
-      searchText: [
-        ...searchFields(notice),
-        ...(notice.artikel || []).flatMap(article => [article.titel, text(article.text)]),
-        ...(notice.personen || []).flatMap(person => [person.title, ...searchFields(person)]),
-      ].filter(Boolean).join(" "),
+      searchText: window.TafelNoticeSearch.fields(notice).join(" "),
     }));
     window.parent.postMessage(
       { type: "aleria:map-pois", mapId, pois },
@@ -44,8 +40,4 @@
     return window.TafelZettelRichText.textPreview(value || "", Number.MAX_SAFE_INTEGER);
   }
 
-  function searchFields(notice) {
-    return [notice.untertitel, notice.verfasserName, text(notice.text),
-      ...(notice.table || []).map(row => `${row.k || ""} ${row.v || ""}`)];
-  }
 })();

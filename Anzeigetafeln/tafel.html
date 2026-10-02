@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anzeigetafel – Aleria</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/tafel.css?v=20260923">
-  <link rel="stylesheet" href="assets/css/notice-board.css?v=20260923">
-  <link rel="stylesheet" href="assets/css/notice-documents.css?v=20260923">
-  <link rel="stylesheet" href="assets/css/notice-media.css?v=20260923">
-  <link rel="stylesheet" href="assets/css/notice-theme.css?v=20260923">
+  <link rel="stylesheet" href="assets/css/tafel.css?v=20261002">
+  <link rel="stylesheet" href="assets/css/notice-board.css?v=20261002">
+  <link rel="stylesheet" href="assets/css/notice-documents.css?v=20261002">
+  <link rel="stylesheet" href="assets/css/notice-media.css?v=20261002">
+  <link rel="stylesheet" href="assets/css/notice-theme.css?v=20261002">
+  <link rel="stylesheet" href="assets/css/notice-register.css?v=20261002">
+  <link rel="stylesheet" href="assets/css/notice-templates.css?v=20261002">
 
   <script src="tafeln.registry.js"></script>
   <script>
@@ -71,25 +73,17 @@
     }
   })();
   </script>
-  <script src="assets/js/tafel-storage.js?v=20260923"></script>
-  <script src="assets/js/notes/zettel-config.js?v=20260923"></script>
+  <script src="assets/js/tafel-storage.js?v=20261002"></script>
+  <script src="assets/js/notes/zettel-config.js?v=20261002"></script>
 </head>
 <body>
   <div class="tafel-app-shell">
     <header id="topbar" class="tafel-topbar">
-      <button id="region-icon-wrap" class="tafel-place-mark" type="button" data-action="edit-region-icon" aria-label="Tafelsymbol bearbeiten">📜</button>
-      <span id="title" class="tafel-title" data-action="edit-title">Anzeigetafel</span>
+      <button id="region-icon-wrap" class="tafel-place-mark" type="button" data-action="edit-region-icon" aria-label="Tafelsymbol bearbeiten">⚜</button>
+      <div class="tafel-heading"><span class="tafel-kicker">Kunde & Bekanntmachungen</span><span id="title" class="tafel-title" data-action="edit-title">Anzeigetafel</span></div>
       <input id="title-input" class="tafel-title-input" maxlength="60" data-blur-action="save-title-edit" data-keydown-action="title-edit">
-      <span class="tafel-mode-plaque" aria-label="Einzelne Tafelebene">Aushänge</span>
-
-      <div id="search-wrap" class="tafel-search">
-        <input id="search-inp" type="search" placeholder="Aushang suchen …" data-input-action="search-notices" autocomplete="off">
-        <button id="search-clear" type="button" data-action="clear-search" aria-label="Suche leeren">×</button>
-        <div id="search-results"></div>
-      </div>
-
-      <button class="tbtn" id="btn-fit" type="button" data-action="fit-board">⛶ Einpassen</button>
-      <button class="tbtn" id="btn-edit" type="button" data-action="toggle-edit">🔒 Bearbeiten</button>
+      <button class="tbtn tafel-register-toggle" id="btn-register" type="button" data-action="toggle-notice-register" aria-expanded="false" aria-controls="notice-register">Verzeichnis <span id="notice-count">0</span></button>
+      <button class="tbtn" id="btn-edit" type="button" data-action="toggle-edit">✎ Bearbeiten</button>
       <span id="lock-lbl">gesperrt</span>
 
       <div id="edit-tools" class="tafel-edit-tools" hidden>
@@ -106,13 +100,37 @@
       </div>
     </header>
 
-    <main id="board-viewport" class="notice-board-viewport" aria-label="Interaktive Anzeigetafel">
+    <div class="tafel-workspace">
+      <aside id="notice-register" class="notice-register" aria-label="Aushangverzeichnis" hidden>
+        <header class="notice-register-heading"><span aria-hidden="true">❧</span><div><p>Am schwarzen Brett</p><h1>Aushänge</h1></div><button type="button" data-action="toggle-notice-register" aria-label="Verzeichnis schließen">×</button></header>
+        <div class="notice-register-filters">
+          <label for="search-inp">Das Brett durchsuchen</label>
+          <div id="search-wrap" class="tafel-search">
+            <input id="search-inp" type="search" placeholder="Titel, Ort, Name oder Wortlaut …" data-input-action="search-notices" autocomplete="off">
+            <button id="search-clear" type="button" data-action="clear-search" aria-label="Suche leeren">×</button>
+          </div>
+          <label for="notice-type-filter">Art des Aushangs</label>
+          <select id="notice-type-filter" data-role="notice-type-filter"><option value="">Alle Aushänge</option></select>
+        </div>
+        <p class="notice-register-count" data-role="notice-result-count" aria-live="polite"></p>
+        <div class="notice-register-list" data-role="notice-register-list"></div>
+        <footer class="notice-register-footer">Ein Nagel hält ein Blatt.<br>Ein Blatt beginnt ein Abenteuer.</footer>
+      </aside>
+      <main id="board-viewport" class="notice-board-viewport" aria-label="Interaktive Anzeigetafel">
       <div id="board-stage" class="notice-board-stage">
         <img id="ln" class="notice-board-image" alt="Anzeigetafel" draggable="false">
         <div id="zettel-layer" class="notice-layer" aria-label="Aushänge"></div>
       </div>
       <div id="notice-placement-cursor" class="notice-placement-cursor" aria-hidden="true">📌</div>
-    </main>
+      </main>
+    </div>
+    <footer class="tafel-board-tools">
+      <p><span aria-hidden="true">✥</span> Nägel öffnen Aushänge <span class="tafel-board-tip">· Ziehen verschiebt die Tafel</span></p>
+      <div class="tafel-zoom-controls" role="group" aria-label="Tafelansicht">
+        <button type="button" data-action="zoom-board-out" aria-label="Verkleinern">−</button><output id="board-zoom" aria-label="Vergrößerung">100 %</output><button type="button" data-action="zoom-board-in" aria-label="Vergrößern">+</button>
+        <button id="btn-fit" type="button" data-action="fit-board">Einpassen</button>
+      </div>
+    </footer>
   </div>
 
   <div class="mo" id="pw-mo">
@@ -166,11 +184,12 @@
   </div>
 
   <div class="mo" id="zettel-tpl-mo">
-    <section class="lmc tafel-dialog tafel-dialog--wide">
-      <header class="lmh"><span>📜 Art des Aushangs</span><button type="button" data-action="cancel-zettel-placement">×</button></header>
+    <section class="lmc tafel-dialog tafel-dialog--wide" role="dialog" aria-modal="true" aria-label="Vorlage für einen Aushang wählen">
+      <header class="lmh"><span>Die Schreibstube · Einen Aushang verfassen</span><button type="button" data-action="cancel-zettel-placement" aria-label="Vorlagenauswahl schließen">×</button></header>
       <div class="lmb-body">
-        <p class="tafel-dialog-copy">Wähle die Form des Aushangs. Inhalt und Gestaltung lassen sich anschließend vollständig bearbeiten.</p>
+        <p class="tafel-dialog-copy">Welches Blatt soll an die Tafel? Wähle eine Vorlage und gib ihr deine eigene Geschichte.</p>
         <div id="zettel-type-grid" class="notice-type-grid"></div>
+        <p id="notice-template-detail" class="notice-template-detail" aria-live="polite">Jede Vorlage bietet eigene Angaben, Bilder und Platz für deinen Wortlaut.</p>
       </div>
       <footer class="lmb-footer">
         <button class="s-btn s-cancel" type="button" data-action="cancel-zettel-placement">Abbrechen</button>
@@ -237,7 +256,7 @@
   <aside id="sidebar" aria-label="Aushang bearbeiten"></aside>
 
   <div class="mo scroll-mo" id="scroll-mo">
-    <section class="scroll-card" id="scroll-card">
+    <section class="scroll-card" id="scroll-card" role="dialog" aria-modal="true" aria-label="Aushang">
       <button class="scroll-close" type="button" data-action="close-scroll" aria-label="Schließen">×</button>
       <div id="scroll-content"></div>
       <footer id="scroll-actions"></footer>
@@ -248,25 +267,27 @@
   <div id="hint"></div>
   <div id="toast"></div>
 
-  <script src="assets/js/core/tafel-state.js?v=20260923"></script>
-  <script src="assets/js/board/notice-board.js?v=20260923"></script>
-  <script src="assets/js/tafel-app.js?v=20260923"></script>
-  <script src="assets/js/notes/zettel-rich-text.js?v=20260923"></script>
-  <script src="assets/js/notes/zettel-comments.js?v=20260923"></script>
+  <script src="assets/js/core/tafel-state.js?v=20261002"></script>
+  <script src="assets/js/board/notice-board.js?v=20261002"></script>
+  <script src="assets/js/tafel-app.js?v=20261002"></script>
+  <script src="assets/js/notes/zettel-rich-text.js?v=20261002"></script>
+  <script src="assets/js/notes/notice-search.js?v=20261002"></script>
+  <script src="assets/js/board/notice-register.js?v=20261002"></script>
+  <script src="assets/js/notes/zettel-comments.js?v=20261002"></script>
   <script src="../AleriaAlmanach/modules/icon-directory/icon-directory-data.js"></script>
   <script src="../Karten/assets/js/media/media-assets.registry.js"></script>
-  <script src="assets/js/media/notice-media-model.js?v=20260923"></script>
-  <script src="assets/js/media/notice-media-upload.js?v=20260923"></script>
-  <script src="assets/js/media/notice-media-picker.js?v=20260923"></script>
-  <script src="assets/js/notes/zettel-document-views.js?v=20260923"></script>
-  <script src="assets/js/notes/zettel-scroll-views.js?v=20260923"></script>
-  <script src="assets/js/notes/zettel-editor.js?v=20260923"></script>
-  <script src="assets/js/notes/zettel-board.js?v=20260923"></script>
-  <script src="assets/js/data/notice-data-manager.js?v=20260923"></script>
-  <script src="assets/js/editor/notice-editor.js?v=20260923"></script>
-  <script src="assets/js/core/tafel-publish-ui.js?v=20260923"></script>
-  <script src="assets/js/core/tafel-actions.js?v=20260923"></script>
-  <script src="assets/js/integrations/orte-notice-bridge.js?v=20261001a"></script>
-  <script src="assets/js/core/tafel-bootstrap.js?v=20260923"></script>
+  <script src="assets/js/media/notice-media-model.js?v=20261002"></script>
+  <script src="assets/js/media/notice-media-upload.js?v=20261002"></script>
+  <script src="assets/js/media/notice-media-picker.js?v=20261002"></script>
+  <script src="assets/js/notes/zettel-document-views.js?v=20261002"></script>
+  <script src="assets/js/notes/zettel-scroll-views.js?v=20261002"></script>
+  <script src="assets/js/notes/zettel-editor.js?v=20261002"></script>
+  <script src="assets/js/notes/zettel-board.js?v=20261002"></script>
+  <script src="assets/js/data/notice-data-manager.js?v=20261002"></script>
+  <script src="assets/js/editor/notice-editor.js?v=20261002"></script>
+  <script src="assets/js/core/tafel-publish-ui.js?v=20261002"></script>
+  <script src="assets/js/core/tafel-actions.js?v=20261002"></script>
+  <script src="assets/js/integrations/orte-notice-bridge.js?v=20261002"></script>
+  <script src="assets/js/core/tafel-bootstrap.js?v=20261002"></script>
 </body>
 </html>

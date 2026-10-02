@@ -27,6 +27,7 @@ for (const kind of ["map", "board"]) {
     const file = kind === "map"
       ? "../../Karten/assets/js/integrations/orte-poi-bridge.js"
       : "../../Anzeigetafeln/assets/js/integrations/orte-notice-bridge.js";
+    if (kind === "board") vm.runInNewContext(readFileSync(new URL("../../Anzeigetafeln/assets/js/notes/notice-search.js", import.meta.url), "utf8"), { window });
     vm.runInNewContext(readFileSync(new URL(file, import.meta.url), "utf8"), { window });
     const message = (type, extra = {}, event = {}) => listeners.get("message")({
       source: parent, origin: window.location.origin, data: { type, mapId: "example", ...extra }, ...event,
