@@ -5,6 +5,7 @@
 .tafel-heading { flex: 1 1 260px; min-width: 0; }
 .tafel-kicker { display: block; color: #ba9b63; font: .6rem/1.5 'Cinzel', serif; letter-spacing: .2em; margin-bottom: .15rem; }
 #title { display: block; font-size: clamp(.9rem, 1.4vw, 1.2rem); text-shadow: none; white-space: normal; }
+#title[hidden] { display: none; }
 #title-input { color: #342615; background: #f4e8c9; }
 #lock-lbl { display: none; }
 .tafel-register-toggle { display: flex; gap: .65rem; align-items: center; }

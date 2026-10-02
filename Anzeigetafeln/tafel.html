@@ -80,8 +80,11 @@
   <div class="tafel-app-shell">
     <header id="topbar" class="tafel-topbar">
       <button id="region-icon-wrap" class="tafel-place-mark" type="button" data-action="edit-region-icon" aria-label="Tafelsymbol bearbeiten">⚜</button>
-      <div class="tafel-heading"><span class="tafel-kicker">Kunde & Bekanntmachungen</span><span id="title" class="tafel-title" data-action="edit-title">Anzeigetafel</span></div>
-      <input id="title-input" class="tafel-title-input" maxlength="60" data-blur-action="save-title-edit" data-keydown-action="title-edit">
+      <div class="tafel-heading">
+        <span class="tafel-kicker">Kunde & Bekanntmachungen</span>
+        <span id="title" class="tafel-title" data-action="edit-title">Anzeigetafel</span>
+        <input id="title-input" class="tafel-title-input" maxlength="60" aria-label="Name der Anzeigetafel" data-blur-action="save-title-edit" data-keydown-action="title-edit">
+      </div>
       <button class="tbtn tafel-register-toggle" id="btn-register" type="button" data-action="toggle-notice-register" aria-expanded="false" aria-controls="notice-register">Verzeichnis <span id="notice-count">0</span></button>
       <button class="tbtn" id="btn-edit" type="button" data-action="toggle-edit">✎ Bearbeiten</button>
       <span id="lock-lbl">gesperrt</span>

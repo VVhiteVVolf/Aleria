@@ -70,6 +70,12 @@ try {
   await page.locator('#pw-inp').fill('7777');
   await page.getByRole('button', { name: 'Freischalten', exact: true }).click();
   assert.equal(await page.locator('.notice-register-entry').count(), 14);
+  await page.locator('#title').click();
+  assert.equal(await page.locator('#title').isVisible(), false);
+  await page.locator('#title-input').fill('Gwynthors schwarzes Brett');
+  await page.locator('#title-input').press('Enter');
+  assert.equal(await page.locator('#title').textContent(), 'Gwynthors schwarzes Brett');
+  assert.equal(await page.locator('#title-input').isVisible(), false);
   await page.locator('#btn-add-zettel').click();
   await page.locator('#board-viewport').click({ position: { x: 35, y: 35 } });
   assert.equal(await page.locator('#zettel-type-grid .tpl-card').count(), 13);
