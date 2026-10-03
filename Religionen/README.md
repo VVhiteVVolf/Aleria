@@ -23,6 +23,7 @@ Eigenständiger, statischer Codex unter `Religionen/index.html`, erreichbar übe
 - `modules/lore`: strukturierte Absätze, Zwischenüberschriften, Gabenlisten, Namensregister und gemeinsame Lehre.
 - `modules/book-shell`: eigene, gekapselte Gestaltung des Codex; Pergament, Serifenschrift, Grün und Gold nehmen Klassen und Bestiarium auf.
 - `modules/content`: Einlesen, Validierung und sichere HTML-Ausgabe zur Erzeugungszeit; keine Laufzeit-Fetch-Kaskaden.
+- `modules/almanach`: erzeugt die mehrseitigen Religionsmodule aus derselben Inhaltsquelle und übernimmt ihre Bilder in den Vite-Build. Die Nimuiten und [Der Grüne Bund](kulte/gruener-bund/README.md) verwenden diesen Weg.
 - `scripts/build-religions.mjs`: erzeugt Hauptseite und lokale Profile aus demselben Register, das Vite verwendet.
 - `assets/symbols`: lokale Symbole der gelieferten Vorlage, vollständig und ohne Beschnitt. Verlustfreies WebP erhält die originalen RGBA-Pixel; Quellen, Original-Hashes und Maße stehen in `assets/sources.json`.
 - `assets/divine-art`: 19 unveränderte Glasmalerei-Porträts aus den gelieferten Einzelprofilen; Herkunft, Maße und Hashes in `sources.json`. Die farbigen Göttersymbole werden direkt aus `BilderRüstungen/<id>_icon.png` gelesen.
@@ -45,7 +46,7 @@ Reine Namens- und Bildregister einer Sammlung verwenden `recordOnly: true` ohne 
 
 Ein Religionsartikel kann über `traditionSource` ein eigenes `glaube.json` einbinden. Dessen lokale Götternamen, Aspekte und Ränge fließen automatisch in die Hauptsuche ein. Die bebilderten Gruppen im Artikel besitzen zusätzlich eigene Such- und Filterfunktionen. Kulturelle Aspektzuordnungen verweisen über `relatedIds` auf bestehende Profile oder benannte Registergestalten.
 
-Der Almanach-Vite-Build nimmt derzeit 74 HTML-Dateien über dieselben Register auf: Hauptseite, 52 Artikel, 20 Klerusseiten und eine Weiterleitung vom alten Infernalen-Pfad. Verwendete Bilder einschließlich der Links zur vollständigen Abbildung werden als lokale Assets verarbeitet. Die alte Klerusseite ist unter [Archiv/AlerischerKlerus](../Archiv/AlerischerKlerus/README.md) gesichert und aus dem aktiven Bestand entfernt.
+Der Almanach-Vite-Build nimmt derzeit 76 HTML-Dateien über dieselben Register auf: Hauptseite, 54 Artikel, 20 Klerusseiten und eine Weiterleitung vom alten Infernalen-Pfad. Verwendete Bilder einschließlich der Links zur vollständigen Abbildung werden als lokale Assets verarbeitet. Die alte Klerusseite ist unter [Archiv/AlerischerKlerus](../Archiv/AlerischerKlerus/README.md) gesichert und aus dem aktiven Bestand entfernt.
 
 ## Quellen und inhaltliche Grenzen
 

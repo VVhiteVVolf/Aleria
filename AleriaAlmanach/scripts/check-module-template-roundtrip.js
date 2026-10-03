@@ -27,6 +27,7 @@ const sources = [
   '../Fonts/Arkanes-Alphabet/arcane.js',
   'modules/language/arcane-alphabet-entry.js',
   'modules/religion/nimuiten/nimuiten-entry.js',
+  'modules/religion/gruener-bund/gruener-bund-entry.js',
   'data/sections.js',
   'modules/core/content-safety.js',
   'modules/house-warriors/house-warriors-data.js',

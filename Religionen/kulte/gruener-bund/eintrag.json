@@ -1,0 +1,206 @@
+{
+  "id": "gruener-bund",
+  "title": "Der Grüne Bund",
+  "epithet": "Die Gemeinschaften der unversehrten Schöpfung",
+  "kind": "Radikale Glaubensbewegung",
+  "summary": "Seltene albische Waldgemeinschaften, die am Alten Pantheon festhalten, die Natur für vollkommen rein erklären und ohne Geld vom eigenen Bedarf leben. Kirche und Druiden beurteilen ihre Lehre als häretisch; ihre militärische Gefährlichkeit gilt als sehr gering.",
+  "symbol": "kulte/gruener-bund/assets/gruener-bund-symbol-v1.png",
+  "page": true,
+  "portrait": {
+    "src": "kulte/gruener-bund/assets/gruener-bund-glasbild-v1.png",
+    "alt": "Symbolisches Glasbild einer grünen Eiche mit verschlungenen Wurzeln, Tiergestalten und kleinen Häusern unter ihrem Blätterdach.",
+    "caption": "Unter einem gemeinsamen Blätterdach: das Ideal einer unversehrten Schöpfung im Glauben des Bundes.",
+    "width": 1024,
+    "height": 1536
+  },
+  "tags": ["Alben", "Albische Fürstentümer", "Alter Pantheon", "Druiden", "Natur", "Häresie", "Kommune", "Ceitheach", "Dunkelhain"],
+  "searchAliases": ["Grüner Bund", "Gruener Bund", "Grüne Gemeinschaften", "Naturfrömmigkeit", "Ahnenbaum", "Tierzeichen", "Ordates", "Mariona", "Balrion", "Gemeinbesitz", "Reformation"],
+  "relations": ["alter-pantheon", "alerische-kirche", "neun-goettliche"],
+  "facts": [
+    { "label": "Selbstverständnis", "value": "Bewahrer des Alten Glaubens und der reinen Natur" },
+    { "label": "Verbreitung", "value": "Seltene Gemeinschaften in den albischen Fürstentümern" },
+    { "label": "Lebensform", "value": "Selbstversorgende Kommunen mit höchstens hundert Seelen" },
+    { "label": "Gefährlichkeit", "value": "Militärisch sehr gering · überwiegend geduldet" },
+    { "label": "Ursprung", "value": "Albischer Widerstand gegen die Reform zur Alerischen Kirche" },
+    { "label": "Geistliche Verehrung", "value": "Druiden als lebende Heilige; keine Anerkennung durch die Druidenordnung" },
+    { "label": "Wirtschaft", "value": "Gemeinbesitz, Bedarfsversorgung und gegenseitige Hilfe; keine Währung" },
+    { "label": "Erinnerungsort", "value": "Der im Großen Krieg verbrannte Ahnenbaum von Ceitheach" }
+  ],
+  "sections": [
+    {
+      "id": "bewegung",
+      "title": "Ein Bund ohne neue Götter",
+      "paragraphs": [
+        "Der Grüne Bund ist eine seltene, vorwiegend unter Alben verbreitete Glaubensbewegung. Seine Angehörigen sehen sich als Menschen, die den alten Göttern und ihrer Schöpfung treu geblieben sind. Sie verehren keine neu entdeckte Gottheit und beanspruchen auch nicht, ein weiteres Pantheon begründet zu haben. In ihren eigenen Augen setzen sie fort, was andere preisgegeben haben.",
+        "Die Bewegung erwuchs aus der Ablehnung jener Reform, durch die sich aus dem Alten Pantheon die Alerische Kirche formte. Unter den Alben gab es zahlreiche Gläubige, die diesen Wandel nicht billigten. Nur ein Teil dieses Widerstands führte jedoch zum Grünen Bund. Das Fortleben des Alten Pantheons und die Entstehung der radikalisierten Gemeinschaften sind nicht dasselbe.",
+        "Was als Bewahrung begann, veränderte sich in der Abgeschiedenheit. Der Rückzug aus kirchlichen und höfischen Zusammenhängen, örtliche Überlieferungen und der Einfluss einzelner Ausleger verschärften die Lehre. Aus der Ehrfurcht vor der Natur wurde die Behauptung ihrer vollkommenen Reinheit; aus dem Gebot des rechten Maßes die Absage an Geldwirtschaft und Erwerb. Deshalb verzeichnen Außenstehende den Bund unter Häresien und Sekten, obwohl er eher eine verstreute Bewegung als eine geschlossene Gegenkirche ist."
+      ]
+    },
+    {
+      "id": "protest",
+      "title": "Der Protest des Druiden",
+      "paragraphs": [
+        "Am Anfang stand der Widerspruch eines Druiden gegen die Reform. Er wollte den überlieferten Glauben bewahren und wandte sich gegen dessen kirchliche Umgestaltung. Sein Protest gab jenen eine Stimme, die sich vom neuen Weg abkehrten; aus diesem Kreis und seiner späteren Überlieferung ging die Bewegung hervor.",
+        "Der Druide ist damit ihr Auslöser, aber nicht der Urheber aller späteren Gebote. Würde er noch leben, billigte er den Grünen Bund in seiner heutigen Gestalt selbst nicht. Die Verehrung seines Andenkens verdeckt diese Entfernung: Seine Nachfolger hören in seiner Ablehnung der Reform die Zustimmung zu einer Lehre, die sich erst nach und nach ausbildete.",
+        "Sein Ahnenbaum stand in Ceitheach. Dass dieser Baum im Großen Krieg verbrannte, gehört zur Geschichte des Bundes; die um seine Asche erzählten Geistergeschichten gehören zur Überlieferung des Dunkelhains."
+      ]
+    },
+    {
+      "id": "alte-namen",
+      "title": "Die Göttlichen in ihren alten Gestalten",
+      "blocks": [
+        { "type": "paragraph", "text": "Im Gebet, im Lied und am Herd werden grundsätzlich die alten Namen und Tierbezeichnungen verwendet. Die Anhänger sprechen von Ordates, dem Drachen, wo ein alerischer Priester Ordan, den Vater, anruft. Sie meinen dieselben Göttlichen; die Tiergestalt gilt ihnen als besonders unverstellter Ausdruck ihrer Nähe zur lebendigen Welt." },
+        { "type": "list", "items": [
+          "Ordates · der Drache — Ordan",
+          "Mariona · die Taube — Mariel",
+          "Balrion · der Bär — Baldran",
+          "Belenor · der Löwe — Maldras",
+          "Silvanis · die Hindin — Sylvana",
+          "Lyrentia · die Nachtigall — Lyris",
+          "Tharannis · der Ochse — Tharim",
+          "Oghma · die Eule — Orin",
+          "Kharan · der Rabe — Kharon"
+        ] },
+        { "type": "paragraph", "text": "Auch die übrigen Götter behalten ihre überlieferten Namen: Nimue ist die Schwalbe, Rhea der Widder, Zephyr der Adler, Aelthar der Greif und Thyrael der Phoenix. Unter den Untergöttern werden Muirenn, die Möwe, Jovellia, der Schmetterling, Arvendil, der Biber, Herion, der Falke, und Oriadh, die Krähe, angerufen. Diese Namen stammen aus dem Alten Pantheon; sie sind keine Neuerfindung des Bundes." }
+      ]
+    },
+    {
+      "id": "sternzeichen",
+      "title": "Unter dem Zeichen eines Tieres",
+      "paragraphs": [
+        "Dieselbe Sprache prägt die Sternendeutung. Ein Kind steht unter der Taube statt unter der Mutter, unter dem Bären statt unter Baldrans kirchlichem Beinamen. Die Bewegung ersetzt die Namen, nicht den Lauf der Sterne. Die dreizehn Monatszeichen, die wandernden Souveräne und die besondere Stellung des Drachen bleiben Teil derselben Himmelsordnung.",
+        "Ordates besitzt deshalb auch hier keinen gewöhnlichen Geburtsmonat. Sein vollständiges Sternbild erscheint in der Drachennacht am 36. Jahrswend eines durch tausend teilbaren Jahres und ergänzt das Monatszeichen. Wenn von einem unter dem Drachen Geborenen die Rede ist, meint dies diese seltene zusätzliche Bindung; es entsteht kein vierzehntes Monatszeichen.",
+        "Für den Bund ist das Geburtszeichen mehr als eine Neigung des Charakters. Es begründet eine persönliche Verpflichtung gegenüber den Tieren, die man dem Zeichen zurechnet. Der Himmel weist dem Einzelnen eine Verwandtschaft zu, die er im täglichen Umgang und an seiner Schale achten soll."
+      ]
+    },
+    {
+      "id": "reine-natur",
+      "title": "Die unversehrte Schöpfung",
+      "paragraphs": [
+        "Wald, Wasser, Tier und gewachsener Boden gelten dem Grünen Bund als heilig. Die Natur soll geschützt werden, weil sie nach seiner Überzeugung vollkommen rein und gut ist. Das Tier kennt weder Münze noch Standesdünkel; der Baum wächst, ohne nach Herrschaft zu verlangen. Darin erkennen die Anhänger das ursprüngliche Maß des Lebens.",
+        "Ihre radikale Folgerung lautet, dass Verderbnis aus menschlicher Anmaßung hervorgehe: aus Besitzgier, Herrschaft über andere Lebewesen und der Umwandlung von Lebensgrundlagen in Ware. Wer diese Verstrickungen ablegt, könne der reinen Ordnung wieder nahekommen. Der Wald wird damit zugleich Zuflucht und Lehrmeister.",
+        "Auch Raubtiere erscheinen in dieser Sicht als schuldlos. Ein Wolf, der frisst, begeht keine Sünde. Die Bewegung geht jedoch weiter, als tierischem Handeln menschliche Schuldmaßstäbe abzusprechen: Sie erklärt die Natur selbst für unverdorben. Krankheit, Grausamkeit und Zerstörung werden als menschlich verursachte Störungen gedeutet oder in eine Harmonie eingeordnet, die der Mensch noch nicht verstehe."
+      ]
+    },
+    {
+      "id": "widerspruch",
+      "title": "Der vergessene Fall",
+      "paragraphs": [
+        "Gerade hier widerspricht der Bund seiner eigenen Glaubenswurzel. Der Alte Pantheon lehrt eine gefallene, in ihrem Gleichgewicht gestörte Welt. Die ursprüngliche Harmonie der Schöpfung besteht nicht unverändert fort; auch die Natur ist von diesem Fall betroffen. Deshalb braucht die Welt die Pflege der Druiden und das verantwortliche Handeln der Gläubigen.",
+        "Heiligkeit bedeutet in dieser Überlieferung nicht Unversehrtheit. Etwas kann schützenswert und zugleich verwundet, fehlgeleitet oder gefährlich sein. Die Druiden verstehen sich als Gärtner der Erde, weil Bewahren mitunter Eingreifen, Begrenzen und Heilen verlangt.",
+        "Der Grüne Bund hält dagegen am Bild einer vollkommen guten Natur fest und verehrt zugleich jene Druiden, deren Aufgabe gerade aus ihrer Unvollkommenheit erwächst. Diese Spannung lässt sich nicht allein durch alte Götternamen auflösen. Sie ist einer der Gründe, aus denen auch die Bewahrer des Alten Pantheons den Bund als häretisch beurteilen."
+      ]
+    },
+    {
+      "id": "tierverwandtschaft",
+      "title": "Was das eigene Zeichen schützt",
+      "paragraphs": [
+        "Wer unter dem Zeichen eines Gottes geboren wird, darf die ihm zugeordneten Tiergruppen nicht verzehren. Die Zuordnung folgt religiöser Ähnlichkeit und örtlicher Überlieferung, keiner genauen Tierkunde. Der Schutz umfasst also mehr als das einzelne Tier, dessen Gestalt am Sternenhimmel erkannt wird.",
+        "Dem Drachen werden etwa Echsen und verwandte geschuppte Tiere zugerechnet, der Taube Geflügel und andere als verwandt verstandene Vögel, dem Bären größere Gruppen des Waldwildes. Ein unter dem Bären Geborener darf deshalb nicht einfach jedes andere Wild essen, weil es kein Bär ist. Wie weit die Grenze reicht, wird innerhalb der jeweiligen Gemeinschaft überliefert; die drei Beispiele sind keine vollständige Liste aller Gebote.",
+        "Die Bindung endet nicht mit dem Tod eines Tieres. Angehörige des entsprechenden Zeichens sollen auch dessen Kadaver nicht zu Fell, Knochen, Schmuck oder anderer Beute ausnutzen. Ein Fund im Wald wird dadurch nicht zum erlaubten Rohstoff. Gefundene tote Schutztiere lässt man ruhen oder übergibt sie behutsam der Erde.",
+        "Diese persönliche Enthaltung ist kein allgemeines Fleischverbot für sämtliche Mitglieder. Bei einer gemeinsamen Mahlzeit werden Herkunft und Art der Speisen offen benannt; pflanzliche Gerichte erlauben es Menschen unterschiedlicher Zeichen, dieselbe Schale zu teilen. Niemand soll sein Gebot umgehen, indem er ein anderes Mitglied für sich jagen oder häuten lässt."
+      ]
+    },
+    {
+      "id": "mass-des-bedarfes",
+      "title": "Nehmen, was ein Leben braucht",
+      "paragraphs": [
+        "Jagd, kleiner Anbau, das Fällen eines benötigten Baumes und die Gewinnung einer geringen Menge Erz sind erlaubt, soweit sie dem tatsächlichen eigenen Lebensbedarf dienen. Dazu gehört die Versorgung der Menschen, die man mitträgt: Kinder, Kranke und Alte müssen nicht selbst jagen oder Holz schlagen. Wintervorräte sind möglich; ein Vorrat für absehbare Not ist etwas anderes als ein Überschuss zum Verkauf.",
+        "Verboten sind Agrarkultur als großflächiger Wirtschaftsbetrieb, Viehzucht, Forstwirtschaft und gewerblicher Bergbau. Ein kleines Gemüsebeet ist zulässig, ein Feldbetrieb für den Markt nicht. Benötigtes Bauholz darf geschlagen werden, ein Wald aber nicht als fortlaufende Ertragsquelle dienen. Eine kleine Erzmenge für ein notwendiges Werkzeug erlaubt weder einen Handelsstollen noch eine Mine. Tiere werden nicht als Nutzvieh gezüchtet.",
+        "Auch viele einzeln behauptete Eigenbedarfe dürfen nicht zum Vorwand für einen Großbetrieb werden. Der Bund misst das erlaubte Nehmen an seiner Begrenzung und an der tatsächlichen Lebensweise. Was für eine zulässige Mahlzeit erlegt wurde, soll dankbar und ohne Verschwendung verwendet werden, sofern kein persönliches Tiergebot entgegensteht; Trophäenjagd und Kadaverhandel widersprechen dieser Haltung.",
+        "Daraus entsteht eine anspruchsvolle Form des Verzichts. Schlechte Ernten, ein harter Winter oder ein beschädigtes Werkzeug treffen eine solche Gemeinschaft empfindlich. Ihr Ideal macht sie weder übernatürlich genügsam noch von den Grenzen ihres Lebensraumes unabhängig."
+      ]
+    },
+    {
+      "id": "gemeinwirtschaft",
+      "title": "Ein Herd, viele Hände",
+      "paragraphs": [
+        "Die Anhänger leben meist in selbstversorgenden Kommunen mit höchstens hundert Seelen. Nahrung, Vorräte und die für das gemeinsame Leben nötigen Werkzeuge stehen im Gemeinbesitz; Arbeit wird nach Vermögen und Versorgung nach Bedarf geteilt. In diesem Sinn ist ihre Lebensweise sozialistisch. Kleidung, Erinnerungsstücke und persönlich genutzte Dinge müssen deshalb nicht bei jedem Gebrauch neu verteilt werden.",
+        "Eine Gemeinschaft soll überschaubar bleiben: Man soll die Menschen kennen, für deren Wintervorrat man arbeitet. Wenn sie zu groß wird, suchen einige Haushalte einen neuen Ort, statt die Siedlung unbegrenzt zu erweitern. Zwischen den Kommunen bestehen Verwandtschaft, Besuche und gegenseitige Hilfe, aber keine gemeinsame Hauptstadt und kein kirchenähnlicher Verwaltungsapparat.",
+        "Über Vorräte, Pflege und notwendige Arbeiten wird am gemeinsamen Herd beraten. Erfahrene Mitglieder besitzen dabei Gewicht, doch Adelstitel schaffen innerhalb des Bundes keinen Anspruch auf einen größeren Anteil. Das Ideal ist die gemeinsame Verantwortung; in der Wirklichkeit können Ansehen, Alter und religiöser Eifer erheblichen Druck auf andere ausüben."
+      ]
+    },
+    {
+      "id": "ohne-muenzen",
+      "title": "Die Welt ohne Preis",
+      "paragraphs": [
+        "Währung gilt als Teufelei der Alerischen Kirche. In den Augen der Anhänger macht die Münze aus einer Gabe einen Anspruch und aus einem Nachbarn einen Schuldner. Diese Beschuldigung ist Bestandteil ihrer Kirchenfeindschaft, kein Beleg dafür, dass die Kirche das Geld tatsächlich erfunden hätte oder jede Münze eine infernale Wirkung besäße.",
+        "Innerhalb der Gemeinschaft gibt es weder Münzlohn noch Kaufpreis. Man verteilt, schenkt und hilft. Auch der Austausch mit anderen soll gegenseitige Hilfe bleiben und nicht zum gewerblichen Tauschhandel werden, der bloß ohne Geld auskommt. Waren eigens für Verkauf oder Gewinn zu erzeugen, widerspricht dem Bund ebenso wie deren Bezahlung mit Münzen.",
+        "Die Grenze nach außen bleibt schwierig. Ein Lord verlangt Abgaben, ein Schmied muss von seiner Arbeit leben, und ein Hungerwinter lässt sich nicht allein mit einem Bekenntnis überstehen. Die Kommunen versuchen, durch persönliche Hilfe, unentgeltliche Gaben und Absprachen zu bestehen. Ihre Geldverweigerung hebt weder die Herrschaftsrechte der Umgebung auf noch verpflichtet sie Außenstehende, den Bund zu versorgen."
+      ]
+    },
+    {
+      "id": "freie-bindungen",
+      "title": "Bindungen ohne Ehebrief",
+      "paragraphs": [
+        "Eine verbindliche Eheordnung im kirchlichen oder adeligen Sinn kennt der Grüne Bund nicht. Erwachsene können sich aus freiem Entschluss miteinander verbinden und eine solche Bindung wieder lösen. Eine Beziehung kann ein Leben dauern, ohne deshalb durch einen Priester, einen Erbvertrag oder die Zustimmung eines Lords begründet zu sein.",
+        "Es gibt keine Bastarde. Kinder besitzen denselben Platz am Herd, unabhängig davon, ob ihre Eltern zusammenleben, getrennt sind oder mehrere Bindungen eingegangen sind. Die Auflösung einer Beziehung beendet nicht die Verantwortung für ein Kind. Eltern und Gemeinschaft teilen die Sorge, ohne aus der Herkunft eine Rangordnung abzuleiten.",
+        "Die Freiheit der Bindung begründet keinen Anspruch auf einen anderen Menschen. Nähe setzt beiderseitiges Einverständnis voraus; Eifersucht, Kränkung und Streit verschwinden durch das Fehlen eines Ehebriefs nicht. Sie werden im Gespräch und nötigenfalls durch Vermittlung behandelt. Für Nachbarn, deren Ordnung auf Heirat, Erbe und Abstammung beruht, bleibt diese Lebensweise dennoch ein besonders anstößiger Teil des Glaubens."
+      ]
+    },
+    {
+      "id": "braeuche",
+      "title": "Lieder unter freiem Himmel",
+      "paragraphs": [
+        "Der religiöse Alltag braucht wenig Besitz: einen Stein als Altar, eine Schale Wasser, Zweige und die vertrauten Tiernamen. Gaben bestehen aus Früchten, Brot oder Blumen. Ein Tier wird nicht getötet, um aus seiner Opferung besonderen göttlichen Gewinn zu ziehen; die erlaubte Jagd dient der Nahrung.",
+        "Gemeinsames Singen, Reigentänze, Kräuterkunde und lange Erzählabende gehören zum Leben vieler Kommunen. Man schmückt das Haar mit Blättern oder Blumen, trägt einfaches Leinen und ausgebesserte Gewänder und feiert den Wechsel der Jahreszeiten unter freiem Himmel. Solche Bräuche drücken Freude und Verbundenheit aus, ohne eine einheitliche Tracht oder einen verbindlichen Festkalender vorauszusetzen.",
+        "Gäste erhalten einen Platz am Feuer, solange sie die Ruhe und die Speisegebote achten. Die Gemeinschaften wirken dadurch oft offenherzig, obwohl sie sich geistig stark von der Außenwelt abgrenzen. Wer ihre Reinheitslehre bezweifelt oder Münzen anbietet, kann dieselben Menschen plötzlich verschlossen erleben. Ihre Freundlichkeit und ihre Starrheit wachsen aus demselben Wunsch, den eigenen Lebenskreis zu bewahren."
+      ]
+    },
+    {
+      "id": "lebende-heilige",
+      "title": "Heilige wider Willen",
+      "paragraphs": [
+        "Druiden werden als lebende Heilige verehrt. Ihre Nähe zur Erde, ihre Pflege heiliger Haine und ihr Wissen erscheinen dem Bund als Zeichen eines Lebens, das der Schöpfung besonders nahekommt. Ein durchreisender Druide kann den besten Platz am Herd erhalten, noch bevor er ein Wort gesprochen hat.",
+        "Diese Verehrung bedeutet keine Zugehörigkeit. Die Druiden, die den Alten Pantheon weiterhin praktizieren, beurteilen die radikalisierte Bewegung selbst als Häresie und Sekte. Sie weisen insbesondere die Gleichsetzung von Natur und vollkommener Reinheit zurück. Auch die Erhebung jedes Druiden zum lebenden Heiligen geht über ihr eigenes Verständnis des Amtes hinaus.",
+        "Daraus entstehen eigentümliche Begegnungen: Ein verehrter Gast widerspricht der Lehre seiner Gastgeber, und diese hören in seiner Zurechtweisung bisweilen nur eine Prüfung oder besonders schwer verständliche Weisheit. Andere nehmen den Widerspruch ernst und geraten ins Zweifeln. Der Bund besitzt keine Vollmacht, für die Druidenordnung zu sprechen, und ein Druide billigt seine Lehre nicht allein dadurch, dass er jemandem hilft."
+      ]
+    },
+    {
+      "id": "kirche-und-herren",
+      "title": "Geduldet, gemieden, zur Umkehr gerufen",
+      "paragraphs": [
+        "Die Alerische Kirche gilt dem Grünen Bund als fehlgeleitet: Sie habe die Tiergestalten der Götter überformt, sich mit Herrschaft und Geld verbunden und den Menschen von der heiligen Natur entfernt. Die Anhänger lehnen ihre geistliche Führung ab, ohne daraus gewöhnlich einen bewaffneten Auftrag abzuleiten.",
+        "Kirche und traditionelle Druiden stufen die Lehre als häretisch ein. Die militärische Gefährlichkeit der Bewegung ist jedoch sehr gering. Sie unterhält weder ein Eroberungsheer noch einen gewaltsamen Bekehrungszug. Daher lässt die Kirche die kleinen Gemeinschaften meist gewähren und versucht, sie durch Gespräche, Predigt und Seelsorge zurückzuführen. Eine systematische Verfolgung ist für den Bund nicht kennzeichnend.",
+        "Diese Duldung ist keine Anerkennung seiner Lehre und keine allgemeine Befreiung von weltlichen Pflichten. In den albischen Fürstentümern begegnet man nur gelegentlich einer solchen Kommune. Fürsten und Lords meiden sie häufig: Aus ihr lassen sich wenige verlässliche Abgaben, Heiratsbindungen oder Gefolgschaften gewinnen, während ihre bloße Gegenwart religiöse Auseinandersetzungen auslösen kann.",
+        "Der typische Konflikt betrifft deshalb Zugang zu Land und Wald, verweigerte Abgaben, Kindererziehung oder den Versuch einer Bekehrung. Die Gemeinschaft ist im militärischen Sinn harmlos; im Alltag können ihr strenger Reinheitsanspruch und der Rückzug aus der übrigen Gesellschaft dennoch Spannungen und Abhängigkeiten schaffen."
+      ]
+    },
+    {
+      "id": "ceitheach",
+      "title": "Die Asche des Ahnenbaums",
+      "paragraphs": [
+        "Der Ahnenbaum des Druiden, dessen Protest den Grünen Bund auslöste, stand einst in Ceitheach. Im Großen Krieg wurde er niedergebrannt und zerstört. Wo früher sein lebendes Holz das Andenken bewahrte, blieben Asche und verkohlte Wurzeln zurück. Das einstige Ceitheach liegt heute im Dunkelhain.",
+        "Es heißt, die Seele des Druiden treibe noch über dieser Asche und spuke zwischen den Bäumen. Manche erzählen von einer Gestalt im Nebel, andere nur von einer Stimme, die sich nicht von den Blättern unterscheiden lasse. Diese Erzählungen machen den zerstörten Baum zu einem Ort der Trauer und der unerledigten Fragen; ein sicherer Nachweis seines gegenwärtigen Seelenzustands sind sie nicht.",
+        "Für Anhänger des Bundes kann die Zerstörung als Sinnbild jener Welt gelten, vor der sie sich zurückgezogen haben. Doch der tote Druide ist kein verlässlicher Zeuge für ihre heutige Lehre. Sollte eine Stimme aus dem Dunkelhain tatsächlich die seine sein, müsste sie nicht das bestätigen, was seine Verehrer von ihr hören wollen."
+      ]
+    },
+    {
+      "id": "erinnerung",
+      "title": "Was aus einem Widerspruch erwuchs",
+      "paragraphs": [
+        "Der Grüne Bund bewahrt echte Teile des Alten Glaubens: seine Namen, seine Tiergestalten und die Ehrfurcht vor der Welt. Zugleich hat er aus dieser Überlieferung eine Lebensform entwickelt, deren Reinheitslehre die Verletzlichkeit der Schöpfung ausblendet. Seine Abweichung liegt daher nicht im bloßen Alter seiner Gebete.",
+        "In einer kleinen Kommune können Fürsorge, freiwilliges Teilen und die Achtung jedes Kindes gelingen. Dieselbe Gemeinschaft kann ihren Mitgliedern aber die Mittel nehmen, Widerspruch auszuhalten oder Hilfe außerhalb des eigenen Kreises zu suchen. So bleibt sie eine seltene, meist friedliche Bewegung mit einer strengen Lehre: aus Protest geboren, durch Abgeschiedenheit verändert und an einen Ahnen gebunden, der ihren Weg nicht gebilligt hätte."
+      ]
+    }
+  ],
+  "links": [
+    { "label": "Der Alte Pantheon", "href": "Religionen/religionen/alter-pantheon/index.html", "note": "Die überlieferten Tiergestalten und die tatsächliche Druidenordnung" },
+    { "label": "Alerias Astrologie", "href": "Astrologie/index.html", "note": "Die dreizehn Monatszeichen, die Souveräne und die seltene Drachennacht" },
+    { "label": "Estryll und seine Reiche", "href": "Kontinente/Estryll/Estryll.html", "note": "Die albischen Fürstentümer, das vergangene Ceitheach und der Dunkelhain" }
+  ],
+  "almanach": {
+    "factory": "createGruenerBundReligionEntry",
+    "output": "AleriaAlmanach/modules/religion/gruener-bund/gruener-bund-entry.js",
+    "pages": [
+      { "title": "I. — Aus dem Widerspruch geboren", "sections": ["bewegung", "protest"], "scene": "kulte/gruener-bund/assets/gruener-bund-protest-v1.png" },
+      { "title": "II. — Die alten Namen und die Sterne", "sections": ["alte-namen", "sternzeichen"], "scene": "kulte/gruener-bund/assets/gruener-bund-altar-v1.png" },
+      { "title": "III. — Die unversehrte Schöpfung", "sections": ["reine-natur", "widerspruch"], "scene": "kulte/gruener-bund/assets/gruener-bund-natur-v1.png" },
+      { "title": "IV. — Das Maß des Nehmens", "sections": ["tierverwandtschaft", "mass-des-bedarfes"], "scene": "kulte/gruener-bund/assets/gruener-bund-vorrat-v1.png" },
+      { "title": "V. — Ein Herd, viele Hände", "sections": ["gemeinwirtschaft", "ohne-muenzen"], "scene": "kulte/gruener-bund/assets/gruener-bund-kommune-v1.png" },
+      { "title": "VI. — Freie Bindungen und alte Lieder", "sections": ["freie-bindungen", "braeuche"], "scene": "kulte/gruener-bund/assets/gruener-bund-reigen-v1.png" },
+      { "title": "VII. — Heilige wider Willen", "sections": ["lebende-heilige", "kirche-und-herren"], "scene": "kulte/gruener-bund/assets/gruener-bund-begegnung-v1.png" },
+      { "title": "VIII. — Die Asche von Ceitheach", "sections": ["ceitheach", "erinnerung"], "scene": "kulte/gruener-bund/assets/gruener-bund-ahnenbaum-v1.png" }
+    ]
+  }
+}

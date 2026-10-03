@@ -15,14 +15,14 @@ const workspace = resolve(RELIGION_ROOT, '..');
 const searchable = rootCatalogEntries(catalog).map((entry, order) => ({ ...entry, order, searchText: entrySearchText(entry) }));
 
 test('preserves all named legacy entries and prepares empty future chapters', () => {
-  assert.equal(catalog.entries.length, 59);
+  assert.equal(catalog.entries.length, 60);
   assert.equal(catalog.chapters.length, 7);
   assert.equal(catalog.entries.filter(entry => entry.chapterId === 'religionen').length, 10);
-  assert.equal(catalog.entries.filter(entry => entry.page).length, 53);
+  assert.equal(catalog.entries.filter(entry => entry.page).length, 54);
   for (const title of ['Die Celestische Synode', 'Manât', 'Der Phalantische Bund', 'Der Zirkel des Ewigen Waldes', 'Die Offenbarung der Schwarzen Sonne']) {
     assert(catalog.entries.some(entry => entry.title === title));
   }
-  assert.equal(catalog.chapters.find(chapter => chapter.id === 'kulte').entries.length, 1);
+  assert.equal(catalog.chapters.find(chapter => chapter.id === 'kulte').entries.length, 2);
   assert.equal(catalog.chapters.find(chapter => chapter.id === 'weltanschauungen').entries.length, 0);
   assert(!JSON.stringify(catalog).includes('animexx'));
 });
@@ -34,7 +34,7 @@ test('search combines words, matches tags and accepts German/diacritic variants'
   assert.deepEqual(filterEntries(searchable, { query: 'SONNE MOND', chapterId: 'religionen' }).map(entry => entry.id), ['harmonie-von-mond-und-sonne']);
   assert.equal(filterEntries(searchable, { query: 'Morgath', chapterId: 'religionen' }).length, 0);
   assert.equal(filterEntries(searchable, { query: 'nichtimregister' }).length, 0);
-  assert.equal(filterEntries(searchable, { query: '  ' }).length, 19);
+  assert.equal(filterEntries(searchable, { query: '  ' }).length, 20);
 });
 
 test('sorts German titles without leading articles and leaves source data intact', () => {
@@ -105,7 +105,7 @@ test('all generated pages are current, escaped, independently readable and local
 
 test('Vite and the Almanach register resolve the new generated pages', () => {
   const inputs = getReligionPageInputs();
-  assert.equal(Object.keys(inputs).length, 55);
+  assert.equal(Object.keys(inputs).length, 56);
   for (const value of Object.values(inputs)) assert(existsSync(value), value);
   const source = readFileSync(resolve(workspace, 'AleriaAlmanach/modules/sidebar/sidebar-registers.js'), 'utf8');
   const html = vm.runInNewContext(`${source}\nbuildAlmanachLeftRegisterItem(ALMANACH_LEFT_REGISTER_ITEMS.find(item => item.key === 'religion'))`, { document: { querySelector: () => null }, escapeHtml });

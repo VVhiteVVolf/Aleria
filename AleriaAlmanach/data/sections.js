@@ -1065,6 +1065,7 @@ const SECTIONS = [
     key: "Religion", desc: "Glaube, Orden & Kirche", tab: "Religion",
     entries: [
       createNimuitenReligionEntry(),
+      createGruenerBundReligionEntry(),
       {
         id: "sanktoren",
         multipage: true,
