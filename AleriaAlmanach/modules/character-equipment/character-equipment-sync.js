@@ -4,6 +4,7 @@
 
 export const CHARACTER_EQUIPMENT_LINK_SCHEMA_VERSION = 1;
 import { normalizeEquipmentDamageProtection } from './equipment-damage-protection.js';
+import { applyArmorBalance, balanceArmorInventoryItem } from './equipment-armor-rules.js';
 
 const EQUIPMENT_KINDS = Object.freeze({ weapon: 'weapons', armor: 'armorItems' });
 
@@ -63,12 +64,14 @@ function weaponCombatDefinition(entry = {}) {
 }
 
 function armorCombatDefinition(entry = {}) {
+  entry = applyArmorBalance(entry);
   return {
     kind: 'armor',
     mechanics: clone(entry.mechanics || {}),
     damageProtection: normalizeEquipmentDamageProtection(entry.damageProtection),
     triggerRules: clone(entry.triggerRules || []),
     armorKind: text(entry.kind, 'armor'),
+    armorCategory: text(entry.armorCategory),
     baseArmorClass: entry.baseArmorClass == null || entry.baseArmorClass === '' ? null : Number(entry.baseArmorClass),
     armorClassBonus: Number(entry.armorClassBonus) || 0,
     dexterityMode: text(entry.dexterityMode, 'full'),
@@ -163,13 +166,14 @@ function combatEntryFromInventory(item, entry, kind) {
       aiInstructions: text(definition.aiInstructions, entry.aiInstructions)
     };
   }
-  return {
+  return applyArmorBalance({
     ...entry,
     inventoryItemId: text(item.id),
     equipped: typeof item.equipped === 'boolean' ? item.equipped : entry.equipped,
     name: text(item.name, entry.name),
     image: text(item.image || item.icon, entry.image),
     kind: text(definition.armorKind, entry.kind),
+    armorCategory: text(definition.armorCategory, entry.armorCategory),
     mechanics: clone(definition.mechanics ?? entry.mechanics ?? {}),
     damageProtection: normalizeEquipmentDamageProtection(definition.damageProtection === undefined ? entry.damageProtection : definition.damageProtection),
     triggerRules: clone(definition.triggerRules ?? entry.triggerRules ?? []),
@@ -182,13 +186,13 @@ function combatEntryFromInventory(item, entry, kind) {
       : Math.max(0, Number(definition.dexterityUnlockLevel) || 0),
     properties: text(definition.properties, entry.properties),
     notes: text(definition.notes || item.description, entry.notes)
-  };
+  });
 }
 
 export function synchronizeEquipmentFromCombat({ inventory = {}, combatProfile = {}, characterId = '', characterName = '', now = '' } = {}) {
   const nextInventory = clone(inventory && typeof inventory === 'object' ? inventory : {});
   const nextProfile = clone(combatProfile && typeof combatProfile === 'object' ? combatProfile : {});
-  nextInventory.items = Array.isArray(nextInventory.items) ? nextInventory.items : [];
+  nextInventory.items = Array.isArray(nextInventory.items) ? nextInventory.items.map(balanceArmorInventoryItem) : [];
   const usedIds = new Set(nextInventory.items.map(item => text(item?.id)).filter(Boolean));
   const context = { characterId, characterName, now };
 
@@ -217,7 +221,7 @@ export function synchronizeEquipmentFromCombat({ inventory = {}, combatProfile =
 export function synchronizeEquipmentFromInventory({ inventory = {}, combatProfile = {}, addMissingEquipment = false } = {}) {
   const nextInventory = clone(inventory && typeof inventory === 'object' ? inventory : {});
   const nextProfile = clone(combatProfile && typeof combatProfile === 'object' ? combatProfile : {});
-  nextInventory.items = Array.isArray(nextInventory.items) ? nextInventory.items : [];
+  nextInventory.items = Array.isArray(nextInventory.items) ? nextInventory.items.map(balanceArmorInventoryItem) : [];
   const itemsById = new Map(nextInventory.items.map(item => [text(item?.id), item]));
 
   Object.entries(EQUIPMENT_KINDS).forEach(([kind, collectionName]) => {

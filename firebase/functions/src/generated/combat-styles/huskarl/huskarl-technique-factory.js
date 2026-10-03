@@ -1,5 +1,6 @@
 import { createDrachentanzDamageProfile } from '../drachentanz/drachentanz-damage-progression.js';
 import { hasWeaponTechniqueControl } from '../weapon-technique-budget.js';
+import { reviseMartialPositionEntry } from '../martial-position-effects.js';
 import { techniqueCost, weaponDamageEffect, temporaryCondition, secondarySave } from '../drachentanz/techniques/drachentanz-technique-factory.js?v=20260909-dragon-parent-v2';
 import { getHuskarlForms, HUSKARL_FORM_IDS as F } from './huskarl-forms.js';
 
@@ -57,7 +58,7 @@ export function createHuskarlTechnique(classId, formId, spec) {
     weapon.twoHanded ? 'Beide Hände für eine Waffe frei; kein zugleich geführter Schild.' : '',
     weapon.ranged ? 'Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.' : '',
     spec.mounted ? 'Beritten; für einen Anritt mindestens 3 m freier Anlauf. Zu Fuß eine andere Technik wählen.' : '', spec.requirement || ''].filter(Boolean).join(' ');
-  return { id, name: spec.name, minimumLevel: spec.level, status: 'draft', active: false, live: false,
+  return reviseMartialPositionEntry({ id, name: spec.name, minimumLevel: spec.level, status: 'draft', active: false, live: false,
     combatStyleId: 'huskarl-waffenlehre', combatStyleFormId: formId, trainingForm: form.name,
     category: 'technique', description: spec.description || spec.effect, effect: spec.effect,
     weaponLabel: weapon.name, weaponTypes: weapon.types, compatibleWeaponIds: [],
@@ -73,5 +74,5 @@ export function createHuskarlTechnique(classId, formId, spec) {
       branchId: `${classId}-${spec.weapon}`, slotBands: [band], requiresShield: Boolean(weapon.shield),
       requiresTwoHands: Boolean(weapon.twoHanded), requiresDualWield: Boolean(weapon.dualWield), requiresMounted: Boolean(spec.mounted) },
     mechanicNotes: ['Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden.'],
-    tags: `Huskarl-Waffenlehre · ${classId} · ${form.name}` };
+    tags: `Huskarl-Waffenlehre · ${classId} · ${form.name}` });
 }

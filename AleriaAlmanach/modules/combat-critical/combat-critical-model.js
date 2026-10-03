@@ -1,11 +1,21 @@
 import { CRITICAL_HIT_EFFECTS, CRITICAL_FAILURE_EFFECTS, getCriticalWeaponAttack } from './combat-critical-catalog.js';
 import { createWeaponDrop } from '../scene-items/scene-items-model.js';
+import { createPositionCondition } from '../combat-styles/martial-position-effects.js';
+import { refreshRuntimeCondition } from '../combat/combat-condition-lifecycle.js';
 
-export function createCriticalConsequence(resolution, { encounter, roll, id, actor, target } = {}) {
+export function createCriticalConsequence(resolution, { encounter, roll, id, actor, target, usedConsequenceKeys } = {}) {
   const criticalAttack = getCriticalWeaponAttack(resolution);
   if (encounter?.criticalEffectsVersion !== 1 || !criticalAttack) return null;
   if (!Number.isInteger(roll) || roll < 1 || roll > 10) throw new Error('Kritischer Nebeneffekt benötigt einen W10-Wert von 1 bis 10.');
   const failure = criticalAttack.criticalFailure === true;
+  const key = failure ? `failure:${resolution.actorId}` : `hit:${resolution.actorId}:${resolution.targetId}`;
+  if (usedConsequenceKeys?.has(key)) {
+    resolution.mechanicNotes = [...(resolution.mechanicNotes || []), failure
+      ? 'Weiterer kritischer Fehlschlag ohne zusätzlichen Nebeneffekt: Das Limit dieses Beitrags ist erreicht.'
+      : 'Weiterer kritischer Treffer: Kritschaden bleibt gültig; das Nebeneffekt-Limit gegen dieses Ziel ist erreicht.'];
+    return null;
+  }
+  usedConsequenceKeys?.add(key);
   const effect = (failure ? CRITICAL_FAILURE_EFFECTS : CRITICAL_HIT_EFFECTS)[roll - 1];
   const affected = effect.recipient === 'actor' ? actor : target;
   const result = { id, roll, version: 1, kind: failure ? 'failure' : 'hit', name: effect.name,
@@ -27,6 +37,10 @@ export function createCriticalConsequence(resolution, { encounter, roll, id, act
       recipient: 'actor', sourceRelation: 'self', activation: 'passive', actionKinds: ['weapon', 'technique'],
       condition: 'always', effects: { attackModifier: attack, damageModifier: effect.damage || 0 } }]
   };
+  if (effect.nextAttackPenalty) result.condition = { ...createPositionCondition(false),
+    id: `critical:${id}`, sourceConditionId: 'martial-position-penalty', sourceActorId: resolution.actorId,
+    name: result.name, criticalConsequence: true,
+    durationModel: { kind: 'actor-comments', remainingActorComments: 1, encounterId: encounter.encounterId } };
   return result;
 }
 
@@ -40,7 +54,8 @@ export function applyCriticalConsequencesForComment(states, comment) {
       const state = states.get(consequence.actorId) || {};
       const conditions = state.temporaryConditions || [];
       // Same named consequences refresh, rather than accumulating penalties.
-      states.set(consequence.actorId, { ...state, temporaryConditions: conditions
+      states.set(consequence.actorId, { ...state, temporaryConditions: consequence.condition.stanceGroup
+        ? refreshRuntimeCondition(conditions, consequence.condition) : conditions
         .filter(condition => !condition.criticalConsequence || condition.name !== consequence.condition.name)
         .concat(consequence.condition) });
     }

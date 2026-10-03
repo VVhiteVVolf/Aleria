@@ -41,6 +41,7 @@ import { consumeCombatAmmunition } from './combat-ammunition.js?v=20260804-refer
 import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260928-equipment-art-v4';
 import { resolveCombatWard } from './combat-ward-resolution.js?v=20260906-character-vitality-v1';
 import { refreshRuntimeCondition } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
+import { getActionLockPrevention } from './combat-action-lock-recovery.js';
 import { resolveCombatConcentration } from './combat-concentration-resolution.js?v=20260928-equipment-art-v4';
 import {
   collectApplicableCombatRules,
@@ -53,7 +54,7 @@ import { attachCombatEquipmentPreparation } from './combat-equipment-preparation
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { prepareCombatTurnStart, attachCombatTurnStart } from './combat-turn-start.js?v=20260928-equipment-art-v4';
 
-export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-9';
+export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-10';
 
 function normalizeRollMode(value) {
   return ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
@@ -622,6 +623,8 @@ export class CombatResolutionService {
         continue;
       }
       if (['apply-condition', 'buff', 'debuff'].includes(effect.type) && effect.condition) {
+        const prevented = getActionLockPrevention(recipientConditions, effect.condition);
+        if (prevented) { effectResults.push({ effect, applied: false, prevented, recipient }); continue; }
         // Ein effect.formula (z.B. "1w4") wird einmalig gewürfelt und als negativer
         // Angriffsmalus in die Zustandsmechanik eingebacken - für Effekte wie Spottvers,
         // deren Stärke variabel ist statt eines festen Werts.
@@ -693,7 +696,13 @@ export class CombatResolutionService {
       targetConditions = applied.conditions;
       effectResults.push({ effect, amount: followUpResult.damage.total, roll: followUpResult.damage, applied });
     });
-    if (appliedTemporaryCondition) targetConditions = refreshRuntimeCondition(targetConditions, normalizeRuntimeCondition(appliedTemporaryCondition));
+    if (appliedTemporaryCondition) {
+      const prevented = getActionLockPrevention(targetConditions, appliedTemporaryCondition);
+      if (prevented) {
+        effectResults.push({ effect: { type: 'apply-condition' }, applied: false, prevented, recipient: 'target' });
+        appliedTemporaryCondition = null;
+      } else targetConditions = refreshRuntimeCondition(targetConditions, normalizeRuntimeCondition(appliedTemporaryCondition));
+    }
     let damageEffectResults = effectResults.filter(result => result.effect?.type === 'damage' && result.applied && result.recipient !== 'actor');
     let totalDamageApplied = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.incoming || 0), 0);
     let rawDamageRolled = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.rawIncoming ?? result.amount ?? 0), 0);

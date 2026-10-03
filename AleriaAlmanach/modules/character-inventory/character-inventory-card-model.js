@@ -1,6 +1,7 @@
 import { inferInventoryUseMode } from '../inventory-use/inventory-use-model.js';
 import { inventoryValuation, formatInventoryPrice } from './character-inventory-valuation.js';
 import { describeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
+import { balanceArmorInventoryItem } from '../character-equipment/equipment-armor-rules.js';
 
 const signed = value => Number(value) ? `${Number(value) > 0 ? '+' : '−'}${Math.abs(Number(value))}` : '';
 const dice = value => String(value || '').replace(/d/gi, 'W');
@@ -16,6 +17,7 @@ export function inventoryCardKind(item = {}) {
 }
 
 export function inventoryCardModel(item = {}) {
+  item = balanceArmorInventoryItem(item);
   const kind = inventoryCardKind(item);
   const labels = { weapon: ['Waffe', '⚔'], armor: ['Rüstung', '◇'], consumable: ['Verbrauchsgut', '⚗'],
     artifact: ['Artefakt', '✧'], document: ['Dokument', '▤'], equipment: ['Ausrüstung', '⚒'], companion: ['Gefährte', '♞'] };
@@ -30,7 +32,10 @@ export function inventoryCardModel(item = {}) {
   } else if (kind === 'armor') {
     if (definition.baseArmorClass != null) rules.push({ label: 'Rüstungsklasse', value: `${definition.baseArmorClass}${signed(definition.armorClassBonus)} RK` });
     else if (Number(definition.armorClassBonus)) rules.push({ label: 'Rüstungsbonus', value: `${signed(definition.armorClassBonus)} RK` });
-    if (definition.dexterityUnlockLevel) rules.push({ label: 'Rüstungsroutine', value: `Geschicklichkeit ab Stufe ${definition.dexterityUnlockLevel}` });
+    if (definition.armorCategory === 'medium') rules.push({ label: 'Rüstungsroutine', value: 'GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 unbegrenzt' });
+    else if (definition.armorCategory === 'light') rules.push({ label: 'Rüstungsroutine', value: 'Voller GES-Bonus ab Stufe 1' });
+    else if (definition.armorCategory === 'heavy') rules.push({ label: 'Rüstungsroutine', value: 'Kein GES-Bonus' });
+    else if (definition.dexterityUnlockLevel) rules.push({ label: 'Rüstungsroutine', value: `Geschicklichkeit ab Stufe ${definition.dexterityUnlockLevel}` });
     actions.push({ name: 'Anlegen', description: definition.properties || 'Schutz wirkt, solange die Rüstung getragen wird.' });
   } else {
     actions.push({ name: kind === 'consumable' ? 'Verbrauchen' : 'Benutzen', description: kind === 'consumable'

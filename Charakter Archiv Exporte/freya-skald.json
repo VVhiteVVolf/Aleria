@@ -598,7 +598,8 @@
       },
       "proficiencies": {
         "armor": [
-          "light"
+          "light",
+          "medium"
         ],
         "weapons": [
           "simple",
@@ -1060,14 +1061,15 @@
           "name": "Wattierter Waffenrock",
           "image": "",
           "kind": "armor",
-          "baseArmorClass": 11,
+          "baseArmorClass": 14,
           "armorClassBonus": 0,
-          "dexterityMode": "full",
+          "dexterityMode": "capped",
           "dexterityCap": 2,
           "dexterityUnlockLevel": 0,
-          "properties": "Leichte Rüstung der Skalden-Ausbildung",
+          "properties": "Mittlere Rüstung",
           "notes": "",
-          "equipped": true
+          "equipped": true,
+          "armorCategory": "medium"
         },
         {
           "id": "freya-shield",
@@ -1329,10 +1331,1225 @@
           "notes": ""
         }
       ],
-      "techniques": [],
+      "techniques": [
+        {
+          "id": "combat-style-huskarl-skalde-wahl-1",
+          "name": "Klinge im Takt",
+          "minimumLevel": 1,
+          "status": "confirmed",
+          "active": true,
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "trainingForm": "Stand des Schildes",
+          "category": "technique",
+          "description": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
+          "effect": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "compatibleWeaponIds": [],
+          "activationType": "bonus-action",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-1-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "baseDieCap": 4,
+            "lightAttack": true,
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "damageType": "",
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "requirements": "Schwert, Axt oder Sax",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-1-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "triggerRules": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes"
+        },
+        {
+          "id": "combat-style-huskarl-skalde-wahl-2",
+          "name": "Standvers",
+          "minimumLevel": 1,
+          "status": "confirmed",
+          "active": true,
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "trainingForm": "Stand des Schildes",
+          "category": "technique",
+          "description": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.",
+          "effect": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.",
+          "weaponLabel": "Stimme · nichtmagische Kampfansage",
+          "weaponTypes": [],
+          "compatibleWeaponIds": [],
+          "activationType": "reaction",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-2-reaction-1",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "damageType": "",
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "maximumTargets": 1,
+          "target": "Selbst",
+          "range": "Waffenreichweite",
+          "requirements": "Stimme · nichtmagische Kampfansage Hörbare eigene Stimme. Nichtmagische Selbstvorbereitung; kein Effekt auf fremde Figuren, keine Manakosten.",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-2-condition",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-deckung",
+                "name": "Feste Deckung",
+                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 1
+                }
+              },
+              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            }
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "triggerRules": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-voice",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes"
+        },
+        {
+          "id": "combat-style-huskarl-skalde-wahl-3",
+          "name": "Schwert zwischen den Takten",
+          "minimumLevel": 2,
+          "status": "confirmed",
+          "active": true,
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "trainingForm": "Stand des Schildes",
+          "category": "technique",
+          "description": "Ein gezielter Einzelangriff mit der geführten Waffe.",
+          "effect": "Ein gezielter Einzelangriff mit der geführten Waffe.",
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "compatibleWeaponIds": [],
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-3-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "damageType": "",
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "requirements": "Schwert, Axt oder Sax",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-3-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "triggerRules": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes"
+        },
+        {
+          "id": "combat-style-huskarl-skalde-wahl-4",
+          "name": "Gezählter Atem",
+          "minimumLevel": 2,
+          "status": "confirmed",
+          "active": true,
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "trainingForm": "Stand des Schildes",
+          "category": "technique",
+          "description": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
+          "effect": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
+          "weaponLabel": "Stimme · nichtmagische Kampfansage",
+          "weaponTypes": [],
+          "compatibleWeaponIds": [],
+          "activationType": "bonus-action",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-4-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skalde-wahl-4-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "damageType": "",
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "maximumTargets": 1,
+          "target": "Selbst",
+          "range": "Waffenreichweite",
+          "requirements": "Stimme · nichtmagische Kampfansage Hörbare eigene Stimme. Nichtmagische Selbstvorbereitung; kein Effekt auf fremde Figuren, keine Manakosten.",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-4-aim",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-zielen",
+                "name": "Gesammelte Ruhe",
+                "description": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "mechanics": {
+                  "attack": 1
+                }
+              },
+              "notes": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht."
+            }
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "triggerRules": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-voice",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes"
+        },
+        {
+          "id": "combat-style-huskarl-skalde-wahl-5",
+          "name": "Antäuschender Refrain",
+          "minimumLevel": 3,
+          "status": "confirmed",
+          "active": true,
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "trainingForm": "Stand des Schildes",
+          "category": "technique",
+          "description": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "effect": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "compatibleWeaponIds": [],
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-5-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skalde-wahl-5-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "attackBonus": 1,
+          "damageBonus": 0,
+          "damageType": "",
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "requirements": "Schwert, Axt oder Sax",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-5-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "triggerRules": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes"
+        },
+        {
+          "id": "combat-style-huskarl-skalde-wahl-6",
+          "name": "Schritt zum nächsten Takt",
+          "minimumLevel": 3,
+          "status": "confirmed",
+          "active": true,
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "trainingForm": "Stand des Schildes",
+          "category": "technique",
+          "description": "keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "effect": "keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "weaponLabel": "Stimme · nichtmagische Kampfansage",
+          "weaponTypes": [],
+          "compatibleWeaponIds": [],
+          "activationType": "bonus-action",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-6-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "damageType": "",
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "maximumTargets": 1,
+          "target": "Selbst",
+          "range": "Waffenreichweite",
+          "requirements": "Stimme · nichtmagische Kampfansage Hörbare eigene Stimme. Nichtmagische Selbstvorbereitung; kein Effekt auf fremde Figuren, keine Manakosten.",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-6-mobility",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "martial-position-guard",
+                "name": "Sicherer Schritt",
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "mechanics": {
+                  "movement": 0
+                },
+                "stanceGroup": "martial-position-guard",
+                "active": true,
+                "triggerRules": [
+                  {
+                    "id": "martial-position-guard-once",
+                    "name": "Stellungseffekt",
+                    "phase": "pre-roll",
+                    "recipient": "actor",
+                    "sourceRelation": "enemy",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "weaponAttackOnly": true,
+                    "condition": "always",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "resultEffects": [
+                      {
+                        "id": "martial-position-guard-consume",
+                        "type": "remove-condition",
+                        "target": "target",
+                        "conditionId": "martial-position-guard",
+                        "on": "always"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
+            }
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "triggerRules": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-voice",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes"
+        },
+        {
+          "id": "combat-style-huskarl-skalde-wahl-7",
+          "name": "Sax an der Fessel",
+          "minimumLevel": 4,
+          "status": "confirmed",
+          "active": true,
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "trainingForm": "Stand des Schildes",
+          "category": "technique",
+          "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "effect": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "compatibleWeaponIds": [],
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-7-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skalde-wahl-7-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 6
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "damageType": "",
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "requirements": "Schwert, Axt oder Sax",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-7-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "martial-position-penalty",
+              "name": "Gehemmter Schritt",
+              "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+              "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+              "tags": "Huskarl-Waffenlehre",
+              "mechanics": {
+                "movement": 0
+              },
+              "stanceGroup": "martial-position-penalty",
+              "active": true,
+              "durationModel": {
+                "kind": "actor-comments",
+                "remainingActorComments": 1
+              },
+              "triggerRules": [
+                {
+                  "id": "martial-position-penalty-once",
+                  "name": "Stellungseffekt",
+                  "phase": "pre-roll",
+                  "recipient": "actor",
+                  "sourceRelation": "self",
+                  "activation": "passive",
+                  "frequency": "comment",
+                  "actionKinds": [
+                    "weapon",
+                    "technique"
+                  ],
+                  "weaponAttackOnly": true,
+                  "condition": "always",
+                  "effects": {
+                    "attackModifier": -1
+                  },
+                  "resultEffects": [
+                    {
+                      "id": "martial-position-penalty-consume",
+                      "type": "remove-condition",
+                      "target": "self",
+                      "conditionId": "martial-position-penalty",
+                      "on": "always"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "triggerRules": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes"
+        },
+        {
+          "id": "combat-style-huskarl-skalde-wahl-8",
+          "name": "Vers der Sammlung",
+          "minimumLevel": 4,
+          "status": "confirmed",
+          "active": true,
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "trainingForm": "Stand des Schildes",
+          "category": "technique",
+          "description": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.",
+          "effect": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.",
+          "weaponLabel": "Stimme · nichtmagische Kampfansage",
+          "weaponTypes": [],
+          "compatibleWeaponIds": [],
+          "activationType": "bonus-action",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-8-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skalde-wahl-8-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "damageType": "",
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "maximumTargets": 1,
+          "target": "Selbst",
+          "range": "Waffenreichweite",
+          "requirements": "Stimme · nichtmagische Kampfansage Hörbare eigene Stimme. Nichtmagische Selbstvorbereitung; kein Effekt auf fremde Figuren, keine Manakosten.",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-8-condition",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-deckung",
+                "name": "Feste Deckung",
+                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 2
+                }
+              },
+              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            }
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "triggerRules": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-voice",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes"
+        },
+        {
+          "id": "combat-style-huskarl-skalde-wahl-9",
+          "name": "Klinge und Gegenrhythmus",
+          "minimumLevel": 5,
+          "status": "confirmed",
+          "active": true,
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "trainingForm": "Stand des Schildes",
+          "category": "technique",
+          "description": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
+          "effect": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "compatibleWeaponIds": [],
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-9-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skalde-wahl-9-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "damageType": "",
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "requirements": "Schwert, Axt oder Sax",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-9-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "combat-style-huskarl-skalde-wahl-9-failed-save",
+              "name": "Gebundene Waffenführung",
+              "duration": "1 eigener Beitrag",
+              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
+              "tags": "Huskarl-Waffenlehre",
+              "mechanics": {
+                "attack": -1
+              }
+            }
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "triggerRules": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes"
+        },
+        {
+          "id": "combat-style-huskarl-skalde-wahl-10",
+          "name": "Betonter Schlusshieb",
+          "minimumLevel": 5,
+          "status": "confirmed",
+          "active": true,
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "trainingForm": "Stand des Schildes",
+          "category": "technique",
+          "description": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
+          "effect": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "compatibleWeaponIds": [],
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-10-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skalde-wahl-10-special-action-2",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 12
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "damageType": "",
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "requirements": "Schwert, Axt oder Sax",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-10-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "triggerRules": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes"
+        }
+      ],
       "classTraining": {
         "schemaVersion": 2,
-        "curriculumId": "",
+        "curriculumId": "aldrimar-skalde",
         "selections": [],
         "techniqueSelections": []
       },
@@ -2602,7 +3819,8 @@
         "enabled": false,
         "automaticCritical": false
       },
-      "notes": ""
+      "notes": "",
+      "defenseBalanceVersion": 1
     },
     "identity": {
       "worldPersonId": ""

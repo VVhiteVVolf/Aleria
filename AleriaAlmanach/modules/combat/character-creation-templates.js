@@ -1,6 +1,7 @@
 // Versionierte Ausgangspakete für den Stufe-1-Assistenten.
 // Die Vorlagen enthalten nur strukturierte Startdaten; individuelle Regeln bleiben im Charakterbogen editierbar.
 import { withCenyrClassTraining } from '../classes/cenyr/cenyr-class-registry.js?v=20260909-dragon-parent-v2';
+import { applyArmorBalance } from '../character-equipment/equipment-armor-rules.js';
 
 export const CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION = 1;
 
@@ -25,11 +26,12 @@ const weapon = (id, name, weaponType, damageFormula, damageType, attackAttribute
   equipped: false
 });
 
-const armor = (id, name, training, baseArmorClass, dexterityMode, dexterityCap = 2) => ({
+const armor = (id, name, training, baseArmorClass, dexterityMode, dexterityCap = 2) => applyArmorBalance({
   id: `starter-${id}`,
   name,
   kind: 'armor',
   training,
+  armorCategory: training,
   baseArmorClass,
   armorClassBonus: 0,
   dexterityMode,

@@ -116,7 +116,9 @@ for (const form of DRACHENTANZ_COMBAT_STYLE.forms) {
       assert.equal(resolved.attackModifier, base.attackModifier + (effect.condition.mechanics.attack || 0), technique.name);
       assert.equal(resolved.totalDefense, base.totalDefense + (effect.condition.mechanics.armorClass || 0), technique.name);
       for (let index = 0; index < applied[0].remainingActorComments; index++) comments.push({ characterId: recipientId });
-      assert.equal(deriveCombatStateFromComments(comments).get(recipientId).temporaryConditions.length, 0, `${technique.name}: Ablauf`);
+      const remaining = deriveCombatStateFromComments(comments).get(recipientId).temporaryConditions;
+      assert.equal(remaining.filter(c => !c.actionLockRecovery).length, 0, `${technique.name}: Ablauf`);
+      if (effect.condition.blockedResource === 'action') assert.equal(remaining[0]?.actionLockRecovery, true);
     }
   });
 }

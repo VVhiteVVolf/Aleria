@@ -66,7 +66,7 @@ test('new passives and defensive abilities carry executable effects and avoid un
   assert.equal(support.damageModel.mode, 'fixed');
   assert.equal(support.effects.some(effect => effect.type === 'damage'), false);
   assert(support.effects.some(effect => effect.condition?.mechanics.armorClass === 2 && effect.on === 'always'));
-  assert(attacks(F.speerdrache).some(attack => attack.effects.some(effect => effect.type === 'move')));
+  assert(attacks(F.speerdrache).some(attack => attack.effects.some(effect => effect.condition?.stanceGroup === 'martial-position-guard')));
   for (const formId of [F.peitschender, F.schweifender]) {
     const penalties = attacks(formId).flatMap(attack => attack.effects).filter(effect => effect.condition?.mechanics.armorClass < 0);
     assert(penalties.length > 0);

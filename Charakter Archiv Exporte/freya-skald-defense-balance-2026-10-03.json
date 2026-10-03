@@ -1,0 +1,4077 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-03T02:00:00.000Z",
+  "character": {
+    "id": "ksJQe8Ai4KbRE9jOAvb7",
+    "name": "Freya Skald",
+    "updatedAt": "2026-10-03T02:00:00.000Z",
+    "combatProfile": {
+      "weapons": [
+        {
+          "name": "Nahkampf",
+          "effects": [],
+          "ammunition": null,
+          "weaponType": "unarmed",
+          "damageFormula": "1d4",
+          "attackAttribute": "strength",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "id": "default-unarmed-melee",
+          "training": "simple",
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "versatileDamageFormula": "",
+          "image": "",
+          "activationType": "action",
+          "inventoryItemId": "",
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": ""
+          },
+          "equipped": false,
+          "damageType": "Wucht",
+          "attackBonus": 0,
+          "proficient": true,
+          "aiInstructions": "",
+          "requirements": "",
+          "weaponProfileId": "",
+          "costs": [
+            {
+              "id": "activation-action",
+              "scope": "comment",
+              "amount": 1,
+              "resourceId": "action",
+              "name": "Aktion"
+            }
+          ],
+          "properties": "Schlicht · simpel · immer verfügbar"
+        },
+        {
+          "inventoryItemId": "",
+          "costs": [
+            {
+              "resourceId": "action",
+              "scope": "comment",
+              "id": "freya-lute-action",
+              "name": "Aktion",
+              "amount": 1
+            }
+          ],
+          "attackBonus": 0,
+          "ammunition": null,
+          "weaponType": "arcane",
+          "effects": [],
+          "weaponProfileId": "",
+          "versatileDamageFormula": "",
+          "requirements": "",
+          "image": "",
+          "training": "simple",
+          "id": "freya-lute",
+          "attackAttribute": "charisma",
+          "equipped": true,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "aiInstructions": "",
+          "proficient": true,
+          "properties": "Hauptcaster-Werkzeug · improvisierter Schlag bei Bedarf",
+          "damageFormula": "1d4",
+          "notes": "Freyas Laute, mit der sie ihre Zauber wirkt.",
+          "name": "Laute",
+          "activationType": "action",
+          "damageType": "Wucht",
+          "auraBypass": {
+            "cost": 1,
+            "resourceId": "aura-focus",
+            "allowed": true
+          }
+        },
+        {
+          "proficient": true,
+          "equipped": false,
+          "aiInstructions": "",
+          "image": "",
+          "properties": "Sekundäre Skjoldr-Kampfweise · mit Schild geführt",
+          "attackAttribute": "strength",
+          "costs": [
+            {
+              "scope": "comment",
+              "id": "freya-sword-action",
+              "name": "Aktion",
+              "amount": 1,
+              "resourceId": "action"
+            }
+          ],
+          "attackBonus": 0,
+          "activationType": "action",
+          "name": "Schwert",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "cost": 1,
+            "allowed": true
+          },
+          "versatileDamageFormula": "",
+          "damageType": "Hieb",
+          "id": "freya-sword",
+          "weaponProfileId": "",
+          "requirements": "",
+          "notes": "",
+          "damageFormula": "1d8",
+          "range": "Nahkampf",
+          "training": "martial",
+          "inventoryItemId": "",
+          "weaponType": "sword",
+          "ammunition": null,
+          "damageBonus": 0,
+          "effects": []
+        },
+        {
+          "range": "Nahkampf",
+          "damageBonus": 0,
+          "effects": [],
+          "equipped": false,
+          "weaponProfileId": "",
+          "auraBypass": {
+            "cost": 1,
+            "resourceId": "aura-focus",
+            "allowed": true
+          },
+          "damageFormula": "1d4",
+          "damageType": "Wucht",
+          "notes": "Derselbe Schild wie im Rüstungsteil, hier für den offensiven Einsatz erfasst.",
+          "id": "freya-shield-bash",
+          "proficient": true,
+          "requirements": "",
+          "inventoryItemId": "",
+          "properties": "Offensiver Einsatz des Schilds · Rüstungsbonus siehe Rüstungsteil",
+          "aiInstructions": "",
+          "versatileDamageFormula": "",
+          "ammunition": null,
+          "weaponType": "shield",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1,
+              "scope": "comment",
+              "name": "Bonusaktion",
+              "id": "freya-shield-bash-bonus-action"
+            }
+          ],
+          "attackBonus": 0,
+          "name": "Schild (Schildstoß)",
+          "training": "martial",
+          "image": "",
+          "attackAttribute": "strength",
+          "activationType": "bonus-action"
+        }
+      ],
+      "classTraining": {
+        "techniqueSelections": [],
+        "curriculumId": "aldrimar-skalde",
+        "schemaVersion": 2,
+        "selections": []
+      },
+      "revision": 1790450756671,
+      "magic": {
+        "notes": "Skaldische Magie, gewirkt durch Stimme, Vortrag und ihre Laute.",
+        "spells": [
+          {
+            "tags": "Zaubertrick · Spott · Debuff",
+            "aiInstructions": "Der Malus wird einmalig als 1W4 gewürfelt und als fester Abzug auf den nächsten Angriffswurf des Ziels eingebacken, nicht erneut würfeln. Wirkt nur bei misslungenem Willenskraft-Rettungswurf (Weisheit) gegen Freyas Zauber-SG. Vereinfachung: Das Ziel würfelt aktuell sofort beim Wirken, nicht nachträglich reagierend als eigene Handlung - eine echte spätere Reaktionsmöglichkeit ist noch nicht gebaut.",
+            "costs": [
+              {
+                "name": "Aktion",
+                "resourceId": "action",
+                "scope": "comment",
+                "id": "activation-action",
+                "amount": 1
+              },
+              {
+                "resourceId": "mana-focus",
+                "id": "freya-spottvers-mana-cost",
+                "name": "Mana",
+                "scope": "persistent",
+                "amount": 1
+              }
+            ],
+            "icon": "",
+            "rollFormula": "",
+            "channelComments": 0,
+            "activationType": "action",
+            "description": "Ein spöttischer Vers, begleitet von einem schneidenden Lautenakkord.",
+            "duration": "Bis zum Ende des nächsten Gesamtkommentars des Ziels",
+            "id": "freya-spottvers",
+            "saveAttribute": "wisdom",
+            "resolutionType": "saving-throw",
+            "range": "Stimmreichweite",
+            "name": "Spottvers",
+            "concentration": false,
+            "slotResourceId": "",
+            "requirements": "",
+            "slotCost": 0,
+            "level": 0,
+            "prepared": true,
+            "halfDamageOnSave": false,
+            "manaCost": 1,
+            "auraBypass": {
+              "resourceId": "",
+              "allowed": true,
+              "cost": 1
+            },
+            "school": "",
+            "upcast": {
+              "formulaPerLevel": "",
+              "amountPerLevel": 0,
+              "enabled": false,
+              "maximumLevel": 10
+            },
+            "damageType": "psychisch",
+            "presentationKind": "song",
+            "effects": [
+              {
+                "inheritWeaponDamageType": false,
+                "movementKind": "move",
+                "movementMeters": 0,
+                "formula": "1d4",
+                "channelComments": 0,
+                "magical": false,
+                "condition": {
+                  "remainingActorComments": 1,
+                  "ward": {
+                    "deflectChance": 100,
+                    "enabled": false,
+                    "breaksOnCriticalHit": false,
+                    "charges": 0
+                  },
+                  "source": "Spottvers",
+                  "id": "freya-spottvers-verspottet",
+                  "description": "Ein Malus auf den nächsten Angriffswurf, durch Freyas Spott ausgelöst.",
+                  "tags": "Spott · Debuff",
+                  "duration": "Bis zum Ende des nächsten Gesamtkommentars des Ziels",
+                  "active": true,
+                  "name": "Verspottet",
+                  "mechanics": {
+                    "initiative": 0,
+                    "passivePerception": 0,
+                    "movement": 0,
+                    "armorClass": 0,
+                    "damage": 0,
+                    "attackRollMode": "normal",
+                    "maximumHitPoints": 0,
+                    "spellSaveDc": 0,
+                    "attack": 0,
+                    "spellAttack": 0,
+                    "skill": 0,
+                    "savingThrow": 0
+                  },
+                  "durationModel": {
+                    "channelOwnerId": "",
+                    "label": "Bis zum Ende des nächsten Gesamtkommentars des Ziels",
+                    "expiresOnDayChange": false,
+                    "expiresOnRest": "",
+                    "kind": "actor-comments",
+                    "remainingActorComments": 1,
+                    "concentrationOwnerId": "",
+                    "remainingSceneComments": 0,
+                    "encounterId": ""
+                  },
+                  "remainingSceneComments": 0
+                },
+                "amount": 0,
+                "summon": null,
+                "conditionId": "",
+                "damageType": "physisch",
+                "type": "apply-condition",
+                "resourceId": "",
+                "concentration": false,
+                "on": "save-failure",
+                "notes": "",
+                "id": "freya-spottvers-malus",
+                "nonlethal": false,
+                "conditionTags": "",
+                "target": "target"
+              }
+            ]
+          },
+          {
+            "saveAttribute": "wisdom",
+            "range": "9 Meter",
+            "manaCost": 1,
+            "level": 0,
+            "id": "freya-magische-hand",
+            "concentration": false,
+            "effects": [],
+            "tags": "Zaubertrick · Utility · Mage Hand",
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "resolutionType": "automatic",
+            "damageType": "Magie",
+            "school": "",
+            "upcast": {
+              "amountPerLevel": 0,
+              "maximumLevel": 10,
+              "enabled": false,
+              "formulaPerLevel": ""
+            },
+            "prepared": true,
+            "slotCost": 0,
+            "slotResourceId": "",
+            "icon": "",
+            "costs": [
+              {
+                "resourceId": "action",
+                "scope": "comment",
+                "name": "Aktion",
+                "amount": 1,
+                "id": "activation-action"
+              },
+              {
+                "name": "Mana",
+                "id": "freya-magische-hand-mana-cost",
+                "resourceId": "mana-focus",
+                "scope": "persistent",
+                "amount": 1
+              }
+            ],
+            "description": "Ein kaum sichtbarer Luftzug folgt den Klängen der Laute und bewegt kleine Gegenstände.",
+            "halfDamageOnSave": false,
+            "activationType": "action",
+            "requirements": "",
+            "duration": "Kurz, solange die Melodie andauert",
+            "presentationKind": "song",
+            "channelComments": 0,
+            "rollFormula": "",
+            "aiInstructions": "Rein narrativer Nutzzauber ohne Schaden oder Rettungswurf. Türen öffnen, Gegenstände bewegen, Hebel ziehen, Waffen oder Beutel heranholen - nichts, was Kampf entscheidet.",
+            "name": "Magische Hand"
+          },
+          {
+            "manaCost": 1,
+            "effects": [],
+            "channelComments": 0,
+            "resolutionType": "automatic",
+            "school": "",
+            "upcast": {
+              "maximumLevel": 10,
+              "formulaPerLevel": "",
+              "amountPerLevel": 0,
+              "enabled": false
+            },
+            "prepared": true,
+            "tags": "Zaubertrick · Utility · Minor Illusion",
+            "slotCost": 0,
+            "slotResourceId": "",
+            "costs": [
+              {
+                "amount": 1,
+                "id": "activation-action",
+                "resourceId": "action",
+                "name": "Aktion",
+                "scope": "comment"
+              },
+              {
+                "name": "Mana",
+                "resourceId": "mana-focus",
+                "amount": 1,
+                "id": "freya-kleine-illusion-mana-cost",
+                "scope": "persistent"
+              }
+            ],
+            "icon": "",
+            "presentationKind": "song",
+            "activationType": "action",
+            "duration": "Kurz, solange die Melodie andauert",
+            "description": "Mit wenigen gezupften Saiten erschafft die Skaldin Geräusche oder kleine Trugbilder, als würden Erinnerungen oder Geister vergangener Zeiten Gestalt annehmen.",
+            "auraBypass": {
+              "resourceId": "",
+              "cost": 1,
+              "allowed": true
+            },
+            "id": "freya-kleine-illusion",
+            "damageType": "Magie",
+            "halfDamageOnSave": false,
+            "requirements": "",
+            "saveAttribute": "wisdom",
+            "rollFormula": "",
+            "range": "9 Meter",
+            "aiInstructions": "Rein narrativer Nutzzauber ohne Schaden oder Rettungswurf. Ablenkung, Täuschung, Lockrufe, Deckung durch kleine Trugbilder oder Geräusche.",
+            "name": "Kleine Illusion",
+            "concentration": false,
+            "level": 0
+          },
+          {
+            "activationType": "action",
+            "presentationKind": "song",
+            "channelComments": 0,
+            "costs": [
+              {
+                "amount": 1,
+                "id": "activation-action",
+                "name": "Aktion",
+                "resourceId": "action",
+                "scope": "comment"
+              },
+              {
+                "name": "Mana",
+                "amount": 1,
+                "id": "freya-licht-mana-cost",
+                "resourceId": "mana-focus",
+                "scope": "persistent"
+              }
+            ],
+            "description": "Eine ruhige Melodie lässt eine Waffe, Brosche oder den Kopf der Laute in warmem Licht erstrahlen, als würde das Lied selbst die Dunkelheit vertreiben.",
+            "halfDamageOnSave": false,
+            "requirements": "",
+            "name": "Licht",
+            "rollFormula": "",
+            "duration": "Bis zur nächsten langen Rast oder bewusster Auflösung",
+            "aiInstructions": "Rein narrativer Nutzzauber ohne Schaden oder Rettungswurf. Beleuchtung, Signalgebung, Erkundung.",
+            "school": "",
+            "upcast": {
+              "amountPerLevel": 0,
+              "formulaPerLevel": "",
+              "enabled": false,
+              "maximumLevel": 10
+            },
+            "id": "freya-licht",
+            "prepared": true,
+            "range": "Berührung",
+            "slotCost": 0,
+            "level": 0,
+            "auraBypass": {
+              "cost": 1,
+              "allowed": true,
+              "resourceId": ""
+            },
+            "effects": [],
+            "damageType": "Magie",
+            "tags": "Zaubertrick · Utility · Light",
+            "resolutionType": "automatic",
+            "concentration": false,
+            "manaCost": 1,
+            "icon": "",
+            "slotResourceId": "",
+            "saveAttribute": "wisdom"
+          },
+          {
+            "slotResourceId": "spell-slot-1",
+            "auraBypass": {
+              "cost": 1,
+              "resourceId": "",
+              "allowed": true
+            },
+            "resolutionType": "saving-throw",
+            "requirements": "",
+            "damageType": "Magie",
+            "manaCost": 2,
+            "description": "Ein warmes, einschmeichelndes Lied, das Zuneigung und Vertrauen weckt.",
+            "prepared": true,
+            "slotCost": 1,
+            "costs": [
+              {
+                "resourceId": "action",
+                "id": "activation-action",
+                "scope": "comment",
+                "amount": 1,
+                "name": "Aktion"
+              },
+              {
+                "resourceId": "mana-focus",
+                "amount": 2,
+                "name": "Mana",
+                "id": "freya-charm-person-mana-cost",
+                "scope": "persistent"
+              }
+            ],
+            "upcast": {
+              "amountPerLevel": 0,
+              "enabled": false,
+              "maximumLevel": 10,
+              "formulaPerLevel": ""
+            },
+            "name": "Person bezaubern",
+            "school": "",
+            "rollFormula": "",
+            "id": "freya-charm-person",
+            "aiInstructions": "Freitext-Auflösung: bei misslungenem Weisheits-Rettungswurf gegen Freyas Zauber-SG betrachtet das Ziel Freya vorerst als freundlich gesinnt und ist ihr wohlgesonnen; offen feindseliges Verhalten Freyas oder ihrer Verbündeten bricht den Effekt sofort.",
+            "duration": "Mehrere Szenen, bis aufgehoben oder durch Feindseligkeit gebrochen",
+            "presentationKind": "song",
+            "halfDamageOnSave": false,
+            "level": 1,
+            "effects": [],
+            "saveAttribute": "wisdom",
+            "icon": "",
+            "range": "9 Meter",
+            "concentration": false,
+            "channelComments": 0,
+            "tags": "Grad I · Bezauberung · Charm Person",
+            "activationType": "action"
+          },
+          {
+            "damageType": "Magie",
+            "auraBypass": {
+              "cost": 1,
+              "resourceId": "",
+              "allowed": true
+            },
+            "channelComments": 0,
+            "effects": [],
+            "resolutionType": "saving-throw",
+            "name": "Person beruhigen",
+            "school": "",
+            "upcast": {
+              "maximumLevel": 10,
+              "formulaPerLevel": "",
+              "enabled": false,
+              "amountPerLevel": 0
+            },
+            "requirements": "",
+            "slotResourceId": "spell-slot-1",
+            "manaCost": 2,
+            "slotCost": 1,
+            "prepared": true,
+            "id": "freya-calm-person",
+            "halfDamageOnSave": false,
+            "presentationKind": "song",
+            "costs": [
+              {
+                "amount": 1,
+                "id": "activation-action",
+                "name": "Aktion",
+                "scope": "comment",
+                "resourceId": "action"
+              },
+              {
+                "resourceId": "mana-focus",
+                "scope": "persistent",
+                "name": "Mana",
+                "id": "freya-calm-person-mana-cost",
+                "amount": 2
+              }
+            ],
+            "duration": "Mehrere Runden, bis das Ziel angegriffen wird oder Schaden nimmt",
+            "concentration": false,
+            "tags": "Grad I · Beruhigung · Calm Person",
+            "description": "Eine sanfte, gleichmäßige Melodie, die Wogen glättet und Zorn verebben lässt.",
+            "icon": "",
+            "saveAttribute": "wisdom",
+            "aiInstructions": "Freitext-Auflösung: bei misslungenem Weisheits-Rettungswurf gegen Freyas Zauber-SG wird das Ziel deutlich ruhiger, kann nicht aggressiv handeln oder sich freiwillig in Gefahr begeben; Schaden oder direkte Bedrohung beendet den Effekt sofort.",
+            "activationType": "action",
+            "rollFormula": "",
+            "range": "9 Meter",
+            "level": 1
+          },
+          {
+            "slotCost": 1,
+            "prepared": true,
+            "upcast": {
+              "amountPerLevel": 0,
+              "formulaPerLevel": "",
+              "maximumLevel": 10,
+              "enabled": false
+            },
+            "rollFormula": "",
+            "school": "",
+            "damageType": "Magie",
+            "auraBypass": {
+              "allowed": true,
+              "cost": 1,
+              "resourceId": ""
+            },
+            "icon": "",
+            "resolutionType": "saving-throw",
+            "tags": "Grad II · Zorn · Enrage Person",
+            "description": "Ein aufpeitschender, dissonanter Ton, der Wut und Reizbarkeit schürt.",
+            "manaCost": 3,
+            "costs": [
+              {
+                "amount": 1,
+                "name": "Aktion",
+                "resourceId": "action",
+                "scope": "comment",
+                "id": "activation-action"
+              },
+              {
+                "scope": "persistent",
+                "resourceId": "mana-focus",
+                "amount": 3,
+                "name": "Mana",
+                "id": "freya-enrage-person-mana-cost"
+              }
+            ],
+            "slotResourceId": "spell-slot-2",
+            "effects": [],
+            "presentationKind": "song",
+            "id": "freya-enrage-person",
+            "activationType": "action",
+            "requirements": "",
+            "halfDamageOnSave": false,
+            "concentration": false,
+            "duration": "Mehrere Runden, bis der Zorn narrativ abklingt",
+            "name": "Person wütend machen",
+            "channelComments": 0,
+            "saveAttribute": "wisdom",
+            "level": 2,
+            "aiInstructions": "Freitext-Auflösung: bei misslungenem Weisheits-Rettungswurf gegen Freyas Zauber-SG gerät das Ziel in blinde Wut und greift bevorzugt den ihm nächststehenden Gegner an, auch entgegen eigener Taktik.",
+            "range": "9 Meter"
+          },
+          {
+            "damageType": "Magie",
+            "halfDamageOnSave": false,
+            "auraBypass": {
+              "resourceId": "",
+              "allowed": true,
+              "cost": 1
+            },
+            "slotCost": 1,
+            "prepared": true,
+            "activationType": "action",
+            "range": "9 Meter",
+            "level": 3,
+            "presentationKind": "song",
+            "requirements": "",
+            "aiInstructions": "Freitext-Auflösung: erschafft eine Zone völliger Stille an einem gewählten Punkt in Reichweite; darin ist weder Sprache noch Gesang noch stimmbasierte Magie möglich. Kein Rettungswurf, wirkt automatisch auf den Bereich, nicht auf eine Person.",
+            "concentration": false,
+            "channelComments": 0,
+            "manaCost": 5,
+            "saveAttribute": "wisdom",
+            "name": "Stille",
+            "description": "Freya lässt die Laute für einen Moment verstummen - und mit ihr jeden Klang in der Umgebung.",
+            "id": "freya-silence",
+            "school": "",
+            "costs": [
+              {
+                "id": "activation-action",
+                "scope": "comment",
+                "name": "Aktion",
+                "resourceId": "action",
+                "amount": 1
+              },
+              {
+                "resourceId": "mana-focus",
+                "scope": "persistent",
+                "id": "freya-silence-mana-cost",
+                "amount": 5,
+                "name": "Mana"
+              }
+            ],
+            "upcast": {
+              "amountPerLevel": 0,
+              "enabled": false,
+              "formulaPerLevel": "",
+              "maximumLevel": 10
+            },
+            "effects": [],
+            "tags": "Grad III · Stille · Silence",
+            "duration": "Mehrere Runden, bis bewusst aufgelöst",
+            "slotResourceId": "spell-slot-3",
+            "rollFormula": "",
+            "resolutionType": "automatic",
+            "icon": ""
+          }
+        ],
+        "bypassResourceId": "",
+        "spellAttackOverride": null,
+        "castingAttribute": "charisma",
+        "casterTier": "full",
+        "slotResourceIds": [
+          "spell-slot-1",
+          "spell-slot-2",
+          "spell-slot-3",
+          "spell-slot-4",
+          "spell-slot-5",
+          "spell-slot-6",
+          "spell-slot-7",
+          "spell-slot-8",
+          "spell-slot-9",
+          "spell-slot-10"
+        ],
+        "focusEnabled": false,
+        "enabled": true,
+        "focusResourceId": "focus",
+        "manaResourceId": "mana-focus",
+        "spellSaveDcOverride": null
+      },
+      "progression": {
+        "level": 5,
+        "experience": 0,
+        "proficiencyBonusOverride": null,
+        "actionPoolChoices": [],
+        "experienceReward": null,
+        "nextLevelExperience": null,
+        "specialLevels": 0,
+        "resourceRulesVersion": 2
+      },
+      "templateSelections": {
+        "appliedAt": "2026-08-07T02:00:00.000Z",
+        "backgroundId": "musikerin",
+        "ancestryId": "aldrimarer",
+        "schemaVersion": 1,
+        "attributeMethod": "point-buy",
+        "classId": "skalde"
+      },
+      "attributes": [
+        {
+          "key": "strength",
+          "shortLabel": "KRF",
+          "score": 13,
+          "label": "Kraft",
+          "modifierOverride": null
+        },
+        {
+          "modifierOverride": null,
+          "shortLabel": "GES",
+          "label": "Geschick",
+          "score": 13,
+          "key": "dexterity"
+        },
+        {
+          "key": "constitution",
+          "score": 12,
+          "modifierOverride": null,
+          "label": "Konstitution",
+          "shortLabel": "KON"
+        },
+        {
+          "label": "Intelligenz",
+          "modifierOverride": null,
+          "shortLabel": "INT",
+          "key": "intelligence",
+          "score": 10
+        },
+        {
+          "shortLabel": "WEI",
+          "label": "Weisheit",
+          "modifierOverride": null,
+          "score": 13,
+          "key": "wisdom"
+        },
+        {
+          "score": 19,
+          "key": "charisma",
+          "modifierOverride": null,
+          "label": "Charisma",
+          "shortLabel": "CHA"
+        }
+      ],
+      "armorClass": {
+        "overrideMode": "total",
+        "shieldBonus": 0,
+        "dexterityCap": 2,
+        "override": null,
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "dexterityMode": "full",
+        "base": 10
+      },
+      "schemaVersion": 11,
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "conditions": [],
+      "techniques": [
+        {
+          "minimumLevel": 1,
+          "effect": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
+          "requirements": "Schwert, Axt oder Sax",
+          "trainingForm": "Stand des Schildes",
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes",
+          "activationType": "bonus-action",
+          "compatibleWeaponIds": [],
+          "attackBonus": 0,
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "range": "Waffenreichweite",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "category": "technique",
+          "combatStyleId": "huskarl-waffenlehre",
+          "damageFormula": "",
+          "criticalThreshold": 20,
+          "mechanics": {},
+          "name": "Klinge im Takt",
+          "id": "combat-style-huskarl-skalde-wahl-1",
+          "live": true,
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "status": "confirmed",
+          "targetDefenseModifier": 0,
+          "maximumTargets": 1,
+          "secondarySave": {
+            "enabled": false
+          },
+          "active": true,
+          "combatStyleFormId": "huskarl-schildgrund",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "damageType": "",
+          "damageBonus": 0,
+          "triggerRules": [],
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-1-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "target": "Ein Gegner",
+          "description": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-1-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "baseDieCap": 4,
+            "lightAttack": true,
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          }
+        },
+        {
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-voice",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "combatStyleFormId": "huskarl-schildgrund",
+          "effect": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.",
+          "attackBonus": 0,
+          "category": "technique",
+          "damageFormula": "",
+          "combatStyleId": "huskarl-waffenlehre",
+          "mechanics": {},
+          "damageType": "",
+          "activationType": "reaction",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "triggerRules": [],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes",
+          "range": "Waffenreichweite",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-2-condition",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-deckung",
+                "name": "Feste Deckung",
+                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 1
+                }
+              },
+              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            }
+          ],
+          "id": "combat-style-huskarl-skalde-wahl-2",
+          "status": "confirmed",
+          "damageBonus": 0,
+          "minimumLevel": 1,
+          "active": true,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "weaponLabel": "Stimme · nichtmagische Kampfansage",
+          "trainingForm": "Stand des Schildes",
+          "requirements": "Stimme · nichtmagische Kampfansage Hörbare eigene Stimme. Nichtmagische Selbstvorbereitung; kein Effekt auf fremde Figuren, keine Manakosten.",
+          "description": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.",
+          "name": "Standvers",
+          "live": true,
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "weaponTypes": [],
+          "targetDefenseModifier": 0,
+          "compatibleWeaponIds": [],
+          "target": "Selbst",
+          "secondarySave": {
+            "enabled": false
+          },
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-2-reaction-1",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "attackBonus": 0,
+          "criticalThreshold": 20,
+          "compatibleWeaponIds": [],
+          "minimumLevel": 2,
+          "trainingForm": "Stand des Schildes",
+          "requirements": "Schwert, Axt oder Sax",
+          "status": "confirmed",
+          "id": "combat-style-huskarl-skalde-wahl-3",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "secondarySave": {
+            "enabled": false
+          },
+          "target": "Ein Gegner",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-3-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "maximumTargets": 1,
+          "live": true,
+          "name": "Schwert zwischen den Takten",
+          "damageBonus": 0,
+          "category": "technique",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-3-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "damageType": "",
+          "effect": "Ein gezielter Einzelangriff mit der geführten Waffe.",
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "description": "Ein gezielter Einzelangriff mit der geführten Waffe.",
+          "range": "Waffenreichweite",
+          "activationType": "action",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "combatStyleFormId": "huskarl-schildgrund",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes",
+          "targetDefenseModifier": 0,
+          "mechanics": {},
+          "combatStyleId": "huskarl-waffenlehre",
+          "damageFormula": "",
+          "triggerRules": []
+        },
+        {
+          "active": true,
+          "compatibleWeaponIds": [],
+          "maximumTargets": 1,
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes",
+          "status": "confirmed",
+          "weaponTypes": [],
+          "target": "Selbst",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-4-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skalde-wahl-4-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "weaponLabel": "Stimme · nichtmagische Kampfansage",
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "description": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
+          "triggerRules": [],
+          "criticalThreshold": 20,
+          "secondarySave": {
+            "enabled": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "damageBonus": 0,
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-voice",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "activationType": "bonus-action",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "live": true,
+          "name": "Gezählter Atem",
+          "requirements": "Stimme · nichtmagische Kampfansage Hörbare eigene Stimme. Nichtmagische Selbstvorbereitung; kein Effekt auf fremde Figuren, keine Manakosten.",
+          "trainingForm": "Stand des Schildes",
+          "effect": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "damageFormula": "",
+          "minimumLevel": 2,
+          "combatStyleId": "huskarl-waffenlehre",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-4-aim",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-zielen",
+                "name": "Gesammelte Ruhe",
+                "description": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "mechanics": {
+                  "attack": 1
+                }
+              },
+              "notes": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht."
+            }
+          ],
+          "mechanics": {},
+          "range": "Waffenreichweite",
+          "damageType": "",
+          "id": "combat-style-huskarl-skalde-wahl-4",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "category": "technique",
+          "targetDefenseModifier": 0,
+          "attackBonus": 0
+        },
+        {
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "description": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "effect": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-5-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skalde-wahl-5-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "targetDefenseModifier": 0,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-5-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "triggerRules": [],
+          "category": "technique",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageBonus": 0,
+          "damageType": "",
+          "secondarySave": {
+            "enabled": false
+          },
+          "id": "combat-style-huskarl-skalde-wahl-5",
+          "mechanics": {},
+          "activationType": "action",
+          "criticalThreshold": 20,
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "range": "Waffenreichweite",
+          "status": "confirmed",
+          "active": true,
+          "attackBonus": 1,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "minimumLevel": 3,
+          "compatibleWeaponIds": [],
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "trainingForm": "Stand des Schildes",
+          "requirements": "Schwert, Axt oder Sax",
+          "live": true,
+          "name": "Antäuschender Refrain",
+          "maximumTargets": 1,
+          "combatStyleId": "huskarl-waffenlehre",
+          "damageFormula": "",
+          "target": "Ein Gegner"
+        },
+        {
+          "damageType": "",
+          "mechanics": {},
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "activationType": "bonus-action",
+          "criticalThreshold": 20,
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-voice",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "range": "Waffenreichweite",
+          "effect": "keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "name": "Schritt zum nächsten Takt",
+          "damageFormula": "",
+          "targetDefenseModifier": 0,
+          "requirements": "Stimme · nichtmagische Kampfansage Hörbare eigene Stimme. Nichtmagische Selbstvorbereitung; kein Effekt auf fremde Figuren, keine Manakosten.",
+          "trainingForm": "Stand des Schildes",
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "attackBonus": 0,
+          "minimumLevel": 3,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-6-mobility",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "martial-position-guard",
+                "name": "Sicherer Schritt",
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "mechanics": {
+                  "movement": 0
+                },
+                "stanceGroup": "martial-position-guard",
+                "active": true,
+                "triggerRules": [
+                  {
+                    "id": "martial-position-guard-once",
+                    "name": "Stellungseffekt",
+                    "phase": "pre-roll",
+                    "recipient": "actor",
+                    "sourceRelation": "enemy",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "weaponAttackOnly": true,
+                    "condition": "always",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "resultEffects": [
+                      {
+                        "id": "martial-position-guard-consume",
+                        "type": "remove-condition",
+                        "target": "target",
+                        "conditionId": "martial-position-guard",
+                        "on": "always"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
+            }
+          ],
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false
+          },
+          "id": "combat-style-huskarl-skalde-wahl-6",
+          "maximumTargets": 1,
+          "active": true,
+          "weaponTypes": [],
+          "category": "technique",
+          "status": "confirmed",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-6-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "target": "Selbst",
+          "damageBonus": 0,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes",
+          "weaponLabel": "Stimme · nichtmagische Kampfansage",
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "compatibleWeaponIds": [],
+          "description": "keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "combatStyleFormId": "huskarl-schildgrund"
+        },
+        {
+          "name": "Sax an der Fessel",
+          "live": true,
+          "status": "confirmed",
+          "criticalThreshold": 20,
+          "combatStyleId": "huskarl-waffenlehre",
+          "damageFormula": "",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "active": true,
+          "attackBonus": 0,
+          "compatibleWeaponIds": [],
+          "maximumTargets": 1,
+          "requirements": "Schwert, Axt oder Sax",
+          "trainingForm": "Stand des Schildes",
+          "category": "technique",
+          "id": "combat-style-huskarl-skalde-wahl-7",
+          "minimumLevel": 4,
+          "range": "Waffenreichweite",
+          "target": "Ein Gegner",
+          "triggerRules": [],
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 6
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "effect": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "targetDefenseModifier": 0,
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes",
+          "damageBonus": 0,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-7-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageType": "",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "activationType": "action",
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "martial-position-penalty",
+              "name": "Gehemmter Schritt",
+              "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+              "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+              "tags": "Huskarl-Waffenlehre",
+              "mechanics": {
+                "movement": 0
+              },
+              "stanceGroup": "martial-position-penalty",
+              "active": true,
+              "durationModel": {
+                "kind": "actor-comments",
+                "remainingActorComments": 1
+              },
+              "triggerRules": [
+                {
+                  "id": "martial-position-penalty-once",
+                  "name": "Stellungseffekt",
+                  "phase": "pre-roll",
+                  "recipient": "actor",
+                  "sourceRelation": "self",
+                  "activation": "passive",
+                  "frequency": "comment",
+                  "actionKinds": [
+                    "weapon",
+                    "technique"
+                  ],
+                  "weaponAttackOnly": true,
+                  "condition": "always",
+                  "effects": {
+                    "attackModifier": -1
+                  },
+                  "resultEffects": [
+                    {
+                      "id": "martial-position-penalty-consume",
+                      "type": "remove-condition",
+                      "target": "self",
+                      "conditionId": "martial-position-penalty",
+                      "on": "always"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "mechanics": {},
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-7-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skalde-wahl-7-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ]
+        },
+        {
+          "status": "confirmed",
+          "maximumTargets": 1,
+          "weaponTypes": [],
+          "triggerRules": [],
+          "category": "technique",
+          "compatibleWeaponIds": [],
+          "active": true,
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes",
+          "damageBonus": 0,
+          "damageFormula": "",
+          "combatStyleId": "huskarl-waffenlehre",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "weaponLabel": "Stimme · nichtmagische Kampfansage",
+          "criticalThreshold": 20,
+          "description": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.",
+          "range": "Waffenreichweite",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "target": "Selbst",
+          "id": "combat-style-huskarl-skalde-wahl-8",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageType": "",
+          "secondarySave": {
+            "enabled": false
+          },
+          "activationType": "bonus-action",
+          "effect": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.",
+          "targetDefenseModifier": 0,
+          "combatStyleFormId": "huskarl-schildgrund",
+          "minimumLevel": 4,
+          "attackBonus": 0,
+          "trainingForm": "Stand des Schildes",
+          "requirements": "Stimme · nichtmagische Kampfansage Hörbare eigene Stimme. Nichtmagische Selbstvorbereitung; kein Effekt auf fremde Figuren, keine Manakosten.",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-8-condition",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-deckung",
+                "name": "Feste Deckung",
+                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 2
+                }
+              },
+              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            }
+          ],
+          "mechanics": {},
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-8-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skalde-wahl-8-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-voice",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "name": "Vers der Sammlung",
+          "live": true
+        },
+        {
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "combat-style-huskarl-skalde-wahl-9-failed-save",
+              "name": "Gebundene Waffenführung",
+              "duration": "1 eigener Beitrag",
+              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
+              "tags": "Huskarl-Waffenlehre",
+              "mechanics": {
+                "attack": -1
+              }
+            }
+          },
+          "category": "technique",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-9-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "effect": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
+          "trainingForm": "Stand des Schildes",
+          "requirements": "Schwert, Axt oder Sax",
+          "minimumLevel": 5,
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-9-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skalde-wahl-9-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "attackBonus": 0,
+          "activationType": "action",
+          "criticalThreshold": 20,
+          "live": true,
+          "mechanics": {},
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "name": "Klinge und Gegenrhythmus",
+          "targetDefenseModifier": 0,
+          "compatibleWeaponIds": [],
+          "status": "confirmed",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "description": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
+          "maximumTargets": 1,
+          "id": "combat-style-huskarl-skalde-wahl-9",
+          "active": true,
+          "range": "Waffenreichweite",
+          "damageBonus": 0,
+          "damageFormula": "",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "combatStyleId": "huskarl-waffenlehre",
+          "damageType": "",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "triggerRules": [],
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "target": "Ein Gegner"
+        },
+        {
+          "combatStyleId": "huskarl-waffenlehre",
+          "damageFormula": "",
+          "active": true,
+          "range": "Waffenreichweite",
+          "id": "combat-style-huskarl-skalde-wahl-10",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skalde"
+            ],
+            "branchId": "skalde-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "attackBonus": 0,
+          "maximumTargets": 1,
+          "damageType": "",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "combatStyleFormId": "huskarl-schildgrund",
+          "status": "confirmed",
+          "tags": "Huskarl-Waffenlehre · skalde · Stand des Schildes",
+          "target": "Ein Gegner",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "targetDefenseModifier": 0,
+          "triggerRules": [],
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 12
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-10-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skalde-wahl-10-special-action-2",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "description": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
+          "category": "technique",
+          "compatibleWeaponIds": [],
+          "effect": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
+          "damageBonus": 0,
+          "requirements": "Schwert, Axt oder Sax",
+          "trainingForm": "Stand des Schildes",
+          "activationType": "action",
+          "minimumLevel": 5,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skalde-wahl-10-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "criticalThreshold": 20,
+          "name": "Betonter Schlusshieb",
+          "mechanics": {},
+          "live": true
+        }
+      ],
+      "skills": [
+        {
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "bonus": 0,
+          "name": "Athletik",
+          "proficiency": "trained",
+          "id": "default-skill-1",
+          "attributeKey": "strength"
+        },
+        {
+          "proficiency": "none",
+          "attributeKey": "dexterity",
+          "name": "Akrobatik",
+          "id": "default-skill-2",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "name": "Fingerfertigkeit",
+          "bonus": 0,
+          "notes": "",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "id": "default-skill-3"
+        },
+        {
+          "proficiency": "none",
+          "notes": "",
+          "id": "default-skill-4",
+          "bonus": 0,
+          "attributeKey": "dexterity",
+          "name": "Heimlichkeit"
+        },
+        {
+          "name": "Arkane Kunde",
+          "proficiency": "none",
+          "bonus": 0,
+          "id": "default-skill-5",
+          "attributeKey": "intelligence",
+          "notes": ""
+        },
+        {
+          "id": "default-skill-6",
+          "attributeKey": "intelligence",
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "proficiency": "trained",
+          "bonus": 0,
+          "name": "Geschichte"
+        },
+        {
+          "notes": "",
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "proficiency": "none",
+          "name": "Nachforschungen",
+          "id": "default-skill-7"
+        },
+        {
+          "name": "Naturkunde",
+          "id": "default-skill-8",
+          "bonus": 0,
+          "notes": "",
+          "attributeKey": "intelligence",
+          "proficiency": "none"
+        },
+        {
+          "proficiency": "none",
+          "id": "default-skill-9",
+          "attributeKey": "intelligence",
+          "notes": "",
+          "name": "Religion",
+          "bonus": 0
+        },
+        {
+          "id": "default-skill-10",
+          "bonus": 0,
+          "name": "Heilkunde",
+          "notes": "",
+          "attributeKey": "wisdom",
+          "proficiency": "none"
+        },
+        {
+          "name": "Mit Tieren umgehen",
+          "attributeKey": "wisdom",
+          "proficiency": "trained",
+          "bonus": 0,
+          "id": "default-skill-11",
+          "notes": "Geübt durch Stufe-1-Vorlage"
+        },
+        {
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "name": "Motiv erkennen",
+          "proficiency": "trained",
+          "id": "default-skill-12",
+          "attributeKey": "wisdom",
+          "bonus": 0
+        },
+        {
+          "bonus": 0,
+          "name": "Überleben",
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "id": "default-skill-13",
+          "proficiency": "trained",
+          "attributeKey": "wisdom"
+        },
+        {
+          "notes": "",
+          "bonus": 0,
+          "attributeKey": "wisdom",
+          "name": "Wahrnehmung",
+          "proficiency": "none",
+          "id": "default-skill-14"
+        },
+        {
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "id": "default-skill-15",
+          "notes": "",
+          "bonus": 0,
+          "name": "Auftreten"
+        },
+        {
+          "bonus": 0,
+          "name": "Einschüchtern",
+          "notes": "",
+          "proficiency": "none",
+          "attributeKey": "charisma",
+          "id": "default-skill-16"
+        },
+        {
+          "notes": "",
+          "proficiency": "none",
+          "id": "default-skill-17",
+          "bonus": 0,
+          "attributeKey": "charisma",
+          "name": "Täuschen"
+        },
+        {
+          "name": "Überreden",
+          "proficiency": "none",
+          "attributeKey": "charisma",
+          "bonus": 0,
+          "id": "default-skill-18",
+          "notes": ""
+        },
+        {
+          "attributeKey": "charisma",
+          "id": "default-skill-19",
+          "bonus": 0,
+          "notes": "",
+          "name": "Flirten",
+          "proficiency": "none"
+        },
+        {
+          "notes": "",
+          "proficiency": "none",
+          "bonus": 0,
+          "id": "default-skill-20",
+          "attributeKey": "constitution",
+          "name": "Körperbeherrschung"
+        }
+      ],
+      "aura": {
+        "latentPresence": {
+          "radius": "",
+          "duration": "",
+          "allyMechanics": {
+            "damage": 0,
+            "armorClass": 0,
+            "spellSaveDc": 0,
+            "attack": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "savingThrowAdvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "attackRollMode": "normal",
+            "passivePerception": 0,
+            "savingThrow": 0,
+            "initiative": 0,
+            "spellAttack": 0,
+            "movement": 0,
+            "bonusDamageFormula": ""
+          },
+          "enemyMechanics": {
+            "spellSaveDc": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "passivePerception": 0,
+            "damage": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "movement": 0,
+            "savingThrowAdvantageAttributes": [],
+            "attack": 0,
+            "initiative": 0,
+            "bonusDamageFormula": "",
+            "spellAttack": 0,
+            "savingThrow": 0,
+            "armorClass": 0,
+            "skill": 0,
+            "attackRollMode": "normal",
+            "maximumHitPoints": 0
+          },
+          "description": "",
+          "active": true,
+          "selfMechanics": {
+            "spellSaveDc": 0,
+            "passivePerception": 0,
+            "damage": 0,
+            "attackRollMode": "normal",
+            "skill": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attack": 0,
+            "armorClass": 0,
+            "savingThrowAdvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "movement": 0,
+            "spellAttack": 0,
+            "savingThrow": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "bonusDamageFormula": "",
+            "initiative": 0
+          },
+          "enabled": true,
+          "name": "Latente Präsenz",
+          "requirements": "",
+          "aiInstructions": "",
+          "trigger": "",
+          "target": "Umgebung, Verbündete und Gegner"
+        },
+        "activeForm": {
+          "trigger": "",
+          "requirements": "",
+          "description": "",
+          "target": "Selbst und gewählte Ziele",
+          "aiInstructions": "",
+          "enabled": false,
+          "allyMechanics": {
+            "damage": 0,
+            "skill": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "initiative": 0,
+            "attackRollMode": "normal",
+            "spellAttack": 0,
+            "attack": 0,
+            "maximumHitPoints": 0,
+            "savingThrow": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "bonusDamageFormula": "",
+            "spellSaveDc": 0,
+            "passivePerception": 0,
+            "savingThrowAdvantageAttributes": [],
+            "armorClass": 0,
+            "movement": 0
+          },
+          "active": false,
+          "enemyMechanics": {
+            "spellSaveDc": 0,
+            "savingThrowAdvantageAttributes": [],
+            "passivePerception": 0,
+            "maximumHitPoints": 0,
+            "bonusDamageFormula": "",
+            "attack": 0,
+            "skill": 0,
+            "damage": 0,
+            "initiative": 0,
+            "attackRollMode": "normal",
+            "combatStartTemporaryHitPoints": 0,
+            "movement": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "armorClass": 0
+          },
+          "name": "Aktive Form",
+          "selfMechanics": {
+            "armorClass": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "savingThrowAdvantageAttributes": [],
+            "spellAttack": 0,
+            "maximumHitPoints": 0,
+            "bonusDamageFormula": "",
+            "movement": 0,
+            "initiative": 0,
+            "passivePerception": 0,
+            "attack": 0,
+            "damage": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attackRollMode": "normal",
+            "spellSaveDc": 0
+          },
+          "radius": "",
+          "duration": ""
+        },
+        "domain": "",
+        "name": "Aura",
+        "enabled": false,
+        "notes": "",
+        "focusResourceId": "aura-focus",
+        "focusBypassCost": 1
+      },
+      "abilities": [
+        {
+          "tags": "Skaldin · Schockwelle · Selbstschaden",
+          "combatUsable": true,
+          "resolutionType": "saving-throw",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "allowed": false,
+            "cost": 1
+          },
+          "damageType": "Wucht",
+          "range": "9 Meter, kegelförmig vor ihr",
+          "usesMaximum": 1,
+          "target": "Mehrere ausgewählte Gegner vor ihr",
+          "concentration": false,
+          "usesCurrent": 1,
+          "saveAttribute": "constitution",
+          "duration": "Sofort",
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "requireActualRecovery": true,
+            "restoreResources": [],
+            "itemTags": []
+          },
+          "id": "freya-arkaner-schrei",
+          "channelComments": 0,
+          "active": true,
+          "requirements": "Einmal am Tag, bis zur Rast. Verbraucht ihre Besondere Aktion und praktisch ihr gesamtes Mana - danach kann Freya an diesem Tag nicht mehr zaubern, bis sie rastet.",
+          "delivery": "song",
+          "halfDamageOnSave": false,
+          "mechanics": {
+            "armorClass": 0,
+            "spellSaveDc": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "savingThrowAdvantageAttributes": [],
+            "passivePerception": 0,
+            "maximumHitPoints": 0,
+            "initiative": 0,
+            "attackRollMode": "normal",
+            "movement": 0,
+            "damage": 0,
+            "attack": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "skill": 0,
+            "bonusDamageFormula": ""
+          },
+          "recoveryDayKey": "",
+          "costs": [
+            {
+              "name": "Besondere Aktion",
+              "resourceId": "special-action",
+              "scope": "persistent",
+              "id": "freya-arkaner-schrei-special-action",
+              "amount": 1
+            },
+            {
+              "scope": "persistent",
+              "resourceId": "mana-focus",
+              "name": "Mana",
+              "amount": 39,
+              "id": "freya-arkaner-schrei-mana"
+            }
+          ],
+          "rollFormula": "3d6",
+          "aiInstructions": "Jeder ausgewählte Gegner würfelt einzeln einen Konstitution-Rettungswurf gegen Freyas Zauber-SG; bei Fehlschlag 3W6 Wucht, bei Erfolg kein Schaden. Freya selbst erleidet danach immer 1W6 Schaden, unabhängig vom Ausgang der gegnerischen Rettungswürfe. Bekannte Einschränkung: Wird diese Handlung technisch einmal pro ausgewähltem Ziel aufgelöst statt einmal für die ganze Gruppe, würfelt der eigene Schaden pro Auflösung erneut - dann nur den ersten Wurf werten, den Rest als DM manuell ignorieren. Der Mana-Kosten-Wert unten entspricht Freyas vollem Manapool auf Stufe 5 (39, nach der überarbeiteten Manapool-Tabelle) und muss bei künftigen Stufenaufstiegen manuell auf ihr dann aktuelles Maximum angehoben werden, damit der Schrei sie weiterhin vollständig erschöpft.",
+          "triggerRules": [],
+          "name": "Arkaner Schrei",
+          "activationType": "special-action",
+          "recovery": "none",
+          "description": "Ein durchdringender, magisch verstärkter Schrei, der als Schockwelle nach vorne rast.",
+          "effects": [
+            {
+              "channelComments": 0,
+              "conditionId": "",
+              "condition": null,
+              "amount": 0,
+              "summon": null,
+              "notes": "",
+              "movementMeters": 0,
+              "on": "hit",
+              "id": "freya-arkaner-schrei-aoe",
+              "formula": "3d6",
+              "type": "damage",
+              "conditionTags": "",
+              "damageType": "Wucht",
+              "magical": false,
+              "nonlethal": false,
+              "target": "selected",
+              "concentration": false,
+              "inheritWeaponDamageType": false,
+              "resourceId": "",
+              "movementKind": "move"
+            },
+            {
+              "condition": null,
+              "magical": false,
+              "inheritWeaponDamageType": false,
+              "type": "damage",
+              "on": "always",
+              "id": "freya-arkaner-schrei-selbstschaden",
+              "conditionTags": "",
+              "damageType": "Wucht",
+              "notes": "",
+              "formula": "1d6",
+              "concentration": false,
+              "resourceId": "",
+              "amount": 0,
+              "summon": null,
+              "conditionId": "",
+              "nonlethal": false,
+              "channelComments": 0,
+              "movementKind": "move",
+              "target": "self",
+              "movementMeters": 0
+            }
+          ]
+        },
+        {
+          "tags": "Erholung · Lange Rast",
+          "activationType": "bonus-action",
+          "description": "Regeneriere 1 eigenen Klassen-Trefferwürfel + 10 % der maximalen TP (aufgerundet), höchstens bis zum TP-Maximum. Kein KON-Bonus. Einmal pro langer Rast.",
+          "delivery": "ability",
+          "target": "Selbst",
+          "usesCurrent": 1,
+          "effects": [
+            {
+              "scaling": "hit-die-and-tenth-maximum",
+              "id": "second-wind-heal",
+              "formula": "1d8",
+              "target": "self",
+              "on": "always",
+              "type": "healing"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false
+          },
+          "name": "Durchschnaufen",
+          "minimumLevel": 1,
+          "usesMaximum": 1,
+          "id": "martial-durchschnaufen",
+          "combatUsable": true,
+          "costs": [
+            {
+              "amount": 1,
+              "resourceId": "bonus-action",
+              "id": "second-wind-bonus",
+              "scope": "comment",
+              "name": "Bonusaktion"
+            }
+          ],
+          "range": "Selbst",
+          "resolutionType": "automatic",
+          "active": true,
+          "recovery": "long-rest"
+        }
+      ],
+      "identity": {
+        "archetype": "Skaldin",
+        "ancestry": "Aldrimarer",
+        "background": "Musikerin"
+      },
+      "quirks": [
+        {
+          "type": "trait",
+          "mechanics": {
+            "attack": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "damage": 0,
+            "attackRollMode": "normal",
+            "spellSaveDc": 0,
+            "armorClass": 0,
+            "maximumHitPoints": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "bonusDamageFormula": "",
+            "skill": 0,
+            "movement": 0,
+            "passivePerception": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrow": 0,
+            "initiative": 0,
+            "spellAttack": 0
+          },
+          "duration": "",
+          "name": "Aldrimarische Widerstandskraft",
+          "active": true,
+          "id": "starter-ancestry-aldrimarer-trait-1",
+          "triggerRules": [],
+          "tags": "Volk · Aldrimarer",
+          "aiInstructions": "",
+          "priority": 0,
+          "stacking": "normal",
+          "limitations": "",
+          "target": "self",
+          "trigger": "",
+          "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
+          "appliesWhen": "Dauerhafte kulturelle Prägung"
+        },
+        {
+          "type": "trait",
+          "stacking": "normal",
+          "name": "Bühnenerfahrung und Publikumsgespür",
+          "limitations": "",
+          "aiInstructions": "",
+          "description": "Auf Marktplätzen, in Hallen und Wirtshäusern ausgebildete Musikerin, mit Vortrag, Instrument und dem Umgang mit Publikum vertraut.",
+          "active": true,
+          "tags": "Hintergrund · Musikerin",
+          "id": "starter-background-musikerin-trait-1",
+          "appliesWhen": "Wenn Auftritt, Musik oder Publikum relevant sind",
+          "duration": "",
+          "triggerRules": [],
+          "target": "self",
+          "trigger": "",
+          "mechanics": {
+            "initiative": 0,
+            "savingThrowAdvantageAttributes": [],
+            "passivePerception": 0,
+            "skill": 0,
+            "spellSaveDc": 0,
+            "maximumHitPoints": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attack": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "armorClass": 0,
+            "movement": 0,
+            "spellAttack": 0,
+            "savingThrow": 0,
+            "damage": 0,
+            "combatStartTemporaryHitPoints": 0
+          },
+          "priority": 0
+        },
+        {
+          "target": "self",
+          "priority": 0,
+          "triggerRules": [
+            {
+              "radiusMeters": null,
+              "resultEffects": [],
+              "costs": [],
+              "phase": "pre-roll",
+              "actionScope": "global",
+              "actionKinds": [
+                "skill"
+              ],
+              "sourceRelation": "self",
+              "enabled": true,
+              "priority": 0,
+              "effects": {
+                "damageReduction": 0,
+                "attackModifier": 0,
+                "damageModifier": 0,
+                "outcome": "none",
+                "spellSaveDcModifier": 0,
+                "defenseModifier": 0,
+                "savingThrowModifier": 0,
+                "skillModifier": 1,
+                "rollMode": "normal"
+              },
+              "condition": "always",
+              "description": "+1 auf positive, freundliche Fertigkeiten mit Menschen.",
+              "frequency": "always",
+              "authority": "passive",
+              "requiredTargetTags": [],
+              "activation": "passive",
+              "skillIds": [
+                "persuasion",
+                "performance",
+                "insight"
+              ],
+              "consumeReaction": false,
+              "name": "Frohnatur-Bonus",
+              "recipient": "actor",
+              "id": "freya-frohnatur-skill-bonus"
+            }
+          ],
+          "id": "freya-frohnatur",
+          "mechanics": {
+            "combatStartTemporaryHitPoints": 0,
+            "maximumHitPoints": 0,
+            "skill": 0,
+            "spellSaveDc": 0,
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "armorClass": 0,
+            "damage": 0,
+            "attackRollMode": "normal",
+            "initiative": 0,
+            "movement": 0,
+            "passivePerception": 0,
+            "spellAttack": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attack": 0,
+            "savingThrow": 0
+          },
+          "aiInstructions": "",
+          "duration": "",
+          "trigger": "",
+          "appliesWhen": "Bei positiven, freundlichen Fertigkeitsversuchen mit Menschen",
+          "tags": "Persönlichkeit · Frohnatur",
+          "active": true,
+          "description": "Freyas warme, offene Art macht es Menschen leicht, ihr zu vertrauen.",
+          "type": "trait",
+          "name": "Frohnatur",
+          "stacking": "normal",
+          "limitations": "Nur positive, freundliche Fertigkeiten mit Menschen."
+        },
+        {
+          "type": "flaw",
+          "limitations": "Nur niederträchtige Fertigkeiten (Täuschen, Einschüchtern).",
+          "mechanics": {
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "savingThrowAdvantageAttributes": [],
+            "damage": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "attack": 0,
+            "skill": 0,
+            "initiative": 0,
+            "attackRollMode": "normal",
+            "spellSaveDc": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "bonusDamageFormula": "",
+            "passivePerception": 0,
+            "armorClass": 0,
+            "combatStartTemporaryHitPoints": 0
+          },
+          "name": "Gutmensch",
+          "duration": "",
+          "target": "self",
+          "priority": 0,
+          "tags": "Persönlichkeit · Gutmensch",
+          "description": "Freya tut sich schwer damit, andere gezielt zu täuschen oder einzuschüchtern.",
+          "appliesWhen": "Bei niederträchtigen Fertigkeitsversuchen",
+          "trigger": "",
+          "aiInstructions": "",
+          "active": true,
+          "stacking": "normal",
+          "triggerRules": [
+            {
+              "actionKinds": [
+                "skill"
+              ],
+              "actionScope": "global",
+              "requiredTargetTags": [],
+              "effects": {
+                "spellSaveDcModifier": 0,
+                "outcome": "none",
+                "defenseModifier": 0,
+                "attackModifier": 0,
+                "damageModifier": 0,
+                "damageReduction": 0,
+                "skillModifier": -3,
+                "rollMode": "normal",
+                "savingThrowModifier": 0
+              },
+              "consumeReaction": false,
+              "resultEffects": [],
+              "enabled": true,
+              "radiusMeters": null,
+              "id": "freya-gutmensch-skill-malus",
+              "priority": 0,
+              "recipient": "actor",
+              "activation": "passive",
+              "description": "-3 bei niederträchtigen Fertigkeiten.",
+              "sourceRelation": "self",
+              "frequency": "always",
+              "phase": "pre-roll",
+              "costs": [],
+              "authority": "passive",
+              "name": "Gutmensch-Malus",
+              "condition": "always",
+              "skillIds": [
+                "deception",
+                "intimidation"
+              ]
+            }
+          ],
+          "id": "freya-gutmensch"
+        },
+        {
+          "description": "Jahre der Bühnenpraxis geben Freya Sicherheit vor Publikum.",
+          "active": true,
+          "appliesWhen": "Bei Auftreten-Versuchen",
+          "tags": "Persönlichkeit · Künstlerin",
+          "mechanics": {
+            "initiative": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "spellSaveDc": 0,
+            "savingThrowAdvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "spellAttack": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attackRollMode": "normal",
+            "savingThrow": 0,
+            "armorClass": 0,
+            "movement": 0,
+            "damage": 0,
+            "passivePerception": 0,
+            "bonusDamageFormula": "",
+            "attack": 0,
+            "skill": 0
+          },
+          "aiInstructions": "",
+          "name": "Künstlerische Ausbildung",
+          "id": "freya-kuenstlerische-ausbildung",
+          "stacking": "normal",
+          "type": "trait",
+          "limitations": "Nur Auftreten.",
+          "triggerRules": [
+            {
+              "consumeReaction": false,
+              "sourceRelation": "self",
+              "description": "Vorteil bei Auftreten.",
+              "resultEffects": [],
+              "enabled": true,
+              "skillIds": [
+                "performance"
+              ],
+              "effects": {
+                "spellSaveDcModifier": 0,
+                "defenseModifier": 0,
+                "damageReduction": 0,
+                "outcome": "none",
+                "rollMode": "advantage",
+                "savingThrowModifier": 0,
+                "attackModifier": 0,
+                "damageModifier": 0,
+                "skillModifier": 0
+              },
+              "radiusMeters": null,
+              "name": "Bühnensicherheit",
+              "id": "freya-kuenstlerische-ausbildung-advantage",
+              "actionScope": "global",
+              "actionKinds": [
+                "skill"
+              ],
+              "costs": [],
+              "phase": "pre-roll",
+              "recipient": "actor",
+              "requiredTargetTags": [],
+              "authority": "passive",
+              "priority": 0,
+              "frequency": "always",
+              "condition": "always",
+              "activation": "passive"
+            }
+          ],
+          "trigger": "",
+          "target": "self",
+          "priority": 0,
+          "duration": ""
+        },
+        {
+          "triggerRules": [
+            {
+              "authority": "passive",
+              "requiredTargetTags": [],
+              "frequency": "always",
+              "sourceRelation": "self",
+              "skillIds": [
+                "performance"
+              ],
+              "condition": "always",
+              "name": "Bühnenpräsenz",
+              "costs": [],
+              "phase": "pre-roll",
+              "actionScope": "global",
+              "actionKinds": [
+                "skill"
+              ],
+              "recipient": "actor",
+              "consumeReaction": false,
+              "enabled": true,
+              "priority": 0,
+              "effects": {
+                "damageReduction": 0,
+                "attackModifier": 0,
+                "damageModifier": 0,
+                "defenseModifier": 0,
+                "savingThrowModifier": 0,
+                "outcome": "none",
+                "skillModifier": 2,
+                "spellSaveDcModifier": 0,
+                "rollMode": "normal"
+              },
+              "radiusMeters": null,
+              "activation": "passive",
+              "id": "freya-exzentrisch-performance-bonus",
+              "resultEffects": [],
+              "description": "+2 auf Auftreten."
+            },
+            {
+              "effects": {
+                "rollMode": "normal",
+                "damageModifier": 0,
+                "savingThrowModifier": 0,
+                "skillModifier": -4,
+                "attackModifier": 0,
+                "spellSaveDcModifier": 0,
+                "damageReduction": 0,
+                "outcome": "none",
+                "defenseModifier": 0
+              },
+              "requiredTargetTags": [],
+              "id": "freya-exzentrisch-wildnis-malus",
+              "enabled": true,
+              "activation": "passive",
+              "consumeReaction": false,
+              "phase": "pre-roll",
+              "costs": [],
+              "radiusMeters": null,
+              "name": "Fehl am Platz",
+              "resultEffects": [],
+              "actionScope": "global",
+              "actionKinds": [
+                "skill"
+              ],
+              "skillIds": [
+                "survival",
+                "intimidation"
+              ],
+              "frequency": "always",
+              "authority": "passive",
+              "sourceRelation": "self",
+              "condition": "always",
+              "recipient": "actor",
+              "description": "-4 auf Überleben und Einschüchtern.",
+              "priority": 0
+            }
+          ],
+          "target": "self",
+          "name": "Exzentrische Künstlerin",
+          "priority": 0,
+          "type": "trait",
+          "trigger": "",
+          "duration": "",
+          "tags": "Persönlichkeit · Exzentrisch",
+          "limitations": "",
+          "aiInstructions": "",
+          "active": true,
+          "mechanics": {
+            "initiative": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "bonusDamageFormula": "",
+            "passivePerception": 0,
+            "armorClass": 0,
+            "damage": 0,
+            "attackRollMode": "normal",
+            "savingThrowAdvantageAttributes": [],
+            "combatStartTemporaryHitPoints": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "attack": 0,
+            "spellSaveDc": 0
+          },
+          "stacking": "normal",
+          "id": "freya-exzentrische-kuenstlerin",
+          "appliesWhen": "Bei Auftreten, Überleben und Einschüchtern",
+          "description": "Freya lebt für die Bühne - und ist entsprechend fehl am Platz, wenn es hart und wild zugeht."
+        },
+        {
+          "active": true,
+          "priority": 0,
+          "mechanics": {
+            "movement": 0,
+            "savingThrowAdvantageAttributes": [],
+            "attackRollMode": "normal",
+            "passivePerception": 0,
+            "maximumHitPoints": 0,
+            "savingThrow": 0,
+            "initiative": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "spellAttack": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "bonusDamageFormula": "",
+            "damage": 0,
+            "attack": 0,
+            "spellSaveDc": 0,
+            "armorClass": 0,
+            "skill": 0
+          },
+          "trigger": "",
+          "duration": "",
+          "triggerRules": [
+            {
+              "priority": 0,
+              "costs": [],
+              "phase": "pre-roll",
+              "recipient": "actor",
+              "id": "freya-busenwunder-flirt-bonus",
+              "description": "+4 auf Flirten.",
+              "condition": "always",
+              "frequency": "always",
+              "authority": "passive",
+              "consumeReaction": false,
+              "sourceRelation": "self",
+              "actionScope": "global",
+              "actionKinds": [
+                "skill"
+              ],
+              "skillIds": [
+                "seduction"
+              ],
+              "requiredTargetTags": [],
+              "effects": {
+                "attackModifier": 0,
+                "outcome": "none",
+                "savingThrowModifier": 0,
+                "damageModifier": 0,
+                "damageReduction": 0,
+                "skillModifier": 4,
+                "rollMode": "normal",
+                "spellSaveDcModifier": 0,
+                "defenseModifier": 0
+              },
+              "activation": "passive",
+              "enabled": true,
+              "name": "Busenwunder-Bonus",
+              "radiusMeters": null,
+              "resultEffects": []
+            }
+          ],
+          "limitations": "Nur Flirten.",
+          "type": "trait",
+          "target": "self",
+          "name": "Busenwunder",
+          "stacking": "normal",
+          "tags": "Persönlichkeit · Busenwunder",
+          "appliesWhen": "Bei Flirten-Versuchen",
+          "aiInstructions": "",
+          "description": "Freyas Ausstrahlung wirkt beim Flirten wahre Wunder.",
+          "id": "freya-busenwunder"
+        }
+      ],
+      "armorItems": [
+        {
+          "image": "",
+          "dexterityUnlockLevel": 0,
+          "properties": "Mittlere Rüstung",
+          "id": "freya-padded-armor",
+          "name": "Wattierter Waffenrock",
+          "dexterityMode": "capped",
+          "notes": "",
+          "kind": "armor",
+          "inventoryItemId": "",
+          "baseArmorClass": 14,
+          "armorClassBonus": 0,
+          "equipped": true,
+          "dexterityCap": 2,
+          "armorCategory": "medium"
+        },
+        {
+          "armorClassBonus": 2,
+          "dexterityMode": "full",
+          "inventoryItemId": "",
+          "equipped": true,
+          "name": "Schild",
+          "properties": "Schild der Skjoldr-Zweitausbildung · +2 Rüstungsklasse",
+          "id": "freya-shield",
+          "kind": "shield",
+          "dexterityCap": 2,
+          "image": "",
+          "dexterityUnlockLevel": 0,
+          "baseArmorClass": null,
+          "notes": "Kann auch offensiv als Schildstoß eingesetzt werden (siehe Waffenteil)."
+        }
+      ],
+      "combat": {
+        "passivePerceptionBonus": 0,
+        "mounted": false,
+        "initiativeBonus": 0,
+        "attackBonus": 0,
+        "damageBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "movement": 9
+      },
+      "notes": "",
+      "hitPoints": {
+        "temporary": 0,
+        "hitDie": 8,
+        "averagePerLevelOverride": null,
+        "current": 42,
+        "vitality": {
+          "version": 1,
+          "legacyIncrease": 9,
+          "overrideAnchor": null
+        },
+        "maximumOverride": null
+      },
+      "damageAffinities": [],
+      "savingThrows": [
+        {
+          "expertise": false,
+          "attributeKey": "strength",
+          "bonus": 0,
+          "proficient": false
+        },
+        {
+          "attributeKey": "dexterity",
+          "expertise": false,
+          "proficient": false,
+          "bonus": 0
+        },
+        {
+          "expertise": false,
+          "attributeKey": "constitution",
+          "proficient": false,
+          "bonus": 0
+        },
+        {
+          "bonus": 0,
+          "proficient": false,
+          "attributeKey": "intelligence",
+          "expertise": false
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": true
+        },
+        {
+          "expertise": false,
+          "proficient": true,
+          "attributeKey": "charisma",
+          "bonus": 0
+        }
+      ],
+      "resources": [
+        {
+          "recovery": "manual",
+          "category": "",
+          "notes": "",
+          "maximum": 1,
+          "id": "inspiration",
+          "current": 0,
+          "icon": "",
+          "scope": "persistent",
+          "name": "Inspiration"
+        },
+        {
+          "maximum": 39,
+          "category": "magic",
+          "recovery": "day",
+          "id": "mana-focus",
+          "scope": "persistent",
+          "current": 39,
+          "name": "Mana",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "current": 0,
+          "maximum": 0,
+          "scope": "persistent",
+          "category": "celestial",
+          "notes": "",
+          "icon": "",
+          "name": "Celestiale Punkte",
+          "id": "celestial-points",
+          "recovery": "day"
+        },
+        {
+          "recovery": "day",
+          "id": "infernal-points",
+          "scope": "persistent",
+          "name": "Infernale Punkte",
+          "icon": "",
+          "category": "infernal",
+          "maximum": 0,
+          "notes": "",
+          "current": 0
+        },
+        {
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "name": "Aktion",
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "current": 1,
+          "id": "action",
+          "scope": "comment",
+          "recovery": "scene",
+          "maximum": 1,
+          "category": "action"
+        },
+        {
+          "recovery": "scene",
+          "id": "bonus-action",
+          "scope": "comment",
+          "category": "action",
+          "maximum": 1,
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "name": "Bonusaktion",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "current": 1
+        },
+        {
+          "recovery": "scene",
+          "maximum": 1,
+          "category": "action",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "current": 1,
+          "id": "reaction",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "name": "Reaktion",
+          "scope": "comment"
+        },
+        {
+          "maximum": 2,
+          "scope": "persistent",
+          "name": "Besondere Aktion",
+          "current": 2,
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "recovery": "day",
+          "notes": "",
+          "category": "action",
+          "id": "special-action"
+        },
+        {
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "name": "Aura-Fokuspunkt",
+          "notes": "",
+          "maximum": 0,
+          "id": "aura-focus",
+          "current": 0,
+          "category": "action",
+          "scope": "persistent",
+          "paymentRole": "universal-substitute",
+          "recovery": "day"
+        },
+        {
+          "category": "spell-slot",
+          "recovery": "long-rest",
+          "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "id": "spell-slot-1",
+          "spellLevel": 1,
+          "maximum": 1,
+          "current": 1,
+          "scope": "persistent",
+          "icon": "",
+          "name": "Zauberplatz I"
+        },
+        {
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "id": "spell-slot-2",
+          "icon": "",
+          "name": "Zauberplatz II",
+          "category": "spell-slot",
+          "spellLevel": 2,
+          "maximum": 1,
+          "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "current": 1
+        },
+        {
+          "spellLevel": 3,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "name": "Zauberplatz III",
+          "maximum": 1,
+          "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "current": 1,
+          "id": "spell-slot-3"
+        },
+        {
+          "recovery": "long-rest",
+          "current": 0,
+          "category": "spell-slot",
+          "maximum": 0,
+          "scope": "persistent",
+          "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "icon": "",
+          "name": "Zauberplatz IV",
+          "spellLevel": 4,
+          "id": "spell-slot-4"
+        },
+        {
+          "recovery": "long-rest",
+          "id": "spell-slot-5",
+          "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "category": "spell-slot",
+          "spellLevel": 5,
+          "current": 0,
+          "icon": "",
+          "name": "Zauberplatz V",
+          "maximum": 0,
+          "scope": "persistent"
+        },
+        {
+          "current": 0,
+          "name": "Zauberplatz VI",
+          "icon": "",
+          "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "maximum": 0,
+          "scope": "persistent",
+          "id": "spell-slot-6",
+          "recovery": "long-rest",
+          "spellLevel": 6,
+          "category": "spell-slot"
+        },
+        {
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "id": "spell-slot-7",
+          "current": 0,
+          "maximum": 0,
+          "spellLevel": 7,
+          "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "icon": "",
+          "name": "Zauberplatz VII"
+        },
+        {
+          "id": "spell-slot-8",
+          "spellLevel": 8,
+          "maximum": 0,
+          "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "current": 0,
+          "recovery": "long-rest",
+          "category": "spell-slot",
+          "icon": "",
+          "name": "Zauberplatz VIII",
+          "scope": "persistent"
+        },
+        {
+          "maximum": 0,
+          "scope": "persistent",
+          "icon": "",
+          "name": "Zauberplatz IX",
+          "current": 0,
+          "category": "spell-slot",
+          "id": "spell-slot-9",
+          "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "spellLevel": 9
+        },
+        {
+          "spellLevel": 10,
+          "scope": "persistent",
+          "name": "Zauberplatz X",
+          "icon": "",
+          "recovery": "long-rest",
+          "category": "spell-slot",
+          "current": 0,
+          "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "maximum": 0,
+          "id": "spell-slot-10"
+        },
+        {
+          "notes": "",
+          "id": "focus",
+          "recovery": "day",
+          "current": 0,
+          "icon": "",
+          "name": "Fokus",
+          "category": "focus",
+          "maximum": 0,
+          "scope": "persistent"
+        },
+        {
+          "id": "pact-points",
+          "notes": "",
+          "current": 0,
+          "recovery": "day",
+          "icon": "",
+          "name": "Paktpunkte",
+          "category": "pact",
+          "scope": "persistent",
+          "maximum": 0
+        }
+      ],
+      "proficiencies": {
+        "tools": [
+          "Musikinstrument (Laute)"
+        ],
+        "languages": [],
+        "weapons": [
+          "simple",
+          "sword"
+        ],
+        "armor": [
+          "light",
+          "medium"
+        ],
+        "notes": "Sekundär als Skjoldr mit Schwert und Schild ausgebildet."
+      },
+      "defenseBalanceVersion": 1
+    },
+    "inventory": {
+      "portraitFit": "cover",
+      "characterId": "",
+      "companions": [
+        {
+          "image": "https://i.imgur.com/O7igyaP.png",
+          "role": "Reittier",
+          "id": "companion-mshyqs5m-0-y3py",
+          "imagePosition": "top",
+          "infoRows": [
+            {
+              "value": "Hest-Mischlingsstute",
+              "label": "Art"
+            },
+            {
+              "label": "Besitzer",
+              "value": "Freya Skald"
+            },
+            {
+              "label": "Rolle",
+              "value": "Reittier"
+            },
+            {
+              "label": "Kreaturbogen",
+              "value": "Eldfaxi · Kreaturenregister"
+            }
+          ],
+          "imageFit": "cover",
+          "species": "Hest-Mischlingsstute",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 8
+            },
+            {
+              "value": 6,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 5
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 8
+            },
+            {
+              "label": "Robustheit",
+              "value": 7
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "description": "Eldfaxi begleitet Freya seit über sechs Jahren, ein zäher Mischling mit starkem Einschlag des Hest – jener aldrimarischen Kaltblutrasse, die für ihren ruhigen Geist und unbeirrbaren Tritt bekannt ist. Sein Fell ist gescheckt, die Mähne dicht und dunkel wie Sturmwolken, und seine Augen tragen dieses eigenwillige Glitzern, das nur Tiere haben, die mehr denken als man ihnen zutraut.\n\nSeine liebenswerteste Eigenart: Eldfaxi summt. Nicht wirklich wie ein Mensch, eher ein tiefes, vibrierendes Brummen, sobald Freya zu singen beginnt – besonders dann, wenn sie schlecht gelaunt ist. Viele Wirte schwören, sie hätten in Tavernen schon Duette zwischen Frau und Pferd gehört. Freya behauptet, er könne keinen einzigen Ton halten – aber sie lächelt, wenn sie es sagt.",
+          "imageFormat": "landscape",
+          "name": "Eldfaxi",
+          "status": "Fröhlich & gesund",
+          "summary": "Fröhliche Hest-Mischlingsstute, die im Duett mit Freyas Gesang brummt."
+        },
+        {
+          "id": "companion-mshyqs5m-1-eqin",
+          "imagePosition": "top",
+          "role": "Gefährte",
+          "species": "Tier / Person",
+          "description": "",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "image": "",
+          "imageFormat": "landscape",
+          "statusColor": "#5c7f20",
+          "name": "Treuer Begleiter",
+          "status": "Noch festlegen",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "imageFit": "cover",
+          "infoRows": []
+        }
+      ],
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen",
+          "id": "potions"
+        },
+        {
+          "label": "Dokumente",
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "revision": 1786237318420,
+      "equipmentQuiz": {
+        "status": "",
+        "open": false,
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "step": 0
+      },
+      "portraitPosition": "top",
+      "showInfoTable": false,
+      "moneyNotice": "",
+      "moneyState": {
+        "silver": 0,
+        "totalCopper": 0,
+        "gold": 0,
+        "copper": 0
+      },
+      "portrait": "",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "infoRows": [
+        {
+          "icon": "*",
+          "label": "Status",
+          "value": "Gesund"
+        },
+        {
+          "label": "TP / Zustand",
+          "value": "Noch festlegen",
+          "icon": "*"
+        },
+        {
+          "label": "Geld",
+          "icon": "*",
+          "value": "0 Gold, 0 Silber, 0 Kupfer"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Tragkapazität"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Rolle"
+        },
+        {
+          "label": "Fraktion",
+          "icon": "*",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "value": "Noch festlegen",
+          "label": "Aufenthalt"
+        },
+        {
+          "label": "Notiz",
+          "value": "Noch festlegen",
+          "icon": "*"
+        }
+      ],
+      "items": [
+        {
+          "image": "",
+          "combatDefinition": null,
+          "imageFit": "contain",
+          "infoRows": [],
+          "ownerCharacterName": "",
+          "tags": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "category": "weapon",
+          "type": "Waffe",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "id": "item-mshyqs5m-0-o2so",
+          "individualizedAt": "",
+          "ownerCharacterId": "",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "imageFormat": "square",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "equipmentLink": null,
+          "acquiredAt": "",
+          "name": "Hauptwaffe",
+          "equipped": false
+        },
+        {
+          "acquiredAt": "",
+          "ownerCharacterName": "",
+          "id": "item-mshyqs5m-1-b5xe",
+          "originItemDbKey": "",
+          "equipmentLink": null,
+          "itemStorageMode": "character",
+          "tags": "",
+          "combatDefinition": null,
+          "weight": "Noch festlegen",
+          "category": "armor",
+          "icon": "*",
+          "infoRows": [],
+          "imageFit": "contain",
+          "type": "Rüstung",
+          "individualizedAt": "",
+          "ownerCharacterId": "",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "quantity": "1",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "equipped": false,
+          "name": "Rüstung / Schutz",
+          "image": ""
+        },
+        {
+          "tags": "",
+          "itemDbKey": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "acquiredAt": "",
+          "imagePosition": "center",
+          "type": "Ausrüstung",
+          "icon": "*",
+          "image": "",
+          "id": "item-mshyqs5m-2-qsz3",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "originItemDbKey": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "equipmentLink": null,
+          "name": "Reiseausrüstung",
+          "category": "equipment",
+          "individualizedAt": "",
+          "ownerCharacterId": "",
+          "itemStorageMode": "character",
+          "weight": "Noch festlegen",
+          "ownerCharacterName": "",
+          "imageFormat": "square",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände."
+        },
+        {
+          "imageFormat": "square",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "equipmentLink": null,
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterName": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "imageFit": "contain",
+          "infoRows": [],
+          "combatDefinition": null,
+          "category": "potions",
+          "weight": "Noch festlegen",
+          "individualizedAt": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "acquiredAt": "",
+          "quantity": "1",
+          "imagePosition": "center",
+          "type": "Trinktur",
+          "id": "item-mshyqs5m-3-brtu",
+          "image": "",
+          "originItemDbKey": "",
+          "icon": "*",
+          "equipped": false,
+          "tags": "",
+          "itemDbKey": ""
+        },
+        {
+          "icon": "*",
+          "type": "Dokument",
+          "imagePosition": "center",
+          "quantity": "1",
+          "combatDefinition": null,
+          "tags": "",
+          "itemStorageMode": "character",
+          "image": "",
+          "acquiredAt": "",
+          "id": "item-mshyqs5m-4-tcgb",
+          "equipped": false,
+          "ownerCharacterName": "",
+          "originItemDbKey": "",
+          "name": "Dokumente / Urkunden",
+          "equipmentLink": null,
+          "itemDbKey": "",
+          "imageFormat": "square",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "documents"
+        },
+        {
+          "equipmentLink": null,
+          "weight": "Noch festlegen",
+          "category": "other",
+          "id": "item-mshyqs5m-5-uzcn",
+          "infoRows": [],
+          "imageFit": "contain",
+          "itemDbKey": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Sonstiges",
+          "imageFormat": "square",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "icon": "*",
+          "tags": "",
+          "combatDefinition": null,
+          "equipped": false,
+          "imagePosition": "center",
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "ownerCharacterName": "",
+          "itemStorageMode": "character",
+          "name": "Persönlicher Gegenstand",
+          "acquiredAt": "",
+          "quantity": "1",
+          "image": "",
+          "originItemDbKey": ""
+        },
+        {
+          "attributes": [],
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "id": "equipment-weapon-freya-lute",
+          "ownerCharacterId": "ksJQe8Ai4KbRE9jOAvb7",
+          "individualizedAt": "",
+          "category": "weapon",
+          "image": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "originItemDbKey": "",
+          "name": "Laute",
+          "equipped": true,
+          "weight": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "combatEntryId": "freya-lute",
+            "kind": "weapon"
+          },
+          "imageFormat": "square",
+          "acquiredAt": "2026-08-08T22:04:01.153Z",
+          "description": "Freyas Laute, mit der sie ihre Zauber wirkt.",
+          "itemDbKey": "",
+          "tags": "Hauptcaster-Werkzeug · improvisierter Schlag bei Bedarf",
+          "combatDefinition": {
+            "damageBonus": 0,
+            "attackBonus": 0,
+            "requirements": "",
+            "notes": "Freyas Laute, mit der sie ihre Zauber wirkt.",
+            "versatileDamageFormula": "",
+            "weaponType": "arcane",
+            "damageType": "Wucht",
+            "attackAttribute": "charisma",
+            "training": "simple",
+            "range": "Nahkampf",
+            "aiInstructions": "",
+            "kind": "weapon",
+            "properties": "Hauptcaster-Werkzeug · improvisierter Schlag bei Bedarf",
+            "proficient": true,
+            "damageFormula": "1d4"
+          },
+          "type": "Waffe",
+          "quantity": "1",
+          "icon": "",
+          "ownerCharacterName": "Freya Skald"
+        },
+        {
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "weight": "",
+          "name": "Schwert",
+          "ownerCharacterId": "ksJQe8Ai4KbRE9jOAvb7",
+          "originItemDbKey": "",
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "acquiredAt": "2026-08-08T22:04:01.153Z",
+          "description": "Sekundäre Skjoldr-Kampfweise · mit Schild geführt",
+          "equipped": false,
+          "ownerCharacterName": "Freya Skald",
+          "image": "",
+          "tags": "Sekundäre Skjoldr-Kampfweise · mit Schild geführt",
+          "type": "Waffe",
+          "combatDefinition": {
+            "weaponType": "sword",
+            "damageFormula": "1d8",
+            "notes": "",
+            "kind": "weapon",
+            "versatileDamageFormula": "",
+            "damageType": "Hieb",
+            "aiInstructions": "",
+            "range": "Nahkampf",
+            "requirements": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "attackAttribute": "strength",
+            "proficient": true,
+            "training": "martial",
+            "properties": "Sekundäre Skjoldr-Kampfweise · mit Schild geführt"
+          },
+          "icon": "",
+          "equipmentLink": {
+            "kind": "weapon",
+            "schemaVersion": 1,
+            "combatEntryId": "freya-sword"
+          },
+          "category": "weapon",
+          "id": "equipment-weapon-freya-sword",
+          "infoRows": [],
+          "imageFit": "contain",
+          "attributes": []
+        },
+        {
+          "acquiredAt": "2026-08-08T22:04:01.153Z",
+          "name": "Schild (Schildstoß)",
+          "category": "weapon",
+          "weight": "",
+          "equipmentLink": {
+            "kind": "weapon",
+            "schemaVersion": 1,
+            "combatEntryId": "freya-shield-bash"
+          },
+          "infoRows": [],
+          "imageFit": "contain",
+          "itemDbKey": "",
+          "ownerCharacterName": "Freya Skald",
+          "combatDefinition": {
+            "kind": "weapon",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "requirements": "",
+            "properties": "Offensiver Einsatz des Schilds · Rüstungsbonus siehe Rüstungsteil",
+            "notes": "Derselbe Schild wie im Rüstungsteil, hier für den offensiven Einsatz erfasst.",
+            "range": "Nahkampf",
+            "training": "martial",
+            "damageFormula": "1d4",
+            "damageType": "Wucht",
+            "weaponType": "shield",
+            "versatileDamageFormula": "",
+            "aiInstructions": "",
+            "attackBonus": 0,
+            "damageBonus": 0
+          },
+          "image": "",
+          "type": "Waffe",
+          "id": "equipment-weapon-freya-shield-bash",
+          "equipped": false,
+          "itemStorageMode": "character",
+          "icon": "",
+          "attributes": [],
+          "tags": "Offensiver Einsatz des Schilds · Rüstungsbonus siehe Rüstungsteil",
+          "imagePosition": "center",
+          "ownerCharacterId": "ksJQe8Ai4KbRE9jOAvb7",
+          "individualizedAt": "",
+          "originItemDbKey": "",
+          "quantity": "1",
+          "imageFormat": "square",
+          "description": "Derselbe Schild wie im Rüstungsteil, hier für den offensiven Einsatz erfasst."
+        },
+        {
+          "attributes": [],
+          "imageFormat": "square",
+          "itemStorageMode": "character",
+          "combatDefinition": {
+            "armorClassBonus": 0,
+            "armorKind": "armor",
+            "properties": "Mittlere Rüstung",
+            "dexterityMode": "capped",
+            "notes": "",
+            "dexterityCap": 2,
+            "baseArmorClass": 14,
+            "dexterityUnlockLevel": 0,
+            "armorCategory": "medium",
+            "kind": "armor"
+          },
+          "description": "Leichte Rüstung der Skalden-Ausbildung",
+          "imagePosition": "center",
+          "quantity": "1",
+          "name": "Wattierter Waffenrock",
+          "equipped": true,
+          "originItemDbKey": "",
+          "ownerCharacterName": "Freya Skald",
+          "weight": "",
+          "acquiredAt": "2026-08-08T22:04:01.153Z",
+          "itemDbKey": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "combatEntryId": "freya-padded-armor",
+            "kind": "armor"
+          },
+          "image": "",
+          "icon": "",
+          "type": "Rüstung",
+          "infoRows": [],
+          "imageFit": "contain",
+          "id": "equipment-armor-freya-padded-armor",
+          "ownerCharacterId": "ksJQe8Ai4KbRE9jOAvb7",
+          "tags": "Leichte Rüstung der Skalden-Ausbildung",
+          "individualizedAt": "",
+          "category": "armor"
+        },
+        {
+          "imageFormat": "square",
+          "description": "Kann auch offensiv als Schildstoß eingesetzt werden (siehe Waffenteil).",
+          "quantity": "1",
+          "image": "",
+          "combatDefinition": {
+            "armorKind": "shield",
+            "dexterityCap": 2,
+            "properties": "Schild der Skjoldr-Zweitausbildung · +2 Rüstungsklasse",
+            "dexterityUnlockLevel": 0,
+            "notes": "Kann auch offensiv als Schildstoß eingesetzt werden (siehe Waffenteil).",
+            "armorClassBonus": 2,
+            "dexterityMode": "full",
+            "baseArmorClass": null,
+            "kind": "armor"
+          },
+          "acquiredAt": "2026-08-08T22:04:01.153Z",
+          "name": "Schild",
+          "id": "equipment-armor-freya-shield",
+          "equipped": true,
+          "equipmentLink": {
+            "combatEntryId": "freya-shield",
+            "schemaVersion": 1,
+            "kind": "armor"
+          },
+          "weight": "",
+          "itemStorageMode": "character",
+          "type": "Rüstung",
+          "category": "armor",
+          "itemDbKey": "",
+          "icon": "",
+          "ownerCharacterId": "ksJQe8Ai4KbRE9jOAvb7",
+          "ownerCharacterName": "Freya Skald",
+          "infoRows": [],
+          "imageFit": "contain",
+          "individualizedAt": "",
+          "originItemDbKey": "",
+          "attributes": [],
+          "tags": "Schild der Skjoldr-Zweitausbildung · +2 Rüstungsklasse",
+          "imagePosition": "center"
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "carryValue": "Noch festlegen",
+      "portraitFormat": "portrait",
+      "name": "Name des Charakters",
+      "carryLabel": "Traglast",
+      "role": "Rolle",
+      "healthColor": "#5c7f20",
+      "status": "Gesund",
+      "level": "Stufe",
+      "title": "Charakter-Inventar"
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import { normalizeCombatResourceCosts } from './combat-action-economy.js?v=20260905-resource-balance-v2';
+import { canUseEquippedCombatShield } from './combat-weapon-loadout.js';
 import { normalizeCombatEffects } from './combat-effect-model.js?v=20260928-equipment-art-v4';
 
 export const COMBAT_RULE_PHASES = Object.freeze([
@@ -153,7 +154,7 @@ function entryCollections(profile = {}) {
     ['ability', profile.abilities],
     ['technique', profile.techniques],
     ['weapon', profile.weapons],
-    ['armor', profile.armorItems]
+    ['armor', (profile.armorItems || []).filter(item => item.kind !== 'shield' || canUseEquippedCombatShield(profile))]
   ];
 }
 

@@ -239,6 +239,7 @@ export async function commitCombatCommentOperation(request, {
     const recoveryDayKey = `scene:${entryId}:day-${sceneDay}`;
     const rulePeriods = { comment: commentRef.id, scene: entryId, day: recoveryDayKey };
     let usedRuleFrequencyKeys = deriveCombatRuleFrequencyKeys(trustedHistory, rulePeriods);
+    const usedConsequenceKeys = new Set();
 
     const descriptors = entries.flatMap(({ submitted }) => [
       { role: 'actor', actorId: submitted.actorId, persistence: normalizePersistence(submitted.actorPersistence, submitted.actorId) },
@@ -483,7 +484,7 @@ export async function commitCombatCommentOperation(request, {
       resolution.multiTargetCount = targetCount;
       usedRuleFrequencyKeys = new Set(resolution.usedRuleFrequencyKeys || []);
       resolution.resolutionId = randomUUID();
-      const consequence = createCriticalConsequence(resolution, { encounter,
+      const consequence = createCriticalConsequence(resolution, { encounter, usedConsequenceKeys,
         roll: criticalRolls.get(`${index}:${targetIndex}`), id: `${commentRef.id}:${index}:${targetIndex}`,
         actor: { ...actor, weaponUnavailable: actor.weaponUnavailable || pendingWeaponDrops.has(dropKey(actor)) },
         target: { ...target, weaponUnavailable: target.weaponUnavailable || pendingWeaponDrops.has(dropKey(target)) } });

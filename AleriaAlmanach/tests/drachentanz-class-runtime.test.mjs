@@ -44,7 +44,7 @@ test('Ruhige Schwelle resolves without hit or damage roll and expires after the 
   let state = deriveCombatStateFromComments(comments).get(actor.characterId);
   assert.equal(state.temporaryConditions.length, 2, 'Explicit defence and the learned path stance each apply once.');
   const protectedActor = overlayCombatHitPointState(actor, state);
-  assert.equal(protectedActor.totalDefense, actor.totalDefense + 3);
+  assert.equal(protectedActor.totalDefense, actor.totalDefense + 2, 'Nur die stärkste RK-Haltung gilt');
   assert.equal(protectedActor.currentHitPoints, actor.currentHitPoints);
   comments.push({ id: 'foreign', characterId: 'other-actor' });
   assert.equal(deriveCombatStateFromComments(comments).get(actor.characterId).temporaryConditions.length, 2);
@@ -97,9 +97,9 @@ test('Gedeckter Wechsel resolves the movement allowance and defence without auto
   const result = await new CombatResolutionService(dice).resolveAttack({ actor, target: actor });
   assert.equal(dice.attacks.length, 0);
   assert.equal(dice.damage.length, 0);
-  const movement = result.effectResults.find(entry => entry.effect.type === 'move');
-  assert.equal(movement.effect.movementMeters, 4, 'The base three metres receive the learned one-metre path allowance.');
-  assert.equal(movement.applied, true);
+  const movement = result.effectResults.find(entry => entry.condition?.stanceGroup === 'martial-position-guard');
+  assert.ok(movement, 'Einmalige Deckung ersetzt die bisherige Meterwirkung.');
+  assert.equal(movement.condition.triggerRules[0].effects.attackModifier, -1);
   const state = deriveCombatStateFromComments([{ id: 'move', commentSegments: [{ combatResolution: result }] }]).get(actor.characterId);
   assert.equal(overlayCombatHitPointState(actor, state).totalDefense, actor.totalDefense + 2);
   assert(state.temporaryConditions.every(condition => !/verbor|unsicht|überrascht/i.test(condition.name)));

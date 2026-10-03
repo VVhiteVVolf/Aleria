@@ -2355,6 +2355,7 @@
                   "label": "1 eigener Beitrag"
                 },
                 "tags": "Drachentanz",
+                "armorStance": true,
                 "stanceGroup": "jungdrache-guard",
                 "mechanics": {
                   "armorClass": 1
@@ -2484,8 +2485,8 @@
           "combatStyleFormId": "drachentanz-form-i-jungdrache",
           "minimumLevel": 4,
           "category": "technique",
-          "description": "Ein kurzer Schnitt begleitet den seitlichen Schritt in eine gedeckte Waffenlinie.",
-          "effect": "Technikschaden; bei Treffer bis zu 2 m Eigenbewegung im verfügbaren Bewegungsbudget und +1 RK bis zum Ende des nächsten eigenen Kampfposts.",
+          "description": "Ein kurzer Schnitt begleitet den seitlichen Schritt in eine gedeckte Waffenlinie. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "effect": "Technikschaden; Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
           "activationType": "bonus-action",
           "weaponTypes": [
             "sword"
@@ -2520,7 +2521,7 @@
           "duration": "Sofort",
           "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
           "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
-          "aiInstructions": "Technikschaden; bei Treffer bis zu 2 m Eigenbewegung im verfügbaren Bewegungsbudget und +1 RK bis zum Ende des nächsten eigenen Kampfposts. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "aiInstructions": "Technikschaden; Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
           "mechanicNotes": [],
           "effects": [
             {
@@ -2547,7 +2548,7 @@
             },
             {
               "id": "teulu-fluegelschritt-move-movement",
-              "type": "move",
+              "type": "buff",
               "target": "self",
               "amount": 0,
               "formula": "",
@@ -2556,16 +2557,74 @@
               "magical": false,
               "on": "hit",
               "resourceId": "",
-              "condition": null,
+              "condition": {
+                "id": "martial-position-guard",
+                "name": "Gedeckter Stellungswechsel",
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "stanceGroup": "martial-position-guard",
+                "active": true,
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": "Bis zum Ende des nächsten eigenen Beitrags"
+                },
+                "mechanics": {
+                  "movement": 0
+                },
+                "triggerRules": [
+                  {
+                    "id": "martial-position-guard-once",
+                    "name": "Stellungseffekt",
+                    "phase": "pre-roll",
+                    "recipient": "actor",
+                    "sourceRelation": "enemy",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "weaponAttackOnly": true,
+                    "condition": "always",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "resultEffects": [
+                      {
+                        "id": "martial-position-guard-consume",
+                        "type": "remove-condition",
+                        "target": "target",
+                        "conditionId": "martial-position-guard",
+                        "on": "always"
+                      }
+                    ]
+                  }
+                ],
+                "remainingActorComments": 1,
+                "remainingSceneComments": 0,
+                "ward": {
+                  "enabled": false,
+                  "charges": 0,
+                  "deflectChance": 100,
+                  "breaksOnCriticalHit": false
+                }
+              },
               "conditionId": "",
               "conditionTags": "",
-              "movementMeters": 2,
+              "movementMeters": 0,
               "movementKind": "move",
               "summon": null,
               "concentration": false,
               "channelComments": 0,
               "nonlethal": false,
-              "notes": "Freier Weg und verbleibende Bewegung erforderlich."
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
             },
             {
               "id": "teulu-fluegelschritt-condition",
@@ -2595,6 +2654,7 @@
                   "label": "1 eigener Beitrag"
                 },
                 "tags": "Drachentanz",
+                "armorStance": true,
                 "mechanics": {
                   "armorClass": 1
                 },
@@ -2967,6 +3027,7 @@
                   "label": "Bis zum Ende des nächsten eigenen Beitrags"
                 },
                 "tags": "Drachentanz",
+                "armorStance": true,
                 "mechanics": {
                   "armorClass": 2
                 },

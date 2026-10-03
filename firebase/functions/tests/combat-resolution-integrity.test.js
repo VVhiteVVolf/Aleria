@@ -25,7 +25,7 @@ test('server computes Drachenkerbe and typed armor protection from equipment and
   const baseline = structuredClone(gawain);
   baseline.combatProfile.armorItems.forEach(item => { item.damageProtection = null; });
   const normalHit = await resolve(attacker, resolveCombatProfile(baseline));
-  assert.equal(normalHit.damage.total - protectedHit.damage.total, 2);
+  assert.equal(normalHit.damage.total - protectedHit.damage.total, 1, 'Special protection 2 replaces ordinary plate protection 1');
   assert.equal(protectedHit.damage.damageReduction, 2);
 });
 

@@ -9,6 +9,7 @@ import { sceneItemEvents, applySceneItemEvent, applyDroppedWeaponsToStates } fro
 import { preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import { reconcileClassDamageCondition } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
 import { applySceneRestCommentToStateMap } from '../scene-rest/scene-rest-model.js?v=20260906-character-vitality-v1';
+import { getArmorStanceExcess } from './combat-armor-stances.js';
 import {
   advanceTemporaryConditionsForComment,
   normalizeRuntimeCondition
@@ -458,6 +459,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
   const temporarySpellAttackBonus = Number(temporaryMechanics.attack || 0) + Number(temporaryMechanics.spellAttack || 0);
   const strengthBefore = getAttributeModifier(getEffectiveCombatAttribute(profile, 'strength'));
   temporaryMechanics.armorClass = Number(temporaryMechanics.armorClass || 0)
+    - getArmorStanceExcess([...(profile.conditions || []), ...temporaryConditions]) + getArmorStanceExcess(profile.conditions)
     - getBurningArmorPenalty({ ...profile, temporaryConditions }) + getBurningArmorPenalty(profile);
   const strengthAfter = getEffectiveCombatAttribute({ ...profile,
     conditions: [...(profile.conditions || []), ...temporaryConditions] }, 'strength');

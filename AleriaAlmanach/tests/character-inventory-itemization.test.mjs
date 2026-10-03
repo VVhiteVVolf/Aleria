@@ -99,7 +99,7 @@ test('Gawains modest quality bonuses and descriptions survive both equipment dir
   assert.equal(inventoryCardModel(sword).rows.find(row=>row.label==='Schaden').value,'1W8+1 Hieb');
   const resolved=resolveCombatProfile({...c,...reverse},{actionId:'weapon:gawain-draig-knightly-sword',segmentKind:'combataction'});
   assert.equal(resolved.weapon.damageBonus,1);
-  assert.equal(resolved.totalDefense,16);
+  assert.equal(resolved.totalDefense,15);
   assert.equal(reverse.combatProfile.armorItems.find(item=>item.id==='gawain-draig-armor').damageProtection.amount,2);
   assert.equal(reverse.combatProfile.weapons.find(item=>item.id==='gawain-draig-knightly-sword').damageBonus,1);
   assert.equal(inventoryCardModel({category:'potions'}).kind,'consumable');

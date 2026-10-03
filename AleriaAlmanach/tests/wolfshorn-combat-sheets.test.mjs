@@ -24,14 +24,14 @@ const equip = (character, right, left = '', shield = false) => {
 };
 const action = (character, id) => resolveCombatProfile(character, {actionId:id,includeAiSnapshot:false});
 
-for (const [character, classId, hp, ac, count] of [[ylva,'skytte',95,12,22],[asgeir,'skjaldr',108,14,22]]) {
+for (const [character, classId, hp, ac, count] of [[ylva,'skytte',95,16,22],[asgeir,'skjaldr',108,15,22]]) {
   test(`${character.name}: level, curriculum budget, equipment and resource parity`, () => {
     const profile = sanitizeCharacterCombatProfile(character.combatProfile);
     assert.equal(profile.progression.level, 7);
     assert.equal(profile.templateSelections.classId, classId);
     assert.equal(getMaximumHitPoints(profile), hp);
     assert.equal(profile.hitPoints.current, hp);
-    assert.equal(getArmorClass(profile), ac, 'GES erst mit bestehender Rüstungsroutine ab Stufe 12');
+    assert.equal(getArmorClass(profile), ac, 'Mittlere Rüstung mit GES-Bonus bis +2 auf Stufe 7');
     assert.equal(profile.techniques.filter(entry => !entry.id.startsWith('class-special-')).length, count);
     assert.equal(profile.techniques.filter(entry => entry.id.startsWith('class-special-')).length, 0);
     const slots = getAldrimarClassDefinition(classId).techniqueBudget.slots.filter(slot => slot.level <= 7);
@@ -80,7 +80,7 @@ test('all learned techniques have usable loadouts; missing hands, shields and wr
   assert.equal(action(asgeir,'technique:combat-style-huskarl-skjaldr-grund-5').selectedAction.compatible,false);
   assert.equal(action(equip(asgeir,'asgeir-axt-rechts'),'technique:combat-style-huskarl-skjaldr-grund-3').selectedAction.compatible,false);
   const foreign = structuredClone(ylva);
-  foreign.combatProfile.techniques.push(asgeir.combatProfile.techniques[0]);
+  foreign.combatProfile.techniques.push(asgeir.combatProfile.techniques.find(t=>t.id==='combat-style-huskarl-skjaldr-grund-1'));
   assert.equal(action(equip(foreign,'ylva-handaxt'),'technique:combat-style-huskarl-skjaldr-grund-1').selectedAction.compatible,false);
 });
 
@@ -130,7 +130,7 @@ test('archive contains both original IDs and Asgeir Bleiddorn as an alias withou
     const rows = registry.records.filter(record => record.firestoreDocumentId === character.id);
     assert.equal(rows.length,1);
     const record = await read(`../../CharakterDatenbank/${rows[0].path}`);
-    const current = (await read(`../../Charakter%20Archiv%20Exporte/${character === ylva ? 'ylva' : 'asgeir'}-wolfshorn-weapon-economy-2026-09-30.json`)).character;
+    const current = (await read(`../../Charakter%20Archiv%20Exporte/${character === ylva ? 'ylva' : 'asgeir'}-wolfshorn-defense-balance-2026-10-03.json`)).character;
     assert.deepEqual(record.character.combatProfile,current.combatProfile);
     assert.deepEqual(record.character.inventory,current.inventory);
   }

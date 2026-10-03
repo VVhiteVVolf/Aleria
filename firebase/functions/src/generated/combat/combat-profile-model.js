@@ -5,11 +5,14 @@ import { normalizeSpellCatalogReference, resolveCatalogSpellSnapshot } from '../
 import { reconcileSkjaldrCombatProfile } from '../classes/aldrimar/skjaldr-combat-profile.js';
 import { reconcileClassSpecialManeuvers } from '../classes/class-special-maneuvers.js';
 import { getAldrimarWeaponAttackBonus } from '../classes/aldrimar/aldrimar-combat-rules.js';
-import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
+import { getCombatWeaponLoadout, canUseEquippedCombatShield } from './combat-weapon-loadout.js';
 import { normalizeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
 import { resolveEquipmentImage, projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
 import { sanitizeRegeneration, getBurningArmorPenalty } from './combat-creature-traits.js';
 import { getArmorRoutine, isArmorDexterityUnlocked } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
+import { applyArmorBalance, getArmorDexterityRules } from '../character-equipment/equipment-armor-rules.js';
+import { getArmorStanceExcess } from './combat-armor-stances.js';
+import { reconcileMartialPositionEffects } from '../combat-styles/martial-position-effects.js';
 import { mergeRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
 import { HIT_POINT_VITALITY_VERSION, normalizeHitPointVitality, getStandardHitPointProgression, resolveHitPointProgression, preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import {
@@ -324,7 +327,7 @@ function sanitizeWeaponsWithDefault(value = []) {
 }
 
 function sanitizeArmor(value = {}, index = 0) {
-  const source = value && typeof value === 'object' ? value : {};
+  const source = applyArmorBalance(value && typeof value === 'object' ? value : {});
   const kind = normalizeText(source.kind, 20);
   const dexterityMode = normalizeText(source.dexterityMode, 20);
   return {
@@ -334,6 +337,7 @@ function sanitizeArmor(value = {}, index = 0) {
     name: normalizeText(source.name, 120),
     image: normalizeText(source.image || source.icon, 1000),
     kind: ['armor', 'shield', 'ward'].includes(kind) ? kind : 'armor',
+    armorCategory: source.armorCategory || '',
     damageProtection: normalizeEquipmentDamageProtection(source.damageProtection),
     triggerRules: sanitizeCombatTriggerRules(source.triggerRules),
     baseArmorClass: normalizeOptionalNumber(source.baseArmorClass, 0, 99),
@@ -458,6 +462,9 @@ function sanitizeQuirk(value = {}, index = 0) {
 function sanitizeCondition(value = {}, index = 0) {
   const source = value && typeof value === 'object' ? value : {};
   return {
+    armorStance: source.armorStance === true,
+    stanceGroup: normalizeText(source.stanceGroup, 120),
+    tags: normalizeText(source.tags, 500),
     id: normalizeId(source.id, `condition-${index + 1}`),
     name: normalizeText(source.name, 100),
     duration: normalizeText(source.duration, 100),
@@ -611,6 +618,8 @@ function sanitizeTechniqueSecondarySave(value = {}) {
     dcAttributeKey: getAttributeKey(source.dcAttributeKey, 'strength'),
     addProficiency: normalizeBoolean(source.addProficiency, true),
     failureCondition: {
+      ...(failure.stanceGroup ? { stanceGroup: normalizeText(failure.stanceGroup, 120) } : {}),
+      ...(failure.armorStance ? { armorStance: true } : {}),
       ...(failure.disarm === true ? { disarm: true } : {}),
       ...(['action', 'bonus-action', 'reaction'].includes(failure.blockedResource) ? { blockedResource: failure.blockedResource } : {}),
       ...(failure.triggerRules?.length ? { triggerRules: sanitizeCombatTriggerRules(failure.triggerRules) } : {}),
@@ -840,7 +849,7 @@ function getLegacyArmor(source) {
 }
 
 export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
-  const source = reconcileFrekiTechniques(reconcileClassSpecialManeuvers(reconcileSkjaldrCombatProfile(reconcileClassDamageRevisions(value && typeof value === 'object' ? value : {}))));
+  const source = reconcileMartialPositionEffects(reconcileFrekiTechniques(reconcileClassSpecialManeuvers(reconcileSkjaldrCombatProfile(reconcileClassDamageRevisions(value && typeof value === 'object' ? value : {})))));
   const sourceAttributes = new Map((Array.isArray(source.attributes) ? source.attributes : [])
     .map(attribute => [getAttributeKey(attribute?.key, ''), attribute]));
   const sourceSaves = new Map((Array.isArray(source.savingThrows) ? source.savingThrows : [])
@@ -1142,7 +1151,8 @@ export function getAuraTargetMechanics(profile = {}, context = {}) {
 
 function sumMechanicalModifier(profile, key) {
   return collectActiveMechanicalSources(profile)
-    .reduce((total, mechanics) => total + (Number(mechanics?.[key]) || 0), 0);
+    .reduce((total, mechanics) => total + (Number(mechanics?.[key]) || 0), 0)
+    - (key === 'armorClass' ? getArmorStanceExcess(profile.conditions) : 0);
 }
 
 export function getHitPointProgression(profile = {}) {
@@ -1196,8 +1206,8 @@ export function getArmorClass(profile = {}) {
   if (normalized.armorClass.override != null && normalized.armorClass.overrideMode === 'total') {
     return normalized.armorClass.override - getBurningArmorPenalty(normalized);
   }
-  const dualWield = getCombatWeaponLoadout(normalized).dualWield;
-  const equipped = normalized.armorItems.filter(item => item.equipped && (!dualWield || item.kind !== 'shield'));
+  const shieldAllowed = canUseEquippedCombatShield(normalized);
+  const equipped = normalized.armorItems.filter(item => item.equipped && (shieldAllowed || item.kind !== 'shield'));
   const bodyArmor = equipped
     .filter(item => item.kind === 'armor' && item.baseArmorClass != null)
     .sort((a, b) => b.baseArmorClass - a.baseArmorClass)[0] || null;
@@ -1205,16 +1215,17 @@ export function getArmorClass(profile = {}) {
     ? normalized.armorClass.override
     : (bodyArmor?.baseArmorClass ?? normalized.armorClass.base);
   const dexterityUnlocked = isArmorDexterityUnlocked(normalized, bodyArmor);
-  const dexterityMode = dexterityUnlocked
+  const armorRules = getArmorDexterityRules(normalized, bodyArmor);
+  const dexterityMode = armorRules?.mode ?? (dexterityUnlocked
     ? (bodyArmor?.dexterityMode ?? normalized.armorClass.dexterityMode)
-    : 'none';
-  const dexterityCap = bodyArmor?.dexterityCap ?? normalized.armorClass.dexterityCap;
+    : 'none');
+  const dexterityCap = armorRules?.cap ?? bodyArmor?.dexterityCap ?? normalized.armorClass.dexterityCap;
   const dexterityModifier = getAttributeModifier(getAttribute(normalized, 'dexterity'));
   const equipmentBonus = equipped.reduce((total, item) => total + item.armorClassBonus, 0);
   return base
     + getAppliedDexterityModifier(dexterityModifier, dexterityMode, dexterityCap)
     + equipmentBonus
-    + (dualWield ? 0 : normalized.armorClass.shieldBonus)
+    + (shieldAllowed ? normalized.armorClass.shieldBonus : 0)
     + normalized.armorClass.magicModifier
     + normalized.armorClass.otherModifier
     + sumMechanicalModifier(normalized, 'armorClass')

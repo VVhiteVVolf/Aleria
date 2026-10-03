@@ -1,6 +1,7 @@
 import { DRACHENTANZ_FORM_NAMES } from '../drachentanz-ids.js?v=20260909-dragon-parent-v2';
 import { createDrachentanzDamageProfile } from '../drachentanz-damage-progression.js?v=20260905-damage-balance-v1';
 import { hasWeaponTechniqueControl } from '../../weapon-technique-budget.js';
+import { reviseMartialPositionEntry } from '../../martial-position-effects.js';
 
 const RESOURCE_NAMES = Object.freeze({
   action: 'Aktion',
@@ -57,6 +58,7 @@ export function temporaryCondition(id, name, description, mechanics = {}, option
       duration: options.duration || `${comments} eigener Beitrag`,
       durationModel: { kind: 'actor-comments', remainingActorComments: comments },
       tags: options.tags || 'Drachentanz',
+      ...(Number(mechanics.armorClass) > 0 ? { armorStance: true } : {}),
       ...(options.stanceGroup ? { stanceGroup: options.stanceGroup } : {}),
       mechanics
     },
@@ -102,7 +104,7 @@ export function createDrachentanzTechnique(spec) {
     : [weaponDamageEffect(id, { target: spec.damageTarget, magical: spec.magical }), ...(spec.effects || [])];
   const costs = (spec.costs?.length ? spec.costs : [spec.activationType || 'action'])
     .map((cost, index) => techniqueCost(id, cost, index));
-  return {
+  return reviseMartialPositionEntry({
     id,
     name: spec.name,
     trainingForm: `Drachentanz · ${formName}`,
@@ -156,7 +158,7 @@ export function createDrachentanzTechnique(spec) {
       slotBands: spec.slotBands || [],
       designNotes: spec.designNotes || ''
     }
-  };
+  });
 }
 
 export const drachentanzTechniqueFactoryInternals = Object.freeze({ RESOURCE_NAMES, DEFAULT_WEAPON_TYPES, normalizedCost });

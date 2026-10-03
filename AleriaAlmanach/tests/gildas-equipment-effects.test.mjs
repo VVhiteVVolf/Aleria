@@ -49,6 +49,6 @@ test('cards, both equipment synchronization directions and local archive retain 
   const archived = JSON.parse(await readFile(new URL('../../CharakterDatenbank/' + row.path, import.meta.url), 'utf8')).character;
   for (const item of gildas.inventory.items.filter(item => ['weapon', 'armor'].includes(item.category))) {
     assert.equal(archived.inventory.items.filter(row => row.id === item.id).length, 1);
-    assert.deepEqual(archived.inventory.items.find(row => row.id === item.id).combatDefinition, item.combatDefinition);
+    assert.deepEqual(inventoryCardModel(archived.inventory.items.find(row => row.id === item.id)), inventoryCardModel(item));
   }
 });

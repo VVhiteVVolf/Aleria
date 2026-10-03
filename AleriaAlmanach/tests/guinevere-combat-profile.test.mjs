@@ -59,9 +59,9 @@ test('Federblick verbindet den Helwyr-Fernkampfbonus mit dem Angriff der Form', 
   assert.equal(federblick.attackModifier, base.attackModifier + 1);
 });
 
-test('Guineveres Lederrüstung erhält den Geschicklichkeitsbonus erst durch Rüstungsroutine', async () => {
+test('Guineveres Lederrüstung erhält den vollen Geschicklichkeitsbonus bereits auf Stufe 5', async () => {
   const character = await loadGuinevere();
-  assert.equal(resolveCombatProfile(character).totalDefense, 11);
+  assert.equal(resolveCombatProfile(character).totalDefense, 15);
   character.combatProfile.progression.level = 12;
   assert.equal(resolveCombatProfile(character).totalDefense, 15);
 });

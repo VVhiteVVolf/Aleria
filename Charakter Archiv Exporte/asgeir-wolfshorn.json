@@ -349,7 +349,6 @@
           "equipped": true,
           "attributes": [],
           "combatDefinition": {
-            "kind": "armor",
             "mechanics": {},
             "damageProtection": {
               "amount": 2,
@@ -362,13 +361,15 @@
             },
             "triggerRules": [],
             "armorKind": "armor",
+            "armorCategory": "medium",
             "baseArmorClass": 14,
             "armorClassBonus": 0,
             "dexterityMode": "capped",
             "dexterityCap": 2,
             "dexterityUnlockLevel": 0,
             "properties": "Mittlere Rüstung",
-            "notes": "Angelegt: −2 Hieb-/Wuchtschaden je Treffer. Kein zusätzlicher RK-Bonus."
+            "notes": "Angelegt: −2 Hieb-/Wuchtschaden je Treffer. Kein zusätzlicher RK-Bonus.",
+            "kind": "armor"
           },
           "individualizedAt": "",
           "name": "Wolfshorn-Schuppenpanzer",
@@ -429,6 +430,7 @@
               }
             ],
             "armorKind": "shield",
+            "armorCategory": "",
             "baseArmorClass": null,
             "armorClassBonus": 2,
             "dexterityMode": "full",
@@ -1195,7 +1197,8 @@
           },
           "name": "Wolfshorn-Schuppenpanzer",
           "dexterityUnlockLevel": 0,
-          "armorClassBonus": 0
+          "armorClassBonus": 0,
+          "armorCategory": "medium"
         },
         {
           "kind": "shield",
@@ -1843,2574 +1846,6 @@
       },
       "techniques": [
         {
-          "damageBonus": 0,
-          "secondarySave": {
-            "enabled": false
-          },
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "costs": [
-            {
-              "scope": "comment",
-              "id": "combat-style-huskarl-skjaldr-grund-1-bonus-action-1",
-              "resourceId": "bonus-action",
-              "amount": 1,
-              "name": "Bonusaktion"
-            }
-          ],
-          "active": true,
-          "combatStyleFormId": "huskarl-schildgrund",
-          "damageFormula": "1d6",
-          "description": "Ein leichter Einzelhieb, noch ohne Berserkergang.",
-          "minimumLevel": 1,
-          "damageModel": {
-            "weaponDiceMultiplier": 1,
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ],
-            "bonusFormula": "",
-            "mode": "fixed",
-            "bonusWeaponDice": 0,
-            "bonusWeaponDieCap": 6
-          },
-          "cultureTraining": {
-            "requiresDualWield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresShield": false,
-            "slotBands": [
-              "foundation"
-            ],
-            "branchId": "skjaldr-flexible",
-            "schemaVersion": 1,
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "requiresTwoHands": false
-          },
-          "cenyrTraining": {
-            "requiresMounted": false,
-            "classWeaponProfiles": {},
-            "allowedClassIds": [],
-            "designNotes": "",
-            "sourceStatus": "",
-            "selectedAtLevel": null,
-            "uchelwyrCompatible": false,
-            "slotBands": [],
-            "weaponRuleSetId": "",
-            "branchId": "",
-            "assignedSlotId": ""
-          },
-          "id": "combat-style-huskarl-skjaldr-grund-1",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "combatStyleId": "huskarl-waffenlehre",
-          "live": true,
-          "auraBypass": {
-            "resourceId": "aura-focus",
-            "cost": 1,
-            "allowed": true
-          },
-          "target": "Ein Gegner",
-          "status": "confirmed",
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "trainingForm": "Stand des Schildes",
-          "maximumTargets": 1,
-          "name": "Kurzer Axthieb",
-          "compatibleWeaponIds": [],
-          "activationType": "bonus-action",
-          "attackBonus": 0,
-          "weaponLabel": "Schwert, Axt oder Streitkolben",
-          "damageType": "",
-          "category": "technique",
-          "targetDefenseModifier": 0,
-          "requirements": "Schwert, Axt oder Streitkolben",
-          "rollMode": "normal",
-          "criticalThreshold": 20,
-          "effects": [
-            {
-              "damageType": "",
-              "on": "hit",
-              "target": "target",
-              "inheritWeaponDamageType": true,
-              "formula": "",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "id": "combat-style-huskarl-skjaldr-grund-1-weapon-damage",
-              "type": "damage",
-              "magical": false
-            }
-          ],
-          "duration": "",
-          "aiInstructions": "",
-          "mechanics": {},
-          "triggerRules": [],
-          "range": "Waffenreichweite",
-          "effect": "Ein leichter Einzelhieb, noch ohne Berserkergang.",
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "mace"
-          ]
-        },
-        {
-          "effects": [
-            {
-              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-              "on": "always",
-              "id": "combat-style-huskarl-skjaldr-grund-2-condition",
-              "target": "self",
-              "type": "buff",
-              "condition": {
-                "tags": "Huskarl-Waffenlehre",
-                "duration": "1 eigener Beitrag",
-                "mechanics": {
-                  "armorClass": 1
-                },
-                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-                "name": "Feste Deckung",
-                "durationModel": {
-                  "kind": "actor-comments",
-                  "remainingActorComments": 1
-                },
-                "id": "huskarl-deckung"
-              }
-            }
-          ],
-          "target": "Selbst",
-          "criticalThreshold": 20,
-          "requirements": "Schwert, Axt oder Streitkolben",
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "damageFormula": "",
-          "live": true,
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "status": "confirmed",
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "mace"
-          ],
-          "secondarySave": {
-            "enabled": false
-          },
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "trainingForm": "Stand des Schildes",
-          "range": "Waffenreichweite",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "attackBonus": 0,
-          "weaponLabel": "Schwert, Axt oder Streitkolben",
-          "mechanics": {},
-          "triggerRules": [],
-          "cultureTraining": {
-            "requiresShield": false,
-            "requiresDualWield": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "requiresMounted": false,
-            "branchId": "skjaldr-flexible",
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresTwoHands": false,
-            "schemaVersion": 1,
-            "cultureIds": [
-              "aldrimar"
-            ]
-          },
-          "combatStyleId": "huskarl-waffenlehre",
-          "cenyrTraining": {
-            "slotBands": [],
-            "branchId": "",
-            "assignedSlotId": "",
-            "weaponRuleSetId": "",
-            "designNotes": "",
-            "classWeaponProfiles": {},
-            "selectedAtLevel": null,
-            "sourceStatus": "",
-            "allowedClassIds": [],
-            "requiresMounted": false,
-            "uchelwyrCompatible": false
-          },
-          "targetDefenseModifier": 0,
-          "active": true,
-          "minimumLevel": 2,
-          "activationType": "reaction",
-          "maximumTargets": 1,
-          "effect": "Schadenslose Deckung: +1 RK für einen eigenen Beitrag.",
-          "id": "combat-style-huskarl-skjaldr-grund-2",
-          "category": "technique",
-          "aiInstructions": "",
-          "compatibleWeaponIds": [],
-          "costs": [
-            {
-              "scope": "comment",
-              "amount": 1,
-              "resourceId": "reaction",
-              "id": "combat-style-huskarl-skjaldr-grund-2-reaction-1",
-              "name": "Reaktion"
-            }
-          ],
-          "rollMode": "normal",
-          "combatStyleFormId": "huskarl-schildgrund",
-          "duration": "",
-          "damageBonus": 0,
-          "damageModel": {
-            "mode": "fixed",
-            "scalingSteps": []
-          },
-          "damageType": "",
-          "name": "Gebändigter Stand",
-          "description": "Schadenslose Deckung: +1 RK für einen eigenen Beitrag."
-        },
-        {
-          "cenyrTraining": {
-            "branchId": "",
-            "assignedSlotId": "",
-            "classWeaponProfiles": {},
-            "weaponRuleSetId": "",
-            "uchelwyrCompatible": false,
-            "selectedAtLevel": null,
-            "slotBands": [],
-            "sourceStatus": "",
-            "designNotes": "",
-            "requiresMounted": false,
-            "allowedClassIds": []
-          },
-          "minimumLevel": 3,
-          "effects": [
-            {
-              "inheritWeaponDamageType": true,
-              "on": "hit",
-              "type": "damage",
-              "id": "combat-style-huskarl-skjaldr-grund-3-weapon-damage",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "magical": false,
-              "damageType": "",
-              "target": "target",
-              "formula": ""
-            }
-          ],
-          "combatStyleId": "huskarl-waffenlehre",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "mechanics": {},
-          "target": "Ein Gegner",
-          "category": "technique",
-          "combatStyleFormId": "huskarl-schildgrund",
-          "status": "confirmed",
-          "weaponLabel": "Lange Streitaxt",
-          "attackBonus": 0,
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "rollMode": "normal",
-          "secondarySave": {
-            "enabled": false
-          },
-          "cultureTraining": {
-            "requiresDualWield": false,
-            "requiresShield": false,
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "branchId": "skjaldr-greatAxe",
-            "schemaVersion": 1,
-            "requiresTwoHands": true,
-            "slotBands": [
-              "foundation"
-            ]
-          },
-          "duration": "",
-          "weaponTypes": [
-            "axe"
-          ],
-          "auraBypass": {
-            "resourceId": "aura-focus",
-            "cost": 1,
-            "allowed": true
-          },
-          "active": true,
-          "damageFormula": "",
-          "name": "Langer Spalthieb",
-          "range": "Waffenreichweite",
-          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
-          "description": "Ein kontrollierter Hieb mit der langen Streitaxt.",
-          "costs": [
-            {
-              "name": "Aktion",
-              "scope": "comment",
-              "resourceId": "action",
-              "amount": 1,
-              "id": "combat-style-huskarl-skjaldr-grund-3-action-1"
-            }
-          ],
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "damageModel": {
-            "bonusFormula": "",
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ],
-            "mode": "weapon-dice",
-            "weaponDiceMultiplier": 1,
-            "bonusWeaponDice": 1,
-            "bonusWeaponDieCap": 6
-          },
-          "live": true,
-          "id": "combat-style-huskarl-skjaldr-grund-3",
-          "aiInstructions": "",
-          "damageBonus": 0,
-          "damageType": "",
-          "trainingForm": "Stand des Schildes",
-          "effect": "Ein kontrollierter Hieb mit der langen Streitaxt.",
-          "maximumTargets": 1,
-          "triggerRules": [],
-          "activationType": "action",
-          "compatibleWeaponIds": [],
-          "targetDefenseModifier": 0,
-          "criticalThreshold": 20
-        },
-        {
-          "duration": "",
-          "rollMode": "normal",
-          "combatStyleFormId": "huskarl-schildgrund",
-          "maximumTargets": 1,
-          "targetDefenseModifier": 0,
-          "attackBonus": 0,
-          "weaponLabel": "Zwei Äxte",
-          "name": "Doppelter Axtgriff",
-          "activationType": "action",
-          "effect": "Zwei geführte Äxte, ein gemeinsamer Technikwurf. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.",
-          "cultureTraining": {
-            "schemaVersion": 1,
-            "requiresShield": false,
-            "requiresDualWield": true,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "branchId": "skjaldr-twinAxes",
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresMounted": false,
-            "requiresTwoHands": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ]
-          },
-          "costs": [
-            {
-              "id": "combat-style-huskarl-skjaldr-grund-4-action-1",
-              "resourceId": "action",
-              "scope": "comment",
-              "amount": 1,
-              "name": "Aktion"
-            },
-            {
-              "resourceId": "reaction",
-              "amount": 1,
-              "id": "combat-style-huskarl-skjaldr-grund-4-reaction-2",
-              "scope": "comment",
-              "name": "Reaktion"
-            }
-          ],
-          "weaponTypes": [
-            "axe"
-          ],
-          "damageType": "",
-          "minimumLevel": 4,
-          "id": "combat-style-huskarl-skjaldr-grund-4",
-          "category": "technique",
-          "aiInstructions": "",
-          "damageModel": {
-            "bonusFormula": "",
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "formula": "1d6",
-                "level": 9
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ],
-            "weaponDiceMultiplier": 1,
-            "bonusWeaponDieCap": 8,
-            "mode": "weapon-dice",
-            "bonusWeaponDice": 1
-          },
-          "compatibleWeaponIds": [],
-          "description": "Zwei geführte Äxte, ein gemeinsamer Technikwurf. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "secondarySave": {
-            "attributeKey": "strength",
-            "enabled": true,
-            "dcAttributeKey": "strength",
-            "failureCondition": {
-              "tags": "Huskarl-Waffenlehre",
-              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
-              "duration": "1 eigener Beitrag",
-              "id": "combat-style-huskarl-skjaldr-grund-4-failed-save",
-              "name": "Gebundene Waffenführung",
-              "mechanics": {
-                "attack": -1
-              }
-            },
-            "addProficiency": true,
-            "dcBase": 8
-          },
-          "target": "Ein Gegner",
-          "effects": [
-            {
-              "formula": "",
-              "type": "damage",
-              "on": "hit",
-              "target": "target",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "magical": false,
-              "inheritWeaponDamageType": true,
-              "damageType": "",
-              "id": "combat-style-huskarl-skjaldr-grund-4-weapon-damage"
-            }
-          ],
-          "range": "Waffenreichweite",
-          "mechanics": {},
-          "status": "confirmed",
-          "damageFormula": "",
-          "auraBypass": {
-            "resourceId": "aura-focus",
-            "cost": 1,
-            "allowed": true
-          },
-          "triggerRules": [],
-          "damageBonus": 0,
-          "criticalThreshold": 20,
-          "live": true,
-          "combatStyleId": "huskarl-waffenlehre",
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "cenyrTraining": {
-            "uchelwyrCompatible": false,
-            "designNotes": "",
-            "branchId": "",
-            "assignedSlotId": "",
-            "weaponRuleSetId": "",
-            "selectedAtLevel": null,
-            "slotBands": [],
-            "classWeaponProfiles": {},
-            "sourceStatus": "",
-            "requiresMounted": false,
-            "allowedClassIds": []
-          },
-          "active": true,
-          "trainingForm": "Stand des Schildes",
-          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert.",
-          "followUpAttack": {
-            "enabled": false
-          }
-        },
-        {
-          "id": "combat-style-huskarl-skjaldr-grund-5",
-          "effects": [
-            {
-              "type": "damage",
-              "damageType": "",
-              "inheritWeaponDamageType": true,
-              "id": "combat-style-huskarl-skjaldr-grund-5-weapon-damage",
-              "on": "hit",
-              "magical": false,
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "target": "target",
-              "formula": ""
-            }
-          ],
-          "status": "confirmed",
-          "damageType": "",
-          "target": "Ein Gegner",
-          "secondarySave": {
-            "enabled": false
-          },
-          "range": "Waffenreichweite",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "damageFormula": "",
-          "targetDefenseModifier": 0,
-          "followUpAttack": {
-            "enabled": false
-          },
-          "mechanics": {},
-          "damageBonus": 0,
-          "combatStyleId": "huskarl-waffenlehre",
-          "cenyrTraining": {
-            "branchId": "",
-            "requiresMounted": false,
-            "allowedClassIds": [],
-            "slotBands": [],
-            "selectedAtLevel": null,
-            "designNotes": "",
-            "classWeaponProfiles": {},
-            "uchelwyrCompatible": false,
-            "weaponRuleSetId": "",
-            "assignedSlotId": "",
-            "sourceStatus": ""
-          },
-          "description": "Ein Hieb aus der Schilddeckung; kein Berserkerbonus unter Stufe 6.",
-          "criticalThreshold": 20,
-          "compatibleWeaponIds": [],
-          "active": true,
-          "damageModel": {
-            "bonusWeaponDieCap": 8,
-            "bonusWeaponDice": 1,
-            "mode": "weapon-dice",
-            "weaponDiceMultiplier": 1,
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "formula": "1d8",
-                "level": 13
-              },
-              {
-                "level": 17,
-                "formula": "1d10"
-              }
-            ],
-            "bonusFormula": ""
-          },
-          "minimumLevel": 5,
-          "name": "Haken hinter den Schild",
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "effect": "Ein Hieb aus der Schilddeckung; kein Berserkerbonus unter Stufe 6.",
-          "live": true,
-          "category": "technique",
-          "triggerRules": [],
-          "aiInstructions": "",
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "mace",
-            "spear"
-          ],
-          "cultureTraining": {
-            "requiresShield": true,
-            "branchId": "skjaldr-shield",
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "requiresMounted": false,
-            "requiresTwoHands": false,
-            "requiresDualWield": false,
-            "schemaVersion": 1,
-            "slotBands": [
-              "foundation"
-            ]
-          },
-          "combatStyleFormId": "huskarl-schildgrund",
-          "rollMode": "normal",
-          "trainingForm": "Stand des Schildes",
-          "duration": "",
-          "attackBonus": 0,
-          "weaponLabel": "Einhandwaffe und Schild",
-          "maximumTargets": 1,
-          "costs": [
-            {
-              "scope": "comment",
-              "resourceId": "action",
-              "name": "Aktion",
-              "amount": 1,
-              "id": "combat-style-huskarl-skjaldr-grund-5-action-1"
-            },
-            {
-              "resourceId": "bonus-action",
-              "name": "Bonusaktion",
-              "scope": "comment",
-              "amount": 1,
-              "id": "combat-style-huskarl-skjaldr-grund-5-bonus-action-2"
-            }
-          ],
-          "activationType": "action",
-          "requirements": "Einhandwaffe und Schild Schild aktiv geführt.",
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          }
-        },
-        {
-          "damageType": "",
-          "effect": "Ein kräftiger Einzelhieb. Der Berserkergang muss separat aktiviert werden.",
-          "range": "Waffenreichweite",
-          "description": "Ein kräftiger Einzelhieb. Der Berserkergang muss separat aktiviert werden.",
-          "cultureTraining": {
-            "requiresDualWield": false,
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "branchId": "skjaldr-greatAxe",
-            "slotBands": [
-              "foundation"
-            ],
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "schemaVersion": 1,
-            "requiresTwoHands": true,
-            "requiresShield": false
-          },
-          "damageModel": {
-            "bonusWeaponDice": 1,
-            "weaponDiceMultiplier": 1,
-            "scalingSteps": [
-              {
-                "formula": "1d4",
-                "level": 7
-              },
-              {
-                "formula": "1d6",
-                "level": 9
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "level": 17,
-                "formula": "1d10"
-              }
-            ],
-            "bonusModifier": 1,
-            "mode": "weapon-dice",
-            "bonusWeaponDieCap": 8,
-            "bonusFormula": ""
-          },
-          "triggerRules": [],
-          "targetDefenseModifier": 0,
-          "mechanics": {},
-          "damageBonus": 0,
-          "maximumTargets": 1,
-          "activationType": "action",
-          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
-          "name": "Hieb des Schildbeißers",
-          "compatibleWeaponIds": [],
-          "combatStyleFormId": "huskarl-schildgrund",
-          "trainingForm": "Stand des Schildes",
-          "aiInstructions": "",
-          "criticalThreshold": 20,
-          "status": "confirmed",
-          "category": "technique",
-          "target": "Ein Gegner",
-          "live": true,
-          "combatStyleId": "huskarl-waffenlehre",
-          "effects": [
-            {
-              "type": "damage",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "id": "combat-style-huskarl-skjaldr-grund-6-weapon-damage",
-              "damageType": "",
-              "target": "target",
-              "formula": "",
-              "inheritWeaponDamageType": true,
-              "magical": false,
-              "on": "hit"
-            }
-          ],
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "attackBonus": 0,
-          "weaponLabel": "Lange Streitaxt",
-          "cenyrTraining": {
-            "allowedClassIds": [],
-            "slotBands": [],
-            "requiresMounted": false,
-            "selectedAtLevel": null,
-            "designNotes": "",
-            "weaponRuleSetId": "",
-            "assignedSlotId": "",
-            "branchId": "",
-            "uchelwyrCompatible": false,
-            "classWeaponProfiles": {},
-            "sourceStatus": ""
-          },
-          "id": "combat-style-huskarl-skjaldr-grund-6",
-          "minimumLevel": 6,
-          "damageFormula": "",
-          "weaponTypes": [
-            "axe"
-          ],
-          "active": true,
-          "duration": "",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "auraBypass": {
-            "cost": 1,
-            "resourceId": "aura-focus",
-            "allowed": true
-          },
-          "costs": [
-            {
-              "scope": "comment",
-              "amount": 1,
-              "resourceId": "action",
-              "name": "Aktion",
-              "id": "combat-style-huskarl-skjaldr-grund-6-action-1"
-            },
-            {
-              "id": "combat-style-huskarl-skjaldr-grund-6-bonus-action-2",
-              "resourceId": "bonus-action",
-              "name": "Bonusaktion",
-              "amount": 1,
-              "scope": "comment"
-            },
-            {
-              "amount": 1,
-              "id": "combat-style-huskarl-skjaldr-grund-6-reaction-3",
-              "scope": "comment",
-              "name": "Reaktion",
-              "resourceId": "reaction"
-            }
-          ],
-          "secondarySave": {
-            "enabled": false
-          },
-          "rollMode": "normal",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ]
-        },
-        {
-          "description": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
-          "damageModel": {
-            "bonusWeaponDice": 0,
-            "bonusWeaponDieCap": 6,
-            "mode": "fixed",
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "formula": "1d6",
-                "level": 9
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ],
-            "bonusFormula": "",
-            "weaponDiceMultiplier": 1
-          },
-          "active": true,
-          "range": "Waffenreichweite",
-          "live": true,
-          "criticalThreshold": 20,
-          "minimumLevel": 1,
-          "damageBonus": 0,
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "effects": [
-            {
-              "inheritWeaponDamageType": true,
-              "magical": false,
-              "on": "hit",
-              "type": "damage",
-              "formula": "",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "target": "target",
-              "id": "combat-style-huskarl-skjaldr-wahl-1-weapon-damage",
-              "damageType": ""
-            }
-          ],
-          "auraBypass": {
-            "resourceId": "aura-focus",
-            "allowed": true,
-            "cost": 1
-          },
-          "target": "Ein Gegner",
-          "status": "confirmed",
-          "id": "combat-style-huskarl-skjaldr-wahl-1",
-          "mechanics": {},
-          "activationType": "bonus-action",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "secondarySave": {
-            "enabled": false
-          },
-          "maximumTargets": 1,
-          "compatibleWeaponIds": [],
-          "trainingForm": "Stand des Schildes",
-          "requirements": "Schwert, Axt oder Streitkolben",
-          "damageFormula": "1d6",
-          "damageType": "",
-          "weaponLabel": "Schwert, Axt oder Streitkolben",
-          "attackBonus": 0,
-          "targetDefenseModifier": 0,
-          "name": "Kurzer Bartzug",
-          "cultureTraining": {
-            "requiresShield": false,
-            "requiresDualWield": false,
-            "branchId": "skjaldr-flexible",
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "schemaVersion": 1,
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresTwoHands": false,
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ]
-          },
-          "combatStyleId": "huskarl-waffenlehre",
-          "costs": [
-            {
-              "name": "Bonusaktion",
-              "scope": "comment",
-              "id": "combat-style-huskarl-skjaldr-wahl-1-bonus-action-1",
-              "amount": 1,
-              "resourceId": "bonus-action"
-            }
-          ],
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "mace"
-          ],
-          "category": "technique",
-          "effect": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
-          "triggerRules": [],
-          "combatStyleFormId": "huskarl-schildgrund"
-        },
-        {
-          "followUpAttack": {
-            "enabled": false
-          },
-          "damageType": "",
-          "trainingForm": "Stand des Schildes",
-          "cultureTraining": {
-            "requiresShield": false,
-            "requiresDualWield": false,
-            "branchId": "skjaldr-flexible",
-            "requiresTwoHands": false,
-            "schemaVersion": 1,
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresMounted": false
-          },
-          "active": true,
-          "effects": [
-            {
-              "target": "self",
-              "on": "always",
-              "condition": {
-                "duration": "1 eigener Beitrag",
-                "durationModel": {
-                  "remainingActorComments": 1,
-                  "kind": "actor-comments"
-                },
-                "id": "huskarl-deckung",
-                "tags": "Huskarl-Waffenlehre",
-                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-                "name": "Feste Deckung",
-                "mechanics": {
-                  "armorClass": 1
-                }
-              },
-              "id": "combat-style-huskarl-skjaldr-wahl-2-condition",
-              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-              "type": "buff"
-            }
-          ],
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "mace"
-          ],
-          "requirements": "Schwert, Axt oder Streitkolben",
-          "range": "Waffenreichweite",
-          "name": "Ruhige Axtdeckung",
-          "criticalThreshold": 20,
-          "mechanics": {},
-          "weaponLabel": "Schwert, Axt oder Streitkolben",
-          "attackBonus": 0,
-          "target": "Selbst",
-          "triggerRules": [],
-          "status": "confirmed",
-          "compatibleWeaponIds": [],
-          "combatStyleFormId": "huskarl-schildgrund",
-          "combatStyleId": "huskarl-waffenlehre",
-          "id": "combat-style-huskarl-skjaldr-wahl-2",
-          "category": "technique",
-          "minimumLevel": 1,
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "secondarySave": {
-            "enabled": false
-          },
-          "activationType": "reaction",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "costs": [
-            {
-              "name": "Reaktion",
-              "amount": 1,
-              "scope": "comment",
-              "id": "combat-style-huskarl-skjaldr-wahl-2-reaction-1",
-              "resourceId": "reaction"
-            }
-          ],
-          "damageBonus": 0,
-          "live": true,
-          "maximumTargets": 1,
-          "targetDefenseModifier": 0,
-          "description": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.",
-          "damageFormula": "",
-          "damageModel": {
-            "mode": "fixed",
-            "scalingSteps": []
-          },
-          "auraBypass": {
-            "cost": 1,
-            "resourceId": "aura-focus",
-            "allowed": true
-          },
-          "effect": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag."
-        },
-        {
-          "cultureTraining": {
-            "requiresDualWield": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "requiresMounted": false,
-            "schemaVersion": 1,
-            "branchId": "skjaldr-greatAxe",
-            "requiresTwoHands": true,
-            "requiresShield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "slotBands": [
-              "foundation"
-            ]
-          },
-          "effect": "Ein gezielter Einzelangriff mit der geführten Waffe.",
-          "criticalThreshold": 20,
-          "range": "Waffenreichweite",
-          "attackBonus": 0,
-          "weaponLabel": "Lange Streitaxt",
-          "triggerRules": [],
-          "activationType": "action",
-          "compatibleWeaponIds": [],
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "weaponTypes": [
-            "axe"
-          ],
-          "maximumTargets": 1,
-          "live": true,
-          "trainingForm": "Stand des Schildes",
-          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
-          "auraBypass": {
-            "cost": 1,
-            "allowed": true,
-            "resourceId": "aura-focus"
-          },
-          "damageModel": {
-            "mode": "weapon-dice",
-            "bonusWeaponDieCap": 6,
-            "bonusFormula": "",
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ],
-            "bonusWeaponDice": 1,
-            "weaponDiceMultiplier": 1
-          },
-          "damageType": "",
-          "mechanics": {},
-          "status": "confirmed",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "target": "Ein Gegner",
-          "description": "Ein gezielter Einzelangriff mit der geführten Waffe.",
-          "damageFormula": "",
-          "targetDefenseModifier": 0,
-          "name": "Schneide über den Schaft",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "damageBonus": 0,
-          "secondarySave": {
-            "enabled": false
-          },
-          "combatStyleFormId": "huskarl-schildgrund",
-          "effects": [
-            {
-              "id": "combat-style-huskarl-skjaldr-wahl-3-weapon-damage",
-              "magical": false,
-              "formula": "",
-              "damageType": "",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "target": "target",
-              "on": "hit",
-              "type": "damage",
-              "inheritWeaponDamageType": true
-            }
-          ],
-          "category": "technique",
-          "id": "combat-style-huskarl-skjaldr-wahl-3",
-          "minimumLevel": 2,
-          "combatStyleId": "huskarl-waffenlehre",
-          "costs": [
-            {
-              "name": "Aktion",
-              "scope": "comment",
-              "amount": 1,
-              "id": "combat-style-huskarl-skjaldr-wahl-3-action-1",
-              "resourceId": "action"
-            }
-          ],
-          "active": true
-        },
-        {
-          "costs": [
-            {
-              "id": "combat-style-huskarl-skjaldr-wahl-4-bonus-action-1",
-              "scope": "comment",
-              "resourceId": "bonus-action",
-              "amount": 1,
-              "name": "Bonusaktion"
-            },
-            {
-              "name": "Reaktion",
-              "resourceId": "reaction",
-              "amount": 1,
-              "scope": "comment",
-              "id": "combat-style-huskarl-skjaldr-wahl-4-reaction-2"
-            }
-          ],
-          "minimumLevel": 2,
-          "combatStyleFormId": "huskarl-schildgrund",
-          "combatStyleId": "huskarl-waffenlehre",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "active": true,
-          "auraBypass": {
-            "resourceId": "aura-focus",
-            "allowed": true,
-            "cost": 1
-          },
-          "compatibleWeaponIds": [],
-          "attackBonus": 0,
-          "weaponLabel": "Schwert, Axt oder Streitkolben",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "cultureTraining": {
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "branchId": "skjaldr-flexible",
-            "requiresDualWield": false,
-            "schemaVersion": 1,
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresShield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresTwoHands": false
-          },
-          "secondarySave": {
-            "enabled": false
-          },
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "mace"
-          ],
-          "name": "Zorn im Zaum",
-          "target": "Selbst",
-          "damageFormula": "",
-          "status": "confirmed",
-          "description": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
-          "requirements": "Schwert, Axt oder Streitkolben",
-          "live": true,
-          "damageModel": {
-            "scalingSteps": [],
-            "mode": "fixed"
-          },
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "damageBonus": 0,
-          "targetDefenseModifier": 0,
-          "trainingForm": "Stand des Schildes",
-          "category": "technique",
-          "maximumTargets": 1,
-          "effects": [
-            {
-              "on": "always",
-              "type": "buff",
-              "notes": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
-              "target": "self",
-              "id": "combat-style-huskarl-skjaldr-wahl-4-aim",
-              "condition": {
-                "tags": "Huskarl-Waffenlehre",
-                "description": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
-                "mechanics": {
-                  "attack": 1
-                },
-                "id": "huskarl-zielen",
-                "durationModel": {
-                  "kind": "actor-comments",
-                  "remainingActorComments": 1
-                },
-                "duration": "1 eigener Beitrag",
-                "name": "Gesammelte Ruhe"
-              }
-            }
-          ],
-          "criticalThreshold": 20,
-          "damageType": "",
-          "activationType": "bonus-action",
-          "id": "combat-style-huskarl-skjaldr-wahl-4",
-          "triggerRules": [],
-          "mechanics": {},
-          "range": "Waffenreichweite",
-          "effect": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag."
-        },
-        {
-          "name": "Doppelter Kantenwechsel",
-          "combatStyleId": "huskarl-waffenlehre",
-          "mechanics": {},
-          "weaponLabel": "Zwei Äxte",
-          "attackBonus": 1,
-          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert.",
-          "maximumTargets": 1,
-          "effect": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
-          "targetDefenseModifier": 0,
-          "trainingForm": "Stand des Schildes",
-          "activationType": "action",
-          "effects": [
-            {
-              "target": "target",
-              "on": "hit",
-              "damageType": "",
-              "id": "combat-style-huskarl-skjaldr-wahl-5-weapon-damage",
-              "formula": "",
-              "inheritWeaponDamageType": true,
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "magical": false,
-              "type": "damage"
-            }
-          ],
-          "range": "Waffenreichweite",
-          "triggerRules": [],
-          "auraBypass": {
-            "resourceId": "aura-focus",
-            "cost": 1,
-            "allowed": true
-          },
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "criticalThreshold": 20,
-          "secondarySave": {
-            "enabled": false
-          },
-          "cultureTraining": {
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresDualWield": true,
-            "slotBands": [
-              "foundation"
-            ],
-            "schemaVersion": 1,
-            "branchId": "skjaldr-twinAxes",
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "requiresMounted": false,
-            "requiresShield": false,
-            "requiresTwoHands": false
-          },
-          "weaponTypes": [
-            "axe"
-          ],
-          "damageFormula": "",
-          "combatStyleFormId": "huskarl-schildgrund",
-          "minimumLevel": 3,
-          "damageBonus": 0,
-          "status": "confirmed",
-          "damageType": "",
-          "damageModel": {
-            "bonusWeaponDice": 1,
-            "bonusFormula": "",
-            "scalingSteps": [
-              {
-                "formula": "1d4",
-                "level": 7
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ],
-            "weaponDiceMultiplier": 1,
-            "mode": "weapon-dice",
-            "bonusWeaponDieCap": 8
-          },
-          "costs": [
-            {
-              "id": "combat-style-huskarl-skjaldr-wahl-5-action-1",
-              "resourceId": "action",
-              "amount": 1,
-              "scope": "comment",
-              "name": "Aktion"
-            },
-            {
-              "name": "Bonusaktion",
-              "resourceId": "bonus-action",
-              "scope": "comment",
-              "id": "combat-style-huskarl-skjaldr-wahl-5-bonus-action-2",
-              "amount": 1
-            }
-          ],
-          "description": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
-          "target": "Ein Gegner",
-          "active": true,
-          "category": "technique",
-          "id": "combat-style-huskarl-skjaldr-wahl-5",
-          "live": true,
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "compatibleWeaponIds": [],
-          "followUpAttack": {
-            "enabled": false
-          }
-        },
-        {
-          "damageType": "",
-          "target": "Selbst",
-          "category": "technique",
-          "requirements": "Schwert, Axt oder Streitkolben",
-          "status": "confirmed",
-          "compatibleWeaponIds": [],
-          "costs": [
-            {
-              "resourceId": "bonus-action",
-              "amount": 1,
-              "name": "Bonusaktion",
-              "id": "combat-style-huskarl-skjaldr-wahl-6-bonus-action-1",
-              "scope": "comment"
-            }
-          ],
-          "combatStyleFormId": "huskarl-schildgrund",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "trainingForm": "Stand des Schildes",
-          "targetDefenseModifier": 0,
-          "damageModel": {
-            "scalingSteps": [],
-            "mode": "fixed"
-          },
-          "description": "+2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf.",
-          "name": "Schritt des Schildbeißers",
-          "triggerRules": [],
-          "active": true,
-          "damageBonus": 0,
-          "minimumLevel": 3,
-          "effects": [
-            {
-              "target": "self",
-              "on": "always",
-              "condition": {
-                "name": "Sicherer Schritt",
-                "mechanics": {
-                  "movement": 2
-                },
-                "durationModel": {
-                  "kind": "actor-comments",
-                  "remainingActorComments": 1
-                },
-                "description": "+2 m Bewegung für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung.",
-                "tags": "Huskarl-Waffenlehre",
-                "id": "huskarl-bewegung",
-                "duration": "1 eigener Beitrag"
-              },
-              "notes": "+2 m Bewegung für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung.",
-              "id": "combat-style-huskarl-skjaldr-wahl-6-mobility",
-              "type": "buff"
-            }
-          ],
-          "combatStyleId": "huskarl-waffenlehre",
-          "mechanics": {},
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "mace"
-          ],
-          "effect": "+2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf.",
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "live": true,
-          "id": "combat-style-huskarl-skjaldr-wahl-6",
-          "secondarySave": {
-            "enabled": false
-          },
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "cultureTraining": {
-            "slotBands": [
-              "foundation"
-            ],
-            "branchId": "skjaldr-flexible",
-            "schemaVersion": 1,
-            "requiresDualWield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresTwoHands": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "requiresMounted": false,
-            "requiresShield": false
-          },
-          "maximumTargets": 1,
-          "weaponLabel": "Schwert, Axt oder Streitkolben",
-          "attackBonus": 0,
-          "range": "Waffenreichweite",
-          "criticalThreshold": 20,
-          "auraBypass": {
-            "resourceId": "aura-focus",
-            "allowed": true,
-            "cost": 1
-          },
-          "activationType": "bonus-action",
-          "damageFormula": ""
-        },
-        {
-          "description": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −2 m Bewegung für einen eigenen Beitrag.",
-          "damageModel": {
-            "bonusFormula": "",
-            "scalingSteps": [
-              {
-                "formula": "1d4",
-                "level": 7
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ],
-            "bonusWeaponDieCap": 8,
-            "mode": "weapon-dice",
-            "weaponDiceMultiplier": 1,
-            "bonusWeaponDice": 1
-          },
-          "combatStyleFormId": "huskarl-schildgrund",
-          "name": "Axtbart zur Fessel",
-          "triggerRules": [],
-          "maximumTargets": 1,
-          "damageBonus": 0,
-          "effect": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −2 m Bewegung für einen eigenen Beitrag.",
-          "activationType": "action",
-          "auraBypass": {
-            "cost": 1,
-            "allowed": true,
-            "resourceId": "aura-focus"
-          },
-          "trainingForm": "Stand des Schildes",
-          "effects": [
-            {
-              "target": "target",
-              "formula": "",
-              "on": "hit",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "magical": false,
-              "id": "combat-style-huskarl-skjaldr-wahl-7-weapon-damage",
-              "damageType": "",
-              "type": "damage",
-              "inheritWeaponDamageType": true
-            }
-          ],
-          "costs": [
-            {
-              "name": "Aktion",
-              "scope": "comment",
-              "amount": 1,
-              "resourceId": "action",
-              "id": "combat-style-huskarl-skjaldr-wahl-7-action-1"
-            },
-            {
-              "name": "Reaktion",
-              "amount": 1,
-              "scope": "comment",
-              "resourceId": "reaction",
-              "id": "combat-style-huskarl-skjaldr-wahl-7-reaction-2"
-            }
-          ],
-          "id": "combat-style-huskarl-skjaldr-wahl-7",
-          "requirements": "Schwert, Axt oder Streitkolben",
-          "mechanics": {},
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "secondarySave": {
-            "enabled": true,
-            "addProficiency": true,
-            "dcBase": 8,
-            "attributeKey": "strength",
-            "failureCondition": {
-              "duration": "1 eigener Beitrag",
-              "id": "combat-style-huskarl-skjaldr-wahl-7-failed-save",
-              "name": "Gehemmter Schritt",
-              "description": "−2 m Bewegung für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
-              "mechanics": {
-                "movement": -2
-              },
-              "tags": "Huskarl-Waffenlehre"
-            },
-            "dcAttributeKey": "strength"
-          },
-          "target": "Ein Gegner",
-          "range": "Waffenreichweite",
-          "damageFormula": "",
-          "status": "confirmed",
-          "attackBonus": 0,
-          "weaponLabel": "Schwert, Axt oder Streitkolben",
-          "criticalThreshold": 20,
-          "damageType": "",
-          "combatStyleId": "huskarl-waffenlehre",
-          "active": true,
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "mace"
-          ],
-          "cultureTraining": {
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "branchId": "skjaldr-flexible",
-            "requiresShield": false,
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresTwoHands": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "requiresMounted": false,
-            "requiresDualWield": false,
-            "schemaVersion": 1
-          },
-          "compatibleWeaponIds": [],
-          "targetDefenseModifier": 0,
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "category": "technique",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "live": true,
-          "minimumLevel": 4
-        },
-        {
-          "id": "combat-style-huskarl-skjaldr-wahl-8",
-          "status": "confirmed",
-          "combatStyleId": "huskarl-waffenlehre",
-          "compatibleWeaponIds": [],
-          "damageType": "",
-          "live": true,
-          "attackBonus": 0,
-          "weaponLabel": "Lange Streitaxt",
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "target": "Selbst",
-          "active": true,
-          "range": "Waffenreichweite",
-          "weaponTypes": [
-            "axe"
-          ],
-          "combatStyleFormId": "huskarl-schildgrund",
-          "damageFormula": "",
-          "targetDefenseModifier": 0,
-          "minimumLevel": 4,
-          "followUpAttack": {
-            "enabled": false
-          },
-          "cultureTraining": {
-            "requiresTwoHands": true,
-            "slotBands": [
-              "foundation"
-            ],
-            "schemaVersion": 1,
-            "requiresShield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "branchId": "skjaldr-greatAxe",
-            "requiresDualWield": false,
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ]
-          },
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "secondarySave": {
-            "enabled": false
-          },
-          "damageModel": {
-            "mode": "fixed",
-            "scalingSteps": []
-          },
-          "criticalThreshold": 20,
-          "description": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.",
-          "activationType": "bonus-action",
-          "effect": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.",
-          "maximumTargets": 1,
-          "costs": [
-            {
-              "id": "combat-style-huskarl-skjaldr-wahl-8-bonus-action-1",
-              "name": "Bonusaktion",
-              "resourceId": "bonus-action",
-              "amount": 1,
-              "scope": "comment"
-            },
-            {
-              "scope": "comment",
-              "resourceId": "reaction",
-              "id": "combat-style-huskarl-skjaldr-wahl-8-reaction-2",
-              "name": "Reaktion",
-              "amount": 1
-            }
-          ],
-          "category": "technique",
-          "mechanics": {},
-          "damageBonus": 0,
-          "triggerRules": [],
-          "name": "Hut am langen Schaft",
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "trainingForm": "Stand des Schildes",
-          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
-          "effects": [
-            {
-              "type": "buff",
-              "target": "self",
-              "on": "always",
-              "condition": {
-                "duration": "1 eigener Beitrag",
-                "tags": "Huskarl-Waffenlehre",
-                "mechanics": {
-                  "armorClass": 2
-                },
-                "durationModel": {
-                  "remainingActorComments": 1,
-                  "kind": "actor-comments"
-                },
-                "id": "huskarl-deckung",
-                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-                "name": "Feste Deckung"
-              },
-              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-              "id": "combat-style-huskarl-skjaldr-wahl-8-condition"
-            }
-          ]
-        },
-        {
-          "combatStyleFormId": "huskarl-schildgrund",
-          "activationType": "action",
-          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert.",
-          "maximumTargets": 1,
-          "effect": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
-          "id": "combat-style-huskarl-skjaldr-wahl-9",
-          "trainingForm": "Stand des Schildes",
-          "mechanics": {},
-          "effects": [
-            {
-              "formula": "",
-              "damageType": "",
-              "target": "target",
-              "inheritWeaponDamageType": true,
-              "on": "hit",
-              "magical": false,
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "id": "combat-style-huskarl-skjaldr-wahl-9-weapon-damage",
-              "type": "damage"
-            }
-          ],
-          "triggerRules": [],
-          "damageBonus": 0,
-          "damageModel": {
-            "weaponDiceMultiplier": 1,
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ],
-            "bonusWeaponDieCap": 8,
-            "mode": "weapon-dice",
-            "bonusFormula": "",
-            "bonusWeaponDice": 1
-          },
-          "costs": [
-            {
-              "name": "Aktion",
-              "scope": "comment",
-              "amount": 1,
-              "id": "combat-style-huskarl-skjaldr-wahl-9-action-1",
-              "resourceId": "action"
-            },
-            {
-              "name": "Reaktion",
-              "amount": 1,
-              "scope": "comment",
-              "id": "combat-style-huskarl-skjaldr-wahl-9-reaction-2",
-              "resourceId": "reaction"
-            }
-          ],
-          "name": "Äxte am Waffenarm",
-          "compatibleWeaponIds": [],
-          "description": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
-          "auraBypass": {
-            "resourceId": "aura-focus",
-            "cost": 1,
-            "allowed": true
-          },
-          "targetDefenseModifier": 0,
-          "live": true,
-          "damageType": "",
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "range": "Waffenreichweite",
-          "minimumLevel": 5,
-          "status": "confirmed",
-          "weaponTypes": [
-            "axe"
-          ],
-          "target": "Ein Gegner",
-          "category": "technique",
-          "combatStyleId": "huskarl-waffenlehre",
-          "damageFormula": "",
-          "cultureTraining": {
-            "schemaVersion": 1,
-            "branchId": "skjaldr-twinAxes",
-            "requiresDualWield": true,
-            "requiresShield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresTwoHands": false,
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ]
-          },
-          "followUpAttack": {
-            "enabled": false
-          },
-          "active": true,
-          "weaponLabel": "Zwei Äxte",
-          "attackBonus": 0,
-          "criticalThreshold": 20,
-          "secondarySave": {
-            "dcAttributeKey": "strength",
-            "attributeKey": "strength",
-            "dcBase": 8,
-            "enabled": true,
-            "addProficiency": true,
-            "failureCondition": {
-              "mechanics": {
-                "attack": -1
-              },
-              "tags": "Huskarl-Waffenlehre",
-              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
-              "duration": "1 eigener Beitrag",
-              "id": "combat-style-huskarl-skjaldr-wahl-9-failed-save",
-              "name": "Gebundene Waffenführung"
-            }
-          },
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ]
-        },
-        {
-          "mechanics": {},
-          "combatStyleFormId": "huskarl-schildgrund",
-          "auraBypass": {
-            "resourceId": "aura-focus",
-            "cost": 1,
-            "allowed": true
-          },
-          "weaponTypes": [
-            "axe"
-          ],
-          "status": "confirmed",
-          "target": "Ein Gegner",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "minimumLevel": 5,
-          "active": true,
-          "costs": [
-            {
-              "resourceId": "action",
-              "amount": 1,
-              "name": "Aktion",
-              "scope": "comment",
-              "id": "combat-style-huskarl-skjaldr-wahl-10-action-1"
-            },
-            {
-              "name": "Besondere Aktion",
-              "scope": "persistent",
-              "amount": 1,
-              "resourceId": "special-action",
-              "id": "combat-style-huskarl-skjaldr-wahl-10-special-action-2"
-            }
-          ],
-          "id": "combat-style-huskarl-skjaldr-wahl-10",
-          "name": "Tiefer Spaltbogen",
-          "weaponLabel": "Lange Streitaxt",
-          "attackBonus": 0,
-          "targetDefenseModifier": 0,
-          "live": true,
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "range": "Waffenreichweite",
-          "triggerRules": [],
-          "damageFormula": "",
-          "compatibleWeaponIds": [],
-          "effect": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
-          "secondarySave": {
-            "enabled": false
-          },
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
-          "description": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
-          "criticalThreshold": 20,
-          "category": "technique",
-          "cultureTraining": {
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "slotBands": [
-              "foundation"
-            ],
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresDualWield": false,
-            "schemaVersion": 1,
-            "branchId": "skjaldr-greatAxe",
-            "requiresTwoHands": true,
-            "requiresShield": false
-          },
-          "damageModel": {
-            "weaponDiceMultiplier": 1,
-            "mode": "weapon-dice",
-            "bonusWeaponDice": 1,
-            "bonusFormula": "",
-            "scalingSteps": [
-              {
-                "formula": "1d4",
-                "level": 7
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "level": 17,
-                "formula": "1d10"
-              }
-            ],
-            "bonusModifier": 1,
-            "bonusWeaponDieCap": 8
-          },
-          "maximumTargets": 1,
-          "damageBonus": 0,
-          "combatStyleId": "huskarl-waffenlehre",
-          "trainingForm": "Stand des Schildes",
-          "activationType": "action",
-          "effects": [
-            {
-              "target": "target",
-              "on": "hit",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "formula": "",
-              "inheritWeaponDamageType": true,
-              "damageType": "",
-              "id": "combat-style-huskarl-skjaldr-wahl-10-weapon-damage",
-              "magical": false,
-              "type": "damage"
-            }
-          ],
-          "damageType": ""
-        },
-        {
-          "id": "combat-style-huskarl-skjaldr-wahl-11",
-          "category": "technique",
-          "damageFormula": "",
-          "effect": "+2 RK für einen eigenen Beitrag und 1W4 temporäre TP. Temporäre TP werden nicht addiert.",
-          "maximumTargets": 1,
-          "auraBypass": {
-            "allowed": true,
-            "cost": 1,
-            "resourceId": "aura-focus"
-          },
-          "weaponLabel": "Einhandwaffe und Schild",
-          "attackBonus": 0,
-          "activationType": "reaction",
-          "name": "Schild vor dem Zorn",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "range": "Waffenreichweite",
-          "secondarySave": {
-            "enabled": false
-          },
-          "effects": [
-            {
-              "id": "combat-style-huskarl-skjaldr-wahl-11-condition",
-              "target": "self",
-              "on": "always",
-              "condition": {
-                "tags": "Huskarl-Waffenlehre",
-                "mechanics": {
-                  "armorClass": 2
-                },
-                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-                "duration": "1 eigener Beitrag",
-                "durationModel": {
-                  "remainingActorComments": 1,
-                  "kind": "actor-comments"
-                },
-                "name": "Feste Deckung",
-                "id": "huskarl-deckung"
-              },
-              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-              "type": "buff"
-            },
-            {
-              "formula": "1d4",
-              "target": "self",
-              "id": "combat-style-huskarl-skjaldr-wahl-11-resolve",
-              "notes": "Temporäre TP ersetzen nur einen niedrigeren vorhandenen Vorrat; sie werden nicht addiert.",
-              "type": "temporary-hit-points",
-              "on": "always"
-            }
-          ],
-          "compatibleWeaponIds": [],
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "mace",
-            "spear"
-          ],
-          "cultureTraining": {
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "requiresMounted": false,
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresDualWield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "branchId": "skjaldr-shield",
-            "requiresShield": true,
-            "schemaVersion": 1,
-            "requiresTwoHands": false
-          },
-          "minimumLevel": 6,
-          "targetDefenseModifier": 0,
-          "combatStyleId": "huskarl-waffenlehre",
-          "criticalThreshold": 20,
-          "target": "Selbst",
-          "triggerRules": [],
-          "mechanics": {},
-          "description": "+2 RK für einen eigenen Beitrag und 1W4 temporäre TP. Temporäre TP werden nicht addiert.",
-          "status": "confirmed",
-          "damageModel": {
-            "scalingSteps": [],
-            "mode": "fixed"
-          },
-          "damageBonus": 0,
-          "combatStyleFormId": "huskarl-schildgrund",
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "costs": [
-            {
-              "amount": 1,
-              "id": "combat-style-huskarl-skjaldr-wahl-11-reaction-1",
-              "scope": "comment",
-              "name": "Reaktion",
-              "resourceId": "reaction"
-            },
-            {
-              "name": "Besondere Aktion",
-              "id": "combat-style-huskarl-skjaldr-wahl-11-special-action-2",
-              "amount": 1,
-              "resourceId": "special-action",
-              "scope": "persistent"
-            }
-          ],
-          "requirements": "Einhandwaffe und Schild Schild aktiv geführt.",
-          "damageType": "",
-          "live": true,
-          "trainingForm": "Stand des Schildes",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "active": true
-        },
-        {
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "secondarySave": {
-            "enabled": false
-          },
-          "weaponLabel": "Zwei Äxte",
-          "attackBonus": 0,
-          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert.",
-          "activationType": "action",
-          "trainingForm": "Stand des Schildes",
-          "damageFormula": "",
-          "maximumTargets": 1,
-          "name": "Gerichteter Doppelhieb",
-          "mechanics": {},
-          "triggerRules": [],
-          "effect": "Ein Einzelangriff. Bei Treffer +1 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung.",
-          "combatStyleId": "huskarl-waffenlehre",
-          "cultureTraining": {
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "requiresShield": false,
-            "requiresMounted": false,
-            "slotBands": [
-              "foundation"
-            ],
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresDualWield": true,
-            "schemaVersion": 1,
-            "branchId": "skjaldr-twinAxes",
-            "requiresTwoHands": false
-          },
-          "range": "Waffenreichweite",
-          "criticalThreshold": 20,
-          "damageType": "",
-          "weaponTypes": [
-            "axe"
-          ],
-          "targetDefenseModifier": 0,
-          "effects": [
-            {
-              "type": "damage",
-              "magical": false,
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "formula": "",
-              "damageType": "",
-              "id": "combat-style-huskarl-skjaldr-wahl-12-weapon-damage",
-              "on": "hit",
-              "target": "target",
-              "inheritWeaponDamageType": true
-            },
-            {
-              "condition": {
-                "description": "+1 m Bewegung für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung.",
-                "durationModel": {
-                  "kind": "actor-comments",
-                  "remainingActorComments": 1
-                },
-                "tags": "Huskarl-Waffenlehre",
-                "name": "Sicherer Schritt",
-                "duration": "1 eigener Beitrag",
-                "id": "huskarl-bewegung",
-                "mechanics": {
-                  "movement": 1
-                }
-              },
-              "target": "self",
-              "on": "hit",
-              "type": "buff",
-              "notes": "+1 m Bewegung für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung.",
-              "id": "combat-style-huskarl-skjaldr-wahl-12-mobility"
-            }
-          ],
-          "category": "technique",
-          "minimumLevel": 6,
-          "auraBypass": {
-            "cost": 1,
-            "resourceId": "aura-focus",
-            "allowed": true
-          },
-          "costs": [
-            {
-              "amount": 1,
-              "id": "combat-style-huskarl-skjaldr-wahl-12-action-1",
-              "scope": "comment",
-              "name": "Aktion",
-              "resourceId": "action"
-            },
-            {
-              "id": "combat-style-huskarl-skjaldr-wahl-12-bonus-action-2",
-              "name": "Bonusaktion",
-              "scope": "comment",
-              "resourceId": "bonus-action",
-              "amount": 1
-            }
-          ],
-          "damageBonus": 0,
-          "live": true,
-          "damageModel": {
-            "bonusWeaponDieCap": 8,
-            "bonusWeaponDice": 1,
-            "mode": "weapon-dice",
-            "weaponDiceMultiplier": 1,
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "formula": "1d6",
-                "level": 9
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "level": 17,
-                "formula": "1d10"
-              }
-            ],
-            "bonusFormula": ""
-          },
-          "active": true,
-          "description": "Ein Einzelangriff. Bei Treffer +1 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung.",
-          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
-          "id": "combat-style-huskarl-skjaldr-wahl-12",
-          "combatStyleFormId": "huskarl-schildgrund",
-          "compatibleWeaponIds": [],
-          "target": "Ein Gegner",
-          "status": "confirmed",
-          "followUpAttack": {
-            "enabled": false
-          }
-        },
-        {
-          "category": "technique",
-          "active": true,
-          "id": "combat-style-huskarl-skjaldr-grund-7",
-          "live": true,
-          "cultureTraining": {
-            "branchId": "skjaldr-twinAxes",
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "schemaVersion": 1,
-            "slotBands": [
-              "advanced"
-            ],
-            "requiresDualWield": true,
-            "requiresShield": false,
-            "requiresTwoHands": false,
-            "cultureIds": [
-              "aldrimar"
-            ]
-          },
-          "tags": "Huskarl-Waffenlehre · skjaldr · Schritt des Huskarls",
-          "weaponLabel": "Zwei Äxte",
-          "attackBonus": 0,
-          "minimumLevel": 7,
-          "costs": [
-            {
-              "scope": "comment",
-              "amount": 1,
-              "name": "Aktion",
-              "id": "combat-style-huskarl-skjaldr-grund-7-action-1",
-              "resourceId": "action"
-            },
-            {
-              "id": "combat-style-huskarl-skjaldr-grund-7-reaction-2",
-              "amount": 1,
-              "scope": "comment",
-              "resourceId": "reaction",
-              "name": "Reaktion"
-            }
-          ],
-          "compatibleWeaponIds": [],
-          "effects": [
-            {
-              "on": "hit",
-              "type": "damage",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "target": "target",
-              "damageType": "",
-              "formula": "",
-              "inheritWeaponDamageType": true,
-              "id": "combat-style-huskarl-skjaldr-grund-7-weapon-damage",
-              "magical": false
-            },
-            {
-              "on": "hit",
-              "type": "buff",
-              "target": "self",
-              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-              "id": "combat-style-huskarl-skjaldr-grund-7-condition",
-              "condition": {
-                "durationModel": {
-                  "kind": "actor-comments",
-                  "remainingActorComments": 1
-                },
-                "tags": "Huskarl-Waffenlehre",
-                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-                "duration": "1 eigener Beitrag",
-                "mechanics": {
-                  "armorClass": 1
-                },
-                "id": "huskarl-deckung",
-                "name": "Feste Deckung"
-              }
-            }
-          ],
-          "rollMode": "normal",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "status": "confirmed",
-          "combatStyleFormId": "huskarl-fester-schritt",
-          "duration": "",
-          "auraBypass": {
-            "cost": 1,
-            "resourceId": "aura-focus",
-            "allowed": true
-          },
-          "target": "Ein Gegner",
-          "targetDefenseModifier": 0,
-          "weaponTypes": [
-            "axe"
-          ],
-          "cenyrTraining": {
-            "slotBands": [],
-            "weaponRuleSetId": "",
-            "designNotes": "",
-            "sourceStatus": "",
-            "uchelwyrCompatible": false,
-            "assignedSlotId": "",
-            "branchId": "",
-            "requiresMounted": false,
-            "allowedClassIds": [],
-            "classWeaponProfiles": {},
-            "selectedAtLevel": null
-          },
-          "damageType": "",
-          "damageBonus": 0,
-          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Technikwurf; beide Waffenwürfel werden nicht addiert.",
-          "combatStyleId": "huskarl-waffenlehre",
-          "description": "Ein gemeinsamer Angriff; bei Treffer +1 RK für einen eigenen Beitrag.",
-          "trainingForm": "Schritt des Huskarls",
-          "activationType": "action",
-          "criticalThreshold": 20,
-          "damageModel": {
-            "mode": "weapon-dice",
-            "scalingSteps": [
-              {
-                "formula": "1d4",
-                "level": 9
-              },
-              {
-                "formula": "1d6",
-                "level": 13
-              },
-              {
-                "level": 17,
-                "formula": "1d8"
-              }
-            ],
-            "bonusFormula": "",
-            "bonusWeaponDice": 1,
-            "bonusWeaponDieCap": 8,
-            "weaponDiceMultiplier": 1,
-            "bonusModifier": 1
-          },
-          "maximumTargets": 1,
-          "triggerRules": [],
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "secondarySave": {
-            "enabled": false
-          },
-          "range": "Waffenreichweite",
-          "name": "Gekreuzte Axtwende",
-          "effect": "Ein gemeinsamer Angriff; bei Treffer +1 RK für einen eigenen Beitrag.",
-          "damageFormula": "",
-          "aiInstructions": "",
-          "mechanics": {}
-        },
-        {
-          "category": "technique",
-          "mechanics": {},
-          "live": true,
-          "range": "Waffenreichweite",
-          "damageType": "",
-          "weaponTypes": [
-            "axe"
-          ],
-          "combatStyleId": "huskarl-waffenlehre",
-          "tags": "Huskarl-Waffenlehre · skjaldr · Schritt des Huskarls",
-          "attackBonus": 1,
-          "weaponLabel": "Lange Streitaxt",
-          "combatStyleFormId": "huskarl-fester-schritt",
-          "damageFormula": "",
-          "maximumTargets": 1,
-          "minimumLevel": 7,
-          "effect": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
-          "secondarySave": {
-            "enabled": false
-          },
-          "activationType": "action",
-          "cultureTraining": {
-            "requiresTwoHands": true,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "branchId": "skjaldr-greatAxe",
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "requiresMounted": false,
-            "requiresDualWield": false,
-            "slotBands": [
-              "advanced"
-            ],
-            "requiresShield": false,
-            "schemaVersion": 1
-          },
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "criticalThreshold": 20,
-          "active": true,
-          "effects": [
-            {
-              "target": "target",
-              "id": "combat-style-huskarl-skjaldr-wahl-13-weapon-damage",
-              "inheritWeaponDamageType": true,
-              "on": "hit",
-              "type": "damage",
-              "formula": "",
-              "damageType": "",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "magical": false
-            }
-          ],
-          "id": "combat-style-huskarl-skjaldr-wahl-13",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "triggerRules": [],
-          "name": "Schneidender Richtungswechsel",
-          "damageBonus": 0,
-          "targetDefenseModifier": 0,
-          "compatibleWeaponIds": [],
-          "auraBypass": {
-            "allowed": true,
-            "cost": 1,
-            "resourceId": "aura-focus"
-          },
-          "costs": [
-            {
-              "id": "combat-style-huskarl-skjaldr-wahl-13-action-1",
-              "name": "Aktion",
-              "resourceId": "action",
-              "amount": 1,
-              "scope": "comment"
-            },
-            {
-              "name": "Bonusaktion",
-              "scope": "comment",
-              "amount": 1,
-              "resourceId": "bonus-action",
-              "id": "combat-style-huskarl-skjaldr-wahl-13-bonus-action-2"
-            }
-          ],
-          "trainingForm": "Schritt des Huskarls",
-          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
-          "target": "Ein Gegner",
-          "damageModel": {
-            "weaponDiceMultiplier": 1,
-            "mode": "weapon-dice",
-            "bonusWeaponDieCap": 8,
-            "bonusModifier": 1,
-            "bonusFormula": "",
-            "scalingSteps": [
-              {
-                "formula": "1d4",
-                "level": 9
-              },
-              {
-                "formula": "1d6",
-                "level": 13
-              },
-              {
-                "level": 17,
-                "formula": "1d8"
-              }
-            ],
-            "bonusWeaponDice": 1
-          },
-          "status": "confirmed",
-          "description": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf."
-        },
-        {
-          "tags": "Huskarl-Waffenlehre · skjaldr · Schritt des Huskarls",
-          "compatibleWeaponIds": [],
-          "cultureTraining": {
-            "allowedClassIds": [
-              "skjaldr"
-            ],
-            "requiresMounted": false,
-            "slotBands": [
-              "advanced"
-            ],
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresDualWield": false,
-            "requiresTwoHands": false,
-            "requiresShield": false,
-            "schemaVersion": 1,
-            "branchId": "skjaldr-flexible"
-          },
-          "status": "confirmed",
-          "target": "Selbst",
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "mace"
-          ],
-          "requirements": "Schwert, Axt oder Streitkolben",
-          "live": true,
-          "damageFormula": "",
-          "trainingForm": "Schritt des Huskarls",
-          "costs": [
-            {
-              "resourceId": "bonus-action",
-              "scope": "comment",
-              "amount": 1,
-              "id": "combat-style-huskarl-skjaldr-wahl-14-bonus-action-1",
-              "name": "Bonusaktion"
-            },
-            {
-              "name": "Besondere Aktion",
-              "resourceId": "special-action",
-              "amount": 1,
-              "id": "combat-style-huskarl-skjaldr-wahl-14-special-action-2",
-              "scope": "persistent"
-            }
-          ],
-          "damageType": "",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "secondarySave": {
-            "enabled": false
-          },
-          "maximumTargets": 1,
-          "triggerRules": [],
-          "activationType": "bonus-action",
-          "criticalThreshold": 20,
-          "combatStyleId": "huskarl-waffenlehre",
-          "category": "technique",
-          "active": true,
-          "weaponLabel": "Schwert, Axt oder Streitkolben",
-          "attackBonus": 0,
-          "effects": [
-            {
-              "type": "temporary-hit-points",
-              "target": "self",
-              "on": "always",
-              "formula": "1d6",
-              "id": "combat-style-huskarl-skjaldr-wahl-14-resolve",
-              "notes": "Temporäre TP ersetzen nur einen niedrigeren vorhandenen Vorrat; sie werden nicht addiert."
-            }
-          ],
-          "effect": "1W6 temporäre TP; ersetzt nur einen niedrigeren Vorrat. Keine Heilung verlorener TP.",
-          "targetDefenseModifier": 0,
-          "minimumLevel": 7,
-          "followUpAttack": {
-            "enabled": false
-          },
-          "combatStyleFormId": "huskarl-fester-schritt",
-          "description": "1W6 temporäre TP; ersetzt nur einen niedrigeren Vorrat. Keine Heilung verlorener TP.",
-          "mechanics": {},
-          "range": "Waffenreichweite",
-          "auraBypass": {
-            "resourceId": "aura-focus",
-            "allowed": true,
-            "cost": 1
-          },
-          "damageModel": {
-            "mode": "fixed",
-            "scalingSteps": []
-          },
-          "id": "combat-style-huskarl-skjaldr-wahl-14",
-          "damageBonus": 0,
-          "name": "Atem unter Spannung"
-        },
-        {
           "active": true,
           "minimumLevel": 7,
           "status": "confirmed",
@@ -4480,6 +1915,2703 @@
             "repeatCount": 3,
             "allHitsStun": true
           }
+        },
+        {
+          "damageBonus": 0,
+          "secondarySave": {
+            "enabled": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-1-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "active": true,
+          "combatStyleFormId": "huskarl-schildgrund",
+          "damageFormula": "",
+          "description": "Ein leichter Einzelhieb, noch ohne Berserkergang.",
+          "minimumLevel": 1,
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "baseDieCap": 4,
+            "lightAttack": true,
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-flexible",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "cenyrTraining": {
+            "requiresMounted": false,
+            "classWeaponProfiles": {},
+            "allowedClassIds": [],
+            "designNotes": "",
+            "sourceStatus": "",
+            "selectedAtLevel": null,
+            "uchelwyrCompatible": false,
+            "slotBands": [],
+            "weaponRuleSetId": "",
+            "branchId": "",
+            "assignedSlotId": ""
+          },
+          "id": "combat-style-huskarl-skjaldr-grund-1",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "combatStyleId": "huskarl-waffenlehre",
+          "live": true,
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "target": "Ein Gegner",
+          "status": "confirmed",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "trainingForm": "Stand des Schildes",
+          "maximumTargets": 1,
+          "name": "Kurzer Axthieb",
+          "compatibleWeaponIds": [],
+          "activationType": "bonus-action",
+          "attackBonus": 0,
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "damageType": "",
+          "category": "technique",
+          "targetDefenseModifier": 0,
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-1-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "duration": "",
+          "aiInstructions": "",
+          "mechanics": {},
+          "triggerRules": [],
+          "range": "Waffenreichweite",
+          "effect": "Ein leichter Einzelhieb, noch ohne Berserkergang.",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ]
+        },
+        {
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-2-condition",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-deckung",
+                "name": "Feste Deckung",
+                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 1
+                }
+              },
+              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            }
+          ],
+          "target": "Selbst",
+          "criticalThreshold": 20,
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "damageFormula": "",
+          "live": true,
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "status": "confirmed",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "trainingForm": "Stand des Schildes",
+          "range": "Waffenreichweite",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "attackBonus": 0,
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "mechanics": {},
+          "triggerRules": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-flexible",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "combatStyleId": "huskarl-waffenlehre",
+          "cenyrTraining": {
+            "slotBands": [],
+            "branchId": "",
+            "assignedSlotId": "",
+            "weaponRuleSetId": "",
+            "designNotes": "",
+            "classWeaponProfiles": {},
+            "selectedAtLevel": null,
+            "sourceStatus": "",
+            "allowedClassIds": [],
+            "requiresMounted": false,
+            "uchelwyrCompatible": false
+          },
+          "targetDefenseModifier": 0,
+          "active": true,
+          "minimumLevel": 2,
+          "activationType": "reaction",
+          "maximumTargets": 1,
+          "effect": "Schadenslose Deckung: +1 RK für einen eigenen Beitrag.",
+          "id": "combat-style-huskarl-skjaldr-grund-2",
+          "category": "technique",
+          "aiInstructions": "",
+          "compatibleWeaponIds": [],
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-2-reaction-1",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "rollMode": "normal",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "duration": "",
+          "damageBonus": 0,
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "damageType": "",
+          "name": "Gebändigter Stand",
+          "description": "Schadenslose Deckung: +1 RK für einen eigenen Beitrag."
+        },
+        {
+          "cenyrTraining": {
+            "branchId": "",
+            "assignedSlotId": "",
+            "classWeaponProfiles": {},
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "selectedAtLevel": null,
+            "slotBands": [],
+            "sourceStatus": "",
+            "designNotes": "",
+            "requiresMounted": false,
+            "allowedClassIds": []
+          },
+          "minimumLevel": 3,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-3-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "combatStyleId": "huskarl-waffenlehre",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "target": "Ein Gegner",
+          "category": "technique",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "status": "confirmed",
+          "weaponLabel": "Lange Streitaxt",
+          "attackBonus": 0,
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "rollMode": "normal",
+          "secondarySave": {
+            "enabled": false
+          },
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-greatAxe",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": true,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "duration": "",
+          "weaponTypes": [
+            "axe"
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "damageFormula": "",
+          "name": "Langer Spalthieb",
+          "range": "Waffenreichweite",
+          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
+          "description": "Ein kontrollierter Hieb mit der langen Streitaxt.",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-3-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "live": true,
+          "id": "combat-style-huskarl-skjaldr-grund-3",
+          "aiInstructions": "",
+          "damageBonus": 0,
+          "damageType": "",
+          "trainingForm": "Stand des Schildes",
+          "effect": "Ein kontrollierter Hieb mit der langen Streitaxt.",
+          "maximumTargets": 1,
+          "triggerRules": [],
+          "activationType": "action",
+          "compatibleWeaponIds": [],
+          "targetDefenseModifier": 0,
+          "criticalThreshold": 20
+        },
+        {
+          "duration": "",
+          "rollMode": "normal",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "maximumTargets": 1,
+          "targetDefenseModifier": 0,
+          "attackBonus": 0,
+          "weaponLabel": "Zwei Äxte",
+          "name": "Doppelter Axtgriff",
+          "activationType": "action",
+          "effect": "Zwei geführte Äxte, ein gemeinsamer Technikwurf. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-twinAxes",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": true,
+            "requiresMounted": false
+          },
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-4-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-4-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "weaponTypes": [
+            "axe"
+          ],
+          "damageType": "",
+          "minimumLevel": 4,
+          "id": "combat-style-huskarl-skjaldr-grund-4",
+          "category": "technique",
+          "aiInstructions": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "compatibleWeaponIds": [],
+          "description": "Zwei geführte Äxte, ein gemeinsamer Technikwurf. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "combat-style-huskarl-skjaldr-grund-4-failed-save",
+              "name": "Gebundene Waffenführung",
+              "duration": "1 eigener Beitrag",
+              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
+              "tags": "Huskarl-Waffenlehre",
+              "mechanics": {
+                "attack": -1
+              }
+            }
+          },
+          "target": "Ein Gegner",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-4-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "range": "Waffenreichweite",
+          "mechanics": {},
+          "status": "confirmed",
+          "damageFormula": "",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "triggerRules": [],
+          "damageBonus": 0,
+          "criticalThreshold": 20,
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "cenyrTraining": {
+            "uchelwyrCompatible": false,
+            "designNotes": "",
+            "branchId": "",
+            "assignedSlotId": "",
+            "weaponRuleSetId": "",
+            "selectedAtLevel": null,
+            "slotBands": [],
+            "classWeaponProfiles": {},
+            "sourceStatus": "",
+            "requiresMounted": false,
+            "allowedClassIds": []
+          },
+          "active": true,
+          "trainingForm": "Stand des Schildes",
+          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Trefferwurf mit beiden Waffenwürfeln; feste Boni einmal.",
+          "followUpAttack": {
+            "enabled": false
+          }
+        },
+        {
+          "id": "combat-style-huskarl-skjaldr-grund-5",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-5-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "status": "confirmed",
+          "damageType": "",
+          "target": "Ein Gegner",
+          "secondarySave": {
+            "enabled": false
+          },
+          "range": "Waffenreichweite",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "damageFormula": "",
+          "targetDefenseModifier": 0,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "damageBonus": 0,
+          "combatStyleId": "huskarl-waffenlehre",
+          "cenyrTraining": {
+            "branchId": "",
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "slotBands": [],
+            "selectedAtLevel": null,
+            "designNotes": "",
+            "classWeaponProfiles": {},
+            "uchelwyrCompatible": false,
+            "weaponRuleSetId": "",
+            "assignedSlotId": "",
+            "sourceStatus": ""
+          },
+          "description": "Ein Hieb aus der Schilddeckung; kein Berserkerbonus unter Stufe 6.",
+          "criticalThreshold": 20,
+          "compatibleWeaponIds": [],
+          "active": true,
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "minimumLevel": 5,
+          "name": "Haken hinter den Schild",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "effect": "Ein Hieb aus der Schilddeckung; kein Berserkerbonus unter Stufe 6.",
+          "live": true,
+          "category": "technique",
+          "triggerRules": [],
+          "aiInstructions": "",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace",
+            "spear"
+          ],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-shield",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": true,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "rollMode": "normal",
+          "trainingForm": "Stand des Schildes",
+          "duration": "",
+          "attackBonus": 0,
+          "weaponLabel": "Einhandwaffe und Schild",
+          "maximumTargets": 1,
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-5-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-5-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "activationType": "action",
+          "requirements": "Einhandwaffe und Schild Schild aktiv geführt.",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          }
+        },
+        {
+          "damageType": "",
+          "effect": "Ein kräftiger Einzelhieb. Der Berserkergang muss separat aktiviert werden.",
+          "range": "Waffenreichweite",
+          "description": "Ein kräftiger Einzelhieb. Der Berserkergang muss separat aktiviert werden.",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-greatAxe",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": true,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 6
+              },
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "triggerRules": [],
+          "targetDefenseModifier": 0,
+          "mechanics": {},
+          "damageBonus": 0,
+          "maximumTargets": 1,
+          "activationType": "action",
+          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
+          "name": "Hieb des Schildbeißers",
+          "compatibleWeaponIds": [],
+          "combatStyleFormId": "huskarl-schildgrund",
+          "trainingForm": "Stand des Schildes",
+          "aiInstructions": "",
+          "criticalThreshold": 20,
+          "status": "confirmed",
+          "category": "technique",
+          "target": "Ein Gegner",
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-6-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "attackBonus": 0,
+          "weaponLabel": "Lange Streitaxt",
+          "cenyrTraining": {
+            "allowedClassIds": [],
+            "slotBands": [],
+            "requiresMounted": false,
+            "selectedAtLevel": null,
+            "designNotes": "",
+            "weaponRuleSetId": "",
+            "assignedSlotId": "",
+            "branchId": "",
+            "uchelwyrCompatible": false,
+            "classWeaponProfiles": {},
+            "sourceStatus": ""
+          },
+          "id": "combat-style-huskarl-skjaldr-grund-6",
+          "minimumLevel": 6,
+          "damageFormula": "",
+          "weaponTypes": [
+            "axe"
+          ],
+          "active": true,
+          "duration": "",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-6-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-6-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-6-reaction-3",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "rollMode": "normal",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ]
+        },
+        {
+          "description": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "baseDieCap": 4,
+            "lightAttack": true,
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
+          "active": true,
+          "range": "Waffenreichweite",
+          "live": true,
+          "criticalThreshold": 20,
+          "minimumLevel": 1,
+          "damageBonus": 0,
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-1-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "target": "Ein Gegner",
+          "status": "confirmed",
+          "id": "combat-style-huskarl-skjaldr-wahl-1",
+          "mechanics": {},
+          "activationType": "bonus-action",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "maximumTargets": 1,
+          "compatibleWeaponIds": [],
+          "trainingForm": "Stand des Schildes",
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "damageFormula": "",
+          "damageType": "",
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "attackBonus": 0,
+          "targetDefenseModifier": 0,
+          "name": "Kurzer Bartzug",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-flexible",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "combatStyleId": "huskarl-waffenlehre",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-1-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "category": "technique",
+          "effect": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
+          "triggerRules": [],
+          "combatStyleFormId": "huskarl-schildgrund"
+        },
+        {
+          "followUpAttack": {
+            "enabled": false
+          },
+          "damageType": "",
+          "trainingForm": "Stand des Schildes",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-flexible",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "active": true,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-2-condition",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-deckung",
+                "name": "Feste Deckung",
+                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 1
+                }
+              },
+              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            }
+          ],
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "range": "Waffenreichweite",
+          "name": "Ruhige Axtdeckung",
+          "criticalThreshold": 20,
+          "mechanics": {},
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "attackBonus": 0,
+          "target": "Selbst",
+          "triggerRules": [],
+          "status": "confirmed",
+          "compatibleWeaponIds": [],
+          "combatStyleFormId": "huskarl-schildgrund",
+          "combatStyleId": "huskarl-waffenlehre",
+          "id": "combat-style-huskarl-skjaldr-wahl-2",
+          "category": "technique",
+          "minimumLevel": 1,
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "secondarySave": {
+            "enabled": false
+          },
+          "activationType": "reaction",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-2-reaction-1",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "damageBonus": 0,
+          "live": true,
+          "maximumTargets": 1,
+          "targetDefenseModifier": 0,
+          "description": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.",
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "effect": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag."
+        },
+        {
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-greatAxe",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": true,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "effect": "Ein gezielter Einzelangriff mit der geführten Waffe.",
+          "criticalThreshold": 20,
+          "range": "Waffenreichweite",
+          "attackBonus": 0,
+          "weaponLabel": "Lange Streitaxt",
+          "triggerRules": [],
+          "activationType": "action",
+          "compatibleWeaponIds": [],
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "weaponTypes": [
+            "axe"
+          ],
+          "maximumTargets": 1,
+          "live": true,
+          "trainingForm": "Stand des Schildes",
+          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "damageType": "",
+          "mechanics": {},
+          "status": "confirmed",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "target": "Ein Gegner",
+          "description": "Ein gezielter Einzelangriff mit der geführten Waffe.",
+          "damageFormula": "",
+          "targetDefenseModifier": 0,
+          "name": "Schneide über den Schaft",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "damageBonus": 0,
+          "secondarySave": {
+            "enabled": false
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-3-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "category": "technique",
+          "id": "combat-style-huskarl-skjaldr-wahl-3",
+          "minimumLevel": 2,
+          "combatStyleId": "huskarl-waffenlehre",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-3-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "active": true
+        },
+        {
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-4-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-4-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "minimumLevel": 2,
+          "combatStyleFormId": "huskarl-schildgrund",
+          "combatStyleId": "huskarl-waffenlehre",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "active": true,
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "compatibleWeaponIds": [],
+          "attackBonus": 0,
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-flexible",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "secondarySave": {
+            "enabled": false
+          },
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "name": "Zorn im Zaum",
+          "target": "Selbst",
+          "damageFormula": "",
+          "status": "confirmed",
+          "description": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "live": true,
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "trainingForm": "Stand des Schildes",
+          "category": "technique",
+          "maximumTargets": 1,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-4-aim",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-zielen",
+                "name": "Gesammelte Ruhe",
+                "description": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "mechanics": {
+                  "attack": 1
+                }
+              },
+              "notes": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht."
+            }
+          ],
+          "criticalThreshold": 20,
+          "damageType": "",
+          "activationType": "bonus-action",
+          "id": "combat-style-huskarl-skjaldr-wahl-4",
+          "triggerRules": [],
+          "mechanics": {},
+          "range": "Waffenreichweite",
+          "effect": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag."
+        },
+        {
+          "name": "Doppelter Kantenwechsel",
+          "combatStyleId": "huskarl-waffenlehre",
+          "mechanics": {},
+          "weaponLabel": "Zwei Äxte",
+          "attackBonus": 1,
+          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Trefferwurf mit beiden Waffenwürfeln; feste Boni einmal.",
+          "maximumTargets": 1,
+          "effect": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "targetDefenseModifier": 0,
+          "trainingForm": "Stand des Schildes",
+          "activationType": "action",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-5-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "range": "Waffenreichweite",
+          "triggerRules": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "criticalThreshold": 20,
+          "secondarySave": {
+            "enabled": false
+          },
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-twinAxes",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": true,
+            "requiresMounted": false
+          },
+          "weaponTypes": [
+            "axe"
+          ],
+          "damageFormula": "",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "minimumLevel": 3,
+          "damageBonus": 0,
+          "status": "confirmed",
+          "damageType": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-5-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-5-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "target": "Ein Gegner",
+          "active": true,
+          "category": "technique",
+          "id": "combat-style-huskarl-skjaldr-wahl-5",
+          "live": true,
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "compatibleWeaponIds": [],
+          "followUpAttack": {
+            "enabled": false
+          }
+        },
+        {
+          "damageType": "",
+          "target": "Selbst",
+          "category": "technique",
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "status": "confirmed",
+          "compatibleWeaponIds": [],
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-6-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "combatStyleFormId": "huskarl-schildgrund",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "trainingForm": "Stand des Schildes",
+          "targetDefenseModifier": 0,
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "description": "keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "name": "Schritt des Schildbeißers",
+          "triggerRules": [],
+          "active": true,
+          "damageBonus": 0,
+          "minimumLevel": 3,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-6-mobility",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "martial-position-guard",
+                "name": "Sicherer Schritt",
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "mechanics": {
+                  "movement": 0
+                },
+                "stanceGroup": "martial-position-guard",
+                "active": true,
+                "triggerRules": [
+                  {
+                    "id": "martial-position-guard-once",
+                    "name": "Stellungseffekt",
+                    "phase": "pre-roll",
+                    "recipient": "actor",
+                    "sourceRelation": "enemy",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "weaponAttackOnly": true,
+                    "condition": "always",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "resultEffects": [
+                      {
+                        "id": "martial-position-guard-consume",
+                        "type": "remove-condition",
+                        "target": "target",
+                        "conditionId": "martial-position-guard",
+                        "on": "always"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
+            }
+          ],
+          "combatStyleId": "huskarl-waffenlehre",
+          "mechanics": {},
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "effect": "keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "live": true,
+          "id": "combat-style-huskarl-skjaldr-wahl-6",
+          "secondarySave": {
+            "enabled": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-flexible",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "maximumTargets": 1,
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "attackBonus": 0,
+          "range": "Waffenreichweite",
+          "criticalThreshold": 20,
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "activationType": "bonus-action",
+          "damageFormula": ""
+        },
+        {
+          "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 6
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "name": "Axtbart zur Fessel",
+          "triggerRules": [],
+          "maximumTargets": 1,
+          "damageBonus": 0,
+          "effect": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "activationType": "action",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "trainingForm": "Stand des Schildes",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-7-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-7-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-7-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "id": "combat-style-huskarl-skjaldr-wahl-7",
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "mechanics": {},
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "martial-position-penalty",
+              "name": "Gehemmter Schritt",
+              "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+              "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+              "tags": "Huskarl-Waffenlehre",
+              "mechanics": {
+                "movement": 0
+              },
+              "stanceGroup": "martial-position-penalty",
+              "active": true,
+              "durationModel": {
+                "kind": "actor-comments",
+                "remainingActorComments": 1
+              },
+              "triggerRules": [
+                {
+                  "id": "martial-position-penalty-once",
+                  "name": "Stellungseffekt",
+                  "phase": "pre-roll",
+                  "recipient": "actor",
+                  "sourceRelation": "self",
+                  "activation": "passive",
+                  "frequency": "comment",
+                  "actionKinds": [
+                    "weapon",
+                    "technique"
+                  ],
+                  "weaponAttackOnly": true,
+                  "condition": "always",
+                  "effects": {
+                    "attackModifier": -1
+                  },
+                  "resultEffects": [
+                    {
+                      "id": "martial-position-penalty-consume",
+                      "type": "remove-condition",
+                      "target": "self",
+                      "conditionId": "martial-position-penalty",
+                      "on": "always"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "damageFormula": "",
+          "status": "confirmed",
+          "attackBonus": 0,
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "criticalThreshold": 20,
+          "damageType": "",
+          "combatStyleId": "huskarl-waffenlehre",
+          "active": true,
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-flexible",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "compatibleWeaponIds": [],
+          "targetDefenseModifier": 0,
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "category": "technique",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "live": true,
+          "minimumLevel": 4
+        },
+        {
+          "id": "combat-style-huskarl-skjaldr-wahl-8",
+          "status": "confirmed",
+          "combatStyleId": "huskarl-waffenlehre",
+          "compatibleWeaponIds": [],
+          "damageType": "",
+          "live": true,
+          "attackBonus": 0,
+          "weaponLabel": "Lange Streitaxt",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "target": "Selbst",
+          "active": true,
+          "range": "Waffenreichweite",
+          "weaponTypes": [
+            "axe"
+          ],
+          "combatStyleFormId": "huskarl-schildgrund",
+          "damageFormula": "",
+          "targetDefenseModifier": 0,
+          "minimumLevel": 4,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-greatAxe",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": true,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "criticalThreshold": 20,
+          "description": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.",
+          "activationType": "bonus-action",
+          "effect": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.",
+          "maximumTargets": 1,
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-8-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-8-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "category": "technique",
+          "mechanics": {},
+          "damageBonus": 0,
+          "triggerRules": [],
+          "name": "Hut am langen Schaft",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "trainingForm": "Stand des Schildes",
+          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-8-condition",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-deckung",
+                "name": "Feste Deckung",
+                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 2
+                }
+              },
+              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            }
+          ]
+        },
+        {
+          "combatStyleFormId": "huskarl-schildgrund",
+          "activationType": "action",
+          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Trefferwurf mit beiden Waffenwürfeln; feste Boni einmal.",
+          "maximumTargets": 1,
+          "effect": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
+          "id": "combat-style-huskarl-skjaldr-wahl-9",
+          "trainingForm": "Stand des Schildes",
+          "mechanics": {},
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-9-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "triggerRules": [],
+          "damageBonus": 0,
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-9-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-9-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "name": "Äxte am Waffenarm",
+          "compatibleWeaponIds": [],
+          "description": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "targetDefenseModifier": 0,
+          "live": true,
+          "damageType": "",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "range": "Waffenreichweite",
+          "minimumLevel": 5,
+          "status": "confirmed",
+          "weaponTypes": [
+            "axe"
+          ],
+          "target": "Ein Gegner",
+          "category": "technique",
+          "combatStyleId": "huskarl-waffenlehre",
+          "damageFormula": "",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-twinAxes",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": true,
+            "requiresMounted": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "active": true,
+          "weaponLabel": "Zwei Äxte",
+          "attackBonus": 0,
+          "criticalThreshold": 20,
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "combat-style-huskarl-skjaldr-wahl-9-failed-save",
+              "name": "Gebundene Waffenführung",
+              "duration": "1 eigener Beitrag",
+              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
+              "tags": "Huskarl-Waffenlehre",
+              "mechanics": {
+                "attack": -1
+              }
+            }
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ]
+        },
+        {
+          "mechanics": {},
+          "combatStyleFormId": "huskarl-schildgrund",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "weaponTypes": [
+            "axe"
+          ],
+          "status": "confirmed",
+          "target": "Ein Gegner",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "minimumLevel": 5,
+          "active": true,
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-10-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-10-special-action-2",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "id": "combat-style-huskarl-skjaldr-wahl-10",
+          "name": "Tiefer Spaltbogen",
+          "weaponLabel": "Lange Streitaxt",
+          "attackBonus": 0,
+          "targetDefenseModifier": 0,
+          "live": true,
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "range": "Waffenreichweite",
+          "triggerRules": [],
+          "damageFormula": "",
+          "compatibleWeaponIds": [],
+          "effect": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
+          "secondarySave": {
+            "enabled": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
+          "description": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
+          "criticalThreshold": 20,
+          "category": "technique",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-greatAxe",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": true,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 12
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "maximumTargets": 1,
+          "damageBonus": 0,
+          "combatStyleId": "huskarl-waffenlehre",
+          "trainingForm": "Stand des Schildes",
+          "activationType": "action",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-10-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "damageType": ""
+        },
+        {
+          "id": "combat-style-huskarl-skjaldr-wahl-11",
+          "category": "technique",
+          "damageFormula": "",
+          "effect": "+2 RK für einen eigenen Beitrag und 1W4 temporäre TP. Temporäre TP werden nicht addiert.",
+          "maximumTargets": 1,
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "weaponLabel": "Einhandwaffe und Schild",
+          "attackBonus": 0,
+          "activationType": "reaction",
+          "name": "Schild vor dem Zorn",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "range": "Waffenreichweite",
+          "secondarySave": {
+            "enabled": false
+          },
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-11-condition",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-deckung",
+                "name": "Feste Deckung",
+                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 2
+                }
+              },
+              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-11-resolve",
+              "type": "temporary-hit-points",
+              "target": "self",
+              "on": "always",
+              "formula": "1d4",
+              "notes": "Temporäre TP ersetzen nur einen niedrigeren vorhandenen Vorrat; sie werden nicht addiert."
+            }
+          ],
+          "compatibleWeaponIds": [],
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace",
+            "spear"
+          ],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-shield",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": true,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "minimumLevel": 6,
+          "targetDefenseModifier": 0,
+          "combatStyleId": "huskarl-waffenlehre",
+          "criticalThreshold": 20,
+          "target": "Selbst",
+          "triggerRules": [],
+          "mechanics": {},
+          "description": "+2 RK für einen eigenen Beitrag und 1W4 temporäre TP. Temporäre TP werden nicht addiert.",
+          "status": "confirmed",
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "damageBonus": 0,
+          "combatStyleFormId": "huskarl-schildgrund",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-11-reaction-1",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-11-special-action-2",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "requirements": "Einhandwaffe und Schild Schild aktiv geführt.",
+          "damageType": "",
+          "live": true,
+          "trainingForm": "Stand des Schildes",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "active": true
+        },
+        {
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "weaponLabel": "Zwei Äxte",
+          "attackBonus": 0,
+          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Trefferwurf mit beiden Waffenwürfeln; feste Boni einmal.",
+          "activationType": "action",
+          "trainingForm": "Stand des Schildes",
+          "damageFormula": "",
+          "maximumTargets": 1,
+          "name": "Gerichteter Doppelhieb",
+          "mechanics": {},
+          "triggerRules": [],
+          "effect": "Ein Einzelangriff. keine freie Bewegung. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "combatStyleId": "huskarl-waffenlehre",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-twinAxes",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": true,
+            "requiresMounted": false
+          },
+          "range": "Waffenreichweite",
+          "criticalThreshold": 20,
+          "damageType": "",
+          "weaponTypes": [
+            "axe"
+          ],
+          "targetDefenseModifier": 0,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-12-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-12-mobility",
+              "type": "buff",
+              "target": "self",
+              "on": "hit",
+              "condition": {
+                "id": "martial-position-guard",
+                "name": "Sicherer Schritt",
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "mechanics": {
+                  "movement": 0
+                },
+                "stanceGroup": "martial-position-guard",
+                "active": true,
+                "triggerRules": [
+                  {
+                    "id": "martial-position-guard-once",
+                    "name": "Stellungseffekt",
+                    "phase": "pre-roll",
+                    "recipient": "actor",
+                    "sourceRelation": "enemy",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "weaponAttackOnly": true,
+                    "condition": "always",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "resultEffects": [
+                      {
+                        "id": "martial-position-guard-consume",
+                        "type": "remove-condition",
+                        "target": "target",
+                        "conditionId": "martial-position-guard",
+                        "on": "always"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
+            }
+          ],
+          "category": "technique",
+          "minimumLevel": 6,
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-12-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-12-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "damageBonus": 0,
+          "live": true,
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "active": true,
+          "description": "Ein Einzelangriff. keine freie Bewegung. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "id": "combat-style-huskarl-skjaldr-wahl-12",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "compatibleWeaponIds": [],
+          "target": "Ein Gegner",
+          "status": "confirmed",
+          "followUpAttack": {
+            "enabled": false
+          }
+        },
+        {
+          "category": "technique",
+          "active": true,
+          "id": "combat-style-huskarl-skjaldr-grund-7",
+          "live": true,
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-twinAxes",
+            "slotBands": [
+              "advanced"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": true,
+            "requiresMounted": false
+          },
+          "tags": "Huskarl-Waffenlehre · skjaldr · Schritt des Huskarls",
+          "weaponLabel": "Zwei Äxte",
+          "attackBonus": 0,
+          "minimumLevel": 7,
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-7-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-7-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "compatibleWeaponIds": [],
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-7-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-7-condition",
+              "type": "buff",
+              "target": "self",
+              "on": "hit",
+              "condition": {
+                "id": "huskarl-deckung",
+                "name": "Feste Deckung",
+                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 1
+                }
+              },
+              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            }
+          ],
+          "rollMode": "normal",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "status": "confirmed",
+          "combatStyleFormId": "huskarl-fester-schritt",
+          "duration": "",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "target": "Ein Gegner",
+          "targetDefenseModifier": 0,
+          "weaponTypes": [
+            "axe"
+          ],
+          "cenyrTraining": {
+            "slotBands": [],
+            "weaponRuleSetId": "",
+            "designNotes": "",
+            "sourceStatus": "",
+            "uchelwyrCompatible": false,
+            "assignedSlotId": "",
+            "branchId": "",
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "classWeaponProfiles": {},
+            "selectedAtLevel": null
+          },
+          "damageType": "",
+          "damageBonus": 0,
+          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Trefferwurf mit beiden Waffenwürfeln; feste Boni einmal.",
+          "combatStyleId": "huskarl-waffenlehre",
+          "description": "Ein gemeinsamer Angriff; bei Treffer +1 RK für einen eigenen Beitrag.",
+          "trainingForm": "Schritt des Huskarls",
+          "activationType": "action",
+          "criticalThreshold": 20,
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "maximumTargets": 1,
+          "triggerRules": [],
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "range": "Waffenreichweite",
+          "name": "Gekreuzte Axtwende",
+          "effect": "Ein gemeinsamer Angriff; bei Treffer +1 RK für einen eigenen Beitrag.",
+          "damageFormula": "",
+          "aiInstructions": "",
+          "mechanics": {}
+        },
+        {
+          "category": "technique",
+          "mechanics": {},
+          "live": true,
+          "range": "Waffenreichweite",
+          "damageType": "",
+          "weaponTypes": [
+            "axe"
+          ],
+          "combatStyleId": "huskarl-waffenlehre",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Schritt des Huskarls",
+          "attackBonus": 1,
+          "weaponLabel": "Lange Streitaxt",
+          "combatStyleFormId": "huskarl-fester-schritt",
+          "damageFormula": "",
+          "maximumTargets": 1,
+          "minimumLevel": 7,
+          "effect": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "secondarySave": {
+            "enabled": false
+          },
+          "activationType": "action",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-greatAxe",
+            "slotBands": [
+              "advanced"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": true,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "criticalThreshold": 20,
+          "active": true,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-13-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "id": "combat-style-huskarl-skjaldr-wahl-13",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "triggerRules": [],
+          "name": "Schneidender Richtungswechsel",
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "compatibleWeaponIds": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-13-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-13-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "trainingForm": "Schritt des Huskarls",
+          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
+          "target": "Ein Gegner",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "status": "confirmed",
+          "description": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf."
+        },
+        {
+          "tags": "Huskarl-Waffenlehre · skjaldr · Schritt des Huskarls",
+          "compatibleWeaponIds": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "branchId": "skjaldr-flexible",
+            "slotBands": [
+              "advanced"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "status": "confirmed",
+          "target": "Selbst",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "live": true,
+          "damageFormula": "",
+          "trainingForm": "Schritt des Huskarls",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-14-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-14-special-action-2",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "damageType": "",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "maximumTargets": 1,
+          "triggerRules": [],
+          "activationType": "bonus-action",
+          "criticalThreshold": 20,
+          "combatStyleId": "huskarl-waffenlehre",
+          "category": "technique",
+          "active": true,
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "attackBonus": 0,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-14-resolve",
+              "type": "temporary-hit-points",
+              "target": "self",
+              "on": "always",
+              "formula": "1d6",
+              "notes": "Temporäre TP ersetzen nur einen niedrigeren vorhandenen Vorrat; sie werden nicht addiert."
+            }
+          ],
+          "effect": "1W6 temporäre TP; ersetzt nur einen niedrigeren Vorrat. Keine Heilung verlorener TP.",
+          "targetDefenseModifier": 0,
+          "minimumLevel": 7,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "combatStyleFormId": "huskarl-fester-schritt",
+          "description": "1W6 temporäre TP; ersetzt nur einen niedrigeren Vorrat. Keine Heilung verlorener TP.",
+          "mechanics": {},
+          "range": "Waffenreichweite",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "id": "combat-style-huskarl-skjaldr-wahl-14",
+          "damageBonus": 0,
+          "name": "Atem unter Spannung"
         }
       ],
       "templateSelections": {
@@ -4528,7 +4660,8 @@
           "proficient": false
         }
       ],
-      "revision": 1790054758405
+      "revision": 1790054758405,
+      "defenseBalanceVersion": 1
     }
   }
 }

@@ -148,7 +148,7 @@
             "totalCopper": 5500
           },
           "description": "Gildas hält die schlichte Klinge gewissenhaft in Schuss. Ihr sauberer Kerbenschliff trägt keine Magie, nur die Sorgfalt eines Ritters, der sich auf sein Werkzeug verlassen muss.",
-          "tags": "Schwert, Draig, Ritterschwert, vielseitig, Drachentanz, ritterlich",
+          "tags": "Vielseitig · 1W10 bei zweihändiger Führung",
           "infoRows": [
             {
               "icon": "◈",
@@ -223,7 +223,7 @@
           "type": "Gafyr-Plattenrüstung",
           "image": "https://i.imgur.com/7siJPXG.png",
           "description": "Unter dem Wappenrock greifen sorgsam angepasste Platten ineinander. Abgenutzte Riemen werden ersetzt, lose Nieten nachgezogen: Dieser Harnisch ist für lange Wachen gebaut, nicht für Bewunderung.",
-          "tags": "Rüstung, Platte, Draig, Jungritter, Wappenrock, Helm",
+          "tags": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
           "infoRows": [
             {
               "icon": "⬙",
@@ -246,25 +246,44 @@
             }
           ],
           "combatDefinition": {
-            "kind": "armor",
             "armorKind": "armor",
             "damageFormula": "",
-            "baseArmorClass": 16,
+            "baseArmorClass": 15,
             "armorClassBonus": 0,
-            "dexterityMode": "full",
+            "dexterityMode": "none",
             "dexterityCap": 2,
-            "dexterityUnlockLevel": 12,
+            "dexterityUnlockLevel": 0,
             "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
-            "notes": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus. Rüstungsroutine: Geschicklichkeit zählt erst ab Stufe 12.",
-            "triggerRules": [],
+            "notes": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus.",
+            "mechanics": {
+              "attack": 0,
+              "damage": 0,
+              "armorClass": 0,
+              "initiative": 0,
+              "skill": 0,
+              "savingThrow": 0,
+              "spellAttack": 0,
+              "spellSaveDc": 0,
+              "movement": 0,
+              "maximumHitPoints": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "attackRollMode": "normal",
+              "bonusDamageFormula": "",
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": []
+            },
             "damageProtection": {
-              "name": "Gafyr-Plattenschutz",
               "amount": 2,
+              "name": "Gafyr-Plattenschutz",
               "damageTypes": [],
               "excludedDamageTypes": [
                 "stich"
               ]
-            }
+            },
+            "triggerRules": [],
+            "armorCategory": "heavy",
+            "kind": "armor"
           },
           "id": "gildas-gafyr-watch-armor-item",
           "itemDbKey": "",
@@ -307,7 +326,7 @@
           "type": "Dolch",
           "image": "https://i.imgur.com/caR593j.png",
           "description": "Kompakter Draig-Dolch als leichte Seiten- und Wurfwaffe.",
-          "tags": "Dolch, Draig, leicht, Finesse, Wurfwaffe",
+          "tags": "Finesse · leicht · Wurfwaffe",
           "infoRows": [
             {
               "icon": "†",
@@ -341,7 +360,8 @@
             "properties": "Finesse · leicht · Wurfwaffe",
             "notes": "Seitenwaffe des Hauses Draig.",
             "requirements": "",
-            "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick."
+            "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick.",
+            "triggerRules": []
           },
           "id": "gildas-gafyr-dagger-item",
           "itemDbKey": "",
@@ -968,6 +988,7 @@
           "name": "Gafyr-Plattenrüstung",
           "image": "https://i.imgur.com/7siJPXG.png",
           "kind": "armor",
+          "armorCategory": "heavy",
           "damageProtection": {
             "amount": 2,
             "name": "Gafyr-Plattenschutz",
@@ -977,13 +998,13 @@
             ]
           },
           "triggerRules": [],
-          "baseArmorClass": 16,
+          "baseArmorClass": 15,
           "armorClassBonus": 0,
-          "dexterityMode": "full",
+          "dexterityMode": "none",
           "dexterityCap": 2,
-          "dexterityUnlockLevel": 12,
+          "dexterityUnlockLevel": 0,
           "properties": "Plattenrüstung · Gafyr-Wappenrock · geschlossener Helm",
-          "notes": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus. Rüstungsroutine: Geschicklichkeit zählt erst ab Stufe 12.",
+          "notes": "Schadensreduktion 2 gegen alle Schadensarten außer Stich; kein RK-Bonus.",
           "equipped": true
         }
       ],
@@ -2495,6 +2516,7 @@
                   "label": "1 eigener Beitrag"
                 },
                 "tags": "Drachentanz",
+                "armorStance": true,
                 "stanceGroup": "jungdrache-guard",
                 "mechanics": {
                   "armorClass": 1
@@ -2624,8 +2646,8 @@
           "combatStyleFormId": "drachentanz-form-i-jungdrache",
           "minimumLevel": 4,
           "category": "technique",
-          "description": "Ein kurzer Schnitt begleitet den seitlichen Schritt in eine gedeckte Waffenlinie.",
-          "effect": "Technikschaden; bei Treffer bis zu 2 m Eigenbewegung im verfügbaren Bewegungsbudget und +1 RK bis zum Ende des nächsten eigenen Kampfposts.",
+          "description": "Ein kurzer Schnitt begleitet den seitlichen Schritt in eine gedeckte Waffenlinie. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "effect": "Technikschaden; Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
           "activationType": "bonus-action",
           "weaponTypes": [
             "sword"
@@ -2660,7 +2682,7 @@
           "duration": "Sofort",
           "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
           "tags": "Drachentanz · Tanz des Jungdrachens · Grundform",
-          "aiInstructions": "Technikschaden; bei Treffer bis zu 2 m Eigenbewegung im verfügbaren Bewegungsbudget und +1 RK bis zum Ende des nächsten eigenen Kampfposts. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "aiInstructions": "Technikschaden; Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
           "mechanicNotes": [],
           "effects": [
             {
@@ -2687,7 +2709,7 @@
             },
             {
               "id": "teulu-fluegelschritt-move-movement",
-              "type": "move",
+              "type": "buff",
               "target": "self",
               "amount": 0,
               "formula": "",
@@ -2696,16 +2718,74 @@
               "magical": false,
               "on": "hit",
               "resourceId": "",
-              "condition": null,
+              "condition": {
+                "id": "martial-position-guard",
+                "name": "Gedeckter Stellungswechsel",
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "stanceGroup": "martial-position-guard",
+                "active": true,
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": "Bis zum Ende des nächsten eigenen Beitrags"
+                },
+                "mechanics": {
+                  "movement": 0
+                },
+                "triggerRules": [
+                  {
+                    "id": "martial-position-guard-once",
+                    "name": "Stellungseffekt",
+                    "phase": "pre-roll",
+                    "recipient": "actor",
+                    "sourceRelation": "enemy",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "weaponAttackOnly": true,
+                    "condition": "always",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "resultEffects": [
+                      {
+                        "id": "martial-position-guard-consume",
+                        "type": "remove-condition",
+                        "target": "target",
+                        "conditionId": "martial-position-guard",
+                        "on": "always"
+                      }
+                    ]
+                  }
+                ],
+                "remainingActorComments": 1,
+                "remainingSceneComments": 0,
+                "ward": {
+                  "enabled": false,
+                  "charges": 0,
+                  "deflectChance": 100,
+                  "breaksOnCriticalHit": false
+                }
+              },
               "conditionId": "",
               "conditionTags": "",
-              "movementMeters": 2,
+              "movementMeters": 0,
               "movementKind": "move",
               "summon": null,
               "concentration": false,
               "channelComments": 0,
               "nonlethal": false,
-              "notes": "Freier Weg und verbleibende Bewegung erforderlich."
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
             },
             {
               "id": "teulu-fluegelschritt-condition",
@@ -2735,6 +2815,7 @@
                   "label": "1 eigener Beitrag"
                 },
                 "tags": "Drachentanz",
+                "armorStance": true,
                 "mechanics": {
                   "armorClass": 1
                 },
@@ -3300,6 +3381,7 @@
                   "label": "Bis zum Ende des nächsten eigenen Beitrags"
                 },
                 "tags": "Drachentanz",
+                "armorStance": true,
                 "mechanics": {
                   "armorClass": 2
                 },
@@ -6538,6 +6620,9 @@
       ],
       "conditions": [
         {
+          "armorStance": false,
+          "stanceGroup": "",
+          "tags": "",
           "id": "gildas-vorschnelles-urteil",
           "name": "Vorschnelles Urteil",
           "duration": "Dauerhaft",

@@ -133,7 +133,7 @@ test('weapon critical effects and armor protection apply only to equipped items'
   assert.equal(critical.damage.modifier - normal.damage.modifier, 2);
   const archer = resolveCombatProfile(ylva);
   const pin = await new CombatResolutionService(dice([20])).resolveAttack({ actor: archer, target: target() });
-  assert.ok(pin.targetConditionSnapshot.after.some(c => c.name === 'Festnagelnder Schuss' && c.mechanics.movement === -2));
+  assert.ok(pin.targetConditionSnapshot.after.some(c => c.name === 'Festnagelnder Schuss' && c.stanceGroup === 'martial-position-penalty'));
   const shieldBearer = equipped(asgeir, 'asgeir-axt-rechts');
   shieldBearer.combatProfile.armorItems.find(a => a.kind === 'shield').equipped = true;
   const defended = { ...resolveCombatProfile(shieldBearer), characterId: 'enemy' };

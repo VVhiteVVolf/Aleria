@@ -865,13 +865,17 @@
         "vitality": {
           "version": 1,
           "legacyIncrease": 5,
-          "overrideAnchor": null
+          "overrideAnchor": {
+            "base": 20,
+            "bonus": 5,
+            "vitality": 5
+          }
         },
         "current": 25,
         "temporary": 0,
         "hitDie": 6,
         "averagePerLevelOverride": null,
-        "maximumOverride": null
+        "maximumOverride": 35
       },
       "armorClass": {
         "base": 10,
@@ -3468,7 +3472,8 @@
         "enabled": false,
         "automaticCritical": false
       },
-      "notes": ""
+      "notes": "",
+      "defenseBalanceVersion": 1
     },
     "localRecord": {
       "recordId": "character--y7MBxDiAaesbWHBtmw5Q",

@@ -1,5 +1,6 @@
 import { parsePrice, formatPrice, moneyState } from './item-register-money.js?v=20260919-shop-v1';
 import { indexInventoryTemplates, resolveInventoryItem } from '../character-inventory/character-inventory-identity.js?v=20260928-equipment-art-v4';
+import { balanceArmorInventoryItem } from '../character-equipment/equipment-armor-rules.js';
 
 export const REGISTER_SECTIONS = Object.freeze([
   { id: 'standard', label: 'Standardgüter', text: 'Verbindliche Vorlagen und Preismaßstäbe.' },
@@ -27,6 +28,7 @@ export function canManageCharacter(character, access = {}) {
   return !!access.authenticated && (access.canModerate === true || character?.ownerUid === access.uid);
 }
 export function normalizeOffer(input = {}, baseline = []) {
+  input = balanceArmorInventoryItem(input);
   const standard = baseline.find(item => item.id === input.templateId || item.aliases?.includes(input.templateId));
   const price = input.priceRange || parsePrice(input.price, input.currency);
   if (!String(input.id || '').trim() || !String(input.title || '').trim()) throw new Error('Ein Angebot braucht eine ID und einen Namen.');
@@ -74,6 +76,7 @@ export function buildOwnedItems(characters = [], templates = [], creatures = [])
 }
 
 export function toLegacyItem(item) {
+  item = balanceArmorInventoryItem(item);
   return { ...item, canonicalKey: item.id, categoryLabel: categoryLabel(item.category),
     price: formatPrice(item.priceRange).replace(/ KT/g, ''), currency: 'K',
     hiddenMeta: { ...item.hiddenMeta, stock: item.stock, origin: item.listName || 'Standardgüter',
@@ -81,6 +84,7 @@ export function toLegacyItem(item) {
 }
 
 export function createOwnedItem(template, { id, characterId, characterName, quantity = 1, unitCopper, now }) {
+  template = balanceArmorInventoryItem(template);
   return { id, instanceId: id, templateId: template.templateId || template.id, templateName: template.title,
     offerId: template.section === 'offer' ? template.id : '', registerCategory: template.category,
     itemDbKey: '', originItemDbKey: template.templateId || template.id, itemStorageMode: 'character',

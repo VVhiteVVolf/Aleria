@@ -241,17 +241,50 @@
                     "target": "target",
                     "on": "always",
                     "condition": {
-                      "id": "wolfshorn-pinned",
+                      "id": "martial-position-penalty",
                       "name": "Festnagelnder Schuss",
                       "active": true,
                       "mechanics": {
-                        "movement": -2
+                        "movement": 0
                       },
                       "durationModel": {
                         "kind": "actor-comments",
-                        "amount": 1
-                      }
-                    }
+                        "remainingActorComments": 1
+                      },
+                      "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                      "stanceGroup": "martial-position-penalty",
+                      "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                      "triggerRules": [
+                        {
+                          "id": "martial-position-penalty-once",
+                          "name": "Stellungseffekt",
+                          "phase": "pre-roll",
+                          "recipient": "actor",
+                          "sourceRelation": "self",
+                          "activation": "passive",
+                          "frequency": "comment",
+                          "actionKinds": [
+                            "weapon",
+                            "technique"
+                          ],
+                          "weaponAttackOnly": true,
+                          "condition": "always",
+                          "effects": {
+                            "attackModifier": -1
+                          },
+                          "resultEffects": [
+                            {
+                              "id": "martial-position-penalty-consume",
+                              "type": "remove-condition",
+                              "target": "self",
+                              "conditionId": "martial-position-penalty",
+                              "on": "always"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "notes": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
                   }
                 ]
               }
@@ -267,9 +300,9 @@
             "damageBonus": 1,
             "range": "Fernkampf · 45 / 180 m",
             "properties": "Zweihändig · Munition",
-            "notes": "+1 Waffenschaden. Festnagelnder Schuss: bei kritischem Treffer −2 m Bewegung im nächsten eigenen Beitrag des Ziels, nicht stapelbar.",
+            "notes": "+1 Waffenschaden. Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
             "requirements": "",
-            "aiInstructions": ""
+            "aiInstructions": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
           },
           "equipped": true,
           "itemDbKey": "",
@@ -418,7 +451,6 @@
           "registerCategory": "ruestungen",
           "templateId": "standard:waffen-rustungen:verstaerkte-lederruestung",
           "combatDefinition": {
-            "kind": "armor",
             "mechanics": {
               "saveModifiers": [
                 {
@@ -438,13 +470,15 @@
             },
             "triggerRules": [],
             "armorKind": "armor",
-            "baseArmorClass": 12,
+            "armorCategory": "medium",
+            "baseArmorClass": 14,
             "armorClassBonus": 0,
-            "dexterityMode": "full",
+            "dexterityMode": "capped",
             "dexterityCap": 2,
             "dexterityUnlockLevel": 0,
-            "properties": "Leichte Rüstung",
-            "notes": "Angelegt: −1 Hieb-/Stichschaden je Treffer und +2 auf Rettungswürfe gegen Gift. Kein zusätzlicher RK-Bonus."
+            "properties": "Mittlere Rüstung",
+            "notes": "Angelegt: −1 Hieb-/Stichschaden je Treffer und +2 auf Rettungswürfe gegen Gift. Kein zusätzlicher RK-Bonus.",
+            "kind": "armor"
           },
           "imageFormat": "square",
           "icon": "",
@@ -462,7 +496,7 @@
           "ownerCharacterName": "Ylva Wolfshorn",
           "type": "Rüstung",
           "weight": "6 kg",
-          "tags": "Leichte Rüstung",
+          "tags": "Mittlere Rüstung",
           "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO"
         },
         {
@@ -647,7 +681,8 @@
         "notes": "",
         "languages": [],
         "armor": [
-          "light"
+          "light",
+          "medium"
         ],
         "tools": [
           "Seemannschaft und Gefolgschaftsbrauchtum",
@@ -835,14 +870,14 @@
             ],
             "name": "Grenzerleder"
           },
-          "properties": "Leichte Rüstung",
+          "properties": "Mittlere Rüstung",
           "dexterityCap": 2,
           "name": "Verstärkte Jagdleder-Rüstung",
           "armorClassBonus": 0,
-          "baseArmorClass": 12,
+          "baseArmorClass": 14,
           "equipped": true,
           "dexterityUnlockLevel": 0,
-          "dexterityMode": "full",
+          "dexterityMode": "capped",
           "kind": "armor",
           "id": "ylva-leder",
           "notes": "Angelegt: −1 Hieb-/Stichschaden je Treffer und +2 auf Rettungswürfe gegen Gift. Kein zusätzlicher RK-Bonus.",
@@ -853,7 +888,8 @@
                 "bonus": 2
               }
             ]
-          }
+          },
+          "armorCategory": "medium"
         }
       ],
       "resources": [
@@ -1574,22 +1610,55 @@
                   "target": "target",
                   "on": "always",
                   "condition": {
-                    "id": "wolfshorn-pinned",
+                    "id": "martial-position-penalty",
                     "name": "Festnagelnder Schuss",
                     "active": true,
                     "mechanics": {
-                      "movement": -2
+                      "movement": 0
                     },
                     "durationModel": {
                       "kind": "actor-comments",
-                      "amount": 1
-                    }
-                  }
+                      "remainingActorComments": 1
+                    },
+                    "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                    "stanceGroup": "martial-position-penalty",
+                    "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                    "triggerRules": [
+                      {
+                        "id": "martial-position-penalty-once",
+                        "name": "Stellungseffekt",
+                        "phase": "pre-roll",
+                        "recipient": "actor",
+                        "sourceRelation": "self",
+                        "activation": "passive",
+                        "frequency": "comment",
+                        "actionKinds": [
+                          "weapon",
+                          "technique"
+                        ],
+                        "weaponAttackOnly": true,
+                        "condition": "always",
+                        "effects": {
+                          "attackModifier": -1
+                        },
+                        "resultEffects": [
+                          {
+                            "id": "martial-position-penalty-consume",
+                            "type": "remove-condition",
+                            "target": "self",
+                            "conditionId": "martial-position-penalty",
+                            "on": "always"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "notes": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
                 }
               ]
             }
           ],
-          "aiInstructions": "",
+          "aiInstructions": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
           "weaponProfileId": "",
           "range": "Fernkampf · 45 / 180 m",
           "attackBonus": 0,
@@ -1598,8 +1667,10 @@
           "effects": [],
           "requirements": "",
           "equipped": true,
-          "notes": "+1 Waffenschaden. Festnagelnder Schuss: bei kritischem Treffer −2 m Bewegung im nächsten eigenen Beitrag des Ziels, nicht stapelbar.",
-          "properties": "Zweihändig · Munition"
+          "notes": "+1 Waffenschaden. Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "properties": "Zweihändig · Munition",
+          "effect": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
         },
         {
           "range": "Nahkampf · 1,5 m",
@@ -1926,2541 +1997,6 @@
       ],
       "techniques": [
         {
-          "maximumTargets": 1,
-          "effects": [
-            {
-              "target": "target",
-              "damageType": "",
-              "on": "hit",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "formula": "",
-              "magical": false,
-              "id": "combat-style-huskarl-skytte-grund-1-weapon-damage",
-              "type": "damage",
-              "inheritWeaponDamageType": true
-            }
-          ],
-          "attackBonus": 0,
-          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
-          "criticalThreshold": 20,
-          "activationType": "bonus-action",
-          "name": "Erster Jagdpfeil",
-          "costs": [
-            {
-              "id": "combat-style-huskarl-skytte-grund-1-bonus-action-1",
-              "scope": "comment",
-              "resourceId": "bonus-action",
-              "amount": 1,
-              "name": "Bonusaktion"
-            }
-          ],
-          "category": "technique",
-          "cenyrTraining": {
-            "classWeaponProfiles": {},
-            "slotBands": [],
-            "weaponRuleSetId": "",
-            "uchelwyrCompatible": false,
-            "branchId": "",
-            "requiresMounted": false,
-            "allowedClassIds": [],
-            "sourceStatus": "",
-            "assignedSlotId": "",
-            "selectedAtLevel": null,
-            "designNotes": ""
-          },
-          "minimumLevel": 1,
-          "combatStyleId": "huskarl-waffenlehre",
-          "damageFormula": "1d6",
-          "rollMode": "normal",
-          "duration": "",
-          "aiInstructions": "",
-          "secondarySave": {
-            "enabled": false
-          },
-          "effect": "Ein leichter Schuss auf ein einzelnes Ziel.",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "weaponTypes": [
-            "bow"
-          ],
-          "auraBypass": {
-            "cost": 1,
-            "allowed": true,
-            "resourceId": "aura-focus"
-          },
-          "targetDefenseModifier": 0,
-          "active": true,
-          "damageBonus": 0,
-          "damageType": "",
-          "trainingForm": "Stand des Schildes",
-          "description": "Ein leichter Schuss auf ein einzelnes Ziel.",
-          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
-          "damageModel": {
-            "weaponDiceMultiplier": 1,
-            "bonusWeaponDice": 0,
-            "bonusWeaponDieCap": 6,
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "level": 17,
-                "formula": "1d10"
-              }
-            ],
-            "bonusFormula": "",
-            "mode": "fixed"
-          },
-          "compatibleWeaponIds": [],
-          "combatStyleFormId": "huskarl-schildgrund",
-          "live": true,
-          "cultureTraining": {
-            "slotBands": [
-              "foundation"
-            ],
-            "schemaVersion": 1,
-            "requiresTwoHands": false,
-            "requiresDualWield": false,
-            "branchId": "skytte-bow",
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresShield": false,
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skytte"
-            ]
-          },
-          "followUpAttack": {
-            "enabled": false
-          },
-          "range": "Waffenreichweite",
-          "id": "combat-style-huskarl-skytte-grund-1",
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "status": "confirmed",
-          "target": "Ein Gegner",
-          "triggerRules": [],
-          "mechanics": {}
-        },
-        {
-          "attackBonus": 0,
-          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
-          "criticalThreshold": 20,
-          "active": true,
-          "compatibleWeaponIds": [],
-          "minimumLevel": 2,
-          "live": true,
-          "target": "Selbst",
-          "category": "technique",
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "status": "confirmed",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "weaponTypes": [
-            "bow"
-          ],
-          "id": "combat-style-huskarl-skytte-grund-2",
-          "range": "Waffenreichweite",
-          "damageType": "",
-          "maximumTargets": 1,
-          "costs": [
-            {
-              "scope": "comment",
-              "resourceId": "bonus-action",
-              "name": "Bonusaktion",
-              "id": "combat-style-huskarl-skytte-grund-2-bonus-action-1",
-              "amount": 1
-            },
-            {
-              "amount": 1,
-              "resourceId": "reaction",
-              "id": "combat-style-huskarl-skytte-grund-2-reaction-2",
-              "name": "Reaktion",
-              "scope": "comment"
-            }
-          ],
-          "combatStyleId": "huskarl-waffenlehre",
-          "auraBypass": {
-            "cost": 1,
-            "allowed": true,
-            "resourceId": "aura-focus"
-          },
-          "cultureTraining": {
-            "branchId": "skytte-bow",
-            "requiresShield": false,
-            "schemaVersion": 1,
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresTwoHands": false,
-            "requiresDualWield": false,
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresMounted": false
-          },
-          "damageBonus": 0,
-          "targetDefenseModifier": 0,
-          "activationType": "bonus-action",
-          "triggerRules": [],
-          "mechanics": {},
-          "name": "Ruhiger Atem",
-          "damageModel": {
-            "mode": "fixed",
-            "scalingSteps": []
-          },
-          "description": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
-          "effects": [
-            {
-              "id": "combat-style-huskarl-skytte-grund-2-aim",
-              "notes": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
-              "condition": {
-                "duration": "1 eigener Beitrag",
-                "mechanics": {
-                  "attack": 1
-                },
-                "name": "Gesammelte Ruhe",
-                "description": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
-                "id": "huskarl-zielen",
-                "durationModel": {
-                  "kind": "actor-comments",
-                  "remainingActorComments": 1
-                },
-                "tags": "Huskarl-Waffenlehre"
-              },
-              "on": "always",
-              "target": "self",
-              "type": "buff"
-            }
-          ],
-          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
-          "secondarySave": {
-            "enabled": false
-          },
-          "combatStyleFormId": "huskarl-schildgrund",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "effect": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
-          "damageFormula": "",
-          "trainingForm": "Stand des Schildes"
-        },
-        {
-          "costs": [
-            {
-              "id": "combat-style-huskarl-skytte-grund-3-action-1",
-              "name": "Aktion",
-              "resourceId": "action",
-              "amount": 1,
-              "scope": "comment"
-            }
-          ],
-          "triggerRules": [],
-          "damageBonus": 0,
-          "effects": [
-            {
-              "on": "hit",
-              "inheritWeaponDamageType": true,
-              "damageType": "",
-              "magical": false,
-              "target": "target",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "id": "combat-style-huskarl-skytte-grund-3-weapon-damage",
-              "formula": "",
-              "type": "damage"
-            }
-          ],
-          "auraBypass": {
-            "cost": 1,
-            "allowed": true,
-            "resourceId": "aura-focus"
-          },
-          "maximumTargets": 1,
-          "damageModel": {
-            "weaponDiceMultiplier": 1,
-            "bonusFormula": "",
-            "bonusWeaponDice": 1,
-            "mode": "weapon-dice",
-            "scalingSteps": [
-              {
-                "formula": "1d4",
-                "level": 7
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "formula": "1d8",
-                "level": 13
-              },
-              {
-                "level": 17,
-                "formula": "1d10"
-              }
-            ],
-            "bonusWeaponDieCap": 6
-          },
-          "activationType": "action",
-          "description": "Ein sicherer Speerstoß im Nahkampf.",
-          "criticalThreshold": 20,
-          "id": "combat-style-huskarl-skytte-grund-3",
-          "live": true,
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "mechanics": {},
-          "requirements": "Speer",
-          "trainingForm": "Stand des Schildes",
-          "aiInstructions": "",
-          "effect": "Ein sicherer Speerstoß im Nahkampf.",
-          "attackBonus": 0,
-          "weaponLabel": "Speer",
-          "active": true,
-          "category": "technique",
-          "combatStyleId": "huskarl-waffenlehre",
-          "name": "Speer am Wildpfad",
-          "compatibleWeaponIds": [],
-          "cenyrTraining": {
-            "sourceStatus": "",
-            "requiresMounted": false,
-            "allowedClassIds": [],
-            "selectedAtLevel": null,
-            "slotBands": [],
-            "branchId": "",
-            "uchelwyrCompatible": false,
-            "assignedSlotId": "",
-            "weaponRuleSetId": "",
-            "designNotes": "",
-            "classWeaponProfiles": {}
-          },
-          "rollMode": "normal",
-          "targetDefenseModifier": 0,
-          "minimumLevel": 3,
-          "damageType": "",
-          "duration": "",
-          "damageFormula": "",
-          "combatStyleFormId": "huskarl-schildgrund",
-          "weaponTypes": [
-            "spear"
-          ],
-          "target": "Ein Gegner",
-          "cultureTraining": {
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "requiresMounted": false,
-            "schemaVersion": 1,
-            "requiresDualWield": false,
-            "requiresShield": false,
-            "slotBands": [
-              "foundation"
-            ],
-            "branchId": "skytte-spear",
-            "requiresTwoHands": false
-          },
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "range": "Waffenreichweite",
-          "status": "confirmed",
-          "secondarySave": {
-            "enabled": false
-          },
-          "followUpAttack": {
-            "enabled": false
-          }
-        },
-        {
-          "duration": "",
-          "requirements": "Schwert, Axt oder Sax",
-          "rollMode": "normal",
-          "cultureTraining": {
-            "schemaVersion": 1,
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresShield": false,
-            "branchId": "skytte-sidearm",
-            "requiresDualWield": false,
-            "requiresTwoHands": false
-          },
-          "aiInstructions": "",
-          "compatibleWeaponIds": [],
-          "id": "combat-style-huskarl-skytte-grund-4",
-          "name": "Sax im Unterholz",
-          "effect": "Nahkampftreffer mit Bindung: KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.",
-          "trainingForm": "Stand des Schildes",
-          "damageModel": {
-            "bonusWeaponDice": 1,
-            "mode": "weapon-dice",
-            "bonusWeaponDieCap": 8,
-            "weaponDiceMultiplier": 1,
-            "bonusFormula": "",
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ]
-          },
-          "costs": [
-            {
-              "name": "Aktion",
-              "id": "combat-style-huskarl-skytte-grund-4-action-1",
-              "amount": 1,
-              "scope": "comment",
-              "resourceId": "action"
-            },
-            {
-              "scope": "comment",
-              "amount": 1,
-              "resourceId": "reaction",
-              "id": "combat-style-huskarl-skytte-grund-4-reaction-2",
-              "name": "Reaktion"
-            }
-          ],
-          "description": "Nahkampftreffer mit Bindung: KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.",
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "triggerRules": [],
-          "criticalThreshold": 20,
-          "activationType": "action",
-          "category": "technique",
-          "maximumTargets": 1,
-          "damageBonus": 0,
-          "secondarySave": {
-            "addProficiency": true,
-            "attributeKey": "strength",
-            "enabled": true,
-            "failureCondition": {
-              "id": "combat-style-huskarl-skytte-grund-4-failed-save",
-              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
-              "name": "Gebundene Waffenführung",
-              "tags": "Huskarl-Waffenlehre",
-              "duration": "1 eigener Beitrag",
-              "mechanics": {
-                "attack": -1
-              }
-            },
-            "dcAttributeKey": "strength",
-            "dcBase": 8
-          },
-          "combatStyleFormId": "huskarl-schildgrund",
-          "minimumLevel": 4,
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "dagger"
-          ],
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "followUpAttack": {
-            "enabled": false
-          },
-          "target": "Ein Gegner",
-          "damageFormula": "",
-          "damageType": "",
-          "range": "Waffenreichweite",
-          "effects": [
-            {
-              "type": "damage",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "on": "hit",
-              "inheritWeaponDamageType": true,
-              "damageType": "",
-              "magical": false,
-              "target": "target",
-              "formula": "",
-              "id": "combat-style-huskarl-skytte-grund-4-weapon-damage"
-            }
-          ],
-          "mechanics": {},
-          "status": "confirmed",
-          "live": true,
-          "cenyrTraining": {
-            "classWeaponProfiles": {},
-            "assignedSlotId": "",
-            "slotBands": [],
-            "designNotes": "",
-            "sourceStatus": "",
-            "weaponRuleSetId": "",
-            "selectedAtLevel": null,
-            "uchelwyrCompatible": false,
-            "allowedClassIds": [],
-            "branchId": "",
-            "requiresMounted": false
-          },
-          "targetDefenseModifier": 0,
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "combatStyleId": "huskarl-waffenlehre",
-          "active": true,
-          "attackBonus": 0,
-          "weaponLabel": "Schwert, Axt oder Sax"
-        },
-        {
-          "compatibleWeaponIds": [],
-          "mechanics": {},
-          "combatStyleId": "huskarl-waffenlehre",
-          "criticalThreshold": 20,
-          "name": "Schuss durch die Lichtung",
-          "cultureTraining": {
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "branchId": "skytte-bow",
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresShield": false,
-            "schemaVersion": 1,
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresTwoHands": false,
-            "requiresDualWield": false
-          },
-          "costs": [
-            {
-              "name": "Aktion",
-              "scope": "comment",
-              "id": "combat-style-huskarl-skytte-grund-5-action-1",
-              "resourceId": "action",
-              "amount": 1
-            },
-            {
-              "id": "combat-style-huskarl-skytte-grund-5-bonus-action-2",
-              "amount": 1,
-              "scope": "comment",
-              "resourceId": "bonus-action",
-              "name": "Bonusaktion"
-            }
-          ],
-          "description": "Ein sorgfältig angesetzter Schuss; keine automatische Deckungsaufhebung.",
-          "damageFormula": "",
-          "damageType": "",
-          "category": "technique",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "effect": "Ein sorgfältig angesetzter Schuss; keine automatische Deckungsaufhebung.",
-          "damageModel": {
-            "bonusFormula": "",
-            "bonusWeaponDieCap": 8,
-            "bonusWeaponDice": 1,
-            "scalingSteps": [
-              {
-                "formula": "1d4",
-                "level": 7
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ],
-            "mode": "weapon-dice",
-            "weaponDiceMultiplier": 1
-          },
-          "damageBonus": 0,
-          "minimumLevel": 5,
-          "secondarySave": {
-            "enabled": false
-          },
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "maximumTargets": 1,
-          "activationType": "action",
-          "weaponTypes": [
-            "bow"
-          ],
-          "auraBypass": {
-            "cost": 1,
-            "allowed": true,
-            "resourceId": "aura-focus"
-          },
-          "triggerRules": [],
-          "range": "Waffenreichweite",
-          "active": true,
-          "targetDefenseModifier": 0,
-          "target": "Ein Gegner",
-          "id": "combat-style-huskarl-skytte-grund-5",
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "trainingForm": "Stand des Schildes",
-          "live": true,
-          "status": "confirmed",
-          "effects": [
-            {
-              "inheritWeaponDamageType": true,
-              "magical": false,
-              "damageType": "",
-              "id": "combat-style-huskarl-skytte-grund-5-weapon-damage",
-              "formula": "",
-              "on": "hit",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "target": "target",
-              "type": "damage"
-            }
-          ],
-          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
-          "combatStyleFormId": "huskarl-schildgrund",
-          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
-          "attackBonus": 0
-        },
-        {
-          "criticalThreshold": 20,
-          "attackBonus": 0,
-          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
-          "costs": [
-            {
-              "amount": 1,
-              "id": "combat-style-huskarl-skytte-grund-6-action-1",
-              "scope": "comment",
-              "name": "Aktion",
-              "resourceId": "action"
-            },
-            {
-              "id": "combat-style-huskarl-skytte-grund-6-bonus-action-2",
-              "name": "Bonusaktion",
-              "amount": 1,
-              "resourceId": "bonus-action",
-              "scope": "comment"
-            },
-            {
-              "name": "Reaktion",
-              "resourceId": "reaction",
-              "amount": 1,
-              "id": "combat-style-huskarl-skytte-grund-6-reaction-3",
-              "scope": "comment"
-            }
-          ],
-          "damageFormula": "",
-          "minimumLevel": 6,
-          "id": "combat-style-huskarl-skytte-grund-6",
-          "aiInstructions": "",
-          "active": true,
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "secondarySave": {
-            "enabled": false
-          },
-          "effects": [
-            {
-              "type": "damage",
-              "on": "hit",
-              "damageType": "",
-              "inheritWeaponDamageType": true,
-              "target": "target",
-              "id": "combat-style-huskarl-skytte-grund-6-weapon-damage",
-              "formula": "",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "magical": false
-            }
-          ],
-          "cultureTraining": {
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "requiresMounted": false,
-            "requiresShield": false,
-            "schemaVersion": 1,
-            "branchId": "skytte-bow",
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresTwoHands": false,
-            "requiresDualWield": false,
-            "cultureIds": [
-              "aldrimar"
-            ]
-          },
-          "maximumTargets": 1,
-          "auraBypass": {
-            "resourceId": "aura-focus",
-            "cost": 1,
-            "allowed": true
-          },
-          "activationType": "action",
-          "targetDefenseModifier": 0,
-          "target": "Ein Gegner",
-          "cenyrTraining": {
-            "weaponRuleSetId": "",
-            "uchelwyrCompatible": false,
-            "assignedSlotId": "",
-            "designNotes": "",
-            "allowedClassIds": [],
-            "requiresMounted": false,
-            "slotBands": [],
-            "sourceStatus": "",
-            "branchId": "",
-            "classWeaponProfiles": {},
-            "selectedAtLevel": null
-          },
-          "weaponTypes": [
-            "bow"
-          ],
-          "combatStyleId": "huskarl-waffenlehre",
-          "name": "Grenzwächterschuss",
-          "status": "confirmed",
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "damageBonus": 0,
-          "followUpAttack": {
-            "enabled": false
-          },
-          "live": true,
-          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
-          "damageType": "",
-          "trainingForm": "Stand des Schildes",
-          "damageModel": {
-            "bonusWeaponDice": 1,
-            "mode": "weapon-dice",
-            "weaponDiceMultiplier": 1,
-            "bonusWeaponDieCap": 8,
-            "bonusFormula": "",
-            "bonusModifier": 1,
-            "scalingSteps": [
-              {
-                "formula": "1d4",
-                "level": 7
-              },
-              {
-                "formula": "1d6",
-                "level": 9
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ]
-          },
-          "category": "technique",
-          "description": "Ein kräftiger, einzelner Bogenschuss.",
-          "duration": "",
-          "triggerRules": [],
-          "rollMode": "normal",
-          "mechanics": {},
-          "combatStyleFormId": "huskarl-schildgrund",
-          "compatibleWeaponIds": [],
-          "effect": "Ein kräftiger, einzelner Bogenschuss.",
-          "range": "Waffenreichweite"
-        },
-        {
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "attackBonus": 0,
-          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
-          "effects": [
-            {
-              "target": "target",
-              "on": "hit",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "formula": "",
-              "inheritWeaponDamageType": true,
-              "id": "combat-style-huskarl-skytte-wahl-1-weapon-damage",
-              "type": "damage",
-              "magical": false,
-              "damageType": ""
-            }
-          ],
-          "live": true,
-          "category": "technique",
-          "criticalThreshold": 20,
-          "status": "confirmed",
-          "target": "Ein Gegner",
-          "targetDefenseModifier": 0,
-          "cultureTraining": {
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "schemaVersion": 1,
-            "branchId": "skytte-bow",
-            "requiresTwoHands": false,
-            "requiresDualWield": false,
-            "requiresMounted": false,
-            "slotBands": [
-              "foundation"
-            ],
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "requiresShield": false
-          },
-          "maximumTargets": 1,
-          "active": true,
-          "activationType": "bonus-action",
-          "range": "Waffenreichweite",
-          "minimumLevel": 1,
-          "weaponTypes": [
-            "bow"
-          ],
-          "damageType": "",
-          "mechanics": {},
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "triggerRules": [],
-          "followUpAttack": {
-            "enabled": false
-          },
-          "damageBonus": 0,
-          "damageModel": {
-            "weaponDiceMultiplier": 1,
-            "bonusFormula": "",
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "formula": "1d6",
-                "level": 9
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "level": 17,
-                "formula": "1d10"
-              }
-            ],
-            "bonusWeaponDice": 0,
-            "bonusWeaponDieCap": 6,
-            "mode": "fixed"
-          },
-          "costs": [
-            {
-              "name": "Bonusaktion",
-              "scope": "comment",
-              "resourceId": "bonus-action",
-              "amount": 1,
-              "id": "combat-style-huskarl-skytte-wahl-1-bonus-action-1"
-            }
-          ],
-          "effect": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
-          "combatStyleId": "huskarl-waffenlehre",
-          "description": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
-          "id": "combat-style-huskarl-skytte-wahl-1",
-          "damageFormula": "1d6",
-          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "trainingForm": "Stand des Schildes",
-          "compatibleWeaponIds": [],
-          "secondarySave": {
-            "enabled": false
-          },
-          "name": "Pfeil auf kurze Distanz",
-          "combatStyleFormId": "huskarl-schildgrund"
-        },
-        {
-          "weaponLabel": "Schwert, Axt oder Sax",
-          "attackBonus": 0,
-          "effect": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.",
-          "costs": [
-            {
-              "id": "combat-style-huskarl-skytte-wahl-2-reaction-1",
-              "scope": "comment",
-              "resourceId": "reaction",
-              "name": "Reaktion",
-              "amount": 1
-            }
-          ],
-          "effects": [
-            {
-              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-              "condition": {
-                "tags": "Huskarl-Waffenlehre",
-                "mechanics": {
-                  "armorClass": 1
-                },
-                "id": "huskarl-deckung",
-                "durationModel": {
-                  "kind": "actor-comments",
-                  "remainingActorComments": 1
-                },
-                "duration": "1 eigener Beitrag",
-                "name": "Feste Deckung",
-                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
-              },
-              "on": "always",
-              "type": "buff",
-              "target": "self",
-              "id": "combat-style-huskarl-skytte-wahl-2-condition"
-            }
-          ],
-          "auraBypass": {
-            "resourceId": "aura-focus",
-            "allowed": true,
-            "cost": 1
-          },
-          "combatStyleFormId": "huskarl-schildgrund",
-          "targetDefenseModifier": 0,
-          "minimumLevel": 1,
-          "maximumTargets": 1,
-          "live": true,
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "dagger"
-          ],
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "activationType": "reaction",
-          "name": "Sax in der Hut",
-          "target": "Selbst",
-          "status": "confirmed",
-          "damageFormula": "",
-          "damageBonus": 0,
-          "triggerRules": [],
-          "damageModel": {
-            "mode": "fixed",
-            "scalingSteps": []
-          },
-          "cultureTraining": {
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "requiresTwoHands": false,
-            "requiresMounted": false,
-            "slotBands": [
-              "foundation"
-            ],
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresDualWield": false,
-            "requiresShield": false,
-            "schemaVersion": 1,
-            "branchId": "skytte-sidearm"
-          },
-          "secondarySave": {
-            "enabled": false
-          },
-          "description": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "compatibleWeaponIds": [],
-          "requirements": "Schwert, Axt oder Sax",
-          "category": "technique",
-          "damageType": "",
-          "range": "Waffenreichweite",
-          "mechanics": {},
-          "id": "combat-style-huskarl-skytte-wahl-2",
-          "combatStyleId": "huskarl-waffenlehre",
-          "criticalThreshold": 20,
-          "active": true,
-          "trainingForm": "Stand des Schildes"
-        },
-        {
-          "damageBonus": 0,
-          "maximumTargets": 1,
-          "id": "combat-style-huskarl-skytte-wahl-3",
-          "activationType": "action",
-          "category": "technique",
-          "active": true,
-          "cultureTraining": {
-            "requiresShield": false,
-            "branchId": "skytte-spear",
-            "requiresTwoHands": false,
-            "schemaVersion": 1,
-            "requiresMounted": false,
-            "requiresDualWield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "slotBands": [
-              "foundation"
-            ]
-          },
-          "description": "Ein gezielter Einzelangriff mit der geführten Waffe.",
-          "combatStyleFormId": "huskarl-schildgrund",
-          "damageType": "",
-          "minimumLevel": 2,
-          "damageModel": {
-            "bonusWeaponDieCap": 6,
-            "bonusWeaponDice": 1,
-            "weaponDiceMultiplier": 1,
-            "bonusFormula": "",
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ],
-            "mode": "weapon-dice"
-          },
-          "compatibleWeaponIds": [],
-          "status": "confirmed",
-          "targetDefenseModifier": 0,
-          "name": "Speer aus dem Knie",
-          "target": "Ein Gegner",
-          "costs": [
-            {
-              "resourceId": "action",
-              "id": "combat-style-huskarl-skytte-wahl-3-action-1",
-              "amount": 1,
-              "scope": "comment",
-              "name": "Aktion"
-            }
-          ],
-          "trainingForm": "Stand des Schildes",
-          "range": "Waffenreichweite",
-          "attackBonus": 0,
-          "weaponLabel": "Speer",
-          "damageFormula": "",
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "effects": [
-            {
-              "magical": false,
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "formula": "",
-              "inheritWeaponDamageType": true,
-              "id": "combat-style-huskarl-skytte-wahl-3-weapon-damage",
-              "target": "target",
-              "on": "hit",
-              "type": "damage",
-              "damageType": ""
-            }
-          ],
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "requirements": "Speer",
-          "live": true,
-          "secondarySave": {
-            "enabled": false
-          },
-          "auraBypass": {
-            "cost": 1,
-            "allowed": true,
-            "resourceId": "aura-focus"
-          },
-          "effect": "Ein gezielter Einzelangriff mit der geführten Waffe.",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "triggerRules": [],
-          "mechanics": {},
-          "combatStyleId": "huskarl-waffenlehre",
-          "criticalThreshold": 20,
-          "weaponTypes": [
-            "spear"
-          ]
-        },
-        {
-          "triggerRules": [],
-          "attackBonus": 0,
-          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "mechanics": {},
-          "combatStyleFormId": "huskarl-schildgrund",
-          "auraBypass": {
-            "allowed": true,
-            "cost": 1,
-            "resourceId": "aura-focus"
-          },
-          "weaponTypes": [
-            "bow"
-          ],
-          "trainingForm": "Stand des Schildes",
-          "effect": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
-          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
-          "name": "Ziel zwischen den Zweigen",
-          "category": "technique",
-          "range": "Waffenreichweite",
-          "id": "combat-style-huskarl-skytte-wahl-4",
-          "effects": [
-            {
-              "notes": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
-              "id": "combat-style-huskarl-skytte-wahl-4-aim",
-              "condition": {
-                "id": "huskarl-zielen",
-                "description": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
-                "mechanics": {
-                  "attack": 1
-                },
-                "tags": "Huskarl-Waffenlehre",
-                "name": "Gesammelte Ruhe",
-                "duration": "1 eigener Beitrag",
-                "durationModel": {
-                  "remainingActorComments": 1,
-                  "kind": "actor-comments"
-                }
-              },
-              "on": "always",
-              "type": "buff",
-              "target": "self"
-            }
-          ],
-          "live": true,
-          "costs": [
-            {
-              "resourceId": "bonus-action",
-              "amount": 1,
-              "name": "Bonusaktion",
-              "id": "combat-style-huskarl-skytte-wahl-4-bonus-action-1",
-              "scope": "comment"
-            },
-            {
-              "scope": "comment",
-              "resourceId": "reaction",
-              "name": "Reaktion",
-              "id": "combat-style-huskarl-skytte-wahl-4-reaction-2",
-              "amount": 1
-            }
-          ],
-          "description": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
-          "damageFormula": "",
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "damageModel": {
-            "scalingSteps": [],
-            "mode": "fixed"
-          },
-          "criticalThreshold": 20,
-          "damageBonus": 0,
-          "targetDefenseModifier": 0,
-          "secondarySave": {
-            "enabled": false
-          },
-          "active": true,
-          "damageType": "",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "target": "Selbst",
-          "status": "confirmed",
-          "compatibleWeaponIds": [],
-          "cultureTraining": {
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "branchId": "skytte-bow",
-            "requiresTwoHands": false,
-            "schemaVersion": 1,
-            "slotBands": [
-              "foundation"
-            ],
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "requiresMounted": false,
-            "requiresDualWield": false,
-            "requiresShield": false
-          },
-          "maximumTargets": 1,
-          "minimumLevel": 2,
-          "combatStyleId": "huskarl-waffenlehre",
-          "activationType": "bonus-action"
-        },
-        {
-          "compatibleWeaponIds": [],
-          "status": "confirmed",
-          "criticalThreshold": 20,
-          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
-          "attackBonus": 1,
-          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
-          "damageFormula": "",
-          "target": "Ein Gegner",
-          "name": "Schuss auf die Öffnung",
-          "trainingForm": "Stand des Schildes",
-          "mechanics": {},
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "costs": [
-            {
-              "name": "Aktion",
-              "amount": 1,
-              "resourceId": "action",
-              "id": "combat-style-huskarl-skytte-wahl-5-action-1",
-              "scope": "comment"
-            },
-            {
-              "resourceId": "bonus-action",
-              "id": "combat-style-huskarl-skytte-wahl-5-bonus-action-2",
-              "amount": 1,
-              "scope": "comment",
-              "name": "Bonusaktion"
-            }
-          ],
-          "secondarySave": {
-            "enabled": false
-          },
-          "triggerRules": [],
-          "cultureTraining": {
-            "branchId": "skytte-bow",
-            "requiresTwoHands": false,
-            "schemaVersion": 1,
-            "requiresDualWield": false,
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresShield": false,
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresMounted": false
-          },
-          "targetDefenseModifier": 0,
-          "damageType": "",
-          "active": true,
-          "combatStyleId": "huskarl-waffenlehre",
-          "activationType": "action",
-          "weaponTypes": [
-            "bow"
-          ],
-          "maximumTargets": 1,
-          "damageBonus": 0,
-          "effect": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
-          "effects": [
-            {
-              "magical": false,
-              "on": "hit",
-              "damageType": "",
-              "formula": "",
-              "type": "damage",
-              "inheritWeaponDamageType": true,
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "id": "combat-style-huskarl-skytte-wahl-5-weapon-damage",
-              "target": "target"
-            }
-          ],
-          "category": "technique",
-          "minimumLevel": 3,
-          "followUpAttack": {
-            "enabled": false
-          },
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "description": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
-          "id": "combat-style-huskarl-skytte-wahl-5",
-          "damageModel": {
-            "weaponDiceMultiplier": 1,
-            "bonusWeaponDieCap": 8,
-            "bonusWeaponDice": 1,
-            "bonusFormula": "",
-            "mode": "weapon-dice",
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ]
-          },
-          "range": "Waffenreichweite",
-          "combatStyleFormId": "huskarl-schildgrund",
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "live": true
-        },
-        {
-          "compatibleWeaponIds": [],
-          "weaponLabel": "Schwert, Axt oder Sax",
-          "attackBonus": 0,
-          "effects": [
-            {
-              "on": "always",
-              "condition": {
-                "durationModel": {
-                  "kind": "actor-comments",
-                  "remainingActorComments": 1
-                },
-                "name": "Sicherer Schritt",
-                "description": "+2 m Bewegung für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung.",
-                "mechanics": {
-                  "movement": 2
-                },
-                "duration": "1 eigener Beitrag",
-                "id": "huskarl-bewegung",
-                "tags": "Huskarl-Waffenlehre"
-              },
-              "type": "buff",
-              "notes": "+2 m Bewegung für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung.",
-              "id": "combat-style-huskarl-skytte-wahl-6-mobility",
-              "target": "self"
-            }
-          ],
-          "mechanics": {},
-          "target": "Selbst",
-          "activationType": "bonus-action",
-          "category": "technique",
-          "maximumTargets": 1,
-          "status": "confirmed",
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "combatStyleFormId": "huskarl-schildgrund",
-          "id": "combat-style-huskarl-skytte-wahl-6",
-          "active": true,
-          "live": true,
-          "auraBypass": {
-            "cost": 1,
-            "allowed": true,
-            "resourceId": "aura-focus"
-          },
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "dagger"
-          ],
-          "targetDefenseModifier": 0,
-          "minimumLevel": 3,
-          "range": "Waffenreichweite",
-          "damageFormula": "",
-          "costs": [
-            {
-              "id": "combat-style-huskarl-skytte-wahl-6-bonus-action-1",
-              "scope": "comment",
-              "amount": 1,
-              "resourceId": "bonus-action",
-              "name": "Bonusaktion"
-            }
-          ],
-          "criticalThreshold": 20,
-          "damageBonus": 0,
-          "triggerRules": [],
-          "secondarySave": {
-            "enabled": false
-          },
-          "damageModel": {
-            "mode": "fixed",
-            "scalingSteps": []
-          },
-          "damageType": "",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "name": "Leiser Standortwechsel",
-          "description": "+2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf.",
-          "effect": "+2 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf.",
-          "trainingForm": "Stand des Schildes",
-          "cultureTraining": {
-            "requiresShield": false,
-            "branchId": "skytte-sidearm",
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresDualWield": false,
-            "slotBands": [
-              "foundation"
-            ],
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "requiresMounted": false,
-            "schemaVersion": 1,
-            "requiresTwoHands": false
-          },
-          "followUpAttack": {
-            "enabled": false
-          },
-          "requirements": "Schwert, Axt oder Sax",
-          "combatStyleId": "huskarl-waffenlehre"
-        },
-        {
-          "costs": [
-            {
-              "scope": "comment",
-              "name": "Aktion",
-              "amount": 1,
-              "resourceId": "action",
-              "id": "combat-style-huskarl-skytte-wahl-7-action-1"
-            },
-            {
-              "amount": 1,
-              "scope": "comment",
-              "name": "Reaktion",
-              "resourceId": "reaction",
-              "id": "combat-style-huskarl-skytte-wahl-7-reaction-2"
-            }
-          ],
-          "followUpAttack": {
-            "enabled": false
-          },
-          "effects": [
-            {
-              "inheritWeaponDamageType": true,
-              "type": "damage",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "on": "hit",
-              "magical": false,
-              "target": "target",
-              "id": "combat-style-huskarl-skytte-wahl-7-weapon-damage",
-              "damageType": "",
-              "formula": ""
-            }
-          ],
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "minimumLevel": 4,
-          "secondarySave": {
-            "dcBase": 8,
-            "addProficiency": true,
-            "attributeKey": "strength",
-            "enabled": true,
-            "failureCondition": {
-              "duration": "1 eigener Beitrag",
-              "tags": "Huskarl-Waffenlehre",
-              "id": "combat-style-huskarl-skytte-wahl-7-failed-save",
-              "description": "−2 m Bewegung für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
-              "mechanics": {
-                "movement": -2
-              },
-              "name": "Gehemmter Schritt"
-            },
-            "dcAttributeKey": "strength"
-          },
-          "auraBypass": {
-            "cost": 1,
-            "allowed": true,
-            "resourceId": "aura-focus"
-          },
-          "category": "technique",
-          "damageFormula": "",
-          "combatStyleId": "huskarl-waffenlehre",
-          "cultureTraining": {
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresTwoHands": false,
-            "requiresDualWield": false,
-            "requiresShield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "schemaVersion": 1,
-            "branchId": "skytte-spear",
-            "requiresMounted": false
-          },
-          "id": "combat-style-huskarl-skytte-wahl-7",
-          "damageBonus": 0,
-          "damageModel": {
-            "bonusWeaponDieCap": 8,
-            "bonusWeaponDice": 1,
-            "mode": "weapon-dice",
-            "weaponDiceMultiplier": 1,
-            "bonusFormula": "",
-            "scalingSteps": [
-              {
-                "formula": "1d4",
-                "level": 7
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "level": 17,
-                "formula": "1d10"
-              }
-            ]
-          },
-          "name": "Speer gegen den Schritt",
-          "criticalThreshold": 20,
-          "description": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −2 m Bewegung für einen eigenen Beitrag.",
-          "effect": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −2 m Bewegung für einen eigenen Beitrag.",
-          "compatibleWeaponIds": [],
-          "live": true,
-          "active": true,
-          "requirements": "Speer",
-          "mechanics": {},
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "weaponTypes": [
-            "spear"
-          ],
-          "trainingForm": "Stand des Schildes",
-          "targetDefenseModifier": 0,
-          "combatStyleFormId": "huskarl-schildgrund",
-          "activationType": "action",
-          "weaponLabel": "Speer",
-          "attackBonus": 0,
-          "triggerRules": [],
-          "maximumTargets": 1,
-          "target": "Ein Gegner",
-          "damageType": "",
-          "range": "Waffenreichweite",
-          "status": "confirmed"
-        },
-        {
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "secondarySave": {
-            "enabled": false
-          },
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "dagger"
-          ],
-          "criticalThreshold": 20,
-          "triggerRules": [],
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "damageFormula": "",
-          "active": true,
-          "live": true,
-          "mechanics": {},
-          "activationType": "bonus-action",
-          "target": "Selbst",
-          "trainingForm": "Stand des Schildes",
-          "id": "combat-style-huskarl-skytte-wahl-8",
-          "combatStyleId": "huskarl-waffenlehre",
-          "status": "confirmed",
-          "maximumTargets": 1,
-          "targetDefenseModifier": 0,
-          "costs": [
-            {
-              "resourceId": "bonus-action",
-              "id": "combat-style-huskarl-skytte-wahl-8-bonus-action-1",
-              "scope": "comment",
-              "amount": 1,
-              "name": "Bonusaktion"
-            },
-            {
-              "resourceId": "reaction",
-              "scope": "comment",
-              "amount": 1,
-              "name": "Reaktion",
-              "id": "combat-style-huskarl-skytte-wahl-8-reaction-2"
-            }
-          ],
-          "damageType": "",
-          "weaponLabel": "Schwert, Axt oder Sax",
-          "attackBonus": 0,
-          "requirements": "Schwert, Axt oder Sax",
-          "cultureTraining": {
-            "requiresShield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "slotBands": [
-              "foundation"
-            ],
-            "branchId": "skytte-sidearm",
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "schemaVersion": 1,
-            "requiresMounted": false,
-            "requiresDualWield": false,
-            "requiresTwoHands": false
-          },
-          "followUpAttack": {
-            "enabled": false
-          },
-          "auraBypass": {
-            "cost": 1,
-            "allowed": true,
-            "resourceId": "aura-focus"
-          },
-          "category": "technique",
-          "effects": [
-            {
-              "condition": {
-                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-                "duration": "1 eigener Beitrag",
-                "id": "huskarl-deckung",
-                "tags": "Huskarl-Waffenlehre",
-                "durationModel": {
-                  "kind": "actor-comments",
-                  "remainingActorComments": 1
-                },
-                "mechanics": {
-                  "armorClass": 2
-                },
-                "name": "Feste Deckung"
-              },
-              "type": "buff",
-              "on": "always",
-              "target": "self",
-              "id": "combat-style-huskarl-skytte-wahl-8-condition",
-              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
-            }
-          ],
-          "range": "Waffenreichweite",
-          "compatibleWeaponIds": [],
-          "damageModel": {
-            "scalingSteps": [],
-            "mode": "fixed"
-          },
-          "name": "Deckung im Unterholz",
-          "effect": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.",
-          "description": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.",
-          "minimumLevel": 4,
-          "damageBonus": 0,
-          "combatStyleFormId": "huskarl-schildgrund"
-        },
-        {
-          "combatStyleId": "huskarl-waffenlehre",
-          "effect": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
-          "range": "Waffenreichweite",
-          "attackBonus": 0,
-          "weaponLabel": "Schwert, Axt oder Sax",
-          "requirements": "Schwert, Axt oder Sax",
-          "criticalThreshold": 20,
-          "maximumTargets": 1,
-          "trainingForm": "Stand des Schildes",
-          "effects": [
-            {
-              "on": "hit",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "type": "damage",
-              "inheritWeaponDamageType": true,
-              "magical": false,
-              "target": "target",
-              "id": "combat-style-huskarl-skytte-wahl-9-weapon-damage",
-              "formula": "",
-              "damageType": ""
-            }
-          ],
-          "activationType": "action",
-          "triggerRules": [],
-          "live": true,
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "id": "combat-style-huskarl-skytte-wahl-9",
-          "secondarySave": {
-            "dcBase": 8,
-            "failureCondition": {
-              "mechanics": {
-                "attack": -1
-              },
-              "name": "Gebundene Waffenführung",
-              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
-              "id": "combat-style-huskarl-skytte-wahl-9-failed-save",
-              "duration": "1 eigener Beitrag",
-              "tags": "Huskarl-Waffenlehre"
-            },
-            "addProficiency": true,
-            "enabled": true,
-            "dcAttributeKey": "strength",
-            "attributeKey": "strength"
-          },
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "dagger"
-          ],
-          "damageFormula": "",
-          "damageBonus": 0,
-          "status": "confirmed",
-          "targetDefenseModifier": 0,
-          "minimumLevel": 5,
-          "target": "Ein Gegner",
-          "damageType": "",
-          "name": "Axt am Waffenarm",
-          "description": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
-          "mechanics": {},
-          "compatibleWeaponIds": [],
-          "damageModel": {
-            "bonusWeaponDieCap": 8,
-            "mode": "weapon-dice",
-            "weaponDiceMultiplier": 1,
-            "bonusWeaponDice": 1,
-            "bonusFormula": "",
-            "scalingSteps": [
-              {
-                "formula": "1d4",
-                "level": 7
-              },
-              {
-                "formula": "1d6",
-                "level": 9
-              },
-              {
-                "formula": "1d8",
-                "level": 13
-              },
-              {
-                "formula": "1d10",
-                "level": 17
-              }
-            ]
-          },
-          "cultureTraining": {
-            "requiresShield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "requiresDualWield": false,
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresTwoHands": false,
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "requiresMounted": false,
-            "schemaVersion": 1,
-            "branchId": "skytte-sidearm"
-          },
-          "category": "technique",
-          "combatStyleFormId": "huskarl-schildgrund",
-          "costs": [
-            {
-              "scope": "comment",
-              "id": "combat-style-huskarl-skytte-wahl-9-action-1",
-              "amount": 1,
-              "resourceId": "action",
-              "name": "Aktion"
-            },
-            {
-              "amount": 1,
-              "id": "combat-style-huskarl-skytte-wahl-9-reaction-2",
-              "name": "Reaktion",
-              "resourceId": "reaction",
-              "scope": "comment"
-            }
-          ],
-          "active": true,
-          "followUpAttack": {
-            "enabled": false
-          }
-        },
-        {
-          "category": "technique",
-          "mechanics": {},
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
-          "attackBonus": 0,
-          "triggerRules": [],
-          "live": true,
-          "effect": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
-          "combatStyleId": "huskarl-waffenlehre",
-          "compatibleWeaponIds": [],
-          "followUpAttack": {
-            "enabled": false
-          },
-          "cultureTraining": {
-            "requiresShield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "slotBands": [
-              "foundation"
-            ],
-            "branchId": "skytte-bow",
-            "requiresTwoHands": false,
-            "schemaVersion": 1,
-            "requiresDualWield": false,
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skytte"
-            ]
-          },
-          "combatStyleFormId": "huskarl-schildgrund",
-          "range": "Waffenreichweite",
-          "effects": [
-            {
-              "target": "target",
-              "damageType": "",
-              "inheritWeaponDamageType": true,
-              "on": "hit",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "formula": "",
-              "id": "combat-style-huskarl-skytte-wahl-10-weapon-damage",
-              "type": "damage",
-              "magical": false
-            }
-          ],
-          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
-          "damageFormula": "",
-          "targetDefenseModifier": 0,
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "trainingForm": "Stand des Schildes",
-          "weaponTypes": [
-            "bow"
-          ],
-          "secondarySave": {
-            "enabled": false
-          },
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "target": "Ein Gegner",
-          "damageBonus": 0,
-          "damageType": "",
-          "status": "confirmed",
-          "description": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
-          "damageModel": {
-            "bonusModifier": 1,
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "formula": "1d6",
-                "level": 9
-              },
-              {
-                "formula": "1d8",
-                "level": 13
-              },
-              {
-                "level": 17,
-                "formula": "1d10"
-              }
-            ],
-            "bonusFormula": "",
-            "bonusWeaponDieCap": 8,
-            "bonusWeaponDice": 1,
-            "mode": "weapon-dice",
-            "weaponDiceMultiplier": 1
-          },
-          "costs": [
-            {
-              "amount": 1,
-              "scope": "comment",
-              "id": "combat-style-huskarl-skytte-wahl-10-action-1",
-              "resourceId": "action",
-              "name": "Aktion"
-            },
-            {
-              "amount": 1,
-              "name": "Besondere Aktion",
-              "resourceId": "special-action",
-              "id": "combat-style-huskarl-skytte-wahl-10-special-action-2",
-              "scope": "persistent"
-            }
-          ],
-          "minimumLevel": 5,
-          "id": "combat-style-huskarl-skytte-wahl-10",
-          "criticalThreshold": 20,
-          "maximumTargets": 1,
-          "name": "Voller Jagdauszug",
-          "active": true,
-          "activationType": "action"
-        },
-        {
-          "status": "confirmed",
-          "damageBonus": 0,
-          "damageFormula": "",
-          "target": "Selbst",
-          "combatStyleFormId": "huskarl-schildgrund",
-          "description": "+2 RK für einen eigenen Beitrag und 1W4 temporäre TP. Temporäre TP werden nicht addiert.",
-          "live": true,
-          "damageType": "",
-          "damageModel": {
-            "mode": "fixed",
-            "scalingSteps": []
-          },
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "compatibleWeaponIds": [],
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "costs": [
-            {
-              "resourceId": "reaction",
-              "amount": 1,
-              "name": "Reaktion",
-              "id": "combat-style-huskarl-skytte-wahl-11-reaction-1",
-              "scope": "comment"
-            },
-            {
-              "resourceId": "special-action",
-              "scope": "persistent",
-              "id": "combat-style-huskarl-skytte-wahl-11-special-action-2",
-              "amount": 1,
-              "name": "Besondere Aktion"
-            }
-          ],
-          "secondarySave": {
-            "enabled": false
-          },
-          "maximumTargets": 1,
-          "activationType": "reaction",
-          "minimumLevel": 6,
-          "active": true,
-          "combatStyleId": "huskarl-waffenlehre",
-          "effects": [
-            {
-              "target": "self",
-              "id": "combat-style-huskarl-skytte-wahl-11-condition",
-              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-              "type": "buff",
-              "condition": {
-                "id": "huskarl-deckung",
-                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
-                "mechanics": {
-                  "armorClass": 2
-                },
-                "tags": "Huskarl-Waffenlehre",
-                "name": "Feste Deckung",
-                "duration": "1 eigener Beitrag",
-                "durationModel": {
-                  "remainingActorComments": 1,
-                  "kind": "actor-comments"
-                }
-              },
-              "on": "always"
-            },
-            {
-              "formula": "1d4",
-              "target": "self",
-              "on": "always",
-              "type": "temporary-hit-points",
-              "id": "combat-style-huskarl-skytte-wahl-11-resolve",
-              "notes": "Temporäre TP ersetzen nur einen niedrigeren vorhandenen Vorrat; sie werden nicht addiert."
-            }
-          ],
-          "category": "technique",
-          "effect": "+2 RK für einen eigenen Beitrag und 1W4 temporäre TP. Temporäre TP werden nicht addiert.",
-          "cultureTraining": {
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "requiresMounted": false,
-            "branchId": "skytte-spear",
-            "requiresDualWield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "schemaVersion": 1,
-            "requiresTwoHands": false,
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresShield": false
-          },
-          "triggerRules": [],
-          "followUpAttack": {
-            "enabled": false
-          },
-          "attackBonus": 0,
-          "weaponLabel": "Speer",
-          "id": "combat-style-huskarl-skytte-wahl-11",
-          "targetDefenseModifier": 0,
-          "range": "Waffenreichweite",
-          "criticalThreshold": 20,
-          "name": "Stand hinter dem Speer",
-          "mechanics": {},
-          "requirements": "Speer",
-          "auraBypass": {
-            "cost": 1,
-            "resourceId": "aura-focus",
-            "allowed": true
-          },
-          "trainingForm": "Stand des Schildes",
-          "weaponTypes": [
-            "spear"
-          ]
-        },
-        {
-          "live": true,
-          "category": "technique",
-          "mechanics": {},
-          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
-          "active": true,
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "dagger"
-          ],
-          "damageType": "",
-          "range": "Waffenreichweite",
-          "id": "combat-style-huskarl-skytte-wahl-12",
-          "criticalThreshold": 20,
-          "activationType": "action",
-          "minimumLevel": 6,
-          "effects": [
-            {
-              "id": "combat-style-huskarl-skytte-wahl-12-weapon-damage",
-              "inheritWeaponDamageType": true,
-              "magical": false,
-              "damageType": "",
-              "formula": "",
-              "on": "hit",
-              "target": "target",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "type": "damage"
-            },
-            {
-              "type": "buff",
-              "target": "self",
-              "condition": {
-                "id": "huskarl-bewegung",
-                "durationModel": {
-                  "kind": "actor-comments",
-                  "remainingActorComments": 1
-                },
-                "tags": "Huskarl-Waffenlehre",
-                "mechanics": {
-                  "movement": 1
-                },
-                "name": "Sicherer Schritt",
-                "duration": "1 eigener Beitrag",
-                "description": "+1 m Bewegung für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung."
-              },
-              "on": "hit",
-              "id": "combat-style-huskarl-skytte-wahl-12-mobility",
-              "notes": "+1 m Bewegung für einen eigenen Beitrag; keine freie Bewegung oder automatische Loslösung."
-            }
-          ],
-          "maximumTargets": 1,
-          "target": "Ein Gegner",
-          "status": "confirmed",
-          "weaponLabel": "Schwert, Axt oder Sax",
-          "attackBonus": 0,
-          "followUpAttack": {
-            "enabled": false
-          },
-          "combatStyleId": "huskarl-waffenlehre",
-          "triggerRules": [],
-          "compatibleWeaponIds": [],
-          "requirements": "Schwert, Axt oder Sax",
-          "costs": [
-            {
-              "scope": "comment",
-              "amount": 1,
-              "id": "combat-style-huskarl-skytte-wahl-12-action-1",
-              "resourceId": "action",
-              "name": "Aktion"
-            },
-            {
-              "name": "Bonusaktion",
-              "amount": 1,
-              "resourceId": "bonus-action",
-              "id": "combat-style-huskarl-skytte-wahl-12-bonus-action-2",
-              "scope": "comment"
-            }
-          ],
-          "description": "Ein Einzelangriff. Bei Treffer +1 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung.",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "damageModel": {
-            "weaponDiceMultiplier": 1,
-            "bonusWeaponDice": 1,
-            "mode": "weapon-dice",
-            "bonusWeaponDieCap": 8,
-            "scalingSteps": [
-              {
-                "level": 7,
-                "formula": "1d4"
-              },
-              {
-                "level": 9,
-                "formula": "1d6"
-              },
-              {
-                "level": 13,
-                "formula": "1d8"
-              },
-              {
-                "level": 17,
-                "formula": "1d10"
-              }
-            ],
-            "bonusFormula": ""
-          },
-          "secondarySave": {
-            "enabled": false
-          },
-          "combatStyleFormId": "huskarl-schildgrund",
-          "cultureTraining": {
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "branchId": "skytte-sidearm",
-            "slotBands": [
-              "foundation"
-            ],
-            "requiresDualWield": false,
-            "requiresShield": false,
-            "requiresTwoHands": false,
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "requiresMounted": false,
-            "schemaVersion": 1
-          },
-          "damageBonus": 0,
-          "name": "Klinge am Wildwechsel",
-          "targetDefenseModifier": 0,
-          "trainingForm": "Stand des Schildes",
-          "damageFormula": "",
-          "effect": "Ein Einzelangriff. Bei Treffer +1 m Bewegungsbudget für einen eigenen Beitrag; keine freie Bewegung."
-        },
-        {
-          "live": true,
-          "damageBonus": 0,
-          "tags": "Huskarl-Waffenlehre · skytte · Schritt des Huskarls",
-          "targetDefenseModifier": 0,
-          "compatibleWeaponIds": [],
-          "cultureTraining": {
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "slotBands": [
-              "advanced"
-            ],
-            "branchId": "skytte-spear",
-            "requiresShield": false,
-            "requiresTwoHands": false,
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "requiresMounted": false,
-            "schemaVersion": 1,
-            "requiresDualWield": false
-          },
-          "aiInstructions": "",
-          "description": "Nahkampftreffer; danach +1 RK für einen eigenen Beitrag.",
-          "active": true,
-          "mechanics": {},
-          "damageModel": {
-            "bonusModifier": 1,
-            "mode": "weapon-dice",
-            "scalingSteps": [
-              {
-                "level": 9,
-                "formula": "1d4"
-              },
-              {
-                "level": 13,
-                "formula": "1d6"
-              },
-              {
-                "level": 17,
-                "formula": "1d8"
-              }
-            ],
-            "bonusFormula": "",
-            "bonusWeaponDieCap": 8,
-            "bonusWeaponDice": 1,
-            "weaponDiceMultiplier": 1
-          },
-          "minimumLevel": 7,
-          "effects": [
-            {
-              "formula": "",
-              "target": "target",
-              "magical": false,
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "id": "combat-style-huskarl-skytte-grund-7-weapon-damage",
-              "damageType": "",
-              "type": "damage",
-              "on": "hit",
-              "inheritWeaponDamageType": true
-            },
-            {
-              "type": "buff",
-              "condition": {
-                "id": "huskarl-deckung",
-                "durationModel": {
-                  "kind": "actor-comments",
-                  "remainingActorComments": 1
-                },
-                "name": "Feste Deckung",
-                "duration": "1 eigener Beitrag",
-                "mechanics": {
-                  "armorClass": 1
-                },
-                "tags": "Huskarl-Waffenlehre",
-                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
-              },
-              "on": "hit",
-              "target": "self",
-              "id": "combat-style-huskarl-skytte-grund-7-condition",
-              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
-            }
-          ],
-          "status": "confirmed",
-          "range": "Waffenreichweite",
-          "target": "Ein Gegner",
-          "activationType": "action",
-          "combatStyleFormId": "huskarl-fester-schritt",
-          "auraBypass": {
-            "allowed": true,
-            "cost": 1,
-            "resourceId": "aura-focus"
-          },
-          "maximumTargets": 1,
-          "secondarySave": {
-            "enabled": false
-          },
-          "damageType": "",
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "trainingForm": "Schritt des Huskarls",
-          "category": "technique",
-          "attackBonus": 0,
-          "weaponLabel": "Speer",
-          "id": "combat-style-huskarl-skytte-grund-7",
-          "damageFormula": "",
-          "costs": [
-            {
-              "id": "combat-style-huskarl-skytte-grund-7-action-1",
-              "name": "Aktion",
-              "amount": 1,
-              "resourceId": "action",
-              "scope": "comment"
-            },
-            {
-              "scope": "comment",
-              "name": "Reaktion",
-              "id": "combat-style-huskarl-skytte-grund-7-reaction-2",
-              "amount": 1,
-              "resourceId": "reaction"
-            }
-          ],
-          "followUpAttack": {
-            "enabled": false
-          },
-          "criticalThreshold": 20,
-          "requirements": "Speer",
-          "effect": "Nahkampftreffer; danach +1 RK für einen eigenen Beitrag.",
-          "cenyrTraining": {
-            "weaponRuleSetId": "",
-            "uchelwyrCompatible": false,
-            "sourceStatus": "",
-            "slotBands": [],
-            "allowedClassIds": [],
-            "classWeaponProfiles": {},
-            "requiresMounted": false,
-            "designNotes": "",
-            "assignedSlotId": "",
-            "selectedAtLevel": null,
-            "branchId": ""
-          },
-          "combatStyleId": "huskarl-waffenlehre",
-          "rollMode": "normal",
-          "triggerRules": [],
-          "name": "Abstand mit dem Speer",
-          "duration": "",
-          "weaponTypes": [
-            "spear"
-          ]
-        },
-        {
-          "maximumTargets": 1,
-          "weaponTypes": [
-            "bow"
-          ],
-          "activationType": "action",
-          "status": "confirmed",
-          "cultureTraining": {
-            "branchId": "skytte-bow",
-            "requiresTwoHands": false,
-            "requiresShield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "schemaVersion": 1,
-            "slotBands": [
-              "advanced"
-            ],
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "requiresDualWield": false,
-            "requiresMounted": false
-          },
-          "live": true,
-          "criticalThreshold": 20,
-          "tags": "Huskarl-Waffenlehre · skytte · Schritt des Huskarls",
-          "target": "Ein Gegner",
-          "active": true,
-          "range": "Waffenreichweite",
-          "minimumLevel": 7,
-          "id": "combat-style-huskarl-skytte-wahl-13",
-          "compatibleWeaponIds": [],
-          "targetDefenseModifier": 0,
-          "damageType": "",
-          "attackBonus": 1,
-          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
-          "effects": [
-            {
-              "magical": false,
-              "on": "hit",
-              "formula": "",
-              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
-              "target": "target",
-              "inheritWeaponDamageType": true,
-              "id": "combat-style-huskarl-skytte-wahl-13-weapon-damage",
-              "damageType": "",
-              "type": "damage"
-            }
-          ],
-          "damageFormula": "",
-          "mechanics": {},
-          "auraBypass": {
-            "allowed": true,
-            "resourceId": "aura-focus",
-            "cost": 1
-          },
-          "triggerRules": [],
-          "effect": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
-          "secondarySave": {
-            "enabled": false
-          },
-          "costs": [
-            {
-              "name": "Aktion",
-              "scope": "comment",
-              "id": "combat-style-huskarl-skytte-wahl-13-action-1",
-              "amount": 1,
-              "resourceId": "action"
-            },
-            {
-              "scope": "comment",
-              "name": "Bonusaktion",
-              "amount": 1,
-              "id": "combat-style-huskarl-skytte-wahl-13-bonus-action-2",
-              "resourceId": "bonus-action"
-            }
-          ],
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "damageModel": {
-            "bonusWeaponDice": 1,
-            "weaponDiceMultiplier": 1,
-            "bonusModifier": 1,
-            "scalingSteps": [
-              {
-                "level": 9,
-                "formula": "1d4"
-              },
-              {
-                "level": 13,
-                "formula": "1d6"
-              },
-              {
-                "formula": "1d8",
-                "level": 17
-              }
-            ],
-            "bonusWeaponDieCap": 8,
-            "bonusFormula": "",
-            "mode": "weapon-dice"
-          },
-          "name": "Versetzter Grenzpfeil",
-          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
-          "description": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "combatStyleFormId": "huskarl-fester-schritt",
-          "combatStyleId": "huskarl-waffenlehre",
-          "category": "technique",
-          "damageBonus": 0,
-          "trainingForm": "Schritt des Huskarls"
-        },
-        {
-          "costs": [
-            {
-              "scope": "comment",
-              "amount": 1,
-              "id": "combat-style-huskarl-skytte-wahl-14-bonus-action-1",
-              "resourceId": "bonus-action",
-              "name": "Bonusaktion"
-            },
-            {
-              "name": "Besondere Aktion",
-              "resourceId": "special-action",
-              "amount": 1,
-              "scope": "persistent",
-              "id": "combat-style-huskarl-skytte-wahl-14-special-action-2"
-            }
-          ],
-          "activationType": "bonus-action",
-          "combatStyleId": "huskarl-waffenlehre",
-          "maximumTargets": 1,
-          "active": true,
-          "mechanics": {},
-          "triggerRules": [],
-          "category": "technique",
-          "id": "combat-style-huskarl-skytte-wahl-14",
-          "auraBypass": {
-            "allowed": true,
-            "cost": 1,
-            "resourceId": "aura-focus"
-          },
-          "live": true,
-          "damageModel": {
-            "scalingSteps": [],
-            "mode": "fixed"
-          },
-          "secondarySave": {
-            "enabled": false
-          },
-          "mechanicNotes": [
-            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
-          ],
-          "tags": "Huskarl-Waffenlehre · skytte · Schritt des Huskarls",
-          "trainingForm": "Schritt des Huskarls",
-          "description": "1W6 temporäre TP; ersetzt nur einen niedrigeren Vorrat. Keine Heilung verlorener TP.",
-          "target": "Selbst",
-          "combatStyleFormId": "huskarl-fester-schritt",
-          "requirements": "Schwert, Axt oder Sax",
-          "damageBonus": 0,
-          "damageFormula": "",
-          "status": "confirmed",
-          "weaponTypes": [
-            "sword",
-            "axe",
-            "dagger"
-          ],
-          "targetDefenseModifier": 0,
-          "name": "Atem des Fährtenlesers",
-          "cultureTraining": {
-            "requiresMounted": false,
-            "allowedClassIds": [
-              "skytte"
-            ],
-            "schemaVersion": 1,
-            "requiresDualWield": false,
-            "cultureIds": [
-              "aldrimar"
-            ],
-            "branchId": "skytte-sidearm",
-            "requiresTwoHands": false,
-            "slotBands": [
-              "advanced"
-            ],
-            "requiresShield": false
-          },
-          "criticalThreshold": 20,
-          "damageType": "",
-          "followUpAttack": {
-            "enabled": false
-          },
-          "effects": [
-            {
-              "on": "always",
-              "notes": "Temporäre TP ersetzen nur einen niedrigeren vorhandenen Vorrat; sie werden nicht addiert.",
-              "formula": "1d6",
-              "id": "combat-style-huskarl-skytte-wahl-14-resolve",
-              "type": "temporary-hit-points",
-              "target": "self"
-            }
-          ],
-          "attackBonus": 0,
-          "weaponLabel": "Schwert, Axt oder Sax",
-          "minimumLevel": 7,
-          "compatibleWeaponIds": [],
-          "range": "Waffenreichweite",
-          "effect": "1W6 temporäre TP; ersetzt nur einen niedrigeren Vorrat. Keine Heilung verlorener TP."
-        },
-        {
           "active": true,
           "minimumLevel": 7,
           "status": "confirmed",
@@ -4522,8 +2058,2672 @@
             "saveFailureBonus": true,
             "repeatCount": 1
           }
+        },
+        {
+          "maximumTargets": 1,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-1-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "attackBonus": 0,
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "criticalThreshold": 20,
+          "activationType": "bonus-action",
+          "name": "Erster Jagdpfeil",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-1-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "category": "technique",
+          "cenyrTraining": {
+            "classWeaponProfiles": {},
+            "slotBands": [],
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "branchId": "",
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "sourceStatus": "",
+            "assignedSlotId": "",
+            "selectedAtLevel": null,
+            "designNotes": ""
+          },
+          "minimumLevel": 1,
+          "combatStyleId": "huskarl-waffenlehre",
+          "damageFormula": "",
+          "rollMode": "normal",
+          "duration": "",
+          "aiInstructions": "",
+          "secondarySave": {
+            "enabled": false
+          },
+          "effect": "Ein leichter Schuss auf ein einzelnes Ziel.",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "weaponTypes": [
+            "bow"
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "targetDefenseModifier": 0,
+          "active": true,
+          "damageBonus": 0,
+          "damageType": "",
+          "trainingForm": "Stand des Schildes",
+          "description": "Ein leichter Schuss auf ein einzelnes Ziel.",
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "baseDieCap": 4,
+            "lightAttack": true,
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
+          "compatibleWeaponIds": [],
+          "combatStyleFormId": "huskarl-schildgrund",
+          "live": true,
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-bow",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "range": "Waffenreichweite",
+          "id": "combat-style-huskarl-skytte-grund-1",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "status": "confirmed",
+          "target": "Ein Gegner",
+          "triggerRules": [],
+          "mechanics": {}
+        },
+        {
+          "attackBonus": 0,
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "criticalThreshold": 20,
+          "active": true,
+          "compatibleWeaponIds": [],
+          "minimumLevel": 2,
+          "live": true,
+          "target": "Selbst",
+          "category": "technique",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "status": "confirmed",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "weaponTypes": [
+            "bow"
+          ],
+          "id": "combat-style-huskarl-skytte-grund-2",
+          "range": "Waffenreichweite",
+          "damageType": "",
+          "maximumTargets": 1,
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-2-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-grund-2-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "combatStyleId": "huskarl-waffenlehre",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-bow",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "activationType": "bonus-action",
+          "triggerRules": [],
+          "mechanics": {},
+          "name": "Ruhiger Atem",
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "description": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-2-aim",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-zielen",
+                "name": "Gesammelte Ruhe",
+                "description": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "mechanics": {
+                  "attack": 1
+                }
+              },
+              "notes": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht."
+            }
+          ],
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "secondarySave": {
+            "enabled": false
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "effect": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
+          "damageFormula": "",
+          "trainingForm": "Stand des Schildes"
+        },
+        {
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-3-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "triggerRules": [],
+          "damageBonus": 0,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-3-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "maximumTargets": 1,
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "activationType": "action",
+          "description": "Ein sicherer Speerstoß im Nahkampf.",
+          "criticalThreshold": 20,
+          "id": "combat-style-huskarl-skytte-grund-3",
+          "live": true,
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "mechanics": {},
+          "requirements": "Speer",
+          "trainingForm": "Stand des Schildes",
+          "aiInstructions": "",
+          "effect": "Ein sicherer Speerstoß im Nahkampf.",
+          "attackBonus": 0,
+          "weaponLabel": "Speer",
+          "active": true,
+          "category": "technique",
+          "combatStyleId": "huskarl-waffenlehre",
+          "name": "Speer am Wildpfad",
+          "compatibleWeaponIds": [],
+          "cenyrTraining": {
+            "sourceStatus": "",
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "selectedAtLevel": null,
+            "slotBands": [],
+            "branchId": "",
+            "uchelwyrCompatible": false,
+            "assignedSlotId": "",
+            "weaponRuleSetId": "",
+            "designNotes": "",
+            "classWeaponProfiles": {}
+          },
+          "rollMode": "normal",
+          "targetDefenseModifier": 0,
+          "minimumLevel": 3,
+          "damageType": "",
+          "duration": "",
+          "damageFormula": "",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "weaponTypes": [
+            "spear"
+          ],
+          "target": "Ein Gegner",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-spear",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "range": "Waffenreichweite",
+          "status": "confirmed",
+          "secondarySave": {
+            "enabled": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          }
+        },
+        {
+          "duration": "",
+          "requirements": "Schwert, Axt oder Sax",
+          "rollMode": "normal",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "aiInstructions": "",
+          "compatibleWeaponIds": [],
+          "id": "combat-style-huskarl-skytte-grund-4",
+          "name": "Sax im Unterholz",
+          "effect": "Nahkampftreffer mit Bindung: KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.",
+          "trainingForm": "Stand des Schildes",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-4-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-grund-4-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Nahkampftreffer mit Bindung: KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "triggerRules": [],
+          "criticalThreshold": 20,
+          "activationType": "action",
+          "category": "technique",
+          "maximumTargets": 1,
+          "damageBonus": 0,
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "combat-style-huskarl-skytte-grund-4-failed-save",
+              "name": "Gebundene Waffenführung",
+              "duration": "1 eigener Beitrag",
+              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
+              "tags": "Huskarl-Waffenlehre",
+              "mechanics": {
+                "attack": -1
+              }
+            }
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "minimumLevel": 4,
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "target": "Ein Gegner",
+          "damageFormula": "",
+          "damageType": "",
+          "range": "Waffenreichweite",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-4-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "mechanics": {},
+          "status": "confirmed",
+          "live": true,
+          "cenyrTraining": {
+            "classWeaponProfiles": {},
+            "assignedSlotId": "",
+            "slotBands": [],
+            "designNotes": "",
+            "sourceStatus": "",
+            "weaponRuleSetId": "",
+            "selectedAtLevel": null,
+            "uchelwyrCompatible": false,
+            "allowedClassIds": [],
+            "branchId": "",
+            "requiresMounted": false
+          },
+          "targetDefenseModifier": 0,
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "combatStyleId": "huskarl-waffenlehre",
+          "active": true,
+          "attackBonus": 0,
+          "weaponLabel": "Schwert, Axt oder Sax"
+        },
+        {
+          "compatibleWeaponIds": [],
+          "mechanics": {},
+          "combatStyleId": "huskarl-waffenlehre",
+          "criticalThreshold": 20,
+          "name": "Schuss durch die Lichtung",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-bow",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-5-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-grund-5-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Ein sorgfältig angesetzter Schuss; keine automatische Deckungsaufhebung.",
+          "damageFormula": "",
+          "damageType": "",
+          "category": "technique",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "effect": "Ein sorgfältig angesetzter Schuss; keine automatische Deckungsaufhebung.",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "damageBonus": 0,
+          "minimumLevel": 5,
+          "secondarySave": {
+            "enabled": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "maximumTargets": 1,
+          "activationType": "action",
+          "weaponTypes": [
+            "bow"
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "triggerRules": [],
+          "range": "Waffenreichweite",
+          "active": true,
+          "targetDefenseModifier": 0,
+          "target": "Ein Gegner",
+          "id": "combat-style-huskarl-skytte-grund-5",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "trainingForm": "Stand des Schildes",
+          "live": true,
+          "status": "confirmed",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-5-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "attackBonus": 0
+        },
+        {
+          "criticalThreshold": 20,
+          "attackBonus": 0,
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-6-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-grund-6-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-grund-6-reaction-3",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "damageFormula": "",
+          "minimumLevel": 6,
+          "id": "combat-style-huskarl-skytte-grund-6",
+          "aiInstructions": "",
+          "active": true,
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-6-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-bow",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "maximumTargets": 1,
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "activationType": "action",
+          "targetDefenseModifier": 0,
+          "target": "Ein Gegner",
+          "cenyrTraining": {
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "assignedSlotId": "",
+            "designNotes": "",
+            "allowedClassIds": [],
+            "requiresMounted": false,
+            "slotBands": [],
+            "sourceStatus": "",
+            "branchId": "",
+            "classWeaponProfiles": {},
+            "selectedAtLevel": null
+          },
+          "weaponTypes": [
+            "bow"
+          ],
+          "combatStyleId": "huskarl-waffenlehre",
+          "name": "Grenzwächterschuss",
+          "status": "confirmed",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "damageBonus": 0,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "live": true,
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "damageType": "",
+          "trainingForm": "Stand des Schildes",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 6
+              },
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "category": "technique",
+          "description": "Ein kräftiger, einzelner Bogenschuss.",
+          "duration": "",
+          "triggerRules": [],
+          "rollMode": "normal",
+          "mechanics": {},
+          "combatStyleFormId": "huskarl-schildgrund",
+          "compatibleWeaponIds": [],
+          "effect": "Ein kräftiger, einzelner Bogenschuss.",
+          "range": "Waffenreichweite"
+        },
+        {
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "attackBonus": 0,
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-1-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "live": true,
+          "category": "technique",
+          "criticalThreshold": 20,
+          "status": "confirmed",
+          "target": "Ein Gegner",
+          "targetDefenseModifier": 0,
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-bow",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "maximumTargets": 1,
+          "active": true,
+          "activationType": "bonus-action",
+          "range": "Waffenreichweite",
+          "minimumLevel": 1,
+          "weaponTypes": [
+            "bow"
+          ],
+          "damageType": "",
+          "mechanics": {},
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "triggerRules": [],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "damageBonus": 0,
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "baseDieCap": 4,
+            "lightAttack": true,
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-1-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "effect": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
+          "combatStyleId": "huskarl-waffenlehre",
+          "description": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
+          "id": "combat-style-huskarl-skytte-wahl-1",
+          "damageFormula": "",
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "trainingForm": "Stand des Schildes",
+          "compatibleWeaponIds": [],
+          "secondarySave": {
+            "enabled": false
+          },
+          "name": "Pfeil auf kurze Distanz",
+          "combatStyleFormId": "huskarl-schildgrund"
+        },
+        {
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "attackBonus": 0,
+          "effect": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-2-reaction-1",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-2-condition",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-deckung",
+                "name": "Feste Deckung",
+                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 1
+                }
+              },
+              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "targetDefenseModifier": 0,
+          "minimumLevel": 1,
+          "maximumTargets": 1,
+          "live": true,
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "activationType": "reaction",
+          "name": "Sax in der Hut",
+          "target": "Selbst",
+          "status": "confirmed",
+          "damageFormula": "",
+          "damageBonus": 0,
+          "triggerRules": [],
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "secondarySave": {
+            "enabled": false
+          },
+          "description": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "compatibleWeaponIds": [],
+          "requirements": "Schwert, Axt oder Sax",
+          "category": "technique",
+          "damageType": "",
+          "range": "Waffenreichweite",
+          "mechanics": {},
+          "id": "combat-style-huskarl-skytte-wahl-2",
+          "combatStyleId": "huskarl-waffenlehre",
+          "criticalThreshold": 20,
+          "active": true,
+          "trainingForm": "Stand des Schildes"
+        },
+        {
+          "damageBonus": 0,
+          "maximumTargets": 1,
+          "id": "combat-style-huskarl-skytte-wahl-3",
+          "activationType": "action",
+          "category": "technique",
+          "active": true,
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-spear",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "description": "Ein gezielter Einzelangriff mit der geführten Waffe.",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "damageType": "",
+          "minimumLevel": 2,
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "compatibleWeaponIds": [],
+          "status": "confirmed",
+          "targetDefenseModifier": 0,
+          "name": "Speer aus dem Knie",
+          "target": "Ein Gegner",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-3-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "trainingForm": "Stand des Schildes",
+          "range": "Waffenreichweite",
+          "attackBonus": 0,
+          "weaponLabel": "Speer",
+          "damageFormula": "",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-3-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "requirements": "Speer",
+          "live": true,
+          "secondarySave": {
+            "enabled": false
+          },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "effect": "Ein gezielter Einzelangriff mit der geführten Waffe.",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "triggerRules": [],
+          "mechanics": {},
+          "combatStyleId": "huskarl-waffenlehre",
+          "criticalThreshold": 20,
+          "weaponTypes": [
+            "spear"
+          ]
+        },
+        {
+          "triggerRules": [],
+          "attackBonus": 0,
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "combatStyleFormId": "huskarl-schildgrund",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "weaponTypes": [
+            "bow"
+          ],
+          "trainingForm": "Stand des Schildes",
+          "effect": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "name": "Ziel zwischen den Zweigen",
+          "category": "technique",
+          "range": "Waffenreichweite",
+          "id": "combat-style-huskarl-skytte-wahl-4",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-4-aim",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-zielen",
+                "name": "Gesammelte Ruhe",
+                "description": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "mechanics": {
+                  "attack": 1
+                }
+              },
+              "notes": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht."
+            }
+          ],
+          "live": true,
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-4-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-wahl-4-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
+          "damageFormula": "",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "criticalThreshold": 20,
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "secondarySave": {
+            "enabled": false
+          },
+          "active": true,
+          "damageType": "",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "target": "Selbst",
+          "status": "confirmed",
+          "compatibleWeaponIds": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-bow",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "maximumTargets": 1,
+          "minimumLevel": 2,
+          "combatStyleId": "huskarl-waffenlehre",
+          "activationType": "bonus-action"
+        },
+        {
+          "compatibleWeaponIds": [],
+          "status": "confirmed",
+          "criticalThreshold": 20,
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "attackBonus": 1,
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "damageFormula": "",
+          "target": "Ein Gegner",
+          "name": "Schuss auf die Öffnung",
+          "trainingForm": "Stand des Schildes",
+          "mechanics": {},
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-5-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-wahl-5-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "triggerRules": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-bow",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "targetDefenseModifier": 0,
+          "damageType": "",
+          "active": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "activationType": "action",
+          "weaponTypes": [
+            "bow"
+          ],
+          "maximumTargets": 1,
+          "damageBonus": 0,
+          "effect": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-5-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "category": "technique",
+          "minimumLevel": 3,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "description": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "id": "combat-style-huskarl-skytte-wahl-5",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "range": "Waffenreichweite",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "live": true
+        },
+        {
+          "compatibleWeaponIds": [],
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "attackBonus": 0,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-6-mobility",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "martial-position-guard",
+                "name": "Sicherer Schritt",
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "mechanics": {
+                  "movement": 0
+                },
+                "stanceGroup": "martial-position-guard",
+                "active": true,
+                "triggerRules": [
+                  {
+                    "id": "martial-position-guard-once",
+                    "name": "Stellungseffekt",
+                    "phase": "pre-roll",
+                    "recipient": "actor",
+                    "sourceRelation": "enemy",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "weaponAttackOnly": true,
+                    "condition": "always",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "resultEffects": [
+                      {
+                        "id": "martial-position-guard-consume",
+                        "type": "remove-condition",
+                        "target": "target",
+                        "conditionId": "martial-position-guard",
+                        "on": "always"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
+            }
+          ],
+          "mechanics": {},
+          "target": "Selbst",
+          "activationType": "bonus-action",
+          "category": "technique",
+          "maximumTargets": 1,
+          "status": "confirmed",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "id": "combat-style-huskarl-skytte-wahl-6",
+          "active": true,
+          "live": true,
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "targetDefenseModifier": 0,
+          "minimumLevel": 3,
+          "range": "Waffenreichweite",
+          "damageFormula": "",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-6-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "criticalThreshold": 20,
+          "damageBonus": 0,
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false
+          },
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "damageType": "",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "name": "Leiser Standortwechsel",
+          "description": "keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "effect": "keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "trainingForm": "Stand des Schildes",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "requirements": "Schwert, Axt oder Sax",
+          "combatStyleId": "huskarl-waffenlehre"
+        },
+        {
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-7-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-wahl-7-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-7-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "minimumLevel": 4,
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "martial-position-penalty",
+              "name": "Gehemmter Schritt",
+              "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+              "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+              "tags": "Huskarl-Waffenlehre",
+              "mechanics": {
+                "movement": 0
+              },
+              "stanceGroup": "martial-position-penalty",
+              "active": true,
+              "durationModel": {
+                "kind": "actor-comments",
+                "remainingActorComments": 1
+              },
+              "triggerRules": [
+                {
+                  "id": "martial-position-penalty-once",
+                  "name": "Stellungseffekt",
+                  "phase": "pre-roll",
+                  "recipient": "actor",
+                  "sourceRelation": "self",
+                  "activation": "passive",
+                  "frequency": "comment",
+                  "actionKinds": [
+                    "weapon",
+                    "technique"
+                  ],
+                  "weaponAttackOnly": true,
+                  "condition": "always",
+                  "effects": {
+                    "attackModifier": -1
+                  },
+                  "resultEffects": [
+                    {
+                      "id": "martial-position-penalty-consume",
+                      "type": "remove-condition",
+                      "target": "self",
+                      "conditionId": "martial-position-penalty",
+                      "on": "always"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "category": "technique",
+          "damageFormula": "",
+          "combatStyleId": "huskarl-waffenlehre",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-spear",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "id": "combat-style-huskarl-skytte-wahl-7",
+          "damageBonus": 0,
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 6
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "name": "Speer gegen den Schritt",
+          "criticalThreshold": 20,
+          "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "effect": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "compatibleWeaponIds": [],
+          "live": true,
+          "active": true,
+          "requirements": "Speer",
+          "mechanics": {},
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "weaponTypes": [
+            "spear"
+          ],
+          "trainingForm": "Stand des Schildes",
+          "targetDefenseModifier": 0,
+          "combatStyleFormId": "huskarl-schildgrund",
+          "activationType": "action",
+          "weaponLabel": "Speer",
+          "attackBonus": 0,
+          "triggerRules": [],
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "damageType": "",
+          "range": "Waffenreichweite",
+          "status": "confirmed"
+        },
+        {
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "criticalThreshold": 20,
+          "triggerRules": [],
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "damageFormula": "",
+          "active": true,
+          "live": true,
+          "mechanics": {},
+          "activationType": "bonus-action",
+          "target": "Selbst",
+          "trainingForm": "Stand des Schildes",
+          "id": "combat-style-huskarl-skytte-wahl-8",
+          "combatStyleId": "huskarl-waffenlehre",
+          "status": "confirmed",
+          "maximumTargets": 1,
+          "targetDefenseModifier": 0,
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-8-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-wahl-8-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "damageType": "",
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "attackBonus": 0,
+          "requirements": "Schwert, Axt oder Sax",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "category": "technique",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-8-condition",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-deckung",
+                "name": "Feste Deckung",
+                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 2
+                }
+              },
+              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            }
+          ],
+          "range": "Waffenreichweite",
+          "compatibleWeaponIds": [],
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "name": "Deckung im Unterholz",
+          "effect": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.",
+          "description": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.",
+          "minimumLevel": 4,
+          "damageBonus": 0,
+          "combatStyleFormId": "huskarl-schildgrund"
+        },
+        {
+          "combatStyleId": "huskarl-waffenlehre",
+          "effect": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
+          "range": "Waffenreichweite",
+          "attackBonus": 0,
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "requirements": "Schwert, Axt oder Sax",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "trainingForm": "Stand des Schildes",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-9-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "activationType": "action",
+          "triggerRules": [],
+          "live": true,
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "id": "combat-style-huskarl-skytte-wahl-9",
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "dcAttributeKey": "strength",
+            "addProficiency": true,
+            "failureCondition": {
+              "id": "combat-style-huskarl-skytte-wahl-9-failed-save",
+              "name": "Gebundene Waffenführung",
+              "duration": "1 eigener Beitrag",
+              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
+              "tags": "Huskarl-Waffenlehre",
+              "mechanics": {
+                "attack": -1
+              }
+            }
+          },
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "damageFormula": "",
+          "damageBonus": 0,
+          "status": "confirmed",
+          "targetDefenseModifier": 0,
+          "minimumLevel": 5,
+          "target": "Ein Gegner",
+          "damageType": "",
+          "name": "Axt am Waffenarm",
+          "description": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
+          "mechanics": {},
+          "compatibleWeaponIds": [],
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "category": "technique",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-9-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-wahl-9-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "active": true,
+          "followUpAttack": {
+            "enabled": false
+          }
+        },
+        {
+          "category": "technique",
+          "mechanics": {},
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "attackBonus": 0,
+          "triggerRules": [],
+          "live": true,
+          "effect": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
+          "combatStyleId": "huskarl-waffenlehre",
+          "compatibleWeaponIds": [],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-bow",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "range": "Waffenreichweite",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-10-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "damageFormula": "",
+          "targetDefenseModifier": 0,
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "trainingForm": "Stand des Schildes",
+          "weaponTypes": [
+            "bow"
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "target": "Ein Gegner",
+          "damageBonus": 0,
+          "damageType": "",
+          "status": "confirmed",
+          "description": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 12
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-10-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-wahl-10-special-action-2",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "minimumLevel": 5,
+          "id": "combat-style-huskarl-skytte-wahl-10",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "name": "Voller Jagdauszug",
+          "active": true,
+          "activationType": "action"
+        },
+        {
+          "status": "confirmed",
+          "damageBonus": 0,
+          "damageFormula": "",
+          "target": "Selbst",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "description": "+2 RK für einen eigenen Beitrag und 1W4 temporäre TP. Temporäre TP werden nicht addiert.",
+          "live": true,
+          "damageType": "",
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "compatibleWeaponIds": [],
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-11-reaction-1",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-wahl-11-special-action-2",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "secondarySave": {
+            "enabled": false
+          },
+          "maximumTargets": 1,
+          "activationType": "reaction",
+          "minimumLevel": 6,
+          "active": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-11-condition",
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "huskarl-deckung",
+                "name": "Feste Deckung",
+                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 2
+                }
+              },
+              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            },
+            {
+              "id": "combat-style-huskarl-skytte-wahl-11-resolve",
+              "type": "temporary-hit-points",
+              "target": "self",
+              "on": "always",
+              "formula": "1d4",
+              "notes": "Temporäre TP ersetzen nur einen niedrigeren vorhandenen Vorrat; sie werden nicht addiert."
+            }
+          ],
+          "category": "technique",
+          "effect": "+2 RK für einen eigenen Beitrag und 1W4 temporäre TP. Temporäre TP werden nicht addiert.",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-spear",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "triggerRules": [],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "attackBonus": 0,
+          "weaponLabel": "Speer",
+          "id": "combat-style-huskarl-skytte-wahl-11",
+          "targetDefenseModifier": 0,
+          "range": "Waffenreichweite",
+          "criticalThreshold": 20,
+          "name": "Stand hinter dem Speer",
+          "mechanics": {},
+          "requirements": "Speer",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "trainingForm": "Stand des Schildes",
+          "weaponTypes": [
+            "spear"
+          ]
+        },
+        {
+          "live": true,
+          "category": "technique",
+          "mechanics": {},
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "active": true,
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "damageType": "",
+          "range": "Waffenreichweite",
+          "id": "combat-style-huskarl-skytte-wahl-12",
+          "criticalThreshold": 20,
+          "activationType": "action",
+          "minimumLevel": 6,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-12-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            },
+            {
+              "id": "combat-style-huskarl-skytte-wahl-12-mobility",
+              "type": "buff",
+              "target": "self",
+              "on": "hit",
+              "condition": {
+                "id": "martial-position-guard",
+                "name": "Sicherer Schritt",
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "mechanics": {
+                  "movement": 0
+                },
+                "stanceGroup": "martial-position-guard",
+                "active": true,
+                "triggerRules": [
+                  {
+                    "id": "martial-position-guard-once",
+                    "name": "Stellungseffekt",
+                    "phase": "pre-roll",
+                    "recipient": "actor",
+                    "sourceRelation": "enemy",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "weaponAttackOnly": true,
+                    "condition": "always",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "resultEffects": [
+                      {
+                        "id": "martial-position-guard-consume",
+                        "type": "remove-condition",
+                        "target": "target",
+                        "conditionId": "martial-position-guard",
+                        "on": "always"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
+            }
+          ],
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "status": "confirmed",
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "attackBonus": 0,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "combatStyleId": "huskarl-waffenlehre",
+          "triggerRules": [],
+          "compatibleWeaponIds": [],
+          "requirements": "Schwert, Axt oder Sax",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-12-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-wahl-12-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Ein Einzelangriff. keine freie Bewegung. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "secondarySave": {
+            "enabled": false
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "damageBonus": 0,
+          "name": "Klinge am Wildwechsel",
+          "targetDefenseModifier": 0,
+          "trainingForm": "Stand des Schildes",
+          "damageFormula": "",
+          "effect": "Ein Einzelangriff. keine freie Bewegung. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
+        },
+        {
+          "live": true,
+          "damageBonus": 0,
+          "tags": "Huskarl-Waffenlehre · skytte · Schritt des Huskarls",
+          "targetDefenseModifier": 0,
+          "compatibleWeaponIds": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-spear",
+            "slotBands": [
+              "advanced"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "aiInstructions": "",
+          "description": "Nahkampftreffer; danach +1 RK für einen eigenen Beitrag.",
+          "active": true,
+          "mechanics": {},
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "minimumLevel": 7,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-7-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            },
+            {
+              "id": "combat-style-huskarl-skytte-grund-7-condition",
+              "type": "buff",
+              "target": "self",
+              "on": "hit",
+              "condition": {
+                "id": "huskarl-deckung",
+                "name": "Feste Deckung",
+                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 1
+                }
+              },
+              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            }
+          ],
+          "status": "confirmed",
+          "range": "Waffenreichweite",
+          "target": "Ein Gegner",
+          "activationType": "action",
+          "combatStyleFormId": "huskarl-fester-schritt",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "maximumTargets": 1,
+          "secondarySave": {
+            "enabled": false
+          },
+          "damageType": "",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "trainingForm": "Schritt des Huskarls",
+          "category": "technique",
+          "attackBonus": 0,
+          "weaponLabel": "Speer",
+          "id": "combat-style-huskarl-skytte-grund-7",
+          "damageFormula": "",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-7-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-grund-7-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "criticalThreshold": 20,
+          "requirements": "Speer",
+          "effect": "Nahkampftreffer; danach +1 RK für einen eigenen Beitrag.",
+          "cenyrTraining": {
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "sourceStatus": "",
+            "slotBands": [],
+            "allowedClassIds": [],
+            "classWeaponProfiles": {},
+            "requiresMounted": false,
+            "designNotes": "",
+            "assignedSlotId": "",
+            "selectedAtLevel": null,
+            "branchId": ""
+          },
+          "combatStyleId": "huskarl-waffenlehre",
+          "rollMode": "normal",
+          "triggerRules": [],
+          "name": "Abstand mit dem Speer",
+          "duration": "",
+          "weaponTypes": [
+            "spear"
+          ]
+        },
+        {
+          "maximumTargets": 1,
+          "weaponTypes": [
+            "bow"
+          ],
+          "activationType": "action",
+          "status": "confirmed",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-bow",
+            "slotBands": [
+              "advanced"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "live": true,
+          "criticalThreshold": 20,
+          "tags": "Huskarl-Waffenlehre · skytte · Schritt des Huskarls",
+          "target": "Ein Gegner",
+          "active": true,
+          "range": "Waffenreichweite",
+          "minimumLevel": 7,
+          "id": "combat-style-huskarl-skytte-wahl-13",
+          "compatibleWeaponIds": [],
+          "targetDefenseModifier": 0,
+          "damageType": "",
+          "attackBonus": 1,
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-13-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "formula": "",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "damageFormula": "",
+          "mechanics": {},
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "triggerRules": [],
+          "effect": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "secondarySave": {
+            "enabled": false
+          },
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-13-action-1",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-wahl-13-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "name": "Versetzter Grenzpfeil",
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "description": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "combatStyleFormId": "huskarl-fester-schritt",
+          "combatStyleId": "huskarl-waffenlehre",
+          "category": "technique",
+          "damageBonus": 0,
+          "trainingForm": "Schritt des Huskarls"
+        },
+        {
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-14-bonus-action-1",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-wahl-14-special-action-2",
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "activationType": "bonus-action",
+          "combatStyleId": "huskarl-waffenlehre",
+          "maximumTargets": 1,
+          "active": true,
+          "mechanics": {},
+          "triggerRules": [],
+          "category": "technique",
+          "id": "combat-style-huskarl-skytte-wahl-14",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "live": true,
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "secondarySave": {
+            "enabled": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "tags": "Huskarl-Waffenlehre · skytte · Schritt des Huskarls",
+          "trainingForm": "Schritt des Huskarls",
+          "description": "1W6 temporäre TP; ersetzt nur einen niedrigeren Vorrat. Keine Heilung verlorener TP.",
+          "target": "Selbst",
+          "combatStyleFormId": "huskarl-fester-schritt",
+          "requirements": "Schwert, Axt oder Sax",
+          "damageBonus": 0,
+          "damageFormula": "",
+          "status": "confirmed",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "targetDefenseModifier": 0,
+          "name": "Atem des Fährtenlesers",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "branchId": "skytte-sidearm",
+            "slotBands": [
+              "advanced"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "criticalThreshold": 20,
+          "damageType": "",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-14-resolve",
+              "type": "temporary-hit-points",
+              "target": "self",
+              "on": "always",
+              "formula": "1d6",
+              "notes": "Temporäre TP ersetzen nur einen niedrigeren vorhandenen Vorrat; sie werden nicht addiert."
+            }
+          ],
+          "attackBonus": 0,
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "minimumLevel": 7,
+          "compatibleWeaponIds": [],
+          "range": "Waffenreichweite",
+          "effect": "1W6 temporäre TP; ersetzt nur einen niedrigeren Vorrat. Keine Heilung verlorener TP."
         }
-      ]
+      ],
+      "defenseBalanceVersion": 1
     }
   }
 }

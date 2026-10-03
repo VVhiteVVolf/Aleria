@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-09-30T12:00:00.000Z",
+    "sourceExportedAt": "2026-10-03T02:00:00.000Z",
     "sourceUpdatedAt": "2026-09-03T23:41:37.362Z",
     "sourceDocumentIds": [
       "person--haus-neidr--gwyneth-neidr"
     ],
-    "contentHash": "7f798d0ed97aa252650f9b84bba8f439b46572dca44af0cdffabc254f65c9c2a"
+    "contentHash": "675a5ed4fd9d8784705cd20f10b4762555bb43940d48e775c5cc15da46132391"
   },
   "local": {
     "notes": "",
@@ -253,8 +253,8 @@
           "personId": "gwyneth-neidr",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-09-30T12:00:00.000Z",
-          "lastSyncedAt": "2026-09-30T12:00:00.000Z",
+          "importedAt": "2026-10-03T02:00:00.000Z",
+          "lastSyncedAt": "2026-10-03T02:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-neidr&mode=view&person=gwyneth-neidr",
           "fingerprint": "{\"name\":\"Gwyneth Neidr\",\"title\":\"Uneheliche Tochter Daffyds und Banws\",\"birth\":\"1588\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-neidr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/gwyneth-neidr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"daffyd-neidr\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--daffyd-neidr\",\"name\":\"Daffyd Neidr\"},{\"personId\":\"banw\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--banw\",\"name\":\"Banw\"}],\"partners\":[{\"personId\":\"lancelot-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--lancelot-draig\",\"name\":\"Lancelot Draig\"}],\"children\":[]}}"
         }

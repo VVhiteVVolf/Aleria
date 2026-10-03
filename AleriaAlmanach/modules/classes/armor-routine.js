@@ -1,8 +1,8 @@
 // Shared class rule. Equipment still owns its Dexterity mode and cap; this
 // feature controls when an armored fighter may use that contribution.
 export const ARMOR_ROUTINE = Object.freeze({
-  id: 'armor-routine', name: 'Rüstungsroutine', minimumLevel: 12,
-  description: 'Ab Stufe 12 zählt Geschicklichkeit auch in angelegter Rüstung zur Rüstungsklasse, entsprechend deren GES-Modus und Begrenzung. Ohne Rüstung gelten die normalen Geschicklichkeitsregeln.',
+  id: 'armor-routine', name: 'Rüstungsroutine', minimumLevel: 1,
+  description: 'Leichte Rüstung: voller GES-Bonus ab Stufe 1. Mittlere Rüstung: Basis-RK 14 und GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 ohne Begrenzung. Jungritterplatte: Basis-RK 15 ohne GES; Gegenstandsschutz ersetzt den Grundschutz. Schild und stärkste RK-Haltung zählen zusätzlich.',
   mechanics: null, status: 'confirmed'
 });
 
@@ -42,9 +42,5 @@ export function getArmorRoutine(profile = {}) {
 
 export function isArmorDexterityUnlocked(profile = {}, bodyArmor = null) {
   const equipmentLevel = Math.max(0, Number(bodyArmor?.dexterityUnlockLevel) || 0);
-  // Legacy sheets may store worn armor as a base value without an item slot.
-  const armored = Boolean(bodyArmor) || Number(profile.armorClass?.overrideMode === 'base'
-    ? profile.armorClass.override ?? profile.armorClass.base : profile.armorClass?.base) > 10;
-  if (armored && hasArmorRoutineClass(profile) && !getArmorRoutine(profile).unlocked) return false;
   return (Number(profile.progression?.level) || 1) + (Number(profile.progression?.specialLevels) || 0) >= equipmentLevel;
 }

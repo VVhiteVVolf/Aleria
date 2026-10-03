@@ -1,0 +1,2266 @@
+{
+  "date": "2026-10-03",
+  "source": "Read-only online records with locally applied approved defense balance",
+  "productionWrites": false,
+  "method": {
+    "unit": "one complete contribution (all segments)",
+    "candidateSamples": 48,
+    "postSamples": 512,
+    "ranking": "Best summed sampled direct damage within the actual resource budget; then full sequential resolution.",
+    "assumptions": [
+      "Rested figures, actual selected equipment and ammunition. No invented item ownership.",
+      "Regular: no special actions, aura or limited-use abilities; casting still spends mana.",
+      "Burst: all currently available maxima including limited uses; not renewable each contribution.",
+      "No free pre-buffs, no automatic tactical healing, no move-distance value.",
+      "Critical damage, equipment, saves and follow-ups included; random encounter-critical side effects excluded.",
+      "HP/mean is a pressure indicator, not expected duel duration or victory probability."
+    ]
+  },
+  "profiles": [
+    {
+      "name": "Tegid",
+      "level": 1,
+      "hp": 10,
+      "defense": 10,
+      "actions": 3,
+      "weapon": "Nahkampf"
+    },
+    {
+      "name": "Gwendolyn Draig",
+      "level": 1,
+      "hp": 10,
+      "defense": 10,
+      "actions": 3,
+      "weapon": "Nahkampf"
+    },
+    {
+      "name": "Rhodri",
+      "level": 1,
+      "hp": 10,
+      "defense": 10,
+      "actions": 3,
+      "weapon": "Nahkampf"
+    },
+    {
+      "name": "Gwendolyn Draig",
+      "level": 1,
+      "hp": 10,
+      "defense": 10,
+      "actions": 3,
+      "weapon": "Nahkampf"
+    },
+    {
+      "name": "Gethin",
+      "level": 5,
+      "hp": 62,
+      "defense": 11,
+      "actions": 28,
+      "weapon": "Gethin · Teulu-Ritterschwert"
+    },
+    {
+      "name": "Fenrir Varulv",
+      "level": 6,
+      "hp": 82,
+      "defense": 15,
+      "actions": 35,
+      "weapon": "Großaxt"
+    },
+    {
+      "name": "Kane Draig",
+      "level": 5,
+      "hp": 49,
+      "defense": 12,
+      "actions": 28,
+      "weapon": "Kane Draig · Teulu-Ritterschwert"
+    },
+    {
+      "name": "Gideon Weinlaub",
+      "level": 1,
+      "hp": 10,
+      "defense": 10,
+      "actions": 3,
+      "weapon": "Nahkampf"
+    },
+    {
+      "name": "Llyr Dewrdd",
+      "level": 1,
+      "hp": 10,
+      "defense": 10,
+      "actions": 3,
+      "weapon": "Nahkampf"
+    },
+    {
+      "name": "Mairwen (Geb. Illewod) Pysgod",
+      "level": 1,
+      "hp": 10,
+      "defense": 10,
+      "actions": 3,
+      "weapon": "Nahkampf"
+    },
+    {
+      "name": "Gwendolyn Draig",
+      "level": 1,
+      "hp": 10,
+      "defense": 10,
+      "actions": 3,
+      "weapon": "Nahkampf"
+    },
+    {
+      "name": "Brychan",
+      "level": 1,
+      "hp": 10,
+      "defense": 10,
+      "actions": 3,
+      "weapon": "Nahkampf"
+    },
+    {
+      "name": "Ylva Wolfshorn",
+      "level": 7,
+      "hp": 95,
+      "defense": 16,
+      "actions": 34,
+      "weapon": "Wolfshorn-Langbogen"
+    },
+    {
+      "name": "Gruffudd Gwregysdu",
+      "level": 1,
+      "hp": 10,
+      "defense": 10,
+      "actions": 3,
+      "weapon": "Nahkampf"
+    },
+    {
+      "name": "Freya Skald",
+      "level": 5,
+      "hp": 42,
+      "defense": 17,
+      "actions": 22,
+      "weapon": "Laute"
+    },
+    {
+      "name": "Asgeir Wolfshorn",
+      "level": 7,
+      "hp": 108,
+      "defense": 15,
+      "actions": 33,
+      "weapon": "Wolfshorn-Axt · rechte Hand"
+    },
+    {
+      "name": "Gildas Gafyr",
+      "level": 6,
+      "hp": 58,
+      "defense": 15,
+      "actions": 34,
+      "weapon": "Pflichtschwur · Draig-Ritterschwert"
+    },
+    {
+      "name": "Guinevere Neidr",
+      "level": 5,
+      "hp": 37,
+      "defense": 15,
+      "actions": 38,
+      "weapon": "Helwyr Langbogen"
+    },
+    {
+      "name": "Nudd Saethwyr",
+      "level": 6,
+      "hp": 73,
+      "defense": 15,
+      "actions": 33,
+      "weapon": "Speer"
+    },
+    {
+      "name": "Gais Wyrm",
+      "level": 5,
+      "hp": 43,
+      "defense": 15,
+      "actions": 37,
+      "weapon": "Lanze"
+    },
+    {
+      "name": "Gawain Draig",
+      "level": 5,
+      "hp": 49,
+      "defense": 15,
+      "actions": 30,
+      "weapon": "Drachenzahn · Draig-Ritterschwert"
+    },
+    {
+      "name": "Duncan Gafyr",
+      "level": 20,
+      "hp": 255,
+      "defense": 18,
+      "actions": 85,
+      "weapon": "Nahkampf"
+    },
+    {
+      "name": "Gwendolyn Draig (geb. Aderyn)",
+      "level": 1,
+      "hp": 10,
+      "defense": 10,
+      "actions": 3,
+      "weapon": "Nahkampf"
+    },
+    {
+      "name": "Rhiannon Draig",
+      "level": 6,
+      "hp": 35,
+      "defense": 10,
+      "actions": 15,
+      "weapon": "Nahkampf"
+    },
+    {
+      "name": "Betty",
+      "level": 1,
+      "hp": 10,
+      "defense": 10,
+      "actions": 2,
+      "weapon": "Krallen und Biss"
+    },
+    {
+      "name": "Draig Lehensritter",
+      "level": 7,
+      "hp": 63,
+      "defense": 18,
+      "actions": 4,
+      "weapon": "Draig-Langschwert"
+    },
+    {
+      "name": "Draig Waffenknecht",
+      "level": 3,
+      "hp": 27,
+      "defense": 16,
+      "actions": 4,
+      "weapon": "Draig-Speer"
+    },
+    {
+      "name": "Gwrgi",
+      "level": 3,
+      "hp": 30,
+      "defense": 13,
+      "actions": 3,
+      "weapon": "Biss"
+    },
+    {
+      "name": "Merfyn",
+      "level": 4,
+      "hp": 50,
+      "defense": 13,
+      "actions": 3,
+      "weapon": "Hufschlag"
+    },
+    {
+      "name": "Distry",
+      "level": 1,
+      "hp": 5,
+      "defense": 13,
+      "actions": 3,
+      "weapon": "Schnabelhieb"
+    },
+    {
+      "name": "Drecksack",
+      "level": 2,
+      "hp": 25,
+      "defense": 12,
+      "actions": 3,
+      "weapon": "Hufschlag"
+    },
+    {
+      "name": "Tanor",
+      "level": 1,
+      "hp": 16,
+      "defense": 12,
+      "actions": 4,
+      "weapon": "Tritt"
+    },
+    {
+      "name": "Freki",
+      "level": 4,
+      "hp": 50,
+      "defense": 13,
+      "actions": 9,
+      "weapon": "Biss"
+    },
+    {
+      "name": "Æthel",
+      "level": 1,
+      "hp": 10,
+      "defense": 10,
+      "actions": 2,
+      "weapon": "Krallen und Schnabel"
+    }
+  ],
+  "plans": [
+    {
+      "name": "Fenrir Varulv",
+      "mode": "regular",
+      "budget": {
+        "inspiration": 0,
+        "mana-focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 0,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0
+      },
+      "plan": [
+        {
+          "id": "technique:combat-style-huskarl-skjaldr-grund-1",
+          "name": "Kurzer Axthieb",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 2.625,
+          "formula": "1d4+2"
+        },
+        {
+          "id": "technique:combat-style-huskarl-skjaldr-wahl-7",
+          "name": "Axtbart zur Fessel",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "reaction": 1
+          },
+          "score": 8.395833333333334,
+          "formula": "1d12+1d6+4"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 11.3203125,
+        "mean95HalfWidth": 0.7301843974876019,
+        "median": 12,
+        "p90": 22,
+        "maximum": 35,
+        "defeatProbability": 0,
+        "hpFraction": 0.0011321444644464447,
+        "hpOverMean": 883.27950310559,
+        "meanAttackRolls": 2
+      }
+    },
+    {
+      "name": "Fenrir Varulv",
+      "mode": "burst",
+      "budget": {
+        "inspiration": 1,
+        "mana-focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 2,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0
+      },
+      "plan": [
+        {
+          "id": "weapon:fenrir-greataxe",
+          "name": "Großaxt",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1
+          },
+          "score": 6.25,
+          "formula": "1d12+4"
+        },
+        {
+          "id": "technique:fenrir-spinning-throw",
+          "name": "Kreiselwurf",
+          "paymentMode": "standard",
+          "costs": {
+            "reaction": 1,
+            "special-action": 1
+          },
+          "score": 11.083333333333334,
+          "formula": "2d12+4"
+        },
+        {
+          "id": "technique:combat-style-huskarl-skjaldr-grund-1",
+          "name": "Kurzer Axthieb",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 2.625,
+          "formula": "1d4+2"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 20.583984375,
+        "mean95HalfWidth": 1.0157733598584697,
+        "median": 20,
+        "p90": 36,
+        "maximum": 53,
+        "defeatProbability": 0,
+        "hpFraction": 0.002058604297929793,
+        "hpOverMean": 485.7660119555935,
+        "meanAttackRolls": 3
+      }
+    },
+    {
+      "name": "Ylva Wolfshorn",
+      "mode": "regular",
+      "budget": {
+        "inspiration": 0,
+        "mana-focus": 0,
+        "focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "pact-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 0,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0
+      },
+      "plan": [
+        {
+          "id": "technique:combat-style-huskarl-skytte-grund-6",
+          "name": "Grenzwächterschuss",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "bonus-action": 1,
+            "reaction": 1
+          },
+          "score": 12.875,
+          "formula": "1d8+1d6+2d4+5"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 13.8046875,
+        "mean95HalfWidth": 0.8424054045622582,
+        "median": 17,
+        "p90": 23,
+        "maximum": 39,
+        "defeatProbability": 0,
+        "hpFraction": 0.001380606810681068,
+        "hpOverMean": 724.3191850594228,
+        "meanAttackRolls": 1
+      }
+    },
+    {
+      "name": "Ylva Wolfshorn",
+      "mode": "burst",
+      "budget": {
+        "inspiration": 1,
+        "mana-focus": 0,
+        "focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "pact-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 2,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0
+      },
+      "plan": [
+        {
+          "id": "technique:combat-style-huskarl-skytte-grund-1",
+          "name": "Erster Jagdpfeil",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 3.2708333333333335,
+          "formula": "1d4+2"
+        },
+        {
+          "id": "technique:combat-style-huskarl-skytte-wahl-10",
+          "name": "Voller Jagdauszug",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "special-action": 1
+          },
+          "score": 12.104166666666666,
+          "formula": "2d8+1d4+5"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 15.515625,
+        "mean95HalfWidth": 0.8136193323798668,
+        "median": 18,
+        "p90": 26,
+        "maximum": 43,
+        "defeatProbability": 0,
+        "hpFraction": 0.0015517176717671768,
+        "hpOverMean": 644.4471299093656,
+        "meanAttackRolls": 2
+      }
+    },
+    {
+      "name": "Freya Skald",
+      "mode": "regular",
+      "budget": {
+        "inspiration": 0,
+        "mana-focus": 39,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 0,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0,
+        "uses:freya-arkaner-schrei": 0
+      },
+      "plan": [
+        {
+          "id": "weapon:freya-lute",
+          "name": "Laute",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1
+          },
+          "score": 3.4791666666666665,
+          "formula": "1d4+4"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 3.94921875,
+        "mean95HalfWidth": 0.30188414701622407,
+        "median": 5,
+        "p90": 8,
+        "maximum": 11,
+        "defeatProbability": 0,
+        "hpFraction": 0.0003949613711371137,
+        "hpOverMean": 2531.893175074184,
+        "meanAttackRolls": 1
+      }
+    },
+    {
+      "name": "Freya Skald",
+      "mode": "burst",
+      "budget": {
+        "inspiration": 1,
+        "mana-focus": 39,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 2,
+        "aura-focus": 0,
+        "spell-slot-1": 1,
+        "spell-slot-2": 1,
+        "spell-slot-3": 1,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0,
+        "uses:freya-arkaner-schrei": 1
+      },
+      "plan": [
+        {
+          "id": "weapon:freya-lute",
+          "name": "Laute",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1
+          },
+          "score": 3.4791666666666665,
+          "formula": "1d4+4"
+        },
+        {
+          "id": "ability:freya-arkaner-schrei",
+          "name": "Arkaner Schrei",
+          "paymentMode": "standard",
+          "costs": {
+            "special-action": 1,
+            "mana-focus": 39,
+            "uses:freya-arkaner-schrei": 1
+          },
+          "score": 7.979166666666667,
+          "formula": "3d6"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 11.451171875,
+        "mean95HalfWidth": 0.5603285063715515,
+        "median": 12,
+        "p90": 20,
+        "maximum": 25,
+        "defeatProbability": 0,
+        "hpFraction": 0.0011452317106710672,
+        "hpOverMean": 873.1857410881801,
+        "meanAttackRolls": 1
+      }
+    },
+    {
+      "name": "Asgeir Wolfshorn",
+      "mode": "regular",
+      "budget": {
+        "inspiration": 0,
+        "mana-focus": 0,
+        "focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "pact-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 0,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "asgeir-four-fangs-use": 0
+      },
+      "plan": [
+        {
+          "id": "technique:combat-style-huskarl-skjaldr-grund-1",
+          "name": "Kurzer Axthieb",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 5.458333333333333,
+          "formula": "2d4+3"
+        },
+        {
+          "id": "technique:combat-style-huskarl-skjaldr-wahl-7",
+          "name": "Axtbart zur Fessel",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "reaction": 1
+          },
+          "score": 12.520833333333334,
+          "formula": "3d6+1d4+6"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 17.916015625,
+        "mean95HalfWidth": 0.969056752460131,
+        "median": 20,
+        "p90": 31,
+        "maximum": 47,
+        "defeatProbability": 0,
+        "hpFraction": 0.0017917807405740574,
+        "hpOverMean": 558.1040008721247,
+        "meanAttackRolls": 2
+      }
+    },
+    {
+      "name": "Asgeir Wolfshorn",
+      "mode": "burst",
+      "budget": {
+        "inspiration": 1,
+        "mana-focus": 0,
+        "focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "pact-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 2,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "asgeir-four-fangs-use": 1
+      },
+      "plan": [
+        {
+          "id": "technique:asgeir-vier-faenge",
+          "name": "Vier Fänge des Wolfshorns",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "bonus-action": 1,
+            "reaction": 1,
+            "asgeir-four-fangs-use": 1
+          },
+          "score": 28.5,
+          "formula": "1d6+6"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 24.783203125,
+        "mean95HalfWidth": 0.8411012048735972,
+        "median": 24,
+        "p90": 38,
+        "maximum": 53,
+        "defeatProbability": 0,
+        "hpFraction": 0.0024785681693169316,
+        "hpOverMean": 403.4587437938372,
+        "meanAttackRolls": 4
+      }
+    },
+    {
+      "name": "Gildas Gafyr",
+      "mode": "regular",
+      "budget": {
+        "inspiration": 0,
+        "mana-focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 0,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0
+      },
+      "plan": [
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-01-erster-hieb",
+          "name": "Erster Hieb des Jungdrachens",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 4.041666666666667,
+          "formula": "1d4+3"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+          "name": "Gekreuzte Klauen",
+          "paymentMode": "standard",
+          "costs": {
+            "reaction": 1
+          },
+          "score": 7.666666666666667,
+          "formula": "1d8+6"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-schuppenschnitt",
+          "name": "Schuppenschnitt",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1
+          },
+          "score": 7.666666666666667,
+          "formula": "1d8+6"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 17.8203125,
+        "mean95HalfWidth": 0.7443050847124806,
+        "median": 18,
+        "p90": 29,
+        "maximum": 42,
+        "defeatProbability": 0,
+        "hpFraction": 0.0017822094709470948,
+        "hpOverMean": 561.1012713722051,
+        "meanAttackRolls": 3
+      }
+    },
+    {
+      "name": "Gildas Gafyr",
+      "mode": "burst",
+      "budget": {
+        "inspiration": 1,
+        "mana-focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 2,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0
+      },
+      "plan": [
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+          "name": "Gekreuzte Klauen",
+          "paymentMode": "standard",
+          "costs": {
+            "reaction": 1
+          },
+          "score": 7.666666666666667,
+          "formula": "1d8+6"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-04-schweifkreis",
+          "name": "Schweifkreis des Jungdrachens",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "special-action": 1
+          },
+          "score": 10.458333333333334,
+          "formula": "1d8+1d6+6"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-fluegelschritt",
+          "name": "Flügelschritt des Jungdrachens",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1,
+            "special-action": 1
+          },
+          "score": 7.708333333333333,
+          "formula": "1d4+1d8+3"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 23.59765625,
+        "mean95HalfWidth": 0.9606237538051404,
+        "median": 24,
+        "p90": 38,
+        "maximum": 54,
+        "defeatProbability": 0,
+        "hpFraction": 0.0023600016251625164,
+        "hpOverMean": 423.72852176791923,
+        "meanAttackRolls": 3
+      }
+    },
+    {
+      "name": "Guinevere Neidr",
+      "mode": "regular",
+      "budget": {
+        "inspiration": 0,
+        "mana-focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 0,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0
+      },
+      "plan": [
+        {
+          "id": "weapon:guinevere-longbow",
+          "name": "Helwyr Langbogen",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1
+          },
+          "score": 5.5,
+          "formula": "1d8+4"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-helwyr-jungdrache-federblick",
+          "name": "Federblick",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 3.0416666666666665,
+          "formula": "1d4+2"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 9.623046875,
+        "mean95HalfWidth": 0.43646732723431936,
+        "median": 10,
+        "p90": 16,
+        "maximum": 23,
+        "defeatProbability": 0,
+        "hpFraction": 0.0009624009275927593,
+        "hpOverMean": 1039.0679926933226,
+        "meanAttackRolls": 2
+      }
+    },
+    {
+      "name": "Guinevere Neidr",
+      "mode": "burst",
+      "budget": {
+        "inspiration": 1,
+        "mana-focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 2,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0
+      },
+      "plan": [
+        {
+          "id": "weapon:guinevere-longbow",
+          "name": "Helwyr Langbogen",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1
+          },
+          "score": 5.5,
+          "formula": "1d8+4"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-helwyr-jungdrache-federblick",
+          "name": "Federblick",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 3.0416666666666665,
+          "formula": "1d4+2"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 9.623046875,
+        "mean95HalfWidth": 0.43646732723431936,
+        "median": 10,
+        "p90": 16,
+        "maximum": 23,
+        "defeatProbability": 0,
+        "hpFraction": 0.0009624009275927593,
+        "hpOverMean": 1039.0679926933226,
+        "meanAttackRolls": 2
+      }
+    },
+    {
+      "name": "Nudd Saethwyr",
+      "mode": "regular",
+      "budget": {
+        "inspiration": 0,
+        "mana-focus": 0,
+        "focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "pact-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 0,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0
+      },
+      "plan": [
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-kurze-drachenspur",
+          "name": "Kurze Drachenspur",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 1.6875,
+          "formula": "1d4+1"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-cantref-grund-linie",
+          "name": "Stoß an der Schaftlinie",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1
+          },
+          "score": 2.6666666666666665,
+          "formula": "1d6+2"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe",
+          "name": "Wacht der langen Schuppe",
+          "paymentMode": "standard",
+          "costs": {
+            "reaction": 1
+          },
+          "score": 2.5833333333333335,
+          "formula": "1d6+2"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 8.296875,
+        "mean95HalfWidth": 0.430993701136711,
+        "median": 8,
+        "p90": 15,
+        "maximum": 22,
+        "defeatProbability": 0,
+        "hpFraction": 0.0008297704770477048,
+        "hpOverMean": 1205.1525423728813,
+        "meanAttackRolls": 3
+      }
+    },
+    {
+      "name": "Nudd Saethwyr",
+      "mode": "burst",
+      "budget": {
+        "inspiration": 1,
+        "mana-focus": 0,
+        "focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "pact-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 2,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0
+      },
+      "plan": [
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-kurze-drachenspur",
+          "name": "Kurze Drachenspur",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 1.6875,
+          "formula": "1d4+1"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-cantref-grund-durchbruch",
+          "name": "Durchbruch des Grenzwächters",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "special-action": 1
+          },
+          "score": 4.083333333333333,
+          "formula": "2d6+2"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe",
+          "name": "Wacht der langen Schuppe",
+          "paymentMode": "standard",
+          "costs": {
+            "reaction": 1
+          },
+          "score": 2.5833333333333335,
+          "formula": "1d6+2"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 10.11328125,
+        "mean95HalfWidth": 0.5743130344968681,
+        "median": 10,
+        "p90": 19,
+        "maximum": 31,
+        "defeatProbability": 0,
+        "hpFraction": 0.0010114292679267926,
+        "hpOverMean": 988.6998841251449,
+        "meanAttackRolls": 3
+      }
+    },
+    {
+      "name": "Gais Wyrm",
+      "mode": "regular",
+      "budget": {
+        "inspiration": 0,
+        "mana-focus": 0,
+        "focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "pact-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 0,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0
+      },
+      "plan": [
+        {
+          "id": "weapon:starter-uchelwyr-lance",
+          "name": "Lanze",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1
+          },
+          "score": 3.8958333333333335,
+          "formula": "1d12+1"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-kurze-drachenspur",
+          "name": "Kurze Drachenspur",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 1.4375,
+          "formula": "1d4"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe",
+          "name": "Wacht der langen Schuppe",
+          "paymentMode": "standard",
+          "costs": {
+            "reaction": 1
+          },
+          "score": 3.8958333333333335,
+          "formula": "1d12+1"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 8.56640625,
+        "mean95HalfWidth": 0.6148417482909402,
+        "median": 8,
+        "p90": 19,
+        "maximum": 36,
+        "defeatProbability": 0,
+        "hpFraction": 0.000856726297629763,
+        "hpOverMean": 1167.233926128591,
+        "meanAttackRolls": 3
+      }
+    },
+    {
+      "name": "Gais Wyrm",
+      "mode": "burst",
+      "budget": {
+        "inspiration": 1,
+        "mana-focus": 0,
+        "focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "pact-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 2,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0
+      },
+      "plan": [
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-kurze-drachenspur",
+          "name": "Kurze Drachenspur",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 1.4375,
+          "formula": "1d4"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe",
+          "name": "Wacht der langen Schuppe",
+          "paymentMode": "standard",
+          "costs": {
+            "reaction": 1
+          },
+          "score": 3.8958333333333335,
+          "formula": "1d12+1"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-uchelwyr-grund-durchbruch",
+          "name": "Entschlossener Wappenhieb",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "special-action": 1
+          },
+          "score": 7.229166666666667,
+          "formula": "2d12+1"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 11.794921875,
+        "mean95HalfWidth": 0.9017313804595495,
+        "median": 10,
+        "p90": 26,
+        "maximum": 52,
+        "defeatProbability": 0,
+        "hpFraction": 0.0011796101485148514,
+        "hpOverMean": 847.7377049180328,
+        "meanAttackRolls": 3
+      }
+    },
+    {
+      "name": "Gawain Draig",
+      "mode": "regular",
+      "budget": {
+        "inspiration": 0,
+        "mana-focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 0,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0
+      },
+      "plan": [
+        {
+          "id": "weapon:gawain-draig-knightly-sword",
+          "name": "Drachenzahn · Draig-Ritterschwert",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1
+          },
+          "score": 4.0625,
+          "formula": "1d8+3"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-01-erster-hieb",
+          "name": "Erster Hieb des Jungdrachens",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1
+          },
+          "score": 1.9791666666666667,
+          "formula": "1d4+1"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+          "name": "Gekreuzte Klauen",
+          "paymentMode": "standard",
+          "costs": {
+            "reaction": 1
+          },
+          "score": 4.0625,
+          "formula": "1d8+3"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 10.169921875,
+        "mean95HalfWidth": 0.6101968987088028,
+        "median": 10,
+        "p90": 21,
+        "maximum": 31,
+        "defeatProbability": 0,
+        "hpFraction": 0.001017093896889689,
+        "hpOverMean": 983.1933935087383,
+        "meanAttackRolls": 3
+      }
+    },
+    {
+      "name": "Gawain Draig",
+      "mode": "burst",
+      "budget": {
+        "inspiration": 1,
+        "mana-focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 2,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0,
+        "focus": 0,
+        "pact-points": 0
+      },
+      "plan": [
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+          "name": "Gekreuzte Klauen",
+          "paymentMode": "standard",
+          "costs": {
+            "reaction": 1
+          },
+          "score": 4.0625,
+          "formula": "1d8+3"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-04-schweifkreis",
+          "name": "Schweifkreis des Jungdrachens",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "special-action": 1
+          },
+          "score": 5.625,
+          "formula": "1d8+1d6+3"
+        },
+        {
+          "id": "technique:combat-style-drachentanz-jungdrache-fluegelschritt",
+          "name": "Flügelschritt des Jungdrachens",
+          "paymentMode": "standard",
+          "costs": {
+            "bonus-action": 1,
+            "special-action": 1
+          },
+          "score": 4.291666666666667,
+          "formula": "1d4+1d8+1"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 14.875,
+        "mean95HalfWidth": 0.86551052912567,
+        "median": 14,
+        "p90": 29,
+        "maximum": 52,
+        "defeatProbability": 0,
+        "hpFraction": 0.0014876487648764877,
+        "hpOverMean": 672.2016806722689,
+        "meanAttackRolls": 3
+      }
+    },
+    {
+      "name": "Rhiannon Draig",
+      "mode": "regular",
+      "budget": {
+        "inspiration": 0,
+        "mana-focus": 45,
+        "focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "pact-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 0,
+        "aura-focus": 0,
+        "spell-slot-1": 0,
+        "spell-slot-2": 0,
+        "spell-slot-3": 0,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0
+      },
+      "plan": [
+        {
+          "id": "spell:rhiannon-windklinge",
+          "name": "Windklinge",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "mana-focus": 3
+          },
+          "score": 7.208333333333333,
+          "formula": "1d8+5"
+        },
+        {
+          "id": "spell:rhiannon-druckstoss",
+          "name": "Druckstoß",
+          "paymentMode": "standard",
+          "costs": {
+            "reaction": 1,
+            "bonus-action": 1,
+            "mana-focus": 3
+          },
+          "score": 7.375,
+          "formula": "1d6+5"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 14.07421875,
+        "mean95HalfWidth": 0.47309507323840616,
+        "median": 15,
+        "p90": 21,
+        "maximum": 30,
+        "defeatProbability": 0,
+        "hpFraction": 0.0014075626312631264,
+        "hpOverMean": 710.4479600333055,
+        "meanAttackRolls": 1
+      }
+    },
+    {
+      "name": "Rhiannon Draig",
+      "mode": "burst",
+      "budget": {
+        "inspiration": 1,
+        "mana-focus": 45,
+        "focus": 0,
+        "celestial-points": 0,
+        "infernal-points": 0,
+        "pact-points": 0,
+        "action": 1,
+        "bonus-action": 1,
+        "reaction": 1,
+        "special-action": 2,
+        "aura-focus": 0,
+        "spell-slot-1": 1,
+        "spell-slot-2": 1,
+        "spell-slot-3": 1,
+        "spell-slot-4": 0,
+        "spell-slot-5": 0,
+        "spell-slot-6": 0,
+        "spell-slot-7": 0,
+        "spell-slot-8": 0,
+        "spell-slot-9": 0,
+        "spell-slot-10": 0
+      },
+      "plan": [
+        {
+          "id": "spell:rhiannon-druckstoss",
+          "name": "Druckstoß",
+          "paymentMode": "standard",
+          "costs": {
+            "reaction": 1,
+            "bonus-action": 1,
+            "mana-focus": 3
+          },
+          "score": 7.375,
+          "formula": "1d6+5"
+        },
+        {
+          "id": "spell:rhiannon-blitzfunken",
+          "name": "Blitzfunken",
+          "paymentMode": "standard",
+          "costs": {
+            "action": 1,
+            "special-action": 1,
+            "mana-focus": 6
+          },
+          "score": 12.875,
+          "formula": "3d6+5"
+        }
+      ],
+      "reference": {
+        "samples": 512,
+        "mean": 18.748046875,
+        "mean95HalfWidth": 0.7170869184051993,
+        "median": 21,
+        "p90": 28,
+        "maximum": 42,
+        "defeatProbability": 0,
+        "hpFraction": 0.0018749921867186718,
+        "hpOverMean": 533.3355557870611,
+        "meanAttackRolls": 1
+      }
+    }
+  ],
+  "matchups": [
+    {
+      "attacker": "Gawain Draig",
+      "defender": "Gildas Gafyr",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 7.34765625,
+      "mean95HalfWidth": 0.46141998089803093,
+      "median": 7,
+      "p90": 15,
+      "maximum": 24,
+      "defeatProbability": 0,
+      "hpFraction": 0.12668372844827586,
+      "hpOverMean": 7.893673577884104,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gawain Draig",
+      "defender": "Gildas Gafyr",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 12.5,
+      "mean95HalfWidth": 0.6934518210244975,
+      "median": 12,
+      "p90": 23,
+      "maximum": 39,
+      "defeatProbability": 0,
+      "hpFraction": 0.21551724137931033,
+      "hpOverMean": 4.64,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gildas Gafyr",
+      "defender": "Gawain Draig",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 13.994140625,
+      "mean95HalfWidth": 0.6017740244357337,
+      "median": 14,
+      "p90": 23,
+      "maximum": 31,
+      "defeatProbability": 0,
+      "hpFraction": 0.2855947066326531,
+      "hpOverMean": 3.5014654570830426,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gildas Gafyr",
+      "defender": "Gawain Draig",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 19.966796875,
+      "mean95HalfWidth": 0.8044409430447125,
+      "median": 20,
+      "p90": 32,
+      "maximum": 47,
+      "defeatProbability": 0,
+      "hpFraction": 0.4074856505102041,
+      "hpOverMean": 2.4540741465323292,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Asgeir Wolfshorn",
+      "defender": "Gawain Draig",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 16.427734375,
+      "mean95HalfWidth": 0.8157951326771359,
+      "median": 19,
+      "p90": 27,
+      "maximum": 40,
+      "defeatProbability": 0,
+      "hpFraction": 0.3352598852040816,
+      "hpOverMean": 2.9827606705504697,
+      "meanAttackRolls": 2
+    },
+    {
+      "attacker": "Asgeir Wolfshorn",
+      "defender": "Gawain Draig",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 21.48046875,
+      "mean95HalfWidth": 0.6469597963352631,
+      "median": 22,
+      "p90": 31,
+      "maximum": 43,
+      "defeatProbability": 0,
+      "hpFraction": 0.43837691326530615,
+      "hpOverMean": 2.2811420258228767,
+      "meanAttackRolls": 4
+    },
+    {
+      "attacker": "Gawain Draig",
+      "defender": "Asgeir Wolfshorn",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 7.693359375,
+      "mean95HalfWidth": 0.4746393771522288,
+      "median": 7,
+      "p90": 15,
+      "maximum": 26,
+      "defeatProbability": 0,
+      "hpFraction": 0.07123480902777778,
+      "hpOverMean": 14.038080731150037,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gawain Draig",
+      "defender": "Asgeir Wolfshorn",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 12.14453125,
+      "mean95HalfWidth": 0.6794985657439888,
+      "median": 12,
+      "p90": 22,
+      "maximum": 41,
+      "defeatProbability": 0,
+      "hpFraction": 0.11244936342592593,
+      "hpOverMean": 8.89289160501769,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Asgeir Wolfshorn",
+      "defender": "Gildas Gafyr",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 17.125,
+      "mean95HalfWidth": 0.8469210452275436,
+      "median": 19,
+      "p90": 28,
+      "maximum": 46,
+      "defeatProbability": 0,
+      "hpFraction": 0.2952586206896552,
+      "hpOverMean": 3.386861313868613,
+      "meanAttackRolls": 2
+    },
+    {
+      "attacker": "Asgeir Wolfshorn",
+      "defender": "Gildas Gafyr",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 21.970703125,
+      "mean95HalfWidth": 0.7023990283422855,
+      "median": 22,
+      "p90": 32,
+      "maximum": 44,
+      "defeatProbability": 0,
+      "hpFraction": 0.3788052262931034,
+      "hpOverMean": 2.639879100364477,
+      "meanAttackRolls": 4
+    },
+    {
+      "attacker": "Gildas Gafyr",
+      "defender": "Asgeir Wolfshorn",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 13.6796875,
+      "mean95HalfWidth": 0.6290508376825571,
+      "median": 14,
+      "p90": 23,
+      "maximum": 33,
+      "defeatProbability": 0,
+      "hpFraction": 0.12666377314814814,
+      "hpOverMean": 7.894917190177042,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gildas Gafyr",
+      "defender": "Asgeir Wolfshorn",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 19.869140625,
+      "mean95HalfWidth": 0.8564225458760961,
+      "median": 21,
+      "p90": 32,
+      "maximum": 48,
+      "defeatProbability": 0,
+      "hpFraction": 0.18397352430555555,
+      "hpOverMean": 5.435564730168092,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Ylva Wolfshorn",
+      "defender": "Gawain Draig",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 13.205078125,
+      "mean95HalfWidth": 0.7296009861176457,
+      "median": 15,
+      "p90": 21,
+      "maximum": 38,
+      "defeatProbability": 0,
+      "hpFraction": 0.26949139030612246,
+      "hpOverMean": 3.710693684366218,
+      "meanAttackRolls": 1
+    },
+    {
+      "attacker": "Ylva Wolfshorn",
+      "defender": "Gawain Draig",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 13.404296875,
+      "mean95HalfWidth": 0.6930209058345362,
+      "median": 15,
+      "p90": 22,
+      "maximum": 35,
+      "defeatProbability": 0,
+      "hpFraction": 0.2735570790816326,
+      "hpOverMean": 3.655544222643159,
+      "meanAttackRolls": 2
+    },
+    {
+      "attacker": "Gawain Draig",
+      "defender": "Ylva Wolfshorn",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 8.64453125,
+      "mean95HalfWidth": 0.5320547493703913,
+      "median": 8,
+      "p90": 17,
+      "maximum": 32,
+      "defeatProbability": 0,
+      "hpFraction": 0.09099506578947368,
+      "hpOverMean": 10.989606868504293,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gawain Draig",
+      "defender": "Ylva Wolfshorn",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 12.888671875,
+      "mean95HalfWidth": 0.7923416727413152,
+      "median": 12,
+      "p90": 26,
+      "maximum": 41,
+      "defeatProbability": 0,
+      "hpFraction": 0.1356702302631579,
+      "hpOverMean": 7.370813759660555,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Ylva Wolfshorn",
+      "defender": "Asgeir Wolfshorn",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 14.12109375,
+      "mean95HalfWidth": 0.8507136614315385,
+      "median": 17,
+      "p90": 24,
+      "maximum": 41,
+      "defeatProbability": 0,
+      "hpFraction": 0.13075086805555555,
+      "hpOverMean": 7.648132780082988,
+      "meanAttackRolls": 1
+    },
+    {
+      "attacker": "Ylva Wolfshorn",
+      "defender": "Asgeir Wolfshorn",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 17.142578125,
+      "mean95HalfWidth": 0.7490553121873585,
+      "median": 19,
+      "p90": 27,
+      "maximum": 42,
+      "defeatProbability": 0,
+      "hpFraction": 0.15872757523148148,
+      "hpOverMean": 6.300102540731457,
+      "meanAttackRolls": 2
+    },
+    {
+      "attacker": "Asgeir Wolfshorn",
+      "defender": "Ylva Wolfshorn",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 18.00390625,
+      "mean95HalfWidth": 0.8970174447836865,
+      "median": 20,
+      "p90": 30,
+      "maximum": 46,
+      "defeatProbability": 0,
+      "hpFraction": 0.18951480263157894,
+      "hpOverMean": 5.276632675200695,
+      "meanAttackRolls": 2
+    },
+    {
+      "attacker": "Asgeir Wolfshorn",
+      "defender": "Ylva Wolfshorn",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 22.880859375,
+      "mean95HalfWidth": 0.746415527427514,
+      "median": 23,
+      "p90": 35,
+      "maximum": 46,
+      "defeatProbability": 0,
+      "hpFraction": 0.24085115131578946,
+      "hpOverMean": 4.151941954758856,
+      "meanAttackRolls": 4
+    },
+    {
+      "attacker": "Nudd Saethwyr",
+      "defender": "Gildas Gafyr",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 8.71875,
+      "mean95HalfWidth": 0.4431652040903463,
+      "median": 8,
+      "p90": 15,
+      "maximum": 24,
+      "defeatProbability": 0,
+      "hpFraction": 0.15032327586206898,
+      "hpOverMean": 6.652329749103942,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Nudd Saethwyr",
+      "defender": "Gildas Gafyr",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 10.279296875,
+      "mean95HalfWidth": 0.5581529811121733,
+      "median": 10,
+      "p90": 19,
+      "maximum": 31,
+      "defeatProbability": 0,
+      "hpFraction": 0.17722925646551724,
+      "hpOverMean": 5.642409272278169,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gildas Gafyr",
+      "defender": "Nudd Saethwyr",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 16.369140625,
+      "mean95HalfWidth": 0.6744441115608769,
+      "median": 17,
+      "p90": 27,
+      "maximum": 36,
+      "defeatProbability": 0,
+      "hpFraction": 0.2242348030821918,
+      "hpOverMean": 4.459611024937359,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gildas Gafyr",
+      "defender": "Nudd Saethwyr",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 22.70703125,
+      "mean95HalfWidth": 0.8879859454349031,
+      "median": 22,
+      "p90": 36,
+      "maximum": 50,
+      "defeatProbability": 0,
+      "hpFraction": 0.3110552226027397,
+      "hpOverMean": 3.214863237570962,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gais Wyrm",
+      "defender": "Gawain Draig",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 7.412109375,
+      "mean95HalfWidth": 0.5542059530218526,
+      "median": 7,
+      "p90": 17,
+      "maximum": 32,
+      "defeatProbability": 0,
+      "hpFraction": 0.15126753826530612,
+      "hpOverMean": 6.610803689064559,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gais Wyrm",
+      "defender": "Gawain Draig",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 10.759765625,
+      "mean95HalfWidth": 0.7947175165820726,
+      "median": 10,
+      "p90": 23,
+      "maximum": 48,
+      "defeatProbability": 0,
+      "hpFraction": 0.21958705357142858,
+      "hpOverMean": 4.554002541296061,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gawain Draig",
+      "defender": "Gais Wyrm",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 9.3671875,
+      "mean95HalfWidth": 0.5267247549899888,
+      "median": 9,
+      "p90": 17,
+      "maximum": 30,
+      "defeatProbability": 0,
+      "hpFraction": 0.21784156976744187,
+      "hpOverMean": 4.590492076730609,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gawain Draig",
+      "defender": "Gais Wyrm",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 14.03125,
+      "mean95HalfWidth": 0.7380253092005368,
+      "median": 14,
+      "p90": 26,
+      "maximum": 43,
+      "defeatProbability": 0.001953125,
+      "hpFraction": 0.32630813953488375,
+      "hpOverMean": 3.0645879732739423,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Fenrir Varulv",
+      "defender": "Gildas Gafyr",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 9.505859375,
+      "mean95HalfWidth": 0.6342638102064737,
+      "median": 10,
+      "p90": 19,
+      "maximum": 34,
+      "defeatProbability": 0,
+      "hpFraction": 0.1638941271551724,
+      "hpOverMean": 6.101499897267311,
+      "meanAttackRolls": 2
+    },
+    {
+      "attacker": "Fenrir Varulv",
+      "defender": "Gildas Gafyr",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 18.96875,
+      "mean95HalfWidth": 0.9242313656734014,
+      "median": 19,
+      "p90": 31,
+      "maximum": 60,
+      "defeatProbability": 0.001953125,
+      "hpFraction": 0.3270474137931034,
+      "hpOverMean": 3.057660626029654,
+      "meanAttackRolls": 2.998046875
+    },
+    {
+      "attacker": "Gildas Gafyr",
+      "defender": "Fenrir Varulv",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 17.32421875,
+      "mean95HalfWidth": 0.7168788667716622,
+      "median": 17,
+      "p90": 28,
+      "maximum": 37,
+      "defeatProbability": 0,
+      "hpFraction": 0.21127096036585366,
+      "hpOverMean": 4.73325817361894,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gildas Gafyr",
+      "defender": "Fenrir Varulv",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 23.259765625,
+      "mean95HalfWidth": 0.9365016316923195,
+      "median": 24,
+      "p90": 38,
+      "maximum": 55,
+      "defeatProbability": 0,
+      "hpFraction": 0.2836556783536585,
+      "hpOverMean": 3.5254009572592158,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Guinevere Neidr",
+      "defender": "Gawain Draig",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 7.134765625,
+      "mean95HalfWidth": 0.35010159374069433,
+      "median": 7,
+      "p90": 12,
+      "maximum": 18,
+      "defeatProbability": 0,
+      "hpFraction": 0.14560746173469388,
+      "hpOverMean": 6.867779906925814,
+      "meanAttackRolls": 2
+    },
+    {
+      "attacker": "Guinevere Neidr",
+      "defender": "Gawain Draig",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 7.134765625,
+      "mean95HalfWidth": 0.35010159374069433,
+      "median": 7,
+      "p90": 12,
+      "maximum": 18,
+      "defeatProbability": 0,
+      "hpFraction": 0.14560746173469388,
+      "hpOverMean": 6.867779906925814,
+      "meanAttackRolls": 2
+    },
+    {
+      "attacker": "Gawain Draig",
+      "defender": "Guinevere Neidr",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 11.4140625,
+      "mean95HalfWidth": 0.6183004985237704,
+      "median": 11,
+      "p90": 20,
+      "maximum": 40,
+      "defeatProbability": 0.001953125,
+      "hpFraction": 0.30848817567567566,
+      "hpOverMean": 3.241615331964408,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gawain Draig",
+      "defender": "Guinevere Neidr",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 15.76171875,
+      "mean95HalfWidth": 0.8279225135702994,
+      "median": 15,
+      "p90": 29,
+      "maximum": 48,
+      "defeatProbability": 0.02734375,
+      "hpFraction": 0.42599239864864863,
+      "hpOverMean": 2.347459727385378,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Rhiannon Draig",
+      "defender": "Gawain Draig",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 13.455078125,
+      "mean95HalfWidth": 0.47720180081818103,
+      "median": 14,
+      "p90": 20,
+      "maximum": 24,
+      "defeatProbability": 0,
+      "hpFraction": 0.274593431122449,
+      "hpOverMean": 3.6417477137465526,
+      "meanAttackRolls": 1
+    },
+    {
+      "attacker": "Rhiannon Draig",
+      "defender": "Gawain Draig",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 18.220703125,
+      "mean95HalfWidth": 0.7099829599410099,
+      "median": 20,
+      "p90": 27,
+      "maximum": 41,
+      "defeatProbability": 0,
+      "hpFraction": 0.37185108418367346,
+      "hpOverMean": 2.6892485796977166,
+      "meanAttackRolls": 1
+    },
+    {
+      "attacker": "Gawain Draig",
+      "defender": "Rhiannon Draig",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 15.79296875,
+      "mean95HalfWidth": 0.5259308755580538,
+      "median": 16,
+      "p90": 24,
+      "maximum": 35,
+      "defeatProbability": 0.001953125,
+      "hpFraction": 0.4512276785714286,
+      "hpOverMean": 2.216176106851348,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gawain Draig",
+      "defender": "Rhiannon Draig",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 22.673828125,
+      "mean95HalfWidth": 0.6991510124575248,
+      "median": 23,
+      "p90": 32,
+      "maximum": 47,
+      "defeatProbability": 0.0703125,
+      "hpFraction": 0.6478236607142858,
+      "hpOverMean": 1.5436299422861572,
+      "meanAttackRolls": 2.99609375
+    },
+    {
+      "attacker": "Freya Skald",
+      "defender": "Gildas Gafyr",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 3.09765625,
+      "mean95HalfWidth": 0.21075687107054436,
+      "median": 4,
+      "p90": 6,
+      "maximum": 9,
+      "defeatProbability": 0,
+      "hpFraction": 0.053407866379310345,
+      "hpOverMean": 18.723833543505673,
+      "meanAttackRolls": 1
+    },
+    {
+      "attacker": "Freya Skald",
+      "defender": "Gildas Gafyr",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 7.009765625,
+      "mean95HalfWidth": 0.46523608732561594,
+      "median": 6,
+      "p90": 15,
+      "maximum": 21,
+      "defeatProbability": 0,
+      "hpFraction": 0.12085802801724138,
+      "hpOverMean": 8.27417107829479,
+      "meanAttackRolls": 1
+    },
+    {
+      "attacker": "Gildas Gafyr",
+      "defender": "Freya Skald",
+      "mode": "regular",
+      "samples": 512,
+      "mean": 15.41015625,
+      "mean95HalfWidth": 0.741819208595408,
+      "median": 15,
+      "p90": 27,
+      "maximum": 37,
+      "defeatProbability": 0,
+      "hpFraction": 0.36690848214285715,
+      "hpOverMean": 2.7254752851711026,
+      "meanAttackRolls": 3
+    },
+    {
+      "attacker": "Gildas Gafyr",
+      "defender": "Freya Skald",
+      "mode": "burst",
+      "samples": 512,
+      "mean": 20.00390625,
+      "mean95HalfWidth": 0.959682304209772,
+      "median": 20,
+      "p90": 34,
+      "maximum": 55,
+      "defeatProbability": 0.021484375,
+      "hpFraction": 0.47628348214285715,
+      "hpOverMean": 2.0995899238429994,
+      "meanAttackRolls": 3
+    }
+  ],
+  "errors": []
+}

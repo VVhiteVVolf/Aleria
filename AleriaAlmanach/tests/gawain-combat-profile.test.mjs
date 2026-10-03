@@ -29,7 +29,8 @@ test('Gawains Waffen und Rüstung bleiben mit dem Inventar verknüpft', async ()
   assert.equal(inventoryById.get(armor.inventoryItemId).equipmentLink.combatEntryId, armor.id);
   assert.equal(sword.damageFormula, '1d8');
   assert.equal(sword.versatileDamageFormula, '1d10');
-  assert.equal(armor.dexterityUnlockLevel, 12);
+  assert.equal(armor.dexterityUnlockLevel, 0);
+  assert.equal(armor.dexterityMode, 'none');
 });
 
 test('Gawain verwendet auf Stufe 5 alle 22 zugänglichen Jungdrachen-Techniken', async () => {
@@ -91,7 +92,7 @@ test('Gawains Ritterschwert behält die wählbare ein- und zweihändige Führung
   });
   assert.equal(oneHanded.weapon.damageFormula, '1d8');
   assert.equal(twoHanded.weapon.damageFormula, '1d10');
-  assert.equal(twoHanded.totalDefense, 16);
+  assert.equal(twoHanded.totalDefense, 15);
 });
 
 test('die interaktive Kampfszene füllt ein altes Gawain-Profil automatisch aus der Teulu-Klasse', async () => {

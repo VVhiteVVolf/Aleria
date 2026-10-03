@@ -1,6 +1,7 @@
 // Pure duration helpers shared by browser replay and trusted server validation.
 // A condition owns an explicit clock; prose in `duration` is presentation only.
 import { advanceBerserkForComment } from './combat-berserk-state.js';
+import { createActionLockRecovery } from './combat-action-lock-recovery.js';
 
 const DURATION_KINDS = new Set([
   'permanent', 'combat', 'actor-comments', 'scene-comments',
@@ -142,8 +143,11 @@ export function advanceTemporaryConditionsForComment(states, comment = {}, optio
         }
         return advanceConditionForComment(normalized, actorId, actors);
       })
-      .filter(result => !result.expired)
-      .map(result => result.condition);
+      .flatMap(result => {
+        if (!result.expired) return [result.condition];
+        const recovery = result.reason === 'actor-comments' ? createActionLockRecovery(result.condition) : null;
+        return recovery ? [recovery] : [];
+      });
     states.set(actorId, { ...state, temporaryConditions: advanced });
   });
   return states;

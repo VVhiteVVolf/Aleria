@@ -1,5 +1,6 @@
 // Flat armor protection belongs to each typed damage component, after affinities.
 // This also handles spell/save damage and follow-up hits without attack-kind exceptions.
+import { canUseEquippedCombatShield } from '../combat/combat-weapon-loadout.js';
 const text = (value, max = 160) => String(value ?? '').trim().slice(0, max);
 export function equipmentDamageType(value) {
   const type = text(value).toLocaleLowerCase('de');
@@ -23,7 +24,8 @@ export function describeEquipmentDamageProtection(value) {
 }
 export function resolveEquipmentDamageProtection(profile = {}, damageType, amount = 0) {
   const type = equipmentDamageType(damageType || 'physisch');
-  const sources = (profile.armorItems || []).filter(armor => armor.equipped === true).flatMap(armor => {
+  const sources = (profile.armorItems || []).filter(armor => armor.equipped === true
+    && (armor.kind !== 'shield' || canUseEquippedCombatShield(profile))).flatMap(armor => {
     const protection = normalizeEquipmentDamageProtection(armor.damageProtection);
     if (!protection || protection.excludedDamageTypes.includes(type)
       || (protection.damageTypes.length && !protection.damageTypes.includes(type))) return [];

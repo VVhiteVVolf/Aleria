@@ -1546,12 +1546,13 @@
           "name": "Helwyr Lederrüstung",
           "image": "",
           "kind": "armor",
+          "armorCategory": "light",
           "damageProtection": null,
           "triggerRules": [],
           "baseArmorClass": 11,
           "armorClassBonus": 0,
           "dexterityMode": "full",
-          "dexterityCap": 20,
+          "dexterityCap": 2,
           "dexterityUnlockLevel": 0,
           "properties": "Leichte Lederrüstung der Helwyr-Ausbildung · voller Geschicklichkeitsbonus",
           "notes": "Lässt genug Bewegungsfreiheit für Bogenschießen und Nahkampf gleichermaßen.",
@@ -1869,6 +1870,7 @@
                   "label": "1 eigener Beitrag"
                 },
                 "tags": "Drachentanz",
+                "armorStance": true,
                 "stanceGroup": "jungdrache-guard",
                 "mechanics": {
                   "armorClass": 1
@@ -2229,6 +2231,7 @@
                   "label": "Bis zum Ende des nächsten eigenen Beitrags"
                 },
                 "tags": "Drachentanz",
+                "armorStance": true,
                 "mechanics": {
                   "armorClass": 2
                 },
@@ -5281,8 +5284,8 @@
           "combatStyleFormId": "drachentanz-form-i-jungdrache",
           "minimumLevel": 1,
           "category": "technique",
-          "description": "Der Helwyr löst den Pfeil mitten im Stellungswechsel.",
-          "effect": "Verursacht Technikschaden und erlaubt 2 Meter Eigenbewegung.",
+          "description": "Der Helwyr löst den Pfeil mitten im Stellungswechsel. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "effect": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
           "activationType": "bonus-action",
           "weaponTypes": [
             "bow"
@@ -5312,7 +5315,7 @@
           "duration": "Sofort",
           "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
           "tags": "Drachentanz · Tanz des Jungdrachens · Grundform · Kurzbogen",
-          "aiInstructions": "Verursacht Technikschaden und erlaubt 2 Meter Eigenbewegung. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "aiInstructions": "Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
           "mechanicNotes": [],
           "effects": [
             {
@@ -5339,7 +5342,7 @@
             },
             {
               "id": "helwyr-laufend-move-movement",
-              "type": "move",
+              "type": "buff",
               "target": "self",
               "amount": 0,
               "formula": "",
@@ -5348,16 +5351,74 @@
               "magical": false,
               "on": "hit",
               "resourceId": "",
-              "condition": null,
+              "condition": {
+                "id": "martial-position-guard",
+                "name": "Gedeckter Stellungswechsel",
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "stanceGroup": "martial-position-guard",
+                "active": true,
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": "Bis zum Ende des nächsten eigenen Beitrags"
+                },
+                "mechanics": {
+                  "movement": 0
+                },
+                "triggerRules": [
+                  {
+                    "id": "martial-position-guard-once",
+                    "name": "Stellungseffekt",
+                    "phase": "pre-roll",
+                    "recipient": "actor",
+                    "sourceRelation": "enemy",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "weaponAttackOnly": true,
+                    "condition": "always",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "resultEffects": [
+                      {
+                        "id": "martial-position-guard-consume",
+                        "type": "remove-condition",
+                        "target": "target",
+                        "conditionId": "martial-position-guard",
+                        "on": "always"
+                      }
+                    ]
+                  }
+                ],
+                "remainingActorComments": 1,
+                "remainingSceneComments": 0,
+                "ward": {
+                  "enabled": false,
+                  "charges": 0,
+                  "deflectChance": 100,
+                  "breaksOnCriticalHit": false
+                }
+              },
               "conditionId": "",
               "conditionTags": "",
-              "movementMeters": 2,
+              "movementMeters": 0,
               "movementKind": "move",
               "summon": null,
               "concentration": false,
               "channelComments": 0,
               "nonlethal": false,
-              "notes": ""
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
             }
           ],
           "costs": [
@@ -5751,6 +5812,7 @@
                   "label": "1 eigener Beitrag"
                 },
                 "tags": "Drachentanz",
+                "armorStance": true,
                 "mechanics": {
                   "armorClass": 1
                 },
@@ -6452,8 +6514,8 @@
           "combatStyleFormId": "drachentanz-form-i-jungdrache",
           "minimumLevel": 1,
           "category": "technique",
-          "description": "Ein knapper Schwertangriff schützt den Rückzug aus dem Nahkampf.",
-          "effect": "Verursacht Technikschaden und erlaubt 1 Meter Eigenbewegung.",
+          "description": "Ein knapper Schwertangriff schützt den Rückzug aus dem Nahkampf. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "effect": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
           "activationType": "bonus-action",
           "weaponTypes": [
             "sword"
@@ -6483,7 +6545,7 @@
           "duration": "Sofort",
           "requirements": "Eine zur Klassenfolge passende, geführte Waffe.",
           "tags": "Drachentanz · Tanz des Jungdrachens · Grundform · Schwert",
-          "aiInstructions": "Verursacht Technikschaden und erlaubt 1 Meter Eigenbewegung. Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern.",
+          "aiInstructions": "Zusätzliche erzählerische Folgen dürfen die festgelegte Mechanik nicht erweitern. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
           "mechanicNotes": [],
           "effects": [
             {
@@ -6510,7 +6572,7 @@
             },
             {
               "id": "helwyr-waldwacht-move-movement",
-              "type": "move",
+              "type": "buff",
               "target": "self",
               "amount": 0,
               "formula": "",
@@ -6519,16 +6581,74 @@
               "magical": false,
               "on": "hit",
               "resourceId": "",
-              "condition": null,
+              "condition": {
+                "id": "martial-position-guard",
+                "name": "Gedeckter Stellungswechsel",
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "stanceGroup": "martial-position-guard",
+                "active": true,
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": "Bis zum Ende des nächsten eigenen Beitrags"
+                },
+                "mechanics": {
+                  "movement": 0
+                },
+                "triggerRules": [
+                  {
+                    "id": "martial-position-guard-once",
+                    "name": "Stellungseffekt",
+                    "phase": "pre-roll",
+                    "recipient": "actor",
+                    "sourceRelation": "enemy",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "weaponAttackOnly": true,
+                    "condition": "always",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "resultEffects": [
+                      {
+                        "id": "martial-position-guard-consume",
+                        "type": "remove-condition",
+                        "target": "target",
+                        "conditionId": "martial-position-guard",
+                        "on": "always"
+                      }
+                    ]
+                  }
+                ],
+                "remainingActorComments": 1,
+                "remainingSceneComments": 0,
+                "ward": {
+                  "enabled": false,
+                  "charges": 0,
+                  "deflectChance": 100,
+                  "breaksOnCriticalHit": false
+                }
+              },
               "conditionId": "",
               "conditionTags": "",
-              "movementMeters": 1,
+              "movementMeters": 0,
               "movementKind": "move",
               "summon": null,
               "concentration": false,
               "channelComments": 0,
               "nonlethal": false,
-              "notes": ""
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
             }
           ],
           "costs": [

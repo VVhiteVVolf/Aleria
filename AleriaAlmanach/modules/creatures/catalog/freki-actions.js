@@ -1,5 +1,6 @@
 import { techniqueCost, temporaryCondition, secondarySave, weaponDamageEffect } from '../../combat-styles/drachentanz/techniques/drachentanz-technique-factory.js';
 import { createWeaponTechniqueDamageProfile } from '../../combat-styles/weapon-technique-budget.js';
+import { reviseMartialPositionEntry } from '../../combat-styles/martial-position-effects.js';
 
 const costs = (id, resources) => resources.map((resource,index) => techniqueCost(id,resource,index));
 const bypass = { allowed:false, resourceId:'aura-focus', cost:1 };
@@ -25,7 +26,7 @@ export const FREKI_TECHNIQUES = [
     {secondarySave:secondarySave('freki-fesselbiss','Verbissener Schritt','−2 m Bewegung für einen eigenen Beitrag.',{movement:-2})}),
   attack('freki-jagdsprung','Wuchtiger Jagdsprung',['action','special-action'],
     'Ein kraftvoller Biss: normaler Biss plus ein weiterer Bisswürfel und erreichter Ausbildungswürfel. Kein automatisches Umwerfen, kein zweiter Angriff und keine zusätzliche Bewegung.')
-];
+].map(reviseMartialPositionEntry);
 
 const techniquesById = new Map(FREKI_TECHNIQUES.map(technique => [technique.id, technique]));
 export function reconcileFrekiTechniques(profile = {}) {
@@ -33,7 +34,8 @@ export function reconcileFrekiTechniques(profile = {}) {
   return { ...profile, techniques: profile.techniques.map(technique => {
     const current = techniquesById.get(technique.id);
     return current ? { ...technique, damageFormula: '', damageModel: structuredClone(current.damageModel),
-      description: current.description, effect: current.effect } : technique;
+      description: current.description, effect: current.effect,
+      ...(current.secondarySave ? { secondarySave: structuredClone(current.secondarySave) } : {}) } : technique;
   }) };
 }
 
@@ -47,4 +49,4 @@ export const FREKI_ACTIVE_ABILITIES = [
   ability('freki-durchhalten','Zäher Nordwolf',['bonus-action','special-action'],
     'Freki erhält 1W6 + KON temporäre TP. Ein vorhandener höherer Vorrat bleibt bestehen; keine Heilung und kein Wiederbeleben.',
     [{id:'freki-durchhalten-tp',type:'temporary-hit-points',target:'self',on:'always',formula:'1d6',bonusAttribute:'constitution'}])
-];
+].map(reviseMartialPositionEntry);

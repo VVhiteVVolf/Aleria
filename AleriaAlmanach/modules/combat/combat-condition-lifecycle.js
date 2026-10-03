@@ -1,9 +1,12 @@
 // Scene-owned condition identity and concentration links. Shared by browser and server.
+import { getActionLockPrevention } from './combat-action-lock-recovery.js';
 export function getConditionConcentrationOwnerId(condition = {}) {
   return String(condition.concentrationOwnerId || condition.durationModel?.concentrationOwnerId || '');
 }
 
 export function refreshRuntimeCondition(conditions = [], incoming) {
+  if (getActionLockPrevention(conditions, incoming)) return conditions;
+  if (incoming.blockedResource === 'action') incoming = { ...incoming, grantsActionRecovery: true };
   // Recasting one effect by the same caster refreshes it. Manual effects have
   // independent identities and remain explicitly managed by the player.
   return conditions.filter(condition => {

@@ -17,7 +17,7 @@ test('Silberschuppe protects only Hieb/Stich; Gafyr plate protects all types exc
     const result = applyTypedCombatDamage(state, 8, profile, { damageType, magical });
     assert.equal(result.incoming, protectedType ? 6 : 8, `${character.name}: ${damageType}, magical=${magical}`);
     assert.equal(result.after.current, protectedType ? 54 : 52);
-    assert.equal(profile.armorClassTotal, 16);
+    assert.equal(profile.armorClassTotal, 15);
   }
 });
 

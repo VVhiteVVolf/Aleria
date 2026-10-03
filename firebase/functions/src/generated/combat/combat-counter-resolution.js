@@ -4,16 +4,18 @@ import { consumeCombatAmmunition } from './combat-ammunition.js';
 import { validateCombatActorProfile } from './combat-profile-resolver.js';
 import { compactCombatResolution } from './combat-resolution-storage.js';
 import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
+import { getConditionArmorBonus } from './combat-armor-stances.js';
 
 function afterProfile(profile, result, role) {
   const conditions = result[`${role}ConditionSnapshot`]?.after || profile.temporaryConditions || [];
   const oldTemporary = new Set((profile.temporaryConditions || []).map(condition => condition.id));
-  const beforeArmor = (profile.temporaryConditions || []).reduce((sum, c) => sum + Number(c.mechanics?.armorClass || 0), 0);
-  const afterArmor = conditions.reduce((sum, c) => sum + Number(c.mechanics?.armorClass || 0), 0);
+  const combinedConditions = (profile.conditions || []).filter(c => !oldTemporary.has(c.id)).concat(conditions);
+  const beforeArmor = getConditionArmorBonus(profile.conditions);
+  const afterArmor = getConditionArmorBonus(combinedConditions);
   const hp = role === 'target' ? { current: result.targetSnapshot.hitPointsAfter, temporary: result.targetSnapshot.temporaryHitPointsAfter }
     : result.actorHitPointSnapshot?.after;
   return { ...profile, currentHitPoints: hp?.current ?? profile.currentHitPoints, temporaryHitPoints: hp?.temporary ?? profile.temporaryHitPoints,
-    conditions: (profile.conditions || []).filter(c => !oldTemporary.has(c.id)).concat(conditions), temporaryConditions: conditions,
+    conditions: combinedConditions, temporaryConditions: conditions,
     totalDefense: profile.totalDefense - beforeArmor + afterArmor,
     resources: result[`${role}ResourceSnapshot`]?.after || profile.resources,
     inventory: result[`${role}InventorySnapshot`]?.after || profile.inventory,

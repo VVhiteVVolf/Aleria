@@ -1,0 +1,3156 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-03T02:00:00.000Z",
+  "character": {
+    "id": "y7MBxDiAaesbWHBtmw5Q",
+    "name": "Rhiannon Draig",
+    "updatedAt": "2026-10-03T02:00:00.000Z",
+    "combatProfile": {
+      "armorClass": {
+        "dexterityMode": "full",
+        "base": 10,
+        "overrideMode": "total",
+        "override": null,
+        "shieldBonus": 0,
+        "dexterityCap": 2,
+        "magicModifier": 0,
+        "otherModifier": 0
+      },
+      "schemaVersion": 11,
+      "magic": {
+        "castingAttribute": "intelligence",
+        "focusEnabled": false,
+        "bypassResourceId": "",
+        "enabled": true,
+        "manaResourceId": "mana-focus",
+        "focusResourceId": "focus",
+        "spellAttackOverride": null,
+        "slotResourceIds": [
+          "spell-slot-1",
+          "spell-slot-2",
+          "spell-slot-3",
+          "spell-slot-4",
+          "spell-slot-5",
+          "spell-slot-6",
+          "spell-slot-7",
+          "spell-slot-8",
+          "spell-slot-9",
+          "spell-slot-10"
+        ],
+        "notes": "Arkane Studienmagie. Ungepanzert, verlässt sich auf Geschick und Distanz statt Rüstung.",
+        "casterTier": "full",
+        "spellSaveDcOverride": null,
+        "spells": [
+          {
+            "tags": "Zaubertrick · mysticism",
+            "presentationKind": "spell",
+            "level": 0,
+            "halfDamageOnSave": false,
+            "resolutionType": "automatic",
+            "saveAttribute": "intelligence",
+            "rollFormula": "",
+            "effects": [],
+            "manaCost": 1,
+            "aiInstructions": "Rein freitextbasiert, kein struktureller Effekt. Nur kleine, ungefährliche Interaktionen (Gewicht/Größe eines Buches).",
+            "prepared": true,
+            "slotCost": 0,
+            "requirements": "",
+            "range": "Zauber",
+            "id": "rhiannon-magierhand",
+            "damageType": "Magie",
+            "icon": "../IconOrdner/Zauber/menus/icons/png/mysticism/telekinesis_mysticism.png",
+            "school": "mysticism",
+            "upcast": {
+              "maximumLevel": 10,
+              "amountPerLevel": 0,
+              "formulaPerLevel": "",
+              "enabled": false
+            },
+            "concentration": false,
+            "auraBypass": {
+              "resourceId": "",
+              "cost": 1,
+              "allowed": true
+            },
+            "activationType": "action",
+            "costs": [
+              {
+                "resourceId": "action",
+                "amount": 1,
+                "scope": "comment",
+                "id": "activation-action",
+                "name": "Aktion"
+              },
+              {
+                "name": "Mana",
+                "resourceId": "mana-focus",
+                "scope": "persistent",
+                "id": "rhiannon-magierhand-mana-cost",
+                "amount": 1
+              }
+            ],
+            "channelComments": 0,
+            "slotResourceId": "",
+            "name": "Magierhand",
+            "description": "Eine unsichtbare, geisterhafte Hand bewegt kleine Gegenstände auf Distanz, öffnet Türen oder betätigt Hebel.",
+            "duration": "Sofort bzw. situativ"
+          },
+          {
+            "slotCost": 0,
+            "effects": [],
+            "manaCost": 1,
+            "auraBypass": {
+              "cost": 1,
+              "allowed": true,
+              "resourceId": ""
+            },
+            "resolutionType": "automatic",
+            "costs": [
+              {
+                "id": "activation-action",
+                "name": "Aktion",
+                "resourceId": "action",
+                "amount": 1,
+                "scope": "comment"
+              },
+              {
+                "amount": 1,
+                "scope": "persistent",
+                "name": "Mana",
+                "id": "rhiannon-licht-mana-cost",
+                "resourceId": "mana-focus"
+              }
+            ],
+            "prepared": true,
+            "rollFormula": "",
+            "damageType": "Magie",
+            "tags": "Zaubertrick · illusion",
+            "concentration": false,
+            "channelComments": 0,
+            "id": "rhiannon-licht",
+            "aiInstructions": "Rein freitextbasiert, kein struktureller Effekt.",
+            "name": "Licht",
+            "description": "Rhiannon lässt einen berührten Gegenstand mit warmem, magischem Licht leuchten.",
+            "duration": "Sofort bzw. situativ",
+            "requirements": "",
+            "saveAttribute": "intelligence",
+            "range": "Zauber",
+            "upcast": {
+              "amountPerLevel": 0,
+              "maximumLevel": 10,
+              "enabled": false,
+              "formulaPerLevel": ""
+            },
+            "school": "illusion",
+            "halfDamageOnSave": false,
+            "icon": "../IconOrdner/Zauber/menus/icons/png/illusion/light_eye_illusion.png",
+            "presentationKind": "spell",
+            "slotResourceId": "",
+            "level": 0,
+            "activationType": "action"
+          },
+          {
+            "damageType": "Magie",
+            "saveAttribute": "intelligence",
+            "requirements": "",
+            "rollFormula": "",
+            "auraBypass": {
+              "resourceId": "",
+              "cost": 1,
+              "allowed": true
+            },
+            "slotResourceId": "",
+            "duration": "Sofort bzw. situativ",
+            "costs": [
+              {
+                "name": "Aktion",
+                "amount": 1,
+                "resourceId": "action",
+                "scope": "comment",
+                "id": "activation-action"
+              },
+              {
+                "amount": 1,
+                "name": "Mana",
+                "resourceId": "mana-focus",
+                "scope": "persistent",
+                "id": "rhiannon-taschenspielerei-mana-cost"
+              }
+            ],
+            "activationType": "action",
+            "upcast": {
+              "maximumLevel": 10,
+              "formulaPerLevel": "",
+              "enabled": false,
+              "amountPerLevel": 0
+            },
+            "school": "destruction",
+            "tags": "Zaubertrick · destruction",
+            "id": "rhiannon-taschenspielerei",
+            "halfDamageOnSave": false,
+            "presentationKind": "spell",
+            "name": "Taschenspielerei",
+            "effects": [],
+            "resolutionType": "automatic",
+            "level": 0,
+            "channelComments": 0,
+            "slotCost": 0,
+            "range": "Zauber",
+            "concentration": false,
+            "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/fire_damage.png",
+            "manaCost": 1,
+            "description": "Kleine magische Spielereien: etwas reinigen oder beschmutzen, erwärmen oder abkühlen, eine kleine Flamme entzünden oder löschen.",
+            "aiInstructions": "Rein freitextbasiert, kein struktureller Effekt. Kein Kampfschaden.",
+            "prepared": true
+          },
+          {
+            "icon": "",
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "concentration": false,
+            "rollFormula": "",
+            "range": "Zauber",
+            "resolutionType": "automatic",
+            "name": "Telepathische Botschaft",
+            "damageType": "Magie",
+            "level": 0,
+            "duration": "Sofort bzw. situativ",
+            "aiInstructions": "Rein freitextbasiert, kein struktureller Effekt. Kein passendes Icon im Fundus gefunden, daher ohne Icon.",
+            "id": "rhiannon-telepathische-botschaft",
+            "upcast": {
+              "formulaPerLevel": "",
+              "amountPerLevel": 0,
+              "enabled": false,
+              "maximumLevel": 10
+            },
+            "school": "mysticism",
+            "tags": "Zaubertrick · mysticism",
+            "effects": [],
+            "costs": [
+              {
+                "scope": "comment",
+                "id": "activation-action",
+                "name": "Aktion",
+                "resourceId": "action",
+                "amount": 1
+              },
+              {
+                "name": "Mana",
+                "amount": 1,
+                "id": "rhiannon-telepathische-botschaft-mana-cost",
+                "scope": "persistent",
+                "resourceId": "mana-focus"
+              }
+            ],
+            "requirements": "",
+            "slotResourceId": "",
+            "slotCost": 0,
+            "halfDamageOnSave": false,
+            "presentationKind": "spell",
+            "manaCost": 1,
+            "prepared": true,
+            "activationType": "action",
+            "channelComments": 0,
+            "saveAttribute": "intelligence",
+            "description": "Rhiannon flüstert einer Person auf kurze Distanz eine kurze Botschaft zu, ohne dass Umstehende etwas hören."
+          },
+          {
+            "icon": "../IconOrdner/Zauber/menus/icons/png/illusion/chameleon_illusion.png",
+            "aiInstructions": "Rein freitextbasiert, kein struktureller Effekt. Keine Bewegung, kein Kampfschaden.",
+            "concentration": false,
+            "costs": [
+              {
+                "name": "Aktion",
+                "scope": "comment",
+                "amount": 1,
+                "id": "activation-action",
+                "resourceId": "action"
+              },
+              {
+                "resourceId": "mana-focus",
+                "id": "rhiannon-kleine-illusion-mana-cost",
+                "scope": "persistent",
+                "name": "Mana",
+                "amount": 1
+              }
+            ],
+            "id": "rhiannon-kleine-illusion",
+            "channelComments": 0,
+            "prepared": true,
+            "resolutionType": "automatic",
+            "name": "Kleine Illusion",
+            "upcast": {
+              "enabled": false,
+              "formulaPerLevel": "",
+              "maximumLevel": 10,
+              "amountPerLevel": 0
+            },
+            "manaCost": 1,
+            "school": "illusion",
+            "rollFormula": "",
+            "slotCost": 0,
+            "activationType": "action",
+            "description": "Erschafft ein kleines, unbewegliches Trugbild oder eine Geräuschillusion.",
+            "tags": "Zaubertrick · illusion",
+            "range": "Zauber",
+            "slotResourceId": "",
+            "auraBypass": {
+              "resourceId": "",
+              "cost": 1,
+              "allowed": true
+            },
+            "saveAttribute": "intelligence",
+            "requirements": "",
+            "effects": [],
+            "level": 0,
+            "presentationKind": "spell",
+            "halfDamageOnSave": false,
+            "duration": "Sofort bzw. situativ",
+            "damageType": "Magie"
+          },
+          {
+            "manaCost": 2,
+            "prepared": true,
+            "damageType": "Magie",
+            "activationType": "action",
+            "id": "rhiannon-magierruestung",
+            "slotCost": 1,
+            "slotResourceId": "spell-slot-1",
+            "level": 1,
+            "description": "Ein schimmernder Kraftmantel legt sich um Rhiannon und gewährt ihr temporäre Trefferpunkte (1W10, je Zaubergrad höher +1W10).",
+            "saveAttribute": "intelligence",
+            "range": "Selbst",
+            "requirements": "",
+            "auraBypass": {
+              "allowed": true,
+              "cost": 1,
+              "resourceId": ""
+            },
+            "tags": "Zauber · alteration · Schutz",
+            "effects": [
+              {
+                "concentration": false,
+                "type": "temporary-hit-points",
+                "damageType": "physisch",
+                "conditionId": "",
+                "inheritWeaponDamageType": false,
+                "amount": 0,
+                "resourceId": "",
+                "condition": null,
+                "movementKind": "move",
+                "id": "rhiannon-magierruestung-temp-hp",
+                "notes": "",
+                "magical": false,
+                "movementMeters": 0,
+                "channelComments": 0,
+                "on": "always",
+                "nonlethal": false,
+                "summon": null,
+                "conditionTags": "",
+                "target": "self",
+                "formula": "1d10"
+              }
+            ],
+            "aiInstructions": "Kein Angriffswurf. Gewährt sofort temporäre Trefferpunkte in Höhe des gewürfelten Werts (1W10, bei höherem Zaubergrad zusätzliche 1W10 pro Grad).",
+            "name": "Magierrüstung",
+            "presentationKind": "spell",
+            "duration": "Bis zum Kampfende",
+            "halfDamageOnSave": false,
+            "upcast": {
+              "maximumLevel": 5,
+              "amountPerLevel": 0,
+              "enabled": true,
+              "formulaPerLevel": "1d10"
+            },
+            "school": "alteration",
+            "resolutionType": "automatic",
+            "costs": [
+              {
+                "scope": "comment",
+                "name": "Aktion",
+                "id": "activation-action",
+                "amount": 1,
+                "resourceId": "action"
+              },
+              {
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "amount": 2,
+                "scope": "persistent",
+                "id": "rhiannon-magierruestung-mana-cost"
+              }
+            ],
+            "icon": "../IconOrdner/Zauber/menus/icons/png/alteration/lightning_shield_alteration.png",
+            "rollFormula": "",
+            "concentration": false,
+            "channelComments": 0
+          },
+          {
+            "rollFormula": "",
+            "resolutionType": "automatic",
+            "tags": "Zauber · alteration · Abwehr",
+            "id": "rhiannon-schild",
+            "aiInstructions": "Kein Angriffswurf beim Wirken. Erzeugt eine Abwehrladung, die den nächsten Treffer gegen Rhiannon automatisch ablenkt (kein Schaden, wird serverseitig als Fehlschlag gewertet). Ein kritischer Treffer zerbricht den Schild stattdessen vollständig (der Treffer selbst zählt dann normal). Bei höherem Zaubergrad müsste der DM zusätzliche Ladungen manuell nachtragen - das automatische System skaliert nur die Grad-1-Ladung (1).",
+            "requirements": "",
+            "concentration": false,
+            "duration": "Bis verbraucht oder Kampfende",
+            "channelComments": 0,
+            "upcast": {
+              "enabled": false,
+              "formulaPerLevel": "",
+              "amountPerLevel": 0,
+              "maximumLevel": 10
+            },
+            "school": "alteration",
+            "costs": [
+              {
+                "amount": 1,
+                "name": "Reaktion",
+                "scope": "comment",
+                "id": "activation-reaction",
+                "resourceId": "reaction"
+              },
+              {
+                "amount": 2,
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "scope": "persistent",
+                "id": "rhiannon-schild-mana-cost"
+              }
+            ],
+            "icon": "../IconOrdner/Zauber/menus/icons/png/alteration/shield_alteration.png",
+            "level": 1,
+            "saveAttribute": "intelligence",
+            "damageType": "Magie",
+            "effects": [
+              {
+                "on": "always",
+                "channelComments": 0,
+                "movementMeters": 0,
+                "formula": "",
+                "condition": {
+                  "id": "rhiannon-schild-zustand",
+                  "active": true,
+                  "name": "Schild",
+                  "ward": {
+                    "breaksOnCriticalHit": true,
+                    "enabled": true,
+                    "charges": 1,
+                    "deflectChance": 100
+                  },
+                  "source": "Schild",
+                  "remainingActorComments": 0,
+                  "durationModel": {
+                    "concentrationOwnerId": "",
+                    "remainingSceneComments": 0,
+                    "encounterId": "",
+                    "expiresOnDayChange": false,
+                    "kind": "combat",
+                    "label": "Bis verbraucht oder Kampfende",
+                    "channelOwnerId": "",
+                    "remainingActorComments": 0,
+                    "expiresOnRest": ""
+                  },
+                  "tags": "Schild · Abwehr",
+                  "remainingSceneComments": 0,
+                  "description": "Eine unsichtbare Kraftwand lenkt den nächsten Treffer gegen Rhiannon ab.",
+                  "duration": "Bis verbraucht oder Kampfende",
+                  "mechanics": {
+                    "savingThrow": 0,
+                    "spellAttack": 0,
+                    "passivePerception": 0,
+                    "initiative": 0,
+                    "attack": 0,
+                    "spellSaveDc": 0,
+                    "damage": 0,
+                    "armorClass": 0,
+                    "skill": 0,
+                    "attackRollMode": "normal",
+                    "maximumHitPoints": 0,
+                    "movement": 0
+                  }
+                },
+                "conditionTags": "",
+                "amount": 0,
+                "notes": "",
+                "movementKind": "move",
+                "magical": false,
+                "nonlethal": false,
+                "resourceId": "",
+                "concentration": false,
+                "inheritWeaponDamageType": false,
+                "conditionId": "",
+                "target": "self",
+                "id": "rhiannon-schild-ward",
+                "summon": null,
+                "damageType": "physisch",
+                "type": "apply-condition"
+              }
+            ],
+            "prepared": true,
+            "name": "Schild",
+            "manaCost": 2,
+            "description": "Eine durchsichtige Kraftwand erscheint vor Rhiannon und wehrt den nächsten Angriff vollständig ab. Muss nach dem Verbrauch erneut gewirkt werden. Zerbricht bei einem kritischen Treffer.",
+            "activationType": "reaction",
+            "slotResourceId": "spell-slot-1",
+            "range": "Selbst",
+            "presentationKind": "spell",
+            "slotCost": 1,
+            "auraBypass": {
+              "cost": 1,
+              "resourceId": "",
+              "allowed": true
+            },
+            "halfDamageOnSave": false
+          },
+          {
+            "costs": [
+              {
+                "scope": "comment",
+                "id": "activation-action",
+                "name": "Aktion",
+                "amount": 1,
+                "resourceId": "action"
+              },
+              {
+                "scope": "persistent",
+                "amount": 2,
+                "id": "rhiannon-magisches-geschoss-mana-cost",
+                "resourceId": "mana-focus",
+                "name": "Mana"
+              }
+            ],
+            "damageType": "Arkan",
+            "requirements": "",
+            "tags": "Zauber · destruction · Schaden",
+            "description": "Ein roher Strahl reinen magischen Kraft schießt aus Rhiannons Fingern und trifft unweigerlich sein Ziel.",
+            "resolutionType": "automatic",
+            "concentration": false,
+            "prepared": true,
+            "upcast": {
+              "enabled": true,
+              "formulaPerLevel": "1d4",
+              "maximumLevel": 10,
+              "amountPerLevel": 0
+            },
+            "school": "destruction",
+            "auraBypass": {
+              "cost": 1,
+              "resourceId": "",
+              "allowed": true
+            },
+            "manaCost": 2,
+            "aiInstructions": "Kein Angriffswurf - trifft automatisch. Reiner Schaden, wird bei höherem Zaubergrad stärker (+1W4 pro Grad).",
+            "slotCost": 1,
+            "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/disintegrate_damage.png",
+            "range": "Zauber (Fernkampf)",
+            "channelComments": 0,
+            "slotResourceId": "spell-slot-1",
+            "name": "Magisches Geschoss",
+            "id": "rhiannon-magisches-geschoss",
+            "effects": [
+              {
+                "movementKind": "move",
+                "target": "target",
+                "magical": false,
+                "inheritWeaponDamageType": false,
+                "summon": null,
+                "condition": null,
+                "formula": "1d4+1",
+                "conditionTags": "",
+                "id": "rhiannon-magisches-geschoss-damage",
+                "damageType": "Arkan",
+                "notes": "",
+                "amount": 0,
+                "concentration": false,
+                "on": "hit",
+                "conditionId": "",
+                "movementMeters": 0,
+                "channelComments": 0,
+                "nonlethal": false,
+                "type": "damage",
+                "resourceId": ""
+              }
+            ],
+            "rollFormula": "",
+            "saveAttribute": "dexterity",
+            "halfDamageOnSave": false,
+            "duration": "Sofort",
+            "presentationKind": "spell",
+            "activationType": "action",
+            "level": 1
+          },
+          {
+            "channelComments": 0,
+            "resolutionType": "automatic",
+            "effects": [],
+            "range": "Zauber",
+            "manaCost": 2,
+            "level": 1,
+            "rollFormula": "",
+            "tags": "Zauber · alteration",
+            "prepared": true,
+            "slotCost": 1,
+            "concentration": false,
+            "id": "rhiannon-federfall",
+            "school": "alteration",
+            "aiInstructions": "Rein freitextbasiert, kein struktureller Effekt.",
+            "upcast": {
+              "enabled": false,
+              "formulaPerLevel": "",
+              "maximumLevel": 10,
+              "amountPerLevel": 0
+            },
+            "description": "Verlangsamt den Fall einer berührten Kreatur oder eines Gegenstands, sodass kein Sturzschaden entsteht.",
+            "auraBypass": {
+              "cost": 1,
+              "allowed": true,
+              "resourceId": ""
+            },
+            "costs": [
+              {
+                "id": "activation-action",
+                "scope": "comment",
+                "amount": 1,
+                "resourceId": "action",
+                "name": "Aktion"
+              },
+              {
+                "scope": "persistent",
+                "amount": 2,
+                "name": "Mana",
+                "id": "rhiannon-federfall-mana-cost",
+                "resourceId": "mana-focus"
+              }
+            ],
+            "halfDamageOnSave": false,
+            "presentationKind": "spell",
+            "saveAttribute": "intelligence",
+            "name": "Federfall",
+            "damageType": "Magie",
+            "slotResourceId": "spell-slot-1",
+            "activationType": "action",
+            "icon": "../IconOrdner/Zauber/menus/icons/png/alteration/feather_alteration.png",
+            "requirements": "",
+            "duration": "Situativ"
+          },
+          {
+            "range": "Zauber",
+            "channelComments": 0,
+            "activationType": "action",
+            "id": "rhiannon-identifizieren",
+            "description": "Rhiannon erkennt die magischen Eigenschaften eines Gegenstands oder Zaubers.",
+            "tags": "Zauber · alteration",
+            "slotResourceId": "spell-slot-1",
+            "requirements": "",
+            "slotCost": 1,
+            "concentration": false,
+            "manaCost": 2,
+            "prepared": true,
+            "level": 1,
+            "aiInstructions": "Rein freitextbasiert, kein struktureller Effekt. Kein passendes Icon im Fundus gefunden.",
+            "upcast": {
+              "amountPerLevel": 0,
+              "enabled": false,
+              "maximumLevel": 10,
+              "formulaPerLevel": ""
+            },
+            "saveAttribute": "intelligence",
+            "icon": "",
+            "school": "alteration",
+            "costs": [
+              {
+                "name": "Aktion",
+                "resourceId": "action",
+                "scope": "comment",
+                "amount": 1,
+                "id": "activation-action"
+              },
+              {
+                "amount": 2,
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "id": "rhiannon-identifizieren-mana-cost",
+                "scope": "persistent"
+              }
+            ],
+            "auraBypass": {
+              "cost": 1,
+              "resourceId": "",
+              "allowed": true
+            },
+            "effects": [],
+            "presentationKind": "spell",
+            "name": "Identifizieren",
+            "halfDamageOnSave": false,
+            "rollFormula": "",
+            "resolutionType": "automatic",
+            "duration": "Situativ",
+            "damageType": "Magie"
+          },
+          {
+            "requirements": "",
+            "id": "rhiannon-magie-entdecken",
+            "slotResourceId": "spell-slot-1",
+            "costs": [
+              {
+                "id": "activation-action",
+                "name": "Aktion",
+                "resourceId": "action",
+                "scope": "comment",
+                "amount": 1
+              },
+              {
+                "name": "Mana",
+                "scope": "persistent",
+                "amount": 2,
+                "resourceId": "mana-focus",
+                "id": "rhiannon-magie-entdecken-mana-cost"
+              }
+            ],
+            "activationType": "action",
+            "halfDamageOnSave": false,
+            "auraBypass": {
+              "resourceId": "",
+              "allowed": true,
+              "cost": 1
+            },
+            "presentationKind": "spell",
+            "tags": "Zauber · mysticism",
+            "concentration": false,
+            "school": "mysticism",
+            "effects": [],
+            "upcast": {
+              "enabled": false,
+              "maximumLevel": 10,
+              "formulaPerLevel": "",
+              "amountPerLevel": 0
+            },
+            "slotCost": 1,
+            "description": "Rhiannon spürt die Anwesenheit von Magie in ihrer Umgebung auf.",
+            "prepared": true,
+            "damageType": "Magie",
+            "manaCost": 2,
+            "saveAttribute": "intelligence",
+            "name": "Magie entdecken",
+            "rollFormula": "",
+            "aiInstructions": "Rein freitextbasiert, kein struktureller Effekt.",
+            "range": "Zauber",
+            "duration": "Situativ",
+            "level": 1,
+            "resolutionType": "automatic",
+            "icon": "../IconOrdner/Zauber/menus/icons/png/mysticism/detect_life_mysticism.png",
+            "channelComments": 0
+          },
+          {
+            "description": "Eine scharfe, unsichtbare Klinge aus geballter Luft schneidet in das Ziel.",
+            "slotCost": 1,
+            "prepared": true,
+            "name": "Windklinge",
+            "auraBypass": {
+              "allowed": true,
+              "cost": 1,
+              "resourceId": ""
+            },
+            "aiInstructions": "Zauberangriffswurf gegen die Rüstungsklasse des Ziels.",
+            "presentationKind": "spell",
+            "manaCost": 2,
+            "halfDamageOnSave": false,
+            "concentration": false,
+            "costs": [
+              {
+                "amount": 1,
+                "scope": "comment",
+                "name": "Aktion",
+                "id": "activation-action",
+                "resourceId": "action"
+              },
+              {
+                "amount": 2,
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "scope": "persistent",
+                "id": "rhiannon-windklinge-mana-cost"
+              }
+            ],
+            "resolutionType": "spell-attack",
+            "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/frost_damage.png",
+            "damageType": "Wind",
+            "id": "rhiannon-windklinge",
+            "level": 1,
+            "duration": "Sofort",
+            "saveAttribute": "dexterity",
+            "slotResourceId": "spell-slot-1",
+            "school": "destruction",
+            "upcast": {
+              "maximumLevel": 10,
+              "formulaPerLevel": "",
+              "amountPerLevel": 0,
+              "enabled": false
+            },
+            "activationType": "action",
+            "requirements": "",
+            "rollFormula": "",
+            "effects": [
+              {
+                "concentration": false,
+                "resourceId": "",
+                "notes": "",
+                "movementMeters": 0,
+                "amount": 0,
+                "movementKind": "move",
+                "damageType": "Wind",
+                "on": "hit",
+                "condition": null,
+                "inheritWeaponDamageType": false,
+                "conditionId": "",
+                "formula": "1d8",
+                "channelComments": 0,
+                "summon": null,
+                "type": "damage",
+                "id": "rhiannon-windklinge-damage",
+                "target": "target",
+                "conditionTags": "",
+                "nonlethal": false,
+                "magical": false
+              }
+            ],
+            "tags": "Zauber · destruction · Schaden",
+            "channelComments": 0,
+            "range": "Zauber (Fernkampf)"
+          },
+          {
+            "concentration": false,
+            "rollFormula": "",
+            "channelComments": 0,
+            "resolutionType": "saving-throw",
+            "tags": "Zauber · destruction · Schaden",
+            "requirements": "",
+            "damageType": "Wind",
+            "slotCost": 1,
+            "manaCost": 2,
+            "aiInstructions": "Stärke-Rettungswurf gegen Rhiannons Zauber-SG. Bei Erfolg nur halber Schaden.",
+            "prepared": true,
+            "auraBypass": {
+              "cost": 1,
+              "allowed": true,
+              "resourceId": ""
+            },
+            "costs": [
+              {
+                "name": "Aktion",
+                "resourceId": "action",
+                "amount": 1,
+                "id": "activation-action",
+                "scope": "comment"
+              },
+              {
+                "id": "rhiannon-druckstoss-mana-cost",
+                "name": "Mana",
+                "scope": "persistent",
+                "resourceId": "mana-focus",
+                "amount": 2
+              }
+            ],
+            "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/attribute_damage.png",
+            "upcast": {
+              "enabled": false,
+              "formulaPerLevel": "",
+              "amountPerLevel": 0,
+              "maximumLevel": 10
+            },
+            "school": "destruction",
+            "level": 1,
+            "id": "rhiannon-druckstoss",
+            "effects": [
+              {
+                "type": "damage",
+                "summon": null,
+                "nonlethal": false,
+                "notes": "",
+                "target": "target",
+                "movementMeters": 0,
+                "concentration": false,
+                "on": "hit",
+                "conditionId": "",
+                "movementKind": "move",
+                "inheritWeaponDamageType": false,
+                "id": "rhiannon-druckstoss-damage",
+                "condition": null,
+                "formula": "1d6",
+                "conditionTags": "",
+                "damageType": "Wind",
+                "amount": 0,
+                "channelComments": 0,
+                "resourceId": "",
+                "magical": false
+              }
+            ],
+            "name": "Druckstoß",
+            "presentationKind": "spell",
+            "slotResourceId": "spell-slot-1",
+            "halfDamageOnSave": true,
+            "saveAttribute": "strength",
+            "duration": "Sofort",
+            "activationType": "action",
+            "range": "Zauber (Fernkampf)",
+            "description": "Eine unsichtbare Druckwelle stößt das Ziel zurück und lässt es taumeln."
+          },
+          {
+            "range": "Zauber",
+            "saveAttribute": "intelligence",
+            "id": "rhiannon-nebelschritt",
+            "resolutionType": "automatic",
+            "rollFormula": "",
+            "tags": "Zauber · alteration",
+            "prepared": true,
+            "requirements": "",
+            "manaCost": 3,
+            "level": 2,
+            "slotCost": 1,
+            "aiInstructions": "Rein freitextbasiert, kein struktureller Effekt. Kein passendes Icon im Fundus gefunden.",
+            "upcast": {
+              "enabled": false,
+              "formulaPerLevel": "",
+              "amountPerLevel": 0,
+              "maximumLevel": 10
+            },
+            "school": "alteration",
+            "costs": [
+              {
+                "scope": "comment",
+                "resourceId": "action",
+                "name": "Aktion",
+                "amount": 1,
+                "id": "activation-action"
+              },
+              {
+                "id": "rhiannon-nebelschritt-mana-cost",
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "amount": 3,
+                "scope": "persistent"
+              }
+            ],
+            "auraBypass": {
+              "resourceId": "",
+              "allowed": true,
+              "cost": 1
+            },
+            "icon": "",
+            "channelComments": 0,
+            "damageType": "Magie",
+            "concentration": false,
+            "name": "Nebelschritt",
+            "effects": [],
+            "slotResourceId": "spell-slot-2",
+            "description": "Rhiannon beschleunigt ihren Körper mit einem magischen Schub und springt fast augenblicklich von einem Ort zu einem anderen in Sichtweite.",
+            "duration": "Situativ",
+            "activationType": "action",
+            "presentationKind": "spell",
+            "halfDamageOnSave": false
+          },
+          {
+            "icon": "../IconOrdner/Zauber/menus/icons/png/illusion/invisibility_illusion.png",
+            "duration": "Bis verbraucht oder Kampfende",
+            "saveAttribute": "intelligence",
+            "id": "rhiannon-spiegelbilder",
+            "level": 2,
+            "effects": [
+              {
+                "on": "always",
+                "conditionId": "",
+                "type": "apply-condition",
+                "condition": {
+                  "remainingActorComments": 0,
+                  "description": "Zwei illusionäre Duplikate umschwirren Rhiannon und verwirren angreifende Gegner.",
+                  "tags": "Spiegelbilder · Abwehr",
+                  "mechanics": {
+                    "attack": 0,
+                    "attackRollMode": "normal",
+                    "maximumHitPoints": 0,
+                    "skill": 0,
+                    "armorClass": 0,
+                    "spellAttack": 0,
+                    "savingThrow": 0,
+                    "passivePerception": 0,
+                    "movement": 0,
+                    "damage": 0,
+                    "initiative": 0,
+                    "spellSaveDc": 0
+                  },
+                  "id": "rhiannon-spiegelbilder-zustand",
+                  "ward": {
+                    "enabled": true,
+                    "breaksOnCriticalHit": false,
+                    "deflectChance": 67,
+                    "charges": 2
+                  },
+                  "source": "Spiegelbilder",
+                  "name": "Spiegelbilder",
+                  "active": true,
+                  "durationModel": {
+                    "encounterId": "",
+                    "label": "Bis verbraucht oder Kampfende",
+                    "kind": "combat",
+                    "remainingSceneComments": 0,
+                    "remainingActorComments": 0,
+                    "channelOwnerId": "",
+                    "expiresOnRest": "",
+                    "expiresOnDayChange": false,
+                    "concentrationOwnerId": ""
+                  },
+                  "remainingSceneComments": 0,
+                  "duration": "Bis verbraucht oder Kampfende"
+                },
+                "damageType": "physisch",
+                "movementKind": "move",
+                "concentration": false,
+                "summon": null,
+                "movementMeters": 0,
+                "target": "self",
+                "resourceId": "",
+                "channelComments": 0,
+                "formula": "",
+                "amount": 0,
+                "notes": "",
+                "nonlethal": false,
+                "inheritWeaponDamageType": false,
+                "id": "rhiannon-spiegelbilder-ward",
+                "magical": false,
+                "conditionTags": ""
+              }
+            ],
+            "range": "Selbst",
+            "upcast": {
+              "amountPerLevel": 0,
+              "enabled": false,
+              "formulaPerLevel": "",
+              "maximumLevel": 10
+            },
+            "school": "illusion",
+            "slotResourceId": "spell-slot-2",
+            "name": "Spiegelbilder",
+            "description": "Drei täuschend echte Duplikate Rhiannons erscheinen um sie herum. Gegner können nicht sicher sagen, welches Bild die echte Zauberin ist (33 % Trefferchance je Angriff, 2 Ladungen).",
+            "presentationKind": "spell",
+            "halfDamageOnSave": false,
+            "activationType": "action",
+            "rollFormula": "",
+            "channelComments": 0,
+            "slotCost": 1,
+            "manaCost": 3,
+            "resolutionType": "automatic",
+            "prepared": true,
+            "damageType": "Magie",
+            "tags": "Zauber · illusion · Abwehr",
+            "requirements": "",
+            "costs": [
+              {
+                "scope": "comment",
+                "name": "Aktion",
+                "resourceId": "action",
+                "amount": 1,
+                "id": "activation-action"
+              },
+              {
+                "name": "Mana",
+                "scope": "persistent",
+                "id": "rhiannon-spiegelbilder-mana-cost",
+                "amount": 3,
+                "resourceId": "mana-focus"
+              }
+            ],
+            "aiInstructions": "Kein Angriffswurf beim Wirken. Erzeugt 2 Abwehrladungen: bei jedem Treffer gegen Rhiannon besteht eine 67-%-Chance (serverseitig gewürfelt), dass stattdessen ein Trugbild getroffen wird (kein Schaden, eine Ladung verbraucht). Bei den übrigen 33 % trifft der Angriff Rhiannon wirklich.",
+            "auraBypass": {
+              "resourceId": "",
+              "cost": 1,
+              "allowed": true
+            },
+            "concentration": false
+          },
+          {
+            "requirements": "",
+            "saveAttribute": "wisdom",
+            "slotResourceId": "spell-slot-2",
+            "description": "Eine Kreatur erstarrt vollständig und kann sich weder bewegen noch handeln, solange der Zauber anhält.",
+            "duration": "Bis zu 2 Gesamtkommentare der Zielfigur",
+            "costs": [
+              {
+                "scope": "comment",
+                "id": "activation-action",
+                "name": "Aktion",
+                "resourceId": "action",
+                "amount": 1
+              },
+              {
+                "id": "rhiannon-person-festhalten-mana-cost",
+                "resourceId": "mana-focus",
+                "scope": "persistent",
+                "amount": 3,
+                "name": "Mana"
+              }
+            ],
+            "tags": "Zauber · illusion · Kontrolle",
+            "activationType": "action",
+            "upcast": {
+              "amountPerLevel": 0,
+              "maximumLevel": 10,
+              "enabled": false,
+              "formulaPerLevel": ""
+            },
+            "name": "Person festhalten",
+            "school": "illusion",
+            "halfDamageOnSave": false,
+            "presentationKind": "spell",
+            "rollFormula": "",
+            "auraBypass": {
+              "cost": 1,
+              "allowed": true,
+              "resourceId": ""
+            },
+            "level": 2,
+            "resolutionType": "saving-throw",
+            "effects": [
+              {
+                "conditionId": "",
+                "amount": 0,
+                "channelComments": 0,
+                "concentration": false,
+                "damageType": "physisch",
+                "resourceId": "",
+                "inheritWeaponDamageType": false,
+                "id": "rhiannon-person-festhalten-condition",
+                "type": "apply-condition",
+                "nonlethal": false,
+                "target": "target",
+                "formula": "",
+                "summon": null,
+                "on": "hit",
+                "movementKind": "move",
+                "movementMeters": 0,
+                "notes": "",
+                "condition": {
+                  "remainingActorComments": 2,
+                  "description": "Die Kreatur ist wie erstarrt und kann sich nicht bewegen. Ob sie auch keine Aktionen mehr ausführen kann, ist frei zu erzählen.",
+                  "ward": {
+                    "deflectChance": 100,
+                    "charges": 0,
+                    "breaksOnCriticalHit": false,
+                    "enabled": false
+                  },
+                  "id": "rhiannon-festgehalten",
+                  "active": true,
+                  "duration": "Bis zu 2 eigene Gesamtkommentare",
+                  "source": "Person festhalten",
+                  "name": "Festgehalten",
+                  "mechanics": {
+                    "armorClass": 0,
+                    "passivePerception": 0,
+                    "attack": 0,
+                    "movement": -99,
+                    "skill": 0,
+                    "spellSaveDc": 0,
+                    "damage": 0,
+                    "maximumHitPoints": 0,
+                    "attackRollMode": "normal",
+                    "spellAttack": 0,
+                    "savingThrow": 0,
+                    "initiative": 0
+                  },
+                  "durationModel": {
+                    "remainingSceneComments": 0,
+                    "expiresOnRest": "",
+                    "encounterId": "",
+                    "channelOwnerId": "",
+                    "label": "Bis zu 2 eigene Gesamtkommentare",
+                    "kind": "actor-comments",
+                    "concentrationOwnerId": "",
+                    "expiresOnDayChange": false,
+                    "remainingActorComments": 2
+                  },
+                  "tags": "Kontrolle · Debuff",
+                  "remainingSceneComments": 0
+                },
+                "conditionTags": "",
+                "magical": false
+              }
+            ],
+            "channelComments": 0,
+            "icon": "../IconOrdner/Zauber/menus/icons/png/illusion/paralyze_illusion.png",
+            "slotCost": 1,
+            "range": "Zauber (Fernkampf)",
+            "damageType": "Magie",
+            "aiInstructions": "Willenskraft-Rettungswurf (Weisheit) gegen Rhiannons Zauber-SG. Bei Misserfolg ist die Bewegung des Ziels auf 0 gesetzt (siehe Mechanik); dass es zusätzlich keine Aktionen mehr ausführen kann, ist frei zu erzählen, da es dafür kein eigenes Flag gibt. WICHTIG: Es gibt aktuell keinen automatisierten \"erneuter Rettungswurf am Zugende\"-Mechanismus (kein Reaktions-Button im System) - das wiederholte Losreißen muss der DM manuell/freitextbasiert entscheiden, bis diese Funktion gebaut ist.",
+            "id": "rhiannon-person-festhalten",
+            "manaCost": 3,
+            "prepared": true,
+            "concentration": true
+          },
+          {
+            "effects": [],
+            "resolutionType": "automatic",
+            "id": "rhiannon-gedanken-wahrnehmen",
+            "slotCost": 1,
+            "icon": "",
+            "upcast": {
+              "enabled": false,
+              "amountPerLevel": 0,
+              "formulaPerLevel": "",
+              "maximumLevel": 10
+            },
+            "prepared": true,
+            "school": "mysticism",
+            "level": 2,
+            "manaCost": 3,
+            "range": "Zauber",
+            "rollFormula": "",
+            "concentration": false,
+            "aiInstructions": "Rein freitextbasiert, kein struktureller Effekt. Kein passendes Icon im Fundus gefunden.",
+            "name": "Gedanken wahrnehmen",
+            "duration": "Situativ",
+            "saveAttribute": "intelligence",
+            "description": "Rhiannon liest die oberflächlichen Gedanken einer nahen Kreatur.",
+            "damageType": "Magie",
+            "tags": "Zauber · mysticism",
+            "activationType": "action",
+            "costs": [
+              {
+                "scope": "comment",
+                "resourceId": "action",
+                "amount": 1,
+                "name": "Aktion",
+                "id": "activation-action"
+              },
+              {
+                "id": "rhiannon-gedanken-wahrnehmen-mana-cost",
+                "amount": 3,
+                "scope": "persistent",
+                "name": "Mana",
+                "resourceId": "mana-focus"
+              }
+            ],
+            "presentationKind": "spell",
+            "halfDamageOnSave": false,
+            "auraBypass": {
+              "resourceId": "",
+              "allowed": true,
+              "cost": 1
+            },
+            "channelComments": 0,
+            "slotResourceId": "spell-slot-2",
+            "requirements": ""
+          },
+          {
+            "effects": [
+              {
+                "formula": "2d6",
+                "conditionId": "",
+                "movementMeters": 0,
+                "movementKind": "move",
+                "type": "damage",
+                "target": "target",
+                "condition": null,
+                "magical": false,
+                "summon": null,
+                "on": "hit",
+                "conditionTags": "",
+                "concentration": false,
+                "resourceId": "",
+                "id": "rhiannon-sichelwind-damage",
+                "amount": 0,
+                "notes": "",
+                "damageType": "Wind",
+                "inheritWeaponDamageType": false,
+                "channelComments": 0,
+                "nonlethal": false
+              }
+            ],
+            "channelComments": 0,
+            "halfDamageOnSave": false,
+            "slotCost": 1,
+            "resolutionType": "spell-attack",
+            "concentration": false,
+            "presentationKind": "spell",
+            "rollFormula": "",
+            "upcast": {
+              "maximumLevel": 10,
+              "formulaPerLevel": "",
+              "enabled": false,
+              "amountPerLevel": 0
+            },
+            "prepared": true,
+            "school": "destruction",
+            "level": 2,
+            "manaCost": 3,
+            "aiInstructions": "Zauberangriffswurf gegen die Rüstungsklasse des Ziels.",
+            "range": "Zauber (Fernkampf)",
+            "id": "rhiannon-sichelwind",
+            "tags": "Zauber · destruction · Schaden",
+            "duration": "Sofort",
+            "name": "Sichelwind",
+            "auraBypass": {
+              "allowed": true,
+              "cost": 1,
+              "resourceId": ""
+            },
+            "saveAttribute": "dexterity",
+            "description": "Eine sichelförmige Windklinge schneidet mit voller Wucht durch das Ziel.",
+            "activationType": "action",
+            "costs": [
+              {
+                "amount": 1,
+                "name": "Aktion",
+                "scope": "comment",
+                "id": "activation-action",
+                "resourceId": "action"
+              },
+              {
+                "id": "rhiannon-sichelwind-mana-cost",
+                "resourceId": "mana-focus",
+                "scope": "persistent",
+                "name": "Mana",
+                "amount": 3
+              }
+            ],
+            "requirements": "",
+            "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/poison_damage.png",
+            "slotResourceId": "spell-slot-2",
+            "damageType": "Wind"
+          },
+          {
+            "manaCost": 3,
+            "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/fire_damage.png",
+            "prepared": true,
+            "slotCost": 1,
+            "level": 2,
+            "concentration": false,
+            "range": "Zauber (Flächenbereich)",
+            "activationType": "action",
+            "name": "Berstende Böe",
+            "description": "Eine explosionsartige Windböe reißt an allen ausgewählten Gegnern in der Nähe.",
+            "slotResourceId": "spell-slot-2",
+            "halfDamageOnSave": true,
+            "effects": [
+              {
+                "concentration": false,
+                "resourceId": "",
+                "conditionId": "",
+                "damageType": "Wind",
+                "target": "selected",
+                "condition": null,
+                "on": "hit",
+                "summon": null,
+                "notes": "",
+                "magical": false,
+                "id": "rhiannon-berstende-boe-damage",
+                "inheritWeaponDamageType": false,
+                "nonlethal": false,
+                "channelComments": 0,
+                "movementMeters": 0,
+                "movementKind": "move",
+                "type": "damage",
+                "amount": 0,
+                "conditionTags": "",
+                "formula": "2d4"
+              }
+            ],
+            "presentationKind": "spell",
+            "rollFormula": "",
+            "resolutionType": "saving-throw",
+            "auraBypass": {
+              "resourceId": "",
+              "cost": 1,
+              "allowed": true
+            },
+            "duration": "Sofort",
+            "tags": "Zauber · destruction · Fläche",
+            "channelComments": 0,
+            "upcast": {
+              "maximumLevel": 10,
+              "formulaPerLevel": "",
+              "amountPerLevel": 0,
+              "enabled": false
+            },
+            "school": "destruction",
+            "costs": [
+              {
+                "amount": 1,
+                "scope": "comment",
+                "id": "activation-action",
+                "name": "Aktion",
+                "resourceId": "action"
+              },
+              {
+                "amount": 3,
+                "id": "rhiannon-berstende-boe-mana-cost",
+                "scope": "persistent",
+                "name": "Mana",
+                "resourceId": "mana-focus"
+              }
+            ],
+            "aiInstructions": "Konstitution-Rettungswurf gegen Rhiannons Zauber-SG für jedes ausgewählte Ziel. Bei Erfolg nur halber Schaden. Mehrere Ziele aus der Liste auswählbar.",
+            "damageType": "Wind",
+            "saveAttribute": "constitution",
+            "id": "rhiannon-berstende-boe",
+            "requirements": ""
+          },
+          {
+            "name": "Gegenzauber",
+            "aiInstructions": "Kein struktureller Effekt - das Rücksetzen eines gegnerischen Zaubers gleicher oder niedrigerer Stufe (als wäre er nie gewirkt worden) ist rein erzählerisch/DM-adjudiziert, da das System keine generische \"Zauber rückgängig machen\"-Mechanik besitzt.",
+            "halfDamageOnSave": false,
+            "auraBypass": {
+              "cost": 1,
+              "resourceId": "",
+              "allowed": true
+            },
+            "presentationKind": "spell",
+            "channelComments": 0,
+            "icon": "../IconOrdner/Zauber/menus/icons/png/mysticism/reflect_mysticism.png",
+            "resolutionType": "automatic",
+            "rollFormula": "",
+            "duration": "Sofort",
+            "saveAttribute": "intelligence",
+            "upcast": {
+              "enabled": false,
+              "amountPerLevel": 0,
+              "maximumLevel": 10,
+              "formulaPerLevel": ""
+            },
+            "school": "mysticism",
+            "costs": [
+              {
+                "resourceId": "reaction",
+                "id": "activation-reaction",
+                "scope": "comment",
+                "amount": 1,
+                "name": "Reaktion"
+              },
+              {
+                "name": "Mana",
+                "scope": "persistent",
+                "amount": 5,
+                "id": "rhiannon-gegenzauber-mana-cost",
+                "resourceId": "mana-focus"
+              }
+            ],
+            "damageType": "Magie",
+            "activationType": "reaction",
+            "id": "rhiannon-gegenzauber",
+            "level": 3,
+            "slotResourceId": "spell-slot-3",
+            "description": "Rhiannon unterbricht einen bereits gewirkten gegnerischen Zauber gleicher oder niedrigerer Stufe, als wäre er nie gewirkt worden.",
+            "concentration": false,
+            "effects": [],
+            "prepared": true,
+            "manaCost": 5,
+            "tags": "Zauber · mysticism · Kontrolle",
+            "requirements": "",
+            "range": "Zauber (nah)",
+            "slotCost": 1
+          },
+          {
+            "rollFormula": "",
+            "id": "rhiannon-magie-bannen",
+            "upcast": {
+              "enabled": false,
+              "amountPerLevel": 0,
+              "formulaPerLevel": "",
+              "maximumLevel": 10
+            },
+            "school": "mysticism",
+            "concentration": false,
+            "resolutionType": "automatic",
+            "range": "Zauber",
+            "duration": "Situativ",
+            "level": 3,
+            "tags": "Zauber · mysticism",
+            "aiInstructions": "Rein freitextbasiert, kein struktureller Effekt.",
+            "auraBypass": {
+              "cost": 1,
+              "resourceId": "",
+              "allowed": true
+            },
+            "effects": [],
+            "name": "Magie bannen",
+            "costs": [
+              {
+                "resourceId": "action",
+                "scope": "comment",
+                "name": "Aktion",
+                "amount": 1,
+                "id": "activation-action"
+              },
+              {
+                "scope": "persistent",
+                "name": "Mana",
+                "id": "rhiannon-magie-bannen-mana-cost",
+                "amount": 5,
+                "resourceId": "mana-focus"
+              }
+            ],
+            "channelComments": 0,
+            "saveAttribute": "intelligence",
+            "damageType": "Magie",
+            "presentationKind": "spell",
+            "halfDamageOnSave": false,
+            "slotResourceId": "spell-slot-3",
+            "icon": "../IconOrdner/Zauber/menus/icons/png/mysticism/dispel_mysticism.png",
+            "requirements": "",
+            "slotCost": 1,
+            "description": "Rhiannon löst eine bestehende magische Wirkung auf.",
+            "prepared": true,
+            "activationType": "action",
+            "manaCost": 5
+          },
+          {
+            "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/sun_damage.png",
+            "presentationKind": "spell",
+            "rollFormula": "",
+            "halfDamageOnSave": true,
+            "aiInstructions": "Geschicklichkeit-Rettungswurf gegen Rhiannons Zauber-SG für jedes ausgewählte Ziel. Bei Erfolg nur halber Schaden. Mehrere Ziele aus der Liste auswählbar.",
+            "name": "Hundert Klingen Sturm",
+            "id": "rhiannon-hundert-klingen-sturm",
+            "requirements": "",
+            "costs": [
+              {
+                "resourceId": "action",
+                "id": "activation-action",
+                "scope": "comment",
+                "amount": 1,
+                "name": "Aktion"
+              },
+              {
+                "amount": 5,
+                "name": "Mana",
+                "resourceId": "mana-focus",
+                "scope": "persistent",
+                "id": "rhiannon-hundert-klingen-sturm-mana-cost"
+              }
+            ],
+            "duration": "Sofort",
+            "upcast": {
+              "enabled": false,
+              "maximumLevel": 10,
+              "formulaPerLevel": "",
+              "amountPerLevel": 0
+            },
+            "school": "destruction",
+            "channelComments": 0,
+            "saveAttribute": "dexterity",
+            "resolutionType": "saving-throw",
+            "damageType": "Wind",
+            "slotResourceId": "spell-slot-3",
+            "tags": "Zauber · destruction · Fläche",
+            "concentration": true,
+            "level": 3,
+            "activationType": "action",
+            "description": "Hunderte messerscharfe Windklingen fegen durch das Schlachtfeld und zerschneiden alles in Reichweite.",
+            "prepared": true,
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "effects": [
+              {
+                "id": "rhiannon-hundert-klingen-sturm-damage",
+                "type": "damage",
+                "nonlethal": false,
+                "summon": null,
+                "resourceId": "",
+                "notes": "",
+                "target": "selected",
+                "conditionId": "",
+                "damageType": "Wind",
+                "movementMeters": 0,
+                "concentration": false,
+                "movementKind": "move",
+                "condition": null,
+                "formula": "3d4",
+                "channelComments": 0,
+                "conditionTags": "",
+                "amount": 0,
+                "on": "hit",
+                "inheritWeaponDamageType": false,
+                "magical": false
+              }
+            ],
+            "range": "Zauber (Flächenbereich)",
+            "manaCost": 5,
+            "slotCost": 1
+          },
+          {
+            "name": "Blitzfunken",
+            "presentationKind": "spell",
+            "slotCost": 1,
+            "halfDamageOnSave": false,
+            "damageType": "Wind",
+            "manaCost": 5,
+            "effects": [
+              {
+                "on": "hit",
+                "inheritWeaponDamageType": false,
+                "target": "target",
+                "channelComments": 0,
+                "damageType": "Wind",
+                "summon": null,
+                "movementKind": "move",
+                "condition": null,
+                "concentration": false,
+                "resourceId": "",
+                "amount": 0,
+                "formula": "3d6",
+                "conditionTags": "",
+                "id": "rhiannon-blitzfunken-damage",
+                "movementMeters": 0,
+                "conditionId": "",
+                "notes": "",
+                "type": "damage",
+                "nonlethal": false,
+                "magical": false
+              }
+            ],
+            "prepared": true,
+            "channelComments": 0,
+            "slotResourceId": "spell-slot-3",
+            "icon": "../IconOrdner/Zauber/menus/icons/png/destruction/shock_damage.png",
+            "saveAttribute": "dexterity",
+            "auraBypass": {
+              "allowed": true,
+              "resourceId": "",
+              "cost": 1
+            },
+            "activationType": "action",
+            "costs": [
+              {
+                "resourceId": "action",
+                "amount": 1,
+                "name": "Aktion",
+                "id": "activation-action",
+                "scope": "comment"
+              },
+              {
+                "resourceId": "mana-focus",
+                "name": "Mana",
+                "amount": 5,
+                "id": "rhiannon-blitzfunken-mana-cost",
+                "scope": "persistent"
+              }
+            ],
+            "rollFormula": "",
+            "concentration": false,
+            "upcast": {
+              "amountPerLevel": 0,
+              "maximumLevel": 10,
+              "enabled": false,
+              "formulaPerLevel": ""
+            },
+            "level": 3,
+            "school": "destruction",
+            "duration": "Sofort",
+            "description": "Ein gebündelter Strahl greller Blitzfunken schießt punktgenau auf ein einzelnes Ziel.",
+            "resolutionType": "spell-attack",
+            "aiInstructions": "Zauberangriffswurf gegen die Rüstungsklasse des Ziels.",
+            "requirements": "",
+            "range": "Zauber (Fernkampf)",
+            "tags": "Zauber · destruction · Schaden",
+            "id": "rhiannon-blitzfunken"
+          }
+        ]
+      },
+      "revision": 1788656614803,
+      "conditions": [],
+      "quirks": [
+        {
+          "target": "self",
+          "name": "Cenyri Kultur",
+          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+          "trigger": "",
+          "mechanics": {
+            "damage": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "maximumHitPoints": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "combatStartTemporaryHitPoints": 0,
+            "attackRollMode": "normal",
+            "movement": 0,
+            "spellSaveDc": 0,
+            "savingThrowAdvantageAttributes": [],
+            "passivePerception": 0,
+            "attack": 0,
+            "bonusDamageFormula": ""
+          },
+          "appliesWhen": "Dauerhafte kulturelle Prägung",
+          "aiInstructions": "",
+          "stacking": "normal",
+          "limitations": "",
+          "active": true,
+          "id": "starter-ancestry-cenyr-trait-1",
+          "type": "trait",
+          "priority": 0,
+          "duration": "",
+          "tags": "Volk · Cenyr",
+          "triggerRules": []
+        },
+        {
+          "aiInstructions": "",
+          "tags": "Volk · Cenyr",
+          "type": "trait",
+          "active": true,
+          "stacking": "normal",
+          "mechanics": {
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrowAdvantageAttributes": [],
+            "passivePerception": 0,
+            "damage": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "skill": 0,
+            "initiative": 0,
+            "armorClass": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "attack": 0
+          },
+          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+          "appliesWhen": "Dauerhafte kulturelle Prägung",
+          "priority": 0,
+          "limitations": "",
+          "triggerRules": [],
+          "name": "Höfische und religiöse Prägung",
+          "id": "starter-ancestry-cenyr-trait-2",
+          "trigger": "",
+          "target": "self",
+          "duration": ""
+        },
+        {
+          "triggerRules": [],
+          "type": "trait",
+          "id": "starter-background-gelehrter-trait-1",
+          "duration": "",
+          "target": "self",
+          "priority": 0,
+          "tags": "Hintergrund · Gelehrter",
+          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+          "limitations": "",
+          "mechanics": {
+            "attackRollMode": "normal",
+            "spellSaveDc": 0,
+            "armorClass": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "damage": 0,
+            "initiative": 0,
+            "savingThrowAdvantageAttributes": [],
+            "movement": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "passivePerception": 0,
+            "maximumHitPoints": 0,
+            "savingThrow": 0,
+            "attack": 0,
+            "spellAttack": 0,
+            "bonusDamageFormula": "",
+            "skill": 0
+          },
+          "description": "Jahre in Bibliotheken, Skriptorien oder als Lehrling eines Gelehrten verbracht; vertraut mit Schrift, Theorie und arkanem Grundwissen.",
+          "name": "Gelehrtes Grundwissen",
+          "stacking": "normal",
+          "active": true,
+          "aiInstructions": "",
+          "trigger": ""
+        },
+        {
+          "name": "Hervorragende Arkane Ausbildung",
+          "trigger": "",
+          "limitations": "",
+          "stacking": "normal",
+          "triggerRules": [
+            {
+              "activation": "passive",
+              "consumeReaction": false,
+              "sourceRelation": "self",
+              "radiusMeters": null,
+              "skillIds": [
+                "arcane-kunde"
+              ],
+              "priority": 0,
+              "name": "Myrddins Lehren",
+              "enabled": true,
+              "authority": "passive",
+              "description": "Vorteil bei Arkaner Kunde.",
+              "actionKinds": [
+                "skill"
+              ],
+              "actionScope": "global",
+              "frequency": "always",
+              "costs": [],
+              "condition": "always",
+              "effects": {
+                "damageReduction": 0,
+                "spellSaveDcModifier": 0,
+                "savingThrowModifier": 0,
+                "defenseModifier": 0,
+                "skillModifier": 0,
+                "attackModifier": 0,
+                "outcome": "none",
+                "damageModifier": 0,
+                "rollMode": "advantage"
+              },
+              "resultEffects": [],
+              "id": "rhiannon-arkane-ausbildung-advantage",
+              "requiredTargetTags": [],
+              "recipient": "actor",
+              "phase": "pre-roll"
+            }
+          ],
+          "appliesWhen": "Immer, besonders bei arkaner Kunde und beim Zaubern",
+          "description": "Als persönliche Lehrlingin des großen Zauberers Myrddin genießt Rhiannon eine Ausbildung, von der andere Studierende nur träumen können.",
+          "id": "rhiannon-hervorragende-arkane-ausbildung",
+          "active": true,
+          "priority": 0,
+          "mechanics": {
+            "maximumHitPoints": 0,
+            "savingThrowAdvantageAttributes": [],
+            "spellAttack": 1,
+            "damage": 0,
+            "savingThrow": 0,
+            "movement": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "initiative": 0,
+            "bonusDamageFormula": "",
+            "attack": 0,
+            "spellSaveDc": 1,
+            "passivePerception": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "attackRollMode": "normal",
+            "skill": 0,
+            "armorClass": 0
+          },
+          "type": "trait",
+          "duration": "",
+          "target": "self",
+          "tags": "Persönlichkeit · Myrddins Lehrling",
+          "aiInstructions": ""
+        }
+      ],
+      "abilities": [
+        {
+          "id": "martial-durchschnaufen",
+          "name": "Durchschnaufen",
+          "active": true,
+          "combatUsable": true,
+          "minimumLevel": 1,
+          "activationType": "bonus-action",
+          "delivery": "ability",
+          "resolutionType": "automatic",
+          "target": "Selbst",
+          "range": "Selbst",
+          "recovery": "long-rest",
+          "usesMaximum": 1,
+          "usesCurrent": 1,
+          "description": "Regeneriere 1 eigenen Klassen-Trefferwürfel + 10 % der maximalen TP (aufgerundet), höchstens bis zum TP-Maximum. Kein KON-Bonus. Einmal pro langer Rast.",
+          "costs": [
+            {
+              "id": "second-wind-bonus",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false
+          },
+          "tags": "Erholung · Lange Rast",
+          "effects": [
+            {
+              "id": "second-wind-heal",
+              "type": "healing",
+              "target": "self",
+              "on": "always",
+              "formula": "1d8",
+              "scaling": "hit-die-and-tenth-maximum"
+            }
+          ]
+        }
+      ],
+      "techniques": [],
+      "progression": {
+        "actionPoolChoices": [],
+        "proficiencyBonusOverride": null,
+        "experienceReward": null,
+        "resourceRulesVersion": 2,
+        "experience": 0,
+        "nextLevelExperience": null,
+        "specialLevels": 0,
+        "level": 6
+      },
+      "skills": [
+        {
+          "notes": "",
+          "id": "default-skill-1",
+          "bonus": 0,
+          "attributeKey": "strength",
+          "proficiency": "none",
+          "name": "Athletik"
+        },
+        {
+          "attributeKey": "dexterity",
+          "bonus": 0,
+          "notes": "",
+          "name": "Akrobatik",
+          "proficiency": "none",
+          "id": "default-skill-2"
+        },
+        {
+          "proficiency": "none",
+          "attributeKey": "dexterity",
+          "id": "default-skill-3",
+          "name": "Fingerfertigkeit",
+          "notes": "",
+          "bonus": 0
+        },
+        {
+          "name": "Heimlichkeit",
+          "attributeKey": "dexterity",
+          "bonus": 0,
+          "proficiency": "none",
+          "id": "default-skill-4",
+          "notes": ""
+        },
+        {
+          "proficiency": "trained",
+          "bonus": 0,
+          "id": "default-skill-5",
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "name": "Arkane Kunde",
+          "attributeKey": "intelligence"
+        },
+        {
+          "attributeKey": "intelligence",
+          "notes": "",
+          "proficiency": "none",
+          "name": "Geschichte",
+          "id": "default-skill-6",
+          "bonus": 0
+        },
+        {
+          "proficiency": "trained",
+          "attributeKey": "intelligence",
+          "name": "Nachforschungen",
+          "id": "default-skill-7",
+          "bonus": 0,
+          "notes": "Geübt durch Stufe-1-Vorlage"
+        },
+        {
+          "id": "default-skill-8",
+          "notes": "",
+          "bonus": 0,
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "name": "Naturkunde"
+        },
+        {
+          "proficiency": "trained",
+          "id": "default-skill-9",
+          "name": "Religion",
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "attributeKey": "intelligence",
+          "bonus": 0
+        },
+        {
+          "id": "default-skill-10",
+          "name": "Heilkunde",
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "proficiency": "none",
+          "notes": ""
+        },
+        {
+          "notes": "",
+          "proficiency": "none",
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "id": "default-skill-11",
+          "name": "Mit Tieren umgehen"
+        },
+        {
+          "bonus": 0,
+          "notes": "",
+          "id": "default-skill-12",
+          "name": "Motiv erkennen",
+          "attributeKey": "wisdom",
+          "proficiency": "none"
+        },
+        {
+          "name": "Überleben",
+          "proficiency": "none",
+          "bonus": 0,
+          "id": "default-skill-13",
+          "attributeKey": "wisdom",
+          "notes": ""
+        },
+        {
+          "attributeKey": "wisdom",
+          "notes": "",
+          "bonus": 0,
+          "proficiency": "none",
+          "id": "default-skill-14",
+          "name": "Wahrnehmung"
+        },
+        {
+          "bonus": 0,
+          "name": "Auftreten",
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "attributeKey": "charisma",
+          "id": "default-skill-15",
+          "proficiency": "trained"
+        },
+        {
+          "id": "default-skill-16",
+          "proficiency": "none",
+          "notes": "",
+          "attributeKey": "charisma",
+          "name": "Einschüchtern",
+          "bonus": 0
+        },
+        {
+          "notes": "",
+          "bonus": 0,
+          "name": "Täuschen",
+          "proficiency": "none",
+          "id": "default-skill-17",
+          "attributeKey": "charisma"
+        },
+        {
+          "id": "default-skill-18",
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "bonus": 0,
+          "proficiency": "trained",
+          "name": "Überreden",
+          "attributeKey": "charisma"
+        },
+        {
+          "id": "default-skill-19",
+          "notes": "",
+          "attributeKey": "charisma",
+          "name": "Flirten",
+          "proficiency": "none",
+          "bonus": 0
+        },
+        {
+          "id": "default-skill-20",
+          "bonus": 0,
+          "notes": "",
+          "proficiency": "none",
+          "name": "Körperbeherrschung",
+          "attributeKey": "constitution"
+        }
+      ],
+      "damageAffinities": [],
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "notes": "",
+      "identity": {
+        "ancestry": "Cenyr",
+        "background": "Gelehrter",
+        "archetype": "Magier"
+      },
+      "combat": {
+        "damageBonus": 0,
+        "mounted": false,
+        "passivePerceptionBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "attackBonus": 0,
+        "initiativeBonus": 0,
+        "movement": 9
+      },
+      "aura": {
+        "domain": "",
+        "notes": "",
+        "latentPresence": {
+          "radius": "",
+          "target": "Umgebung, Verbündete und Gegner",
+          "allyMechanics": {
+            "combatStartTemporaryHitPoints": 0,
+            "attack": 0,
+            "spellSaveDc": 0,
+            "armorClass": 0,
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "initiative": 0,
+            "spellAttack": 0,
+            "savingThrow": 0,
+            "movement": 0,
+            "skill": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "damage": 0
+          },
+          "duration": "",
+          "active": true,
+          "trigger": "",
+          "description": "",
+          "requirements": "",
+          "selfMechanics": {
+            "damage": 0,
+            "savingThrowAdvantageAttributes": [],
+            "initiative": 0,
+            "armorClass": 0,
+            "spellAttack": 0,
+            "savingThrow": 0,
+            "bonusDamageFormula": "",
+            "combatStartTemporaryHitPoints": 0,
+            "attackRollMode": "normal",
+            "maximumHitPoints": 0,
+            "movement": 0,
+            "skill": 0,
+            "spellSaveDc": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "passivePerception": 0,
+            "attack": 0
+          },
+          "name": "Latente Präsenz",
+          "aiInstructions": "",
+          "enabled": true,
+          "enemyMechanics": {
+            "maximumHitPoints": 0,
+            "spellSaveDc": 0,
+            "savingThrowAdvantageAttributes": [],
+            "attack": 0,
+            "passivePerception": 0,
+            "spellAttack": 0,
+            "savingThrow": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "movement": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "bonusDamageFormula": "",
+            "initiative": 0,
+            "attackRollMode": "normal"
+          }
+        },
+        "enabled": false,
+        "focusResourceId": "aura-focus",
+        "focusBypassCost": 1,
+        "name": "Aura",
+        "activeForm": {
+          "target": "Selbst und gewählte Ziele",
+          "radius": "",
+          "selfMechanics": {
+            "damage": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "movement": 0,
+            "savingThrowAdvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "skill": 0,
+            "passivePerception": 0,
+            "initiative": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "spellSaveDc": 0,
+            "armorClass": 0,
+            "attackRollMode": "normal",
+            "attack": 0,
+            "bonusDamageFormula": ""
+          },
+          "requirements": "",
+          "aiInstructions": "",
+          "enemyMechanics": {
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "bonusDamageFormula": "",
+            "armorClass": 0,
+            "savingThrow": 0,
+            "movement": 0,
+            "spellAttack": 0,
+            "initiative": 0,
+            "savingThrowAdvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "damage": 0,
+            "spellSaveDc": 0,
+            "attack": 0,
+            "passivePerception": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "attackRollMode": "normal"
+          },
+          "duration": "",
+          "name": "Aktive Form",
+          "active": false,
+          "enabled": false,
+          "description": "",
+          "trigger": "",
+          "allyMechanics": {
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "bonusDamageFormula": "",
+            "skill": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "attack": 0,
+            "attackRollMode": "normal",
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "initiative": 0,
+            "passivePerception": 0,
+            "damage": 0,
+            "spellSaveDc": 0,
+            "armorClass": 0,
+            "savingThrowAdvantageAttributes": []
+          }
+        }
+      },
+      "templateSelections": {
+        "schemaVersion": 1,
+        "ancestryId": "cenyr",
+        "attributeMethod": "free",
+        "classId": "magier",
+        "backgroundId": "gelehrter",
+        "appliedAt": "2026-08-06T22:54:29.915Z"
+      },
+      "savingThrows": [
+        {
+          "proficient": false,
+          "attributeKey": "strength",
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "dexterity",
+          "expertise": false,
+          "bonus": 0,
+          "proficient": false
+        },
+        {
+          "attributeKey": "constitution",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": false
+        },
+        {
+          "attributeKey": "intelligence",
+          "proficient": true,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "proficient": true,
+          "attributeKey": "wisdom",
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "charisma",
+          "expertise": false,
+          "bonus": 0,
+          "proficient": false
+        }
+      ],
+      "resources": [
+        {
+          "notes": "",
+          "maximum": 1,
+          "category": "",
+          "scope": "persistent",
+          "recovery": "manual",
+          "icon": "",
+          "name": "Inspiration",
+          "id": "inspiration",
+          "current": 0
+        },
+        {
+          "recovery": "day",
+          "notes": "",
+          "maximum": 45,
+          "id": "mana-focus",
+          "scope": "persistent",
+          "name": "Mana",
+          "icon": "",
+          "category": "magic",
+          "current": 45
+        },
+        {
+          "maximum": 0,
+          "recovery": "day",
+          "name": "Fokus",
+          "scope": "persistent",
+          "icon": "",
+          "current": 0,
+          "id": "focus",
+          "category": "focus",
+          "notes": ""
+        },
+        {
+          "notes": "",
+          "recovery": "day",
+          "maximum": 0,
+          "scope": "persistent",
+          "id": "celestial-points",
+          "current": 0,
+          "category": "celestial",
+          "name": "Celestiale Punkte",
+          "icon": ""
+        },
+        {
+          "notes": "",
+          "maximum": 0,
+          "id": "infernal-points",
+          "category": "infernal",
+          "scope": "persistent",
+          "recovery": "day",
+          "name": "Infernale Punkte",
+          "icon": "",
+          "current": 0
+        },
+        {
+          "id": "pact-points",
+          "current": 0,
+          "icon": "",
+          "name": "Paktpunkte",
+          "category": "pact",
+          "notes": "",
+          "recovery": "day",
+          "maximum": 0,
+          "scope": "persistent"
+        },
+        {
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "name": "Aktion",
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "id": "action",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "current": 1,
+          "category": "action"
+        },
+        {
+          "scope": "comment",
+          "recovery": "scene",
+          "current": 1,
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "maximum": 1,
+          "category": "action",
+          "id": "bonus-action",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "name": "Bonusaktion"
+        },
+        {
+          "maximum": 1,
+          "id": "reaction",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "name": "Reaktion",
+          "category": "action",
+          "scope": "comment",
+          "recovery": "scene",
+          "current": 1,
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "name": "Besondere Aktion",
+          "notes": "",
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "current": 2,
+          "category": "action",
+          "recovery": "day",
+          "id": "special-action",
+          "maximum": 2,
+          "scope": "persistent"
+        },
+        {
+          "maximum": 0,
+          "recovery": "day",
+          "name": "Aura-Fokuspunkt",
+          "notes": "",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "id": "aura-focus",
+          "paymentRole": "universal-substitute",
+          "category": "action",
+          "scope": "persistent",
+          "current": 0
+        },
+        {
+          "id": "spell-slot-1",
+          "recovery": "long-rest",
+          "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "maximum": 1,
+          "name": "Zauberplatz I",
+          "icon": "",
+          "current": 1,
+          "scope": "persistent",
+          "category": "spell-slot",
+          "spellLevel": 1
+        },
+        {
+          "recovery": "long-rest",
+          "current": 1,
+          "scope": "persistent",
+          "spellLevel": 2,
+          "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "id": "spell-slot-2",
+          "name": "Zauberplatz II",
+          "maximum": 1,
+          "icon": "",
+          "category": "spell-slot"
+        },
+        {
+          "icon": "",
+          "name": "Zauberplatz III",
+          "maximum": 1,
+          "id": "spell-slot-3",
+          "category": "spell-slot",
+          "scope": "persistent",
+          "spellLevel": 3,
+          "current": 1,
+          "recovery": "long-rest",
+          "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "current": 0,
+          "spellLevel": 4,
+          "id": "spell-slot-4",
+          "icon": "",
+          "name": "Zauberplatz IV",
+          "category": "spell-slot",
+          "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "maximum": 0,
+          "scope": "persistent"
+        },
+        {
+          "spellLevel": 5,
+          "current": 0,
+          "category": "spell-slot",
+          "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "name": "Zauberplatz V",
+          "icon": "",
+          "id": "spell-slot-5",
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "maximum": 0
+        },
+        {
+          "spellLevel": 6,
+          "recovery": "long-rest",
+          "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "maximum": 0,
+          "name": "Zauberplatz VI",
+          "icon": "",
+          "current": 0,
+          "scope": "persistent",
+          "category": "spell-slot",
+          "id": "spell-slot-6"
+        },
+        {
+          "scope": "persistent",
+          "maximum": 0,
+          "recovery": "long-rest",
+          "id": "spell-slot-7",
+          "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "category": "spell-slot",
+          "current": 0,
+          "icon": "",
+          "name": "Zauberplatz VII",
+          "spellLevel": 7
+        },
+        {
+          "category": "spell-slot",
+          "id": "spell-slot-8",
+          "scope": "persistent",
+          "maximum": 0,
+          "current": 0,
+          "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "name": "Zauberplatz VIII",
+          "icon": "",
+          "spellLevel": 8,
+          "recovery": "long-rest"
+        },
+        {
+          "icon": "",
+          "name": "Zauberplatz IX",
+          "maximum": 0,
+          "category": "spell-slot",
+          "spellLevel": 9,
+          "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recovery": "long-rest",
+          "current": 0,
+          "id": "spell-slot-9",
+          "scope": "persistent"
+        },
+        {
+          "maximum": 0,
+          "category": "spell-slot",
+          "name": "Zauberplatz X",
+          "icon": "",
+          "scope": "persistent",
+          "recovery": "long-rest",
+          "current": 0,
+          "spellLevel": 10,
+          "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "id": "spell-slot-10"
+        }
+      ],
+      "proficiencies": {
+        "languages": [],
+        "tools": [
+          "Schreibzeug und Kopierwerkzeug",
+          "Arkane Fokusinstrumente"
+        ],
+        "weapons": [
+          "simple"
+        ],
+        "notes": "",
+        "armor": []
+      },
+      "weapons": [
+        {
+          "auraBypass": {
+            "resourceId": "",
+            "allowed": true,
+            "cost": 1
+          },
+          "weaponType": "unarmed",
+          "training": "simple",
+          "aiInstructions": "",
+          "id": "default-unarmed-melee",
+          "costs": [
+            {
+              "resourceId": "action",
+              "scope": "comment",
+              "id": "activation-action",
+              "name": "Aktion",
+              "amount": 1
+            }
+          ],
+          "name": "Nahkampf",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "ammunition": null,
+          "damageType": "Wucht",
+          "versatileDamageFormula": "",
+          "image": "",
+          "damageFormula": "1d4",
+          "requirements": "",
+          "attackAttribute": "strength",
+          "range": "Nahkampf",
+          "equipped": false,
+          "activationType": "action",
+          "damageBonus": 0,
+          "inventoryItemId": "",
+          "attackBonus": 0,
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "effects": [],
+          "weaponProfileId": "",
+          "proficient": true
+        }
+      ],
+      "hitPoints": {
+        "averagePerLevelOverride": null,
+        "current": 25,
+        "hitDie": 6,
+        "vitality": {
+          "overrideAnchor": {
+            "base": 20,
+            "bonus": 5,
+            "vitality": 5
+          },
+          "legacyIncrease": 5,
+          "version": 1
+        },
+        "temporary": 0,
+        "maximumOverride": 35
+      },
+      "attributes": [
+        {
+          "score": 9,
+          "modifierOverride": null,
+          "shortLabel": "KRF",
+          "key": "strength",
+          "label": "Kraft"
+        },
+        {
+          "modifierOverride": null,
+          "key": "dexterity",
+          "label": "Geschick",
+          "shortLabel": "GES",
+          "score": 11
+        },
+        {
+          "label": "Konstitution",
+          "modifierOverride": null,
+          "shortLabel": "KON",
+          "score": 8,
+          "key": "constitution"
+        },
+        {
+          "score": 20,
+          "shortLabel": "INT",
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "modifierOverride": null
+        },
+        {
+          "modifierOverride": null,
+          "shortLabel": "WEI",
+          "score": 15,
+          "key": "wisdom",
+          "label": "Weisheit"
+        },
+        {
+          "label": "Charisma",
+          "shortLabel": "CHA",
+          "score": 18,
+          "modifierOverride": null,
+          "key": "charisma"
+        }
+      ],
+      "classTraining": {
+        "selections": [],
+        "schemaVersion": 2,
+        "curriculumId": "",
+        "techniqueSelections": []
+      },
+      "armorItems": [],
+      "defenseBalanceVersion": 1
+    },
+    "inventory": {
+      "characterId": "y7MBxDiAaesbWHBtmw5Q",
+      "title": "Charakter-Inventar",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portrait": "https://i.imgur.com/oR99BIS.png",
+      "portraitFormat": "portrait",
+      "portraitFit": "cover",
+      "portraitPosition": "top",
+      "name": "Rhiannon Draig",
+      "role": "Lehrling von Myrddin, Prinzessin, Gwynthor",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "status": "Gesund",
+      "hitpoints": "TP / Zustand",
+      "healthColor": "#5c7f20",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "moneyState": {
+        "gold": 0,
+        "silver": 0,
+        "copper": 0,
+        "totalCopper": 0
+      },
+      "moneyNotice": "",
+      "showInfoTable": false,
+      "carryLabel": "Traglast",
+      "carryValue": "Noch festlegen",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "infoRows": [],
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "items": [
+        {
+          "id": "item-mqu1vat1-0-w8ef",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+          "ownerCharacterName": "Rhiannon Draig",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "weapon",
+          "icon": "",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Amethyst-Zauberstab",
+          "type": "Zauberstab",
+          "description": "Zauberstab mit einem Amethyst an der Spitze.",
+          "weight": "",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "item-mqu1vat1-1-exvo",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "armor",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Rüstung / Schutz",
+          "type": "Rüstung",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-2-0fx2",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "equipment",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Reiseausrüstung",
+          "type": "Ausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-3-2lgm",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "potions",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Heil- oder Verbrauchsgut",
+          "type": "Trinktur",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-4-ajrj",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "documents",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Dokumente / Urkunden",
+          "type": "Dokument",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-5-5kao",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+          "ownerCharacterName": "Rhiannon Draig",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "other",
+          "icon": "",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amulett-v1.png",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Amulett",
+          "type": "Amulett",
+          "description": "Rhiannons persönliches Amulett.",
+          "weight": "",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "quantity": "1",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "id": "rhiannon-draig-dagger-item",
+          "name": "Dolch",
+          "type": "Dolch",
+          "category": "weapon",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-dolch-v1.png",
+          "description": "Rhiannons Dolch.",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "icon": "",
+          "attributes": [],
+          "weight": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+          "ownerCharacterName": "Rhiannon Draig"
+        },
+        {
+          "id": "item-mqu1vat1-0-w8ef",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+          "ownerCharacterName": "Rhiannon Draig",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "weapon",
+          "icon": "",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Amethyst-Zauberstab",
+          "type": "Zauberstab",
+          "description": "Zauberstab mit einem Amethyst an der Spitze.",
+          "weight": "",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "item-mqu1vat1-5-5kao",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+          "ownerCharacterName": "Rhiannon Draig",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "category": "other",
+          "icon": "",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amulett-v1.png",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Amulett",
+          "type": "Amulett",
+          "description": "Rhiannons persönliches Amulett.",
+          "weight": "",
+          "quantity": "1",
+          "tags": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "infoRows": [],
+          "attributes": []
+        }
+      ],
+      "companions": [
+        {
+          "id": "companion-mqu1vat2-0-zz2n",
+          "image": "",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "role": "Begleiter",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "companion-mqu1vat2-1-5e7l",
+          "image": "",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "species": "Tier / Person",
+          "role": "Gefährte",
+          "status": "Noch festlegen",
+          "statusColor": "#5c7f20",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "equipmentQuiz": {
+        "open": false,
+        "step": 0,
+        "answers": [
+          ""
+        ],
+        "resultText": "",
+        "status": "",
+        "updatedAt": ""
+      }
+    }
+  }
+}

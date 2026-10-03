@@ -1,0 +1,398 @@
+{
+  "frontendAndClassTests": 1274,
+  "serverUnitTests": 137,
+  "persistedCombatTests": 28,
+  "itemDuelTests": 39,
+  "finalPersistenceRegressionTests": 40,
+  "finalSourceSyncTests": 19,
+  "finalStoredPostRegressionTests": 4,
+  "testedActionVariants": 2922,
+  "actionErrors": [],
+  "unavailableActions": [
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-jungdrache-01-erster-hieb",
+      "name": "Erster Hieb des Jungdrachens",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-jungdrache-02-drachenbiss",
+      "name": "Biss des Jungdrachens",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-jungdrache-03-gekreuzte-klauen",
+      "name": "Gekreuzte Klauen",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-jungdrache-04-schweifkreis",
+      "name": "Schweifkreis des Jungdrachens",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-jungdrache-05-stuermende-spur",
+      "name": "Stürmende Drachenspur",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb",
+      "name": "Sechsfacher Lehrhieb",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-jungdrache-schuppenschnitt",
+      "name": "Schuppenschnitt",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-jungdrache-fluegelschritt",
+      "name": "Flügelschritt des Jungdrachens",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-jungdrache-ruhiger-drachenatem",
+      "name": "Ruhiger Drachenatem",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-schwertdrache-kreisende-einladung",
+      "name": "Kreisende Einladung",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-schwertdrache-schnitt-der-fuenf-finger",
+      "name": "Schnitt der fünf Finger",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-schwertdrache-spiegelparade",
+      "name": "Spiegelparade",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-schwertdrache-krone-des-duellanten",
+      "name": "Krone des Duellanten",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-rueckschritt-des-waechters",
+      "name": "Rückschritt des Wächters",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-stille-schuppe",
+      "name": "Stille Schuppe",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-falsche-oeffnung",
+      "name": "Falsche Öffnung",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-gebrochener-ansturm",
+      "name": "Gebrochener Ansturm",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-spiegelzahn",
+      "name": "Spiegelzahn",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-atemlose-mauer",
+      "name": "Atemlose Mauer",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-wendepunkt",
+      "name": "Wendepunkt",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-kreis-der-stillen-schuppen",
+      "name": "Kreis der stillen Schuppen",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-hunger-des-wartenden",
+      "name": "Hunger des Wartenden",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-unbewegtes-herz",
+      "name": "Unbewegtes Herz",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-letzte-oeffnung",
+      "name": "Letzte Öffnung",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-urteil-des-alten-drachen",
+      "name": "Urteil des alten Drachen",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-aufwindtritt",
+      "name": "Aufwindtritt",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-fluegelwechsel",
+      "name": "Flügelwechsel",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-sturzlinie",
+      "name": "Sturzlinie",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-doppelschwinge",
+      "name": "Doppelschwinge",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-aurasprung",
+      "name": "Aurasprung",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-wirbelpfad",
+      "name": "Wirbelpfad",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-himmelsschnitt",
+      "name": "Himmelsschnitt",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-tanz-ueber-klingen",
+      "name": "Tanz über Klingen",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-drachenflug",
+      "name": "Drachenflug",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-sturmkranz",
+      "name": "Sturmkranz",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-grenzenloser-aufstieg",
+      "name": "Grenzenloser Aufstieg",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-fallender-sternendrache",
+      "name": "Fallender Sternendrache",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-brechender-ruf",
+      "name": "Brechender Ruf",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-schulter-des-kraftdrachen",
+      "name": "Schulter des Kraftdrachen",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-panzerbeisser",
+      "name": "Panzerbeißer",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-hallender-rundschlag",
+      "name": "Hallender Rundschlag",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-aurabruch",
+      "name": "Aurabruch",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-eisernes-gebruell",
+      "name": "Eisernes Gebrüll",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-mauerspalter",
+      "name": "Mauerspalter",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-erdbebenpranke",
+      "name": "Erdbebenpranke",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-herzschlag-des-kolosses",
+      "name": "Herzschlag des Kolosses",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-ruestungssenker",
+      "name": "Rüstungssenker",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-bruellende-katastrophe",
+      "name": "Brüllende Katastrophe",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-weltenbrecher",
+      "name": "Weltenbrecher",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-bruellender-schildrachenmaul",
+      "name": "Schildrachenmaul",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-bruellender-schuppenramme",
+      "name": "Schuppenramme",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-bruellender-donnerwall",
+      "name": "Donnerwall des Brülldrachen",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-vierfacher-empfang",
+      "name": "Vierfacher Empfang",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-wechsel-der-mitte",
+      "name": "Wechsel der Mitte",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-antwort-des-waffenmeisters",
+      "name": "Antwort des Waffenmeisters",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-drei-wege-ein-hieb",
+      "name": "Drei Wege, ein Hieb",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-auragleiche",
+      "name": "Auragleiche",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-wende-des-allrounders",
+      "name": "Wende des Allrounders",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-fuenf-schuppen-kreis",
+      "name": "Fünf-Schuppen-Kreis",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-vollkommener-uebergang",
+      "name": "Vollkommener Übergang",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-meisterliche-gegenwaage",
+      "name": "Meisterliche Gegenwaage",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-schlachtfeldharmonie",
+      "name": "Schlachtfeldharmonie",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-neunfache-mitte",
+      "name": "Neunfache Mitte",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    },
+    {
+      "character": "Duncan Gafyr",
+      "id": "technique:combat-style-drachentanz-vollendeter-waffenmeister",
+      "name": "Vollendeter Waffenmeister",
+      "reason": "Benötigt eine für diese Klassenfolge zugelassene Waffe (sword)."
+    }
+  ],
+  "note": "Regression suites overlap; do not sum repeated test counts. Unavailable actions belong to Duncan, whose live sheet lacks the required sword."
+}

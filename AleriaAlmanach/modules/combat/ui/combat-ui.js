@@ -279,6 +279,7 @@ function summarizeRuleEffects(effects = {}) {
 
 function renderEffectResult(result = {}) {
   const effect = result.effect || {};
+  if (result.prevented) return `<span>${escapeHtml(result.prevented)}</span>`;
   if (effect.type === 'narrative') return `<span class="combat-narrative-result"><b>Mit der Spielleitung auflösen${result.roll ? ` · Wurf: ${escapeHtml(result.amount)}` : ''}</b> · ${escapeHtml(effect.notes || 'Wirkung gemeinsam festlegen.')}</span>`;
   const recipient = result.recipient === 'actor' ? 'Selbst · ' : '';
   if (effect.type === 'damage' && result.applied) {

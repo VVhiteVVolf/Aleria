@@ -74,7 +74,7 @@ test('alle vorhandenen Teulu- und Helwyr-Bögen verwenden ausschließlich ihren 
 test('der generierte Datenbank-Snapshot enthält die zuletzt freigegebenen Online-Ausbildungen und Erholungsfähigkeiten', async () => {
   const snapshot = JSON.parse(await readFile(snapshotUrl, 'utf8'));
   for (const expected of expectations) {
-    const source = await loadCharacter(expected.file.replace('.json', '-weapon-economy-2026-09-30.json'));
+    const source = await loadCharacter(expected.file.replace('.json', '-defense-balance-2026-10-03.json'));
     const stored = snapshot.characters.find(character => character.name === expected.name);
     assert(stored, `${expected.name}: fehlt im Datenbank-Snapshot`);
     assert.deepEqual(stored.combatProfile.classTraining, source.combatProfile.classTraining);

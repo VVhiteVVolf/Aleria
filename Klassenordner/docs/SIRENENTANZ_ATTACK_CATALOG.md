@@ -26,8 +26,8 @@ Waffenflexible Milizausbildung. Die cenyrische Drachling-Ausbildung und die venn
 ### Klassenmerkmale
 
 - **Stufe 1 · Stand der Küstenwache:** +1 auf manuell ausgewertete Balanceproben auf nassem oder schwankendem Untergrund.
+- **Stufe 1 · Rüstungsroutine:** Leichte Rüstung: voller GES-Bonus ab Stufe 1. Mittlere Rüstung: Basis-RK 14 und GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 ohne Begrenzung. Jungritterplatte: Basis-RK 15 ohne GES; Gegenstandsschutz ersetzt den Grundschutz. Schild und stärkste RK-Haltung zählen zusätzlich.
 - **Stufe 6 · Schulter an Schulter:** Schadenslose Deckungstechniken dürfen einen benachbarten Verbündeten schützen; Reichweite 2 m, unveränderte Kosten.
-- **Stufe 12 · Rüstungsroutine:** Ab Stufe 12 zählt Geschicklichkeit auch in angelegter Rüstung zur Rüstungsklasse, entsprechend deren GES-Modus und Begrenzung. Ohne Rüstung gelten die normalen Geschicklichkeitsregeln.
 - **Stufe 15 · Erfahrene Wache:** Der Balancebonus steigt auf +2. Die Waffenausbildung endet auf Stufe 15; Stufen 16–20 bringen weiterhin die allgemeinen Klassenressourcen.
 
 ### Tanz der jungen Welle · 1–6
@@ -64,8 +64,8 @@ Stangenwaffe für Distanz, Axt für Gedränge, Harpune für den Auftakt. Ziehen 
 ### Klassenmerkmale
 
 - **Stufe 1 · Seebeine:** +2 auf Balanceproben an Deck; der Situationsbonus wird manuell berücksichtigt und ist kein allgemeiner RK-Bonus.
+- **Stufe 1 · Rüstungsroutine:** Leichte Rüstung: voller GES-Bonus ab Stufe 1. Mittlere Rüstung: Basis-RK 14 und GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 ohne Begrenzung. Jungritterplatte: Basis-RK 15 ohne GES; Gegenstandsschutz ersetzt den Grundschutz. Schild und stärkste RK-Haltung zählen zusätzlich.
 - **Stufe 6 · Sicherer Entergriff:** +1 auf den Angriffswurf mit Wyrmtanz-Harpunentechniken; keine zusätzliche Attacke.
-- **Stufe 12 · Rüstungsroutine:** Ab Stufe 12 zählt Geschicklichkeit auch in angelegter Rüstung zur Rüstungsklasse, entsprechend deren GES-Modus und Begrenzung. Ohne Rüstung gelten die normalen Geschicklichkeitsregeln.
 - **Stufe 15 · Leinenmeister:** Ein im Manöver ausdrücklich erlaubtes Heranziehen darf bis 3 m statt 2 m reichen. Rettungswurf und Leinenbedingung bleiben bestehen.
 - **Stufe 20 · Meister des Decks:** Einmal pro Beitrag +1 Schaden auf einen Partisanen- oder Enteraxttreffer nach einem eigenen gelungenen Wyrmtanz-Verschiebemanöver.
 
@@ -159,8 +159,8 @@ Dieselben schweren Folgen passen zu Axt, Hammer, Morgenstern und Kolben. Schwert
 ### Klassenmerkmale
 
 - **Stufe 1 · Stand gegen den Sturm:** +1 auf Rettungswürfe gegen Furcht und Umwerfen; nur bei einem tatsächlich geforderten passenden Wurf.
+- **Stufe 1 · Rüstungsroutine:** Leichte Rüstung: voller GES-Bonus ab Stufe 1. Mittlere Rüstung: Basis-RK 14 und GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 ohne Begrenzung. Jungritterplatte: Basis-RK 15 ohne GES; Gegenstandsschutz ersetzt den Grundschutz. Schild und stärkste RK-Haltung zählen zusätzlich.
 - **Stufe 6 · Kontrollierte Wucht:** Bei Wyrmtanz-Angriffen mit schwerer Axt, Hammer, Flegel oder Kolben: −1 Angriff und +1 Schaden. Kein Bonus auf Schwertangriffe.
-- **Stufe 12 · Rüstungsroutine:** Ab Stufe 12 zählt Geschicklichkeit auch in angelegter Rüstung zur Rüstungsklasse, entsprechend deren GES-Modus und Begrenzung. Ohne Rüstung gelten die normalen Geschicklichkeitsregeln.
 - **Stufe 15 · Fassung unter Druck:** Stand gegen den Sturm steigt auf +2 und ersetzt den bisherigen Bonus; keine Immunität gegen Zustände.
 - **Stufe 20 · Unerschütterliche Front:** Nach einer schadenslosen Tiefwasser-Schutztechnik erhält der Anwender einmal pro Beitrag 3 temporäre LP bis zum Ende seines nächsten Beitrags. Temporäre LP werden nicht addiert.
 
@@ -252,8 +252,8 @@ Fern- und Nahkampf teilen sich die Slots. Bereits die Grundform enthält zwei ec
 ### Klassenmerkmale
 
 - **Stufe 1 · Seeblick:** +1 Angriff mit Kurzbogen oder Armbrust. Der Bonus gilt einmal und nicht für Säbel oder Dreizack.
+- **Stufe 1 · Rüstungsroutine:** Leichte Rüstung: voller GES-Bonus ab Stufe 1. Mittlere Rüstung: Basis-RK 14 und GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 ohne Begrenzung. Jungritterplatte: Basis-RK 15 ohne GES; Gegenstandsschutz ersetzt den Grundschutz. Schild und stärkste RK-Haltung zählen zusätzlich.
 - **Stufe 6 · Verteidiger der Reling:** Die vier Grundslots sollen mindestens eine Fernkampf- und eine Nahkampftechnik enthalten. Die Empfehlung vergibt Säbel und Dreizack, bevor weitere Schüsse gewählt werden.
-- **Stufe 12 · Rüstungsroutine:** Ab Stufe 12 zählt Geschicklichkeit auch in angelegter Rüstung zur Rüstungsklasse, entsprechend deren GES-Modus und Begrenzung. Ohne Rüstung gelten die normalen Geschicklichkeitsregeln.
 - **Stufe 15 · Wachsamer Ausguck:** +2 auf manuell ausgewertete Wahrnehmungsproben über freier See; Vögel handeln nicht automatisch mit.
 - **Stufe 20 · Meister beider Distanzen:** Nach einem bezahlten Wechsel zwischen Fern- und Nahwaffe erhält der erste passende Wyrmtanz-Angriff im selben Beitrag +1 Angriff. Waffenwechsel bleibt kostenpflichtig.
 
@@ -347,8 +347,8 @@ Sattelangriffe erfordern ein tatsächlich geführtes Reittier und den Status ber
 ### Klassenmerkmale
 
 - **Stufe 1 · Trittsicherer Reisender:** +2 auf manuell ausgewertete Reitproben in Hügeln und Küstenpfaden; keine zusätzlichen Aktionen des Rosses.
+- **Stufe 1 · Rüstungsroutine:** Leichte Rüstung: voller GES-Bonus ab Stufe 1. Mittlere Rüstung: Basis-RK 14 und GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 ohne Begrenzung. Jungritterplatte: Basis-RK 15 ohne GES; Gegenstandsschutz ersetzt den Grundschutz. Schild und stärkste RK-Haltung zählen zusätzlich.
 - **Stufe 6 · Sicher im Sattel:** +1 Angriff bei ausdrücklich berittenen Wyrmtanz-Techniken. Zu Fuß entfällt dieser Bonus.
-- **Stufe 12 · Rüstungsroutine:** Ab Stufe 12 zählt Geschicklichkeit auch in angelegter Rüstung zur Rüstungsklasse, entsprechend deren GES-Modus und Begrenzung. Ohne Rüstung gelten die normalen Geschicklichkeitsregeln.
 - **Stufe 15 · Hut des Reisenden:** Eine schadenslose Schutztechnik darf auch das eigene Ross in 2 m Reichweite wählen. Kosten und Dauer bleiben gleich.
 - **Stufe 20 · Meister der Wende:** Eine Eigenbewegung einer berittenen Strömungstechnik darf einmal pro Beitrag 2 m weiter reichen. Sie addiert sich nicht zu Weiter Bogen.
 
@@ -442,7 +442,7 @@ Jede Wyrmform hat eine feste Waffenführung. Ein Zauberstab muss als Nahkampfwaf
 
 ### Klassenmerkmale
 
-- **Stufe 12 · Rüstungsroutine:** Ab Stufe 12 zählt Geschicklichkeit auch in angelegter Rüstung zur Rüstungsklasse, entsprechend deren GES-Modus und Begrenzung. Ohne Rüstung gelten die normalen Geschicklichkeitsregeln.
+- **Stufe 1 · Rüstungsroutine:** Leichte Rüstung: voller GES-Bonus ab Stufe 1. Mittlere Rüstung: Basis-RK 14 und GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 ohne Begrenzung. Jungritterplatte: Basis-RK 15 ohne GES; Gegenstandsschutz ersetzt den Grundschutz. Schild und stärkste RK-Haltung zählen zusätzlich.
 
 ### Drachentanz Form · Tanz des Jungdrachens · 1–6
 

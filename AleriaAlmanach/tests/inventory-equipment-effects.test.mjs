@@ -58,7 +58,7 @@ test('Silberschuppe reduces each Hieb hit by two without increasing armor class'
   baseline.combatProfile.armorItems.forEach(item => { item.damageProtection = null; });
   const protectedHit = await attack(actor, target);
   const unprotectedHit = await attack(actor, resolveCombatTargetProfile(baseline));
-  assert.equal(unprotectedHit.result.damage.total - protectedHit.result.damage.total, 2);
+  assert.equal(unprotectedHit.result.damage.total - protectedHit.result.damage.total, 1, 'Sonderschutz 2 ersetzt Plattengrundschutz 1');
   assert.equal(target.totalDefense, resolveCombatTargetProfile(baseline).totalDefense);
   assert.equal(protectedHit.result.damage.damageReduction, 2);
 });

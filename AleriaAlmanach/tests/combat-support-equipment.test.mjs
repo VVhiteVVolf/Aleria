@@ -14,10 +14,10 @@ const selection={rightWeaponId:'asgeir-axt-rechts',leftWeaponId:'',shieldId:'asg
 test('Schild ersetzt zweite Axt, erscheint mit Bild und gibt nur tatsächlich geführt seine RK und Techniken frei',()=>{
   const prepared=prepareCombatEquipment(asgeir,selection,{free:true});assert.equal(prepared.preparation.error,'');
   const profile=resolveCombatProfile(prepared.character,{actionId:'technique:combat-style-huskarl-skjaldr-grund-5'});
-  assert.equal(profile.totalDefense,16);assert.equal(profile.selectedAction.compatible,true);
+  assert.equal(profile.totalDefense,17);assert.equal(profile.selectedAction.compatible,true);
   assert.match(renderWeaponLoadout(profile),/Wolfshorn-Rundschild/);assert.match(renderWeaponLoadout(profile),/asgeir-rundschild-v1\.png/);
   const paired=prepareCombatEquipment(prepared.character,{rightWeaponId:'asgeir-axt-rechts',leftWeaponId:'asgeir-axt-links'},{free:true});
-  assert.equal(resolveCombatProfile(paired.character).totalDefense,14);
+  assert.equal(resolveCombatProfile(paired.character).totalDefense,15);
   assert.equal(paired.character.combatProfile.armorItems.find(a=>a.kind==='shield').equipped,false);
   assert.match(prepareCombatEquipment(asgeir,{...selection,leftWeaponId:'asgeir-axt-links'}).preparation.error,/linke Hand/);
   assert.match(prepareCombatEquipment(asgeir,{...selection,rightWeaponId:'asgeir-grossaxt'}).preparation.error,/linke Hand/);
@@ -41,6 +41,6 @@ test('Schild und Berittenstatus überstehen serverfähige Ergebnissnapshots und 
   const state=deriveCombatStateFromComments([{id:'mount',serverValidatedMechanics:true,commentSegments:[{combatResolution:resolution}]}]).get(asgeir.id);
   const restored=withEquippedCombatWeapon(rider,state.equippedWeaponId,state.offHandWeaponId,state.supportEquipment);
   assert.equal(restored.combatProfile.combat.mounted,true);
-  assert.equal(resolveCombatProfile(restored).totalDefense,16);
+  assert.equal(resolveCombatProfile(restored).totalDefense,17);
   assert.equal(prepareCombatEquipment(restored,{...selection,mountId:'horse'}).preparation,null);
 });

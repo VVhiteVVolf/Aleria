@@ -1,5 +1,12 @@
 // Occupied hands describe equipment. Training decides joint damage; holding
 // two weapons alone never grants an extra attack.
+import { canCarryCombatShield } from './combat-support-equipment.js';
+
+export function canUseEquippedCombatShield(profile = {}) {
+  const loadout = getCombatWeaponLoadout(profile);
+  return !loadout.dualWield && canCarryCombatShield(loadout.right || {});
+}
+
 export function isPairedCombatWeapon(weapon = {}) {
   return /^dual-/.test(weapon.weaponProfileId || '') || /\bpaar\b|beidhändig/i.test(`${weapon.name || ''} ${weapon.properties || ''}`);
 }

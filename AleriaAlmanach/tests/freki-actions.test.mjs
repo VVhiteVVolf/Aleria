@@ -51,7 +51,7 @@ test('Fesselbiss respects the saving throw and expires after one target contribu
   const attack = actor('technique:freki-fesselbiss');
   assert.equal(attack.selectedAction.secondarySave.dc,12);
   const failed = await new CombatResolutionService(new Dice(1)).resolveAttack({actor:attack,target});
-  const condition = failed.targetConditionSnapshot.after.find(condition => condition.mechanics.movement === -2);
+  const condition = failed.targetConditionSnapshot.after.find(condition => condition.stanceGroup === 'martial-position-penalty');
   assert.ok(condition);
   assert.equal(condition.durationModel.kind,'actor-comments');
   assert.equal(condition.durationModel.remainingActorComments,1);
@@ -63,7 +63,7 @@ test('Fesselbiss respects the saving throw and expires after one target contribu
 });
 
 test('both temporary self-buffs affect the runtime profile without an attack roll', async () => {
-  for (const [id,mechanic,value] of [['freki-ducken','armorClass',2],['freki-flankenlauf','movement',3]]) {
+  for (const [id,mechanic,value] of [['freki-ducken','armorClass',2],['freki-flankenlauf','movement',0]]) {
     const dice = new Dice();
     const active = actor(`ability:${id}`);
     const result = await new CombatResolutionService(dice).resolveAttack({actor:active,target:active});
@@ -71,6 +71,7 @@ test('both temporary self-buffs affect the runtime profile without an attack rol
     const states = replay(result);
     const state = states.get(freki.id);
     assert.equal(state.temporaryConditions[0].mechanics[mechanic],value);
+    if (id === 'freki-flankenlauf') assert.equal(state.temporaryConditions[0].stanceGroup, 'martial-position-guard');
     const profile = overlayCombatHitPointState(active,state);
     if (mechanic === 'armorClass') assert.equal(profile.totalDefense,15);
     advanceTemporaryConditionsForComment(states,{characterId:freki.id},{actingCharacterIds:[freki.id]});

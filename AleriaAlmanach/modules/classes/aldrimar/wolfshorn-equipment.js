@@ -1,5 +1,7 @@
+import { createPositionCondition, POSITION_PENALTY_TEXT } from '../../combat-styles/martial-position-effects.js';
+
 const critical = (id, name, effects, resultEffects = []) => ({ id, name, phase: 'pre-damage',
-  description: resultEffects.length ? 'Bei kritischem Treffer: −2 m Bewegung im nächsten eigenen Beitrag des Ziels, nicht stapelbar.'
+  description: resultEffects.length ? `Bei kritischem Treffer: ${POSITION_PENALTY_TEXT}`
     : 'Bei kritischem Treffer: +2 zusätzlicher Schaden, auch bei passenden Waffentechniken. Dieser Zusatz wird nicht verdoppelt.',
   recipient: 'actor', sourceRelation: 'self', activation: 'passive', frequency: 'always', condition: 'critical-hit',
   actionKinds: ['weapon', 'technique'], effects, resultEffects });
@@ -11,10 +13,9 @@ export function upgradeWolfshornEquipment(profile, kind) {
         versatileDamageFormula: '1d10', damageBonus: 1,
         notes: 'Sorgfältig ausbalancierter Grenzerspeer. +1 Waffenschaden. Ylvas persönliche Speerausbildung erlaubt ihr Geschicklichkeit.' };
       if (w.id === 'ylva-handaxt') return { ...w, attackBonus: 1, notes: 'Griffige, ausgewogene Grenzeraxt. +1 Angriff.' };
-      if (w.id === 'ylva-langbogen') return { ...w, damageBonus: 1, notes: '+1 Waffenschaden. Festnagelnder Schuss: bei kritischem Treffer −2 m Bewegung im nächsten eigenen Beitrag des Ziels, nicht stapelbar.',
-        triggerRules: [critical('wolfshorn-pinning-shot', 'Festnagelnder Schuss', {}, [{ type: 'debuff', target: 'target', on: 'always', condition: {
-          id: 'wolfshorn-pinned', name: 'Festnagelnder Schuss', active: true, mechanics: { movement: -2 },
-          durationModel: { kind: 'actor-comments', amount: 1 } } }])] };
+      if (w.id === 'ylva-langbogen') return { ...w, damageBonus: 1, notes: `+1 Waffenschaden. Festnagelnder Schuss bei kritischem Treffer: ${POSITION_PENALTY_TEXT}`,
+        triggerRules: [critical('wolfshorn-pinning-shot', 'Festnagelnder Schuss', {}, [{ type: 'debuff', target: 'target', on: 'always',
+          condition: createPositionCondition(false, { name: 'Festnagelnder Schuss' }) }])] };
     } else {
       if (['asgeir-axt-rechts', 'asgeir-axt-links'].includes(w.id)) return { ...w, attackBonus: 1, damageBonus: 1,
         notes: 'Erprobte Wolfshorn-Schmiedearbeit: +1 Angriff und +1 Schaden mit dieser Axt.' };
