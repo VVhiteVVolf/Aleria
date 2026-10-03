@@ -263,12 +263,13 @@ function summarizeRuleEffects(effects = {}) {
   const labels = [
     ['attackModifier', 'Angriff'], ['defenseModifier', 'Verteidigung'],
     ['savingThrowModifier', 'Rettung'], ['spellSaveDcModifier', 'Zauber-SG'],
-    ['damageModifier', 'Schaden'], ['damageReduction', 'Schadensreduktion']
+    ['damageModifier', 'Schaden'], ['damageReduction', 'Schadensreduktion'], ['damageReductionBypass', 'Schutz umgehen']
   ];
   const parts = labels
     .filter(([key]) => Number(effects[key] || 0) !== 0)
     .map(([key, label]) => `${label} ${Number(effects[key]) > 0 ? '+' : ''}${Number(effects[key])}`);
   if (effects.rollMode && effects.rollMode !== 'normal') parts.push(effects.rollMode === 'advantage' ? 'Vorteil' : 'Nachteil');
+  if (effects.preventAdvantage) parts.push('Kein Vorteil');
   if (effects.outcome && effects.outcome !== 'none') parts.push({
     'force-hit': 'Treffer erzwungen', 'force-miss': 'Fehlschlag erzwungen',
     'force-critical-hit': 'Kritischer Treffer erzwungen',
@@ -409,7 +410,7 @@ export function renderCombatEvaluation(source = {}) {
         </div>
         ${narration ? `<p>${escapeHtml(narration)}</p>` : ''}
         ${renderCounterConsequences(resolution, { renderEffectResult, summarizeRuleEffects })}
-        ${resolution.criticalConsequence ? `<p class="combat-critical-consequence"><strong>W10 · ${escapeHtml(resolution.criticalConsequence.roll)} · ${escapeHtml(resolution.criticalConsequence.name)}</strong><br>${escapeHtml(resolution.criticalConsequence.actorName)}: ${escapeHtml(resolution.criticalConsequence.description)}</p>` : ''}
+        ${resolution.criticalConsequence ? `<p class="combat-critical-consequence"><strong>W${resolution.criticalConsequence.version >= 2 ? 20 : 10} · ${escapeHtml(resolution.criticalConsequence.roll)} · ${escapeHtml(resolution.criticalConsequence.name)}</strong><br>${escapeHtml(resolution.criticalConsequence.actorName)}: ${escapeHtml(resolution.criticalConsequence.description)}</p>` : ''}
         <div class="combat-evaluation-mechanics">
           <span><b>${escapeHtml(attack.total)}</b> ${rollLabel} · ${escapeHtml(attack.notation || '')}</span>
           <span>gegen <b>${escapeHtml(attack.targetDefense)}</b> ${defenseLabel}</span>

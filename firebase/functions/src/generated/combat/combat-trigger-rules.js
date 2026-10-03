@@ -3,7 +3,7 @@ import { canUseEquippedCombatShield } from './combat-weapon-loadout.js';
 import { normalizeCombatEffects } from './combat-effect-model.js?v=20260928-equipment-art-v4';
 
 export const COMBAT_RULE_PHASES = Object.freeze([
-  'pre-roll', 'post-roll', 'post-hit', 'pre-damage', 'on-damaged', 'post-damage',
+  'pre-roll', 'pre-secondary-save', 'post-roll', 'post-hit', 'pre-damage', 'pre-hit-damage', 'on-damaged', 'post-damage',
   'on-heal', 'on-condition-applied', 'on-condition-removed', 'on-resource-spent',
   'on-defeat', 'on-concentration-check', 'on-channel-progress', 'on-combat-start', 'on-combat-end'
 ]);
@@ -89,6 +89,8 @@ export function sanitizeCombatRuleEffects(value = {}) {
     skillModifier: number(source.skillModifier ?? source.skill, 0, -99, 99),
     damageModifier: number(source.damageModifier ?? source.damage, 0, -999, 999),
     damageReduction: number(source.damageReduction, 0, 0, 9999),
+    damageReductionBypass: number(source.damageReductionBypass, 0, 0, 9999),
+    ...(source.preventAdvantage === true ? { preventAdvantage: true } : {}),
     rollMode: ROLL_MODES.has(rollMode) ? rollMode : 'normal',
     outcome: RULE_OUTCOMES.has(outcome) ? outcome : 'none'
   };
@@ -122,6 +124,9 @@ export function sanitizeCombatTriggerRule(value = {}, index = 0) {
     costs: normalizeCombatResourceCosts(source.costs),
     actionKinds: [...new Set(actionKinds)].slice(0, 12),
     ...(source.weaponAttackOnly === true ? { weaponAttackOnly: true } : {}),
+    ...(source.requiredActorId ? { requiredActorId: text(source.requiredActorId, 180) } : {}),
+    ...(source.requiredTargetId ? { requiredTargetId: text(source.requiredTargetId, 180) } : {}),
+    ...(source.saveAttributes ? { saveAttributes: normalizedList(source.saveAttributes) } : {}),
     skillIds: normalizedList(source.skillIds),
     ...(source.damageTypes ? { damageTypes: normalizedList(source.damageTypes) } : {}),
     requiredTargetTags: normalizedList(source.requiredTargetTags),
@@ -238,6 +243,10 @@ function conditionAllows(rule, state = {}) {
 }
 
 function actionAllows(rule, actionKind, profileActionId = '', state = {}) {
+  if (rule.requiredActorId && rule.requiredActorId !== state.actorProfile?.characterId) return false;
+  if (rule.requiredTargetId && rule.requiredTargetId !== state.targetProfile?.characterId) return false;
+  if (rule.saveAttributes?.length && !rule.saveAttributes.includes(state.saveAttribute
+    || (state.actorProfile?.actionResolutionMode === 'saving-throw' ? state.actorProfile.actionSaveAttribute : ''))) return false;
   if (rule.weaponAttackOnly && state.actorProfile?.actionResolutionMode !== 'weapon-attack') return false;
   if (rule.damageTypes?.length && !rule.damageTypes.includes(String(state.actorProfile?.weapon?.damageType || '').toLowerCase())) return false;
   if (rule.requiredWeaponId) {
@@ -343,10 +352,11 @@ export function mergeCombatRuleEffects(applications = []) {
   applications.forEach(application => {
     const current = sanitizeCombatRuleEffects(application.effects);
     Object.keys(effects).forEach(key => {
-      if (['rollMode', 'outcome'].includes(key)) return;
+      if (['rollMode', 'outcome', 'preventAdvantage'].includes(key)) return;
       effects[key] += Number(current[key] || 0);
     });
     if (current.rollMode !== 'normal') rollModes.push(current.rollMode);
+    if (current.preventAdvantage) effects.preventAdvantage = true;
     // Outcome forcing is resolved below using explicit authority, not array order.
   });
   const advantage = rollModes.includes('advantage');

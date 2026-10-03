@@ -15,6 +15,7 @@ import {
   normalizeRuntimeCondition
 } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 import { applyCombatEncounterCommentToStateMap } from './combat-encounter-model.js?v=20260928-equipment-art-v4';
+import { beginCriticalContribution, expireCriticalTemporaryHitPoints } from '../combat-critical/combat-critical-lifecycle.js';
 import { applyCombatStatusCommentToStateMap } from '../combat-status/combat-status-model.js?v=20260906-effect-rolls-v1';
 import { reconcileConcentrationConditions } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
 import { getEffectiveCombatAttribute, getAttributeModifier, getUniversalDamageBonus } from './combat-profile-model.js?v=20260928-equipment-art-v4';
@@ -280,6 +281,7 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
     ]));
     const isStopComment = stopCommentId && String(comment?.id || '') === stopCommentId;
     if (isStopComment && stopSegmentIndex == null) break;
+    beginCriticalContribution(states, comment);
     const segments = Array.isArray(comment?.commentSegments) ? comment.commentSegments : [];
     const entries = segments.length
       ? segments.flatMap((segment, index) => {
@@ -385,6 +387,7 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
     if (isStopComment) break;
     // All contribution kinds advance clocks. Conditions remain active for the
     // complete contribution and expire only after its final segment.
+    expireCriticalTemporaryHitPoints(states, comment, conditionIdsBeforeComment);
     advanceTemporaryConditionsForComment(states, comment, { conditionIdsByActor: conditionIdsBeforeComment });
     applyCriticalConsequencesForComment(states, comment);
     for (const event of sceneItemEvents(comment)) applySceneItemEvent(sceneItems, event);

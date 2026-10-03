@@ -168,6 +168,12 @@ export function deriveCombatEncounterState(comments = []) {
         encounters.set(event.encounterId, current);
       }
     }
+    // Critical HP loss occurs before the first action; later healing may revive
+    // the participant in the same contribution.
+    for (const event of comment.criticalLifecycle || []) if (event.phase === 'start') {
+      applyCombatResolutionToEncounters(encounters, { targetId: event.actorId,
+        targetSnapshot: { hitPointsBefore: event.before?.current, hitPointsAfter: event.after?.current } });
+    }
     getCommentCombatResolutions(comment).forEach(resolution => applyCombatResolutionToEncounters(encounters, resolution));
     // Conservatively invalidate an open preview after any further mechanical
     // contribution in the scene, including rests and resource use.

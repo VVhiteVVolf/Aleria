@@ -1,7 +1,9 @@
 import { prepareCombatEquipment, reserveCombatEquipment } from '../generated/combat/combat-equipment-preparation.js';
+import { prepareCriticalCommentLifecycle } from './critical-comment-lifecycle.js';
 import { getActorsWithCombatPosts } from '../generated/combat/combat-weapon-loadout.js';
 import { randomUUID, randomInt } from 'node:crypto';
 import { createCriticalConsequence } from '../generated/combat-critical/combat-critical-model.js';
+import { CRITICAL_CONSEQUENCE_DIE } from '../generated/combat-critical/combat-critical-catalog.js';
 import { deriveSceneItems, applySceneItemEvent, applyDroppedWeaponsToStates } from '../generated/scene-items/scene-items-model.js';
 import { applySceneItemInteraction } from '../generated/scene-items/scene-item-interaction.js';
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
@@ -201,7 +203,7 @@ function consumeRuleAbilityUse(sourceAbilities, application, recoveryDayKey = ''
 }
 
 export async function commitCombatCommentOperation(request, {
-  database = getFirestore(), rollCritical = () => randomInt(1, 11), nowClient = Date.now()
+  database = getFirestore(), rollCritical = () => randomInt(1, CRITICAL_CONSEQUENCE_DIE + 1), nowClient = Date.now()
 } = {}) {
   if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   const payload = clonePayload(request.data);
@@ -221,6 +223,7 @@ export async function commitCombatCommentOperation(request, {
   let committedComment;
   let profileUpdates = [];
   let responseSegments = [];
+  let criticalLifecycle = [];
 
   await database.runTransaction(async transaction => {
     const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
@@ -273,6 +276,8 @@ export async function commitCombatCommentOperation(request, {
     }]));
     const workingInventories = new Map();
     const persistentUpdates = new Map();
+    const lifecycle = await prepareCriticalCommentLifecycle({ database, transaction, states: workingStates, metadata,
+      records, entries: uniqueRecords, updates: persistentUpdates });
     const combatResolutionsBySegment = new Map();
     let enhancedSegments = metadata.commentSegments.map(segment => {
       const clean = { ...segment };
@@ -618,6 +623,7 @@ export async function commitCombatCommentOperation(request, {
     }
 
     while (nextInventoryEntry < inventoryEntries.length) await resolveInventoryEntry(inventoryEntries[nextInventoryEntry++]);
+    criticalLifecycle = lifecycle.finish({ ...metadata, commentSegments: enhancedSegments });
     const mechanicalUndo = {};
     profileUpdates = [...persistentUpdates.values()].map(update => {
       const values = { updatedAt: new Date(nowClient).toISOString() };
@@ -712,6 +718,7 @@ export async function commitCombatCommentOperation(request, {
         }
       } : {}),
       serverValidatedMechanics: true,
+      ...(criticalLifecycle.length ? { criticalLifecycle } : {}),
       createdBy: request.auth.uid,
       createdByRole: String(request.auth.token?.aleriaRole || 'player'),
       orderKey: nextMechanicalCommentOrderKey(allHistory, metadata.orderKey, nowClient),
@@ -728,6 +735,7 @@ export async function commitCombatCommentOperation(request, {
     id: commentRef.id,
     profileUpdates,
     mechanics: {
+      ...(criticalLifecycle.length ? { criticalLifecycle } : {}),
       commentSegments: responseSegments,
       combatResolution: responseSegments.map(segment => segment?.combatResolution).filter(Boolean).length === 1
         ? responseSegments.find(segment => segment?.combatResolution)?.combatResolution || null

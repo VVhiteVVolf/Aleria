@@ -1,4 +1,5 @@
 import { prepareCombatEquipment, reserveCombatEquipment } from './combat-equipment-preparation.js?v=20260928-equipment-art-v4';
+import { beginCriticalContribution } from '../combat-critical/combat-critical-lifecycle.js';
 import { estimateCombatHitChance } from './combat-action-estimates.js?v=20260928-equipment-art-v4';
 import { getActorsWithCombatPosts, normalizeCombatLoadout, isPairedCombatWeapon, canUseCombatOffHand } from './combat-weapon-loadout.js';
 import { canCarryCombatShield } from './combat-support-equipment.js';
@@ -883,6 +884,8 @@ async function handleSubmission(submission = {}) {
     cachedComments,
     stateContext.rulePeriods
   );
+  stateContext.workingStates = new Map(stateContext.storedStates);
+  beginCriticalContribution(stateContext.workingStates, { characterId: submission.characterId, commentSegments: segments });
 
   activateResolutionDialog();
   try {

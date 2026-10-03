@@ -1,6 +1,7 @@
 import { resolveFollowUpAttacks } from './combat-follow-up-resolution.js?v=20260928-equipment-art-v4';
 import { attachPreparedCounter } from './combat-counter-resolution.js';
 import { attachTechniqueDisarm } from './combat-technique-disarm.js';
+import { releaseCriticalTemporaryOwnership } from '../combat-critical/combat-critical-lifecycle.js';
 import { getActionPaymentCosts } from './combat-action-economy.js';
 import { getCombatAttackNumbers, evaluateCombatAttackRoll, evaluateSavingThrowRoll, applyOutcome } from './combat-attack-evaluation.js?v=20260928-equipment-art-v4';
 import { validateSpellCatalogTarget } from '../spell-catalog/spell-catalog-targets.js';
@@ -17,7 +18,7 @@ import {
   getSavingThrowRollModes,
   resolveSavingThrowRollMode
 } from './combat-profile-model.js?v=20260928-equipment-art-v4';
-import { mergeRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
+import { mergeRollModes, mergeRestrictedRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
 import {
   getCombatActorValidationMessage,
   validateCombatActorProfile,
@@ -54,7 +55,7 @@ import { attachCombatEquipmentPreparation } from './combat-equipment-preparation
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { prepareCombatTurnStart, attachCombatTurnStart } from './combat-turn-start.js?v=20260928-equipment-art-v4';
 
-export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-10';
+export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-11';
 
 function normalizeRollMode(value) {
   return ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
@@ -288,7 +289,8 @@ export function getCombatRollContext(actor, target = {}, options = {}) {
     : getActiveRollModes(actor))];
   const profileRollMode = mergeRollModes(profileRollModes);
   const auraRollMode = savingThrowMode ? actorAuraOnTarget.attackRollMode : targetAuraOnActor.attackRollMode;
-  const safeRollMode = options.counterAttack ? 'advantage' : mergeRollModes(profileRollModes, auraRollMode, preRollApplications.map(application => application.effects?.rollMode));
+  const safeRollMode = mergeRestrictedRollModes(options.counterAttack ? ['advantage']
+    : [profileRollModes, auraRollMode, preRollApplications.map(application => application.effects?.rollMode)], preRollEffects);
   return { relationship, distanceMeters, auraContext, actorAuraOnTarget, targetAuraOnActor,
     resolutionMode, savingThrowMode, automaticMode, ruleSources, usedRuleFrequencyKeys, rulePeriods,
     actionKind, profileActionId, ruleProfileState, preRollApplications, preRollEffects,
@@ -421,9 +423,10 @@ export class CombatResolutionService {
       postAttackModifier, postDefenseModifier } = evaluated;
     let allRuleApplications = [preRollApplications, postRollApplications, postHitApplications, preDamageApplications].flat();
     const followRuleConflicts = [];
-    const damageBonus = Number(actor.damageModifier || 0) + Number(targetAuraOnActor.damage || 0)
+    let damageBonus = Number(actor.damageModifier || 0) + Number(targetAuraOnActor.damage || 0)
       + postHitEffects.damageModifier + preDamageEffects.damageModifier;
     let damageRoll = null;
+    let reductionBypass = Math.max(0, postHitEffects.damageReductionBypass + preDamageEffects.damageReductionBypass);
     const secondarySaves = [];
     const followUpAttacks = [];
     const existingTemporaryConditions = Array.isArray(target.temporaryConditions)
@@ -437,6 +440,14 @@ export class CombatResolutionService {
         && hasHostileEffects(effectiveEffects.filter(effect => effect.target !== 'self'))
     });
     attack = primaryWard.attack;
+    const hitDamageApplications = collectApplicableCombatRules({ phase: 'pre-hit-damage', actionKind, profileActionId,
+      sources: ruleSources, periods: rulePeriods, usedFrequencyKeys: usedRuleFrequencyKeys,
+      state: { ...ruleProfileState, ...attack } });
+    markCombatRuleApplications(hitDamageApplications, usedRuleFrequencyKeys);
+    allRuleApplications.push(...hitDamageApplications);
+    const hitDamageEffects = mergeCombatRuleEffects(hitDamageApplications);
+    damageBonus += hitDamageEffects.damageModifier;
+    reductionBypass += hitDamageEffects.damageReductionBypass;
     let preWardTargetConditions = primaryWard.conditions;
     const wardResolution = primaryWard.wardResolution;
     const applicableDamageEffects = effectiveEffects.filter(effect => effect.type === 'damage'
@@ -476,8 +487,10 @@ export class CombatResolutionService {
       if (primaryDamageEffect.target !== 'self' && !attack.hit && actor.actionHalfDamageOnSave) {
         damageRoll = { ...damageRoll, rawTotal: Number(damageRoll.total), total: Math.floor(Number(damageRoll.total) / 2), halvedBySave: true };
       }
-      const reduction = primaryDamageEffect.target === 'self' ? 0
-        : Math.max(0, postHitEffects.damageReduction + preDamageEffects.damageReduction);
+      const ruleReduction = primaryDamageEffect.target === 'self' ? 0
+        : Math.max(0, postHitEffects.damageReduction + preDamageEffects.damageReduction + hitDamageEffects.damageReduction);
+      const reduction = Math.max(0, ruleReduction - reductionBypass);
+      reductionBypass = Math.max(0, reductionBypass - ruleReduction);
       if (reduction > 0) {
         const beforeReduction = Number(damageRoll.total) || 0;
         damageRoll = {
@@ -490,7 +503,13 @@ export class CombatResolutionService {
     }
     const secondarySave = actor.selectedAction?.secondarySave;
     if (attack.hit && secondarySave?.enabled && typeof this.dice.rollSavingThrow === 'function') {
-      const savingThrowModifier = getSavingThrowTotal(target, secondarySave.attributeKey, secondarySave);
+      const saveApplications = collectApplicableCombatRules({ phase: 'pre-secondary-save', actionKind, profileActionId,
+        sources: ruleSources, periods: rulePeriods, usedFrequencyKeys: usedRuleFrequencyKeys,
+        state: { ...ruleProfileState, saveAttribute: secondarySave.attributeKey } });
+      markCombatRuleApplications(saveApplications, usedRuleFrequencyKeys);
+      allRuleApplications.push(...saveApplications);
+      const savingThrowModifier = getSavingThrowTotal(target, secondarySave.attributeKey, secondarySave)
+        + mergeCombatRuleEffects(saveApplications).savingThrowModifier;
       const savingThrowRoll = await this.dice.rollSavingThrow({
         modifier: savingThrowModifier,
         rollMode: resolveSavingThrowRollMode(target, secondarySave.attributeKey),
@@ -601,7 +620,8 @@ export class CombatResolutionService {
         const damageType = resolveCombatEffectDamageType(effect, weapon);
         const applied = applyTypedCombatDamage(recipientHitPoints, amount, appliesToActor ? actor : target, {
           damageType,
-          magical: effect.magical, conditions: recipientConditions
+          magical: effect.magical, conditions: recipientConditions,
+          reductionBypass: !appliesToActor && roll === damageRoll ? reductionBypass : 0
         });
         if (appliesToActor) { actorHitPoints = applied.after; actorConditions = applied.conditions; }
         else { targetHitPoints = applied.after; targetConditions = applied.conditions; }
@@ -617,8 +637,9 @@ export class CombatResolutionService {
       }
       if (effect.type === 'temporary-hit-points') {
         const applied = applyTemporaryHitPoints(recipientHitPoints, amount);
-        if (appliesToActor) actorHitPoints = applied.after;
-        else targetHitPoints = applied.after;
+        recipientConditions = releaseCriticalTemporaryOwnership(recipientConditions, applied.before, applied.after);
+        if (appliesToActor) { actorHitPoints = applied.after; actorConditions = recipientConditions; }
+        else { targetHitPoints = applied.after; targetConditions = recipientConditions; }
         effectResults.push({ effect, amount, roll, applied, recipient });
         continue;
       }
@@ -690,7 +711,7 @@ export class CombatResolutionService {
       });
       const applied = applyTypedCombatDamage(targetHitPoints, followUpResult.damage.total, target, {
         damageType: effect.damageType,
-        magical: effect.magical, conditions: targetConditions
+        magical: effect.magical, conditions: targetConditions, reductionBypass: followUpResult.damage.reductionBypass || 0
       });
       targetHitPoints = applied.after;
       targetConditions = applied.conditions;

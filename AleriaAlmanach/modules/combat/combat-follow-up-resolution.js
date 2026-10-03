@@ -1,7 +1,7 @@
 import { collectApplicableCombatRules, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js?v=20260928-equipment-art-v4';
 import { getBonusDamageFormulas, getUniversalDamageBonus, getWeaponAttackModifier, getWeaponDamageModifier } from './combat-profile-model.js?v=20260928-equipment-art-v4';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
-import { mergeRollModes } from './combat-roll-mode.js';
+import { mergeRestrictedRollModes } from './combat-roll-mode.js';
 import { combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js';
 import { applyOutcome } from './combat-attack-evaluation.js?v=20260928-equipment-art-v4';
 import { resolveCombatWard } from './combat-ward-resolution.js';
@@ -44,7 +44,8 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
       };
       const followPreApplications = collectFollowRules('pre-roll');
       const followPreEffects = mergeCombatRuleEffects(followPreApplications);
-      const followRollMode = mergeRollModes(profileRollModes, offBalance ? 'advantage' : 'normal', auraRollMode, followPreApplications.map(application => application.effects?.rollMode));
+      const followRollMode = mergeRestrictedRollModes([profileRollModes, offBalance ? 'advantage' : 'normal', auraRollMode,
+        followPreApplications.map(application => application.effects?.rollMode)], followPreEffects);
       const followAttackModifier = Number(actor.attackModifier || 0) + attackDelta + Number(followUp.attackBonus || 0)
         + Number(targetAuraOnActor.attack || 0)
         + (['spell', 'prayer', 'song'].includes(actionKind) ? Number(targetAuraOnActor.spellAttack || 0) : 0)
@@ -86,6 +87,9 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
       });
       followAttack = followWard.attack;
       preWardTargetConditions = followWard.conditions;
+      const hitDamageApplications = collectFollowRules('pre-hit-damage', followAttack);
+      const hitDamageEffects = mergeCombatRuleEffects(hitDamageApplications);
+      allRuleApplications.push(...hitDamageApplications);
       let followDamage = null;
       if (followAttack.hit) {
         const followBonusDamageFormulas = followFormula && followUp.inheritBonusDamage !== false ? getBonusDamageFormulas(actor) : [];
@@ -93,13 +97,16 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
           damageFormula: combineDamageFormulas([followFormula, ...(extraDie ? [`1d${extraDie}`] : []), ...followBonusDamageFormulas]),
           bonus: (followUp.inheritDamageModifier === false ? getUniversalDamageBonus(actor) : Number(actor.damageModifier || 0) + damageDelta) + Number(followUp.damageBonus || 0)
             + Number(targetAuraOnActor.damage || 0)
-            + followPostHitEffects.damageModifier + followPreDamageEffects.damageModifier,
+            + followPostHitEffects.damageModifier + followPreDamageEffects.damageModifier + hitDamageEffects.damageModifier,
           critical: followAttack.criticalSuccess,
           actorName: actor.name,
           targetName: target.name,
           container: options.container
         });
-        const reduction = Math.max(0, followPostHitEffects.damageReduction + followPreDamageEffects.damageReduction);
+        const ruleReduction = Math.max(0, followPostHitEffects.damageReduction + followPreDamageEffects.damageReduction + hitDamageEffects.damageReduction);
+        const bypass = Math.max(0, followPostHitEffects.damageReductionBypass + followPreDamageEffects.damageReductionBypass + hitDamageEffects.damageReductionBypass);
+        const reduction = Math.max(0, ruleReduction - bypass);
+        followDamage.reductionBypass = Math.max(0, bypass - ruleReduction);
         if (reduction > 0) followDamage = { ...followDamage, rawTotal: Number(followDamage.total), total: Math.max(0, Number(followDamage.total) - reduction), damageReduction: reduction };
       }
       followUpAttacks.push({
@@ -124,6 +131,7 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
           diceResults: Array.isArray(followDamage.keptDice) ? followDamage.keptDice.slice() : [],
           modifier: Number(followDamage.modifier) || 0,
           total: Number(followDamage.total),
+          reductionBypass: followDamage.reductionBypass || 0,
           damageType: followUp.damageType || followWeapon.damageType || 'physisch',
           rollId: followDamage.id || ''
         } : null

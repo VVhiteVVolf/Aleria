@@ -198,6 +198,16 @@ function splitCommentByEmoteMarkers(c) {
 }
 
 function renderCommentBubble(c, idx) {
+  if (Array.isArray(c.criticalLifecycle) && c.criticalLifecycle.length) {
+    const rows = c.criticalLifecycle.map(event => {
+      const change = event.loss != null ? `−${Number(event.loss) || 0} TP`
+        : event.grantedTemporary != null ? `+${Number(event.grantedTemporary) || 0} temporäre TP`
+        : `${Number(event.expiredTemporary) || 0} temporäre TP verfallen`;
+      return `<p><strong>${escapeHtml(event.actorName || event.actorId)} · ${escapeHtml((event.names || []).join(', '))}</strong>: ${change} (${event.phase === 'start' ? 'Beitragsbeginn' : 'Beitragsende'}).</p>`;
+    }).join('');
+    return `${renderCommentBubble({ ...c, criticalLifecycle: null, _mechanicalUndoEligible: c.serverValidatedMechanics === true,
+      _criticalLifecycleMechanical: true }, idx)}<div class="combat-critical-consequence" role="note">${rows}</div>`;
+  }
   if (c.sceneItemDraft && window.AleriaSceneItems) return window.AleriaSceneItems.renderDraft(c.sceneItemDraft);
   if (c.sceneItemEvent && window.AleriaSceneItems) {
     const actions = c._hideActions ? '' : c.serverValidatedMechanics ? renderMechanicalUndoButton(c.id) : renderCommentTransactionLock(c);
@@ -245,8 +255,9 @@ function renderCommentBubble(c, idx) {
 
   if (Array.isArray(c.commentSegments) && c.commentSegments.some(segment => String(segment?.text || '').trim())) {
     const cleanSegments = c.commentSegments.filter(segment => String(segment?.text || '').trim());
-    const mechanicalLock = window.AleriaCommentTransactions?.isImmutable?.(c) === true;
-    const mechanicalKinds = window.AleriaCommentTransactions?.getKinds?.(c) || [];
+    const mechanicalLock = c._criticalLifecycleMechanical || window.AleriaCommentTransactions?.isImmutable?.(c) === true;
+    const mechanicalKinds = c._criticalLifecycleMechanical ? ['combat', ...(window.AleriaCommentTransactions?.getKinds?.(c) || [])]
+      : window.AleriaCommentTransactions?.getKinds?.(c) || [];
     // Inventory changes are captured alongside hitPoints/resources in the server's undo snapshot, so a
     // combat+inventory-use comment is safely deletable too. Skill checks are not (separate claim record).
     const hasUnsupportedMechanics = c.commentSegments.some(segment => segment?.skillResolution || segment?.skillChallenge);

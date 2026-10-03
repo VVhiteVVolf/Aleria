@@ -76,6 +76,11 @@ export async function attachPreparedCounter(result, actor, target, options, reso
   const missed = [result.attack, ...(result.followUpAttacks || []).map(entry => entry.attack)].some(attack => attack?.hit === false);
   if (!missed) return result;
   const targetAfter = afterProfile(target, result, 'target');
+  const blocked = targetAfter.temporaryConditions.find(condition => condition.active !== false && condition.blockPreparedCounter);
+  if (blocked) {
+    result.mechanicNotes = [...(result.mechanicNotes || []), `${blocked.name}: Automatische Konter sind vorübergehend gesperrt.`];
+    return result;
+  }
   const stance = targetAfter.temporaryConditions.find(condition => condition.active !== false && condition.counterAttack?.enabled);
   if (!stance) return result;
   const actorAfter = afterProfile(actor, result, 'actor');

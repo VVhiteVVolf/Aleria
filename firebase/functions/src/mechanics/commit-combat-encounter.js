@@ -1,6 +1,8 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
+import { expireCriticalTemporaryHitPoints } from '../generated/combat-critical/combat-critical-lifecycle.js';
+import { persistCriticalHitPointUpdates } from './critical-comment-lifecycle.js';
 import {
   buildEncounterExperienceAwards,
   deriveCombatEncounterState,
@@ -239,6 +241,8 @@ export const commitCombatEncounter = onCall({
 
     let experience = { total: 0, awards: [] };
     const mechanicalUndo = {};
+    const criticalLifecycle = requested.operation === 'end'
+      ? expireCriticalTemporaryHitPoints(sceneStates, { combatEncounter: requested }) : [];
     if (requested.operation === 'end') {
       const endingParticipants = mergedParticipants;
       const awardPlan = requested.awardExperience
@@ -289,6 +293,15 @@ export const commitCombatEncounter = onCall({
 
     committedEvent = normalizeCombatEncounterEvent({ ...requested, experience,
       criticalEffectsVersion: requested.operation === 'start' ? 1 : 0 });
+    const criticalUpdates = new Map();
+    for (const event of criticalLifecycle) {
+      const target = recordsToLoad.find(entry => entry.persistent && entry.recordId === event.actorId);
+      if (!target) continue;
+      const record = records.get(target.key);
+      event.actorName = record.name || event.actorId;
+      criticalUpdates.set(target.key, { entry: target, record, hitPoints: event.after });
+    }
+    profileUpdates.push(...persistCriticalHitPointUpdates(transaction, criticalUpdates, commentRef.id, now, mechanicalUndo));
     transaction.create(commentRef, {
       entryId,
       charName: 'Erzähler',
@@ -304,6 +317,7 @@ export const commitCombatEncounter = onCall({
       commentKind: 'combat-encounter-event',
       commentSegments: null,
       combatEncounter: committedEvent,
+      ...(criticalLifecycle.length ? { criticalLifecycle } : {}),
       encounterTransaction: {
         schemaVersion: 1,
         transactionId: commentRef.id,

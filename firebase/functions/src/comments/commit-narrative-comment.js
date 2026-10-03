@@ -1,5 +1,9 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
+import { deriveCombatStateFromComments } from '../generated/combat/combat-state-model.js';
+import { isTrustedSceneContributionComment, sortSceneHistory } from '../mechanics/trusted-scene-history.js';
+import { nextMechanicalCommentOrderKey } from '../mechanics/mechanical-comment-order.js';
+import { prepareCriticalCommentLifecycle, persistCriticalHitPointUpdates } from '../mechanics/critical-comment-lifecycle.js';
 
 const MAX_COMMENT_BYTES = 700_000;
 
@@ -96,13 +100,7 @@ export function buildNarrativeCommentDocument(payload, entryId, request, now) {
   };
 }
 
-export const commitNarrativeComment = onCall({
-  region: 'europe-west1',
-  maxInstances: 20,
-  concurrency: 40,
-  enforceAppCheck: false,
-  timeoutSeconds: 20
-}, async request => {
+export async function commitNarrativeCommentOperation(request, { database = getFirestore(), now = Date.now() } = {}) {
   if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   const payload = clonePayload(request.data);
   const entryIds = (Array.isArray(payload.entryIds) ? payload.entryIds : [payload.entryId])
@@ -116,17 +114,38 @@ export const commitNarrativeComment = onCall({
 
   if (!hasValidSceneDay(payload.metadata)) fail('invalid-argument', 'Der Aleria-Szenentag ist ungÃ¼ltig.');
 
-  const database = getFirestore();
-  const batch = database.batch();
-  const now = Date.now();
-  const ids = uniqueEntryIds.map(entryId => {
-    const ref = database.collection('comments').doc();
-    batch.create(ref, buildNarrativeCommentDocument(payload, entryId, request, now));
-    return ref.id;
+  const refs = uniqueEntryIds.map(() => database.collection('comments').doc());
+  const committed = await database.runTransaction(async transaction => {
+    const pending = [];
+    // Read all scene copies before writing; retain the previous all-or-nothing save.
+    for (const [index, entryId] of uniqueEntryIds.entries()) {
+      const ref = refs[index];
+      const snapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
+      const history = sortSceneHistory(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))).filter(isTrustedSceneContributionComment);
+      const states = deriveCombatStateFromComments(history), updates = new Map();
+      const lifecycle = await prepareCriticalCommentLifecycle({ database, transaction, states, metadata: payload.metadata || {}, updates });
+      const events = lifecycle.finish(payload.metadata || {});
+      const document = buildNarrativeCommentDocument(payload, entryId, request, now);
+      if (events.length) document.orderKey = nextMechanicalCommentOrderKey(history, payload.metadata?.orderKey, now);
+      pending.push({ ref, updates, events, document });
+    }
+    const profileUpdates = [], criticalLifecycle = [];
+    for (const { ref, updates, events, document } of pending) {
+      const undo = {};
+      const changed = persistCriticalHitPointUpdates(transaction, updates, ref.id, now, undo);
+      if (events.length) Object.assign(document, { criticalLifecycle: events, serverValidatedMechanics: true,
+        mechanicalAudit: true, mechanicalUndo: undo });
+      transaction.create(ref, document);
+      profileUpdates.push(...changed); criticalLifecycle.push(...events);
+    }
+    return { profileUpdates, criticalLifecycle };
   });
-  await batch.commit();
-  return { id: ids[0], ids };
-});
+  const ids = refs.map(ref => ref.id);
+  return { id: ids[0], ids, profileUpdates: committed.profileUpdates, mechanics: { criticalLifecycle: committed.criticalLifecycle } };
+}
+
+export const commitNarrativeComment = onCall({ region: 'europe-west1', maxInstances: 20,
+  concurrency: 40, enforceAppCheck: false, timeoutSeconds: 20 }, request => commitNarrativeCommentOperation(request));
 
 export const narrativeCommentInternals = Object.freeze({
   containsImmutableAuditMechanics,

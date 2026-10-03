@@ -32,6 +32,7 @@
     if (isObject(comment.combatStatus)) kinds.add('status');
     if (
       isObject(comment.combatTransaction)
+      || (Array.isArray(comment.criticalLifecycle) && comment.criticalLifecycle.length > 0)
       || hasResolutionId(comment.combatResolution, 'resolutionId')
       || segments.some(segment => hasResolutionId(segment?.combatResolution, 'resolutionId'))
       || segments.some(segment => (Array.isArray(segment?.combatResolutions) ? segment.combatResolutions : [])

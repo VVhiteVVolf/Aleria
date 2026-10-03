@@ -1,4 +1,5 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
+import { prepareCriticalCommentLifecycle, persistCriticalHitPointUpdates } from './critical-comment-lifecycle.js';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { buildNarrativeCommentDocument } from '../comments/commit-narrative-comment.js';
 import { deriveCombatRuleFrequencyKeys } from '../generated/combat/combat-trigger-rules.js';
@@ -56,6 +57,7 @@ export const commitSkillComment = onCall({
   let document;
   let profileUpdates = [];
   let responseSegments = [];
+  let criticalLifecycle = [];
   await database.runTransaction(async transaction => {
     const snapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const allHistory = sortSceneHistory(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
@@ -69,6 +71,8 @@ export const commitSkillComment = onCall({
       resources: Array.isArray(state.resources) ? resetCommentScopedResources(state.resources) : state.resources
     }]));
     const persistentUpdates = new Map();
+    const lifecycle = await prepareCriticalCommentLifecycle({ database, transaction, states: workingStates,
+      metadata: payload.metadata, updates: persistentUpdates });
     const validated = await validateSkillCommentSegments({
       database,
       transaction,
@@ -82,6 +86,9 @@ export const commitSkillComment = onCall({
       workingStates,
       persistentUpdates
     });
+    criticalLifecycle = lifecycle.finish({ ...payload.metadata, commentSegments: validated.commentSegments });
+    const criticalUndo = {};
+    const criticalUpdates = persistCriticalHitPointUpdates(transaction, persistentUpdates, ref.id, now, criticalUndo);
     profileUpdates = [...persistentUpdates.values()].map(update => {
       const values = { updatedAt: new Date(now).toISOString() };
       if (update.resources) values['combatProfile.resources'] = update.resources;
@@ -99,6 +106,7 @@ export const commitSkillComment = onCall({
         abilities: update.abilities || null
       };
     });
+    profileUpdates.push(...criticalUpdates);
     responseSegments = validated.commentSegments;
     const storedSegments = compactMechanicalSegmentsForStorage(validated.commentSegments);
     const metadata = { ...payload.metadata, commentSegments: storedSegments };
@@ -112,6 +120,7 @@ export const commitSkillComment = onCall({
         committedAtClient: now
       },
       serverValidatedMechanics: true,
+      ...(criticalLifecycle.length ? { criticalLifecycle, mechanicalUndo: criticalUndo } : {}),
       mechanicalAudit: true,
       activityAt: FieldValue.serverTimestamp(),
       ts: FieldValue.serverTimestamp()
@@ -121,6 +130,6 @@ export const commitSkillComment = onCall({
   return {
     id: ref.id,
     profileUpdates,
-    mechanics: { commentSegments: responseSegments }
+    mechanics: { commentSegments: responseSegments, ...(criticalLifecycle.length ? { criticalLifecycle } : {}) }
   };
 });

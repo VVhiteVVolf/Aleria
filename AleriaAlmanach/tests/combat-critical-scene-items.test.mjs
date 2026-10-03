@@ -20,9 +20,9 @@ const consequence = (roll,failure=false) => createCriticalConsequence({...resolu
   {encounter,roll,id:`effect-${roll}-${failure}`,actor,target});
 const post = effect => ({id:'strike',characterId:'actor',commentSegments:[{combatResolution:{...resolution,criticalConsequence:effect}}]});
 
-test('exactly ten moderate effects per table; legacy combats, spells, abilities and noncritical rolls stay unchanged',()=>{
-  assert.equal(CRITICAL_HIT_EFFECTS.length,10);assert.equal(CRITICAL_FAILURE_EFFECTS.length,10);
-  for(let roll=1;roll<=10;roll++)for(const failure of [true,false])assert.ok(consequence(roll,failure));
+test('exactly twenty moderate effects per table; legacy combats, spells, abilities and noncritical rolls stay unchanged',()=>{
+  assert.equal(CRITICAL_HIT_EFFECTS.length,20);assert.equal(CRITICAL_FAILURE_EFFECTS.length,20);
+  for(let roll=1;roll<=20;roll++)for(const failure of [true,false])assert.ok(consequence(roll,failure));
   assert.equal(createCriticalConsequence(resolution,{encounter:{encounterId:'old'},roll:10,actor,target}),null);
   for(const kind of ['spell','song','prayer','ability','skill'])assert.equal(createCriticalConsequence({...resolution,profileActionKind:kind},{encounter,roll:10,actor,target}),null);
   assert.equal(createCriticalConsequence({...resolution,attack:{hit:true}},{encounter,roll:10,actor,target}),null);

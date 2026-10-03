@@ -68,7 +68,7 @@ test('Drachenzahn and Silberschuppe apply on the real server and are visible in 
   report.checks.push('Weapon normal/critical/technique and armor every matching hit: client/server/stored bubble parity');
 });
 
-for (const failure of [false, true]) for (let roll = 1; roll <= 10; roll++) test(`${failure ? 'Fumble' : 'Critical hit'} W10=${roll}: stored effect, next own post and expiry`, async () => {
+for (const failure of [false, true]) for (let roll = 1; roll <= 20; roll++) test(`${failure ? 'Fumble' : 'Critical hit'} W20=${roll}: stored effect, next own post and expiry`, async () => {
   await reset();
   const { actual } = await strike({ natural: failure ? 1 : 20, roll });
   const effect = actual.criticalConsequence;
@@ -80,6 +80,10 @@ for (const failure of [false, true]) for (let roll = 1; roll <= 10; roll++) test
     if (effect.condition.blockedResource) assert.equal(affected.resources.find(resource => resource.id === effect.condition.blockedResource).current, 0);
     const placed = await place({ name: 'Übungsglocke', description: 'Die Glocke markiert das Ende eines Manövers.' });
     await useItem(effect.actorId, itemSegment(effect.actorId, { ...placed.sceneItemEvent, available: true }, { operation: 'use' }));
+    if (roll === 12 && !failure) {
+      assert.ok((await current(effect.actorId)).temporaryConditions.some(condition => condition.id === effect.condition.id));
+      await useItem(effect.actorId, itemSegment(effect.actorId, { ...placed.sceneItemEvent, available: true }, { operation: 'use' }));
+    }
     affected = await current(effect.actorId);
     assert.equal(affected.temporaryConditions.some(condition => condition.id === effect.condition.id), false);
   } else {
@@ -188,6 +192,19 @@ test('Old active encounter remains without critical consequences', async () => {
   report.checks.push('Legacy encounter unchanged');
 });
 
+test('Critical temporary HP expires at encounter end and encounter undo restores it', async () => {
+  await reset();
+  await strike({ natural: 20, roll: 19 });
+  assert.equal((await record(ids[0])).combatProfile.hitPoints.temporary, 2);
+  const active = getActiveCombatEncounter(await history());
+  const ended = await encounter({ encounterId: active.encounterId, operation: 'end', outcome: 'draw', awardExperience: false });
+  assert.equal((await record(ids[0])).combatProfile.hitPoints.temporary, 0);
+  assert.equal((await current(ids[0])).temporaryHitPoints, 0);
+  await undo(ended.id);
+  assert.equal((await record(ids[0])).combatProfile.hitPoints.temporary, 2);
+  assert.equal((await current(ids[0])).temporaryHitPoints, 2);
+});
+
 for (const seed of [11, 42, 77, 99]) test(`Full real-sheet duel with criticals and pickup, seed ${seed}`, async () => {
   await reset();
   const dice = new CheckupDice(null, seed), trace = [];
@@ -208,7 +225,7 @@ for (const seed of [11, 42, 77, 99]) test(`Full real-sheet duel with criticals a
     }
     const forcedDrop = seed === 99 && turn === 0;
     const { actual } = await strike({ attacker, target, dice: forcedDrop ? new CheckupDice(1) : dice,
-      roll: forcedDrop ? 10 : dice.die(10), actionId: sword(attacker), priorSegments, weaponGrip: seed === 77 ? 'two-handed' : 'one-handed' });
+      roll: forcedDrop ? 10 : dice.die(20), actionId: sword(attacker), priorSegments, weaponGrip: seed === 77 ? 'two-handed' : 'one-handed' });
     trace.push({ actor: actual.actorName, roll: actual.attack.naturalRoll, damage: actual.damage?.total || 0, remainingHP: actual.targetSnapshot.hitPointsAfter, effect: actual.criticalConsequence?.name || '', equipment: actual.ruleApplications.filter(rule => /drachenzahn|silberschuppe/.test(rule.ruleId)).map(rule => rule.ruleName) });
     assert.ok(actual.actorResourceSnapshot.after.every(resource => resource.current >= 0));
   }

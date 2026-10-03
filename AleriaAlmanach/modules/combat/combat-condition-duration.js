@@ -94,6 +94,8 @@ export function getCommentActorIds(comment = {}) {
     // Persisted mechanical segments keep their authoritative actor inside the
     // resolution. Narrative metadata is intentionally not required for replay.
     remember(segment?.combatResolution?.actorId);
+    for (const resolution of segment?.combatResolutions || []) remember(resolution?.actorId);
+    remember(segment?.inventoryUse?.actorId);
     remember(segment?.skillResolution?.actorId);
   });
   return ids;

@@ -22,7 +22,7 @@ export function describeEquipmentDamageProtection(value) {
   const exceptions = protection.excludedDamageTypes.length ? ` außer ${protection.excludedDamageTypes.map(label).join(' und ')}` : '';
   return `${protection.amount} Schaden weniger gegen ${types}${exceptions}, je Schadensinstanz (mindestens 0). Wirkt nur bei angelegter Rüstung; kein RK-Bonus.`;
 }
-export function resolveEquipmentDamageProtection(profile = {}, damageType, amount = 0) {
+export function resolveEquipmentDamageProtection(profile = {}, damageType, amount = 0, { reductionBypass = 0 } = {}) {
   const type = equipmentDamageType(damageType || 'physisch');
   const sources = (profile.armorItems || []).filter(armor => armor.equipped === true
     && (armor.kind !== 'shield' || canUseEquippedCombatShield(profile))).flatMap(armor => {
@@ -32,6 +32,9 @@ export function resolveEquipmentDamageProtection(profile = {}, damageType, amoun
     return [{ ...protection, armorId: armor.id, armorName: armor.name }];
   });
   // Multiple equipped pieces do not multiply the same passive armor protection.
-  const reduction = Math.min(Math.max(0, Number(amount) || 0), Math.max(0, ...sources.map(source => source.amount)));
-  return { reduction, sources: reduction > 0 ? sources.filter(source => source.amount === Math.max(...sources.map(row => row.amount))) : [] };
+  const capacity = Math.max(0, ...sources.map(source => source.amount));
+  const bypassedReduction = Math.min(capacity, Math.max(0, Number(reductionBypass) || 0));
+  const reduction = Math.min(Math.max(0, Number(amount) || 0), capacity - bypassedReduction);
+  return { reduction, ...(bypassedReduction ? { bypassedReduction } : {}),
+    sources: reduction > 0 ? sources.filter(source => source.amount === capacity) : [] };
 }

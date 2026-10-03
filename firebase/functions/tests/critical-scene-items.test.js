@@ -5,6 +5,9 @@ import { placeSceneItem } from '../src/mechanics/commit-scene-item.js';
 import { undoMechanicalCommentOperation } from '../src/mechanics/commit-undo-mechanical-comment.js';
 import { deriveSceneItems } from '../src/generated/scene-items/scene-items-model.js';
 import { findLaterMechanicalDependency } from '../src/mechanics/mechanical-comment-dependencies.js';
+import { commitNarrativeCommentOperation } from '../src/comments/commit-narrative-comment.js';
+import { deriveCombatStateFromComments } from '../src/generated/combat/combat-state-model.js';
+import { getActiveCombatEncounter } from '../src/generated/combat/combat-encounter-model.js';
 
 const copy = value => value == null ? value : JSON.parse(JSON.stringify(value));
 function database(initial) {
@@ -28,6 +31,79 @@ const attack=(natural=1)=>({commentKind:'combataction',actorId:'actor',text:'Ang
 const request=segments=>({auth,data:{entryId:'scene',text:'Handlung',charName:'actor',metadata:{characterId:'actor',commentSegments:segments}}});
 const fixture=version=>database({'comments/start':history(version),'characters/actor':person('actor'),'characters/target':person('target')});
 const commit=(db,segments)=>commitCombatCommentOperation(request(segments),{database:db,rollCritical:()=>10,nowClient:100});
+
+test('all forty W20 results are server-selected, replayable and reversible without rewriting old posts',async()=>{
+ for(const failure of [false,true])for(let roll=1;roll<=20;roll++){
+  const db=fixture(1),before=copy([...db.data]);
+  const result=await commitCombatCommentOperation(request([attack(failure?1:20)]),{database:db,rollCritical:()=>roll,nowClient:100});
+  const c=result.mechanics.commentSegments[0].combatResolution.criticalConsequence;
+  assert.equal(c.roll,roll);assert.equal(c.version,2);assert.equal(c.dieSides,20);
+  assert.doesNotThrow(()=>deriveCombatStateFromComments(records(db)));
+  if(roll===19&&!failure)assert.equal(db.data.get('characters/actor').combatProfile.hitPoints.temporary,2);
+  await undoMechanicalCommentOperation({auth,data:{entryId:'scene',commentId:result.id}},{database:db});
+  assert.deepEqual(db.data.get('comments/start'),before.find(([id])=>id==='comments/start')[1]);
+  for(const id of ['actor','target'])assert.equal(db.data.get('characters/'+id).combatProfile.hitPoints.current,40);
+ }
+});
+
+test('critical fixed HP loss persists for narrative posts, cannot be forged, and undo restores HP',async()=>{
+ const db=fixture(1);
+ await commitCombatCommentOperation(request([attack()]),{database:db,rollCritical:()=>12,nowClient:100});
+ assert.equal(db.data.get('characters/actor').combatProfile.hitPoints.current,40);
+ const result=await commitNarrativeCommentOperation({auth,data:{entryId:'scene',text:'Flucht leise.',metadata:{characterId:'actor',
+  commentSegments:[{characterId:'actor',text:'Flucht.'},{characterId:'actor',text:'Atmet.'}],criticalLifecycle:[{loss:99}]}}},{database:db,now:200});
+ assert.equal(db.data.get('characters/actor').combatProfile.hitPoints.current,39);
+ assert.equal(result.mechanics.criticalLifecycle.length,1);assert.equal(result.mechanics.criticalLifecycle[0].loss,1);
+ assert.equal(deriveCombatStateFromComments(records(db)).get('actor').current,39);
+ await undoMechanicalCommentOperation({auth,data:{entryId:'scene',commentId:result.id}},{database:db});
+ assert.equal(db.data.get('characters/actor').combatProfile.hitPoints.current,40);
+});
+
+test('ordinary narrative insertion retains its order; critical HP changes append after existing mechanics',async()=>{
+ const db=fixture(1);
+ const plain=await commitNarrativeCommentOperation({auth,data:{entryId:'scene',text:'Früherer Dialog.',metadata:{orderKey:0.5}}},{database:db,now:20});
+ assert.equal(db.data.get(`comments/${plain.id}`).orderKey,0.5);
+ await commitCombatCommentOperation(request([attack()]),{database:db,rollCritical:()=>12,nowClient:100});
+ const periodic=await commitNarrativeCommentOperation({auth,data:{entryId:'scene',text:'Atmet schwer.',metadata:{characterId:'actor',orderKey:2}}},{database:db,now:200});
+ assert.ok(db.data.get(`comments/${periodic.id}`).orderKey>100);
+ assert.equal(db.data.get('characters/actor').combatProfile.hitPoints.current,39);
+});
+
+test('two-turn hit aftermath applies before combat and narrative actions, once per whole post',async()=>{
+ const db=fixture(1);
+ await commitCombatCommentOperation(request([attack(20)]),{database:db,rollCritical:()=>12,nowClient:100});
+ const hp=db.data.get('characters/target').combatProfile.hitPoints.current;
+ const reverse=attack(15);reverse.actorId='target';reverse.combatResolution.actorId='target';reverse.combatResolution.targetId='actor';
+ reverse.combatResolution.actorPersistence.recordId='target';reverse.combatResolution.targetPersistence.recordId='actor';
+ const input=request([reverse]);input.data.metadata.characterId='target';
+ const next=await commitCombatCommentOperation(input,{database:db,rollCritical:()=>1,nowClient:200});
+ assert.equal(db.data.get('characters/target').combatProfile.hitPoints.current,hp-1);
+ assert.equal(next.mechanics.criticalLifecycle[0].loss,1);
+ for(let i=0;i<2;i++)await commitNarrativeCommentOperation({auth,data:{entryId:'scene',text:'Wartet.',metadata:{characterId:'target'}}},{database:db,now:300+i});
+ assert.equal(db.data.get('characters/target').combatProfile.hitPoints.current,hp-2);
+ assert.equal(deriveCombatStateFromComments(records(db)).get('target').current,hp-2);
+});
+
+test('critical temporary HP expires persistently after a narrative post and undo restores the pool',async()=>{
+ const db=fixture(1);
+ await commitCombatCommentOperation(request([attack(20)]),{database:db,rollCritical:()=>19,nowClient:100});
+ assert.equal(db.data.get('characters/actor').combatProfile.hitPoints.temporary,2);
+ const saved=await commitNarrativeCommentOperation({auth,data:{entryId:'scene',text:'Wartet.',metadata:{characterId:'actor'}}},{database:db,now:200});
+ assert.equal(db.data.get('characters/actor').combatProfile.hitPoints.temporary,0);
+ assert.equal(deriveCombatStateFromComments(records(db)).get('actor').temporary,0);
+ await undoMechanicalCommentOperation({auth,data:{entryId:'scene',commentId:saved.id}},{database:db});
+ assert.equal(db.data.get('characters/actor').combatProfile.hitPoints.temporary,2);
+});
+
+test('critical HP loss at zero prevents further attacks and records defeat on the narrative turn',async()=>{
+ const db=fixture(1);db.data.get('characters/actor').combatProfile.hitPoints.current=1;
+ await commitCombatCommentOperation(request([attack()]),{database:db,rollCritical:()=>12,nowClient:100});
+ const before=copy([...db.data]);await assert.rejects(commit(db,[attack(15)]),/kampfunfähig|Trefferpunkte|Lebenspunkte|0 LP/);
+ assert.deepEqual(copy([...db.data]),before,'invalid attack does not partially spend HP/resources');
+ await commitNarrativeCommentOperation({auth,data:{entryId:'scene',text:'Sinkt nieder.',metadata:{characterId:'actor'}}},{database:db,now:200});
+ assert.equal(db.data.get('characters/actor').combatProfile.hitPoints.current,0);
+ assert.equal(getActiveCombatEncounter(records(db)).participants.get('actor').status,'defeated');
+});
 const records=db=>[...db.data].filter(([key])=>key.startsWith('comments/')).map(([key,value])=>({id:key.split('/').at(-1),...value})).sort((a,b)=>a.orderKey-b.orderKey);
 
 test('published rules activate only future attacks in a legacy duel and protect earlier undo snapshots',async()=>{
