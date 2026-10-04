@@ -1,6 +1,6 @@
 # Lynnes Schiffsmannschaft – Leere Flasche
 
-Das Modul `lynnes-schiffsmannschaft` folgt dem am 4. Oktober 2026 abgerufenen Online-Modul `idwals-schiffsmannschaft`. Es liegt unter **Gruppen → Cenyr → Klaueninseln → Haus Arth**.
+Das Modul `lynnes-schiffsmannschaft` folgt dem am 4. Oktober 2026 abgerufenen Online-Modul `idwals-schiffsmannschaft`. Es liegt entsprechend der abschließenden Nutzerzuordnung direkt unter **Gruppen → Klaueninseln → Haus Arth**.
 
 ## Inhalt und Quellen
 

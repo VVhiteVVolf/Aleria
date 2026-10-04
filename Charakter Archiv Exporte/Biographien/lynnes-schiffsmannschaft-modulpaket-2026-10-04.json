@@ -1,7 +1,7 @@
 {
   "type": "aleria-module-package",
   "version": 1,
-  "exportedAt": "2026-10-04T21:09:27.007Z",
+  "exportedAt": "2026-10-04T21:18:01.004Z",
   "sourceNote": "Nach der Nutzervorlage vom 04.10.2026; Aufbau nach dem aktuellen Online-Modul idwals-schiffsmannschaft. Lynnes Geburtsjahr 1718 aus dem veröffentlichten Stammbaum Haus Arth. Altersbereiche unverändert; keine Klassen, Kampfdaten oder zusätzlichen Biografien erfunden. Originalporträts und Wappen unverändert lokal gesichert; Schiffsbild mit image_gen erzeugt.",
   "module": {
     "type": "aleria-module",
@@ -11,11 +11,10 @@
       "tab": "Gruppen",
       "desc": "",
       "path": [
-        "Cenyr",
         "Klaueninseln",
         "Haus Arth"
       ],
-      "nodeId": "node:gruppen:cenyr/klaueninseln/haus-arth"
+      "nodeId": "node:gruppen:klaueninseln/haus-arth"
     },
     "entry": {
       "id": "lynnes-schiffsmannschaft",
