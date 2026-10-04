@@ -1,8 +1,8 @@
 {
   "type": "aleria-module-package",
   "version": 1,
-  "exportedAt": "2026-10-04T22:05:37.801Z",
-  "sourceNote": "Nach der Nutzervorlage vom 04.10.2026; Aufbau nach dem aktuellen Online-Modul idwals-schiffsmannschaft. Lynnes Geburtsjahr 1718 aus dem veröffentlichten Stammbaum Haus Arth. Altersbereiche unverändert; keine Klassen, Kampfdaten oder zusätzlichen Biografien erfunden. Originalporträts und Wappen unverändert lokal gesichert; Schiffsbild mit image_gen erzeugt. Stellenabgleich am 04.10.2026: alle 54 menschlichen Posten entsprechend Idwals aktueller Hierarchie; 17 bekannte Personen unverändert, weitere Stellen ohne erfundene Besetzung. Bild- und Familienpflege 04.10.2026: zwölf ausgewählte Personenporträts mit image_gen im vorgegebenen Anime-Stil neu gezeichnet; Originaldateien erhalten. Drei Rüstungsbilder ausschließlich als Referenzen. Sieben neue Wappen, zehn neue Familienakten in den Klaueninseln; Dyger und Beryn wiederverwendet. Eira Beryn zur Unterscheidung von Cadells Gemahlin Eira (1688) in Eirlys Beryn umbenannt. 54 menschliche Stellen, 17 namentlich bekannte Mitglieder, zwei Tiere und alle übrigen Seiten erhalten.",
+  "exportedAt": "2026-10-04T22:48:44.721Z",
+  "sourceNote": "Nach der Nutzervorlage vom 04.10.2026; Aufbau nach dem aktuellen Online-Modul idwals-schiffsmannschaft. Lynnes Geburtsjahr 1718 aus dem veröffentlichten Stammbaum Haus Arth. Altersbereiche unverändert; keine Klassen, Kampfdaten oder zusätzlichen Biografien erfunden. Originalporträts und Wappen unverändert lokal gesichert; Schiffsbild mit image_gen erzeugt. Stellenabgleich am 04.10.2026: alle 54 menschlichen Posten entsprechend Idwals aktueller Hierarchie; 17 bekannte Personen unverändert, weitere Stellen ohne erfundene Besetzung. Bild- und Familienpflege 04.10.2026: zwölf ausgewählte Personenporträts mit image_gen im vorgegebenen Anime-Stil neu gezeichnet; Originaldateien erhalten. Drei Rüstungsbilder ausschließlich als Referenzen. Sieben neue Wappen, zehn neue Familienakten in den Klaueninseln; Dyger und Beryn wiederverwendet. Eira Beryn zur Unterscheidung von Cadells Gemahlin Eira (1688) in Eirlys Beryn umbenannt. 54 menschliche Stellen, 17 namentlich bekannte Mitglieder, zwei Tiere und alle übrigen Seiten erhalten. Ergänzungen 05.10.2026: Feierbild mit Lynne, Cerys, Telyn, Nest, Mabli, Awen und Bethan; Nutzerkorrekturen für Mabli und Haus Prys unverändert übernommen. Penry, Bevan, Hirschhorn, Arian, Parry und Bowen nach Sturmklaue/Talgarth eingeordnet und ihre Wappen mit echtem transparentem Außenhintergrund versehen.",
   "module": {
     "type": "aleria-module",
     "version": 2,
@@ -24,7 +24,7 @@
       "category": "Gefolge",
       "moduleWidth": 100,
       "moduleHeight": 100,
-      "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/leere-flasche.png",
+      "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/feier-im-mannschaftsquartier.png",
       "stamp": "HAUS ARTH · TALGARTH · KLAUENINSELN",
       "icon": "",
       "symbol": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
@@ -38,8 +38,8 @@
       "pages": [
         {
           "schemaVersion": 1,
-          "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/leere-flasche.png",
-          "imageWidth": 38,
+          "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/feier-im-mannschaftsquartier.png",
+          "imageWidth": 45,
           "pageTitle": "Die Besatzung der Leeren Flasche",
           "description": "<p><b>Die Leere Flasche</b> ist das pers&ouml;nliche Schiff der Kapit&auml;nin <b>Lady Lynne Arth</b> und dient dem Haus Arth als schnelles Kriegs-, Geleit- und Reiseschiff in den Gew&auml;ssern der Klaueninseln und dar&uuml;ber hinaus. Heimathafen des Schiffes ist <b>Talgarth</b>, die Hauptstadt der Klaueninseln. Von dort aus f&auml;hrt die <i>Leere Flasche</i> Patrouillen entlang der K&uuml;sten, begleitet andere Schiffe, jagt Piraten und nordm&auml;nnische Pl&uuml;nderer und tr&auml;gt Angeh&ouml;rige des Hauses Arth ebenso wie Gesandte der Krone &uuml;ber das Meer. In den n&ouml;rdlichen Gew&auml;ssern Cenyrs ist das Schiff inzwischen ein vertrauter Anblick. Unter cenyriischen Seeleuten gilt sein Erscheinen als beruhigendes Zeichen; unter nordm&auml;nnischen Pl&uuml;nderern hingegen genie&szlig;t die <i>Leere Flasche</i> einen weit weniger erfreulichen Ruf.</p><p>Ihren ungew&ouml;hnlichen Namen verdankt die <b>Leere Flasche</b> ihrer Taufe. Nach alter cenyriischer Seemannstradition wird ein neues Schiff mit einem eigens daf&uuml;r bestimmten Whisky getauft, der &uuml;ber die Reling gegossen wird, w&auml;hrend sein Name ausgesprochen wird. Als Lynne ihr Schiff taufen wollte, musste sie jedoch feststellen, dass ihr Zwillingsbruder <b>Rhydian Arth</b> die daf&uuml;r vorgesehene Flasche zuvor ausgetrunken hatte. Erst nachdem Lynne sie w&uuml;tend mit den Worten <b>&bdquo;Leere Flasche!&ldquo;</b> umdrehte, l&ouml;ste sich ein letzter Tropfen und fiel auf die Reling. Damit war die Taufe vollzogen &ndash; und der Name gesprochen.</p><p>Was zun&auml;chst &ndash; und bisweilen selbst heute noch &ndash; &nbsp;Anlass f&uuml;r einigen Spott bot, wurde bald untrennbar mit Lynne und ihrer Mannschaft verbunden. Die <i>Leere Flasche</i> tr&auml;gt ihren Namen ohne Scham und ihre Besatzung inzwischen mit einigem Stolz. Unter Lynnes Kommando hat sie sich als schnelles und zuverl&auml;ssiges Schiff der Klaueninseln erwiesen und ist sowohl in den heimischen Gew&auml;ssern als auch auf l&auml;ngeren Fahrten anzutreffen. Aus einem bei der Taufe entstandenen Missgeschick wurde so mit der Zeit ein Name, den in Talgarth kaum noch jemand bel&auml;chelt &ndash; zumindest nicht, solange Lynne in H&ouml;rweite ist.</p><p>Bemerkenswert ist auch die Zusammensetzung ihrer Schiffsf&uuml;hrung. S&auml;mtliche leitenden Posten an Bord der <i>Leeren Flasche</i> werden von Frauen bekleidet. Neben Lynne stehen mit <b>Cerys Blodyn</b> und <b>Telyn Diafol</b> zwei geb&uuml;rtige Vennyri an der Spitze der Mannschaft, deren Familien nach dem Untergang Vennyrs auf den Klaueninseln eine neue Heimat fanden. Cenyri und Vennyri dienen an Bord Seite an Seite; die &uuml;brige Mannschaft ist gemischt, auch wenn hier eine deutliche Mehrheit der Frauen herrscht. Eine besondere Vorschrift, nur Frauen mit der F&uuml;hrung des Schiffes zu betrauen, besteht dabei nicht. Lynne w&auml;hlte ihre Offizierinnen und Meisterinnen nach Bef&auml;higung und Vertrauen &ndash; dass daraus eine vollst&auml;ndig weibliche Schiffsf&uuml;hrung entstand, wurde erst mit der Zeit zu einem der bekanntesten Merkmale der <i>Leeren Flasche</i>.</p><p>Trotz des jungen Alters ihrer Kapit&auml;nin und mehrerer ihrer Offizierinnen gilt die Mannschaft keineswegs als unerfahren. Lynne umgab ihren jungen F&uuml;hrungskern bewusst mit &auml;lteren Seeleuten und Meisterinnen, die teilweise bereits seit Jahrzehnten die Gew&auml;sser um die Klaueninseln befahren. So verbindet die Besatzung die K&uuml;hnheit einer neuen Generation mit der Erfahrung jener, die schon unter <b>Sir Parzifal Arth</b> und teilweise dessen Vorg&auml;ngern zur See fuhren.</p>",
           "quote": "„Leere Flasche!“",
@@ -80,7 +80,9 @@
               "Schutz der Klaueninseln und ihrer Gewässer sowie sichere Beförderung von Schutzbefohlenen und Gesandten des Hauses Arth."
             ]
           ],
-          "commentSequence": []
+          "commentSequence": [],
+          "imageLandscape": true,
+          "imageFit": "contain"
         },
         {
           "schemaVersion": 1,
@@ -306,7 +308,7 @@
                     "label": "Deck, Navigation, Vorräte und Waffen",
                     "nodes": [
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/mabli-morgwynt.png",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/mabli-morgwynt.png",
                         "title": "Bootsfrau",
                         "subtitle": "Mabli Morgwynt",
                         "text": "<strong>28–29 Jahre.</strong> Patent, seefest und energisch; aus dem Ritterhaus Morgwynt. Leitet die Decksmannschaft und sorgt für Schiff, Takelage und Ausrüstung. Ihre Knappin Una Dyfrgi ist ebenfalls an Bord.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png\">Wappen Haus Morgwynt</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;person=mabli-morgwynt&amp;mode=view\">Familienakte: Haus Morgwynt</a>"
@@ -712,7 +714,7 @@
                         "text": "Bürgerhaus der Klaueninseln mit engen Verbindungen zum Hafen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-mathgraig&amp;mode=view\">Familienakte öffnen</a>"
                       },
                       {
-                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-prys.png",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-prys.png",
                         "title": "Haus Prys",
                         "subtitle": "",
                         "text": "Bürgerfamilie aus Talgarth, die eine große Taverne betreibt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-prys&amp;mode=view\">Familienakte öffnen</a>"
@@ -730,16 +732,16 @@
                         "text": "Alte Fischerfamilie der Klaueninseln. Als bürgerliche Fischerfamilie geführt; ein Adelstitel ist nicht überliefert.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morglan&amp;mode=view\">Familienakte öffnen</a>"
                       },
                       {
-                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-bowen.png",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-bowen.png",
                         "title": "Haus Bowen",
                         "subtitle": "",
-                        "text": "Bürgerfamilie mit einer eigenen Werft, in der die Leere Flasche gebaut wurde.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bowen&amp;mode=view\">Familienakte öffnen</a>"
+                        "text": "Bürgerfamilie aus Talgarth in Sturmklaue mit einer eigenen Werft, in der die Leere Flasche gebaut wurde.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bowen&amp;mode=view\">Familienakte öffnen</a>"
                       },
                       {
-                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-bevan.png",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-bevan.png",
                         "title": "Haus Bevan",
                         "subtitle": "",
-                        "text": "Familie Nerys Bevans, im Register den Klaueninseln zugeordnet. Hausrang und genauer Sitz sind noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bevan&amp;mode=view\">Familienakte öffnen</a>"
+                        "text": "Familie Nerys Bevans aus Talgarth in Sturmklaue auf den Klaueninseln. Der Hausrang ist noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bevan&amp;mode=view\">Familienakte öffnen</a>"
                       }
                     ]
                   },
@@ -747,10 +749,10 @@
                     "label": "Weitere Häuser an Bord",
                     "nodes": [
                       {
-                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-arian.png",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-arian.png",
                         "title": "Haus Arian",
                         "subtitle": "",
-                        "text": "Familie Lowri Arians, im Register den Klaueninseln zugeordnet. Hausrang und genauer Sitz sind noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-arian&amp;mode=view\">Familienakte öffnen</a>"
+                        "text": "Familie Lowri Arians aus Talgarth in Sturmklaue auf den Klaueninseln. Der Hausrang ist noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-arian&amp;mode=view\">Familienakte öffnen</a>"
                       },
                       {
                         "portrait": "/Stammbäume/assets/images/houses/Talgarth/Klaueninseln/haus-dyger.png",
@@ -759,10 +761,10 @@
                         "text": "Niederes Rittergeschlecht aus Talgarth auf den Klaueninseln und direkte Rittervasallen des Hauses Arth. Musikanten und Seefahrer mit einer einfachen Musikantenschule in Talgarth. Angesehene Bardenhäuser wie die Ceirwyn belächeln sie als Säufer und Tavernenschläger. Die Dyger bilden keine Barddwyr aus.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-dyger&amp;mode=view\">Familienakte öffnen</a>"
                       },
                       {
-                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-hirschhorn.png",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-hirschhorn.png",
                         "title": "Haus Hirschhorn",
                         "subtitle": "",
-                        "text": "Familie Sigrid Hirschhorns, auf Nutzervorgabe im Register den Klaueninseln zugeordnet. Sigrid stammt aus Ivarsheim. Ein Familiensitz auf den Inseln, Hausrang und eine Umsiedlungsgeschichte sind nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-hirschhorn&amp;mode=view\">Familienakte öffnen</a>"
+                        "text": "Familie Sigrid Hirschhorns, auf Nutzervorgabe Talgarth in Sturmklaue auf den Klaueninseln zugeordnet. Sigrid selbst stammt aus Ivarsheim. Hausrang und eine Umsiedlungsgeschichte sind nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-hirschhorn&amp;mode=view\">Familienakte öffnen</a>"
                       },
                       {
                         "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/haus-beryn.png",
@@ -771,16 +773,16 @@
                         "text": "Kleines niederes Ritterherrenhaus aus Talgarth. Der vollständig dargestellte Stammbaum reicht von Ifor Beryn bis zu seinem Urgroßvater Caradog und gliedert sich unter Madog Beryn in genau drei fortgeführte Männerlinien.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-beryn&amp;mode=view\">Familienakte öffnen</a>"
                       },
                       {
-                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-penry.png",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-penry.png",
                         "title": "Haus Penry",
                         "subtitle": "",
-                        "text": "Bürgerhaus der Klaueninseln. Meleri Penry ist eine Enkelin des Vogtes der Arth; der Vogt und Meleris Eltern sind noch nicht namentlich belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-penry&amp;mode=view\">Familienakte öffnen</a>"
+                        "text": "Bürgerhaus aus Talgarth in Sturmklaue auf den Klaueninseln. Meleri Penry ist eine Enkelin des Vogtes der Arth; der Vogt und Meleris Eltern sind noch nicht namentlich belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-penry&amp;mode=view\">Familienakte öffnen</a>"
                       },
                       {
-                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-parry.png",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-parry.png",
                         "title": "Haus Parry",
                         "subtitle": "",
-                        "text": "Familie Tesni Parrys, im Register den Klaueninseln zugeordnet. Ihre Mutter ist Köchin im Dienst des Hauses Arth. Hausrang, Familiensitz und der Name der Mutter sind noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-parry&amp;mode=view\">Familienakte öffnen</a>"
+                        "text": "Familie Tesni Parrys aus Talgarth in Sturmklaue auf den Klaueninseln. Ihre Mutter ist Köchin im Dienst des Hauses Arth. Hausrang und der Name der Mutter sind noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-parry&amp;mode=view\">Familienakte öffnen</a>"
                       }
                     ]
                   }
@@ -837,7 +839,7 @@
                 "label": "Deck, Navigation, Vorräte und Waffen",
                 "nodes": [
                   {
-                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/mabli-morgwynt.png",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/mabli-morgwynt.png",
                     "title": "Bootsfrau",
                     "subtitle": "Mabli Morgwynt",
                     "text": "<strong>28–29 Jahre.</strong> Patent, seefest und energisch; aus dem Ritterhaus Morgwynt. Leitet die Decksmannschaft und sorgt für Schiff, Takelage und Ausrüstung. Ihre Knappin Una Dyfrgi ist ebenfalls an Bord.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png\">Wappen Haus Morgwynt</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;person=mabli-morgwynt&amp;mode=view\">Familienakte: Haus Morgwynt</a>"

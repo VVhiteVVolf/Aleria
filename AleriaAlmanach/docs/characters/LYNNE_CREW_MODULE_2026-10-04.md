@@ -40,19 +40,19 @@ Die Originalbilder bleiben erhalten. Die neuen Porträts stehen im Unterordner [
 | Haus | Einordnung | Wappen |
 | --- | --- | --- |
 | Mathgraig | Bürgerhaus; Hafenbezug | Vorhandene Bärenpranke über Felsen und Wellen |
-| Prys | Bürgerhaus aus Talgarth; große Taverne | Neuer Becher mit Flechthenkeln, Leitstern und Wellen |
+| Prys | Bürgerhaus aus Talgarth; große Taverne | Vom Nutzer korrigiertes Schwert vor einem Sonnenring |
 | Morgwynt | Niederes Ritterhaus | Vorhandene Möwe mit Wind und Wellen |
 | Morglan | Alte Fischerfamilie, bürgerlich eingeordnet | Vorhandener Fisch mit Netz und Wellen |
 | Bowen | Bürgerhaus; Familienwerft | Neue Schiffsrippe mit Zimmermannswerkzeug und Wellen |
-| Bevan | Hausrang und genauer Sitz offen | Neuer Windknoten mit Heilblatt und Wellen |
-| Arian | Hausrang und genauer Sitz offen | Neuer Navigationsstern mit Münzring und Wellen |
+| Bevan | Hausrang offen; Talgarth, Sturmklaue | Neuer Windknoten mit Heilblatt und Wellen |
+| Arian | Hausrang offen; Talgarth, Sturmklaue | Neuer Navigationsstern mit Münzring und Wellen |
 | Dyger | Bestehendes niederes Ritterhaus aus Talgarth | Bestehendes Dyger-Wappen |
-| Hirschhorn | Hausrang und genauer Sitz offen; Sigrid stammt aus Ivarsheim | Neues Geweih über Schiffskiel und Wellen |
+| Hirschhorn | Hausrang offen; Talgarth, Sturmklaue; Sigrid stammt aus Ivarsheim | Neues Geweih über Schiffskiel und Wellen |
 | Beryn | Bestehendes niederes Ritterhaus aus Talgarth | Bestehender Bär mit Dreizack |
 | Penry | Bürgerhaus; Meleri ist Enkelin des Arth-Vogtes | Neuer Schlüssel mit Knotengriff und Wellen |
-| Parry | Hausrang und genauer Sitz offen | Neuer Kochkessel mit Windrose und Wellen |
+| Parry | Hausrang offen; Talgarth, Sturmklaue | Neuer Kochkessel mit Windrose und Wellen |
 
-Zehn neue Familienakten nutzen das vorhandene Stammbaumregister unter `Cenyr / Klaueninsel`. Prys liegt nach seiner belegten Herkunft in `Sturmklaue / Talgarth`; die übrigen neuen Akten erhalten keinen erfundenen Ort oder Lehnsherrn. Die bestehende Singularbezeichnung des Stammbaumregisters bleibt erhalten. Das Almanachmodul liegt weiterhin unter **Gruppen → Klaueninseln → Haus Arth**. Sigrids Herkunft aus Ivarsheim wird durch die gewünschte Registerzuordnung nicht umgeschrieben. Awen und Eirlys werden in Dyger beziehungsweise Beryn ergänzt, ohne Eltern, Ehen oder Verwandtschaftsgrade zu erfinden.
+Zehn neue Familienakten nutzen das vorhandene Stammbaumregister unter `Cenyr / Klaueninsel`. Prys liegt nach seiner belegten Herkunft in `Sturmklaue / Talgarth`. Auf ausdrückliche Nutzervorgabe vom 05.10.2026 sind auch Penry, Bevan, Hirschhorn, Arian, Parry und Bowen dort eingeordnet. Für Mathgraig, Morgwynt und Morglan bleibt der genauere Ort offen; neue Lehnsherren werden nicht erfunden. Die bestehende Singularbezeichnung des Stammbaumregisters bleibt erhalten. Das Almanachmodul liegt weiterhin unter **Gruppen → Klaueninseln → Haus Arth**. Sigrids Herkunft aus Ivarsheim wird durch die gewünschte Registerzuordnung nicht umgeschrieben. Awen und Eirlys werden in Dyger beziehungsweise Beryn ergänzt, ohne Eltern, Ehen oder Verwandtschaftsgrade zu erfinden.
 
 ### Namensprüfung
 
@@ -78,3 +78,13 @@ Die Datei verwendet das gemeinsame Format `aleria.biography-module` Version 1. S
 
 Das gemeinsame Dateiformat liegt in `js/biography/biography-transfer.mjs`; der Leseradapter gehört zum Biografie-Feature. Beide Importziele prüfen Schema und Version vor der Übernahme in den Entwurf. Die Veröffentlichung des Stammbaums erhält das optionale Feld `biography.portrait`. Regressionstests verwenden dieses tatsächliche Mannschaftspaket; der lokale Browsertest prüft Download, Dateiimporte, Editor, Leseansicht und Stammbaum-Speicherdaten ohne Online-Schreibzugriffe.
 
+
+## Abschlusskorrekturen vom 5. Oktober 2026
+
+Das neue Gruppenbild zeigt Lady Lynne Arth, Cerys Blodyn, Telyn Diafol, Nest Mathgraig, Mabli Morgwynt, Awen Dyger und Bethan Prys beim Feiern im Mannschaftsquartier. Es ist das Modulbild und wird in der Übersicht vollständig im Querformat angezeigt; Kapitänsbiografie und Schiffsseite behalten ihre jeweiligen Motive.
+
+Aus `Downloads/Lynnes Crew/Von mir Nachgebessert` wurden `Mabli Morgwynth.png` und `Wappen Prys.png` bytegetreu übernommen. Die kanonische Namensschreibweise bleibt Mabli Morgwynt. Die sechs Wappen Penry, Bevan, Hirschhorn, Arian, Parry und Bowen besitzen nun echte Alpha-Transparenz außerhalb ihres runden Wappens; Innenfeld, Wappenmotive und Rand bleiben deckend. Alle alten Bildfassungen bleiben archiviert.
+
+Die sechs Häuser stehen in Quellenregister und veröffentlichten Familienakten unter **Cenyr → Klaueninsel → Sturmklaue → Talgarth**. Vorhandene Akten übernehmen die korrigierten Bilder und Ortsfelder über die bestehende revisionsgebundene Registerpflege. Personenidentitäten, Beziehungen, Notizen und Hausränge bleiben erhalten.
+
+Bilddateien und vollständige Prompts: [Ergänzungsmanifest](../../assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/prompts-and-assets.json). Erzeugung und Freistellung mit dem eingebauten image_gen; Nutzerkorrekturen unverändert kopiert. Geprüft: echte transparente PNG-Pixel bei allen sechs Wappen, Quellhashes der beiden Nutzerbilder, alle vier Almanachseiten und zwölf Familienakten im Browser, mobile Ansicht ohne Überlauf, 16 gezielte Tests, 1.246 Stammbaum-Haupttests und Modultemplate-Prüfung.

@@ -1,7 +1,7 @@
 import { createBlankHouseFamily } from './blank-house-family-factory.js';
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import { KLAUENINSEL_REGION_EMBLEMS } from './klaueninseln-house-profiles.js';
-import { LYNNE_CREW_MEMBERS, createLynneCrewPerson } from './lynne-crew-family-members.js';
+import { LYNNE_CREW_MEMBERS, createLynneCrewPerson } from './lynne-crew-family-members.js?v=lynne-20261005';
 
 function createCrewHouse(member) {
   const slug = member.surname.toLowerCase();
@@ -21,12 +21,15 @@ function createCrewHouse(member) {
   const base = createBlankHouseFamily({
     id: `haus-${slug}`,
     title: `Haus ${member.surname}`,
-    emblem: `assets/images/houses/Klaueninsel/lynne-crew/haus-${slug}.png`,
+    emblem: member.emblem || `assets/images/houses/Klaueninsel/lynne-crew/haus-${slug}.png`,
     houseProfile,
     description: member.houseDescription
   });
   return Object.freeze({
     ...base,
+    houses: member.emblem ? base.houses.map(house => ({
+      ...house, extensions: { registryManagedFields: ['emblem'] }
+    })) : base.houses,
     persons: Object.freeze([createLynneCrewPerson(member.id)]),
     lineage: Object.freeze({
       ...base.lineage,
@@ -38,7 +41,12 @@ function createCrewHouse(member) {
     extensions: Object.freeze({
       ...base.extensions,
       blankFamily: false,
-      sourceRevision: 1,
+      sourceRevision: member.sourceRevision || 1,
+      ...(member.emblem ? { registryManagedDocumentFields: ['emblem'] } : {}),
+      ...(member.seat ? {
+        registryManagedHouseProfileFields: ['seat', 'barony', 'county', 'kingdom', 'regionEmblems'],
+        registryManagedRecordFields: ['folderPath']
+      } : {}),
       sourceNote: 'Nutzervorlage vom 04.10.2026. Nur belegte Angehörige; keine erfundenen Gründer, Eltern, Ehen oder Lehensverhältnisse.',
       pendingFamilySituation: Object.freeze({
         openQuestions: Object.freeze(['Weitere Angehörige und Abstammung', 'Hausoberhaupt', ...(member.seat ? [] : ['Genauer Familiensitz'])])

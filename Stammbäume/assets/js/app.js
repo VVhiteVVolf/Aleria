@@ -1,5 +1,5 @@
 import { HOUSE_ARWYDD_FAMILY } from './data/house-arwydd-family.js';
-import { RETIRED_FAMILY_IDS } from './data/families.registry.js?v=lynne-20261004';
+import { RETIRED_FAMILY_IDS } from './data/families.registry.js?v=lynne-20261005';
 import { createFirebaseClient } from './modules/firebase-platform/firebase-client.js';
 import { createLocalImageDraftRepository } from './modules/family-assets/local-image-draft-repository.js';
 import { createGitHubFamilyRepository } from './modules/github-publication/github-family-repository.js';
@@ -11,7 +11,7 @@ import { createLatestLocalFamilySource } from './modules/family-sync/latest-loca
 import { resolveProjectFamilyOrigin } from './modules/family-sync/family-origin-resolver.js';
 import { reconcileInitialFamilyDraft } from './modules/family-sync/project-origin-reconciliation.js';
 import { applyPublishedFamilyPriority } from './modules/family-sync/published-family-priority.js';
-import { loadFamilyById, normalizeFamilyId } from './services/family-library.js?v=lynne-20261004';
+import { loadFamilyById, normalizeFamilyId } from './services/family-library.js?v=lynne-20261005';
 import { loadPersistedFamily } from './services/family-persistence.js';
 import {
   hasPendingTreeGeneratorLaunch,
@@ -20,7 +20,7 @@ import {
   WORKSPACE_MODE
 } from './services/workspace-access.js';
 import { createFamilyStore } from './state/family-store.js';
-import { createAppController } from './ui/app-controller.js?v=lynne-20261004';
+import { createAppController } from './ui/app-controller.js?v=lynne-20261005';
 
 const requestedQuery = new URLSearchParams(globalThis.location.search);
 const requestedFamilyId = normalizeFamilyId(requestedQuery.get('family'));

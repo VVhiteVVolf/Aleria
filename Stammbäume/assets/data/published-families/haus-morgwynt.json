@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-morgwynt",
-  "revision": 1,
-  "updatedAt": "2026-10-04T22:05:37.803Z",
+  "revision": 2,
+  "updatedAt": "2026-10-04T22:48:44.725Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -48,7 +48,7 @@
         "status": "alive",
         "birth": "",
         "death": "",
-        "portrait": "../AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/mabli-morgwynt.png",
+        "portrait": "../AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/mabli-morgwynt.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-morgwynt",
         "familyRole": "core",
@@ -60,7 +60,10 @@
         "notes": "28–29 Jahre. Patent, seefest und energisch. Ihre Knappin Una Dyfrgi dient ebenfalls an Bord.",
         "extensions": {
           "sourceNote": "Nutzervorlage zu Lynnes Schiffsmannschaft und Ergänzungen vom 04.10.2026.",
-          "almanachModuleId": "lynnes-schiffsmannschaft"
+          "almanachModuleId": "lynnes-schiffsmannschaft",
+          "registryManagedFields": [
+            "portrait"
+          ]
         }
       }
     ],
@@ -109,7 +112,7 @@
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 1,
+      "sourceRevision": 2,
       "sourceNote": "Nutzervorlage vom 04.10.2026. Nur belegte Angehörige; keine erfundenen Gründer, Eltern, Ehen oder Lehensverhältnisse.",
       "pendingFamilySituation": {
         "openQuestions": [

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-prys",
-  "revision": 1,
-  "updatedAt": "2026-10-04T22:05:37.803Z",
+  "revision": 2,
+  "updatedAt": "2026-10-04T22:48:44.725Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -11,7 +11,7 @@
       "title": "Haus Prys",
       "motto": "",
       "description": "Bürgerfamilie aus Talgarth, die eine große Taverne betreibt.",
-      "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-prys.png",
+      "emblem": "assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-prys.png",
       "houseProfile": {
         "rankId": "commoner",
         "seat": "Talgarth",
@@ -34,8 +34,13 @@
         "id": "house-prys",
         "name": "Haus Prys",
         "motto": "",
-        "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-prys.png",
-        "status": "active"
+        "emblem": "assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-prys.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "emblem"
+          ]
+        }
       }
     ],
     "persons": [
@@ -109,14 +114,27 @@
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 1,
+      "sourceRevision": 2,
       "sourceNote": "Nutzervorlage vom 04.10.2026. Nur belegte Angehörige; keine erfundenen Gründer, Eltern, Ehen oder Lehensverhältnisse.",
       "pendingFamilySituation": {
         "openQuestions": [
           "Weitere Angehörige und Abstammung",
           "Hausoberhaupt"
         ]
-      }
+      },
+      "registryManagedDocumentFields": [
+        "emblem"
+      ],
+      "registryManagedHouseProfileFields": [
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ]
     }
   }
 }

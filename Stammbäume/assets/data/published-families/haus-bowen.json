@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-bowen",
-  "revision": 1,
-  "updatedAt": "2026-10-04T22:05:37.803Z",
+  "revision": 2,
+  "updatedAt": "2026-10-04T22:48:44.725Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -10,12 +10,12 @@
       "id": "haus-bowen",
       "title": "Haus Bowen",
       "motto": "",
-      "description": "Bürgerfamilie mit einer eigenen Werft, in der die Leere Flasche gebaut wurde.",
-      "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-bowen.png",
+      "description": "Bürgerfamilie aus Talgarth in Sturmklaue mit einer eigenen Werft, in der die Leere Flasche gebaut wurde.",
+      "emblem": "assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-bowen.png",
       "houseProfile": {
         "rankId": "commoner",
-        "seat": "",
-        "barony": "",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
         "county": "Klaueninsel",
         "kingdom": "Cenyr",
         "secondarySeats": [],
@@ -23,7 +23,7 @@
         "liegeHouseName": "",
         "regionEmblems": {
           "seat": "",
-          "barony": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
           "county": "assets/images/regions/klaueninsel.png",
           "kingdom": "assets/images/regions/koenigreich-cenyr.png"
         }
@@ -34,8 +34,13 @@
         "id": "house-bowen",
         "name": "Haus Bowen",
         "motto": "",
-        "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-bowen.png",
-        "status": "active"
+        "emblem": "assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-bowen.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "emblem"
+          ]
+        }
       }
     ],
     "persons": [
@@ -109,15 +114,27 @@
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 1,
+      "sourceRevision": 2,
       "sourceNote": "Nutzervorlage vom 04.10.2026. Nur belegte Angehörige; keine erfundenen Gründer, Eltern, Ehen oder Lehensverhältnisse.",
       "pendingFamilySituation": {
         "openQuestions": [
           "Weitere Angehörige und Abstammung",
-          "Hausoberhaupt",
-          "Genauer Familiensitz"
+          "Hausoberhaupt"
         ]
-      }
+      },
+      "registryManagedDocumentFields": [
+        "emblem"
+      ],
+      "registryManagedHouseProfileFields": [
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ]
     }
   }
 }

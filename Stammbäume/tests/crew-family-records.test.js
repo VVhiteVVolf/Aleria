@@ -9,6 +9,7 @@ import { createFamilyCandidates } from '../../AleriaAlmanach/modules/character-g
 import { LYNNE_CREW_MEMBERS } from '../assets/js/data/lynne-crew-family-members.js';
 import { LYNNE_CREW_HOUSE_FAMILIES } from '../assets/js/data/lynne-crew-house-families.js';
 import { createRegistryBrowserIndex, registryPathKey } from '../assets/js/modules/family-registry/registry-browser-model.js';
+import { resolveRegisteredFamilyUpgrade } from '../assets/js/services/family-registry-upgrade.js';
 
 test('Dyger ist ein niederes Ritterhaus in Talgarth und direkter Arth-Vasall', () => {
   const { family } = assertValidFamily(HOUSE_DYGER_FAMILY);
@@ -66,6 +67,13 @@ test('Beide Mannschaftsmitglieder besitzen eindeutige Stammbaumidentitäten und 
 test('Lynnes zwölf Angehörige sind eindeutig in den Klaueninseln auffindbar, ohne erfundene Abstammung', async () => {
   const index = createRegistryBrowserIndex(FAMILY_REGISTRY);
   const county = index.nodes.get(registryPathKey(['Cenyr', 'Klaueninsel']));
+  const talgarthPath = ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth'];
+  const talgarth = index.nodes.get(registryPathKey(talgarthPath));
+  for (const slug of ['penry', 'bevan', 'hirschhorn', 'arian', 'parry', 'bowen']) {
+    const record = FAMILY_REGISTRY.find(record => record.id === `haus-${slug}`);
+    assert.deepEqual(record.folderPath, talgarthPath);
+    assert.ok(talgarth.familyIds.has(record.id));
+  }
   assert.equal(LYNNE_CREW_HOUSE_FAMILIES.length, 10);
   for (const member of LYNNE_CREW_MEMBERS) {
     const familyId = `haus-${member.surname.toLowerCase()}`;
@@ -89,4 +97,32 @@ test('Lynnes zwölf Angehörige sind eindeutig in den Klaueninseln auffindbar, o
   const beryn = FAMILY_REGISTRY.find(record => record.id === 'haus-beryn').family;
   assert.equal(beryn.persons.find(person => person.id === 'eira-cadell-spouse').name, 'Eira');
   assert.equal(beryn.persons.find(person => person.id === 'eirlys-beryn').extensions.formerName, 'Eira Beryn');
+});
+
+test('Lynnes Bild- und Sitzkorrekturen erreichen vorhandene Akten und bewahren Identitäten und eigene Notizen', () => {
+  for (const member of LYNNE_CREW_MEMBERS.filter(member => member.sourceRevision === 2)) {
+    const registered = FAMILY_REGISTRY.find(record => record.id === `haus-${member.surname.toLowerCase()}`).family;
+    const local = structuredClone(registered);
+    local.extensions.sourceRevision = 1;
+    local.persons[0].notes = 'Eigene Notiz zur letzten Fahrt';
+    if (member.portrait) local.persons[0].portrait = 'vorheriges-portrait.png';
+    if (member.emblem) {
+      local.document.emblem = 'vorheriges-wappen.png';
+      local.houses[0].emblem = 'vorheriges-wappen.png';
+    }
+    if (member.seat) {
+      local.document.houseProfile.seat = '';
+      local.document.houseProfile.barony = '';
+    }
+    const upgraded = resolveRegisteredFamilyUpgrade(registered, local);
+    assert.equal(upgraded.persons[0].worldPersonId, local.persons[0].worldPersonId);
+    assert.equal(upgraded.persons[0].notes, local.persons[0].notes);
+    assert.equal(upgraded.persons[0].portrait, registered.persons[0].portrait);
+    assert.equal(upgraded.document.emblem, registered.document.emblem);
+    assert.equal(upgraded.houses[0].emblem, registered.houses[0].emblem);
+    assert.deepEqual(upgraded.document.houseProfile, registered.document.houseProfile);
+    assert.deepEqual(upgraded.parentages, local.parentages);
+    assert.deepEqual(upgraded.partnerships, local.partnerships);
+    assert.deepEqual(resolveRegisteredFamilyUpgrade(registered, upgraded), upgraded);
+  }
 });
