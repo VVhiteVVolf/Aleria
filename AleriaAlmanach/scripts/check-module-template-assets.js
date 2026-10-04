@@ -41,7 +41,7 @@ const mainVendorAssets = [
   ...collect(mainHtml, /src="\.\/(vendor\/[^"?]+\.(?:js))(?:\?[^" ]*)?"/g),
   ...collect(mainHtml, /href="\.\/(vendor\/[^"?]+\.(?:css))(?:\?[^" ]*)?"/g)
 ];
-const shellScripts = ['modules/modal/modal-navigation.js', 'modules/rendering/module-renderer.js', 'modules/modal/modal-controller.js'];
+const shellScripts = ['modules/modal/modal-navigation.js', 'modules/biography/biography-page-export.js', 'modules/rendering/module-renderer.js', 'modules/modal/modal-controller.js'];
 const shellStyles = ['modules/comments/embedded-comments.css', 'modules/organization-network/organization-network.css', 'modules/modal/modal-navigation.css', 'modules/modal/modal-surface.css', 'modules/module-editor/module-preview.css'];
 const loadedScripts = collect(mainHtml, /src="\.\/([^"?]+\.js)/g);
 const loadedStyles = collect(mainHtml, /href="\.\/([^"?]+\.css)/g);

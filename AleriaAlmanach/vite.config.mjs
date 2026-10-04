@@ -75,8 +75,9 @@ function preserveClassicAlmanachScripts() {
         cp(resolve(almanachRoot, directory), resolve(buildAlmanachRoot, directory), { recursive: true, force: true })
       )));
       await mkdir(buildAlmanachRoot, { recursive: true });
-      // Classic entry data references these files without Vite asset rewriting.
+      // Classic scripts and entry data reference these files without Vite asset rewriting.
       await Promise.all([
+        'js/biography/biography-transfer.mjs',
         'Fonts/Arkanes-Alphabet/arcane.js',
         'Fonts/Arkanes-Alphabet/Schriftuebersicht.png',
         'Fonts/Rheunwaith-Font-1.000/rheunwaith.js',
