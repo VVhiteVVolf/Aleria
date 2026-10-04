@@ -44,10 +44,10 @@ export const LYNNE_CREW_MEMBERS = Object.freeze([
     title: 'Wachmeisterin der Leeren Flasche', age: '28 Jahre',
     houseDescription: 'Familie Sigrid Hirschhorns, auf Nutzervorgabe Talgarth in Sturmklaue auf den Klaueninseln zugeordnet. Sigrid selbst stammt aus Ivarsheim. Hausrang und eine Umsiedlungsgeschichte sind nicht belegt.',
     notes: 'Stammt aus Ivarsheim. Kräftig, wachsam und im Dienst diszipliniert; außerhalb des Dienstes dem Alkohol zugetan.' },
-  { id: 'eirlys-beryn', name: 'Eirlys Beryn', surname: 'Beryn', existingHouse: true,
+  // Die veröffentlichte ID bleibt trotz Rücknahme der Umbenennung stabil.
+  { id: 'eirlys-beryn', name: 'Eira Beryn', surname: 'Beryn', existingHouse: true,
     title: 'Lynne Arths Knappin zur See', age: '14 Jahre',
-    notes: 'Wild, frech und neugierig; dunkelbraunes Haar und rotes Piratenkopftuch. Noch frisch im Knappendienst. In der Ausgangsvorlage Eira Beryn genannt; zur Unterscheidung von Eira (1688), Cadells Gemahlin, am 04.10.2026 in Eirlys umbenannt. Eltern und Einordnung in die Beryn-Linien bleiben offen.',
-    formerName: 'Eira Beryn' },
+    notes: 'Wild, frech und neugierig; dunkelbraunes Haar und rotes Piratenkopftuch. Noch frisch im Knappendienst. Tochter von Owain Beryn und Mared, damit eine Nichte Ifor Beryns.' },
   { id: 'meleri-penry', name: 'Meleri Penry', surname: 'Penry', rankId: 'commoner', seat: 'Talgarth',
     sourceRevision: 2, emblem: 'assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-penry.png',
     title: 'Schreiberin, Adjutantin und Zofe Lynne Arths', age: '28 Jahre',

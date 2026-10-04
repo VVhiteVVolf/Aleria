@@ -1,5 +1,5 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
-import { createLynneCrewPerson } from './lynne-crew-family-members.js';
+import { createLynneCrewPerson } from './lynne-crew-family-members.js?v=eira-20261005';
 import {
   createFamilyPerson,
   createMarriage,
@@ -14,6 +14,7 @@ import {
 
 const BERYN_HOUSE_ID = 'house-beryn';
 const BERYN_EMBLEM = KLAUENINSEL_HOUSE_EMBLEMS.beryn;
+const EIRA_CREW_PERSON = createLynneCrewPerson('eirlys-beryn');
 
 const SOURCE_MANAGED_PERSON_FIELDS = Object.freeze([
   'worldPersonId',
@@ -110,7 +111,8 @@ const PARENTS_BY_PARTNERSHIP = Object.freeze({
   'marriage-rhodri-angharad-beryn': COUPLES.rhodri,
   'marriage-cadell-eira-beryn': COUPLES.cadell,
   'affair-cadell-lowri-beryn': COUPLES.cadellAffair,
-  'marriage-brychan-seren-beryn': COUPLES.brychan
+  'marriage-brychan-seren-beryn': COUPLES.brychan,
+  'marriage-owain-mared-beryn': COUPLES.owain
 });
 
 function childrenOf(childIds, partnershipId, options = {}) {
@@ -129,7 +131,7 @@ export const HOUSE_BERYN_FAMILY = Object.freeze({
     id: 'haus-beryn',
     title: 'Haus Beryn',
     motto: '',
-    description: 'Kleines niederes Ritterherrenhaus aus Talgarth. Der vollständig dargestellte Stammbaum reicht von Ifor Beryn bis zu seinem Urgroßvater Caradog und gliedert sich unter Madog Beryn in genau drei fortgeführte Männerlinien.',
+    description: 'Kleines niederes Ritterherrenhaus aus Talgarth. Der Stammbaum reicht von Ifor Beryn bis zu seinem Urgroßvater Caradog und gliedert sich unter Madog Beryn in genau drei fortgeführte Männerlinien. Die jüngste Generation der Hauptlinie vertritt Eira Beryn, Tochter Owains und Mareds, Ifors Nichte und Lynne Arths Knappin zur See.',
     emblem: BERYN_EMBLEM,
     houseProfile: KLAUENINSEL_HOUSE_PROFILES.beryn
   }),
@@ -230,7 +232,16 @@ export const HOUSE_BERYN_FAMILY = Object.freeze({
       title: 'Jüngster Sohn Brychans · unverheiratet',
       tags: ['Unverheiratet']
     }),
-    createLynneCrewPerson('eirlys-beryn')
+    {
+      ...EIRA_CREW_PERSON,
+      birth: '1726',
+      extensions: {
+        ...EIRA_CREW_PERSON.extensions,
+        sourceNote: 'Nutzervorlage: Eira Beryn, 14 Jahre. Familienerweiterung und Rücknahme der Umbenennung auf Nutzerwunsch vom 05.10.2026: Tochter Owains und Mareds, geboren 1726.',
+        registryManagedFields: ['name', 'birth', 'notes'],
+        registryManagedExtensionFields: ['formerName', 'sourceNote']
+      }
+    }
   ]),
   partnerships: Object.freeze([
     createMarriage('marriage-caradog-efa-beryn', ...COUPLES.founders, { status: 'ended', end: '1696' }),
@@ -265,7 +276,10 @@ export const HOUSE_BERYN_FAMILY = Object.freeze({
       legitimacy: 'illegitimate',
       notes: 'Beide Bastardkinder stammen ausschließlich aus Cadells Affäre mit Lowri.'
     }),
-    ...childrenOf(['tudur-beryn', 'mair-beryn', 'llewelyn-beryn'], 'marriage-brychan-seren-beryn')
+    ...childrenOf(['tudur-beryn', 'mair-beryn', 'llewelyn-beryn'], 'marriage-brychan-seren-beryn'),
+    ...childrenOf(['eirlys-beryn'], 'marriage-owain-mared-beryn', {
+      notes: 'Familienerweiterung vom 05.10.2026: Eira ist Owains und Mareds Tochter sowie Ifor Beryns Nichte.'
+    })
   ]),
   cadetBranches: Object.freeze([
     Object.freeze(createMarriedAwayBranch({
@@ -299,8 +313,9 @@ export const HOUSE_BERYN_FAMILY = Object.freeze({
   }),
   extensions: Object.freeze({
     blankFamily: false,
-    sourceRevision: 4,
-    sourceNote: 'Der Baum reicht exakt bis Ifors Urgroßvater Caradog. Unter Madog entstehen ausschließlich die drei Linien Rhodri, Cadell und Brychan. Ifor ist Rhodris dritter Sohn. Eira bleibt als einzige Ehefrau in der normalen Eheposition neben Cadell; nur die räumlich getrennte Affäre Lowri wird über Emrys und Elin ausgerichtet. Beide Bastardkinder hängen ausschließlich unter Lowri. Mair ist direkt an das unbekannte Zielhaus wegverheiratet. Alle Personen unter achtundzwanzig bleiben unverheiratet und unverlobt.',
+    sourceRevision: 5,
+    sourceNote: 'Der Baum reicht exakt bis Ifors Urgroßvater Caradog. Unter Madog entstehen ausschließlich die drei Linien Rhodri, Cadell und Brychan. Ifor ist Rhodris dritter Sohn. Eira (1688) bleibt als einzige Ehefrau in der normalen Eheposition neben Cadell; nur die räumlich getrennte Affäre Lowri wird über Emrys und Elin ausgerichtet. Beide Bastardkinder hängen ausschließlich unter Lowri. Mair ist direkt an das unbekannte Zielhaus wegverheiratet. Alle Personen unter achtundzwanzig bleiben unverheiratet und unverlobt. Die 14-jährige Eira Beryn (1726), Lynne Arths Knappin, ist seit der freigegebenen Familienerweiterung vom 05.10.2026 als Tochter Owains und Mareds mit der Hauptlinie verbunden. Ihre zwischenzeitliche Umbenennung in Eirlys wurde zurückgenommen; Personen-ID und Weltpersonen-ID bleiben erhalten.',
+    registryManagedDocumentFields: Object.freeze(['description']),
     registryManagedExtensionFields: Object.freeze(['sourceNote']),
     registryManagedHouseProfileFields: Object.freeze([
       'rankId',

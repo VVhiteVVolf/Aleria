@@ -18,7 +18,7 @@ Auf Nutzerwunsch wurden die Stellen und Ebenen am 4. Oktober 2026 vollständig m
 | Register | Menschliche Stellen | Aufteilung |
 | --- | ---: | --- |
 | Führung | 16 | Vorhandene 13 Posten plus Waffenmeisterin, Ausguck auf dem Krähennest und Segelmeisterin |
-| Kämpfer | 16 | Je 4 Ritter, Waffenknechte, Knappen und Pagen zur See; Eirlys (zuvor Eira) und Una sind die beiden benannten Knappinnen |
+| Kämpfer | 16 | Je 4 Ritter, Waffenknechte, Knappen und Pagen zur See; Eira und Una sind die beiden benannten Knappinnen |
 | Besatzung | 22 | Schreiberin, Schiffsköchin, Proviantmeisterin, 3 Seiler/Handwerker, 2 Gehilfen, 3 Altmatrosen, 6 Matrosen und 5 Schiffsjungen |
 
 Insgesamt sind damit 54 menschliche Posten dargestellt, davon 17 namentlich zugeordnet. Die Zahl liegt innerhalb der vorgegebenen 50–60 Besatzungsmitglieder. Bordtiere und Wappen werden nicht mitgezählt. Die bisherigen Sammelposten wurden in die entsprechenden Einzelstellen aufgelöst; ihre Aussagen zur gemischten Besatzung und zum Austausch vor einer Schlacht bleiben erhalten. Der Kompatibilitätsbereich `hierarchy.levels` entspricht weiterhin exakt dem Führungsregister. Idwals Modul dient ausschließlich als Referenz.
@@ -52,11 +52,11 @@ Die Originalbilder bleiben erhalten. Die neuen Porträts stehen im Unterordner [
 | Penry | Bürgerhaus; Meleri ist Enkelin des Arth-Vogtes | Neuer Schlüssel mit Knotengriff und Wellen |
 | Parry | Hausrang offen; Talgarth, Sturmklaue | Neuer Kochkessel mit Windrose und Wellen |
 
-Zehn neue Familienakten nutzen das vorhandene Stammbaumregister unter `Cenyr / Klaueninsel`. Prys liegt nach seiner belegten Herkunft in `Sturmklaue / Talgarth`. Auf ausdrückliche Nutzervorgabe vom 05.10.2026 sind auch Penry, Bevan, Hirschhorn, Arian, Parry und Bowen dort eingeordnet. Für Mathgraig, Morgwynt und Morglan bleibt der genauere Ort offen; neue Lehnsherren werden nicht erfunden. Die bestehende Singularbezeichnung des Stammbaumregisters bleibt erhalten. Das Almanachmodul liegt weiterhin unter **Gruppen → Klaueninseln → Haus Arth**. Sigrids Herkunft aus Ivarsheim wird durch die gewünschte Registerzuordnung nicht umgeschrieben. Awen und Eirlys werden in Dyger beziehungsweise Beryn ergänzt, ohne Eltern, Ehen oder Verwandtschaftsgrade zu erfinden.
+Zehn neue Familienakten nutzen das vorhandene Stammbaumregister unter `Cenyr / Klaueninsel`. Prys liegt nach seiner belegten Herkunft in `Sturmklaue / Talgarth`. Auf ausdrückliche Nutzervorgabe vom 05.10.2026 sind auch Penry, Bevan, Hirschhorn, Arian, Parry und Bowen dort eingeordnet. Für Mathgraig, Morgwynt und Morglan bleibt der genauere Ort offen; neue Lehnsherren werden nicht erfunden. Die bestehende Singularbezeichnung des Stammbaumregisters bleibt erhalten. Das Almanachmodul liegt weiterhin unter **Gruppen → Klaueninseln → Haus Arth**. Sigrids Herkunft aus Ivarsheim wird durch die gewünschte Registerzuordnung nicht umgeschrieben. Awen wird in Dyger ergänzt; ihre genaue Verwandtschaft bleibt offen. Eira wird auf Nutzerwunsch vom 05.10.2026 als Tochter Owains und Mareds in die Beryn-Hauptlinie eingeordnet.
 
 ### Namensprüfung
 
-Geprüft wurden der lokale Bestand von 399 registrierten Familien vor der Erweiterung, die veröffentlichten Familien-JSONs sowie 43 Online-Almanachmodule und 295 Charakterdatensätze. Die zwölf vollständigen Namen waren nur im bereits angelegten Mannschaftsmodul belegt. Innerhalb von Beryn existiert jedoch bereits **Eira (1688), Gemahlin Cadells**; ihr eigener Nachname ist nicht gespeichert. Um die Verwechslung innerhalb derselben Familie zu vermeiden, heißt die 14-jährige Knappin jetzt **Eirlys Beryn**. Die ältere Eira bleibt unverändert. Die Dateischreibweisen **Awen Dygar** und **Mabli Morgwynth** wurden an **Awen Dyger** und **Mabli Morgwynt** aus der Vorlage angeglichen.
+Geprüft wurden der lokale Bestand von 399 registrierten Familien vor der Erweiterung, die veröffentlichten Familien-JSONs sowie 43 Online-Almanachmodule und 295 Charakterdatensätze. Die zwölf vollständigen Namen waren nur im bereits angelegten Mannschaftsmodul belegt. Innerhalb von Beryn existiert jedoch bereits **Eira (1688), Gemahlin Cadells**; ihr eigener Nachname ist nicht gespeichert. Die zunächst vorgenommene Umbenennung der 14-jährigen Knappin in Eirlys wurde auf Nutzerwunsch vom 05.10.2026 zurückgenommen: Sie heißt **Eira Beryn**. Die ältere Eira (1688), Cadells Gemahlin, bleibt eine eigenständige, unveränderte Person. Die Dateischreibweisen **Awen Dygar** und **Mabli Morgwynth** wurden an **Awen Dyger** und **Mabli Morgwynt** aus der Vorlage angeglichen.
 
 ### Prüfung der Nachbearbeitung
 
@@ -88,3 +88,9 @@ Aus `Downloads/Lynnes Crew/Von mir Nachgebessert` wurden `Mabli Morgwynth.png` u
 Die sechs Häuser stehen in Quellenregister und veröffentlichten Familienakten unter **Cenyr → Klaueninsel → Sturmklaue → Talgarth**. Vorhandene Akten übernehmen die korrigierten Bilder und Ortsfelder über die bestehende revisionsgebundene Registerpflege. Personenidentitäten, Beziehungen, Notizen und Hausränge bleiben erhalten.
 
 Bilddateien und vollständige Prompts: [Ergänzungsmanifest](../../assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/prompts-and-assets.json). Erzeugung und Freistellung mit dem eingebauten image_gen; Nutzerkorrekturen unverändert kopiert. Geprüft: echte transparente PNG-Pixel bei allen sechs Wappen, Quellhashes der beiden Nutzerbilder, alle vier Almanachseiten und zwölf Familienakten im Browser, mobile Ansicht ohne Überlauf, 16 gezielte Tests, 1.246 Stammbaum-Haupttests und Modultemplate-Prüfung.
+
+## Eira Beryn: Namenskorrektur und Familienerweiterung
+
+Auf Nutzerwunsch vom 05.10.2026 heißt Lynnes 14-jährige Knappin wieder **Eira Beryn**. Sie ist als Tochter **Owain Beryns (1706)** und **Mareds (1708)**, geboren **1726**, in die Hauptlinie eingeordnet und damit **Ifor Beryns Nichte**. Die neue Elternkante verbindet sie mit dem vollständigen Stammbaum; ein isolierter Personenaufruf ist nicht mehr nötig. Die bestehende ältere Eira, Cadells Gemahlin, bleibt unverändert.
+
+Die veröffentlichte technische ID `eirlys-beryn`, die Weltpersonen-ID und der Porträtpfad bleiben aus Kompatibilitätsgründen erhalten. Es entsteht keine zweite Person. Quelle und veröffentlichte Familienakte führen Quellrevision 5; die vorhandene Registerpflege übernimmt Name, Geburtsjahr und Elternkante in ältere Akten und entfernt den überholten Umbenennungsvermerk. Im Mannschaftsmodul sind Biografie, Verbindungen und Hierarchietexte auf Eira korrigiert. Vorherige Bildmanifeste dokumentieren weiterhin ihren damaligen Erstellungsstand.

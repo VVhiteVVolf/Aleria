@@ -1,8 +1,8 @@
 {
   "type": "aleria-module-package",
   "version": 1,
-  "exportedAt": "2026-10-04T22:48:44.721Z",
-  "sourceNote": "Nach der Nutzervorlage vom 04.10.2026; Aufbau nach dem aktuellen Online-Modul idwals-schiffsmannschaft. Lynnes Geburtsjahr 1718 aus dem veröffentlichten Stammbaum Haus Arth. Altersbereiche unverändert; keine Klassen, Kampfdaten oder zusätzlichen Biografien erfunden. Originalporträts und Wappen unverändert lokal gesichert; Schiffsbild mit image_gen erzeugt. Stellenabgleich am 04.10.2026: alle 54 menschlichen Posten entsprechend Idwals aktueller Hierarchie; 17 bekannte Personen unverändert, weitere Stellen ohne erfundene Besetzung. Bild- und Familienpflege 04.10.2026: zwölf ausgewählte Personenporträts mit image_gen im vorgegebenen Anime-Stil neu gezeichnet; Originaldateien erhalten. Drei Rüstungsbilder ausschließlich als Referenzen. Sieben neue Wappen, zehn neue Familienakten in den Klaueninseln; Dyger und Beryn wiederverwendet. Eira Beryn zur Unterscheidung von Cadells Gemahlin Eira (1688) in Eirlys Beryn umbenannt. 54 menschliche Stellen, 17 namentlich bekannte Mitglieder, zwei Tiere und alle übrigen Seiten erhalten. Ergänzungen 05.10.2026: Feierbild mit Lynne, Cerys, Telyn, Nest, Mabli, Awen und Bethan; Nutzerkorrekturen für Mabli und Haus Prys unverändert übernommen. Penry, Bevan, Hirschhorn, Arian, Parry und Bowen nach Sturmklaue/Talgarth eingeordnet und ihre Wappen mit echtem transparentem Außenhintergrund versehen.",
+  "exportedAt": "2026-10-04T23:15:57.323Z",
+  "sourceNote": "Nach der Nutzervorlage vom 04.10.2026; Aufbau nach dem aktuellen Online-Modul idwals-schiffsmannschaft. Lynnes Geburtsjahr 1718 aus dem veröffentlichten Stammbaum Haus Arth. Altersbereiche unverändert; keine Klassen, Kampfdaten oder zusätzlichen Biografien erfunden. Originalporträts und Wappen unverändert lokal gesichert; Schiffsbild mit image_gen erzeugt. Stellenabgleich am 04.10.2026: alle 54 menschlichen Posten entsprechend Idwals aktueller Hierarchie; 17 bekannte Personen unverändert, weitere Stellen ohne erfundene Besetzung. Bild- und Familienpflege 04.10.2026: zwölf ausgewählte Personenporträts mit image_gen im vorgegebenen Anime-Stil neu gezeichnet; Originaldateien erhalten. Drei Rüstungsbilder ausschließlich als Referenzen. Sieben neue Wappen, zehn neue Familienakten in den Klaueninseln; Dyger und Beryn wiederverwendet. Eira Beryn zur Unterscheidung von Cadells Gemahlin Eira (1688) in Eirlys Beryn umbenannt. 54 menschliche Stellen, 17 namentlich bekannte Mitglieder, zwei Tiere und alle übrigen Seiten erhalten. Ergänzungen 05.10.2026: Feierbild mit Lynne, Cerys, Telyn, Nest, Mabli, Awen und Bethan; Nutzerkorrekturen für Mabli und Haus Prys unverändert übernommen. Penry, Bevan, Hirschhorn, Arian, Parry und Bowen nach Sturmklaue/Talgarth eingeordnet und ihre Wappen mit echtem transparentem Außenhintergrund versehen. Korrektur auf Nutzerwunsch 05.10.2026: Die Knappin heißt wieder Eira Beryn. Familienerweiterung als Tochter von Owain und Mared (1726), Nichte Ifors; vorhandene Personen-ID, Porträt und Weltpersonen-ID bleiben erhalten.",
   "module": {
     "type": "aleria-module",
     "version": 2,
@@ -162,7 +162,7 @@
             "triviaTitle": "Wissenswertes",
             "trivia": [
               "Zwillingsschwester von Rhydian Arth.",
-              "Ihre persönliche Knappin ist Eirlys Beryn.",
+              "Ihre persönliche Knappin ist Eira Beryn.",
               "Meleri Penry ist ihre persönliche Zofe, Schreiberin und Adjutantin."
             ],
             "quotesTitle": "Zitate",
@@ -187,7 +187,7 @@
               },
               {
                 "type": "connection",
-                "name": "Eirlys Beryn",
+                "name": "Eira Beryn",
                 "detail": "Knappin zur See",
                 "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/eirlys-beryn.png",
                 "imageFormat": "portrait"
@@ -461,14 +461,14 @@
                       {
                         "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/eirlys-beryn.png",
                         "title": "Knappin zur See",
-                        "subtitle": "Eirlys Beryn",
-                        "text": "<strong>14 Jahre.</strong> Lynnes persönliche Knappin, noch recht frisch im Knappendienst. Wild, frech und neugierig; dunkelbraunes Haar und ein rotes Piratenkopftuch.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-beryn&amp;person=eirlys-beryn&amp;mode=view\">Familienakte: Haus Beryn</a>"
+                        "subtitle": "Eira Beryn",
+                        "text": "<strong>14 Jahre.</strong> Lynnes persönliche Knappin, noch recht frisch im Knappendienst. Wild, frech und neugierig; dunkelbraunes Haar und ein rotes Piratenkopftuch.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-beryn&amp;person=eirlys-beryn&amp;mode=view\">Familienakte: Haus Beryn</a><br><br>Tochter von Owain Beryn und Mared; Nichte Ifor Beryns."
                       },
                       {
                         "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/una-dyfrgi.jpg",
                         "title": "Knappin zur See",
                         "subtitle": "Una Dyfrgi",
-                        "text": "<strong>16 Jahre.</strong> Knappin von Mabli Morgwynt. Frech, temperamentvoll und selbstbewusst; in ihrer Ausbildung bereits etwas weiter als Eirlys, die sie gern zu Blödsinn anstiftet."
+                        "text": "<strong>16 Jahre.</strong> Knappin von Mabli Morgwynt. Frech, temperamentvoll und selbstbewusst; in ihrer Ausbildung bereits etwas weiter als Eira, die sie gern zu Blödsinn anstiftet."
                       },
                       {
                         "portrait": "",
@@ -770,7 +770,7 @@
                         "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/haus-beryn.png",
                         "title": "Haus Beryn",
                         "subtitle": "",
-                        "text": "Kleines niederes Ritterherrenhaus aus Talgarth. Der vollständig dargestellte Stammbaum reicht von Ifor Beryn bis zu seinem Urgroßvater Caradog und gliedert sich unter Madog Beryn in genau drei fortgeführte Männerlinien.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-beryn&amp;mode=view\">Familienakte öffnen</a>"
+                        "text": "Kleines niederes Ritterherrenhaus aus Talgarth. Der Stammbaum reicht von Ifor Beryn bis zu seinem Urgroßvater Caradog und gliedert sich unter Madog Beryn in genau drei fortgeführte Männerlinien. Die jüngste Generation der Hauptlinie vertritt Eira Beryn, Tochter Owains und Mareds, Ifors Nichte und Lynne Arths Knappin zur See.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-beryn&amp;person=eirlys-beryn&amp;mode=view\">Eira im Stammbaum öffnen</a>"
                       },
                       {
                         "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-penry.png",

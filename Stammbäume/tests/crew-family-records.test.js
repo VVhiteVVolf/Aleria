@@ -10,6 +10,8 @@ import { LYNNE_CREW_MEMBERS } from '../assets/js/data/lynne-crew-family-members.
 import { LYNNE_CREW_HOUSE_FAMILIES } from '../assets/js/data/lynne-crew-house-families.js';
 import { createRegistryBrowserIndex, registryPathKey } from '../assets/js/modules/family-registry/registry-browser-model.js';
 import { resolveRegisteredFamilyUpgrade } from '../assets/js/services/family-registry-upgrade.js';
+import { toFamilyChartData } from '../assets/js/adapters/family-chart-adapter.js';
+import { resolveFamilyChartEntryMainId } from '../assets/js/adapters/family-chart-viewport-policy.js';
 
 test('Dyger ist ein niederes Ritterhaus in Talgarth und direkter Arth-Vasall', () => {
   const { family } = assertValidFamily(HOUSE_DYGER_FAMILY);
@@ -64,7 +66,7 @@ test('Beide Mannschaftsmitglieder besitzen eindeutige Stammbaumidentitäten und 
   }
 });
 
-test('Lynnes zwölf Angehörige sind eindeutig in den Klaueninseln auffindbar, ohne erfundene Abstammung', async () => {
+test('Lynnes zwölf Angehörige sind mit Eiras freigegebener Abstammung eindeutig in den Klaueninseln auffindbar', async () => {
   const index = createRegistryBrowserIndex(FAMILY_REGISTRY);
   const county = index.nodes.get(registryPathKey(['Cenyr', 'Klaueninsel']));
   const talgarthPath = ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth'];
@@ -83,8 +85,9 @@ test('Lynnes zwölf Angehörige sind eindeutig in den Klaueninseln auffindbar, o
     const family = assertValidFamily(records[0].family).family;
     const person = family.persons.find(person => person.id === member.id);
     assert.equal(person.name, member.name);
-    assert.equal(person.birth, '');
-    assert.equal(family.parentages.some(edge => edge.childId === person.id || edge.parentIds.includes(person.id)), false);
+    const isEira = person.id === 'eirlys-beryn';
+    assert.equal(person.birth, isEira ? '1726' : '');
+    assert.equal(family.parentages.some(edge => edge.childId === person.id || edge.parentIds.includes(person.id)), isEira);
     assert.equal(family.partnerships.some(edge => edge.participantIds.includes(person.id)), false);
     const candidates = FAMILY_REGISTRY.flatMap(createFamilyCandidates).filter(candidate => candidate.displayName === member.name);
     assert.equal(candidates.length, 1, member.name);
@@ -96,7 +99,53 @@ test('Lynnes zwölf Angehörige sind eindeutig in den Klaueninseln auffindbar, o
   }
   const beryn = FAMILY_REGISTRY.find(record => record.id === 'haus-beryn').family;
   assert.equal(beryn.persons.find(person => person.id === 'eira-cadell-spouse').name, 'Eira');
-  assert.equal(beryn.persons.find(person => person.id === 'eirlys-beryn').extensions.formerName, 'Eira Beryn');
+  assert.equal(beryn.persons.find(person => person.id === 'eirlys-beryn').name, 'Eira Beryn');
+  assert.equal(beryn.persons.find(person => person.id === 'eirlys-beryn').extensions.formerName, undefined);
+});
+
+test('Eira gehört als Owains und Mareds Tochter zur sichtbaren Beryn-Hauptlinie und bleibt dieselbe Weltperson', () => {
+  const family = FAMILY_REGISTRY.find(record => record.id === 'haus-beryn').family;
+  const eira = family.persons.find(person => person.id === 'eirlys-beryn');
+  assert.equal(eira.worldPersonId, 'person--haus-beryn--eirlys-beryn');
+  assert.equal(eira.name, 'Eira Beryn');
+  assert.equal(eira.birth, '1726');
+  const parentage = family.parentages.find(edge => edge.childId === eira.id);
+  assert.deepEqual(parentage.parentIds, ['owain-beryn', 'mared-owain-spouse']);
+  assert.equal(parentage.partnershipId, 'marriage-owain-mared-beryn');
+  assert.equal(parentage.legitimacy, 'legitimate');
+  for (const parentId of parentage.parentIds) {
+    assert.ok(Number(eira.birth) - Number(family.persons.find(person => person.id === parentId).birth) >= 18);
+  }
+  const { data } = toFamilyChartData(family);
+  assert.equal(resolveFamilyChartEntryMainId(data, family.view.focusPersonId, eira.id), family.view.focusPersonId);
+  assert.deepEqual(data.find(person => person.id === eira.id).rels.parents.sort(), [...parentage.parentIds].sort());
+  const olderEira = family.persons.find(person => person.id === 'eira-cadell-spouse');
+  assert.equal(olderEira.name, 'Eira');
+  assert.equal(olderEira.birth, '1688');
+});
+
+test('Eine alte isolierte Eirlys-Akte erhält Name und Eltern genau einmal, ohne doppelte Person', () => {
+  const registered = FAMILY_REGISTRY.find(record => record.id === 'haus-beryn').family;
+  const local = structuredClone(assertValidFamily(registered).family);
+  local.extensions.sourceRevision = 4;
+  local.parentages = local.parentages.filter(edge => edge.childId !== 'eirlys-beryn');
+  const oldEira = local.persons.find(person => person.id === 'eirlys-beryn');
+  oldEira.name = 'Eirlys Beryn';
+  oldEira.birth = '';
+  oldEira.notes = 'Eltern und Einordnung bleiben offen.';
+  oldEira.extensions = { formerName: 'Eira Beryn' };
+  const upgraded = resolveRegisteredFamilyUpgrade(registered, local);
+  const eira = upgraded.persons.find(person => person.id === oldEira.id);
+  assert.equal(eira.name, 'Eira Beryn');
+  assert.equal(eira.worldPersonId, oldEira.worldPersonId);
+  assert.equal(eira.portrait, oldEira.portrait);
+  assert.equal(eira.extensions.formerName, undefined);
+  assert.match(eira.notes, /Tochter von Owain Beryn und Mared/);
+  assert.equal(upgraded.persons.length, local.persons.length);
+  assert.equal(upgraded.parentages.filter(edge => edge.childId === eira.id).length, 1);
+  assert.deepEqual(upgraded.parentages.filter(edge => edge.childId !== eira.id), local.parentages);
+  assert.deepEqual(upgraded.partnerships, local.partnerships);
+  assert.deepEqual(resolveRegisteredFamilyUpgrade(registered, upgraded), upgraded);
 });
 
 test('Lynnes Bild- und Sitzkorrekturen erreichen vorhandene Akten und bewahren Identitäten und eigene Notizen', () => {

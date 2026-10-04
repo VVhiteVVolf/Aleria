@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-beryn",
-  "revision": 3,
-  "updatedAt": "2026-10-04T22:05:37.803Z",
+  "revision": 4,
+  "updatedAt": "2026-10-04T23:15:57.314Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -10,7 +10,7 @@
       "id": "haus-beryn",
       "title": "Haus Beryn",
       "motto": "",
-      "description": "Kleines niederes Ritterherrenhaus aus Talgarth. Der vollständig dargestellte Stammbaum reicht von Ifor Beryn bis zu seinem Urgroßvater Caradog und gliedert sich unter Madog Beryn in genau drei fortgeführte Männerlinien.",
+      "description": "Kleines niederes Ritterherrenhaus aus Talgarth. Der Stammbaum reicht von Ifor Beryn bis zu seinem Urgroßvater Caradog und gliedert sich unter Madog Beryn in genau drei fortgeführte Männerlinien. Die jüngste Generation der Hauptlinie vertritt Eira Beryn, Tochter Owains und Mareds, Ifors Nichte und Lynne Arths Knappin zur See.",
       "emblem": "assets/images/houses/Klaueninsel/haus-beryn.png",
       "houseProfile": {
         "rankId": "knight",
@@ -1108,11 +1108,11 @@
       {
         "id": "eirlys-beryn",
         "worldPersonId": "person--haus-beryn--eirlys-beryn",
-        "name": "Eirlys Beryn",
+        "name": "Eira Beryn",
         "title": "Lynne Arths Knappin zur See",
         "sex": "female",
         "status": "alive",
-        "birth": "",
+        "birth": "1726",
         "death": "",
         "portrait": "../AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/eirlys-beryn.png",
         "portraitPlaceholder": "auto",
@@ -1123,11 +1123,19 @@
           "Leere Flasche",
           "Lynnes Schiffsmannschaft"
         ],
-        "notes": "14 Jahre. Wild, frech und neugierig; dunkelbraunes Haar und rotes Piratenkopftuch. Noch frisch im Knappendienst. In der Ausgangsvorlage Eira Beryn genannt; zur Unterscheidung von Eira (1688), Cadells Gemahlin, am 04.10.2026 in Eirlys umbenannt. Eltern und Einordnung in die Beryn-Linien bleiben offen.",
+        "notes": "14 Jahre. Wild, frech und neugierig; dunkelbraunes Haar und rotes Piratenkopftuch. Noch frisch im Knappendienst. Tochter von Owain Beryn und Mared, damit eine Nichte Ifor Beryns.",
         "extensions": {
-          "sourceNote": "Nutzervorlage zu Lynnes Schiffsmannschaft und Ergänzungen vom 04.10.2026.",
+          "sourceNote": "Nutzervorlage: Eira Beryn, 14 Jahre. Familienerweiterung und Rücknahme der Umbenennung auf Nutzerwunsch vom 05.10.2026: Tochter Owains und Mareds, geboren 1726.",
           "almanachModuleId": "lynnes-schiffsmannschaft",
-          "formerName": "Eira Beryn"
+          "registryManagedFields": [
+            "name",
+            "birth",
+            "notes"
+          ],
+          "registryManagedExtensionFields": [
+            "formerName",
+            "sourceNote"
+          ]
         }
       }
     ],
@@ -1514,6 +1522,21 @@
         "visibility": "public",
         "notes": "",
         "extensions": {}
+      },
+      {
+        "id": "beryn-parentage-eirlys-beryn",
+        "childId": "eirlys-beryn",
+        "parentIds": [
+          "owain-beryn",
+          "mared-owain-spouse"
+        ],
+        "partnershipId": "marriage-owain-mared-beryn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Familienerweiterung vom 05.10.2026: Eira ist Owains und Mareds Tochter sowie Ifor Beryns Nichte.",
+        "extensions": {}
       }
     ],
     "houses": [
@@ -1608,8 +1631,8 @@
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 3,
-      "sourceNote": "Der Baum reicht exakt bis Ifors Urgroßvater Caradog. Unter Madog entstehen ausschließlich die drei Linien Rhodri, Cadell und Brychan. Ifor ist Rhodris dritter Sohn. Eira bleibt als einzige Ehefrau in der normalen Eheposition neben Cadell; nur die räumlich getrennte Affäre Lowri wird über Emrys und Elin ausgerichtet. Beide Bastardkinder hängen ausschließlich unter Lowri. Mair ist direkt an das unbekannte Zielhaus wegverheiratet. Alle Personen unter achtundzwanzig bleiben unverheiratet und unverlobt.",
+      "sourceRevision": 5,
+      "sourceNote": "Der Baum reicht exakt bis Ifors Urgroßvater Caradog. Unter Madog entstehen ausschließlich die drei Linien Rhodri, Cadell und Brychan. Ifor ist Rhodris dritter Sohn. Eira (1688) bleibt als einzige Ehefrau in der normalen Eheposition neben Cadell; nur die räumlich getrennte Affäre Lowri wird über Emrys und Elin ausgerichtet. Beide Bastardkinder hängen ausschließlich unter Lowri. Mair ist direkt an das unbekannte Zielhaus wegverheiratet. Alle Personen unter achtundzwanzig bleiben unverheiratet und unverlobt. Die 14-jährige Eira Beryn (1726), Lynne Arths Knappin, ist seit der freigegebenen Familienerweiterung vom 05.10.2026 als Tochter Owains und Mareds mit der Hauptlinie verbunden. Ihre zwischenzeitliche Umbenennung in Eirlys wurde zurückgenommen; Personen-ID und Weltpersonen-ID bleiben erhalten.",
       "registryManagedExtensionFields": [
         "sourceNote"
       ],
@@ -1626,6 +1649,9 @@
       ],
       "registryManagedRecordFields": [
         "folderPath"
+      ],
+      "registryManagedDocumentFields": [
+        "description"
       ]
     }
   }

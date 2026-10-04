@@ -5,7 +5,7 @@ import {
   HOUSE_ARFORDIR_ABERDAIL_FAMILY,
   HOUSE_ARFORDIR_SERENLYN_FAMILY
 } from './house-arfordir-family.js';
-import { HOUSE_BERYN_FAMILY } from './house-beryn-family.js?v=lynne-20261004';
+import { HOUSE_BERYN_FAMILY } from './house-beryn-family.js?v=eira-20261005';
 import { HOUSE_DYGER_FAMILY } from './house-dyger-family.js?v=lynne-20261004';
 import { LYNNE_CREW_HOUSE_FAMILIES } from './lynne-crew-house-families.js?v=lynne-20261005';
 import { HOUSE_CRAFANC_FAMILY } from './house-crafanc-family.js';
