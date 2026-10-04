@@ -53,13 +53,14 @@ function buildModalEditingActions(entry, pageIndex, total) {
   </section>`;
 }
 
-function buildModalReadingActions(thread) {
+function buildModalReadingActions(thread, page) {
   const disabled = thread?.threadId ? '' : 'disabled';
   return `<section class="modal-menu-section">
     <h3 class="modal-menu-heading">Modul</h3>
     <div class="modal-menu-actions">
       <button class="modal-page-tool modal-menu-primary" type="button" data-modal-action="open-module-editor-current">Bearbeiten</button>
       <button class="modal-page-tool" type="button" data-modal-action="export-current-module">Modul exportieren</button>
+      ${page?.biographyPage && !page._commentsPage ? '<button class="modal-page-tool" type="button" data-modal-action="export-current-biography" title="Nur diese Biografie für Stammbaum und Charakterprofil exportieren">Diese Biografie exportieren</button>' : ''}
     </div>
   </section>
   <section class="modal-menu-section">
@@ -96,7 +97,7 @@ function buildNav(page, pageIndex, total) {
       <details class="modal-tools-menu" data-modal-menu>
         <summary class="modal-page-tool modal-menu-toggle" aria-label="Weitere Modulaktionen" title="Weitere Modulaktionen">…</summary>
         <div class="modal-menu-panel">
-          ${editing ? buildModalEditingActions(entry, pageIndex, total) : buildModalReadingActions(thread)}
+          ${editing ? buildModalEditingActions(entry, pageIndex, total) : buildModalReadingActions(thread, page)}
         </div>
       </details>
     </div>

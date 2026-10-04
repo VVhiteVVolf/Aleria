@@ -1,0 +1,131 @@
+{
+  "schema": "aleria.biography-module",
+  "schemaVersion": 1,
+  "exportedAt": "2026-10-04T21:53:23.964Z",
+  "personId": "",
+  "personName": "Lady Lynne Arth",
+  "biographyModule": {
+    "stats": [
+      [
+        "Vollständiger Name",
+        "Lynne Arth"
+      ],
+      [
+        "Titel",
+        "Lady"
+      ],
+      [
+        "Haus",
+        "Haus Arth"
+      ],
+      [
+        "Geburt",
+        "1718"
+      ],
+      [
+        "Rolle",
+        "Schiffskapitänin"
+      ],
+      [
+        "Schiff",
+        "Leere Flasche"
+      ],
+      [
+        "Heimathafen",
+        "Talgarth, Klaueninseln"
+      ]
+    ],
+    "quote": "„Leere Flasche!“",
+    "quoteBy": "Lady Lynne Arth",
+    "biography": {
+      "portraitStages": [],
+      "sideWidth": 100,
+      "connectionPortraitHeight": 68,
+      "connectionTextOffset": 0,
+      "biographyTitle": "Biografie",
+      "biographyText": "<p>Lady Lynne Arth ist die Kapitänin der <strong>Leeren Flasche</strong>, einer schweren Kriegskogge im Dienst des Hauses Arth. Von Talgarth aus führt sie ihre Mannschaft auf Küstenpatrouillen, Geleitfahrten, zur Piratenbekämpfung sowie auf Reisen und diplomatische Missionen.</p><p>Ihre Offizierinnen und Meisterinnen wählte sie nach Befähigung und Vertrauen. Dass sämtliche leitenden Posten von Frauen bekleidet werden, beruht auf diesen persönlichen Entscheidungen und ist keine Vorschrift. Den jungen Führungskern ergänzte Lynne bewusst um ältere, erfahrene Seeleute.</p>",
+      "abilitiesTitle": "Führung",
+      "abilities": [
+        {
+          "title": "Befähigung und Vertrauen",
+          "detail": "Besetzt die leitenden Ämter nach Können und persönlichem Vertrauen.",
+          "icon": ""
+        },
+        {
+          "title": "Erfahrung an Bord",
+          "detail": "Ergänzt ihren jungen Führungskern bewusst um ältere Seeleute und Meisterinnen.",
+          "icon": ""
+        }
+      ],
+      "extraSections": [],
+      "historyTitle": "Die Taufe der Leeren Flasche",
+      "historyText": "<p>Nach alter cenyriischer Seemannstradition wird ein neues Schiff mit einem eigens bestimmten Whisky getauft: Er wird über die Reling gegossen, während sein Name ausgesprochen wird. Lynnes Zwillingsbruder <strong>Rhydian Arth</strong> hatte die vorgesehene Flasche jedoch bereits ausgetrunken.</p><p>Als Lynne sie wütend mit den Worten <strong>„Leere Flasche!“</strong> umdrehte, löste sich ein letzter Tropfen und fiel auf die Reling. Die Taufe war vollzogen und der Name gesprochen. Was zunächst Spott auslöste, wurde zum stolzen Namen einer schnellen, zuverlässigen Kriegskogge, die in Talgarth kaum noch jemand belächelt – zumindest nicht in Lynnes Hörweite.</p>",
+      "worksTitle": "Aufgaben zur See",
+      "works": [
+        "Patrouillen zum Schutz der Klaueninseln und ihrer Küsten.",
+        "Geleitfahrten sowie die Jagd auf Piraten und nordmännische Plünderer.",
+        "Beförderung von Angehörigen des Hauses Arth und Gesandten der Krone."
+      ],
+      "triviaTitle": "Wissenswertes",
+      "trivia": [
+        "Zwillingsschwester von Rhydian Arth.",
+        "Ihre persönliche Knappin ist Eira Beryn.",
+        "Meleri Penry ist ihre persönliche Zofe, Schreiberin und Adjutantin."
+      ],
+      "quotesTitle": "Zitate",
+      "quotes": [
+        "„Leere Flasche!“"
+      ],
+      "connectionsTitle": "Vertraute an Bord",
+      "connections": [
+        {
+          "type": "connection",
+          "name": "Cerys Blodyn",
+          "detail": "Erster Maat",
+          "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/cerys-blodyn.png",
+          "imageFormat": "portrait"
+        },
+        {
+          "type": "connection",
+          "name": "Telyn Diafol",
+          "detail": "Zweiter Maat",
+          "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/telyn-diafol.jpg",
+          "imageFormat": "portrait"
+        },
+        {
+          "type": "connection",
+          "name": "Eira Beryn",
+          "detail": "Knappin zur See",
+          "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/eira-beryn.jpg",
+          "imageFormat": "portrait"
+        },
+        {
+          "type": "connection",
+          "name": "Meleri Penry",
+          "detail": "Schreiberin & Adjutantin",
+          "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/meleri-penry.jpg",
+          "imageFormat": "portrait"
+        }
+      ],
+      "documentsTitle": "Eigentum & Besitz",
+      "documents": [
+        {
+          "icon": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/leere-flasche.png",
+          "title": "Leere Flasche",
+          "text": "Lynnes persönliche schwere Kriegskogge im Dienst des Hauses Arth; Heimathafen Talgarth.",
+          "link": ""
+        }
+      ],
+      "footer": "",
+      "portrait": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/lynne-arth.jpg"
+    },
+    "schema": "aleria.biography-module",
+    "schemaVersion": 1
+  },
+  "source": {
+    "moduleId": "lynnes-schiffsmannschaft",
+    "moduleTitle": "Lynnes Schiffsmannschaft",
+    "pageIndex": 1,
+    "pageTitle": "Lady Lynne Arth"
+  }
+}

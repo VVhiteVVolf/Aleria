@@ -17,6 +17,7 @@ document.addEventListener('click', event => {
     'move-inline-page',
     'remove-inline-page',
     'export-current-module',
+    'export-current-biography',
     'export-current-comment-thread',
     'import-current-comment-thread',
     'rescue-current-comment-thread',
@@ -56,6 +57,10 @@ document.addEventListener('click', event => {
   }
   if (action === 'export-current-module') {
     exportCurrentModule();
+    return;
+  }
+  if (action === 'export-current-biography') {
+    exportCurrentModuleBiography();
     return;
   }
   if (action === 'export-current-comment-thread') {

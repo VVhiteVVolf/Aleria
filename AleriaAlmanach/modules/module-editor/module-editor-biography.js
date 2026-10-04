@@ -12,7 +12,7 @@ function buildBiographyPortraitStagesEditor(biography = {}) {
             <div class="inline-stat-editor biography-portrait-stage-editor">
               <div class="inline-stat-row biography-portrait-stage-row is-default">
                 <strong>[1]</strong>
-                <span>Hauptportrait (automatisch)</span>
+                <input class="inline-edit-input me-biography-portrait" type="text" inputmode="url" value="${escapeHtml(biography.portrait || '')}" aria-label="Hauptportrait der Biografie" placeholder="Automatisch · optionales Biografieportrait">
               </div>
               ${stages.map((source, index) => `<label class="inline-stat-row biography-portrait-stage-row">
                 <strong>[${index + 2}]</strong>
@@ -566,6 +566,7 @@ function collectBiographyModuleEditorPage(card, page) {
   delete page.imageTabs;
   delete page.imageTabLabel;
   page.biography = sanitizeBiographyData({
+    portrait: getTrimmedFormValue(card, '.me-biography-portrait'),
     portraitStages: collectBiographyPortraitStages(card),
     biographyTitle: getTrimmedFormValue(card, '.me-biography-title'),
     biographyText: getTrimmedFormValue(card, '.me-biography-text'),

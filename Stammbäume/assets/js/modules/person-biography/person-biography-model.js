@@ -85,6 +85,7 @@ function normalizeDocuments(value) {
 
 export function normalizeBiographyData(data = {}) {
   return {
+    portrait: String(data.portrait || '').trim(),
     portraitStages: normalizePortraitStages(data.portraitStages),
     sideWidth: clampNumber(data.sideWidth, 100, 35, 100),
     connectionPortraitHeight: clampNumber(data.connectionPortraitHeight, 68, 44, 140),

@@ -5,7 +5,7 @@ import { sanitizeBiographyImageSource } from './person-biography-content.js';
 import { normalizePersonBiographyModule } from './person-biography-model.js';
 
 function biographyPortrait(person, data) {
-  const mainPortrait = sanitizeBiographyImageSource(resolvePortraitSource(person));
+  const mainPortrait = sanitizeBiographyImageSource(data.portrait) || sanitizeBiographyImageSource(resolvePortraitSource(person));
   const stages = (Array.isArray(data.portraitStages) ? data.portraitStages : [])
     .map((source, index) => ({
       label: `[${index + 2}]`,

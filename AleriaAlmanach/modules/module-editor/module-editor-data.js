@@ -1094,6 +1094,7 @@ function sanitizeBiographyData(data = {}) {
 
   return {
     portraitStages,
+    portrait: String(data.portrait || '').trim(),
     sideWidth: clampBiographyNumber(data.sideWidth, 100, 35, 100),
     connectionPortraitHeight: clampBiographyNumber(data.connectionPortraitHeight, 68, 44, 140),
     connectionTextOffset: clampBiographyNumber(data.connectionTextOffset, 0, 0, 80),

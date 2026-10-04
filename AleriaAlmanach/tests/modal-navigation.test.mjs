@@ -64,6 +64,21 @@ test('comment tools remain disabled when a page has no thread', () => {
   }
 });
 
+test('isolierter Bio-Export erscheint nur auf der gelesenen Bio-Seite und wird delegiert', () => {
+  const { context, listeners } = navigation();
+  const page = { pageTitle: 'Lynne Arth', biographyPage: true };
+  assert.match(context.buildNav(page, 1, 2), /data-modal-action="export-current-biography"/);
+  assert.doesNotMatch(context.buildNav({ ...page, _commentsPage: true }, 1, 2), /data-modal-action="export-current-biography"/);
+  assert.doesNotMatch(context.buildNav({ pageTitle: 'Schiff' }, 0, 2), /data-modal-action="export-current-biography"/);
+  const editing = navigation({ editing: true });
+  assert.doesNotMatch(editing.context.buildNav(page, 1, 2), /data-modal-action="export-current-biography"/);
+  let exported = 0;
+  context.exportCurrentModuleBiography = () => exported++;
+  const trigger = { dataset: { modalAction: 'export-current-biography' }, closest: () => ({}) };
+  listeners.click({ target: { closest: () => trigger }, preventDefault() {} });
+  assert.equal(exported, 1);
+});
+
 test('the embedded live preview does not duplicate module navigation', () => {
   const { context } = navigation({ editing: true });
   context._moduleRenderPreviewContext = { entry: context.currentEntry };

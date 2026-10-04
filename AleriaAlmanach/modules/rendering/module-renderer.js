@@ -123,7 +123,7 @@ function getBiographyPortraitStages(page) {
 // Einzelbild, mit Reitern die Tab-Leiste über den umschaltbaren Bildern.
 function buildBiographyPortrait(page, entry) {
   const portraitStages = getBiographyPortraitStages(page);
-  const mainPortrait = sanitizeImageSrc(page.image || entry?.image || entry?.portrait || '');
+  const mainPortrait = sanitizeImageSrc(page.image || page.biography?.portrait || entry?.image || entry?.portrait || '');
   const tabs = portraitStages.length
     ? [
         ...(mainPortrait ? [{ label: '[1]', image: mainPortrait }] : []),

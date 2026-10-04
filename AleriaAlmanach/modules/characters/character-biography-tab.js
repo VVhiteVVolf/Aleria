@@ -43,6 +43,8 @@ function getCharacterBiographyProfileSource(char = {}) {
 function isCharacterBiographyEmpty(draft) {
   const bio = draft?.biography || {};
   return !String(draft?.quote || '').trim()
+    && !String(bio.portrait || '').trim()
+    && !(bio.portraitStages || []).some(Boolean)
     && !String(bio.biographyText || '').trim()
     && !String(bio.historyText || '').trim()
     && !(draft?.stats || []).length
@@ -346,26 +348,24 @@ function handleCharacterBiographyEditorFieldChange(field) {
   return false;
 }
 
-function exportCurrentCharacterBiographyModule() {
+async function exportCurrentCharacterBiographyModule() {
   const draft = collectCharacterBiographyData();
   const name = document.getElementById('cp-name')?.value.trim() || '';
-  const payload = {
-    schema: 'aleria.biography-module',
-    schemaVersion: 1,
-    exportedAt: new Date().toISOString(),
-    personId: _editingChar || '',
-    personName: name,
-    biographyModule: {
-      schema: 'aleria.biography-module',
-      schemaVersion: 1,
-      stats: draft.stats,
-      quote: draft.quote,
-      quoteBy: draft.quoteBy,
-      biography: draft.biography
-    }
-  };
-  downloadJsonFile(payload, `${slugify(name || _editingChar || 'charakter')}-biographie.json`);
-  showAppStatus('Biographie exportiert.', 'success');
+  const personId = _editingChar || '';
+  const portrait = draft.biography.portrait || getCharacterBiographyEntryMeta().image;
+  try {
+    const { buildBiographyExportPayload } = await import('../../../js/biography/biography-transfer.mjs');
+    const payload = buildBiographyExportPayload({
+      personId,
+      personName: name,
+      biographyModule: { ...draft, biography: { ...draft.biography, portrait } },
+      baseUrl: document.baseURI
+    });
+    downloadJsonFile(payload, `${slugify(name || personId || 'charakter')}-biographie.json`);
+    showAppStatus('Biographie exportiert.', 'success');
+  } catch (error) {
+    showAppStatus(error.message || 'Biographie konnte nicht exportiert werden.', 'error');
+  }
 }
 
 function openCurrentCharacterBiographyImportFilePicker() {
@@ -378,12 +378,8 @@ function openCurrentCharacterBiographyImportFilePicker() {
     if (!file) return;
     try {
       const parsed = JSON.parse(await file.text());
-      if (parsed?.schema !== 'aleria.biography-module') {
-        throw new Error('Keine gültige Biographie-Datei (falsches Schema).');
-      }
-      const module = parsed.biographyModule && typeof parsed.biographyModule === 'object'
-        ? parsed.biographyModule
-        : parsed;
+      const { parseBiographyImportPayload } = await import('../../../js/biography/biography-transfer.mjs');
+      const module = parseBiographyImportPayload(parsed);
       _characterBiographyDraft = {
         schema: 'aleria.biography-module',
         schemaVersion: 1,

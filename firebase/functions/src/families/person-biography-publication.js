@@ -47,6 +47,7 @@ function biographyData(value = {}) {
   const connections = Array.isArray(value.connections) ? value.connections : [];
   const documents = Array.isArray(value.documents) ? value.documents : [];
   return {
+    portrait: image(value.portrait),
     portraitStages: Array.from(
       { length: 4 },
       (_, index) => image(Array.isArray(value.portraitStages) ? value.portraitStages[index] : '')

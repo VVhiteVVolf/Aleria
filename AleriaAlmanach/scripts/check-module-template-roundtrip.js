@@ -163,7 +163,7 @@ const biographyPortraitStageChecks = vm.runInContext(`(() => {
   return {
     stages: biography.portraitStages,
     inputCount: (markup.match(/class="inline-edit-input me-biography-portrait-stage"/g) || []).length,
-    defaultPresent: markup.includes('Hauptportrait (automatisch)')
+    defaultPresent: markup.includes('class="inline-edit-input me-biography-portrait"')
   };
 })()`, context);
 if (biographyPortraitStageChecks.stages.length !== 4) failures.push('biography: Portrait-Altersstufen werden nicht auf vier optionale Felder normalisiert.');

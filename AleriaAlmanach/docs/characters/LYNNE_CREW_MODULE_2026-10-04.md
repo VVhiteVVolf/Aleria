@@ -36,3 +36,12 @@ Das zusätzliche Schiffsbild `leere-flasche.png` wurde mit dem eingebauten `imag
 Die Veröffentlichung fügt einen Datensatz in `module_store_entries` und dessen Zuordnung im bestehenden Modulverzeichnis hinzu. Versionsgeprüfte, atomare Speicherung; die vorherige Konfiguration wird lokal in einem nicht veröffentlichten Backup gesichert. Andere Module, Figuren, Inventare, Kampfdaten, Kommentare und bestehende Szenen sind nicht Teil der Schreiboperation. Die neue Szenenseite erhält kein erfundenes Weltdatum und keine alten Kommentare.
 
 Validierung mit den bestehenden Import- und Sanitizerfunktionen sowie `npm run check:templates`. Browserprüfung aller vier Inhaltsseiten, drei Hierarchieregister und Modulbilder; mobile Prüfung bei 390 Pixeln ohne Seitenüberlauf. Die bestehende Anwendungsarchitektur benötigt für dieses Modul keine Änderungen.
+
+### Einzelne Biografie übertragen
+
+Auf der Seite **Lady Lynne Arth** steht im Drei-Punkte-Menü **Diese Biografie exportieren** bereit. Die JSON-Datei lässt sich im Almanach-Charakterprofil unter **Biographie → Biographie importieren** oder in der bearbeitbaren Stammbaum-Biografie unter **Importieren** laden. Anschließend die Biografie beziehungsweise das Charakterprofil speichern; im Stammbaum zusätzlich den bestehenden Weg zum Online-Speichern nutzen.
+
+Die Datei verwendet das gemeinsame Format `aleria.biography-module` Version 1. Sie enthält ausschließlich die ausgewählte Biografie: Infotabelle, Zitate, Abschnitte, Verbindungen, Besitzkarten und Bildverweise. Hauptportrait und weitere Portraitstufen bleiben erhalten. Relative Bildpfade werden beim Export gegen die Quellseite aufgelöst; Bilder bleiben verknüpft und werden nicht als Bilddateien eingebettet. Ein eigenes Biografieportrait kann im Editor unter [1] geändert oder geleert werden; bei leerem Feld gilt wieder das Profil-/Stammbaumportrait. Der Import ändert weder Personenidentität noch Verwandtschaften, Profilportrait oder Kampfdaten.
+
+Das gemeinsame Dateiformat liegt in `js/biography/biography-transfer.mjs`; der Leseradapter gehört zum Biografie-Feature. Beide Importziele prüfen Schema und Version vor der Übernahme in den Entwurf. Die Veröffentlichung des Stammbaums erhält das optionale Feld `biography.portrait`. Regressionstests verwenden dieses tatsächliche Mannschaftspaket; der lokale Browsertest prüft Download, Dateiimporte, Editor, Leseansicht und Stammbaum-Speicherdaten ohne Online-Schreibzugriffe.
+

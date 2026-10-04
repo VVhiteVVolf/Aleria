@@ -8,11 +8,11 @@ import { createPersonBiographyIconPicker } from './person-biography-icon-picker.
 import {
   createPersonBiographyModule,
   getPersonBiographyModule,
-  normalizePersonBiographyModule,
-  PERSON_BIOGRAPHY_SCHEMA,
-  PERSON_BIOGRAPHY_SCHEMA_VERSION
+  normalizePersonBiographyModule
 } from './person-biography-model.js';
 import { renderPersonBiography } from './person-biography-renderer.js';
+import { buildBiographyExportPayload, parseBiographyImportPayload } from '../../../../../js/biography/biography-transfer.mjs';
+import { resolvePortraitSource } from '../../config/portrait-placeholders.js';
 
 function clone(value) {
   return JSON.parse(JSON.stringify(value));
@@ -29,19 +29,15 @@ function slugifyBiographyFileName(name) {
 // hängt sonst am selben fragilen lokalen Entwurf wie der restliche Stammbaum (siehe
 // family-sync-controller.js) - "Online speichern" im Kopfbereich ist der einzige Weg, sie
 // dauerhaft zu sichern. Diese Datei ist ein Werkzeug-unabhängiges Backup pro Person.
-function buildBiographyExportPayload(person, module) {
-  return {
-    schema: PERSON_BIOGRAPHY_SCHEMA,
-    schemaVersion: PERSON_BIOGRAPHY_SCHEMA_VERSION,
-    exportedAt: new Date().toISOString(),
+function downloadBiographyModuleFile(person, module, documentRef) {
+  const normalized = normalizePersonBiographyModule(module);
+  normalized.biography.portrait ||= resolvePortraitSource(person);
+  const payload = buildBiographyExportPayload({
     personId: person?.id || '',
     personName: person?.name || '',
-    biographyModule: normalizePersonBiographyModule(module)
-  };
-}
-
-function downloadBiographyModuleFile(person, module, documentRef) {
-  const payload = buildBiographyExportPayload(person, module);
+    biographyModule: normalized,
+    baseUrl: documentRef.baseURI
+  });
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const anchor = documentRef.createElement('a');
@@ -49,13 +45,6 @@ function downloadBiographyModuleFile(person, module, documentRef) {
   anchor.download = `${slugifyBiographyFileName(person?.name)}-biographie.json`;
   anchor.click();
   URL.revokeObjectURL(url);
-}
-
-function parseBiographyImportPayload(parsed) {
-  const source = parsed?.biographyModule && typeof parsed.biographyModule === 'object'
-    ? parsed.biographyModule
-    : parsed;
-  return normalizePersonBiographyModule(source || {});
 }
 
 function openBiographyImportPicker(documentRef, onFile) {
@@ -190,11 +179,11 @@ function editorSection(title, action, actionLabel, content) {
   </section>`;
 }
 
-function portraitStagesEditor(items = []) {
+function portraitStagesEditor(items = [], portrait = '') {
   const stages = Array.from({ length: 4 }, (_, index) => String(items[index] || ''));
   return `<div class="person-biography-editor__portrait-stage is-default">
       <strong>[1]</strong>
-      <span>Stammbaum-Portrait (automatisch)</span>
+      <input type="text" inputmode="url" data-biography-data-field="portrait" value="${escapeHtml(portrait)}" aria-label="Hauptportrait der Biografie" placeholder="Automatisch · optionales Biografieportrait">
     </div>
     ${stages.map((source, index) => `<label class="person-biography-editor__portrait-stage">
       <strong>[${index + 2}]</strong>
@@ -208,9 +197,9 @@ function renderEditor(module, documentRef) {
     <section class="person-biography-editor__section">
       <header><h3>Portrait-Altersstufen</h3></header>
       <div class="person-biography-editor__portrait-stages">
-        ${portraitStagesEditor(data.portraitStages)}
+        ${portraitStagesEditor(data.portraitStages, data.portrait)}
       </div>
-      <p class="person-biography-editor__section-help">[1] verwendet immer das Portrait der Person im Stammbaum. Die optionalen Stufen [2] bis [5] können beispielsweise Kindheit, Jugend, Erwachsenenalter und hohes Alter zeigen.</p>
+      <p class="person-biography-editor__section-help">[1] verwendet das Biografieportrait oder, bei leerem Feld, das Portrait der Person im Stammbaum. Die optionalen Stufen [2] bis [5] können beispielsweise Kindheit, Jugend, Erwachsenenalter und hohes Alter zeigen.</p>
     </section>
     <section class="person-biography-editor__section">
       <header><h3>Grundaufbau</h3></header>
@@ -523,7 +512,7 @@ export function createPersonBiographyDialog({
     reader.addEventListener('load', () => {
       let imported;
       try {
-        imported = parseBiographyImportPayload(JSON.parse(String(reader.result || '')));
+        imported = normalizePersonBiographyModule(parseBiographyImportPayload(JSON.parse(String(reader.result || ''))));
       } catch (error) {
         runtime.alert?.(`Biographie-Datei konnte nicht gelesen werden: ${error?.message || 'Unbekanntes Format'}`);
         return;
