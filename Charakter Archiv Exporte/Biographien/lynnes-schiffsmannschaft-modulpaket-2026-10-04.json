@@ -1,20 +1,20 @@
 {
   "type": "aleria-module-package",
   "version": 1,
-  "exportedAt": "2026-10-04T21:18:01.004Z",
-  "sourceNote": "Nach der Nutzervorlage vom 04.10.2026; Aufbau nach dem aktuellen Online-Modul idwals-schiffsmannschaft. Lynnes Geburtsjahr 1718 aus dem veröffentlichten Stammbaum Haus Arth. Altersbereiche unverändert; keine Klassen, Kampfdaten oder zusätzlichen Biografien erfunden. Originalporträts und Wappen unverändert lokal gesichert; Schiffsbild mit image_gen erzeugt.",
+  "exportedAt": "2026-10-04T21:24:35.353Z",
+  "sourceNote": "Nach der Nutzervorlage vom 04.10.2026; Aufbau nach dem aktuellen Online-Modul idwals-schiffsmannschaft. Lynnes Geburtsjahr 1718 aus dem veröffentlichten Stammbaum Haus Arth. Altersbereiche unverändert; keine Klassen, Kampfdaten oder zusätzlichen Biografien erfunden. Originalporträts und Wappen unverändert lokal gesichert; Schiffsbild mit image_gen erzeugt. Stellenabgleich am 04.10.2026: alle 54 menschlichen Posten entsprechend Idwals aktueller Hierarchie; 17 bekannte Personen unverändert, weitere Stellen ohne erfundene Besetzung.",
   "module": {
     "type": "aleria-module",
     "version": 2,
     "section": {
-      "key": "Haus Arth",
-      "tab": "Gruppen",
       "desc": "",
+      "nodeId": "node:gruppen:klaueninseln/haus-arth",
       "path": [
         "Klaueninseln",
         "Haus Arth"
       ],
-      "nodeId": "node:gruppen:klaueninseln/haus-arth"
+      "key": "Haus Arth",
+      "tab": "Gruppen"
     },
     "entry": {
       "id": "lynnes-schiffsmannschaft",
@@ -303,7 +303,7 @@
                     ]
                   },
                   {
-                    "label": "Deck, Navigation und Vorräte",
+                    "label": "Deck, Navigation, Vorräte und Waffen",
                     "nodes": [
                       {
                         "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/mabli-morgwynt.jpg",
@@ -322,6 +322,12 @@
                         "title": "Quartiermeisterin",
                         "subtitle": "Angharad Morglan",
                         "text": "<strong>58 Jahre.</strong> Verwaltet Vorräte, Ausrüstung und Lagerbestände. Gehört zur alten Fischerfamilie Morglan und diente bereits unter Run. Mag es nicht, wenn man sie „Großmütterchen“ nennt – was an Bord trotzdem alle tun.<br><br><a href=\"/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/haus-morglan.jpg\">Wappen Haus Morglan</a>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenmeisterin",
+                        "subtitle": "Nicht benannt",
+                        "text": "Verantwortet Waffen, Rüstungen und die Ausbildung der Waffenknechte im Kampf."
                       }
                     ]
                   },
@@ -355,8 +361,25 @@
                     ]
                   },
                   {
-                    "label": "Bordwache",
+                    "label": "Ausguck",
                     "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Ausguck auf dem Krähennest",
+                        "subtitle": "Nicht benannt",
+                        "text": "Der Ausguck auf dem Krähennest ist die exponierte Position des ersten Spähers im höchsten Mastkorb eines Schiffes, der als wichtigstes Frühwarnsystem Gefahren, Land oder andere Boote rechtzeitig am Horizont erspäht"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Segel und Bordwache",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Segelmeisterin",
+                        "subtitle": "Nicht benannt",
+                        "text": "Beaufsichtigt Segel und Takelage und führt die Matrosen bei allen Segelmanövern.<br>"
+                      },
                       {
                         "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/sigrid-hirschhorn.jpg",
                         "title": "Wachmeisterin",
@@ -373,6 +396,64 @@
                 "label": "Kämpfer",
                 "levels": [
                   {
+                    "label": "Ritter zur See",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Waffenknechte",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bewaffnete Berufskrieger, die Bordwachen stellen, Entergefechte führen und den Rittern im Kampf zur Seite stehen.<br><br><br>Die bewaffnete Besatzung untersteht im Wachdienst Sigrid Hirschhorn. Bei einer Schlacht werden Pagen und Verwaltungsarbeiter durch Waffenknechte ersetzt."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bewaffnete Berufskrieger, die Bordwachen stellen, Entergefechte führen und den Rittern im Kampf zur Seite stehen.<br>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bewaffnete Berufskrieger, die Bordwachen stellen, Entergefechte führen und den Rittern im Kampf zur Seite stehen.<br>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bewaffnete Berufskrieger, die Bordwachen stellen, Entergefechte führen und den Rittern im Kampf zur Seite stehen.<br>"
+                      }
+                    ]
+                  },
+                  {
                     "label": "Knappinnen zur See",
                     "nodes": [
                       {
@@ -386,17 +467,47 @@
                         "title": "Knappin zur See",
                         "subtitle": "Una Dyfrgi",
                         "text": "<strong>16 Jahre.</strong> Knappin von Mabli Morgwynt. Frech, temperamentvoll und selbstbewusst; in ihrer Ausbildung bereits etwas weiter als Eira, die sie gern zu Blödsinn anstiftet."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Knappin zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Junge Adlige oder angehende Ritter, die einem Ritter zur See dienen und auf See wie im Kampf auf ihre spätere Erhebung vorbereitet werden."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Knappin zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Junge Adlige oder angehende Ritter, die einem Ritter zur See dienen und auf See wie im Kampf auf ihre spätere Erhebung vorbereitet werden."
                       }
                     ]
                   },
                   {
-                    "label": "Verteidigung",
+                    "label": "Page zur See",
                     "nodes": [
                       {
                         "portrait": "",
-                        "title": "Waffenknechte und Bordwachen",
-                        "subtitle": "",
-                        "text": "Die bewaffnete Besatzung untersteht im Wachdienst Sigrid Hirschhorn. Bei einer Schlacht werden Pagen und Verwaltungsarbeiter durch Waffenknechte ersetzt."
+                        "title": "Page zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Die jüngsten Angehörigen der Schiffsmannschaft, die grundlegende seemännische, höfische und ritterliche Fertigkeiten erlernen und den Knappen und Rittern zu Diensten stehen.<br><br>Gehören außerhalb einer Schlacht zur Besatzung. Insgesamt dient auf der Leeren Flasche eine Mannschaft von 50 bis 60 Personen."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Die jüngsten Angehörigen der Schiffsmannschaft, die grundlegende seemännische, höfische und ritterliche Fertigkeiten erlernen und den Knappen und Rittern zu Diensten stehen."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Die jüngsten Angehörigen der Schiffsmannschaft, die grundlegende seemännische, höfische und ritterliche Fertigkeiten erlernen und den Knappen und Rittern zu Diensten stehen."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Die jüngsten Angehörigen der Schiffsmannschaft, die grundlegende seemännische, höfische und ritterliche Fertigkeiten erlernen und den Knappen und Rittern zu Diensten stehen."
                       }
                     ]
                   }
@@ -426,23 +537,151 @@
                         "title": "Schiffsköchin",
                         "subtitle": "Tesni Parry",
                         "text": "<strong>29 Jahre.</strong> Tochter der Köchin von Haus Arth. Hervorragende Köchin; frech, kokett, selbstbewusst und bewusst freizügig. Bereitet die Mahlzeiten zu und versorgt die Besatzung auch auf langen Fahrten."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Proviantmeisterin",
+                        "subtitle": "Nicht benannt",
+                        "text": "Verwaltet Lebensmittel, Trinkwasser und Verbrauchsgüter und überwacht deren Ausgabe."
                       }
                     ]
                   },
                   {
-                    "label": "Übrige Mannschaft",
+                    "label": "Handwerk",
                     "nodes": [
                       {
                         "portrait": "",
-                        "title": "Matrosinnen und Matrosen",
-                        "subtitle": "",
-                        "text": "Cenyri und Vennyri dienen Seite an Seite. Die übrige Mannschaft ist gemischt, mit einer deutlichen Mehrheit an Frauen. Erfahrene Seeleute und Meisterinnen fuhren bereits unter Sir Parzifal Arth und teilweise unter dessen Vorgängern zur See."
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "Nicht benannt",
+                        "text": "Kümmern sich um Tauwerk, Segel, Beschläge und sämtliche handwerklichen Arbeiten an Bord.<br>"
                       },
                       {
                         "portrait": "",
-                        "title": "Pagen und Verwaltungsarbeiter",
-                        "subtitle": "",
-                        "text": "Gehören außerhalb einer Schlacht zur Besatzung. Insgesamt dient auf der Leeren Flasche eine Mannschaft von 50 bis 60 Personen."
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "Nicht benannt",
+                        "text": "Kümmern sich um Tauwerk, Segel, Beschläge und sämtliche handwerklichen Arbeiten an Bord.<br>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "Nicht benannt",
+                        "text": "Kümmern sich um Tauwerk, Segel, Beschläge und sämtliche handwerklichen Arbeiten an Bord.<br>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Gehilfen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Gehilfe",
+                        "subtitle": "Nicht benannt",
+                        "text": "Unterstützt die Handwerker bei Reparaturen, Wartung und allen anfallenden Arbeiten.<br>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Gehilfe",
+                        "subtitle": "Nicht benannt",
+                        "text": "Unterstützt die Handwerker bei Reparaturen, Wartung und allen anfallenden Arbeiten.<br>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Matrosen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrener Seemann, der Arbeitsgruppen führt und sein Wissen an jüngere Matrosen weitergibt.<br>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrener Seemann, der Arbeitsgruppen führt und sein Wissen an jüngere Matrosen weitergibt.<br>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrener Seemann, der Arbeitsgruppen führt und sein Wissen an jüngere Matrosen weitergibt.<br>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Decksmannschaft",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage.<br><br>Cenyri und Vennyri dienen Seite an Seite. Die übrige Mannschaft ist gemischt, mit einer deutlichen Mehrheit an Frauen. Erfahrene Seeleute und Meisterinnen fuhren bereits unter Sir Parzifal Arth und teilweise unter dessen Vorgängern zur See."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Schiffsjungen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See."
                       }
                     ]
                   },
@@ -536,7 +775,7 @@
                 ]
               },
               {
-                "label": "Deck, Navigation und Vorräte",
+                "label": "Deck, Navigation, Vorräte und Waffen",
                 "nodes": [
                   {
                     "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/mabli-morgwynt.jpg",
@@ -555,6 +794,12 @@
                     "title": "Quartiermeisterin",
                     "subtitle": "Angharad Morglan",
                     "text": "<strong>58 Jahre.</strong> Verwaltet Vorräte, Ausrüstung und Lagerbestände. Gehört zur alten Fischerfamilie Morglan und diente bereits unter Run. Mag es nicht, wenn man sie „Großmütterchen“ nennt – was an Bord trotzdem alle tun.<br><br><a href=\"/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/haus-morglan.jpg\">Wappen Haus Morglan</a>"
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Waffenmeisterin",
+                    "subtitle": "Nicht benannt",
+                    "text": "Verantwortet Waffen, Rüstungen und die Ausbildung der Waffenknechte im Kampf."
                   }
                 ]
               },
@@ -588,8 +833,25 @@
                 ]
               },
               {
-                "label": "Bordwache",
+                "label": "Ausguck",
                 "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Ausguck auf dem Krähennest",
+                    "subtitle": "Nicht benannt",
+                    "text": "Der Ausguck auf dem Krähennest ist die exponierte Position des ersten Spähers im höchsten Mastkorb eines Schiffes, der als wichtigstes Frühwarnsystem Gefahren, Land oder andere Boote rechtzeitig am Horizont erspäht"
+                  }
+                ]
+              },
+              {
+                "label": "Segel und Bordwache",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Segelmeisterin",
+                    "subtitle": "Nicht benannt",
+                    "text": "Beaufsichtigt Segel und Takelage und führt die Matrosen bei allen Segelmanövern.<br>"
+                  },
                   {
                     "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/sigrid-hirschhorn.jpg",
                     "title": "Wachmeisterin",
@@ -599,7 +861,7 @@
                 ]
               }
             ],
-            "footerNote": "Bei einer Schlacht werden Pagen und Verwaltungsarbeiter durch Waffenknechte ersetzt.",
+            "footerNote": "Die Übersicht umfasst 54 menschliche Stellen; noch nicht namentlich zugeordnete Stellen sind mit „Nicht benannt“ gekennzeichnet. Bei einer Schlacht werden Pagen und Verwaltungsarbeiter durch Waffenknechte ersetzt.",
             "backLabel": "Zurück zur Übersicht",
             "printLabel": "Akte drucken"
           }

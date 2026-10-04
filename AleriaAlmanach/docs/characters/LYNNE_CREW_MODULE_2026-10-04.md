@@ -11,6 +11,18 @@ Das Modul `lynnes-schiffsmannschaft` folgt dem am 4. Oktober 2026 abgerufenen On
 - Lynnes Kapitänsbiografie fasst ausschließlich die Angaben der Vorlage zusammen. Das Geburtsjahr 1718 stammt aus `Stammbäume/assets/data/published-families/haus-arth.json`.
 - Keine zusätzlichen Lebensgeschichten, Klassen, Stufen oder Kampfwerte. Die Kapitänsseite und Mannschaftskarten sind Modulinhalt; separate Charakter- oder Kreaturendatensätze werden durch dieses Paket nicht angelegt.
 
+## Vollständiger Postenabgleich mit Idwal
+
+Auf Nutzerwunsch wurden die Stellen und Ebenen am 4. Oktober 2026 vollständig mit Idwals aktueller Online-Hierarchie abgeglichen. Alle 17 bekannten Personen und beide Bordtiere behalten ihre bisherigen Porträts und Beschreibungen. Weitere Stellen heißen **Nicht benannt**; daraus folgt keine tatsächliche Vakanz und es werden keine Personen erfunden.
+
+| Register | Menschliche Stellen | Aufteilung |
+| --- | ---: | --- |
+| Führung | 16 | Vorhandene 13 Posten plus Waffenmeisterin, Ausguck auf dem Krähennest und Segelmeisterin |
+| Kämpfer | 16 | Je 4 Ritter, Waffenknechte, Knappen und Pagen zur See; Eira und Una bleiben die beiden benannten Knappinnen |
+| Besatzung | 22 | Schreiberin, Schiffsköchin, Proviantmeisterin, 3 Seiler/Handwerker, 2 Gehilfen, 3 Altmatrosen, 6 Matrosen und 5 Schiffsjungen |
+
+Insgesamt sind damit 54 menschliche Posten dargestellt, davon 17 namentlich zugeordnet. Die Zahl liegt innerhalb der vorgegebenen 50–60 Besatzungsmitglieder. Bordtiere und Wappen werden nicht mitgezählt. Die bisherigen Sammelposten wurden in die entsprechenden Einzelstellen aufgelöst; ihre Aussagen zur gemischten Besatzung und zum Austausch vor einer Schlacht bleiben erhalten. Der Kompatibilitätsbereich `hierarchy.levels` entspricht weiterhin exakt dem Führungsregister. Idwals Modul dient ausschließlich als Referenz.
+
 ## Paket und Bilder
 
 Importierbares Paket: [lynnes-schiffsmannschaft-modulpaket-2026-10-04.json](../../../Charakter%20Archiv%20Exporte/Biographien/lynnes-schiffsmannschaft-modulpaket-2026-10-04.json).
