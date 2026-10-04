@@ -1,5 +1,6 @@
 import { createBlankHouseFamily } from './blank-house-family-factory.js';
 import { createFamilyPerson, createParentages } from './family-record-builders.js';
+import { createLynneCrewPerson } from './lynne-crew-family-members.js';
 import { KLAUENINSEL_HOUSE_EMBLEMS, KLAUENINSEL_HOUSE_PROFILES } from './klaueninseln-house-profiles.js';
 
 const base = createBlankHouseFamily({
@@ -25,7 +26,8 @@ export const HOUSE_DYGER_FAMILY = Object.freeze({
       tags: ['Rüdiger', 'Seefahrer', 'Musikant'],
       notes: '27 Jahre. Sohn Tudur Dygers. Von Parzifal Arth gemeinsam mit Ifor Beryn in Idwal Draigs neu gegründete Mannschaft entsandt. Parzifal prägte den Rufnamen Rüdiger. Morwyr mit musikalischem Talent und amateurhaften Zaubertricks, kein ausgebildeter Barddwyr. Mutter und weitere Angehörige sind noch nicht benannt.',
       extensions: { almanachCharacterId: 'tiefenwyrm--rhy-dyger' }
-    })
+    }),
+    createLynneCrewPerson('awen-dyger')
   ]),
   parentages: Object.freeze(createParentages(['rhy-dyger'], ['tudur-dyger'], '', {
     legitimacy: 'unknown', notes: 'Vater-Sohn-Beziehung ausdrücklich durch den Benutzer belegt. Keine Mutter oder Ehe festgelegt.'
@@ -35,7 +37,7 @@ export const HOUSE_DYGER_FAMILY = Object.freeze({
   extensions: Object.freeze({
     ...base.extensions,
     blankFamily: false,
-    sourceRevision: 1,
+    sourceRevision: 2,
     pendingFamilySituation: Object.freeze({
       source: 'Benutzervorgaben vom 06.09.2026',
       knownParentage: 'Tudur Dyger ist der Vater von Rhy Dyger.',

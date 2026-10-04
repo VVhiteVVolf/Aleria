@@ -1,4 +1,4 @@
-import { createFamilyChartSession } from '../adapters/family-chart-adapter.js?v=20260911-person-entry';
+import { createFamilyChartSession } from '../adapters/family-chart-adapter.js?v=lynne-20261004';
 import { requiresFamilyChartRebuild } from '../adapters/family-chart-lifecycle-policy.js';
 import { ALERIA_CURRENT_YEAR } from '../config/chronology.js';
 import { createEmptyFamily, createFoundingFamily } from '../domain/family-factory.js';
@@ -21,7 +21,7 @@ import {
   listFamilyRecords,
   loadFamilyById,
   saveFamilyToLibrary
-} from '../services/family-library.js?v=20260911-gwendolyn-house-bios-h';
+} from '../services/family-library.js?v=lynne-20261004';
 import { downloadFamilyJson, parseFamilyJson } from '../services/family-transfer.js';
 import { saveFamilyRecordsAtomically } from '../services/family-persistence.js';
 import {

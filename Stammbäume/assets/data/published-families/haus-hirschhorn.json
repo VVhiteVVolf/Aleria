@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-hirschhorn",
+  "revision": 1,
+  "updatedAt": "2026-10-04T22:05:37.803Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-hirschhorn",
+      "title": "Haus Hirschhorn",
+      "motto": "",
+      "description": "Familie Sigrid Hirschhorns, auf Nutzervorgabe im Register den Klaueninseln zugeordnet. Sigrid stammt aus Ivarsheim. Ein Familiensitz auf den Inseln, Hausrang und eine Umsiedlungsgeschichte sind nicht belegt.",
+      "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-hirschhorn.png",
+      "houseProfile": {
+        "rankId": "unknown",
+        "seat": "",
+        "barony": "",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-hirschhorn",
+        "name": "Haus Hirschhorn",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-hirschhorn.png",
+        "status": "active"
+      }
+    ],
+    "persons": [
+      {
+        "id": "sigrid-hirschhorn",
+        "worldPersonId": "person--haus-hirschhorn--sigrid-hirschhorn",
+        "name": "Sigrid Hirschhorn",
+        "title": "Wachmeisterin der Leeren Flasche",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/sigrid-hirschhorn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-hirschhorn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Leere Flasche",
+          "Lynnes Schiffsmannschaft"
+        ],
+        "notes": "28 Jahre. Stammt aus Ivarsheim. Kräftig, wachsam und im Dienst diszipliniert; außerhalb des Dienstes dem Alkohol zugetan.",
+        "extensions": {
+          "sourceNote": "Nutzervorlage zu Lynnes Schiffsmannschaft und Ergänzungen vom 04.10.2026.",
+          "almanachModuleId": "lynnes-schiffsmannschaft"
+        }
+      }
+    ],
+    "partnerships": [],
+    "parentages": [],
+    "lineage": {
+      "founderPartnershipId": "",
+      "houseId": "house-hirschhorn",
+      "crestSubtitle": "Klaueninseln · Hausrang offen",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "cadetBranches": [],
+    "timeJumps": [],
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "sigrid-hirschhorn",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 1,
+      "sourceNote": "Nutzervorlage vom 04.10.2026. Nur belegte Angehörige; keine erfundenen Gründer, Eltern, Ehen oder Lehensverhältnisse.",
+      "pendingFamilySituation": {
+        "openQuestions": [
+          "Weitere Angehörige und Abstammung",
+          "Hausoberhaupt",
+          "Genauer Familiensitz"
+        ]
+      }
+    }
+  }
+}

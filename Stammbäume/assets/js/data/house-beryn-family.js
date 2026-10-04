@@ -1,4 +1,5 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
+import { createLynneCrewPerson } from './lynne-crew-family-members.js';
 import {
   createFamilyPerson,
   createMarriage,
@@ -228,7 +229,8 @@ export const HOUSE_BERYN_FAMILY = Object.freeze({
     person('llewelyn-beryn', 'Llewelyn Beryn', 'male', '1717', '', {
       title: 'Jüngster Sohn Brychans · unverheiratet',
       tags: ['Unverheiratet']
-    })
+    }),
+    createLynneCrewPerson('eirlys-beryn')
   ]),
   partnerships: Object.freeze([
     createMarriage('marriage-caradog-efa-beryn', ...COUPLES.founders, { status: 'ended', end: '1696' }),
@@ -297,7 +299,7 @@ export const HOUSE_BERYN_FAMILY = Object.freeze({
   }),
   extensions: Object.freeze({
     blankFamily: false,
-    sourceRevision: 3,
+    sourceRevision: 4,
     sourceNote: 'Der Baum reicht exakt bis Ifors Urgroßvater Caradog. Unter Madog entstehen ausschließlich die drei Linien Rhodri, Cadell und Brychan. Ifor ist Rhodris dritter Sohn. Eira bleibt als einzige Ehefrau in der normalen Eheposition neben Cadell; nur die räumlich getrennte Affäre Lowri wird über Emrys und Elin ausgerichtet. Beide Bastardkinder hängen ausschließlich unter Lowri. Mair ist direkt an das unbekannte Zielhaus wegverheiratet. Alle Personen unter achtundzwanzig bleiben unverheiratet und unverlobt.',
     registryManagedExtensionFields: Object.freeze(['sourceNote']),
     registryManagedHouseProfileFields: Object.freeze([

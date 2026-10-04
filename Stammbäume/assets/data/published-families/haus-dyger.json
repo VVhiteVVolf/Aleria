@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-dyger",
+  "revision": 1,
+  "updatedAt": "2026-10-04T22:05:37.803Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-dyger",
+      "title": "Haus Dyger",
+      "motto": "",
+      "description": "Niederes Rittergeschlecht aus Talgarth auf den Klaueninseln und direkte Rittervasallen des Hauses Arth. Musikanten und Seefahrer mit einer einfachen Musikantenschule in Talgarth. Angesehene Bardenhäuser wie die Ceirwyn belächeln sie als Säufer und Tavernenschläger. Die Dyger bilden keine Barddwyr aus.",
+      "emblem": "assets/images/houses/Talgarth/Klaueninseln/haus-dyger.png",
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-arth",
+        "liegeHouseName": "Haus Arth O'Talgarth",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-dyger",
+        "name": "Haus Dyger",
+        "motto": "",
+        "emblem": "assets/images/houses/Talgarth/Klaueninseln/haus-dyger.png",
+        "status": "active"
+      }
+    ],
+    "persons": [
+      {
+        "id": "tudur-dyger",
+        "worldPersonId": "person--haus-dyger--tudur-dyger",
+        "name": "Tudur Dyger",
+        "title": "Schiffsmusikant Lord Parzifal Arths",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dyger",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Vater von Rhy Dyger. Dient als Schiffsmusikant auf dem Schiff des Grafen Lord Parzifal Arth. Weitere Lebensdaten, Partnerin und eine mögliche Stellung als Hausoberhaupt sind nicht festgelegt.",
+        "extensions": {}
+      },
+      {
+        "id": "rhy-dyger",
+        "worldPersonId": "person--haus-dyger--rhy-dyger",
+        "name": "Rhy Dyger",
+        "title": "Morwyr und Schiffsmusikant der Tiefenwyrm",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-dyger/rhy-dyger.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dyger",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Rüdiger",
+          "Seefahrer",
+          "Musikant"
+        ],
+        "notes": "27 Jahre. Sohn Tudur Dygers. Von Parzifal Arth gemeinsam mit Ifor Beryn in Idwal Draigs neu gegründete Mannschaft entsandt. Parzifal prägte den Rufnamen Rüdiger. Morwyr mit musikalischem Talent und amateurhaften Zaubertricks, kein ausgebildeter Barddwyr. Mutter und weitere Angehörige sind noch nicht benannt.",
+        "extensions": {
+          "almanachCharacterId": "tiefenwyrm--rhy-dyger"
+        }
+      },
+      {
+        "id": "awen-dyger",
+        "worldPersonId": "person--haus-dyger--awen-dyger",
+        "name": "Awen Dyger",
+        "title": "Schiffsmusikantin der Leeren Flasche",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/awen-dyger.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dyger",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Leere Flasche",
+          "Lynnes Schiffsmannschaft"
+        ],
+        "notes": "25 Jahre. Rothaarig, lebenslustig und häufig etwas angetrunken; kümmert sich stark um die Mannschaft. Spielt Schifferklavier statt Laute. Ihre genaue Verwandtschaft zu Tudur und Rhy Dyger ist noch nicht festgelegt.",
+        "extensions": {
+          "sourceNote": "Nutzervorlage zu Lynnes Schiffsmannschaft und Ergänzungen vom 04.10.2026.",
+          "almanachModuleId": "lynnes-schiffsmannschaft"
+        }
+      }
+    ],
+    "partnerships": [],
+    "parentages": [
+      {
+        "id": "parentage-rhy-dyger",
+        "childId": "rhy-dyger",
+        "parentIds": [
+          "tudur-dyger"
+        ],
+        "partnershipId": "",
+        "type": "biological",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Vater-Sohn-Beziehung ausdrücklich durch den Benutzer belegt. Keine Mutter oder Ehe festgelegt.",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "",
+      "houseId": "house-dyger",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "silver",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "cadetBranches": [],
+    "timeJumps": [],
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "tudur-dyger",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 2,
+      "pendingFamilySituation": {
+        "source": "Benutzervorgaben vom 06.09.2026",
+        "knownParentage": "Tudur Dyger ist der Vater von Rhy Dyger.",
+        "openQuestions": [
+          "Rhys Mutter und weitere Angehörige",
+          "Tudurs Lebensdaten und Partnerin",
+          "Weitere Generationen und Hausoberhaupt"
+        ]
+      }
+    }
+  }
+}

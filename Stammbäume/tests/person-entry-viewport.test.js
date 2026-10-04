@@ -1,8 +1,22 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { resolveFamilyChartEntryFocus, resolveFamilyChartInitialViewport } from '../assets/js/adapters/family-chart-viewport-policy.js';
+import { resolveFamilyChartEntryFocus, resolveFamilyChartEntryMainId, resolveFamilyChartInitialViewport } from '../assets/js/adapters/family-chart-viewport-policy.js';
 
 const family = { document: { id: 'haus-pendrag' }, persons: [{ id: 'uther-1643-pendrag' }] };
+
+test('Unverbundene Angehörige sind über Personenlinks sichtbar, ohne Abstammungen zu erfinden', () => {
+  const data = [
+    { id: 'tudur', rels: { children: ['rhy'] } },
+    { id: 'rhy', rels: { parents: ['tudur'] } },
+    { id: 'awen', rels: {} }
+  ];
+  const before = structuredClone(data);
+  assert.equal(resolveFamilyChartEntryMainId(data, 'tudur', 'awen'), 'awen');
+  assert.equal(resolveFamilyChartEntryMainId(data, 'tudur', 'rhy'), 'tudur');
+  assert.equal(resolveFamilyChartEntryMainId(data, 'tudur', 'unbekannt'), 'tudur');
+  assert.equal(resolveFamilyChartEntryMainId(data, 'tudur'), 'tudur');
+  assert.deepEqual(data, before);
+});
 
 test('Ein gültiger Personenlink erhält einen lesbaren Fokus, auch in kleinen Stammbäumen', () => {
   const before = JSON.stringify(family);

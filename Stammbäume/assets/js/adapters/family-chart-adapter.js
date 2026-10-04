@@ -34,7 +34,7 @@ import {
   createFamilyChartAlignedParentageGroupPlan,
   createFamilyChartParentageGroupPlan
 } from './family-chart-parentage-group.js';
-import { resolveFamilyChartEntryFocus, resolveFamilyChartInitialViewport } from './family-chart-viewport-policy.js?v=20260911-person-entry';
+import { resolveFamilyChartEntryFocus, resolveFamilyChartEntryMainId, resolveFamilyChartInitialViewport } from './family-chart-viewport-policy.js?v=lynne-20261004';
 import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
 import {
   insertTimeJumpAsSerialBarrier,
@@ -1151,7 +1151,11 @@ export function createFamilyChartSession(config) {
       : family.persons[0]?.id;
   }
 
-  let focusPersonId = resolveDefaultMainId();
+  let focusPersonId = resolveFamilyChartEntryMainId(
+    converted.data,
+    resolveDefaultMainId(),
+    resolveFamilyChartEntryFocus(family, config.options?.entryFocus)
+  );
   let destroyed = false;
   container.classList.add('f3', 'f3-cont');
   const chart = runtime.f3.createChart(container, converted.data);

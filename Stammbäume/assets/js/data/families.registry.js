@@ -57,7 +57,7 @@ import {
 import {
   KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES,
   KLAUENINSEL_ORIGIN_HOUSE_FAMILIES
-} from './klaueninseln-house-families.js';
+} from './klaueninseln-house-families.js?v=lynne-20261004';
 import { MOCHDAER_ORIGIN_HOUSE_FAMILIES } from './mochdaer-house-families.js';
 import { BLODYN_HOUSE_FAMILIES } from './blodyn-house-families.js';
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
@@ -451,7 +451,7 @@ export const FAMILY_REGISTRY = Object.freeze([
     family,
     type: family.document.houseProfile.rankId === 'knight'
       ? 'lower-nobility'
-      : 'dynasty'
+      : family.document.houseProfile.rankId === 'commoner' ? 'commoner' : 'dynasty'
   })),
   ...KLAUENINSEL_ORIGIN_HOUSE_FAMILIES.map(family => familyRecord({
     id: family.document.id,

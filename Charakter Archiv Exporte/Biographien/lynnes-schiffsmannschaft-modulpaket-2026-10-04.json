@@ -1,8 +1,8 @@
 {
   "type": "aleria-module-package",
   "version": 1,
-  "exportedAt": "2026-10-04T21:24:35.353Z",
-  "sourceNote": "Nach der Nutzervorlage vom 04.10.2026; Aufbau nach dem aktuellen Online-Modul idwals-schiffsmannschaft. Lynnes Geburtsjahr 1718 aus dem veröffentlichten Stammbaum Haus Arth. Altersbereiche unverändert; keine Klassen, Kampfdaten oder zusätzlichen Biografien erfunden. Originalporträts und Wappen unverändert lokal gesichert; Schiffsbild mit image_gen erzeugt. Stellenabgleich am 04.10.2026: alle 54 menschlichen Posten entsprechend Idwals aktueller Hierarchie; 17 bekannte Personen unverändert, weitere Stellen ohne erfundene Besetzung.",
+  "exportedAt": "2026-10-04T22:05:37.801Z",
+  "sourceNote": "Nach der Nutzervorlage vom 04.10.2026; Aufbau nach dem aktuellen Online-Modul idwals-schiffsmannschaft. Lynnes Geburtsjahr 1718 aus dem veröffentlichten Stammbaum Haus Arth. Altersbereiche unverändert; keine Klassen, Kampfdaten oder zusätzlichen Biografien erfunden. Originalporträts und Wappen unverändert lokal gesichert; Schiffsbild mit image_gen erzeugt. Stellenabgleich am 04.10.2026: alle 54 menschlichen Posten entsprechend Idwals aktueller Hierarchie; 17 bekannte Personen unverändert, weitere Stellen ohne erfundene Besetzung. Bild- und Familienpflege 04.10.2026: zwölf ausgewählte Personenporträts mit image_gen im vorgegebenen Anime-Stil neu gezeichnet; Originaldateien erhalten. Drei Rüstungsbilder ausschließlich als Referenzen. Sieben neue Wappen, zehn neue Familienakten in den Klaueninseln; Dyger und Beryn wiederverwendet. Eira Beryn zur Unterscheidung von Cadells Gemahlin Eira (1688) in Eirlys Beryn umbenannt. 54 menschliche Stellen, 17 namentlich bekannte Mitglieder, zwei Tiere und alle übrigen Seiten erhalten.",
   "module": {
     "type": "aleria-module",
     "version": 2,
@@ -160,7 +160,7 @@
             "triviaTitle": "Wissenswertes",
             "trivia": [
               "Zwillingsschwester von Rhydian Arth.",
-              "Ihre persönliche Knappin ist Eira Beryn.",
+              "Ihre persönliche Knappin ist Eirlys Beryn.",
               "Meleri Penry ist ihre persönliche Zofe, Schreiberin und Adjutantin."
             ],
             "quotesTitle": "Zitate",
@@ -185,16 +185,16 @@
               },
               {
                 "type": "connection",
-                "name": "Eira Beryn",
+                "name": "Eirlys Beryn",
                 "detail": "Knappin zur See",
-                "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/eira-beryn.jpg",
+                "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/eirlys-beryn.png",
                 "imageFormat": "portrait"
               },
               {
                 "type": "connection",
                 "name": "Meleri Penry",
                 "detail": "Schreiberin & Adjutantin",
-                "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/meleri-penry.jpg",
+                "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/meleri-penry.png",
                 "imageFormat": "portrait"
               }
             ],
@@ -289,16 +289,16 @@
                     "label": "Kurs und Seelsorge",
                     "nodes": [
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/nest-mathgraig.jpg",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/nest-mathgraig.png",
                         "title": "Steuerfrau",
                         "subtitle": "Nest Mathgraig",
-                        "text": "<strong>35–38 Jahre.</strong> Stammt aus dem Bürgerhaus Mathgraig, das eng mit dem Hafen verbunden ist. Sehr erfahrene Seefahrerin und Waffenknecht; besonders bei schwerer See souverän am Ruder. Seit ihrer Jugend mit dem maritimen Umfeld vertraut.<br><br><a href=\"/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/haus-mathgraig.jpg\">Wappen Haus Mathgraig</a>"
+                        "text": "<strong>35–38 Jahre.</strong> Stammt aus dem Bürgerhaus Mathgraig, das eng mit dem Hafen verbunden ist. Sehr erfahrene Seefahrerin und Waffenknecht; besonders bei schwerer See souverän am Ruder. Seit ihrer Jugend mit dem maritimen Umfeld vertraut.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-mathgraig.png\">Wappen Haus Mathgraig</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-mathgraig&amp;person=nest-mathgraig&amp;mode=view\">Familienakte: Haus Mathgraig</a>"
                       },
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/bethan-prys.jpg",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/bethan-prys.png",
                         "title": "Schiffskaplanin",
                         "subtitle": "Bethan Prys",
-                        "text": "<strong>39 Jahre.</strong> Geistliche Baldrans; fröhlich, trinkfest und mit einer Narbe über einem Auge. Ihre Bürgerfamilie Prys führt eine große Taverne in Talgarth. Sie lernte an der dortigen Kathedrale Baldrans und übernimmt an Bord die Seelsorge sowie celestiale und infernale Themen."
+                        "text": "<strong>39 Jahre.</strong> Geistliche Baldrans; fröhlich, trinkfest und mit einer Narbe über einem Auge. Ihre Bürgerfamilie Prys führt eine große Taverne in Talgarth. Sie lernte an der dortigen Kathedrale Baldrans und übernimmt an Bord die Seelsorge sowie celestiale und infernale Themen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-prys&amp;person=bethan-prys&amp;mode=view\">Familienakte: Haus Prys</a>"
                       }
                     ]
                   },
@@ -306,10 +306,10 @@
                     "label": "Deck, Navigation, Vorräte und Waffen",
                     "nodes": [
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/mabli-morgwynt.jpg",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/mabli-morgwynt.png",
                         "title": "Bootsfrau",
                         "subtitle": "Mabli Morgwynt",
-                        "text": "<strong>28–29 Jahre.</strong> Patent, seefest und energisch; aus dem Ritterhaus Morgwynt. Leitet die Decksmannschaft und sorgt für Schiff, Takelage und Ausrüstung. Ihre Knappin Una Dyfrgi ist ebenfalls an Bord.<br><br><a href=\"/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/haus-morgwynt.jpg\">Wappen Haus Morgwynt</a>"
+                        "text": "<strong>28–29 Jahre.</strong> Patent, seefest und energisch; aus dem Ritterhaus Morgwynt. Leitet die Decksmannschaft und sorgt für Schiff, Takelage und Ausrüstung. Ihre Knappin Una Dyfrgi ist ebenfalls an Bord.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png\">Wappen Haus Morgwynt</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;person=mabli-morgwynt&amp;mode=view\">Familienakte: Haus Morgwynt</a>"
                       },
                       {
                         "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/jenya-eirth.jpg",
@@ -318,10 +318,10 @@
                         "text": "<strong>18 Jahre.</strong> Bestimmt anhand von Karten, Sternen und Landmarken den sichersten Kurs. Faszinierend gut in ihrem Beruf. Ihr Eisbär Nuppi begleitet sie an Bord."
                       },
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/angharad-morglan.jpg",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/angharad-morglan.png",
                         "title": "Quartiermeisterin",
                         "subtitle": "Angharad Morglan",
-                        "text": "<strong>58 Jahre.</strong> Verwaltet Vorräte, Ausrüstung und Lagerbestände. Gehört zur alten Fischerfamilie Morglan und diente bereits unter Run. Mag es nicht, wenn man sie „Großmütterchen“ nennt – was an Bord trotzdem alle tun.<br><br><a href=\"/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/haus-morglan.jpg\">Wappen Haus Morglan</a>"
+                        "text": "<strong>58 Jahre.</strong> Verwaltet Vorräte, Ausrüstung und Lagerbestände. Gehört zur alten Fischerfamilie Morglan und diente bereits unter Run. Mag es nicht, wenn man sie „Großmütterchen“ nennt – was an Bord trotzdem alle tun.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morglan.png\">Wappen Haus Morglan</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morglan&amp;person=angharad-morglan&amp;mode=view\">Familienakte: Haus Morglan</a>"
                       },
                       {
                         "portrait": "",
@@ -335,28 +335,28 @@
                     "label": "Meisterinnen",
                     "nodes": [
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/ffion-bowen.jpg",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/ffion-bowen.png",
                         "title": "Schiffszimmerfrau",
                         "subtitle": "Ffion Bowen",
-                        "text": "<strong>25 Jahre.</strong> Handwerkerin aus der bürgerlichen Familienwerft, in der die Leere Flasche gebaut wurde. Patent, kräftig und durchaus in der Lage, sich zu prügeln. Repariert Schäden und hält Rumpf, Masten und Deck seetüchtig."
+                        "text": "<strong>25 Jahre.</strong> Handwerkerin aus der bürgerlichen Familienwerft, in der die Leere Flasche gebaut wurde. Patent, kräftig und durchaus in der Lage, sich zu prügeln. Repariert Schäden und hält Rumpf, Masten und Deck seetüchtig.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bowen&amp;person=ffion-bowen&amp;mode=view\">Familienakte: Haus Bowen</a>"
                       },
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/nerys-bevan.jpg",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/nerys-bevan.png",
                         "title": "Feldscherin",
                         "subtitle": "Nerys Bevan",
-                        "text": "<strong>30 Jahre.</strong> Braunhaarig mit grünen Augen. Versorgt Verwundete und Kranke, mischt Arzneien und wacht über die Gesundheit der Besatzung. Ihre alkoholische „Medizin“ hat sie praktischerweise immer dabei."
+                        "text": "<strong>30 Jahre.</strong> Braunhaarig mit grünen Augen. Versorgt Verwundete und Kranke, mischt Arzneien und wacht über die Gesundheit der Besatzung. Ihre alkoholische „Medizin“ hat sie praktischerweise immer dabei.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bevan&amp;person=nerys-bevan&amp;mode=view\">Familienakte: Haus Bevan</a>"
                       },
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/lowri-arian.jpg",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/lowri-arian.png",
                         "title": "Schiffsmeierin",
                         "subtitle": "Lowri Arian",
-                        "text": "<strong>30 Jahre.</strong> Verwaltet Schiffskasse, Sold und wertvolle Güter sowie die wirtschaftlichen Belange des Schiffes. Kontrolliert und zuverlässig – bis Alkohol ins Spiel kommt."
+                        "text": "<strong>30 Jahre.</strong> Verwaltet Schiffskasse, Sold und wertvolle Güter sowie die wirtschaftlichen Belange des Schiffes. Kontrolliert und zuverlässig – bis Alkohol ins Spiel kommt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-arian&amp;person=lowri-arian&amp;mode=view\">Familienakte: Haus Arian</a>"
                       },
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/awen-dyger.jpg",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/awen-dyger.png",
                         "title": "Schiffsbardin",
                         "subtitle": "Awen Dyger",
-                        "text": "<strong>25 Jahre.</strong> Rothaarig, lebenslustig und ständig etwas blau. Kümmert sich stark um die Mannschaft und sorgt mit Satire, Musik, Lyrik und Schabernack für Stimmung. Spielt Schifferklavier statt Laute."
+                        "text": "<strong>25 Jahre.</strong> Rothaarig, lebenslustig und ständig etwas blau. Kümmert sich stark um die Mannschaft und sorgt mit Satire, Musik, Lyrik und Schabernack für Stimmung. Spielt Schifferklavier statt Laute.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-dyger&amp;person=awen-dyger&amp;mode=view\">Familienakte: Haus Dyger</a>"
                       }
                     ]
                   },
@@ -381,10 +381,10 @@
                         "text": "Beaufsichtigt Segel und Takelage und führt die Matrosen bei allen Segelmanövern.<br>"
                       },
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/sigrid-hirschhorn.jpg",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/sigrid-hirschhorn.png",
                         "title": "Wachmeisterin",
                         "subtitle": "Sigrid Hirschhorn",
-                        "text": "<strong>28 Jahre.</strong> Stammt aus Ivarsheim. Kräftig, wachsam und im Dienst diszipliniert; außerhalb des Dienstes dem Alkohol zugetan. Befehligt die Bordwachen und verantwortet Sicherheit, Ordnung und Verteidigung an Bord."
+                        "text": "<strong>28 Jahre.</strong> Stammt aus Ivarsheim. Kräftig, wachsam und im Dienst diszipliniert; außerhalb des Dienstes dem Alkohol zugetan. Befehligt die Bordwachen und verantwortet Sicherheit, Ordnung und Verteidigung an Bord.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-hirschhorn&amp;person=sigrid-hirschhorn&amp;mode=view\">Familienakte: Haus Hirschhorn</a>"
                       }
                     ]
                   }
@@ -457,16 +457,16 @@
                     "label": "Knappinnen zur See",
                     "nodes": [
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/eira-beryn.jpg",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/eirlys-beryn.png",
                         "title": "Knappin zur See",
-                        "subtitle": "Eira Beryn",
-                        "text": "<strong>14 Jahre.</strong> Lynnes persönliche Knappin, noch recht frisch im Knappendienst. Wild, frech und neugierig; dunkelbraunes Haar und ein rotes Piratenkopftuch."
+                        "subtitle": "Eirlys Beryn",
+                        "text": "<strong>14 Jahre.</strong> Lynnes persönliche Knappin, noch recht frisch im Knappendienst. Wild, frech und neugierig; dunkelbraunes Haar und ein rotes Piratenkopftuch.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-beryn&amp;person=eirlys-beryn&amp;mode=view\">Familienakte: Haus Beryn</a>"
                       },
                       {
                         "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/una-dyfrgi.jpg",
                         "title": "Knappin zur See",
                         "subtitle": "Una Dyfrgi",
-                        "text": "<strong>16 Jahre.</strong> Knappin von Mabli Morgwynt. Frech, temperamentvoll und selbstbewusst; in ihrer Ausbildung bereits etwas weiter als Eira, die sie gern zu Blödsinn anstiftet."
+                        "text": "<strong>16 Jahre.</strong> Knappin von Mabli Morgwynt. Frech, temperamentvoll und selbstbewusst; in ihrer Ausbildung bereits etwas weiter als Eirlys, die sie gern zu Blödsinn anstiftet."
                       },
                       {
                         "portrait": "",
@@ -522,10 +522,10 @@
                     "label": "Verwaltung",
                     "nodes": [
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/meleri-penry.jpg",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/meleri-penry.png",
                         "title": "Schreiberin & Adjutantin",
                         "subtitle": "Meleri Penry",
-                        "text": "<strong>28 Jahre.</strong> Enkelin des Vogtes der Arth aus dem Bürgerhaus Penry und Lynnes persönliche Zofe. Hellbraunes, schulterlanges Haar; höfisch, organisiert und trocken-humorig. Führt Logbücher, Karten, Berichte und Korrespondenz und verwaltet praktisch Lynnes Leben."
+                        "text": "<strong>28 Jahre.</strong> Enkelin des Vogtes der Arth aus dem Bürgerhaus Penry und Lynnes persönliche Zofe. Hellbraunes, schulterlanges Haar; höfisch, organisiert und trocken-humorig. Führt Logbücher, Karten, Berichte und Korrespondenz und verwaltet praktisch Lynnes Leben.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-penry&amp;person=meleri-penry&amp;mode=view\">Familienakte: Haus Penry</a>"
                       }
                     ]
                   },
@@ -533,10 +533,10 @@
                     "label": "Versorgung",
                     "nodes": [
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/tesni-parry.jpg",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/tesni-parry.png",
                         "title": "Schiffsköchin",
                         "subtitle": "Tesni Parry",
-                        "text": "<strong>29 Jahre.</strong> Tochter der Köchin von Haus Arth. Hervorragende Köchin; frech, kokett, selbstbewusst und bewusst freizügig. Bereitet die Mahlzeiten zu und versorgt die Besatzung auch auf langen Fahrten."
+                        "text": "<strong>29 Jahre.</strong> Tochter der Köchin von Haus Arth. Hervorragende Köchin; frech, kokett, selbstbewusst und bewusst freizügig. Bereitet die Mahlzeiten zu und versorgt die Besatzung auch auf langen Fahrten.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-parry&amp;person=tesni-parry&amp;mode=view\">Familienakte: Haus Parry</a>"
                       },
                       {
                         "portrait": "",
@@ -706,22 +706,81 @@
                     "label": "Häuser an Bord",
                     "nodes": [
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/haus-mathgraig.jpg",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-mathgraig.png",
                         "title": "Haus Mathgraig",
                         "subtitle": "",
-                        "text": "Nest Mathgraigs Bürgerhaus ist eng mit dem Hafen verbunden."
+                        "text": "Bürgerhaus der Klaueninseln mit engen Verbindungen zum Hafen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-mathgraig&amp;mode=view\">Familienakte öffnen</a>"
                       },
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/haus-morgwynt.jpg",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-prys.png",
+                        "title": "Haus Prys",
+                        "subtitle": "",
+                        "text": "Bürgerfamilie aus Talgarth, die eine große Taverne betreibt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-prys&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png",
                         "title": "Haus Morgwynt",
                         "subtitle": "",
-                        "text": "Mabli Morgwynt stammt aus diesem Ritterhaus."
+                        "text": "Niederes Ritterhaus der Klaueninseln. Mabli Morgwynt dient als Bootsfrau auf Lynne Arths Schiff.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;mode=view\">Familienakte öffnen</a>"
                       },
                       {
-                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/haus-morglan.jpg",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morglan.png",
                         "title": "Haus Morglan",
                         "subtitle": "",
-                        "text": "Angharad Morglan gehört dieser alten Fischerfamilie an."
+                        "text": "Alte Fischerfamilie der Klaueninseln. Als bürgerliche Fischerfamilie geführt; ein Adelstitel ist nicht überliefert.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morglan&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-bowen.png",
+                        "title": "Haus Bowen",
+                        "subtitle": "",
+                        "text": "Bürgerfamilie mit einer eigenen Werft, in der die Leere Flasche gebaut wurde.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bowen&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-bevan.png",
+                        "title": "Haus Bevan",
+                        "subtitle": "",
+                        "text": "Familie Nerys Bevans, im Register den Klaueninseln zugeordnet. Hausrang und genauer Sitz sind noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bevan&amp;mode=view\">Familienakte öffnen</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Weitere Häuser an Bord",
+                    "nodes": [
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-arian.png",
+                        "title": "Haus Arian",
+                        "subtitle": "",
+                        "text": "Familie Lowri Arians, im Register den Klaueninseln zugeordnet. Hausrang und genauer Sitz sind noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-arian&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Talgarth/Klaueninseln/haus-dyger.png",
+                        "title": "Haus Dyger",
+                        "subtitle": "",
+                        "text": "Niederes Rittergeschlecht aus Talgarth auf den Klaueninseln und direkte Rittervasallen des Hauses Arth. Musikanten und Seefahrer mit einer einfachen Musikantenschule in Talgarth. Angesehene Bardenhäuser wie die Ceirwyn belächeln sie als Säufer und Tavernenschläger. Die Dyger bilden keine Barddwyr aus.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-dyger&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-hirschhorn.png",
+                        "title": "Haus Hirschhorn",
+                        "subtitle": "",
+                        "text": "Familie Sigrid Hirschhorns, auf Nutzervorgabe im Register den Klaueninseln zugeordnet. Sigrid stammt aus Ivarsheim. Ein Familiensitz auf den Inseln, Hausrang und eine Umsiedlungsgeschichte sind nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-hirschhorn&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/haus-beryn.png",
+                        "title": "Haus Beryn",
+                        "subtitle": "",
+                        "text": "Kleines niederes Ritterherrenhaus aus Talgarth. Der vollständig dargestellte Stammbaum reicht von Ifor Beryn bis zu seinem Urgroßvater Caradog und gliedert sich unter Madog Beryn in genau drei fortgeführte Männerlinien.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-beryn&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-penry.png",
+                        "title": "Haus Penry",
+                        "subtitle": "",
+                        "text": "Bürgerhaus der Klaueninseln. Meleri Penry ist eine Enkelin des Vogtes der Arth; der Vogt und Meleris Eltern sind noch nicht namentlich belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-penry&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-parry.png",
+                        "title": "Haus Parry",
+                        "subtitle": "",
+                        "text": "Familie Tesni Parrys, im Register den Klaueninseln zugeordnet. Ihre Mutter ist Köchin im Dienst des Hauses Arth. Hausrang, Familiensitz und der Name der Mutter sind noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-parry&amp;mode=view\">Familienakte öffnen</a>"
                       }
                     ]
                   }
@@ -761,16 +820,16 @@
                 "label": "Kurs und Seelsorge",
                 "nodes": [
                   {
-                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/nest-mathgraig.jpg",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/nest-mathgraig.png",
                     "title": "Steuerfrau",
                     "subtitle": "Nest Mathgraig",
-                    "text": "<strong>35–38 Jahre.</strong> Stammt aus dem Bürgerhaus Mathgraig, das eng mit dem Hafen verbunden ist. Sehr erfahrene Seefahrerin und Waffenknecht; besonders bei schwerer See souverän am Ruder. Seit ihrer Jugend mit dem maritimen Umfeld vertraut.<br><br><a href=\"/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/haus-mathgraig.jpg\">Wappen Haus Mathgraig</a>"
+                    "text": "<strong>35–38 Jahre.</strong> Stammt aus dem Bürgerhaus Mathgraig, das eng mit dem Hafen verbunden ist. Sehr erfahrene Seefahrerin und Waffenknecht; besonders bei schwerer See souverän am Ruder. Seit ihrer Jugend mit dem maritimen Umfeld vertraut.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-mathgraig.png\">Wappen Haus Mathgraig</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-mathgraig&amp;person=nest-mathgraig&amp;mode=view\">Familienakte: Haus Mathgraig</a>"
                   },
                   {
-                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/bethan-prys.jpg",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/bethan-prys.png",
                     "title": "Schiffskaplanin",
                     "subtitle": "Bethan Prys",
-                    "text": "<strong>39 Jahre.</strong> Geistliche Baldrans; fröhlich, trinkfest und mit einer Narbe über einem Auge. Ihre Bürgerfamilie Prys führt eine große Taverne in Talgarth. Sie lernte an der dortigen Kathedrale Baldrans und übernimmt an Bord die Seelsorge sowie celestiale und infernale Themen."
+                    "text": "<strong>39 Jahre.</strong> Geistliche Baldrans; fröhlich, trinkfest und mit einer Narbe über einem Auge. Ihre Bürgerfamilie Prys führt eine große Taverne in Talgarth. Sie lernte an der dortigen Kathedrale Baldrans und übernimmt an Bord die Seelsorge sowie celestiale und infernale Themen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-prys&amp;person=bethan-prys&amp;mode=view\">Familienakte: Haus Prys</a>"
                   }
                 ]
               },
@@ -778,10 +837,10 @@
                 "label": "Deck, Navigation, Vorräte und Waffen",
                 "nodes": [
                   {
-                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/mabli-morgwynt.jpg",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/mabli-morgwynt.png",
                     "title": "Bootsfrau",
                     "subtitle": "Mabli Morgwynt",
-                    "text": "<strong>28–29 Jahre.</strong> Patent, seefest und energisch; aus dem Ritterhaus Morgwynt. Leitet die Decksmannschaft und sorgt für Schiff, Takelage und Ausrüstung. Ihre Knappin Una Dyfrgi ist ebenfalls an Bord.<br><br><a href=\"/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/haus-morgwynt.jpg\">Wappen Haus Morgwynt</a>"
+                    "text": "<strong>28–29 Jahre.</strong> Patent, seefest und energisch; aus dem Ritterhaus Morgwynt. Leitet die Decksmannschaft und sorgt für Schiff, Takelage und Ausrüstung. Ihre Knappin Una Dyfrgi ist ebenfalls an Bord.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png\">Wappen Haus Morgwynt</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;person=mabli-morgwynt&amp;mode=view\">Familienakte: Haus Morgwynt</a>"
                   },
                   {
                     "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/jenya-eirth.jpg",
@@ -790,10 +849,10 @@
                     "text": "<strong>18 Jahre.</strong> Bestimmt anhand von Karten, Sternen und Landmarken den sichersten Kurs. Faszinierend gut in ihrem Beruf. Ihr Eisbär Nuppi begleitet sie an Bord."
                   },
                   {
-                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/angharad-morglan.jpg",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/angharad-morglan.png",
                     "title": "Quartiermeisterin",
                     "subtitle": "Angharad Morglan",
-                    "text": "<strong>58 Jahre.</strong> Verwaltet Vorräte, Ausrüstung und Lagerbestände. Gehört zur alten Fischerfamilie Morglan und diente bereits unter Run. Mag es nicht, wenn man sie „Großmütterchen“ nennt – was an Bord trotzdem alle tun.<br><br><a href=\"/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/haus-morglan.jpg\">Wappen Haus Morglan</a>"
+                    "text": "<strong>58 Jahre.</strong> Verwaltet Vorräte, Ausrüstung und Lagerbestände. Gehört zur alten Fischerfamilie Morglan und diente bereits unter Run. Mag es nicht, wenn man sie „Großmütterchen“ nennt – was an Bord trotzdem alle tun.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morglan.png\">Wappen Haus Morglan</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morglan&amp;person=angharad-morglan&amp;mode=view\">Familienakte: Haus Morglan</a>"
                   },
                   {
                     "portrait": "",
@@ -807,28 +866,28 @@
                 "label": "Meisterinnen",
                 "nodes": [
                   {
-                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/ffion-bowen.jpg",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/ffion-bowen.png",
                     "title": "Schiffszimmerfrau",
                     "subtitle": "Ffion Bowen",
-                    "text": "<strong>25 Jahre.</strong> Handwerkerin aus der bürgerlichen Familienwerft, in der die Leere Flasche gebaut wurde. Patent, kräftig und durchaus in der Lage, sich zu prügeln. Repariert Schäden und hält Rumpf, Masten und Deck seetüchtig."
+                    "text": "<strong>25 Jahre.</strong> Handwerkerin aus der bürgerlichen Familienwerft, in der die Leere Flasche gebaut wurde. Patent, kräftig und durchaus in der Lage, sich zu prügeln. Repariert Schäden und hält Rumpf, Masten und Deck seetüchtig.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bowen&amp;person=ffion-bowen&amp;mode=view\">Familienakte: Haus Bowen</a>"
                   },
                   {
-                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/nerys-bevan.jpg",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/nerys-bevan.png",
                     "title": "Feldscherin",
                     "subtitle": "Nerys Bevan",
-                    "text": "<strong>30 Jahre.</strong> Braunhaarig mit grünen Augen. Versorgt Verwundete und Kranke, mischt Arzneien und wacht über die Gesundheit der Besatzung. Ihre alkoholische „Medizin“ hat sie praktischerweise immer dabei."
+                    "text": "<strong>30 Jahre.</strong> Braunhaarig mit grünen Augen. Versorgt Verwundete und Kranke, mischt Arzneien und wacht über die Gesundheit der Besatzung. Ihre alkoholische „Medizin“ hat sie praktischerweise immer dabei.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bevan&amp;person=nerys-bevan&amp;mode=view\">Familienakte: Haus Bevan</a>"
                   },
                   {
-                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/lowri-arian.jpg",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/lowri-arian.png",
                     "title": "Schiffsmeierin",
                     "subtitle": "Lowri Arian",
-                    "text": "<strong>30 Jahre.</strong> Verwaltet Schiffskasse, Sold und wertvolle Güter sowie die wirtschaftlichen Belange des Schiffes. Kontrolliert und zuverlässig – bis Alkohol ins Spiel kommt."
+                    "text": "<strong>30 Jahre.</strong> Verwaltet Schiffskasse, Sold und wertvolle Güter sowie die wirtschaftlichen Belange des Schiffes. Kontrolliert und zuverlässig – bis Alkohol ins Spiel kommt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-arian&amp;person=lowri-arian&amp;mode=view\">Familienakte: Haus Arian</a>"
                   },
                   {
-                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/awen-dyger.jpg",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/awen-dyger.png",
                     "title": "Schiffsbardin",
                     "subtitle": "Awen Dyger",
-                    "text": "<strong>25 Jahre.</strong> Rothaarig, lebenslustig und ständig etwas blau. Kümmert sich stark um die Mannschaft und sorgt mit Satire, Musik, Lyrik und Schabernack für Stimmung. Spielt Schifferklavier statt Laute."
+                    "text": "<strong>25 Jahre.</strong> Rothaarig, lebenslustig und ständig etwas blau. Kümmert sich stark um die Mannschaft und sorgt mit Satire, Musik, Lyrik und Schabernack für Stimmung. Spielt Schifferklavier statt Laute.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-dyger&amp;person=awen-dyger&amp;mode=view\">Familienakte: Haus Dyger</a>"
                   }
                 ]
               },
@@ -853,10 +912,10 @@
                     "text": "Beaufsichtigt Segel und Takelage und führt die Matrosen bei allen Segelmanövern.<br>"
                   },
                   {
-                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/sigrid-hirschhorn.jpg",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/sigrid-hirschhorn.png",
                     "title": "Wachmeisterin",
                     "subtitle": "Sigrid Hirschhorn",
-                    "text": "<strong>28 Jahre.</strong> Stammt aus Ivarsheim. Kräftig, wachsam und im Dienst diszipliniert; außerhalb des Dienstes dem Alkohol zugetan. Befehligt die Bordwachen und verantwortet Sicherheit, Ordnung und Verteidigung an Bord."
+                    "text": "<strong>28 Jahre.</strong> Stammt aus Ivarsheim. Kräftig, wachsam und im Dienst diszipliniert; außerhalb des Dienstes dem Alkohol zugetan. Befehligt die Bordwachen und verantwortet Sicherheit, Ordnung und Verteidigung an Bord.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-hirschhorn&amp;person=sigrid-hirschhorn&amp;mode=view\">Familienakte: Haus Hirschhorn</a>"
                   }
                 ]
               }

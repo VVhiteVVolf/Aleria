@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-beryn",
-  "revision": 2,
-  "updatedAt": "2026-08-09T07:56:06.787Z",
+  "revision": 3,
+  "updatedAt": "2026-10-04T22:05:37.803Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -1103,6 +1103,31 @@
             "tags",
             "notes"
           ]
+        }
+      },
+      {
+        "id": "eirlys-beryn",
+        "worldPersonId": "person--haus-beryn--eirlys-beryn",
+        "name": "Eirlys Beryn",
+        "title": "Lynne Arths Knappin zur See",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/eirlys-beryn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-beryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Leere Flasche",
+          "Lynnes Schiffsmannschaft"
+        ],
+        "notes": "14 Jahre. Wild, frech und neugierig; dunkelbraunes Haar und rotes Piratenkopftuch. Noch frisch im Knappendienst. In der Ausgangsvorlage Eira Beryn genannt; zur Unterscheidung von Eira (1688), Cadells Gemahlin, am 04.10.2026 in Eirlys umbenannt. Eltern und Einordnung in die Beryn-Linien bleiben offen.",
+        "extensions": {
+          "sourceNote": "Nutzervorlage zu Lynnes Schiffsmannschaft und Ergänzungen vom 04.10.2026.",
+          "almanachModuleId": "lynnes-schiffsmannschaft",
+          "formerName": "Eira Beryn"
         }
       }
     ],

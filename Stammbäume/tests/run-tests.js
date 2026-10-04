@@ -36237,7 +36237,7 @@ test('bildet Haus Beryn bis zu Ifors Urgroßvater in genau drei Linien ab', () =
   const family = HOUSE_BERYN_FAMILY;
   assert.equal(validateFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 3);
+  assert.equal(family.extensions.sourceRevision, 4);
   assert.equal(family.view.focusPersonId, 'caradog-beryn');
   assert.equal(family.view.limitGenerations, false);
 
@@ -36319,7 +36319,7 @@ test('entfernt Beryns alte kollidierende Eheausrichtung auch aus einer lokal ges
   const marriage = upgraded.partnerships.find(partnership => partnership.id === 'marriage-cadell-eira-beryn');
   const plan = createFamilyChartPartnerAlignmentPlan(upgraded);
 
-  assert.equal(upgraded.extensions.sourceRevision, 3);
+  assert.equal(upgraded.extensions.sourceRevision, 4);
   assert.equal(cadell.extensions.chartCenterBetweenSpousePersonIds, undefined);
   assert.equal(marriage.extensions.chartAlignPartnerOverChildrenPersonId, undefined);
   assert.deepEqual(
@@ -36334,7 +36334,7 @@ test('entfernt Beryns alte kollidierende Eheausrichtung auch aus einer lokal ges
 test('registriert Beryn einmalig als niederes Ritterherrenhaus in Talgarth', () => {
   const records = FAMILY_REGISTRY.filter(record => record.id === 'haus-beryn');
   assert.equal(records.length, 1);
-  assert.equal(records[0].family, HOUSE_BERYN_FAMILY);
+  assert.deepEqual(records[0].family, HOUSE_BERYN_FAMILY);
   assert.equal(records[0].type, 'lower-nobility');
   assert.deepEqual(records[0].folderPath, ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth']);
   assert.equal(HOUSE_BERYN_FAMILY.lineage.crestFrame, 'silver');

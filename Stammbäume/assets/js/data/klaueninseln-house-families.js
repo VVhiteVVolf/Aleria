@@ -5,8 +5,9 @@ import {
   HOUSE_ARFORDIR_ABERDAIL_FAMILY,
   HOUSE_ARFORDIR_SERENLYN_FAMILY
 } from './house-arfordir-family.js';
-import { HOUSE_BERYN_FAMILY } from './house-beryn-family.js';
-import { HOUSE_DYGER_FAMILY } from './house-dyger-family.js';
+import { HOUSE_BERYN_FAMILY } from './house-beryn-family.js?v=lynne-20261004';
+import { HOUSE_DYGER_FAMILY } from './house-dyger-family.js?v=lynne-20261004';
+import { LYNNE_CREW_HOUSE_FAMILIES } from './lynne-crew-house-families.js';
 import { HOUSE_CRAFANC_FAMILY } from './house-crafanc-family.js';
 import {
   HOUSE_DIAFOL_TALGARTH_FAMILY,
@@ -167,6 +168,7 @@ export const KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
   ...CADET_DEFINITIONS.map(createCadetFounderFamily),
   HOUSE_BERYN_FAMILY,
   HOUSE_DYGER_FAMILY,
+  ...LYNNE_CREW_HOUSE_FAMILIES,
   ...SIMPLE_DEFINITIONS.map(createSimpleFamily)
 ]);
 
