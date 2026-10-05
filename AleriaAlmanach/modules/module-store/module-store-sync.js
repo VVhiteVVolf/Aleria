@@ -563,7 +563,10 @@ async function setupModuleStoreRemoteSync() {
     const remoteUpdated = getModuleStoreUpdatedAt(remotePayload);
     const sameContent = getModuleStoreContentSignature(remotePayload) === getModuleStoreContentSignature(localPayload);
 
-    if (localHasContent && remoteHasContent && !sameContent && !isLocalModuleStoreSynced(localPayload)) {
+    // An unchanged cache is never a new edit, even if its clock is ahead of the
+    // online revision. Loading it must not republish an older set of modules.
+    const localIsSynced = isLocalModuleStoreSynced(localPayload);
+    if (localHasContent && remoteHasContent && !sameContent && !localIsSynced) {
       showModuleStoreSyncConflict(localPayload, remotePayload);
       return;
     }
@@ -576,7 +579,7 @@ async function setupModuleStoreRemoteSync() {
       writeModuleStoreSyncMeta(migratedPayload);
       updateModuleStoreSizePanel(migratedPayload);
       updateFirebaseSyncStatus('synced', 'Entfernte Modulbereiche wurden online bereinigt.');
-    } else if (remoteHasContent && (!localHasContent || !localUpdated || remoteUpdated >= localUpdated)) {
+    } else if (remoteHasContent && (!localHasContent || localIsSynced || !localUpdated || remoteUpdated >= localUpdated)) {
       applyModuleStorePayload(remotePayload);
       writeLocalModuleStorePayload(remotePayload);
       writeModuleStoreSyncMeta(remotePayload);

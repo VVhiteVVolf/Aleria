@@ -17,6 +17,7 @@
     import { createCalendarRepository } from './modules/calendar/calendar-repository.mjs';
     import { createItemRegisterFirebase } from './modules/item-register/item-register-firebase.js';
     import { prepareInventoryCompanionWrites, saveLinkedCreature } from './modules/item-register/item-register-companion-firebase.js?v=20260925-creature-biography-v1';
+    import { parseModuleStoreRevision, getFirebaseModuleStoreRevision } from './modules/module-store/module-store-revision.js';
 
     const firebaseConfig = {
       apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
@@ -161,7 +162,7 @@
     function normalizeFirebaseModuleStore(data) {
       return {
         version: data?.version || 1,
-        updatedAtClient: Number(data?.updatedAtClient) || Date.now(),
+        updatedAtClient: parseModuleStoreRevision(data?.updatedAtClient) || Date.now(),
         customSections: Array.isArray(data?.customSections) ? data.customSections : [],
         moduleSectionNodes: Array.isArray(data?.moduleSectionNodes) ? data.moduleSectionNodes : [],
         moduleNodeAssignments: data?.moduleNodeAssignments && typeof data.moduleNodeAssignments === 'object' ? data.moduleNodeAssignments : {},
@@ -413,7 +414,7 @@
 
       return {
         version: manifest.version || 1,
-        updatedAtClient: Number(manifest.updatedAtClient) || 0,
+        updatedAtClient: getFirebaseModuleStoreRevision(configData),
         customSections,
         moduleSectionNodes: Array.isArray(manifest.moduleSectionNodes) ? manifest.moduleSectionNodes : [],
         moduleNodeAssignments: manifest.moduleNodeAssignments || configData?.moduleNodeAssignments || {},

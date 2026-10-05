@@ -1,6 +1,6 @@
 // Separater asynchroner Einstieg: Der lokale Almanach und Kalender bleiben
 // bedienbar, wenn die Firebase-SDK-Dateien vorübergehend nicht erreichbar sind.
-import('../../firebase.js?v=20260925-creature-biography-v1').catch(error => {
+import('../../firebase.js?v=20261006-module-revision-v1').catch(error => {
   console.warn('Die Online-Anbindung konnte noch nicht geladen werden:', error);
   globalThis.dispatchEvent(new CustomEvent('fb-load-error', { detail: { message: String(error?.message || error) } }));
 });
