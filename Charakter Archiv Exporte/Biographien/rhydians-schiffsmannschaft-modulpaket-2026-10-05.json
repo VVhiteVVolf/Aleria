@@ -1,8 +1,8 @@
 {
   "type": "aleria-module-package",
   "version": 1,
-  "exportedAt": "2026-10-05T00:26:26.388Z",
-  "sourceNote": "Nutzervorgabe vom 05.10.2026: leere Mannschaftsvorlage für Rhydian Arths Kriegskogge, 60–70 Mann. Rhydian ist Kapitän, sein Erster Maat Gwylim Arth, Sohn von Gwrhyr Arth und Findabair Mata. Vier Inhaltsseiten und drei Hierarchieregister entsprechen Idwals am 05.10.2026 gelesenem Online-Modul. Alle vorhandenen Rollen übernommen; vorläufige Planung auf 65 Einzelstellen erweitert. Ausschließlich Rhydian und Gwylim benannt; 63 Stellen ohne Name, Porträt und Beschreibung. Bestehende Personen und Porträts aus der veröffentlichten Familienakte Haus Arth wiederverwendet. Kein Schiffsname, kein weiterer Lebenslauf, keine Kampfwerte, keine Weltzeit und keine zusätzliche Person erfunden. Das Hauswappen dient vorläufig als Bild der Schiffsseite.",
+  "exportedAt": "2026-10-05T01:01:02.013Z",
+  "sourceNote": "Nutzervorgabe vom 05.10.2026: leere Mannschaftsvorlage für Rhydian Arths Kriegskogge, 60–70 Mann. Rhydian ist Kapitän, sein Erster Maat Gwylim Arth, Sohn von Gwrhyr Arth und Findabair Mata. Vier Inhaltsseiten und drei Hierarchieregister entsprechen Idwals am 05.10.2026 gelesenem Online-Modul. Alle vorhandenen Rollen übernommen; vorläufige Planung auf 65 Einzelstellen erweitert. Ausschließlich Rhydian und Gwylim benannt; 63 Stellen ohne Name, Porträt und Beschreibung. Bestehende Personen und Porträts aus der veröffentlichten Familienakte Haus Arth wiederverwendet. Kein Schiffsname, kein weiterer Lebenslauf, keine Kampfwerte, keine Weltzeit und keine zusätzliche Person erfunden. Das Hauswappen dient vorläufig als Bild der Schiffsseite. Besetzung am 05.10.2026 ergänzt: Ianto Pawen (1717) wird Erster Maat, Gwylim Arth wechselt auf den Zweiten Maat. Ritter zur See: Llew Dyfrgi (1722), Unig Unigol (1718), Padrig Eirth (1722), Barry Dianc (1722) und Clinoch Cwingod (1722). Für fünf Ritter wird eine fünfte Ritterstelle ergänzt: 66 Gesamtstellen, acht benannt und 58 offen. Die fünf belegten Stammbaupersonen werden mit ihren vorhandenen Porträts übernommen. Clinoch Cwingod ist im geprüften lokalen Bestand und in 44 Online-Almanachmodulen nicht belegt; seine Namensschreibweise und sein Geburtsjahr folgen unverändert der Nutzervorgabe, sein Porträt bleibt leer. Keine zusätzlichen Stammbaupersonen oder Abstammungen angelegt.",
   "module": {
     "type": "aleria-module",
     "version": 2,
@@ -42,7 +42,7 @@
           "imageWidth": 38,
           "imageFit": "contain",
           "pageTitle": "Die Besatzung der Kriegskogge",
-          "description": "<p><strong>Rhydian Arth</strong> führt eine <strong>Kriegskogge</strong> des Hauses Arth mit einer vorgesehenen Besatzung von <strong>60–70 Mann</strong>. Sein Erster Maat ist <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata.</p><p>Die Mannschaft ist als Vorlage mit 65 Stellen angelegt. Bis auf Kapitän und Ersten Maat bleiben die Namen, Porträts und Beschreibungen leer. Schiffsname und weitere Einzelheiten folgen.</p>",
+          "description": "<p><strong>Rhydian Arth</strong> führt eine <strong>Kriegskogge</strong> des Hauses Arth mit einer vorgesehenen Besatzung von <strong>60–70 Mann</strong>. <strong>Ianto Pawen</strong> ist sein Erster Maat. <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata, dient als Zweiter Maat.</p><p>Als Ritter zur See gehören <strong>Llew Dyfrgi</strong>, <strong>Unig Unigol</strong>, <strong>Padrig Eirth</strong>, <strong>Barry Dianc</strong> und <strong>Clinoch Cwingod</strong> zur Mannschaft.</p><p>Die Vorlage umfasst 66 Stellen. Acht sind namentlich besetzt; die übrigen 58 werden später ausgearbeitet. Schiffsname und weitere Einzelheiten bleiben offen.</p>",
           "quote": "",
           "quoteBy": "",
           "enableComments": true,
@@ -62,6 +62,10 @@
             ],
             [
               "Erster Maat",
+              "Ianto Pawen"
+            ],
+            [
+              "Zweiter Maat",
               "Gwylim Arth"
             ],
             [
@@ -74,7 +78,7 @@
             ],
             [
               "Planungsstand",
-              "65 Stellen: 2 benannt, 63 offen"
+              "66 Stellen: 8 benannt, 58 offen"
             ]
           ],
           "commentSequence": []
@@ -84,7 +88,7 @@
           "image": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
           "imageWidth": 30,
           "pageTitle": "Rhydian Arth",
-          "description": "<p><strong>Rhydian Arth</strong> ist der Kapitän der Kriegskogge und der Zwillingsbruder von Lady Lynne Arth. Er wurde 1718 geboren und steht an erster Stelle in der Erbfolge des Hauses Arth.</p><p>Sein Erster Maat ist <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata. Weitere Angaben zur Mannschaft werden noch ausgearbeitet.</p>",
+          "description": "<p><strong>Rhydian Arth</strong> ist der Kapitän der Kriegskogge und der Zwillingsbruder von Lady Lynne Arth. Er wurde 1718 geboren und steht an erster Stelle in der Erbfolge des Hauses Arth.</p><p><strong>Ianto Pawen</strong> dient ihm als Erster Maat. <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata, übernimmt den Posten des Zweiten Maats. Weitere Angaben zur Mannschaft werden noch ausgearbeitet.</p>",
           "quote": "",
           "quoteBy": "",
           "commentDivider": true,
@@ -127,7 +131,7 @@
             "connectionPortraitHeight": 68,
             "connectionTextOffset": 0,
             "biographyTitle": "Biografie",
-            "biographyText": "<p><strong>Rhydian Arth</strong> ist der Kapitän der Kriegskogge und der Zwillingsbruder von Lady Lynne Arth. Er wurde 1718 geboren und steht an erster Stelle in der Erbfolge des Hauses Arth.</p><p>Sein Erster Maat ist <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata. Weitere Angaben zur Mannschaft werden noch ausgearbeitet.</p>",
+            "biographyText": "<p><strong>Rhydian Arth</strong> ist der Kapitän der Kriegskogge und der Zwillingsbruder von Lady Lynne Arth. Er wurde 1718 geboren und steht an erster Stelle in der Erbfolge des Hauses Arth.</p><p><strong>Ianto Pawen</strong> dient ihm als Erster Maat. <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata, übernimmt den Posten des Zweiten Maats. Weitere Angaben zur Mannschaft werden noch ausgearbeitet.</p>",
             "abilitiesTitle": "Führung",
             "abilities": [],
             "extraSections": [],
@@ -143,8 +147,15 @@
             "connections": [
               {
                 "type": "connection",
+                "name": "Ianto Pawen",
+                "detail": "Erster Maat; geboren 1717.",
+                "image": "/Stammbäume/assets/images/portraits/haus-pawen/ianto-pawen.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
                 "name": "Gwylim Arth",
-                "detail": "Erster Maat; Sohn von Gwrhyr Arth und Findabair Mata.",
+                "detail": "Zweiter Maat; Sohn von Gwrhyr Arth und Findabair Mata.",
                 "image": "/Stammbäume/assets/images/portraits/haus-arth/gwylim-arth.jpg",
                 "imageFormat": "portrait"
               }
@@ -172,7 +183,7 @@
             "sideImage": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
             "organizationTitle": "Rhydians Schiffsmannschaft",
             "motto": "Haus Arth · Klaueninseln",
-            "description": "Kriegskogge mit 60–70 Mann. Rhydian Arth führt das Schiff; Gwylim Arth dient als Erster Maat.",
+            "description": "Kriegskogge mit 60–70 Mann. Rhydian Arth führt das Schiff; Ianto Pawen ist Erster Maat, Gwylim Arth Zweiter Maat.",
             "detailsTitle": "Schiff und Mannschaft",
             "details": [
               {
@@ -193,13 +204,13 @@
               {
                 "icon": "",
                 "label": "Vorlage",
-                "value": "65 Stellen · 2 benannt · 63 offen"
+                "value": "66 Stellen · 8 benannt · 58 offen"
               }
             ],
             "quoteLabel": "Wahrspruch",
             "quote": "",
             "chartTitle": "Hierarchie der Kriegskogge",
-            "chartIntro": "Führung, Kämpfer und Besatzung sind vollständig als Einzelstellen angelegt. Nur Rhydian Arth und Gwylim Arth sind bereits eingetragen; die übrigen Felder bleiben zur späteren Ausarbeitung leer.",
+            "chartIntro": "Rhydian Arth führt die Mannschaft mit Ianto Pawen als Erstem und Gwylim Arth als Zweitem Maat. Fünf Ritter zur See sind benannt. Die übrigen Namens-, Porträt- und Beschreibungsfelder bleiben zur späteren Ausarbeitung leer.",
             "trees": [
               {
                 "id": "aufbau",
@@ -221,16 +232,16 @@
                     "label": "Maate",
                     "nodes": [
                       {
-                        "portrait": "/Stammbäume/assets/images/portraits/haus-arth/gwylim-arth.jpg",
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-pawen/ianto-pawen.jpg",
                         "title": "Erster Maat",
-                        "subtitle": "Gwylim Arth",
-                        "text": "Erster Maat. Sohn von Gwrhyr Arth und Findabair Mata."
+                        "subtitle": "Ianto Pawen",
+                        "text": "Geboren 1717. Erster Maat von Rhydians Kriegskogge."
                       },
                       {
-                        "portrait": "",
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-arth/gwylim-arth.jpg",
                         "title": "Zweiter Maat",
-                        "subtitle": "",
-                        "text": ""
+                        "subtitle": "Gwylim Arth",
+                        "text": "Zweiter Maat. Sohn von Gwrhyr Arth und Findabair Mata."
                       }
                     ]
                   },
@@ -348,28 +359,34 @@
                     "label": "Ritter zur See",
                     "nodes": [
                       {
-                        "portrait": "",
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-dyfrgi/llew-dyfrgi.jpg",
                         "title": "Ritter zur See",
-                        "subtitle": "",
-                        "text": ""
+                        "subtitle": "Llew Dyfrgi",
+                        "text": "Geboren 1722."
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-unigol/unig-unigol.jpg",
+                        "title": "Ritter zur See",
+                        "subtitle": "Unig Unigol",
+                        "text": "Geboren 1718."
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-eirth/padrig-eirth.jpg",
+                        "title": "Ritter zur See",
+                        "subtitle": "Padrig Eirth",
+                        "text": "Geboren 1722."
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-dianc/barry-dianc.png",
+                        "title": "Ritter zur See",
+                        "subtitle": "Barry Dianc",
+                        "text": "Geboren 1722."
                       },
                       {
                         "portrait": "",
                         "title": "Ritter zur See",
-                        "subtitle": "",
-                        "text": ""
-                      },
-                      {
-                        "portrait": "",
-                        "title": "Ritter zur See",
-                        "subtitle": "",
-                        "text": ""
-                      },
-                      {
-                        "portrait": "",
-                        "title": "Ritter zur See",
-                        "subtitle": "",
-                        "text": ""
+                        "subtitle": "Clinoch Cwingod",
+                        "text": "Geboren 1722."
                       }
                     ]
                   },
@@ -729,16 +746,16 @@
                 "label": "Maate",
                 "nodes": [
                   {
-                    "portrait": "/Stammbäume/assets/images/portraits/haus-arth/gwylim-arth.jpg",
+                    "portrait": "/Stammbäume/assets/images/portraits/haus-pawen/ianto-pawen.jpg",
                     "title": "Erster Maat",
-                    "subtitle": "Gwylim Arth",
-                    "text": "Erster Maat. Sohn von Gwrhyr Arth und Findabair Mata."
+                    "subtitle": "Ianto Pawen",
+                    "text": "Geboren 1717. Erster Maat von Rhydians Kriegskogge."
                   },
                   {
-                    "portrait": "",
+                    "portrait": "/Stammbäume/assets/images/portraits/haus-arth/gwylim-arth.jpg",
                     "title": "Zweiter Maat",
-                    "subtitle": "",
-                    "text": ""
+                    "subtitle": "Gwylim Arth",
+                    "text": "Zweiter Maat. Sohn von Gwrhyr Arth und Findabair Mata."
                   }
                 ]
               },
@@ -846,7 +863,7 @@
                 ]
               }
             ],
-            "footerNote": "Planungsstand: 65 Stellen innerhalb der vorgesehenen 60–70 Mann. Die leeren Namens- und Porträtfelder werden später ausgefüllt.",
+            "footerNote": "Planungsstand: 66 Stellen innerhalb der vorgesehenen 60–70 Mann. Acht Stellen sind benannt, 58 bleiben zur späteren Ausarbeitung offen.",
             "backLabel": "Zurück zur Übersicht",
             "printLabel": "Akte drucken"
           }
@@ -857,7 +874,7 @@
           "imageWidth": 30,
           "pageTitle": "Schiff",
           "sessionPage": true,
-          "sessionIntro": "Rhydians Kriegskogge ist für eine Besatzung von 60–70 Mann vorgesehen. Rhydian Arth ist der Kapitän, Gwylim Arth sein Erster Maat. Schiffsname, Ausstattung und weitere Einzelheiten bleiben vorerst offen.",
+          "sessionIntro": "Rhydians Kriegskogge ist für eine Besatzung von 60–70 Mann vorgesehen. Rhydian Arth ist der Kapitän, Ianto Pawen sein Erster Maat und Gwylim Arth sein Zweiter Maat. Schiffsname, Ausstattung und weitere Einzelheiten bleiben vorerst offen.",
           "sessionHint": "Führe die Szene an Bord von Rhydians Kriegskogge als Kommentar fort.",
           "sessionEmptyTitle": "An Bord der Kriegskogge",
           "sessionEmptyText": "Hier beginnt die nächste Szene der Mannschaft.",
