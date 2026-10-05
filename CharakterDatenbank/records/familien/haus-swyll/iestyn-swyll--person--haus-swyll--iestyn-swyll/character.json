@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-03T02:00:00.000Z",
+    "sourceExportedAt": "2026-10-05T22:55:55.677Z",
     "sourceUpdatedAt": "2026-09-03T18:12:19.571Z",
     "sourceDocumentIds": [
       "person--haus-swyll--iestyn-swyll"
     ],
-    "contentHash": "d24d506a42cda1296e51f80ea1b50e152553b41001da6769ac2725436200ae18"
+    "contentHash": "d460f9ea18bdb9fbed4dc09713bbb2ef0421beac4c31d9e87538d98d0d55ef4f"
   },
   "local": {
     "notes": "",
@@ -547,8 +547,8 @@
           "personId": "iestyn-swyll",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-10-03T02:00:00.000Z",
-          "lastSyncedAt": "2026-10-03T02:00:00.000Z",
+          "importedAt": "2026-10-05T22:55:55.677Z",
+          "lastSyncedAt": "2026-10-05T22:55:55.677Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=iestyn-swyll",
           "fingerprint": "{\"name\":\"Iestyn Swyll\",\"title\":\"Angehöriger des Hauses Swyll\",\"birth\":\"1699\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"https://i.imgur.com/VpjeTe7.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"rhiannon-draenmelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draenmelyn--rhiannon-draenmelyn\",\"name\":\"Rhiannon Draenmelyn\"}],\"children\":[]}}"
         }

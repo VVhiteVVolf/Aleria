@@ -1,4 +1,4 @@
-import { createFamilyChartSession } from '../adapters/family-chart-adapter.js?v=lynne-20261004';
+import { createFamilyChartSession } from '../adapters/family-chart-adapter.js?v=overview-20261006';
 import { requiresFamilyChartRebuild } from '../adapters/family-chart-lifecycle-policy.js';
 import { ALERIA_CURRENT_YEAR } from '../config/chronology.js';
 import { createEmptyFamily, createFoundingFamily } from '../domain/family-factory.js';
@@ -1071,9 +1071,6 @@ export function createAppController({
         break;
       case 'show-default-view':
         chartSession?.reset();
-        break;
-      case 'focus-person':
-        if (selected) chartSession?.focus(selected.id, { fit: true });
         break;
       case 'toggle-orientation':
         store.setOrientation(state.family.view.orientation === 'vertical' ? 'horizontal' : 'vertical');

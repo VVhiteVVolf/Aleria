@@ -7,6 +7,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_BERYN_PORTRAITS } from './house-beryn-portraits.js';
+import { extendBerynWithGwaeden } from './parzifal-crew-families/beryn.js';
 import {
   KLAUENINSEL_HOUSE_EMBLEMS,
   KLAUENINSEL_HOUSE_PROFILES
@@ -124,7 +125,7 @@ function childrenOf(childIds, partnershipId, options = {}) {
   );
 }
 
-export const HOUSE_BERYN_FAMILY = Object.freeze({
+export const HOUSE_BERYN_FAMILY = extendBerynWithGwaeden({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: Object.freeze({
@@ -176,7 +177,8 @@ export const HOUSE_BERYN_FAMILY = Object.freeze({
     affair('lowri-cadell-affair', 'Lowri', '1692'),
     person('brychan-beryn', 'Brychan Beryn', 'male', '1686', '', {
       title: 'Ritter und jüngster Sohn Madogs',
-      tags: ['Dritte Linie']
+      tags: ['Dritte Linie'],
+      extensions: { registryManagedFieldRevisions: { portrait: 6 } }
     }),
     spouse('seren-brychan-spouse', 'Seren', 'female', '1691', '', {
       title: 'Gemahlin Brychans'

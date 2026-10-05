@@ -1,0 +1,1658 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-pluen",
+  "revision": 1,
+  "updatedAt": "2026-10-05T22:55:55.091Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-pluen",
+      "title": "Haus Pluen",
+      "motto": "",
+      "description": "Bürgerliche Schreiberfamilie aus Talgarth. Korrespondenz, Register und sorgfältige Buchführung gehören zu ihrem Handwerk. Familiengerüst seit 1629 mit Haupt- und Vetternzweigen.",
+      "emblem": "assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-pluen.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "aneirin-pluen",
+        "worldPersonId": "person--haus-pluen--aneirin-pluen",
+        "name": "Aneirin Pluen",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1629",
+        "death": "1700",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "iolo-pluen",
+        "worldPersonId": "person--haus-pluen--iolo-pluen",
+        "name": "Iolo Pluen",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1655",
+        "death": "1727",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "morfydd-pluen",
+        "worldPersonId": "person--haus-pluen--morfydd-pluen",
+        "name": "Morfydd Pluen",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1658",
+        "death": "1729",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "gwydion-pluen",
+        "worldPersonId": "person--haus-pluen--gwydion-pluen",
+        "name": "Gwydion Pluen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1680",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "eirwen-pluen",
+        "worldPersonId": "person--haus-pluen--eirwen-pluen",
+        "name": "Eirwen Pluen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1684",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "cai-pluen",
+        "worldPersonId": "person--haus-pluen--cai-pluen",
+        "name": "Cai Pluen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "eluned-pluen",
+        "worldPersonId": "person--haus-pluen--eluned-pluen",
+        "name": "Eluned Pluen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1682",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "emyr-pluen",
+        "worldPersonId": "person--haus-pluen--emyr-pluen",
+        "name": "Emyr Pluen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "megan-pluen",
+        "worldPersonId": "person--haus-pluen--megan-pluen",
+        "name": "Megan Pluen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "enid-pluen",
+        "worldPersonId": "person--haus-pluen--enid-pluen",
+        "name": "Enid Pluen",
+        "title": "Schreiberin und Adjutantin der Dychwelyd",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/enid-pluen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "36 Jahre. Von Parzifals Gemahlin für den Dienst an Bord ausgewählt. Organisiert Korrespondenz, Befehle und Verwaltung.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death",
+            "title",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6,
+            "title": 6,
+            "portrait": 6,
+            "notes": 6
+          }
+        }
+      },
+      {
+        "id": "luned-pluen",
+        "worldPersonId": "person--haus-pluen--luned-pluen",
+        "name": "Luned Pluen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1709",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "branoc-pluen",
+        "worldPersonId": "person--haus-pluen--branoc-pluen",
+        "name": "Branoc Pluen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1713",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "mair-pluen",
+        "worldPersonId": "person--haus-pluen--mair-pluen",
+        "name": "Mair Pluen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1710",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "dewi-pluen",
+        "worldPersonId": "person--haus-pluen--dewi-pluen",
+        "name": "Dewi Pluen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1717",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "gwenllian-pluen",
+        "worldPersonId": "person--haus-pluen--gwenllian-pluen",
+        "name": "Gwenllian Pluen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "rhian-pluen",
+        "worldPersonId": "person--haus-pluen--rhian-pluen",
+        "name": "Rhian Pluen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1707",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "gareth-pluen",
+        "worldPersonId": "person--haus-pluen--gareth-pluen",
+        "name": "Gareth Pluen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1711",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "tegan-pluen",
+        "worldPersonId": "person--haus-pluen--tegan-pluen",
+        "name": "Tegan Pluen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1715",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "celyn-pluen",
+        "worldPersonId": "person--haus-pluen--celyn-pluen",
+        "name": "Celyn Pluen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "ifor-pluen",
+        "worldPersonId": "person--haus-pluen--ifor-pluen",
+        "name": "Ifor Pluen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "nesta-pluen",
+        "worldPersonId": "person--haus-pluen--nesta-pluen",
+        "name": "Nesta Pluen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "ioan-pluen",
+        "worldPersonId": "person--haus-pluen--ioan-pluen",
+        "name": "Ioan Pluen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1734",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-pluen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "catrin-aneirin-pluen-spouse",
+        "worldPersonId": "person--haus-pluen--catrin-aneirin-pluen-spouse",
+        "name": "Catrin",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1634",
+        "death": "1711",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "gwen-iolo-pluen-spouse",
+        "worldPersonId": "person--haus-pluen--gwen-iolo-pluen-spouse",
+        "name": "Gwen",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1660",
+        "death": "1734",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "cadoc-morfydd-pluen-spouse",
+        "worldPersonId": "person--haus-pluen--cadoc-morfydd-pluen-spouse",
+        "name": "Cadoc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1654",
+        "death": "1722",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "nia-gwydion-pluen-spouse",
+        "worldPersonId": "person--haus-pluen--nia-gwydion-pluen-spouse",
+        "name": "Nia",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1685",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "merfyn-eirwen-pluen-spouse",
+        "worldPersonId": "person--haus-pluen--merfyn-eirwen-pluen-spouse",
+        "name": "Merfyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1681",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "rhys-eluned-pluen-spouse",
+        "worldPersonId": "person--haus-pluen--rhys-eluned-pluen-spouse",
+        "name": "Rhys",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1679",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "heledd-emyr-pluen-spouse",
+        "worldPersonId": "person--haus-pluen--heledd-emyr-pluen-spouse",
+        "name": "Heledd",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "peredur-rhian-pluen-spouse",
+        "worldPersonId": "person--haus-pluen--peredur-rhian-pluen-spouse",
+        "name": "Peredur",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1703",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-aneirin-pluen",
+        "participantIds": [
+          "aneirin-pluen",
+          "catrin-aneirin-pluen-spouse"
+        ],
+        "type": "marriage",
+        "status": "widowed",
+        "start": "",
+        "end": "1700",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-iolo-pluen",
+        "participantIds": [
+          "iolo-pluen",
+          "gwen-iolo-pluen-spouse"
+        ],
+        "type": "marriage",
+        "status": "widowed",
+        "start": "",
+        "end": "1727",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-morfydd-pluen",
+        "participantIds": [
+          "morfydd-pluen",
+          "cadoc-morfydd-pluen-spouse"
+        ],
+        "type": "marriage",
+        "status": "widowed",
+        "start": "",
+        "end": "1722",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-gwydion-pluen",
+        "participantIds": [
+          "gwydion-pluen",
+          "nia-gwydion-pluen-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-eirwen-pluen",
+        "participantIds": [
+          "eirwen-pluen",
+          "merfyn-eirwen-pluen-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-eluned-pluen",
+        "participantIds": [
+          "eluned-pluen",
+          "rhys-eluned-pluen-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-emyr-pluen",
+        "participantIds": [
+          "emyr-pluen",
+          "heledd-emyr-pluen-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-rhian-pluen",
+        "participantIds": [
+          "rhian-pluen",
+          "peredur-rhian-pluen-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-iolo-pluen",
+        "childId": "iolo-pluen",
+        "parentIds": [
+          "aneirin-pluen",
+          "catrin-aneirin-pluen-spouse"
+        ],
+        "partnershipId": "marriage-aneirin-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-morfydd-pluen",
+        "childId": "morfydd-pluen",
+        "parentIds": [
+          "aneirin-pluen",
+          "catrin-aneirin-pluen-spouse"
+        ],
+        "partnershipId": "marriage-aneirin-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-gwydion-pluen",
+        "childId": "gwydion-pluen",
+        "parentIds": [
+          "iolo-pluen",
+          "gwen-iolo-pluen-spouse"
+        ],
+        "partnershipId": "marriage-iolo-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-eirwen-pluen",
+        "childId": "eirwen-pluen",
+        "parentIds": [
+          "iolo-pluen",
+          "gwen-iolo-pluen-spouse"
+        ],
+        "partnershipId": "marriage-iolo-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-cai-pluen",
+        "childId": "cai-pluen",
+        "parentIds": [
+          "iolo-pluen",
+          "gwen-iolo-pluen-spouse"
+        ],
+        "partnershipId": "marriage-iolo-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-eluned-pluen",
+        "childId": "eluned-pluen",
+        "parentIds": [
+          "morfydd-pluen",
+          "cadoc-morfydd-pluen-spouse"
+        ],
+        "partnershipId": "marriage-morfydd-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-emyr-pluen",
+        "childId": "emyr-pluen",
+        "parentIds": [
+          "morfydd-pluen",
+          "cadoc-morfydd-pluen-spouse"
+        ],
+        "partnershipId": "marriage-morfydd-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-megan-pluen",
+        "childId": "megan-pluen",
+        "parentIds": [
+          "morfydd-pluen",
+          "cadoc-morfydd-pluen-spouse"
+        ],
+        "partnershipId": "marriage-morfydd-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-enid-pluen",
+        "childId": "enid-pluen",
+        "parentIds": [
+          "gwydion-pluen",
+          "nia-gwydion-pluen-spouse"
+        ],
+        "partnershipId": "marriage-gwydion-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-luned-pluen",
+        "childId": "luned-pluen",
+        "parentIds": [
+          "gwydion-pluen",
+          "nia-gwydion-pluen-spouse"
+        ],
+        "partnershipId": "marriage-gwydion-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-branoc-pluen",
+        "childId": "branoc-pluen",
+        "parentIds": [
+          "gwydion-pluen",
+          "nia-gwydion-pluen-spouse"
+        ],
+        "partnershipId": "marriage-gwydion-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-mair-pluen",
+        "childId": "mair-pluen",
+        "parentIds": [
+          "eirwen-pluen",
+          "merfyn-eirwen-pluen-spouse"
+        ],
+        "partnershipId": "marriage-eirwen-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-dewi-pluen",
+        "childId": "dewi-pluen",
+        "parentIds": [
+          "eirwen-pluen",
+          "merfyn-eirwen-pluen-spouse"
+        ],
+        "partnershipId": "marriage-eirwen-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-gwenllian-pluen",
+        "childId": "gwenllian-pluen",
+        "parentIds": [
+          "eirwen-pluen",
+          "merfyn-eirwen-pluen-spouse"
+        ],
+        "partnershipId": "marriage-eirwen-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-rhian-pluen",
+        "childId": "rhian-pluen",
+        "parentIds": [
+          "eluned-pluen",
+          "rhys-eluned-pluen-spouse"
+        ],
+        "partnershipId": "marriage-eluned-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-gareth-pluen",
+        "childId": "gareth-pluen",
+        "parentIds": [
+          "eluned-pluen",
+          "rhys-eluned-pluen-spouse"
+        ],
+        "partnershipId": "marriage-eluned-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-tegan-pluen",
+        "childId": "tegan-pluen",
+        "parentIds": [
+          "eluned-pluen",
+          "rhys-eluned-pluen-spouse"
+        ],
+        "partnershipId": "marriage-eluned-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-celyn-pluen",
+        "childId": "celyn-pluen",
+        "parentIds": [
+          "emyr-pluen",
+          "heledd-emyr-pluen-spouse"
+        ],
+        "partnershipId": "marriage-emyr-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-ifor-pluen",
+        "childId": "ifor-pluen",
+        "parentIds": [
+          "emyr-pluen",
+          "heledd-emyr-pluen-spouse"
+        ],
+        "partnershipId": "marriage-emyr-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-nesta-pluen",
+        "childId": "nesta-pluen",
+        "parentIds": [
+          "rhian-pluen",
+          "peredur-rhian-pluen-spouse"
+        ],
+        "partnershipId": "marriage-rhian-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-ioan-pluen",
+        "childId": "ioan-pluen",
+        "parentIds": [
+          "rhian-pluen",
+          "peredur-rhian-pluen-spouse"
+        ],
+        "partnershipId": "marriage-rhian-pluen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-pluen",
+        "name": "Haus Pluen",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-pluen.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-aneirin-pluen",
+      "houseId": "house-pluen",
+      "crestSubtitle": "Bürgerfamilie aus Talgarth",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "heraldryDescription": "Auf Nachtblau eine silberne Schreibfeder mit goldenem Kiel über einem goldenen Tintenfass und silbernen Wellen; goldener Rundrand.",
+      "sourceRevision": 6,
+      "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+      "registryManagedEntitySourceRevision": 6,
+      "registryManagedDocumentFields": [
+        "description"
+      ],
+      "registryManagedLineageFields": [
+        "founderPartnershipId"
+      ],
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "limitGenerations",
+        "showSiblings"
+      ],
+      "registryManagedExtensionFields": [
+        "sourceNote",
+        "pendingFamilySituation"
+      ],
+      "registryTombstones": {},
+      "pendingFamilySituation": {
+        "openQuestions": [
+          "Spätere Lebensereignisse und zusätzliche Angehörige bleiben offen."
+        ]
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import { KLAUENINSEL_REGION_EMBLEMS } from './klaueninseln-house-profiles.js';
 import { LYNNE_CREW_MEMBERS, createLynneCrewPerson } from './lynne-crew-family-members.js?v=lynne-20261005';
 import { extendMorgwyntCrewFamily } from './morgwynt-crew-family.js';
+import { extendParzifalCrewHouse } from './parzifal-crew-house-families.js';
 
 function createCrewHouse(member) {
   const slug = member.surname.toLowerCase();
@@ -54,7 +55,7 @@ function createCrewHouse(member) {
       })
     })
   });
-  return member.surname === 'Morgwynt' ? extendMorgwyntCrewFamily(family) : family;
+  return extendParzifalCrewHouse(member.surname === 'Morgwynt' ? extendMorgwyntCrewFamily(family) : family);
 }
 
 export const LYNNE_CREW_HOUSE_FAMILIES = Object.freeze(

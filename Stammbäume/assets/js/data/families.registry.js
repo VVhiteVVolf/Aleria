@@ -57,7 +57,7 @@ import {
 import {
   KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES,
   KLAUENINSEL_ORIGIN_HOUSE_FAMILIES
-} from './klaueninseln-house-families.js?v=eira-20261005';
+} from './klaueninseln-house-families.js?v=parzifal-20261006';
 import { MOCHDAER_ORIGIN_HOUSE_FAMILIES } from './mochdaer-house-families.js';
 import { BLODYN_HOUSE_FAMILIES } from './blodyn-house-families.js';
 import { VENNYR_NEW_HOUSE_FAMILIES } from './vennyr-house-families.js';

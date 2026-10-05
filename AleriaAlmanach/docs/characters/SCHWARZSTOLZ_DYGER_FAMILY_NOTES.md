@@ -20,11 +20,11 @@ Pfad im bestehenden Register: **Cenyr → Klaueninsel → Sturmklaue → Talgart
 
 - Niederes Rittergeschlecht (Rang Ritter), direkte Vasallen des Hauses Arth.
 - Musikanten und Seefahrer; bescheidene Musikantenschule in Talgarth, keine Barddwyr-Ausbildung.
-- Tudur Dyger ist Schiffsmusikant auf dem Schiff Lord Parzifal Arths und Rhys Vater. Diese Vater-Sohn-Beziehung ist verknüpft.
+- Caedmon Dyger (1691), 49 Jahre, ist Schiffsmusikant der Dychwelyd und Rhys Vater. Er war bei Rhys Geburt 22. Die frühere Personen-ID bleibt nach der Namenskorrektur vom 06.10.2026 erhalten.
 - Rhy Dyger, 27 Jahre, ist Morwyr und Schiffsmusikant der Tiefenwyrm. Parzifal entsandte ihn zusammen mit Ifor in Idwals neue Mannschaft und prägte den Rufnamen Rüdiger.
-- Rhys Mutter, weitere Angehörige, Tudurs Lebensdaten und Partnerin sowie das Hausoberhaupt bleiben offen. Weder eine Ehe noch legitime/uneheliche Geburt Rhys wird erfunden.
+- Das am 06.10.2026 ausdrücklich angeforderte Familiengerüst umfasst 30 Personen seit Taliesin Dyger (1628). Rhys Mutter ist Rhian (1693). Caedmons Bruder Cynan ist Vater von Awen und Iwrban; beide sind Rhys Vetternverwandte. Die neuen Generationen und Verbindungen sind als ausgearbeitete Ergänzungen mit Nutzervorgabe gekennzeichnet.
 
-Die offenen Punkte sind zusätzlich in der Hausakte unter `extensions.pendingFamilySituation` gespeichert. Rhys bereits ausgearbeitete Biografie bleibt erhalten.
+Die Familie besitzt Haupt- und Vetternzweige. Rhys ausgearbeitete Biografie bleibt erhalten; die Korrektur betrifft den Namen seines Vaters und die genealogische Verknüpfung.
 
 ## Prüfung
 

@@ -21,6 +21,7 @@ import {
   detachFamilyChartParentLinks
 } from './family-chart-cycle-router.js';
 import { resolveFamilyChartViewDepths } from './family-chart-depth.js';
+import { completeFamilyChartView, createFamilyChartOverview } from './family-chart-overview-policy.js';
 import {
   createFamilyChartDescendantAlignmentPlan
 } from './family-chart-descendant-alignment.js';
@@ -34,7 +35,6 @@ import {
   createFamilyChartAlignedParentageGroupPlan,
   createFamilyChartParentageGroupPlan
 } from './family-chart-parentage-group.js';
-import { resolveFamilyChartEntryFocus, resolveFamilyChartEntryMainId, resolveFamilyChartInitialViewport } from './family-chart-viewport-policy.js?v=lynne-20261004';
 import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
 import {
   insertTimeJumpAsSerialBarrier,
@@ -1130,35 +1130,19 @@ export function createFamilyChartSession(config) {
   }
 
   let family = normalizeFamily(config.family);
-  let view = { ...family.view, ...(config.view || {}) };
+  let view = completeFamilyChartView({ ...family.view, ...(config.view || {}) });
   let converted = toFamilyChartData(family, config.options);
   if (!converted.data.length) throw new Error('Der Stammbaum enthält keine darstellbare Person.');
 
-  function originRootId() {
-    const origin = family.lineage?.originHouse;
-    if (!origin?.enabled) return '';
-    const nodeId = `__origin-house-${family.document.id}-${origin.id}`;
-    return converted.data.some(entry => entry.id === nodeId) ? nodeId : '';
-  }
-
-  // Mit dem Ursprungshaus als Wurzel rendert Family Chart die Generationen vor dem
-  // Gründerpaar als Nachkommen — samt Ehepartnern und Wappenknoten der Seitenlinien.
+  let overview = createFamilyChartOverview(family, converted.data);
   function resolveDefaultMainId() {
-    const rootId = originRootId();
-    if (rootId) return rootId;
-    return view.focusPersonId && converted.data.some(entry => entry.id === view.focusPersonId)
-      ? view.focusPersonId
-      : family.persons[0]?.id;
+    return overview.rootId;
   }
 
-  let focusPersonId = resolveFamilyChartEntryMainId(
-    converted.data,
-    resolveDefaultMainId(),
-    resolveFamilyChartEntryFocus(family, config.options?.entryFocus)
-  );
+  let rootPersonId = resolveDefaultMainId();
   let destroyed = false;
   container.classList.add('f3', 'f3-cont');
-  const chart = runtime.f3.createChart(container, converted.data);
+  const chart = runtime.f3.createChart(container, overview.data);
 
   function ensureActive() {
     if (destroyed) throw new Error('Die Family-Chart-Sitzung wurde bereits beendet.');
@@ -1193,7 +1177,7 @@ export function createFamilyChartSession(config) {
   });
 
   function applyView(render = false) {
-    const chartDepths = resolveFamilyChartViewDepths(converted.data, focusPersonId, view);
+    const chartDepths = resolveFamilyChartViewDepths(overview.data, rootPersonId, view);
     chart.setTransitionTime?.(260);
     chart.setCardXSpacing?.(FAMILY_CHART_CARD_LAYOUT.horizontalSpacing);
     chart.setCardYSpacing?.(FAMILY_CHART_CARD_LAYOUT.verticalSpacing);
@@ -1262,67 +1246,18 @@ export function createFamilyChartSession(config) {
     });
   }
 
-  function initialFocusViewport() {
-    const fittedScale = Number(container.querySelector('#f3Canvas')?.__zoom?.k);
-    return resolveFamilyChartInitialViewport({
-      chartViewport: family.extensions?.chartViewport,
-      fittedScale,
-      entryPersonId: resolveFamilyChartEntryFocus(family, config.options?.entryFocus)
-    });
-  }
-
-  function centerExistingChartNode(personId, scale) {
-    const canvas = container.querySelector('#f3Canvas');
-    const zoomController = canvas?.__zoomObj;
-    const card = [...container.querySelectorAll('.card[data-id]')]
-      .find(element => element.dataset.id === personId);
-    const cardContainer = card?.closest('.card_cont');
-    if (!canvas || !zoomController || !cardContainer) return false;
-
-    const position = cardContainer.__data__;
-    const transformMatch = String(cardContainer.style.transform || '')
-      .match(/translate\(([-\d.]+)px,\s*([-\d.]+)px\)/);
-    const x = Number.isFinite(position?.x) ? position.x : Number(transformMatch?.[1]);
-    const y = Number.isFinite(position?.y) ? position.y : Number(transformMatch?.[2]);
-    if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
-
-    const canvasRect = canvas.getBoundingClientRect();
-    const targetX = canvasRect.width / 2;
-    const targetY = Math.min(FAMILY_CHART_CARD_LAYOUT.height * 0.85, canvasRect.height * 0.25);
-    const transform = runtime.d3.zoomIdentity
-      .translate(targetX - x * scale, targetY - y * scale)
-      .scale(scale);
-
-    // Family Chart 0.9.0 legt seine D3-Zoomsteuerung am Canvas ab. Der Zugriff
-    // bleibt hier im Adapter gekapselt, damit sehr breite Akten lesbar starten,
-    // ohne den Graphen ein zweites Mal aufzubauen oder Personen auszublenden.
-    runtime.d3.select(canvas).call(zoomController.transform, transform);
-    return true;
-  }
-
-  function scheduleReadableInitialViewport(personId = focusPersonId) {
-    const applyViewport = () => {
-      if (destroyed) return;
-      const focusViewport = initialFocusViewport();
-      if (focusViewport) centerExistingChartNode(personId, focusViewport.scale);
-    };
-    if (typeof runtime.requestAnimationFrame === 'function') {
-      runtime.requestAnimationFrame(() => runtime.requestAnimationFrame(applyViewport));
-    } else applyViewport();
-  }
-
   function update(nextFamily, nextView = nextFamily?.view) {
     ensureActive();
     const nextConverted = toFamilyChartData(nextFamily, config.options);
     if (!nextConverted.data.length) return false;
     family = normalizeFamily(nextFamily);
-    view = { ...family.view, ...(nextView || {}) };
+    view = completeFamilyChartView({ ...family.view, ...(nextView || {}) });
     converted = nextConverted;
-    const actualPersonIds = new Set(family.persons.map(person => person.id));
-    if (!actualPersonIds.has(focusPersonId)) focusPersonId = resolveDefaultMainId();
-    chart.updateData?.(converted.data);
+    overview = createFamilyChartOverview(family, converted.data);
+    rootPersonId = resolveDefaultMainId();
+    chart.updateData?.(overview.data);
     applyView(false);
-    chart.updateMainId?.(focusPersonId);
+    chart.updateMainId?.(rootPersonId);
     chart.updateTree?.({ initial: false, tree_position: 'inherit' });
     return true;
   }
@@ -1331,15 +1266,8 @@ export function createFamilyChartSession(config) {
     ensureActive();
     const datum = converted.data.find(person => person.id === personId);
     if (!datum || datum.data.aleria.virtualType) return false;
-    focusPersonId = personId;
-    applyView(false);
-    chart.updateMainId?.(personId);
-    const focusViewport = initialFocusViewport();
-    if (focusViewport && centerExistingChartNode(personId, focusViewport.scale)) return true;
-    chart.updateTree?.({
-      initial: false,
-      tree_position: options.fit === true ? 'fit' : 'main_to_middle'
-    });
+    // Legacy callers may request navigation; the root and full family stay fixed.
+    if (options.fit === true) fit();
     return true;
   }
 
@@ -1352,11 +1280,10 @@ export function createFamilyChartSession(config) {
     ensureActive();
     const defaultPersonId = resolveDefaultMainId();
     if (!defaultPersonId) return false;
-    focusPersonId = defaultPersonId;
+    rootPersonId = defaultPersonId;
     applyView(false);
     chart.updateMainId?.(defaultPersonId);
     chart.updateTree?.({ initial: false, tree_position: 'fit' });
-    scheduleReadableInitialViewport(defaultPersonId);
     return true;
   }
 
@@ -1408,9 +1335,8 @@ export function createFamilyChartSession(config) {
     linkRenderer.refresh(options?.transition_time);
     houseOffshootRenderer.refresh(options?.transition_time);
   });
-  chart.updateMainId?.(focusPersonId);
+  chart.updateMainId?.(rootPersonId);
   chart.updateTree?.({ initial: true, tree_position: 'fit', transition_time: 0 });
-  scheduleReadableInitialViewport(resolveFamilyChartEntryFocus(family, config.options?.entryFocus) || focusPersonId);
 
   return Object.freeze({
     update,
@@ -1422,7 +1348,8 @@ export function createFamilyChartSession(config) {
     getState() {
       ensureActive();
       return Object.freeze({
-        focusPersonId,
+        focusPersonId: '',
+        rootPersonId,
         orientation: view.orientation,
         diagnostics: converted.diagnostics
       });

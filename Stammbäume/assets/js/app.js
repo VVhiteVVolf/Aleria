@@ -1,5 +1,5 @@
 import { HOUSE_ARWYDD_FAMILY } from './data/house-arwydd-family.js';
-import { RETIRED_FAMILY_IDS } from './data/families.registry.js?v=eira-20261005';
+import { RETIRED_FAMILY_IDS } from './data/families.registry.js?v=parzifal-20261006';
 import { createFirebaseClient } from './modules/firebase-platform/firebase-client.js';
 import { createLocalImageDraftRepository } from './modules/family-assets/local-image-draft-repository.js';
 import { createGitHubFamilyRepository } from './modules/github-publication/github-family-repository.js';
@@ -20,7 +20,7 @@ import {
   WORKSPACE_MODE
 } from './services/workspace-access.js';
 import { createFamilyStore } from './state/family-store.js';
-import { createAppController } from './ui/app-controller.js?v=eira-20261005';
+import { createAppController } from './ui/app-controller.js?v=overview-20261006';
 
 const requestedQuery = new URLSearchParams(globalThis.location.search);
 const requestedFamilyId = normalizeFamilyId(requestedQuery.get('family'));

@@ -28,10 +28,10 @@ test('Cadyn ist Mablis jüngerer Bruder und erreicht vorhandene Morgwynt-Akten g
   assert.equal(cadyn.worldPersonId, 'person--haus-morgwynt--cadyn-morgwynt');
   assert.equal(updated.persons.find(person => person.id === 'mabli-morgwynt').notes, old.persons[0].notes);
   assert.equal(createFamilyGraph(updated).describeConnection('mabli-morgwynt', cadyn.id), 'Geschwister');
-  assert.equal(updated.partnerships.length, 0);
-  assert.equal(updated.persons.filter(person => person.extensions.structuralPlaceholder).length, 1);
+  assert.equal(updated.partnerships.length, registered.partnerships.length);
+  assert.equal(updated.persons.filter(person => person.extensions.structuralPlaceholder).length, 0);
   const { data } = toFamilyChartData(updated);
-  assert.deepEqual(data.find(person => person.id === cadyn.id).rels.parents, ['unknown-parent-mabli-cadyn-morgwynt']);
+  assert.deepEqual(data.find(person => person.id === cadyn.id).rels.parents, ['cadell-morgwynt', 'gwenllian-cadell-morgwynt-spouse']);
   assert.deepEqual(resolveRegisteredFamilyUpgrade(registered, updated), updated);
   await access(new URL('../' + cadyn.portrait, import.meta.url));
 });
@@ -102,15 +102,16 @@ test('Dyger ist ein niederes Ritterhaus in Talgarth und direkter Arth-Vasall', (
   assert.match(family.document.description, /keine Barddwyr/);
 });
 
-test('Tudur ist Rhys Vater, ohne erfundene Mutter, Ehe oder Hausoberhaupt', () => {
+test('Caedmon bleibt Rhys Vater mit stabiler Identität und erhält die freigegebene Familienerweiterung', () => {
   const family = assertValidFamily(HOUSE_DYGER_FAMILY).family;
-  assert.deepEqual(family.persons.map(person => person.name), ['Tudur Dyger', 'Rhy Dyger', 'Awen Dyger']);
-  assert.equal(family.partnerships.length, 0);
-  assert.equal(family.parentages.length, 1);
-  assert.equal(family.parentages[0].childId, 'rhy-dyger');
-  assert.deepEqual(family.parentages[0].parentIds, ['tudur-dyger']);
-  assert.equal(family.parentages[0].legitimacy, 'unknown');
-  assert.ok(family.persons.every(person => person.lineageRole !== 'head'));
+  const father = family.persons.find(person => person.id === 'tudur-dyger');
+  assert.equal(father.name, 'Caedmon Dyger');
+  assert.equal(father.worldPersonId, 'person--haus-dyger--tudur-dyger');
+  assert.equal(father.birth, '1691');
+  assert.equal(family.persons.length, 30);
+  const parentage = family.parentages.find(edge => edge.childId === 'rhy-dyger');
+  assert.deepEqual(parentage.parentIds, ['tudur-dyger', 'rhian-tudur-dyger-spouse']);
+  assert.equal(parentage.legitimacy, 'legitimate');
   assert.ok(family.extensions.pendingFamilySituation.openQuestions.length);
 });
 
@@ -164,10 +165,12 @@ test('Lynnes zwölf Angehörige sind mit Eiras freigegebener Abstammung eindeuti
     const person = family.persons.find(person => person.id === member.id);
     assert.equal(person.name, member.name);
     const isEira = person.id === 'eirlys-beryn';
-    assert.equal(person.birth, isEira ? '1726' : '');
-    assert.equal(family.parentages.some(edge => edge.childId === person.id || edge.parentIds.includes(person.id)), isEira || person.id === 'mabli-morgwynt');
-    assert.equal(family.partnerships.some(edge => edge.participantIds.includes(person.id)), false);
-    const candidates = FAMILY_REGISTRY.flatMap(createFamilyCandidates).filter(candidate => candidate.displayName === member.name);
+    const expanded = ['Dyger', 'Prys', 'Mathgraig', 'Penry', 'Morgwynt', 'Hirschhorn', 'Morglan'].includes(member.surname);
+    if (isEira) assert.equal(person.birth, '1726');
+    if (!expanded && !isEira) assert.equal(person.birth, '');
+    assert.equal(family.parentages.some(edge => edge.childId === person.id || edge.parentIds.includes(person.id)), expanded || isEira);
+    assert.equal(family.partnerships.some(edge => edge.participantIds.includes(person.id)), person.id === 'angharad-morglan');
+    const candidates = FAMILY_REGISTRY.flatMap(createFamilyCandidates).filter(candidate => candidate.worldPersonId === person.worldPersonId);
     assert.equal(candidates.length, 1, member.name);
     await access(new URL('../' + person.portrait, import.meta.url));
     await access(new URL('../' + family.document.emblem, import.meta.url));
@@ -195,7 +198,7 @@ test('Eira gehört als Owains und Mareds Tochter zur sichtbaren Beryn-Hauptlinie
     assert.ok(Number(eira.birth) - Number(family.persons.find(person => person.id === parentId).birth) >= 18);
   }
   const { data } = toFamilyChartData(family);
-  assert.equal(resolveFamilyChartEntryMainId(data, family.view.focusPersonId, eira.id), family.view.focusPersonId);
+  assert.equal(resolveFamilyChartEntryMainId(data, 'caradog-beryn', eira.id), 'caradog-beryn');
   assert.deepEqual(data.find(person => person.id === eira.id).rels.parents.sort(), [...parentage.parentIds].sort());
   const olderEira = family.persons.find(person => person.id === 'eira-cadell-spouse');
   assert.equal(olderEira.name, 'Eira');

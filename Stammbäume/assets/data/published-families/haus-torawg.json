@@ -1,0 +1,1658 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-torawg",
+  "revision": 1,
+  "updatedAt": "2026-10-05T22:55:55.091Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-torawg",
+      "title": "Haus Torawg",
+      "motto": "",
+      "description": "Bürgerfamilie aus Talgarth mit erfahrenen Seeleuten und einer Vorliebe für schwierige Fahrwasser. Familiengerüst seit 1628 mit Haupt- und Vetternzweigen.",
+      "emblem": "assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-torawg.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "llywelyn-torawg",
+        "worldPersonId": "person--haus-torawg--llywelyn-torawg",
+        "name": "Llywelyn Torawg",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1628",
+        "death": "1701",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "cadoc-torawg",
+        "worldPersonId": "person--haus-torawg--cadoc-torawg",
+        "name": "Cadoc Torawg",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1654",
+        "death": "1729",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "emyr-torawg",
+        "worldPersonId": "person--haus-torawg--emyr-torawg",
+        "name": "Emyr Torawg",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1659",
+        "death": "1730",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "gwenfron-torawg",
+        "worldPersonId": "person--haus-torawg--gwenfron-torawg",
+        "name": "Gwenfron Torawg",
+        "title": "Steuerfrau der Dychwelyd",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/gwenfron-torawg.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "49 Jahre. Erfahrene Seefahrerin; hat ausgesprochen viel Freude an schwerer See. Die versehentliche Schreibweise Tonfawr ist berichtigt.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death",
+            "title",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6,
+            "title": 6,
+            "portrait": 6,
+            "notes": 6
+          }
+        }
+      },
+      {
+        "id": "branoc-torawg",
+        "worldPersonId": "person--haus-torawg--branoc-torawg",
+        "name": "Branoc Torawg",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1684",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "eirwen-torawg",
+        "worldPersonId": "person--haus-torawg--eirwen-torawg",
+        "name": "Eirwen Torawg",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "carwyn-torawg",
+        "worldPersonId": "person--haus-torawg--carwyn-torawg",
+        "name": "Carwyn Torawg",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "rhun-torawg",
+        "worldPersonId": "person--haus-torawg--rhun-torawg",
+        "name": "Rhun Torawg",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1687",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "morfydd-torawg",
+        "worldPersonId": "person--haus-torawg--morfydd-torawg",
+        "name": "Morfydd Torawg",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1690",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "gethin-torawg",
+        "worldPersonId": "person--haus-torawg--gethin-torawg",
+        "name": "Gethin Torawg",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1710",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "nia-torawg",
+        "worldPersonId": "person--haus-torawg--nia-torawg",
+        "name": "Nia Torawg",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1714",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "talyn-torawg",
+        "worldPersonId": "person--haus-torawg--talyn-torawg",
+        "name": "Talyn Torawg",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "luned-torawg",
+        "worldPersonId": "person--haus-torawg--luned-torawg",
+        "name": "Luned Torawg",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1714",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "cai-torawg",
+        "worldPersonId": "person--haus-torawg--cai-torawg",
+        "name": "Cai Torawg",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "perwyn-torawg",
+        "worldPersonId": "person--haus-torawg--perwyn-torawg",
+        "name": "Perwyn Torawg",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1712",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "efa-torawg",
+        "worldPersonId": "person--haus-torawg--efa-torawg",
+        "name": "Efa Torawg",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "idwal-torawg",
+        "worldPersonId": "person--haus-torawg--idwal-torawg",
+        "name": "Idwal Torawg",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "sioned-torawg",
+        "worldPersonId": "person--haus-torawg--sioned-torawg",
+        "name": "Sioned Torawg",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "eluned-torawg",
+        "worldPersonId": "person--haus-torawg--eluned-torawg",
+        "name": "Eluned Torawg",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "dewi-torawg",
+        "worldPersonId": "person--haus-torawg--dewi-torawg",
+        "name": "Dewi Torawg",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "arwel-torawg",
+        "worldPersonId": "person--haus-torawg--arwel-torawg",
+        "name": "Arwel Torawg",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1733",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "mair-torawg",
+        "worldPersonId": "person--haus-torawg--mair-torawg",
+        "name": "Mair Torawg",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1737",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-torawg",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "elen-llywelyn-torawg-spouse",
+        "worldPersonId": "person--haus-torawg--elen-llywelyn-torawg-spouse",
+        "name": "Elen",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1633",
+        "death": "1710",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "morwen-cadoc-torawg-spouse",
+        "worldPersonId": "person--haus-torawg--morwen-cadoc-torawg-spouse",
+        "name": "Morwen",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1658",
+        "death": "1734",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "megan-emyr-torawg-spouse",
+        "worldPersonId": "person--haus-torawg--megan-emyr-torawg-spouse",
+        "name": "Megan",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1664",
+        "death": "1737",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "alaw-branoc-torawg-spouse",
+        "worldPersonId": "person--haus-torawg--alaw-branoc-torawg-spouse",
+        "name": "Alaw",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "merfyn-eirwen-torawg-spouse",
+        "worldPersonId": "person--haus-torawg--merfyn-eirwen-torawg-spouse",
+        "name": "Merfyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1685",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "heledd-rhun-torawg-spouse",
+        "worldPersonId": "person--haus-torawg--heledd-rhun-torawg-spouse",
+        "name": "Heledd",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "bedwyr-morfydd-torawg-spouse",
+        "worldPersonId": "person--haus-torawg--bedwyr-morfydd-torawg-spouse",
+        "name": "Bedwyr",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "rhian-gethin-torawg-spouse",
+        "worldPersonId": "person--haus-torawg--rhian-gethin-torawg-spouse",
+        "name": "Rhian",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1711",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-llywelyn-torawg",
+        "participantIds": [
+          "llywelyn-torawg",
+          "elen-llywelyn-torawg-spouse"
+        ],
+        "type": "marriage",
+        "status": "widowed",
+        "start": "",
+        "end": "1701",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-cadoc-torawg",
+        "participantIds": [
+          "cadoc-torawg",
+          "morwen-cadoc-torawg-spouse"
+        ],
+        "type": "marriage",
+        "status": "widowed",
+        "start": "",
+        "end": "1729",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-emyr-torawg",
+        "participantIds": [
+          "emyr-torawg",
+          "megan-emyr-torawg-spouse"
+        ],
+        "type": "marriage",
+        "status": "widowed",
+        "start": "",
+        "end": "1730",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-branoc-torawg",
+        "participantIds": [
+          "branoc-torawg",
+          "alaw-branoc-torawg-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-eirwen-torawg",
+        "participantIds": [
+          "eirwen-torawg",
+          "merfyn-eirwen-torawg-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-rhun-torawg",
+        "participantIds": [
+          "rhun-torawg",
+          "heledd-rhun-torawg-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-morfydd-torawg",
+        "participantIds": [
+          "morfydd-torawg",
+          "bedwyr-morfydd-torawg-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-gethin-torawg",
+        "participantIds": [
+          "gethin-torawg",
+          "rhian-gethin-torawg-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-cadoc-torawg",
+        "childId": "cadoc-torawg",
+        "parentIds": [
+          "llywelyn-torawg",
+          "elen-llywelyn-torawg-spouse"
+        ],
+        "partnershipId": "marriage-llywelyn-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-emyr-torawg",
+        "childId": "emyr-torawg",
+        "parentIds": [
+          "llywelyn-torawg",
+          "elen-llywelyn-torawg-spouse"
+        ],
+        "partnershipId": "marriage-llywelyn-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-branoc-torawg",
+        "childId": "branoc-torawg",
+        "parentIds": [
+          "cadoc-torawg",
+          "morwen-cadoc-torawg-spouse"
+        ],
+        "partnershipId": "marriage-cadoc-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-eirwen-torawg",
+        "childId": "eirwen-torawg",
+        "parentIds": [
+          "cadoc-torawg",
+          "morwen-cadoc-torawg-spouse"
+        ],
+        "partnershipId": "marriage-cadoc-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-gwenfron-torawg",
+        "childId": "gwenfron-torawg",
+        "parentIds": [
+          "cadoc-torawg",
+          "morwen-cadoc-torawg-spouse"
+        ],
+        "partnershipId": "marriage-cadoc-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-carwyn-torawg",
+        "childId": "carwyn-torawg",
+        "parentIds": [
+          "cadoc-torawg",
+          "morwen-cadoc-torawg-spouse"
+        ],
+        "partnershipId": "marriage-cadoc-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-rhun-torawg",
+        "childId": "rhun-torawg",
+        "parentIds": [
+          "emyr-torawg",
+          "megan-emyr-torawg-spouse"
+        ],
+        "partnershipId": "marriage-emyr-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-morfydd-torawg",
+        "childId": "morfydd-torawg",
+        "parentIds": [
+          "emyr-torawg",
+          "megan-emyr-torawg-spouse"
+        ],
+        "partnershipId": "marriage-emyr-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-gethin-torawg",
+        "childId": "gethin-torawg",
+        "parentIds": [
+          "branoc-torawg",
+          "alaw-branoc-torawg-spouse"
+        ],
+        "partnershipId": "marriage-branoc-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-nia-torawg",
+        "childId": "nia-torawg",
+        "parentIds": [
+          "branoc-torawg",
+          "alaw-branoc-torawg-spouse"
+        ],
+        "partnershipId": "marriage-branoc-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-talyn-torawg",
+        "childId": "talyn-torawg",
+        "parentIds": [
+          "branoc-torawg",
+          "alaw-branoc-torawg-spouse"
+        ],
+        "partnershipId": "marriage-branoc-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-luned-torawg",
+        "childId": "luned-torawg",
+        "parentIds": [
+          "eirwen-torawg",
+          "merfyn-eirwen-torawg-spouse"
+        ],
+        "partnershipId": "marriage-eirwen-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-cai-torawg",
+        "childId": "cai-torawg",
+        "parentIds": [
+          "eirwen-torawg",
+          "merfyn-eirwen-torawg-spouse"
+        ],
+        "partnershipId": "marriage-eirwen-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-perwyn-torawg",
+        "childId": "perwyn-torawg",
+        "parentIds": [
+          "rhun-torawg",
+          "heledd-rhun-torawg-spouse"
+        ],
+        "partnershipId": "marriage-rhun-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-efa-torawg",
+        "childId": "efa-torawg",
+        "parentIds": [
+          "rhun-torawg",
+          "heledd-rhun-torawg-spouse"
+        ],
+        "partnershipId": "marriage-rhun-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-idwal-torawg",
+        "childId": "idwal-torawg",
+        "parentIds": [
+          "rhun-torawg",
+          "heledd-rhun-torawg-spouse"
+        ],
+        "partnershipId": "marriage-rhun-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-sioned-torawg",
+        "childId": "sioned-torawg",
+        "parentIds": [
+          "rhun-torawg",
+          "heledd-rhun-torawg-spouse"
+        ],
+        "partnershipId": "marriage-rhun-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-eluned-torawg",
+        "childId": "eluned-torawg",
+        "parentIds": [
+          "morfydd-torawg",
+          "bedwyr-morfydd-torawg-spouse"
+        ],
+        "partnershipId": "marriage-morfydd-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-dewi-torawg",
+        "childId": "dewi-torawg",
+        "parentIds": [
+          "morfydd-torawg",
+          "bedwyr-morfydd-torawg-spouse"
+        ],
+        "partnershipId": "marriage-morfydd-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-arwel-torawg",
+        "childId": "arwel-torawg",
+        "parentIds": [
+          "gethin-torawg",
+          "rhian-gethin-torawg-spouse"
+        ],
+        "partnershipId": "marriage-gethin-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-mair-torawg",
+        "childId": "mair-torawg",
+        "parentIds": [
+          "gethin-torawg",
+          "rhian-gethin-torawg-spouse"
+        ],
+        "partnershipId": "marriage-gethin-torawg",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-torawg",
+        "name": "Haus Torawg",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-torawg.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-llywelyn-torawg",
+      "houseId": "house-torawg",
+      "crestSubtitle": "Bürgerfamilie aus Talgarth",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "heraldryDescription": "Auf Dunkelgrün zwei silberne sich brechende Wogen; schlichter goldener Rundrand.",
+      "sourceRevision": 6,
+      "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+      "registryManagedEntitySourceRevision": 6,
+      "registryManagedDocumentFields": [
+        "description"
+      ],
+      "registryManagedLineageFields": [
+        "founderPartnershipId"
+      ],
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "limitGenerations",
+        "showSiblings"
+      ],
+      "registryManagedExtensionFields": [
+        "sourceNote",
+        "pendingFamilySituation"
+      ],
+      "registryTombstones": {},
+      "pendingFamilySituation": {
+        "openQuestions": [
+          "Spätere Lebensereignisse und zusätzliche Angehörige bleiben offen."
+        ]
+      }
+    }
+  }
+}

@@ -4,27 +4,25 @@ import { resolveFamilyChartEntryFocus, resolveFamilyChartEntryMainId, resolveFam
 
 const family = { document: { id: 'haus-pendrag' }, persons: [{ id: 'uther-1643-pendrag' }] };
 
-test('Unverbundene Angehörige sind über Personenlinks sichtbar, ohne Abstammungen zu erfinden', () => {
+test('Personenlinks wechseln auch bei getrennten Zweigen nicht zu einer Einzelansicht', () => {
   const data = [
     { id: 'tudur', rels: { children: ['rhy'] } },
     { id: 'rhy', rels: { parents: ['tudur'] } },
     { id: 'awen', rels: {} }
   ];
   const before = structuredClone(data);
-  assert.equal(resolveFamilyChartEntryMainId(data, 'tudur', 'awen'), 'awen');
+  assert.equal(resolveFamilyChartEntryMainId(data, 'tudur', 'awen'), 'tudur');
   assert.equal(resolveFamilyChartEntryMainId(data, 'tudur', 'rhy'), 'tudur');
   assert.equal(resolveFamilyChartEntryMainId(data, 'tudur', 'unbekannt'), 'tudur');
   assert.equal(resolveFamilyChartEntryMainId(data, 'tudur'), 'tudur');
   assert.deepEqual(data, before);
 });
 
-test('Ein gültiger Personenlink erhält einen lesbaren Fokus, auch in kleinen Stammbäumen', () => {
+test('Ein gültiger Personenlink verändert die eingepasste Gesamtansicht nicht', () => {
   const before = JSON.stringify(family);
   const entryPersonId = resolveFamilyChartEntryFocus(family, { familyId: 'haus-pendrag', personId: 'uther-1643-pendrag' });
   assert.equal(entryPersonId, 'uther-1643-pendrag');
-  assert.deepEqual(resolveFamilyChartInitialViewport({ fittedScale: 0.8, entryPersonId }), {
-    mode: 'focus', scale: 0.55, reason: 'person-link'
-  });
+  assert.equal(resolveFamilyChartInitialViewport({ fittedScale: 0.8, entryPersonId }), null);
   assert.equal(JSON.stringify(family), before);
 });
 
@@ -34,8 +32,8 @@ test('Ungültige Personen und andere Familien übernehmen den Linkfokus nicht', 
   }
 });
 
-test('Ohne Personenlink bleiben bisherige Startansichten erhalten', () => {
+test('Auch große Bäume und alte Fokuseinstellungen starten vollständig eingepasst', () => {
   assert.equal(resolveFamilyChartInitialViewport({ fittedScale: 0.8 }), null);
-  assert.equal(resolveFamilyChartInitialViewport({ fittedScale: 0.1 }).reason, 'oversized-tree');
-  assert.equal(resolveFamilyChartInitialViewport({ chartViewport: { initialPosition: 'focus', initialScale: 0.6 } }).scale, 0.6);
+  assert.equal(resolveFamilyChartInitialViewport({ fittedScale: 0.1 }), null);
+  assert.equal(resolveFamilyChartInitialViewport({ chartViewport: { initialPosition: 'focus', initialScale: 0.6 } }), null);
 });

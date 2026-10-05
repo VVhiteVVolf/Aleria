@@ -137,7 +137,6 @@ export function renderPersonInspector(container, graph, personId) {
         <button class="button button--quiet" type="button" data-action="open-person-edit">Person bearbeiten</button>
         <button class="button button--quiet" type="button" data-action="open-person-biography">Biographie bearbeiten</button>
         <button class="button button--quiet" type="button" data-action="open-almanach-characters">Almanach-Person zuordnen</button>
-        <button class="button button--quiet" type="button" data-action="focus-person">Im Baum zentrieren</button>
         <button class="button button--danger" type="button" data-action="delete-person">Person löschen</button>
       </footer>
     </article>

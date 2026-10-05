@@ -1,0 +1,1151 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "createdAt": "2026-10-05T23:08:49.945Z",
+  "module": {
+    "type": "custom",
+    "version": 1,
+    "section": {
+      "desc": "",
+      "nodeId": "node:gruppen:klaueninseln/haus-arth",
+      "path": [
+        "Klaueninseln",
+        "Haus Arth"
+      ],
+      "key": "Haus Arth",
+      "tab": "Gruppen"
+    },
+    "entry": {
+      "id": "parzifals-schiffsmannschaft",
+      "title": "Parzifals Schiffsmannschaft",
+      "subtitle": "Die Besatzung der Dychwelyd",
+      "type": "Story",
+      "category": "Gefolge",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "image": "/Stammbäume/assets/images/portraits/haus-grawn/parzifal-arth.jpg",
+      "stamp": "HAUS ARTH · KLAUENINSELN",
+      "icon": "",
+      "symbol": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+      "locked": false,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "schemaVersion": 1,
+      "multipage": true,
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Besatzung der Dychwelyd",
+          "image": "/Stammbäume/assets/images/portraits/haus-grawn/parzifal-arth.jpg",
+          "imageWidth": 38,
+          "imageFit": "contain",
+          "description": "<p style=\"vertical-align:top;\">Die <b>Dychwelyd</b> ist das pers&ouml;nliche Schiff von <b>Sir Parzifal Arth</b>, Graf der Klaueninseln, Seemarschall Cenyrs und Ritter der Tafelrunde. Ihr Heimathafen ist <b>Talgarth</b>, die Hauptstadt der Klaueninseln, von wo aus sie bis heute f&uuml;r die Verteidigung der Grafschaft und im Dienste der cenyriischen Krone ausl&auml;uft. Sie dient Parzifal gleicherma&szlig;en als Kriegsschiff, Flaggschiff und Reiseschiff und ist seit vielen Jahren eng mit seinem pers&ouml;nlichen Werdegang verbunden. In den Gew&auml;ssern um die Klaueninseln ist die <i>Dychwelyd</i> daher weit mehr als nur eines der Schiffe der dortigen Flotte. F&uuml;r viele Bewohner der Inseln ist sie beinahe ebenso untrennbar mit ihrem Grafen verbunden wie dessen Wappen und Titel.</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">Ihr Name bedeutet <b>&bdquo;Heimkehr&ldquo;</b> und erwies sich im Laufe ihrer Geschichte als ausgesprochen passend. So weit die Reisen Parzifals ihn und seine Mannschaft auch f&uuml;hrten, die <i>Dychwelyd</i> kehrte immer wieder nach Talgarth zur&uuml;ck. Sie begleitete ihn bereits w&auml;hrend jener Jahre, in denen der junge Ritter weit &uuml;ber die Grenzen seiner Heimat hinausreiste, und trug nicht nur Angeh&ouml;rige des Hauses Arth, sondern auch Mitglieder der <b>Tafelrunde</b> &uuml;ber das Meer. Selbst <b>K&ouml;nig Tristan Pendrag</b> befand sich w&auml;hrend gemeinsamer Fahrten an Bord. Diese Vergangenheit tr&auml;gt das Schiff bis heute sichtbar mit sich. Neben dem Zeichen des Hauses Arth werden an Bord auch die Zeichen der Tafelrunde und des K&ouml;nigshauses Pendrag gef&uuml;hrt &ndash; nicht als blo&szlig;er Schmuck, sondern als Erinnerung an jene, die einst auf ihren Planken standen.</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">Trotz dieser Vergangenheit ist die <i>Dychwelyd</i> keineswegs zu einem schwimmenden Denkmal geworden. Unter Parzifals Kommando steht sie weiterhin im aktiven Dienst. Sie liegt als Warnung an die Nordm&auml;nner im Hafen von Talgarth und beteiligt sich an der Jagd auf Piraten und nordm&auml;nnische Pl&uuml;nderer und kann im Kriegsfall gemeinsam mit der Flotte Cenyrs auslaufen. Als <b>Seemarschall Cenyrs</b> f&uuml;hrt Parzifal von ihrem Deck aus zudem Verb&auml;nde der k&ouml;niglichen Flotte, wenn sein pers&ouml;nliches Eingreifen erforderlich ist.</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">Einen wesentlichen Teil ihres Rufes verdankt die <i>Dychwelyd</i> ihrer Besatzung. Zahlreiche Mitglieder der Mannschaft fahren bereits seit Parzifals jungen Jahren gemeinsam zur See. Manche begleiteten ihn auf seinen fr&uuml;hen Reisen, andere stie&szlig;en erst sp&auml;ter hinzu. Aus einer gew&ouml;hnlichen Schiffsbesatzung entstand &uuml;ber die Jahre ein ungew&ouml;hnlich enges Gef&uuml;ge aus Seeleuten, Rittern, Waffenknechten, Handwerkern und alten Weggef&auml;hrten. An Bord befinden sich daher M&auml;nner und Frauen, die einander seit Jahrzehnten kennen und deren Aufgabenverteilung h&auml;ufig weit &auml;lter ist als die &Auml;mter und Titel, die sie heute tragen.</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">An Parzifals Seite steht als Erster Maat <b>Yhon Blodyn</b>, ein Vennyr und Paladin der Dame des Sees, dessen eigenes Schicksal eng mit dem Untergang seiner Heimat verbunden ist. Daneben geh&ouml;ren erfahrene Seeleute wie <b>Lwyd Pawen</b>, <b>Gwenfron Torawg</b>, <b>Gereint Mathgraig</b>, <b>Tegid Cwingod</b> und <b>Iorwerth Penry</b> zur Schiffsf&uuml;hrung. Mit <b>Sir Iestyn Ddraenen</b> befindet sich zudem Parzifals ehemaliger Knappe und heutiger pers&ouml;nlicher Leibw&auml;chter an Bord.</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">So ist die <i>Dychwelyd</i> heute gleicherma&szlig;en <b>Kriegsschiff, Heimstatt und lebendiges St&uuml;ck cenyriischer Geschichte</b>. Auf ihren Planken standen Ritter der Tafelrunde und ein K&ouml;nig, doch f&uuml;r ihre Mannschaft besitzt dies kaum mehr Bedeutung als die zahllosen gew&ouml;hnlichen Fahrten, St&uuml;rme, K&auml;mpfe und Abende, die sie gemeinsam erlebt hat. Ihr Name verspricht keine Eroberung und keinen Sieg. Er verspricht lediglich, dass am Ende einer jeden Reise ein Weg zur&uuml;ck nach Hause besteht.</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\"><b>Name</b><br />\r\nDychwelyd &ndash; &bdquo;Heimkehr&ldquo;</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\"><b>Kriegsschiff und pers&ouml;nliches Flaggschiff des Grafen der Klaueninseln, des Seemarschalls Cenyrs und des K&ouml;nigs von Cenyr</b></p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\"><b>Hauptquartier</b><br />\r\nHafen von Talgarth, Klaueninseln</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\"><b>Anf&uuml;hrer</b><br />\r\nSir Parzifal Arth, Kapit&auml;n &middot; Graf der Klaueninseln &middot; Seemarschall Cenyrs &middot; Ritter der Tafelrunde</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\"><b>Zugeh&ouml;rigkeit</b><br />\r\nHaus Arth &middot; Grafschaft der Klaueninseln &middot; K&ouml;nigreich Cenyr</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\"><b>Mitgliederst&auml;rke</b><br />\r\nSt&auml;ndige Schiffsbesatzung von siebzig Mitgliedern, &nbsp;zuz&uuml;glich eingeschiffter Waffenknechte, Ritter und weiterer Gefolgsleute je nach Auftrag.</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\"><b>Dienst</b><br />\r\nK&uuml;stenschutz &middot; Flottenf&uuml;hrung &middot; Piratenbek&auml;mpfung &middot; Bek&auml;mpfung nordm&auml;nnischer Pl&uuml;nderer &middot; Teilnahme an Seeschlachten</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\"><b>Ziel</b><br />\r\nSchutz der Klaueninseln und der cenyriischen Gew&auml;sser, Unterst&uuml;tzung der k&ouml;niglichen Flotte sowie sichere Bef&ouml;rderung des Hauses Arth, der Krone und ihrer Schutzbefohlenen.</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\"><span style=\"font-size:22px\"><b>Hierachie</b></span>:</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<h4><span style=\"font-size:16px\">Schiffskapit&auml;n</span></h4>\r\n\r\n<p style=\"vertical-align:top;\"><img alt=\"dd07609913467809df318bd07e9810efac724102\" src=\"https://64.media.tumblr.com/a0993284325a421c32377f51418c4a61/d637d5597cd1ad6d-a1/s250x400/dd07609913467809df318bd07e9810efac724102.jpg\" style=\"height:195px; width:130px\" /></p>\r\n\r\n<p style=\"vertical-align:top;\"><span style=\"font-size:14px\"><b>Parzifal Arth</b></span></p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<section><article>\r\n<h4><span style=\"font-size:16px\">Erster Maat</span></h4>\r\n\r\n<p style=\"vertical-align:top;\"><i>Stellvertreter des Kapit&auml;ns und verantwortlich f&uuml;r die Umsetzung seiner Befehle im t&auml;glichen Schiffsbetrieb.</i></p>\r\n\r\n<p style=\"vertical-align:top;\"><img alt=\"OjI4MCQ.png\" src=\"https://i.imgur.com/OjI4MCQ.png\" style=\"height:195px; width:130px\" /></p>\r\n\r\n<p style=\"vertical-align:top;\"><span style=\"font-size:14px\"><b>Yhon Blodyn</b></span></p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n</article>\r\n\r\n<article>\r\n<h4><span style=\"font-size:16px\">Zweiter Maat</span></h4>\r\n\r\n<p style=\"vertical-align:top;\">Unterst&uuml;tzt den Ersten Maat, beaufsichtigt Wachen und &uuml;bernimmt dessen Aufgaben bei Bedarf.</p>\r\n\r\n<p style=\"vertical-align:top;\"><img alt=\"RPtfnai.png\" src=\"https://i.imgur.com/RPtfnai.png\" style=\"height:195px; width:130px\" /></p>\r\n\r\n<p style=\"vertical-align:top;\"><b><span style=\"font-size:14px\">Tegid Cwingod</span></b></p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n\r\n<p style=\"vertical-align:top;\">&nbsp;</p>\r\n</article>\r\n</section>\r\n\r\n<section><article>\r\n<h4><span style=\"font-size:16px\">Steuermann</span></h4>\r\n\r\n<p style=\"vertical-align:top;\"><i>Ein Steuermann ist die f&uuml;r die Navigation und Kurslenkung verantwortliche Person an Bord eines Schiffes oder Bootes.</i></p>\r\n\r\n<h4><img alt=\"zspvr26.png\" src=\"https://i.imgur.com/zspvr26.png\" style=\"height:195px; width:130px\" /></h4>\r\n\r\n<p style=\"vertical-align:top;\"><span style=\"font-size:14px\"><b>Gwenfron Torawg (49)</b></span></p>",
+          "stats": [
+            [
+              "Name",
+              "Dychwelyd – „Heimkehr“"
+            ],
+            [
+              "Hauptquartier",
+              "Hafen von Talgarth, Klaueninseln"
+            ],
+            [
+              "Anführer",
+              "Sir Parzifal Arth · Graf der Klaueninseln · Seemarschall Cenyrs · Ritter der Tafelrunde"
+            ],
+            [
+              "Zugehörigkeit",
+              "Haus Arth · Grafschaft der Klaueninseln · Königreich Cenyr"
+            ],
+            [
+              "Mitgliederstärke",
+              "70 ständige Besatzungsmitglieder; eingeschiffte Gefolgsleute kommen je nach Auftrag hinzu."
+            ],
+            [
+              "Dienst",
+              "Küstenschutz · Flottenführung · Piratenbekämpfung · Seeschlachten"
+            ]
+          ],
+          "quote": "Heimkehr.",
+          "quoteBy": "Der Name Dychwelyd",
+          "enableComments": true,
+          "commentDivider": true,
+          "commentThreadKey": "0"
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Sir Parzifal Arth",
+          "image": "/Stammbäume/assets/images/portraits/haus-grawn/parzifal-arth.jpg",
+          "imageWidth": 38,
+          "imageFit": "contain",
+          "description": "<p><b>Sir Parzifal Arth</b> (1694), Graf der Klaueninseln, Seemarschall Cenyrs und Ritter der Tafelrunde, führt die Dychwelyd. Er ist mit Ceridwen Grawn verheiratet und Vater der Zwillinge Rhydian und Lynne Arth.</p><p><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-arth&amp;person=parzifal-arth&amp;mode=view\">Bestehende Familienakte und Porträt</a></p>",
+          "stats": [
+            [
+              "Alter",
+              "46 Jahre"
+            ],
+            [
+              "Schiff",
+              "Dychwelyd"
+            ]
+          ],
+          "commentThreadKey": "1"
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie der Mannschaft",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "layoutMode": "vertical",
+            "treeDisplayMode": "tabs",
+            "cardFontScale": 92,
+            "portraitScale": 100,
+            "chartScale": 83,
+            "eyebrow": "Hierarchie",
+            "subtitle": "Die Schiffsmannschaft",
+            "centerLabel": "Aufbau der Besatzung",
+            "emblem": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+            "sideImage": "",
+            "organizationTitle": "Die Besatzung der Dychwelyd",
+            "motto": "Heimkehr · Talgarth · Klaueninseln",
+            "description": "Erfahrene Seeleute, Ritter, Handwerker und langjährige Weggefährten unter Sir Parzifal Arth.",
+            "detailsTitle": "Schiff und Mannschaft",
+            "details": [
+              {
+                "icon": "",
+                "label": "Heimathafen",
+                "value": "Talgarth, Klaueninseln"
+              },
+              {
+                "icon": "",
+                "label": "Ständige Besatzung",
+                "value": "70 Menschen · zwei Bordtiere"
+              }
+            ],
+            "chartTitle": "Hierarchie der Dychwelyd",
+            "chartIntro": "21 benannte Mitglieder und 49 weitere Stellen. Alle Führungs- und Fachposten sind besetzt; zusätzliche eingeschiffte Gefolgsleute zählen gesondert.",
+            "trees": [
+              {
+                "id": "fuehrung",
+                "parentTreeId": "",
+                "label": "Schiffsführung und Fachposten",
+                "levels": [
+                  {
+                    "label": "Kommando",
+                    "nodes": [
+                      {
+                        "id": "parzifal-arth",
+                        "title": "Schiffskapitän",
+                        "subtitle": "Parzifal Arth",
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-grawn/parzifal-arth.jpg",
+                        "text": "<strong>46 Jahre. </strong><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-arth&amp;person=parzifal-arth&amp;mode=view\">Familienakte: Arth</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Maate",
+                    "nodes": [
+                      {
+                        "id": "yhon-blodyn",
+                        "title": "Erster Maat",
+                        "subtitle": "Yhon Blodyn",
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-blodyn/yhon-blodyn.jpg",
+                        "text": "<strong>47 Jahre. </strong><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-blodyn&amp;person=yhon-blodyn&amp;mode=view\">Familienakte: Blodyn</a>"
+                      },
+                      {
+                        "id": "tegid-cwningod",
+                        "title": "Zweiter Maat",
+                        "subtitle": "Tegid Cwingod",
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-pawen/tegid-cwningod.jpg",
+                        "text": "<strong>45 Jahre. </strong><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-cwningod&amp;person=tegid-cwningod&amp;mode=view\">Familienakte: Cwingod</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Kurs und Seelsorge",
+                    "nodes": [
+                      {
+                        "id": "gwenfron-torawg",
+                        "title": "Steuerfrau",
+                        "subtitle": "Gwenfron Torawg",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/gwenfron-torawg.png",
+                        "text": "<strong>49 Jahre. </strong>Erfahrene Seefahrerin; hat ausgesprochen viel Freude an schwerer See.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-torawg&amp;person=gwenfron-torawg&amp;mode=view\">Familienakte: Torawg</a>"
+                      },
+                      {
+                        "id": "bethan-elder-prys",
+                        "title": "Schiffskaplan",
+                        "subtitle": "Bethan Prys",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/bethan-prys-elder.png",
+                        "text": "<strong>58 Jahre. </strong>Streiter Baldrans; ruhig, väterlich und trocken-humorig. Oenrics Vater und Onkel der namensgleichen Schiffskaplanin Lynnes.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-prys&amp;person=bethan-elder-prys&amp;mode=view\">Familienakte: Prys</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Deck und Navigation",
+                    "nodes": [
+                      {
+                        "id": "lwyd-pawen",
+                        "title": "Bootsmann",
+                        "subtitle": "Lwyd Pawen",
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-mwyalchen/lwyd-pawen.jpg",
+                        "text": "<strong>43 Jahre. </strong><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-pawen&amp;person=lwyd-pawen&amp;mode=view\">Familienakte: Pawen</a>"
+                      },
+                      {
+                        "id": "gereint-mathgraig",
+                        "title": "Navigator",
+                        "subtitle": "Gereint Mathgraig",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/gereint-mathgraig.jpg",
+                        "text": "<strong>46 Jahre. </strong>Nests älterer Bruder; Bruder von Uwchric und Seithen. Bestimmt den Kurs anhand von Karten, Sternen und Landmarken.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-mathgraig&amp;person=gereint-mathgraig&amp;mode=view\">Familienakte: Mathgraig</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Versorgung und Verwaltung",
+                    "nodes": [
+                      {
+                        "id": "iorwerth-penry",
+                        "title": "Quartiermeister",
+                        "subtitle": "Iorwerth Penry",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/iorwerth-penry.png",
+                        "text": "<strong>52 Jahre. </strong>Jüngerer Bruder Rhun Penrys, des Vogtes der Arth; Großonkel Meleris und Maelbans. Verwaltet Vorräte, Ausrüstung und Lagerbestände.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-penry&amp;person=iorwerth-penry&amp;mode=view\">Familienakte: Penry</a>"
+                      },
+                      {
+                        "id": "livia-cassiana",
+                        "title": "Schiffsmeier",
+                        "subtitle": "Livia Cassiana",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/livia-cassiana.png",
+                        "text": "<strong>46 Jahre. </strong>Finanz- und Handelsexpertin aus einer Bankiersfamilie in Venalys. Verwaltet Schiffskasse, Sold und wertvolle Güter."
+                      },
+                      {
+                        "id": "tudur-dyger",
+                        "title": "Schiffsmusikant",
+                        "subtitle": "Caedmon Dyger",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/caedmon-dyger.jpg",
+                        "text": "<strong>49 Jahre. </strong>Vater Rhy Dygers, Gemahl Rhians und langjähriger Schiffsmusikant Parzifal Arths. Bei Rhys Geburt war er 22. Morwyr-Tradition und Musikantenschule der Familie; kein ausgebildeter Barddwyr.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-dyger&amp;person=tudur-dyger&amp;mode=view\">Familienakte: Dyger</a>"
+                      },
+                      {
+                        "id": "enid-pluen",
+                        "title": "Schreiberin / Adjutantin",
+                        "subtitle": "Enid Pluen",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/enid-pluen.png",
+                        "text": "<strong>36 Jahre. </strong>36 Jahre. Von Parzifals Gemahlin für den Dienst an Bord ausgewählt. Organisiert Korrespondenz, Befehle und Verwaltung.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-pluen&amp;person=enid-pluen&amp;mode=view\">Familienakte: Pluen</a>"
+                      },
+                      {
+                        "id": "halvard-hirschhorn",
+                        "title": "Schiffskoch",
+                        "subtitle": "Halvard Hirschhorn",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/halvard-hirschhorn.jpg",
+                        "text": "<strong>50 Jahre. </strong>Sigrids Vater und Gemahl Ingas; Hirdmann und Schiffskoch. Nennt sich hervorragenden Koch. Seine Kameraden behaupten, er verhaue vor allem das Fleisch.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-hirschhorn&amp;person=halvard-hirschhorn&amp;mode=view\">Familienakte: Hirschhorn</a>"
+                      },
+                      {
+                        "id": "huw-morglan",
+                        "title": "Proviantmeister",
+                        "subtitle": "Huw Morglan",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/portraits-2026-10-06/huw-morglan.png",
+                        "text": "<strong>50 Jahre. </strong>50 Jahre. Vater Saithars, jüngerer Bruder Angharads. Kupferrotes Haar und graublaue Augen wie Saithar; beaufsichtigt Schiffsproviant und haltbare Vorräte. Morglan ist nicht Morlan.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morglan&amp;person=huw-morglan&amp;mode=view\">Familienakte: Morglan</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Handwerk und Heilkunde",
+                    "nodes": [
+                      {
+                        "id": "tadgh-darach",
+                        "title": "Schiffszimmermann",
+                        "subtitle": "Tadgh Darach",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/tadgh-darach.png",
+                        "text": "<strong>48 Jahre. </strong>Albe und Meisterhandwerker aus Mathringen; die Dychwelyd wurde sein neues Zuhause. Hält Rumpf, Masten und Deck seetüchtig."
+                      },
+                      {
+                        "id": "anselm-gerwig",
+                        "title": "Feldscher",
+                        "subtitle": "Anselm Gerwig",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/anselm-gerwig.png",
+                        "text": "<strong>55 Jahre. </strong>Methodischer und fürsorglicher Feldscher aus Mathringen, mit rabenschwarzem Humor."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Bordwache und Verteidigung",
+                    "nodes": [
+                      {
+                        "id": "brychan-beryn",
+                        "title": "Waffenmeister",
+                        "subtitle": "Brychan Beryn",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/brychan-beryn.png",
+                        "text": "<strong>54 Jahre. </strong><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-beryn&amp;person=brychan-beryn&amp;mode=view\">Familienakte: Beryn</a>"
+                      },
+                      {
+                        "id": "cadell-morgwynt",
+                        "title": "Wachmeister",
+                        "subtitle": "Cadell Morgwynt",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/cadell-morgwynt.png",
+                        "text": "<strong>49 Jahre. </strong>49 Jahre. Vater von Mabli und Cadyn, Gemahl Gwenllians. Führt Parzifals Bordwachen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;person=cadell-morgwynt&amp;mode=view\">Familienakte: Morgwynt</a>"
+                      },
+                      {
+                        "id": "iestyn-ddraenen",
+                        "title": "Ritter zur See / Leibwächter",
+                        "subtitle": "Iestyn Ddraenen",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/iestyn-ddraenen.jpg",
+                        "text": "<strong>40 Jahre. </strong>40 Jahre. Parzifals früherer Knappe und heutiger persönlicher Leibwächter. Familienwappen dem Dornzweig mit roter Blüte auf seiner Rüstung entnommen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-ddraenen&amp;person=iestyn-ddraenen&amp;mode=view\">Familienakte: Ddraenen</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Erfahrene Seeleute",
+                    "nodes": [
+                      {
+                        "id": "tudur-morlan",
+                        "title": "Altmatrose",
+                        "subtitle": "Tudur Morlan",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/tudur-morlan.png",
+                        "text": "<strong>72 Jahre. </strong>72 Jahre. War schon an Bord, als Parzifal mit 18 Jahren erstmals das Schiff betrat, und nennt ihn gelegentlich noch Junge. Angehöriger von Morlan, nicht Morglan.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morlan&amp;person=tudur-morlan&amp;mode=view\">Familienakte: Morlan</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Mast und Segel",
+                    "nodes": [
+                      {
+                        "id": "edern-morgwynt",
+                        "title": "Ausguck / Späher",
+                        "subtitle": "Edern Morgwynt",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/portraits-2026-10-06/edern-morgwynt.png",
+                        "text": "<strong>57 Jahre. </strong>57 Jahre. Vater Helbans und älterer Bruder Cadells. Braunes Haar, graublaue Augen wie Helban; erfahrener Ausguck im Krähennest.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;person=edern-morgwynt&amp;mode=view\">Familienakte: Morgwynt</a>"
+                      },
+                      {
+                        "id": "seithen-mathgraig",
+                        "title": "Segelmeister",
+                        "subtitle": "Seithen Mathgraig",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/portraits-2026-10-06/seithen-mathgraig.png",
+                        "text": "<strong>48 Jahre. </strong>48 Jahre. Bruder von Uwchric, Gereint und Nest; kupferrotes Haar und braune Augen wie Uwchric. Beaufsichtigt Segelführung und Takelage.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-mathgraig&amp;person=seithen-mathgraig&amp;mode=view\">Familienakte: Mathgraig</a>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "besatzung",
+                "parentTreeId": "fuehrung",
+                "label": "Weitere Besatzung",
+                "levels": [
+                  {
+                    "label": "Decksmannschaft · 1–6",
+                    "nodes": [
+                      {
+                        "id": "stelle-matrose-1",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-2",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-3",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-4",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-5",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-6",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Decksmannschaft · 7–12",
+                    "nodes": [
+                      {
+                        "id": "stelle-matrose-7",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-8",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-9",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-10",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-11",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-12",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Decksmannschaft · 13–18",
+                    "nodes": [
+                      {
+                        "id": "stelle-matrose-13",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-14",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-15",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-16",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-17",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-18",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Decksmannschaft · 19–24",
+                    "nodes": [
+                      {
+                        "id": "stelle-matrose-19",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-20",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-21",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-22",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-23",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-24",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Decksmannschaft · 25–30",
+                    "nodes": [
+                      {
+                        "id": "stelle-matrose-25",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-26",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-27",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-28",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-29",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-30",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Decksmannschaft · 31–32",
+                    "nodes": [
+                      {
+                        "id": "stelle-matrose-31",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-matrose-32",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Bordwachen · 1–6",
+                    "nodes": [
+                      {
+                        "id": "stelle-waffenknecht-1",
+                        "title": "Waffenknecht",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-waffenknecht-2",
+                        "title": "Waffenknecht",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-waffenknecht-3",
+                        "title": "Waffenknecht",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-waffenknecht-4",
+                        "title": "Waffenknecht",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-waffenknecht-5",
+                        "title": "Waffenknecht",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-waffenknecht-6",
+                        "title": "Waffenknecht",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Bordwachen · 7–12",
+                    "nodes": [
+                      {
+                        "id": "stelle-waffenknecht-7",
+                        "title": "Waffenknecht",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-waffenknecht-8",
+                        "title": "Waffenknecht",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-waffenknecht-9",
+                        "title": "Waffenknecht",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-waffenknecht-10",
+                        "title": "Waffenknecht",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-waffenknecht-11",
+                        "title": "Waffenknecht",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-waffenknecht-12",
+                        "title": "Waffenknecht",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Versorgungsgehilfen",
+                    "nodes": [
+                      {
+                        "id": "stelle-gehilfe-1",
+                        "title": "Gehilfe",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-gehilfe-2",
+                        "title": "Gehilfe",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-gehilfe-3",
+                        "title": "Gehilfe",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-gehilfe-4",
+                        "title": "Gehilfe",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      },
+                      {
+                        "id": "stelle-gehilfe-5",
+                        "title": "Gehilfe",
+                        "subtitle": "Nicht benannt",
+                        "text": "",
+                        "portrait": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "bordtiere",
+                "parentTreeId": "",
+                "label": "Bordtiere",
+                "levels": [
+                  {
+                    "label": "Bordtiere",
+                    "nodes": [
+                      {
+                        "id": "caradog-schnuffel",
+                        "title": "Bordbär",
+                        "subtitle": "Caradog „Schnuffel“",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/caradog-schnuffel.png",
+                        "text": "<strong></strong>Extrem territorial: Schiff und Mannschaft sind sein Revier und seine Leute. Nach einem verlorenen Duell gegen Parzifal kam er an Bord, um sich regelmäßig erneut mit ihm zu messen. Benannt werden sollte er nach Caradoc Arth, dem Gründer des Hauses. Bei der Taufe verstand jemand jedoch Caradog – und der Bär war für eine nachträgliche Rechtschreibdiskussion nicht zu gewinnen. Parzifal nennt ihn ohnehin nur Schnuffel."
+                      },
+                      {
+                        "id": "sir-morchyn",
+                        "title": "Schiffskatze · Rattenfänger im Ruhestand",
+                        "subtitle": "Sir Morchyn",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/sir-morchyn.png",
+                        "text": "<strong></strong>Altehrwürdiger Rattenfänger im Ruhestand. Inzwischen hauptsächlich für Schlafen und Urteilen zuständig."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "familien",
+                "parentTreeId": "",
+                "label": "Familien der Besatzung",
+                "levels": [
+                  {
+                    "label": "Familienakten · 1–6",
+                    "nodes": [
+                      {
+                        "title": "Haus Arth",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-arth&amp;mode=view\">Stammbaum öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Blodyn",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Blütenland/haus-blodyn.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-blodyn&amp;mode=view\">Stammbaum öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Cwingod",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/haus-cwningod.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-cwningod&amp;mode=view\">Stammbaum öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Torawg",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-torawg.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-torawg&amp;mode=view\">Stammbaum öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Prys",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-prys.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-prys&amp;mode=view\">Stammbaum öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Pawen",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/haus-pawen.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-pawen&amp;mode=view\">Stammbaum öffnen</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Familienakten · 7–12",
+                    "nodes": [
+                      {
+                        "title": "Haus Mathgraig",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-mathgraig.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-mathgraig&amp;mode=view\">Stammbaum öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Penry",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-penry.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-penry&amp;mode=view\">Stammbaum öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Beryn",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/haus-beryn.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-beryn&amp;mode=view\">Stammbaum öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Dyger",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Talgarth/Klaueninseln/haus-dyger.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-dyger&amp;mode=view\">Stammbaum öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Morgwynt",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;mode=view\">Stammbaum öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Ddraenen",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-ddraenen.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-ddraenen&amp;mode=view\">Stammbaum öffnen</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Familienakten · 13–16",
+                    "nodes": [
+                      {
+                        "title": "Haus Pluen",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-pluen.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-pluen&amp;mode=view\">Stammbaum öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Hirschhorn",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-hirschhorn.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-hirschhorn&amp;mode=view\">Stammbaum öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Morlan",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-morlan.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morlan&amp;mode=view\">Stammbaum öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Morglan",
+                        "subtitle": "",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morglan.png",
+                        "text": "<a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morglan&amp;mode=view\">Stammbaum öffnen</a>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [
+              {
+                "label": "Kommando",
+                "nodes": [
+                  {
+                    "id": "parzifal-arth",
+                    "title": "Schiffskapitän",
+                    "subtitle": "Parzifal Arth",
+                    "portrait": "/Stammbäume/assets/images/portraits/haus-grawn/parzifal-arth.jpg",
+                    "text": "<strong>46 Jahre. </strong><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-arth&amp;person=parzifal-arth&amp;mode=view\">Familienakte: Arth</a>"
+                  }
+                ]
+              },
+              {
+                "label": "Maate",
+                "nodes": [
+                  {
+                    "id": "yhon-blodyn",
+                    "title": "Erster Maat",
+                    "subtitle": "Yhon Blodyn",
+                    "portrait": "/Stammbäume/assets/images/portraits/haus-blodyn/yhon-blodyn.jpg",
+                    "text": "<strong>47 Jahre. </strong><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-blodyn&amp;person=yhon-blodyn&amp;mode=view\">Familienakte: Blodyn</a>"
+                  },
+                  {
+                    "id": "tegid-cwningod",
+                    "title": "Zweiter Maat",
+                    "subtitle": "Tegid Cwingod",
+                    "portrait": "/Stammbäume/assets/images/portraits/haus-pawen/tegid-cwningod.jpg",
+                    "text": "<strong>45 Jahre. </strong><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-cwningod&amp;person=tegid-cwningod&amp;mode=view\">Familienakte: Cwingod</a>"
+                  }
+                ]
+              },
+              {
+                "label": "Kurs und Seelsorge",
+                "nodes": [
+                  {
+                    "id": "gwenfron-torawg",
+                    "title": "Steuerfrau",
+                    "subtitle": "Gwenfron Torawg",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/gwenfron-torawg.png",
+                    "text": "<strong>49 Jahre. </strong>Erfahrene Seefahrerin; hat ausgesprochen viel Freude an schwerer See.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-torawg&amp;person=gwenfron-torawg&amp;mode=view\">Familienakte: Torawg</a>"
+                  },
+                  {
+                    "id": "bethan-elder-prys",
+                    "title": "Schiffskaplan",
+                    "subtitle": "Bethan Prys",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/bethan-prys-elder.png",
+                    "text": "<strong>58 Jahre. </strong>Streiter Baldrans; ruhig, väterlich und trocken-humorig. Oenrics Vater und Onkel der namensgleichen Schiffskaplanin Lynnes.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-prys&amp;person=bethan-elder-prys&amp;mode=view\">Familienakte: Prys</a>"
+                  }
+                ]
+              },
+              {
+                "label": "Deck und Navigation",
+                "nodes": [
+                  {
+                    "id": "lwyd-pawen",
+                    "title": "Bootsmann",
+                    "subtitle": "Lwyd Pawen",
+                    "portrait": "/Stammbäume/assets/images/portraits/haus-mwyalchen/lwyd-pawen.jpg",
+                    "text": "<strong>43 Jahre. </strong><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-pawen&amp;person=lwyd-pawen&amp;mode=view\">Familienakte: Pawen</a>"
+                  },
+                  {
+                    "id": "gereint-mathgraig",
+                    "title": "Navigator",
+                    "subtitle": "Gereint Mathgraig",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/gereint-mathgraig.jpg",
+                    "text": "<strong>46 Jahre. </strong>Nests älterer Bruder; Bruder von Uwchric und Seithen. Bestimmt den Kurs anhand von Karten, Sternen und Landmarken.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-mathgraig&amp;person=gereint-mathgraig&amp;mode=view\">Familienakte: Mathgraig</a>"
+                  }
+                ]
+              },
+              {
+                "label": "Versorgung und Verwaltung",
+                "nodes": [
+                  {
+                    "id": "iorwerth-penry",
+                    "title": "Quartiermeister",
+                    "subtitle": "Iorwerth Penry",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/iorwerth-penry.png",
+                    "text": "<strong>52 Jahre. </strong>Jüngerer Bruder Rhun Penrys, des Vogtes der Arth; Großonkel Meleris und Maelbans. Verwaltet Vorräte, Ausrüstung und Lagerbestände.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-penry&amp;person=iorwerth-penry&amp;mode=view\">Familienakte: Penry</a>"
+                  },
+                  {
+                    "id": "livia-cassiana",
+                    "title": "Schiffsmeier",
+                    "subtitle": "Livia Cassiana",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/livia-cassiana.png",
+                    "text": "<strong>46 Jahre. </strong>Finanz- und Handelsexpertin aus einer Bankiersfamilie in Venalys. Verwaltet Schiffskasse, Sold und wertvolle Güter."
+                  },
+                  {
+                    "id": "tudur-dyger",
+                    "title": "Schiffsmusikant",
+                    "subtitle": "Caedmon Dyger",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/caedmon-dyger.jpg",
+                    "text": "<strong>49 Jahre. </strong>Vater Rhy Dygers, Gemahl Rhians und langjähriger Schiffsmusikant Parzifal Arths. Bei Rhys Geburt war er 22. Morwyr-Tradition und Musikantenschule der Familie; kein ausgebildeter Barddwyr.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-dyger&amp;person=tudur-dyger&amp;mode=view\">Familienakte: Dyger</a>"
+                  },
+                  {
+                    "id": "enid-pluen",
+                    "title": "Schreiberin / Adjutantin",
+                    "subtitle": "Enid Pluen",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/enid-pluen.png",
+                    "text": "<strong>36 Jahre. </strong>36 Jahre. Von Parzifals Gemahlin für den Dienst an Bord ausgewählt. Organisiert Korrespondenz, Befehle und Verwaltung.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-pluen&amp;person=enid-pluen&amp;mode=view\">Familienakte: Pluen</a>"
+                  },
+                  {
+                    "id": "halvard-hirschhorn",
+                    "title": "Schiffskoch",
+                    "subtitle": "Halvard Hirschhorn",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/halvard-hirschhorn.jpg",
+                    "text": "<strong>50 Jahre. </strong>Sigrids Vater und Gemahl Ingas; Hirdmann und Schiffskoch. Nennt sich hervorragenden Koch. Seine Kameraden behaupten, er verhaue vor allem das Fleisch.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-hirschhorn&amp;person=halvard-hirschhorn&amp;mode=view\">Familienakte: Hirschhorn</a>"
+                  },
+                  {
+                    "id": "huw-morglan",
+                    "title": "Proviantmeister",
+                    "subtitle": "Huw Morglan",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/portraits-2026-10-06/huw-morglan.png",
+                    "text": "<strong>50 Jahre. </strong>50 Jahre. Vater Saithars, jüngerer Bruder Angharads. Kupferrotes Haar und graublaue Augen wie Saithar; beaufsichtigt Schiffsproviant und haltbare Vorräte. Morglan ist nicht Morlan.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morglan&amp;person=huw-morglan&amp;mode=view\">Familienakte: Morglan</a>"
+                  }
+                ]
+              },
+              {
+                "label": "Handwerk und Heilkunde",
+                "nodes": [
+                  {
+                    "id": "tadgh-darach",
+                    "title": "Schiffszimmermann",
+                    "subtitle": "Tadgh Darach",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/tadgh-darach.png",
+                    "text": "<strong>48 Jahre. </strong>Albe und Meisterhandwerker aus Mathringen; die Dychwelyd wurde sein neues Zuhause. Hält Rumpf, Masten und Deck seetüchtig."
+                  },
+                  {
+                    "id": "anselm-gerwig",
+                    "title": "Feldscher",
+                    "subtitle": "Anselm Gerwig",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/anselm-gerwig.png",
+                    "text": "<strong>55 Jahre. </strong>Methodischer und fürsorglicher Feldscher aus Mathringen, mit rabenschwarzem Humor."
+                  }
+                ]
+              },
+              {
+                "label": "Bordwache und Verteidigung",
+                "nodes": [
+                  {
+                    "id": "brychan-beryn",
+                    "title": "Waffenmeister",
+                    "subtitle": "Brychan Beryn",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/brychan-beryn.png",
+                    "text": "<strong>54 Jahre. </strong><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-beryn&amp;person=brychan-beryn&amp;mode=view\">Familienakte: Beryn</a>"
+                  },
+                  {
+                    "id": "cadell-morgwynt",
+                    "title": "Wachmeister",
+                    "subtitle": "Cadell Morgwynt",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/cadell-morgwynt.png",
+                    "text": "<strong>49 Jahre. </strong>49 Jahre. Vater von Mabli und Cadyn, Gemahl Gwenllians. Führt Parzifals Bordwachen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;person=cadell-morgwynt&amp;mode=view\">Familienakte: Morgwynt</a>"
+                  },
+                  {
+                    "id": "iestyn-ddraenen",
+                    "title": "Ritter zur See / Leibwächter",
+                    "subtitle": "Iestyn Ddraenen",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/iestyn-ddraenen.jpg",
+                    "text": "<strong>40 Jahre. </strong>40 Jahre. Parzifals früherer Knappe und heutiger persönlicher Leibwächter. Familienwappen dem Dornzweig mit roter Blüte auf seiner Rüstung entnommen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-ddraenen&amp;person=iestyn-ddraenen&amp;mode=view\">Familienakte: Ddraenen</a>"
+                  }
+                ]
+              },
+              {
+                "label": "Erfahrene Seeleute",
+                "nodes": [
+                  {
+                    "id": "tudur-morlan",
+                    "title": "Altmatrose",
+                    "subtitle": "Tudur Morlan",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/tudur-morlan.png",
+                    "text": "<strong>72 Jahre. </strong>72 Jahre. War schon an Bord, als Parzifal mit 18 Jahren erstmals das Schiff betrat, und nennt ihn gelegentlich noch Junge. Angehöriger von Morlan, nicht Morglan.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morlan&amp;person=tudur-morlan&amp;mode=view\">Familienakte: Morlan</a>"
+                  }
+                ]
+              },
+              {
+                "label": "Mast und Segel",
+                "nodes": [
+                  {
+                    "id": "edern-morgwynt",
+                    "title": "Ausguck / Späher",
+                    "subtitle": "Edern Morgwynt",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/portraits-2026-10-06/edern-morgwynt.png",
+                    "text": "<strong>57 Jahre. </strong>57 Jahre. Vater Helbans und älterer Bruder Cadells. Braunes Haar, graublaue Augen wie Helban; erfahrener Ausguck im Krähennest.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;person=edern-morgwynt&amp;mode=view\">Familienakte: Morgwynt</a>"
+                  },
+                  {
+                    "id": "seithen-mathgraig",
+                    "title": "Segelmeister",
+                    "subtitle": "Seithen Mathgraig",
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/portraits-2026-10-06/seithen-mathgraig.png",
+                    "text": "<strong>48 Jahre. </strong>48 Jahre. Bruder von Uwchric, Gereint und Nest; kupferrotes Haar und braune Augen wie Uwchric. Beaufsichtigt Segelführung und Takelage.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-mathgraig&amp;person=seithen-mathgraig&amp;mode=view\">Familienakte: Mathgraig</a>"
+                  }
+                ]
+              }
+            ],
+            "footerNote": "70 menschliche Stellen; 21 Personen benannt, 49 offen. Caradog und Sir Morchyn zählen separat.",
+            "backLabel": "Zurück zur Übersicht",
+            "printLabel": "Akte drucken"
+          },
+          "commentThreadKey": "2"
+        },
+        {
+          "pageTitle": "Gruppenübersicht",
+          "landingPage": true,
+          "landing": {
+            "bannerImage": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+            "title": "Parzifals Schiffsmannschaft",
+            "subtitle": "Die Besatzung der Dychwelyd",
+            "memberTitle": "Aktuelle Gruppe",
+            "questTitle": "Aufgaben & Quests",
+            "notesTitle": "Notizen",
+            "eventsTitle": "Ereignisse",
+            "mapTitle": "Aktuelle Karte",
+            "mapKartenId": "",
+            "mapImage": "",
+            "mapLink": "",
+            "mapButtonLabel": "Karte öffnen",
+            "infoTitle": "Informationen",
+            "members": [],
+            "quests": [],
+            "notes": [],
+            "events": [],
+            "info": [],
+            "group": {
+              "version": 2,
+              "location": "Talgarth, Klaueninseln",
+              "activity": "",
+              "status": "",
+              "supplies": "",
+              "threadId": "",
+              "sceneThreads": [],
+              "members": [],
+              "guests": [],
+              "presets": [],
+              "treasury": {
+                "openingCopper": null,
+                "entries": []
+              },
+              "inventory": [],
+              "icons": {
+                "roster": "",
+                "scene": "",
+                "quests": "",
+                "inventory": "",
+                "notes": "",
+                "map": "",
+                "location": "",
+                "status": "",
+                "activity": "",
+                "supplies": "",
+                "treasury": ""
+              }
+            }
+          },
+          "stats": [],
+          "commentDivider": false,
+          "commentSequence": [],
+          "commentThreadKey": "group-overview"
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Schiff",
+          "image": "/Stammbäume/assets/images/portraits/haus-grawn/parzifal-arth.jpg",
+          "imageWidth": 30,
+          "imageFit": "contain",
+          "sessionPage": true,
+          "sessionIntro": "Die Dychwelyd liegt im Heimathafen Talgarth. Ihre Fahrten und das Bordleben werden über interaktive Szenen fortgeführt.",
+          "sessionHint": "Führe das Bordleben als interaktive Szene fort.",
+          "sessionEmptyTitle": "Die nächste Heimkehr",
+          "sessionEmptyText": "Noch keine Beiträge.",
+          "sessionDateAleria": "",
+          "commentThreadKey": "4"
+        }
+      ]
+    }
+  },
+  "source": "Nutzervorlage zur Dychwelyd und Korrekturen vom 06.10.2026.",
+  "membership": {
+    "permanentHumans": 70,
+    "namedHumans": 21,
+    "unnamedHumans": 49,
+    "animals": 2
+  }
+}

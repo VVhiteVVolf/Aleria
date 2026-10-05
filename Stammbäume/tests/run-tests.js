@@ -1557,22 +1557,18 @@ function collectReachableChartNodeIds(family) {
   return { chartById, converted, reachableNodeIds };
 }
 
-test('startet nur mikroskopisch eingepasste Großbäume in einer lesbaren Ansicht', () => {
+test('startet auch große Bäume und alte Fokusakten vollständig eingepasst', () => {
   assert.equal(resolveFamilyChartInitialViewport({ fittedScale: 0.2 }), null);
   assert.deepEqual(
     resolveFamilyChartInitialViewport({ fittedScale: 0.05 }),
-    {
-      mode: 'focus',
-      scale: FAMILY_CHART_VIEWPORT_POLICY.readableStartScale,
-      reason: 'oversized-tree'
-    }
+    null
   );
   assert.deepEqual(
     resolveFamilyChartInitialViewport({
       chartViewport: { initialPosition: 'focus', initialScale: 0.6 },
       fittedScale: 0.4
     }),
-    { mode: 'focus', scale: 0.6, reason: 'configured' }
+    null
   );
 });
 
@@ -36246,8 +36242,8 @@ test('bildet Haus Beryn bis zu Ifors Urgroßvater in genau drei Linien ab', () =
   const family = HOUSE_BERYN_FAMILY;
   assert.equal(validateFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 5);
-  assert.equal(family.view.focusPersonId, 'caradog-beryn');
+  assert.equal(family.extensions.sourceRevision, 6);
+  assert.equal(family.view.focusPersonId, '');
   assert.equal(family.view.limitGenerations, false);
 
   const madogChildren = family.parentages
@@ -36328,7 +36324,7 @@ test('entfernt Beryns alte kollidierende Eheausrichtung auch aus einer lokal ges
   const marriage = upgraded.partnerships.find(partnership => partnership.id === 'marriage-cadell-eira-beryn');
   const plan = createFamilyChartPartnerAlignmentPlan(upgraded);
 
-  assert.equal(upgraded.extensions.sourceRevision, 5);
+  assert.equal(upgraded.extensions.sourceRevision, 6);
   assert.equal(cadell.extensions.chartCenterBetweenSpousePersonIds, undefined);
   assert.equal(marriage.extensions.chartAlignPartnerOverChildrenPersonId, undefined);
   assert.deepEqual(

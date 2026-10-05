@@ -1,0 +1,1752 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-morlan",
+  "revision": 1,
+  "updatedAt": "2026-10-05T22:55:55.091Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-morlan",
+      "title": "Haus Morlan",
+      "motto": "",
+      "description": "Eigenständige Bürgerfamilie aus Talgarth mit langer Seefahrertradition. Morlan und die bereits bestehende Fischerfamilie Morglan sind verschiedene Familien. Familiengerüst seit 1629 mit Haupt- und Vetternzweigen.",
+      "emblem": "assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-morlan.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "goronwy-morlan",
+        "worldPersonId": "person--haus-morlan--goronwy-morlan",
+        "name": "Goronwy Morlan",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1629",
+        "death": "1706",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "tudur-morlan",
+        "worldPersonId": "person--haus-morlan--tudur-morlan",
+        "name": "Tudur Morlan",
+        "title": "Altmatrose der Dychwelyd",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1668",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/tudur-morlan.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "72 Jahre. War schon an Bord, als Parzifal mit 18 Jahren erstmals das Schiff betrat, und nennt ihn gelegentlich noch Junge. Angehöriger von Morlan, nicht Morglan.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death",
+            "title",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6,
+            "title": 6,
+            "portrait": 6,
+            "notes": 6
+          }
+        }
+      },
+      {
+        "id": "cynan-morlan",
+        "worldPersonId": "person--haus-morlan--cynan-morlan",
+        "name": "Cynan Morlan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1671",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "efa-morlan",
+        "worldPersonId": "person--haus-morlan--efa-morlan",
+        "name": "Efa Morlan",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1674",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "owain-morlan",
+        "worldPersonId": "person--haus-morlan--owain-morlan",
+        "name": "Owain Morlan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "aneirin-morlan",
+        "worldPersonId": "person--haus-morlan--aneirin-morlan",
+        "name": "Aneirin Morlan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "eirwen-morlan",
+        "worldPersonId": "person--haus-morlan--eirwen-morlan",
+        "name": "Eirwen Morlan",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1701",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "elidyr-morlan",
+        "worldPersonId": "person--haus-morlan--elidyr-morlan",
+        "name": "Elidyr Morlan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "gwydion-morlan",
+        "worldPersonId": "person--haus-morlan--gwydion-morlan",
+        "name": "Gwydion Morlan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1703",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "mabli-morlan",
+        "worldPersonId": "person--haus-morlan--mabli-morlan",
+        "name": "Mabli Morlan",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1707",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "bedwyr-morlan",
+        "worldPersonId": "person--haus-morlan--bedwyr-morlan",
+        "name": "Bedwyr Morlan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "morfydd-morlan",
+        "worldPersonId": "person--haus-morlan--morfydd-morlan",
+        "name": "Morfydd Morlan",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1702",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "rhys-morlan",
+        "worldPersonId": "person--haus-morlan--rhys-morlan",
+        "name": "Rhys Morlan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "nesta-morlan",
+        "worldPersonId": "person--haus-morlan--nesta-morlan",
+        "name": "Nesta Morlan",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "dewi-morlan",
+        "worldPersonId": "person--haus-morlan--dewi-morlan",
+        "name": "Dewi Morlan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "gwen-morlan",
+        "worldPersonId": "person--haus-morlan--gwen-morlan",
+        "name": "Gwen Morlan",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "tegan-morlan",
+        "worldPersonId": "person--haus-morlan--tegan-morlan",
+        "name": "Tegan Morlan",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "cai-morlan",
+        "worldPersonId": "person--haus-morlan--cai-morlan",
+        "name": "Cai Morlan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "alaw-morlan",
+        "worldPersonId": "person--haus-morlan--alaw-morlan",
+        "name": "Alaw Morlan",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1727",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "meilyr-morlan",
+        "worldPersonId": "person--haus-morlan--meilyr-morlan",
+        "name": "Meilyr Morlan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "ioan-morlan",
+        "worldPersonId": "person--haus-morlan--ioan-morlan",
+        "name": "Ioan Morlan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "luned-morlan",
+        "worldPersonId": "person--haus-morlan--luned-morlan",
+        "name": "Luned Morlan",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1728",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "arwel-morlan",
+        "worldPersonId": "person--haus-morlan--arwel-morlan",
+        "name": "Arwel Morlan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1733",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-morlan",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true,
+          "registryManagedExtensionFields": [
+            "sourceNote"
+          ],
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "birth",
+            "death"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 6,
+            "death": 6
+          }
+        }
+      },
+      {
+        "id": "elen-goronwy-morlan-spouse",
+        "worldPersonId": "person--haus-morlan--elen-goronwy-morlan-spouse",
+        "name": "Elen",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1633",
+        "death": "1711",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "mair-tudur-morlan-spouse",
+        "worldPersonId": "person--haus-morlan--mair-tudur-morlan-spouse",
+        "name": "Mair",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1673",
+        "death": "1735",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "nia-cynan-morlan-spouse",
+        "worldPersonId": "person--haus-morlan--nia-cynan-morlan-spouse",
+        "name": "Nia",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1677",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "idris-efa-morlan-spouse",
+        "worldPersonId": "person--haus-morlan--idris-efa-morlan-spouse",
+        "name": "Idris",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "heledd-owain-morlan-spouse",
+        "worldPersonId": "person--haus-morlan--heledd-owain-morlan-spouse",
+        "name": "Heledd",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "rhosyn-aneirin-morlan-spouse",
+        "worldPersonId": "person--haus-morlan--rhosyn-aneirin-morlan-spouse",
+        "name": "Rhosyn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "peredur-eirwen-morlan-spouse",
+        "worldPersonId": "person--haus-morlan--peredur-eirwen-morlan-spouse",
+        "name": "Peredur",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "olwen-elidyr-morlan-spouse",
+        "worldPersonId": "person--haus-morlan--olwen-elidyr-morlan-spouse",
+        "name": "Olwen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1702",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      },
+      {
+        "id": "dilys-bedwyr-morlan-spouse",
+        "worldPersonId": "person--haus-morlan--dilys-bedwyr-morlan-spouse",
+        "name": "Dilys",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Neu ausgearbeitete Familiengeneration nach Nutzerauftrag vom 06.10.2026.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+          "authoredFamilyExpansion": true
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-goronwy-morlan",
+        "participantIds": [
+          "goronwy-morlan",
+          "elen-goronwy-morlan-spouse"
+        ],
+        "type": "marriage",
+        "status": "widowed",
+        "start": "",
+        "end": "1706",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-tudur-morlan",
+        "participantIds": [
+          "tudur-morlan",
+          "mair-tudur-morlan-spouse"
+        ],
+        "type": "marriage",
+        "status": "widowed",
+        "start": "",
+        "end": "1735",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-cynan-morlan",
+        "participantIds": [
+          "cynan-morlan",
+          "nia-cynan-morlan-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-efa-morlan",
+        "participantIds": [
+          "efa-morlan",
+          "idris-efa-morlan-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-owain-morlan",
+        "participantIds": [
+          "owain-morlan",
+          "heledd-owain-morlan-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-aneirin-morlan",
+        "participantIds": [
+          "aneirin-morlan",
+          "rhosyn-aneirin-morlan-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-eirwen-morlan",
+        "participantIds": [
+          "eirwen-morlan",
+          "peredur-eirwen-morlan-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-elidyr-morlan",
+        "participantIds": [
+          "elidyr-morlan",
+          "olwen-elidyr-morlan-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      },
+      {
+        "id": "marriage-bedwyr-morlan",
+        "participantIds": [
+          "bedwyr-morlan",
+          "dilys-bedwyr-morlan-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+        "extensions": {
+          "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740."
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-tudur-morlan",
+        "childId": "tudur-morlan",
+        "parentIds": [
+          "goronwy-morlan",
+          "elen-goronwy-morlan-spouse"
+        ],
+        "partnershipId": "marriage-goronwy-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-cynan-morlan",
+        "childId": "cynan-morlan",
+        "parentIds": [
+          "goronwy-morlan",
+          "elen-goronwy-morlan-spouse"
+        ],
+        "partnershipId": "marriage-goronwy-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-efa-morlan",
+        "childId": "efa-morlan",
+        "parentIds": [
+          "goronwy-morlan",
+          "elen-goronwy-morlan-spouse"
+        ],
+        "partnershipId": "marriage-goronwy-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-owain-morlan",
+        "childId": "owain-morlan",
+        "parentIds": [
+          "tudur-morlan",
+          "mair-tudur-morlan-spouse"
+        ],
+        "partnershipId": "marriage-tudur-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-aneirin-morlan",
+        "childId": "aneirin-morlan",
+        "parentIds": [
+          "tudur-morlan",
+          "mair-tudur-morlan-spouse"
+        ],
+        "partnershipId": "marriage-tudur-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-eirwen-morlan",
+        "childId": "eirwen-morlan",
+        "parentIds": [
+          "tudur-morlan",
+          "mair-tudur-morlan-spouse"
+        ],
+        "partnershipId": "marriage-tudur-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-elidyr-morlan",
+        "childId": "elidyr-morlan",
+        "parentIds": [
+          "cynan-morlan",
+          "nia-cynan-morlan-spouse"
+        ],
+        "partnershipId": "marriage-cynan-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-gwydion-morlan",
+        "childId": "gwydion-morlan",
+        "parentIds": [
+          "cynan-morlan",
+          "nia-cynan-morlan-spouse"
+        ],
+        "partnershipId": "marriage-cynan-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-mabli-morlan",
+        "childId": "mabli-morlan",
+        "parentIds": [
+          "cynan-morlan",
+          "nia-cynan-morlan-spouse"
+        ],
+        "partnershipId": "marriage-cynan-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-bedwyr-morlan",
+        "childId": "bedwyr-morlan",
+        "parentIds": [
+          "efa-morlan",
+          "idris-efa-morlan-spouse"
+        ],
+        "partnershipId": "marriage-efa-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-morfydd-morlan",
+        "childId": "morfydd-morlan",
+        "parentIds": [
+          "efa-morlan",
+          "idris-efa-morlan-spouse"
+        ],
+        "partnershipId": "marriage-efa-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-rhys-morlan",
+        "childId": "rhys-morlan",
+        "parentIds": [
+          "owain-morlan",
+          "heledd-owain-morlan-spouse"
+        ],
+        "partnershipId": "marriage-owain-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-nesta-morlan",
+        "childId": "nesta-morlan",
+        "parentIds": [
+          "owain-morlan",
+          "heledd-owain-morlan-spouse"
+        ],
+        "partnershipId": "marriage-owain-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-dewi-morlan",
+        "childId": "dewi-morlan",
+        "parentIds": [
+          "owain-morlan",
+          "heledd-owain-morlan-spouse"
+        ],
+        "partnershipId": "marriage-owain-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-gwen-morlan",
+        "childId": "gwen-morlan",
+        "parentIds": [
+          "aneirin-morlan",
+          "rhosyn-aneirin-morlan-spouse"
+        ],
+        "partnershipId": "marriage-aneirin-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-tegan-morlan",
+        "childId": "tegan-morlan",
+        "parentIds": [
+          "aneirin-morlan",
+          "rhosyn-aneirin-morlan-spouse"
+        ],
+        "partnershipId": "marriage-aneirin-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-cai-morlan",
+        "childId": "cai-morlan",
+        "parentIds": [
+          "eirwen-morlan",
+          "peredur-eirwen-morlan-spouse"
+        ],
+        "partnershipId": "marriage-eirwen-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-alaw-morlan",
+        "childId": "alaw-morlan",
+        "parentIds": [
+          "eirwen-morlan",
+          "peredur-eirwen-morlan-spouse"
+        ],
+        "partnershipId": "marriage-eirwen-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-meilyr-morlan",
+        "childId": "meilyr-morlan",
+        "parentIds": [
+          "elidyr-morlan",
+          "olwen-elidyr-morlan-spouse"
+        ],
+        "partnershipId": "marriage-elidyr-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-ioan-morlan",
+        "childId": "ioan-morlan",
+        "parentIds": [
+          "elidyr-morlan",
+          "olwen-elidyr-morlan-spouse"
+        ],
+        "partnershipId": "marriage-elidyr-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-luned-morlan",
+        "childId": "luned-morlan",
+        "parentIds": [
+          "bedwyr-morlan",
+          "dilys-bedwyr-morlan-spouse"
+        ],
+        "partnershipId": "marriage-bedwyr-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      },
+      {
+        "id": "parentage-arwel-morlan",
+        "childId": "arwel-morlan",
+        "parentIds": [
+          "bedwyr-morlan",
+          "dilys-bedwyr-morlan-spouse"
+        ],
+        "partnershipId": "marriage-bedwyr-morlan",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740. Der Familienname wird auch in den mütterlich fortgeführten Zweigen beibehalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 6
+        }
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-morlan",
+        "name": "Haus Morlan",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-morlan.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-goronwy-morlan",
+      "houseId": "house-morlan",
+      "crestSubtitle": "Bürgerfamilie aus Talgarth",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "heraldryDescription": "Auf Nachtblau eine silberne Seilschlinge über zwei roten Segeln und silbernen Wellen; goldener Rundrand.",
+      "sourceRevision": 6,
+      "sourceNote": "Nutzervorgaben vom 06.10.2026: vorhandene Angehörige erhalten; ergänzte Eltern, Vettern und weitere Generationen ausdrücklich neu ausgearbeitet. Altersbezug: 1740.",
+      "registryManagedEntitySourceRevision": 6,
+      "registryManagedDocumentFields": [
+        "description"
+      ],
+      "registryManagedLineageFields": [
+        "founderPartnershipId"
+      ],
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "limitGenerations",
+        "showSiblings"
+      ],
+      "registryManagedExtensionFields": [
+        "sourceNote",
+        "pendingFamilySituation"
+      ],
+      "registryTombstones": {},
+      "pendingFamilySituation": {
+        "openQuestions": [
+          "Spätere Lebensereignisse und zusätzliche Angehörige bleiben offen."
+        ]
+      }
+    }
+  }
+}

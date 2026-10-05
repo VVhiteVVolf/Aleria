@@ -3,10 +3,11 @@ import {
   HOUSE_ARFORDIR_ABERDAIL_FAMILY,
   HOUSE_ARFORDIR_SERENLYN_FAMILY
 } from './house-arfordir-family.js';
-import { HOUSE_BERYN_FAMILY } from './house-beryn-family.js?v=eira-20261005';
-import { HOUSE_DYGER_FAMILY } from './house-dyger-family.js?v=lynne-20261004';
-import { LYNNE_CREW_HOUSE_FAMILIES } from './lynne-crew-house-families.js?v=lynne-20261005';
+import { HOUSE_BERYN_FAMILY } from './house-beryn-family.js?v=parzifal-20261006';
+import { HOUSE_DYGER_FAMILY } from './house-dyger-family.js?v=parzifal-20261006';
+import { LYNNE_CREW_HOUSE_FAMILIES } from './lynne-crew-house-families.js?v=parzifal-20261006';
 import { RHYDIAN_CREW_HOUSE_FAMILIES } from './rhydian-crew-house-families.js';
+import { PARZIFAL_CREW_HOUSE_FAMILIES } from './parzifal-crew-house-families.js';
 import { HOUSE_CRAFANC_FAMILY } from './house-crafanc-family.js';
 import { HOUSE_CWINGOD_FAMILY } from './house-cwingod-family.js';
 import {
@@ -78,6 +79,7 @@ export const KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
   HOUSE_DYGER_FAMILY,
   ...LYNNE_CREW_HOUSE_FAMILIES,
   ...RHYDIAN_CREW_HOUSE_FAMILIES,
+  ...PARZIFAL_CREW_HOUSE_FAMILIES,
   ...SIMPLE_DEFINITIONS.map(createSimpleFamily)
 ]);
 

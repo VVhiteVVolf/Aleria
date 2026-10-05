@@ -3,7 +3,7 @@
   "version": 3,
   "exportedAt": "2026-09-06T04:36:36.261Z",
   "mergeStrategy": "replace-exported-fields",
-  "sourceNote": "Autorisierte Familienzuordnung vom 06.09.2026. Haus Dyger ist unter Cenyr / Klaueninsel / Sturmklaue / Talgarth als niederes Ritterhaus und direkter Arth-Vasall angelegt. Tudur Dyger ist als Rhys Vater verknüpft. Mutter, weitere Angehörige und Hausoberhaupt bleiben offen. Rhys bereits veröffentlichte Biografie, Inventar, Kampfdaten und Bildbibliothek bleiben unverändert. Eigentümerkennungen sind aus dem portablen Export entfernt.",
+  "sourceNote": "Autorisierte Familienzuordnung vom 06.09.2026. Haus Dyger ist unter Cenyr / Klaueninsel / Sturmklaue / Talgarth als niederes Ritterhaus und direkter Arth-Vasall angelegt. Caedmon Dyger ist als Rhys Vater verknüpft. Mutter, weitere Angehörige und Hausoberhaupt bleiben offen. Rhys bereits veröffentlichte Biografie, Inventar, Kampfdaten und Bildbibliothek bleiben unverändert. Eigentümerkennungen sind aus dem portablen Export entfernt.",
   "character": {
     "activeImageSetId": "",
     "aliases": [
@@ -55,7 +55,7 @@
             "detail": "Sein Vater; Schiffsmusikant auf dem Schiff Lord Parzifal Arths.",
             "image": "../Stammbäume/assets/images/houses/Talgarth/Klaueninseln/haus-dyger.png",
             "imageFormat": "square",
-            "name": "Tudur Dyger",
+            "name": "Caedmon Dyger",
             "type": "connection"
           },
           {
@@ -99,7 +99,7 @@
           }
         ],
         "footer": "Personenakte · Sir Rhy „Rüdiger“ Dyger · Tiefenwyrm",
-        "historyText": "<p>Die <strong>Dyger</strong> sind ein niederes Rittergeschlecht aus den <strong>Klaueninseln Talgarths</strong> und direkte Rittervasallen des Hauses Arth. Seefahrt und Musik gehören bei ihnen ebenso zum Familienhandwerk wie der Dienst mit der Waffe. Ihr Ruf reicht allerdings selten bis in die vornehmen Säle der angesehenen Bardenhäuser. Häuser wie die <strong>Ceirwyn</strong> tun die Dyger als Säufer und Tavernenschläger ab; ganz ohne eigene Mithilfe sind diese zu ihrem Ansehen nicht gekommen.</p><p>In Talgarth unterhalten die Dyger eine bescheidene Musikantenschule. Dort lernen ihre Angehörigen und die Männer ihres Gefolges, kräftig in die Saiten zu greifen, eine volle Stube mit der Stimme zu erreichen und einen gemeinsamen Takt zu halten. Trockene Kehlen gelten dabei rasch als vermeidbares Hindernis. Eine berühmte Akademie ist die Schule nicht, doch wer dort etwas gelernt hat, kann eine müde Runde zum Mitsingen bringen. <strong>Barddwyr bildet das Haus nicht aus</strong>; die gelehrte Verbindung von Bardenkunst und Magie überlässt es anderen.</p><p>Rhys Vater <strong>Tudur Dyger</strong> dient als Schiffsmusikant auf dem Schiff des Grafen <strong>Lord Parzifal Arth</strong>, Idwal Draigs Mentor. In diesem Umfeld wurden für Rhy ritterlicher Dienst, das Leben zur See und die Musik früh zu eng verbundenen Dingen. Eine gute Stimme war nützlich; auf schwankenden Planken bestehen und seinen Kameraden beistehen zu können ebenso.</p>",
+        "historyText": "<p>Die <strong>Dyger</strong> sind ein niederes Rittergeschlecht aus den <strong>Klaueninseln Talgarths</strong> und direkte Rittervasallen des Hauses Arth. Seefahrt und Musik gehören bei ihnen ebenso zum Familienhandwerk wie der Dienst mit der Waffe. Ihr Ruf reicht allerdings selten bis in die vornehmen Säle der angesehenen Bardenhäuser. Häuser wie die <strong>Ceirwyn</strong> tun die Dyger als Säufer und Tavernenschläger ab; ganz ohne eigene Mithilfe sind diese zu ihrem Ansehen nicht gekommen.</p><p>In Talgarth unterhalten die Dyger eine bescheidene Musikantenschule. Dort lernen ihre Angehörigen und die Männer ihres Gefolges, kräftig in die Saiten zu greifen, eine volle Stube mit der Stimme zu erreichen und einen gemeinsamen Takt zu halten. Trockene Kehlen gelten dabei rasch als vermeidbares Hindernis. Eine berühmte Akademie ist die Schule nicht, doch wer dort etwas gelernt hat, kann eine müde Runde zum Mitsingen bringen. <strong>Barddwyr bildet das Haus nicht aus</strong>; die gelehrte Verbindung von Bardenkunst und Magie überlässt es anderen.</p><p>Rhys Vater <strong>Caedmon Dyger</strong> dient als Schiffsmusikant auf dem Schiff des Grafen <strong>Lord Parzifal Arth</strong>, Idwal Draigs Mentor. In diesem Umfeld wurden für Rhy ritterlicher Dienst, das Leben zur See und die Musik früh zu eng verbundenen Dingen. Eine gute Stimme war nützlich; auf schwankenden Planken bestehen und seinen Kameraden beistehen zu können ebenso.</p>",
         "historyTitle": "Haus Dyger – Saiten, Salz und volle Becher",
         "portraitStages": [
           "",
@@ -165,7 +165,7 @@
         },
         {
           "label": "Vater",
-          "value": "Tudur Dyger"
+          "value": "Caedmon Dyger"
         },
         {
           "label": "Lehnsherr des Hauses",
@@ -195,7 +195,7 @@
           {
             "certainty": "confirmed",
             "legitimacy": "unknown",
-            "name": "Tudur Dyger",
+            "name": "Caedmon Dyger",
             "personId": "tudur-dyger",
             "type": "biological",
             "worldPersonId": "person--haus-dyger--tudur-dyger"
@@ -207,7 +207,7 @@
       "sources": [
         {
           "familyId": "haus-dyger",
-          "fingerprint": "{\"name\":\"Rhy Dyger\",\"title\":\"Morwyr und Schiffsmusikant der Tiefenwyrm\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-dyger\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-dyger/rhy-dyger.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Rüdiger\",\"Seefahrer\",\"Musikant\"],\"relationships\":{\"parents\":[{\"personId\":\"tudur-dyger\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dyger--tudur-dyger\",\"name\":\"Tudur Dyger\"}],\"partners\":[],\"children\":[]}}",
+          "fingerprint": "{\"name\":\"Rhy Dyger\",\"title\":\"Morwyr und Schiffsmusikant der Tiefenwyrm\",\"birth\":\"\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-dyger\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-dyger/rhy-dyger.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Rüdiger\",\"Seefahrer\",\"Musikant\"],\"relationships\":{\"parents\":[{\"personId\":\"tudur-dyger\",\"type\":\"biological\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-dyger--tudur-dyger\",\"name\":\"Caedmon Dyger\"}],\"partners\":[],\"children\":[]}}",
           "importedAt": "2026-09-06T04:36:36.261Z",
           "lastSyncedAt": "2026-09-06T04:36:36.261Z",
           "personId": "rhy-dyger",
