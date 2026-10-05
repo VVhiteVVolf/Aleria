@@ -40,6 +40,8 @@ Vor dem Schreiben von Daten:
 - Aktuelle `extensions.sourceRevision` und vorhandene Migrationstests erfassen.
 - Den bestehenden Arbeitsbaum nicht durch eine neue parallele Datei oder neue IDs duplizieren.
 
+Gezielte Gegenquellenkorrekturen erhalten bereits übernommene Nachbarfelder: `registryManagedSourceRevision` begrenzt die verwalteten Felder einer einzelnen Person oder Beziehung auf deren fachliche Quellenrevision. `registryManagedFieldRevisions` kann einzelne Felder ausdrücklich später korrigieren, etwa die kanonische Cwingod-Schreibweise, während lokale Chroniknotizen erhalten bleiben. Ohne diese optionalen Grenzen bleibt das bisherige Verhalten bestehen. Jede solche Korrektur benötigt einen Test für die alten Daten, unveränderte Nachbarfelder und eine wiederholungsfeste Übernahme.
+
 ## 3. Quelle zuerst als Inventar erfassen
 
 Das Quelllayout wird nicht direkt in Code übersetzt. Zuerst entstehen getrennte Inventare:
@@ -554,6 +556,43 @@ Referenzfall Blutstahl/Silberblut: Sigrun Blutstahl bleibt trotz Wallmars erzwun
 - Nach sämtlichen lokalen Ausrichtungen läuft eine zentrale Endkontrolle. Findet sie noch überlappende Karten, wird der gesamte Baum proportional auf der Querachse verbreitert. Dadurch bleiben bereits senkrechte Eltern-Kind- und Hausachsen senkrecht; einzelne Zweige werden nicht nachträglich in Zickzackbahnen gedrückt.
 - Jede nicht automatisch lösbare Restkollision wird am Chartcontainer als Diagnose ausgewiesen und in der Konsole mit den beiden betroffenen Karten-IDs gemeldet. Sie darf bei der visuellen Abnahme nicht ignoriert werden.
 - Neue oder besonders korrigierte Akten erhalten `extensions.chartLayoutPolicy: 'strict-v1'`. Die Richtlinie verlangt direkte Einzelkindachsen, verankerte Blattgeschwistergruppen, gerade Hausknoten und ausdrücklich getrennte Mehrpartnerspuren. Ein zentraler Registertest prüft alle so markierten Akten gemeinsam, damit spätere Änderungen keine stillen Layoutregressionen einführen.
+
+### 13.13 Weitere Vennyr-Quellen und spätere Gegenkorrekturen
+
+- Ein einzelner Vorname eines Partners aus unbekanntem Haus begründet keine Identität mit einer gleichnamigen Person eines bestehenden Hauses. Vollständiger Name, Herkunft und Lebensdaten müssen zusammenpassen; unbekannte Herkunft bleibt unbekannt. Belegte Namenszusätze wie O’Gwych und O’Caer Ynys sowie bestehende Welt-IDs bleiben erhalten.
+- Kanonische Ehen teilen ihre fachlichen Daten und IDs. Ihre `chart*`-Erweiterungen gehören zur jeweiligen Darstellung: Aus einer Gegenakte übernommene Partnerausrichtungen dürfen nicht in eine Herkunftsakte ohne dieselbe Kindergruppe gelangen. Neue Quellenakten berechnen ihre eigenen Achsen.
+- Feldgenaue spätere Quellenkorrekturen dürfen auch nach einer bereits übernommenen strukturellen Revision gelten. `registryManagedFieldRevisions` steuert die einzelnen Korrekturen; die frühere Grenze für Ansicht, Hausachse und unveränderte Nachbarfelder bleibt erhalten. Gegenakten wenden den gekapselten Quellenabgleich beim Export ihrer eigenen Akte an, damit direkte Importe und Register dieselbe kanonische Akte verwenden.
+- Redaktionell neu erschaffene Personen und plausible Ergänzungen auf ausdrücklichen Nutzerwunsch werden als solche protokolliert. Eine plausible, nicht überlieferte Abstammung erhält `type: 'claimed'`, `certainty: 'uncertain'` und einen sichtbaren Quellenhinweis. Überlieferungslücken und Pflegeelternschaften bleiben davon getrennt.
+
+Referenzfälle vom 05.10.2026: Die neun weiteren Vennyr-Akten übernehmen keine anonymen Hof- oder Verlobungsvorlagen. Illtyd Drewi (1629–1700) und die auf Nutzerwunsch neu ergänzte Ilwen Drewi (1632–1689) bleiben getrennte Weltpersonen; Ilwen erhält die Meinir-Verbindung und weibliche Silhouette. Ysolts Geburtsjahr 1715 ist ausdrücklich ergänzt. Gwyron und Lilifer Gwanrhyd erhalten eine gemeinsame Ehe mit Fortsetzung bei Gwyron und kinderloser Spiegelkarte bei Lilifer. Isottas Morgryn-Abstammung bleibt von ihrer Wivern-Aufnahme getrennt.
+
+### 13.14 Territoriale Ergänzungen in Ceitheach
+
+- Die sechs Oberherrschaften und vorhandenen Hauptclans werden durch die benannten Clan-/Sitzzeilen ergänzt. Kopierte Regional-Steckbriefe mit „Carraigreach“ als Hauptstadt jeder Oberherrschaft und leere Rats-, Baronien- oder Laird-Vorlagen begründen keine neue Zuordnung.
+- Neue territoriale Clanakten verwenden `createBlankHouseFamily`: Name, Wappen, Sitz und unmittelbarer Lehnsherr sind belegt; Personen, Partnerschaften und Abstammungen bleiben bis zur Familienquelle leer. Ein Namenspräfix wie Fáill, Mallacht oder Tir begründet keinen Rang.
+- Bereits bekannte Zielhaus-IDs werden erhalten, auch wenn die territoriale Quelle einen ausführlicheren Clannamen verwendet. Craobhan, Eldath und Eamhra erhalten ihre neuen Akten unter den schon vorhandenen Ziel-IDs.
+- Ein belegter Herkunftssitz eines bereits anderswo vollständig registrierten Clans wird als `registryAdditionalPlacements` ergänzt. Das Register und die lokale Bibliothek verwenden dafür dieselbe Akte; weder Personen noch Genealogie oder ein zweiter Stammbaum werden kopiert. Eine reine Registerplatzierung erfordert keine neue Genealogierevision.
+
+Referenzfall vom 05.10.2026: Nic Blar bleibt auf ausdrückliche Nutzerantwort in Lochcoille; Sioran wird nur als abweichende Quelle protokolliert. Somhairle bleibt mit seiner vollständigen Leitheacher Akte in Broch an Clais erhalten und erscheint zusätzlich unter Ceitheach / Tir na Dun / Glaennmor. Mallacht Seaghda steht entsprechend seiner eigenen Quelle unter Tir na Dorcha / Glaennmor. Sept Daires bestehende Einordnung nach Tulachinis wird nicht durch das Fehlen in einer neuen Regionaltabelle aufgehoben.
+
+### 13.15 Vollständige Ceitheach-Quellen und gemeinsame Identitäten
+
+- Nachgereichte Genealogien erweitern die bereits territorial registrierten Akten unter ihren bestehenden IDs. Ein vollständiger Stammbaum ersetzt eine Leerakte oder den vorbereiteten Gründerplatzhalter durch eine neue Quellenrevision; lokale Zusatzpersonen, eigene Notizen und Ansichten bleiben erhalten.
+- Gleichnamige Personen verschiedener Generationen bleiben getrennt. Die Zusammenführung erfordert passende Herkunft, Lebensdaten und belegte Partner. Insbesondere sind die frühen Sorcha und Eadbhard nicht mit ihren späteren Namensvettern identisch; Máire Feannag von 1637 ist nicht Máire Feannag von 1700.
+- Die gemeinsame Quellenfabrik `source-house-family-builder.js` verwaltet ausschließlich Personen, Beziehungen und Hausknoten. Regionale Wrapper liefern Hausprofil, Titel und Biografie. Neue territoriale Quellen begründen ohne ausdrücklichen Beleg keinen zusätzlichen Rang.
+- Spätere Gegenkorrekturen verwenden `source-family-field-upgrade.js` mit expliziten Feldern und bewahren die frühere strukturelle Revisionsgrenze. Der Abgleich erfolgt beim kanonischen Familienexport; Register und direkte Importe verwenden dieselben Personen und Beziehungen. Unveränderte Abstammungen, IDs und lokale Ergänzungen werden nicht neu geschrieben.
+- Unter 16 Verstorbene erhalten die Kindersilhouette; bei Lebenden zählt das aktuelle Weltjahr 1740. Mitgelieferte individuelle Kinderbilder werden als unbenutzte Referenzen gesichert. Kriegerdarstellungen und Stammbaumgrafiken werden ebenfalls getrennt mit Herkunft und Prüfsumme archiviert.
+
+Referenzfälle vom 05.10.2026: Ui’Rochraide (105 Personen), Craobhan (49), Eldath (58) und Eamhra (54) teilen 250 eindeutige Weltpersonen. Die fünf vom Nutzer bestätigten Jahrhundertkorrekturen lauten Kessog 1592, Deirdre 1675, Moira 1678, Ídeóg 1680 und Zeargán 1675. Siabhan Rochraides Tod bleibt unbekannt, 1720 ausschließlich unsichere Quellenangabe; ihre Cei-Verbindung ist eine Verlobung. Trianne Eldath ist ausdrücklich ein Mann und bleibt mit Magdis Varangr verheiratet. Donnachas und Siabhans frühere Vormundschaften bleiben historische Notizen ohne dauerhafte Mündelrahmen. Sorchas Ceinselaig- und Wuirseachs Eldath-Gründungen erhalten getrennte Kadettenhausknoten. Die drei Rochraide-, eine Craobhan-, zwei Eldath- und eine Eamhra-Quellenlücke bleiben seriell. Der vollständige Herkunfts- und Abschlussnachweis steht in `assets/data/source-inventories/ceitheach-families-2026-10-05.json`.
+
+### 13.16 Ergänzte Ceitheach-Akten vom 05.10.2026
+
+- Séaghdha (54 Personen), Mac Tuirseach (49), Dal Leite (73), Nic Holloran (75), An’Morchoe (71), Ua Nic Ceinselaig (51), Tir an Tordarroch (48) und An’Bhàird (38) ersetzen ihre vorhandenen territorialen Leerakten. Die 459 beschrifteten Personenfelder teilen 390 Weltpersonen; bestehende Welt- und Partnerschafts-IDs bleiben erhalten.
+- Die acht Akten verwenden denselben regionalen Quellenwrapper und einen getrennten, importfreien Identitätskatalog. Ein übergebener Katalog erweitert den Wrapper, ohne die vorherigen vier Quellenakten zu ersetzen. Jeder Baum hat genau den einen in der Grafik belegten seriellen Gründerzeitsprung; fehlende Jahreszahlen begründen keinen zusätzlichen Sprung.
+- Kindergruppen werden anhand der beschrifteten Elternpaare und der Grafik zugeordnet. Insbesondere gehören Deóiridh/Peadaróg zu Donndubhán/Gràinne, Feamainn/Bearnárd zu Sceolaigh/Leogán, Eairdsidh zur Ehe Bearnárd/Liadan, Colmas zu Macthar/Xuinchín sowie Eilidh/Kester zu Jowan/Teasag. Párthas gehört zu Aodhra/Liosa, Fergus/Ulfrik zu Réamonn/Geirlaug und Iain zu Réamonn/Frauke.
+- Präzise bestehende Lebensdaten von Peadaróg Leite, Nansaidh Craobhan und Garbhán Eldath bleiben erhalten, wenn die Gegenquelle nur unbekannte Daten nennt. Zeargáns Geburt 1675 und Deirdres Geburt 1675 folgen den bereits ausdrücklich bestätigten Benutzerkorrekturen. Mebhs `11700` wird als offensichtlicher Ziffernfehler zu 1700 berichtigt; Eanbharrs `1584` ist wegen seiner bereits 1582–1586 geborenen Kinder redaktionell als `1564` gelesen und dokumentiert.
+- Keallach bleibt dieselbe Weltperson in Eldath, Tuirseach und Leite. Die bisher geführten Lebensdaten 1697–1720 bleiben vorerst erhalten; Leites 1700–1730 und die abweichende Jagdgeschichte werden ausdrücklich als noch ungeklärte Angaben festgehalten.
+- Kriegerdarstellungen, Stammbaumgrafiken und individuelle Kinderporträts sind unter `assets/images/references/haus-…` mit Herkunft und SHA-256 gesichert. Der vollständige Nachweis steht in `assets/data/source-inventories/ceitheach-additional-families-2026-10-05.json`.
 
 ## 14. Abschlussprotokoll
 

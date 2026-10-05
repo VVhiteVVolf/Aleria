@@ -116,6 +116,9 @@
 .ci-card-title h3 { margin: 0; color: var(--card-accent); font: 600 1.3rem/1.3 'Cinzel', serif; overflow-wrap: anywhere; }
 .ci-card-title p { margin: .35rem 0 0; font-size: .73rem; color: #85836f; }
 .ci-card-diagram { text-align: center; margin: .2rem 0 .8rem; }
+.ci-card-diagram > summary { padding: .6rem .75rem; border-radius: 4px; background: var(--card-wash); color: var(--card-accent); font-size: .75rem; text-align: left; cursor: pointer; }
+.ci-card-diagram > summary:focus-visible { outline: 2px solid var(--card-accent); outline-offset: 2px; }
+.ci-card-diagram[open] > summary { margin-bottom: .65rem; }
 .ci-card-diagram > small { font-size: .6rem; color: #8b8876; }
 .ci-card-radar svg { width: min(100%, 230px); height: 205px; overflow: visible; }
 .ci-card-radar text { font-size: 9px; fill: #706c56; }

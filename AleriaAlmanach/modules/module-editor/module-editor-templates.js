@@ -1307,6 +1307,8 @@ const MODULE_TEMPLATE_REGISTRY = {
     buildEditorFields: page => buildLandingModuleEditorFields(page),
     collectEditorPage: (card, page) => collectLandingModuleEditorPage(card, page),
     renderPage: (page, entry, pageIndex, total) => buildLandingPage(page, entry, pageIndex, total),
+    mountPage: context => globalThis.AleriaGroupLanding?.mount(context),
+    unmountPage: context => globalThis.AleriaGroupLanding?.unmount(context),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'landing')
   },
   artifact: {
@@ -1377,6 +1379,8 @@ const MODULE_TEMPLATE_REGISTRY = {
     buildEditorFields: page => buildSessionModuleEditorFields(page),
     collectEditorPage: (card, page) => collectSessionModuleEditorPage(card, page),
     renderPage: (page, entry, pageIndex, total) => buildSessionPage(page, entry, pageIndex, total),
+    mountPage: context => globalThis.AleriaGroupLanding?.mountScene(context),
+    unmountPage: context => globalThis.AleriaGroupLanding?.unmountScene(context),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineSessionTemplatePage(page, entry, pageIndex, total)
   },
   hierarchy: {

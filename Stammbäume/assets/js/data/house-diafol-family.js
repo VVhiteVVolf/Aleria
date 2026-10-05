@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -206,7 +207,7 @@ const ORIGIN_PARTNERS = Object.freeze({
   gwawr: ['gwawr-diafol', 'taranis-morgant']
 });
 
-export const HOUSE_DIAFOL_TREFGOCH_FAMILY = Object.freeze({
+export const HOUSE_DIAFOL_TREFGOCH_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -429,7 +430,7 @@ export const HOUSE_DIAFOL_TREFGOCH_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Vollständige Diafol-Herkunftsakte nach der bereitgestellten Tabelle. Die Hausverknotung steht unter Gwrgwst und Célyn, gefolgt von genau einem seriellen Zeitsprung. Beide Äste Ercwlffs und Griffs, sämtliche belegten Ehen, Wegverheiratungen und die Kriegsverluste von 1720 bleiben erhalten. Torri erscheint nur einmal; Madog steht über Meic und Slevin über Medi. Telyn ist leibliches Kind Tryffins und Morcants, zugleich aber mit blauem Weggegeben-Mündelrahmen und Gegenlink zu Haus Blodyn versehen.'
   }
-});
+}));
 
 const TALGARTH_PARTNERS = Object.freeze({
   tryffin: ['morcant-gwaedlyd', 'tryffin-diafol'],
@@ -438,7 +439,7 @@ const TALGARTH_PARTNERS = Object.freeze({
   tarawg: ['tarawg-diafol', 'maygan-caerdyn']
 });
 
-export const HOUSE_DIAFOL_TALGARTH_FAMILY = Object.freeze({
+export const HOUSE_DIAFOL_TALGARTH_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -567,4 +568,4 @@ export const HOUSE_DIAFOL_TALGARTH_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Getrennte Talgarther Zielakte mit genau den acht überlebenden Diafol: Tryffin, Torri, Tarawg, Tawr, Telyn, Meic, Medi und Tref. Morcant, Maygan und Slevin sind als lebende Partner enthalten; der 1720 gefallene Madog bleibt ausschließlich notwendig, damit Meic seiner tatsächlichen Affäre zugeordnet wird. Torri wird nicht gedoppelt. Telyn behält seinen leiblichen Elternanschluss und zugleich die blaue Weggegeben-Mündelverknüpfung zur Blodyn-Gegenakte.'
   }
-});
+}));

@@ -8,7 +8,9 @@ function cleanCustomSection(section) {
     key,
     tab: String(section?.tab || '').trim() || key,
     desc: String(section?.desc || '').trim(),
-    entries: Array.isArray(section?.entries) ? section.entries.map(entry => sanitizeModuleEntry(entry)).filter(Boolean) : [],
+    entries: Array.isArray(section?.entries) ? section.entries.map(entry => sanitizeModuleEntry(
+      typeof migrateModuleEntryForSection === 'function' ? migrateModuleEntryForSection(entry, section) : entry
+    )).filter(Boolean) : [],
   };
   if (iconUrl) next.iconUrl = iconUrl;
   const nodeId = String(section?.nodeId || '').trim();
@@ -176,7 +178,11 @@ function getAllSections() {
     }
   });
 
-  return merged.filter(section => section && Array.isArray(section.entries));
+  return merged.filter(section => section && Array.isArray(section.entries)).map(section => ({
+    ...section,
+    entries: section.entries.map(entry => typeof migrateModuleEntryForSection === 'function'
+      ? migrateModuleEntryForSection(entry, section) : entry)
+  }));
 }
 
 function getValidSections() {

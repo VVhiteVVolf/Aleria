@@ -7,6 +7,7 @@ import { HOUSE_PYSGOD_PORTRAITS } from './house-pysgod-portraits.js';
 const PORTRAIT_ROOT = 'assets/images/portraits/haus-blaidd';
 
 export const HOUSE_BLAIDD_LOCAL_PORTRAIT_FILES = Object.freeze({
+  'sulwen-blaidd': 'sulwen-blaidd.jpg',
   'llewelyn-founder-blaidd': 'llewelyn-founder-blaidd.png',
   'sieffre-founder-blaidd': 'sieffre-founder-blaidd.png',
   'tangwistl-blaidd': 'tangwistl-blaidd.png',
@@ -36,6 +37,7 @@ export const HOUSE_BLAIDD_LOCAL_PORTRAIT_FILES = Object.freeze({
 });
 
 export const HOUSE_BLAIDD_PORTRAIT_SOURCES = Object.freeze({
+  'sulwen-blaidd': 'https://64.media.tumblr.com/cb67931300995f7643f0bf5d77f12695/8e76879a27a0fa24-ae/s250x400/23bba99ffaa65c62550377d0e278131ca3855c8a.pnj',
   'llewelyn-founder-blaidd': 'https://i.imgur.com/X6wOECU.png',
   'sieffre-founder-blaidd': 'https://i.imgur.com/deA9uZt.png',
   'tangwistl-blaidd': 'https://i.imgur.com/NRkJIz9.png',

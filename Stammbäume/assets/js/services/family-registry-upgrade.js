@@ -63,19 +63,27 @@ function mergeEntityExtensions(registeredExtensions = {}, localExtensions = {}) 
   return result;
 }
 
-function mergeEntities(registeredEntities = [], localEntities = [], tombstones = new Set(), applyManagedFields = true) {
+function mergeEntities(registeredEntities = [], localEntities = [], tombstones = new Set(), applyManagedFields = true, localSourceRevision = 0) {
   const localById = new Map(localEntities.map(entity => [entity.id, entity]));
   const merged = registeredEntities.filter(entity => !tombstones.has(entity.id)).map(entity => {
     const localEntity = localById.get(entity.id);
     if (!localEntity) return entity;
 
-    const registryManagedFields = applyManagedFields && Array.isArray(entity.extensions?.registryManagedFields)
-      ? entity.extensions.registryManagedFields
+    // Einzelne Quellenkorrekturen dürfen bereits übernommene Nachbardaten erhalten.
+    const entityRevision = entity.extensions?.registryManagedSourceRevision;
+    const applyEntityFields = Number.isInteger(entityRevision)
+      ? localSourceRevision < entityRevision : applyManagedFields;
+    const fieldRevisions = entity.extensions?.registryManagedFieldRevisions || {};
+    // Feldgenaue spätere Korrekturen gelten auch nach der strukturellen Revision;
+    // bereits übernommene Nachbardaten und Ansichtseinstellungen bleiben lokal.
+    const registryManagedFields = Array.isArray(entity.extensions?.registryManagedFields)
+      ? entity.extensions.registryManagedFields.filter(field => Number.isInteger(fieldRevisions[field])
+        ? localSourceRevision < fieldRevisions[field] : applyManagedFields && applyEntityFields)
       : [];
     const result = {
       ...entity,
       ...localEntity,
-      extensions: applyManagedFields
+      extensions: applyEntityFields
         ? mergeEntityExtensions(entity.extensions, localEntity.extensions)
         : { ...entity.extensions, ...localEntity.extensions }
     };
@@ -166,7 +174,7 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
   ]));
   const mergedCollections = Object.fromEntries(ENTITY_COLLECTIONS.map(collection => [
     collection,
-    mergeEntities(registered[collection], local[collection], mergedTombstones[collection], applyManagedEntityFields)
+    mergeEntities(registered[collection], local[collection], mergedTombstones[collection], applyManagedEntityFields, localRevision)
   ]));
   const mergedRegistryTombstones = Object.fromEntries(ENTITY_COLLECTIONS.flatMap(collection => {
     const ids = [...mergedTombstones[collection]];

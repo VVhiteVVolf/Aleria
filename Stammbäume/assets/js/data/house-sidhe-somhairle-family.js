@@ -1,3 +1,4 @@
+import { withCeitheachSourceCounterUpgrade } from './ceitheach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -16,6 +17,7 @@ import {
   TIR_NA_GORTANNA_HOUSE_PROFILES,
   TIR_NA_GORTANNA_MANAGED_PROFILE_FIELDS
 } from './tir-na-gortanna-house-profiles.js';
+import { getCeitheachDependentHouseProfile } from './ceitheach-house-profiles.js';
 
 const SOMHAIRLE_HOUSE_ID = 'house-somhairle';
 const SOMHAIRLE_EMBLEM = TIR_NA_GORTANNA_HOUSE_EMBLEMS.somhairle;
@@ -167,7 +169,7 @@ const FIONNCHU_IDS = ['fionnchu-somhairle', 'ybhna-iomrach'];
 const WIHALG_IDS = ['hurracan-frisealach', 'wihalg-somhairle'];
 const BREANNA_IDS = ['conan-iomrach', 'breanna-somhairle'];
 
-export const HOUSE_SIDHE_SOMHAIRLE_FAMILY = Object.freeze({
+export const HOUSE_SIDHE_SOMHAIRLE_FAMILY = Object.freeze(withCeitheachSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -362,6 +364,13 @@ export const HOUSE_SIDHE_SOMHAIRLE_FAMILY = Object.freeze({
     immediateLiegeHouseName: 'Clan Dál’Cruthin',
     legacyTitles: Object.freeze(['Clan Somhairle']),
     originPlacement: SIDHE_SOMHAIRLE_ORIGIN,
+    // Das Register zeigt den belegten Herkunftssitz als weitere Platzierung
+    // derselben Akte. Der Leitheacher Hauptsitz und die Genealogie bleiben erhalten.
+    registryAdditionalPlacements: Object.freeze([Object.freeze({
+      role: 'origin',
+      houseProfile: getCeitheachDependentHouseProfile('haus-somhairle'),
+      source: Object.freeze({ attachmentId: '113de06b-d1b1-4aad-b493-ac585c440ecc', row: 80, column: 0 })
+    })]),
     sourceDiscrepancies: Object.freeze({
       muiredachBirth: Object.freeze({ somhairleSource: '1647', frisealachSource: '1648', canonical: '1648' })
     }),
@@ -397,4 +406,4 @@ export const HOUSE_SIDHE_SOMHAIRLE_FAMILY = Object.freeze({
       timeJumps: []
     }
   }
-});
+}));

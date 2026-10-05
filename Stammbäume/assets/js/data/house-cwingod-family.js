@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { createFamilyPerson, createMarriage, createParentages, createMarriedAwayBranch } from './family-record-builders.js';
 import { HOUSE_ARTH_FAMILY } from './house-arth-family.js';
@@ -21,7 +22,8 @@ const SHARED_FAMILIES = [HOUSE_ARTH_FAMILY, HOUSE_CRAFANC_FAMILY, HOUSE_EIRTH_FA
 function person(id, name, sex, birth, death = '', options = {}) {
   return createFamilyPerson({ id, name, sex, birth, death, houseId: HOUSE_ID,
     portrait: HOUSE_CWINGOD_PORTRAITS[id] || '', ...options,
-    extensions: { ...options.extensions, registryManagedFields: MANAGED_PERSON_FIELDS }
+    extensions: { registryManagedSourceRevision: 2, ...options.extensions,
+      registryManagedFields: options.extensions?.registryManagedFields || MANAGED_PERSON_FIELDS }
   });
 }
 
@@ -30,7 +32,7 @@ function shared(family, id, options = {}) {
   if (!source) throw new Error(`Cwingod: gemeinsame Person ${id} fehlt.`);
   return { ...source, familyRole: source.houseId === HOUSE_ID ? 'core' : 'married',
     lineageRole: 'branch', ...options,
-    extensions: { ...source.extensions, ...options.extensions, registryManagedFields: MANAGED_PERSON_FIELDS }
+    extensions: { ...source.extensions, registryManagedSourceRevision: 2, ...options.extensions, registryManagedFields: MANAGED_PERSON_FIELDS }
   };
 }
 
@@ -96,12 +98,12 @@ const persons = [
   shared(HOUSE_PAWEN_FAMILY, 'joally-pawen'),
   person('ywain-cwingod', 'Ywain Cwingod', 'male', '1699', '1720'),
   person('riderch-cwingod', 'Riderch Cwingod', 'male', '1702'),
-  person('mervyn-serenoc', 'Mervyn Serenoc', 'unknown', '1700', '', { houseId: 'house-serenoc', familyRole: 'married', notes: 'Die Grafik nennt Mervyne, die Partnerkarte Mervyn Serenoc. Die Kinderüberschrift nennt abweichend Engla; dieser Widerspruch begründet keine zusätzliche Person oder Ehe.' }),
+  person('mervyn-serenoc', 'Mervyne Serenoc', 'unknown', '1700', '', { houseId: 'house-serenoc', familyRole: 'married', notes: 'Die Serenoc-Partnerkarte und beide Stammbaumgrafiken nennen Mervyne. Identisch mit der zuvor als Mervyn geführten Person der Cwingod-Akte; Personen- und Welt-ID bleiben stabil. Die abweichende alte Kinderüberschrift Engla begründet keine weitere Person.', extensions: { registryManagedSourceRevision: 3, registryManagedFields: ['name', 'notes'] } }),
   person('gildas-cwingod', 'Gildas Cwingod', 'male', '1705'),
   person('llio-cwingod-spouse', 'Llio', 'female', '1709', '', { houseId: 'house-unbekannt-llio', familyRole: 'married' }),
   person('artgal-cwingod', 'Artgal Cwingod', 'male', '1720', '', { lineageRole: 'mainline', title: 'Erster in der überlieferten Erbfolge' }),
   person('clinoch-cwingod', 'Clinoch Cwingod', 'male', '1722', '', { title: 'Ritter zur See · Besatzung des Seebären; zweiter in der überlieferten Erbfolge' }),
-  person('hedd-morlais', 'Hedd Morlais', 'male', '1720', '', { houseId: 'house-morlais', familyRole: 'ward', notes: 'Die Stammbaumgrafik zeigt eine blaue Verbindung zu Galeshin und Tiwlip; Pflege-/Adoptionsart ist im Text nicht bezeichnet. Als unsichere Aufnahme geführt, biologische Eltern bleiben unbekannt.' }),
+  person('hedd-morlais', 'Hedd Morlais', 'male', '1720', '', { houseId: 'house-morlais', familyRole: 'ward', notes: 'Leiblicher Sohn von Kibddar Morlais (1692) und Lunet Serenoc; die blaue Quellenmarkierung und die Cwingod-Gegenakte belegen seine Aufnahme bei Galeshin Cwingod und Tiwlip Arth. Biologische und Pflegeelternschaft bleiben getrennt.', extensions: { registryManagedSourceRevision: 3, registryManagedFields: ['notes'] } }),
   person('vaughan-cwingod', 'Vaughan Cwingod', 'male', '1719', '', { notes: 'Im Almanach als Vaughn Cwingod bei den Schwarzfischen geführt: gleiches Porträt, gleiches Haus und der Titel „Ritter, Morea“ belegen dieselbe Figur. Die bestehende Almanach-ID EPwTMvE8J0vG76aXt2NK bleibt erhalten.', extensions: { sourceNameVariants: ['Vaughn Cwingod'], almanachCharacterId: 'EPwTMvE8J0vG76aXt2NK' } }),
   person('arianrhod-cwingod', 'Arianrhod Cwingod', 'female', '1723'),
   person('adeon-cwingod', 'Adeon Cwingod', 'male', '1721'),
@@ -113,7 +115,7 @@ const requiredHouseIds = new Set(persons.map(entry => entry.houseId));
 const sharedHouses = new Map(SHARED_FAMILIES.flatMap(family => family.houses.map(house => [house.id, house])));
 const houseNames = { 'house-drewi': 'Haus Drewi', 'house-rioga': 'Haus Ríoga', 'house-serenoc': 'Haus Serenoc', 'house-morlais': 'Haus Morlais', 'house-unbekannt-llio': 'Unbekanntes Haus' };
 
-export const HOUSE_CWINGOD_FAMILY = {
+export const HOUSE_CWINGOD_FAMILY = withVennyrSourceCounterUpgrade({
   schema: 'aleria.family-tree', schemaVersion: 1,
   document: { id: 'haus-cwningod', title: "Haus Cwingod O'Morea", motto: 'Im Maul des Bären liegt die Kraft, die durch Worte und Taten spricht.',
     description: 'Drittes Kadettenhaus der Arth und Baronenhaus der Talklaue. Die vollständige überlieferte Linie steht unter Cra Fryn; Morea ist der in der Hausquelle genannte Stadt- und Handelssitz.',
@@ -135,7 +137,7 @@ export const HOUSE_CWINGOD_FAMILY = {
     ...children(['artgal-cwingod', 'clinoch-cwingod'], 'galeshin'),
     ...children(['hedd-morlais'], 'galeshin', { type: 'foster', certainty: 'unknown', legitimacy: 'unknown', notes: 'Blaue Quellenverbindung; Art der Aufnahme nicht ausdrücklich benannt.' }),
     ...children(['vaughan-cwingod', 'arianrhod-cwingod'], 'tegid'),
-    ...children(['adeon-cwingod', 'sioned-cwingod'], 'riderch', { certainty: 'probable', notes: 'Partnerkarte und Grafik nennen Mervyn/Mervyne Serenoc; die Kinderüberschrift nennt abweichend Engla.' }),
+    ...children(['adeon-cwingod', 'sioned-cwingod'], 'riderch', { certainty: 'confirmed', notes: 'Die Serenoc-Gegenquelle bestätigt Mervyne als Riderchs Eheperson; die abweichende Engla-Überschrift der Altquelle ist ein Kopierfehler.', extensions: { registryManagedSourceRevision: 3, registryManagedFields: ['certainty', 'notes'] } }),
     ...children(['slevin-cwingod', 'eirwen-cwingod'], 'gildas')
   ],
   cadetBranches: [away('rhonwen', 'Haus Unigol', 'house-unigol', 'haus-unigol'), away('delyth', 'Haus Drewi', 'house-drewi', 'haus-drewi'),
@@ -146,7 +148,7 @@ export const HOUSE_CWINGOD_FAMILY = {
     crestEmblemScale: 0.86, crestFrame: 'gold', crestFrameScale: 1, timeGap: { enabled: false, years: 0, fromYear: '', toYear: '', label: '' } },
   presentation: { relationshipColors: { ...DEFAULT_RELATIONSHIP_COLORS } },
   view: { focusPersonId: 'galeshin-ancient-arth', orientation: 'vertical', ancestorDepth: 16, descendantDepth: 16, limitGenerations: false, showSiblings: true },
-  extensions: { blankFamily: false, sourceRevision: 2, sourceFamilyId: 'haus-arth', sourcePartnershipId: MARRIAGE_IDS.founders,
+  extensions: { blankFamily: false, sourceRevision: 3, sourceFamilyId: 'haus-arth', sourcePartnershipId: MARRIAGE_IDS.founders,
     houseBiographyModule: HOUSE_CWINGOD_BIOGRAPHY,
     sourceNote: 'Nutzerquelle und Stammbaumgrafik vom 05.10.2026. Cwingod ist die ausdrücklich korrigierte Schreibweise; alte Akten-, Haus- und Weltpersonen-IDs bleiben stabil. 39 Personen, 14 Ehen, 24 Abstammungs-/Aufnahmekanten, fünf Wegheiraten, ein serieller Zeitsprung. Amtsjahre werden von Lebensdaten getrennt. Gegenakten bestimmen Braih, Dumnagual, Mared Lyfant, Tarawgs Lebensdaten und Maelgwns Todesjahr 1740. Rhonwens Quellenkreuz belegt den Tod ohne Todesjahr. Tualas unmögliches 1976 wird zu 1676 korrigiert. Riderch/Engla gegenüber Mervyn und die blaue Hedd-Verbindung sind als Quellenwidersprüche dokumentiert. Leere Hof-, Verlobungs- und Trivia-Vorlagen werden nicht zu Personen. Die ausdrückliche Einordnung lautet Cenyr > Klaueninsel > Talklaue > Cra Fryn, während Morea als Stadt- und Handelssitz erhalten bleibt.',
     registryManagedDocumentFields: ['title', 'description', 'motto'],
@@ -155,4 +157,4 @@ export const HOUSE_CWINGOD_FAMILY = {
     registryManagedRecordFields: ['folderPath', 'title'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings']
   }
-};
+});

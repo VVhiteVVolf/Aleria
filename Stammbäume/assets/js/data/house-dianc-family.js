@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -184,7 +185,7 @@ const ORIGIN_PARTNERS = Object.freeze({
   murvin: ['vanna-mochdaer', 'murvin-dianc']
 });
 
-export const HOUSE_DIANC_GWYNLANN_FAMILY = Object.freeze({
+export const HOUSE_DIANC_GWYNLANN_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -454,14 +455,14 @@ export const HOUSE_DIANC_GWYNLANN_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Getrennte Gwynlann-Herkunftsakte nach der Dianc-Tabelle. Arthfael und Gwendolen tragen Hausknoten und seriellen Zeitsprung; sämtliche historischen Äste, Ehen und Wegverheiratungen bleiben erhalten. Gingalain erhält den alleinigen Übergang nach Aberdail. Marn und Delwyn bleiben als vor der Flucht geborene Überlebende genealogisch in Gwynlann sichtbar; die nach 1720 geborenen Gwenifer und Barry erscheinen nur in Aberdail. Die Oberherrschaftstabelle von Tir Mynddoedd belegt Dianc als Penron-Haus (Grafengeschlecht); die Genealogie bleibt bei dieser territorialen Ergänzung unverändert.'
   }
-});
+}));
 
 const ABERDAIL_PARTNERS = Object.freeze({
   gingalain: ['glaw-crafanc', 'gingalain-dianc'],
   murvin: ['vanna-mochdaer', 'murvin-dianc']
 });
 
-export const HOUSE_DIANC_ABERDAIL_FAMILY = Object.freeze({
+export const HOUSE_DIANC_ABERDAIL_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -551,7 +552,7 @@ export const HOUSE_DIANC_ABERDAIL_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Aberdail-Akte mit Gingalain als Begründer und einem gemeinsamen Herkunftsknoten über Gingalain und Murvin. Glaw steht über Marn, Gwenifer und Barry; Vanna und Murvin stehen parallel über Delwyn. Dadurch werden beide Elternschaften eindeutig und ohne doppelte Kinder fortgeführt.'
   }
-});
+}));
 
 export const DIANC_HOUSE_FAMILIES = Object.freeze([
   HOUSE_DIANC_GWYNLANN_FAMILY,

@@ -1,3 +1,4 @@
+import { withCeitheachSourceCounterUpgrade } from './ceitheach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -296,7 +297,7 @@ const SENAN_1700_IDS = ['senan-1700-cumhail', 'polain-cruthin'];
 const ODRAN_IDS = ['odran-cumhail', 'iarlaith-gallchobhair'];
 const DOMHNALL_1702_IDS = ['domhnall-1702-cumhail', 'caragh-coronach'];
 
-export const HOUSE_MAC_ARD_CUMHAILL_FAMILY = Object.freeze({
+export const HOUSE_MAC_ARD_CUMHAILL_FAMILY = Object.freeze(withCeitheachSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -776,4 +777,4 @@ export const HOUSE_MAC_ARD_CUMHAILL_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId'],
     registryManagedRecordFields: ['folderPath']
   }
-});
+}));

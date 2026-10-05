@@ -11,6 +11,7 @@ import { HOUSE_PYSGOD_PORTRAITS } from './house-pysgod-portraits.js';
 const PORTRAIT_ROOT = 'assets/images/portraits/haus-arfordir';
 
 export const HOUSE_ARFORDIR_LOCAL_PORTRAIT_FILES = Object.freeze({
+  'jenita-blodeuwedd': 'jenita-blodeuwedd.png',
   'llaesgwynyn-walwrs': 'llaesgwynyn-walwrs.jpg',
   'arglwydd-arfordir': 'arglwydd-arfordir.png',
   'thalen-arfordir': 'thalen-arfordir.png',
@@ -26,6 +27,7 @@ export const HOUSE_ARFORDIR_LOCAL_PORTRAIT_FILES = Object.freeze({
 });
 
 export const HOUSE_ARFORDIR_PORTRAIT_SOURCES = Object.freeze({
+  'jenita-blodeuwedd': 'https://i.imgur.com/1x2K9e0.png',
   'llaesgwynyn-walwrs': 'https://64.media.tumblr.com/b278a6094f299a17ee53f80db73b3151/5cb9705b68b3ce6b-c2/s250x400/9aacaa5d92c8ded033be429668b13dba309a55c9.pnj',
   'arglwydd-arfordir': 'https://i.imgur.com/WEP8ckh.png',
   'thalen-arfordir': 'https://i.imgur.com/3A7enFm.png',

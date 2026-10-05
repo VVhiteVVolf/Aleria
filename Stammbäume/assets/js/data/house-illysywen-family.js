@@ -1,3 +1,4 @@
+import { withCeitheachSourceCounterUpgrade } from './ceitheach-source-counter-upgrade.js';
 import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Illysywen/haus.biography.mjs?v=20260911c';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
@@ -74,7 +75,7 @@ const ERCWLFF_IDS = ['ercwlff-illysywen', 'wenna-saethwyr'];
 const NODAWL_IDS = ['nodawl-illysywen', 'dagny-brathfengr'];
 const EINION_IDS = ['einion-illysywen', 'xantippe-pyrth'];
 
-export const HOUSE_ILLYSYWEN_FAMILY = Object.freeze({
+export const HOUSE_ILLYSYWEN_FAMILY = Object.freeze(withCeitheachSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -246,4 +247,4 @@ export const HOUSE_ILLYSYWEN_FAMILY = Object.freeze({
     houseBiographyModule: HOUSE_BIOGRAPHY,
     sourceRevision: 3
   }
-});
+}));

@@ -1,138 +1,16 @@
-function makeLandingItemId(prefix = 'item', fallbackIndex = 0) {
-  return `${prefix}-${Date.now().toString(36)}-${fallbackIndex}-${Math.random().toString(36).slice(2, 6)}`;
+// The shared, generated facade is loaded before the classic module editors.
+function makeLandingItemId(prefix = 'item') {
+  return prefix + '-' + (globalThis.crypto?.randomUUID?.() || Date.now().toString(36) + '-' + Math.random().toString(36).slice(2));
 }
-
-function sanitizeLandingNumber(value, fallback = 0, min = 0, max = 100) {
-  const number = Number(value);
-  const safe = Number.isFinite(number) ? number : fallback;
-  return Math.max(min, Math.min(max, Math.round(safe)));
-}
-
-function sanitizeLandingMemberClass(item = {}) {
-  const explicit = String(item.className || '').trim();
-  if (explicit) return explicit;
-  const legacyLevel = String(item.level || '').trim();
-  return /^stufe\b/i.test(legacyLevel) ? String(item.role || '').trim() : legacyLevel;
-}
-
-function sanitizeLandingMembers(items = []) {
-  return (Array.isArray(items) ? items : []).map((item, index) => ({
-    id: String(item?.id || '').trim() || makeLandingItemId('member', index),
-    name: String(item?.name || `Abenteurer ${index + 1}`).trim(),
-    role: String(item?.role || '').trim(),
-    className: sanitizeLandingMemberClass(item),
-    status: String(item?.status || 'Bereit').trim(),
-    statusColor: String(item?.statusColor || '#2c8a3d').trim(),
-    portrait: String(item?.portrait || '').trim(),
-    badgeIcon: String(item?.badgeIcon || '*').trim()
-  })).filter(item => item.name || item.portrait).slice(0, 60);
-}
-
-function sanitizeLandingQuests(items = []) {
-  return (Array.isArray(items) ? items : []).map((item, index) => ({
-    id: String(item?.id || '').trim() || makeLandingItemId('quest', index),
-    title: String(item?.title || `Quest ${index + 1}`).trim(),
-    text: String(item?.text || '').trim(),
-    image: String(item?.image || '').trim(),
-    kind: String(item?.kind || 'Nebenquest').trim(),
-    status: ['active', 'done', 'failed'].includes(String(item?.status || '').trim()) ? String(item.status).trim() : 'active',
-    progress: sanitizeLandingNumber(item?.progress, 0, 0, 100)
-  })).filter(item => item.title || item.text || item.image).slice(0, 30);
-}
-
-function sanitizeLandingNotes(items = []) {
-  return (Array.isArray(items) ? items : []).map((item, index) => ({
-    id: String(item?.id || '').trim() || makeLandingItemId('note', index),
-    authorId: String(item?.authorId || '').trim(),
-    authorName: String(item?.authorName || '').trim(),
-    icon: String(item?.icon || '').trim(),
-    title: String(item?.title || `Notiz ${index + 1}`).trim(),
-    text: String(item?.text || '').trim(),
-    createdAt: String(item?.createdAt || '').trim() || new Date().toISOString()
-  })).filter(item => item.title || item.text).slice(0, 40);
-}
-
-function sanitizeLandingEvents(items = []) {
-  return (Array.isArray(items) ? items : []).map((item, index) => ({
-    icon: String(item?.icon || '*').trim(),
-    title: String(item?.title || `Ereignis ${index + 1}`).trim(),
-    time: String(item?.time || '').trim(),
-    aleriaDate: sanitizeAleriaDate(item?.aleriaDate)
-  })).filter(item => item.icon || item.title || item.time).slice(0, 12);
-}
-
-function sanitizeLandingInfo(items = []) {
-  return (Array.isArray(items) ? items : []).map((item, index) => ({
-    icon: String(item?.icon || '*').trim(),
-    title: String(item?.title || `Information ${index + 1}`).trim(),
-    text: String(item?.text || '').trim()
-  })).filter(item => item.icon || item.title || item.text).slice(0, 12);
-}
-
-function sanitizeLandingData(data = {}) {
-  return {
-    bannerImage: String(data.bannerImage || '').trim(),
-    title: String(data.title || 'Celtigerns Wacht').trim(),
-    subtitle: String(data.subtitle || 'Grafschaft Celtigerns Wacht').trim(),
-    memberTitle: String(data.memberTitle || 'Abenteurer').trim(),
-    questTitle: String(data.questTitle || 'Quests').trim(),
-    notesTitle: String(data.notesTitle || 'Notizen').trim(),
-    eventsTitle: String(data.eventsTitle || 'Letzte Ereignisse').trim(),
-    mapTitle: String(data.mapTitle || 'Aktuelle Karte').trim(),
-    mapKartenId: String(data.mapKartenId || '').trim(),
-    mapImage: String(data.mapImage || '').trim(),
-    mapLink: String(data.mapLink || '').trim(),
-    mapButtonLabel: String(data.mapButtonLabel || 'Karte oeffnen').trim(),
-    infoTitle: String(data.infoTitle || 'Informationen').trim(),
-    members: sanitizeLandingMembers(data.members),
-    quests: sanitizeLandingQuests(data.quests),
-    notes: sanitizeLandingNotes(data.notes),
-    events: sanitizeLandingEvents(data.events),
-    info: sanitizeLandingInfo(data.info)
-  };
-}
-
+function sanitizeLandingNumber(value, fallback = 0, min = 0, max = 100) { return AleriaLandingModel.landingNumber(value, fallback, min, max); }
+function sanitizeLandingMembers(items) { return AleriaLandingModel.normalizeLandingMembers(items); }
+function sanitizeLandingQuests(items) { return AleriaLandingModel.normalizeLandingQuests(items); }
+function sanitizeLandingNotes(items) { return AleriaLandingModel.normalizeLandingNotes(items); }
+function sanitizeLandingEvents(items) { return AleriaLandingModel.normalizeLandingEvents(items, sanitizeAleriaDate); }
+function sanitizeLandingInfo(items) { return AleriaLandingModel.normalizeLandingInfo(items); }
+function sanitizeLandingData(data = {}) { return AleriaLandingModel.normalizeLandingData(data, sanitizeAleriaDate); }
 function createDefaultLandingPage(index = 0) {
-  const members = Array.from({ length: 8 }, (_, i) => ({
-    name: `Abenteurer ${i + 1}`,
-    role: i % 2 ? 'Kundschafter' : 'Krieger',
-    className: i % 2 ? 'Kundschafter' : 'Krieger',
-    status: i % 3 === 0 ? 'Erschoepft' : 'Gesund',
-    statusColor: i % 3 === 0 ? '#1c7faf' : '#27853c',
-    portrait: '',
-    badgeIcon: '*'
-  }));
-  return {
-    pageTitle: `${getRomanPageLabel(index)} - Landing Page`,
-    landingPage: true,
-    landing: sanitizeLandingData({
-      title: 'Celtigerns Wacht',
-      subtitle: 'Grafschaft Celtigerns Wacht',
-      members,
-      quests: [
-        { title: 'Die Schwarzen Zitteraale', text: 'Untersucht die Aktivitaeten der Raeuberbande.', kind: 'Hauptquest', progress: 66, status: 'active' },
-        { title: 'Das Arkanistenfieber', text: 'Findet eine Heilung fuer das magische Fieber.', kind: 'Nebenquest', progress: 40, status: 'active' },
-        { title: 'Verlorene Relikte', text: 'Bergt verschollene Relikte aus alten Ruinen.', kind: 'Nebenquest', progress: 20, status: 'active' }
-      ],
-      notes: [
-        { title: 'Geruecht ueber den Nebelwald', text: 'In der Taverne wurde von seltsamen Lichtern berichtet.', authorName: 'Erzaehler' },
-        { title: 'Kontakt in Broneclyn', text: 'Ein Informant kann moeglicherweise helfen.', authorName: 'Erzaehler' }
-      ],
-      events: [
-        { icon: '*', title: 'Sitzung mit der Grafenfamilie', time: 'Heute, 18:00 Uhr' },
-        { icon: '*', title: 'Patrouille im Grenzgebiet', time: 'Gestern, 09:00 Uhr' },
-        { icon: '*', title: 'Lieferung fuer die Taverne', time: 'Vor 2 Tagen, 14:00 Uhr' }
-      ],
-      info: [
-        { icon: '*', title: 'Gildenruf', text: 'Angesehen' },
-        { icon: '*', title: 'Aktuelles Gold', text: '1.245 GM' },
-        { icon: '*', title: 'Vorraete', text: 'Gut versorgt' }
-      ]
-    }),
-    stats: [],
-    commentDivider: false,
-    commentSequence: []
-  };
+  return { ...AleriaLandingModel.createLandingPage(), pageTitle: getRomanPageLabel(index) + ' – Gruppenübersicht' };
 }
 
 function buildLandingInput(label, className, value, type = 'text') {
@@ -221,7 +99,7 @@ function buildLandingMapKartenField(data) {
       <select class="inline-edit-select me-landing-mapKartenId" data-module-editor-action="sync-json-preview">
         ${buildLandingKartenOptions(data.mapKartenId)}
       </select>
-    </label>`;
+    </label><label><span>Darstellung</span><select class="inline-edit-select me-landing-mapDisplay" data-module-editor-action="sync-json-preview"><option value="embed"${data.mapDisplay === 'embed' ? ' selected' : ''}>Interaktive Karte (Iframe)</option><option value="image"${data.mapDisplay === 'image' ? ' selected' : ''}>Vorschaubild</option></select></label>`;
 }
 
 function buildLandingMemberRows(members = [], mode = 'module') {
@@ -307,7 +185,10 @@ function collectLandingRows(block, selector, mapper) {
 }
 
 function collectLandingDataFromBlock(block) {
+  let base = {};
+  try { base = JSON.parse(block.dataset?.landingBase || '{}'); } catch { /* Older templates have no preserved state. */ }
   return sanitizeLandingData({
+    ...base,
     bannerImage: getTrimmedFormValue(block, '.me-landing-bannerImage'),
     title: getTrimmedFormValue(block, '.me-landing-title'),
     subtitle: getTrimmedFormValue(block, '.me-landing-subtitle'),
@@ -317,11 +198,13 @@ function collectLandingDataFromBlock(block) {
     eventsTitle: getTrimmedFormValue(block, '.me-landing-eventsTitle'),
     mapTitle: getTrimmedFormValue(block, '.me-landing-mapTitle'),
     mapKartenId: getTrimmedFormValue(block, '.me-landing-mapKartenId'),
+    mapDisplay: getTrimmedFormValue(block, '.me-landing-mapDisplay'),
     mapImage: getTrimmedFormValue(block, '.me-landing-mapImage'),
     mapLink: getTrimmedFormValue(block, '.me-landing-mapLink'),
     mapButtonLabel: getTrimmedFormValue(block, '.me-landing-mapButtonLabel'),
     infoTitle: getTrimmedFormValue(block, '.me-landing-infoTitle'),
-    members: collectLandingRows(block, '.landing-editor-member-row', row => ({
+    members: base.group ? base.members : collectLandingRows(block, '.landing-editor-member-row', row => ({
+      ...(base.members || []).find(item => item.id === getTrimmedFormValue(row, '.me-landing-member-id')),
       id: getTrimmedFormValue(row, '.me-landing-member-id'),
       name: getTrimmedFormValue(row, '.me-landing-member-name'),
       role: getTrimmedFormValue(row, '.me-landing-member-role'),
@@ -332,6 +215,7 @@ function collectLandingDataFromBlock(block) {
       portrait: getTrimmedFormValue(row, '.me-landing-member-portrait')
     })),
     quests: collectLandingRows(block, '.landing-editor-quest-row', row => ({
+      ...(base.quests || []).find(item => item.id === getTrimmedFormValue(row, '.me-landing-quest-id')),
       id: getTrimmedFormValue(row, '.me-landing-quest-id'),
       title: getTrimmedFormValue(row, '.me-landing-quest-title'),
       kind: getTrimmedFormValue(row, '.me-landing-quest-kind'),
@@ -366,11 +250,11 @@ function collectLandingDataFromBlock(block) {
 function buildLandingModuleEditorFields(page) {
   const data = sanitizeLandingData(page?.landing || {});
   return `
-    <div class="module-page-type-block${inferModulePageType(page) === 'landing' ? ' visible' : ''}" data-page-type="landing">
+    <div class="module-page-type-block${inferModulePageType(page) === 'landing' ? ' visible' : ''}" data-page-type="landing" data-landing-base="${escapeHtml(JSON.stringify(data))}">
       <div class="module-editor-grid">
         <div class="module-editor-field wide">
           <div class="module-editor-kicker">Landing Page</div>
-          <div class="module-editor-help">Gruppenuebersicht mit Abenteurern, Quests, Notizen, Ereignissen, Kartenlink und Schnellinformationen.</div>
+          <div class="module-editor-help">Übersicht mit Mitgliedern, Aufgaben, Notizen, Ereignissen und Karte.${data.group ? ' Die aktuelle Gruppe, Gäste, aktive Sitzung und Kasse bearbeitest du direkt auf der Gruppenseite. Mitglieder stammen aus der Hierarchie.' : ''}</div>
         </div>
         <div class="module-editor-field wide"><label>Kopfbereich</label><div class="trade-editor-grid">
           ${buildLandingInput('Titel', 'me-landing-title', data.title)}
@@ -385,7 +269,7 @@ function buildLandingModuleEditorFields(page) {
           ${buildLandingInput('Karte', 'me-landing-mapTitle', data.mapTitle)}
           ${buildLandingInput('Informationen', 'me-landing-infoTitle', data.infoTitle)}
         </div></div>
-        <div class="module-editor-field wide"><div class="module-editor-inline" style="justify-content:space-between;"><label>Abenteurer</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-landing-member">+ Abenteurer</button></div><div class="trade-editor-list landing-editor-member-list">${buildLandingMemberRows(data.members, 'module')}</div></div>
+        ${data.group ? '' : `<div class="module-editor-field wide"><div class="module-editor-inline" style="justify-content:space-between;"><label>Mitglieder</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-landing-member">+ Mitglied</button></div><div class="trade-editor-list landing-editor-member-list">${buildLandingMemberRows(data.members, 'module')}</div></div>`}
         <div class="module-editor-field wide"><div class="module-editor-inline" style="justify-content:space-between;"><label>Quests</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-landing-quest">+ Quest</button></div><div class="trade-editor-list landing-editor-quest-list">${buildLandingQuestRows(data.quests, 'module')}</div></div>
         <div class="module-editor-field wide"><div class="module-editor-inline" style="justify-content:space-between;"><label>Notizen</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-landing-note">+ Notiz</button></div><div class="trade-editor-list landing-editor-note-list">${buildLandingNoteRows(data.notes, 'module')}</div></div>
         <div class="module-editor-field wide"><div class="module-editor-inline" style="justify-content:space-between;"><label>Letzte Ereignisse</label><button class="module-editor-mini-btn" type="button" data-module-editor-action="add-landing-event">+ Ereignis</button></div><div class="trade-editor-list landing-editor-event-list">${buildLandingSimpleRows(data.events, 'event', 'module')}</div></div>
@@ -445,7 +329,7 @@ function buildInlineLandingEditor(page) {
         <div class="inline-edit-field"><span class="inline-edit-label">Untertitel</span><input class="inline-edit-input" data-inline-action="update-landing-field" data-landing-field="subtitle" value="${escapeHtml(data.subtitle)}"></div>
         <div class="inline-edit-field wide"><span class="inline-edit-label">Bannerbild</span><input class="inline-edit-input" data-inline-action="update-landing-field" data-landing-field="bannerImage" value="${escapeHtml(data.bannerImage)}"></div>
       </div>
-      <div class="inline-placeholder-note">Listen und Details bearbeitest du komfortabler im grossen Modul-Editor. Quests und Notizen lassen sich in der fertigen Ansicht direkt pflegen.</div>
+      <div class="inline-placeholder-note">${data.group ? 'Zusammenstellung, Gäste, Status, Kasse und aktive Sitzung lassen sich in der fertigen Gruppenübersicht direkt bearbeiten. Die Hierarchie bleibt die Quelle der Mitglieder.' : 'Listen und Darstellung bearbeitest du im Modul-Editor. Aufgaben und Notizen lassen sich auch direkt in der fertigen Ansicht pflegen.'}</div>
     </div>`;
 }
 

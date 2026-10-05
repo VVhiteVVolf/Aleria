@@ -8,6 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const almanachRoot = path.resolve(__dirname, '..');
 const sources = [
+  'modules/landing/landing-model.global.js',
   '../Fonts/Rheunwaith-Font-1.000/rheunwaith.js',
   '../Fonts/Karnrith-Font-2.000/karnrith.js',
   'modules/language/language-script-display.js',

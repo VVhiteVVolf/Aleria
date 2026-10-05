@@ -1,4 +1,5 @@
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
+import { CEITHEACH_DEPENDENT_CLANS } from './ceitheach-territorial-catalog.js';
 
 export const CEITHEACH_MANAGED_PROFILE_FIELDS = Object.freeze([
   'rankId',
@@ -143,3 +144,25 @@ export const CEITHEACH_HOUSE_PROFILES = Object.freeze({
     }
   )
 });
+
+const dependentProfiles = new Map(CEITHEACH_DEPENDENT_CLANS.map(clan => {
+  const liege = CEITHEACH_CLAN_DEFINITIONS.find(definition => `haus-${definition.slug}` === clan.liegeFamilyId);
+  return [clan.familyId, createHouseProfileFromFolderPath(['Ceitheach', clan.territory], {
+    rankId: clan.rankId,
+    seat: clan.seat,
+    liegeHouseId: clan.liegeFamilyId,
+    liegeHouseName: liege.title,
+    folderIcons: [CEITHEACH_REGION_EMBLEMS.ceitheach, liege.territoryEmblem, ''],
+    regionEmblems: {
+      kingdom: CEITHEACH_REGION_EMBLEMS.ceitheach,
+      county: liege.territoryEmblem,
+      barony: '', seat: ''
+    }
+  })];
+}));
+
+export function getCeitheachDependentHouseProfile(familyId) {
+  const profile = dependentProfiles.get(familyId);
+  if (!profile) throw new Error(`Keine territoriale Ceitheach-Quelle für ${familyId}.`);
+  return profile;
+}

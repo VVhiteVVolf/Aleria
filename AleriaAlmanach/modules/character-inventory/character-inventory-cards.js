@@ -11,7 +11,11 @@ function buildInventoryCardContent(item, { compact = false, status = '' } = {}) 
     <header class="ci-card-heading"><span class="ci-card-kicker">${model.symbol} ${escapeHtml(model.label)}</span><span class="ci-card-status">${escapeHtml(model.status)}</span></header>
     <div class="ci-card-image">${image}</div>
     <div class="ci-card-title"><h3>${escapeHtml(item.name)}</h3><p>${escapeHtml(item.type || model.label)}</p></div>
-    <div class="ci-card-diagram">${buildCharacterInventoryRadar(item.attributes, 'ci-card-radar')}<small>Eigenschaften · Skala 0–10</small></div>
+    <details class="ci-card-diagram">
+      <summary>Eigenschaftsdiagramm</summary>
+      ${buildCharacterInventoryRadar(item.attributes, 'ci-card-radar')}
+      <small>Eigenschaften · Skala 0–10</small>
+    </details>
     <div class="ci-card-description">${buildInventoryCardFacts(compact ? model.rows.filter(row => !['Preisgrundlage', 'Gezahlter Kaufpreis'].includes(row.label)) : model.rows)}<div class="ci-card-lore"><span class="ci-card-kicker">Beschreibung</span><p>${characterInventoryText(model.description)}</p></div></div>
     ${compact ? '' : `<section class="ci-card-rules"><h4>Aktionen & Wirkung</h4>${model.actions.map(action => `<div><strong>${escapeHtml(action.name)}</strong><p>${characterInventoryText(action.description)}</p></div>`).join('')}${model.effects.map(effect => `<div><strong>${escapeHtml(effect.label)}</strong><p>${characterInventoryText(effect.value)}</p></div>`).join('')}</section>`}
   </div>`;

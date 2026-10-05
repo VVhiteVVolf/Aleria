@@ -78,7 +78,7 @@
 <link rel="stylesheet" href="./styles/module-page-boards.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-profiles.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-character-inventory.css?v=20260922-itemization-v1">
-<link rel="stylesheet" href="./styles/character-inventory-cards.css?v=20260922-companion-landscape-v1">
+<link rel="stylesheet" href="./styles/character-inventory-cards.css?v=20260928-collapsible-diagram-v1">
 <link rel="stylesheet" href="./styles/module-page-hierarchy.css?v=20260909-newspaper-guilds-v1">
 <link rel="stylesheet" href="./vendor/family-chart/0.9.0/family-chart.css?v=20260715-family-chart-v1">
 <link rel="stylesheet" href="./styles/module-page-family.css?v=20260909-template-layout-v1">
@@ -94,7 +94,8 @@
 <link rel="stylesheet" href="./styles/module-page-script-table.css?v=20260913-morgar-v20">
 <link rel="stylesheet" href="./modules/language/arcane-alphabet.css?v=20260911-arcane-v1">
 <link rel="stylesheet" href="./modules/language/laerelis/laerelis.css?v=20260919-laerelis-v1">
-<link rel="stylesheet" href="./styles/module-page-landing.css?v=20260909-template-layout-v1">
+<link rel="stylesheet" href="./styles/module-page-landing.css?v=20261005-group-overview-v2">
+<link rel="stylesheet" href="./styles/group-landing.css?v=20261005-group-overview-v2">
 <link rel="stylesheet" href="./styles/module-page-guest-register.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-artifact-recipe.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/crop-dialog.css?v=20260520-cleanup-v1">
@@ -133,7 +134,8 @@
   <script src="./modules/language/laerelis/laerelis-script.js?v=20260919-laerelis-v1" defer></script>
   <script src="./modules/language/laerelis/laerelis-tables.js?v=20260919-laerelis-v1" defer></script>
   <script src="./modules/language/laerelis/laerelis-entry.js?v=20260919-laerelis-v1" defer></script>
-  <script src="./modules/module-store/module-entry-migrations.js?v=20260913-morgar-store-v1" defer></script>
+  <script src="./modules/landing/landing-model.global.js?v=20261005-group-overview-v2" defer></script>
+  <script src="./modules/module-store/module-entry-migrations.js?v=20261005-group-overview-v1" defer></script>
   <script src="./modules/language/language-reference-entries.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="../Fonts/Arkanes-Alphabet/arcane.js?v=2" defer></script>
   <script src="./modules/language/arcane-alphabet-entry.js?v=20260911-arcane-v1" defer></script>
@@ -170,7 +172,8 @@
   <script src="./modules/module-store/module-section-policy.js?v=20260826-section-policy-v1" defer></script>
   <script src="./modules/module-store/module-store-tree.js?v=20260703-category-icons-v1" defer></script>
   <script src="./modules/module-store/module-store-sync.js?v=20260919-shop-v1" defer></script>
-  <script src="./modules/module-store/module-store-sections.js?v=20260826-world-date-v1" defer></script>
+  <script src="./modules/module-store/module-store-sections.js?v=20261005-group-overview-v1" defer></script>
+  <script src="./modules/module-store/module-entry-write.js?v=20261005-group-edit-access-v1" defer></script>
   <script src="./modules/world-date/world-date-model.js?v=20260826-world-date-v1" defer></script>
   <script src="./modules/world-date/world-date-store.js?v=20260826-world-date-shared-v4" defer></script>
   <script src="./modules/world-date/world-date-scene-default.js?v=20260911-calendar-v2" defer></script>
@@ -182,7 +185,7 @@
   <script src="./modules/module-section-manager/module-section-manager-template.js?v=20260912-v1" defer></script>
   <script src="./modules/module-section-manager/module-section-manager-view.js?v=20260912-v1" defer></script>
   <script src="./modules/module-store/module-section-management.js?v=20260912-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-auth.js?v=20260520-cleanup-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-auth.js?v=20261005-group-edit-access-v1" defer></script>
   <script src="./modules/module-editor/module-editor-preview.js?v=20260909-template-layout-v1" defer></script>
   <script src="./modules/module-editor/module-editor-dnd.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-data.js?v=20261004-biography-export-v1" defer></script>
@@ -206,11 +209,11 @@
   <script src="./modules/language/language-module-editor.js?v=20260909-template-layout-v1" defer></script>
   <script src="./modules/name-list/name-list-module-editor.js?v=20260919-laerelis-v1" defer></script>
   <script src="./modules/script-table/script-table-module-editor.js?v=20260919-laerelis-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-landing.js?v=20260623-landing-editor-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-landing.js?v=20261005-group-overview-v2" defer></script>
   <script src="./modules/module-editor/module-editor-guest-register.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/module-editor/module-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-editor.js?v=20260716-family-tree-registry-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-templates.js?v=20260909-newspaper-guilds-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-templates.js?v=20261005-group-overview-v1" defer></script>
   <script src="./modules/module-editor/module-editor-workflow.js?v=20260909-newspaper-guilds-v1" defer></script>
   <script src="./modules/module-editor/module-editor-drafts.js?v=20260711-module-drafts-v1" defer></script>
   <script src="./modules/module-editor/module-editor-cast-picker.js?v=20260520-cleanup-v1" defer></script>
@@ -241,7 +244,7 @@
   <script src="./modules/module-editor/module-editor-family.js?v=20260715-family-workbench-v2" defer></script>
   <script src="./modules/module-editor/module-editor-template-transfer.js?v=20260911-page-comments-v1" defer></script>
   <script src="./modules/module-editor/module-editor-pages.js?v=20260911-page-comments-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-controller.js?v=20260715-family-workbench-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-controller.js?v=20261005-group-edit-access-v1" defer></script>
   <script src="./modules/module-editor/module-editor-events.js?v=20260806-clear-comments-v1" defer></script>
   <script src="./modules/backup/almanach-backup.js?v=20260806-force-clear-v1" defer></script>
   <script src="./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2" defer></script>
@@ -282,10 +285,11 @@
   <script src="./modules/language/language-renderer.js?v=20260712-language-template-v1" defer></script>
   <script src="./modules/name-list/name-list-renderer.js?v=20260913-karnrith-v3" defer></script>
   <script src="./modules/script-table/script-table-renderer.js?v=20260913-morgar-v20" defer></script>
-  <script src="./modules/landing/landing-renderer.js?v=20260623-landing-editor-v1" defer></script>
+  <script src="./modules/landing/landing-renderer.js?v=20261005-group-edit-access-v1" defer></script>
+  <script type="module" src="./modules/landing/group-landing-controller.js?v=20261005-group-edit-access-v1"></script>
   <script src="./modules/character-inventory/character-inventory-renderer.js?v=20260922-itemization-v1" defer></script>
   <script src="./modules/character-inventory/character-inventory-card-editor.js?v=20260922-itemization-v1" defer></script>
-  <script src="./modules/character-inventory/character-inventory-cards.js?v=20260922-companion-landscape-v1" defer></script>
+  <script src="./modules/character-inventory/character-inventory-cards.js?v=20260928-collapsible-diagram-v1" defer></script>
   <script src="./modules/character-inventory/character-inventory-questionnaire.js?v=20260922-itemization-v1" defer></script>
   <script src="./modules/character-inventory/character-inventory-events.js?v=20260922-itemization-v1" defer></script>
   <script type="module" src="./modules/character-inventory/character-inventory-integration.js?v=20260928-equipment-art-v4"></script>

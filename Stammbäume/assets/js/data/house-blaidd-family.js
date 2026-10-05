@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createCadetHouseBranch,
@@ -188,7 +189,7 @@ const TREDEGAR_HOUSES = Object.freeze([
   house('house-brithyll', 'Haus Brithyll', HOUSE_EMBLEMS.brithyll)
 ]);
 
-export const HOUSE_BLAIDD_BRANON_FAMILY = Object.freeze({
+export const HOUSE_BLAIDD_BRANON_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -501,9 +502,9 @@ export const HOUSE_BLAIDD_BRANON_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Vollständige Branon-Herkunftsakte nach der bereitgestellten Blaidd-Tabelle. Ein unbekanntes Elternpaar führt zu den Brüdern Llewelyn und Sieffre samt ihren Ehefrauen. Sieffres Tochter Myfanwy endet in der Wegverheiratung nach Haus Blodyn. Llewelyns Sohn Gwynfor begründet mit Ceridwen Blodyn erst danach das Haus Blaidd; der erste Zeitsprung folgt seriell unmittelbar unter diesem Hausknoten. Pelleas und Caron schließen die Herkunftsakte mit einem gemeinsamen Übergabeknoten nach Tredegar ab; keine ihrer Nachkommen wird hier gedoppelt. Der Name Arvyn folgt der bereits kanonischen Blodyn-Gegenakte statt der widersprüchlichen Altquellenbezeichnung Caryln.'
   }
-});
+}));
 
-export const HOUSE_BLAIDD_TREDEGAR_FAMILY = Object.freeze({
+export const HOUSE_BLAIDD_TREDEGAR_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -626,7 +627,7 @@ export const HOUSE_BLAIDD_TREDEGAR_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Getrennte Tredegar-Nachfolgeakte nach dem Mochdaer- und Blodyn-Muster. Sie beginnt bewusst erneut mit Pelleas und Caron als Gründerpaar und enthält ausschließlich ihre Kinder sowie die in der Quelle genannten Kindeskinder. Nachkommen der wegverheirateten Bronwen und Enora bleiben in den Gegenakten Blodyn von Aberdail beziehungsweise Draenog; so entstehen keine doppelten Kinderlinien.'
   }
-});
+}));
 
 export const BLAIDD_HOUSE_FAMILIES = Object.freeze([
   HOUSE_BLAIDD_BRANON_FAMILY,

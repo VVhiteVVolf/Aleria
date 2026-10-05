@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { BLODYN_HOUSE_PROFILES } from './blodyn-house-profiles.js';
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
@@ -133,7 +134,7 @@ const TALARA_IDS = ['tarrant-1703-arth', 'talara-blodyn'];
 const WYNFOR_IDS = ['wynfor-blodyn', 'delwen-trachwyll'];
 const SIRIOL_IDS = ['siriol-blodyn', 'trachmyr-serenoc'];
 
-export const HOUSE_BLODYN_FAMILY = Object.freeze({
+export const HOUSE_BLODYN_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -253,8 +254,14 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     person('bettrys-gwaedlyd', 'Bettrys Gwaedlyd', 'female', '1652', '1702', 'house-gwaedlyd'),
     person('diafol-blodyn', 'Diafol Blodyn', 'male', '1653', '1671'),
     person('corryn-illygoden', 'Corryn Illygoden', 'female', '1648', '1714', 'house-illygoden'),
-    person('telyn-blodyn', 'Telyn Blodyn', 'male', '1655', '1714'),
-    person('hetwn-morgant', 'Hetwn Morgant', 'female', '1651', '1720', 'house-morgant'),
+    person('telyn-blodyn', 'Telyn Blodyn', 'female', '1655', '1714', BLODYN_HOUSE_ID, {
+      notes: 'Nutzerkorrektur vom 05.10.2026: Telyn Blodyn ist eine Frau. Ihre Ehe mit Hetwn Morgant setzt sich im Haus Morgant fort. Ihre Herkunftslinie endet bei Blodyn am Wegheiratsknoten; die Kinder werden ausschließlich in Morgant fortgesetzt.',
+      extensions: { registryManagedSourceRevision: 5, registryManagedFields: ['sex', 'notes'] }
+    }),
+    person('hetwn-morgant', 'Hetwn Morgant', 'male', '1651', '1720', 'house-morgant', {
+      notes: 'Das Individualporträt und die Morgant-Oberhauptfolge zeigen Hetwn als Mann; die bisherige weibliche Zuordnung in Blodyn ist ein Übertragungsfehler.',
+      extensions: { registryManagedSourceRevision: 5, registryManagedFields: ['sex', 'notes'] }
+    }),
 
     person('jygallag-blodyn', 'Jygallag Blodyn', 'male', '1670', '1720', BLODYN_HOUSE_ID, { title: 'König von Vennyr 1715–1720' }),
     person('sheena-urquhart', 'Sheena Urquhart', 'female', '1665', '1720', 'house-urquhart'),
@@ -380,6 +387,11 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
     }),
   ],
   cadetBranches: [
+    createCadetHouseBranch({ id: 'cadet-blodeuwedd-uryen', name: 'Haus Blodeuwedd',
+      parentPartnershipId: 'marriage-uryen-maygan', houseId: 'house-blodeuwedd', targetFamilyId: 'haus-blodeuwedd',
+      emblem: 'assets/images/houses/Vennyr/haus-blodeuwedd.png',
+      notes: 'Uryen Blodyn und Maygan Morlais sind das Gründerpaar der gesonderten Blodeuwedd-Akte; die Nachkommen werden ausschließlich dort fortgeführt.' }),
+    marriedAway('married-away-morgant-telyn', 'Haus Morgant', 'marriage-telyn-hetwn', 'house-morgant', 'assets/images/houses/Vennyr/haus-morgant.png', 'haus-morgant'),
     createCadetHouseBranch({
       id: 'cadet-blodyn-talgarth-yhon',
       name: "Haus Blodyn O'Talgarth",
@@ -474,10 +486,10 @@ export const HOUSE_BLODYN_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Verbindungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Blodyn-Tabelle und ihrer eingebetteten Stammbaumgrafik. Die zwei Auslassungen sind als strikt serielle Generationentrenner Breunor–Gogyvwlch und Gogyvwlch–Dyvynwal modelliert. Sämtliche belegten Ehen von Blodyn-Frauen in andere Häuser besitzen einen direkten Wegverheiratet-Knoten. Tarrant Arth ist als aufgenommenes Mündel und nicht als leibliches Blodyn-Kind erfasst. Die ausdrückliche frühere Korrektur Arryn Blodyn hat Vorrang vor der Namensvariante Caryln in dieser Quelle. Gwyneths Geburtsjahr bleibt wegen der Draig-Gegenakte und ihrer 1617/1619 geborenen Kinder bei 1600. Yhons Kinder Cerys und Griffin sowie sein Mündel Telyn stehen ausschließlich in der verknüpften Talgarther Akte; Yvains Nachkommen Dalvin und Erec ausschließlich in der verknüpften Aberdailer Akte. Dadurch wird keine der beiden Nachkommenschaften in zwei Diagrammen weitergeführt. Morfydds Ehe mit Breseal führt zum gegründeten Haus Dyfrgi in Mynyddharbwr; Elins Ehe mit Mervyn verlinkt dagegen zur neuen Caer-Cryftlawd-Linie. Die ältere technische ID mevyn-dyfrgi bleibt stabil, während die sichtbare Quellschreibweise Mervyn verwendet wird.',
     blankFamily: false,
-    sourceRevision: 4,
+    sourceRevision: 5,
     registryTombstones: {
       persons: ['cerys-blodyn', 'griffin-blodyn', 'telyn-diafol'],
       parentages: ['parentage-cerys-blodyn', 'parentage-griffin-blodyn', 'parentage-telyn-diafol']
     }
   }
-});
+}));

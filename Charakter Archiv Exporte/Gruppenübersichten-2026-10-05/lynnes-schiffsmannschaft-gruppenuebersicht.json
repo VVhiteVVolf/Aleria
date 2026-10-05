@@ -1,0 +1,997 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-05T15:33:51.980Z",
+  "sourceNote": "Gruppenübersicht direkt nach der Hierarchie. Bestehende Seiten, Porträts und historische Kommentar-IDs erhalten. Nur lokal vorbereitet.",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Haus Arth",
+      "desc": "",
+      "tab": "Gruppen",
+      "path": [
+        "Klaueninseln",
+        "Haus Arth"
+      ],
+      "nodeId": "node:gruppen:klaueninseln/haus-arth"
+    },
+    "entry": {
+      "id": "lynnes-schiffsmannschaft",
+      "title": "Lynnes Schiffsmannschaft",
+      "subtitle": "Die Besatzung der Leeren Flasche",
+      "type": "Story",
+      "category": "Gefolge",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/feier-im-mannschaftsquartier-2x3.png",
+      "stamp": "HAUS ARTH · TALGARTH · KLAUENINSELN",
+      "icon": "",
+      "symbol": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+      "locked": false,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/feier-im-mannschaftsquartier-2x3.png",
+          "imageWidth": 38,
+          "imageFit": "contain",
+          "pageTitle": "Die Besatzung der Leeren Flasche",
+          "description": "<p><b>Die Leere Flasche</b> ist das pers&ouml;nliche Schiff der Kapit&auml;nin <b>Lady Lynne Arth</b> und dient dem Haus Arth als schnelles Kriegs-, Geleit- und Reiseschiff in den Gew&auml;ssern der Klaueninseln und dar&uuml;ber hinaus. Heimathafen des Schiffes ist <b>Talgarth</b>, die Hauptstadt der Klaueninseln. Von dort aus f&auml;hrt die <i>Leere Flasche</i> Patrouillen entlang der K&uuml;sten, begleitet andere Schiffe, jagt Piraten und nordm&auml;nnische Pl&uuml;nderer und tr&auml;gt Angeh&ouml;rige des Hauses Arth ebenso wie Gesandte der Krone &uuml;ber das Meer. In den n&ouml;rdlichen Gew&auml;ssern Cenyrs ist das Schiff inzwischen ein vertrauter Anblick. Unter cenyriischen Seeleuten gilt sein Erscheinen als beruhigendes Zeichen; unter nordm&auml;nnischen Pl&uuml;nderern hingegen genie&szlig;t die <i>Leere Flasche</i> einen weit weniger erfreulichen Ruf.</p><p>Ihren ungew&ouml;hnlichen Namen verdankt die <b>Leere Flasche</b> ihrer Taufe. Nach alter cenyriischer Seemannstradition wird ein neues Schiff mit einem eigens daf&uuml;r bestimmten Whisky getauft, der &uuml;ber die Reling gegossen wird, w&auml;hrend sein Name ausgesprochen wird. Als Lynne ihr Schiff taufen wollte, musste sie jedoch feststellen, dass ihr Zwillingsbruder <b>Rhydian Arth</b> die daf&uuml;r vorgesehene Flasche zuvor ausgetrunken hatte. Erst nachdem Lynne sie w&uuml;tend mit den Worten <b>&bdquo;Leere Flasche!&ldquo;</b> umdrehte, l&ouml;ste sich ein letzter Tropfen und fiel auf die Reling. Damit war die Taufe vollzogen &ndash; und der Name gesprochen.</p><p>Was zun&auml;chst &ndash; und bisweilen selbst heute noch &ndash; &nbsp;Anlass f&uuml;r einigen Spott bot, wurde bald untrennbar mit Lynne und ihrer Mannschaft verbunden. Die <i>Leere Flasche</i> tr&auml;gt ihren Namen ohne Scham und ihre Besatzung inzwischen mit einigem Stolz. Unter Lynnes Kommando hat sie sich als schnelles und zuverl&auml;ssiges Schiff der Klaueninseln erwiesen und ist sowohl in den heimischen Gew&auml;ssern als auch auf l&auml;ngeren Fahrten anzutreffen. Aus einem bei der Taufe entstandenen Missgeschick wurde so mit der Zeit ein Name, den in Talgarth kaum noch jemand bel&auml;chelt &ndash; zumindest nicht, solange Lynne in H&ouml;rweite ist.</p><p>Bemerkenswert ist auch die Zusammensetzung ihrer Schiffsf&uuml;hrung. S&auml;mtliche leitenden Posten an Bord der <i>Leeren Flasche</i> werden von Frauen bekleidet. Neben Lynne stehen mit <b>Cerys Blodyn</b> und <b>Telyn Diafol</b> zwei geb&uuml;rtige Vennyri an der Spitze der Mannschaft, deren Familien nach dem Untergang Vennyrs auf den Klaueninseln eine neue Heimat fanden. Cenyri und Vennyri dienen an Bord Seite an Seite; die &uuml;brige Mannschaft ist gemischt, auch wenn hier eine deutliche Mehrheit der Frauen herrscht. Eine besondere Vorschrift, nur Frauen mit der F&uuml;hrung des Schiffes zu betrauen, besteht dabei nicht. Lynne w&auml;hlte ihre Offizierinnen und Meisterinnen nach Bef&auml;higung und Vertrauen &ndash; dass daraus eine vollst&auml;ndig weibliche Schiffsf&uuml;hrung entstand, wurde erst mit der Zeit zu einem der bekanntesten Merkmale der <i>Leeren Flasche</i>.</p><p>Trotz des jungen Alters ihrer Kapit&auml;nin und mehrerer ihrer Offizierinnen gilt die Mannschaft keineswegs als unerfahren. Lynne umgab ihren jungen F&uuml;hrungskern bewusst mit &auml;lteren Seeleuten und Meisterinnen, die teilweise bereits seit Jahrzehnten die Gew&auml;sser um die Klaueninseln befahren. So verbindet die Besatzung die K&uuml;hnheit einer neuen Generation mit der Erfahrung jener, die schon unter <b>Sir Parzifal Arth</b> und teilweise dessen Vorg&auml;ngern zur See fuhren.</p>",
+          "quote": "„Leere Flasche!“",
+          "quoteBy": "Lady Lynne Arth bei der Schiffstaufe",
+          "enableComments": true,
+          "commentDivider": true,
+          "stats": [
+            [
+              "Name",
+              "Leere Flasche"
+            ],
+            [
+              "Typ",
+              "Schwere Kriegskogge"
+            ],
+            [
+              "Hauptquartier",
+              "Hafen von Talgarth, Klaueninseln"
+            ],
+            [
+              "Anführerin",
+              "Lady Lynne Arth, Kapitänin"
+            ],
+            [
+              "Zugehörigkeit",
+              "Haus Arth · Grafschaft der Klaueninseln · Königreich Cenyr"
+            ],
+            [
+              "Mitgliederstärke",
+              "50–60 Besatzungsmitglieder; bei einer Schlacht ersetzen Waffenknechte die Pagen und Verwaltungsarbeiter."
+            ],
+            [
+              "Dienst",
+              "Küstenschutz · Geleitfahrten · Piratenbekämpfung · Aufklärung · Reisen und diplomatische Missionen · Seeschlachten"
+            ],
+            [
+              "Ziel",
+              "Schutz der Klaueninseln und ihrer Gewässer sowie sichere Beförderung von Schutzbefohlenen und Gesandten des Hauses Arth."
+            ]
+          ],
+          "commentThreadKey": "0"
+        },
+        {
+          "schemaVersion": 1,
+          "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/lynne-arth.jpg",
+          "imageWidth": 30,
+          "pageTitle": "Lady Lynne Arth",
+          "description": "<p>Lady Lynne Arth ist die Kapitänin der <strong>Leeren Flasche</strong>, einer schweren Kriegskogge im Dienst des Hauses Arth. Von Talgarth aus führt sie ihre Mannschaft auf Küstenpatrouillen, Geleitfahrten, zur Piratenbekämpfung sowie auf Reisen und diplomatische Missionen.</p><p>Ihre Offizierinnen und Meisterinnen wählte sie nach Befähigung und Vertrauen. Dass sämtliche leitenden Posten von Frauen bekleidet werden, beruht auf diesen persönlichen Entscheidungen und ist keine Vorschrift. Den jungen Führungskern ergänzte Lynne bewusst um ältere, erfahrene Seeleute.</p>",
+          "quote": "„Leere Flasche!“",
+          "quoteBy": "Lady Lynne Arth",
+          "commentDivider": true,
+          "imageTall": true,
+          "biographyPage": true,
+          "stats": [
+            [
+              "Vollständiger Name",
+              "Lynne Arth"
+            ],
+            [
+              "Titel",
+              "Lady"
+            ],
+            [
+              "Haus",
+              "Haus Arth"
+            ],
+            [
+              "Geburt",
+              "1718"
+            ],
+            [
+              "Rolle",
+              "Schiffskapitänin"
+            ],
+            [
+              "Schiff",
+              "Leere Flasche"
+            ],
+            [
+              "Heimathafen",
+              "Talgarth, Klaueninseln"
+            ]
+          ],
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "portrait": "",
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Biografie",
+            "biographyText": "<p>Lady Lynne Arth ist die Kapitänin der <strong>Leeren Flasche</strong>, einer schweren Kriegskogge im Dienst des Hauses Arth. Von Talgarth aus führt sie ihre Mannschaft auf Küstenpatrouillen, Geleitfahrten, zur Piratenbekämpfung sowie auf Reisen und diplomatische Missionen.</p><p>Ihre Offizierinnen und Meisterinnen wählte sie nach Befähigung und Vertrauen. Dass sämtliche leitenden Posten von Frauen bekleidet werden, beruht auf diesen persönlichen Entscheidungen und ist keine Vorschrift. Den jungen Führungskern ergänzte Lynne bewusst um ältere, erfahrene Seeleute.</p>",
+            "abilitiesTitle": "Führung",
+            "abilities": [
+              {
+                "title": "Befähigung und Vertrauen",
+                "detail": "Besetzt die leitenden Ämter nach Können und persönlichem Vertrauen.",
+                "icon": ""
+              },
+              {
+                "title": "Erfahrung an Bord",
+                "detail": "Ergänzt ihren jungen Führungskern bewusst um ältere Seeleute und Meisterinnen.",
+                "icon": ""
+              }
+            ],
+            "extraSections": [],
+            "historyTitle": "Die Taufe der Leeren Flasche",
+            "historyText": "<p>Nach alter cenyriischer Seemannstradition wird ein neues Schiff mit einem eigens bestimmten Whisky getauft: Er wird über die Reling gegossen, während sein Name ausgesprochen wird. Lynnes Zwillingsbruder <strong>Rhydian Arth</strong> hatte die vorgesehene Flasche jedoch bereits ausgetrunken.</p><p>Als Lynne sie wütend mit den Worten <strong>„Leere Flasche!“</strong> umdrehte, löste sich ein letzter Tropfen und fiel auf die Reling. Die Taufe war vollzogen und der Name gesprochen. Was zunächst Spott auslöste, wurde zum stolzen Namen einer schnellen, zuverlässigen Kriegskogge, die in Talgarth kaum noch jemand belächelt – zumindest nicht in Lynnes Hörweite.</p>",
+            "worksTitle": "Aufgaben zur See",
+            "works": [
+              "Patrouillen zum Schutz der Klaueninseln und ihrer Küsten.",
+              "Geleitfahrten sowie die Jagd auf Piraten und nordmännische Plünderer.",
+              "Beförderung von Angehörigen des Hauses Arth und Gesandten der Krone."
+            ],
+            "triviaTitle": "Wissenswertes",
+            "trivia": [
+              "Zwillingsschwester von Rhydian Arth.",
+              "Ihre persönliche Knappin ist Eira Beryn.",
+              "Meleri Penry ist ihre persönliche Zofe, Schreiberin und Adjutantin."
+            ],
+            "quotesTitle": "Zitate",
+            "quotes": [
+              "„Leere Flasche!“"
+            ],
+            "connectionsTitle": "Vertraute an Bord",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Cerys Blodyn",
+                "detail": "Erster Maat",
+                "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/cerys-blodyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Telyn Diafol",
+                "detail": "Zweiter Maat",
+                "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/telyn-diafol.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Eira Beryn",
+                "detail": "Knappin zur See",
+                "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/eirlys-beryn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Meleri Penry",
+                "detail": "Schreiberin & Adjutantin",
+                "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/meleri-penry.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Eigentum & Besitz",
+            "documents": [
+              {
+                "icon": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/leere-flasche.png",
+                "title": "Leere Flasche",
+                "text": "Lynnes persönliche schwere Kriegskogge im Dienst des Hauses Arth; Heimathafen Talgarth.",
+                "link": ""
+              }
+            ],
+            "footer": ""
+          },
+          "commentThreadKey": "1"
+        },
+        {
+          "schemaVersion": 1,
+          "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/leere-flasche.png",
+          "pageTitle": "Hierarchie der Mannschaft",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "layoutMode": "vertical",
+            "treeDisplayMode": "tabs",
+            "cardFontScale": 92,
+            "portraitScale": 100,
+            "chartScale": 83,
+            "eyebrow": "Hierarchie",
+            "subtitle": "Die Schiffsmannschaft",
+            "centerLabel": "Aufbau der Besatzung",
+            "emblem": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+            "sideImage": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/leere-flasche.png",
+            "organizationTitle": "Die Besatzung der Leeren Flasche",
+            "motto": "Talgarth · Klaueninseln",
+            "description": "Sämtliche leitenden Posten werden von Frauen bekleidet. Lynne wählte ihre Offizierinnen und Meisterinnen nach Befähigung und Vertrauen. Die übrige Mannschaft ist gemischt, mit einer deutlichen Mehrheit an Frauen; Cenyri und Vennyri dienen Seite an Seite.",
+            "detailsTitle": "Schiff und Mannschaft",
+            "details": [
+              {
+                "icon": "",
+                "label": "Heimathafen",
+                "value": "Talgarth, Klaueninseln"
+              },
+              {
+                "icon": "",
+                "label": "Zugehörigkeit",
+                "value": "Haus Arth"
+              },
+              {
+                "icon": "",
+                "label": "Besatzung",
+                "value": "50–60 Personen"
+              }
+            ],
+            "quoteLabel": "Bei der Schiffstaufe",
+            "quote": "„Leere Flasche!“",
+            "chartTitle": "Hierarchie der Leeren Flasche",
+            "chartIntro": "Lady Lynne Arth führt das Schiff. Cerys Blodyn und Telyn Diafol setzen als Maate ihre Befehle um; die Meisterinnen verantworten ihre jeweiligen Fachbereiche. Die Register zeigen Führung, Kämpfer und Ausbildung sowie die weitere Besatzung mit Bordtieren und Hauswappen.",
+            "trees": [
+              {
+                "id": "aufbau",
+                "parentTreeId": "",
+                "label": "Führung",
+                "levels": [
+                  {
+                    "label": "Kommando",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/lynne-arth.jpg",
+                        "title": "Schiffskapitänin",
+                        "subtitle": "Lady Lynne Arth",
+                        "text": "Führt die Leere Flasche und trägt die Verantwortung für Schiff, Besatzung und Auftrag. Sie wählt ihre Offizierinnen und Meisterinnen nach Befähigung und Vertrauen."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Maate",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/cerys-blodyn.png",
+                        "title": "Erster Maat",
+                        "subtitle": "Cerys Blodyn",
+                        "text": "Lynnes Stellvertreterin; setzt ihre Befehle im täglichen Schiffsbetrieb um. Gebürtige Vennyri, deren Familie nach dem Untergang Vennyrs auf den Klaueninseln eine neue Heimat fand."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/telyn-diafol.jpg",
+                        "title": "Zweiter Maat",
+                        "subtitle": "Telyn Diafol",
+                        "text": "Unterstützt den Ersten Maat, beaufsichtigt die Wachen und übernimmt dessen Aufgaben bei Bedarf. Gebürtige Vennyri, deren Familie nach dem Untergang Vennyrs auf den Klaueninseln eine neue Heimat fand."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Kurs und Seelsorge",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/nest-mathgraig.png",
+                        "title": "Steuerfrau",
+                        "subtitle": "Nest Mathgraig",
+                        "text": "<strong>35–38 Jahre.</strong> Stammt aus dem Bürgerhaus Mathgraig, das eng mit dem Hafen verbunden ist. Sehr erfahrene Seefahrerin und Waffenknecht; besonders bei schwerer See souverän am Ruder. Seit ihrer Jugend mit dem maritimen Umfeld vertraut.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-mathgraig.png\">Wappen Haus Mathgraig</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-mathgraig&amp;person=nest-mathgraig&amp;mode=view\">Familienakte: Haus Mathgraig</a>"
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/bethan-prys.png",
+                        "title": "Schiffskaplanin",
+                        "subtitle": "Bethan Prys",
+                        "text": "<strong>39 Jahre.</strong> Geistliche Baldrans; fröhlich, trinkfest und mit einer Narbe über einem Auge. Ihre Bürgerfamilie Prys führt eine große Taverne in Talgarth. Sie lernte an der dortigen Kathedrale Baldrans und übernimmt an Bord die Seelsorge sowie celestiale und infernale Themen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-prys&amp;person=bethan-prys&amp;mode=view\">Familienakte: Haus Prys</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Deck, Navigation, Vorräte und Waffen",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/mabli-morgwynt.png",
+                        "title": "Bootsfrau",
+                        "subtitle": "Mabli Morgwynt",
+                        "text": "<strong>28–29 Jahre.</strong> Patent, seefest und energisch; aus dem Ritterhaus Morgwynt. Leitet die Decksmannschaft und sorgt für Schiff, Takelage und Ausrüstung. Ihre Knappin Una Dyfrgi ist ebenfalls an Bord.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png\">Wappen Haus Morgwynt</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;person=mabli-morgwynt&amp;mode=view\">Familienakte: Haus Morgwynt</a>"
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/jenya-eirth.jpg",
+                        "title": "Navigatorin",
+                        "subtitle": "Jenya Eirth",
+                        "text": "<strong>18 Jahre.</strong> Bestimmt anhand von Karten, Sternen und Landmarken den sichersten Kurs. Faszinierend gut in ihrem Beruf. Ihr Eisbär Nuppi begleitet sie an Bord."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/angharad-morglan.png",
+                        "title": "Quartiermeisterin",
+                        "subtitle": "Angharad Morglan",
+                        "text": "<strong>58 Jahre.</strong> Verwaltet Vorräte, Ausrüstung und Lagerbestände. Gehört zur alten Fischerfamilie Morglan und diente bereits unter Run. Mag es nicht, wenn man sie „Großmütterchen“ nennt – was an Bord trotzdem alle tun.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morglan.png\">Wappen Haus Morglan</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morglan&amp;person=angharad-morglan&amp;mode=view\">Familienakte: Haus Morglan</a>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenmeisterin",
+                        "subtitle": "Nicht benannt",
+                        "text": "Verantwortet Waffen, Rüstungen und die Ausbildung der Waffenknechte im Kampf."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Meisterinnen",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/ffion-bowen.png",
+                        "title": "Schiffszimmerfrau",
+                        "subtitle": "Ffion Bowen",
+                        "text": "<strong>25 Jahre.</strong> Handwerkerin aus der bürgerlichen Familienwerft, in der die Leere Flasche gebaut wurde. Patent, kräftig und durchaus in der Lage, sich zu prügeln. Repariert Schäden und hält Rumpf, Masten und Deck seetüchtig.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bowen&amp;person=ffion-bowen&amp;mode=view\">Familienakte: Haus Bowen</a>"
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/nerys-bevan.png",
+                        "title": "Feldscherin",
+                        "subtitle": "Nerys Bevan",
+                        "text": "<strong>30 Jahre.</strong> Braunhaarig mit grünen Augen. Versorgt Verwundete und Kranke, mischt Arzneien und wacht über die Gesundheit der Besatzung. Ihre alkoholische „Medizin“ hat sie praktischerweise immer dabei.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bevan&amp;person=nerys-bevan&amp;mode=view\">Familienakte: Haus Bevan</a>"
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/lowri-arian.png",
+                        "title": "Schiffsmeierin",
+                        "subtitle": "Lowri Arian",
+                        "text": "<strong>30 Jahre.</strong> Verwaltet Schiffskasse, Sold und wertvolle Güter sowie die wirtschaftlichen Belange des Schiffes. Kontrolliert und zuverlässig – bis Alkohol ins Spiel kommt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-arian&amp;person=lowri-arian&amp;mode=view\">Familienakte: Haus Arian</a>"
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/awen-dyger.png",
+                        "title": "Schiffsbardin",
+                        "subtitle": "Awen Dyger",
+                        "text": "<strong>25 Jahre.</strong> Rothaarig, lebenslustig und ständig etwas blau. Kümmert sich stark um die Mannschaft und sorgt mit Satire, Musik, Lyrik und Schabernack für Stimmung. Spielt Schifferklavier statt Laute.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-dyger&amp;person=awen-dyger&amp;mode=view\">Familienakte: Haus Dyger</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Ausguck",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Ausguck auf dem Krähennest",
+                        "subtitle": "Nicht benannt",
+                        "text": "Der Ausguck auf dem Krähennest ist die exponierte Position des ersten Spähers im höchsten Mastkorb eines Schiffes, der als wichtigstes Frühwarnsystem Gefahren, Land oder andere Boote rechtzeitig am Horizont erspäht"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Segel und Bordwache",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Segelmeisterin",
+                        "subtitle": "Nicht benannt",
+                        "text": "Beaufsichtigt Segel und Takelage und führt die Matrosen bei allen Segelmanövern.<br>"
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/sigrid-hirschhorn.png",
+                        "title": "Wachmeisterin",
+                        "subtitle": "Sigrid Hirschhorn",
+                        "text": "<strong>28 Jahre.</strong> Stammt aus Ivarsheim. Kräftig, wachsam und im Dienst diszipliniert; außerhalb des Dienstes dem Alkohol zugetan. Befehligt die Bordwachen und verantwortet Sicherheit, Ordnung und Verteidigung an Bord.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-hirschhorn&amp;person=sigrid-hirschhorn&amp;mode=view\">Familienakte: Haus Hirschhorn</a>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ausbildung",
+                "parentTreeId": "",
+                "label": "Kämpfer",
+                "levels": [
+                  {
+                    "label": "Ritter zur See",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrene Seekrieger adliger Herkunft, die Offiziersaufgaben übernehmen und im Kampf als Vorbilder der Besatzung dienen."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Waffenknechte",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bewaffnete Berufskrieger, die Bordwachen stellen, Entergefechte führen und den Rittern im Kampf zur Seite stehen.<br><br><br>Die bewaffnete Besatzung untersteht im Wachdienst Sigrid Hirschhorn. Bei einer Schlacht werden Pagen und Verwaltungsarbeiter durch Waffenknechte ersetzt."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bewaffnete Berufskrieger, die Bordwachen stellen, Entergefechte führen und den Rittern im Kampf zur Seite stehen.<br>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bewaffnete Berufskrieger, die Bordwachen stellen, Entergefechte führen und den Rittern im Kampf zur Seite stehen.<br>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bewaffnete Berufskrieger, die Bordwachen stellen, Entergefechte führen und den Rittern im Kampf zur Seite stehen.<br>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Knappinnen zur See",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/eirlys-beryn.png",
+                        "title": "Knappin zur See",
+                        "subtitle": "Eira Beryn",
+                        "text": "<strong>14 Jahre.</strong> Lynnes persönliche Knappin, noch recht frisch im Knappendienst. Wild, frech und neugierig; dunkelbraunes Haar und ein rotes Piratenkopftuch.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-beryn&amp;person=eirlys-beryn&amp;mode=view\">Familienakte: Haus Beryn</a><br><br>Tochter von Owain Beryn und Mared; Nichte Ifor Beryns."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/una-dyfrgi.jpg",
+                        "title": "Knappin zur See",
+                        "subtitle": "Una Dyfrgi",
+                        "text": "<strong>16 Jahre.</strong> Knappin von Mabli Morgwynt. Frech, temperamentvoll und selbstbewusst; in ihrer Ausbildung bereits etwas weiter als Eira, die sie gern zu Blödsinn anstiftet."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Knappin zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Junge Adlige oder angehende Ritter, die einem Ritter zur See dienen und auf See wie im Kampf auf ihre spätere Erhebung vorbereitet werden."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Knappin zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Junge Adlige oder angehende Ritter, die einem Ritter zur See dienen und auf See wie im Kampf auf ihre spätere Erhebung vorbereitet werden."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Page zur See",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Die jüngsten Angehörigen der Schiffsmannschaft, die grundlegende seemännische, höfische und ritterliche Fertigkeiten erlernen und den Knappen und Rittern zu Diensten stehen.<br><br>Gehören außerhalb einer Schlacht zur Besatzung. Insgesamt dient auf der Leeren Flasche eine Mannschaft von 50 bis 60 Personen."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Die jüngsten Angehörigen der Schiffsmannschaft, die grundlegende seemännische, höfische und ritterliche Fertigkeiten erlernen und den Knappen und Rittern zu Diensten stehen."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Die jüngsten Angehörigen der Schiffsmannschaft, die grundlegende seemännische, höfische und ritterliche Fertigkeiten erlernen und den Knappen und Rittern zu Diensten stehen."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "Nicht benannt",
+                        "text": "Die jüngsten Angehörigen der Schiffsmannschaft, die grundlegende seemännische, höfische und ritterliche Fertigkeiten erlernen und den Knappen und Rittern zu Diensten stehen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "besatzung",
+                "parentTreeId": "",
+                "label": "Besatzung",
+                "levels": [
+                  {
+                    "label": "Verwaltung",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/meleri-penry.png",
+                        "title": "Schreiberin & Adjutantin",
+                        "subtitle": "Meleri Penry",
+                        "text": "<strong>28 Jahre.</strong> Enkelin des Vogtes der Arth aus dem Bürgerhaus Penry und Lynnes persönliche Zofe. Hellbraunes, schulterlanges Haar; höfisch, organisiert und trocken-humorig. Führt Logbücher, Karten, Berichte und Korrespondenz und verwaltet praktisch Lynnes Leben.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-penry&amp;person=meleri-penry&amp;mode=view\">Familienakte: Haus Penry</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Versorgung",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/tesni-parry.png",
+                        "title": "Schiffsköchin",
+                        "subtitle": "Tesni Parry",
+                        "text": "<strong>29 Jahre.</strong> Tochter der Köchin von Haus Arth. Hervorragende Köchin; frech, kokett, selbstbewusst und bewusst freizügig. Bereitet die Mahlzeiten zu und versorgt die Besatzung auch auf langen Fahrten.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-parry&amp;person=tesni-parry&amp;mode=view\">Familienakte: Haus Parry</a>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Proviantmeisterin",
+                        "subtitle": "Nicht benannt",
+                        "text": "Verwaltet Lebensmittel, Trinkwasser und Verbrauchsgüter und überwacht deren Ausgabe."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Handwerk",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "Nicht benannt",
+                        "text": "Kümmern sich um Tauwerk, Segel, Beschläge und sämtliche handwerklichen Arbeiten an Bord.<br>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "Nicht benannt",
+                        "text": "Kümmern sich um Tauwerk, Segel, Beschläge und sämtliche handwerklichen Arbeiten an Bord.<br>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "Nicht benannt",
+                        "text": "Kümmern sich um Tauwerk, Segel, Beschläge und sämtliche handwerklichen Arbeiten an Bord.<br>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Gehilfen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Gehilfe",
+                        "subtitle": "Nicht benannt",
+                        "text": "Unterstützt die Handwerker bei Reparaturen, Wartung und allen anfallenden Arbeiten.<br>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Gehilfe",
+                        "subtitle": "Nicht benannt",
+                        "text": "Unterstützt die Handwerker bei Reparaturen, Wartung und allen anfallenden Arbeiten.<br>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Matrosen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrener Seemann, der Arbeitsgruppen führt und sein Wissen an jüngere Matrosen weitergibt.<br>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrener Seemann, der Arbeitsgruppen führt und sein Wissen an jüngere Matrosen weitergibt.<br>"
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erfahrener Seemann, der Arbeitsgruppen führt und sein Wissen an jüngere Matrosen weitergibt.<br>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Decksmannschaft",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage.<br><br>Cenyri und Vennyri dienen Seite an Seite. Die übrige Mannschaft ist gemischt, mit einer deutlichen Mehrheit an Frauen. Erfahrene Seeleute und Meisterinnen fuhren bereits unter Sir Parzifal Arth und teilweise unter dessen Vorgängern zur See."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "Nicht benannt",
+                        "text": "Bildet das Rückgrat der Besatzung und übernimmt alle seemännischen Arbeiten an Deck und in der Takelage."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Schiffsjungen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "Nicht benannt",
+                        "text": "Erledigt einfache Arbeiten, Botengänge und lernt unter den erfahrenen Seeleuten das Handwerk zur See."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Tierische Gesellschaft",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/nuppi.jpg",
+                        "title": "Jenyas Eisbär",
+                        "subtitle": "Nuppi",
+                        "text": "Bewacht vor allem die Kombüse und lässt oftmals niemanden hinein, bevor er gefüttert wurde. Hängt viel mit Sir Schmusefuß ab."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/sir-schmusefuss.jpg",
+                        "title": "Bordtier",
+                        "subtitle": "Sir Schmusefuß",
+                        "text": "Wem Sir Schmusefuß gehört, ist nicht ganz klar. Angeblich war er schon von Anfang an auf dem Schiff, weshalb manche ihn Ffions Familie zurechnen. Ffion weiß davon nichts. Vermutlich gehören aber alle Sir Schmusefuß – und nicht umgekehrt."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Häuser an Bord",
+                    "nodes": [
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-mathgraig.png",
+                        "title": "Haus Mathgraig",
+                        "subtitle": "",
+                        "text": "Bürgerhaus der Klaueninseln mit engen Verbindungen zum Hafen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-mathgraig&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-prys.png",
+                        "title": "Haus Prys",
+                        "subtitle": "",
+                        "text": "Bürgerfamilie aus Talgarth, die eine große Taverne betreibt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-prys&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png",
+                        "title": "Haus Morgwynt",
+                        "subtitle": "",
+                        "text": "Niederes Ritterhaus der Klaueninseln. Mabli Morgwynt dient als Bootsfrau auf Lynne Arths Schiff.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morglan.png",
+                        "title": "Haus Morglan",
+                        "subtitle": "",
+                        "text": "Alte Fischerfamilie der Klaueninseln. Als bürgerliche Fischerfamilie geführt; ein Adelstitel ist nicht überliefert.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morglan&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-bowen.png",
+                        "title": "Haus Bowen",
+                        "subtitle": "",
+                        "text": "Bürgerfamilie aus Talgarth in Sturmklaue mit einer eigenen Werft, in der die Leere Flasche gebaut wurde.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bowen&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-bevan.png",
+                        "title": "Haus Bevan",
+                        "subtitle": "",
+                        "text": "Familie Nerys Bevans aus Talgarth in Sturmklaue auf den Klaueninseln. Der Hausrang ist noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bevan&amp;mode=view\">Familienakte öffnen</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Weitere Häuser an Bord",
+                    "nodes": [
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-arian.png",
+                        "title": "Haus Arian",
+                        "subtitle": "",
+                        "text": "Familie Lowri Arians aus Talgarth in Sturmklaue auf den Klaueninseln. Der Hausrang ist noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-arian&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Talgarth/Klaueninseln/haus-dyger.png",
+                        "title": "Haus Dyger",
+                        "subtitle": "",
+                        "text": "Niederes Rittergeschlecht aus Talgarth auf den Klaueninseln und direkte Rittervasallen des Hauses Arth. Musikanten und Seefahrer mit einer einfachen Musikantenschule in Talgarth. Angesehene Bardenhäuser wie die Ceirwyn belächeln sie als Säufer und Tavernenschläger. Die Dyger bilden keine Barddwyr aus.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-dyger&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-hirschhorn.png",
+                        "title": "Haus Hirschhorn",
+                        "subtitle": "",
+                        "text": "Familie Sigrid Hirschhorns, auf Nutzervorgabe Talgarth in Sturmklaue auf den Klaueninseln zugeordnet. Sigrid selbst stammt aus Ivarsheim. Hausrang und eine Umsiedlungsgeschichte sind nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-hirschhorn&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/haus-beryn.png",
+                        "title": "Haus Beryn",
+                        "subtitle": "",
+                        "text": "Kleines niederes Ritterherrenhaus aus Talgarth. Der Stammbaum reicht von Ifor Beryn bis zu seinem Urgroßvater Caradog und gliedert sich unter Madog Beryn in genau drei fortgeführte Männerlinien. Die jüngste Generation der Hauptlinie vertritt Eira Beryn, Tochter Owains und Mareds, Ifors Nichte und Lynne Arths Knappin zur See.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-beryn&amp;person=eirlys-beryn&amp;mode=view\">Eira im Stammbaum öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-penry.png",
+                        "title": "Haus Penry",
+                        "subtitle": "",
+                        "text": "Bürgerhaus aus Talgarth in Sturmklaue auf den Klaueninseln. Meleri Penry ist eine Enkelin des Vogtes der Arth; der Vogt und Meleris Eltern sind noch nicht namentlich belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-penry&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-parry.png",
+                        "title": "Haus Parry",
+                        "subtitle": "",
+                        "text": "Familie Tesni Parrys aus Talgarth in Sturmklaue auf den Klaueninseln. Ihre Mutter ist Köchin im Dienst des Hauses Arth. Hausrang und der Name der Mutter sind noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-parry&amp;mode=view\">Familienakte öffnen</a>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [
+              {
+                "label": "Kommando",
+                "nodes": [
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/lynne-arth.jpg",
+                    "title": "Schiffskapitänin",
+                    "subtitle": "Lady Lynne Arth",
+                    "text": "Führt die Leere Flasche und trägt die Verantwortung für Schiff, Besatzung und Auftrag. Sie wählt ihre Offizierinnen und Meisterinnen nach Befähigung und Vertrauen."
+                  }
+                ]
+              },
+              {
+                "label": "Maate",
+                "nodes": [
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/cerys-blodyn.png",
+                    "title": "Erster Maat",
+                    "subtitle": "Cerys Blodyn",
+                    "text": "Lynnes Stellvertreterin; setzt ihre Befehle im täglichen Schiffsbetrieb um. Gebürtige Vennyri, deren Familie nach dem Untergang Vennyrs auf den Klaueninseln eine neue Heimat fand."
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/telyn-diafol.jpg",
+                    "title": "Zweiter Maat",
+                    "subtitle": "Telyn Diafol",
+                    "text": "Unterstützt den Ersten Maat, beaufsichtigt die Wachen und übernimmt dessen Aufgaben bei Bedarf. Gebürtige Vennyri, deren Familie nach dem Untergang Vennyrs auf den Klaueninseln eine neue Heimat fand."
+                  }
+                ]
+              },
+              {
+                "label": "Kurs und Seelsorge",
+                "nodes": [
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/nest-mathgraig.png",
+                    "title": "Steuerfrau",
+                    "subtitle": "Nest Mathgraig",
+                    "text": "<strong>35–38 Jahre.</strong> Stammt aus dem Bürgerhaus Mathgraig, das eng mit dem Hafen verbunden ist. Sehr erfahrene Seefahrerin und Waffenknecht; besonders bei schwerer See souverän am Ruder. Seit ihrer Jugend mit dem maritimen Umfeld vertraut.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-mathgraig.png\">Wappen Haus Mathgraig</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-mathgraig&amp;person=nest-mathgraig&amp;mode=view\">Familienakte: Haus Mathgraig</a>"
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/bethan-prys.png",
+                    "title": "Schiffskaplanin",
+                    "subtitle": "Bethan Prys",
+                    "text": "<strong>39 Jahre.</strong> Geistliche Baldrans; fröhlich, trinkfest und mit einer Narbe über einem Auge. Ihre Bürgerfamilie Prys führt eine große Taverne in Talgarth. Sie lernte an der dortigen Kathedrale Baldrans und übernimmt an Bord die Seelsorge sowie celestiale und infernale Themen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-prys&amp;person=bethan-prys&amp;mode=view\">Familienakte: Haus Prys</a>"
+                  }
+                ]
+              },
+              {
+                "label": "Deck, Navigation, Vorräte und Waffen",
+                "nodes": [
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/mabli-morgwynt.png",
+                    "title": "Bootsfrau",
+                    "subtitle": "Mabli Morgwynt",
+                    "text": "<strong>28–29 Jahre.</strong> Patent, seefest und energisch; aus dem Ritterhaus Morgwynt. Leitet die Decksmannschaft und sorgt für Schiff, Takelage und Ausrüstung. Ihre Knappin Una Dyfrgi ist ebenfalls an Bord.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png\">Wappen Haus Morgwynt</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;person=mabli-morgwynt&amp;mode=view\">Familienakte: Haus Morgwynt</a>"
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/jenya-eirth.jpg",
+                    "title": "Navigatorin",
+                    "subtitle": "Jenya Eirth",
+                    "text": "<strong>18 Jahre.</strong> Bestimmt anhand von Karten, Sternen und Landmarken den sichersten Kurs. Faszinierend gut in ihrem Beruf. Ihr Eisbär Nuppi begleitet sie an Bord."
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/angharad-morglan.png",
+                    "title": "Quartiermeisterin",
+                    "subtitle": "Angharad Morglan",
+                    "text": "<strong>58 Jahre.</strong> Verwaltet Vorräte, Ausrüstung und Lagerbestände. Gehört zur alten Fischerfamilie Morglan und diente bereits unter Run. Mag es nicht, wenn man sie „Großmütterchen“ nennt – was an Bord trotzdem alle tun.<br><br><a href=\"/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morglan.png\">Wappen Haus Morglan</a><br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morglan&amp;person=angharad-morglan&amp;mode=view\">Familienakte: Haus Morglan</a>"
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Waffenmeisterin",
+                    "subtitle": "Nicht benannt",
+                    "text": "Verantwortet Waffen, Rüstungen und die Ausbildung der Waffenknechte im Kampf."
+                  }
+                ]
+              },
+              {
+                "label": "Meisterinnen",
+                "nodes": [
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/ffion-bowen.png",
+                    "title": "Schiffszimmerfrau",
+                    "subtitle": "Ffion Bowen",
+                    "text": "<strong>25 Jahre.</strong> Handwerkerin aus der bürgerlichen Familienwerft, in der die Leere Flasche gebaut wurde. Patent, kräftig und durchaus in der Lage, sich zu prügeln. Repariert Schäden und hält Rumpf, Masten und Deck seetüchtig.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bowen&amp;person=ffion-bowen&amp;mode=view\">Familienakte: Haus Bowen</a>"
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/nerys-bevan.png",
+                    "title": "Feldscherin",
+                    "subtitle": "Nerys Bevan",
+                    "text": "<strong>30 Jahre.</strong> Braunhaarig mit grünen Augen. Versorgt Verwundete und Kranke, mischt Arzneien und wacht über die Gesundheit der Besatzung. Ihre alkoholische „Medizin“ hat sie praktischerweise immer dabei.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bevan&amp;person=nerys-bevan&amp;mode=view\">Familienakte: Haus Bevan</a>"
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/lowri-arian.png",
+                    "title": "Schiffsmeierin",
+                    "subtitle": "Lowri Arian",
+                    "text": "<strong>30 Jahre.</strong> Verwaltet Schiffskasse, Sold und wertvolle Güter sowie die wirtschaftlichen Belange des Schiffes. Kontrolliert und zuverlässig – bis Alkohol ins Spiel kommt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-arian&amp;person=lowri-arian&amp;mode=view\">Familienakte: Haus Arian</a>"
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/awen-dyger.png",
+                    "title": "Schiffsbardin",
+                    "subtitle": "Awen Dyger",
+                    "text": "<strong>25 Jahre.</strong> Rothaarig, lebenslustig und ständig etwas blau. Kümmert sich stark um die Mannschaft und sorgt mit Satire, Musik, Lyrik und Schabernack für Stimmung. Spielt Schifferklavier statt Laute.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-dyger&amp;person=awen-dyger&amp;mode=view\">Familienakte: Haus Dyger</a>"
+                  }
+                ]
+              },
+              {
+                "label": "Ausguck",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Ausguck auf dem Krähennest",
+                    "subtitle": "Nicht benannt",
+                    "text": "Der Ausguck auf dem Krähennest ist die exponierte Position des ersten Spähers im höchsten Mastkorb eines Schiffes, der als wichtigstes Frühwarnsystem Gefahren, Land oder andere Boote rechtzeitig am Horizont erspäht"
+                  }
+                ]
+              },
+              {
+                "label": "Segel und Bordwache",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Segelmeisterin",
+                    "subtitle": "Nicht benannt",
+                    "text": "Beaufsichtigt Segel und Takelage und führt die Matrosen bei allen Segelmanövern.<br>"
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/anime-2026-10-04/sigrid-hirschhorn.png",
+                    "title": "Wachmeisterin",
+                    "subtitle": "Sigrid Hirschhorn",
+                    "text": "<strong>28 Jahre.</strong> Stammt aus Ivarsheim. Kräftig, wachsam und im Dienst diszipliniert; außerhalb des Dienstes dem Alkohol zugetan. Befehligt die Bordwachen und verantwortet Sicherheit, Ordnung und Verteidigung an Bord.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-hirschhorn&amp;person=sigrid-hirschhorn&amp;mode=view\">Familienakte: Haus Hirschhorn</a>"
+                  }
+                ]
+              }
+            ],
+            "footerNote": "Die Übersicht umfasst 54 menschliche Stellen; noch nicht namentlich zugeordnete Stellen sind mit „Nicht benannt“ gekennzeichnet. Bei einer Schlacht werden Pagen und Verwaltungsarbeiter durch Waffenknechte ersetzt.",
+            "backLabel": "Zurück zur Übersicht",
+            "printLabel": "Akte drucken"
+          },
+          "commentThreadKey": "2"
+        },
+        {
+          "pageTitle": "Gruppenübersicht",
+          "landingPage": true,
+          "landing": {
+            "bannerImage": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+            "title": "Lynnes Schiffsmannschaft",
+            "subtitle": "Die Besatzung der Leeren Flasche",
+            "memberTitle": "Aktuelle Gruppe",
+            "questTitle": "Aufgaben & Quests",
+            "notesTitle": "Notizen",
+            "eventsTitle": "Ereignisse",
+            "mapTitle": "Aktuelle Karte",
+            "mapKartenId": "",
+            "mapImage": "",
+            "mapLink": "",
+            "mapButtonLabel": "Karte öffnen",
+            "infoTitle": "Informationen",
+            "members": [],
+            "quests": [],
+            "notes": [],
+            "events": [],
+            "info": [],
+            "group": {
+              "version": 1,
+              "location": "",
+              "activity": "",
+              "status": "",
+              "supplies": "",
+              "threadId": "",
+              "sceneThreads": [],
+              "members": [],
+              "guests": [],
+              "presets": [],
+              "treasury": {
+                "openingCopper": null,
+                "entries": []
+              }
+            }
+          },
+          "stats": [],
+          "commentDivider": false,
+          "commentSequence": [],
+          "commentThreadKey": "group-overview"
+        },
+        {
+          "schemaVersion": 1,
+          "image": "/AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/feier-im-mannschaftsquartier-2x3.png",
+          "imageWidth": 38,
+          "imageFit": "contain",
+          "pageTitle": "Schiff",
+          "sessionPage": true,
+          "sessionIntro": "Die Leere Flasche ist Lynnes schwere Kriegskogge. Von ihrem Heimathafen Talgarth aus schützt sie die Gewässer der Klaueninseln, begleitet andere Schiffe und trägt Angehörige des Hauses Arth sowie Gesandte der Krone über das Meer. Zwischen Deck, Takelage und Kombüse versehen Cenyri und Vennyri gemeinsam ihren Dienst; Nuppi und Sir Schmusefuß gehören zum vertrauten Bordleben.",
+          "sessionHint": "Führe die Szene an Bord der Leeren Flasche als Kommentar fort.",
+          "sessionEmptyTitle": "An Bord der Leeren Flasche",
+          "sessionEmptyText": "Hier beginnt die nächste Szene der Mannschaft.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "commentThreadKey": "3"
+        }
+      ],
+      "schemaVersion": 1,
+      "multipage": true
+    }
+  }
+}

@@ -1,0 +1,934 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-05T15:33:51.982Z",
+  "sourceNote": "Gruppenübersicht direkt nach der Hierarchie. Bestehende Seiten, Porträts und historische Kommentar-IDs erhalten. Nur lokal vorbereitet.",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "tab": "Gruppen",
+      "desc": "",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Haus Draig"
+      ],
+      "nodeId": "node:gruppen:cenyr/celtigerns-wacht/haus-draig",
+      "key": "Haus Draig"
+    },
+    "entry": {
+      "id": "modul-1782120382311",
+      "title": "Anarauts Gefolge",
+      "subtitle": "Der Trupp des Adjutanten des Marschalls",
+      "type": "Story",
+      "category": "Anarauts Gefolge",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "image": null,
+      "stamp": "BEREICH · ORT · WELT",
+      "icon": "",
+      "symbol": null,
+      "locked": false,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "0",
+          "image": "https://i.imgur.com/6uustiS.png",
+          "imageWidth": 38,
+          "pageTitle": "Anarauts Gefolge",
+          "description": "Erzählerischer Einstieg: Was ist geschehen, wer ist betroffen, und warum bleibt dieser Eintrag im Almanach erhalten?",
+          "quote": "",
+          "quoteBy": "",
+          "enableComments": true,
+          "commentDivider": true,
+          "stats": [
+            [
+              "Name",
+              "Wert"
+            ],
+            [
+              "Typ",
+              "Wert"
+            ],
+            [
+              "Hauptquartier",
+              "Wert"
+            ],
+            [
+              "Anführer",
+              "Wert"
+            ],
+            [
+              "Zugehörigkeit",
+              "Wert"
+            ],
+            [
+              "Mitgliederstärke",
+              "Wert"
+            ],
+            [
+              "Dienst",
+              "Wert"
+            ],
+            [
+              "Ziel",
+              "Wert"
+            ]
+          ],
+          "commentSequence": [
+            {
+              "narrator": true,
+              "text": "Ein kurzer Kommentar kann die Stimmung bündeln, ohne die Erzählung zu überladen."
+            }
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "p-mqp0lhb3-zxoof",
+          "image": "https://i.imgur.com/BuQJtjk.png",
+          "imageWidth": 30,
+          "pageTitle": "Anaraut Draig",
+          "description": "Beschreibe Herkunft, Ausbildung, Wendepunkte und die Rolle der Person in der Welt.",
+          "quote": "„Ein Leitsatz oder persönliches Zitat.“",
+          "quoteBy": "— Name",
+          "commentDivider": true,
+          "imageTall": true,
+          "biographyPage": true,
+          "stats": [
+            [
+              "Vollständiger Name",
+              "Anaraut Drag"
+            ],
+            [
+              "Titel",
+              "Kronprinz, Ritter"
+            ],
+            [
+              "Haus",
+              "Draig O'Gwynthor"
+            ],
+            [
+              "Geburt",
+              "1715"
+            ],
+            [
+              "Alter",
+              "25"
+            ],
+            [
+              "Rolle",
+              "Adjutant des Marschalls"
+            ],
+            [
+              "Status",
+              "Aktiv"
+            ]
+          ],
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "portrait": "",
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Biografie",
+            "biographyText": "Beschreibe Herkunft, Ausbildung, Wendepunkte und die Rolle der Person in der Welt.",
+            "abilitiesTitle": "Merkmale",
+            "abilities": [
+              {
+                "title": "Neuer Punkt",
+                "detail": "",
+                "icon": "*"
+              },
+              {
+                "title": "Neuer Punkt",
+                "detail": "",
+                "icon": "*"
+              },
+              {
+                "title": "Neuer Punkt",
+                "detail": "",
+                "icon": "*"
+              },
+              {
+                "title": "Neuer Punkt",
+                "detail": "",
+                "icon": "*"
+              }
+            ],
+            "extraSections": [],
+            "historyTitle": "Geschichte",
+            "historyText": "Was hat diese Person geprägt, verändert oder ausgelöst? Welche Spuren bleiben?",
+            "worksTitle": "Sonstiges",
+            "works": [
+              "Neues Werk",
+              "Neues Werk",
+              "Neues Werk"
+            ],
+            "triviaTitle": "Trivia",
+            "trivia": [
+              "Ein prägnantes Detail.",
+              "Ein Gerücht oder beobachtetes Merkmal."
+            ],
+            "quotesTitle": "Zitate",
+            "quotes": [
+              "„Ein markantes Zitat der Person.“"
+            ],
+            "connectionsTitle": "Verbindungen",
+            "connections": [
+              {
+                "type": "heading",
+                "title": "Personen",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Verbündete Person",
+                "detail": "Rolle oder Beziehung",
+                "image": "",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Dokumente & Aufzeichnungen",
+            "documents": [
+              {
+                "icon": "",
+                "title": "",
+                "text": "Archivnotiz oder Dokument",
+                "link": ""
+              }
+            ],
+            "footer": "Disziplin ist unser Schild. Wissen ist unsere Waffe."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "p-mqp0xaj7-63pzk",
+          "pageTitle": "Hierarchie des Gefolges",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "layoutMode": "vertical",
+            "treeDisplayMode": "tabs",
+            "cardFontScale": 92,
+            "portraitScale": 100,
+            "chartScale": 100,
+            "eyebrow": "Hierarchie",
+            "subtitle": "Das Gefolge Anarauts",
+            "centerLabel": "der Aufbau der Truppe",
+            "emblem": "https://i.imgur.com/0HOa3YY.png",
+            "sideImage": "https://i.imgur.com/RndAFuQ.png",
+            "organizationTitle": "Anarauts Gefolge",
+            "motto": "Wehren . Helfen . Schützen",
+            "description": "....",
+            "detailsTitle": "Details",
+            "details": [],
+            "quoteLabel": "???",
+            "quote": ".....",
+            "chartTitle": "Aufbau",
+            "chartIntro": "Die Gilde ist in verschiedene Raenge und Aemter unterteilt. Jeder Rang traegt spezifische Verantwortung innerhalb der Hierarchie.",
+            "trees": [
+              {
+                "id": "aufbau",
+                "parentTreeId": "",
+                "label": "Aufbau",
+                "levels": [
+                  {
+                    "label": "",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/BuQJtjk.png",
+                        "title": "Anaraut Draig",
+                        "subtitle": "Anführer",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Leutnanten",
+                    "nodes": [
+                      {
+                        "portrait": "https://i.imgur.com/ZiMXmCQ.png",
+                        "title": "Alwyn Gafyr",
+                        "subtitle": "Leutnant",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "https://64.media.tumblr.com/71edaefe89bab1e2d1433558a6b460c7/deb6c6d744f2a5cc-46/s250x400/4692b20898aff86fb937362df0edb32f1800d107.pnj",
+                        "title": "Gwenna Crafanc",
+                        "subtitle": "Leutnant",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "",
+                    "nodes": [
+                      {
+                        "portrait": "https://64.media.tumblr.com/dd46a0f3e3052e31b8dda5439ea49933/2253a408f503aa07-a8/s250x400/bf802d45791dda8d74fd6ee4e9fa21f132d4839d.pnj",
+                        "title": "Enan Wyrm",
+                        "subtitle": "Ritter",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "https://i.imgur.com/67ra8yj.png",
+                        "title": "Peryr Gwefrydd",
+                        "subtitle": "Ritter",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Neuer Rang",
+                        "subtitle": "Ritter",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Neuer Rang",
+                        "subtitle": "Ritter",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Neuer Unterrang",
+                        "subtitle": "Ritter",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Neuer Rang",
+                        "subtitle": "Ritter",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Neuer Rang",
+                        "subtitle": "Ritter",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Neuer Rang",
+                        "subtitle": "Ritter",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Knappen & Pagen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Neuer Unterrang",
+                        "subtitle": "Ritter",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "https://i.imgur.com/N9qrVWP.png",
+                        "title": "Oth Dyngwn",
+                        "subtitle": "Knappe Anarauts",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Neuer Rang",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [
+              {
+                "label": "",
+                "nodes": [
+                  {
+                    "portrait": "https://i.imgur.com/BuQJtjk.png",
+                    "title": "Anaraut Draig",
+                    "subtitle": "Anführer",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "Leutnanten",
+                "nodes": [
+                  {
+                    "portrait": "https://i.imgur.com/ZiMXmCQ.png",
+                    "title": "Alwyn Gafyr",
+                    "subtitle": "Leutnant",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "https://64.media.tumblr.com/71edaefe89bab1e2d1433558a6b460c7/deb6c6d744f2a5cc-46/s250x400/4692b20898aff86fb937362df0edb32f1800d107.pnj",
+                    "title": "Gwenna Crafanc",
+                    "subtitle": "Leutnant",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "",
+                "nodes": [
+                  {
+                    "portrait": "https://64.media.tumblr.com/dd46a0f3e3052e31b8dda5439ea49933/2253a408f503aa07-a8/s250x400/bf802d45791dda8d74fd6ee4e9fa21f132d4839d.pnj",
+                    "title": "Enan Wyrm",
+                    "subtitle": "Ritter",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "https://i.imgur.com/67ra8yj.png",
+                    "title": "Peryr Gwefrydd",
+                    "subtitle": "Ritter",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Neuer Rang",
+                    "subtitle": "Ritter",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Neuer Rang",
+                    "subtitle": "Ritter",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Neuer Unterrang",
+                    "subtitle": "Ritter",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Neuer Rang",
+                    "subtitle": "Ritter",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Neuer Rang",
+                    "subtitle": "Ritter",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Neuer Rang",
+                    "subtitle": "Ritter",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "Knappen & Pagen",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Neuer Unterrang",
+                    "subtitle": "Ritter",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "https://i.imgur.com/N9qrVWP.png",
+                    "title": "Oth Dyngwn",
+                    "subtitle": "Knappe Anarauts",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Neuer Rang",
+                    "subtitle": "",
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "footerNote": "Raenge und Zustaendigkeiten koennen je nach Gildensatzung und Gildenordnung variieren.",
+            "backLabel": "Zurueck zur Uebersicht",
+            "printLabel": "Akte drucken"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "p-mqp19aou-3zph5",
+          "pageTitle": "Gruppenübersicht",
+          "landingPage": true,
+          "landing": {
+            "bannerImage": "https://i.imgur.com/0HOa3YY.png",
+            "title": "Anarauts Gefolge",
+            "subtitle": "Der Trupp des Adjutanten des Marschalls",
+            "memberTitle": "Abenteurer",
+            "questTitle": "Quests",
+            "notesTitle": "Notizen",
+            "eventsTitle": "Anstehende Ereignisse",
+            "mapTitle": "Aktuelle Karte",
+            "mapKartenId": "cenyr-celtigerns-wacht",
+            "mapImage": "",
+            "mapLink": "",
+            "mapButtonLabel": "Karte öffnen",
+            "infoTitle": "Schnelle Informationen",
+            "members": [
+              {
+                "id": "member-mqp19aou-0-dpji",
+                "name": "Anaraut Draig",
+                "role": "Ritter",
+                "className": "Teulu",
+                "status": "Bereit",
+                "statusColor": "#2c8a3d",
+                "portrait": "https://i.imgur.com/BuQJtjk.png",
+                "badgeIcon": "https://i.imgur.com/4OcZiid.png",
+                "characterId": ""
+              },
+              {
+                "id": "member-mqp19aou-1-1e0j",
+                "name": "Gwenna Crafanc",
+                "role": "Ritter",
+                "className": "Arthwyr",
+                "status": "Bereit",
+                "statusColor": "#2c8a3d",
+                "portrait": "https://64.media.tumblr.com/71edaefe89bab1e2d1433558a6b460c7/deb6c6d744f2a5cc-46/s250x400/4692b20898aff86fb937362df0edb32f1800d107.pnj",
+                "badgeIcon": "*",
+                "characterId": ""
+              },
+              {
+                "id": "member-mqptkw4f-2-ugj8",
+                "name": "Alwyn Gafyr",
+                "role": "Ritter",
+                "className": "Teulu",
+                "status": "Bereit",
+                "statusColor": "#2c8a3d",
+                "portrait": "https://i.imgur.com/ZiMXmCQ.png",
+                "badgeIcon": "*",
+                "characterId": ""
+              },
+              {
+                "id": "member-mqptlv6x-3-3ab5",
+                "name": "Enan Wyrm",
+                "role": "Ritter",
+                "className": "Cantref",
+                "status": "Bereit",
+                "statusColor": "#2c8a3d",
+                "portrait": "https://64.media.tumblr.com/dd46a0f3e3052e31b8dda5439ea49933/2253a408f503aa07-a8/s250x400/bf802d45791dda8d74fd6ee4e9fa21f132d4839d.pnj",
+                "badgeIcon": "*",
+                "characterId": ""
+              },
+              {
+                "id": "member-mqptthgz-4-wx13",
+                "name": "Peryr Gwefrydd",
+                "role": "Ritter",
+                "className": "Teulu, Helwyr",
+                "status": "Bereit",
+                "statusColor": "#2c8a3d",
+                "portrait": "https://i.imgur.com/67ra8yj.png",
+                "badgeIcon": "*",
+                "characterId": ""
+              },
+              {
+                "id": "member-mqptvt24-5-e8j5",
+                "name": "Oth Dyngwn",
+                "role": "Knappe",
+                "className": "Teulu",
+                "status": "Bereit",
+                "statusColor": "#2c8a3d",
+                "portrait": "https://i.imgur.com/N9qrVWP.png",
+                "badgeIcon": "*",
+                "characterId": ""
+              },
+              {
+                "id": "member-mqptz5me-6-q8eq",
+                "name": "Abenteurer 7",
+                "role": "",
+                "className": "",
+                "status": "Bereit",
+                "statusColor": "#2c8a3d",
+                "portrait": "",
+                "badgeIcon": "*",
+                "characterId": ""
+              },
+              {
+                "id": "member-mrxc2izd-7-o7cy",
+                "name": "Abenteurer 8",
+                "role": "",
+                "className": "",
+                "status": "Bereit",
+                "statusColor": "#2c8a3d",
+                "portrait": "",
+                "badgeIcon": "*",
+                "characterId": ""
+              }
+            ],
+            "quests": [
+              {
+                "id": "quest-mqptk5hs-0-mi9b",
+                "title": "Quest 1",
+                "text": "",
+                "image": "https://i.imgur.com/u1qz1cq.png",
+                "kind": "Nebenquest",
+                "status": "active",
+                "progress": 0,
+                "ownerMemberId": "",
+                "dueDate": "",
+                "moduleId": ""
+              },
+              {
+                "id": "quest-mqptkq3b-1-fx0g",
+                "title": "Quest 2",
+                "text": "",
+                "image": "https://i.imgur.com/u1qz1cq.png",
+                "kind": "Nebenquest",
+                "status": "active",
+                "progress": 0,
+                "ownerMemberId": "",
+                "dueDate": "",
+                "moduleId": ""
+              },
+              {
+                "id": "quest-mqptvt25-2-7j7n",
+                "title": "Quest 3",
+                "text": "",
+                "image": "",
+                "kind": "Nebenquest",
+                "status": "active",
+                "progress": 0,
+                "ownerMemberId": "",
+                "dueDate": "",
+                "moduleId": ""
+              },
+              {
+                "id": "quest-mqptz5me-3-1pek",
+                "title": "Quest 4",
+                "text": "",
+                "image": "",
+                "kind": "Nebenquest",
+                "status": "active",
+                "progress": 0,
+                "ownerMemberId": "",
+                "dueDate": "",
+                "moduleId": ""
+              },
+              {
+                "id": "quest-mrxc2izd-4-chd2",
+                "title": "Quest 5",
+                "text": "",
+                "image": "",
+                "kind": "Nebenquest",
+                "status": "active",
+                "progress": 0,
+                "ownerMemberId": "",
+                "dueDate": "",
+                "moduleId": ""
+              }
+            ],
+            "notes": [
+              {
+                "id": "note-mqptk5hs-0-ws8o",
+                "authorId": "",
+                "authorName": "",
+                "icon": "https://i.imgur.com/wYRRpzV.png",
+                "title": "Notiz 1",
+                "text": "",
+                "createdAt": "2026-06-22T23:00:54.351Z"
+              },
+              {
+                "id": "note-mqptvt25-1-95ef",
+                "authorId": "",
+                "authorName": "",
+                "icon": "",
+                "title": "Notiz 2",
+                "text": "",
+                "createdAt": "2026-06-22T23:09:58.108Z"
+              },
+              {
+                "id": "note-mqptz5me-2-w5dg",
+                "authorId": "",
+                "authorName": "",
+                "icon": "",
+                "title": "Notiz 3",
+                "text": "",
+                "createdAt": "2026-06-22T23:12:34.358Z"
+              },
+              {
+                "id": "note-mrxc2izd-3-9f6v",
+                "authorId": "",
+                "authorName": "",
+                "icon": "",
+                "title": "Notiz 4",
+                "text": "",
+                "createdAt": "2026-07-23T09:53:10.297Z"
+              }
+            ],
+            "events": [
+              {
+                "icon": "https://i.imgur.com/oxxBDIa.png",
+                "title": "Ereignis 1",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "https://i.imgur.com/oxxBDIa.png",
+                "title": "Ereignis 2",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "https://i.imgur.com/oxxBDIa.png",
+                "title": "Ereignis 3",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "https://i.imgur.com/oxxBDIa.png",
+                "title": "Ereignis 4",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "https://i.imgur.com/oxxBDIa.png",
+                "title": "Ereignis 5",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "https://i.imgur.com/oxxBDIa.png",
+                "title": "Ereignis 6",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "*",
+                "title": "Ereignis 7",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "*",
+                "title": "Ereignis 8",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "*",
+                "title": "Ereignis 9",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "*",
+                "title": "Ereignis 10",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              }
+            ],
+            "info": [
+              {
+                "icon": "https://i.imgur.com/4OcZiid.png",
+                "title": "Gildenruf",
+                "text": "Angesehen"
+              },
+              {
+                "icon": "https://i.imgur.com/kH2Ry56.png",
+                "title": "Aktuelles Gold",
+                "text": "12 GM"
+              },
+              {
+                "icon": "https://i.imgur.com/52bHTVP.png",
+                "title": "Vorräte",
+                "text": "Gut versorgt"
+              },
+              {
+                "icon": "https://i.imgur.com/wYRRpzV.png",
+                "title": "Information 4",
+                "text": ""
+              },
+              {
+                "icon": "https://i.imgur.com/skIWGP2.png",
+                "title": "Information 5",
+                "text": ""
+              },
+              {
+                "icon": "https://i.imgur.com/skIWGP2.png",
+                "title": "Information 6",
+                "text": ""
+              },
+              {
+                "icon": "https://i.imgur.com/skIWGP2.png",
+                "title": "Information 7",
+                "text": ""
+              },
+              {
+                "icon": "https://i.imgur.com/skIWGP2.png",
+                "title": "Information 8",
+                "text": ""
+              },
+              {
+                "icon": "https://i.imgur.com/skIWGP2.png",
+                "title": "Information 9",
+                "text": ""
+              },
+              {
+                "icon": "https://i.imgur.com/skIWGP2.png",
+                "title": "Information 10",
+                "text": ""
+              },
+              {
+                "icon": "*",
+                "title": "Information 11",
+                "text": ""
+              },
+              {
+                "icon": "*",
+                "title": "Information 12",
+                "text": ""
+              }
+            ],
+            "group": {
+              "version": 1,
+              "location": "",
+              "activity": "",
+              "status": "",
+              "supplies": "",
+              "threadId": "",
+              "sceneThreads": [],
+              "members": [
+                {
+                  "id": "hierarchy:anaraut draig",
+                  "characterId": "",
+                  "linkMode": "auto",
+                  "assignment": "active",
+                  "status": "auto",
+                  "note": ""
+                },
+                {
+                  "id": "hierarchy:alwyn gafyr",
+                  "characterId": "",
+                  "linkMode": "auto",
+                  "assignment": "active",
+                  "status": "auto",
+                  "note": ""
+                },
+                {
+                  "id": "hierarchy:gwenna crafanc",
+                  "characterId": "",
+                  "linkMode": "auto",
+                  "assignment": "active",
+                  "status": "auto",
+                  "note": ""
+                },
+                {
+                  "id": "hierarchy:enan wyrm",
+                  "characterId": "",
+                  "linkMode": "auto",
+                  "assignment": "active",
+                  "status": "auto",
+                  "note": ""
+                },
+                {
+                  "id": "hierarchy:peryr gwefrydd",
+                  "characterId": "",
+                  "linkMode": "auto",
+                  "assignment": "active",
+                  "status": "auto",
+                  "note": ""
+                },
+                {
+                  "id": "hierarchy:oth dyngwn",
+                  "characterId": "",
+                  "linkMode": "auto",
+                  "assignment": "active",
+                  "status": "auto",
+                  "note": ""
+                }
+              ],
+              "guests": [],
+              "presets": [],
+              "treasury": {
+                "openingCopper": null,
+                "entries": []
+              }
+            }
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "p-mqp19t4v-3tq42",
+          "image": "https://i.imgur.com/6uustiS.png",
+          "imageWidth": 20,
+          "pageTitle": "Hauptquartier & Lager",
+          "sessionPage": true,
+          "sessionIntro": "Einleitung der Szene. Beschreibe Ort, Anlass und Stimmung. Der eigentliche Szenenverlauf entsteht später über Kommentare.",
+          "sessionHint": "Führe diese Szene als Kommentar fort.",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ],
+      "schemaVersion": 1,
+      "multipage": true
+    }
+  }
+}

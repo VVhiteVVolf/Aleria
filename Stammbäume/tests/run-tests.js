@@ -7351,7 +7351,7 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
       + SCHWARZFENN_DEPENDENT_HOUSE_FAMILIES.length
       + KRAEHENMOOR_DEPENDENT_HOUSE_FAMILIES.length
       + RORIKSHEIM_DEPENDENT_HOUSE_FAMILIES.length + LEITHEACH_HOUSE_FAMILIES.length
-      + CEITHEACH_CLAN_FAMILIES.length + 6
+      + CEITHEACH_HOUSE_FAMILIES.length - 1 + 6
   );
   expected.forEach(({ rankId, path }, familyId) => {
     const loaded = loadFamilyById(familyId, storage);
@@ -16585,9 +16585,9 @@ test('bildet das Königshaus Blodyn vollständig mit zwei seriellen Zeitsprünge
   assert.equal(family.persons.length, 88);
   assert.equal(family.partnerships.length, 42);
   assert.equal(family.parentages.length, 46);
-  assert.equal(family.cadetBranches.length, 22);
-  assert.equal(family.cadetBranches.filter(branch => branch.linkType === 'married-away').length, 20);
-  assert.equal(family.cadetBranches.filter(branch => branch.linkType === 'cadet-house').length, 2);
+  assert.equal(family.cadetBranches.length, 24);
+  assert.equal(family.cadetBranches.filter(branch => branch.linkType === 'married-away').length, 21);
+  assert.equal(family.cadetBranches.filter(branch => branch.linkType === 'cadet-house').length, 3);
   assert.equal(family.timeJumps.length, 2);
   assert.equal(family.document.id, 'haus-blodyn');
   assert.equal(family.document.title, "Haus Blodyn O'Llyndor");
@@ -16599,7 +16599,7 @@ test('bildet das Königshaus Blodyn vollständig mit zwei seriellen Zeitsprünge
   assert.equal(family.lineage.founderPartnershipId, 'marriage-kerrylin-mordred');
   assert.equal(family.lineage.crestFrame, 'gold');
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 4);
+  assert.equal(family.extensions.sourceRevision, 6);
 
   const crest = converted.data.find(node => node.data.nodeKind === 'house-crest');
   assert.ok(crest, 'Der Stammwappenknoten des Königshauses Blodyn fehlt.');
@@ -16645,7 +16645,7 @@ test('bildet das Königshaus Blodyn vollständig mit zwei seriellen Zeitsprünge
     'afanen-blodyn', 'angharad-blodyn', 'arryn-blodyn', 'arvyn-blodyn', 'blawd-blodyn',
     'blodeuwedd-blodyn', 'catrin-blodyn', 'ceridwen-blodyn', 'dylis-blodyn', 'elin-blodyn',
     'gwendolen-blodyn', 'gwyneth-blodyn', 'meggan-blodyn', 'morfydd-blodyn', 'morwenna-blodyn',
-    'myfanwy-1618-blodyn', 'olwyn-blodyn', 'siriol-blodyn', 'tanwen-blodyn', 'tudurwen-blodyn'
+    'myfanwy-1618-blodyn', 'olwyn-blodyn', 'siriol-blodyn', 'tanwen-blodyn', 'telyn-blodyn', 'tudurwen-blodyn'
   ].sort());
   family.cadetBranches.forEach(branch => {
     const chartBranch = chartById.get(`__cadet-${branch.id}`);
@@ -16680,7 +16680,8 @@ test('bildet das Königshaus Blodyn vollständig mit zwei seriellen Zeitsprünge
   assert.equal(new Set(family.partnerships.map(partnership => partnership.id)).size, family.partnerships.length);
   assert.equal(new Set(family.parentages.map(parentage => parentage.childId)).size, family.parentages.length);
   assert.equal(new Set(chartIds).size, chartIds.length);
-  assert.equal(converted.data.length, 114);
+  // Zwei neue Zielhäuser und die dadurch benötigte serielle Layoutstufe.
+  assert.equal(converted.data.length, 117);
   converted.data.forEach(node => assert.ok(node.rels.parents.length <= 2, `${node.id} besitzt mehr als zwei Diagrammeltern.`));
 
   const visited = new Set([converted.data[0].id]);
@@ -16808,7 +16809,7 @@ test('liefert alle 57 individuellen Blodyn-Quellportraits und die Regionswappen 
   assert.equal(localIds.length, 57);
   assert.equal(new Set(Object.values(sourceManifest)).size, 57);
   assert.equal(Object.keys(HOUSE_BLODYN_PORTRAITS).length, 68);
-  assert.equal(HOUSE_BLODYN_FAMILY.persons.filter(person => person.portrait).length, 63);
+  assert.equal(HOUSE_BLODYN_FAMILY.persons.filter(person => person.portrait).length, 64);
   assert.equal(HOUSE_BLODYN_TALGARTH_FAMILY.persons.filter(person => person.portrait).length, 5);
   assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
 
@@ -18397,7 +18398,7 @@ test('bildet Diafols vollständige Herkunftslinie aus Trefgoch ohne Fokusbegrenz
   assert.equal(family.extensions.blankFamily, false);
   assert.equal(family.extensions.originLine, true);
   assert.equal(family.extensions.successorFamilyId, 'haus-diafol-talgarth');
-  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.extensions.sourceRevision, 3);
   assert.equal(family.persons.length, 30);
   assert.equal(family.partnerships.length, 13);
   assert.equal(family.parentages.length, 16);
@@ -18421,7 +18422,7 @@ test('führt in Talgarth alle acht überlebenden Diafol mit ihren notwendigen Pa
   assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
   assert.equal(family.extensions.blankFamily, false);
   assert.equal(family.extensions.originFamilyId, 'haus-diafol');
-  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.extensions.sourceRevision, 3);
   assert.equal(family.persons.length, 12);
   assert.equal(family.partnerships.length, 4);
   assert.equal(family.parentages.length, 5);
@@ -19046,7 +19047,7 @@ test('ersetzt Diafols frühere lokale Platzhalterakten in Vennyr und Talgarth', 
     staleFamily.extensions.sourceRevision = 1;
 
     const upgraded = resolveRegisteredFamilyUpgrade(family, staleFamily);
-    assert.equal(upgraded.extensions.sourceRevision, 2);
+    assert.equal(upgraded.extensions.sourceRevision, 3);
     assert.equal(upgraded.extensions.blankFamily, false);
     assert.equal(upgraded.persons.length, family.persons.length);
     assert.equal(upgraded.parentages.length, family.parentages.length);
@@ -19060,7 +19061,7 @@ test('bildet Diancs vollständige Herkunftslinie aus Gwynlann ohne Fokusbegrenzu
   assert.equal(family.extensions.blankFamily, false);
   assert.equal(family.extensions.originLine, true);
   assert.equal(family.extensions.successorFamilyId, 'haus-dianc-aberdail');
-  assert.equal(family.extensions.sourceRevision, 3);
+  assert.equal(family.extensions.sourceRevision, 4);
   assert.equal(family.persons.length, 41);
   assert.equal(family.partnerships.length, 18);
   assert.equal(family.parentages.length, 22);
@@ -19261,7 +19262,7 @@ test('ersetzt Diancs frühere lokale Platzhalterakten in Gwynlann und Aberdail',
     staleFamily.extensions.sourceRevision = 1;
 
     const upgraded = resolveRegisteredFamilyUpgrade(family, staleFamily);
-    assert.equal(upgraded.extensions.sourceRevision, family === HOUSE_DIANC_GWYNLANN_FAMILY ? 3 : 2);
+    assert.equal(upgraded.extensions.sourceRevision, family === HOUSE_DIANC_GWYNLANN_FAMILY ? 4 : 2);
     assert.equal(upgraded.extensions.blankFamily, false);
     assert.equal(upgraded.persons.length, family.persons.length);
     assert.equal(upgraded.parentages.length, family.parentages.length);
@@ -19275,7 +19276,7 @@ test('bildet Arfordirs vollständige Grafenlinie aus Serenlyn ohne Fokusbegrenzu
   assert.equal(family.extensions.blankFamily, false);
   assert.equal(family.extensions.originLine, true);
   assert.equal(family.extensions.successorFamilyId, 'haus-arfordir-aberdail');
-  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.extensions.sourceRevision, 4);
   assert.equal(family.document.houseProfile.rankId, 'county');
   assert.equal(family.persons.length, 40);
   assert.equal(family.partnerships.length, 19);
@@ -19486,7 +19487,7 @@ test('liefert Arfordirs individuelle Quellenporträts lokal und Gegenaktenbilder
   [
     'eurolwyn-arfordir', 'elus-arfordir', 'jenifrydd-dianc', 'meiriona-arfordir',
     'trevor-arfordir', 'cryl-trachwyll', 'lowri-arfordir', 'jowna-arfordir',
-    'eiddon-arfordir', 'jenita-blodeuwedd'
+    'eiddon-arfordir'
   ].forEach(personId => {
     assert.equal(HOUSE_ARFORDIR_PORTRAITS[personId], undefined, `${personId}: Standardsilhouette darf nicht importiert werden`);
   });
@@ -19504,7 +19505,7 @@ test('ersetzt Arfordirs frühere lokale Platzhalterakten in Serenlyn und Aberdai
     staleFamily.extensions.sourceRevision = 1;
 
     const upgraded = resolveRegisteredFamilyUpgrade(family, staleFamily);
-    assert.equal(upgraded.extensions.sourceRevision, 2);
+    assert.equal(upgraded.extensions.sourceRevision, family === HOUSE_ARFORDIR_SERENLYN_FAMILY ? 4 : 2);
     assert.equal(upgraded.extensions.blankFamily, false);
     assert.equal(upgraded.persons.length, family.persons.length);
     assert.equal(upgraded.parentages.length, family.parentages.length);
@@ -19518,7 +19519,7 @@ test('bildet Dyfrgis vollständige alte Grafenlinie aus Mynyddharbwr ohne Fokusb
   assert.equal(family.extensions.blankFamily, false);
   assert.equal(family.extensions.originLine, true);
   assert.equal(family.extensions.successorFamilyId, 'haus-dyfrgi-caer-cryftlawd');
-  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.extensions.sourceRevision, 3);
   assert.equal(family.document.houseProfile.rankId, 'county');
   assert.equal(family.persons.length, 19);
   assert.equal(family.partnerships.length, 9);
@@ -19586,7 +19587,7 @@ test('beginnt Dyfrgis Ritterfürstenlinie in Caer Cryftlawd ausschließlich bei 
   assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
   assert.equal(family.extensions.blankFamily, false);
   assert.equal(family.extensions.originFamilyId, 'haus-dyfrgi');
-  assert.equal(family.extensions.sourceRevision, 3);
+  assert.equal(family.extensions.sourceRevision, 4);
   assert.equal(family.document.houseProfile.rankId, 'knight-prince');
   assert.equal(family.persons.length, 14);
   assert.equal(family.partnerships.length, 4);
@@ -19729,12 +19730,12 @@ test('bildet Walwrs vollständige alte Ritterfürstenlinie aus Traeth ohne Perso
   assert.equal(family.extensions.blankFamily, false);
   assert.equal(family.extensions.originLine, true);
   assert.equal(family.extensions.successorFamilyId, 'haus-walwrs-caer-deheuol');
-  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.extensions.sourceRevision, 3);
   assert.equal(family.document.houseProfile.rankId, 'knight-prince');
-  assert.equal(family.persons.length, 26);
-  assert.equal(family.partnerships.length, 13);
+  assert.equal(family.persons.length, 27);
+  assert.equal(family.partnerships.length, 14);
   assert.equal(family.parentages.length, 12);
-  assert.equal(family.cadetBranches.length, 7);
+  assert.equal(family.cadetBranches.length, 8);
   assert.equal(family.timeJumps.length, 1);
   assert.equal(family.view.focusPersonId, 'owain-founder-walwrs');
   assert.equal(family.view.limitGenerations, false);
@@ -19793,7 +19794,7 @@ test('beginnt Walwrs Caer-Deheuol-Linie bei Rheidwn und führt nur seine Nachkom
   assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
   assert.equal(family.extensions.blankFamily, false);
   assert.equal(family.extensions.originFamilyId, 'haus-walwrs');
-  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.extensions.sourceRevision, 3);
   assert.equal(family.document.houseProfile.rankId, 'knight-prince');
   assert.equal(family.persons.length, 14);
   assert.equal(family.partnerships.length, 4);
@@ -19927,7 +19928,7 @@ test('ersetzt Walwrs frühere Platzhalterakten in Traeth und Caer Deheuol', () =
     staleFamily.extensions.sourceRevision = 1;
 
     const upgraded = resolveRegisteredFamilyUpgrade(family, staleFamily);
-    assert.equal(upgraded.extensions.sourceRevision, 2);
+    assert.equal(upgraded.extensions.sourceRevision, 3);
     assert.equal(upgraded.extensions.blankFamily, false);
     assert.equal(upgraded.persons.length, family.persons.length);
     assert.equal(upgraded.parentages.length, family.parentages.length);
@@ -20263,7 +20264,7 @@ test('liefert Blaidds individuelle Quellporträts lokal und verwendet Gegenakten
     new URL('../assets/images/portraits/haus-blaidd/portrait-sources.json', import.meta.url),
     'utf8'
   ));
-  assert.equal(Object.keys(HOUSE_BLAIDD_LOCAL_PORTRAIT_FILES).length, 26);
+  assert.equal(Object.keys(HOUSE_BLAIDD_LOCAL_PORTRAIT_FILES).length, 27);
   assert.deepEqual(
     Object.keys(HOUSE_BLAIDD_LOCAL_PORTRAIT_FILES).sort(),
     Object.keys(HOUSE_BLAIDD_PORTRAIT_SOURCES).sort()
@@ -20326,7 +20327,7 @@ test('migriert die verworfene Blaidd-Doppelwappenfassung zur Gründung durch Gwy
   });
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_BLAIDD_BRANON_FAMILY, stale);
 
-  assert.equal(upgraded.extensions.sourceRevision, 5);
+  assert.equal(upgraded.extensions.sourceRevision, 6);
   assert.equal(upgraded.lineage.founderPartnershipId, 'marriage-ceridwen-gwynfor');
   assert.equal(upgraded.view.focusPersonId, 'unknown-father-blaidd-brothers');
   assert.ok(upgraded.persons.some(person => person.id === 'unknown-father-blaidd-brothers'));
@@ -20882,7 +20883,6 @@ test('liefert Lyfants 28 zulassige Quellportraets und laesst veraltete Bilder au
     'agnes',
     'gunhild-eisenbieger',
     'aine-drummond',
-    'gereint-drewi',
     'dafydd-trachwyll'
   ];
   excludedPortraitIds.forEach(personId => {
@@ -21016,7 +21016,7 @@ test('bildet Haus Brithyll vollständig mit serieller Gründerlücke und eindeut
   assert.equal(family.cadetBranches.length, 8);
   assert.equal(family.timeJumps.length, 1);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.extensions.sourceRevision, 3);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-categirn-marwine');
   assert.equal(family.view.focusPersonId, 'categirn-pysgod');
   assert.equal(family.view.limitGenerations, false);
@@ -29158,7 +29158,7 @@ test('synchronisiert Ceirwyns vorhandene Gegenakten ohne neue Weltpersonen oder 
   });
 
   assert.equal(HOUSE_PENDRAG_FAMILY.persons.find(person => person.id === 'talla-ceirwyn').death, '1720');
-  assert.equal(HOUSE_PENDRAG_FAMILY.extensions.sourceRevision, 4);
+  assert.equal(HOUSE_PENDRAG_FAMILY.extensions.sourceRevision, 5);
 });
 
 test('registriert die ausgearbeitete Ceirwyn-Akte genau einmal als Baronenhaus in Calon', () => {
@@ -30572,7 +30572,7 @@ test('migriert eine lokal gespeicherte Pendrag-Akte in die neue Mathragon-Hierar
 
   const loaded = loadFamilyById('haus-pendrag', storage);
   assert.equal(loaded.source, 'registry-upgrade');
-  assert.equal(loaded.family.extensions.sourceRevision, 4);
+  assert.equal(loaded.family.extensions.sourceRevision, HOUSE_PENDRAG_FAMILY.extensions.sourceRevision);
   assert.deepEqual(loaded.folderPath, ['Cenyr', 'Vortigerns Ruh', 'Tanwens Flamme', 'Mathragon']);
   assert.deepEqual(
     createFolderPathFromHouseProfile(loaded.family.document.houseProfile),
@@ -31725,7 +31725,7 @@ test('zeigt eine ältere GitHub-Fassung mit neueren Projektkorrekturen zusammeng
   const mergedMarriage = store.getState().family.partnerships
     .find(entry => entry.id === 'marriage-rorik-gisrun-varangr');
   assert.equal(store.getState().family.document.motto, 'Patricks veröffentlichter Inhalt');
-  assert.equal(store.getState().family.extensions.sourceRevision, 7);
+  assert.equal(store.getState().family.extensions.sourceRevision, HOUSE_VARANGR_FAMILY.extensions.sourceRevision);
   assert.equal(mergedMarriage.extensions.chartAlignPartnerOverChildrenPersonId, undefined);
   assert.equal(mergedMarriage.extensions.chartAlignChildGroupBelowParentPair, true);
   assert.equal(synchronizationSource, 'repository-published-project-reconciliation');
@@ -32078,7 +32078,7 @@ test('übernimmt Patricks GitHub-Inhalte und hält neuere Registry-Korrekturen z
     .find(entry => entry.id === 'marriage-rorik-gisrun-varangr');
 
   assert.equal(mergedFamily.document.motto, 'Patricks GitHub-Inhalt');
-  assert.equal(mergedFamily.extensions.sourceRevision, 7);
+  assert.equal(mergedFamily.extensions.sourceRevision, HOUSE_VARANGR_FAMILY.extensions.sourceRevision);
   assert.equal(mergedMarriage.extensions.chartAlignPartnerOverChildrenPersonId, undefined);
   assert.equal(mergedMarriage.extensions.chartAlignChildGroupBelowParentPair, true);
   assert.equal(harness.controller.getSyncState().dirty, true);
@@ -32087,7 +32087,7 @@ test('übernimmt Patricks GitHub-Inhalte und hält neuere Registry-Korrekturen z
   await harness.controller.saveNow();
   assert.equal(harness.metrics().lastSave.expectedRevision, 41);
   assert.equal(harness.metrics().lastSave.baseFamily.extensions.sourceRevision, 5);
-  assert.equal(harness.metrics().lastSave.family.extensions.sourceRevision, 7);
+  assert.equal(harness.metrics().lastSave.family.extensions.sourceRevision, HOUSE_VARANGR_FAMILY.extensions.sourceRevision);
   assert.equal(harness.localRepository.loadDraft('haus-varangr').dirty, false);
 });
 
@@ -34376,7 +34376,7 @@ test('bereitet Ceitheachs sechs Oberherrschaften und ihre herrschenden Clans vol
     expected
   );
   assert.equal(CEITHEACH_CLAN_FAMILIES.length, 6);
-  assert.equal(CEITHEACH_HOUSE_FAMILIES.length, 7);
+  assert.equal(CEITHEACH_HOUSE_FAMILIES.length, 14);
 
   CEITHEACH_CLAN_DEFINITIONS.forEach((definition, index) => {
     const family = CEITHEACH_CLAN_FAMILIES[index];
@@ -34388,8 +34388,8 @@ test('bereitet Ceitheachs sechs Oberherrschaften und ihre herrschenden Clans vol
     assert.equal(profile, CEITHEACH_HOUSE_PROFILES[definition.slug]);
     assert.equal(family.document.title, definition.title);
     assert.equal(family.document.emblem, CEITHEACH_HOUSE_EMBLEMS[definition.slug]);
-    assert.equal(family.extensions.sourceRevision, definition.slug === 'nic-blar' ? 4 : 1);
-    assert.equal(family.extensions.preparedMainLine, definition.slug !== 'nic-blar');
+    assert.ok(family.extensions.sourceRevision >= 2);
+    assert.equal(family.extensions.preparedMainLine, false);
     assert.equal(profile.rankId, definition.rankId);
     assert.equal(profile.kingdom, 'Ceitheach');
     assert.equal(profile.county, definition.territory);
@@ -34584,7 +34584,14 @@ test('liefert Lorcáns Portrait sowie sämtliche Ceitheach-Regions- und Clanwapp
     'clan-mac-tuirseach.png': 'https://i.imgur.com/KcAlGpu.png',
     'clan-dal-leite.png': 'https://i.imgur.com/b9A4eIK.png',
     'clan-nic-holloran.png': 'https://i.imgur.com/MMOhJ5c.png',
-    'clan-ua-nic-ceinselaig.png': 'https://i.imgur.com/g2GdvKE.png'
+    'clan-ua-nic-ceinselaig.png': 'https://i.imgur.com/g2GdvKE.png',
+    'clan-tir-an-craobhan.png': 'https://i.imgur.com/5wJbjFV.png',
+    'clan-faill-ua-eldath.png': 'https://i.imgur.com/X4uOWk0.png',
+    'clan-faill-mallacht-eamhra.png': 'https://i.imgur.com/JZykg5E.png',
+    'clan-mallacht-seaghda.png': 'https://i.imgur.com/2HRc9fV.png',
+    'clan-an-morchoe.png': 'https://i.imgur.com/GfdwYmG.png',
+    'clan-tir-an-tordarroch.png': 'https://i.imgur.com/ZVXvAfO.png',
+    'clan-an-bhaird.png': 'https://i.imgur.com/Z7dNqR1.png'
   });
   assert.deepEqual(regionManifest, {
     'ceitheach.png': 'https://i.imgur.com/J8IZkrX.png',
@@ -35729,7 +35736,7 @@ test('bildet Haus Wivern vollständig vom Gründerpaar aus mit einem seriellen Z
   assert.equal(family.cadetBranches.length, 6);
   assert.equal(family.timeJumps.length, 1);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 1);
+  assert.equal(family.extensions.sourceRevision, 2);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-ulysses-ulaeth-wivern');
   assert.equal(family.lineage.crestFrame, 'gold');
   assert.equal(family.view.focusPersonId, 'ulysses-founder-wivern');
@@ -35962,8 +35969,8 @@ test('ersetzt die Wivern-Leerakte im Register ohne doppelte Personen oder Bezieh
   stale.extensions.sourceRevision = 0;
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_WIVERN_FAMILY, stale);
-  assert.equal(upgraded.extensions.sourceRevision, 1);
-  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 0, toRevision: 1 });
+  assert.equal(upgraded.extensions.sourceRevision, 2);
+  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 0, toRevision: 2 });
   assert.equal(upgraded.persons.length, 41);
   assert.equal(new Set(upgraded.persons.map(personRecord => personRecord.id)).size, 41);
   assert.equal(upgraded.partnerships.length, 16);
@@ -36229,7 +36236,7 @@ test('migriert gespeicherte Brithyll- und Gwialen-Ansichten vom Personenfokus zu
     staleFamily.view.limitGenerations = true;
 
     const upgraded = resolveRegisteredFamilyUpgrade(registeredFamily, staleFamily);
-    assert.equal(upgraded.extensions.sourceRevision, 2, registeredFamily.document.id);
+    assert.equal(upgraded.extensions.sourceRevision, registeredFamily === HOUSE_BRITHYLL_FAMILY ? 3 : 2, registeredFamily.document.id);
     assert.equal(upgraded.view.focusPersonId, expectedFounderId, registeredFamily.document.id);
     assert.equal(upgraded.view.limitGenerations, false, registeredFamily.document.id);
   });
@@ -36774,7 +36781,7 @@ test('migriert Vaerens alte Mehrpartner-Anker und Astrids fehlendes Gegenaktenpo
   const upgradedPlan = createFamilyChartPartnerAlignmentPlan(upgraded);
   const upgradedBalgruuf = upgraded.persons.find(person => person.id === 'balgruuf-younger-vaeren');
 
-  assert.equal(upgraded.extensions.sourceRevision, 8);
+  assert.equal(upgraded.extensions.sourceRevision, HOUSE_VAEREN_FAMILY.extensions.sourceRevision);
   assert.deepEqual(upgradedBalgruuf.extensions.chartCenterBetweenPartnerPersonIds, [
     'eola-sturmgeborene',
     'elisef-1592-varangr'
@@ -37078,8 +37085,8 @@ test('ersetzt eine gespeicherte Varangr-Leerakte kontrolliert durch den vollstä
   stale.view.focusPersonId = stale.persons[0].id;
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_VARANGR_FAMILY, stale);
-  assert.equal(upgraded.extensions.sourceRevision, 7);
-  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 2, toRevision: 7 });
+  assert.equal(upgraded.extensions.sourceRevision, HOUSE_VARANGR_FAMILY.extensions.sourceRevision);
+  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 2, toRevision: HOUSE_VARANGR_FAMILY.extensions.sourceRevision });
   assert.equal(upgraded.persons.length, HOUSE_VARANGR_FAMILY.persons.length);
   assert.equal(upgraded.extensions.blankFamily, false);
 });
@@ -37147,7 +37154,7 @@ test('migriert Varangrs alte Partnerausrichtung und Svanhildrs falsches Bild', (
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_VARANGR_FAMILY, stale);
   const upgradedRorik = upgraded.persons.find(person => person.id === 'rorik-varangr');
 
-  assert.equal(upgraded.extensions.sourceRevision, 7);
+  assert.equal(upgraded.extensions.sourceRevision, HOUSE_VARANGR_FAMILY.extensions.sourceRevision);
   assert.deepEqual(upgradedRorik.extensions.chartCenterBetweenPartnerPersonIds, [
     'gisrun-schattenherz',
     'urd'
@@ -37201,7 +37208,7 @@ test('gleicht einen lokalen Varangr-Entwurf vor dem Bearbeiten mit der Registry 
     .find(entry => entry.id === 'marriage-rorik-gisrun-varangr');
 
   assert.equal(result.upgraded, true);
-  assert.equal(result.draft.family.extensions.sourceRevision, 7);
+  assert.equal(result.draft.family.extensions.sourceRevision, HOUSE_VARANGR_FAMILY.extensions.sourceRevision);
   assert.equal(result.draft.family.document.motto, 'Lokale redaktionelle Ergänzung');
   assert.equal(marriage.extensions.chartAlignPartnerOverChildrenPersonId, undefined);
   assert.equal(marriage.extensions.chartAlignChildGroupBelowParentPair, true);
@@ -38083,7 +38090,7 @@ test('trennt Kenyons Ivarsfels-Linie eindeutig von allen in Vennyr verbleibenden
     assert.equal(here.portrait, there.portrait, personId);
   });
   assert.equal(origin.persons.find(person => person.id === 'kenyon-trachwyll').birth, '1676');
-  assert.equal(origin.persons.find(person => person.id === 'geraint-drewi').portrait, '');
+  assert.equal(origin.persons.find(person => person.id === 'geraint-drewi').portrait, 'assets/images/portraits/haus-drewi/geraint-drewi.jpg');
   assert.equal(origin.persons.find(person => person.id === 'dafydd-trachwyll').portrait, '');
 
   const localDelwenMarriage = origin.partnerships.find(partnership => partnership.id === 'marriage-wynfor-delwen');
@@ -40407,7 +40414,7 @@ test('bildet Clan Todbrand vollständig vom Gründerpaar bis zur Generation von 
   assert.equal(new Set(family.parentages.map(parentage => parentage.id)).size, 24);
   assert.equal(family.cadetBranches.length, 9);
   assert.equal(family.timeJumps.length, 1);
-  assert.equal(family.extensions.sourceRevision, 3);
+  assert.equal(family.extensions.sourceRevision, 4);
   assert.equal(family.extensions.blankFamily, false);
   assert.equal(family.view.limitGenerations, false);
   assert.equal(family.lineage.founderPartnershipId, 'marriage-nordal-olfreya-todbrand');
@@ -41443,7 +41450,7 @@ test('migriert den alten Hella-Ysmal-Zweig auf den frauenpriorisierten Morga-Blo
   });
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_KAMPFGEBORENE_FAMILY, stale);
-  assert.equal(upgraded.extensions.sourceRevision, 5);
+  assert.equal(upgraded.extensions.sourceRevision, HOUSE_KAMPFGEBORENE_FAMILY.extensions.sourceRevision);
   assert.equal(
     upgraded.parentages.some(parentage => parentage.id === 'kampfgeborene-parentage-ysmal-kampfgeborene'),
     false
@@ -42104,7 +42111,7 @@ test('ersetzt die vorbereitete Silberzungen-Leerakte kontrolliert durch den voll
 
 test('ersetzt beide vorbereiteten Trachwyll-Leerakten kontrolliert durch Herkunfts- und Ivarsfels-Linie', () => {
   [
-    [HOUSE_TRACHWYLL_TALFRONWYN_FAMILY, 63, 33, 12, 2, 3],
+    [HOUSE_TRACHWYLL_TALFRONWYN_FAMILY, 63, 33, 12, 2, 4],
     [HOUSE_TRACHWYLL_IVARSFELS_FAMILY, 15, 9, 2, 0, 2]
   ].forEach(([registered, personCount, parentageCount, branchCount, timeJumpCount, sourceRevision]) => {
     const stale = structuredClone(createFounderPlaceholderHouseFamily({
@@ -43682,8 +43689,8 @@ test('ersetzt die vorbereitete Kaltherz-Leerakte kontrolliert durch den Quellenb
   stale.extensions.sourceRevision = 1;
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_KALTHERZ_FAMILY, stale);
-  assert.equal(upgraded.extensions.sourceRevision, 4);
-  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: 4 });
+  assert.equal(upgraded.extensions.sourceRevision, HOUSE_KALTHERZ_FAMILY.extensions.sourceRevision);
+  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: HOUSE_KALTHERZ_FAMILY.extensions.sourceRevision });
   assert.equal(upgraded.extensions.blankFamily, false);
   assert.equal(upgraded.persons.length, 55);
   assert.equal(upgraded.persons.some(entry => entry.id === 'haus-kaltherz-gruender'), false);
@@ -43858,8 +43865,8 @@ test('ersetzt die vorbereitete Feuerherz-Leerakte kontrolliert durch den Quellen
   stale.extensions.sourceRevision = 1;
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_FEUERHERZ_FAMILY, stale);
-  assert.equal(upgraded.extensions.sourceRevision, 2);
-  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: 2 });
+  assert.equal(upgraded.extensions.sourceRevision, HOUSE_FEUERHERZ_FAMILY.extensions.sourceRevision);
+  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: HOUSE_FEUERHERZ_FAMILY.extensions.sourceRevision });
   assert.equal(upgraded.extensions.blankFamily, false);
   assert.equal(upgraded.persons.length, 49);
   assert.equal(upgraded.persons.some(entry => entry.id === 'haus-feuerherz-gruender'), false);
@@ -51437,7 +51444,7 @@ test('modelliert Mac Ard Cumhaill mit sieben Quellenlücken und der vollständig
   assert.equal(family.document.houseProfile.seat, 'Dun Athar');
   assert.equal(family.lineage.founderPartnershipId, 'marriage-fionnbarr-gormlaith');
   assert.equal(family.view.focusPersonId, 'fionnbarr-cumhail');
-  assert.equal(family.extensions.sourceRevision, 10);
+  assert.equal(family.extensions.sourceRevision, 11);
   assert.deepEqual(family.extensions.registryManagedViewFields, ['focusPersonId']);
   family.persons.forEach(personRecord => {
     assert.ok(reachableNodeIds.has(personRecord.id), `${personRecord.id} muss in der Cumhaill-Vollansicht erreichbar sein.`);
@@ -51520,7 +51527,7 @@ test('modelliert Mac Ard Cumhaill mit sieben Quellenlücken und der vollständig
     upgraded.persons.find(entry => entry.id === 'iarlaith-gallchobhair').portrait,
     HOUSE_FIR_AN_GALLCHOBHAIR_PORTRAITS['iarlaith-gallchobhair']
   );
-  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 7, toRevision: 10 });
+  assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 7, toRevision: HOUSE_MAC_ARD_CUMHAILL_FAMILY.extensions.sourceRevision });
 });
 
 test('verknotet Sinna, Donnchadh und den frühen Senan mit ihren Kadettenhäusern', () => {
@@ -53041,7 +53048,7 @@ test('liefert Iomrach- und Somhairle-Porträts lokal und verwendet Gegenaktenbil
       localIds: HOUSE_IOMRACH_LOCAL_PORTRAIT_IDS,
       reusedIds: HOUSE_IOMRACH_REUSED_PORTRAIT_IDS,
       portraits: HOUSE_IOMRACH_PORTRAITS,
-      picturedCount: 15
+      picturedCount: 16
     },
     {
       family: HOUSE_SIDHE_SOMHAIRLE_FAMILY,
@@ -53049,7 +53056,7 @@ test('liefert Iomrach- und Somhairle-Porträts lokal und verwendet Gegenaktenbil
       localIds: HOUSE_SIDHE_SOMHAIRLE_LOCAL_PORTRAIT_IDS,
       reusedIds: HOUSE_SIDHE_SOMHAIRLE_REUSED_PORTRAIT_IDS,
       portraits: HOUSE_SIDHE_SOMHAIRLE_PORTRAITS,
-      picturedCount: 27
+      picturedCount: 30
     }
   ];
 
@@ -53095,8 +53102,8 @@ test('ersetzt die beiden vorbereiteten Broch-an-Clais-Akten kontrolliert durch d
     stale.extensions.sourceRevision = 1;
     stale.extensions.preparedMainLine = true;
     const upgraded = resolveRegisteredFamilyUpgrade(registeredFamily, stale);
-    assert.equal(upgraded.extensions.sourceRevision, 2);
-    assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: 2 });
+    assert.equal(upgraded.extensions.sourceRevision, registeredFamily.extensions.sourceRevision);
+    assert.deepEqual(upgraded.extensions.registryUpgrade, { fromRevision: 1, toRevision: registeredFamily.extensions.sourceRevision });
     assert.equal(upgraded.extensions.preparedMainLine, false);
     assert.equal(upgraded.persons.some(person => person.id.endsWith('-gruender')), false);
     assert.equal(upgraded.persons.some(person => person.id.endsWith('-gruenderin')), false);

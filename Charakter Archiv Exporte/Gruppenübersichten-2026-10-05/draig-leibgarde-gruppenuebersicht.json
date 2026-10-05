@@ -1,0 +1,529 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-05T17:55:44.291Z",
+  "sourceNote": "Eingebaute Draig-Leibgarde mit Gruppenübersicht; bestehende Hierarchie und Kommentar-IDs erhalten. Nur lokal vorbereitet.",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Haus Draig",
+      "tab": "Gruppen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Haus Draig"
+      ],
+      "iconUrl": "../IconOrdner/ReiterIcons/Weltpfade/gruppen.png",
+      "desc": "Die Gemeinschaften und bewaffneten Dienste des Hauses Draig.",
+      "nodeId": "node:gruppen:cenyr/celtigerns-wacht/haus-draig"
+    },
+    "entry": {
+      "id": "draig-leibgarde",
+      "title": "Draig Leibgarde",
+      "subtitle": "Die persönliche Wacht des Hauses Draig",
+      "type": "Leibgarde · Hausmacht",
+      "category": "Cenyr · Celtigerns Wacht · Haus Draig",
+      "image": "./public/assets/draig-leibgarde/steffan-burghof-v1.png",
+      "symbol": "./public/assets/draig-leibgarde/drachengarde-wappen-elfenbein-v1.png",
+      "icon": "⚔",
+      "stamp": "HAUS DRAIG · LEIBGARDE",
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "pages": [
+        {
+          "pageTitle": "I. — Dem Haus anvertraut",
+          "image": "./public/assets/draig-leibgarde/steffan-burghof-v1.png",
+          "imageWidth": 38,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "<p>Wer im inneren Hof von Castell Draig an den aufgereihten Gardisten vorübergeht, sieht nur einen kleinen Teil der Macht des Hauses. Hinter den dunklen Rüstungen und roten Wappenröcken stehen Männer, denen weit mehr als ein Mauerabschnitt anvertraut ist: die Türen zu den Kammern, die Ruhe des Hofes und das Leben jener, die unter dem Schutz der Draig stehen.</p><p>Die <strong>Draig Leibgarde</strong> bildet den engsten bewaffneten Dienst des Hauses. Ihr angestammter Wachbereich ist der <strong>Bergfried mit den Wohn- und Herrschaftsräumen</strong>. Während die übrigen Haustruppen die weiter gefassten Aufgaben der Hausmacht erfüllen, dient die Leibgarde dort, wo das Leben der Familie und ihres Haushalts stattfindet.</p><p>Ihre besondere Stellung erwächst aus dieser Nähe. Ein sicherer Waffenarm gehört zum Dienst, doch ebenso zählen Verschwiegenheit, Aufmerksamkeit und die Gewissheit, sich auch in einer langen, ereignislosen Nacht auf den Mann vor der Tür verlassen zu können. <strong>Vertrauen, gute Schulung und Verlässlichkeit</strong> entscheiden über die Auswahl.</p><p>Meist umfasst die Leibgarde <strong>weniger als fünfzig ausgewählte Waffenknechte und wenige Ritter</strong>. Sie werden aus der Hausmacht handverlesen. Wie die Hausmacht selbst ist auch die Leibgarde Bestandteil des Hauses Draig; die Hausmacht umfasst sämtliche Waffenknechte und Streitkräfte, die dem Haus angehören.</p>",
+          "stats": [
+            [
+              "Zugehörigkeit",
+              "Haus Draig · Teil der Hausmacht"
+            ],
+            [
+              "Angestammter Dienst",
+              "Bergfried von Castell Draig"
+            ],
+            [
+              "Stärke",
+              "Meist unter 50 Waffenknechte und Ritter"
+            ],
+            [
+              "Kommandant der Hausmacht",
+              "Steffan Draig"
+            ]
+          ],
+          "commentSequence": [],
+          "commentThreadKey": "0"
+        },
+        {
+          "pageTitle": "II. — Hinter den Türen des Bergfrieds",
+          "image": "./public/assets/draig-leibgarde/bergfried-gang-v1.png",
+          "imageWidth": 38,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "<p>Ein stiller Gang kann ebenso viel Wachsamkeit verlangen wie ein Burgtor. Vor den Gemächern der Familie, an den Zugängen zum Thronsaal und zwischen den Räumen des Haushalts versieht die Leibgarde ihren täglichen Dienst. Sie kennt die Wege, die vertrauten Gesichter und jene Türen, an denen ein Besucher warten muss.</p><p>Ihr Auftrag umfasst den <strong>Schutz der Behausung und ihrer Bewohner</strong>. Die Burg ist für sie zugleich Dienstort und anvertrautes Haus: Kammern, Säle und innere Zugänge bilden den Mittelpunkt ihrer Wacht. Ob eine Audienz bevorsteht oder die letzten Lichter verlöschen, die Verantwortung bleibt dieselbe.</p><p>Besondere Fürsorge gilt denjenigen, die selbst keine Waffen führen. <strong>Prinzessinnen und junge Prinzen</strong> gehören ebenso zu den Schutzbefohlenen wie Angehörige der Familie, Ratsmitglieder, Beamte, Zofen und weitere Bedienstete. Wer im persönlichen Dienst der Draig steht, soll seinem Tagwerk nachgehen können, ohne bei jeder fremden Stimme im Gang nach einer Waffe greifen zu müssen.</p><p>Ein guter Leibgardist versteht deshalb auch, wann Zurückhaltung geboten ist. Er wahrt Abstand, ohne unaufmerksam zu werden, und tritt vor, sobald sein Schutz gebraucht wird. Die Würde des Hauses zeigt sich auch darin, wie ruhig seine Wache ihren Dienst versieht.</p>",
+          "stats": [],
+          "commentSequence": [],
+          "commentThreadKey": "1"
+        },
+        {
+          "pageTitle": "III. — Mit dem Haus auf dem Weg",
+          "image": "./public/assets/draig-leibgarde/gefolge-v1.png",
+          "imageWidth": 38,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "<p>Wenn die Tore sich für eine Reise öffnen, endet der Dienst der Leibgarde nicht an der Zugbrücke. Aus den Wachen der Kammern wird ein <strong>persönliches Geleit</strong>: auf dem Weg an einen fremden Hof, bei einer Reise ins Ausland oder bei einem Ausritt hinaus in die Wildnis.</p><p>Zwischen Sattelzeug und Reisegepäck bleiben die vertrauten Gesichter nahe. Waffenknechte wie <strong>Llywelyn Coeddu, Hywel Craigddu und Mathon Curiad</strong> begleiten die ihnen Anvertrauten, halten beim Aufbruch die Wege frei und übernehmen auch fern des Bergfrieds die Wacht. Ihr Dienst folgt den Menschen des Hauses.</p><p>Im Krieg tritt ein Teil der Leibgarde als <strong>Garde des ranghöchsten oder kommandierenden Familienmitglieds</strong> ins Feld. Sie schützt dessen Person und Stellung und vertritt an seiner Seite sichtbar die Gegenwart des Hauses Draig auf dem Schlachtfeld.</p><p>Auch dort bleibt sie in die Hausmacht eingebunden. Nicht jeder Gardist zieht mit dem Feldgefolge: Der Schutz des zurückbleibenden Haushalts und der Dienst an den Kammern bestehen fort. Zwischen Burg und Feldlager trägt die Leibgarde dieselbe Verantwortung weiter.</p>",
+          "stats": [],
+          "commentSequence": [],
+          "commentThreadKey": "2"
+        },
+        {
+          "pageTitle": "IV. — Dienstordnung & Namen",
+          "hierarchyPage": true,
+          "image": "./public/assets/draig-leibgarde/waffenkammer-v1.png",
+          "hierarchy": {
+            "layoutMode": "vertical",
+            "treeDisplayMode": "tabs",
+            "cardFontScale": 100,
+            "portraitScale": 85,
+            "chartScale": 75,
+            "eyebrow": "Haus Draig",
+            "subtitle": "Leibgarde · Dienstordnung",
+            "centerLabel": "Draig Leibgarde",
+            "emblem": "./public/assets/draig-leibgarde/drachengarde-wappen-elfenbein-v1.png",
+            "sideImage": "./public/assets/draig-leibgarde/waffenkammer-v1.png",
+            "organizationTitle": "Die Wacht des Hauses",
+            "motto": "An den Türen. Auf den Wegen. An der Seite des Hauses.",
+            "description": "<p>Unter Steffan Draig als Kommandant der Hausmacht führt der Hauptmann den Dienst der Leibgarde. Darunter stehen die Leutnante, die Ritter und die Waffenknechte; Rekruten, Knappen und Pagen schließen die Übersicht ab.</p><p>Neben den Dienenden stehen die Namen jener, deren Wacht geendet hat: im Ruhestand oder im Tod.</p>",
+            "detailsTitle": "Zugehörigkeit & Dienst",
+            "details": [
+              {
+                "icon": "⚑",
+                "label": "Haus",
+                "value": "Draig"
+              },
+              {
+                "icon": "⌂",
+                "label": "Sitz",
+                "value": "Castell Draig · Bergfried"
+              },
+              {
+                "icon": "⚔",
+                "label": "Verband",
+                "value": "Teil der Hausmacht"
+              },
+              {
+                "icon": "♜",
+                "label": "Stärke",
+                "value": "Meist unter fünfzig Mann"
+              }
+            ],
+            "quote": "",
+            "chartTitle": "Die Leibgarde & ihre Ehemaligen",
+            "chartIntro": "Die beiden Waffenknechtreihen gehören demselben Rang an. Freie Plätze halten Raum für weitere Namen; sie stellen keine festgelegte Sollstärke dar. Pensionierte und Verstorbene stehen außerhalb der aktiven Befehlsfolge.",
+            "trees": [
+              {
+                "id": "draig-leibgarde-aktiv",
+                "label": "Draig Leibgarde",
+                "levels": [
+                  {
+                    "label": "Kommandant der Hausmacht",
+                    "nodes": [
+                      {
+                        "title": "Steffan Draig",
+                        "subtitle": "Kommandant der Hausmacht",
+                        "portrait": "../Stammbäume/assets/images/portraits/haus-draig/steffan-draig.jpg",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Hauptmann der Leibgarde",
+                    "nodes": [
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Leutnante",
+                    "nodes": [
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Ritter der Leibgarde",
+                    "nodes": [
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Waffenknechte · erste Reihe",
+                    "nodes": [
+                      {
+                        "title": "Llywelyn Coeddu",
+                        "subtitle": "Leibgardist · Waffenknecht",
+                        "portrait": "../Stammbäume/assets/images/portraits/haus-coeddu/llywelyn-coeddu.png",
+                        "text": ""
+                      },
+                      {
+                        "title": "Hywel Craigddu",
+                        "subtitle": "Leibgardist · Waffenknecht",
+                        "portrait": "../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png",
+                        "text": ""
+                      },
+                      {
+                        "title": "Mathon Curiad",
+                        "subtitle": "Leibgardist · Waffenknecht",
+                        "portrait": "./public/assets/draig-leibgarde/mathon-curiad.png",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Waffenknechte · zweite Reihe",
+                    "nodes": [
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Rekruten",
+                    "nodes": [
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Knappen",
+                    "nodes": [
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Pagen",
+                    "nodes": [
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "draig-leibgarde-ehemalige",
+                "label": "Ehemalige Leibgardisten",
+                "levels": [
+                  {
+                    "label": "Pensioniert",
+                    "nodes": [
+                      {
+                        "title": "Brenric Coeddu",
+                        "subtitle": "Waffenknecht im Ruhestand",
+                        "portrait": "",
+                        "text": "Llywelyns Vater. Veteran des Großen Krieges; diente unter Sir Maredudd."
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Verstorben",
+                    "nodes": [
+                      {
+                        "title": "Idwalladr Arwydd",
+                        "subtitle": "1653–1720",
+                        "portrait": "../Stammbäume/assets/images/portraits/haus-arwydd/idwalladr-arwydd.jpg",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      },
+                      {
+                        "title": "Freier Platz",
+                        "subtitle": "",
+                        "portrait": "",
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "footerNote": "Waffenknechte und Ritter werden aus der Hausmacht ausgewählt. Ihr persönlicher Dienst gilt dem Haus Draig."
+          },
+          "commentSequence": [],
+          "commentThreadKey": "3"
+        },
+        {
+          "pageTitle": "Gruppenübersicht",
+          "landingPage": true,
+          "landing": {
+            "bannerImage": "./public/assets/draig-leibgarde/drachengarde-wappen-elfenbein-v1.png",
+            "title": "Draig Leibgarde",
+            "subtitle": "Die persönliche Wacht des Hauses Draig",
+            "memberTitle": "Aktuelle Gruppe",
+            "questTitle": "Aufgaben & Quests",
+            "notesTitle": "Notizen",
+            "eventsTitle": "Ereignisse",
+            "mapTitle": "Aktuelle Karte",
+            "mapKartenId": "",
+            "mapImage": "",
+            "mapDisplay": "embed",
+            "mapLink": "",
+            "mapButtonLabel": "Karte öffnen",
+            "infoTitle": "Informationen",
+            "members": [],
+            "quests": [],
+            "notes": [],
+            "events": [],
+            "info": [],
+            "group": {
+              "version": 2,
+              "location": "",
+              "activity": "",
+              "status": "",
+              "supplies": "",
+              "threadId": "",
+              "sceneThreads": [],
+              "members": [],
+              "guests": [],
+              "presets": [],
+              "treasury": {
+                "openingCopper": null,
+                "entries": []
+              },
+              "inventory": [],
+              "icons": {
+                "roster": "",
+                "scene": "",
+                "quests": "",
+                "inventory": "",
+                "notes": "",
+                "map": "",
+                "location": "",
+                "status": "",
+                "activity": "",
+                "supplies": "",
+                "treasury": ""
+              }
+            }
+          },
+          "stats": [],
+          "commentDivider": false,
+          "commentSequence": [],
+          "commentThreadKey": "group-overview"
+        }
+      ]
+    }
+  }
+}

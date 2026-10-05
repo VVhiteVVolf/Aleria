@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -148,7 +149,7 @@ const CAER_ASGWRN_HOUSES = Object.freeze([
   house('house-morfil', "Haus Morfil O'Talsarn", HOUSE_EMBLEMS.morfil)
 ]);
 
-export const HOUSE_LYFANT_DERWYDDION_FAMILY = Object.freeze({
+export const HOUSE_LYFANT_DERWYDDION_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -391,9 +392,9 @@ export const HOUSE_LYFANT_DERWYDDION_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Vollständige Derwyddion-Herkunftsakte nach der Lyfant-Quelle. Der Hausknoten und der einzige Zeitsprung folgen seriell auf Conan und Ffion. Cledwyn und Cadwgan erhalten je einen direkten Übergang nach Caer Asgwrn; ihre Kinder werden nur dort fortgeführt. Meredydd, Main, Deiniol, Frewi sowie Ceri und Cadi bleiben ausschließlich in Derwyddion, weil dieser Zweig 1720 erlischt. Frewis Ehe und Nachkommen werden im Gegenstammbaum Gwaedlyd fortgeführt.'
   }
-});
+}));
 
-export const HOUSE_LYFANT_CAER_ASGWRN_FAMILY = Object.freeze({
+export const HOUSE_LYFANT_CAER_ASGWRN_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -529,7 +530,7 @@ export const HOUSE_LYFANT_CAER_ASGWRN_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Getrennte Caer-Asgwrn-Nachfolgeakte mit Cledwyn als primärem Linienführer. Cledwyn und Cadwgan erscheinen erneut als genealogische Anker; nur ihre Kinder und Kindeskinder werden hier fortgeführt. Meredydd, Main, Deiniol, Frewi, Ceri und Cadi verbleiben ausschließlich in Derwyddion. Die Kinder der wegverheirateten Eilun werden nur im Morfil-Stammbaum geführt. Bethans Ehe mit Pryderi verweist auf die neue Caer-Deheuol-Akte, in der ihre Walwrs-Kinder ausschließlich fortgeführt werden.'
   }
-});
+}));
 
 export const LYFANT_HOUSE_FAMILIES = Object.freeze([
   HOUSE_LYFANT_DERWYDDION_FAMILY,

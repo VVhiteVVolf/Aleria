@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -96,8 +97,9 @@ function personForLine(lineHouseId, id, name, sex, birth = '????', death = '', o
     tags: options.tags || [],
     notes: options.notes || '',
     extensions: {
-      ...(options.extensions || {}),
-      registryManagedFields: SOURCE_MANAGED_PERSON_FIELDS
+      registryManagedSourceRevision: 2,
+      registryManagedFields: SOURCE_MANAGED_PERSON_FIELDS,
+      ...options.extensions
     }
   });
 }
@@ -187,7 +189,7 @@ const ORIGIN_PARTNERS = Object.freeze({
   malltwyn: ['malltwyn-arfordir', 'maldwyn-morgryn']
 });
 
-export const HOUSE_ARFORDIR_SERENLYN_FAMILY = Object.freeze({
+export const HOUSE_ARFORDIR_SERENLYN_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -327,7 +329,8 @@ export const HOUSE_ARFORDIR_SERENLYN_FAMILY = Object.freeze({
     serenlynPerson('eiddon-arfordir', 'Eiddon Arfordir', 'male', '1679', '1720'),
     serenlynPerson('jenita-blodeuwedd', 'Jenita Blodeuwedd', 'female', '1680', '1720', {
       houseId: 'house-blodeuwedd',
-      familyRole: 'married'
+      familyRole: 'married',
+      extensions: { registryManagedSourceRevision: 3, registryManagedFields: ['portrait'] }
     }),
     serenlynPerson('malltwyn-arfordir', 'Malltwyn Arfordir', 'female', '1698', '1720', {
       title: 'Wegverheiratet an Haus Morgryn',
@@ -437,13 +440,13 @@ export const HOUSE_ARFORDIR_SERENLYN_FAMILY = Object.freeze({
     blankFamily: false,
     originLine: true,
     successorFamilyId: 'haus-arfordir-aberdail',
-    sourceRevision: 2,
+    sourceRevision: 3,
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],
     registryManagedLineageFields: ['founderPartnershipId', 'houseId'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Getrennte Serenlyn-Herkunftsakte nach der Arfordir-Tabelle. Das alte Haus wird seinem vennyrianischen Grafenrang entsprechend geführt. Ysbryd und Tudurwen tragen Hausknoten und seriellen Zeitsprung; alle historischen Nebenäste und Wegverheiratungen bleiben sichtbar. Leodegrance und Luc erscheinen hier als Brüder unter Thalen und Aignéis, ihre Kinder dagegen ausschließlich in der Aberdail-Akte.'
   }
-});
+}));
 
 const ABERDAIL_PARTNERS = Object.freeze({
   leodegrance: ['leodegrance-arfordir', 'cryl-trachwyll'],
@@ -454,7 +457,7 @@ const ABERDAIL_PARTNERS = Object.freeze({
   morgana: ['yale-lyfant', 'morgana-arfordir']
 });
 
-export const HOUSE_ARFORDIR_ABERDAIL_FAMILY = Object.freeze({
+export const HOUSE_ARFORDIR_ABERDAIL_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -581,7 +584,7 @@ export const HOUSE_ARFORDIR_ABERDAIL_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Aberdail-Akte mit gemeinsamem Serenlyn-Herkunftsknoten über Leodegrance und Luc. Micah und Madoc sind Kinder Leodegrances und Cryls; Meredithe und Morgana sind Kinder Lucs und Arianrhods. Heston und Reece folgen unter Micah und Meggan, Huw und Roderick unter Madoc und Glesni. Die in fremden Häusern fortgeführten Kinder Meredithes und Morganas werden hier bewusst nicht gedoppelt.'
   }
-});
+}));
 
 export const ARFORDIR_HOUSE_FAMILIES = Object.freeze([
   HOUSE_ARFORDIR_SERENLYN_FAMILY,

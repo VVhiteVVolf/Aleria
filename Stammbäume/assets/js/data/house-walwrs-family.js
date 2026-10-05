@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -171,7 +172,7 @@ const ORIGIN_PARTNERS = Object.freeze({
   einir: ['einir-walwrs', 'gwindor-bochdew']
 });
 
-export const HOUSE_WALWRS_TRAETH_FAMILY = Object.freeze({
+export const HOUSE_WALWRS_TRAETH_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -380,7 +381,7 @@ export const HOUSE_WALWRS_TRAETH_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Vollständige Traeth-Herkunftsakte nach der Walwrs-Tabelle und ihrer Stammbaumgrafik. Owain und Lleucu tragen Wappen und genau einen seriellen Zeitsprung. Taran/Nesta führen nur zu Meinir; Llaesgwynyn/Meiriona nur zu Sieffre und Gwendolen. Kinder der wegverheirateten Cerridwyn, Gwendolen, Lleucu und Zenna verbleiben ausschließlich in Blodyn, Gwaedlyd, Draenog und Dianc. Rheidwn bleibt als Sohn Owains und Zaras sichtbar; seine Kinder und Enkel werden allein in der Caer-Deheuol-Akte fortgeführt.'
   }
-});
+}));
 
 const TARGET_PARTNERS = Object.freeze({
   rheidwn: ['rheidwn-walwrs', 'rhosyn-gwenyen'],
@@ -389,7 +390,7 @@ const TARGET_PARTNERS = Object.freeze({
   pryderi: ['bethan-lyfant', 'pryderi-walwrs']
 });
 
-export const HOUSE_WALWRS_CAER_DEHEUOL_FAMILY = Object.freeze({
+export const HOUSE_WALWRS_CAER_DEHEUOL_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -486,7 +487,7 @@ export const HOUSE_WALWRS_CAER_DEHEUOL_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Getrennte Caer-Deheuol-Nachfolgeakte nach dem Blaidd- und Mochdaer-Muster. Rheidwn und Rhosyn bilden das neue genealogische Gründerpaar; Hopcyn, Tathal und Pryderi sind ausschließlich ihre Kinder. Unig/Trefor, Tawy/Alys und Tud/Alaw bleiben jeweils am richtigen Elternpaar. Zenna, Einir und die erloschenen älteren Seitenzweige gehören nicht zu Rheidwns neuer Linie und verbleiben daher ausschließlich in der vollständigen Herkunftsakte.'
   }
-});
+}));
 
 export const WALWRS_HOUSE_FAMILIES = Object.freeze([
   HOUSE_WALWRS_TRAETH_FAMILY,

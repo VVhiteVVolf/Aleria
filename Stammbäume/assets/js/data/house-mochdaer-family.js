@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createCadetHouseBranch,
@@ -114,7 +115,7 @@ const CERRIGARTH_HOUSES = Object.freeze([
   house('house-creyr', 'Haus Créyr', HOUSE_EMBLEMS.creyr)
 ]);
 
-export const HOUSE_MOCHDAER_GWYLIAU_FAMILY = Object.freeze({
+export const HOUSE_MOCHDAER_GWYLIAU_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -261,9 +262,9 @@ export const HOUSE_MOCHDAER_GWYLIAU_FAMILY = Object.freeze({
     sourceRevision: 2,
     sourceNote: 'Vennyrianische Herkunftsakte nach der bereitgestellten Mochdaer-Tabelle. Der Auslassungspunkt der Quelle wird als absoluter serieller Zeitsprung direkt nach dem Gwyliau-Hauswappen und vor Owain, Armella und Marmaduke geführt. Aethlem ist hier Sohn von Drudwas und Mallt; seine Ehe mit Lunet ist dieselbe wie in Cerrigarth und führt geradlinig in den gemeinsamen Kadettenhausknoten. Seine Nachkommen sind bewusst nicht Teil dieser Akte. Slavis und Lindseys vollständiger verbliebener Zweig endet 1720 mit Idris, Ceridwen und Meggan sowie den Enkeln Arian und Afon.'
   }
-});
+}));
 
-export const HOUSE_MOCHDAER_CERRIGARTH_FAMILY = Object.freeze({
+export const HOUSE_MOCHDAER_CERRIGARTH_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -354,4 +355,4 @@ export const HOUSE_MOCHDAER_CERRIGARTH_FAMILY = Object.freeze({
     sourceRevision: 3,
     sourceNote: 'Eigenständige Cerrigarth-Akte ab Aethlem Mochdaer. Aethlem verwendet dieselbe Weltidentität wie in Gwyliau; seine Ehe mit Lunet Blaidd, ihre drei Kinder und ausschließlich Micahs Nachkommen werden nur hier geführt. Vannas Ehe mit Murvin verweist auf die ausgearbeitete Aberdail-Akte, in der beide als Eltern Delwyns erneut erscheinen. Catrins Ehe mit Tathal verweist auf die neue Caer-Deheuol-Akte, in der ihre Walwrs-Kinder ausschließlich fortgeführt werden. Dadurch entstehen beim Wechsel zwischen den Akten keine gedoppelten Kinder.'
   }
-});
+}));

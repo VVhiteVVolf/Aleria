@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -233,7 +234,7 @@ function timeJump(id, parentPartnershipId, childIds) {
   };
 }
 
-export const HOUSE_TODBRAND_FAMILY = Object.freeze({
+export const HOUSE_TODBRAND_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -493,4 +494,4 @@ export const HOUSE_TODBRAND_FAMILY = Object.freeze({
     ],
     registryManagedRecordFields: ['folderPath']
   }
-});
+}));

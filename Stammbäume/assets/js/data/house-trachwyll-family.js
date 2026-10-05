@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -240,7 +241,7 @@ const IVARSFELS_PARTNERS = Object.freeze({
   gwilym: ['gwilym-trachwyll', 'ingrid-grendel']
 });
 
-export const HOUSE_TRACHWYLL_TALFRONWYN_FAMILY = Object.freeze({
+export const HOUSE_TRACHWYLL_TALFRONWYN_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -551,9 +552,9 @@ export const HOUSE_TRACHWYLL_TALFRONWYN_FAMILY = Object.freeze({
     registryManagedRecordFields: ['folderPath'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings']
   }
-});
+}));
 
-export const HOUSE_TRACHWYLL_IVARSFELS_FAMILY = Object.freeze({
+export const HOUSE_TRACHWYLL_IVARSFELS_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -676,7 +677,7 @@ export const HOUSE_TRACHWYLL_IVARSFELS_FAMILY = Object.freeze({
     registryManagedRecordFields: ['folderPath'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings']
   }
-});
+}));
 
 export const HOUSE_TRACHWYLL_FAMILIES = Object.freeze([
   HOUSE_TRACHWYLL_TALFRONWYN_FAMILY,

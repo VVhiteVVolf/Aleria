@@ -1,6 +1,6 @@
 function formatLandingDate(value) {
   const date = value ? new Date(value) : null;
-  if (!date || Number.isNaN(date.getTime())) return 'Gerade eben';
+  if (!date || Number.isNaN(date.getTime())) return 'Datum offen';
   return date.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
 }
 
@@ -40,6 +40,7 @@ function buildLandingMembers(data) {
     <section class="landing-panel landing-members-panel">
       <div class="landing-panel-head"><h3>${escapeHtml(data.memberTitle)}</h3><span>${data.members.length}</span></div>
       <div class="landing-member-grid">
+        ${data.members.length ? '' : '<p class="group-empty">Noch keine Mitglieder eingetragen.</p>'}
         ${data.members.map(member => `
           <article class="landing-member-card">
             <div class="landing-member-media">
@@ -75,12 +76,14 @@ function buildLandingQuests(data) {
         ${buildLandingQuestFilters()}
       </div>
       <div class="landing-quest-list">
+        ${data.quests.length ? '' : '<p class="group-empty">Noch keine aktiven Aufgaben oder Quests.</p>'}
         ${data.quests.map(quest => `
           <article class="landing-quest-card" data-quest-status="${escapeHtml(quest.status)}" data-quest-id="${escapeHtml(quest.id)}">
             ${buildLandingImage(quest.image, quest.title, 'landing-quest-icon', '*')}
             <div class="landing-quest-main">
               <strong>${escapeHtml(quest.title)}</strong>
               <p>${landingParagraph(quest.text)}</p>
+              <div class="group-quest-meta"><span>${escapeHtml(quest.kind)}</span>${quest.ownerMemberId ? `<span>Zuständig: ${escapeHtml(data.members.find(member => member.id === quest.ownerMemberId)?.name || 'Nicht mehr in der Gruppe')}</span>` : ''}${quest.dueDate ? `<span>Fällig: ${escapeHtml(quest.dueDate)}</span>` : ''}${quest.moduleId ? `<button type="button" data-landing-action="open-quest-module" data-module-id="${escapeHtml(quest.moduleId)}">Quest öffnen ↗</button>` : ''}</div>
               <div class="landing-progress"><i style="width:${quest.progress}%"></i></div>
             </div>
             <div class="landing-item-menu-wrap">
@@ -94,7 +97,7 @@ function buildLandingQuests(data) {
             </div>
           </article>`).join('')}
       </div>
-      <button class="landing-wide-action" type="button" data-landing-action="edit-quest">+ Quest anlegen</button>
+      <button class="landing-wide-action" type="button" data-landing-action="edit-quest">+ Aufgabe / Quest anlegen</button>
     </section>`;
 }
 
@@ -107,6 +110,7 @@ function buildLandingNotes(data) {
         <button type="button" data-landing-action="edit-note">+</button>
       </div>
       <div class="landing-note-list" data-member-options="${escapeHtml(memberOptions)}">
+        ${data.notes.length ? '' : '<p class="group-empty">Platz für Absprachen, Beobachtungen und Reiseberichte.</p>'}
         ${data.notes.map(note => `
           <article class="landing-note-card" data-note-id="${escapeHtml(note.id)}">
             ${buildLandingIcon(note.icon, note.title, 'landing-note-icon')}
@@ -150,13 +154,14 @@ function buildLandingMap(data) {
   const kartenMap = data.mapKartenId && typeof KartoMapRegistry !== 'undefined' ? KartoMapRegistry.byId(data.mapKartenId) : null;
   if (kartenMap) {
     const previewSrc = kartenMap.images?.normal ? `../Karten/${kartenMap.images.normal}` : '';
-    const preview = buildLandingImage(previewSrc, kartenMap.title, 'landing-map-image', '*');
-    const href = `../Karten/${kartenMap.link}`;
+    const href = AleriaLandingModel.landingMapFrameSource(data.mapKartenId, KartoMapRegistry);
+    const frameSource = data.group ? `src="about:blank" data-landing-map-src="${escapeHtml(href)}"` : `src="${escapeHtml(href)}"`;
+    const preview = data.mapDisplay === 'embed' ? `<iframe class="landing-map-embed" ${frameSource} title="Interaktive Karte: ${escapeHtml(kartenMap.title)}" loading="lazy" allow="fullscreen" referrerpolicy="same-origin"></iframe>` : buildLandingImage(previewSrc, kartenMap.title, 'landing-map-image', '*');
     return `
       <section class="landing-panel landing-map-panel">
         <div class="landing-panel-head"><h3>${escapeHtml(data.mapTitle)}</h3></div>
-        <div class="landing-map-frame">${preview}</div>
-        <button class="landing-wide-action" type="button" data-landing-action="open-karten-map" data-map-link="${escapeHtml(href)}">${escapeHtml(data.mapButtonLabel || 'Karte oeffnen')}</button>
+        <div class="landing-map-frame${data.mapDisplay === 'embed' ? ' landing-map-frame-interactive' : ''}">${preview}</div>
+        <button class="landing-wide-action" type="button" data-landing-action="open-karten-map" data-map-link="${escapeHtml(href)}">${escapeHtml(data.mapButtonLabel || 'Karte groß öffnen')}</button>
       </section>`;
   }
   const image = buildLandingImage(data.mapImage, data.mapTitle, 'landing-map-image', '*');
@@ -208,30 +213,26 @@ function persistLandingCurrentEntry() {
   if (!currentEntry?.id) return false;
   const found = findCurrentSectionByEntryId(currentEntry.id);
   const section = found?.section || getPreferredEditorSection();
-  const entry = sanitizeModuleEntry(currentEntry);
-  const builtin = findBuiltinSectionByEntryId(entry.id);
-  if (builtin) {
-    _entryOverrides[entry.id] = entry;
-    unhideModuleEntry(entry.id);
-    setModuleSectionMove(entry.id, section);
-  } else {
-    removeCustomModuleById(entry.id);
-    upsertCustomModule(section, entry);
-  }
-  currentEntry = entry;
-  saveModuleStore();
+  currentEntry = persistExistingModuleEntry(currentEntry, section);
   return true;
 }
 
 function updateLandingPage(element, updater) {
   const page = getLandingMutablePage(element);
   if (!page) return;
+  if (page.landing?.group && !canEditModuleContent()) throw new Error('Bitte zuerst die Bearbeitung freischalten.');
   const data = sanitizeLandingData(page.landing || {});
   updater(data);
   page.landingPage = true;
   page.landing = sanitizeLandingData(data);
   persistLandingCurrentEntry();
   renderPage(getLandingPageIndexFromElement(element), 0);
+}
+
+function replaceGroupLandingData(element, entryId, next) {
+  if (currentEntry?.id !== entryId || !getLandingMutablePage(element)?.landing?.group) return false;
+  updateLandingPage(element, data => { Object.assign(data, sanitizeLandingData(next)); });
+  return true;
 }
 
 function ensureLandingEditorDialog() {
@@ -253,6 +254,14 @@ function ensureLandingEditorDialog() {
       </div>
     </div>`;
   document.body.appendChild(overlay);
+  overlay.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    event.stopPropagation();
+    closeLandingEditorDialog();
+  });
+  overlay.addEventListener('click', event => {
+    if (event.target === overlay) closeLandingEditorDialog();
+  });
   return overlay;
 }
 
@@ -264,12 +273,12 @@ function landingSettingsInput(label, field, value, type = 'text') {
     </label>`;
 }
 
-function landingSettingsIconInput(label, field, value) {
+function landingSettingsIconInput(label, field, value, scope = 'settings') {
   return `
     <label>
       <span>${escapeHtml(label)}</span>
       <div class="biography-ability-icon-field">
-        <input type="text" data-landing-settings-field="${escapeHtml(field)}" value="${escapeHtml(value || '')}">
+        <input type="text" data-landing-${scope}-field="${escapeHtml(field)}" value="${escapeHtml(value || '')}">
         <button type="button" class="biography-ability-icon-picker" data-landing-editor-action="pick-icon" title="Icon-Verzeichnis oeffnen" aria-label="Icon-Verzeichnis oeffnen">Icon</button>
       </div>
     </label>`;
@@ -278,7 +287,7 @@ function landingSettingsIconInput(label, field, value) {
 let _landingSettingsIconPickerTarget = null;
 
 function openLandingSettingsIconPicker(button) {
-  const target = button.closest('label')?.querySelector('[data-landing-settings-field]');
+  const target = button.closest('label')?.querySelector('[data-landing-settings-field], [data-landing-editor-field]');
   if (!target) return;
   _landingSettingsIconPickerTarget = target;
   if (typeof openIconDirectory === 'function') {
@@ -414,7 +423,7 @@ function buildLandingSettingsList(kind, items = [], buttonLabel = '+ Eintrag') {
 
 function buildLandingSettingsBody(data) {
   return `
-    <div class="landing-settings-root">
+    <div class="landing-settings-root" data-landing-base="${escapeHtml(JSON.stringify(data))}">
       <section class="landing-settings-section">
         <h4>Kopfbereich</h4>
         <div class="landing-settings-grid">
@@ -435,8 +444,8 @@ function buildLandingSettingsBody(data) {
         </div>
       </section>
       <section class="landing-settings-section">
-        <h4>Abenteurer</h4>
-        ${buildLandingSettingsList('member', data.members, '+ Abenteurer')}
+        <h4>${data.group ? 'Mitglieder aus der Hierarchie' : 'Abenteurer'}</h4>
+        ${data.group ? '<p>Namen, Rollen und Porträts werden aus der Hierarchie übernommen. Hier wählst du aus, wer aktuell mitkommt.</p><button type="button" data-landing-editor-action="open-group-editor" data-group-editor="select">+ Aus Hierarchie auswählen</button><button type="button" data-landing-editor-action="open-group-editor" data-group-editor="guest">+ Gast aus Charakterarchiv</button><button type="button" data-landing-editor-action="open-group-editor" data-group-editor="settings">Gruppenlage, Überschriften & Icons</button>' : buildLandingSettingsList('member', data.members, '+ Abenteurer')}
       </section>
       <section class="landing-settings-section">
         <h4>Quests</h4>
@@ -459,6 +468,7 @@ function buildLandingSettingsBody(data) {
               ${buildLandingKartenOptions(data.mapKartenId)}
             </select>
           </label>
+          ${landingSettingsSelect('Darstellung', 'mapDisplay', data.mapDisplay, [{ value: 'embed', label: 'Interaktive Karte (Iframe)' }, { value: 'image', label: 'Vorschaubild' }])}
           ${landingSettingsIconInput('Platzhalterbild (Fallback)', 'mapImage', data.mapImage)}
           ${landingSettingsInput('Klickziel / Modul-ID / Link (Fallback)', 'mapLink', data.mapLink)}
           ${landingSettingsInput('Buttontext', 'mapButtonLabel', data.mapButtonLabel)}
@@ -474,12 +484,14 @@ function buildLandingSettingsBody(data) {
 function closeLandingEditorDialog() {
   const overlay = document.getElementById('landing-editor-overlay');
   if (!overlay) return;
+  if (typeof deactivateDialog === 'function') deactivateDialog(overlay.id);
   overlay.classList.remove('active');
   overlay.classList.remove('settings-mode');
   overlay.removeAttribute('data-kind');
   overlay.removeAttribute('data-page-index');
   overlay.removeAttribute('data-item-id');
   overlay.querySelector('.landing-editor-body').innerHTML = '';
+  _landingSettingsIconPickerTarget = null;
 }
 
 function openLandingEditorDialog(element, kind, item = {}) {
@@ -491,7 +503,8 @@ function openLandingEditorDialog(element, kind, item = {}) {
   overlay.dataset.pageIndex = String(getLandingPageIndexFromElement(element));
   overlay.dataset.itemId = item.id || '';
   overlay.querySelector('#landing-editor-title').textContent = kind === 'quest' ? 'Quest bearbeiten' : 'Notiz bearbeiten';
-  const authorNames = data.members.map(member => member.name).filter(Boolean);
+  const members = data.group ? AleriaLandingModel.resolveGroupRoster(currentEntry, data.group, globalThis.getAvailableCommentCharacters?.() || []) : data.members;
+  const authorNames = members.map(member => member.name).filter(Boolean);
   const authorKnown = authorNames.includes(item.authorName || '');
   const authorOptions = [
     !authorKnown && item.authorName ? `<option value="${escapeHtml(item.authorName)}" selected>${escapeHtml(item.authorName)}</option>` : '',
@@ -499,7 +512,7 @@ function openLandingEditorDialog(element, kind, item = {}) {
   ].join('');
   body.innerHTML = kind === 'quest' ? `
     <label><span>Titel</span><input data-landing-editor-field="title" value="${escapeHtml(item.title || '')}"></label>
-    <label><span>Icon oder Bild-URL</span><input data-landing-editor-field="image" value="${escapeHtml(item.image || '')}"></label>
+    ${landingSettingsIconInput('Icon oder Bild-URL', 'image', item.image, 'editor')}
     <label><span>Art</span><input data-landing-editor-field="kind" value="${escapeHtml(item.kind || 'Quest')}"></label>
     <label><span>Status</span><select data-landing-editor-field="status">
       <option value="active"${item.status === 'active' ? ' selected' : ''}>Aktiv</option>
@@ -507,13 +520,17 @@ function openLandingEditorDialog(element, kind, item = {}) {
       <option value="failed"${item.status === 'failed' ? ' selected' : ''}>Fehlgeschlagen</option>
     </select></label>
     <label><span>Fortschritt</span><input type="number" min="0" max="100" data-landing-editor-field="progress" value="${escapeHtml(item.progress ?? 0)}"></label>
+    <label><span>Zuständiges Mitglied</span><select data-landing-editor-field="ownerMemberId"><option value="">Nicht zugewiesen</option>${members.map(member => `<option value="${escapeHtml(member.id)}"${member.id === item.ownerMemberId ? ' selected' : ''}>${escapeHtml(member.name)}</option>`).join('')}</select></label>
+    <label><span>Fällig (Aleria-Datum / Ereignis)</span><input data-landing-editor-field="dueDate" value="${escapeHtml(item.dueDate || '')}"></label>
+    <label><span>Verknüpftes Questmodul</span><select data-landing-editor-field="moduleId"><option value="">Keine Verknüpfung</option>${(globalThis.getAllSections?.() || []).flatMap(section => section.entries || []).filter(entry => entry.pages?.some(page => page.questFilePage)).map(entry => `<option value="${escapeHtml(entry.id)}"${entry.id === item.moduleId ? ' selected' : ''}>${escapeHtml(entry.title)}</option>`).join('')}</select></label>
     <label class="wide"><span>Text</span><textarea data-landing-editor-field="text">${escapeHtml(item.text || '')}</textarea></label>`
     : `
     <label><span>Titel</span><input data-landing-editor-field="title" value="${escapeHtml(item.title || '')}"></label>
-    <label><span>Icon oder Bild-URL</span><input data-landing-editor-field="icon" value="${escapeHtml(item.icon || '')}"></label>
+    ${landingSettingsIconInput('Icon oder Bild-URL', 'icon', item.icon, 'editor')}
     <label><span>Verfasser</span><select data-landing-editor-field="authorName">${authorOptions || `<option value="${escapeHtml(item.authorName || 'Erzaehler')}" selected>${escapeHtml(item.authorName || 'Erzaehler')}</option>`}</select></label>
     <label class="wide"><span>Text</span><textarea data-landing-editor-field="text">${escapeHtml(item.text || '')}</textarea></label>`;
   overlay.classList.add('active');
+  if (typeof activateDialog === 'function') activateDialog(overlay.id, { initialFocus: '.landing-editor-body input, .landing-editor-body select' });
   body.querySelector('input, textarea, select')?.focus();
 }
 
@@ -528,6 +545,7 @@ function openLandingSettingsDialog(element) {
   overlay.querySelector('#landing-editor-title').textContent = 'Landing Page bearbeiten';
   body.innerHTML = buildLandingSettingsBody(data);
   overlay.classList.add('active', 'settings-mode');
+  if (typeof activateDialog === 'function') activateDialog(overlay.id, { initialFocus: '.landing-editor-body input, .landing-editor-body select' });
   body.querySelector('input, textarea, select')?.focus();
 }
 
@@ -544,7 +562,10 @@ function collectLandingSettingsRows(root, kind, mapper) {
 }
 
 function collectLandingSettingsData(root) {
+  let base = {};
+  try { base = JSON.parse(root.dataset?.landingBase || '{}'); } catch { /* Legacy settings have no preserved state. */ }
   return sanitizeLandingData({
+    ...base,
     title: getLandingSettingsValue(root, 'title'),
     subtitle: getLandingSettingsValue(root, 'subtitle'),
     bannerImage: getLandingSettingsValue(root, 'bannerImage'),
@@ -554,11 +575,13 @@ function collectLandingSettingsData(root) {
     eventsTitle: getLandingSettingsValue(root, 'eventsTitle'),
     mapTitle: getLandingSettingsValue(root, 'mapTitle'),
     mapKartenId: getLandingSettingsValue(root, 'mapKartenId'),
+    mapDisplay: getLandingSettingsValue(root, 'mapDisplay'),
     mapImage: getLandingSettingsValue(root, 'mapImage'),
     mapLink: getLandingSettingsValue(root, 'mapLink'),
     mapButtonLabel: getLandingSettingsValue(root, 'mapButtonLabel'),
     infoTitle: getLandingSettingsValue(root, 'infoTitle'),
-    members: collectLandingSettingsRows(root, 'member', row => ({
+    members: base.group ? base.members : collectLandingSettingsRows(root, 'member', row => ({
+      ...(base.members || []).find(item => item.id === getLandingSettingsValue(row, 'id')),
       id: getLandingSettingsValue(row, 'id'),
       name: getLandingSettingsValue(row, 'name'),
       role: getLandingSettingsValue(row, 'role'),
@@ -569,6 +592,7 @@ function collectLandingSettingsData(root) {
       portrait: getLandingSettingsValue(row, 'portrait')
     })),
     quests: collectLandingSettingsRows(root, 'quest', row => ({
+      ...(base.quests || []).find(item => item.id === getLandingSettingsValue(row, 'id')),
       id: getLandingSettingsValue(row, 'id'),
       title: getLandingSettingsValue(row, 'title'),
       kind: getLandingSettingsValue(row, 'kind'),
@@ -583,7 +607,7 @@ function collectLandingSettingsData(root) {
       icon: getLandingSettingsValue(row, 'icon'),
       authorName: getLandingSettingsValue(row, 'authorName'),
       authorId: getLandingSettingsValue(row, 'authorId'),
-      createdAt: getLandingSettingsValue(row, 'createdAt') || new Date().toISOString(),
+      createdAt: getLandingSettingsValue(row, 'createdAt'),
       text: getLandingSettingsValue(row, 'text')
     })),
     events: collectLandingSettingsRows(root, 'event', row => ({
@@ -632,6 +656,19 @@ function saveLandingSettingsDialog(overlay) {
   closeLandingEditorDialog();
 }
 
+function openGroupEditorFromLandingSettings(button) {
+  const overlay = button.closest('#landing-editor-overlay');
+  const pageIndex = Number(overlay?.dataset.pageIndex || currentPage || 0);
+  const page = document.querySelector(`.group-landing[data-landing-page-index="${pageIndex}"]`);
+  if (!page) return;
+  // Keep edits already made in this dialog before changing editor views.
+  const next = collectLandingSettingsData(overlay.querySelector('.landing-settings-root'));
+  updateLandingPage(page, data => Object.assign(data, next));
+  closeLandingEditorDialog();
+  const current = document.querySelector(`.group-landing[data-landing-page-index="${pageIndex}"]`);
+  globalThis.AleriaGroupLanding?.edit(current, button.dataset.groupEditor);
+}
+
 function saveLandingEditorDialog() {
   const overlay = document.getElementById('landing-editor-overlay');
   if (!overlay?.classList.contains('active')) return;
@@ -647,13 +684,17 @@ function saveLandingEditorDialog() {
   updateLandingPage(landingPage, data => {
     if (kind === 'quest') {
       const raw = {
-        id: itemId,
+        ...data.quests.find(item => item.id === itemId),
+        id: itemId || makeLandingItemId('quest'),
         title: getLandingEditorField('title'),
         image: getLandingEditorField('image'),
         kind: getLandingEditorField('kind'),
         status: getLandingEditorField('status'),
         progress: getLandingEditorField('progress'),
-        text: getLandingEditorField('text')
+        text: getLandingEditorField('text'),
+        ownerMemberId: getLandingEditorField('ownerMemberId'),
+        dueDate: getLandingEditorField('dueDate'),
+        moduleId: getLandingEditorField('moduleId')
       };
       const clean = sanitizeLandingQuests([raw])[0];
       if (!clean) return;
@@ -663,7 +704,8 @@ function saveLandingEditorDialog() {
       return;
     }
     const raw = {
-      id: itemId,
+      ...data.notes.find(item => item.id === itemId),
+      id: itemId || makeLandingItemId('note'),
       title: getLandingEditorField('title'),
       icon: getLandingEditorField('icon'),
       authorName: getLandingEditorField('authorName'),
@@ -712,6 +754,7 @@ document.addEventListener('click', event => {
     else if (action === 'add-settings-row') addLandingSettingsRow(editorAction);
     else if (action === 'remove-settings-row') removeLandingSettingsRow(editorAction);
     else if (action === 'pick-icon') openLandingSettingsIconPicker(editorAction);
+    else if (action === 'open-group-editor') openGroupEditorFromLandingSettings(editorAction);
     else closeLandingEditorDialog();
     return;
   }
@@ -751,6 +794,11 @@ document.addEventListener('click', event => {
 
   if (action === 'edit-settings') {
     openLandingSettingsDialog(page);
+    return;
+  }
+  if (action === 'open-quest-module') {
+    const target = (globalThis.getAllSections?.() || []).flatMap(section => section.entries || []).find(entry => entry.id === trigger.dataset.moduleId);
+    if (target) openModal(target);
     return;
   }
   if (action === 'edit-quest') {
@@ -799,6 +847,7 @@ document.addEventListener('click', event => {
 function buildLandingPage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
   const data = sanitizeLandingData(page.landing || {});
+  if (data.group && globalThis.AleriaGroupLanding) return `${nav}${globalThis.AleriaGroupLanding.renderBody(data, entry, pageIndex)}`;
   const banner = sanitizeImageSrc(data.bannerImage || entry?.symbol || '');
   const sym = entry.symbol ? `<img class="modal-symbol" src="${sanitizeImageSrc(entry.symbol)}" alt="" loading="lazy" decoding="async">` : '';
   return `

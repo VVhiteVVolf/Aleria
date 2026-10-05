@@ -193,7 +193,7 @@ function isModuleEditorAuthBypassed(context = _moduleEditorContext) {
 }
 
 function showModuleEditorForm() {
-  const authorized = _moduleEditorAuthorized || isModuleEditorAuthBypassed();
+  const authorized = canEditModuleContent() || isModuleEditorAuthBypassed();
   document.getElementById('module-editor-gate').style.display = authorized ? 'none' : 'flex';
   document.getElementById('module-editor-body').classList.toggle('visible', authorized);
   if (authorized && _moduleEditorContext?.payload) {
@@ -208,6 +208,16 @@ function showModuleEditorForm() {
   }
 }
 
+function openModuleEditorAccessGate(onAuthorized) {
+  _moduleEditorContext = { sourceKind: 'content-access', onAuthorized };
+  applyModuleEditorContextChrome(_moduleEditorContext);
+  document.getElementById('module-editor-title').textContent = 'Bearbeitung freischalten';
+  document.getElementById('me-code').value = '';
+  document.getElementById('me-code-error').style.display = 'none';
+  showModuleEditorForm();
+  activateDialog('module-editor-overlay', { initialFocus: '#me-code' });
+}
+
 function openModuleEditor(payload, context) {
   const recovery = typeof resolveModuleEditorRecoveryDraft === 'function'
     ? resolveModuleEditorRecoveryDraft(payload, context)
@@ -220,7 +230,7 @@ function openModuleEditor(payload, context) {
   document.getElementById('me-code').value = '';
   document.getElementById('me-code-error').style.display = 'none';
   showModuleEditorForm();
-  const authorized = _moduleEditorAuthorized || isModuleEditorAuthBypassed(_moduleEditorContext);
+  const authorized = canEditModuleContent() || isModuleEditorAuthBypassed(_moduleEditorContext);
   activateDialog('module-editor-overlay', {
     initialFocus: authorized ? '#me-title, #me-json, button, input, textarea, select' : '#me-code'
   });
@@ -228,6 +238,11 @@ function openModuleEditor(payload, context) {
 }
 
 function closeModuleEditor() {
+  if (_moduleEditorContext?.sourceKind === 'content-access') {
+    _moduleEditorContext = null;
+    deactivateDialog('module-editor-overlay');
+    return;
+  }
   if (!confirmDiscardModuleEditorChanges('schließen')) return;
   const pages = document.getElementById('me-pages');
   if (pages) globalThis.AleriaFamily?.workbench?.unmount?.({ root: pages });
@@ -261,7 +276,7 @@ async function unlockModuleEditor() {
     } else {
       error.style.display = 'none';
     }
-    if (window._fb?.setCommentAdminCode) {
+    if (_moduleEditorContext?.sourceKind !== 'content-access' && window._fb?.setCommentAdminCode) {
       try {
         await window._fb.setCommentAdminCode(code);
       } catch (adminError) {
@@ -276,6 +291,14 @@ async function unlockModuleEditor() {
   }
 
   _moduleEditorAuthorized = true;
+  window.dispatchEvent(new Event('aleria:module-editor-access-changed'));
+  if (_moduleEditorContext?.sourceKind === 'content-access') {
+    const onAuthorized = _moduleEditorContext.onAuthorized;
+    _moduleEditorContext = null;
+    deactivateDialog('module-editor-overlay');
+    onAuthorized?.();
+    return;
+  }
   showModuleEditorForm();
   scheduleModuleEditorPreviewRefresh();
 }

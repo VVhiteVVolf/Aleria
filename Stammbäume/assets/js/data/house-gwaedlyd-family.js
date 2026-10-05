@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -147,7 +148,7 @@ const TREDEGAR_HOUSES = Object.freeze([
   house('house-coedwig', 'Haus Coedwig', HOUSE_EMBLEMS.coedwig)
 ]);
 
-export const HOUSE_GWAEDLYD_CAER_GORWEL_FAMILY = Object.freeze({
+export const HOUSE_GWAEDLYD_CAER_GORWEL_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -369,9 +370,9 @@ export const HOUSE_GWAEDLYD_CAER_GORWEL_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Vollständige Herkunftsakte nach der Gwaedlyd-Quelle. Agravaine und seine unbekannte Ehefrau tragen Wappen und seriellen Zeitsprung. Sämtliche benannten historischen Zweige bleiben sichtbar. Die neue Tredegar-Akte beginnt bei Gronw und führt Blodeuyn, Gronw, Morcant, Uthyr und Rhondda als ausdrücklich genannten Überlebendenkreis mit; Arianrhod bleibt als bereits wegverheiratete Frau in ihrer Herkunftsbeziehung.'
   }
-});
+}));
 
-export const HOUSE_GWAEDLYD_TREDEGAR_FAMILY = Object.freeze({
+export const HOUSE_GWAEDLYD_TREDEGAR_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -497,4 +498,4 @@ export const HOUSE_GWAEDLYD_TREDEGAR_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Tredegar-Akte mit Gronw als Begründer der neuen Linie. Cadwgawn und Blodeuyn stehen als Eltern über Gronw, Morcant und Uthyr. Rhondda wird unter ihren verstorbenen Eltern Iltud und Gwenifer geführt; die beiden Toten sind ausschließlich als notwendige genealogische Anker enthalten und gehören nicht zum Überlebendenkreis. Caraf, Tryffin und Briallen erscheinen als lebende Ehepartner. Erst nach der Flucht geborene Kinder werden ausschließlich hier fortgeführt. Talan ist nach der neuen Gwaedlyd-Quelle mit Zara Coedwig verlobt; die alte widersprüchliche Zuordnung zu Talan Créyr wurde in beiden Gegenakten aufgehoben.'
   }
-});
+}));

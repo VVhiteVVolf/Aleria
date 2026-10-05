@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -148,7 +149,7 @@ const ORIGIN_PARTNERS = Object.freeze({
   oth: ['oth-dyfrgi', 'bronwen-bochdew']
 });
 
-export const HOUSE_DYFRGI_MYNYDDHARBWR_FAMILY = Object.freeze({
+export const HOUSE_DYFRGI_MYNYDDHARBWR_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -314,7 +315,7 @@ export const HOUSE_DYFRGI_MYNYDDHARBWR_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Getrennte Mynyddharbwr-Herkunftsakte nach der Dyfrgi-Tabelle. Breseal Dobhar und Morfydd Blodyn begründen das umbenannte Haus; der einzige Haus-Zeitsprung führt seriell zu Mawr und Idwal. Gwayne ist ausschließlich Sohn Mawr/Mennas, Myf ausschließlich Tochter Idwal/Meaghans. Mervyn bleibt als Sohn Gwaynes und Wennas sichtbar, während seine Kinder allein in der Caer-Cryftlawd-Akte fortgeführt werden. Oths Seitenzweig verbleibt trotz seines Todes nach 1720 in der Herkunftsakte, weil Mervyn ausdrücklich die neue Linie begründet.'
   }
-});
+}));
 
 const TARGET_PARTNERS = Object.freeze({
   mervyn: ['elin-blodyn', 'mevyn-dyfrgi'],
@@ -323,7 +324,7 @@ const TARGET_PARTNERS = Object.freeze({
   glyn: ['glyn-dyfrgi', 'greer-spouse-dyfrgi']
 });
 
-export const HOUSE_DYFRGI_CAER_CRYFTLAWD_FAMILY = Object.freeze({
+export const HOUSE_DYFRGI_CAER_CRYFTLAWD_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -417,7 +418,7 @@ export const HOUSE_DYFRGI_CAER_CRYFTLAWD_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Getrennte Caer-Cryftlawd-Nachfolgeakte nach dem Blaidd- und Mochdaer-Muster. Mervyn und Elin bilden das neue Gründerpaar; Lyr, Ynyr und Glyn sind ausschließlich ihre Kinder. Ifan/Eira, Llew/Una und Iob/Nia bleiben jeweils am richtigen Elternpaar. Rhondda, Tudur, Oth und Orbo gehören nicht zu Mervyns neuer Linie und verbleiben daher ausschließlich in der vollständigen Herkunftsakte.'
   }
-});
+}));
 
 export const DYFRGI_HOUSE_FAMILIES = Object.freeze([
   HOUSE_DYFRGI_MYNYDDHARBWR_FAMILY,

@@ -1,0 +1,605 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-05T15:33:51.975Z",
+  "sourceNote": "Gruppenübersicht direkt nach der Hierarchie. Bestehende Seiten, Porträts und historische Kommentar-IDs erhalten. Nur lokal vorbereitet.",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Haus Draig",
+      "desc": "",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Haus Draig"
+      ],
+      "tab": "Gruppen",
+      "nodeId": "node:gruppen:cenyr/celtigerns-wacht/haus-draig"
+    },
+    "entry": {
+      "id": "gawain-duncan",
+      "title": "Gawain & Duncan",
+      "subtitle": "Gawain & Duncan",
+      "type": "Story",
+      "category": "Gefolge",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "image": null,
+      "stamp": "BEREICH · ORT · WELT",
+      "icon": "",
+      "symbol": null,
+      "locked": false,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "image": "https://i.imgur.com/hjp0jeh.jpeg",
+          "imageWidth": 38,
+          "pageTitle": "Gawains Bewährung",
+          "description": "Erzählerischer Einstieg: Was ist geschehen, wer ist betroffen, und warum bleibt dieser Eintrag im Almanach erhalten?",
+          "quote": "",
+          "quoteBy": "",
+          "enableComments": true,
+          "commentDivider": true,
+          "stats": [
+            [
+              "Name",
+              "Wert"
+            ],
+            [
+              "Typ",
+              "Wert"
+            ],
+            [
+              "Hauptquartier",
+              "Wert"
+            ],
+            [
+              "Anführer",
+              "Wert"
+            ],
+            [
+              "Zugehörigkeit",
+              "Wert"
+            ],
+            [
+              "Mitgliederstärke",
+              "Wert"
+            ],
+            [
+              "Dienst",
+              "Wert"
+            ],
+            [
+              "Ziel",
+              "Wert"
+            ]
+          ],
+          "commentSequence": [
+            {
+              "narrator": true,
+              "text": "Ein kurzer Kommentar kann die Stimmung bündeln, ohne die Erzählung zu überladen."
+            }
+          ],
+          "commentThreadKey": "0"
+        },
+        {
+          "schemaVersion": 1,
+          "image": "https://i.imgur.com/BceZTJo.jpeg",
+          "imageWidth": 30,
+          "pageTitle": "Gawain & Duncan",
+          "description": ".........",
+          "quote": "...",
+          "quoteBy": "— ...",
+          "commentDivider": true,
+          "imageTall": true,
+          "biographyPage": true,
+          "stats": [
+            [
+              "Vollständiger Name",
+              "..."
+            ],
+            [
+              "Titel",
+              "..."
+            ],
+            [
+              "Haus",
+              "..."
+            ],
+            [
+              "Geburt",
+              "..."
+            ],
+            [
+              "Alter",
+              "..."
+            ],
+            [
+              "Rolle",
+              "..."
+            ],
+            [
+              "Status",
+              "..."
+            ]
+          ],
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "portrait": "",
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Biografie",
+            "biographyText": ".........",
+            "abilitiesTitle": "Merkmale",
+            "abilities": [
+              {
+                "title": "Neuer Punkt",
+                "detail": "",
+                "icon": "*"
+              },
+              {
+                "title": "Neuer Punkt",
+                "detail": "",
+                "icon": "*"
+              },
+              {
+                "title": "Neuer Punkt",
+                "detail": "",
+                "icon": "*"
+              },
+              {
+                "title": "Neuer Punkt",
+                "detail": "",
+                "icon": "*"
+              }
+            ],
+            "extraSections": [],
+            "historyTitle": "Geschichte",
+            "historyText": ".........",
+            "worksTitle": "Bekannte Werke",
+            "works": [
+              "Neues Werk",
+              "Neues Werk",
+              "Neues Werk"
+            ],
+            "triviaTitle": "Trivia",
+            "trivia": [
+              "Ein prägnantes Detail.",
+              "Ein Gerücht oder beobachtetes Merkmal."
+            ],
+            "quotesTitle": "Zitate",
+            "quotes": [
+              "„Ein markantes Zitat der Person.“"
+            ],
+            "connectionsTitle": "Verbindungen",
+            "connections": [
+              {
+                "type": "heading",
+                "title": "Personen",
+                "detail": ""
+              },
+              {
+                "type": "connection",
+                "name": "Verbündete Person",
+                "detail": "Rolle oder Beziehung",
+                "image": "",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Eigentum & Besitz",
+            "documents": [],
+            "footer": "..."
+          },
+          "commentThreadKey": "1"
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gruppendynamik",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "layoutMode": "vertical",
+            "treeDisplayMode": "tabs",
+            "cardFontScale": 92,
+            "portraitScale": 100,
+            "chartScale": 100,
+            "eyebrow": "Hierarchie",
+            "subtitle": "Organisationsstruktur",
+            "centerLabel": "Gilde der Wahrheitswaage",
+            "emblem": "",
+            "sideImage": "",
+            "organizationTitle": "Gilde der Wahrheitswaage",
+            "motto": "Wehren . Helfen . Schützen",
+            "description": "....",
+            "detailsTitle": "Details",
+            "details": [],
+            "quoteLabel": "???",
+            "quote": ".....",
+            "chartTitle": "Aufbau",
+            "chartIntro": "Die Gilde ist in verschiedene Raenge und Aemter unterteilt. Jeder Rang traegt spezifische Verantwortung innerhalb der Hierarchie.",
+            "trees": [
+              {
+                "id": "aufbau",
+                "parentTreeId": "",
+                "label": "Aufbau",
+                "levels": [
+                  {
+                    "label": "",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Neuer Rang",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [
+              {
+                "label": "",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Neuer Rang",
+                    "subtitle": "",
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "footerNote": "Raenge und Zustaendigkeiten koennen je nach Gildensatzung und Gildenordnung variieren.",
+            "backLabel": "Zurueck zur Uebersicht",
+            "printLabel": "Akte drucken"
+          },
+          "commentThreadKey": "2"
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gruppenübersicht",
+          "landingPage": true,
+          "landing": {
+            "bannerImage": "",
+            "title": "Gawain & Duncan",
+            "subtitle": "Gawain & Duncan",
+            "memberTitle": "Abenteurer",
+            "questTitle": "Quests",
+            "notesTitle": "Notizen",
+            "eventsTitle": "Anstehende Ereignisse",
+            "mapTitle": "Aktuelle Karte",
+            "mapKartenId": "",
+            "mapImage": "",
+            "mapLink": "",
+            "mapButtonLabel": "Karte öffnen",
+            "infoTitle": "Schnelle Informationen",
+            "members": [
+              {
+                "id": "member-mrxbausu-0-tmvi",
+                "name": "Abenteurer 1",
+                "role": "",
+                "className": "",
+                "status": "Bereit",
+                "statusColor": "#2c8a3d",
+                "portrait": "",
+                "badgeIcon": "*",
+                "characterId": ""
+              }
+            ],
+            "quests": [
+              {
+                "id": "quest-mqptk5hs-0-mi9b",
+                "title": "Quest 1",
+                "text": "",
+                "image": "https://i.imgur.com/u1qz1cq.png",
+                "kind": "Nebenquest",
+                "status": "active",
+                "progress": 0,
+                "ownerMemberId": "",
+                "dueDate": "",
+                "moduleId": ""
+              },
+              {
+                "id": "quest-mqptkq3b-1-fx0g",
+                "title": "Quest 2",
+                "text": "",
+                "image": "https://i.imgur.com/u1qz1cq.png",
+                "kind": "Nebenquest",
+                "status": "active",
+                "progress": 0,
+                "ownerMemberId": "",
+                "dueDate": "",
+                "moduleId": ""
+              },
+              {
+                "id": "quest-mqptvt25-2-7j7n",
+                "title": "Quest 3",
+                "text": "",
+                "image": "",
+                "kind": "Nebenquest",
+                "status": "active",
+                "progress": 0,
+                "ownerMemberId": "",
+                "dueDate": "",
+                "moduleId": ""
+              },
+              {
+                "id": "quest-mqptz5me-3-1pek",
+                "title": "Quest 4",
+                "text": "",
+                "image": "",
+                "kind": "Nebenquest",
+                "status": "active",
+                "progress": 0,
+                "ownerMemberId": "",
+                "dueDate": "",
+                "moduleId": ""
+              },
+              {
+                "id": "quest-mrxbausu-4-j3wm",
+                "title": "Quest 5",
+                "text": "",
+                "image": "",
+                "kind": "Nebenquest",
+                "status": "active",
+                "progress": 0,
+                "ownerMemberId": "",
+                "dueDate": "",
+                "moduleId": ""
+              }
+            ],
+            "notes": [
+              {
+                "id": "note-mqptk5hs-0-ws8o",
+                "authorId": "",
+                "authorName": "",
+                "icon": "https://i.imgur.com/wYRRpzV.png",
+                "title": "Notiz 1",
+                "text": "",
+                "createdAt": "2026-06-22T23:00:54.351Z"
+              },
+              {
+                "id": "note-mqptvt25-1-95ef",
+                "authorId": "",
+                "authorName": "",
+                "icon": "",
+                "title": "Notiz 2",
+                "text": "",
+                "createdAt": "2026-06-22T23:09:58.108Z"
+              },
+              {
+                "id": "note-mqptz5me-2-w5dg",
+                "authorId": "",
+                "authorName": "",
+                "icon": "",
+                "title": "Notiz 3",
+                "text": "",
+                "createdAt": "2026-06-22T23:12:34.358Z"
+              },
+              {
+                "id": "note-mrxbausu-3-gf75",
+                "authorId": "",
+                "authorName": "",
+                "icon": "",
+                "title": "Notiz 4",
+                "text": "",
+                "createdAt": "2026-07-23T09:31:39.246Z"
+              }
+            ],
+            "events": [
+              {
+                "icon": "https://i.imgur.com/oxxBDIa.png",
+                "title": "Ereignis 1",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "https://i.imgur.com/oxxBDIa.png",
+                "title": "Ereignis 2",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "https://i.imgur.com/oxxBDIa.png",
+                "title": "Ereignis 3",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "https://i.imgur.com/oxxBDIa.png",
+                "title": "Ereignis 4",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "https://i.imgur.com/oxxBDIa.png",
+                "title": "Ereignis 5",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "https://i.imgur.com/oxxBDIa.png",
+                "title": "Ereignis 6",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "*",
+                "title": "Ereignis 7",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "*",
+                "title": "Ereignis 8",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "*",
+                "title": "Ereignis 9",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              },
+              {
+                "icon": "*",
+                "title": "Ereignis 10",
+                "time": "",
+                "aleriaDate": {
+                  "year": null,
+                  "month": null,
+                  "day": null
+                }
+              }
+            ],
+            "info": [
+              {
+                "icon": "https://i.imgur.com/4OcZiid.png",
+                "title": "Gildenruf",
+                "text": "Angesehen"
+              },
+              {
+                "icon": "https://i.imgur.com/kH2Ry56.png",
+                "title": "Aktuelles Gold",
+                "text": "12 GM"
+              },
+              {
+                "icon": "https://i.imgur.com/52bHTVP.png",
+                "title": "Vorräte",
+                "text": "Gut versorgt"
+              },
+              {
+                "icon": "https://i.imgur.com/wYRRpzV.png",
+                "title": "Information 4",
+                "text": ""
+              },
+              {
+                "icon": "https://i.imgur.com/skIWGP2.png",
+                "title": "Information 5",
+                "text": ""
+              },
+              {
+                "icon": "https://i.imgur.com/skIWGP2.png",
+                "title": "Information 6",
+                "text": ""
+              },
+              {
+                "icon": "https://i.imgur.com/skIWGP2.png",
+                "title": "Information 7",
+                "text": ""
+              },
+              {
+                "icon": "https://i.imgur.com/skIWGP2.png",
+                "title": "Information 8",
+                "text": ""
+              },
+              {
+                "icon": "https://i.imgur.com/skIWGP2.png",
+                "title": "Information 9",
+                "text": ""
+              },
+              {
+                "icon": "https://i.imgur.com/skIWGP2.png",
+                "title": "Information 10",
+                "text": ""
+              },
+              {
+                "icon": "*",
+                "title": "Information 11",
+                "text": ""
+              },
+              {
+                "icon": "*",
+                "title": "Information 12",
+                "text": ""
+              }
+            ],
+            "group": {
+              "version": 1,
+              "location": "",
+              "activity": "",
+              "status": "",
+              "supplies": "",
+              "threadId": "",
+              "sceneThreads": [],
+              "members": [],
+              "guests": [],
+              "presets": [],
+              "treasury": {
+                "openingCopper": null,
+                "entries": []
+              }
+            }
+          },
+          "commentThreadKey": "3"
+        },
+        {
+          "schemaVersion": 1,
+          "image": "https://i.imgur.com/hjp0jeh.jpeg",
+          "imageWidth": 20,
+          "pageTitle": "Hauptquartier & Lager",
+          "sessionPage": true,
+          "sessionIntro": "Einleitung der Szene. Beschreibe Ort, Anlass und Stimmung. Der eigentliche Szenenverlauf entsteht später über Kommentare.",
+          "sessionHint": "Führe diese Szene als Kommentar fort.",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "commentThreadKey": "4"
+        }
+      ],
+      "schemaVersion": 1,
+      "multipage": true
+    }
+  }
+}

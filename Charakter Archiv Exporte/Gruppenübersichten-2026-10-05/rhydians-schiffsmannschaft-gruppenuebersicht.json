@@ -1,0 +1,1097 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-05T15:33:51.983Z",
+  "sourceNote": "Gruppenübersicht direkt nach der Hierarchie. Bestehende Seiten, Porträts und historische Kommentar-IDs erhalten. Nur lokal vorbereitet. Neuerer lokaler Entwurf übernommen: ../Charakter Archiv Exporte/Biographien/rhydians-schiffsmannschaft-modulpaket-2026-10-05.json",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "desc": "",
+      "nodeId": "node:gruppen:klaueninseln/haus-arth",
+      "path": [
+        "Klaueninseln",
+        "Haus Arth"
+      ],
+      "key": "Haus Arth",
+      "tab": "Gruppen"
+    },
+    "entry": {
+      "id": "rhydians-schiffsmannschaft",
+      "title": "Rhydians Schiffsmannschaft",
+      "subtitle": "Die Besatzung des Seebären",
+      "type": "Story",
+      "category": "Gefolge",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "image": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/feier-2026-10-05/gruppenbild-01.png",
+      "stamp": "HAUS ARTH · KLAUENINSELN",
+      "icon": "",
+      "symbol": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/der-seebaer-wappen.png",
+      "locked": false,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "schemaVersion": 1,
+      "multipage": true,
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "image": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/feier-2026-10-05/gruppenbild-01.png",
+          "imageWidth": 38,
+          "imageFit": "contain",
+          "pageTitle": "Die Besatzung des Seebären",
+          "description": "<p><strong>Rhydian Arth</strong>, der Zwillingsbruder Lady Lynne Arths und Erbe des Hauses Arth, führt die Kriegskogge <strong>Der Seebär</strong>. Mit Idwal Draig verbindet ihn eine gute Freundschaft. An seiner Seite stehen <strong>Ianto Pawen</strong> als Erster Maat und <strong>Gwylim Arth</strong> als Zweiter Maat.</p><p>Der Seebär ist für <strong>60–70 Mann</strong> ausgelegt. Ritter zur See, erfahrene Seeleute und Handwerker bilden seine Mannschaft. Sein Zeichen zeigt einen Bärenoberkörper mit Fischunterleib – eine Erinnerung daran, dass die Taufe des Schiffes weit weniger feierlich verlief, als Rhydian ursprünglich beabsichtigt hatte.</p><p><strong>Wie aus Nimues Streiter ein Seebär wurde</strong></p><p>Eigentlich hatte Rhydian einen würdevollen Namen im Sinn. Gemeinsam mit seinem Ersten Maat Ianto Pawen und seinem Zweiten Maat Gwylim Arth grübelte er über die Taufe seiner Kriegskogge. „Nimues Streiter“ klang gut. „Nimues … irgendwas“ immerhin noch feierlich. Einig wurden sie sich zunächst nur darüber, dass sich die Frage bei einem Krug leichter beantworten ließe.</p><p>Einige Krüge später erklärte Rhydian, eine Meerjungfer – das heilige Wesen Nimues – mit einem Dreizack würde sich hervorragend als Zeichen des Schiffes machen. Die anderen stimmten begeistert zu. Danach gewann die Idee Fahrt. Und ein Eigenleben. Irgendwo zwischen weiteren Trinksprüchen, dem Bären des Hauses Arth und Iantos tatkräftiger Zustimmung ging der ursprüngliche Plan über Bord.</p><p>Als die drei wieder nüchtern waren, hatte Ianto bereits alles organisiert. Das Schiff war auf <strong>Der Seebär</strong> getauft. Rhydian starrte seinen Ersten Maat an: Wie sollte daraus noch ein Wappen werden, das auch nur entfernt zu seiner Meerjungfer passte?</p><p>Die Antwort war von bestechender Einfachheit: <strong>oben Bär, unten Fisch.</strong> Das Meerjungfrauenprinzip blieb erhalten; nur die Dame hatte Fell bekommen. Und der Dreizack? „<strong>Den werfen wir über Bord!</strong>“</p>",
+          "quote": "Oben Bär, unten Fisch. Den Dreizack werfen wir über Bord!",
+          "quoteBy": "Zur Taufe des Seebären",
+          "enableComments": true,
+          "commentDivider": true,
+          "stats": [
+            [
+              "Schiffsname",
+              "Der Seebär"
+            ],
+            [
+              "Typ",
+              "Kriegskogge"
+            ],
+            [
+              "Kapitän",
+              "Rhydian Arth"
+            ],
+            [
+              "Erster Maat",
+              "Ianto Pawen"
+            ],
+            [
+              "Zweiter Maat",
+              "Gwylim Arth"
+            ],
+            [
+              "Zugehörigkeit",
+              "Haus Arth · Klaueninseln"
+            ],
+            [
+              "Mitgliederstärke",
+              "60–70 Mann"
+            ],
+            [
+              "Ausgearbeitete Besatzung",
+              "28 von 66 Posten"
+            ],
+            [
+              "Bordtiere",
+              "Bootsmops und Admiral Krümel"
+            ]
+          ],
+          "commentSequence": [],
+          "commentThreadKey": "0"
+        },
+        {
+          "schemaVersion": 1,
+          "image": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
+          "imageWidth": 30,
+          "pageTitle": "Rhydian Arth",
+          "description": "<p><strong>Rhydian Arth</strong> wurde 1718 geboren. Er ist Lady Lynne Arths Zwillingsbruder, erster Erbe des Hauses Arth und Kapitän des Seebären. Mit <strong>Idwal Draig</strong> verbindet ihn eine gute Freundschaft.</p><p>Sein Erster Maat ist <strong>Ianto Pawen</strong>. <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata, dient als Zweiter Maat. Rhydians persönlicher Knappe ist der vierzehnjährige <strong>Cadyn Morgwynt</strong>, Mablis frecher jüngerer Bruder.</p>",
+          "quote": "",
+          "quoteBy": "",
+          "commentDivider": true,
+          "imageTall": true,
+          "biographyPage": true,
+          "stats": [
+            [
+              "Vollständiger Name",
+              "Rhydian Arth"
+            ],
+            [
+              "Haus",
+              "Haus Arth"
+            ],
+            [
+              "Geburt",
+              "1718"
+            ],
+            [
+              "Rolle",
+              "Schiffskapitän"
+            ],
+            [
+              "Schiff",
+              "Der Seebär"
+            ],
+            [
+              "Zwillingsschwester",
+              "Lady Lynne Arth"
+            ]
+          ],
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Biografie",
+            "biographyText": "<p><strong>Rhydian Arth</strong> wurde 1718 geboren. Er ist Lady Lynne Arths Zwillingsbruder, erster Erbe des Hauses Arth und Kapitän des Seebären. Mit <strong>Idwal Draig</strong> verbindet ihn eine gute Freundschaft.</p><p>Sein Erster Maat ist <strong>Ianto Pawen</strong>. <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata, dient als Zweiter Maat. Rhydians persönlicher Knappe ist der vierzehnjährige <strong>Cadyn Morgwynt</strong>, Mablis frecher jüngerer Bruder.</p>",
+            "abilitiesTitle": "Führung",
+            "abilities": [],
+            "extraSections": [],
+            "historyTitle": "Die Taufe des Seebären",
+            "historyText": "<p><strong>Wie aus Nimues Streiter ein Seebär wurde</strong></p><p>Eigentlich hatte Rhydian einen würdevollen Namen im Sinn. Gemeinsam mit seinem Ersten Maat Ianto Pawen und seinem Zweiten Maat Gwylim Arth grübelte er über die Taufe seiner Kriegskogge. „Nimues Streiter“ klang gut. „Nimues … irgendwas“ immerhin noch feierlich. Einig wurden sie sich zunächst nur darüber, dass sich die Frage bei einem Krug leichter beantworten ließe.</p><p>Einige Krüge später erklärte Rhydian, eine Meerjungfer – das heilige Wesen Nimues – mit einem Dreizack würde sich hervorragend als Zeichen des Schiffes machen. Die anderen stimmten begeistert zu. Danach gewann die Idee Fahrt. Und ein Eigenleben. Irgendwo zwischen weiteren Trinksprüchen, dem Bären des Hauses Arth und Iantos tatkräftiger Zustimmung ging der ursprüngliche Plan über Bord.</p><p>Als die drei wieder nüchtern waren, hatte Ianto bereits alles organisiert. Das Schiff war auf <strong>Der Seebär</strong> getauft. Rhydian starrte seinen Ersten Maat an: Wie sollte daraus noch ein Wappen werden, das auch nur entfernt zu seiner Meerjungfer passte?</p><p>Die Antwort war von bestechender Einfachheit: <strong>oben Bär, unten Fisch.</strong> Das Meerjungfrauenprinzip blieb erhalten; nur die Dame hatte Fell bekommen. Und der Dreizack? „<strong>Den werfen wir über Bord!</strong>“</p>",
+            "worksTitle": "Aufgaben zur See",
+            "works": [
+              "Führt die Kriegskogge Der Seebär im Dienst des Hauses Arth.",
+              "Stimmt Kurs, Wachen und Aufgaben mit seinen beiden Maaten ab.",
+              "Bildet seinen persönlichen Knappen Cadyn Morgwynt aus."
+            ],
+            "triviaTitle": "Wissenswertes",
+            "trivia": [
+              "Zwillingsbruder Lady Lynne Arths.",
+              "Guter Freund Idwal Draigs.",
+              "Hatte ursprünglich einen Schiffsnamen zu Ehren Nimues im Sinn."
+            ],
+            "quotesTitle": "Zitate",
+            "quotes": [],
+            "connectionsTitle": "Mannschaft",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Ianto Pawen",
+                "detail": "Erster Maat; geboren 1717.",
+                "image": "/Stammbäume/assets/images/portraits/haus-pawen/ianto-pawen.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gwylim Arth",
+                "detail": "Zweiter Maat; Sohn von Gwrhyr Arth und Findabair Mata.",
+                "image": "/Stammbäume/assets/images/portraits/haus-arth/gwylim-arth.jpg",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Cadyn Morgwynt",
+                "detail": "Persönlicher Knappe; 14 Jahre. Jüngerer Bruder Mabli Morgwynts.",
+                "image": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/cadyn-morgwynt-v2.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Eigentum & Besitz",
+            "documents": [],
+            "footer": ""
+          },
+          "commentThreadKey": "1"
+        },
+        {
+          "schemaVersion": 1,
+          "image": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
+          "pageTitle": "Hierarchie der Mannschaft",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "layoutMode": "vertical",
+            "treeDisplayMode": "tabs",
+            "cardFontScale": 92,
+            "portraitScale": 100,
+            "chartScale": 83,
+            "eyebrow": "Hierarchie",
+            "subtitle": "Der Seebär",
+            "centerLabel": "Aufbau der Besatzung",
+            "emblem": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/der-seebaer-wappen.png",
+            "sideImage": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/feier-2026-10-05/gruppenbild-03.png",
+            "organizationTitle": "Die Mannschaft des Seebären",
+            "motto": "Haus Arth · Klaueninseln",
+            "description": "Rhydian Arth führt die Kriegskogge. Ianto Pawen ist Erster, Gwylim Arth Zweiter Maat. Gemeinsam halten Seeleute, Ritter und Handwerker das Schiff auf Kurs.",
+            "detailsTitle": "Schiff und Mannschaft",
+            "details": [
+              {
+                "icon": "",
+                "label": "Schiffsname",
+                "value": "Der Seebär"
+              },
+              {
+                "icon": "",
+                "label": "Schiffstyp",
+                "value": "Kriegskogge"
+              },
+              {
+                "icon": "",
+                "label": "Zugehörigkeit",
+                "value": "Haus Arth"
+              },
+              {
+                "icon": "",
+                "label": "Besatzungsstärke",
+                "value": "60–70 Mann"
+              },
+              {
+                "icon": "",
+                "label": "Besetzung",
+                "value": "28 von 66 Posten ausgearbeitet"
+              },
+              {
+                "icon": "",
+                "label": "Bordtiere",
+                "value": "Bootsmops · Admiral Krümel"
+              }
+            ],
+            "quoteLabel": "Zur Schiffstaufe",
+            "quote": "Oben Bär, unten Fisch. Den Dreizack werfen wir über Bord!",
+            "chartTitle": "Posten an Bord",
+            "chartIntro": "28 namentlich ausgearbeitete Mitglieder in einer Besatzung von 66 Mann. Die weiteren Posten bleiben für spätere Ergänzungen offen. Bordtiere und Familien stehen in eigenen Registern.",
+            "trees": [
+              {
+                "id": "aufbau",
+                "parentTreeId": "",
+                "label": "Führung",
+                "levels": [
+                  {
+                    "label": "Kommando",
+                    "nodes": [
+                      {
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
+                        "title": "Schiffskapitän",
+                        "subtitle": "Rhydian Arth",
+                        "text": "Kapitän des Seebären. Zwillingsbruder von Lady Lynne Arth."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Maate",
+                    "nodes": [
+                      {
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-pawen/ianto-pawen.jpg",
+                        "title": "Erster Maat",
+                        "subtitle": "Ianto Pawen",
+                        "text": "Geboren 1717. Erster Maat des Seebären."
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-arth/gwylim-arth.jpg",
+                        "title": "Zweiter Maat",
+                        "subtitle": "Gwylim Arth",
+                        "text": "Zweiter Maat. Sohn von Gwrhyr Arth und Findabair Mata."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Kurs und Seelsorge",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/uwchric-mathgraig-v2.png",
+                        "title": "Steuermann",
+                        "subtitle": "Uwchric Mathgraig",
+                        "text": "54 Jahre · Talgarth. Erfahrener Steuermann; kennt Strömungen und Untiefen, bleibt bei schwerer See ruhig am Ruder."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/oenric-prys.png",
+                        "title": "Schiffskaplan",
+                        "subtitle": "Oenric Prys",
+                        "text": "24 Jahre · Talgarth. Junger Geistlicher Baldrans; kameradschaftlich, mit Sinn für Seemannsbräuche."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Deck, Navigation, Vorräte und Waffen",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/helban-morgwynt.png",
+                        "title": "Bootsmann",
+                        "subtitle": "Helban Morgwynt",
+                        "text": "36 Jahre · Talgarth. Erfahrener Decksführer; rauer Ton, klare Befehle und verlässlicher Drill."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/saithric-derynwal.png",
+                        "title": "Navigator",
+                        "subtitle": "Saithric Derynwal",
+                        "text": "20 Jahre · Vennyr. Navigator; berechnet Kurse und verbindet Seekarten mit der Beobachtung von Küste und Sternen."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/saithar-morglan-v2.png",
+                        "title": "Quartiermeister",
+                        "subtitle": "Saithar Morglan",
+                        "text": "25 Jahre · Talgarth. Organisiert Stauplätze, Ausrüstung und die Ausgabe an die Mannschaft."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/hakon-graufels.png",
+                        "title": "Waffenmeister",
+                        "subtitle": "Håkon Graufels",
+                        "text": "56 Jahre · Aldrimar. Erfahrener Waffenmeister; sorgfältig mit Waffenbestand und Pflege, leitet die Waffenübungen an Bord."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Meister",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/thalan-bowen-v2.png",
+                        "title": "Schiffszimmermann",
+                        "subtitle": "Thalan Bowen",
+                        "text": "24 Jahre · Talgarth. Schiffszimmermann aus einer Werftfamilie; kümmert sich um Rumpf, Spanten und Lecks."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/neddwyn-bevan.png",
+                        "title": "Feldscher",
+                        "subtitle": "Neddwyn Bevan",
+                        "text": "26 Jahre · Talgarth. Ruhiger und sorgfältiger Feldscher; versorgt Wunden und Brüche und kennt Heilkräuter."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/perwyn-neddeth-v3.png",
+                        "title": "Schiffsmeier",
+                        "subtitle": "Perwyn Neddeth",
+                        "text": "22 Jahre · Vennyr. Verwaltet Kasse, Sold und Rechnungen; nüchtern und zahlenfest."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/iwrban-dyger.png",
+                        "title": "Schiffsmusikant",
+                        "subtitle": "Iwrban Dyger",
+                        "text": "23 Jahre · Talgarth. Fiedel, Seemannslieder und Arbeitstakt; Musikant, kein ausgebildeter Barddwyr."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Ausguck",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/leif-nebelkind.png",
+                        "title": "Ausguck",
+                        "subtitle": "Leif Nebelkind",
+                        "text": "18 Jahre · Aldrimar. Leichtfüßig und scharfsichtig; erkennt Segel und Küstenzeichen früh."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Segel und Bordwache",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/bjarne-rotstraehne.png",
+                        "title": "Segelmeister",
+                        "subtitle": "Bjarne Rotsträhne",
+                        "text": "23 Jahre · Aldrimar. Kräftiger und seefester Segelmeister; verantwortet Segeltrimm, Takelage und Decksmanöver."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/gwaeden-beryn.png",
+                        "title": "Wachmeister",
+                        "subtitle": "Gwaeden Beryn",
+                        "text": "26 Jahre · Talgarth. Teilt Wachen ein; diszipliniert und aufmerksam an Deck und im Hafen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ausbildung",
+                "parentTreeId": "",
+                "label": "Kämpfer",
+                "levels": [
+                  {
+                    "label": "Ritter zur See",
+                    "nodes": [
+                      {
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-dyfrgi/llew-dyfrgi.jpg",
+                        "title": "Ritter zur See",
+                        "subtitle": "Llew Dyfrgi",
+                        "text": "Geboren 1722."
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-unigol/unig-unigol.jpg",
+                        "title": "Ritter zur See",
+                        "subtitle": "Unig Unigol",
+                        "text": "Geboren 1718."
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-eirth/padrig-eirth.jpg",
+                        "title": "Ritter zur See",
+                        "subtitle": "Padrig Eirth",
+                        "text": "Geboren 1722."
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-dianc/barry-dianc.png",
+                        "title": "Ritter zur See",
+                        "subtitle": "Barry Dianc",
+                        "text": "Geboren 1722."
+                      },
+                      {
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-cwingod/clinoch-cwingod.jpg",
+                        "title": "Ritter zur See",
+                        "subtitle": "Clinoch Cwingod",
+                        "text": "Geboren 1722."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Waffenknechte",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Waffenknechte · Fortsetzung",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Knappen zur See",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/cadyn-morgwynt-v2.png",
+                        "title": "Knappe zur See",
+                        "subtitle": "Cadyn Morgwynt",
+                        "text": "Rhydian Arths persönlicher Knappe; 14 Jahre (geboren 1726). Jüngerer Bruder Mabli Morgwynts. Frech, mit braunem Pferdeschwanz und graublauen Augen."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Knappe zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Knappe zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Knappe zur See",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Pagen zur See",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "besatzung",
+                "parentTreeId": "",
+                "label": "Besatzung",
+                "levels": [
+                  {
+                    "label": "Verwaltung",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/maelban-penry.png",
+                        "title": "Schreiber / Adjutant",
+                        "subtitle": "Maelban Penry",
+                        "text": "27 Jahre · Talgarth. Organisiert Logbuch, Mannschaftslisten und Korrespondenz; unterstützt Rhydian als Schreiber und Adjutant."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Versorgung",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/ellor-parry.png",
+                        "title": "Schiffskoch",
+                        "subtitle": "Ellor Parry",
+                        "text": "21 Jahre · Talgarth. Schiffskoch; erfindungsreich mit knappen Vorräten und erfahren im Haltbarmachen."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/ketil-rabenzorn.png",
+                        "title": "Proviantmeister",
+                        "subtitle": "Ketil Rabenzorn",
+                        "text": "22 Jahre · Aldrimar. Proviantmeister; prüft Lebensmittel, Trinkwasser, Haltbarkeit und Nachschub."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Handwerk",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/gwaedric-gwernhelyd.png",
+                        "title": "Kalfaterer",
+                        "subtitle": "Gwaedric Gwernhelyd",
+                        "text": "25 Jahre · Talgarth. Kennt Holz, Fugen und Pech; arbeitet bei Lecks eng mit Thalan zusammen."
+                      },
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/cyror-cledrann.png",
+                        "title": "Reepschläger / Seiler",
+                        "subtitle": "Cyror Cledrann",
+                        "text": "23 Jahre · Talgarth. Fertigt und repariert Tauwerk; unterstützt Bjarne bei der Takelage."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Gehilfen",
+                    "nodes": [
+                      {
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/pereth-halenwych.png",
+                        "title": "Vorratsgehilfe",
+                        "subtitle": "Pereth Halenwych",
+                        "text": "19 Jahre · Talgarth. Prüft Pökelfässer und Wasservorräte; unterstützt Ketil und Ellor."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Gehilfe",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Gehilfe",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Altmatrosen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Decksmannschaft",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Decksmannschaft · Fortsetzung",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Schiffsjungen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "bordtiere",
+                "parentTreeId": "",
+                "label": "Bordtiere",
+                "levels": [
+                  {
+                    "label": "Die heimlichen Herren an Bord",
+                    "nodes": [
+                      {
+                        "title": "Schiffsbär",
+                        "subtitle": "Bootsmops",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/schiffsbaer-schlafend-2026-10-05.png",
+                        "text": "Iantos rotbrauner Arth-Bär. Beherrscht vor allem die Kunst, sich dort zum Schlafen niederzulassen, wo jemand vorbei möchte."
+                      },
+                      {
+                        "title": "Schiffskatze",
+                        "subtitle": "Admiral Krümel",
+                        "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/schiffskatze-orange-2026-10-05.png",
+                        "text": "Verwöhnte orange Tigerkatze mit festen Ansprüchen auf das weichste Kissen. Der Admiralsrang ist selbst verliehen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "haeuser",
+                "parentTreeId": "",
+                "label": "Häuser",
+                "levels": [
+                  {
+                    "label": "Talgarther Familien",
+                    "nodes": [
+                      {
+                        "title": "Haus Mathgraig",
+                        "subtitle": "Familie aus Talgarth",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-mathgraig.png",
+                        "text": "Bürgerhaus der Klaueninseln mit engen Verbindungen zum Hafen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-mathgraig&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Morgwynt",
+                        "subtitle": "Niederes Ritterhaus",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png",
+                        "text": "Niederes Ritterhaus der Klaueninseln. Mabli Morgwynt dient als Bootsfrau auf Lynne Arths Schiff.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morgwynt&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Bevan",
+                        "subtitle": "Familie aus Talgarth",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-bevan.png",
+                        "text": "Familie Nerys Bevans aus Talgarth in Sturmklaue auf den Klaueninseln. Der Hausrang ist noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bevan&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Prys",
+                        "subtitle": "Familie aus Talgarth",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-prys.png",
+                        "text": "Bürgerfamilie aus Talgarth, die eine große Taverne betreibt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-prys&amp;mode=view\">Familienakte öffnen</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Talgarther Familien · Fortsetzung",
+                    "nodes": [
+                      {
+                        "title": "Haus Morglan",
+                        "subtitle": "Familie aus Talgarth",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morglan.png",
+                        "text": "Alte Fischerfamilie der Klaueninseln. Als bürgerliche Fischerfamilie geführt; ein Adelstitel ist nicht überliefert.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-morglan&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Penry",
+                        "subtitle": "Familie aus Talgarth",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-penry.png",
+                        "text": "Bürgerhaus aus Talgarth in Sturmklaue auf den Klaueninseln. Meleri Penry ist eine Enkelin des Vogtes der Arth; der Vogt und Meleris Eltern sind noch nicht namentlich belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-penry&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Dyger",
+                        "subtitle": "Niederes Ritterhaus",
+                        "portrait": "/Stammbäume/assets/images/houses/Talgarth/Klaueninseln/haus-dyger.png",
+                        "text": "Niederes Rittergeschlecht aus Talgarth auf den Klaueninseln und direkte Rittervasallen des Hauses Arth. Musikanten und Seefahrer mit einer einfachen Musikantenschule in Talgarth. Angesehene Bardenhäuser wie die Ceirwyn belächeln sie als Säufer und Tavernenschläger. Die Dyger bilden keine Barddwyr aus.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-dyger&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Bowen",
+                        "subtitle": "Familie aus Talgarth",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-bowen.png",
+                        "text": "Bürgerfamilie aus Talgarth in Sturmklaue mit einer eigenen Werft, in der die Leere Flasche gebaut wurde.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-bowen&amp;mode=view\">Familienakte öffnen</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Talgarther Familien · Fortsetzung",
+                    "nodes": [
+                      {
+                        "title": "Haus Beryn",
+                        "subtitle": "Niederes Ritterhaus",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/haus-beryn.png",
+                        "text": "Kleines niederes Ritterherrenhaus aus Talgarth. Der Stammbaum reicht von Ifor Beryn bis zu seinem Urgroßvater Caradog und gliedert sich unter Madog Beryn in genau drei fortgeführte Männerlinien. Die jüngste Generation der Hauptlinie vertritt Eira Beryn, Tochter Owains und Mareds, Ifors Nichte und Lynne Arths Knappin zur See.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-beryn&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Parry",
+                        "subtitle": "Familie aus Talgarth",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-parry.png",
+                        "text": "Familie Tesni Parrys aus Talgarth in Sturmklaue auf den Klaueninseln. Ihre Mutter ist Köchin im Dienst des Hauses Arth. Hausrang und der Name der Mutter sind noch nicht belegt.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-parry&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Gwernhelyd",
+                        "subtitle": "Familie aus Talgarth",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-gwernhelyd.png",
+                        "text": "Bürgerfamilie aus Talgarth mit einer Tradition als Lotsen und Fahrwasserkenner. Ihr Handwerk ist die sichere Führung von Schiffen durch Untiefen und Hafeneinfahrten. Hausoberhaupt, weitere Angehörige und Abstammung sind noch offen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-gwernhelyd&amp;mode=view\">Familienakte öffnen</a>"
+                      },
+                      {
+                        "title": "Haus Cledrann",
+                        "subtitle": "Niederes Ritterhaus",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-cledrann.png",
+                        "text": "Niederes Ritterhaus aus Talgarth mit einer Tradition im Küstenwachtdienst und in der Waffenpflege an Bord. Hausoberhaupt, Besitz, Lehensverhältnis und Abstammung sind noch offen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-cledrann&amp;mode=view\">Familienakte öffnen</a>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Talgarther Familien · Fortsetzung",
+                    "nodes": [
+                      {
+                        "title": "Haus Halenwych",
+                        "subtitle": "Familie aus Talgarth",
+                        "portrait": "/Stammbäume/assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-halenwych.png",
+                        "text": "Bürgerfamilie aus Talgarth, spezialisiert auf Salzhandel, Vorratslagerung und haltbaren Schiffsproviant. Hausoberhaupt, weitere Angehörige und Abstammung sind noch offen.<br><br><a href=\"/Stammb%C3%A4ume/Stammbaum.html?family=haus-halenwych&amp;mode=view\">Familienakte öffnen</a>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [
+              {
+                "label": "Kommando",
+                "nodes": [
+                  {
+                    "portrait": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
+                    "title": "Schiffskapitän",
+                    "subtitle": "Rhydian Arth",
+                    "text": "Kapitän des Seebären. Zwillingsbruder von Lady Lynne Arth."
+                  }
+                ]
+              },
+              {
+                "label": "Maate",
+                "nodes": [
+                  {
+                    "portrait": "/Stammbäume/assets/images/portraits/haus-pawen/ianto-pawen.jpg",
+                    "title": "Erster Maat",
+                    "subtitle": "Ianto Pawen",
+                    "text": "Geboren 1717. Erster Maat des Seebären."
+                  },
+                  {
+                    "portrait": "/Stammbäume/assets/images/portraits/haus-arth/gwylim-arth.jpg",
+                    "title": "Zweiter Maat",
+                    "subtitle": "Gwylim Arth",
+                    "text": "Zweiter Maat. Sohn von Gwrhyr Arth und Findabair Mata."
+                  }
+                ]
+              },
+              {
+                "label": "Kurs und Seelsorge",
+                "nodes": [
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/uwchric-mathgraig-v2.png",
+                    "title": "Steuermann",
+                    "subtitle": "Uwchric Mathgraig",
+                    "text": "54 Jahre · Talgarth. Erfahrener Steuermann; kennt Strömungen und Untiefen, bleibt bei schwerer See ruhig am Ruder."
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/oenric-prys.png",
+                    "title": "Schiffskaplan",
+                    "subtitle": "Oenric Prys",
+                    "text": "24 Jahre · Talgarth. Junger Geistlicher Baldrans; kameradschaftlich, mit Sinn für Seemannsbräuche."
+                  }
+                ]
+              },
+              {
+                "label": "Deck, Navigation, Vorräte und Waffen",
+                "nodes": [
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/helban-morgwynt.png",
+                    "title": "Bootsmann",
+                    "subtitle": "Helban Morgwynt",
+                    "text": "36 Jahre · Talgarth. Erfahrener Decksführer; rauer Ton, klare Befehle und verlässlicher Drill."
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/saithric-derynwal.png",
+                    "title": "Navigator",
+                    "subtitle": "Saithric Derynwal",
+                    "text": "20 Jahre · Vennyr. Navigator; berechnet Kurse und verbindet Seekarten mit der Beobachtung von Küste und Sternen."
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/saithar-morglan-v2.png",
+                    "title": "Quartiermeister",
+                    "subtitle": "Saithar Morglan",
+                    "text": "25 Jahre · Talgarth. Organisiert Stauplätze, Ausrüstung und die Ausgabe an die Mannschaft."
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/hakon-graufels.png",
+                    "title": "Waffenmeister",
+                    "subtitle": "Håkon Graufels",
+                    "text": "56 Jahre · Aldrimar. Erfahrener Waffenmeister; sorgfältig mit Waffenbestand und Pflege, leitet die Waffenübungen an Bord."
+                  }
+                ]
+              },
+              {
+                "label": "Meister",
+                "nodes": [
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/thalan-bowen-v2.png",
+                    "title": "Schiffszimmermann",
+                    "subtitle": "Thalan Bowen",
+                    "text": "24 Jahre · Talgarth. Schiffszimmermann aus einer Werftfamilie; kümmert sich um Rumpf, Spanten und Lecks."
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/neddwyn-bevan.png",
+                    "title": "Feldscher",
+                    "subtitle": "Neddwyn Bevan",
+                    "text": "26 Jahre · Talgarth. Ruhiger und sorgfältiger Feldscher; versorgt Wunden und Brüche und kennt Heilkräuter."
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/perwyn-neddeth-v3.png",
+                    "title": "Schiffsmeier",
+                    "subtitle": "Perwyn Neddeth",
+                    "text": "22 Jahre · Vennyr. Verwaltet Kasse, Sold und Rechnungen; nüchtern und zahlenfest."
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/iwrban-dyger.png",
+                    "title": "Schiffsmusikant",
+                    "subtitle": "Iwrban Dyger",
+                    "text": "23 Jahre · Talgarth. Fiedel, Seemannslieder und Arbeitstakt; Musikant, kein ausgebildeter Barddwyr."
+                  }
+                ]
+              },
+              {
+                "label": "Ausguck",
+                "nodes": [
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/leif-nebelkind.png",
+                    "title": "Ausguck",
+                    "subtitle": "Leif Nebelkind",
+                    "text": "18 Jahre · Aldrimar. Leichtfüßig und scharfsichtig; erkennt Segel und Küstenzeichen früh."
+                  }
+                ]
+              },
+              {
+                "label": "Segel und Bordwache",
+                "nodes": [
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/bjarne-rotstraehne.png",
+                    "title": "Segelmeister",
+                    "subtitle": "Bjarne Rotsträhne",
+                    "text": "23 Jahre · Aldrimar. Kräftiger und seefester Segelmeister; verantwortet Segeltrimm, Takelage und Decksmanöver."
+                  },
+                  {
+                    "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/gwaeden-beryn.png",
+                    "title": "Wachmeister",
+                    "subtitle": "Gwaeden Beryn",
+                    "text": "26 Jahre · Talgarth. Teilt Wachen ein; diszipliniert und aufmerksam an Deck und im Hafen."
+                  }
+                ]
+              }
+            ],
+            "footerNote": "66 Mannschaftsposten · 28 namentlich besetzt · 38 noch offen. Bootsmops und Admiral Krümel zählen nicht zur Mannschaftsstärke.",
+            "backLabel": "Zurück zur Übersicht",
+            "printLabel": "Akte drucken"
+          },
+          "commentThreadKey": "2"
+        },
+        {
+          "pageTitle": "Gruppenübersicht",
+          "landingPage": true,
+          "landing": {
+            "bannerImage": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/der-seebaer-wappen.png",
+            "title": "Rhydians Schiffsmannschaft",
+            "subtitle": "Die Besatzung des Seebären",
+            "memberTitle": "Aktuelle Gruppe",
+            "questTitle": "Aufgaben & Quests",
+            "notesTitle": "Notizen",
+            "eventsTitle": "Ereignisse",
+            "mapTitle": "Aktuelle Karte",
+            "mapKartenId": "",
+            "mapImage": "",
+            "mapLink": "",
+            "mapButtonLabel": "Karte öffnen",
+            "infoTitle": "Informationen",
+            "members": [],
+            "quests": [],
+            "notes": [],
+            "events": [],
+            "info": [],
+            "group": {
+              "version": 1,
+              "location": "",
+              "activity": "",
+              "status": "",
+              "supplies": "",
+              "threadId": "",
+              "sceneThreads": [],
+              "members": [],
+              "guests": [],
+              "presets": [],
+              "treasury": {
+                "openingCopper": null,
+                "entries": []
+              }
+            }
+          },
+          "stats": [],
+          "commentDivider": false,
+          "commentSequence": [],
+          "commentThreadKey": "group-overview"
+        },
+        {
+          "schemaVersion": 1,
+          "image": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/feier-2026-10-05/gruppenbild-02.png",
+          "imageWidth": 38,
+          "pageTitle": "An Bord des Seebären",
+          "sessionPage": true,
+          "sessionIntro": "Der Seebär ist Rhydian Arths Kriegskogge im Dienst des Hauses Arth. Kapitän, Maate, Ritter und Seeleute teilen hier Fahrten, Wachen und Feierabende. Neben 60–70 Mann haben auch Iantos schlafliebender Arth-Bär Bootsmops und die verwöhnte Schiffskatze Admiral Krümel ihren festen Platz an Bord.",
+          "sessionHint": "Setze die gemeinsame Szene an Bord des Seebären als Kommentar fort.",
+          "sessionEmptyTitle": "An Bord des Seebären",
+          "sessionEmptyText": "Eine neue Fahrt, ein Abend im Mannschaftsquartier oder der nächste Streit um Admiral Krümels Lieblingsplatz – hier beginnt die Szene.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          },
+          "imageFit": "contain",
+          "commentThreadKey": "3"
+        }
+      ]
+    }
+  }
+}

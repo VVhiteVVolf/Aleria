@@ -7,6 +7,20 @@ let _moduleEditorInitialSignature = '';
 let _moduleEditorUndoSnapshot = null;
 let _moduleEditorPendingCommentImport = null;
 
+// Local editorial unlock and Firebase roles are separate permissions. The local
+// gate allows the existing browser editor; Firebase still enforces remote writes.
+function canEditModuleContent() {
+  return _moduleEditorAuthorized || globalThis._fbAuth?.getAccess?.().canEditSharedContent === true;
+}
+
+function requestModuleEditorAccess(onAuthorized) {
+  if (canEditModuleContent()) {
+    onAuthorized();
+    return;
+  }
+  openModuleEditorAccessGate(onAuthorized);
+}
+
 async function hashModuleEditorCode(code) {
   const normalized = String(code || '').trim();
   if (!normalized) return '';

@@ -1,25 +1,28 @@
 import { createBlankHouseFamily } from './blank-house-family-factory.js';
-import { normalizeHouseProfile } from '../domain/house-profile.js';
-import { BLODYN_REGION_EMBLEMS } from './blodyn-house-profiles.js';
-import { VENNYR_TERRITORIES, VENNYR_TERRITORIAL_HOUSES } from './vennyr-territorial-catalog.js';
+import { VENNYR_TERRITORIAL_HOUSES } from './vennyr-territorial-catalog.js';
+import { getVennyrHouseProfile } from './vennyr-house-profiles.js';
+import { HOUSE_BLODEUWEDD_FAMILY } from './house-blodeuwedd-family.js';
+import { HOUSE_MORGANT_FAMILY } from './house-morgant-family.js';
+import { HOUSE_SERENOC_FAMILY } from './house-serenoc-family.js';
+import { HOUSE_MORLAIS_FAMILY } from './house-morlais-family.js';
+
+import { HOUSE_CAERDYN_FAMILY } from './house-caerdyn-family.js';
+import { HOUSE_DREWI_FAMILY } from './house-drewi-family.js';
+import { HOUSE_GWANRHYD_FAMILY } from './house-gwanrhyd-family.js';
+import { HOUSE_BOCHDEW_FAMILY } from './house-bochdew-family.js';
+import { HOUSE_UDGORN_FAMILY } from './house-udgorn-family.js';
+import { HOUSE_BALAURIC_FAMILY } from './house-balauric-family.js';
+import { HOUSE_MORGRYN_FAMILY } from './house-morgryn-family.js';
+import { HOUSE_GWENYEN_FAMILY } from './house-gwenyen-family.js';
+import { HOUSE_CRWYNOG_FAMILY } from './house-crwynog-family.js';
+
+const COMPLETED_FAMILIES = new Map([HOUSE_BLODEUWEDD_FAMILY, HOUSE_MORGANT_FAMILY, HOUSE_SERENOC_FAMILY, HOUSE_MORLAIS_FAMILY, HOUSE_CAERDYN_FAMILY, HOUSE_DREWI_FAMILY, HOUSE_GWANRHYD_FAMILY, HOUSE_BOCHDEW_FAMILY, HOUSE_UDGORN_FAMILY, HOUSE_BALAURIC_FAMILY, HOUSE_MORGRYN_FAMILY, HOUSE_GWENYEN_FAMILY, HOUSE_CRWYNOG_FAMILY]
+  .map(family => [family.document.id, family]));
 
 function createTerritorialHouseFamily(house) {
-  const territory = VENNYR_TERRITORIES.find(entry => entry.name === house.region);
-  const houseProfile = normalizeHouseProfile({
-    rankId: house.rankId,
-    kingdom: 'Vennyr',
-    county: house.region,
-    barony: house.lordship || '',
-    seat: house.seat,
-    liegeHouseId: house.liegeFamilyId,
-    liegeHouseName: house.liegeHouseName,
-    regionEmblems: {
-      kingdom: BLODYN_REGION_EMBLEMS.vennyr,
-      county: territory.emblemPath,
-      barony: house.lordship === 'Baronie Hoyers Krone' ? BLODYN_REGION_EMBLEMS.hoyersKrone : '',
-      seat: house.seat === 'Lyndor' ? BLODYN_REGION_EMBLEMS.lyndor : ''
-    }
-  });
+  const completed = COMPLETED_FAMILIES.get(house.familyId);
+  if (completed) return completed;
+  const houseProfile = getVennyrHouseProfile(house.familyId);
   const family = createBlankHouseFamily({
     id: house.familyId,
     title: `Haus ${house.name}`,

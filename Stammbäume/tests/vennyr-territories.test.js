@@ -35,19 +35,20 @@ test('Vennyrs 25 belegte Häuser erscheinen einmal unter den sechs richtigen Obe
   }
 });
 
-test('die 13 neuen Hausakten enthalten Wappen und Sitze, aber keine erfundenen Stammbäume oder Ränge', () => {
+test('alle dreizehn neuen Hausakten enthalten ihre ergänzten Quellenlinien, Wappen und Sitze ohne erfundene Ränge', () => {
   assert.equal(VENNYR_NEW_HOUSE_FAMILIES.length, 13);
+  assert.equal(VENNYR_NEW_HOUSE_FAMILIES.filter(family => family.extensions.blankFamily).length, 0);
   for (const family of VENNYR_NEW_HOUSE_FAMILIES) {
     assertValidFamily(family);
-    assert.equal(family.extensions.blankFamily, true);
+    assert.equal(family.extensions.blankFamily, false);
     assert.equal(family.document.houseProfile.rankId, 'unknown');
     assert.ok(family.document.houseProfile.seat);
     assert.ok(family.document.emblem);
     for (const collection of ['persons', 'partnerships', 'parentages', 'cadetBranches', 'timeJumps']) {
-      assert.deepEqual(family[collection], [], `${family.document.id}: ${collection}`);
+      assert.ok(Array.isArray(family[collection]), `${family.document.id}: ${collection}`);
     }
-    assert.equal(family.lineage.founderPartnershipId, '');
-    assert.equal(family.view.focusPersonId, '');
+    assert.ok(family.lineage.founderPartnershipId);
+    assert.ok(family.view.focusPersonId);
   }
   assert.equal(getRegisteredFamily('haus-diafol').houseProfile.rankId, 'unknown');
 });
@@ -86,7 +87,7 @@ test('Diancs Rangkorrektur migriert alte Gwynlann-Akten und bewahrt lokale Inhal
   const before = normalizeFamily(stale);
   const upgraded = resolveRegisteredFamilyUpgrade(registered, stale);
   assert.equal(upgraded.document.houseProfile.rankId, 'county');
-  assert.equal(upgraded.extensions.sourceRevision, 3);
+  assert.equal(upgraded.extensions.sourceRevision, registered.extensions.sourceRevision);
   assert.deepEqual(upgraded.document.houseProfile.secondarySeats, ['Lokaler Sitz']);
   assert.deepEqual(upgraded.lineage, before.lineage);
   assert.deepEqual(upgraded.view, before.view);

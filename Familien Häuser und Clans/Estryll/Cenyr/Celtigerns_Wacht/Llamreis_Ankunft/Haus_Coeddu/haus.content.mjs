@@ -19,7 +19,7 @@ export const HOUSE_CONTENT = {
   "prepared": true,
   "registerPage": true,
   "biographySourceRevision": 2,
-  "biographyPreviousDefaultFingerprints": ["2223:5a8fd8ce:2d6090ec"],
+  "biographyPreviousDefaultFingerprints": ["2223:5a8fd8ce:2d6090ec", "2237:9f388769:e74117ff"],
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {

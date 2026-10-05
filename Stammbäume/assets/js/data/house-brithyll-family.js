@@ -1,3 +1,4 @@
+import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -188,7 +189,7 @@ function marriedAway(id, name, partnershipId, houseId, emblem = '', options = {}
   });
 }
 
-export const HOUSE_BRITHYLL_FAMILY = Object.freeze({
+export const HOUSE_BRITHYLL_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -425,4 +426,4 @@ export const HOUSE_BRITHYLL_FAMILY = Object.freeze({
     registryManagedRecordFields: ['folderPath'],
     registryManagedViewFields: ['focusPersonId', 'limitGenerations']
   }
-});
+}));

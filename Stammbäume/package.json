@@ -3,6 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test tests/registry-browser.test.js tests/house-bradrhith.test.js tests/crew-family-records.test.js tests/coeddu-craigddu.test.js tests/person-entry-viewport.test.js tests/house-cwingod.test.js tests/vennyr-territories.test.js && node tests/run-tests.js"
+    "test": "node --test tests/registry-browser.test.js tests/house-bradrhith.test.js tests/crew-family-records.test.js tests/coeddu-craigddu.test.js tests/person-entry-viewport.test.js tests/house-cwingod.test.js tests/vennyr-territories.test.js tests/vennyr-bluetenland-families.test.js tests/vennyr-remaining-families.test.js tests/ceitheach-territories.test.js tests/ceitheach-source-families.test.js tests/ceitheach-additional-families.test.js && node tests/run-tests.js"
   }
 }

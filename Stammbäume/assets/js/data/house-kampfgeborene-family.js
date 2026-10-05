@@ -1,3 +1,4 @@
+import { withCeitheachSourceCounterUpgrade } from './ceitheach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -211,7 +212,7 @@ function marriedAway(id, name, partnershipId, houseId, targetFamilyId, emblem = 
   });
 }
 
-export const HOUSE_KAMPFGEBORENE_FAMILY = Object.freeze({
+export const HOUSE_KAMPFGEBORENE_FAMILY = Object.freeze(withCeitheachSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -520,4 +521,4 @@ export const HOUSE_KAMPFGEBORENE_FAMILY = Object.freeze({
     registryManagedRecordFields: ['folderPath'],
     registryManagedViewFields: ['focusPersonId', 'limitGenerations']
   }
-});
+}));
