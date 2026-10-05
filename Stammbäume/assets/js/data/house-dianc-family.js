@@ -445,11 +445,14 @@ export const HOUSE_DIANC_GWYNLANN_FAMILY = Object.freeze({
     blankFamily: false,
     originLine: true,
     successorFamilyId: 'haus-dianc-aberdail',
-    sourceRevision: 2,
+    sourceRevision: 3,
+    // Revision 3 ergänzt nur den Rang; die Genealogie bleibt auf Quellenstand 2.
+    registryManagedEntitySourceRevision: 2,
+    registryManagedHouseProfileFields: ['rankId'],
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],
     registryManagedLineageFields: ['founderPartnershipId', 'houseId'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
-    sourceNote: 'Getrennte Gwynlann-Herkunftsakte nach der Dianc-Tabelle. Arthfael und Gwendolen tragen Hausknoten und seriellen Zeitsprung; sämtliche historischen Äste, Ehen und Wegverheiratungen bleiben erhalten. Gingalain erhält den alleinigen Übergang nach Aberdail. Marn und Delwyn bleiben als vor der Flucht geborene Überlebende genealogisch in Gwynlann sichtbar; die nach 1720 geborenen Gwenifer und Barry erscheinen nur in Aberdail.'
+    sourceNote: 'Getrennte Gwynlann-Herkunftsakte nach der Dianc-Tabelle. Arthfael und Gwendolen tragen Hausknoten und seriellen Zeitsprung; sämtliche historischen Äste, Ehen und Wegverheiratungen bleiben erhalten. Gingalain erhält den alleinigen Übergang nach Aberdail. Marn und Delwyn bleiben als vor der Flucht geborene Überlebende genealogisch in Gwynlann sichtbar; die nach 1720 geborenen Gwenifer und Barry erscheinen nur in Aberdail. Die Oberherrschaftstabelle von Tir Mynddoedd belegt Dianc als Penron-Haus (Grafengeschlecht); die Genealogie bleibt bei dieser territorialen Ergänzung unverändert.'
   }
 });
 

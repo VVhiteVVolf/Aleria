@@ -432,6 +432,7 @@ import { HOUSE_BLODYN_ABERDAIL_FAMILY } from '../assets/js/data/house-blodyn-abe
 import { HOUSE_BLODYN_TALGARTH_FAMILY } from '../assets/js/data/house-blodyn-talgarth-family.js';
 import { HOUSE_BLODYN_PORTRAITS } from '../assets/js/data/house-blodyn-portraits.js';
 import { BLODYN_HOUSE_FAMILIES } from '../assets/js/data/blodyn-house-families.js';
+import { VENNYR_NEW_HOUSE_FAMILIES } from '../assets/js/data/vennyr-house-families.js';
 import { HOUSE_WOLFSHORN_FAMILY } from '../assets/js/data/house-wolfshorn-family.js';
 import { HOUSE_WOLFSHORN_PORTRAITS } from '../assets/js/data/house-wolfshorn-portraits.js';
 import {
@@ -7343,6 +7344,7 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
       + GRAUE_WEITE_DEPENDENT_HOUSE_FAMILIES.length + GRAUE_WEITE_ORIGIN_HOUSE_FAMILIES.length
       + KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES.length + KLAUENINSEL_ORIGIN_HOUSE_FAMILIES.length
       + MOCHDAER_ORIGIN_HOUSE_FAMILIES.length + BLODYN_HOUSE_FAMILIES.length
+      + VENNYR_NEW_HOUSE_FAMILIES.length
       + AELDRUNMAR_HOUSE_FAMILIES.length + ALDRIMAR_HOUSE_FAMILIES.length
       + KRONENTAL_DEPENDENT_HOUSE_FAMILIES.length
       + IVARSHEIM_DEPENDENT_HOUSE_FAMILIES.length + IVARSHEIM_ORIGIN_HOUSE_FAMILIES.length
@@ -19058,7 +19060,7 @@ test('bildet Diancs vollständige Herkunftslinie aus Gwynlann ohne Fokusbegrenzu
   assert.equal(family.extensions.blankFamily, false);
   assert.equal(family.extensions.originLine, true);
   assert.equal(family.extensions.successorFamilyId, 'haus-dianc-aberdail');
-  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.extensions.sourceRevision, 3);
   assert.equal(family.persons.length, 41);
   assert.equal(family.partnerships.length, 18);
   assert.equal(family.parentages.length, 22);
@@ -19259,7 +19261,7 @@ test('ersetzt Diancs frühere lokale Platzhalterakten in Gwynlann und Aberdail',
     staleFamily.extensions.sourceRevision = 1;
 
     const upgraded = resolveRegisteredFamilyUpgrade(family, staleFamily);
-    assert.equal(upgraded.extensions.sourceRevision, 2);
+    assert.equal(upgraded.extensions.sourceRevision, family === HOUSE_DIANC_GWYNLANN_FAMILY ? 3 : 2);
     assert.equal(upgraded.extensions.blankFamily, false);
     assert.equal(upgraded.persons.length, family.persons.length);
     assert.equal(upgraded.parentages.length, family.parentages.length);
@@ -20975,7 +20977,7 @@ test('zeigt die Graue Weite und ihre vier Vennyr-Ursprünge als getrennte Regist
   const vennyr = registryTree.folders.get('Vennyr');
   assert.deepEqual(
     vennyr.folders.get('Tir Dwyrain').folders.get('Branon').records.map(record => record.id),
-    ['haus-blaidd']
+    ['haus-blaidd', 'haus-gwanrhyd']
   );
   assert.deepEqual(
     vennyr.folders.get('Tir Dwyrain').folders.get('Tirwedd').records.map(record => record.id),

@@ -60,6 +60,7 @@ import {
 } from './klaueninseln-house-families.js?v=eira-20261005';
 import { MOCHDAER_ORIGIN_HOUSE_FAMILIES } from './mochdaer-house-families.js';
 import { BLODYN_HOUSE_FAMILIES } from './blodyn-house-families.js';
+import { VENNYR_NEW_HOUSE_FAMILIES } from './vennyr-house-families.js';
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
 import { HOUSE_BIOGRAPHY_DEFAULTS } from './house-biographies.registry.js?v=gwendolyn-20260911h';
 import { withHouseBiographyDefault } from '../modules/house-biography/house-biography-registry-default.js';
@@ -466,6 +467,11 @@ export const FAMILY_REGISTRY = Object.freeze([
     type: 'dynasty'
   })),
   ...BLODYN_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family
+  })),
+  ...VENNYR_NEW_HOUSE_FAMILIES.map(family => familyRecord({
     id: family.document.id,
     title: family.document.title,
     family

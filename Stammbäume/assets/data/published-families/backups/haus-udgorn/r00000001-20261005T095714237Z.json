@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-udgorn",
+  "revision": 1,
+  "updatedAt": "2026-10-05T09:57:14.237Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-udgorn",
+      "title": "Haus Udgorn",
+      "motto": "",
+      "description": "Haus Udgorn mit Sitz in Mynyddharbwr, Tir Gorllewin, Vennyr. Die Familiengeschichte wird gesondert ergänzt.",
+      "emblem": "assets/images/houses/Vennyr/haus-udgorn.png",
+      "houseProfile": {
+        "rankId": "unknown",
+        "seat": "Mynyddharbwr",
+        "barony": "",
+        "county": "Tir Gorllewin",
+        "kingdom": "Vennyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-dyfrgi",
+        "liegeHouseName": "Haus Dyfrgi",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/Vennyr/Tir Gorllewin.png",
+          "kingdom": "assets/images/regions/vennyr.png"
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-udgorn",
+        "name": "Haus Udgorn",
+        "motto": "",
+        "emblem": "assets/images/houses/Vennyr/haus-udgorn.png",
+        "status": "active"
+      }
+    ],
+    "persons": [],
+    "partnerships": [],
+    "parentages": [],
+    "lineage": {
+      "founderPartnershipId": "",
+      "houseId": "house-udgorn",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "cadetBranches": [],
+    "timeJumps": [],
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": true,
+      "sourceRevision": 1,
+      "territorialSource": {
+        "attachmentId": "4b4b4817-354d-416c-86cc-b6595742fbc6",
+        "row": 74,
+        "column": 1
+      },
+      "sourceNote": "Territoriale Hausakte nach der Vennyr-Oberherrschaftstabelle. Sitz, Oberherrschaft und Wappen sind belegt. Der Hausrang ist nicht vermerkt; Personen und Abstammungen folgen erst mit der gesonderten Stammbaumquelle."
+    }
+  }
+}

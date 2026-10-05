@@ -1,0 +1,2545 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-dianc",
+  "revision": 1,
+  "updatedAt": "2026-10-05T09:57:14.237Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-dianc",
+      "title": "Haus Dianc O'Gwynlann",
+      "motto": "",
+      "description": "Vollständige vennyrianische Herkunftsakte der Dianc aus Gwynlann. Gingalain begründet 1720 die getrennte Ritterfürstenlinie von Aberdail; der über Murvin zu Delwyn führende Überlebendenzweig wird dort parallel mitgeführt.",
+      "emblem": "assets/images/houses/Klaueninsel/haus-dianc.png",
+      "houseProfile": {
+        "rankId": "county",
+        "seat": "",
+        "barony": "Gwynlann",
+        "county": "Tir Mynddoedd",
+        "kingdom": "Vennyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/Vennyr/Tir Mynddoedd.png",
+          "kingdom": "assets/images/regions/vennyr.png"
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-dianc",
+        "name": "Haus Dianc O'Gwynlann",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-dianc.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-dianc-aberdail",
+        "name": "Haus Dianc O'Aberdail",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-dianc.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-blodyn",
+        "name": "Haus Blodyn O'Llyndor",
+        "motto": "",
+        "emblem": "assets/images/houses/Blütenland/haus-blodyn.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-blodyn-talgarth",
+        "name": "Haus Blodyn O'Talgarth",
+        "motto": "",
+        "emblem": "assets/images/houses/Blütenland/haus-blodyn.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-arfordir",
+        "name": "Haus Arfordir O'Serenlyn",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-arfordir.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-arth",
+        "name": "Haus Arth O'Talgarth",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-arth.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-bochdew",
+        "name": "Haus Bochdew",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-drewi",
+        "name": "Haus Drewi",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-forsyth",
+        "name": "Haus Forsyth",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-lyfant",
+        "name": "Haus Lyfant O'Derwyddion",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/Silberwald/haus-lyfant.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-illygoden",
+        "name": "Haus Illygoden O'Tirwedd",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/Schimmerküste/haus-illygoden.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-crwynog",
+        "name": "Haus Crwynog",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-pysgod",
+        "name": "Haus Pysgod O'Tredegar",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/haus-pysgod.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-blaidd",
+        "name": "Haus Blaidd O'Branon",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/Schimmerküste/haus-blaidd.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-walwrs",
+        "name": "Haus Walwrs O'Traeth",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-walwrs.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-crafanc",
+        "name": "Haus Crafanc O'Talgarth",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-crafanc.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-mochdaer-cerrigarth",
+        "name": "Haus Mochdaer O'Cerrigarth",
+        "motto": "",
+        "emblem": "assets/images/houses/Weidebucht/Melwas Au/haus-mochdaer.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      }
+    ],
+    "persons": [
+      {
+        "id": "arthfael-dianc",
+        "worldPersonId": "person--haus-dianc--arthfael-dianc",
+        "name": "Arthfael Dianc",
+        "title": "Gründer des Hauses Dianc O'Gwynlann",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-blodyn/arthfael-dianc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "founder",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "gwendolen-blodyn",
+        "worldPersonId": "person--haus-blodyn--gwendolen-blodyn",
+        "name": "Gwendolen Blodyn",
+        "title": "Prinzessin von Vennyr · Mitgründerin des Hauses Dianc",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-blodyn/gwendolen-blodyn.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-blodyn",
+        "familyRole": "founder",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "kynwrig-dianc",
+        "worldPersonId": "person--haus-dianc--kynwrig-dianc",
+        "name": "Kynwrig Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1618",
+        "death": "1687",
+        "portrait": "assets/images/portraits/haus-blodyn/kynwrig-dianc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "myfanwy-1618-blodyn",
+        "worldPersonId": "person--haus-blodyn--myfanwy-1618-blodyn",
+        "name": "Myfanwy Blodyn",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1618",
+        "death": "1699",
+        "portrait": "assets/images/portraits/haus-blodyn/myfanwy-1618-blodyn.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-blodyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "jenifrydd-dianc",
+        "worldPersonId": "person--haus-dianc--jenifrydd-dianc",
+        "name": "Jenifrydd Dianc",
+        "title": "Wegverheiratet an Haus Arfordir",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1612",
+        "death": "1659",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "newyddllyn-arfordir",
+        "worldPersonId": "person--haus-arfordir--newyddllyn-arfordir",
+        "name": "Newyddllyn Arfordir",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1610",
+        "death": "1679",
+        "portrait": "assets/images/portraits/haus-dianc/newyddllyn-arfordir.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arfordir",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "gareth-dianc",
+        "worldPersonId": "person--haus-dianc--gareth-dianc",
+        "name": "Gareth Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1635",
+        "death": "1700",
+        "portrait": "assets/images/portraits/haus-arth/gareth-dianc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "ffraid-arth",
+        "worldPersonId": "person--haus-arth--ffraid-arth",
+        "name": "Ffraid Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1633",
+        "death": "1688",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "kerenza-dianc",
+        "worldPersonId": "person--haus-dianc--kerenza-dianc",
+        "name": "Kerenza Dianc",
+        "title": "Wegverheiratet an Haus Bochdew",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1632",
+        "death": "1679",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "mawr-bochdew",
+        "worldPersonId": "person--haus-bochdew--mawr-bochdew",
+        "name": "Mawr Bochdew",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1628",
+        "death": "1704",
+        "portrait": "assets/images/portraits/haus-dianc/mawr-bochdew.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-bochdew",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "kyvwlch-dianc",
+        "worldPersonId": "person--haus-dianc--kyvwlch-dianc",
+        "name": "Kyvwlch Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1633",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-dianc/kyvwlch-dianc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Das gedruckte Geburtsjahr 1933 wurde wegen der Generationenfolge als 1633 normalisiert; sein Todesjahr ist nicht überliefert.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "eleri-drewi",
+        "worldPersonId": "person--haus-drewi--eleri-drewi",
+        "name": "Eleri Drewi",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1635",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-drewi",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "itan-dianc",
+        "worldPersonId": "person--haus-dianc--itan-dianc",
+        "name": "Itan Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1653",
+        "death": "1712",
+        "portrait": "assets/images/portraits/haus-dianc/itan-dianc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "fionnghuala-forsyth",
+        "worldPersonId": "person--haus-forsyth--fionnghuala-forsyth",
+        "name": "Fionnghuala Forsyth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1653",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-forsyth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "gwenhwyfach-dianc",
+        "worldPersonId": "person--haus-dianc--gwenhwyfach-dianc",
+        "name": "Gwenhwyfach Dianc",
+        "title": "Wegverheiratet an Haus Lyfant",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1655",
+        "death": "1699",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "Das Todesjahr 1699 folgt der ausgearbeiteten Lyfant-Gegenakte.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "macsen-lyfant",
+        "worldPersonId": "person--haus-lyfant--macsen-lyfant",
+        "name": "Macsen Lyfant",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1654",
+        "death": "1698",
+        "portrait": "assets/images/portraits/haus-lyfant/macsen-lyfant.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-lyfant",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "sywlch-dianc",
+        "worldPersonId": "person--haus-dianc--sywlch-dianc",
+        "name": "Sywlch Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1655",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-illygoden/sywlch-dianc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die direkte Dianc-Quelle nennt 1720 als Todesjahr; die Ehe endet bereits 1690 mit Wynnes Tod.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "wynne-illygoden",
+        "worldPersonId": "person--haus-illygoden--wynne-illygoden",
+        "name": "Wynne Illygoden",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1655",
+        "death": "1690",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-illygoden",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Das Todesjahr 1690 folgt der ausgearbeiteten Illygoden-Gegenakte.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "dolena-dianc",
+        "worldPersonId": "person--haus-dianc--dolena-dianc",
+        "name": "Dolena Dianc",
+        "title": "Wegverheiratet an Haus Crwynog",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1657",
+        "death": "1720",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "ehangwen-crwynog",
+        "worldPersonId": "person--haus-crwynog--ehangwen-crwynog",
+        "name": "Ehangwen Crwynog",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1651",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-dianc/ehangwen-crwynog.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-crwynog",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "carantec-dianc",
+        "worldPersonId": "person--haus-dianc--carantec-dianc",
+        "name": "Carantec Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1672",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-dianc/carantec-dianc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "lowri-arfordir",
+        "worldPersonId": "person--haus-arfordir--lowri-arfordir",
+        "name": "Lowri Arfordir",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1677",
+        "death": "1730",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arfordir",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "mairwen-dianc",
+        "worldPersonId": "person--haus-dianc--mairwen-dianc",
+        "name": "Mairwen Dianc",
+        "title": "Wegverheiratet an Haus Pysgod",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1673",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pysgod/mairwen-dianc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "idris-pysgod",
+        "worldPersonId": "person--haus-pysgod--idris-pysgod",
+        "name": "Idris Pysgod",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "????",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pysgod/idris-pysgod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pysgod",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Das gedruckte Geburtsjahr 1772 ist mit Ehe und Sohn unvereinbar und bleibt deshalb unbekannt.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "caron-dianc",
+        "worldPersonId": "person--haus-dianc--caron-dianc",
+        "name": "Caron Dianc",
+        "title": "Wegverheiratet an Haus Blaidd",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1673",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-blaidd/caron-dianc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "pelleas-blaidd",
+        "worldPersonId": "person--haus-blaidd--pelleas-blaidd",
+        "name": "Pelleas Blaidd",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1669",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-blaidd/pelleas-blaidd.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-blaidd",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Das gedruckte Geburtsjahr 1769 wurde nach der kanonischen Blaidd-Gegenakte zu 1669 korrigiert.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "ysgonan-dianc",
+        "worldPersonId": "person--haus-dianc--ysgonan-dianc",
+        "name": "Ysgonan Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1673",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-dianc/ysgonan-dianc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "zenna-walwrs",
+        "worldPersonId": "person--haus-walwrs--zenna-walwrs",
+        "name": "Zenna Walwrs",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1675",
+        "death": "1733",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-walwrs",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "gingalain-dianc",
+        "worldPersonId": "person--haus-dianc--gingalain-dianc",
+        "name": "Gingalain Dianc",
+        "title": "Begründer der Aberdail-Linie",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-crafanc/gingalain-dianc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "Gingalain bleibt als Sohn Carantecs und Lowris in Gwynlann sichtbar. Seine neue Linie wird ausschließlich in der verknüpften Aberdail-Akte fortgeführt.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "glaw-crafanc",
+        "worldPersonId": "person--haus-crafanc--glaw-crafanc",
+        "name": "Glaw Crafanc",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-crafanc/glaw-crafanc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-crafanc",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "cerny-dianc",
+        "worldPersonId": "person--haus-dianc--cerny-dianc",
+        "name": "Cerny Dianc",
+        "title": "Wegverheiratet an Haus Blodyn O'Talgarth",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1692",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-blodyn/cerny-dianc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "yhon-blodyn",
+        "worldPersonId": "person--haus-blodyn--yhon-blodyn",
+        "name": "Yhon Blodyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-blodyn/yhon-blodyn.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-blodyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "werbenec-dianc",
+        "worldPersonId": "person--haus-dianc--werbenec-dianc",
+        "name": "Werbenec Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1694",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-dianc/werbenec-dianc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "prys-bochdew",
+        "worldPersonId": "person--haus-bochdew--prys-bochdew",
+        "name": "Prys Bochdew",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1693",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-dianc/prys-bochdew.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-bochdew",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "murvin-dianc",
+        "worldPersonId": "person--haus-dianc--murvin-dianc",
+        "name": "Murvin Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1698",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-mochdaer/murvin-dianc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Murvin fällt 1720. Er wird in Aberdail als notwendiger Vateranker Delwyns erneut dargestellt.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "vanna-mochdaer",
+        "worldPersonId": "person--haus-mochdaer-cerrigarth--vanna-mochdaer",
+        "name": "Vanna Mochdaer",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1698",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-mochdaer/vanna-mochdaer.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-mochdaer-cerrigarth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "trevar-dianc",
+        "worldPersonId": "person--haus-dianc--trevar-dianc",
+        "name": "Trevar Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1702",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-dianc/trevar-dianc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "marn-dianc",
+        "worldPersonId": "person--haus-dianc--marn-dianc",
+        "name": "Marn Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-dianc/marn-dianc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "dewi-dianc",
+        "worldPersonId": "person--haus-dianc--dewi-dianc",
+        "name": "Dewi Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1710",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-dianc/dewi-dianc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Quelle kennzeichnet Dewi als verstorben, nennt aber kein Todesjahr.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "ened-dianc",
+        "worldPersonId": "person--haus-dianc--ened-dianc",
+        "name": "Ened Dianc",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1717",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-dianc/ened-dianc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Quelle kennzeichnet Ened als verstorben, nennt aber kein Todesjahr.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "delwyn-dianc",
+        "worldPersonId": "person--haus-dianc--delwyn-dianc",
+        "name": "Delwyn Dianc",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-dianc/delwyn-dianc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dianc",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "Überlebender Sohn Murvins und Vannas; seine Fortsetzung wird parallel zu Gingalain in Aberdail gezeigt.",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-gwendolen-arthfael",
+        "participantIds": [
+          "gwendolen-blodyn",
+          "arthfael-dianc"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-myfanwy-kynwrig",
+        "participantIds": [
+          "myfanwy-1618-blodyn",
+          "kynwrig-dianc"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1687",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-jenifrydd-newyddllyn-dianc",
+        "participantIds": [
+          "jenifrydd-dianc",
+          "newyddllyn-arfordir"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1659",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-ffraid-gareth",
+        "participantIds": [
+          "ffraid-arth",
+          "gareth-dianc"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1688",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-kerenza-mawr-dianc",
+        "participantIds": [
+          "kerenza-dianc",
+          "mawr-bochdew"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1679",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-kyvwlch-eleri-dianc",
+        "participantIds": [
+          "kyvwlch-dianc",
+          "eleri-drewi"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-itan-fionnghuala-dianc",
+        "participantIds": [
+          "itan-dianc",
+          "fionnghuala-forsyth"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1712",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-macsen-gwenhwyfach-lyfant",
+        "participantIds": [
+          "macsen-lyfant",
+          "gwenhwyfach-dianc"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1698",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-wynne-sywlch-illygoden",
+        "participantIds": [
+          "wynne-illygoden",
+          "sywlch-dianc"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1690",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-dolena-ehangwen-dianc",
+        "participantIds": [
+          "dolena-dianc",
+          "ehangwen-crwynog"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1720",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-carantec-lowri-dianc",
+        "participantIds": [
+          "carantec-dianc",
+          "lowri-arfordir"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1720",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-idris-mairwen",
+        "participantIds": [
+          "idris-pysgod",
+          "mairwen-dianc"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-pelleas-caron-blaidd",
+        "participantIds": [
+          "pelleas-blaidd",
+          "caron-dianc"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-ysgonan-zenna-dianc",
+        "participantIds": [
+          "ysgonan-dianc",
+          "zenna-walwrs"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1720",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-glaw-gingalain-crafanc",
+        "participantIds": [
+          "glaw-crafanc",
+          "gingalain-dianc"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-yhon-cerny",
+        "participantIds": [
+          "yhon-blodyn",
+          "cerny-dianc"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1720",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-werbenec-prys-dianc",
+        "participantIds": [
+          "werbenec-dianc",
+          "prys-bochdew"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1720",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-vanna-murvin-mochdaer",
+        "participantIds": [
+          "vanna-mochdaer",
+          "murvin-dianc"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1720",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "dianc-parentage-kynwrig-dianc",
+        "childId": "kynwrig-dianc",
+        "parentIds": [
+          "gwendolen-blodyn",
+          "arthfael-dianc"
+        ],
+        "partnershipId": "marriage-gwendolen-arthfael",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Zwischen dem Gründerpaar und den ab 1612 belegten Linien liegen nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-founders-to-kynwrig-jenifrydd-dianc"
+        }
+      },
+      {
+        "id": "dianc-parentage-jenifrydd-dianc",
+        "childId": "jenifrydd-dianc",
+        "parentIds": [
+          "gwendolen-blodyn",
+          "arthfael-dianc"
+        ],
+        "partnershipId": "marriage-gwendolen-arthfael",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Zwischen dem Gründerpaar und den ab 1612 belegten Linien liegen nicht einzeln überlieferte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-founders-to-kynwrig-jenifrydd-dianc"
+        }
+      },
+      {
+        "id": "dianc-parentage-gareth-dianc",
+        "childId": "gareth-dianc",
+        "parentIds": [
+          "myfanwy-1618-blodyn",
+          "kynwrig-dianc"
+        ],
+        "partnershipId": "marriage-myfanwy-kynwrig",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-kerenza-dianc",
+        "childId": "kerenza-dianc",
+        "parentIds": [
+          "myfanwy-1618-blodyn",
+          "kynwrig-dianc"
+        ],
+        "partnershipId": "marriage-myfanwy-kynwrig",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-kyvwlch-dianc",
+        "childId": "kyvwlch-dianc",
+        "parentIds": [
+          "myfanwy-1618-blodyn",
+          "kynwrig-dianc"
+        ],
+        "partnershipId": "marriage-myfanwy-kynwrig",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-itan-dianc",
+        "childId": "itan-dianc",
+        "parentIds": [
+          "ffraid-arth",
+          "gareth-dianc"
+        ],
+        "partnershipId": "marriage-ffraid-gareth",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-gwenhwyfach-dianc",
+        "childId": "gwenhwyfach-dianc",
+        "parentIds": [
+          "ffraid-arth",
+          "gareth-dianc"
+        ],
+        "partnershipId": "marriage-ffraid-gareth",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-sywlch-dianc",
+        "childId": "sywlch-dianc",
+        "parentIds": [
+          "kyvwlch-dianc",
+          "eleri-drewi"
+        ],
+        "partnershipId": "marriage-kyvwlch-eleri-dianc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-dolena-dianc",
+        "childId": "dolena-dianc",
+        "parentIds": [
+          "kyvwlch-dianc",
+          "eleri-drewi"
+        ],
+        "partnershipId": "marriage-kyvwlch-eleri-dianc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-carantec-dianc",
+        "childId": "carantec-dianc",
+        "parentIds": [
+          "itan-dianc",
+          "fionnghuala-forsyth"
+        ],
+        "partnershipId": "marriage-itan-fionnghuala-dianc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-mairwen-dianc",
+        "childId": "mairwen-dianc",
+        "parentIds": [
+          "itan-dianc",
+          "fionnghuala-forsyth"
+        ],
+        "partnershipId": "marriage-itan-fionnghuala-dianc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-caron-dianc",
+        "childId": "caron-dianc",
+        "parentIds": [
+          "itan-dianc",
+          "fionnghuala-forsyth"
+        ],
+        "partnershipId": "marriage-itan-fionnghuala-dianc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-ysgonan-dianc",
+        "childId": "ysgonan-dianc",
+        "parentIds": [
+          "wynne-illygoden",
+          "sywlch-dianc"
+        ],
+        "partnershipId": "marriage-wynne-sywlch-illygoden",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-gingalain-dianc",
+        "childId": "gingalain-dianc",
+        "parentIds": [
+          "carantec-dianc",
+          "lowri-arfordir"
+        ],
+        "partnershipId": "marriage-carantec-lowri-dianc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-cerny-dianc",
+        "childId": "cerny-dianc",
+        "parentIds": [
+          "carantec-dianc",
+          "lowri-arfordir"
+        ],
+        "partnershipId": "marriage-carantec-lowri-dianc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-werbenec-dianc",
+        "childId": "werbenec-dianc",
+        "parentIds": [
+          "ysgonan-dianc",
+          "zenna-walwrs"
+        ],
+        "partnershipId": "marriage-ysgonan-zenna-dianc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-murvin-dianc",
+        "childId": "murvin-dianc",
+        "parentIds": [
+          "ysgonan-dianc",
+          "zenna-walwrs"
+        ],
+        "partnershipId": "marriage-ysgonan-zenna-dianc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-trevar-dianc",
+        "childId": "trevar-dianc",
+        "parentIds": [
+          "ysgonan-dianc",
+          "zenna-walwrs"
+        ],
+        "partnershipId": "marriage-ysgonan-zenna-dianc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-marn-dianc",
+        "childId": "marn-dianc",
+        "parentIds": [
+          "glaw-crafanc",
+          "gingalain-dianc"
+        ],
+        "partnershipId": "marriage-glaw-gingalain-crafanc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-dewi-dianc",
+        "childId": "dewi-dianc",
+        "parentIds": [
+          "werbenec-dianc",
+          "prys-bochdew"
+        ],
+        "partnershipId": "marriage-werbenec-prys-dianc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-ened-dianc",
+        "childId": "ened-dianc",
+        "parentIds": [
+          "werbenec-dianc",
+          "prys-bochdew"
+        ],
+        "partnershipId": "marriage-werbenec-prys-dianc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "dianc-parentage-delwyn-dianc",
+        "childId": "delwyn-dianc",
+        "parentIds": [
+          "vanna-mochdaer",
+          "murvin-dianc"
+        ],
+        "partnershipId": "marriage-vanna-murvin-mochdaer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-jenifrydd-dianc-arfordir",
+        "name": "Haus Arfordir",
+        "subtitle": "Wegverheiratet an Haus Arfordir",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-jenifrydd-newyddllyn-dianc",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-arfordir",
+        "emblem": "assets/images/houses/Klaueninsel/haus-arfordir.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-arfordir",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-kerenza-dianc-bochdew",
+        "name": "Haus Bochdew",
+        "subtitle": "Wegverheiratet an Haus Bochdew",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-kerenza-mawr-dianc",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-bochdew",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-bochdew",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-gwenhwyfach-dianc-lyfant",
+        "name": "Haus Lyfant",
+        "subtitle": "Wegverheiratet an Haus Lyfant",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-macsen-gwenhwyfach-lyfant",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-lyfant",
+        "emblem": "assets/images/houses/Graue Weite/Silberwald/haus-lyfant.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-lyfant",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-dolena-dianc-crwynog",
+        "name": "Haus Crwynog",
+        "subtitle": "Wegverheiratet an Haus Crwynog",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-dolena-ehangwen-dianc",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-crwynog",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-crwynog",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-mairwen-dianc-pysgod",
+        "name": "Haus Pysgod",
+        "subtitle": "Wegverheiratet an Haus Pysgod",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-idris-mairwen",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-pysgod",
+        "emblem": "assets/images/houses/Graue Weite/haus-pysgod.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-pysgod",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-caron-dianc-blaidd",
+        "name": "Haus Blaidd",
+        "subtitle": "Wegverheiratet an Haus Blaidd",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-pelleas-caron-blaidd",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-blaidd",
+        "emblem": "assets/images/houses/Graue Weite/Schimmerküste/haus-blaidd.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-blaidd",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "married-away-cerny-dianc-blodyn",
+        "name": "Haus Blodyn O'Talgarth",
+        "subtitle": "Wegverheiratet an Haus Blodyn O'Talgarth",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-yhon-cerny",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-blodyn-talgarth",
+        "emblem": "assets/images/houses/Blütenland/haus-blodyn.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-blodyn-talgarth",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "migration-gingalain-dianc-aberdail",
+        "name": "Haus Dianc O'Aberdail",
+        "subtitle": "Von Gingalain begründete neue Ritterfürstenlinie in Aberdail",
+        "linkType": "migration-offshoot",
+        "parentPartnershipId": "",
+        "parentPersonId": "gingalain-dianc",
+        "childIds": [],
+        "houseId": "house-dianc-aberdail",
+        "emblem": "assets/images/houses/Klaueninsel/haus-dianc.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "1720",
+        "targetFamilyId": "haus-dianc-aberdail",
+        "notes": "Der Übergang hängt allein und geradlinig unter Gingalain. In der Zielakte überspannt ein gemeinsamer Herkunftsknoten Gingalains Linie und Murvins zu Delwyn führenden Zweig.",
+        "extensions": {
+          "offshootPlacement": "below"
+        }
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-founders-to-kynwrig-jenifrydd-dianc",
+        "parentPartnershipId": "marriage-gwendolen-arthfael",
+        "sharedParentPartnershipIds": [],
+        "childIds": [
+          "kynwrig-dianc",
+          "jenifrydd-dianc"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1612",
+        "label": "Die belegte Linie setzt 1612 wieder ein",
+        "notes": "Absoluter Generationentrenner: Gründerpaar, Hausknoten, genau ein serieller Zeitsprung und erst danach Kynwrig und Jenifrydd."
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-gwendolen-arthfael",
+      "houseId": "house-dianc",
+      "crestSubtitle": "Alte vennyrianische Linie aus Gwynlann",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "arthfael-dianc",
+      "orientation": "vertical",
+      "ancestorDepth": 20,
+      "descendantDepth": 20,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "originLine": true,
+      "successorFamilyId": "haus-dianc-aberdail",
+      "sourceRevision": 3,
+      "registryManagedEntitySourceRevision": 2,
+      "registryManagedHouseProfileFields": [
+        "rankId"
+      ],
+      "registryManagedExtensionFields": [
+        "blankFamily",
+        "sourceNote"
+      ],
+      "registryManagedLineageFields": [
+        "founderPartnershipId",
+        "houseId"
+      ],
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "ancestorDepth",
+        "descendantDepth",
+        "limitGenerations",
+        "showSiblings"
+      ],
+      "sourceNote": "Getrennte Gwynlann-Herkunftsakte nach der Dianc-Tabelle. Arthfael und Gwendolen tragen Hausknoten und seriellen Zeitsprung; sämtliche historischen Äste, Ehen und Wegverheiratungen bleiben erhalten. Gingalain erhält den alleinigen Übergang nach Aberdail. Marn und Delwyn bleiben als vor der Flucht geborene Überlebende genealogisch in Gwynlann sichtbar; die nach 1720 geborenen Gwenifer und Barry erscheinen nur in Aberdail. Die Oberherrschaftstabelle von Tir Mynddoedd belegt Dianc als Penron-Haus (Grafengeschlecht); die Genealogie bleibt bei dieser territorialen Ergänzung unverändert."
+    }
+  }
+}

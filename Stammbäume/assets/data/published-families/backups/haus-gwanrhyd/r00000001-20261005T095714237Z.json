@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-gwanrhyd",
+  "revision": 1,
+  "updatedAt": "2026-10-05T09:57:14.237Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-gwanrhyd",
+      "title": "Haus Gwanrhyd",
+      "motto": "",
+      "description": "Haus Gwanrhyd mit Sitz in Branon, Tir Dwyrain, Vennyr. Die Familiengeschichte wird gesondert ergänzt.",
+      "emblem": "assets/images/houses/Vennyr/haus-gwanrhyd.png",
+      "houseProfile": {
+        "rankId": "unknown",
+        "seat": "Branon",
+        "barony": "",
+        "county": "Tir Dwyrain",
+        "kingdom": "Vennyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-blaidd",
+        "liegeHouseName": "Haus Blaidd",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "assets/images/regions/Vennyr/Tir Dwyrain.png",
+          "kingdom": "assets/images/regions/vennyr.png"
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-gwanrhyd",
+        "name": "Haus Gwanrhyd",
+        "motto": "",
+        "emblem": "assets/images/houses/Vennyr/haus-gwanrhyd.png",
+        "status": "active"
+      }
+    ],
+    "persons": [],
+    "partnerships": [],
+    "parentages": [],
+    "lineage": {
+      "founderPartnershipId": "",
+      "houseId": "house-gwanrhyd",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "cadetBranches": [],
+    "timeJumps": [],
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": true,
+      "sourceRevision": 1,
+      "territorialSource": {
+        "attachmentId": "05e384ed-77ba-4489-9f2a-4c38043cdf1c",
+        "row": 74,
+        "column": 0
+      },
+      "sourceNote": "Territoriale Hausakte nach der Vennyr-Oberherrschaftstabelle. Sitz, Oberherrschaft und Wappen sind belegt. Der Hausrang ist nicht vermerkt; Personen und Abstammungen folgen erst mit der gesonderten Stammbaumquelle."
+    }
+  }
+}

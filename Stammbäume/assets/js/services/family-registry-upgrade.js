@@ -16,6 +16,13 @@ function sourceRevision(family) {
   return Number.isInteger(revision) && revision >= 0 ? revision : 0;
 }
 
+function shouldApplyManagedEntityFields(registeredFamily, localFamily) {
+  // Eine spätere reine Metadatenrevision darf bereits übernommene Genealogie
+  // nicht erneut überschreiben. Ohne explizite Grenze gilt das bisherige Verhalten.
+  const entitySourceRevision = registeredFamily.extensions?.registryManagedEntitySourceRevision;
+  return !Number.isInteger(entitySourceRevision) || sourceRevision(localFamily) < entitySourceRevision;
+}
+
 function tombstonesFor(family, collection) {
   return new Set(family?.extensions?.registryTombstones?.[collection] || []);
 }
@@ -56,19 +63,21 @@ function mergeEntityExtensions(registeredExtensions = {}, localExtensions = {}) 
   return result;
 }
 
-function mergeEntities(registeredEntities = [], localEntities = [], tombstones = new Set()) {
+function mergeEntities(registeredEntities = [], localEntities = [], tombstones = new Set(), applyManagedFields = true) {
   const localById = new Map(localEntities.map(entity => [entity.id, entity]));
   const merged = registeredEntities.filter(entity => !tombstones.has(entity.id)).map(entity => {
     const localEntity = localById.get(entity.id);
     if (!localEntity) return entity;
 
-    const registryManagedFields = Array.isArray(entity.extensions?.registryManagedFields)
+    const registryManagedFields = applyManagedFields && Array.isArray(entity.extensions?.registryManagedFields)
       ? entity.extensions.registryManagedFields
       : [];
     const result = {
       ...entity,
       ...localEntity,
-      extensions: mergeEntityExtensions(entity.extensions, localEntity.extensions)
+      extensions: applyManagedFields
+        ? mergeEntityExtensions(entity.extensions, localEntity.extensions)
+        : { ...entity.extensions, ...localEntity.extensions }
     };
     registryManagedFields.forEach(fieldName => {
       if (fieldName !== 'id' && fieldName !== 'extensions' && Object.hasOwn(entity, fieldName)) {
@@ -136,8 +145,10 @@ export function needsRegisteredFamilyUpgrade(registeredFamily, localFamily) {
   if (!knownRegistrySnapshot) return false;
   return registeredRevision > localRevision
     || missesRegisteredStructure(registeredFamily, localFamily)
-    || Number(localFamily.view?.ancestorDepth || 0) < Number(registeredFamily.view?.ancestorDepth || 0)
-    || Number(localFamily.view?.descendantDepth || 0) < Number(registeredFamily.view?.descendantDepth || 0);
+    || (shouldApplyManagedEntityFields(registeredFamily, localFamily) && (
+      Number(localFamily.view?.ancestorDepth || 0) < Number(registeredFamily.view?.ancestorDepth || 0)
+      || Number(localFamily.view?.descendantDepth || 0) < Number(registeredFamily.view?.descendantDepth || 0)
+    ));
 }
 
 export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
@@ -147,13 +158,15 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
   const localRevision = sourceRevision(local);
   if (!needsRegisteredFamilyUpgrade(registered, local)) return local;
 
+  const applyManagedEntityFields = shouldApplyManagedEntityFields(registered, local);
+
   const mergedTombstones = Object.fromEntries(ENTITY_COLLECTIONS.map(collection => [
     collection,
     mergedTombstonesFor(registered, local, collection)
   ]));
   const mergedCollections = Object.fromEntries(ENTITY_COLLECTIONS.map(collection => [
     collection,
-    mergeEntities(registered[collection], local[collection], mergedTombstones[collection])
+    mergeEntities(registered[collection], local[collection], mergedTombstones[collection], applyManagedEntityFields)
   ]));
   const mergedRegistryTombstones = Object.fromEntries(ENTITY_COLLECTIONS.flatMap(collection => {
     const ids = [...mergedTombstones[collection]];
@@ -172,12 +185,12 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
   const mergedView = mergeRegisteredManagedFields(
     registered.view,
     local.view,
-    registryManagedFieldNames(registered, 'registryManagedViewFields')
+    applyManagedEntityFields ? registryManagedFieldNames(registered, 'registryManagedViewFields') : []
   );
   const mergedLineage = mergeRegisteredManagedFields(
     registered.lineage,
     local.lineage,
-    registryManagedFieldNames(registered, 'registryManagedLineageFields')
+    applyManagedEntityFields ? registryManagedFieldNames(registered, 'registryManagedLineageFields') : []
   );
   const mergedExtensions = mergeRegisteredManagedFields(
     registered.extensions,
@@ -186,6 +199,7 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
   );
   const registryManagedUpgradeMetadata = Object.fromEntries([
     'registryManagedDocumentFields',
+    'registryManagedEntitySourceRevision',
     'registryManagedExtensionFields',
     'registryManagedHouseProfileFields',
     'registryManagedLineageFields',
@@ -193,6 +207,9 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
     'registryManagedViewFields'
   ].flatMap(extensionKey => {
     const fieldNames = registered.extensions?.[extensionKey];
+    if (extensionKey === 'registryManagedEntitySourceRevision') {
+      return Number.isInteger(fieldNames) ? [[extensionKey, fieldNames]] : [];
+    }
     return Array.isArray(fieldNames) ? [[extensionKey, [...fieldNames]]] : [];
   }));
 
@@ -206,7 +223,7 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
     },
     lineage: {
       ...mergedLineage,
-      originHouse: registeredRevision > localRevision
+      originHouse: registeredRevision > localRevision && applyManagedEntityFields
         ? registered.lineage.originHouse
         : {
             ...registered.lineage.originHouse,
@@ -223,8 +240,10 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
     },
     view: {
       ...mergedView,
-      ancestorDepth: Math.max(registered.view.ancestorDepth, local.view.ancestorDepth),
-      descendantDepth: Math.max(registered.view.descendantDepth, local.view.descendantDepth)
+      ancestorDepth: applyManagedEntityFields
+        ? Math.max(registered.view.ancestorDepth, local.view.ancestorDepth) : mergedView.ancestorDepth,
+      descendantDepth: applyManagedEntityFields
+        ? Math.max(registered.view.descendantDepth, local.view.descendantDepth) : mergedView.descendantDepth
     },
     extensions: {
       ...mergedExtensions,
