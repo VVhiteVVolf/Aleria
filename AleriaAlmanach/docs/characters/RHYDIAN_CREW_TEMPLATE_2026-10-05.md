@@ -1,6 +1,6 @@
-# Rhydians Schiffsmannschaft – Vorlage
+# Rhydians Schiffsmannschaft – Der Seebär
 
-Das Modul `rhydians-schiffsmannschaft` liegt unter **Gruppen → Klaueninseln → Haus Arth**. Es bereitet auf Nutzerwunsch vom 5. Oktober 2026 eine Kriegskogge mit **60–70 Mann** vor. Schiffsname, Heimathafen, Ausstattung und weitere Personen sind noch nicht festgelegt.
+Das Modul `rhydians-schiffsmannschaft` liegt unter **Gruppen → Klaueninseln → Haus Arth**. Es bereitet auf Nutzerwunsch vom 5. Oktober 2026 die Kriegskogge **Der Seebär** mit **60–70 Mann** vor. Heimathafen, Ausstattung und weitere Personen sind noch nicht festgelegt.
 
 ## Aufbau und Besetzung
 
@@ -31,7 +31,7 @@ Die übrigen **58 Stellen** besitzen nur ihren Rollentitel; Name, Porträt und B
 
 Identität und Porträts werden aus `Stammbäume/assets/data/published-families/haus-arth.json` übernommen. Rhydian (`rhydian-arth`) und Gwylim (`gwylim-arth`) bestehen bereits; Gwylims Elternverbindung ist dort vorhanden. Der Stammbaum benötigt keine Änderung.
 
-Rhydians vorhandenes Porträt dient als Modulbild und auf den ersten drei Seiten. Gwylims und Iantos vorhandene Porträts stehen bei ihren Hierarchieposten und ihren Verbindungen auf der Kapitänsseite. Die Schiffsseite verwendet vorläufig das bestehende Arth-Wappen, bis ein Schiffsbild ausgearbeitet ist.
+Rhydians vorhandenes Porträt dient als Modulbild und auf den ersten drei Seiten. Gwylims und Iantos vorhandene Porträts stehen bei ihren Hierarchieposten und ihren Verbindungen auf der Kapitänsseite. Die Schiffsseite verwendet das eigene Mannschaftswappen, bis ein Schiffsbild ausgearbeitet ist.
 
 Die fünf weiteren belegten Personen und ihre Geburtsjahre sind mit dem bestehenden Familienregister abgeglichen. Ihre vorhandenen Porträts werden direkt wiederverwendet:
 
@@ -47,8 +47,17 @@ Die fünf weiteren belegten Personen und ihre Geburtsjahre sind mit dem bestehen
 
 Importierbares Paket: [rhydians-schiffsmannschaft-modulpaket-2026-10-05.json](../../../Charakter%20Archiv%20Exporte/Biographien/rhydians-schiffsmannschaft-modulpaket-2026-10-05.json).
 
+## Mannschaftswappen „Der Seebär“
+
+Der Nutzer legte am 5. Oktober 2026 den Namen **Der Seebär** und das humorvolle Motiv fest: Bärenoberkörper und Fischunterleib nach dem Meerjungfrauenprinzip. Das runde Arth-Wappen, das in Lynnes Modul verwendet wird, ist die Form- und Stilreferenz. Das neue Mannschaftswappen übernimmt den goldenen Flechtknotenrand, das dunkle Innenfeld und die rot-goldene heraldische Gestaltung; der grinsende Bär besitzt einen geschuppten, eingerollten Fischschwanz. Das innere Namensband lautet „Der Seebär“.
+
+Erstellt mit dem eingebauten `image_gen`, gespeichert als unverändertes **1254 × 1254 RGBA-PNG** mit echtem transparentem Außenhintergrund. Die vier Ecken sind vollständig transparent; Bild und generierter Alphakanal werden unverändert übernommen. Das Wappen wird als Modulsymbol, als Hierarchieemblem und auf der Schiffsseite verwendet. Das Arth-Familienwappen und Lynnes Modul bleiben unverändert.
+
+- Bild: [der-seebaer-wappen.png](../../assets/ship-crews/rhydians-schiffsmannschaft/der-seebaer-wappen.png).
+- Vollständiger Prompt, Referenz, Quelldatei, SHA-256-Prüfsumme und Alphaprüfung: [wappen-prompt.json](../../assets/ship-crews/rhydians-schiffsmannschaft/wappen-prompt.json).
+
 ## Prüfung und Veröffentlichung
 
 Die vorhandene Modulimport- und Seitenlogik wird wiederverwendet. Im Browser geprüft: alle vier Seiten, drei Hierarchieregister, 66 erhaltene Karten, genau acht benannte und 58 leere Stellen, die Rollenverteilung der Maate, fünf Ritter, Bildverfügbarkeit und Gruppenzuordnung. Bei 390 Pixeln entsteht auf keiner Seite horizontaler Überlauf. Die bestehende `check:templates`-Prüfung der Erstvorlage bestand für alle 31 Modulvorlagen einschließlich Import-Roundtrip; die Besetzung verändert ausschließlich Moduldaten.
 
-Die Erstveröffentlichung legte das neue Modul samt Zuordnung im Arth-Verzeichnis an und übernahm Lynnes ausgewähltes Gruppenbild. Die anschließende Besetzung aktualisiert ausschließlich Rhydians Modul und die Verzeichniszeit. Die Speicherung erfolgt atomar mit Versionsvorbedingungen und lokalem Backup; Lynnes und Idwals Module bleiben dabei unverändert. Szenendaten, Kommentare, Charakterbögen und Live-Ressourcen werden nicht geschrieben. Die Schiffsseite enthält kein festgelegtes Weltdatum.
+Die Erstveröffentlichung legte das neue Modul samt Zuordnung im Arth-Verzeichnis an und übernahm Lynnes ausgewähltes Gruppenbild. Die anschließenden Änderungen an Besetzung, Schiffsname und Mannschaftswappen aktualisieren ausschließlich Rhydians Modul und die Verzeichniszeit. Das neue Wappen muss vor der Online-Zuordnung unter seinem öffentlichen Bildpfad erreichbar sein und dieselbe SHA-256-Prüfsumme besitzen. Die Speicherung erfolgt atomar mit Versionsvorbedingungen und lokalem Backup; Lynnes und Idwals Module bleiben dabei unverändert. Szenendaten, Kommentare, Charakterbögen und Live-Ressourcen werden nicht geschrieben. Die Schiffsseite enthält kein festgelegtes Weltdatum.

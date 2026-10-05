@@ -1,8 +1,8 @@
 {
   "type": "aleria-module-package",
   "version": 1,
-  "exportedAt": "2026-10-05T01:01:02.013Z",
-  "sourceNote": "Nutzervorgabe vom 05.10.2026: leere Mannschaftsvorlage für Rhydian Arths Kriegskogge, 60–70 Mann. Rhydian ist Kapitän, sein Erster Maat Gwylim Arth, Sohn von Gwrhyr Arth und Findabair Mata. Vier Inhaltsseiten und drei Hierarchieregister entsprechen Idwals am 05.10.2026 gelesenem Online-Modul. Alle vorhandenen Rollen übernommen; vorläufige Planung auf 65 Einzelstellen erweitert. Ausschließlich Rhydian und Gwylim benannt; 63 Stellen ohne Name, Porträt und Beschreibung. Bestehende Personen und Porträts aus der veröffentlichten Familienakte Haus Arth wiederverwendet. Kein Schiffsname, kein weiterer Lebenslauf, keine Kampfwerte, keine Weltzeit und keine zusätzliche Person erfunden. Das Hauswappen dient vorläufig als Bild der Schiffsseite. Besetzung am 05.10.2026 ergänzt: Ianto Pawen (1717) wird Erster Maat, Gwylim Arth wechselt auf den Zweiten Maat. Ritter zur See: Llew Dyfrgi (1722), Unig Unigol (1718), Padrig Eirth (1722), Barry Dianc (1722) und Clinoch Cwingod (1722). Für fünf Ritter wird eine fünfte Ritterstelle ergänzt: 66 Gesamtstellen, acht benannt und 58 offen. Die fünf belegten Stammbaupersonen werden mit ihren vorhandenen Porträts übernommen. Clinoch Cwingod ist im geprüften lokalen Bestand und in 44 Online-Almanachmodulen nicht belegt; seine Namensschreibweise und sein Geburtsjahr folgen unverändert der Nutzervorgabe, sein Porträt bleibt leer. Keine zusätzlichen Stammbaupersonen oder Abstammungen angelegt.",
+  "exportedAt": "2026-10-05T01:11:58.142Z",
+  "sourceNote": "Nutzervorgabe vom 05.10.2026: leere Mannschaftsvorlage für Rhydian Arths Kriegskogge, 60–70 Mann. Rhydian ist Kapitän, sein Erster Maat Gwylim Arth, Sohn von Gwrhyr Arth und Findabair Mata. Vier Inhaltsseiten und drei Hierarchieregister entsprechen Idwals am 05.10.2026 gelesenem Online-Modul. Alle vorhandenen Rollen übernommen; vorläufige Planung auf 65 Einzelstellen erweitert. Ausschließlich Rhydian und Gwylim benannt; 63 Stellen ohne Name, Porträt und Beschreibung. Bestehende Personen und Porträts aus der veröffentlichten Familienakte Haus Arth wiederverwendet. Kein Schiffsname, kein weiterer Lebenslauf, keine Kampfwerte, keine Weltzeit und keine zusätzliche Person erfunden. Das Hauswappen dient vorläufig als Bild der Schiffsseite. Besetzung am 05.10.2026 ergänzt: Ianto Pawen (1717) wird Erster Maat, Gwylim Arth wechselt auf den Zweiten Maat. Ritter zur See: Llew Dyfrgi (1722), Unig Unigol (1718), Padrig Eirth (1722), Barry Dianc (1722) und Clinoch Cwingod (1722). Für fünf Ritter wird eine fünfte Ritterstelle ergänzt: 66 Gesamtstellen, acht benannt und 58 offen. Die fünf belegten Stammbaupersonen werden mit ihren vorhandenen Porträts übernommen. Clinoch Cwingod ist im geprüften lokalen Bestand und in 44 Online-Almanachmodulen nicht belegt; seine Namensschreibweise und sein Geburtsjahr folgen unverändert der Nutzervorgabe, sein Porträt bleibt leer. Keine zusätzlichen Stammbaupersonen oder Abstammungen angelegt. Schiffsname und Mannschaftswappen 05.10.2026: Auf Nutzerwunsch heißt Rhydians Kriegskogge „Der Seebär“. Neues rundes Wappen mit humorvollem Bärenoberkörper und Fischunterleib, rotem und goldenem Motiv sowie Flechtknotenrand nach dem in Lynnes Modul verwendeten Arth-Wappen. Mit dem eingebauten image_gen erstellt; transparenter Außenhintergrund. Das Mannschaftswappen ersetzt nur Rhydians bisheriges Arth-Symbol, das Hierarchieemblem und das vorläufige Bild auf der Schiffsseite. Rhydians Porträt, Besetzung, Rollen, weitere leere Stellen und Familienwappen bleiben erhalten.",
   "module": {
     "type": "aleria-module",
     "version": 2,
@@ -19,7 +19,7 @@
     "entry": {
       "id": "rhydians-schiffsmannschaft",
       "title": "Rhydians Schiffsmannschaft",
-      "subtitle": "Kriegskogge · Mannschaftsvorlage",
+      "subtitle": "Die Besatzung des Seebären",
       "type": "Story",
       "category": "Gefolge",
       "moduleWidth": 100,
@@ -27,7 +27,7 @@
       "image": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
       "stamp": "HAUS ARTH · KLAUENINSELN",
       "icon": "",
-      "symbol": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+      "symbol": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/der-seebaer-wappen.png",
       "locked": false,
       "appendCommentsPage": true,
       "enablePageComments": true,
@@ -41,8 +41,8 @@
           "image": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
           "imageWidth": 38,
           "imageFit": "contain",
-          "pageTitle": "Die Besatzung der Kriegskogge",
-          "description": "<p><strong>Rhydian Arth</strong> führt eine <strong>Kriegskogge</strong> des Hauses Arth mit einer vorgesehenen Besatzung von <strong>60–70 Mann</strong>. <strong>Ianto Pawen</strong> ist sein Erster Maat. <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata, dient als Zweiter Maat.</p><p>Als Ritter zur See gehören <strong>Llew Dyfrgi</strong>, <strong>Unig Unigol</strong>, <strong>Padrig Eirth</strong>, <strong>Barry Dianc</strong> und <strong>Clinoch Cwingod</strong> zur Mannschaft.</p><p>Die Vorlage umfasst 66 Stellen. Acht sind namentlich besetzt; die übrigen 58 werden später ausgearbeitet. Schiffsname und weitere Einzelheiten bleiben offen.</p>",
+          "pageTitle": "Die Besatzung des Seebären",
+          "description": "<p><strong>Der Seebär</strong> ist die <strong>Kriegskogge</strong> von <strong>Rhydian Arth</strong> im Dienst des Hauses Arth mit einer vorgesehenen Besatzung von <strong>60–70 Mann</strong>. <strong>Ianto Pawen</strong> ist sein Erster Maat. <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata, dient als Zweiter Maat.</p><p>Als Ritter zur See gehören <strong>Llew Dyfrgi</strong>, <strong>Unig Unigol</strong>, <strong>Padrig Eirth</strong>, <strong>Barry Dianc</strong> und <strong>Clinoch Cwingod</strong> zur Mannschaft.</p><p>Die Vorlage umfasst 66 Stellen. Acht sind namentlich besetzt; die übrigen 58 werden später ausgearbeitet. Ausstattung und weitere Einzelheiten bleiben offen.</p>",
           "quote": "",
           "quoteBy": "",
           "enableComments": true,
@@ -50,7 +50,7 @@
           "stats": [
             [
               "Schiffsname",
-              "Noch offen"
+              "Der Seebär"
             ],
             [
               "Typ",
@@ -88,7 +88,7 @@
           "image": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
           "imageWidth": 30,
           "pageTitle": "Rhydian Arth",
-          "description": "<p><strong>Rhydian Arth</strong> ist der Kapitän der Kriegskogge und der Zwillingsbruder von Lady Lynne Arth. Er wurde 1718 geboren und steht an erster Stelle in der Erbfolge des Hauses Arth.</p><p><strong>Ianto Pawen</strong> dient ihm als Erster Maat. <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata, übernimmt den Posten des Zweiten Maats. Weitere Angaben zur Mannschaft werden noch ausgearbeitet.</p>",
+          "description": "<p><strong>Rhydian Arth</strong> ist der Kapitän des <strong>Seebären</strong> und der Zwillingsbruder von Lady Lynne Arth. Er wurde 1718 geboren und steht an erster Stelle in der Erbfolge des Hauses Arth.</p><p><strong>Ianto Pawen</strong> dient ihm als Erster Maat. <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata, übernimmt den Posten des Zweiten Maats. Weitere Angaben zur Mannschaft werden noch ausgearbeitet.</p>",
           "quote": "",
           "quoteBy": "",
           "commentDivider": true,
@@ -113,7 +113,7 @@
             ],
             [
               "Schiff",
-              "Kriegskogge; Name noch offen"
+              "Der Seebär"
             ],
             [
               "Zwillingsschwester",
@@ -131,7 +131,7 @@
             "connectionPortraitHeight": 68,
             "connectionTextOffset": 0,
             "biographyTitle": "Biografie",
-            "biographyText": "<p><strong>Rhydian Arth</strong> ist der Kapitän der Kriegskogge und der Zwillingsbruder von Lady Lynne Arth. Er wurde 1718 geboren und steht an erster Stelle in der Erbfolge des Hauses Arth.</p><p><strong>Ianto Pawen</strong> dient ihm als Erster Maat. <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata, übernimmt den Posten des Zweiten Maats. Weitere Angaben zur Mannschaft werden noch ausgearbeitet.</p>",
+            "biographyText": "<p><strong>Rhydian Arth</strong> ist der Kapitän des <strong>Seebären</strong> und der Zwillingsbruder von Lady Lynne Arth. Er wurde 1718 geboren und steht an erster Stelle in der Erbfolge des Hauses Arth.</p><p><strong>Ianto Pawen</strong> dient ihm als Erster Maat. <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata, übernimmt den Posten des Zweiten Maats. Weitere Angaben zur Mannschaft werden noch ausgearbeitet.</p>",
             "abilitiesTitle": "Führung",
             "abilities": [],
             "extraSections": [],
@@ -179,13 +179,18 @@
             "eyebrow": "Hierarchie",
             "subtitle": "Rhydians Schiffsmannschaft",
             "centerLabel": "Aufbau der Besatzung",
-            "emblem": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+            "emblem": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/der-seebaer-wappen.png",
             "sideImage": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
-            "organizationTitle": "Rhydians Schiffsmannschaft",
+            "organizationTitle": "Die Besatzung des Seebären",
             "motto": "Haus Arth · Klaueninseln",
-            "description": "Kriegskogge mit 60–70 Mann. Rhydian Arth führt das Schiff; Ianto Pawen ist Erster Maat, Gwylim Arth Zweiter Maat.",
+            "description": "Der Seebär ist eine Kriegskogge mit 60–70 Mann. Rhydian Arth führt das Schiff; Ianto Pawen ist Erster Maat, Gwylim Arth Zweiter Maat.",
             "detailsTitle": "Schiff und Mannschaft",
             "details": [
+              {
+                "icon": "",
+                "label": "Schiffsname",
+                "value": "Der Seebär"
+              },
               {
                 "icon": "",
                 "label": "Schiffstyp",
@@ -209,7 +214,7 @@
             ],
             "quoteLabel": "Wahrspruch",
             "quote": "",
-            "chartTitle": "Hierarchie der Kriegskogge",
+            "chartTitle": "Hierarchie des Seebären",
             "chartIntro": "Rhydian Arth führt die Mannschaft mit Ianto Pawen als Erstem und Gwylim Arth als Zweitem Maat. Fünf Ritter zur See sind benannt. Die übrigen Namens-, Porträt- und Beschreibungsfelder bleiben zur späteren Ausarbeitung leer.",
             "trees": [
               {
@@ -224,7 +229,7 @@
                         "portrait": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
                         "title": "Schiffskapitän",
                         "subtitle": "Rhydian Arth",
-                        "text": "Kapitän der Kriegskogge. Zwillingsbruder von Lady Lynne Arth."
+                        "text": "Kapitän des Seebären. Zwillingsbruder von Lady Lynne Arth."
                       }
                     ]
                   },
@@ -235,7 +240,7 @@
                         "portrait": "/Stammbäume/assets/images/portraits/haus-pawen/ianto-pawen.jpg",
                         "title": "Erster Maat",
                         "subtitle": "Ianto Pawen",
-                        "text": "Geboren 1717. Erster Maat von Rhydians Kriegskogge."
+                        "text": "Geboren 1717. Erster Maat des Seebären."
                       },
                       {
                         "portrait": "/Stammbäume/assets/images/portraits/haus-arth/gwylim-arth.jpg",
@@ -738,7 +743,7 @@
                     "portrait": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
                     "title": "Schiffskapitän",
                     "subtitle": "Rhydian Arth",
-                    "text": "Kapitän der Kriegskogge. Zwillingsbruder von Lady Lynne Arth."
+                    "text": "Kapitän des Seebären. Zwillingsbruder von Lady Lynne Arth."
                   }
                 ]
               },
@@ -749,7 +754,7 @@
                     "portrait": "/Stammbäume/assets/images/portraits/haus-pawen/ianto-pawen.jpg",
                     "title": "Erster Maat",
                     "subtitle": "Ianto Pawen",
-                    "text": "Geboren 1717. Erster Maat von Rhydians Kriegskogge."
+                    "text": "Geboren 1717. Erster Maat des Seebären."
                   },
                   {
                     "portrait": "/Stammbäume/assets/images/portraits/haus-arth/gwylim-arth.jpg",
@@ -870,13 +875,13 @@
         },
         {
           "schemaVersion": 1,
-          "image": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+          "image": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/der-seebaer-wappen.png",
           "imageWidth": 30,
           "pageTitle": "Schiff",
           "sessionPage": true,
-          "sessionIntro": "Rhydians Kriegskogge ist für eine Besatzung von 60–70 Mann vorgesehen. Rhydian Arth ist der Kapitän, Ianto Pawen sein Erster Maat und Gwylim Arth sein Zweiter Maat. Schiffsname, Ausstattung und weitere Einzelheiten bleiben vorerst offen.",
-          "sessionHint": "Führe die Szene an Bord von Rhydians Kriegskogge als Kommentar fort.",
-          "sessionEmptyTitle": "An Bord der Kriegskogge",
+          "sessionIntro": "Der Seebär ist Rhydians Kriegskogge und für eine Besatzung von 60–70 Mann vorgesehen. Rhydian Arth ist der Kapitän, Ianto Pawen sein Erster Maat und Gwylim Arth sein Zweiter Maat. Ausstattung und weitere Einzelheiten bleiben vorerst offen.",
+          "sessionHint": "Führe die Szene an Bord des Seebären als Kommentar fort.",
+          "sessionEmptyTitle": "An Bord des Seebären",
           "sessionEmptyText": "Hier beginnt die nächste Szene der Mannschaft.",
           "sessionDateAleria": {
             "year": null,
