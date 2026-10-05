@@ -781,12 +781,14 @@
       "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-mathgraig.png",
       "folderPath": [
         "Cenyr",
-        "Klaueninsel"
+        "Klaueninsel",
+        "Sturmklaue",
+        "Talgarth"
       ],
       "houseProfile": {
         "rankId": "commoner",
-        "seat": "",
-        "barony": "",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
         "county": "Klaueninsel",
         "kingdom": "Cenyr",
         "secondarySeats": [],
@@ -794,14 +796,14 @@
         "liegeHouseName": "",
         "regionEmblems": {
           "seat": "",
-          "barony": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
           "county": "assets/images/regions/klaueninsel.png",
           "kingdom": "assets/images/regions/koenigreich-cenyr.png"
         }
       },
       "personCount": 1,
-      "revision": 1,
-      "updatedAt": "2026-10-04T22:05:37.803Z",
+      "revision": 2,
+      "updatedAt": "2026-10-05T02:14:11.386Z",
       "link": "Stammbaum.html?family=haus-mathgraig&mode=view",
       "source": "github"
     },
@@ -813,12 +815,14 @@
       "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-morglan.png",
       "folderPath": [
         "Cenyr",
-        "Klaueninsel"
+        "Klaueninsel",
+        "Sturmklaue",
+        "Talgarth"
       ],
       "houseProfile": {
         "rankId": "commoner",
-        "seat": "",
-        "barony": "",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
         "county": "Klaueninsel",
         "kingdom": "Cenyr",
         "secondarySeats": [],
@@ -826,14 +830,14 @@
         "liegeHouseName": "",
         "regionEmblems": {
           "seat": "",
-          "barony": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
           "county": "assets/images/regions/klaueninsel.png",
           "kingdom": "assets/images/regions/koenigreich-cenyr.png"
         }
       },
       "personCount": 1,
-      "revision": 1,
-      "updatedAt": "2026-10-04T22:05:37.803Z",
+      "revision": 2,
+      "updatedAt": "2026-10-05T02:14:11.396Z",
       "link": "Stammbaum.html?family=haus-morglan&mode=view",
       "source": "github"
     },
@@ -845,12 +849,14 @@
       "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png",
       "folderPath": [
         "Cenyr",
-        "Klaueninsel"
+        "Klaueninsel",
+        "Sturmklaue",
+        "Talgarth"
       ],
       "houseProfile": {
         "rankId": "knight",
-        "seat": "",
-        "barony": "",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
         "county": "Klaueninsel",
         "kingdom": "Cenyr",
         "secondarySeats": [],
@@ -858,14 +864,14 @@
         "liegeHouseName": "",
         "regionEmblems": {
           "seat": "",
-          "barony": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
           "county": "assets/images/regions/klaueninsel.png",
           "kingdom": "assets/images/regions/koenigreich-cenyr.png"
         }
       },
-      "personCount": 1,
-      "revision": 2,
-      "updatedAt": "2026-10-04T22:48:44.725Z",
+      "personCount": 3,
+      "revision": 4,
+      "updatedAt": "2026-10-05T07:06:28.184Z",
       "link": "Stammbaum.html?family=haus-morgwynt&mode=view",
       "source": "github"
     },
@@ -969,6 +975,108 @@
       "revision": 2,
       "updatedAt": "2026-10-04T22:48:44.725Z",
       "link": "Stammbaum.html?family=haus-prys&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-gwernhelyd",
+      "familyId": "haus-gwernhelyd",
+      "title": "Haus Gwernhelyd",
+      "motto": "",
+      "emblem": "assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-gwernhelyd.png",
+      "folderPath": [
+        "Cenyr",
+        "Klaueninsel",
+        "Sturmklaue",
+        "Talgarth"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 0,
+      "revision": 1,
+      "updatedAt": "2026-10-05T03:05:42.378Z",
+      "link": "Stammbaum.html?family=haus-gwernhelyd&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-cledrann",
+      "familyId": "haus-cledrann",
+      "title": "Haus Cledrann",
+      "motto": "",
+      "emblem": "assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-cledrann.png",
+      "folderPath": [
+        "Cenyr",
+        "Klaueninsel",
+        "Sturmklaue",
+        "Talgarth"
+      ],
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 0,
+      "revision": 1,
+      "updatedAt": "2026-10-05T03:05:42.378Z",
+      "link": "Stammbaum.html?family=haus-cledrann&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-halenwych",
+      "familyId": "haus-halenwych",
+      "title": "Haus Halenwych",
+      "motto": "",
+      "emblem": "assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-halenwych.png",
+      "folderPath": [
+        "Cenyr",
+        "Klaueninsel",
+        "Sturmklaue",
+        "Talgarth"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 0,
+      "revision": 1,
+      "updatedAt": "2026-10-05T03:05:42.378Z",
+      "link": "Stammbaum.html?family=haus-halenwych&mode=view",
       "source": "github"
     }
   ]

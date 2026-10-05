@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-gwernhelyd",
+  "revision": 1,
+  "updatedAt": "2026-10-05T03:05:42.378Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-gwernhelyd",
+      "title": "Haus Gwernhelyd",
+      "motto": "",
+      "description": "Bürgerfamilie aus Talgarth mit einer Tradition als Lotsen und Fahrwasserkenner. Ihr Handwerk ist die sichere Führung von Schiffen durch Untiefen und Hafeneinfahrten. Hausoberhaupt, weitere Angehörige und Abstammung sind noch offen.",
+      "emblem": "assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-gwernhelyd.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-gwernhelyd",
+        "name": "Haus Gwernhelyd",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-gwernhelyd.png",
+        "status": "active"
+      }
+    ],
+    "persons": [],
+    "partnerships": [],
+    "parentages": [],
+    "lineage": {
+      "founderPartnershipId": "",
+      "houseId": "house-gwernhelyd",
+      "crestSubtitle": "Bürgerfamilie aus Talgarth",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "cadetBranches": [],
+    "timeJumps": [],
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": true,
+      "sourceRevision": 1,
+      "sourceNote": "Neue Familien nach Nutzervorgabe vom 05.10.2026 für Rhydians lokale Mannschaftsplanung. Familiennamen im verfügbaren Cenyr- und Projektbestand geprüft. Die Kandidatenliste bleibt ein Entwurf; keine neuen Angehörigen oder Abstammungskanten übernommen.",
+      "heraldryDescription": "Auf Dunkelgrün eine silberne Weide über einem goldenen offenen Boot und drei silbernen Wellenbändern; schlichter antikgoldener Rundrand mit schwarzer Kontur.",
+      "pendingFamilySituation": {
+        "openQuestions": [
+          "Hausoberhaupt",
+          "Angehörige und Abstammung",
+          "Aufnahme der vorgeschlagenen Mannschaftsmitglieder"
+        ]
+      }
+    }
+  }
+}

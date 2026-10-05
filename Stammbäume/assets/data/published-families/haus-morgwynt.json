@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-morgwynt",
-  "revision": 2,
-  "updatedAt": "2026-10-04T22:48:44.725Z",
+  "revision": 4,
+  "updatedAt": "2026-10-05T07:06:28.184Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -14,8 +14,8 @@
       "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png",
       "houseProfile": {
         "rankId": "knight",
-        "seat": "",
-        "barony": "",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
         "county": "Klaueninsel",
         "kingdom": "Cenyr",
         "secondarySeats": [],
@@ -23,21 +23,12 @@
         "liegeHouseName": "",
         "regionEmblems": {
           "seat": "",
-          "barony": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
           "county": "assets/images/regions/klaueninsel.png",
           "kingdom": "assets/images/regions/koenigreich-cenyr.png"
         }
       }
     },
-    "houses": [
-      {
-        "id": "house-morgwynt",
-        "name": "Haus Morgwynt",
-        "motto": "",
-        "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png",
-        "status": "active"
-      }
-    ],
     "persons": [
       {
         "id": "mabli-morgwynt",
@@ -65,10 +56,99 @@
             "portrait"
           ]
         }
+      },
+      {
+        "id": "unknown-parent-mabli-cadyn-morgwynt",
+        "worldPersonId": "person--haus-morgwynt--unknown-parent-mabli-cadyn-morgwynt",
+        "name": "Unbekanntes Elternteil",
+        "title": "",
+        "sex": "unknown",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morgwynt",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Struktureller Platzhalter für die bestätigte Geschwisterbeziehung von Mabli und Cadyn. Identität und weitere Elternschaft sind nicht festgelegt.",
+        "extensions": {
+          "structuralPlaceholder": true,
+          "sourceNote": "Nutzervorgabe vom 05.10.2026: Cadyn Morgwynt ist Mablis 14-jähriger jüngerer Bruder und Rhydian Arths persönlicher Knappe."
+        }
+      },
+      {
+        "id": "cadyn-morgwynt",
+        "worldPersonId": "person--haus-morgwynt--cadyn-morgwynt",
+        "name": "Cadyn Morgwynt",
+        "title": "Rhydian Arths Knappe zur See",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/cadyn-morgwynt-v2.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morgwynt",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Der Seebär",
+          "Rhydians Schiffsmannschaft"
+        ],
+        "notes": "14 Jahre im Bezugsjahr 1740. Mablis jüngerer Bruder; frech, mit braunem Pferdeschwanz, graublauen Augen und Axt. Persönlicher Knappe Rhydian Arths.",
+        "extensions": {
+          "sourceNote": "Nutzervorgabe vom 05.10.2026: Cadyn Morgwynt ist Mablis 14-jähriger jüngerer Bruder und Rhydian Arths persönlicher Knappe.",
+          "almanachModuleId": "rhydians-schiffsmannschaft",
+          "registryManagedFields": [
+            "portrait"
+          ]
+        }
       }
     ],
     "partnerships": [],
-    "parentages": [],
+    "parentages": [
+      {
+        "id": "parentage-mabli-morgwynt",
+        "childId": "mabli-morgwynt",
+        "parentIds": [
+          "unknown-parent-mabli-cadyn-morgwynt"
+        ],
+        "partnershipId": "",
+        "type": "biological",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Bestätigte Geschwister; Eltern nicht namentlich bekannt.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cadyn-morgwynt",
+        "childId": "cadyn-morgwynt",
+        "parentIds": [
+          "unknown-parent-mabli-cadyn-morgwynt"
+        ],
+        "partnershipId": "",
+        "type": "biological",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Bestätigte Geschwister; Eltern nicht namentlich bekannt.",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-morgwynt",
+        "name": "Haus Morgwynt",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png",
+        "status": "active",
+        "extensions": {}
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
     "lineage": {
       "founderPartnershipId": "",
       "houseId": "house-morgwynt",
@@ -82,10 +162,29 @@
         "fromYear": "",
         "toYear": "",
         "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
       }
     },
-    "cadetBranches": [],
-    "timeJumps": [],
     "presentation": {
       "relationshipColors": {
         "marriage": "#326c4a",
@@ -108,18 +207,33 @@
       "orientation": "vertical",
       "ancestorDepth": 8,
       "descendantDepth": 8,
+      "limitGenerations": false,
       "showSiblings": true
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 2,
+      "sourceRevision": 4,
+      "registryManagedHouseProfileFields": [
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ],
       "sourceNote": "Nutzervorlage vom 04.10.2026. Nur belegte Angehörige; keine erfundenen Gründer, Eltern, Ehen oder Lehensverhältnisse.",
       "pendingFamilySituation": {
         "openQuestions": [
           "Weitere Angehörige und Abstammung",
-          "Hausoberhaupt",
-          "Genauer Familiensitz"
+          "Hausoberhaupt"
         ]
+      },
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 3,
+        "toRevision": 4
       }
     }
   }

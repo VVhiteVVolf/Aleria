@@ -1,0 +1,71 @@
+{
+  "status": "passed-local",
+  "humanPosts": 66,
+  "named": 28,
+  "open": 38,
+  "pets": 2,
+  "houses": 13,
+  "groupVariants": 3,
+  "pages": 4,
+  "selectedGroupImage": "01",
+  "checks": [
+    "Vorhandene Modul-ID und Seitenreihenfolge erhalten",
+    "19 bestätigte Rollen und korrigierte Porträts zugeordnet",
+    "Cadyn in einer bestehenden Knappenstelle",
+    "Alle Bilder lokal erreichbar",
+    "Hierarchiegrenzen eingehalten",
+    "Szenendatum erhalten"
+  ],
+  "browser": {
+    "pages": [
+      {
+        "index": 0,
+        "title": "Die Besatzung des Seebären",
+        "images": 2
+      },
+      {
+        "index": 1,
+        "title": "Rhydian Arth",
+        "images": 4
+      },
+      {
+        "index": 2,
+        "title": "Hierarchie der Mannschaft",
+        "images": 44
+      },
+      {
+        "index": 3,
+        "title": "An Bord des Seebären",
+        "images": 1
+      }
+    ],
+    "trees": 5,
+    "mobile": [
+      {
+        "page": 0,
+        "client": 390,
+        "scroll": 390
+      },
+      {
+        "page": 1,
+        "client": 390,
+        "scroll": 390
+      },
+      {
+        "page": 2,
+        "client": 390,
+        "scroll": 390
+      },
+      {
+        "page": 3,
+        "client": 390,
+        "scroll": 390
+      }
+    ],
+    "errors": []
+  },
+  "familyTests": {
+    "passed": 17,
+    "failed": 0
+  }
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-mathgraig",
-  "revision": 1,
-  "updatedAt": "2026-10-04T22:05:37.803Z",
+  "revision": 2,
+  "updatedAt": "2026-10-05T02:14:11.386Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -14,8 +14,8 @@
       "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-mathgraig.png",
       "houseProfile": {
         "rankId": "commoner",
-        "seat": "",
-        "barony": "",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
         "county": "Klaueninsel",
         "kingdom": "Cenyr",
         "secondarySeats": [],
@@ -23,21 +23,12 @@
         "liegeHouseName": "",
         "regionEmblems": {
           "seat": "",
-          "barony": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
           "county": "assets/images/regions/klaueninsel.png",
           "kingdom": "assets/images/regions/koenigreich-cenyr.png"
         }
       }
     },
-    "houses": [
-      {
-        "id": "house-mathgraig",
-        "name": "Haus Mathgraig",
-        "motto": "",
-        "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-mathgraig.png",
-        "status": "active"
-      }
-    ],
     "persons": [
       {
         "id": "nest-mathgraig",
@@ -66,6 +57,18 @@
     ],
     "partnerships": [],
     "parentages": [],
+    "houses": [
+      {
+        "id": "house-mathgraig",
+        "name": "Haus Mathgraig",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/lynne-crew/haus-mathgraig.png",
+        "status": "active",
+        "extensions": {}
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
     "lineage": {
       "founderPartnershipId": "",
       "houseId": "house-mathgraig",
@@ -79,10 +82,29 @@
         "fromYear": "",
         "toYear": "",
         "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
       }
     },
-    "cadetBranches": [],
-    "timeJumps": [],
     "presentation": {
       "relationshipColors": {
         "marriage": "#326c4a",
@@ -105,18 +127,33 @@
       "orientation": "vertical",
       "ancestorDepth": 8,
       "descendantDepth": 8,
+      "limitGenerations": false,
       "showSiblings": true
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 1,
+      "sourceRevision": 3,
+      "registryManagedHouseProfileFields": [
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ],
       "sourceNote": "Nutzervorlage vom 04.10.2026. Nur belegte Angehörige; keine erfundenen Gründer, Eltern, Ehen oder Lehensverhältnisse.",
       "pendingFamilySituation": {
         "openQuestions": [
           "Weitere Angehörige und Abstammung",
-          "Hausoberhaupt",
-          "Genauer Familiensitz"
+          "Hausoberhaupt"
         ]
+      },
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 1,
+        "toRevision": 3
       }
     }
   }

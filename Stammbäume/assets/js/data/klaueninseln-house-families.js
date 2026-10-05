@@ -8,6 +8,7 @@ import {
 import { HOUSE_BERYN_FAMILY } from './house-beryn-family.js?v=eira-20261005';
 import { HOUSE_DYGER_FAMILY } from './house-dyger-family.js?v=lynne-20261004';
 import { LYNNE_CREW_HOUSE_FAMILIES } from './lynne-crew-house-families.js?v=lynne-20261005';
+import { RHYDIAN_CREW_HOUSE_FAMILIES } from './rhydian-crew-house-families.js';
 import { HOUSE_CRAFANC_FAMILY } from './house-crafanc-family.js';
 import {
   HOUSE_DIAFOL_TALGARTH_FAMILY,
@@ -169,6 +170,7 @@ export const KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
   HOUSE_BERYN_FAMILY,
   HOUSE_DYGER_FAMILY,
   ...LYNNE_CREW_HOUSE_FAMILIES,
+  ...RHYDIAN_CREW_HOUSE_FAMILIES,
   ...SIMPLE_DEFINITIONS.map(createSimpleFamily)
 ]);
 

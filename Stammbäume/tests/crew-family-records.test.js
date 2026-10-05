@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { access } from 'node:fs/promises';
+import { access, readFile } from 'node:fs/promises';
 import { HOUSE_DYGER_FAMILY } from '../assets/js/data/house-dyger-family.js';
 import { HOUSE_SCHWARZSTOLZ_FAMILY } from '../assets/js/data/house-schwarzstolz-family.js';
 import { FAMILY_REGISTRY } from '../assets/js/data/families.registry.js';
@@ -8,10 +8,88 @@ import { assertValidFamily } from '../assets/js/domain/family-schema.js';
 import { createFamilyCandidates } from '../../AleriaAlmanach/modules/character-genealogy/genealogy-mapping.js';
 import { LYNNE_CREW_MEMBERS } from '../assets/js/data/lynne-crew-family-members.js';
 import { LYNNE_CREW_HOUSE_FAMILIES } from '../assets/js/data/lynne-crew-house-families.js';
+import { RHYDIAN_CREW_HOUSE_FAMILIES } from '../assets/js/data/rhydian-crew-house-families.js';
 import { createRegistryBrowserIndex, registryPathKey } from '../assets/js/modules/family-registry/registry-browser-model.js';
 import { resolveRegisteredFamilyUpgrade } from '../assets/js/services/family-registry-upgrade.js';
 import { toFamilyChartData } from '../assets/js/adapters/family-chart-adapter.js';
 import { resolveFamilyChartEntryMainId } from '../assets/js/adapters/family-chart-viewport-policy.js';
+import { createFamilyGraph } from '../assets/js/domain/family-graph.js';
+
+test('Cadyn ist Mablis jüngerer Bruder und erreicht vorhandene Morgwynt-Akten genau einmal', async () => {
+  const registered = assertValidFamily(FAMILY_REGISTRY.find(record => record.id === 'haus-morgwynt').family).family;
+  const old = structuredClone(registered);
+  old.persons = old.persons.filter(person => person.id === 'mabli-morgwynt');
+  old.parentages = [];
+  old.extensions.sourceRevision = 3;
+  old.persons[0].notes = 'Eigene Notiz zu Mabli';
+  const updated = resolveRegisteredFamilyUpgrade(registered, old);
+  const cadyn = updated.persons.find(person => person.id === 'cadyn-morgwynt');
+  assert.equal(cadyn.birth, '1726');
+  assert.equal(cadyn.worldPersonId, 'person--haus-morgwynt--cadyn-morgwynt');
+  assert.equal(updated.persons.find(person => person.id === 'mabli-morgwynt').notes, old.persons[0].notes);
+  assert.equal(createFamilyGraph(updated).describeConnection('mabli-morgwynt', cadyn.id), 'Geschwister');
+  assert.equal(updated.partnerships.length, 0);
+  assert.equal(updated.persons.filter(person => person.extensions.structuralPlaceholder).length, 1);
+  const { data } = toFamilyChartData(updated);
+  assert.deepEqual(data.find(person => person.id === cadyn.id).rels.parents, ['unknown-parent-mabli-cadyn-morgwynt']);
+  assert.deepEqual(resolveRegisteredFamilyUpgrade(registered, updated), updated);
+  await access(new URL('../' + cadyn.portrait, import.meta.url));
+});
+
+test('Rhydians drei neue Familien erscheinen in Talgarth mit validen Akten und erreichbaren Wappen', async () => {
+  const index = createRegistryBrowserIndex(FAMILY_REGISTRY);
+  const path = ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth'];
+  const node = index.nodes.get(registryPathKey(path));
+  assert.equal(RHYDIAN_CREW_HOUSE_FAMILIES.length, 3);
+  assert.equal(new Set(FAMILY_REGISTRY.map(record => record.id)).size, FAMILY_REGISTRY.length);
+  for (const source of RHYDIAN_CREW_HOUSE_FAMILIES) {
+    const { family } = assertValidFamily(source);
+    const record = FAMILY_REGISTRY.find(entry => entry.id === family.document.id);
+    assert.deepEqual(record.folderPath, path);
+    const rank = family.document.houseProfile.rankId;
+    assert.ok(['commoner', 'knight'].includes(rank));
+    assert.equal(record.type, rank === 'knight' ? 'lower-nobility' : 'commoner');
+    assert.equal(family.lineage.crestFrame, rank === 'knight' ? 'silver' : 'iron');
+    assert.ok(node.familyIds.has(record.id));
+    // Namen sind noch Kandidaten: keine unbestätigten Gründer oder Genealogie.
+    assert.equal(family.persons.length, 0);
+    assert.equal(family.parentages.length, 0);
+    assert.equal(family.partnerships.length, 0);
+    await access(new URL(`../${family.document.emblem}`, import.meta.url));
+    const publication = JSON.parse(await readFile(new URL(`../assets/data/published-families/${record.id}.json`, import.meta.url), 'utf8'));
+    assert.equal(publication.familyId, record.id);
+    assert.equal(publication.family.document.emblem, family.document.emblem);
+    assertValidFamily(publication.family);
+  }
+});
+
+test('Rhydians Kandidatenentwurf enthält pro Familie einen Mann und erhält die Herkunfts- und Altersvorgaben', async () => {
+  const draft = JSON.parse(await readFile(new URL('../../AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/crew-candidates-2026-10-05.json', import.meta.url), 'utf8'));
+  const candidates = draft.candidates;
+  assert.equal(candidates.length, 19);
+  assert.ok(candidates.every(candidate => candidate.sex === 'male'));
+  const ids = candidates.map(candidate => candidate.houseId).filter(Boolean);
+  assert.equal(new Set(ids).size, ids.length);
+  for (const [country, count] of [['Cenyr', 13], ['Aldrimar', 4], ['Vennyr', 2]]) {
+    assert.equal(candidates.filter(candidate => candidate.originCountry === country).length, count);
+  }
+  assert.equal(candidates.filter(candidate => candidate.age > 30).length, 3);
+  assert.equal(candidates.filter(candidate => candidate.age > 50).length, 2);
+  const hakon = candidates.find(candidate => candidate.displayName === 'Håkon Graufels');
+  assert.equal(hakon.age, 56);
+  assert.equal(hakon.role, 'Waffenmeister');
+  for (const [name, role] of [
+    ['Uwchric Mathgraig', 'Steuermann'], ['Neddwyn Bevan', 'Feldscher'],
+    ['Maelban Penry', 'Schreiber / Adjutant'], ['Thalan Bowen', 'Schiffszimmermann'],
+    ['Ellor Parry', 'Schiffskoch'], ['Gwaeden Beryn', 'Wachmeister']
+  ]) assert.equal(candidates.find(candidate => candidate.displayName === name).role, role);
+  assert.ok(candidates.every(candidate => candidate.age > 30 || (candidate.age >= 17 && candidate.age <= 27)));
+  for (const candidate of candidates.filter(entry => entry.houseId)) {
+    const record = FAMILY_REGISTRY.find(entry => entry.id === candidate.houseId);
+    assert.ok(record, candidate.houseId);
+    assert.equal(record.houseProfile.seat, 'Talgarth');
+  }
+});
 
 test('Dyger ist ein niederes Ritterhaus in Talgarth und direkter Arth-Vasall', () => {
   const { family } = assertValidFamily(HOUSE_DYGER_FAMILY);
@@ -71,7 +149,7 @@ test('Lynnes zwölf Angehörige sind mit Eiras freigegebener Abstammung eindeuti
   const county = index.nodes.get(registryPathKey(['Cenyr', 'Klaueninsel']));
   const talgarthPath = ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth'];
   const talgarth = index.nodes.get(registryPathKey(talgarthPath));
-  for (const slug of ['penry', 'bevan', 'hirschhorn', 'arian', 'parry', 'bowen']) {
+  for (const slug of ['penry', 'bevan', 'hirschhorn', 'arian', 'parry', 'bowen', 'mathgraig', 'morgwynt', 'morglan']) {
     const record = FAMILY_REGISTRY.find(record => record.id === `haus-${slug}`);
     assert.deepEqual(record.folderPath, talgarthPath);
     assert.ok(talgarth.familyIds.has(record.id));
@@ -87,7 +165,7 @@ test('Lynnes zwölf Angehörige sind mit Eiras freigegebener Abstammung eindeuti
     assert.equal(person.name, member.name);
     const isEira = person.id === 'eirlys-beryn';
     assert.equal(person.birth, isEira ? '1726' : '');
-    assert.equal(family.parentages.some(edge => edge.childId === person.id || edge.parentIds.includes(person.id)), isEira);
+    assert.equal(family.parentages.some(edge => edge.childId === person.id || edge.parentIds.includes(person.id)), isEira || person.id === 'mabli-morgwynt');
     assert.equal(family.partnerships.some(edge => edge.participantIds.includes(person.id)), false);
     const candidates = FAMILY_REGISTRY.flatMap(createFamilyCandidates).filter(candidate => candidate.displayName === member.name);
     assert.equal(candidates.length, 1, member.name);
@@ -149,7 +227,7 @@ test('Eine alte isolierte Eirlys-Akte erhält Name und Eltern genau einmal, ohne
 });
 
 test('Lynnes Bild- und Sitzkorrekturen erreichen vorhandene Akten und bewahren Identitäten und eigene Notizen', () => {
-  for (const member of LYNNE_CREW_MEMBERS.filter(member => member.sourceRevision === 2)) {
+  for (const member of LYNNE_CREW_MEMBERS.filter(member => member.sourceRevision >= 2)) {
     const registered = FAMILY_REGISTRY.find(record => record.id === `haus-${member.surname.toLowerCase()}`).family;
     const local = structuredClone(registered);
     local.extensions.sourceRevision = 1;

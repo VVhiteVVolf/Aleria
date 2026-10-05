@@ -1,0 +1,436 @@
+{
+  "status": "integrated-module-package",
+  "finalizedDate": "2026-10-05",
+  "approvalScope": "Namen, Alter, Rollen, Porträts und Moduleinordnung freigegeben. Cadyn Morgwynt wurde ausdrücklich zusätzlich zur ursprünglichen 19er-Auswahl angefordert.",
+  "date": "2026-10-05",
+  "moduleId": "rhydians-schiffsmannschaft",
+  "referenceWorldYear": 1740,
+  "captainBirthYear": 1718,
+  "captainPlanningAge": 22,
+  "youngerAgeRange": [
+    17,
+    27
+  ],
+  "revision": 11,
+  "composition": {
+    "sex": "male",
+    "Cenyr": 13,
+    "Aldrimar": 4,
+    "Vennyr": 2,
+    "foreigners": 6
+  },
+  "nameSource": {
+    "CenyrAndVennyr": "AleriaAlmanach/modules/name-list/name-list-data.js:createRheunwaithNameListData",
+    "Aldrimar": "Håkon Graufels, Bjarne Rotsträhne, Leif Nebelkind und Ketil Rabenzorn gemäß finaler Nutzerauswahl vom 05.10.2026. Persönliche Beinamen ohne vorgeschriebenen Berufsbezug.",
+    "VennyrSurnames": "Neddeth gemäß Nutzerkorrektur vom 05.10.2026; Derynwal ersetzt Maelor in der finalisierten Liste. Ohne ap und ohne behauptete Elternverbindung."
+  },
+  "note": "Die 19 bestätigten zusätzlichen Männer sind im Modul einsortiert. Cadyn Morgwynt ergänzt die Mannschaft als gesondert angeforderter Knappe. Insgesamt 28 benannte Mitglieder und 38 weitere Stellen; Bootsmops und Admiral Krümel zählen separat.",
+  "candidates": [
+    {
+      "givenName": "Uwchric",
+      "surname": "Mathgraig",
+      "houseId": "haus-mathgraig",
+      "sex": "male",
+      "age": 54,
+      "role": "Steuermann",
+      "idea": "Erfahrener Steuermann; kennt Strömungen und Untiefen, bleibt bei schwerer See ruhig am Ruder.",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "displayName": "Uwchric Mathgraig",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/uwchric-mathgraig-v2.png"
+    },
+    {
+      "givenName": "Helban",
+      "surname": "Morgwynt",
+      "houseId": "haus-morgwynt",
+      "sex": "male",
+      "age": 36,
+      "role": "Bootsmann",
+      "idea": "Erfahrener Decksführer; rauer Ton, klare Befehle und verlässlicher Drill.",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "displayName": "Helban Morgwynt",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/helban-morgwynt.png"
+    },
+    {
+      "givenName": "Håkon",
+      "surname": null,
+      "epithet": "Graufels",
+      "houseId": null,
+      "originCountry": "Aldrimar",
+      "sex": "male",
+      "age": 56,
+      "role": "Waffenmeister",
+      "idea": "Erfahrener Waffenmeister; sorgfältig mit Waffenbestand und Pflege, leitet die Waffenübungen an Bord.",
+      "displayName": "Håkon Graufels",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/hakon-graufels.png"
+    },
+    {
+      "givenName": "Neddwyn",
+      "surname": "Bevan",
+      "houseId": "haus-bevan",
+      "sex": "male",
+      "age": 26,
+      "role": "Feldscher",
+      "idea": "Ruhiger und sorgfältiger Feldscher; versorgt Wunden und Brüche und kennt Heilkräuter.",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "displayName": "Neddwyn Bevan",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/neddwyn-bevan.png"
+    },
+    {
+      "givenName": "Oenric",
+      "surname": "Prys",
+      "houseId": "haus-prys",
+      "sex": "male",
+      "age": 24,
+      "role": "Schiffskaplan",
+      "idea": "Junger Geistlicher Baldrans; kameradschaftlich, mit Sinn für Seemannsbräuche.",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "displayName": "Oenric Prys",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/oenric-prys.png"
+    },
+    {
+      "givenName": "Saithar",
+      "surname": "Morglan",
+      "houseId": "haus-morglan",
+      "sex": "male",
+      "age": 25,
+      "role": "Quartiermeister",
+      "idea": "Organisiert Stauplätze, Ausrüstung und die Ausgabe an die Mannschaft.",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "displayName": "Saithar Morglan",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/saithar-morglan-v2.png"
+    },
+    {
+      "givenName": "Maelban",
+      "surname": "Penry",
+      "houseId": "haus-penry",
+      "sex": "male",
+      "age": 27,
+      "role": "Schreiber / Adjutant",
+      "idea": "Organisiert Logbuch, Mannschaftslisten und Korrespondenz; unterstützt Rhydian als Schreiber und Adjutant.",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "displayName": "Maelban Penry",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/maelban-penry.png"
+    },
+    {
+      "givenName": "Bjarne",
+      "surname": null,
+      "epithet": "Rotsträhne",
+      "houseId": null,
+      "originCountry": "Aldrimar",
+      "sex": "male",
+      "age": 23,
+      "role": "Segelmeister",
+      "idea": "Kräftiger und seefester Segelmeister; verantwortet Segeltrimm, Takelage und Decksmanöver.",
+      "displayName": "Bjarne Rotsträhne",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/bjarne-rotstraehne.png"
+    },
+    {
+      "givenName": "Perwyn",
+      "surname": "Neddeth",
+      "houseId": null,
+      "originCountry": "Vennyr",
+      "sex": "male",
+      "age": 22,
+      "role": "Schiffsmeier",
+      "idea": "Verwaltet Kasse, Sold und Rechnungen; nüchtern und zahlenfest.",
+      "displayName": "Perwyn Neddeth",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/perwyn-neddeth-v3.png"
+    },
+    {
+      "givenName": "Iwrban",
+      "surname": "Dyger",
+      "houseId": "haus-dyger",
+      "sex": "male",
+      "age": 23,
+      "role": "Schiffsmusikant",
+      "idea": "Fiedel, Seemannslieder und Arbeitstakt; Musikant, kein ausgebildeter Barddwyr.",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "displayName": "Iwrban Dyger",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/iwrban-dyger.png"
+    },
+    {
+      "givenName": "Leif",
+      "surname": null,
+      "epithet": "Nebelkind",
+      "houseId": null,
+      "originCountry": "Aldrimar",
+      "sex": "male",
+      "age": 18,
+      "role": "Ausguck",
+      "idea": "Leichtfüßig und scharfsichtig; erkennt Segel und Küstenzeichen früh.",
+      "displayName": "Leif Nebelkind",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/leif-nebelkind.png"
+    },
+    {
+      "givenName": "Thalan",
+      "surname": "Bowen",
+      "houseId": "haus-bowen",
+      "sex": "male",
+      "age": 24,
+      "role": "Schiffszimmermann",
+      "idea": "Schiffszimmermann aus einer Werftfamilie; kümmert sich um Rumpf, Spanten und Lecks.",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "displayName": "Thalan Bowen",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/thalan-bowen-v2.png"
+    },
+    {
+      "givenName": "Gwaeden",
+      "surname": "Beryn",
+      "houseId": "haus-beryn",
+      "sex": "male",
+      "age": 26,
+      "role": "Wachmeister",
+      "idea": "Teilt Wachen ein; diszipliniert und aufmerksam an Deck und im Hafen.",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "displayName": "Gwaeden Beryn",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/gwaeden-beryn.png"
+    },
+    {
+      "givenName": "Saithric",
+      "surname": "Derynwal",
+      "houseId": null,
+      "originCountry": "Vennyr",
+      "sex": "male",
+      "age": 20,
+      "role": "Navigator",
+      "idea": "Navigator; berechnet Kurse und verbindet Seekarten mit der Beobachtung von Küste und Sternen.",
+      "displayName": "Saithric Derynwal",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/saithric-derynwal.png"
+    },
+    {
+      "givenName": "Ketil",
+      "surname": null,
+      "epithet": "Rabenzorn",
+      "houseId": null,
+      "originCountry": "Aldrimar",
+      "sex": "male",
+      "age": 22,
+      "role": "Proviantmeister",
+      "idea": "Proviantmeister; prüft Lebensmittel, Trinkwasser, Haltbarkeit und Nachschub.",
+      "displayName": "Ketil Rabenzorn",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/ketil-rabenzorn.png"
+    },
+    {
+      "givenName": "Ellor",
+      "surname": "Parry",
+      "houseId": "haus-parry",
+      "sex": "male",
+      "age": 21,
+      "role": "Schiffskoch",
+      "idea": "Schiffskoch; erfindungsreich mit knappen Vorräten und erfahren im Haltbarmachen.",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "displayName": "Ellor Parry",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/ellor-parry.png"
+    },
+    {
+      "givenName": "Gwaedric",
+      "surname": "Gwernhelyd",
+      "age": 25,
+      "role": "Kalfaterer",
+      "idea": "Kennt Holz, Fugen und Pech; arbeitet bei Lecks eng mit Thalan zusammen.",
+      "houseId": "haus-gwernhelyd",
+      "sex": "male",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "displayName": "Gwaedric Gwernhelyd",
+      "newFamily": true,
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/gwaedric-gwernhelyd.png"
+    },
+    {
+      "givenName": "Cyror",
+      "surname": "Cledrann",
+      "age": 23,
+      "role": "Reepschläger / Seiler",
+      "idea": "Fertigt und repariert Tauwerk; unterstützt Bjarne bei der Takelage.",
+      "houseId": "haus-cledrann",
+      "sex": "male",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "displayName": "Cyror Cledrann",
+      "newFamily": true,
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/cyror-cledrann.png"
+    },
+    {
+      "givenName": "Pereth",
+      "surname": "Halenwych",
+      "age": 19,
+      "role": "Vorratsgehilfe",
+      "idea": "Prüft Pökelfässer und Wasservorräte; unterstützt Ketil und Ellor.",
+      "houseId": "haus-halenwych",
+      "sex": "male",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "displayName": "Pereth Halenwych",
+      "newFamily": true,
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/pereth-halenwych.png"
+    }
+  ],
+  "pet": {
+    "label": "Schiffsbär",
+    "name": "Bootsmops",
+    "species": "Arth-Bär",
+    "owner": "Ianto Pawen",
+    "coat": "rotbraun",
+    "image": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/schiffsbaer-schlafend-2026-10-05.png",
+    "note": "Iantos rotbrauner Arth-Bär. Beherrscht vor allem die Kunst, sich dort zum Schlafen niederzulassen, wo jemand vorbei möchte."
+  },
+  "familyReassignments": [
+    {
+      "givenName": "Neddwyn",
+      "previousSurname": "Mathgraig",
+      "surname": "Bevan",
+      "reason": "Ein Mann pro Familie innerhalb der zusätzlichen Mannschaftskandidaten."
+    },
+    {
+      "givenName": "Maelban",
+      "previousSurname": "Morgwynt",
+      "surname": "Penry",
+      "reason": "Ein Mann pro Familie innerhalb der zusätzlichen Mannschaftskandidaten."
+    },
+    {
+      "givenName": "Ellor",
+      "previousSurname": "Morglan",
+      "surname": "Parry",
+      "reason": "Ein Mann pro Familie innerhalb der zusätzlichen Mannschaftskandidaten."
+    }
+  ],
+  "selectionRules": {
+    "maleOnly": true,
+    "maxCandidatesPerFamily": 1,
+    "foreigners": {
+      "Aldrimar": 4,
+      "Vennyr": 2
+    },
+    "scope": "Die ursprünglich 16 zusätzlichen Vorschläge werden bereinigt und um drei Männer aus neuen Familien ergänzt. Die acht bereits benannten Mannschaftsmitglieder, einschließlich Rhydian und Gwylim Arth, bleiben erhalten.",
+    "agePolicy": {
+      "over30": 3,
+      "over50": 2,
+      "youngerRange": [
+        17,
+        27
+      ],
+      "exceptions": [
+        {
+          "name": "Uwchric Mathgraig",
+          "age": 54
+        },
+        {
+          "name": "Helban Morgwynt",
+          "age": 36
+        },
+        {
+          "name": "Håkon Graufels",
+          "age": 56
+        }
+      ]
+    },
+    "portraitFraming": "2:3 mit Oberkörperfokus bis etwa zur Hüfte; keine Ganzkörperansicht bei weiteren Personenporträts."
+  },
+  "nameAudit": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/new-families-2026-10-05/name-audit.json",
+  "emblemPrompts": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/new-families-2026-10-05/emblem-prompts.json",
+  "newFamilies": [
+    {
+      "id": "haus-gwernhelyd",
+      "name": "Haus Gwernhelyd",
+      "rankId": "commoner",
+      "location": [
+        "Cenyr",
+        "Klaueninsel",
+        "Sturmklaue",
+        "Talgarth"
+      ],
+      "emblem": "Stammbäume/assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-gwernhelyd.png",
+      "heraldry": "Auf Dunkelgrün eine silberne Weide über einem goldenen offenen Boot und drei silbernen Wellenbändern; schlichter antikgoldener Rundrand mit schwarzer Kontur.",
+      "status": "included-in-module-and-registry"
+    },
+    {
+      "id": "haus-cledrann",
+      "name": "Haus Cledrann",
+      "rankId": "knight",
+      "location": [
+        "Cenyr",
+        "Klaueninsel",
+        "Sturmklaue",
+        "Talgarth"
+      ],
+      "emblem": "Stammbäume/assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-cledrann.png",
+      "heraldry": "Auf Weinrot eine goldene dreilappige Seilschlinge mit zwei silbernen Sternen; schlichter antikgoldener Rundrand mit schwarzer Kontur.",
+      "status": "included-in-module-and-registry"
+    },
+    {
+      "id": "haus-halenwych",
+      "name": "Haus Halenwych",
+      "rankId": "commoner",
+      "location": [
+        "Cenyr",
+        "Klaueninsel",
+        "Sturmklaue",
+        "Talgarth"
+      ],
+      "emblem": "Stammbäume/assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-halenwych.png",
+      "heraldry": "Auf Nachtblau ein silberner Salzberg in einem goldenen offenen Bottich mit zwei dunklen Reifen, darunter drei goldene Wellenbänder; schlichter antikgoldener Rundrand mit schwarzer Kontur.",
+      "status": "included-in-module-and-registry"
+    }
+  ],
+  "portraitSet": {
+    "date": "2026-10-05",
+    "count": 19,
+    "status": "integrated-module-package",
+    "gallery": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/index.html",
+    "manifest": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/prompts-and-assets.json"
+  },
+  "pets": [
+    {
+      "label": "Schiffsbär",
+      "name": "Bootsmops",
+      "species": "Arth-Bär",
+      "owner": "Ianto Pawen",
+      "coat": "rotbraun",
+      "image": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/schiffsbaer-schlafend-2026-10-05.png",
+      "note": "Iantos rotbrauner Arth-Bär. Beherrscht vor allem die Kunst, sich dort zum Schlafen niederzulassen, wo jemand vorbei möchte."
+    },
+    {
+      "label": "Schiffskatze",
+      "name": "Admiral Krümel",
+      "species": "Hauskatze",
+      "coat": "orange getigert",
+      "image": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/schiffskatze-orange-2026-10-05.png",
+      "note": "Verwöhnte orange Tigerkatze mit festen Ansprüchen auf das weichste Kissen. Der Admiralsrang ist selbst verliehen."
+    }
+  ],
+  "additionalMembers": [
+    {
+      "displayName": "Cadyn Morgwynt",
+      "givenName": "Cadyn",
+      "surname": "Morgwynt",
+      "age": 14,
+      "birth": "1726",
+      "sex": "male",
+      "originCountry": "Cenyr",
+      "originPlace": "Talgarth",
+      "houseId": "haus-morgwynt",
+      "role": "Rhydians persönlicher Knappe zur See",
+      "portrait": "/AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/cadyn-morgwynt-v2.png",
+      "sister": "Mabli Morgwynt"
+    }
+  ],
+  "moduleIntegration": {
+    "date": "2026-10-05",
+    "status": "complete-validated",
+    "humanPosts": 66,
+    "namedMembers": 28,
+    "openPosts": 38,
+    "modulePackage": "Charakter Archiv Exporte/Biographien/rhydians-schiffsmannschaft-modulpaket-2026-10-05.json",
+    "selectedGroupImage": "01"
+  }
+}

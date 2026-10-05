@@ -3,7 +3,7 @@ import { createFamilyPerson } from './family-record-builders.js';
 // Belegte Angehörige der Leeren Flasche. Alter ist keine exakte Geburtsdatierung;
 // aus dem gemeinsamen Nachnamen werden keine Abstammungskanten abgeleitet.
 export const LYNNE_CREW_MEMBERS = Object.freeze([
-  { id: 'nest-mathgraig', name: 'Nest Mathgraig', surname: 'Mathgraig', rankId: 'commoner',
+  { id: 'nest-mathgraig', name: 'Nest Mathgraig', surname: 'Mathgraig', rankId: 'commoner', seat: 'Talgarth', sourceRevision: 3,
     title: 'Steuerfrau der Leeren Flasche', age: '35–38 Jahre',
     houseDescription: 'Bürgerhaus der Klaueninseln mit engen Verbindungen zum Hafen.',
     notes: 'Erfahrene Seefahrerin und Waffenknecht; besonders bei schwerer See souverän am Ruder.' },
@@ -12,12 +12,12 @@ export const LYNNE_CREW_MEMBERS = Object.freeze([
     title: 'Schiffskaplanin der Leeren Flasche', age: '39 Jahre',
     houseDescription: 'Bürgerfamilie aus Talgarth, die eine große Taverne betreibt.',
     notes: 'Geistliche Baldrans, an seiner Kathedrale in Talgarth ausgebildet. Fröhlich und trinkfest, mit einer Narbe über einem Auge.' },
-  { id: 'mabli-morgwynt', name: 'Mabli Morgwynt', surname: 'Morgwynt', rankId: 'knight',
-    sourceRevision: 2, portrait: '../AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/mabli-morgwynt.png',
+  { id: 'mabli-morgwynt', name: 'Mabli Morgwynt', surname: 'Morgwynt', rankId: 'knight', seat: 'Talgarth',
+    sourceRevision: 3, portrait: '../AleriaAlmanach/assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/mabli-morgwynt.png',
     title: 'Bootsfrau der Leeren Flasche', age: '28–29 Jahre',
     houseDescription: 'Niederes Ritterhaus der Klaueninseln. Mabli Morgwynt dient als Bootsfrau auf Lynne Arths Schiff.',
     notes: 'Patent, seefest und energisch. Ihre Knappin Una Dyfrgi dient ebenfalls an Bord.' },
-  { id: 'angharad-morglan', name: 'Angharad Morglan', surname: 'Morglan', rankId: 'commoner',
+  { id: 'angharad-morglan', name: 'Angharad Morglan', surname: 'Morglan', rankId: 'commoner', seat: 'Talgarth', sourceRevision: 3,
     title: 'Quartiermeisterin der Leeren Flasche', age: '58 Jahre',
     houseDescription: 'Alte Fischerfamilie der Klaueninseln. Als bürgerliche Fischerfamilie geführt; ein Adelstitel ist nicht überliefert.',
     notes: 'Hat bereits unter Run gedient. Wird an Bord Großmütterchen genannt, obwohl sie diesen Rufnamen nicht mag.' },

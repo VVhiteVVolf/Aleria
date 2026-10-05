@@ -1,0 +1,557 @@
+{
+  "date": "2026-10-05",
+  "status": "complete-local-not-published",
+  "generatedWith": "built-in image_gen",
+  "basePrompt": "Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)",
+  "format": "2:3",
+  "roleCorrection": {
+    "hakon": {
+      "age": 56,
+      "role": "Waffenmeister"
+    },
+    "maelban": {
+      "age": 27,
+      "role": "Schreiber / Adjutant"
+    },
+    "familyAlignment": {
+      "Uwchric Mathgraig": "Steuermann",
+      "Neddwyn Bevan": "Feldscher",
+      "Maelban Penry": "Schreiber / Adjutant",
+      "Bjarne Rotsträhne": "Segelmeister",
+      "Thalan Bowen": "Schiffszimmermann",
+      "Saithric Derynwal": "Navigator",
+      "Ketil Rabenzorn": "Proviantmeister",
+      "Ellor Parry": "Schiffskoch"
+    }
+  },
+  "portraits": [
+    {
+      "slug": "uwchric-mathgraig",
+      "name": "Uwchric Mathgraig",
+      "age": 54,
+      "role": "Steuermann",
+      "appearance": "Rostrotes Haar und rotbrauner Vollbart mit wenigen altersgrauen Strähnen; wie Nest Mathgraigs kräftiges rotes Haar und natürliche braun-olivfarbene Augen. Ein männlicher Angehöriger derselben Familie, kantiges langes Gesicht, breite Nase, tiefe Lachfalten, eine markant hochgezogene Augenbraue. Klar 54, kräftig und wettergegerbt, kein gebrechlicher Greis.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\rhydians-schiffsmannschaft\\portraits-2026-10-05\\uwchric-mathgraig.png"
+      ],
+      "referenceRoles": [
+        "Edit-Ziel: vorhandenes Uwchric-Porträt; nur Balken, Armhaltung und Mimik ändern."
+      ],
+      "prompt": "Use case: identity-preserve.\nBearbeite das angehängte Porträt von Uwchric Mathgraig, 54 Jahre. Ändere NUR Pose und Mimik wie folgt: Entferne den großen schrägen Holzbalken/die Ruderpinne im Vordergrund vollständig. Der Mann hält KEINEN Gegenstand. Stattdessen verschränkt er beide Arme natürlich vor dem unteren Brustkorb, mit zwei korrekt verbundenen Armen und Händen in einer entspannten selbstbewussten Pose. Das Familienabzeichen möglichst oberhalb der Arme sichtbar lassen. Er GRINST breit und verschmitzt, mit sichtbaren Zähnen; glaubwürdiges männliches älteres Gesicht. Bewahre exakt seine Identität, Gesichtsform, Augenfarbe, roten Haare mit grauen Alterssträhnen, roten Bart, Narben, Alter, Körperbau, Rüstung, Fellkragen, Wappen, Kleidungsfarben, Gürtel, Hintergrund und den 2:3-Ausschnitt. Kein neuer Gegenstand, keine neuen Figuren. Gleicher strenger Frieren/One Piece Anime Art Style, klare Lineart, sauberes Cel-Shading, keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Bildformat 2:3, 1024 × 1536 Pixel.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/uwchric-mathgraig-v2.png",
+      "status": "generated-reviewed",
+      "previousVersions": [
+        {
+          "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/uwchric-mathgraig.png",
+          "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-dc0cb920-efb2-4ffe-8684-6a2eed3fd613.png",
+          "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: Nest Mathgraig, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.\nBild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.\nBild 3: nur mittelalterliche Rüstungsformen/Familienfarben, NICHT Malstil, Papiertextur, Alter oder Gesicht übernehmen. Bei ausdrücklich bürokratischer Rolle keine Rüstung daraus übernehmen.\nFigur: Uwchric Mathgraig, männlich, 54 Jahre, Steuermann. Rostrotes Haar und rotbrauner Vollbart mit wenigen altersgrauen Strähnen; wie Nest Mathgraigs kräftiges rotes Haar und natürliche braun-olivfarbene Augen. Ein männlicher Angehöriger derselben Familie, kantiges langes Gesicht, breite Nase, tiefe Lachfalten, eine markant hochgezogene Augenbraue. Klar 54, kräftig und wettergegerbt, kein gebrechlicher Greis.\nKleidung, Pose und Szene: Praktische dunkelblaue Wolltunika über Kettenhemd, kurze dunkle Metall-Brustplatte, brauner Schulterkragen entsprechend dem Rüstungsbeispiel. Mathgraig-Tatze über Fels und Wellen als EIN Brustabzeichen. Beide Hände entspannt und anatomisch korrekt an einer massiven hölzernen Ruderpinne einer mittelalterlichen Kogge. Ruhiges wissendes halbes Lächeln. Oberdeck, nur eine Holzreling und weitgehend leerer Meereshorizont.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+          "referenceImagePaths": [
+            "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\nest-mathgraig.png",
+            "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Klaueninsel\\lynne-crew\\haus-mathgraig.png",
+            "C:\\Users\\fhg_r\\Downloads\\Lynnes Crew\\Mathgraig Rüstung.png"
+          ],
+          "reason": "Nutzerkorrektur: Holzbalken entfernen, Arme verschränken und grinsen."
+        }
+      ],
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-a8cac53b-a560-4e4b-acb7-c8a3b6055b76.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "6653f08e888379f69706c209d4ceaaab91376b9891d4530c3b2e46d9c17f744f",
+      "bytes": 2023224
+    },
+    {
+      "slug": "helban-morgwynt",
+      "name": "Helban Morgwynt",
+      "age": 36,
+      "role": "Bootsmann",
+      "appearance": "Dunkelkastanienbraunes Haar wie Mabli Morgwynt, grau-blaue Augen genau aus der Mabli-Referenz, dichte dunkle Brauen. Kräftiger breitschultriger Mann mit quadratischem Kinn und kurzem Bart, halblanges Haar nach hinten gebunden. Lebhaftes selbstsicheres schiefes Grinsen, leicht schiefe Nase.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\revised-2026-10-05\\mabli-morgwynt.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Klaueninsel\\lynne-crew\\haus-morgwynt.png",
+        "C:\\Users\\fhg_r\\Downloads\\Lynnes Crew\\Morgwynt Rüstung.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: Mabli Morgwynt, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.",
+        "Bild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.",
+        "Bild 3: nur mittelalterliche Rüstungsformen/Familienfarben, NICHT Malstil, Papiertextur, Alter oder Gesicht übernehmen. Bei ausdrücklich bürokratischer Rolle keine Rüstung daraus übernehmen."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: Mabli Morgwynt, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.\nBild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.\nBild 3: nur mittelalterliche Rüstungsformen/Familienfarben, NICHT Malstil, Papiertextur, Alter oder Gesicht übernehmen. Bei ausdrücklich bürokratischer Rolle keine Rüstung daraus übernehmen.\nFigur: Helban Morgwynt, männlich, 36 Jahre, Bootsmann. Dunkelkastanienbraunes Haar wie Mabli Morgwynt, grau-blaue Augen genau aus der Mabli-Referenz, dichte dunkle Brauen. Kräftiger breitschultriger Mann mit quadratischem Kinn und kurzem Bart, halblanges Haar nach hinten gebunden. Lebhaftes selbstsicheres schiefes Grinsen, leicht schiefe Nase.\nKleidung, Pose und Szene: Schlichtes Kettenhemd mit silbergrauen Schulterplatten und blauem Wappenrock mit weißem Saum. Morgwynt-Seevogel und Wellen als EIN gut lesbares Brustmotiv; kleinem braunem Fellbesatz gemäß Rüstungsreferenz. Eine Faust entspannt am Gürtel, die andere Hand an einem einzelnen Tau. Einfaches Deck, Reling und Himmel, keine umstehenden Matrosen.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/helban-morgwynt.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-cd2fb4b1-6150-4c55-a150-be81279444b7.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "fd8df8c50bbb9eb803a1ea9fd3e07d3bd39c17e8a3e82cba43139e81e6eb9dd4",
+      "bytes": 2083600
+    },
+    {
+      "slug": "hakon-graufels",
+      "name": "Håkon Graufels",
+      "age": 56,
+      "role": "Waffenmeister",
+      "appearance": "Aldrimarer Mann, 56, helles aschblondes nach hinten gekämmtes Haar, kräftiger hellblonder Bart, einzelne silberne Alterssträhnen erlaubt, Gesamtfarbe unverkennbar BLOND. Eisblau-graue natürliche Augen. Massiver kantiger Kopf, kräftige gebrochene Nase, markante Stirnfalten, kleine alte Augenbrauennarbe, ernstes aber trocken-amüsiertes Gesicht. Keine rote oder schwarze Haarfarbe.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\nest-mathgraig.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt.\nFigur: Håkon Graufels, männlich, 56 Jahre, Waffenmeister. Aldrimarer Mann, 56, helles aschblondes nach hinten gekämmtes Haar, kräftiger hellblonder Bart, einzelne silberne Alterssträhnen erlaubt, Gesamtfarbe unverkennbar BLOND. Eisblau-graue natürliche Augen. Massiver kantiger Kopf, kräftige gebrochene Nase, markante Stirnfalten, kleine alte Augenbrauennarbe, ernstes aber trocken-amüsiertes Gesicht. Keine rote oder schwarze Haarfarbe.\nKleidung, Pose und Szene: Bewährte schlichte stahlgraue Plattenbrust über Kettenhemd und dunkelblauem Gambeson, braune Lederriemen, wenige matte messingfarbene Beschläge. Sichtbarer Körper kräftig, keine nackte Muskelshow. Eine Hand locker auf dem Knauf eines senkrecht in der Scheide steckenden Schwertes, andere am Gürtel. Nur dieses eine Schwert, keine Waffensammlung, kein erfundenes Familienwappen. Holzreling und ruhiger Himmel. Kein Hornhelm.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/hakon-graufels.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-a7995388-4f89-45ed-bfd8-4aa834cfb993.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "7f057c35153838fbac8ea2e326488b1c5ca6fef9b7d2abda4a55fc9cc6898694",
+      "bytes": 2022641
+    },
+    {
+      "slug": "neddwyn-bevan",
+      "name": "Neddwyn Bevan",
+      "age": 26,
+      "role": "Feldscher",
+      "appearance": "Warmes kastanienbraunes Haar und klare grüne Augen wie Nerys Bevan. Eigener junger männlicher Familienangehöriger, leicht welliges mittellanges Haar, schlankes kantiges Gesicht, starke Augenbrauen, kurzer Kinnbart. Konzentrierte Mimik mit kleinem selbstbewussten Lächeln.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\nerys-bevan.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Klaueninsel\\lynne-crew\\revised-2026-10-05\\haus-bevan.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: Nerys Bevan, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.",
+        "Bild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: Nerys Bevan, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.\nBild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.\nFigur: Neddwyn Bevan, männlich, 26 Jahre, Feldscher. Warmes kastanienbraunes Haar und klare grüne Augen wie Nerys Bevan. Eigener junger männlicher Familienangehöriger, leicht welliges mittellanges Haar, schlankes kantiges Gesicht, starke Augenbrauen, kurzer Kinnbart. Konzentrierte Mimik mit kleinem selbstbewussten Lächeln.\nKleidung, Pose und Szene: Praktischer meeresblauer gesteppter Wams über hellem Leinenhemd, kleiner Kettenhemdkragen, braune Ledermanschetten. Das helle Bevan-Knotenmotiv mit Wellen dezent als Brustabzeichen. EINE saubere gerollte Leinenbinde in einer Hand und ein kleines geschlossenes Lederetui am Gürtel deuten den Feldscher an. Keine moderne Arztkleidung, keine Fläschchensammlung, kein Werkzeugwald. Schlichte helle Kajütenwand und kleine Luke.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/neddwyn-bevan.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-b55463ef-23e7-421c-b5cb-b3fa50728dca.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "8d71fac9ffb361cfaf48855d8786e7e6c806a684afdb92c798a11d4d0c6fb7a9",
+      "bytes": 1987133
+    },
+    {
+      "slug": "oenric-prys",
+      "name": "Oenric Prys",
+      "age": 24,
+      "role": "Schiffskaplan",
+      "appearance": "Warmes mittelbraunes Haar wie Bethan Prys, naturfarbene braun-haselnussfarbene Augen entsprechend dem offenen Referenzauge. Eigenständiger junger Mann, kräftige Brauen, leicht abstehende Ohren, runderes Kinn mit kurzem gepflegtem Bart. Herzliches offenes Lachen, lebendiges Gesicht.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\bethan-prys.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Klaueninsel\\lynne-crew\\revised-2026-10-05\\haus-prys.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: Bethan Prys, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.",
+        "Bild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: Bethan Prys, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.\nBild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.\nFigur: Oenric Prys, männlich, 24 Jahre, Schiffskaplan. Warmes mittelbraunes Haar wie Bethan Prys, naturfarbene braun-haselnussfarbene Augen entsprechend dem offenen Referenzauge. Eigenständiger junger Mann, kräftige Brauen, leicht abstehende Ohren, runderes Kinn mit kurzem gepflegtem Bart. Herzliches offenes Lachen, lebendiges Gesicht.\nKleidung, Pose und Szene: Schlichte silberne Brustplatte über Kettenhemd und blauem Stoff, kurze elfenbeinfarbene Stola mit genau EINEM kleinen goldenen Prys-Sonnenzeichen gemäß Wappen. Keine riesige Priesterhaube, kein moderner Klerikerkragen, kein Kreuz. Eine Hand locker aufs geschlossene kleine Gebetbuch am Gürtel gelegt; zweite Hand offen entspannt. Helles einfaches Holzdeck, Meer und Himmel.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/oenric-prys.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-73e464a6-b269-44d3-92b8-35fd30f34094.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "eb9a25b681006ebdc13679a2ae06ea4910eb59c31003594226535ac12a1963ce",
+      "bytes": 2030966
+    },
+    {
+      "slug": "saithar-morglan",
+      "name": "Saithar Morglan",
+      "age": 25,
+      "role": "Quartiermeister",
+      "appearance": "Sattes natürliches kupferrotes Haar, graugrüne Augen, klar junges männliches Gesicht von 25 Jahren ohne Altersfalten. Das graue Haar der älteren Angharad war altersbedingt und ist kein Familienmerkmal. Schulterlanges Haar in einen kurzen praktischen Zopf gefasst, schmales Gesicht, markante spitze Nase und gerade kräftige Brauen. Trockener leicht skeptischer Blick, ein Mundwinkel hochgezogen.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\rhydians-schiffsmannschaft\\portraits-2026-10-05\\saithar-morglan.png"
+      ],
+      "referenceRoles": [
+        "Zu korrigierendes Saithar-Porträt: ausschließlich Haarfarbe auf Nutzerwunsch ändern."
+      ],
+      "prompt": "Use case: identity-preserve.\nBearbeite exakt das angehängte Porträt von Saithar Morglan. ÄNDERE NUR DIE HAARFARBE: Sein gesamtes derzeit silbergraues Kopfhaar inklusive Zopf wird sattes natürliches kupferrotes Haar. Keine grauen oder weißen Strähnen, natürliche dunklere rote Schatten und hellere kupferrote Cel-Shading-Lichter. Er ist 25. Bewahre sein Gesicht, die graugrünen Augen, Gesichtsausdruck, Alter, Hautfarbe, Haarfrisur und Haarsträhnenform, Pose, Hände, Buch, Kleidung, Farben, Gürtel, Familienwappen, Hintergrund und Bildausschnitt so unverändert wie möglich. Auch die Anime-Lineart und das Cel-Shading exakt erhalten. Bildformat 2:3, 1024 × 1536. Kein Text, keine neuen Gegenstände, keine anderen Änderungen. Strenger Frieren/One Piece Anime Art Style, keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/saithar-morglan-v2.png",
+      "status": "generated-reviewed",
+      "previousVersions": [
+        {
+          "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/saithar-morglan.png",
+          "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-63497b16-4b36-4f10-8821-1a78194d6713.png",
+          "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: Angharad Morglan, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.\nBild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.\nBild 3: nur mittelalterliche Rüstungsformen/Familienfarben, NICHT Malstil, Papiertextur, Alter oder Gesicht übernehmen. Bei ausdrücklich bürokratischer Rolle keine Rüstung daraus übernehmen.\nFigur: Saithar Morglan, männlich, 25 Jahre, Quartiermeister. Das silbergraue Haar und die graugrünen Augen der Morglan-Porträtvorlage übernehmen, aber klar junges männliches Gesicht von 25 Jahren ohne Altersfalten. Schulterlanges Haar in einen kurzen praktischen Zopf gefasst, schmales Gesicht, markante spitze Nase und gerade kräftige Brauen. Trockener leicht skeptischer Blick, ein Mundwinkel hochgezogen.\nKleidung, Pose und Szene: Als Verwalter schlichte dunkelpetrolfarbene Wollweste über elfenbeinfarbenem Leinenhemd, brauner Gürtel; keine schwere Rüstung. Morglan-Fisch, Netz und Wellen als kleines einzelnes Stoffabzeichen am Oberarm. Hält EIN geschlossenes schmales Bestandsbuch locker an der Hüfte, andere Hand am Gürtel. Schlichte Schottwand und ein angedeuteter Balken im Hintergrund. Kein Lager voller Fässer, keine Werkzeugansammlung.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+          "referenceImagePaths": [
+            "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\angharad-morglan.png",
+            "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Klaueninsel\\lynne-crew\\haus-morglan.png",
+            "C:\\Users\\fhg_r\\Downloads\\Lynnes Crew\\MorglanRüstung.png"
+          ],
+          "reason": "Vom Nutzer ersetzt: graues Haar war bei Angharad altersbedingt; Saithar erhält rotes Haar."
+        }
+      ],
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-9a0881d2-1264-4130-8cf6-b81811937594.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "3e7c466877a2db2af10669d8059b300a0643264b952c2d89b19f5e249c92e56f",
+      "bytes": 1846658
+    },
+    {
+      "slug": "maelban-penry",
+      "name": "Maelban Penry",
+      "age": 27,
+      "role": "Schreiber / Adjutant",
+      "appearance": "Hellbraunes Haar und graublaue Augen wie Meleri Penry; Schulterhaar auf Kinnlänge gekürzt, etwas hinter ein Ohr gestrichen. Eigener männlicher Familienangehöriger, schlankes längliches Gesicht mit ähnlicher Nase, deutliche Wangenknochen und feiner kurzer Bartschatten. Ruhiges selbstsicheres leicht spöttisches Lächeln.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\meleri-penry.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Klaueninsel\\lynne-crew\\revised-2026-10-05\\haus-penry.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: Meleri Penry, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.",
+        "Bild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: Meleri Penry, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.\nBild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.\nFigur: Maelban Penry, männlich, 27 Jahre, Schreiber / Adjutant. Hellbraunes Haar und graublaue Augen wie Meleri Penry; Schulterhaar auf Kinnlänge gekürzt, etwas hinter ein Ohr gestrichen. Eigener männlicher Familienangehöriger, schlankes längliches Gesicht mit ähnlicher Nase, deutliche Wangenknochen und feiner kurzer Bartschatten. Ruhiges selbstsicheres leicht spöttisches Lächeln.\nKleidung, Pose und Szene: Bürokratischer Dienst: gut sitzender dunkelblauer Wollrock mit feiner zurückhaltender Goldborte über weißem Leinenhemd, brauner Gürtel. KEINE Rüstung, kein Kettenhemd. Penry-Schlüssel über Wellen als EIN kleines goldenes Abzeichen am Brustverschluss. Stehend an einer einfachen Schreibpultkante, ein geschlossenes Logbuch unter einem Arm, andere Hand hält EINE Gänsefeder. Keine Verbände oder Medizin, keine fliegenden Papierstapel. Schlichtes Holzschott und eine helle Luke.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/maelban-penry.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-296f093a-df55-4dc3-a6bf-af64789951f0.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "fd686746f374ca1e23000c390cb09d9a6fa01de2a2a999ec0ef84c9ed9a6a095",
+      "bytes": 1838577
+    },
+    {
+      "slug": "bjarne-rotstraehne",
+      "name": "Bjarne Rotsträhne",
+      "age": 23,
+      "role": "Segelmeister",
+      "appearance": "Aldrimarer, leuchtend goldblondes dichtes kurzes Haar mit nach hinten gebundenem kleinem Nackenzopf, blaugrüne Augen. ALLE Haare blond: Trotz Beiname Rotsträhne KEINE rote Haarsträhne. Sehr kräftiger breiter Oberkörper, breites jugendliches Gesicht, markante leicht platte Nase, Sommersprossen, kurzes blondes Kinnbärtchen. Breites schelmisches Grinsen.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\nest-mathgraig.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt.\nFigur: Bjarne Rotsträhne, männlich, 23 Jahre, Segelmeister. Aldrimarer, leuchtend goldblondes dichtes kurzes Haar mit nach hinten gebundenem kleinem Nackenzopf, blaugrüne Augen. ALLE Haare blond: Trotz Beiname Rotsträhne KEINE rote Haarsträhne. Sehr kräftiger breiter Oberkörper, breites jugendliches Gesicht, markante leicht platte Nase, Sommersprossen, kurzes blondes Kinnbärtchen. Breites schelmisches Grinsen.\nKleidung, Pose und Szene: Praktischer dunkelblauer gesteppter Wams mit schlichten kleinen Stahl-Schulterplatten und kurzen Kettenhemdärmeln, cremefarbene Hemdärmel, brauner Gürtel. Beide Hände halten EIN kurzes sauber aufgeschossenes Tau locker auf Hüfthöhe. Keine Zimmermannswerkzeuge, keine übergroße Schürze, kein erfundenes Hauswappen. Leeres Holzdeck mit einer einzigen großen hellen Segelfläche und blauem Himmel. Der kräftige blonde junge Mann wirkt seefest und fröhlich.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/bjarne-rotstraehne.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-8a07522a-6c2f-4799-ac40-a4a2bcdc1580.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "b2e6a80106ce20786fd3ceb03c2f30ed98844e8ecd8575efb0274950fd66c3a1",
+      "bytes": 1830176
+    },
+    {
+      "slug": "perwyn-neddeth",
+      "name": "Perwyn Neddeth",
+      "age": 22,
+      "role": "Schiffsmeier",
+      "appearance": "Vennyri, sehr dunkelweinrotes Haar, natürliche grüne Augen, 22 Jahre. Aufrechte ungekreuzte Haltung, konzentrierter Blick, beide Arme entspannt seitlich, leere Hände; keine Gegenstände im Vordergrund.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\rhydians-schiffsmannschaft\\portraits-2026-10-05\\perwyn-neddeth-v2.png"
+      ],
+      "referenceRoles": [
+        "Edit-Ziel: bisheriges Porträt. Nutzerkorrektur: schwebendes Buch und Pult vollständig entfernen; stehend mit leeren Händen und locker seitlich hängenden Armen."
+      ],
+      "prompt": "Use case: precise-object-edit / identity-preserve.\nInput image 1 is the exact edit target, Perwyn Neddeth. Edit this existing portrait, preserving the SAME young adult man's facial identity, very dark burgundy red hair and hairstyle, green eyes, skin, build, burgundy gold-trimmed waistcoat, white rolled-sleeve shirt, navy gold-trimmed cloak and leather belt.\nPrimary change: Completely REMOVE the open book AND the entire wooden lectern/table/railing in the foreground. There must be NO book, document, writing equipment, tool, cup, weapon, furniture or other prop anywhere in front of him or in his hands. Do not replace these with another object. Both hands EMPTY.\nPose: standing upright naturally, torso and hips aligned, legs clearly separate and uncrossed, both arms hanging comfortably down at his sides, hands relaxed with correct anatomy. Show him from head to about knees, making his standing posture unambiguous. Keep a meticulous, quietly focused expression, looking slightly toward the viewer. No pointing gesture.\nPreserve the restrained wooden ship cabin setting and daylight through the small sea-facing window, but simplify the background and remove the hanging lantern as well. Only simple wall, wood beams and window, no extra figures or movable objects.\nBildformat 2:3, 1024 x 1536. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Weniger ist mehr, was Hintergrund anbelangt. Preserve original colors and drawing style. No text, no watermark.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/perwyn-neddeth-v3.png",
+      "status": "generated-reviewed",
+      "previousVersions": [
+        {
+          "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/perwyn-neddeth.png",
+          "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-a1a89d05-04ae-410c-b515-ea60524578d5.png",
+          "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt.\nFigur: Perwyn Neddeth, männlich, 22 Jahre, Schiffsmeier. Vennyri, sehr dunkelweinrotes Haar, fast schwarzrotes Bordeaux; im Licht dunkelrot erkennbar, NICHT leuchtend orange. Natürliche grüne Augen. Welliges kurzes Haar mit Seitenscheitel, schmales freundliches Gesicht, hohe Wangenknochen, gebogene Brauen, sauber rasiert. Aufmerksam und gelassen mit schmalem Lächeln.\nKleidung, Pose und Szene: Bürokratischer Dienst: gut sitzender dunkelweinroter Wollrock über cremefarbenem Leinenhemd, dunkelblauer Mantelkragen, dezente matte Goldborte, KEINE Rüstung. Sitzend seitlich an einer einfachen Holztischkante, eine Hand auf einem einzigen geschlossenen Rechnungsbuch, die andere entspannt am Oberschenkel. Keine Münzberge, keine Pergamentflut, keine erfundene Familienheraldik. Schlichte Kajütenwand und eine kleine Luke.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+          "referenceImagePaths": [
+            "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\nest-mathgraig.png"
+          ],
+          "reason": "Nutzerkorrektur: seltsame Beinstellung ersetzen durch akribische stehende Arbeitshaltung."
+        },
+        {
+          "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/perwyn-neddeth-v2.png",
+          "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-3e50afe2-c5d4-46fd-a29e-77fc367729d0.png",
+          "prompt": "Use case: identity-preserve.\nBearbeite dieses Porträt von Perwyn Neddeth, 22 Jahre, Schiffsmeier. Behalte exakt seine Identität, Gesichtsform, sehr dunkelweinroten Haare und Frisur, grünen Augen, Alter, Hautfarbe und dieselbe dunkelweinrote/dunkelblaue Kleidung mit dezenter Goldborte und weißem Hemd. ÄNDERE DIE HALTUNG: Er sitzt NICHT mehr. Er steht aufrecht neben einem schmalen hölzernen Pult und prüft akribisch ein einzelnes geöffnetes Rechnungsbuch. Konzentrierte präzise Mimik, Brauen leicht zusammengezogen, Blick aufmerksam auf das Buch gerichtet. Eine Hand hält das Buch auf dem Pult offen, ein Finger der anderen Hand verfolgt ruhig eine Zeile. Keine zusätzlichen Gegenstände. Beide Beine stehen natürlich parallel nebeneinander, sind UNGEKREUZT, keine verschlungenen Beine, keine gehobenen Knie; der sichtbare Bereich von Hüfte und Oberschenkeln zeigt eine anatomisch klare stehende Pose. Kein Hocker oder Stuhl. Ansicht Kopf bis Mitte Oberschenkel, Kopf vollständig sichtbar. Pult schmal und nur seitlich im Bild, Körper gut sichtbar. Schlichter Kajütenhintergrund mit Holzplanken und kleiner Luke bleibt ähnlich. Keine Rüstung. Bildformat 2:3, 1024 × 1536. Strenger Frieren/One Piece Anime Art Style, starke charakteristische Mimik, klare Anime-Lineart, sauberes Cel-Shading. Weiche simple Anime-Texturen; keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Kein Name, keine Bildbeschriftung, keine lesbaren Buchtexte, keine zusätzlichen Figuren. Weniger ist mehr.",
+          "referenceImagePaths": [
+            "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\rhydians-schiffsmannschaft\\portraits-2026-10-05\\perwyn-neddeth.png"
+          ],
+          "referenceRoles": [
+            "Edit-Ziel: vorhandenes Perwyn-Porträt. Stehende Haltung und akribische Mimik anpassen, Identität bewahren."
+          ],
+          "appearance": "Vennyri, sehr dunkelweinrotes Haar, fast schwarzrotes Bordeaux; im Licht dunkelrot erkennbar, NICHT leuchtend orange. Natürliche grüne Augen. Welliges kurzes Haar mit Seitenscheitel, schmales freundliches Gesicht, hohe Wangenknochen, gebogene Brauen, sauber rasiert. Aufmerksam und gelassen mit schmalem Lächeln.",
+          "sha256": "37f8eb7fd2885229542018c78e9c499b74466f14ac15b1c1012b9c074656dc3c",
+          "reason": "Nutzerkorrektur: schwebendes Buch und Pult vollständig entfernen; stehend mit leeren Händen und locker seitlich hängenden Armen."
+        }
+      ],
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-2e4df3b6-b244-4fa6-95f2-fd2417cf518a.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "e5d974ee962f7b1069edca71bf555f2fdf5869c7d870c4846da97b02970c7bb7",
+      "bytes": 1660856
+    },
+    {
+      "slug": "iwrban-dyger",
+      "name": "Iwrban Dyger",
+      "age": 23,
+      "role": "Schiffsmusikant",
+      "appearance": "Kräftiges kupferrotes Haar wie Rhy und Awen Dyger, grün-haselnussfarbene natürliche Augen aus den Familienreferenzen, Sommersprossen. Eigener junger Mann mit schmalem kantigem Kinn, breitem ausdrucksstarkem Mund, kurzen stacheligen Haaren und einem dünnen Seitenzopf. Temperamentvolles offenes Lachen. Keine direkte Kopie Rhys.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\Stammbäume\\assets\\images\\portraits\\haus-dyger\\rhy-dyger.png",
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\awen-dyger.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Talgarth\\Klaueninseln\\haus-dyger.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: Rhy Dyger, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.",
+        "Bild 2: Awen Dyger, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.",
+        "Bild 3: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: Rhy Dyger, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.\nBild 2: Awen Dyger, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.\nBild 3: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.\nFigur: Iwrban Dyger, männlich, 23 Jahre, Schiffsmusikant. Kräftiges kupferrotes Haar wie Rhy und Awen Dyger, grün-haselnussfarbene natürliche Augen aus den Familienreferenzen, Sommersprossen. Eigener junger Mann mit schmalem kantigem Kinn, breitem ausdrucksstarkem Mund, kurzen stacheligen Haaren und einem dünnen Seitenzopf. Temperamentvolles offenes Lachen. Keine direkte Kopie Rhys.\nKleidung, Pose und Szene: Weißes Leinenhemd, offener dunkelblauer Waffenrock mit zurückhaltender Goldborte, kurzer Kettenhemdkragen, rotes Hüfttuch und brauner Gürtel. Kleines Dyger-Lyramotiv vom Wappen am Westenaufschlag. Eine mittelalterliche Fiedel am Oberschenkel gehalten, der zugehörige Bogen locker in der anderen Hand; Hände anatomisch sauber, kein Spielen nötig. Keine Magie, kein modernes Instrument, keine zweite Person. Reling und eine einzelne Segelfläche im Hintergrund.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/iwrban-dyger.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-b7eeda96-286d-4554-ad93-2c4a37b551ac.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "582e743e6e74bf05450ca2e8df7088f3016f9324b041a796f08ddea9213bddfe",
+      "bytes": 1991775
+    },
+    {
+      "slug": "leif-nebelkind",
+      "name": "Leif Nebelkind",
+      "age": 18,
+      "role": "Ausguck",
+      "appearance": "Aldrimarer, eindeutig helles flachsblondes etwas struppiges Haar, klare natürliche hellblaue Augen. Schlanker hochgewachsener junger Mann, klar 18 und nicht kindlich; schmale Wangen, leicht spitze Nase, ausgeprägte freche Augenbrauen. Neugieriges aufgewecktes Lächeln.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\nest-mathgraig.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt.\nFigur: Leif Nebelkind, männlich, 18 Jahre, Ausguck. Aldrimarer, eindeutig helles flachsblondes etwas struppiges Haar, klare natürliche hellblaue Augen. Schlanker hochgewachsener junger Mann, klar 18 und nicht kindlich; schmale Wangen, leicht spitze Nase, ausgeprägte freche Augenbrauen. Neugieriges aufgewecktes Lächeln.\nKleidung, Pose und Szene: Leichter graublauer Gambeson unter kurzem dunkelblauem Wollumhang, braune Lederschulterriemen und kleine schlichte Stahl-Unterarmschützer. Keine schwere Vollplatte. Eine Hand locker an EINER Wante, andere an der Hüfte; sicher mit beiden Füßen auf Deck, keine riskante Kletterpose. Ruhiger blasser Meereshorizont und ein Mastabschnitt. Kein Fernglas, kein Fernrohr, keine Schutzbrille, kein erfundenes Familienwappen.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/leif-nebelkind.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-cde03050-3f3e-4968-9e70-46e256f391be.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "deb324bd2215843947f5bc1ff0ff4b3cb57d089d8d77258bbc72c95c9abde85d",
+      "bytes": 1822176
+    },
+    {
+      "slug": "thalan-bowen",
+      "name": "Thalan Bowen",
+      "age": 24,
+      "role": "Schiffszimmermann",
+      "appearance": "Kräftiges kupferrotes Haar in kurzem zerzaustem Schnitt, bernsteinbraune Augen wie Ffion Bowen. Markante Brauen, kantiger Kiefer, kurze Bartstoppeln, leicht mürrische geschlossene Mimik. Jugendliches Gesicht, 24 Jahre, keine zusätzlichen Altersmerkmale.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\rhydians-schiffsmannschaft\\portraits-2026-10-05\\thalan-bowen.png"
+      ],
+      "referenceRoles": [
+        "Edit-Ziel: bisheriges Porträt. Nutzerkorrektur: kurze rote Haare, leicht mürrisch, maskulinere Gesichtszüge; weiterhin 24 Jahre alt."
+      ],
+      "prompt": "Use case: identity-preserve.\nEdit target: supplied portrait of Thalan Bowen, a 24-year-old medieval ship's carpenter. Preserve his recognizable identity, bright copper-red hair COLOR, amber-brown eyes, skin tone, existing athletic build, clothes, armor, leather apron, precise round family crest, belt-mounted mallet, pose leaning on the plank, ship deck, sea and daylight.\nChange ONLY hairstyle, expression and slight facial-shape definition as requested:\n1. SHORT copper-red hair, a practical compact tousled crop, short at sides and nape, a few short angular strands on top. Remove the entire ponytail and ALL long hanging locks, including hair behind the shoulders/arms; replace that area with the correct existing background/clothing.\n2. A slightly GRUMPY serious expression: closed unsmiling mouth, lightly knitted strong eyebrows, steady stern look; no bared teeth, no grin, not enraged.\n3. More masculine youthful face: a subtly broader square jaw, firm chin and strong brows, retain his existing light short stubble. He must still look exactly 24, a young adult. Smooth youthful skin; do not add wrinkles, forehead creases, bags under eyes, gray hair, heavy beard, older weathering or age.\nBildformat 2:3, 1024 x 1536. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Weniger ist mehr, was Hintergrund anbelangt. Preserve the source image's clean anime rendering, color palette and composition. No added objects, figures, text or watermark.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/thalan-bowen-v2.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-ca3ef623-e147-4ad6-85c7-0dd43248f312.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "29b4cf3d547ed35cf55926ba3f4bed5aaa8dd4a5af601a19ca3a3119c661c3ed",
+      "bytes": 1945119,
+      "previousVersions": [
+        {
+          "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/thalan-bowen.png",
+          "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-b306cc18-7f81-4067-be36-db833a82a0b3.png",
+          "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: Ffion Bowen, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.\nBild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.\nFigur: Thalan Bowen, männlich, 24 Jahre, Schiffszimmermann. Leuchtendes kräftiges kupferrotes Haar und bernsteinbraune natürliche Augen wie Ffion Bowen. Eigenständiger männlicher Familienangehöriger, hochgebundener langer Pferdeschwanz und kurze Bartstoppeln, energisches kantiges Gesicht mit Ffions markanten Brauen. Herausforderndes schiefes Grinsen.\nKleidung, Pose und Szene: Marineblauer Gambeson mit kleinen Stahl-Schulterplatten, brauner Lederverstärkung vorne und cremefarbenen hochgerollten Hemdärmeln. Bowen-Schiff und gekreuzte Werkzeuge klein als Brustabzeichen. EIN kleiner Holzhammer sicher im Gürtel und die Hand locker auf einem einzelnen Holzspant genügen als Berufshinweis, andere Hand am Gürtel. Keine Ansammlung von Sägen und Nägeln. Hintergrund nur Reling und Himmel.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+          "referenceImagePaths": [
+            "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\ffion-bowen.png",
+            "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Klaueninsel\\lynne-crew\\revised-2026-10-05\\haus-bowen.png"
+          ],
+          "referenceRoles": [
+            "Bild 1: Ffion Bowen, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.",
+            "Bild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik."
+          ],
+          "appearance": "Leuchtendes kräftiges kupferrotes Haar und bernsteinbraune natürliche Augen wie Ffion Bowen. Eigenständiger männlicher Familienangehöriger, hochgebundener langer Pferdeschwanz und kurze Bartstoppeln, energisches kantiges Gesicht mit Ffions markanten Brauen. Herausforderndes schiefes Grinsen.",
+          "sha256": "8881fbfdcfd8a2c454910a3402052500b1402fdaf0003b20d1b6cb1ad79a2f50",
+          "reason": "Nutzerkorrektur: kurze rote Haare, leicht mürrisch, maskulinere Gesichtszüge; weiterhin 24 Jahre alt."
+        }
+      ]
+    },
+    {
+      "slug": "gwaeden-beryn",
+      "name": "Gwaeden Beryn",
+      "age": 26,
+      "role": "Wachmeister",
+      "appearance": "Dunkelbraunes Haar, dunkle natürliche braun-haselnussfarbene Augen passend zu Ifor und Eira Beryn. KEINE roten Haare. Neuer männlicher Familienangehöriger mit Ifors kantiger Gesichtsform, kräftiger Stirn und Nase, aber eigenem Gesicht; seitlich gescheiteltes dunkelbraunes schulterlanges Haar, kurzer gepflegter Vollbart. Strenger wachsamer Blick mit leicht ironisch gehobener Braue.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\Stammbäume\\assets\\images\\portraits\\haus-beryn\\ifor-beryn.png",
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\eirlys-beryn.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Klaueninsel\\haus-beryn.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: Ifor Beryn, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.",
+        "Bild 2: Eira Beryn, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.",
+        "Bild 3: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: Ifor Beryn, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.\nBild 2: Eira Beryn, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.\nBild 3: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.\nFigur: Gwaeden Beryn, männlich, 26 Jahre, Wachmeister. Dunkelbraunes Haar, dunkle natürliche braun-haselnussfarbene Augen passend zu Ifor und Eira Beryn. KEINE roten Haare. Neuer männlicher Familienangehöriger mit Ifors kantiger Gesichtsform, kräftiger Stirn und Nase, aber eigenem Gesicht; seitlich gescheiteltes dunkelbraunes schulterlanges Haar, kurzer gepflegter Vollbart. Strenger wachsamer Blick mit leicht ironisch gehobener Braue.\nKleidung, Pose und Szene: Schlichte dunkle Stahlbrust und Schulterplatten über Kettenhemd, kleiner brauner Schulterkragen, rostrot-schwarzer Wappenrock. Schwarzer aufgerichteter Bär mit Dreizack auf rotem Feld vom Beryn-Wappen als EIN klares Brustmotiv. Eine Hand ruht auf dem Gürtel, die andere locker auf der Reling. Kein zusätzlicher großer Dreizack nötig. Kein Helm auf dem Kopf, Gesicht frei. Nur Holzreling und Meereshorizont.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/gwaeden-beryn.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-3df90273-e7f7-4a3a-b223-2bd5372e9fbb.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "fc4e3a1da8aeb03bda1e863c531c08729d557b17e29d3ea556f6cb2f381b32f1",
+      "bytes": 1973582
+    },
+    {
+      "slug": "saithric-derynwal",
+      "name": "Saithric Derynwal",
+      "age": 20,
+      "role": "Navigator",
+      "appearance": "Vennyri, sehr dunkelrote burgunderfarbene Haare, beinahe schwarzkirschrot, NICHT hellrot oder orange. Natürliche braune Augen. Gerades kinnlanges Haar mit einer seitlichen langen Strähne, schlanker junger Mann mit spitzem Kinn, schmaler gerader Nase und lebhaften Brauen. Wach, etwas verschmitzt, kleiner geschlossener Mundlächel.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\nest-mathgraig.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt.\nFigur: Saithric Derynwal, männlich, 20 Jahre, Navigator. Vennyri, sehr dunkelrote burgunderfarbene Haare, beinahe schwarzkirschrot, NICHT hellrot oder orange. Natürliche braune Augen. Gerades kinnlanges Haar mit einer seitlichen langen Strähne, schlanker junger Mann mit spitzem Kinn, schmaler gerader Nase und lebhaften Brauen. Wach, etwas verschmitzt, kleiner geschlossener Mundlächel.\nKleidung, Pose und Szene: Dunkelblauer Wollrock mit weinrotem Kragen, schmalen goldenen Kanten und kurzem Kettenhemdkragen, helle Leinenärmel, brauner Gürtel. Steht bei einer Relingkante, eine Hand auf einer einzigen teilweise eingerollten einfachen Seekarte, die andere hält einen kleinen schlichten Messzirkel. Karte ohne lesbare Schrift. Kein Schreibpult, keine Gänsefeder, kein Fernglas, kein Fernrohr, kein erfundenes Familienwappen. Hintergrund ein Mastabschnitt und viel leerer Himmel mit Meereshorizont.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/saithric-derynwal.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-ef02c5c9-3b92-421c-8db6-e3193f1c41ab.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "ca84a2472cdc9676757d854bfff7b70a42817349cfdf577e9c77b51755b32336",
+      "bytes": 1848945
+    },
+    {
+      "slug": "ketil-rabenzorn",
+      "name": "Ketil Rabenzorn",
+      "age": 22,
+      "role": "Proviantmeister",
+      "appearance": "Aldrimarer, kräftig honigblondes lockiges Haar, blaugrüne natürliche Augen. Alle Haare und kurzer Backenbart BLOND, trotz Rabenzorn KEINE schwarzen Haare. Breites junges Gesicht, kräftige Nase, sehr ausdrucksstarke heruntergezogene Brauen und freches asymmetrisches Grinsen, kerniger Körperbau.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\nest-mathgraig.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt.\nFigur: Ketil Rabenzorn, männlich, 22 Jahre, Proviantmeister. Aldrimarer, kräftig honigblondes lockiges Haar, blaugrüne natürliche Augen. Alle Haare und kurzer Backenbart BLOND, trotz Rabenzorn KEINE schwarzen Haare. Breites junges Gesicht, kräftige Nase, sehr ausdrucksstarke heruntergezogene Brauen und freches asymmetrisches Grinsen, kerniger Körperbau.\nKleidung, Pose und Szene: Als Vorratsverwalter cremefarbenes Leinenhemd mit hochgerollten Ärmeln und offene dunkelblaue Wollweste, schlichter brauner Gürtel. Keine schwere Rüstung, keine Schürze oder Kochmütze. Eine Hand liegt auf EINEM geschlossenen Fass, die andere hält EIN kleines geschlossenes Bestandsbuch. Keine Kochlöffel, keine Speisentabletts, keine Raben, keine erfundene Familienheraldik. Im Hintergrund nur ruhige Schiffsplanken und eine kleine Luke.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/ketil-rabenzorn.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-d5aa6e92-eb76-4c36-be00-a71e8f57314e.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "1910cf8779f07fbcf2353945a729a912e80d4da1ce7680a9585ddfaa4d331248",
+      "bytes": 1762317
+    },
+    {
+      "slug": "ellor-parry",
+      "name": "Ellor Parry",
+      "age": 21,
+      "role": "Schiffskoch",
+      "appearance": "Sehr dunkles braunschwarzes Haar und bernsteinbraune natürliche Augen wie Tesni Parry; keine blonden oder roten Haare. Eigener junger männlicher Familienangehöriger, lockige etwas zerzauste kurze Haare, markantes Kinn, dicke Brauen, kaum Bart. Lebhaftes breites selbstbewusstes Lächeln.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\tesni-parry.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Klaueninsel\\lynne-crew\\revised-2026-10-05\\haus-parry.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: Tesni Parry, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.",
+        "Bild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: Tesni Parry, ausschließlich Familienmerkmale (Haar-/Augenfarbe, verwandte Gesichtszüge) und Anime-Stil. Erzeuge eine NEUE männliche Person, keine Kopie und keine weitere Figur.\nBild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.\nFigur: Ellor Parry, männlich, 21 Jahre, Schiffskoch. Sehr dunkles braunschwarzes Haar und bernsteinbraune natürliche Augen wie Tesni Parry; keine blonden oder roten Haare. Eigener junger männlicher Familienangehöriger, lockige etwas zerzauste kurze Haare, markantes Kinn, dicke Brauen, kaum Bart. Lebhaftes breites selbstbewusstes Lächeln.\nKleidung, Pose und Szene: Cremefarbenes Leinenhemd mit hochgerollten Ärmeln, dunkelblaue gesteppte Weste, schmales weinrotes Hüfttuch und kleine praktische braune Lederschürze nur bis zur Taille. Kleines goldenes Parry-Kesselzeichen mit Wellen am Brustverschluss. EIN schlichter Holzlöffel locker in einer Hand, andere Hand am Gürtel. Keine Kochmütze, keine große weiße Küchenschürze, keine Speisenauslage. Hintergrund nur ein kleiner angedeuteter mittelalterlicher Schiffsofen und ruhiges Holzschott.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/ellor-parry.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-c14918a7-4522-488e-bf65-4357fde662f0.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "52137ddb7a819ff2c600c2e3c1701ad0466d06b4cd2db8a34e7ddd24308fbd28",
+      "bytes": 1852044
+    },
+    {
+      "slug": "gwaedric-gwernhelyd",
+      "name": "Gwaedric Gwernhelyd",
+      "age": 25,
+      "role": "Kalfaterer",
+      "appearance": "Cenyri ohne vorhandenes Personenbeispiel: dunkel kastanienbraunes welliges Haar und natürliche braune Augen. Kräftiger kompakter Mann, breite Nase, kantiger kurzer Bart, dichte Brauen. Humorvolles seitliches Grinsen, leicht gerötete Wangen.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\nest-mathgraig.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Klaueninsel\\rhydian-new-families-2026-10-05\\haus-gwernhelyd.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt.",
+        "Bild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt.\nBild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.\nFigur: Gwaedric Gwernhelyd, männlich, 25 Jahre, Kalfaterer. Cenyri ohne vorhandenes Personenbeispiel: dunkel kastanienbraunes welliges Haar und natürliche braune Augen. Kräftiger kompakter Mann, breite Nase, kantiger kurzer Bart, dichte Brauen. Humorvolles seitliches Grinsen, leicht gerötete Wangen.\nKleidung, Pose und Szene: Tannengrüner Gambeson über hellem Leinenhemd, einfache dunkle Stahl-Schulterkappen, braune Ledermanschetten. Kleines Gwernhelyd-Wappen mit silberner Weide, goldenem Boot und Wellen auf der Brust. EIN kleiner Kalfathammer im Gürtel und eine einzelne schlichte Holzfuge an der Reling als Berufshinweis; keine Pechberge, keine schmutzige schwarze Maske, kein Werkzeugwald. Hände locker am Gürtel, ruhiger heller Deckhintergrund.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/gwaedric-gwernhelyd.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-dbe1a97e-c8c0-4f81-82e3-88405c706a68.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "e7db8a6c3a79110f3e9c07413527ff8d4c22bf906a34db1c50ff86b3f852a7ac",
+      "bytes": 2056261
+    },
+    {
+      "slug": "cyror-cledrann",
+      "name": "Cyror Cledrann",
+      "age": 23,
+      "role": "Reepschläger / Seiler",
+      "appearance": "Cenyri ohne vorhandenes Personenbeispiel: satt rotbraunes Haar und natürliche haselnussgrüne Augen. Hochgewachsener sehniger Mann, kräftiges langes Gesicht mit hoher Stirn, markanten Wangenknochen, kurzem sauberem Kinnbart; halblanges Haar hinten in einer einzelnen praktischen Flechtung. Fröhlicher offener Ausdruck.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\nest-mathgraig.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Klaueninsel\\rhydian-new-families-2026-10-05\\haus-cledrann.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt.",
+        "Bild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt.\nBild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.\nFigur: Cyror Cledrann, männlich, 23 Jahre, Reepschläger / Seiler. Cenyri ohne vorhandenes Personenbeispiel: satt rotbraunes Haar und natürliche haselnussgrüne Augen. Hochgewachsener sehniger Mann, kräftiges langes Gesicht mit hoher Stirn, markanten Wangenknochen, kurzem sauberem Kinnbart; halblanges Haar hinten in einer einzelnen praktischen Flechtung. Fröhlicher offener Ausdruck.\nKleidung, Pose und Szene: Einfache silbergraue Brustplatte über Kettenhemd und weinrotem Wappenrock, zurückhaltende goldene Kanten, braune Lederhandschuhe. Das goldene dreilappige Seilzeichen und zwei kleine silberne Sterne aus dem Cledrann-Wappen als EIN Brustmotiv. Hält ein kurzes fertig gespleißtes Tau locker zwischen zwei Händen in anatomisch einfacher Pose. Keine riesigen Seilknoten, keine um den Körper gewickelten Taue. Reling und Himmel als ruhiger Hintergrund.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/cyror-cledrann.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-b1f3dbb0-2c35-4012-8a1d-117a4f009705.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "741f249d60308e6b6a97cb5acc5e171e99eadf60d5d0d6c7ef243d14f1d0ed9e",
+      "bytes": 2138858
+    },
+    {
+      "slug": "pereth-halenwych",
+      "name": "Pereth Halenwych",
+      "age": 19,
+      "role": "Vorratsgehilfe",
+      "appearance": "Cenyri ohne vorhandenes Personenbeispiel: warm mittelbraunes dichtes leicht welliges Haar, natürliche graublaue Augen. Junger schlanker Erwachsener, deutliche junge männliche Züge, runderes Kinn, lange Nase, leicht abstehende Ohren und freche dichte Brauen. Freundliches erwartungsvolles Lächeln, nicht kindlich.",
+      "referenceImagePaths": [
+        "E:\\Aleria\\AleriaAlmanach\\assets\\ship-crews\\lynnes-schiffsmannschaft\\anime-2026-10-04\\nest-mathgraig.png",
+        "E:\\Aleria\\Stammbäume\\assets\\images\\houses\\Klaueninsel\\rhydian-new-families-2026-10-05\\haus-halenwych.png"
+      ],
+      "referenceRoles": [
+        "Bild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt.",
+        "Bild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik."
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: Einzelporträt für Rhydians Mannschaft der mittelalterlichen Kriegskogge „Der Seebär“.\nVERBINDLICHER STILPROMPT: Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. (Weniger ist mehr, was Hintergrund anbelangt)\nReferenzrollen:\nBild 1: ausschließlich Referenz für Anime-Lineart/Cel-Shading. NICHT Haarfarbe, Augenfarbe, Geschlecht oder Identität übernehmen; diese sind unten für die neue Person festgelegt.\nBild 2: verbindliches Familienwappen; übernehme Palette und Motiv in EIN dezentes Kleidungsabzeichen, keine schwebende Grafik.\nFigur: Pereth Halenwych, männlich, 19 Jahre, Vorratsgehilfe. Cenyri ohne vorhandenes Personenbeispiel: warm mittelbraunes dichtes leicht welliges Haar, natürliche graublaue Augen. Junger schlanker Erwachsener, deutliche junge männliche Züge, runderes Kinn, lange Nase, leicht abstehende Ohren und freche dichte Brauen. Freundliches erwartungsvolles Lächeln, nicht kindlich.\nKleidung, Pose und Szene: Nachtblauer gepolsterter Wams mit goldgelbem Kragen und braunem Gürtel, kurze schlichte Kettenhemdärmel. Ein kleines Halenwych-Abzeichen: goldener Bottich mit silbernem Salz und Wellen. Eine Hand liegt auf EINEM geschlossenen Fass, die andere locker an der Hüfte. Kein Essenstablett, keine Salzberge außerhalb des Abzeichens, keine Schürze. Hintergrund schlichtes Lagerraumschott und eine kleine helle Luke.\nKomposition: GENAU EINE Person, vertikales 2:3-Porträt, Wunschgröße 1024 × 1536 Pixel. Kopf bis Mitte Oberschenkel sichtbar, Kopf vollständig im Bild mit etwas Luft, Gesicht groß und klar lesbar. Kräftige variierte Anime-Proportionen und starke charakteristische Mimik. Korrekte Anatomie, zwei Arme, natürliche Hände. Kein Text, keine Schrift, kein Name, kein Rahmen, kein Wasserzeichen. Keine Nebenfiguren. Wenige große Hintergrundformen, keine Requisitenhäufung. Mittelalterliche Fantasy, keine Schusswaffen, keine modernen Werkzeuge. Altersmerkmale mit klaren Linien und flachen Schatten darstellen. Weder realistische Poren noch Fotolicht, Filmkorn, malerische Pinselspuren oder 3D-Render.",
+      "file": "AleriaAlmanach/assets/ship-crews/rhydians-schiffsmannschaft/portraits-2026-10-05/pereth-halenwych.png",
+      "status": "generated-reviewed",
+      "sourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a108b0-6759-78c3-97ef-94fb168c238f\\exec-2608c14c-b9d3-43b1-a8a3-7de7fbcff141.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "sha256": "142054860a9a719e779de357d5d74f1cf2bb465d7621cb67f9a74b371f1a9c41",
+      "bytes": 1841320
+    }
+  ],
+  "completedDate": "2026-10-05",
+  "qualityReview": {
+    "reviewed": true,
+    "portraits": 19,
+    "ratio": "2:3",
+    "dimensions": "1024 × 1536",
+    "familyReferencesInspected": true,
+    "corrections": [
+      "Saithar: kupferrotes statt altersgrauem Haar",
+      "Uwchric: Arme verschränkt, grinsend, ohne Holzbalken",
+      "Perwyn: stehend, konzentriert, leere Hände; Buch, Pult und Vordergrundgegenstände entfernt",
+      "Thalan: kurze rote Haare, leicht mürrisch, markanteres Gesicht; unverändert 24 Jahre alt"
+    ],
+    "note": "Ausgaben visuell geprüft. Originaldateien und generierte Bilddaten unverändert kopiert; ersetzte Fassungen separat erhalten."
+  }
+}
