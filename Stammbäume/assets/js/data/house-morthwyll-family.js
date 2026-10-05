@@ -193,7 +193,7 @@ export const HOUSE_MORTHWYLL_FAMILY = Object.freeze({
     house('house-arth', "Haus Arth O'Talgarth", HOUSE_EMBLEMS.arth),
     house('house-penderyn', "Haus Penderyn O'Mathragon", HOUSE_EMBLEMS.penderyn),
     house('house-dyngwn', "Haus Dyngwn O'Mathragon", HOUSE_EMBLEMS.dyngwn),
-    house('house-cwningod', "Haus Cwningod O'Morea", HOUSE_EMBLEMS.cwningod),
+    house('house-cwningod', "Haus Cwingod O'Morea", HOUSE_EMBLEMS.cwningod),
     house('house-wargh', 'Haus Wargh'),
     house('house-unigol', "Haus Unigol O'Caer Marwor", HOUSE_EMBLEMS.unigol),
     house('house-selwyn', "Haus Sélwyn O'Caer Ebirth", HOUSE_EMBLEMS.selwyn),
@@ -231,8 +231,8 @@ export const HOUSE_MORTHWYLL_FAMILY = Object.freeze({
       title: 'Ritterfürst und Oberhaupt des Hauses Morthwyll 1688–1706'
     }),
     spouse('heddwen-arth', 'Heddwen Arth', 'female', '1642', '1701', 'house-arth'),
-    marriedAwayPerson('braih-morthwyll', 'Braih Morthwyll', 'female', '1632', '1675', 'Haus Cwningod'),
-    spouse('rhodhri-cwningod', 'Rhodhri Cwningod', 'male', '1631', '1671', 'house-cwningod'),
+    marriedAwayPerson('braih-morthwyll', 'Braih Morthwyll', 'female', '1632', '1675', 'Haus Cwingod'),
+    spouse('rhodhri-cwningod', 'Rhodhri Cwingod', 'male', '1631', '1671', 'house-cwningod'),
 
     person('cadwallen-morthwyll', 'Cadwallen Morthwyll', 'male', '1659', '1725', {
       title: 'Ritterfürst und Oberhaupt des Hauses Morthwyll 1706–1725'
@@ -309,7 +309,7 @@ export const HOUSE_MORTHWYLL_FAMILY = Object.freeze({
   ],
   cadetBranches: [
     marriedAway('married-away-gwenfrewi-morthwyll-penderyn', 'Haus Penderyn', 'marriage-dadweir-gwenfrewi-penderyn', 'house-penderyn', 'haus-penderyn', HOUSE_EMBLEMS.penderyn),
-    marriedAway('married-away-braih-morthwyll-cwningod', 'Haus Cwningod', 'marriage-braih-rhodhri-morthwyll', 'house-cwningod', 'haus-cwningod', HOUSE_EMBLEMS.cwningod),
+    marriedAway('married-away-braih-morthwyll-cwningod', 'Haus Cwingod', 'marriage-braih-rhodhri-morthwyll', 'house-cwningod', 'haus-cwningod', HOUSE_EMBLEMS.cwningod),
     marriedAway('married-away-tymora-morthwyll-unigol', 'Haus Unigol', 'marriage-tryffin-tymora-unigol', 'house-unigol', 'haus-unigol', HOUSE_EMBLEMS.unigol),
     marriedAway('married-away-senara-morthwyll-selwyn', 'Haus Sélwyn', 'marriage-senara-berwyn-morthwyll', 'house-selwyn', 'haus-selwyn', HOUSE_EMBLEMS.selwyn),
     marriedAway('married-away-katewen-morthwyll-crefyddol', 'Haus Crefyddol', 'marriage-gethin-katewen-crefyddol', 'house-crefyddol', 'haus-crefyddol', HOUSE_EMBLEMS.crefyddol),
@@ -349,11 +349,11 @@ export const HOUSE_MORTHWYLL_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceFamilyId: '',
     sourcePartnershipId: '',
     sourceModule: "Haus Morthwyl O'Caer Morben (bereitgestellte Altdaten)",
-    sourceNote: 'Haus Morthwyll ist ein eigenständiges Ritterfürsten- und Vasallenhaus der Arth, ausdrücklich kein Arth-Kadettenhaus. Collen und Tymora stehen vor dem Hausknoten; genau ein absoluter Zeitsprung führt danach zu Merlion und Gwenfrewi. Heddwen Arth heiratet erst später zu Sayres Morthwyll ein. Gwenfrewi, Braih, Tymora, Senara, Katewen und Guenevere erhalten direkte Wegverheiratet-Knoten; ihre fremden Kinderlinien bleiben ausschließlich in Penderyn, Cwningod, Unigol, Sélwyn, Crefyddol beziehungsweise Trachwyll. Lowris in der Hausgeschichte belegte Verlobung mit einem namentlich unbekannten Mitglied des Clans Grendel wird als Verlobung ohne Wegheirat geführt. Gegenakten haben bei abweichenden Daten Vorrang: Gwenfrewi 1612–1664, Dadweir 1611–1678 und Rhondia 1622–1699. Ursulas frühere Tippfehler-ID „ursula-skog“ wurde für die gemeinsame Skogg-Gegenakte auf „ursula-skogg“ vereinheitlicht. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
+    sourceNote: 'Haus Morthwyll ist ein eigenständiges Ritterfürsten- und Vasallenhaus der Arth, ausdrücklich kein Arth-Kadettenhaus. Collen und Tymora stehen vor dem Hausknoten; genau ein absoluter Zeitsprung führt danach zu Merlion und Gwenfrewi. Heddwen Arth heiratet erst später zu Sayres Morthwyll ein. Gwenfrewi, Braih, Tymora, Senara, Katewen und Guenevere erhalten direkte Wegverheiratet-Knoten; ihre fremden Kinderlinien bleiben ausschließlich in Penderyn, Cwingod, Unigol, Sélwyn, Crefyddol beziehungsweise Trachwyll. Lowris in der Hausgeschichte belegte Verlobung mit einem namentlich unbekannten Mitglied des Clans Grendel wird als Verlobung ohne Wegheirat geführt. Gegenakten haben bei abweichenden Daten Vorrang: Gwenfrewi 1612–1664, Dadweir 1611–1678 und Rhondia 1622–1699. Ursulas frühere Tippfehler-ID „ursula-skog“ wurde für die gemeinsame Skogg-Gegenakte auf „ursula-skogg“ vereinheitlicht. Wiederholte Standardsilhouetten wurden nicht als Individualporträts importiert.',
     registryManagedExtensionFields: ['blankFamily', 'sourceNote', 'sourceFamilyId', 'sourcePartnershipId'],
     registryManagedHouseProfileFields: [
       'rankId',

@@ -19,7 +19,7 @@ Die drei Feierbilder zeigen ausschließlich sechs erwachsene Kernmitglieder: **R
 
 Rhydian Arth (1718) ist Lady Lynne Arths Zwilling, erster Erbe des Hauses Arth, guter Freund Idwal Draigs und Kapitän des Seebären. **Ianto Pawen (1717)** dient als Erster Maat, **Gwylim Arth (1719)** als Zweiter Maat. Gwylim ist der Sohn von Gwrhyr Arth und Findabair Mata.
 
-Die fünf Ritter zur See bleiben **Llew Dyfrgi (1722), Unig Unigol (1718), Padrig Eirth (1722), Barry Dianc (1722) und Clinoch Cwingod (1722)**. Bestehende Identitäten und Porträts werden wiederverwendet. Clinochs Nutzername bleibt erhalten; eine belegte Stammbaumidentität und ein individuelles Porträt fehlen weiterhin. Cwingod wird nicht stillschweigend in Cwningod umbenannt.
+Die fünf Ritter zur See bleiben **Llew Dyfrgi (1722), Unig Unigol (1718), Padrig Eirth (1722), Barry Dianc (1722) und Clinoch Cwingod (1722)**. Bestehende Identitäten und Porträts werden wiederverwendet. Die am 5. Oktober ergänzte Cwingod-Quelle belegt Clinoch als Sohn von **Galeshin Cwingod und Tiwlip Arth**. Sein vorhandenes Originalporträt ist nun seiner Mannschaftskarte zugeordnet. Das Haus wird gemäß Nutzerkorrektur **Cwingod** geschrieben und unter **Klaueninseln → Talklaue → Cra Fryn** geführt; bestehende technische IDs bleiben erhalten.
 
 ## Cadyn Morgwynt
 

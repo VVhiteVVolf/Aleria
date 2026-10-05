@@ -54,8 +54,11 @@ function resolveFamilyRecord(registered, local) {
     : [];
   const usesRegisteredFolderPath = needsUpgrade
     && registryManagedRecordFields.includes('folderPath');
+  const usesRegisteredTitle = needsUpgrade
+    && registryManagedRecordFields.includes('title');
   return {
     ...local,
+    title: usesRegisteredTitle ? registered.title : local.title,
     listing: registered.listing,
     folderPath: usesRegisteredFolderPath ? registered.folderPath : local.folderPath,
     additionalPlacements: registered.additionalPlacements,

@@ -15471,7 +15471,7 @@ test('bildet Haus Pysgod vollständig mit drei strikt seriellen Überlieferungsl
   assert.equal(family.lineage.crestFrame, 'gold');
   assert.equal(family.lineage.timeGap.enabled, false);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 8);
+  assert.equal(family.extensions.sourceRevision, 9);
   assert.equal(family.persons.find(person => person.id === 'aranhrod-pysgod').name, 'Arianhrod Pysgod');
 
   const crest = converted.data.find(node => node.data.nodeKind === 'house-crest');
@@ -15760,8 +15760,8 @@ test('ersetzt die Pysgod-Leerakte und migriert einen älteren lokalen Pysgod-Sta
   }, revisionStorage);
   const upgraded = loadFamilyById('haus-pysgod', revisionStorage);
   assert.equal(upgraded.source, 'registry-upgrade');
-  assert.equal(upgraded.family.extensions.sourceRevision, 8);
-  assert.deepEqual(upgraded.family.extensions.registryUpgrade, { fromRevision: 1, toRevision: 8 });
+  assert.equal(upgraded.family.extensions.sourceRevision, 9);
+  assert.deepEqual(upgraded.family.extensions.registryUpgrade, { fromRevision: 1, toRevision: 9 });
   assert.equal(upgraded.family.persons.length, 105);
   assert.equal(new Set(upgraded.family.persons.map(person => person.id)).size, 105);
   assert.equal(upgraded.family.partnerships.length, 45);
@@ -15799,7 +15799,7 @@ test('bildet Haus Arth vollständig mit vier strikt seriellen Zeitsprüngen und 
   assert.equal(family.lineage.crestFrame, 'gold');
   assert.equal(family.lineage.timeGap.enabled, false);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 13);
+  assert.equal(family.extensions.sourceRevision, 14);
 
   const crest = converted.data.find(node => node.data.nodeKind === 'house-crest');
   assert.ok(crest, 'Der Stammwappenknoten des Hauses Arth fehlt.');
@@ -16153,8 +16153,8 @@ test('ersetzt die Arth-Leerakte und migriert einen älteren lokalen Arth-Stand o
   }, revisionStorage);
   const upgraded = loadFamilyById('haus-arth', revisionStorage);
   assert.equal(upgraded.source, 'registry-upgrade');
-  assert.equal(upgraded.family.extensions.sourceRevision, 13);
-  assert.deepEqual(upgraded.family.extensions.registryUpgrade, { fromRevision: 0, toRevision: 13 });
+  assert.equal(upgraded.family.extensions.sourceRevision, 14);
+  assert.deepEqual(upgraded.family.extensions.registryUpgrade, { fromRevision: 0, toRevision: 14 });
   assert.equal(upgraded.family.persons.length, 116);
   assert.equal(new Set(upgraded.family.persons.map(person => person.id)).size, 116);
   assert.equal(upgraded.family.partnerships.length, 55);
@@ -16970,7 +16970,7 @@ test('gliedert sämtliche Häuser der Klaueninseln unter die belegten Herrschaft
     ['haus-crafanc', { rankId: 'knight-prince', path: ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth'] }],
     ['haus-diafol-talgarth', { rankId: 'knight-prince', path: ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth'] }],
     ['haus-blodyn-talgarth', { rankId: 'knight-prince', path: ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth'] }],
-    ['haus-cwningod', { rankId: 'barony', path: ['Cenyr', 'Klaueninsel', 'Talklaue', 'Morea'] }],
+    ['haus-cwningod', { rankId: 'barony', path: ['Cenyr', 'Klaueninsel', 'Talklaue', 'Cra Fryn'] }],
     ['haus-dyfrgi-caer-cryftlawd', { rankId: 'knight-prince', path: ['Cenyr', 'Klaueninsel', 'Talklaue', 'Caer Cryftlawd'] }],
     ['haus-blodyn-aberdail', { rankId: 'barony', path: ['Cenyr', 'Klaueninsel', 'Blutklaue', 'Aberdail'] }],
     ['haus-dianc-aberdail', { rankId: 'knight-prince', path: ['Cenyr', 'Klaueninsel', 'Blutklaue', 'Aberdail'] }],
@@ -17047,7 +17047,7 @@ test('trennt die fünf Vennyr-Herkunftshäuser von ihren Klaueninsel-Nachfolgeak
   assert.deepEqual(createFolderPathFromHouseProfile(KLAUENINSEL_ORIGIN_HOUSE_PROFILES['diafol-trefgoch']), ['Vennyr', 'Tir Gogledd', 'Trefgoch']);
 });
 
-test('übernimmt das noch nicht ausgearbeitete Arth-Gründerpaar von Cwningod ohne erfundene Nachkommen', () => {
+test('verbindet den vollständigen Cwingod-Baum mit dem bestehenden Arth-Gründerpaar', () => {
   const expectedFounders = new Map([
     ['haus-cwningod', 'marriage-galeshin-arianhrod']
   ]);
@@ -17058,11 +17058,11 @@ test('übernimmt das noch nicht ausgearbeitete Arth-Gründerpaar von Cwningod oh
     const branch = HOUSE_ARTH_FAMILY.cadetBranches.find(entry => entry.targetFamilyId === familyId);
     assert.ok(family && arthPartnership && branch, `${familyId}: Gründerverknüpfung fehlt.`);
     assert.deepEqual(family.partnerships[0].participantIds, arthPartnership.participantIds);
-    assert.deepEqual(family.persons.map(person => person.id), arthPartnership.participantIds);
-    assert.equal(family.parentages.length, 0);
+    assert.deepEqual(family.persons.slice(0, 2).map(person => person.id), arthPartnership.participantIds);
+    assert.equal(family.parentages.length, 24);
     assert.equal(family.extensions.sourceFamilyId, 'haus-arth');
     assert.equal(branch.emblem, family.document.emblem);
-    family.persons.forEach(person => {
+    family.persons.slice(0, 2).forEach(person => {
       const arthPerson = HOUSE_ARTH_FAMILY.persons.find(entry => entry.id === person.id);
       assert.equal(person.worldPersonId, arthPerson.worldPersonId);
       assert.equal(person.portrait, arthPerson.portrait);
@@ -17074,7 +17074,7 @@ test('bildet Haus Eirth vollständig als Kadetten- und Vasallenhaus der Arth ab'
   const family = HOUSE_EIRTH_FAMILY;
   assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.extensions.sourceRevision, 3);
   assert.equal(family.extensions.sourceFamilyId, 'haus-arth');
   assert.equal(family.extensions.sourcePartnershipId, 'marriage-rhynnon-kyndra');
   assert.equal(family.persons.length, 23);
@@ -17232,7 +17232,7 @@ test('ersetzt Eirths frühere Arth-Gründer-Leerakte durch den vollständigen Ka
   staleFamily.extensions.sourceRevision = 1;
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_EIRTH_FAMILY, staleFamily);
-  assert.equal(upgraded.extensions.sourceRevision, 2);
+  assert.equal(upgraded.extensions.sourceRevision, 3);
   assert.equal(upgraded.extensions.blankFamily, false);
   assert.equal(upgraded.extensions.sourceFamilyId, 'haus-arth');
   assert.equal(upgraded.persons.length, 23);
@@ -17611,7 +17611,7 @@ test('bildet Haus Pawen vollständig als ältestes Kadettenhaus der Arth ab', ()
   const family = HOUSE_PAWEN_FAMILY;
   assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.extensions.sourceRevision, 3);
   assert.equal(family.persons.length, 43);
   assert.equal(family.partnerships.length, 19);
   assert.equal(family.parentages.length, 23);
@@ -17659,7 +17659,7 @@ test('ersetzt Pawens frühere lokale Gründer-Leerakte durch den vollständigen 
   staleFamily.extensions.sourceRevision = 1;
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_PAWEN_FAMILY, staleFamily);
-  assert.equal(upgraded.extensions.sourceRevision, 2);
+  assert.equal(upgraded.extensions.sourceRevision, 3);
   assert.equal(upgraded.extensions.blankFamily, false);
   assert.equal(upgraded.persons.length, 43);
   assert.equal(upgraded.parentages.length, 23);
@@ -17768,7 +17768,7 @@ test('bildet Haus Unigol vollständig als von Trahaern Arth begründetes Kadette
   const family = HOUSE_UNIGOL_FAMILY;
   assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.extensions.sourceRevision, 3);
   assert.equal(family.persons.length, 35);
   assert.equal(family.partnerships.length, 15);
   assert.equal(family.parentages.length, 19);
@@ -17955,7 +17955,7 @@ test('ersetzt Unigols frühere Arth-Gründer-Leerakte durch den vollständigen S
   staleFamily.extensions.sourceRevision = 1;
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_UNIGOL_FAMILY, staleFamily);
-  assert.equal(upgraded.extensions.sourceRevision, 2);
+  assert.equal(upgraded.extensions.sourceRevision, 3);
   assert.equal(upgraded.extensions.blankFamily, false);
   assert.equal(upgraded.persons.length, 35);
   assert.equal(upgraded.parentages.length, 19);
@@ -17967,7 +17967,7 @@ test('bildet Haus Morthwyll vollständig als eigenständiges Vasallenhaus der Ar
   const family = HOUSE_MORTHWYLL_FAMILY;
   assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.extensions.sourceRevision, 3);
   assert.equal(family.persons.length, 32);
   assert.equal(family.partnerships.length, 14);
   assert.equal(family.parentages.length, 17);
@@ -18176,7 +18176,7 @@ test('ersetzt Morthwylls falsche Arth-Kadetten-Leerakte durch den eigenständige
   staleFamily.extensions.sourceFamilyId = 'haus-arth';
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_MORTHWYLL_FAMILY, staleFamily);
-  assert.equal(upgraded.extensions.sourceRevision, 2);
+  assert.equal(upgraded.extensions.sourceRevision, 3);
   assert.equal(upgraded.extensions.blankFamily, false);
   assert.equal(upgraded.persons.length, 32);
   assert.equal(upgraded.parentages.length, 17);
@@ -18189,7 +18189,7 @@ test('bildet Haus Crafanc vollständig als zweites Kadettenhaus der Arth ab', ()
   const family = HOUSE_CRAFANC_FAMILY;
   assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
   assert.equal(family.extensions.blankFamily, false);
-  assert.equal(family.extensions.sourceRevision, 4);
+  assert.equal(family.extensions.sourceRevision, 5);
   assert.equal(family.persons.length, 42);
   assert.equal(family.partnerships.length, 18);
   assert.equal(family.parentages.length, 23);
@@ -18237,7 +18237,7 @@ test('ersetzt Crafancs frühere lokale Gründer-Leerakte durch den vollständige
   staleFamily.extensions.sourceRevision = 1;
 
   const upgraded = resolveRegisteredFamilyUpgrade(HOUSE_CRAFANC_FAMILY, staleFamily);
-  assert.equal(upgraded.extensions.sourceRevision, 4);
+  assert.equal(upgraded.extensions.sourceRevision, 5);
   assert.equal(upgraded.extensions.blankFamily, false);
   assert.equal(upgraded.persons.length, 42);
   assert.equal(upgraded.parentages.length, 23);
@@ -19584,7 +19584,7 @@ test('beginnt Dyfrgis Ritterfürstenlinie in Caer Cryftlawd ausschließlich bei 
   assert.equal(assertValidFamily(family).diagnostics.filter(item => item.severity === 'error').length, 0);
   assert.equal(family.extensions.blankFamily, false);
   assert.equal(family.extensions.originFamilyId, 'haus-dyfrgi');
-  assert.equal(family.extensions.sourceRevision, 2);
+  assert.equal(family.extensions.sourceRevision, 3);
   assert.equal(family.document.houseProfile.rankId, 'knight-prince');
   assert.equal(family.persons.length, 14);
   assert.equal(family.partnerships.length, 4);
@@ -19713,7 +19713,7 @@ test('ersetzt Dyfrgis frühere lokale Platzhalterakten in Mynyddharbwr und Caer 
     staleFamily.extensions.sourceRevision = 1;
 
     const upgraded = resolveRegisteredFamilyUpgrade(family, staleFamily);
-    assert.equal(upgraded.extensions.sourceRevision, 2);
+    assert.equal(upgraded.extensions.sourceRevision, family.extensions.sourceRevision);
     assert.equal(upgraded.extensions.blankFamily, false);
     assert.equal(upgraded.persons.length, family.persons.length);
     assert.equal(upgraded.parentages.length, family.parentages.length);
@@ -19943,7 +19943,7 @@ test('liefert die neuen Wappen der Klaueninseln und Tir Gogledd als lokale PNG-D
     'utf8'
   ));
   assert.deepEqual(Object.keys(houseSources), [
-    'Pawen', 'Crafanc', 'Diafol', 'Cwningod', 'Dianc', 'Arfordir', 'Dyfrgi',
+    'Pawen', 'Crafanc', 'Diafol', 'Cwingod', 'Dianc', 'Arfordir', 'Dyfrgi',
     'Walwrs', 'Unigol', 'Morthwyl', 'Eirth', 'Sélwyn', 'Ard Follmhar', 'Beryn'
   ]);
   assert.deepEqual(Object.keys(regionSources), [
@@ -29683,7 +29683,7 @@ test('synchronisiert Penderyns gemeinsame Personen und Beziehungen mit allen vor
   const draigRevelyn = HOUSE_DRAIG_FAMILY.persons.find(person => person.id === 'revelyn-penderyn');
   assert.deepEqual([arthFfionwen.birth, arthFfionwen.death], ['1662', '1733']);
   assert.equal(draigRevelyn.houseId, 'house-penderyn');
-  assert.equal(HOUSE_ARTH_FAMILY.extensions.sourceRevision, 13);
+  assert.equal(HOUSE_ARTH_FAMILY.extensions.sourceRevision, 14);
   assert.equal(HOUSE_DRAIG_FAMILY.extensions.sourceRevision, 11);
 
   [
@@ -30152,7 +30152,7 @@ test('synchronisiert Dyngwns vorhandene Gegenakten ohne zweite Weltpersonen oder
   const hafwen = HOUSE_PYSGOD_FAMILY.persons.find(person => person.id === 'hafwen-dwyngwn');
   assert.equal(hafwen.name, 'Hafwen Dyngwn');
   assert.equal(hafwen.houseId, 'house-dyngwn');
-  assert.equal(HOUSE_PYSGOD_FAMILY.extensions.sourceRevision, 8);
+  assert.equal(HOUSE_PYSGOD_FAMILY.extensions.sourceRevision, 9);
   const dyddi = HOUSE_ARWYDD_FAMILY.persons.find(person => person.id === 'dyddi-dyngwn');
   assert.equal(dyddi.sex, 'female');
   assert.equal(HOUSE_ARWYDD_FAMILY.extensions.sourceRevision, 3);
@@ -30387,7 +30387,7 @@ test('synchronisiert Marwolaeths vorhandene Gegenakten und korrigiert deren Lebe
   );
   assert.equal(HOUSE_DYNGWN_FAMILY.extensions.sourceRevision, 4);
   assert.equal(HOUSE_DIENYDDIWR_FAMILY.extensions.sourceRevision, 3);
-  assert.equal(HOUSE_ARTH_FAMILY.extensions.sourceRevision, 13);
+  assert.equal(HOUSE_ARTH_FAMILY.extensions.sourceRevision, 14);
 
   const correctionCases = [
     {

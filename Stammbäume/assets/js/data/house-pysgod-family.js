@@ -198,7 +198,7 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
     house('house-ronain', 'Haus Rónáin'),
     house('house-estmere', 'Haus Estmere'),
     house('house-dianc', 'Haus Dianc'),
-    house('house-cwningod', 'Haus Cwningod'),
+    house('house-cwningod', 'Haus Cwingod'),
     house('house-nuadat', 'Haus Nuadat'),
     house('house-marwolaeth', 'Haus Marwolaeth'),
     house('house-dyngwn', 'Haus Dyngwn')
@@ -327,7 +327,7 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
       notes: 'Das gedruckte Geburtsjahr 1788 ist mit Ehe und Todesjahr Eskills unvereinbar und bleibt deshalb unbekannt.'
     }),
     person('mairwen-dianc', 'Mairwen Dianc', 'female', '1673', '', 'house-dianc'),
-    person('kerensa-cwningod', 'Kerensa Cwningod', 'female', '1677', '1701', 'house-cwningod'),
+    person('kerensa-cwningod', 'Kerensa Cwingod', 'female', '1677', '1701', 'house-cwningod'),
 
     // Kinder Griflets, seiner Geschwister und seiner Vettern
     person('crisiant-pysgod', 'Crisiant Pysgod', 'unknown', '1694', '1720'),
@@ -585,7 +585,7 @@ export const HOUSE_PYSGOD_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Ehen, Abstammungen und Portraitzuordnungen folgen der bereitgestellten Pysgod-Tabelle und ihrer eingebetteten Stammbaumgrafik. Die drei Auslassungszeichen wurden ausschließlich als serielle Zeitsprünge unter Caradoc/Linessa, Cynwrig/Afanen und Tyreke/Gobaith modelliert. Die Quelle widerspricht sich bei Cynwrig/„Griflet“ sowie bei mehreren unmöglichen Jahreszahlen; diese Fälle sind direkt an den betroffenen Personen dokumentiert und wurden nicht still erfunden. Amtsjahre der Grafen sind Titelangaben, keine Geburtsjahre. Die vier ausdrücklich bestätigten Gründerpaare sind Trayvion Pysgod/Brighde für Haus Morfil, Háscan Gwialen/Arianhrod Pysgod für Haus Gwialen, Categirn Pysgod/Marwine für Haus Brithyll sowie Morholt Pysgod/Caitrin Neidr für Haus Tiwna; jeder Hausknoten hängt ausschließlich direkt unter seinem Paar. Alle dreizehn verheirateten Pysgod-Frauen, deren Linie im Zielhaus weiterläuft, besitzen eine direkte Wegverheiratet-Verknüpfung; bloße Herkunftswappen eingeheirateter Partner erzeugen keinen Hausknoten. Generische Quell-Silhouetten und unbenannte Hofämter wurden nicht als individuelle Portraits oder Personen importiert.',
     blankFamily: false,
-    sourceRevision: 8,
+    sourceRevision: 9,
     registryManagedHouseProfileFields: [
       'rankId',
       'seat',

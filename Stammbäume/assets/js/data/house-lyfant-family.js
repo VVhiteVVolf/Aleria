@@ -130,7 +130,7 @@ const DERWYDDION_HOUSES = Object.freeze([
   house('house-crwynog', 'Haus Crwynog'),
   house('house-gwanrhyd', 'Haus Gwanrhyd'),
   house('house-mochdaer-gwyliau', "Haus Mochdaer O'Gwyliau", HOUSE_EMBLEMS.mochdaer),
-  house('house-cwningod', 'Haus Cwningod'),
+  house('house-cwningod', 'Haus Cwingod'),
   house('house-serenoc', 'Haus Serenoc'),
   house('house-blodeuwedd', 'Haus Blodeuwedd'),
   house('house-gwaedlyd', "Haus Gwaedlyd O'Caer Gorwel", HOUSE_EMBLEMS.gwaedlyd)
@@ -235,9 +235,9 @@ export const HOUSE_LYFANT_DERWYDDION_FAMILY = Object.freeze({
       familyRole: 'married'
     }),
     derwyddionPerson('mared-lyfant', 'Mared Lyfant', 'female', '1682', '', {
-      title: 'Wegverheiratet an Haus Cwningod'
+      title: 'Wegverheiratet an Haus Cwingod'
     }),
-    derwyddionPerson('teudebur-cwningod', 'Teudebur Cwningod', 'male', '1678', '', {
+    derwyddionPerson('teudebur-cwningod', 'Teudebur Cwingod', 'male', '1678', '', {
       houseId: 'house-cwningod',
       familyRole: 'married'
     }),
@@ -340,7 +340,7 @@ export const HOUSE_LYFANT_DERWYDDION_FAMILY = Object.freeze({
       crestFrame: 'gold',
       notes: 'Der Übergang hängt allein und geradlinig unter Cledwyn. Seine Nachkommen werden ausschließlich in der Zielakte fortgeführt.'
     }),
-    marriedAway('married-away-mared-lyfant-cwningod', 'Haus Cwningod', 'marriage-mared-teudebur-lyfant', 'house-cwningod', 'haus-cwningod'),
+    marriedAway('married-away-mared-lyfant-cwningod', 'Haus Cwingod', 'marriage-mared-teudebur-lyfant', 'house-cwningod', 'haus-cwningod'),
     createSingleFounderHouseBranch({
       id: 'migration-cadwgan-lyfant-caer-asgwrn',
       name: "Haus Lyfant O'Caer Asgwrn",
@@ -386,7 +386,7 @@ export const HOUSE_LYFANT_DERWYDDION_FAMILY = Object.freeze({
     blankFamily: false,
     originLine: true,
     successorFamilyId: 'haus-lyfant-caer-asgwrn',
-    sourceRevision: 1,
+    sourceRevision: 2,
     registryManagedLineageFields: ['founderPartnershipId', 'houseId', 'timeGap'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Vollständige Derwyddion-Herkunftsakte nach der Lyfant-Quelle. Der Hausknoten und der einzige Zeitsprung folgen seriell auf Conan und Ffion. Cledwyn und Cadwgan erhalten je einen direkten Übergang nach Caer Asgwrn; ihre Kinder werden nur dort fortgeführt. Meredydd, Main, Deiniol, Frewi sowie Ceri und Cadi bleiben ausschließlich in Derwyddion, weil dieser Zweig 1720 erlischt. Frewis Ehe und Nachkommen werden im Gegenstammbaum Gwaedlyd fortgeführt.'
@@ -523,7 +523,7 @@ export const HOUSE_LYFANT_CAER_ASGWRN_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     originFamilyId: 'haus-lyfant',
     registryManagedLineageFields: ['founderPartnershipId', 'houseId', 'originHouse'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],

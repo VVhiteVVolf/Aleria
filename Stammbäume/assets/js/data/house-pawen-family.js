@@ -210,7 +210,7 @@ export const HOUSE_PAWEN_FAMILY = Object.freeze({
     house('house-brithyll', "Haus Brithyll O'Tredegar", HOUSE_EMBLEMS.brithyll),
     house('house-neidr', "Haus Neidr O'Llanvane", HOUSE_EMBLEMS.neidr),
     house('house-unbekannt-mair', 'Unbekanntes Haus'),
-    house('house-cwningod', "Haus Cwningod O'Morea", HOUSE_EMBLEMS.cwningod),
+    house('house-cwningod', "Haus Cwingod O'Morea", HOUSE_EMBLEMS.cwningod),
     house('house-mwyalchen', "Haus Mwyalchen O'Penbryn", HOUSE_EMBLEMS.mwyalchen),
     house('house-morfil', "Haus Morfil O'Talsarn", HOUSE_EMBLEMS.morfil),
     house('house-eirth', "Haus Eirth O'Caer Glaslyn", HOUSE_EMBLEMS.eirth),
@@ -268,12 +268,12 @@ export const HOUSE_PAWEN_FAMILY = Object.freeze({
     spouse('mair-unknown-pawen', 'Mair', 'female', '1675', '1725', 'house-unbekannt-mair'),
 
     person('amaethon-pawen', 'Amaethon Pawen', 'male', '1695'),
-    awayWoman('joally-pawen', 'Joally Pawen', '1696', '', 'Haus Cwningod'),
+    awayWoman('joally-pawen', 'Joally Pawen', '1696', '', 'Haus Cwingod'),
     person('lwyd-pawen', 'Lwyd Pawen', 'male', '1697'),
     person('march-pawen', 'March Pawen', 'male', '1696'),
     awayWoman('mared-pawen', 'Mared Pawen', '1697', '', 'Haus Eirth'),
     spouse('glinda-crafanc', 'Glinda Crafanc', 'female', '1693', '', 'house-crafanc'),
-    spouse('tegid-cwningod', 'Tegid Cwningod', 'male', '1695', '', 'house-cwningod'),
+    spouse('tegid-cwningod', 'Tegid Cwingod', 'male', '1695', '', 'house-cwningod'),
     spouse('naili-mwyalchen', 'Naili Mwyalchen', 'female', '1697', '', 'house-mwyalchen'),
     spouse('mabil-morfil', 'Mabil Morfil', 'female', '1698', '', 'house-morfil'),
     spouse('urien-eirth', 'Urien Eirth', 'male', '1695', '', 'house-eirth'),
@@ -341,7 +341,7 @@ export const HOUSE_PAWEN_FAMILY = Object.freeze({
     marriedAway('married-away-libet-pawen-gwialen', 'Haus Gwialen', 'marriage-libet-artus-gwialen', 'house-gwialen', HOUSE_EMBLEMS.gwialen),
     marriedAway('married-away-rhonwen-pawen-brithyll', 'Haus Brithyll', 'marriage-aneirin-rhonwen-brithyll', 'house-brithyll', HOUSE_EMBLEMS.brithyll),
     marriedAway('married-away-gwenfrewi-pawen-arth', 'Haus Arth', 'marriage-domnall-gwenfrewi', 'house-arth', HOUSE_EMBLEMS.arth),
-    marriedAway('married-away-joally-pawen-cwningod', 'Haus Cwningod', 'marriage-joally-tegid-pawen', 'house-cwningod', HOUSE_EMBLEMS.cwningod),
+    marriedAway('married-away-joally-pawen-cwningod', 'Haus Cwingod', 'marriage-joally-tegid-pawen', 'house-cwningod', HOUSE_EMBLEMS.cwningod),
     marriedAway('married-away-mared-pawen-eirth', 'Haus Eirth', 'marriage-mared-urien-pawen', 'house-eirth', HOUSE_EMBLEMS.eirth)
   ],
   timeJumps: [
@@ -378,7 +378,7 @@ export const HOUSE_PAWEN_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceFamilyId: 'haus-arth',
     sourcePartnershipId: 'marriage-lamorak-mared',
     sourceModule: "Haus Pawen O'Talgarth (bereitgestellte Altdaten)",

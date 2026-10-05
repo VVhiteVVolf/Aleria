@@ -2,7 +2,7 @@ import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 
 const CENYR_COUNTY_PATH = Object.freeze(['Cenyr', 'Klaueninsel']);
 const TALGARTH_PATH = Object.freeze([...CENYR_COUNTY_PATH, 'Sturmklaue', 'Talgarth']);
-const MOREA_PATH = Object.freeze([...CENYR_COUNTY_PATH, 'Talklaue', 'Morea']);
+const CRA_FRYN_PATH = Object.freeze([...CENYR_COUNTY_PATH, 'Talklaue', 'Cra Fryn']);
 const CAER_CRYFTLAWD_PATH = Object.freeze([...CENYR_COUNTY_PATH, 'Talklaue', 'Caer Cryftlawd']);
 const ABERDAIL_PATH = Object.freeze([...CENYR_COUNTY_PATH, 'Blutklaue', 'Aberdail']);
 const CAER_DEHEUOL_PATH = Object.freeze([
@@ -77,6 +77,7 @@ function freezeProfile(profile) {
 function cenyrProfile(rankId, folderPath, options = {}) {
   return freezeProfile(createHouseProfileFromFolderPath(folderPath, {
     rankId,
+    secondarySeats: options.secondarySeats || [],
     liegeHouseId: options.liegeHouseId === undefined ? 'haus-arth' : options.liegeHouseId,
     liegeHouseName: options.liegeHouseName === undefined ? "Haus Arth O'Talgarth" : options.liegeHouseName,
     regionEmblems: {
@@ -105,7 +106,7 @@ export const KLAUENINSEL_HOUSE_PROFILES = Object.freeze({
   pawen: cenyrProfile('knight-prince', TALGARTH_PATH),
   crafanc: cenyrProfile('knight-prince', TALGARTH_PATH),
   diafol: cenyrProfile('knight-prince', TALGARTH_PATH),
-  cwningod: cenyrProfile('barony', MOREA_PATH),
+  cwningod: cenyrProfile('barony', CRA_FRYN_PATH, { secondarySeats: ['Morea'] }),
   dianc: cenyrProfile('knight-prince', ABERDAIL_PATH, {
     liegeHouseId: 'haus-blodyn-aberdail',
     liegeHouseName: "Haus Blodyn O'Aberdail"
@@ -116,7 +117,7 @@ export const KLAUENINSEL_HOUSE_PROFILES = Object.freeze({
   }),
   dyfrgi: cenyrProfile('knight-prince', CAER_CRYFTLAWD_PATH, {
     liegeHouseId: 'haus-cwningod',
-    liegeHouseName: 'Haus Cwningod'
+    liegeHouseName: 'Haus Cwingod'
   }),
   walwrs: cenyrProfile('knight-prince', CAER_DEHEUOL_PATH),
   morthwyll: cenyrProfile('knight-prince', CAER_MORBEN_PATH),

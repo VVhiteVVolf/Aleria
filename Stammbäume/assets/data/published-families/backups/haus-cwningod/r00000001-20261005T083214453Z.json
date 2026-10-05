@@ -1,0 +1,2459 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-cwningod",
+  "revision": 1,
+  "updatedAt": "2026-10-05T08:32:14.453Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-cwningod",
+      "title": "Haus Cwingod O'Morea",
+      "motto": "Im Maul des Bären liegt die Kraft, die durch Worte und Taten spricht.",
+      "description": "Drittes Kadettenhaus der Arth und Baronenhaus der Talklaue. Die vollständige überlieferte Linie steht unter Cra Fryn; Morea ist der in der Hausquelle genannte Stadt- und Handelssitz.",
+      "emblem": "assets/images/houses/Klaueninsel/haus-cwningod.png",
+      "houseProfile": {
+        "rankId": "barony",
+        "seat": "Cra Fryn",
+        "barony": "Talklaue",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Morea"
+        ],
+        "liegeHouseId": "haus-arth",
+        "liegeHouseName": "Haus Arth O'Talgarth",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Talklaue.png",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "galeshin-ancient-arth",
+        "worldPersonId": "person--haus-arth--galeshin-ancient-arth",
+        "name": "Galeshin Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/galeshin-ancient-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "arianhrod-unknown",
+        "worldPersonId": "person--haus-unbekannt-arianhrod--arianhrod-unknown",
+        "name": "Arianhrod",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-arianhrod",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "rhodhri-cwningod",
+        "worldPersonId": "person--haus-cwningod--rhodhri-cwningod",
+        "name": "Rhodhri Cwingod",
+        "title": "Baron von Morea 1663–1671",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1631",
+        "death": "1671",
+        "portrait": "assets/images/portraits/haus-morthwyll/rhodhri-cwningod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "braih-morthwyll",
+        "worldPersonId": "person--haus-morthwyll--braih-morthwyll",
+        "name": "Braih Morthwyll",
+        "title": "Wegverheiratet an Haus Cwingod",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1632",
+        "death": "1675",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morthwyll",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "In der Cwingod-Quelle Braith; identisch mit Braih Morthwyll (1632–1675) der Gegenakte.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "rhonwen-cwningod",
+        "worldPersonId": "person--haus-cwningod--rhonwen-cwningod",
+        "name": "Rhonwen Cwingod",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1639",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die neue Cwingod-Quelle kennzeichnet Rhonwen ausdrücklich als verstorben; ein Todesjahr ist nicht überliefert.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "tarawg-unigol",
+        "worldPersonId": "person--haus-unigol--tarawg-unigol",
+        "name": "Tarawg Unigol",
+        "title": "Ritterfürst und Oberhaupt des Hauses Unigol 1684–1706",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1644",
+        "death": "1706",
+        "portrait": "assets/images/portraits/haus-unigol/tarawg-unigol.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unigol",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "idris-cwingod",
+        "worldPersonId": "person--haus-cwningod--idris-cwingod",
+        "name": "Idris Cwingod",
+        "title": "Baron von Morea 1671–1672",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1650",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-cwingod/idris-cwingod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Amtsjahre 1671–1672 sind keine Lebensjahre; das Todesjahr bleibt unbekannt.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "sath-cwningod",
+        "worldPersonId": "person--haus-cwningod--sath-cwningod",
+        "name": "Sath Cwingod",
+        "title": "Baron von Morea 1672–1713",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1652",
+        "death": "1713",
+        "portrait": "assets/images/portraits/haus-arth/sath-cwningod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "rian-arth",
+        "worldPersonId": "person--haus-arth--rian-arth",
+        "name": "Rian Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1654",
+        "death": "1712",
+        "portrait": "assets/images/portraits/haus-arth/rian-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "delyth-cwingod",
+        "worldPersonId": "person--haus-cwningod--delyth-cwingod",
+        "name": "Delyth Cwingod",
+        "title": "Wegverheiratet an Haus Drewi",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1656",
+        "death": "1694",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "trevor-drewi",
+        "worldPersonId": "person--haus-drewi--trevor-drewi",
+        "name": "Trevor Drewi",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1654",
+        "death": "1679",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-drewi",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "domnall-cwingod",
+        "worldPersonId": "person--haus-cwningod--domnall-cwingod",
+        "name": "Domnall Cwingod",
+        "title": "Baron von Morea 1713–1738",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1671",
+        "death": "1738",
+        "portrait": "assets/images/portraits/haus-cwingod/domnall-cwingod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "tuala-rioga",
+        "worldPersonId": "person--haus-rioga--tuala-rioga",
+        "name": "Tuala Ríoga",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1676",
+        "death": "1702",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-rioga",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Das Quelljahr 1976 widerspricht Tod 1702 und den Kindern 1694/1695; offensichtlicher Jahrhundertfehler, zu 1676 korrigiert.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "ffion-cwningod",
+        "worldPersonId": "person--haus-cwningod--ffion-cwningod",
+        "name": "Ffion Cwingod",
+        "title": "Wegverheiratet an Haus Crafanc",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1676",
+        "death": "1736",
+        "portrait": "assets/images/portraits/haus-crafanc/ffion-cwningod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "dumnagual-crafanc",
+        "worldPersonId": "person--haus-crafanc--dumnagual-crafanc",
+        "name": "Dumnagual Crafanc",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1676",
+        "death": "1718",
+        "portrait": "assets/images/portraits/haus-crafanc/dumnagual-crafanc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-crafanc",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "kerensa-cwningod",
+        "worldPersonId": "person--haus-cwningod--kerensa-cwningod",
+        "name": "Kerensa Cwingod",
+        "title": "Wegverheiratet an Haus Pysgod",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1677",
+        "death": "1701",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "maelgwn-pysgod",
+        "worldPersonId": "person--haus-pysgod--maelgwn-pysgod",
+        "name": "Maelgwn Pysgod",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1673",
+        "death": "1740",
+        "portrait": "assets/images/portraits/haus-pysgod/maelgwn-pysgod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pysgod",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "teudebur-cwningod",
+        "worldPersonId": "person--haus-cwningod--teudebur-cwningod",
+        "name": "Teudebur Cwingod",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1678",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-lyfant/teudebur-cwningod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "mared-lyfant",
+        "worldPersonId": "person--haus-lyfant--mared-lyfant",
+        "name": "Mared Lyfant",
+        "title": "Wegverheiratet an Haus Cwingod",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1682",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-lyfant/mared-lyfant.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-lyfant",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "ifanwy-cwningod",
+        "worldPersonId": "person--haus-cwningod--ifanwy-cwningod",
+        "name": "Ifanwy Cwingod",
+        "title": "Wegverheiratet an Haus Eirth",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1678",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-eirth/ifanwy-cwningod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Nutzerkorrektur vom 05.10.2026 bestätigt Cwingod als richtige Hausschreibung; die vorhandene Weltpersonen-ID bleibt erhalten.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "prysor-eirth",
+        "worldPersonId": "person--haus-eirth--prysor-eirth",
+        "name": "Prysor Eirth",
+        "title": "Ritterfürst und Oberhaupt des Hauses Eirth seit 1720",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1674",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-eirth/prysor-eirth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eirth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "galeshin-cwningod",
+        "worldPersonId": "person--haus-cwningod--galeshin-cwningod",
+        "name": "Galeshin Cwingod",
+        "title": "Baron von Morea seit 1738",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/galeshin-cwningod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "tiwlip-arth",
+        "worldPersonId": "person--haus-arth--tiwlip-arth",
+        "name": "Tiwlip Arth",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/tiwlip-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Quelle druckt unmöglich 1967; die Geschwister- und Partnergeneration belegt 1697.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "tegid-cwningod",
+        "worldPersonId": "person--haus-cwningod--tegid-cwningod",
+        "name": "Tegid Cwingod",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pawen/tegid-cwningod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "joally-pawen",
+        "worldPersonId": "person--haus-pawen--joally-pawen",
+        "name": "Joally Pawen",
+        "title": "Wegverheiratet an Haus Cwingod",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pawen/joally-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "ywain-cwingod",
+        "worldPersonId": "person--haus-cwningod--ywain-cwingod",
+        "name": "Ywain Cwingod",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1699",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-cwingod/ywain-cwingod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "riderch-cwingod",
+        "worldPersonId": "person--haus-cwningod--riderch-cwingod",
+        "name": "Riderch Cwingod",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1702",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-cwingod/riderch-cwingod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "mervyn-serenoc",
+        "worldPersonId": "person--haus-serenoc--mervyn-serenoc",
+        "name": "Mervyn Serenoc",
+        "title": "",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-cwingod/mervyn-serenoc.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-serenoc",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Grafik nennt Mervyne, die Partnerkarte Mervyn Serenoc. Die Kinderüberschrift nennt abweichend Engla; dieser Widerspruch begründet keine zusätzliche Person oder Ehe.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "gildas-cwingod",
+        "worldPersonId": "person--haus-cwningod--gildas-cwingod",
+        "name": "Gildas Cwingod",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1705",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-cwingod/gildas-cwingod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "llio-cwingod-spouse",
+        "worldPersonId": "person--haus-unbekannt-llio--llio-cwingod-spouse",
+        "name": "Llio",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1709",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-llio",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "artgal-cwingod",
+        "worldPersonId": "person--haus-cwningod--artgal-cwingod",
+        "name": "Artgal Cwingod",
+        "title": "Erster in der überlieferten Erbfolge",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-cwingod/artgal-cwingod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "clinoch-cwingod",
+        "worldPersonId": "person--haus-cwningod--clinoch-cwingod",
+        "name": "Clinoch Cwingod",
+        "title": "Ritter zur See · Besatzung des Seebären; zweiter in der überlieferten Erbfolge",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-cwingod/clinoch-cwingod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "hedd-morlais",
+        "worldPersonId": "person--haus-morlais--hedd-morlais",
+        "name": "Hedd Morlais",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-cwingod/hedd-morlais.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morlais",
+        "familyRole": "ward",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Die Stammbaumgrafik zeigt eine blaue Verbindung zu Galeshin und Tiwlip; Pflege-/Adoptionsart ist im Text nicht bezeichnet. Als unsichere Aufnahme geführt, biologische Eltern bleiben unbekannt.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "vaughan-cwingod",
+        "worldPersonId": "person--haus-cwningod--vaughan-cwingod",
+        "name": "Vaughan Cwingod",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-cwingod/vaughan-cwingod.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Im Almanach als Vaughn Cwingod bei den Schwarzfischen geführt: gleiches Porträt, gleiches Haus und der Titel „Ritter, Morea“ belegen dieselbe Figur. Die bestehende Almanach-ID EPwTMvE8J0vG76aXt2NK bleibt erhalten.",
+        "extensions": {
+          "sourceNameVariants": [
+            "Vaughn Cwingod"
+          ],
+          "almanachCharacterId": "EPwTMvE8J0vG76aXt2NK",
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "arianrhod-cwingod",
+        "worldPersonId": "person--haus-cwningod--arianrhod-cwingod",
+        "name": "Arianrhod Cwingod",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-cwingod/arianrhod-cwingod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "adeon-cwingod",
+        "worldPersonId": "person--haus-cwningod--adeon-cwingod",
+        "name": "Adeon Cwingod",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-cwingod/adeon-cwingod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "sioned-cwingod",
+        "worldPersonId": "person--haus-cwningod--sioned-cwingod",
+        "name": "Sioned Cwingod",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-cwingod/sioned-cwingod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "slevin-cwingod",
+        "worldPersonId": "person--haus-cwningod--slevin-cwingod",
+        "name": "Slevin Cwingod",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1734",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-cwingod/slevin-cwingod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      },
+      {
+        "id": "eirwen-cwingod",
+        "worldPersonId": "person--haus-cwningod--eirwen-cwingod",
+        "name": "Eirwen Cwingod",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1736",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-cwingod/eirwen-cwingod.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "notes"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-galeshin-arianhrod",
+        "participantIds": [
+          "galeshin-ancient-arth",
+          "arianhrod-unknown"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-braih-rhodhri-morthwyll",
+        "participantIds": [
+          "braih-morthwyll",
+          "rhodhri-cwningod"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1671",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-tarawg-rhonwen-unigol",
+        "participantIds": [
+          "tarawg-unigol",
+          "rhonwen-cwningod"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1706",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-rian-sath",
+        "participantIds": [
+          "rian-arth",
+          "sath-cwningod"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-delyth-trevor-cwingod",
+        "participantIds": [
+          "delyth-cwingod",
+          "trevor-drewi"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-domnall-tuala-cwingod",
+        "participantIds": [
+          "domnall-cwingod",
+          "tuala-rioga"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-dumnagual-ffion-crafanc",
+        "participantIds": [
+          "dumnagual-crafanc",
+          "ffion-cwningod"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1718",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-maelgwn-kerensa",
+        "participantIds": [
+          "maelgwn-pysgod",
+          "kerensa-cwningod"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-mared-teudebur-lyfant",
+        "participantIds": [
+          "mared-lyfant",
+          "teudebur-cwningod"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-prysor-ifanwy-eirth",
+        "participantIds": [
+          "prysor-eirth",
+          "ifanwy-cwningod"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-tiwlip-galeshin",
+        "participantIds": [
+          "tiwlip-arth",
+          "galeshin-cwningod"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-joally-tegid-pawen",
+        "participantIds": [
+          "joally-pawen",
+          "tegid-cwningod"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-riderch-mervyn-cwingod",
+        "participantIds": [
+          "riderch-cwingod",
+          "mervyn-serenoc"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gildas-llio-cwingod",
+        "participantIds": [
+          "gildas-cwingod",
+          "llio-cwingod-spouse"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "cwingod-parentage-rhodhri-cwningod",
+        "childId": "rhodhri-cwningod",
+        "parentIds": [
+          "galeshin-ancient-arth",
+          "arianhrod-unknown"
+        ],
+        "partnershipId": "marriage-galeshin-arianhrod",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Zwischengenerationen.",
+        "extensions": {
+          "timeJumpId": "gap-cwingod-founders-rhodhri"
+        }
+      },
+      {
+        "id": "cwingod-parentage-rhonwen-cwningod",
+        "childId": "rhonwen-cwningod",
+        "parentIds": [
+          "galeshin-ancient-arth",
+          "arianhrod-unknown"
+        ],
+        "partnershipId": "marriage-galeshin-arianhrod",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Zwischengenerationen.",
+        "extensions": {
+          "timeJumpId": "gap-cwingod-founders-rhodhri"
+        }
+      },
+      {
+        "id": "cwingod-parentage-idris-cwingod",
+        "childId": "idris-cwingod",
+        "parentIds": [
+          "braih-morthwyll",
+          "rhodhri-cwningod"
+        ],
+        "partnershipId": "marriage-braih-rhodhri-morthwyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-sath-cwningod",
+        "childId": "sath-cwningod",
+        "parentIds": [
+          "braih-morthwyll",
+          "rhodhri-cwningod"
+        ],
+        "partnershipId": "marriage-braih-rhodhri-morthwyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-delyth-cwingod",
+        "childId": "delyth-cwingod",
+        "parentIds": [
+          "braih-morthwyll",
+          "rhodhri-cwningod"
+        ],
+        "partnershipId": "marriage-braih-rhodhri-morthwyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-domnall-cwingod",
+        "childId": "domnall-cwingod",
+        "parentIds": [
+          "rian-arth",
+          "sath-cwningod"
+        ],
+        "partnershipId": "marriage-rian-sath",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-ffion-cwningod",
+        "childId": "ffion-cwningod",
+        "parentIds": [
+          "rian-arth",
+          "sath-cwningod"
+        ],
+        "partnershipId": "marriage-rian-sath",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-kerensa-cwningod",
+        "childId": "kerensa-cwningod",
+        "parentIds": [
+          "rian-arth",
+          "sath-cwningod"
+        ],
+        "partnershipId": "marriage-rian-sath",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-teudebur-cwningod",
+        "childId": "teudebur-cwningod",
+        "parentIds": [
+          "rian-arth",
+          "sath-cwningod"
+        ],
+        "partnershipId": "marriage-rian-sath",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-ifanwy-cwningod",
+        "childId": "ifanwy-cwningod",
+        "parentIds": [
+          "rian-arth",
+          "sath-cwningod"
+        ],
+        "partnershipId": "marriage-rian-sath",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-galeshin-cwningod",
+        "childId": "galeshin-cwningod",
+        "parentIds": [
+          "domnall-cwingod",
+          "tuala-rioga"
+        ],
+        "partnershipId": "marriage-domnall-tuala-cwingod",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-tegid-cwningod",
+        "childId": "tegid-cwningod",
+        "parentIds": [
+          "domnall-cwingod",
+          "tuala-rioga"
+        ],
+        "partnershipId": "marriage-domnall-tuala-cwingod",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-ywain-cwingod",
+        "childId": "ywain-cwingod",
+        "parentIds": [
+          "mared-lyfant",
+          "teudebur-cwningod"
+        ],
+        "partnershipId": "marriage-mared-teudebur-lyfant",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-riderch-cwingod",
+        "childId": "riderch-cwingod",
+        "parentIds": [
+          "mared-lyfant",
+          "teudebur-cwningod"
+        ],
+        "partnershipId": "marriage-mared-teudebur-lyfant",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-gildas-cwingod",
+        "childId": "gildas-cwingod",
+        "parentIds": [
+          "mared-lyfant",
+          "teudebur-cwningod"
+        ],
+        "partnershipId": "marriage-mared-teudebur-lyfant",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-artgal-cwingod",
+        "childId": "artgal-cwingod",
+        "parentIds": [
+          "tiwlip-arth",
+          "galeshin-cwningod"
+        ],
+        "partnershipId": "marriage-tiwlip-galeshin",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-clinoch-cwingod",
+        "childId": "clinoch-cwingod",
+        "parentIds": [
+          "tiwlip-arth",
+          "galeshin-cwningod"
+        ],
+        "partnershipId": "marriage-tiwlip-galeshin",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-hedd-morlais",
+        "childId": "hedd-morlais",
+        "parentIds": [
+          "tiwlip-arth",
+          "galeshin-cwningod"
+        ],
+        "partnershipId": "marriage-tiwlip-galeshin",
+        "type": "foster",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Blaue Quellenverbindung; Art der Aufnahme nicht ausdrücklich benannt.",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-vaughan-cwingod",
+        "childId": "vaughan-cwingod",
+        "parentIds": [
+          "joally-pawen",
+          "tegid-cwningod"
+        ],
+        "partnershipId": "marriage-joally-tegid-pawen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-arianrhod-cwingod",
+        "childId": "arianrhod-cwingod",
+        "parentIds": [
+          "joally-pawen",
+          "tegid-cwningod"
+        ],
+        "partnershipId": "marriage-joally-tegid-pawen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-adeon-cwingod",
+        "childId": "adeon-cwingod",
+        "parentIds": [
+          "riderch-cwingod",
+          "mervyn-serenoc"
+        ],
+        "partnershipId": "marriage-riderch-mervyn-cwingod",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Partnerkarte und Grafik nennen Mervyn/Mervyne Serenoc; die Kinderüberschrift nennt abweichend Engla.",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-sioned-cwingod",
+        "childId": "sioned-cwingod",
+        "parentIds": [
+          "riderch-cwingod",
+          "mervyn-serenoc"
+        ],
+        "partnershipId": "marriage-riderch-mervyn-cwingod",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Partnerkarte und Grafik nennen Mervyn/Mervyne Serenoc; die Kinderüberschrift nennt abweichend Engla.",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-slevin-cwingod",
+        "childId": "slevin-cwingod",
+        "parentIds": [
+          "gildas-cwingod",
+          "llio-cwingod-spouse"
+        ],
+        "partnershipId": "marriage-gildas-llio-cwingod",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "cwingod-parentage-eirwen-cwingod",
+        "childId": "eirwen-cwingod",
+        "parentIds": [
+          "gildas-cwingod",
+          "llio-cwingod-spouse"
+        ],
+        "partnershipId": "marriage-gildas-llio-cwingod",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-cwningod",
+        "name": "Haus Cwingod O'Morea",
+        "motto": "Im Maul des Bären liegt die Kraft, die durch Worte und Taten spricht.",
+        "emblem": "assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "status": "active"
+      },
+      {
+        "id": "house-arth",
+        "name": "Haus Arth O'Talgarth",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-arth.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-unbekannt-arianhrod",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-morthwyll",
+        "name": "Haus Morthwyl O'Caer Morben",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-morthwyll.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-unigol",
+        "name": "Haus Unigol O'Caer Marwor",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-unigol.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-drewi",
+        "name": "Haus Drewi",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-rioga",
+        "name": "Haus Ríoga",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-crafanc",
+        "name": "Haus Crafanc O'Talgarth",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-crafanc.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-pysgod",
+        "name": "Haus Pysgod",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/haus-pysgod.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-lyfant",
+        "name": "Haus Lyfant O'Derwyddion",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/Silberwald/haus-lyfant.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-eirth",
+        "name": "Haus Eirth O'Caer Glaslyn",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-eirth.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-pawen",
+        "name": "Haus Pawen O'Talgarth",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-pawen.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-serenoc",
+        "name": "Haus Serenoc",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-unbekannt-llio",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-morlais",
+        "name": "Haus Morlais",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-rhonwen-cwingod",
+        "name": "Haus Unigol",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-tarawg-rhonwen-unigol",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unigol",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unigol",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId"
+          ]
+        }
+      },
+      {
+        "id": "married-away-delyth-cwingod",
+        "name": "Haus Drewi",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-delyth-trevor-cwingod",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-drewi",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-drewi",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId"
+          ]
+        }
+      },
+      {
+        "id": "married-away-ffion-cwingod",
+        "name": "Haus Crafanc",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-dumnagual-ffion-crafanc",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-crafanc",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-crafanc",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId"
+          ]
+        }
+      },
+      {
+        "id": "married-away-kerensa-cwingod",
+        "name": "Haus Pysgod",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-maelgwn-kerensa",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-pysgod",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-pysgod",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId"
+          ]
+        }
+      },
+      {
+        "id": "married-away-ifanwy-cwingod",
+        "name": "Haus Eirth",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-prysor-ifanwy-eirth",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-eirth",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-eirth",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "parentPartnershipId",
+            "houseId",
+            "targetFamilyId"
+          ]
+        }
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-cwingod-founders-rhodhri",
+        "parentPartnershipId": "marriage-galeshin-arianhrod",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "rhodhri-cwningod",
+          "rhonwen-cwningod"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1631",
+        "label": "Nicht einzeln überlieferte Generationen",
+        "notes": "Einziger absoluter serieller Trenner nach Gründerpaar und Hauswappen.",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-galeshin-arianhrod",
+      "houseId": "house-cwningod",
+      "crestSubtitle": "Baronenhaus der Talklaue · Kadettenhaus der Arth",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "galeshin-ancient-arth",
+      "orientation": "vertical",
+      "ancestorDepth": 16,
+      "descendantDepth": 16,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 2,
+      "sourceFamilyId": "haus-arth",
+      "sourcePartnershipId": "marriage-galeshin-arianhrod",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Cwingod O'Morea",
+        "image": "assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "housePage": true,
+        "description": "Die Cwingod sind das dritte Kadettenhaus der Arth und bezeichnen sich als das „Maul“ des Bären. Sie bewohnten früher eine Burg in Talgarth und wurden später beauftragt, aus dem Fischerdorf More eine Stadt für die Versorgungslinie durch Tredegar zu machen. Sie erhielten den Baronstitel. Ihre Baronie Talklaue ist unter Cra Fryn innerhalb der Klaueninseln eingeordnet; die überlieferte Hausquelle nennt Morea als Stadt- und Handelssitz.",
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Cwingod O'Morea"
+          ],
+          [
+            "Rang",
+            "Baronenhaus"
+          ],
+          [
+            "Baronie",
+            "Talklaue"
+          ],
+          [
+            "Registerort / Sitz",
+            "Cra Fryn"
+          ],
+          [
+            "Überlieferte Handelsstadt",
+            "Morea"
+          ],
+          [
+            "Oberhaupt",
+            "Galeshin Cwingod (1694), seit 1738"
+          ],
+          [
+            "Erbfolge",
+            "Artgal, danach Clinoch Cwingod"
+          ],
+          [
+            "Lehensherr",
+            "Haus Arth O'Talgarth"
+          ],
+          [
+            "Volksgruppe",
+            "Nordcenyri"
+          ],
+          [
+            "Hausfarben",
+            "Gelb und Schwarz"
+          ],
+          [
+            "Truppenstärke",
+            "800; 600 Waffenknechte und 100 Stadtwachen genannt"
+          ],
+          [
+            "Flotte",
+            "10 Kriegsschiffe"
+          ],
+          [
+            "Religion",
+            "Alerische Kirche; Dame der See und der Knecht"
+          ],
+          [
+            "Wohlstand",
+            "Mittelmäßig"
+          ]
+        ],
+        "house": {
+          "portrait": "",
+          "portraitStages": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "sideWidth": 100,
+          "connectionPortraitHeight": 68,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Übersicht",
+          "biographyText": "Die Cwingod sind das dritte Kadettenhaus der Arth und bezeichnen sich als das „Maul“ des Bären. Sie bewohnten früher eine Burg in Talgarth und wurden später beauftragt, aus dem Fischerdorf More eine Stadt für die Versorgungslinie durch Tredegar zu machen. Sie erhielten den Baronstitel. Ihre Baronie Talklaue ist unter Cra Fryn innerhalb der Klaueninseln eingeordnet; die überlieferte Hausquelle nennt Morea als Stadt- und Handelssitz.",
+          "abilitiesTitle": "Traditionen und Werte",
+          "abilities": [],
+          "extraSections": [
+            {
+              "position": "afterIntro",
+              "mode": "text",
+              "title": "Traditionen",
+              "text": "Das Haus Cwingod, bekannt für seine Rolle als das \"Maul\" des Bären, hat im Laufe der Zeit Traditionen entwickelt, die ihre administrativen Fähigkeiten und ihre Verantwortung als Verwalter und Politiker betonen."
+            },
+            {
+              "position": "afterIntro",
+              "mode": "text",
+              "title": "Rittertum",
+              "text": "Das Rittertum von Cenyr, weltbekannt und in Avallorn geboren, findet seine vollendete Form im Rittertum der Pendragons. Ein cenyrischer Ritter unterscheidet sich deutlich von seinen Kollegen, da er stets ein gesalbter Ritter ist. Der Initiationsritus erfolgt an einem See oder einem Gewässer, wo der Knappe zum Ritter geschlagen und gesalbt wird. Dabei schwört er einen Eid auf jeden der Neun Göttlichen, verpflichtet sich zu den Tugenden der Neun und gibt zusätzlich einen zehnten Eid auf die Dame des Sees ab, der Schutzgöttin des Landes Cenyr.\n\nDie Ritter des Hauses Cwingod sind bekannt für ihre imposante Erscheinung, die durch ihre massiven Rüstungen noch verstärkt wird. Diese Rüstungen, deren Primärfarbe ein auffälliges Gelb ist, sind oft mit schwarzen Fellen besetzt, die einen kraftvollen Kontrast bilden und gleichzeitig ihre Herkunft aus den rauen Landschaften von Talgarth unterstreichen.\n\nDie Rüstungen der Cwingod-Ritter sind nicht nur ein Schutz, sondern auch ein Symbol ihrer Stärke und ihres Mutes. Sie sind für ihre schiere Größe und Robustheit bekannt, getragen von den größten und kräftigsten Kriegern der Cenyri, die sorgfältig ausgewählt werden, um diese Rolle zu erfüllen. Diese Krieger verkörpern das \"Maul\" des Bären, das die Cwingod stolz repräsentieren, und ihre Anwesenheit auf dem Schlachtfeld ist ebenso beeindruckend wie furchteinflößend.\n\nDie massive Erscheinung der Cwingod-Ritter macht sie zu einer einschüchternden Kraft, die ihre Feinde schon allein durch ihre physische Präsenz in Angst versetzen kann. Diese Krieger sind darauf trainiert, ihre schwere Rüstung mit Geschick und Kraft zu tragen, was ihnen erlaubt, im Kampf unaufhaltsam und nahezu unverwundbar zu erscheinen. Die Kombination aus ihren massiven Rüstungen, der markanten Farbgebung und der schieren körperlichen Stärke der Krieger macht die Ritter des Hauses Cwingod zu einer furchterregenden und respektierten Macht in der Grafschaft Talgarth."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Kultur und Religion",
+              "text": "Das Haus Cwingod gehört zu den Nordcenyri und teilt das unerschütterliche Gemüt der übrigen Arth. Im Vergleich zu ihren temperamentvolleren Verwandten gelten die Cwingod jedoch als etwas ruhiger und besonnener. Diese Gelassenheit spiegelt sich in ihrem täglichen Leben und ihrer Herangehensweise an Herausforderungen wider, was sie zu verlässlichen Verwaltern und Diplomaten macht.\n\nIn religiöser Hinsicht verehren die Cwingod, wie alle Cenyri, die Dame der See. Ihr zu Ehren haben sie in der Stadt Morea eine prächtige Kapelle errichtet, die als spirituelles Zentrum für die Stadt und das Umland dient. Die Verehrung der Dame der See symbolisiert ihre tiefe Verbundenheit mit dem Meer und ihre Abhängigkeit von den sicheren Handelsrouten, die sie schützen und pflegen.\n\nNeben der Dame der See sind die Cwingod auch treue Anhänger des Knechts, den sie als den Gott der Arbeit, des Handels und der Aufrichtigkeit verehren. Der Knecht verkörpert für sie die Werte, die das Haus Cwingod leiten: harte Arbeit, Ehrlichkeit und wirtschaftlicher Erfolg. Diese doppelte religiöse Ausrichtung spiegelt die kulturelle Balance der Cwingod wider, die sowohl in ihrer maritimen Tradition als auch in ihrer Verantwortung als Verwalter und Hüter des Handels tief verwurzelt ist."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte",
+              "text": "Ein herausragender Aspekt der Cwingod ist, dass sie, obwohl sie als einziges Kadettenhaus der Arth einer Baronie vorstehen, niemals über die anderen Kadettenhäuser erhaben sind oder sich gegen sie stellen. Die Brüderlichkeit zu den anderen Kadettenhäusern ist den Cwingod von großer Bedeutung."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitztum",
+              "text": "Das Haus Cwingod spielt eine zentrale Rolle als wichtiger Knotenpunkt für den Handel in Cenyr. Durch ihre Kontrolle über die Stadt Morea sichern sie der Grafschaft und der gesamten Inselgruppe einen sicheren Hafen, der unerlässlich für den stetigen Fluss von Waren und Handelsschiffen ist. Ohne Morea wären die Handelsschiffe gezwungen, die Inselgruppe zu umfahren, was zwar möglich, aber mit erheblichen Zeitverlusten und erhöhten Gefahren durch Überfälle verbunden wäre.\n\nDieser kontinuierliche Handel verschafft den Cwingod eine stabile wirtschaftliche Grundlage und eine gewisse Existenzsicherheit, die ihnen stetiges Einkommen und einen zuverlässigen Warenfluss garantiert. Doch das Haus Cwingod betrachtet dieses Privileg nicht als selbstverständlich. Sie übernehmen die Verantwortung, die mit ihrer Schlüsselposition einhergeht, mit großem Ernst und sind bereit, ihre Pflichten mit harter Arbeit und Entschlossenheit zu erfüllen.\n\nDie Cwingod sind sich nicht zu schade, selbst in den Schmutz zu greifen, wenn es nötig ist. Wenn die Situation es erfordert, zögern sie nicht, sich mit anderen Häusern in die Schlacht zu begeben, um die Sicherheit ihrer Handelsrouten und die Verteidigung ihrer Heimat zu gewährleisten. Diese Mischung aus wirtschaftlicher Verantwortung und kriegerischer Bereitschaft macht das Haus Cwingod zu einem unverzichtbaren Pfeiler der Grafschaft Talgarth."
+            }
+          ],
+          "historyTitle": "Geschichte",
+          "historyText": "Die Cwingod bewohnten ursprünglich eine Burg im Inneren von Talgarth. Der Graf der Arth rief die Ritterfürsten seiner Kadettenhäuser Pawen, Crafanc und Cwingod zusammen, um über den Aufbau der Stadt Morea und die spätere Baronie zu entscheiden. Pawen und Crafanc betrachteten sich als rechte und linke Hand der Arth. Gemeinsam wählten sie die Cwingod, deren Stärken in Politik und Verwaltung lagen, für diese Aufgabe aus.",
+          "worksTitle": "Amtsfolge der Barone von Morea",
+          "works": [
+            "Galeshin Arth: Gründer, Amtsjahre nicht überliefert.",
+            "Rhodhri Cwingod: 1663–1671.",
+            "Idris Cwingod: 1671–1672.",
+            "Sath Cwingod: 1672–1713.",
+            "Domnall Cwingod: 1713–1738.",
+            "Galeshin Cwingod: seit 1738."
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausworte & Zitate",
+          "quotes": [
+            "Maer'r grym yn y geg arth yn siarad trwy eiriau a gweithredoedd."
+          ],
+          "connectionsTitle": "Konflikte und Allianzen",
+          "connections": [
+            {
+              "type": "heading",
+              "title": "Lehensbindung und Brüderhäuser",
+              "detail": "Die Cwingod halten sich aus Konflikten raus und versuchen nur ihre Rolle für den Grafen zu erfüllen. Natürlich haben sie mit den Piraten zu kämpfen, aber bei wem ist dies auch anders? Allianzen werden meist mit anderen Kadettenhäusern, den Arth selbst oder Seefahrenden Häusern geschlossen, mit gelegentlichen ausnahmen."
+            },
+            {
+              "type": "connection",
+              "name": "Haus Arth",
+              "detail": "Ursprung und Lehensherr; Schutz der Handels- und Versorgungslinien.",
+              "image": "assets/images/houses/Klaueninsel/haus-arth.png",
+              "imageFormat": "square"
+            },
+            {
+              "type": "connection",
+              "name": "Haus Pawen und Haus Crafanc",
+              "detail": "Brüderliche Verbundenheit trotz des eigenen Baronstitels.",
+              "image": "",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Quellen und Darstellungen",
+          "documents": [
+            {
+              "icon": "",
+              "title": "Gelieferte Stammbaumgrafik",
+              "text": "Originalgrafik zur übernommenen Genealogie.",
+              "link": "https://i.imgur.com/wl3UqqR.jpeg"
+            },
+            {
+              "icon": "",
+              "title": "Rüstungsbeispiel",
+              "text": "Gelbe schwere Rüstung mit schwarzen Fellen.",
+              "link": "https://i.imgur.com/GguxeYO.png"
+            }
+          ],
+          "footer": "Im Maul des Bären liegt die Kraft.",
+          "crestImage": "assets/images/houses/Klaueninsel/haus-cwningod.png"
+        },
+        "commentSequence": [],
+        "quote": "Im Maul des Bären liegt die Kraft, die durch Worte und Taten spricht.",
+        "quoteBy": "— Haus Cwingod"
+      },
+      "sourceNote": "Nutzerquelle und Stammbaumgrafik vom 05.10.2026. Cwingod ist die ausdrücklich korrigierte Schreibweise; alte Akten-, Haus- und Weltpersonen-IDs bleiben stabil. 39 Personen, 14 Ehen, 24 Abstammungs-/Aufnahmekanten, fünf Wegheiraten, ein serieller Zeitsprung. Amtsjahre werden von Lebensdaten getrennt. Gegenakten bestimmen Braih, Dumnagual, Mared Lyfant, Tarawgs Lebensdaten und Maelgwns Todesjahr 1740. Rhonwens Quellenkreuz belegt den Tod ohne Todesjahr. Tualas unmögliches 1976 wird zu 1676 korrigiert. Riderch/Engla gegenüber Mervyn und die blaue Hedd-Verbindung sind als Quellenwidersprüche dokumentiert. Leere Hof-, Verlobungs- und Trivia-Vorlagen werden nicht zu Personen. Die ausdrückliche Einordnung lautet Cenyr > Klaueninsel > Talklaue > Cra Fryn, während Morea als Stadt- und Handelssitz erhalten bleibt.",
+      "registryManagedDocumentFields": [
+        "title",
+        "description",
+        "motto"
+      ],
+      "registryManagedExtensionFields": [
+        "blankFamily",
+        "sourceNote",
+        "houseBiographyModule"
+      ],
+      "registryManagedHouseProfileFields": [
+        "rankId",
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "liegeHouseId",
+        "liegeHouseName",
+        "secondarySeats",
+        "regionEmblems",
+        "folderPath"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath",
+        "title"
+      ],
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "ancestorDepth",
+        "descendantDepth",
+        "limitGenerations",
+        "showSiblings"
+      ]
+    }
+  }
+}

@@ -208,7 +208,7 @@ export const HOUSE_CRAFANC_FAMILY = Object.freeze({
     house('house-unigol', "Haus Unigol O'Caer Marwor", HOUSE_EMBLEMS.unigol),
     house('house-unbekannt-ffraid-crafanc', 'Unbekanntes Haus'),
     house('house-eirth', "Haus Eirth O'Caer Glaslyn", HOUSE_EMBLEMS.eirth),
-    house('house-cwningod', "Haus Cwningod O'Morea", HOUSE_EMBLEMS.cwningod),
+    house('house-cwningod', "Haus Cwingod O'Morea", HOUSE_EMBLEMS.cwningod),
     house('house-gwialen', "Haus Gwialen O'Tredegar", HOUSE_EMBLEMS.gwialen),
     house('house-mochdaer-gwyliau', "Haus Mochdaer O'Gwyliau", HOUSE_EMBLEMS.mochdaer),
     house('house-dianc', "Haus Dianc O'Aberdail", HOUSE_EMBLEMS.dianc),
@@ -269,7 +269,7 @@ export const HOUSE_CRAFANC_FAMILY = Object.freeze({
       notes: 'Die Crafanc-Quelle schreibt Amdarch; Partnerkarte und ausgearbeitete Gwialen-Gegenakte belegen Andarch.'
     }),
     person('artgal-crafanc', 'Artgal Crafanc', 'male', '1680', ''),
-    spouse('ffion-cwningod', 'Ffion Cwningod', 'female', '1676', '1736', 'house-cwningod'),
+    spouse('ffion-cwningod', 'Ffion Cwingod', 'female', '1676', '1736', 'house-cwningod'),
     spouse('gereint-gwialen', 'Gereint Gwialen', 'male', '1676', '', 'house-gwialen'),
     spouse('jowna-1681-mochdaer', 'Jowna Mochdaer', 'female', '1681', '1738', 'house-mochdaer-gwyliau'),
 
@@ -409,7 +409,7 @@ export const HOUSE_CRAFANC_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 4,
+    sourceRevision: 5,
     sourceFamilyId: 'haus-arth',
     sourcePartnershipId: 'marriage-artgal-amdarch',
     sourceModule: "Haus Crafanc O'Talgarth (bereitgestellte Altdaten)",

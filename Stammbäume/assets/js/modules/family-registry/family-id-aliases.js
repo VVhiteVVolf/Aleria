@@ -1,4 +1,5 @@
 const LEGACY_FAMILY_ID_ALIASES = Object.freeze({
+  'haus-cwingod': 'haus-cwningod',
   beran: 'haus-beran',
   earncynne: 'haus-earncynne',
   estmere: 'haus-estmere',

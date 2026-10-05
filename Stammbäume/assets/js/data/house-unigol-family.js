@@ -189,7 +189,7 @@ export const HOUSE_UNIGOL_FAMILY = Object.freeze({
     house('house-pawen', "Haus Pawen O'Talgarth", HOUSE_EMBLEMS.pawen),
     house('house-crafanc', "Haus Crafanc O'Talgarth", HOUSE_EMBLEMS.crafanc),
     house('house-dienyddiwr', "Haus Dienyddiwr O'Mathragon", HOUSE_EMBLEMS.dienyddiwr),
-    house('house-cwningod', "Haus Cwningod O'Morea", HOUSE_EMBLEMS.cwningod),
+    house('house-cwningod', "Haus Cwingod O'Morea", HOUSE_EMBLEMS.cwningod),
     house('house-selwyn', "Haus Sélwyn O'Caer Ebirth", HOUSE_EMBLEMS.selwyn),
     house('house-morthwyll', "Haus Morthwyl O'Caer Morben", HOUSE_EMBLEMS.morthwyll),
     house('house-chiffyddlon', 'Haus Chiffyddlon', HOUSE_EMBLEMS.chiffyddlon),
@@ -228,7 +228,9 @@ export const HOUSE_UNIGOL_FAMILY = Object.freeze({
       title: 'Ritterfürst und Oberhaupt des Hauses Unigol 1684–1706'
     }),
     marriedAwayPerson('hafren-unigol', 'Hafren Unigol', 'female', '1646', '1688', 'Haus Sélwyn'),
-    spouse('rhonwen-cwningod', 'Rhonwen Cwningod', 'female', '1639', '', 'house-cwningod'),
+    spouse('rhonwen-cwningod', 'Rhonwen Cwingod', 'female', '1639', '', 'house-cwningod', {
+      status: 'dead', notes: 'Die neue Cwingod-Quelle kennzeichnet Rhonwen ausdrücklich als verstorben; ein Todesjahr ist nicht überliefert.'
+    }),
     spouse('garselid-selwyn', 'Garselid Sélwyn', 'male', '1640', '1699', 'house-selwyn'),
 
     person('tryffin-unigol', 'Tryffin Unigol', 'male', '1661', '1720', {
@@ -334,7 +336,7 @@ export const HOUSE_UNIGOL_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceFamilyId: 'haus-arth',
     sourcePartnershipId: 'marriage-trahaern-ceridwen',
     sourceModule: "Haus Unigol O'Caer Marwor (bereitgestellte Altdaten)",

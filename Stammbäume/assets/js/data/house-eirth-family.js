@@ -161,7 +161,7 @@ export const HOUSE_EIRTH_FAMILY = Object.freeze({
     house(EIRTH_HOUSE_ID, "Haus Eirth O'Caer Glaslyn", EIRTH_EMBLEM),
     house('house-arth', "Haus Arth O'Talgarth", HOUSE_EMBLEMS.arth),
     house('house-crafanc', "Haus Crafanc O'Talgarth", HOUSE_EMBLEMS.crafanc),
-    house('house-cwningod', "Haus Cwningod O'Morea", HOUSE_EMBLEMS.cwningod),
+    house('house-cwningod', "Haus Cwingod O'Morea", HOUSE_EMBLEMS.cwningod),
     house('house-unigol', "Haus Unigol O'Caer Marwor", HOUSE_EMBLEMS.unigol),
     house('house-crefyddol', "Haus Crefyddol O'Llanvane", HOUSE_EMBLEMS.crefyddol),
     house('house-pawen', "Haus Pawen O'Talgarth", HOUSE_EMBLEMS.pawen),
@@ -189,8 +189,8 @@ export const HOUSE_EIRTH_FAMILY = Object.freeze({
     awayWoman('gaynor-eirth', 'Gaynor Eirth', '1680', '', 'Haus Unigol'),
     person('wyndham-eirth', 'Wyndham Eirth', 'male', '1676', ''),
 
-    spouse('ifanwy-cwningod', 'Ifanwy Cwningod', 'female', '1678', '', 'house-cwningod', {
-      notes: 'Die Quellform Cwingod wird zur bestehenden Hausschreibung Cwningod normalisiert.'
+    spouse('ifanwy-cwningod', 'Ifanwy Cwingod', 'female', '1678', '', 'house-cwningod', {
+      notes: 'Die Nutzerkorrektur vom 05.10.2026 bestätigt Cwingod als richtige Hausschreibung; die vorhandene Weltpersonen-ID bleibt erhalten.'
     }),
     spouse('dafydd-unigol', 'Dafydd Unigol', 'male', '1680', '', 'house-unigol'),
     spouse('gwendolen-crefyddol', 'Gwendolen Crefyddol', 'female', '1678', '', 'house-crefyddol'),
@@ -260,11 +260,11 @@ export const HOUSE_EIRTH_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceFamilyId: 'haus-arth',
     sourcePartnershipId: 'marriage-rhynnon-kyndra',
     sourceModule: "Haus Eirth O'Caer Glaslyn (bereitgestellte Altdaten)",
-    sourceNote: 'Rhynnon Arth und Kyndra Crafanc begründen Haus Eirth als Kadettenhaus der Arth; politisch bleibt es zugleich deren Vasallenhaus. Der Eirth-Hausknoten hängt direkt unter beiden und es folgt kein Zeitsprung. Prysor, Gaynor und Wyndham sind ihre Kinder. Nur die Linien Prysors und Wyndhams werden in Eirth fortgeführt. Gaynor und Eirwyn erhalten direkte Wegverheiratet-Knoten zu Haus Unigol; ihre Unigol-Kinder werden ausschließlich dort geführt. Die Tabellenüberschrift „Uren & Mared“ bezeichnet anhand der Personenspalten eindeutig Urien und Mared. Die Quellformen Cwingod und Selwyn werden als Cwningod und Sélwyn normalisiert. Kyndras unmögliches Geburtsjahr 1955 ist wie in Arth und Crafanc zu 1655 korrigiert. Sämtliche individuellen Quellporträts werden lokal gespeichert; bereits ausgearbeitete Gegenakten bleiben für gemeinsame Personen kanonisch.',
+    sourceNote: 'Rhynnon Arth und Kyndra Crafanc begründen Haus Eirth als Kadettenhaus der Arth; politisch bleibt es zugleich deren Vasallenhaus. Der Eirth-Hausknoten hängt direkt unter beiden und es folgt kein Zeitsprung. Prysor, Gaynor und Wyndham sind ihre Kinder. Nur die Linien Prysors und Wyndhams werden in Eirth fortgeführt. Gaynor und Eirwyn erhalten direkte Wegverheiratet-Knoten zu Haus Unigol; ihre Unigol-Kinder werden ausschließlich dort geführt. Die Tabellenüberschrift „Uren & Mared“ bezeichnet anhand der Personenspalten eindeutig Urien und Mared. Die Quellformen Cwingod und Selwyn werden als Cwingod und Sélwyn normalisiert. Kyndras unmögliches Geburtsjahr 1955 ist wie in Arth und Crafanc zu 1655 korrigiert. Sämtliche individuellen Quellporträts werden lokal gespeichert; bereits ausgearbeitete Gegenakten bleiben für gemeinsame Personen kanonisch.',
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],
     registryManagedHouseProfileFields: [
       'rankId',

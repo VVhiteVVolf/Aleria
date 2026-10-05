@@ -1,4 +1,5 @@
 import { normalizeFamily } from '../domain/family-schema.js';
+import { withCwingodHouseNameUpgrade } from '../data/cwingod-house-name-upgrade.js';
 import { houseBiographyDefaultUpgrade } from '../modules/house-biography/house-biography-default-upgrade.js?v=gwendolyn-20260911h';
 
 const ENTITY_COLLECTIONS = Object.freeze([
@@ -140,7 +141,7 @@ export function needsRegisteredFamilyUpgrade(registeredFamily, localFamily) {
 }
 
 export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
-  const registered = normalizeFamily(registeredInput);
+  const registered = withCwingodHouseNameUpgrade(normalizeFamily(registeredInput));
   const local = normalizeFamily(localInput);
   const registeredRevision = sourceRevision(registered);
   const localRevision = sourceRevision(local);

@@ -196,7 +196,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     house('house-unbekannt-arianhrod', 'Unbekanntes Haus'),
     house('house-pawen', 'Haus Pawen', HOUSE_EMBLEMS.pawen),
     house('house-crafanc', 'Haus Crafanc', HOUSE_EMBLEMS.crafanc),
-    house('house-cwningod', 'Haus Cwningod', HOUSE_EMBLEMS.cwningod),
+    house('house-cwningod', 'Haus Cwingod', HOUSE_EMBLEMS.cwningod),
     house('house-unigol', 'Haus Unigol', HOUSE_EMBLEMS.unigol),
     house('house-dienyddiwr', 'Haus Dienyddiwr'),
     house('house-nuadat', 'Haus Nuadat'),
@@ -299,7 +299,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
       notes: 'Die Quelle druckt unmöglich 1952; anhand der Generation wurde der offensichtliche Jahrhundertfehler zu 1652 berichtigt.'
     }),
     person('rian-arth', 'Rian Arth', 'female', '1654', '1712'),
-    person('sath-cwningod', 'Sath Cwningod', 'male', '1652', '1713', 'house-cwningod'),
+    person('sath-cwningod', 'Sath Cwingod', 'male', '1652', '1713', 'house-cwningod'),
     person('rhynnon-arth', 'Rhynnon Arth', 'male', '1655', '1720'),
     person('kyndra-crafanc', 'Kyndra Crafanc', 'female', '1655', '1701', 'house-crafanc', {
       notes: 'Die Quelle druckt unmöglich 1955; die Elterngeneration und das Todesjahr 1701 belegen 1655.',
@@ -385,7 +385,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     person('tiwlip-arth', 'Tiwlip Arth', 'female', '1697', '', ARTH_HOUSE_ID, {
       notes: 'Die Quelle druckt unmöglich 1967; die Geschwister- und Partnergeneration belegt 1697.'
     }),
-    person('galeshin-cwningod', 'Galeshin Cwningod', 'male', '1694', '', 'house-cwningod'),
+    person('galeshin-cwningod', 'Galeshin Cwingod', 'male', '1694', '', 'house-cwningod'),
     person('aled-arth', 'Aled Arth', 'male', '1695', ''),
     person('hiolair-morgacht', 'Hiolair Mórgacht', 'female', '1701', '', 'house-morgacht'),
     person('sylvia-cenyr', "Sylvia O'Cenyr", 'female', '1695', '1719', 'house-cenyr', { familyRole: 'bastard' }),
@@ -523,7 +523,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
   cadetBranches: [
     createCadetHouseBranch({ id: 'cadet-pawen-lamorak', name: 'Haus Pawen', parentPartnershipId: 'marriage-lamorak-mared', houseId: 'house-pawen', targetFamilyId: 'haus-pawen', emblem: HOUSE_EMBLEMS.pawen, notes: 'Lamorak Arth und Mared begründen Haus Pawen; der Knoten hängt direkt unter ihrem Paar.' }),
     createCadetHouseBranch({ id: 'cadet-crafanc-artgal', name: 'Haus Crafanc', parentPartnershipId: 'marriage-artgal-amdarch', houseId: 'house-crafanc', targetFamilyId: 'haus-crafanc', emblem: HOUSE_EMBLEMS.crafanc, notes: 'Artgal Arth und Amdarch begründen Haus Crafanc; der Knoten hängt direkt unter ihrem Paar.' }),
-    createCadetHouseBranch({ id: 'cadet-cwningod-galeshin', name: 'Haus Cwningod', parentPartnershipId: 'marriage-galeshin-arianhrod', houseId: 'house-cwningod', targetFamilyId: 'haus-cwningod', emblem: HOUSE_EMBLEMS.cwningod, notes: 'Galeshin Arth und Arianhrod begründen Haus Cwningod; der Knoten hängt direkt unter ihrem Paar.' }),
+    createCadetHouseBranch({ id: 'cadet-cwningod-galeshin', name: 'Haus Cwingod', parentPartnershipId: 'marriage-galeshin-arianhrod', houseId: 'house-cwningod', targetFamilyId: 'haus-cwningod', emblem: HOUSE_EMBLEMS.cwningod, notes: 'Galeshin Arth und Arianhrod begründen Haus Cwingod; der Knoten hängt direkt unter ihrem Paar.' }),
     createCadetHouseBranch({ id: 'cadet-unigol-trahaern', name: 'Haus Unigol', parentPartnershipId: 'marriage-trahaern-ceridwen', houseId: 'house-unigol', targetFamilyId: 'haus-unigol', emblem: HOUSE_EMBLEMS.unigol, notes: 'Trahaern Arth und Ceridwen Pawen begründen Haus Unigol; der Knoten hängt direkt unter ihrem Paar.' }),
     marriedAway('married-away-morthwyll-heddwen', 'Haus Morthwyll', 'marriage-heddwen-sayres', 'house-morthwyll', HOUSE_EMBLEMS.morthwyll),
     createCadetHouseBranch({ id: 'cadet-eirth-rhynnon', name: 'Haus Eirth', parentPartnershipId: 'marriage-rhynnon-kyndra', houseId: 'house-eirth', targetFamilyId: 'haus-eirth', emblem: HOUSE_EMBLEMS.eirth, notes: 'Rhynnon Arth und Kyndra Crafanc begründen Haus Eirth; der Knoten hängt direkt unter ihrem Paar.' }),
@@ -534,7 +534,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     marriedAway('married-away-pawen-isobel', 'Haus Pawen', 'marriage-isobel-sadwrn', 'house-pawen', HOUSE_EMBLEMS.pawen),
     marriedAway('married-away-crafanc-wenonah', 'Haus Crafanc', 'marriage-wenonah-cynwrig', 'house-crafanc', HOUSE_EMBLEMS.crafanc),
     marriedAway('married-away-dianc-ffraid', 'Haus Dianc', 'marriage-ffraid-gareth', 'house-dianc', HOUSE_EMBLEMS.dianc),
-    marriedAway('married-away-cwningod-rian', 'Haus Cwningod', 'marriage-rian-sath', 'house-cwningod', HOUSE_EMBLEMS.cwningod),
+    marriedAway('married-away-cwningod-rian', 'Haus Cwingod', 'marriage-rian-sath', 'house-cwningod', HOUSE_EMBLEMS.cwningod),
     marriedAway('married-away-pawen-tarian', 'Haus Pawen', 'marriage-tarian-brac', 'house-pawen', HOUSE_EMBLEMS.pawen),
     marriedAway('married-away-crafanc-afanen1660', 'Haus Crafanc', 'marriage-afanen-elisud', 'house-crafanc', HOUSE_EMBLEMS.crafanc),
     marriedAway('married-away-pysgod-llewella', 'Haus Pysgod', 'marriage-gingalain1671-llewella', 'house-pysgod', HOUSE_EMBLEMS.pysgod),
@@ -542,7 +542,7 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     marriedAway('married-away-pendrag-isolde', 'Haus Pendrag', 'marriage-tristan-isolde', 'house-pendrag', HOUSE_EMBLEMS.pendrag),
     marriedAway('married-away-crafanc-olwen', 'Haus Crafanc', 'marriage-olwen-melwas', 'house-crafanc', HOUSE_EMBLEMS.crafanc),
     marriedAway('married-away-dyngwn-lynfa1696', 'Haus Dyngwn', 'marriage-lynfa-derwyn', 'house-dyngwn'),
-    marriedAway('married-away-cwningod-tiwlip', 'Haus Cwningod', 'marriage-tiwlip-galeshin', 'house-cwningod', HOUSE_EMBLEMS.cwningod),
+    marriedAway('married-away-cwningod-tiwlip', 'Haus Cwingod', 'marriage-tiwlip-galeshin', 'house-cwningod', HOUSE_EMBLEMS.cwningod),
     marriedAway('married-away-wivern-gwennan', 'Haus Wivern', 'marriage-gwennan-cerdd', 'house-wivern')
   ],
   timeJumps: [
@@ -570,9 +570,9 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Personen, Beziehungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Arth-Tabelle sowie ihrer eingebetteten Stammbaumgrafik. Vier Auslassungen bilden die eine strikt serielle Hauptlinie Rhun–Cadfael–Tarrant–Caradoc–Traharyan; parallele Auslassungszeichen der Seitenlinien werden gemäß der absoluten Zeitsprungregel als beanspruchte Abstammungen dokumentiert, aber nicht als konkurrierende Diagrammknoten wiederholt. Die ausdrücklich bestätigten Hausgründungen Pawen, Crafanc, Cwningod, Unigol und Eirth hängen jeweils direkt unter ihrem Gründerpaar. Haus Morthwyll und Haus Sélwyn sind dagegen eigenständige Vasallenhäuser der Arth: Heddwen Arth wird an Sayres Morthwyll und Tegwen Arth an Morgan Sélwyn wegverheiratet; beide Ehen erzeugen keinen Kadettenhausknoten. Sämtliche übrigen Arth-Linien, die durch Ehe in einem anderen Haus weiterlaufen, besitzen einen direkten Wegverheiratet-Knoten. Offensichtliche Jahrhundertfehler 1952/1955/1967 wurden zu 1652/1655/1697 berichtigt und direkt an den Personen notiert; 1620 bei Traharyan ist ein Amtsbeginn. Die Pysgod-Gegenakte löst den Widerspruch Griflet/Cynwrig zugunsten Cynwrigs, die Saethwyr-Gegenakte Melyns Geschlecht und Familie. Talara Blodyn ist nur in der eingebetteten Grafik benannt. Die Marwolaeth-Gegenakte ergänzt Gwendolens Geburtsjahr 1679 und Cadfaels Todesjahr 1740. Caradocs individuelle Tumblr-Quelle ist nicht mehr abrufbar und wird nicht durch das Portrait seines späteren Namensvetters ersetzt. Generische Silhouetten und unbenannte Abschlussplatzhalter wurden nicht als individuelle Portraits oder zusätzliche Ehen importiert.',
+    sourceNote: 'Personen, Beziehungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Arth-Tabelle sowie ihrer eingebetteten Stammbaumgrafik. Vier Auslassungen bilden die eine strikt serielle Hauptlinie Rhun–Cadfael–Tarrant–Caradoc–Traharyan; parallele Auslassungszeichen der Seitenlinien werden gemäß der absoluten Zeitsprungregel als beanspruchte Abstammungen dokumentiert, aber nicht als konkurrierende Diagrammknoten wiederholt. Die ausdrücklich bestätigten Hausgründungen Pawen, Crafanc, Cwingod, Unigol und Eirth hängen jeweils direkt unter ihrem Gründerpaar. Haus Morthwyll und Haus Sélwyn sind dagegen eigenständige Vasallenhäuser der Arth: Heddwen Arth wird an Sayres Morthwyll und Tegwen Arth an Morgan Sélwyn wegverheiratet; beide Ehen erzeugen keinen Kadettenhausknoten. Sämtliche übrigen Arth-Linien, die durch Ehe in einem anderen Haus weiterlaufen, besitzen einen direkten Wegverheiratet-Knoten. Offensichtliche Jahrhundertfehler 1952/1955/1967 wurden zu 1652/1655/1697 berichtigt und direkt an den Personen notiert; 1620 bei Traharyan ist ein Amtsbeginn. Die Pysgod-Gegenakte löst den Widerspruch Griflet/Cynwrig zugunsten Cynwrigs, die Saethwyr-Gegenakte Melyns Geschlecht und Familie. Talara Blodyn ist nur in der eingebetteten Grafik benannt. Die Marwolaeth-Gegenakte ergänzt Gwendolens Geburtsjahr 1679 und Cadfaels Todesjahr 1740. Caradocs individuelle Tumblr-Quelle ist nicht mehr abrufbar und wird nicht durch das Portrait seines späteren Namensvetters ersetzt. Generische Silhouetten und unbenannte Abschlussplatzhalter wurden nicht als individuelle Portraits oder zusätzliche Ehen importiert.',
     blankFamily: false,
-    sourceRevision: 13,
+    sourceRevision: 14,
     registryManagedHouseProfileFields: [
       'rankId',
       'seat',

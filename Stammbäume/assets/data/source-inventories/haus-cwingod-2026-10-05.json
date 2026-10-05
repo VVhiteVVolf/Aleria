@@ -1,0 +1,4070 @@
+{
+  "schema": "aleria.family-source-inventory",
+  "version": 1,
+  "recordedAt": "2026-10-05T08:32:14.453Z",
+  "familyId": "haus-cwningod",
+  "source": {
+    "attachmentName": "Eingefügter Text.txt",
+    "sha256": "3be070f7bfb715855577bbcee1f429110a090cac9c4bab91f0f2fcd1bf40b37a",
+    "familyChart": "https://i.imgur.com/wl3UqqR.jpeg",
+    "houseEmblem": "https://i.imgur.com/2Xe7AgL.png",
+    "baronyEmblem": "https://i.imgur.com/S3McWYr.png"
+  },
+  "userCorrections": {
+    "name": "Cwingod",
+    "placement": [
+      "Cenyr",
+      "Klaueninsel",
+      "Talklaue",
+      "Cra Fryn"
+    ]
+  },
+  "counts": {
+    "persons": 39,
+    "partnerships": 14,
+    "parentages": 24,
+    "marriedAwayBranches": 5,
+    "serialTimeJumps": 1,
+    "portraits": 31,
+    "newPortraitFiles": 15
+  },
+  "identitiesPreserved": {
+    "familyId": "haus-cwningod",
+    "houseId": "house-cwningod",
+    "urlAlias": "haus-cwingod",
+    "sharedPersons": [
+      {
+        "id": "galeshin-ancient-arth",
+        "worldPersonId": "person--haus-arth--galeshin-ancient-arth"
+      },
+      {
+        "id": "arianhrod-unknown",
+        "worldPersonId": "person--haus-unbekannt-arianhrod--arianhrod-unknown"
+      },
+      {
+        "id": "braih-morthwyll",
+        "worldPersonId": "person--haus-morthwyll--braih-morthwyll"
+      },
+      {
+        "id": "tarawg-unigol",
+        "worldPersonId": "person--haus-unigol--tarawg-unigol"
+      },
+      {
+        "id": "rian-arth",
+        "worldPersonId": "person--haus-arth--rian-arth"
+      },
+      {
+        "id": "trevor-drewi",
+        "worldPersonId": "person--haus-drewi--trevor-drewi"
+      },
+      {
+        "id": "tuala-rioga",
+        "worldPersonId": "person--haus-rioga--tuala-rioga"
+      },
+      {
+        "id": "dumnagual-crafanc",
+        "worldPersonId": "person--haus-crafanc--dumnagual-crafanc"
+      },
+      {
+        "id": "maelgwn-pysgod",
+        "worldPersonId": "person--haus-pysgod--maelgwn-pysgod"
+      },
+      {
+        "id": "mared-lyfant",
+        "worldPersonId": "person--haus-lyfant--mared-lyfant"
+      },
+      {
+        "id": "prysor-eirth",
+        "worldPersonId": "person--haus-eirth--prysor-eirth"
+      },
+      {
+        "id": "tiwlip-arth",
+        "worldPersonId": "person--haus-arth--tiwlip-arth"
+      },
+      {
+        "id": "joally-pawen",
+        "worldPersonId": "person--haus-pawen--joally-pawen"
+      },
+      {
+        "id": "mervyn-serenoc",
+        "worldPersonId": "person--haus-serenoc--mervyn-serenoc"
+      },
+      {
+        "id": "llio-cwingod-spouse",
+        "worldPersonId": "person--haus-unbekannt-llio--llio-cwingod-spouse"
+      },
+      {
+        "id": "hedd-morlais",
+        "worldPersonId": "person--haus-morlais--hedd-morlais"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "issue": "Cwningod / Gwingod",
+      "resolution": "Cwingod gemäß ausdrücklicher Nutzerkorrektur; technische IDs bleiben stabil."
+    },
+    {
+      "issue": "Sitz Morea gegenüber Cra Fryn",
+      "resolution": "Cra Fryn gemäß Nutzer; Morea bleibt als überlieferte Handelsstadt und Nebensitz erhalten."
+    },
+    {
+      "issue": "Amtsjahre als mögliche Lebensjahre",
+      "resolution": "Rhodhri, Idris und die weiteren Barone behalten getrennte Amts- und Lebensdaten."
+    },
+    {
+      "issue": "Braith / Braih Morthwyll",
+      "resolution": "Braih Morthwyll (1632–1675) mit bestehender Weltidentität."
+    },
+    {
+      "issue": "Domnuagal / Donnuagal / Dumnagual",
+      "resolution": "Dumnagual Crafanc (1676–1718) gemäß Gegenakte."
+    },
+    {
+      "issue": "Llyfant / Lyfant",
+      "resolution": "Mared Lyfant gemäß kanonischer Gegenakte."
+    },
+    {
+      "issue": "Rhonwen: Quellenkreuz ohne Todesjahr",
+      "resolution": "Verstorben, Todesjahr unbekannt. Kein erfundenes Todesjahr."
+    },
+    {
+      "issue": "Tarawg: unvollständige Quelldaten",
+      "resolution": "1644–1706 gemäß vorhandener Unigol-Gegenakte."
+    },
+    {
+      "issue": "Maelgwn: offenes Endjahr",
+      "resolution": "1740 gemäß vorhandener Pysgod-Gegenakte."
+    },
+    {
+      "issue": "Tuala: 1976–1702",
+      "resolution": "Geburt 1676; Jahrhundertfehler anhand Todesjahr und Kindergeburten dokumentiert."
+    },
+    {
+      "issue": "Mervyn / Mervyne gegenüber Engla in der Kinderüberschrift",
+      "resolution": "Ein Partnerdatensatz Mervyn Serenoc; keine zweite Ehe erfunden. Kinderzuordnung wahrscheinlich, Geschlecht unbekannt.",
+      "status": "user-clarification-pending"
+    },
+    {
+      "issue": "Hedd: blaue Grafikverbindung ohne benannte Aufnahmeart",
+      "resolution": "Als unsicher aufgenommenes Mündel modelliert; keine biologischen Eltern erfunden.",
+      "status": "user-clarification-pending"
+    },
+    {
+      "issue": "Vaughan / Vaughn Cwingod",
+      "resolution": "Gleiches Porträt, gleiches Haus, Titel Ritter von Morea: bestehende Almanachfigur EPwTMvE8J0vG76aXt2NK; Alias dokumentiert, Charakterdaten unberührt."
+    },
+    {
+      "issue": "800 Gesamttruppen gegenüber 600 Waffenknechten + 100 Stadtwachen",
+      "resolution": "Beide Quellangaben erhalten; fehlende 100 keiner erfundenen Truppengattung zugeordnet."
+    },
+    {
+      "issue": "Nicht überlieferte Gründer-Zwischengenerationen",
+      "resolution": "Ein serieller Zeitsprung, beanspruchte/wahrscheinliche Abstammung statt biologischer Direkteltern."
+    }
+  ],
+  "persons": [
+    {
+      "id": "galeshin-ancient-arth",
+      "worldPersonId": "person--haus-arth--galeshin-ancient-arth",
+      "name": "Galeshin Arth",
+      "sex": "male",
+      "birth": "????",
+      "death": "????",
+      "status": "dead",
+      "houseId": "house-arth",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-arth/galeshin-ancient-arth.jpg",
+      "portraitSource": "https://64.media.tumblr.com/33bf83b6498b5cf02c6deda55e8a1b1d/ae140fa5f48f17a9-7c/s250x400/1ac13ba65b97f96165ddda21dd53844be2e05318.pnj",
+      "notes": ""
+    },
+    {
+      "id": "arianhrod-unknown",
+      "worldPersonId": "person--haus-unbekannt-arianhrod--arianhrod-unknown",
+      "name": "Arianhrod",
+      "sex": "female",
+      "birth": "????",
+      "death": "????",
+      "status": "dead",
+      "houseId": "house-unbekannt-arianhrod",
+      "familyRole": "married",
+      "portrait": "",
+      "portraitSource": null,
+      "notes": ""
+    },
+    {
+      "id": "rhodhri-cwningod",
+      "worldPersonId": "person--haus-cwningod--rhodhri-cwningod",
+      "name": "Rhodhri Cwingod",
+      "sex": "male",
+      "birth": "1631",
+      "death": "1671",
+      "status": "dead",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-morthwyll/rhodhri-cwningod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/e95b76bb01e5c81636e579edd0be12a3/ede4c143dc24726b-26/s250x400/63fa514408d143c78bc15059d02e6676edb4e7d6.pnj",
+      "notes": ""
+    },
+    {
+      "id": "braih-morthwyll",
+      "worldPersonId": "person--haus-morthwyll--braih-morthwyll",
+      "name": "Braih Morthwyll",
+      "sex": "female",
+      "birth": "1632",
+      "death": "1675",
+      "status": "dead",
+      "houseId": "house-morthwyll",
+      "familyRole": "married",
+      "portrait": "",
+      "portraitSource": null,
+      "notes": "In der Cwingod-Quelle Braith; identisch mit Braih Morthwyll (1632–1675) der Gegenakte."
+    },
+    {
+      "id": "rhonwen-cwningod",
+      "worldPersonId": "person--haus-cwningod--rhonwen-cwningod",
+      "name": "Rhonwen Cwingod",
+      "sex": "female",
+      "birth": "1639",
+      "death": "",
+      "status": "dead",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "",
+      "portraitSource": null,
+      "notes": "Die neue Cwingod-Quelle kennzeichnet Rhonwen ausdrücklich als verstorben; ein Todesjahr ist nicht überliefert."
+    },
+    {
+      "id": "tarawg-unigol",
+      "worldPersonId": "person--haus-unigol--tarawg-unigol",
+      "name": "Tarawg Unigol",
+      "sex": "male",
+      "birth": "1644",
+      "death": "1706",
+      "status": "dead",
+      "houseId": "house-unigol",
+      "familyRole": "married",
+      "portrait": "assets/images/portraits/haus-unigol/tarawg-unigol.jpg",
+      "portraitSource": "https://64.media.tumblr.com/616d91c7f87dbcd00279b8dbe49b8a1e/69a252243d308613-c0/s250x400/1fb536fb8f478c271e1e408680747684c3a7f029.pnj",
+      "notes": ""
+    },
+    {
+      "id": "idris-cwingod",
+      "worldPersonId": "person--haus-cwningod--idris-cwingod",
+      "name": "Idris Cwingod",
+      "sex": "male",
+      "birth": "1650",
+      "death": "????",
+      "status": "dead",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-cwingod/idris-cwingod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/0100feeaa7ce7181ca0ca26ac7090fbd/2bfa0e4852a1cce2-15/s400x600/1c8639a379aa8dbb6850d6f6070812666d3e2ed3.pnj",
+      "notes": "Die Amtsjahre 1671–1672 sind keine Lebensjahre; das Todesjahr bleibt unbekannt."
+    },
+    {
+      "id": "sath-cwningod",
+      "worldPersonId": "person--haus-cwningod--sath-cwningod",
+      "name": "Sath Cwingod",
+      "sex": "male",
+      "birth": "1652",
+      "death": "1713",
+      "status": "dead",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-arth/sath-cwningod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/a61b9dffbb078a8303edf8c8e8d7cfe7/ede4c143dc24726b-2e/s250x400/47934f26319f3549971db42671362eb513093443.pnj",
+      "notes": ""
+    },
+    {
+      "id": "rian-arth",
+      "worldPersonId": "person--haus-arth--rian-arth",
+      "name": "Rian Arth",
+      "sex": "female",
+      "birth": "1654",
+      "death": "1712",
+      "status": "dead",
+      "houseId": "house-arth",
+      "familyRole": "married",
+      "portrait": "assets/images/portraits/haus-arth/rian-arth.jpg",
+      "portraitSource": "https://64.media.tumblr.com/3dcd873c7b82001a2282b755886dbfdb/d637d5597cd1ad6d-60/s250x400/2ec1227e2290d1cc577e824537847672d77ca76c.pnj",
+      "notes": ""
+    },
+    {
+      "id": "delyth-cwingod",
+      "worldPersonId": "person--haus-cwningod--delyth-cwingod",
+      "name": "Delyth Cwingod",
+      "sex": "female",
+      "birth": "1656",
+      "death": "1694",
+      "status": "dead",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "",
+      "portraitSource": null,
+      "notes": ""
+    },
+    {
+      "id": "trevor-drewi",
+      "worldPersonId": "person--haus-drewi--trevor-drewi",
+      "name": "Trevor Drewi",
+      "sex": "male",
+      "birth": "1654",
+      "death": "1679",
+      "status": "dead",
+      "houseId": "house-drewi",
+      "familyRole": "married",
+      "portrait": "",
+      "portraitSource": null,
+      "notes": ""
+    },
+    {
+      "id": "domnall-cwingod",
+      "worldPersonId": "person--haus-cwningod--domnall-cwingod",
+      "name": "Domnall Cwingod",
+      "sex": "male",
+      "birth": "1671",
+      "death": "1738",
+      "status": "dead",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-cwingod/domnall-cwingod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/d189602a7867bfe5a6d74497aae63c32/ede4c143dc24726b-54/s250x400/f38a520181e05601abe68360d49217da95c950aa.pnj",
+      "notes": ""
+    },
+    {
+      "id": "tuala-rioga",
+      "worldPersonId": "person--haus-rioga--tuala-rioga",
+      "name": "Tuala Ríoga",
+      "sex": "female",
+      "birth": "1676",
+      "death": "1702",
+      "status": "dead",
+      "houseId": "house-rioga",
+      "familyRole": "married",
+      "portrait": "",
+      "portraitSource": null,
+      "notes": "Das Quelljahr 1976 widerspricht Tod 1702 und den Kindern 1694/1695; offensichtlicher Jahrhundertfehler, zu 1676 korrigiert."
+    },
+    {
+      "id": "ffion-cwningod",
+      "worldPersonId": "person--haus-cwningod--ffion-cwningod",
+      "name": "Ffion Cwingod",
+      "sex": "female",
+      "birth": "1676",
+      "death": "1736",
+      "status": "dead",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-crafanc/ffion-cwningod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/50428716476e006fcf70d433cea03e17/2bfa0e4852a1cce2-29/s250x400/c14d103c29e584de8b8cbbc4448b9bab2e1346d4.pnj",
+      "notes": ""
+    },
+    {
+      "id": "dumnagual-crafanc",
+      "worldPersonId": "person--haus-crafanc--dumnagual-crafanc",
+      "name": "Dumnagual Crafanc",
+      "sex": "male",
+      "birth": "1676",
+      "death": "1718",
+      "status": "dead",
+      "houseId": "house-crafanc",
+      "familyRole": "married",
+      "portrait": "assets/images/portraits/haus-crafanc/dumnagual-crafanc.jpg",
+      "portraitSource": "https://64.media.tumblr.com/5349b2b41a1d514302f8cfe420203754/deb6c6d744f2a5cc-e1/s250x400/7e6f5d681a0d353d3aec140e08973019a40ac908.pnj",
+      "notes": ""
+    },
+    {
+      "id": "kerensa-cwningod",
+      "worldPersonId": "person--haus-cwningod--kerensa-cwningod",
+      "name": "Kerensa Cwingod",
+      "sex": "female",
+      "birth": "1677",
+      "death": "1701",
+      "status": "dead",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "",
+      "portraitSource": null,
+      "notes": ""
+    },
+    {
+      "id": "maelgwn-pysgod",
+      "worldPersonId": "person--haus-pysgod--maelgwn-pysgod",
+      "name": "Maelgwn Pysgod",
+      "sex": "male",
+      "birth": "1673",
+      "death": "1740",
+      "status": "dead",
+      "houseId": "house-pysgod",
+      "familyRole": "married",
+      "portrait": "assets/images/portraits/haus-pysgod/maelgwn-pysgod.jpg",
+      "portraitSource": "https://i.imgur.com/sAyWEIY.png",
+      "notes": ""
+    },
+    {
+      "id": "teudebur-cwningod",
+      "worldPersonId": "person--haus-cwningod--teudebur-cwningod",
+      "name": "Teudebur Cwingod",
+      "sex": "male",
+      "birth": "1678",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-lyfant/teudebur-cwningod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/093660625bf467e8e3c1fc623eb92ee9/ede4c143dc24726b-f0/s250x400/7fb2f7d5caf4bec29bef4271f5826e96d207814d.pnj",
+      "notes": ""
+    },
+    {
+      "id": "mared-lyfant",
+      "worldPersonId": "person--haus-lyfant--mared-lyfant",
+      "name": "Mared Lyfant",
+      "sex": "female",
+      "birth": "1682",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-lyfant",
+      "familyRole": "married",
+      "portrait": "assets/images/portraits/haus-lyfant/mared-lyfant.png",
+      "portraitSource": "https://i.imgur.com/1Udlyu2.png",
+      "notes": ""
+    },
+    {
+      "id": "ifanwy-cwningod",
+      "worldPersonId": "person--haus-cwningod--ifanwy-cwningod",
+      "name": "Ifanwy Cwingod",
+      "sex": "female",
+      "birth": "1678",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-eirth/ifanwy-cwningod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/ba166c81e6559c4d0574cc249eb4d7d1/2bfa0e4852a1cce2-80/s400x600/3fb02d9f9d3ef4da9abc47a90423f1f9b0574cb4.pnj",
+      "notes": "Die Nutzerkorrektur vom 05.10.2026 bestätigt Cwingod als richtige Hausschreibung; die vorhandene Weltpersonen-ID bleibt erhalten."
+    },
+    {
+      "id": "prysor-eirth",
+      "worldPersonId": "person--haus-eirth--prysor-eirth",
+      "name": "Prysor Eirth",
+      "sex": "male",
+      "birth": "1674",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-eirth",
+      "familyRole": "married",
+      "portrait": "assets/images/portraits/haus-eirth/prysor-eirth.jpg",
+      "portraitSource": "https://64.media.tumblr.com/7d0ae701d371925bbcd82cea9adf8571/ef7b451a93b548d3-ef/s250x400/d1f2e00edac690f19f08cf15830c6b6496d118cb.pnj",
+      "notes": ""
+    },
+    {
+      "id": "galeshin-cwningod",
+      "worldPersonId": "person--haus-cwningod--galeshin-cwningod",
+      "name": "Galeshin Cwingod",
+      "sex": "male",
+      "birth": "1694",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-arth/galeshin-cwningod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/111347534fdebbacbb34a72f38882801/2bfa0e4852a1cce2-18/s250x400/81df77cd8a4ea5b8f4de07e58e0e4c157e753730.pnj",
+      "notes": ""
+    },
+    {
+      "id": "tiwlip-arth",
+      "worldPersonId": "person--haus-arth--tiwlip-arth",
+      "name": "Tiwlip Arth",
+      "sex": "female",
+      "birth": "1697",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-arth",
+      "familyRole": "married",
+      "portrait": "assets/images/portraits/haus-arth/tiwlip-arth.jpg",
+      "portraitSource": "https://64.media.tumblr.com/dfe3ba4b072c9f3cefec882be5cc96d1/f81d49deb9d86770-45/s400x600/8ae46fa1dc03f1a929cd46b71ec9ad0d939eb23e.pnj",
+      "notes": "Die Quelle druckt unmöglich 1967; die Geschwister- und Partnergeneration belegt 1697."
+    },
+    {
+      "id": "tegid-cwningod",
+      "worldPersonId": "person--haus-cwningod--tegid-cwningod",
+      "name": "Tegid Cwingod",
+      "sex": "male",
+      "birth": "1695",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-pawen/tegid-cwningod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/c6f1dac712fbffee9005127270ea3a34/ede4c143dc24726b-04/s250x400/641fb7f1138cb071c600ac3fa6d7bc857c5ac613.pnj",
+      "notes": ""
+    },
+    {
+      "id": "joally-pawen",
+      "worldPersonId": "person--haus-pawen--joally-pawen",
+      "name": "Joally Pawen",
+      "sex": "female",
+      "birth": "1696",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-pawen",
+      "familyRole": "married",
+      "portrait": "assets/images/portraits/haus-pawen/joally-pawen.jpg",
+      "portraitSource": "https://64.media.tumblr.com/8f74f9682145902f1e275d1ecd33bfa2/61c4bf701607a1c0-ec/s250x400/519a7dfeaf63c9fc74948e1fe2e356863d42a9b7.pnj",
+      "notes": ""
+    },
+    {
+      "id": "ywain-cwingod",
+      "worldPersonId": "person--haus-cwningod--ywain-cwingod",
+      "name": "Ywain Cwingod",
+      "sex": "male",
+      "birth": "1699",
+      "death": "1720",
+      "status": "dead",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-cwingod/ywain-cwingod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/7b7f4e0891ae132f11a66dee6fb9a65d/ede4c143dc24726b-e0/s250x400/3dfd7282be84f91c65db7d9e30e382d154c606c4.pnj",
+      "notes": ""
+    },
+    {
+      "id": "riderch-cwingod",
+      "worldPersonId": "person--haus-cwningod--riderch-cwingod",
+      "name": "Riderch Cwingod",
+      "sex": "male",
+      "birth": "1702",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-cwingod/riderch-cwingod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/df4ea621258c4bb614675afed540bd27/ede4c143dc24726b-1c/s250x400/dc03b476fb67d064f1469e1ebba637d69a1b2308.pnj",
+      "notes": ""
+    },
+    {
+      "id": "mervyn-serenoc",
+      "worldPersonId": "person--haus-serenoc--mervyn-serenoc",
+      "name": "Mervyn Serenoc",
+      "sex": "unknown",
+      "birth": "1700",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-serenoc",
+      "familyRole": "married",
+      "portrait": "assets/images/portraits/haus-cwingod/mervyn-serenoc.png",
+      "portraitSource": "https://i.imgur.com/iQ3ih1x.png",
+      "notes": "Die Grafik nennt Mervyne, die Partnerkarte Mervyn Serenoc. Die Kinderüberschrift nennt abweichend Engla; dieser Widerspruch begründet keine zusätzliche Person oder Ehe."
+    },
+    {
+      "id": "gildas-cwingod",
+      "worldPersonId": "person--haus-cwningod--gildas-cwingod",
+      "name": "Gildas Cwingod",
+      "sex": "male",
+      "birth": "1705",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-cwingod/gildas-cwingod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/e9b4cd6e401960ecc475dba7e1f4cd23/2bfa0e4852a1cce2-9d/s250x400/b40369b0517308dfc04aafc99449b6fad7e34fd4.pnj",
+      "notes": ""
+    },
+    {
+      "id": "llio-cwingod-spouse",
+      "worldPersonId": "person--haus-unbekannt-llio--llio-cwingod-spouse",
+      "name": "Llio",
+      "sex": "female",
+      "birth": "1709",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-unbekannt-llio",
+      "familyRole": "married",
+      "portrait": "",
+      "portraitSource": null,
+      "notes": ""
+    },
+    {
+      "id": "artgal-cwingod",
+      "worldPersonId": "person--haus-cwningod--artgal-cwingod",
+      "name": "Artgal Cwingod",
+      "sex": "male",
+      "birth": "1720",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-cwingod/artgal-cwingod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/b5afd89266e9bae3d286d3c02d0b7653/2bfa0e4852a1cce2-5d/s250x400/e9ab8fe1649be3e434edc2002e32f5e7cce44da3.pnj",
+      "notes": ""
+    },
+    {
+      "id": "clinoch-cwingod",
+      "worldPersonId": "person--haus-cwningod--clinoch-cwingod",
+      "name": "Clinoch Cwingod",
+      "sex": "male",
+      "birth": "1722",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-cwingod/clinoch-cwingod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/9accf4982e8b8f641abec229c84072e6/2bfa0e4852a1cce2-93/s250x400/9169901f3782cf9f0a39b7b98a12b9bb7a4ecb53.pnj",
+      "notes": ""
+    },
+    {
+      "id": "hedd-morlais",
+      "worldPersonId": "person--haus-morlais--hedd-morlais",
+      "name": "Hedd Morlais",
+      "sex": "male",
+      "birth": "1720",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-morlais",
+      "familyRole": "ward",
+      "portrait": "assets/images/portraits/haus-cwingod/hedd-morlais.png",
+      "portraitSource": "https://i.imgur.com/ljkiPo1.png",
+      "notes": "Die Stammbaumgrafik zeigt eine blaue Verbindung zu Galeshin und Tiwlip; Pflege-/Adoptionsart ist im Text nicht bezeichnet. Als unsichere Aufnahme geführt, biologische Eltern bleiben unbekannt."
+    },
+    {
+      "id": "vaughan-cwingod",
+      "worldPersonId": "person--haus-cwningod--vaughan-cwingod",
+      "name": "Vaughan Cwingod",
+      "sex": "male",
+      "birth": "1719",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-cwingod/vaughan-cwingod.png",
+      "portraitSource": "https://i.imgur.com/CUjUTwF.png",
+      "notes": "Im Almanach als Vaughn Cwingod bei den Schwarzfischen geführt: gleiches Porträt, gleiches Haus und der Titel „Ritter, Morea“ belegen dieselbe Figur. Die bestehende Almanach-ID EPwTMvE8J0vG76aXt2NK bleibt erhalten."
+    },
+    {
+      "id": "arianrhod-cwingod",
+      "worldPersonId": "person--haus-cwningod--arianrhod-cwingod",
+      "name": "Arianrhod Cwingod",
+      "sex": "female",
+      "birth": "1723",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-cwingod/arianrhod-cwingod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/903d6a3d754c2155fb54ccb2955721c1/2bfa0e4852a1cce2-9c/s250x400/e57e21939a7d3c790e57ed01e2e909b5f5451e51.pnj",
+      "notes": ""
+    },
+    {
+      "id": "adeon-cwingod",
+      "worldPersonId": "person--haus-cwningod--adeon-cwingod",
+      "name": "Adeon Cwingod",
+      "sex": "male",
+      "birth": "1721",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-cwingod/adeon-cwingod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/ea3d92a3668b03833f6bc98a09ff2a60/2bfa0e4852a1cce2-1c/s250x400/4d1003a38beb0e5e54486da21bcc52295ed81ebc.pnj",
+      "notes": ""
+    },
+    {
+      "id": "sioned-cwingod",
+      "worldPersonId": "person--haus-cwningod--sioned-cwingod",
+      "name": "Sioned Cwingod",
+      "sex": "female",
+      "birth": "1723",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-cwingod/sioned-cwingod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/7ba78773c12a49cf4b35ad0bd1fd07dc/ede4c143dc24726b-bf/s250x400/5724f0cd402705c944f5e38829a6575f534ae135.pnj",
+      "notes": ""
+    },
+    {
+      "id": "slevin-cwingod",
+      "worldPersonId": "person--haus-cwningod--slevin-cwingod",
+      "name": "Slevin Cwingod",
+      "sex": "male",
+      "birth": "1734",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-cwingod/slevin-cwingod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/d125602c64ecad57cbcb84ce3e5dc5ff/ede4c143dc24726b-27/s250x400/2bf8355e017d8f432b803a239a4421b1bb1789e0.pnj",
+      "notes": ""
+    },
+    {
+      "id": "eirwen-cwingod",
+      "worldPersonId": "person--haus-cwningod--eirwen-cwingod",
+      "name": "Eirwen Cwingod",
+      "sex": "female",
+      "birth": "1736",
+      "death": "",
+      "status": "alive",
+      "houseId": "house-cwningod",
+      "familyRole": "core",
+      "portrait": "assets/images/portraits/haus-cwingod/eirwen-cwingod.jpg",
+      "portraitSource": "https://64.media.tumblr.com/71e0479061c2d12a414e639f163697a3/2bfa0e4852a1cce2-88/s250x400/0b35d0fc45c5b61c96a3aba8e7f30c92790739be.pnj",
+      "notes": ""
+    }
+  ],
+  "partnerships": [
+    {
+      "id": "marriage-galeshin-arianhrod",
+      "participantIds": [
+        "galeshin-ancient-arth",
+        "arianhrod-unknown"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-braih-rhodhri-morthwyll",
+      "participantIds": [
+        "braih-morthwyll",
+        "rhodhri-cwningod"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "",
+      "end": "1671",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-tarawg-rhonwen-unigol",
+      "participantIds": [
+        "tarawg-unigol",
+        "rhonwen-cwningod"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "",
+      "end": "1706",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-rian-sath",
+      "participantIds": [
+        "rian-arth",
+        "sath-cwningod"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-delyth-trevor-cwingod",
+      "participantIds": [
+        "delyth-cwingod",
+        "trevor-drewi"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-domnall-tuala-cwingod",
+      "participantIds": [
+        "domnall-cwingod",
+        "tuala-rioga"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-dumnagual-ffion-crafanc",
+      "participantIds": [
+        "dumnagual-crafanc",
+        "ffion-cwningod"
+      ],
+      "type": "marriage",
+      "status": "ended",
+      "start": "",
+      "end": "1718",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-maelgwn-kerensa",
+      "participantIds": [
+        "maelgwn-pysgod",
+        "kerensa-cwningod"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-mared-teudebur-lyfant",
+      "participantIds": [
+        "mared-lyfant",
+        "teudebur-cwningod"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-prysor-ifanwy-eirth",
+      "participantIds": [
+        "prysor-eirth",
+        "ifanwy-cwningod"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-tiwlip-galeshin",
+      "participantIds": [
+        "tiwlip-arth",
+        "galeshin-cwningod"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-joally-tegid-pawen",
+      "participantIds": [
+        "joally-pawen",
+        "tegid-cwningod"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-riderch-mervyn-cwingod",
+      "participantIds": [
+        "riderch-cwingod",
+        "mervyn-serenoc"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-gildas-llio-cwingod",
+      "participantIds": [
+        "gildas-cwingod",
+        "llio-cwingod-spouse"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "parentages": [
+    {
+      "id": "cwingod-parentage-rhodhri-cwningod",
+      "childId": "rhodhri-cwningod",
+      "parentIds": [
+        "galeshin-ancient-arth",
+        "arianhrod-unknown"
+      ],
+      "partnershipId": "marriage-galeshin-arianhrod",
+      "type": "claimed",
+      "legitimacy": "unknown",
+      "certainty": "probable",
+      "visibility": "public",
+      "notes": "Nicht einzeln überlieferte Zwischengenerationen.",
+      "extensions": {
+        "timeJumpId": "gap-cwingod-founders-rhodhri"
+      }
+    },
+    {
+      "id": "cwingod-parentage-rhonwen-cwningod",
+      "childId": "rhonwen-cwningod",
+      "parentIds": [
+        "galeshin-ancient-arth",
+        "arianhrod-unknown"
+      ],
+      "partnershipId": "marriage-galeshin-arianhrod",
+      "type": "claimed",
+      "legitimacy": "unknown",
+      "certainty": "probable",
+      "visibility": "public",
+      "notes": "Nicht einzeln überlieferte Zwischengenerationen.",
+      "extensions": {
+        "timeJumpId": "gap-cwingod-founders-rhodhri"
+      }
+    },
+    {
+      "id": "cwingod-parentage-idris-cwingod",
+      "childId": "idris-cwingod",
+      "parentIds": [
+        "braih-morthwyll",
+        "rhodhri-cwningod"
+      ],
+      "partnershipId": "marriage-braih-rhodhri-morthwyll",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-sath-cwningod",
+      "childId": "sath-cwningod",
+      "parentIds": [
+        "braih-morthwyll",
+        "rhodhri-cwningod"
+      ],
+      "partnershipId": "marriage-braih-rhodhri-morthwyll",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-delyth-cwingod",
+      "childId": "delyth-cwingod",
+      "parentIds": [
+        "braih-morthwyll",
+        "rhodhri-cwningod"
+      ],
+      "partnershipId": "marriage-braih-rhodhri-morthwyll",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-domnall-cwingod",
+      "childId": "domnall-cwingod",
+      "parentIds": [
+        "rian-arth",
+        "sath-cwningod"
+      ],
+      "partnershipId": "marriage-rian-sath",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-ffion-cwningod",
+      "childId": "ffion-cwningod",
+      "parentIds": [
+        "rian-arth",
+        "sath-cwningod"
+      ],
+      "partnershipId": "marriage-rian-sath",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-kerensa-cwningod",
+      "childId": "kerensa-cwningod",
+      "parentIds": [
+        "rian-arth",
+        "sath-cwningod"
+      ],
+      "partnershipId": "marriage-rian-sath",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-teudebur-cwningod",
+      "childId": "teudebur-cwningod",
+      "parentIds": [
+        "rian-arth",
+        "sath-cwningod"
+      ],
+      "partnershipId": "marriage-rian-sath",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-ifanwy-cwningod",
+      "childId": "ifanwy-cwningod",
+      "parentIds": [
+        "rian-arth",
+        "sath-cwningod"
+      ],
+      "partnershipId": "marriage-rian-sath",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-galeshin-cwningod",
+      "childId": "galeshin-cwningod",
+      "parentIds": [
+        "domnall-cwingod",
+        "tuala-rioga"
+      ],
+      "partnershipId": "marriage-domnall-tuala-cwingod",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-tegid-cwningod",
+      "childId": "tegid-cwningod",
+      "parentIds": [
+        "domnall-cwingod",
+        "tuala-rioga"
+      ],
+      "partnershipId": "marriage-domnall-tuala-cwingod",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-ywain-cwingod",
+      "childId": "ywain-cwingod",
+      "parentIds": [
+        "mared-lyfant",
+        "teudebur-cwningod"
+      ],
+      "partnershipId": "marriage-mared-teudebur-lyfant",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-riderch-cwingod",
+      "childId": "riderch-cwingod",
+      "parentIds": [
+        "mared-lyfant",
+        "teudebur-cwningod"
+      ],
+      "partnershipId": "marriage-mared-teudebur-lyfant",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-gildas-cwingod",
+      "childId": "gildas-cwingod",
+      "parentIds": [
+        "mared-lyfant",
+        "teudebur-cwningod"
+      ],
+      "partnershipId": "marriage-mared-teudebur-lyfant",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-artgal-cwingod",
+      "childId": "artgal-cwingod",
+      "parentIds": [
+        "tiwlip-arth",
+        "galeshin-cwningod"
+      ],
+      "partnershipId": "marriage-tiwlip-galeshin",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-clinoch-cwingod",
+      "childId": "clinoch-cwingod",
+      "parentIds": [
+        "tiwlip-arth",
+        "galeshin-cwningod"
+      ],
+      "partnershipId": "marriage-tiwlip-galeshin",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-hedd-morlais",
+      "childId": "hedd-morlais",
+      "parentIds": [
+        "tiwlip-arth",
+        "galeshin-cwningod"
+      ],
+      "partnershipId": "marriage-tiwlip-galeshin",
+      "type": "foster",
+      "legitimacy": "unknown",
+      "certainty": "unknown",
+      "visibility": "public",
+      "notes": "Blaue Quellenverbindung; Art der Aufnahme nicht ausdrücklich benannt.",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-vaughan-cwingod",
+      "childId": "vaughan-cwingod",
+      "parentIds": [
+        "joally-pawen",
+        "tegid-cwningod"
+      ],
+      "partnershipId": "marriage-joally-tegid-pawen",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-arianrhod-cwingod",
+      "childId": "arianrhod-cwingod",
+      "parentIds": [
+        "joally-pawen",
+        "tegid-cwningod"
+      ],
+      "partnershipId": "marriage-joally-tegid-pawen",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-adeon-cwingod",
+      "childId": "adeon-cwingod",
+      "parentIds": [
+        "riderch-cwingod",
+        "mervyn-serenoc"
+      ],
+      "partnershipId": "marriage-riderch-mervyn-cwingod",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "probable",
+      "visibility": "public",
+      "notes": "Partnerkarte und Grafik nennen Mervyn/Mervyne Serenoc; die Kinderüberschrift nennt abweichend Engla.",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-sioned-cwingod",
+      "childId": "sioned-cwingod",
+      "parentIds": [
+        "riderch-cwingod",
+        "mervyn-serenoc"
+      ],
+      "partnershipId": "marriage-riderch-mervyn-cwingod",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "probable",
+      "visibility": "public",
+      "notes": "Partnerkarte und Grafik nennen Mervyn/Mervyne Serenoc; die Kinderüberschrift nennt abweichend Engla.",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-slevin-cwingod",
+      "childId": "slevin-cwingod",
+      "parentIds": [
+        "gildas-cwingod",
+        "llio-cwingod-spouse"
+      ],
+      "partnershipId": "marriage-gildas-llio-cwingod",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "cwingod-parentage-eirwen-cwingod",
+      "childId": "eirwen-cwingod",
+      "parentIds": [
+        "gildas-cwingod",
+        "llio-cwingod-spouse"
+      ],
+      "partnershipId": "marriage-gildas-llio-cwingod",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "cadetBranches": [
+    {
+      "id": "married-away-rhonwen-cwingod",
+      "name": "Haus Unigol",
+      "subtitle": "Wegverheiratete Linie",
+      "linkType": "married-away",
+      "parentPartnershipId": "marriage-tarawg-rhonwen-unigol",
+      "parentPersonId": "",
+      "childIds": [],
+      "houseId": "house-unigol",
+      "emblem": "",
+      "emblemScale": 0.86,
+      "crestFrame": "gold",
+      "frameScale": 1,
+      "founded": "",
+      "targetFamilyId": "haus-unigol",
+      "notes": "",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "parentPartnershipId",
+          "houseId",
+          "targetFamilyId"
+        ]
+      }
+    },
+    {
+      "id": "married-away-delyth-cwingod",
+      "name": "Haus Drewi",
+      "subtitle": "Wegverheiratete Linie",
+      "linkType": "married-away",
+      "parentPartnershipId": "marriage-delyth-trevor-cwingod",
+      "parentPersonId": "",
+      "childIds": [],
+      "houseId": "house-drewi",
+      "emblem": "",
+      "emblemScale": 0.86,
+      "crestFrame": "gold",
+      "frameScale": 1,
+      "founded": "",
+      "targetFamilyId": "haus-drewi",
+      "notes": "",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "parentPartnershipId",
+          "houseId",
+          "targetFamilyId"
+        ]
+      }
+    },
+    {
+      "id": "married-away-ffion-cwingod",
+      "name": "Haus Crafanc",
+      "subtitle": "Wegverheiratete Linie",
+      "linkType": "married-away",
+      "parentPartnershipId": "marriage-dumnagual-ffion-crafanc",
+      "parentPersonId": "",
+      "childIds": [],
+      "houseId": "house-crafanc",
+      "emblem": "",
+      "emblemScale": 0.86,
+      "crestFrame": "gold",
+      "frameScale": 1,
+      "founded": "",
+      "targetFamilyId": "haus-crafanc",
+      "notes": "",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "parentPartnershipId",
+          "houseId",
+          "targetFamilyId"
+        ]
+      }
+    },
+    {
+      "id": "married-away-kerensa-cwingod",
+      "name": "Haus Pysgod",
+      "subtitle": "Wegverheiratete Linie",
+      "linkType": "married-away",
+      "parentPartnershipId": "marriage-maelgwn-kerensa",
+      "parentPersonId": "",
+      "childIds": [],
+      "houseId": "house-pysgod",
+      "emblem": "",
+      "emblemScale": 0.86,
+      "crestFrame": "gold",
+      "frameScale": 1,
+      "founded": "",
+      "targetFamilyId": "haus-pysgod",
+      "notes": "",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "parentPartnershipId",
+          "houseId",
+          "targetFamilyId"
+        ]
+      }
+    },
+    {
+      "id": "married-away-ifanwy-cwingod",
+      "name": "Haus Eirth",
+      "subtitle": "Wegverheiratete Linie",
+      "linkType": "married-away",
+      "parentPartnershipId": "marriage-prysor-ifanwy-eirth",
+      "parentPersonId": "",
+      "childIds": [],
+      "houseId": "house-eirth",
+      "emblem": "",
+      "emblemScale": 0.86,
+      "crestFrame": "gold",
+      "frameScale": 1,
+      "founded": "",
+      "targetFamilyId": "haus-eirth",
+      "notes": "",
+      "extensions": {
+        "registryManagedFields": [
+          "name",
+          "parentPartnershipId",
+          "houseId",
+          "targetFamilyId"
+        ]
+      }
+    }
+  ],
+  "timeJumps": [
+    {
+      "id": "gap-cwingod-founders-rhodhri",
+      "parentPartnershipId": "marriage-galeshin-arianhrod",
+      "sharedParentPartnershipIds": [],
+      "parentPersonId": "",
+      "childIds": [
+        "rhodhri-cwningod",
+        "rhonwen-cwningod"
+      ],
+      "years": 0,
+      "fromYear": "????",
+      "toYear": "1631",
+      "label": "Nicht einzeln überlieferte Generationen",
+      "notes": "Einziger absoluter serieller Trenner nach Gründerpaar und Hauswappen.",
+      "extensions": {}
+    }
+  ],
+  "reusedEmblems": [
+    {
+      "path": "assets/images/regions/Cenyr/Klaueninsel/Talklaue.png",
+      "source": "https://i.imgur.com/S3McWYr.png",
+      "sha256": "8267c53661199914b7a603a4a3c598443802ce69ebe26261fb9d13e06de60a56"
+    },
+    {
+      "path": "assets/images/houses/Klaueninsel/haus-cwningod.png",
+      "source": "https://i.imgur.com/2Xe7AgL.png",
+      "sha256": "0d39b523b7f83e71f68dc86d2b1fa5420fc48253fd267ee5af7281294643071b"
+    }
+  ],
+  "downloadedPortraits": [
+    {
+      "id": "idris-cwingod",
+      "url": "https://64.media.tumblr.com/0100feeaa7ce7181ca0ca26ac7090fbd/2bfa0e4852a1cce2-15/s400x600/1c8639a379aa8dbb6850d6f6070812666d3e2ed3.pnj",
+      "filename": "idris-cwingod.jpg",
+      "bytes": 88012,
+      "sha256": "a86cc736ca89fddb08b3a3e3bf4356216b916d30a67ad0437f5d5c99e8455950"
+    },
+    {
+      "id": "domnall-cwingod",
+      "url": "https://64.media.tumblr.com/d189602a7867bfe5a6d74497aae63c32/ede4c143dc24726b-54/s250x400/f38a520181e05601abe68360d49217da95c950aa.pnj",
+      "filename": "domnall-cwingod.jpg",
+      "bytes": 38442,
+      "sha256": "34d5d449e009befe0053bfaa6c0c2a5d6a3cc0fc935fa2adc0c06832811f5c91"
+    },
+    {
+      "id": "ywain-cwingod",
+      "url": "https://64.media.tumblr.com/7b7f4e0891ae132f11a66dee6fb9a65d/ede4c143dc24726b-e0/s250x400/3dfd7282be84f91c65db7d9e30e382d154c606c4.pnj",
+      "filename": "ywain-cwingod.jpg",
+      "bytes": 48244,
+      "sha256": "50bd4ff70afc365bacbdbefe16a3ba7e91daedaf49942f187a6bb47567f86527"
+    },
+    {
+      "id": "riderch-cwingod",
+      "url": "https://64.media.tumblr.com/df4ea621258c4bb614675afed540bd27/ede4c143dc24726b-1c/s250x400/dc03b476fb67d064f1469e1ebba637d69a1b2308.pnj",
+      "filename": "riderch-cwingod.jpg",
+      "bytes": 44658,
+      "sha256": "950977935fa96db0636359292b8c8f551ccd5756c1a1074f6c97d89ffdb74d72"
+    },
+    {
+      "id": "gildas-cwingod",
+      "url": "https://64.media.tumblr.com/e9b4cd6e401960ecc475dba7e1f4cd23/2bfa0e4852a1cce2-9d/s250x400/b40369b0517308dfc04aafc99449b6fad7e34fd4.pnj",
+      "filename": "gildas-cwingod.jpg",
+      "bytes": 49945,
+      "sha256": "5b4da024e464d9367f2e796be87237d9537991718d844b6566c8fbe05a47e0c5"
+    },
+    {
+      "id": "mervyn-serenoc",
+      "url": "https://i.imgur.com/iQ3ih1x.png",
+      "filename": "mervyn-serenoc.png",
+      "bytes": 2696238,
+      "sha256": "f2ec0cbe281f5592ce1a1bd8c053d360456598a697417fcd4fe4c5ee656eac44"
+    },
+    {
+      "id": "artgal-cwingod",
+      "url": "https://64.media.tumblr.com/b5afd89266e9bae3d286d3c02d0b7653/2bfa0e4852a1cce2-5d/s250x400/e9ab8fe1649be3e434edc2002e32f5e7cce44da3.pnj",
+      "filename": "artgal-cwingod.jpg",
+      "bytes": 44841,
+      "sha256": "b75cfe510523fca73c84634f2a5dfafc9bfa8287f22f2defd0dc72f513e1ca1d"
+    },
+    {
+      "id": "clinoch-cwingod",
+      "url": "https://64.media.tumblr.com/9accf4982e8b8f641abec229c84072e6/2bfa0e4852a1cce2-93/s250x400/9169901f3782cf9f0a39b7b98a12b9bb7a4ecb53.pnj",
+      "filename": "clinoch-cwingod.jpg",
+      "bytes": 40345,
+      "sha256": "b3949875c79b262c55f17906be65b0df38828916c84a0e6e048926e1a3812c75"
+    },
+    {
+      "id": "hedd-morlais",
+      "url": "https://i.imgur.com/ljkiPo1.png",
+      "filename": "hedd-morlais.png",
+      "bytes": 2841163,
+      "sha256": "ec1e5fd48b126d8b0a6f5a3c338f6c46dcd0f446075337d4e7be6f977af49606"
+    },
+    {
+      "id": "vaughan-cwingod",
+      "url": "https://i.imgur.com/CUjUTwF.png",
+      "filename": "vaughan-cwingod.png",
+      "bytes": 2331279,
+      "sha256": "a90c8dc208036e35a50859b0c648775f4af760c1f92cdce8593486874f3de138"
+    },
+    {
+      "id": "arianrhod-cwingod",
+      "url": "https://64.media.tumblr.com/903d6a3d754c2155fb54ccb2955721c1/2bfa0e4852a1cce2-9c/s250x400/e57e21939a7d3c790e57ed01e2e909b5f5451e51.pnj",
+      "filename": "arianrhod-cwingod.jpg",
+      "bytes": 36161,
+      "sha256": "90a6c373736bf5028a9e7046185bde6a22078700f19d1c63c45cfa84e2a1b6dc"
+    },
+    {
+      "id": "adeon-cwingod",
+      "url": "https://64.media.tumblr.com/ea3d92a3668b03833f6bc98a09ff2a60/2bfa0e4852a1cce2-1c/s250x400/4d1003a38beb0e5e54486da21bcc52295ed81ebc.pnj",
+      "filename": "adeon-cwingod.jpg",
+      "bytes": 46648,
+      "sha256": "87a8059db5bc7e28f8a7fe8f726b4f81cc476d6a4d9bc37fe797da6cdd4974ad"
+    },
+    {
+      "id": "sioned-cwingod",
+      "url": "https://64.media.tumblr.com/7ba78773c12a49cf4b35ad0bd1fd07dc/ede4c143dc24726b-bf/s250x400/5724f0cd402705c944f5e38829a6575f534ae135.pnj",
+      "filename": "sioned-cwingod.jpg",
+      "bytes": 45624,
+      "sha256": "46d1312489f89f5ba7b05fa5bd09a75a7a06e29ec2e5b8265f174f5044aa6415"
+    },
+    {
+      "id": "slevin-cwingod",
+      "url": "https://64.media.tumblr.com/d125602c64ecad57cbcb84ce3e5dc5ff/ede4c143dc24726b-27/s250x400/2bf8355e017d8f432b803a239a4421b1bb1789e0.pnj",
+      "filename": "slevin-cwingod.jpg",
+      "bytes": 47188,
+      "sha256": "86d710ad7458c87fd8fd2ef863871d36931cf5f6d7128b59ae2e89cf56e8158c"
+    },
+    {
+      "id": "eirwen-cwingod",
+      "url": "https://64.media.tumblr.com/71e0479061c2d12a414e639f163697a3/2bfa0e4852a1cce2-88/s250x400/0b35d0fc45c5b61c96a3aba8e7f30c92790739be.pnj",
+      "filename": "eirwen-cwingod.jpg",
+      "bytes": 47093,
+      "sha256": "acef8e0eec660dfa2556e598a1fcf7e6d8b2c0d166de9e50bf254f5059bf1100"
+    }
+  ],
+  "sourceRows": [
+    {
+      "row": 0,
+      "cells": [
+        {
+          "text": "„Maer'r grym yn y geg arth yn siarad trwy eiriau a gweithredoedd.“ | | „Im Maul des Bären liegt die Kraft, die durch Worte und Taten spricht.“ | Motto des Hauses |",
+          "images": [
+            "https://i.imgur.com/2Xe7AgL.png"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 1,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "cells": [
+        {
+          "text": "Inhalt: 1) Übersicht 2) Geschichte 3) Traditionen | 4) Rittertum | 5) Besitztum | 6) Kultur / Religion | 7) Konflikte & Allianzen | 8) Werte | 9) Hof | 10) Hierache | 11) Stammbaum | 12) Trivia",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "cells": [
+        {
+          "text": "Morea",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/S3McWYr.png"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "cells": [
+        {
+          "text": "Allgemein",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "cells": [
+        {
+          "text": "Name",
+          "images": []
+        },
+        {
+          "text": "Die Klaueninseln",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "cells": [
+        {
+          "text": "Höchster Titel",
+          "images": []
+        },
+        {
+          "text": "Baron",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "cells": [
+        {
+          "text": "Typ",
+          "images": []
+        },
+        {
+          "text": "Baronie",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "cells": [
+        {
+          "text": "Motto",
+          "images": []
+        },
+        {
+          "text": "\"Im Maul des Bären liegt Kraft, die durch Worte und Taten spricht.\"",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "cells": [
+        {
+          "text": "Sitz",
+          "images": []
+        },
+        {
+          "text": "Morea",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "cells": [
+        {
+          "text": "Zugehörigkeit",
+          "images": []
+        },
+        {
+          "text": "Grafschaft Talgarth",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "cells": [
+        {
+          "text": "Militär",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "cells": [
+        {
+          "text": "Truppenstärke",
+          "images": []
+        },
+        {
+          "text": "800",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "cells": [
+        {
+          "text": "Ritter",
+          "images": []
+        },
+        {
+          "text": "überwiegend Teulu",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "cells": [
+        {
+          "text": "Knechte",
+          "images": []
+        },
+        {
+          "text": "600 Waffenknechte, 100 Stadtwachen",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "cells": [
+        {
+          "text": "Flotte",
+          "images": []
+        },
+        {
+          "text": "10 Kriegsschiffe",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "cells": [
+        {
+          "text": "Geschichte",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "cells": [
+        {
+          "text": "Jahr ...",
+          "images": []
+        },
+        {
+          "text": "Gründung",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "cells": [
+        {
+          "text": "Jahr ...",
+          "images": []
+        },
+        {
+          "text": "-",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "cells": [
+        {
+          "text": "Jahr ...",
+          "images": []
+        },
+        {
+          "text": "-",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "cells": [
+        {
+          "text": "Kultur",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "cells": [
+        {
+          "text": "Volksgruppe",
+          "images": []
+        },
+        {
+          "text": "Cenyri",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "cells": [
+        {
+          "text": "Wohlstand",
+          "images": []
+        },
+        {
+          "text": "Mittelmäßig",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "cells": [
+        {
+          "text": "Religion",
+          "images": []
+        },
+        {
+          "text": "Alerische Kirche",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "cells": [
+        {
+          "text": "Hauptpatrone",
+          "images": []
+        },
+        {
+          "text": "Der Knecht",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "cells": [
+        {
+          "text": "Beziehungen",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "cells": [
+        {
+          "text": "Ursprung",
+          "images": []
+        },
+        {
+          "text": "Haus Arth",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "cells": [
+        {
+          "text": "Kadetten",
+          "images": []
+        },
+        {
+          "text": "keine",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "cells": [
+        {
+          "text": "Freunde",
+          "images": []
+        },
+        {
+          "text": "Arth, Arth-Kadettenhäuser",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "cells": [
+        {
+          "text": "Feinde (Fehde)",
+          "images": []
+        },
+        {
+          "text": "Keine",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "cells": [
+        {
+          "text": "3.) Traditionen | | Das Haus Gwingod, bekannt für seine Rolle als das \"Maul\" des Bären, hat im Laufe der Zeit Traditionen entwickelt, die ihre administrativen Fähigkeiten und ihre Verantwortung als Verwalter und Politiker betonen. |",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "cells": [
+        {
+          "text": "4.) Rittertum | | Das Rittertum von Cenyr, weltbekannt und in Avallorn geboren, findet seine vollendete Form im Rittertum der Pendragons. Ein cenyrischer Ritter unterscheidet sich deutlich von seinen Kollegen, da er stets ein gesalbter Ritter ist. Der Initiationsritus erfolgt an einem See oder einem Gewässer, wo der Knappe zum Ritter geschlagen und gesalbt wird. Dabei schwört er einen Eid auf jeden der Neun Göttlichen, verpflichtet sich zu den Tugenden der Neun und gibt zusätzlich einen zehnten Eid auf die Dame des Sees ab, der Schutzgöttin des Landes Cenyr. | | | Die Ritter des Hauses Cwingod sind bekannt für ihre imposante Erscheinung, die durch ihre massiven Rüstungen noch verstärkt wird. Diese Rüstungen, deren Primärfarbe ein auffälliges Gelb ist, sind oft mit schwarzen Fellen besetzt, die einen kraftvollen Kontrast bilden und gleichzeitig ihre Herkunft aus den rauen Landschaften von Talgarth unterstreichen. | | Die Rüstungen der Cwingod-Ritter sind nicht nur ein Schutz, sondern auch ein Symbol ihrer Stärke und ihres Mutes. Sie sind für ihre schiere Größe und Robustheit bekannt, getragen von den größten und kräftigsten Kriegern der Cenyri, die sorgfältig ausgewählt werden, um diese Rolle zu erfüllen. Diese Krieger verkörpern das \"Maul\" des Bären, das die Cwingod stolz repräsentieren, und ihre Anwesenheit auf dem Schlachtfeld ist ebenso beeindruckend wie furchteinflößend. | | Die massive Erscheinung der Cwingod-Ritter macht sie zu einer einschüchternden Kraft, die ihre Feinde schon allein durch ihre physische Präsenz in Angst versetzen kann. Diese Krieger sind darauf trainiert, ihre schwere Rüstung mit Geschick und Kraft zu tragen, was ihnen erlaubt, im Kampf unaufhaltsam und nahezu unverwundbar zu erscheinen. Die Kombination aus ihren massiven Rüstungen, der markanten Farbgebung und der schieren körperlichen Stärke der Krieger macht die Ritter des Hauses Cwingod zu einer furchterregenden und respektierten Macht in der Grafschaft Talgarth. |",
+          "images": [
+            "https://i.imgur.com/GguxeYO.png"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "cells": [
+        {
+          "text": "5.) Besitztum | | Das Haus Cwingod spielt eine zentrale Rolle als wichtiger Knotenpunkt für den Handel in Cenyr. Durch ihre Kontrolle über die Stadt Morea sichern sie der Grafschaft und der gesamten Inselgruppe einen sicheren Hafen, der unerlässlich für den stetigen Fluss von Waren und Handelsschiffen ist. Ohne Morea wären die Handelsschiffe gezwungen, die Inselgruppe zu umfahren, was zwar möglich, aber mit erheblichen Zeitverlusten und erhöhten Gefahren durch Überfälle verbunden wäre. | | Dieser kontinuierliche Handel verschafft den Cwingod eine stabile wirtschaftliche Grundlage und eine gewisse Existenzsicherheit, die ihnen stetiges Einkommen und einen zuverlässigen Warenfluss garantiert. Doch das Haus Cwingod betrachtet dieses Privileg nicht als selbstverständlich. Sie übernehmen die Verantwortung, die mit ihrer Schlüsselposition einhergeht, mit großem Ernst und sind bereit, ihre Pflichten mit harter Arbeit und Entschlossenheit zu erfüllen. | | Die Cwingod sind sich nicht zu schade, selbst in den Schmutz zu greifen, wenn es nötig ist. Wenn die Situation es erfordert, zögern sie nicht, sich mit anderen Häusern in die Schlacht zu begeben, um die Sicherheit ihrer Handelsrouten und die Verteidigung ihrer Heimat zu gewährleisten. Diese Mischung aus wirtschaftlicher Verantwortung und kriegerischer Bereitschaft macht das Haus Cwingod zu einem unverzichtbaren Pfeiler der Grafschaft Talgarth. |",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "cells": [
+        {
+          "text": "6.) Kultur/ Religion | | Das Haus Cwingod gehört zu den Nordcenyri und teilt das unerschütterliche Gemüt der übrigen Arth. Im Vergleich zu ihren temperamentvolleren Verwandten gelten die Cwingod jedoch als etwas ruhiger und besonnener. Diese Gelassenheit spiegelt sich in ihrem täglichen Leben und ihrer Herangehensweise an Herausforderungen wider, was sie zu verlässlichen Verwaltern und Diplomaten macht. | | In religiöser Hinsicht verehren die Cwingod, wie alle Cenyri, die Dame der See. Ihr zu Ehren haben sie in der Stadt Morea eine prächtige Kapelle errichtet, die als spirituelles Zentrum für die Stadt und das Umland dient. Die Verehrung der Dame der See symbolisiert ihre tiefe Verbundenheit mit dem Meer und ihre Abhängigkeit von den sicheren Handelsrouten, die sie schützen und pflegen. | | Neben der Dame der See sind die Cwingod auch treue Anhänger des Knechts, den sie als den Gott der Arbeit, des Handels und der Aufrichtigkeit verehren. Der Knecht verkörpert für sie die Werte, die das Haus Cwingod leiten: harte Arbeit, Ehrlichkeit und wirtschaftlicher Erfolg. Diese doppelte religiöse Ausrichtung spiegelt die kulturelle Balance der Cwingod wider, die sowohl in ihrer maritimen Tradition als auch in ihrer Verantwortung als Verwalter und Hüter des Handels tief verwurzelt ist. |",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 37,
+      "cells": [
+        {
+          "text": "7.) Konflikte & Allianzen | | Die Cwingod halten sich aus Konflikten raus und versuchen nur ihre Rolle für den Grafen zu erfüllen. Natürlich haben sie mit den Piraten zu kämpfen, aber bei wem ist dies auch anders? Allianzen werden meist mit anderen Kadettenhäusern, den Arth selbst oder Seefahrenden Häusern geschlossen, mit gelegentlichen ausnahmen. |",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 38,
+      "cells": [
+        {
+          "text": "8.) Werte | | Ein herausragender Aspekt der Cwingod ist, dass sie, obwohl sie als einziges Kadettenhaus der Arth einer Baronie vorstehen, niemals über die anderen Kadettenhäuser erhaben sind oder sich gegen sie stellen. Die Brüderlichkeit zu den anderen Kadettenhäusern ist den Cwingod von großer Bedeutung. |",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 40,
+      "cells": [
+        {
+          "text": "Struktur",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 41,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 42,
+      "cells": [
+        {
+          "text": "Gründer",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 43,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/33bf83b6498b5cf02c6deda55e8a1b1d/ae140fa5f48f17a9-7c/s250x400/1ac13ba65b97f96165ddda21dd53844be2e05318.pnj"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 44,
+      "cells": [
+        {
+          "text": "† Galeshin † | (???? - ????)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 45,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 46,
+      "cells": [
+        {
+          "text": "Oberhaupt / Baron von Morea",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 47,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/33bf83b6498b5cf02c6deda55e8a1b1d/ae140fa5f48f17a9-7c/s250x400/1ac13ba65b97f96165ddda21dd53844be2e05318.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/e95b76bb01e5c81636e579edd0be12a3/ede4c143dc24726b-26/s250x400/63fa514408d143c78bc15059d02e6676edb4e7d6.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/0100feeaa7ce7181ca0ca26ac7090fbd/2bfa0e4852a1cce2-15/s400x600/1c8639a379aa8dbb6850d6f6070812666d3e2ed3.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/a61b9dffbb078a8303edf8c8e8d7cfe7/ede4c143dc24726b-2e/s250x400/47934f26319f3549971db42671362eb513093443.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/d189602a7867bfe5a6d74497aae63c32/ede4c143dc24726b-54/s250x400/f38a520181e05601abe68360d49217da95c950aa.pnj"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 48,
+      "cells": [
+        {
+          "text": "† Galeshin † | (???? - ????)",
+          "images": []
+        },
+        {
+          "text": "† Rhodhri † | (1663- 1671)",
+          "images": []
+        },
+        {
+          "text": "† Idris † | (1671 - 1672)",
+          "images": []
+        },
+        {
+          "text": "† Sath † | (1672 - 1713)",
+          "images": []
+        },
+        {
+          "text": "† Domnall † | (1713 - 1738)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 49,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 50,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/111347534fdebbacbb34a72f38882801/2bfa0e4852a1cce2-18/s250x400/81df77cd8a4ea5b8f4de07e58e0e4c157e753730.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 51,
+      "cells": [
+        {
+          "text": "Galeshin | (1738 - ????)",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 52,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 53,
+      "cells": [
+        {
+          "text": "Erbfolge",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 54,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/b5afd89266e9bae3d286d3c02d0b7653/2bfa0e4852a1cce2-5d/s250x400/e9ab8fe1649be3e434edc2002e32f5e7cce44da3.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/9accf4982e8b8f641abec229c84072e6/2bfa0e4852a1cce2-93/s250x400/9169901f3782cf9f0a39b7b98a12b9bb7a4ecb53.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 55,
+      "cells": [
+        {
+          "text": "Artgal",
+          "images": []
+        },
+        {
+          "text": "Clinoch",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 56,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 57,
+      "cells": [
+        {
+          "text": "Hof/Hofämter",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 58,
+      "cells": [
+        {
+          "text": "Vogt",
+          "images": []
+        },
+        {
+          "text": "Schatzmeister",
+          "images": []
+        },
+        {
+          "text": "Kommandant der | Garde",
+          "images": []
+        },
+        {
+          "text": "Zeremonienmeister",
+          "images": []
+        },
+        {
+          "text": "Mundschenk",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 59,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/51CghpL.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/51CghpL.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/51CghpL.png"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 60,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 61,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 62,
+      "cells": [
+        {
+          "text": "Waffenmeister",
+          "images": []
+        },
+        {
+          "text": "Stallmeister",
+          "images": []
+        },
+        {
+          "text": "Kerkermeister",
+          "images": []
+        },
+        {
+          "text": "Jagdmeister",
+          "images": []
+        },
+        {
+          "text": "Hafenmeister",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 63,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/51CghpL.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/51CghpL.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/51CghpL.png"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 64,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 65,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 66,
+      "cells": [
+        {
+          "text": "Küchenmeister",
+          "images": []
+        },
+        {
+          "text": "Brotmeister",
+          "images": []
+        },
+        {
+          "text": "Handwerksmeister",
+          "images": []
+        },
+        {
+          "text": "Gartenmeister",
+          "images": []
+        },
+        {
+          "text": "Hofkaplan",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 67,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/51CghpL.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/51CghpL.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/51CghpL.png"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 68,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 69,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 70,
+      "cells": [
+        {
+          "text": "Hofmeister",
+          "images": []
+        },
+        {
+          "text": "Hofdame",
+          "images": []
+        },
+        {
+          "text": "Archivar",
+          "images": []
+        },
+        {
+          "text": "Hoffalkner",
+          "images": []
+        },
+        {
+          "text": "Zwingermeister",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 71,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/51CghpL.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/51CghpL.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/51CghpL.png"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 72,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 73,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 75,
+      "cells": [
+        {
+          "text": "Struktur",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 76,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 77,
+      "cells": [
+        {
+          "text": "Kinder",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 78,
+      "cells": [
+        {
+          "text": "??'s & ??'s",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 79,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/33bf83b6498b5cf02c6deda55e8a1b1d/ae140fa5f48f17a9-7c/s250x400/1ac13ba65b97f96165ddda21dd53844be2e05318.pnj"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 80,
+      "cells": [
+        {
+          "text": "† Galeshin † | (???? - ????)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 81,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 82,
+      "cells": [
+        {
+          "text": "Ehefrau/Ehemann",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 83,
+      "cells": [
+        {
+          "text": "Galeshin's",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 84,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 85,
+      "cells": [
+        {
+          "text": "† Arianhrod † | (???? - ????)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 86,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 87,
+      "cells": [
+        {
+          "text": ". . .",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 88,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 89,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 90,
+      "cells": [
+        {
+          "text": "??'s & ??'s",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 91,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/e95b76bb01e5c81636e579edd0be12a3/ede4c143dc24726b-26/s250x400/63fa514408d143c78bc15059d02e6676edb4e7d6.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 92,
+      "cells": [
+        {
+          "text": "† Rhodhri † | (1631 - ????)",
+          "images": []
+        },
+        {
+          "text": "† Rhonwen † | (???? - ????)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 93,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 94,
+      "cells": [
+        {
+          "text": "Ehefrau/Ehemann",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 95,
+      "cells": [
+        {
+          "text": "Rhodhri's",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "Rhonwen's",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 96,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/616d91c7f87dbcd00279b8dbe49b8a1e/69a252243d308613-c0/s250x400/1fb536fb8f478c271e1e408680747684c3a7f029.pnj"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 97,
+      "cells": [
+        {
+          "text": "† Braith Morthwyll | O'Caer Morben † | (1632 - 1675)",
+          "images": []
+        },
+        {
+          "text": "† Tarawg Unigol | O'Caer Marwor† | (???? - ????)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 98,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 99,
+      "cells": [
+        {
+          "text": "Kinder",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 100,
+      "cells": [
+        {
+          "text": "Rhodhri's & Braith's",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 101,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/0100feeaa7ce7181ca0ca26ac7090fbd/2bfa0e4852a1cce2-15/s400x600/1c8639a379aa8dbb6850d6f6070812666d3e2ed3.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/a61b9dffbb078a8303edf8c8e8d7cfe7/ede4c143dc24726b-2e/s250x400/47934f26319f3549971db42671362eb513093443.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 102,
+      "cells": [
+        {
+          "text": "† Idris † | (1650 - ????)",
+          "images": []
+        },
+        {
+          "text": "† Sath † | (1652 - 1713)",
+          "images": []
+        },
+        {
+          "text": "† Delyth † | (1656 - 1694)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 103,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 104,
+      "cells": [
+        {
+          "text": "Ehefrau/Ehemann",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 105,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "Sath's",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "Delyth's",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 106,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/3dcd873c7b82001a2282b755886dbfdb/d637d5597cd1ad6d-60/s250x400/2ec1227e2290d1cc577e824537847672d77ca76c.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/51CghpL.png"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 107,
+      "cells": [
+        {
+          "text": "† Rian | Arth † | (1654 - 1712)",
+          "images": []
+        },
+        {
+          "text": "† Trevor | Drewi † | (1654 - 1679)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 108,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 109,
+      "cells": [
+        {
+          "text": "Kinder",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 110,
+      "cells": [
+        {
+          "text": "Sath's und Rian's",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 111,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/d189602a7867bfe5a6d74497aae63c32/ede4c143dc24726b-54/s250x400/f38a520181e05601abe68360d49217da95c950aa.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/50428716476e006fcf70d433cea03e17/2bfa0e4852a1cce2-29/s250x400/c14d103c29e584de8b8cbbc4448b9bab2e1346d4.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/093660625bf467e8e3c1fc623eb92ee9/ede4c143dc24726b-f0/s250x400/7fb2f7d5caf4bec29bef4271f5826e96d207814d.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/ba166c81e6559c4d0574cc249eb4d7d1/2bfa0e4852a1cce2-80/s400x600/3fb02d9f9d3ef4da9abc47a90423f1f9b0574cb4.pnj"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 112,
+      "cells": [
+        {
+          "text": "† Domnall † | (1671 - 1738)",
+          "images": []
+        },
+        {
+          "text": "† Ffion † | 1676 - 1736)",
+          "images": []
+        },
+        {
+          "text": "† Kerensa† | (1677 - 1701)",
+          "images": []
+        },
+        {
+          "text": "Teudebur | (1678 - ????)",
+          "images": []
+        },
+        {
+          "text": "Ifanwy | (1678 - ????)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 113,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 114,
+      "cells": [
+        {
+          "text": "Ehefrau/Ehemann",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 115,
+      "cells": [
+        {
+          "text": "Domnall's",
+          "images": []
+        },
+        {
+          "text": "Ffion's",
+          "images": []
+        },
+        {
+          "text": "Kerensa's",
+          "images": []
+        },
+        {
+          "text": "Teudebur's",
+          "images": []
+        },
+        {
+          "text": "Ifanwy's",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 116,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/5349b2b41a1d514302f8cfe420203754/deb6c6d744f2a5cc-e1/s250x400/7e6f5d681a0d353d3aec140e08973019a40ac908.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/sAyWEIY.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/1Udlyu2.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/7d0ae701d371925bbcd82cea9adf8571/ef7b451a93b548d3-ef/s250x400/d1f2e00edac690f19f08cf15830c6b6496d118cb.pnj"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 117,
+      "cells": [
+        {
+          "text": "† Tuala | Ríoga † | (1976- 1702)",
+          "images": []
+        },
+        {
+          "text": "† Domnuagal | Crafanc † | (1676 - 1718)",
+          "images": []
+        },
+        {
+          "text": "† Maelgwn | Pysgod † | (1673 - ????)",
+          "images": []
+        },
+        {
+          "text": "Mared | Llyfant | (1682 - ????)",
+          "images": []
+        },
+        {
+          "text": "Prysor | Eirth | (1674 - ????)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 118,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 119,
+      "cells": [
+        {
+          "text": "Kinder",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 120,
+      "cells": [
+        {
+          "text": "Domnall's & Tuala's",
+          "images": []
+        },
+        {
+          "text": "Teutebur's & Mared's",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 121,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/111347534fdebbacbb34a72f38882801/2bfa0e4852a1cce2-18/s250x400/81df77cd8a4ea5b8f4de07e58e0e4c157e753730.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/c6f1dac712fbffee9005127270ea3a34/ede4c143dc24726b-04/s250x400/641fb7f1138cb071c600ac3fa6d7bc857c5ac613.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/7b7f4e0891ae132f11a66dee6fb9a65d/ede4c143dc24726b-e0/s250x400/3dfd7282be84f91c65db7d9e30e382d154c606c4.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/df4ea621258c4bb614675afed540bd27/ede4c143dc24726b-1c/s250x400/dc03b476fb67d064f1469e1ebba637d69a1b2308.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/e9b4cd6e401960ecc475dba7e1f4cd23/2bfa0e4852a1cce2-9d/s250x400/b40369b0517308dfc04aafc99449b6fad7e34fd4.pnj"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 122,
+      "cells": [
+        {
+          "text": "Galeshin | (1694 - ????)",
+          "images": []
+        },
+        {
+          "text": "Tegid | (1695 - ????)",
+          "images": []
+        },
+        {
+          "text": "† Ywain † | (1699 - 1720)",
+          "images": []
+        },
+        {
+          "text": "Riderch | (1702 - ????)",
+          "images": []
+        },
+        {
+          "text": "Gildas | (1705 - ????)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 123,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 124,
+      "cells": [
+        {
+          "text": "Ehefrau/Ehemann",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 125,
+      "cells": [
+        {
+          "text": "Galeshin's",
+          "images": []
+        },
+        {
+          "text": "Tegid's",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "Riderch's",
+          "images": []
+        },
+        {
+          "text": "Gildas",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 126,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/dfe3ba4b072c9f3cefec882be5cc96d1/f81d49deb9d86770-45/s400x600/8ae46fa1dc03f1a929cd46b71ec9ad0d939eb23e.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/8f74f9682145902f1e275d1ecd33bfa2/61c4bf701607a1c0-ec/s250x400/519a7dfeaf63c9fc74948e1fe2e356863d42a9b7.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/iQ3ih1x.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/7yB9PR6.png"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 127,
+      "cells": [
+        {
+          "text": "Tiwlip | Arth | (1697 - ????)",
+          "images": []
+        },
+        {
+          "text": "Joally | Pawen | (1696 - ????)",
+          "images": []
+        },
+        {
+          "text": "Mervyn | Serenoc | (1700 - ????)",
+          "images": []
+        },
+        {
+          "text": "Llio | (1709 - ????)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 128,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 129,
+      "cells": [
+        {
+          "text": "Kinder",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 130,
+      "cells": [
+        {
+          "text": "Galeshin's & Tiwlip's",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "Tegid's & Joally's",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 131,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/b5afd89266e9bae3d286d3c02d0b7653/2bfa0e4852a1cce2-5d/s250x400/e9ab8fe1649be3e434edc2002e32f5e7cce44da3.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/9accf4982e8b8f641abec229c84072e6/2bfa0e4852a1cce2-93/s250x400/9169901f3782cf9f0a39b7b98a12b9bb7a4ecb53.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/ljkiPo1.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://i.imgur.com/CUjUTwF.png"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/903d6a3d754c2155fb54ccb2955721c1/2bfa0e4852a1cce2-9c/s250x400/e57e21939a7d3c790e57ed01e2e909b5f5451e51.pnj"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 132,
+      "cells": [
+        {
+          "text": "Artgal | (1720 - ????)",
+          "images": []
+        },
+        {
+          "text": "Clinoch | (1722 - ????)",
+          "images": []
+        },
+        {
+          "text": "Hedd | Morlais | (1720 - ????)",
+          "images": []
+        },
+        {
+          "text": "Vaughan | (1719 - ????)",
+          "images": []
+        },
+        {
+          "text": "Arianrhod | (1723 - ????)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 133,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 134,
+      "cells": [
+        {
+          "text": "Riderch's & Engla's",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "Gildas & Llio's",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 135,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/ea3d92a3668b03833f6bc98a09ff2a60/2bfa0e4852a1cce2-1c/s250x400/4d1003a38beb0e5e54486da21bcc52295ed81ebc.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/7ba78773c12a49cf4b35ad0bd1fd07dc/ede4c143dc24726b-bf/s250x400/5724f0cd402705c944f5e38829a6575f534ae135.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/d125602c64ecad57cbcb84ce3e5dc5ff/ede4c143dc24726b-27/s250x400/2bf8355e017d8f432b803a239a4421b1bb1789e0.pnj"
+          ]
+        },
+        {
+          "text": "",
+          "images": [
+            "https://64.media.tumblr.com/71e0479061c2d12a414e639f163697a3/2bfa0e4852a1cce2-88/s250x400/0b35d0fc45c5b61c96a3aba8e7f30c92790739be.pnj"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 136,
+      "cells": [
+        {
+          "text": "Adeon | (1721 - ????)",
+          "images": []
+        },
+        {
+          "text": "Sioned | (1723 - ????)",
+          "images": []
+        },
+        {
+          "text": "Slevin | (1734 - ????)",
+          "images": []
+        },
+        {
+          "text": "Ei rwen | (1736 - ????)",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 137,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 138,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 139,
+      "cells": [
+        {
+          "text": "Verlobte/Verlobter",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 140,
+      "cells": [
+        {
+          "text": "??'s",
+          "images": []
+        },
+        {
+          "text": "??'s",
+          "images": []
+        },
+        {
+          "text": "??'s",
+          "images": []
+        },
+        {
+          "text": "??'s",
+          "images": []
+        },
+        {
+          "text": "??'s",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 141,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 142,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 143,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 144,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 145,
+      "cells": [
+        {
+          "text": "11.) Stammbaum",
+          "images": [
+            "https://i.imgur.com/wl3UqqR.jpeg"
+          ]
+        }
+      ]
+    },
+    {
+      "row": 147,
+      "cells": [
+        {
+          "text": "Historische Personen und Figuren des Clans",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 148,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 149,
+      "cells": [
+        {
+          "text": "Name",
+          "images": []
+        },
+        {
+          "text": "Beschreibung",
+          "images": []
+        },
+        {
+          "text": "Name",
+          "images": []
+        },
+        {
+          "text": "Beschreibung",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 150,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 151,
+      "cells": [
+        {
+          "text": "Name",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "Name",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 152,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png"
+          ]
+        },
+        {
+          "text": "Beschreibung ...",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": [
+            "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png"
+          ]
+        },
+        {
+          "text": "Beschreibung ...",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 153,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 154,
+      "cells": [
+        {
+          "text": "Name",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "Name",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 155,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png"
+          ]
+        },
+        {
+          "text": "Beschreibung ...",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": [
+            "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png"
+          ]
+        },
+        {
+          "text": "Beschreibung ...",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 156,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 157,
+      "cells": [
+        {
+          "text": "Name",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        },
+        {
+          "text": "Name",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 158,
+      "cells": [
+        {
+          "text": "",
+          "images": [
+            "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png"
+          ]
+        },
+        {
+          "text": "Beschreibung ... | | | | | | |",
+          "images": []
+        },
+        {
+          "text": "",
+          "images": [
+            "https://66.media.tumblr.com/c11fe8f7aab917bc90215beef3e83c10/tumblr_otwjgn7mfU1wwqdobo1_1280.png"
+          ]
+        },
+        {
+          "text": "Beschreibung ...",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 159,
+      "cells": [
+        {
+          "text": "",
+          "images": []
+        }
+      ]
+    },
+    {
+      "row": 160,
+      "cells": [
+        {
+          "text": "12.) Trivia",
+          "images": []
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "browser": {
+      "families": 412,
+      "rendered": 409,
+      "emptyFamilies": [
+        {
+          "id": "haus-gwernhelyd",
+          "persons": 0,
+          "message": "Der Stammbaum enthält keine darstellbare Person."
+        },
+        {
+          "id": "haus-cledrann",
+          "persons": 0,
+          "message": "Der Stammbaum enthält keine darstellbare Person."
+        },
+        {
+          "id": "haus-halenwych",
+          "persons": 0,
+          "message": "Der Stammbaum enthält keine darstellbare Person."
+        }
+      ],
+      "cardOverlaps": 0,
+      "lineCardIntersections": 0,
+      "cwingod": {
+        "id": "haus-cwningod",
+        "cards": 46,
+        "overlaps": [],
+        "lineCardIntersections": [],
+        "houseOffsets": [
+          {
+            "id": "married-away-rhonwen-cwingod",
+            "offset": 0
+          },
+          {
+            "id": "married-away-delyth-cwingod",
+            "offset": 0
+          },
+          {
+            "id": "married-away-ffion-cwingod",
+            "offset": 0
+          },
+          {
+            "id": "married-away-kerensa-cwingod",
+            "offset": 0
+          },
+          {
+            "id": "married-away-ifanwy-cwingod",
+            "offset": 0
+          }
+        ],
+        "excessiveRoutes": [
+          {
+            "route": "parentage:__time-jump-gap-cwingod-founders-rhodhri:native:3",
+            "widthInCards": 69.41281074267741
+          },
+          {
+            "route": "parentage:__time-jump-gap-cwingod-founders-rhodhri:native:4",
+            "widthInCards": 69.41281032243491
+          },
+          {
+            "route": "parentage:braih-morthwyll|rhodhri-cwningod:native:6",
+            "widthInCards": 86.8398913968542
+          },
+          {
+            "route": "parentage:braih-morthwyll|rhodhri-cwningod:native:7",
+            "widthInCards": 67.93597413301926
+          },
+          {
+            "route": "parentage:braih-morthwyll|rhodhri-cwningod:native:8",
+            "widthInCards": 96.29180709654679
+          },
+          {
+            "route": "parentage:rian-arth|sath-cwningod:native:12",
+            "widthInCards": 121.69397811899366
+          },
+          {
+            "route": "parentage:rian-arth|sath-cwningod:native:13",
+            "widthInCards": 43.7153086726183
+          },
+          {
+            "route": "parentage:rian-arth|sath-cwningod:native:15",
+            "widthInCards": 34.26335004070083
+          },
+          {
+            "route": "parentage:rian-arth|sath-cwningod:native:16",
+            "widthInCards": 121.69396705052942
+          },
+          {
+            "route": "parentage:domnall-cwingod|tuala-rioga:native:20",
+            "widthInCards": 35.44484486969051
+          },
+          {
+            "route": "parentage:mared-lyfant|teudebur-cwningod:native:27",
+            "widthInCards": 35.44484486969051
+          },
+          {
+            "route": "parentage:mared-lyfant|teudebur-cwningod:native:29",
+            "widthInCards": 25.992886237773043
+          }
+        ],
+        "lineCrossingMarkers": 0,
+        "diagnostics": [
+          {
+            "severity": "info",
+            "code": "LAYOUT_GENDER_FALLBACK",
+            "message": "Family Chart benötigt für das Layout M oder F; unbekannt bleibt im Aleria-Modell erhalten.",
+            "details": {
+              "personId": "mervyn-serenoc",
+              "sex": "unknown"
+            }
+          }
+        ]
+      }
+    },
+    "regressionTestsPassed": 1246,
+    "cwingodTargetedTestsPassed": 4,
+    "firebasePublicationTestsPassed": 9,
+    "existingUnrelatedFailure": "coeddu-craigddu.test.js: eigene Hausbiografie gegenüber aktueller Coeddu-Standardbiografie"
+  }
+}

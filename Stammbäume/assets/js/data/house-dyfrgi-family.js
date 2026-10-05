@@ -410,7 +410,7 @@ export const HOUSE_DYFRGI_CAER_CRYFTLAWD_FAMILY = Object.freeze({
   },
   extensions: {
     blankFamily: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     originFamilyId: 'haus-dyfrgi',
     registryManagedExtensionFields: ['blankFamily', 'sourceNote'],
     registryManagedLineageFields: ['founderPartnershipId', 'houseId'],
