@@ -89,6 +89,12 @@ Die sechs Häuser stehen in Quellenregister und veröffentlichten Familienakten 
 
 Bilddateien und vollständige Prompts: [Ergänzungsmanifest](../../assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/prompts-and-assets.json). Erzeugung und Freistellung mit dem eingebauten image_gen; Nutzerkorrekturen unverändert kopiert. Geprüft: echte transparente PNG-Pixel bei allen sechs Wappen, Quellhashes der beiden Nutzerbilder, alle vier Almanachseiten und zwölf Familienakten im Browser, mobile Ansicht ohne Überlauf, 16 gezielte Tests, 1.246 Stammbaum-Haupttests und Modultemplate-Prüfung.
 
+## Ausgewähltes Gruppenbild im Hochformat
+
+Am 5. Oktober 2026 wurde **Bild 1 – Gemeinsamer Toast** aus den drei neuen Entwürfen ausgewählt. Das unveränderte 2:3-Bild (1024 × 1536) ersetzt die vorherigen Motive an genau drei Stellen: Modultitelbild, erste Inhaltsseite und Schiffsseite. Auf der ersten Seite entfällt die frühere Querformat-Einstellung. Die Kapitänsbiografie und die Hierarchie behalten ihre bisherigen Bilder; die ältere Querformatfassung bleibt archiviert.
+
+Auswahl, vollständiger Prompt und SHA-256-Prüfsumme stehen in [selected-group-image.json](../../assets/ship-crews/lynnes-schiffsmannschaft/revised-2026-10-05/selected-group-image.json).
+
 ## Eira Beryn: Namenskorrektur und Familienerweiterung
 
 Auf Nutzerwunsch vom 05.10.2026 heißt Lynnes 14-jährige Knappin wieder **Eira Beryn**. Sie ist als Tochter **Owain Beryns (1706)** und **Mareds (1708)**, geboren **1726**, in die Hauptlinie eingeordnet und damit **Ifor Beryns Nichte**. Die neue Elternkante verbindet sie mit dem vollständigen Stammbaum; ein isolierter Personenaufruf ist nicht mehr nötig. Die bestehende ältere Eira, Cadells Gemahlin, bleibt unverändert.

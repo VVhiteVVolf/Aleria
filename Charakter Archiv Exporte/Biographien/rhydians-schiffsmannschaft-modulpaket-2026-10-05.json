@@ -1,0 +1,873 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-10-05T00:26:26.388Z",
+  "sourceNote": "Nutzervorgabe vom 05.10.2026: leere Mannschaftsvorlage für Rhydian Arths Kriegskogge, 60–70 Mann. Rhydian ist Kapitän, sein Erster Maat Gwylim Arth, Sohn von Gwrhyr Arth und Findabair Mata. Vier Inhaltsseiten und drei Hierarchieregister entsprechen Idwals am 05.10.2026 gelesenem Online-Modul. Alle vorhandenen Rollen übernommen; vorläufige Planung auf 65 Einzelstellen erweitert. Ausschließlich Rhydian und Gwylim benannt; 63 Stellen ohne Name, Porträt und Beschreibung. Bestehende Personen und Porträts aus der veröffentlichten Familienakte Haus Arth wiederverwendet. Kein Schiffsname, kein weiterer Lebenslauf, keine Kampfwerte, keine Weltzeit und keine zusätzliche Person erfunden. Das Hauswappen dient vorläufig als Bild der Schiffsseite.",
+  "module": {
+    "type": "aleria-module",
+    "version": 2,
+    "section": {
+      "desc": "",
+      "nodeId": "node:gruppen:klaueninseln/haus-arth",
+      "path": [
+        "Klaueninseln",
+        "Haus Arth"
+      ],
+      "key": "Haus Arth",
+      "tab": "Gruppen"
+    },
+    "entry": {
+      "id": "rhydians-schiffsmannschaft",
+      "title": "Rhydians Schiffsmannschaft",
+      "subtitle": "Kriegskogge · Mannschaftsvorlage",
+      "type": "Story",
+      "category": "Gefolge",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "image": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
+      "stamp": "HAUS ARTH · KLAUENINSELN",
+      "icon": "",
+      "symbol": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+      "locked": false,
+      "appendCommentsPage": true,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "schemaVersion": 1,
+      "multipage": true,
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "image": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
+          "imageWidth": 38,
+          "imageFit": "contain",
+          "pageTitle": "Die Besatzung der Kriegskogge",
+          "description": "<p><strong>Rhydian Arth</strong> führt eine <strong>Kriegskogge</strong> des Hauses Arth mit einer vorgesehenen Besatzung von <strong>60–70 Mann</strong>. Sein Erster Maat ist <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata.</p><p>Die Mannschaft ist als Vorlage mit 65 Stellen angelegt. Bis auf Kapitän und Ersten Maat bleiben die Namen, Porträts und Beschreibungen leer. Schiffsname und weitere Einzelheiten folgen.</p>",
+          "quote": "",
+          "quoteBy": "",
+          "enableComments": true,
+          "commentDivider": true,
+          "stats": [
+            [
+              "Schiffsname",
+              "Noch offen"
+            ],
+            [
+              "Typ",
+              "Kriegskogge"
+            ],
+            [
+              "Kapitän",
+              "Rhydian Arth"
+            ],
+            [
+              "Erster Maat",
+              "Gwylim Arth"
+            ],
+            [
+              "Zugehörigkeit",
+              "Haus Arth · Klaueninseln"
+            ],
+            [
+              "Mitgliederstärke",
+              "60–70 Mann"
+            ],
+            [
+              "Planungsstand",
+              "65 Stellen: 2 benannt, 63 offen"
+            ]
+          ],
+          "commentSequence": []
+        },
+        {
+          "schemaVersion": 1,
+          "image": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
+          "imageWidth": 30,
+          "pageTitle": "Rhydian Arth",
+          "description": "<p><strong>Rhydian Arth</strong> ist der Kapitän der Kriegskogge und der Zwillingsbruder von Lady Lynne Arth. Er wurde 1718 geboren und steht an erster Stelle in der Erbfolge des Hauses Arth.</p><p>Sein Erster Maat ist <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata. Weitere Angaben zur Mannschaft werden noch ausgearbeitet.</p>",
+          "quote": "",
+          "quoteBy": "",
+          "commentDivider": true,
+          "imageTall": true,
+          "biographyPage": true,
+          "stats": [
+            [
+              "Vollständiger Name",
+              "Rhydian Arth"
+            ],
+            [
+              "Haus",
+              "Haus Arth"
+            ],
+            [
+              "Geburt",
+              "1718"
+            ],
+            [
+              "Rolle",
+              "Schiffskapitän"
+            ],
+            [
+              "Schiff",
+              "Kriegskogge; Name noch offen"
+            ],
+            [
+              "Zwillingsschwester",
+              "Lady Lynne Arth"
+            ]
+          ],
+          "biography": {
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Biografie",
+            "biographyText": "<p><strong>Rhydian Arth</strong> ist der Kapitän der Kriegskogge und der Zwillingsbruder von Lady Lynne Arth. Er wurde 1718 geboren und steht an erster Stelle in der Erbfolge des Hauses Arth.</p><p>Sein Erster Maat ist <strong>Gwylim Arth</strong>, Sohn von Gwrhyr Arth und Findabair Mata. Weitere Angaben zur Mannschaft werden noch ausgearbeitet.</p>",
+            "abilitiesTitle": "Führung",
+            "abilities": [],
+            "extraSections": [],
+            "historyTitle": "Geschichte",
+            "historyText": "",
+            "worksTitle": "Aufgaben zur See",
+            "works": [],
+            "triviaTitle": "Wissenswertes",
+            "trivia": [],
+            "quotesTitle": "Zitate",
+            "quotes": [],
+            "connectionsTitle": "Mannschaft",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Gwylim Arth",
+                "detail": "Erster Maat; Sohn von Gwrhyr Arth und Findabair Mata.",
+                "image": "/Stammbäume/assets/images/portraits/haus-arth/gwylim-arth.jpg",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Eigentum & Besitz",
+            "documents": [],
+            "footer": ""
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "image": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
+          "pageTitle": "Hierarchie der Mannschaft",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "layoutMode": "vertical",
+            "treeDisplayMode": "tabs",
+            "cardFontScale": 92,
+            "portraitScale": 100,
+            "chartScale": 83,
+            "eyebrow": "Hierarchie",
+            "subtitle": "Rhydians Schiffsmannschaft",
+            "centerLabel": "Aufbau der Besatzung",
+            "emblem": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+            "sideImage": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
+            "organizationTitle": "Rhydians Schiffsmannschaft",
+            "motto": "Haus Arth · Klaueninseln",
+            "description": "Kriegskogge mit 60–70 Mann. Rhydian Arth führt das Schiff; Gwylim Arth dient als Erster Maat.",
+            "detailsTitle": "Schiff und Mannschaft",
+            "details": [
+              {
+                "icon": "",
+                "label": "Schiffstyp",
+                "value": "Kriegskogge"
+              },
+              {
+                "icon": "",
+                "label": "Zugehörigkeit",
+                "value": "Haus Arth"
+              },
+              {
+                "icon": "",
+                "label": "Besatzungsstärke",
+                "value": "60–70 Mann"
+              },
+              {
+                "icon": "",
+                "label": "Vorlage",
+                "value": "65 Stellen · 2 benannt · 63 offen"
+              }
+            ],
+            "quoteLabel": "Wahrspruch",
+            "quote": "",
+            "chartTitle": "Hierarchie der Kriegskogge",
+            "chartIntro": "Führung, Kämpfer und Besatzung sind vollständig als Einzelstellen angelegt. Nur Rhydian Arth und Gwylim Arth sind bereits eingetragen; die übrigen Felder bleiben zur späteren Ausarbeitung leer.",
+            "trees": [
+              {
+                "id": "aufbau",
+                "parentTreeId": "",
+                "label": "Führung",
+                "levels": [
+                  {
+                    "label": "Kommando",
+                    "nodes": [
+                      {
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
+                        "title": "Schiffskapitän",
+                        "subtitle": "Rhydian Arth",
+                        "text": "Kapitän der Kriegskogge. Zwillingsbruder von Lady Lynne Arth."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Maate",
+                    "nodes": [
+                      {
+                        "portrait": "/Stammbäume/assets/images/portraits/haus-arth/gwylim-arth.jpg",
+                        "title": "Erster Maat",
+                        "subtitle": "Gwylim Arth",
+                        "text": "Erster Maat. Sohn von Gwrhyr Arth und Findabair Mata."
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Zweiter Maat",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Kurs und Seelsorge",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Steuermann",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffskaplan",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Deck, Navigation, Vorräte und Waffen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Bootsmann",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Navigator",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Quartiermeister",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenmeister",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Meister",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Schiffszimmermann",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Feldscher",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsmeier",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsbarde",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Ausguck",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Ausguck auf dem Krähennest",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Segel und Bordwache",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Segelmeister",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Wachmeister",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ausbildung",
+                "parentTreeId": "",
+                "label": "Kämpfer",
+                "levels": [
+                  {
+                    "label": "Ritter zur See",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Ritter zur See",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Waffenknechte",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Waffenknechte · Fortsetzung",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Waffenknecht zur See",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Knappen zur See",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Knappe zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Knappe zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Knappe zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Knappe zur See",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Pagen zur See",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Page zur See",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "besatzung",
+                "parentTreeId": "",
+                "label": "Besatzung",
+                "levels": [
+                  {
+                    "label": "Verwaltung",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Schreiber & Adjutant",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Versorgung",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Schiffskoch",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Proviantmeister",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Handwerk",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Seiler & Handwerker",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Gehilfen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Gehilfe",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Gehilfe",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Gehilfe",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Altmatrosen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Altmatrose",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Decksmannschaft",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Decksmannschaft · Fortsetzung",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Matrose",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Schiffsjungen",
+                    "nodes": [
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": ""
+                      },
+                      {
+                        "portrait": "",
+                        "title": "Schiffsjunge",
+                        "subtitle": "",
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [
+              {
+                "label": "Kommando",
+                "nodes": [
+                  {
+                    "portrait": "/Stammbäume/assets/images/portraits/haus-arth/rhydian-arth.jpg",
+                    "title": "Schiffskapitän",
+                    "subtitle": "Rhydian Arth",
+                    "text": "Kapitän der Kriegskogge. Zwillingsbruder von Lady Lynne Arth."
+                  }
+                ]
+              },
+              {
+                "label": "Maate",
+                "nodes": [
+                  {
+                    "portrait": "/Stammbäume/assets/images/portraits/haus-arth/gwylim-arth.jpg",
+                    "title": "Erster Maat",
+                    "subtitle": "Gwylim Arth",
+                    "text": "Erster Maat. Sohn von Gwrhyr Arth und Findabair Mata."
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Zweiter Maat",
+                    "subtitle": "",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "Kurs und Seelsorge",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Steuermann",
+                    "subtitle": "",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Schiffskaplan",
+                    "subtitle": "",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "Deck, Navigation, Vorräte und Waffen",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Bootsmann",
+                    "subtitle": "",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Navigator",
+                    "subtitle": "",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Quartiermeister",
+                    "subtitle": "",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Waffenmeister",
+                    "subtitle": "",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "Meister",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Schiffszimmermann",
+                    "subtitle": "",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Feldscher",
+                    "subtitle": "",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Schiffsmeier",
+                    "subtitle": "",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Schiffsbarde",
+                    "subtitle": "",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "Ausguck",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Ausguck auf dem Krähennest",
+                    "subtitle": "",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "label": "Segel und Bordwache",
+                "nodes": [
+                  {
+                    "portrait": "",
+                    "title": "Segelmeister",
+                    "subtitle": "",
+                    "text": ""
+                  },
+                  {
+                    "portrait": "",
+                    "title": "Wachmeister",
+                    "subtitle": "",
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "footerNote": "Planungsstand: 65 Stellen innerhalb der vorgesehenen 60–70 Mann. Die leeren Namens- und Porträtfelder werden später ausgefüllt.",
+            "backLabel": "Zurück zur Übersicht",
+            "printLabel": "Akte drucken"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "image": "/Stammbäume/assets/images/houses/Klaueninsel/haus-arth.png",
+          "imageWidth": 30,
+          "pageTitle": "Schiff",
+          "sessionPage": true,
+          "sessionIntro": "Rhydians Kriegskogge ist für eine Besatzung von 60–70 Mann vorgesehen. Rhydian Arth ist der Kapitän, Gwylim Arth sein Erster Maat. Schiffsname, Ausstattung und weitere Einzelheiten bleiben vorerst offen.",
+          "sessionHint": "Führe die Szene an Bord von Rhydians Kriegskogge als Kommentar fort.",
+          "sessionEmptyTitle": "An Bord der Kriegskogge",
+          "sessionEmptyText": "Hier beginnt die nächste Szene der Mannschaft.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}
