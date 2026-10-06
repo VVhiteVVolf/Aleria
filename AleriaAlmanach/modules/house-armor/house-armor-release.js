@@ -1,5 +1,5 @@
-import { assignHouseArmor } from './house-armor-assignment.js?v=20261006-house-armor-v1';
-import { findArmorHouse, characterArmorLevel } from './house-armor-model.js?v=20261006-house-armor-v1';
+import { assignHouseArmor } from './house-armor-assignment.js?v=20261006-regional-equipment-v2';
+import { findArmorHouse, characterArmorLevel } from './house-armor-model.js?v=20261006-regional-equipment-v2';
 import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
 
 const torso = item => item.kind !== 'shield' && !/schild|shield|helm|stiefel|handschuh/i.test(item.name || '');

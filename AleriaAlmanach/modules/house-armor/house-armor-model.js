@@ -1,6 +1,6 @@
-import { HOUSE_ARMOR_HOUSES } from './house-armor-catalog.js?v=20261006-house-armor-v1';
+import { HOUSE_ARMOR_HOUSES } from './house-armor-catalog.js?v=20261006-regional-equipment-v2';
 
-export const HOUSE_ARMOR_CATEGORY = 'cenyr-ruestungen';
+export const HOUSE_ARMOR_CATEGORY = 'ruestungen';
 export const HOUSE_ARMOR_RANKS = Object.freeze([
   { id: 'jungritter', label: 'Jungritter', minimumLevel: 4, armorClassRange: '13–15' },
   { id: 'ritter', label: 'Gestandener Ritter', minimumLevel: 7, armorClassRange: '15–17' },
@@ -24,7 +24,7 @@ export function armorTemplateId(houseId, rankId) {
 export function buildHouseArmorTemplates(houses = HOUSE_ARMOR_HOUSES) {
   return houses.filter(house => house.image).flatMap(house => HOUSE_ARMOR_RANKS.map(rank => ({
     id: armorTemplateId(house.id, rank.id), canonicalKey: armorTemplateId(house.id, rank.id), aliases: [],
-    section: 'standard', category: HOUSE_ARMOR_CATEGORY, categoryLabel: 'Cenyr – Rüstungen',
+    section: 'regional', category: HOUSE_ARMOR_CATEGORY, categoryLabel: 'Rüstungen',
     title: `${house.name} · ${rank.label}-Plattenrüstung`, type: 'Hausrüstung · Harnisch',
     description: `Harnisch des ${house.name.replace(/^Haus /, 'Hauses ')}. ${rank.label} ab Stufe ${rank.minimumLevel}.`,
     details: `RK-Rahmen ${rank.armorClassRange}. Konkrete Kampfwerte sind noch nicht festgelegt. Alle Rangvarianten verwenden dasselbe Hausbild.`,
@@ -33,6 +33,6 @@ export function buildHouseArmorTemplates(houses = HOUSE_ARMOR_HOUSES) {
     tags: ['Cenyr', house.region, house.name, rank.label, 'Harnisch'],
     priceRange: null, combatDefinition: null, stock: null, updatedAt: 0,
     sourceRefs: [{ kind: 'house-armor', houseId: house.id, sourceIllustrationId: house.sourceIllustrationId, sourcePage: house.tree }],
-    hiddenMeta: { origin: house.region }
+    hiddenMeta: { origin: `Cenyr · ${house.region}` }
   })));
 }

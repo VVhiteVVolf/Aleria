@@ -1,5 +1,5 @@
 import { mergeCharacterImageLibrary } from './character-import-policy.js?v=20260808-character-storage-audit-v1';
-import { prepareHouseArmorWrite } from '../house-armor/house-armor-assignment.js?v=20261006-house-armor-v1';
+import { prepareHouseArmorWrite } from '../house-armor/house-armor-assignment.js?v=20261006-regional-equipment-v2';
 
 // Reine Entscheidungslogik hinter dem Zurücküberschreiben-Schutz aus firebase.js#saveCharacter.
 // Getrennt in ein eigenes, Firebase-freies Modul, damit die eigentliche Vergleichslogik echt

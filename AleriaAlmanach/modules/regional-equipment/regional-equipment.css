@@ -1,0 +1,24 @@
+.re-breadcrumb { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: 0 0 1.4rem; color: #675640; font-size: .85rem; }
+.re-breadcrumb button { border: 0; background: transparent; color: #365744; text-decoration: underline; cursor: pointer; font: inherit; padding: .35rem 0; }
+.re-heading, .re-house-heading { display: flex; gap: 1.25rem; align-items: center; margin-bottom: 1.4rem; }
+.re-heading h2, .re-house-heading h2 { margin: 0 0 .45rem; }
+.re-heading p, .re-house-heading p { margin: 0; color: #675640; line-height: 1.5; }
+.re-heading > .re-emblem, .re-house-heading > .re-emblem { width: 72px; height: 92px; flex: 0 0 72px; object-fit: contain; }
+.re-territory-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(185px, 1fr)); gap: 1rem; }
+.re-house-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .85rem; }
+.re-territory-card, .re-house-card { display: flex; flex-direction: column; align-items: center; gap: .65rem; padding: 1.2rem .8rem; border: 1px solid #c8b997; border-radius: 5px; background: #fbf7ed; color: #332b21; cursor: pointer; font: inherit; text-align: center; }
+.re-territory-card:hover, .re-territory-card:focus-visible, .re-house-card:hover, .re-house-card:focus-visible { border-color: #466b50; background: #f0eddf; }
+.re-emblem { display: block; object-fit: contain; max-width: 100%; }
+.re-territory-card > .re-emblem { width: 150px; height: 180px; }
+.re-house-card > .re-emblem { width: 88px; height: 105px; }
+.re-no-emblem { display: grid; place-items: center; width: 88px; height: 105px; font-size: 3rem; color: #ad9c7b; }
+.re-territory-card > span, .re-house-card > span { font-size: .82rem; color: #6e614e; }
+.re-houses-title { margin: 2rem 0 1rem; }
+.re-houses-title span { color: #6e614e; font-size: .85rem; }
+.re-empty { padding: 1.4rem; border: 1px dashed #c8b997; }
+@media (max-width: 600px) {
+  .re-territory-grid, .re-house-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+  .re-territory-card, .re-house-card { padding: .7rem .4rem; }
+  .re-territory-card > .re-emblem { width: 110px; height: 150px; }
+  .re-heading h2 { font-size: 1.4rem; }
+}

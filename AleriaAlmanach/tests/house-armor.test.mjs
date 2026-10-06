@@ -44,7 +44,7 @@ test('Primary house wins over guest trees; unrelated, missing and unknown houses
   before.genealogy.houseId = ''; assert.equal(assignHouseArmor(before), before);
 });
 test('House register filters region, house and search together', () => {
-  const found = queryRegister(buildHouseArmorTemplates(), { category: 'cenyr-ruestungen', regionId: 'celtigerns-wacht', houseId: 'haus-wyrm', search: 'Senior' });
+  const found = queryRegister(buildHouseArmorTemplates(), { section: 'regional', category: 'ruestungen', regionId: 'celtigerns-wacht', houseId: 'haus-wyrm', search: 'Senior' });
   assert.equal(found.length, 1); assert.equal(found[0].houseArmor.rankId, 'seniorritter');
 });
 

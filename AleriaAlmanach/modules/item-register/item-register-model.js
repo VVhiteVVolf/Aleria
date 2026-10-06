@@ -4,11 +4,11 @@ import { balanceArmorInventoryItem } from '../character-equipment/equipment-armo
 
 export const REGISTER_SECTIONS = Object.freeze([
   { id: 'standard', label: 'Standardgüter', text: 'Verbindliche Vorlagen und Preismaßstäbe.' },
+  { id: 'regional', label: 'Länder Spezifische Rüstungen und Waffen', text: 'Länder, Gebiete und Häuser nach ihren Wappen und Bannern.' },
   { id: 'offer', label: 'Anbieter & Sortimente', text: 'Besondere Waren, eigene Preise und verfügbare Bestände.' },
   { id: 'owned', label: 'Individuelle Listen', text: 'Besitz, Ausrüstung und Begleiter deiner Figuren.' }
 ]);
 export const REGISTER_CATEGORIES = Object.freeze([
-  ['cenyr-ruestungen', 'Cenyr – Rüstungen', '◇'],
   ['waffen', 'Waffen', '⚔'], ['ruestungen', 'Rüstungen', '◇'], ['pferde', 'Pferde', '♞'],
   ['vieh', 'Vieh', '♧'], ['speisen', 'Speisen', '◒'], ['getraenke', 'Getränke', '♜'],
   ['alchemie', 'Alchemie', '⚗'], ['arkanes', 'Arkanes', '✧'], ['werkzeuge', 'Werkzeuge', '⚒'], ['sonstiges', 'Sonstiges', '◈']
@@ -100,11 +100,12 @@ export function createOwnedItem(template, { id, characterId, characterName, quan
     infoRows: template.infoRows || [], attributes: template.attributes || [], ...(template.houseArmor ? { houseArmor: { ...template.houseArmor } } : {}) };
 }
 
-export function queryRegister(items, { section = 'standard', category = '', listId = '', search = '', sort = 'name', equippedOnly = false, regionId = '', houseId = '' } = {}) {
+export function queryRegister(items, { section = 'standard', category = '', listId = '', search = '', sort = 'name', equippedOnly = false, regionId = '', houseId = '', houseIds = null } = {}) {
   const needle = searchText(search.trim());
-  if (!category && !listId && !needle) return [];
+  if (!category && !listId && !needle && !houseId) return [];
   return items.filter(item => item.section === section && !item.archived &&
     (!regionId || item.houseArmor?.regionId === regionId) && (!houseId || item.houseArmor?.houseId === houseId) &&
+    (!houseIds || houseIds.includes(item.houseArmor?.houseId)) &&
     (!category || item.category === category) && (!listId || item.listId === listId) && (!equippedOnly || item.equipped) &&
     (!needle || searchText([item.title, item.type, item.description, item.listName, item.templateName, ...(item.tags || [])].join(' ')).includes(needle)))
     .sort((a, b) => (sort === 'price' ? (a.priceRange?.minCopper ?? Infinity) - (b.priceRange?.minCopper ?? Infinity) : 0)

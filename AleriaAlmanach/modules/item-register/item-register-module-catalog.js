@@ -1,4 +1,4 @@
-import { searchText } from './item-register-model.js?v=20261006-house-armor-v1';
+import { searchText } from './item-register-model.js?v=20261006-regional-equipment-v2';
 import { parsePrice } from './item-register-money.js?v=20260919-shop-v1';
 
 const text = value => String(value ?? '').replace(/[\u200b-\u200d\ufeff]/g, '').trim();

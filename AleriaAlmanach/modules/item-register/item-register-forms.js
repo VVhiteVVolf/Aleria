@@ -1,7 +1,7 @@
-import { REGISTER_CATEGORIES, canManageCharacter } from './item-register-model.js?v=20261006-house-armor-v1';
+import { REGISTER_CATEGORIES, canManageCharacter } from './item-register-model.js?v=20261006-regional-equipment-v2';
 import { moneyTotal, formatCopper, localizedNumber } from './item-register-money.js?v=20260919-shop-v1';
-import { resalePrice } from './item-register-trade.js?v=20261006-house-armor-v1';
-import { escape, field, textarea, select } from './item-register-view.js?v=20261006-house-armor-v1';
+import { resalePrice } from './item-register-trade.js?v=20261006-regional-equipment-v2';
+import { escape, field, textarea, select } from './item-register-view.js?v=20261006-regional-equipment-v2';
 
 export function createForm(kind, item, snapshot, access) {
   const id = crypto.randomUUID();
@@ -29,7 +29,7 @@ export function createForm(kind, item, snapshot, access) {
     content: `<p><strong>${escape(item.title)}</strong> wird mit ${escape(item.ownerCharacterName)} und diesem Besitzdatensatz verbunden.</p><p>Name, Bild und Beschreibung werden übernommen. Die Spielwerte können anschließend im Bestiarium ergänzt werden.</p>` };
   const editing = kind === 'edit-offer';
   const source = editing ? item : { ...item, id: `offer:${id}`, listId: '', listName: '', stock: null, buybackCopper: null };
-  const templateId = editing ? item.templateId : item?.section === 'standard' ? item.id : item?.templateId || '';
+  const templateId = editing ? item.templateId : ['standard', 'regional'].includes(item?.section) ? item.id : item?.templateId || '';
   return { id, kind: 'offer', item: source, snapshot, editing, title: editing ? 'Angebot bearbeiten' : 'Angebot im Sortiment anlegen', submitLabel: 'Angebot speichern',
     content: `<p class="ir-form-help">Ein Anbieter kann beliebig viele Varianten führen. Gleichnamige Waren anderer Sortimente bleiben getrennt.</p><div class="ir-form-grid">
       ${field('listName', 'Anbieter / Name der Liste', source.listName, 'required maxlength="180" list="ir-provider-names"')}<datalist id="ir-provider-names">${[...new Set(snapshot.offers.map(offer => offer.listName))].map(name => `<option value="${escape(name)}">`).join('')}</datalist>

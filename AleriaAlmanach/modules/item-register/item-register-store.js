@@ -1,7 +1,7 @@
-import { STANDARD_ITEMS, STANDARD_VERSION } from './item-register-standard.js?v=20261006-house-armor-v1';
-import { buildOwnedItems, toLegacyItem } from './item-register-model.js?v=20261006-house-armor-v1';
-import { legacyOffers } from './item-register-migration.js?v=20261006-house-armor-v1';
-import { buildModuleOffers, isModuleScanDuplicate } from './item-register-module-catalog.js?v=20261006-house-armor-v1';
+import { STANDARD_ITEMS, STANDARD_VERSION } from './item-register-standard.js?v=20261006-regional-equipment-v2';
+import { buildOwnedItems, toLegacyItem } from './item-register-model.js?v=20261006-regional-equipment-v2';
+import { legacyOffers } from './item-register-migration.js?v=20261006-regional-equipment-v2';
+import { buildModuleOffers, isModuleScanDuplicate } from './item-register-module-catalog.js?v=20261006-regional-equipment-v2';
 import { moduleProviders } from './item-register-providers.js?v=20260919-provider-crests-v2';
 
 export function createRegisterStore({ standards = STANDARD_ITEMS, version = STANDARD_VERSION, notify = () => {} } = {}) {
@@ -80,7 +80,7 @@ export function createRegisterStore({ standards = STANDARD_ITEMS, version = STAN
     return result;
   }
   function replaceStandards(next, nextVersion) {
-    if (!Array.isArray(next) || !next.length || next.some(item => item.section !== 'standard' || !item.id?.startsWith('standard:')) || new Set(next.map(item => item.id)).size !== next.length) throw new Error('Die Standarddaten sind ungültig.');
+    if (!Array.isArray(next) || !next.length || next.some(item => !['standard', 'regional'].includes(item.section) || !item.id?.startsWith('standard:')) || new Set(next.map(item => item.id)).size !== next.length) throw new Error('Die Vorlagendaten sind ungültig.');
     standards = next; version = nextVersion; moduleOffers = buildModuleOffers(modules, standards); changed();
   }
   return Object.freeze({ snapshot, connect, stop, commit, setLegacy, setLocalLegacy, setModules, replaceStandards,

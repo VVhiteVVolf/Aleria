@@ -1,4 +1,4 @@
-import { findArmorHouse, houseArmorRank, characterArmorLevel, armorTemplateId, HOUSE_ARMOR_CATEGORY } from './house-armor-model.js?v=20261006-house-armor-v1';
+import { findArmorHouse, houseArmorRank, characterArmorLevel, armorTemplateId, HOUSE_ARMOR_CATEGORY } from './house-armor-model.js?v=20261006-regional-equipment-v2';
 
 const isTorso = item => item.category === 'armor' && !/schild|shield|helm|stiefel|handschuh/i.test(`${item.name || ''} ${item.type || ''}`);
 const rankMetadata = (house, rank) => ({ houseId: house.id, regionId: house.regionId, rankId: rank?.id || '', minimumLevel: rank?.minimumLevel || 0, armorClassRange: rank?.armorClassRange || '' });

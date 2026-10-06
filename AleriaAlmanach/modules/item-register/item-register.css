@@ -165,7 +165,7 @@
   .ir-header-actions button:last-child { margin-left: auto; }
   .ir-sync { font-size: 11px; }
   .ir-layout, .ir-layout.has-detail { display: block; }
-  .ir-navigation { padding: 8px; border-right: 0; border-bottom: 1px solid var(--ir-line); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; }
+  .ir-navigation { padding: 8px; border-right: 0; border-bottom: 1px solid var(--ir-line); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; }
   .ir-nav-intro, .ir-nav-note, .ir-categories, .ir-nav-number { display: none; }
   .ir-nav-section { display: contents; }
   .ir-navigation .ir-nav-section-button { padding: 7px; font-size: 10px; height: auto; }

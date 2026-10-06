@@ -75,4 +75,4 @@ for (const path of ['AleriaAlmanach/modules/item-register/item-register-standard
   await mkdir(dirname(target), { recursive: true });
   await writeFile(target, source, 'utf8');
 }
-console.log(`${items.length} Standardgüter, Version ${version}`);
+console.log(`${items.filter(item => item.section === 'standard').length} Standardgüter, ${items.filter(item => item.section === 'regional').length} länderspezifische Vorlagen, Version ${version}`);

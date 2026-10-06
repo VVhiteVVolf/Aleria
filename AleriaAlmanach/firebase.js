@@ -12,11 +12,11 @@
     import { finalizeCommittedCommentNarration }
       from "./modules/comments/comments-narration-finalization.js";
     import { detectStaleCharacterFields, prepareCharacterDocumentWrite, sanitizeCharacterBiographyForFirestore, shouldBlockCharacterWriteDuringEncounter, stampFreshRevisions }
-      from "./modules/characters/character-save-guard.js?v=20261006-house-armor-v1";
+      from "./modules/characters/character-save-guard.js?v=20261006-regional-equipment-v2";
 
     import { createCalendarRepository } from './modules/calendar/calendar-repository.mjs';
     import { createItemRegisterFirebase } from './modules/item-register/item-register-firebase.js';
-    import { prepareInventoryCompanionWrites, saveLinkedCreature } from './modules/item-register/item-register-companion-firebase.js?v=20261006-house-armor-v1';
+    import { prepareInventoryCompanionWrites, saveLinkedCreature } from './modules/item-register/item-register-companion-firebase.js?v=20261006-regional-equipment-v2';
     import { parseModuleStoreRevision, getFirebaseModuleStoreRevision } from './modules/module-store/module-store-revision.js';
 
     const firebaseConfig = {
