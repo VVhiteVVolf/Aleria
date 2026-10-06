@@ -26,7 +26,6 @@ const ALMANACH_LEFT_REGISTER_ITEMS = [
   { key: 'klassen', label: 'Klassen', note: 'Basisklassen und kulturelle Pfade', icon: 'Klassen.png', href: '../Klassenordner/Klassenseite.html' },
   { key: 'kontinente', label: 'Kontinente', note: 'Weltkarte und Reiche', icon: 'Kontinente.png', href: '../Kontinente/index.html' },
   { key: 'krieger-ruestungen', label: 'Krieger & Rüstungen', note: 'Illustrationen und Hausrüstungen', icon: 'Weltpfade/krieger-ruestungen.png', href: '../Gallerien/krieger/index.html', compact: true },
-  { key: 'laender-ausruestung', label: 'Länder Spezifische Rüstungen und Waffen', note: 'Länderwappen · Grafschaften · Häuser', icon: 'Weltpfade/krieger-ruestungen.png', href: '#laender-ruestungen-waffen', compact: true },
   { key: 'markt', label: 'Markt', note: 'Items und Güter', icon: 'Markt.png', action: 'open-item-database' },
   { key: 'charakterbogen-archiv', label: 'Charakterbogen Archiv', note: 'Traits, Zauber, Klassen & mehr', icon: 'Charakterbogen Archiv.png', action: 'open-character-archive' },
   { key: 'religion', label: 'Religion', note: 'Glaubenswelten, Gottheiten und Überlieferungen', icon: 'Religion.png', href: '../Religionen/index.html' },
