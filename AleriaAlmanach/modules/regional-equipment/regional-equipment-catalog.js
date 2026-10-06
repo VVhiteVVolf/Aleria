@@ -217,6 +217,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-diafol-talgarth",
       "haus-beryn",
       "haus-dyger",
+      "haus-gwyllt",
       "haus-mathgraig",
       "haus-prys",
       "haus-morgwynt",
@@ -677,6 +678,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-diafol-talgarth",
       "haus-beryn",
       "haus-dyger",
+      "haus-gwyllt",
       "haus-mathgraig",
       "haus-prys",
       "haus-morgwynt",
@@ -2884,6 +2886,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-diafol-talgarth",
       "haus-beryn",
       "haus-dyger",
+      "haus-gwyllt",
       "haus-mathgraig",
       "haus-prys",
       "haus-morgwynt",
@@ -2937,6 +2940,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-diafol-talgarth",
       "haus-beryn",
       "haus-dyger",
+      "haus-gwyllt",
       "haus-mathgraig",
       "haus-prys",
       "haus-morgwynt",
@@ -2978,6 +2982,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-diafol-talgarth",
       "haus-beryn",
       "haus-dyger",
+      "haus-gwyllt",
       "haus-mathgraig",
       "haus-prys",
       "haus-morgwynt",
@@ -12253,6 +12258,18 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Talgarth"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-dyger&mode=view"
+  },
+  {
+    "id": "haus-gwyllt",
+    "name": "Haus Gwyllt",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Klaueninsel/haus-gwyllt.png",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Sturmklaue",
+      "Talgarth"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-gwyllt&mode=view"
   },
   {
     "id": "haus-mathgraig",

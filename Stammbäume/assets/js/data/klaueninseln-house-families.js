@@ -5,6 +5,7 @@ import {
 } from './house-arfordir-family.js';
 import { HOUSE_BERYN_FAMILY } from './house-beryn-family.js?v=parzifal-20261006';
 import { HOUSE_DYGER_FAMILY } from './house-dyger-family.js?v=parzifal-20261006';
+import { HOUSE_GWYLLT_FAMILY } from './house-gwyllt-family.js';
 import { LYNNE_CREW_HOUSE_FAMILIES } from './lynne-crew-house-families.js?v=parzifal-20261006';
 import { RHYDIAN_CREW_HOUSE_FAMILIES } from './rhydian-crew-house-families.js';
 import { PARZIFAL_CREW_HOUSE_FAMILIES } from './parzifal-crew-house-families.js';
@@ -78,6 +79,7 @@ export const KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
   HOUSE_CWINGOD_FAMILY,
   HOUSE_BERYN_FAMILY,
   HOUSE_DYGER_FAMILY,
+  HOUSE_GWYLLT_FAMILY,
   ...LYNNE_CREW_HOUSE_FAMILIES,
   ...RHYDIAN_CREW_HOUSE_FAMILIES,
   ...PARZIFAL_CREW_HOUSE_FAMILIES,

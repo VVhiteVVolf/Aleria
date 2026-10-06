@@ -17,10 +17,5 @@ export const PRYS_EXPANSION = {
     ['Gwenllian', 'Peredur|m|1680', ['Luned', 'Gwyn', 'Adwen']],
     ['Gethin', 'Rhian|f|1711', ['Meriel', 'Taron']],
     ['Rhun', 'Nesta|f|1707', ['Perwyn', 'Efa']]
-  ],
-  personPatches: {
-    'bethan-elder-prys': { name: 'Bethan Prys', title: 'Schiffskaplan der Dychwelyd',
-      portrait: '../AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/bethan-prys-elder.png',
-      notes: '58 Jahre, Mann. Streiter Baldrans; ruhig, väterlich und trocken-humorig. Vater Oenrics und Onkel der namensgleichen Bethan Prys (39), Lynnes Schiffskaplanin. Zwei eigenständige Personen.' }
-  }
+  ]
 };

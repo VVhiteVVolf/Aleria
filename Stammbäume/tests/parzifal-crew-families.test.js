@@ -84,13 +84,46 @@ test('Alle betroffenen Angehörigen aus Lynnes und Rhydians Crew stehen in ihren
   }
 });
 
-test('Bethan Prys bezeichnet zwei unterschiedliche Weltpersonen; Morlan bleibt ein eigenes Haus', () => {
+test('Der frühere männliche Bethan heißt Emrys Prys; Deiniol gehört zu Gwyllt', async () => {
   const bethans = family('Prys').persons.filter(person => person.name === 'Bethan Prys');
-  assert.deepEqual(bethans.map(p => [p.sex,p.birth]).sort(), [['female','1701'],['male','1682']]);
-  assert.equal(new Set(bethans.map(p => p.worldPersonId)).size, 2);
+  assert.deepEqual(bethans.map(p => [p.sex,p.birth]), [['female','1701']]);
   assert.equal(person('Prys','bethan-prys').worldPersonId, 'person--haus-prys--bethan-prys');
+  const emrys = person('Prys', 'bethan-elder-prys');
+  assert.equal(emrys.name, 'Emrys Prys');
+  assert.equal(emrys.worldPersonId, 'person--haus-prys--bethan-elder-prys');
+  assert.equal(emrys.portrait, '');
+  assert.equal(emrys.title, '');
+  assert.equal(emrys.notes, '');
+  assert.ok(family('Prys').parentages.find(edge => edge.childId === 'oenric-prys').parentIds.includes(emrys.id));
+  const deiniol = person('Gwyllt', 'deiniol-gwyllt');
+  assert.equal(deiniol.name, 'Deiniol Gwyllt');
+  assert.equal(deiniol.title, 'Schiffskaplan der Dychwelyd');
+  assert.notEqual(deiniol.worldPersonId, emrys.worldPersonId);
+  assert.equal(family('Gwyllt').persons.length, 1);
+  assert.deepEqual(family('Gwyllt').parentages, []);
+  assertValidFamily(family('Gwyllt'));
+  await access(new URL('../' + deiniol.portrait, import.meta.url));
+  await access(new URL('../' + family('Gwyllt').document.emblem, import.meta.url));
   assert.notEqual(family('Morlan').document.id, family('Morglan').document.id);
   for (const surname of ['Darach','Gerwig','Cassiana']) assert.equal(FAMILY_REGISTRY.some(record => record.id === `haus-${surname.toLowerCase()}`), false);
+});
+
+test('Die Prys-Korrektur erhält Beziehungen, Identitäten und nachträgliche Angaben anderer Angehöriger', () => {
+  const registered = family('Prys');
+  const stale = structuredClone(registered);
+  stale.extensions.sourceRevision = 6;
+  const previous = stale.persons.find(p => p.id === 'bethan-elder-prys');
+  Object.assign(previous, { name: 'Bethan Prys', title: 'Schiffskaplan der Dychwelyd', portrait: 'old.png', notes: 'Falsche Zuordnung' });
+  stale.persons.find(p => p.id === 'bethan-prys').notes = 'Eigene Notiz von Lynnes Kaplanin';
+  stale.persons.find(p => p.id === 'oenric-prys').birth = '1717';
+  const updated = resolveRegisteredFamilyUpgrade(registered, stale);
+  assert.equal(updated.persons.find(p => p.id === previous.id).name, 'Emrys Prys');
+  assert.equal(updated.persons.find(p => p.id === previous.id).worldPersonId, previous.worldPersonId);
+  assert.equal(updated.persons.find(p => p.id === 'bethan-prys').notes, 'Eigene Notiz von Lynnes Kaplanin');
+  assert.equal(updated.persons.find(p => p.id === 'oenric-prys').birth, '1717');
+  assert.deepEqual(updated.parentages, stale.parentages);
+  assert.deepEqual(updated.partnerships, stale.partnerships);
+  assert.deepEqual(resolveRegisteredFamilyUpgrade(registered, updated), updated);
 });
 
 test('Die neuen Häuser liegen in Talgarth, sind Bürgerfamilien und haben erreichbare Wappen', async () => {

@@ -4,12 +4,13 @@ import { KLAUENINSEL_REGION_EMBLEMS } from './klaueninseln-house-profiles.js';
 import { PARZIFAL_FAMILY_EXPANSIONS, PARZIFAL_NEW_HOUSES } from './parzifal-crew-families/catalog.js';
 import { expandParzifalCrewFamily } from './parzifal-crew-families/family-expansion.js';
 import { RHYDIAN_FAMILY_MEMBERS } from './parzifal-crew-families/rhydian-members.js';
+import { withParzifalChaplainIdentityCorrection } from './parzifal-crew-families/identity-upgrade.js';
 
 export function extendParzifalCrewHouse(base) {
   const definition = PARZIFAL_FAMILY_EXPANSIONS.find(row => `haus-${row.surname.toLowerCase()}` === base.document.id);
   if (!definition) return base;
   const crew = RHYDIAN_FAMILY_MEMBERS.filter(person => person.houseId === base.lineage.houseId);
-  return expandParzifalCrewFamily(base, definition, crew);
+  return withParzifalChaplainIdentityCorrection(expandParzifalCrewFamily(base, definition, crew));
 }
 
 function createParzifalHouse(definition) {

@@ -18,7 +18,7 @@ test('Country and county cards match the canonical family tree, including the or
   assert.equal(counties.length,9);assert.ok(counties.every(n=>n.image.startsWith('/Stammb')));
   assert.deepEqual(counties.map(n=>n.name).sort(),[...tree.folders.get('Cenyr').folders.keys()].sort());
   assert.ok(regionalTerritory('cenyr/celtigerns-wacht').image.endsWith('/celtigerns-wacht.png'));
-  assert.equal(regionalHouses('').length,436);
+  assert.deepEqual(regionalHouses('').map(house => house.id).sort(), FAMILY_REGISTRY.map(house => house.id).sort());
 });
 test('Regional armor never appears in standard goods, their category totals or search',()=>{
   const standard=queryRegister(STANDARD_ITEMS,{section:'standard',category:'ruestungen'});
