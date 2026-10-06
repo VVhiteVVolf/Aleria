@@ -1,5 +1,6 @@
 import { registerStore } from './item-register-store.js?v=20261006-regional-equipment-v2';
-import { queryRegister, normalizeOffer, toLegacyItem } from './item-register-model.js?v=20261006-regional-equipment-v2';
+import { REGISTER_SECTIONS, queryRegister, normalizeOffer, toLegacyItem } from './item-register-model.js?v=20261006-regional-equipment-v2';
+import { mountRegisterNavigation } from './item-register-navigation.js?v=20261006-sidebar-equipment-v1';
 import { shell, navigation, overview, results, detail, escape, safeImage } from './item-register-view.js?v=20261006-regional-equipment-v2';
 import { createForm, collectOperation, quote } from './item-register-forms.js?v=20261006-regional-equipment-v2';
 import { moneyState, moneyTotal, parsePrice, formatPrice } from './item-register-money.js?v=20260919-shop-v1';
@@ -11,6 +12,7 @@ import { regionalQuery, regionalHomeForHouse } from '../regional-equipment/regio
 
 const state = { open: false, section: 'standard', category: '', territoryId: '', houseId: '', listId: '', search: '', sort: 'name', selectedId: '', limit: 48, equippedOnly: false, ownedExpanded: false };
 let panel, editor, form = null, busy = false, pendingOperation = null;
+let registerNavigation;
 const access = () => globalThis._fbAuth?.getAccess?.() || {};
 const snapshot = () => registerStore.snapshot();
 const selected = () => snapshot().items.find(item => item.id === state.selectedId);
@@ -59,10 +61,16 @@ export function openItemRegister(itemId = '') {
   globalThis.activateDialog?.(panel.id, { initialFocus: '[data-ir-field="search"]' });
   connect();
 }
+export function openItemRegisterSection(section) {
+  if (!REGISTER_SECTIONS.some(entry => entry.id === section)) return;
+  ensurePanel(); reset(section); openItemRegister();
+  panel.querySelector('.ir-main').scrollTo({ top: 0 });
+}
 export function closeItemRegister() {
   if (form) closeForm();
   state.open = false;
   if (panel) { globalThis.deactivateDialog?.(panel.id); panel.hidden = true; }
+  registerNavigation?.closed();
 }
 function reset(section = state.section) {
   Object.assign(state, { section, category: '', territoryId: '', houseId: '', listId: '', search: '', selectedId: '', limit: 48, equippedOnly: false });
@@ -215,10 +223,11 @@ document.addEventListener('keydown', event => {
   else if (!form && (!top || top.id === panel.id)) { event.preventDefault(); event.stopImmediatePropagation(); closeItemRegister(); }
 }, true);
 
-globalThis.AleriaItemRegister = Object.freeze({ open: openItemRegister, close: closeItemRegister,
+globalThis.AleriaItemRegister = Object.freeze({ open: openItemRegister, openSection: openItemRegisterSection, close: closeItemRegister,
   ensure: connect, store: registerStore, moneyState, moneyTotal,
   getItems: () => registerStore.legacyIndex(), getByKey: key => { const item = registerStore.getByKey(key); return item ? toLegacyItem(item) : null; },
   formatPrice: item => formatPrice(item.priceRange || parsePrice(item.price, item.currency)) });
 if (globalThis._fb?.itemRegister) connect();
 watchStandardReleases(registerStore);
+registerNavigation = mountRegisterNavigation({ openSection: openItemRegisterSection, close: closeItemRegister });
 window.dispatchEvent(new CustomEvent('item-db-store-updated', { detail: { reason: 'register-ready' } }));

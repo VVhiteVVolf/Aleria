@@ -25,5 +25,5 @@ function itemDbExportDatabasePayload() {
 function itemDbBuildIndex() { return window.AleriaItemRegister?.getItems() || []; }
 function itemDbEnsureGlobalSync() {
   if (window.AleriaItemRegister) return Promise.resolve(window.AleriaItemRegister.ensure());
-  return import('../item-register/item-register-ui.js?v=20261006-regional-equipment-v2').then(() => window.AleriaItemRegister?.ensure());
+  return import('../item-register/item-register-ui.js?v=20261006-sidebar-equipment-v1').then(() => window.AleriaItemRegister?.ensure());
 }

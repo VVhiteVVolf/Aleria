@@ -17,7 +17,6 @@ const AleriaArchiveNavigation = (() => {
       <div class="archive-tab-scroller">
         <button class="archive-tab-scroll" type="button" data-archive-navigation="scroll" data-direction="-1" aria-label="Vorherige Reiter" hidden>‹</button>
         <div class="gallery-tab-group gallery-tab-group-main">
-          ${AleriaArchiveDestinations.map(link => `<a class="gallery-tab-btn archive-destination-tab" href="${escapeHtml(link.href)}"><img src="${escapeHtml(link.iconUrl)}" alt="" width="30" height="30">${escapeHtml(link.label)}</a>`).join('')}
           ${tabs.map(tab => `<button class="gallery-tab-btn${tab === activeTab ? ' active' : ''}" type="button" data-tab="${escapeHtml(tab)}" data-tab-theme="${escapeHtml(getThemeMetaForTab(tab).slug)}" data-archive-action="switch-tab"${tab === activeTab ? ' aria-current="page"' : ''}>${escapeHtml(tab === 'Alle' ? 'Übersicht' : tab)}</button>`).join('')}
         </div>
         <button class="archive-tab-scroll" type="button" data-archive-navigation="scroll" data-direction="1" aria-label="Weitere Reiter" hidden>›</button>

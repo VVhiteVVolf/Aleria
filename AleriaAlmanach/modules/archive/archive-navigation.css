@@ -1,6 +1,4 @@
 /* Overflow and the full area chooser supplement the existing theme tabs. */
-.archive-destination-tab { display: inline-flex; align-items: center; gap: .45rem; text-decoration: none; }
-.archive-destination-tab img { width: 1.9rem; height: 1.9rem; border-radius: 3px; object-fit: cover; }
 .gallery-tabs { grid-template-columns: minmax(0, 1fr) auto auto; }
 .archive-tab-scroller { display: grid; grid-template-columns: minmax(0, 1fr); min-width: 0; align-items: stretch; }
 .archive-tab-scroller.has-overflow { grid-template-columns: 2rem minmax(0, 1fr) 2rem; }

@@ -25,6 +25,8 @@ const ALMANACH_LEFT_REGISTER_ITEMS = [
   { key: 'kalender', label: 'Kalender', icon: 'Kalender.png', note: 'Festtage, Termine und Zusammenkünfte', href: './kalender.html' },
   { key: 'klassen', label: 'Klassen', note: 'Basisklassen und kulturelle Pfade', icon: 'Klassen.png', href: '../Klassenordner/Klassenseite.html' },
   { key: 'kontinente', label: 'Kontinente', note: 'Weltkarte und Reiche', icon: 'Kontinente.png', href: '../Kontinente/index.html' },
+  { key: 'krieger-ruestungen', label: 'Krieger & Rüstungen', note: 'Illustrationen und Hausrüstungen', icon: 'Weltpfade/krieger-ruestungen.png', href: '../Gallerien/krieger/index.html', compact: true },
+  { key: 'laender-ausruestung', label: 'Länder Spezifische Rüstungen und Waffen', note: 'Länderwappen · Grafschaften · Häuser', icon: 'Weltpfade/krieger-ruestungen.png', href: '#laender-ruestungen-waffen', compact: true },
   { key: 'markt', label: 'Markt', note: 'Items und Güter', icon: 'Markt.png', action: 'open-item-database' },
   { key: 'charakterbogen-archiv', label: 'Charakterbogen Archiv', note: 'Traits, Zauber, Klassen & mehr', icon: 'Charakterbogen Archiv.png', action: 'open-character-archive' },
   { key: 'religion', label: 'Religion', note: 'Glaubenswelten, Gottheiten und Überlieferungen', icon: 'Religion.png', href: '../Religionen/index.html' },
@@ -45,9 +47,10 @@ function buildAlmanachLeftRegisterContent(item, iconSrc) {
 function buildAlmanachLeftRegisterItem(item) {
   const iconSrc = `../IconOrdner/ReiterIcons/${item.icon}`;
   const content = buildAlmanachLeftRegisterContent(item, iconSrc);
+  const compactAttr = item.archiveTab || item.compact ? ' data-register-compact' : '';
 
   if (item.href) {
-    return `<a class="almanach-left-register active" href="${escapeHtml(item.href)}" title="${escapeHtml(item.label)} öffnen" data-register-key="${escapeHtml(item.key)}">
+    return `<a class="almanach-left-register active" href="${escapeHtml(item.href)}" title="${escapeHtml(item.label)} öffnen" data-register-key="${escapeHtml(item.key)}"${compactAttr}>
     ${content}
   </a>`;
   }
@@ -61,7 +64,7 @@ function buildAlmanachLeftRegisterItem(item) {
     actionAttrs = 'data-character-archive-action="open" title="Charakterbogen Archiv öffnen"';
   }
   const isInteractive = !!(item.action || item.archiveTab);
-  return `<button class="almanach-left-register${isInteractive ? ' active' : ''}" type="button" ${actionAttrs} data-register-key="${escapeHtml(item.key)}">
+  return `<button class="almanach-left-register${isInteractive ? ' active' : ''}" type="button" ${actionAttrs} data-register-key="${escapeHtml(item.key)}"${compactAttr}>
     ${content}
   </button>`;
 }
