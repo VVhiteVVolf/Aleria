@@ -1,0 +1,37 @@
+{
+  "reviewedAt": "2026-10-06",
+  "excludedHouses": [
+    { "id": "haus-caerlaen", "reason": "Ziviles Schreibermotiv, keine Krieger- oder Rüstungsdarstellung." },
+    { "id": "haus-caerthwyn", "reason": "Ziviles Gelehrtenmotiv, keine Krieger- oder Rüstungsdarstellung." }
+  ],
+  "additionalImages": [
+    {
+      "file": "Familien Häuser und Clans/assets/images/scenes/haus-albholz.png",
+      "houseId": "haus-albholz", "name": "Clan Albholz · Krieger",
+      "source": "Familien Häuser und Clans/data/haus-albholz.data.js"
+    },
+    {
+      "file": "Familien Häuser und Clans/assets/images/scenes/haus-suedstahl.png",
+      "houseId": "haus-suedstahl", "name": "Clan Südstahl · Krieger",
+      "source": "Familien Häuser und Clans/data/haus-suedstahl.data.js"
+    },
+    {
+      "file": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn-Hausbild.png",
+      "houseId": "haus-falchdyn", "name": "Haus Falchdyn · bewaffnete Hausdarstellung",
+      "source": "Stammbäume/assets/js/data/house-falchdyn-family.js",
+      "note": "Hausmotiv mit Schuppenrüstung und Seitenwaffe. Kein schwerer Hausritter."
+    },
+    {
+      "file": "AleriaAlmanach/public/assets/draig-leibgarde/drachengarde-krieger.png",
+      "houseId": "haus-draig", "name": "Drachengarde · frühere Rüstungsreferenz",
+      "source": "AleriaAlmanach/public/assets/draig-leibgarde/drachengarde-krieger.png",
+      "note": "Zusätzliche vorhandene Referenz der Draig-Leibgarde; neben der aktuellen Hausbio-Serie erhalten."
+    },
+    {
+      "file": "Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/assets/kriegerentwicklung.webp",
+      "name": "Lysfaen · Entwicklung der Wachen", "category": "Stadt- & Ortswachen",
+      "affiliation": "Stadt / Ort · Lysfaen",
+      "source": "Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/assets/kriegerentwicklung.webp"
+    }
+  ]
+}

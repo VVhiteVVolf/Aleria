@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Krieger- und Rüstungsreferenzen Alerias, nach Häusern geordnet. Mit vollständigem Stammbaumregister und Übersicht fehlender Illustrationen.">
+  <title>Krieger & Häuser · Aleria</title>
+  <link rel="stylesheet" href="warrior-gallery.css?v=20261006">
+  <script type="module" src="warrior-gallery.mjs?v=20261006"></script>
+</head>
+<body>
+  <div class="gallery-shell" data-gallery>
+    <header class="gallery-hero">
+      <nav class="gallery-breadcrumb" aria-label="Seitenpfad"><a href="../../index.html">Aleria</a><span>/</span><a href="../../Stammbäume/register.html">Stammbäume</a><span>/</span><span>Bildarchiv</span></nav>
+      <div class="hero-copy"><p class="eyebrow">Das Rüstungsarchiv</p><h1>Krieger <i>&</i> Häuser</h1><p class="hero-description">Die Rüstungen, Farben und Krieger Alerias.<br>Nach Zugehörigkeit gesammelt. Fehlende Bilder im Blick.</p></div>
+      <div class="hero-illustrations" aria-hidden="true">
+        <img src="../../Stammb%C3%A4ume/assets/images/references/haus-gwanrhyd/krieger.png" alt="">
+        <img src="../../Familien%20H%C3%A4user%20und%20Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/draig-ritter.png" alt="">
+        <img src="../../Stammb%C3%A4ume/assets/images/references/haus-serenoc/krieger.png" alt="">
+      </div>
+      <div class="gallery-statistics" data-role="statistics" aria-label="Bestand"></div>
+    </header>
+
+    <main id="main">
+      <section class="gallery-controls" aria-label="Galerie durchsuchen">
+        <div class="view-switch" role="group" aria-label="Ansicht">
+          <button type="button" data-action="view" data-view="gallery" aria-pressed="true">Illustrationen</button>
+          <button type="button" data-action="view" data-view="houses" aria-pressed="false">Alle Häuser</button>
+          <button type="button" data-action="view" data-view="missing" aria-pressed="false">Illustration fehlt</button>
+          <button type="button" data-action="view" data-view="other" aria-pressed="false">Gilden, Wachen & Klerus</button>
+          <button type="button" data-action="view" data-view="unassigned" aria-pressed="false">Zuordnung offen</button>
+        </div>
+        <div class="filter-row">
+          <label class="search-field">Suche<input type="search" data-filter="query" placeholder="Haus, Region oder Krieger …" autocomplete="off"></label>
+          <label>Region<select data-filter="region"><option value="">Alle Regionen</option></select></label>
+          <label>Registerumfang<select data-filter="scope"><option value="all">Alle Häuser & erwähnten Namen</option><option value="registered">436 Registerhäuser</option><option value="mentioned">Nur erwähnte Namen & Linien</option></select></label>
+          <label hidden>Bildsammlung<select data-filter="collection"><option value="">Alle Sammlungen</option></select></label>
+          <button class="quiet-button" type="button" data-action="reset-filters">Zurücksetzen</button>
+        </div>
+      </section>
+      <div class="results-heading"><div><p class="eyebrow" data-role="view-eyebrow">Nach Hauszugehörigkeit</p><h2 data-role="view-title">Die Bildersammlung</h2></div><p data-role="result-count" aria-live="polite">Bestand wird geladen …</p></div>
+      <p class="view-note" data-role="view-note">Krieger- und Rüstungsdarstellungen aus Hausbios und Referenzarchiven. Ein Bild anklicken, um es zu vergrößern oder einem Haus zuzuordnen.</p>
+      <div class="gallery-results" data-role="results"></div>
+      <p class="gallery-notice" data-role="notice" aria-live="polite"></p>
+      <noscript><p>Für die Bildersammlung bitte JavaScript aktivieren. Die <a href="data/haeuser.csv">vollständige Häuserliste</a> steht auch als CSV bereit.</p></noscript>
+    </main>
+
+    <footer class="gallery-footer">
+      <div><strong>Aleria · Kriegerarchiv</strong><p>Bestandsprüfung vom 6. Oktober 2026. Enthält auch die Sammlungen „Bilder für Krieger“, „Gilden“ und „Götter und Geistliche“. Klassen-Icons, Wappen, gewöhnliche Personenporträts und reine Gegenstandsbilder sind ausgeschlossen.</p><p>Erwähnte Namen und Linien stehen separat neben den Registerhäusern. Mögliche Schreibvarianten bleiben nachvollziehbar erhalten. Private Online-Entwürfe sind nicht erfasst.</p><a href="data/local-source-review.json">Sichtung der 711 lokalen Dateien · Quellenverzeichnis</a></div>
+      <div class="footer-actions"><a href="data/haeuser.csv" download>Häuserliste im Quellenbestand · CSV</a><button type="button" data-action="export">Zuordnungen exportieren · JSON</button><label class="import-label">Zuordnungen importieren<input type="file" accept="application/json,.json" data-role="import"></label><small>Eigene Zuordnungen werden in diesem Browser gespeichert. Export und Import übertragen sie auf andere Geräte.</small></div>
+    </footer>
+
+    <dialog class="image-dialog" data-role="viewer" aria-labelledby="viewer-title">
+      <button class="dialog-close" type="button" data-action="close-viewer" aria-label="Bildansicht schließen">×</button>
+      <div class="viewer-image"><img data-role="viewer-image" alt=""></div>
+      <div class="viewer-details"><p class="eyebrow" data-role="viewer-category"></p><h2 id="viewer-title"></h2><p data-role="viewer-note"></p><p class="provenance-label">Belegte Zugehörigkeit / Quellenbezeichnung</p><p data-role="viewer-origin"></p><label class="variant-control" data-role="variant-control" hidden>Bildfassung<select data-role="variant"></select></label><a data-role="original" target="_blank" rel="noopener">Bild in voller Auflösung öffnen ↗</a><p class="house-meta" data-role="conversion-note"></p>
+        <details class="source-details"><summary>Bildquellen & Fundstellen</summary><ul data-role="sources"></ul></details>
+        <section class="assignment-editor" aria-labelledby="assignment-heading"><h3 id="assignment-heading">Zuordnung im Arbeitsbestand</h3><p>Hier kannst du die Darstellung einem oder mehreren Häusern zuordnen. Die belegte Herkunft bleibt sichtbar.</p><div data-role="assignments" class="assignment-list"></div><form data-role="assignment-form"><label for="assignment-house">Haus suchen oder auswählen</label><input id="assignment-house" list="gallery-houses" required autocomplete="off" placeholder="Zum Beispiel Haus Draig"><datalist id="gallery-houses"></datalist><button type="submit">Haus zuordnen</button></form><button class="quiet-button" type="button" data-action="restore-assignment">Quellenzuordnung wiederherstellen</button><p class="storage-status" data-role="storage-status" aria-live="polite"></p></section>
+        <div class="viewer-navigation"><button type="button" data-action="previous">← Vorheriges</button><button type="button" data-action="next">Nächstes →</button></div>
+      </div>
+    </dialog>
+  </div>
+</body>
+</html>
