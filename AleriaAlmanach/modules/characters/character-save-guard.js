@@ -1,4 +1,5 @@
 import { mergeCharacterImageLibrary } from './character-import-policy.js?v=20260808-character-storage-audit-v1';
+import { prepareHouseArmorWrite } from '../house-armor/house-armor-assignment.js?v=20261006-house-armor-v1';
 
 // Reine Entscheidungslogik hinter dem Zurücküberschreiben-Schutz aus firebase.js#saveCharacter.
 // Getrennt in ein eigenes, Firebase-freies Modul, damit die eigentliche Vergleichslogik echt
@@ -135,7 +136,7 @@ export function prepareCharacterDocumentWrite(currentDocData, outgoingData, opti
       })
     : (outgoingData || {});
   const nextRevision = getNextCharacterRevision(current, fields, options.now);
-  const stamped = stampFreshRevisions(protectedOutgoing, fields, nextRevision);
+  const stamped = stampFreshRevisions(prepareHouseArmorWrite(current, protectedOutgoing, options), fields, nextRevision);
 
   if (!current) {
     return {

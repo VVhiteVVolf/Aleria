@@ -40,7 +40,8 @@ const PROFILE_COLLECTIONS = Object.freeze([
   ['skill', 'skills']
 ]);
 const REGISTER_KIND_BY_CATEGORY = new Map(
-  CHARACTER_ARCHIVE_KINDS.filter(kind => kind.registerCategory).map(kind => [kind.registerCategory, kind.id])
+  [...CHARACTER_ARCHIVE_KINDS.filter(kind => kind.registerCategory).map(kind => [kind.registerCategory, kind.id]),
+    ['cenyr-ruestungen', 'register-ruestungen']]
 );
 
 export function cloneArchiveValue(value, fallback = null) {

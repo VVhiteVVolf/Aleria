@@ -1,5 +1,5 @@
 import { companionIdentityFromItem, inventoryWithCreatureIdentity } from './item-register-companions.js';
-import { detectStaleCharacterFields, stampFreshRevisions } from '../characters/character-save-guard.js?v=20260903-genealogy-portrait-sync-v1';
+import { detectStaleCharacterFields, stampFreshRevisions } from '../characters/character-save-guard.js?v=20261006-house-armor-v1';
 
 export async function prepareInventoryCompanionWrites({ transaction, db, doc, characterId, before, after }) {
   if (!after.inventory) return [];

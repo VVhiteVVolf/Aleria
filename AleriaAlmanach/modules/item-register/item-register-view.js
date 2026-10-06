@@ -1,6 +1,6 @@
-import { REGISTER_CATEGORIES, REGISTER_SECTIONS, categoryLabel, canManageCharacter } from './item-register-model.js?v=20260928-equipment-art-v4';
+import { REGISTER_CATEGORIES, REGISTER_SECTIONS, categoryLabel, canManageCharacter } from './item-register-model.js?v=20261006-house-armor-v1';
 import { formatCopper, formatPrice, moneyTotal } from './item-register-money.js?v=20260919-shop-v1';
-import { resalePrice } from './item-register-trade.js?v=20260928-equipment-art-v4';
+import { resalePrice } from './item-register-trade.js?v=20261006-house-armor-v1';
 import { registerLists } from './item-register-providers.js?v=20260919-provider-crests-v2';
 import { describeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
 
@@ -11,7 +11,7 @@ export function safeImage(value) {
 }
 const attr = escape;
 const amountLabel = (count, singular, plural) => `${count} ${count === 1 ? singular : plural}`;
-const categoryIcon = id => `./public/assets/item-register/categories/${id === 'ruestungen' ? 'ruestungen-v3' : id}.png`;
+const categoryIcon = id => id === 'cenyr-ruestungen' ? '../IconOrdner/ReiterIcons/Weltpfade/krieger-ruestungen.png' : `./public/assets/item-register/categories/${id === 'ruestungen' ? 'ruestungen-v3' : id}.png`;
 function listEmblem(list, { fallback = true } = {}) {
   const image = (list?.images || []).map(safeImage).find(Boolean);
   if (image) return `<span class="ir-provider-emblem" aria-hidden="true"><img src="${attr(image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span>`;

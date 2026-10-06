@@ -8,6 +8,7 @@ export const REGISTER_SECTIONS = Object.freeze([
   { id: 'owned', label: 'Individuelle Listen', text: 'Besitz, Ausrüstung und Begleiter deiner Figuren.' }
 ]);
 export const REGISTER_CATEGORIES = Object.freeze([
+  ['cenyr-ruestungen', 'Cenyr – Rüstungen', '◇'],
   ['waffen', 'Waffen', '⚔'], ['ruestungen', 'Rüstungen', '◇'], ['pferde', 'Pferde', '♞'],
   ['vieh', 'Vieh', '♧'], ['speisen', 'Speisen', '◒'], ['getraenke', 'Getränke', '♜'],
   ['alchemie', 'Alchemie', '⚗'], ['arkanes', 'Arkanes', '✧'], ['werkzeuge', 'Werkzeuge', '⚒'], ['sonstiges', 'Sonstiges', '◈']
@@ -19,7 +20,7 @@ export function searchText(value) {
 }
 export function categoryLabel(id) { return REGISTER_CATEGORIES.find(category => category.id === id)?.label || 'Sonstiges'; }
 export function inventoryCategory(id) {
-  return ({ waffen: 'weapon', ruestungen: 'armor', alchemie: 'potions', getraenke: 'potions', werkzeuge: 'equipment' })[id] || 'other';
+  return ({ waffen: 'weapon', ruestungen: 'armor', 'cenyr-ruestungen': 'armor', alchemie: 'potions', getraenke: 'potions', werkzeuge: 'equipment' })[id] || 'other';
 }
 export function registerCategory(item) {
   return item.registerCategory || ({ weapon: 'waffen', armor: 'ruestungen', potions: 'alchemie', equipment: 'werkzeuge' })[item.category] || 'sonstiges';
@@ -69,6 +70,7 @@ export function buildOwnedItems(characters = [], templates = [], creatures = [])
         (character.combatProfile?.weapons || []).some(weapon => weapon.inventoryItemId === item.id && weapon.equipped) ||
         (character.combatProfile?.armorItems || []).some(armor => armor.inventoryItemId === item.id && armor.equipped),
       combatDefinition: item.combatDefinition || template?.combatDefinition || null,
+      houseArmor: item.houseArmor || template?.houseArmor || null,
       creatureId: creature?.id || item.creatureId || '', revision: character.inventory?.revision || 0,
       tags: Array.isArray(item.tags) ? item.tags : String(item.tags || '').split(',').filter(Boolean),
       sourceRefs: [{ kind: 'character-inventory', moduleTitle: character.name, characterId: character.id }], rawItem: item };
@@ -95,13 +97,14 @@ export function createOwnedItem(template, { id, characterId, characterName, quan
     tags: (template.tags || []).join(', '), combatDefinition: template.combatDefinition || null, equipped: false,
     value: moneyState(unitCopper), valuation: template.priceRange || null,
     purchase: { unitCopper, quantity, sourceId: template.id, at: now, ...(template.moduleId ? { moduleId: template.moduleId } : {}) },
-    infoRows: [], attributes: template.attributes || [] };
+    infoRows: template.infoRows || [], attributes: template.attributes || [], ...(template.houseArmor ? { houseArmor: { ...template.houseArmor } } : {}) };
 }
 
-export function queryRegister(items, { section = 'standard', category = '', listId = '', search = '', sort = 'name', equippedOnly = false } = {}) {
+export function queryRegister(items, { section = 'standard', category = '', listId = '', search = '', sort = 'name', equippedOnly = false, regionId = '', houseId = '' } = {}) {
   const needle = searchText(search.trim());
   if (!category && !listId && !needle) return [];
   return items.filter(item => item.section === section && !item.archived &&
+    (!regionId || item.houseArmor?.regionId === regionId) && (!houseId || item.houseArmor?.houseId === houseId) &&
     (!category || item.category === category) && (!listId || item.listId === listId) && (!equippedOnly || item.equipped) &&
     (!needle || searchText([item.title, item.type, item.description, item.listName, item.templateName, ...(item.tags || [])].join(' ')).includes(needle)))
     .sort((a, b) => (sort === 'price' ? (a.priceRange?.minCopper ?? Infinity) - (b.priceRange?.minCopper ?? Infinity) : 0)

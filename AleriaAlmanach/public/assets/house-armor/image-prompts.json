@@ -1,0 +1,1409 @@
+{
+  "schema": "aleria-house-armor-v1",
+  "generator": "Built-in image_gen",
+  "regionId": "celtigerns-wacht",
+  "houses": [
+    {
+      "id": "haus-aelmor",
+      "name": "Haus Aelmor",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-aelmor&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-aelmor-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-almarch",
+      "name": "Haus Almarch",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-almarch&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Almarch/assets/krieger.png",
+      "sourceIllustrationId": "bild-4e4491c74e9dfd16",
+      "file": "haus-almarch-harnisch-v1.png",
+      "prompt": "Create a square fantasy inventory image: EMPTY torso armor of Haus Almarch. First reference is this house's design. Its identifying design is dark forest GREEN and GOLD, a GOLD HORSE HEAD with wheat sprig. Extract only the waist-length chest armor; any heraldic cloth may remain fitted over its torso. Second reference defines painterly RPG ITEM RENDERING STYLE only, never copy its symbols. NO DRAGON motifs. Preserve the design, materials and HOUSE SYMBOL of the FIRST reference. Remove all living body, helmet, head, arms, forearms, gloves, legs, skirt, cloak, shield, weapons and props. Hollow open neckline and empty armholes, short shoulder caps and short belt plates only. Slight three-quarter view, richly textured but readable at thumbnail size, crisp dark outlines, soft even lighting. Center one torso item with 10% margins on TRUE TRANSPARENT alpha background, very faint BLACK soft shadow below. No text, floor, stand or painted checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "d8ec53a8582e14c5f3c187816773bec02614b8a71eb12892afe21aa8bb01a1e5",
+      "sourceSha256": "4e4491c74e9dfd1664268ef128a7f789230735e2e879a1b540ece752d3fcd8de"
+    },
+    {
+      "id": "haus-althin",
+      "name": "Haus Althin",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-althin&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Althin/assets/krieger.png",
+      "sourceIllustrationId": "bild-afd793b97612ecb6",
+      "file": "haus-althin-harnisch-v1.png",
+      "prompt": "Create a square fantasy inventory image: EMPTY torso armor of Haus Althin. First reference is this house's design. Its identifying design is forest green leather-covered armor and tan trim, a PALE STAG HEAD with antlers. Extract only the waist-length chest armor; any heraldic cloth may remain fitted over its torso. Second reference defines painterly RPG ITEM RENDERING STYLE only, never copy its symbols. NO DRAGON motifs. Preserve the design, materials and HOUSE SYMBOL of the FIRST reference. Remove all living body, helmet, head, arms, forearms, gloves, legs, skirt, cloak, shield, weapons and props. Hollow open neckline and empty armholes, short shoulder caps and short belt plates only. Slight three-quarter view, richly textured but readable at thumbnail size, crisp dark outlines, soft even lighting. Center one torso item with 10% margins on TRUE TRANSPARENT alpha background, very faint BLACK soft shadow below. No text, floor, stand or painted checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "a063dda8352f282e3881d08643ebd60d949cea5b668a3f8a11f7219e816683b9",
+      "sourceSha256": "afd793b97612ecb6fb3a9f5df2d18f3b9bc24d7c3cf5c1091c6c853f59873428"
+    },
+    {
+      "id": "haus-annwyl",
+      "name": "Haus Annwyl",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Côr Mynyddfaen",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-annwyl&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Annwyl/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-b208b66c24c1baa0",
+      "file": "haus-annwyl-harnisch-v1.png",
+      "prompt": "Create a square fantasy inventory image: EMPTY torso armor of Haus Annwyl. First reference is this house's design. Its identifying design is antique gold armor with GREEN chest cloth, a small GOLD DOG wearing a tiny heraldic helmet. Extract only the waist-length chest armor; any heraldic cloth may remain fitted over its torso. Second reference defines painterly RPG ITEM RENDERING STYLE only, never copy its symbols. NO DRAGON motifs. Preserve the design, materials and HOUSE SYMBOL of the FIRST reference. Remove all living body, helmet, head, arms, forearms, gloves, legs, skirt, cloak, shield, weapons and props. Hollow open neckline and empty armholes, short shoulder caps and short belt plates only. Slight three-quarter view, richly textured but readable at thumbnail size, crisp dark outlines, soft even lighting. Center one torso item with 10% margins on TRUE TRANSPARENT alpha background, very faint BLACK soft shadow below. No text, floor, stand or painted checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "1d3d53ef6bfc3b9d6c84f963e5db8d15338dfe49f960006f2f64dbde37024ab4",
+      "sourceSha256": "b208b66c24c1baa0b1cc5057bbd7dd071f08ae5c9e7c5706858ae054e6d3f21d"
+    },
+    {
+      "id": "haus-ard-conbhron",
+      "name": "Haus Ard Conbhrón",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Antike Crannath Clans · Lycath",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-ard-conbhron&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Antike_Crannath_Clans/Haus_Ard_Conbhron/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-8b325637b3c94f05",
+      "file": "haus-ard-conbhron-harnisch-v1.png",
+      "prompt": "Create a square fantasy inventory image: EMPTY torso armor of Haus Ard Conbhrón. First reference is this house's design. Its identifying design is bronze leather Celtic cuirass with engraved spirals and WOLF medallion. Extract only the waist-length chest armor; any heraldic cloth may remain fitted over its torso. Second reference defines painterly RPG ITEM RENDERING STYLE only, never copy its symbols. NO DRAGON motifs. Preserve the design, materials and HOUSE SYMBOL of the FIRST reference. Remove all living body, helmet, head, arms, forearms, gloves, legs, skirt, cloak, shield, weapons and props. Hollow open neckline and empty armholes, short shoulder caps and short belt plates only. Slight three-quarter view, richly textured but readable at thumbnail size, crisp dark outlines, soft even lighting. Center one torso item with 10% margins on TRUE TRANSPARENT alpha background, very faint BLACK soft shadow below. No text, floor, stand or painted checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "9daebc2e597ddc598fff583ec995b610782c6f4d0b65024e1d9c25c05ec06963",
+      "sourceSha256": "8b325637b3c94f05b5ae25077f4e1dd72fb08123b616d3dd8878d297f63eee7d"
+    },
+    {
+      "id": "haus-argall",
+      "name": "Haus Argall",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Llysfaen",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-argall&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-argall-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-arwydd",
+      "name": "Haus Arwydd",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Rhonwens Tränen · Castellbryn",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-arwydd&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Arwydd/assets/ritter.png",
+      "sourceIllustrationId": "bild-c0affc9df7efcc44",
+      "file": "haus-arwydd-harnisch-v1.png",
+      "prompt": "Create a square fantasy inventory image: EMPTY torso armor of Haus Arwydd. First reference is this house's design. Its identifying design is silver steel, RED and CREAM chest cloth, GREEN TURTLE emblem. Extract only the waist-length chest armor; any heraldic cloth may remain fitted over its torso. Second reference defines painterly RPG ITEM RENDERING STYLE only, never copy its symbols. NO DRAGON motifs. Preserve the design, materials and HOUSE SYMBOL of the FIRST reference. Remove all living body, helmet, head, arms, forearms, gloves, legs, skirt, cloak, shield, weapons and props. Hollow open neckline and empty armholes, short shoulder caps and short belt plates only. Slight three-quarter view, richly textured but readable at thumbnail size, crisp dark outlines, soft even lighting. Center one torso item with 10% margins on TRUE TRANSPARENT alpha background, very faint BLACK soft shadow below. No text, floor, stand or painted checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "71c7778ebc13a8b8c6e174af7d2f782e46d9c27c455b18d001a9a91ff940ff28",
+      "sourceSha256": "c0affc9df7efcc444c650a30550ce72d6e98de4ea85afed7e8af6f6132b83da5"
+    },
+    {
+      "id": "haus-awenor",
+      "name": "Haus Awenor",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-awenor&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenor/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-b2eb32d1040c9f82",
+      "file": "haus-awenor-harnisch-v1.png",
+      "prompt": "Create a square fantasy inventory image: EMPTY torso armor of Haus Awenor. First reference is this house's design. Its identifying design is silver and gold steel, BLUE chest cloth, small pale SWORD AND STAR heraldry. Extract only the waist-length chest armor; any heraldic cloth may remain fitted over its torso. Second reference defines painterly RPG ITEM RENDERING STYLE only, never copy its symbols. NO DRAGON motifs. Preserve the design, materials and HOUSE SYMBOL of the FIRST reference. Remove all living body, helmet, head, arms, forearms, gloves, legs, skirt, cloak, shield, weapons and props. Hollow open neckline and empty armholes, short shoulder caps and short belt plates only. Slight three-quarter view, richly textured but readable at thumbnail size, crisp dark outlines, soft even lighting. Center one torso item with 10% margins on TRUE TRANSPARENT alpha background, very faint BLACK soft shadow below. No text, floor, stand or painted checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "b327c78d7a77cd571e445214afff01fe7eb090f25607d34512f7e29c5161c3f4",
+      "sourceSha256": "b2eb32d1040c9f82210a90d678e410eaee0584af96e8dfee77b460c9843430ea"
+    },
+    {
+      "id": "haus-awenydd",
+      "name": "Haus Awenydd",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-awenydd&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenydd/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-770bcc6e6cddc21a",
+      "file": "haus-awenydd-harnisch-v1.png",
+      "prompt": "One empty waist-length torso harnisch for Haus Awenydd, square fantasy RPG inventory illustration. HOUSE DESIGN from first reference: antique STEEL with rust RED chest cloth and a PALE CASTLE GATE/PORTCULLIS crest. Transfer that house color scheme and chest emblem onto the torso cuirass. Second reference ONLY demonstrates rendering quality: textured painterly metal/leather, crisp outlines, readable three-quarter inventory view; DO NOT copy its chest symbol or its exact construction. Respect this house's rounded/segmented armor shapes from reference 1.  Remove EVERYTHING except torso armor: no helmet, no wearer/head/limbs, no cape, no long skirt, no horse, no shield, no weapon or held scroll, no floor or stand. Short shoulder caps allowed; stop at waist. Empty neck and arm openings. Center with clear margins. Genuine TRANSPARENT background, very faint soft BLACK shadow underneath. No text or watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "193a695ff6e7a3ffe28973d3c04c8c12b1406ec208dd0c875d4a935dd71a4ba1",
+      "sourceSha256": "770bcc6e6cddc21a4ba40fdb8ceedc3f08eeb7984c67f9bb5ad0d8fde9a58862"
+    },
+    {
+      "id": "haus-balchder",
+      "name": "Haus Balchder",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-balchder&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Balchder/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-5eccc10b14ffdefd",
+      "file": "haus-balchder-harnisch-v1.png",
+      "prompt": "One empty waist-length torso harnisch for Haus Balchder, square fantasy RPG inventory illustration. HOUSE DESIGN from first reference: black steel and detailed GOLD filigree, a PALE PARCHMENT SCROLL with red wax seal as chest heraldry. Transfer that house color scheme and chest emblem onto the torso cuirass. Second reference ONLY demonstrates rendering quality: textured painterly metal/leather, crisp outlines, readable three-quarter inventory view; DO NOT copy its chest symbol or its exact construction. Respect this house's rounded/segmented armor shapes from reference 1.  Remove EVERYTHING except torso armor: no helmet, no wearer/head/limbs, no cape, no long skirt, no horse, no shield, no weapon or held scroll, no floor or stand. Short shoulder caps allowed; stop at waist. Empty neck and arm openings. Center with clear margins. Genuine TRANSPARENT background, very faint soft BLACK shadow underneath. No text or watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "eb4b39a44125714207748c09ee9048b8d0c62c3897a01d74d44b45c3493216a2",
+      "sourceSha256": "5eccc10b14ffdefd0426ae047b199b1853c604a8ba041bfcf5a744040d148f9a"
+    },
+    {
+      "id": "haus-barus",
+      "name": "Haus Barus",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-barus&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Barus/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-29b9688e98385087",
+      "file": "haus-barus-harnisch-v1.png",
+      "prompt": "One empty waist-length torso harnisch for Haus Barus, square fantasy RPG inventory illustration. HOUSE DESIGN from first reference: weathered SILVER plate, BLUE cloth breast panel, a BIRD standing on COINS within a gold oval. Transfer that house color scheme and chest emblem onto the torso cuirass. Second reference ONLY demonstrates rendering quality: textured painterly metal/leather, crisp outlines, readable three-quarter inventory view; DO NOT copy its chest symbol or its exact construction. Respect this house's rounded/segmented armor shapes from reference 1.  Remove EVERYTHING except torso armor: no helmet, no wearer/head/limbs, no cape, no long skirt, no horse, no shield, no weapon or held scroll, no floor or stand. Short shoulder caps allowed; stop at waist. Empty neck and arm openings. Center with clear margins. Genuine TRANSPARENT background, very faint soft BLACK shadow underneath. No text or watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "d47358a54341227d510d42a9d0feb852b42dd137d484df784ae1b9ec09eace59",
+      "sourceSha256": "29b9688e98385087f73f2e36422cdd94ac2b29d69ed02acdb6d1b89a7bb05494"
+    },
+    {
+      "id": "haus-bekab",
+      "name": "Haus Bekab",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-bekab&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-bekab-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-bleiddorn",
+      "name": "Haus Bleiddorn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-bleiddorn&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Bleiddorn/assets/krieger-g850v6f.png",
+      "sourceIllustrationId": "bild-b857138c9d7fda90",
+      "file": "haus-bleiddorn-harnisch-v1.png",
+      "prompt": "One empty waist-length torso harnisch for Haus Bleiddorn, square fantasy RPG inventory illustration. HOUSE DESIGN from first reference: RED plate with GOLD trim, BLACK WOLF HEAD and curled gold horn within round chest medallion. Transfer that house color scheme and chest emblem onto the torso cuirass. Second reference ONLY demonstrates rendering quality: textured painterly metal/leather, crisp outlines, readable three-quarter inventory view; DO NOT copy its chest symbol or its exact construction. Respect this house's rounded/segmented armor shapes from reference 1.  Remove EVERYTHING except torso armor: no helmet, no wearer/head/limbs, no cape, no long skirt, no horse, no shield, no weapon or held scroll, no floor or stand. Short shoulder caps allowed; stop at waist. Empty neck and arm openings. Center with clear margins. Genuine TRANSPARENT background, very faint soft BLACK shadow underneath. No text or watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "865ce3e984cf20d4db3b7b5b740468543217270d162e4c61b2126f91b663f8f8",
+      "sourceSha256": "b857138c9d7fda90630aad9170691aadd1655081e5dce79f1aeaf56c6bee6e5b"
+    },
+    {
+      "id": "haus-bradrhith",
+      "name": "Haus Bradrhith",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor · Bradrhith Hof",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-bradrhith&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Bradrhith/assets/bradrhith-hausbild.png",
+      "sourceIllustrationId": "bild-e11f8f055e6309c0",
+      "file": "haus-bradrhith-harnisch-v1.png",
+      "prompt": "One empty waist-length torso harnisch for Haus Bradrhith, square fantasy RPG inventory illustration. HOUSE DESIGN from first reference: simple GREEN cloth-covered cuirass, dark green shield-shaped chest field with pale GRAZING HORSE emblem, brown leather edging. Transfer that house color scheme and chest emblem onto the torso cuirass. Second reference ONLY demonstrates rendering quality: textured painterly metal/leather, crisp outlines, readable three-quarter inventory view; DO NOT copy its chest symbol or its exact construction. Respect this house's rounded/segmented armor shapes from reference 1. The first reference shows simple clothing: interpret a modest protective torso under the green heraldic cloth, with no extravagant gold decoration. Remove EVERYTHING except torso armor: no helmet, no wearer/head/limbs, no cape, no long skirt, no horse, no shield, no weapon or held scroll, no floor or stand. Short shoulder caps allowed; stop at waist. Empty neck and arm openings. Center with clear margins. Genuine TRANSPARENT background, very faint soft BLACK shadow underneath. No text or watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "548a66729f79e2f479d5793f1c6c4fa70f4087784ebdc60dc6119e41ab1d3bc4",
+      "sourceSha256": "e11f8f055e6309c04df88b71962ad3bd34bc0216a4756fa4b77e080770479c99"
+    },
+    {
+      "id": "haus-braglas",
+      "name": "Haus Braglas",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-braglas&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-braglas-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-brinmarch",
+      "name": "Haus Brinmarch",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-brinmarch&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Brinmarch/assets/krieger.png",
+      "sourceIllustrationId": "bild-99ff021a0bdfb4c2",
+      "file": "haus-brinmarch-harnisch-v1.png",
+      "prompt": "One empty waist-length torso harnisch for Haus Brinmarch, square fantasy RPG inventory illustration. HOUSE DESIGN from first reference: dark STEEL with dark GREEN chest field, a HORSESHOE enclosing an UPRIGHT SWORD as its heraldic emblem. Transfer that house color scheme and chest emblem onto the torso cuirass. Second reference ONLY demonstrates rendering quality: textured painterly metal/leather, crisp outlines, readable three-quarter inventory view; DO NOT copy its chest symbol or its exact construction. Respect this house's rounded/segmented armor shapes from reference 1.  Remove EVERYTHING except torso armor: no helmet, no wearer/head/limbs, no cape, no long skirt, no horse, no shield, no weapon or held scroll, no floor or stand. Short shoulder caps allowed; stop at waist. Empty neck and arm openings. Center with clear margins. Genuine TRANSPARENT background, very faint soft BLACK shadow underneath. No text or watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "14960af30ce3344fe5dd3f44f227ec58983e085c4c44f58e66ac84162c1009bc",
+      "sourceSha256": "99ff021a0bdfb4c292931ab71e22b4a4283141bc2ad0a752338c4a266e861d87"
+    },
+    {
+      "id": "haus-caerlaen",
+      "name": "Haus Caerlaen",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-caerlaen&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-caerlaen-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-caerthwyn",
+      "name": "Haus Caerthwyn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-caerthwyn&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-caerthwyn-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-cenfig",
+      "name": "Haus Cenfig",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-cenfig&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Cenfig/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-fd65c3783f8e6548",
+      "file": "haus-cenfig-harnisch-v1.png",
+      "prompt": "Single empty torso armor of Haus Cenfig, square inventory item art. HOUSE DESIGN: weathered silver plate, muted GREEN chest field with a small shield bearing gold CLAWS/THORNS around a pale crescent shape; copy source crest accurately. Reference 1 is its house warrior; preserve these unique colors, emblem and construction. Reference 2 shows painterly fantasy RPG inventory rendering STYLE only, do not copy its gold trim, shapes or emblem. Empty waist-length chest harness with open neck/armholes, small shoulder caps, short waist plates optional. No human/head/arms/legs/helmet/gloves/boots, cape/robe/skirt, weapon/shield/props. Cloth heraldry can fit over protective torso only, truncated at waist. Strong readable silhouette, textured materials, crisp dark outlines, slight three-quarter view. One item with clear margins. Genuine TRANSPARENT background and faint soft BLACK shadow directly under armor, no floor/stand/text/watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "8350aba2b236dd9e7b89827c5d9ab440289353b38b9293c49dd0676a7e1b0649",
+      "sourceSha256": "fd65c3783f8e654876679b0b86708456f4115cdadacb58e257841881c968ad91"
+    },
+    {
+      "id": "haus-chwedlonol",
+      "name": "Haus Chwedonol",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-chwedlonol&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Chwedonol/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-63884fdc419dec51",
+      "file": "haus-chwedlonol-harnisch-v1.png",
+      "prompt": "Single empty torso armor of Haus Chwedonol, square inventory item art. HOUSE DESIGN: weathered steel, TEAL blue-green chest cloth, GOLDEN SEAHORSE heraldic emblem. Reference 1 is its house warrior; preserve these unique colors, emblem and construction. Reference 2 shows painterly fantasy RPG inventory rendering STYLE only, do not copy its gold trim, shapes or emblem. Empty waist-length chest harness with open neck/armholes, small shoulder caps, short waist plates optional. No human/head/arms/legs/helmet/gloves/boots, cape/robe/skirt, weapon/shield/props. Cloth heraldry can fit over protective torso only, truncated at waist. Strong readable silhouette, textured materials, crisp dark outlines, slight three-quarter view. One item with clear margins. Genuine TRANSPARENT background and faint soft BLACK shadow directly under armor, no floor/stand/text/watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "efe3c1d38655839cb16b2a156610a8771bedcf437555da47fc3866d461f2e1a4",
+      "sourceSha256": "63884fdc419dec51b5b7a9e0fa147d46abcbe489318aeb8937b4fc2b31461283"
+    },
+    {
+      "id": "haus-cludwyr",
+      "name": "Haus Cludwyr",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-cludwyr&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cludwyr/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-62ef43583d055366",
+      "file": "haus-cludwyr-harnisch-v1.png",
+      "prompt": "Single empty torso armor of Haus Cludwyr, square inventory item art. HOUSE DESIGN: steel rounded segmented shoulders, BLUE breast cloth with TWO GOLD WHEAT EARS and long grass leaves. Reference 1 is its house warrior; preserve these unique colors, emblem and construction. Reference 2 shows painterly fantasy RPG inventory rendering STYLE only, do not copy its gold trim, shapes or emblem. Empty waist-length chest harness with open neck/armholes, small shoulder caps, short waist plates optional. No human/head/arms/legs/helmet/gloves/boots, cape/robe/skirt, weapon/shield/props. Cloth heraldry can fit over protective torso only, truncated at waist. Strong readable silhouette, textured materials, crisp dark outlines, slight three-quarter view. One item with clear margins. Genuine TRANSPARENT background and faint soft BLACK shadow directly under armor, no floor/stand/text/watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "5ae7ba6a5b0c15fc10df8b0c3d68adb98079885792bbefaa60c98ac6720a33ce",
+      "sourceSha256": "62ef43583d0553660986eebe10b0f5783b7ad419fcd791acd092f9c5bdea1c9c"
+    },
+    {
+      "id": "haus-coeddu",
+      "name": "Haus Coeddu",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-coeddu&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Coeddu/assets/coeddu-krieger.png",
+      "sourceIllustrationId": "bild-3781320b04414a6c",
+      "file": "haus-coeddu-harnisch-v1.png",
+      "prompt": "Single empty torso armor of Haus Coeddu, square inventory item art. HOUSE DESIGN: steel plate over RED and IVORY DIAMOND patterned chest fabric, central golden rectangle with dark gray TOMBSTONE emblem. Reference 1 is its house warrior; preserve these unique colors, emblem and construction. Reference 2 shows painterly fantasy RPG inventory rendering STYLE only, do not copy its gold trim, shapes or emblem. Empty waist-length chest harness with open neck/armholes, small shoulder caps, short waist plates optional. No human/head/arms/legs/helmet/gloves/boots, cape/robe/skirt, weapon/shield/props. Cloth heraldry can fit over protective torso only, truncated at waist. Strong readable silhouette, textured materials, crisp dark outlines, slight three-quarter view. One item with clear margins. Genuine TRANSPARENT background and faint soft BLACK shadow directly under armor, no floor/stand/text/watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "b90b1064ac2c7756a18229b544fda4fb4c526d1f4cca5a37756a5d6b1f68d562",
+      "sourceSha256": "3781320b04414a6cda8c1a908a1fbd90231a175e670a50156940f323bdc537c1"
+    },
+    {
+      "id": "haus-coedvarn",
+      "name": "Haus Coedvarn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-coedvarn&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Coedvarn/assets/krieger.png",
+      "sourceIllustrationId": "bild-0557ab9b39f38150",
+      "file": "haus-coedvarn-harnisch-v1.png",
+      "prompt": "Single empty torso armor of Haus Coedvarn, square inventory item art. HOUSE DESIGN: dark green protective leather and tan edging, PALE BOW with HORIZONTAL ARROW and two PINE TREES as chest heraldry. Reference 1 is its house warrior; preserve these unique colors, emblem and construction. Reference 2 shows painterly fantasy RPG inventory rendering STYLE only, do not copy its gold trim, shapes or emblem. Empty waist-length chest harness with open neck/armholes, small shoulder caps, short waist plates optional. No human/head/arms/legs/helmet/gloves/boots, cape/robe/skirt, weapon/shield/props. Cloth heraldry can fit over protective torso only, truncated at waist. Strong readable silhouette, textured materials, crisp dark outlines, slight three-quarter view. One item with clear margins. Genuine TRANSPARENT background and faint soft BLACK shadow directly under armor, no floor/stand/text/watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "c73a6cd2bdfa3240404a7cc3423b081cf8207be181167fd0bd4a9baf7145977e",
+      "sourceSha256": "0557ab9b39f38150899acf9ac10afe3371ade1eddbd3bff7fc63edbbce93a9c4"
+    },
+    {
+      "id": "craigddu",
+      "name": "Haus Craigddu",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=craigddu&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Craigddu/assets/craigddu-krieger.png",
+      "sourceIllustrationId": "bild-3b3adf1f46d9b259",
+      "file": "craigddu-harnisch-v1.png",
+      "prompt": "Single empty torso armor of Haus Craigddu, square inventory item art. HOUSE DESIGN: simple gray iron shoulder caps, BLUE chest cloth bearing PALE THREE-TOWER CASTLE on dark rocky crag. Reference 1 is its house warrior; preserve these unique colors, emblem and construction. Reference 2 shows painterly fantasy RPG inventory rendering STYLE only, do not copy its gold trim, shapes or emblem. Empty waist-length chest harness with open neck/armholes, small shoulder caps, short waist plates optional. No human/head/arms/legs/helmet/gloves/boots, cape/robe/skirt, weapon/shield/props. Cloth heraldry can fit over protective torso only, truncated at waist. Strong readable silhouette, textured materials, crisp dark outlines, slight three-quarter view. One item with clear margins. Genuine TRANSPARENT background and faint soft BLACK shadow directly under armor, no floor/stand/text/watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "21672dec974b3fef71ca861bd142baee8066503eaa800e083546d61f19372f6a",
+      "sourceSha256": "3b3adf1f46d9b259da04f84ab5002831ea76110a9af414df45a08fd8cf4a74ae"
+    },
+    {
+      "id": "haus-cymrath-o-traethlan",
+      "name": "Haus Cymrath O'Traethlan",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Tŵr Traethlan",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-cymrath-o-traethlan&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-cymrath-o-traethlan-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-cysgodion",
+      "name": "Haus Cysgodion",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-cysgodion&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Cysgodion/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-446b418d450869bb",
+      "file": "haus-cysgodion-harnisch-v1.png",
+      "prompt": "Create ONE empty torso armor for Haus Cysgodion. Square fantasy RPG inventory art. First image defines HOUSE DESIGN: plain dark weathered brown-black plates, crossed brown leather straps and narrow muted burgundy waist lining, NO crest and NO gold trim. Preserve that distinctive design. Second image is RENDERING STYLE ONLY: detailed painterly textures, strong dark outlines, gentle three-quarter angle, NOT its chest pattern or palette. Hollow open neck and armholes, small shoulder caps, short waist finish, whole object fully visible. ONLY the waist-length torso/harnisch: NO helmet/head/body/arms/legs/boots, cape/robe/skirt, weapons/shield, stand/floor. Do not transfer symbols from the style reference. True transparent alpha background, very subtle BLACK shadow directly below, clear margins. No letters or watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "c510b18da04af9ee128f349c57e1f94cb32037ef8de4a7838721bda060c2b3f6",
+      "sourceSha256": "446b418d450869bbd392e71fd2d31302b62700e58e6370dfa3c49f45b4abc051"
+    },
+    {
+      "id": "haus-daran",
+      "name": "Haus Daran",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Garwfaen",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-daran&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Daran/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-e26e6dd52ececb47",
+      "file": "haus-daran-harnisch-v1.png",
+      "prompt": "Create ONE empty torso armor for Haus Daran. Square fantasy RPG inventory art. First image defines HOUSE DESIGN: rust RED plate, dull gold edging, central RED BULL HEAD with GOLD HORNS and two small gold bone-like ornaments beneath its muzzle. Preserve that distinctive design. Second image is RENDERING STYLE ONLY: detailed painterly textures, strong dark outlines, gentle three-quarter angle, NOT its chest pattern or palette. Hollow open neck and armholes, small shoulder caps, short waist finish, whole object fully visible. ONLY the waist-length torso/harnisch: NO helmet/head/body/arms/legs/boots, cape/robe/skirt, weapons/shield, stand/floor. Do not transfer symbols from the style reference. True transparent alpha background, very subtle BLACK shadow directly below, clear margins. No letters or watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "a869135f1b2dd0fa04b1a3a6076da7605665cc6fd9fdb4bf3b03826ccffb5283",
+      "sourceSha256": "e26e6dd52ececb47cdff60e725dbc3bb39035ed603bb0108a8e4aa51d0480c5e"
+    },
+    {
+      "id": "haus-draenmelyn",
+      "name": "Haus Draenmelyn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-draenmelyn-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-draig",
+      "name": "Haus Draig",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-draig&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/draig-ritter.png",
+      "sourceIllustrationId": "bild-b81ceeeb69d9fa4b",
+      "file": "haus-draig-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. One square fantasy RPG inventory asset, the torso armor of Haus Draig. Reference 1 defines this house's exact armor DESIGN, metal colors, trim and heraldic chest emblem. Reference 2 defines the ITEM ART STYLE: match painterly textured metal/leather, crisp dark outlines, readable details, gentle three-quarter view. Extract ONLY the torso cuirass from the warrior: an EMPTY standalone waist-length harness with open neck and empty armholes, small attached shoulder caps and short waist plates allowed. Faithfully retain the house colors and chest emblem from reference 1. NO helmet, head, wearer, mannequin, arms, gloves, legs, boots, long skirt, cloak, weapon, shield, stand or text. Keep silhouette within square with 10% clear margins. TRUE transparent alpha background, only a faint soft BLACK contact shadow immediately beneath the torso; no painted backdrop or checkerboard. One armor item.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/character-equipment/gawain-silberschuppe-v4.png"
+      ],
+      "sha256": "b205e9ddf65cf591a2af58ae46599ab604baddf9aab610ced130e3a1d8ca05f8",
+      "sourceSha256": "b81ceeeb69d9fa4b78941393cf544dbd5ff74470ceae526203c2b33d4fda21ce"
+    },
+    {
+      "id": "haus-dubhan-gwynthor",
+      "name": "Haus Dubhan",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-dubhan-gwynthor&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Dubhan/assets/krieger-M3xsR4U.png",
+      "sourceIllustrationId": "bild-3046ebfb3dc1a1b5",
+      "file": "haus-dubhan-gwynthor-harnisch-v1.png",
+      "prompt": "Create ONE empty torso armor for Haus Dubhan. Square fantasy RPG inventory art. First image defines HOUSE DESIGN: weathered silver plate with RUST ORANGE and GREEN checked chest cloth, circular Celtic medallion with CROSSED GOLD AXES. Preserve that distinctive design. Second image is RENDERING STYLE ONLY: detailed painterly textures, strong dark outlines, gentle three-quarter angle, NOT its chest pattern or palette. Hollow open neck and armholes, small shoulder caps, short waist finish, whole object fully visible. ONLY the waist-length torso/harnisch: NO helmet/head/body/arms/legs/boots, cape/robe/skirt, weapons/shield, stand/floor. Do not transfer symbols from the style reference. True transparent alpha background, very subtle BLACK shadow directly below, clear margins. No letters or watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "b3ce4c75946fdc18d843e64e68cc8bd5d06b7b43335caa5fc2a62d96ba272c21",
+      "sourceSha256": "3046ebfb3dc1a1b5349d7cf41c86436dc55e1eeb2f678f45f85660b25d7df785"
+    },
+    {
+      "id": "haus-edmy",
+      "name": "Haus Edmy",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-edmy&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Edmy/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-5b72f001d8b6a502",
+      "file": "haus-edmy-harnisch-v1.png",
+      "prompt": "Create ONE empty torso armor for Haus Edmy. Square fantasy RPG inventory art. First image defines HOUSE DESIGN: bright silver plate gold borders, BURGUNDY chest cloth, small shield showing TWO GOLD FIGURES kneeling and standing (copy source crest). Preserve that distinctive design. Second image is RENDERING STYLE ONLY: detailed painterly textures, strong dark outlines, gentle three-quarter angle, NOT its chest pattern or palette. Hollow open neck and armholes, small shoulder caps, short waist finish, whole object fully visible. ONLY the waist-length torso/harnisch: NO helmet/head/body/arms/legs/boots, cape/robe/skirt, weapons/shield, stand/floor. Do not transfer symbols from the style reference. True transparent alpha background, very subtle BLACK shadow directly below, clear margins. No letters or watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "7f947c87741dbc18f2198dd17f89a22fd3cfa3a37e9a85878bf623161f3f35dd",
+      "sourceSha256": "5b72f001d8b6a50264e7b13bc221db36444f27fbb4fb2313db48bd775d347c04"
+    },
+    {
+      "id": "haus-eirfael",
+      "name": "Haus Eirfael",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-eirfael&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Eirfael/assets/krieger.png",
+      "sourceIllustrationId": "bild-6055c2f5d2bd44dc",
+      "file": "haus-eirfael-harnisch-v1.png",
+      "prompt": "Create ONE empty torso armor for Haus Eirfael. Square fantasy RPG inventory art. First image defines HOUSE DESIGN: silver GREEN steel, GREEN cloth chest, oval pale HORSE HEAD AND LAUREL branch emblem. Preserve that distinctive design. Second image is RENDERING STYLE ONLY: detailed painterly textures, strong dark outlines, gentle three-quarter angle, NOT its chest pattern or palette. Hollow open neck and armholes, small shoulder caps, short waist finish, whole object fully visible. ONLY the waist-length torso/harnisch: NO helmet/head/body/arms/legs/boots, cape/robe/skirt, weapons/shield, stand/floor. Do not transfer symbols from the style reference. True transparent alpha background, very subtle BLACK shadow directly below, clear margins. No letters or watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "7239d517644aa7a1315b745855d12489737def78746c5473bc941a14f1883619",
+      "sourceSha256": "6055c2f5d2bd44dcd0b208e125cfc851deefe678f2157174841b769951b6f133"
+    },
+    {
+      "id": "haus-eneiniog",
+      "name": "Haus Eneiniog",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-eneiniog&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Eneiniog/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-39220b2fb688e14e",
+      "file": "haus-eneiniog-harnisch-v1.png",
+      "prompt": "Create ONE empty torso armor for Haus Eneiniog. Square fantasy RPG inventory art. First image defines HOUSE DESIGN: pale steel, IVORY chest cloth, BURGUNDY circular medallion showing TWO PALE HUMAN FIGURES exchanging a small item (heraldic flat drawing only). Preserve that distinctive design. Second image is RENDERING STYLE ONLY: detailed painterly textures, strong dark outlines, gentle three-quarter angle, NOT its chest pattern or palette. Hollow open neck and armholes, small shoulder caps, short waist finish, whole object fully visible. ONLY the waist-length torso/harnisch: NO helmet/head/body/arms/legs/boots, cape/robe/skirt, weapons/shield, stand/floor. Do not transfer symbols from the style reference. True transparent alpha background, very subtle BLACK shadow directly below, clear margins. No letters or watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "034bebe63d59c7fe0de537eabe0b52af121ae3ca43d28a3b522471352c48fd3d",
+      "sourceSha256": "39220b2fb688e14e2c33f3705f46bc735bd39ce30daad9d1c919992246c69474"
+    },
+    {
+      "id": "haus-falchdyn",
+      "name": "Haus Falchdyn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-falchdyn&mode=view",
+      "sourceImage": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn-Hausbild.png",
+      "sourceIllustrationId": "bild-b06dccc8354e2d34",
+      "file": "haus-falchdyn-harnisch-v1.png",
+      "prompt": "One empty torso armor inventory item, Haus Falchdyn. First reference is canonical HOUSE DESIGN: charcoal small overlapping SCALE chest armor, warm gold central opening trim, red padded underlining, brown waist belt; NO crest on chest and NO parchment scroll. Preserve its distinctive material and emblem; render its waist-length protective torso only. Second reference is painterly fantasy RPG rendering STYLE only, never copy its construction, chest motif or palette. Open neck and empty armholes. Attached short shoulder caps and short waist finish allowed. NO person, helmet, head, arms, hands, legs, boots, cape, long skirt, shield, weapons, held props or mannequin. Square composition with margin, slight three-quarter view, rich readable painted texture and dark outlines. TRUE transparent alpha background; only very faint soft BLACK shadow underneath. No text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "70e5344241a1339d46eef6ad69423a5271f2a6ee6a81cd16d7e037997cd2eed0",
+      "sourceSha256": "b06dccc8354e2d3459a7a6a1c6be7beefd1e7780be43554d55cb1f001cfd4749"
+    },
+    {
+      "id": "haus-gafyr",
+      "name": "Haus Gafyr",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gafyr/assets/ritter.png",
+      "sourceIllustrationId": "bild-9a2b72a0e9596ddb",
+      "file": "haus-gafyr-harnisch-v1.png",
+      "prompt": "Edit the first image, the empty black and gold torso armor, to correct ONLY its CHEST DESIGN. The chest currently has a gold DRAGON, which is WRONG for Haus Gafyr. REMOVE that dragon entirely. Reference 2 is the canonical Gafyr warrior: his black chest has a simple narrow geometric gold cross/branch-like vertical reinforcement, NOT a dragon or animal. Reproduce that narrow angular vertical gold chest reinforcement faithfully from reference 2. Keep blackened metal, gold-edged pointed pauldrons, empty neck/armholes, short waist plates, beautiful textured inventory art. No helmet, person, arms, legs, cloak or weapons. Preserve genuine transparent alpha and very subtle BLACK ground shadow. One square empty torso item.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/character-equipment/gawain-silberschuppe-v4.png"
+      ],
+      "sha256": "f83bbb9f73ad6c2cdcc446c351bce02e88a5efea709ae7d401e11686f4733a63",
+      "sourceSha256": "9a2b72a0e9596ddb71656fa8b7601b67849871bd793f4310146d99989e51c340",
+      "initialPrompt": "Use case: stylized-concept. One square fantasy RPG inventory asset, the torso armor of Haus Gafyr. Reference 1 defines this house's exact armor DESIGN, metal colors, trim and heraldic chest emblem. Reference 2 defines the ITEM ART STYLE: match painterly textured metal/leather, crisp dark outlines, readable details, gentle three-quarter view. Extract ONLY the torso cuirass from the warrior: an EMPTY standalone waist-length harness with open neck and empty armholes, small attached shoulder caps and short waist plates allowed. Faithfully retain the house colors and chest emblem from reference 1. NO helmet, head, wearer, mannequin, arms, gloves, legs, boots, long skirt, cloak, weapon, shield, stand or text. Keep silhouette within square with 10% clear margins. TRUE transparent alpha background, only a faint soft BLACK contact shadow immediately beneath the torso; no painted backdrop or checkerboard. One armor item.",
+      "correction": {
+        "editTarget": "Initial generated Gafyr torso with incorrect dragon emblem",
+        "editTargetSha256": "e58618e25d45a31d6e29b0355c1a3268eac5c08b35024d73c1469af76e1d87ae",
+        "reference": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gafyr/assets/ritter.png"
+      }
+    },
+    {
+      "id": "haus-garrael",
+      "name": "Haus Garrael",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Camruisge · Aberllan",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-garrael&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Camruisge/Haus_Garrael/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-39adf7d48a7b5b6a",
+      "file": "haus-garrael-harnisch-v1.png",
+      "prompt": "One empty torso armor inventory item, Haus Garrael. First reference is canonical HOUSE DESIGN: weathered gray chainmail cuirass with GREEN cloth over chest, pale shield showing an UPRIGHT STANDING STONE with three wavy lines on each side. Preserve its distinctive material and emblem; render its waist-length protective torso only. Second reference is painterly fantasy RPG rendering STYLE only, never copy its construction, chest motif or palette. Open neck and empty armholes. Attached short shoulder caps and short waist finish allowed. NO person, helmet, head, arms, hands, legs, boots, cape, long skirt, shield, weapons, held props or mannequin. Square composition with margin, slight three-quarter view, rich readable painted texture and dark outlines. TRUE transparent alpha background; only very faint soft BLACK shadow underneath. No text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "7af2bbf8c24b92776d15e1441118bbdc304e6c65f000a2ca5abd334a70839d0c",
+      "sourceSha256": "39adf7d48a7b5b6af7cccf9c313e9dd11c7ec3c5ba975a2a4d84ad7709690fc1"
+    },
+    {
+      "id": "haus-gelyn",
+      "name": "Haus Gelyn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gelyn&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gelyn/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-6e43da1810776e2a",
+      "file": "haus-gelyn-harnisch-v1.png",
+      "prompt": "One empty torso armor inventory item, Haus Gelyn. First reference is canonical HOUSE DESIGN: antique GOLD and RED plate, red chest panel bearing a small gold bordered shield with simple GOLD SHIELD shape inside. Preserve its distinctive material and emblem; render its waist-length protective torso only. Second reference is painterly fantasy RPG rendering STYLE only, never copy its construction, chest motif or palette. Open neck and empty armholes. Attached short shoulder caps and short waist finish allowed. NO person, helmet, head, arms, hands, legs, boots, cape, long skirt, shield, weapons, held props or mannequin. Square composition with margin, slight three-quarter view, rich readable painted texture and dark outlines. TRUE transparent alpha background; only very faint soft BLACK shadow underneath. No text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "b42661617ab1be3d2131efc459333171c03c4f665a59ecc329d513ffd9000f0f",
+      "sourceSha256": "6e43da1810776e2aec38862c918dfd2c6700c8ed08d17d905fb69c20965506fb"
+    },
+    {
+      "id": "haus-ghorswyn",
+      "name": "Haus Ghorswyn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-ghorswyn&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Ghorswyn/assets/krieger.png",
+      "sourceIllustrationId": "bild-b78ef990b70b9bc8",
+      "file": "haus-ghorswyn-harnisch-v1.png",
+      "prompt": "One empty torso armor inventory item, Haus Ghorswyn. First reference is canonical HOUSE DESIGN: muted olive leather, IVORY chest panel and tan leather shoulder caps, GREEN oval with PALE UPRIGHT ARROW encircled by LAUREL branches. Preserve its distinctive material and emblem; render its waist-length protective torso only. Second reference is painterly fantasy RPG rendering STYLE only, never copy its construction, chest motif or palette. Open neck and empty armholes. Attached short shoulder caps and short waist finish allowed. NO person, helmet, head, arms, hands, legs, boots, cape, long skirt, shield, weapons, held props or mannequin. Square composition with margin, slight three-quarter view, rich readable painted texture and dark outlines. TRUE transparent alpha background; only very faint soft BLACK shadow underneath. No text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "a219bb6d756589a2556c71b53ef2e3563822cb91f462e32b2c933d4f0c02f874",
+      "sourceSha256": "b78ef990b70b9bc856dc10dd225650943e81ac76f471db6100f9c03534c003e6"
+    },
+    {
+      "id": "haus-gostyn",
+      "name": "Haus Gostyn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gostyn&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gostyn/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-f70e757fae5ab215",
+      "file": "haus-gostyn-harnisch-v1.png",
+      "prompt": "One empty torso armor inventory item, Haus Gostyn. First reference is canonical HOUSE DESIGN: ochre GOLD plate and brown-gold cloth breast, pale circular heraldic PLATE with FORK and KNIFE alongside. Preserve its distinctive material and emblem; render its waist-length protective torso only. Second reference is painterly fantasy RPG rendering STYLE only, never copy its construction, chest motif or palette. Open neck and empty armholes. Attached short shoulder caps and short waist finish allowed. NO person, helmet, head, arms, hands, legs, boots, cape, long skirt, shield, weapons, held props or mannequin. Square composition with margin, slight three-quarter view, rich readable painted texture and dark outlines. TRUE transparent alpha background; only very faint soft BLACK shadow underneath. No text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "f60e6703b55b92ab031201d9c3261a129a04079983aca445804d32649c5828a4",
+      "sourceSha256": "f70e757fae5ab2159ca11ebe0ab3afb4d582e73c3bca961e2bddbbc28ec35de5"
+    },
+    {
+      "id": "haus-gwardin",
+      "name": "Haus Gwardin",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gwardin&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwardin/assets/krieger.png",
+      "sourceIllustrationId": "bild-bd89940752df3932",
+      "file": "haus-gwardin-harnisch-v1.png",
+      "prompt": "One empty torso armor inventory item, Haus Gwardin. First reference is canonical HOUSE DESIGN: gray-green steel segmented armor, dark BLUE chest panel, GOLD HAWK perched on small post inside gold oval. Preserve its distinctive material and emblem; render its waist-length protective torso only. Second reference is painterly fantasy RPG rendering STYLE only, never copy its construction, chest motif or palette. Open neck and empty armholes. Attached short shoulder caps and short waist finish allowed. NO person, helmet, head, arms, hands, legs, boots, cape, long skirt, shield, weapons, held props or mannequin. Square composition with margin, slight three-quarter view, rich readable painted texture and dark outlines. TRUE transparent alpha background; only very faint soft BLACK shadow underneath. No text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "b813375ce917da53dedb87bfa7ab6aed872f4c9fb9d8d1a09aa990ee4fd7eec5",
+      "sourceSha256": "bd89940752df39329e3f07cd4fa2f3047f0aff042676a4d2e4eabb52ec28fe5d"
+    },
+    {
+      "id": "haus-gwared",
+      "name": "Haus Gwared",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Rhonwens Tränen · Castellbryn",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gwared&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Gwared/assets/krieger.png",
+      "sourceIllustrationId": "bild-56c6696a5c64d659",
+      "file": "haus-gwared-harnisch-v1.png",
+      "prompt": "One EMPTY waist-length torso armor for Haus Gwared. Design from first reference: GREEN overlapping scale torso, restrained GOLD trim, green chest shield bearing GOLD SNAKE coiled around a SMALL TOWER; preserve scale construction. Preserve its specific construction and materials, adapting the visible protective torso into an isolated inventory item. Second reference is only painterly fantasy RPG rendering style, dark outlines, textured materials and readable three-quarter composition; never copy its emblem or generic shape. Hollow neck and arm openings, short shoulder caps and short waist plates only. NO person/head/arms/legs, helmet, gloves, boots, robe/cape/long skirt, weapons, shield, props, stand. Square format with clear margins. TRUE TRANSPARENT alpha background, only a faint soft BLACK contact shadow immediately below. No text/watermark/floor/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "25a5bad256f4968d27e44a21d9d377b2728be7569afd2254fc0195b04153688d",
+      "sourceSha256": "56c6696a5c64d659018d4c228d29ff361c4f6ac032a4c884c08a92dd42a11cee"
+    },
+    {
+      "id": "haus-gwefrydd",
+      "name": "Haus Gwefrydd",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gwefrydd&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwefrydd/assets/ritter.png",
+      "sourceIllustrationId": "bild-b6721bb29b7a27bf",
+      "file": "haus-gwefrydd-harnisch-v1.png",
+      "prompt": "One EMPTY waist-length torso armor for Haus Gwefrydd. Design from first reference: DARK SILVER rounded plate shoulders and chest, RED chest panel and IVORY circle with BLACK REARING HORSE emblem. Preserve its specific construction and materials, adapting the visible protective torso into an isolated inventory item. Second reference is only painterly fantasy RPG rendering style, dark outlines, textured materials and readable three-quarter composition; never copy its emblem or generic shape. Hollow neck and arm openings, short shoulder caps and short waist plates only. NO person/head/arms/legs, helmet, gloves, boots, robe/cape/long skirt, weapons, shield, props, stand. Square format with clear margins. TRUE TRANSPARENT alpha background, only a faint soft BLACK contact shadow immediately below. No text/watermark/floor/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "a1de384a0c0340581226cd3dc246db3030df7d1acff1942f1fd2e6ea7c444848",
+      "sourceSha256": "b6721bb29b7a27bf6b8621d67f81741b205d0868e02c4ac315b31ecbee3f0682"
+    },
+    {
+      "id": "haus-gwyllach",
+      "name": "Haus Gwyllach",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gwyllach/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-878be5ef00e3b182",
+      "file": "haus-gwyllach-harnisch-v1.png",
+      "prompt": "One EMPTY waist-length torso armor for Haus Gwyllach. Design from first reference: dark charcoal fitted leather brigandine torso with subtle PURPLE edging and brown crossing straps, a small round dark purple/gold animal-clasp from the first reference at upper chest; NO cape or hood. Preserve its specific construction and materials, adapting the visible protective torso into an isolated inventory item. Second reference is only painterly fantasy RPG rendering style, dark outlines, textured materials and readable three-quarter composition; never copy its emblem or generic shape. Hollow neck and arm openings, short shoulder caps and short waist plates only. NO person/head/arms/legs, helmet, gloves, boots, robe/cape/long skirt, weapons, shield, props, stand. Square format with clear margins. TRUE TRANSPARENT alpha background, only a faint soft BLACK contact shadow immediately below. No text/watermark/floor/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "922b6bc42fbe4c62dff2985d9427c0ac72f9c917c6d04cf34879d4cfaa934456",
+      "sourceSha256": "878be5ef00e3b1822184e56db1e4fddadafdc5b819ec0c92b2f52bd3eca0cd75"
+    },
+    {
+      "id": "haus-gwynrhos",
+      "name": "Haus Gwynrhos",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gwynrhos&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwynrhos/assets/krieger.png",
+      "sourceIllustrationId": "bild-e76019a0e3c46544",
+      "file": "haus-gwynrhos-harnisch-v1.png",
+      "prompt": "One EMPTY waist-length torso armor for Haus Gwynrhos. Design from first reference: gray-green STEEL armor with TEAL BLUE chest cloth, round golden outline and GOLD REARING HORSE inside. Preserve its specific construction and materials, adapting the visible protective torso into an isolated inventory item. Second reference is only painterly fantasy RPG rendering style, dark outlines, textured materials and readable three-quarter composition; never copy its emblem or generic shape. Hollow neck and arm openings, short shoulder caps and short waist plates only. NO person/head/arms/legs, helmet, gloves, boots, robe/cape/long skirt, weapons, shield, props, stand. Square format with clear margins. TRUE TRANSPARENT alpha background, only a faint soft BLACK contact shadow immediately below. No text/watermark/floor/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "df78f310a6d1bd1603e0930d816953a7fcdadcbc2ac63a96f0f8a890821989ac",
+      "sourceSha256": "e76019a0e3c4654428c57cd72696b643a850ce4338e8b90a07747d112e248727"
+    },
+    {
+      "id": "haus-gwyntog",
+      "name": "Haus Gwyntog",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gwyntog&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Gwyntog/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-5cc3a6400fc5810c",
+      "file": "haus-gwyntog-harnisch-v1.png",
+      "prompt": "One EMPTY waist-length torso armor for Haus Gwyntog. Design from first reference: simple burgundy RED protective chest with dark leather sides, gold-rimmed black medallion bearing a GOLD SAILING LONGSHIP on WAVES. Preserve its specific construction and materials, adapting the visible protective torso into an isolated inventory item. Second reference is only painterly fantasy RPG rendering style, dark outlines, textured materials and readable three-quarter composition; never copy its emblem or generic shape. Hollow neck and arm openings, short shoulder caps and short waist plates only. NO person/head/arms/legs, helmet, gloves, boots, robe/cape/long skirt, weapons, shield, props, stand. Square format with clear margins. TRUE TRANSPARENT alpha background, only a faint soft BLACK contact shadow immediately below. No text/watermark/floor/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "a23d65153f3f9982936f13a3071b7db7036780ee8742978af81a11e69604f07b",
+      "sourceSha256": "5cc3a6400fc5810c02e8237eeb73a0676ffcc4cab5c29c753c6a36cb1b499889"
+    },
+    {
+      "id": "haus-gwyvern",
+      "name": "Haus Gwyvern",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gwyvern&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Gwyvern/assets/ritter.png",
+      "sourceIllustrationId": "bild-72eeb2a955be2f88",
+      "file": "haus-gwyvern-harnisch-v1.png",
+      "prompt": "One EMPTY waist-length torso armor for Haus Gwyvern. Design from first reference: ornate RED and GOLD plate with GOLD SCALE shoulder caps, red circle on chest with PALE COILING WYVERN emblem from first reference. Preserve its specific construction and materials, adapting the visible protective torso into an isolated inventory item. Second reference is only painterly fantasy RPG rendering style, dark outlines, textured materials and readable three-quarter composition; never copy its emblem or generic shape. Hollow neck and arm openings, short shoulder caps and short waist plates only. NO person/head/arms/legs, helmet, gloves, boots, robe/cape/long skirt, weapons, shield, props, stand. Square format with clear margins. TRUE TRANSPARENT alpha background, only a faint soft BLACK contact shadow immediately below. No text/watermark/floor/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "45051e418b37403aa83fa1954e826c56bc4bb58e3b9067483da8e16696b6352d",
+      "sourceSha256": "72eeb2a955be2f886bfa8019afcab0894acdb53d45a82d034efcbbcce0ce7ce0"
+    },
+    {
+      "id": "haus-illysywen",
+      "name": "Haus Illysywen",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Rhonwens Tränen · Castellbryn",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-illysywen&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Illysywen/assets/ritter.png",
+      "sourceIllustrationId": "bild-37d3839095905319",
+      "file": "haus-illysywen-harnisch-v1.png",
+      "prompt": "Create a single empty waist-length torso armor for Haus Illysywen. First reference defines house design: BLACK overlapping scales with restrained gold piping and black leather; chest shield GOLD field with BLACK coiled EEL/SERPENT and a small black TRIDENT, pale patterned shield border. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "b97f1aae1a4a333c999a0a8c827e049c4a69291368e08208b34c73b5f1dad645",
+      "sourceSha256": "37d38390959053192eb9edf617de92f0cb337d9128065a44c09bc2b7c41b9e8c"
+    },
+    {
+      "id": "haus-iorwen",
+      "name": "Haus Iorwen",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-iorwen&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-iorwen-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-loer",
+      "name": "Haus Loer",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-loer&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Loer/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-d05a008af6a67422",
+      "file": "haus-loer-harnisch-v1.png",
+      "prompt": "Create a single empty waist-length torso armor for Haus Loer. First reference defines house design: weathered steel, PURPLE chest panel with pale GAUNTLETED HAND holding a red leaf-shaped flower inside an oval. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "0243f84e011e4447ee38d66981befa9310eea300c40caaa4c04f96cbffa258dd",
+      "sourceSha256": "d05a008af6a674220d10105c0c5786136bd9f3a6bd2e082bab0841db37303b6b"
+    },
+    {
+      "id": "haus-madryn",
+      "name": "Haus Madryn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Rhonwens Tränen",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-madryn&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Madryn/assets/krieger.png",
+      "sourceIllustrationId": "bild-e74a6faf44dcb2f9",
+      "file": "haus-madryn-harnisch-v1.png",
+      "prompt": "Create a single empty waist-length torso armor for Haus Madryn. First reference defines house design: simple brown RIVETED LEATHER brigandine torso, olive underlining, small BLUE round medallion with GOLD WOODEN BRIDGE and pale WAVES. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "00dfb9ee2228236a47054b210136b33ee1f4d92b50be48c3247f79f0d4ecea2e",
+      "sourceSha256": "e74a6faf44dcb2f92d739a23df650596ada3755de90c66a726cb4e48f33a517f"
+    },
+    {
+      "id": "haus-maerllys",
+      "name": "Haus Maerllys",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-maerllys-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-maethan",
+      "name": "Haus Maethan",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-maethan&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-maethan-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-merek",
+      "name": "Haus Merek",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Rhonwens Tränen",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-merek&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Merek/assets/krieger.png",
+      "sourceIllustrationId": "bild-c69fb99bfa22ea13",
+      "file": "haus-merek-harnisch-v1.png",
+      "prompt": "Create a single empty waist-length torso armor for Haus Merek. First reference defines house design: GREEN overlapping scales and rounded green shoulder caps, circular chest emblem of a pale CASTLE above a BRIDGE reflected in green water. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "6d3e9a8668be63016fa802fb706b9a54d93953f236cde16f08978d733ec9f62a",
+      "sourceSha256": "c69fb99bfa22ea13caafb4e2a54cfd15df40b78f73028d503686ede9c327cb74"
+    },
+    {
+      "id": "haus-morveth",
+      "name": "Haus Morveth",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Rhonwens Tränen",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-morveth&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Morveth/assets/krieger.png",
+      "sourceIllustrationId": "bild-da043b1a268c150c",
+      "file": "haus-morveth-harnisch-v1.png",
+      "prompt": "Create a single empty waist-length torso armor for Haus Morveth. First reference defines house design: muted dark green protective torso, round deep green chest field with a RING OF EIGHT SMALL PALE SEASHELLS. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "e956bba4f156a6bd2e98c2d8d7f48c9620c38fa1a2e2d069f13aa415d3bc65f2",
+      "sourceSha256": "da043b1a268c150ccd7ffad799262b21af784da1f80520c3b7c6a3e458c2564e"
+    },
+    {
+      "id": "haus-pendrwn",
+      "name": "Haus Pendrwn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-pendrwn&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-pendrwn-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-penwyn",
+      "name": "Haus Penwyn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Morddyn",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-penwyn&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Penwyn/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-39f32951c5e6571e",
+      "file": "haus-penwyn-harnisch-v1.png",
+      "prompt": "Create a single empty waist-length torso armor for Haus Penwyn. First reference defines house design: dark gray chest plate with vivid RED DRAGON heraldry, RED rounded shoulder plates and trim, brown leather straps; NO fur cloak. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "5e8aaf27ddd0ade17aee0c4d075a1cceb5b08a983dc1ad3743163ce210d0f7a9",
+      "sourceSha256": "39f32951c5e6571e3a9b350b661266ede798e9cafecc2a38b6ce94b7b712fd66"
+    },
+    {
+      "id": "haus-rhen",
+      "name": "Haus Rhen",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-rhen&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-rhen-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-rhenna",
+      "name": "Haus Rhenna",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Rhonwens Tränen",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-rhenna&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Rhenna/assets/krieger.png",
+      "sourceIllustrationId": "bild-8f5d335cc37bfac1",
+      "file": "haus-rhenna-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Rhenna. First reference defines house design: dark blue-green scale armor and steel shoulder caps, a round chest crest with gold border featuring a pale crowned tower or lighthouse above stylized waves, faithfully reproduce the source chest emblem. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "1e4d3f1d9d3ccb6d9987488787d9a3c72b0a9606bf3f8c25f1307c34ba410056",
+      "sourceSha256": "8f5d335cc37bfac1879f82b18750a309c1ebb055ea59c7f8dff16ebad403cdb1"
+    },
+    {
+      "id": "haus-rhuddgar",
+      "name": "Haus Rhuddgar",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-rhuddgar&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Rhuddgar/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-9bce9b3757f1a676",
+      "file": "haus-rhuddgar-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Rhuddgar. First reference defines house design: dark weathered steel and a deep rust-red chest panel, gold piping; round dark chest crest with TWO gold heraldic lions facing each other across a small red heart. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "c77b5f9f3f86344700fc9558c635dfa4d0c3077a73ed242e8ee083dc81830e7d",
+      "sourceSha256": "9bce9b3757f1a67606db4e105c01717b9eba5abd89f4bf971643edd339ee56f0"
+    },
+    {
+      "id": "haus-rhyddid",
+      "name": "Haus Rhyddid",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-rhyddid&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Rhyddid/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-aeeaaf125b31e2ba",
+      "file": "haus-rhyddid-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Rhyddid. First reference defines house design: weathered silver plate, teal chest cloth panel edged in gold; round gold-lined crest depicting the kneeling and standing figures in the reference, flat heraldic gold silhouettes. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "da16572768f736ca42db376efaa87a739bc9df22c9332bed721a1ec30ba39c16",
+      "sourceSha256": "aeeaaf125b31e2badd28d54841f164e85979c41ab0e8cb840957c0ff3e3ff128"
+    },
+    {
+      "id": "haus-saethwyr",
+      "name": "Haus Saethwyr",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-saethwyr&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Saethwyr/assets/ritter.png",
+      "sourceIllustrationId": "bild-2b07b8626e20fdb5",
+      "file": "haus-saethwyr-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. One square fantasy RPG inventory asset, the torso armor of Haus Saethwyr. Reference 1 defines this house's exact armor DESIGN, metal colors, trim and heraldic chest emblem. Reference 2 defines the ITEM ART STYLE: match painterly textured metal/leather, crisp dark outlines, readable details, gentle three-quarter view. Extract ONLY the torso cuirass from the warrior: an EMPTY standalone waist-length harness with open neck and empty armholes, small attached shoulder caps and short waist plates allowed. Faithfully retain the house colors and chest emblem from reference 1. NO helmet, head, wearer, mannequin, arms, gloves, legs, boots, long skirt, cloak, weapon, shield, stand or text. Keep silhouette within square with 10% clear margins. TRUE transparent alpha background, only a faint soft BLACK contact shadow immediately beneath the torso; no painted backdrop or checkerboard. One armor item.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/character-equipment/gawain-silberschuppe-v4.png"
+      ],
+      "sha256": "da9e4bb3e263b69b57689d96db66777c5ccec83087d3618b70024275bcfb6784",
+      "sourceSha256": "2b07b8626e20fdb5e425a93d5b2286f27e1d30d8b5f6cd2385459ab6a68ed230"
+    },
+    {
+      "id": "haus-seldryn",
+      "name": "Haus Seldryn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-seldryn&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Seldryn/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-3fcfee27297f21fc",
+      "file": "haus-seldryn-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Seldryn. First reference defines house design: weathered silver plate with a GOLD heraldic bird/griffin with raised wing and curled tail on the breastplate, small deep blue fabric accents confined to torso. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "20f761bd3e2b8fb2a3f4bf9697992ccf8750171c7d6805b485cc9932be1899f5",
+      "sourceSha256": "3fcfee27297f21fc88d0ae962727b4412075f50000c51c6276675303b6523f8b"
+    },
+    {
+      "id": "haus-selog",
+      "name": "Haus Selog",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-selog&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Selog/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-1a47d38091708679",
+      "file": "haus-selog-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Selog. First reference defines house design: warm rich GOLD plate, rounded shoulders, understated subtle engraved curling ornament on breastplate, faithful to the reference with no added large crest. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "4744ebde7fdd86d9b7c0d54fcf3143e3e9ac6aa9c707af7fcd6b282cc808a68a",
+      "sourceSha256": "1a47d3809170867912e59b111aa43cbccea29fa4c6ea047c2d59fecfa4291c0d"
+    },
+    {
+      "id": "haus-sgrechiwr",
+      "name": "Haus Sgrechiwr",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Lynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-sgrechiwr&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Sgrechiwr/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-1a39a1dc2e80d990",
+      "file": "haus-sgrechiwr-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Sgrechiwr. First reference defines house design: a black protective torso cuirass inspired by the reference black herald's tunic, red shield-shaped chest badge with TWO crossed silver swords as a FLAT HERALDIC EMBLEM only; silver edging and black leather straps, no loose weapons. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "7e184b44e3340f2ebd74bcf1a831ab1aee5ac5c4c9684d657c0e930166bcd631",
+      "sourceSha256": "1a39a1dc2e80d9908e6f0b64bfdcff1b9c57c77f994accdfae51055b8b1890fa"
+    },
+    {
+      "id": "haus-skellor",
+      "name": "Haus Skellor",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Rhonwens Tränen",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-skellor&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Skellor/assets/krieger.png",
+      "sourceIllustrationId": "bild-5beddeff606318fe",
+      "file": "haus-skellor-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Skellor. First reference defines house design: nearly black weathered steel plates, a round black chest crest edged gold depicting a gold tower entwined by a winged dragon, faithfully follow the source emblem. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "750808631768a4cf4c691a6d8d52cbf18ccf1b45c1468723dcd3bfd038983258",
+      "sourceSha256": "5beddeff606318fe8974391b7e657141bda305ee0636037a8e80320e6a2f063d"
+    },
+    {
+      "id": "haus-swyll",
+      "name": "Haus Swyll",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-swyll&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-swyll-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-talinvyr",
+      "name": "Haus Talinvyr",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Rhonwens Tränen",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-talinvyr&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Talinvyr/assets/krieger.png",
+      "sourceIllustrationId": "bild-4f83a9d3102f3bc2",
+      "file": "haus-talinvyr-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Talinvyr. First reference defines house design: rust orange riveted leather brigandine, black oval chest badge with pale sharp MOUNTAIN, red lower ridges and tiny white birds, brown straps; retain riveted construction. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "bc13ebff7d6067849b11a742f06adb82e327cfac4c2c63814b10a07984d04b52",
+      "sourceSha256": "4f83a9d3102f3bc20126b41d5ac76a3493fad299eb54b95da5715ed4720d754a"
+    },
+    {
+      "id": "haus-talmeirch",
+      "name": "Haus Talmeirch",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-talmeirch&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Talmeirch/assets/krieger.png",
+      "sourceIllustrationId": "bild-2e1e8d7b300471d9",
+      "file": "haus-talmeirch-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Talmeirch. First reference defines house design: weathered silver steel over rust-red chest panel with oval gold-bordered badge showing a gold HORSE surrounded by small gold crosses. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "b32e459c33c9da055f8857542f25f6cd8f6c3ef859841f99fc3f036945d81c11",
+      "sourceSha256": "2e1e8d7b300471d987bfb8528613d4a15e3536476186fd73ebdd20b7d1376cde"
+    },
+    {
+      "id": "haus-taranvyr",
+      "name": "Haus Taranvyr",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-taranvyr&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Taranvyr/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-b73f23212c369e50",
+      "file": "haus-taranvyr-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Taranvyr. First reference defines house design: blue steel plate with golden edge trim, deep blue chest crest featuring a golden eagle with wings spread within a golden circle. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "d3350d431241dbc7e09781a7de1bbbcb43f504a23d261d7d1345c3facb73959f",
+      "sourceSha256": "b73f23212c369e50c544e28afa5fdafbca48b085d90ce17720739b1d1462154d"
+    },
+    {
+      "id": "haus-tawelgar",
+      "name": "Haus Tawelgar",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-tawelgar&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Tawelgar/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-294e5b0e481e2794",
+      "file": "haus-tawelgar-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Tawelgar. First reference defines house design: weathered silver plate with muted blue chest panel, golden bird in profile holding a short HORIZONTAL SWORD in its beak as a FLAT chest emblem only, narrow gold border. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "17f2f8fd614c82d84202b572e4e204835edd04c184e7e6a5325b9853cb8ad5f6",
+      "sourceSha256": "294e5b0e481e2794608024c675c2e8b81e8fe3599d6ec4525cb0a8c5d8d86994"
+    },
+    {
+      "id": "haus-tirwyn",
+      "name": "Haus Tirwyn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Artus Streben · Rhosmere",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-tirwyn&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Tirwyn/assets/krieger.png",
+      "sourceIllustrationId": "bild-46bf2bcb958c64f8",
+      "file": "haus-tirwyn-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Tirwyn. First reference defines house design: weathered silver steel with forest-green chest panel, golden wheat-like THREE LEAF STALK emblem within gold oval, brown waist belt, no cloak. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "2ff6daab15508e725deef74571b6fba291b2dce2f982febd2d993b87492220c1",
+      "sourceSha256": "46bf2bcb958c64f89a84a1a4ba97f2eb197d35f024f55d180ebb8c36b0571b63"
+    },
+    {
+      "id": "haus-tlawd",
+      "name": "Haus Tlawd",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-tlawd&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Tlawd/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-6ecaf13493a63b64",
+      "file": "haus-tlawd-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Tlawd. First reference defines house design: angular BLACK steel plate with vivid RED trim and bold downward red V CHEVRON on chest, as in the source torso. No goat crest from the shield, keep the source breastplate design without additions. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "c5db784538051c832d6e925c0ee64c7ea9bf975ada0b57d33e685f65410ad8ee",
+      "sourceSha256": "6ecaf13493a63b644608ef488e3e2c4851f877e21d3509c841db419972a6c524"
+    },
+    {
+      "id": "haus-tonnarth",
+      "name": "Haus Tonnarth",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-tonnarth-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-trydar",
+      "name": "Haus Trydar",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-trydar&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Trydar/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-074e9453c064941d",
+      "file": "haus-trydar-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Trydar. First reference defines house design: weathered silver steel, red chest panel carrying a black oval badge with gold border and a golden bird in profile with a curled flourish near the beak. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "6a1b106160db8cc2261d7a6b4fc83eee099c440e4c79ce28e7015c66d38d1ecf",
+      "sourceSha256": "074e9453c064941d43995cfee1340447bcfd432dc4196af0b314e8efe8a61bcc"
+    },
+    {
+      "id": "haus-ui-talamh",
+      "name": "Haus Ui Talamh",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Antike Crannath Clans · Antikes Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-ui-talamh&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Antike_Crannath_Clans/Haus_Ui_Talamh/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-7023ff76310f03eb",
+      "file": "haus-ui-talamh-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Ui Talamh. First reference defines house design: forest-green protective leather torso with mail around armholes and restrained silver trim, pale SILVER LEAFLESS TREE chest emblem; brown straps and belt, preserve green forest house character. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "a1d5e16f23399899ba40ee1582cb419b2ed54ee1c5fd3fcbdf2cc603f309647b",
+      "sourceSha256": "7023ff76310f03eb0c9a4221647238b473ee9d862d6c2e705c92687799a876b8"
+    },
+    {
+      "id": "haus-wyrm",
+      "name": "Haus Wyrm",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Wyrm/assets/ritter.png",
+      "sourceIllustrationId": "bild-d142e66555ed8d00",
+      "file": "haus-wyrm-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: one square inventory item illustration for Aleria, Haus Wyrm torso armor. Reference image 1 is the HOUSE DESIGN reference: extract the design of the torso only from this Wyrm warrior. Reference images 2 and 3 are ITEM ART STYLE references only: match their painterly polished fantasy RPG item rendering, crisp dark outlines, readable material textures, leather straps and three-quarter presentation. Create ONE EMPTY standalone torso cuirass/harness, waist-length, neck opening and empty arm openings visible. For Wyrm preserve the steel/olive metal tones, golden yellow chest field and unmistakable BLACK coiling heraldic dragon emblem from image 1, with restrained red quilted lower-waist lining. Interpret only the torso armor, faithful to the house design. No helmet, no head, no body, no arms, no gloves, no legs, no boots, no long skirt, no weapons, no shield, no cloak, no mannequin or stand. Short attached waist plates are okay but no leg equipment. Square composition with about 10 percent clear margin, object centered. True transparent alpha background, with just a very faint soft BLACK oval contact shadow immediately under the cuirass, no floor, no colored backdrop, no checkerboard painted in the image. No text or watermark. One image, one torso item.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/character-equipment/gawain-silberschuppe-v4.png",
+        "AleriaAlmanach/public/assets/character-equipment/gildas-gafyr-plattenruestung-v3.png"
+      ],
+      "sha256": "22a589e5e508a61055c36c82b5a65986b5bb5e34b90630636ed8b596bf2c0a20",
+      "sourceSha256": "d142e66555ed8d00b465a25d6751c05119a92d26a26658bfc75ee68e5948ce10"
+    },
+    {
+      "id": "haus-ymladd",
+      "name": "Haus Ymladd",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Gwendolyns Ufer · Abergwint",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-ymladd&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Ymladd/assets/hausmotiv.png",
+      "sourceIllustrationId": "bild-842a3b64c5fb46ea",
+      "file": "haus-ymladd-harnisch-v1.png",
+      "prompt": "Use case: stylized-concept. Create a single empty waist-length torso armor for Haus Ymladd. First reference defines house design: weathered silver steel and dark GREEN chest panel, gold-edged shield-shaped crest depicting the dark thistle/flower with pale rose shown on source chest. Match its construction and emblem, torso only. Second reference supplies painterly inventory rendering style ONLY, not motifs/shape/palette. Crisp outlines, rich materials, soft highlights, slight three-quarter presentation, hollow neck opening and armholes. Small attached shoulder caps allowed, finish at waist. NO helmet/head/person/limbs/hands/boots/legs, cloak/fur cape/robe/skirt, shield/weapon/props. Square composition with clear margins. TRUE TRANSPARENT alpha with faint soft BLACK shadow immediately under item; no stand/floor/text/watermark/checkerboard.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "63f3ebce70a675095c15c997f74fe685ba9be4c2a23c32b1bd8a659208ce10de",
+      "sourceSha256": "842a3b64c5fb46ea86612c36222074cc2de02324b93d031f6385f64cf0c9f96b"
+    },
+    {
+      "id": "haus-ysgrif",
+      "name": "Haus Ysgrif",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-ysgrif-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    }
+  ],
+  "navigationIcon": {
+    "file": "IconOrdner/ReiterIcons/Weltpfade/krieger-ruestungen.png",
+    "generator": "Built-in image_gen",
+    "styleReferences": [
+      "IconOrdner/ReiterIcons/Weltpfade/soeldner.png",
+      "IconOrdner/ReiterIcons/Weltpfade/techniken.png"
+    ],
+    "prompt": "Use case: stylized-concept. Create one square navigation icon for the Aleria Almanach, new subject: Krieger & Rüstungsgalerie. The two attached local reference images are STYLE REFERENCES only. Match their exact existing visual family: warm golden ochre parchment square, fine grain, dark brown engraved woodcut line art, thin double square frame and matching scrolling leaf ornament in the four corners with oval inner framing. Central subject is one simple empty armored torso/breastplate shown frontally, flanked by two small overlapping illustration sheets to communicate an armor reference gallery. No person, no face, no helmet, no legs, no weapons. Large clear silhouette, flat sepia/gold tones, same outline thickness as the references. No text, letters, digits or watermark. Opaque parchment background matching the reference icons. Output one complete square icon."
+  }
+}

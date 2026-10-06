@@ -262,6 +262,7 @@ function sanitizeCharacterInventoryItems(items = []) {
       templateName: String(item?.templateName || '').trim(),
       offerId: String(item?.offerId || '').trim(),
       registerCategory: String(item?.registerCategory || '').trim(),
+      ...(item?.houseArmor && typeof item.houseArmor === 'object' ? { houseArmor: { ...item.houseArmor } } : {}),
       creatureId: String(item?.creatureId || '').trim(),
       valuation: item?.valuation && typeof item.valuation === 'object' ? { ...item.valuation } : null,
       valuationNote: String(item?.valuationNote || '').trim().slice(0, 800),
@@ -307,7 +308,7 @@ function sanitizeCharacterInventoryItems(items = []) {
         { label: 'Qualitaet', value: 'Noch festlegen' },
         { label: 'Zustand', value: 'Noch festlegen' }
       ]),
-      attributes: sanitizeCharacterInventoryAttributes(item?.attributes, [
+      attributes: item?.houseArmor && !item.combatDefinition && !item.attributes?.length ? [] : sanitizeCharacterInventoryAttributes(item?.attributes, [
         { label: 'Schaden', value: 5 },
         { label: 'Schutz', value: 3 },
         { label: 'Wert', value: 4 },

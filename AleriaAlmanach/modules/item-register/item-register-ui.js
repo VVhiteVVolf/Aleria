@@ -1,13 +1,14 @@
-import { registerStore } from './item-register-store.js?v=20260928-equipment-art-v4';
-import { queryRegister, normalizeOffer, toLegacyItem } from './item-register-model.js?v=20260928-equipment-art-v4';
-import { shell, navigation, overview, results, detail, escape, safeImage } from './item-register-view.js?v=20260928-equipment-art-v4';
-import { createForm, collectOperation, quote } from './item-register-forms.js?v=20260928-equipment-art-v4';
+import { registerStore } from './item-register-store.js?v=20261006-house-armor-v1';
+import { queryRegister, normalizeOffer, toLegacyItem } from './item-register-model.js?v=20261006-house-armor-v1';
+import { shell, navigation, overview, results, detail, escape, safeImage } from './item-register-view.js?v=20261006-house-armor-v1';
+import { createForm, collectOperation, quote } from './item-register-forms.js?v=20261006-house-armor-v1';
 import { moneyState, moneyTotal, parsePrice, formatPrice } from './item-register-money.js?v=20260919-shop-v1';
 import { adaptItemImage } from './item-register-images.js?v=20260919-shop-v1';
 import { watchStandardReleases } from './item-register-updates.js?v=20260919-shop-v1';
-import { watchModuleCatalog } from './item-register-module-sync.js?v=20260919-shop-v1';
+import { watchModuleCatalog } from './item-register-module-sync.js?v=20261006-house-armor-v1';
+import { houseArmorBrowse, houseArmorNavigation, houseArmorMissing } from '../house-armor/house-armor-register.js?v=20261006-house-armor-v1';
 
-const state = { open: false, section: 'standard', category: '', listId: '', search: '', sort: 'name', selectedId: '', limit: 48, equippedOnly: false, ownedExpanded: false };
+const state = { open: false, section: 'standard', category: '', regionId: '', houseId: '', listId: '', search: '', sort: 'name', selectedId: '', limit: 48, equippedOnly: false, ownedExpanded: false };
 let panel, editor, form = null, busy = false, pendingOperation = null;
 const access = () => globalThis._fbAuth?.getAccess?.() || {};
 const snapshot = () => registerStore.snapshot();
@@ -26,7 +27,7 @@ function render() {
   const data = snapshot();
   roles('navigation').innerHTML = navigation(data, state);
   const browsing = state.category || state.listId || state.search.trim();
-  roles('results').innerHTML = browsing ? results(data, state, queryRegister(data.items, state)) : overview(data, state, access());
+  roles('results').innerHTML = houseArmorNavigation(state) + (houseArmorBrowse(state) || houseArmorMissing(state) || (browsing ? results(data, state, queryRegister(data.items, state)) : overview(data, state, access())));
   const item = selected();
   roles('detail').hidden = !item;
   roles('detail').innerHTML = detail(item, data, access());
@@ -62,13 +63,16 @@ export function closeItemRegister() {
   if (panel) { globalThis.deactivateDialog?.(panel.id); panel.hidden = true; }
 }
 function reset(section = state.section) {
-  Object.assign(state, { section, category: '', listId: '', search: '', selectedId: '', limit: 48, equippedOnly: false });
+  Object.assign(state, { section, category: '', regionId: '', houseId: '', listId: '', search: '', selectedId: '', limit: 48, equippedOnly: false });
   panel.querySelector('[data-ir-field="search"]').value = '';
 }
 function selectItem(id) {
   const item = snapshot().items.find(entry => entry.id === id);
   if (!item) throw new Error('Dieser Eintrag ist nicht mehr verfügbar.');
   if (item.section !== state.section) { reset(item.section); state.category = item.category; state.listId = item.listId || ''; }
+  if (item.houseArmor && item.section === 'standard') {
+    state.category = item.category; state.regionId = item.houseArmor.regionId; state.houseId = item.houseArmor.houseId;
+  }
   state.selectedId = id; render();
   if (window.innerWidth < 1100) roles('detail').scrollIntoView({ block: 'start', behavior: 'smooth' });
 }
@@ -162,6 +166,8 @@ async function handleClick(event) {
     if (action === 'toggle-owned') { state.ownedExpanded = !state.ownedExpanded; return; }
     if (action === 'section') reset(trigger.dataset.id);
     else if (action === 'category') { reset('standard'); state.category = trigger.dataset.id; }
+    else if (action === 'armor-region') { reset('standard'); state.category = 'cenyr-ruestungen'; state.regionId = trigger.dataset.id; }
+    else if (action === 'armor-house') { state.houseId = trigger.dataset.id; state.selectedId = ''; state.search = ''; state.limit = 48; roles('results').scrollIntoView({ block: 'start' }); }
     else if (action === 'list') { reset(trigger.dataset.section); state.listId = trigger.dataset.id; }
     else if (action === 'reset') reset();
     else if (action === 'select' || action === 'reference') return selectItem(trigger.dataset.id);

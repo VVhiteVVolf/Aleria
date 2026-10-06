@@ -35,6 +35,17 @@ test('archive projection includes every goods category and cannot overwrite regi
   } finally { if (previous) globalThis.itemDbBuildIndex = previous; else delete globalThis.itemDbBuildIndex; }
 });
 
+test('house armor remains statless and retains its house and rank through classic inventory saves', async () => {
+  const context = vm.createContext({ window: { AleriaItemRegister: { moneyState, moneyTotal } }, document: { addEventListener() {} } });
+  vm.runInContext(await readFile(new URL('../modules/module-editor/module-editor-character-inventory.js', import.meta.url), 'utf8'), context);
+  const template = STANDARD_ITEMS.find(entry => entry.houseArmor?.houseId === 'haus-wyrm');
+  context.purchased = createOwnedItem(template, { id: 'armor', characterId: 'wyrm', characterName: 'Wyrm', unitCopper: 0 });
+  const saved = JSON.parse(JSON.stringify(vm.runInContext('sanitizeCharacterInventoryItems(sanitizeCharacterInventoryItems([purchased]))[0]', context)));
+  assert.deepEqual(saved.attributes, []); assert.equal(saved.combatDefinition, null);
+  assert.deepEqual(saved.houseArmor, template.houseArmor);
+  assert.deepEqual(saved.infoRows.map(({ label, value }) => ({ label, value })), template.infoRows);
+});
+
 test('local legacy records survive first connection; explicit remote deletion and adoption do not duplicate them', () => {
   const store = createRegisterStore();
   const legacy = { customItems: [{ canonicalKey: 'custom:one', title: 'Lokale Klinge', category: 'waffen' }] };

@@ -12,11 +12,11 @@
     import { finalizeCommittedCommentNarration }
       from "./modules/comments/comments-narration-finalization.js";
     import { detectStaleCharacterFields, prepareCharacterDocumentWrite, sanitizeCharacterBiographyForFirestore, shouldBlockCharacterWriteDuringEncounter, stampFreshRevisions }
-      from "./modules/characters/character-save-guard.js?v=20260903-genealogy-portrait-sync-v1";
+      from "./modules/characters/character-save-guard.js?v=20261006-house-armor-v1";
 
     import { createCalendarRepository } from './modules/calendar/calendar-repository.mjs';
     import { createItemRegisterFirebase } from './modules/item-register/item-register-firebase.js';
-    import { prepareInventoryCompanionWrites, saveLinkedCreature } from './modules/item-register/item-register-companion-firebase.js?v=20260925-creature-biography-v1';
+    import { prepareInventoryCompanionWrites, saveLinkedCreature } from './modules/item-register/item-register-companion-firebase.js?v=20261006-house-armor-v1';
     import { parseModuleStoreRevision, getFirebaseModuleStoreRevision } from './modules/module-store/module-store-revision.js';
 
     const firebaseConfig = {
@@ -1040,9 +1040,10 @@
           const needsProtectedTransaction = options.replaceExisting === true
             || options.createWithId === true
             || Object.prototype.hasOwnProperty.call(safeData, 'combatProfile')
-            || Object.prototype.hasOwnProperty.call(safeData, 'inventory');
+            || Object.prototype.hasOwnProperty.call(safeData, 'inventory')
+            || Object.prototype.hasOwnProperty.call(safeData, 'genealogy');
 
-          // Reine Profil-, Archiv-, Genealogie- und Avatar-Patches verändern keine
+          // Reine Profil-, Archiv- und Avatar-Patches verändern keine
           // revisionsgeschützten Mechanikfelder. Sie bleiben normale Merge-Writes, damit die
           // Firestore-Warteschlange sie auch bei einer kurzen Verbindungsunterbrechung annehmen
           // kann. Atomare Transaktionen sind den konfliktkritischen Pfaden vorbehalten.
@@ -1079,11 +1080,15 @@
               existingSnap.exists() ? existingSnap.data() : null,
               safeData,
               {
+                characterId: id,
                 userId: user.uid,
                 replaceExisting: options.replaceExisting === true,
                 replaceImageLibrary: options.replaceImageLibrary === true
               }
             );
+            if (shouldBlockCharacterWriteDuringEncounter(write.data, lockSnap.data()?.activeEncounterKeys || [])) {
+              throw new Error('Die Hausrüstung kann während eines aktiven Kampfes nicht geändert werden. Bitte den Kampf zuerst beenden.');
+            }
             const companionWrites = await prepareInventoryCompanionWrites({ transaction, db, doc, characterId: id,
               before: existingSnap.data(), after: write.data });
             transaction.set(ref, write.data, { merge: write.merge });
@@ -1094,13 +1099,14 @@
             ? { id, data: preparedWrite.data }
             : id;
         } else {
-          const newCharacterData = stampFreshRevisions(sanitizedData || {});
+          const ref = doc(collection(db, 'characters'));
+          const newCharacterData = prepareCharacterDocumentWrite(null, sanitizedData || {}, { userId: user.uid, characterId: ref.id }).data;
           const storedData = {
             ...newCharacterData,
             ownerUid: user.uid,
             createdBy: user.uid
           };
-          const ref = await addDoc(collection(db, 'characters'), storedData);
+          await setDoc(ref, storedData);
           return options.returnWriteResult === true
             ? { id: ref.id, data: storedData }
             : ref.id;

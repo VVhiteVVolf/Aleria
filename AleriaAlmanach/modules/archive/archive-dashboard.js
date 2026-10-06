@@ -281,16 +281,19 @@ function buildArchiveDashboardSectionCards(sections = []) {
     grouped.set(label, existing);
   });
 
+  AleriaArchiveDestinations.forEach(link => grouped.set(link.label, {
+    ...link, theme: getThemeMetaForTab(link.label), entries: []
+  }));
   return Array.from(grouped.values()).map(group => {
     const section = { key: group.label, tab: group.label };
     const entries = group.entries;
     const stats = getArchiveSectionStats(section, entries);
-    const href = group.label === 'Magie' ? '../Magie/index.html' : '';
+    const href = group.href || (group.label === 'Magie' ? '../Magie/index.html' : '');
     const tag = href ? 'a' : 'button';
     const action = href
       ? `href="${escapeHtml(href)}"`
       : `type="button" data-archive-action="switch-tab" data-tab="${escapeHtml(group.label)}"`;
-    const description = href ? 'Schulen, Druidenkunst & göttliche Magie' : `${stats.moduleCount} Module · ${stats.pageCount} Seiten`;
+    const description = group.description || (href ? 'Schulen, Druidenkunst & göttliche Magie' : `${stats.moduleCount} Module · ${stats.pageCount} Seiten`);
     return `
       <${tag} class="archive-dashboard-section" ${action} data-section-theme="${escapeHtml(group.theme.slug)}">
         ${group.iconUrl ? `<img class="archive-dashboard-section-icon" src="${escapeHtml(group.iconUrl)}" alt="" loading="lazy" decoding="async">` : '<span class="archive-dashboard-section-mark" aria-hidden="true">✦</span>'}
