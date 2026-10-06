@@ -201,7 +201,9 @@
   .modal-subtitle { font-style:italic; color:var(--ink-faded); font-size:0.85rem; line-height:1.4; margin-bottom:0; }
   .modal-divider { height:1px; background:linear-gradient(90deg,var(--gold),transparent); margin:0.5rem 0; flex-shrink:0; }
   .modal-description { max-width: 68ch; font-size:0.92rem; line-height:1.82; color:var(--ink-faded); }
-  .modal-story-description { max-width: none; }
+  .modal-story-description { max-width: none; margin: 0; }
+  .modal-story-description :where(p, div) { margin: 0; }
+  .modal-story-description :where(p, div) + :where(p, div) { margin-block-start: 1em; }
 
   /* Stats */
   .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:0.55rem; margin:0; width:100%; }

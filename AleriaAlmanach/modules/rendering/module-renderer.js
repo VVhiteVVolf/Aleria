@@ -1740,7 +1740,7 @@ function buildPage(page, entry, pageIndex, total) {
               <h2 class="modal-title">${escapeHtml(effectiveEntry.title)}</h2>
               <p class="modal-subtitle">${escapeHtml(effectiveEntry.subtitle)}</p>
               <div class="modal-divider"></div>
-              <p class="modal-description modal-story-description">${sanitizeContentHtml(page.description || '')}</p>
+              ${AleriaStoryContent.renderDescription(page.description, { sanitizeHtml: sanitizeContentHtml })}
             </div>
             ${stats ? `<div class="modal-content-section">${stats}</div>` : ''}
             <div class="modal-content-section">

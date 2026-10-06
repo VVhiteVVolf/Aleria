@@ -23,6 +23,7 @@ function createRenderer({ editing = false } = {}) {
   for (const relative of [
     '../modules/comments/comments-routing.js',
     '../modules/comments/comments-page.js',
+    '../modules/story/story-description.js',
     '../modules/rendering/module-renderer.js'
   ]) {
     vm.runInContext(readFileSync(new URL(relative, import.meta.url), 'utf8'), context, { filename: relative });
