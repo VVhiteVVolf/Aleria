@@ -8,9 +8,37 @@ import { resolveRegisteredFamilyUpgrade } from '../assets/js/services/family-reg
 import { createFamilyGraph } from '../assets/js/domain/family-graph.js';
 import { createFamilyChartOverview } from '../assets/js/adapters/family-chart-overview-policy.js';
 import { toFamilyChartData } from '../assets/js/adapters/family-chart-adapter.js';
+import { PARZIFAL_CORRECTED_PORTRAITS } from '../assets/js/data/parzifal-crew-families/portrait-upgrade.js';
 
 const family = surname => FAMILY_REGISTRY.find(record => record.id === `haus-${surname.toLowerCase()}`).family;
 const person = (surname, id) => family(surname).persons.find(person => person.id === id);
+
+test('Korrigierte Porträts erreichen bestehende Akten ohne Änderungen an Notizen oder Genealogie', async () => {
+  for (const [familyId, personId, previousRevision] of [
+    ['haus-ddraenen', 'iestyn-ddraenen', 6],
+    ['haus-cwningod', 'tegid-cwningod', 4],
+    ['haus-pawen', 'tegid-cwningod', 3]
+  ]) {
+    const registered = FAMILY_REGISTRY.find(record => record.id === familyId).family;
+    const local = structuredClone(registered);
+    local.extensions.sourceRevision = previousRevision;
+    const existing = local.persons.find(person => person.id === personId);
+    existing.portrait = 'old-portrait.jpg';
+    existing.notes = 'Eigene Reisenotiz';
+    existing.title = 'Eigener Amtstitel';
+    const previousRelations = { partnerships: local.partnerships, parentages: local.parentages };
+    const updated = resolveRegisteredFamilyUpgrade(registered, local);
+    const corrected = updated.persons.find(person => person.id === personId);
+    assert.equal(corrected.portrait, PARZIFAL_CORRECTED_PORTRAITS[personId]);
+    assert.equal(corrected.notes, existing.notes);
+    assert.equal(corrected.title, existing.title);
+    assert.equal(corrected.worldPersonId, existing.worldPersonId);
+    assert.deepEqual(updated.partnerships, previousRelations.partnerships);
+    assert.deepEqual(updated.parentages, previousRelations.parentages);
+    assert.deepEqual(resolveRegisteredFamilyUpgrade(registered, updated), updated);
+    await access(new URL('../'+corrected.portrait, import.meta.url));
+  }
+});
 
 test('Alle elf ausgearbeiteten Gerüste sind verbunden, chronologisch plausibel und besitzen Kinderplatzhalter', () => {
   for (const definition of PARZIFAL_FAMILY_EXPANSIONS) {

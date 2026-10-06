@@ -1,0 +1,43 @@
+{
+  "createdAt": "2026-10-05T23:58:38.574Z",
+  "mode": "built-in imagegen",
+  "useCase": "illustration-story",
+  "format": "2:3",
+  "selectedImage": "gruppenbild-01.png",
+  "coreMembers": [
+    "Parzifal Arth",
+    "Yhon Blodyn",
+    "Tegid Cwingod",
+    "Lwyd Pawen",
+    "Brychan Beryn"
+  ],
+  "referenceImages": [
+    {
+      "name": "Parzifal Arth",
+      "path": "Stammbäume/assets/images/portraits/haus-grawn/parzifal-arth.jpg"
+    },
+    {
+      "name": "Yhon Blodyn",
+      "path": "Stammbäume/assets/images/portraits/haus-blodyn/yhon-blodyn.jpg"
+    },
+    {
+      "name": "Tegid Cwingod",
+      "path": "AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/corrected-2026-10-06/tegid-cwingod.png"
+    },
+    {
+      "name": "Lwyd Pawen",
+      "path": "Stammbäume/assets/images/portraits/haus-mwyalchen/lwyd-pawen.jpg"
+    },
+    {
+      "name": "Brychan Beryn",
+      "path": "AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/source-2026-10-06/brychan-beryn.png"
+    }
+  ],
+  "prompt": "Bildformat 2:3. Strenger Frieren/One Piece Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Weniger ist mehr, was den Hintergrund anbelangt.\n\nErstelle ein stimmiges, lebendiges Gruppenbild einer mittelalterlichen Schiffsmannschaft in Feierlaune an einem einzigen hölzernen Tisch im Mannschaftsquartier der Dychwelyd. GENAU FÜNF erwachsene Männer, jede Person nur einmal, keine weiteren Hintergrundfiguren. Alle Gesichter erkennbar. Verwende die fünf Referenzbilder in folgender Reihenfolge als verbindliche individuelle Vorlagen:\n1. Parzifal Arth: Kapitän, 46, lange rotbraune Haare und kräftiger Vollbart, dunkle schwarz-goldene Rüstung mit braunem Fellkragen und Bärenzeichen. Herzhaft lachend im Mittelpunkt.\n2. Yhon Blodyn: 47, lange rote Haare, goldenes Stirnband mit rautenförmiger Spitze, bernsteinfarbene Augen, kleiner rötlicher Kinnbart, silber-goldene Rüstung mit Blumenzeichen und Fell.\n3. Tegid Cwingod: 45, exakt das NEUE Referenzporträt: nach hinten gebundene rote Haare im niedrigen Pferdeschwanz, roter Vollbart, blaugraue Augen, zwei Gesichtsnarben, schwarzer Umhang und schwarzer Schal, gelber Wappenrock mit schwarzem brüllendem Bärenkopf, Kettenhemd und braune Lederhandschuhe.\n4. Lwyd Pawen: 43, kurzes rotes Haar, kurzer kantiger roter Bart, dunkelrote und graue Rüstung, roter Pelzkragen und Bärenprankenzeichen.\n5. Brychan Beryn: 54, lange dunkelbraune Haare mit dünnen Zöpfen, warme gebräunte Haut, brauner Kinnbart, roter Rock mit schwarzem Bären-/Dreizackzeichen, graue Plattenrüstung.\n\nDie Männer sitzen dicht zusammen, lachen und stoßen ungezwungen mit stabil gegriffenen Holzkrügen an. Echte Kameradschaft, unterschiedliche starke fröhliche Mimik. Oberkörperfokus: Bildausschnitt bis etwa zur Taille, keine Ganzkörper und keine sichtbaren Beine. Eine klare vertikale Komposition mit zwei Männern näher am Betrachter und drei dahinter am selben Tisch; Gesichter und Krüge dürfen einander nicht verdecken. Halte Kleidung, Haarfarben, individuelle Gesichter und Wappen wie in den Referenzen erkennbar. Natürlich korrekte Arme und Hände, alle Gegenstände stehen auf dem Tisch oder werden sichtbar sicher gehalten. Zurückhaltender Hintergrund aus wenigen Holzbalken und einer warm leuchtenden Schiffslaterne. Auf dem Tisch wenige Krüge und eine kleine gemeinsame Schale; keine Gegenstandsflut. Warmes Laternenlicht, klare Anime-Farbflächen. Keine Tiere, keine Schrift, kein Rahmen, keine Collage.",
+  "inspection": {
+    "people": 5,
+    "atOneTable": true,
+    "upperBodyFocus": true,
+    "newTegidReferenceUsed": true
+  }
+}

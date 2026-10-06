@@ -1,0 +1,3716 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-pawen",
+  "revision": 1,
+  "updatedAt": "2026-10-05T23:57:52.973Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-pawen",
+      "title": "Haus Pawen O'Talgarth",
+      "motto": "Die Pranke des Bären vereint Entschlossenheit und Stärke.",
+      "description": "Ältestes Kadettenhaus der Arth und ritterfürstliche Pranke Talgarths.",
+      "emblem": "assets/images/houses/Klaueninsel/haus-pawen.png",
+      "houseProfile": {
+        "rankId": "knight-prince",
+        "seat": "Talgarth",
+        "barony": "Sturmklaue",
+        "county": "Klaueninsel",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-arth",
+        "liegeHouseName": "Haus Arth O'Talgarth",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+          "county": "assets/images/regions/klaueninsel.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "lamorak-arth",
+        "worldPersonId": "person--haus-arth--lamorak-arth",
+        "name": "Lamorak Arth",
+        "title": "Gründer des Hauses Pawen",
+        "sex": "male",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "assets/images/portraits/haus-arth/lamorak-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "mared-unknown",
+        "worldPersonId": "person--haus-unbekannt-mared--mared-unknown",
+        "name": "Mared",
+        "title": "Mitgründerin des Hauses Pawen",
+        "sex": "female",
+        "status": "dead",
+        "birth": "????",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-mared",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "cadoc-pawen",
+        "worldPersonId": "person--haus-pawen--cadoc-pawen",
+        "name": "Cadoc Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1592",
+        "death": "1643",
+        "portrait": "assets/images/portraits/haus-pawen/cadoc-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "ceridwen-pawen",
+        "worldPersonId": "person--haus-pawen--ceridwen-pawen",
+        "name": "Ceridwen Pawen",
+        "title": "Mitgründerin des Hauses Unigol",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1595",
+        "death": "1662",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Kadettenhausgründerin"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "kerenza-crafanc",
+        "worldPersonId": "person--haus-crafanc--kerenza-crafanc",
+        "name": "Kerenza Crafanc",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1596",
+        "death": "1643",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-crafanc",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "trahaern-arth",
+        "worldPersonId": "person--haus-arth--trahaern-arth",
+        "name": "Trahaern Arth",
+        "title": "Mitgründer des Hauses Unigol",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1594",
+        "death": "1669",
+        "portrait": "assets/images/portraits/haus-arth/trahaern-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "sadwrn-pawen",
+        "worldPersonId": "person--haus-pawen--sadwrn-pawen",
+        "name": "Sadwrn Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1614",
+        "death": "1670",
+        "portrait": "assets/images/portraits/haus-arth/sadwrn-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "tegwyn-pawen",
+        "worldPersonId": "person--haus-pawen--tegwyn-pawen",
+        "name": "Tegwyn Pawen",
+        "title": "Wegverheiratet an Haus Crefyddol",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1616",
+        "death": "1680",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "isobel-1614-arth",
+        "worldPersonId": "person--haus-arth--isobel-1614-arth",
+        "name": "Isobel Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1614",
+        "death": "1658",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "emrys-crefyddol",
+        "worldPersonId": "person--haus-crefyddol--emrys-crefyddol",
+        "name": "Emrys Crefyddol",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1615",
+        "death": "1676",
+        "portrait": "assets/images/portraits/haus-crefyddol/emrys-crefyddol.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-crefyddol",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "rhodri-pawen",
+        "worldPersonId": "person--haus-pawen--rhodri-pawen",
+        "name": "Rhodri Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1641",
+        "death": "1695",
+        "portrait": "assets/images/portraits/haus-canwyll/rhodri-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "morwen-pawen",
+        "worldPersonId": "person--haus-pawen--morwen-pawen",
+        "name": "Morwen Pawen",
+        "title": "Wegverheiratet an Haus Tiwna",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1642",
+        "death": "1659",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "grufudd-pawen",
+        "worldPersonId": "person--haus-pawen--grufudd-pawen",
+        "name": "Grufudd Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1644",
+        "death": "1710",
+        "portrait": "assets/images/portraits/haus-cath/grufudd-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "branwen-canwyll",
+        "worldPersonId": "person--haus-canwyll--branwen-canwyll",
+        "name": "Branwen Canwyll",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1640",
+        "death": "1705",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-canwyll",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "madoc-tiwna",
+        "worldPersonId": "person--haus-tiwna--madoc-tiwna",
+        "name": "Madoc Tiwna",
+        "title": "Baron des Hauses Tiwna 1683–1705",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1630",
+        "death": "1705",
+        "portrait": "assets/images/portraits/haus-tiwna/madoc-tiwna.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tiwna",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "heledd-cath",
+        "worldPersonId": "person--haus-cath--heledd-cath",
+        "name": "Heledd Cath",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1645",
+        "death": "1699",
+        "portrait": "assets/images/portraits/haus-cath/heledd-cath.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cath",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "brac-pawen",
+        "worldPersonId": "person--haus-pawen--brac-pawen",
+        "name": "Brac Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1660",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-arth/brac-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "libet-pawen",
+        "worldPersonId": "person--haus-pawen--libet-pawen",
+        "name": "Libet Pawen",
+        "title": "Wegverheiratet an Haus Gwialen",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1660",
+        "death": "1693",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "rhonwen-pawen",
+        "worldPersonId": "person--haus-pawen--rhonwen-pawen",
+        "name": "Rhonwen Pawen",
+        "title": "Wegverheiratet an Haus Brithyll",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1661",
+        "death": "1710",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "tarian-arth",
+        "worldPersonId": "person--haus-arth--tarian-arth",
+        "name": "Tarian Arth",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1660",
+        "death": "1710",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "artus-gwialen",
+        "worldPersonId": "person--haus-gwialen--artus-gwialen",
+        "name": "Artus Gwialen",
+        "title": "Ritterfürst des Hauses Gwialen 1702–1721",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1659",
+        "death": "1721",
+        "portrait": "assets/images/portraits/haus-gwialen/artus-gwialen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwialen",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "aneirin-brithyll",
+        "worldPersonId": "person--haus-brithyll--aneirin-brithyll",
+        "name": "Aneirin Brithyll",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1660",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-brithyll/aneirin-brithyll.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-brithyll",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "lamorak-pawen",
+        "worldPersonId": "person--haus-pawen--lamorak-pawen",
+        "name": "Lamorak Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1678",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-neidr/lamorak-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "gwenfrewi-pawen",
+        "worldPersonId": "person--haus-pawen--gwenfrewi-pawen",
+        "name": "Gwenfrewi Pawen",
+        "title": "Wegverheiratet an Haus Arth",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1678",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-arth/gwenfrewi-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "blegywryd-pawen",
+        "worldPersonId": "person--haus-pawen--blegywryd-pawen",
+        "name": "Blegywryd Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1678",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pawen/blegywryd-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "genofeva-neidr",
+        "worldPersonId": "person--haus-neidr--genofeva-neidr",
+        "name": "Genofeva Neidr",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1679",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-neidr/genofeva-neidr.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-neidr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "domnall-arth",
+        "worldPersonId": "person--haus-arth--domnall-arth",
+        "name": "Domnall Arth",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1672",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-arth/domnall-arth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-arth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "mair-unknown-pawen",
+        "worldPersonId": "person--haus-unbekannt-mair--mair-unknown-pawen",
+        "name": "Mair",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1675",
+        "death": "1725",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-mair",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "amaethon-pawen",
+        "worldPersonId": "person--haus-pawen--amaethon-pawen",
+        "name": "Amaethon Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pawen/amaethon-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "joally-pawen",
+        "worldPersonId": "person--haus-pawen--joally-pawen",
+        "name": "Joally Pawen",
+        "title": "Wegverheiratet an Haus Cwingod",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pawen/joally-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "lwyd-pawen",
+        "worldPersonId": "person--haus-pawen--lwyd-pawen",
+        "name": "Lwyd Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/lwyd-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "march-pawen",
+        "worldPersonId": "person--haus-pawen--march-pawen",
+        "name": "March Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-morfil/march-pawen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "mared-pawen",
+        "worldPersonId": "person--haus-pawen--mared-pawen",
+        "name": "Mared Pawen",
+        "title": "Wegverheiratet an Haus Eirth",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pawen/mared-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "glinda-crafanc",
+        "worldPersonId": "person--haus-crafanc--glinda-crafanc",
+        "name": "Glinda Crafanc",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pawen/glinda-crafanc.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-crafanc",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "tegid-cwningod",
+        "worldPersonId": "person--haus-cwningod--tegid-cwningod",
+        "name": "Tegid Cwingod",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/corrected-2026-10-06/tegid-cwingod.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cwningod",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 4,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "naili-mwyalchen",
+        "worldPersonId": "person--haus-mwyalchen--naili-mwyalchen",
+        "name": "Naili Mwyalchen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-mwyalchen/naili-mwyalchen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-mwyalchen",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "mabil-morfil",
+        "worldPersonId": "person--haus-morfil--mabil-morfil",
+        "name": "Mabil Morfil",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-morfil/mabil-morfil.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-morfil",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "urien-eirth",
+        "worldPersonId": "person--haus-eirth--urien-eirth",
+        "name": "Urien Eirth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pawen/urien-eirth.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eirth",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "ianto-pawen",
+        "worldPersonId": "person--haus-pawen--ianto-pawen",
+        "name": "Ianto Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1717",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pawen/ianto-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "owena-pawen",
+        "worldPersonId": "person--haus-pawen--owena-pawen",
+        "name": "Owena Pawen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pawen/owena-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "thalen-pawen",
+        "worldPersonId": "person--haus-pawen--thalen-pawen",
+        "name": "Thalen Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pawen/thalen-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "niniel-pawen",
+        "worldPersonId": "person--haus-pawen--niniel-pawen",
+        "name": "Niniel Pawen",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pawen/niniel-pawen.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "guto-pawen",
+        "worldPersonId": "person--haus-pawen--guto-pawen",
+        "name": "Guto Pawen",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-pawen/guto-pawen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-pawen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "worldPersonId",
+            "name",
+            "title",
+            "sex",
+            "status",
+            "birth",
+            "death",
+            "portrait",
+            "portraitPlaceholder",
+            "houseId",
+            "familyRole",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 3,
+            "name": 3,
+            "title": 3,
+            "sex": 3,
+            "status": 3,
+            "birth": 3,
+            "death": 3,
+            "portrait": 3,
+            "portraitPlaceholder": 3,
+            "houseId": 3,
+            "familyRole": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-lamorak-mared",
+        "participantIds": [
+          "lamorak-arth",
+          "mared-unknown"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Lamorak Arth und Mared begründen gemeinsam das Kadettenhaus Pawen.",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-cadoc-kerenza-pawen",
+        "participantIds": [
+          "cadoc-pawen",
+          "kerenza-crafanc"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1643",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-trahaern-ceridwen",
+        "participantIds": [
+          "trahaern-arth",
+          "ceridwen-pawen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-isobel-sadwrn",
+        "participantIds": [
+          "isobel-1614-arth",
+          "sadwrn-pawen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-emrys-tegwyn-crefyddol",
+        "participantIds": [
+          "emrys-crefyddol",
+          "tegwyn-pawen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-branwen-rhodri-canwyll",
+        "participantIds": [
+          "branwen-canwyll",
+          "rhodri-pawen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-madoc-morwen-tiwna",
+        "participantIds": [
+          "madoc-tiwna",
+          "morwen-pawen"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1659",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-heledd-grufudd-pawen",
+        "participantIds": [
+          "heledd-cath",
+          "grufudd-pawen"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1699",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-tarian-brac",
+        "participantIds": [
+          "tarian-arth",
+          "brac-pawen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-libet-artus-gwialen",
+        "participantIds": [
+          "libet-pawen",
+          "artus-gwialen"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1693",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-aneirin-rhonwen-brithyll",
+        "participantIds": [
+          "aneirin-brithyll",
+          "rhonwen-pawen"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1710",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-genofeva-lamorak",
+        "participantIds": [
+          "genofeva-neidr",
+          "lamorak-pawen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-domnall-gwenfrewi",
+        "participantIds": [
+          "domnall-arth",
+          "gwenfrewi-pawen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-blegywryd-mair-pawen",
+        "participantIds": [
+          "blegywryd-pawen",
+          "mair-unknown-pawen"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "1725",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-amaethon-glinda-pawen",
+        "participantIds": [
+          "amaethon-pawen",
+          "glinda-crafanc"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-joally-tegid-pawen",
+        "participantIds": [
+          "joally-pawen",
+          "tegid-cwningod"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-naili-lwyd-mwyalchen",
+        "participantIds": [
+          "naili-mwyalchen",
+          "lwyd-pawen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-march-mabil-morfil",
+        "participantIds": [
+          "march-pawen",
+          "mabil-morfil"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-mared-urien-pawen",
+        "participantIds": [
+          "mared-pawen",
+          "urien-eirth"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "pawen-parentage-cadoc-pawen",
+        "childId": "cadoc-pawen",
+        "parentIds": [
+          "lamorak-arth",
+          "mared-unknown"
+        ],
+        "partnershipId": "marriage-lamorak-mared",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Cadoc und Ceridwen.",
+        "extensions": {
+          "timeJumpId": "gap-lamorak-to-cadoc-pawen",
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-ceridwen-pawen",
+        "childId": "ceridwen-pawen",
+        "parentIds": [
+          "lamorak-arth",
+          "mared-unknown"
+        ],
+        "partnershipId": "marriage-lamorak-mared",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Cadoc und Ceridwen.",
+        "extensions": {
+          "timeJumpId": "gap-lamorak-to-cadoc-pawen",
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-sadwrn-pawen",
+        "childId": "sadwrn-pawen",
+        "parentIds": [
+          "cadoc-pawen",
+          "kerenza-crafanc"
+        ],
+        "partnershipId": "marriage-cadoc-kerenza-pawen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-tegwyn-pawen",
+        "childId": "tegwyn-pawen",
+        "parentIds": [
+          "cadoc-pawen",
+          "kerenza-crafanc"
+        ],
+        "partnershipId": "marriage-cadoc-kerenza-pawen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-rhodri-pawen",
+        "childId": "rhodri-pawen",
+        "parentIds": [
+          "isobel-1614-arth",
+          "sadwrn-pawen"
+        ],
+        "partnershipId": "marriage-isobel-sadwrn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-morwen-pawen",
+        "childId": "morwen-pawen",
+        "parentIds": [
+          "isobel-1614-arth",
+          "sadwrn-pawen"
+        ],
+        "partnershipId": "marriage-isobel-sadwrn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-grufudd-pawen",
+        "childId": "grufudd-pawen",
+        "parentIds": [
+          "isobel-1614-arth",
+          "sadwrn-pawen"
+        ],
+        "partnershipId": "marriage-isobel-sadwrn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-brac-pawen",
+        "childId": "brac-pawen",
+        "parentIds": [
+          "branwen-canwyll",
+          "rhodri-pawen"
+        ],
+        "partnershipId": "marriage-branwen-rhodri-canwyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-libet-pawen",
+        "childId": "libet-pawen",
+        "parentIds": [
+          "branwen-canwyll",
+          "rhodri-pawen"
+        ],
+        "partnershipId": "marriage-branwen-rhodri-canwyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-rhonwen-pawen",
+        "childId": "rhonwen-pawen",
+        "parentIds": [
+          "heledd-cath",
+          "grufudd-pawen"
+        ],
+        "partnershipId": "marriage-heledd-grufudd-pawen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-lamorak-pawen",
+        "childId": "lamorak-pawen",
+        "parentIds": [
+          "tarian-arth",
+          "brac-pawen"
+        ],
+        "partnershipId": "marriage-tarian-brac",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-gwenfrewi-pawen",
+        "childId": "gwenfrewi-pawen",
+        "parentIds": [
+          "tarian-arth",
+          "brac-pawen"
+        ],
+        "partnershipId": "marriage-tarian-brac",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-blegywryd-pawen",
+        "childId": "blegywryd-pawen",
+        "parentIds": [
+          "tarian-arth",
+          "brac-pawen"
+        ],
+        "partnershipId": "marriage-tarian-brac",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-amaethon-pawen",
+        "childId": "amaethon-pawen",
+        "parentIds": [
+          "genofeva-neidr",
+          "lamorak-pawen"
+        ],
+        "partnershipId": "marriage-genofeva-lamorak",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-joally-pawen",
+        "childId": "joally-pawen",
+        "parentIds": [
+          "genofeva-neidr",
+          "lamorak-pawen"
+        ],
+        "partnershipId": "marriage-genofeva-lamorak",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-lwyd-pawen",
+        "childId": "lwyd-pawen",
+        "parentIds": [
+          "genofeva-neidr",
+          "lamorak-pawen"
+        ],
+        "partnershipId": "marriage-genofeva-lamorak",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-march-pawen",
+        "childId": "march-pawen",
+        "parentIds": [
+          "blegywryd-pawen",
+          "mair-unknown-pawen"
+        ],
+        "partnershipId": "marriage-blegywryd-mair-pawen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-mared-pawen",
+        "childId": "mared-pawen",
+        "parentIds": [
+          "blegywryd-pawen",
+          "mair-unknown-pawen"
+        ],
+        "partnershipId": "marriage-blegywryd-mair-pawen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-ianto-pawen",
+        "childId": "ianto-pawen",
+        "parentIds": [
+          "amaethon-pawen",
+          "glinda-crafanc"
+        ],
+        "partnershipId": "marriage-amaethon-glinda-pawen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-owena-pawen",
+        "childId": "owena-pawen",
+        "parentIds": [
+          "amaethon-pawen",
+          "glinda-crafanc"
+        ],
+        "partnershipId": "marriage-amaethon-glinda-pawen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-thalen-pawen",
+        "childId": "thalen-pawen",
+        "parentIds": [
+          "naili-mwyalchen",
+          "lwyd-pawen"
+        ],
+        "partnershipId": "marriage-naili-lwyd-mwyalchen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-niniel-pawen",
+        "childId": "niniel-pawen",
+        "parentIds": [
+          "naili-mwyalchen",
+          "lwyd-pawen"
+        ],
+        "partnershipId": "marriage-naili-lwyd-mwyalchen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "pawen-parentage-guto-pawen",
+        "childId": "guto-pawen",
+        "parentIds": [
+          "march-pawen",
+          "mabil-morfil"
+        ],
+        "partnershipId": "marriage-march-mabil-morfil",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-pawen",
+        "name": "Haus Pawen O'Talgarth",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-pawen.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-arth",
+        "name": "Haus Arth O'Talgarth",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-arth.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-unbekannt-mared",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "house-crafanc",
+        "name": "Haus Crafanc O'Talgarth",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-crafanc.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-crefyddol",
+        "name": "Haus Crefyddol O'Llanvane",
+        "motto": "",
+        "emblem": "assets/images/houses/Silberinsel/Silberbucht/haus-crefyddol.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-canwyll",
+        "name": "Haus Canwyll O'Llanvane",
+        "motto": "",
+        "emblem": "assets/images/houses/Silberinsel/Silberbucht/haus-canwyll.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-tiwna",
+        "name": "Haus Tiwna O'Eiddon",
+        "motto": "",
+        "emblem": "assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-cath",
+        "name": "Haus Cath O'Mathragon",
+        "motto": "",
+        "emblem": "assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-cath.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-gwialen",
+        "name": "Haus Gwialen O'Tredegar",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/Schimmerküste/haus-gwialen.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-brithyll",
+        "name": "Haus Brithyll O'Tredegar",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/Schimmerküste/haus-brithyll.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-neidr",
+        "name": "Haus Neidr O'Llanvane",
+        "motto": "",
+        "emblem": "assets/images/houses/Silberinsel/haus-neidr.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-unbekannt-mair",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "house-cwningod",
+        "name": "Haus Cwingod O'Morea",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-mwyalchen",
+        "name": "Haus Mwyalchen O'Penbryn",
+        "motto": "",
+        "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-mwyalchen.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-morfil",
+        "name": "Haus Morfil O'Talsarn",
+        "motto": "",
+        "emblem": "assets/images/houses/Graue Weite/Grauküste/haus-morfil.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-eirth",
+        "name": "Haus Eirth O'Caer Glaslyn",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-eirth.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "house-unigol",
+        "name": "Haus Unigol O'Caer Marwor",
+        "motto": "",
+        "emblem": "assets/images/houses/Klaueninsel/haus-unigol.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
+        }
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "cadet-unigol-ceridwen-pawen",
+        "name": "Haus Unigol",
+        "subtitle": "Von Trahaern Arth und Ceridwen Pawen begründetes Kadettenhaus",
+        "linkType": "cadet-house",
+        "parentPartnershipId": "marriage-trahaern-ceridwen",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unigol",
+        "emblem": "assets/images/houses/Klaueninsel/haus-unigol.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unigol",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "targetFamilyId",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "houseId": 3,
+            "targetFamilyId": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "married-away-tegwyn-pawen-crefyddol",
+        "name": "Haus Crefyddol",
+        "subtitle": "Wegverheiratet an Haus Crefyddol",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-emrys-tegwyn-crefyddol",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-crefyddol",
+        "emblem": "assets/images/houses/Silberinsel/Silberbucht/haus-crefyddol.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-crefyddol",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "targetFamilyId",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "houseId": 3,
+            "targetFamilyId": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "married-away-morwen-pawen-tiwna",
+        "name": "Haus Tiwna",
+        "subtitle": "Wegverheiratet an Haus Tiwna",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-madoc-morwen-tiwna",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-tiwna",
+        "emblem": "assets/images/houses/Silberinsel/Silberküste/haus-tiwna.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-tiwna",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "targetFamilyId",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "houseId": 3,
+            "targetFamilyId": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "married-away-libet-pawen-gwialen",
+        "name": "Haus Gwialen",
+        "subtitle": "Wegverheiratet an Haus Gwialen",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-libet-artus-gwialen",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-gwialen",
+        "emblem": "assets/images/houses/Graue Weite/Schimmerküste/haus-gwialen.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-gwialen",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "targetFamilyId",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "houseId": 3,
+            "targetFamilyId": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "married-away-rhonwen-pawen-brithyll",
+        "name": "Haus Brithyll",
+        "subtitle": "Wegverheiratet an Haus Brithyll",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-aneirin-rhonwen-brithyll",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-brithyll",
+        "emblem": "assets/images/houses/Graue Weite/Schimmerküste/haus-brithyll.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-brithyll",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "targetFamilyId",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "houseId": 3,
+            "targetFamilyId": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "married-away-gwenfrewi-pawen-arth",
+        "name": "Haus Arth",
+        "subtitle": "Wegverheiratet an Haus Arth",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-domnall-gwenfrewi",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-arth",
+        "emblem": "assets/images/houses/Klaueninsel/haus-arth.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-arth",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "targetFamilyId",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "houseId": 3,
+            "targetFamilyId": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "married-away-joally-pawen-cwningod",
+        "name": "Haus Cwingod",
+        "subtitle": "Wegverheiratet an Haus Cwingod",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-joally-tegid-pawen",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-cwningod",
+        "emblem": "assets/images/houses/Klaueninsel/haus-cwningod.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-cwningod",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "targetFamilyId",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "houseId": 3,
+            "targetFamilyId": 3,
+            "emblem": 3
+          }
+        }
+      },
+      {
+        "id": "married-away-mared-pawen-eirth",
+        "name": "Haus Eirth",
+        "subtitle": "Wegverheiratet an Haus Eirth",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-mared-urien-pawen",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-eirth",
+        "emblem": "assets/images/houses/Klaueninsel/haus-eirth.png",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-eirth",
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "houseId",
+            "targetFamilyId",
+            "emblem"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "houseId": 3,
+            "targetFamilyId": 3,
+            "emblem": 3
+          }
+        }
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-lamorak-to-cadoc-pawen",
+        "parentPartnershipId": "marriage-lamorak-mared",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "cadoc-pawen",
+          "ceridwen-pawen"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1592",
+        "label": "Nicht einzeln überlieferte Generationen",
+        "notes": "Absoluter Generationentrenner: Gründerpaar, Hausknoten, Zeitsprung und erst danach Cadoc und Ceridwen.",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-lamorak-mared",
+      "houseId": "house-pawen",
+      "crestSubtitle": "Ritterfürstenhaus von Talgarth · Ältestes Kadettenhaus der Arth",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "lamorak-arth",
+      "orientation": "vertical",
+      "ancestorDepth": 20,
+      "descendantDepth": 20,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 4,
+      "sourceFamilyId": "haus-arth",
+      "sourcePartnershipId": "marriage-lamorak-mared",
+      "sourceModule": "Haus Pawen O'Talgarth (bereitgestellte Altdaten)",
+      "sourceNote": "Lamorak Arth und Mared begründen Haus Pawen. Der Hausknoten und genau ein serieller Zeitsprung stehen vor Cadoc und Ceridwen. Ceridwen und Trahaern Arth begründen Haus Unigol; ihre Linie endet deshalb hier am Kadettenhausknoten. Tegwyn, Morwen, Libet, Rhonwen, Gwenfrewi, Joally und Mared werden mit geraden Wegverheiratet-Verknüpfungen in ihre Zielhäuser geführt; deren Kinder bleiben ausschließlich in den fortführenden Zielhäusern. Gegenakten haben Vorrang bei widersprüchlichen Lebensdaten: Trahaern stirbt 1669, Madoc Tiwna wird 1630 geboren, Morwen stirbt 1659, Grufudd stirbt 1710, Artus 1721 und Aneirin 1720. Wiederholte Standardsilhouetten wurden nicht als individuelle Porträts importiert.",
+      "registryManagedExtensionFields": [
+        "blankFamily",
+        "sourceNote",
+        "parzifalPortraitCorrection"
+      ],
+      "registryManagedHouseProfileFields": [
+        "rankId",
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "liegeHouseId",
+        "liegeHouseName",
+        "secondarySeats",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ],
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "limitGenerations"
+      ],
+      "registryManagedEntitySourceRevision": 3,
+      "parzifalPortraitCorrection": "parzifal-corrected-portraits-2026-10-06"
+    }
+  }
+}

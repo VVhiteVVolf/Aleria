@@ -8,6 +8,7 @@ import { HOUSE_DYGER_FAMILY } from './house-dyger-family.js?v=parzifal-20261006'
 import { LYNNE_CREW_HOUSE_FAMILIES } from './lynne-crew-house-families.js?v=parzifal-20261006';
 import { RHYDIAN_CREW_HOUSE_FAMILIES } from './rhydian-crew-house-families.js';
 import { PARZIFAL_CREW_HOUSE_FAMILIES } from './parzifal-crew-house-families.js';
+import { withParzifalCrewPortraitUpgrade } from './parzifal-crew-families/portrait-upgrade.js';
 import { HOUSE_CRAFANC_FAMILY } from './house-crafanc-family.js';
 import { HOUSE_CWINGOD_FAMILY } from './house-cwingod-family.js';
 import {
@@ -81,7 +82,7 @@ export const KLAUENINSEL_DEPENDENT_HOUSE_FAMILIES = Object.freeze([
   ...RHYDIAN_CREW_HOUSE_FAMILIES,
   ...PARZIFAL_CREW_HOUSE_FAMILIES,
   ...SIMPLE_DEFINITIONS.map(createSimpleFamily)
-]);
+].map(withParzifalCrewPortraitUpgrade));
 
 export const KLAUENINSEL_ORIGIN_HOUSE_FAMILIES = Object.freeze(
   [

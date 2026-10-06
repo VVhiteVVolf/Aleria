@@ -1,15 +1,26 @@
 {
-  "checkedAt": "2026-10-05T23:09:31.568Z",
-  "passed": true,
-  "canonicalHierarchyRoundTripPreservesAllNamesAndPortraits": true,
+  "checkedAt": "2026-10-06T00:06:57.312Z",
+  "referenceModules": [
+    "idwals-schiffsmannschaft",
+    "lynnes-schiffsmannschaft",
+    "rhydians-schiffsmannschaft"
+  ],
+  "treeLabels": [
+    "Führung",
+    "Kämpfer",
+    "Besatzung",
+    "Bordtiere",
+    "Häuser"
+  ],
   "totals": {
-    "fuehrung": 21,
-    "besatzung": 49,
+    "aufbau": 16,
+    "ausbildung": 20,
+    "besatzung": 34,
     "bordtiere": 2,
-    "familien": 16
+    "haeuser": 16
   },
-  "namedHumans": 21,
-  "unnamedHumans": 49,
-  "animals": 2,
-  "landingImmediatelyAfterHierarchy": true
+  "allNamedCrewPreserved": true,
+  "landingStatePreserved": true,
+  "biographyPage": true,
+  "image": "/AleriaAlmanach/assets/ship-crews/parzifals-schiffsmannschaft/celebration-2026-10-06/gruppenbild-01.png"
 }
