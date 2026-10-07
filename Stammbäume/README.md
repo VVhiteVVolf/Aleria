@@ -174,8 +174,10 @@ Sie wird ausschließlich beim Start des Registerbrowsers als Ordnerdefinition
 Familienakten. Die Ordner bleiben auch nach dem Laden veröffentlichter Akten erhalten.
 Die sechs Originalvorlagen samt Hashes, relevanten Tabellenzeilen und 21 Wappen-URLs
 liegen unter `assets/data/source-inventories/fjordheim-2026-10-07.json` und dem
-gleichnamigen Unterordner. Wappen-URLs sind für die spätere Übernahme dokumentiert;
-die Planung nutzt bereits vorhandene lokale Gebietsicons.
+gleichnamigen Unterordner. Alle 21 Originalwappen sind lokal gesichert und durch
+PNG-Abmessungen sowie SHA-256-Hashes belegt. Reichs- und Jarltumswappen erscheinen
+in der Gebietsauswahl; die 15 Clanwappen in den Ortsvorschauen und Clanplanungen.
+Clanwappen bleiben den Clans zugeordnet und werden nicht als Stadtwappen ausgegeben.
 
 ## Abhängigkeiten
 

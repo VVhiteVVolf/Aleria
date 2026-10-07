@@ -45,6 +45,9 @@ test('every planned clan and seat is grounded in the supplied jarltum table; unk
         assert.ok(column >= 0, clan.name);
         const sourceSeat = row(main >= 0 ? 68 : 72)[column].text.replace(/\s*\(.+\)$/, '');
         assert.equal(place.name, sourceSeat, clan.name);
+        const sourceEmblem = row(main >= 0 ? 69 : 73)[column].images[0];
+        const asset = inventory.assets.find(entry => entry.path === clan.emblem);
+        assert.equal(asset?.source, sourceEmblem, `${clan.name}: Quellenwappen`);
         assert.equal('familyId' in clan, false);
         assert.equal('persons' in clan, false);
       }
@@ -110,14 +113,35 @@ test('published registry refresh retains prepared folders and counts real future
   assert.equal(listeners.size, 0);
 });
 
-test('all six source snapshots retain their original bytes; local territory icon exists', () => {
+test('all six source snapshots and all 21 original emblems have verifiable local bytes', () => {
   assert.equal(inventory.sources.length, 6);
   for (const source of inventory.sources) {
     const bytes = fs.readFileSync(new URL('../' + source.path, import.meta.url));
     assert.equal(createHash('sha256').update(bytes).digest('hex'), source.sha256, source.id);
   }
   const root = new URL('../', import.meta.url);
-  for (const folder of FJORDHEIM_REGISTRY_FOLDERS.filter(entry => entry.icon)) {
-    assert.ok(fs.existsSync(new URL(folder.icon, root)), folder.icon);
+  const usedEmblems = FJORDHEIM_REGISTRY_FOLDERS.flatMap(folder => [
+    ...(folder.icon ? [folder.icon] : []), ...folder.plannedHouses.map(house => house.emblem)
+  ]);
+  assert.equal(usedEmblems.length, 21);
+  assert.deepEqual(new Set(usedEmblems), new Set(inventory.assets.map(asset => asset.path)));
+  for (const asset of inventory.assets) {
+    const bytes = fs.readFileSync(new URL(asset.path, root));
+    assert.equal(asset.status, 'local');
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), asset.sha256, asset.path);
+    assert.equal(bytes.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
+    assert.equal(bytes.readUInt32BE(16), asset.width);
+    assert.equal(bytes.readUInt32BE(20), asset.height);
+  }
+  const index = createRegistryBrowserIndex([], FJORDHEIM_REGISTRY_FOLDERS);
+  for (const territory of FJORDHEIM_TERRITORIES) {
+    const regionalPage = renderRegistryContent(index, resolveRegistryLocation(index, ['Fjordheim', territory.name]), '').html;
+    for (const place of territory.places) {
+      const localPage = renderRegistryContent(index, resolveRegistryLocation(index, ['Fjordheim', territory.name, place.name]), '').html;
+      for (const clan of place.clans) {
+        assert.ok(regionalPage.includes(`src="${clan.emblem}"`), `${clan.name}: Ortsvorschau`);
+        assert.ok(localPage.includes(`src="${clan.emblem}"`), `${clan.name}: Clanplanung`);
+      }
+    }
   }
 });

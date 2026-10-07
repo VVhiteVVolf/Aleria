@@ -530,6 +530,34 @@
   color: #756044;
 }
 
+.registry-planned-house-preview, .registry-planning-clan-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.registry-planned-house-preview {
+  margin-top: 0.65rem;
+}
+
+.registry-planning-preview-emblem {
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 3rem;
+  object-fit: contain;
+}
+
+.registry-planning-clan-emblem {
+  width: 5rem;
+  height: 5rem;
+  flex: 0 0 5rem;
+  object-fit: contain;
+}
+
+.registry-planning-clan-heading > div {
+  min-width: 0;
+}
+
 @media (max-width: 58rem) {
   .registry-browser {
     grid-template-columns: minmax(14rem, 17rem) minmax(0, 1fr);
