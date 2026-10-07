@@ -33,7 +33,7 @@
 }
 
 .trade-catalog-header-icon,
-.trade-catalog-image,
+.trade-catalog-image-wrap,
 .trade-advisor-image {
   display: grid;
   place-items: center;
@@ -198,11 +198,18 @@
 }
 
 .trade-catalog-image {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
   width: 100%;
   height: 100%;
 }
 
 .trade-catalog-image-wrap {
+  position: relative;
+  isolation: isolate;
   width: 100%;
   height: var(--trade-image-height, 220px);
   max-height: 520px;
@@ -284,9 +291,34 @@
 }
 
 .trade-catalog-description {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  min-height: 0;
+  max-height: var(--trade-image-height, 220px);
+  box-sizing: border-box;
   border-left: 1px solid rgba(98, 66, 30, 0.2);
   border-right: 1px solid rgba(98, 66, 30, 0.2);
   padding: 0.1rem 1rem;
+}
+
+.trade-catalog-description > h4 {
+  flex: 0 0 auto;
+}
+
+.trade-catalog-description-scroll {
+  min-height: 0;
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #8b7046 transparent;
+  padding-right: 0.5rem;
+}
+
+.trade-catalog-description-scroll:focus-visible {
+  outline: 2px solid #8b7046;
+  outline-offset: 2px;
 }
 
 .trade-catalog-description h4,
@@ -501,12 +533,18 @@
 }
 
 .trade-catalog-seal {
-  display: block;
-  width: 5.4rem;
-  height: 5.4rem;
-  margin: 0.75rem auto 0;
+  position: absolute;
+  z-index: 0;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  width: 62%;
+  max-width: 11rem;
+  height: auto;
+  aspect-ratio: 1;
   object-fit: contain;
-  opacity: 0.35;
+  opacity: 0.23;
+  transform: rotate(-18deg);
+  pointer-events: none;
 }
 
 .trade-catalog-footer {

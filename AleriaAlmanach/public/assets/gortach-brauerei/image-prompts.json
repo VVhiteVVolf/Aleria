@@ -1,0 +1,233 @@
+{
+  "method": "Built-in image_gen",
+  "date": "2026-10-07",
+  "itemStyleReference": {
+    "url": "https://i.imgur.com/yh4qIxn.png",
+    "registerId": "standard:taverne:starkbier",
+    "local": "references/warenregister-starkbier.png"
+  },
+  "notes": [
+    "Scene format 2:3; strict Tales of Xillia / Frieren anime linework and cel shading.",
+    "Products use the existing illustrated inventory-item style and actual alpha transparency.",
+    "Original coat of arms and portraits are unchanged. The new linked-tankards mark is a brewery label variation.",
+    "Kinneth and Jodhrán appear in illustrative family scenes; no new offices or dated events are implied."
+  ],
+  "images": [
+    {
+      "id": "brauzeichen",
+      "prompt": "Use case: logo-brand. Create a new simplified brewery trade emblem derived from the provided Gortach coat of arms (reference only, do not replace the original). The original depicts two affectionate companions embracing while holding beer mugs, a blue field and golden ornamental rim. For small product labels translate that idea into TWO GOLDEN TANKARDS with inward-linked handles, slightly tilted together in a toast, white foam, above two minimal golden wave lines. A round dark navy blue field, a restrained antique gold Celtic knot border. Flat clean ink linework and cel shaded fantasy heraldry, legible compact silhouette, only navy, gold, cream. No people, no crowns, no fleurs-de-lis, no words, no lettering. The emblem fills the square composition; real transparent background outside the circular seal. This is a new brewery mark for a Celtic fantasy family.",
+      "referenced_image_paths": [
+        "E:/Aleria/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-7afee931-276b-4b1e-8062-163e85fc30b9.png",
+      "file": "brauzeichen.png"
+    },
+    {
+      "id": "01-broch-an-ear",
+      "prompt": "Use case: illustration-story. Portrait 2:3 aspect ratio. Strict Tales of Xillia / Frieren anime art style. Bold exaggerated facial features and proportions, strong expressions, clean anime lineart and tidy cel shading. Soft simple anime textures for skin, cloth, wood and stone. No realistic textures, photorealism, painterly brushwork, film grain or writing. Celtic medieval fantasy, restrained uncluttered composition, less is more. A warm welcoming introduction to the Gortach brewery in a Celtic stone port town beside a cool blue sea. In the foreground Kinneth Gortach laughs warmly, one open hand inviting the viewer into the brewery courtyard. Preserve the reference portrait identity: older broad stocky man, swept back shaggy white hair, huge white moustache and beard, golden thin headband, deep teal tunic with modest gold knotwork, brown fur shoulder mantle. Behind him the simple old brewery gable and one round blue-and-gold sign, a glimpse of the harbor below. Only one person; medium shot with enough setting to read the brewery. Morning light. Reference image is identity and clothing only; new scene, no raised horn copied from portrait.",
+      "transparent_background": false,
+      "referenced_image_paths": [
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-ru-gortach/kinneth-gortach.png"
+      ],
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-5360596b-7407-4055-8253-8277657f4539.png",
+      "file": "01-broch-an-ear.png"
+    },
+    {
+      "id": "03-muttergerste",
+      "prompt": "Use case: illustration-story. Portrait 2:3 aspect ratio. Strict Tales of Xillia / Frieren anime art style. Bold exaggerated facial features and proportions, strong expressions, clean anime lineart and tidy cel shading. Soft simple anime textures for skin, cloth, wood and stone. No realistic textures, photorealism, painterly brushwork, film grain or writing. Celtic medieval fantasy, restrained uncluttered composition, less is more. Quiet still life introducing ancient Celtic mother barley Òrbharr: a few heavy golden barley ears resting over an open small wooden seed box, a simple folded blue wool cloth, and beyond an open stone window a narrow golden barley field meeting distant blue sea. Clearly drawn plump grains and long awns. No people, no lettering, no runes, no magical glow. Very few objects. Honey gold and sea blue palette. Focus on the barley and saved seed, clear cel shaded shapes.",
+      "transparent_background": false,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-61629765-fcdb-4579-9a77-20f6fd050e2b.png",
+      "file": "03-muttergerste.png"
+    },
+    {
+      "id": "04-brauhaus",
+      "prompt": "Use case: illustration-story. Portrait 2:3 aspect ratio. Strict Tales of Xillia / Frieren anime art style. Bold exaggerated facial features and proportions, strong expressions, clean anime lineart and tidy cel shading. Soft simple anime textures for skin, cloth, wood and stone. No realistic textures, photorealism, painterly brushwork, film grain or writing. Celtic medieval fantasy, restrained uncluttered composition, less is more. Inside an old Celtic brewery, Jodhrán Gortach joyfully examines a shallow handful of barley malt beside one open wooden mash tun. Preserve reference identity: broad stocky elderly man, bald crown with flowing white side hair, bushy white eyebrows, full white beard and moustache, warm laughing eyes. He wears a rolled-sleeve blue tunic with a narrow golden Celtic knot trim and a simple brown work apron; no plate armor in the brewhouse. Stone window, faint rising steam, warm copper accent, nothing cluttered. This is an illustrative family visit to the brewing floor, not a formal office portrait. One person only.",
+      "transparent_background": false,
+      "referenced_image_paths": [
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-ru-gortach/jodhran-gortach.png"
+      ],
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-cb28ce31-abad-4f0a-9abe-a1aa541e92d1.png",
+      "file": "04-brauhaus.png"
+    },
+    {
+      "id": "11-brennerei-erbe",
+      "prompt": "Use case: illustration-story. Portrait 2:3 aspect ratio. Strict Tales of Xillia / Frieren anime art style. Bold exaggerated facial features and proportions, strong expressions, clean anime lineart and tidy cel shading. Soft simple anime textures for skin, cloth, wood and stone. No realistic textures, photorealism, painterly brushwork, film grain or writing. Celtic medieval fantasy, restrained uncluttered composition, less is more. A quiet still life about an old Celtic distillery preserved by generations: one squat copper pot still with a narrow curved swan neck on an old stone hearth, sunlight coming through a small arched window, a single closed leather-bound working book on a low wooden bench. No people. The copper is clean cel-shaded warm orange, no realistic hammered metal grain. Restrained curved pipe, simple pale stone walls. Three main shapes only. The mood is patient inherited craft, not magic or steampunk. No text.",
+      "transparent_background": false,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-641509b9-a3fa-4680-8f93-771a7d2a1818.png",
+      "file": "11-brennerei-erbe.png"
+    },
+    {
+      "id": "12-fasshof",
+      "prompt": "Use case: illustration-story. Portrait 2:3 aspect ratio. Strict Tales of Xillia / Frieren anime art style. Bold exaggerated facial features and proportions, strong expressions, clean anime lineart and tidy cel shading. Soft simple anime textures for skin, cloth, wood and stone. No realistic textures, photorealism, painterly brushwork, film grain or writing. Celtic medieval fantasy, restrained uncluttered composition, less is more. Two elder Gortach family members cross the little stone courtyard connecting brewery and distillery, accompanying a single oak barrel resting on its side. Identity reference 1: Kinneth, shaggy swept back white hair, gold headband, full white beard, teal tunic and brown fur shoulder mantle. Identity reference 2: Jodhrán, bald crown, flowing white side hair, bushy white eyebrows, white beard, blue tunic with gold Celtic trim. They exchange an amused knowing look, expressive eyebrows and warm smiles. Medium view, two people and one barrel only, a simple doorway on either side suggests the two workshops. The barrel stands securely on a low wooden cradle, no need for strained carrying poses. They are family visitors sharing a moment, not newly appointed master brewers. Sunlit Celtic harbor architecture, simplified stone.",
+      "transparent_background": false,
+      "referenced_image_paths": [
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-ru-gortach/kinneth-gortach.png",
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-ru-gortach/jodhran-gortach.png"
+      ],
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-32c92d3e-ff64-4b1a-bf4c-c2df008bd5e1.png",
+      "file": "12-fasshof.png"
+    },
+    {
+      "id": "13-handschrift",
+      "prompt": "Use case: illustration-story. Portrait 2:3 aspect ratio. Strict Tales of Xillia / Frieren anime art style. Bold exaggerated facial features and proportions, strong expressions, clean anime lineart and tidy cel shading. Soft simple anime textures for skin, cloth, wood and stone. No realistic textures, photorealism, painterly brushwork, film grain or writing. Celtic medieval fantasy, restrained uncluttered composition, less is more. Spare intimate still life in a Celtic distillery: one small tulip-shaped tasting glass of luminous honey amber whisky on an old oak barrel lid, beside exactly two golden barley ears and a small unlit beeswax candle. Dark blue stone cellar background softly simplified, one warm diagonal beam of light. The glass shows slow thick legs through clean cel-shaded strokes, no photographic reflections. The image evokes barley, honey and wax, no people, no fruit pile, no bottle labels, no text, no smoke.",
+      "transparent_background": false,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-d329a397-88af-4e92-a8b5-c56729de50d2.png",
+      "file": "13-handschrift.png"
+    },
+    {
+      "id": "bier-orbharr",
+      "prompt": "Use case: product-mockup. A single Celtic fantasy drink inventory illustration in a vertical 2:3 canvas, genuine transparent background. Match the supplied wooden tankard item illustration from the Aleria goods register: carefully outlined hand-drawn medieval object, warm antique colors, controlled engraved detail and clean readable shaded volumes, not a photograph, not oil painting, no scene or people. Two objects only: a corked stoneware beer bottle behind a small clear handmade glass tankard showing the beer's color and foam, both fully visible with generous transparent margins. Subtle Celtic decoration. On the bottle a parchment label with the supplied navy and gold linked-two-tankards emblem, and the exact short product name. No modern packaging, no other writing, no decorative ingredients. Label emblem reference must remain recognizable.\nClassic everyday beer, warm amber-copper beer with dense cream foam. Tall round honey-brown stoneware bottle, ochre and gold neck band. Label exact text: ÒRBHARR.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-0ca570b4-62ce-4b21-b139-2200a4852b60.png",
+      "file": "bier-orbharr.png"
+    },
+    {
+      "id": "bier-dubhbharr",
+      "prompt": "Use case: product-mockup. A single Celtic fantasy drink inventory illustration in a vertical 2:3 canvas, genuine transparent background. Match the supplied wooden tankard item illustration from the Aleria goods register: carefully outlined hand-drawn medieval object, warm antique colors, controlled engraved detail and clean readable shaded volumes, not a photograph, not oil painting, no scene or people. Two objects only: a corked stoneware beer bottle behind a small clear handmade glass tankard showing the beer's color and foam, both fully visible with generous transparent margins. Subtle Celtic decoration. On the bottle a parchment label with the supplied navy and gold linked-two-tankards emblem, and the exact short product name. No modern packaging, no other writing, no decorative ingredients. Label emblem reference must remain recognizable.\nDark roasted beer, deep mahogany almost black with red undertones and light brown foam. Stout dark brown stoneware bottle, charcoal neck band and copper rim. Label exact text: DUBHBHARR.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-eb20e2c9-6b25-41de-9a6f-d159c888236d.png",
+      "file": "bier-dubhbharr.png"
+    },
+    {
+      "id": "bier-gealbharr",
+      "prompt": "Use case: product-mockup. A single Celtic fantasy drink inventory illustration in a vertical 2:3 canvas, genuine transparent background. Match the supplied wooden tankard item illustration from the Aleria goods register: carefully outlined hand-drawn medieval object, warm antique colors, controlled engraved detail and clean readable shaded volumes, not a photograph, not oil painting, no scene or people. Two objects only: a corked stoneware beer bottle behind a small clear handmade glass tankard showing the beer's color and foam, both fully visible with generous transparent margins. Subtle Celtic decoration. On the bottle a parchment label with the supplied navy and gold linked-two-tankards emblem, and the exact short product name. No modern packaging, no other writing, no decorative ingredients. Label emblem reference must remain recognizable.\nLight breakfast beer, clear pale straw gold, fine bright ivory foam. Slim pale cream stoneware bottle, pale blue neck band. Label exact text: GEALBHARR.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-64621b34-fa95-4280-af9a-852d534ad22b.png",
+      "file": "bier-gealbharr.png"
+    },
+    {
+      "id": "bier-ciarbharr",
+      "prompt": "Use case: product-mockup. A single Celtic fantasy drink inventory illustration in a vertical 2:3 canvas, genuine transparent background. Match the supplied wooden tankard item illustration from the Aleria goods register: carefully outlined hand-drawn medieval object, warm antique colors, controlled engraved detail and clean readable shaded volumes, not a photograph, not oil painting, no scene or people. Two objects only: a corked stoneware beer bottle behind a small clear handmade glass tankard showing the beer's color and foam, both fully visible with generous transparent margins. Subtle Celtic decoration. On the bottle a parchment label with the supplied navy and gold linked-two-tankards emblem, and the exact short product name. No modern packaging, no other writing, no decorative ingredients. Label emblem reference must remain recognizable.\nCopper-ruby red dusk beer, translucent deep red copper with cream foam. Reddish chestnut stoneware bottle, burgundy neck band. Label exact text: CIARBHARR. The negative space must be genuinely transparent alpha with no beige glow, no vignette and no background color.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-11ea6a4d-43d8-4041-9940-236c3cb443ab.png",
+      "file": "bier-ciarbharr.png"
+    },
+    {
+      "id": "bier-turas",
+      "prompt": "Use case: product-mockup. A single Celtic fantasy drink inventory illustration in a vertical 2:3 canvas, genuine transparent background. Match the supplied wooden tankard item illustration from the Aleria goods register: carefully outlined hand-drawn medieval object, warm antique colors, controlled engraved detail and clean readable shaded volumes, not a photograph, not oil painting, no scene or people. Two objects only: a corked stoneware beer bottle behind a small clear handmade glass tankard showing the beer's color and foam, both fully visible with generous transparent margins. Subtle Celtic decoration. On the bottle a parchment label with the supplied navy and gold linked-two-tankards emblem, and the exact short product name. No modern packaging, no other writing, no decorative ingredients. Label emblem reference must remain recognizable.\nSeafaring beer, golden amber with a little natural haze, lasting ivory foam. Sturdy oval olive-brown stoneware bottle, sea blue neck band and modest rope collar under cork. Label exact text: TURAS. The negative space must be genuinely transparent alpha with no beige glow, no vignette and no background color.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-cd755890-5a58-4272-bea9-1974fb9046a0.png",
+      "file": "bier-turas.png"
+    },
+    {
+      "id": "bier-moine",
+      "prompt": "Use case: product-mockup. A single Celtic fantasy drink inventory illustration in a vertical 2:3 canvas, genuine transparent background. Match the supplied wooden tankard item illustration from the Aleria goods register: carefully outlined hand-drawn medieval object, warm antique colors, controlled engraved detail and clean readable shaded volumes, not a photograph, not oil painting, no scene or people. Two objects only: a corked stoneware beer bottle behind a small clear handmade glass tankard showing the beer's color and foam, both fully visible with generous transparent margins. Subtle Celtic decoration. On the bottle a parchment label with the supplied navy and gold linked-two-tankards emblem, and the exact short product name. No modern packaging, no other writing, no decorative ingredients. Label emblem reference must remain recognizable.\nPeat smoked beer, translucent chestnut-copper red, noticeably lighter than a dark stout, cream foam. Squat grey stoneware bottle, dark moss green neck band. Label exact text: MÒINE. No actual smoke or flames. The negative space must be genuinely transparent alpha with no beige glow, no vignette and no background color.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-6bfe1f3c-b6fc-4df9-87e6-ba2c60c13677.png",
+      "file": "bier-moine.png"
+    },
+    {
+      "id": "whisky-gealbharr-18",
+      "prompt": "Use case: product-mockup. Celtic fantasy whisky inventory illustration, vertical 2:3 canvas, true transparent background. Match supplied Aleria inventory tankard as an illustrated object style: hand drawn dark contours, antique warm color, carefully restrained etched detail, clear readable volume, no photograph and no oil painting. A single cork-stoppered handblown whisky bottle, fully visible with ample margin; no glass, people, environment or loose props. Rounded broad shoulders, heavy base, modest Celtic neck band. On a large parchment label show the supplied navy/gold linked-two-tankards seal clearly and the exact text specified. Composition straightforward elegant product portrait. NO vignette, NO colored glow around silhouette, transparent empty space. Fine illustration material, avoid realistic pores or photographic reflections.\nRich golden honey amber liquid in a clear classic rounded bottle. Pale cream label, a pale blue and gold neck band. Label words exactly: CADDACH GORTACH / GEALBHARR / 18 / 46%. Emphasize large legible age numeral 18.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-7e70f28e-d001-4b03-88bc-1fa7729f5610.png",
+      "file": "whisky-gealbharr-18.png"
+    },
+    {
+      "id": "whisky-orbharr-18",
+      "prompt": "Use case: product-mockup. Celtic fantasy whisky inventory illustration, vertical 2:3 canvas, true transparent background. Match supplied Aleria inventory tankard as an illustrated object style: hand drawn dark contours, antique warm color, carefully restrained etched detail, clear readable volume, no photograph and no oil painting. A single cork-stoppered handblown whisky bottle, fully visible with ample margin; no glass, people, environment or loose props. Rounded broad shoulders, heavy base, modest Celtic neck band. On a large parchment label show the supplied navy/gold linked-two-tankards seal clearly and the exact text specified. Composition straightforward elegant product portrait. NO vignette, NO colored glow around silhouette, transparent empty space. Fine illustration material, avoid realistic pores or photographic reflections.\nDeeper warm golden amber whisky in clear rounded bottle, ochre-gold neck band. Warm ivory parchment label. Label words exactly: CADDACH GORTACH / ÒRBHARR / 18 / 46%. Large legible age numeral 18.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-46c56bc5-d6f6-45db-841a-316b44677128.png",
+      "file": "whisky-orbharr-18.png"
+    },
+    {
+      "id": "whisky-ciarbharr-18",
+      "prompt": "Use case: product-mockup. Celtic fantasy whisky inventory illustration, vertical 2:3 canvas, true transparent background. Match supplied Aleria inventory tankard as an illustrated object style: hand drawn dark contours, antique warm color, carefully restrained etched detail, clear readable volume, no photograph and no oil painting. A single cork-stoppered handblown whisky bottle, fully visible with ample margin; no glass, people, environment or loose props. Rounded broad shoulders, heavy base, modest Celtic neck band. On a large parchment label show the supplied navy/gold linked-two-tankards seal clearly and the exact text specified. Composition straightforward elegant product portrait. NO vignette, NO colored glow around silhouette, transparent empty space. Fine illustration material, avoid realistic pores or photographic reflections.\nDeep amber-copper whisky with subtle ruby-red reflections in a clear rounded bottle. Burgundy and gold neck band, warm parchment label with thin copper border. Label words exactly: CADDACH GORTACH / CIARBHARR / 18 / 46%. Large legible age numeral 18.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-906ba278-e4f3-4936-9fee-0bdbcc7c5b72.png",
+      "file": "whisky-ciarbharr-18.png"
+    },
+    {
+      "id": "whisky-dubhbharr-18",
+      "prompt": "Use case: product-mockup. Celtic fantasy whisky inventory illustration, vertical 2:3 canvas, true transparent background. Match supplied Aleria inventory tankard as an illustrated object style: hand drawn dark contours, antique warm color, carefully restrained etched detail, clear readable volume, no photograph and no oil painting. A single cork-stoppered handblown whisky bottle, fully visible with ample margin; no glass, people, environment or loose props. Rounded broad shoulders, heavy base, modest Celtic neck band. On a large parchment label show the supplied navy/gold linked-two-tankards seal clearly and the exact text specified. Composition straightforward elegant product portrait. NO vignette, NO colored glow around silhouette, transparent empty space. Fine illustration material, avoid realistic pores or photographic reflections.\nDeep dark amber with mahogany copper glints inside clear rounded bottle. Dark charcoal and copper neck band. Parchment label with subdued brown edge. Label text exactly: CADDACH GORTACH / DUBHBHARR / 18 / 46%. Large age 18.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-c730b542-60d5-4a26-8ab3-9a900bb7b4fd.png",
+      "file": "whisky-dubhbharr-18.png"
+    },
+    {
+      "id": "whisky-turas-18",
+      "prompt": "Use case: product-mockup. Celtic fantasy whisky inventory illustration, vertical 2:3 canvas, true transparent background. Match supplied Aleria inventory tankard as an illustrated object style: hand drawn dark contours, antique warm color, carefully restrained etched detail, clear readable volume, no photograph and no oil painting. A single cork-stoppered handblown whisky bottle, fully visible with ample margin; no glass, people, environment or loose props. Rounded broad shoulders, heavy base, modest Celtic neck band. On a large parchment label show the supplied navy/gold linked-two-tankards seal clearly and the exact text specified. Composition straightforward elegant product portrait. NO vignette, NO colored glow around silhouette, transparent empty space. Fine illustration material, avoid realistic pores or photographic reflections.\nClear rich golden amber whisky, a shade lighter than dark mahogany, in a sturdy clear bottle. Sea-blue and gold neck band. Parchment label with restrained wave motif. Label text exactly: CADDACH GORTACH / TURAS / 18 / 46%. Large age 18. No unofficial nickname on label.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-728181f9-949b-4caa-8bea-7e067b32b735.png",
+      "file": "whisky-turas-18.png"
+    },
+    {
+      "id": "whisky-grosse-reise-22",
+      "prompt": "Use case: product-mockup. Celtic fantasy whisky inventory illustration, vertical 2:3 canvas, true transparent background. Match supplied Aleria inventory tankard as an illustrated object style: hand drawn dark contours, antique warm color, carefully restrained etched detail, clear readable volume, no photograph and no oil painting. A single cork-stoppered handblown whisky bottle, fully visible with ample margin; no glass, people, environment or loose props. Rounded broad shoulders, heavy base, modest Celtic neck band. On a large parchment label show the supplied navy/gold linked-two-tankards seal clearly and the exact text specified. Composition straightforward elegant product portrait. NO vignette, NO colored glow around silhouette, transparent empty space. Fine illustration material, avoid realistic pores or photographic reflections.\nDeep copper gold amber whisky in an elegant heavy clear bottle. Navy neck band with six small gold dots for its six cask stages. Label has exactly the provided seal, title and age, not crowded. Label text exactly: CADDACH GORTACH / DIE GROSSE REISE / 22 / 46%. Large age numeral 22. Thin gold ring around age, no maps or props.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-d9a60dab-db87-4f2e-9f73-53696a9ec0f1.png",
+      "file": "whisky-grosse-reise-22.png"
+    },
+    {
+      "id": "whisky-moine-18",
+      "prompt": "Use case: product-mockup. Celtic fantasy whisky inventory illustration, vertical 2:3 canvas, true transparent background. Match supplied Aleria inventory tankard as an illustrated object style: hand drawn dark contours, antique warm color, carefully restrained etched detail, clear readable volume, no photograph and no oil painting. A single cork-stoppered handblown whisky bottle, fully visible with ample margin; no glass, people, environment or loose props. Rounded broad shoulders, heavy base, modest Celtic neck band. On a large parchment label show the supplied navy/gold linked-two-tankards seal clearly and the exact text specified. Composition straightforward elegant product portrait. NO vignette, NO colored glow around silhouette, transparent empty space. Fine illustration material, avoid realistic pores or photographic reflections.\nAmber copper-gold whisky inside clear rounded bottle. Dark moss-green and antique gold neck band, ivory parchment label. Label text exactly: CADDACH GORTACH / MÒINE / 18 / 46%. Large age 18. No smoke effect, peat chunks, flames or extra objects.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-4b2963d6-9e89-4ea7-b0d8-931763c5083b.png",
+      "file": "whisky-moine-18.png"
+    },
+    {
+      "id": "whisky-orbharr-28",
+      "prompt": "Use case: product-mockup. Celtic fantasy whisky inventory illustration, vertical 2:3 canvas, true transparent background. Match supplied Aleria inventory tankard as an illustrated object style: hand drawn dark contours, antique warm color, carefully restrained etched detail, clear readable volume, no photograph and no oil painting. A single cork-stoppered handblown whisky bottle, fully visible with ample margin; no glass, people, environment or loose props. Rounded broad shoulders, heavy base, modest Celtic neck band. On a large parchment label show the supplied navy/gold linked-two-tankards seal clearly and the exact text specified. Composition straightforward elegant product portrait. NO vignette, NO colored glow around silhouette, transparent empty space. Fine illustration material, avoid realistic pores or photographic reflections.\nOld gold to deep amber whisky in a slightly broader prestigious clear rounded bottle. A restrained dark navy and gold neck band with thin gold barley ornament; simple wax cap above cork. Parchment label with double thin gold border. Label text exactly: CADDACH GORTACH / ÒRBHARR / 28 / 46%. The age 28 should be large and unambiguous. No extra nickname, crown, luxury box or loose props.",
+      "referenced_image_paths": [
+        "E:/Aleria/.tmp/gortach-register-reference.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/gortach-brauerei/brauzeichen.png"
+      ],
+      "transparent_background": true,
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11411-2d8a-7e20-ab34-a1026f9fac5b\\exec-71abbb67-2a74-4715-82c7-09fdd0ad28c1.png",
+      "file": "whisky-orbharr-28.png"
+    }
+  ]
+}

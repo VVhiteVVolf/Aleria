@@ -168,21 +168,23 @@ function buildTradeCatalogItem(item, activeCategory = 'all') {
   ].join(' ').toLowerCase();
   const hiddenAttr = activeCategory !== 'all' && item.category !== activeCategory ? ' hidden' : '';
   return `
-    <article class="trade-catalog-item" data-trade-category="${escapeHtml(item.category)}" data-trade-search="${escapeHtml(searchText)}"${hiddenAttr}>
+    <article class="trade-catalog-item" style="${escapeHtml(getTradeCatalogImageStyle(item))}" data-trade-category="${escapeHtml(item.category)}" data-trade-search="${escapeHtml(searchText)}"${hiddenAttr}>
       <aside class="trade-catalog-visual">
         ${item.badge ? `<div class="trade-catalog-badge">${escapeHtml(item.badge)}</div>` : ''}
-        <div class="trade-catalog-image-wrap ${escapeHtml(getTradeCatalogImageClasses(item))}" style="${escapeHtml(getTradeCatalogImageStyle(item))}">
+        <div class="trade-catalog-image-wrap ${escapeHtml(getTradeCatalogImageClasses(item))}">
+          ${item.sealImage ? `<img class="trade-catalog-seal" src="${sanitizeImageSrc(item.sealImage)}" alt="" aria-hidden="true" loading="lazy" decoding="async">` : ''}
           ${buildTradeCatalogImage(item.image, 'trade-catalog-image', getInitialChar(item.title))}
         </div>
         <h3>${escapeHtml(item.title)}</h3>
         ${item.subtitle ? `<p>${escapeHtml(item.subtitle)}</p>` : ''}
         ${buildTradeTagList(item.tags)}
-        ${item.sealImage ? `<img class="trade-catalog-seal" src="${sanitizeImageSrc(item.sealImage)}" alt="" loading="lazy" decoding="async">` : ''}
       </aside>
       <section class="trade-catalog-description">
         <h4>${escapeHtml(item.descriptionTitle)}</h4>
-        <div>${sanitizeContentHtml(item.description || '')}</div>
-        ${buildTradeDescriptionLower(item)}
+        <div class="trade-catalog-description-scroll" role="region" tabindex="0" aria-label="${escapeHtml(`${item.descriptionTitle || 'Beschreibung'}: ${item.title}`)}">
+          <div>${sanitizeContentHtml(item.description || '')}</div>
+          ${buildTradeDescriptionLower(item)}
+        </div>
       </section>
       <aside class="trade-catalog-meta">
         ${item.origin ? `
