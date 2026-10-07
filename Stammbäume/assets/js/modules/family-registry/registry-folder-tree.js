@@ -3,7 +3,18 @@ import { createHouseProfileFromFolderPath } from '../../domain/house-profile.js'
 const FOLDER_ICON_LEVELS = Object.freeze(['kingdom', 'county', 'barony', 'seat']);
 
 function createFolderNode(name = '', icon = '') {
-  return { name, icon, folders: new Map(), records: [] };
+  return { name, icon, folders: new Map(), records: [], description: '', plannedHouses: [], searchTerms: [] };
+}
+
+function ensureFolderPath(root, path, iconAtLevel = () => '') {
+  let node = root;
+  path.forEach((segment, levelIndex) => {
+    const icon = iconAtLevel(levelIndex);
+    if (!node.folders.has(segment)) node.folders.set(segment, createFolderNode(segment, icon));
+    node = node.folders.get(segment);
+    if (!node.icon && icon) node.icon = icon;
+  });
+  return node;
 }
 
 export function getRegistryRecordHouseProfile(record) {
@@ -47,21 +58,23 @@ function placementViewsFor(record) {
   ];
 }
 
-export function buildRegistryFolderTree(records) {
+export function buildRegistryFolderTree(records, folderDefinitions = []) {
   const root = createFolderNode();
+  folderDefinitions.forEach(definition => {
+    if (!definition.path?.length) return;
+    const node = ensureFolderPath(root, definition.path);
+    node.icon = definition.icon || node.icon;
+    node.description = definition.description || '';
+    node.plannedHouses = definition.plannedHouses || [];
+    node.searchTerms = definition.searchTerms || [];
+  });
   records.forEach(record => {
     if (record.listing === 'linked-only') return;
     placementViewsFor(record).forEach(placementRecord => {
       const path = placementRecord.folderPath?.length
         ? placementRecord.folderPath
         : ['Nicht einsortiert'];
-      let node = root;
-      path.forEach((segment, levelIndex) => {
-        const icon = iconForPathLevel(placementRecord, levelIndex);
-        if (!node.folders.has(segment)) node.folders.set(segment, createFolderNode(segment, icon));
-        node = node.folders.get(segment);
-        if (!node.icon && icon) node.icon = icon;
-      });
+      const node = ensureFolderPath(root, path, levelIndex => iconForPathLevel(placementRecord, levelIndex));
       node.records.push(placementRecord);
     });
   });

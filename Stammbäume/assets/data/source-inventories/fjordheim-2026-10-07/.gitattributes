@@ -1,0 +1,2 @@
+# Preserve the supplied HTML bytes and whitespace for verifiable source hashes.
+*.html -text -whitespace

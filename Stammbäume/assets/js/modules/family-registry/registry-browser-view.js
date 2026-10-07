@@ -4,6 +4,7 @@ import { createFamilyViewLink } from '../../services/family-links.js';
 import { escapeHtml as esc } from '../../ui/dom.js';
 import { getRegistryRecordHouseProfile } from './registry-folder-tree.js';
 import { groupRegistryFamilies, registryPathKey, searchRegistry } from './registry-browser-model.js';
+import { renderRegistryPlanning } from './registry-planning-view.js';
 
 const housesLabel = count => `${count} ${count === 1 ? 'Haus' : 'Häuser'}`;
 const action = (name, key) => `data-action="${name}" data-path="${esc(key)}"`;
@@ -42,6 +43,7 @@ function renderFolderCards(nodes, showPath = false) {
   return `<div class="registry-region-grid">${nodes.map(node => `<button type="button" class="registry-region-card" ${action('select-region', node.key)}>
     ${icon(node.icon, 'registry-region-emblem')}
     <span><strong>${esc(node.name)}</strong><small>${housesLabel(node.totalCount)}${node.children.length ? ' · mit Unterorten' : ''}</small>
+    ${node.plannedHouses.length ? `<small>Vorgesehen: ${esc(node.plannedHouses.map(house => house.name).join(' · '))}</small>` : ''}
     ${showPath ? `<small class="registry-result-path">${esc(node.path.join(' › '))}</small>` : ''}</span>
     <span aria-hidden="true">›</span>
   </button>`).join('')}</div>`;
@@ -89,6 +91,7 @@ export function renderRegistryContent(index, selected, query) {
     : `${housesLabel(index.root.totalCount)} in ${index.root.children.length} Gebieten`;
   return { status, html: `${renderBreadcrumbs(selected)}
     <div class="registry-panel-heading"><p class="eyebrow">${selected.path.length ? 'Gebietsübersicht' : 'Genealogische Archive'}</p><h2 id="registry-location-title" tabindex="-1">${esc(selected.name)}</h2><p>${status}</p></div>
+    ${renderRegistryPlanning(selected)}
     ${selected.children.length ? `<section class="registry-section"><h3>${selected.path.length ? 'Untergebiete & Orte' : 'Länder & Regionen'}</h3>${renderFolderCards(selected.children)}</section>` : ''}
     ${selected.records.length ? `<section class="registry-section"><h3>Häuser in ${esc(selected.name)}</h3>${renderHouseGroups(selected.records.map(record => ({ record, placements: [{ record, node: selected }] })))}</section>` : ''}
     ${!selected.totalCount ? '<p class="registry-empty">Noch keine Häuser eingetragen.</p>' : ''}` };

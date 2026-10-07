@@ -139,6 +139,44 @@ Es werden keine Pakete installiert. Die Tests verwenden ausschließlich Node.js 
 - Die Silberinsel ist vollständig als Registerstruktur vorbereitet. Haus Neidr liegt als ausgearbeitete Grafenakte unter `Cenyr > Silberinsel > Silberbucht > Llanvane`; dort ersetzen Haus Saith, Haus Crefyddol und Haus Canwyll ihre Leerakten durch vollständige Stammbäume. Crefyddol umfasst 79 Personen, 36 Ehen, 42 eindeutige Abstammungen, zwölf direkte Wegverheiratet-Knoten und den verknüpften Bruderhaus-Knoten Canwyll. Canwyll umfasst 70 Personen, 31 Ehen, 38 eindeutige Abstammungen, 15 direkte Wegverheiratet-Knoten und den verknüpften Bruderhaus-Knoten Crefyddol. Sieffre der Fromme trägt in beiden Akten den Holy Frame; seine Söhne Llwyarch und Llwellyn gründen mit Lynette beziehungsweise Hafren die getrennten Bruderhäuser. Jede Akte führt nur ihre eigene Linie fort. Die drei Canwyll-Quellenlücken stehen ebenso wie die beiden Crefyddol-Lücken als absolute serielle Generationentrenner. Uvel führt als ausdrücklich belegte matrilineare Ausnahme die Canwyll-Linie mit Alaweyn Saith fort; die Kinder fortgeführter Gegenakten werden nicht gedoppelt. Die gemeinsame Herkunft ist auch in Neidr statt des früheren unbekannten Hauszweigs aufgelöst. Saith umfasst weiterhin 50 Personen, 21 Ehen, 28 eindeutige Abstammungen und acht direkte Wegverheiratet-Knoten. Tiwna ersetzt seine Leerakte unter `Silberküste > Eiddon` durch 68 Personen, 28 Ehen, 39 eindeutige Abstammungen und elf direkte Wegverheiratet-Knoten. Morholt Pysgod und Caitrin Neidr tragen den gemeinsamen Hausknoten unmittelbar unter ihrer Ehe; beide anschließenden Quellenlücken sind absolute serielle Trenner, wobei der zweite ausschließlich Caradoc und Telyth mit Brannock und Eirian verbindet. Pyrth ersetzt seine Leerakte unter `Silberpfad > Caer Clwyd` durch 49 Personen, 20 Ehen, 28 eindeutige Abstammungen und sieben direkte Wegverheiratet-Knoten. Roderic Pyrth und Llynn Neidr tragen den gemeinsamen Hausknoten unmittelbar unter ihrer Ehe; die einzige Quellenlücke folgt strikt seriell nach dem Wappen. Kinder fortgeführter Gegenakten werden nicht gedoppelt. Die zehn niederen Ritterhäuser und Brithfaen stehen weiterhin in Llanvane; Tir An Muirghin liegt als antikes Mór-Tiarna-Geschlecht auf Grafen-Tier direkt unter `Antike Crannath Clans`. Die zwölf noch nicht ausgearbeiteten Häuser besitzen jeweils nur ein neutrales Gründerpaar und ihren Hausknoten. Die Quellenvarianten `Crefyddoll`, `Crefydoll` und `Pirth` werden bewusst unter den projektweit kanonischen Namen Crefyddol und Pyrth geführt. Alle drei Herrschaftsicons, sämtliche 18 Hauswappen, 23 neue Saith-, 26 neue Crefyddol-, 21 neue Canwyll-, 25 neue Tiwna- und 18 neue Pyrth-Porträts werden lokal ausgeliefert.
 - Das Tal der Milane ist vollständig als Registerstruktur vorbereitet. Haus Aderyn bleibt die ausgearbeitete Grafenakte und wird verlustfrei auf `Cenyr > Tal der Milane > Yvains Klamm > Penbryn` migriert. Haus Eryr ersetzt dort seine Leerakte durch 41 Personen, 17 Beziehungen und 23 eindeutige Abstammungen. Aeron Aderyn und Rhianu tragen den Eryr-Gründungsknoten direkt unter ihrer Ehe; erst danach folgt der einzige absolute Zeitsprung zu Eiddyl. Ellanah, Malvina, Venora, Meriel und Sian besitzen direkte Wegverheiratet-Knoten, Aysha einen ausdrücklichen Wegverlobt-Knoten zu Catwan Aderyn. Kinder aus Illysywen und Baedd bleiben nur in den dort fortgeführten Gegenakten, während Sheevs und Mererids Kinder ausschließlich bei Eryr erscheinen. Tylluan, Mwyalchen, zehn niedere Ritterhäuser und Ffwnarch liegen ebenfalls in Penbryn; Ilyuncu steht unter `Schwalbenhort > Caer Gwennol`, Gaeth unter `Taubenfurt > Penllyn` und Hebog unter `Falkenhöh > Talwyn`. Die antiken Clans Ui Gormárd und Ua Fíonnghal liegen getrennt unter `Antike Crannath Clans > Dun Talonach` beziehungsweise `Tûr Briste`; Ui Gormárd wird als Mór-Tiarna-Geschlecht auf Grafen-Tier, Ua Fíonnghal als dessen historischer Dún-Tiarna-Vasall geführt. Die 18 noch nicht ausgearbeiteten Häuser besitzen ausschließlich ein neutrales Gründerpaar und ihren Hausknoten. Alle vier Herrschaftsicons, sämtliche 20 Hauswappen und 28 individuelle Eryr-Quellporträts werden lokal mit Quellenmanifest ausgeliefert; für die vier Sitze werden keine nicht belegten Stadtwappen erfunden.
 
+## Fjordheim: vorbereitete Registerstruktur (7. Oktober 2026)
+
+`register.html?gebiet=Fjordheim` enthält die fünf Jarltümer und 16 belegte Orte.
+Die 15 Clan-Zuordnungen sind reine Planungseinträge: Es entstehen keine Familienakten,
+Gründerpaare, Personen, Beziehungen oder Stammbaumlinks. Die Familienanzahl bleibt unverändert.
+Bestehende Vennyr-Akten werden weder verschoben noch als nordische Familien dupliziert.
+
+| Jarltum | Hoher Clan / Hauptsitz | Niedere Clans / Sitze |
+| --- | --- | --- |
+| Drachenzunge | Draca / Drakensund | Vingar / Styrkr; Fjargardr / Caer (Quellenkonflikt) |
+| Langstrand | Hjort / Talfjörn | Helvandr / Derwaskr; Hronulf / Eldrvik; Vötnar / Blomholr |
+| Kragenküste | Ulfr / Bergshamn | Valdruna / Askarholm; Ulvar / Blotfjall; Æxewindr / Bjarnaströnd |
+| Tiefenfjord | Geit / Nyfjord | Arngull / Strandr |
+| Windtal | Orn / Tirvindr | Haming / Skerdgardr |
+
+Llyndor ist zusätzlich als Thanentum ohne belegten nordischen Clan vorbereitet.
+Die Quelle nennt Haming ausdrücklich unter einem Hesirentum. Bei Valdruna und
+Fjargardr bleibt der konkrete Rang offen. Die Reichsgeschichte belegt Draca als
+führenden Clan des Reiktums; es wird dafür keine zweite Familienakte vorgesehen.
+
+Quellenvarianten bleiben sichtbar bzw. durchsuchbar: Ulf/Ulfr,
+Derwaskyr/Derwaskr, Askerholm/Askarholm, Skergardr/Skerdgardr,
+Blómholr/Blomholr sowie Talforwyn/Talfronwyn. **Ungeklärt:** Die Reichsübersicht
+nennt Fjandr mit Sitz Fjargardr, die Jarltumsseite Fjargardr mit Sitz Caer beim
+gleichen Wappen. Außerdem belegt die Clantabelle Valdruna in Askarholm,
+während die Geographie Llyndor als weiteres Thanentum führt. Diese Orte werden
+nicht gleichgesetzt. Die Namenswahl in der Oberfläche folgt vorläufig den
+Jarltumsseiten und entscheidet keine spätere genealogische Identität.
+
+Die gemeinsame Quelle der Planung ist `assets/js/data/fjordheim-territorial-plan.js`.
+Sie wird ausschließlich beim Start des Registerbrowsers als Ordnerdefinition
+übergeben; Familienregister, Speicherung und Almanach-Import lesen sie nicht als
+Familienakten. Die Ordner bleiben auch nach dem Laden veröffentlichter Akten erhalten.
+Die sechs Originalvorlagen samt Hashes, relevanten Tabellenzeilen und 21 Wappen-URLs
+liegen unter `assets/data/source-inventories/fjordheim-2026-10-07.json` und dem
+gleichnamigen Unterordner. Wappen-URLs sind für die spätere Übernahme dokumentiert;
+die Planung nutzt bereits vorhandene lokale Gebietsicons.
+
 ## Abhängigkeiten
 
 - [Family Chart 0.9.0](https://github.com/donatso/family-chart), MIT

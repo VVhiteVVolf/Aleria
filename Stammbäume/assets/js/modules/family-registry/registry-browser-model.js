@@ -5,7 +5,7 @@ export const registryPathKey = path => JSON.stringify(path);
 const normalizeSearch = value => String(value || '').normalize('NFD').replace(/\p{M}/gu, '').toLocaleLowerCase('de');
 
 // Count each house once, retaining its individual territorial placements.
-export function createRegistryBrowserIndex(records) {
+export function createRegistryBrowserIndex(records, folderDefinitions = []) {
   const uniqueRecords = [...new Map(records.filter(record => record.listing !== 'linked-only')
     .map(record => [record.id, record])).values()];
   const nodes = new Map();
@@ -13,7 +13,8 @@ export function createRegistryBrowserIndex(records) {
   function visit(folder, path) {
     const node = {
       key: registryPathKey(path), path, name: folder.name || 'Alle Gebiete', icon: folder.icon,
-      records: folder.records, children: [], familyIds: new Set()
+      records: folder.records, children: [], familyIds: new Set(),
+      description: folder.description, plannedHouses: folder.plannedHouses, searchTerms: folder.searchTerms
     };
     nodes.set(node.key, node);
     folder.records.forEach(record => {
@@ -27,7 +28,7 @@ export function createRegistryBrowserIndex(records) {
     node.totalCount = node.familyIds.size;
     return node;
   }
-  const root = visit(buildRegistryFolderTree(uniqueRecords), []);
+  const root = visit(buildRegistryFolderTree(uniqueRecords, folderDefinitions), []);
   return { root, nodes, families };
 }
 
@@ -44,7 +45,7 @@ export function searchRegistry(index, query) {
     const haystack = normalizeSearch(values.join(' '));
     return terms.every(term => haystack.includes(term));
   };
-  const folders = [...index.nodes.values()].filter(node => node.path.length && matches(node.path));
+  const folders = [...index.nodes.values()].filter(node => node.path.length && matches([...node.path, ...node.searchTerms]));
   const families = [...index.families.values()].filter(entry => matches([
     entry.record.title, entry.record.id,
     ...entry.placements.flatMap(({ record, node }) => [

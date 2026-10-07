@@ -501,6 +501,35 @@
   color: #756044;
 }
 
+.registry-planning-note {
+  color: #756044;
+  line-height: 1.6;
+}
+
+.registry-planning-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.registry-planning-list li {
+  padding: 1rem;
+  border: 1px dashed #cbb990;
+  border-radius: 0.5rem;
+  background: #f4e9d2;
+}
+
+.registry-planning-list strong, .registry-planning-list span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.registry-planning-list span, .registry-planning-list p {
+  margin: 0.45rem 0 0;
+  color: #756044;
+}
+
 @media (max-width: 58rem) {
   .registry-browser {
     grid-template-columns: minmax(14rem, 17rem) minmax(0, 1fr);

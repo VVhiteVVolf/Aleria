@@ -1,7 +1,7 @@
 import { createRegistryBrowserIndex, registryPathKey, resolveRegistryLocation } from './registry-browser-model.js';
 import { renderRegistryContent, renderRegistryNavigation } from './registry-browser-view.js';
 
-export function createRegistryBrowser({ root, records, browserWindow = window }) {
+export function createRegistryBrowser({ root, records, folderDefinitions = [], browserWindow = window }) {
   const navigation = root.querySelector('[data-role="registry-navigation"]');
   const content = root.querySelector('[data-role="registry-content"]');
   const search = root.querySelector('#registry-search');
@@ -10,7 +10,7 @@ export function createRegistryBrowser({ root, records, browserWindow = window })
   const sidebar = root.querySelector('.registry-sidebar');
   const isNarrow = () => browserWindow.matchMedia('(max-width: 42rem)').matches;
   if (isNarrow()) sidebar.open = false;
-  let index = createRegistryBrowserIndex(records);
+  let index = createRegistryBrowserIndex(records, folderDefinitions);
   let selected = resolveRegistryLocation(index, new URL(browserWindow.location.href).searchParams.getAll('gebiet'));
   const expanded = new Set();
 
@@ -70,7 +70,7 @@ export function createRegistryBrowser({ root, records, browserWindow = window })
   render();
   return {
     updateRecords(nextRecords) {
-      index = createRegistryBrowserIndex(nextRecords);
+      index = createRegistryBrowserIndex(nextRecords, folderDefinitions);
       selected = resolveRegistryLocation(index, selected.path);
       expandLocation();
       render();
