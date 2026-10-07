@@ -9,6 +9,11 @@ const SECTION_THEME_META = {
     label: 'Kulturarchiv',
     note: 'Völker, Tavernen, Bräuche und Alltagsbilder der Welt.'
   },
+  'Sitte & Etiquette': {
+    slug: 'kultur',
+    label: 'Sitten & Gebräuche',
+    note: 'Gastrecht, Gaben, Festtage und die Verantwortung füreinander.'
+  },
   Zauberei: {
     slug: 'magie',
     label: 'Arkanes Fach',
