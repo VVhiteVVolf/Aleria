@@ -16,6 +16,32 @@
       "referenceUsage": "Vor der Generierung passende Bilder aus diesem Ordner ansehen und als Stilreferenzen verwenden. Der Ordner wurde am 7. Oktober 2026 geprüft; er enthält unter anderem OBR-class-Archer.png, OBR-class-Assassin.png und OBR-class-Knight.png.",
       "prompt": "Stilrichtung: Klassische Fantasy-RPG-Charakterillustration im 2:3-Hochformat, als vollständige Ganzkörperfigur. Illustrativ, lebendig und leicht comichaft, mit natürlichen, aber stilisierten Proportionen, ausdrucksstarken Gesichtern, dynamischen Posen und fantasievoll gestalteter Kleidung, Rüstung und Waffen. Traditionell gemalte Aquarell-, Gouache- und Tuscheoptik mit lockeren Pinselstrichen, sichtbarem Color Bleeding, transparenten Lasuren, ausgewaschenen Farbflächen, trockenen Pinselspuren und bewusst unfertig auslaufenden, aufbrechenden Bildrändern. Formen sind klar und anatomisch verständlich, Texturen und Details dagegen malerisch angedeutet statt realistisch ausgerendert. Metall, Stoff, Leder, Fell und Haut entstehen durch lockere Farbflächen und wenige gezielte Details. Feine, teilweise unterbrochene Zeichenkonturen statt harter Comic-Outlines. Heller, nahezu leerer Papierhintergrund mit einzelnen lockeren Farb- und Pinselwolken um die Figur. Gesamtwirkung wie eine handgemalte Charakterillustration aus einem klassischen Fantasy-Rollenspielhandbuch – elegant, abenteuerlich, leicht verspielt und malerisch; kein Fotorealismus, kein CGI, keine Hochglanz-Concept-Art und keine vollständig ausgerenderten Oberflächen."
     },
+    "fantasy-inventory-item": {
+      "name": "Fantasy-Items im Stil der Häuser aus Celtigerns Wacht",
+      "useFor": [
+        "Freigestellte Items und Inventarbilder",
+        "Waffen, Schilde, Rüstungen und Ausrüstung",
+        "Haus-Harnische",
+        "Einzelne Waren und Gegenstände im Warenregister"
+      ],
+      "aspectRatio": "1:1",
+      "transparentBackground": true,
+      "referenceDirectory": "D:\\0-KI Generierte\\01 Bilder\\01 - Items\\Beispiele",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png",
+        "AleriaAlmanach/public/assets/character-equipment/gawain-silberschuppe-v4.png"
+      ],
+      "referenceUsage": "Vor der Generierung passende vorhandene Itembilder ansehen. Referenz 1 bestimmt das konkrete Gegenstandsdesign, Hausfarben, Materialien und Wappen; Referenz 2 bestimmt ausschließlich den Mal- und Darstellungsstil. Keine fremden Wappen, Drachen oder Hausfarben aus der Stilreferenz übernehmen.",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: [GEGENSTAND]. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.",
+      "houseTorsoPrompt": "Use case: stylized-concept. One square fantasy RPG inventory asset, the torso armor of [HAUSNAME]. Reference 1 defines this house's exact armor DESIGN, metal colors, trim and heraldic chest emblem. Reference 2 defines the ITEM ART STYLE: match painterly textured metal/leather, crisp dark outlines, readable details, gentle three-quarter view. Extract ONLY the torso cuirass from the warrior: an EMPTY standalone waist-length harness with open neck and empty armholes, small attached shoulder caps and short waist plates allowed. Faithfully retain the house colors and chest emblem from reference 1. NO helmet, head, wearer, mannequin, arms, gloves, legs, boots, long skirt, cloak, weapon, shield, stand or text. Keep silhouette within square with 10% clear margins. TRUE transparent alpha background, only a faint soft BLACK contact shadow immediately beneath the torso; no painted backdrop or checkerboard. One armor item.",
+      "houseTorsoUsage": "Für einen Haus-Harnisch houseTorsoPrompt verwenden und [HAUSNAME] ersetzen. Die Beschränkung auf den leeren, hüftlangen Torso gilt für Harnische; andere Items behalten ihren tatsächlich angefragten Umfang.",
+      "transparencyCheck": "Den echten Alphakanal prüfen. Ein weißer, grauer oder gemalter Schachbrett-Hintergrund ist keine Transparenz; außerhalb des Gegenstands müssen transparente Flächen erhalten bleiben.",
+      "sourceManifests": [
+        "AleriaAlmanach/public/assets/house-armor/image-prompts.json",
+        "AleriaAlmanach/public/assets/character-equipment/image-prompts.json"
+      ],
+      "provenance": "Der allgemeine Item-Prompt fasst die belegten Stil- und Freistellungsvorgaben der Haus- und Ausrüstungsbilder zusammen. houseTorsoPrompt übernimmt den verwendeten Wortlaut für Haus Draig und Haus Saethwyr aus dem Celtigerns-Wacht-Manifest; nur der konkrete Hausname wird durch [HAUSNAME] ersetzt."
+    },
     "anime-scene-portrait": {
       "name": "Anime für Szenen und Figurenporträts",
       "useFor": [
@@ -34,7 +60,8 @@
   },
   "applicationRules": [
     "Den passenden Stilblock vollständig in den konkreten Bildprompt übernehmen und Motiv, Person, Kleidung, Wappen, Region und Handlung passend zum Auftrag ergänzen.",
-    "Die beiden Stilrichtungen getrennt verwenden: Die Aquarell-, Gouache- und Tuscheoptik gehört zur Fantasy-RPG-Ganzkörperillustration; der allgemeine Anime-Stil verwendet klare Lineart und Cel-Shading.",
+    "Die drei Stilrichtungen nach Verwendungszweck getrennt verwenden: Fantasy-RPG-Ganzkörperillustrationen in Aquarell/Gouache/Tusche (2:3), Anime-Szenen und -Porträts mit Lineart und Cel-Shading (2:3), freigestellte Fantasy-Inventaritems im belegten Item-Stil (1:1 mit echtem Alphakanal).",
+    "Bei Itembildern fantasy-inventory-item wählen. Ein Gegenstand als Teil einer Szene macht die gesamte Szene nicht zum Inventarbild; Szenen und Stillleben mit Umgebung bleiben im passenden Szenenstil.",
     "Bei bereits bekannten Figuren vorhandene Porträts und bei Häusern oder Organisationen vorhandene Wappen als Referenzen einbeziehen, soweit sie im Motiv vorkommen.",
     "Explizite Stil-, Format- und Motivvorgaben des aktuellen Auftrags haben Vorrang vor diesen Standards. Die Standards nicht bei jedem neuen Bildauftrag erneut abfragen."
   ]

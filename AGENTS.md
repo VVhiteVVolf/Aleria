@@ -7,8 +7,9 @@ Stil ohne erneute Erinnerung verwenden:
 
 - **Szenen, Figurenporträts, Storybilder und passende Stillleben:** `anime-scene-portrait`, 2:3, klare Anime-Lineart und Cel-Shading. `[ANIME EINTRAGEN]` durch die gewünschte Anime-Referenz ersetzen; ohne neue Vorgabe gilt die bisher vereinbarte Referenz **Tales of Xillia/Frieren**. Ruhige, nicht überladene Komposition.
 - **Kriegergalerie, Klassenillustrationen und Ganzkörperfiguren im RPG-Handbuch-Stil:** `fantasy-rpg-character`, 2:3, Aquarell/Gouache/Tusche mit auslaufenden Rändern. Stilreferenzen aus **`D:\0-KI Generierte\01 Bilder\Oblivion Classes`** vor der Generierung ansehen.
+- **Freigestellte Items, Waffen, Schilde, Rüstungen und Warenregister-Gegenstände:** `fantasy-inventory-item`, 1:1, handgemalter Fantasy-Inventarstil mit klaren dunklen Konturen und echtem transparentem PNG-Alphakanal, wie bei den Haus-Items aus Celtigerns Wacht. Referenzen aus **`D:\0-KI Generierte\01 Bilder\01 - Items\Beispiele`** und den verlinkten Haus-Harnischen verwenden. Motivvorlagen bestimmen Hausfarben und Wappen; Stilreferenzen liefern nur die Darstellung. Für Haus-Harnische den gespeicherten `houseTorsoPrompt` verwenden: leerer hüftlanger Torso mit offenen Hals- und Armausschnitten.
 
-Die beiden Stilrichtungen getrennt verwenden. Vorhandene Figurenporträts und
+Die drei Stilrichtungen nach Verwendungszweck getrennt verwenden. Vorhandene Figurenporträts und
 Wappen als Motivreferenzen berücksichtigen. Ausdrückliche Vorgaben des aktuellen
 Auftrags haben Vorrang; die Standards nicht bei jedem Bildauftrag erneut abfragen.
 
