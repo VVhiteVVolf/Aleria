@@ -273,10 +273,13 @@ function buildArchiveDashboardSectionCards(sections = []) {
     const existing = grouped.get(label) || {
       label,
       theme: getThemeMetaForSection(section),
-      iconUrl: '',
+      iconUrl: getArchiveDashboardTabIcon(label),
       entries: []
     };
-    if (!existing.iconUrl) existing.iconUrl = getArchiveDashboardTabIcon(label, section.iconUrl);
+    // A child section owns its own icon; only the root may replace the tab icon.
+    if (!getSectionPathParts(section).length && section.iconUrl) {
+      existing.iconUrl = getArchiveDashboardTabIcon(label, section.iconUrl);
+    }
     existing.entries.push(...(Array.isArray(section.entries) ? section.entries : []));
     grouped.set(label, existing);
   });

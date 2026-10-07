@@ -50,7 +50,7 @@ Das vorhandene Handelstemplate erhält zwei optionale Felder: `status: 'planned'
 
 Teyrngarchs Brauzeichen verwendet Krug, Gerstenähren und Grün/Gold. Penderyns Brennzeichen übersetzt das rote Wappen in einen Drachen um eine Flasche. Die Marken erscheinen auf Etiketten und als große, zentrierte Wasserzeichen hinter dem Artikelbild: 23 % Deckkraft und −18° Drehung. Die Beschreibung bleibt auf die Bildhöhe begrenzt und bei Bedarf scrollbar.
 
-Die drei Navigationsbereiche erhalten eigene Motive: Krug/Brennblase, Hammer/Keltenknoten und Feder/Pergament. Archivordner starten geschlossen. Nur eine ausdrückliche Auswahl oder das Aufklappen öffnet sie; erneutes Rendern öffnet keinen zuvor eingeklappten Ordner.
+Die drei Navigationsbereiche erhalten eigene Motive: Krug/Brennblase, Hammer/Keltenknoten und Feder/Pergament. Das Hauptsymbol „Gilden & Zünfte“ behält sein bisheriges Weltpfad-Motiv; Unterbereichssymbole werden nicht an die Hauptkarte vererbt. Ein ausdrücklich gesetztes Wurzelsymbol bleibt maßgeblich. Archivordner starten geschlossen. Nur eine ausdrückliche Auswahl oder das Aufklappen öffnet sie; erneutes Rendern öffnet keinen zuvor eingeklappten Ordner.
 
 ## Erzeugung und Prüfung
 

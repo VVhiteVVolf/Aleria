@@ -45,6 +45,7 @@ function createContext() {
     getArchiveEntryPageCount(entry) { return entry.pages.length; },
     getArchiveEntryPreviewImage(entry) { return entry.id === 'lore-cenyr' ? 'chronik.png' : 'court.png'; },
     getSectionOptionLabel(section) { return section.tab || section.key; },
+    getSectionPathParts(section) { return section.path || []; },
     getThemeMetaForSection() { return { slug: 'chroniken' }; },
     getArchiveSectionStats(_section, entries) {
       return { moduleCount: entries.length, pageCount: entries.reduce((sum, entry) => sum + entry.pages.length, 0) };
@@ -91,6 +92,22 @@ test('Der Magie-Weltpfad öffnet den Codex, andere Bereiche bleiben Archiv-Reite
   assert.match(html, /<button class="archive-dashboard-section" type="button" data-archive-action="switch-tab" data-tab="Chroniken"/);
   assert.doesNotMatch(html, /data-archive-action="switch-tab" data-tab="Magie"/);
   assert.match(html, /Schulen, Druidenkunst &amp; göttliche Magie/);
+});
+
+test('Unterbereichssymbole ersetzen kein Hauptsymbol; ein eigenes Wurzelsymbol bleibt erhalten', () => {
+  const { context } = createContext();
+  const children = ['Brauer & Brenner', 'Handwerk & Kulturbünde', 'Nachrichten und Schreibergilden'].map((key, index) => ({
+    key, tab: 'Gilden & Zünfte', path: [key], iconUrl: `child-${index}.png`, entries: []
+  }));
+  for (const sections of [children, [...children].reverse()]) {
+    const html = context.buildArchiveDashboardSectionCards(sections);
+    assert.match(html, /Weltpfade\/gilden-zuenfte\.png/);
+    assert.doesNotMatch(html, /child-\d\.png/);
+  }
+  const root = { key: 'Gilden & Zünfte', tab: 'Gilden & Zünfte', path: [], iconUrl: 'custom-root.png', entries: [] };
+  for (const sections of [[root, ...children], [...children, root]]) {
+    assert.match(context.buildArchiveDashboardSectionCards(sections), /src="custom-root\.png"/);
+  }
 });
 
 test('Fundstücke bevorzugen echte Illustrationen und erhalten einen Rückfall auf Text', () => {
