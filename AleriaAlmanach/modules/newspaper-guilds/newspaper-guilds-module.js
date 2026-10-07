@@ -81,7 +81,7 @@ function registerNewspaperGuild(data) {
   let section = SECTIONS.find(section => section.tab === tab && section.path?.length === 1 && section.path[0] === category);
   if (!section) {
     section = { key: category, tab, path: [category],
-      iconUrl: '../IconOrdner/ReiterIcons/Weltpfade/gilden-zuenfte.png?v=20260909-pergament-v3',
+      iconUrl: './public/assets/brewer-guilds/nav-nachrichten-schreiber.png',
       desc: 'Zeitungshäuser, Schreiberschulen und die Wege ihrer Nachrichten.', entries: [] };
     SECTIONS.push(section);
   }

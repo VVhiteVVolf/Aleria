@@ -1475,11 +1475,24 @@ function sanitizeTradeCatalogAttributeRows(items = []) {
     .slice(0, 8);
 }
 
+function sanitizeTradeCatalogPriceOptions(value = []) {
+  const rows = Array.isArray(value) ? value : String(value || '').split('\n').map(line => {
+    const [label, unit, price] = line.split('|');
+    return { label, unit, price };
+  });
+  return rows.map(row => ({
+    label: String(row?.label || '').trim(),
+    unit: String(row?.unit || '').trim(),
+    price: String(row?.price ?? '').trim()
+  })).filter(row => row.label && row.unit).slice(0, 8);
+}
+
 function sanitizeTradeCatalogItems(items = []) {
   return (Array.isArray(items) ? items : [])
     .map((item, index) => ({
       id: slugify(item?.id || item?.title || `handelsgut-${index + 1}`, `handelsgut-${index + 1}`),
       category: slugify(item?.category || item?.categoryId || 'tiere', 'tiere'),
+      status: item?.status === 'planned' ? 'planned' : 'available',
       image: String(item?.image || '').trim(),
       imageFormat: sanitizeTradeCatalogImageFormat(item?.imageFormat),
       imageFit: sanitizeTradeCatalogImageFit(item?.imageFit),
@@ -1501,6 +1514,7 @@ function sanitizeTradeCatalogItems(items = []) {
       priceFill: clampTradeCatalogPercent(item?.priceFill),
       priceMin: String(item?.priceMin || '').trim(),
       priceMax: String(item?.priceMax || '').trim(),
+      priceOptions: sanitizeTradeCatalogPriceOptions(item?.priceOptions),
       currencyCode: String(item?.currencyCode || 'KS').trim(),
       currencyLabel: String(item?.currencyLabel || 'Kupferstueck').trim(),
       currencyIcon: String(item?.currencyIcon || '*').trim(),

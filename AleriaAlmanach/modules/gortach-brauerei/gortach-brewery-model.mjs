@@ -1,5 +1,7 @@
 // Build-time editorial composition. Rendering, editing and trading remain owned by
 // the existing Story, Guild and Trade Catalog systems.
+import { buildDrinkPricing, reservedDrinkSlots } from '../trade-catalog/drink-catalog-model.mjs';
+import { GORTACH_SERVING_PRICES } from './gortach-prices.mjs';
 const ASSETS = './public/assets/gortach-brauerei';
 const FAMILY = '../Stammbäume/assets/images/portraits/haus-ru-gortach';
 const CREST = '../Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png';
@@ -129,8 +131,7 @@ function productItem(product, blocks, whisky = false) {
     ],
     originTitle: 'Herkunft', origin: ORIGIN,
     usageTitle: whisky ? 'Charakter' : 'Am Tisch & unterwegs', usageTags: product.occasions || product.tags,
-    priceTitle: 'Preis', priceMin: '', priceMax: '', priceFill: 0, currencyCode: 'K', currencyLabel: 'Kupferstücke', currencyIcon: '◈',
-    priceNote: 'Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.',
+    ...buildDrinkPricing(whisky ? 'whisky' : 'beer', GORTACH_SERVING_PRICES[whisky ? 'whisky' : 'beer'][product.id]),
     conditionsTitle: 'Verfügbarkeit & Besonderheiten', conditions: product.availability,
     attributes: [], sealImage: MARK
   };
@@ -147,7 +148,7 @@ function assortmentPage(products, manuscript, offset, whisky = false) {
       categories: [{ id: whisky ? 'whisky' : 'bier', label: whisky ? 'Whisky · Getränke' : 'Bier · Getränke' }],
       allLabel: whisky ? 'Alle Whiskys' : 'Alle Biere',
       searchPlaceholder: 'Nach Name, Charakter oder Fass suchen …', filterLabel: 'Suche',
-      items: products.map((product, index) => productItem(product, manuscript[index + offset].blocks, whisky)),
+      items: [...products.map((product, index) => productItem(product, manuscript[index + offset].blocks, whisky)), ...reservedDrinkSlots(whisky ? 'whisky' : 'bier')],
       footerCards: []
     }, commentSequence: []
   };

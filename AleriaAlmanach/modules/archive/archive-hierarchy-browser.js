@@ -1,5 +1,4 @@
 const _expandedArchiveHierarchyNodes = new Set();
-const _initializedArchiveHierarchyTabs = new Set();
 
 function getArchiveHierarchyNodeKey(tab, path = []) {
   const normalizedPath = (Array.isArray(path) ? path : [])
@@ -86,17 +85,6 @@ function expandArchiveHierarchyPath(tab, path = []) {
   });
 }
 
-function initializeArchiveHierarchyExpansion(model, selectedPath = []) {
-  const tabKey = normalizeArchivePathPart(model?.tab || 'archiv');
-  if (!_initializedArchiveHierarchyTabs.has(tabKey)) {
-    _initializedArchiveHierarchyTabs.add(tabKey);
-    const firstChild = model?.root?.children?.[0];
-    if (firstChild) _expandedArchiveHierarchyNodes.add(getArchiveHierarchyNodeKey(model.tab, firstChild.path));
-  }
-  // Keep ancestors visible, but respect an explicitly collapsed selected folder.
-  expandArchiveHierarchyPath(model?.tab, selectedPath.slice(0, -1));
-}
-
 function toggleArchiveHierarchyNode(tab, path = []) {
   const key = getArchiveHierarchyNodeKey(tab, path);
   if (_expandedArchiveHierarchyNodes.has(key)) _expandedArchiveHierarchyNodes.delete(key);
@@ -178,7 +166,6 @@ function renderArchiveHierarchyNode(node, model, selectedPath = []) {
 }
 
 function renderArchiveHierarchyBrowser(model, selectedPath = [], options = {}) {
-  initializeArchiveHierarchyExpansion(model, selectedPath);
   const selectedNode = findArchiveHierarchyNode(model.root, selectedPath) || model.root;
   const rootEntries = model.root.directEntries.map(renderArchiveHierarchyEntry).join('');
   return `

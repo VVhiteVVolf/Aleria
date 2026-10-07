@@ -141,6 +141,16 @@ function buildTradeDescriptionLower(item) {
 }
 
 function buildTradePrice(item) {
+  if (item.priceOptions?.length) {
+    return `<section class="trade-catalog-meta-block trade-catalog-price">
+      <h4>${escapeHtml(item.priceTitle || 'Ausschank & Gebinde')}</h4>
+      <dl class="trade-price-options">${item.priceOptions.map(option => `
+        <div><dt>${escapeHtml(option.label)} <small>${escapeHtml(option.unit)}</small></dt>
+        <dd>${escapeHtml(option.price || 'Preis offen')}${option.price ? ` <small>${escapeHtml(item.currencyCode || 'KT')}</small>` : ''}</dd></div>`).join('')}
+      </dl>
+      ${item.priceNote ? `<p>${escapeHtml(item.priceNote)}</p>` : ''}
+    </section>`;
+  }
   const price = item.priceMin || item.priceMax
     ? `${escapeHtml(item.priceMin || '-')}${item.priceMax ? ` - ${escapeHtml(item.priceMax)}` : ''}`
     : '-';
@@ -167,6 +177,13 @@ function buildTradeCatalogItem(item, activeCategory = 'all') {
     ...(item.usageTags || [])
   ].join(' ').toLowerCase();
   const hiddenAttr = activeCategory !== 'all' && item.category !== activeCategory ? ' hidden' : '';
+  if (item.status === 'planned') {
+    return `<article class="trade-catalog-item trade-catalog-planned" data-trade-category="${escapeHtml(item.category)}" data-trade-search="${escapeHtml(searchText)}"${hiddenAttr}>
+      <span class="trade-catalog-planned-mark" aria-hidden="true">＋</span>
+      <div><h3>${escapeHtml(item.title)}</h3><p>Für eine künftige Abfüllung reserviert.</p></div>
+      <span class="trade-catalog-planned-status">Noch nicht im Sortiment</span>
+    </article>`;
+  }
   return `
     <article class="trade-catalog-item" style="${escapeHtml(getTradeCatalogImageStyle(item))}" data-trade-category="${escapeHtml(item.category)}" data-trade-search="${escapeHtml(searchText)}"${hiddenAttr}>
       <aside class="trade-catalog-visual">

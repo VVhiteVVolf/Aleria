@@ -134,6 +134,10 @@ function buildTradeCatalogItemRows(items = [], mode = 'module') {
         ${buildTradeCatalogInput('Titel', 'title', item.title, index, mode)}
         ${buildTradeCatalogInput('Untertitel', 'subtitle', item.subtitle, index, mode)}
         ${buildTradeCatalogInput('Kategorie-ID', 'category', item.category, index, mode)}
+        ${buildTradeCatalogSelect('Sortimentstatus', 'status', item.status, index, mode, [
+          { value: 'available', label: 'Sortimenteintrag' },
+          { value: 'planned', label: 'Freier Sortimentsplatz (nicht im Warenregister)' }
+        ])}
         ${buildTradeCatalogInput('Bild', 'image', item.image, index, mode, 'url')}
         ${buildTradeCatalogSelect('Bildformat', 'imageFormat', item.imageFormat, index, mode, [
           { value: 'landscape', label: 'Querformat' },
@@ -161,6 +165,7 @@ function buildTradeCatalogItemRows(items = [], mode = 'module') {
         ${buildTradeCatalogInput('Verwendung, Komma-getrennt', 'usageTags', item.usageTags.join(', '), index, mode)}
         ${buildTradeCatalogInput('Preis von', 'priceMin', item.priceMin, index, mode)}
         ${buildTradeCatalogInput('Preis bis', 'priceMax', item.priceMax, index, mode)}
+        ${buildTradeCatalogTextarea('Verkaufsgrößen: Bezeichnung | Menge | Preis (eine Größe pro Zeile; ersetzt die Preisspanne)', 'priceOptions', (item.priceOptions || []).map(option => `${option.label} | ${option.unit} | ${option.price}`).join('\n'), index, mode)}
         ${buildTradeCatalogInput('Preisbalken %', 'priceFill', item.priceFill, index, mode, 'range')}
         ${buildTradeCatalogInput('Waehrungsicon', 'currencyIcon', item.currencyIcon, index, mode)}
         ${buildTradeCatalogInput('Waehrungsname', 'currencyLabel', item.currencyLabel, index, mode)}
@@ -384,6 +389,7 @@ function collectTradeCatalogItems(block) {
     title: getTrimmedFormValue(row, '.me-trade-item-title'),
     subtitle: getTrimmedFormValue(row, '.me-trade-item-subtitle'),
     category: getTrimmedFormValue(row, '.me-trade-item-category'),
+    status: getTrimmedFormValue(row, '.me-trade-item-status'),
     image: getTrimmedFormValue(row, '.me-trade-item-image'),
     imageFormat: getTrimmedFormValue(row, '.me-trade-item-imageFormat'),
     imageFit: getTrimmedFormValue(row, '.me-trade-item-imageFit'),
@@ -397,6 +403,7 @@ function collectTradeCatalogItems(block) {
     usageTags: getTrimmedFormValue(row, '.me-trade-item-usageTags'),
     priceMin: getTrimmedFormValue(row, '.me-trade-item-priceMin'),
     priceMax: getTrimmedFormValue(row, '.me-trade-item-priceMax'),
+    priceOptions: sanitizeTradeCatalogPriceOptions(getTrimmedFormValue(row, '.me-trade-item-priceOptions')),
     priceFill: getTrimmedFormValue(row, '.me-trade-item-priceFill'),
     currencyIcon: getTrimmedFormValue(row, '.me-trade-item-currencyIcon'),
     currencyLabel: getTrimmedFormValue(row, '.me-trade-item-currencyLabel'),

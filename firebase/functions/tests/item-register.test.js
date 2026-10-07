@@ -43,6 +43,27 @@ function moduleDatabase(entry = menu()) {
     'char_tabs/config': {moduleStoreManifest:{customSections:[{tab:'Kultur',entryIds:['taverne']}],entryOverrideIds:[],hiddenModuleIds:{}}} });
 }
 
+test('drink sizes preserve independent authoritative prices and never sell reserved slots', async () => {
+  const entry = { id: 'taverne', title: 'Brauerei', pages: [{ tradeCatalogPage: true, tradeCatalog: {
+    categories: [{ id: 'beer', label: 'Bier · Getränke' }], items: [
+      { title: 'Sonnenglanz', category: 'beer', currencyCode: 'KT', priceOptions: [
+        { label: 'Krug', unit: '0,5 l', price: '0,5' }, { label: 'Flasche', unit: '1 l', price: '1' }, { label: 'Fass', unit: '50 l', price: '50' }
+      ] }, { title: 'Freier Sortimentplatz 1', status: 'planned', category: 'beer' }
+    ]
+  } }] };
+  const offers = buildModuleOffers([entry], STANDARD_ITEMS);
+  assert.equal(offers.length, 3);
+  assert.equal(new Set(offers.map(offer => offer.id)).size, 3);
+  for (const [index, price] of [0.5, 1, 50].entries()) {
+    const db = moduleDatabase(entry), offer = offers[index];
+    const input = purchase({ productId: offer.id, moduleId: offer.moduleId, sourceRevision: offer.sourceRevision, unitCopper: price });
+    await assert.rejects(commitItemRegisterOperation(db, auth, { ...input, unitCopper: price / 2 }), /Preisspanne/);
+    const result = await commitItemRegisterOperation(db, auth, input);
+    assert.equal(result.character.inventory.moneyState.totalCopper, 3000 - price);
+    assert.match(result.character.inventory.items[0].description, new RegExp(['Krug', 'Flasche', 'Fass'][index]));
+  }
+});
+
 test('module purchases use the authoritative menu, do not write a second catalogue, and allow later resale', async () => {
   const db = moduleDatabase();
   const offer = buildModuleOffers([menu()], STANDARD_ITEMS)[0];

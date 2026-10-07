@@ -237,14 +237,31 @@
               "Schankstube",
               "Tafel"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "2"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "4"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "200"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Das bekannteste und am weitesten verbreitete Gortach-Bier; auch über den Seehandel erhältlich.",
             "attributes": [],
@@ -290,14 +307,31 @@
               "Lange Abende",
               "Herbst & Winter"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "2,5"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "5"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "250"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Ganzjährig gebraut. Die fassgereifte Variante ist seltener und im Winter besonders begehrt.",
             "attributes": [],
@@ -343,14 +377,31 @@
               "Frühstück",
               "Herzhafte Speisen"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "1"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "2"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "100"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Vor allem in und um Broch an Ear; für lange Reisen weniger geeignet.",
             "attributes": [],
@@ -396,14 +447,31 @@
               "Dämmerung",
               "Feierabend"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "2,5"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "5"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "250"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Regulärer Ausschank; besondere Fasssude werden für Feste und Familienanlässe zurückgelegt.",
             "attributes": [],
@@ -450,14 +518,31 @@
               "Aufbruch",
               "Proviant"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "3"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "6"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "300"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Für lange Überfahrten bestimmt; gute Lagerbedingungen bleiben auch auf See entscheidend.",
             "attributes": [],
@@ -503,18 +588,80 @@
               "Rauchbier",
               "Ruhiger Abend"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "4"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "8"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "400"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Die Menge hängt von Ernte, Torf und Reife ab. Bei großer Nachfrage muss man auf fertige Fässer warten.",
             "attributes": [],
             "sealImage": "./public/assets/gortach-brauerei/brauzeichen.png"
+          },
+          {
+            "id": "bier-reserve-1",
+            "category": "bier",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 1",
+            "description": "",
+            "image": "",
+            "priceOptions": []
+          },
+          {
+            "id": "bier-reserve-2",
+            "category": "bier",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 2",
+            "description": "",
+            "image": "",
+            "priceOptions": []
+          },
+          {
+            "id": "bier-reserve-3",
+            "category": "bier",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 3",
+            "description": "",
+            "image": "",
+            "priceOptions": []
+          },
+          {
+            "id": "bier-reserve-4",
+            "category": "bier",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 4",
+            "description": "",
+            "image": "",
+            "priceOptions": []
+          },
+          {
+            "id": "bier-reserve-5",
+            "category": "bier",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 5",
+            "description": "",
+            "image": "",
+            "priceOptions": []
           }
         ],
         "footerCards": []
@@ -613,14 +760,31 @@
               "Gelber Apfel",
               "Bienenwachs"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Glas",
+                "unit": "4 cl",
+                "price": "8"
+              },
+              {
+                "label": "Flasche",
+                "unit": "0,7 l",
+                "price": "140"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "10.000"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Der klassische Achtzehnjährige und Maßstab des Hauses.",
             "attributes": [],
@@ -671,14 +835,31 @@
               "Brot",
               "Haselnuss"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Glas",
+                "unit": "4 cl",
+                "price": "9"
+              },
+              {
+                "label": "Flasche",
+                "unit": "0,7 l",
+                "price": "157,5"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "11.250"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Klassische Abfüllung mit besonders ausgeprägtem Charakter der Muttergerste.",
             "attributes": [],
@@ -729,14 +910,31 @@
               "Honig",
               "Trockenfrucht"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Glas",
+                "unit": "4 cl",
+                "price": "10"
+              },
+              {
+                "label": "Flasche",
+                "unit": "0,7 l",
+                "price": "175"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "12.500"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Die fruchtigste klassische Abfüllung; auch als Caddach der Dämmerung bekannt.",
             "attributes": [],
@@ -787,14 +985,31 @@
               "Brotkruste",
               "Kakao"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Glas",
+                "unit": "4 cl",
+                "price": "10"
+              },
+              {
+                "label": "Flasche",
+                "unit": "0,7 l",
+                "price": "175"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "12.500"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Kräftige ungetorfte Abfüllung mit dunklem Malzcharakter.",
             "attributes": [],
@@ -845,14 +1060,31 @@
               "Eiche",
               "Trocken"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Glas",
+                "unit": "4 cl",
+                "price": "9"
+              },
+              {
+                "label": "Flasche",
+                "unit": "0,7 l",
+                "price": "157,5"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "11.250"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Unter Seeleuten als Whisky der Heimkehr bekannt; der Beiname steht nicht auf dem Etikett.",
             "attributes": [],
@@ -903,14 +1135,31 @@
               "Vielschichtig",
               "Feiner Torfrauch"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Glas",
+                "unit": "4 cl",
+                "price": "16"
+              },
+              {
+                "label": "Flasche",
+                "unit": "0,7 l",
+                "price": "280"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "20.000"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Eine bestimmte Abfüllung der experimentellen 22-jährigen Reihe. Andere Zweiundzwanzigjährige können andere Fassfolgen besitzen.",
             "attributes": [],
@@ -961,14 +1210,31 @@
               "Heide",
               "Bienenwachs"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Glas",
+                "unit": "4 cl",
+                "price": "12"
+              },
+              {
+                "label": "Flasche",
+                "unit": "0,7 l",
+                "price": "210"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "15.000"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Der einzige klassische Achtzehnjährige aus getorftem Malz.",
             "attributes": [],
@@ -1019,18 +1285,80 @@
               "Quitte",
               "Ausgeprägt wachsig"
             ],
-            "priceTitle": "Preis",
+            "priceTitle": "Ausschank & Gebinde",
             "priceMin": "",
             "priceMax": "",
             "priceFill": 0,
-            "currencyCode": "K",
-            "currencyLabel": "Kupferstücke",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
             "currencyIcon": "◈",
-            "priceNote": "Für diese Abfüllung ist noch kein Verkaufspreis festgelegt.",
+            "priceOptions": [
+              {
+                "label": "Glas",
+                "unit": "4 cl",
+                "price": "28"
+              },
+              {
+                "label": "Flasche",
+                "unit": "0,7 l",
+                "price": "490"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "35.000"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
             "conditionsTitle": "Verfügbarkeit & Besonderheiten",
             "conditions": "Seltenste und älteste regelmäßig vorgesehene Abfüllung. In schlechten Jahren wird kein Fass freigegeben.",
             "attributes": [],
             "sealImage": "./public/assets/gortach-brauerei/brauzeichen.png"
+          },
+          {
+            "id": "whisky-reserve-1",
+            "category": "whisky",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 1",
+            "description": "",
+            "image": "",
+            "priceOptions": []
+          },
+          {
+            "id": "whisky-reserve-2",
+            "category": "whisky",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 2",
+            "description": "",
+            "image": "",
+            "priceOptions": []
+          },
+          {
+            "id": "whisky-reserve-3",
+            "category": "whisky",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 3",
+            "description": "",
+            "image": "",
+            "priceOptions": []
+          },
+          {
+            "id": "whisky-reserve-4",
+            "category": "whisky",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 4",
+            "description": "",
+            "image": "",
+            "priceOptions": []
+          },
+          {
+            "id": "whisky-reserve-5",
+            "category": "whisky",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 5",
+            "description": "",
+            "image": "",
+            "priceOptions": []
           }
         ],
         "footerCards": []
@@ -1044,7 +1372,7 @@
   const category = 'Brauer & Brenner';
   let section = SECTIONS.find(candidate => candidate.tab === tab && candidate.path?.length === 1 && candidate.path[0] === category);
   if (!section) {
-    section = { key: category, tab, path: [category], desc: 'Brauereien, Brennereien und die Menschen hinter ihrem Handwerk.', entries: [] };
+    section = { key: category, tab, path: [category], iconUrl: './public/assets/brewer-guilds/nav-brauer-brenner.png', desc: 'Brauereien, Brennereien und die Menschen hinter ihrem Handwerk.', entries: [] };
     SECTIONS.push(section);
   }
   section.entries.push(entry);

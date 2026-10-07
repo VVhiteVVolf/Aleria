@@ -27,7 +27,8 @@ test('nine pages retain the complete manuscript and collect all drinks on two ca
   assert.equal(entry.pages.length, 9);
   assert.equal(entry.pages.filter(page => page.guildPage).length, 1);
   const catalogues = entry.pages.filter(page => page.tradeCatalogPage);
-  assert.deepEqual(catalogues.map(page => page.tradeCatalog.items.length), [6, 8]);
+  assert.deepEqual(catalogues.map(page => page.tradeCatalog.items.filter(item => item.status !== 'planned').length), [6, 8]);
+  assert(catalogues.every(page => page.tradeCatalog.items.filter(item => item.status === 'planned').length === 5));
   const renderedCopy = entry.pages.flatMap(page => [page.description || '', ...(page.tradeCatalog?.items || []).map(item => item.description)]).join('\n');
   for (const section of manuscript) {
     for (const block of section.blocks) assert(renderedCopy.includes(block), `Missing manuscript block: ${block.slice(0, 100)}`);
@@ -37,12 +38,12 @@ test('nine pages retain the complete manuscript and collect all drinks on two ca
   }
 });
 
-test('existing goods projection identifies fourteen distinct drinks without inventing prices', () => {
+test('existing goods projection offers fourteen drinks in three priced serving sizes', () => {
   const offers = buildModuleOffers([entry]);
-  assert.equal(offers.length, 14);
-  assert.equal(new Set(offers.map(offer => offer.id)).size, 14);
+  assert.equal(offers.length, 42);
+  assert.equal(new Set(offers.map(offer => offer.id)).size, 42);
   assert(offers.every(offer => offer.category === 'getraenke'));
-  assert(offers.every(offer => offer.priceRange === null && offer.price === ''));
+  assert(offers.every(offer => offer.priceRange?.minCopper > 0 && offer.hiddenMeta.unit));
   assert(offers.every(offer => offer.moduleId === entry.id && offer.image));
 });
 
@@ -67,7 +68,7 @@ test('all references exist and every story and drink has its own portrait-format
     }
   };
   visit(entry);
-  const images = entry.pages.flatMap(page => page.tradeCatalogPage ? page.tradeCatalog.items.map(item => item.image) : page.guildPage ? [] : [page.image]);
+  const images = entry.pages.flatMap(page => page.tradeCatalogPage ? page.tradeCatalog.items.filter(item => item.status !== 'planned').map(item => item.image) : page.guildPage ? [] : [page.image]);
   assert.equal(images.length, 20);
   assert.equal(new Set(images).size, 20);
   for (const image of images) {

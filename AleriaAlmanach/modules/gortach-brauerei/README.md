@@ -16,7 +16,7 @@ Das Modul `gortach-brauerei` steht unter **Gilden & Zünfte → Brauer & Brenner
 | VIII | Ein Brand, sechs Wege | Story; Gerste, Whisky und Wachs |
 | IX | Caddach Gortach · Acht Abfüllungen | Handelsgut & Tiere; acht bebilderte Einträge |
 
-Ein weiteres Template ist nicht erforderlich: Die Handwerksgeschichte bleibt im Story-Layout, die Gemeinschaft im Gilden-Layout und das vollständige Sortiment in den beiden Katalogen. Es werden keine zusätzlichen Meisterämter, Gründungsdaten oder Preise erfunden.
+Ein weiteres Template ist nicht erforderlich: Die Handwerksgeschichte bleibt im Story-Layout, die Gemeinschaft im Gilden-Layout und das vollständige Sortiment in den beiden Katalogen. Zusätzliche Meisterämter oder Gründungsdaten werden nicht erfunden. Seit 7. Oktober 2026 enthalten beide Kataloge je fünf kompakte, im Editor befüllbare Reserveplätze.
 
 ## Quellen und Bearbeitung
 
@@ -27,7 +27,9 @@ Ein weiteres Template ist nicht erforderlich: Die Handwerksgeschichte bleibt im 
 
 Familienangaben und Bildreferenzen stammen aus `Stammbäume/assets/js/data/house-ru-gortach-family.js` und den dort zugeordneten Porträts. Kinneth, Jodhrán, Peighneachan und Carthach erscheinen mit ihren belegten Familienrollen. Die Darstellung der älteren Angehörigen in Handwerksszenen ist eine Illustration, keine Zuweisung eines Meisteramts.
 
-Die Whisky-Steckbriefe unterscheiden ausdrücklich Grundbrand und Fasswirkung: Nur der klassische Mòine ist getorft. Die Große Reise besitzt ihre konkrete 22-jährige Fassfolge; der 28-jährige Òrbharr beginnt unmittelbar in Òrbharr-Fässern. Nicht überlieferte Preise bleiben leer, auch bei der Übernahme ins Warenregister.
+Die Whisky-Steckbriefe unterscheiden ausdrücklich Grundbrand und Fasswirkung: Nur der klassische Mòine ist getorft. Die Große Reise besitzt ihre konkrete 22-jährige Fassfolge; der 28-jährige Òrbharr beginnt unmittelbar in Òrbharr-Fässern.
+
+Auf Nutzerwunsch wurden am 7. Oktober 2026 sämtliche Getränke bepreist. `gortach-prices.mjs` enthält die Ausschankpreise, abgestimmt auf Teyrngarchs Bier und Penderyns Whisky. Die gemeinsame Ableitung und freigegebenen Mengen stehen in [Brauerzünfte](../brewer-guilds/README.md). Das Warenregister führt vierzehn Getränke in jeweils drei Verkaufsgrößen; Reserveplätze erzeugen keine Angebote.
 
 ## Bilder
 
@@ -54,6 +56,6 @@ npm run test:gortach
 npm run check:templates
 ```
 
-Die Tests prüfen die vollständige Textübernahme, die neun Seiten, alle vierzehn Warenregister-Einträge, besondere Reifefolgen, lokale Bildverweise, das 2:3-Format und die wiederholbare Registrierung. Bei eingeschränkter Prozesserzeugung kann der Test mit `node --test --experimental-test-isolation=none tests/gortach-brewery.test.mjs` laufen.
+Die Tests prüfen die vollständige Textübernahme, die neun Seiten, alle 42 Warenregister-Angebote, die Reserveplätze, besondere Reifefolgen, lokale Bildverweise, das 2:3-Format und die wiederholbare Registrierung. Bei eingeschränkter Prozesserzeugung kann der Test mit `node --test --experimental-test-isolation=none tests/gortach-brewery.test.mjs` laufen.
 
 Zusätzlich geprüft: alle neun Seiten bei 1600, 1120 und 390 Pixeln Breite, Bilder, Suche, Scrollhöhe, Tastaturbedienung sowie der Editor- und Import-Rücklauf. Das Modul benötigt keine neuen Firebase-Zugriffe und verändert keine Charakter-, Inventar- oder Kampfdaten.

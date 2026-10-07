@@ -75,3 +75,22 @@ test('a selected folder stays collapsed while its ancestors remain reachable', (
   assert.match(html, /aria-expanded="false"/);
   assert.doesNotMatch(html, /data-entry-id="dance"/);
 });
+
+test('folders start closed and rendering never reopens an explicitly collapsed parent', () => {
+  const context = createContext();
+  const model = context.buildArchiveHierarchyModel([
+    { key: 'Brauer', tab: 'Gilden', path: ['Brauer'], entries: [{ id: 'brewery', pages: [{}] }] },
+    { key: 'Cenyr', tab: 'Gilden', path: ['Brauer', 'Cenyr'], entries: [{ id: 'cenyr', pages: [{}] }] }
+  ], 'Gilden');
+  const first = context.renderArchiveHierarchyBrowser(model, [], { navigationOpen: true });
+  assert.match(first, /aria-expanded="false"/);
+  assert.doesNotMatch(first, /data-entry-id="brewery"/);
+  context.expandArchiveHierarchyPath('Gilden', ['Brauer', 'Cenyr']);
+  context.toggleArchiveHierarchyNode('Gilden', ['Brauer']);
+  const closed = context.renderArchiveHierarchyBrowser(model, ['Brauer', 'Cenyr'], { navigationOpen: true });
+  assert.doesNotMatch(closed, /data-entry-id="brewery"|data-entry-id="cenyr"/);
+  context.toggleArchiveHierarchyNode('Gilden', ['Brauer']);
+  const opened = context.renderArchiveHierarchyBrowser(model, ['Brauer', 'Cenyr'], { navigationOpen: true });
+  assert.match(opened, /data-entry-id="brewery"/);
+  assert.match(opened, /data-entry-id="cenyr"/);
+});

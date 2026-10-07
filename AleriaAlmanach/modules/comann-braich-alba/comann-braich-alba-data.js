@@ -12,7 +12,7 @@
   if (!section) {
     section = {
       key: path[0], tab, path,
-      iconUrl: '../IconOrdner/ReiterIcons/Weltpfade/gilden-zuenfte.png?v=20260909-pergament-v3',
+      iconUrl: './public/assets/brewer-guilds/nav-handwerk-kultur.png',
       desc: 'Handwerkstraditionen, Herkunftsschutz und die Bünde ihrer Bewahrer.',
       entries: []
     };

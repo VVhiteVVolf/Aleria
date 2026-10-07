@@ -79,7 +79,8 @@ function goodsRows(page, pageIndex) {
 }
 function tradeRows(page, pageIndex) {
   const catalog = page.tradeCatalog || {};
-  return (catalog.items || []).map((item, itemIndex) => {
+  return (catalog.items || []).flatMap((item, itemIndex) => {
+    if (item.status === 'planned') return [];
     const category = (catalog.categories || []).find(value => value.id === item.category)?.label || item.category;
     const facts = [
       { label: item.originTitle || 'Herkunft', value: text(item.origin) },
@@ -88,11 +89,17 @@ function tradeRows(page, pageIndex) {
       { label: item.conditionsTitle || 'Kaufbedingungen', value: text(item.conditions) },
       { label: 'Preishinweis', value: text(item.priceNote) }
     ].filter(fact => fact.value);
-    return { title: text(item.title), type: text(item.subtitle), category, description: text(item.description), details: '',
+    const row = { title: text(item.title), type: text(item.subtitle), category, description: text(item.description), details: '',
       image: text(item.image), unit: '', availability: '', price: unique([text(item.priceMin), text(item.priceMax)]).join(' - '),
       currency: text(item.currencyLabel || item.currencyCode), tags: unique([...(item.tags || []), ...(item.usageTags || [])]),
       attributes: item.attributes || [], facts, source: { kind: 'trade-catalog', pageIndex, pageTitle: text(page.pageTitle || page.title), itemId: text(item.id), itemIndex }
     };
+    const options = Array.isArray(item.priceOptions) ? item.priceOptions.filter(option => text(option.label) && text(option.unit)) : [];
+    return options.length ? options.map(option => ({ ...row,
+      unit: `${text(option.label)} · ${text(option.unit)}`, price: text(option.price),
+      facts: [...facts, { label: 'Verkaufsgröße', value: `${text(option.label)} · ${text(option.unit)}` }],
+      source: { ...row.source, priceOption: text(option.label), unit: text(option.unit) }
+    })) : [row];
   });
 }
 

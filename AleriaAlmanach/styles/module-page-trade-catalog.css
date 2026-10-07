@@ -177,6 +177,59 @@
   display: none;
 }
 
+.trade-catalog-planned {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  border-style: dashed;
+  padding: 0.65rem 0.8rem;
+}
+
+.trade-catalog-planned h3,
+.trade-catalog-planned p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.trade-catalog-planned-mark {
+  color: #8b7046;
+  font-size: 1.5rem;
+}
+
+.trade-catalog-planned-status {
+  color: #75654f;
+  font-size: 0.8rem;
+}
+
+.trade-price-options {
+  margin: 0.35rem 0;
+}
+
+.trade-price-options > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(98, 66, 30, 0.16);
+}
+
+.trade-price-options dt small {
+  display: block;
+  color: #75654f;
+}
+
+.trade-price-options dd {
+  margin: 0;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .trade-catalog-planned-status {
+    grid-column: 2;
+  }
+}
+
 .trade-catalog-visual {
   position: relative;
   text-align: center;
