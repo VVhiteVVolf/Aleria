@@ -42,6 +42,13 @@ test('hierarchies distinguish documented family roles and unnamed master offices
   assert.equal(p.levels[1].nodes[0].subtitle, 'Amtsinhaber nicht benannt');
 });
 
+test('Penderyn retains the protected house name ahead of the bottling name', () => {
+  const items = entries[1].pages.find(page => page.tradeCatalogPage).tradeCatalog.items.filter(item => item.status !== 'planned');
+  assert.deepEqual(items.map(item => item.title), ['Penderyn', 'Penderyn · Rhagorol']);
+  assert(items.every(item => !/Gleann|Beinn|Cladach/.test(item.title)));
+  assert.match(strings(entries[1]).join('\n'), /Haus- und Traditionsname/);
+});
+
 test('registration adds both guilds once and respects already edited modules', () => {
   const context = vm.createContext({ SECTIONS: [] });
   const script = readFileSync(new URL('brewer-guilds-data.js', root), 'utf8');

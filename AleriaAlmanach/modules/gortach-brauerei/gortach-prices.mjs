@@ -1,4 +1,5 @@
-// Compared with Teyrngarch's 0.5–5 KT beer servings and Penderyn's 5/8 KT
+// Original prices before the user-requested 20–70% increase. Compared with
+// Teyrngarch's 0.5–5 KT beer servings and Penderyn's 5/8 KT
 // whisky servings. Small-batch beers, long maturation and rarity set the steps.
 export const GORTACH_SERVING_PRICES = Object.freeze({
   beer: { orbharr: 2, dubhbharr: 2.5, gealbharr: 1, ciarbharr: 2.5, turas: 3, moine: 4 },

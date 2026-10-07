@@ -1,6 +1,7 @@
 // Build-time editorial composition. Rendering, editing and trading remain owned by
 // the existing Story, Guild and Trade Catalog systems.
-import { buildDrinkPricing, reservedDrinkSlots } from '../trade-catalog/drink-catalog-model.mjs';
+import { reservedDrinkSlots } from '../trade-catalog/drink-catalog-model.mjs';
+import { buildBreweryDrinkPricing } from '../brewer-guilds/brewery-prices.mjs';
 import { GORTACH_SERVING_PRICES } from './gortach-prices.mjs';
 const ASSETS = './public/assets/gortach-brauerei';
 const FAMILY = '../Stammbäume/assets/images/portraits/haus-ru-gortach';
@@ -131,7 +132,7 @@ function productItem(product, blocks, whisky = false) {
     ],
     originTitle: 'Herkunft', origin: ORIGIN,
     usageTitle: whisky ? 'Charakter' : 'Am Tisch & unterwegs', usageTags: product.occasions || product.tags,
-    ...buildDrinkPricing(whisky ? 'whisky' : 'beer', GORTACH_SERVING_PRICES[whisky ? 'whisky' : 'beer'][product.id]),
+    ...buildBreweryDrinkPricing(whisky ? 'whisky' : 'beer', GORTACH_SERVING_PRICES[whisky ? 'whisky' : 'beer'][product.id]),
     conditionsTitle: 'Verfügbarkeit & Besonderheiten', conditions: product.availability,
     attributes: [], sealImage: MARK
   };

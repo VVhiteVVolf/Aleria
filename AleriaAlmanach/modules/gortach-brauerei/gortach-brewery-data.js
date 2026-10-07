@@ -248,17 +248,17 @@
               {
                 "label": "Krug",
                 "unit": "0,5 l",
-                "price": "2"
+                "price": "2,6"
               },
               {
                 "label": "Flasche",
                 "unit": "1 l",
-                "price": "4"
+                "price": "5,2"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "200"
+                "price": "260"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -318,17 +318,17 @@
               {
                 "label": "Krug",
                 "unit": "0,5 l",
-                "price": "2,5"
+                "price": "3,25"
               },
               {
                 "label": "Flasche",
                 "unit": "1 l",
-                "price": "5"
+                "price": "6,5"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "250"
+                "price": "325"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -388,17 +388,17 @@
               {
                 "label": "Krug",
                 "unit": "0,5 l",
-                "price": "1"
+                "price": "1,3"
               },
               {
                 "label": "Flasche",
                 "unit": "1 l",
-                "price": "2"
+                "price": "2,6"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "100"
+                "price": "130"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -458,17 +458,17 @@
               {
                 "label": "Krug",
                 "unit": "0,5 l",
-                "price": "2,5"
+                "price": "3,25"
               },
               {
                 "label": "Flasche",
                 "unit": "1 l",
-                "price": "5"
+                "price": "6,5"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "250"
+                "price": "325"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -529,17 +529,17 @@
               {
                 "label": "Krug",
                 "unit": "0,5 l",
-                "price": "3"
+                "price": "4,5"
               },
               {
                 "label": "Flasche",
                 "unit": "1 l",
-                "price": "6"
+                "price": "9"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "300"
+                "price": "450"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -599,17 +599,17 @@
               {
                 "label": "Krug",
                 "unit": "0,5 l",
-                "price": "4"
+                "price": "6"
               },
               {
                 "label": "Flasche",
                 "unit": "1 l",
-                "price": "8"
+                "price": "12"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "400"
+                "price": "600"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -771,17 +771,17 @@
               {
                 "label": "Glas",
                 "unit": "4 cl",
-                "price": "8"
+                "price": "12"
               },
               {
                 "label": "Flasche",
                 "unit": "0,7 l",
-                "price": "140"
+                "price": "210"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "10.000"
+                "price": "15.000"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -846,17 +846,17 @@
               {
                 "label": "Glas",
                 "unit": "4 cl",
-                "price": "9"
+                "price": "13,5"
               },
               {
                 "label": "Flasche",
                 "unit": "0,7 l",
-                "price": "157,5"
+                "price": "236,25"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "11.250"
+                "price": "16.875"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -921,17 +921,17 @@
               {
                 "label": "Glas",
                 "unit": "4 cl",
-                "price": "10"
+                "price": "15"
               },
               {
                 "label": "Flasche",
                 "unit": "0,7 l",
-                "price": "175"
+                "price": "262,5"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "12.500"
+                "price": "18.750"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -996,17 +996,17 @@
               {
                 "label": "Glas",
                 "unit": "4 cl",
-                "price": "10"
+                "price": "15"
               },
               {
                 "label": "Flasche",
                 "unit": "0,7 l",
-                "price": "175"
+                "price": "262,5"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "12.500"
+                "price": "18.750"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -1071,17 +1071,17 @@
               {
                 "label": "Glas",
                 "unit": "4 cl",
-                "price": "9"
+                "price": "13,5"
               },
               {
                 "label": "Flasche",
                 "unit": "0,7 l",
-                "price": "157,5"
+                "price": "236,25"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "11.250"
+                "price": "16.875"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -1146,17 +1146,17 @@
               {
                 "label": "Glas",
                 "unit": "4 cl",
-                "price": "16"
+                "price": "27,2"
               },
               {
                 "label": "Flasche",
                 "unit": "0,7 l",
-                "price": "280"
+                "price": "476"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "20.000"
+                "price": "34.000"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -1221,17 +1221,17 @@
               {
                 "label": "Glas",
                 "unit": "4 cl",
-                "price": "12"
+                "price": "18"
               },
               {
                 "label": "Flasche",
                 "unit": "0,7 l",
-                "price": "210"
+                "price": "315"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "15.000"
+                "price": "22.500"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -1296,17 +1296,17 @@
               {
                 "label": "Glas",
                 "unit": "4 cl",
-                "price": "28"
+                "price": "47,6"
               },
               {
                 "label": "Flasche",
                 "unit": "0,7 l",
-                "price": "490"
+                "price": "833"
               },
               {
                 "label": "Fass",
                 "unit": "50 l",
-                "price": "35.000"
+                "price": "59.500"
               }
             ],
             "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",

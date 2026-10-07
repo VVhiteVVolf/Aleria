@@ -1,4 +1,5 @@
-import { buildDrinkPricing, reservedDrinkSlots } from '../trade-catalog/drink-catalog-model.mjs';
+import { reservedDrinkSlots } from '../trade-catalog/drink-catalog-model.mjs';
+import { buildBreweryDrinkPricing } from './brewery-prices.mjs';
 
 export const ASSETS = './public/assets/brewer-guilds';
 export const paragraph = text => `<p>${text}</p>`;
@@ -20,7 +21,7 @@ export function drinkItem(product, { mark, origin, kind = 'beer' }) {
     descriptionTitle: 'Charakter & Herkunft', description: product.description,
     featuresTitle: 'Steckbrief', features: [], originTitle: 'Herkunft', origin: product.origin || origin,
     usageTitle: 'Am Tisch', usageTags: product.occasions || product.tags,
-    ...buildDrinkPricing(kind, product.servingCopper),
+    ...buildBreweryDrinkPricing(kind, product.servingCopper),
     conditionsTitle: 'Verfügbarkeit & Besonderheiten', conditions: product.conditions || 'Stammsortiment des Hauses.',
     attributes: [], sealImage: mark
   };

@@ -29,7 +29,7 @@ Familienangaben und Bildreferenzen stammen aus `Stammbäume/assets/js/data/house
 
 Die Whisky-Steckbriefe unterscheiden ausdrücklich Grundbrand und Fasswirkung: Nur der klassische Mòine ist getorft. Die Große Reise besitzt ihre konkrete 22-jährige Fassfolge; der 28-jährige Òrbharr beginnt unmittelbar in Òrbharr-Fässern.
 
-Auf Nutzerwunsch wurden am 7. Oktober 2026 sämtliche Getränke bepreist. `gortach-prices.mjs` enthält die Ausschankpreise, abgestimmt auf Teyrngarchs Bier und Penderyns Whisky. Die gemeinsame Ableitung und freigegebenen Mengen stehen in [Brauerzünfte](../brewer-guilds/README.md). Das Warenregister führt vierzehn Getränke in jeweils drei Verkaufsgrößen; Reserveplätze erzeugen keine Angebote.
+Auf Nutzerwunsch wurden am 7. Oktober 2026 sämtliche Getränke bepreist. `gortach-prices.mjs` enthält die ursprünglichen Ausschankpreise, abgestimmt auf Teyrngarchs Bier und Penderyns Whisky. Der anschließende Nutzerwunsch erhöht alle Getränke der drei Häuser um 20–50 %, teure Spitzenabfüllungen um 70 %. Die gemeinsame, nicht kumulierende Staffel, Mengenableitung und freigegebenen Größen stehen in [Brauerzünfte](../brewer-guilds/README.md). Das Warenregister führt vierzehn Getränke in jeweils drei Verkaufsgrößen; Reserveplätze erzeugen keine Angebote.
 
 ## Bilder
 

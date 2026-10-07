@@ -1,3 +1,5 @@
+import { renderTradeMoney } from './trade-catalog-money.js?v=20261007-coin-prices-v1';
+
 function buildTradeCatalogImage(src, className, fallback = '') {
   const image = sanitizeImageSrc(src || '');
   if (image) return `<div class="${className}"><img src="${image}" alt="" loading="lazy" decoding="async"></div>`;
@@ -146,7 +148,7 @@ function buildTradePrice(item) {
       <h4>${escapeHtml(item.priceTitle || 'Ausschank & Gebinde')}</h4>
       <dl class="trade-price-options">${item.priceOptions.map(option => `
         <div><dt>${escapeHtml(option.label)} <small>${escapeHtml(option.unit)}</small></dt>
-        <dd>${escapeHtml(option.price || 'Preis offen')}${option.price ? ` <small>${escapeHtml(item.currencyCode || 'KT')}</small>` : ''}</dd></div>`).join('')}
+        <dd>${renderTradeMoney(option.price, item.currencyLabel || item.currencyCode || 'KT') ?? `${escapeHtml(option.price || 'Preis offen')}${option.price ? ` <small>${escapeHtml(item.currencyCode || '')}</small>` : ''}`}</dd></div>`).join('')}
       </dl>
       ${item.priceNote ? `<p>${escapeHtml(item.priceNote)}</p>` : ''}
     </section>`;
@@ -156,12 +158,13 @@ function buildTradePrice(item) {
     : '-';
   const priceFill = Math.max(0, Math.min(100, Number(item.priceFill) || 0));
   const gradientSize = priceFill > 0 ? 10000 / priceFill : 100;
+  const coinPrice = renderTradeMoney([item.priceMin, item.priceMax].filter(Boolean).join(' - '), item.currencyLabel || item.currencyCode || 'KT');
   return `
     <section class="trade-catalog-meta-block trade-catalog-price">
       <h4>${escapeHtml(item.priceTitle)}</h4>
       <div class="trade-price-bar"><span style="width:${escapeHtml(`${priceFill}%`)};--trade-price-gradient-size:${escapeHtml(`${gradientSize}%`)}"></span></div>
-      <strong>${price}</strong>
-      <div class="trade-currency">${buildTradeCatalogSmallIcon(item.currencyIcon, 'trade-currency-icon')}<span>${escapeHtml(item.currencyLabel)}</span></div>
+      <strong class="trade-price-value">${coinPrice ?? price}</strong>
+      ${coinPrice ? '' : `<div class="trade-currency">${buildTradeCatalogSmallIcon(item.currencyIcon, 'trade-currency-icon')}<span>${escapeHtml(item.currencyLabel)}</span></div>`}
       ${item.priceNote ? `<p>${escapeHtml(item.priceNote)}</p>` : ''}
     </section>`;
 }
@@ -285,6 +288,9 @@ function applyTradeCatalogFilters(root) {
     item.hidden = !(matchesCategory && matchesSearch);
   });
 }
+
+// Preserve the existing template entry point; renderer helpers stay module-local.
+globalThis.buildTradeCatalogPage = buildTradeCatalogPage;
 
 document.addEventListener('click', event => {
   const trigger = event.target?.closest?.('.trade-catalog-tab[data-trade-filter]');

@@ -224,6 +224,28 @@
   white-space: nowrap;
 }
 
+.trade-price-value,
+.trade-price-options dd,
+.trade-money,
+.trade-money-part {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.trade-money-part {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.trade-money-part img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex: 0 0 22px;
+}
+
 @media (max-width: 600px) {
   .trade-catalog-planned-status {
     grid-column: 2;

@@ -16,7 +16,7 @@
     "test:gortach": "node --test tests/gortach-brewery.test.mjs",
     "build:brewer-guilds": "node scripts/build-brewer-guilds.mjs && npm run build:gortach",
     "check:brewer-guilds": "node scripts/build-brewer-guilds.mjs --check && npm run check:gortach",
-    "test:brewer-guilds": "node --test tests/brewer-guilds.test.mjs tests/trade-catalog-pricing.test.mjs tests/gortach-brewery.test.mjs",
+    "test:brewer-guilds": "node --test tests/brewer-guilds.test.mjs tests/trade-catalog-pricing.test.mjs tests/trade-catalog-money.test.mjs tests/gortach-brewery.test.mjs",
     "check:languages": "node modules/language/morgar/morgar-build.mjs --check && node modules/language/laerelis/laerelis-build.mjs --check",
     "build:events": "node ../Ereignisse/scripts/build-events.mjs && node ../Ereignisse/scripts/build-weddings.mjs",
     "check:events": "node ../Ereignisse/scripts/build-events.mjs --check && node ../Ereignisse/scripts/build-weddings.mjs --check",

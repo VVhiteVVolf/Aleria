@@ -173,5 +173,34 @@
       ],
       "file": "public/assets/brewer-guilds/whisky-rhagorol.png"
     }
+  ],
+  "edits": [
+    {
+      "id": "eisenpfennig-transparent",
+      "prompt": "Remove ONLY the entire dark green background from this existing iron coin icon. Preserve this exact iron coin design, weathered dark grey metal, outer irregular rim, four raised four-point stars, round central hole, frontal orientation, lighting, proportions and position. The outside of the coin AND the entire central hole must be truly transparent alpha, not black, white, grey, green, checkerboard, or a painted transparency pattern. No background gradient, no floor, no shadow outside the coin, no glow. Clean antialiased outline. Same square canvas and coin scale. This is a precise background-removal edit, not a redesign.",
+      "transparentBackground": true,
+      "references": [
+        "AleriaAlmanach/public/assets/inventory/coins/eisenpfennig.png"
+      ],
+      "file": "public/assets/inventory/coins/eisenpfennig.png"
+    },
+    {
+      "id": "whisky-penderyn-namensprinzip",
+      "prompt": "Edit only the label lettering of this existing transparent Celtic fantasy catalogue whisky bottle illustration. Keep the exact bottle shape, red amber liquid, cork, Celtic red-gold neck ornament, alternate red dragon and ivory bottle emblem, cream parchment label, illustration style and vertical 2:3 composition. Name hierarchy: PENDERYN is the dominant and largest house/destillery name. Beneath it write WHISKY in smaller lettering, and CENYR in a small bottom line. No invented age, no alcohol number, no geographical prefix, no certification seal. Main name is a protected family tradition name. Keep true transparent background, no floor, no scenery, no outside shadow or glow. Entire bottle visible.",
+      "transparentBackground": true,
+      "references": [
+        "AleriaAlmanach/public/assets/brewer-guilds/whisky-penderyn.png"
+      ],
+      "file": "public/assets/brewer-guilds/whisky-penderyn.png"
+    },
+    {
+      "id": "whisky-rhagorol-namensprinzip",
+      "prompt": "Edit the label typography of this existing transparent Celtic fantasy catalogue whisky bottle illustration. Keep the same bottle, golden amber whisky, cork, Celtic red-gold neck ornament, cream label and existing red dragon around ivory bottle emblem. Correct the name hierarchy decisively: PENDERYN must become the LARGEST, dominant lettering, the protected house/destillery name. RHAGOROL must appear as a clearly SMALLER subordinate bottling name on the next line, no larger than half the height of PENDERYN. Add the small origin CENYR below. Keep the clean inked catalogue illustration style, same centered vertical 2:3 entire bottle. No age, no alcohol percentage, no invented geographic prefix, no certification seal. True transparent background, no floor, no scenery, no outside shadow or glow.",
+      "transparentBackground": true,
+      "references": [
+        "AleriaAlmanach/public/assets/brewer-guilds/whisky-rhagorol.png"
+      ],
+      "file": "public/assets/brewer-guilds/whisky-rhagorol.png"
+    }
   ]
 }

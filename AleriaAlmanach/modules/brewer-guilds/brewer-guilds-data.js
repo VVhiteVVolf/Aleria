@@ -392,17 +392,17 @@
                 {
                   "label": "Krug",
                   "unit": "0,5 l",
-                  "price": "5"
+                  "price": "8,5"
                 },
                 {
                   "label": "Flasche",
                   "unit": "1 l",
-                  "price": "10"
+                  "price": "17"
                 },
                 {
                   "label": "Fass",
                   "unit": "50 l",
-                  "price": "500"
+                  "price": "850"
                 }
               ],
               "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -451,17 +451,17 @@
                 {
                   "label": "Krug",
                   "unit": "0,5 l",
-                  "price": "2"
+                  "price": "2,6"
                 },
                 {
                   "label": "Flasche",
                   "unit": "1 l",
-                  "price": "4"
+                  "price": "5,2"
                 },
                 {
                   "label": "Fass",
                   "unit": "50 l",
-                  "price": "200"
+                  "price": "260"
                 }
               ],
               "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -509,17 +509,17 @@
                 {
                   "label": "Krug",
                   "unit": "0,5 l",
-                  "price": "1,5"
+                  "price": "1,95"
                 },
                 {
                   "label": "Flasche",
                   "unit": "1 l",
-                  "price": "3"
+                  "price": "3,9"
                 },
                 {
                   "label": "Fass",
                   "unit": "50 l",
-                  "price": "150"
+                  "price": "195"
                 }
               ],
               "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -567,17 +567,17 @@
                 {
                   "label": "Krug",
                   "unit": "0,5 l",
-                  "price": "1"
+                  "price": "1,3"
                 },
                 {
                   "label": "Flasche",
                   "unit": "1 l",
-                  "price": "2"
+                  "price": "2,6"
                 },
                 {
                   "label": "Fass",
                   "unit": "50 l",
-                  "price": "100"
+                  "price": "130"
                 }
               ],
               "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -625,17 +625,17 @@
                 {
                   "label": "Krug",
                   "unit": "0,5 l",
-                  "price": "0,5"
+                  "price": "0,6"
                 },
                 {
                   "label": "Flasche",
                   "unit": "1 l",
-                  "price": "1"
+                  "price": "1,2"
                 },
                 {
                   "label": "Fass",
                   "unit": "50 l",
-                  "price": "50"
+                  "price": "60"
                 }
               ],
               "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -754,17 +754,17 @@
                 {
                   "label": "Krug",
                   "unit": "0,5 l",
-                  "price": "1"
+                  "price": "1,3"
                 },
                 {
                   "label": "Flasche",
                   "unit": "1 l",
-                  "price": "2"
+                  "price": "2,6"
                 },
                 {
                   "label": "Fass",
                   "unit": "50 l",
-                  "price": "100"
+                  "price": "130"
                 }
               ],
               "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -853,7 +853,7 @@
             },
             {
               "title": "Der Familienname als Herkunft",
-              "detail": "Penderyn bezeichnet die Familie und die historisch gewachsene Brenntradition. Der Comann Braich Alba führt sie als Beispiel eines geschützten Hausnamens.",
+              "detail": "Penderyn ist der geschützte Haus- und Traditionsname. Rhagorol wird als Zusatz einer Abfüllung geführt; die Herkunft Penderyn bleibt vorrangig.",
               "icon": "../Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png"
             },
             {
@@ -866,7 +866,7 @@
           "historyText": "<p>Islwyn Penderyn gründete die erste kleine Destillerie; Caoimhe Haeghra steht als Mitgründerin an seiner Seite in der Familienüberlieferung. Zwischen ihnen und den später datierten Generationen liegen nicht einzeln benannte Vorfahren.</p><p>Die Geschichte der Penderyn Destillerie beginnt bescheiden. Vor ihrer Erhebung in den Adelsstand war die Familie Penderyn lediglich eine kleine Gruppe von Destillateuren, die in <strong>Mathragon</strong> Whiskey herstellten. Ihr Talent für die Kunst der Destillation, verbunden mit einem tiefen Verständnis für das Handwerk, führte dazu, dass ihr Whiskey bald herausragende Qualität erreichte. Der Penderyn Whiskey wurde in Adelskreisen geschätzt und öffnete der Familie Türen, die für gewöhnliche Handwerker unzugänglich gewesen wären.</p>\n<p>Mit wachsendem Erfolg und Einfluss, gepaart mit kluger Führung, wurde die Familie schließlich in den Adelsstand erhoben und erlangte durch ihren Whiskey Reichtum und Macht. Die Destillerie selbst entwickelte sich zum Dreh- und Angelpunkt ihres neuen Status, und der <strong>Penderyn Whiskey</strong> avancierte zum Symbol für Qualität und Prestige. Ihr Whiskey wurde zum Stolz des Hauses, und durch ihn gelang es der Familie, sich in den oberen Kreisen Mathragons und des gesamten Königreichs zu etablieren.</p>\n<p>Trotz ihres Wohlstands hat die Familie Penderyn stets ihre Wurzeln in der Destillierkunst bewahrt. Sie sind auch heute noch direkt in die Überwachung und Führung ihrer Destillerie eingebunden und achten darauf, dass jede Flasche den hohen Standards entspricht, die ihren Ruf begründet haben.</p>",
           "worksTitle": "Handwerk & Leistungen",
           "works": [
-            "Penderyn Whiskey und Rhagorol Whiskey",
+            "Penderyn und Penderyn · Rhagorol",
             "Destillation, Fassherstellung und Reifekeller",
             "Handel innerhalb Cenyrs und darüber hinaus"
           ],
@@ -1019,7 +1019,7 @@
         "imageWidth": 38,
         "imageFit": "contain",
         "imagePosition": "center",
-        "description": "<p>Die <strong>Penderyn Destillerie</strong> verfolgt drei zentrale Aufgabenbereiche, die sich alle um die Herstellung und den Schutz ihres wertvollen Whiskeys drehen:</p>\n<p><strong>Destillation und Produktion des Penderyn Whiskeys</strong><br/> Der Hauptfokus der Destillerie liegt auf der Herstellung ihres weltbekannten Whiskeys. Der Destillationsprozess selbst ist über Generationen hinweg perfektioniert worden. Von der Auswahl der besten Zutaten bis hin zur Lagerung in speziellen Fässern – jeder Schritt ist von höchster Präzision geprägt. Die Familie Penderyn hat ihre Verfahren so optimiert, dass jede Charge des Whiskeys die gleiche Qualität und den unverwechselbaren Geschmack aufweist, der den Penderyn zu einem Markenzeichen gemacht hat. Besonders die Lagerung und Reifung des Whiskeys spielt eine zentrale Rolle, um das vollmundige Aroma zu erreichen, das Kenner so schätzen.</p>\n<p><strong>Vertrieb und Expansion</strong><br/> Obwohl die Destillerie in <strong>Cenyr</strong> noch nicht flächendeckend präsent ist, exportiert sie ihren Whiskey in alle Ecken des Königreichs und darüber hinaus. Die Vermarktung des Penderyn Whiskeys hat den Ruf der Familie gestärkt und ihre Verbindungen zu anderen einflussreichen Häusern und Märkten gefestigt. Die Penderyn sind ständig bemüht, neue Märkte zu erschließen, sei es im Königreich selbst oder in den angrenzenden Reichen. Dabei bleibt das Ziel, den Penderyn Whiskey als ein Synonym für Qualität und Prestige zu etablieren.</p><p>Insgesamt haben sich die <strong>Penderyn</strong> nicht nur als Meister in der Kunst der Whiskeyherstellung bewiesen, sondern auch als geschickte Händler und Beschützer ihres Erbes. Mit ihrem Whiskey, der Destillerie und ihrer Söldnergilde haben sie sich eine Stellung erarbeitet, die ihnen sowohl Macht als auch Respekt im Königreich verschafft hat.</p>",
+        "description": "<p>Die <strong>Penderyn Destillerie</strong> verfolgt drei zentrale Aufgabenbereiche, die sich alle um die Herstellung und den Schutz ihres wertvollen Whiskeys drehen:</p>\n<p><strong>Destillation und Produktion des Penderyn Whiskeys</strong><br/> Der Hauptfokus der Destillerie liegt auf der Herstellung ihres weltbekannten Whiskeys. Der Destillationsprozess selbst ist über Generationen hinweg perfektioniert worden. Von der Auswahl der besten Zutaten bis hin zur Lagerung in speziellen Fässern – jeder Schritt ist von höchster Präzision geprägt. Die Familie Penderyn hat ihre Verfahren so optimiert, dass jede Charge des Whiskeys die gleiche Qualität und den unverwechselbaren Geschmack aufweist, der den Penderyn zu einem Markenzeichen gemacht hat. Besonders die Lagerung und Reifung des Whiskeys spielt eine zentrale Rolle, um das vollmundige Aroma zu erreichen, das Kenner so schätzen.</p>\n<p><strong>Vertrieb und Expansion</strong><br/> Obwohl die Destillerie in <strong>Cenyr</strong> noch nicht flächendeckend präsent ist, exportiert sie ihren Whiskey in alle Ecken des Königreichs und darüber hinaus. Die Vermarktung des Penderyn Whiskeys hat den Ruf der Familie gestärkt und ihre Verbindungen zu anderen einflussreichen Häusern und Märkten gefestigt. Die Penderyn sind ständig bemüht, neue Märkte zu erschließen, sei es im Königreich selbst oder in den angrenzenden Reichen. Dabei bleibt das Ziel, den Penderyn Whiskey als ein Synonym für Qualität und Prestige zu etablieren.</p><p>Insgesamt haben sich die <strong>Penderyn</strong> nicht nur als Meister in der Kunst der Whiskeyherstellung bewiesen, sondern auch als geschickte Händler und Beschützer ihres Erbes. Mit ihrem Whiskey, der Destillerie und ihrer Söldnergilde haben sie sich eine Stellung erarbeitet, die ihnen sowohl Macht als auch Respekt im Königreich verschafft hat.</p><p>Nach der Namensordnung des Comann Braich Alba ist <strong>Penderyn</strong> ein Haus- und Traditionsname: Er bezeichnet die Familie und ihre überlieferte Brennkunst. Das Haus führt daher seine Abfüllungen zuerst unter <strong>Penderyn</strong>. <strong>Rhagorol</strong> ergänzt diesen Herkunftsnamen als Bezeichnung einer einzelnen Abfüllung. Der Drache verweist auf Cenyr und die Heraldik des Hauses; er ersetzt den Herkunftsnamen nicht.</p>",
         "commentSequence": []
       },
       {
@@ -1063,7 +1063,7 @@
         "commentSequence": [],
         "tradeCatalog": {
           "title": "Das Stammsortiment · Zwei Whiskys",
-          "subtitle": "Penderyn & Rhagorol · Fünf Plätze für künftige Abfüllungen",
+          "subtitle": "Penderyn · Hausabfüllung & Rhagorol · Fünf freie Plätze",
           "headerIcon": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
           "noteIcon": "◈",
           "noteTitle": "Glas / Krug · Flasche · Fass",
@@ -1082,8 +1082,8 @@
               "id": "whisky-penderyn",
               "category": "whisky",
               "status": "available",
-              "title": "Penderyn Whiskey",
-              "subtitle": "Das Aushängeschild des Hauses",
+              "title": "Penderyn",
+              "subtitle": "Whisky des Hauses · Cenyr",
               "image": "./public/assets/brewer-guilds/whisky-penderyn.png",
               "imageFormat": "portrait",
               "imageFit": "contain",
@@ -1096,7 +1096,7 @@
                 "Edler Rauch"
               ],
               "descriptionTitle": "Charakter & Herkunft",
-              "description": "<p>Ein Schluck <strong>Penderyn Whiskey</strong> ist wie das erste Kapitel eines alten Liedes, gesungen am Feuer der Legenden. Geboren aus den Reben des Hochlands und destilliert in den Hallen der <strong>Penderyn-Brennerei</strong>, erhebt sich dieser Whiskey wie ein <strong>ritterlicher Held</strong> – stolz, tiefgründig, unerschrocken.</p>\n<p>Sein <strong>Geschmacksprofil</strong> eröffnet mit <strong>klaren Noten von Apfel und Birne</strong>, getragen von einer <strong>sanften Süße der Schneebeere</strong> – eine seltene Frucht, Symbol der Reinheit und Verbundenheit mit dem alten Land. Doch was diesen Tropfen zum Epos erhebt, sind seine <strong>rauchigen Schatten</strong>, die durch jeden Schluck ziehen wie ein Nebel über dem Schlachtfeld – <em>nicht überwältigend, sondern edel und getragen</em>.</p>\n<p>Der Whiskey selbst glänzt <strong>bernsteinrot</strong>, warm wie ein Schwertgriff, das im Sonnenlicht ruht. Im Abgang bleibt er <strong>edel, würzig und seelenruhig</strong>, wie ein alter Krieger, der seine Geschichte erzählt, ohne sie aufzudrängen.</p>\n<p><em>\"Penderyn ist kein Getränk. Es ist ein Schwur in flüssiger Form.\"</em></p>",
+              "description": "<p>Ein Schluck <strong>Penderyn Whiskey</strong> ist wie das erste Kapitel eines alten Liedes, gesungen am Feuer der Legenden. Geboren aus den Reben des Hochlands und destilliert in den Hallen der <strong>Penderyn-Brennerei</strong>, erhebt sich dieser Whiskey wie ein <strong>ritterlicher Held</strong> – stolz, tiefgründig, unerschrocken.</p>\n<p>Sein <strong>Geschmacksprofil</strong> eröffnet mit <strong>klaren Noten von Apfel und Birne</strong>, getragen von einer <strong>sanften Süße der Schneebeere</strong> – eine seltene Frucht, Symbol der Reinheit und Verbundenheit mit dem alten Land. Doch was diesen Tropfen zum Epos erhebt, sind seine <strong>rauchigen Schatten</strong>, die durch jeden Schluck ziehen wie ein Nebel über dem Schlachtfeld – <em>nicht überwältigend, sondern edel und getragen</em>.</p>\n<p>Der Whiskey selbst glänzt <strong>bernsteinrot</strong>, warm wie ein Schwertgriff, das im Sonnenlicht ruht. Im Abgang bleibt er <strong>edel, würzig und seelenruhig</strong>, wie ein alter Krieger, der seine Geschichte erzählt, ohne sie aufzudrängen.</p>\n<p><em>\"Penderyn ist kein Getränk. Es ist ein Schwur in flüssiger Form.\"</em></p><p>Der Hauptwhisky trägt den Namen seiner Brennerei: <strong>Penderyn</strong>. Hausname und Herkunft stehen auf dem Etikett an erster Stelle.</p>",
               "featuresTitle": "Steckbrief",
               "features": [],
               "originTitle": "Herkunft",
@@ -1117,17 +1117,17 @@
                 {
                   "label": "Glas",
                   "unit": "4 cl",
-                  "price": "8"
+                  "price": "12"
                 },
                 {
                   "label": "Flasche",
                   "unit": "0,7 l",
-                  "price": "140"
+                  "price": "210"
                 },
                 {
                   "label": "Fass",
                   "unit": "50 l",
-                  "price": "10.000"
+                  "price": "15.000"
                 }
               ],
               "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
@@ -1140,8 +1140,8 @@
               "id": "whisky-rhagorol",
               "category": "whisky",
               "status": "available",
-              "title": "Rhagorol Whiskey",
-              "subtitle": "Frucht, Säure & rauchiger Nachklang",
+              "title": "Penderyn · Rhagorol",
+              "subtitle": "Frucht, Säure & rauchiger Nachklang · Cenyr",
               "image": "./public/assets/brewer-guilds/whisky-rhagorol.png",
               "imageFormat": "portrait",
               "imageFit": "contain",
@@ -1154,7 +1154,7 @@
                 "Rauch"
               ],
               "descriptionTitle": "Charakter & Herkunft",
-              "description": "<p>Der <strong>Rhagorol</strong> ist kein gewöhnlicher Whiskey – er ist ein maskierter Gentleman, der sich mit einem süffisanten Grinsen in dein Herz stiehlt. Ein Tropfen, der nicht nur <strong>getrunken</strong>, sondern <strong>erlebt</strong> wird. Jede Facette seines Geschmacks ist wie der raffinierte Schliff eines Dolchs: präzise, verführerisch, und leicht gefährlich.</p>\n<p>Schon beim ersten Schluck tänzelt eine <strong>helle Säure</strong> auf der Zunge, frech wie ein Dieb im Morgengrauen. Die <strong>Apfelnoten</strong> eröffnen die Melodie, frisch und verspielt, doch dann – <strong>Stachelbeere.</strong> Eine Frucht mit Biss. Anders. Wild. Sie nimmt die Süße an der Hand und zerrt sie in dunklere Gassen. Hier wird nicht geschmeichelt. Hier wird verführt.</p>\n<p>Im Abgang bleibt ein <strong>rauchiger Schatten</strong> zurück, wie das Parfüm eines Spions, der längst verschwunden ist. Der Rhagorol gleicht einem Flirt mit Konsequenzen – aufregend, unvergesslich, ein wenig gefährlich.</p>\n<p><em>\"Rhagorol ist kein Whiskey für einen leichten Abend. Es ist der Drink für das letzte Wort, für das letzte Lächeln – bevor die Tür ins Dunkel aufschwingt.\"</em></p>",
+              "description": "<p>Der <strong>Rhagorol</strong> ist kein gewöhnlicher Whiskey – er ist ein maskierter Gentleman, der sich mit einem süffisanten Grinsen in dein Herz stiehlt. Ein Tropfen, der nicht nur <strong>getrunken</strong>, sondern <strong>erlebt</strong> wird. Jede Facette seines Geschmacks ist wie der raffinierte Schliff eines Dolchs: präzise, verführerisch, und leicht gefährlich.</p>\n<p>Schon beim ersten Schluck tänzelt eine <strong>helle Säure</strong> auf der Zunge, frech wie ein Dieb im Morgengrauen. Die <strong>Apfelnoten</strong> eröffnen die Melodie, frisch und verspielt, doch dann – <strong>Stachelbeere.</strong> Eine Frucht mit Biss. Anders. Wild. Sie nimmt die Süße an der Hand und zerrt sie in dunklere Gassen. Hier wird nicht geschmeichelt. Hier wird verführt.</p>\n<p>Im Abgang bleibt ein <strong>rauchiger Schatten</strong> zurück, wie das Parfüm eines Spions, der längst verschwunden ist. Der Rhagorol gleicht einem Flirt mit Konsequenzen – aufregend, unvergesslich, ein wenig gefährlich.</p>\n<p><em>\"Rhagorol ist kein Whiskey für einen leichten Abend. Es ist der Drink für das letzte Wort, für das letzte Lächeln – bevor die Tür ins Dunkel aufschwingt.\"</em></p><p>Die vollständige Bezeichnung lautet <strong>Penderyn · Rhagorol</strong>: Penderyn nennt die Brennerei und Familientradition, Rhagorol diese Abfüllung. Der Zusatz bleibt dem Hausnamen auf dem Etikett untergeordnet.</p>",
               "featuresTitle": "Steckbrief",
               "features": [],
               "originTitle": "Herkunft",
@@ -1175,17 +1175,17 @@
                 {
                   "label": "Glas",
                   "unit": "4 cl",
-                  "price": "5"
+                  "price": "6,5"
                 },
                 {
                   "label": "Flasche",
                   "unit": "0,7 l",
-                  "price": "87,5"
+                  "price": "113,75"
                 },
                 {
                   "label": "Fass",
                   "unit": "50 l",
-                  "price": "6.250"
+                  "price": "8.125"
                 }
               ],
               "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
