@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-07",
+  "description": "Dauerhafte Bildstil-Vorgaben des Nutzers für Aleria. Den passenden Stil ohne erneute Erinnerung verwenden; ausdrückliche Vorgaben des aktuellen Auftrags haben Vorrang.",
+  "defaultPreset": "anime-scene-portrait",
+  "presets": {
+    "fantasy-rpg-character": {
+      "name": "Klassische Fantasy-RPG-Charakterillustration",
+      "useFor": [
+        "Kriegergalerie",
+        "Klassenillustrationen",
+        "Vollständige Ganzkörperfiguren im Rollenspielhandbuch-Stil"
+      ],
+      "aspectRatio": "2:3",
+      "referenceDirectory": "D:\\0-KI Generierte\\01 Bilder\\Oblivion Classes",
+      "referenceUsage": "Vor der Generierung passende Bilder aus diesem Ordner ansehen und als Stilreferenzen verwenden. Der Ordner wurde am 7. Oktober 2026 geprüft; er enthält unter anderem OBR-class-Archer.png, OBR-class-Assassin.png und OBR-class-Knight.png.",
+      "prompt": "Stilrichtung: Klassische Fantasy-RPG-Charakterillustration im 2:3-Hochformat, als vollständige Ganzkörperfigur. Illustrativ, lebendig und leicht comichaft, mit natürlichen, aber stilisierten Proportionen, ausdrucksstarken Gesichtern, dynamischen Posen und fantasievoll gestalteter Kleidung, Rüstung und Waffen. Traditionell gemalte Aquarell-, Gouache- und Tuscheoptik mit lockeren Pinselstrichen, sichtbarem Color Bleeding, transparenten Lasuren, ausgewaschenen Farbflächen, trockenen Pinselspuren und bewusst unfertig auslaufenden, aufbrechenden Bildrändern. Formen sind klar und anatomisch verständlich, Texturen und Details dagegen malerisch angedeutet statt realistisch ausgerendert. Metall, Stoff, Leder, Fell und Haut entstehen durch lockere Farbflächen und wenige gezielte Details. Feine, teilweise unterbrochene Zeichenkonturen statt harter Comic-Outlines. Heller, nahezu leerer Papierhintergrund mit einzelnen lockeren Farb- und Pinselwolken um die Figur. Gesamtwirkung wie eine handgemalte Charakterillustration aus einem klassischen Fantasy-Rollenspielhandbuch – elegant, abenteuerlich, leicht verspielt und malerisch; kein Fotorealismus, kein CGI, keine Hochglanz-Concept-Art und keine vollständig ausgerenderten Oberflächen."
+    },
+    "anime-scene-portrait": {
+      "name": "Anime für Szenen und Figurenporträts",
+      "useFor": [
+        "Szenenbilder",
+        "Porträts von Figuren",
+        "Story- und Modulillustrationen",
+        "Stillleben innerhalb dieser Bildwelt"
+      ],
+      "aspectRatio": "2:3",
+      "animePlaceholder": "[ANIME EINTRAGEN]",
+      "defaultAnimeReference": "Tales of Xillia/Frieren",
+      "animeUsage": "Den Platzhalter durch die im Auftrag genannte Anime-Referenz ersetzen. Ohne neue Stilvorgabe die bisher für Aleria vereinbarte Referenz Tales of Xillia/Frieren verwenden.",
+      "prompt": "Bildformat 2:3. [ANIME EINTRAGEN] Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.",
+      "compositionPreference": "Die Szene nicht mit Gegenständen überladen; weniger ist mehr. Je nach Motiv sind Stillleben ohne Personen ausdrücklich passend."
+    }
+  },
+  "applicationRules": [
+    "Den passenden Stilblock vollständig in den konkreten Bildprompt übernehmen und Motiv, Person, Kleidung, Wappen, Region und Handlung passend zum Auftrag ergänzen.",
+    "Die beiden Stilrichtungen getrennt verwenden: Die Aquarell-, Gouache- und Tuscheoptik gehört zur Fantasy-RPG-Ganzkörperillustration; der allgemeine Anime-Stil verwendet klare Lineart und Cel-Shading.",
+    "Bei bereits bekannten Figuren vorhandene Porträts und bei Häusern oder Organisationen vorhandene Wappen als Referenzen einbeziehen, soweit sie im Motiv vorkommen.",
+    "Explizite Stil-, Format- und Motivvorgaben des aktuellen Auftrags haben Vorrang vor diesen Standards. Die Standards nicht bei jedem neuen Bildauftrag erneut abfragen."
+  ]
+}

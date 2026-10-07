@@ -1,3 +1,17 @@
+# Dauerhafte Bildstil-Vorgaben
+
+Die vom Nutzer am 7. Oktober 2026 festgelegten Bildprompts stehen vollständig in
+[Bildstil-Vorlagen](AleriaAlmanach/docs/art/image-style-presets.json).
+Vor jeder Bildgenerierung für Aleria diese Vorlagen lesen und den passenden
+Stil ohne erneute Erinnerung verwenden:
+
+- **Szenen, Figurenporträts, Storybilder und passende Stillleben:** `anime-scene-portrait`, 2:3, klare Anime-Lineart und Cel-Shading. `[ANIME EINTRAGEN]` durch die gewünschte Anime-Referenz ersetzen; ohne neue Vorgabe gilt die bisher vereinbarte Referenz **Tales of Xillia/Frieren**. Ruhige, nicht überladene Komposition.
+- **Kriegergalerie, Klassenillustrationen und Ganzkörperfiguren im RPG-Handbuch-Stil:** `fantasy-rpg-character`, 2:3, Aquarell/Gouache/Tusche mit auslaufenden Rändern. Stilreferenzen aus **`D:\0-KI Generierte\01 Bilder\Oblivion Classes`** vor der Generierung ansehen.
+
+Die beiden Stilrichtungen getrennt verwenden. Vorhandene Figurenporträts und
+Wappen als Motivreferenzen berücksichtigen. Ausdrückliche Vorgaben des aktuellen
+Auftrags haben Vorrang; die Standards nicht bei jedem Bildauftrag erneut abfragen.
+
 # Projektregeln für Zauberkosten
 
 Die vom Nutzer am 11. September 2026 festgelegte Aktionsökonomie gilt auch für künftig ausgearbeitete und überarbeitete Zauber. Kosten nach tatsächlichem Schaden, Wirkung, Dauer und Rolle wählen; nicht jeden Zauber pauschal mit einer Aktion bepreisen.
