@@ -33,6 +33,7 @@ import { RORIKSHEIM_DEPENDENT_HOUSE_FAMILIES } from './roriksheim-house-families
 import { TALYNDOR_HOUSE_FAMILIES } from './talyndor-house-families.js';
 import { CEITHEACH_HOUSE_FAMILIES } from './ceitheach-house-families.js';
 import { LEITHEACH_HOUSE_FAMILIES } from './leitheach-house-families.js';
+import { DUNFAL_HOUSE_FAMILIES } from './dunfal-house-families.js';
 import { LOWER_KNIGHT_HOUSE_FAMILIES } from './lower-knight-house-families.js?v=armel-bio-20260912';
 import { ARTUS_STREBEN_HOUSE_FAMILIES } from './artus-streben-house-families.js';
 import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families.js';
@@ -313,6 +314,14 @@ export const FAMILY_REGISTRY = Object.freeze([
       : ['laird', 'sept-lord'].includes(family.document.houseProfile.rankId)
         ? 'lower-nobility'
         : 'dynasty'
+  })),
+  ...DUNFAL_HOUSE_FAMILIES.map(family => familyRecord({
+    id: family.document.id,
+    title: family.document.title,
+    family,
+    type: family.document.houseProfile.rankId === 'sept-head'
+      ? 'commoner'
+      : family.document.houseProfile.rankId === 'laird' ? 'lower-nobility' : 'dynasty'
   })),
   familyRecord({
     id: 'haus-gwyllach',

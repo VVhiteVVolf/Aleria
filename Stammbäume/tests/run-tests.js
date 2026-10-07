@@ -79,6 +79,7 @@ import { getCrestFrame, getPersonCardFrame } from '../assets/js/config/chart-fra
 import { SAMPLE_FAMILY } from '../assets/js/data/sample-family.js';
 import { FAMILY_REGISTRY } from '../assets/js/data/families.registry.js';
 import { LEITHEACH_HOUSE_FAMILIES } from '../assets/js/data/leitheach-house-families.js';
+import { DUNFAL_HOUSE_FAMILIES } from '../assets/js/data/dunfal-house-families.js';
 import { HOUSE_MAC_ARD_CUMHAILL_FAMILY } from '../assets/js/data/house-mac-ard-cumhaill-family.js';
 import { HOUSE_MAC_ARD_CUMHAILL_PORTRAITS } from '../assets/js/data/house-mac-ard-cumhaill-portraits.js';
 import { HOUSE_FIR_AN_GALLCHOBHAIR_FAMILY } from '../assets/js/data/house-fir-an-gallchobhair-family.js';
@@ -7347,7 +7348,7 @@ test('verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hi
       + SCHWARZFENN_DEPENDENT_HOUSE_FAMILIES.length
       + KRAEHENMOOR_DEPENDENT_HOUSE_FAMILIES.length
       + RORIKSHEIM_DEPENDENT_HOUSE_FAMILIES.length + LEITHEACH_HOUSE_FAMILIES.length
-      + CEITHEACH_HOUSE_FAMILIES.length - 1 + 6
+      + CEITHEACH_HOUSE_FAMILIES.length - 1 + 6 + DUNFAL_HOUSE_FAMILIES.length
   );
   expected.forEach(({ rankId, path }, familyId) => {
     const loaded = loadFamilyById(familyId, storage);

@@ -2,11 +2,11 @@ import { createGitHubFamilyRepository } from './modules/github-publication/githu
 import { mergePublishedRegistryRecords } from './modules/family-registry/published-registry-merge.js';
 import { createRegistryBrowser } from './modules/family-registry/registry-browser-controller.js';
 import { listFamilyRecords } from './services/family-library.js';
-import { FJORDHEIM_REGISTRY_FOLDERS } from './data/fjordheim-territorial-plan.js';
+import { FAMILY_REGISTRY_FOLDERS } from './data/family-registry-folders.js';
 
 const records = listFamilyRecords();
 const browser = createRegistryBrowser({
-  root: document.querySelector('.registry-shell'), records, folderDefinitions: FJORDHEIM_REGISTRY_FOLDERS
+  root: document.querySelector('.registry-shell'), records, folderDefinitions: FAMILY_REGISTRY_FOLDERS
 });
 
 async function loadPublishedRegistry() {

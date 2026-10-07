@@ -594,6 +594,14 @@ Referenzfälle vom 05.10.2026: Ui’Rochraide (105 Personen), Craobhan (49), Eld
 - Keallach bleibt dieselbe Weltperson in Eldath, Tuirseach und Leite. Die bisher geführten Lebensdaten 1697–1720 bleiben vorerst erhalten; Leites 1700–1730 und die abweichende Jagdgeschichte werden ausdrücklich als noch ungeklärte Angaben festgehalten.
 - Kriegerdarstellungen, Stammbaumgrafiken und individuelle Kinderporträts sind unter `assets/images/references/haus-…` mit Herkunft und SHA-256 gesichert. Der vollständige Nachweis steht in `assets/data/source-inventories/ceitheach-additional-families-2026-10-05.json`.
 
+### 13.17 Dunfal: territoriale Vorbereitung mit leeren Akten
+
+- Die Nutzerantwort vom 07.10.2026 verlangt zusätzlich zur Registerplanung leere Familienakten. Alle 13 Akten verwenden deshalb `createBlankHouseFamily`; weder unbekannte Gründerpaare noch die in Ratstabellen genannten Amtsträger werden als Genealogie angelegt.
+- Kurze bestehende Ziel-IDs bleiben erhalten. Hauspräfixe stehen im vollständigen Titel und erzeugen keine parallelen Familien. „Mac Ailella“ in der Helgr-Gegenakte wird ohne genealogischen Beleg nicht mit Ailella zusammengeführt.
+- Tir na Rithe gehört zum Fürstenclan Ard’Chulainn, Tir na Fathach zu Nic’Nuadat. Letzteres folgt aus Reichsübersicht, Nuadat-Wappen und Tagd Nuadats Amt; die dort kopierte Chulainn-Überschrift wird ausdrücklich als Fehler vermerkt. Leitheach, Dun Athar sowie die kopierten Rithe-/Dunfal-Angaben im Fathach-Abschnitt begründen keine zusätzlichen Gebiete oder Sitze.
+- Herrschaften erhalten eigene Gebietsordner und Wappen, aber allein dadurch keinen Baronsrang. Die benannten Amtsträger belegen neun Laird-Clans. Ferbend bleibt Bauernsept mit unbekanntem unmittelbarem Lehnsherrn; Ui’Duilb bleibt ausgestorben mit unbekanntem historischen Rang. Ohne letzte Erbperson entsteht kein genealogischer Endknoten.
+- Die Herrschaft der Fianna ist ein familienloses Gebiet. Alle vier Rohvorlagen bleiben archiviert; die inhaltlich identischen Rithe-Kopien ergeben nur eine Struktur. Der Quellen- und Wappennachweis liegt unter `assets/data/source-inventories/dunfal-2026-10-07.json`.
+
 ## 14. Abschlussprotokoll
 
 Jede neue oder korrigierte Familie wird mit folgendem Kurzprotokoll abgeschlossen:

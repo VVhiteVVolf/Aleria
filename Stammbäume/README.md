@@ -179,6 +179,45 @@ PNG-Abmessungen sowie SHA-256-Hashes belegt. Reichs- und Jarltumswappen erschein
 in der Gebietsauswahl; die 15 Clanwappen in den Ortsvorschauen und Clanplanungen.
 Clanwappen bleiben den Clans zugeordnet und werden nicht als Stadtwappen ausgegeben.
 
+## Dunfal: Gebiete und leere Familienakten (7. Oktober 2026)
+
+`register.html?gebiet=Dunfal` enthält Tir na Rithe und Tir na Fathach mit ihren
+belegten Sitzen, neun Clanherrschaften und der Herrschaft der Fianna. Auf ausdrücklichen
+Nutzerwunsch sind zusätzlich 13 **personenleere** Familienakten angelegt:
+
+| Oberherrschaft | Vorbereitete Familien |
+| --- | --- |
+| Tir na Rithe | Ard’Chulainn, Mac Sidhe’Ailella, Mac’Céin, Dál’Birn, Ruin’Morath, ausgestorbenes Ui’Duilb |
+| Tir na Fathach | Nic’Nuadat, Ua’Anbhair, Ua’Casur, Dál’Aonghusa, Na’Riangabra, Mac’Eachtrai, Sept Ferbend |
+
+Ard’Chulainn führt das Fürstentum und die Oberherrschaft Tir na Rithe;
+Nic’Nuadat ist der Mor-Tiarna-Clan von Tir na Fathach. Die neun weiteren aktiven
+Adelsclans sind durch die Laird-Tabellen belegt. Ferbends unmittelbarer Lehnsherr,
+Ui’Duilbs historischer Rang und das Erlöschensdatum bleiben offen. Die Fianna
+erhalten als Organisation nur einen Gebietsordner ohne Familienakte oder erfundenen Sitz.
+
+Alle vorhandenen kurzen Ziel-IDs (`haus-chulainn`, `haus-nuadat`, `haus-ailella`
+usw.) bleiben erhalten. Die Akten enthalten keine Gründerpaare, Amtsträger,
+Partnerschaften, Abstammungen oder Zeitsprünge. Spätere Genealogien erweitern
+dieselben Akten. Die ältere Helgr-Gegenangabe „Mac Ailella“ bleibt bis zur
+Familienquelle getrennt; bestehende Personen und Welt-IDs werden nicht umgeschrieben.
+
+Die Vorlagen enthalten folgende dokumentierte Widersprüche: Leitheach statt
+Dunfal in Reichsüberschriften und Fließtext; Dun Athar in beiden Ratstiteln;
+Ard Tiarna in den Regional-Steckbriefen; Ard’Chulainn unter dem Nuadat-Wappen;
+„Land der Könige“, Tir na Rithe und Dunfal in kopierten Teilen der Fathach-Seite.
+Titel, konkrete Sitzzeilen, Wappen und Amtsträger belegen die verwendete Zuordnung.
+Akzentvarianten bleiben im Original erhalten. Die beiden Rithe-Anhänge sind inhaltlich
+identisch und erzeugen keine doppelten Einträge.
+
+`dunfal-territorial-catalog.js` hält die Quellenzuordnung und Gebietsstruktur,
+`dunfal-house-profiles.js` die Orts-/Rangprofile und `dunfal-house-families.js`
+die Akten auf Basis der gemeinsamen Leeraktenfabrik. `family-registry-folders.js`
+bündelt die Gebietsergänzungen für Dunfal und Fjordheim. Die vier unveränderten
+Vorlagen, Tabellenzeilen, Entscheidungen und Prüfsummen der 26 lokal gesicherten
+Originalwappen liegen unter `assets/data/source-inventories/dunfal-2026-10-07.json`
+und im gleichnamigen Unterordner. Haus- und Herrschaftswappen bleiben getrennt.
+
 ## Abhängigkeiten
 
 - [Family Chart 0.9.0](https://github.com/donatso/family-chart), MIT
