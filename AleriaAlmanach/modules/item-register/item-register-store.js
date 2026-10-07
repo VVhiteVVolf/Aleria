@@ -2,7 +2,7 @@ import { STANDARD_ITEMS, STANDARD_VERSION } from './item-register-standard.js?v=
 import { buildOwnedItems, toLegacyItem } from './item-register-model.js?v=20261006-regional-equipment-v2';
 import { legacyOffers } from './item-register-migration.js?v=20261006-regional-equipment-v2';
 import { buildModuleOffers, isModuleScanDuplicate } from './item-register-module-catalog.js?v=20261007-drink-prices-v1';
-import { moduleProviders } from './item-register-providers.js?v=20260919-provider-crests-v2';
+import { moduleProviders } from './item-register-providers.js?v=20261007-provider-groups-v1';
 
 export function createRegisterStore({ standards = STANDARD_ITEMS, version = STANDARD_VERSION, notify = () => {} } = {}) {
   let backend = null;

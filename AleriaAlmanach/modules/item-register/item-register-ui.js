@@ -1,7 +1,7 @@
-import { registerStore } from './item-register-store.js?v=20261007-drink-prices-v1';
+import { registerStore } from './item-register-store.js?v=20261007-provider-groups-v1';
 import { REGISTER_SECTIONS, queryRegister, normalizeOffer, toLegacyItem } from './item-register-model.js?v=20261006-regional-equipment-v2';
 import { mountRegisterNavigation } from './item-register-navigation.js?v=20261006-sidebar-equipment-v1';
-import { shell, navigation, overview, results, detail, escape, safeImage } from './item-register-view.js?v=20261006-regional-equipment-v2';
+import { shell, navigation, overview, results, detail, escape, safeImage } from './item-register-view.js?v=20261007-provider-groups-v1';
 import { createForm, collectOperation, quote } from './item-register-forms.js?v=20261006-regional-equipment-v2';
 import { moneyState, moneyTotal, parsePrice, formatPrice } from './item-register-money.js?v=20260919-shop-v1';
 import { adaptItemImage } from './item-register-images.js?v=20260919-shop-v1';
@@ -10,7 +10,7 @@ import { watchModuleCatalog } from './item-register-module-sync.js?v=20261006-re
 import { regionalEquipmentView } from '../regional-equipment/regional-equipment-view.js?v=20261006-regional-equipment-v2';
 import { regionalQuery, regionalHomeForHouse } from '../regional-equipment/regional-equipment-model.js?v=20261006-regional-equipment-v2';
 
-const state = { open: false, section: 'standard', category: '', territoryId: '', houseId: '', listId: '', search: '', sort: 'name', selectedId: '', limit: 48, equippedOnly: false, ownedExpanded: false };
+const state = { open: false, section: 'standard', category: '', territoryId: '', houseId: '', listId: '', search: '', sort: 'name', selectedId: '', limit: 48, equippedOnly: false, ownedExpanded: false, expandedProviderGroups: new Set() };
 let panel, editor, form = null, busy = false, pendingOperation = null;
 let registerNavigation;
 const access = () => globalThis._fbAuth?.getAccess?.() || {};
@@ -28,6 +28,9 @@ function notice(message = '', error = false) {
 function render() {
   if (!state.open || !panel) return;
   const data = snapshot();
+  // Read native disclosure state before replacing the navigation. A queued
+  // toggle event can otherwise arrive after a search or sort has re-rendered it.
+  state.expandedProviderGroups = new Set([...roles('navigation').querySelectorAll('[data-ir-provider-group][open]')].map(node => node.dataset.irProviderGroup));
   roles('navigation').innerHTML = navigation(data, state);
   const browsing = state.category || state.listId || state.search.trim();
   const items = queryRegister(data.items, regionalQuery(state));
