@@ -164,7 +164,7 @@
           "commentSequence": [],
           "hierarchy": {
             "layoutMode": "vertical",
-            "treeDisplayMode": "groups",
+            "treeDisplayMode": "tabs",
             "cardFontScale": 100,
             "portraitScale": 50,
             "chartScale": 85,
@@ -185,8 +185,8 @@
               },
               {
                 "icon": "II",
-                "label": "Seitenzweige",
-                "value": "Fachstellen mit eigener Verantwortung"
+                "label": "Bereiche wählen",
+                "value": "Jeder Reiter öffnet einen eigenen Baum"
               },
               {
                 "icon": "III",
@@ -195,12 +195,12 @@
               }
             ],
             "chartTitle": "Oberste Führung und Rangordnung",
-            "chartIntro": "Die verbundenen Teilbäume zeigen die Dienstwege. Jede Karte benennt zusätzlich ihre direkte Unterstellung. Ränge bezeichnen Stellung und Ausbildung; Fachämter bezeichnen einen Auftrag innerhalb dieser Ordnung.",
+            "chartIntro": "Wähle einen Bereich, um seinen eigenen Aufbau zu lesen. Die übergeordnete Stelle bleibt am Baum angegeben; jede Rollenkarte nennt ihre direkte Unterstellung, Aufgabe und Verantwortung.",
             "trees": [
               {
                 "id": "draken-fuehrung",
                 "parentTreeId": "",
-                "label": "Trägerschaft & oberste Leitung",
+                "label": "Führung",
                 "levels": [
                   {
                     "label": "Trägerschaft",
@@ -246,7 +246,7 @@
               {
                 "id": "draken-raenge",
                 "parentTreeId": "draken-fuehrung",
-                "label": "Die überlieferte Dienstleiter",
+                "label": "Dienstgrade",
                 "levels": [
                   {
                     "label": "Leitung eines Verbandes",
@@ -297,7 +297,7 @@
               {
                 "id": "draken-vertrag",
                 "parentTreeId": "draken-fuehrung",
-                "label": "Auftrag, Recht & Rechenschaft",
+                "label": "Verträge & Recht",
                 "levels": [
                   {
                     "label": "Fachaufsicht",
@@ -420,7 +420,7 @@
           "commentSequence": [],
           "hierarchy": {
             "layoutMode": "vertical",
-            "treeDisplayMode": "groups",
+            "treeDisplayMode": "tabs",
             "cardFontScale": 100,
             "portraitScale": 50,
             "chartScale": 85,
@@ -441,8 +441,8 @@
               },
               {
                 "icon": "II",
-                "label": "Seitenzweige",
-                "value": "Fachstellen mit eigener Verantwortung"
+                "label": "Bereiche wählen",
+                "value": "Jeder Reiter öffnet einen eigenen Baum"
               },
               {
                 "icon": "III",
@@ -451,12 +451,12 @@
               }
             ],
             "chartTitle": "Garnison, Geleit und Leibschutz",
-            "chartIntro": "Die verbundenen Teilbäume zeigen die Dienstwege. Jede Karte benennt zusätzlich ihre direkte Unterstellung. Ränge bezeichnen Stellung und Ausbildung; Fachämter bezeichnen einen Auftrag innerhalb dieser Ordnung.",
+            "chartIntro": "Wähle einen Bereich, um seinen eigenen Aufbau zu lesen. Die übergeordnete Stelle bleibt am Baum angegeben; jede Rollenkarte nennt ihre direkte Unterstellung, Aufgabe und Verantwortung.",
             "trees": [
               {
                 "id": "draken-einsatz",
                 "parentTreeId": "",
-                "label": "Gemeinsame Einsatzleitung",
+                "label": "Einsatzleitung",
                 "levels": [
                   {
                     "label": "Verteilung der Kräfte",
@@ -491,7 +491,7 @@
               {
                 "id": "draken-garnison",
                 "parentTreeId": "draken-einsatz",
-                "label": "Feste Wachen",
+                "label": "Garnison",
                 "levels": [
                   {
                     "label": "Ortsverantwortung",
@@ -560,7 +560,7 @@
               {
                 "id": "draken-geleit",
                 "parentTreeId": "draken-einsatz",
-                "label": "Karawanen & bewegliche Dienste",
+                "label": "Geleit",
                 "levels": [
                   {
                     "label": "Auftragsleitung",
@@ -623,7 +623,7 @@
               {
                 "id": "draken-leibschutz",
                 "parentTreeId": "draken-einsatz",
-                "label": "Persönlicher Schutz",
+                "label": "Leibschutz",
                 "levels": [
                   {
                     "label": "Verantwortung",
@@ -717,7 +717,7 @@
           "commentSequence": [],
           "hierarchy": {
             "layoutMode": "vertical",
-            "treeDisplayMode": "groups",
+            "treeDisplayMode": "tabs",
             "cardFontScale": 100,
             "portraitScale": 50,
             "chartScale": 85,
@@ -738,8 +738,8 @@
               },
               {
                 "icon": "II",
-                "label": "Seitenzweige",
-                "value": "Fachstellen mit eigener Verantwortung"
+                "label": "Bereiche wählen",
+                "value": "Jeder Reiter öffnet einen eigenen Baum"
               },
               {
                 "icon": "III",
@@ -748,12 +748,12 @@
               }
             ],
             "chartTitle": "Versorgung, Ausbildung und freie Stellen",
-            "chartIntro": "Die verbundenen Teilbäume zeigen die Dienstwege. Jede Karte benennt zusätzlich ihre direkte Unterstellung. Ränge bezeichnen Stellung und Ausbildung; Fachämter bezeichnen einen Auftrag innerhalb dieser Ordnung.",
+            "chartIntro": "Wähle einen Bereich, um seinen eigenen Aufbau zu lesen. Die übergeordnete Stelle bleibt am Baum angegeben; jede Rollenkarte nennt ihre direkte Unterstellung, Aufgabe und Verantwortung.",
             "trees": [
               {
                 "id": "draken-stab",
                 "parentTreeId": "",
-                "label": "Der tragende Gildenstab",
+                "label": "Gildenstab",
                 "levels": [
                   {
                     "label": "Leitung",
@@ -782,7 +782,7 @@
               {
                 "id": "draken-versorgung",
                 "parentTreeId": "draken-stab",
-                "label": "Sold, Werkstatt & Tross",
+                "label": "Sold & Versorgung",
                 "levels": [
                   {
                     "label": "Fachmeister",
@@ -869,7 +869,7 @@
               {
                 "id": "draken-lehre",
                 "parentTreeId": "draken-stab",
-                "label": "Eintritt, Bewährung & Weitergabe",
+                "label": "Ausbildung",
                 "levels": [
                   {
                     "label": "Ausbildungsaufsicht",
@@ -1263,7 +1263,7 @@
           "commentSequence": [],
           "hierarchy": {
             "layoutMode": "vertical",
-            "treeDisplayMode": "groups",
+            "treeDisplayMode": "tabs",
             "cardFontScale": 100,
             "portraitScale": 50,
             "chartScale": 85,
@@ -1284,8 +1284,8 @@
               },
               {
                 "icon": "II",
-                "label": "Seitenzweige",
-                "value": "Fachstellen mit eigener Verantwortung"
+                "label": "Bereiche wählen",
+                "value": "Jeder Reiter öffnet einen eigenen Baum"
               },
               {
                 "icon": "III",
@@ -1294,12 +1294,12 @@
               }
             ],
             "chartTitle": "Patronat, Bandenführung und Rangordnung",
-            "chartIntro": "Die verbundenen Teilbäume zeigen die Dienstwege. Jede Karte benennt zusätzlich ihre direkte Unterstellung. Ränge bezeichnen Stellung und Ausbildung; Fachämter bezeichnen einen Auftrag innerhalb dieser Ordnung.",
+            "chartIntro": "Wähle einen Bereich, um seinen eigenen Aufbau zu lesen. Die übergeordnete Stelle bleibt am Baum angegeben; jede Rollenkarte nennt ihre direkte Unterstellung, Aufgabe und Verantwortung.",
             "trees": [
               {
                 "id": "melyn-fuehrung",
                 "parentTreeId": "",
-                "label": "Hausbindung & oberste Riege",
+                "label": "Führung",
                 "levels": [
                   {
                     "label": "Trägerschaft",
@@ -1362,7 +1362,7 @@
               {
                 "id": "melyn-raenge",
                 "parentTreeId": "melyn-fuehrung",
-                "label": "Die überlieferten Ränge",
+                "label": "Rangfolge",
                 "levels": [
                   {
                     "label": "Erfahrene Verantwortung",
@@ -1413,7 +1413,7 @@
               {
                 "id": "melyn-rat",
                 "parentTreeId": "melyn-fuehrung",
-                "label": "Ämter des inneren Kreises",
+                "label": "Innerer Kreis",
                 "levels": [
                   {
                     "label": "Fachstimmen",
@@ -1542,7 +1542,7 @@
           "commentSequence": [],
           "hierarchy": {
             "layoutMode": "vertical",
-            "treeDisplayMode": "groups",
+            "treeDisplayMode": "tabs",
             "cardFontScale": 100,
             "portraitScale": 50,
             "chartScale": 85,
@@ -1563,8 +1563,8 @@
               },
               {
                 "icon": "II",
-                "label": "Seitenzweige",
-                "value": "Fachstellen mit eigener Verantwortung"
+                "label": "Bereiche wählen",
+                "value": "Jeder Reiter öffnet einen eigenen Baum"
               },
               {
                 "icon": "III",
@@ -1573,12 +1573,12 @@
               }
             ],
             "chartTitle": "Taverne, Straße und Hafen",
-            "chartIntro": "Die verbundenen Teilbäume zeigen die Dienstwege. Jede Karte benennt zusätzlich ihre direkte Unterstellung. Ränge bezeichnen Stellung und Ausbildung; Fachämter bezeichnen einen Auftrag innerhalb dieser Ordnung.",
+            "chartIntro": "Wähle einen Bereich, um seinen eigenen Aufbau zu lesen. Die übergeordnete Stelle bleibt am Baum angegeben; jede Rollenkarte nennt ihre direkte Unterstellung, Aufgabe und Verantwortung.",
             "trees": [
               {
                 "id": "melyn-orte",
                 "parentTreeId": "",
-                "label": "Leitung der Kreise",
+                "label": "Ortsleitung",
                 "levels": [
                   {
                     "label": "Überörtliche Koordination",
@@ -1607,7 +1607,7 @@
               {
                 "id": "melyn-hauptquartier",
                 "parentTreeId": "melyn-orte",
-                "label": "Zum Goldenen Kuss",
+                "label": "Goldener Kuss",
                 "levels": [
                   {
                     "label": "Leitung des Hauses",
@@ -1671,7 +1671,7 @@
               {
                 "id": "melyn-strasse",
                 "parentTreeId": "melyn-orte",
-                "label": "Tavernen, Grenzorte & offene Gefolgschaft",
+                "label": "Tavernen & Grenzen",
                 "levels": [
                   {
                     "label": "Bezirksverantwortung",
@@ -1741,7 +1741,7 @@
               {
                 "id": "melyn-hafen",
                 "parentTreeId": "melyn-orte",
-                "label": "Traethwych, Morcarreg & Warenkreise",
+                "label": "Häfen & Waren",
                 "levels": [
                   {
                     "label": "Verantwortung",
@@ -1847,7 +1847,7 @@
           "commentSequence": [],
           "hierarchy": {
             "layoutMode": "vertical",
-            "treeDisplayMode": "groups",
+            "treeDisplayMode": "tabs",
             "cardFontScale": 100,
             "portraitScale": 50,
             "chartScale": 85,
@@ -1868,8 +1868,8 @@
               },
               {
                 "icon": "II",
-                "label": "Seitenzweige",
-                "value": "Fachstellen mit eigener Verantwortung"
+                "label": "Bereiche wählen",
+                "value": "Jeder Reiter öffnet einen eigenen Baum"
               },
               {
                 "icon": "III",
@@ -1878,12 +1878,12 @@
               }
             ],
             "chartTitle": "Kasse, Kodex, Nachwuchs und freie Stellen",
-            "chartIntro": "Die verbundenen Teilbäume zeigen die Dienstwege. Jede Karte benennt zusätzlich ihre direkte Unterstellung. Ränge bezeichnen Stellung und Ausbildung; Fachämter bezeichnen einen Auftrag innerhalb dieser Ordnung.",
+            "chartIntro": "Wähle einen Bereich, um seinen eigenen Aufbau zu lesen. Die übergeordnete Stelle bleibt am Baum angegeben; jede Rollenkarte nennt ihre direkte Unterstellung, Aufgabe und Verantwortung.",
             "trees": [
               {
                 "id": "melyn-gemeinschaft",
                 "parentTreeId": "",
-                "label": "Aufsicht über die innere Ordnung",
+                "label": "Innere Ordnung",
                 "levels": [
                   {
                     "label": "Zusammenhalt",
@@ -1901,7 +1901,7 @@
               {
                 "id": "melyn-kasse",
                 "parentTreeId": "melyn-gemeinschaft",
-                "label": "Kasse & gemeinsamer Unterhalt",
+                "label": "Kasse & Unterhalt",
                 "levels": [
                   {
                     "label": "Fachleitung",
@@ -1953,7 +1953,7 @@
               {
                 "id": "melyn-kodex",
                 "parentTreeId": "melyn-gemeinschaft",
-                "label": "Versprechen, Streit & Nachrichten",
+                "label": "Kodex & Meldungen",
                 "levels": [
                   {
                     "label": "Fachleitung",
@@ -2011,7 +2011,7 @@
               {
                 "id": "melyn-nachwuchs",
                 "parentTreeId": "melyn-gemeinschaft",
-                "label": "Vom Lakeien zur eigenen Verantwortung",
+                "label": "Nachwuchs",
                 "levels": [
                   {
                     "label": "Aufnahme & Ausbildung",

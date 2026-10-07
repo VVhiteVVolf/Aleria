@@ -21,14 +21,14 @@ export function vacancy(title, reportsTo, purpose) {
 }
 export function hierarchy(title, organization, emblem, intro, trees) {
   return { pageTitle: title, hierarchyPage: true, commentSequence: [], hierarchy: {
-    layoutMode: 'vertical', treeDisplayMode: 'groups', cardFontScale: 100, portraitScale: 50, chartScale: 85,
+    layoutMode: 'vertical', treeDisplayMode: 'tabs', cardFontScale: 100, portraitScale: 50, chartScale: 85,
     eyebrow: 'Ämter, Ränge & Unterstellungen', subtitle: organization, centerLabel: organization,
     emblem, sideImage: emblem, organizationTitle: organization, motto: 'Ränge · Fachämter · offene Stellen',
     description: p(intro), detailsTitle: 'Die Ordnung lesen', details: [
       { icon: 'I', label: 'Oben nach unten', value: 'Aufsicht → Leitung → Ausführung → Nachwuchs' },
-      { icon: 'II', label: 'Seitenzweige', value: 'Fachstellen mit eigener Verantwortung' },
+      { icon: 'II', label: 'Bereiche wählen', value: 'Jeder Reiter öffnet einen eigenen Baum' },
       { icon: 'III', label: 'Freie Plätze', value: 'Bewusst ohne Personenbesetzung' }
-    ], chartTitle: title, chartIntro: 'Die verbundenen Teilbäume zeigen die Dienstwege. Jede Karte benennt zusätzlich ihre direkte Unterstellung. Ränge bezeichnen Stellung und Ausbildung; Fachämter bezeichnen einen Auftrag innerhalb dieser Ordnung.',
+    ], chartTitle: title, chartIntro: 'Wähle einen Bereich, um seinen eigenen Aufbau zu lesen. Die übergeordnete Stelle bleibt am Baum angegeben; jede Rollenkarte nennt ihre direkte Unterstellung, Aufgabe und Verantwortung.',
     trees, levels: trees[0].levels,
     footerNote: 'Rollenübersicht ohne Personenbiografien. Die überlieferten Ränge sind gekennzeichnet; die Fachstellen konkretisieren die Organisation. Freie Reserveplätze sind noch keine besetzten Ämter.'
   } };

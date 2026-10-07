@@ -68,12 +68,16 @@ function getHierarchyTreeId(tree, index) {
   return String(tree?.id || `baum-${index + 1}`).trim();
 }
 
-function buildHierarchyTreePanel(tree, index, layoutMode, displayMode = 'tabs') {
+function buildHierarchyTreePanel(tree, index, layoutMode, displayMode = 'tabs', trees = []) {
   const levels = Array.isArray(tree?.levels) ? tree.levels : [];
   const active = displayMode === 'parallel' || displayMode === 'groups' || index === 0;
+  const parent = displayMode === 'tabs' && tree?.parentTreeId
+    ? trees.find((candidate, candidateIndex) => getHierarchyTreeId(candidate, candidateIndex) === tree.parentTreeId && candidateIndex !== index)
+    : null;
   return `
     <div class="hierarchy-chart-panel hierarchy-tree-panel${active ? ' active' : ''}" data-hierarchy-tree-panel="${index}" data-hierarchy-tree-id="${escapeHtml(getHierarchyTreeId(tree, index))}">
       ${displayMode === 'parallel' || displayMode === 'groups' ? `<div class="hierarchy-tree-heading">${escapeHtml(tree?.label || `Baum ${index + 1}`)}</div>` : ''}
+      ${parent ? `<div class="hierarchy-tree-context">Übergeordneter Bereich: <strong>${escapeHtml(parent.label || 'Führung')}</strong></div>` : ''}
       <div class="hierarchy-chart mode-${escapeHtml(layoutMode)}">
         ${levels.length
           ? levels.map(buildHierarchyLevel).join('')
@@ -147,6 +151,7 @@ document.addEventListener('click', event => {
   if (!treeTrigger) return;
   const page = treeTrigger.closest('.hierarchy-page');
   if (!page) return;
+  if (treeTrigger.getAttribute('aria-selected') === 'true') return;
   const index = treeTrigger.dataset.hierarchyTreeTab || '0';
   page.querySelectorAll('[data-hierarchy-tree-tab]').forEach(button => {
     const active = button.dataset.hierarchyTreeTab === index;
@@ -156,6 +161,11 @@ document.addEventListener('click', event => {
   page.querySelectorAll('[data-hierarchy-tree-panel]').forEach(panel => {
     panel.classList.toggle('active', panel.dataset.hierarchyTreePanel === index);
   });
+  const viewport = page.querySelector('.hierarchy-chart-viewport');
+  if (viewport) {
+    viewport.scrollTop = 0;
+    viewport.scrollLeft = 0;
+  }
 });
 
 document.addEventListener('click', event => {
@@ -347,7 +357,7 @@ function buildHierarchyPage(page, entry, pageIndex, total) {
             <div class="hierarchy-chart-panels hierarchy-tree-mode-${escapeHtml(displayMode)}">
               ${displayMode === 'groups'
                 ? buildHierarchyTreeGroups(trees, data.layoutMode, buildHierarchyTreePanel)
-                : trees.map((tree, treeIndex) => buildHierarchyTreePanel(tree, treeIndex, data.layoutMode, displayMode)).join('')}
+                : trees.map((tree, treeIndex) => buildHierarchyTreePanel(tree, treeIndex, data.layoutMode, displayMode, trees)).join('')}
             </div>
           </div>
         </main>

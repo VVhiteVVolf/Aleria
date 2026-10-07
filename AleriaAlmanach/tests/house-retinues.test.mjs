@@ -26,8 +26,9 @@ test('role hierarchies include complete rank ladders, connected departments and 
   const rankLists=[['Drakenführer','Drakenhauptmann','Drakensöldner','Drachling','Rekrut'],['Erzgauner','Ritterdieb','Schattenknappe','Streuner']];
   entries.forEach((entry,index)=>{
     const nodes=roles(entry);
-    assert(nodes.length>=55);
-    assert(nodes.filter(node=>node.title.startsWith('Freier Platz')).length>=6);
+    assert.equal(nodes.length,index===0?58:63);
+    assert.equal(nodes.filter(node=>node.title.startsWith('Freier Platz')).length,index===0?6:7);
+    assert.equal(entry.pages.reduce((count,page)=>count+(page.hierarchy?.trees.length||0),0),index===0?10:11);
     for(const title of rankLists[index]) assert(nodes.some(node=>node.title===title&&node.subtitle.includes('Überlieferter Rang')),title);
     for(const node of nodes) {
       assert.match(node.text,/Unterstellung/);
@@ -36,8 +37,9 @@ test('role hierarchies include complete rank ladders, connected departments and 
       if(node.title.startsWith('Freier Platz')) assert.equal(node.portrait,'');
     }
     for(const page of entry.pages.filter(page=>page.hierarchyPage)) {
+      assert.equal(page.hierarchy.treeDisplayMode,'tabs');
       const trees=page.hierarchy.trees, byId=new Map(trees.map(tree=>[tree.id,tree]));
-      assert(trees.length<=8);
+      assert(trees.length>=3&&trees.length<=4);
       assert.equal(byId.size,trees.length);
       assert.equal(trees.filter(tree=>!tree.parentTreeId).length,1);
       for(const tree of trees) {

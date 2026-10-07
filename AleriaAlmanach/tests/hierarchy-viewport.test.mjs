@@ -60,3 +60,14 @@ test('editor restoration keeps every connected or parallel branch, and only the 
     assert.equal(f.viewport.scrollLeft, 240);
   }
 });
+
+test('separate trees retain a safe parent label without inventing missing or self parents', () => {
+  const { context } = fixture();
+  context.escapeHtml = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+  const trees = [{ id: 'leadership', label: 'Führung & <Rat>', levels: [] }, { id: 'watch', parentTreeId: 'leadership', label: 'Wache', levels: [] }];
+  const render = (tree, mode = 'tabs') => context.buildHierarchyTreePanel(tree, 1, 'vertical', mode, trees);
+  assert.match(render(trees[1]), /Übergeordneter Bereich: <strong>Führung &amp; &lt;Rat&gt;<\/strong>/);
+  assert.doesNotMatch(render(trees[1], 'groups'), /hierarchy-tree-context/);
+  assert.doesNotMatch(render({ ...trees[1], parentTreeId: 'missing' }), /hierarchy-tree-context/);
+  assert.doesNotMatch(render({ ...trees[1], parentTreeId: 'watch' }), /hierarchy-tree-context/);
+});

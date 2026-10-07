@@ -20,9 +20,18 @@ Melynwyrrd-Ränge sind überliefert; Fachämter und ihre Zuständigkeiten werden
 redaktionelle Ausarbeitung ergänzt. Sie sind keine zusätzlich behaupteten
 militärischen Dienstgrade. Jede Rolle nennt ihren Zweck und die verantwortliche
 übergeordnete Stelle. Freie Stellen bleiben ohne Personenporträt und ohne
-erfundene Besetzung. Mehrere verbundene Teilbäume bilden den Gesamtverband ab.
-Die Aufteilung auf drei Seiten wahrt die Grenzen des bestehenden Templates
-(höchstens acht Bäume, zwölf Ebenen und sechs Knoten je Ebene).
+erfundene Besetzung. Wie bei Idwals Schiffsmannschaft zeigt das bestehende
+Hierarchietemplate jeweils einen über Reiter gewählten Baum (`treeDisplayMode:
+tabs`). Drakenschluck hat zehn Bäume, Melynwyrrd elf; auf jeder der drei
+Hierarchieseiten liegen drei oder vier Bereiche. Alle 121 Rollen- und Platzkarten
+einschließlich der 13 Reserven bleiben erhalten. `parentTreeId` erhält den Bezug
+zur übergeordneten Stelle, die am gewählten Baum angezeigt wird.
+
+| Seite | Drakenschluck: Reiter | Melynwyrrd: Reiter |
+| --- | --- | --- |
+| III | Führung · Dienstgrade · Verträge & Recht | Führung · Rangfolge · Innerer Kreis |
+| IV | Einsatzleitung · Garnison · Geleit · Leibschutz | Ortsleitung · Goldener Kuss · Tavernen & Grenzen · Häfen & Waren |
+| V | Gildenstab · Sold & Versorgung · Ausbildung | Innere Ordnung · Kasse & Unterhalt · Kodex & Meldungen · Nachwuchs |
 
 ## Quellen und Abgrenzung
 
@@ -62,6 +71,10 @@ bewachte oder genutzte fremde Betriebe von Niederlassungen zu unterscheiden.
 Das Hierarchietemplate zentriert beim Öffnen verbundener Bäume die erste
 Führungskarte. Gespeicherte Editorpositionen haben Vorrang; die Wiederherstellung
 der Vorschau erhält alle verbundenen und parallelen Zweige.
+Beim Wechsel eines Reiters beginnt der neu gewählte Baum oben; die aktive
+Auswahl und Leseposition bleiben bei der Aktualisierung der Editorvorschau erhalten.
+Auf schmalen Ansichten erhält der Aufbau eine eigene Lesefläche; Rollenkarten
+stehen innerhalb ihrer Rangstufe untereinander. Die Bereichsreiter dürfen umbrechen.
 
 ## Prüfung
 

@@ -435,7 +435,8 @@
 
 .hierarchy-tree-tabs {
   display: flex;
-  flex: 1 1 18rem;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
   gap: 0.35rem;
   min-width: min(100%, 14rem);
   max-width: 100%;
@@ -458,7 +459,7 @@
   line-height: 1.1;
   padding: 0.5rem 0.65rem;
   text-transform: uppercase;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .hierarchy-tree-tab.active {
@@ -641,6 +642,14 @@
   letter-spacing: 0.08em;
   text-align: center;
   text-transform: uppercase;
+}
+
+.hierarchy-tree-context {
+  padding: 0.5rem 0.65rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--hierarchy-line);
+  color: var(--hierarchy-muted);
+  font-size: 0.85rem;
 }
 
 .hierarchy-empty-tree {
@@ -971,10 +980,32 @@
 }
 
 @container module-content (max-width: 980px) {
+  .hierarchy-page:has(.hierarchy-tree-mode-tabs):not(.fullscreen-active) {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .hierarchy-page:has(.hierarchy-tree-mode-tabs):not(.fullscreen-active) .hierarchy-document {
+    display: block;
+    flex: none;
+    overflow: visible;
+  }
+
+  .hierarchy-page:has(.hierarchy-tree-mode-tabs):not(.fullscreen-active) .hierarchy-sidebar {
+    max-height: 18rem;
+  }
+
+  .hierarchy-page:has(.hierarchy-tree-mode-tabs):not(.fullscreen-active) .hierarchy-chart-viewport {
+    flex: none;
+    height: clamp(20rem, 60dvh, 34rem);
+  }
+
   .hierarchy-topbar,
   .hierarchy-document,
   .hierarchy-footer {
     grid-template-columns: 1fr;
+    flex-shrink: 0;
   }
 
   .hierarchy-sidebar {
@@ -988,9 +1019,30 @@
 }
 
 @container module-content (max-width: 640px) {
+  .hierarchy-tree-mode-tabs,
+  .hierarchy-tree-mode-tabs .hierarchy-tree-panel,
+  .hierarchy-tree-mode-tabs .hierarchy-chart,
+  .hierarchy-tree-mode-tabs .hierarchy-chart-level {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .hierarchy-tree-mode-tabs .hierarchy-chart-level .hierarchy-level-nodes {
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+  }
+
+  .hierarchy-page.fullscreen-active .hierarchy-tree-mode-tabs .hierarchy-level-nodes {
+    min-width: 0;
+  }
+
   .hierarchy-side-head,
   .hierarchy-node-card {
     grid-template-columns: 1fr;
+  }
+
+  .hierarchy-tree-mode-tabs .hierarchy-node-card {
+    grid-template-columns: calc(3.25rem * var(--hierarchy-effective-portrait-scale, 1)) minmax(0, 1fr);
   }
 
   .hierarchy-chart-level + .hierarchy-chart-level::after {
