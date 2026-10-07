@@ -535,15 +535,13 @@
 .trade-catalog-seal {
   position: absolute;
   z-index: 0;
-  right: 0.9rem;
-  bottom: 0.9rem;
-  width: 62%;
-  max-width: 11rem;
-  height: auto;
-  aspect-ratio: 1;
+  left: 50%;
+  top: 50%;
+  width: 84%;
+  height: 84%;
   object-fit: contain;
   opacity: 0.23;
-  transform: rotate(-18deg);
+  transform: translate(-50%, -50%) rotate(-18deg);
   pointer-events: none;
 }
 

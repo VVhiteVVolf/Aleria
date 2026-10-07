@@ -41,7 +41,7 @@ Die Storybilder folgen dem vorgegebenen Anime-Stil mit Cel-Shading und zurückha
 
 `trade-catalog-renderer.js` stellt die bestehende Variable `--trade-image-height` am gesamten Produkteintrag bereit. `module-page-trade-catalog.css` begrenzt die Beschreibung einschließlich Überschrift auf diese Höhe. Der Inhalt darunter erhält eine eigene Scrollleiste, eine zugängliche Beschriftung und Tastaturfokus. Die Änderung gilt für alle Seiten dieses Templates; die Bildhöhe bleibt weiterhin im Editor einstellbar.
 
-Das vorhandene Feld `sealImage` erscheint als dekoratives Wasserzeichen innerhalb des Bildrahmens, hinter dem freigestellten Artikelbild: 23 % Deckkraft und 18 Grad gegen den Uhrzeigersinn gedreht. Es beansprucht keinen zusätzlichen Platz unter Name, Kurzbeschreibung und Schlagworten.
+Das vorhandene Feld `sealImage` erscheint als dekoratives Wasserzeichen innerhalb des Bildrahmens, hinter dem freigestellten Artikelbild: mittig ausgerichtet, auf 84 % des Rahmens begrenzt, mit 23 % Deckkraft und 18 Grad gegen den Uhrzeigersinn gedreht. Es beansprucht keinen zusätzlichen Platz unter Name, Kurzbeschreibung und Schlagworten.
 
 ## Erzeugung und Prüfung
 
