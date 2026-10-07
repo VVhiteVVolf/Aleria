@@ -62,9 +62,12 @@ die mitgelieferte Drakenschluck-Kriegerdarstellung werden unverändert verwendet
 Das neue quadratische Banden-Icon liegt bei den übrigen Weltpfad-Icons.
 
 Die Modelle erzeugen `house-retinues-data.js`. Die Registrierung ergänzt
-**Söldner → Drakenschluck Söldner** und **Banden → Melynwyrrd Bande** anhand
+**Söldner → Kategorie Drakenschluck Söldner → Modul Drakenschluck Söldner** und **Banden → Melynwyrrd Bande** anhand
 stabiler IDs. Bestehende Bereiche und redaktionelle Überschreibungen bleiben im
-Modul-Store verwaltet. Es gibt keine Änderungen an Kampfwerten oder Inventaren.
+Modul-Store verwaltet. Die gemeinsame Registrierung aus
+`modules/archive/archive-section-registration.mjs` verschiebt vorhandene
+eingebaute Drakenschluck-Einträge anhand ihrer ID in die eigene Kategorie,
+ohne ihren Inhalt zu ersetzen. Es gibt keine Änderungen an Kampfwerten oder Inventaren.
 
 Das Standorttemplate kennt zusätzlich `partner` („Verbundener Standort“), um
 bewachte oder genutzte fremde Betriebe von Niederlassungen zu unterscheiden.

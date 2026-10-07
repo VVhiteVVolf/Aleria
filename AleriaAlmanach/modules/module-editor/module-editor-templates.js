@@ -1224,6 +1224,23 @@ const MODULE_TEMPLATE_REGISTRY = {
     renderPage: (page, entry, pageIndex, total) => buildMapTemplatePage(page, entry, pageIndex, total),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'map-template')
   },
+  'guild-services': {
+    id: 'guild-services',
+    pageType: 'guild-services',
+    pageFlag: 'guildServicesPage',
+    label: 'Service-Template',
+    pageLabel: 'Aufgabenbereich & Service',
+    defaultTitle: 'Neue Gildendienste',
+    defaultSubtitle: 'Leistungen, Auftraggeber und Vereinbarungen',
+    entryType: 'Gildendienste',
+    typeMatchers: ['gildendienste', 'dienstleistungen'],
+    createPages: () => [createDefaultGuildServicesPage(0)],
+    createPage: index => createDefaultGuildServicesPage(index),
+    buildEditorFields: page => buildGuildServicesModuleEditorFields(page),
+    collectEditorPage: (card, page) => collectGuildServicesModuleEditorPage(card, page),
+    renderPage: (page, entry, index, total) => buildGuildServicesPage(page, entry, index, total),
+    renderInlinePage: (page, entry, index, total) => buildInlineComplexTemplatePage(page, entry, index, total, 'guild-services')
+  },
   'organization-network': {
     id: 'organization-network',
     pageType: 'organization-network',
@@ -1633,6 +1650,7 @@ const MODULE_TEMPLATE_RUNTIME_DEPENDENCIES = {
   goods: ['buildGoodsModuleEditorFields', 'collectGoodsModuleEditorPage', 'buildGoodsTablePage'],
   'trade-catalog': ['buildTradeCatalogModuleEditorFields', 'collectTradeCatalogModuleEditorPage', 'buildTradeCatalogPage'],
   'map-template': ['buildMapTemplateModuleEditorFields', 'collectMapTemplateModuleEditorPage', 'buildMapTemplatePage'],
+  'guild-services': ['buildGuildServicesModuleEditorFields', 'collectGuildServicesModuleEditorPage', 'buildGuildServicesPage'],
   'organization-network': ['buildOrganizationNetworkModuleEditorFields', 'collectOrganizationNetworkModuleEditorPage', 'buildOrganizationNetworkPage'],
   language: ['buildLanguageModuleEditorFields', 'collectLanguageModuleEditorPage', 'buildLanguagePage'],
   'name-list': ['buildNameListModuleEditorFields', 'collectNameListModuleEditorPage', 'buildNameListPage'],

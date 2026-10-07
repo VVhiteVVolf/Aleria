@@ -66,12 +66,13 @@ test('registration is idempotent, keeps existing mercenaries and leaves edited m
   const context=vm.createContext({SECTIONS:[{key:'Söldner',tab:'Söldner',entries:[{id:'windreiter',title:'Existing'}]}]});
   const source=readFileSync(new URL('house-retinues-data.js',root),'utf8');
   vm.runInContext(source,context);
-  assert.equal(context.SECTIONS[0].entries.length,2);
-  assert.equal(context.SECTIONS[1].tab,'Banden');
-  assert.match(context.SECTIONS[1].iconUrl,/banden\.png$/);
+  assert.equal(context.SECTIONS[0].entries.length,1);
+  assert.deepEqual(Array.from(context.SECTIONS[1].path),['Drakenschluck Söldner']);
+  assert.equal(context.SECTIONS[2].tab,'Banden');
+  assert.match(context.SECTIONS[2].iconUrl,/banden\.png$/);
   context.SECTIONS[1].entries[0].title='Edited';
   vm.runInContext(source,context);
-  assert.equal(context.SECTIONS.length,2);
+  assert.equal(context.SECTIONS.length,3);
   assert.equal(context.SECTIONS[1].entries.length,1);
   assert.equal(context.SECTIONS[1].entries[0].title,'Edited');
 });

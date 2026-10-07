@@ -284,6 +284,7 @@ function validateModulePageAssets(errors, page, index) {
 
   pushInvalidModuleAsset(errors, `${prefix} Hierarchie Emblem`, page.hierarchy?.emblem);
   validateModuleAssetRows(errors, `${prefix} Netzwerk Standort`, page.organizationNetwork?.sites, [['image', 'Wappen oder Ortsbild']]);
+  validateModuleAssetRows(errors, `${prefix} Dienst`, page.guildServices?.services, [['icon', 'Service-Icon']]);
   pushInvalidModuleAsset(errors, `${prefix} Hierarchie Seitenbild`, page.hierarchy?.sideImage);
   (page.hierarchy?.trees || []).forEach((tree, treeIndex) => {
     (tree.levels || []).forEach((level, levelIndex) => {

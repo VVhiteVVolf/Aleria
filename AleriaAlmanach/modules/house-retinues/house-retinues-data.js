@@ -3,7 +3,11 @@
   const modules = [
   {
     "tab": "Söldner",
-    "description": "Söldnergilden und Freikompanien",
+    "path": [
+      "Drakenschluck Söldner"
+    ],
+    "description": "Die Schutzgilde des Hauses Penderyn und ihre Verbände",
+    "icon": "./public/assets/house-retinues/references/drakenschluck-emblem.png",
     "entry": {
       "id": "drakenschluck-soeldner",
       "title": "Drakenschluck Söldner",
@@ -2232,11 +2236,18 @@
   }
 ];
   for (const module of modules) {
-    let section = SECTIONS.find(candidate => candidate.tab === module.tab && !candidate.path?.length);
+    const path = module.path || [];
+    const entryId = module.entry?.id || module.entryId;
+    const previous = SECTIONS.find(candidate => candidate.entries?.some(entry => entry.id === entryId));
+    const entry = previous?.entries.find(entry => entry.id === entryId) || module.entry;
+    if (!entry) continue;
+    let section = SECTIONS.find(candidate => candidate.tab === module.tab && JSON.stringify(candidate.path || []) === JSON.stringify(path));
     if (!section) {
-      section = { key: module.tab, tab: module.tab, desc: module.description, ...(module.icon ? { iconUrl: module.icon } : {}), entries: [] };
+      section = { key: path.at(-1) || module.tab, tab: module.tab, path, desc: module.description || '', ...(module.icon ? { iconUrl: module.icon } : {}), entries: [] };
       SECTIONS.push(section);
     }
-    if (!SECTIONS.some(candidate => candidate.entries?.some(entry => entry.id === module.entry.id))) section.entries.push(module.entry);
+    if (previous === section) continue;
+    if (previous) previous.entries = previous.entries.filter(candidate => candidate.id !== entryId);
+    section.entries.push(entry);
   }
 })();

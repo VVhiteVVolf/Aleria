@@ -402,6 +402,10 @@ function sanitizeModulePage(page, fallbackTitle = '') {
     next.mapTemplate = sanitizeMapTemplateData(page.mapTemplate);
   }
 
+  if (page.guildServicesPage) {
+    next.guildServicesPage = true;
+    next.guildServices = sanitizeGuildServicesData(page.guildServices);
+  }
   if (page.organizationNetworkPage) {
     next.organizationNetwork = sanitizeOrganizationNetworkData(page.organizationNetwork);
   }

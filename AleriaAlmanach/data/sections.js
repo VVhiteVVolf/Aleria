@@ -1339,15 +1339,15 @@ const SECTIONS = [
         subtitle: "Kommandantenbanner der Windreiter · Kontinent Estryll",
         type: "Söldnerbande",
         category: "Söldner · Windreiter · Estryll",
-        image: "https://i.imgur.com/fZ71YsH.jpeg",
+        image: "./public/assets/windreiter/references/fZ71YsH.jpeg",
         stamp: "WINDREITER ESTRYLL · SCHWARZFISCHE",
         multipage: true,
         locked: false,
         icon: "⚔",
-        symbol: "https://i.imgur.com/xYZyjk3.png",
+        symbol: "./public/assets/windreiter/references/xYZyjk3.png",
         pages: [
           {
-            image: "https://i.imgur.com/fZ71YsH.jpeg",
+            image: "./public/assets/windreiter/references/fZ71YsH.jpeg",
             pageTitle: "I. — Die Windreiter",
             description: "Die Windreiter sind keine gewöhnliche Söldnergilde — sie sind eine Institution. Über Jahrhunderte haben sie sich aus einer einfachen Freikompanie zu einer der wenigen wirklich globalen Söldnerorganisationen Alerias entwickelt, vertreten auf jedem Kontinent, bekannt in Häfen wie in Thronsälen. Ihre Struktur ist hierarchisch gegliedert: Auf kontinentaler Ebene agieren die Hauptbanner — mächtige Verbände mit dem Mandat, ihren jeweiligen Kontinent zu koordinieren. Darunter stehen kleinere Banden, fest stationiert oder frei umherziehend. Dazu kommen administrative Standorte, an denen bandenlose Freischwerter unter dem Schirm der Windreiter operieren, bis sie einem Banner zugewiesen werden oder selbst eines gründen.<br><br>Die Schwarzen Fische, gegründet vor zwölf bis dreizehn Jahren von Cynwrig Psygod O'Tredegar, sind das amtierende Kommandantenbanner der Windreiter auf dem Kontinent Estryll. Ihre Mitgliederzahl hat sich binnen dieser Zeit von einer Handvoll Veteranen auf mehrere hundert Söldner ausgeweitet — eine Wachstumsgeschwindigkeit, die in der Geschichte der Windreiter auf Estryll ihresgleichen sucht.",
             stats: [
@@ -1365,7 +1365,7 @@ const SECTIONS = [
             quoteBy: "— Cynwrig Psygod O'Tredegar",
           },
           {
-            image: "https://i.imgur.com/wprWQtp.jpeg",
+            image: "./public/assets/windreiter/references/wprWQtp.jpeg",
             pageTitle: "II. — Einordnung bei den Windreitern",
             description: "Innerhalb der Windreiter nehmen die Schwarzen Fische eine besondere Stellung ein: Sie sind das Kommandantenbanner auf dem Kontinent Estryll — sie tragen nicht nur Verantwortung für die eigene Bande, sondern koordinieren und repräsentieren die gesamte Windreiter-Präsenz auf dem Kontinent. Andere Banden auf Estryll, wie die Höllenreiter oder die Klingensturz-Bande, operieren eigenständig, ordnen sich in Fragen der kontinentalen Koordination jedoch dem Kommandantenbanner unter.<br><br>Viele der erfahrenen Schwarzfische kamen ursprünglich aus den Kettensprengern, dem primären Hauptbanner der Windreiter. Als der Kommandant auf Estryll verstarb und ein Nachfolger gesucht wurde, fiel die Wahl auf Cynwrig. Er gründete die Schwarzfische, zog ehemalige Kettensprengerleute und Söldner aus anderen Banden zu sich und baute binnen weniger als fünfzehn Jahren den stärksten Windreiter-Verband auf, den Estryll je gesehen hat.",
             stats: [
@@ -1382,7 +1382,7 @@ const SECTIONS = [
             quote: null,
           },
           {
-            image: "https://i.imgur.com/NueIXCr.png",
+            image: "./public/assets/windreiter/references/NueIXCr.png",
             pageTitle: "III. — Die Schwarzfische heute",
             description: "Die Schwarzen Fische operieren auf einem Gebiet, das von den Fürstentümern Blaithneachs im Süden bis in die nördlichen Regionen Aldrimars reicht. Ihre Struktur ist bewusst dezentral gehalten: Die meisten Schwarzfische bewegen sich in kleinen Gruppen von drei bis zehn Mann, geführt von erfahrenen Mitgliedern des engeren Kreises. Manche operieren vollständig solo. Bei größeren Aufträgen zieht Cynwrig den engeren Kreis zusammen und übernimmt persönlich — solche Fälle sind jedoch die Ausnahme. Für die Mehrzahl der Aufträge reicht eine Handvoll regulärer Schwarzfische aus.<br><br>Was die Bande auszeichnet, ist nicht die schiere Masse, sondern Qualität und Verlässlichkeit: Ein Schwarzfisch, der unter Cynwrigs Banner steht, hat einen Ruf zu verteidigen — und das weiß jeder Auftraggeber.",
             stats: [
@@ -1399,7 +1399,7 @@ const SECTIONS = [
             quote: null,
           },
           {
-            image: "https://i.imgur.com/jvsx52Y.jpeg",
+            image: "./public/assets/windreiter/references/jvsx52Y.jpeg",
             pageTitle: "IV. — Standorte",
             description: "Die Schwarzen Fische unterhalten mehrere feste Stützpunkte. Als primäre Residenz und Hauptquartier des Kommandantenbanners fungiert die Burg Windfeste im Fürstentum Aislaerneach — traditionell der Sitz des Estryll-Kommandanten der Windreiter. Als sekundärer Stützpunkt dient die Burg Windfeld in der Grafschaft Graue Weite, Königreich Cenyr — Cynwrigs eigentlicher Heimat.<br><br>Zu den mobilen Ressourcen zählen die Schattenschuppe, vorwiegend in Aislaerneach vor Anker, sowie die Schwarze Flut, die in Tredegar — der Hauptstadt der Grauen Weite und Cynwrigs Geburtsstadt — ankert. Die Schwarzfische unterhalten darüber hinaus weitere Standorte, die nicht öffentlich bekannt sind. Die genannten sind jedoch die bedeutendsten.",
             stats: [
