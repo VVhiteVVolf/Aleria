@@ -1,4 +1,6 @@
 import { HOUSE_PENDERYN_FAMILY as family } from '../../../Stammbäume/assets/js/data/house-penderyn-family.js';
+import { PENDERYN_BEERS } from './penderyn-beers.mjs';
+import { buildDrinkPricing } from '../trade-catalog/drink-catalog-model.mjs';
 import { ASSETS, paragraph as p, sourceCopy as copy, familyPortrait, familyCrest, storyPage, cataloguePage, hierarchyPage, finishBreweryModule } from './brewery-pages.mjs';
 
 const mark = `${ASSETS}/penderyn-brennzeichen.png`;
@@ -7,6 +9,9 @@ const connection = (id, detail) => ({ name: family.persons.find(person => person
 const naming = p('Nach der Namensordnung des Comann Braich Alba ist <strong>Penderyn</strong> ein Haus- und Traditionsname: Er bezeichnet die Familie und ihre überlieferte Brennkunst. Das Haus führt daher seine Abfüllungen zuerst unter <strong>Penderyn</strong>. <strong>Rhagorol</strong> ergänzt diesen Herkunftsnamen als Bezeichnung einer einzelnen Abfüllung. Der Drache verweist auf Cenyr und die Heraldik des Hauses; er ersetzt den Herkunftsnamen nicht.');
 
 export function buildPenderyn(source) {
+  const beers = PENDERYN_BEERS.map(({ paragraphs, ...product }) => ({
+    ...product, description: paragraphs.map(text => p(text.replaceAll('\n', '<br>'))).join('\n')
+  }));
   const whiskies = [
     { id: 'whisky-penderyn', name: 'Penderyn', subtitle: 'Whisky des Hauses · Cenyr', servingCopper: 8,
       tags: ['Apfel & Birne', 'Schneebeere', 'Edler Rauch'], description: copy(source, 72, 76) + p('Der Hauptwhisky trägt den Namen seiner Brennerei: <strong>Penderyn</strong>. Hausname und Herkunft stehen auf dem Etikett an erster Stelle.'), badge: 'Hausabfüllung', occasions: ['Festtafel', 'Ruhiger Abend'] },
@@ -16,14 +21,14 @@ export function buildPenderyn(source) {
   const guild = { pageTitle: 'Die Familie am Brennhaus', guildPage: true, image: portrait('talfryn-penderyn'), imageFit: 'contain',
     stats: [['Hauptsitz', 'Drakenburg · Vortigerns Ruh'], ['Produktion', 'Mathragon & Gwynthor'], ['Träger', 'Haus Penderyn'], ['Hausoberhaupt', 'Talfryn Penderyn'], ['Mitglieder', '100–200']],
     guild: { crestImage: familyCrest(family), portraitFormat: 'portrait', sideWidth: 100, connectionPortraitHeight: 100,
-      biographyTitle: 'Aus einem Handwerk wurde ein Haus', biographyText: copy(source, 4) + p('Die Brauer- und Destillierzunft führt die Überlieferung der Penderyn-Destillerie fort. Ihr bekanntes Stammsortiment besteht aus Whisky; Biere der verbündeten Teyrngarch behalten ihre eigene Herkunft und werden nicht zu Penderyn-Eigenmarken erklärt.'),
+      biographyTitle: 'Aus einem Handwerk wurde ein Haus', biographyText: copy(source, 4) + p('Die Brauer- und Destillierzunft führt die Überlieferung der Penderyn-Destillerie fort. Neben den Whiskys Penderyn und Rhagorol gehören Goldschuppen und Drachenblut als eigene Biere zum Stammsortiment. Brandhorn bleibt das Traditionsbier der Gochwyr vom „Zum Roten Drachen“, veredelt in Zusammenarbeit mit Penderyn. Biere der verbündeten Teyrngarch behalten ihre eigene Herkunft.'),
       abilitiesTitle: 'Wofür die Penderyn stehen', abilities: [
         { title: 'Sorgfalt bis zur Abfüllung', detail: 'Zutatenwahl, Destillation und Fassreife werden als zusammengehörendes Handwerk überwacht.', icon: mark },
         { title: 'Der Familienname als Herkunft', detail: 'Penderyn ist der geschützte Haus- und Traditionsname. Rhagorol wird als Zusatz einer Abfüllung geführt; die Herkunft Penderyn bleibt vorrangig.', icon: familyCrest(family) },
         { title: 'Bewachte Wege', detail: 'Die Drakenschluck Söldner schützen Brennhäuser, Reifekeller und Transporte.', icon: '../IconOrdner/Organisationsicons/Militär.png' }
       ],
       historyTitle: 'Islwyns Erbe', historyText: p('Islwyn Penderyn gründete die erste kleine Destillerie; Caoimhe Haeghra steht als Mitgründerin an seiner Seite in der Familienüberlieferung. Zwischen ihnen und den später datierten Generationen liegen nicht einzeln benannte Vorfahren.') + copy(source, 6, 9),
-      worksTitle: 'Handwerk & Leistungen', works: ['Penderyn und Penderyn · Rhagorol', 'Destillation, Fassherstellung und Reifekeller', 'Handel innerhalb Cenyrs und darüber hinaus'],
+      worksTitle: 'Handwerk & Leistungen', works: ['Penderyn und Penderyn · Rhagorol', 'Goldschuppen und Drachenblut · Eigene Hausbiere', 'Brandhorn · Kooperation mit den Gochwyr', 'Brauerei, Destillation, Fassherstellung und Reifekeller', 'Handel innerhalb Cenyrs und darüber hinaus'],
       triviaTitle: 'Eine Familie mit weitem Netz', trivia: ['Talfryn steht dem Haus seit 1724 vor. Seine Mutter Mairwen entstammt dem Haus Teyrngarch.', 'Aneurin ist der erste Erbe des Hauses. Daraus folgt kein automatisch erworbener Meisterrang.'],
       connectionsTitle: 'Die heutige Familie', connections: [
         connection('talfryn-penderyn', 'Geboren 1670 · Ritterfürst und Hausoberhaupt seit 1724; Sohn Gareths und Mairwen Teyrngarchs.'),
@@ -32,6 +37,7 @@ export function buildPenderyn(source) {
       ],
       contractsTitle: 'Verbündete & Schutz', contracts: [
         { title: 'Teyrngarch Brauerzunft', text: 'Bier und Whisky ergänzen sich im Handel. Ehen und die Verlobung Dwnns mit Elinor Teyrngarch verbinden beide Häuser.', icon: `${ASSETS}/teyrngarch-brauzeichen.png` },
+        { title: 'Gochwyr · Zum Roten Drachen', text: 'Für Brandhorn verbindet sich das alte Rauchmalz- und Wacholderrezept der Gochwyr mit der Brauführung der Penderyn-Destillerie.', icon: `${ASSETS}/bier-brandhorn.png` },
         { title: 'Drakenschluck Söldner', text: 'Hauseigene Schutzgilde mit eigenem militärischem Auftrag; kein handwerklicher Rang im Brennhaus.', icon: '../IconOrdner/Organisationsicons/Militär.png' }
       ],
       documentsTitle: 'Familienbuch & Häuser', documents: [{ title: "Haus Penderyn O’Mathragon", text: 'Stammbaum, Originalporträts und überlieferte Verbindungen.', icon: familyCrest(family), link: '../Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view' }],
@@ -65,7 +71,9 @@ export function buildPenderyn(source) {
       storyPage('Ein Brennhaus wird zum Familienerbe', 'penderyn-erbe', copy(source, 4) + copy(source, 6, 9)), guild, hierarchy,
       storyPage('Die Kunst zwischen Feuer und Fass', 'penderyn-handwerk', copy(source, 10, 13) + copy(source, 15) + naming), network,
       cataloguePage('Das Stammsortiment · Zwei Whiskys', whiskies, { mark, origin: 'Penderyn · Mathragon & Gwynthor · Königreich Cenyr', kind: 'whisky', subtitle: 'Penderyn · Hausabfüllung & Rhagorol · Fünf freie Plätze' }),
-      storyPage('Verbündete, Schutz & Familienbande', 'penderyn-buendnisse', copy(source, 13, 15) + p('Mairwen Teyrngarch war mit Gareth Penderyn verheiratet; ihr Sohn Talfryn führt heute das Haus. In der jüngeren Generation ist Dwnn Penderyn mit Elinor Teyrngarch verlobt. Die beiden Handwerke behalten dabei ihre eigenen Namen: Goldhaube bleibt ein Teyrngarch-Bier, Penderyn und Rhagorol bleiben Abfüllungen des Brennhauses.'))
+      cataloguePage('Die Hausbiere · Goldschuppen & Drachenblut', beers.filter(product => !product.partner), { mark, origin: 'Penderyn-Destillerie · Königreich Cenyr', priceBuilder: buildDrinkPricing, commentThreadKey: 'hausbiere', subtitle: 'Helles und dunkles Bier aus eigener Braukunst · Fünf freie Plätze' }),
+      cataloguePage('Kooperationsbier · Brandhorn', beers.filter(product => product.partner), { mark, origin: 'Gochwyr · Zum Roten Drachen', partner: true, priceBuilder: buildDrinkPricing, commentThreadKey: 'kooperationsbiere', subtitle: 'Das Traditionsbier der Gochwyr in Zusammenarbeit mit Penderyn' }),
+      { ...storyPage('Verbündete, Schutz & Familienbande', 'penderyn-buendnisse', copy(source, 13, 15) + p('Mairwen Teyrngarch war mit Gareth Penderyn verheiratet; ihr Sohn Talfryn führt heute das Haus. In der jüngeren Generation ist Dwnn Penderyn mit Elinor Teyrngarch verlobt. Die beiden Handwerke behalten dabei ihre eigenen Namen: Goldhaube bleibt ein Teyrngarch-Bier, Penderyn und Rhagorol bleiben Abfüllungen des Brennhauses.')), commentThreadKey: '6' }
     ]
   });
 }

@@ -12,16 +12,16 @@ export function storyPage(title, asset, description) {
     imageFit: 'contain', imagePosition: 'center', description, commentSequence: [] };
 }
 
-export function drinkItem(product, { mark, origin, kind = 'beer' }) {
+export function drinkItem(product, { mark, origin, kind = 'beer', priceBuilder = buildBreweryDrinkPricing }) {
   return {
     id: product.id, category: kind, status: 'available', title: product.name,
-    subtitle: product.subtitle, image: `${ASSETS}/${product.id}.png`, imageFormat: 'portrait',
+    subtitle: product.subtitle, image: `${ASSETS}/${product.id}.png`, imageFormat: product.imageFormat || 'portrait',
     imageFit: 'contain', imagePosition: 'center', imageHeight: 420,
     badge: product.badge || (kind === 'beer' ? 'Hausbier' : 'Whisky'), tags: product.tags,
     descriptionTitle: 'Charakter & Herkunft', description: product.description,
     featuresTitle: 'Steckbrief', features: [], originTitle: 'Herkunft', origin: product.origin || origin,
     usageTitle: 'Am Tisch', usageTags: product.occasions || product.tags,
-    ...buildBreweryDrinkPricing(kind, product.servingCopper),
+    ...priceBuilder(kind, product.servingCopper),
     conditionsTitle: 'Verfügbarkeit & Besonderheiten', conditions: product.conditions || 'Stammsortiment des Hauses.',
     attributes: [], sealImage: mark
   };
@@ -29,7 +29,7 @@ export function drinkItem(product, { mark, origin, kind = 'beer' }) {
 
 export function cataloguePage(title, products, options) {
   const kind = options.kind || 'beer';
-  return { pageTitle: title, tradeCatalogPage: true, commentSequence: [], tradeCatalog: {
+  return { pageTitle: title, ...(options.commentThreadKey ? { commentThreadKey: options.commentThreadKey } : {}), tradeCatalogPage: true, commentSequence: [], tradeCatalog: {
     title, subtitle: options.subtitle, headerIcon: options.mark,
     noteIcon: '◈', noteTitle: 'Glas / Krug · Flasche · Fass',
     noteText: kind === 'beer' ? 'Krug 0,5 l · Flasche 1 l · Fass 50 l. Alle Preise in Kupfertalern.' : 'Glas 4 cl · Flasche 0,7 l · Fass 50 l. Alle Preise in Kupfertalern.',

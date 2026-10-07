@@ -843,7 +843,7 @@
           "sideWidth": 100,
           "connectionPortraitHeight": 100,
           "biographyTitle": "Aus einem Handwerk wurde ein Haus",
-          "biographyText": "<p>Die <strong>Penderyn Destillerie</strong> ist das Fundament des Hauses <strong>Penderyn</strong> und der Schlüssel zu ihrem Aufstieg in den Adelsstand. Einst einfache Destillateure in der Hauptstadt <strong>Mathragon</strong>, wurden die Penderyn durch den Erfolg ihres weltberühmten <strong>Penderyn Whiskeys</strong> in den Rang ritterlicher Herren erhoben. Heute zählt die Destillerie zu den renommiertesten im Königreich <strong>Cenyr</strong> und hat sich weit über die Landesgrenzen hinaus einen Namen gemacht. Ihr Whiskey gilt als einer der edelsten Tropfen des Reiches, geschätzt bei Adel und Feinschmeckern gleichermaßen.</p><p>Die Brauer- und Destillierzunft führt die Überlieferung der Penderyn-Destillerie fort. Ihr bekanntes Stammsortiment besteht aus Whisky; Biere der verbündeten Teyrngarch behalten ihre eigene Herkunft und werden nicht zu Penderyn-Eigenmarken erklärt.</p>",
+          "biographyText": "<p>Die <strong>Penderyn Destillerie</strong> ist das Fundament des Hauses <strong>Penderyn</strong> und der Schlüssel zu ihrem Aufstieg in den Adelsstand. Einst einfache Destillateure in der Hauptstadt <strong>Mathragon</strong>, wurden die Penderyn durch den Erfolg ihres weltberühmten <strong>Penderyn Whiskeys</strong> in den Rang ritterlicher Herren erhoben. Heute zählt die Destillerie zu den renommiertesten im Königreich <strong>Cenyr</strong> und hat sich weit über die Landesgrenzen hinaus einen Namen gemacht. Ihr Whiskey gilt als einer der edelsten Tropfen des Reiches, geschätzt bei Adel und Feinschmeckern gleichermaßen.</p><p>Die Brauer- und Destillierzunft führt die Überlieferung der Penderyn-Destillerie fort. Neben den Whiskys Penderyn und Rhagorol gehören Goldschuppen und Drachenblut als eigene Biere zum Stammsortiment. Brandhorn bleibt das Traditionsbier der Gochwyr vom „Zum Roten Drachen“, veredelt in Zusammenarbeit mit Penderyn. Biere der verbündeten Teyrngarch behalten ihre eigene Herkunft.</p>",
           "abilitiesTitle": "Wofür die Penderyn stehen",
           "abilities": [
             {
@@ -867,7 +867,9 @@
           "worksTitle": "Handwerk & Leistungen",
           "works": [
             "Penderyn und Penderyn · Rhagorol",
-            "Destillation, Fassherstellung und Reifekeller",
+            "Goldschuppen und Drachenblut · Eigene Hausbiere",
+            "Brandhorn · Kooperation mit den Gochwyr",
+            "Brauerei, Destillation, Fassherstellung und Reifekeller",
             "Handel innerhalb Cenyrs und darüber hinaus"
           ],
           "triviaTitle": "Eine Familie mit weitem Netz",
@@ -902,6 +904,11 @@
               "title": "Teyrngarch Brauerzunft",
               "text": "Bier und Whisky ergänzen sich im Handel. Ehen und die Verlobung Dwnns mit Elinor Teyrngarch verbinden beide Häuser.",
               "icon": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+            },
+            {
+              "title": "Gochwyr · Zum Roten Drachen",
+              "text": "Für Brandhorn verbindet sich das alte Rauchmalz- und Wacholderrezept der Gochwyr mit der Brauführung der Penderyn-Destillerie.",
+              "icon": "./public/assets/brewer-guilds/bier-brandhorn.png"
             },
             {
               "title": "Drakenschluck Söldner",
@@ -1244,13 +1251,285 @@
         }
       },
       {
-        "pageTitle": "VII. — Verbündete, Schutz & Familienbande",
+        "pageTitle": "VII. — Die Hausbiere · Goldschuppen & Drachenblut",
+        "commentThreadKey": "hausbiere",
+        "tradeCatalogPage": true,
+        "commentSequence": [],
+        "tradeCatalog": {
+          "title": "Die Hausbiere · Goldschuppen & Drachenblut",
+          "subtitle": "Helles und dunkles Bier aus eigener Braukunst · Fünf freie Plätze",
+          "headerIcon": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+          "noteIcon": "◈",
+          "noteTitle": "Glas / Krug · Flasche · Fass",
+          "noteText": "Krug 0,5 l · Flasche 1 l · Fass 50 l. Alle Preise in Kupfertalern.",
+          "categories": [
+            {
+              "id": "beer",
+              "label": "Bier · Getränke"
+            }
+          ],
+          "allLabel": "Gesamtes Sortiment",
+          "searchPlaceholder": "Nach Name, Charakter oder Herkunft suchen …",
+          "filterLabel": "Suche",
+          "items": [
+            {
+              "id": "bier-goldschuppen",
+              "category": "beer",
+              "status": "available",
+              "title": "Goldschuppen Bier",
+              "subtitle": "Helles Hausbier · Penderyn",
+              "image": "./public/assets/brewer-guilds/bier-goldschuppen.png",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageHeight": 420,
+              "badge": "Hausbier",
+              "tags": [
+                "Helles Malz",
+                "Vanille",
+                "Eiche"
+              ],
+              "descriptionTitle": "Charakter & Herkunft",
+              "description": "<p>Das Goldschuppen ist das standardisierte Helle der Penderyn-Destillerie, entstanden aus nüchterner Notwendigkeit und ehrgeizigem Stolz. Wer Whiskey brennt, kann nicht zulassen, dass allein die Teyrngarcher Brauerzunft den Biermarkt dominiert. Also brachte die Gilde ihr eigenes Helles hervor – nicht als Nebenspielerei, sondern als ernstzunehmende Antwort.</p>\n<p>Gebraut wird es mit hellem Gerstenmalz, sauber geführter Gärung und einer bewusst milden Hopfung. Der eigentliche Kniff liegt jedoch in der Reifung: Ein Teil des Suds ruht für kurze Zeit in ehemaligen Penderyn-Whiskeyfässern, bevor er mit dem frischen Bier verschnitten wird. Kein schwerer Fassgeschmack, kein aufdringliches Brennfeuer – nur ein Hauch von Eichenwärme und feiner Vanillenote, der dem Bier Tiefe verleiht, ohne es zu beschweren.</p>\n<p>Gedacht ist es als Alltagsbier mit Anspruch. Leicht genug für lange Abende, charakterstark genug, um neben großen Namen zu bestehen. In städtischen Gegenden längst ein Exportschlager – Tavernen in ganz Cenyr führen es mittlerweile selbstverständlich.</p>\n<p>Im Glas schimmert es wie eine einzelne, sonnenbeschienene Drachenschuppe – warm golden, klar, mit feinem, cremigem Schaum. Der erste Duft ist frisch: Getreide, ein Hauch Blütenhonig, darunter fast unmerklich die leise Spur von Eiche.</p>\n<p>Der erste Schluck ist weich. Kein Angriff, kein Aufplustern. Es legt sich an den Gaumen wie warmer Spätsommer. Leicht süßliches Malz, dann eine dezente, saubere Hopfenbittere, die nicht sticht, sondern trägt. Und dann – fast unbewusst – dieser feine Whiskey-Schatten: Vanille, ein Hauch Karamell, eine trockene Holznote im Nachklang.</p>\n<p>Es will dich nicht beeindrucken. Es will dich entspannen.<br>Ein Bier, das dich sitzen lässt, statt dich aufzurütteln.<br>Ein ruhiger Atemzug eines Drachen – nicht sein Feuer.</p>",
+              "featuresTitle": "Steckbrief",
+              "features": [],
+              "originTitle": "Herkunft",
+              "origin": "Penderyn-Destillerie · Königreich Cenyr",
+              "usageTitle": "Am Tisch",
+              "usageTags": [
+                "Tavernenabend",
+                "Alltagsbier"
+              ],
+              "priceTitle": "Ausschank & Gebinde",
+              "priceMin": "",
+              "priceMax": "",
+              "priceFill": 0,
+              "currencyCode": "KT",
+              "currencyLabel": "Kupfertaler",
+              "currencyIcon": "◈",
+              "priceOptions": [
+                {
+                  "label": "Krug",
+                  "unit": "0,5 l",
+                  "price": "2"
+                },
+                {
+                  "label": "Flasche",
+                  "unit": "1 l",
+                  "price": "4"
+                },
+                {
+                  "label": "Fass",
+                  "unit": "50 l",
+                  "price": "200"
+                }
+              ],
+              "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+              "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+              "conditions": "Stammsortiment des Hauses.",
+              "attributes": [],
+              "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+            },
+            {
+              "id": "bier-drachenblut",
+              "category": "beer",
+              "status": "available",
+              "title": "Drachenblut Bier",
+              "subtitle": "Dunkles, fassgereiftes Hausbier · Penderyn",
+              "image": "./public/assets/brewer-guilds/bier-drachenblut.png",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageHeight": 420,
+              "badge": "Hausbier",
+              "tags": [
+                "Röstmalz",
+                "Toffee",
+                "Whiskeyfass"
+              ],
+              "descriptionTitle": "Charakter & Herkunft",
+              "description": "<p>Das Drachenblut ist das zweite große Standbein der Penderyn-Gilde – dunkler, kräftiger und eigenwilliger als die Goldschuppe. Sein Name ist kein Marketingtrick: Im richtigen Licht schimmert es tiefrotbraun, fast wie geronnenes Blut im Glas. Gebraut wird es aus stärker geröstetem Malz, mit längerer Maischeführung und deutlich höherem Stammwürzegehalt.</p>\n<p>Anders als die Goldschuppe ruht das Drachenblut länger in ehemaligen Whiskeyfässern. Nicht nur ein Hauch, sondern eine spürbare Reifung. Die Eiche darf arbeiten, der Restalkohol darf Tiefe entwickeln, die Röstnoten dürfen sich mit Vanille, dunklem Holz und einem Anflug von Rauch verbinden. Es ist kein bloßes Dunkelbier – es ist ein Hybrid aus Brau- und Brennkunst. In vielen Städten ist es mindestens so gefragt wie das helle Pendant, mancherorts sogar begehrter.</p>\n<p>Gedacht ist es nicht für den schnellen Durst. Es ist ein Bier für Abende, an denen Gespräche langsamer werden und die Kerzen tiefer brennen.</p>\n<p>Im Krug wirkt es schwer. Tief. Fast lebendig. Der Schaum ist dicht, cremig, leicht karamellfarben. Schon im Duft liegt geröstetes Malz, dunkle Schokolade, ein Hauch von Kaffee – und darunter diese warme, würzige Eiche.</p>\n<p>Der erste Schluck ist vollmundig. Malzsüße trifft auf sanfte Bittere, dann entfaltet sich die Fassreife: Vanille, Toffee, ein warmer Whiskey-Schleier, der sich wie Glut im Rachen ausbreitet. Es brennt nicht – es wärmt.</p>\n<p>Langsam. Nachhaltig.</p>\n<p>Das Drachenblut ist kein Atemzug.<br>Es ist die Glut im Inneren des Drachen.<br>Und wer es trinkt, spürt, wie es sich im Bauch niederlässt und dort bleibt.</p>",
+              "featuresTitle": "Steckbrief",
+              "features": [],
+              "originTitle": "Herkunft",
+              "origin": "Penderyn-Destillerie · Königreich Cenyr",
+              "usageTitle": "Am Tisch",
+              "usageTags": [
+                "Ruhiger Abend",
+                "Herzhafte Speisen"
+              ],
+              "priceTitle": "Ausschank & Gebinde",
+              "priceMin": "",
+              "priceMax": "",
+              "priceFill": 0,
+              "currencyCode": "KT",
+              "currencyLabel": "Kupfertaler",
+              "currencyIcon": "◈",
+              "priceOptions": [
+                {
+                  "label": "Krug",
+                  "unit": "0,5 l",
+                  "price": "4"
+                },
+                {
+                  "label": "Flasche",
+                  "unit": "1 l",
+                  "price": "8"
+                },
+                {
+                  "label": "Fass",
+                  "unit": "50 l",
+                  "price": "400"
+                }
+              ],
+              "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+              "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+              "conditions": "Stammsortiment des Hauses.",
+              "attributes": [],
+              "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+            },
+            {
+              "id": "beer-reserve-1",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 1",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            },
+            {
+              "id": "beer-reserve-2",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 2",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            },
+            {
+              "id": "beer-reserve-3",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 3",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            },
+            {
+              "id": "beer-reserve-4",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 4",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            },
+            {
+              "id": "beer-reserve-5",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 5",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            }
+          ],
+          "footerCards": []
+        }
+      },
+      {
+        "pageTitle": "VIII. — Kooperationsbier · Brandhorn",
+        "commentThreadKey": "kooperationsbiere",
+        "tradeCatalogPage": true,
+        "commentSequence": [],
+        "tradeCatalog": {
+          "title": "Kooperationsbier · Brandhorn",
+          "subtitle": "Das Traditionsbier der Gochwyr in Zusammenarbeit mit Penderyn",
+          "headerIcon": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+          "noteIcon": "◈",
+          "noteTitle": "Glas / Krug · Flasche · Fass",
+          "noteText": "Krug 0,5 l · Flasche 1 l · Fass 50 l. Alle Preise in Kupfertalern.",
+          "categories": [
+            {
+              "id": "beer",
+              "label": "Partnerbiere · Getränke"
+            }
+          ],
+          "allLabel": "Alle Partnerprodukte",
+          "searchPlaceholder": "Nach Name, Charakter oder Herkunft suchen …",
+          "filterLabel": "Suche",
+          "items": [
+            {
+              "id": "bier-brandhorn",
+              "category": "beer",
+              "status": "available",
+              "title": "Brandhorn Bier",
+              "subtitle": "Rauch- und Wacholderbier · Gochwyr × Penderyn",
+              "image": "./public/assets/brewer-guilds/bier-brandhorn.png",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageHeight": 420,
+              "badge": "Kooperationsbier",
+              "tags": [
+                "Rauchmalz",
+                "Wacholder",
+                "Harzig"
+              ],
+              "descriptionTitle": "Charakter & Herkunft",
+              "description": "<p>Das Brandhorn ist das Traditionsbier der Gochwyr vom „Zum Roten Drachen“, entstanden aus der Zeit, als die Taverne noch unter dem Zeichen des brennenden Geißbocks stand. In Zusammenarbeit mit der Penderyn-Destillerie wurde das alte Rezept veredelt, nicht verdrängt. Es bleibt ein Wirtshausbier – kräftig, bodenständig, eigenwillig – doch mit sauberer Führung und kontrollierter Gärung nach Gildenstandard.</p>\n<p>Gebraut mit Rauchmalz und veredelt durch eine dezente Wacholdergabe, trägt es eine harzig-würzige Wildnote in sich, die bewusst an Lagerfeuer, feuchte Wälder und knisterndes Holz erinnert. Keine Fassreifung wie bei den Drachenbieren – das Brandhorn bleibt ungezähmt. Es soll nicht glänzen, sondern brennen.</p>\n<p>Schon beim ersten Zug steigt dir eine warme, rauchige Schwere in die Nase – wie ein Abend am Feuer, wenn der Rauch in Kleidung und Haar kriecht. Dann kommt das Malz: voll, rund, leicht süßlich. Und gleich darauf dieser Wacholder – trocken, harzig, fast waldig.</p>\n<p>Es schmeckt nach Erde, nach Holz, nach Horn und Fell. Nach einem Becher, der auf einem groben Tisch abgestellt wird, während draußen der Wind pfeift. Kein höfisches Bier. Kein Stadtgeflüster.</p>\n<p>Das Brandhorn ist kein Getränk – es ist ein Wald im Becher.</p>",
+              "featuresTitle": "Steckbrief",
+              "features": [],
+              "originTitle": "Herkunft",
+              "origin": "Gochwyr · Zum Roten Drachen · Llamreis Ankunft · Königreich Cenyr",
+              "usageTitle": "Am Tisch",
+              "usageTags": [
+                "Wirtshaus",
+                "Lagerfeuer"
+              ],
+              "priceTitle": "Ausschank & Gebinde",
+              "priceMin": "",
+              "priceMax": "",
+              "priceFill": 0,
+              "currencyCode": "KT",
+              "currencyLabel": "Kupfertaler",
+              "currencyIcon": "◈",
+              "priceOptions": [
+                {
+                  "label": "Krug",
+                  "unit": "0,5 l",
+                  "price": "3"
+                },
+                {
+                  "label": "Flasche",
+                  "unit": "1 l",
+                  "price": "6"
+                },
+                {
+                  "label": "Fass",
+                  "unit": "50 l",
+                  "price": "300"
+                }
+              ],
+              "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+              "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+              "conditions": "Traditionsbier der Gochwyr vom „Zum Roten Drachen“, veredelt in Zusammenarbeit mit der Penderyn-Destillerie. Keine Fassreifung; die eigene Herkunft bleibt erhalten.",
+              "attributes": [],
+              "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+            }
+          ],
+          "footerCards": []
+        }
+      },
+      {
+        "pageTitle": "IX. — Verbündete, Schutz & Familienbande",
         "image": "./public/assets/brewer-guilds/penderyn-buendnisse.png",
         "imageWidth": 38,
         "imageFit": "contain",
         "imagePosition": "center",
         "description": "<p><strong>Schutz und Sicherung der Destillerie</strong><br/> Der Schutz der Destillerie und ihrer Interessen ist für die Penderyn von größter Bedeutung. Hier kommt ihre hauseigene Söldnergilde, die <strong>Drakenschluck Söldner</strong>, ins Spiel. Diese Söldner wurden eigens dafür gegründet, um die Destillerie, ihre Lagerhäuser und die Handelskarawanen zu bewachen, die den wertvollen Whiskey transportieren. Die Drakenschluck Söldner sind aber nicht nur Verteidiger, sondern werden auch eingesetzt, um konkurrierende Destillerien einzuschüchtern und feindliche Übernahmen abzuwehren. Ihre Präsenz garantiert, dass die Penderyn ihre Interessen auf dem Markt wahren und weiterhin die Vorherrschaft im Destilliergeschäft behaupten können.</p>\n<p>Zusätzlich zu ihren Aufgaben im Bereich der Destilleriesicherung bieten die Penderyn Söldner ihre Dienste auch anderen Gilden an, was zu einem weiteren Einnahmezweig für die Familie geführt hat. So sichern sie nicht nur den Erfolg der Penderyn Destillerie, sondern erweitern auch die Reichweite und den Einfluss des Hauses im ganzen Königreich.</p><p>Mairwen Teyrngarch war mit Gareth Penderyn verheiratet; ihr Sohn Talfryn führt heute das Haus. In der jüngeren Generation ist Dwnn Penderyn mit Elinor Teyrngarch verlobt. Die beiden Handwerke behalten dabei ihre eigenen Namen: Goldhaube bleibt ein Teyrngarch-Bier, Penderyn und Rhagorol bleiben Abfüllungen des Brennhauses.</p>",
-        "commentSequence": []
+        "commentSequence": [],
+        "commentThreadKey": "6"
       }
     ]
   }
