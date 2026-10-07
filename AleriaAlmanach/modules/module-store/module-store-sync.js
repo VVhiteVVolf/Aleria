@@ -386,7 +386,10 @@ function cleanupSyncedModuleStoreCache(options = {}) {
 }
 
 function applyModuleStorePayload(payload) {
-  const normalized = normalizeModuleStorePayload(payload);
+  let normalized = normalizeModuleStorePayload(payload);
+  if (typeof migrateWindreiterModuleSections === 'function') {
+    normalized = migrateWindreiterModuleSections(normalized);
+  }
   _moduleSectionNodes = normalized.moduleSectionNodes || [];
   _moduleNodeAssignments = normalized.moduleNodeAssignments || {};
   _customSections = normalized.customSections;

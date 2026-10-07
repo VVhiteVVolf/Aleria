@@ -5,9 +5,9 @@ import { renderArchiveSectionRegistration } from '../modules/archive/archive-sec
 const root = new URL('../modules/windreiter/', import.meta.url);
 const input = JSON.parse(readFileSync(new URL('sources/windreiter.json', root), 'utf8'));
 const modules = [
-  { tab: 'Söldner', path: ['Windreiter'], icon: WINDREITER_EMBLEM,
+  { tab: 'Söldner', path: ['Die Windreiter'], icon: WINDREITER_EMBLEM,
     description: 'Die übergeordnete Kriegergilde, ihre Hauptbanner und Unterbanden.', entry: buildWindreiter(input) },
-  { tab: 'Söldner', path: ['Windreiter', 'Schwarzfische'], icon: `${WINDREITER_ART}/references/xYZyjk3.png`,
+  { tab: 'Söldner', path: ['Die Windreiter', 'Estryll Banden', 'Die Schwarzen Fische'], icon: `${WINDREITER_ART}/references/xYZyjk3.png`,
     description: 'Estrylls Hauptbanner der Windreiter und seine späteren Unterbanden.', entryId: 'schwarzfische-windreiter' }
 ];
 const output = new URL('windreiter-data.js', root);

@@ -4,12 +4,13 @@ Die Registrierung verwendet den vorhandenen Archivbaum:
 
 ```text
 Söldner
-├─ Windreiter                         Kategorie
+├─ Die Windreiter                     vorhandene Kategorie
 │  ├─ Die Windreiter                  Modul, 11 Seiten
-│  └─ Schwarzfische                   Kategorie
-│     ├─ Die Schwarzen Fische         bestehendes Modul, 4 Seiten
-│     └─ spätere Banden               jeweils Kategorie + eigenes Modul
-│        └─ spätere kleinere Verbände beliebig weiter verschachtelbar
+│  └─ Estryll Banden                  vorhandene regionale Kategorie
+│     └─ Die Schwarzen Fische         vorhandene Kategorie
+│        ├─ Die Schwarzen Fische      bestehendes Modul, 4 Seiten
+│        ├─ Die Schwarzfische – Hierarchie (online angelegtes Modul)
+│        └─ bestehende und spätere Unterkategorien, beliebig verschachtelbar
 └─ Drakenschluck Söldner              Kategorie
    └─ Drakenschluck Söldner           bestehendes Modul, unveränderte ID
 ```
@@ -72,9 +73,14 @@ referenziert nur seine ID und legt keine zweite Fassung an. Seine vier bisherige
 Illustrationen und sein Wappen sind unverändert lokal gespeichert; ihre Herkunft
 und Prüfsummen stehen in `sources/schwarzfische-images.json`.
 
-Bestehende redaktionelle Überschreibungen und ausdrücklich gespeicherte
-Benutzerverschiebungen bleiben beim Modul-Store. Die Umordnung greift auf die
-eingebauten Kategorien; sie führt keine Firebase-Migration aus.
+Die Standardpfade entsprechen dem vorhandenen Online-Baum, einschließlich der
+regionalen Ebene „Estryll Banden“. Redaktionelle Überschreibungen, eigene Module,
+Unterkategorien und Kommentar-IDs bleiben erhalten. `windreiter-section-migration.js`
+führt nur die versehentlich hinzugefügten Kategorien „Windreiter“ und
+„Windreiter > Schwarzfische“ aus dem ersten Release in diesen Baum zurück.
+Der Abgleich erfolgt beim Anwenden des Stores im Arbeitsspeicher. Er verändert
+weder die Synchronisationssignatur eines gespeicherten Caches noch den
+Firebase-Inhalt automatisch; reguläres Speichern übernimmt den korrigierten Baum.
 
 ## Bilder und Prüfung
 

@@ -4,7 +4,7 @@
   {
     "tab": "Söldner",
     "path": [
-      "Windreiter"
+      "Die Windreiter"
     ],
     "icon": "../Fraktionen/assets/emblems/gilden/windreiter.webp",
     "description": "Die übergeordnete Kriegergilde, ihre Hauptbanner und Unterbanden.",
@@ -987,8 +987,9 @@
   {
     "tab": "Söldner",
     "path": [
-      "Windreiter",
-      "Schwarzfische"
+      "Die Windreiter",
+      "Estryll Banden",
+      "Die Schwarzen Fische"
     ],
     "icon": "./public/assets/windreiter/references/xYZyjk3.png",
     "description": "Estrylls Hauptbanner der Windreiter und seine späteren Unterbanden.",

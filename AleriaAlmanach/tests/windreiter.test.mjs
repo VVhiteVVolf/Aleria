@@ -58,8 +58,8 @@ test('builtin categories relocate existing entries without replacing edits or du
   const location = id => context.SECTIONS.find(section => section.entries.some(entry => entry.id === id));
   assert.equal(location(old.id).entries[0], old);
   assert.deepEqual(Array.from(location(old.id).path), ['Drakenschluck Söldner']);
-  assert.deepEqual(Array.from(location('windreiter').path), ['Windreiter']);
-  assert.deepEqual(Array.from(location('schwarzfische-windreiter').path), ['Windreiter', 'Schwarzfische']);
+  assert.deepEqual(Array.from(location('windreiter').path), ['Die Windreiter']);
+  assert.deepEqual(Array.from(location('schwarzfische-windreiter').path), ['Die Windreiter', 'Estryll Banden', 'Die Schwarzen Fische']);
   assert.equal(location('schwarzfische-windreiter').entries[0], schwarzfische);
   assert.equal(location('unrelated').entries.length, 1);
   const ids = context.SECTIONS.flatMap(section => section.entries.map(entry => entry.id));

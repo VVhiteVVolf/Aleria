@@ -19,7 +19,7 @@
     "test:house-retinues": "node --test tests/house-retinues.test.mjs",
     "build:windreiter": "node scripts/build-windreiter.mjs",
     "check:windreiter": "node scripts/build-windreiter.mjs --check",
-    "test:windreiter": "node --test tests/windreiter.test.mjs",
+    "test:windreiter": "node --test tests/windreiter*.test.mjs",
     "build:brewer-guilds": "node scripts/build-brewer-guilds.mjs && npm run build:gortach",
     "check:brewer-guilds": "node scripts/build-brewer-guilds.mjs --check && npm run check:gortach",
     "test:brewer-guilds": "node --test tests/brewer-guilds.test.mjs tests/trade-catalog-pricing.test.mjs tests/trade-catalog-money.test.mjs tests/gortach-brewery.test.mjs",

@@ -1,4 +1,12 @@
-.guild-services-page { padding: clamp(20px, 3vw, 44px); color: var(--ink); background: var(--module-paper); }
+.guild-services-page {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  padding: clamp(20px, 3vw, 44px);
+  color: var(--ink);
+  background: var(--module-paper);
+}
 .guild-services-header { border-bottom: 1px solid var(--module-line); padding-bottom: 24px; margin-bottom: 24px; }
 .guild-services-header > span { font: .7rem 'Cinzel', serif; letter-spacing: .12em; color: var(--module-bronze); }
 .guild-services-page h2 { font: 600 clamp(1.4rem, 2vw, 2rem) 'Cinzel', serif; }

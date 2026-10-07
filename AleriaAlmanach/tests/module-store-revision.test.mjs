@@ -112,3 +112,21 @@ test('a first local module can still be saved when the online store is empty', a
   assert.equal(saved.length, 1);
   assert.equal(saved[0].customSections[0].entries[0].title, 'Erstes Modul');
 });
+
+test('Windreiter layout repair does not turn an unchanged cache into an unsynced edit', async () => {
+  const { context, saved } = syncContext();
+  context.normalizeModuleTreeState = payload => ({ nodes: payload.moduleSectionNodes || [], assignments: payload.moduleNodeAssignments || {} });
+  vm.runInContext(readFileSync(new URL('../modules/windreiter/windreiter-section-migration.js', import.meta.url), 'utf8'), context);
+  const payload = { updatedAtClient: 200, moduleSectionNodes: [
+    { id: 'root:soldner', parentId: '', tab: 'Söldner', title: 'Söldner' },
+    { id: 'node:soldner:windreiter', parentId: 'root:soldner', tab: 'Söldner', title: 'Windreiter' }
+  ], moduleNodeAssignments: { windreiter: 'node:soldner:windreiter' } };
+  context.writeLocalModuleStorePayload(payload);
+  context.writeModuleStoreSyncMeta(payload);
+  context._fb.loadModuleStore = async () => payload;
+  await context.setupModuleStoreRemoteSync();
+  assert.equal(context._moduleNodeAssignments.windreiter, 'node:soldner:die-windreiter');
+  assert.equal(context.isLocalModuleStoreSynced(context.readLocalModuleStorePayload()), true);
+  assert.equal(context._moduleStoreSyncConflict, null);
+  assert.equal(saved.length, 0, 'Rendering a repaired layout must not republish the store');
+});
