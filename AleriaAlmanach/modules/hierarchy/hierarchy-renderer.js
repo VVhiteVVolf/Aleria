@@ -1,5 +1,23 @@
 // Renders the dedicated hierarchy / organisation chart module template.
 
+// A connected tree is wider than its root. Start at the first root card,
+// not at the empty left margin; saved editor positions always take precedence.
+function mountHierarchyPage({ root = document } = {}) {
+  root.querySelectorAll('.hierarchy-page').forEach(page => {
+    const viewport = page.querySelector('.hierarchy-chart-viewport');
+    const firstCard = viewport?.querySelector('.hierarchy-tree-mode-groups .hierarchy-node-card');
+    if (!firstCard) return;
+    const centerRoot = () => {
+      if (!page.isConnected || viewport.dataset.hierarchyViewportRestored === 'true') return;
+      const bounds = viewport.getBoundingClientRect();
+      const card = firstCard.getBoundingClientRect();
+      viewport.scrollLeft += card.left + card.width / 2 - bounds.left - viewport.clientLeft - viewport.clientWidth / 2;
+    };
+    if (viewport.clientWidth) centerRoot();
+    else requestAnimationFrame(centerRoot);
+  });
+}
+
 function buildHierarchyNodeCard(node) {
   const portrait = sanitizeImageSrc(node.portrait || '');
   return `

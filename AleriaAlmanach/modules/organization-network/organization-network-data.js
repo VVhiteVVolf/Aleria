@@ -2,7 +2,8 @@
 const ORGANIZATION_NETWORK_KINDS = Object.freeze([
   ['headquarters', 'Hauptsitz'], ['editorial', 'Redaktion'],
   ['printing', 'Druck- & Korrespondenzhaus'], ['distribution', 'Vertriebsstelle'],
-  ['workshop', 'Werkstatt'], ['branch', 'Niederlassung']
+  ['workshop', 'Werkstatt'], ['branch', 'Niederlassung'],
+  ['partner', 'Verbundener Standort']
 ]);
 
 function sanitizeOrganizationNetworkData(value = {}) {

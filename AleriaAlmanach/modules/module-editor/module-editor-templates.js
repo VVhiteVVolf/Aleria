@@ -1398,6 +1398,7 @@ const MODULE_TEMPLATE_REGISTRY = {
     buildEditorFields: page => buildHierarchyModuleEditorFields(page),
     collectEditorPage: (card, page) => collectHierarchyModuleEditorPage(card, page),
     renderPage: (page, entry, pageIndex, total) => buildHierarchyPage(page, entry, pageIndex, total),
+    mountPage: context => mountHierarchyPage(context),
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'hierarchy')
   },
   'family-tree': {

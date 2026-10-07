@@ -109,13 +109,14 @@ function restoreInlinePreviewRuntimeState(state, root = document) {
   (state.hierarchies || []).forEach(saved => {
     const page = scope.querySelectorAll('.hierarchy-page')[saved.index];
     if (!page) return;
+    const tabbed = !!page.querySelector('.hierarchy-tree-mode-tabs');
     page.querySelectorAll('[data-hierarchy-tree-tab]').forEach(button => {
       const active = button.dataset.hierarchyTreeTab === String(saved.tree || '0');
       button.classList.toggle('active', active);
       button.setAttribute('aria-selected', active ? 'true' : 'false');
     });
     page.querySelectorAll('[data-hierarchy-tree-panel]').forEach(panel => {
-      panel.classList.toggle('active', panel.dataset.hierarchyTreePanel === String(saved.tree || '0'));
+      panel.classList.toggle('active', !tabbed || panel.dataset.hierarchyTreePanel === String(saved.tree || '0'));
     });
     page.classList.toggle('sidebar-collapsed', !!saved.sidebarCollapsed);
     page.classList.toggle('intro-collapsed', !!saved.introCollapsed);
@@ -123,6 +124,7 @@ function restoreInlinePreviewRuntimeState(state, root = document) {
     if (saved.scale && typeof setHierarchyRuntimeScale === 'function') setHierarchyRuntimeScale(page, saved.scale);
     const viewport = page.querySelector('.hierarchy-chart-viewport');
     if (viewport) {
+      viewport.dataset.hierarchyViewportRestored = 'true';
       viewport.scrollTop = saved.chartTop || 0;
       viewport.scrollLeft = saved.chartLeft || 0;
     }
