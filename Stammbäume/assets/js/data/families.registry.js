@@ -65,6 +65,7 @@ import { VENNYR_NEW_HOUSE_FAMILIES } from './vennyr-house-families.js';
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
 import { HOUSE_BIOGRAPHY_DEFAULTS } from './house-biographies.registry.js?v=gwendolyn-20260911h';
 import { withHouseBiographyDefault } from '../modules/house-biography/house-biography-registry-default.js';
+import { withCwingodSourcePortraitUpgrade } from './cwingod-source-portrait-upgrade.js';
 
 export const RETIRED_FAMILY_IDS = Object.freeze(['haus-vael', 'haus-sgrechwyr']);
 
@@ -100,6 +101,7 @@ function additionalPlacementsFor(family) {
 }
 
 function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed' }) {
+  family = withCwingodSourcePortraitUpgrade(family);
   family = withHouseBiographyDefault(family, HOUSE_BIOGRAPHY_DEFAULTS);
   const folderPath = Object.freeze(createFolderPathFromHouseProfile(family.document.houseProfile));
   const additionalPlacements = additionalPlacementsFor(family);

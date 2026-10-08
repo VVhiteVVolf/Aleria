@@ -16112,7 +16112,7 @@ test('ersetzt die Arth-Leerakte und migriert einen älteren lokalen Arth-Stand o
   const folderPath = ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth'];
 
   assert.equal(countyFamily, HOUSE_ARTH_FAMILY);
-  assert.equal(registryRecord?.family, HOUSE_ARTH_FAMILY);
+  assert.equal(registryRecord?.family.document, HOUSE_ARTH_FAMILY.document);
   assert.deepEqual(registryRecord?.folderPath, folderPath);
   assert.notEqual(registryRecord?.family.extensions.blankFamily, true);
   assert.equal(loadFamilyById('haus-arth', createMemoryStorage()).family.persons.length, 116);
@@ -16152,8 +16152,8 @@ test('ersetzt die Arth-Leerakte und migriert einen älteren lokalen Arth-Stand o
   }, revisionStorage);
   const upgraded = loadFamilyById('haus-arth', revisionStorage);
   assert.equal(upgraded.source, 'registry-upgrade');
-  assert.equal(upgraded.family.extensions.sourceRevision, 14);
-  assert.deepEqual(upgraded.family.extensions.registryUpgrade, { fromRevision: 0, toRevision: 14 });
+  assert.equal(upgraded.family.extensions.sourceRevision, registryRecord.family.extensions.sourceRevision);
+  assert.deepEqual(upgraded.family.extensions.registryUpgrade, { fromRevision: 0, toRevision: registryRecord.family.extensions.sourceRevision });
   assert.equal(upgraded.family.persons.length, 116);
   assert.equal(new Set(upgraded.family.persons.map(person => person.id)).size, 116);
   assert.equal(upgraded.family.partnerships.length, 55);
@@ -17107,7 +17107,7 @@ test('bildet Haus Eirth vollständig als Kadetten- und Vasallenhaus der Arth ab'
 
   const records = FAMILY_REGISTRY.filter(record => record.id === family.document.id);
   assert.equal(records.length, 1);
-  assert.equal(records[0].family, family);
+  assert.equal(records[0].family.document, family.document);
   assert.deepEqual(records[0].folderPath, ['Cenyr', 'Klaueninsel', 'Nebelklaue', 'Caer Glaslyn']);
 });
 
@@ -17643,7 +17643,7 @@ test('bildet Haus Pawen vollständig als ältestes Kadettenhaus der Arth ab', ()
 
   const records = FAMILY_REGISTRY.filter(record => record.id === family.document.id);
   assert.equal(records.length, 1);
-  assert.equal(records[0].family, family);
+  assert.equal(records[0].family.document, family.document);
   assert.deepEqual(records[0].folderPath, ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth']);
   assert.equal(records[0].type, 'dynasty');
 });
@@ -18005,7 +18005,7 @@ test('bildet Haus Morthwyll vollständig als eigenständiges Vasallenhaus der Ar
 
   const records = FAMILY_REGISTRY.filter(record => record.id === family.document.id);
   assert.equal(records.length, 1);
-  assert.equal(records[0].family, family);
+  assert.equal(records[0].family.document, family.document);
   assert.deepEqual(records[0].folderPath, ['Cenyr', 'Klaueninsel', 'Wellenklaue', 'Caer Morben']);
 });
 
@@ -18221,7 +18221,7 @@ test('bildet Haus Crafanc vollständig als zweites Kadettenhaus der Arth ab', ()
 
   const records = FAMILY_REGISTRY.filter(record => record.id === family.document.id);
   assert.equal(records.length, 1);
-  assert.equal(records[0].family, family);
+  assert.equal(records[0].family.document, family.document);
   assert.deepEqual(records[0].folderPath, ['Cenyr', 'Klaueninsel', 'Sturmklaue', 'Talgarth']);
   assert.equal(records[0].type, 'dynasty');
 });

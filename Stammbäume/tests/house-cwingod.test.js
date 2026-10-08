@@ -1,9 +1,13 @@
+import { CWINGOD_SOURCE_PORTRAITS, CWINGOD_PORTRAIT_REVISIONS } from '../assets/js/data/cwingod-source-portraits.js';
+import { withCwingodSourcePortraitUpgrade } from '../assets/js/data/cwingod-source-portrait-upgrade.js';
+import { withParzifalCrewPortraitUpgrade } from '../assets/js/data/parzifal-crew-families/portrait-upgrade.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import { HOUSE_CWINGOD_FAMILY } from '../assets/js/data/house-cwingod-family.js';
 import { HOUSE_CWINGOD_PORTRAITS } from '../assets/js/data/house-cwingod-portraits.js';
-import { assertValidFamily } from '../assets/js/domain/family-schema.js';
+import { assertValidFamily, normalizeFamily } from '../assets/js/domain/family-schema.js';
 import { FAMILY_REGISTRY, getRegisteredFamily } from '../assets/js/data/families.registry.js';
 import { resolveRegisteredFamilyUpgrade } from '../assets/js/services/family-registry-upgrade.js';
 import { loadFamilyById } from '../assets/js/services/family-library.js';
@@ -63,7 +67,7 @@ test('Namenskorrektur überträgt sich ohne Identitätswechsel auf ältere Gegen
   for(const record of FAMILY_REGISTRY.filter(r=>r.family.houses.some(h=>h.id==='house-cwningod'))){
     const current=record.family;
     const stale=structuredClone(current);
-    stale.extensions.sourceRevision=current.extensions.sourceRevision-1;
+    stale.extensions.sourceRevision=(current.extensions.cwingodHouseNameRevision ?? current.extensions.sourceRevision)-1;
     stale.persons.forEach(p=>{p.name=p.name.replace('Cwingod','Cwningod');});
     stale.houses.forEach(h=>{h.name=h.name.replace('Cwingod','Cwningod');});
     stale.cadetBranches.forEach(h=>{h.name=h.name.replace('Cwingod','Cwningod');});
@@ -74,5 +78,59 @@ test('Namenskorrektur überträgt sich ohne Identitätswechsel auf ältere Gegen
     assert.ok(updated.houses.every(h=>!h.name.includes('Cwningod')),record.id);
     assert.ok(updated.cadetBranches.every(h=>!h.name.includes('Cwningod')),record.id);
     assert.equal(new Set(updated.persons.map(p=>p.id)).size,updated.persons.length,record.id);
+  }
+});
+
+const portraitInventory = JSON.parse(fs.readFileSync(new URL('../assets/data/source-inventories/cwingod-portraits-2026-10-08.json', import.meta.url), 'utf8'));
+
+test('Cwingod übernimmt exakt die 19 neuen Originalbilder und schützt Tegid, Angehörige und Platzhalter', () => {
+  assert.equal(portraitInventory.portraits.length, 19);
+  assert.deepEqual(new Set(Object.keys(CWINGOD_SOURCE_PORTRAITS)), new Set(portraitInventory.portraits.map(p => p.personId)));
+  const digest = path => createHash('sha256').update(fs.readFileSync(new URL('../' + path, import.meta.url))).digest('hex');
+  for (const asset of portraitInventory.portraits) {
+    assert.equal(family.persons.find(p => p.id === asset.personId).portrait, asset.path);
+    assert.equal(digest(asset.path), asset.sha256, asset.personId);
+  }
+  for (const protectedPortrait of portraitInventory.preservedPortraits) {
+    const previous = withParzifalCrewPortraitUpgrade(HOUSE_CWINGOD_FAMILY).persons.find(p => p.id === protectedPortrait.personId);
+    assert.equal(family.persons.find(p => p.id === protectedPortrait.personId).portrait, previous.portrait, protectedPortrait.personId);
+  }
+});
+
+test('die Porträtkorrektur aktualisiert vorhandene Gegenakten feldgenau und wiederholungsfest', () => {
+  const withoutExtensions = ({ extensions, ...record }) => record;
+  for (const [familyId, revision] of Object.entries(CWINGOD_PORTRAIT_REVISIONS)) {
+    const current = getRegisteredFamily(familyId)?.family;
+    // The Rioga source may be published separately; it receives the same portrait
+    // correction as soon as its full family record is available.
+    if (!current?.persons.some(person => Object.hasOwn(CWINGOD_SOURCE_PORTRAITS, person.id))) continue;
+    const stale = normalizeFamily(current);
+    stale.extensions.sourceRevision = revision - 1;
+    delete stale.extensions.cwingodSourcePortraitInventory;
+    for (const person of stale.persons) {
+      const asset = portraitInventory.portraits.find(p => p.personId === person.id);
+      if (asset) person.portrait = asset.previousPath;
+      person.notes = 'Lokale Notiz ' + person.id;
+      person.title = 'Lokaler Titel ' + person.id;
+      person.name = 'Lokaler Name ' + person.id;
+    }
+    for (const key of ['partnerships', 'parentages', 'houses', 'cadetBranches', 'timeJumps']) {
+      stale[key].forEach(record => {
+        const field = key === 'houses' ? 'name' : 'notes';
+        record[field] = 'Lokale Ergänzung ' + record.id;
+      });
+    }
+    const upgraded = resolveRegisteredFamilyUpgrade(current, stale);
+    assert.equal(upgraded.extensions.sourceRevision, revision, familyId);
+    for (const person of upgraded.persons) {
+      const expected = { ...stale.persons.find(p => p.id === person.id) };
+      if (Object.hasOwn(CWINGOD_SOURCE_PORTRAITS, person.id)) expected.portrait = CWINGOD_SOURCE_PORTRAITS[person.id];
+      assert.deepEqual(withoutExtensions(person), withoutExtensions(expected), familyId + '/' + person.id);
+    }
+    for (const key of ['partnerships', 'parentages', 'houses', 'cadetBranches', 'timeJumps']) {
+      assert.deepEqual(upgraded[key].map(withoutExtensions), stale[key].map(withoutExtensions), familyId + '/' + key);
+    }
+    assert.deepEqual(resolveRegisteredFamilyUpgrade(current, upgraded), upgraded, familyId);
+    assert.equal(withCwingodSourcePortraitUpgrade(current), current, familyId);
   }
 });

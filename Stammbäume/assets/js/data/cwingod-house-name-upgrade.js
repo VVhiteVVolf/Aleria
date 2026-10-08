@@ -21,7 +21,9 @@ function withManagedFields(record, fields, sourceRevision) {
 export function withCwingodHouseNameUpgrade(family) {
   if (!family.houses.some(house => house.id === HOUSE_ID)
     && family.document.houseProfile?.liegeHouseId !== 'haus-cwningod') return family;
-  const sourceRevision = Number.isInteger(family.extensions?.sourceRevision) ? family.extensions.sourceRevision : 0;
+  // A later portrait-only release must not reopen the earlier name correction.
+  const sourceRevision = family.extensions?.cwingodHouseNameRevision
+    ?? (Number.isInteger(family.extensions?.sourceRevision) ? family.extensions.sourceRevision : 0);
   return {
     ...family,
     persons: family.persons.map(person => person.houseId === HOUSE_ID
@@ -33,6 +35,7 @@ export function withCwingodHouseNameUpgrade(family) {
       ? withManagedFields(branch, ['name', 'notes'], sourceRevision) : branch),
     extensions: {
       ...family.extensions,
+      cwingodHouseNameRevision: sourceRevision,
       registryManagedHouseProfileFields: [...new Set([
         ...(family.extensions?.registryManagedHouseProfileFields || []), 'liegeHouseName'
       ])]
