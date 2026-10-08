@@ -44,13 +44,14 @@ export const ALBIC_CLAN_PAGES = [
   },
   {
     key: 'ui', prefix: 'Ui', title: 'Ui — Sprösslinge der Hohen', group: 'Herkömmliche Präfixe',
-    lead: 'Die anerkannte Herkunft aus hohem Adel reicht weiter als ein gegenwärtiges Amt.',
+    lead: 'Ein Ehebund mit dem Königsclan Tuathanach verleiht einer Familie ein Ansehen, das über das Ende des Königshauses hinausreicht.',
     sections: [
-      ['Adliges Blut', 'Ui bezeichnet eine legitime, nachvollziehbare Abstammung aus dem Adel, häufig aus einem Fürstenhaus oder einer Linie hoher Herren. Königliches Blut ist dafür nicht erforderlich.'],
-      ['Der Umfang des Anspruchs', 'Ui betont die Verbindung zum hohen Ursprung, auch wenn dieser weit zurückliegt. Mac stellt dagegen einen bestimmten Stammvater und die direkte väterliche Linie heraus; Mac- oder Mc-Clans verzichten deshalb häufig auf ein zusätzliches Ui. Eine adlige Herkunft allein begründet noch keinen Anspruch auf Ri.']
+      ['Verschwägert mit dem Königsclan', 'Ui bezeichnet eine durch Verschwägerung entstandene Verwandtschaft mit den Tuathanach, dem Königsclan der Alben. Ein Ehebund verbindet das betreffende Haus mit der königlichen Familie. Die Tuathanach gelten als ausgestorben; die Erinnerung an diese Verbindung bleibt im Präfix ihrer verschwägerten Clans erhalten.'],
+      ['Das Prestige des Königshauses', 'Ui-Clans genießen deshalb mitunter das größte Prestige unter den Alben und sind meist Fürstenhäuser. Ihr Ansehen beruht auf der verwandtschaftlichen Nähe zum einstigen Königsclan. Der Präfix bewahrt diese besondere Verbindung auch über viele Generationen.'],
+      ['Ui und Ri', 'Ui kennzeichnet den durch Heirat entstandenen Verwandtschaftsbund mit den Tuathanach. Ri bezeichnet dagegen die direkte Blutlinie legitimer Albenkönige, deren Nachweis nur Druidenälteste anerkennen können. Die Verschwägerung und das hohe Prestige eines Ui-Clans begründen für sich allein keinen Ri-Anspruch.']
     ],
-    example: { familyId: 'haus-morna', kind: 'documented', people: ['goll-1668-morna', 'garbhan-morna'], paragraphs: ['Ui’Morna herrscht von Gaelan aus über Aislearneach. Die Überlieferung verbindet den Gründer Garbhán, Begründer der Reiterkaste der Mormaer, mit Prinzessin Ainéinan. Dieser hohe Ursprung prägt das Haus.', 'Fürst Goll Morna und sein Sohn Garbhán, Mor Tiarna von Gaelan und Fürstenerbe, veranschaulichen die fortdauernde Stellung der Linie. Die Verbindung zu einer Prinzessin wird hier als Teil der überlieferten Herkunft erzählt; sie ersetzt keine druidische Anerkennung einer Königslinie.'] },
-    caption: 'Goll Morna mit einem ruhig geführten Pferd vor den grünen Hügeln Gaelans; Reittradition und fürstliche Herkunft.'
+    example: { familyId: 'haus-morna', kind: 'documented', people: ['goll-1668-morna', 'garbhan-morna'], paragraphs: ['Ui’Morna herrscht von Gaelan aus über Aislearneach. Der Gründer Garbhán, Begründer der Reiterkaste der Mormaer, heiratete Prinzessin Ainéinan aus dem Königsclan Tuathanach. Dieser Ehebund macht die Bedeutung von Ui unmittelbar anschaulich: Das Haus Morna wurde mit dem Königshaus verschwägert.', 'Fürst Goll Morna und sein Sohn Garbhán, Mor Tiarna von Gaelan und Fürstenerbe, stehen heute für die fortdauernde fürstliche Stellung des Clans. Der Name Ui’Morna bewahrt die königliche Verwandtschaft durch Heirat und das damit verbundene Prestige, obwohl die Tuathanach selbst als ausgestorben gelten.'] },
+    caption: 'Goll Morna mit einem ruhig geführten Pferd vor den grünen Hügeln Gaelans; Reittradition und das Prestige eines mit den Tuathanach verschwägerten Fürstenhauses.'
   },
   {
     key: 'na', prefix: 'Na', title: 'Na — Neuer Adel', group: 'Herkömmliche Präfixe',
@@ -107,7 +108,7 @@ export const ALBIC_CLAN_PAGES = [
     lead: 'Königliches Blut braucht die Anerkennung der Druidenältesten.',
     sections: [
       ['Die legitime Königslinie', 'Ri bezeichnet die direkte Blutlinie legitimer Albenkönige. Ihren Nachweis können nur Druidenälteste anerkennen. Deshalb tragen praktisch keine Clans diesen Präfix ohne ausdrückliche Bestätigung ihrer Königswürde.'],
-      ['Anerkennung statt Selbsternennung', 'In der Regel wird ein bereits bestehender Clan erst nach dieser Bestätigung zum Ri-Clan erklärt. Ein Fürstentitel, hohes Ansehen oder ein königlich klingender Ortsname reichen dafür nicht aus.']
+      ['Anerkennung statt Selbsternennung', 'In der Regel wird ein bereits bestehender Clan erst nach dieser Bestätigung zum Ri-Clan erklärt. Ein Fürstentitel, hohes Ansehen oder ein königlich klingender Ortsname reichen dafür nicht aus. Auch die durch Ui bezeichnete Verschwägerung mit dem als ausgestorben geltenden Königsclan Tuathanach ersetzt diesen Nachweis einer direkten Königslinie nicht.']
     ],
     example: { familyId: 'haus-chulainn', kind: 'hypothetical', people: ['cu-1509-chulainn', 'connla-1660-chulainn'], paragraphs: ['Ard’Chulainn führt das Fürstentum Dunfal und Tir na Rithe, das Land der Könige. Cú ist als Gründer und Fürst, Connla als Mor Tiarna und erster Erbe belegt. Daraus folgt noch kein Ri-Präfix.'], thought: 'Würde ein Druidenältester bei dieser Familie eine direkte legitime Königslinie nachweisen und anerkennen, wäre eine Erklärung zum Ri-Clan denkbar. Das Gedankenbeispiel beschreibt die erforderliche Schwelle; eine solche Anerkennung ist für Chulainn hier nicht als geschehen behauptet.' },
     caption: 'Gedankenbild: Cú Chulainn vor einem unbesetzten alten Herrschersitz. Eine Krönung oder Ri-Anerkennung wird nicht dargestellt.'
