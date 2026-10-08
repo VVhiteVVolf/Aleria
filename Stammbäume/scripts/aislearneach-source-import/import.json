@@ -1,0 +1,41 @@
+{
+  "slug": "aislearneach",
+  "name": "Aislearneach",
+  "date": "2026-10-08",
+  "displayDate": "08.10.2026",
+  "inventory": "assets/data/source-inventories/aislearneach-families-2026-10-08.json",
+  "familyKinds": {
+    "techtmar": "sept"
+  },
+  "displayNames": {
+    "ui-faill-duibhne": "Duibhne"
+  },
+  "cardTextCorrections": {
+    "morna:198:2": "Oighrig (1730 - ????)"
+  },
+  "familyDecorators": [
+    {
+      "slugs": [
+        "morna",
+        "ceallaigh",
+        "fintain",
+        "durthacht",
+        "coronach",
+        "morgacht",
+        "rioga",
+        "fiantorc",
+        "treada",
+        "muileach",
+        "feannag",
+        "uilebheist",
+        "cnogan",
+        "fiachiontach",
+        "tartarfhuil",
+        "gaisgh",
+        "luchdon"
+      ],
+      "function": "withAlbenSourcePortraitUpgrade",
+      "module": "alben-source-portrait-upgrade.js"
+    }
+  ]
+}

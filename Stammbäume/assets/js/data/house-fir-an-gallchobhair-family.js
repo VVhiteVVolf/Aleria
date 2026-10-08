@@ -1,3 +1,7 @@
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
+import { withBlaithneachSourceCounterUpgrade } from './blaithneach-source-counter-upgrade.js';
+import { withDunfalSourceCounterUpgrade } from './dunfal-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createCadetHouseBranch,
@@ -273,7 +277,7 @@ const IARLAITH_IDS = ['odran-cumhail', 'iarlaith-gallchobhair'];
 const HOLMAN_IDS = ['holman-gallchobhair', 'oonagh-mhuir'];
 const AIDEEN_IDS = ['aideen-gallchobhair', 'rogan-ceardaiocht'];
 
-export const HOUSE_FIR_AN_GALLCHOBHAIR_FAMILY = Object.freeze({
+export const HOUSE_FIR_AN_GALLCHOBHAIR_FAMILY = withAlbenSourcePortraitUpgrade(withAislearneachSourceCounterUpgrade(withBlaithneachSourceCounterUpgrade(Object.freeze(withDunfalSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -619,4 +623,4 @@ export const HOUSE_FIR_AN_GALLCHOBHAIR_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId'],
     registryManagedRecordFields: ['folderPath']
   }
-});
+})))));

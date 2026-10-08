@@ -1,0 +1,451 @@
+{
+  "date": "2026-10-08",
+  "scope": "Diuid, Lockart, Fiorghra, Ness, Haig and Banlaoch; Piobarach capital correction",
+  "publication": "local-only; no commit, push or deployment",
+  "counts": {
+    "families": 6,
+    "sourceAppearances": 385,
+    "distinctPeople": 336,
+    "distinctPartnerships": 135,
+    "htmlSources": 5,
+    "graphicCards": 47,
+    "matchedExistingPeople": 74,
+    "newIndividualPortraits": 164,
+    "reusedPortraits": 30,
+    "warriorIllustrations": 5,
+    "counterpartFamilies": 18,
+    "counterpartPeople": 29,
+    "counterpartPortraitsAdded": 22,
+    "untouchedFamilies": 494,
+    "reconstructedBanlaochPeople": 32,
+    "anchoredBanlaochPeople": 13,
+    "undatedBanlaochFounders": 2
+  },
+  "families": [
+    {
+      "id": "haus-diuid",
+      "persons": 89,
+      "partnerships": 37,
+      "parentages": 51,
+      "houseNodes": 16,
+      "timeJumps": 4,
+      "portraits": 57,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-lockart",
+      "persons": 78,
+      "partnerships": 31,
+      "parentages": 46,
+      "houseNodes": 15,
+      "timeJumps": 3,
+      "portraits": 54,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-fiorghra",
+      "persons": 52,
+      "partnerships": 22,
+      "parentages": 29,
+      "houseNodes": 8,
+      "timeJumps": 1,
+      "portraits": 32,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-ness",
+      "persons": 60,
+      "partnerships": 25,
+      "parentages": 34,
+      "houseNodes": 9,
+      "timeJumps": 1,
+      "portraits": 41,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-haig",
+      "persons": 59,
+      "partnerships": 24,
+      "parentages": 34,
+      "houseNodes": 11,
+      "timeJumps": 2,
+      "portraits": 35,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-banlaoch",
+      "persons": 47,
+      "partnerships": 19,
+      "parentages": 27,
+      "houseNodes": 9,
+      "timeJumps": 1,
+      "portraits": 6,
+      "sourceRevision": 2
+    }
+  ],
+  "userDecisions": {
+    "beileagNessDeath": "1681",
+    "grainnesPartnerAndChildrensFather": "Rúairc Diuid (*1704)",
+    "maithnuEoghainnBirth": "1676",
+    "banlaoch": "Missing years explicitly authorized; youngest descendants 6–25 in 1740; pre-gap founders undated",
+    "forsyth": "Leave prepared; supplied second diagram was Stwatchn",
+    "capital": "Piobarach"
+  },
+  "sourceDiscrepancies": [
+    "Allanah Urquhart: own origin 1583 retained instead of Diuid partner row 1582.",
+    "Fingín Fintain: own origin 1705 retained instead of Ness partner row 1700.",
+    "Jodhrán Diuid: origin 1657 takes precedence over Fiorghra partner row 1656.",
+    "Kenna/Keena Fiorghra: same 1610–1697 counterpart, one identity.",
+    "Fidelma Lockart: living in new origin table; older Dyngwn death 1720 removed.",
+    "Muirgheas Lachlann: living in own source; undocumented Haig partner dagger not adopted.",
+    "Talitha Haig: origin birth 1730 replaces Drummond ward year 1728; old ID retained.",
+    "Ness: Fintan/Scáthán child heading resolves copied spouse heading; incumbent Malcolm omitted from his own succession list.",
+    "Rabhán Haig: explicit birth 1672 retained over narrative age 66.",
+    "Diud, Fíoghrrhá and Haigh spellings matched through couples; IDs preserved; Ness remains separate from Nessa.",
+    "Other unknown dates, sexes, portraits and unprovided heraldry remain open; only Banlaoch has authorized reconstructed years."
+  ],
+  "tests": {
+    "mathgham": {
+      "passed": 9,
+      "failed": 0
+    },
+    "serverValidation": {
+      "passed": 9,
+      "failed": 0
+    },
+    "legacySuite": {
+      "passed": 1246,
+      "failed": 0
+    },
+    "modularSuite": {
+      "passed": 158,
+      "failed": 8,
+      "total": 166,
+      "note": "Eight pre-existing Cwingod portrait/revision mismatches in historical import tests remain; current Mathgham identity and preservation tests pass."
+    },
+    "offlineRegeneration": {
+      "modules": 20,
+      "changed": []
+    },
+    "unchangedFamilyFingerprints": 494,
+    "unmodifiedCounterpartFingerprints": 18
+  },
+  "browser": {
+    "desktop": [
+      {
+        "familyId": "haus-diuid",
+        "cardCount": 113,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 2,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-lockart",
+        "cardCount": 99,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-fiorghra",
+        "cardCount": 62,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-ness",
+        "cardCount": 71,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-haig",
+        "cardCount": 74,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-banlaoch",
+        "cardCount": 58,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      }
+    ],
+    "mobile": [
+      {
+        "familyId": "haus-diuid",
+        "cardCount": 113,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 2,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-lockart",
+        "cardCount": 99,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-fiorghra",
+        "cardCount": 62,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-ness",
+        "cardCount": 71,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-haig",
+        "cardCount": 74,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-banlaoch",
+        "cardCount": 58,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      }
+    ],
+    "wholeRegistry": {
+      "families": 518,
+      "findings": [
+        {
+          "familyId": "haus-draig",
+          "cardCount": 223,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 3,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 14,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-saith",
+          "cardCount": 62,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 1,
+          "excessiveRoutes": 2,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-mwyalchen",
+          "cardCount": 78,
+          "overlaps": 459,
+          "confirmedLineCardIntersections": 73,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 0,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        }
+      ],
+      "runtimeFailures": []
+    },
+    "focusedRechecks": [
+      {
+        "familyId": "haus-mwyalchen",
+        "cardCount": 78,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-frostauge",
+        "cardCount": 83,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 4,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-eamhra",
+        "cardCount": 64,
+        "overlaps": 1,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-blach",
+        "cardCount": 83,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 2,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-draig",
+        "cardCount": 223,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 14,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-saith",
+        "cardCount": 62,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 1,
+        "excessiveRoutes": 2,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      }
+    ],
+    "recheckResult": "Mwyalchen transient fast-scan overlaps were not reproducible with settled rendering. Frostauge and Draig have no collisions. Existing findings persist at Eamhra (one overlap), Blach (two crest links), Saith (one crest link).",
+    "biographyImages": {
+      "families": 6,
+      "images": 17,
+      "chartImageReferences": 373,
+      "failures": []
+    },
+    "notes": "Own hidden Chrome/CDP used because the in-app browser was unavailable. Diuid and Lockart retain three wide but collision-free ancestry routes; centered affair branches have no long partnership routes. Frostauge checked separately after fixing its legacy Diud crest link."
+  },
+  "counterpartRevisions": {
+    "haus-draig": 14,
+    "haus-frostauge": 2,
+    "haus-dal-leite": 5,
+    "haus-ua-eirce": 3,
+    "haus-nuadat": 4,
+    "haus-anbhair": 4,
+    "haus-casur": 5,
+    "haus-aonghusa": 6,
+    "haus-fintain": 4,
+    "haus-urquhart": 3,
+    "haus-stwatchn": 3,
+    "haus-lachlann": 3,
+    "haus-drummond": 3,
+    "haus-dundas": 3,
+    "haus-arth": 17,
+    "haus-dienyddiwr": 5,
+    "haus-dyngwn": 5,
+    "haus-unigol": 4
+  },
+  "sourceAudit": "assets/data/source-inventories/mathgham-families-audit-2026-10-08.json",
+  "chronology": "scripts/mathgham-source-import/chronology.json",
+  "preservedOriginals": [
+    {
+      "path": "assets/images/references/haus-diuid/krieger.png",
+      "sha256": "c70a1123ac7fd67feafa1a04781793ede889bafa37ccc3e408433f878e7281f2"
+    },
+    {
+      "path": "assets/images/references/haus-lockart/krieger.png",
+      "sha256": "46fd4d43edea24141802e82a6d8685168986a9c41bd0c19df15a34cf41865c0f"
+    },
+    {
+      "path": "assets/images/references/haus-fiorghra/krieger.png",
+      "sha256": "0e2e2d99817ff35ea3d28f98888348de779fc7f609d5b0fb3cdc99c06e0fedaf"
+    },
+    {
+      "path": "assets/images/references/haus-ness/krieger.png",
+      "sha256": "59fe6f8f4dc6c133adae5f70800df3bd3f4373009ce1f77dbab378c36684aa18"
+    },
+    {
+      "path": "assets/images/references/haus-haig/krieger.png",
+      "sha256": "e3c4ab8c85a8520e1bf8db3e57c642634cff6dd68d8f626573e5682fb662e35a"
+    }
+  ]
+}

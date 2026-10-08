@@ -1,3 +1,5 @@
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
+import { withDunfalSourceCounterUpgrade } from './dunfal-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -190,7 +192,7 @@ const PREACHAN_IDS = ['preachan-trodach', 'isibeal-treada'];
 const TRAOLACH_IDS = ['traolach-trodach', 'ealasaid-ancient-trodach'];
 const UASALAN_IDS = ['breccan-gealach', 'uasalan-tordach'];
 
-export const HOUSE_ARD_TRODACH_FAMILY = Object.freeze({
+export const HOUSE_ARD_TRODACH_FAMILY = withAislearneachSourceCounterUpgrade(Object.freeze(withDunfalSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -452,4 +454,4 @@ export const HOUSE_ARD_TRODACH_FAMILY = Object.freeze({
       timeJumps: []
     }
   }
-});
+})));

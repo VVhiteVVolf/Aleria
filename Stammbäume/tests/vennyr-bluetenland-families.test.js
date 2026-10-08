@@ -91,7 +91,7 @@ test('neun unter 16 verstorbene Kinder erhalten tatsächlich die Kindersilhouett
   assert.equal(getRegisteredFamily('haus-blodeuwedd').family.persons.find(p=>p.id==='rhydian-blodeuwedd').birth,'1650');
 });
 
-test('Hedds biologische Eltern und Cwingod-Pflegeeltern bleiben getrennt; March verweist nur auf das künftige Stwatchn', () => {
+test('Hedds biologische Eltern und Cwingod-Pflegeeltern bleiben getrennt; March verweist auf die Stwatchn-Akte', () => {
   const morlais=getRegisteredFamily('haus-morlais').family;
   const cwingod=getRegisteredFamily('haus-cwningod').family;
   assert.deepEqual(new Set(morlais.parentages.find(p=>p.childId==='hedd-morlais').parentIds),new Set(['kibddar-1692-morlais','lunet-serenoc']));
@@ -103,7 +103,10 @@ test('Hedds biologische Eltern und Cwingod-Pflegeeltern bleiben getrennt; March 
   const morgant=getRegisteredFamily('haus-morgant').family;
   const march=morgant.persons.find(p=>p.id==='march-morgant');
   assert.match(march.notes,/Stwatchn aus Faelaorn/);
-  assert.ok(!getRegisteredFamily('haus-stwatchn'));
+  const stwatchn = getRegisteredFamily('haus-stwatchn');
+  assert.deepEqual(stwatchn.folderPath, ['Faelaorn', 'Tir na Rann', 'Invercalda']);
+  assert.equal(stwatchn.family.extensions.blankFamily, false);
+  assert.ok(stwatchn.family.persons.length > 0);
   const branch=morgant.cadetBranches.find(b=>b.parentPersonId===march.id);
   assert.equal(branch.name,'Haus Stwatchn');
   assert.equal(branch.targetFamilyId,'haus-stwatchn');

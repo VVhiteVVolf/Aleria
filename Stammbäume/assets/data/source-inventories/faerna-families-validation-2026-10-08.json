@@ -1,0 +1,380 @@
+{
+  "date": "2026-10-08",
+  "scope": "Buadhtreun, Durachd, Muirgheal, Boyd; genealogies, original portraits, house biographies, warriors and counterpart corrections",
+  "publication": "local-only; no commit, push or deployment",
+  "counts": {
+    "sourceAppearances": 216,
+    "distinctPeople": 192,
+    "distinctPartnerships": 87,
+    "matchedExistingPeople": 72,
+    "newPortraits": 79,
+    "reusedPortraits": 36,
+    "unpicturedPeople": 77,
+    "warriorIllustrations": 4,
+    "counterpartFamilies": 10,
+    "counterpartPeople": 17,
+    "counterpartPortraitsAdded": 9,
+    "untouchedFamilies": 504
+  },
+  "families": [
+    {
+      "id": "haus-buadhtreun",
+      "persons": 54,
+      "partnerships": 25,
+      "parentages": 28,
+      "houseNodes": 13,
+      "timeJumps": 2,
+      "portraits": 32,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-durachd",
+      "persons": 66,
+      "partnerships": 29,
+      "parentages": 36,
+      "houseNodes": 13,
+      "timeJumps": 3,
+      "portraits": 42,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-muirgheal",
+      "persons": 43,
+      "partnerships": 20,
+      "parentages": 22,
+      "houseNodes": 9,
+      "timeJumps": 1,
+      "portraits": 23,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-boyd",
+      "persons": 53,
+      "partnerships": 25,
+      "parentages": 27,
+      "houseNodes": 11,
+      "timeJumps": 1,
+      "portraits": 33,
+      "sourceRevision": 2
+    }
+  ],
+  "openQuestions": [],
+  "userDecisions": {
+    "dubhanBoydBirth": "1560",
+    "olwynaDrewiBirth": "1562",
+    "status": "Explicitly confirmed by the user; applied to both Boyd and Drewi."
+  },
+  "sourceDecisions": [
+    "Historical lordships and seats remain despite war and partial occupation. Boyd immediately serves Muirgheal beneath Buadhtreun; Durachd keeps its additional asylum placement.",
+    "No invented living heads or blanket extinction of war-damaged houses. Documented survivors remain alive.",
+    "Blàthnat Durachd, wife of Oistín Lockart, is alive and born 1698 according to her new origin table; established person/world IDs remain. Oistín died 1725.",
+    "Dúrchadh/Durachd variants for Haeghra spouses are reconciled through explicit reciprocal marriages, retaining IDs.",
+    "Diarmuid/Diarmaid Diuid, Elewyne/Eleyne Grawn and Jarlaith/Jarlath Drummond preserve canonical IDs and names. Diarmaid death 1704 supplied.",
+    "Lomhán and Eilidh death 1720, Veaghán death 1732, and Nóracha/Vaithreach death 1720 fill formerly unknown values from explicit counterpart tables.",
+    "Known counterpart dates fill remaining unknown source years; spaced Wuirseach birth 1 7 14 means 1714.",
+    "Bochdew-generation note does not specify an additional parentage. Muirgheal remains Dun-Tiarna despite copied Laird wording in succession prose.",
+    "Trianach/Isbeil marriage and Trianach/Iúliana affair remain separate. Bardan is the affair child; unknown surnames and template betrothals are not invented."
+  ],
+  "tests": {
+    "faerna": {
+      "passed": 7,
+      "failed": 0
+    },
+    "braigh": {
+      "passed": 8,
+      "failed": 0
+    },
+    "mathgham": {
+      "passed": 9,
+      "failed": 0
+    },
+    "serverValidation": {
+      "passed": 9,
+      "failed": 0
+    },
+    "portraitImport": {
+      "passed": 1,
+      "failed": 0
+    },
+    "legacy": {
+      "passed": 1246,
+      "failed": 0
+    },
+    "modular": {
+      "total": 181,
+      "passed": 173,
+      "failed": 8,
+      "note": "Same eight pre-existing historical fingerprint/revision and Cwingod portrait discrepancies; no new failure."
+    },
+    "offlineRegeneration": {
+      "modules": 16,
+      "changedModules": [],
+      "offline": true,
+      "baselineBytes": 257522
+    },
+    "unchangedFamilyFingerprints": 504,
+    "unmodifiedCounterpartFingerprints": 10
+  },
+  "browser": {
+    "desktop": [
+      {
+        "familyId": "haus-buadhtreun",
+        "cardCount": 71,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-durachd",
+        "cardCount": 85,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-muirgheal",
+        "cardCount": 54,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-boyd",
+        "cardCount": 66,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      }
+    ],
+    "mobile": [
+      {
+        "familyId": "haus-buadhtreun",
+        "cardCount": 71,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-durachd",
+        "cardCount": 85,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-muirgheal",
+        "cardCount": 54,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-boyd",
+        "cardCount": 66,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      }
+    ],
+    "counterparts": [
+      {
+        "familyId": "haus-wellenschild",
+        "cardCount": 64,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 2,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-ui-rochraide",
+        "cardCount": 141,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-haeghra",
+        "cardCount": 74,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-lachlann",
+        "cardCount": 82,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-drummond",
+        "cardCount": 79,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-dundas",
+        "cardCount": 56,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-diuid",
+        "cardCount": 113,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 2,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-lockart",
+        "cardCount": 100,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-grawn",
+        "cardCount": 123,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 4,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-drewi",
+        "cardCount": 70,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      }
+    ],
+    "images": {
+      "biographyImages": 12,
+      "chartImageReferences": 216,
+      "failures": []
+    },
+    "notes": "Owned hidden Chrome/CDP used because the in-app browser was unavailable. No overlaps, line/card collisions or crest misalignment. One wide collision-free ancestry route in Buadhtreun; existing wide routes in counterpart trees retained."
+  },
+  "counterpartRevisions": {
+    "haus-wellenschild": 4,
+    "haus-ui-rochraide": 7,
+    "haus-haeghra": 4,
+    "haus-lachlann": 5,
+    "haus-drummond": 4,
+    "haus-dundas": 4,
+    "haus-diuid": 3,
+    "haus-lockart": 4,
+    "haus-grawn": 6,
+    "haus-drewi": 4
+  },
+  "sourceAudit": "assets/data/source-inventories/faerna-families-audit-2026-10-08.json",
+  "documentedDecisions": "DATENPFLEGE.md, section 13.28"
+}

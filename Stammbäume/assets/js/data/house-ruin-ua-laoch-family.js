@@ -1,3 +1,6 @@
+import { withFaelaornSourceCounterUpgrade } from './faelaorn-source-counter-upgrade.js';
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
+import { withBlaithneachSourceCounterUpgrade } from './blaithneach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -213,7 +216,7 @@ const FLANNAIT_IDS = ['flannait-laoch', 'laitheal-gealach'];
 const YORAN_IDS = ['yoran-laoch', 'bebinn-unknown-laoch'];
 const TRIAN_IDS = ['trian-laoch', 'fara-unknown-laoch'];
 
-export const HOUSE_RUIN_UA_LAOCH_FAMILY = Object.freeze({
+export const HOUSE_RUIN_UA_LAOCH_FAMILY = withFaelaornSourceCounterUpgrade(withAlbenSourcePortraitUpgrade(withBlaithneachSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -455,4 +458,4 @@ export const HOUSE_RUIN_UA_LAOCH_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId'],
     registryManagedRecordFields: ['folderPath']
   }
-});
+}))));

@@ -1,6 +1,15 @@
 const LEGACY_FAMILY_ID_ALIASES = Object.freeze({
   'haus-cwingod': 'haus-cwningod',
   'haus-bleidd': 'haus-blaidd',
+  // The Dubhan source uses this older house prefix for the same Mac Dubglais crest.
+  'haus-mac-dubglais': 'haus-dubglais',
+  // Carnegie is the diagram spelling of the prepared Cerneige record.
+  'haus-carnegie': 'haus-cerneige',
+  // Explicitly matched Mathgham counterpart spellings retain their old links.
+  'haus-diud': 'haus-diuid',
+  'haus-fioghrrha': 'haus-fiorghra',
+  'haus-haigh': 'haus-haig',
+  'haus-macborthwick': 'haus-borthwick',
   beran: 'haus-beran',
   earncynne: 'haus-earncynne',
   estmere: 'haus-estmere',

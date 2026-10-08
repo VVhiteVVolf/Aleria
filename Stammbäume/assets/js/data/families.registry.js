@@ -34,6 +34,10 @@ import { TALYNDOR_HOUSE_FAMILIES } from './talyndor-house-families.js';
 import { CEITHEACH_HOUSE_FAMILIES } from './ceitheach-house-families.js';
 import { LEITHEACH_HOUSE_FAMILIES } from './leitheach-house-families.js';
 import { DUNFAL_HOUSE_FAMILIES } from './dunfal-house-families.js';
+import { AISLEARNEACH_HOUSE_FAMILIES } from './aislearneach-house-families.js';
+import { BLAITHNEACH_HOUSE_FAMILIES } from './blaithneach-house-families.js';
+import { BLAITHNEACH_ADDITIONAL_PLACEMENTS } from './blaithneach-house-profiles.js';
+import { FAELAORN_HOUSE_FAMILIES } from './faelaorn-house-families.js';
 import { LOWER_KNIGHT_HOUSE_FAMILIES } from './lower-knight-house-families.js?v=armel-bio-20260912';
 import { ARTUS_STREBEN_HOUSE_FAMILIES } from './artus-streben-house-families.js';
 import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families.js';
@@ -66,6 +70,11 @@ import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
 import { HOUSE_BIOGRAPHY_DEFAULTS } from './house-biographies.registry.js?v=gwendolyn-20260911h';
 import { withHouseBiographyDefault } from '../modules/house-biography/house-biography-registry-default.js';
 import { withCwingodSourcePortraitUpgrade } from './cwingod-source-portrait-upgrade.js';
+import { withMathghamSourceCounterUpgrade } from './mathgham-source-counter-upgrade.js';
+import { withBraighSourceCounterUpgrade } from './braigh-source-counter-upgrade.js';
+import { withFaernaSourceCounterUpgrade } from './faerna-source-counter-upgrade.js';
+import { withDamhSourceCounterUpgrade } from './damh-source-counter-upgrade.js';
+import { withBrannSourceCounterUpgrade } from './brann-source-counter-upgrade.js';
 
 export const RETIRED_FAMILY_IDS = Object.freeze(['haus-vael', 'haus-sgrechwyr']);
 
@@ -81,10 +90,11 @@ function hierarchyFor(path, familyId, familyTitle) {
   ]);
 }
 
-function additionalPlacementsFor(family) {
-  const placements = Array.isArray(family.extensions?.registryAdditionalPlacements)
+function additionalPlacementsFor(family, territorialPlacements = []) {
+  const familyPlacements = Array.isArray(family.extensions?.registryAdditionalPlacements)
     ? family.extensions.registryAdditionalPlacements
     : [];
+  const placements = [...familyPlacements, ...territorialPlacements];
   return Object.freeze(placements.flatMap(placement => {
     const houseProfile = placement?.houseProfile;
     if (!houseProfile) return [];
@@ -100,11 +110,16 @@ function additionalPlacementsFor(family) {
   }));
 }
 
-function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed' }) {
+function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed', territorialPlacements = [] }) {
   family = withCwingodSourcePortraitUpgrade(family);
+  family = withMathghamSourceCounterUpgrade(family);
+  family = withBraighSourceCounterUpgrade(family);
+  family = withFaernaSourceCounterUpgrade(family);
+  family = withDamhSourceCounterUpgrade(family);
+  family = withBrannSourceCounterUpgrade(family);
   family = withHouseBiographyDefault(family, HOUSE_BIOGRAPHY_DEFAULTS);
   const folderPath = Object.freeze(createFolderPathFromHouseProfile(family.document.houseProfile));
-  const additionalPlacements = additionalPlacementsFor(family);
+  const additionalPlacements = additionalPlacementsFor(family, territorialPlacements);
   return Object.freeze({
     id,
     title,
@@ -301,6 +316,7 @@ export const FAMILY_REGISTRY = Object.freeze([
     id: family.document.id,
     title: family.document.title,
     family,
+    territorialPlacements: BLAITHNEACH_ADDITIONAL_PLACEMENTS[family.document.id] || [],
     type: family.document.houseProfile.rankId === 'commoner'
       ? 'commoner'
       : ['laird', 'sept-lord'].includes(family.document.houseProfile.rankId)
@@ -317,7 +333,7 @@ export const FAMILY_REGISTRY = Object.freeze([
         ? 'lower-nobility'
         : 'dynasty'
   })),
-  ...DUNFAL_HOUSE_FAMILIES.map(family => familyRecord({
+  ...[...DUNFAL_HOUSE_FAMILIES, ...AISLEARNEACH_HOUSE_FAMILIES, ...BLAITHNEACH_HOUSE_FAMILIES, ...FAELAORN_HOUSE_FAMILIES].map(family => familyRecord({
     id: family.document.id,
     title: family.document.title,
     family,

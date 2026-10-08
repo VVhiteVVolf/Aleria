@@ -1,3 +1,4 @@
+import { withBlaithneachSourceCounterUpgrade } from './blaithneach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -224,7 +225,7 @@ const SEAMUS_AFFAIR = ['seamus-gortach', 'mide-gortach'];
 const HIOMHAR_AFFAIR = ['mide-gortach', 'hiomhar-gortach'];
 const HIOMHAR = ['hiomhar-gortach', 'trianne-gortach'];
 
-export const HOUSE_RU_GORTACH_FAMILY = Object.freeze({
+export const HOUSE_RU_GORTACH_FAMILY = withBlaithneachSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -574,4 +575,4 @@ export const HOUSE_RU_GORTACH_FAMILY = Object.freeze({
       timeJumps: []
     }
   }
-});
+}));

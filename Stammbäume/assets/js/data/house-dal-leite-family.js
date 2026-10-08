@@ -1,3 +1,5 @@
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
 import { createCeitheachSourceFamily } from './ceitheach-source-family-builder.js';
 import { CEITHEACH_ADDITIONAL_SOURCE_CATALOG } from './ceitheach-additional-source-catalog.js';
 
@@ -343,4 +345,4 @@ const SOURCE = Object.freeze({
   "sourceNote": "Ein in der Grafik belegter serieller Quellenzeitsprung. Fehlende Lebensdaten begründen keine weiteren Überlieferungslücken. Agnetas unsicheres Geburtsjahr 1704? bleibt als unsicherer Quellenwert erhalten. Sàrraas und Keallach bilden eine erzwungene Verbindung; Marsail ist ihr uneheliches Kind. Individuelle Bilder unter 16 werden nur als Referenz archiviert."
 });
 
-export const HOUSE_DAL_LEITE_FAMILY = createCeitheachSourceFamily('dal-leite', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG);
+export const HOUSE_DAL_LEITE_FAMILY = withAlbenSourcePortraitUpgrade(withAislearneachSourceCounterUpgrade(createCeitheachSourceFamily('dal-leite', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG)));

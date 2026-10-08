@@ -1,0 +1,424 @@
+{
+  "corrections": {
+    "diuid:149:2": {
+      "death": "1681",
+      "note": "Nutzerkorrektur: Beileag Ness starb 1681; 1581 war ein Vorlagenfehler."
+    },
+    "ness:98:1": {
+      "death": "1681",
+      "note": "Nutzerkorrektur: Beileag Ness starb 1681; 1581 war ein Vorlagenfehler."
+    },
+    "ness:143:2": {
+      "birth": "1676",
+      "note": "Nutzerkorrektur: Maithnú Eoghainn wurde 1676 geboren; in 176 fehlte eine Ziffer."
+    },
+    "diuid:219:2": {
+      "note": "Nutzerkorrektur: Gráinne ist Rúaircs Frau. Rúairc und Gráinne sind die Eltern von Raghallach und Orla; Ronan in der Kinderüberschrift ist ein Vorlagenfehler."
+    },
+    "fiorghra:135:1": {
+      "death": "1720",
+      "note": "Eindeutige Gegenbeziehung: ältere Schreibvariante des Hausnamens kanonisch vereinheitlicht, vorhandene Personen- und Welt-ID erhalten.",
+      "houseId": "house-fiorghra",
+      "canonicalName": "Gobaith Fiorghra"
+    },
+    "ness:138:1": {
+      "death": "1720",
+      "note": "Unbekannte Quellenjahre durch die eindeutig identifizierte Gegenperson ergänzt; bestehende Weltidentität bleibt erhalten."
+    },
+    "haig:140:1": {
+      "death": "1726",
+      "note": "Unbekannte Quellenjahre durch die eindeutig identifizierte Gegenperson ergänzt; bestehende Weltidentität bleibt erhalten."
+    },
+    "banlaoch:10:0": {
+      "birth": "1588",
+      "death": "1644",
+      "note": "Lebensdaten aus der bereits eindeutig belegten Gegenbeziehung; die Banlaoch-Grafik selbst ist undatiert.",
+      "status": "dead"
+    },
+    "banlaoch:10:2": {
+      "birth": "1589",
+      "note": "Lebensdaten aus der bereits eindeutig belegten Gegenbeziehung; die Banlaoch-Grafik selbst ist undatiert.",
+      "death": "",
+      "status": "alive"
+    },
+    "banlaoch:30:2": {
+      "birth": "1632",
+      "death": "1700",
+      "note": "Lebensdaten aus der bereits eindeutig belegten Gegenbeziehung; die Banlaoch-Grafik selbst ist undatiert.",
+      "status": "dead"
+    },
+    "banlaoch:30:5": {
+      "birth": "1630",
+      "death": "1720",
+      "note": "Lebensdaten aus der bereits eindeutig belegten Gegenbeziehung; die Banlaoch-Grafik selbst ist undatiert.",
+      "status": "dead"
+    },
+    "banlaoch:50:1": {
+      "birth": "1676",
+      "note": "Lebensdaten aus der bereits eindeutig belegten Gegenbeziehung; die Banlaoch-Grafik selbst ist undatiert.",
+      "death": "",
+      "status": "alive"
+    },
+    "banlaoch:50:5": {
+      "birth": "1674",
+      "note": "Lebensdaten aus der bereits eindeutig belegten Gegenbeziehung; die Banlaoch-Grafik selbst ist undatiert.",
+      "death": "",
+      "status": "alive"
+    },
+    "banlaoch:60:1": {
+      "birth": "1700",
+      "note": "Lebensdaten aus der bereits eindeutig belegten Gegenbeziehung; die Banlaoch-Grafik selbst ist undatiert.",
+      "death": "",
+      "status": "alive"
+    },
+    "banlaoch:60:6": {
+      "birth": "1696",
+      "note": "Lebensdaten aus der bereits eindeutig belegten Gegenbeziehung; die Banlaoch-Grafik selbst ist undatiert.",
+      "death": "",
+      "status": "alive"
+    },
+    "diuid:149:0": {
+      "birth": "1583",
+      "note": "Abweichende neue Partnerzeile; die bereits ausgearbeitete eigene Herkunftstabelle und dieselbe Gegenbeziehung belegen 1583. Stabile Identität bleibt erhalten."
+    },
+    "ness:153:1": {
+      "birth": "1705",
+      "note": "Abweichende neue Partnerzeile; die bereits ausgearbeitete eigene Herkunftstabelle und dieselbe Gegenbeziehung belegen 1705. Stabile Identität bleibt erhalten."
+    },
+    "haig:145:1": {
+      "death": "",
+      "status": "alive",
+      "note": "Die neue Haig-Partnerzeile markiert Muirgheas verstorben, ohne Todesjahr. Seine eigene Lachlann-Tabelle führt ihn lebend als amtierendes Oberhaupt; dieser kanonische Stand bleibt erhalten."
+    },
+    "haig:178:4": {
+      "note": "Eigene Haig-Herkunftstabelle: Talitha wurde 1730 geboren. Die Drummond-Mündelzeile nennt abweichend 1728; stabile ID bleibt erhalten, Lebensjahr folgt der Herkunftstabelle."
+    },
+    "lockart:152:1": {
+      "note": "Die eigene Lockart-Tabelle führt Fidelma lebend, die ältere Dyngwn-Gegenakte nennt 1720. Die neue Herkunftstabelle gilt; Todesjahr wird entfernt."
+    },
+    "diuid:174:0": {
+      "houseId": "house-diuid",
+      "canonicalName": "Finnbar Diuid",
+      "note": "Eindeutige Gegenbeziehung: ältere Schreibvariante des Hausnamens kanonisch vereinheitlicht, vorhandene Personen- und Welt-ID erhalten."
+    },
+    "diuid:184:4": {
+      "houseId": "house-diuid",
+      "canonicalName": "Tamsin Diuid",
+      "note": "Eindeutige Gegenbeziehung: ältere Schreibvariante des Hausnamens kanonisch vereinheitlicht, vorhandene Personen- und Welt-ID erhalten."
+    },
+    "haig:98:1": {
+      "houseId": "house-haig",
+      "canonicalName": "Banbhin Haig",
+      "note": "Eindeutige Gegenbeziehung: ältere Schreibvariante des Hausnamens kanonisch vereinheitlicht, vorhandene Personen- und Welt-ID erhalten."
+    },
+    "lockart:86:0": {
+      "houseId": "house-diuid"
+    },
+    "haig:86:0": {
+      "houseId": "house-diuid"
+    },
+    "haig:173:1": {
+      "houseId": "house-unbekannt",
+      "sex": "male",
+      "note": "Ausdrücklich als Rhonas Vergewaltiger und Zohairs Vater genannter Unbekannter; keine allgemeine leere Templatekarte."
+    },
+    "lockart:132:1": {
+      "death": "1692",
+      "note": "Das ausdrücklich datierte Diuid-Gegenpaar ergänzt das unbekannte Todesjahr der Herkunftstabelle."
+    },
+    "ness:128:1": {
+      "death": "1734",
+      "note": "Die eigene Ness-Tabelle lässt das Todesjahr offen; die Haig-Gegenbeziehung nennt 1734."
+    },
+    "banlaoch:10:1": {
+      "birth": "1593",
+      "death": "1668",
+      "status": "dead",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:10:3": {
+      "birth": "1595",
+      "death": "1674",
+      "status": "dead",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:20:0": {
+      "birth": "1609",
+      "death": "1696",
+      "status": "dead",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:20:1": {
+      "birth": "1612",
+      "death": "1681",
+      "status": "dead",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:20:2": {
+      "birth": "1606",
+      "death": "1684",
+      "status": "dead",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:20:3": {
+      "birth": "1615",
+      "death": "1704",
+      "status": "dead",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:30:0": {
+      "birth": "1630",
+      "death": "1708",
+      "status": "dead",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:30:1": {
+      "birth": "1632",
+      "death": "1711",
+      "status": "dead",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:30:3": {
+      "birth": "1631",
+      "death": "1712",
+      "status": "dead",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:30:4": {
+      "birth": "1629",
+      "death": "1705",
+      "status": "dead",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:40:1": {
+      "birth": "1656",
+      "death": "1730",
+      "status": "dead",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:40:2": {
+      "birth": "1658",
+      "death": "1732",
+      "status": "dead",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:40:4": {
+      "birth": "1657",
+      "death": "1725",
+      "status": "dead",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:50:0": {
+      "birth": "1673",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:50:2": {
+      "birth": "1676",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:50:4": {
+      "birth": "1670",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:50:6": {
+      "birth": "1677",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:60:0": {
+      "birth": "1695",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:60:2": {
+      "birth": "1705",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:60:3": {
+      "birth": "1699",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:60:4": {
+      "birth": "1715",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:60:5": {
+      "birth": "1692",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:60:7": {
+      "birth": "1701",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:60:8": {
+      "birth": "1701",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:70:0": {
+      "birth": "1717",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:70:1": {
+      "birth": "1721",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:70:2": {
+      "birth": "1727",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:70:3": {
+      "birth": "1733",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:70:4": {
+      "birth": "1725",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:70:5": {
+      "birth": "1732",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:70:6": {
+      "birth": "1722",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    },
+    "banlaoch:70:7": {
+      "birth": "1728",
+      "death": "",
+      "status": "alive",
+      "note": "Jahre mit ausdrücklicher Nutzerfreigabe ergänzt (Bezugsjahr 1740), nicht in der undatierten Grafik überliefert. Eltern- und Partnerjahre wurden berücksichtigt."
+    }
+  },
+  "aliases": {
+    "lockart:86:0": "diuid:98:2",
+    "lockart:91:0": "diuid:103:2",
+    "haig:86:0": "diuid:122:1",
+    "haig:91:0": "diuid:127:1",
+    "haig:125:2": "fiorghra:105:1",
+    "fiorghra:130:3": "diuid:174:4",
+    "fiorghra:150:0": "diuid:206:1",
+    "banlaoch:40:0": "diuid:179:2",
+    "banlaoch:40:3": "diuid:174:2",
+    "banlaoch:40:5": "lockart:152:3",
+    "lockart:157:3": "banlaoch:40:2",
+    "banlaoch:50:3": "haig:155:2",
+    "banlaoch:50:7": "haig:150:2"
+  },
+  "existing": {
+    "diuid:110:1": "oideach-diuid",
+    "diuid:115:1": "cadfael-ancient-arth",
+    "diuid:132:1": "hadhbh-diuid",
+    "diuid:137:1": "tarrant-ancient-arth",
+    "diuid:144:0": "raghallach-1579-diuid",
+    "diuid:144:1": "scathach-1584-diuid",
+    "diuid:149:0": "allanah-1583-urquhart",
+    "diuid:149:1": "gadhra-1581-stwatchn",
+    "diuid:174:0": "finnbar-diud",
+    "diuid:179:0": "ragnfrid-frostauge",
+    "diuid:184:1": "donndubhan-1666-diuid",
+    "diuid:184:4": "tamsin-diud",
+    "diuid:193:0": "sharni-1667-nuadat",
+    "diuid:193:2": "neidion-unigol",
+    "diuid:202:0": "domhnall-1688-diuid",
+    "diuid:215:0": "mairi-1695-urquhart",
+    "lockart:98:1": "beileag-lockart",
+    "lockart:103:1": "denawal-ancient-arth",
+    "lockart:110:1": "glaodhach-lockart",
+    "lockart:115:1": "caradoc-line-arth",
+    "lockart:142:1": "kumhn-1629-lockart",
+    "lockart:142:2": "bonnie-lockart",
+    "lockart:147:1": "reamha-1626-aonghusa",
+    "lockart:147:2": "owain-mochdaer",
+    "lockart:152:1": "fidelma-lockart",
+    "lockart:157:1": "glewlwyd-dyngwn",
+    "lockart:162:1": "orthanach-1670-lockart",
+    "lockart:162:4": "cathal-lockart",
+    "lockart:167:1": "eimhin-1673-casur",
+    "lockart:167:4": "olwyn-unigol",
+    "lockart:172:1": "aigneis-1692-lockart",
+    "lockart:181:1": "brodie-1686-nuadat",
+    "lockart:190:3": "barra-lockart",
+    "lockart:198:2": "praithi-1731-lockart",
+    "lockart:198:4": "art-1727-lockart",
+    "fiorghra:105:0": "murdoch-1604-fiorghra",
+    "fiorghra:110:0": "draighean-1609-dundas",
+    "fiorghra:135:1": "gobaith-fioghrrha",
+    "fiorghra:140:1": "odhranag-leite",
+    "fiorghra:145:3": "fiona-1703-fiorghra",
+    "fiorghra:150:3": "searach-1697-stwatchn",
+    "ness:108:0": "michan-ness",
+    "ness:113:0": "evaine-dienyddiwr",
+    "ness:118:1": "lannraig-1632-ness",
+    "ness:118:4": "mairead-1634-ness",
+    "ness:123:1": "cathal-1632-urquhart",
+    "ness:123:4": "gilleasbuig-1632-stwatchn",
+    "ness:128:0": "turlough-ness",
+    "ness:133:0": "arianwen-draig",
+    "ness:138:1": "lindsey-ness",
+    "ness:143:1": "slavi-mochdaer",
+    "ness:148:1": "jilbhe-1709-ness",
+    "ness:153:1": "fingin-1705-fintain",
+    "haig:98:1": "banbhin-haigh",
+    "haig:103:1": "parzifal-ancient-arth",
+    "haig:130:2": "bardan-1630-haig",
+    "haig:135:2": "oighreag-1633-dundas",
+    "haig:140:0": "aonghus-1649-haig",
+    "haig:140:1": "jorna-1654-haig",
+    "haig:145:0": "teaganach-1654-anbhair",
+    "haig:145:1": "muirgheas-1652-lachlann",
+    "haig:150:3": "rogaire-1676-haig",
+    "haig:155:3": "tadgh-1674-drummond",
+    "haig:160:1": "senga-haig",
+    "haig:169:1": "idris-mochdaer",
+    "haig:178:4": "talitha-1728-haig",
+    "banlaoch:10:0": "morag-1588-banlaoch",
+    "banlaoch:10:2": "daire-1589-luthsach",
+    "banlaoch:30:2": "fionn-1632-banlaoch",
+    "banlaoch:30:5": "eilidh-1630-luthsach",
+    "banlaoch:50:1": "lorcan-1676-banlaoch",
+    "banlaoch:50:5": "gormlaith-1674-luthsach",
+    "banlaoch:60:1": "wairbhin-1700-banlaoch",
+    "banlaoch:60:6": "sulach-1696-goidin"
+  },
+  "houseAliases": {
+    "mochdear": "house-mochdaer-gwyliau",
+    "diud": "house-diuid",
+    "haigh": "house-haig",
+    "fioghrrha": "house-fiorghra",
+    "conchobhair": "house-connchobhair"
+  }
+}

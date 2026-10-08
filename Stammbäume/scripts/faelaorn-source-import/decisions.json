@@ -1,0 +1,233 @@
+{
+  "corrections": {
+    "bhaird:189:0": {
+      "birth": "1727",
+      "note": "Nutzerkorrektur: Ruarc wurde 1727 geboren, nicht 1627."
+    },
+    "lachlann:91:0": {
+      "death": "1611",
+      "note": "Nutzerkorrektur: Meabhróg Laga starb 1611; die Lachlann-Angabe 1609 ist berichtigt."
+    },
+    "urquhart:193:2": {
+      "death": "1689",
+      "note": "Nutzerkorrektur: Filidh Urquhart starb 1689, gemäß Luthsach-Tabelle."
+    },
+    "drummond:161:4": {
+      "birth": "1678",
+      "note": "Uathach folgt ihrer eigenen Lachlann-Herkunftstabelle (*1678), nicht der abweichenden Partnerzeile *1680."
+    },
+    "lachlann:86:0": {
+      "houseId": "house-ffearnach"
+    },
+    "drummond:86:0": {
+      "houseId": "house-ffearnach"
+    },
+    "lachlann:96:0": {
+      "houseId": "house-lachlann",
+      "canonicalName": "Meadhbhán Lachlann",
+      "note": "Geboren Ffearnach; Mitbegründer der Teilung 1570."
+    },
+    "lachlann:96:1": {
+      "houseId": "house-drummond",
+      "canonicalName": "Maelbrigte Drummond"
+    },
+    "drummond:96:0": {
+      "houseId": "house-lachlann",
+      "canonicalName": "Meadhbhán Lachlann"
+    },
+    "drummond:96:1": {
+      "houseId": "house-drummond",
+      "canonicalName": "Maelbrigte Drummond",
+      "note": "Geboren Ffearnach; Mitbegründer der Teilung 1570."
+    },
+    "bhaird:83:0": {
+      "houseId": "house-urquhart"
+    },
+    "luthsach:83:0": {
+      "houseId": "house-urquhart"
+    },
+    "dundas:0:0": {
+      "houseId": "house-stwatchn"
+    },
+    "stwatchn:50:6": {
+      "houseId": "house-laoch",
+      "note": "Die Grafik nennt Talamhan *1653; die bisherige Laoch-Gegenakte *1651. Die ausdrücklich neu gelieferte Grafik gilt, die vorhandene Identität bleibt erhalten.",
+      "death": "1728",
+      "status": "dead"
+    },
+    "stwatchn:20:1": {
+      "death": "1688",
+      "status": "dead"
+    },
+    "stwatchn:20:3": {
+      "death": "1674",
+      "status": "dead"
+    },
+    "stwatchn:50:2": {
+      "death": "1738",
+      "status": "dead"
+    },
+    "dundas:40:0": {
+      "death": "1720",
+      "status": "dead"
+    },
+    "dundas:40:1": {
+      "death": "1720",
+      "status": "dead"
+    },
+    "dundas:40:3": {
+      "death": "1731",
+      "status": "dead"
+    },
+    "dundas:40:4": {
+      "death": "1720",
+      "status": "dead"
+    },
+    "bhaird:167:3": {
+      "houseId": "house-bhaird",
+      "note": "Die neue Herkunftstabelle belegt Ó Bhaird aus Faelaorn. Die bestehende Personen-/Weltkennung bleibt trotz ihres alten An-Bhaird-Namens erhalten."
+    },
+    "stwatchn:40:1": {
+      "death": "1704",
+      "status": "dead"
+    },
+    "stwatchn:40:4": {
+      "death": "1720",
+      "status": "dead"
+    },
+    "stwatchn:50:0": {
+      "death": "1728",
+      "status": "dead"
+    },
+    "stwatchn:50:4": {
+      "death": "1735",
+      "status": "dead"
+    },
+    "dundas:40:2": {
+      "death": "1720",
+      "status": "dead"
+    },
+    "stwatchn:50:1": {
+      "death": "1738",
+      "status": "dead"
+    },
+    "urquhart:173:1": {
+      "houseId": "house-urquhart",
+      "note": "Die Herkunftstabelle ergänzt das bisher leere Herkunftshaus; vorhandene Welt-ID bleibt erhalten."
+    }
+  },
+  "aliases": {
+    "bhaird:83:0": "urquhart:137:1",
+    "bhaird:88:0": "urquhart:142:1",
+    "luthsach:83:0": "urquhart:161:2",
+    "luthsach:88:0": "urquhart:166:2",
+    "drummond:86:0": "lachlann:86:0",
+    "lachlann:91:0": "drummond:91:0",
+    "drummond:96:0": "lachlann:96:0",
+    "lachlann:96:1": "drummond:96:1",
+    "drummond:101:0": "lachlann:101:0",
+    "lachlann:101:1": "drummond:101:1",
+    "lachlann:121:1": "drummond:116:0",
+    "dundas:0:0": "stwatchn:10:1",
+    "dundas:0:1": "stwatchn:10:3"
+  },
+  "existing": {
+    "urquhart:101:0": "dermod-urquhart",
+    "urquhart:106:0": "faoiltiama-cumhail",
+    "urquhart:118:1": "cadan-cumhail",
+    "urquhart:125:1": "sinead-urquhart",
+    "urquhart:130:1": "malon-pendrag",
+    "urquhart:137:0": "ossian-founder-urquhart",
+    "urquhart:142:0": "caitriona-founder-ronain",
+    "urquhart:149:1": "gormlaith-urquhart",
+    "urquhart:154:1": "iorwerth-draig",
+    "urquhart:161:0": "muirgel-1266-urquhart",
+    "urquhart:166:0": "sorley-1260-morath",
+    "urquhart:178:1": "thorgest-vaeren",
+    "urquhart:193:0": "conchobhair-urquhart",
+    "urquhart:193:4": "eochaidh-urquhart",
+    "urquhart:198:0": "fearcharae-cumhail",
+    "urquhart:198:4": "kerrilynn-ceirwyn",
+    "urquhart:203:0": "orfllaith-urquhart",
+    "urquhart:207:0": "siomhrach-urquhart",
+    "urquhart:207:2": "muirne-urquhart",
+    "urquhart:212:0": "dyvynwal-blodyn",
+    "urquhart:212:2": "goraidh-1600-ronain",
+    "urquhart:216:0": "faithleach-amrhan",
+    "urquhart:216:2": "einarr-1614-sterkr",
+    "urquhart:221:1": "noirin-urquhart",
+    "urquhart:221:3": "roisin-urquhart",
+    "urquhart:226:1": "artus-1622-pendrag",
+    "urquhart:226:3": "oleg-skald",
+    "urquhart:231:0": "cainneach-urquhart",
+    "urquhart:231:1": "quarnait-1665-urquhart",
+    "urquhart:231:3": "dearbhlaas-1652-urquhart",
+    "urquhart:236:0": "meeghan-pendrag",
+    "urquhart:236:1": "connla-1660-chulainn",
+    "urquhart:236:3": "sean-1648-morna",
+    "urquhart:245:2": "sheena-urquhart",
+    "urquhart:254:2": "jygallag-blodyn",
+    "urquhart:263:0": "sileas-1700-urquhart",
+    "urquhart:276:0": "seanchan-1692-morath",
+    "bhaird:137:0": "seaghdha-bhaird",
+    "bhaird:142:0": "eirwenna-ceirwyn",
+    "bhaird:142:2": "lodvar-skald",
+    "bhaird:142:3": "doireann-1634-morath",
+    "bhaird:147:3": "wihalg-bhaird",
+    "bhaird:152:3": "tarlachan-amrhan",
+    "bhaird:157:1": "fenella-bhaird",
+    "bhaird:157:4": "brigid-bhaird",
+    "bhaird:162:1": "edwyn-ceirwyn",
+    "bhaird:162:4": "skjomi-soekeren",
+    "bhaird:167:3": "mhor-1705-an-bhaird",
+    "bhaird:176:3": "muiris-1698-morath",
+    "lachlann:126:1": "biorna-lachlann",
+    "lachlann:131:1": "keallach-1607-eldath",
+    "lachlann:161:1": "merrion-caerdyn",
+    "drummond:106:1": "eithne-drummond",
+    "drummond:111:1": "bujold-kampfgeborene",
+    "drummond:136:1": "eireann-drummond",
+    "drummond:136:3": "sadbh-drummond",
+    "drummond:141:1": "eoghair-1628-eldath",
+    "drummond:141:3": "gareth-lyfant",
+    "drummond:156:1": "earcan-1670-drummond",
+    "drummond:161:1": "yachna-1676-anbhair",
+    "drummond:170:3": "aine-drummond",
+    "stwatchn:20:1": "tamsin-stwatchn",
+    "stwatchn:20:3": "galahad-blaidd",
+    "stwatchn:50:2": "laoiseach-stwatchn",
+    "stwatchn:60:1": "niamhe-stwatchn",
+    "stwatchn:60:6": "cardoc-dinefwr",
+    "stwatchn:60:9": "ruaidhrigh-1680-chulainn",
+    "stwatchn:70:1": "neidhe-1695-stwatchn",
+    "stwatchn:70:8": "ninnidh-1690-magach",
+    "stwatchn:80:3": "nairn-1726-stwatchn",
+    "dundas:40:0": "alasdair-dundas",
+    "dundas:40:1": "lughna-dundas",
+    "dundas:40:3": "urchrist-laoch",
+    "dundas:40:4": "kenehyr-1655-morgant",
+    "urquhart:207:1": "donnchadh-1600-urquhart",
+    "urquhart:216:1": "nuala-1608-morath",
+    "bhaird:137:3": "ailionora-bhaird",
+    "stwatchn:50:6": "talamhan-laoch",
+    "urquhart:173:1": "eamhair-urquhart",
+    "urquhart:203:2": "beathag-1603-urquhart",
+    "stwatchn:50:1": "niamhasas-1653-stwatchn",
+    "stwatchn:60:4": "ciorstaidh-1682-stwatchn"
+  },
+  "houseAliases": {
+    "cumhaill": "house-cumhail",
+    "amhran": "house-amrhan",
+    "sokering": "house-soekeren",
+    "sokaren": "house-soekeren",
+    "sokeren": "house-soekeren",
+    "lyfant": "house-lyfant",
+    "llyfant": "house-lyfant",
+    "kampfgeborener": "house-kampfgeborene",
+    "riangabra": "house-riangabra",
+    "anbhair": "house-anbhair",
+    "ceinselaig": "house-ceinselaig",
+    "laoch": "house-laoch",
+    "tuathanach": "house-tuathanach"
+  }
+}

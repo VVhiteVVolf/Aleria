@@ -1,3 +1,4 @@
+import { withFaelaornSourceCounterUpgrade } from './faelaorn-source-counter-upgrade.js';
 import { withCeitheachSourceCounterUpgrade } from './ceitheach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
@@ -272,7 +273,7 @@ function timeJump(id, parentPartnershipId, childIds, options = {}) {
   };
 }
 
-export const HOUSE_VAEREN_FAMILY = Object.freeze(withCeitheachSourceCounterUpgrade({
+export const HOUSE_VAEREN_FAMILY = withFaelaornSourceCounterUpgrade(Object.freeze(withCeitheachSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -572,4 +573,4 @@ export const HOUSE_VAEREN_FAMILY = Object.freeze(withCeitheachSourceCounterUpgra
     ],
     registryManagedRecordFields: ['folderPath']
   }
-}));
+})));

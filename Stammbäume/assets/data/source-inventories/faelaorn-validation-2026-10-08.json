@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-08",
+  "sourceInventory": "assets/data/source-inventories/faelaorn-2026-10-08.json",
+  "publication": "local-only",
+  "historicalTerritories": 6,
+  "newEmptyFamilies": 39,
+  "newClans": 34,
+  "newSepts": 5,
+  "totalFaelaornFamiliesIncludingExistingDubhan": 40,
+  "asylumPlacements": 4,
+  "exclavePlacements": 1,
+  "unchangedExistingFamilies": 479,
+  "sourceTables": 7,
+  "verifiedLocalPngs": 46,
+  "schemaValidation": {
+    "families": 39,
+    "browser": "passed",
+    "server": "passed"
+  },
+  "modularTests": {
+    "script": "package.json scripts.test, first Node invocation (23 test files)",
+    "additionalNodeFlag": "--experimental-test-isolation=none",
+    "passed": 147,
+    "failed": 0
+  },
+  "legacyTests": {
+    "command": "node tests/run-tests.js",
+    "passed": 1245,
+    "failed": 1,
+    "knownPreexistingFailure": "Pawen: Referenzgleichheit der ältesten Arth-Kadettenakte"
+  },
+  "browser": {
+    "engine": "headless Chromium",
+    "viewports": [[1440, 1000], [390, 844]],
+    "passed": true,
+    "uncaughtExceptions": 0,
+    "checks": [
+      "40 unique Faelaorn families, six historical territories and separately listed capital",
+      "War with Skjaerheim and roughly half occupied visible on the country page",
+      "Durachd and Eoghainn open the same canonical families through Rann asylum",
+      "Mathgham asylum sites and Duff in Balgavrie",
+      "Forsyth's Mathgham exclave links to the canonical family",
+      "Five Braigh Septs directly listed without invented seats",
+      "Urquhart, Grein and Ffearnach open as empty families with loaded local emblems",
+      "No horizontal page overflow on the tested country and Braigh pages"
+    ]
+  },
+  "diffCheck": "passed"
+}

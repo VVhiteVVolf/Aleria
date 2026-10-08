@@ -1,3 +1,4 @@
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
 import { createCeitheachSourceFamily } from './ceitheach-source-family-builder.js';
 import { CEITHEACH_ADDITIONAL_SOURCE_CATALOG } from './ceitheach-additional-source-catalog.js';
 
@@ -363,4 +364,4 @@ const SOURCE = Object.freeze({
   "sourceNote": "Ein serieller Quellenzeitsprung. Acht Affären führen getrennte Mutter-/Vatergruppen; Bastarde bleiben ihren tatsächlichen Eltern zugeordnet. Mebhs unmögliches Geburtsjahr 11700 wird als offensichtlicher zusätzlicher Ziffernfehler zu 1700 berichtigt. Die historischen Vormundschaften Donnachas werden nicht als neue Adoptionen angelegt."
 });
 
-export const HOUSE_NIC_HOLLORAN_FAMILY = createCeitheachSourceFamily('nic-holloran', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG);
+export const HOUSE_NIC_HOLLORAN_FAMILY = withAislearneachSourceCounterUpgrade(createCeitheachSourceFamily('nic-holloran', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG));

@@ -1,3 +1,5 @@
+import { withFaelaornSourceCounterUpgrade } from './faelaorn-source-counter-upgrade.js';
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { PORTRAIT_PLACEHOLDERS } from '../config/portrait-placeholders.js';
 import { CELTIGERNS_WACHT_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
@@ -130,7 +132,7 @@ const RHYS_IDS = ['rhys-draig', 'brona-eisenherz'];
 const STEFFAN_IDS = ['steffan-draig', 'branwen-gwefrydd'];
 const CADFAN_IDS = ['cadfan-draig', 'wynonna-fiachrach'];
 
-export const HOUSE_DRAIG_FAMILY = Object.freeze({
+export const HOUSE_DRAIG_FAMILY = withFaelaornSourceCounterUpgrade(withAislearneachSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -726,4 +728,4 @@ export const HOUSE_DRAIG_FAMILY = Object.freeze({
     sourceRevision: 11,
     houseBiographyModule: HOUSE_BIOGRAPHY
   }
-});
+})));

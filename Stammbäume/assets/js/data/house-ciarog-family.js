@@ -1,3 +1,6 @@
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
+import { withBlaithneachSourceCounterUpgrade } from './blaithneach-source-counter-upgrade.js';
+import { withDunfalSourceCounterUpgrade } from './dunfal-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -176,7 +179,7 @@ function marriedAway(id, name, partnershipId, houseId, emblem = '') {
   });
 }
 
-export const HOUSE_CIAROG_FAMILY = Object.freeze({
+export const HOUSE_CIAROG_FAMILY = withAislearneachSourceCounterUpgrade(withBlaithneachSourceCounterUpgrade(Object.freeze(withDunfalSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -396,4 +399,4 @@ export const HOUSE_CIAROG_FAMILY = Object.freeze({
     ],
     registryManagedRecordFields: ['folderPath']
   }
-});
+}))));

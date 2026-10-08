@@ -1,3 +1,4 @@
+import { withBlaithneachSourceCounterUpgrade } from './blaithneach-source-counter-upgrade.js';
 import { createCeitheachSourceFamily } from './ceitheach-source-family-builder.js';
 import { CEITHEACH_ADDITIONAL_SOURCE_CATALOG } from './ceitheach-additional-source-catalog.js';
 
@@ -261,4 +262,4 @@ const SOURCE = Object.freeze({
   "sourceNote": "Sorcha Rochraide und Kelch sind dieselben Gründerpersonen wie im Rochraide-Kadettenknoten. Ein serieller Quellenzeitsprung. Deirdres Jahrhundertkorrektur 1775→1675 wurde bereits ausdrücklich bestätigt. Dòrnaidhs fehlende öffnende Jahresklammer ist ein Formatfehler."
 });
 
-export const HOUSE_UA_NIC_CEINSELAIG_FAMILY = createCeitheachSourceFamily('ua-nic-ceinselaig', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG);
+export const HOUSE_UA_NIC_CEINSELAIG_FAMILY = withBlaithneachSourceCounterUpgrade(createCeitheachSourceFamily('ua-nic-ceinselaig', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG));

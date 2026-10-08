@@ -1,0 +1,594 @@
+{
+  "date": "2026-10-08",
+  "principality": "Blaithneach",
+  "publication": "local-only; no push or deployment",
+  "sources": 9,
+  "sourceCards": 559,
+  "uniquePersons": 465,
+  "uniquePartnerships": 192,
+  "families": [
+    {
+      "id": "haus-ronain",
+      "persons": 87,
+      "partnerships": 37,
+      "parentages": 49,
+      "houseNodes": 16,
+      "timeJumps": 5,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-nessa",
+      "persons": 79,
+      "partnerships": 31,
+      "parentages": 47,
+      "houseNodes": 14,
+      "timeJumps": 2,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-magach",
+      "persons": 81,
+      "partnerships": 34,
+      "parentages": 46,
+      "houseNodes": 16,
+      "timeJumps": 2,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-suiste",
+      "persons": 53,
+      "partnerships": 22,
+      "parentages": 30,
+      "houseNodes": 9,
+      "timeJumps": 2,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-gairner",
+      "persons": 44,
+      "partnerships": 19,
+      "parentages": 24,
+      "houseNodes": 8,
+      "timeJumps": 1,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-goidin",
+      "persons": 39,
+      "partnerships": 15,
+      "parentages": 23,
+      "houseNodes": 6,
+      "timeJumps": 1,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-eala",
+      "persons": 48,
+      "partnerships": 20,
+      "parentages": 27,
+      "houseNodes": 8,
+      "timeJumps": 1,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-haeghra",
+      "persons": 59,
+      "partnerships": 27,
+      "parentages": 31,
+      "houseNodes": 11,
+      "timeJumps": 2,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-cleirigh",
+      "persons": 69,
+      "partnerships": 34,
+      "parentages": 34,
+      "houseNodes": 13,
+      "timeJumps": 1,
+      "sourceRevision": 2
+    }
+  ],
+  "counterpartFamilies": [
+    "haus-varangr",
+    "haus-helgr",
+    "haus-schwarzdorn",
+    "haus-ui-rochraide",
+    "haus-mac-tuirseach",
+    "haus-ua-nic-ceinselaig",
+    "haus-eldath",
+    "haus-mac-ard-cumhaill",
+    "haus-ruin-ua-laoch",
+    "haus-ua-gaelach",
+    "haus-gallchobhair",
+    "haus-gortach",
+    "haus-airgid",
+    "haus-chulainn",
+    "haus-ailella",
+    "haus-cein",
+    "haus-aonghusa",
+    "haus-riangabra",
+    "haus-eachtrai",
+    "haus-teyrngarch",
+    "haus-ciarog",
+    "haus-sgwarnog",
+    "haus-mwyalchen"
+  ],
+  "counterpartPersons": 26,
+  "unchangedFamilyFingerprints": 447,
+  "images": {
+    "downloadedPortraits": 251,
+    "childrenArchivedOnly": 34,
+    "reusedPortraits": 81,
+    "visiblePortraitPaths": 298,
+    "warriors": 9,
+    "sourceTreeGraphics": 9,
+    "verification": "Original file SHA-256 and dimensions verified against receipts; source HTML byte-identical to attachments."
+  },
+  "tests": {
+    "modular": {
+      "passed": 127,
+      "failed": 0
+    },
+    "firebase": {
+      "passed": 9,
+      "failed": 0
+    },
+    "legacy": {
+      "passed": 1245,
+      "failed": 1,
+      "knownPreexistingFailure": "Pawen reference equality: bildet Haus Pawen vollständig als ältestes Kadettenhaus der Arth"
+    }
+  },
+  "browser": {
+    "method": "Local headless Chromium via CDP; in-app browser unavailable",
+    "desktop": {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "families": [
+        {
+          "familyId": "haus-ronain",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-nessa",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-magach",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-suiste",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-gairner",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-goidin",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-eala",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-haeghra",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-cleirigh",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        }
+      ]
+    },
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "families": [
+        {
+          "familyId": "haus-ronain",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-nessa",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-magach",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-suiste",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-gairner",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-goidin",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-eala",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-haeghra",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-cleirigh",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        }
+      ]
+    },
+    "counterparts": {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "families": [
+        {
+          "familyId": "haus-varangr",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-helgr",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-schwarzdorn",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-ui-rochraide",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-mac-tuirseach",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-ua-nic-ceinselaig",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-eldath",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-mac-ard-cumhaill",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-ruin-ua-laoch",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-ua-gaelach",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-gallchobhair",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-gortach",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-airgid",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-chulainn",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-ailella",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-cein",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-aonghusa",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-riangabra",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-eachtrai",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-teyrngarch",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-ciarog",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-sgwarnog",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        },
+        {
+          "familyId": "haus-mwyalchen",
+          "cardOverlaps": 0,
+          "lineCardIntersections": 0,
+          "runtimeError": null
+        }
+      ]
+    },
+    "biographies": [
+      {
+        "familyId": "haus-ronain",
+        "images": [
+          {
+            "path": "assets/images/houses/Blaithneach/clan-mac-ard-ronain.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/references/haus-ronain/krieger.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/houses/Blaithneach/clan-mac-ard-ronain.png",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "familyId": "haus-nessa",
+        "images": [
+          {
+            "path": "assets/images/houses/Blaithneach/clan-ard-nessa.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/references/haus-nessa/krieger.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/houses/Blaithneach/clan-ard-nessa.png",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "familyId": "haus-magach",
+        "images": [
+          {
+            "path": "assets/images/houses/Blaithneach/clan-sidhe-magach.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/references/haus-magach/krieger.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/houses/Blaithneach/clan-sidhe-magach.png",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "familyId": "haus-suiste",
+        "images": [
+          {
+            "path": "assets/images/houses/Blaithneach/clan-ua-suiste.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/references/haus-suiste/krieger.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/houses/Blaithneach/clan-ua-suiste.png",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "familyId": "haus-gairner",
+        "images": [
+          {
+            "path": "assets/images/houses/Blaithneach/clan-dal-gairner.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/references/haus-gairner/krieger.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/houses/Blaithneach/clan-dal-gairner.png",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "familyId": "haus-goidin",
+        "images": [
+          {
+            "path": "assets/images/houses/Blaithneach/clan-ua-goidin.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/references/haus-goidin/krieger.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/houses/Blaithneach/clan-ua-goidin.png",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "familyId": "haus-eala",
+        "images": [
+          {
+            "path": "assets/images/houses/Blaithneach/clan-ua-eala.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/references/haus-eala/krieger.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/houses/Blaithneach/clan-ua-eala.png",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "familyId": "haus-haeghra",
+        "images": [
+          {
+            "path": "assets/images/houses/Blaithneach/clan-an-haeghra.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/references/haus-haeghra/krieger.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/houses/Blaithneach/clan-an-haeghra.png",
+            "loaded": true
+          }
+        ]
+      },
+      {
+        "familyId": "haus-cleirigh",
+        "images": [
+          {
+            "path": "assets/images/houses/Blaithneach/clan-faill-cleirigh.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/references/haus-cleirigh/krieger.png",
+            "loaded": true
+          },
+          {
+            "path": "assets/images/houses/Blaithneach/clan-faill-cleirigh.png",
+            "loaded": true
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "localStorageKeys": []
+  },
+  "reproduction": {
+    "blaithneach": "All six offline import stages reproduce 22 runtime and audit artifacts byte-for-byte after reducing the identity baseline.",
+    "dunfal": "Source person inventory, resolved identities and runtime person records reproduced byte-for-byte through shared import stages."
+  },
+  "sourceConflicts": [
+    {
+      "person": "Súlach Goidin",
+      "decision": "Table alive; graphic marks death. Table status retained with explicit source note; no death year inferred."
+    },
+    {
+      "person": "Xorán Cléirigh",
+      "decision": "Table death 1720 retained with explicit note that the biography reports an unconfirmed disappearance."
+    }
+  ],
+  "userDecisions": [
+    "Sources belong to Blaithneach.",
+    "Dympna 1721 is the daughter of Fergus Nessa and Samthann Magach.",
+    "Cléirigh remains expelled.",
+    "Dal Leite retains one unchanged family with both regional placements.",
+    "No push until explicitly requested."
+  ]
+}

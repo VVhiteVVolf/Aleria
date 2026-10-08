@@ -1,3 +1,4 @@
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { AEHRENTAL_HOUSE_EMBLEMS } from './aehrental-house-profiles.js';
 import {
@@ -210,7 +211,7 @@ const NOGHAN_IDS = ['noghan-tsaoir', 'lannraig-gaisgh'];
 const QUONA_IDS = ['vailintin-choinnich', 'quona-tsaoir'];
 const JUNAID_IDS = ['padraigin-laidir', 'junaid-tsaoir'];
 
-export const HOUSE_DAL_T_SAOR_FAMILY = Object.freeze({
+export const HOUSE_DAL_T_SAOR_FAMILY = withAislearneachSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -429,4 +430,4 @@ export const HOUSE_DAL_T_SAOR_FAMILY = Object.freeze({
       timeJumps: []
     }
   }
-});
+}));

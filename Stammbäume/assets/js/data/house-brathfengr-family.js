@@ -1,3 +1,4 @@
+import { withDunfalSourceCounterUpgrade } from './dunfal-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { ALDRIMAR_HOUSE_EMBLEMS } from './aldrimar-house-profiles.js';
 import {
@@ -246,7 +247,7 @@ function timeJump(id, parentPartnershipId, childIds, fromYear, toYear, label) {
   };
 }
 
-export const HOUSE_BRATHFENGR_FAMILY = Object.freeze({
+export const HOUSE_BRATHFENGR_FAMILY = Object.freeze(withDunfalSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -494,4 +495,4 @@ export const HOUSE_BRATHFENGR_FAMILY = Object.freeze({
     registryManagedRecordFields: ['folderPath'],
     registryManagedViewFields: ['focusPersonId', 'limitGenerations']
   }
-});
+}));

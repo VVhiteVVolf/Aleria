@@ -14,3 +14,33 @@ AleriaAlmanach/.vite-dice-test*.log
 # Netlify build step, so the bundled output must be checked in for
 # /karten-v2/* to be servable. Rebuild with `npm run build` in karten-v2/
 # and commit the result after any source change.
+
+# Python bytecode and temporary portrait-import test directories.
+__pycache__/
+*.pyc
+*.pyo
+/Stammbäume/tests/.portrait-import-test-*/
+
+# Local diagnostic browser profiles; keep collected project sources visible.
+/diagnostics/**/chrome*-profile/
+
+# Skyrim extraction and build workspaces. These rules only hide working copies
+# from Git; local files, rollback backups, reports and custom scripts are kept.
+# Do not ignore diagnostics/ wholesale: the outfit catalog imports a module
+# from diagnostics/obody-bodyslide-audit-20261006/.
+/diagnostics/new-followers-*/unpacked/
+/diagnostics/new-followers-*/staged/
+/diagnostics/new-followers-*/BuildCatalog/
+/diagnostics/new-followers-*/generated/
+/diagnostics/new-followers-*/BodySlide/
+/diagnostics/neckseam-*/default-repair-build/
+/diagnostics/neckseam-*/comparison-build/
+/diagnostics/skyrimnet-*/upstream/
+/diagnostics/skyrimnet-*/stage/
+/diagnostics/skyrimnet-*/downloads/
+/diagnostics/skyrimnet-wheel-animation-*/internet-check/
+/diagnostics/skyrimnet-wheel-animation-*/headers/
+/diagnostics/obody-repair-cleanup-*/BuildCatalog/
+/diagnostics/obody-repair-cleanup-*/mod-stage/
+/diagnostics/obody-repair-cleanup-*/generated/
+/diagnostics/obody-repair-cleanup-*/BodySlide/

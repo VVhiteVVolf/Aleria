@@ -6,6 +6,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
 import { HOUSE_CWINGOD_FAMILY } from '../assets/js/data/house-cwingod-family.js';
+import { HOUSE_ARTH_FAMILY } from '../assets/js/data/house-arth-family.js';
 import { HOUSE_CWINGOD_PORTRAITS } from '../assets/js/data/house-cwingod-portraits.js';
 import { assertValidFamily, normalizeFamily } from '../assets/js/domain/family-schema.js';
 import { FAMILY_REGISTRY, getRegisteredFamily } from '../assets/js/data/families.registry.js';
@@ -14,6 +15,20 @@ import { loadFamilyById } from '../assets/js/services/family-library.js';
 import { toFamilyChartData } from '../assets/js/adapters/family-chart-adapter.js';
 
 const family = getRegisteredFamily('haus-cwningod').family;
+
+test('spätere Gegenaktenrevisionen öffnen Cwingods bereits übernommene Ehen und Häuser nicht erneut', () => {
+  const stale = structuredClone(family);
+  stale.extensions.sourceRevision = 3;
+  const pairId = 'marriage-galeshin-arianhrod';
+  stale.partnerships.find(pair => pair.id === pairId).notes = 'Lokale Eheergänzung';
+  stale.houses.find(house => house.id === 'house-arth').emblem = 'assets/local-arth.png';
+  const upgraded = resolveRegisteredFamilyUpgrade(family, stale);
+  assert.equal(upgraded.partnerships.find(pair => pair.id === pairId).notes, 'Lokale Eheergänzung');
+  assert.equal(upgraded.houses.find(house => house.id === 'house-arth').emblem, 'assets/local-arth.png');
+  for (const record of [...family.houses, ...family.partnerships]) {
+    assert.ok(record.extensions.registryManagedSourceRevision <= 3, record.id);
+  }
+});
 test('Cwingod übernimmt vollständige Quelle, Clinoch und einen seriellen Quellenzeitsprung', () => {
   assertValidFamily(family);
   assert.deepEqual([family.persons.length, family.partnerships.length, family.parentages.length, family.cadetBranches.length, family.timeJumps.length], [39,14,24,5,1]);
@@ -100,7 +115,10 @@ test('Cwingod übernimmt exakt die 19 neuen Originalbilder und schützt Tegid, A
 test('die Porträtkorrektur aktualisiert vorhandene Gegenakten feldgenau und wiederholungsfest', () => {
   const withoutExtensions = ({ extensions, ...record }) => record;
   for (const [familyId, revision] of Object.entries(CWINGOD_PORTRAIT_REVISIONS)) {
-    const current = getRegisteredFamily(familyId)?.family;
+    // Exercise this portrait release before the later Mathgham field correction.
+    const current = familyId === 'haus-arth'
+      ? withCwingodSourcePortraitUpgrade(HOUSE_ARTH_FAMILY)
+      : getRegisteredFamily(familyId)?.family;
     // The Rioga source may be published separately; it receives the same portrait
     // correction as soon as its full family record is available.
     if (!current?.persons.some(person => Object.hasOwn(CWINGOD_SOURCE_PORTRAITS, person.id))) continue;

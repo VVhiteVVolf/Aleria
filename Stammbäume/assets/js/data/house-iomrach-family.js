@@ -1,3 +1,4 @@
+import { withDunfalSourceCounterUpgrade } from './dunfal-source-counter-upgrade.js';
 import { withCeitheachSourceCounterUpgrade } from './ceitheach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
@@ -181,7 +182,7 @@ const DONNACHA_IDS = ['donnacha-iomrach', 'ulfhild-ancient-iomrach'];
 const YBHNA_IDS = ['fionnchu-somhairle', 'ybhna-iomrach'];
 const CONAN_IDS = ['conan-iomrach', 'breanna-somhairle'];
 
-export const HOUSE_IOMRACH_FAMILY = Object.freeze(withCeitheachSourceCounterUpgrade({
+export const HOUSE_IOMRACH_FAMILY = Object.freeze(withDunfalSourceCounterUpgrade(withCeitheachSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -397,4 +398,4 @@ export const HOUSE_IOMRACH_FAMILY = Object.freeze(withCeitheachSourceCounterUpgr
       timeJumps: []
     }
   }
-}));
+})));

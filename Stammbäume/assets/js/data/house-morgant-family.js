@@ -1,8 +1,9 @@
+import { withFaelaornSourceCounterUpgrade } from './faelaorn-source-counter-upgrade.js';
 import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { createVennyrSourceFamily } from './vennyr-source-family-builder.js';
 
 // Belegte Kindergruppen, Ehen und Endknoten aus Tabelle und Stammbaumgrafik.
-export const HOUSE_MORGANT_FAMILY = withVennyrSourceCounterUpgrade(createVennyrSourceFamily('morgant', {
+export const HOUSE_MORGANT_FAMILY = withFaelaornSourceCounterUpgrade(withVennyrSourceCounterUpgrade(createVennyrSourceFamily('morgant', {
   "personIds": [
     "kenehyr-founder-morgant",
     "meredith-unknown-morgant-founder",
@@ -164,4 +165,4 @@ export const HOUSE_MORGANT_FAMILY = withVennyrSourceCounterUpgrade(createVennyrS
   ],
   "headTerms": { "heveydd-morgant": "bis 1700", "hetwn-morgant": "1700–1720" },
   "sourceNote": "Tegins unmögliches Geburtsjahr 1618 wird wegen der 1697/1700 geborenen Eltern zu 1718 korrigiert. Hetwns Individualporträt zeigt einen Mann; Telyns als wegverheirateter Blodyn-Zweig geführte Ehe wird in Morgant fortgesetzt. Marchs Vermittlung an Haus Stwatchn aus Faelaorn ist ausdrücklich vom Nutzer bestätigt; die noch fehlende Hausakte wird nur notiert. Sluach wird nach Partnerkarte als Sluagh geführt."
-}));
+})));

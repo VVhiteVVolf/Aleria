@@ -1,0 +1,63 @@
+{
+  "slug": "dunfal",
+  "name": "Dunfal",
+  "date": "2026-10-07",
+  "displayDate": "07.10.2026",
+  "inventory": "assets/data/source-inventories/dunfal-families-2026-10-07.json",
+  "familyDecorators": [
+    {
+      "module": "blaithneach-source-counter-upgrade.js",
+      "function": "withBlaithneachSourceCounterUpgrade",
+      "slugs": [
+        "chulainn",
+        "ailella",
+        "cein",
+        "aonghusa",
+        "riangabra",
+        "eachtrai"
+      ]
+    },
+    {
+      "slugs": [
+        "chulainn",
+        "ailella",
+        "cein",
+        "birn",
+        "morath",
+        "casur",
+        "aonghusa",
+        "eachtrai"
+      ],
+      "function": "withAislearneachSourceCounterUpgrade",
+      "module": "aislearneach-source-counter-upgrade.js"
+    },
+    {
+      "slugs": [
+        "chulainn",
+        "nuadat",
+        "ailella",
+        "cein",
+        "birn",
+        "riangabra",
+        "morath",
+        "aonghusa",
+        "anbhair",
+        "casur",
+        "eachtrai"
+      ],
+      "function": "withAlbenSourcePortraitUpgrade",
+      "module": "alben-source-portrait-upgrade.js"
+    },
+    {
+      "slugs": [
+        "chulainn",
+        "morath"
+      ],
+      "function": "withFaelaornSourceCounterUpgrade",
+      "module": "faelaorn-source-counter-upgrade.js"
+    }
+  ],
+  "familyKinds": {
+    "ferbend": "sept"
+  }
+}

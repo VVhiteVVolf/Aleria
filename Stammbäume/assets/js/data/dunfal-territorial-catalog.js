@@ -30,7 +30,7 @@ export const DUNFAL_HOUSE_DEFINITIONS = Object.freeze([
     slug: 'ailella', name: 'Mac Sidhe’Ailella', emblemSlug: 'mac-sidhe-ailella', territoryId: 'tir-na-rithe',
     rankId: 'laird', seat: 'Dunfal', realm: 'Herrschaft der Mac Sidhe’Ailella',
     source: sourceRef('tir-na-rithe', 76, 74, 75, 0),
-    sourceNote: 'Quinn Ailella ist als Laird genannt. Die ältere Gegenakte „Mac Ailella“ mit Finnbar in Helgr bleibt bis zur Familienquelle eine ungeklärte mögliche Namensvariante; ihre Welt- und Haus-IDs werden nicht umgeschrieben.'
+    sourceNote: 'Quinn Ailella ist als Laird genannt. Die Familienquelle vom 07.10.2026 bestätigt anhand Geburt 1700 und Ehe mit Irma Helgr, dass Finnbar aus der älteren Gegenakte „Mac Ailella“ zu diesem Clan gehört. Seine Personen- und Welt-ID bleiben erhalten; die Herkunft wird dem bestehenden Haus Ailella zugeordnet.'
   },
   {
     slug: 'cein', name: 'Mac’Céin', emblemSlug: 'mac-cein', territoryId: 'tir-na-rithe',

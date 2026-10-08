@@ -1,3 +1,4 @@
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
 import { createCeitheachSourceFamily } from './ceitheach-source-family-builder.js';
 import { CEITHEACH_ADDITIONAL_SOURCE_CATALOG } from './ceitheach-additional-source-catalog.js';
 
@@ -340,4 +341,4 @@ const SOURCE = Object.freeze({
   "sourceNote": "Ein serieller Quellenzeitsprung. Die beiden Réamonns von 1650 und 1651 sind unterschiedliche Personen mit unterschiedlichen Paaren. Die jüngeren Réamonn- und Omhar-Affären erhalten getrennte uneheliche Kindergruppen. Quaira Boyd ist trotz der kopierten Überschrift Quira dieselbe Quellenperson."
 });
 
-export const HOUSE_AN_MORCHOE_FAMILY = createCeitheachSourceFamily('an-morchoe', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG);
+export const HOUSE_AN_MORCHOE_FAMILY = withAlbenSourcePortraitUpgrade(createCeitheachSourceFamily('an-morchoe', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG));

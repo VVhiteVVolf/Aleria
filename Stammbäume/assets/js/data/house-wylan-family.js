@@ -1,3 +1,4 @@
+import { withDunfalSourceCounterUpgrade } from './dunfal-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
 import {
@@ -145,7 +146,7 @@ const LIAM_IDS = ['liam-wylan', 'eirlys-dyngwn'];
 const ANONA_IDS = ['anona-wylan', 'alun-hwyaden'];
 const NONA_IDS = ['nona-wylan', 'evan-creyr'];
 
-export const HOUSE_WYLAN_FAMILY = Object.freeze({
+export const HOUSE_WYLAN_FAMILY = Object.freeze(withDunfalSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -537,4 +538,4 @@ export const HOUSE_WYLAN_FAMILY = Object.freeze({
     ],
     registryManagedRecordFields: ['folderPath']
   }
-});
+}));

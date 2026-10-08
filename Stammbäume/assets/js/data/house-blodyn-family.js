@@ -1,3 +1,4 @@
+import { withFaelaornSourceCounterUpgrade } from './faelaorn-source-counter-upgrade.js';
 import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { BLODYN_HOUSE_PROFILES } from './blodyn-house-profiles.js';
@@ -134,7 +135,7 @@ const TALARA_IDS = ['tarrant-1703-arth', 'talara-blodyn'];
 const WYNFOR_IDS = ['wynfor-blodyn', 'delwen-trachwyll'];
 const SIRIOL_IDS = ['siriol-blodyn', 'trachmyr-serenoc'];
 
-export const HOUSE_BLODYN_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
+export const HOUSE_BLODYN_FAMILY = withFaelaornSourceCounterUpgrade(withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -492,4 +493,4 @@ export const HOUSE_BLODYN_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze(
       parentages: ['parentage-cerys-blodyn', 'parentage-griffin-blodyn', 'parentage-telyn-diafol']
     }
   }
-}));
+})));

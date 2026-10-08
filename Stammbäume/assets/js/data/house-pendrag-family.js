@@ -1,3 +1,4 @@
+import { withFaelaornSourceCounterUpgrade } from './faelaorn-source-counter-upgrade.js';
 import { withCeitheachSourceCounterUpgrade } from './ceitheach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { PORTRAIT_PLACEHOLDERS } from '../config/portrait-placeholders.js';
@@ -157,7 +158,7 @@ const CEI_IDS = ['cei-pendrag', 'siabhan-rochraide'];
 const AFFAIR_YGRAINE_IDS = ['ygraine-pendrag', 'owain-draig'];
 const HOYER_IDS = ['hoyer-pendrag', 'siobhara-eisenherz'];
 
-export const HOUSE_PENDRAG_FAMILY = Object.freeze(withCeitheachSourceCounterUpgrade({
+export const HOUSE_PENDRAG_FAMILY = withFaelaornSourceCounterUpgrade(Object.freeze(withCeitheachSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -525,4 +526,4 @@ export const HOUSE_PENDRAG_FAMILY = Object.freeze(withCeitheachSourceCounterUpgr
     registryManagedHouseProfileFields: ['rankId', 'seat', 'barony', 'county', 'kingdom', 'regionEmblems'],
     registryManagedRecordFields: ['folderPath']
   }
-}));
+})));

@@ -1,0 +1,25 @@
+// Lokale Originalbilder aus der Aislearneach-Quelle vom 08.10.2026.
+export const HOUSE_FINTAIN_PORTRAITS = Object.freeze({
+  "muireadhach-founder-fintain": "assets/images/portraits/haus-fintain/muireadhach-founder-fintain.png",
+  "lorgain-1603-luchdon": "assets/images/portraits/haus-fintain/lorgain-1603-luchdon.jpg",
+  "cethern-1610-fintain": "assets/images/portraits/haus-fintain/cethern-1610-fintain.png",
+  "muireadhach-1627-fintain": "assets/images/portraits/haus-fintain/muireadhach-1627-fintain.png",
+  "diarmuid-1628-ui-faill-duibhne": "assets/images/portraits/haus-fintain/diarmuid-1628-ui-faill-duibhne.jpg",
+  "ruari-fintain": "assets/images/portraits/haus-fintain/ruari-fintain.png",
+  "eoghanas-1656-fintain": "assets/images/portraits/haus-fintain/eoghanas-1656-fintain.png",
+  "eachan-1669-fintain": "assets/images/portraits/haus-fintain/eachan-1669-fintain.jpg",
+  "talullaan-1680-fintain": "assets/images/portraits/haus-fintain/talullaan-1680-fintain.png",
+  "oranan-1684-fintain": "assets/images/portraits/haus-fintain/oranan-1684-fintain.png",
+  "gordanach-1675-fintain": "assets/images/portraits/haus-fintain/gordanach-1675-fintain.png",
+  "deirdreas-1676-fintain": "assets/images/portraits/haus-fintain/deirdreas-1676-fintain.png",
+  "urramach-1678-fintain": "assets/images/portraits/haus-fintain/urramach-1678-fintain.jpg",
+  "cethern-1692-fintain": "assets/images/portraits/haus-fintain/cethern-1692-fintain.jpg",
+  "edana-1703-fintain": "assets/images/portraits/haus-fintain/edana-1703-fintain.png",
+  "fingin-1705-fintain": "assets/images/portraits/haus-fintain/fingin-1705-fintain.jpg",
+  "baodan-1698-fintain": "assets/images/portraits/haus-fintain/baodan-1698-fintain.png",
+  "eamon-1705-fintain": "assets/images/portraits/haus-fintain/eamon-1705-fintain.jpg",
+  "mornain-1699-fintain": "assets/images/portraits/haus-fintain/mornain-1699-fintain.png",
+  "ramsay-1717-fintain": "assets/images/portraits/haus-fintain/ramsay-1717-fintain.png",
+  "oithiona-1723-fintain": "assets/images/portraits/haus-fintain/oithiona-1723-fintain.png",
+  "ealag-1721-fintain": "assets/images/portraits/haus-fintain/ealag-1721-fintain.png"
+});

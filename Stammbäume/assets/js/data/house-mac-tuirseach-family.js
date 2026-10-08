@@ -1,3 +1,4 @@
+import { withBlaithneachSourceCounterUpgrade } from './blaithneach-source-counter-upgrade.js';
 import { createCeitheachSourceFamily } from './ceitheach-source-family-builder.js';
 import { CEITHEACH_ADDITIONAL_SOURCE_CATALOG } from './ceitheach-additional-source-catalog.js';
 
@@ -254,4 +255,4 @@ const SOURCE = Object.freeze({
   "sourceNote": "Ein serieller Quellenzeitsprung. Ionnracht­aighs Ehe mit Latiaran und erzwungene Verbindung mit Samthann sind getrennt; Eóin ist das belegte Kind der Ehe. Dearbhla und Keallach sind verlobt."
 });
 
-export const HOUSE_MAC_TUIRSEACH_FAMILY = createCeitheachSourceFamily('mac-tuirseach', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG);
+export const HOUSE_MAC_TUIRSEACH_FAMILY = withBlaithneachSourceCounterUpgrade(createCeitheachSourceFamily('mac-tuirseach', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG));

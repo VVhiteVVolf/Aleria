@@ -39,7 +39,13 @@ export function withSourceFamilyFieldUpgrade(family, patch, { inventory, marker 
   const bounded = preserveSourceEntityBoundaries(family);
   const houseIds = new Set(bounded.houses.map(house => house.id));
   const additionalHouses = (patch.additionalHouses || []).filter(house => !houseIds.has(house.id));
-  let changed = additionalHouses.length > 0;
+  const branchIds = new Set(bounded.cadetBranches.map(branch => branch.id));
+  const additionalBranches = (patch.additionalCadetBranches || []).filter(branch => {
+    if (branchIds.has(branch.id)) return false;
+    branchIds.add(branch.id);
+    return true;
+  });
+  let changed = additionalHouses.length > 0 || additionalBranches.length > 0;
   const collections = Object.fromEntries(Object.entries(patch.collections).map(([collection, entities]) => [
     collection,
     bounded[collection].map(entity => {
@@ -57,6 +63,13 @@ export function withSourceFamilyFieldUpgrade(family, patch, { inventory, marker 
       ...house,
       extensions: {
         ...sourceManagedFields(house.extensions, ['name', 'emblem', 'motto', 'status'], patch.revision),
+        registryManagedSourceRevision: patch.revision
+      }
+    }))],
+    cadetBranches: [...(collections.cadetBranches || bounded.cadetBranches), ...additionalBranches.map(branch => ({
+      ...branch,
+      extensions: {
+        ...sourceManagedFields(branch.extensions, Object.keys(branch).filter(key => !['id', 'extensions'].includes(key)), patch.revision),
         registryManagedSourceRevision: patch.revision
       }
     }))],

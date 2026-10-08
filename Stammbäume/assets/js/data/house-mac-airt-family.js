@@ -1,3 +1,6 @@
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
+import { withDunfalSourceCounterUpgrade } from './dunfal-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -247,7 +250,7 @@ const FINTAN_IDS = ['rhianu-illwath', 'fintan-airt'];
 const STIOFAN_IDS = ['stiofan-airt', 'una-spouse-airt'];
 const KEVYN_IDS = ['kevyn-airt', 'roisin-blar'];
 
-export const HOUSE_MAC_AIRT_FAMILY = Object.freeze({
+export const HOUSE_MAC_AIRT_FAMILY = withAlbenSourcePortraitUpgrade(withAislearneachSourceCounterUpgrade(Object.freeze(withDunfalSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -626,4 +629,4 @@ export const HOUSE_MAC_AIRT_FAMILY = Object.freeze({
       timeJumps: []
     }
   }
-});
+}))));

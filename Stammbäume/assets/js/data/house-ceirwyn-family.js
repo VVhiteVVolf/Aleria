@@ -1,3 +1,4 @@
+import { withFaelaornSourceCounterUpgrade } from './faelaorn-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -149,7 +150,7 @@ function marriedAway(id, name, partnershipId, houseId, options = {}) {
   });
 }
 
-export const HOUSE_CEIRWYN_FAMILY = Object.freeze({
+export const HOUSE_CEIRWYN_FAMILY = withFaelaornSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -511,4 +512,4 @@ export const HOUSE_CEIRWYN_FAMILY = Object.freeze({
     registryManagedHouseProfileFields: ['rankId', 'seat', 'barony', 'county', 'kingdom', 'regionEmblems'],
     registryManagedRecordFields: ['folderPath']
   }
-});
+}));

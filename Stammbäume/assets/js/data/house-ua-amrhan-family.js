@@ -1,3 +1,4 @@
+import { withDunfalSourceCounterUpgrade } from './dunfal-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -198,7 +199,7 @@ const SCANNLAN_IDS = ['scannlan-amrhan', 'huaid-morath'];
 const ZOMHLAIGH_IDS = ['gorm-cuinn', 'zomhlaigh-amrhan'];
 const GORMAN_IDS = ['gorman-amrhan', 'tuiren-muiredaigh'];
 
-export const HOUSE_UA_AMRHAN_FAMILY = Object.freeze({
+export const HOUSE_UA_AMRHAN_FAMILY = Object.freeze(withDunfalSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -452,4 +453,4 @@ export const HOUSE_UA_AMRHAN_FAMILY = Object.freeze({
       timeJumps: []
     }
   }
-});
+}));

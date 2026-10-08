@@ -1,3 +1,4 @@
+import { withDunfalSourceCounterUpgrade } from './dunfal-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { CENYR_COUNTY_HOUSE_PROFILES } from './cenyr-county-house-profiles.js';
 import { GRAUE_WEITE_HOUSE_EMBLEMS } from './graue-weite-house-profiles.js';
@@ -170,7 +171,7 @@ const SYLVIA_AFFAIR_IDS = ['sylvia-cenyr', 'owain-draig'];
 const SIEFFRE_IDS = ['sieffre-arth', 'cerridwyn-grael'];
 const DENAWAL_1724_IDS = ['denawal-1724-arth', 'hildegard-wargh'];
 
-export const HOUSE_ARTH_FAMILY = Object.freeze({
+export const HOUSE_ARTH_FAMILY = Object.freeze(withDunfalSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -586,4 +587,4 @@ export const HOUSE_ARTH_FAMILY = Object.freeze({
     ],
     registryManagedRecordFields: ['folderPath']
   }
-});
+}));

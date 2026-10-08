@@ -1,3 +1,6 @@
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
+import { withBlaithneachSourceCounterUpgrade } from './blaithneach-source-counter-upgrade.js';
 import { withCeitheachSourceCounterUpgrade } from './ceitheach-source-counter-upgrade.js';
 import { createCeitheachSourceFamily } from './ceitheach-source-family-builder.js';
 
@@ -524,4 +527,4 @@ const SOURCE = Object.freeze({
   "sourceNote": "Drei in der Grafik markierte Überlieferungslücken bleiben getrennt. Sorcha gründet Ceinselaig, Wuirseach Eldath. Kopierte Partnerüberschriften Colmach/Moira wurden zu Jowan/Sorcha berichtigt. Graobhan und Eldrath in neuen Karten bezeichnen Craobhan und Eldath. Jathgal/Jathghal werden als dieselbe Person geführt. Fünf offenkundige Jahrhundertfehler wurden auf Nutzerwunsch berichtigt. Siabhans Todesjahr bleibt auf Nutzerwunsch unbekannt; 1720 ist nur eine unsichere Tabellenangabe."
 });
 
-export const HOUSE_UI_ROCHRAIDE_FAMILY = withCeitheachSourceCounterUpgrade(createCeitheachSourceFamily('ui-rochraide', SOURCE));
+export const HOUSE_UI_ROCHRAIDE_FAMILY = withAlbenSourcePortraitUpgrade(withAislearneachSourceCounterUpgrade(withBlaithneachSourceCounterUpgrade(withCeitheachSourceCounterUpgrade(createCeitheachSourceFamily('ui-rochraide', SOURCE)))));

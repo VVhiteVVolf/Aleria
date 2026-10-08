@@ -1,3 +1,4 @@
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createCadetHouseBranch,
@@ -207,7 +208,7 @@ const SIOBHAN_IDS = ['siobhan-cuinn', 'glaodhran-airgid'];
 const ATHGHALL_IDS = ['athghall-cuinn', 'peath'];
 const AIMHIRNE_IDS = ['zadran-laoch', 'aimhirne-cuinn'];
 
-export const HOUSE_TIR_AN_CUINN_FAMILY = Object.freeze({
+export const HOUSE_TIR_AN_CUINN_FAMILY = withAlbenSourcePortraitUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -486,4 +487,4 @@ export const HOUSE_TIR_AN_CUINN_FAMILY = Object.freeze({
       timeJumps: []
     }
   }
-});
+}));

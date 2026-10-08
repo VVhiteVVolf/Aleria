@@ -1,0 +1,446 @@
+{
+  "date": "2026-10-08",
+  "scope": "Culloch, Borthwick, Erskine, Grannd; original assets, house biographies, counterpart identity and ward links",
+  "publication": "local-only; no commit, push or deployment",
+  "counts": {
+    "sourceAppearances": 261,
+    "distinctPeople": 233,
+    "distinctPartnerships": 95,
+    "matchedExistingPeople": 53,
+    "newPortraits": 131,
+    "reusedPortraits": 26,
+    "unpicturedPeople": 76,
+    "warriorIllustrations": 4,
+    "counterpartFamilies": 15,
+    "counterpartPeople": 17,
+    "counterpartPortraitsAdded": 10,
+    "reciprocalWardLinks": 3,
+    "untouchedFamilies": 499
+  },
+  "families": [
+    {
+      "id": "haus-culloch",
+      "persons": 91,
+      "partnerships": 40,
+      "parentages": 50,
+      "houseNodes": 18,
+      "timeJumps": 2,
+      "portraits": 60,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-borthwick",
+      "persons": 57,
+      "partnerships": 23,
+      "parentages": 33,
+      "houseNodes": 8,
+      "timeJumps": 1,
+      "portraits": 41,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-erskine",
+      "persons": 59,
+      "partnerships": 24,
+      "parentages": 34,
+      "houseNodes": 8,
+      "timeJumps": 1,
+      "portraits": 40,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-grannd",
+      "persons": 54,
+      "partnerships": 22,
+      "parentages": 31,
+      "houseNodes": 8,
+      "timeJumps": 1,
+      "portraits": 37,
+      "sourceRevision": 2
+    }
+  ],
+  "userDecisions": {
+    "fiadhHaig": "Alive, born 1727; Borthwick year 1726 and dagger are template errors",
+    "grainnesPartner": "Rúairc Diuid born 1704; earlier explicit correction retained over copied Ronan row",
+    "capital": "Piobarach",
+    "forsyth": "Still prepared, as previously requested",
+    "war": "Historical lordships retained during war and partial occupation"
+  },
+  "sourceDecisions": [
+    "Rónnat Lockart remains born 1723 and Gobaith Haig 1722 according to their own origin tables, despite Culloch ward dates 1725.",
+    "Murchadh Lachlann remains deceased in 1720 according to his own origin table instead of 1736 in Borthwick.",
+    "Keitha Borthwick died 1735 according to new origin table; older Lachlann counterpart year 1739 corrected.",
+    "Uidhir Erskine died 1724 according to new origin table; older Lachlann counterpart year 1700 corrected. Oileán’s known death 1734 fills unknown counterpart year.",
+    "Marag/Morag, Ciara MacBorthwick/Borthwick and Pailtéar Cleirgh/Cleirigh are identified by their spouses and dates; existing identities retained.",
+    "Unnamed second Borthwick child heading continues Donnacha/Dechtire; Eilidh explicitly continues in Culloch.",
+    "Office lists are not birth dates or automatic head titles for every biological generation; Nechtan’s narrative Tiarna title does not replace Goirtín as listed head.",
+    "Kunigunde Falkert’s name and Mathringen origin are supplied in prose; previous unnamed husband and crest stay open.",
+    "Bearnárd/Seonaid remain a legal marriage with legitimate children despite coercion; five Svanhild children belong to their affair. Former unnamed guardian of Seonaid is not invented.",
+    "Four named Culloch sept founders link to prepared records; explicitly unnamed spouses remain unknown and template betrothal placeholders are omitted.",
+    "Grannd has Erskine as immediate liege beneath Culloch; documented in both new sources."
+  ],
+  "tests": {
+    "braigh": {
+      "passed": 8,
+      "failed": 0
+    },
+    "mathgham": {
+      "passed": 9,
+      "failed": 0
+    },
+    "serverValidation": {
+      "passed": 9,
+      "failed": 0
+    },
+    "legacy": {
+      "passed": 1246,
+      "failed": 0
+    },
+    "modular": {
+      "total": 174,
+      "passed": 166,
+      "failed": 8,
+      "note": "Same eight pre-existing Cwingod portrait/revision and historical fingerprint discrepancies; no new Braigh failure."
+    },
+    "offlineRegeneration": {
+      "modules": 16,
+      "changedModules": [],
+      "offline": true,
+      "baselineBytes": 225777
+    },
+    "unchangedFamilyFingerprints": 499,
+    "unmodifiedCounterpartFingerprints": 15
+  },
+  "browser": {
+    "desktop": [
+      {
+        "familyId": "haus-culloch",
+        "cardCount": 113,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-borthwick",
+        "cardCount": 67,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-erskine",
+        "cardCount": 69,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-grannd",
+        "cardCount": 64,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 1,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      }
+    ],
+    "mobile": [
+      {
+        "familyId": "haus-culloch",
+        "cardCount": 113,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-borthwick",
+        "cardCount": 67,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-erskine",
+        "cardCount": 69,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-grannd",
+        "cardCount": 64,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 1,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      }
+    ],
+    "counterparts": [
+      {
+        "familyId": "haus-sturmgeborene",
+        "cardCount": 93,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 2,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-wellenschild",
+        "cardCount": 64,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 2,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-blutstahl",
+        "cardCount": 73,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-an-morchoe",
+        "cardCount": 86,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-casur",
+        "cardCount": 62,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-morna",
+        "cardCount": 101,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-tartarfhuil",
+        "cardCount": 55,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-bhaird",
+        "cardCount": 90,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 4,
+        "longPartnershipRoutes": 1,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-lachlann",
+        "cardCount": 82,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-lockart",
+        "cardCount": 100,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-haig",
+        "cardCount": 76,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-illygoden",
+        "cardCount": 36,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-drewi",
+        "cardCount": 70,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-balauric",
+        "cardCount": 30,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-morlais",
+        "cardCount": 55,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      }
+    ],
+    "images": {
+      "biographyImages": 12,
+      "chartImageReferences": 277,
+      "failures": []
+    },
+    "notes": "Owned hidden Chrome/CDP used because the in-app browser was unavailable. No overlaps or line/card collisions. One wide ancestry route each in Borthwick and Erskine, and one wider Grannd marriage route for seven children across two partner branches. Existing Bhaird wide relationship route retained."
+  },
+  "counterpartRevisions": {
+    "haus-sturmgeborene": 3,
+    "haus-wellenschild": 3,
+    "haus-blutstahl": 4,
+    "haus-an-morchoe": 4,
+    "haus-casur": 6,
+    "haus-morna": 4,
+    "haus-tartarfhuil": 4,
+    "haus-bhaird": 3,
+    "haus-lachlann": 4,
+    "haus-lockart": 3,
+    "haus-haig": 3,
+    "haus-illygoden": 6,
+    "haus-drewi": 3,
+    "haus-balauric": 3,
+    "haus-morlais": 4
+  },
+  "sourceAudit": "assets/data/source-inventories/braigh-families-audit-2026-10-08.json",
+  "documentedDecisions": "DATENPFLEGE.md, section 13.27"
+}

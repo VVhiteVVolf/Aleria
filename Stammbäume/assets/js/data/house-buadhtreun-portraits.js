@@ -1,0 +1,26 @@
+// Lokale Originalbilder aus der Faerna-Quelle vom 08.10.2026.
+export const HOUSE_BUADHTREUN_PORTRAITS = Object.freeze({
+  "zachair-founder-buadhtreun": "assets/images/portraits/haus-buadhtreun/zachair-founder-buadhtreun.png",
+  "lomhan-founder-buadhtreun": "assets/images/portraits/haus-buadhtreun/lomhan-founder-buadhtreun.png",
+  "hectan-buadhtreun": "assets/images/portraits/haus-buadhtreun/hectan-buadhtreun.png",
+  "zachair-1604-buadhtreun": "assets/images/portraits/haus-buadhtreun/zachair-1604-buadhtreun.png",
+  "cathalan-1627-buadhtreun": "assets/images/portraits/haus-buadhtreun/cathalan-1627-buadhtreun.png",
+  "donncadh-1634-buadhtreun": "assets/images/portraits/haus-buadhtreun/donncadh-1634-buadhtreun.png",
+  "wighnach-1650-buadhtreun": "assets/images/portraits/haus-buadhtreun/wighnach-1650-buadhtreun.png",
+  "macraith-1660-buadhtreun": "assets/images/portraits/haus-buadhtreun/macraith-1660-buadhtreun.png",
+  "proinnsias-1653-durachd": "assets/images/portraits/haus-buadhtreun/proinnsias-1653-durachd.png",
+  "gearoid-1670-buadhtreun": "assets/images/portraits/haus-buadhtreun/gearoid-1670-buadhtreun.png",
+  "jilleen-1674-buadhtreun": "assets/images/portraits/haus-buadhtreun/jilleen-1674-buadhtreun.png",
+  "diarmait-1676-buadhtreun": "assets/images/portraits/haus-buadhtreun/diarmait-1676-buadhtreun.png",
+  "lomhan-1682-buadhtreun": "assets/images/portraits/haus-buadhtreun/lomhan-1682-buadhtreun.png",
+  "peagan-1685-buadhtreun": "assets/images/portraits/haus-buadhtreun/peagan-1685-buadhtreun.png",
+  "vannoch-1692-buadhtreun": "assets/images/portraits/haus-buadhtreun/vannoch-1692-buadhtreun.png",
+  "hectan-1702-buadhtreun": "assets/images/portraits/haus-buadhtreun/hectan-1702-buadhtreun.png",
+  "naodhan-1699-buadhtreun": "assets/images/portraits/haus-buadhtreun/naodhan-1699-buadhtreun.png",
+  "noracha-1704-buadhtreun": "assets/images/portraits/haus-buadhtreun/noracha-1704-buadhtreun.png",
+  "zachair-1703-buadhtreun": "assets/images/portraits/haus-buadhtreun/zachair-1703-buadhtreun.png",
+  "donncadh-1709-buadhtreun": "assets/images/portraits/haus-buadhtreun/donncadh-1709-buadhtreun.png",
+  "peigi-1696-durachd": "assets/images/portraits/haus-buadhtreun/peigi-1696-durachd.png",
+  "uachall-1704-boyd": "assets/images/portraits/haus-buadhtreun/uachall-1704-boyd.png",
+  "banan-1714-buadhtreun": "assets/images/portraits/haus-buadhtreun/banan-1714-buadhtreun.png"
+});

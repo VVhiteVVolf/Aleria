@@ -1,3 +1,4 @@
+import { withBlaithneachSourceCounterUpgrade } from './blaithneach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -121,7 +122,7 @@ function marriedAway(id, name, partnershipId, houseId, options = {}) {
   });
 }
 
-export const HOUSE_TEYRNGARCH_FAMILY = Object.freeze({
+export const HOUSE_TEYRNGARCH_FAMILY = withBlaithneachSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -403,4 +404,4 @@ export const HOUSE_TEYRNGARCH_FAMILY = Object.freeze({
     registryManagedRecordFields: ['folderPath'],
     chartViewport: { initialPosition: 'focus', initialScale: 0.5 }
   }
-});
+}));

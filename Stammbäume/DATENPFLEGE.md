@@ -386,6 +386,7 @@ Wiederkehrende oder strukturell relevante Fehlerlösungen werden hier append-onl
 | Haus Morthwyll: eigenständiges Arth-Vasallenhaus statt Kadettenhaus | Die frühere Leerakte leitete Morthwyll fälschlich aus Heddwen Arth und Sayres Morthwyll als Arth-Kadettenhaus ab. Die vollständige Quelle belegt jedoch eine eigene ältere Gründerlinie um Collen und Tymora; Heddwen heiratet erst später zu Sayres ein. Gwenfrewi, Rhondia, Heddwen, Tymora und Katewen besitzen bereits Gegenakten mit teilweise abweichenden Lebensdaten. Lowris Verlobter aus Clan Grindel ist ausdrücklich belegt, aber namentlich unbekannt | Collen und Tymora tragen den eigenständigen Morthwyll-Hausknoten. Genau ein absoluter Zeitsprung folgt seriell darunter und führt erst danach zu Merlion und Gwenfrewi. Die fortgeführte Kopfschaft läuft über Merlion, Sayres, Cadwallen und Glendower; Grugyn, Arawn und der jüngere Collen bilden die belegte Erbfolge. In Arth wird Heddwen nun normal an Haus Morthwyll wegverheiratet, ohne Kadettenhausknoten. Gwenfrewi, Braih, Tymora, Senara, Katewen und Guenevere erhalten direkte Wegverheiratet-Knoten; fremde Kinderlinien verbleiben ausschließlich in Penderyn, Cwningod, Unigol, Sélwyn, Crefyddol und Trachwyll. Lowris Verlobung bleibt eine Verlobung und erzeugt noch keinen Wegheiratsknoten. Gegenakten haben bei Widersprüchen Vorrang; Katewens technische Herkunft wird auf `house-morthwyll` vereinheitlicht | 32 Personen, 14 Partnerschaften, 17 Elternschaften, sechs direkte Wegverheiratet-Knoten und ein strikt serieller Zeitsprung; sämtliche Personen vom Gründerpaar erreichbar; Rang `knight-prince` unter `Cenyr/Klaueninsel/Wellenklaue/Caer Morben`, Lehnsherr Haus Arth; 15 neue lokale Individualporträts und fünf kanonisch wiederverwendete Gegenaktenbilder, Standardsilhouetten ausgelassen; Morthwyll Revision 1, Arth Revision 11 und Crefyddol Revision 4; falsche Kadetten-Leerakte kontrolliert ersetzt; 713 Tests. |
 | Haus Eirth: vollständige Arth-Kadettenlinie und politisches Vasallenhaus | Die frühere Registerakte enthielt nur Rhynnon Arth und Kyndra Crafanc. Die vollständige Quelle bezeichnet beide als Begründer des Hauses Eirth und führt die Linien Prysors und Wyndhams bis 1740 fort. Gaynor und Eirwyn heiraten dagegen in Haus Unigol ein; ihre dort bereits geführten Kinder dürfen nicht nochmals in Eirth erscheinen. Kyndras gedrucktes Geburtsjahr 1955 ist unmöglich, die vermeintliche Bildquelle ist lediglich die bekannte Standardsilhouette. | Eirth wird ausdrücklich zugleich als genealogisches Kadettenhaus und politisches Vasallenhaus der Arth geführt. Rhynnon/Kyndra tragen direkt den Eirth-Hausknoten; Prysor, Gaynor und Wyndham folgen seriell darunter, ohne Zeitsprung. Nur Prysor/Ifanwy und Wyndham/Gwendolen setzen Eirth fort. Gaynor/Dafydd sowie Eirwyn/Rhiwallon erhalten die normalen direkten Unigol-Zielhausknoten, während Wynston, Tawny, Lleulu und Rhys ausschließlich in Unigol verbleiben. Die Partnerschaften mit Arth, Crafanc, Unigol, Crefyddol, Pawen und Gwarchod verwenden identische Weltpersonen, Reihenfolgen und kanonische Gegenaktenporträts. Kyndras Jahr wird konsistent auf 1655 berichtigt; ihre Standardsilhouette wird nicht als Individualporträt importiert. | 23 Personen, acht Partnerschaften, 14 eindeutige Elternschaften, zwei direkte Wegverheiratet-Knoten und kein Zeitsprung; sämtliche Personen vom Gründerpaar erreichbar; Rang `knight-prince` unter `Cenyr/Klaueninsel/Nebelklaue/Caer Glaslyn`, Lehnsherr Haus Arth; elf neue lokale JPEG-Porträts und elf kanonisch wiederverwendete Gegenaktenbilder; Eirth Revision 2, Arth Revision 11 und Crafanc Revision 4; frühere Gründer-Leerakte kontrolliert ersetzt; 720 Tests. Die integrierte Browseransicht war während der Abschlussprüfung nicht verbunden; Adaptergraph, Hausknotenposition und Verknüpfungsstruktur sind vollständig geprüft. |
 | Haus Sélwyn: eigenständiges Ritterfürsten- und Vasallenhaus statt Arth-Kadettenhaus | Die frühere Leerakte leitete Sélwyn fälschlich aus Tegwen Arth und Morgan Sélwyn ab. Die vollständige Quelle belegt jedoch einen eigenen älteren Ursprung mit Morgan und Cariad; Tegwen heiratet erst mehrere Generationen später ein. Linette und Cariad führen in Dienyddiwr beziehungsweise Eirth fort, deren Kinder dürfen nicht nochmals in Sélwyn erscheinen. Senaras Geburtsjahr ist in der Quelle um drei Jahrhunderte verschoben | Morgan und Cariad tragen den eigenständigen Sélwyn-Hausknoten. Genau ein absoluter Zeitsprung folgt seriell darunter zu Garselid und Linette. Die Hauptlinie läuft über Garselid, Berwyn, Morgan und Cledwyn zu Evan; Cadfan, Edern und Colwynn bilden die zweite fortgeführte Linie. In Arth wird Tegwen normal an Haus Sélwyn wegverheiratet, ohne Kadettenhausknoten. Linette und Cariad erhalten direkte Wegverheiratet-Knoten; ihre fremden Kinderlinien verbleiben ausschließlich in Dienyddiwr und Eirth. Alle acht bestehenden Gegenbeziehungen verwenden identische Weltpersonen, Partnerschaftsreihenfolgen und Porträts. Senara und Enfys folgen den kanonischen Gegenakten mit 1662–1717 | 25 Personen, zehn Partnerschaften, 14 Elternschaften, zwei direkte Wegverheiratet-Knoten und ein strikt serieller Zeitsprung; sämtliche Personen vom Gründerpaar erreichbar; Rang `knight-prince` unter `Cenyr/Klaueninsel/Silberklaue/Caer Ebirth`, Lehnsherr Haus Arth; sieben neue lokale Individualporträts und 13 kanonisch wiederverwendete Gegenaktenbilder, Standardsilhouetten ausgelassen; Sélwyn Revision 2, Arth Revision 11 und Sgwarnog Revision 3; falsche Kadetten-Leerakte kontrolliert ersetzt; 728 Tests. |
+| Faelaorn: Quellensilhouetten und breite Mehrfachpartnerschaft | Zwei allgemeine Erwachsenenbilder wurden als Individualporträts angeboten; Ciarags zwei Kindergruppen führten bei Bhaird durch Brigids Hausverweis | Gemeinsame Bildauswahl schließt alle bekannten Silhouetten aus, der Emitter berücksichtigt nur ausgewählte Downloadbelege. Bestehende Partnergruppen- und Geschwisterzweigoptionen ordnen Bhairds Fortsetzung ohne neue Mehrfachkarten | 192 Silhouettenkopien ausgeschlossen; echte Kinderporträts bleiben zulässig; sieben Bäume ohne Kartenüberlappung oder bestätigte Linien-Karten-Kollision bei 1440 und 390 Pixeln |
 
 ### 13.1 Auswanderungszweig ist kein Nachkomme
 
@@ -594,13 +595,1006 @@ Referenzfälle vom 05.10.2026: Ui’Rochraide (105 Personen), Craobhan (49), Eld
 - Keallach bleibt dieselbe Weltperson in Eldath, Tuirseach und Leite. Die bisher geführten Lebensdaten 1697–1720 bleiben vorerst erhalten; Leites 1700–1730 und die abweichende Jagdgeschichte werden ausdrücklich als noch ungeklärte Angaben festgehalten.
 - Kriegerdarstellungen, Stammbaumgrafiken und individuelle Kinderporträts sind unter `assets/images/references/haus-…` mit Herkunft und SHA-256 gesichert. Der vollständige Nachweis steht in `assets/data/source-inventories/ceitheach-additional-families-2026-10-05.json`.
 
-### 13.17 Dunfal: territoriale Vorbereitung mit leeren Akten
+### 13.17 Dunfal: ursprüngliche territoriale Vorbereitung
 
-- Die Nutzerantwort vom 07.10.2026 verlangt zusätzlich zur Registerplanung leere Familienakten. Alle 13 Akten verwenden deshalb `createBlankHouseFamily`; weder unbekannte Gründerpaare noch die in Ratstabellen genannten Amtsträger werden als Genealogie angelegt.
-- Kurze bestehende Ziel-IDs bleiben erhalten. Hauspräfixe stehen im vollständigen Titel und erzeugen keine parallelen Familien. „Mac Ailella“ in der Helgr-Gegenakte wird ohne genealogischen Beleg nicht mit Ailella zusammengeführt.
+- Die erste Nutzerantwort vom 07.10.2026 verlangte zusätzlich zur Registerplanung leere Familienakten. Die ursprünglichen 13 Akten verwendeten deshalb `createBlankHouseFamily`; die spätere genealogische Ausarbeitung steht in Abschnitt 13.20.
+- Kurze bestehende Ziel-IDs bleiben erhalten. Hauspräfixe stehen im vollständigen Titel und erzeugen keine parallelen Familien. Die damals offene Zuordnung „Mac Ailella“ ist inzwischen durch die genealogische Quelle belegt.
 - Tir na Rithe gehört zum Fürstenclan Ard’Chulainn, Tir na Fathach zu Nic’Nuadat. Letzteres folgt aus Reichsübersicht, Nuadat-Wappen und Tagd Nuadats Amt; die dort kopierte Chulainn-Überschrift wird ausdrücklich als Fehler vermerkt. Leitheach, Dun Athar sowie die kopierten Rithe-/Dunfal-Angaben im Fathach-Abschnitt begründen keine zusätzlichen Gebiete oder Sitze.
 - Herrschaften erhalten eigene Gebietsordner und Wappen, aber allein dadurch keinen Baronsrang. Die benannten Amtsträger belegen neun Laird-Clans. Ferbend bleibt Bauernsept mit unbekanntem unmittelbarem Lehnsherrn; Ui’Duilb bleibt ausgestorben mit unbekanntem historischen Rang. Ohne letzte Erbperson entsteht kein genealogischer Endknoten.
 - Die Herrschaft der Fianna ist ein familienloses Gebiet. Alle vier Rohvorlagen bleiben archiviert; die inhaltlich identischen Rithe-Kopien ergeben nur eine Struktur. Der Quellen- und Wappennachweis liegt unter `assets/data/source-inventories/dunfal-2026-10-07.json`.
+
+### 13.18 Aislearneach: territoriale Vorbereitung und Nutzerkorrekturen
+
+- Sechs Vorlagen ergeben fünf Oberherrschaften, zehn Sitze, 18 Clanakten und die bürgerliche Sept Techtmar. Alle 19 Akten sind personenleer; keine Gründerpaare, Amtsträger-Genealogien oder leeren Herrschaftsüberschriften importieren.
+- Gaisgh → Broch an Traigh und Luchdon → Broch an Creig sind ausdrückliche Nutzerkorrekturen vom 07.10.2026. Die vertauschte Clanübersicht bleibt als überholter Quellenbeleg archiviert.
+- Ui Faill Duibhne vorerst als `expelled` führen. Der Nutzer nennt einen lebenden, begnadigten Clanteil: deshalb kein `extinctHouse` und kein Endknoten; Personen und historischer Rang bleiben bis zur Familienquelle offen.
+- Aislearneach/Aislaerneach, Geach/Gaech und Caetharlach/Cethearlach bleiben dokumentierte Schreibvarianten. Ceitheach in der Reichsvorlage sowie Ceallaigh/Gaelan/Koldair in Faela sind anhand von Übersicht, Wappen und konkreten Ämtern berichtigt. Kanonische kurze Haus-/Ziel-IDs bleiben erhalten.
+- Foraoise ist kirchlich: keine Derbforgaill-Familie erfinden. Techtmar bleibt bürgerlich; Muileach und Feannag sind Dún-Tiarna-Clans. Die Windreiter und Ahnenschilde sind keine genealogisch belegten Familien.
+- Na’Fiachiontach nicht ohne Familienquelle mit Ultán Tir Fiachiontach und `house-tir-fiachiontach` in Ciaróg gleichsetzen. Die Gegenakten und Welt-IDs bleiben unverändert.
+- Quelleninventar: `assets/data/source-inventories/aislearneach-2026-10-07.json`; 24 Originalwappen, sechs bytegetreue HTML-Dateien und 31 abgeglichene Gegenakten. Gemeinsame territoriale Leeraktenhülle mit Dunfal; keine Veränderung bestehender Akten durch die Extraktion.
+
+### 13.19 Blaithneach: Leerakten und weitere Leite-Platzierung
+
+- Vier Vorlagen ergeben drei Oberherrschaften, sechs Sitze und elf Clans. Zehn neue Akten bleiben personenleer. Vorhandene kurze Ziel-IDs und alle Gegenakten bleiben erhalten; keine Amtsträger-Genealogien oder anonymen Herrschaftsordner importieren.
+- Nutzerkorrektur vom 07.10.2026: Dal’Leites Überlebende siedelten nach Ceitheachs Niedergang nach Blaithneach über. Genau dieselbe Akte `haus-dal-leite` bleibt in Greinmhar/Ceitheach und wird zusätzlich als Laird in Ardán/Blaithneach eingetragen. 73 Personen, Welt-IDs, Hauptprofil, Quellenrevision und Genealogie bleiben unverändert. Der zusätzliche Registerplatz zählt keine zweite Familie und darf lokale Ergänzungen nicht ersetzen.
+- Nutzerkorrektur vom 07.10.2026: Faill’ Cléirigh ist ausgestoßen (`expelled`), trotz der ausgestorbenen Quellkategorie. Pailtéar Cléirigh (*1698) bleibt in Ceinselaig lebend. Kein `extinctHouse` oder Endknoten. Ui’Abhrach bleibt gemäß eindeutiger Reichsangabe ausgestorben; historischer Rang und Erlöschenszeitpunkt bleiben offen.
+- Dílses Geographie nennt fälschlich Sioran; Eorach folgt den mehreren unabhängigen Sitzbelegen. Ard Nessa/Ard’Nessa, Gáirner/Gáirnér und Ardan/Ardán bleiben dokumentierte Varianten. Bestehende Haeghra-/Heaghra-IDs werden ohne Genealogie nicht global vereinheitlicht. Der historische Déaglán (1625–1684) ist nicht automatisch der aktuelle Laird.
+- Sidhe’Magach/Mac Magach, Ua’Eala/Mac Eala sowie Gillesbuig/Gilleasbuig Leite bleiben offene Gegenidentitäten. Die Archive halten leere Spalten fest; Gilden, Erzkelterbund und Ahnenschilde erzeugen keine Familienakten.
+- Quelleninventar: `assets/data/source-inventories/blaithneach-2026-10-07.json`; vier bytegetreue Quellen, 15 Wappen einschließlich des wiederverwendeten Leite-Wappens und 41 abgeglichene Gegenakten. Tests müssen besonders die doppelte Platzierung bei einfacher Familienzählung, unveränderte Genealogie und den Erhalt lokaler Notizen sichern.
+
+### 13.20 Dunfal: ausgearbeitete Familien und Gegenakten
+
+Die zwölf Nutzerquellen vom 07.10.2026 sind bytegetreu archiviert. 626 beschriftete
+Personenfelder ergeben 544 Weltpersonen und 219 unterschiedliche Partnerschaften;
+mehrfach vorkommende Gegenpersonen bleiben dieselben Personen. Alle neuen Akten
+haben `sourceRevision: 2`. Ui’Duilb bleibt die unveränderte ausgestorbene Leerakte.
+
+| Akte | Personen | Partnerschaften | Elternschaften | Hausknoten | Zeitsprünge |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Ard’Chulainn | 70 | 25 | 44 | 11 | 0 |
+| Nic’Nuadat | 67 | 28 | 38 | 12 | 3 |
+| Mac Sidhe’Ailella | 66 | 28 | 37 | 14 | 2 |
+| Mac’Céin | 70 | 30 | 39 | 12 | 2 |
+| Dál’Birn | 49 | 21 | 28 | 7 | 1 |
+| Na’Riangabra | 45 | 20 | 24 | 5 | 1 |
+| Ruin’Morath | 66 | 27 | 38 | 12 | 2 |
+| Dál’Aonghusa | 47 | 20 | 26 | 8 | 1 |
+| Ua’Anbhair | 40 | 17 | 22 | 7 | 1 |
+| Ua’Casur | 49 | 21 | 27 | 11 | 1 |
+| Mac’Eachtrai | 48 | 19 | 28 | 8 | 1 |
+| Sept Ferbend | 7 | 3 | 3 | 0 | 0 |
+
+Quellenentscheidungen und verbleibende Abweichungen:
+
+- Nutzerbestätigt: Pól Céin wurde 1730 statt 1630 geboren. Xina Birn ist nur Orans Frau; die Zuordnung zu Banan ist ein Vorlagenfehler. Shurkan und Avissa sind Adoptivkinder Sétantas und Aleynas, keine belegten leiblichen Kinder.
+- Die alte Welt-ID `emer-ailella` verband zwei chronologisch unvereinbare Frauen. Owain Neidr ist Vater von Cadoc/Caitrin und Vorfahr des bereits 1555 geborenen Daffyd. Seine verstorbene Frau behält die historische ID. Tarrant Ciarógs Frau (*1675) erhält `person--haus-ailella--emer-1675-ailella`; ihre bestehende lokale Ciaróg-ID bleibt erhalten. Keine neue Beziehung zwischen beiden Frauen behaupten.
+- Ciorstaidh (*1700, Birn-Gegenperson): Tabelle „Luachra“, Grafik „Eachtrai“. **Weiterhin ungeklärt**; der Tabellenname Luachra bleibt mit ausdrücklicher Abweichungsnotiz bestehen. Nicht mit Ciorstaidh Stwatchn (*1682) zusammenführen.
+- Kavans Riangabra-Geburtsjahr 1611 ersetzt Birns unvereinbare Angabe 1632: Ihr Kind Tuiren wurde bereits 1630 geboren. Die vertauschten Riangabra-Partnerüberschriften werden nach Grafik und Gegenakten zu Ealar–Gearoid Neill und Kavan–Peadaróg Birn berichtigt.
+- Die Aonghusa-Kinderüberschrift „Wiórna/Naemhan“ ist kopiert: Wiórna und Carthach Casur sind das Elternpaar. Naemhan ist Wiórnas Geschwister und mit Vionnadh Anbhair verbunden.
+- Tadgs `16663` wird anhand Nuadats Herkunftsakte zu 1663. Guilleasbuig/Gilleasbuig, Aillela/Ailella, Wíórna/Wiórna und Hallaigh/Hailaigh/Haileigh sind anhand Partnern und Lebensdaten belegte Schreibvarianten. Mael Gaddach folgt der beschrifteten Grafik als Mael Caddach. Gráinne Chuulain wird als Chulainn geführt; stabile Personen- und Welt-ID bleiben erhalten.
+- Die eigene Ailella-Quelle belegt Finnbar aus Helgr als Ailella, Quinns Geburt 1648 statt 1654 und Malachias’ Geburt 1604 aus Eachtrai. Toirberths Tod 1687 und Vaithreachs Tod 1731 werden aus ihren Herkunftsakten ergänzt. Fionnghuala Nuadat ist seit 1729 verstorben. Liosa Céin wurde 1727 statt 1726 geboren. Kaivín Birns zuvor unbekannte Lebensjahre lauten 1628–1694.
+- Moraths historische Amtsliste enthält bei Torna eine als Amtsbeginn kopierte Geburtsangabe. Daraus wird kein unbelegter Amtsbeginn erzeugt. Flann (*1623) bleibt als gewähltes lebendes Oberhaupt erhalten; hohes Alter allein begründet keinen Tod. Birns beanspruchte königliche Herkunft erzeugt keine unbelegten Vorfahren.
+- Wairbhíns und Damháns ausdrücklich dargestellte, aber unbenannte Ehepersonen bleiben als „Unbekannte Eheperson“ erhalten. Namenlose zusätzliche Vorlagenfelder und Standardsilhouetten werden nicht als Personen oder Individualporträts importiert. Unbekannte Jahre und Geschlechter bleiben unbekannt.
+
+Artair Roth, Caolán Fiachiontach, Oideach Fintain, Fínghin Roth und Shan Ciaróg
+besitzen ausschließlich die ausdrücklich belegten Pflegebeziehungen. Shan bleibt
+leibliches Kind Yales und Aoifes in Ciaróg und wird an Anbhair vermittelt. Tiarnait,
+Aindí, Neartfhlaith, Liosa und Emer Casur behalten ihre belegten Herkunftslinien
+und direkten Mündel-Zielknoten. Diarmuid Duibhne bleibt mit Duibhne-Zugehörigkeit
+als Sohn Aodnaits in Ferbend sichtbar. Die ältere Nutzerentscheidung „ausgestoßen“
+für Ui Faill Duibhne wird durch den lebenden Ferbend-Zweig nicht aufgehoben.
+
+Die Binnenheirat Oran–Xina hat eine fachliche Ehe und einen Sohn Iagan. Die
+Fortführung hängt an Xinas Zweig; Oran besitzt dafür eine zusätzliche Partnerkarte,
+Xina eine ausdrücklich kinderlose Spiegelkarte bei Orans Herkunft. Keine zweite
+Weltperson oder Elternschaft anlegen. Riangabras Vierergruppe Máirtín–Glaisne–Loeg–Zosie
+verwendet geordnete Partnerkarten und getrennte Kinderbereiche. Loegs lokale
+Layoutfreigabe bezeichnet diese geprüfte Kette; zwei konkurrierende Zentrierungen
+dürfen nicht wieder eingeführt werden.
+
+318 neue Porträtdateien enthalten 38 nur archivierte Kinderreferenzen; 44 bereits
+kanonische Bilder werden wiederverwendet. 324 individuelle Porträtpfade bleiben
+für die Anzeige. Zephen Riangabra starb mit 15 und erhält ebenfalls die
+Kindersilhouette. Elf Kriegerbilder und zwölf Stammbaumgrafiken sind separat
+gesichert. Die kurzen Hausbios zeigen Kriegerbild und eigenes Wappen getrennt.
+
+Die 15 Gegenakten Helgr, Brathfengr, Mac Ard Cumhaill, Fiachrach, Gallchobhair,
+Dál Cruthin, Ard Trodach, Iomrach, Mac Airt, Amrhan, Wylan, Arth, Dienyddiwr,
+Marwolaeth und Ciaróg übernehmen nur die expliziten Felder aus
+`dunfal-source-counter-patches.js`. Der Abgleich erfolgt in ihrem kanonischen
+Export und bewahrt die vorherige strukturelle Revisionsgrenze. Gegenkorrekturen,
+Bildherkunft, Originalprüfsummen und sämtliche Quellkoordinaten stehen in
+`assets/data/source-inventories/dunfal-families-audit-2026-10-07.json`.
+
+Erkannte technische Fehlerklassen: Die Servervalidierung behandelte direkte
+Mündelvermittlungen irrtümlich wie Elternpaarknoten. Sie prüft jetzt die
+Mündelrolle, genau eine Personenverankerung und das Zielhaus; eine Kinderfortführung
+über diesen Knoten ist unzulässig. Doppelte Partnerzentrierungen in verzahnten
+Beziehungsgruppen werden durch lokale Layoutdaten vermieden. Die Altersprüfung
+verwendet bei bekannten Todesjahren das Sterbealter. Cwingods übernommene
+Haus-/Ehedaten behalten ihre eigene frühere Revisionsgrenze; spätere Arth-Revisionen
+dürfen diesen unveränderten Empfängerbestand nicht erneut zur Bearbeitung öffnen.
+
+Prüfprotokoll: `tests/dunfal-families.test.js` sichert Quellenabdeckung, Identitäten,
+Adoptionen, Pflegeverbindungen, Bildprüfsummen, Browser-/Servermodell und
+wiederholbare Migrationen mit lokalen Ergänzungen. Der vollständige Registerlauf
+umfasst 479 Akten. Bereits bekannte Layoutprobleme in Nic’Holloran und Eamhra
+bleiben außerhalb dieses Datenimports; der vorhandene Pawen-Referenzvergleich
+im alten Testlauf bleibt ebenfalls unverändert. Ergebnis: 120 erfolgreiche
+Node-Untertests, 1.245/1.246 Prüfungen im älteren Gesamtlauf und 10/10 betroffene
+Firebase-Tests. Die zwölf neuen Akten und Ciaróg sind bei 1440×1000 und 390×844
+ohne Kartenüberschneidungen, Linien-Karten-Kollisionen oder Laufzeitfehler geprüft;
+alle neuen Biografiebilder laden. Der Offline-Neuaufbau erzeugt identische Daten.
+Der kompakte Nachweis liegt in
+`assets/data/source-inventories/dunfal-families-validation-2026-10-07.json`.
+Kein Push und keine Veröffentlichung.
+
+### 13.21 Blaithneach: ausgearbeitete Familien und Gegenakten
+
+Die neun Nutzerquellen vom 08.10.2026 gehören nach ausdrücklicher Bestätigung
+zu Blaithneach, trotz „Dunfal“ im wiederholten Auftrag. Die HTML-Dateien sind
+bytegetreu archiviert. 559 beschriftete Personenfelder ergeben 465 unterschiedliche
+Weltpersonen und 192 Partnerschaften. Alle neun ausgearbeiteten Akten haben
+`sourceRevision: 2`. Ui’Abhrach bleibt die ausgestorbene Leerakte; Dal’Leites
+73 Personen und beide Registerplätze bleiben unverändert.
+
+| Akte | Personen | Partnerschaften | Elternschaften | Hausknoten | Zeitsprünge |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Mac Ard’Ronain | 87 | 37 | 49 | 16 | 5 |
+| Ard’Nessa | 79 | 31 | 47 | 14 | 2 |
+| Sidhe’Magach | 81 | 34 | 46 | 16 | 2 |
+| Ua’Suiste | 53 | 22 | 30 | 9 | 2 |
+| Dal’Gáirnér | 44 | 19 | 24 | 8 | 1 |
+| Ua’Goidin | 39 | 15 | 23 | 6 | 1 |
+| Ua’Eala | 48 | 20 | 27 | 8 | 1 |
+| An’Haeghra | 59 | 27 | 31 | 11 | 2 |
+| Faill’ Cléirigh | 69 | 34 | 34 | 13 | 1 |
+
+Quellenentscheidungen und verbleibende Abweichungen:
+
+- Nutzerbestätigt: Dympna (*1721) stammt von Fergus Nessa und Samthann Magach ab. Ihre Eltern waren verlobt; Dympna ist als unehelich überliefert. Die erzwungene Verbindung Samthanns mit Ionnrachtaigh Tuirseach bleibt kinderlos. Aingeals erzwungene Verbindung mit Koarnach und die Zwillinge Anndra/Fergus werden ebenfalls als solche geführt, nicht als freiwillige Affäre.
+- Sìmag ist nach Ronain- und Gáirnér-Quellen der uneheliche Sohn Goraidh Ronains und Moiraith Cétchathachs. Er ist der Gáirnér-Gründer; seine Eltern bleiben sichtbar, werden aber nicht zu Clan-Gründern umgedeutet. Diarmadas begründet Suiste, Lùcasach Eala und Bairrfhionn Nessa den Goidin-Zweig. Ausdrücklich überlieferte Generationenlücken erzeugen keine erfundenen Personen.
+- Die Kinderüberschriften bei Suiste/Goidin enthalten Kopierreste. Oiric gehört zu Maoldònaich/Sileach, Simeon zu Quinnan/Bridachach; bei Goidin gelten Fearghal/Caoimheas und Amlaibh/Eideard. Cathalag Eala gehört zu Fionnlagh/Aingeal, Peigas zu Raghnallóg/Maighread. Xorán und Caoimheas Cléirigh stammen von Uilleam/Nighean ab. Die Zuordnungen folgen Zellspannen, Lebensdaten und Grafiken.
+- Caoimheas Cléirighs Partner ist Fearghal Goidin, wie beide Tabellen und die Goidin-Grafik belegen; „Amlaibh“ in der Cléirigh-Grafik ist eine abweichende Beschriftung. Die bestehenden Gaothaire–Grian-, Onuist–Ziocha- und Pailtéar–Doileag-Beziehungen sind Verlobungen. Ihre historischen Beziehungs-IDs bleiben erhalten, obwohl sie das alte Wort `marriage` enthalten.
+- **Cléirigh bleibt ausgestoßen**, nicht ausgestorben. Pailtéar (*1698) und Morrigan (*1582) bleiben lebend. „Sidhe“ in der neuen Vorlage ist als Variante zum registrierten „Faill“ dokumentiert. Ein gegenwärtiges Oberhaupt wird nicht erfunden.
+- **Xoráns Todesangabe bleibt unsicher:** Die Tabelle nennt 1720; die Biografie beschreibt sein unbestätigtes Verschwinden im Krieg. Das Tabellenjahr bleibt mit ausdrücklicher Widerspruchsnotiz erhalten. **Súlach Goidin:** Tabelle lebend, Grafik mit Kreuz. Der Tabellenstatus bleibt ebenfalls mit Widerspruchsnotiz erhalten; kein Todesjahr wird ergänzt.
+- Tomaltach Leite (*1700) bleibt nach Herkunftsakte und Grafik lebend trotz eines isolierten Kreuzes in der Gáirnér-Tabelle. Sverre Goldglanz behält das Geburtsjahr 1714 seiner Herkunftsakte statt 1717. Vencha Mac Magach, Alastar Mac Eala und Donnagh Heaghra werden nach den neuen Familienquellen Magach, Eala und Haeghra zugeordnet; ihre bestehenden Personen-/Welt-IDs bleiben erhalten. Alastars eigene Eala-Quelle belegt 1674. Die bloße Namensähnlichkeit historischer Déagláns begründet keine Zusammenführung.
+- Goidins Erbfolge folgt der belegten Druidenwahl mit Meabh, keiner berechneten Erstgeburtsregel. Liúsaidh Haeghras Verlobung mit Jarlaith endet 1720 vor ihrer Ehe mit Goirtín. Samthann Magachs Lebensstatus sowie die Geschlechter mehrerer Dunfal-Gegenpersonen werden nach ihrer eigenen Familienquelle präzisiert; unbekannte Angaben bleiben unbekannt.
+
+Ròislaith Cétchathach, Ainean Durthacht, Cailean Conchobhair, Ráithín Gealach,
+Tòmas Gaisgh und Ideas Tir an Treathai besitzen nur die jeweils überlieferte
+Pflegeperson. Artair Ronain, Jathán und Rabhla Nessa, Máirín Magach und Mórag
+Eala behalten ihre leiblichen Herkunftslinien und direkte Mündel-Zielknoten.
+Mórags Ziel ist die vorhandene Akte `haus-ruin-ua-laoch`. Aindí Ailellas bereits
+bekannte Vermittlung nach Magach wird erhalten; ohne benannte Pflegeperson
+entsteht in Magach keine zusätzliche Elternschaft.
+
+Ealas Domhnullan besitzt eine zusätzliche Partnerkarte für die Verbindung mit
+Ottilde. Es bleiben genau eine Person, eine Affäre und eine Abstammung Vears;
+die Spiegelkarte ist ausdrücklich ohne Kinderfortführung. Haeghras Liúsaidh
+wird zwischen dem früheren Verlobten und ihrem Ehemann angeordnet. Beide
+Darstellungen nutzen vorhandene lokale Layoutfelder; der gemeinsame Renderer
+wurde dafür nicht verändert.
+
+251 neue Originalporträts enthalten 34 nur archivierte Kinderreferenzen.
+81 vorhandene kanonische Bilder werden wiederverwendet; 298 individuelle
+Porträtpfade stehen zur Anzeige bereit. Alle neun Clans erhalten eine kurze
+Hausbio und ihr Kriegerbild; neun Stammbaumgrafiken sind als separate Belege
+gesichert. Generische Quellsilhouetten werden nicht als Individualporträts
+übernommen. Die Altersprüfung berücksichtigt bekannte Todesjahre.
+
+23 bestehende Akten erhalten nur die geprüften Felder aus
+`blaithneach-source-counter-patches.js`; 26 vorhandene Personen sind betroffen.
+Der Adapter arbeitet im kanonischen Familienexport und bewahrt die frühere
+strukturelle Revisionsgrenze, lokale Notizen und eigene Ergänzungen. Die sechs
+betroffenen Dunfal-Akten haben danach Revision 3; übrige Dunfal-Akten bleiben
+auf ihrem bisherigen Stand. Alle 447 Akten außerhalb der neun neuen Familien
+und 23 Gegenakten stimmen normalisiert mit den Vorher-Prüfsummen überein.
+
+Die gemeinsamen Importstufen liegen in `scripts/family-source-import/`.
+`scripts/blaithneach-source-import/` enthält Konfiguration, geprüfte Zellpläne,
+Identitätsentscheidungen, Quellenkorrekturen, Bildbelege und den auf benötigte
+Felder reduzierten Vorherbestand. Die Aufrufskripte von Dunfal und Blaithneach
+verwenden dieselben Stufen: `extract.py`, `person_inventory.py`, `resolve.py`,
+`portrait_assets.py`, `portrait_bindings.mjs` mit Node und `emit.py`.
+Bereits gesicherte Bilddateien benötigen keinen erneuten Download; `download.py`
+verarbeitet nur ein ausdrücklich übergebenes Bildmanifest. Gemeinsame
+Familienerzeugung: `territorial-source-family-builder.js`, mit getrennten
+Katalogen und Quellentscheidungen je Fürstentum.
+
+Prüfung: 127 modulare Tests und neun Serverprüfungen bestanden. Im älteren
+Bestandstest bestehen 1245/1246 Prüfungen; nur der bereits zuvor bekannte
+Pawen-Referenzvergleich schlägt fehl. Alle neun Stammbäume sind bei 1440×1000
+und 390×844, alle 23 ergänzten Akten bei 1440×1000 ohne Kartenüberschneidungen,
+Linien-Karten-Kollisionen und Laufzeitfehler geprüft. Die neun Hausbios laden
+alle 27 Bildinstanzen. Der Neuaufbau aus dem reduzierten Vorherbestand erzeugt
+identische Daten; Dunfals Personeninventar, Identitätsauflösung und Datensätze
+bleiben beim Neuaufbau ebenfalls identisch. Nachweise:
+`assets/data/source-inventories/blaithneach-families-audit-2026-10-08.json` und
+`blaithneach-families-validation-2026-10-08.json`. Kein Push, keine Veröffentlichung.
+
+### 13.22 Aislearneach: vollständige Quellenstammbäume
+
+Die 19 HTML-Vorlagen vom 08.10.2026 sind bytegetreu archiviert. 908 benannte
+Personenfelder ergeben 752 unterschiedliche Personen und 303 Partnerschaften.
+179 bereits bekannte Personen behalten ihre bisherigen IDs und Welt-IDs.
+Alle 18 Clans und die bürgerliche Sept Techtmar sind ausgearbeitet und ersetzen
+mit `sourceRevision: 2` die vorbereiteten Leerakten.
+
+| Akte | Personen | Partnerschaften | Elternschaften | Hausknoten | Zeitsprünge |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Clan Ui’Morna | 81 | 33 | 47 | 14 | 3 |
+| Clan Tir An’Ceallaigh | 73 | 30 | 42 | 14 | 2 |
+| Clan Mac’Fintain | 72 | 30 | 41 | 15 | 1 |
+| Clan Mac’Durthacht | 90 | 36 | 53 | 18 | 3 |
+| Clan Ua’Coronach | 37 | 15 | 21 | 3 | 1 |
+| Clan Na’Morgacht | 32 | 14 | 17 | 6 | 0 |
+| Clan An’Rioga | 51 | 21 | 29 | 9 | 1 |
+| Clan Ua’Fiáintorc | 47 | 21 | 25 | 8 | 1 |
+| Clan Ua’Tréada | 39 | 17 | 21 | 7 | 1 |
+| Clan Ua’Muileach | 50 | 21 | 28 | 9 | 1 |
+| Clan Ui Faill Duibhne | 42 | 20 | 21 | 9 | 2 |
+| Clan An’Feannag | 43 | 19 | 23 | 7 | 1 |
+| Clan An’Uilebheist | 34 | 14 | 19 | 4 | 1 |
+| Clan Nic’Cnogan | 35 | 15 | 19 | 4 | 1 |
+| Sept Techtmar | 9 | 3 | 5 | 0 | 0 |
+| Clan Na’Fiachiontach | 49 | 19 | 29 | 8 | 1 |
+| Clan Dal’Tartarfhuil | 46 | 19 | 26 | 7 | 1 |
+| Clan An’Gaisgh | 38 | 16 | 21 | 6 | 1 |
+| Clan Na’Luchdon | 40 | 18 | 21 | 8 | 1 |
+
+Die maßgeblichen Nutzerentscheidungen bleiben verbindlich: Seasaidh Cnogan
+wurde 1718, Vear 1725 geboren; Sorcha Ceallaigh starb 1739. Gaisgh sitzt in
+Broch an Traigh, Luchdon in Broch an Creig. Duibhne bleibt ausgestoßen; sein
+überlebender, begnadigter Zweig begründet keinen erfundenen amtierenden Laird.
+
+Quellenentscheidungen:
+
+- Keiras Morna begründet Muileach, Brian Morna Coronach; Lorgain und Kealtán Durthacht begründen Fiantorc und Treada. Eochaidh ist der Durthacht-Gründer; seine Eltern bleiben darüber sichtbar. Seine Mutter Ainnle und seine namensgleiche Ehefrau sind verschiedene Personen. Historische Amtsjahre werden nicht als Geburtsjahre verwendet.
+- Kopierte Kinderüberschriften bei Muileach, Duibhne, Fiachiontach und Tartarfhuil werden anhand der Grafiken und Gegenakten berichtigt. Maol und Siobhan gehören zu Aodhagán/Taillte; Duibhnes Diarmuid/Oithíona und Colmas/Eilidhan behalten ihre getrennten Kindergruppen. Balthos/Liadan sind Coemgens Eltern. Cathal/Ibhail sind Eltern des Fiachiontach-Kinderblocks; Macmhar/Loinneog Eltern von Bran, Breandan und Griana.
+- Gaisghs kopierte Sìm-Zelle bezeichnet nach Grafik und Kinderüberschrift Vairbh Goidin, Nearts Partnerin. Ihr überliefertes Jahr 1657 bleibt mit Korrekturhinweis erhalten. Morna 198.2 enthält Oighrig (*1730); nur die fehlende öffnende Jahresklammer wird bei der Extraktion ergänzt, der Originaltext bleibt im Archiv.
+- Fabiennes Mann ist Caílte Ronain (*1694) gemäß eigener Ronain-Akte. Er wird nicht mit seinem Bruder Caiden verwechselt. Feamainn Ronain behält 1582 statt des Duibhne-Kopierfehlers 1682. Zachrachs Jahr 1696 folgt seiner Séaghdha-Akte. Die eigene Ceallaigh-Quelle präzisiert Cinnfhlaiths Geburt auf 1633; die eigene Rioga-Quelle Eibhlins auf 1609. Bestehende IDs bleiben trotz enthaltenem älterem Jahr erhalten.
+- Muiredachs Geburtsjahr folgt Fintain, Mornaíníns Ceallaigh, Brianachs Morgacht und Gearoids Treada. Namenvarianten wie Birdín/Bridín, Eimerarín/Eimearín, Marsaili/Mairsaili, Diarine/Dairine und Neechtanas/Nechtanas sind über belegte Partner und gleiche Lebensdaten abgeglichen. Unbekannte Partner gleichen Namens werden nicht pauschal zusammengeführt.
+- Brigid Ceallaigh und Iseult Tartarfhuil sind in ihrer jeweiligen eigenen Tabelle und Grafik lebend dargestellt. Diese Belege ersetzen die unbezeichneten Todesangaben der Ciaróg-Gegenakte mit ausdrücklicher Notiz. Bereits bekannte konkrete Todesjahre ergänzen unbekannte Jahresangaben der neuen Quellen. Unbelegte Todesjahre und allein aus hohem Alter abgeleitete Todesfälle werden nicht erfunden.
+- Zennia Cnogan und Zibhí Feannag stammen aus erzwungenen Verbindungen. Ihre bisherigen IDs `zennia-eamhra` und `zibhhi-seaghdha` sowie ihre Welt-IDs bleiben erhalten; Name und Clanzugehörigkeit folgen den neuen Herkunftsakten. Cnogans matrilineare Erbfolge und die ausdrücklich beschriebenen Geschlechter Tormoids und Barabals bleiben erhalten.
+- Pflegebeziehungen sind eigenständige `foster`-Elternschaften: Fóla Roth bei Garbhán, Nairn bei Tameran, Jathán Nessa bei Gòrdan, Mael Mata bei Cethern, Baodan Midgna bei Eochaidh und Mughna Cumhaill bei Háscan. Die biologischen Herkunftslinien fortgegebener Kinder bleiben sichtbar. Caoláns Blumenwappen und die Gegenakte belegen Ailella; Ultán ist nach Ciaróg vermittelt. Seine alte Kennung `ultan-tir-fiachiontach` gehört jetzt nachweislich zu Fiachiontach.
+
+Kelchs Ehe und Affäre werden in Morna als lokaler Dreierblock mit getrennten
+Kinderbereichen dargestellt. Kelch erscheint genau einmal. Die vorhandenen
+Layoutfelder `chartCenterBetweenPartnerPersonIds` und
+`chartAlignPartnerOverChildrenPersonId` lösen die Überlagerung Keir/Eilidhan;
+Renderer und fachliche Elternschaften bleiben unverändert.
+
+Alle Akten besitzen kurze Hausbiografien. Die 18 gelieferten Kriegerbilder
+sind ihrem jeweiligen Clan zugeordnet. Techtmar besitzt keine mitgelieferte
+Kriegerdarstellung und erhält keine erfundene. 407 neue Originalporträts sind
+lokal gesichert, davon 61 Kinderbilder nur als Referenz; 111 kanonische Bilder
+werden wiederverwendet. 457 individuelle Bildpfade stehen zur Darstellung
+bereit. Generische Quellsilhouetten werden nicht als neue Porträts behandelt.
+
+29 bestehende Gegenakten erhalten 45 geprüfte Personenänderungen, darunter
+22 ergänzte Porträts. Vier alte Duibhne-/Ghaisgh-Hausverweise führen jetzt zu
+den vorhandenen kanonischen Akten. Die Änderungen laufen ausschließlich über
+`aislearneach-source-counter-patches.js` und den gemeinsamen Feld-Upgrade;
+lokale Titel, Ergänzungen, Orientierung und vorherige Genealogiegrenzen bleiben
+bestehen. Alle 431 anderen Akten stimmen vollständig mit ihren Vorher-Prüfsummen
+überein. Die Bildrichtlinien älterer Quellen bleiben als Herkunftsvermerk erhalten;
+die ausdrücklich erlaubten neuen Gegenaktenbilder ergänzen diesen Bestand.
+
+Gemeinsame Importstufen: `scripts/family-source-import/`. Entscheidungen,
+Zellpläne, Biografien, Bildbelege und reduzierter Vorherbestand liegen getrennt
+in `scripts/aislearneach-source-import/`. Hausart und abweichende Anzeigenamen
+sind Konfiguration. Bereits geprüfte Porträt-Modulbindungen werden beim
+Neuaufbau beibehalten, damit spätere Importe keine zyklischen Bildimporte in
+älteren Familien erzeugen. Alle sechs Offline-Stufen reproduzieren die Daten
+von Dunfal, Blaithneach und Aislearneach unverändert.
+
+Prüfung: 136 modulare Tests und neun Serverprüfungen bestanden. Im älteren
+Bestandstest bestehen 1245/1246 Prüfungen; allein der bekannte Pawen-
+Referenzvergleich bleibt fehlerhaft. Alle 19 neuen Bäume wurden bei 1440×1000
+und 390×844 ohne Kartenüberlagerungen, Linien-durch-Karte-Kollisionen oder
+Laufzeitfehler geprüft. Alle 19 Hausbios laden sämtliche 56 Bildinstanzen.
+Von 29 Gegenakten sind 27 ohne Kollisionen; die älteren Probleme in Nic Holloran
+(vier Überlagerungen, sieben Linien-Karten-Kollisionen) und Eamhra (eine
+Überlagerung) sind im direkten Vergleich mit dem Vorherbestand bei identischer
+Fenstergröße unverändert. Nachweise: `aislearneach-families-audit-2026-10-08.json`
+und `aislearneach-families-validation-2026-10-08.json` unter
+`assets/data/source-inventories/`. Kein Commit, Push oder Deployment.
+
+### 13.23 Alben: vorhandene Sprösslingsporträts wieder einbinden (08.10.2026)
+
+Der vollständige Abgleich umfasst 86 registrierte Familienakten aus Ceitheach,
+Leitheach, Dunfal, Blaithneach, Aislearneach und Faelaorn mit 3.063 unterschiedlichen
+Personen-IDs. 153 vorhandene Individualbilder werden in 165 Personenauftritten
+innerhalb von 52 Akten ergänzt; darunter sieben bei Nessa und vier bei Haeghra.
+Es wurden keine neuen Bilder erzeugt oder fremde Personenbilder zugewiesen.
+Neun Kinder besitzen auch im Quellenbestand kein Individualbild und behalten
+ihre Kindersilhouette. Alle bereits eingetragenen lokalen Bildpfade sind vorhanden.
+
+**Ein belegtes Individualporträt hat unabhängig vom Alter Vorrang.**
+`portraitPlaceholder: 'child'` bezeichnet ausschließlich das Ersatzbild, falls
+kein Porträt vorhanden ist. Die früheren Importregeln, nach denen Bilder unter
+16-Jähriger nur archiviert wurden, sind damit aufgehoben. Die Originaldateien
+bleiben an ihren geprüften Pfaden; historische `referenceOnly`-Kennzeichnungen
+in alten Importprotokollen beschreiben den damaligen Zustand.
+
+`alben-source-portraits.js` hält die geprüften Zuordnungen und Aktenrevisionen;
+`alben-source-portrait-upgrade.js` verwendet die gemeinsame feldweise Übernahme.
+Es ändern sich ausschließlich Porträts und deren Revisionsmetadaten. Namen,
+Lebensdaten, Weltpersonen-IDs, Verbindungen, Biografien und Layout bleiben erhalten.
+Die neue Kennzeichnung `registryManagedFieldFillOnlyRevisions` schützt bereits
+selbst eingetragene Bilder bei dieser Ergänzung. Spätere ausdrückliche
+Quellenkorrekturen mit einer neuen Revision bleiben möglich.
+
+Der gemeinsame Import unter `scripts/family-source-import/` unterdrückt
+Kinderbilder künftig weder bei der Dateiauswahl noch beim Gegenaktenabgleich.
+Die Importkonfigurationen erhalten den nachfolgenden Porträtabgleich bei einer
+erneuten Generierung. SHA-256, Herkunft, betroffene Akten und die neun offenen
+Kinderbilder stehen in `assets/data/source-inventories/alben-portraits-2026-10-08.json`.
+Die Regressionstests sichern sämtliche genealogischen Inhalte und alle 427
+unbeteiligten Akten. Nessa und Haeghra wurden auf Desktop und Mobilansicht geprüft.
+Zusätzlicher Importtest: `python -X utf8 tests/source-portrait-import.test.py`.
+Diese Korrektur bleibt bis zur ausdrücklichen Freigabe lokal.
+
+### 13.24 Faelaorn: alte Herrschaften während Krieg und Teilbesetzung (08.10.2026)
+
+Die sieben Nutzerquellen bereiten Faelaorn und seine sechs alten Oberherrschaften
+Tir na Rann, Tir na Mathgham, Tir na Braigh, Tir na Faerna, Tir na Damh und Tir na
+Brann vor. Die ausdrückliche Nutzerkorrektur ist verbindlich: Krieg mit Skjaerheim,
+etwa die Hälfte übernommen, **weiterhin Gliederung nach den alten Herrschaften**.
+Es sind weder konkrete Besatzungsgrenzen noch neue skjaerheimische Lehen belegt.
+Der Konflikt steht deshalb im Landesregister und in den Aktenbeschreibungen sowie
+als getrennte Metadaten unter `extensions.faelaornWarContext`.
+
+39 neue Leerakten umfassen 34 Clans und die fünf Braigh-Septs Malairt, Dubhair,
+Gréin, Gaesa und Treoir. Alle verwenden die bestehende `territorial-family-factory.js`
+mit `sourceRevision: 1`; Personen, Partnerschaften, Elternschaften, Nebenlinien
+und Zeitsprünge bleiben leer. Die vorhandene Dubhan-Akte bleibt einschließlich
+aller 24 Personen, Bilder, Identitäten und Auswanderungsverbindungen unverändert.
+Das Register zählt damit 40 unterschiedliche Faelaorn-Akten. Die unbekannten
+Wohnorte der fünf Septs werden nicht durch erfundene Heimstätten ersetzt.
+
+Asyl ist eine zusätzliche Platzierung derselben Akte, keine neue Herrschaft:
+Durachd und Eoghainn erscheinen außerdem in Tir na Rann, Duff in Balgavrie und
+Airdmhor in Caisteal Gorm (beide Tir na Mathgham). Ihre Hauptzuordnung bleibt am
+alten Sitz; Asylprofile erhalten keinen neuen Lehnsherrn. Forsyth bleibt unter
+Inverfay in Tir na Damh und erscheint zusätzlich in der ausdrücklich bezeichneten
+Mathgham-Exklave Inverfay. Alle fünf Verweise verwenden bestehende
+`registryAdditionalPlacements`; die Landeszahl zählt jede Akte nur einmal.
+
+Quellenentscheidungen:
+
+- Nach ausdrücklicher Nutzerkorrektur ist Piobarach zugleich Hauptstadt und
+  Urquharts Stammsitz. Die frühere abweichende Hauptstadtangabe war ein Vorlagenfehler.
+- Buadhtreun sitzt in Beinnstir gemäß Landesübersicht, Regionalsteckbrief und
+  Amtszeile. Die einzelne abweichende Angabe Airdree gehört zum Muirgheal-Sitz.
+- Todeszeichen an Faernas Amtsträgern bedeuten kein Erlöschen ihrer vier Clans.
+  Nur Mac Ffearnach ist ausdrücklich ausgestorben; Rang und Erlöschensjahr bleiben offen.
+- Durachd und der Asyleintrag „Tir An Durchad“ tragen dasselbe Wappen und bilden
+  eine Akte. Die bestehende Gegenaktenkennung `house-durchadh` bleibt dagegen
+  bis zur Klärung unverändert; ebenso `house-ard-dubglais`, `house-macborthwick`
+  und `house-haigh`.
+- Der belegte Dubhan-Verweis `haus-mac-dubglais` führt über einen Routenalias auf
+  `haus-dubglais`. Bestehende Haus- und Weltpersonenkennungen werden nicht umgeschrieben.
+- Faelaorns An Ness und Ó / Dál Bhaird bleiben von Blaithneachs Ard’Nessa und
+  Ceitheachs An’Bhaird getrennt. Vorlagenreste zu Ceitheach und Aislearneach,
+  Gilden sowie namenlose Platzhalter werden nicht als Familien importiert.
+
+Die Originaltabellen, Quellenkoordinaten, Korrekturen und SHA-256-Belege stehen in
+`assets/data/source-inventories/faelaorn-2026-10-08.json` und dem gleichnamigen
+HTML-Archiv. 46 geprüfte lokale PNGs umfassen Landeswappen, sechs Gebietswappen
+und 39 Familienzeichen. Wiederholbarer Ablauf: `scripts/faelaorn-preparation/prepare.py`,
+`download.py assets.json`, erneut `prepare.py`. Der Downloader verwendet den
+gemeinsamen Quellenimport; er erzeugt keine Bilder.
+
+`tests/faelaorn-structure.test.js` prüft Browser- und Serverschema, historische
+Zuordnung, Asylverweise, Identitätstrennung und alle Quellenbilder. Die Prüfsummen
+in `scripts/faelaorn-preparation/baseline-fingerprints.json` sichern sämtliche
+479 vorherigen Familienakten. Browserprüfungen bei 1440 und 390 Pixeln bestätigen
+Registerwege, Asyl und Exklave, fünf Septs sowie repräsentative leere Clan-/Septakten
+mit geladenen Wappen. Die Änderungen bleiben lokal; keine Veröffentlichung.
+Prüfprotokoll: `assets/data/source-inventories/faelaorn-validation-2026-10-08.json`;
+147 modulare Tests erfolgreich, in der Altsuite 1.245 von 1.246 erfolgreich mit
+dem bereits zuvor vorhandenen Pawen-Referenzgleichheitsfehler.
+
+### 13.25 Faelaorn: sieben ausgearbeitete Stammbäume (08.10.2026)
+
+Die fünf neuen HTML-Quellen zu Urquhart, Bhaird, Luthsach, Lachlann und Drummond
+sowie die beiden beigefügten Grafiken zu Stwatchn und Dundas ersetzen sieben der
+vorbereiteten Leerakten. Alle sieben haben `sourceRevision: 2`; 32 vorbereitete
+Akten und die schon ausgearbeitete Dubhan-Akte bleiben erhalten. Krieg mit
+Skjaerheim, Teilbesetzung und die Gliederung nach den **alten Herrschaften** gelten
+unverändert. Eine heutige Besatzungsgrenze wird nicht erfunden.
+
+| Akte | Personen | Partnerschaften | Abstammungen | Hausdatensätze | Hausverweise | Überlieferungslücken |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Urquhart | 135 | 57 | 77 | 38 | 27 | 7 |
+| Bhaird | 72 | 31 | 40 | 21 | 14 | 2 |
+| Luthsach | 52 | 20 | 31 | 15 | 9 | 1 |
+| Lachlann | 69 | 30 | 38 | 24 | 12 | 0 |
+| Drummond | 67 | 27 | 39 | 21 | 11 | 0 |
+| Stwatchn | 67 | 27 | 39 | 23 | 11 | 2 |
+| Dundas | 46 | 20 | 25 | 19 | 8 | 1 |
+
+508 Quellenvorkommen ergeben 444 verschiedene Weltpersonen und 180 verschiedene
+Partnerschaften. Gegenakten verwenden dieselben vorhandenen Personen- und
+Weltkennungen. 14 Gegenakten erhalten ausschließlich belegte Feldkorrekturen bzw.
+Beziehungsstatus; davon werden zehn fehlende Porträts ergänzt. Die übrigen 497
+Registerakten werden durch diesen Import nicht verändert. Der isolierte Vergleich
+bestätigt ihre früheren Prüfsummen; das währenddessen separat hinzugekommene
+Cwingod-Porträtupdate wird dabei ausdrücklich ausgeklammert und bleibt im Projekt erhalten.
+Lokale Notizen, eigene Porträts, Ansichten und gelöschte Datensätze bleiben bei
+späteren Aktualisierungen geschützt.
+
+Verbindliche Nutzerkorrekturen und Quellenentscheidungen:
+
+- Ruarc Bhaird wurde **1727** geboren. Meabhróg Laga starb **1611** und Filidh
+  Urquhart **1689**. Beide Vorkommen der gemeinsamen Personen sind identisch.
+- Aodhán, Sheena und Alasdair Urquhart gehören gemäß der dreispaltigen
+  Elternüberschrift zu Fergus und Joaigh; nur Ruairidh zu Lachlan und Tuarenn.
+- Die kopierte Elternüberschrift vor Donndubhán Drummond (*1626) und Eireann
+  (*1631) nennt fälschlich Donndubhán selbst. Das unmittelbar vorausgehende Paar
+  Maelbrigte (*1605) und Eideard (*1608) wird als Eltern geführt.
+- Uathach Lachlanns Geburtsjahr folgt ihrer Herkunftstabelle (**1678**, statt
+  1680 im Drummond-Partnereintrag). Donnchadh Urquhart (**1608**) und Nuala Morath
+  (**1600**) folgen der neuen Urquhart-Tabelle; die Gegenakte hatte die Jahre
+  vertauscht. Die alten Kennungen mit ihren früheren Jahreszahlen bleiben stabil.
+- Talamhán Laoch folgt mit **1653** der Stwatchn-Grafik statt 1651 im Bestand.
+  Sadbh Drummonds Todesjahr folgt mit **1710** der Herkunftstabelle statt 1689 in
+  der Lyfant-Akte. Róisíns Tod 1720 und Ailionóras Lebensdaten 1630–1720 ergänzen
+  bisher unbekannte Angaben. Diese Entscheidungen sind im Audit einzeln belegt.
+- Mhór (*1705) stammt aus **Ó Bhaird in Faelaorn**, nicht aus An’Bhaird in
+  Ceitheach. Beide Clans bleiben getrennt; Mhórs bestehende Weltkennung bleibt
+  trotz ihrer historischen An-Bhaird-Schreibweise erhalten.
+- Lachlann und Drummond beginnen 1570 mit den Ffearnach-Zwillingen. Ihre Eltern
+  stehen vor dem jeweiligen neuen Hauswappen; die Schwesterlinie bleibt verlinkt.
+  Amtszeiten werden niemals als Lebensdaten übernommen. Urquharts fehlerhafte
+  Amtszeit „1628–1562“ erzeugt deshalb keine erfundenen Lebensdaten.
+- Die zwei unbenannten Ehepersonen bei Senan und Fergus Stwatchn sind durch
+  Linien in der Grafik belegt und ausdrücklich als unbekannt verzeichnet.
+  Allgemeine Vorlagenleerstellen erzeugen keine zusätzlichen Personen. Draigheans
+  Herkunft bleibt offen; keine andere Draighean wird nur aufgrund des Namens
+  mit ihr zusammengeführt. Stwatchn und Dundas erhalten kein aus Schriftgröße erratenes
+  heutiges Oberhaupt und keine erfundene Erbfolge.
+
+Ciarag Bhairds Ehe und Affäre sowie Fergus Stwatchns Ehe und Affäre führen
+getrennte Kindergruppen; die jeweils ausdrücklich markierten unehelichen Kinder
+behalten ihren Status. Seán Roth, Práithí Lockart, Talitha Haig und Art Lockart
+sind aufgenommene Mündel. Nairns Weg zu Ceallaigh bleibt als auswärtige
+Vormundschaft verzeichnet. Es werden keine biologischen Eltern für Mündel erfunden.
+Keine zusätzlichen Mehrfachkarten wurden zur Layoutkorrektur angelegt: Bei Bhaird
+halten die vorhandenen Partnergruppen- und Zweigoptionen Ciarags beide Familien
+zusammen und Brigid außerhalb von Carolans fortgesetztem Zweig.
+
+Jede Akte hat eine kurze Hausbio. Fünf originale Kriegerdarstellungen sind lokal
+archiviert und zugeordnet. Für Stwatchn und Dundas liegt keine entsprechende
+Illustration vor; ihre Hausbilder verwenden das vorhandene Wappen. 131 neue
+individuelle Originalporträts und 39 kanonische Bestandsbilder sind eingebunden.
+Die bekannten allgemeinen Erwachsenen- und Kindersilhouetten werden vom gemeinsamen
+Import ausgefiltert; ein individuelles Kinderbild hat stets Vorrang vor dem
+Altersplatzhalter. 192 zunächst mitgeladene Silhouettenkopien wurden aus dem
+Bildbestand entfernt und als ausgeschlossene Quellen im Importprotokoll erfasst.
+
+Reproduzierbare Pflege: `scripts/faelaorn-source-import/` verwendet den gemeinsamen
+`family-source-import` mit getrennten Quellenentscheidungen, Beziehungen, Hausbios
+und Layoutoptionen. Ablauf: `extract.py`, `person_inventory.py`, `resolve.py`,
+`portrait_assets.py`, `portrait_bindings.mjs`, `emit.py`; bei neuen Bildquellen
+vor dem Emit den gemeinsamen Downloader mit dem konkreten Manifest ausführen.
+Fünf Original-HTML-Dateien sind einschließlich SHA-256 archiviert. Für die zwei
+Inline-Grafiken ist keine Originaldatei verfügbar; `graphic_transcription.py` und
+`graphic-cards.json` dokumentieren alle 113 abgelesenen Karten. Koordinaten dieser
+Transkriptionen sind ausdrücklich keine HTML-Zeilennummern.
+
+Tests prüfen Browser-/Serverschema, vollständige Quellenabdeckung, Lebensdaten,
+Abstammungen, Mündel, individuelle Kinderbilder, Bildprüfsummen und wiederholbare
+Bestandsaktualisierung. Desktop und Mobilansicht werden auf Kartenüberlappungen,
+Linienkreuzungen und Wappenverbindungen geprüft. Das detaillierte Abschlussprotokoll
+steht in `assets/data/source-inventories/faelaorn-families-validation-2026-10-08.json`.
+Sechs Kernprüfungen bestehen mit dem aktuellen Gesamtbestand; alle 14 Faelaorn-
+Prüfungen einschließlich historischer Prüfsummen bestehen bei isoliertem Ausklammern
+des parallel hinzugekommenen Cwingod-Porträtupdates. Der Kinder-/Silhouettenimporttest
+ist erfolgreich. Die sieben Bäume sind bei 1440 und 390 Pixeln ohne Karten- oder
+Linienkollision; 370 Bildverweise in den Bäumen sowie 19 Hausbio-Bilder laden korrekt.
+Urquhart und Bhaird behalten einige breite, aber kollisionsfreie Verbindungen.
+Der Durchlauf über 518 Registerakten findet keine Laufzeitfehler und dokumentiert
+zusätzliche Layoutbefunde bei Draig, Eamhra, Blach und Saith. Der beobachtete
+Gesamtteststand ist wegen der parallelen Bestandsänderungen nicht vollständig grün:
+148/157 modulare Tests und 1.244/1.246 Alttests; Details und Abgrenzung im Prüfprotokoll.
+Alle Änderungen bleiben lokal; keine Veröffentlichung.
+
+### 13.26 Mathgham: sechs Stammbäume und Piobarach (08.10.2026)
+
+Die fünf neuen HTML-Quellen gehören zu Diuid, Lockart, Fiorghra, Ness und Haig.
+Banlaoch wird aus der undatierten Nutzergrafik übernommen. Forsyth bleibt auf
+ausdrücklichen Wunsch vorerst vorbereitet: Das zweite Bild war die bereits
+übernommene Stwatchn-Grafik. Die sechs Akten ersetzen ihre bisherigen Leerakten
+mit denselben Familien- und Haus-IDs und Revision 2. Die alten Herrschaftsverhältnisse,
+der Krieg mit Skjaerheim und die Teilbesetzung bleiben maßgeblich.
+
+| Clan | Personen | Partnerschaften | Elternschaften | Haus-/Mündelknoten | Zeitsprünge |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Mac Ard Diuid | 89 | 37 | 51 | 16 | 4 |
+| Ó Lockart | 78 | 31 | 46 | 15 | 3 |
+| Tir An Fiorghra | 52 | 22 | 29 | 8 | 1 |
+| An Ness | 60 | 25 | 34 | 9 | 1 |
+| Dál Haig | 59 | 24 | 34 | 11 | 2 |
+| Nic Banlaoch | 47 | 19 | 27 | 9 | 1 |
+
+385 Quellenkarten ergeben 336 Weltpersonen und 135 gemeinsame Partnerschaften.
+74 bestehende Personenidentitäten werden wiederverwendet. Alle Personen sind
+vom jeweiligen Stammbaum aus erreichbar; die einzelnen Zeitsprünge stehen seriell.
+Lockart und Haig hängen als direkte Kadettenhäuser unter ihren Diuid-Gründerpaaren.
+Die früheren Arth-Ehen von Oideach, Hadhbh, Beileag, Glaodhach und Banbhin behalten
+ihre Personen- und Paar-IDs; sie werden nicht mit erst späteren Pawen-, Crafanc-
+oder Cwingod-Gründern verwechselt.
+
+**Ausdrückliche Nutzerentscheidungen:**
+
+- Beileag Ness (*1590) stirbt 1681; 1581 ist berichtigt.
+- Rúairc Diuid (*1704) und Gráinne Culloch (*1700) sind das Ehe- und Elternpaar
+  von Raghallach (*1721) und Orla (*1725). „Ronan“ in der Kinderüberschrift war falsch.
+- Maithnú Eoghainn wurde 1676 geboren; „176“ ist berichtigt.
+- Piobarach ist die Hauptstadt Faelaorns und Stammsitz der Urquhart. Der veraltete
+  Hauptstadtname wird aus aktiven Registerbeschreibungen und Ordnern entfernt;
+  archivierte Originalquellen bleiben unverändert.
+- Banlaochs fehlende Jahre dürfen ergänzt werden. Die 47 Rohkarten bleiben
+  undatiert; 32 Personen erhalten gesondert markierte Rekonstruktionsdaten,
+  13 weitere Personen belegte Daten aus Gegenakten oder den neuen Tabellen.
+  Mórríoghan und Hearn vor dem Zeitsprung bleiben vollständig undatiert.
+  Die acht jüngsten Nachkommen sowie Keitha sind im Jahr 1740 zwischen 7 und 25
+  Jahre alt und erfüllen damit die Vorgabe 6–25. Die vorhandenen Anker Morag
+  1588–1644, Fionn 1632–1700, Morrígan 1651–1724, Lorcan *1676 und Wairbhín *1700
+  bleiben erhalten. Namensgleichheit allein verbindet die Glaodhaich-Agnew-Karte
+  nicht mit Brennans ungleich eingeordneter Eheperson in Luthsach.
+
+**Weitere dokumentierte Quellenabweichungen:**
+
+- Allanah Urquhart bleibt gemäß ihrer eigenen Herkunftstabelle *1583, trotz
+  *1582 in der neuen Diuid-Partnerzeile. Fingín Fintain bleibt aus demselben Grund
+  *1705 statt *1700; beide Ehepaare und Weltidentitäten sind eindeutig.
+- Jodhrán folgt seiner Diuid-Herkunftstabelle mit *1657; Fiorghra nennt als
+  Gegenperson *1656. Kenna/Keena Fiorghra ist dieselbe Person von 1610–1697.
+- Fidelma Lockart wird nach ihrer neuen Herkunftstabelle lebend geführt;
+  das frühere Dyngwn-Todesjahr 1720 wird entfernt. Muirgheas Lachlann bleibt dagegen
+  gemäß seiner eigenen ausgearbeiteten Akte lebendes Oberhaupt; das unbezifferte
+  Kreuz in der Haig-Partnerzeile wird nicht als neuer Tod übernommen.
+- Talitha folgt der eigenen Haig-Tabelle mit *1730 statt *1728 in der
+  Drummond-Mündelzeile. Ihre vorhandene ID bleibt trotz des alten Jahres im ID-Text stabil.
+- Die Partnerüberschrift „Scáthán“ bei Ness wird durch die eindeutige Kinderzeile
+  Fintan/Scáthán aufgelöst. Malcolm erscheint in der gelieferten Erbfolge nochmals
+  als sein eigener Nachfolger; die Hausbio führt nur die übrigen benannten Erben.
+- Rabhán Haigs Tabellenjahr 1672 bleibt erhalten; die erzählerische Altersangabe
+  66 ist gegenüber dem Bezugsjahr 1740 überholt. Sein Alter wird nicht rückwärts
+  zur Änderung eines belegten Geburtsjahrs verwendet.
+- Diud/Diuid, Fíoghrrhá/Fiorghra und Haigh/Haig sind anhand ihrer Gegenpaare
+  vereinheitlicht; alte Personen- und Welt-IDs bleiben erhalten. Der alte
+  Frostauge-Diud-Zweig führt mit dem richtigen Wappen nach Diuid, alte Familienlinks
+  bleiben über die bestehenden Aliasregeln auflösbar. Ness und Nessa bleiben getrennt.
+
+Artán Rowak und Torcall Haig sind aufgenommene Mündel. Práithí, Art, Torcall,
+Talitha und Fóla erhalten im Herkunftshaus `ward-away` sowie direkte Zielhausknoten;
+ihre biologische Elternschaft bleibt davon getrennt. Garvans/Teagans und
+Sinclairs/Yvainnes Kinder gehören jeweils ausschließlich zu ihrer Affäre.
+Isla/Mael sowie Rhona/der ausdrücklich genannte unbekannte Gewalttäter sind
+erzwungene Beziehungen. Peadar und Zohair bleiben ihre unehelichen Kinder.
+Andere anonyme Vorlagenkarten werden nicht als zusätzliche Menschen importiert.
+
+164 individuelle Originalporträts und fünf Kriegerdarstellungen sind lokal mit
+Prüfsummen archiviert; 30 bestehende Porträts werden aus ihren vorhandenen Modulen
+bezogen. Auch mitgelieferte Kinderporträts werden angezeigt. 18 Gegenakten erhalten
+29 gezielte Personenabgleiche, darunter 22 fehlende Porträts; unbekannte Bilder
+und nicht vorhandene Wappen bleiben Platzhalter. Alle sechs Clans haben eine kurze
+Hausbio, die fünf mitgelieferten Kriegerbilder sind dem jeweiligen Clan zugeordnet.
+Für Banlaoch ist keine eigenständige Kriegerdarstellung belegt.
+
+Der Import liegt unter `scripts/mathgham-source-import/` und verwendet die
+bestehenden gemeinsamen Importstufen. `chronology.json` trennt erfundene und
+belegte Jahreswerte, `graphic-cards.json` bewahrt die undatierte Transkription.
+Der Bestandsabzug ist auf benötigte Personen, Paare und eindeutige Häuser reduziert.
+Die komplette Offline-Neuerzeugung liefert 20 byte-identische Laufzeitmodule.
+Die Gegenkorrektur erfolgt nach den bereits vorhandenen Registerübernahmen,
+damit fremde Hausmodule keine späteren Verwaltungsrevisionen erben. Die gemeinsame
+Porträt-Feldübernahme ergänzt fehlende Bilder und schützt lokal ausgewählte Bilder,
+Notizen, Titel, Ansichten und unveränderte Genealogien.
+
+`tests/mathgham-families.test.js` prüft Quellenvollständigkeit, Browser-/Serverschema,
+die freigegebene Chronologie, Mündel und Sonderbeziehungen, Bilddateien,
+Gegenidentitäten und wiederholungsfeste Aktualisierung. Die Prüfsummen aller 494
+nicht beteiligten Akten und aller unveränderten Gegenaktenfelder stimmen mit dem
+vorherigen Stand überein. Das Abschlussprotokoll steht in
+`assets/data/source-inventories/mathgham-families-validation-2026-10-08.json`.
+Alle Änderungen bleiben lokal; kein Commit, Push oder Deployment.
+
+Abschlussprüfung der Mathgham-Serie: neun neue Daten-/Migrationstests,
+neun serverseitige Prüfungen und 1.246 bestehende Funktionstests bestanden.
+Der damalige modulare Lauf bestand 158 von 166 Prüfungen; acht schon vorhandene
+Cwingod-Porträt-/Revisionsabweichungen blieben bestehen. Alle sechs neuen Bäume
+waren auf Desktop und Mobilgerät ohne Kartenkollisionen, Linien durch Karten
+oder versetzte Wappenknoten; 17 Biografiebilder und 373 Chart-Bildreferenzen
+luden erfolgreich. Der Gesamtlauf umfasste 518 Akten. Die gezielte Nachprüfung
+bestätigte bestehende Layoutbefunde bei Eamhra, Blach und Saith; der schnelle
+Mwyalchen-Treffer war bei ausgerendertem Chart nicht reproduzierbar. Frostauge
+war auch nach Korrektur seines Diuid-Wappenlinks kollisionsfrei.
+
+### 13.27 Braigh: Culloch, Borthwick, Erskine und Grannd (08.10.2026)
+
+Die vier gelieferten HTML-Tabellen ersetzen die jeweiligen Leerakten in Tír na
+Braigh. Die Originale sind unter `assets/data/source-inventories/braigh-families-2026-10-08/`
+mit Prüfsummen archiviert. 261 beschriftete Karten entsprechen 233 Personen und
+95 eindeutigen Partnerschaften; 53 bereits vorhandene Personen behalten ihre
+Personen- und Welt-IDs, bestehende Ehe-IDs bleiben erhalten.
+
+| Clan | Personen | Partnerschaften | Elternschaften | Hausknoten | Zeitsprünge | Porträts |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Mac Culloch | 91 | 40 | 50 | 18 | 2 | 60 |
+| Tir An Borthwick | 57 | 23 | 33 | 8 | 1 | 41 |
+| An Erskine | 59 | 24 | 34 | 8 | 1 | 40 |
+| Na Grannd | 54 | 22 | 31 | 8 | 1 | 37 |
+
+Alle vier Quellenbäume haben `sourceRevision: 2`, kurze Hausbiografien und ihre
+mitgelieferte Kriegerdarstellung. Die alten Herrschaften bleiben während des
+Krieges mit Skjaerheim und der Teilbesetzung Faelaorns maßgeblich. Grannd gehört
+nach beiden neuen Hausbeschreibungen unmittelbar zu Erskine, darüber zu Culloch;
+diese Präzisierung wird auch aus einer vorhandenen Leerakte übernommen.
+
+**Quellenwidersprüche und Entscheidungen:**
+
+- Nutzerbestätigung: Fiadh Haig lebt und wurde 1727 geboren. Das Kreuz und *1726
+  in der Borthwick-Mündelzeile sind falsch; die Haig-Herkunftstabelle gilt.
+- Die frühere ausdrückliche Nutzerkorrektur bleibt verbindlich: Gráinne Culloch
+  ist Rúairc Diuid (*1704) zugeordnet. Die neue Culloch-Zeile mit Ronan (*1699)
+  wird berichtigt, ohne Ronans eigenständige Person oder seine Herkunft zu verändern.
+- Rónnat Lockart bleibt gemäß Herkunftstabelle *1723 statt *1725 in der Culloch-
+  Mündelzeile; Gobaith Haig bleibt aus demselben Grund *1722 statt *1725.
+- Murchadh Lachlann (*1657) behält das in seiner Herkunftstabelle belegte Todesjahr
+  1720 statt 1736 aus der Borthwick-Partnerzeile. Seine Frau Keitha folgt dagegen
+  ihrer jetzt gelieferten eigenen Herkunftstabelle: Tod 1735 statt 1739.
+- Uidhir Erskine (*1652) stirbt laut eigener Herkunftstabelle 1724; die ältere
+  Lachlann-Gegenangabe 1700 ist ersetzt. Oileáns dort belegter Tod 1734 ergänzt
+  das unbekannte Endjahr in ihrer neuen Erskine-Partnerzeile.
+- Marag/Morag Culloch, Ciara MacBorthwick/Borthwick und Pailtéar Cleirgh/Cleirigh
+  sind durch dieselben Ehepartner und Lebensdaten eindeutig identifiziert.
+  Vorhandene IDs bleiben stabil; Ciara erhält die kanonische Borthwick-Zuordnung.
+  Aoife Grannds bisher fehlende Haus-ID wird in der Sturmgeborenen-Gegenakte ergänzt.
+- Borthwicks unbeschriftete zweite Kinderüberschrift wird der fortgeführten
+  Donnacha/Dechtire-Linie zugeordnet; Eilidhs Gegenehe läuft ausdrücklich bei
+  Culloch weiter. Die kopierten anonymen Verlobtenkarten erzeugen keine Personen.
+- Die Borthwick-Amtsliste enthält bei Donnacha eine Lebensspanne statt einer
+  schlüssigen Amtszeit. Daraus wird kein Amtsbeginn erfunden. Nechtans Titel
+  „Tiarna“ im Begleittext ersetzt nicht das in der Hierarchie benannte Oberhaupt
+  Goirtín. Erskines Amtsliste überspringt biologische Generationen; diese werden
+  deshalb nicht nachträglich zu Oberhäuptern erklärt.
+- Die Biografie ergänzt Kunigundes Familiennamen Falkert und Mathringen-Herkunft.
+  Ihr Wappen und ihr früherer Ehemann sind nicht belegt und bleiben offen.
+- Bearnárds gegen seinen Willen arrangierte Ehe mit Seonaid bleibt eine Ehe mit
+  ehelichen Kindern. Svanhild und ihre fünf Kinder gehören zur getrennten Affäre.
+  Seonaids frühere Vormundsperson ist nur als „Oberhaupt“ bezeichnet; eine nicht
+  namentlich belegte Pflegeperson wird daraus nicht erfunden.
+
+Rónnat Lockart und Gobaith Haig sind Mündel bei Culloch, Fiadh Haig bei Borthwick,
+Íosán Cadhla bei Erskine. Haig und Lockart erhalten drei entsprechende
+`ward-away`-Verweise, während ihre biologischen Elternschaften unverändert bleiben.
+Die vier benannten Sept-Gründungen führen zu Dubhair, Gréin, Gaesa und Malairt;
+deren fortgeführte Stammbäume bleiben mangels Quelle vorbereitet. Die ausdrücklich
+genannten unbekannten Ehepersonen dieser Gründungen bleiben namenlos. Nairns
+Verbindung mit Yluach Farraigeach wird als Verlobung geführt. Wraynes und Nechtans
+Affären erhalten ausschließlich die ihnen ausdrücklich zugeordneten Kinder.
+
+131 neue Originalporträts und vier Kriegerbilder sind mit Formatprüfung und
+SHA-256 lokal archiviert; 26 vorhandene Bilder werden aus den ursprünglichen
+Porträtmodulen bezogen. Individuelle Kinderbilder bleiben sichtbar. 76 Personen
+haben keine individuelle Bildquelle und verwenden weiterhin Platzhalter.
+15 Gegenakten erhalten 17 gezielte Personenabgleiche, darunter zehn fehlende
+Porträts und die drei Mündelrollen. Unveränderte Notizen, eigene Porträts, Titel,
+Ansichten und biologische Abstammungen bleiben erhalten.
+
+Der Import unter `scripts/braigh-source-import/` nutzt die gemeinsamen
+Importstufen. `lineage_plans.py` enthält geprüfte Zeilenbezüge; `decisions.json`
+bewahrt Korrekturen und Identitätsentscheidungen. Die neue optionale
+`cadetHouseId` hält Sept-Haus-IDs ausdrücklich getrennt von Familien-IDs.
+Die gemeinsame Feldübernahme kann belegte Hausknoten einmalig ergänzen;
+bestehende Knoten werden dadurch nicht überschrieben. Die Braigh-Gegenübernahme
+erfolgt am Register nach Mathgham. Ein auf benötigte Gegenpersonen und Häuser
+reduzierter Bestandsabzug erlaubt die Offline-Neuerzeugung: 16 Laufzeitmodule
+bleiben byte-identisch.
+
+**Prüfungen:** Acht neue Braigh-Tests und neun Mathgham-Tests bestehen, ebenso neun
+serverseitige Prüfungen und 1.246 bestehende Funktionstests. Der modulare Gesamtlauf
+umfasst 174 Prüfungen: 166 bestanden; dieselben acht bereits vorliegenden
+Cwingod-Porträt-/Revisionsabweichungen bleiben dokumentiert. Alle 499 unbeteiligten
+Akten sowie sämtliche unveränderten Gegenaktenfelder stimmen mit dem unmittelbar
+vor diesem Import gesicherten Stand überein. Historische Importtests vergleichen
+weiterhin ihre jeweilige Quellenrevision; die neuen Erhaltungstests prüfen die
+spätere Braigh-Änderung separat.
+
+Desktop (1440 px), Mobilgerät (390 px) und alle 15 Gegenakten: keine
+Kartenüberlappungen, Linien durch Karten, versetzten Wappenknoten oder Laufzeitfehler.
+Borthwick und Erskine haben je eine breite, kollisionsfreie Abstammungsroute;
+Grannds sieben Kinder aus zwei Verbindungen benötigen eine breitere Eheverbindung.
+Alle zwölf Biografiebildreferenzen und sämtliche geprüften Chart-Bildreferenzen
+laden erfolgreich. Details stehen in
+`assets/data/source-inventories/braigh-families-validation-2026-10-08.json`.
+Forsyth bleibt offen; Piobarach bleibt die Hauptstadt. Kein Commit, Push oder Deployment.
+
+## 13.28 Faerna: Buadhtreun, Durachd, Muirgheal und Boyd (08.10.2026)
+
+Die vier nachgereichten HTML-Quellen ersetzen ihre vorbereiteten Akten in Tir na
+Faerna. Unveränderte Originale, SHA-256 und nummerierte Tabellenzeilen stehen in
+`assets/data/source-inventories/faerna-families-2026-10-08.json` und dem
+gleichnamigen Archivverzeichnis. 216 benannte Karten bilden 192 eindeutige Personen
+und 87 unterschiedliche Partnerschaften; 72 bestehende Personen-IDs werden
+wiederverwendet. Jede neue Akte hat `sourceRevision: 2`.
+
+| Akte | Personen | Partnerschaften | Elternschaften | Hausknoten | Serielle Lücken |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Ard Buadhtreun | 54 | 25 | 28 | 13 | 2 |
+| Tir An Durachd | 66 | 29 | 36 | 13 | 3 |
+| Tir An Muirgheal | 43 | 20 | 22 | 9 | 1 |
+| Na Boyd | 53 | 25 | 27 | 11 | 1 |
+
+Die bisherige Kriegsregel bleibt verbindlich: alte Sitze und Herrschaften werden
+beibehalten, Verluste nicht in erfundene Besatzungsgrenzen oder ein pauschales
+Aussterben übersetzt. Beinnstir bleibt Buadhtreuns Sitz, Airdree Muirgheals Sitz
+und Culrain Durachds historische Herrschaft. Durachds Asyl in Tir na Rann bleibt
+eine zusätzliche Ansicht derselben Akte. Die Boyd-Quelle bestätigt ausdrücklich
+die Lehensfolge **Boyd → Muirgheal → Buadhtreun**. Für Buadhtreun, Muirgheal und
+Boyd ist kein gegenwärtiges Oberhaupt belegt; die letzten genannten Amtsträger
+werden als historische Personen geführt. Durachd wird seit 1725 von Yestinán
+geführt. Verheiratete Überlebende und Diarmuids Flucht werden in den Hausbios
+berücksichtigt. Forsyth bleibt auf Nutzerwunsch vorbereitet.
+
+**Quellenentscheidungen und offene Angaben:**
+
+- Bei Boyd nennen die Tabellen Dubhan *1580 und Olwyna Drewi *1582, ihre eindeutig
+  zugeordneten Kinder aber schon *1590, *1592 und *1596. Die jüngeren Generationen
+  und Gegenehen stützen die Kinderjahre. Der Nutzer bestätigt ausdrücklich:
+  **Dubhan wurde 1560, Olwyna 1562 geboren.** Die Korrektur gilt auch in Drewi.
+  Die Originalwerte bleiben im Archiv und in den Entscheidungen nachlesbar.
+  Bestehende Personen- und Welt-IDs werden nicht umbenannt.
+- Blàthnat, Oistín Lockarts Frau, ist laut neuer Durachd-Herkunftstabelle lebend
+  und *1698. Der frühere undatierte Lockart-Eintrag mit Kreuz wird entsprechend
+  berichtigt; seine historisch benannte ID `blathnat-founder-durachd` bleibt
+  erhalten. Oistíns unbekanntes Todesjahr wird durch 1725 ergänzt.
+- Dúrchadh/Durachd bei Blàthnat und Fíonaach sind durch ihre eindeutigen Ehen mit
+  Muiredach und Seamus Haeghra identifiziert. Namen und Hauszuordnung werden
+  vereinheitlicht, Personen- und Welt-IDs erhalten.
+- Diarmuid/Diarmaid Diuid, Elewyne/Eleyne Grawn und Jarlaith/Jarlath Drummond sind
+  anhand gleicher Lebensdaten und Gegenehen dieselben Personen. Bestehende
+  kanonische Namen und IDs bleiben erhalten. Diarmaids Todesjahr wird mit 1704
+  ergänzt.
+- Die Buadhtreun-Tabelle ergänzt Lomháns und Eilidh Dundas’ Tod mit 1720. Die
+  Boyd-Tabelle ergänzt Veaghán Dundas’ Tod mit 1732. Bei Nóracha Muirgheal und
+  Vaithreach Durachd konkretisiert die Durachd-Tabelle das unbekannte Todesjahr
+  ebenfalls mit 1720. Bekannte Gegenaktenjahre ergänzen die offenen Angaben bei
+  Grainneog Buadhtreun, Dubessa, Tadhaigh, Finlay, Blathnaid und Iolanda.
+- Wuirseachs durch HTML-Abstände getrenntes Geburtsjahr „1 7 14“ wird als 1714
+  gelesen. Die Kinderüberschrift „Crían“ bezeichnet dieselbe als Grían Torcmhar
+  eingetragene Eheperson. Keine zusätzliche Person wird erzeugt.
+- Der Buadhtreun-Hinweis „Generation Gründung Bochdew“ steht an einer
+  Überlieferungslücke und benennt keine konkrete Elternschaft. Órflaiths und
+  Trahayarns belegte Ehe wird mit Blaidd verknüpft; weitere Ahnen werden nicht
+  erfunden. Muirgheal bleibt Dún-Tiarna gemäß Rangtabelle und Register, trotz des
+  abweichenden Worts „Laird“ im Erbfolgetext.
+- Trianachs Ehe mit Isbeil und die Affäre mit Iúliana sind getrennt. Ytarán gehört
+  zur Ehe, Bardan zur Affäre und trägt die entsprechende Abstammungskennzeichnung.
+  Iúlianas und Deirdres nicht genannte Herkunftshäuser bleiben unbekannt.
+  Anonyme Verlobtenplatzhalter erzeugen keine Personen. Nachkommen aus
+  Wegverheiratungen stehen nur in der tatsächlich fortführenden Akte.
+
+79 neue Originalporträts und vier Kriegerdarstellungen sind formatgeprüft und mit
+SHA-256 lokal archiviert. 36 vorhandene Porträts werden kanonisch wiederverwendet.
+77 Personen haben keine individuelle Bildquelle und behalten Platzhalter; eine
+Altersgrenze unterdrückt keine vorhandenen Kinderbilder. Zehn Gegenakten erhalten
+17 gezielte Personenabgleiche, darunter neun Porträtergänzungen. Historische
+Partnerschaften in Grawn und Drewi werden als beendet geführt. Eigene Notizen,
+Titel, Porträts, Ansichten, Elternschaften und Personen-IDs bleiben erhalten.
+
+**Behobene Importfehlerklasse:** Ein bereits vorhandenes Bildmodul eines bisher
+leeren Hauses kann von anderen Familien benutzt werden. Beim Ausarbeiten Boyds
+darf Dubhans älteres Vennyr-Porträt deshalb nicht aus `house-boyd-portraits.js`
+verschwinden. Die gemeinsame Porträtzuordnung bindet auch solche bestehenden
+Hausmodule; der Emitter erhält ihre wiederverwendeten Einträge neben neuen
+Downloads. Unveränderte Gegenfelder und alle wiederverwendeten Bildpfade werden
+ausdrücklich geprüft. Für Faerna und den vorherigen Braigh-Import bleiben jeweils
+16 neu erzeugte Laufzeitmodule bei der Offline-Wiederholung byte-identisch.
+
+**Prüfungen:** Sieben neue Faerna-Tests, acht Braigh-Tests, neun Mathgham-Tests,
+neun serverseitige Prüfungen, der Kinderporträt-Importtest und 1.246 bestehende
+Funktionstests bestehen. Im modularen Gesamtlauf bestehen 173 von 181 Prüfungen;
+dieselben acht schon vorher vorliegenden historischen Fingerprint-/Revisions-
+und Cwingod-Bildabweichungen bleiben bestehen. Die 504 unbeteiligten Akten und
+sämtliche unveränderten Felder der zehn Gegenakten stimmen mit dem unveränderlichen
+Bestandsabzug unmittelbar vor Faerna überein. Frühere Importtests verwenden ihre
+jeweiligen historischen Revisionen; die neue Erhaltungsprüfung deckt Faerna ab.
+
+Desktop (1440 px), Mobilgerät (390 px) und alle zehn Gegenakten: keine
+Kartenüberlappungen, Linien durch Karten, versetzten Wappenknoten oder
+Laufzeitfehler. Buadhtreun hat eine breite, kollisionsfreie Abstammungsroute;
+breite Routen in alten Gegenakten bleiben erhalten. Zwölf Biografiebildreferenzen
+und alle überprüften Chart-Bilder laden. Vollständiger Nachweis:
+`assets/data/source-inventories/faerna-families-validation-2026-10-08.json`.
+Kein Commit, Push oder Deployment.
+
+### 13.29 Tir na Damh aus sieben Bildstammbäumen (08.10.2026)
+
+Eoghainn, Agnew, Dianaomh, Dobhar, Forsyth, Elid und Oglivy sind aus den sieben
+Nutzergrafiken ausgearbeitet. Tabellen, Einzelporträts und Kriegerdarstellungen
+lagen für diesen Schritt nicht vor. Die nun richtige Forsyth-Grafik ersetzt die
+frühere offene Vorbereitung; Duff bleibt mangels neuer Vorlage vorbereitet.
+Die alte Herrschaftsordnung von Tir na Damh bleibt trotz Krieg mit Skjaerheim
+und Teilbesetzung bestehen. Eoghainns Asyl und Forsyths zusätzliche Platzierung
+bleiben Ansichten derselben kanonischen Familien.
+
+406 Bildkarten ergeben **346 unterschiedliche Personen und 149 unterschiedliche
+Partnerschaften**. 83 bekannte Personen behalten ihre Personen- und Welt-IDs.
+
+| Familie | Personen | Partnerschaften | Elternschaften | Hausknoten | Überlieferungslücken |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Eoghainn | 93 | 41 | 51 | 19 | 4 |
+| Agnew | 47 | 20 | 26 | 9 | 1 |
+| Dianaomh | 43 | 20 | 22 | 9 | 1 |
+| Dobhar | 49 | 23 | 25 | 9 | 1 |
+| Forsyth | 65 | 25 | 39 | 14 | 1 |
+| Elid | 47 | 21 | 25 | 7 | 1 |
+| Oglivy | 62 | 29 | 32 | 12 | 2 |
+
+Die sieben Akten haben `sourceRevision: 2`. Faelaorn enthält damit 28 ausgearbeitete
+und elf vorbereitete Akten, insgesamt 1.776 Personenauftritte mit 1.396 IDs.
+Gemeinsame Personen in mehreren Akten sind keine zusätzlichen Identitäten.
+
+**Quellen und Reproduktion:** Die Grafiken sind in der Nutzernachricht verfügbar,
+nicht als lokale Originaldateien. `scripts/damh-source-import/graphic_transcription.py`
+archiviert die manuelle Lesung; `graphic-cards.json` bewahrt die 406 Rohkarten.
+Die Zeilen sind Transkriptionskoordinaten. `person_inventory.py` schreibt das
+Inventar mit Bildreihenfolge, Originalmaßen und SHA-256 der Transkription.
+`lineage_plans.py` enthält die nachgezeichneten Verbindungen, `decisions.json`
+die Identitätsentscheidungen und Korrekturen. `baseline.json` ist der reduzierte
+unveränderliche Bestand vor Damh. Er darf nicht aus dem späteren Register neu
+erzeugt werden. Offline-Reihenfolge: `person_inventory.py`, `resolve.py`,
+`portrait_assets.py`, `portrait_bindings.mjs`, `emit.py`. Keine Downloads nötig.
+Alle 22 Damh-Laufzeitmodule bleiben bei Wiederholung byte-identisch; auch die
+16 Faerna-Module bleiben mit den gemeinsamen Importbausteinen unverändert.
+
+**Bestätigte Entscheidungen und Quellenabgleich:**
+
+- Agnews jüngste Eilionoir, Caoilfhionn und Baoigheall wurden **1723, 1728 und
+  1730** geboren. Eanbharr Eoghainn wurde **1653** geboren; seine eigene Grafik
+  gilt gegenüber dem Agnew-Vermerk 1648. Iarbhine Forsyth wurde **1665** geboren.
+  Vardán Elid und Uisigh Avernax wurden **1716 und 1717** geboren. Alle diese
+  Korrekturen wurden vom Nutzer ausdrücklich bestätigt.
+- **Cailte–Ealar Duff, Vadria–Bjørn und Heulyn–Kjartan sind erzwungene
+  Verbindungen.** Poilín und Skjell gehören zu den entsprechenden unehelichen
+  Linien. Die vier violetten Affären bleiben von Ehen getrennt. Graue Nachkommen
+  Wraynes gehören zur unehelichen Nebenlinie; daraus werden keine zusätzlichen
+  Affären ihrer Eltern erfunden.
+- Elf auswärts gegebene Mündel behalten ihre biologische Abstammung. Uisigh
+  Avernax erhält genau eine Pflegebeziehung mit Gréagóir und Tuarenn als beiden
+  Pflegeeltern. Seine fremde Hauszugehörigkeit bleibt erhalten; biologische
+  Eltern werden nicht ergänzt. Laga, Kerlaouen und Marcaigh sind als Zielhäuser
+  erfasst, ohne dafür unbelegte Familienakten oder Pflegeeltern anzulegen.
+- Die Verbindungslinien bei Agnew führen Glaodhaich, Seallach und Quíghleann
+  auf **Loinneog und Zachair** zurück. Bei Elid gehören Xubhnán, Xarthan und
+  Zibhí zu **Zeargán und seiner unbenannten Eheperson**. Die Gründerpaare von
+  Agnew und Elid sind mit den entsprechenden Eoghainn-Personen identisch.
+- Der undatierte Gründer Pádraig bleibt ausdrücklich verschieden von Pádraig
+  Agnew (*1714). Gründer vor den Überlieferungslücken erhalten keine erfundenen
+  Lebensdaten. Größere Schrift allein begründet keine Oberhaupt- oder Erbenrolle.
+- Eanbharr ist nach der bestätigten Jahreszahl bei Seallachs Geburt 14 Jahre
+  alt; Vadria ist bei Poilíns Geburt aus der erzwungenen Verbindung 15.
+  Diese Quellenangaben bleiben erhalten, statt weitere Jahre zu erfinden.
+- Bekannte Gegenakten ergänzen fehlende Todesjahre und unsichere Namenslesungen.
+  Muircheartach Casur *1604, Koarnach Culloch *1610, Mairghread Ness *1613 und
+  Heilbhic Muirgheal *1657 folgen ihren Herkunftstabellen und den eindeutigen
+  Gegenehen. Kanonische Namen wie Járnan, Jenadhe, Fechín, Fionnghuala und
+  Thrainn sowie die Hausbezeichnung Dyfrgi bleiben erhalten.
+- Belegte Agnew-Jahre ersetzen die zuvor ausdrücklich erfundene Banlaoch-
+  Chronologie: Hearn und Glaodhaich *1627, Meara *1704, Bairrfhionn *1700.
+  Die historischen IDs mit den alten Jahreszahlen bleiben stabil. Glaodhaich,
+  Brennans Partner, erhält in Luthsach *1700 und den Status lebend. Ursprüngliche
+  Rekonstruktionsbelege bleiben historisch dokumentiert; die Feldrevisionen
+  kennzeichnen die späteren Korrekturen. Die beiden Gegenakten erreichen Revision 3.
+- Bestehende Partnerschaftsstatus bleiben erhalten: Die Grafiken enthalten
+  hierfür keine neue Aussage. Todeskreuze werden nicht zum Anlass genommen,
+  andere alte Akten pauschal neu zu normalisieren.
+
+**Offene Angaben beim Damh-Import:** Torcalls Beschriftung nennt Oglivy, sein Wappen entspricht
+Dubglais. Die Herkunft wurde anschließend durch die Brann-Grafik geklärt (13.30). Eithne
+(*1559) erscheint in der Oglivy-Grafik als Bujolds Frau, im Bestand aber als
+Eithne Drummond. Die Identitäten bleiben vorläufig getrennt und der Konflikt ist
+vermerkt; eine gesicherte zweite Ehe wird daraus nicht behauptet. Cairells
+Wellenkrone-Eheperson hat einen nicht sicher lesbaren Vornamen und erhält einen
+sichtbaren Namensplatzhalter. Leere Namensfelder mit Elternlinie und Geburtsjahr
+sind echte Platzhalterpersonen, insbesondere die Kinder Maithnús (*1702) und
+Haodhs (*1704); sie werden nicht als leere Vorlagenspalten verworfen.
+
+25 vorhandene Originalporträts werden wiederverwendet. 321 Personen haben keine
+individuelle Bildquelle und behalten Platzhalter. Fehlende Wappen werden nicht
+erfunden. Die sieben kurzen Hausbios verwenden die jeweiligen vorhandenen
+Clanwappen; es gibt keine unbelegte Kriegerillustration. Nur Luthsach und Banlaoch
+erhalten fünf Personenabgleiche, keine neuen Porträtüberschreibungen. Eigene
+Notizen, Titel, Bilder, Ansichten, Elternschaften und Identitäten bleiben erhalten.
+
+**Behobene Fehlerklassen:** Der gemeinsame Resolver unterstützt ausdrücklich
+getrennte Identitäten (`decisions.distinct`), damit undatierte Gründer nicht mit
+späteren gleichnamigen Nachkommen verschmelzen und Abstammungszyklen erzeugen.
+Der territoriale Familienbauer bündelt mehrere Pflegeeltern eines Kindes in
+einem Datensatz mit stabiler ID. Der Damh-Import erhält vorhandene Paarstatus
+über `preserveExistingPartnershipStatus`; andere Importvorgaben ändern sich
+nicht. Alle drei Fälle sind durch die neuen Daten- und Erhaltungsprüfungen gedeckt.
+
+**Prüfungen:** Acht Damh-Tests, sieben Faerna-, acht Braigh-, neun Mathgham-,
+neun serverseitige Tests, der Kinderporträt-Importtest und 1.246 bestehende
+Funktionstests bestehen. Der modulare Gesamtlauf besteht mit 181 von 189 Tests;
+dieselben acht vorher dokumentierten historischen Fingerprint-/Revisions- und
+Cwingod-Bildabweichungen bleiben bestehen. Alle 509 unbeteiligten Akten und die
+unveränderten Felder beider Gegenakten entsprechen dem Bestandsabzug vor Damh.
+
+Desktop (1440 px), Mobilgerät (390 px) und beide Gegenakten zeigen keine
+Kartenüberlappungen, Linien durch Karten, versetzten Wappenknoten oder
+Laufzeitfehler. Eoghainn und Forsyth haben jeweils zwei breite, kollisionsfreie
+Abstammungsrouten. Alle 14 Biografiebildreferenzen und 197 geprüften Chart-
+Bildreferenzen laden. Prüfbeleg:
+`assets/data/source-inventories/damh-families-validation-2026-10-08.json`.
+Kein Commit, Push oder Deployment.
+
+### 13.30 Brann: Wemyss, Dubglais, Airdmhor und Carnegie (08.10.2026)
+
+Die vier ausschließlich als Grafik gelieferten Stammbäume ersetzen ihre
+vorbereiteten Akten in **Tir na Brann**: Wemyss in Drumrath, Mac Dubglais in
+Sgurrfàil, Airdmhor in Carnascal und Carnegie in Glenmohr. Alte Herrschaften,
+Faelaorns Kriegslage und Airdmhors zusätzlicher Asylort Caisteal Gorm bleiben
+erhalten. **236 Karten entsprechen 204 eindeutigen Personen und 92 verschiedenen
+Partnerschaften**; die Akten enthalten 49, 85, 48 und 54 Personen.
+
+Quelle und Reproduktion: `scripts/brann-source-import/graphic_transcription.py`,
+`graphic-cards.json`, `lineage_plans.py`, `decisions.json`, `baseline.json` und
+`baseline-fingerprints.json`. Die Originalbilder liegen in der Nutzernachricht;
+es werden keine nicht vorhandenen HTML-Tabellen oder lokalen Originaldateien
+behauptet. Das Quelleninventar archiviert Bildreihenfolge, Originalmaße und den
+Hash der manuellen Transkription. Rohdaten und Korrekturen bleiben getrennt.
+
+- **Cathbad Carnegie:** vom Nutzer auf **1702** berichtigt.
+- **Rory:** bestätigte Affäre mit Tavish Airdmhor → Vaelor und Móirín;
+  erste unbenannte Geliebte → Kaelmor; zweite unbenannte Geliebte → zwei
+  unbenannte Kinder; erzwungene Verbindung mit Lagertha Grimr → Veyran.
+- Die sechs undatierten Kinder erhalten mit ausdrücklicher Zustimmung
+  redaktionelle Geburtsjahre: **Vaelor 1726, Móirín 1729, Kaelmor 1722,
+  unbenannte Kinder 1730/1734, Veyran 1732**. Damit sind sie 1740 zwischen
+  sechs und 18 Jahre alt. Diese Ergänzungen sind in den Personennotizen
+  kenntlich gemacht. Vaelor und Móirín behalten in Airdmhor dieselben IDs.
+- **Lulach/Blodeuwedd:** Nutzer bestätigt den Bestand: Lulach *1636 und
+  Blodeuwedd Blodyn *1637. Die unsichere kleine Grafiklesung wird nicht als
+  zusätzliche Ehe übernommen.
+- Die neue Herkunftsgrafik belegt **Torcall Dubglais *1609**, Lannraig Oglivys
+  Partner. Die bisherige Platzhalter-ID bleibt erhalten. Étaín Airdmhor erhält
+  aus ihrer Herkunftsgrafik *1672 statt des Dundas-Gegenvermerks *1677;
+  Faolán Airdmhors vorher unbekanntes Geburtsjahr wird mit *1695 ergänzt.
+- Herkunftstabellen bleiben bei Cainneach Urquhart *1561, Nóracha Buadhtreun
+  *1590 und Vearga Muirgheal *1700 maßgeblich. Bekannte Todesjahre und
+  Personen-/Welt-IDs bleiben erhalten. Die belegte Vater-Sohn-Folge Cathmor
+  *1650 → Taranach *1665 wird als Quellenangabe dokumentiert, nicht erfunden
+  korrigiert. Tuirens Todesjahr 1694 passt zur getrennten zweiten Ehe Taranachs.
+- **Carnegie/Cerneige:** eine kanonische Akte `haus-cerneige`, angezeigt als
+  Carnegie; `haus-carnegie` ist ein alter Linkalias. Die bestehenden Carnegie-
+  Personen und zugehörigen Hausverweise werden auf `house-cerneige` abgeglichen.
+  Die Schreibvarianten Ard Dubglais und Dublais erhalten in den eindeutig
+  belegten Gegenehen ebenfalls die Dubglais-Herkunft. **Dubhan bleibt unverändert.**
+- Eine Wemyss-, drei Dubglais-, zwei Airdmhor- und eine Carnegie-Lücke bleiben
+  ausdrücklich seriell. Airdmhors Jahre 1118–1125 werden nicht zu unmittelbarer
+  Elternschaft im 16. Jahrhundert umgedeutet. Rothniams Lebensstatus bleibt
+  wegen des fehlenden Todeszeichens offen. Gründer erhalten keine erfundenen
+  Daten, unbekannte Oberhäupter keine aus Schriftgrößen abgeleiteten Titel.
+
+Der unleserliche Vorname von Maels Fionnghal-Partnerperson bleibt als
+**„Unklarer Vorname Fionnghal“** sichtbar. Die sechs unbenannten Kinder in
+Wemyss und Dubglais und Rorys/Kenneths unbenannte Partnerpersonen sind echte
+Platzhalterkarten. Lagertha Grimr und Lagertha Wellenkrone bleiben verschiedene
+Personen. Es gibt 21 wiederverwendete Originalporträts, 183 Personen ohne
+individuelle Bildquelle und vier kurze Hausbios mit den vorhandenen Wappen.
+Keine Kriegerillustrationen wurden mitgeliefert oder unbelegt ergänzt.
+
+78 bestehende Personen-IDs sind abgeglichen. 14 Gegenakten erhalten 15
+Personenabgleiche und die zugehörigen Carnegie-Hausverweise. Alle 500 anderen
+Akten sowie sämtliche nicht freigegebenen Gegenfelder entsprechen dem
+unveränderlichen Vor-Brann-Abzug. Eigene Notizen, Titel, Bilder, Ansichten und
+Elternschaften bleiben erhalten; die Feld-Upgrades sind idempotent.
+
+**Darstellung:** Rorys vier Kindergruppen besitzen jeweils genau einen
+Partner-/Kinder-Anker. Die spätere Paarmittelpunkt-Ausrichtung wird für diese
+Gruppen ausdrücklich deaktiviert, damit sie die bereits belegten Spuren nicht
+wieder zusammenschiebt. Der bestehende Layout-Prüfer erkennt einen gültigen
+Partneranker als Alternative zum Paaranker an; ein Test stellt sicher, dass
+fehlende Anker weiterhin beanstandet werden. Es entstehen keine mehrfachen
+Weltpersonen oder neuen Renderer-Sonderfälle.
+
+**Prüfungen:** Neun Brann-Tests sowie 32 Damh-/Faerna-/Braigh-/Mathgham-Tests
+bestehen. Der Prüfbeleg mit Gesamtläufen, unveränderten Bestandsfeldern,
+Offline-Reproduktion und Browser-/Bildprüfung steht in
+`assets/data/source-inventories/brann-families-validation-2026-10-08.json`.
+Die vier neuen Akten sind auf Desktop und Mobilgerät ohne Kartenüberlappungen,
+Linien durch fremde Karten oder versetzte Wappenknoten geprüft. Breite,
+kollisionsfreie Abstammungs- und Partnerschaftslinien werden im Beleg aufgeführt.
+Kein Commit, Push oder Deployment.
 
 ## 14. Abschlussprotokoll
 

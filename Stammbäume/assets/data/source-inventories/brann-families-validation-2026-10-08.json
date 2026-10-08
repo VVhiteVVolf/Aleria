@@ -1,0 +1,467 @@
+{
+  "date": "2026-10-08",
+  "scope": "Wemyss, Dubglais, Airdmhor and Carnegie/Cerneige: four graphic-only genealogies and house biographies",
+  "publication": "local-only; no commit, push or deployment",
+  "counts": {
+    "sourceAppearances": 236,
+    "distinctPeople": 204,
+    "distinctPartnerships": 92,
+    "matchedExistingPeople": 78,
+    "newPortraits": 0,
+    "reusedPortraits": 21,
+    "unpicturedPeople": 183,
+    "warriorIllustrations": 0,
+    "counterpartFamilies": 14,
+    "counterpartPeople": 15,
+    "untouchedFamilies": 500
+  },
+  "families": [
+    {
+      "id": "haus-wemyss",
+      "persons": 49,
+      "partnerships": 22,
+      "parentages": 26,
+      "houseNodes": 9,
+      "timeJumps": 1,
+      "portraits": 4,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-dubglais",
+      "persons": 85,
+      "partnerships": 38,
+      "parentages": 46,
+      "houseNodes": 16,
+      "timeJumps": 3,
+      "portraits": 9,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-airdmhor",
+      "persons": 48,
+      "partnerships": 22,
+      "parentages": 25,
+      "houseNodes": 9,
+      "timeJumps": 2,
+      "portraits": 1,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-cerneige",
+      "persons": 54,
+      "partnerships": 24,
+      "parentages": 29,
+      "houseNodes": 11,
+      "timeJumps": 1,
+      "portraits": 7,
+      "sourceRevision": 2
+    }
+  ],
+  "faelaorn": {
+    "populated": 32,
+    "prepared": 7,
+    "personAppearances": 2012,
+    "distinctPeople": 1542
+  },
+  "unresolved": [
+    {
+      "person": "Maels Partnerperson aus Fionnghal",
+      "issue": "Vorname in der kleinen Grafik nicht sicher lesbar",
+      "handling": "Unklarer Vorname Fionnghal als sichtbarer Platzhalter."
+    },
+    {
+      "person": "Rothniam Gealán (*1118)",
+      "issue": "Vor dem Überlieferungssprung; kein Todeszeichen sichtbar",
+      "handling": "Status unbekannt, kein erfundenes Todesjahr."
+    },
+    {
+      "persons": "Unbenannte Partnerpersonen und sechs unbenannte Kinder",
+      "handling": "Echte Platzhalter mit den gezeichneten Verbindungen; keine erfundenen Namen oder Herkunftshäuser."
+    }
+  ],
+  "userDecisions": {
+    "cathbadCarnegieBirth": "1702",
+    "reconstructedBirths": {
+      "Vaelor": "1726",
+      "Móirín": "1729",
+      "Kaelmor": "1722",
+      "unnamedChild1": "1730",
+      "unnamedChild2": "1734",
+      "Veyran": "1732"
+    },
+    "reconstructionAuthorization": "Six undated youngest Dubglais children should be 6–25 years old in 1740; editorial dates are marked.",
+    "roryBranches": [
+      "Tavish Airdmhor: affair, Vaelor and Móirín",
+      "First unnamed lover: affair, Kaelmor",
+      "Second unnamed lover: affair, two unnamed children",
+      "Lagertha Grimr: forced, Veyran"
+    ],
+    "lulachAndBlodeuwedd": "Existing Lulach 1636 and Blodeuwedd Blodyn 1637 retained as confirmed."
+  },
+  "sourceDecisions": [
+    "Historical Brann lordships and Airdmhor asylum remain despite war and partial occupation.",
+    "Carnegie/Cerneige share stable family ID haus-cerneige; haus-carnegie remains an alias. Ten old Carnegie person IDs retain their identity while their house and outgoing links are reconciled.",
+    "New origin evidence resolves Torcall Dubglais 1609 in Oglivy while retaining the old placeholder person ID. Etain Airdmhor receives 1672 and Faolan 1695 from the origin diagram.",
+    "Existing origin-table years Cainneach 1561, Noracha 1590 and Vearga 1700 remain. Known death years, world IDs, portraits and partnership statuses remain intact.",
+    "Cathmor 1650 / Taranach 1665 is documented source chronology. Taranachs two wives have separate child groups, consistent with Tuirens death in 1694.",
+    "One Wemyss, three Dubglais, two Airdmhor and one Carnegie transmission gaps. Founders retain unknown years; dated early Airdmhor ancestors remain before the 16th-century gap.",
+    "Dubhan is unchanged. Lagertha Grimr is shared across Wemyss and Dubglais, distinct from Lagertha Wellenkrone.",
+    "No warrior illustrations or new portraits were supplied; canonical portraits are reused and absent images remain placeholders.",
+    "Rory uses a single canonical card with four explicit partner/child lanes. Pair-midpoint alignment is disabled for those groups so it cannot undo the lane anchors; the authoring guard accepts this existing precise anchor and still rejects missing anchors."
+  ],
+  "tests": {
+    "brann": {
+      "passed": 9,
+      "failed": 0
+    },
+    "precedingFaelaornImports": {
+      "passed": 32,
+      "failed": 0
+    },
+    "serverValidation": {
+      "passed": 9,
+      "failed": 0
+    },
+    "legacy": {
+      "passed": 1246,
+      "failed": 0
+    },
+    "modular": {
+      "total": 198,
+      "passed": 190,
+      "failed": 8,
+      "note": "Same eight pre-existing historical fingerprint/revision and Cwingod portrait discrepancies; no new failure."
+    },
+    "offlineRegeneration": {
+      "modules": 16,
+      "changedModules": [],
+      "offline": true,
+      "baselineBytes": 291878,
+      "previousImport": {
+        "name": "damh",
+        "modules": 22,
+        "changedModules": []
+      }
+    },
+    "unchangedFamilyFingerprints": 500,
+    "unmodifiedCounterpartFingerprints": 14
+  },
+  "browser": {
+    "desktop": [
+      {
+        "familyId": "haus-wemyss",
+        "cardCount": 60,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 1,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-dubglais",
+        "cardCount": 107,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 1,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-airdmhor",
+        "cardCount": 61,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-cerneige",
+        "cardCount": 67,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      }
+    ],
+    "mobile": [
+      {
+        "familyId": "haus-wemyss",
+        "cardCount": 60,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 1,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-dubglais",
+        "cardCount": 107,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 1,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-airdmhor",
+        "cardCount": 61,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-cerneige",
+        "cardCount": 67,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      }
+    ],
+    "counterparts": [
+      {
+        "familyId": "haus-varulv",
+        "cardCount": 91,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 3,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-tir-an-tordarroch",
+        "cardCount": 61,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-ailella",
+        "cardCount": 84,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-goidin",
+        "cardCount": 47,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-urquhart",
+        "cardCount": 176,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 2,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-drummond",
+        "cardCount": 79,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-dundas",
+        "cardCount": 56,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-diuid",
+        "cardCount": 113,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 2,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-lockart",
+        "cardCount": 100,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 1,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-fiorghra",
+        "cardCount": 62,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-haig",
+        "cardCount": 76,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-dianaomh",
+        "cardCount": 54,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-oglivy",
+        "cardCount": 78,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-arfordir",
+        "cardCount": 49,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      }
+    ],
+    "images": {
+      "biographyImages": 8,
+      "chartImageReferences": 118,
+      "failures": []
+    },
+    "notes": "Owned hidden Chrome/CDP fallback because the in-app browser was unavailable. Every tree rendered with no overlaps, foreign-card intersections or misplaced crests. Broad collision-free routes are counted, not hidden."
+  },
+  "counterpartRevisions": {
+    "haus-varulv": 5,
+    "haus-tir-an-tordarroch": 3,
+    "haus-ailella": 6,
+    "haus-goidin": 4,
+    "haus-urquhart": 4,
+    "haus-drummond": 5,
+    "haus-dundas": 5,
+    "haus-diuid": 4,
+    "haus-lockart": 5,
+    "haus-fiorghra": 3,
+    "haus-haig": 4,
+    "haus-dianaomh": 3,
+    "haus-oglivy": 3,
+    "haus-arfordir": 5
+  },
+  "sourceAudit": "assets/data/source-inventories/brann-families-audit-2026-10-08.json",
+  "documentedDecisions": "DATENPFLEGE.md, section 13.30"
+}

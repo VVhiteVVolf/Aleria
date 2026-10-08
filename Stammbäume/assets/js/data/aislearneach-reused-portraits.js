@@ -1,0 +1,136 @@
+import { BLAITHNEACH_REUSED_PORTRAITS } from './blaithneach-reused-portraits.js';
+import { BLAITHNEACH_SOURCE_PORTRAITS } from './blaithneach-source-portraits.js';
+import { CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS } from './ceitheach-additional-source-portraits.js';
+import { CEITHEACH_SOURCE_PORTRAITS } from './ceitheach-source-portraits.js';
+import { DUNFAL_SOURCE_PORTRAITS } from './dunfal-source-portraits.js';
+import { HOUSE_ARD_FRISEALACH_PORTRAITS } from './house-ard-frisealach-portraits.js';
+import { HOUSE_ARD_TRODACH_PORTRAITS } from './house-ard-trodach-portraits.js';
+import { HOUSE_ARTH_LOCAL_PORTRAITS } from './house-arth-local-portraits.js';
+import { HOUSE_BRITHYLL_PORTRAITS } from './house-brithyll-portraits.js';
+import { HOUSE_CIAROG_PORTRAITS } from './house-ciarog-portraits.js';
+import { HOUSE_CWINGOD_PORTRAITS } from './house-cwingod-portraits.js';
+import { HOUSE_DAL_RUITHEACH_PORTRAITS } from './house-dal-ruitheach-portraits.js';
+import { HOUSE_DIENYDDIWR_LOCAL_PORTRAITS } from './house-dienyddiwr-portraits.js';
+import { HOUSE_DRAENOG_PORTRAITS } from './house-draenog-portraits.js';
+import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
+import { HOUSE_FIR_AN_GALLCHOBHAIR_PORTRAITS } from './house-fir-an-gallchobhair-portraits.js';
+import { HOUSE_FREIWINTER_PORTRAITS } from './house-freiwinter-portraits.js';
+import { HOUSE_GRAWN_PORTRAITS } from './house-grawn-portraits.js';
+import { HOUSE_MAC_ARD_CUMHAILL_PORTRAITS } from './house-mac-ard-cumhaill-portraits.js';
+import { HOUSE_PYRTH_PORTRAITS } from './house-pyrth-portraits.js';
+import { HOUSE_TIR_ADDAWOL_PORTRAITS } from './house-tir-addawol-portraits.js';
+import { HOUSE_TODBRAND_PORTRAITS } from './house-todbrand-portraits.js';
+
+export const AISLEARNEACH_REUSED_PORTRAITS = Object.freeze({
+  "koarnach-1690-eamhra": BLAITHNEACH_REUSED_PORTRAITS["koarnach-1690-eamhra"],
+  "fergusin-1621-ronain": BLAITHNEACH_SOURCE_PORTRAITS["fergusin-1621-ronain"],
+  "fabienne-1695-morna": BLAITHNEACH_SOURCE_PORTRAITS["fabienne-1695-morna"],
+  "cailte-1694-ronain": BLAITHNEACH_SOURCE_PORTRAITS["cailte-1694-ronain"],
+  "iainbheag-1627-magach": BLAITHNEACH_SOURCE_PORTRAITS["iainbheag-1627-magach"],
+  "clothru-1696-ceallaigh": BLAITHNEACH_SOURCE_PORTRAITS["clothru-1696-ceallaigh"],
+  "conchobhar-1690-nessa": BLAITHNEACH_SOURCE_PORTRAITS["conchobhar-1690-nessa"],
+  "urramach-1607-fintain": BLAITHNEACH_SOURCE_PORTRAITS["urramach-1607-fintain"],
+  "fingin-1634-fintain": BLAITHNEACH_SOURCE_PORTRAITS["fingin-1634-fintain"],
+  "caitriona-1703-fintain": BLAITHNEACH_SOURCE_PORTRAITS["caitriona-1703-fintain"],
+  "muiredach-1700-haeghra": BLAITHNEACH_SOURCE_PORTRAITS["muiredach-1700-haeghra"],
+  "ruadhan-founder-durthacht": BLAITHNEACH_SOURCE_PORTRAITS["ruadhan-founder-durthacht"],
+  "cillian-1646-durthacht": BLAITHNEACH_SOURCE_PORTRAITS["cillian-1646-durthacht"],
+  "eabha-1650-magach": BLAITHNEACH_SOURCE_PORTRAITS["eabha-1650-magach"],
+  "kealtan-1700-durthacht": BLAITHNEACH_SOURCE_PORTRAITS["kealtan-1700-durthacht"],
+  "saoithin-1703-magach": BLAITHNEACH_SOURCE_PORTRAITS["saoithin-1703-magach"],
+  "labhruinn-1697-muileach": BLAITHNEACH_SOURCE_PORTRAITS["labhruinn-1697-muileach"],
+  "iubhail-1700-nessa": BLAITHNEACH_SOURCE_PORTRAITS["iubhail-1700-nessa"],
+  "connla-1578-ui-faill-duibhne": BLAITHNEACH_SOURCE_PORTRAITS["connla-1578-ui-faill-duibhne"],
+  "iomhar-1605-feannag": BLAITHNEACH_SOURCE_PORTRAITS["iomhar-1605-feannag"],
+  "iasgair-1650-feannag": BLAITHNEACH_SOURCE_PORTRAITS["iasgair-1650-feannag"],
+  "ultanach-1603-fiachiontach": BLAITHNEACH_SOURCE_PORTRAITS["ultanach-1603-fiachiontach"],
+  "colmach-1628-fiachiontach": BLAITHNEACH_SOURCE_PORTRAITS["colmach-1628-fiachiontach"],
+  "latharn-1625-luchdon": BLAITHNEACH_SOURCE_PORTRAITS["latharn-1625-luchdon"],
+  "zephen-fintain": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["zephen-fintain"],
+  "saoirse-1652-ceinselaig": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["saoirse-1652-ceinselaig"],
+  "oirbhealach-1649-leite": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["oirbhealach-1649-leite"],
+  "giollan-durthacht": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["giollan-durthacht"],
+  "cuilinn-holloran": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["cuilinn-holloran"],
+  "etain-coronach": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["etain-coronach"],
+  "odhran-1676-tordarroch": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["odhran-1676-tordarroch"],
+  "macthar-rioga": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["macthar-rioga"],
+  "diarmaid-1631-tordarroch": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["diarmaid-1631-tordarroch"],
+  "beileag-fiantorc": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["beileag-fiantorc"],
+  "tomaltach-1676-leite": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["tomaltach-1676-leite"],
+  "oisean-muileach": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["oisean-muileach"],
+  "dechtire-1630-ceinselaig": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["dechtire-1630-ceinselaig"],
+  "aodhluan-tuirseach": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["aodhluan-tuirseach"],
+  "fearghas-duibhne": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["fearghas-duibhne"],
+  "meabhin-1655-holloran": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["meabhin-1655-holloran"],
+  "donndubhan-1651-leite": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["donndubhan-1651-leite"],
+  "nairn-feannag": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["nairn-feannag"],
+  "biorna-feannag": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["biorna-feannag"],
+  "zachrach-1696-seaghdha": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["zachrach-1696-seaghdha"],
+  "zibhhi-seaghdha": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["zibhhi-seaghdha"],
+  "seonaid-1632-ceinselaig": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["seonaid-1632-ceinselaig"],
+  "carthann-ghaisgh": CEITHEACH_ADDITIONAL_SOURCE_PORTRAITS["carthann-ghaisgh"],
+  "kelch-morna": CEITHEACH_SOURCE_PORTRAITS["kelch-morna"],
+  "dughall-1609-craobhan": CEITHEACH_SOURCE_PORTRAITS["dughall-1609-craobhan"],
+  "gaothaire-duibhne": CEITHEACH_SOURCE_PORTRAITS["gaothaire-duibhne"],
+  "maolmhuire-duibhne": CEITHEACH_SOURCE_PORTRAITS["maolmhuire-duibhne"],
+  "cairisti-duibhne": CEITHEACH_SOURCE_PORTRAITS["cairisti-duibhne"],
+  "grainnein-eldath": CEITHEACH_SOURCE_PORTRAITS["grainnein-eldath"],
+  "conand-1670-rochraide": CEITHEACH_SOURCE_PORTRAITS["conand-1670-rochraide"],
+  "fothradh-1671-craobhan": CEITHEACH_SOURCE_PORTRAITS["fothradh-1671-craobhan"],
+  "fothad-duibhne": CEITHEACH_SOURCE_PORTRAITS["fothad-duibhne"],
+  "doileag-rochraide": CEITHEACH_SOURCE_PORTRAITS["doileag-rochraide"],
+  "conall-1632-eamhra": CEITHEACH_SOURCE_PORTRAITS["conall-1632-eamhra"],
+  "oighreag-cnogan": CEITHEACH_SOURCE_PORTRAITS["oighreag-cnogan"],
+  "zennia-eamhra": CEITHEACH_SOURCE_PORTRAITS["zennia-eamhra"],
+  "nessa-1672-chulainn": DUNFAL_SOURCE_PORTRAITS["nessa-1672-chulainn"],
+  "caitria-1705-chulainn": DUNFAL_SOURCE_PORTRAITS["caitria-1705-chulainn"],
+  "aodhagan-1699-morath": DUNFAL_SOURCE_PORTRAITS["aodhagan-1699-morath"],
+  "maighread-1673-cein": DUNFAL_SOURCE_PORTRAITS["maighread-1673-cein"],
+  "noghan-1700-casur": DUNFAL_SOURCE_PORTRAITS["noghan-1700-casur"],
+  "luibheas-1600-birn": DUNFAL_SOURCE_PORTRAITS["luibheas-1600-birn"],
+  "coemgen-1694-ui-faill-duibhne": DUNFAL_SOURCE_PORTRAITS["coemgen-1694-ui-faill-duibhne"],
+  "aodnait-1700-sept-ferbend": DUNFAL_SOURCE_PORTRAITS["aodnait-1700-sept-ferbend"],
+  "diarmuid-1722-ui-faill-duibhne": DUNFAL_SOURCE_PORTRAITS["diarmuid-1722-ui-faill-duibhne"],
+  "lannan-1705-eachtrai": DUNFAL_SOURCE_PORTRAITS["lannan-1705-eachtrai"],
+  "uibhist-1675-birn": DUNFAL_SOURCE_PORTRAITS["uibhist-1675-birn"],
+  "magan-1704-aonghusa": DUNFAL_SOURCE_PORTRAITS["magan-1704-aonghusa"],
+  "koarnach-frisealach": HOUSE_ARD_FRISEALACH_PORTRAITS["koarnach-frisealach"],
+  "aodhagan-frisealach": HOUSE_ARD_FRISEALACH_PORTRAITS["aodhagan-frisealach"],
+  "jaralt-frisealach": HOUSE_ARD_FRISEALACH_PORTRAITS["jaralt-frisealach"],
+  "jonaibhi-trodach": HOUSE_ARD_TRODACH_PORTRAITS["jonaibhi-trodach"],
+  "preachan-trodach": HOUSE_ARD_TRODACH_PORTRAITS["preachan-trodach"],
+  "lorghus-trodach": HOUSE_ARD_TRODACH_PORTRAITS["lorghus-trodach"],
+  "hiolair-morgacht": HOUSE_ARTH_LOCAL_PORTRAITS["hiolair-morgacht"],
+  "aled-arth": HOUSE_ARTH_LOCAL_PORTRAITS["aled-arth"],
+  "tara-treada": HOUSE_BRITHYLL_PORTRAITS["tara-treada"],
+  "jenkin-brithyll": HOUSE_BRITHYLL_PORTRAITS["jenkin-brithyll"],
+  "hywel-ciarog": HOUSE_CIAROG_PORTRAITS["hywel-ciarog"],
+  "brigid-ceallaigh": HOUSE_CIAROG_PORTRAITS["brigid-ceallaigh"],
+  "dyfan-ciarog": HOUSE_CIAROG_PORTRAITS["dyfan-ciarog"],
+  "mordred-ciarog": HOUSE_CIAROG_PORTRAITS["mordred-ciarog"],
+  "fionn-fiantorc": HOUSE_CIAROG_PORTRAITS["fionn-fiantorc"],
+  "carranog-ciarog": HOUSE_CIAROG_PORTRAITS["carranog-ciarog"],
+  "ultan-tir-fiachiontach": HOUSE_CIAROG_PORTRAITS["ultan-tir-fiachiontach"],
+  "iseult-tartarfhuil": HOUSE_CIAROG_PORTRAITS["iseult-tartarfhuil"],
+  "bhreac-ciarog": HOUSE_CIAROG_PORTRAITS["bhreac-ciarog"],
+  "domnall-cwingod": HOUSE_CWINGOD_PORTRAITS["domnall-cwingod"],
+  "ruaidhri-1648-ruitheach": HOUSE_DAL_RUITHEACH_PORTRAITS["ruaidhri-1648-ruitheach"],
+  "siobhan-muileach": HOUSE_DIENYDDIWR_LOCAL_PORTRAITS["siobhan-muileach"],
+  "rhys-dienyddiwr": HOUSE_DIENYDDIWR_LOCAL_PORTRAITS["rhys-dienyddiwr"],
+  "eimear-ceallaigh": HOUSE_DRAENOG_PORTRAITS["eimear-ceallaigh"],
+  "waleran-draenog": HOUSE_DRAENOG_PORTRAITS["waleran-draenog"],
+  "cadwalladar-draig": HOUSE_DRAIG_PORTRAITS["cadwalladar-draig"],
+  "meallan-gallchobhair": HOUSE_FIR_AN_GALLCHOBHAIR_PORTRAITS["meallan-gallchobhair"],
+  "brychan-durthacht": HOUSE_FREIWINTER_PORTRAITS["brychan-durthacht"],
+  "hjalmfrid-freiwinter": HOUSE_FREIWINTER_PORTRAITS["hjalmfrid-freiwinter"],
+  "diahan-fintain": HOUSE_GRAWN_PORTRAITS["diahan-fintain"],
+  "meirion-grawn": HOUSE_GRAWN_PORTRAITS["meirion-grawn"],
+  "saorlaith-cumhail": HOUSE_MAC_ARD_CUMHAILL_PORTRAITS["saorlaith-cumhail"],
+  "domhnall-1702-cumhail": HOUSE_MAC_ARD_CUMHAILL_PORTRAITS["domhnall-1702-cumhail"],
+  "donnchadh-cumhail": HOUSE_MAC_ARD_CUMHAILL_PORTRAITS["donnchadh-cumhail"],
+  "dervla-coronach": HOUSE_PYRTH_PORTRAITS["dervla-coronach"],
+  "wynward-pyrth": HOUSE_PYRTH_PORTRAITS["wynward-pyrth"],
+  "drwst-tir-addawol": HOUSE_TIR_ADDAWOL_PORTRAITS["drwst-tir-addawol"],
+  "finnbar-fiantorc": HOUSE_TODBRAND_PORTRAITS["finnbar-fiantorc"],
+  "einhild-todbrand": HOUSE_TODBRAND_PORTRAITS["einhild-todbrand"]
+});

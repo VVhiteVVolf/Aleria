@@ -70,7 +70,14 @@ export function validateWorkspaceForPublishing(workspace) {
     });
   });
   collections.cadetBranches.forEach(branch => {
-    if (!partnershipIds.has(branch.parentPartnershipId)) diagnostics.push(`Hausverknüpfung „${branch.id}“ hat kein gültiges Elternpaar.`);
+    if (branch.linkType === 'ward-away') {
+      const ward = collections.persons.find(person => person.id === branch.parentPersonId);
+      if (!ward || ward.familyRole !== 'ward-away' || branch.parentPartnershipId || branch.childIds?.length) {
+        diagnostics.push(`Mündelvermittlung „${branch.id}“ muss direkt an einem fortgegebenen Mündel ohne Elternpaar oder eigene Kinderfortführung hängen.`);
+      }
+    } else if (!partnershipIds.has(branch.parentPartnershipId)) {
+      diagnostics.push(`Hausverknüpfung „${branch.id}“ hat kein gültiges Elternpaar.`);
+    }
     if (!branch.targetFamilyId) diagnostics.push(`Hausverknüpfung „${branch.id}“ hat kein Zielhaus.`);
   });
   const timeJumpAnchors = [];

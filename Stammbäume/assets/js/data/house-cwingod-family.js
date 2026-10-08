@@ -1,3 +1,4 @@
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
 import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { createFamilyPerson, createMarriage, createParentages, createMarriedAwayBranch } from './family-record-builders.js';
@@ -112,21 +113,34 @@ const persons = [
   person('eirwen-cwingod', 'Eirwen Cwingod', 'female', '1736')
 ];
 const requiredHouseIds = new Set(persons.map(entry => entry.houseId));
+// Revisions belong to the receiving family. Arth's later field corrections must
+// not reopen Cwingod's already imported houses or marriages.
+function localSharedRecord(record) {
+  const { registryManagedSourceRevision, registryManagedFieldRevisions, ...extensions } = record.extensions || {};
+  const localRevision = revision => Number.isInteger(revision) ? Math.min(revision, 3) : revision;
+  return { ...record, extensions: {
+    ...extensions,
+    ...(registryManagedSourceRevision === undefined ? {} : { registryManagedSourceRevision: localRevision(registryManagedSourceRevision) }),
+    ...(registryManagedFieldRevisions ? { registryManagedFieldRevisions: Object.fromEntries(
+      Object.entries(registryManagedFieldRevisions).map(([field, revision]) => [field, localRevision(revision)])
+    ) } : {})
+  } };
+}
 const sharedHouses = new Map(SHARED_FAMILIES.flatMap(family => family.houses.map(house => [house.id, house])));
 const houseNames = { 'house-drewi': 'Haus Drewi', 'house-rioga': 'Haus Ríoga', 'house-serenoc': 'Haus Serenoc', 'house-morlais': 'Haus Morlais', 'house-unbekannt-llio': 'Unbekanntes Haus' };
 
-export const HOUSE_CWINGOD_FAMILY = withVennyrSourceCounterUpgrade({
+export const HOUSE_CWINGOD_FAMILY = withAislearneachSourceCounterUpgrade(withVennyrSourceCounterUpgrade({
   schema: 'aleria.family-tree', schemaVersion: 1,
   document: { id: 'haus-cwningod', title: "Haus Cwingod O'Morea", motto: 'Im Maul des Bären liegt die Kraft, die durch Worte und Taten spricht.',
     description: 'Drittes Kadettenhaus der Arth und Baronenhaus der Talklaue. Die vollständige überlieferte Linie steht unter Cra Fryn; Morea ist der in der Hausquelle genannte Stadt- und Handelssitz.',
     emblem: EMBLEM, houseProfile: KLAUENINSEL_HOUSE_PROFILES.cwningod
   },
   houses: [{ id: HOUSE_ID, name: "Haus Cwingod O'Morea", motto: 'Im Maul des Bären liegt die Kraft, die durch Worte und Taten spricht.', emblem: EMBLEM, status: 'active' },
-    ...[...requiredHouseIds].filter(id => id !== HOUSE_ID).map(id => sharedHouses.get(id) || { id, name: houseNames[id] || 'Unbekanntes Haus', motto: '', emblem: '', status: 'active' })],
+    ...[...requiredHouseIds].filter(id => id !== HOUSE_ID).map(id => sharedHouses.has(id) ? localSharedRecord(sharedHouses.get(id)) : { id, name: houseNames[id] || 'Unbekanntes Haus', motto: '', emblem: '', status: 'active' })],
   persons,
   partnerships: Object.entries(COUPLES).map(([key, ids]) => {
     const existing = SHARED_FAMILIES.flatMap(family => family.partnerships).find(entry => entry.id === MARRIAGE_IDS[key]);
-    return existing ? { ...existing } : createMarriage(MARRIAGE_IDS[key], ...ids);
+    return existing ? localSharedRecord(existing) : createMarriage(MARRIAGE_IDS[key], ...ids);
   }),
   parentages: [
     ...children(['rhodhri-cwningod', 'rhonwen-cwningod'], 'founders', { type: 'claimed', certainty: 'probable', notes: 'Nicht einzeln überlieferte Zwischengenerationen.', extensions: { timeJumpId: 'gap-cwingod-founders-rhodhri' } }),
@@ -157,4 +171,4 @@ export const HOUSE_CWINGOD_FAMILY = withVennyrSourceCounterUpgrade({
     registryManagedRecordFields: ['folderPath', 'title'],
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings']
   }
-});
+}));

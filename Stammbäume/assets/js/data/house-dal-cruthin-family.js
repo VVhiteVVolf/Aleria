@@ -1,3 +1,5 @@
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
+import { withDunfalSourceCounterUpgrade } from './dunfal-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -177,7 +179,7 @@ const LACHTNAID_IDS = ['lachtnaid-cruthin', 'tiona-laidir'];
 const SORCHA_1700_IDS = ['sorcha-1700-cruthin', 'gaius-tarvo'];
 const KOIBHNE_IDS = ['koibhne-cruthin', 'zolaith-gortach'];
 
-export const HOUSE_DAL_CRUTHIN_FAMILY = Object.freeze({
+export const HOUSE_DAL_CRUTHIN_FAMILY = withAlbenSourcePortraitUpgrade(Object.freeze(withDunfalSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -437,4 +439,4 @@ export const HOUSE_DAL_CRUTHIN_FAMILY = Object.freeze({
       timeJumps: []
     }
   }
-});
+})));

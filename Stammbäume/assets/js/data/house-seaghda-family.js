@@ -1,3 +1,5 @@
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
 import { createCeitheachSourceFamily } from './ceitheach-source-family-builder.js';
 import { CEITHEACH_ADDITIONAL_SOURCE_CATALOG } from './ceitheach-additional-source-catalog.js';
 
@@ -265,4 +267,4 @@ const SOURCE = Object.freeze({
   "sourceNote": "Ein Quellenzeitsprung. Valínachs Ehe und Affäre sowie die Bastardlinien bleiben getrennt. Zachrachs Verbindung zu Biorna ist erzwungen. Die bereits bestätigte Geburt Zeargáns 1675 bleibt erhalten; 1669 ist eine abweichende Tabellenangabe."
 });
 
-export const HOUSE_SEAGHDA_FAMILY = createCeitheachSourceFamily('seaghda', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG);
+export const HOUSE_SEAGHDA_FAMILY = withAlbenSourcePortraitUpgrade(withAislearneachSourceCounterUpgrade(createCeitheachSourceFamily('seaghda', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG)));

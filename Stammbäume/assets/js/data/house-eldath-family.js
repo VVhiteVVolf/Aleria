@@ -1,3 +1,5 @@
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
+import { withBlaithneachSourceCounterUpgrade } from './blaithneach-source-counter-upgrade.js';
 import { createCeitheachSourceFamily } from './ceitheach-source-family-builder.js';
 
 // Paar- und Kindergruppen nach der beschrifteten Nutzerquelle, keine Ableitung aus Spaltennähe.
@@ -273,4 +275,4 @@ const SOURCE = Object.freeze({
   "sourceNote": "Wuirseach Rochraide und seine Gemahlin sind dieselben Gründerpersonen wie in Rochraide. Zwei Überlieferungslücken. Eadbhard (1656) mit Frida wird von seinem gleichnamigen frühen Vorfahren getrennt. Onoras Einion-Verbindung ist eine Affäre; Keallachs Dearbhla-Verbindung eine Verlobung und die Sàrraas-Verbindung erzwungen. Die kopierte Überschrift Sior bezeichnet Innogen als Siors Partnerin. Eoghair (1651), Eireanns Partner in Eamhra, bleibt ohne erfundene Abstammung von Eoghair (1628) und Aonghus getrennt."
 });
 
-export const HOUSE_ELDATH_FAMILY = createCeitheachSourceFamily('eldath', SOURCE);
+export const HOUSE_ELDATH_FAMILY = withAislearneachSourceCounterUpgrade(withBlaithneachSourceCounterUpgrade(createCeitheachSourceFamily('eldath', SOURCE)));

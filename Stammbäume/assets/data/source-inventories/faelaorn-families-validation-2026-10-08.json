@@ -1,0 +1,331 @@
+{
+  "date": "2026-10-08",
+  "scope": "Faelaorn genealogy, biographies, supplied warriors and counterpart portraits",
+  "publication": "local-only; no commit, push or deployment",
+  "counts": {
+    "families": 7,
+    "sourceAppearances": 508,
+    "distinctPeople": 444,
+    "distinctPartnerships": 180,
+    "htmlSources": 5,
+    "graphicSourceCards": 113,
+    "newIndividualPortraits": 131,
+    "reusedPortraits": 39,
+    "excludedGenericSilhouetteCopies": 192,
+    "warriorIllustrations": 5,
+    "patchedCounterpartFamilies": 14,
+    "patchedCounterpartPeople": 16,
+    "counterpartPortraitsAdded": 10,
+    "unchangedByThisImport": 497
+  },
+  "userCorrections": {
+    "ruarcBhairdBirth": "1727",
+    "meabhrogLagaDeath": "1611",
+    "filidhUrquhartDeath": "1689",
+    "administration": "old lordships despite war and partial occupation"
+  },
+  "familyPeople": {
+    "urquhart": 135,
+    "bhaird": 72,
+    "luthsach": 52,
+    "lachlann": 69,
+    "drummond": 67,
+    "stwatchn": 67,
+    "dundas": 46
+  },
+  "sourceRevision": 2,
+  "tests": {
+    "currentFaelaornCore": {
+      "passed": 6,
+      "failed": 0,
+      "scope": "source coverage, schemas, chronology, wards, portraits, local upgrade preservation"
+    },
+    "faelaornIncludingHistoricalFingerprints": {
+      "passed": 14,
+      "failed": 0,
+      "isolation": "The separately added cwingod-source-portraits.js overlay is replaced with empty exports in a diagnostic Node loader only. No production data was reverted."
+    },
+    "portraitImporter": {
+      "passed": 1,
+      "failed": 0,
+      "covers": "individual child images, preserved archive paths, general adult/child silhouettes"
+    },
+    "wholeModularSuiteObserved": {
+      "total": 157,
+      "passed": 148,
+      "failed": 9,
+      "limitation": "Historical fingerprint, revision and counterpart portrait expectations conflict with the concurrently added Cwingod portrait update. The earlier run before that overlay passed all 155 then-existing checks."
+    },
+    "legacySuiteObserved": {
+      "total": 1246,
+      "passed": 1244,
+      "failed": 2,
+      "failures": [
+        "Arth registry reference equality",
+        "Pawen registry reference equality"
+      ]
+    },
+    "generatedRuntimeAfterReducingBaseline": "byte-identical",
+    "gitDiffCheck": "passed"
+  },
+  "browser": {
+    "desktop": {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "families": [
+        {
+          "familyId": "haus-urquhart",
+          "cardCount": 176,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 2,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-bhaird",
+          "cardCount": 90,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 4,
+          "longPartnershipRoutes": 1,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-luthsach",
+          "cardCount": 63,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 0,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-lachlann",
+          "cardCount": 82,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 0,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-drummond",
+          "cardCount": 79,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 0,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-stwatchn",
+          "cardCount": 82,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 0,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-dundas",
+          "cardCount": 56,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 0,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        }
+      ]
+    },
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "families": [
+        {
+          "familyId": "haus-urquhart",
+          "cardCount": 176,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 2,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-bhaird",
+          "cardCount": 90,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 4,
+          "longPartnershipRoutes": 1,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-luthsach",
+          "cardCount": 63,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 0,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-lachlann",
+          "cardCount": 82,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 0,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-drummond",
+          "cardCount": 79,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 0,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-stwatchn",
+          "cardCount": 82,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 0,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-dundas",
+          "cardCount": 56,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 0,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        }
+      ]
+    },
+    "biographies": {
+      "families": 7,
+      "images": 19,
+      "failures": []
+    },
+    "chartImages": {
+      "checkedAcrossFamilies": 370,
+      "failures": []
+    },
+    "registry": {
+      "families": 518,
+      "emptyPreparedFamilies": 46,
+      "runtimeErrors": 0,
+      "otherFamilyGeometryFindings": [
+        {
+          "familyId": "haus-draig",
+          "cardCount": 223,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 3,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 14,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-eamhra",
+          "cardCount": 64,
+          "overlaps": 1,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "excessiveRoutes": 0,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-blach",
+          "cardCount": 83,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 2,
+          "excessiveRoutes": 0,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        },
+        {
+          "familyId": "haus-saith",
+          "cardCount": 62,
+          "overlaps": 0,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 1,
+          "excessiveRoutes": 2,
+          "longPartnershipRoutes": 0,
+          "runtimeError": "",
+          "browserExceptions": []
+        }
+      ],
+      "note": "No generic chart-renderer changes were made. Other-family findings are recorded for separate layout maintenance."
+    },
+    "routeWarnings": "Urquhart has two wide parent/child routes; Bhaird has four wide routes and one long partnership route. Neither has overlaps, line/card intersections or detached crest links."
+  },
+  "limitations": [
+    "Stwatchn and Dundas are transcribed from inline user diagrams; original raster files were not available locally.",
+    "Unknown names, dates, origin houses and current heads remain open.",
+    "No warrior illustration was supplied for Stwatchn or Dundas; their crests are the biography image."
+  ],
+  "documentation": "DATENPFLEGE.md#1325-faelaorn-sieben-ausgearbeitete-stammbäume-08102026",
+  "sourceInventory": "assets/data/source-inventories/faelaorn-families-2026-10-08.json",
+  "decisionAudit": "assets/data/source-inventories/faelaorn-families-audit-2026-10-08.json"
+}

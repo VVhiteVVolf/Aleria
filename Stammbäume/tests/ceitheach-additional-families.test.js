@@ -1,3 +1,4 @@
+import { ALBEN_SOURCE_PORTRAITS, ALBEN_SOURCE_PORTRAIT_FAMILIES } from '../assets/js/data/alben-source-portraits.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -87,7 +88,7 @@ test('korrigierte Herkunftshäuser stehen samt Wappen auch in den Gegenakten; de
   }
 });
 
-test('unter 16 zählt das tatsächliche Alter bei Tod oder im Weltjahr 1740 und verwendet ausschließlich die Kindersilhouette',()=>{
+test('unter 16 zählt das tatsächliche Alter bei Tod oder im Weltjahr 1740 und verwendet das belegte Porträt oder die Kindersilhouette als Ersatz',()=>{
   const children=Object.values(catalog.persons).filter(p=>p.portraitPlaceholder==='child');
   assert.ok(children.length>=12);
   for(const record of records)for(const p of record.family.persons){
@@ -95,7 +96,7 @@ test('unter 16 zählt das tatsächliche Alter bei Tod oder im Weltjahr 1740 und 
     const end=p.status==='dead'?Number(/^\d{4}$/.test(p.death)?p.death:NaN):1740;
     const age=end-Number(p.birth);if(!Number.isFinite(age)||age<0)continue;
     assert.equal(p.portraitPlaceholder==='child',age<16,p.id);
-    if(age<16){assert.equal(p.portrait,'');assert.equal(resolvePortraitSource(p),PORTRAIT_PLACEHOLDERS.child);}
+    if(age<16){assert.equal(p.portrait,ALBEN_SOURCE_PORTRAITS[p.id] || '');assert.equal(resolvePortraitSource(p),ALBEN_SOURCE_PORTRAITS[p.id] || PORTRAIT_PLACEHOLDERS.child);}
   }
 });
 

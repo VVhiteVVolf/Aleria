@@ -95,11 +95,17 @@ export function auditFamilyChartLayoutPolicy(family) {
 
   (family?.partnerships || []).forEach(partnership => {
     const childIds = directChildIds(family, partnership.id);
+    // An explicit partner/children lane is an equally precise anchor. Requiring
+    // a second pair-midpoint anchor would make later passes undo that layout.
+    const hasPartnerChildAnchor = partnerPlan.partnerOverChildrenRoutes.some(route => (
+      route.partnershipId === partnership.id
+      && childIds.every(id => route.childIds.includes(id))
+    ));
     if (childIds.length === 1) {
       const configuredChildId = String(
         partnership.extensions?.chartAlignParentPairOverChildPersonId || ''
       ).trim();
-      if (configuredChildId !== childIds[0]) {
+      if (configuredChildId !== childIds[0] && !hasPartnerChildAnchor) {
         issues.push(issue('SINGLE_CHILD_WITHOUT_DIRECT_ANCHOR', {
           partnershipId: partnership.id,
           childPersonId: childIds[0],
@@ -112,6 +118,7 @@ export function auditFamilyChartLayoutPolicy(family) {
       childIds.length > 1
       && childIds.every(childId => !isContinuingPerson(family, childId))
       && partnership.extensions?.chartAlignChildGroupBelowParentPair !== true
+      && !hasPartnerChildAnchor
     ) {
       issues.push(issue('LEAF_CHILD_GROUP_WITHOUT_PARENT_PAIR_ANCHOR', {
         partnershipId: partnership.id,

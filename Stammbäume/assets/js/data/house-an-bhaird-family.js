@@ -1,3 +1,4 @@
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
 import { createCeitheachSourceFamily } from './ceitheach-source-family-builder.js';
 import { CEITHEACH_ADDITIONAL_SOURCE_CATALOG } from './ceitheach-additional-source-catalog.js';
 
@@ -200,4 +201,4 @@ const SOURCE = Object.freeze({
   "sourceNote": "Ein serieller Quellenzeitsprung. Die wiederholten Vornamen Fergusach, Eachan, Aoifean, Jowan und Dervla bleiben nach Generation getrennt. Banbas Verbindung ist eine Verlobung; Dervla und Calum sind verheiratet."
 });
 
-export const HOUSE_AN_BHAIRD_FAMILY = createCeitheachSourceFamily('an-bhaird', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG);
+export const HOUSE_AN_BHAIRD_FAMILY = withAislearneachSourceCounterUpgrade(createCeitheachSourceFamily('an-bhaird', SOURCE, CEITHEACH_ADDITIONAL_SOURCE_CATALOG));

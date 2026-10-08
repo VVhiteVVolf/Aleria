@@ -32,7 +32,7 @@ export function createSourceHouseFamily({
     if (!person) throw new Error(`${id}: fehlende Quellenperson ${personId}.`);
     return createFamilyPerson({
       ...person,
-      portrait: person.portraitPlaceholder === 'child' ? '' : catalog.portraits[personId] || '',
+      portrait: catalog.portraits[personId] || '',
       title: titleForPerson(personId, founderId),
       familyRole: wardIds.has(personId) ? 'ward-away' : source.personRoles?.[personId] || (person.houseId === houseId || personId === founderId ? 'core' : 'married'),
       lineageRole: source.heads.includes(personId) ? 'head' : 'branch',

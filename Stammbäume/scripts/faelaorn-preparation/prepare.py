@@ -1,0 +1,106 @@
+"""Archive Faelaorn's supplied territorial evidence and emit the reviewed catalog.
+
+Run before download.py assets.json; run again afterwards to include image receipts.
+Existing family data and genealogical identities are never rewritten here.
+"""
+import hashlib
+import json
+from pathlib import Path
+from bs4 import BeautifulSoup
+
+DIRECTORY = Path(__file__).resolve().parent
+ROOT = DIRECTORY.parents[1]
+INVENTORY = 'assets/data/source-inventories/faelaorn-2026-10-08.json'
+ARCHIVE = ROOT / INVENTORY.removesuffix('.json')
+ATTACHMENTS = Path.home() / '.codex/attachments'
+
+
+def write_json(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+
+def archive_sources():
+    sources = []
+    ARCHIVE.mkdir(parents=True, exist_ok=True)
+    for source in json.loads((DIRECTORY / 'sources.json').read_text('utf-8')):
+        path = ARCHIVE / (source['id'] + '.html')
+        if not path.exists():
+            path.write_bytes((ATTACHMENTS / source['attachmentId'] / 'Eingefügter Text.txt').read_bytes())
+        content = path.read_bytes()
+        soup = BeautifulSoup(content.decode('utf-8'), 'html.parser')
+        rows = []
+        for index, row in enumerate(soup.find_all('tr')):
+            # Container cells repeat every nested row; original row numbers stay stable.
+            if row.find('table'):
+                continue
+            cells = [{'text': cell.get_text(' ', strip=True),
+                      'images': [image.get('src', '') for image in cell.find_all('img')]}
+                     for cell in row.find_all(['td', 'th'], recursive=False)]
+            rows.append({'row': index, 'cells': cells})
+        sources.append({**source, 'path': path.relative_to(ROOT).as_posix(),
+                        'sha256': hashlib.sha256(content).hexdigest(), 'rows': rows})
+    return sources
+
+
+def main():
+    plan = json.loads((DIRECTORY / 'plan.json').read_text('utf-8'))
+    sources = archive_sources()
+    by_id = {s['id']: s for s in sources}
+    assets = []
+
+    def source_image(source_id, row, column):
+        cell = next(r for r in by_id[source_id]['rows'] if r['row'] == row)['cells'][column]
+        assert len(cell['images']) == 1, (source_id, row, column)
+        return cell['images'][0]
+
+    def asset(path, source_id, row, column=0):
+        assets.append({'path': path, 'url': source_image(source_id, row, column),
+                       'sourceId': source_id, 'sourceRow': row, 'sourceColumn': column})
+        return path
+
+    emblem = asset('assets/images/regions/Faelaorn/faelaorn.png', 'faelaorn', 0)
+    territories = [{**entry, 'emblem': asset(f'assets/images/regions/Faelaorn/{entry["id"]}.png', entry['id'], 0)}
+                   for entry in plan['territories']]
+    houses = []
+    for entry in plan['houses']:
+        kind = entry.get('kind', 'clan')
+        prefix = 'sept' if kind == 'sept' else 'haus'
+        image_prefix = 'sept' if kind == 'sept' else 'clan'
+        source = entry['source']
+        houses.append({'kind': kind, 'extinct': False, 'createFamily': True,
+                       'sourceNote': 'Sitz und Rang folgen der alten territorialen Gliederung der Nutzerquelle.',
+                       **entry, 'familyId': f'{prefix}-{entry["slug"]}',
+                       'houseId': f'house-sept-{entry["slug"]}' if kind == 'sept' else f'house-{entry["slug"]}',
+                       'title': ('Sept ' if kind == 'sept' else 'Clan ') + entry['name'],
+                       'emblem': asset(f'assets/images/houses/Faelaorn/{image_prefix}-{entry["slug"]}.png',
+                                      source['id'], source['emblemRow'], source['column'])})
+    receipt_path = DIRECTORY / 'assets-receipt.json'
+    receipts = json.loads(receipt_path.read_text('utf-8')) if receipt_path.exists() else []
+    for receipt in receipts:
+        assert 'error' not in receipt, receipt
+        assert receipt['format'] == 'PNG', 'Update the reviewed paths before emitting another image format.'
+    write_json(DIRECTORY / 'assets.json', assets)
+    write_json(ROOT / INVENTORY, {
+        'date': '2026-10-08', 'scope': 'territorial-preparation-with-empty-family-records',
+        'publication': 'local-only', 'capital': plan['capital'], 'warContext': plan['warContext'],
+        'sources': sources, 'territories': territories, 'houses': houses,
+        'additionalPlacements': plan['additionalPlacements'], 'assets': receipts,
+        'corrections': plan['corrections'], 'unresolvedIdentities': plan['unresolvedIdentities'],
+        'familyAliases': plan['familyAliases']
+    })
+    values = [('FAELAORN_CAPITAL', plan['capital']), ('FAELAORN_EMBLEM', emblem), ('FAELAORN_WAR_CONTEXT', plan['warContext']),
+              ('FAELAORN_TERRITORIES', territories), ('FAELAORN_HOUSE_DEFINITIONS', houses),
+              ('FAELAORN_ADDITIONAL_PLACEMENT_SOURCES', plan['additionalPlacements'])]
+    text = f'// Reviewed source: {INVENTORY}; regenerated by scripts/faelaorn-preparation/prepare.py.\n'
+    for name, value in values:
+        literal = json.dumps(value, ensure_ascii=False, indent=2)
+        expression = literal if isinstance(value, str) else f'Object.freeze({literal})'
+        text += f'export const {name} = {expression};\n\n'
+    (ROOT / 'assets/js/data/faelaorn-territorial-catalog.js').write_text(text, encoding='utf-8')
+    print(json.dumps({'sources': len(sources), 'territories': len(territories), 'families': len(houses),
+                      'assets': len(assets), 'verifiedAssets': len(receipts)}))
+
+
+if __name__ == '__main__':
+    main()

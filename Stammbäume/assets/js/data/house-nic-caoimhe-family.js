@@ -1,3 +1,4 @@
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -187,7 +188,7 @@ const FAINNE_1696_IDS = ['dallan-airgid', 'fainne-1696-caoimhe'];
 const BIORNA_IDS = ['nioclas-ancient-caoimhe', 'biorna-caoimhe'];
 const LATHARNA_IDS = ['meallchu-cruthin', 'latharna-caoimhe'];
 
-export const HOUSE_NIC_CAOIMHE_FAMILY = Object.freeze({
+export const HOUSE_NIC_CAOIMHE_FAMILY = withAlbenSourcePortraitUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -389,4 +390,4 @@ export const HOUSE_NIC_CAOIMHE_FAMILY = Object.freeze({
       timeJumps: []
     }
   }
-});
+}));

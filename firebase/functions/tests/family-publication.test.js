@@ -74,6 +74,23 @@ test('validiert eine konsistente Familienakte', () => {
   assert.equal(validateWorkspaceForPublishing(workspace()).valid, true);
 });
 
+test('Mündelvermittlungen hängen ausschließlich an der fortgegebenen Person', () => {
+  const draft = workspace();
+  draft.collections.persons[2].familyRole = 'ward-away';
+  const branch = { id: 'ward-c', linkType: 'ward-away', parentPersonId: 'c', parentPartnershipId: '', targetFamilyId: 'haus-ziel', childIds: [] };
+  draft.collections.cadetBranches = [branch];
+  assert.equal(validateWorkspaceForPublishing(draft).valid, true);
+  for (const change of [
+    { parentPersonId: 'missing' }, { parentPersonId: 'a' },
+    { parentPartnershipId: 'p' }, { childIds: ['c'] }, { targetFamilyId: '' }
+  ]) {
+    draft.collections.cadetBranches = [{ ...branch, ...change }];
+    assert.equal(validateWorkspaceForPublishing(draft).valid, false, JSON.stringify(change));
+  }
+  draft.collections.cadetBranches = [{ ...branch, linkType: 'cadet-house' }];
+  assert.equal(validateWorkspaceForPublishing(draft).valid, false);
+});
+
 test('akzeptiert einen Zeitsprung direkt nach einer einzelnen Person', () => {
   const draft = workspace();
   draft.collections.timeJumps = [{

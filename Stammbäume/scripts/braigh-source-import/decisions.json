@@ -1,0 +1,184 @@
+{
+  "corrections": {
+    "culloch:204:1": {
+      "name": "Rúairc Diuid",
+      "birth": "1704",
+      "canonicalName": "Rúairc Diuid",
+      "note": "Ausdrückliche Nutzerkorrektur zur Diuid-Tabelle gilt auch hier: Gráinne ist mit Rúairc (*1704) verheiratet; Ronan (*1699) in der neuen Gegenzeile ist ein Vorlagenfehler."
+    },
+    "culloch:209:2": {
+      "birth": "1723",
+      "death": "",
+      "status": "alive",
+      "note": "Abweichende Partner-/Mündelzeile: Lebensdaten folgen der bereits ausgearbeiteten eigenen Herkunftstabelle. Identität und Gegenbeziehung bleiben erhalten."
+    },
+    "culloch:213:2": {
+      "birth": "1722",
+      "death": "",
+      "status": "alive",
+      "note": "Abweichende Partner-/Mündelzeile: Lebensdaten folgen der bereits ausgearbeiteten eigenen Herkunftstabelle. Identität und Gegenbeziehung bleiben erhalten."
+    },
+    "borthwick:133:3": {
+      "birth": "1657",
+      "death": "1720",
+      "status": "dead",
+      "note": "Abweichende Partner-/Mündelzeile: Lebensdaten folgen der bereits ausgearbeiteten eigenen Herkunftstabelle. Identität und Gegenbeziehung bleiben erhalten."
+    },
+    "borthwick:166:2": {
+      "birth": "1727",
+      "death": "",
+      "status": "alive",
+      "note": "Nutzerbestätigung: Fiadh Haig lebt und wurde 1727 geboren. Das Kreuz und 1726 in der Borthwick-Mündelzeile sind Vorlagenfehler."
+    },
+    "erskine:130:2": {
+      "death": "1734",
+      "note": "Das in der neuen Gegenzeile unbekannte Todesjahr stammt aus der eindeutigen Lachlann-Herkunftsakte."
+    },
+    "borthwick:128:3": {
+      "note": "Die eigene Borthwick-Herkunftstabelle nennt Keithas Tod 1735 statt 1739 in der älteren Lachlann-Gegenzeile."
+    },
+    "erskine:125:2": {
+      "note": "Die eigene Erskine-Herkunftstabelle nennt Uidhirs Tod 1724 statt 1700 in der älteren Lachlann-Gegenzeile."
+    },
+    "culloch:159:1": {
+      "note": "Marag/Morag Culloch: dieselbe Person (*1652, †1720), eindeutig durch Merfyn Gwaedlyd identifiziert; kanonischer Name und IDs bleiben erhalten."
+    },
+    "erskine:110:1": {
+      "note": "Cleirgh ist die Schreibvariante der eindeutig durch Jórna Erskine identifizierten Cleirigh-Gegenperson."
+    },
+    "borthwick:138:1": {
+      "houseId": "house-borthwick",
+      "canonicalName": "Ciara Borthwick",
+      "note": "Ciara MacBorthwick und Ciara Borthwick sind anhand Tjelvar Wellenschild und *1672 eindeutig dieselbe Person; vorhandene IDs bleiben erhalten."
+    },
+    "grannd:148:1": {
+      "houseId": "house-grannd",
+      "note": "Die bisher im Sturmgeborenen-Baum ohne houseId geführte Aoife gehört gemäß eigener Herkunftstabelle zu Grannd."
+    },
+    "borthwick:157:3": {
+      "houseId": "house-falkert",
+      "canonicalName": "Kunigunde Falkert",
+      "note": "Der Begleittext ergänzt ausdrücklich den Familiennamen Falkert und die Herkunft aus Mathringen; kein Wappen überliefert."
+    },
+    "culloch:110:2": {
+      "canonicalName": "Unbekannte Eheperson",
+      "houseId": "house-unbekannt",
+      "note": "Ausdrücklich genannte Eheperson einer Septgründung, kein leerer Verlobtenplatzhalter. Name, Herkunftssept, Lebensdaten und Geschlecht sind unbekannt."
+    },
+    "culloch:122:2": {
+      "canonicalName": "Unbekannte Eheperson",
+      "houseId": "house-unbekannt",
+      "note": "Ausdrücklich genannte Eheperson einer Septgründung, kein leerer Verlobtenplatzhalter. Name, Herkunftssept, Lebensdaten und Geschlecht sind unbekannt."
+    },
+    "culloch:150:0": {
+      "canonicalName": "Unbekannte Eheperson",
+      "houseId": "house-unbekannt",
+      "note": "Ausdrücklich genannte Eheperson einer Septgründung, kein leerer Verlobtenplatzhalter. Name, Herkunftssept, Lebensdaten und Geschlecht sind unbekannt."
+    },
+    "culloch:182:3": {
+      "canonicalName": "Unbekannte Eheperson",
+      "houseId": "house-unbekannt",
+      "note": "Ausdrücklich genannte Eheperson einer Septgründung, kein leerer Verlobtenplatzhalter. Name, Herkunftssept, Lebensdaten und Geschlecht sind unbekannt."
+    },
+    "culloch:204:3": {
+      "houseId": "house-unbekannt"
+    },
+    "grannd:153:3": {
+      "houseId": "house-unbekannt"
+    },
+    "culloch:105:2": {
+      "canonicalName": "Muirgen Culloch",
+      "note": "Gründer der Sept Dubhair; Culloch-Herkunft und direkter Gründungsknoten bleiben getrennt."
+    },
+    "culloch:117:2": {
+      "canonicalName": "Quilla Culloch",
+      "note": "Gründerin der Sept Gréin; Culloch-Herkunft und direkter Gründungsknoten bleiben getrennt."
+    },
+    "culloch:141:0": {
+      "canonicalName": "Glaisne Culloch",
+      "sex": "female",
+      "note": "Im Begleittext ausdrücklich Gründerin der Sept Gaesa; Herkunft weiterhin Culloch."
+    },
+    "culloch:173:3": {
+      "canonicalName": "Beathag Culloch",
+      "sex": "male",
+      "note": "Im Begleittext ausdrücklich Gründer der Sept Malairt (*1674); kein zusätzlicher Laird-Status abgeleitet."
+    },
+    "grannd:148:3": {
+      "note": "Die Ehe mit Jugendfreundin Seonaid wurde gegen Bearnárds Willen arrangiert. Rechtliche Ehe und eheliche Kinder bleiben von seiner dauerhaften Affäre mit Svanhild getrennt."
+    },
+    "grannd:153:2": {
+      "note": "Früheres Mündel des Oberhauptes laut Biografie. Die damalige Vormundsperson ist nicht namentlich belegt; kein gegenwärtiger Vormund wird geraten."
+    },
+    "erskine:145:1": {
+      "note": "Brigid ist laut Begleittext Smutje der Wintermonde."
+    },
+    "culloch:177:0": {
+      "note": "Kommandant bei den Windreiter-Söldnern; führt das Hauptbanner mit den Sturmreitern."
+    },
+    "culloch:195:2": {
+      "note": "Hauptmann der Sturmreiter und rechte Hand seines Vaters Darragh; als dessen künftiger Nachfolger vorgesehen."
+    }
+  },
+  "aliases": {},
+  "existing": {
+    "culloch:105:1": "aoife-founder-culloch",
+    "culloch:110:1": "reamonn-founder-diuid",
+    "culloch:127:1": "walla-culloch",
+    "culloch:132:1": "fenrir-wellenschild",
+    "culloch:127:2": "caomhog-culloch",
+    "culloch:132:2": "gallgoid-morlais",
+    "culloch:155:0": "vionnan-culloch",
+    "culloch:164:0": "rangrid-blutstahl",
+    "culloch:155:2": "hurracan-1649-culloch",
+    "culloch:164:2": "maille-1650-bhaird",
+    "culloch:159:0": "jathghal-1651-culloch",
+    "culloch:168:0": "seallach-1655-casur",
+    "culloch:159:1": "morag-culloch",
+    "culloch:168:1": "merfyn-gwaedlyd",
+    "culloch:173:2": "murdoch-1672-culloch",
+    "culloch:182:2": "muirgel-1676-urquhart",
+    "culloch:177:0": "darragh-culloch",
+    "culloch:186:0": "crystin-illygoden",
+    "culloch:177:2": "loinneog-1675-culloch",
+    "culloch:186:2": "macmhar-1672-tartarfhuil",
+    "culloch:191:3": "neasa-1709-culloch",
+    "culloch:200:3": "wiarnan-1705-morna",
+    "culloch:195:1": "grainne-1700-culloch",
+    "culloch:204:1": "ruairc-1704-diuid",
+    "culloch:209:2": "ronnat-1723-lockart",
+    "culloch:213:2": "gobaith-1722-haig",
+    "borthwick:118:1": "sorcha-borthwick",
+    "borthwick:123:1": "jowaneth-wivern",
+    "borthwick:128:1": "nasuada-borthwick",
+    "borthwick:133:1": "conway-trachwyll",
+    "borthwick:128:2": "gabhan-borthwick",
+    "borthwick:133:2": "oideach-mochoe",
+    "borthwick:128:3": "keitha-1660-borthwick",
+    "borthwick:133:3": "murchadh-1657-lachlann",
+    "borthwick:138:1": "ciara-macborthwick",
+    "borthwick:143:1": "tjelvar-wellenschild",
+    "borthwick:166:2": "fiadh-1727-haig",
+    "erskine:105:1": "jorna-1605-erskine",
+    "erskine:110:1": "pailtear-1602-cleirigh",
+    "erskine:125:1": "julbhach-1648-erskine",
+    "erskine:130:1": "hamish-1648-bhaird",
+    "erskine:125:2": "uidhir-1652-erskine",
+    "erskine:130:2": "oilean-1655-lachlann",
+    "erskine:125:4": "veilleann-1655-erskine",
+    "erskine:130:4": "keir-1655-fiorghra",
+    "erskine:135:1": "talulah-erskine",
+    "erskine:140:1": "uther-drewi",
+    "erskine:135:3": "uaine-erskine",
+    "erskine:140:3": "cynfarch-tiwna",
+    "grannd:118:1": "keebh-grannd",
+    "grannd:123:1": "eivyonydd-balauric",
+    "grannd:148:1": "aoife-grannd",
+    "grannd:153:1": "grimnir-sturmgeborener"
+  },
+  "houseAliases": {
+    "cleirgh": "house-cleirigh",
+    "gairbre": "house-cairbre",
+    "macborthwick": "house-borthwick"
+  }
+}

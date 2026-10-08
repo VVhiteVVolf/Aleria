@@ -1,0 +1,25 @@
+// Lokale Originalbilder aus der Dunfal-Quelle vom 07.10.2026.
+export const HOUSE_AONGHUSA_PORTRAITS = Object.freeze({
+  "wiorna-1606-aonghusa": "assets/images/portraits/haus-aonghusa/wiorna-1606-aonghusa.png",
+  "naemhan-1606-aonghusa": "assets/images/portraits/haus-aonghusa/naemhan-1606-aonghusa.png",
+  "carthach-1608-casur": "assets/images/portraits/haus-aonghusa/carthach-1608-casur.png",
+  "vionnadh-1604-anbhair": "assets/images/portraits/haus-aonghusa/vionnadh-1604-anbhair.png",
+  "reamha-1626-aonghusa": "assets/images/portraits/haus-aonghusa/reamha-1626-aonghusa.png",
+  "hurracan-1632-aonghusa": "assets/images/portraits/haus-aonghusa/hurracan-1632-aonghusa.png",
+  "odhbha-1653-aonghusa": "assets/images/portraits/haus-aonghusa/odhbha-1653-aonghusa.png",
+  "searan-1652-aonghusa": "assets/images/portraits/haus-aonghusa/searan-1652-aonghusa.png",
+  "neart-1654-aonghusa": "assets/images/portraits/haus-aonghusa/neart-1654-aonghusa.png",
+  "cuan-1677-aonghusa": "assets/images/portraits/haus-aonghusa/cuan-1677-aonghusa.png",
+  "hurracan-1679-aonghusa": "assets/images/portraits/haus-aonghusa/hurracan-1679-aonghusa.png",
+  "neidhe-1674-aonghusa": "assets/images/portraits/haus-aonghusa/neidhe-1674-aonghusa.png",
+  "hearn-1677-aonghusa": "assets/images/portraits/haus-aonghusa/hearn-1677-aonghusa.png",
+  "vathna-1678-anbhair": "assets/images/portraits/haus-aonghusa/vathna-1678-anbhair.png",
+  "wiorna-1694-aonghusa": "assets/images/portraits/haus-aonghusa/wiorna-1694-aonghusa.png",
+  "catania-1698-aonghusa": "assets/images/portraits/haus-aonghusa/catania-1698-aonghusa.png",
+  "magan-1704-aonghusa": "assets/images/portraits/haus-aonghusa/magan-1704-aonghusa.png",
+  "keebh-1710-aonghusa": "assets/images/portraits/haus-aonghusa/keebh-1710-aonghusa.png",
+  "judan-1713-aonghusa": "assets/images/portraits/haus-aonghusa/judan-1713-aonghusa.png",
+  "rioghnan-1693-casur": "assets/images/portraits/haus-aonghusa/rioghnan-1693-casur.png",
+  "kumhn-1720-aonghusa": "assets/images/portraits/haus-aonghusa/kumhn-1720-aonghusa.png",
+  "banbhin-1724-aonghusa": "assets/images/portraits/haus-aonghusa/banbhin-1724-aonghusa.png"
+});

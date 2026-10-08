@@ -1,3 +1,4 @@
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
 import { withCeitheachSourceCounterUpgrade } from './ceitheach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
@@ -518,7 +519,7 @@ const ROISIN_IDS = ['kevyn-airt', 'roisin-blar'];
 const MAONAIT_IDS = ['joriath-choinnich', 'maonait-blar'];
 const NALAINN_IDS = ['lughaidh-1698-laidir', 'nalainn-blar'];
 
-export const HOUSE_NIC_BLAR_LEITHEACH_FAMILY = Object.freeze(withCeitheachSourceCounterUpgrade({
+export const HOUSE_NIC_BLAR_LEITHEACH_FAMILY = withAlbenSourcePortraitUpgrade(Object.freeze(withCeitheachSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -731,4 +732,4 @@ export const HOUSE_NIC_BLAR_LEITHEACH_FAMILY = Object.freeze(withCeitheachSource
       timeJumps: []
     }
   }
-}));
+})));

@@ -1,0 +1,37 @@
+{
+  "slug": "blaithneach",
+  "name": "Blaithneach",
+  "date": "2026-10-08",
+  "displayDate": "08.10.2026",
+  "inventory": "assets/data/source-inventories/blaithneach-families-2026-10-08.json",
+  "familyDecorators": [
+    {
+      "slugs": [
+        "magach"
+      ],
+      "function": "withAislearneachSourceCounterUpgrade",
+      "module": "aislearneach-source-counter-upgrade.js"
+    },
+    {
+      "slugs": [
+        "ronain",
+        "nessa",
+        "magach",
+        "suiste",
+        "gairner",
+        "goidin",
+        "eala",
+        "haeghra"
+      ],
+      "function": "withAlbenSourcePortraitUpgrade",
+      "module": "alben-source-portrait-upgrade.js"
+    },
+    {
+      "slugs": [
+        "ronain"
+      ],
+      "function": "withFaelaornSourceCounterUpgrade",
+      "module": "faelaorn-source-counter-upgrade.js"
+    }
+  ]
+}

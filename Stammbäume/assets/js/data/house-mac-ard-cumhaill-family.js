@@ -1,3 +1,8 @@
+import { withFaelaornSourceCounterUpgrade } from './faelaorn-source-counter-upgrade.js';
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
+import { withBlaithneachSourceCounterUpgrade } from './blaithneach-source-counter-upgrade.js';
+import { withDunfalSourceCounterUpgrade } from './dunfal-source-counter-upgrade.js';
 import { withCeitheachSourceCounterUpgrade } from './ceitheach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
@@ -297,7 +302,7 @@ const SENAN_1700_IDS = ['senan-1700-cumhail', 'polain-cruthin'];
 const ODRAN_IDS = ['odran-cumhail', 'iarlaith-gallchobhair'];
 const DOMHNALL_1702_IDS = ['domhnall-1702-cumhail', 'caragh-coronach'];
 
-export const HOUSE_MAC_ARD_CUMHAILL_FAMILY = Object.freeze(withCeitheachSourceCounterUpgrade({
+export const HOUSE_MAC_ARD_CUMHAILL_FAMILY = withFaelaornSourceCounterUpgrade(withAlbenSourcePortraitUpgrade(withAislearneachSourceCounterUpgrade(withBlaithneachSourceCounterUpgrade(Object.freeze(withDunfalSourceCounterUpgrade(withCeitheachSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -777,4 +782,4 @@ export const HOUSE_MAC_ARD_CUMHAILL_FAMILY = Object.freeze(withCeitheachSourceCo
     registryManagedViewFields: ['focusPersonId'],
     registryManagedRecordFields: ['folderPath']
   }
-}));
+})))))));

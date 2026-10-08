@@ -1,3 +1,4 @@
+import { ALBEN_SOURCE_PORTRAITS, ALBEN_SOURCE_PORTRAIT_FAMILIES } from '../assets/js/data/alben-source-portraits.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -88,7 +89,7 @@ test('Nutzerklärungen und sechs junge Verstorbene werden ohne erfundene Todesda
   assert.equal(children.length,6);
   for(const child of children){
     assert.ok(Number(child.death)-Number(child.birth)<16);
-    for(const record of records){const p=record.family.persons.find(p=>p.id===child.id);if(p){assert.equal(p.portrait,'');assert.equal(resolvePortraitSource(p),PORTRAIT_PLACEHOLDERS.child);}}
+    for(const record of records){const p=record.family.persons.find(p=>p.id===child.id);if(p){assert.equal(p.portrait,ALBEN_SOURCE_PORTRAITS[p.id] || '');assert.equal(resolvePortraitSource(p),ALBEN_SOURCE_PORTRAITS[p.id] || PORTRAIT_PLACEHOLDERS.child);}}
   }
 });
 

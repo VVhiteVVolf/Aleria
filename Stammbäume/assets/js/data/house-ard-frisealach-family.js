@@ -1,3 +1,4 @@
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -223,7 +224,7 @@ const HURRACAN_IDS = ['hurracan-frisealach', 'wihalg-somhairle'];
 const HOILBHE_IDS = ['hoilbhe-frisealach', 'nobhan-ancient'];
 const JARALT_IDS = ['jaralt-frisealach', 'leagha-luchdon'];
 
-export const HOUSE_ARD_FRISEALACH_FAMILY = Object.freeze({
+export const HOUSE_ARD_FRISEALACH_FAMILY = withAislearneachSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -506,4 +507,4 @@ export const HOUSE_ARD_FRISEALACH_FAMILY = Object.freeze({
       timeJumps: []
     }
   }
-});
+}));

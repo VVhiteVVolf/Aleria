@@ -1,3 +1,4 @@
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
 import { withCeitheachSourceCounterUpgrade } from './ceitheach-source-counter-upgrade.js';
 import { createCeitheachSourceFamily } from './ceitheach-source-family-builder.js';
 
@@ -258,4 +259,4 @@ const SOURCE = Object.freeze({
   "sourceNote": "Die unbekannten Oberhäupter und Erben der Vorlage bleiben unbesetzt. Mehrere Partnerschaften sind entsprechend der Quelle getrennt: Peighanns Verlobung mit Meallán und Affäre mit Ollamh; Koarnachs Ehe mit Uthbhla und erzwungene Verbindungen mit Oighreag/Aingeal. Die daraus stammenden Kinder sind als Bastarde belegt. Geburten 1721 nach Koarnachs Tod 1720 werden als mögliche posthume Geburten beibehalten; Jahresangaben allein widerlegen sie nicht. Máire Feannag (1637) ist eine andere Person als die bereits geführte Máire (1700). Anonyme Verlobungsvorlagen werden nicht als Personen übernommen."
 });
 
-export const HOUSE_EAMHRA_FAMILY = withCeitheachSourceCounterUpgrade(createCeitheachSourceFamily('eamhra', SOURCE));
+export const HOUSE_EAMHRA_FAMILY = withAislearneachSourceCounterUpgrade(withCeitheachSourceCounterUpgrade(createCeitheachSourceFamily('eamhra', SOURCE)));

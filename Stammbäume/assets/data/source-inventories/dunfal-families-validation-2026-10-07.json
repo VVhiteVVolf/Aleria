@@ -1,0 +1,416 @@
+{
+  "date": "2026-10-07",
+  "sourceCards": 626,
+  "uniquePersons": 544,
+  "newGenealogies": 12,
+  "counterpartFamilies": 15,
+  "counterpartPeople": 16,
+  "portraits": {
+    "newOriginalFiles": 318,
+    "childReferences": 38,
+    "reusedFiles": 44,
+    "displayPaths": 324
+  },
+  "references": {
+    "warriors": 11,
+    "trees": 12
+  },
+  "tests": {
+    "nodeTest": {
+      "passed": 120,
+      "failed": 0
+    },
+    "legacyRunner": {
+      "passed": 1245,
+      "failed": 1,
+      "knownBaselineFailure": "Pawen: Referenzgleichheit der registrierten Familienakte; bereits vor dem Dunfal-Import vorhanden"
+    },
+    "firebasePublicationAndAssets": {
+      "passed": 10,
+      "failed": 0
+    }
+  },
+  "browser": {
+    "registry": {
+      "audited": 479,
+      "emptyFamilies": 33,
+      "existingNonemptyIssues": [
+        {
+          "familyId": "haus-nic-holloran",
+          "cardCount": 87,
+          "viewport": {
+            "width": 320,
+            "height": 240
+          },
+          "overlaps": 4,
+          "confirmedLineCardIntersections": 6,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "runtimeError": ""
+        },
+        {
+          "familyId": "haus-eamhra",
+          "cardCount": 64,
+          "viewport": {
+            "width": 320,
+            "height": 240
+          },
+          "overlaps": 1,
+          "confirmedLineCardIntersections": 0,
+          "unattributedLineCardIntersections": 0,
+          "misalignedCrestLinks": 0,
+          "runtimeError": ""
+        }
+      ]
+    },
+    "desktop": [
+      {
+        "familyId": "haus-chulainn",
+        "cardCount": 82,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-nuadat",
+        "cardCount": 85,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-ailella",
+        "cardCount": 84,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-cein",
+        "cardCount": 85,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-birn",
+        "cardCount": 60,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-riangabra",
+        "cardCount": 48,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-morath",
+        "cardCount": 82,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-aonghusa",
+        "cardCount": 57,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-anbhair",
+        "cardCount": 49,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-casur",
+        "cardCount": 62,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-eachtrai",
+        "cardCount": 58,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "sept-ferbend",
+        "cardCount": 8,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-ciarog",
+        "cardCount": 60,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      }
+    ],
+    "mobile": [
+      {
+        "familyId": "haus-chulainn",
+        "cardCount": 82,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-nuadat",
+        "cardCount": 85,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-ailella",
+        "cardCount": 84,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-cein",
+        "cardCount": 85,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-birn",
+        "cardCount": 60,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-riangabra",
+        "cardCount": 48,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-morath",
+        "cardCount": 82,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-aonghusa",
+        "cardCount": 57,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-anbhair",
+        "cardCount": 49,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-casur",
+        "cardCount": 62,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-eachtrai",
+        "cardCount": 58,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "sept-ferbend",
+        "cardCount": 8,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      },
+      {
+        "familyId": "haus-ciarog",
+        "cardCount": 61,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": ""
+      }
+    ],
+    "biographyImages": {
+      "families": 13,
+      "broken": 0,
+      "runtimeErrors": 0,
+      "mobileDialogVisible": true
+    }
+  },
+  "publication": "Local only; no push or deploy"
+}

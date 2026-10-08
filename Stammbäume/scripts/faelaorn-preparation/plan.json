@@ -1,0 +1,724 @@
+{
+  "warContext": {
+    "status": "war",
+    "opponent": "Skjaerheim",
+    "occupation": "partial",
+    "extent": "Etwa die Hälfte Faelaorns ist übernommen.",
+    "administrativeBasis": "historical",
+    "territorialControlSpecified": false,
+    "note": "Faelaorn befindet sich im Krieg mit Skjaerheim und ist etwa zur Hälfte übernommen. Das Register folgt weiterhin den alten Herrschaften, Stammsitzen und Lehnsverhältnissen. Eine konkrete Besatzungsgrenze ist nicht überliefert."
+  },
+  "territories": [
+    {
+      "id": "tir-na-rann",
+      "name": "Tir na Rann",
+      "gloss": "Land der Verse",
+      "seat": "Piobarach",
+      "rulingFamilyId": "haus-urquhart"
+    },
+    {
+      "id": "tir-na-mathgham",
+      "name": "Tir na Mathgham",
+      "gloss": "Land der Bären",
+      "seat": "Balgavrie",
+      "rulingFamilyId": "haus-diuid"
+    },
+    {
+      "id": "tir-na-braigh",
+      "name": "Tir na Braigh",
+      "gloss": "Land der Brandung",
+      "seat": "Eldrimuir",
+      "rulingFamilyId": "haus-culloch"
+    },
+    {
+      "id": "tir-na-faerna",
+      "name": "Tir na Faerna",
+      "gloss": "Land der Herden",
+      "seat": "Beinnstir",
+      "rulingFamilyId": "haus-buadhtreun"
+    },
+    {
+      "id": "tir-na-damh",
+      "name": "Tir na Damh",
+      "gloss": "Land der Haine",
+      "seat": "Càrn Bruach",
+      "rulingFamilyId": "haus-eoghainn"
+    },
+    {
+      "id": "tir-na-brann",
+      "name": "Tir na Brann",
+      "gloss": "Land der Wälle",
+      "seat": "Sgurrfàil",
+      "rulingFamilyId": "haus-dubglais"
+    }
+  ],
+  "houses": [
+    {
+      "slug": "urquhart",
+      "name": "Ui Urquhart",
+      "territoryId": "tir-na-rann",
+      "rankId": "ard-tiarna",
+      "seat": "Piobarach",
+      "source": {
+        "id": "tir-na-rann",
+        "nameRow": 76,
+        "seatRow": 74,
+        "emblemRow": 75,
+        "column": 0
+      },
+      "administrativeRole": "Fürstenclan Faelaorns und Oberherr von Tir na Rann",
+      "sourceNote": "Ui Urquhart ist der Fürstenclan. Piobarach ist Hauptstadt Faelaorns und Stammsitz des Clans (ausdrückliche Nutzerkorrektur vom 08.10.2026). Kein unbenanntes Ratsmitglied wird als Person angelegt."
+    },
+    {
+      "slug": "stwatchn",
+      "name": "Ru Stwatchn",
+      "territoryId": "tir-na-rann",
+      "rankId": "dun-tiarna",
+      "seat": "Invercalda",
+      "source": {
+        "id": "tir-na-rann",
+        "nameRow": 82,
+        "seatRow": 80,
+        "emblemRow": 81,
+        "column": 0
+      }
+    },
+    {
+      "slug": "bhaird",
+      "name": "Ó / Dál Bhaird",
+      "territoryId": "tir-na-rann",
+      "rankId": "laird",
+      "seat": "Piobarach",
+      "source": {
+        "id": "tir-na-rann",
+        "nameRow": 88,
+        "seatRow": 86,
+        "emblemRow": 87,
+        "column": 0
+      }
+    },
+    {
+      "slug": "luthsach",
+      "name": "Ó / Dál Luthsach",
+      "territoryId": "tir-na-rann",
+      "rankId": "laird",
+      "seat": "Piobarach",
+      "source": {
+        "id": "tir-na-rann",
+        "nameRow": 88,
+        "seatRow": 86,
+        "emblemRow": 87,
+        "column": 1
+      }
+    },
+    {
+      "slug": "lachlann",
+      "name": "Breac Lachlann",
+      "territoryId": "tir-na-rann",
+      "rankId": "laird",
+      "seat": "Dun Liath",
+      "source": {
+        "id": "tir-na-rann",
+        "nameRow": 88,
+        "seatRow": 86,
+        "emblemRow": 87,
+        "column": 2
+      }
+    },
+    {
+      "slug": "drummond",
+      "name": "Breac Drummond",
+      "territoryId": "tir-na-rann",
+      "rankId": "laird",
+      "seat": "Dun Grealach",
+      "source": {
+        "id": "tir-na-rann",
+        "nameRow": 88,
+        "seatRow": 86,
+        "emblemRow": 87,
+        "column": 3
+      }
+    },
+    {
+      "slug": "dundas",
+      "name": "Ó Dundas",
+      "territoryId": "tir-na-rann",
+      "rankId": "laird",
+      "seat": "Dun Foirgneamh",
+      "source": {
+        "id": "tir-na-rann",
+        "nameRow": 88,
+        "seatRow": 86,
+        "emblemRow": 87,
+        "column": 4
+      }
+    },
+    {
+      "slug": "ffearnach",
+      "name": "Mac Ffearnach",
+      "territoryId": "tir-na-rann",
+      "rankId": "unknown",
+      "seat": "Caer Fionnach",
+      "source": {
+        "id": "tir-na-rann",
+        "nameRow": 111,
+        "seatRow": 108,
+        "emblemRow": 110,
+        "column": 0
+      },
+      "extinct": true,
+      "sourceNote": "Ausdrücklich unter ausgestorbenen Häusern und als ehemalige Lehensherrschaft genannt. Historischer Rang, letztes Oberhaupt und Erlöschensjahr bleiben offen."
+    },
+    {
+      "slug": "diuid",
+      "name": "Mac Ard Diuid",
+      "territoryId": "tir-na-mathgham",
+      "rankId": "mor-tiarna",
+      "seat": "Balgavrie",
+      "source": {
+        "id": "tir-na-mathgham",
+        "nameRow": 76,
+        "seatRow": 74,
+        "emblemRow": 75,
+        "column": 0
+      },
+      "sourceNote": "Die Hauptübersicht ergänzt den vollständigen Clannamen Mac Ard Diuid; die Regionalkarte nennt dieselbe Familie mit identischem Wappen nur Diuid."
+    },
+    {
+      "slug": "lockart",
+      "name": "Ó Lockart",
+      "territoryId": "tir-na-mathgham",
+      "rankId": "dun-tiarna",
+      "seat": "Cnosbubh",
+      "source": {
+        "id": "tir-na-mathgham",
+        "nameRow": 82,
+        "seatRow": 80,
+        "emblemRow": 81,
+        "column": 0
+      }
+    },
+    {
+      "slug": "fiorghra",
+      "name": "Tir An Fiorghra",
+      "territoryId": "tir-na-mathgham",
+      "rankId": "dun-tiarna",
+      "seat": "Lochcaeron",
+      "source": {
+        "id": "tir-na-mathgham",
+        "nameRow": 82,
+        "seatRow": 80,
+        "emblemRow": 81,
+        "column": 1
+      }
+    },
+    {
+      "slug": "ness",
+      "name": "An Ness",
+      "territoryId": "tir-na-mathgham",
+      "rankId": "dun-tiarna",
+      "seat": "Glenshear",
+      "source": {
+        "id": "tir-na-mathgham",
+        "nameRow": 82,
+        "seatRow": 80,
+        "emblemRow": 81,
+        "column": 2
+      }
+    },
+    {
+      "slug": "haig",
+      "name": "Ó / Dál Haig",
+      "territoryId": "tir-na-mathgham",
+      "rankId": "laird",
+      "seat": "Tur na Fala",
+      "source": {
+        "id": "tir-na-mathgham",
+        "nameRow": 88,
+        "seatRow": 86,
+        "emblemRow": 87,
+        "column": 0
+      }
+    },
+    {
+      "slug": "banlaoch",
+      "name": "Nic Banlaoch",
+      "territoryId": "tir-na-mathgham",
+      "rankId": "laird",
+      "seat": "Caisteal Gorm",
+      "source": {
+        "id": "tir-na-mathgham",
+        "nameRow": 88,
+        "seatRow": 86,
+        "emblemRow": 87,
+        "column": 2
+      }
+    },
+    {
+      "slug": "culloch",
+      "name": "Mac Culloch",
+      "territoryId": "tir-na-braigh",
+      "rankId": "mor-tiarna",
+      "seat": "Eldrimuir",
+      "source": {
+        "id": "tir-na-braigh",
+        "nameRow": 76,
+        "seatRow": 74,
+        "emblemRow": 75,
+        "column": 0
+      },
+      "sourceNote": "Callum Mac Culloch ist als Mor Tiarna genannt; die Amtstabelle liefert keine genealogischen Beziehungen."
+    },
+    {
+      "slug": "borthwick",
+      "name": "Tir An Borthwick",
+      "territoryId": "tir-na-braigh",
+      "rankId": "dun-tiarna",
+      "seat": "Morvay",
+      "source": {
+        "id": "tir-na-braigh",
+        "nameRow": 82,
+        "seatRow": 80,
+        "emblemRow": 81,
+        "column": 0
+      },
+      "sourceNote": "Goirtín Tir An Borthwick steht in der Amtstabelle. Die Familienakte bleibt bis zur genealogischen Quelle leer."
+    },
+    {
+      "slug": "erskine",
+      "name": "An Erskine",
+      "territoryId": "tir-na-braigh",
+      "rankId": "dun-tiarna",
+      "seat": "Garadhain",
+      "source": {
+        "id": "tir-na-braigh",
+        "nameRow": 82,
+        "seatRow": 80,
+        "emblemRow": 81,
+        "column": 1
+      },
+      "sourceNote": "Ylorcán An Erskine steht in der Amtstabelle; kein unbelegter Stammbaum wird daraus abgeleitet."
+    },
+    {
+      "slug": "grannd",
+      "name": "Na Grannd",
+      "territoryId": "tir-na-braigh",
+      "rankId": "laird",
+      "seat": "Dun Uisge",
+      "source": {
+        "id": "tir-na-braigh",
+        "nameRow": 88,
+        "seatRow": 86,
+        "emblemRow": 87,
+        "column": 0
+      },
+      "sourceNote": "Jarlath Na Grannd ist als Laird von Dun Uisge genannt. Die genealogische Grannd-/Erskine-Quelle vom 08.10.2026 bestätigt Erskine als unmittelbaren Lehensherrn unter der Oberherrschaft Cullochs.",
+      "liegeFamilyId": "haus-erskine"
+    },
+    {
+      "slug": "malairt",
+      "name": "Malairt",
+      "territoryId": "tir-na-braigh",
+      "rankId": "sept-head",
+      "seat": "",
+      "source": {
+        "id": "tir-na-braigh",
+        "nameRow": 100,
+        "seatRow": 98,
+        "emblemRow": 99,
+        "column": 0
+      },
+      "kind": "sept",
+      "sourceNote": "Namentlich und mit eigenem Zeichen belegte Sept. Die Sitzangabe „Heimstätte“ ist ein Vorlagenplatzhalter; Ort und Genealogie bleiben offen."
+    },
+    {
+      "slug": "dubhair",
+      "name": "Dubhair",
+      "territoryId": "tir-na-braigh",
+      "rankId": "sept-head",
+      "seat": "",
+      "source": {
+        "id": "tir-na-braigh",
+        "nameRow": 100,
+        "seatRow": 98,
+        "emblemRow": 99,
+        "column": 1
+      },
+      "kind": "sept",
+      "sourceNote": "Namentlich und mit eigenem Zeichen belegte Sept. Die Sitzangabe „Heimstätte“ ist ein Vorlagenplatzhalter; Ort und Genealogie bleiben offen."
+    },
+    {
+      "slug": "grein",
+      "name": "Gréin",
+      "territoryId": "tir-na-braigh",
+      "rankId": "sept-head",
+      "seat": "",
+      "source": {
+        "id": "tir-na-braigh",
+        "nameRow": 100,
+        "seatRow": 98,
+        "emblemRow": 99,
+        "column": 2
+      },
+      "kind": "sept",
+      "sourceNote": "Namentlich und mit eigenem Zeichen belegte Sept. Die Sitzangabe „Heimstätte“ ist ein Vorlagenplatzhalter; Ort und Genealogie bleiben offen."
+    },
+    {
+      "slug": "gaesa",
+      "name": "Gaesa",
+      "territoryId": "tir-na-braigh",
+      "rankId": "sept-head",
+      "seat": "",
+      "source": {
+        "id": "tir-na-braigh",
+        "nameRow": 100,
+        "seatRow": 98,
+        "emblemRow": 99,
+        "column": 3
+      },
+      "kind": "sept",
+      "sourceNote": "Namentlich und mit eigenem Zeichen belegte Sept. Die Sitzangabe „Heimstätte“ ist ein Vorlagenplatzhalter; Ort und Genealogie bleiben offen."
+    },
+    {
+      "slug": "treoir",
+      "name": "Treoir",
+      "territoryId": "tir-na-braigh",
+      "rankId": "sept-head",
+      "seat": "",
+      "source": {
+        "id": "tir-na-braigh",
+        "nameRow": 100,
+        "seatRow": 98,
+        "emblemRow": 99,
+        "column": 4
+      },
+      "kind": "sept",
+      "sourceNote": "Namentlich und mit eigenem Zeichen belegte Sept. Die Sitzangabe „Heimstätte“ ist ein Vorlagenplatzhalter; Ort und Genealogie bleiben offen."
+    },
+    {
+      "slug": "buadhtreun",
+      "name": "Ard Buadhtreun",
+      "territoryId": "tir-na-faerna",
+      "rankId": "mor-tiarna",
+      "seat": "Beinnstir",
+      "source": {
+        "id": "tir-na-faerna",
+        "nameRow": 76,
+        "seatRow": 74,
+        "emblemRow": 75,
+        "column": 0
+      },
+      "sourceNote": "Beinnstir folgt Landesübersicht, Regionalsteckbrief und Macraiths Amtszeile. Airdree in der Buadhtreun-Sitzzeile widerspricht diesen drei Belegen und ist zugleich der bestätigte Muirgheal-Sitz. Diarmait und Macraith sind als verstorbene Amtsträger bezeichnet; daraus folgt kein Erlöschen des Clans."
+    },
+    {
+      "slug": "durachd",
+      "name": "Tir An Durachd",
+      "territoryId": "tir-na-faerna",
+      "rankId": "dun-tiarna",
+      "seat": "Culrain",
+      "source": {
+        "id": "tir-na-faerna",
+        "nameRow": 82,
+        "seatRow": 80,
+        "emblemRow": 81,
+        "column": 0
+      },
+      "sourceNote": "In Tir na Rann als Tir An Durchad im Asyl mit demselben Wappen geführt. Die alte Herrschaft bleibt Culrain in Faerna. † Proinnsias ist ein verstorbener Amtsträger, kein Beleg für das Erlöschen aller Angehörigen."
+    },
+    {
+      "slug": "muirgheal",
+      "name": "Tir An Muirgheal",
+      "territoryId": "tir-na-faerna",
+      "rankId": "dun-tiarna",
+      "seat": "Airdree",
+      "source": {
+        "id": "tir-na-faerna",
+        "nameRow": 82,
+        "seatRow": 80,
+        "emblemRow": 81,
+        "column": 1
+      },
+      "sourceNote": "† Fáithleach wird als verstorbener Dún Tiarna genannt; der Clan wird nicht automatisch als ausgestorben geführt."
+    },
+    {
+      "slug": "boyd",
+      "name": "Na Boyd",
+      "territoryId": "tir-na-faerna",
+      "rankId": "laird",
+      "seat": "Ealach",
+      "liegeFamilyId": "haus-muirgheal",
+      "source": {
+        "id": "tir-na-faerna",
+        "nameRow": 88,
+        "seatRow": 86,
+        "emblemRow": 87,
+        "column": 0
+      },
+      "sourceNote": "† Ardan Boyd wird als verstorbener Laird genannt; ein Aussterben der Familie ist nicht belegt. Die nachgereichte Boyd-Hausquelle bestätigt die unmittelbare Unterstellung unter Muirgheal, darüber Buadhtreun."
+    },
+    {
+      "slug": "eoghainn",
+      "name": "Tir An Ó Eoghainn",
+      "territoryId": "tir-na-damh",
+      "rankId": "mor-tiarna",
+      "seat": "Càrn Bruach",
+      "source": {
+        "id": "tir-na-damh",
+        "nameRow": 77,
+        "seatRow": 75,
+        "emblemRow": 76,
+        "column": 0
+      },
+      "sourceNote": "Alter Herrschaftssitz Càrn Bruach in Damh; dieselbe Familie erscheint außerdem im Asyl in Tir na Rann, dort ohne benannten Zufluchtsort."
+    },
+    {
+      "slug": "agnew",
+      "name": "Ó Nic Agnew",
+      "territoryId": "tir-na-damh",
+      "rankId": "dun-tiarna",
+      "seat": "Tighlean",
+      "source": {
+        "id": "tir-na-damh",
+        "nameRow": 83,
+        "seatRow": 81,
+        "emblemRow": 82,
+        "column": 0
+      }
+    },
+    {
+      "slug": "duff",
+      "name": "Ó Ard Duff",
+      "territoryId": "tir-na-damh",
+      "rankId": "dun-tiarna",
+      "seat": "Dalriadh",
+      "source": {
+        "id": "tir-na-damh",
+        "nameRow": 83,
+        "seatRow": 81,
+        "emblemRow": 82,
+        "column": 1
+      }
+    },
+    {
+      "slug": "dianaomh",
+      "name": "Sid Ard Dianaomh",
+      "territoryId": "tir-na-damh",
+      "rankId": "dun-tiarna",
+      "seat": "Torbhreac",
+      "source": {
+        "id": "tir-na-damh",
+        "nameRow": 83,
+        "seatRow": 81,
+        "emblemRow": 82,
+        "column": 2
+      }
+    },
+    {
+      "slug": "dobhar",
+      "name": "An Dobhar",
+      "territoryId": "tir-na-damh",
+      "rankId": "dun-tiarna",
+      "seat": "Maolnair",
+      "source": {
+        "id": "tir-na-damh",
+        "nameRow": 83,
+        "seatRow": 81,
+        "emblemRow": 82,
+        "column": 3
+      }
+    },
+    {
+      "slug": "forsyth",
+      "name": "Ó Forsyth",
+      "territoryId": "tir-na-damh",
+      "rankId": "laird",
+      "seat": "Inverfay",
+      "source": {
+        "id": "tir-na-damh",
+        "nameRow": 89,
+        "seatRow": 87,
+        "emblemRow": 88,
+        "column": 0
+      },
+      "sourceNote": "Die Damh-Quelle schreibt einmal Imverfay. Die Mathgham-Quelle bezeichnet denselben Ort ausdrücklich als Exklave Inverfay und zeigt dasselbe Forsyth-Wappen. Eine einzige Familienakte mit zusätzlicher Exklavenzuordnung."
+    },
+    {
+      "slug": "elid",
+      "name": "Ó Mall Elid",
+      "territoryId": "tir-na-damh",
+      "rankId": "laird",
+      "seat": "Càrn Bruach",
+      "source": {
+        "id": "tir-na-damh",
+        "nameRow": 89,
+        "seatRow": 87,
+        "emblemRow": 88,
+        "column": 1
+      }
+    },
+    {
+      "slug": "oglivy",
+      "name": "Fir An Oglivy",
+      "territoryId": "tir-na-damh",
+      "rankId": "laird",
+      "seat": "Inniscaer",
+      "source": {
+        "id": "tir-na-damh",
+        "nameRow": 89,
+        "seatRow": 87,
+        "emblemRow": 88,
+        "column": 2
+      }
+    },
+    {
+      "slug": "dubglais",
+      "name": "Mac Dubglais",
+      "territoryId": "tir-na-brann",
+      "rankId": "mor-tiarna",
+      "seat": "Sgurrfàil",
+      "source": {
+        "id": "tir-na-brann",
+        "nameRow": 76,
+        "seatRow": 74,
+        "emblemRow": 75,
+        "column": 0
+      },
+      "sourceNote": "Die bestehende Dubhan-Akte und alle ihre Personen bleiben unverändert. Ihr Haus Mac Dubglais verwendet dasselbe Wappen; die neue Hauptakte nutzt die bereits mehrfach vorgemerkte Ziel-ID haus-dubglais."
+    },
+    {
+      "slug": "cerneige",
+      "name": "Tair Carnegie",
+      "territoryId": "tir-na-brann",
+      "rankId": "dun-tiarna",
+      "seat": "Glenmohr",
+      "source": {
+        "id": "tir-na-brann",
+        "nameRow": 82,
+        "seatRow": 80,
+        "emblemRow": 81,
+        "column": 0
+      }
+    },
+    {
+      "slug": "airdmhor",
+      "name": "Dál Airdmhor",
+      "territoryId": "tir-na-brann",
+      "rankId": "dun-tiarna",
+      "seat": "Carnascal",
+      "source": {
+        "id": "tir-na-brann",
+        "nameRow": 82,
+        "seatRow": 80,
+        "emblemRow": 81,
+        "column": 1
+      }
+    },
+    {
+      "slug": "wemyss",
+      "name": "Tir An Wemyss",
+      "territoryId": "tir-na-brann",
+      "rankId": "dun-tiarna",
+      "seat": "Drumrath",
+      "source": {
+        "id": "tir-na-brann",
+        "nameRow": 82,
+        "seatRow": 80,
+        "emblemRow": 81,
+        "column": 2
+      }
+    }
+  ],
+  "additionalPlacements": [
+    {
+      "familyId": "haus-durachd",
+      "territoryId": "tir-na-rann",
+      "seat": "",
+      "role": "asylum",
+      "source": {
+        "id": "tir-na-rann",
+        "nameRow": 98,
+        "seatRow": 96,
+        "emblemRow": 97,
+        "column": 0
+      },
+      "sourceNote": "Tir An Durchad ist durch identisches Wappen als Durachd belegt. Zufluchtsort innerhalb von Tir na Rann unbenannt; kein neuer Lehnsrang."
+    },
+    {
+      "familyId": "haus-eoghainn",
+      "territoryId": "tir-na-rann",
+      "seat": "",
+      "role": "asylum",
+      "source": {
+        "id": "tir-na-rann",
+        "nameRow": 98,
+        "seatRow": 96,
+        "emblemRow": 97,
+        "column": 1
+      },
+      "sourceNote": "Asyl innerhalb von Tir na Rann; der konkrete Ort ist nicht genannt. Alte Oberherrschaft bleibt Damh."
+    },
+    {
+      "familyId": "haus-duff",
+      "territoryId": "tir-na-mathgham",
+      "seat": "Balgavrie",
+      "role": "asylum",
+      "source": {
+        "id": "tir-na-mathgham",
+        "nameRow": 98,
+        "seatRow": 96,
+        "emblemRow": 97,
+        "column": 0
+      },
+      "sourceNote": "Asyl in Balgavrie; die historische Lehensherrschaft bleibt Dalriadh in Damh."
+    },
+    {
+      "familyId": "haus-airdmhor",
+      "territoryId": "tir-na-mathgham",
+      "seat": "Caisteal Gorm",
+      "role": "asylum",
+      "source": {
+        "id": "tir-na-mathgham",
+        "nameRow": 98,
+        "seatRow": 96,
+        "emblemRow": 97,
+        "column": 1
+      },
+      "sourceNote": "Asyl in Caisteal Gorm; die historische Lehensherrschaft bleibt Carnascal in Brann."
+    },
+    {
+      "familyId": "haus-forsyth",
+      "territoryId": "tir-na-mathgham",
+      "seat": "Inverfay",
+      "role": "exclave",
+      "source": {
+        "id": "tir-na-mathgham",
+        "nameRow": 88,
+        "seatRow": 86,
+        "emblemRow": 87,
+        "column": 4
+      },
+      "sourceNote": "Die Quelle bezeichnet Inverfay ausdrücklich als Exklave. Der Clan steht bereits mit gleichem Wappen in der alten Damh-Gliederung."
+    }
+  ],
+  "corrections": [
+    "Faelaorn ist die kanonische Schreibweise; Faelorn bleibt eine Quellvariante. Ceitheach im Geographieblock, Aislearneach in der Ahnengalerie und die fünf Aislearneach-Orte der Grafentabelle sind Vorlagenreste.",
+    "Tir na Faerna folgt Regionaltitel und Steckbrief; Tir na Fearna in der Landesübersicht ist eine Schreibvariante.",
+    "Beinnstir wird durch Landesübersicht, Faerna-Steckbrief und Macraiths Amtszeile bestätigt. Die einzelne Buadhtreun-Sitzzeile Airdree wird nicht zur Hauptzuordnung.",
+    "Lochcearon/Lochcaeron, Tighlean/Tighlaen, Cárn/Càrn/Carn Bruach, Sgurrfail/Sgurrfàil, Imverfay/Inverfay und Dianaohm/Dianaomh bleiben als Varianten dokumentiert.",
+    "Die Geographieüberschrift Tir na Rann – Land der Bären in der Mathgham-Vorlage ist ein Kopierrest.",
+    "Die vier Asylvermerke erzeugen zusätzliche Registeransichten derselben Familien, keine neuen Clans. Todeszeichen von Amtsträgern begründen keinen ausgestorbenen Familienstatus.",
+    "Bhaird aus Faelaorn bleibt von An’Bhaird aus Ceitheach und An Ness bleibt von Ard’Nessa aus Blaithneach getrennt.",
+    "Fal an Fhiadhaich ist eine Gilde; generische Platzhalterwappen und unbenannte Namensfelder erzeugen keine Familienakten.",
+    "Nutzerkorrektur 08.10.2026: Piobarach ist die Hauptstadt. Der frühere Hauptstadtname im Landessteckbrief ist ein überholter Vorlagenfehler und wird nicht mehr im Register geführt."
+  ],
+  "unresolvedIdentities": [
+    "house-ard-dubglais",
+    "house-macborthwick",
+    "house-durchadh",
+    "house-haigh"
+  ],
+  "familyAliases": {
+    "haus-mac-dubglais": "haus-dubglais"
+  },
+  "capital": "Piobarach"
+}

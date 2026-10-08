@@ -1,3 +1,5 @@
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
 import { withCeitheachSourceCounterUpgrade } from './ceitheach-source-counter-upgrade.js';
 import { createCeitheachSourceFamily } from './ceitheach-source-family-builder.js';
 
@@ -241,4 +243,4 @@ const SOURCE = Object.freeze({
   "sourceNote": "Die Grafik bestätigt die fortgeführte Linie über Dùghall und Faelan sowie Faelan (1719) als überlebenden Erben. Kessogs Geburtsjahr wurde auf Nutzerwunsch 1692→1592, Deirdres 1775→1675 korrigiert. Vier 1720 unter 16 verstorbene Kinder sowie Keebh und Kelch erhalten Kindersilhouetten; anonyme Verlobungsvorlagen werden nicht angelegt."
 });
 
-export const HOUSE_CRAOBHAN_FAMILY = withCeitheachSourceCounterUpgrade(createCeitheachSourceFamily('craobhan', SOURCE));
+export const HOUSE_CRAOBHAN_FAMILY = withAlbenSourcePortraitUpgrade(withAislearneachSourceCounterUpgrade(withCeitheachSourceCounterUpgrade(createCeitheachSourceFamily('craobhan', SOURCE))));

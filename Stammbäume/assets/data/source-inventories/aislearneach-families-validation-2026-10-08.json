@@ -1,0 +1,1233 @@
+{
+  "date": "2026-10-08",
+  "sourceCards": 908,
+  "uniquePersons": 752,
+  "uniquePartnerships": 303,
+  "existingIdentitiesRetained": 179,
+  "families": [
+    {
+      "id": "haus-morna",
+      "title": "Clan Ui’Morna",
+      "persons": 81,
+      "partnerships": 33,
+      "parentages": 47,
+      "branches": 14,
+      "timeJumps": 3,
+      "revision": 2
+    },
+    {
+      "id": "haus-ceallaigh",
+      "title": "Clan Tir An’Ceallaigh",
+      "persons": 73,
+      "partnerships": 30,
+      "parentages": 42,
+      "branches": 14,
+      "timeJumps": 2,
+      "revision": 2
+    },
+    {
+      "id": "haus-fintain",
+      "title": "Clan Mac’Fintain",
+      "persons": 72,
+      "partnerships": 30,
+      "parentages": 41,
+      "branches": 15,
+      "timeJumps": 1,
+      "revision": 2
+    },
+    {
+      "id": "haus-durthacht",
+      "title": "Clan Mac’Durthacht",
+      "persons": 90,
+      "partnerships": 36,
+      "parentages": 53,
+      "branches": 18,
+      "timeJumps": 3,
+      "revision": 2
+    },
+    {
+      "id": "haus-coronach",
+      "title": "Clan Ua’Coronach",
+      "persons": 37,
+      "partnerships": 15,
+      "parentages": 21,
+      "branches": 3,
+      "timeJumps": 1,
+      "revision": 2
+    },
+    {
+      "id": "haus-morgacht",
+      "title": "Clan Na’Morgacht",
+      "persons": 32,
+      "partnerships": 14,
+      "parentages": 17,
+      "branches": 6,
+      "timeJumps": 0,
+      "revision": 2
+    },
+    {
+      "id": "haus-rioga",
+      "title": "Clan An’Rioga",
+      "persons": 51,
+      "partnerships": 21,
+      "parentages": 29,
+      "branches": 9,
+      "timeJumps": 1,
+      "revision": 2
+    },
+    {
+      "id": "haus-fiantorc",
+      "title": "Clan Ua’Fiáintorc",
+      "persons": 47,
+      "partnerships": 21,
+      "parentages": 25,
+      "branches": 8,
+      "timeJumps": 1,
+      "revision": 2
+    },
+    {
+      "id": "haus-treada",
+      "title": "Clan Ua’Tréada",
+      "persons": 39,
+      "partnerships": 17,
+      "parentages": 21,
+      "branches": 7,
+      "timeJumps": 1,
+      "revision": 2
+    },
+    {
+      "id": "haus-muileach",
+      "title": "Clan Ua’Muileach",
+      "persons": 50,
+      "partnerships": 21,
+      "parentages": 28,
+      "branches": 9,
+      "timeJumps": 1,
+      "revision": 2
+    },
+    {
+      "id": "haus-ui-faill-duibhne",
+      "title": "Clan Ui Faill Duibhne",
+      "persons": 42,
+      "partnerships": 20,
+      "parentages": 21,
+      "branches": 9,
+      "timeJumps": 2,
+      "revision": 2
+    },
+    {
+      "id": "haus-feannag",
+      "title": "Clan An’Feannag",
+      "persons": 43,
+      "partnerships": 19,
+      "parentages": 23,
+      "branches": 7,
+      "timeJumps": 1,
+      "revision": 2
+    },
+    {
+      "id": "haus-uilebheist",
+      "title": "Clan An’Uilebheist",
+      "persons": 34,
+      "partnerships": 14,
+      "parentages": 19,
+      "branches": 4,
+      "timeJumps": 1,
+      "revision": 2
+    },
+    {
+      "id": "haus-cnogan",
+      "title": "Clan Nic’Cnogan",
+      "persons": 35,
+      "partnerships": 15,
+      "parentages": 19,
+      "branches": 4,
+      "timeJumps": 1,
+      "revision": 2
+    },
+    {
+      "id": "sept-techtmar",
+      "title": "Sept Techtmar",
+      "persons": 9,
+      "partnerships": 3,
+      "parentages": 5,
+      "branches": 0,
+      "timeJumps": 0,
+      "revision": 2
+    },
+    {
+      "id": "haus-fiachiontach",
+      "title": "Clan Na’Fiachiontach",
+      "persons": 49,
+      "partnerships": 19,
+      "parentages": 29,
+      "branches": 8,
+      "timeJumps": 1,
+      "revision": 2
+    },
+    {
+      "id": "haus-tartarfhuil",
+      "title": "Clan Dal’Tartarfhuil",
+      "persons": 46,
+      "partnerships": 19,
+      "parentages": 26,
+      "branches": 7,
+      "timeJumps": 1,
+      "revision": 2
+    },
+    {
+      "id": "haus-gaisgh",
+      "title": "Clan An’Gaisgh",
+      "persons": 38,
+      "partnerships": 16,
+      "parentages": 21,
+      "branches": 6,
+      "timeJumps": 1,
+      "revision": 2
+    },
+    {
+      "id": "haus-luchdon",
+      "title": "Clan Na’Luchdon",
+      "persons": 40,
+      "partnerships": 18,
+      "parentages": 21,
+      "branches": 8,
+      "timeJumps": 1,
+      "revision": 2
+    }
+  ],
+  "counterpartFamilies": 29,
+  "counterpartPeople": 45,
+  "counterpartPortraitAdditions": 22,
+  "unmodifiedFamilyFingerprints": 431,
+  "portraits": {
+    "downloadedOriginals": 407,
+    "archivedChildReferences": 61,
+    "reusedCanonicalImages": 111,
+    "displayPaths": 457
+  },
+  "references": {
+    "warriors": 18,
+    "trees": 19,
+    "septWithoutWarrior": "sept-techtmar"
+  },
+  "userCorrections": {
+    "cnogan:145:0": {
+      "birth": "1718"
+    },
+    "cnogan:145:1": {
+      "birth": "1725"
+    },
+    "ceallaigh:140:1": {
+      "death": "1739"
+    },
+    "luchdon:120:0": {
+      "death": "1739"
+    }
+  },
+  "persistedDecisions": {
+    "gaisghSeat": "Broch an Traigh",
+    "luchdonSeat": "Broch an Creig",
+    "duibhneStatus": "expelled"
+  },
+  "checks": {
+    "nodeTests": {
+      "passed": 136,
+      "failed": 0
+    },
+    "serverPublicationTests": {
+      "passed": 9,
+      "failed": 0
+    },
+    "legacyTests": {
+      "passed": 1245,
+      "failed": 1,
+      "existingFailure": "Pawen: reference equality of the registered family; preexisting and outside this import."
+    }
+  },
+  "browser": {
+    "desktop": [
+      {
+        "familyId": "haus-morna",
+        "cardCount": 101,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-ceallaigh",
+        "cardCount": 91,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-fintain",
+        "cardCount": 89,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-durthacht",
+        "cardCount": 114,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-coronach",
+        "cardCount": 42,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-morgacht",
+        "cardCount": 39,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-rioga",
+        "cardCount": 62,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-fiantorc",
+        "cardCount": 57,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-treada",
+        "cardCount": 48,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-muileach",
+        "cardCount": 61,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-ui-faill-duibhne",
+        "cardCount": 55,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-feannag",
+        "cardCount": 52,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-uilebheist",
+        "cardCount": 40,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-cnogan",
+        "cardCount": 41,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "sept-techtmar",
+        "cardCount": 10,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-fiachiontach",
+        "cardCount": 59,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-tartarfhuil",
+        "cardCount": 55,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-gaisgh",
+        "cardCount": 46,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-luchdon",
+        "cardCount": 50,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      }
+    ],
+    "mobile": [
+      {
+        "familyId": "haus-morna",
+        "cardCount": 101,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-ceallaigh",
+        "cardCount": 91,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-fintain",
+        "cardCount": 89,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-durthacht",
+        "cardCount": 114,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-coronach",
+        "cardCount": 42,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-morgacht",
+        "cardCount": 39,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-rioga",
+        "cardCount": 62,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-fiantorc",
+        "cardCount": 57,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-treada",
+        "cardCount": 48,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-muileach",
+        "cardCount": 61,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-ui-faill-duibhne",
+        "cardCount": 55,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-feannag",
+        "cardCount": 52,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-uilebheist",
+        "cardCount": 40,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-cnogan",
+        "cardCount": 41,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "sept-techtmar",
+        "cardCount": 10,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-fiachiontach",
+        "cardCount": 59,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-tartarfhuil",
+        "cardCount": 55,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-gaisgh",
+        "cardCount": 46,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-luchdon",
+        "cardCount": 50,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      }
+    ],
+    "counterparts": [
+      {
+        "familyId": "haus-draig",
+        "cardCount": 223,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-ui-rochraide",
+        "cardCount": 141,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-dal-leite",
+        "cardCount": 88,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-nic-holloran",
+        "cardCount": 87,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 4,
+        "confirmedLineCardIntersections": 7,
+        "longPartnershipRoutes": 2,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-craobhan",
+        "cardCount": 62,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-eldath",
+        "cardCount": 72,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-eamhra",
+        "cardCount": 64,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 1,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-seaghda",
+        "cardCount": 63,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-an-bhaird",
+        "cardCount": 49,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-mac-ard-cumhaill",
+        "cardCount": 121,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-ua-gaelach",
+        "cardCount": 68,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-gallchobhair",
+        "cardCount": 90,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-frisealach",
+        "cardCount": 71,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-ard-trodach",
+        "cardCount": 59,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-mac-airt",
+        "cardCount": 96,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-choinnich",
+        "cardCount": 64,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-dal-t-saor",
+        "cardCount": 38,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-chulainn",
+        "cardCount": 82,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-ailella",
+        "cardCount": 84,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-cein",
+        "cardCount": 85,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-birn",
+        "cardCount": 60,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 3,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-morath",
+        "cardCount": 82,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-casur",
+        "cardCount": 62,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-aonghusa",
+        "cardCount": 57,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-eachtrai",
+        "cardCount": 58,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-magach",
+        "cardCount": 101,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-dinefwr",
+        "cardCount": 64,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-ciarog",
+        "cardCount": 61,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-cwningod",
+        "cardCount": 46,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      }
+    ],
+    "counterpartBaseline": [
+      {
+        "familyId": "haus-nic-holloran",
+        "cardCount": 87,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 4,
+        "confirmedLineCardIntersections": 7,
+        "longPartnershipRoutes": 2,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      },
+      {
+        "familyId": "haus-eamhra",
+        "cardCount": 64,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "overlaps": 1,
+        "confirmedLineCardIntersections": 0,
+        "longPartnershipRoutes": 0,
+        "misalignedCrestLinks": 0,
+        "runtimeError": "",
+        "browserExceptions": []
+      }
+    ],
+    "bioDialogs": {
+      "opened": 19,
+      "imagesLoaded": 56,
+      "brokenImages": 0,
+      "warriorAssignmentsVerified": 18
+    },
+    "knownExistingIssues": "Nic Holloran: 4 overlaps and 7 line/card intersections; Eamhra: 1 overlap. Same results using the pre-import acts at the same desktop viewport."
+  },
+  "reproducibility": "All six offline stages for Dunfal, Blaithneach and Aislearneach reproduce the runtime and audit files byte-for-byte. The reduced Aislearneach baseline retains only required identities, source fields, house information and four corrected house links. Verified portrait module bindings stay stable across subsequent imports.",
+  "publication": "Local changes only. No commit, push or deployment."
+}

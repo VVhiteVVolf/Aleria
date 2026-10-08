@@ -89,6 +89,10 @@ function mergeEntities(registeredEntities = [], localEntities = [], tombstones =
     };
     registryManagedFields.forEach(fieldName => {
       if (fieldName !== 'id' && fieldName !== 'extensions' && Object.hasOwn(entity, fieldName)) {
+        // A source revision that only fills missing data preserves locally
+        // supplied values. Later explicit corrections keep their usual rules.
+        const fillOnlyRevision = entity.extensions?.registryManagedFieldFillOnlyRevisions?.[fieldName];
+        if (Number.isInteger(fillOnlyRevision) && fillOnlyRevision === fieldRevisions[fieldName] && localEntity[fieldName]) return;
         result[fieldName] = entity[fieldName];
       }
     });

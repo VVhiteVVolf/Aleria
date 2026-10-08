@@ -1,3 +1,4 @@
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -159,7 +160,7 @@ const PARTNERS_BY_ID = Object.freeze({
   'marriage-gaven-ywen-dinefwr': COUPLES.gaven
 });
 
-export const HOUSE_DINEFWR_FAMILY = Object.freeze({
+export const HOUSE_DINEFWR_FAMILY = withAislearneachSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -414,4 +415,4 @@ export const HOUSE_DINEFWR_FAMILY = Object.freeze({
     registryManagedExtensionFields: ['sourceNote'],
     registryManagedHouseProfileFields: ['rankId', 'seat', 'barony', 'county', 'kingdom', 'regionEmblems']
   }
-});
+}));

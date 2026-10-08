@@ -179,13 +179,15 @@ PNG-Abmessungen sowie SHA-256-Hashes belegt. Reichs- und Jarltumswappen erschein
 in der Gebietsauswahl; die 15 Clanwappen in den Ortsvorschauen und Clanplanungen.
 Clanwappen bleiben den Clans zugeordnet und werden nicht als Stadtwappen ausgegeben.
 
-## Dunfal: Gebiete und leere Familienakten (7. Oktober 2026)
+## Dunfal: Gebiete und ausgearbeitete Stammbäume (7. Oktober 2026)
 
 `register.html?gebiet=Dunfal` enthält Tir na Rithe und Tir na Fathach mit ihren
 belegten Sitzen, neun Clanherrschaften und der Herrschaft der Fianna. Auf ausdrücklichen
-Nutzerwunsch sind zusätzlich 13 **personenleere** Familienakten angelegt:
+Nutzerwunsch wurden zunächst 13 Familienakten vorbereitet. Die anschließend gelieferten
+zwölf Familienquellen füllen jetzt elf Clans und Sept Ferbend; Ui’Duilb bleibt mangels
+genealogischer Quelle eine ausgestorbene Leerakte.
 
-| Oberherrschaft | Vorbereitete Familien |
+| Oberherrschaft | Familien |
 | --- | --- |
 | Tir na Rithe | Ard’Chulainn, Mac Sidhe’Ailella, Mac’Céin, Dál’Birn, Ruin’Morath, ausgestorbenes Ui’Duilb |
 | Tir na Fathach | Nic’Nuadat, Ua’Anbhair, Ua’Casur, Dál’Aonghusa, Na’Riangabra, Mac’Eachtrai, Sept Ferbend |
@@ -197,10 +199,20 @@ Ui’Duilbs historischer Rang und das Erlöschensdatum bleiben offen. Die Fianna
 erhalten als Organisation nur einen Gebietsordner ohne Familienakte oder erfundenen Sitz.
 
 Alle vorhandenen kurzen Ziel-IDs (`haus-chulainn`, `haus-nuadat`, `haus-ailella`
-usw.) bleiben erhalten. Die Akten enthalten keine Gründerpaare, Amtsträger,
-Partnerschaften, Abstammungen oder Zeitsprünge. Spätere Genealogien erweitern
-dieselben Akten. Die ältere Helgr-Gegenangabe „Mac Ailella“ bleibt bis zur
-Familienquelle getrennt; bestehende Personen und Welt-IDs werden nicht umgeschrieben.
+usw.) bleiben erhalten. 626 beschriftete Quellfelder sind 544 eindeutigen Personen
+zugeordnet. Gemeinsame Gegenpersonen verwenden dieselben Welt-IDs und Bilder.
+Finnbar „Mac Ailella“ ist durch seine Herkunftsakte und die Ehe mit Irma Helgr
+als Ailella belegt; seine bestehenden IDs bleiben erhalten. Die jüngere Emer Ailella
+(*1675, Tarrant Ciarógs Frau) wurde dagegen von der irrtümlich gemeinsam geführten
+historischen Neidr-Ahnin getrennt.
+
+Alle zwölf Akten besitzen kurze Hausbios; die elf gelieferten Kriegerdarstellungen
+sind dem jeweiligen Clan zugeordnet. 318 neue Bilddateien einschließlich 38
+Kinderreferenzen wurden gesichert; 44 bestehende Porträts werden wiederverwendet.
+Zusammen stehen 324 individuelle Porträtpfade zur Anzeige bereit. Unter 16 Jahren
+erscheint die Kindersilhouette, auch bei frühem Tod. Bilder und belegte Daten wurden
+in 15 vorhandenen Gegenakten gezielt ergänzt. Shurkan und Avissa sind adoptiert,
+Pól wurde 1730 geboren und Xina ist ausschließlich mit Oran verbunden.
 
 Die Vorlagen enthalten folgende dokumentierte Widersprüche: Leitheach statt
 Dunfal in Reichsüberschriften und Fließtext; Dun Athar in beiden Ratstiteln;
@@ -212,11 +224,333 @@ identisch und erzeugen keine doppelten Einträge.
 
 `dunfal-territorial-catalog.js` hält die Quellenzuordnung und Gebietsstruktur,
 `dunfal-house-profiles.js` die Orts-/Rangprofile und `dunfal-house-families.js`
-die Akten auf Basis der gemeinsamen Leeraktenfabrik. `family-registry-folders.js`
+die Auswahl zwischen ausgearbeiteten Akten und Leeraktenfabrik. Die eigene
+Dunfal-Quellenschicht verwendet den gemeinsamen Familienbaukasten;
+`family-registry-folders.js`
 bündelt die Gebietsergänzungen für Dunfal und Fjordheim. Die vier unveränderten
 Vorlagen, Tabellenzeilen, Entscheidungen und Prüfsummen der 26 lokal gesicherten
 Originalwappen liegen unter `assets/data/source-inventories/dunfal-2026-10-07.json`
 und im gleichnamigen Unterordner. Haus- und Herrschaftswappen bleiben getrennt.
+
+Die zwölf genealogischen Originale stehen in `assets/data/source-inventories/dunfal-families-2026-10-07/`.
+Das zugehörige JSON-Inventar und `dunfal-families-audit-2026-10-07.json` dokumentieren
+jede Personenkarte, Identitätsentscheidung, Gegenkorrektur und Bildprüfsumme.
+Die Importwerkzeuge und der reduzierte Ausgangsbestand liegen unter
+`scripts/dunfal-source-import/`. Die neuen Akten verwenden Quellenrevision 2;
+lokale Ergänzungen werden über die bestehende Registermigration erhalten.
+Alle Quellenabweichungen und Prüfgrenzen sind in [DATENPFLEGE.md](DATENPFLEGE.md#1320-dunfal-ausgearbeitete-familien-und-gegenakten) aufgeführt.
+
+## Aislearneach: Gebiete und leere Familienakten (7. Oktober 2026)
+
+`register.html?gebiet=Aislearneach` enthält fünf Oberherrschaften, zehn belegte
+Sitze und 19 **personenleere** Familienakten. Die aktuelle Vorbereitung bleibt
+auf Nutzerwunsch lokal; Push und Veröffentlichung erfolgen erst auf erneute Bitte.
+
+| Oberherrschaft | Vorbereitete Familien |
+| --- | --- |
+| Tir na Geach · Gaelan | Ui’Morna, Ua’Coronach, Na’Morgacht, An’Rioga |
+| Tir na Tirth · Lorai | Mac’Durthacht, Ua’Fiáintorc, Ua’Tréada, Ua’Muileach (Athan), Ui Faill Duibhne (Cliath) |
+| Tir na Faela · Croga | Mac’Fintain, An’Feannag (Caetharlach) |
+| Tir na Adharcach · Foraoise | An’Uilebheist, Nic’Cnogan, bürgerliche Sept Techtmar |
+| Tir na Iomaire · Koldair | Tir An’Ceallaigh, Na’Fiachiontach, Dal’Tartarfhuil, An’Gaisgh (Broch an Traigh), Na’Luchdon (Broch an Creig) |
+
+Ui’Morna führt Fürstentum und Tir na Geach. Durthacht, Fintain und Ceallaigh sind
+Mor-Tiarna-Clans; Muileach und Feannag haben ausdrücklich den Dún-Tiarna-Rang.
+Die übrigen aktiven Adelsclans sind Lairds. Foraoise bleibt eine kirchliche
+Oberherrschaft unter dem Sagarth; daraus entsteht keine Derbforgaill-Familie.
+Techtmar erhält weder Adelsrang noch einen unbelegten direkten Lehnsherrn.
+
+Die Nutzerkorrekturen vom 7. Oktober haben Vorrang vor den Tabellen:
+
+- Gaisgh sitzt im **Broch an Traigh**, Luchdon im **Broch an Creig**. Die Laird-Tabelle
+  gilt; die Clanübersicht vertauscht die beiden Sitze.
+- Ui Faill Duibhne wird vorerst als **ausgestoßen** geführt (`status: 'expelled'`).
+  Ein überlebender, begnadigter Clanteil bleibt für die spätere Genealogie vermerkt.
+  Es gibt weder ein Ausgestorben-Flag noch einen erfundenen Endknoten oder lebende
+  Platzhalterpersonen. Der historische Clanrang bleibt offen.
+
+Weitere Quellenabweichungen bleiben nachvollziehbar dokumentiert:
+
+- Der Reichstitel nennt **Aislearneach**, Regionaltexte **Aislaerneach**; „Ceitheach“
+  in der Reichsvorlage ist ein Kopierrest. Der Registerpfad folgt dem Reichstitel.
+- **Tir na Geach** folgt der Übersicht; **Tir na Gaech** und „Tir na Rösser“ sind
+  über die Gebietssuche auffindbare Varianten.
+- In Faela widersprechen „Tir An’Ceallaigh“, „Mor Tiarna von Gaelan“ und „Koldair“
+  dem Fintain-Wappen, Eachans Amt und den Croga-Zuordnungen der Reichsübersicht.
+  Die Akte wird deshalb als Mac’Fintain in Croga vorbereitet.
+- **Caetharlach/Cethearlach** bleibt eine vorläufige Schreibvarianten-Zuordnung;
+  die Clanlistenschreibweise bildet den Pfad, beide Formen sind in der Gebietssuche.
+- Durthachts Mac-Präfix folgt der Übersicht. Fiáintorc/Fiantorc, Coronach/Corónach,
+  Morgacht/Mórgacht, Rioga/Ríoga und Tir an’/Tir An’Ceallaigh bleiben in den
+  Quellen erhalten. Die bestehenden kurzen Haus- und Ziel-IDs werden beibehalten.
+- **Na’Fiachiontach/Tir Fiachiontach** ist als hausübergreifende Identitätsfrage
+  offen. Ultán Tir Fiachiontach in Ciaróg wird ohne Familienquelle weder verschoben
+  noch mit einer neuen Person gedoppelt.
+- Allgemeine Ard-Tiarna- und „Fürstliches Herrschaftsgebiet“-Vorlagentexte ersetzen
+  nicht die konkreten Amtsangaben; Estryll/Estyll und Geweihten/Geweithen bleiben
+  im Archiv. Leere Herrschaftsüberschriften, Windreiter und Ahnenschilde erzeugen
+  keine Familien oder unbelegten Herrschaftsgebiete.
+
+`aislearneach-territorial-catalog.js` hält Gebiete und Quellenentscheidungen;
+`aislearneach-house-profiles.js` bildet Ränge und Orte ab. Die Akten nutzen mit
+Dunfal `territorial-family-factory.js` und die bestehende Leeraktenfabrik.
+Die 450 vorherigen Registerakten bleiben inhaltlich unverändert. Spätere
+Genealogien ergänzen dieselben 19 neuen Akten; lokale Ergänzungen bleiben beim
+wiederholten Laden erhalten.
+
+Sechs unveränderte HTML-Vorlagen, Tabellenzeilen einschließlich leerer Spalten,
+31 abgeglichene Gegenakten, Nutzerkorrekturen und SHA-256-Belege der 24 lokalen
+Originalwappen liegen in `assets/data/source-inventories/aislearneach-2026-10-07.json`
+und im gleichnamigen Quellordner. Das identische Fürsten-/Morna-Wappen wird nur
+einmal gespeichert. Die territorialen Tests prüfen Browser- und Servervalidierung,
+Ränge, Sitzkorrekturen, Status, Quellenzuordnung und den Erhalt lokaler Ergänzungen.
+
+Prüfung am 07.10.2026: 105 modulare Tests und neun Firebase-Validierungstests
+bestanden; im großen Bestandstest bestehen 1245 von 1246 Prüfungen. Der bereits
+vorher vorhandene Pawen-Referenzgleichheitstest bleibt rot. Der Vergleich mit
+dem Ausgangsstand bestätigt 450 unveränderte Registerakten. Der Browser-Gesamtlauf
+prüfte 469 Akten: 35 erwartete Leerakten (davon 19 neue) und die unveränderten
+Layoutbefunde in Draig (drei Linien-/Kartenkollisionen), Nic’Holloran (vier
+Überlappungen, sechs Linien-/Kartenkollisionen) und Eamhra (eine Überlappung).
+Keine Laufzeitfehler oder versetzten Hausknoten. Aislearneachs Gebietsnavigation,
+Suche, Wappen, Leeransichten und mobile Darstellung wurden zusätzlich geprüft.
+
+## Blaithneach: Vorbereitung und Leites Übersiedlung (7. Oktober 2026)
+
+`register.html?gebiet=Blaithneach` enthält drei Oberherrschaften, sechs Sitze und
+elf Clans. Die Vorbereitung vom 7. Oktober umfasste zehn **personenleere** Akten
+und die bereits ausgearbeitete Dal’Leite-Akte. Neun dieser Leerakten sind seit
+dem 8. Oktober ausgearbeitet; der folgende Abschnitt dokumentiert diesen Ausbau.
+Die Änderungen bleiben wie Aislearneach lokal, bis der Nutzer
+ausdrücklich wieder einen Push anfordert.
+
+| Oberherrschaft | Sitze und Familien |
+| --- | --- |
+| Tir na Beatha · Land des Lebens | Sioran: Ard’Nessa, Ua’Goidin; Réadlann: An’Haeghra |
+| Tir na Dílse · Land der Treue | Eorach: Mac Ard’Ronain, Ua’Suiste, Dal’Gáirnér, Faill’ Cléirigh, Ui’Abhrach; Ardán: Dal’Leite |
+| Tir na Méinnear · Land der Erze | Cairmor: Sidhe’Magach; Cel Bearradh: Ua’Eala |
+
+Mac Ard’Ronain führt das Fürstentum und Dílse. Ard’Nessa und Sidhe’Magach sind
+Mor-Tiarna-Clans, An’Haeghra ist durch Donnaghs Amtsangabe ein Dún-Tiarna-Clan.
+Goidin, Suiste, Gáirnér und Eala sind Lairds. Historische Ränge von Cléirigh und
+Abhrach bleiben offen. Wiederholte Amtsinhaber aus demselben Clan begründen
+keine zusätzlichen Familien oder Kadettenlinien; die Leerakten enthalten weder
+Gründerpaare noch Amtsträger, Elternschaften, Partnerschaften oder Endknoten.
+
+Zwei ausdrückliche Nutzerkorrekturen vom 07.10.2026 haben Vorrang:
+
+- **Dal’Leite:** Nach dem Niedergang Ceitheachs siedelten die Überlebenden nach
+  Blaithneach über. Die eine Akte `haus-dal-leite` mit 73 Personen bleibt unter
+  Ceitheach/Tir na Dun/Greinmhar als Mor-Tiarna-Clan und zusätzlich unter
+  Blaithneach/Tir na Dílse/Ardán als Laird-Clan erreichbar. Es entsteht keine
+  zweite Familie, und die Gesamtzählung zählt sie weiterhin nur einmal.
+- **Faill’ Cléirigh:** als **ausgestoßen** führen. Die Reichsvorlage nennt den
+  Clan zwar ausgestorben, in Ceinselaig ist Pailtéar Cléirigh (*1698) jedoch
+  lebend überliefert. Sein Status und seine Welt-ID bleiben erhalten; die neue
+  Akte erhält `expelled`, kein `extinctHouse` und keinen Endknoten.
+
+Ui’Abhrach folgt der ausdrücklichen Angabe „Ausgestorben“ in der Reichsübersicht,
+welche die gemeinsame Regionalkategorie „Ausgestorben/Ausgestoßen“ präzisiert.
+Ein letzter Erbe oder Erlöschenszeitpunkt wird nicht ergänzt.
+
+Quellenabweichungen und Stand der Gegenidentitäten bei der Vorbereitung:
+
+- **Sioran in Dílses Geographie** wird als Kopierrest dokumentiert. Eorach ist
+  durch Regionalsteckbrief, Reichsübersicht, Clan-Sitzzeile und Amtstabellen belegt.
+- **Ard Nessa/Ard’Nessa**, **Gáirner/Gáirnér** und **Ardan/Ardán** bleiben
+  dokumentierte Schreibvarianten. Ardán ist über beide Schreibweisen auffindbar.
+- **Haeghra/Heaghra:** Clanlisten und Amtslisten verwenden unterschiedliche
+  Formen. Donnagh Heaghra ist bereits in Teyrngarch erfasst; bestehende
+  `house-haeghra`- und `house-heaghra`-IDs werden ohne Familienquelle nicht
+  global zusammengeführt. Der alte Déaglán Haeghra (1625–1684) in Dal’Leite
+  wird nicht allein wegen seines Namens dem aktuellen Laird gleichgesetzt.
+- **Sidhe’Magach/Mac Magach** (Vencha in Helgr), **Ua’Eala/Mac Eala** (Alastar
+  in Sgwarnog) sowie **Gillesbuig/Gilleasbuig Leite** bleiben mögliche, noch
+  nicht genealogisch abgeglichene Gegenidentitäten. Bestehende Personen bleiben
+  unverändert; keine zusätzlichen Personen werden daraus angelegt.
+- Die Übersicht hat fünf Zellen für Gebiets-/Sitznamen, aber drei für Wappen
+  und Glossen. Das Inventar erhält leere Zellen und belegt die Zuordnung über
+  die Regionalvorlagen. Leere Herrschaftsüberschriften und allgemeine
+  „Fürstliches Herrschaftsgebiet“-Texte erzeugen keine unbestätigten Gebiete.
+  Gilden, Erzkelterbund An’Haeghra und Ahnenschilde sind keine Zusatzfamilien.
+
+Die Module `blaithneach-territorial-catalog.js`, `blaithneach-house-profiles.js`
+und `blaithneach-house-families.js` nutzen die gemeinsame territoriale
+Leeraktenfabrik. Leites zusätzlicher Registerplatz wird ausdrücklich bei der
+Registrierung seiner bestehenden Akte übergeben; Familie, Hauptprofil und
+Quellenrevision 2 bleiben unverändert. Auch alte lokal gespeicherte Akten
+erhalten den Registerplatz unter Erhalt eigener Notizen und Genealogien.
+
+Vier unveränderte HTML-Quellen, Tabellenzellen, 41 abgeglichene Gegenakten,
+Nutzerentscheidungen und SHA-256-Belege der 15 verwendeten Originalwappen
+liegen in `assets/data/source-inventories/blaithneach-2026-10-07.json` und im
+gleichnamigen Quellordner. 14 Wappen sind neu lokal gesichert; Dal’Leites
+identisches vorhandenes Wappen wird wiederverwendet. Die 469 vorherigen
+Familien bleiben inhaltlich unverändert; das Register enthält jetzt 479 Akten.
+
+Prüfung am 07.10.2026: 112 modulare Tests und neun Serverprüfungen bestanden.
+Im großen Bestandstest bleiben 1245 von 1246 Prüfungen grün; der bekannte
+Pawen-Referenzgleichheitstest schlägt weiterhin fehl. Der Browser-Gesamtlauf
+erfasste alle 479 Akten ohne Laufzeitfehler oder versetzte Hausknoten. Er meldet
+45 erwartete Leerakten und Layoutbefunde in den bereits betroffenen Familien
+Draig, Nic’Holloran und Eamhra. Bei 1440 × 1000 wurden dort drei, sieben und
+null Linien-/Kartenkollisionen sowie null, vier und eine Kartenüberlappung
+gemessen. Die zusätzliche Nic’Holloran-Messung bei der früheren Prüfgröße
+320 × 240 reproduziert die bisherigen sechs Linien-/Kartenkollisionen.
+Blaithneachs Navigation, elf Suchtreffer, Wappen, Leeransichten und mobile
+Darstellung wurden gesondert geprüft; beide Leite-Einträge öffnen denselben
+Stammbaum mit 73 Personen und 88 dargestellten Karten einschließlich Hausknoten.
+
+## Blaithneach: ausgearbeitete Stammbäume (8. Oktober 2026)
+
+Die neun nachgereichten Vorlagen gehören laut Nutzerbestätigung zu Blaithneach.
+Ronain, Nessa, Magach, Suiste, Gáirnér, Goidin, Eala, Haeghra und Cléirigh sind
+jetzt vollständig nach diesen Quellen ausgearbeitet: 559 Personenfelder ergeben
+465 unterschiedliche Weltpersonen und 192 Partnerschaften. Jede Akte enthält
+eine kurze Hausbiografie sowie das lokal gesicherte Kriegerbild ihres Clans.
+Ui’Abhrach bleibt ohne genealogische Quelle leer. Dal’Leites bestehende Akte
+und ihre beiden Registerplätze bleiben unverändert.
+
+Wesentliche Festlegungen:
+
+- **Dympna (*1721)** ist nach Biografie und ausdrücklicher Nutzerbestätigung
+  die Tochter von Samthann Magach und ihrem Verlobten Fergus Nessa. Die
+  erzwungene Verbindung mit Ionnrachtaigh bleibt separat und ohne zugeordnete Kinder.
+- **Cléirigh bleibt ausgestoßen.** Pailtéar und Morrigan bleiben lebend;
+  die abweichende Überschrift „Sidhe“ erzeugt keine zusätzliche Familie.
+- Sìmag begründet Gáirnér als unehelicher Sohn Goraidh Ronains und Moiraiths.
+  Die belegten Ronain-Zweige Suiste und Eala sowie Nessas Zweig Goidin sind
+  verknüpft. Mündel behalten ihre leibliche Herkunft und getrennte Pflegeverbindungen.
+- Die neuen Familienquellen klären Vencha Magach in Helgr, Alastar Eala in
+  Sgwarnog und Donnagh Haeghra in Teyrngarch. Die älteren Personen- und Welt-IDs
+  bleiben erhalten. Gleichnamige ältere Personen werden nicht pauschal zusammengeführt.
+
+251 neue Porträtdateien und 81 vorhandene Bilder wurden zugeordnet. 34 der
+neuen Dateien sind ausschließlich archivierte Kinderreferenzen; Kinder behalten
+ihre passende Silhouette. Damit stehen 298 individuelle Porträtpfade zur Anzeige
+bereit. Neun Kriegerbilder und neun Stammbaumgrafiken sind zusätzlich archiviert.
+23 bestehende Akten erhalten eng begrenzte Bild- und Datenkorrekturen.
+
+Die Quellen, Zuordnungen und SHA-256-Belege stehen unter
+`assets/data/source-inventories/blaithneach-families-2026-10-08.json` und
+`blaithneach-families-audit-2026-10-08.json`; Details und noch widersprüchliche
+Quellangaben dokumentiert [DATENPFLEGE.md](DATENPFLEGE.md#1321-blaithneach-ausgearbeitete-familien-und-gegenakten).
+Die gemeinsamen Importstufen liegen in `scripts/family-source-import/`, die
+geprüften Zuordnungen und Familienpläne getrennt in `scripts/blaithneach-source-import/`.
+Dunfal verwendet dieselben Importstufen; seine Personendaten bleiben reproduzierbar.
+
+Prüfung: 127 modulare Tests, neun Serverprüfungen und 1245 von 1246 älteren
+Bestandstests bestanden. Der bereits bekannte Pawen-Referenzvergleich bleibt
+der einzige Fehler. Die neun neuen Bäume sind bei 1440 × 1000 und 390 × 844,
+die 23 ergänzten Akten bei 1440 × 1000 ohne Kartenüberschneidungen,
+Linien-Karten-Kollisionen oder Laufzeitfehler geprüft. Alle neun Hausbios laden
+ihre Bilder. 447 übrige Akten stimmen vollständig mit dem Stand vor diesem
+Import überein. Der kompakte Nachweis liegt in
+`assets/data/source-inventories/blaithneach-families-validation-2026-10-08.json`.
+Kein Push und keine Veröffentlichung.
+
+## Aislearneach: ausgearbeitete Stammbäume vom 08.10.2026
+
+Alle 19 vorbereiteten Akten sind ausgearbeitet: 908 Quelleneinträge ergeben
+752 unterschiedliche Personen und 303 Partnerschaften. Jede Akte hat eine
+kurze Hausbiografie; die 18 mitgelieferten Kriegerdarstellungen sind den Clans
+zugeordnet. Techtmar bleibt eine bürgerliche Sept. Duibhne bleibt ausgestoßen,
+mit dem überlieferten lebenden Zweig.
+
+407 neue Bilddateien und 111 wiederverwendete Porträts sind belegt; 61
+Kinderreferenzen bleiben außerhalb der Erwachsenenporträts. 29 Gegenakten
+wurden abgeglichen, darunter 22 Porträtergänzungen. Alle 431 übrigen Akten
+sind unverändert. Bestätigte Korrekturen: Seasaidh 1718, Vear 1725,
+Sorchas Todesjahr 1739; Gaisgh in Traigh, Luchdon in Creig.
+
+136 modulare Tests und neun Serverprüfungen bestehen. Der ältere Bestandstest
+hat ausschließlich seinen bekannten Pawen-Referenzfehler. Alle 19 neuen Bäume
+sind auf Desktop und Mobilgerät kollisionsfrei geprüft, sämtliche Hausbio-
+Bilder laden. Zwei bestehende Layoutprobleme in Gegenakten sind nachweislich
+unverändert. Quellen, Entscheidungen und reproduzierbarer Import:
+`scripts/aislearneach-source-import/`; Details in Abschnitt 13.22 von
+[DATENPFLEGE.md](DATENPFLEGE.md). Der kompakte Prüfbeleg liegt unter
+`assets/data/source-inventories/aislearneach-families-validation-2026-10-08.json`.
+Kein Commit, Push oder Deployment.
+
+## Porträtabgleich der Alben vom 8. Oktober 2026
+
+86 Familienakten wurden auf fehlende Bildverknüpfungen geprüft. 153 vorhandene
+Individualporträts sind in 52 Akten ergänzt, darunter sieben bei Nessa und vier
+bei Haeghra. Kinderbilder werden nicht mehr wegen des Alters ausgeblendet;
+die Kindersilhouette dient nur noch als Ersatz bei fehlendem Individualbild.
+Neun Kinder besitzen bislang kein belegtes Bild. Eigene Porträts und Notizen
+bleiben beim Aktualisieren gespeicherter Akten erhalten. Nachweis:
+`assets/data/source-inventories/alben-portraits-2026-10-08.json`.
+Die Änderungen sind lokal und noch nicht veröffentlicht.
+
+## Faelaorn: historische Herrschaften und Stammbäume (8. Oktober 2026)
+
+Faelaorn ist in sechs alte Oberherrschaften gegliedert. Krieg mit Skjaerheim und
+die ungefähr hälftige Übernahme sind vermerkt; Stammorte, Ränge und
+Lehnszuordnungen folgen weiterhin den alten Verhältnissen. Konkrete
+Besatzungsgrenzen werden ohne Quelle nicht festgelegt.
+
+Von den 34 Clan- und fünf Braigh-Septakten sind Urquhart, Bhaird, Luthsach,
+Lachlann, Drummond, Stwatchn, Dundas, Diuid, Lockart, Fiorghra, Ness, Haig, Banlaoch,
+Culloch, Borthwick, Erskine, Grannd, Buadhtreun, Durachd, Muirgheal und Boyd
+ausgearbeitet. Die 21 Bäume enthalten 1.370 Personenvorkommen mit 1.107 gemeinsamen
+Identitäten und kurze Hausbiografien. 18 weitere Akten bleiben vorbereitet. Zusammen mit der
+unveränderten Dubhan-Akte sind es weiterhin 40 Faelaorn-Akten.
+Durachd, Eoghainn, Duff und Airdmhor erscheinen zusätzlich an ihren belegten
+Asylorten; Forsyth außerdem in seiner Mathgham-Exklave. Die Verweise öffnen
+jeweils dieselbe Familienakte. Piobarach ist die Hauptstadt Faelaorns und zugleich Stammsitz des Fürstenclans Ui Urquhart.
+
+Alle sieben Vorlagen und 46 lokale Wappen sind im Quelleninventar
+`assets/data/source-inventories/faelaorn-2026-10-08.json` belegt.
+Die fünf Familientabellen und die Transkriptionen der beiden Nutzergrafiken stehen
+im zusätzlichen Inventar `assets/data/source-inventories/faelaorn-families-2026-10-08.json`.
+131 individuelle Originalporträts wurden ergänzt, 39 bestehende wiederverwendet
+und zehn fehlende Porträts in Gegenakten eingetragen. Allgemeine Silhouetten zählen
+nicht als individuelle Bilder. Die fünf mitgelieferten Kriegerdarstellungen sind
+den jeweiligen Clans zugeordnet; für Stwatchn und Dundas dient das Wappen als Hausbild.
+Unbekannte Angaben aus diesen beiden Grafiken bleiben offen.
+
+Die zweite Quellenserie ergänzt Diuid, Lockart, Fiorghra, Ness und Haig aus fünf
+Tabellen sowie Banlaoch aus einer undatierten Grafik: 385 Personenvorkommen,
+336 Identitäten, 164 neue und 30 wiederverwendete Porträts sowie fünf weitere
+Kriegerdarstellungen. 22 fehlende Bilder sind in 18 abgeglichenen Gegenakten
+ergänzt; Personen-, Weltpersonen- und Paar-IDs bleiben erhalten. Banlaoch verwendet
+sechs belegte Gegenporträts und sein Wappen als Hausbild. Seine fehlenden Jahre
+wurden ausdrücklich freigegeben ergänzt: jüngste Nachkommen sind 1740 zwischen
+6 und 25 Jahre alt; das Gründerpaar bleibt undatiert. Forsyth bleibt nach
+Nutzerbestätigung vorerst offen, weil das zweite beigefügte Bild nochmals
+Stwatchn zeigte. Die neue Quellenserie steht unter
+`scripts/mathgham-source-import/`; die Rekonstruktion ist in `chronology.json`
+von den undatierten Originalkarten getrennt.
+
+Die dritte Quellenserie führt Culloch, Borthwick, Erskine und Grannd in Tír na
+Braigh aus: 261 Personenvorkommen, 233 Identitäten, 131 neue und 26 wiederverwendete
+Porträts sowie vier Kriegerdarstellungen. Zehn fehlende Gegenporträts werden in
+15 gezielt abgeglichenen Akten ergänzt. Rónnat, Gobaith und Fiadh erhalten auch
+in ihren Herkunftshäusern die Mündelverweise; Fiadh bleibt nach Nutzerbestätigung
+lebend und *1727. Die bestätigte Ehe Gráinne/Rúairc gilt auch bei Culloch.
+Grannd ist unmittelbar Erskine unterstellt. Die vier Culloch-Septgründungen
+verweisen auf die vorbereiteten Akten Dubhair, Gréin, Gaesa und Malairt.
+Quellen, Zuordnungen und reproduzierbare Importstufen liegen unter
+`scripts/braigh-source-import/`.
+
+Die vierte Quellenserie führt Buadhtreun, Durachd, Muirgheal und Boyd in Tir na
+Faerna aus: 216 Personenvorkommen, 192 Identitäten, 79 neue und 36 wiederverwendete
+Porträts sowie vier Kriegerdarstellungen. Zehn Gegenakten erhalten 17 gezielte
+Personenabgleiche, darunter neun fehlende Bilder. Boyd dient unmittelbar Muirgheal;
+die historischen Sitze und Durachds Asyl bleiben erhalten. Die Kriegsverluste
+erzeugen keine pauschal ausgestorbenen Clans. Nach ausdrücklicher Nutzerbestätigung
+sind Dubhan 1560 und Olwyna 1562 geboren. Quellen und Entscheidungen:
+`scripts/faerna-source-import/`. Bereits vorhandene Porträts in einem neu erweiterten
+Haus-Bildmodul bleiben beim erneuten Import erhalten.
+
+Quellenentscheidungen, Zahlen und Prüfungen:
+[Datenpflege, Abschnitt 13.25](DATENPFLEGE.md#1325-faelaorn-sieben-ausgearbeitete-stammbäume-08102026).
+Die Mathgham-Ergänzung ist in [Abschnitt 13.26](DATENPFLEGE.md#1326-mathgham-sechs-stammbäume-und-piobarach-08102026) dokumentiert.
+Die Braigh-Ergänzung steht in [Abschnitt 13.27](DATENPFLEGE.md#1327-braigh-culloch-borthwick-erskine-und-grannd-08102026).
+Die Faerna-Ergänzung steht in [Abschnitt 13.28](DATENPFLEGE.md#1328-faerna-buadhtreun-durachd-muirgheal-und-boyd-08102026).
+Alle Änderungen bleiben lokal; keine Veröffentlichung.
 
 ## Abhängigkeiten
 
@@ -235,3 +569,5 @@ Der Browser erhält niemals einen GitHub-Token. `netlify/functions/family-publis
 - `ALERIA_GITHUB_BRANCH`: optional, Standard `master`.
 
 Der Publisher ist für den bewusst klein gehaltenen privaten Bearbeiterkreis ohne zusätzliche Anmeldung erreichbar; der lokale Bearbeitungsmodus bleibt die einzige UI-Hürde. Der GitHub-Token wird weiterhin niemals an den Browser ausgeliefert. Jede Speicherung erzeugt genau einen Commit mit den geänderten Familienakten und `assets/data/published-families/registry.json`. Portraitänderungen an einer `worldPersonId`, die in mehreren Stammbäumen vorkommt, werden bereits im lokalen Entwurf auf alle bekannten Gegenakten projiziert und anschließend im selben atomaren Online-Paket veröffentlicht. Im selben Commit wird jede betroffene Familie zusätzlich als unveränderliche Revisionskopie unter `assets/data/published-families/backups/<familien-id>/` abgelegt. Die standardmäßig aktive Option „Deploy überspringen“ ergänzt den Commit um `[skip netlify]`: Der Editor liest die neue Revision sofort über die Function, während die öffentliche Seite erst beim nächsten Netlify-Deploy aktualisiert wird. Wird das Häkchen vor dem Speichern entfernt, löst derselbe Commit den normalen Production-Deploy aus.
+
+Brann: Vier weitere Bildstammbäume sind ausgearbeitet; siehe `DATENPFLEGE.md`, Abschnitt 13.30.

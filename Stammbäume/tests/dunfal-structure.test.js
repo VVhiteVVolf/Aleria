@@ -1,4 +1,10 @@
+import { BRANN_SOURCE_COUNTER_PATCHES } from '../assets/js/data/brann-source-counter-patches.js';
+import { MATHGHAM_SOURCE_COUNTER_PATCHES } from '../assets/js/data/mathgham-source-counter-patches.js';
+import { BRAIGH_SOURCE_COUNTER_PATCHES } from '../assets/js/data/braigh-source-counter-patches.js';
+import { FAELAORN_SOURCE_COUNTER_PATCHES } from '../assets/js/data/faelaorn-source-counter-patches.js';
+import { ALBEN_SOURCE_PORTRAITS, ALBEN_SOURCE_PORTRAIT_FAMILIES } from '../assets/js/data/alben-source-portraits.js';
 import test from 'node:test';
+import { AISLEARNEACH_SOURCE_COUNTER_PATCHES } from '../assets/js/data/aislearneach-source-counter-patches.js';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -10,27 +16,33 @@ import { assertValidFamily, normalizeFamily } from '../assets/js/domain/family-s
 import { createRegistryBrowserIndex, resolveRegistryLocation, searchRegistry } from '../assets/js/modules/family-registry/registry-browser-model.js';
 import { loadFamilyById } from '../assets/js/services/family-library.js';
 import { validateWorkspaceForPublishing } from '../../firebase/functions/src/families/family-validation.js';
+import { BLAITHNEACH_SOURCE_COUNTER_PATCHES } from '../assets/js/data/blaithneach-source-counter-patches.js';
 
 const inventory = JSON.parse(fs.readFileSync(new URL('../assets/data/source-inventories/dunfal-2026-10-07.json', import.meta.url), 'utf8'));
 const sourceCell = (id, row, column = 0) => inventory.sources.find(source => source.id === id).rows.find(entry => entry.row === row).cells[column];
 const canonicalText = text => text.replaceAll("'", '’');
 
-test('Dunfal registers thirteen genuinely empty, browser- and server-valid families with stable target IDs', () => {
+test('Dunfal retains thirteen browser- and server-valid territorial families with stable target IDs', () => {
   assert.equal(DUNFAL_HOUSE_FAMILIES.length, 13);
   assert.equal(new Set(FAMILY_REGISTRY.map(record => record.id)).size, FAMILY_REGISTRY.length);
   for (const definition of DUNFAL_HOUSE_DEFINITIONS) {
     const registered = getRegisteredFamily(definition.familyId);
     const family = normalizeFamily(registered.family);
     assertValidFamily(family);
-    assert.equal(family.extensions.blankFamily, true);
-    assert.equal(family.extensions.sourceRevision, 1);
+    const blank = definition.familyId === 'haus-duilb';
+    assert.equal(family.extensions.blankFamily, blank);
+    assert.equal(family.extensions.sourceRevision, BRANN_SOURCE_COUNTER_PATCHES[family.document.id]?.revision || BRAIGH_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || MATHGHAM_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || FAELAORN_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || ALBEN_SOURCE_PORTRAIT_FAMILIES[definition.familyId]?.revision || AISLEARNEACH_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || BLAITHNEACH_SOURCE_COUNTER_PATCHES[definition.familyId]?.revision || (blank ? 1 : 2));
     assert.equal(family.lineage.houseId, definition.houseId);
     assert.equal(family.houses[0].id, definition.houseId);
-    for (const key of ['persons', 'partnerships', 'parentages', 'cadetBranches', 'timeJumps']) {
-      assert.equal(family[key].length, 0, `${definition.familyId}: ${key}`);
+    if (blank) {
+      for (const key of ['persons', 'partnerships', 'parentages', 'cadetBranches', 'timeJumps']) {
+        assert.equal(family[key].length, 0, `${definition.familyId}: ${key}`);
+      }
+      assert.equal(family.view.focusPersonId, '');
+      assert.equal(family.lineage.founderPartnershipId, '');
+    } else {
+      assert.ok(family.persons.length > 0);
     }
-    assert.equal(family.view.focusPersonId, '');
-    assert.equal(family.lineage.founderPartnershipId, '');
     const { persons, partnerships, parentages, houses, cadetBranches, timeJumps, ...root } = family;
     const validation = validateWorkspaceForPublishing({
       root: { ...root, familyId: definition.familyId },
@@ -111,15 +123,15 @@ test('ranks, extinct status and explicit territorial hierarchy do not invent bar
   }
 });
 
-test('opening an empty Dunfal family repeatedly preserves a locally started genealogy and notes', () => {
+test('opening a current Dunfal family repeatedly preserves local additions and notes', () => {
   const local = structuredClone(getRegisteredFamily('haus-cein'));
   local.family.persons.push({ id: 'local-person', name: 'Lokale Ergänzung', houseId: 'house-cein', notes: 'Eigene Recherche' });
   local.family.document.description = 'Eigene Notiz';
   const storage = { getItem: key => key === 'aleria.family-tree.saved-families.v1' ? JSON.stringify([local]) : null };
   for (let repeat = 0; repeat < 2; repeat++) {
     const loaded = loadFamilyById('haus-cein', storage);
-    assert.equal(loaded.family.persons.length, 1);
-    assert.equal(loaded.family.persons[0].notes, 'Eigene Recherche');
+    assert.equal(loaded.family.persons.length, local.family.persons.length);
+    assert.equal(loaded.family.persons.find(person => person.id === 'local-person').notes, 'Eigene Recherche');
     assert.equal(loaded.family.document.description, 'Eigene Notiz');
   }
 });

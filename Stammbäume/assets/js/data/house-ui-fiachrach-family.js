@@ -1,3 +1,5 @@
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
+import { withDunfalSourceCounterUpgrade } from './dunfal-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -200,7 +202,7 @@ const WYNONNA_IDS = ['wynonna-fiachrach', 'cadfan-draig'];
 const GADHRA_IDS = ['gadhra-fiachrach', 'astrid-unknown-fiachrach'];
 const UALLACH_IDS = ['uallach-fiachrach', 'bercan-gealach'];
 
-export const HOUSE_UI_FIACHRACH_FAMILY = Object.freeze({
+export const HOUSE_UI_FIACHRACH_FAMILY = withAlbenSourcePortraitUpgrade(Object.freeze(withDunfalSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -415,4 +417,4 @@ export const HOUSE_UI_FIACHRACH_FAMILY = Object.freeze({
     registryManagedViewFields: ['focusPersonId'],
     registryManagedRecordFields: ['folderPath']
   }
-});
+})));

@@ -1,3 +1,5 @@
+import { withAlbenSourcePortraitUpgrade } from './alben-source-portrait-upgrade.js';
+import { withBlaithneachSourceCounterUpgrade } from './blaithneach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -183,7 +185,7 @@ const SORLEY_IDS = ['sorley-airgid', 'jilbhe-goidin'];
 const PIARAS_IDS = ['piaras-airgid', 'johana'];
 const PIARAS_AFFAIR_IDS = ['piaras-airgid', 'waldri'];
 
-export const HOUSE_TIR_AN_AIRGID_FAMILY = Object.freeze({
+export const HOUSE_TIR_AN_AIRGID_FAMILY = withAlbenSourcePortraitUpgrade(withBlaithneachSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -441,4 +443,4 @@ export const HOUSE_TIR_AN_AIRGID_FAMILY = Object.freeze({
       partnerships: ['marriage-haus-airgid-founders']
     }
   }
-});
+})));

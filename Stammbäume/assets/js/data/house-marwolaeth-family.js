@@ -1,3 +1,4 @@
+import { withDunfalSourceCounterUpgrade } from './dunfal-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -159,7 +160,7 @@ function marriedAway(id, name, partnershipId, houseId, emblem = '') {
   });
 }
 
-export const HOUSE_MARWOLAETH_FAMILY = Object.freeze({
+export const HOUSE_MARWOLAETH_FAMILY = Object.freeze(withDunfalSourceCounterUpgrade({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -410,4 +411,4 @@ export const HOUSE_MARWOLAETH_FAMILY = Object.freeze({
     registryManagedHouseProfileFields: ['rankId', 'seat', 'barony', 'county', 'kingdom', 'regionEmblems'],
     registryManagedRecordFields: ['folderPath']
   }
-});
+}));

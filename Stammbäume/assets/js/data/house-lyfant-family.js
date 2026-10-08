@@ -1,3 +1,4 @@
+import { withFaelaornSourceCounterUpgrade } from './faelaorn-source-counter-upgrade.js';
 import { withVennyrSourceCounterUpgrade } from './vennyr-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
@@ -149,7 +150,7 @@ const CAER_ASGWRN_HOUSES = Object.freeze([
   house('house-morfil', "Haus Morfil O'Talsarn", HOUSE_EMBLEMS.morfil)
 ]);
 
-export const HOUSE_LYFANT_DERWYDDION_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
+export const HOUSE_LYFANT_DERWYDDION_FAMILY = withFaelaornSourceCounterUpgrade(withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -392,7 +393,7 @@ export const HOUSE_LYFANT_DERWYDDION_FAMILY = withVennyrSourceCounterUpgrade(Obj
     registryManagedViewFields: ['focusPersonId', 'ancestorDepth', 'descendantDepth', 'limitGenerations', 'showSiblings'],
     sourceNote: 'Vollständige Derwyddion-Herkunftsakte nach der Lyfant-Quelle. Der Hausknoten und der einzige Zeitsprung folgen seriell auf Conan und Ffion. Cledwyn und Cadwgan erhalten je einen direkten Übergang nach Caer Asgwrn; ihre Kinder werden nur dort fortgeführt. Meredydd, Main, Deiniol, Frewi sowie Ceri und Cadi bleiben ausschließlich in Derwyddion, weil dieser Zweig 1720 erlischt. Frewis Ehe und Nachkommen werden im Gegenstammbaum Gwaedlyd fortgeführt.'
   }
-}));
+})));
 
 export const HOUSE_LYFANT_CAER_ASGWRN_FAMILY = withVennyrSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',

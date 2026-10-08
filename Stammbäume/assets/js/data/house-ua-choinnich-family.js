@@ -1,3 +1,4 @@
+import { withAislearneachSourceCounterUpgrade } from './aislearneach-source-counter-upgrade.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import {
   createFamilyPerson,
@@ -204,7 +205,7 @@ const GLAISNE_IDS = ['daithi-eirce', 'glaisne-choinnich'];
 const VAILINTIN_IDS = ['vailintin-choinnich', 'quona-tsaoir'];
 const JORIATH_IDS = ['joriath-choinnich', 'maonait-blar'];
 
-export const HOUSE_UA_CHOINNICH_FAMILY = Object.freeze({
+export const HOUSE_UA_CHOINNICH_FAMILY = withAislearneachSourceCounterUpgrade(Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -526,4 +527,4 @@ export const HOUSE_UA_CHOINNICH_FAMILY = Object.freeze({
       timeJumps: []
     }
   }
-});
+}));

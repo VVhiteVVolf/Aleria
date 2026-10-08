@@ -1,0 +1,419 @@
+{
+  "date": "2026-10-08",
+  "scope": "Eoghainn, Agnew, Dianaomh, Dobhar, Forsyth, Elid, Oglivy: seven graphic-only genealogies and house biographies",
+  "publication": "local-only; no commit, push or deployment",
+  "counts": {
+    "sourceAppearances": 406,
+    "distinctPeople": 346,
+    "distinctPartnerships": 149,
+    "matchedExistingPeople": 83,
+    "newPortraits": 0,
+    "reusedPortraits": 25,
+    "unpicturedPeople": 321,
+    "warriorIllustrations": 0,
+    "counterpartFamilies": 2,
+    "counterpartPeople": 5,
+    "counterpartPortraitsAdded": 0,
+    "untouchedFamilies": 509
+  },
+  "families": [
+    {
+      "id": "haus-eoghainn",
+      "persons": 93,
+      "partnerships": 41,
+      "parentages": 51,
+      "houseNodes": 19,
+      "timeJumps": 4,
+      "portraits": 9,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-agnew",
+      "persons": 47,
+      "partnerships": 20,
+      "parentages": 26,
+      "houseNodes": 9,
+      "timeJumps": 1,
+      "portraits": 2,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-dianaomh",
+      "persons": 43,
+      "partnerships": 20,
+      "parentages": 22,
+      "houseNodes": 9,
+      "timeJumps": 1,
+      "portraits": 2,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-dobhar",
+      "persons": 49,
+      "partnerships": 23,
+      "parentages": 25,
+      "houseNodes": 9,
+      "timeJumps": 1,
+      "portraits": 3,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-forsyth",
+      "persons": 65,
+      "partnerships": 25,
+      "parentages": 39,
+      "houseNodes": 14,
+      "timeJumps": 1,
+      "portraits": 6,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-elid",
+      "persons": 47,
+      "partnerships": 21,
+      "parentages": 25,
+      "houseNodes": 7,
+      "timeJumps": 1,
+      "portraits": 1,
+      "sourceRevision": 2
+    },
+    {
+      "id": "haus-oglivy",
+      "persons": 62,
+      "partnerships": 29,
+      "parentages": 32,
+      "houseNodes": 12,
+      "timeJumps": 2,
+      "portraits": 2,
+      "sourceRevision": 2
+    }
+  ],
+  "faelaorn": {
+    "populated": 28,
+    "prepared": 11,
+    "personAppearances": 1776,
+    "distinctPeople": 1396
+  },
+  "openQuestions": [
+    {
+      "person": "Torcall, Lannraigs Partner",
+      "issue": "Oglivy surname versus Dubglais crest",
+      "handling": "Unknown house and explicit provenance note pending user reply."
+    },
+    {
+      "person": "Eithne (*1559), Bujold Kampfgeboreners Frau",
+      "issue": "Oglivy diagram versus existing Drummond identity",
+      "handling": "Separate provisional identity with explicit conflict note; existing Eithne Drummond unchanged."
+    },
+    {
+      "person": "Cairell Forsyths Eheperson aus Wellenkrone",
+      "issue": "Given name not reliably legible",
+      "handling": "Visible placeholder Unklarer Vorname Wellenkrone; no invented birth year."
+    }
+  ],
+  "userDecisions": {
+    "agnewYoungestBirths": [
+      "1723",
+      "1728",
+      "1730"
+    ],
+    "eanbharrEoghainnBirth": "1653",
+    "iarbhineForsythBirth": "1665",
+    "vardanElidBirth": "1716",
+    "uisighAvernaxBirth": "1717",
+    "forcedPartnerships": [
+      "Cailte–Ealar Duff",
+      "Vadria–Bjørn",
+      "Heulyn–Kjartan"
+    ]
+  },
+  "sourceDecisions": [
+    "Historical Damh lordships remain despite war and partial occupation. Eoghainn asylum and Forsyth additional placement remain.",
+    "Four Eoghainn gaps, two Oglivy gaps and one in each remaining diagram; no invented founder years or current heads.",
+    "Agnew Glaodhaich/Seallach/Quíghleann descend from Loinneog–Zachair. Elid Xubhnán/Xarthan/Zibhí descend from Zeargán and the unnamed spouse.",
+    "Eanbharr was 14 at Seallachs source birth; Vadria was 15 at Poilíns birth from the confirmed forced relationship. Explicit source years are retained.",
+    "Pádraig the undated founder is explicitly distinct from Pádraig (*1714). Founder house affiliations and cross-diagram aliases are reviewed.",
+    "Eleven outgoing wards retain biological parentage. Incoming Uisigh has one foster record containing both guardians, with no invented biological parents.",
+    "Known counterpart birth/death years and canonical names supplement lower-information graphic readings. Muircheartach Casur 1604, Koarnach Culloch 1610, Mairghread Ness 1613 and Heilbhic Muirgheal 1657 follow their origin tables.",
+    "Dated Agnew evidence supersedes authorized reconstructed Banlaoch births, preserving established IDs and historical source notes. Glaodhaich (*1700) receives his formerly unknown birth and living status in Luthsach.",
+    "Existing relationship status is retained where diagrams supply no new evidence. No unrelated pair statuses are normalized.",
+    "No portraits or warrior illustrations were supplied. Existing canonical portraits are reused; missing portraits and crests remain placeholders. No unregistered house or guardian is fabricated for Laga, Kerlaouen or Marcaigh."
+  ],
+  "tests": {
+    "damh": {
+      "passed": 8,
+      "failed": 0
+    },
+    "faerna": {
+      "passed": 7,
+      "failed": 0
+    },
+    "braigh": {
+      "passed": 8,
+      "failed": 0
+    },
+    "mathgham": {
+      "passed": 9,
+      "failed": 0
+    },
+    "serverValidation": {
+      "passed": 9,
+      "failed": 0
+    },
+    "portraitImport": {
+      "passed": 1,
+      "failed": 0
+    },
+    "legacy": {
+      "passed": 1246,
+      "failed": 0
+    },
+    "modular": {
+      "total": 189,
+      "passed": 181,
+      "failed": 8,
+      "note": "Same eight pre-existing historical fingerprint/revision and Cwingod portrait discrepancies; no new failure."
+    },
+    "offlineRegeneration": {
+      "modules": 22,
+      "changedModules": [],
+      "offline": true,
+      "baselineBytes": 290313,
+      "previousImport": {
+        "name": "faerna",
+        "modules": 16,
+        "changedModules": []
+      }
+    },
+    "unchangedFamilyFingerprints": 509,
+    "unmodifiedCounterpartFingerprints": 2
+  },
+  "browser": {
+    "desktop": [
+      {
+        "familyId": "haus-eoghainn",
+        "cardCount": 120,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 2,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-agnew",
+        "cardCount": 58,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-dianaomh",
+        "cardCount": 54,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-dobhar",
+        "cardCount": 60,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-forsyth",
+        "cardCount": 81,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 2,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-elid",
+        "cardCount": 56,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-oglivy",
+        "cardCount": 78,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      }
+    ],
+    "mobile": [
+      {
+        "familyId": "haus-eoghainn",
+        "cardCount": 120,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 2,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-agnew",
+        "cardCount": 58,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-dianaomh",
+        "cardCount": 54,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-dobhar",
+        "cardCount": 60,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-forsyth",
+        "cardCount": 81,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 2,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-elid",
+        "cardCount": 56,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-oglivy",
+        "cardCount": 78,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      }
+    ],
+    "counterparts": [
+      {
+        "familyId": "haus-luthsach",
+        "cardCount": 63,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      },
+      {
+        "familyId": "haus-banlaoch",
+        "cardCount": 58,
+        "overlaps": 0,
+        "confirmedLineCardIntersections": 0,
+        "unattributedLineCardIntersections": 0,
+        "misalignedCrestLinks": 0,
+        "excessiveRoutes": 0,
+        "longPartnershipRoutes": 0,
+        "runtimeError": "",
+        "browserExceptions": [],
+        "evaluationError": ""
+      }
+    ],
+    "images": {
+      "biographyImages": 14,
+      "chartImageReferences": 197,
+      "failures": []
+    },
+    "notes": "Owned hidden Chrome/CDP used because the in-app browser was unavailable. No overlaps, line/card collisions or crest misalignment. Eoghainn and Forsyth each have two wide collision-free ancestry routes; no long partnership routes."
+  },
+  "counterpartRevisions": {
+    "haus-luthsach": 3,
+    "haus-banlaoch": 3
+  },
+  "sourceAudit": "assets/data/source-inventories/damh-families-audit-2026-10-08.json",
+  "documentedDecisions": "DATENPFLEGE.md, section 13.29"
+}
