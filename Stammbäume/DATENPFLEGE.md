@@ -1596,6 +1596,43 @@ Linien durch fremde Karten oder versetzte Wappenknoten geprüft. Breite,
 kollisionsfreie Abstammungs- und Partnerschaftslinien werden im Beleg aufgeführt.
 Kein Commit, Push oder Deployment.
 
+### 13.31 Skjaerheim: Registerstruktur mit offenen Thanenzuordnungen (09.10.2026)
+
+Die Reichstabelle des Nutzers belegt vier hohe und zehn niedere Clans. Gemäß
+Auftrag führt Hrothgar als Königsclan das Reiktum und sein eigenes fürstliches
+Jarltum. Knything, Stanleagh und Bjerk sind Jarlclans. Hjarning, Vargul, Veknar,
+Hjorvik, Iskarn, Hrodmar, Skath, Thirsk, Garnulf und Draugmar werden als
+Thanenclans gemeinsam unter `Skjaerheim/Niedere Clans – noch nicht zugeordnet`
+geführt. Ihre Sitze sind belegt, ihre Jarltümer ausdrücklich offen.
+
+Die Struktur nutzt die vorhandene Gebietsplanung wie Fjordheim. Sie erzeugt
+keine Familien- oder Personen-IDs, keine unbekannten Gründerpaare und keine
+Beziehungen. Bei der späteren Ausarbeitung werden echte Akten mit belegter
+Genealogie registriert und die jeweiligen Planungseinträge abgelöst.
+Faelaorns historische Akten behalten trotz gleicher alter Ortsnamen ihre
+bestehenden Zuordnungen und Identitäten.
+
+Quellenaudit: Die Clanliste nennt **Stanleagh**, die Jarltumsüberschrift
+**Stanlaegh**. Erstere dient als Registername; Letztere bleibt sichtbar und
+suchbar als Variante erhalten. Die vereinzelte Ratsüberschrift „Reik von
+Fjordheim“ ist eine kopierte Vorlagenzeile; Reichstitel und Geographie nennen
+Skjaerheim. „Reik“ und „fürstliches Jarltum“ bleiben als Quellbegriffe erhalten,
+während die ausdrückliche Nutzerangabe den Rang Königsclan bestimmt.
+
+Quelle und Zeileninventar: `assets/data/source-inventories/skjaerheim-2026-10-09.json`
+mit bytegetreuer HTML-Vorlage und 19 lokal gespiegelten Wappen einschließlich
+SHA-256-Belegen. Die gezielten Strukturtests prüfen Quellenabdeckung, getrennte
+Ränge, gemeinsame offene Thanenablage, Namenssuche, unveränderte bestehende
+Registerplätze und die lokalen Wappen.
+
+Prüfung: 16 gezielte Struktur- und Registertests erfolgreich. Die Browserprüfung
+bei 1440×1000 und 390×844 bestätigt Navigation, Suchvariante, Königsrang, geladene
+Wappen und eine Darstellung ohne horizontalen Überlauf. Ordnerkarten zeigen
+höchstens drei Clanvorschauen plus Restanzahl; im Bereich bleiben alle Clans sichtbar.
+Die zusätzliche Faelaorn-Strukturprüfung besteht in fünf von sechs Fällen; ihr
+historischer Fingerprint-Abgleich für `haus-rioga` ist bereits im Ausgangsstand
+veraltet. Dessen Familienakte und der betreffende Test werden nicht geändert.
+
 ## 14. Abschlussprotokoll
 
 Jede neue oder korrigierte Familie wird mit folgendem Kurzprotokoll abgeschlossen:

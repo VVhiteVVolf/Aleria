@@ -37,6 +37,7 @@ Es werden keine Pakete installiert. Die Tests verwenden ausschließlich Node.js 
 - Der Netlify-Publisher validiert das vollständige Familienschema und gespiegelte Mehrfamilienbeziehungen erneut. Erwartete und aktuelle Revision müssen übereinstimmen; bei einem zwischenzeitlich veränderten `master` wird der Commit ohne Force-Push abgelehnt.
 - Portraits und Wappen können weiterhin als Imgur-URL eingetragen werden. Alternativ wird eine PNG-, JPEG- oder WebP-Quelldatei bis 8 MB angenommen; Dateien über 1 MB werden vor dem lokalen Vormerken automatisch in ein speicherbares WebP optimiert. Erst „Online speichern“ legt das vorbereitete Bild zusammen mit der Familienakte als versioniertes Projektasset in demselben GitHub-Commit ab.
 - Projektweit auslieferbare Familien werden zentral in `assets/js/data/families.registry.js` registriert.
+- Skjaerheims Registerstruktur liegt in `assets/js/data/skjaerheim-territorial-plan.js`: Königsclan Hrothgar, die Jarlclans Knything, Stanleagh und Bjerk sowie zehn Thanenclans im gemeinsamen Bereich „Niedere Clans – noch nicht zugeordnet“. Sitze, Ortsvarianten und lokale Wappen sind vorbereitet; genealogische Akten folgen mit den Familienquellen.
 - Der verbindliche Ablauf für Quellenübernahme, Weltidentitäten, Hausknoten, Zeitsprünge, Portraits, Revisionen und Fehlerdiagnose steht in [`DATENPFLEGE.md`](DATENPFLEGE.md).
 - JSON-Export verwendet `aleria.family-tree` Schema-Version 1.
 - Der Import akzeptiert außerdem das alte Format der temporären `Stammbaum.html` mit `persons` und `couples`.

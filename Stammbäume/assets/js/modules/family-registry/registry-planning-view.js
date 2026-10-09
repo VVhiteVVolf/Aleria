@@ -7,10 +7,13 @@ function renderClanEmblem(house, className) {
 }
 
 export function renderPlannedHousePreviews(houses) {
-  return houses.map(house => `<span class="registry-planned-house-preview">
+  const previewLimit = 3;
+  const previews = houses.slice(0, previewLimit).map(house => `<span class="registry-planned-house-preview">
     ${renderClanEmblem(house, 'registry-planning-preview-emblem')}
     <small>Vorgesehen: Clan ${esc(house.name)}</small>
   </span>`).join('');
+  const remaining = houses.length - previewLimit;
+  return previews + (remaining > 0 ? `<small>+ ${remaining} weitere ${remaining === 1 ? 'Clan' : 'Clans'}</small>` : '');
 }
 
 export function renderRegistryPlanning(node) {

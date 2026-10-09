@@ -5,5 +5,7 @@
 *.woff binary
 *.woff2 binary
 *.png binary
+# Preserve the supplied Skjaerheim HTML snapshot byte-for-byte for its source hash.
+Stammbäume/assets/data/source-inventories/skjaerheim-2026-10-09/*.html -text whitespace=-blank-at-eol
 # Generated Bestiarium bundle preserves upstream CSS template-literal whitespace.
 AleriaAlmanach/DokumentenWerkstatt/assets/book-reader.bundle.js linguist-generated whitespace=-blank-at-eol
