@@ -795,14 +795,14 @@
 
 .family-chart-host .link {
   stroke: rgba(76, 52, 32, 0.65);
-  stroke-width: 3.25px;
+  stroke-width: 1.65px;
   stroke-linecap: round;
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
 }
 
 .family-chart-host .link.f3-path-to-main {
-  stroke-width: 3.25px !important;
+  stroke-width: 1.65px !important;
 }
 
 .family-chart-host .aleria-line-crossing-overlay {
@@ -812,14 +812,14 @@
 
 .family-chart-host .aleria-line-crossing-overlay--casing {
   stroke: var(--family-chart-crossing-gap, #ead6ae) !important;
-  stroke-width: 10px !important;
+  stroke-width: 6px !important;
   stroke-dasharray: none !important;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .family-chart-host .aleria-line-crossing-overlay--foreground {
-  stroke-width: 4px !important;
+  stroke-width: 2.4px !important;
   stroke-dasharray: none !important;
   stroke-linecap: round;
   stroke-linejoin: round;

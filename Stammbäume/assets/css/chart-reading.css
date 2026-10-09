@@ -1,0 +1,177 @@
+/* Reading aids own their presentation; person artwork remains in the chart theme. */
+.chart-reading-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+.chart-reading-tools > button,
+.chart-reading-guide > summary {
+  padding: 0.45rem 0.7rem;
+  border: 1px solid #a58b61;
+  border-radius: 0.35rem;
+  color: #4e3825;
+  background: linear-gradient(#fff8e8, #ecdbbc);
+  box-shadow: 0 2px 4px #3b281412;
+  font: 600 0.8rem var(--font-body);
+  cursor: pointer;
+}
+
+.chart-reading-tools > button:hover,
+.chart-reading-guide > summary:hover {
+  background: #fff9ec;
+}
+
+.chart-reading-guide {
+  position: relative;
+}
+
+.chart-reading-guide__panel {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  width: min(28rem, calc(100vw - 3rem));
+  max-height: 65vh;
+  overflow: auto;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #ac9269;
+  border-radius: 0.4rem;
+  color: #4e3825;
+  background: #fbf2df;
+  box-shadow: 0 10px 30px #3b281430;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.chart-reading-guide__panel p {
+  margin: 0 0 0.7rem;
+}
+
+.chart-reading-guide__lines,
+.chart-reading-guide__roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.chart-reading-guide__sample {
+  display: inline-block;
+  width: 1.5rem;
+  margin-right: 0.35rem;
+  border-top: 2px solid var(--sample-color);
+  vertical-align: middle;
+}
+
+.chart-reading-guide__sample--dashed {
+  border-top-style: dashed;
+}
+
+.chart-panel .chart-stage {
+  --family-chart-crossing-gap: #eddfc4;
+  border: 1px solid #aa8d60;
+  border-radius: 0.6rem;
+  background:
+    radial-gradient(ellipse at 50% 35%, #fffaf0db, transparent 75%),
+    radial-gradient(#78522d15 0.7px, transparent 0.8px) 0 0 / 24px 24px,
+    linear-gradient(145deg, #f1e7d3, #e2cba3);
+  box-shadow: inset 0 0 0 4px #fff7e65c, inset 0 0 4rem #7353320d, 0 0.6rem 1.8rem #402a181c;
+}
+
+.family-chart-host .aleria-connection-reference {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 284px;
+  height: 28px;
+  padding: 3px 9px;
+  overflow: hidden;
+  border: 1.5px solid var(--reference-color);
+  border-radius: 6px;
+  color: #35271e;
+  background: #fff9eb;
+  box-shadow: 0 2px 6px #3b281420;
+  font: 600 12px var(--font-body);
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.family-chart-host .aleria-reference-stem {
+  stroke-width: 1.65px;
+  vector-effect: non-scaling-stroke;
+  pointer-events: none;
+}
+
+.family-chart-host .aleria-line-junction {
+  stroke: #fff5df;
+  stroke-width: 1.2px;
+  pointer-events: none;
+}
+
+.family-chart-host .family-card-role {
+  margin-bottom: 0.2rem;
+  color: var(--card-subtle);
+  font-size: 0.57rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.family-chart-host .aleria-chart-card,
+.family-chart-host [data-related-card-ids] {
+  transition: opacity 130ms ease;
+}
+
+.family-chart-host.has-relationship-focus .card_cont:not(.is-relationship-focused) .aleria-chart-card {
+  opacity: 0.38;
+}
+
+.family-chart-host.has-relationship-focus [data-related-card-ids]:not(.is-relationship-focused),
+.family-chart-host.has-relationship-focus .aleria-line-crossing-overlay:not(.is-relationship-focused) {
+  opacity: 0.13;
+}
+
+.family-chart-host .is-relationship-origin .aleria-person-card {
+  filter: drop-shadow(0 0 9px #ffe4a0) drop-shadow(0 5px 7px #452e2699);
+}
+
+.family-chart-host .aleria-connection-reference:focus-visible,
+.family-chart-host .aleria-person-card:focus-visible {
+  outline: 3px solid #98651e;
+  outline-offset: 4px;
+}
+
+.chart-panel.is-exporting-png .chart-reading-tools {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .chart-panel .chart-heading-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .chart-reading-tools {
+    position: relative;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .chart-reading-guide {
+    position: static;
+  }
+  .chart-reading-guide__panel {
+    right: auto;
+    left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .family-chart-host .aleria-chart-card,
+  .family-chart-host [data-related-card-ids] {
+    transition: none;
+  }
+}

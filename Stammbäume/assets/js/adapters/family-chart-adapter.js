@@ -26,6 +26,8 @@ import {
   createFamilyChartDescendantAlignmentPlan
 } from './family-chart-descendant-alignment.js';
 import { createFamilyChartLinkRenderer } from './family-chart-link-renderer.js';
+import { createFamilyChartRelationshipFocus } from './family-chart-relationship-focus.js';
+import { changeFamilyChartZoom } from './family-chart-zoom.js';
 import { createFamilyChartHouseOffshootRenderer } from './family-chart-house-offshoot-renderer.js';
 import { applyFamilyChartLayoutPipeline } from './family-chart-layout-pipeline.js';
 import {
@@ -1148,6 +1150,13 @@ export function createFamilyChartSession(config) {
     if (destroyed) throw new Error('Die Family-Chart-Sitzung wurde bereits beendet.');
   }
 
+  const relationshipFocus = createFamilyChartRelationshipFocus({
+    container,
+    onReferenceActivate(payload) {
+      const datum = converted.data.find(person => person.id === payload.personId);
+      config.onPersonClick?.({ ...payload, personId: datum?.data?.aleria?.personId || payload.personId });
+    }
+  });
   const linkRenderer = createFamilyChartLinkRenderer({
     container,
     resolveMetadata(link) {
@@ -1161,7 +1170,15 @@ export function createFamilyChartSession(config) {
     },
     resolveOrientation() {
       return view.orientation;
-    }
+    },
+    resolveNativeNodes() {
+      return chart.store?.getTree?.()?.data || [];
+    },
+    settleNativePath(path) {
+      runtime.d3.select?.(path).interrupt('path');
+      path.style.opacity = '1';
+    },
+    onRendered: relationshipFocus.refresh
   });
   const houseOffshootRenderer = createFamilyChartHouseOffshootRenderer({
     container,
@@ -1296,6 +1313,7 @@ export function createFamilyChartSession(config) {
   function destroy() {
     if (destroyed) return;
     linkRenderer.destroy();
+    relationshipFocus.destroy();
     houseOffshootRenderer.destroy();
     container.replaceChildren();
     container.classList.remove('f3', 'f3-cont');
@@ -1305,6 +1323,7 @@ export function createFamilyChartSession(config) {
   configureCard();
   applyView(false);
   chart.setBeforeUpdate?.(() => {
+    linkRenderer.prepareUpdate();
     const tree = chart.store?.getTree?.();
     const layout = applyFamilyChartLayoutPipeline({
       tree,
@@ -1342,6 +1361,10 @@ export function createFamilyChartSession(config) {
     update,
     focus,
     fit,
+    zoom(factor) {
+      ensureActive();
+      return changeFamilyChartZoom(container, runtime, factor);
+    },
     reset,
     setOrientation,
     destroy,

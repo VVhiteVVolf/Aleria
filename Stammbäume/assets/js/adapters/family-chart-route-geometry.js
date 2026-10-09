@@ -160,6 +160,38 @@ function orthogonalRouteLength(route) {
   }, 0);
 }
 
+/** A bounded local escape when a vertical stem, rather than its rail, is blocked. */
+export function selectCollisionAwareParentageDetour({ first, second, route, cardPositions, relatedCardIds, orientation = 'vertical', clearance = DEFAULT_ROUTE_CLEARANCE }) {
+  if (!countOrthogonalRouteCardIntersections([route], cardPositions, relatedCardIds, clearance).length) return route;
+  const generation = orientation === 'horizontal' ? 'x' : 'y';
+  const cross = generation === 'x' ? 'y' : 'x';
+  const generationHalfSize = generation === 'x' ? FAMILY_CHART_CARD_LAYOUT.width / 2 : FAMILY_CHART_CARD_LAYOUT.height / 2;
+  const crossHalfSize = cross === 'x' ? FAMILY_CHART_CARD_LAYOUT.width / 2 : FAMILY_CHART_CARD_LAYOUT.height / 2;
+  const direction = second[generation] >= first[generation] ? 1 : -1;
+  const gap = Math.abs(second[generation] - first[generation]);
+  const exitDistance = gap > 2 * (generationHalfSize + clearance) ? generationHalfSize + clearance : clearance;
+  const entryDistance = Math.min(generationHalfSize + clearance, Math.max(clearance, gap - exitDistance));
+  const exit = first[generation] + direction * exitDistance;
+  const entry = second[generation] - direction * entryDistance;
+  const minimum = Math.min(first[cross], second[cross]) - FAMILY_CHART_CARD_LAYOUT.width * 2;
+  const maximum = Math.max(first[cross], second[cross]) + FAMILY_CHART_CARD_LAYOUT.width * 2;
+  const lanes = new Set([minimum, maximum]);
+  cardPositions.forEach(point => {
+    [point[cross] - crossHalfSize - clearance, point[cross] + crossHalfSize + clearance]
+      .filter(value => value >= minimum && value <= maximum).forEach(value => lanes.add(value));
+  });
+  const candidates = [route, ...[...lanes].map(lane => [
+    first, { [cross]: first[cross], [generation]: exit },
+    { [cross]: lane, [generation]: exit }, { [cross]: lane, [generation]: entry },
+    { [cross]: second[cross], [generation]: entry }, second
+  ])];
+  return candidates.map(candidate => ({
+    route: candidate,
+    hits: countOrthogonalRouteCardIntersections([candidate], cardPositions, relatedCardIds, clearance).length,
+    length: orthogonalRouteLength(candidate)
+  })).sort((a, b) => a.hits - b.hits || a.length - b.length)[0].route;
+}
+
 function partnershipLaneRoute(first, second, orientation, laneCoordinate) {
   return orientation === 'horizontal'
     ? [first, { x: laneCoordinate, y: first.y }, { x: laneCoordinate, y: second.y }, second]

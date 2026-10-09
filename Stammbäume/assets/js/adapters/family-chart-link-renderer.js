@@ -5,6 +5,7 @@ import {
 } from './family-chart-layout-dom.js';
 import {
   countOrthogonalRouteCardIntersections,
+  selectCollisionAwareParentageDetour,
   selectCollisionAwarePartnershipRoute,
   selectCollisionAwareRail
 } from './family-chart-route-geometry.js';
@@ -12,6 +13,14 @@ import {
   applyFamilyChartLineCrossingBridges,
   clearFamilyChartLineCrossingBridges
 } from './family-chart-line-crossings.js';
+import {
+  planFamilyChartConnectionReferences,
+  findFamilyChartConnectionReference,
+  familyChartReferenceParentAnchor,
+  renderFamilyChartConnectionReferences,
+  clearFamilyChartConnectionReferences
+} from './family-chart-connection-references.js';
+import { renderFamilyChartJunctions } from './family-chart-junction-renderer.js';
 
 const DEFAULT_CORNER_RADIUS = 18;
 const ALIGNED_CARD_TOLERANCE = 1;
@@ -136,9 +145,10 @@ function parentageRoute(
     orientation,
     buildRoutes
   });
-  return selected?.routes?.[0] || buildRoutes(
+  const route = selected?.routes?.[0] || buildRoutes(
     parentGeneration + ((childGeneration - parentGeneration) / 2)
   )[0];
+  return selectCollisionAwareParentageDetour({ first, second, route, cardPositions, relatedCardIds, orientation });
 }
 
 function alignedPartnershipRoute(first, second, orientation) {
@@ -170,6 +180,29 @@ function hierarchyNodeId(node) {
   return node?.data?.id || node?.data?.data?.id || node?.id || '';
 }
 
+function parentJunction(points, parentIds, childPoint, cardPositions, orientation, references) {
+  const reference = findFamilyChartConnectionReference(references, parentIds, points);
+  if (reference) return familyChartReferenceParentAnchor(reference, childPoint, orientation);
+  const unique = [...new Map(points.map(point => [`${point.x}:${point.y}`, point])).values()];
+  if (unique.length !== 2) return midpoint(unique);
+  const [first, second] = unique;
+  const route = selectCollisionAwarePartnershipRoute({
+    first, second, directRoute: alignedPartnershipRoute(first, second, orientation),
+    cardPositions, relatedCardIds: parentIds, orientation
+  });
+  // A U-shaped partnership owns its junction on the outer rail. Its old
+  // centre point could lie inside a different partner's card.
+  const cross = orientation === 'horizontal' ? 'y' : 'x';
+  const generation = cross === 'x' ? 'y' : 'x';
+  for (let index = 1; index < route.length; index += 1) {
+    if (Math.abs(route[index][generation] - route[index - 1][generation]) < 0.001
+      && Math.abs(route[index][cross] - route[index - 1][cross]) > 0.001) {
+      return midpoint([route[index - 1], route[index]]);
+    }
+  }
+  return midpoint(unique);
+}
+
 function hierarchyNodeIds(value) {
   return (Array.isArray(value) ? value : [value])
     .map(hierarchyNodeId)
@@ -178,6 +211,11 @@ function hierarchyNodeIds(value) {
 
 function hierarchyNodes(value) {
   return (Array.isArray(value) ? value : [value]).filter(Boolean);
+}
+
+export function isFamilyChartNativeLinkActive(link, nodes) {
+  const endpoints = [...hierarchyNodes(link?.source), ...hierarchyNodes(link?.target)];
+  return endpoints.length > 0 && endpoints.every(node => nodes.has(node));
 }
 
 function hierarchyNodePoints(value, cardPositions) {
@@ -267,7 +305,8 @@ function registerRoute(routeRecords, {
 export function createFamilyChartNativeLinkRoute(
   link,
   cardPositions,
-  orientation = 'vertical'
+  orientation = 'vertical',
+  references = []
 ) {
   const sourceIds = hierarchyNodeIds(link?.source);
   const targetIds = hierarchyNodeIds(link?.target);
@@ -306,16 +345,14 @@ export function createFamilyChartNativeLinkRoute(
 
   const sourceIsParentGroup = Array.isArray(link?.source);
   const targetIsParentGroup = Array.isArray(link?.target);
-  const parentPoint = sourceIsParentGroup
-    ? midpoint(sourcePoints)
-    : targetIsParentGroup
-      ? midpoint(targetPoints)
-      : sourcePoints[0];
   const childPoint = sourceIsParentGroup
     ? targetPoints[0]
     : targetIsParentGroup
       ? sourcePoints[0]
       : targetPoints[0];
+  const parentPoints = sourceIsParentGroup ? sourcePoints : targetIsParentGroup ? targetPoints : [sourcePoints[0]];
+  const parentIds = sourceIsParentGroup ? sourceIds : targetIsParentGroup ? targetIds : [sourceIds[0]];
+  const parentPoint = parentJunction(parentPoints, parentIds, childPoint, cardPositions, orientation, references);
   return Object.freeze({
     route: Object.freeze(parentageRoute(parentPoint, childPoint, orientation, {
       cardPositions,
@@ -344,10 +381,11 @@ function endpointDistance(firstRoute, secondRoute) {
 export function selectFamilyChartNativeLinkRoute(
   link,
   cardPositions,
-  orientation = 'vertical'
+  orientation = 'vertical',
+  references = []
 ) {
   const nativeRoute = compactPoints(Array.isArray(link?.d) ? link.d : []);
-  const rebuilt = createFamilyChartNativeLinkRoute(link, cardPositions, orientation);
+  const rebuilt = createFamilyChartNativeLinkRoute(link, cardPositions, orientation, references);
   if (rebuilt.route.length < 2) {
     return Object.freeze({
       route: Object.freeze(nativeRoute),
@@ -370,8 +408,7 @@ export function selectFamilyChartNativeLinkRoute(
   );
   const endpointsMoved = endpointDistance(nativeRoute, rebuilt.route) > 1;
   const rebuiltImprovesCollision = rebuiltHitCardIds.length < nativeHitCardIds.length;
-  const rebuiltRestoresMovedAnchors = endpointsMoved
-    && rebuiltHitCardIds.length <= nativeHitCardIds.length;
+  const rebuiltRestoresMovedAnchors = endpointsMoved;
   const useRebuiltRoute = rebuiltImprovesCollision || rebuiltRestoresMovedAnchors;
 
   return Object.freeze({
@@ -388,12 +425,13 @@ export function selectFamilyChartNativeLinkRoute(
 export function createFamilyChartParentageGroupRoutes(
   extraLink,
   cardPositions,
-  orientation = 'vertical'
+  orientation = 'vertical',
+  references = []
 ) {
   const parentPoints = (extraLink.parentIds || [])
     .map(parentId => cardPositions.get(parentId))
     .filter(Boolean);
-  const parentPoint = parentPoints.length
+  let parentPoint = parentPoints.length
     ? midpoint(parentPoints)
     : cardPositions.get(extraLink.parentId);
   const childPoints = (extraLink.childIds || [])
@@ -404,6 +442,9 @@ export function createFamilyChartParentageGroupRoutes(
     || (extraLink.parentIds?.length && parentPoints.length !== extraLink.parentIds.length)
     || childPoints.length !== extraLink.childIds.length
   ) return [];
+  if (parentPoints.length) parentPoint = parentJunction(
+    parentPoints, extraLink.parentIds, midpoint(childPoints), cardPositions, orientation, references
+  );
 
   const childAxisValues = childPoints.map(point => (
     orientation === 'horizontal' ? point.y : point.x
@@ -439,16 +480,20 @@ export function createFamilyChartParentageGroupRoutes(
     orientation,
     buildRoutes
   });
-  return selected?.routes || buildRoutes(
+  const routes = selected?.routes || buildRoutes(
     parentGeneration + ((childGeneration - parentGeneration) / 2)
   );
+  if (!countOrthogonalRouteCardIntersections(routes, cardPositions, relatedCardIds).length) return routes;
+  // Retain the shared rail whenever clear. Only obstructed groups fall back
+  // to individually anchored, collision-aware child routes.
+  return childPoints.map(child => parentageRoute(parentPoint, child, orientation, { cardPositions, relatedCardIds }));
 }
 
-export function createFamilyChartExtraLinkRoute(extraLink, cardPositions, orientation = 'vertical') {
+export function createFamilyChartExtraLinkRoute(extraLink, cardPositions, orientation = 'vertical', references = []) {
   if (extraLink.kind === 'parentage') {
     const parentPoints = (extraLink.parentIds || []).map(parentId => cardPositions.get(parentId)).filter(Boolean);
     const childPoint = cardPositions.get(extraLink.childId);
-    const parentPoint = midpoint(parentPoints);
+    const parentPoint = childPoint && parentJunction(parentPoints, extraLink.parentIds || [], childPoint, cardPositions, orientation, references);
     return parentPoint && childPoint ? parentageRoute(parentPoint, childPoint, orientation, {
       cardPositions,
       relatedCardIds: relatedIdsForExtraLink(extraLink)
@@ -478,6 +523,9 @@ export function createFamilyChartLinkRenderer({
   resolveMetadata,
   resolveExtraLinks,
   resolveOrientation,
+  resolveNativeNodes,
+  settleNativePath,
+  onRendered,
   schedule = globalThis.setTimeout?.bind(globalThis),
   cancel = globalThis.clearTimeout?.bind(globalThis)
 }) {
@@ -490,14 +538,13 @@ export function createFamilyChartLinkRenderer({
   function applyLineStyle(path, metadata) {
     path.style.display = metadata.hidden ? 'none' : '';
     path.style.stroke = metadata.color;
-    path.style.strokeWidth = '3.25px';
-    path.style.strokeDasharray = metadata.dashed ? '8 6' : '';
+    path.style.strokeWidth = '1.65px';
+    path.style.strokeDasharray = metadata.dashed ? '6 5' : '';
     path.dataset.relationshipType = metadata.type;
   }
 
-  function renderExtraLinks(routeRecords) {
+  function renderExtraLinks(routeRecords, references, extraLinks) {
     container.querySelectorAll('.links_view path.aleria-extra-link').forEach(element => element.remove());
-    const extraLinks = typeof resolveExtraLinks === 'function' ? resolveExtraLinks() || [] : [];
     if (!extraLinks.length) return;
     const linksView = container.querySelector('.links_view');
     if (!linksView) return;
@@ -509,7 +556,8 @@ export function createFamilyChartLinkRenderer({
         const routes = createFamilyChartParentageGroupRoutes(
           extraLink,
           cardPositions,
-          orientation
+          orientation,
+          references
         );
 
         routes.forEach((route, routeIndex) => {
@@ -533,7 +581,11 @@ export function createFamilyChartLinkRenderer({
         });
         return;
       }
-      const route = createFamilyChartExtraLinkRoute(extraLink, cardPositions, orientation);
+      if (extraLink.kind !== 'parentage' && findFamilyChartConnectionReference(
+        references, [extraLink.firstId, extraLink.secondId],
+        [cardPositions.get(extraLink.firstId), cardPositions.get(extraLink.secondId)].filter(Boolean)
+      )) return;
+      const route = createFamilyChartExtraLinkRoute(extraLink, cardPositions, orientation, references);
       if (route.length < 2) return;
       const path = container.ownerDocument.createElementNS(SVG_NAMESPACE, 'path');
       path.setAttribute('class', 'link aleria-link--routed aleria-extra-link');
@@ -562,25 +614,58 @@ export function createFamilyChartLinkRenderer({
     const cardPositions = collectFamilyChartCardPositions(container);
     const orientation = typeof resolveOrientation === 'function' ? resolveOrientation() : 'vertical';
     const routeRecords = [];
-    container.querySelectorAll('.links_view path.link:not(.aleria-extra-link):not(.aleria-line-crossing-overlay)').forEach((path, pathIndex) => {
+    const activeNodes = typeof resolveNativeNodes === 'function' ? new Set(resolveNativeNodes() || []) : null;
+    const nativePaths = [...container.querySelectorAll('.links_view path.link:not(.aleria-extra-link):not(.aleria-line-crossing-overlay)')].filter(path => {
+      if (!activeNodes || isFamilyChartNativeLinkActive(path.__data__, activeNodes)) return true;
+      path.remove();
+      return false;
+    });
+    // A delayed native path tween must not restore stale anchors after this
+    // renderer has painted the final route. Exiting links were removed above.
+    nativePaths.forEach(path => settleNativePath?.(path));
+    const extraLinks = typeof resolveExtraLinks === 'function' ? resolveExtraLinks() || [] : [];
+    const names = new Map([...container.querySelectorAll('.card_cont')].map(card => [hierarchyNodeId(card.__data__), card.__data__?.data?.data?.name || '']));
+    const partnerships = nativePaths.filter(path => path.__data__?.spouse).map(path => {
+      const link = path.__data__;
+      return {
+        ...(resolveMetadata(link) || { type: 'marriage' }),
+        firstId: hierarchyNodeId(link.source), secondId: hierarchyNodeId(link.target),
+        first: hierarchyNodePoints(link.source, cardPositions)[0], second: hierarchyNodePoints(link.target, cardPositions)[0]
+      };
+    });
+    extraLinks.filter(link => !['parentage', 'parentage-group'].includes(link.kind)).forEach(link => partnerships.push({
+      ...link, first: cardPositions.get(link.firstId), second: cardPositions.get(link.secondId)
+    }));
+    const references = planFamilyChartConnectionReferences({
+      partnerships: partnerships.map(pair => ({ ...pair, firstName: names.get(pair.firstId), secondName: names.get(pair.secondId) })),
+      cardPositions, orientation
+    });
+    nativePaths.forEach((path, pathIndex) => {
       const link = path.__data__;
       const metadata = resolveMetadata(link);
       const selectedRoute = selectFamilyChartNativeLinkRoute(
         link,
         cardPositions,
-        orientation
+        orientation,
+        references
       );
       const routedPath = createRoundedOrthogonalPath(selectedRoute.route);
       if (routedPath) path.setAttribute('d', routedPath);
       path.classList.add('aleria-link--routed');
       path.dataset.routeStrategy = selectedRoute.strategy;
       setRelatedCardIds(path, selectedRoute.relatedCardIds);
-      const resolvedMetadata = metadata || Object.freeze({
+      const resolvedMetadata = { ...(metadata || {
         type: link?.spouse ? 'marriage' : 'biological',
         hidden: false,
         color: path.style.stroke || '#9f1f25',
         dashed: false
-      });
+      }) };
+      const reference = link?.spouse && findFamilyChartConnectionReference(
+        references, selectedRoute.relatedCardIds,
+        [...hierarchyNodePoints(link.source, cardPositions), ...hierarchyNodePoints(link.target, cardPositions)]
+      );
+      path.dataset.connectionPresentation = reference ? 'reference' : 'line';
+      if (reference) resolvedMetadata.hidden = true;
       applyLineStyle(path, resolvedMetadata);
       const groupId = nativeRouteGroupId(link);
       registerRoute(routeRecords, {
@@ -593,8 +678,11 @@ export function createFamilyChartLinkRenderer({
         hidden: resolvedMetadata.hidden
       });
     });
-    renderExtraLinks(routeRecords);
+    renderExtraLinks(routeRecords, references, extraLinks);
     applyFamilyChartLineCrossingBridges(container, routeRecords);
+    renderFamilyChartJunctions(container, routeRecords);
+    renderFamilyChartConnectionReferences(container, references);
+    onRendered?.();
   }
 
   function refresh(transitionTime = 0) {
@@ -617,11 +705,23 @@ export function createFamilyChartLinkRenderer({
     }
   }
 
+  function prepareUpdate() {
+    if (pendingRender !== null && cancel) cancel(pendingRender);
+    pendingRender = null;
+    // The library binds every path.link by datum.id. Renderer-owned paths
+    // have no library datum and must leave that selection before its join.
+    clearFamilyChartLineCrossingBridges(container);
+    container.querySelectorAll('.aleria-extra-link, .aleria-line-junction').forEach(element => element.remove());
+    clearFamilyChartConnectionReferences(container);
+  }
+
   function destroy() {
     destroyed = true;
     if (pendingRender !== null && cancel) cancel(pendingRender);
     pendingRender = null;
+    clearFamilyChartConnectionReferences(container);
+    container.querySelectorAll('.aleria-line-junction').forEach(element => element.remove());
   }
 
-  return Object.freeze({ refresh, destroy });
+  return Object.freeze({ refresh, prepareUpdate, destroy });
 }

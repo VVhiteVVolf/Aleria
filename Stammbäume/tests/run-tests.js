@@ -3009,7 +3009,7 @@ test('liefert alle lokalen Toolbar-Motive und vereinheitlichte Linienkonturen au
   const css = await readFile(new URL('../assets/css/family-chart-theme.css', import.meta.url), 'utf8');
   assert.match(css, /stroke-linecap: round;/);
   assert.match(css, /stroke-linejoin: round;/);
-  assert.match(css, /\.link\.f3-path-to-main\s*\{\s*stroke-width: 3\.25px !important;/);
+  assert.match(css, /\.link\.f3-path-to-main\s*\{\s*stroke-width: 1\.65px !important;/);
 });
 
 test('migriert das alte persons/couples-Format ohne Render-Abhängigkeit', () => {

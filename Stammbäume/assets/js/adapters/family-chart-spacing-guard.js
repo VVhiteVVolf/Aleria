@@ -135,6 +135,67 @@ function comparePriority(first, second) {
     || first.priority[1] - second.priority[1];
 }
 
+function localCollisionResolution(nodes, family, graph, collision, axis) {
+  const firstId = collision.firstId;
+  const secondId = collision.secondId;
+  const branchCandidates = [
+    branchRootForCollision(graph, firstId, secondId),
+    branchRootForCollision(graph, secondId, firstId)
+  ].filter(Boolean).map(rootPersonId => {
+      const movingNodes = displayedBranchNodes(nodes, graph, rootPersonId);
+      return {
+        rootPersonId,
+        movingNodes,
+        priority: branchMovePriority(graph, rootPersonId, movingNodes.length)
+      };
+    });
+  const relationshipCandidates = [firstId, secondId]
+    .map(houseNodeId => ({
+      rootPersonId: houseNodeId,
+      movingNodes: familyChartCadetRelationshipBlock(nodes, family, houseNodeId)
+    }))
+    .filter(candidate => candidate.movingNodes.length)
+    .map(candidate => ({
+      ...candidate,
+      // A local childless relationship block is safer to move than a whole
+      // lineage branch, because its parents and house knot stay together.
+      priority: [-1, candidate.movingNodes.length]
+    }));
+  // Different unions can share the same upstream branch. Moving that whole
+  // branch cannot separate its own overlapping children. Try each child's
+  // smaller descendant branch only after the established block choices.
+  const localCandidates = [firstId, secondId].filter(id => graph.personById.has(id)).map(rootPersonId => {
+    const movingNodes = displayedBranchNodes(nodes, graph, rootPersonId);
+    return { rootPersonId, movingNodes, priority: branchMovePriority(graph, rootPersonId, movingNodes.length) };
+  }).sort(comparePriority);
+  const candidates = [...[...relationshipCandidates, ...branchCandidates]
+    .filter(candidate => candidate.movingNodes.length)
+    .sort(comparePriority), ...localCandidates];
+
+  for (const candidate of candidates) {
+    const movingNodeSet = new Set(candidate.movingNodes);
+    const stationaryNodes = nodes.filter(node => !movingNodeSet.has(node));
+    const collisionPartner = candidate.movingNodes.includes(collision.first)
+      ? collision.second
+      : collision.first;
+    if (movingNodeSet.has(collisionPartner)) continue;
+    const movingCoordinate = Number(candidate.movingNodes[0]?.[axis]);
+    const partnerCoordinate = Number(collisionPartner?.[axis]);
+    const preferredDirection = Number.isFinite(movingCoordinate) && Number.isFinite(partnerCoordinate)
+      ? (movingCoordinate <= partnerCoordinate ? -1 : 1)
+      : 0;
+    const delta = findCollisionFreeGroupShift(
+      candidate.movingNodes,
+      stationaryNodes,
+      axis,
+      { preferredDirection }
+    );
+    if (!Number.isFinite(delta) || delta === 0) continue;
+    return { ...candidate, delta, collision };
+  }
+  return null;
+}
+
 function resolveLocalBranchCollisions(nodes, family, axis, minimumGap) {
   if (!family) return Object.freeze([]);
   const graph = familyGraph(family);
@@ -142,66 +203,19 @@ function resolveLocalBranchCollisions(nodes, family, axis, minimumGap) {
   const maximumPasses = Math.max(1, nodes.length * 2);
 
   for (let pass = 0; pass < maximumPasses; pass += 1) {
-    const collision = collectFamilyChartCardCollisions(nodes, { minimumGap })[0];
-    if (!collision) break;
-    const firstId = collision.firstId;
-    const secondId = collision.secondId;
-    const branchCandidates = [
-      branchRootForCollision(graph, firstId, secondId),
-      branchRootForCollision(graph, secondId, firstId)
-    ].filter(Boolean).map(rootPersonId => {
-        const movingNodes = displayedBranchNodes(nodes, graph, rootPersonId);
-        return {
-          rootPersonId,
-          movingNodes,
-          priority: branchMovePriority(graph, rootPersonId, movingNodes.length)
-        };
-      });
-    const relationshipCandidates = [firstId, secondId]
-      .map(houseNodeId => ({
-        rootPersonId: houseNodeId,
-        movingNodes: familyChartCadetRelationshipBlock(nodes, family, houseNodeId)
-      }))
-      .filter(candidate => candidate.movingNodes.length)
-      .map(candidate => ({
-        ...candidate,
-        // A local childless relationship block is safer to move than a whole
-        // lineage branch, because its parents and house knot stay together.
-        priority: [-1, candidate.movingNodes.length]
-      }));
-    const candidates = [...relationshipCandidates, ...branchCandidates]
-      .filter(candidate => candidate.movingNodes.length)
-      .sort(comparePriority);
-
+    const collisions = collectFamilyChartCardCollisions(nodes, { minimumGap });
+    // An indivisible house block can miss the preferred padding by a few
+    // pixels. That must not stop repairs of actual overlaps elsewhere.
     let selected = null;
-    for (const candidate of candidates) {
-      const movingNodeSet = new Set(candidate.movingNodes);
-      const stationaryNodes = nodes.filter(node => !movingNodeSet.has(node));
-      const collisionPartner = candidate.movingNodes.includes(collision.first)
-        ? collision.second
-        : collision.first;
-      if (movingNodeSet.has(collisionPartner)) continue;
-      const movingCoordinate = Number(candidate.movingNodes[0]?.[axis]);
-      const partnerCoordinate = Number(collisionPartner?.[axis]);
-      const preferredDirection = Number.isFinite(movingCoordinate) && Number.isFinite(partnerCoordinate)
-        ? (movingCoordinate <= partnerCoordinate ? -1 : 1)
-        : 0;
-      const delta = findCollisionFreeGroupShift(
-        candidate.movingNodes,
-        stationaryNodes,
-        axis,
-        { preferredDirection }
-      );
-      if (!Number.isFinite(delta) || delta === 0) continue;
-      selected = { ...candidate, delta };
-      break;
+    for (const collision of collisions) {
+      selected = localCollisionResolution(nodes, family, graph, collision, axis);
+      if (selected) break;
     }
-
     if (!selected) break;
     selected.movingNodes.forEach(node => shiftNodeAlongCrossAxis(node, axis, selected.delta));
     resolutions.push(Object.freeze({
-      firstId,
-      secondId,
+      firstId: selected.collision.firstId,
+      secondId: selected.collision.secondId,
       rootPersonId: selected.rootPersonId,
       axis,
       delta: selected.delta,

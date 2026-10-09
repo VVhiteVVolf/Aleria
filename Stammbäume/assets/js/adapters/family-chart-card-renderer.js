@@ -1,3 +1,5 @@
+import { LEGITIMACY_LABELS } from '../config/family-colors.js';
+
 export const FAMILY_CHART_CARD_LAYOUT = Object.freeze({
   width: 320,
   height: 213,
@@ -60,13 +62,17 @@ function personCard(data) {
   const role = escapeHtml(data.role || 'core');
   const lineageRole = escapeHtml(data.lineageRole || 'branch');
   const frameVariant = escapeHtml(data.frameVariant || 'standard');
+  const roleLabel = data.legitimacy === 'legitimized'
+    ? LEGITIMACY_LABELS.legitimized
+    : !['core', 'married'].includes(data.role || 'core') ? data.roleLabel : '';
   return `
-    <div class="card-inner aleria-chart-card aleria-person-card role-${role} lineage-${lineageRole} frame-${frameVariant}" data-lineage-role="${lineageRole}"${crestPositionStyle(data.crestPosition)}>
+    <div class="card-inner aleria-chart-card aleria-person-card role-${role} lineage-${lineageRole} frame-${frameVariant}" data-lineage-role="${lineageRole}" tabindex="0" role="button" aria-label="${escapeHtml(`${data.name || 'Person'}${roleLabel ? ` · ${roleLabel}` : ''} · Beziehungen öffnen`)}"${crestPositionStyle(data.crestPosition)}>
       ${marker(data)}
       <div class="aleria-person-card__fill" aria-hidden="true"></div>
       <div class="aleria-person-card__portrait-backdrop" aria-hidden="true"></div>
       ${optionalImage(data.portrait, 'aleria-person-card__portrait')}
       <div class="aleria-person-card__text">
+        ${roleLabel ? `<span class="family-card-role">${escapeHtml(roleLabel)}</span>` : ''}
         <span class="family-card-name">${escapeHtml(data.name)}</span>
         ${data.title ? `<span class="family-card-title">${escapeHtml(data.title)}</span>` : ''}
         ${data.house ? `<span class="family-card-house">${escapeHtml(data.house)}</span>` : ''}

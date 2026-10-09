@@ -21,6 +21,8 @@ import {
   createFamilyChartPairPlacementPlan
 } from './family-chart-pair-placement.js';
 import { applyFamilyChartSpacingGuard } from './family-chart-spacing-guard.js';
+import { updateFamilyChartLayoutBounds } from './family-chart-layout-bounds.js';
+import { applyFamilyChartReferenceSpacing } from './family-chart-reference-spacing.js';
 
 /**
  * Owns the order of every post-library layout pass.
@@ -92,6 +94,8 @@ export function applyFamilyChartLayoutPipeline({
     orientation,
     maximumScale: maximumSpacingScale
   });
+  const referenceSpacing = applyFamilyChartReferenceSpacing({ tree, family, orientation });
+  const bounds = updateFamilyChartLayoutBounds(tree);
 
   return Object.freeze({
     plans: Object.freeze({
@@ -108,6 +112,8 @@ export function applyFamilyChartLayoutPipeline({
     pairCompaction,
     houseLinkAlignment,
     lineageOriginAlignment,
+    bounds,
+    referenceSpacing,
     spacingGuard
   });
 }

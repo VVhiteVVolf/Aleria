@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="assets/css/house-profile.css">
   <link rel="stylesheet" href="assets/css/tree-generator.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/chart-reading.css">
 </head>
 <body>
   <div class="app-shell" id="family-app" data-workspace-mode="view">
@@ -193,6 +194,15 @@
             <h2 id="chart-heading">Stammbaum ansehen</h2>
           </div>
           <p class="chart-hint">Ziehen zum Verschieben · Mausrad zum Zoomen · Karte wählen für Details</p>
+          <div class="chart-reading-tools" aria-label="Stammbaumansicht">
+            <button type="button" data-action="zoom-chart-out" aria-label="Stammbaum verkleinern">−</button>
+            <button type="button" data-action="zoom-chart-in" aria-label="Stammbaum vergrößern">+</button>
+            <button type="button" data-action="fit-chart">Einpassen</button>
+            <details class="chart-reading-guide">
+              <summary>Linienhilfe</summary>
+              <div class="chart-reading-guide__panel" id="chart-reading-guide"></div>
+            </details>
+          </div>
         </div>
         <div class="chart-stage">
           <div class="family-chart-host f3 f3-cont" id="family-chart" aria-label="Interaktiver Stammbaum"></div>

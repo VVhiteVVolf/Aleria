@@ -35,7 +35,7 @@ import { createCadetDialog } from './cadet-dialog.js';
 import { escapeHtml } from './dom.js';
 import { createEditAccessDialog } from './edit-access-dialog.js';
 import { createFamilySaveDialog } from './family-save-dialog.js';
-import { renderFamilyLegend } from './legend-ui.js';
+import { renderFamilyLegend, renderFamilyReadingGuide } from './legend-ui.js';
 import { createLineColorsDialog } from './line-colors-dialog.js';
 import { createLineageDialog } from './lineage-dialog.js';
 import { createLineageTimeGapDialog } from './lineage-time-gap-dialog.js';
@@ -1056,6 +1056,14 @@ export function createAppController({
       openHouseBiography();
       return;
     }
+    if (action === 'fit-chart') {
+      chartSession?.fit();
+      return;
+    }
+    if (action === 'zoom-chart-in' || action === 'zoom-chart-out') {
+      chartSession?.zoom(action === 'zoom-chart-in' ? 1.35 : 1 / 1.35);
+      return;
+    }
     if (!isEditing) return;
     const state = store.getState();
     const selected = graph.getPerson(state.selectedPersonId);
@@ -1065,9 +1073,6 @@ export function createAppController({
         break;
       case 'redo':
         store.redo();
-        break;
-      case 'fit-chart':
-        chartSession?.fit();
         break;
       case 'show-default-view':
         chartSession?.reset();
@@ -1713,11 +1718,12 @@ export function createAppController({
       : 'Stammbaum ansehen';
     documentRef.querySelector('.chart-hint').textContent = isEditing
       ? 'Ziehen zum Verschieben · Mausrad zum Zoomen · Karte oder Portrait öffnet „Beziehung modifizieren“'
-      : 'Ziehen zum Verschieben · Mausrad zum Zoomen · Portrait öffnet die Biographie · Wappen öffnen weitere Häuser';
+      : 'Karte hervorheben: Beziehungen verfolgen · Karte wählen: Beziehungsübersicht · Portrait: Biographie';
     documentRef.querySelectorAll('[data-current-year]').forEach(element => {
       element.textContent = String(ALERIA_CURRENT_YEAR);
     });
     if (isEditing) renderFamilyLegend(documentRef.getElementById('family-legend'));
+    renderFamilyReadingGuide(documentRef.getElementById('chart-reading-guide'));
     if (isEditing) editorToolbarController.init();
     documentRef.addEventListener('click', onClick);
     documentRef.addEventListener('input', onInput);
