@@ -7,9 +7,11 @@ export function createRelationshipMatrixDialog(documentRef = document) {
   const title = dialog?.querySelector('[data-matrix-title]');
   const count = dialog?.querySelector('[data-matrix-count]');
   const resetButton = dialog?.querySelector('[data-matrix-action="reset"]');
+  const backButton = dialog?.querySelector('[data-matrix-action="back"]');
   let family = null;
   let initialPersonId = '';
   let currentPersonId = '';
+  let history = [];
 
   function render(personId) {
     if (!content || !family) return;
@@ -18,6 +20,7 @@ export function createRelationshipMatrixDialog(documentRef = document) {
     title.textContent = `Beziehungsgeflecht · ${matrix.focusPerson.name}`;
     count.textContent = `${matrix.relationshipCount} Personen in der direkten Familie und im unmittelbaren Beziehungsnetz`;
     resetButton.hidden = personId === initialPersonId;
+    if (backButton) backButton.hidden = history.length === 0;
     content.innerHTML = renderRelationshipMatrix(matrix);
   }
 
@@ -32,12 +35,23 @@ export function createRelationshipMatrixDialog(documentRef = document) {
       return;
     }
     if (actionTarget?.dataset.matrixAction === 'reset') {
+      history = [];
       render(initialPersonId);
+      return;
+    }
+    if (actionTarget?.dataset.matrixAction === 'back') {
+      const previousId = history.pop();
+      if (previousId) render(previousId);
       return;
     }
     const personTarget = event.target.closest('[data-matrix-person-id]');
     const personId = personTarget?.dataset.matrixPersonId;
-    if (personId && personId !== currentPersonId) render(personId);
+    if (personId && personId !== currentPersonId) {
+      history.push(currentPersonId);
+      render(personId);
+      content.scrollTop = 0;
+      content.querySelector('.relationship-matrix-focus h3')?.focus({ preventScroll: true });
+    }
   });
 
   dialog?.addEventListener('click', event => {
@@ -45,12 +59,18 @@ export function createRelationshipMatrixDialog(documentRef = document) {
   });
 
   return Object.freeze({
-    open(nextFamily, personId) {
+    open(nextFamily, personId, partnershipId = '') {
       if (!dialog || !content) return false;
       family = nextFamily;
       initialPersonId = personId;
+      history = [];
       render(personId);
       if (!dialog.open) dialog.showModal();
+      if (partnershipId) {
+        const group = [...content.querySelectorAll('[data-matrix-partnership-id]')].find(element => element.dataset.matrixPartnershipId === partnershipId);
+        group?.classList.add('is-selected');
+        group?.scrollIntoView({ block: 'nearest' });
+      } else content.scrollTop = 0;
       return true;
     },
     close

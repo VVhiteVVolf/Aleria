@@ -4,7 +4,8 @@ export const FAMILY_CHART_CARD_LAYOUT = Object.freeze({
   width: 320,
   height: 213,
   horizontalSpacing: 430,
-  verticalSpacing: 326
+  verticalSpacing: 326,
+  linkedHouseOffsetY: -52
 });
 
 function escapeHtml(value) {
@@ -86,7 +87,7 @@ function personCard(data) {
 function crestNode(data) {
   const isLinkedHouse = data.nodeKind === 'cadet-house';
   return `
-    <div class="card-inner aleria-chart-card aleria-crest-node${isLinkedHouse ? ' aleria-crest-node--linked' : ''}">
+    <div class="card-inner aleria-chart-card aleria-crest-node${isLinkedHouse ? ' aleria-crest-node--linked' : ''}"${isLinkedHouse ? ` style="--linked-house-offset:${FAMILY_CHART_CARD_LAYOUT.linkedHouseOffsetY}px"` : ''}>
       ${marker(data)}
       <div class="aleria-crest-node__seal"${crestScaleStyle(data)}>
         <div class="aleria-crest-node__emblem-clip">

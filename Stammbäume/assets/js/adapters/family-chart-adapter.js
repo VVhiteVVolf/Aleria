@@ -38,6 +38,7 @@ import {
   createFamilyChartParentageGroupPlan
 } from './family-chart-parentage-group.js';
 import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
+import { createFamilyChartAppearanceLayout } from './family-chart-appearance-layout.js';
 import {
   insertTimeJumpAsSerialBarrier,
   resolveFamilyChartSerialPredecessorId
@@ -777,7 +778,7 @@ export function toFamilyChartData(input, options = {}) {
   const visiblePartnerships = family.partnerships.filter(partnership => (
     !options.publicOnly || partnership.visibility === 'public'
   ));
-  const appearancePlan = createFamilyChartPersonAppearancePlan({ partnerships: visiblePartnerships, personById });
+  const appearancePlan = createFamilyChartPersonAppearancePlan({ partnerships: visiblePartnerships, personById, parentages: [...selectedParentageByChild.values()] });
   appearancePlan.appearances.forEach(appearance => {
     const sourceNode = chartById.get(appearance.personId);
     if (sourceNode) chartById.set(appearance.id, createChartPersonAppearance(sourceNode, appearance));
@@ -802,8 +803,9 @@ export function toFamilyChartData(input, options = {}) {
     ))
   }));
   const parentageGroupPlan = createFamilyChartParentageGroupPlan(selectedParentageByChild);
-  const conversionPartnerAlignmentPlan = createFamilyChartPartnerAlignmentPlan(family);
-  const conversionDescendantAlignmentPlan = createFamilyChartDescendantAlignmentPlan(family);
+  const appearanceLayout = createFamilyChartAppearanceLayout(family, appearancePlan);
+  const conversionPartnerAlignmentPlan = createFamilyChartPartnerAlignmentPlan(appearanceLayout);
+  const conversionDescendantAlignmentPlan = createFamilyChartDescendantAlignmentPlan(appearanceLayout);
   const alignedParentageGroupPlan = createFamilyChartAlignedParentageGroupPlan({
     selectedParentageByChild,
     explicitGroupPlan: parentageGroupPlan,
@@ -853,6 +855,8 @@ export function toFamilyChartData(input, options = {}) {
         const firstId = validIds[firstIndex];
         const secondId = validIds[secondIndex];
         const metadata = Object.freeze({
+          partnershipId: partnership.id,
+          start: partnership.start, end: partnership.end, status: partnership.status,
           type: partnership.type,
           color: relationColor(family, partnership.type),
           dashed: partnership.type === 'affair' || partnership.type === 'forced'
@@ -914,6 +918,8 @@ export function toFamilyChartData(input, options = {}) {
     if (!partnership || !mirrorNode) return;
 
     const metadata = Object.freeze({
+      partnershipId: partnership.id,
+      start: partnership.start, end: partnership.end, status: partnership.status,
       type: partnership.type,
       color: relationColor(family, partnership.type),
       dashed: partnership.type === 'affair' || partnership.type === 'forced'

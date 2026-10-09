@@ -17,16 +17,37 @@ function requestedPartnershipIds(person, extensionKey) {
     : [];
 }
 
-export function createFamilyChartPersonAppearancePlan({ partnerships, personById }) {
+export function createFamilyChartPersonAppearancePlan({ partnerships, personById, parentages = [] }) {
   const partnershipById = new Map((partnerships || []).map(partnership => [partnership.id, partnership]));
   const appearanceByPersonAndPartnership = new Map();
   const partnerMirrorByPersonAndPartnership = new Map();
   const appearances = [];
   const partnerMirrors = [];
   const invalidRequests = [];
+  const originIds = new Set(parentages.filter(parentage => !parentage.extensions?.timeJumpId).map(parentage => parentage.childId));
 
   personById.forEach((person, personId) => {
-    requestedPartnershipIds(person, 'chartRepeatForPartnershipIds').forEach(partnershipId => {
+    const repeatedIds = requestedPartnershipIds(person, 'chartRepeatForPartnershipIds');
+    // An external partner with several families must not drag those families
+    // away from their own parents. Give each additional anchored union its
+    // own card, keeping the first union on the original card.
+    const anchoredUnions = (partnerships || []).filter(partnership => (
+      partnership.participantIds.length === 2
+      && partnership.participantIds.includes(personId)
+      && partnership.participantIds.some(id => id !== personId && originIds.has(id))
+      && parentages.some(parentage => parentage.partnershipId === partnership.id)
+    ));
+    const managedLayout = person?.extensions?.chartMultiPartnerLayoutReviewed
+      || person?.extensions?.chartCenterBetweenPartnerPersonIds?.length
+      || person?.extensions?.chartCenterBetweenSpousePersonIds?.length
+      || anchoredUnions.some(partnership => partnership.extensions?.chartAlignPartnerOverChildrenPersonId);
+    if (!managedLayout && !originIds.has(personId) && anchoredUnions.length > 1) {
+      const base = anchoredUnions.find(partnership => !repeatedIds.includes(partnership.id));
+      anchoredUnions.filter(partnership => partnership !== base).forEach(partnership => {
+        if (!repeatedIds.includes(partnership.id)) repeatedIds.push(partnership.id);
+      });
+    }
+    repeatedIds.forEach(partnershipId => {
       const partnership = partnershipById.get(partnershipId);
       if (!partnership || !partnership.participantIds.includes(personId)) {
         invalidRequests.push(Object.freeze({ personId, partnershipId, role: 'partnership-participant' }));

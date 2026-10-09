@@ -3,17 +3,7 @@ import {
   shiftedCollisionCount,
   shiftNodeAlongCrossAxis
 } from './family-chart-collision-geometry.js';
-import {
-  familyChartPartnerMirrorId,
-  familyChartPersonAppearanceId
-} from './family-chart-person-appearance-router.js';
-
-function requestedPartnershipIds(person, extensionKey) {
-  const value = person?.extensions?.[extensionKey];
-  return Array.isArray(value)
-    ? [...new Set(value.filter(partnershipId => typeof partnershipId === 'string' && partnershipId.trim()))]
-    : [];
-}
+import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
 
 /**
  * Internal marriages use two deliberately separate pair views:
@@ -31,32 +21,22 @@ export function createFamilyChartAppearanceAlignmentPlan(family) {
   ]));
   const routes = [];
 
-  (family?.persons || []).forEach(person => {
-    const addRoutes = (extensionKey, createNodeId, role) => {
-      requestedPartnershipIds(person, extensionKey).forEach(partnershipId => {
-        const partnership = partnershipById.get(partnershipId);
-        const anchorPersonId = (partnership?.participantIds || [])
-          .find(participantId => participantId !== person.id) || '';
-        if (!anchorPersonId) return;
-        routes.push(Object.freeze({
-          partnershipId,
-          anchorPersonId,
-          appearanceNodeId: createNodeId(person.id, partnershipId),
-          role
-        }));
-      });
-    };
-
-    addRoutes(
-      'chartRepeatForPartnershipIds',
-      familyChartPersonAppearanceId,
-      'partnership-participant'
-    );
-    addRoutes(
-      'chartPartnerMirrorForPartnershipIds',
-      familyChartPartnerMirrorId,
-      'partner-mirror'
-    );
+  const appearances = createFamilyChartPersonAppearancePlan({
+    partnerships: family?.partnerships || [],
+    personById: new Map((family?.persons || []).map(person => [person.id, person])),
+    parentages: family?.parentages || []
+  });
+  appearances.appearances.forEach(appearance => {
+    const partnership = partnershipById.get(appearance.partnershipId);
+    const anchorPersonId = (partnership?.participantIds || [])
+      .find(participantId => participantId !== appearance.personId) || '';
+    if (!anchorPersonId) return;
+    routes.push(Object.freeze({
+      partnershipId: appearance.partnershipId,
+      anchorPersonId,
+      appearanceNodeId: appearance.id,
+      role: appearance.role
+    }));
   });
 
   return Object.freeze({ routes: Object.freeze(routes) });

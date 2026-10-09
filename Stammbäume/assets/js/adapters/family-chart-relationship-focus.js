@@ -32,7 +32,7 @@ export function createFamilyChartRelationshipFocus({ container, onReferenceActiv
   }
 
   function idsForTarget(target) {
-    const reference = target?.closest?.('.aleria-connection-reference');
+    const reference = target?.closest?.('.aleria-connection-reference, .aleria-partnership-node');
     if (reference && container.contains(reference)) return (reference.dataset.relatedCardIds || '').split(',');
     const card = target?.closest?.('.card_cont');
     return card && container.contains(card) ? [personId(card)].filter(Boolean) : [];
@@ -56,7 +56,7 @@ export function createFamilyChartRelationshipFocus({ container, onReferenceActiv
     const trigger = event.target?.closest?.('[data-action="open-relationship-reference"]');
     if (!trigger || !container.contains(trigger)) return;
     event.stopPropagation();
-    if (event.type === 'click') onReferenceActivate?.({ personId: trigger.dataset.personId, event });
+    if (event.type === 'click') onReferenceActivate?.({ personId: trigger.dataset.personId, partnershipId: trigger.dataset.partnershipId || '', event });
   }
 
   function keydown(event) {

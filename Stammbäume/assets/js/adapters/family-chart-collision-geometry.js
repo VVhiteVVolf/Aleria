@@ -11,7 +11,9 @@ export function shiftNodeAlongCrossAxis(node, axis, delta) {
 
 export function cardRectangle(node, deltaAxis = '', delta = 0) {
   const x = Number(node?.x) + (deltaAxis === 'x' ? delta : 0);
-  const y = Number(node?.y) + (deltaAxis === 'y' ? delta : 0);
+  const nodeKind = node?.nodeKind || node?.data?.data?.nodeKind;
+  const visualOffsetY = nodeKind === 'cadet-house' ? FAMILY_CHART_CARD_LAYOUT.linkedHouseOffsetY : 0;
+  const y = Number(node?.y) + visualOffsetY + (deltaAxis === 'y' ? delta : 0);
   if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
   const halfWidth = FAMILY_CHART_CARD_LAYOUT.width / 2;
   const halfHeight = FAMILY_CHART_CARD_LAYOUT.height / 2;

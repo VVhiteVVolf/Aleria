@@ -33,7 +33,8 @@ export function collectFamilyChartCardPositions(container) {
   container?.querySelectorAll?.('.card_cont')?.forEach(cardContainer => {
     const cardId = familyChartCardId(cardContainer);
     const point = familyChartCardPoint(cardContainer);
-    if (cardId && point) positions.set(cardId, point);
+    const nodeKind = cardContainer.__data__?.data?.data?.nodeKind;
+    if (cardId && point) positions.set(cardId, nodeKind ? { ...point, nodeKind } : point);
   });
   return positions;
 }

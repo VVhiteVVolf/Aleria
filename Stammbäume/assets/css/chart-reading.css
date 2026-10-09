@@ -141,10 +141,35 @@
 }
 
 .family-chart-host .aleria-connection-reference:focus-visible,
+.family-chart-host .aleria-partnership-node:focus-visible,
 .family-chart-host .aleria-person-card:focus-visible {
   outline: 3px solid #98651e;
   outline-offset: 4px;
 }
+
+.family-chart-host .aleria-partnership-node {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: grid;
+  align-content: center;
+  width: 200px;
+  height: 32px;
+  padding: 2px 8px;
+  border: 1.5px solid var(--reference-color);
+  border-radius: 12px;
+  background: #fff9eb;
+  color: #35271e;
+  font: 11px var(--font-body);
+  line-height: 1.1;
+  cursor: pointer;
+  box-shadow: 0 2px 6px #3b281420;
+}
+.family-chart-host .aleria-partnership-node strong { font-size: 11px; }
+.family-chart-host .aleria-partnership-node span { font-size: 9px; }
+.family-chart-host .aleria-partnership-node strong,
+.family-chart-host .aleria-partnership-node span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .chart-panel.is-exporting-png .chart-reading-tools {
   display: none;

@@ -1,5 +1,6 @@
 import { PARTNERSHIP_LABELS } from '../../config/family-colors.js';
 import { createFamilyGraph } from '../../domain/family-graph.js';
+import { buildRelationshipPartnershipGroups } from './relationship-partnership-groups.js';
 
 const SECTION_DEFINITIONS = Object.freeze([
   Object.freeze({ id: 'ancestors', title: 'Vorfahren', eyebrow: 'Woher die Linie stammt' }),
@@ -57,8 +58,9 @@ function finalizeEntry(entry) {
   });
 }
 
-function partnershipBetween(graph, firstId, secondId) {
-  return graph.getPartnerships(firstId).find(partnership => partnership.participantIds.includes(secondId)) || null;
+function familyPartners(graph, personId) {
+  const ids = new Set(graph.getPartnerships(personId).filter(partnership => ['marriage', 'union'].includes(partnership.type)).flatMap(partnership => partnership.participantIds));
+  return graph.getPartners(personId).filter(person => ids.has(person.id));
 }
 
 export function buildRelationshipMatrix(input, focusPersonId) {
@@ -118,7 +120,7 @@ export function buildRelationshipMatrix(input, focusPersonId) {
       });
     });
 
-    graph.getPartners(parent.id)
+    familyPartners(graph, parent.id)
       .filter(partner => !parents.some(item => item.id === partner.id))
       .forEach(stepParent => {
         add('bonds', stepParent, gendered(stepParent, 'Stiefvater', 'Stiefmutter', 'Stiefelternteil'), 'step-parent', 45);
@@ -127,7 +129,7 @@ export function buildRelationshipMatrix(input, focusPersonId) {
 
   siblings.forEach(({ person: sibling, kind }) => {
     add('collateral', sibling, siblingLabel(sibling, kind), 'sibling', 10);
-    graph.getPartners(sibling.id).forEach(inLaw => {
+    familyPartners(graph, sibling.id).forEach(inLaw => {
       add('bonds', inLaw, gendered(inLaw, 'Schwager', 'Schwägerin', 'Angeheiratete Geschwisterperson'), 'sibling-in-law', 40);
     });
     graph.getChildren(sibling.id, KINSHIP_OPTIONS).forEach(relative => {
@@ -136,14 +138,17 @@ export function buildRelationshipMatrix(input, focusPersonId) {
   });
 
   partners.forEach(partner => {
-    const partnership = partnershipBetween(graph, focusPersonId, partner.id);
-    add('bonds', partner, partnerLabel(partner, partnership?.type), 'partner', 10);
+    graph.getPartnerships(focusPersonId).filter(item => item.participantIds.includes(partner.id)).forEach(item => {
+      add('bonds', partner, partnerLabel(partner, item.type), 'partner', 10);
+    });
+    const familyBond = familyPartners(graph, focusPersonId).some(person => person.id === partner.id);
     graph.getParents(partner.id, KINSHIP_OPTIONS).forEach(inLaw => {
-      add('bonds', inLaw, gendered(inLaw, 'Schwiegervater', 'Schwiegermutter', 'Schwiegerelternteil'), 'parent-in-law', 20);
+      add('bonds', inLaw, familyBond ? gendered(inLaw, 'Schwiegervater', 'Schwiegermutter', 'Schwiegerelternteil') : `${parentLabel(inLaw)} von ${partner.name}`, familyBond ? 'parent-in-law' : 'partner-parent', 20);
     });
     graph.getSiblings(partner.id, KINSHIP_OPTIONS).forEach(({ person: inLaw }) => {
-      add('bonds', inLaw, gendered(inLaw, 'Schwager', 'Schwägerin', 'Schwiegergeschwister'), 'sibling-in-law', 30);
+      add('bonds', inLaw, familyBond ? gendered(inLaw, 'Schwager', 'Schwägerin', 'Schwiegergeschwister') : `${siblingLabel(inLaw)} von ${partner.name}`, familyBond ? 'sibling-in-law' : 'partner-sibling', 30);
     });
+    if (!familyBond) return;
     graph.getChildren(partner.id, KINSHIP_OPTIONS)
       .filter(stepChild => !children.some(item => item.id === stepChild.id))
       .forEach(stepChild => {
@@ -153,7 +158,7 @@ export function buildRelationshipMatrix(input, focusPersonId) {
 
   children.forEach(child => {
     add('descendants', child, gendered(child, 'Sohn', 'Tochter', 'Kind'), 'child', 10);
-    graph.getPartners(child.id).forEach(inLaw => {
+    familyPartners(graph, child.id).forEach(inLaw => {
       add('descendants', inLaw, gendered(inLaw, 'Schwiegersohn', 'Schwiegertochter', 'Schwiegerkind'), 'child-in-law', 20);
     });
     graph.getChildren(child.id, KINSHIP_OPTIONS).forEach(grandchild => {
@@ -173,6 +178,7 @@ export function buildRelationshipMatrix(input, focusPersonId) {
     family: graph.family,
     focusPerson,
     sections: Object.freeze(finalizedSections),
+    partnerships: buildRelationshipPartnershipGroups(graph, focusPersonId),
     relationshipCount: entriesByPerson.size
   });
 }

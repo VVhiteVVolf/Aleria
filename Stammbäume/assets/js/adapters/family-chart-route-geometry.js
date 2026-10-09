@@ -1,4 +1,5 @@
 import { FAMILY_CHART_CARD_LAYOUT } from './family-chart-card-renderer.js';
+import { cardRectangle as visualCardRectangle } from './family-chart-collision-geometry.js';
 
 const DEFAULT_ROUTE_CLEARANCE = 10;
 
@@ -9,13 +10,12 @@ function finitePoint(point) {
 }
 
 function cardRectangle(point, clearance = 0) {
-  const halfWidth = (FAMILY_CHART_CARD_LAYOUT.width / 2) + clearance;
-  const halfHeight = (FAMILY_CHART_CARD_LAYOUT.height / 2) + clearance;
+  const bounds = visualCardRectangle(point);
   return {
-    left: Number(point.x) - halfWidth,
-    right: Number(point.x) + halfWidth,
-    top: Number(point.y) - halfHeight,
-    bottom: Number(point.y) + halfHeight
+    left: bounds.left - clearance,
+    right: bounds.right + clearance,
+    top: bounds.top - clearance,
+    bottom: bounds.bottom + clearance
   };
 }
 
@@ -74,12 +74,14 @@ function candidateRailCoordinates({
   childGeneration,
   cardPositions,
   orientation,
-  clearance
+  clearance,
+  parentHalfSize: configuredParentHalfSize
 }) {
-  const parentHalfSize = orientation === 'horizontal'
+  const cardHalfSize = orientation === 'horizontal'
     ? FAMILY_CHART_CARD_LAYOUT.width / 2
     : FAMILY_CHART_CARD_LAYOUT.height / 2;
-  const childHalfSize = parentHalfSize;
+  const parentHalfSize = configuredParentHalfSize ?? cardHalfSize;
+  const childHalfSize = cardHalfSize;
   const direction = childGeneration >= parentGeneration ? 1 : -1;
   const parentEdge = parentGeneration + (direction * (parentHalfSize + clearance));
   const childEdge = childGeneration - (direction * (childHalfSize + clearance));
@@ -90,11 +92,8 @@ function candidateRailCoordinates({
 
   (cardPositions || new Map()).forEach(point => {
     if (!finitePoint(point)) return;
-    const coordinate = orientation === 'horizontal' ? Number(point.x) : Number(point.y);
-    const halfSize = orientation === 'horizontal'
-      ? FAMILY_CHART_CARD_LAYOUT.width / 2
-      : FAMILY_CHART_CARD_LAYOUT.height / 2;
-    [coordinate - halfSize - clearance, coordinate + halfSize + clearance]
+    const rectangle = cardRectangle(point, clearance);
+    (orientation === 'horizontal' ? [rectangle.left, rectangle.right] : [rectangle.top, rectangle.bottom])
       .filter(value => value >= minimum && value <= maximum)
       .forEach(value => candidates.add(value));
   });
@@ -118,6 +117,7 @@ export function selectCollisionAwareRail({
   relatedCardIds,
   orientation = 'vertical',
   buildRoutes,
+  parentHalfSize,
   clearance = DEFAULT_ROUTE_CLEARANCE
 }) {
   if (typeof buildRoutes !== 'function') return null;
@@ -127,7 +127,8 @@ export function selectCollisionAwareRail({
     childGeneration,
     cardPositions,
     orientation,
-    clearance
+    clearance,
+    parentHalfSize
   });
   const evaluated = candidates.map(railCoordinate => {
     const routes = buildRoutes(railCoordinate);

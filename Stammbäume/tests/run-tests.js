@@ -1721,7 +1721,8 @@ test('übersetzt Gründerwappen, Zeitsprung und Kadettenhaus im Adapter', () => 
   assert.equal(crest.data.crestFrameAsset, getCrestFrame('gold').asset);
   assert.equal(cadet.data.crestFrameAsset, getCrestFrame('silver').asset);
   assert.deepEqual(converted.getPartnershipLine('maelis-vael', 'elyra-mire'), {
-    type: 'affair', color: '#704485', dashed: true
+    type: 'affair', color: '#704485', dashed: true,
+    partnershipId: 'affair-maelis-elyra', start: '1729', end: '1736', status: 'ended'
   });
   assert.equal(converted.getParentageLine('oryn-ash').color, '#62615e');
 });
@@ -2825,7 +2826,7 @@ test('liefert die Oberfläche standardmäßig schreibgeschützt und ohne Inline-
   assert.match(relationActionsScript, /Welche Linie führt die Ehe fort/);
   assert.match(relationActionsScript, /Aufnehmende Person/);
   assert.match(relationActionsScript, /erst „Online speichern“[^\n]+für andere/);
-  assert.match(appController, /relationshipMatrixDialog\.open\(store\.getState\(\)\.family, personId\)/);
+  assert.match(appController, /relationshipMatrixDialog\.open\(store\.getState\(\)\.family, personId, partnershipId\)/);
   assert.doesNotMatch(html, /\son(?:click|input|change|submit)=/i);
 });
 

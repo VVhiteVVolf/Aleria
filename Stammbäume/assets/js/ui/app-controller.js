@@ -871,8 +871,8 @@ export function createAppController({
         view: family.view,
         options: { resolveHouse: resolveRegisteredHouse, entryFocus },
         runtime,
-        onPersonClick({ personId }) {
-          if (!isEditing) return relationshipMatrixDialog.open(store.getState().family, personId);
+        onPersonClick({ personId, partnershipId }) {
+          if (!isEditing) return relationshipMatrixDialog.open(store.getState().family, personId, partnershipId);
           store.selectPerson(personId);
           return openRelationActions(personId);
         },

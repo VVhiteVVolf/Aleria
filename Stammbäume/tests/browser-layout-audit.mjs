@@ -386,6 +386,7 @@ const auditExpression = String.raw`(async () => {
   }
 
   return {
+    quality: (await import('./assets/js/modules/chart-quality/chart-geometry-audit.js')).auditRenderedFamilyChart(chartContainer),
     title: document.title,
     url: location.href,
     readyState: document.readyState,
@@ -549,6 +550,7 @@ let output = summaryOnly
         .filter(report => !report.relatedCardIds?.length);
       const summary = {
         familyId: result.familyId,
+        quality: result.quality,
         cardCount: result.cardCount || 0,
         viewport: result.viewport || null,
         zoomScale: result.zoomScale || 0,
@@ -630,6 +632,7 @@ if (failuresOnly && summaryOnly) {
   const summarizedResults = output;
   const failedResults = summarizedResults.filter(result => (
     result.cardCount === 0
+    || result.quality?.passed === false
     || result.overlaps > 0
     || result.confirmedLineCardIntersections > 0
     || result.unattributedLineCardIntersections > 0

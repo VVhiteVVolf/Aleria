@@ -564,7 +564,7 @@
 }
 
 .aleria-crest-node--linked {
-  transform: translateY(-3.25rem);
+  transform: translateY(var(--linked-house-offset, -3.25rem));
 }
 
 .family-chart-host div.card:hover .aleria-crest-node__seal {

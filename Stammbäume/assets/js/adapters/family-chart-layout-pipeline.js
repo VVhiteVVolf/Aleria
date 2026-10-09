@@ -23,14 +23,14 @@ import {
 import { applyFamilyChartSpacingGuard } from './family-chart-spacing-guard.js';
 import { updateFamilyChartLayoutBounds } from './family-chart-layout-bounds.js';
 import { applyFamilyChartReferenceSpacing } from './family-chart-reference-spacing.js';
+import { createFamilyChartAppearanceLayout } from './family-chart-appearance-layout.js';
 
 /**
  * Owns the order of every post-library layout pass.
  *
- * The order is an invariant: local relationship blocks first, serial lineage
- * origin second to last, and the local collision guard last. Native parent
- * lines are deliberately not recreated here; Family Chart remains their sole
- * owner so a local alignment cannot turn the whole tree into routing rails.
+ * Concrete partner occurrences are resolved before local alignment. The
+ * lineage origin and collision guard follow; label spacing and fit bounds
+ * are measured last. This pipeline never changes the genealogical graph.
  */
 export function applyFamilyChartLayoutPipeline({
   tree,
@@ -39,11 +39,12 @@ export function applyFamilyChartLayoutPipeline({
   maximumSpacingScale = 2,
   alignPersonAppearances = true
 }) {
-  const partnerPlan = createFamilyChartPartnerAlignmentPlan(family);
-  const descendantPlan = createFamilyChartDescendantAlignmentPlan(family);
-  const houseLinkPlan = createFamilyChartHouseLinkAlignmentPlan(family);
   const appearancePlan = createFamilyChartAppearanceAlignmentPlan(family);
-  const pairPlacementPlan = createFamilyChartPairPlacementPlan(family);
+  const layoutFamily = createFamilyChartAppearanceLayout(family);
+  const partnerPlan = createFamilyChartPartnerAlignmentPlan(layoutFamily);
+  const descendantPlan = createFamilyChartDescendantAlignmentPlan(layoutFamily);
+  const houseLinkPlan = createFamilyChartHouseLinkAlignmentPlan(layoutFamily);
+  const pairPlacementPlan = createFamilyChartPairPlacementPlan(layoutFamily);
   // Kopierte Karten interner Ehen müssen vor allen Zweigverschiebungen an
   // ihrer lokalen Paaransicht sitzen. Werden sie erst nachträglich in einen
   // fertigen Baum geschoben, interpretiert der Kollisionsschutz die neue
@@ -74,7 +75,7 @@ export function applyFamilyChartLayoutPipeline({
   });
   const pairCompaction = applyFamilyChartPairCompaction({
     tree,
-    family,
+    family: layoutFamily,
     plan: houseLinkPlan,
     orientation
   });
@@ -90,11 +91,11 @@ export function applyFamilyChartLayoutPipeline({
   });
   const spacingGuard = applyFamilyChartSpacingGuard({
     tree,
-    family,
+    family: layoutFamily,
     orientation,
     maximumScale: maximumSpacingScale
   });
-  const referenceSpacing = applyFamilyChartReferenceSpacing({ tree, family, orientation });
+  const referenceSpacing = applyFamilyChartReferenceSpacing({ tree, family: layoutFamily, orientation });
   const bounds = updateFamilyChartLayoutBounds(tree);
 
   return Object.freeze({
