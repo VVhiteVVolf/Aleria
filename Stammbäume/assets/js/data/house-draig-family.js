@@ -14,6 +14,7 @@ import {
 import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
 import { OWETA_DRAIG_BIOGRAPHY } from './person-biographies/oweta-draig.js';
 import { TRAHERN_DRAIG_BIOGRAPHY } from './person-biographies/trahern-draig.js';
+import { MYRIAD_DRAIG_BIOGRAPHY } from './person-biographies/myriad-draig.js';
 import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.biography.mjs?v=20260911b';
 
 const HOUSE_EMBLEMS = Object.freeze({
@@ -259,7 +260,10 @@ export const HOUSE_DRAIG_FAMILY = withFaelaornSourceCounterUpgrade(withAislearne
     }),
     person('neithon-1136-draig', 'Neithon', 'male', '1136', '1184'),
     person('lancelot-draig', 'Lancelot', 'male', '1411', ''),
-    person('myriad-draig', 'Myriad', 'unknown', '1500', '', DRAIG_HOUSE_ID, { familyRole: 'bastard' }),
+    person('myriad-draig', 'Myriad', 'unknown', '1500', '', DRAIG_HOUSE_ID, {
+      familyRole: 'bastard',
+      extensions: { biographyModule: MYRIAD_DRAIG_BIOGRAPHY }
+    }),
     person('saorlaith-roth', 'Saorlaith Roth', 'female', '????', '????', 'house-roth'),
     person('gwyneth-neidr', 'Gwyneth Neidr', 'female', '1588', '', 'house-neidr'),
     person('iorwerth-draig', 'Iorwerth', 'male', '1160', '1271'),

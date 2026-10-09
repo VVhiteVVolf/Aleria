@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-09",
+  "source": "Vom Nutzer bereitgestellte Dateien aus Downloads/Neue Bilder",
+  "primaryPortraits": [
+    {
+      "personId": "lancelot-draig",
+      "sourceFile": "Lancelot.png",
+      "portrait": "lancelot-draig.jpg",
+      "width": 1024,
+      "height": 1536,
+      "sourceSha256": "0de85ea8570f27b40531661e78637a5ad82b1e5ea9d19cb0e461bff747dfcef7",
+      "portraitSha256": "5fbd977ca500576391ebdcb11e80b05ebaa968d43fd9b795aeb2a58ff351fbf4"
+    },
+    {
+      "personId": "gwyneth-neidr",
+      "sourceFile": "Gwyneth Neidr.png",
+      "portrait": "gwyneth-neidr.jpg",
+      "width": 1024,
+      "height": 1536,
+      "sourceSha256": "0662b73996ffac4c0c1994b3f182e5c7eaa793c69ede02c96607691d427ed47a",
+      "portraitSha256": "6afffd9f2175ff44bbc38c7b72131812a15c696544bb729d6a536d38eb2944e8"
+    },
+    {
+      "personId": "ffion-draig",
+      "sourceFile": "Ffion.png",
+      "portrait": "ffion-draig.jpg",
+      "width": 1024,
+      "height": 1536,
+      "sourceSha256": "4735b10ee6f0c8957f01ee383f65f6219696697d499e3d82e5c080c8016576aa",
+      "portraitSha256": "b0b887e88e1b68ad40b2724c675a97fc5c87a2e6b0a5c35e7cdaea2e1847215c"
+    },
+    {
+      "personId": "myriad-draig",
+      "sourceFile": "Myriad Neu.png",
+      "portrait": "myriad-draig.jpg",
+      "width": 1024,
+      "height": 1536,
+      "sourceSha256": "cbefe908e8229f961748a6da6cdbd112cf9ec819f03f0aa717f7966e39a13d55",
+      "portraitSha256": "307b8c251484f6aac285bb6a24b2c6d43b0f222671d7b3cdafd70ee904702d50"
+    }
+  ],
+  "secondaryBiographyPortrait": {
+    "personId": "myriad-draig",
+    "sourceFile": "MyriadAlternativ.png",
+    "portrait": "myriad-draig-alternativ.png",
+    "slot": 2,
+    "sha256": "6817c0168c0e0cb923df957fe0a299aa676b9617dae1dcf43798d722f5a9b695"
+  }
+}

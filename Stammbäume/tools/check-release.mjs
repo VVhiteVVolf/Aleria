@@ -15,7 +15,9 @@ const prepareBrowser = process.argv.includes('--prepare-browser');
 if (prepareBrowser) {
   if (process.platform === 'win32') await run(process.env.ComSpec || 'cmd.exe', ['/d', '/s', '/c', 'npm ci --include=dev --ignore-scripts --no-audit --no-fund']);
   else await run('npm', ['ci', '--include=dev', '--ignore-scripts', '--no-audit', '--no-fund']);
-  await run(process.execPath, ['node_modules/playwright-core/cli.js', 'install', '--with-deps', 'chromium']);
+  // Build images provide the shared libraries; installing system packages
+  // would require root privileges that hosted Netlify builds do not grant.
+  await run(process.execPath, ['node_modules/playwright-core/cli.js', 'install', 'chromium']);
 }
 try {
   await run(process.execPath, ['--test', '--experimental-test-isolation=none', 'tests/family-chart-reading.test.js', 'tests/family-chart-partnerships.test.js', 'tests/relationship-matrix.test.js', 'tests/chart-geometry-audit.test.js', 'tests/family-chart-overview.test.js', 'tests/person-entry-viewport.test.js']);

@@ -166,3 +166,7 @@ Tastaturbedienung und Zoom kontrolliert. Dreizehn zusätzliche Regressionstests
 und alle 1.246 bisherigen Tests in `tests/run-tests.js` bestehen. Der vollständige
 Modultestlauf enthält weiterhin dieselben acht oben dokumentierten historischen
 Importabweichungen (222 von 230 Tests bestanden).
+
+Die Browserinstallation im Netlify-Build lädt nur Chromium herunter. Eine
+Installation von Betriebssystempaketen mit `--with-deps` verlangt dort nicht
+verfügbare Administratorrechte und wurde nach dem ersten Cloudlauf entfernt.
