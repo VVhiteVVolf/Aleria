@@ -1,5 +1,5 @@
 [build]
-  command = "node Stammbäume/tools/check-release.mjs --prepare-browser && node Karten/tools/build-media-library.mjs"
+  command = "node --test --experimental-test-isolation=none AleriaAlmanach/tests/firebase-auth-session.test.mjs AleriaAlmanach/tests/firebase-module-storage.test.mjs AleriaAlmanach/tests/module-store-revision.test.mjs && node Stammbäume/tools/check-release.mjs --prepare-browser && node Karten/tools/build-media-library.mjs"
   publish = "."
   functions = "netlify/functions"
 

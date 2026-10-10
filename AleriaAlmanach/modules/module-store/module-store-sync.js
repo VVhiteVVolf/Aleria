@@ -206,14 +206,22 @@ function confirmBackupBeforeDestructiveImport(label, details = '') {
 
 function getModuleStoreContentSignature(payload) {
   const normalized = normalizeModuleStorePayload(payload);
-  return JSON.stringify({
+  // Firestore sorts map keys. Object insertion order must not turn an
+  // unchanged round trip into a conflict; array order remains meaningful.
+  const canonicalize = value => Array.isArray(value)
+    ? value.map(canonicalize)
+    : value && typeof value === 'object'
+      ? Object.fromEntries(Object.keys(value).sort().map(key => [key, canonicalize(value[key])]))
+      : value;
+  return JSON.stringify(canonicalize({
     customSections: normalized.customSections,
     moduleSectionNodes: normalized.moduleSectionNodes,
     moduleNodeAssignments: normalized.moduleNodeAssignments,
     moduleSectionMoves: normalized.moduleSectionMoves,
+    hiddenModuleIds: normalized.hiddenModuleIds,
     archiveDashboardInsights: normalized.archiveDashboardInsights,
     entryOverrides: normalized.entryOverrides
-  });
+  }));
 }
 
 function readModuleStoreSyncMeta() {
@@ -242,7 +250,12 @@ function writeModuleStoreSyncMeta(payload) {
 function isLocalModuleStoreSynced(payload) {
   const meta = readModuleStoreSyncMeta();
   if (!meta?.signature) return false;
-  return meta.signature === getModuleStoreContentSignature(payload);
+  try {
+    // Also recognize sync receipts written before canonical signatures.
+    return getModuleStoreContentSignature(JSON.parse(meta.signature)) === getModuleStoreContentSignature(payload);
+  } catch {
+    return false;
+  }
 }
 
 function hasModuleStoreContent(payload) {
@@ -251,6 +264,7 @@ function hasModuleStoreContent(payload) {
     || normalized.moduleSectionNodes.length
     || Object.keys(normalized.moduleNodeAssignments).length
     || Object.keys(normalized.moduleSectionMoves).length
+    || Object.keys(normalized.hiddenModuleIds).length
     || normalized.archiveDashboardInsights.length
     || Object.keys(normalized.entryOverrides).length;
 }
@@ -299,6 +313,8 @@ function renderModuleStoreConflictPrompt(localPayload, remotePayload) {
 }
 
 function showModuleStoreSyncConflict(localPayload, remotePayload) {
+  clearTimeout(_moduleStoreRemoteSaveTimer);
+  _moduleStoreRemoteSaveTimer = null;
   _moduleStoreSyncConflict = {
     localPayload: deepClone(normalizeModuleStorePayload(localPayload)),
     remotePayload: deepClone(normalizeModuleStorePayload(remotePayload))
@@ -323,7 +339,7 @@ async function resolveModuleStoreSyncConflict(choice) {
     showAppStatus('Kein aktiver Modul-Sync-Konflikt vorhanden.', 'info');
     return;
   }
-  const localPayload = normalizeModuleStorePayload(_moduleStoreSyncConflict.localPayload);
+  const localPayload = readLocalModuleStorePayload();
   const remotePayload = normalizeModuleStorePayload(_moduleStoreSyncConflict.remotePayload);
 
   try {
@@ -467,6 +483,10 @@ async function pushModuleStoreToFirebase(payload) {
 
 function scheduleRemoteModuleStoreSave(payload) {
   clearTimeout(_moduleStoreRemoteSaveTimer);
+  if (_moduleStoreSyncConflict) {
+    showModuleStoreSyncConflict(payload, _moduleStoreSyncConflict.remotePayload);
+    return;
+  }
   updateFirebaseSyncStatus('syncing', 'Moduländerungen werden online gespeichert...');
   _moduleStoreRemoteSaveTimer = window.setTimeout(async () => {
     _moduleStoreRemoteSaveTimer = null;
@@ -511,22 +531,22 @@ function applyRemoteModuleStore(payload) {
   try {
     const remotePayload = normalizeModuleStorePayload(payload);
     const localPayload = readLocalModuleStorePayload();
-    const remoteUpdated = getModuleStoreUpdatedAt(remotePayload);
-    const localUpdated = getModuleStoreUpdatedAt(localPayload);
     const sameContent = getModuleStoreContentSignature(remotePayload) === getModuleStoreContentSignature(localPayload);
 
     if (sameContent) {
+      writeModuleStoreSyncMeta(remotePayload);
+      _moduleStoreSyncConflict = null;
+      updateFirebaseSyncStatus('synced', 'Online-Stand aktuell.');
       if (removedContentWasPruned) {
         scheduleRemoteModuleStoreSave({ ...remotePayload, updatedAtClient: Date.now() });
       }
       return;
     }
     if (hasModuleStoreContent(localPayload) && !isLocalModuleStoreSynced(localPayload)) {
+      if (isLocalModuleStoreSynced(remotePayload)) return;
       showModuleStoreSyncConflict(localPayload, remotePayload);
       return;
     }
-    if (localUpdated && remoteUpdated && remoteUpdated < localUpdated) return;
-
     applyModuleStorePayload(remotePayload);
     writeLocalModuleStorePayload(remotePayload);
     writeModuleStoreSyncMeta(remotePayload);
@@ -551,13 +571,16 @@ async function setupModuleStoreRemoteSync() {
   try {
     const ready = await waitForFirebaseReady();
     if (!ready || !window._fb?.loadModuleStore) {
+      _moduleStoreRemoteSyncStarted = false;
       updateFirebaseSyncStatus('offline', 'Online-Speicher nicht erreichbar. Änderungen bleiben lokal.');
       return;
     }
     updateFirebaseSyncStatus('syncing', 'Online-Speicher wird geprüft...');
 
-    const localPayload = readLocalModuleStorePayload();
     const remoteSource = await window._fb.loadModuleStore();
+    // Edits made while the request was running must participate in the
+    // conflict check, rather than being replaced by the startup snapshot.
+    const localPayload = readLocalModuleStorePayload();
     const removedRemoteContentWasPruned = !!globalThis.AleriaModuleSectionPolicy?.hasRemovedContent?.(remoteSource);
     const remotePayload = normalizeModuleStorePayload(remoteSource);
     const localHasContent = hasModuleStoreContent(localPayload);
@@ -569,8 +592,10 @@ async function setupModuleStoreRemoteSync() {
     // An unchanged cache is never a new edit, even if its clock is ahead of the
     // online revision. Loading it must not republish an older set of modules.
     const localIsSynced = isLocalModuleStoreSynced(localPayload);
-    if (localHasContent && remoteHasContent && !sameContent && !localIsSynced) {
+    const localCanPublish = localHasContent && !localIsSynced && isLocalModuleStoreSynced(remotePayload);
+    if (localHasContent && remoteHasContent && !sameContent && !localIsSynced && !localCanPublish) {
       showModuleStoreSyncConflict(localPayload, remotePayload);
+      subscribeToModuleStoreUpdates();
       return;
     }
 
@@ -582,7 +607,7 @@ async function setupModuleStoreRemoteSync() {
       writeModuleStoreSyncMeta(migratedPayload);
       updateModuleStoreSizePanel(migratedPayload);
       updateFirebaseSyncStatus('synced', 'Entfernte Modulbereiche wurden online bereinigt.');
-    } else if (remoteHasContent && (!localHasContent || localIsSynced || !localUpdated || remoteUpdated >= localUpdated)) {
+    } else if (remoteHasContent && !localCanPublish && (!localHasContent || localIsSynced || sameContent || !localUpdated || remoteUpdated >= localUpdated)) {
       applyModuleStorePayload(remotePayload);
       writeLocalModuleStorePayload(remotePayload);
       writeModuleStoreSyncMeta(remotePayload);
@@ -599,8 +624,8 @@ async function setupModuleStoreRemoteSync() {
         await pushModuleStoreToFirebase(migratedPayload);
         writeModuleStoreSyncMeta(migratedPayload);
       }
-    } else if (localHasContent && (!remoteHasContent || !remoteUpdated || localUpdated > remoteUpdated)) {
-      const publishPayload = localUpdated ? localPayload : { ...localPayload, updatedAtClient: Date.now() };
+    } else if (localHasContent && (localCanPublish || !remoteHasContent || !remoteUpdated || localUpdated > remoteUpdated)) {
+      const publishPayload = { ...localPayload, updatedAtClient: Math.max(Date.now(), localUpdated, remoteUpdated + 1) };
       writeLocalModuleStorePayload(publishPayload);
       await pushModuleStoreToFirebase(publishPayload);
       writeModuleStoreSyncMeta(publishPayload);
@@ -611,12 +636,26 @@ async function setupModuleStoreRemoteSync() {
       updateFirebaseSyncStatus('synced', remoteHasContent ? 'Online-Stand aktuell.' : 'Kein Modul-Backup nötig.');
     }
 
-    if (window._fb?.subscribeModuleStore && !_moduleStoreRemoteUnsubscribe) {
-      _moduleStoreRemoteUnsubscribe = window._fb.subscribeModuleStore(applyRemoteModuleStore);
-    }
+    subscribeToModuleStoreUpdates();
   } catch (error) {
+    _moduleStoreRemoteSyncStarted = false;
     console.error('module store remote sync failed:', error);
     updateFirebaseSyncStatus('error', 'Online-Synchronisation fehlgeschlagen.');
     showFriendlyAppError(error, 'Almanach-Module konnten nicht online synchronisiert werden.');
   }
 }
+
+function subscribeToModuleStoreUpdates() {
+  if (!window._fb?.subscribeModuleStore || _moduleStoreRemoteUnsubscribe) return;
+  _moduleStoreRemoteUnsubscribe = window._fb.subscribeModuleStore(applyRemoteModuleStore, error => {
+    updateFirebaseSyncStatus('error', 'Live-Synchronisation unterbrochen.');
+    showFriendlyAppError(error, 'Online-Änderungen konnten nicht geladen werden. Lokale Änderungen bleiben erhalten.');
+  });
+}
+
+window.addEventListener('fb-ready', () => {
+  if (typeof _appInitialized !== 'undefined' && _appInitialized) setupModuleStoreRemoteSync();
+});
+window.addEventListener('online', () => {
+  if (typeof _appInitialized !== 'undefined' && _appInitialized) setupModuleStoreRemoteSync();
+});

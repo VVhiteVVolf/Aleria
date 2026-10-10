@@ -34,6 +34,7 @@ export function createFirebaseAuthSession({ auth, onIdTokenChanged, signInAnonym
     if (startPromise) return startPromise;
     startPromise = new Promise((resolve, reject) => {
       let settled = false;
+      let anonymousSignIn = null;
       const finish = value => {
         if (!settled) {
           settled = true;
@@ -41,20 +42,30 @@ export function createFirebaseAuthSession({ auth, onIdTokenChanged, signInAnonym
         }
       };
       onIdTokenChanged(auth, user => {
-        inspect(user).then(finish).catch(reject);
+        if (user) {
+          inspect(user).then(finish).catch(reject);
+        } else if (!settled) {
+          // The first observer event follows restoration of the persisted
+          // session. A null event is not a completed anonymous sign-in.
+          anonymousSignIn ||= Promise.resolve().then(() => signInAnonymously(auth))
+            .then(result => inspect(result?.user || auth.currentUser))
+            .then(current => {
+              if (!current.user) throw new Error('Firebase konnte keine Anmeldung herstellen.');
+              finish(current);
+            })
+            .catch(reject);
+        } else {
+          publish(null);
+        }
       }, reject);
-      Promise.resolve(auth.currentUser ? { user: auth.currentUser } : signInAnonymously(auth))
-        .then(result => inspect(result?.user || auth.currentUser))
-        .then(finish)
-        .catch(reject);
     });
     return startPromise;
   }
 
   async function requireUser() {
-    const current = await start();
-    if (!current?.user) throw new Error('Für diese Änderung ist eine Firebase-Anmeldung erforderlich.');
-    return current.user;
+    await start();
+    if (!state.user) throw new Error('Für diese Änderung ist eine Firebase-Anmeldung erforderlich.');
+    return state.user;
   }
 
   async function getIdToken(forceRefresh = false) {

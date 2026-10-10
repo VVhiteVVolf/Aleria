@@ -6,7 +6,7 @@
     import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, limit, serverTimestamp, onSnapshot, doc, getDoc, setDoc, deleteDoc, writeBatch, runTransaction }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
     import { createFirebaseAuthSession }
-      from "./modules/auth/firebase-auth-session.js?v=20260803-auth-v1";
+      from "./modules/auth/firebase-auth-session.js?v=20261010-auth-restore-v2";
     import { compactMechanicalMetadata }
       from "./modules/combat/combat-resolution-storage.js?v=20260804-referee-v1";
     import { finalizeCommittedCommentNarration }
@@ -32,6 +32,10 @@
     const auth = getAuth(app);
     const authSession = createFirebaseAuthSession({ auth, onIdTokenChanged, signInAnonymously });
     const authReady = authSession.start();
+    authReady.catch(error => {
+      console.warn('Firebase authentication failed:', error);
+      notifyAppStatus(getFirebaseErrorMessage(error, 'Firebase-Anmeldung fehlgeschlagen. Änderungen können noch nicht online gespeichert werden.'));
+    });
     const db  = getFirestore(app);
     const functions = getFunctions(app, 'europe-west1');
     const commitCombatCommentCallable = httpsCallable(functions, 'commitCombatComment', { timeout: 30000 });
@@ -323,6 +327,7 @@
                 key: String(section?.key || '').trim(),
                 tab: String(section?.tab || '').trim(),
                 desc: String(section?.desc || '').trim(),
+                ...(section?.iconUrl ? { iconUrl: String(section.iconUrl).trim() } : {}),
                 nodeId: String(section?.nodeId || '').trim(),
                 path: Array.isArray(section?.path) ? section.path.map(part => String(part || '').trim()).filter(Boolean) : []
               },
@@ -339,6 +344,7 @@
           key: String(section?.key || '').trim(),
           tab: String(section?.tab || '').trim(),
           desc: String(section?.desc || '').trim(),
+          ...(section?.iconUrl ? { iconUrl: String(section.iconUrl).trim() } : {}),
           nodeId: String(section?.nodeId || '').trim(),
           path: Array.isArray(section?.path) ? section.path.map(part => String(part || '').trim()).filter(Boolean) : [],
           entryIds
@@ -398,6 +404,7 @@
           key: String(section?.key || '').trim(),
           tab: String(section?.tab || section?.key || '').trim(),
           desc: String(section?.desc || '').trim(),
+          ...(section?.iconUrl ? { iconUrl: String(section.iconUrl).trim() } : {}),
           nodeId: String(section?.nodeId || '').trim(),
           path: Array.isArray(section?.path) ? section.path.map(part => String(part || '').trim()).filter(Boolean) : [],
           entries: (Array.isArray(section?.entryIds) ? section.entryIds : [])
@@ -1287,10 +1294,15 @@
       async saveCharTabs(data) {
         try {
           await requireFirebaseUser();
-          await setDoc(doc(db, 'char_tabs', 'config'), data || {});
+          // This document also owns the module manifest. Replace only the
+          // character-tab fields, including removed map entries.
+          const fields = ['tabs', 'map', 'subtabs', 'subtabMap', 'hiddenBuiltins'];
+          const payload = Object.fromEntries(fields.map(key => [key, data?.[key] ?? (key === 'tabs' || key === 'hiddenBuiltins' ? [] : {})]));
+          await setDoc(doc(db, 'char_tabs', 'config'), payload, { mergeFields: fields });
         } catch(e) {
           console.error('saveCharTabs:', e);
           notifyAppStatus(getFirebaseErrorMessage(e, 'Charakter-Reiter konnten nicht gespeichert werden.'));
+          throw e;
         }
       },
       async setCommentAdminCode(code) {
@@ -1303,19 +1315,16 @@
           const snap = await getDoc(doc(db, MODULE_STORE_COLLECTION, MODULE_STORE_DOC));
           if (!snap.exists()) return null;
           const data = snap.data();
-          let splitStore = null;
-          try {
-            splitStore = await loadSplitModuleStore(data);
-          } catch(splitError) {
-            console.warn('loadModuleStore split fallback:', splitError);
-          }
+          const splitStore = await loadSplitModuleStore(data);
           if (splitStore) return splitStore;
           if (typeof data?.moduleStoreData === 'string') return { data: data.moduleStoreData };
           return data?.moduleStore || null;
         } catch(e) {
           console.error('loadModuleStore:', e);
           notifyAppStatus(getFirebaseErrorMessage(e, 'Almanach-Module konnten nicht synchronisiert werden.'));
-          return null;
+          // An unreadable store is not an empty store: callers must never
+          // republish their cache because an online read failed.
+          throw e;
         }
       },
       async saveModuleStore(data) {
@@ -1353,12 +1362,7 @@
           (async () => {
             try {
               const data = snap.data();
-              let splitStore = null;
-              try {
-                splitStore = await loadSplitModuleStore(data);
-              } catch(splitError) {
-                console.warn('subscribeModuleStore split fallback:', splitError);
-              }
+              const splitStore = await loadSplitModuleStore(data);
               if (splitStore) {
                 onNext(splitStore);
                 return;

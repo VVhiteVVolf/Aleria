@@ -31,16 +31,18 @@ function syncContext() {
   const storage = new Map();
   const saved = [];
   const context = vm.createContext({
-    console, CustomEvent, TextEncoder, setTimeout, clearTimeout,
+    console, CustomEvent, TextEncoder, setTimeout, clearTimeout, addEventListener() {},
     MODULE_STORE_SCHEMA_VERSION: 1,
     MODULE_STORE_KEY: 'module-store', MODULE_STORE_SYNC_META_KEY: 'sync-meta',
     FIREBASE_READY_TIMEOUT_MS: 100,
     _fbReady: true, _moduleStoreRemoteSyncStarted: false, _moduleStoreRemoteUnsubscribe: null,
     _moduleStoreSyncConflict: null,
+    _moduleStoreRemoteSaveTimer: null, MODULE_STORE_REMOTE_SAVE_DELAY: 5,
     _inlineModuleEdit: { active: false },
     document: { getElementById: () => null },
     localStorage: { getItem: key => storage.get(key) || null, setItem: (key, value) => storage.set(key, value) },
     cleanCustomSection: clone, cleanModuleSectionMove: clone, sanitizeModuleEntry: clone, deepClone: clone,
+    normalizeModuleTreeState: payload => ({ nodes: payload.moduleSectionNodes || [], assignments: payload.moduleNodeAssignments || {} }),
     dispatchEvent() {}, invalidateArchiveSearchCache() {}, updateFirebaseSyncStatus() {},
     renderAll() {}, showAppStatus() {}, showAppStatusHtml() {},
     showFriendlyAppError(error) { throw error; }, escapeHtml: value => value,
@@ -53,7 +55,7 @@ function syncContext() {
   context.window = context;
   vm.runInContext(readFileSync(new URL('../modules/module-store/module-store-sync.js', import.meta.url), 'utf8'), context);
   const firebase = readFileSync(new URL('../firebase.js', import.meta.url), 'utf8');
-  vm.runInContext(firebase.slice(firebase.indexOf('    async function loadSplitModuleStore('), firebase.indexOf('    async function saveSplitModuleStore(')), context);
+  vm.runInContext(firebase.slice(firebase.indexOf('    function normalizeFirebaseModuleStore('), firebase.indexOf('    async function hashDeleteCode(')), context);
   return { context, saved };
 }
 
@@ -78,6 +80,108 @@ test('the actual split loader keeps an ISO release newer than the eight-person c
   await context.setupModuleStoreRemoteSync();
   assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, '28 Namen mit Bildern');
   assert.equal(saved.length, 0);
+});
+
+test('Firestore map ordering and old sync receipts do not create conflicts', async () => {
+  const { context, saved } = syncContext();
+  const local = { ...store(200, 'Identisch'), moduleSectionNodes: [{ id: 'root:gruppen' }],
+    moduleNodeAssignments: { z: 'root:gruppen', a: 'root:gruppen' },
+    entryOverrides: { z: { title: 'Z', id: 'z' }, a: { title: 'A', id: 'a' } } };
+  const remote = { ...clone(local), moduleNodeAssignments: { a: 'root:gruppen', z: 'root:gruppen' },
+    entryOverrides: { a: { id: 'a', title: 'A' }, z: { id: 'z', title: 'Z' } } };
+  assert.equal(context.getModuleStoreContentSignature(local), context.getModuleStoreContentSignature(remote));
+  context.writeLocalModuleStorePayload(local);
+  const normalized = context.normalizeModuleStorePayload(local);
+  delete normalized.hiddenModuleIds;
+  context.localStorage.setItem('sync-meta', JSON.stringify({ signature: JSON.stringify(normalized), syncedAt: 1 }));
+  assert.equal(context.isLocalModuleStoreSynced(remote), true);
+  context._fb.loadModuleStore = async () => remote;
+  await context.setupModuleStoreRemoteSync();
+  assert.equal(context._moduleStoreSyncConflict, null);
+  assert.equal(saved.length, 0);
+});
+
+test('hidden modules participate in sync state even without custom modules', () => {
+  const { context } = syncContext();
+  const before = {};
+  context.writeModuleStoreSyncMeta(before);
+  const hidden = { hiddenModuleIds: { builtin: true } };
+  assert.ok(context.hasModuleStoreContent(hidden));
+  assert.equal(context.isLocalModuleStoreSynced(hidden), false);
+});
+
+test('an equal live snapshot establishes a missing sync receipt', () => {
+  const { context } = syncContext();
+  const payload = store(200, 'Gleich');
+  context.writeLocalModuleStorePayload(payload);
+  assert.equal(context.isLocalModuleStoreSynced(payload), false);
+  context.applyRemoteModuleStore(payload);
+  assert.equal(context.isLocalModuleStoreSynced(payload), true);
+});
+
+test('only local offline edits are uploaded when the online baseline is unchanged', async () => {
+  const { context, saved } = syncContext();
+  const baseline = store(300, 'Basis');
+  const local = store(200, 'Eigene Bearbeitung trotz abweichender Geräteuhr');
+  context.writeModuleStoreSyncMeta(baseline);
+  context.writeLocalModuleStorePayload(local);
+  context._fb.loadModuleStore = async () => baseline;
+  await context.setupModuleStoreRemoteSync();
+  assert.equal(saved.length, 1);
+  assert.equal(saved[0].customSections[0].entries[0].title, local.customSections[0].entries[0].title);
+  assert.equal(context._moduleStoreSyncConflict, null);
+});
+
+test('edits made during the initial online read are preserved', async () => {
+  const { context, saved } = syncContext();
+  const baseline = store(100, 'Basis');
+  context.writeModuleStoreSyncMeta(baseline);
+  context.writeLocalModuleStorePayload(baseline);
+  context._fb.loadModuleStore = async () => {
+    context.writeLocalModuleStorePayload(store(200, 'Während des Ladens bearbeitet'));
+    return store(300, 'Online ebenfalls bearbeitet');
+  };
+  await context.setupModuleStoreRemoteSync();
+  assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, 'Während des Ladens bearbeitet');
+  assert.ok(context._moduleStoreSyncConflict);
+  assert.equal(saved.length, 0);
+});
+
+test('failed reads cannot publish a local cache as an allegedly empty online store', async () => {
+  const { context, saved } = syncContext();
+  context.writeLocalModuleStorePayload(store(100, 'Lokaler Cache'));
+  context._fb.loadModuleStore = async () => { throw new Error('unavailable'); };
+  context.showFriendlyAppError = () => {};
+  await context.setupModuleStoreRemoteSync();
+  assert.equal(saved.length, 0);
+  assert.equal(context._moduleStoreRemoteSyncStarted, false);
+  assert.equal(context.readLocalModuleStorePayload().customSections[0].entries[0].title, 'Lokaler Cache');
+});
+
+test('detecting a conflict cancels queued automatic writes', async () => {
+  const { context, saved } = syncContext();
+  const local = store(200, 'Lokaler Entwurf');
+  context.scheduleRemoteModuleStoreSave(local);
+  context.showModuleStoreSyncConflict(local, store(300, 'Anderer Online-Stand'));
+  await new Promise(resolve => setTimeout(resolve, 20));
+  assert.equal(saved.length, 0);
+  assert.equal(context._moduleStoreRemoteSaveTimer, null);
+  context.scheduleRemoteModuleStoreSave(store(400, 'Weitere lokale Änderung'));
+  await new Promise(resolve => setTimeout(resolve, 20));
+  assert.equal(saved.length, 0);
+});
+
+test('the split module round trip retains section icons and content', async () => {
+  const { context } = syncContext();
+  context.getSectionPathParts = section => section.path || [];
+  const sectionSource = readFileSync(new URL('../modules/module-store/module-store-sections.js', import.meta.url), 'utf8');
+  vm.runInContext(sectionSource.slice(0, sectionSource.indexOf('function cleanModuleSectionMove(')), context);
+  const payload = store(200, 'Mit Bereichsbild');
+  payload.customSections[0].iconUrl = './assets/section.png';
+  const split = context.buildSplitModuleStore(payload);
+  context.getDocs = async () => ({ docs: split.docs.map(item => ({ data: () => item.data })) });
+  const restored = await context.loadSplitModuleStore({ moduleStoreManifest: split.manifest });
+  assert.equal(context.getModuleStoreContentSignature(restored), context.getModuleStoreContentSignature(payload));
 });
 
 for (const remoteRevision of [0, 100]) {
