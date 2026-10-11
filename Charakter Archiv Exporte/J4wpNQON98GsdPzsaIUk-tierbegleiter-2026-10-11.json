@@ -1,0 +1,413 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-11T19:46:42.303Z",
+  "character": {
+    "id": "J4wpNQON98GsdPzsaIUk",
+    "name": "Heledd (Geb. Gwyvern) Draig",
+    "inventory": {
+      "title": "Charakter-Inventar",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "portrait": "https://64.media.tumblr.com/8dc61192062955f746f568c6805028d8/9478cbecf8647d84-83/s250x400/7478540fe4115203df1272cd306b486f92bd0d92.pnj",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "moneyNotice": "",
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "name": "Heledd (Geb. Gwyvern) Draig",
+      "companions": [
+        {
+          "role": "Gefährte",
+          "imagePosition": "center",
+          "infoRows": [],
+          "attributes": [],
+          "id": "companion-mqu1vat2-0-zz2n",
+          "summary": "Die Katze von Sir Meurigs Frau Heledd. Eine Skjarn. Sie terrorisiert Meurig regelmäßig.",
+          "image": "https://i.imgur.com/twMU1E2.png",
+          "description": "Die Katze von Sir Meurigs Frau Heledd. Eine Skjarn. Sie terrorisiert Meurig regelmäßig.",
+          "creatureId": "companion-heledd-mabli",
+          "statusColor": "#5c7f20",
+          "status": "Gesund",
+          "species": "Skjarn-Katze",
+          "imageFit": "contain",
+          "imageFormat": "portrait",
+          "name": "Mabli",
+          "inventoryItemId": "heledd-mabli"
+        }
+      ],
+      "status": "Gesund",
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "status": "",
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "open": false
+      },
+      "carryLabel": "Traglast",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitPosition": "top",
+      "portraitFormat": "portrait",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "role": "Hofdame des Hauses Draig, Abergwint",
+      "infoRows": [],
+      "healthColor": "#5c7f20",
+      "carryValue": "Noch festlegen",
+      "moneyState": {
+        "gold": 0,
+        "copper": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "hitpoints": "TP / Zustand",
+      "revision": 1791748002303,
+      "items": [
+        {
+          "id": "item-mqu1vat1-0-w8ef",
+          "icon": "*",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "image": "",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "type": "Waffe",
+          "tags": "",
+          "name": "Hauptwaffe",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "category": "weapon"
+        },
+        {
+          "id": "item-mqu1vat1-1-exvo",
+          "infoRows": [],
+          "type": "Rüstung",
+          "tags": "",
+          "category": "armor",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "name": "Rüstung / Schutz",
+          "quantity": "1",
+          "imagePosition": "center",
+          "image": "",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*"
+        },
+        {
+          "category": "equipment",
+          "infoRows": [],
+          "imageFormat": "square",
+          "name": "Reiseausrüstung",
+          "tags": "",
+          "type": "Ausrüstung",
+          "quantity": "1",
+          "id": "item-mqu1vat1-2-0fx2",
+          "imageFit": "contain",
+          "image": "",
+          "icon": "*",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände."
+        },
+        {
+          "icon": "*",
+          "imageFormat": "square",
+          "quantity": "1",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "category": "potions",
+          "imagePosition": "center",
+          "name": "Heil- oder Verbrauchsgut",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "id": "item-mqu1vat1-3-2lgm",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "image": "",
+          "imageFit": "contain",
+          "tags": "",
+          "type": "Trinktur"
+        },
+        {
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "name": "Dokumente / Urkunden",
+          "image": "",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "type": "Dokument",
+          "tags": "",
+          "infoRows": [],
+          "category": "documents",
+          "icon": "*",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-4-ajrj",
+          "weight": "Noch festlegen",
+          "quantity": "1"
+        },
+        {
+          "imageFit": "contain",
+          "name": "Persönlicher Gegenstand",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-5-5kao",
+          "tags": "",
+          "type": "Sonstiges",
+          "imagePosition": "center",
+          "icon": "*",
+          "infoRows": [],
+          "category": "other",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "quantity": "1"
+        },
+        {
+          "itemStorageMode": "character",
+          "quantity": "1",
+          "id": "heledd-mabli",
+          "instanceId": "heledd-mabli",
+          "name": "Mabli",
+          "attributes": [],
+          "type": "Skjarn-Katze",
+          "ownerCharacterName": "Heledd (Geb. Gwyvern) Draig",
+          "image": "https://i.imgur.com/twMU1E2.png",
+          "infoRows": [],
+          "category": "companion",
+          "creatureId": "companion-heledd-mabli",
+          "imageFormat": "portrait",
+          "individualizedAt": "2026-10-11T19:46:45.505Z",
+          "description": "Die Katze von Sir Meurigs Frau Heledd. Eine Skjarn. Sie terrorisiert Meurig regelmäßig.",
+          "ownerCharacterId": "J4wpNQON98GsdPzsaIUk",
+          "templateId": "",
+          "templateName": "Skjarn-Katze",
+          "originItemDbKey": "",
+          "itemDbKey": "",
+          "registerCategory": "vieh",
+          "imagePosition": "center",
+          "imageFit": "contain"
+        }
+      ],
+      "portraitFit": "cover"
+    },
+    "updatedAt": "2026-10-11T19:46:42.303Z"
+  }
+}

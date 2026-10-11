@@ -1,4 +1,35 @@
 import { inventoryWithCreatureIdentity } from '../item-register/item-register-companions.js';
+import { inferCreatureGenus } from './creature-classification.js?v=20261011-creature-groups-v1';
+
+export function isUnassignedCompanionCard(card = {}) {
+  return ['Reittier / Gefährte', 'Treuer Begleiter'].includes(card.name)
+    && !card.image && !card.description && !card.creatureId && !card.inventoryItemId
+    && ['Tier oder Begleiter', 'Tier / Person'].includes(card.species);
+}
+
+// Add a named animal or reuse its existing card. Empty starter cards carry no ownership.
+export function attachCreatureToInventory(character, creature, now = new Date().toISOString()) {
+  const inventory = structuredClone(character.inventory || {});
+  inventory.companions ||= [];
+  const matches = inventory.companions.filter(card => card.creatureId === creature.id || card.name === creature.name);
+  if (matches.length > 1) throw new Error(`Mehrdeutige Gefährtenkarte: ${creature.name}`);
+  let card = matches[0];
+  if (!card) {
+    card = inventory.companions.find(isUnassignedCompanionCard);
+    const data = { name: creature.name, species: creature.species, image: creature.portrait,
+      description: creature.notes, summary: creature.biography?.summary || creature.notes,
+      role: inferCreatureGenus(creature) === 'Pferde' ? 'Reittier' : 'Gefährte',
+      imageFormat: 'portrait', imageFit: 'contain', imagePosition: 'center', attributes: [], infoRows: [] };
+    if (card) Object.assign(card, data);
+    else { card = { id: `card-${creature.itemOrigin?.instanceId}`, status: 'Gesund', ...data }; inventory.companions.push(card); }
+  }
+  const item = inventory.items?.find(item => item.id === creature.itemOrigin?.inventoryItemId);
+  if (card.creatureId === creature.id && card.inventoryItemId === item?.id
+    && item?.instanceId === creature.itemOrigin?.instanceId && item?.creatureId === creature.id
+    && item.name === creature.name && item.image === creature.portrait && item.description === creature.notes
+    && creature.itemOrigin?.ownerCharacterId === character.id) return inventory;
+  return linkCreatureToInventoryCompanion({ ...character, inventory }, card.id, creature, now);
+}
 
 // Convert an existing narrative companion card into a linked inventory instance.
 // The caller persists inventory and creature atomically; no writes occur here.
@@ -23,7 +54,7 @@ export function linkCreatureToInventoryCompanion(character, companionId, creatur
     inventory.items.push({
       id: origin.inventoryItemId, instanceId: origin.instanceId, creatureId: creature.id,
       name: creature.name, image: creature.portrait, description: creature.notes,
-      type: creature.species, category: 'companion', registerCategory: /Pferd|Hengst|Stute/i.test(creature.species) ? 'pferde' : 'vieh',
+      type: creature.species, category: 'companion', registerCategory: inferCreatureGenus(creature) === 'Pferde' ? 'pferde' : 'vieh',
       templateId: origin.templateId || '', templateName: creature.species,
       quantity: '1', itemStorageMode: 'character', itemDbKey: '', originItemDbKey: '',
       ownerCharacterId: character.id, ownerCharacterName: character.name,

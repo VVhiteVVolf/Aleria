@@ -1,0 +1,500 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-11T19:46:42.303Z",
+  "character": {
+    "id": "fklEm9zDR9y1LuCaXeeb",
+    "name": "Tegan Draig",
+    "inventory": {
+      "showInfoTable": false,
+      "hitpoints": "TP / Zustand",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "items": [
+        {
+          "type": "Waffe",
+          "category": "weapon",
+          "icon": "*",
+          "imageFit": "contain",
+          "name": "Hauptwaffe",
+          "ownerCharacterName": "",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "originItemDbKey": "",
+          "individualizedAt": "",
+          "acquiredAt": "",
+          "tags": "",
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "quantity": "1",
+          "imageFormat": "square",
+          "ownerCharacterId": "",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "id": "item-mqu1vat1-0-w8ef",
+          "itemStorageMode": "character"
+        },
+        {
+          "type": "Rüstung",
+          "id": "item-mqu1vat1-1-exvo",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "individualizedAt": "",
+          "name": "Rüstung / Schutz",
+          "ownerCharacterName": "",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "itemStorageMode": "character",
+          "acquiredAt": "",
+          "tags": "",
+          "imageFormat": "square",
+          "image": "",
+          "imagePosition": "center",
+          "ownerCharacterId": "",
+          "imageFit": "contain",
+          "itemDbKey": "",
+          "category": "armor",
+          "originItemDbKey": "",
+          "description": "Rüstung, Kleidung oder magischer Schutz."
+        },
+        {
+          "originItemDbKey": "",
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-2-0fx2",
+          "imageFormat": "square",
+          "individualizedAt": "",
+          "type": "Ausrüstung",
+          "icon": "*",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "imageFit": "contain",
+          "category": "equipment",
+          "name": "Reiseausrüstung",
+          "ownerCharacterName": "",
+          "infoRows": [],
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "ownerCharacterId": "",
+          "image": "",
+          "tags": "",
+          "quantity": "1",
+          "acquiredAt": "",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "quantity": "1",
+          "ownerCharacterName": "",
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-3-2lgm",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "type": "Trinktur",
+          "icon": "*",
+          "originItemDbKey": "",
+          "infoRows": [],
+          "imagePosition": "center",
+          "name": "Heil- oder Verbrauchsgut",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "category": "potions",
+          "image": "",
+          "tags": "",
+          "ownerCharacterId": "",
+          "itemDbKey": "",
+          "itemStorageMode": "character"
+        },
+        {
+          "name": "Dokumente / Urkunden",
+          "ownerCharacterId": "",
+          "imageFormat": "square",
+          "icon": "*",
+          "type": "Dokument",
+          "infoRows": [],
+          "imagePosition": "center",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "ownerCharacterName": "",
+          "id": "item-mqu1vat1-4-ajrj",
+          "acquiredAt": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": "",
+          "individualizedAt": "",
+          "image": "",
+          "itemDbKey": "",
+          "imageFit": "contain",
+          "weight": "Noch festlegen",
+          "itemStorageMode": "character",
+          "category": "documents"
+        },
+        {
+          "type": "Sonstiges",
+          "itemStorageMode": "character",
+          "weight": "Noch festlegen",
+          "itemDbKey": "",
+          "icon": "*",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "id": "item-mqu1vat1-5-5kao",
+          "ownerCharacterName": "",
+          "infoRows": [],
+          "name": "Persönlicher Gegenstand",
+          "acquiredAt": "",
+          "quantity": "1",
+          "individualizedAt": "",
+          "tags": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "image": "",
+          "originItemDbKey": "",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "category": "other",
+          "imageFormat": "square",
+          "ownerCharacterId": ""
+        },
+        {
+          "originItemDbKey": "",
+          "ownerCharacterId": "fklEm9zDR9y1LuCaXeeb",
+          "category": "companion",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "creatureId": "companion-tegan-alaw",
+          "attributes": [],
+          "itemDbKey": "",
+          "image": "https://i.imgur.com/Frc3apc.jpeg",
+          "type": "Rhyfel-Pferd",
+          "description": "Tegans Rhyfel.",
+          "imagePosition": "center",
+          "name": "Alaw",
+          "templateName": "Rhyfel-Pferd",
+          "individualizedAt": "2026-10-11T19:46:45.487Z",
+          "id": "tegan-alaw",
+          "ownerCharacterName": "Tegan Draig",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "registerCategory": "pferde",
+          "infoRows": [],
+          "instanceId": "tegan-alaw",
+          "templateId": ""
+        },
+        {
+          "quantity": "1",
+          "registerCategory": "vieh",
+          "ownerCharacterName": "Tegan Draig",
+          "templateName": "Brodgi-Haushund",
+          "individualizedAt": "2026-10-11T19:46:45.487Z",
+          "id": "tegan-twm",
+          "imagePosition": "center",
+          "infoRows": [],
+          "creatureId": "companion-tegan-twm",
+          "attributes": [],
+          "originItemDbKey": "",
+          "image": "https://i.imgur.com/QzubwXw.jpeg",
+          "imageFit": "contain",
+          "itemDbKey": "",
+          "name": "Twm",
+          "instanceId": "tegan-twm",
+          "templateId": "",
+          "type": "Brodgi-Haushund",
+          "category": "companion",
+          "imageFormat": "portrait",
+          "ownerCharacterId": "fklEm9zDR9y1LuCaXeeb",
+          "itemStorageMode": "character",
+          "description": "Der Brodgi von Tegan Draig. Er liebt Musik."
+        }
+      ],
+      "moneyState": {
+        "gold": 0,
+        "totalCopper": 0,
+        "copper": 0,
+        "silver": 0
+      },
+      "infoRows": [],
+      "carryLabel": "Traglast",
+      "equipmentQuiz": {
+        "status": "",
+        "open": false,
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "updatedAt": "",
+        "resultText": ""
+      },
+      "healthColor": "#5c7f20",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitFormat": "portrait",
+      "title": "Charakter-Inventar",
+      "carryValue": "Noch festlegen",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "portraitFit": "cover",
+      "name": "Tegan Draig",
+      "portraitPosition": "top",
+      "role": "Lady, Gwynthor",
+      "status": "Gesund",
+      "characterId": "fklEm9zDR9y1LuCaXeeb",
+      "revision": 1791748002303,
+      "companions": [
+        {
+          "creatureId": "companion-tegan-alaw",
+          "attributes": [],
+          "image": "https://i.imgur.com/Frc3apc.jpeg",
+          "name": "Alaw",
+          "infoRows": [],
+          "id": "companion-mqu1vat2-0-zz2n",
+          "role": "Reittier",
+          "species": "Rhyfel-Pferd",
+          "summary": "Tegans Rhyfel.",
+          "statusColor": "#5c7f20",
+          "imageFormat": "portrait",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "status": "Gesund",
+          "description": "Tegans Rhyfel.",
+          "inventoryItemId": "tegan-alaw"
+        },
+        {
+          "id": "companion-mqu1vat2-1-5e7l",
+          "image": "https://i.imgur.com/QzubwXw.jpeg",
+          "name": "Twm",
+          "imageFit": "contain",
+          "summary": "Der Brodgi von Tegan Draig. Er liebt Musik.",
+          "role": "Gefährte",
+          "status": "Noch festlegen",
+          "imageFormat": "portrait",
+          "species": "Brodgi-Haushund",
+          "statusColor": "#5c7f20",
+          "attributes": [],
+          "creatureId": "companion-tegan-twm",
+          "infoRows": [],
+          "imagePosition": "center",
+          "description": "Der Brodgi von Tegan Draig. Er liebt Musik.",
+          "inventoryItemId": "tegan-twm"
+        }
+      ],
+      "level": "Haus Draig, Celtigerns Wacht",
+      "portrait": "https://64.media.tumblr.com/3af118205b853e6c505e3e1723c3bb40/5009d73b71942c23-1b/s250x400/8ace5e91a2ff1b815ab8b639010f8cba3677dca7.pnj",
+      "categories": [
+        {
+          "label": "Waffen",
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment",
+          "label": "Ausrüstung"
+        },
+        {
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente",
+          "id": "documents"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "moneyNotice": ""
+    },
+    "updatedAt": "2026-10-11T19:46:42.303Z"
+  }
+}

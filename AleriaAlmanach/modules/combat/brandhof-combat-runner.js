@@ -1,4 +1,4 @@
-import { getBuiltinCreatureTemplates } from '../creatures/creature-catalog.js?v=20260928-equipment-art-v4';
+import { getBuiltinCreatureTemplates } from '../creatures/creature-catalog.js?v=20261011-household-v1';
 import { resolveCombatProfile } from './combat-profile-resolver.js?v=20260928-equipment-art-v4';
 import { CombatResolutionService } from './combat-resolution-service.js?v=20260928-equipment-art-v4';
 import { getResolutionHitPointState, overlayCombatHitPointState } from './combat-state-model.js?v=20260928-equipment-art-v4';

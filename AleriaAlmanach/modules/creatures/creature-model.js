@@ -1,5 +1,6 @@
 import { normalizeCreatureImages, MAX_CREATURE_AVATARS } from './creature-images-model.js?v=20260919-creature-pages-v1';
 import { normalizeCreatureBiography } from './creature-biography-model.js?v=20260925-creature-biography-v2';
+import { normalizeCreatureClassification } from './creature-classification.js?v=20261011-creature-groups-v1';
 export { MAX_CREATURE_AVATARS };
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
@@ -109,6 +110,7 @@ export function sanitizeCreature(value = {}) {
     name: normalizeText(source.name || 'Unbenannte Kreatur', 140),
     type: normalizeText(source.type || 'Kreatur', 100),
     species: normalizeText(source.species, 120),
+    classification: normalizeCreatureClassification(source.classification),
     habitat: normalizeText(source.habitat, 160),
     challengeRating: normalizeNumber(source.challengeRating, 1, 0, 30),
     size: normalizeText(source.size || 'Mittel', 60),

@@ -1,0 +1,555 @@
+{
+  "type": "aleria-creature",
+  "version": 5,
+  "exportedAt": "2026-10-11T19:48:27.159Z",
+  "creature": {
+    "schemaVersion": 5,
+    "entityType": "creature",
+    "itemOrigin": {
+      "ownerCharacterName": "Guinevere Neidr",
+      "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+      "inventoryItemId": "guinevere-uath",
+      "disposition": "owned",
+      "instanceId": "guinevere-uath",
+      "templateId": ""
+    },
+    "needsStatReview": false,
+    "name": "Uath",
+    "type": "Reittier",
+    "species": "Rhyfel",
+    "classification": {
+      "genus": "Pferde",
+      "location": "Celtigerns Wacht",
+      "house": "Ohne Hauszuordnung"
+    },
+    "habitat": "Stets an Guineveres Seite, kampfbereit",
+    "challengeRating": 2,
+    "size": "Groß",
+    "level": 2,
+    "biography": {
+      "schemaVersion": 2,
+      "revision": 0,
+      "summary": "",
+      "appearance": "",
+      "personality": "",
+      "history": "",
+      "bonds": "",
+      "habits": "",
+      "facts": [],
+      "sections": [],
+      "quote": "",
+      "quoteBy": "",
+      "traitsTitle": "Persönlichkeit & Eigenschaften",
+      "connectionsTitle": "Verbindungen",
+      "traits": [],
+      "connections": []
+    },
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://i.imgur.com/OuNzyoV.png",
+        "emotes": [],
+        "createdAt": "2026-09-22T13:19:28.863Z",
+        "updatedAt": "2026-09-22T13:19:33.743Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "https://i.imgur.com/OuNzyoV.png",
+    "avatars": [],
+    "portraitCaption": "Uath, Guineveres kampfbereite Rhyfelstute.",
+    "templateId": "",
+    "instanceOrdinal": 0,
+    "combatProfile": {
+      "schemaVersion": 11,
+      "revision": 0,
+      "identity": {
+        "ancestry": "Rhyfel",
+        "archetype": "Reittier",
+        "background": "Stets an Guineveres Seite, kampfbereit"
+      },
+      "templateSelections": {
+        "schemaVersion": 1,
+        "ancestryId": "",
+        "backgroundId": "",
+        "classId": "",
+        "attributeMethod": "",
+        "appliedAt": ""
+      },
+      "proficiencies": {
+        "armor": [],
+        "weapons": [],
+        "tools": [],
+        "languages": [],
+        "notes": ""
+      },
+      "progression": {
+        "level": 2,
+        "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [],
+        "experience": 0,
+        "nextLevelExperience": null,
+        "experienceReward": null,
+        "proficiencyBonusOverride": null
+      },
+      "attributes": [
+        {
+          "key": "strength",
+          "label": "Kraft",
+          "shortLabel": "KRF",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "dexterity",
+          "label": "Geschick",
+          "shortLabel": "GES",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "constitution",
+          "label": "Konstitution",
+          "shortLabel": "KON",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "shortLabel": "INT",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "wisdom",
+          "label": "Weisheit",
+          "shortLabel": "WEI",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "charisma",
+          "label": "Charisma",
+          "shortLabel": "CHA",
+          "score": 10,
+          "modifierOverride": null
+        }
+      ],
+      "hitPoints": {
+        "current": 10,
+        "temporary": 0,
+        "hitDie": 8,
+        "averagePerLevelOverride": null,
+        "maximumOverride": 10
+      },
+      "armorClass": {
+        "base": 10,
+        "dexterityMode": "full",
+        "dexterityCap": 2,
+        "shieldBonus": 0,
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "override": 10,
+        "overrideMode": "total"
+      },
+      "combat": {
+        "movement": 9,
+        "initiativeBonus": 0,
+        "attackBonus": 0,
+        "damageBonus": 0,
+        "passivePerceptionBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "mounted": false
+      },
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "dexterity",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "constitution",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "intelligence",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "wisdom",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "charisma",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        }
+      ],
+      "skills": [],
+      "weapons": [
+        {
+          "id": "default-unarmed-melee",
+          "inventoryItemId": "",
+          "name": "Nahkampf",
+          "image": "",
+          "weaponProfileId": "",
+          "triggerRules": [],
+          "weaponType": "unarmed",
+          "training": "simple",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": true
+        }
+      ],
+      "armorItems": [],
+      "resources": [
+        {
+          "id": "mana-focus",
+          "name": "Mana",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "magic",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "inspiration",
+          "name": "Inspiration",
+          "current": 0,
+          "maximum": 1,
+          "recovery": "manual",
+          "scope": "persistent",
+          "category": "",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "focus",
+          "name": "Fokus",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "focus",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "celestial-points",
+          "name": "Celestiale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "celestial",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "infernal-points",
+          "name": "Infernale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "infernal",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "pact-points",
+          "name": "Paktpunkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "pact",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "action",
+          "name": "Aktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "bonus-action",
+          "name": "Bonusaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "reaction",
+          "name": "Reaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "special-action",
+          "name": "Besondere Aktion",
+          "current": 2,
+          "maximum": 2,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "notes": ""
+        },
+        {
+          "id": "aura-focus",
+          "name": "Aura-Fokuspunkt",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "paymentRole": "universal-substitute",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "notes": ""
+        }
+      ],
+      "techniques": [],
+      "classTraining": {
+        "schemaVersion": 2,
+        "curriculumId": "",
+        "selections": [],
+        "techniqueSelections": []
+      },
+      "quirks": [],
+      "conditions": [],
+      "damageAffinities": [],
+      "abilities": [],
+      "magic": {
+        "enabled": false,
+        "casterTier": "full",
+        "bypassResourceId": "",
+        "focusEnabled": false,
+        "focusResourceId": "focus",
+        "castingAttribute": "intelligence",
+        "spellAttackOverride": null,
+        "spellSaveDcOverride": null,
+        "manaResourceId": "mana-focus",
+        "slotResourceIds": [],
+        "notes": "",
+        "spells": []
+      },
+      "aura": {
+        "enabled": false,
+        "name": "Aura",
+        "domain": "",
+        "focusResourceId": "aura-focus",
+        "focusBypassCost": 1,
+        "notes": "",
+        "activeForm": {
+          "enabled": false,
+          "active": false,
+          "name": "Aktive Form",
+          "description": "",
+          "radius": "",
+          "target": "Selbst und gewählte Ziele",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        },
+        "latentPresence": {
+          "enabled": true,
+          "active": true,
+          "name": "Latente Präsenz",
+          "description": "",
+          "radius": "",
+          "target": "Umgebung, Verbündete und Gegner",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        }
+      },
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "notes": "Uath, benannt nach dem albischen Wort für Schrecken, trägt den Namen mit einer Konsequenz, die einem Soldaten zur Ehre gereicht. Diese Stute steht – oder marschiert – als wäre sie von einem General ausgebildet worden. Ihr helles Fell täuscht: hinter dem makellosen Äußeren steckt ein Tier mit der Disziplin einer Legion und der Nervenstärke eines Kommandanten. Am Sattel führt sie stets ein Bündel Pfeile, und mit fast beängstigender Routine schnappt sie einen davon mit den Zähnen, sobald Guinevere auch nur die Hand nach dem Bogen hebt.\n\nManchmal wirkt es, als wolle Uath, dass etwas erschossen wird – als sei sie enttäuscht, wenn ihre Herrin den Abzug zögert. Woher diese Mordlust stammt, weiß niemand, aber sie liegt ihr tief im Blut. Uath duldet kaum andere Tiere: Gawains Tanor verachtet sie wie eine Parfümflasche mit Beinen, Fenrirs Gaul scheint sie für einen Irrtum der Schöpfung zu halten – einzig Freyas Pferd betrachtet sie mit etwas, das man fast Respekt nennen könnte. Wenn sie nicht gerade unterwegs sind, steht Uath kerzengerade, regungslos, den Blick nach vorn gerichtet, als warte sie auf einen Befehl, der vielleicht nie kommt. Guinevere muss sie regelmäßig daran erinnern, dass Atmen kein militärischer Befehl ist – sonst würde die Stute vermutlich noch salutieren, während die Welt in Flammen aufgeht."
+    },
+    "loot": {
+      "currency": "",
+      "notes": "",
+      "items": [],
+      "revision": 0
+    },
+    "notes": "Uath, benannt nach dem albischen Wort für Schrecken, trägt den Namen mit einer Konsequenz, die einem Soldaten zur Ehre gereicht. Diese Stute steht – oder marschiert – als wäre sie von einem General ausgebildet worden. Ihr helles Fell täuscht: hinter dem makellosen Äußeren steckt ein Tier mit der Disziplin einer Legion und der Nervenstärke eines Kommandanten. Am Sattel führt sie stets ein Bündel Pfeile, und mit fast beängstigender Routine schnappt sie einen davon mit den Zähnen, sobald Guinevere auch nur die Hand nach dem Bogen hebt.\n\nManchmal wirkt es, als wolle Uath, dass etwas erschossen wird – als sei sie enttäuscht, wenn ihre Herrin den Abzug zögert. Woher diese Mordlust stammt, weiß niemand, aber sie liegt ihr tief im Blut. Uath duldet kaum andere Tiere: Gawains Tanor verachtet sie wie eine Parfümflasche mit Beinen, Fenrirs Gaul scheint sie für einen Irrtum der Schöpfung zu halten – einzig Freyas Pferd betrachtet sie mit etwas, das man fast Respekt nennen könnte. Wenn sie nicht gerade unterwegs sind, steht Uath kerzengerade, regungslos, den Blick nach vorn gerichtet, als warte sie auf einen Befehl, der vielleicht nie kommt. Guinevere muss sie regelmäßig daran erinnern, dass Atmen kein militärischer Befehl ist – sonst würde die Stute vermutlich noch salutieren, während die Welt in Flammen aufgeht.",
+    "id": "companion-uath",
+    "createdAt": "2026-09-22T13:19:36.972Z",
+    "updatedAt": "2026-10-11T19:46:42.303Z"
+  }
+}

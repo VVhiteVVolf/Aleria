@@ -1,0 +1,1180 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-11T19:46:42.303Z",
+  "character": {
+    "id": "person--haus-neidr--guinevere-neidr",
+    "name": "Guinevere Neidr",
+    "inventory": {
+      "equipmentQuiz": {
+        "step": 0,
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": "",
+        "resultText": "",
+        "updatedAt": ""
+      },
+      "carryValue": "Noch festlegen",
+      "items": [
+        {
+          "id": "item-ms1qmx6k-0-74ih",
+          "equipmentLink": null,
+          "itemDbKey": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "originItemDbKey": "",
+          "equipped": false,
+          "icon": "*",
+          "imageFit": "contain",
+          "category": "weapon",
+          "name": "Hauptwaffe",
+          "infoRows": [],
+          "image": "",
+          "combatDefinition": null,
+          "type": "Waffe",
+          "ownerCharacterName": "",
+          "tags": "",
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "acquiredAt": "",
+          "weight": "Noch festlegen"
+        },
+        {
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "originItemDbKey": "",
+          "image": "",
+          "name": "Rüstung / Schutz",
+          "itemDbKey": "",
+          "acquiredAt": "",
+          "itemStorageMode": "character",
+          "imageFormat": "square",
+          "type": "Rüstung",
+          "infoRows": [],
+          "tags": "",
+          "imageFit": "contain",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "category": "armor",
+          "combatDefinition": null,
+          "id": "item-ms1qmx6k-1-it87",
+          "ownerCharacterName": "",
+          "equipped": false,
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "equipmentLink": null,
+          "quantity": "1",
+          "icon": "*"
+        },
+        {
+          "ownerCharacterName": "",
+          "type": "Ausrüstung",
+          "weight": "Noch festlegen",
+          "name": "Reiseausrüstung",
+          "category": "equipment",
+          "combatDefinition": null,
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "infoRows": [],
+          "itemStorageMode": "character",
+          "equipmentLink": null,
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "image": "",
+          "tags": "",
+          "originItemDbKey": "",
+          "acquiredAt": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFormat": "square",
+          "quantity": "1",
+          "itemDbKey": "",
+          "icon": "*",
+          "id": "item-ms1qmx6k-2-uypw",
+          "equipped": false,
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände."
+        },
+        {
+          "acquiredAt": "",
+          "quantity": "1",
+          "equipmentLink": null,
+          "combatDefinition": null,
+          "image": "",
+          "weight": "Noch festlegen",
+          "individualizedAt": "",
+          "icon": "*",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "equipped": false,
+          "imagePosition": "center",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "type": "Trinktur",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "name": "Heil- oder Verbrauchsgut",
+          "imageFit": "contain",
+          "category": "potions",
+          "infoRows": [],
+          "id": "item-ms1qmx6k-3-ozbk",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFormat": "square",
+          "tags": "",
+          "ownerCharacterName": ""
+        },
+        {
+          "image": "",
+          "quantity": "1",
+          "equipmentLink": null,
+          "icon": "*",
+          "equipped": false,
+          "itemDbKey": "",
+          "ownerCharacterName": "",
+          "imagePosition": "center",
+          "acquiredAt": "",
+          "tags": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "infoRows": [],
+          "combatDefinition": null,
+          "id": "item-ms1qmx6k-4-kfnq",
+          "category": "documents",
+          "imageFit": "contain",
+          "individualizedAt": "",
+          "name": "Dokumente / Urkunden",
+          "ownerCharacterId": "",
+          "itemStorageMode": "character",
+          "weight": "Noch festlegen",
+          "originItemDbKey": "",
+          "type": "Dokument",
+          "imageFormat": "square"
+        },
+        {
+          "quantity": "1",
+          "imagePosition": "center",
+          "originItemDbKey": "",
+          "imageFormat": "square",
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "itemStorageMode": "character",
+          "image": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "icon": "*",
+          "equipmentLink": null,
+          "acquiredAt": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "itemDbKey": "",
+          "id": "item-ms1qmx6k-5-5l4o",
+          "type": "Sonstiges",
+          "infoRows": [],
+          "imageFit": "contain",
+          "name": "Persönlicher Gegenstand",
+          "weight": "Noch festlegen",
+          "category": "other",
+          "ownerCharacterName": "",
+          "tags": ""
+        },
+        {
+          "tags": "Munition, Pfeil",
+          "description": "Gewöhnliche Pfeile für Lang- und Kurzbogen. Werden beim Schuss verbraucht; nach einem Kampf kann der DM freitextbasiert ca. 50 % der verschossenen Pfeile als vom Schlachtfeld geborgen werten (kein automatischer Systemmechanismus).",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "ownerCharacterName": "Guinevere Neidr",
+          "category": "weapon",
+          "infoRows": [],
+          "originItemDbKey": "",
+          "itemDbKey": "",
+          "name": "Standardpfeile",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "equipmentLink": null,
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "type": "Munition",
+          "id": "guinevere-arrows-standard",
+          "acquiredAt": "",
+          "quantity": "40",
+          "image": "",
+          "combatDefinition": null,
+          "icon": "*",
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "individualizedAt": "",
+          "equipped": true
+        },
+        {
+          "image": "",
+          "icon": "*",
+          "quantity": "5",
+          "id": "guinevere-arrows-fire",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "weight": "Noch festlegen",
+          "equipped": false,
+          "itemDbKey": "",
+          "combatDefinition": null,
+          "infoRows": [],
+          "tags": "Munition, Pfeil, Feuer",
+          "originItemDbKey": "",
+          "category": "weapon",
+          "ownerCharacterName": "Guinevere Neidr",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "acquiredAt": "",
+          "imagePosition": "center",
+          "itemStorageMode": "character",
+          "equipmentLink": null,
+          "name": "Feuerpfeile",
+          "type": "Munition",
+          "individualizedAt": "",
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "description": "Mit Pech und Zunder umwickelte Pfeilspitzen; setzen Getroffenes in Brand und verursachen zusätzlich 1W4 Feuerschaden. Werden beim Schuss verbraucht; nach einem Kampf kann der DM freitextbasiert ca. 50 % als geborgen werten (kein automatischer Systemmechanismus)."
+        },
+        {
+          "id": "guinevere-arrows-signal",
+          "combatDefinition": null,
+          "equipped": false,
+          "image": "",
+          "acquiredAt": "",
+          "itemDbKey": "",
+          "ownerCharacterName": "Guinevere Neidr",
+          "individualizedAt": "",
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "quantity": "3",
+          "icon": "*",
+          "itemStorageMode": "character",
+          "name": "Signalpfeile",
+          "originItemDbKey": "",
+          "imageFormat": "square",
+          "equipmentLink": null,
+          "weight": "Noch festlegen",
+          "type": "Munition",
+          "infoRows": [],
+          "imagePosition": "center",
+          "tags": "Munition, Pfeil, Signal",
+          "imageFit": "contain",
+          "description": "Laut pfeifende Pfeile, die Tiere verstören und Getroffene kurz aus dem Konzept bringen; -1W4 auf deren nächsten Angriffswurf. Werden beim Schuss verbraucht; nach einem Kampf kann der DM freitextbasiert ca. 50 % als geborgen werten (kein automatischer Systemmechanismus).",
+          "category": "weapon",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ]
+        },
+        {
+          "icon": "*",
+          "infoRows": [],
+          "imageFit": "contain",
+          "ownerCharacterName": "Guinevere Neidr",
+          "category": "weapon",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "image": "",
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "equipmentLink": null,
+          "itemStorageMode": "character",
+          "acquiredAt": "",
+          "individualizedAt": "",
+          "imageFormat": "square",
+          "equipped": false,
+          "originItemDbKey": "",
+          "id": "guinevere-arrows-crippling",
+          "tags": "Munition, Pfeil, Krüpplung",
+          "type": "Munition",
+          "description": "Schwer gebarbte Pfeilspitzen für besonders verheerende Treffer, 1W6 Schaden statt der üblichen Pfeile und eine kurze Krüpplungswunde. Werden beim Schuss verbraucht; nach einem Kampf kann der DM freitextbasiert ca. 50 % als geborgen werten (kein automatischer Systemmechanismus).",
+          "name": "Krüpplungspfeile",
+          "quantity": "4",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "combatDefinition": null,
+          "itemDbKey": ""
+        },
+        {
+          "quantity": "1",
+          "itemDbKey": "",
+          "image": "",
+          "icon": "",
+          "acquiredAt": "2026-08-08T22:07:19.714Z",
+          "equipped": true,
+          "weight": "",
+          "id": "equipment-weapon-guinevere-longbow",
+          "itemStorageMode": "character",
+          "type": "Waffe",
+          "combatDefinition": {
+            "training": "martial",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "damageType": "Stich",
+            "notes": "Ihre Hauptwaffe für weite Distanzen und Präzisionsschüsse.",
+            "versatileDamageFormula": "",
+            "properties": "Munition · Standardpfeile",
+            "weaponType": "bow",
+            "range": "Fernkampf (weit)",
+            "kind": "weapon",
+            "proficient": true,
+            "aiInstructions": "",
+            "damageFormula": "1d8",
+            "attackAttribute": "dexterity",
+            "requirements": ""
+          },
+          "attributes": [],
+          "originItemDbKey": "",
+          "name": "Helwyr Langbogen",
+          "infoRows": [],
+          "imagePosition": "center",
+          "category": "weapon",
+          "description": "Ihre Hauptwaffe für weite Distanzen und Präzisionsschüsse.",
+          "imageFit": "contain",
+          "ownerCharacterName": "Guinevere Neidr",
+          "equipmentLink": {
+            "combatEntryId": "guinevere-longbow",
+            "schemaVersion": 1,
+            "kind": "weapon"
+          },
+          "imageFormat": "square",
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "individualizedAt": "",
+          "tags": "Munition · Standardpfeile"
+        },
+        {
+          "itemStorageMode": "character",
+          "attributes": [],
+          "name": "Helwyr Langbogen (Feuerpfeil)",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "type": "Waffe",
+          "imageFormat": "square",
+          "tags": "Munition · Feuerpfeile · entzündet Getroffenes",
+          "ownerCharacterName": "Guinevere Neidr",
+          "description": "Setzt brennbares Material in Brand.",
+          "equipped": false,
+          "itemDbKey": "",
+          "infoRows": [],
+          "image": "",
+          "weight": "",
+          "category": "weapon",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "combatDefinition": {
+            "requirements": "",
+            "kind": "weapon",
+            "damageFormula": "1d8+1d4",
+            "properties": "Munition · Feuerpfeile · entzündet Getroffenes",
+            "weaponType": "bow",
+            "damageType": "Stich + Feuer",
+            "range": "Fernkampf (weit)",
+            "notes": "Setzt brennbares Material in Brand.",
+            "attackAttribute": "dexterity",
+            "aiInstructions": "Der Gesamtschaden enthält bereits 1W8 normalen Pfeilschaden und zusätzlich 1W4 Feuerschaden; nichts doppelt addieren.",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "versatileDamageFormula": "",
+            "training": "martial",
+            "proficient": true
+          },
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "individualizedAt": "",
+          "equipmentLink": {
+            "kind": "weapon",
+            "combatEntryId": "guinevere-longbow-fire",
+            "schemaVersion": 1
+          },
+          "id": "equipment-weapon-guinevere-longbow-fire",
+          "acquiredAt": "2026-08-08T22:07:19.714Z",
+          "icon": ""
+        },
+        {
+          "tags": "Munition · Krüpplungspfeile · schwer gebarbt",
+          "equipped": false,
+          "itemDbKey": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "combatEntryId": "guinevere-longbow-crippling",
+            "kind": "weapon"
+          },
+          "image": "",
+          "attributes": [],
+          "quantity": "1",
+          "imagePosition": "center",
+          "weight": "",
+          "name": "Helwyr Langbogen (Krüpplungspfeil)",
+          "id": "equipment-weapon-guinevere-longbow-crippling",
+          "type": "Waffe",
+          "originItemDbKey": "",
+          "individualizedAt": "",
+          "description": "Schwere, gewidderte Spitze - reißt eine Wunde, die die Gegenwehr behindert.",
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "ownerCharacterName": "Guinevere Neidr",
+          "itemStorageMode": "character",
+          "icon": "",
+          "acquiredAt": "2026-08-08T22:07:19.714Z",
+          "category": "weapon",
+          "combatDefinition": {
+            "damageType": "Stich",
+            "attackAttribute": "dexterity",
+            "properties": "Munition · Krüpplungspfeile · schwer gebarbt",
+            "weaponType": "bow",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "kind": "weapon",
+            "proficient": true,
+            "training": "martial",
+            "requirements": "",
+            "damageFormula": "1d6",
+            "versatileDamageFormula": "",
+            "notes": "Schwere, gewidderte Spitze - reißt eine Wunde, die die Gegenwehr behindert.",
+            "aiInstructions": "Der Malus wird einmalig als 1W4 gewürfelt und als fester Abzug auf die nächsten Angriffswürfe des Ziels eingebacken, nicht erneut würfeln.",
+            "range": "Fernkampf (weit)"
+          },
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "infoRows": []
+        },
+        {
+          "image": "",
+          "itemDbKey": "",
+          "weight": "",
+          "attributes": [],
+          "icon": "",
+          "ownerCharacterName": "Guinevere Neidr",
+          "infoRows": [],
+          "imageFit": "contain",
+          "category": "weapon",
+          "equipped": false,
+          "itemStorageMode": "character",
+          "tags": "Munition · Standardpfeile · schnell zu führen",
+          "id": "equipment-weapon-guinevere-shortbow",
+          "combatDefinition": {
+            "attackAttribute": "dexterity",
+            "training": "martial",
+            "range": "Fernkampf (nah bis mittel)",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "proficient": true,
+            "notes": "Leichter und schneller als der Langbogen, dafür kürzere Reichweite.",
+            "damageFormula": "1d6",
+            "requirements": "",
+            "aiInstructions": "",
+            "kind": "weapon",
+            "versatileDamageFormula": "",
+            "weaponType": "bow",
+            "properties": "Munition · Standardpfeile · schnell zu führen",
+            "damageType": "Stich"
+          },
+          "description": "Leichter und schneller als der Langbogen, dafür kürzere Reichweite.",
+          "equipmentLink": {
+            "kind": "weapon",
+            "combatEntryId": "guinevere-shortbow",
+            "schemaVersion": 1
+          },
+          "originItemDbKey": "",
+          "imageFormat": "square",
+          "acquiredAt": "2026-08-08T22:07:19.714Z",
+          "quantity": "1",
+          "name": "Helwyr Kurzbogen",
+          "imagePosition": "center",
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "individualizedAt": "",
+          "type": "Waffe"
+        },
+        {
+          "ownerCharacterName": "Guinevere Neidr",
+          "itemStorageMode": "character",
+          "acquiredAt": "2026-08-08T22:07:19.714Z",
+          "individualizedAt": "",
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "originItemDbKey": "",
+          "imagePosition": "center",
+          "equipped": false,
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "weapon",
+            "combatEntryId": "guinevere-shortbow-signal"
+          },
+          "icon": "",
+          "combatDefinition": {
+            "notes": "Der grelle Pfeifton bringt Getroffene kurz aus dem Konzept.",
+            "properties": "Munition · Signalpfeile · laut, verstört Tiere",
+            "weaponType": "bow",
+            "damageType": "Stich",
+            "range": "Fernkampf (nah bis mittel)",
+            "requirements": "",
+            "damageFormula": "1d4",
+            "versatileDamageFormula": "",
+            "proficient": true,
+            "attackAttribute": "dexterity",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "training": "martial",
+            "aiInstructions": "Der Malus wird einmalig als 1W4 gewürfelt und als fester Abzug auf den nächsten Angriffswurf des Ziels eingebacken, nicht erneut würfeln.",
+            "kind": "weapon"
+          },
+          "weight": "",
+          "quantity": "1",
+          "id": "equipment-weapon-guinevere-shortbow-signal",
+          "imageFormat": "square",
+          "type": "Waffe",
+          "name": "Helwyr Kurzbogen (Signalpfeil)",
+          "itemDbKey": "",
+          "image": "",
+          "imageFit": "contain",
+          "category": "weapon",
+          "infoRows": [],
+          "tags": "Munition · Signalpfeile · laut, verstört Tiere",
+          "attributes": [],
+          "description": "Der grelle Pfeifton bringt Getroffene kurz aus dem Konzept."
+        },
+        {
+          "icon": "",
+          "quantity": "1",
+          "id": "equipment-weapon-guinevere-sword",
+          "acquiredAt": "2026-08-08T22:07:19.714Z",
+          "equipped": false,
+          "ownerCharacterName": "Guinevere Neidr",
+          "image": "",
+          "weight": "",
+          "itemDbKey": "",
+          "combatDefinition": {
+            "aiInstructions": "",
+            "proficient": true,
+            "versatileDamageFormula": "",
+            "requirements": "",
+            "damageFormula": "1d6",
+            "training": "martial",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "kind": "weapon",
+            "range": "Nahkampf",
+            "damageType": "Hieb",
+            "weaponType": "sword",
+            "properties": "Ein wenig Teulu-Schwertausbildung als Rückfallwaffe",
+            "notes": "Leichteres Schwert für den Nahkampf, falls der Bogen nicht reicht.",
+            "attackAttribute": "strength"
+          },
+          "itemStorageMode": "character",
+          "infoRows": [],
+          "description": "Leichteres Schwert für den Nahkampf, falls der Bogen nicht reicht.",
+          "imageFit": "contain",
+          "tags": "Ein wenig Teulu-Schwertausbildung als Rückfallwaffe",
+          "originItemDbKey": "",
+          "category": "weapon",
+          "imagePosition": "center",
+          "type": "Waffe",
+          "equipmentLink": {
+            "combatEntryId": "guinevere-sword",
+            "kind": "weapon",
+            "schemaVersion": 1
+          },
+          "attributes": [],
+          "imageFormat": "square",
+          "individualizedAt": "",
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "name": "Helwyr Schwert"
+        },
+        {
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "combatEntryId": "guinevere-hunting-daggers",
+            "kind": "weapon"
+          },
+          "attributes": [],
+          "image": "",
+          "combatDefinition": {
+            "kind": "weapon",
+            "attackAttribute": "dexterity",
+            "aiInstructions": "",
+            "versatileDamageFormula": "",
+            "damageFormula": "1d4",
+            "properties": "Finesse · ein Paar, wird gemeinsam beidhändig geführt",
+            "weaponType": "dagger",
+            "damageType": "Stich",
+            "requirements": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "training": "martial",
+            "proficient": true,
+            "range": "Nahkampf",
+            "notes": "Für den Nahkampf, wenn der Bogen keine Zeit mehr lässt."
+          },
+          "equipped": false,
+          "individualizedAt": "",
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "weight": "",
+          "icon": "",
+          "quantity": "1",
+          "id": "equipment-weapon-guinevere-hunting-daggers",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "name": "Helwyr Jagddolche (Paar)",
+          "type": "Waffe",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "infoRows": [],
+          "tags": "Finesse · ein Paar, wird gemeinsam beidhändig geführt",
+          "category": "weapon",
+          "ownerCharacterName": "Guinevere Neidr",
+          "imageFit": "contain",
+          "description": "Für den Nahkampf, wenn der Bogen keine Zeit mehr lässt.",
+          "itemStorageMode": "character",
+          "acquiredAt": "2026-08-08T22:07:19.714Z"
+        },
+        {
+          "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-lederruestung-v1.png",
+          "description": "Lässt genug Bewegungsfreiheit für Bogenschießen und Nahkampf gleichermaßen.",
+          "quantity": "1",
+          "icon": "",
+          "imagePosition": "center",
+          "weight": "",
+          "attributes": [],
+          "equipmentLink": {
+            "combatEntryId": "guinevere-leather-armor",
+            "schemaVersion": 1,
+            "kind": "armor"
+          },
+          "equipped": true,
+          "id": "equipment-armor-guinevere-leather-armor",
+          "imageFormat": "square",
+          "infoRows": [],
+          "tags": "Leichte Lederrüstung der Helwyr-Ausbildung · voller Geschicklichkeitsbonus",
+          "category": "armor",
+          "imageFit": "contain",
+          "acquiredAt": "2026-08-08T22:07:19.714Z",
+          "individualizedAt": "",
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "combatDefinition": {
+            "baseArmorClass": 11,
+            "armorClassBonus": 0,
+            "properties": "Leichte Lederrüstung der Helwyr-Ausbildung · voller Geschicklichkeitsbonus",
+            "notes": "Lässt genug Bewegungsfreiheit für Bogenschießen und Nahkampf gleichermaßen.",
+            "dexterityUnlockLevel": 0,
+            "dexterityCap": 2,
+            "armorCategory": "light",
+            "dexterityMode": "full",
+            "kind": "armor",
+            "armorKind": "armor"
+          },
+          "name": "Helwyr Lederrüstung",
+          "ownerCharacterName": "Guinevere Neidr",
+          "originItemDbKey": "",
+          "type": "Rüstung",
+          "itemDbKey": "",
+          "itemStorageMode": "character"
+        },
+        {
+          "infoRows": [],
+          "type": "Tryw-Jagdhündin",
+          "itemStorageMode": "character",
+          "instanceId": "guinevere-scath",
+          "imageFit": "contain",
+          "templateName": "Tryw-Jagdhündin",
+          "category": "companion",
+          "ownerCharacterName": "Guinevere Neidr",
+          "quantity": "1",
+          "imageFormat": "portrait",
+          "name": "Scath",
+          "attributes": [],
+          "originItemDbKey": "",
+          "registerCategory": "vieh",
+          "creatureId": "companion-guinevere-scath",
+          "description": "Guineveres Tryw-Jagdhündin. Benannt nach Scathach.",
+          "image": "https://i.imgur.com/oofN4OQ.jpeg",
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "individualizedAt": "2026-10-11T19:46:45.516Z",
+          "imagePosition": "center",
+          "templateId": "",
+          "id": "guinevere-scath",
+          "itemDbKey": ""
+        },
+        {
+          "imageFit": "cover",
+          "individualizedAt": "2026-10-11T19:46:45.516Z",
+          "category": "companion",
+          "ownerCharacterId": "person--haus-neidr--guinevere-neidr",
+          "creatureId": "companion-uath",
+          "imageFormat": "landscape",
+          "infoRows": [],
+          "templateId": "",
+          "image": "https://i.imgur.com/OuNzyoV.png",
+          "quantity": "1",
+          "id": "guinevere-uath",
+          "instanceId": "guinevere-uath",
+          "type": "Rhyfel",
+          "itemDbKey": "",
+          "imagePosition": "top",
+          "templateName": "Rhyfel",
+          "itemStorageMode": "character",
+          "name": "Uath",
+          "attributes": [],
+          "ownerCharacterName": "Guinevere Neidr",
+          "registerCategory": "pferde",
+          "description": "Uath, benannt nach dem albischen Wort für Schrecken, trägt den Namen mit einer Konsequenz, die einem Soldaten zur Ehre gereicht. Diese Stute steht – oder marschiert – als wäre sie von einem General ausgebildet worden. Ihr helles Fell täuscht: hinter dem makellosen Äußeren steckt ein Tier mit der Disziplin einer Legion und der Nervenstärke eines Kommandanten. Am Sattel führt sie stets ein Bündel Pfeile, und mit fast beängstigender Routine schnappt sie einen davon mit den Zähnen, sobald Guinevere auch nur die Hand nach dem Bogen hebt.\n\nManchmal wirkt es, als wolle Uath, dass etwas erschossen wird – als sei sie enttäuscht, wenn ihre Herrin den Abzug zögert. Woher diese Mordlust stammt, weiß niemand, aber sie liegt ihr tief im Blut. Uath duldet kaum andere Tiere: Gawains Tanor verachtet sie wie eine Parfümflasche mit Beinen, Fenrirs Gaul scheint sie für einen Irrtum der Schöpfung zu halten – einzig Freyas Pferd betrachtet sie mit etwas, das man fast Respekt nennen könnte. Wenn sie nicht gerade unterwegs sind, steht Uath kerzengerade, regungslos, den Blick nach vorn gerichtet, als warte sie auf einen Befehl, der vielleicht nie kommt. Guinevere muss sie regelmäßig daran erinnern, dass Atmen kein militärischer Befehl ist – sonst würde die Stute vermutlich noch salutieren, während die Welt in Flammen aufgeht.",
+          "originItemDbKey": ""
+        }
+      ],
+      "status": "Gesund",
+      "showInfoTable": false,
+      "portraitFormat": "portrait",
+      "revision": 1791748002303,
+      "moneyNotice": "",
+      "role": "Mündel des Hauses Draig",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "title": "Charakter-Inventar",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "level": "Haus Neidr",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "carryLabel": "Traglast",
+      "hitpoints": "TP / Zustand",
+      "infoRows": [
+        {
+          "value": "Gesund",
+          "label": "Status",
+          "icon": "*"
+        },
+        {
+          "icon": "*",
+          "value": "Noch festlegen",
+          "label": "TP / Zustand"
+        },
+        {
+          "label": "Geld",
+          "icon": "*",
+          "value": "0 Gold, 0 Silber, 0 Kupfer"
+        },
+        {
+          "label": "Tragkapazität",
+          "icon": "*",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "Mündel des Hauses Draig",
+          "label": "Rolle",
+          "icon": "*"
+        },
+        {
+          "value": "Haus Neidr",
+          "icon": "*",
+          "label": "Fraktion"
+        },
+        {
+          "label": "Aufenthalt",
+          "icon": "*",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Notiz"
+        }
+      ],
+      "name": "Guinevere Neidr",
+      "moneyState": {
+        "copper": 0,
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "portraitFit": "cover",
+      "portraitPosition": "top",
+      "characterId": "person--haus-neidr--guinevere-neidr",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "companions": [
+        {
+          "species": "Rhyfel-Stute",
+          "imagePosition": "top",
+          "inventoryItemId": "guinevere-uath",
+          "summary": "Kampfbereite Rhyfelstute mit der Disziplin einer Legion.",
+          "creatureId": "companion-uath",
+          "imageFormat": "landscape",
+          "status": "Kampfbereit",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 7
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "value": 6,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 7
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 3
+            },
+            {
+              "label": "Robustheit",
+              "value": 6
+            }
+          ],
+          "statusColor": "#6b1f1f",
+          "name": "Uath",
+          "description": "Uath, benannt nach dem albischen Wort für Schrecken, trägt den Namen mit einer Konsequenz, die einem Soldaten zur Ehre gereicht. Diese Stute steht – oder marschiert – als wäre sie von einem General ausgebildet worden. Ihr helles Fell täuscht: hinter dem makellosen Äußeren steckt ein Tier mit der Disziplin einer Legion und der Nervenstärke eines Kommandanten. Am Sattel führt sie stets ein Bündel Pfeile, und mit fast beängstigender Routine schnappt sie einen davon mit den Zähnen, sobald Guinevere auch nur die Hand nach dem Bogen hebt.\n\nManchmal wirkt es, als wolle Uath, dass etwas erschossen wird – als sei sie enttäuscht, wenn ihre Herrin den Abzug zögert. Woher diese Mordlust stammt, weiß niemand, aber sie liegt ihr tief im Blut. Uath duldet kaum andere Tiere: Gawains Tanor verachtet sie wie eine Parfümflasche mit Beinen, Fenrirs Gaul scheint sie für einen Irrtum der Schöpfung zu halten – einzig Freyas Pferd betrachtet sie mit etwas, das man fast Respekt nennen könnte. Wenn sie nicht gerade unterwegs sind, steht Uath kerzengerade, regungslos, den Blick nach vorn gerichtet, als warte sie auf einen Befehl, der vielleicht nie kommt. Guinevere muss sie regelmäßig daran erinnern, dass Atmen kein militärischer Befehl ist – sonst würde die Stute vermutlich noch salutieren, während die Welt in Flammen aufgeht.",
+          "imageFit": "cover",
+          "role": "Reittier",
+          "id": "companion-ms1qmx6k-0-xhlq",
+          "image": "https://i.imgur.com/8HPNtIr.png",
+          "infoRows": [
+            {
+              "value": "Rhyfel-Stute",
+              "label": "Art"
+            },
+            {
+              "value": "Guinevere Neidr",
+              "label": "Besitzer"
+            },
+            {
+              "value": "Reittier",
+              "label": "Rolle"
+            },
+            {
+              "value": "Uath · Kreaturenregister",
+              "label": "Kreaturbogen"
+            }
+          ]
+        },
+        {
+          "status": "Noch festlegen",
+          "creatureId": "companion-guinevere-scath",
+          "infoRows": [],
+          "imageFit": "contain",
+          "inventoryItemId": "guinevere-scath",
+          "imageFormat": "portrait",
+          "statusColor": "#5c7f20",
+          "summary": "Guineveres Tryw-Jagdhündin. Benannt nach Scathach.",
+          "description": "Guineveres Tryw-Jagdhündin. Benannt nach Scathach.",
+          "imagePosition": "center",
+          "name": "Scath",
+          "species": "Tryw-Jagdhündin",
+          "role": "Gefährte",
+          "attributes": [],
+          "image": "https://i.imgur.com/oofN4OQ.jpeg",
+          "id": "companion-ms1qmx6k-1-yx83"
+        }
+      ],
+      "portrait": "../Stammbäume/assets/images/portraits/haus-draig/guinevere-neidr.jpg",
+      "healthColor": "#5c7f20"
+    },
+    "updatedAt": "2026-10-11T19:46:42.303Z"
+  }
+}

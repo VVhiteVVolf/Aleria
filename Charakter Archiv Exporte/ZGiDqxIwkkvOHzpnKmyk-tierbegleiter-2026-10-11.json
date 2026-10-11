@@ -1,0 +1,456 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-11T19:46:42.303Z",
+  "character": {
+    "id": "ZGiDqxIwkkvOHzpnKmyk",
+    "name": "Maredudd Draig",
+    "inventory": {
+      "moneyState": {
+        "copper": 0,
+        "silver": 0,
+        "gold": 0,
+        "totalCopper": 0
+      },
+      "portrait": "https://64.media.tumblr.com/c53bf3796359bdcd8aae8f491ffd229d/18fb17b5724618d9-aa/s250x400/4e93b47434f0032cf5b176c2dbca7593d2b9f76f.pnj",
+      "infoRows": [],
+      "level": "Haus Draig, Celtigerns Wacht",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitPosition": "top",
+      "carryValue": "Noch festlegen",
+      "name": "Maredudd Draig",
+      "role": "Feldmarschall, Gwynthor",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions",
+          "label": "Trinkturen"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente",
+          "id": "documents"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "portraitFit": "cover",
+      "moneyNotice": "",
+      "status": "Gesund",
+      "companions": [
+        {
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "description": "Das Ceffyl von Sir Maredudd. Ein treuer Begleiter seit über 40 Jahren.",
+          "species": "Ceffyl-Pferd",
+          "creatureId": "companion-maredudd-cadarn",
+          "imageFit": "contain",
+          "status": "Gesund",
+          "infoRows": [],
+          "summary": "Das Ceffyl von Sir Maredudd. Ein treuer Begleiter seit über 40 Jahren.",
+          "attributes": [],
+          "name": "Cadarn",
+          "image": "https://i.imgur.com/A9eCwvp.jpeg",
+          "imagePosition": "center",
+          "inventoryItemId": "maredudd-cadarn",
+          "role": "Reittier",
+          "imageFormat": "portrait"
+        },
+        {
+          "image": "https://i.imgur.com/asGrolJ.png",
+          "species": "Wachhund",
+          "attributes": [],
+          "name": "Hari",
+          "role": "Gefährte",
+          "description": "Sir Maredudds Hund. Er liegt meistens in seinem Gemach und lässt niemanden bewaffnet dort herein. Nicht einmal Maredudd.",
+          "statusColor": "#5c7f20",
+          "summary": "Sir Maredudds Hund. Er liegt meistens in seinem Gemach und lässt niemanden bewaffnet dort herein. Nicht einmal Maredudd.",
+          "imageFormat": "portrait",
+          "imagePosition": "center",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "imageFit": "contain",
+          "status": "Noch festlegen",
+          "creatureId": "companion-maredudd-hari",
+          "infoRows": [],
+          "inventoryItemId": "maredudd-hari"
+        }
+      ],
+      "equipmentQuiz": {
+        "status": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false,
+        "resultText": "",
+        "updatedAt": "",
+        "step": 0
+      },
+      "carryLabel": "Traglast",
+      "items": [
+        {
+          "type": "Waffe",
+          "infoRows": [],
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "category": "weapon",
+          "imageFit": "contain",
+          "quantity": "1",
+          "name": "Hauptwaffe",
+          "image": "",
+          "id": "item-mqu1vat1-0-w8ef",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": ""
+        },
+        {
+          "name": "Rüstung / Schutz",
+          "image": "",
+          "id": "item-mqu1vat1-1-exvo",
+          "quantity": "1",
+          "imageFit": "contain",
+          "type": "Rüstung",
+          "category": "armor",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": "",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "icon": "*"
+        },
+        {
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": "",
+          "category": "equipment",
+          "id": "item-mqu1vat1-2-0fx2",
+          "type": "Ausrüstung",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "infoRows": [],
+          "imageFormat": "square",
+          "name": "Reiseausrüstung",
+          "quantity": "1",
+          "image": ""
+        },
+        {
+          "type": "Trinktur",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "name": "Heil- oder Verbrauchsgut",
+          "category": "potions",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "infoRows": [],
+          "icon": "*",
+          "id": "item-mqu1vat1-3-2lgm",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "image": "",
+          "tags": ""
+        },
+        {
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "tags": "",
+          "category": "documents",
+          "id": "item-mqu1vat1-4-ajrj",
+          "icon": "*",
+          "quantity": "1",
+          "imagePosition": "center",
+          "name": "Dokumente / Urkunden",
+          "type": "Dokument",
+          "image": "",
+          "imageFormat": "square",
+          "weight": "Noch festlegen"
+        },
+        {
+          "imageFit": "contain",
+          "category": "other",
+          "type": "Sonstiges",
+          "infoRows": [],
+          "name": "Persönlicher Gegenstand",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "image": "",
+          "quantity": "1",
+          "icon": "*",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-5-5kao",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": ""
+        },
+        {
+          "ownerCharacterName": "Maredudd Draig",
+          "name": "Cadarn",
+          "attributes": [],
+          "instanceId": "maredudd-cadarn",
+          "type": "Ceffyl-Pferd",
+          "imageFormat": "portrait",
+          "templateName": "Ceffyl-Pferd",
+          "ownerCharacterId": "ZGiDqxIwkkvOHzpnKmyk",
+          "individualizedAt": "2026-10-11T19:46:45.495Z",
+          "registerCategory": "pferde",
+          "category": "companion",
+          "image": "https://i.imgur.com/A9eCwvp.jpeg",
+          "imagePosition": "center",
+          "id": "maredudd-cadarn",
+          "imageFit": "contain",
+          "templateId": "",
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "infoRows": [],
+          "description": "Das Ceffyl von Sir Maredudd. Ein treuer Begleiter seit über 40 Jahren.",
+          "creatureId": "companion-maredudd-cadarn",
+          "quantity": "1",
+          "originItemDbKey": ""
+        },
+        {
+          "type": "Wachhund",
+          "instanceId": "maredudd-hari",
+          "itemStorageMode": "character",
+          "imageFormat": "portrait",
+          "name": "Hari",
+          "attributes": [],
+          "imagePosition": "center",
+          "id": "maredudd-hari",
+          "registerCategory": "vieh",
+          "originItemDbKey": "",
+          "templateName": "Wachhund",
+          "description": "Sir Maredudds Hund. Er liegt meistens in seinem Gemach und lässt niemanden bewaffnet dort herein. Nicht einmal Maredudd.",
+          "ownerCharacterId": "ZGiDqxIwkkvOHzpnKmyk",
+          "creatureId": "companion-maredudd-hari",
+          "individualizedAt": "2026-10-11T19:46:45.495Z",
+          "itemDbKey": "",
+          "ownerCharacterName": "Maredudd Draig",
+          "quantity": "1",
+          "imageFit": "contain",
+          "templateId": "",
+          "category": "companion",
+          "image": "https://i.imgur.com/asGrolJ.png",
+          "infoRows": []
+        }
+      ],
+      "portraitFormat": "portrait",
+      "healthColor": "#5c7f20",
+      "revision": 1791748002303,
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "hitpoints": "TP / Zustand",
+      "title": "Charakter-Inventar"
+    },
+    "updatedAt": "2026-10-11T19:46:42.303Z"
+  }
+}

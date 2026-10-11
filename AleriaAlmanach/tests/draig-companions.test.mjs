@@ -16,7 +16,7 @@ const sourceCharacter = async creature => {
 };
 
 test('the four companions have the requested levels, individual combat values and preserved descriptions and portraits', async () => {
-  assert.deepEqual(DRAIG_COMPANION_SOURCES.map(c => [c.name, c.level]), [['Distry', 1], ['Drecksack', 2], ['Merfyn', 4], ['Gwrgi', 3]]);
+  assert.deepEqual(DRAIG_COMPANION_SOURCES.map(c => [c.name, c.level]), [['Distry', 1], ['Drecksack', 2], ['Merfyn', 3], ['Gwrgi', 3]]);
   for (const source of DRAIG_COMPANION_SOURCES) {
     const creature = sanitizeCreature(source);
     const owner = await sourceCharacter(creature);

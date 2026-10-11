@@ -1,0 +1,413 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-11T19:46:42.303Z",
+  "character": {
+    "id": "E8HXkgi2kdkXaqkxrnRo",
+    "name": "Meurig Draig",
+    "inventory": {
+      "items": [
+        {
+          "id": "item-mqu1vat1-0-w8ef",
+          "quantity": "1",
+          "image": "",
+          "icon": "*",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "imagePosition": "center",
+          "category": "weapon",
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "infoRows": [],
+          "tags": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "type": "Waffe",
+          "imageFormat": "square",
+          "name": "Hauptwaffe"
+        },
+        {
+          "icon": "*",
+          "image": "",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "category": "armor",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "infoRows": [],
+          "type": "Rüstung",
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-1-exvo",
+          "tags": "",
+          "name": "Rüstung / Schutz",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "quantity": "1"
+        },
+        {
+          "type": "Ausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "tags": "",
+          "name": "Reiseausrüstung",
+          "image": "",
+          "category": "equipment",
+          "infoRows": [],
+          "imageFit": "contain",
+          "id": "item-mqu1vat1-2-0fx2",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imagePosition": "center",
+          "quantity": "1"
+        },
+        {
+          "quantity": "1",
+          "imagePosition": "center",
+          "icon": "*",
+          "imageFormat": "square",
+          "image": "",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "imageFit": "contain",
+          "category": "potions",
+          "type": "Trinktur",
+          "tags": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "id": "item-mqu1vat1-3-2lgm",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "icon": "*",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "type": "Dokument",
+          "id": "item-mqu1vat1-4-ajrj",
+          "tags": "",
+          "name": "Dokumente / Urkunden",
+          "image": "",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "infoRows": [],
+          "category": "documents"
+        },
+        {
+          "id": "item-mqu1vat1-5-5kao",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "category": "other",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "imageFit": "contain",
+          "infoRows": [],
+          "icon": "*",
+          "name": "Persönlicher Gegenstand",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "type": "Sonstiges",
+          "imagePosition": "center",
+          "tags": ""
+        },
+        {
+          "templateName": "Ceffyl-Pferd",
+          "registerCategory": "pferde",
+          "image": "https://i.imgur.com/DVqEI6P.jpeg",
+          "type": "Ceffyl-Pferd",
+          "individualizedAt": "2026-10-11T19:46:45.503Z",
+          "quantity": "1",
+          "description": "Sir Meurigs Ceffyl. Ein altes Pferd in seinen letzten Jahren.",
+          "name": "Emrys",
+          "instanceId": "meurig-emrys",
+          "id": "meurig-emrys",
+          "itemDbKey": "",
+          "creatureId": "companion-meurig-emrys",
+          "imagePosition": "center",
+          "itemStorageMode": "character",
+          "attributes": [],
+          "templateId": "",
+          "ownerCharacterId": "E8HXkgi2kdkXaqkxrnRo",
+          "originItemDbKey": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "ownerCharacterName": "Meurig Draig",
+          "category": "companion",
+          "imageFormat": "portrait"
+        }
+      ],
+      "healthColor": "#5c7f20",
+      "carryValue": "Noch festlegen",
+      "portraitFit": "cover",
+      "infoRows": [],
+      "moneyNotice": "",
+      "name": "Meurig Draig",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "portraitFormat": "portrait",
+      "equipmentQuiz": {
+        "resultText": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0,
+        "updatedAt": "",
+        "status": ""
+      },
+      "title": "Charakter-Inventar",
+      "portrait": "https://i.imgur.com/yf6v066.jpeg",
+      "role": "Ritter & Justiziar von Gwynthor",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "portraitPosition": "top",
+      "moneyState": {
+        "silver": 0,
+        "totalCopper": 0,
+        "gold": 0,
+        "copper": 0
+      },
+      "companions": [
+        {
+          "description": "Sir Meurigs Ceffyl. Ein altes Pferd in seinen letzten Jahren.",
+          "creatureId": "companion-meurig-emrys",
+          "imageFit": "contain",
+          "infoRows": [],
+          "species": "Ceffyl-Pferd",
+          "imagePosition": "center",
+          "statusColor": "#5c7f20",
+          "name": "Emrys",
+          "summary": "Sir Meurigs Ceffyl. Ein altes Pferd in seinen letzten Jahren.",
+          "attributes": [],
+          "inventoryItemId": "meurig-emrys",
+          "imageFormat": "portrait",
+          "role": "Reittier",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "image": "https://i.imgur.com/DVqEI6P.jpeg",
+          "status": "Gesund"
+        }
+      ],
+      "revision": 1791748002303,
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "status": "Gesund",
+      "carryLabel": "Traglast",
+      "level": "Justiziar der Grafschaft Celtigerns Wacht",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten"
+    },
+    "updatedAt": "2026-10-11T19:46:42.303Z"
+  }
+}

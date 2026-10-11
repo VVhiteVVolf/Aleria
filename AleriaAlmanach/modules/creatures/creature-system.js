@@ -37,12 +37,14 @@ import {
   makeCreatureExportPayload,
   normalizeCreatureImportPayload,
   sanitizeCreature
-} from './creature-model.js?v=20260928-equipment-art-v4';
+} from './creature-model.js?v=20261011-creature-groups-v1';
 import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
   isBuiltinCreatureId
-} from './creature-catalog.js?v=20260928-equipment-art-v4';
+} from './creature-catalog.js?v=20261011-household-v1';
+import { getCreatureClassification } from './creature-classification.js?v=20261011-creature-groups-v1';
+import { renderCreatureGroups } from './creature-library-view.js?v=20261011-creature-groups-v1';
 import { selectChangedSections } from '../characters/character-save-guard.js?v=20260808-character-storage-audit-v1';
 
 const state = {
@@ -252,6 +254,7 @@ function matchesSearch(creature, needle) {
   const profile = creature.combatProfile || {};
   const text = [
     creature.name, creature.type, creature.species, creature.habitat, creature.size,
+    ...Object.values(getCreatureClassification(creature)), creature.itemOrigin?.ownerCharacterName,
     creature.notes, creature.loot?.notes,
     ...(creature.loot?.items || []).map(item => `${item.name} ${item.notes}`),
     ...(profile.weapons || []).map(item => `${item.name} ${item.damageFormula} ${item.damageType} ${item.properties}`),
@@ -287,6 +290,8 @@ function renderLibrary() {
   }
   const needle = getSearchNeedle();
   const visible = state.creatures.filter(creature => matchesSearch(creature, needle));
+  const groups = [...root.querySelectorAll('[data-creature-group]')];
+  const openPaths = needle || !groups.length ? null : new Set(groups.filter(group => group.open).map(group => group.dataset.creatureGroup));
   root.innerHTML = `
     <div class="creature-library-toolbar">
       <div class="creature-library-summary"><strong>${state.creatures.length}</strong> Kreaturen · Vorlagen dürfen beliebig oft dupliziert werden.</div>
@@ -296,9 +301,9 @@ function renderLibrary() {
         <button type="button" class="creature-primary-button" data-creature-action="new">+ Kreatur</button>
       </div>
     </div>
-    <div class="creature-grid">
-      ${visible.map(renderCreatureCard).join('')}
-      ${visible.length ? '' : `<div class="creature-library-state">${needle ? 'Keine Kreatur passt zur Archivsuche.' : 'Noch keine Kreaturen gespeichert. Lege die erste Vorlage an.'}</div>`}
+    <div class="creature-library-groups">
+      ${visible.length ? renderCreatureGroups(visible, { renderCard: renderCreatureCard, escape: escapeHtml, openPaths })
+        : `<div class="creature-library-state">${needle ? 'Keine Kreatur passt zur Archivsuche.' : 'Noch keine Kreaturen gespeichert. Lege die erste Vorlage an.'}</div>`}
     </div>`;
 }
 
@@ -309,7 +314,7 @@ function renderCreatureCard(creature) {
   const ac = getArmorClass(profile);
   const instanceLabel = creature.instanceOrdinal > 0
     ? `Instanz ${creature.instanceOrdinal}`
-    : (isBuiltinCreatureId(creature.id) ? 'Grundvorlage' : 'Vorlage');
+    : (creature.itemOrigin?.ownerCharacterId ? 'Begleiter' : isBuiltinCreatureId(creature.id) ? 'Grundvorlage' : 'Vorlage');
   return `
     <article class="creature-card" data-creature-id="${escapeHtml(creature.id)}">
       <button class="creature-card-open" type="button" data-creature-action="open" data-creature-id="${escapeHtml(creature.id)}">
@@ -324,6 +329,7 @@ function renderCreatureCard(creature) {
           <small>${escapeHtml(profile.abilities.filter(ability => ability.active).map(ability => ability.name).slice(0, 3).join(' · '))}</small>
         </span>
       </button>
+      ${creature.itemOrigin?.ownerCharacterId ? `<button type="button" class="creature-owner-tag" data-creature-action="open-owner" data-character-id="${escapeHtml(creature.itemOrigin.ownerCharacterId)}">${escapeHtml(creature.itemOrigin.ownerCharacterName || 'Besitzer öffnen')}</button>` : ''}
       <div class="creature-card-actions">
         <button type="button" data-creature-action="duplicate" data-creature-id="${escapeHtml(creature.id)}">Duplizieren</button>
         <button type="button" data-creature-action="export-one" data-creature-id="${escapeHtml(creature.id)}">Export</button>
@@ -393,6 +399,9 @@ function renderSheet() {
         ${renderField('Typ', 'type', creature.type, { placeholder: 'Untoter, Tier, NSC …' })}
         ${renderField('Gattung', 'species', creature.species)}
         ${renderField('Habitat', 'habitat', creature.habitat)}
+        ${renderField('Register-Gattung', 'classification.genus', creature.classification.genus, { placeholder: getCreatureClassification(creature).genus })}
+        ${renderField('Register-Ort', 'classification.location', creature.classification.location, { placeholder: getCreatureClassification(creature).location })}
+        ${renderField('Haus (Menschen)', 'classification.house', creature.classification.house, { placeholder: 'Haus Draig' })}
         ${renderField('Bedrohungsgrad', 'challengeRating', creature.challengeRating, { type: 'number', min: 0, max: 30 })}
         <label class="creature-field"><span>Größe</span><select data-creature-field="size">${SIZE_OPTIONS.map(size => `<option value="${size}"${size === creature.size ? ' selected' : ''}>${size}</option>`).join('')}</select></label>
         ${renderField('Stufe', 'level', creature.level, { type: 'number', min: 1, max: 30 })}
@@ -595,7 +604,7 @@ function collectDraftFromForm() {
     const value = element.type === 'number' ? readNumber(element) : element.value;
     if (path === 'loot.currency') next.loot.currency = value;
     else if (path === 'loot.notes') next.loot.notes = value;
-    else next[path] = value;
+    else setAtPath(next, path, value);
   });
   const profile = clone(next.combatProfile);
   root.querySelectorAll('[data-creature-profile-path]').forEach(element => {
@@ -1035,6 +1044,7 @@ function handleClick(event) {
   const action = trigger.dataset.creatureAction;
   const id = trigger.dataset.creatureId || '';
   if (action === 'new') openSheet();
+  else if (action === 'open-owner') window.openCharProfile?.(trigger.dataset.characterId);
   else if (action === 'open') openSheet(id);
   else if (action === 'close') closeSheet();
   else if (action === 'save') saveCurrent();

@@ -1,5 +1,7 @@
 # Idwals und Anarauts Gefährten
 
+Aktualisierung vom 11. Oktober 2026: Merfyn steht aufgrund der neuen Pferde-Obergrenze auf Stufe 3. Bestehende Trefferpunkte, Ressourcen und Individualwerte bleiben erhalten. Die folgende Tabelle dokumentiert die ursprüngliche Übernahme vom 25. September. Die neu hinzugekommenen Tiere und die Registerordnung stehen in [Draig-Haushaltsbegleiter](DRAIG_HOUSEHOLD_COMPANIONS.md).
+
 Am 25. September 2026 online angelegt und mit den bestehenden Inventaren verknüpft.
 
 | Besitzer | Gefährte | Art | Stufe | TP | RK | Kreatur-ID |

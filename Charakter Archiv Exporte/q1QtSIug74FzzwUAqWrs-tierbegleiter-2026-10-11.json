@@ -1,0 +1,706 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-11T19:46:42.303Z",
+  "character": {
+    "id": "q1QtSIug74FzzwUAqWrs",
+    "name": "Gawain Draig",
+    "inventory": {
+      "role": "Mundschenk des Grafen, Gwynthor",
+      "hitpoints": "49 / 49 LP",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "portrait": "https://i.imgur.com/BceZTJo.jpeg",
+      "healthColor": "#5c7f20",
+      "showInfoTable": false,
+      "portraitFormat": "portrait",
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "status": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false,
+        "step": 0,
+        "resultText": ""
+      },
+      "moneyState": {
+        "copper": 0,
+        "totalCopper": 0,
+        "gold": 0,
+        "silver": 0
+      },
+      "items": [
+        {
+          "value": {
+            "silver": 5,
+            "gold": 5,
+            "copper": 0,
+            "totalCopper": 5500,
+            "pfennig": 0
+          },
+          "image": "https://i.imgur.com/38Na5EY.png",
+          "itemStorageMode": "character",
+          "valuationNote": "Ritterschwert: 2–5 GT im Waffenregister. Gute Draig-Ausführung 5 GT, sorgfältiger Schliff +10 %.",
+          "itemDbKey": "",
+          "individualizedAt": "",
+          "equipped": true,
+          "originItemDbKey": "",
+          "templateName": "Ritterschwert",
+          "infoRows": [
+            {
+              "icon": "◆",
+              "value": "Aktiv geführt",
+              "label": "Status"
+            },
+            {
+              "label": "Qualität",
+              "value": "Sorgfältiger Schliff · +1 Schaden (nichtmagisch)"
+            }
+          ],
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-0-w8ef",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 6
+            },
+            {
+              "value": 2,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 7,
+              "label": "Zuverlässigkeit"
+            },
+            {
+              "value": 6,
+              "label": "Handhabung"
+            }
+          ],
+          "icon": "https://i.imgur.com/38Na5EY.png",
+          "equipmentLink": {
+            "combatEntryId": "gawain-draig-knightly-sword",
+            "schemaVersion": 1,
+            "kind": "weapon"
+          },
+          "ownerCharacterId": "q1QtSIug74FzzwUAqWrs",
+          "registerCategory": "waffen",
+          "valuation": {
+            "maxCopper": 5500,
+            "minCopper": 5500
+          },
+          "quantity": "1",
+          "description": "Die schmale Hohlkehle fängt das Licht, während sich am Knauf der Drache seines Hauses windet. Drachenzahn ist kein sagenumwobenes Relikt: nur guter Stahl, sorgfältig geschliffen und einem jungen Ritter zuverlässig vertraut.",
+          "name": "Drachenzahn · Draig-Ritterschwert",
+          "type": "Ritterschwert",
+          "ownerCharacterName": "Gawain Draig",
+          "imageFormat": "square",
+          "acquiredAt": "",
+          "templateId": "standard:waffen-rustungen:ritterschwert",
+          "combatDefinition": {
+            "weaponType": "sword",
+            "notes": "Sorgfältiger Schliff: +1 Waffenschaden. Nichtmagisch. Draig-Ritterschwert für die Schwertfolgen des Drachentanzes.",
+            "triggerRules": [
+              {
+                "activation": "passive",
+                "name": "Drachenkerbe",
+                "sourceRelation": "self",
+                "description": "Bei einem kritischen Treffer mit Drachenzahn verursacht der präzise Kerbenschliff 2 zusätzlichen Schaden. Gilt auch für mit diesem Schwert ausgeführte Kampftechniken; der Zusatz wird nicht verdoppelt.",
+                "condition": "critical-hit",
+                "recipient": "actor",
+                "frequency": "always",
+                "actionKinds": [
+                  "weapon",
+                  "technique"
+                ],
+                "effects": {
+                  "damageModifier": 2
+                },
+                "id": "drachenzahn-drachenkerbe",
+                "phase": "pre-damage"
+              }
+            ],
+            "attackBonus": 0,
+            "attackAttribute": "strength",
+            "damageType": "Hieb",
+            "range": "Nahkampf",
+            "damageBonus": 1,
+            "kind": "weapon",
+            "training": "martial",
+            "versatileDamageFormula": "1d10",
+            "proficient": true,
+            "requirements": "",
+            "damageFormula": "1d8",
+            "aiInstructions": "Verwende 1W8 bei einhändiger und 1W10 ausschließlich bei ausdrücklich zweihändiger Führung.",
+            "properties": "Vielseitig · 1W10 bei zweihändiger Führung"
+          },
+          "tags": "Vielseitig · 1W10 bei zweihändiger Führung",
+          "category": "weapon",
+          "weight": "1,5 kg"
+        },
+        {
+          "valuationNote": "Ritterplatte: 5–40 GT im Rüstungsregister. Schlichte Jungritterplatte 8 GT, angepasste Platten +10 %.",
+          "category": "armor",
+          "icon": "https://i.imgur.com/7siJPXG.png",
+          "ownerCharacterName": "Gawain Draig",
+          "registerCategory": "ruestungen",
+          "itemDbKey": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "armor",
+            "combatEntryId": "gawain-draig-armor"
+          },
+          "quantity": "1",
+          "combatDefinition": {
+            "kind": "armor",
+            "properties": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
+            "armorCategory": "heavy",
+            "triggerRules": [],
+            "armorClassBonus": 0,
+            "mechanics": {},
+            "notes": "Schadensreduktion 2 gegen Hieb und Stich; kein RK-Bonus.",
+            "dexterityMode": "none",
+            "baseArmorClass": 15,
+            "dexterityUnlockLevel": 0,
+            "dexterityCap": 2,
+            "damageProtection": {
+              "damageTypes": [
+                "hieb",
+                "stich"
+              ],
+              "excludedDamageTypes": [],
+              "name": "Silberschuppen",
+              "amount": 2
+            },
+            "armorKind": "armor"
+          },
+          "houseArmor": {
+            "regionId": "celtigerns-wacht",
+            "minimumLevel": 4,
+            "rankId": "jungritter",
+            "houseId": "haus-draig",
+            "armorClassRange": "13–15"
+          },
+          "flavorText": "Sorgfältig ineinandergreifende Platten unter dem Draig-Wappenrock lenken schneidende Klingen und stechende Spitzen ab. Silberschuppe ist ein verlässlicher, nichtmagischer Harnisch für den jungen Ritter.",
+          "acquiredAt": "",
+          "templateId": "standard:waffen-rustungen:ritterplatte",
+          "weight": "25 kg",
+          "imagePosition": "center",
+          "templateName": "Ritter-Plattenrüstung",
+          "individualizedAt": "",
+          "tags": "Plattenrüstung · Draig-Wappenrock · geschlossener Helm",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-1-exvo",
+          "infoRows": [
+            {
+              "label": "Ausführung",
+              "value": "Draig-Jungritter",
+              "icon": "✦"
+            },
+            {
+              "icon": "◆",
+              "value": "Angelegt",
+              "label": "Status"
+            },
+            {
+              "value": "Schadensreduktion 2 gegen Hieb und Stich; kein RK-Bonus.",
+              "label": "Qualität"
+            }
+          ],
+          "imageFit": "contain",
+          "type": "Draig-Jungritter-Plattenrüstung",
+          "ownerCharacterId": "q1QtSIug74FzzwUAqWrs",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/gawain-silberschuppe-v4.png",
+          "value": {
+            "gold": 8,
+            "silver": 8,
+            "totalCopper": 8800,
+            "pfennig": 0,
+            "copper": 0
+          },
+          "equipped": true,
+          "name": "Silberschuppe · Draig-Jungritter-Plattenrüstung",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 1
+            },
+            {
+              "label": "Schutz",
+              "value": 8
+            },
+            {
+              "label": "Wert",
+              "value": 7
+            },
+            {
+              "label": "Seltenheit",
+              "value": 3
+            },
+            {
+              "label": "Zuverlässigkeit",
+              "value": 7
+            },
+            {
+              "label": "Handhabung",
+              "value": 4
+            }
+          ],
+          "originItemDbKey": "",
+          "valuation": {
+            "maxCopper": 8800,
+            "minCopper": 8800
+          },
+          "description": "Sorgfältig ineinandergreifende Platten unter dem Draig-Wappenrock lenken schneidende Klingen und stechende Spitzen ab. Silberschuppe ist ein verlässlicher, nichtmagischer Harnisch für den jungen Ritter.",
+          "itemStorageMode": "character"
+        },
+        {
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "weapon",
+            "combatEntryId": "gawain-draig-dagger"
+          },
+          "value": {
+            "copper": 0,
+            "totalCopper": 200,
+            "pfennig": 0,
+            "gold": 0,
+            "silver": 2
+          },
+          "individualizedAt": "",
+          "image": "https://i.imgur.com/caR593j.png",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "quantity": "1",
+          "attributes": [],
+          "description": "Kompakter Draig-Dolch als leichte Seiten- und Wurfwaffe.",
+          "ownerCharacterId": "q1QtSIug74FzzwUAqWrs",
+          "valuationNote": "Schätzung anhand des Stahlschwerts (5 ST): kleinere Klinge, etwa 40 % Material- und Schmiedeaufwand.",
+          "category": "weapon",
+          "valuation": {
+            "maxCopper": 200,
+            "minCopper": 200
+          },
+          "icon": "https://i.imgur.com/caR593j.png",
+          "weight": "0,5 kg",
+          "equipped": false,
+          "id": "gawain-draig-dagger-item",
+          "name": "Draig-Dolch",
+          "ownerCharacterName": "Gawain Draig",
+          "acquiredAt": "",
+          "type": "Dolch",
+          "infoRows": [
+            {
+              "icon": "†",
+              "value": "1W4 Stich",
+              "label": "Schaden"
+            },
+            {
+              "icon": "◇",
+              "value": "Finesse · leicht",
+              "label": "Führung"
+            },
+            {
+              "icon": "◆",
+              "label": "Status",
+              "value": "Seitenwaffe"
+            }
+          ],
+          "imageFit": "contain",
+          "combatDefinition": {
+            "requirements": "",
+            "damageBonus": 0,
+            "damageType": "Stich",
+            "versatileDamageFormula": "",
+            "notes": "Seitenwaffe des Hauses Draig.",
+            "range": "Nahkampf",
+            "training": "simple",
+            "weaponType": "dagger",
+            "triggerRules": [],
+            "damageFormula": "1d4",
+            "properties": "Finesse · leicht · Wurfwaffe",
+            "aiInstructions": "Kann mit Kraft oder Geschick geführt werden; der aktuelle Bogen verwendet Geschick.",
+            "proficient": true,
+            "kind": "weapon",
+            "attackAttribute": "dexterity",
+            "attackBonus": 0
+          },
+          "tags": "Finesse · leicht · Wurfwaffe",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "itemDbKey": ""
+        },
+        {
+          "attributes": [],
+          "name": "Reisepaket · gewachste Hülle",
+          "id": "item-mqu1vat1-2-0fx2",
+          "individualizedAt": "",
+          "category": "equipment",
+          "ownerCharacterName": "",
+          "description": "Ein fest verschnürtes Bündel für die nächste Wegstrecke. Gewachstes Tuch hält Nieselregen vom Inhalt fern; Griff und Riemen sind vom häufigen Tragen weich geworden.",
+          "templateName": "Reisepaket (klein)",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "tags": "",
+          "quantity": "1",
+          "imageFormat": "square",
+          "type": "Ausrüstung",
+          "acquiredAt": "",
+          "templateId": "standard:gemischtwarenhandler:reisepaket-klein",
+          "imageFit": "contain",
+          "infoRows": [
+            {
+              "value": "Wetterfeste Hülle · schützt den Reisevorrat vor Nässe.",
+              "label": "Qualität"
+            }
+          ],
+          "imagePosition": "center",
+          "weight": "",
+          "registerCategory": "speisen",
+          "equipmentLink": null,
+          "image": "https://i.imgur.com/UbjFi5T.png",
+          "value": {
+            "copper": 13,
+            "totalCopper": 13.2,
+            "pfennig": 20,
+            "gold": 0,
+            "silver": 0
+          },
+          "equipped": false,
+          "combatDefinition": null,
+          "icon": "https://i.imgur.com/UbjFi5T.png",
+          "valuation": {
+            "maxCopper": 13.2,
+            "minCopper": 13.2
+          },
+          "valuationNote": "Kleines Reisepaket: 12 KT im Register. Wetterfeste Verpackung +10 %."
+        },
+        {
+          "templateId": "standard:gemischtwarenhandler:verbandstoff",
+          "acquiredAt": "",
+          "description": "Das Wachstuch knistert leise beim Öffnen. Darin liegen eng gerollte Leinenstreifen und eine kleine Portion Kräuterpaste, sauber getrennt vom Staub des Reisegepäcks.",
+          "ownerCharacterName": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "name": "Wundverband · Draig-Reisevorrat",
+          "imageFormat": "square",
+          "weight": "0,2 kg",
+          "itemDbKey": "",
+          "infoRows": [
+            {
+              "label": "Wirkung",
+              "value": "Leinen und Kräuterpaste zur Versorgung einer Wunde."
+            },
+            {
+              "value": "Gewachste Hülle · bleibt im Reisegepäck trocken und sauber.",
+              "label": "Qualität"
+            },
+            {
+              "value": "Ein Päckchen je Versorgung; Heilkunde und Szene bestimmen das Ergebnis.",
+              "label": "Anwendung"
+            }
+          ],
+          "imageFit": "contain",
+          "type": "Verbandpäckchen",
+          "registerCategory": "alchemie",
+          "tags": "Verband, Wundversorgung, Verbrauchsgut, Draig",
+          "attributes": [
+            {
+              "label": "Versorgung",
+              "value": 5
+            },
+            {
+              "value": 2,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 2
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlässigkeit",
+              "value": 7
+            },
+            {
+              "value": 7,
+              "label": "Handhabung"
+            }
+          ],
+          "equipmentLink": null,
+          "quantity": "1",
+          "ownerCharacterId": "",
+          "id": "item-mqu1vat1-3-2lgm",
+          "value": {
+            "copper": 27,
+            "pfennig": 50,
+            "silver": 0,
+            "gold": 0,
+            "totalCopper": 27.5
+          },
+          "imagePosition": "center",
+          "image": "https://i.imgur.com/UbjFi5T.png",
+          "icon": "https://i.imgur.com/UbjFi5T.png",
+          "valuationNote": "Verbandstoff-Paket: 25 KT im Register. Saubere Einzelverpackung in Wachstuch +10 %.",
+          "individualizedAt": "",
+          "valuation": {
+            "minCopper": 27.5,
+            "maxCopper": 27.5
+          },
+          "itemStorageMode": "character",
+          "inventoryUseMode": "consume",
+          "category": "potions",
+          "originItemDbKey": "",
+          "templateName": "Verbandstoff (Paket)"
+        },
+        {
+          "acquiredAt": "",
+          "combatDefinition": null,
+          "ownerCharacterName": "",
+          "equipmentLink": null,
+          "imageFormat": "square",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "equipped": false,
+          "valuationNote": "Persönliche Unterlagen und Urkunden haben keinen regulären Warenwert.",
+          "imageFit": "contain",
+          "infoRows": [],
+          "icon": "*",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "valuation": {
+            "maxCopper": 0,
+            "minCopper": 0
+          },
+          "quantity": "1",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "value": {
+            "gold": 0,
+            "pfennig": 0,
+            "silver": 0,
+            "copper": 0,
+            "totalCopper": 0
+          },
+          "image": "",
+          "id": "item-mqu1vat1-4-ajrj",
+          "name": "Dokumente / Urkunden",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "type": "Dokument",
+          "tags": "",
+          "individualizedAt": "",
+          "category": "documents"
+        },
+        {
+          "templateId": "",
+          "attributes": [],
+          "templateName": "Rhyfel",
+          "individualizedAt": "2026-10-11T19:46:45.521Z",
+          "originItemDbKey": "",
+          "imageFormat": "landscape",
+          "creatureId": "companion-tanor",
+          "imagePosition": "top",
+          "registerCategory": "pferde",
+          "name": "Tanor",
+          "ownerCharacterName": "Gawain Draig",
+          "itemStorageMode": "character",
+          "quantity": "1",
+          "category": "companion",
+          "id": "gawain-tanor",
+          "ownerCharacterId": "q1QtSIug74FzzwUAqWrs",
+          "instanceId": "gawain-tanor",
+          "type": "Rhyfel",
+          "imageFit": "cover",
+          "infoRows": [],
+          "itemDbKey": "",
+          "description": "Tanor ist ein junger, prachtvoller Rhyfelhengst, den Gawain zu seinem achtzehnten Geburtstag von seinem Onkel Sir Owain, dem berühmten Pferdezüchter, geschenkt bekam. Owain nannte ihn damals „ein Ross für Grünschnäbel mit zu viel Stolz im Blick\" – und selten hatte er so recht. Tanor ist ein Tier von makelloser Statur und unverschämtem Selbstbewusstsein, mit einem Fell, das in der Sonne wie poliertes Gold glänzt, und einer Mähne, die eher gepflegt als geritten werden will.\n\nEr ist in jeder Hinsicht Gawains Spiegelbild – eitel, temperamentvoll, eigensinnig. Ein einziger Schlammfleck genügt, um ihn in einen hysterischen Anfall zu treiben. Bei Regen reitet er keinen Schritt freiwillig, und wehe, man versucht ihn dazu zu überreden: dann wird geschnauft, geschnaubt und gestampft, bis selbst der Himmel kleinlaut wird. Tanor hat eine ausgesprochene Abneigung gegen alle anderen Pferderassen außer Rhyfel, Ceffyl und Hest – den Rest ignoriert er mit kühler Verachtung. Dafür liebt er rote Äpfel, und zwar so sehr, dass er Gawain mit einem gezielten Biss oder Tritt daran erinnert, wenn die Fütterung nicht pünktlich erfolgt.\n\nEin schwieriges Ross – aber eines, das seinem Reiter gleicht: stolz, schön, eigenwillig – und zu gut, um im Dreck zu stehen.",
+          "image": "https://i.imgur.com/Bkp2EVo.png"
+        }
+      ],
+      "companions": [
+        {
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 7
+            },
+            {
+              "value": 6,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 7,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 3
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "infoRows": [
+            {
+              "label": "Art",
+              "value": "Rhyfel-Hengst"
+            },
+            {
+              "value": "Gawain Draig",
+              "label": "Besitzer"
+            },
+            {
+              "label": "Rolle",
+              "value": "Reittier"
+            },
+            {
+              "label": "Kreaturbogen",
+              "value": "Tanor · Kreaturenregister"
+            }
+          ],
+          "statusColor": "#c2883e",
+          "name": "Tanor",
+          "inventoryItemId": "gawain-tanor",
+          "summary": "Eitler, prachtvoller Rhyfelhengst – liebt rote Äpfel, hasst Schlamm und Regen.",
+          "creatureId": "companion-tanor",
+          "image": "https://i.imgur.com/YcL98jJ.png",
+          "imagePosition": "top",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "status": "Prächtig, aber launisch",
+          "description": "Tanor ist ein junger, prachtvoller Rhyfelhengst, den Gawain zu seinem achtzehnten Geburtstag von seinem Onkel Sir Owain, dem berühmten Pferdezüchter, geschenkt bekam. Owain nannte ihn damals „ein Ross für Grünschnäbel mit zu viel Stolz im Blick\" – und selten hatte er so recht. Tanor ist ein Tier von makelloser Statur und unverschämtem Selbstbewusstsein, mit einem Fell, das in der Sonne wie poliertes Gold glänzt, und einer Mähne, die eher gepflegt als geritten werden will.\n\nEr ist in jeder Hinsicht Gawains Spiegelbild – eitel, temperamentvoll, eigensinnig. Ein einziger Schlammfleck genügt, um ihn in einen hysterischen Anfall zu treiben. Bei Regen reitet er keinen Schritt freiwillig, und wehe, man versucht ihn dazu zu überreden: dann wird geschnauft, geschnaubt und gestampft, bis selbst der Himmel kleinlaut wird. Tanor hat eine ausgesprochene Abneigung gegen alle anderen Pferderassen außer Rhyfel, Ceffyl und Hest – den Rest ignoriert er mit kühler Verachtung. Dafür liebt er rote Äpfel, und zwar so sehr, dass er Gawain mit einem gezielten Biss oder Tritt daran erinnert, wenn die Fütterung nicht pünktlich erfolgt.\n\nEin schwieriges Ross – aber eines, das seinem Reiter gleicht: stolz, schön, eigenwillig – und zu gut, um im Dreck zu stehen.",
+          "role": "Reittier",
+          "species": "Rhyfel-Hengst"
+        }
+      ],
+      "moneyNotice": "",
+      "revision": 1791748002303,
+      "infoRows": [],
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "portraitFit": "cover",
+      "carryLabel": "Traglast",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "carryValue": "Noch festlegen",
+      "status": "Gesund",
+      "name": "Gawain Draig",
+      "portraitPosition": "top",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "title": "Charakter-Inventar",
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "characterId": "q1QtSIug74FzzwUAqWrs"
+    },
+    "updatedAt": "2026-10-11T19:46:42.303Z"
+  }
+}

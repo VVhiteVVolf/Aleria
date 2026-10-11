@@ -1,0 +1,500 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-11T19:46:42.303Z",
+  "character": {
+    "id": "fcNfoBWpVNvK3ORQUJwX",
+    "name": "Tudwal Draig",
+    "inventory": {
+      "companions": [
+        {
+          "creatureId": "companion-tudwal-ceiniog",
+          "name": "Ceiniog",
+          "attributes": [],
+          "status": "Gesund",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "role": "Reittier",
+          "imageFormat": "portrait",
+          "inventoryItemId": "tudwal-ceiniog",
+          "statusColor": "#5c7f20",
+          "description": "Tudwals Rhyfel. Ein gutes und loyales Pferd.",
+          "summary": "Tudwals Rhyfel. Ein gutes und loyales Pferd.",
+          "species": "Rhyfel-Pferd",
+          "imagePosition": "center",
+          "image": "https://i.imgur.com/hjWBWQN.jpeg",
+          "imageFit": "contain",
+          "infoRows": []
+        },
+        {
+          "role": "Gefährte",
+          "image": "https://i.imgur.com/HhtmeUx.jpeg",
+          "creatureId": "companion-tudwal-pryderi",
+          "status": "Noch festlegen",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "attributes": [],
+          "summary": "Ein Pfau, den Tudwal eigentlich seiner zukünftigen Frau zur Verlobung geschenkt hat. Diese hat ihn allerdings im Garten der Draigs gelassen für „Später“. Pryderi sorgt ständig für Tudwals Kopfschmerzen.",
+          "statusColor": "#5c7f20",
+          "name": "Pryderi",
+          "species": "Pfau",
+          "description": "Ein Pfau, den Tudwal eigentlich seiner zukünftigen Frau zur Verlobung geschenkt hat. Diese hat ihn allerdings im Garten der Draigs gelassen für „Später“. Pryderi sorgt ständig für Tudwals Kopfschmerzen.",
+          "imageFit": "contain",
+          "infoRows": [],
+          "imagePosition": "center",
+          "imageFormat": "portrait",
+          "inventoryItemId": "tudwal-pryderi"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "infoRows": [],
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon",
+          "label": "Waffen"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor",
+          "label": "Rüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment",
+          "label": "Ausrüstung"
+        },
+        {
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other",
+          "label": "Sonstiges"
+        }
+      ],
+      "level": "Haus Draig, Celtigerns Wacht",
+      "characterId": "fcNfoBWpVNvK3ORQUJwX",
+      "healthColor": "#5c7f20",
+      "role": "Adjutant des Kämmerers des Grafen, Gwynthor",
+      "title": "Charakter-Inventar",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "portraitFit": "cover",
+      "moneyNotice": "",
+      "carryLabel": "Traglast",
+      "portrait": "https://i.imgur.com/9E95Xwq.png",
+      "carryValue": "Noch festlegen",
+      "hitpoints": "TP / Zustand",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "revision": 1791748002303,
+      "moneyState": {
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0,
+        "copper": 0
+      },
+      "status": "Gesund",
+      "items": [
+        {
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "individualizedAt": "",
+          "type": "Waffe",
+          "image": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "itemDbKey": "",
+          "id": "item-mqu1vat1-0-w8ef",
+          "itemStorageMode": "character",
+          "category": "weapon",
+          "imageFit": "contain",
+          "infoRows": [],
+          "imagePosition": "center",
+          "originItemDbKey": "",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "name": "Hauptwaffe",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "quantity": "1",
+          "icon": "*",
+          "imageFormat": "square",
+          "ownerCharacterId": ""
+        },
+        {
+          "originItemDbKey": "",
+          "itemDbKey": "",
+          "quantity": "1",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-1-exvo",
+          "type": "Rüstung",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "image": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "category": "armor",
+          "individualizedAt": "",
+          "imagePosition": "center",
+          "icon": "*",
+          "acquiredAt": "",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "itemStorageMode": "character",
+          "tags": "",
+          "name": "Rüstung / Schutz",
+          "weight": "Noch festlegen"
+        },
+        {
+          "image": "",
+          "ownerCharacterName": "",
+          "itemDbKey": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "originItemDbKey": "",
+          "icon": "*",
+          "tags": "",
+          "individualizedAt": "",
+          "name": "Reiseausrüstung",
+          "id": "item-mqu1vat1-2-0fx2",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "quantity": "1",
+          "ownerCharacterId": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "weight": "Noch festlegen",
+          "type": "Ausrüstung",
+          "category": "equipment",
+          "imageFit": "contain",
+          "infoRows": [],
+          "acquiredAt": "",
+          "itemStorageMode": "character"
+        },
+        {
+          "itemDbKey": "",
+          "ownerCharacterName": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "itemStorageMode": "character",
+          "tags": "",
+          "acquiredAt": "",
+          "image": "",
+          "individualizedAt": "",
+          "imageFormat": "square",
+          "infoRows": [],
+          "imageFit": "contain",
+          "icon": "*",
+          "category": "potions",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "ownerCharacterId": "",
+          "type": "Trinktur",
+          "id": "item-mqu1vat1-3-2lgm",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "originItemDbKey": "",
+          "quantity": "1"
+        },
+        {
+          "tags": "",
+          "ownerCharacterId": "",
+          "imageFormat": "square",
+          "name": "Dokumente / Urkunden",
+          "acquiredAt": "",
+          "originItemDbKey": "",
+          "icon": "*",
+          "id": "item-mqu1vat1-4-ajrj",
+          "weight": "Noch festlegen",
+          "ownerCharacterName": "",
+          "quantity": "1",
+          "imagePosition": "center",
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "type": "Dokument",
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFit": "contain",
+          "infoRows": [],
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "category": "documents",
+          "individualizedAt": ""
+        },
+        {
+          "type": "Sonstiges",
+          "acquiredAt": "",
+          "originItemDbKey": "",
+          "weight": "Noch festlegen",
+          "category": "other",
+          "itemDbKey": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "individualizedAt": "",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-5-5kao",
+          "name": "Persönlicher Gegenstand",
+          "tags": "",
+          "ownerCharacterId": "",
+          "image": "",
+          "itemStorageMode": "character",
+          "quantity": "1",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*",
+          "ownerCharacterName": ""
+        },
+        {
+          "name": "Ceiniog",
+          "itemDbKey": "",
+          "ownerCharacterName": "Tudwal Draig",
+          "image": "https://i.imgur.com/hjWBWQN.jpeg",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "description": "Tudwals Rhyfel. Ein gutes und loyales Pferd.",
+          "imagePosition": "center",
+          "itemStorageMode": "character",
+          "quantity": "1",
+          "id": "tudwal-ceiniog",
+          "instanceId": "tudwal-ceiniog",
+          "individualizedAt": "2026-10-11T19:46:45.498Z",
+          "type": "Rhyfel-Pferd",
+          "creatureId": "companion-tudwal-ceiniog",
+          "ownerCharacterId": "fcNfoBWpVNvK3ORQUJwX",
+          "imageFormat": "portrait",
+          "attributes": [],
+          "originItemDbKey": "",
+          "category": "companion",
+          "imageFit": "contain",
+          "infoRows": [],
+          "templateName": "Rhyfel-Pferd"
+        },
+        {
+          "originItemDbKey": "",
+          "creatureId": "companion-tudwal-pryderi",
+          "category": "companion",
+          "infoRows": [],
+          "imageFit": "contain",
+          "attributes": [],
+          "ownerCharacterId": "fcNfoBWpVNvK3ORQUJwX",
+          "description": "Ein Pfau, den Tudwal eigentlich seiner zukünftigen Frau zur Verlobung geschenkt hat. Diese hat ihn allerdings im Garten der Draigs gelassen für „Später“. Pryderi sorgt ständig für Tudwals Kopfschmerzen.",
+          "imagePosition": "center",
+          "name": "Pryderi",
+          "ownerCharacterName": "Tudwal Draig",
+          "image": "https://i.imgur.com/HhtmeUx.jpeg",
+          "quantity": "1",
+          "individualizedAt": "2026-10-11T19:46:45.499Z",
+          "templateId": "",
+          "imageFormat": "portrait",
+          "id": "tudwal-pryderi",
+          "registerCategory": "vieh",
+          "itemDbKey": "",
+          "type": "Pfau",
+          "itemStorageMode": "character",
+          "templateName": "Pfau",
+          "instanceId": "tudwal-pryderi"
+        }
+      ],
+      "showInfoTable": false,
+      "name": "Tudwal Draig",
+      "portraitPosition": "top",
+      "portraitFormat": "portrait",
+      "equipmentQuiz": {
+        "open": false,
+        "step": 0,
+        "resultText": "",
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": ""
+      }
+    },
+    "updatedAt": "2026-10-11T19:46:42.303Z"
+  }
+}

@@ -1,5 +1,6 @@
-import { sanitizeCreature } from './creature-model.js?v=20260928-equipment-art-v4';
-import { DRAIG_COMPANION_SOURCES } from './catalog/draig-companions.js?v=20260925-companion-facts-v1';
+import { sanitizeCreature } from './creature-model.js?v=20261011-creature-groups-v1';
+import { DRAIG_COMPANION_SOURCES } from './catalog/draig-companions.js?v=20261011-horse-level-cap-v1';
+import { DRAIG_HOUSEHOLD_COMPANIONS } from './catalog/draig-household-companions.js?v=20261011-household-v1';
 import { TROLL_CREATURE_SOURCE } from './catalog/troll.js';
 import { FREKI_CREATURE_SOURCE } from './catalog/freki.js';
 
@@ -452,7 +453,7 @@ const BUILTIN_CREATURE_SOURCES = Object.freeze([
     habitat: 'Fenrirs Stall, irgendwo unter dreihundert anderen Gäulen',
     challengeRating: 1,
     size: 'Groß',
-    level: 4,
+    level: 3,
     portrait: 'https://i.imgur.com/UcjejAc.png',
     portraitCaption: 'Gaul, Fenrirs grauer, kriegsmüder Hest.',
     avatars: [
@@ -546,10 +547,10 @@ const BUILTIN_CREATURE_SOURCES = Object.freeze([
   }
 ]);
 
-const BUILTIN_CREATURE_IDS = new Set([...BUILTIN_CREATURE_SOURCES, TROLL_CREATURE_SOURCE, FREKI_CREATURE_SOURCE, ...DRAIG_COMPANION_SOURCES].map(creature => creature.id));
+const BUILTIN_CREATURE_IDS = new Set([...BUILTIN_CREATURE_SOURCES, TROLL_CREATURE_SOURCE, FREKI_CREATURE_SOURCE, ...DRAIG_COMPANION_SOURCES, ...DRAIG_HOUSEHOLD_COMPANIONS].map(creature => creature.id));
 
 export function getBuiltinCreatureTemplates() {
-  return [...BUILTIN_CREATURE_SOURCES, TROLL_CREATURE_SOURCE, FREKI_CREATURE_SOURCE, ...DRAIG_COMPANION_SOURCES].map(source => sanitizeCreature(source));
+  return [...BUILTIN_CREATURE_SOURCES, TROLL_CREATURE_SOURCE, FREKI_CREATURE_SOURCE, ...DRAIG_COMPANION_SOURCES, ...DRAIG_HOUSEHOLD_COMPANIONS].map(source => sanitizeCreature(source));
 }
 
 export function isBuiltinCreatureId(id) {

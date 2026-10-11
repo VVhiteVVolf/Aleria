@@ -1,0 +1,500 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-11T19:46:42.303Z",
+  "character": {
+    "id": "hTN74LdJjXUFz7X7ReRr",
+    "name": "Cadfan Draig",
+    "inventory": {
+      "characterId": "hTN74LdJjXUFz7X7ReRr",
+      "portraitFormat": "portrait",
+      "infoRows": [],
+      "revision": 1791748002303,
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "showInfoTable": false,
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente",
+          "id": "documents"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other",
+          "label": "Sonstiges"
+        }
+      ],
+      "level": "Haus Draig, Celtigerns Wacht",
+      "portraitPosition": "top",
+      "portrait": "https://i.imgur.com/9BKpYTU.jpeg",
+      "equipmentQuiz": {
+        "step": 0,
+        "updatedAt": "",
+        "resultText": "",
+        "status": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false
+      },
+      "status": "Gesund",
+      "role": "Herold des Grafen, Gwynthor",
+      "moneyState": {
+        "totalCopper": 0,
+        "silver": 0,
+        "gold": 0,
+        "copper": 0
+      },
+      "items": [
+        {
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "icon": "*",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "infoRows": [],
+          "type": "Waffe",
+          "acquiredAt": "",
+          "id": "item-mqu1vat1-0-w8ef",
+          "category": "weapon",
+          "ownerCharacterName": "",
+          "tags": "",
+          "image": "",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "name": "Hauptwaffe",
+          "imageFormat": "square",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "individualizedAt": ""
+        },
+        {
+          "imageFit": "contain",
+          "type": "Rüstung",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "individualizedAt": "",
+          "itemStorageMode": "character",
+          "infoRows": [],
+          "icon": "*",
+          "category": "armor",
+          "acquiredAt": "",
+          "id": "item-mqu1vat1-1-exvo",
+          "quantity": "1",
+          "ownerCharacterName": "",
+          "tags": "",
+          "image": "",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "itemDbKey": "",
+          "name": "Rüstung / Schutz"
+        },
+        {
+          "infoRows": [],
+          "category": "equipment",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "quantity": "1",
+          "name": "Reiseausrüstung",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "acquiredAt": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "",
+          "id": "item-mqu1vat1-2-0fx2",
+          "itemDbKey": "",
+          "image": "",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "ownerCharacterName": "",
+          "itemStorageMode": "character",
+          "individualizedAt": "",
+          "type": "Ausrüstung",
+          "imagePosition": "center",
+          "tags": ""
+        },
+        {
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "imageFit": "contain",
+          "originItemDbKey": "",
+          "imageFormat": "square",
+          "infoRows": [],
+          "ownerCharacterId": "",
+          "itemDbKey": "",
+          "category": "potions",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "acquiredAt": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "type": "Trinktur",
+          "icon": "*",
+          "image": "",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-3-2lgm",
+          "individualizedAt": "",
+          "ownerCharacterName": "",
+          "tags": "",
+          "itemStorageMode": "character"
+        },
+        {
+          "quantity": "1",
+          "ownerCharacterName": "",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "imagePosition": "center",
+          "name": "Dokumente / Urkunden",
+          "infoRows": [],
+          "id": "item-mqu1vat1-4-ajrj",
+          "itemDbKey": "",
+          "category": "documents",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "tags": "",
+          "acquiredAt": "",
+          "imageFormat": "square",
+          "individualizedAt": "",
+          "type": "Dokument",
+          "itemStorageMode": "character",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "image": "",
+          "icon": "*"
+        },
+        {
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "name": "Persönlicher Gegenstand",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "quantity": "1",
+          "type": "Sonstiges",
+          "imagePosition": "center",
+          "icon": "*",
+          "imageFormat": "square",
+          "infoRows": [],
+          "image": "",
+          "originItemDbKey": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "category": "other",
+          "id": "item-mqu1vat1-5-5kao",
+          "individualizedAt": "",
+          "imageFit": "contain",
+          "tags": ""
+        },
+        {
+          "creatureId": "companion-cadfan-ciaran",
+          "quantity": "1",
+          "instanceId": "cadfan-ciaran",
+          "ownerCharacterName": "Cadfan Draig",
+          "imagePosition": "center",
+          "itemStorageMode": "character",
+          "templateId": "",
+          "infoRows": [],
+          "registerCategory": "vieh",
+          "category": "companion",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "name": "Cíaran",
+          "individualizedAt": "2026-10-11T19:46:45.501Z",
+          "description": "Cadfans Hund. Ein Geschenk der Familie seiner Frau.",
+          "type": "Hund",
+          "ownerCharacterId": "hTN74LdJjXUFz7X7ReRr",
+          "itemDbKey": "",
+          "attributes": [],
+          "image": "https://i.imgur.com/TZK9oBa.png",
+          "id": "cadfan-ciaran",
+          "originItemDbKey": "",
+          "templateName": "Hund"
+        },
+        {
+          "attributes": [],
+          "ownerCharacterId": "hTN74LdJjXUFz7X7ReRr",
+          "ownerCharacterName": "Cadfan Draig",
+          "originItemDbKey": "",
+          "description": "Cadfans zweites Pferd. Ebenfalls ein Geschenk der Familie seiner Frau. Ein Tirashan.",
+          "imagePosition": "center",
+          "imageFormat": "portrait",
+          "templateName": "Tirashan-Pferd",
+          "itemDbKey": "",
+          "image": "https://i.imgur.com/EDPyiua.jpeg",
+          "type": "Tirashan-Pferd",
+          "id": "cadfan-donn",
+          "name": "Donn",
+          "quantity": "1",
+          "creatureId": "companion-cadfan-donn",
+          "instanceId": "cadfan-donn",
+          "category": "companion",
+          "infoRows": [],
+          "individualizedAt": "2026-10-11T19:46:45.501Z",
+          "itemStorageMode": "character",
+          "templateId": "",
+          "registerCategory": "pferde",
+          "imageFit": "contain"
+        }
+      ],
+      "name": "Cadfan Draig",
+      "carryValue": "Noch festlegen",
+      "companions": [
+        {
+          "imagePosition": "center",
+          "description": "Cadfans Hund. Ein Geschenk der Familie seiner Frau.",
+          "imageFormat": "portrait",
+          "inventoryItemId": "cadfan-ciaran",
+          "creatureId": "companion-cadfan-ciaran",
+          "infoRows": [],
+          "summary": "Cadfans Hund. Ein Geschenk der Familie seiner Frau.",
+          "imageFit": "contain",
+          "name": "Cíaran",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "role": "Gefährte",
+          "species": "Hund",
+          "attributes": [],
+          "image": "https://i.imgur.com/TZK9oBa.png"
+        },
+        {
+          "name": "Donn",
+          "role": "Reittier",
+          "image": "https://i.imgur.com/EDPyiua.jpeg",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "attributes": [],
+          "statusColor": "#5c7f20",
+          "imagePosition": "center",
+          "species": "Tirashan-Pferd",
+          "infoRows": [],
+          "imageFit": "contain",
+          "description": "Cadfans zweites Pferd. Ebenfalls ein Geschenk der Familie seiner Frau. Ein Tirashan.",
+          "summary": "Cadfans zweites Pferd. Ebenfalls ein Geschenk der Familie seiner Frau. Ein Tirashan.",
+          "imageFormat": "portrait",
+          "inventoryItemId": "cadfan-donn",
+          "creatureId": "companion-cadfan-donn",
+          "status": "Noch festlegen"
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "portraitFit": "cover",
+      "moneyNotice": "",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "title": "Charakter-Inventar",
+      "healthColor": "#5c7f20",
+      "carryLabel": "Traglast",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten"
+    },
+    "updatedAt": "2026-10-11T19:46:42.303Z"
+  }
+}

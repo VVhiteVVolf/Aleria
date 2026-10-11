@@ -1,0 +1,560 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-11T19:46:42.303Z",
+  "character": {
+    "id": "15ml9RhSvJPXof7z4qY3",
+    "name": "Gwendolyn Draig",
+    "inventory": {
+      "role": "Gräfin von Celtigerns Wacht · geb. Aderyn",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon",
+          "label": "Waffen"
+        },
+        {
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "characterId": "",
+      "carryValue": "Noch festlegen",
+      "items": [
+        {
+          "name": "Hauptwaffe",
+          "id": "item-mqu1vat1-0-w8ef",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "acquiredAt": "",
+          "type": "Waffe",
+          "icon": "*",
+          "imageFormat": "square",
+          "individualizedAt": "",
+          "image": "",
+          "itemDbKey": "",
+          "tags": "",
+          "category": "weapon",
+          "quantity": "1",
+          "equipped": false,
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "imageFit": "contain",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "combatDefinition": null,
+          "infoRows": [],
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "equipmentLink": null
+        },
+        {
+          "acquiredAt": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "id": "item-mqu1vat1-1-exvo",
+          "weight": "Noch festlegen",
+          "individualizedAt": "",
+          "category": "armor",
+          "quantity": "1",
+          "equipped": false,
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "image": "",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "tags": "",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "icon": "*",
+          "type": "Rüstung",
+          "imageFormat": "square",
+          "equipmentLink": null,
+          "combatDefinition": null,
+          "infoRows": [],
+          "imageFit": "contain",
+          "name": "Rüstung / Schutz"
+        },
+        {
+          "itemDbKey": "",
+          "tags": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "id": "item-mqu1vat1-2-0fx2",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "ownerCharacterName": "",
+          "icon": "*",
+          "individualizedAt": "",
+          "type": "Ausrüstung",
+          "equipped": false,
+          "quantity": "1",
+          "category": "equipment",
+          "name": "Reiseausrüstung",
+          "ownerCharacterId": "",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "equipmentLink": null,
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "acquiredAt": "",
+          "infoRows": [],
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "image": "",
+          "combatDefinition": null
+        },
+        {
+          "ownerCharacterId": "",
+          "category": "potions",
+          "imageFormat": "square",
+          "quantity": "1",
+          "equipped": false,
+          "ownerCharacterName": "",
+          "combatDefinition": null,
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "acquiredAt": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "name": "Heil- oder Verbrauchsgut",
+          "image": "",
+          "weight": "Noch festlegen",
+          "type": "Trinktur",
+          "individualizedAt": "",
+          "icon": "*",
+          "id": "item-mqu1vat1-3-2lgm",
+          "imageFit": "contain",
+          "infoRows": [],
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "itemDbKey": "",
+          "tags": "",
+          "equipmentLink": null
+        },
+        {
+          "name": "Dokumente / Urkunden",
+          "combatDefinition": null,
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "acquiredAt": "",
+          "category": "documents",
+          "equipped": false,
+          "quantity": "1",
+          "type": "Dokument",
+          "itemDbKey": "",
+          "icon": "*",
+          "imageFormat": "square",
+          "image": "",
+          "tags": "",
+          "equipmentLink": null,
+          "ownerCharacterId": "",
+          "id": "item-mqu1vat1-4-ajrj",
+          "ownerCharacterName": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "individualizedAt": "",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz."
+        },
+        {
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "infoRows": [],
+          "ownerCharacterId": "",
+          "combatDefinition": null,
+          "id": "item-mqu1vat1-5-5kao",
+          "itemDbKey": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "equipmentLink": null,
+          "ownerCharacterName": "",
+          "weight": "Noch festlegen",
+          "name": "Persönlicher Gegenstand",
+          "type": "Sonstiges",
+          "quantity": "1",
+          "equipped": false,
+          "category": "other",
+          "image": "",
+          "icon": "*",
+          "imageFormat": "square",
+          "acquiredAt": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "individualizedAt": "",
+          "tags": ""
+        },
+        {
+          "creatureId": "companion-gwendolyn-olwen",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "registerCategory": "vieh",
+          "templateName": "Rotmilan",
+          "attributes": [],
+          "templateId": "",
+          "ownerCharacterId": "15ml9RhSvJPXof7z4qY3",
+          "ownerCharacterName": "Gwendolyn Draig",
+          "type": "Rotmilan",
+          "name": "Olwen",
+          "imagePosition": "center",
+          "instanceId": "gwendolyn-olwen",
+          "imageFormat": "portrait",
+          "individualizedAt": "2026-10-11T19:46:45.491Z",
+          "infoRows": [],
+          "imageFit": "contain",
+          "itemDbKey": "",
+          "id": "gwendolyn-olwen",
+          "description": "Der erste Rotmilan von Gwendolyn. Mittlerweile ziemlich alt und kurz vor dem Ende. Sie fliegt kaum noch. Aber wenn, dann zeigt sie, was sie noch drauf hat. Sie sitzt meistens auf dem Balkon von Gwendolyn und Galahad.",
+          "category": "companion",
+          "image": "https://i.imgur.com/4CNNfEa.png",
+          "quantity": "1"
+        },
+        {
+          "id": "gwendolyn-alwen",
+          "instanceId": "gwendolyn-alwen",
+          "imagePosition": "center",
+          "itemDbKey": "",
+          "individualizedAt": "2026-10-11T19:46:45.492Z",
+          "category": "companion",
+          "type": "Rotmilan",
+          "quantity": "1",
+          "templateId": "",
+          "attributes": [],
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "description": "Gwendolyns zweiter Milan. Tochter ihres ersten Milans, Olwen. Noch voller Energie; fliegt den halben Tag über der Burg herum.",
+          "creatureId": "companion-gwendolyn-alwen",
+          "registerCategory": "vieh",
+          "imageFit": "contain",
+          "templateName": "Rotmilan",
+          "imageFormat": "portrait",
+          "infoRows": [],
+          "image": "https://i.imgur.com/ISKbqc2.png",
+          "ownerCharacterName": "Gwendolyn Draig",
+          "ownerCharacterId": "15ml9RhSvJPXof7z4qY3",
+          "name": "Alwen"
+        },
+        {
+          "registerCategory": "pferde",
+          "id": "gwendolyn-flam",
+          "name": "Flam",
+          "templateName": "Ceffyl-Pferd",
+          "ownerCharacterId": "15ml9RhSvJPXof7z4qY3",
+          "itemDbKey": "",
+          "creatureId": "companion-gwendolyn-flam",
+          "type": "Ceffyl-Pferd",
+          "ownerCharacterName": "Gwendolyn Draig",
+          "imagePosition": "center",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "attributes": [],
+          "templateId": "",
+          "category": "companion",
+          "quantity": "1",
+          "individualizedAt": "2026-10-11T19:46:45.492Z",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "image": "https://i.imgur.com/55FbPYH.jpeg",
+          "instanceId": "gwendolyn-flam",
+          "infoRows": [],
+          "description": "Das Ceffyl von Gwendolyn Draig. Ein herrisches Pferd. War schon bei den Rittern der Tafelrunde dabei."
+        }
+      ],
+      "moneyState": {
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0,
+        "copper": 0
+      },
+      "portraitFormat": "portrait",
+      "portraitPosition": "top",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "title": "Charakter-Inventar",
+      "infoRows": [],
+      "companions": [
+        {
+          "attributes": [],
+          "name": "Olwen",
+          "role": "Gefährte",
+          "creatureId": "companion-gwendolyn-olwen",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "infoRows": [],
+          "imageFit": "contain",
+          "species": "Rotmilan",
+          "summary": "Der erste Rotmilan von Gwendolyn. Mittlerweile ziemlich alt und kurz vor dem Ende. Sie fliegt kaum noch. Aber wenn, dann zeigt sie, was sie noch drauf hat. Sie sitzt meistens auf dem Balkon von Gwendolyn und Galahad.",
+          "inventoryItemId": "gwendolyn-olwen",
+          "status": "Gesund",
+          "description": "Der erste Rotmilan von Gwendolyn. Mittlerweile ziemlich alt und kurz vor dem Ende. Sie fliegt kaum noch. Aber wenn, dann zeigt sie, was sie noch drauf hat. Sie sitzt meistens auf dem Balkon von Gwendolyn und Galahad.",
+          "statusColor": "#5c7f20",
+          "image": "https://i.imgur.com/4CNNfEa.png",
+          "imageFormat": "portrait",
+          "imagePosition": "center"
+        },
+        {
+          "id": "companion-mqu1vat2-1-5e7l",
+          "name": "Alwen",
+          "role": "Gefährte",
+          "imageFit": "contain",
+          "infoRows": [],
+          "imagePosition": "center",
+          "description": "Gwendolyns zweiter Milan. Tochter ihres ersten Milans, Olwen. Noch voller Energie; fliegt den halben Tag über der Burg herum.",
+          "species": "Rotmilan",
+          "summary": "Gwendolyns zweiter Milan. Tochter ihres ersten Milans, Olwen. Noch voller Energie; fliegt den halben Tag über der Burg herum.",
+          "status": "Noch festlegen",
+          "attributes": [],
+          "image": "https://i.imgur.com/ISKbqc2.png",
+          "inventoryItemId": "gwendolyn-alwen",
+          "statusColor": "#5c7f20",
+          "creatureId": "companion-gwendolyn-alwen",
+          "imageFormat": "portrait"
+        },
+        {
+          "species": "Ceffyl-Pferd",
+          "summary": "Das Ceffyl von Gwendolyn Draig. Ein herrisches Pferd. War schon bei den Rittern der Tafelrunde dabei.",
+          "name": "Flam",
+          "role": "Reittier",
+          "creatureId": "companion-gwendolyn-flam",
+          "imagePosition": "center",
+          "id": "card-gwendolyn-flam",
+          "attributes": [],
+          "imageFit": "contain",
+          "description": "Das Ceffyl von Gwendolyn Draig. Ein herrisches Pferd. War schon bei den Rittern der Tafelrunde dabei.",
+          "status": "Gesund",
+          "infoRows": [],
+          "inventoryItemId": "gwendolyn-flam",
+          "imageFormat": "portrait",
+          "image": "https://i.imgur.com/55FbPYH.jpeg"
+        }
+      ],
+      "status": "Gesund",
+      "name": "Gwendolyn Draig",
+      "showInfoTable": false,
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "resultText": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0,
+        "status": ""
+      },
+      "portraitFit": "cover",
+      "level": "Stufe",
+      "revision": 1791748002303,
+      "hitpoints": "TP / Zustand",
+      "moneyNotice": "",
+      "carryLabel": "Traglast",
+      "portrait": "https://i.imgur.com/ZX7jU9h.png",
+      "healthColor": "#5c7f20",
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ]
+    },
+    "updatedAt": "2026-10-11T19:46:42.303Z"
+  }
+}
