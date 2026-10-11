@@ -107,6 +107,7 @@
     gap: 0.8rem;
   }
   .artifact-image-frame {
+    position: relative;
     margin: 0 0 0.9rem;
     aspect-ratio: 4 / 5;
     display: grid;
@@ -118,6 +119,9 @@
     box-shadow: inset 0 0 26px rgba(58,35,12,0.12), 0 10px 20px rgba(58,35,12,0.12);
   }
   .artifact-image-frame img {
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
     object-fit: contain;

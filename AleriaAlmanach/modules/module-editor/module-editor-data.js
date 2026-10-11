@@ -1824,8 +1824,8 @@ function sanitizeArtifactData(data = {}) {
   return {
     archiveLabel: String(data.archiveLabel || 'Artefaktakte').trim(),
     classification: String(data.classification || 'Unklassifiziert').trim(),
-    origin: String(data.origin || 'Herkunft unbekannt').trim(),
-    condition: String(data.condition || 'Zustand ungeprüft').trim(),
+    origin: String(data.origin ?? 'Herkunft unbekannt').trim(),
+    condition: String(data.condition ?? 'Zustand ungeprüft').trim(),
     keeper: String(data.keeper || '').trim(),
     discovery: String(data.discovery || '').trim(),
     propertiesTitle: String(data.propertiesTitle || 'Eigenschaften').trim(),

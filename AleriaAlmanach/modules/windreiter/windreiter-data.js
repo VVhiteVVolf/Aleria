@@ -999,14 +999,15 @@
   for (const module of modules) {
     const path = module.path || [];
     const entryId = module.entry?.id || module.entryId;
-    const previous = SECTIONS.find(candidate => candidate.entries?.some(entry => entry.id === entryId));
+    const previous = entryId ? SECTIONS.find(candidate => candidate.entries?.some(entry => entry.id === entryId)) : undefined;
     const entry = previous?.entries.find(entry => entry.id === entryId) || module.entry;
-    if (!entry) continue;
+    if (!entry && !module.sectionOnly) continue;
     let section = SECTIONS.find(candidate => candidate.tab === module.tab && JSON.stringify(candidate.path || []) === JSON.stringify(path));
     if (!section) {
       section = { key: path.at(-1) || module.tab, tab: module.tab, path, desc: module.description || '', ...(module.icon ? { iconUrl: module.icon } : {}), entries: [] };
       SECTIONS.push(section);
     }
+    if (module.sectionOnly) continue;
     if (previous === section) continue;
     if (previous) previous.entries = previous.entries.filter(candidate => candidate.id !== entryId);
     section.entries.push(entry);
