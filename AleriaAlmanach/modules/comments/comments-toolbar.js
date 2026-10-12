@@ -21,6 +21,7 @@ function buildCommentTurnBar(threadId) {
         <button class="comment-turn-btn" type="button" data-action="set-comment-turn" data-turn-value="patrick">Patrick</button>
         <button class="comment-turn-btn comment-turn-ended" type="button" data-action="set-comment-turn" data-turn-value="ended">Sitzung beendet</button>
       </div>
+      <p class="scene-backup-status" data-scene-backup-status role="status" aria-live="polite" hidden></p>
     </div>`;
 }
 

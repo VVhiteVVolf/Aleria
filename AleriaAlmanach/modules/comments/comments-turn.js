@@ -37,6 +37,7 @@ function renderCommentTurnState(threadId, state) {
     });
   });
   if (typeof refreshSessionStatusTurn === 'function') refreshSessionStatusTurn(threadId, state);
+  window.AleriaSceneBackup?.renderStatus(threadId, state || {});
   applyCommentToolsVisibility();
 }
 
@@ -73,6 +74,10 @@ async function loadCommentTurnIntoPage(threadId, forceRefresh = false) {
 async function setCommentTurn(threadId, current) {
   if (!threadId) return;
   const backend = await getCommentBackend({ timeoutMs: 800 });
+  if (current === 'ended' && parseCommentThreadLocation(threadId).kind === 'session') {
+    if (!window.AleriaSceneBackup) throw new Error('Das Szenenbackup-Modul ist nicht geladen.');
+    return window.AleriaSceneBackup.endSession(threadId, backend);
+  }
   if (!backend?.saveCommentTurn) return;
   await backend.saveCommentTurn(threadId, current);
 }

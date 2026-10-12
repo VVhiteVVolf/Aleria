@@ -1,0 +1,13 @@
+.comment-turn-bar:has([data-scene-backup-status]:not([hidden])) { flex-wrap: wrap; }
+
+.scene-backup-status {
+  flex-basis: 100%;
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.scene-backup-status[hidden] { display: none; }
+.scene-backup-status a { color: inherit; text-underline-offset: 0.15em; }
+.comment-turn-bar[data-scene-backup-status="failed"] .scene-backup-status { color: #842d25; }

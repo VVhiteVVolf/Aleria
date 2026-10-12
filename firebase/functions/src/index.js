@@ -15,6 +15,7 @@ import { commitHerausforderung } from './mechanics/commit-herausforderung.js';
 import { commitLootClaim } from './mechanics/commit-loot-claim.js';
 import { finalizeCombatNarration } from './mechanics/finalize-combat-narration.js';
 import { importBackupRecords } from './backup/import-backup-records.js';
+export { endSceneSession, writeSceneBackupToGitHub } from './backup/scene-backup-jobs.js';
 import { commitInventoryTransfer } from './mechanics/commit-inventory-transfer.js';
 export { commitItemRegister } from './mechanics/commit-item-register.js';
 export { commitSceneItem } from './mechanics/commit-scene-item.js';

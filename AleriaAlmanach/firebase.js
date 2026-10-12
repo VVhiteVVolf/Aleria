@@ -53,6 +53,7 @@
     const commitNarrativeCommentCallable = httpsCallable(functions, 'commitNarrativeComment', { timeout: 20000 });
     const finalizeCombatNarrationCallable = httpsCallable(functions, 'finalizeCombatNarration', { timeout: 15000 });
     const importBackupRecordsCallable = httpsCallable(functions, 'importBackupRecords', { timeout: 60000 });
+    const endSceneSessionCallable = httpsCallable(functions, 'endSceneSession', { timeout: 60000 });
     const familyTreeDb = getFirestore(app, 'family-trees');
     const FAMILY_TREE_ENTITY_COLLECTIONS = Object.freeze([
       'persons',
@@ -818,6 +819,11 @@
           updatedBy: user.uid,
           updatedAt: serverTimestamp()
         }, { merge: true });
+      },
+      async endSceneSession(threadId, modulePayload) {
+        await requireFirebaseUser();
+        const result = await endSceneSessionCallable({ threadId, modulePayload });
+        return result.data;
       },
       async deleteComment(docId, deleteCode) {
         await requireFirebaseUser();

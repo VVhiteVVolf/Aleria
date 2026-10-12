@@ -42,6 +42,25 @@ test('öffentliche Spieldaten bleiben ohne Anmeldung lesbar', async () => {
   await assertSucceeds(getDoc(doc(environment.unauthenticatedContext().firestore(), 'characters/gawain')));
 });
 
+test('Szenenabschlüsse und GitHub-Erfolgsbelege können nicht vom Browser gefälscht werden', async () => {
+  const player = environment.authenticatedContext('owner').firestore();
+  const threadId = 'hearing::session:main';
+  const turnRef = doc(player, 'comment_turns', threadId);
+  await assertSucceeds(setDoc(turnRef, { threadId, current: 'erdi', updatedBy: 'owner' }));
+  await assertFails(updateDoc(turnRef, { current: 'ended' }));
+  await assertFails(updateDoc(turnRef, { sceneBackup: { id: 'forged', status: 'saved', url: 'https://github.com/forged' } }));
+  await environment.withSecurityRulesDisabled(async context => {
+    await updateDoc(doc(context.firestore(), 'comment_turns', threadId), { current: 'ended', sceneBackup: { id: 'one', status: 'saved' } });
+    await setDoc(doc(context.firestore(), 'scene_backup_jobs/one'), { moduleJson: 'private staging', status: 'saved' });
+  });
+  await assertSucceeds(getDoc(doc(environment.unauthenticatedContext().firestore(), 'comment_turns', threadId)));
+  await assertSucceeds(updateDoc(turnRef, { current: 'patrick', updatedBy: 'owner' }));
+  await assertFails(updateDoc(turnRef, { sceneBackup: null }));
+  await assertFails(deleteDoc(turnRef));
+  await assertFails(getDoc(doc(player, 'scene_backup_jobs/one')));
+  await assertFails(setDoc(doc(player, 'scene_backup_jobs/two'), { status: 'queued' }));
+});
+
 test('Kalendertermine benötigen Anmeldung, gültige Daten und die nächste Revision', async () => {
   const player = environment.authenticatedContext('owner').firestore();
   const anonymous = environment.unauthenticatedContext().firestore();

@@ -116,8 +116,16 @@ service cloud.firestore {
 
     match /comment_turns/{threadId} {
       allow read: if true;
-      allow create, update: if signedIn() && request.resource.data.updatedBy == request.auth.uid;
-      allow delete: if signedIn();
+      // Backed-up scene closures and their receipts are written only by the server.
+      allow create: if signedIn()
+        && request.resource.data.updatedBy == request.auth.uid
+        && !request.resource.data.keys().hasAny(['sceneBackup'])
+        && (!threadId.matches('.*::session:[^:]+$') || request.resource.data.current != 'ended');
+      allow update: if signedIn()
+        && request.resource.data.updatedBy == request.auth.uid
+        && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['sceneBackup'])
+        && (!threadId.matches('.*::session:[^:]+$') || request.resource.data.current != 'ended');
+      allow delete: if signedIn() && !resource.data.keys().hasAny(['sceneBackup']);
     }
 
     match /char_tabs/{documentId} {
