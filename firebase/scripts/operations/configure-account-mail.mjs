@@ -30,12 +30,20 @@ const desiredTemplate = {
   body: `<div style="background:#faf1df;color:#352b25;font-family:Georgia,serif;padding:24px;max-width:520px;margin:auto;border:3px solid #352b25;border-radius:16px"><img src="${origin}/AleriaAlmanach/public/assets/account/myrddin-v1.webp" alt="Myrddin Draig mit einem magischen Brief" width="192" style="display:block;margin:auto"><h1 style="font-size:26px">Ein Brief! Für dich!</h1><p>Sei gegrüßt, %DISPLAY_NAME%!</p><p>Dein Gildenpass ist fast bereit. Ich habe den Bestätigungszauber dreimal geprüft. Diesmal wird ganz bestimmt niemand zum Frosch.</p><p><a href="%LINK%" style="display:inline-block;background:#e9bf65;color:#352b25;padding:14px 20px;border:2px solid #352b25;border-radius:8px;font-weight:bold">E-Mail mit Myrddins Siegel bestätigen</a></p><p>Damit bestätigst du die Adresse %EMAIL% für deinen Aleria-Zugang.</p><p>Magische Grüße<br><strong>Myrddin Draig</strong><br>Vorübergehend zuständig für funktionierende Postzauber</p><p style="font-size:12px">Falls du keinen Aleria-Zugang angelegt hast, kannst du diese Nachricht ignorieren.</p></div>`
 };
 let templateMode = 'dry-run';
+const restrictedTemplateCodes = new Set(['EMAIL_TEMPLATE_UPDATE_NOT_ALLOWED', 'INVALID_EMAIL_TEMPLATE']);
+let handlerConfigurationBlocked = false;
 if (process.argv.includes('--apply')) {
   // Never point live email to a page or script which has not been published.
   const hash = value => createHash('sha256').update(value).digest('hex');
   for (const file of [actionPath, '/AleriaAlmanach/modules/auth/email-action-bootstrap.mjs', '/AleriaAlmanach/modules/auth/email-action-page.js', '/AleriaAlmanach/modules/auth/email-action-controller.js', '/AleriaAlmanach/public/assets/account/myrddin-v1.webp']) {
     const response = await fetch(`${origin}${file}?mail-setup-check=20261012`, { signal: AbortSignal.timeout(30000) });
-    const canonical = value => file.endsWith('.webp') ? value : value.toString('utf8').replace(/\r\n/g, '\n');
+    const canonical = value => {
+      if (file.endsWith('.webp')) return value;
+      const text = value.toString('utf8').replace(/\r\n/g, '\n').replace(/^\uFEFF/u, '');
+      // Netlify's Pretty URLs processor rewrites this static return link.
+      // Accept only its equivalent known form; verify every other byte as before.
+      return file === actionPath ? text.replace("<a class='account-primary' href='/aleriaalmanach/aleriaalmanach'>", '<a href="./AleriaAlmanach.html" class="account-primary">') : text;
+    };
     if (!response.ok || hash(canonical(Buffer.from(await response.arrayBuffer()))) !== hash(canonical(await readFile(new URL(`../../..${file}`, import.meta.url))))) throw new Error('Account mail page must be published and match the local source first.');
   }
   await writeFile(new URL('../../../.tmp/firebase-health-20261012/account-mail-before.json', import.meta.url), JSON.stringify({ authorizedDomains: before.authorizedDomains, notification: { defaultLocale: before.notification?.defaultLocale, sendEmail: { callbackUri: notification.callbackUri, verifyEmailTemplate: notification.verifyEmailTemplate } } }, null, 2), { flag: 'wx' }).catch(error => { if (error.code !== 'EEXIST') throw error; });
@@ -45,14 +53,24 @@ if (process.argv.includes('--apply')) {
     await patch(Object.keys(desiredTemplate).map(key => `notification.sendEmail.verifyEmailTemplate.${key}`), { notification: { sendEmail: { verifyEmailTemplate: desiredTemplate } } });
     templateMode = 'custom-html';
   } catch (error) {
-    if (!['EMAIL_TEMPLATE_UPDATE_NOT_ALLOWED', 'INVALID_EMAIL_TEMPLATE'].includes(error.apiCode)) throw error;
+    if (!restrictedTemplateCodes.has(error.apiCode)) throw error;
     // Firebase may restrict verification body customization. Keep its secure
     // default body and apply only the supported sender/title branding.
-    await patch(['notification.sendEmail.verifyEmailTemplate.senderDisplayName', 'notification.sendEmail.verifyEmailTemplate.subject'], { notification: { sendEmail: { verifyEmailTemplate: { senderDisplayName: desiredTemplate.senderDisplayName, subject: desiredTemplate.subject } } } });
-    templateMode = 'firebase-body-with-myrddin-sender';
+    try {
+      await patch(['notification.sendEmail.verifyEmailTemplate.senderDisplayName', 'notification.sendEmail.verifyEmailTemplate.subject'], { notification: { sendEmail: { verifyEmailTemplate: { senderDisplayName: desiredTemplate.senderDisplayName, subject: desiredTemplate.subject } } } });
+      templateMode = 'firebase-body-with-myrddin-sender';
+    } catch (brandingError) {
+      if (!restrictedTemplateCodes.has(brandingError.apiCode)) throw brandingError;
+      templateMode = 'firebase-default-template-restricted';
+    }
   }
-  await patch(['notification.sendEmail.callbackUri', 'notification.defaultLocale'], { notification: { defaultLocale: 'de', sendEmail: { callbackUri: `${origin}${actionPath}` } } });
+  try {
+    await patch(['notification.sendEmail.callbackUri', 'notification.defaultLocale'], { notification: { defaultLocale: 'de', sendEmail: { callbackUri: `${origin}${actionPath}` } } });
+  } catch (handlerError) {
+    if (!restrictedTemplateCodes.has(handlerError.apiCode)) throw handlerError;
+    handlerConfigurationBlocked = true;
+  }
 }
 const after = await request(url);
 if (before.signIn?.anonymous?.enabled !== after.signIn?.anonymous?.enabled || before.signIn?.email?.enabled !== after.signIn?.email?.enabled) throw new Error('An unrelated sign-in provider changed.');
-console.log(JSON.stringify({ applied: process.argv.includes('--apply'), templateMode, callbackUri: after.notification?.sendEmail?.callbackUri, senderDisplayName: after.notification?.sendEmail?.verifyEmailTemplate?.senderDisplayName, subject: after.notification?.sendEmail?.verifyEmailTemplate?.subject, locale: after.notification?.defaultLocale, websiteAuthorized: after.authorizedDomains?.includes('dieweltvonaleria.netlify.app'), providerSettingsUnchanged: true, emailsSent: 0 }));
+console.log(JSON.stringify({ applied: process.argv.includes('--apply'), templateMode, handlerConfigurationBlocked, customHandlerEnabled: after.notification?.sendEmail?.callbackUri === `${origin}${actionPath}`, callbackUri: after.notification?.sendEmail?.callbackUri, senderDisplayName: after.notification?.sendEmail?.verifyEmailTemplate?.senderDisplayName, subject: after.notification?.sendEmail?.verifyEmailTemplate?.subject, locale: after.notification?.defaultLocale, websiteAuthorized: after.authorizedDomains?.includes('dieweltvonaleria.netlify.app'), providerSettingsUnchanged: true, emailsSent: 0 }));
