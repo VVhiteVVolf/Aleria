@@ -1064,9 +1064,9 @@
       }
     },
     {
-      "key": "nudd-speer",
+      "key": "nudd-dreizack",
       "owner": "Nudd Saethwyr",
-      "file": "nudd-speer-v3.png",
+      "file": "nudd-dreizack-v1.png",
       "bindings": [
         {
           "characterId": "person--haus-saethwyr--nudd-saethwyr",
@@ -1078,19 +1078,47 @@
           ]
         }
       ],
-      "legacyImages": [],
-      "prompt": "Use case: stylized-concept. Asset type: Aleria fantasy inventory item illustration. Create ONE 1:1 square PNG with a genuinely TRANSPARENT alpha background. Reference 1 defines the existing item-art style: hand-painted simplified fantasy illustration, clean dark contours, warm muted colors, subtle brush texture, readable silhouette, soft illustrated highlights. Not photorealistic, not a 3D render. Other references define the owner's colors, heraldry and clothing construction only. No person, skin, face, hands, mannequin or scenery. No frame, letters, watermark, checkerboard, background or cast shadow. Entire object centered, completely inside frame with 8% transparent margin, large and readable at small inventory-card size. For armor: present ONE empty wearable outfit with sleeves naturally at its sides, visible hollow neck, slight three-quarter front view, never a human. For weapons: a single complete weapon diagonally from lower-left handle to upper-right tip unless a pair is specified. Do not add weapons to armor or armor to weapons. Subject: Nudd Saethwyr's spear, match house warrior: long straight brown wooden shaft, narrow diamond/leaf-shaped muted steel spearhead with warm brass socket, dark leather hand grip and restrained gold fittings. Practical straight infantry spear, fully visible diagonally.",
-      "referenceImages": [
-        "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/ChatGPT_Image_1._Juni_2025__01_04_48-removebg-preview.png",
-        "E:\\Aleria\\.tmp\\equipment-art\\nudd.jpg",
-        "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Saethwyr/assets/ritter.png"
+      "legacyImages": [
+        "/AleriaAlmanach/public/assets/character-equipment/nudd-speer-v3.png"
       ],
-      "title": "Speer",
+      "prompt": "Use case: precise-object-edit. Asset type: ONE square 1:1 fantasy RPG inventory PNG for Aleria. Redesign reference 1, Nudd Saethwyr's existing spear, as his elegant but practical THREE-PRONGED TRIDENT. Keep its full-length dark brown wooden shaft, simple leather grip, restrained gold fittings, hand-painted fantasy inventory rendering, crisp dark outlines, softly shaded warm textured materials and diagonal lower-left butt to upper-right metal head composition. Replace the single spearhead with a clearly readable functional forged silver-steel TRIDENT head: exactly three separated forward-facing sharpened prongs, a slightly longer center prong and two gracefully curving shorter outer prongs, attached to one gold socket. Reference 2 is DESIGN AND HOUSE PALETTE ONLY: house Saethwyr gold, silver/steel, dark brown leather, small restrained black dragon emblem on the socket if readable. Do not draw the armor. Reference 3 is ITEM ART STYLE ONLY: illustrated brush textures and clear outline treatment, no tree emblem or foreign heraldry. Entire weapon visible, centered and large with about 10% empty margin on every side. This is a knight's grounded polearm, not a sea-god relic; no excessive decorations. TRUE transparent alpha background including gaps between the prongs. No magic glow, no lighting halo, no external shadow, no floor, no stand, no person, hands, mannequin, frame, labels, text, watermark or painted checkerboard.",
+      "referenceImages": [
+        "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/nudd-speer-v3.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-saethwyr-harnisch-v1.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "title": "Dreifache Pflicht · Saethwyr-Dreizack",
       "status": "validated",
       "revision": {
         "purpose": "transparent background extraction",
         "prompt": "Make the background transparent. Keep only the illustrated item. Return a transparent PNG, square aspect ratio."
       }
+    },
+    {
+      "key": "nudd-ritterschwert",
+      "owner": "Nudd Saethwyr",
+      "file": "nudd-ritterschwert-v1.png",
+      "title": "Eidwacht · Saethwyr-Ritterschwert",
+      "bindings": [
+        {
+          "characterId": "person--haus-saethwyr--nudd-saethwyr",
+          "itemIds": [
+            "equipment-weapon-nudd-saethwyr-knightly-sword"
+          ],
+          "combatEntryIds": [
+            "nudd-saethwyr-knightly-sword"
+          ]
+        }
+      ],
+      "legacyImages": [],
+      "status": "validated",
+      "prompt": "Use case: precise-object-edit. Asset type: ONE square 1:1 transparent fantasy RPG inventory illustration for Aleria. Create a distinct SAETHWYR KNIGHT'S SWORD by redesigning reference 1's sword. Retain the grounded straight double-edged steel blade with a narrow fuller, a functional modest crossguard, clear hand-painted fantasy inventory rendering, crisp dark outlines and softly textured illustrated metal/leather. Change the Draig red/dark palette and coiling dragon pommel to SAETHWYR design: warm gold crossguard and pommel trim, dark brown leather grip, silver-steel blade, and a small circular gold pommel bearing the black heraldic dragon of reference 3. Reference 2 defines the exact SAETHWYR house palette and restrained crafted ornament; do not draw the armor. Reference 3 defines the authentic black dragon emblem, simplify it cleanly at pommel size without text. Reference 4 is ITEM ART STYLE ONLY: illustrated brushwork, outlines and soft shading; never copy its tree emblem. Entire single sword, centered diagonally with the hilt at lower left and point at upper right, large within the square but leave 10% clear margin so the whole pommel, quillons and tip remain inside. A reliable young knight's sword suitable for Nudd's modest, dutiful nature, not a giant legendary weapon. Painterly hand-painted fantasy item illustration, not photorealism, not glossy CGI. True transparent PNG alpha outside the weapon and through any open parts of the guard. No scabbard, additional item, person, hand, mannequin, floor, external shadow, glow, halo, runic lettering, labels, text, watermark, frame or painted checkerboard.",
+      "referenceImages": [
+        "E:/Aleria/AleriaAlmanach/public/assets/character-equipment/gawain-drachenzahn-v1.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-saethwyr-harnisch-v1.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ]
     },
     {
       "key": "nudd-plattenruestung",

@@ -649,8 +649,8 @@ export const EQUIPMENT_ARTWORK = [
     "legacyImages": []
   },
   {
-    "key": "nudd-speer",
-    "image": "/AleriaAlmanach/public/assets/character-equipment/nudd-speer-v3.png",
+    "key": "nudd-dreizack",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/nudd-dreizack-v1.png",
     "bindings": [
       {
         "characterId": "person--haus-saethwyr--nudd-saethwyr",
@@ -659,6 +659,24 @@ export const EQUIPMENT_ARTWORK = [
         ],
         "combatEntryIds": [
           "starter-cantref-spear"
+        ]
+      }
+    ],
+    "legacyImages": [
+      "/AleriaAlmanach/public/assets/character-equipment/nudd-speer-v3.png"
+    ]
+  },
+  {
+    "key": "nudd-ritterschwert",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/nudd-ritterschwert-v1.png",
+    "bindings": [
+      {
+        "characterId": "person--haus-saethwyr--nudd-saethwyr",
+        "itemIds": [
+          "equipment-weapon-nudd-saethwyr-knightly-sword"
+        ],
+        "combatEntryIds": [
+          "nudd-saethwyr-knightly-sword"
         ]
       }
     ],
