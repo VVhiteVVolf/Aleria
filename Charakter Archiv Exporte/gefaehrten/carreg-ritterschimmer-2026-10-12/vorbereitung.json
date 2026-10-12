@@ -1,0 +1,28 @@
+{
+  "status": "local-draft",
+  "preparedAt": "2026-10-12T21:41:49.827Z",
+  "published": false,
+  "creatureId": "companion-duncan-carreg",
+  "ownerCharacterId": "tmfBA2zPTc88EMMGkyyA",
+  "sourceUpdateTime": "2026-10-06T05:51:37.987207Z",
+  "breed": "Ritterschimmer",
+  "parentBreeds": [
+    "herzogsschimmer",
+    "ceffyl"
+  ],
+  "bestiaryReference": {
+    "id": "tiere/pferde/zuchtbuch/ritterschimmer",
+    "name": "Ritterschimmer",
+    "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-herzogsschimmer"
+  },
+  "localDatabasePath": "records/familien/haus-gafyr/duncan-gafyr--tmfBA2zPTc88EMMGkyyA/character.json",
+  "otherCharacterRecordsPreserved": 237,
+  "asset": {
+    "path": "/AleriaAlmanach/assets/companions/haus-gafyr/carreg.png",
+    "originalPath": "C:/Users/fhg_r/Downloads/CarregDuncan.png",
+    "sha256": "ffe063a5ff78c9f48721ee1eded9712d0fdbe3c009de9d2f2a3e63a1652615b5",
+    "width": 1024,
+    "height": 1536
+  },
+  "releaseNote": "Noch nicht veröffentlicht. Vor Freigabe Duncan und Kreaturbestand erneut lesen. Carreg und Inventarverknüpfung gemeinsam versionsgeprüft übernehmen. Duncan nur um das Reittier ergänzen; keine veralteten Vollimporte über aktuelle Kampfwerte oder Besitzdaten schreiben. Den Teil-Overlay ausschließlich für die lokale Archiv-Zusammenführung verwenden. Ritterschimmer-Eintrag, Kreaturmodule und unverändertes Bild gemeinsam veröffentlichen."
+}

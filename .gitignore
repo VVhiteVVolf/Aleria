@@ -8,6 +8,9 @@ storage-debug.log
 .codex-temp/
 /.tmp/
 /.private-backups/
+# The complete stamp download exceeds GitHub's 100 MiB per-file limit.
+# Its byte-identical split parts and reconstruction script are versioned.
+/Karten/assets/images/worldmap-stamps/Inkarnate-Stamps-Komplett-01-119-mit-Hafenvarianten.zip
 .codex-edge-*/
 AleriaAlmanach/dist/
 AleriaAlmanach/.vite-dice-test*.log

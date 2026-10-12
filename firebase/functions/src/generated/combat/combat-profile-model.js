@@ -969,7 +969,8 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
       ...(normalizeHitPointVitality(hitPoints.vitality) ? { vitality: normalizeHitPointVitality(hitPoints.vitality) } : {}),
       current: normalizeOptionalNumber(hitPoints.current ?? source.currentHitPoints, 0, 9999),
       temporary: normalizeNumber(hitPoints.temporary, 0, 0, 9999),
-      hitDie: [6, 8, 10, 12].includes(Number(hitPoints.hitDie)) ? Number(hitPoints.hitDie) : 8,
+      // The shared schema also carries small creatures with W4 hit dice.
+      hitDie: [4, 6, 8, 10, 12].includes(Number(hitPoints.hitDie)) ? Number(hitPoints.hitDie) : 8,
       averagePerLevelOverride: normalizeOptionalNumber(hitPoints.averagePerLevelOverride, 1, 999),
       maximumOverride: normalizeOptionalNumber(hitPoints.maximumOverride ?? legacyMaximumHitPoints, 1, 9999)
     },

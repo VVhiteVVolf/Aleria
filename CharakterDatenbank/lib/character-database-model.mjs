@@ -329,6 +329,10 @@ function sha256(value) {
   return createHash('sha256').update(JSON.stringify(value)).digest('hex');
 }
 
+export function characterDatabaseContentHash(character, classification, sourceDocumentIds) {
+  return sha256({ character, classification, sourceDocumentIds });
+}
+
 function meaningfulSize(value) {
   if (value === null || value === undefined || value === '') return 0;
   if (Array.isArray(value)) return value.reduce((sum, item) => sum + meaningfulSize(item), value.length);
@@ -485,7 +489,7 @@ export function buildCharacterDatabase(archive, familyCandidates, options = {}) 
       }
     };
     const sourceDocumentIds = sourceCharacters.map(source => text(source.id)).filter(Boolean);
-    const contentHash = sha256({ character, classification, sourceDocumentIds });
+    const contentHash = characterDatabaseContentHash(character, classification, sourceDocumentIds);
     const localRecord = {
       recordId,
       path,

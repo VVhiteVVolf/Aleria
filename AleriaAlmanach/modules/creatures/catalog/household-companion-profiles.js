@@ -19,7 +19,7 @@ export function createHouseholdCompanion(spec) {
   return {
     id: `companion-${itemId}`, name: spec.name, type: 'Tier', species: spec.species,
     level: spec.level, challengeRating: spec.level, size: base.size,
-    classification: { genus: base.genus, location: 'Celtigerns Wacht', house: '' },
+    classification: { genus: base.genus, location: spec.location || 'Celtigerns Wacht', house: spec.house || '' },
     habitat: spec.habitat || 'Burg Draig, Celtigerns Wacht',
     portrait: spec.portrait || `https://i.imgur.com/${spec.image}`, portraitCaption: `${spec.name} · ${spec.ownerName}`,
     itemOrigin: { instanceId: itemId, inventoryItemId: itemId, templateId: '', ownerCharacterId: spec.ownerId, ownerCharacterName: spec.ownerName, disposition: 'owned' },

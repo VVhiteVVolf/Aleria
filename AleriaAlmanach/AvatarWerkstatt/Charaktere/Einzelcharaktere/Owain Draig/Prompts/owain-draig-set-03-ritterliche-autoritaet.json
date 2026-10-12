@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-11",
+  "characterName": "Owain Draig",
+  "setId": "set-03",
+  "theme": "Ritterliche Autorität",
+  "referenceImage": "Referenzen/owain-draig-portraet.jpg",
+  "referenceSource": "Stammbäume\\assets\\images\\portraits\\haus-draig\\owain-draig.jpg",
+  "referenceSha256": "20ad9997b34c0ec48294b250a540e8a06390c997416bb7db68e784fde8846eda",
+  "promptFile": "Prompts/owain-draig-set-03-ritterliche-autoritaet.txt",
+  "sheetFile": "Sheets/owain-draig-set-03-ritterliche-autoritaet.png",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "emotion": "Entschlossener Befehl",
+      "gesture": "A commanding focused expression, mouth open just enough to issue a clear order; one forearm points decisively to the side, shoulders square and upright."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "emotion": "Halt und Ruhe",
+      "gesture": "Firm calm authority, steady forward gaze and closed mouth; one open palm raised toward the viewer in a clear stop gesture, the other hand relaxed low."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "emotion": "Strenge Mahnung",
+      "gesture": "A stern furrowed brow, level eye contact, slightly open mouth; one upright index finger beside the chest delivering a measured warning, other arm lowered."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "emotion": "Unbeirrbare Herausforderung",
+      "gesture": "A cool fearless half-smile, chin slightly lifted and sharp focused eyes; arms confidently folded, powerful but controlled stance."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "emotion": "Gerechter Zorn",
+      "gesture": "Controlled genuine anger, eyebrows tightly drawn, jaw firm, lips parted mid-rebuke; one clenched fist held near the shoulder, without distorting his face."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "emotion": "Mitreißender Ruf",
+      "gesture": "An inspiring vigorous rallying call, open mouth, determined bright eyes; one arm lifted diagonally in a compact rallying gesture with the hand fully inside its panel."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "emotion": "Ritterliches Ehrenwort",
+      "gesture": "Solemn unwavering sincerity and direct blue-eyed gaze; one closed fist placed over the heart, the other arm at ease, no weapon."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "emotion": "Last der Verantwortung",
+      "gesture": "Concern beneath composed authority, brows drawn and eyes briefly lowered; one hand rubbing the back of his neck, the other near the lower chest, no melodrama."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "emotion": "Beruhigende Zuversicht",
+      "gesture": "Steady protective confidence with a reassuring small smile; both open hands held low and gently angled downward in a calming gesture, shoulders relaxed but dignified."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "generationMode": "built-in image_gen",
+  "status": "erstellt, zerlegt und visuell geprüft",
+  "outputFolder": "Output/set-03",
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-11",
+    "reviewedAvatars": 9,
+    "passed": true
+  }
+}

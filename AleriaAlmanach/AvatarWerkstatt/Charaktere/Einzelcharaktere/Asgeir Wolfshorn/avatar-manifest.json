@@ -1,0 +1,565 @@
+{
+  "createdAt": "2026-10-13",
+  "character": "Asgeir Wolfshorn",
+  "generationMode": "built-in image_gen",
+  "splitter": "AleriaAlmanach\\AvatarWerkstatt\\Werkzeuge\\Avatar Splitterer\\AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "operation": "Original V3 get_crops and crop_box methods, no GUI",
+  "sourcePortrait": "Referenzen/asgeir-wolfshorn-nutzerreferenz.png",
+  "settings": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "sets": [
+    {
+      "setId": "set-01",
+      "theme": "Zwei Einhandäxte",
+      "sheet": "Sheets/asgeir-wolfshorn-kampf-set-01-doppelaexte.png",
+      "sheetSha256": "8613f7d9d1ca101832a7199aa3a40e3cd084831814038e39e1747f9c9f47968a",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Entschlossener kurzer Hieb",
+          "file": "Output/set-01/asgeir-wolfshorn-kampf-set-01-doppelaexte_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "335792c993d22dc397188372cbb56c6558d4899a8eb22b4039645caadeca3baf",
+          "category": "Angriff",
+          "gesture": "Focused narrowed eyes, clenched closed jaw; right-hand axe in a compact outward diagonal cut, left axe held close in reserve."
+        },
+        {
+          "index": 2,
+          "emotion": "Kämpferischer Ruf",
+          "file": "Output/set-01/asgeir-wolfshorn-kampf-set-01-doppelaexte_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "09731d7848f8c4ee033cbbec0e418f7250998cbc5dcc201711495b7642bf6629",
+          "category": "Angriff",
+          "gesture": "Open mouth in a brief battle call, drawn brows; left-hand axe lifted beside shoulder for a descending cut, right axe lower and forward, two distinct grips."
+        },
+        {
+          "index": 3,
+          "emotion": "Selbstsicherer Gegenangriff",
+          "file": "Output/set-01/asgeir-wolfshorn-kampf-set-01-doppelaexte_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "ff9755d2c27066ca07ee7059ae4ba7fb418bf1a532003220a28fc1ae07ba5076",
+          "category": "Angriff",
+          "gesture": "Small confident fierce grin; right axe sweeps laterally below face, left axe held beside ribs, torso modestly turned."
+        },
+        {
+          "index": 4,
+          "emotion": "Konzentrierte Kreuzparade",
+          "file": "Output/set-01/asgeir-wolfshorn-kampf-set-01-doppelaexte_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "1b8eb971c3c6e52c757fdbdfc95a0cd02ae2b5a0f60e773d808b76cd1fd52827",
+          "category": "Abwehr",
+          "gesture": "Sharp concentrated gaze; independent short axe hafts crossed well below chin in a readable X guard, each hand grips its own haft, blades point away."
+        },
+        {
+          "index": 5,
+          "emotion": "Wachsames Abfangen",
+          "file": "Output/set-01/asgeir-wolfshorn-kampf-set-01-doppelaexte_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "c5a87184c9c9d1aeb07c1d77de1616cb5dff666e6758fc28954ae4d2a22dab3c",
+          "category": "Abwehr",
+          "gesture": "Alert wide eyes, lips tight; left axe rises as outer side guard, right axe remains in front of lower chest, face clear."
+        },
+        {
+          "index": 6,
+          "emotion": "Zäher Rückzug",
+          "file": "Output/set-01/asgeir-wolfshorn-kampf-set-01-doppelaexte_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "1aa96eebe268de98c15088c5a07242570f5de41a55d30d250fc93d58733c94fb",
+          "category": "Abwehr",
+          "gesture": "Gritted teeth and knitted brows, shoulders pulled slightly back; both separate axes in a compact low protective guard."
+        },
+        {
+          "index": 7,
+          "emotion": "Ruhige Kampfbereitschaft",
+          "file": "Output/set-01/asgeir-wolfshorn-kampf-set-01-doppelaexte_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "4357e6ccfdecf9b583d5475f6e210096eed4cf4b122763ea2fff060b52299dba",
+          "category": "Neutral",
+          "gesture": "Neutral focused eyes, closed relaxed lips; both axes held low at opposite sides, shoulders level, upright posture."
+        },
+        {
+          "index": 8,
+          "emotion": "Abschätzendes Beobachten",
+          "file": "Output/set-01/asgeir-wolfshorn-kampf-set-01-doppelaexte_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "e6906e783d40a8a53107d7a6e9b831a6e9475f9ec31f709297726fb5a3dbe435",
+          "category": "Neutral",
+          "gesture": "One raised brow and sideways measuring look; right axe upright beside shoulder, left axe lowered at hip."
+        },
+        {
+          "index": 9,
+          "emotion": "Gelöste Trainingspause",
+          "file": "Output/set-01/asgeir-wolfshorn-kampf-set-01-doppelaexte_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "e382939b781cab99eb6fb1d8245b25b6d847a0d12408e6dd88edbb67462c7de7",
+          "category": "Neutral",
+          "gesture": "Faint relaxed half smile, steady breathing; both hands still hold their own axes lowered, elbows easy, no attack in progress."
+        }
+      ],
+      "visualReview": {
+        "reviewedAt": "2026-10-13",
+        "reviewedAvatars": 9,
+        "passed": true,
+        "checks": [
+          "Originalvorlage und Zeichenstil",
+          "3 Angriff / 3 Abwehr / 3 Neutral",
+          "lesbare Mimik",
+          "Waffenanzahl und Griff",
+          "quadratischer Ausschnitt",
+          "keine Nachbarbildreste oder Beschriftung"
+        ]
+      }
+    },
+    {
+      "setId": "set-02",
+      "theme": "Großaxt",
+      "sheet": "Sheets/asgeir-wolfshorn-kampf-set-02-grossaxt-v2.png",
+      "sheetSha256": "2a143fdbc84b7002dad96d9d4e7252a4302ef0a3fe2b5ab5c09734799597c0ca",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Kraftvoller Spalthieb",
+          "file": "Output/set-02/asgeir-wolfshorn-kampf-set-02-grossaxt_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "18ebfd8cbf730e4f37436e3bbf549a94a9fea08897cdfffc6cefb6fd7fcd7322",
+          "category": "Angriff",
+          "gesture": "Fierce focused eyes and clenched jaw; both hands on one shaft, preparation for controlled descending diagonal strike beside the head, face unobscured."
+        },
+        {
+          "index": 2,
+          "emotion": "Entschlossener Seitwärtshieb",
+          "file": "Output/set-02/asgeir-wolfshorn-kampf-set-02-grossaxt_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "7b4cf8780afd3052235894d6fa795b704130cf88664bbcc59a704f605601bb00",
+          "category": "Angriff",
+          "gesture": "Brief open-mouth exertion, deep-set brows; two separated hands drive one axe shaft laterally at lower chest height."
+        },
+        {
+          "index": 3,
+          "emotion": "Beherrschter Aufwärtshieb",
+          "file": "Output/set-02/asgeir-wolfshorn-kampf-set-02-grossaxt_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "d0678f6ceebb73b917e5d81a148bae1065ad3111d9d708ea59b548adb6fa86ff",
+          "category": "Angriff",
+          "gesture": "Tight confident smile; both hands guide one diagonal shaft rising from hip toward outside shoulder, not through the face."
+        },
+        {
+          "index": 4,
+          "emotion": "Stabile Schaftparade",
+          "file": "Output/set-02/asgeir-wolfshorn-kampf-set-02-grossaxt_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "b9a007a050f2cb7d9bcd3e9eb7c594b96e888273473cc9130517ed5dba190cec",
+          "category": "Abwehr",
+          "gesture": "Intense calm focused stare; two hands hold one continuous axe haft horizontally in front of upper chest, below chin, to parry."
+        },
+        {
+          "index": 5,
+          "emotion": "Wachsame hohe Deckung",
+          "file": "Output/set-02/asgeir-wolfshorn-kampf-set-02-grossaxt_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "355ae907dabeab57f07ed395c12cac5e57606b8e53f6aab64b5c984a9eb299c1",
+          "category": "Abwehr",
+          "gesture": "Alert eyes and tightened mouth; both hands on one diagonal haft beside the shoulder, raised defensive guard, shaft away from eyes."
+        },
+        {
+          "index": 6,
+          "emotion": "Standhaftes Ableiten",
+          "file": "Output/set-02/asgeir-wolfshorn-kampf-set-02-grossaxt_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "e349243ef5154d91d1bfb989afe295334cb2521f8626d9e8929eb9e74e5b8fe3",
+          "category": "Abwehr",
+          "gesture": "Gritted teeth, protective shoulders; both hands angle the same shaft down and outward across lower torso to redirect a blow."
+        },
+        {
+          "index": 7,
+          "emotion": "Gelassene Bereitschaft",
+          "file": "Output/set-02/asgeir-wolfshorn-kampf-set-02-grossaxt_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "a096b146dac1c04de8c7e26467946e8f635d00c5088a336df5667cb6443e7f8d",
+          "category": "Neutral",
+          "gesture": "Neutral steady direct gaze; same axe upright beside body with two separated hands resting on haft."
+        },
+        {
+          "index": 8,
+          "emotion": "Prüfender Blick",
+          "file": "Output/set-02/asgeir-wolfshorn-kampf-set-02-grossaxt_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "cacb9b60fb41fa9ba6bc7f13c3003b007cc70ec2f61d0bad0293a9819f4a7ebc",
+          "category": "Neutral",
+          "gesture": "Slightly lifted brow, eyes off to side; same axe held diagonally low in both hands, shoulders loose."
+        },
+        {
+          "index": 9,
+          "emotion": "Ruhige Trainingspause",
+          "file": "Output/set-02/asgeir-wolfshorn-kampf-set-02-grossaxt_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "8a066297d16d9a91bc39d46303a9c9e2f218c9cc2473193247a8542c1bedc775",
+          "category": "Neutral",
+          "gesture": "Soft knowing half smile; one long axe at relaxed low carry in both hands, no shouting or strike, face fully visible."
+        }
+      ],
+      "visualReview": {
+        "reviewedAt": "2026-10-13",
+        "reviewedAvatars": 9,
+        "passed": true,
+        "checks": [
+          "Originalvorlage und Zeichenstil",
+          "3 Angriff / 3 Abwehr / 3 Neutral",
+          "lesbare Mimik",
+          "Waffenanzahl und Griff",
+          "quadratischer Ausschnitt",
+          "keine Nachbarbildreste oder Beschriftung"
+        ]
+      }
+    },
+    {
+      "setId": "set-03",
+      "theme": "Axt und Rundschild",
+      "sheet": "Sheets/asgeir-wolfshorn-kampf-set-03-axt-und-schild-v2.png",
+      "sheetSha256": "77fdf7a49c2f838961cc27a62f68655cc75742edc8898f1cb87f33cbb1983aab",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        410,
+        410
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Vorstoß aus der Deckung",
+          "file": "Output/set-03/asgeir-wolfshorn-kampf-set-03-axt-und-schild_Bild01.png",
+          "box": [
+            4,
+            2,
+            414,
+            412
+          ],
+          "sha256": "8b99f4856eb21e96b42316c3f928baec76e8fe7b5920296e9ab857e503b55a66",
+          "category": "Angriff",
+          "gesture": "Focused brows and set jaw; left shield in front of lower chest, right axe makes compact diagonal forward cut outside shield edge."
+        },
+        {
+          "index": 2,
+          "emotion": "Entschlossener Hieb",
+          "file": "Output/set-03/asgeir-wolfshorn-kampf-set-03-axt-und-schild_Bild02.png",
+          "box": [
+            422,
+            2,
+            832,
+            412
+          ],
+          "sha256": "992a8743c9b1feb1074aa4de4c11d4b4638aeae1ef47c23d3bdac106bac838ae",
+          "category": "Angriff",
+          "gesture": "Open mouth short fighting call; right axe raised beside shoulder for overhead strike, left shield held low forward."
+        },
+        {
+          "index": 3,
+          "emotion": "Sicherer Gegenhieb",
+          "file": "Output/set-03/asgeir-wolfshorn-kampf-set-03-axt-und-schild_Bild03.png",
+          "box": [
+            840,
+            2,
+            1250,
+            412
+          ],
+          "sha256": "371db1fc8b4c33f16e2607df091a8c518717daf02c13284d3b04fc12143a1277",
+          "category": "Angriff",
+          "gesture": "Small fierce confident grin; right axe sweeps out to his right below shoulder height while left shield protects left flank."
+        },
+        {
+          "index": 4,
+          "emotion": "Feste Schilddeckung",
+          "file": "Output/set-03/asgeir-wolfshorn-kampf-set-03-axt-und-schild_Bild04.png",
+          "box": [
+            4,
+            415,
+            414,
+            825
+          ],
+          "sha256": "7592e9e0729939ec98221d59d644057b296e0eb23d0b5763f640b9c369306328",
+          "category": "Abwehr",
+          "gesture": "Steady intense direct eyes; left shield raised to chest height, top rim below chin, right axe upright in reserve outside face."
+        },
+        {
+          "index": 5,
+          "emotion": "Wachsames Abwinkeln",
+          "file": "Output/set-03/asgeir-wolfshorn-kampf-set-03-axt-und-schild_Bild05.png",
+          "box": [
+            422,
+            415,
+            832,
+            825
+          ],
+          "sha256": "47887da22c39ffb87825e9dce064698c390d738d0b01f46a61ea548ff6051d51",
+          "category": "Abwehr",
+          "gesture": "Eyes tracking an unseen attack to his left, lips compressed; left shield angled outward with believable forearm behind it, right axe close at hip."
+        },
+        {
+          "index": 6,
+          "emotion": "Zähes Standhalten",
+          "file": "Output/set-03/asgeir-wolfshorn-kampf-set-03-axt-und-schild_Bild06.png",
+          "box": [
+            840,
+            415,
+            1250,
+            825
+          ],
+          "sha256": "c5b603d2eaa5ab0a32ff7baa1e162acfaba1202d3d150cf3c25f01b3f7ef28d7",
+          "category": "Abwehr",
+          "gesture": "Tensed jaw and determined brows; torso slightly recoils behind left shield covering chest, right axe kept clear beside shoulder."
+        },
+        {
+          "index": 7,
+          "emotion": "Ruhiger Bereitschaftsstand",
+          "file": "Output/set-03/asgeir-wolfshorn-kampf-set-03-axt-und-schild_Bild07.png",
+          "box": [
+            4,
+            829,
+            414,
+            1239
+          ],
+          "sha256": "47491dc458b98dcf268a7639e2245da10fe65e19e60f385a4d67b0501ec75651",
+          "category": "Neutral",
+          "gesture": "Calm neutral focused expression; left shield relaxed near hip, right axe held low, upright torso."
+        },
+        {
+          "index": 8,
+          "emotion": "Abschätzen des Gegenübers",
+          "file": "Output/set-03/asgeir-wolfshorn-kampf-set-03-axt-und-schild_Bild08.png",
+          "box": [
+            422,
+            829,
+            832,
+            1239
+          ],
+          "sha256": "44391f8848b6dc1096c3148e4132e40a35862b13e017f154aa03f727da63f3da",
+          "category": "Neutral",
+          "gesture": "One raised eyebrow, sideways assessing eyes; shield upright at left side, right axe near shoulder, no swing."
+        },
+        {
+          "index": 9,
+          "emotion": "Gelöste Wachsamkeit",
+          "file": "Output/set-03/asgeir-wolfshorn-kampf-set-03-axt-und-schild_Bild09.png",
+          "box": [
+            840,
+            829,
+            1250,
+            1239
+          ],
+          "sha256": "3c8a8a6e9663e0cc57e3d95b4df0f77fcf849793144467f348c3e7e3b198579a",
+          "category": "Neutral",
+          "gesture": "Faint relaxed half smile; shield and axe lowered while still securely held, shoulders easy, training break."
+        }
+      ],
+      "cropCorrection": {
+        "reason": "Sichtprüfung: tatsächliche Bildzeilen wechseln bei y=414 und y=827; Übergangspixel und Nachbarbildreste durch individuelle V3-Kanten ausschließen. Kein Resampling.",
+        "gridY": [
+          0,
+          414,
+          827,
+          1254
+        ],
+        "cellSize": 410,
+        "adjustments": [
+          {
+            "left": 4,
+            "top": 2,
+            "right": -4,
+            "bottom": -2
+          },
+          {
+            "left": 4,
+            "top": 2,
+            "right": -4,
+            "bottom": -2
+          },
+          {
+            "left": 4,
+            "top": 2,
+            "right": -4,
+            "bottom": -2
+          },
+          {
+            "left": 4,
+            "top": 1,
+            "right": -4,
+            "bottom": -2
+          },
+          {
+            "left": 4,
+            "top": 1,
+            "right": -4,
+            "bottom": -2
+          },
+          {
+            "left": 4,
+            "top": 1,
+            "right": -4,
+            "bottom": -2
+          },
+          {
+            "left": 4,
+            "top": 2,
+            "right": -4,
+            "bottom": -15
+          },
+          {
+            "left": 4,
+            "top": 2,
+            "right": -4,
+            "bottom": -15
+          },
+          {
+            "left": 4,
+            "top": 2,
+            "right": -4,
+            "bottom": -15
+          }
+        ]
+      },
+      "visualReview": {
+        "reviewedAt": "2026-10-13",
+        "reviewedAvatars": 9,
+        "passed": true,
+        "checks": [
+          "Originalvorlage und Zeichenstil",
+          "3 Angriff / 3 Abwehr / 3 Neutral",
+          "lesbare Mimik",
+          "Waffenanzahl und Griff",
+          "quadratischer Ausschnitt",
+          "keine Nachbarbildreste oder Beschriftung"
+        ]
+      }
+    }
+  ],
+  "avatarCount": 27,
+  "visualReview": {
+    "reviewedAt": "2026-10-13",
+    "reviewedAvatars": 27,
+    "method": "Alle Einzelavatare in Prüfübersichten aus den tatsächlich exportierten PNGs bei Originalgröße angesehen; nach Kantenkorrektur erneute Prüfung des Schild-Sets.",
+    "passed": true
+  },
+  "referenceSha256": "2355b6b888e26e3034c5f7e81081a15844f6ebab575f8a719f4213f4a2d1e285",
+  "distributionPerSet": {
+    "Angriff": 3,
+    "Abwehr": 3,
+    "Neutral": 3
+  }
+}

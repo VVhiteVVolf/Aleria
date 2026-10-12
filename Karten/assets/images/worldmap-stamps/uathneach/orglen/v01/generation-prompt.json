@@ -1,0 +1,69 @@
+{
+  "order": 2,
+  "slug": "orglen",
+  "label": "Órglen",
+  "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_20_45-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+  "userBrief": "Große, ausgeprägte Hafenstadt; berühmt für Fischfang und als Flottenstützpunkt.",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "status": "first-draft-ready",
+  "version": 1,
+  "tool": "built-in image_gen",
+  "stylePreset": "fantasy-worldmap-stamp",
+  "styleVersion": 2,
+  "transparentBackground": true,
+  "primaryStyleReference": "Karten/assets/images/worldmap-stamps/style-tests/01-gaelic-farmhouse-approved.png",
+  "file": "orglen-v01.png",
+  "designDescription": "A large strongly characterized Gaelic fishing harbor city and naval base. About 28 to 34 very simple chunky little houses in two dense quarters, a broad modest naval castle, fish-market hall, three low warehouses and a prominent dockyard with three short quays. A fortified landward perimeter. Three tiny single-sail boats and one slightly larger two-mast naval vessel with extremely simplified rigging. Naval and fishing identity comes from the docks and vessel silhouettes, not miniature clutter. Muted slate-blue and terracotta roofs, pale stone and brown timber. Distinctive long hooked headland plan and a concave working waterfront",
+  "geographicLayout": "A broad western headland curls around a sheltered bay to the NORTHEAST, with open water west and southwest and land access southeast. The city spreads from the rounded northwest end down the broad land to the southeast. Put the compact naval stronghold at the northern end around (35%,27%), housing at (42%,47%) and (64%,66%), and the working harbor at the NORTHEAST-facing concave bay around (69%,43%); docks project upward/right into this bay, not downward across the southern coast. Southeast main gate around (78%,77%). Keep buildings on the headland and the bay opening transparent.",
+  "prompt": "Create ONE transparent Inkarnate worldmap stamp of Órglen — Gaelic town or city.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A large strongly characterized Gaelic fishing harbor city and naval base. About 28 to 34 very simple chunky little houses in two dense quarters, a broad modest naval castle, fish-market hall, three low warehouses and a prominent dockyard with three short quays. A fortified landward perimeter. Three tiny single-sail boats and one slightly larger two-mast naval vessel with extremely simplified rigging. Naval and fishing identity comes from the docks and vessel silhouettes, not miniature clutter. Muted slate-blue and terracotta roofs, pale stone and brown timber. Distinctive long hooked headland plan and a concave working waterfront. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nREFERENCE ROLES: Image 1 is the approved farmhouse, the PRIMARY STYLE reference. Image 2 is ONLY the north-up target MAP GEOGRAPHY and placement reference. Match the map's approximate canvas aspect ratio and layout. Colored diamond markers indicate location only, NOT a frame, emblem, background, or rigid city boundary. Never reproduce those markers, labels, terrain, mountain ranges, trees outside the settlement, river, sea, sky or background. Draw only the architecture and indispensable attached harbor elements. Buildings stand upright in the approved elevated three-quarter view while their footprint follows the north-up map. Keep all foundations on the indicated land; existing bridges remain part of the original map and should not be redrawn. Use the geographic directions below. Normalized positions are approximate centers, not exact requirements.\n\nGEOGRAPHIC LAYOUT: A broad western headland curls around a sheltered bay to the NORTHEAST, with open water west and southwest and land access southeast. The city spreads from the rounded northwest end down the broad land to the southeast. Put the compact naval stronghold at the northern end around (35%,27%), housing at (42%,47%) and (64%,66%), and the working harbor at the NORTHEAST-facing concave bay around (69%,43%); docks project upward/right into this bay, not downward across the southern coast. Southeast main gate around (78%,77%). Keep buildings on the headland and the bay opening transparent.\n\nTRANSPARENCY AND SIMPLICITY: Every exterior contour is a clean solid dark-brown pen stroke. Immediately outside it is fully transparent empty space, no brown gradient, blur, halo, glow, cast shadow or ground shadow. Free gaps and all water areas are transparent. Only small enclosed courtyards and narrow built streets may be filled; no continuous city ground plate. Do not add tiny surface marks to fill the canvas. All houses retain the farmhouse reference's playful simple shape language; cities may contain more houses but each stays equally simple.",
+  "geographyReferenceSize": [
+    522,
+    525
+  ],
+  "validation": {
+    "width": 1278,
+    "height": 1230,
+    "mode": "RGBA",
+    "transparentFraction": 0.6671,
+    "transparentPixelCount": 1048594,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "visibleBoundsAlphaAbove8": [
+      191,
+      99,
+      1153,
+      1084
+    ],
+    "originalAlphaPreserved": true,
+    "originalBytesPreserved": true
+  },
+  "sourceImage": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11f40-a25b-73f1-8920-3ca29d7e34d6\\exec-fdf3a537-7afc-42fe-8308-6711593d1011.png",
+  "generationId": "exec-fdf3a537-7afc-42fe-8308-6711593d1011",
+  "sha256": "157d135fa98675b14ca9c71343c1df89f2b6755ebc8d4f8bb14df79629580836",
+  "review": {
+    "userApproved": false,
+    "batchFirstDraft": true,
+    "geographyReferenceInspected": true,
+    "preciseMapPlacementDeferred": true,
+    "optimizationDeferredByUser": true,
+    "note": "Erstentwurf auf Grundlage des freigegebenen Bauernhaus-Stils und des individuellen Kartenausschnitts. Keine Zwischenfreigabe erforderlich; individuelle Optimierung erfolgt spaeter.",
+    "lightAndDarkCompositeInspected": true,
+    "edgeInspection": "Auf heller und dunkler Vorschauunterlage visuell geprueft; keine sichtbaren aeusseren Halos oder Hintergrundrechtecke. Originaler Alphakanal unveraendert.",
+    "overviewLight": "../../batch-16-previews/overview-light.png",
+    "overviewDark": "../../batch-16-previews/overview-dark.png",
+    "laterOptimizationNote": "Bei der spaeteren Optimierung die breite innere Bodenflaeche und den schmalen beigefarbenen Aussenrand der Stadtanlage pruefen."
+  },
+  "referenceHashes": {
+    "primaryStyleReference": "cb49eb5e92bc28d42eadbcf6eb4927bef73f449c2a713c76d0b427990310b3bd",
+    "geographyReference": "93b395816e59b520ff45baff681810ca6879a172cae76b6fe84e737b26e5161a"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-12",
+  "characterName": "Nudd Saethwyr",
+  "setId": "set-01",
+  "stem": "nudd-saethwyr-kampf-set-01-dreizack-kontrolle",
+  "theme": "Dreizack – Kontrolle und Präzision",
+  "referenceSource": "Unveränderter aktueller Nutzeranhang, lokal in Referenzen gesichert.",
+  "promptFile": "Prompts/nudd-saethwyr-kampf-set-01-dreizack-kontrolle.txt",
+  "sheetFile": "Sheets/nudd-saethwyr-kampf-set-01-dreizack-kontrolle-v3.png",
+  "outputFolder": "Output/set-01",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "framing": "Kopf bis Hüfte, Mimik im Fokus, Waffen dürfen den Rand verlassen",
+  "background": "Trainingsplatz im Draig-Burginnenhof, helle Steinmauern, rote Draig-Banner, Tageslicht",
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "category": "Angriff",
+      "emotion": "Präziser gerader Stoß",
+      "gesture": "Brows narrow, lips firmly closed; two separated gloved hands drive one trident shaft in an oblique forward thrust toward offscreen side, prongs beside face, no extreme foreshortening."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "category": "Angriff",
+      "emotion": "Entschlossener Ausfall",
+      "gesture": "Mouth slightly open with exertion, focused eyes; torso leans modestly forward, both hands on one level shaft push the three-pronged head laterally out of frame."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "category": "Angriff",
+      "emotion": "Gezielter Gegenstoß",
+      "gesture": "Cold concentrated narrowed eyes and tense jaw; trident drawn back diagonally at waist then aimed toward upper outside corner, both grips visible."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "category": "Abwehr",
+      "emotion": "Ruhige Querparade",
+      "gesture": "Calm intensely focused expression; two spaced hands hold continuous trident shaft horizontally across chest below chin, three-pronged head to side."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "category": "Abwehr",
+      "emotion": "Aufmerksames Ableiten",
+      "gesture": "Alert slightly wider eyes, compressed lips; guide hand farther up shaft, rear hand at waist, weapon angled out to deflect, face unobstructed."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "category": "Abwehr",
+      "emotion": "Unbeirrbare Wacht",
+      "gesture": "Firm determined frown, chin slightly tucked; both hands hold trident diagonally in a close guard outside his face, elbows bent naturally."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "category": "Neutral",
+      "emotion": "Disziplinierte Bereitschaft",
+      "gesture": "Serious neutral direct gaze; trident upright beside shoulder, one gloved hand grips near chest while other relaxed near lower shaft."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "category": "Neutral",
+      "emotion": "Prüfendes Beobachten",
+      "gesture": "One slight raised brow and sideways gaze; two hands carry trident low across hips, shoulders relaxed, no attack."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "category": "Neutral",
+      "emotion": "Kurze Trainingspause",
+      "gesture": "Subtle tired exhale and softened eyes, closed mouth; one hand on upright trident, other relaxed at waist, upright stance."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "generationMode": "built-in image_gen",
+  "status": "erstellt, mit V3 zerlegt und visuell geprüft",
+  "styleCorrection": "13.10.2026: Nutzer verlangt Asgeirs hochgradig unveränderte Optik und künstlerischen Stil nach dem Originalanhang; allgemeines Anime-Preset und abweichende Rüstungsdarstellung sind nachrangig.",
+  "referenceImage": "Referenzen/nudd-saethwyr-nutzerreferenz.png",
+  "referenceSha256": "d9776a8c10b9b486c83c2aae5b62c3b4044a4b9466cc72323b0a69b87473c3c0",
+  "referenceMechanism": "referenced_image_paths; originales Nutzerbild als erste Referenz",
+  "generatedAt": "2026-10-13",
+  "generationSourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a12c67-6d1d-7d71-9ae7-d9ba800fc264\\exec-7e3feae2-83fb-414e-8621-e2e3b1719deb.png",
+  "correctionPromptFile": "Prompts/nudd-saethwyr-kampf-set-01-dreizack-kontrolle-griffkorrektur.txt",
+  "draftSheetFile": "Sheets/Entwuerfe/nudd-saethwyr-kampf-set-01-dreizack-kontrolle-vor-griffkorrektur.png",
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-13",
+    "reviewedAvatars": 9,
+    "passed": true,
+    "checks": [
+      "Originalvorlage und Zeichenstil",
+      "3 Angriff / 3 Abwehr / 3 Neutral",
+      "lesbare Mimik",
+      "Waffenanzahl und Griff",
+      "quadratischer Ausschnitt",
+      "keine Nachbarbildreste oder Beschriftung"
+    ]
+  },
+  "avatarPixels": [
+    418,
+    418
+  ],
+  "inputImageFiles": [
+    "Referenzen/nudd-saethwyr-nutzerreferenz.png"
+  ],
+  "correctionInputImageFiles": [
+    "Sheets/Entwuerfe/nudd-saethwyr-kampf-set-01-dreizack-kontrolle-vor-griffkorrektur.png",
+    "Referenzen/nudd-saethwyr-nutzerreferenz.png"
+  ]
+}

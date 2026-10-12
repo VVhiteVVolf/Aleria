@@ -19,7 +19,8 @@ import {
   sanitizeCharacterCombatProfile
 } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260928-equipment-art-v4';
-import { renderCreatureDossier } from './creature-dossier.js?v=20260928-equipment-art-v4';
+import { renderCreatureDossier } from './creature-dossier.js?v=20261012-carreg-v1';
+import { renderCreatureBestiaryReference } from './creature-bestiary-view.js?v=20261012-carreg-v1';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import {
   findSpellSlotResourceId,
@@ -37,13 +38,13 @@ import {
   makeCreatureExportPayload,
   normalizeCreatureImportPayload,
   sanitizeCreature
-} from './creature-model.js?v=20261011-creature-groups-v1';
+} from './creature-model.js?v=20261012-carreg-v1';
 import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
   isBuiltinCreatureId
-} from './creature-catalog.js?v=20261011-household-v1';
-import { getCreatureClassification } from './creature-classification.js?v=20261011-creature-groups-v1';
+} from './creature-catalog.js?v=20261012-carreg-v1';
+import { getCreatureClassification } from './creature-classification.js?v=20261012-carreg-v1';
 import { renderCreatureGroups } from './creature-library-view.js?v=20261011-creature-groups-v1';
 import { selectChangedSections } from '../characters/character-save-guard.js?v=20260808-character-storage-audit-v1';
 
@@ -397,7 +398,7 @@ function renderSheet() {
       <div class="creature-identity-grid">
         ${renderField('Name', 'name', creature.name)}
         ${renderField('Typ', 'type', creature.type, { placeholder: 'Untoter, Tier, NSC …' })}
-        ${renderField('Gattung', 'species', creature.species)}
+        ${renderField('Rasse / Art', 'species', creature.species)}
         ${renderField('Habitat', 'habitat', creature.habitat)}
         ${renderField('Register-Gattung', 'classification.genus', creature.classification.genus, { placeholder: getCreatureClassification(creature).genus })}
         ${renderField('Register-Ort', 'classification.location', creature.classification.location, { placeholder: getCreatureClassification(creature).location })}
@@ -406,6 +407,7 @@ function renderSheet() {
         <label class="creature-field"><span>Größe</span><select data-creature-field="size">${SIZE_OPTIONS.map(size => `<option value="${size}"${size === creature.size ? ' selected' : ''}>${size}</option>`).join('')}</select></label>
         ${renderField('Stufe', 'level', creature.level, { type: 'number', min: 1, max: 30 })}
       </div>
+      ${renderCreatureBestiaryReference(creature, escapeHtml)}
       <p class="creature-level-guideline"><strong>Stufenorientierung:</strong> ${CREATURE_LEVEL_GUIDELINES.map(formatLevelGuideline).join(' · ')}</p>
     </section>
     <section class="creature-sheet-section">

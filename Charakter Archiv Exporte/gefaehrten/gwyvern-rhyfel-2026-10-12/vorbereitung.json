@@ -1,0 +1,114 @@
+{
+  "status": "local-draft",
+  "preparedAt": "2026-10-12T21:09:06.423Z",
+  "published": false,
+  "characters": [
+    {
+      "id": "0Sku8euk5jhlWebdsskI",
+      "name": "Trevor Gwyvern",
+      "action": "inventory-only-merge",
+      "expectedUpdateTime": "2026-09-24T19:23:03.917251Z"
+    },
+    {
+      "id": "person--haus-gwyvern--tegwen-gwyvern",
+      "name": "Tegwen Gwyvern",
+      "action": "create-if-absent",
+      "expectedUpdateTime": null
+    },
+    {
+      "id": "person--haus-gwyvern--huw-gwyvern",
+      "name": "Huw Gwyvern",
+      "action": "create-if-absent",
+      "expectedUpdateTime": null
+    }
+  ],
+  "creatures": [
+    {
+      "id": "companion-trevor-bwmbo",
+      "name": "Bwmbo",
+      "ownerCharacterId": "0Sku8euk5jhlWebdsskI",
+      "level": 2,
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/katzen/cenyric",
+        "name": "Cenyric",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/cenyric/index.html"
+      }
+    },
+    {
+      "id": "companion-trevor-uffel",
+      "name": "Uffel",
+      "ownerCharacterId": "0Sku8euk5jhlWebdsskI",
+      "level": 2,
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/katzen/cenyric",
+        "name": "Cenyric",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/cenyric/index.html"
+      }
+    },
+    {
+      "id": "companion-trevor-struppi",
+      "name": "Struppi",
+      "ownerCharacterId": "0Sku8euk5jhlWebdsskI",
+      "level": 3,
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      }
+    },
+    {
+      "id": "companion-huw-dyreth",
+      "name": "Dyreth",
+      "ownerCharacterId": "person--haus-gwyvern--huw-gwyvern",
+      "level": 3,
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      }
+    },
+    {
+      "id": "companion-tegwen-uffyrae",
+      "name": "Uffyrae",
+      "ownerCharacterId": "person--haus-gwyvern--tegwen-gwyvern",
+      "level": 2,
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "name": "Struppi",
+      "path": "/AleriaAlmanach/assets/companions/haus-gwyvern/struppi.png",
+      "selectedOriginal": "AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companion-concepts/trevor-rhyfel-frech-aggressiv-v2-2026-10-12/03-der-freche-querkopf.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "44ce0eb4796ba1e03a04a2b9cfc54dc3316011fc410b565ab6638450406d56d9"
+    },
+    {
+      "name": "Dyreth",
+      "path": "/AleriaAlmanach/assets/companions/haus-gwyvern/dyreth.png",
+      "selectedOriginal": "AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companion-concepts/trevor-rhyfel-frech-aggressiv-v2-2026-10-12/02-der-beisser.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "a9f68e7be5daadbe46ac99241be11a071ac2a7bf2a4ddc48ae3049331d84aea3"
+    },
+    {
+      "name": "Uffyrae",
+      "path": "/AleriaAlmanach/assets/companions/haus-gwyvern/uffyrae.png",
+      "selectedOriginal": "AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companion-concepts/trevor-rhyfel-2026-10-12/02-der-wachposten.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6d9be125b5a9975bff4792c3bada120a4c9c8944c7f497f76a45492d2cd51242"
+    }
+  ],
+  "randomNames": {
+    "stallion": "Dyreth",
+    "mare": "Uffyrae",
+    "source": "AleriaAlmanach/modules/name-list/name-list-data.js#createRheunwaithNameListData"
+  },
+  "releaseNote": "Nicht veröffentlicht. Vor Freigabe aktuellen Online-Stand lesen; Trevor nur um die drei Gefährten ergänzen, neue Geschwister nur anlegen, falls ihre Weltpersonen-IDs weiterhin fehlen. Kreaturen und Besitzerinventare gemeinsam versionsgeprüft übernehmen. Bestehende Charaktere niemals mit veralteten Vollimporten überschreiben."
+}

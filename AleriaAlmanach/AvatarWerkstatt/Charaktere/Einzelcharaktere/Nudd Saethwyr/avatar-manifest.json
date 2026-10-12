@@ -1,0 +1,343 @@
+{
+  "createdAt": "2026-10-13",
+  "character": "Nudd Saethwyr",
+  "generationMode": "built-in image_gen",
+  "splitter": "AleriaAlmanach\\AvatarWerkstatt\\Werkzeuge\\Avatar Splitterer\\AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "operation": "Original V3 get_crops and crop_box methods, no GUI",
+  "sourcePortrait": "Referenzen/nudd-saethwyr-nutzerreferenz.png",
+  "settings": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "sets": [
+    {
+      "setId": "set-01",
+      "theme": "Dreizack – Kontrolle und Präzision",
+      "sheet": "Sheets/nudd-saethwyr-kampf-set-01-dreizack-kontrolle-v3.png",
+      "sheetSha256": "b712822e04dfe465428134643e40880b8704e0d2a1d4068e596b8621c4cfcda2",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Präziser gerader Stoß",
+          "file": "Output/set-01/nudd-saethwyr-kampf-set-01-dreizack-kontrolle_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "374af5ade620c2f3e5a48f4eeda05b545625403744933d3a8f4130681d1bde17",
+          "category": "Angriff",
+          "gesture": "Brows narrow, lips firmly closed; two separated gloved hands drive one trident shaft in an oblique forward thrust toward offscreen side, prongs beside face, no extreme foreshortening."
+        },
+        {
+          "index": 2,
+          "emotion": "Entschlossener Ausfall",
+          "file": "Output/set-01/nudd-saethwyr-kampf-set-01-dreizack-kontrolle_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "d9770c43b72cb4d51a31778e26c07eaf539fd57e41dd18218ac0fdca6ee12324",
+          "category": "Angriff",
+          "gesture": "Mouth slightly open with exertion, focused eyes; torso leans modestly forward, both hands on one level shaft push the three-pronged head laterally out of frame."
+        },
+        {
+          "index": 3,
+          "emotion": "Gezielter Gegenstoß",
+          "file": "Output/set-01/nudd-saethwyr-kampf-set-01-dreizack-kontrolle_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "81e1198c9282da97f5000cafef0e5eb2a64f6908008b94aadba0e73b909dc326",
+          "category": "Angriff",
+          "gesture": "Cold concentrated narrowed eyes and tense jaw; trident drawn back diagonally at waist then aimed toward upper outside corner, both grips visible."
+        },
+        {
+          "index": 4,
+          "emotion": "Ruhige Querparade",
+          "file": "Output/set-01/nudd-saethwyr-kampf-set-01-dreizack-kontrolle_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "7dde70f53f9f590f9f454d62b37a388765086967eed65364afc8ecc152da7890",
+          "category": "Abwehr",
+          "gesture": "Calm intensely focused expression; two spaced hands hold continuous trident shaft horizontally across chest below chin, three-pronged head to side."
+        },
+        {
+          "index": 5,
+          "emotion": "Aufmerksames Ableiten",
+          "file": "Output/set-01/nudd-saethwyr-kampf-set-01-dreizack-kontrolle_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "7125c1aaf122fd1db79cf7765891306beca4fd98cfdf83bfd3bd8dc02cc9ac08",
+          "category": "Abwehr",
+          "gesture": "Alert slightly wider eyes, compressed lips; guide hand farther up shaft, rear hand at waist, weapon angled out to deflect, face unobstructed."
+        },
+        {
+          "index": 6,
+          "emotion": "Unbeirrbare Wacht",
+          "file": "Output/set-01/nudd-saethwyr-kampf-set-01-dreizack-kontrolle_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "99afd6e860b96c7dac40864223f715c4a372b887a51f48cb2cd41f5308e11e18",
+          "category": "Abwehr",
+          "gesture": "Firm determined frown, chin slightly tucked; both hands hold trident diagonally in a close guard outside his face, elbows bent naturally."
+        },
+        {
+          "index": 7,
+          "emotion": "Disziplinierte Bereitschaft",
+          "file": "Output/set-01/nudd-saethwyr-kampf-set-01-dreizack-kontrolle_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "cf500ac27a512873df19e40ccf7387bf695f9926af0d2b90bd174498c8b59884",
+          "category": "Neutral",
+          "gesture": "Serious neutral direct gaze; trident upright beside shoulder, one gloved hand grips near chest while other relaxed near lower shaft."
+        },
+        {
+          "index": 8,
+          "emotion": "Prüfendes Beobachten",
+          "file": "Output/set-01/nudd-saethwyr-kampf-set-01-dreizack-kontrolle_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "862816b97fc9cdd2bdacf5452f3d274a3629ecb37eea36ca6bd76733d404ffc7",
+          "category": "Neutral",
+          "gesture": "One slight raised brow and sideways gaze; two hands carry trident low across hips, shoulders relaxed, no attack."
+        },
+        {
+          "index": 9,
+          "emotion": "Kurze Trainingspause",
+          "file": "Output/set-01/nudd-saethwyr-kampf-set-01-dreizack-kontrolle_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "e3b7fd1f354c34f6a9e5bdfdcd3e0a4e3c40cac97ba4e4897d24ea7ce81a36bd",
+          "category": "Neutral",
+          "gesture": "Subtle tired exhale and softened eyes, closed mouth; one hand on upright trident, other relaxed at waist, upright stance."
+        }
+      ],
+      "visualReview": {
+        "reviewedAt": "2026-10-13",
+        "reviewedAvatars": 9,
+        "passed": true,
+        "checks": [
+          "Originalvorlage und Zeichenstil",
+          "3 Angriff / 3 Abwehr / 3 Neutral",
+          "lesbare Mimik",
+          "Waffenanzahl und Griff",
+          "quadratischer Ausschnitt",
+          "keine Nachbarbildreste oder Beschriftung"
+        ]
+      }
+    },
+    {
+      "setId": "set-02",
+      "theme": "Dreizack – Dynamik und Reaktion",
+      "sheet": "Sheets/nudd-saethwyr-kampf-set-02-dreizack-dynamik.png",
+      "sheetSha256": "547985853ebb7c3c4edad8a7734073c32cd00cfdb8873d718d912515f859cdd7",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Energischer Kampfruf",
+          "file": "Output/set-02/nudd-saethwyr-kampf-set-02-dreizack-dynamik_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "393728cb5868a741a6d09f8d2fe2cec1ff96b5735e70f44f8278e67b617f7035",
+          "category": "Angriff",
+          "gesture": "Open mouth in sharp short battle call, furrowed brows; two hands guide one shaft into a diagonal downward thrust beside torso, no overhead axe-like chop."
+        },
+        {
+          "index": 2,
+          "emotion": "Schnelle Finte",
+          "file": "Output/set-02/nudd-saethwyr-kampf-set-02-dreizack-dynamik_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "be6aaac98b5c23b0d7360a3f78286e1b0ef04af53f8ba81116d593cead966fe7",
+          "category": "Angriff",
+          "gesture": "Small purposeful one-sided smirk and intent eyes; two spaced hands retract single trident near one flank, prongs angled outward in a feint, torso slightly turned."
+        },
+        {
+          "index": 3,
+          "emotion": "Druckvoller Vorstoß",
+          "file": "Output/set-02/nudd-saethwyr-kampf-set-02-dreizack-dynamik_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "4777d3a068bf9643d103580d59d8434b1309cdda883904ebd2cc7dcf750f436e",
+          "category": "Angriff",
+          "gesture": "Teeth slightly clenched with exertion; forward hand extends on shaft, rear hand drives from near hip, trident aimed obliquely offscreen, head not in front of face."
+        },
+        {
+          "index": 4,
+          "emotion": "Überraschte Abwehr",
+          "file": "Output/set-02/nudd-saethwyr-kampf-set-02-dreizack-dynamik_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "72ba4ec313cf3f391e70b93dd3d817f46429fc444cfaf93c63c481141346d914",
+          "category": "Abwehr",
+          "gesture": "Eyes briefly widen and lips part, reacting without panic; two hands bring one continuous shaft into diagonal guard at chest level beside face."
+        },
+        {
+          "index": 5,
+          "emotion": "Angespannte Gegenwehr",
+          "file": "Output/set-02/nudd-saethwyr-kampf-set-02-dreizack-dynamik_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "eae1965d6d53bb05c1bbd8328948eb93d7c7764cf043606a0028d736e000c013",
+          "category": "Abwehr",
+          "gesture": "Eyes narrowed, teeth gritted; both hands braced a forearm apart on one shaft angled low and outward, shoulders absorb imaginary pressure."
+        },
+        {
+          "index": 6,
+          "emotion": "Konzentrierte Distanzwacht",
+          "file": "Output/set-02/nudd-saethwyr-kampf-set-02-dreizack-dynamik_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "19a670e5ca7ad5319180df02364b833029c9147f7476e82dc66dbf9790692cc4",
+          "category": "Abwehr",
+          "gesture": "One brow knit more strongly, lips thin, eyes tracking sideways; two hands hold trident aimed out laterally as a cautious intercepting guard."
+        },
+        {
+          "index": 7,
+          "emotion": "Skeptisches Mustern",
+          "file": "Output/set-02/nudd-saethwyr-kampf-set-02-dreizack-dynamik_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "554852576ea597ab407d9321978252d401a0ebc431e82695507b01697f1d03b5",
+          "category": "Neutral",
+          "gesture": "One raised brow, slight doubtful closed-mouth tilt; trident resting upright in one gloved hand, free hand on hip, no aggressive movement."
+        },
+        {
+          "index": 8,
+          "emotion": "Ruhige Zuversicht",
+          "file": "Output/set-02/nudd-saethwyr-kampf-set-02-dreizack-dynamik_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "cbbdb038c097bb62618684a445debb920f8ae8863932541ac72d9ce3b54ef6e1",
+          "category": "Neutral",
+          "gesture": "Very small reassuring smile and soft direct eyes; trident at relaxed diagonal carry in both hands, shoulders level."
+        },
+        {
+          "index": 9,
+          "emotion": "Gesammelter Atem",
+          "file": "Output/set-02/nudd-saethwyr-kampf-set-02-dreizack-dynamik_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "20a5588c0095490e70815013f885a24da5467306bb0a664de52a005a7c7c0fad",
+          "category": "Neutral",
+          "gesture": "Eyes lowered briefly, controlled half-open exhale, no grimace; trident upright in one hand with other hand lightly supporting lower shaft, a composed neutral pause."
+        }
+      ],
+      "visualReview": {
+        "reviewedAt": "2026-10-13",
+        "reviewedAvatars": 9,
+        "passed": true,
+        "checks": [
+          "Originalvorlage und Zeichenstil",
+          "3 Angriff / 3 Abwehr / 3 Neutral",
+          "lesbare Mimik",
+          "Waffenanzahl und Griff",
+          "quadratischer Ausschnitt",
+          "keine Nachbarbildreste oder Beschriftung"
+        ]
+      }
+    }
+  ],
+  "avatarCount": 18,
+  "visualReview": {
+    "reviewedAt": "2026-10-13",
+    "reviewedAvatars": 18,
+    "method": "Alle Einzelavatare in Prüfübersichten aus den tatsächlich exportierten PNGs bei Originalgröße angesehen; nach Kantenkorrektur erneute Prüfung des Schild-Sets.",
+    "passed": true
+  },
+  "referenceSha256": "d9776a8c10b9b486c83c2aae5b62c3b4044a4b9466cc72323b0a69b87473c3c0",
+  "distributionPerSet": {
+    "Angriff": 3,
+    "Abwehr": 3,
+    "Neutral": 3
+  }
+}

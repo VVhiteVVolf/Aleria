@@ -51,12 +51,18 @@
       "collection": "characters",
       "documentId": "person--haus-draig--myriad-draig",
       "documentIds": [
+        "person--haus-draig--myriad-draig",
         "person--haus-draig--myriad-draig"
       ],
       "documents": [
         {
           "documentId": "person--haus-draig--myriad-draig",
           "createdAt": "2026-09-03T23:41:36.861Z",
+          "updatedAt": "2026-09-03T23:41:36.861Z"
+        },
+        {
+          "documentId": "person--haus-draig--myriad-draig",
+          "createdAt": "",
           "updatedAt": "2026-10-09T08:50:42.777Z"
         }
       ]
@@ -74,12 +80,13 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-09T08:50:42.777Z",
+    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
     "sourceUpdatedAt": "2026-10-09T08:50:42.777Z",
     "sourceDocumentIds": [
+      "person--haus-draig--myriad-draig",
       "person--haus-draig--myriad-draig"
     ],
-    "contentHash": "91e890c01f3e20ff274692841b927cea7515d0df8c27573e2461b34afa32d8de"
+    "contentHash": "7b9175da1cbc1ddfdd7b510d902ac60958f4166afeb407af6d54a6b549a34796"
   },
   "local": {
     "notes": "",

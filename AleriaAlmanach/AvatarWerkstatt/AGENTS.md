@@ -1,0 +1,17 @@
+# AvatarWerkstatt
+
+Diese Werkstatt ist die dauerhafte Arbeitsgrundlage für Charakteravatare und 9er-Reaktionssets in AleriaAlmanach.
+
+- Vor einem Avatar-Auftrag `README.md` und die drei vollständigen Lesefassungen in `Anleitungen/Lesefassungen` lesen. Die originalen Word-Dateien bleiben erhalten.
+- Vor der Bildgenerierung das verbindliche Charakterporträt tatsächlich ansehen und als Bildreferenz übergeben. Identität, Kleidung, Farben, Zeichenstil, Hintergrund und Beleuchtung erhalten. Beispiele anderer Figuren sind keine Identitätsreferenzen.
+- Avatar-Sheets haben Format 1:1 und ein gleichmäßiges 3×3-Raster. Das allgemeine 2:3-Porträtformat nicht auf das Gesamt-Sheet anwenden. Jede der neun Reaktionen braucht Mimik und passende, gut sichtbare Gestik; keine neutralen Füllposen oder Wiederholungen.
+- Keine Schrift, Nummerierung, Sprechblasen, Rahmen, weißen Trennlinien oder ungefragten Requisiten. Hände bleiben zum Gestikulieren frei. Konkrete aktuelle Nutzerwünsche haben Vorrang.
+- Vorhandene Charaktere nach Möglichkeit in ihrem bestehenden Ordner fortführen. Neue Figuren unter `Charaktere/Einzelcharaktere/<Name>`, gemeinsame Bestände unter `Charaktere/Gruppen/<Gruppe>` anlegen. Dafür `Vorlagen/Charakterordner` verwenden; benannte Gruppenmitglieder dürfen eigene Unterordner bekommen. Anlässe oder Kleidungsvarianten bei Bedarf zusätzlich trennen.
+- Auftrag und tatsächlich verwendeten Prompt unter `Prompts`, vollständige Sheets unter `Sheets`, geprüfte Einzelavatare unter `Output/<set-id>` speichern. Figur und Set müssen aus Pfad oder Dateiname eindeutig erkennbar sein.
+- `Originale` und die Quellen auf D: unverändert erhalten. Historische `Benutzt`-/`output`-Ordner innerhalb von `Originale` gehören zum übernommenen Bestand.
+- Zentraler Splitter ist `Werkzeuge/Avatar Splitterer/AvatarSplitterPro_V3.py`. Die alte V2 in Idwals Crew ist nur historischer Bestand. Vorhandene Zuschneidelogik wiederverwenden; keine zweite unabhängige Splitter-Implementierung hinzufügen.
+- Für randlose Sheets mit 3×3, Lücke X/Y 0 und Autocrop aus beginnen. Die mitkopierte Quellkonfiguration hat abweichende Werte (Y 8, Autocrop an); diese nicht ungeprüft übernehmen.
+- `Ordner verarbeiten` verschiebt Eingaben nach `Benutzt`. Deshalb ausschließlich mit einer Sheet-Kopie in `Verarbeitung/<set-id>` arbeiten, genau ein Sheet pro Arbeitsordner. Der Einzelexport erhält die Eingabe, überschreibt aber gleichnamige Ausgabedateien.
+- Exportreihenfolge: oben links, oben Mitte, oben rechts, Mitte links, Mitte Mitte, Mitte rechts, unten links, unten Mitte, unten rechts. Alle neun Dateien auf Identität, Ausschnitt und Randreste prüfen.
+- Rasterlinien und individuelle Kantenkorrekturen werden von V3 nicht in der Konfiguration gespeichert. Nötige Korrekturwerte oder Ausschnittkoordinaten pro Auftrag dokumentieren.
+- Importnachweis: `import-manifest.json` enthält Herkunft, Dateigröße und SHA-256 jeder übernommenen Datei. Diesen historischen Importbeleg nicht bei späteren Bildaufträgen umschreiben.

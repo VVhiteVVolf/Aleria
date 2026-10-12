@@ -51,3 +51,7 @@
   .creature-sheet-editor { display: none; }
   .creature-dossier { break-inside: avoid; box-shadow: none; }
 }
+.creature-bestiary-reference { margin: .75rem 0; color: #53381f; }
+.creature-dossier > .creature-bestiary-reference { padding: 0 1.25rem; }
+.creature-bestiary-reference a { color: #703c31; text-decoration: underline; text-underline-offset: .15em; }
+.creature-bestiary-reference a:focus-visible { outline: 3px solid #963e40; outline-offset: 3px; }

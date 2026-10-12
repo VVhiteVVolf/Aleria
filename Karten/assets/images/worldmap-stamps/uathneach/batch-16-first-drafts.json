@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "status": "complete-first-drafts",
+  "workflow": "Alle 16 Erstentwürfe ohne Zwischenfreigabe erstellen; individuelle Optimierung folgt später auf Nutzerwunsch.",
+  "tool": "built-in image_gen",
+  "stylePreset": "fantasy-worldmap-stamp",
+  "styleVersion": 2,
+  "total": 16,
+  "completed": 16,
+  "assets": [
+    {
+      "order": 1,
+      "slug": "broch-an-reithe",
+      "label": "Broch an Reithe",
+      "file": "broch-an-reithe/v01/broch-an-reithe-v01.png",
+      "manifest": "broch-an-reithe/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "7f698afbfe9fcdf92a032c533b7ea9a41e95032c4e3574e509c3b83b15fe7e42",
+      "validation": {
+        "width": 1311,
+        "height": 1200,
+        "mode": "RGBA",
+        "transparentFraction": 0.7784,
+        "transparentPixelCount": 1224628,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          307,
+          246,
+          1150,
+          944
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 2,
+      "slug": "orglen",
+      "label": "Órglen",
+      "file": "orglen/v01/orglen-v01.png",
+      "manifest": "orglen/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "157d135fa98675b14ca9c71343c1df89f2b6755ebc8d4f8bb14df79629580836",
+      "validation": {
+        "width": 1278,
+        "height": 1230,
+        "mode": "RGBA",
+        "transparentFraction": 0.6671,
+        "transparentPixelCount": 1048594,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          191,
+          99,
+          1153,
+          1084
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 3,
+      "slug": "broch-an-mhor",
+      "label": "Broch An Mhor",
+      "file": "broch-an-mhor/v01/broch-an-mhor-v01.png",
+      "manifest": "broch-an-mhor/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "1cc58aeb0a41331d84f997152685b04b9f65a803e00412059a859d623ce1b4a2",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7704,
+        "transparentPixelCount": 1212052,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          294,
+          223,
+          1096,
+          916
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 4,
+      "slug": "rinnmara",
+      "label": "Rinnmara",
+      "file": "rinnmara/v01/rinnmara-v01.png",
+      "manifest": "rinnmara/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "04698d63f861a2037f5190c162fded65dd26ff09a8d86d786fb7e441010c8e43",
+      "validation": {
+        "width": 1295,
+        "height": 1214,
+        "mode": "RGBA",
+        "transparentFraction": 0.745,
+        "transparentPixelCount": 1171311,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          160,
+          206,
+          1152,
+          933
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 5,
+      "slug": "broch-an-cuan",
+      "label": "Broch An Cuan",
+      "file": "broch-an-cuan/v01/broch-an-cuan-v01.png",
+      "manifest": "broch-an-cuan/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "895aaa2242e1d577e505f60baf2fb43a43f8a41e9c8b7e2ba76fb6c3257fa02f",
+      "validation": {
+        "width": 1182,
+        "height": 1331,
+        "mode": "RGBA",
+        "transparentFraction": 0.739,
+        "transparentPixelCount": 1162640,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          225,
+          168,
+          1048,
+          1085
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 6,
+      "slug": "kharanor",
+      "label": "Kharanor",
+      "file": "kharanor/v01/kharanor-v01.png",
+      "manifest": "kharanor/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "94adbed11ecc77003f2269947eb38d7db6218282aea8778453be71a4d20011e4",
+      "validation": {
+        "width": 1266,
+        "height": 1243,
+        "mode": "RGBA",
+        "transparentFraction": 0.7032,
+        "transparentPixelCount": 1106550,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          86,
+          221,
+          1223,
+          1016
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 7,
+      "slug": "rioghain",
+      "label": "Rioghain",
+      "file": "rioghain/v01/rioghain-v01.png",
+      "manifest": "rioghain/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "8b0597cd11db21707c2c6a107dd5b1bcf200e7fa5d28142637e47d7572e3ad88",
+      "validation": {
+        "width": 1426,
+        "height": 1103,
+        "mode": "RGBA",
+        "transparentFraction": 0.7213,
+        "transparentPixelCount": 1134538,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          283,
+          283,
+          1251,
+          969
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 8,
+      "slug": "mhorcha",
+      "label": "Mhorcha",
+      "file": "mhorcha/v01/mhorcha-v01.png",
+      "manifest": "mhorcha/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "4a0771af43377fa3e754b442c90efa2b3b0c973ad21c76d6a5663bd7c1d0d598",
+      "validation": {
+        "width": 1144,
+        "height": 1375,
+        "mode": "RGBA",
+        "transparentFraction": 0.6314,
+        "transparentPixelCount": 993220,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          104,
+          132,
+          1080,
+          1208
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 9,
+      "slug": "moineal",
+      "label": "Moineal",
+      "file": "moineal/v01/moineal-v01.png",
+      "manifest": "moineal/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "466223499d1f84f78917037b2e75f409d50f2f8cf3e9da212b5a8fb6bff0f2a8",
+      "validation": {
+        "width": 1225,
+        "height": 1284,
+        "mode": "RGBA",
+        "transparentFraction": 0.709,
+        "transparentPixelCount": 1115259,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          329,
+          74,
+          1035,
+          1092
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 10,
+      "slug": "treabhair",
+      "label": "Treabhair",
+      "file": "treabhair/v01/treabhair-v01.png",
+      "manifest": "treabhair/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "18dc941569aaa436d2851b608629c121ca4f363fb6c3305f3a0387bf2b6de95d",
+      "validation": {
+        "width": 1225,
+        "height": 1284,
+        "mode": "RGBA",
+        "transparentFraction": 0.6984,
+        "transparentPixelCount": 1098560,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          296,
+          128,
+          1105,
+          1039
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 11,
+      "slug": "dathuil",
+      "label": "Dathuil",
+      "file": "dathuil/v01/dathuil-v01.png",
+      "manifest": "dathuil/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "8af10b66d877741d24d58bece7e789669cb7efe6a1fe235663bcef1a5f555a84",
+      "validation": {
+        "width": 1351,
+        "height": 1164,
+        "mode": "RGBA",
+        "transparentFraction": 0.7249,
+        "transparentPixelCount": 1140003,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          259,
+          134,
+          1143,
+          956
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 12,
+      "slug": "ceithirn",
+      "label": "Ceithirn",
+      "file": "ceithirn/v01/ceithirn-v01.png",
+      "manifest": "ceithirn/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "b1754b7c8e8d4a12a51ce189cee671dc6c1ab16df8c6ca7c3cc9922f5e85f736",
+      "validation": {
+        "width": 1315,
+        "height": 1197,
+        "mode": "RGBA",
+        "transparentFraction": 0.5575,
+        "transparentPixelCount": 877468,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          119,
+          67,
+          1200,
+          1058
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 13,
+      "slug": "temair",
+      "label": "Temair",
+      "file": "temair/v01/temair-v01.png",
+      "manifest": "temair/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "a19ce57565134ab9b8a162ac087678795095a7232a50a71085c4c6d039b643f6",
+      "validation": {
+        "width": 1322,
+        "height": 1190,
+        "mode": "RGBA",
+        "transparentFraction": 0.6665,
+        "transparentPixelCount": 1048452,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          84,
+          226,
+          1262,
+          988
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 14,
+      "slug": "cathair",
+      "label": "Cathair",
+      "file": "cathair/v01/cathair-v01.png",
+      "manifest": "cathair/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "dc139b50f35acf2fee35b8d26114fcb7c7576aae5027c779054991fcf2314903",
+      "validation": {
+        "width": 1294,
+        "height": 1216,
+        "mode": "RGBA",
+        "transparentFraction": 0.6885,
+        "transparentPixelCount": 1083290,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          170,
+          186,
+          1181,
+          971
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 15,
+      "slug": "bronnan",
+      "label": "Bronnan",
+      "file": "bronnan/v01/bronnan-v01.png",
+      "manifest": "bronnan/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "767ba5606f7ce886765b148186c5dbd5166f7c0bc9c9e13f47a94abbbe7146f5",
+      "validation": {
+        "width": 1490,
+        "height": 1055,
+        "mode": "RGBA",
+        "transparentFraction": 0.684,
+        "transparentPixelCount": 1075233,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          132,
+          161,
+          1358,
+          877
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "order": 16,
+      "slug": "caorthann",
+      "label": "Caorthann",
+      "file": "caorthann/v01/caorthann-v01.png",
+      "manifest": "caorthann/v01/generation-prompt.json",
+      "status": "first-draft-ready",
+      "sha256": "16a2be6d9816266291205233ad9afb4fade5d532058353072884911e4159c746",
+      "validation": {
+        "width": 1470,
+        "height": 1070,
+        "mode": "RGBA",
+        "transparentFraction": 0.6439,
+        "transparentPixelCount": 1012772,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visibleBoundsAlphaAbove8": [
+          69,
+          276,
+          1435,
+          899
+        ],
+        "originalAlphaPreserved": true,
+        "originalBytesPreserved": true
+      }
+    }
+  ],
+  "remaining": 0,
+  "previewLight": "batch-16-previews/overview-light.png",
+  "previewDark": "batch-16-previews/overview-dark.png",
+  "package": "Uathneach-16-Erstentwuerfe.zip",
+  "review": {
+    "allPngRgbaValidated": true,
+    "originalBytesPreserved": true,
+    "lightAndDarkCompositeInspected": true,
+    "exactPlacementOptimizationDeferredByUser": true,
+    "userApproved": false
+  }
+}

@@ -1,0 +1,766 @@
+{
+  "type": "aleria-creature",
+  "version": 6,
+  "exportedAt": "2026-10-12T21:09:06.722Z",
+  "creature": {
+    "schemaVersion": 6,
+    "entityType": "creature",
+    "itemOrigin": {
+      "instanceId": "trevor-uffel",
+      "inventoryItemId": "trevor-uffel",
+      "templateId": "",
+      "ownerCharacterId": "0Sku8euk5jhlWebdsskI",
+      "ownerCharacterName": "Trevor Gwyvern",
+      "disposition": "owned"
+    },
+    "needsStatReview": false,
+    "name": "Uffel",
+    "type": "Tier",
+    "species": "Cenyric-Kater",
+    "bestiaryReference": {
+      "id": "tiere/vieh/haustiere/katzen/cenyric",
+      "name": "Cenyric",
+      "url": "/Bestiarium/tiere/vieh/haustiere/katzen/cenyric/index.html"
+    },
+    "classification": {
+      "genus": "Katzen",
+      "location": "Tiefenwyrm",
+      "house": ""
+    },
+    "habitat": "An Bord der Tiefenwyrm",
+    "challengeRating": 2,
+    "size": "Winzig",
+    "level": 2,
+    "biography": {
+      "schemaVersion": 2,
+      "revision": 0,
+      "summary": "Alter, zäher Cenyric-Schiffskater mit verblasstem orangefarbenem Tigerfell, weißem Bauch und ausgeprägter Mähne. Ein Auge ist trüb. Uffel war schon an Bord, als Idwals Mannschaft die Tiefenwyrm übernahm, und ist einfach geblieben. Trevor ist heute sein Herrchen.",
+      "appearance": "Verblasstes orangefarbenes Tigerfell mit weißen Partien an Bauch, Brust und Pfoten. Kantiges Gesicht, breite helle Mähne und aufrechter, stolzer Stand. Sein rechtes Auge ist milchig-trüb, das linke bernsteinfarben.",
+      "personality": "Alt, zäh, abgesotten und stoisch. Bleibt gelassen und steht stolz; ein vertrauter Bewohner des Schiffes mit eigenem Willen.",
+      "history": "Uffel lebte bereits auf der Tiefenwyrm, als Idwal und seine Mannschaft das Schiff bekamen. Er blieb einfach an Bord. Inzwischen ist Sir Trevor Gwyvern sein Herrchen.",
+      "bonds": "Herrchen: Sir Trevor Gwyvern. Gehört zu den Schiffskatzen von Idwals Mannschaft auf der Tiefenwyrm.",
+      "habits": "Lebt an Bord der Tiefenwyrm. Als Cenyric-Schiffskatze jagt er Mäuse und anderes Ungeziefer und sucht vertraute Ruheplätze an Deck.",
+      "facts": [
+        {
+          "label": "Rasse",
+          "value": "Cenyric"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "Kater"
+        },
+        {
+          "label": "Rolle",
+          "value": "Schiffskatze"
+        },
+        {
+          "label": "Herrchen",
+          "value": "Sir Trevor Gwyvern"
+        },
+        {
+          "label": "Heimat",
+          "value": "Tiefenwyrm"
+        }
+      ],
+      "sections": [],
+      "quote": "",
+      "quoteBy": "",
+      "traitsTitle": "Persönlichkeit & Eigenschaften",
+      "connectionsTitle": "Verbindungen",
+      "traits": [
+        {
+          "icon": "",
+          "title": "Abgesottener Bordveteran",
+          "detail": "Ein alter, stolzer Kater, der sich vom Leben auf See nicht leicht beeindrucken lässt."
+        },
+        {
+          "icon": "",
+          "title": "Trübes Auge & Mähne",
+          "detail": "Das milchig-trübe Auge und die ausgeprägte helle Mähne sind seine auffälligsten Merkmale."
+        }
+      ],
+      "connections": [
+        {
+          "type": "connection",
+          "title": "",
+          "image": "",
+          "icon": "",
+          "imageFormat": "portrait",
+          "name": "Sir Trevor Gwyvern",
+          "detail": "Herrchen · Erster Maat der Tiefenwyrm"
+        }
+      ]
+    },
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/uffel.png",
+        "emotes": [],
+        "createdAt": "",
+        "updatedAt": ""
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/uffel.png",
+    "avatars": [],
+    "portraitCaption": "Uffel · Schiffskater der Tiefenwyrm",
+    "templateId": "",
+    "instanceOrdinal": 0,
+    "combatProfile": {
+      "schemaVersion": 11,
+      "revision": 0,
+      "identity": {
+        "ancestry": "Cenyric-Kater",
+        "archetype": "Tier",
+        "background": "An Bord der Tiefenwyrm"
+      },
+      "templateSelections": {
+        "schemaVersion": 1,
+        "ancestryId": "",
+        "backgroundId": "",
+        "classId": "",
+        "attributeMethod": "",
+        "appliedAt": ""
+      },
+      "proficiencies": {
+        "armor": [],
+        "weapons": [],
+        "tools": [],
+        "languages": [],
+        "notes": ""
+      },
+      "progression": {
+        "level": 2,
+        "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [],
+        "experience": 0,
+        "nextLevelExperience": null,
+        "experienceReward": null,
+        "proficiencyBonusOverride": null
+      },
+      "attributes": [
+        {
+          "key": "strength",
+          "label": "Kraft",
+          "shortLabel": "KRF",
+          "score": 3,
+          "modifierOverride": null
+        },
+        {
+          "key": "dexterity",
+          "label": "Geschick",
+          "shortLabel": "GES",
+          "score": 14,
+          "modifierOverride": null
+        },
+        {
+          "key": "constitution",
+          "label": "Konstitution",
+          "shortLabel": "KON",
+          "score": 12,
+          "modifierOverride": null
+        },
+        {
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "shortLabel": "INT",
+          "score": 3,
+          "modifierOverride": null
+        },
+        {
+          "key": "wisdom",
+          "label": "Weisheit",
+          "shortLabel": "WEI",
+          "score": 14,
+          "modifierOverride": null
+        },
+        {
+          "key": "charisma",
+          "label": "Charisma",
+          "shortLabel": "CHA",
+          "score": 10,
+          "modifierOverride": null
+        }
+      ],
+      "hitPoints": {
+        "current": 12,
+        "temporary": 0,
+        "hitDie": 4,
+        "averagePerLevelOverride": null,
+        "maximumOverride": 12
+      },
+      "armorClass": {
+        "base": 10,
+        "dexterityMode": "full",
+        "dexterityCap": 2,
+        "shieldBonus": 0,
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "override": null,
+        "overrideMode": "total"
+      },
+      "combat": {
+        "movement": 9,
+        "initiativeBonus": 0,
+        "attackBonus": 0,
+        "damageBonus": 0,
+        "passivePerceptionBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "mounted": false
+      },
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "dexterity",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "constitution",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "intelligence",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "wisdom",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "charisma",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        }
+      ],
+      "skills": [
+        {
+          "id": "trevor-uffel-perception",
+          "name": "Wahrnehmung",
+          "attributeKey": "wisdom",
+          "proficiency": "trained",
+          "bonus": 0,
+          "notes": ""
+        }
+      ],
+      "weapons": [
+        {
+          "id": "trevor-uffel-natural",
+          "inventoryItemId": "",
+          "name": "Krallen",
+          "image": "",
+          "weaponProfileId": "",
+          "triggerRules": [],
+          "weaponType": "natural",
+          "training": "simple",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Hieb",
+          "attackAttribute": "dexterity",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": -2,
+          "range": "Nahkampf · 0,5 m",
+          "properties": "Naturwaffe",
+          "notes": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": true
+        },
+        {
+          "id": "default-unarmed-melee",
+          "inventoryItemId": "",
+          "name": "Nahkampf",
+          "image": "",
+          "weaponProfileId": "",
+          "triggerRules": [],
+          "weaponType": "unarmed",
+          "training": "simple",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
+        }
+      ],
+      "armorItems": [],
+      "resources": [
+        {
+          "id": "inspiration",
+          "name": "Inspiration",
+          "current": 0,
+          "maximum": 1,
+          "recovery": "manual",
+          "scope": "persistent",
+          "category": "",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "mana-focus",
+          "name": "Mana",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "magic",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "focus",
+          "name": "Fokus",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "focus",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "celestial-points",
+          "name": "Celestiale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "celestial",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "infernal-points",
+          "name": "Infernale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "infernal",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "pact-points",
+          "name": "Paktpunkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "pact",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "action",
+          "name": "Aktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "bonus-action",
+          "name": "Bonusaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "reaction",
+          "name": "Reaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "special-action",
+          "name": "Besondere Aktion",
+          "current": 2,
+          "maximum": 2,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "notes": ""
+        },
+        {
+          "id": "aura-focus",
+          "name": "Aura-Fokuspunkt",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "paymentRole": "universal-substitute",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "notes": ""
+        }
+      ],
+      "techniques": [],
+      "classTraining": {
+        "schemaVersion": 2,
+        "curriculumId": "",
+        "selections": [],
+        "techniqueSelections": []
+      },
+      "quirks": [],
+      "conditions": [],
+      "damageAffinities": [],
+      "abilities": [
+        {
+          "id": "trevor-uffel-ability-0",
+          "name": "Kletterin",
+          "description": "Bewegt sich sicher auf schmalen Vorsprüngen und klettert bis zu 6 m; schwierige Stellen benötigen passende Proben.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "passive",
+          "delivery": "ability",
+          "resolutionType": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": false,
+          "target": "",
+          "range": "",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "effects": [],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        },
+        {
+          "id": "trevor-uffel-ability-1",
+          "name": "Leiser Schritt",
+          "description": "Schleicht und beobachtet aufmerksam. Heimlichkeit wird gegen die Wahrnehmung der Umgebung geprüft.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "passive",
+          "delivery": "ability",
+          "resolutionType": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": false,
+          "target": "",
+          "range": "",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "effects": [],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        }
+      ],
+      "magic": {
+        "enabled": false,
+        "casterTier": "full",
+        "bypassResourceId": "",
+        "focusEnabled": false,
+        "focusResourceId": "focus",
+        "castingAttribute": "intelligence",
+        "spellAttackOverride": null,
+        "spellSaveDcOverride": null,
+        "manaResourceId": "mana-focus",
+        "slotResourceIds": [],
+        "notes": "",
+        "spells": []
+      },
+      "aura": {
+        "enabled": false,
+        "name": "Aura",
+        "domain": "",
+        "focusResourceId": "aura-focus",
+        "focusBypassCost": 1,
+        "notes": "",
+        "activeForm": {
+          "enabled": false,
+          "active": false,
+          "name": "Aktive Form",
+          "description": "",
+          "radius": "",
+          "target": "Selbst und gewählte Ziele",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        },
+        "latentPresence": {
+          "enabled": true,
+          "active": true,
+          "name": "Latente Präsenz",
+          "description": "",
+          "radius": "",
+          "target": "Umgebung, Verbündete und Gegner",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        }
+      },
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "notes": "Alter, zäher Cenyric-Schiffskater mit verblasstem orangefarbenem Tigerfell, weißem Bauch und ausgeprägter Mähne. Ein Auge ist trüb. Uffel war schon an Bord, als Idwals Mannschaft die Tiefenwyrm übernahm, und ist einfach geblieben. Trevor ist heute sein Herrchen."
+    },
+    "loot": {
+      "currency": "",
+      "notes": "Persönlicher Begleiter; kein festgelegter Handelswert.",
+      "items": [],
+      "revision": 0
+    },
+    "notes": "Alter, zäher Cenyric-Schiffskater mit verblasstem orangefarbenem Tigerfell, weißem Bauch und ausgeprägter Mähne. Ein Auge ist trüb. Uffel war schon an Bord, als Idwals Mannschaft die Tiefenwyrm übernahm, und ist einfach geblieben. Trevor ist heute sein Herrchen.",
+    "id": "companion-trevor-uffel"
+  }
+}

@@ -1,0 +1,3056 @@
+{
+  "version": 1,
+  "importedAt": "2026-10-11",
+  "sourceDirectory": "D:\\0-KI Generierte\\01 Bilder\\Charaktere\\Avatare Erstellungs Ordner",
+  "destinationDirectory": "AleriaAlmanach/AvatarWerkstatt",
+  "sourcePolicy": "Kopien; keine Quelldatei verändert oder verschoben.",
+  "splitterVersion": "Avatar Splitter Pro V3",
+  "copiedFiles": 238,
+  "copiedBytes": 149699808,
+  "categories": {
+    "instructions": 3,
+    "splitter-v3": 5,
+    "example-sheet": 6,
+    "character:Idwals Crew": 202,
+    "character:Lachende Nixe": 1,
+    "character:Schwarzfische": 9,
+    "character:Yvain": 10,
+    "character:Gawain Hochzeit": 2
+  },
+  "files": [
+    {
+      "source": "Anweisungen.docx",
+      "destination": "Anleitungen/Anweisungen.docx",
+      "category": "instructions",
+      "bytes": 16446,
+      "sha256": "0ad1ab381d9487bcb283c8cce8bb9bea6ee7e9440650af7d7ac3ddcd8054f30d"
+    },
+    {
+      "source": "Character_Expression_Sheet_Prompt.docx",
+      "destination": "Anleitungen/Character_Expression_Sheet_Prompt.docx",
+      "category": "instructions",
+      "bytes": 11141,
+      "sha256": "3fc689ce1cababcc8fb2b2e8b5f97d83985a014d5dc4548c65b0a8622d1fee09"
+    },
+    {
+      "source": "Charakter-Emotionssheet Master Prompt.docx",
+      "destination": "Anleitungen/Charakter-Emotionssheet Master Prompt.docx",
+      "category": "instructions",
+      "bytes": 12898,
+      "sha256": "26c0cca72198fa192ed9ed27ad88fe0c28f82ef838665ac59d50c3ced89d3a31"
+    },
+    {
+      "source": "Avatar Splitterer/AvatarSplitterPro_V3.py",
+      "destination": "Werkzeuge/Avatar Splitterer/AvatarSplitterPro_V3.py",
+      "category": "splitter-v3",
+      "bytes": 27863,
+      "sha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8"
+    },
+    {
+      "source": "Avatar Splitterer/README.txt",
+      "destination": "Werkzeuge/Avatar Splitterer/README.txt",
+      "category": "splitter-v3",
+      "bytes": 1895,
+      "sha256": "31bab5921ea7ca2599292cb9be5366a2a45d1e7f2c2bb0d7dccddbe2605b187e"
+    },
+    {
+      "source": "Avatar Splitterer/requirements.txt",
+      "destination": "Werkzeuge/Avatar Splitterer/requirements.txt",
+      "category": "splitter-v3",
+      "bytes": 13,
+      "sha256": "dce978a554b00caca70d59f539d25c61fcc89681e02d7fec42948cd5c3c0a127"
+    },
+    {
+      "source": "Avatar Splitterer/splitter_config_v3.json",
+      "destination": "Werkzeuge/Avatar Splitterer/splitter_config_v3.json",
+      "category": "splitter-v3",
+      "bytes": 82,
+      "sha256": "520b84d233f1146051ed18f2117a828cf96c090876af964d8275a9474b6cacb2"
+    },
+    {
+      "source": "Avatar Splitterer/starten.bat",
+      "destination": "Werkzeuge/Avatar Splitterer/starten.bat",
+      "category": "splitter-v3",
+      "bytes": 273,
+      "sha256": "656adaa8768de86f23e7fa3d763b738a3856ab318f625f204f53b8ff0574408e"
+    },
+    {
+      "source": "Beispiele/Aldo.png",
+      "destination": "Beispiele/9er-Sheets/Aldo.png",
+      "category": "example-sheet",
+      "bytes": 2526673,
+      "sha256": "89e0be4066a77a5f4e1c129a889ba2589bbe0c7b7ceb1d846f052d47b97e6fbc",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Beispiele/gais.png",
+      "destination": "Beispiele/9er-Sheets/gais.png",
+      "category": "example-sheet",
+      "bytes": 2235673,
+      "sha256": "62a6ff475a02588899976cb38aa2ec405cbc26508e30f32310cc4d7d73204b8b",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Beispiele/Heledd.png",
+      "destination": "Beispiele/9er-Sheets/Heledd.png",
+      "category": "example-sheet",
+      "bytes": 2852369,
+      "sha256": "1e483050bd743e51e38e564dcf29e5627dd66e60877d8b6b92aac072e31e449d",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Beispiele/Morgan.png",
+      "destination": "Beispiele/9er-Sheets/Morgan.png",
+      "category": "example-sheet",
+      "bytes": 2467419,
+      "sha256": "365385b54d7c964f754788798e9130abae9e08151119448594aa6e4c11e47497",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Beispiele/refri.png",
+      "destination": "Beispiele/9er-Sheets/refri.png",
+      "category": "example-sheet",
+      "bytes": 2854210,
+      "sha256": "ae1dd7e239b6323df4363a4048483dc65052027ed9629a32459affa47e9e9997",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Beispiele/Maredudd.png",
+      "destination": "Beispiele/9er-Sheets/Maredudd.png",
+      "category": "example-sheet",
+      "bytes": 2372005,
+      "sha256": "44374e46e2203957cede20b142e918874cf6ad911045e5b84dff0cb48c9105bc",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/AvatarSplitterPro_V2.py",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/AvatarSplitterPro_V2.py",
+      "category": "character:Idwals Crew",
+      "bytes": 7520,
+      "sha256": "4a156d060b9381e2d2266ce46969506ea0096c241dcb30ec9a7b0b21e0309a5f"
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Afan Gwyntog.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Afan Gwyntog.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2717706,
+      "sha256": "55e377325839d2067b974b2e82ac9b396d367eecfc4e938fa8ef51c1f04cbab7",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Afan Gwyntog2.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Afan Gwyntog2.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2648036,
+      "sha256": "5b66fa058c1b690546d40f5f82de0eb749218aad97b05c459be08b1f695740fe",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Angus Lònan.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Angus Lònan.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2223850,
+      "sha256": "559b0ccdcbe4f2882033a8ba1034b78d7597b2ede0c6c9bce50a25f84f6f9f6d",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Barde vielleicht.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Barde vielleicht.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2501301,
+      "sha256": "e1c8f029c72d0e2dc5ac67d916429ae23d95b23775277e2bdde4df188503b7be",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Barde vielleicht2.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Barde vielleicht2.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2524873,
+      "sha256": "a259a74bb216d400b3de74bc7c153ddef88763136e5a89221ccc65e71c6a9e6e",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Barde vielleicht3.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Barde vielleicht3.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2630302,
+      "sha256": "af47f907cb1bba5cc166f9e43088d9eb1aaa695771320c384586d60126c9a6ee",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Cadell Ysgrif.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Cadell Ysgrif.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2368402,
+      "sha256": "514fb18448379cde74d7d90e36b4a4d203dd95b28e817eacf1aadb2bcf180375",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Cadell Ysgrif2.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Cadell Ysgrif2.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2465021,
+      "sha256": "f4a8a24748a3f62bfe00026341b7c41f87cc370e4b817c97f0a869cb1a67b833",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Caradog Tonnarth.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Caradog Tonnarth.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2290733,
+      "sha256": "be06f02b8859e2c09763cb0998ad507ca1c3350f409474d78b2f8a5b0958b3c0",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Cederic1.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Cederic1.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2177152,
+      "sha256": "632d2ac7e1b22e4f16fe24383a65481774bf0fa166e6028a9a3e824f0eb0c278",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Cederic2.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Cederic2.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2117349,
+      "sha256": "567de6ee25d8ff6fba4ed305a8d992083e985120fcb9a5a470fe3d97bc133b66",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Idwal.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Idwal.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2643499,
+      "sha256": "45fb21d376a4c8abe27f25fedeeaa02c395dc58faee1fa7664d41c6166c65f00",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Idwal2.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Idwal2.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2493368,
+      "sha256": "0a7648ba6ab5bc34a84d88a3e07f13fe5a6081eb2d836641424e1efd78221d74",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Ifor1.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Ifor1.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2329707,
+      "sha256": "fa8368e0ef64a38ef4bcbd9f1558992450df923a9c9a523305f8997ba4d41b4c",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/ifor2.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/ifor2.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2354886,
+      "sha256": "7ce80ce94e101a5f5bb6bc240aa0022480842a486818b7d192fb8b869cfa99b9",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Llewarch1.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Llewarch1.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2488262,
+      "sha256": "3e4d87770b470ee333ae8ae7e329bd7a8571d15e11c26464c33f1504176a4b4c",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Llewarch2.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Llewarch2.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2488412,
+      "sha256": "d69fcc00f30765d31f62f071532c21665679f8b9af6a94a7eb5510bdead29644",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Murdo Marlòn.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Murdo Marlòn.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2276642,
+      "sha256": "5761ff48d80b6e2274d753d5fd2a801b8ed7ddd248988784dffb9a6edad4c9f1",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Sindre Brandstolz!.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Sindre Brandstolz!.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2892150,
+      "sha256": "dfb8450486ae1dcf58fed14aff2b35f10c074f4e0428d6d4b92d8c47b6725d78",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/Benutzt/Sindre Brandstolz2.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/Benutzt/Sindre Brandstolz2.png",
+      "category": "character:Idwals Crew",
+      "bytes": 2812982,
+      "sha256": "c0a0d9d203b40bc16914e6686f1d10e914cb8be5682d4513df59abe737e34a7a",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_01.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_01.png",
+      "category": "character:Idwals Crew",
+      "bytes": 307118,
+      "sha256": "3dc3aa782f952a2fb3ec24414fdcf583a2b8fead59c15abd7d57cbf42a568e0e",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_02.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_02.png",
+      "category": "character:Idwals Crew",
+      "bytes": 295957,
+      "sha256": "38166fb27a0ebfa97ef6740b783b5c403dcd030892f21d55fbdb80058cfd9ad5",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_03.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_03.png",
+      "category": "character:Idwals Crew",
+      "bytes": 294038,
+      "sha256": "9751f57c5463ede4d0abcbc3a7c6c5f55edad10cee69b19eefe0b5cf4bb9c2d3",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_04.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_04.png",
+      "category": "character:Idwals Crew",
+      "bytes": 298361,
+      "sha256": "7b836eedbad986f7ec0660b8903f240a93e576d89671ad6875438df8ca0c85e2",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_05.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_05.png",
+      "category": "character:Idwals Crew",
+      "bytes": 288935,
+      "sha256": "4b83a3bc2623061b9628104da9d38817fb92b02b3f92b2fddaf7eac055b9b3f0",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_06.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_06.png",
+      "category": "character:Idwals Crew",
+      "bytes": 299149,
+      "sha256": "ac8077723fd0e671be4c28cbc670fc6982f6947b24842da0068a5e1af915113f",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_07.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_07.png",
+      "category": "character:Idwals Crew",
+      "bytes": 304799,
+      "sha256": "ac2a4ca5e73df986762d19bfb7c9dc3d47d574e5f113a8a49d0e90e6ef3c3f17",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_08.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_08.png",
+      "category": "character:Idwals Crew",
+      "bytes": 293171,
+      "sha256": "5a9e395efeecd9687b4530a5ebb997282e14288142fb2eea5436a19bc170e09c",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_09.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_09.png",
+      "category": "character:Idwals Crew",
+      "bytes": 298309,
+      "sha256": "b67d9744f19a2344fdd27539f2c3d462c97cfe15a05460538e0a723f26dff1d8",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_10.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_10.png",
+      "category": "character:Idwals Crew",
+      "bytes": 293757,
+      "sha256": "b950a7386089d3d8a9a8ac2ca550d91b1f1a68c43b200fa8883dd6a1f5f95f74",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_11.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_11.png",
+      "category": "character:Idwals Crew",
+      "bytes": 287593,
+      "sha256": "8a941f969f5df9cb09136ac6051da023a8f60296cdc37c26e5bfc2b34c1da3b8",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_12.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_12.png",
+      "category": "character:Idwals Crew",
+      "bytes": 292934,
+      "sha256": "4ccc7ae141176c68203daf3bfdff0641f5716a448567a73528a526f7e3faaa7d",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_13.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_13.png",
+      "category": "character:Idwals Crew",
+      "bytes": 293707,
+      "sha256": "5c6407a5210beb6f5490e725a7ab2ebd9af42c9765f66cad5e409cb018d6d402",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_14.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_14.png",
+      "category": "character:Idwals Crew",
+      "bytes": 284333,
+      "sha256": "0876cca0ecfe91ca4f4f27ed8cb8916654ea4471ffcf5fd3f5b9a35c821ea49c",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_15.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_15.png",
+      "category": "character:Idwals Crew",
+      "bytes": 290932,
+      "sha256": "772db8f11f7400eb7ea819cb9664966cf2937344457ce46fbb5414d114083242",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_16.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_16.png",
+      "category": "character:Idwals Crew",
+      "bytes": 287075,
+      "sha256": "83b1f8fb71d62d8584dcaffcb5517cdf5bd857d364b62efd04690579b97e1d28",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_17.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_17.png",
+      "category": "character:Idwals Crew",
+      "bytes": 288119,
+      "sha256": "e6a3e36149fc261d9e5c3aa8202d814f5df64dc7dc91b86a172e15229dfae3a6",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Afan Gwyntog_18.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Afan Gwyntog_18.png",
+      "category": "character:Idwals Crew",
+      "bytes": 297698,
+      "sha256": "73736db66199b4a145ad59b5bab5573418208e3fbdcbf0af87d4b755c5acb795",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Angus Lònan_01.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Angus Lònan_01.png",
+      "category": "character:Idwals Crew",
+      "bytes": 256325,
+      "sha256": "8bd7f44682aa429e9dc8c3f3809eafb29530e9ce1c97acb4ee15aea23a9596f6",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Angus Lònan_02.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Angus Lònan_02.png",
+      "category": "character:Idwals Crew",
+      "bytes": 244234,
+      "sha256": "31892fca3922e1c5b9e95a671820b037490c576e4e4222f899053934c87060e9",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Angus Lònan_03.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Angus Lònan_03.png",
+      "category": "character:Idwals Crew",
+      "bytes": 244792,
+      "sha256": "283d72d504c8fe821b83251441b92584404a287cedeaa88de9c1a9328842850a",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Angus Lònan_04.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Angus Lònan_04.png",
+      "category": "character:Idwals Crew",
+      "bytes": 245495,
+      "sha256": "eefb902ccb9db2964049730251ecaf9a9a5e4428ad5b06206987b509a675bb99",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Angus Lònan_05.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Angus Lònan_05.png",
+      "category": "character:Idwals Crew",
+      "bytes": 239781,
+      "sha256": "786fb37c79170ad9292ea31cc871bfa1a61aba10ecad18065c7aa9ba7437ddc2",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Angus Lònan_06.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Angus Lònan_06.png",
+      "category": "character:Idwals Crew",
+      "bytes": 241691,
+      "sha256": "c56a11a798fa4a3ce04fa1cdf6a02369cd9302be9ab5db4be78bd327f365f6ba",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Angus Lònan_07.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Angus Lònan_07.png",
+      "category": "character:Idwals Crew",
+      "bytes": 254203,
+      "sha256": "1756c5c5f5ea2372ea56d4afa5c75b2dfd4bcdd9bee93007f5fc182679e99996",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Angus Lònan_08.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Angus Lònan_08.png",
+      "category": "character:Idwals Crew",
+      "bytes": 244390,
+      "sha256": "46a879da166760fb11c1581da2953bc185cecce126a7ab9ce02fdf798dc5e4de",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Angus Lònan_09.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Angus Lònan_09.png",
+      "category": "character:Idwals Crew",
+      "bytes": 245892,
+      "sha256": "08b1025df29b14a18dee7d0a52684faf96455cf98a5eb013af61de0aaa73eb39",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_01.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_01.png",
+      "category": "character:Idwals Crew",
+      "bytes": 285843,
+      "sha256": "b0e9d669dd351281eead74e8c9aed6e68c28bf9d29a316192dc7c8f342a89887",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_02.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_02.png",
+      "category": "character:Idwals Crew",
+      "bytes": 268893,
+      "sha256": "3e2eaf9f628531de7c01e3660c821560119f1f5c77c863f50b45adfe34550471",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_03.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_03.png",
+      "category": "character:Idwals Crew",
+      "bytes": 272344,
+      "sha256": "13d0d2947aa7b11b1c83ba858313ca065102764d6b4e60599720ee6288383a7e",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_04.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_04.png",
+      "category": "character:Idwals Crew",
+      "bytes": 266971,
+      "sha256": "1180772b8db53b6521daa0fa16404a8ce7d1d4cce383935c544ccfd6d3d78037",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_05.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_05.png",
+      "category": "character:Idwals Crew",
+      "bytes": 268207,
+      "sha256": "03c6f753b1c59907429ab728aea48c384154e4a5ab3ad35fecf01d1e829b41da",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_06.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_06.png",
+      "category": "character:Idwals Crew",
+      "bytes": 276701,
+      "sha256": "26b7932c4d1d5bccc9ce63b461d82fd1ac414e55a26719c1bc9312d91d2d6100",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_07.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_07.png",
+      "category": "character:Idwals Crew",
+      "bytes": 283695,
+      "sha256": "66ef6deaac1dcf0e0e3d5af623d5e996a9dc37d67cfcf89e32b971df8ad064c5",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_08.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_08.png",
+      "category": "character:Idwals Crew",
+      "bytes": 270198,
+      "sha256": "afeb1f462f4b3d0778768aa7c90e854be54af8b2ca5189c96364e2a367d2eafe",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_09.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_09.png",
+      "category": "character:Idwals Crew",
+      "bytes": 280066,
+      "sha256": "feee9e0e33c70131b63100f66dc2865d57015dbbdd2ac5c0cc43931ea6393f1b",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_10.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_10.png",
+      "category": "character:Idwals Crew",
+      "bytes": 285987,
+      "sha256": "63f0e9d57d5fa0454eb8d61b71a60bc5611879adcddc41c484c2eacee1f4560e",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_11.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_11.png",
+      "category": "character:Idwals Crew",
+      "bytes": 274067,
+      "sha256": "e2970bf83cd8b352f6864446350b5e48571cbf335626e33bc6f67008613cdddb",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_12.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_12.png",
+      "category": "character:Idwals Crew",
+      "bytes": 274015,
+      "sha256": "13cfc3e5c544203ab328028378c2565fb27d24a01ead92e57200965705c0df07",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_13.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_13.png",
+      "category": "character:Idwals Crew",
+      "bytes": 273780,
+      "sha256": "7a05f5279a291137bcdf647803459bc96b83ae1a42f6dcba67f37db1f46cd964",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_14.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_14.png",
+      "category": "character:Idwals Crew",
+      "bytes": 275541,
+      "sha256": "9220167afbb2767eaf12611d3b63ec513f7647f1258e73dfb98e0d650b35670e",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_15.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_15.png",
+      "category": "character:Idwals Crew",
+      "bytes": 274247,
+      "sha256": "f41c3aacdbb37306504c9e33315bcc2e5229d31d36dcd08cddc0c688cded3026",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_16.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_16.png",
+      "category": "character:Idwals Crew",
+      "bytes": 287126,
+      "sha256": "cd808aed5a41043d89235fb22dda0581db84bead36b0fa033351243d5c4da7f1",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_17.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_17.png",
+      "category": "character:Idwals Crew",
+      "bytes": 272947,
+      "sha256": "2fc0c56e31486c719537cdfc1c8586b87747f29d329b2da3ac75edbf9ef67c5c",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_18.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_18.png",
+      "category": "character:Idwals Crew",
+      "bytes": 280830,
+      "sha256": "3605d433e7e6380e80fcff0236a47f4933a333d348bb6ac26e3aceb51a2b2df4",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_19.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_19.png",
+      "category": "character:Idwals Crew",
+      "bytes": 294439,
+      "sha256": "eb26097ce9708bc8fc005e691d592ece3910f39220c2c45e77f83827136e32fa",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_20.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_20.png",
+      "category": "character:Idwals Crew",
+      "bytes": 285770,
+      "sha256": "7694158a396d68b47dd79ac2255af9f11988fd21d8f3211032f0689b3a2b615f",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_21.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_21.png",
+      "category": "character:Idwals Crew",
+      "bytes": 291908,
+      "sha256": "5e1e35b964c9b1c02fe7a298372db97111fe49cda8e5146c7f48269b4c164b56",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_22.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_22.png",
+      "category": "character:Idwals Crew",
+      "bytes": 281462,
+      "sha256": "73874f498b3ba6011c4d52a4b8b60c91f7c294cef1e3f0eaa4d900d071b1e477",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_23.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_23.png",
+      "category": "character:Idwals Crew",
+      "bytes": 290028,
+      "sha256": "0ea6f0e70e3ba26594a9089ca0987460a71fea6c5c4d82da927d656b73ea54ca",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_24.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_24.png",
+      "category": "character:Idwals Crew",
+      "bytes": 280019,
+      "sha256": "bb29cfcfd1a3a01dd72220831389cc82f63e4e1ad57981e7fdfbff270a5acc14",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_25.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_25.png",
+      "category": "character:Idwals Crew",
+      "bytes": 303507,
+      "sha256": "a3f7267f3b0dc89f0e6804b3426eb628e5ed3b4cd8c38042e618d6a9b564b1b8",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_26.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_26.png",
+      "category": "character:Idwals Crew",
+      "bytes": 288470,
+      "sha256": "857d1a47bf0ed25df48c5c65f97b07e2ba7ab94a3d6c90ca224e4f956d7d65c3",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Barde vielleicht_27.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Barde vielleicht_27.png",
+      "category": "character:Idwals Crew",
+      "bytes": 293296,
+      "sha256": "ce469dca05a4bad109ff094478058253494bfeb8ef6bb73e9db9ad4dc21ae8ed",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_01.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_01.png",
+      "category": "character:Idwals Crew",
+      "bytes": 277341,
+      "sha256": "3f246ba431a0d032473464291a9be77f3d19704c08a39d2e0c2e17ebbd0ce4d3",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_02.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_02.png",
+      "category": "character:Idwals Crew",
+      "bytes": 259845,
+      "sha256": "592b909bedb74562427966a1f6f090b9efeed9a87d707deb7e2b8b45652deee8",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_03.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_03.png",
+      "category": "character:Idwals Crew",
+      "bytes": 251521,
+      "sha256": "96c80bc04e7346982b20b481466973f7e58db9518f5afcf630091dc03d523897",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_04.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_04.png",
+      "category": "character:Idwals Crew",
+      "bytes": 256656,
+      "sha256": "c4e719f57649527522dcd7f5bb8397651e248963d7549c2f2b12d931880529a2",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_05.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_05.png",
+      "category": "character:Idwals Crew",
+      "bytes": 252306,
+      "sha256": "7aafbaa7523ed8a77f26d720c6719c4887deb05b2d40442b0bb09e0ba9601b0b",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_06.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_06.png",
+      "category": "character:Idwals Crew",
+      "bytes": 257609,
+      "sha256": "290b7308fcdf5e9259c882210b3177ffb4a9ab8155b293d3bb4087d8ddf004b0",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_07.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_07.png",
+      "category": "character:Idwals Crew",
+      "bytes": 249759,
+      "sha256": "f14df5515d04e50f57ea869305fd15c37e63d6416b1f5360073922d2ac9ed8e3",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_08.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_08.png",
+      "category": "character:Idwals Crew",
+      "bytes": 265262,
+      "sha256": "f0a5057e16526aee232d5dcf48141bb473a0f0a609aaad0e71f5e66a13cc16ea",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_09.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_09.png",
+      "category": "character:Idwals Crew",
+      "bytes": 259870,
+      "sha256": "fa13540ed269631bac316d4b68441829d4ab2daac053a0d23507e623695d2b2a",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_10.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_10.png",
+      "category": "character:Idwals Crew",
+      "bytes": 280215,
+      "sha256": "7c7bde659f08686e864a66158888ca30b0e2dd0cac4e9143a193b80092b03d50",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_11.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_11.png",
+      "category": "character:Idwals Crew",
+      "bytes": 268628,
+      "sha256": "49605866ea2c70231be7a588dab594068161d160cdb0ca678bd6f24947189679",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_12.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_12.png",
+      "category": "character:Idwals Crew",
+      "bytes": 266678,
+      "sha256": "7cb00a891abe37fa98a0481a521a2774e18ee0ba62d6963b4af357f11d6b3519",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_13.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_13.png",
+      "category": "character:Idwals Crew",
+      "bytes": 269570,
+      "sha256": "967a088f04ae49e0288a559751820f61d18f732b75f9ad7b91e6d6449dac90cb",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_14.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_14.png",
+      "category": "character:Idwals Crew",
+      "bytes": 272883,
+      "sha256": "7126443f9549963563c876124ecb38804401b1bc32aaacf4774e86f565228968",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_15.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_15.png",
+      "category": "character:Idwals Crew",
+      "bytes": 267318,
+      "sha256": "b915a8a964535a06205555f977951f9e05740b6875a30f257c08bf7bc89d8e35",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_16.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_16.png",
+      "category": "character:Idwals Crew",
+      "bytes": 264594,
+      "sha256": "d7e0ff5c59d05908c8201fa6ec8298583b3b7b594f712467da2fc87c84966434",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_17.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_17.png",
+      "category": "character:Idwals Crew",
+      "bytes": 267963,
+      "sha256": "a733666b39c81ad65f896212b68d7f00b5f1b4af010695786461766e691ccbf1",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cadell Ysgrif_18.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cadell Ysgrif_18.png",
+      "category": "character:Idwals Crew",
+      "bytes": 270967,
+      "sha256": "83d7ecf80aa0ef106c63cbe9557088ef9c8344046709e59d80a9e4743afca282",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Caradog Tonnarth_01.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Caradog Tonnarth_01.png",
+      "category": "character:Idwals Crew",
+      "bytes": 264771,
+      "sha256": "5f4170d1b642236b22357c9fe9e324ef2d1f3a5a147249b0a2ca8a673a821090",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Caradog Tonnarth_02.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Caradog Tonnarth_02.png",
+      "category": "character:Idwals Crew",
+      "bytes": 251112,
+      "sha256": "36adebb586fa231c7d1905f2fd55a993b5bd83a825814393e0f3a649ea27f2f9",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Caradog Tonnarth_03.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Caradog Tonnarth_03.png",
+      "category": "character:Idwals Crew",
+      "bytes": 242225,
+      "sha256": "a68c890b59517005d9979eb2b649e86abdfd874e346d988815f734e37aebb0ec",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Caradog Tonnarth_04.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Caradog Tonnarth_04.png",
+      "category": "character:Idwals Crew",
+      "bytes": 248881,
+      "sha256": "cc3132ad7b43f935f575c886eb347ffa3bf0c3df3a7bea90f2e02df8a9ea7c24",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Caradog Tonnarth_05.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Caradog Tonnarth_05.png",
+      "category": "character:Idwals Crew",
+      "bytes": 247570,
+      "sha256": "30115f270a21c82c9bc5de1d35f7b4e3ca99e4595065459c20786376da839ca1",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Caradog Tonnarth_06.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Caradog Tonnarth_06.png",
+      "category": "character:Idwals Crew",
+      "bytes": 248734,
+      "sha256": "cc6ab702579e0a840cef7a4839b0f84653c53a0d765c3e1f530f017f1490a0e9",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Caradog Tonnarth_07.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Caradog Tonnarth_07.png",
+      "category": "character:Idwals Crew",
+      "bytes": 257001,
+      "sha256": "3984158e3959d09b081e320aacdb8db246ebd7aed93849e44120d40afadb03c4",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Caradog Tonnarth_08.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Caradog Tonnarth_08.png",
+      "category": "character:Idwals Crew",
+      "bytes": 252953,
+      "sha256": "78cb5ba68edfa9fc78e938e3990b4562f76721b5c50a97c90f4480f2f242f2ea",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Caradog Tonnarth_09.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Caradog Tonnarth_09.png",
+      "category": "character:Idwals Crew",
+      "bytes": 249227,
+      "sha256": "86d4fec977e6a7362e78bcd3d9fe5dbbc57cdb3689ff335faa242ddb025c4a56",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_01.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_01.png",
+      "category": "character:Idwals Crew",
+      "bytes": 237831,
+      "sha256": "95c533f501c1cc9c3cff18bee8bf38f4cb9538783f28cd0593504072239682d7",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_02.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_02.png",
+      "category": "character:Idwals Crew",
+      "bytes": 239501,
+      "sha256": "a156fece1c692bed46f1b1b725162e0dc965da271e2c3d352040bee70ff03788",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_03.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_03.png",
+      "category": "character:Idwals Crew",
+      "bytes": 240671,
+      "sha256": "68657a5b6c3e6f5fec3b0b2cdbeeb5467bef1f361db7b7570afb69cae4c44932",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_04.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_04.png",
+      "category": "character:Idwals Crew",
+      "bytes": 240278,
+      "sha256": "5d5588e692548f1984a2f00eeb3ef0186ff4dfbabe2ae6563345b743076a1170",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_05.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_05.png",
+      "category": "character:Idwals Crew",
+      "bytes": 239604,
+      "sha256": "6e87e48363fb7963c464c48d1022106e1de9240b632bdbbaccc994d999ac930d",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_06.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_06.png",
+      "category": "character:Idwals Crew",
+      "bytes": 236160,
+      "sha256": "d8609ee5ce0c0b87043d7a98dca963a6913537f01cd1a81957befd7dbefd302d",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_07.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_07.png",
+      "category": "character:Idwals Crew",
+      "bytes": 248264,
+      "sha256": "124bfaab502b26df0779a408749cfe763cc42dc0be7719a199b103ffe65409ca",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_08.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_08.png",
+      "category": "character:Idwals Crew",
+      "bytes": 247970,
+      "sha256": "b857768df175f4c06d47e3084f897abd58bcadb5ca9878b02c8e1044d76a1197",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_09.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_09.png",
+      "category": "character:Idwals Crew",
+      "bytes": 239660,
+      "sha256": "bd2337f8ed9600d739279eb0b38b3c3b0eba136407449f1b56c8a0896717c6b9",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_10.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_10.png",
+      "category": "character:Idwals Crew",
+      "bytes": 240299,
+      "sha256": "95dc7c5c546093e1b41295a4f623290f9889da1263d6b52fd71637860e14fa9a",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_11.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_11.png",
+      "category": "character:Idwals Crew",
+      "bytes": 233128,
+      "sha256": "0b42b34d9a81ed88cfa7de700dc9c5141b8d2ecdb7148a4ce3559e4214c4654c",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_12.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_12.png",
+      "category": "character:Idwals Crew",
+      "bytes": 232735,
+      "sha256": "1733b624f647c2107f1b1099e4146ce825c7d5d61f966830af5986aba16bafc2",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_13.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_13.png",
+      "category": "character:Idwals Crew",
+      "bytes": 229343,
+      "sha256": "ba9d0926b17134e2eaf7c4f022153aa85668a17125f25105ad6854e1084202b9",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_14.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_14.png",
+      "category": "character:Idwals Crew",
+      "bytes": 233590,
+      "sha256": "a27e45cd2915e552f4bd4e971de81ef524a5b5e7a8c31a1eee22e5524a754dc5",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_15.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_15.png",
+      "category": "character:Idwals Crew",
+      "bytes": 231319,
+      "sha256": "af0e2f63e958ee67c6bc79e86606ec766a6e1765da45f19bdfffdf251b0c28fb",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_16.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_16.png",
+      "category": "character:Idwals Crew",
+      "bytes": 235338,
+      "sha256": "1e991646d09306927b15663ea7edb8bce9f9218ed0590a7569aa7c42a1e426b9",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_17.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_17.png",
+      "category": "character:Idwals Crew",
+      "bytes": 237471,
+      "sha256": "8338797a4843fd2d9730d6d16743fd207deae2069271c8d8bddabde711ab8936",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Cederic_18.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Cederic_18.png",
+      "category": "character:Idwals Crew",
+      "bytes": 235138,
+      "sha256": "96f282d6a99ad9446ea6258b0d07fe83aec86c592924269cb9245393db551212",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_01.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_01.png",
+      "category": "character:Idwals Crew",
+      "bytes": 297214,
+      "sha256": "d9705acbef033c86aa2ebf558fb507abaddcf053de4449db50c90bb35de0d68d",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_02.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_02.png",
+      "category": "character:Idwals Crew",
+      "bytes": 294121,
+      "sha256": "79806b1e31b03b3efb537097498d83850deab992125dfe4724dac05438f476ec",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_03.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_03.png",
+      "category": "character:Idwals Crew",
+      "bytes": 293875,
+      "sha256": "ecf2b945cc6c8fb52834ea3c837a8739719a1125bf255028d2d53e6d48d3463f",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_04.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_04.png",
+      "category": "character:Idwals Crew",
+      "bytes": 294162,
+      "sha256": "185de03c3a66013bdd9886bb8ff978e2a66cb70a44562e4631e51c1fd404a2e9",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_05.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_05.png",
+      "category": "character:Idwals Crew",
+      "bytes": 287621,
+      "sha256": "8f8ef57cf7c8969c3eb8c354382fa1cd666aa2ab7c2fb7e430261e839b9623f1",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_06.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_06.png",
+      "category": "character:Idwals Crew",
+      "bytes": 283877,
+      "sha256": "74639990961399671ab49a5e02f26716a1de8a4e10a9e66932295f0a1fd12f17",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_07.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_07.png",
+      "category": "character:Idwals Crew",
+      "bytes": 297086,
+      "sha256": "882f2282df8d10cbab9fe72f8dda27c764b4bfcbd11d5d37e882f7c7e239fdcd",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_08.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_08.png",
+      "category": "character:Idwals Crew",
+      "bytes": 292910,
+      "sha256": "2a6c6480a5ce366a455399dbef4b222129a0f55dd3262102c5670ac955a2a238",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_09.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_09.png",
+      "category": "character:Idwals Crew",
+      "bytes": 294618,
+      "sha256": "f0cf31eb621635a49493a056054c86f8d9db539c8d429db3502394eafb61cc75",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_10.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_10.png",
+      "category": "character:Idwals Crew",
+      "bytes": 276320,
+      "sha256": "9ee4d3f4eef357bc6ce6aee9113c28c8e22be456b5b107a2bfb5440df8595456",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_11.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_11.png",
+      "category": "character:Idwals Crew",
+      "bytes": 269679,
+      "sha256": "ac2ad379a6dd0ee0b8068fedb6c706f88e65b3af7ff96fd85ceec26d046e3523",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_12.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_12.png",
+      "category": "character:Idwals Crew",
+      "bytes": 272028,
+      "sha256": "3db32869a29e48822c55c83a8ee9266df758a536be2f3a1a7ac329e2e7433674",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_13.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_13.png",
+      "category": "character:Idwals Crew",
+      "bytes": 276576,
+      "sha256": "5d29a93ce9f0971693e6167e0a595553362e4714a1d8c1d9c1a8e337ce193755",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_14.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_14.png",
+      "category": "character:Idwals Crew",
+      "bytes": 266809,
+      "sha256": "41776217c494543f88d67e2ed23dcc8dddbedbc8817a8c6c0e886aa336850dfc",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_15.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_15.png",
+      "category": "character:Idwals Crew",
+      "bytes": 278777,
+      "sha256": "8b987c8473dc5c62a231fa24acd23e601af0da2809e548d07175df728d45c62a",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_16.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_16.png",
+      "category": "character:Idwals Crew",
+      "bytes": 290136,
+      "sha256": "e36a5b50820f67249f6b89fb954b85d76039e5a9f794ad830f478a12dba0e7c5",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_17.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_17.png",
+      "category": "character:Idwals Crew",
+      "bytes": 278848,
+      "sha256": "2cbc2e7e791682832d934e72fee426d413e3c7317ad858e0d04e299515c57cec",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Idwal_18.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Idwal_18.png",
+      "category": "character:Idwals Crew",
+      "bytes": 276242,
+      "sha256": "6cd0a1e0bdd0c334a56d5f6c41a7e9e8f1605a7f75c75aaecd04bd31444abed1",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_01.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_01.png",
+      "category": "character:Idwals Crew",
+      "bytes": 257947,
+      "sha256": "8778c5ea3e01d3dd7dc86a5694d312a455484a51848e3d21dc5d673f2a78b6e5",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_02.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_02.png",
+      "category": "character:Idwals Crew",
+      "bytes": 249688,
+      "sha256": "f1cd79dfe69abe0c787b54a6354f5f4518d340aaa7f3da218cba16bd7f3d88de",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_03.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_03.png",
+      "category": "character:Idwals Crew",
+      "bytes": 254766,
+      "sha256": "9bb4473bbc264cc5b274276468f29a688df37d133223aebf4ef16fb18efb0fe6",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_04.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_04.png",
+      "category": "character:Idwals Crew",
+      "bytes": 258989,
+      "sha256": "bdf04145f213065f2864eab89d6529319e6811800830e8fbc68d43e5842478f3",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_05.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_05.png",
+      "category": "character:Idwals Crew",
+      "bytes": 251131,
+      "sha256": "e11daf99e5b8eca91cc199907cd3e0d26945c97359c4a27105f9e5d786e3981d",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_06.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_06.png",
+      "category": "character:Idwals Crew",
+      "bytes": 248261,
+      "sha256": "6da5cb659b554db5d8ce4869d26e2bdfda795baa37c68cc2c3313653593e4e2c",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_07.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_07.png",
+      "category": "character:Idwals Crew",
+      "bytes": 265040,
+      "sha256": "cd5afba55cc67a8f4b1d6edd9a29a3e205b3a18c6a3797ca16f090826a0523df",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_08.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_08.png",
+      "category": "character:Idwals Crew",
+      "bytes": 265518,
+      "sha256": "d92f810134b3945a9b485c5f9e184d33d131b82ea623ab109b80cb297d8999f0",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_09.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_09.png",
+      "category": "character:Idwals Crew",
+      "bytes": 256423,
+      "sha256": "f4c1886552f6db9a502c2787cbfb5eed0e5069f662e6007caccd843dc80a4172",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_10.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_10.png",
+      "category": "character:Idwals Crew",
+      "bytes": 265444,
+      "sha256": "5a6b094f3dca96cb8112e1fed06546be2d68e41087fa013ee9020063aeb5e49e",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_11.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_11.png",
+      "category": "character:Idwals Crew",
+      "bytes": 256520,
+      "sha256": "564555da2037015b06d16c7e8dc1cd10dee92f551b54cd6b7afbe57f27cb1fbe",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_12.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_12.png",
+      "category": "character:Idwals Crew",
+      "bytes": 262719,
+      "sha256": "908dbcb65495d5d5ddba8058c79ef36945e9db006e6894c00aa6e07446adc5eb",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_13.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_13.png",
+      "category": "character:Idwals Crew",
+      "bytes": 263954,
+      "sha256": "d691b45d8e14c4e24a4c501ab89cca08d4208f5d1c5a3c96d8331fdd25855a54",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_14.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_14.png",
+      "category": "character:Idwals Crew",
+      "bytes": 251040,
+      "sha256": "c096bc0c41ac32eec6fc69ce963451c7e4c2280944ab84ae9d852b527360e55e",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_15.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_15.png",
+      "category": "character:Idwals Crew",
+      "bytes": 250076,
+      "sha256": "bf6be56f177ccc002cbabe07cd683681d5246fc6eb43963441400243ac823ffc",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_16.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_16.png",
+      "category": "character:Idwals Crew",
+      "bytes": 266502,
+      "sha256": "b94ce82a87325b1501530dbdcdd2a6c18428cc38bc76113197d465cbc38f24e0",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_17.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_17.png",
+      "category": "character:Idwals Crew",
+      "bytes": 255625,
+      "sha256": "25e611c7230649212139a045f66cb50063f99fa50c6bcdcfa991223baaaf27d6",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Ifor_18.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Ifor_18.png",
+      "category": "character:Idwals Crew",
+      "bytes": 266238,
+      "sha256": "8bd89d062071498df93cbd79c3b2a0423b336a77d8d7432999b9c5da38b30d11",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_01.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_01.png",
+      "category": "character:Idwals Crew",
+      "bytes": 275534,
+      "sha256": "d85d79e10062de3fb21ff9140e2024fdd821616d8ef38c2b4f14055db0120d1f",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_02.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_02.png",
+      "category": "character:Idwals Crew",
+      "bytes": 273750,
+      "sha256": "9ed4161cd33b0fdae77c4e77c56e6e09a341f8ea2f07951ab54a77d68df4b6e7",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_03.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_03.png",
+      "category": "character:Idwals Crew",
+      "bytes": 273207,
+      "sha256": "c1a7a2dbda4ac48e0d1264d78377ee20927f7438214edbfc74ec134cdd60b423",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_04.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_04.png",
+      "category": "character:Idwals Crew",
+      "bytes": 276090,
+      "sha256": "5c73f47780be4ea4eb7c18c999c20d1131c563c97c24d1ee75d15d2aa2fbd4bd",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_05.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_05.png",
+      "category": "character:Idwals Crew",
+      "bytes": 271877,
+      "sha256": "dfa7e2ea4dd481d17cafc8f5a7d22f6077de8d99426ac8c05146b814a3912828",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_06.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_06.png",
+      "category": "character:Idwals Crew",
+      "bytes": 267405,
+      "sha256": "9ad0c7b3ae123a0f9997ef5199fa6b8a7c9a5700089cad15a09538712b8b3ad1",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_07.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_07.png",
+      "category": "character:Idwals Crew",
+      "bytes": 283541,
+      "sha256": "978cbe0b4e665706de2f5a3d140a06e8308d85818387880b530b2b4ceac0d009",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_08.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_08.png",
+      "category": "character:Idwals Crew",
+      "bytes": 274600,
+      "sha256": "4f56b0a7cc6ad44c79b11eb92abce9893fd94dcf1ca82c953d2a1df043f6f85f",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_09.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_09.png",
+      "category": "character:Idwals Crew",
+      "bytes": 266485,
+      "sha256": "43ad6d075099393d3bae43b9cc03b64463bb86745b207847ba3693db7abfd2da",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_10.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_10.png",
+      "category": "character:Idwals Crew",
+      "bytes": 277211,
+      "sha256": "1a880b2cf535b0719ad256792d098da89dc71b85334c729a7f59e01830ccd94a",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_11.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_11.png",
+      "category": "character:Idwals Crew",
+      "bytes": 274356,
+      "sha256": "999a08f39db89d688979098190e05cccd4359ba401ee82a1f63c3bd807f0875e",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_12.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_12.png",
+      "category": "character:Idwals Crew",
+      "bytes": 275318,
+      "sha256": "ed48ca7dcd57a5e025e827c4e0dd27bf074957bfb656fd51e01d2a23036223e3",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_13.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_13.png",
+      "category": "character:Idwals Crew",
+      "bytes": 275348,
+      "sha256": "8198b9c677cb78773f25129d6623eb2b4edaf67b956d6a0464dae7bf1714f83d",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_14.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_14.png",
+      "category": "character:Idwals Crew",
+      "bytes": 263997,
+      "sha256": "59efdc62f0ed46828a4250d6178258f38e2b6bd4471b9fdba39f5720fff8676c",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_15.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_15.png",
+      "category": "character:Idwals Crew",
+      "bytes": 266965,
+      "sha256": "6b46a2b0e3fb5d95eff106292b0d8f4833d2712e68cbfef3ffdf6ff14220e3e7",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_16.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_16.png",
+      "category": "character:Idwals Crew",
+      "bytes": 277900,
+      "sha256": "ae5ebd8688910decbe6fdd54a34fa01d6b3ecddbd7f0cc18bcfe0e4a9bd88fea",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_17.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_17.png",
+      "category": "character:Idwals Crew",
+      "bytes": 271805,
+      "sha256": "dfca2959eaca54ae60951590d31bf0328b6e854994a3f6bf476b40ea7b745b0d",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Llewarch_18.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Llewarch_18.png",
+      "category": "character:Idwals Crew",
+      "bytes": 275056,
+      "sha256": "67cd2d0dd68a6aa6d1ae52e1221f490f020dab6203f7d3a59b8fcbb22392a423",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Murdo Marlòn_01.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Murdo Marlòn_01.png",
+      "category": "character:Idwals Crew",
+      "bytes": 262340,
+      "sha256": "04fb24b1a74fb4b9df5fa1e966eba7a9db1fdf0a9c6d7c5f9c11c45c0b24c0a9",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Murdo Marlòn_02.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Murdo Marlòn_02.png",
+      "category": "character:Idwals Crew",
+      "bytes": 256328,
+      "sha256": "81706ddf538d385a138b4c2638c993432dbf59ba34170c49da7d9d38e2ec681c",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Murdo Marlòn_03.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Murdo Marlòn_03.png",
+      "category": "character:Idwals Crew",
+      "bytes": 246694,
+      "sha256": "6da5244eb659601d51f38c329f180de25f866b1169baae50737477f786d813b9",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Murdo Marlòn_04.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Murdo Marlòn_04.png",
+      "category": "character:Idwals Crew",
+      "bytes": 247071,
+      "sha256": "6d9e0e635a24d96fbba6ad30b8fd2de2d34e24afae61d102070bdb0745cfdb1f",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Murdo Marlòn_05.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Murdo Marlòn_05.png",
+      "category": "character:Idwals Crew",
+      "bytes": 241966,
+      "sha256": "84fa550ed5c64068dc48a667857b0a1d503d35b16a885906637b63bdb092b35b",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Murdo Marlòn_06.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Murdo Marlòn_06.png",
+      "category": "character:Idwals Crew",
+      "bytes": 254488,
+      "sha256": "1b44b9f166cf4c0e97a20d5b606be08682c91b5d37c82699a381c8cb5bd500b4",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Murdo Marlòn_07.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Murdo Marlòn_07.png",
+      "category": "character:Idwals Crew",
+      "bytes": 251042,
+      "sha256": "8501db75fb7319d619a2b768f605ba362fc71f5b360344a204c7352e7137853c",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Murdo Marlòn_08.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Murdo Marlòn_08.png",
+      "category": "character:Idwals Crew",
+      "bytes": 241999,
+      "sha256": "1cbdec62dad6ee6c163a970c77e69b5dc646f21dab97eaac2a0d4268dc5928f7",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Murdo Marlòn_09.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Murdo Marlòn_09.png",
+      "category": "character:Idwals Crew",
+      "bytes": 252410,
+      "sha256": "5159262d33ce2031bbfa83bd5160f73d6e7bc8c4eea825eb8fd091b4da8fc517",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_01.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_01.png",
+      "category": "character:Idwals Crew",
+      "bytes": 324314,
+      "sha256": "7bbed04f15f6cf19c35e30300c5f0516ec08d3a3000c86e9d8829abec431c27e",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_02.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_02.png",
+      "category": "character:Idwals Crew",
+      "bytes": 315014,
+      "sha256": "39a82cff775a01d4e62f559c9a77fcadd15da72d5ff7a0ba4e39baf8a44082a9",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_03.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_03.png",
+      "category": "character:Idwals Crew",
+      "bytes": 312595,
+      "sha256": "c97aea6d1bbcc11ca374f51ab23e9df44e7418d73fa683f9b47c15b2821502bb",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_04.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_04.png",
+      "category": "character:Idwals Crew",
+      "bytes": 314244,
+      "sha256": "863cfbafb9c3ca1efb044be33bd049ca3e7e88fd9837fe323f71a70df8a69d67",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_05.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_05.png",
+      "category": "character:Idwals Crew",
+      "bytes": 310452,
+      "sha256": "e4f4ea127b3c10c20938377a0d471a746f12705f9afec840b268880912371347",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_06.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_06.png",
+      "category": "character:Idwals Crew",
+      "bytes": 311169,
+      "sha256": "2230cae351d8c1b1329ad970793c042801e1b3fcaa82e43cd517c64d9d98f66e",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_07.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_07.png",
+      "category": "character:Idwals Crew",
+      "bytes": 325291,
+      "sha256": "4b439484894abdee6d003d6dd5e43bea35bad81b3b4321a67329ba36b1b99e50",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_08.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_08.png",
+      "category": "character:Idwals Crew",
+      "bytes": 316913,
+      "sha256": "72d5724b6c8efbdeb15bfb59a0e7ffb6eb4a442a8927765ce5b7ce87af49f3a5",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_09.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_09.png",
+      "category": "character:Idwals Crew",
+      "bytes": 316123,
+      "sha256": "a4681ccc773b910d195972a19277d2efedca8d848127da72dd7c7b263b94635e",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_10.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_10.png",
+      "category": "character:Idwals Crew",
+      "bytes": 307563,
+      "sha256": "554b3eca26b09e3c2511f053a478accebe62ca7f147d839670c06f4fd93f398a",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_11.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_11.png",
+      "category": "character:Idwals Crew",
+      "bytes": 304945,
+      "sha256": "e0d971dc132a6556738f661b5e5c1ba9c3b28a381211a518fc2e0476435250b8",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_12.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_12.png",
+      "category": "character:Idwals Crew",
+      "bytes": 307101,
+      "sha256": "22c040ae2fc68b08e75c60987a909b89a3ee7f06ede753ff266333eddde30221",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_13.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_13.png",
+      "category": "character:Idwals Crew",
+      "bytes": 307118,
+      "sha256": "2d95be611d456fa0e3dcb3e3fb6fbaedb21724c47c727eed725d20e05cbe579e",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_14.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_14.png",
+      "category": "character:Idwals Crew",
+      "bytes": 305546,
+      "sha256": "0021367b05fcd98136c168865cbe44e81a1d9aa529959c5c5eaa95540d500cc9",
+      "image": {
+        "width": 412,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_15.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_15.png",
+      "category": "character:Idwals Crew",
+      "bytes": 302731,
+      "sha256": "4f789d847f90914da2da1930e091cf8ec05f162a4b8c41406ac988df3732f509",
+      "image": {
+        "width": 415,
+        "height": 412,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_16.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_16.png",
+      "category": "character:Idwals Crew",
+      "bytes": 315678,
+      "sha256": "7b62c864697b9da4694b93db704aa8b69ab1be00e0ea7c83bfaaa0cd2410799e",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_17.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_17.png",
+      "category": "character:Idwals Crew",
+      "bytes": 309505,
+      "sha256": "7f519b0821843bbce50b5cfa78cd80711910dc0e3613181633886bd209163f0a",
+      "image": {
+        "width": 412,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/output/Sindre Brandstolz_18.png",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/output/Sindre Brandstolz_18.png",
+      "category": "character:Idwals Crew",
+      "bytes": 307868,
+      "sha256": "c96705bdaead1cf51ee69365dbc6ef92110fd25b97e1e4a0d0f4e26621cd47f0",
+      "image": {
+        "width": 415,
+        "height": 415,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Idwals Crew/splitter_config.json",
+      "destination": "Charaktere/Gruppen/Idwals Crew/Originale/splitter_config.json",
+      "category": "character:Idwals Crew",
+      "bytes": 46,
+      "sha256": "7a77e96f3223627c0eb12eb7da15c704f7fddf3f1d527f39dc990081d388f151"
+    },
+    {
+      "source": "Lachende Nixe/474aefd6-3d71-4b7d-a08b-4e194749254c.png",
+      "destination": "Charaktere/Gruppen/Lachende Nixe/Originale/474aefd6-3d71-4b7d-a08b-4e194749254c.png",
+      "category": "character:Lachende Nixe",
+      "bytes": 2403640,
+      "sha256": "be4e1c9dab24af14d672c08c3120949df33d3d3aa5920de679a97381211368d6",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Schwarzfische/0ad8ee68-1cb1-4460-8dab-aab47e97c800.png",
+      "destination": "Charaktere/Gruppen/Schwarzfische/Originale/0ad8ee68-1cb1-4460-8dab-aab47e97c800.png",
+      "category": "character:Schwarzfische",
+      "bytes": 2512301,
+      "sha256": "a694a7c9e972525557b4cd1adfe1d7158cbd58362afc0d5841cf4b1821d8eedc",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Schwarzfische/11efd918-7496-40fa-bcde-d024c699ff88.png",
+      "destination": "Charaktere/Gruppen/Schwarzfische/Originale/11efd918-7496-40fa-bcde-d024c699ff88.png",
+      "category": "character:Schwarzfische",
+      "bytes": 2292033,
+      "sha256": "c52067bbd40d338d4356dc2933dbf9b2f88bc960ea945a846e40ffdc2fae95e8",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Schwarzfische/1724dbf8-5773-4a83-a325-1f6f29497e7f.png",
+      "destination": "Charaktere/Gruppen/Schwarzfische/Originale/1724dbf8-5773-4a83-a325-1f6f29497e7f.png",
+      "category": "character:Schwarzfische",
+      "bytes": 2533428,
+      "sha256": "de388b324278a76e4c1e844e6cef2f95d8d405f89318265676667f31a02fa827",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Schwarzfische/2756baea-aca4-4085-ad79-1735691c30bb.png",
+      "destination": "Charaktere/Gruppen/Schwarzfische/Originale/2756baea-aca4-4085-ad79-1735691c30bb.png",
+      "category": "character:Schwarzfische",
+      "bytes": 2543377,
+      "sha256": "27bc24f3f0d4000df31ba656f8e6b1c20007897f4cb448a835c6585f4430b28e",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Schwarzfische/68ff07f2-019a-4ab8-b0a8-4db24aeea4fa.png",
+      "destination": "Charaktere/Gruppen/Schwarzfische/Originale/68ff07f2-019a-4ab8-b0a8-4db24aeea4fa.png",
+      "category": "character:Schwarzfische",
+      "bytes": 3104122,
+      "sha256": "7b218ce2db047060cf0dd20b2aa9a41957403baa649c1b36444da40f2b80d7e7",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Schwarzfische/c16a8258-dec0-48a6-9f31-422b0f3a2a10.png",
+      "destination": "Charaktere/Gruppen/Schwarzfische/Originale/c16a8258-dec0-48a6-9f31-422b0f3a2a10.png",
+      "category": "character:Schwarzfische",
+      "bytes": 2548440,
+      "sha256": "3cb668a52bc24a532ec899edd9e191f7d7b75f4b2c5666c0773a64e2788c6632",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Schwarzfische/cae0edd0-0106-43a7-b639-17e330ddbcfd.png",
+      "destination": "Charaktere/Gruppen/Schwarzfische/Originale/cae0edd0-0106-43a7-b639-17e330ddbcfd.png",
+      "category": "character:Schwarzfische",
+      "bytes": 3031915,
+      "sha256": "162d94b062ac8e329aad516ef484e4589c55b1b5ce94a1d5637ea28bb1f416ed",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Schwarzfische/d5bc40db-58b0-4a42-b5c8-6f295899951f.png",
+      "destination": "Charaktere/Gruppen/Schwarzfische/Originale/d5bc40db-58b0-4a42-b5c8-6f295899951f.png",
+      "category": "character:Schwarzfische",
+      "bytes": 2856572,
+      "sha256": "069f9dad180290ff8b2e066b295ba325ac5daf2772504f6c2a96d3c237f53fac",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Schwarzfische/dc3bdfd6-5b08-4ab0-a628-91f232ac01f8.png",
+      "destination": "Charaktere/Gruppen/Schwarzfische/Originale/dc3bdfd6-5b08-4ab0-a628-91f232ac01f8.png",
+      "category": "character:Schwarzfische",
+      "bytes": 2660519,
+      "sha256": "3e76cc93945981efc11a981a830c7b56d04695edc337dacea04d8318c77e2f02",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Yvain/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_01.png",
+      "destination": "Charaktere/Einzelcharaktere/Yvain/Originale/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_01.png",
+      "category": "character:Yvain",
+      "bytes": 273997,
+      "sha256": "355d0e44225ce30cb6e0a667314f446ea7515b62fbd0ff69aacfcf56c1f31b0b",
+      "image": {
+        "width": 418,
+        "height": 418,
+        "mode": "RGBA",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Yvain/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_02.png",
+      "destination": "Charaktere/Einzelcharaktere/Yvain/Originale/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_02.png",
+      "category": "character:Yvain",
+      "bytes": 273828,
+      "sha256": "793e624b4d2aeb27c73f0cddf48578b728b9ffe2f4d37ba779094e1f408df809",
+      "image": {
+        "width": 418,
+        "height": 418,
+        "mode": "RGBA",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Yvain/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_03.png",
+      "destination": "Charaktere/Einzelcharaktere/Yvain/Originale/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_03.png",
+      "category": "character:Yvain",
+      "bytes": 271302,
+      "sha256": "891b455710467829ed222a196cc06929636fb2981bd32295dba95130b464f980",
+      "image": {
+        "width": 418,
+        "height": 418,
+        "mode": "RGBA",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Yvain/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_04.png",
+      "destination": "Charaktere/Einzelcharaktere/Yvain/Originale/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_04.png",
+      "category": "character:Yvain",
+      "bytes": 278959,
+      "sha256": "026940ef94d82756039743c9172bf9b83b6d738c3e2b36124aad41eba5a42d0a",
+      "image": {
+        "width": 418,
+        "height": 418,
+        "mode": "RGBA",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Yvain/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_05.png",
+      "destination": "Charaktere/Einzelcharaktere/Yvain/Originale/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_05.png",
+      "category": "character:Yvain",
+      "bytes": 277358,
+      "sha256": "52c8b9c5a21467b0d517f0506bde6db2dc286b129def01e23cb093b9a6c44fe5",
+      "image": {
+        "width": 418,
+        "height": 418,
+        "mode": "RGBA",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Yvain/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_06.png",
+      "destination": "Charaktere/Einzelcharaktere/Yvain/Originale/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_06.png",
+      "category": "character:Yvain",
+      "bytes": 282284,
+      "sha256": "beec7ebfdb87f907d318965cf1b7f885feb6dd6e462457ed1c356e6b2a754132",
+      "image": {
+        "width": 418,
+        "height": 418,
+        "mode": "RGBA",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Yvain/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_07.png",
+      "destination": "Charaktere/Einzelcharaktere/Yvain/Originale/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_07.png",
+      "category": "character:Yvain",
+      "bytes": 262362,
+      "sha256": "48ea5103e8868bfd986438abd1c5a4817fef8790d3b038f4f34a512e878271ba",
+      "image": {
+        "width": 418,
+        "height": 418,
+        "mode": "RGBA",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Yvain/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_08.png",
+      "destination": "Charaktere/Einzelcharaktere/Yvain/Originale/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_08.png",
+      "category": "character:Yvain",
+      "bytes": 273963,
+      "sha256": "793ecc6e10cd274dc4a5086c14614ec8cb21acce00b06c6c484f3390094a2572",
+      "image": {
+        "width": 418,
+        "height": 418,
+        "mode": "RGBA",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Yvain/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_09.png",
+      "destination": "Charaktere/Einzelcharaktere/Yvain/Originale/a93a45e5-1edd-40f0-8c59-9e08296f76a4/a93a45e5-1edd-40f0-8c59-9e08296f76a4_09.png",
+      "category": "character:Yvain",
+      "bytes": 282910,
+      "sha256": "5cc0033f277582f29192b6ea4e903cb5b21c66f5ab25327568dbfa532872d206",
+      "image": {
+        "width": 418,
+        "height": 418,
+        "mode": "RGBA",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Yvain/a93a45e5-1edd-40f0-8c59-9e08296f76a4.png",
+      "destination": "Charaktere/Einzelcharaktere/Yvain/Originale/a93a45e5-1edd-40f0-8c59-9e08296f76a4.png",
+      "category": "character:Yvain",
+      "bytes": 2269004,
+      "sha256": "14b500826b13bd2f02ebc224f97a006794109170fb243f1bd75269dbfc727b60",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Gawain Hochzeit.png",
+      "destination": "Charaktere/Einzelcharaktere/Gawain/Hochzeit/Originale/Gawain Hochzeit.png",
+      "category": "character:Gawain Hochzeit",
+      "bytes": 2146562,
+      "sha256": "6c345dd6139e343ff7b3362f996bf4e4ce7507cbe1dffbab4e3b5d50a3a8f6e0",
+      "image": {
+        "width": 916,
+        "height": 1374,
+        "mode": "RGBA",
+        "format": "PNG"
+      }
+    },
+    {
+      "source": "Gawain Hochzeit Avatare.png",
+      "destination": "Charaktere/Einzelcharaktere/Gawain/Hochzeit/Originale/Gawain Hochzeit Avatare.png",
+      "category": "character:Gawain Hochzeit",
+      "bytes": 2541136,
+      "sha256": "e5d1f803d09eb1af8d56a22b76268d9360dee86ea9be590ed71131e03b1ea8d0",
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGB",
+        "format": "PNG"
+      }
+    }
+  ]
+}

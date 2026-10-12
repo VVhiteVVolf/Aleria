@@ -1,0 +1,142 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-10-12T21:09:06.423Z",
+  "character": {
+    "id": "person--haus-gwyvern--huw-gwyvern",
+    "name": "Huw Gwyvern",
+    "title": "",
+    "fraktion": "Haus Gwyvern",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Huw Gwyvern (geboren 1722) ist jüngerer Bruder von Trevor Gwyvern und ein Kind von Mervyn Gwyvern und Jeannae Aderyn. Zugehörigkeit: Haus Gwyvern, Gwendolyns Ufer.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-10-12T21:09:06.423Z",
+    "updatedAt": "2026-10-12T21:09:06.423Z",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-gwyvern/huw-gwyvern.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": {
+      "characterId": "person--haus-gwyvern--huw-gwyvern",
+      "name": "Huw Gwyvern",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-gwyvern/huw-gwyvern.jpg",
+      "title": "Charakter-Inventar",
+      "role": "Haus Gwyvern",
+      "level": "Nicht ausgearbeitet",
+      "hitpoints": "Nicht ausgearbeitet",
+      "carryValue": "Nicht ausgearbeitet",
+      "status": "Nicht ausgearbeitet",
+      "infoRows": [],
+      "attributes": [],
+      "items": [
+        {
+          "id": "huw-dyreth",
+          "instanceId": "huw-dyreth",
+          "creatureId": "companion-huw-dyreth",
+          "name": "Dyreth",
+          "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/dyreth.png",
+          "description": "Dyreth ist Huw Gwyverns Rhyfel-Hengst: ein dunkler, kräftiger Eisenschimmel mit langer schwarzer Mähne, hellem Stirnfleck und aggressivem Temperament.",
+          "type": "Rhyfel-Hengst",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Rhyfel-Hengst",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-gwyvern--huw-gwyvern",
+          "ownerCharacterName": "Huw Gwyvern",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-12T21:09:06.719Z"
+        }
+      ],
+      "companions": [
+        {
+          "id": "card-huw-dyreth",
+          "name": "Dyreth",
+          "species": "Rhyfel-Hengst",
+          "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/dyreth.png",
+          "description": "Dyreth ist Huw Gwyverns Rhyfel-Hengst: ein dunkler, kräftiger Eisenschimmel mit langer schwarzer Mähne, hellem Stirnfleck und aggressivem Temperament.",
+          "summary": "Dyreth ist Huw Gwyverns Rhyfel-Hengst: ein dunkler, kräftiger Eisenschimmel mit langer schwarzer Mähne, hellem Stirnfleck und aggressivem Temperament.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-huw-dyreth",
+          "inventoryItemId": "huw-dyreth"
+        }
+      ],
+      "revision": 1791839346721
+    },
+    "biography": null,
+    "identity": {
+      "worldPersonId": "person--haus-gwyvern--huw-gwyvern"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-gwyvern--huw-gwyvern",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "houseId": "house-gwyvern",
+      "houseName": "Haus Gwyvern",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-gwyvern",
+          "personId": "huw-gwyvern",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-12T21:09:06.423Z",
+          "lastSyncedAt": "2026-10-12T21:09:06.423Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwyvern&mode=view&person=huw-gwyvern",
+          "fingerprint": "{\"name\":\"Huw Gwyvern\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwyvern\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyvern/huw-gwyvern.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"mervyn-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--mervyn-gwyvern\",\"name\":\"Mervyn Gwyvern\"},{\"personId\":\"jeannae-aderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--jeannae-aderyn\",\"name\":\"Jeannae Aderyn\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "mervyn-gwyvern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwyvern--mervyn-gwyvern",
+            "name": "Mervyn Gwyvern"
+          },
+          {
+            "personId": "jeannae-aderyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-aderyn--jeannae-aderyn",
+            "name": "Jeannae Aderyn"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

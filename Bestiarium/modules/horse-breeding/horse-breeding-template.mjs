@@ -1,6 +1,7 @@
 import { escapeHtml } from '../book-shell/book-template-utils.mjs';
+import { horseCrossingAnchor } from './horse-breeding-model.mjs';
 
-const VERSION = '20260912-horse-breeding-v2';
+const VERSION = '20261012-ritterschimmer-v1';
 
 const safeJson = value => JSON.stringify(value).replace(/</g, '\\u003c').replace(/-->/g, '--\\u003e');
 
@@ -14,7 +15,7 @@ function renderKnownCrossing(crossing, breedsById) {
   const established = crossing.establishedBreed
     ? `<span>Gefestigte Linie: ${escapeHtml(crossing.establishedBreed)}</span>`
     : '';
-  return `<article class="breeding-known-card">
+  return `<article id="${escapeHtml(horseCrossingAnchor(crossing.mareId, crossing.sireId))}" class="breeding-known-card">
     <p class="eyebrow">${escapeHtml(crossing.source)}</p>
     <h3>${escapeHtml(crossing.name)}</h3>
     <p><strong>${escapeHtml(mare.name)}</strong> <span aria-hidden="true">×</span> <strong>${escapeHtml(sire.name)}</strong></p>
@@ -95,7 +96,7 @@ export function renderHorseBreedingPage(data) {
         <div class="breeding-matrix-scroll" data-role="matrix-container" tabindex="0" aria-label="Scrollbare Kreuzungsmatrix"></div>
       </section>
 
-      <noscript><p class="breeding-noscript">Der Rechner, lokale Aufzeichnungen und die interaktive Matrix benötigen JavaScript. Die sieben überlieferten Kreuzungen bleiben oben lesbar.</p></noscript>
+      <noscript><p class="breeding-noscript">Der Rechner, lokale Aufzeichnungen und die interaktive Matrix benötigen JavaScript. Die ${data.crossings.length} überlieferten Kreuzungen bleiben oben lesbar.</p></noscript>
     </main>
     <footer class="bestiary-footer"><span class="footer-monogram" aria-hidden="true">A</span><p>Aus den Archiven der Thalenorischen Akademie<small>Zuchtbuch · Pferde Alerias</small></p><a href="../index.html">Zurück zu den Pferden ↗</a></footer>
     <script type="application/json" data-role="horse-breeding-data">${safeJson(data)}</script>

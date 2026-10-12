@@ -89,6 +89,7 @@
       "collection": "characters",
       "documentId": "person--haus-draig--galahad-draig",
       "documentIds": [
+        "person--haus-draig--galahad-draig",
         "person--haus-draig--galahad-draig"
       ],
       "documents": [
@@ -96,6 +97,11 @@
           "documentId": "person--haus-draig--galahad-draig",
           "createdAt": "2026-09-03T23:41:58.678Z",
           "updatedAt": "2026-09-03T23:41:58.678Z"
+        },
+        {
+          "documentId": "person--haus-draig--galahad-draig",
+          "createdAt": "",
+          "updatedAt": "2026-10-11T19:46:42.303Z"
         }
       ]
     },
@@ -124,12 +130,13 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-05T22:55:55.677Z",
-    "sourceUpdatedAt": "2026-09-03T23:41:58.678Z",
+    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
+    "sourceUpdatedAt": "2026-10-11T19:46:42.303Z",
     "sourceDocumentIds": [
+      "person--haus-draig--galahad-draig",
       "person--haus-draig--galahad-draig"
     ],
-    "contentHash": "3439c2037b8127e8b4f7a37a5d42bb679a7614072671fa8c3e3ce8c35f9c76fe"
+    "contentHash": "e1de051db8be1cb1489695f6c1aeffb209ab462d3d8366593e6b3af543af70a2"
   },
   "local": {
     "notes": "",
@@ -290,6 +297,60 @@
         "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
         "title": "Graf von Celtigerns Wacht",
         "updatedAt": "2026-09-03T23:41:58.678Z"
+      },
+      {
+        "id": "person--haus-draig--galahad-draig",
+        "name": "Galahad Draig",
+        "inventory": {
+          "items": [
+            {
+              "category": "companion",
+              "creatureId": "companion-galahad-sturmwind",
+              "templateId": "",
+              "itemDbKey": "",
+              "templateName": "Drake-Pferd",
+              "ownerCharacterId": "person--haus-draig--galahad-draig",
+              "id": "galahad-sturmwind",
+              "itemStorageMode": "character",
+              "imagePosition": "center",
+              "ownerCharacterName": "Galahad Draig",
+              "imageFit": "contain",
+              "type": "Drake-Pferd",
+              "description": "Ein Drake aus Baldreska. Galahad hat ihn auf seinen Reisen als Ritter der Tafelrunde erstanden, nachdem sein erstes Pferd gestorben war.",
+              "originItemDbKey": "",
+              "imageFormat": "portrait",
+              "instanceId": "galahad-sturmwind",
+              "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/companions/sturmwind-galahad.png",
+              "quantity": "1",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-10-11T19:46:45.483Z",
+              "registerCategory": "pferde",
+              "name": "Sturmwind"
+            }
+          ],
+          "companions": [
+            {
+              "attributes": [],
+              "inventoryItemId": "galahad-sturmwind",
+              "description": "Ein Drake aus Baldreska. Galahad hat ihn auf seinen Reisen als Ritter der Tafelrunde erstanden, nachdem sein erstes Pferd gestorben war.",
+              "name": "Sturmwind",
+              "imageFormat": "portrait",
+              "id": "card-galahad-sturmwind",
+              "role": "Reittier",
+              "imagePosition": "center",
+              "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/companions/sturmwind-galahad.png",
+              "species": "Drake-Pferd",
+              "imageFit": "contain",
+              "creatureId": "companion-galahad-sturmwind",
+              "infoRows": [],
+              "summary": "Ein Drake aus Baldreska. Galahad hat ihn auf seinen Reisen als Ritter der Tafelrunde erstanden, nachdem sein erstes Pferd gestorben war.",
+              "status": "Gesund"
+            }
+          ],
+          "revision": 1791748002303
+        },
+        "updatedAt": "2026-10-11T19:46:42.303Z"
       }
     ]
   },
@@ -424,8 +485,8 @@
           "personId": "galahad-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-10-05T22:55:55.677Z",
-          "lastSyncedAt": "2026-10-05T22:55:55.677Z",
+          "importedAt": "2026-10-12T22:24:41.567Z",
+          "lastSyncedAt": "2026-10-12T22:24:41.567Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-neidr&mode=view&person=galahad-draig",
           "fingerprint": "{\"name\":\"Galahad Draig\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwendolyn-aderyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"children\":[{\"personId\":\"guinevere-neidr\",\"type\":\"foster\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--guinevere-neidr\",\"name\":\"Guinevere Neidr\"}]}}"
         },
@@ -434,8 +495,8 @@
           "personId": "galahad-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-10-05T22:55:55.677Z",
-          "lastSyncedAt": "2026-10-05T22:55:55.677Z",
+          "importedAt": "2026-10-12T22:24:41.567Z",
+          "lastSyncedAt": "2026-10-12T22:24:41.567Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-aderyn&mode=view&person=galahad-draig",
           "fingerprint": "{\"name\":\"Galahad Draig\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/galahad-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwendolyn-aderyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"children\":[]}}"
         }
@@ -451,7 +512,55 @@
     "imageSets": [],
     "imageSetSchemaVersion": 0,
     "imageSetsOverride": false,
-    "inventory": null,
+    "inventory": {
+      "items": [
+        {
+          "category": "companion",
+          "creatureId": "companion-galahad-sturmwind",
+          "templateId": "",
+          "itemDbKey": "",
+          "templateName": "Drake-Pferd",
+          "ownerCharacterId": "person--haus-draig--galahad-draig",
+          "id": "galahad-sturmwind",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "ownerCharacterName": "Galahad Draig",
+          "imageFit": "contain",
+          "type": "Drake-Pferd",
+          "description": "Ein Drake aus Baldreska. Galahad hat ihn auf seinen Reisen als Ritter der Tafelrunde erstanden, nachdem sein erstes Pferd gestorben war.",
+          "originItemDbKey": "",
+          "imageFormat": "portrait",
+          "instanceId": "galahad-sturmwind",
+          "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/companions/sturmwind-galahad.png",
+          "quantity": "1",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-11T19:46:45.483Z",
+          "registerCategory": "pferde",
+          "name": "Sturmwind"
+        }
+      ],
+      "companions": [
+        {
+          "attributes": [],
+          "inventoryItemId": "galahad-sturmwind",
+          "description": "Ein Drake aus Baldreska. Galahad hat ihn auf seinen Reisen als Ritter der Tafelrunde erstanden, nachdem sein erstes Pferd gestorben war.",
+          "name": "Sturmwind",
+          "imageFormat": "portrait",
+          "id": "card-galahad-sturmwind",
+          "role": "Reittier",
+          "imagePosition": "center",
+          "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/companions/sturmwind-galahad.png",
+          "species": "Drake-Pferd",
+          "imageFit": "contain",
+          "creatureId": "companion-galahad-sturmwind",
+          "infoRows": [],
+          "summary": "Ein Drake aus Baldreska. Galahad hat ihn auf seinen Reisen als Ritter der Tafelrunde erstanden, nachdem sein erstes Pferd gestorben war.",
+          "status": "Gesund"
+        }
+      ],
+      "revision": 1791748002303
+    },
     "name": "Galahad Draig",
     "origin": "",
     "playerOwner": "",
@@ -463,6 +572,6 @@
     "status": "active",
     "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
     "title": "Graf von Celtigerns Wacht",
-    "updatedAt": "2026-09-03T23:41:58.678Z"
+    "updatedAt": "2026-10-11T19:46:42.303Z"
   }
 }

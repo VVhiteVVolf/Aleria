@@ -1,0 +1,143 @@
+{
+  "verifiedAt": "2026-10-11",
+  "importedFilesVerified": 238,
+  "imagesVerified": 228,
+  "sourcesUnchanged": true,
+  "requestedDirectoriesComplete": true,
+  "splitter": "Werkzeuge/Avatar Splitterer/AvatarSplitterPro_V3.py",
+  "splitterSourceUnmodified": true,
+  "testedOperation": "V3 get_crops and crop_box, without GUI",
+  "sheet": "Beispiele/9er-Sheets/Aldo.png",
+  "settings": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "order": "row-major, top left to bottom right",
+  "outputCount": 9,
+  "visualReview": {
+    "reviewedFiles": 9,
+    "result": "Alle neun Ausschnitte angesehen: Reihenfolge korrekt, keine Nachbarpanels oder Trennlinien sichtbar, Kopf und dargestellte Gestik erhalten."
+  },
+  "outputs": [
+    {
+      "file": "Output/Prueflauf/Aldo/Aldo_Bild1.png",
+      "index": 1,
+      "box": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "width": 418,
+      "height": 418,
+      "sha256": "512dfb7847e98352fd09cc908a918f21e1278c15c5c783c04d83fbda4c554371"
+    },
+    {
+      "file": "Output/Prueflauf/Aldo/Aldo_Bild2.png",
+      "index": 2,
+      "box": [
+        418,
+        0,
+        836,
+        418
+      ],
+      "width": 418,
+      "height": 418,
+      "sha256": "66fb14283ace45a36f0424542d4be00c26656d3b8bd9bf5c7ea535b5b3f5d6e0"
+    },
+    {
+      "file": "Output/Prueflauf/Aldo/Aldo_Bild3.png",
+      "index": 3,
+      "box": [
+        836,
+        0,
+        1254,
+        418
+      ],
+      "width": 418,
+      "height": 418,
+      "sha256": "a9fc5794c4704f1f298bc84c4d62ada9b7cfe2e327c3ee35bd198b4600cb5107"
+    },
+    {
+      "file": "Output/Prueflauf/Aldo/Aldo_Bild4.png",
+      "index": 4,
+      "box": [
+        0,
+        418,
+        418,
+        836
+      ],
+      "width": 418,
+      "height": 418,
+      "sha256": "ea80d38b64d1cd3e89c167f74470cf90e53e2e0be46ea35ff5dc14e02246e9c3"
+    },
+    {
+      "file": "Output/Prueflauf/Aldo/Aldo_Bild5.png",
+      "index": 5,
+      "box": [
+        418,
+        418,
+        836,
+        836
+      ],
+      "width": 418,
+      "height": 418,
+      "sha256": "f731e54e347ee4c6d9fbfdbe4224304a38922fbc656ca0d1cd62125309becd8b"
+    },
+    {
+      "file": "Output/Prueflauf/Aldo/Aldo_Bild6.png",
+      "index": 6,
+      "box": [
+        836,
+        418,
+        1254,
+        836
+      ],
+      "width": 418,
+      "height": 418,
+      "sha256": "075a25c3b3835e27f3daeb788efd7ac51a31223f0c6ff8011a13fce955c60b8c"
+    },
+    {
+      "file": "Output/Prueflauf/Aldo/Aldo_Bild7.png",
+      "index": 7,
+      "box": [
+        0,
+        836,
+        418,
+        1254
+      ],
+      "width": 418,
+      "height": 418,
+      "sha256": "117ef78770681feb8d3ed170bfe40aac2eac5d7c40ca2f725a8aecfbb29a9e1d"
+    },
+    {
+      "file": "Output/Prueflauf/Aldo/Aldo_Bild8.png",
+      "index": 8,
+      "box": [
+        418,
+        836,
+        836,
+        1254
+      ],
+      "width": 418,
+      "height": 418,
+      "sha256": "7fd9553385194f40aadc84a6ade6aa2b45f930a342d6b350b8e748232b1b7114"
+    },
+    {
+      "file": "Output/Prueflauf/Aldo/Aldo_Bild9.png",
+      "index": 9,
+      "box": [
+        836,
+        836,
+        1254,
+        1254
+      ],
+      "width": 418,
+      "height": 418,
+      "sha256": "4fbfaa5dab3a70152021f549488ffaa6b968fb11c377ad1629c97397edb5b20d"
+    }
+  ]
+}

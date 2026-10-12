@@ -1,0 +1,68 @@
+{
+  "order": 14,
+  "slug": "cathair",
+  "label": "Cathair",
+  "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_51_49-Uathneach Alternativ _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+  "userBrief": "Eindrucksvolle Flussstadt.",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "status": "first-draft-ready",
+  "version": 1,
+  "tool": "built-in image_gen",
+  "stylePreset": "fantasy-worldmap-stamp",
+  "styleVersion": 2,
+  "transparentBackground": true,
+  "primaryStyleReference": "Karten/assets/images/worldmap-stamps/style-tests/01-gaelic-farmhouse-approved.png",
+  "file": "cathair-v01.png",
+  "designDescription": "An impressive large Gaelic river city with 26 to 32 chunky simple houses in several quarters, a broad river-facing civic hall, one compact stronghold and a complete irregular pale stone wall with a few round towers. A long simple quay, three short wooden landing stages, two broad warehouses and two very small river sailing craft emphasize its river-city identity. Muted terracotta and slate roofs, pale warm stone and brown timber. Large clean silhouettes and near-blank walls",
+  "geographicLayout": "The large river runs down the EAST/RIGHT and bends SOUTHWEST across the lower part of the map. Place the city on the WEST/NORTHWEST bank, centered around (46%,40%), with a long gently curving eastern waterfront following the river from around (72%,30%) to (61%,60%). Inland gate faces WEST toward the road loop. Keep the broad lower river bend and the tiny sandy river island free. Docks project RIGHT/SOUTHEAST into the river. Do not draw river water, marsh, cliffs or map labels.",
+  "prompt": "Create ONE transparent Inkarnate worldmap stamp of Cathair — Gaelic town or city.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: An impressive large Gaelic river city with 26 to 32 chunky simple houses in several quarters, a broad river-facing civic hall, one compact stronghold and a complete irregular pale stone wall with a few round towers. A long simple quay, three short wooden landing stages, two broad warehouses and two very small river sailing craft emphasize its river-city identity. Muted terracotta and slate roofs, pale warm stone and brown timber. Large clean silhouettes and near-blank walls. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nREFERENCE ROLES: Image 1 is the approved farmhouse, the PRIMARY STYLE reference. Image 2 is ONLY the north-up target MAP GEOGRAPHY and placement reference. Match the map's approximate canvas aspect ratio and layout. Colored diamond markers indicate location only, NOT a frame, emblem, background, or rigid city boundary. Never reproduce those markers, labels, terrain, mountain ranges, trees outside the settlement, river, sea, sky or background. Draw only the architecture and indispensable attached harbor elements. Buildings stand upright in the approved elevated three-quarter view while their footprint follows the north-up map. Keep all foundations on the indicated land; existing bridges remain part of the original map and should not be redrawn. Use the geographic directions below. Normalized positions are approximate centers, not exact requirements.\n\nGEOGRAPHIC LAYOUT: The large river runs down the EAST/RIGHT and bends SOUTHWEST across the lower part of the map. Place the city on the WEST/NORTHWEST bank, centered around (46%,40%), with a long gently curving eastern waterfront following the river from around (72%,30%) to (61%,60%). Inland gate faces WEST toward the road loop. Keep the broad lower river bend and the tiny sandy river island free. Docks project RIGHT/SOUTHEAST into the river. Do not draw river water, marsh, cliffs or map labels.\n\nTRANSPARENCY AND SIMPLICITY: Every exterior contour is a clean solid dark-brown pen stroke. Immediately outside it is fully transparent empty space, no brown gradient, blur, halo, glow, cast shadow or ground shadow. Free gaps and all water areas are transparent. Only small enclosed courtyards and narrow built streets may be filled; no continuous city ground plate. Do not add tiny surface marks to fill the canvas. All houses retain the farmhouse reference's playful simple shape language; cities may contain more houses but each stays equally simple.",
+  "geographyReferenceSize": [
+    687,
+    646
+  ],
+  "validation": {
+    "width": 1294,
+    "height": 1216,
+    "mode": "RGBA",
+    "transparentFraction": 0.6885,
+    "transparentPixelCount": 1083290,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "visibleBoundsAlphaAbove8": [
+      170,
+      186,
+      1181,
+      971
+    ],
+    "originalAlphaPreserved": true,
+    "originalBytesPreserved": true
+  },
+  "sourceImage": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11f40-a25b-73f1-8920-3ca29d7e34d6\\exec-c5979148-ecb7-47bb-a9e1-04cb882fb205.png",
+  "generationId": "exec-c5979148-ecb7-47bb-a9e1-04cb882fb205",
+  "sha256": "dc139b50f35acf2fee35b8d26114fcb7c7576aae5027c779054991fcf2314903",
+  "review": {
+    "userApproved": false,
+    "batchFirstDraft": true,
+    "geographyReferenceInspected": true,
+    "preciseMapPlacementDeferred": true,
+    "optimizationDeferredByUser": true,
+    "note": "Erstentwurf auf Grundlage des freigegebenen Bauernhaus-Stils und des individuellen Kartenausschnitts. Keine Zwischenfreigabe erforderlich; individuelle Optimierung erfolgt spaeter.",
+    "lightAndDarkCompositeInspected": true,
+    "edgeInspection": "Auf heller und dunkler Vorschauunterlage visuell geprueft; keine sichtbaren aeusseren Halos oder Hintergrundrechtecke. Originaler Alphakanal unveraendert.",
+    "overviewLight": "../../batch-16-previews/overview-light.png",
+    "overviewDark": "../../batch-16-previews/overview-dark.png"
+  },
+  "referenceHashes": {
+    "primaryStyleReference": "cb49eb5e92bc28d42eadbcf6eb4927bef73f449c2a713c76d0b427990310b3bd",
+    "geographyReference": "960e2e1efb5869345cc488bf94abd470671761695bbf5a2858c67c452f0ff903"
+  }
+}

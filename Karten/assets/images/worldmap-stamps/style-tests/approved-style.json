@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "status": "approved",
+  "approvedBy": "user",
+  "approvalQuote": "Exakt so! Speichere dir diesen Stil nun.",
+  "label": "Freigegebener Map-Stamp-Stil: rundliches gälisches Bauernhaus",
+  "file": "01-gaelic-farmhouse-approved.png",
+  "tool": "built-in image_gen",
+  "transparentBackground": true,
+  "sourceStyleReference": "AleriaAlmanach/docs/art/references/fantasy-worldmap-stamp/02-walled-castle-settlement.png",
+  "exactGenerationPrompt": "Create ONE transparent Inkarnate map stamp of a ROUND GAELIC FARMHOUSE.\n\nUse ONLY the attached reference image for the art style. Look especially at the SMALL STRAW-ROOFED COTTAGE OUTSIDE THE CASTLE AT THE LOWER RIGHT. Match that little cottage's playful simplicity, chunky proportions, slightly wonky hand-drawn brown outlines and restrained flat coloring as closely as possible. Keep exactly that SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: one squat round / softly oval Gaelic farmhouse. Low warm cream-colored daub walls, an oversized rounded conical straw roof with an uneven drooping brim, a slightly crooked dark brown wooden doorway and ONE tiny dark window. Cozy, chubby, asymmetrical, a little cartoonish. See the roof and the rounded front wall from the same elevated three-quarter map angle as the reference. Roof painted as just a few broad golden-ochre shapes, with only a handful of short straw marks. Wall almost plain. Dark-brown outlines carry the design. Gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY this single house. No surrounding castle, other buildings, fence, props, vegetation, ground patch, shadow or text. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else.\n\nEntire house visible, comfortable transparent margin. TRUE transparent PNG alpha background; no colored backdrop, no paper rectangle, no pin frame, no white outline and no shadow.",
+  "usage": "Dieses vom Nutzer ausdrücklich freigegebene Bild bestimmt künftig Detailgrad, verspielte Formensprache, Strichstärke und flache Aquarellkolorierung aller Map Stamps. Es ersetzt den zuvor abgelehnten detailreichen Ansatz. Motiv je Auftrag ändern, Stil beibehalten. Keine automatische Fortsetzung der unterbrochenen 24er-Serie.",
+  "image": {
+    "width": 1374,
+    "height": 1145,
+    "mode": "RGBA",
+    "sha256": "cb49eb5e92bc28d42eadbcf6eb4927bef73f449c2a713c76d0b427990310b3bd"
+  }
+}

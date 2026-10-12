@@ -1,0 +1,839 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "status": "complete",
+  "additionalEdgeInstructionsFromIndex": 15,
+  "additionalEdgeInstructions": "Match the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing from the supplied approved style reference only.",
+  "stylePreset": "fantasy-worldmap-stamp",
+  "styleVersion": 2,
+  "tool": "built-in image_gen",
+  "transparentBackground": true,
+  "primaryStyleReference": "Karten/assets/images/worldmap-stamps/style-tests/01-gaelic-farmhouse-approved.png",
+  "promptTemplate": "Create ONE transparent Inkarnate worldmap stamp of [MOTIF].\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: [SUBJECT DESCRIPTION]. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.",
+  "promptAssembly": "Use finalPromptOverride when present; otherwise replace [MOTIF] with label and [SUBJECT DESCRIPTION] with subject in promptTemplate. For index >= additionalEdgeInstructionsFromIndex append two newlines and additionalEdgeInstructions. Send primaryStyleReference as sole style image and transparent_background=true.",
+  "order": "First 24 motifs from user sheet: first two rows, left to right within each row; matches Karten/docs/location-symbol-types.json.",
+  "assets": [
+    {
+      "index": 1,
+      "label": "Ahnenbaum",
+      "file": "01-ahnenbaum.png",
+      "subject": "A single ancestral oak tree: a short chunky crooked brown trunk, three simple spreading roots and a large round golden-ochre crown made of five big puffy lobes. Draw the foliage as broad plain shapes, not individual leaves. No bark texture.",
+      "status": "generated",
+      "generationId": "exec-095ef14b-6b24-475a-b26e-7faa32263715",
+      "sha256": "dd81f1bd2e01556078454a5493c3c7423fbc0873ed27069eea61bae809dcc6f5",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7099,
+        "alphaBoundingBox": [
+          0,
+          0,
+          1305,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 1,
+        "visibleBoundsAlphaAbove8": [
+          254,
+          154,
+          1116,
+          1021
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 2,
+      "label": "Antike Ruine",
+      "file": "02-antike-ruine.png",
+      "subject": "A tiny ancient ruin: two squat cream-stone columns supporting one lopsided partly broken arch, with two fallen blocks beside one column. Almost plain stone surfaces, only two or three joint marks. Transparent opening.",
+      "status": "generated",
+      "generationId": "exec-aa7547d9-6748-4f64-a7b6-e58963502db7",
+      "sha256": "1e8bc2fcdc64e1dfb4a9e9be58a09a40be4186b8e1a8b4aa90a1df775e3a1c30",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.8076,
+        "alphaBoundingBox": [
+          68,
+          37,
+          1346,
+          1121
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          354,
+          221,
+          1090,
+          939
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 3,
+      "label": "Antikes Grab",
+      "file": "03-antikes-grab.png",
+      "subject": "A squat ancient tomb: one tiny cream-grey mausoleum, oversized simple triangular pediment, two stubby columns, dark doorway and one broad step. No carving, skull, ornament or stonework pattern.",
+      "status": "generated",
+      "generationId": "exec-43902791-c815-40e8-b29c-b294e9748fc2",
+      "sha256": "311306a754bb854f758eacd436fcd3694bd8bc4f7cff82e9a180407322ac2952",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7324,
+        "alphaBoundingBox": [
+          0,
+          49,
+          1338,
+          1105
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          313,
+          226,
+          1080,
+          984
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 4,
+      "label": "Anwesen",
+      "file": "04-anwesen.png",
+      "subject": "A chubby manor house with a wide warm-cream main block, two short side wings and oversized reddish-brown roofs. One central door, four small dark windows and one broad front step. Simple slightly crooked silhouette.",
+      "status": "generated",
+      "generationId": "exec-04942e30-da39-421d-976f-b182b5666bf4",
+      "sha256": "ee603d023d5d3454c4976273f2bbcb1800c80e666777546e1d7829524e738921",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7101,
+        "alphaBoundingBox": [
+          25,
+          22,
+          1352,
+          1113
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          222,
+          185,
+          1152,
+          933
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 5,
+      "label": "Ausgrabung",
+      "file": "05-ausgrabung.png",
+      "subject": "A tiny archaeological dig: two crooked timber posts and a crossbeam over a small shallow ochre rectangular excavation containing one broken pot and two stone blocks. One leaning spade. Only the little actual pit, no surrounding earth.",
+      "status": "generated",
+      "generationId": "exec-b5ecbb4c-5e42-4ffe-8f60-6c177fbab826",
+      "sha256": "05464c6e8a5289a7be80d7d5b73d330c5bfe2ffab0a4cc429db3ff0fc6b4b688",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7798,
+        "alphaBoundingBox": [
+          33,
+          29,
+          1328,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          290,
+          216,
+          1086,
+          961
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 6,
+      "label": "Außenposten",
+      "file": "06-aussenposten.png",
+      "subject": "A squat grey stone watchtower with a few oversized crenellations, one little dark doorway and a short uneven timber palisade attached to one side. Plain walls and only three stone marks. No hill.",
+      "status": "generated",
+      "generationId": "exec-f8d9b1d8-4e6e-4e66-97d3-9fb7fbb11e11",
+      "sha256": "b664e8729bcbef8ad37c98adf517baf932abf68315853280eb8da5723834eb6d",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7621,
+        "alphaBoundingBox": [
+          0,
+          21,
+          1356,
+          1121
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          372,
+          240,
+          1116,
+          922
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 7,
+      "label": "Banditenlager",
+      "file": "07-banditenlager.png",
+      "subject": "A tiny bandit camp: two lopsided ochre canvas tents, one simple round shield, one crate and a single small fir behind them. The tents are broad triangular shapes with dark entrances. No campsite ground.",
+      "status": "generated",
+      "generationId": "exec-d3a1d598-ec39-4f17-9608-92f829153097",
+      "sha256": "bffdce0dfd060818c76fb941977fdd4d4b205a36db7fdda4c1fc06fb43dab8ff",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7731,
+        "alphaBoundingBox": [
+          0,
+          23,
+          1354,
+          1121
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          218,
+          233,
+          1175,
+          912
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 8,
+      "label": "Kleinstadt",
+      "file": "08-kleinstadt.png",
+      "subject": "A tiny town cluster: four chubby cream houses with oversized muted terracotta roofs and one slightly taller central town hall with a small red flag. Each house has one dark doorway and at most one tiny window. No paving base.",
+      "status": "generated",
+      "generationId": "exec-350ef69d-06af-4baf-ab23-a7ab2203a77a",
+      "sha256": "d1176b9449bcbbca99e2b390c5f969ec2e17209f9382e5420f8880e764b73d04",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6881,
+        "alphaBoundingBox": [
+          33,
+          27,
+          1322,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          207,
+          122,
+          1209,
+          990
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 9,
+      "label": "Bauernhof",
+      "file": "09-bauernhof.png",
+      "subject": "A little farmstead: one chubby round straw-roofed cottage, one simple low barn and one short windmill with four broad sails. Big roofs, tiny dark openings, almost no material marks. No fields.",
+      "status": "generated",
+      "generationId": "exec-fca74e88-f030-43e9-87fc-ed50e7094d64",
+      "sha256": "e2bde49b534cb0fc8f59189403ec2e2aa7edfbc8905ac2c1eef9a5053bc3ae81",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6837,
+        "alphaBoundingBox": [
+          49,
+          28,
+          1340,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          204,
+          134,
+          1236,
+          997
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 10,
+      "label": "Bauernsiedlung",
+      "file": "10-bauernsiedlung.png",
+      "subject": "A tiny farming hamlet: three chubby straw-roofed cottages and one short simple wooden windmill, with one small golden wheat sheaf tucked beside a cottage. Big plain roofs, very few openings. No fields or grass base.",
+      "status": "generated",
+      "generationId": "exec-ac67f62e-6e69-4b1c-a559-6f9a3a04be64",
+      "sha256": "2d83c990dad8e8b9288150c01b23512f74270291b4165fe1e81048b88effba70",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6364,
+        "alphaBoundingBox": [
+          92,
+          25,
+          1350,
+          1073
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          127,
+          108,
+          1248,
+          1043
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 11,
+      "label": "Monsterhort",
+      "file": "11-monsterhort.png",
+      "subject": "A monster lair: one low rounded ochre-brown rock mound with a large simple dark cave mouth and two tiny flat amber eyes inside. Just three big rock shapes. No visible monster, lighting effects or landscape.",
+      "status": "generated",
+      "generationId": "exec-bf755028-a840-41a9-a9f6-1e434cef6cfe",
+      "sha256": "75ce60856207473977e57a1597f9be48e2001d03f097b9a6e0057dd228b948b9",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6853,
+        "alphaBoundingBox": [
+          0,
+          20,
+          1257,
+          1040
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          222,
+          220,
+          1200,
+          960
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 12,
+      "label": "Handelshof",
+      "file": "12-handelshof.png",
+      "subject": "A small trading yard represented by one squat wooden market shelter, a wide ochre striped cloth awning, a simple counter, two chunky crates and one barrel. Few broad structural lines, no individual products or lettering.",
+      "status": "generated",
+      "generationId": "exec-27cd66f0-6c15-49d1-8159-590b00e3f789",
+      "sha256": "38ef5947f191da9bfb89bb291078bac921b88f065e47bd5fc5feda7dcabb0e7f",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6774,
+        "alphaBoundingBox": [
+          0,
+          23,
+          1350,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          243,
+          200,
+          1154,
+          997
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 13,
+      "label": "Bergbausiedlung",
+      "file": "13-bergbausiedlung.png",
+      "subject": "A tiny mining settlement: two squat timber cottages beside a simple timber-framed mine entrance in one small grey rock, and one chunky ore cart on two short rail strokes. No mountain or ground plate.",
+      "status": "generated",
+      "generationId": "exec-9fea5843-aec6-44cc-9efe-0e028e691df7",
+      "sha256": "d94bd20bd79c35387b0d1ef1e176c224e77550e89d46c5a7fa4ed19c5482878d",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6994,
+        "alphaBoundingBox": [
+          33,
+          35,
+          1346,
+          1121
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          187,
+          181,
+          1211,
+          966
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 14,
+      "label": "Brauersiedlung",
+      "file": "14-brauersiedlung.png",
+      "finalPromptOverride": "Create ONE transparent Inkarnate worldmap stamp of Brauersiedlung.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A tiny brewing hamlet: one broad chubby cream brewhouse with a terracotta roof and a short chimney, two smaller cottages and two large simple barrels beside the main door. No smoke, sign or grain fields.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nThis is a NEW drawing using the attached farmhouse only. Match the reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke; there must be NO soft brown gradient, blur or glow around that contour. All space outside the actual buildings and barrels must be completely empty and transparent.",
+      "subject": "A tiny brewing hamlet: one broad chubby cream brewhouse with a terracotta roof and a short chimney, two smaller cottages and two large simple barrels beside the main door. No smoke, sign or grain fields.",
+      "status": "generated",
+      "generationId": "exec-20a8cf33-0fc1-4cc4-a20a-14908ee921d5",
+      "sha256": "a0f0f7f901f6cacac8bdaaf88a70ae37af0e97e71e6e072ab07908ddaa4c4681",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6949,
+        "alphaBoundingBox": [
+          47,
+          23,
+          1365,
+          1089
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          118,
+          227,
+          1264,
+          939
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      },
+      "supersededGenerations": [
+        {
+          "generationId": "exec-3582812c-7039-4275-babd-9051080078a0",
+          "reason": "Superseded during transparency inspection. Preview showed hidden RGB in alpha-zero pixels; selected final checked on light/dark backgrounds."
+        },
+        {
+          "generationId": "exec-22102325-e96f-446d-aaa8-1a0f0497c3fc",
+          "reason": "Superseded during transparency inspection. Preview showed hidden RGB in alpha-zero pixels; selected final checked on light/dark backgrounds."
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "label": "Brückensiedlung",
+      "file": "15-brueckensiedlung.png",
+      "subject": "A tiny bridge settlement: a short cream-stone bridge with two broad open arches and two chubby gatehouses with oversized red roofs at opposite ends. All openings and the space beneath the bridge remain transparent. No river or banks.",
+      "status": "generated",
+      "generationId": "exec-37804a85-8d1a-44b0-abec-f5a7d759c431",
+      "sha256": "cb87212e097ef0cfb13c89f557c2310747062abdf05956aed84b3363b750daf5",
+      "validation": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGBA",
+        "transparentFraction": 0.7134,
+        "alphaBoundingBox": [
+          86,
+          85,
+          1498,
+          1000
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          88,
+          171,
+          1461,
+          860
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      },
+      "supersededGenerations": [
+        {
+          "generationId": "exec-912df5f9-43a5-4ca6-80d8-fd403e7a1038",
+          "reason": "Earlier variant superseded during alpha inspection; excluded from delivered set."
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "label": "Burgsiedlung",
+      "file": "16-burgsiedlung.png",
+      "subject": "A tiny castle hamlet: one squat cream-grey keep with four big crenellations and three little chubby cottages with muted ochre and terracotta roofs clustered at its foot. Plain surfaces, minimal openings. No hill or ground plate.",
+      "status": "generated",
+      "generationId": "exec-bb399f86-5705-43f0-b428-4316de578d9c",
+      "sha256": "4df3398e0d37914ef701e43ec676eaf98751a49eae6974cf05b49cde64d28e74",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7123,
+        "alphaBoundingBox": [
+          33,
+          13,
+          1354,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          227,
+          174,
+          1161,
+          1004
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 17,
+      "label": "Diebesgilde",
+      "file": "17-diebesgilde.png",
+      "subject": "A tiny thieves' guild hideout: one squat crooked dark-timber house with two oversized slouching slate roofs, a small side stair and one little locked door. Just two dark windows and a few thick timber strokes. No figures or scenery.",
+      "status": "generated",
+      "generationId": "exec-a0b66daf-6990-44d4-9474-6532e415d9ec",
+      "sha256": "0ceb8ae224d865505f72dfbedf330d76974b6116f83bac3c0758c8197bc5c1b0",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.692,
+        "alphaBoundingBox": [
+          41,
+          48,
+          1320,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          227,
+          146,
+          1149,
+          1001
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 18,
+      "label": "Druidenhütte",
+      "file": "18-druidenhuette.png",
+      "subject": "A tiny round druid hut with warm clay walls, an oversized puffy moss-green roof, one crooked round-topped door, one tiny window and a single small fir behind it. Very simple soft shapes. No grass base or forest.",
+      "status": "generated",
+      "generationId": "exec-60a8b9a5-e6ab-4a81-a558-fbf0d1c88e9e",
+      "sha256": "a3c79bcac97b03fb39db91bae89c98964d78833da740625840c0d9808fed4996",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7691,
+        "alphaBoundingBox": [
+          33,
+          53,
+          1328,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          308,
+          260,
+          1067,
+          956
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 19,
+      "label": "Festung",
+      "file": "19-festung.png",
+      "subject": "A compact fortress: four squat rounded cream-grey towers with big simple crenellations joined by thick low walls around a very small enclosed courtyard. One dark gate, only a few arrow slits. No brick pattern or scenery.",
+      "status": "generated",
+      "generationId": "exec-b1ebee19-f73d-4425-b581-2b2231071d18",
+      "sha256": "1d812045595fb2f84b20e9932a628ba29a52e477a86ec934bc59141862371509",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7155,
+        "alphaBoundingBox": [
+          0,
+          21,
+          1338,
+          1121
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          243,
+          184,
+          1143,
+          950
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 20,
+      "label": "Dunkle Festung",
+      "file": "20-dunkle-festung.png",
+      "subject": "A playful dark fortress: one tall crooked charcoal keep and two shorter chunky towers with oversized muted plum pointed roofs, joined by a short wall and a broad dark gate. Few windows. No glow, lava, spikes or landscape.",
+      "status": "generated",
+      "generationId": "exec-982aa4b6-3c41-4ef1-ba4a-0f977ac1bc13",
+      "sha256": "7bdfa2cb31304566c7b68fdcebefb4927c79dc175efc929b28c7be709ef630fb",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6657,
+        "alphaBoundingBox": [
+          114,
+          35,
+          1348,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          211,
+          69,
+          1170,
+          1061
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 21,
+      "label": "Berggipfel",
+      "file": "21-berggipfel.png",
+      "subject": "A single little mountain peak: one tall slightly crooked blue-grey triangular peak, a tiny off-white snowcap and one smaller rock joined at its foot. Three broad flat colored facets. No surrounding landscape, writing or runes.",
+      "status": "generated",
+      "generationId": "exec-3b63811a-618d-48ce-b9e0-e1565b8331dd",
+      "sha256": "2a4a3e3172364140886e8569a9930be3b867f43c8133fca28e1989cb1426008e",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7857,
+        "alphaBoundingBox": [
+          102,
+          59,
+          1287,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          323,
+          204,
+          1108,
+          981
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 22,
+      "label": "Hornlingslager",
+      "file": "22-hornlingslager.png",
+      "subject": "A tiny hornling camp: two chunky brown hide tents with a pair of simple curved horns at the roof tips, one short crooked fence and one little fir. Broad plain shapes, dark entrances, no figures or ground base.",
+      "status": "generated",
+      "generationId": "exec-7ba3d786-12e7-430a-b207-1d66cddf51f3",
+      "sha256": "eab0874201876275ce7318034bb6ffe13f64ff4187d560cd662432bb24c344b1",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.774,
+        "alphaBoundingBox": [
+          49,
+          23,
+          1360,
+          1121
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          294,
+          240,
+          1075,
+          949
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 23,
+      "label": "Kaufmannssiedlung",
+      "file": "23-kaufmannssiedlung.png",
+      "subject": "A tiny merchant settlement: three chubby two-storey cream gabled houses with oversized muted terracotta roofs, one simple ochre market awning and two large crates. Only a few dark openings and thick timber strokes. No port or river.",
+      "status": "generated",
+      "generationId": "exec-a4582cae-ba98-4521-8a8b-e60abfbd7997",
+      "sha256": "e30f09bd69915bb2afde17015b0ef4039a41c89d07199ae83e5c0e401e12ae7e",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6908,
+        "alphaBoundingBox": [
+          39,
+          31,
+          1346,
+          1129
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          189,
+          201,
+          1211,
+          947
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    },
+    {
+      "index": 24,
+      "label": "Schlachtfeld",
+      "file": "24-schlachtfeld.png",
+      "subject": "A tiny symbolic battlefield: one broken round wooden wagon wheel, two simple damaged round shields, two crossed spears and one short crooked pole bearing a ragged muted red pennant. A compact playful map symbol with very few strokes. No bodies, blood or earth patch.",
+      "status": "generated",
+      "generationId": "exec-7e197aed-eeca-4d5a-9818-63f29e3a0480",
+      "sha256": "2495310fd94847b9905238a2185b42dc28c72e08cf03c60c37ad59c9bdd08cf7",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7631,
+        "alphaBoundingBox": [
+          90,
+          55,
+          1336,
+          1107
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          292,
+          131,
+          1130,
+          1007
+        ]
+      },
+      "review": {
+        "visualReview": "reviewed against approved farmhouse and on light/dark backgrounds",
+        "originalGeneratedAlphaPreserved": true
+      }
+    }
+  ],
+  "completedAt": "2026-10-09",
+  "assetCount": 24,
+  "alphaInspection": "Actual RGBA examined; previews composited with source alpha. Tiny generated alpha=1 residual pixels can occur at canvas edges; original generated files and alpha retained without postprocessing. No visible outer halo on light/dark previews.",
+  "previews": {
+    "light": "preview/overview-light.png",
+    "dark": "preview/overview-dark.png",
+    "note": "Preview backgrounds/labels are separate from the original numbered PNGs."
+  },
+  "nextMotif": {
+    "index": 25,
+    "label": "Grabmal",
+    "status": "not-requested-in-this-set"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "status": "local-draft",
+  "preparedAt": "2026-10-12T20:34:45.257Z",
+  "published": false,
+  "moduleId": "idwals-schiffsmannschaft",
+  "ownerCharacterId": "0Sku8euk5jhlWebdsskI",
+  "sourceUpdateTimes": {
+    "module": "2026-10-08T03:46:48.141579Z",
+    "character": "2026-09-24T19:23:03.917251Z"
+  },
+  "creatureIds": [
+    "companion-trevor-bwmbo",
+    "companion-trevor-uffel"
+  ],
+  "assets": [
+    {
+      "name": "Bwmbo",
+      "path": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/bwmbo.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "99a64cecb94d4b5d8f00e5832646a3099d54d042554b3a6b3ede49639796a4e8"
+    },
+    {
+      "name": "Uffel",
+      "path": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/uffel.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "d893e61816b198f49fd883bf284a02b52fe2faf23383c609b3c9af2990e61f01"
+    }
+  ],
+  "releaseNote": "Vor späterer Veröffentlichung den Live-Stand erneut lesen, den Hierarchiebaum und die Inventarverknüpfungen gezielt gegen diesen Stand anwenden. Inventarexport nicht über einen neueren Stand schreiben. Kreaturen, Inventar und Modul gemeinsam mit Versionsprüfung speichern; keine Kampfdaten bestehender Figuren ändern."
+}

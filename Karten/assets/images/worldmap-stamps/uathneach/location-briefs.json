@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-09",
+  "workflow": "Alle 16 neu angeforderten Orte ohne Zwischenfreigabe als Erstentwuerfe erstellt. Individuelle Optimierung und genaue Einpassung folgen spaeter auf Nutzerwunsch.",
+  "stylePreset": "fantasy-worldmap-stamp",
+  "styleVersion": 2,
+  "locations": [
+    {
+      "slug": "fethlinn",
+      "label": "Fethlinn",
+      "geographyReference": "C:\\Users\\fhg_r\\Downloads\\Uathneach Städte\\2026-10-09 11_20_35-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Burg eines niederen Laird-Clans an der Küste; eine solide albische Festung mit zur Küste ausgerichtetem Hafen.",
+      "status": "ready-for-review",
+      "currentDraft": "fethlinn/v02/fethlinn-v02.png",
+      "placementPreview": "fethlinn/v02/preview/placement-fitted.png"
+    },
+    {
+      "slug": "broch-an-reithe",
+      "label": "Broch an Reithe",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_20_41-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Etwas kleinere Burg an der Spitze einer Halbinsel unterhalb des Gebirges.",
+      "status": "first-draft-ready",
+      "currentDraft": "broch-an-reithe/v01/broch-an-reithe-v01.png",
+      "manifest": "broch-an-reithe/v01/generation-prompt.json"
+    },
+    {
+      "slug": "orglen",
+      "label": "Órglen",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_20_45-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Große, ausgeprägte Hafenstadt; berühmt für Fischfang und als Flottenstützpunkt.",
+      "status": "first-draft-ready",
+      "currentDraft": "orglen/v01/orglen-v01.png",
+      "manifest": "orglen/v01/generation-prompt.json"
+    },
+    {
+      "slug": "broch-an-mhor",
+      "label": "Broch An Mhor",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_20_53-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Kleine Burg eines niederen Lairds.",
+      "status": "first-draft-ready",
+      "currentDraft": "broch-an-mhor/v01/broch-an-mhor-v01.png",
+      "manifest": "broch-an-mhor/v01/generation-prompt.json"
+    },
+    {
+      "slug": "rinnmara",
+      "label": "Rinnmara",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_20_58-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Verschlafene Hafenstadt im Süden.",
+      "status": "first-draft-ready",
+      "currentDraft": "rinnmara/v01/rinnmara-v01.png",
+      "manifest": "rinnmara/v01/generation-prompt.json"
+    },
+    {
+      "slug": "broch-an-cuan",
+      "label": "Broch An Cuan",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_21_02-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Eine weitere kleine Burg.",
+      "status": "first-draft-ready",
+      "currentDraft": "broch-an-cuan/v01/broch-an-cuan-v01.png",
+      "manifest": "broch-an-cuan/v01/generation-prompt.json"
+    },
+    {
+      "slug": "kharanor",
+      "label": "Kharanor",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_21_07-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Große umschlossene Stadt am Fluss, von Sumpfland umgeben, mit Hafenbereich am Fluss.",
+      "status": "first-draft-ready",
+      "currentDraft": "kharanor/v01/kharanor-v01.png",
+      "manifest": "kharanor/v01/generation-prompt.json"
+    },
+    {
+      "slug": "rioghain",
+      "label": "Rioghain",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_21_13-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Verschlafene umschlossene Waldstadt südlich des Flusses und der Brücke.",
+      "status": "first-draft-ready",
+      "currentDraft": "rioghain/v01/rioghain-v01.png",
+      "manifest": "rioghain/v01/generation-prompt.json"
+    },
+    {
+      "slug": "mhorcha",
+      "label": "Mhorcha",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_21_17-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Am Fluss in sumpfiger Umgebung, hölzern ummauert, mit ausgeprägter Burg und Hafenbereich.",
+      "status": "first-draft-ready",
+      "currentDraft": "mhorcha/v01/mhorcha-v01.png",
+      "manifest": "mhorcha/v01/generation-prompt.json"
+    },
+    {
+      "slug": "moineal",
+      "label": "Moineal",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_21_26-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Ausgeprägte Magierstadt, von den Stadttoren unten bei der Brücke bis oben ins Gebirge reichend.",
+      "status": "first-draft-ready",
+      "currentDraft": "moineal/v01/moineal-v01.png",
+      "manifest": "moineal/v01/generation-prompt.json"
+    },
+    {
+      "slug": "treabhair",
+      "label": "Treabhair",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_21_33-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Umschlossene Waldstadt am Fluss.",
+      "status": "first-draft-ready",
+      "currentDraft": "treabhair/v01/treabhair-v01.png",
+      "manifest": "treabhair/v01/generation-prompt.json"
+    },
+    {
+      "slug": "dathuil",
+      "label": "Dathuil",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_21_41-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Ähnlich wie Mhorcha: Flussstadt mit hölzerner Umwallung, ausgeprägter Burg und Hafenbereich.",
+      "status": "first-draft-ready",
+      "currentDraft": "dathuil/v01/dathuil-v01.png",
+      "manifest": "dathuil/v01/generation-prompt.json"
+    },
+    {
+      "slug": "ceithirn",
+      "label": "Ceithirn",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_21_46-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Im Gebirge gelegene imposante Burg.",
+      "status": "first-draft-ready",
+      "currentDraft": "ceithirn/v01/ceithirn-v01.png",
+      "manifest": "ceithirn/v01/generation-prompt.json"
+    },
+    {
+      "slug": "temair",
+      "label": "Temair",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_21_50-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Eindrucksvolle breite Handels- und Hafenstadt, große Burg am Hafen.",
+      "status": "first-draft-ready",
+      "currentDraft": "temair/v01/temair-v01.png",
+      "manifest": "temair/v01/generation-prompt.json"
+    },
+    {
+      "slug": "cathair",
+      "label": "Cathair",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_51_49-Uathneach Alternativ _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Eindrucksvolle Flussstadt.",
+      "status": "first-draft-ready",
+      "currentDraft": "cathair/v01/cathair-v01.png",
+      "manifest": "cathair/v01/generation-prompt.json"
+    },
+    {
+      "slug": "bronnan",
+      "label": "Bronnan",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_51_58-Uathneach Alternativ _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Große Waldstadt.",
+      "status": "first-draft-ready",
+      "currentDraft": "bronnan/v01/bronnan-v01.png",
+      "manifest": "bronnan/v01/generation-prompt.json"
+    },
+    {
+      "slug": "caorthann",
+      "label": "Caorthann",
+      "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_53_42-Uathneach Alternativ _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+      "userBrief": "Wirklich eindrucksvolle Hafenstadt.",
+      "status": "first-draft-ready",
+      "currentDraft": "caorthann/v01/caorthann-v01.png",
+      "manifest": "caorthann/v01/generation-prompt.json"
+    }
+  ]
+}

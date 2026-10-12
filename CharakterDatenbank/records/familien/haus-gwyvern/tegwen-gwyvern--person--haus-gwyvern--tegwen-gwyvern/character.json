@@ -1,0 +1,368 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-gwyvern--tegwen-gwyvern",
+  "slug": "tegwen-gwyvern",
+  "identity": {
+    "name": "Tegwen Gwyvern",
+    "aliases": [],
+    "worldPersonId": "person--haus-gwyvern--tegwen-gwyvern"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-gwyvern",
+      "label": "Haus Gwyvern"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-gwyvern",
+        "familyTitle": "Haus Gwyvern",
+        "personId": "tegwen-gwyvern",
+        "worldPersonId": "person--haus-gwyvern--tegwen-gwyvern",
+        "houseId": "house-gwyvern",
+        "houseName": "Haus Gwyvern",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Gwendolyns Ufer",
+          "Abergwint"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwyvern&mode=view&person=tegwen-gwyvern",
+        "fingerprint": "{\"name\":\"Tegwen Gwyvern\",\"title\":\"\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwyvern\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyvern/tegwen-gwyvern.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"mervyn-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--mervyn-gwyvern\",\"name\":\"Mervyn Gwyvern\"},{\"personId\":\"jeannae-aderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--jeannae-aderyn\",\"name\":\"Jeannae Aderyn\"}],\"partners\":[],\"children\":[]}}",
+        "score": 275
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [],
+    "legacy": {
+      "tabs": [],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-gwyvern--tegwen-gwyvern",
+      "documentIds": [
+        "person--haus-gwyvern--tegwen-gwyvern"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-gwyvern--tegwen-gwyvern",
+          "createdAt": "2026-10-12T21:09:06.423Z",
+          "updatedAt": "2026-10-12T21:09:06.423Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-gwyvern",
+        "personId": "tegwen-gwyvern",
+        "worldPersonId": "person--haus-gwyvern--tegwen-gwyvern",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwyvern&mode=view&person=tegwen-gwyvern"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
+    "sourceUpdatedAt": "2026-10-12T21:09:06.423Z",
+    "sourceDocumentIds": [
+      "person--haus-gwyvern--tegwen-gwyvern"
+    ],
+    "contentHash": "36d9ad388eb4a80df6d1121a6a94a37ffca1ee10e45ad67d080b80e8514e4d4f"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-gwyvern--tegwen-gwyvern",
+        "name": "Tegwen Gwyvern",
+        "title": "",
+        "fraktion": "Haus Gwyvern",
+        "role": "",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint",
+        "currentLocation": "",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Tegwen Gwyvern (geboren 1720) ist Schwester von Trevor Gwyvern und ein Kind von Mervyn Gwyvern und Jeannae Aderyn. Zugehörigkeit: Haus Gwyvern, Gwendolyns Ufer.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-12T21:09:06.423Z",
+        "updatedAt": "2026-10-12T21:09:06.423Z",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gwyvern/tegwen-gwyvern.jpg",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": {
+          "characterId": "person--haus-gwyvern--tegwen-gwyvern",
+          "name": "Tegwen Gwyvern",
+          "portrait": "../Stammbäume/assets/images/portraits/haus-gwyvern/tegwen-gwyvern.jpg",
+          "title": "Charakter-Inventar",
+          "role": "Haus Gwyvern",
+          "level": "Nicht ausgearbeitet",
+          "hitpoints": "Nicht ausgearbeitet",
+          "carryValue": "Nicht ausgearbeitet",
+          "status": "Nicht ausgearbeitet",
+          "infoRows": [],
+          "attributes": [],
+          "items": [
+            {
+              "id": "tegwen-uffyrae",
+              "instanceId": "tegwen-uffyrae",
+              "creatureId": "companion-tegwen-uffyrae",
+              "name": "Uffyrae",
+              "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/uffyrae.png",
+              "description": "Uffyrae ist Tegwen Gwyverns Rhyfel-Stute: ein freundlicher, ruhiger heller Apfelschimmel mit silberweißer Mähne und sanftem Blick.",
+              "type": "Rhyfel-Stute",
+              "category": "companion",
+              "registerCategory": "pferde",
+              "templateId": "",
+              "templateName": "Rhyfel-Stute",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-gwyvern--tegwen-gwyvern",
+              "ownerCharacterName": "Tegwen Gwyvern",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-10-12T21:09:06.718Z"
+            }
+          ],
+          "companions": [
+            {
+              "id": "card-tegwen-uffyrae",
+              "name": "Uffyrae",
+              "species": "Rhyfel-Stute",
+              "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/uffyrae.png",
+              "description": "Uffyrae ist Tegwen Gwyverns Rhyfel-Stute: ein freundlicher, ruhiger heller Apfelschimmel mit silberweißer Mähne und sanftem Blick.",
+              "summary": "Uffyrae ist Tegwen Gwyverns Rhyfel-Stute: ein freundlicher, ruhiger heller Apfelschimmel mit silberweißer Mähne und sanftem Blick.",
+              "role": "Reittier",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-tegwen-uffyrae",
+              "inventoryItemId": "tegwen-uffyrae"
+            }
+          ],
+          "revision": 1791839346719
+        },
+        "biography": null,
+        "identity": {
+          "worldPersonId": "person--haus-gwyvern--tegwen-gwyvern"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-gwyvern--tegwen-gwyvern",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1720",
+          "death": "",
+          "houseId": "house-gwyvern",
+          "houseName": "Haus Gwyvern",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-gwyvern",
+              "personId": "tegwen-gwyvern",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-12T21:09:06.423Z",
+              "lastSyncedAt": "2026-10-12T21:09:06.423Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-gwyvern&mode=view&person=tegwen-gwyvern",
+              "fingerprint": "{\"name\":\"Tegwen Gwyvern\",\"title\":\"\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwyvern\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyvern/tegwen-gwyvern.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"mervyn-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--mervyn-gwyvern\",\"name\":\"Mervyn Gwyvern\"},{\"personId\":\"jeannae-aderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--jeannae-aderyn\",\"name\":\"Jeannae Aderyn\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "mervyn-gwyvern",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-gwyvern--mervyn-gwyvern",
+                "name": "Mervyn Gwyvern"
+              },
+              {
+                "personId": "jeannae-aderyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-aderyn--jeannae-aderyn",
+                "name": "Jeannae Aderyn"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-gwyvern--tegwen-gwyvern",
+    "name": "Tegwen Gwyvern",
+    "title": "",
+    "fraktion": "Haus Gwyvern",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Abergwint",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Tegwen Gwyvern (geboren 1720) ist Schwester von Trevor Gwyvern und ein Kind von Mervyn Gwyvern und Jeannae Aderyn. Zugehörigkeit: Haus Gwyvern, Gwendolyns Ufer.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-10-12T21:09:06.423Z",
+    "updatedAt": "2026-10-12T21:09:06.423Z",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-gwyvern/tegwen-gwyvern.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": {
+      "characterId": "person--haus-gwyvern--tegwen-gwyvern",
+      "name": "Tegwen Gwyvern",
+      "portrait": "../Stammbäume/assets/images/portraits/haus-gwyvern/tegwen-gwyvern.jpg",
+      "title": "Charakter-Inventar",
+      "role": "Haus Gwyvern",
+      "level": "Nicht ausgearbeitet",
+      "hitpoints": "Nicht ausgearbeitet",
+      "carryValue": "Nicht ausgearbeitet",
+      "status": "Nicht ausgearbeitet",
+      "infoRows": [],
+      "attributes": [],
+      "items": [
+        {
+          "id": "tegwen-uffyrae",
+          "instanceId": "tegwen-uffyrae",
+          "creatureId": "companion-tegwen-uffyrae",
+          "name": "Uffyrae",
+          "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/uffyrae.png",
+          "description": "Uffyrae ist Tegwen Gwyverns Rhyfel-Stute: ein freundlicher, ruhiger heller Apfelschimmel mit silberweißer Mähne und sanftem Blick.",
+          "type": "Rhyfel-Stute",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Rhyfel-Stute",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-gwyvern--tegwen-gwyvern",
+          "ownerCharacterName": "Tegwen Gwyvern",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-12T21:09:06.718Z"
+        }
+      ],
+      "companions": [
+        {
+          "id": "card-tegwen-uffyrae",
+          "name": "Uffyrae",
+          "species": "Rhyfel-Stute",
+          "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/uffyrae.png",
+          "description": "Uffyrae ist Tegwen Gwyverns Rhyfel-Stute: ein freundlicher, ruhiger heller Apfelschimmel mit silberweißer Mähne und sanftem Blick.",
+          "summary": "Uffyrae ist Tegwen Gwyverns Rhyfel-Stute: ein freundlicher, ruhiger heller Apfelschimmel mit silberweißer Mähne und sanftem Blick.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-tegwen-uffyrae",
+          "inventoryItemId": "tegwen-uffyrae"
+        }
+      ],
+      "revision": 1791839346719
+    },
+    "biography": null,
+    "identity": {
+      "worldPersonId": "person--haus-gwyvern--tegwen-gwyvern"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-gwyvern--tegwen-gwyvern",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1720",
+      "death": "",
+      "houseId": "house-gwyvern",
+      "houseName": "Haus Gwyvern",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-gwyvern",
+          "personId": "tegwen-gwyvern",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-12T21:09:06.423Z",
+          "lastSyncedAt": "2026-10-12T21:09:06.423Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwyvern&mode=view&person=tegwen-gwyvern",
+          "fingerprint": "{\"name\":\"Tegwen Gwyvern\",\"title\":\"\",\"birth\":\"1720\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwyvern\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyvern/tegwen-gwyvern.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"mervyn-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--mervyn-gwyvern\",\"name\":\"Mervyn Gwyvern\"},{\"personId\":\"jeannae-aderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--jeannae-aderyn\",\"name\":\"Jeannae Aderyn\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "mervyn-gwyvern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwyvern--mervyn-gwyvern",
+            "name": "Mervyn Gwyvern"
+          },
+          {
+            "personId": "jeannae-aderyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-aderyn--jeannae-aderyn",
+            "name": "Jeannae Aderyn"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

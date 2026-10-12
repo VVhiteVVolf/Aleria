@@ -1,0 +1,130 @@
+INPUT IMAGE ROLES: Image 1 is the EXACT original user-uploaded portrait for THIS character, the binding reference for facial identity, hair shape, age, outfit, colors, linework, shading and artistic style. Additional input images if any show ONLY the explicitly requested axe or shield item, not people. Match Image 1 far more strictly than earlier generated attempts. Never use previous combat sheets or a generic anime preset as style reference. Change weapon poses, natural expressions and requested background; preserve the original person's actual look.
+
+HIGHEST PRIORITY — STRICT USER REFERENCE MATCH, 13 October 2026 correction:
+The user rejected the first blond combat sheet because the face, hair and artistic rendering changed. DO NOT use either recently generated combat sheet as visual or stylistic reference. Use INPUT IMAGE 1, the original square user portrait of the character named in this prompt.
+This is an identity-preserving expansion of the exact uploaded portrait into combat poses, not a character redesign or a transfer to another anime style. The uploaded portrait's actual rendering is binding; discard generic Tales of Xillia/Frieren presets if they would change it. Keep its mature face shape, delicate irregular linework, muted colors and nuanced original shading. Do not simplify him into a bright, sharp-jawed generic anime hero. Keep natural hair strands and the exact hairline, no spiky crown, no new swept-back hairstyle, no new bangs. Keep original cloak, armor silhouette, neckline and fastening. Item illustrations supply ONLY weapon shape and shield decoration, not a different outfit or character rendering. Weapon grips/poses and the requested Draig training courtyard are the intentional changes. Faces remain large and clearly visible; avoid giant foreground fists. The neutral rows may retain almost the same source portrait expression, with small natural emotional variation.
+NUDD EXACT APPEARANCE LOCK: the original portrait in INPUT IMAGE 1 is the only facial/style authority. Preserve his exact long straight red hairstyle and downward-falling parted fringe, brown-red eyes, youthful angular face, small pointed red chin tuft. Preserve the original subdued silver/cream plate, thin gold trim, rounded pauldrons, dark high gorget, diamond-shaped central collar detail, dark sleeves and brown gloves. Do not turn the parted fringe into a swept-back spiky hairstyle. Do not replace the original breastplate with an invented bright yellow heraldic tabard or extra gold rosettes. The armor item is a supporting inventory reference, not permission to redesign the actual portrait. Rendering must match this uploaded portrait precisely.
+
+Use case: illustration-story. Create ONE square 1:1 combat avatar contact sheet, exactly 3 columns by 3 rows, nine perfectly equal square panels, seamless edge-to-edge tiles without gutters, borders or divider strokes. No text, numbers, labels, balloons, motion typography or floating symbols. Top row: three attacking poses; middle row: three defending poses; bottom row: three different neutral ready/rest poses. One character per panel, no opponent, no contact, no wounds or magical effects. Flexible reusable combat reactions rather than specific victorious or injured outcomes.
+Camera: consistent eye-level medium upper-body portrait from head to hips, slightly zoomed out to show BOTH forearms and weapon grips. Face is the primary focal point, sufficiently large and unobstructed in every tile. Keep complete head inside its own tile. Weapons may naturally exit their tile at the outer framing; NEVER let a weapon or body extend into a neighboring panel. Do not shrink weapons to fit or turn these into full-body illustrations. No extreme fisheye, no blade pointed straight into the camera.
+Hands and weapons: anatomically credible shoulders, elbows and wrists, exactly two arms and two hands, natural closed fingers visibly wrapping around each wooden grip, thumbs opposite fingers; all weapons are rigid with continuous straight shafts through hands. No floating weapons, fingers gripping blade edges, doubled shafts, extra axe heads or melted hands. Use moderate diagonal and lateral weapon angles so the grip is legible. Face never hidden by hands, shield or shaft.
+Background override explicitly requested by the user: replace the original background with the training yard INSIDE CASTLE DRAIG. Same bright mild daytime light and background in ALL 45 avatars: pale gray stone crenellated courtyard walls, stone archway, one square tower, red banners with gold edging and the black Draig dragon around a pale castle, unobtrusive timber weapon rack and straw practice dummy in the distance, sandy compacted training ground. Background softly subordinate but recognizably the same Draig courtyard. No blue-and-gold lion banner. No crowd, other figures or distractions.
+The current equipment/weapon request and 3 attack / 3 defend / 3 neutral distribution override any generic free-hand/no-props/no-neutral and original-background clauses in the master template below. Preserve portrait identity, face, age, hair, eyes and rendering exactly. Equipment references affect only the corresponding item, never facial identity. Preserve the same outfit throughout each character's sets.
+
+
+Charakter-Emotionssheet Master Prompt (9er Set)
+Take the provided portrait image as the ONLY reference for the character.
+Create a complete 3×3 expression and gesture sheet (9 panels) featuring the EXACT SAME character.
+Identity Preservation (Highest Priority)
+The character must remain 100% identical in every panel.
+Preserve exactly:
+Face shape and proportions
+Eyes, eyebrows and nose
+Hairstyle, hair volume and hairline
+Facial hair
+Armor, clothing, colors and accessories
+Age
+Art style
+Line quality
+Rendering quality
+Lighting
+Color palette
+Do NOT redesign, reinterpret or stylize the character differently.
+Every panel should feel like the same portrait with altered expressions and poses, not nine separate illustrations.
+
+Background Consistency
+Use the exact same background in every panel.
+Same environment
+Same lighting
+Same camera distance
+Same perspective
+No simplification
+No redesign
+The only changes should be the character’s expression, head angle (minor), gaze and body gesture.
+
+Composition
+Square overall format (1:1)
+3×3 grid
+Nine equally sized panels
+No white borders
+No text
+No captions
+No symbols
+No speech bubbles
+No props unless explicitly requested
+Character visible from chest to upper body in every panel
+Same camera angle and framing across all panels
+Minimal variation in rotation only when it supports the expression
+
+Expression Consistency
+This is NOT nine different drawings.
+It must look like the same portrait whose facial muscles and body language change naturally.
+Changes should primarily affect:
+Eyebrows
+Eyes
+Eyelids
+Mouth
+Jaw tension
+Head tilt
+Eye direction
+Avoid changing:
+Skull proportions
+Hair shape
+Armor proportions
+Clothing folds unnecessarily
+High character consistency is critical.
+
+Gesture Rules
+Every emotion must also be expressed through:
+Hands
+Arms
+Shoulders
+Head position
+Torso posture
+Eye direction
+Body language is more important than facial expression alone.
+Every panel should immediately communicate a usable RPG reaction.
+Avoid neutral filler poses.
+Every tile should have a clear storytelling purpose.
+No repeated gestures.
+
+Character Description
+Nudd Saethwyr, young adult knight, pale skin, long straight vivid red hair with the exact parted bangs of the original portrait in INPUT IMAGE 1, reddish brown eyes, small pointed red chin tuft, otherwise clean-shaven face. Preserve his serious youthful angular face and exact anime rendering. Preserve silver/cream steel plate armor, rounded shoulder plates with gold trim, high dark-edged gorget with gold edging, dark sleeves and brown leather gloves as in the attached portrait. The uploaded plain silver-gold breastplate remains binding; do not add extra heraldry or change the original armor silhouette. No helmet, shield, axe, sword, cloak or orange-blond hair.
+Weapon: exactly ONE Saethwyr TRIDENT, a long straight brown wooden pole with leather grip and a modest steel three-pronged head. Exactly THREE straight distinct prongs, central prong slightly longer, two parallel side prongs, tasteful small gold collar. Not a single-point spear, forked axe, pitchfork with four prongs, or Poseidon fantasy staff. Both gloved hands grip the SAME shaft at separated points in every active attack/defense, one rear leverage hand near waist and one forward guide hand roughly a forearm apart. Neutral upright rests may use one hand while the other stays relaxed. The three-pronged head can be partially out of frame but should be recognizable in most panels. No existing canonical dedicated trident item image was found: this restrained design follows the current inventory weapon type and armor colors, not the obsolete spear artwork.
+
+Nudd uses only the SAME single three-pronged trident, same armor, hair and courtyard as his first set. New nine facial expression/pose combinations, slightly more energetic but still flexible. Avoid duplicating the first set's exact expressions and grips.
+
+Theme
+Dreizack – Dynamik und Reaktion; 3 attacking / 3 defending / 3 neutral reactions.
+
+Panel List
+Top Left
+Energischer Kampfruf: Open mouth in sharp short battle call, furrowed brows; two hands guide one shaft into a diagonal downward thrust beside torso, no overhead axe-like chop.
+Top Center
+Schnelle Finte: Small purposeful one-sided smirk and intent eyes; two spaced hands retract single trident near one flank, prongs angled outward in a feint, torso slightly turned.
+Top Right
+Druckvoller Vorstoß: Teeth slightly clenched with exertion; forward hand extends on shaft, rear hand drives from near hip, trident aimed obliquely offscreen, head not in front of face.
+Middle Left
+Überraschte Abwehr: Eyes briefly widen and lips part, reacting without panic; two hands bring one continuous shaft into diagonal guard at chest level beside face.
+Center
+Angespannte Gegenwehr: Eyes narrowed, teeth gritted; both hands braced a forearm apart on one shaft angled low and outward, shoulders absorb imaginary pressure.
+Middle Right
+Konzentrierte Distanzwacht: One brow knit more strongly, lips thin, eyes tracking sideways; two hands hold trident aimed out laterally as a cautious intercepting guard.
+Bottom Left
+Skeptisches Mustern: One raised brow, slight doubtful closed-mouth tilt; trident resting upright in one gloved hand, free hand on hip, no aggressive movement.
+Bottom Center
+Angespannte Gegenwehr: Eyes narrowed, teeth gritted; both hands braced a forearm apart on one shaft angled low and outward, shoulders absorb imaginary pressure.
+Bottom Right
+Gesammelter Atem: Eyes lowered briefly, controlled half-open exhale, no grimace; trident upright in one hand with other hand lightly supporting lower shaft, a composed neutral pause.
+
+Quality Goals
+Same person in all nine panels
+Same portrait identity
+Highly expressive but believable
+Strong hand acting
+Natural body language
+Consistent anatomy
+Consistent proportions
+Consistent rendering quality
+Anime style identical to the reference image
+Every panel suitable as an RPG reaction portrait

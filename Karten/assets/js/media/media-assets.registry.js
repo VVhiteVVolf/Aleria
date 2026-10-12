@@ -161,6 +161,158 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "0bd8dfe957991d",
+    "name": "clan an feannag",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-feannag.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "06117a153d58aa",
+    "name": "clan an gaisgh",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "baf06f87904039",
+    "name": "clan an rioga",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-rioga.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "6b69be5eb1f91b",
+    "name": "clan an uilebheist",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "c186b0fb32c1f4",
+    "name": "clan dal tartarfhuil",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-dal-tartarfhuil.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "5a74f974e5a522",
+    "name": "clan mac durthacht",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-mac-durthacht.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "dcfde56f6e752c",
+    "name": "clan mac fintain",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-mac-fintain.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "c2b2067138d660",
+    "name": "clan na fiachiontach",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "ea8edca2d9988a",
+    "name": "clan na luchdon",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "a7208186f890d5",
+    "name": "clan na morgacht",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-morgacht.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "ab272787198f53",
+    "name": "clan nic cnogan",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "d3b190f4294c04",
+    "name": "clan tir an ceallaigh",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-tir-an-ceallaigh.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "db5812fd25c5b7",
+    "name": "clan ua coronach",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-coronach.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "bbb03381d311d1",
+    "name": "clan ua fiaintorc",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-fiaintorc.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "596b802e622d73",
+    "name": "clan ua muileach",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-muileach.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "da6ccac947113e",
+    "name": "clan ua treada",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-treada.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "ca8b9678f8fefd",
+    "name": "clan ui faill duibhne",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-ui-faill-duibhne.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "077999b10b93d6",
+    "name": "clan ui morna",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/clan-ui-morna.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "5a315fd52a9398",
+    "name": "sept techtmar",
+    "url": "/Stammbäume/assets/images/houses/Aislearneach/sept-techtmar.png",
+    "kind": "crest",
+    "group": "Aislearneach",
+    "source": "Hauswappen"
+  },
+  {
     "id": "f84861930ec5fd",
     "name": "clan ragnulf",
     "url": "/Stammbäume/assets/images/houses/Aldrimar/clan-ragnulf.png",
@@ -452,6 +604,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "id": "32d117e0445147",
     "name": "clan schwarzblut",
     "url": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schwarzblut.png",
+    "kind": "crest",
+    "group": "Aldrimar / Kraehenmoor",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "7383fa610d85c6",
+    "name": "clan schwarzstolz",
+    "url": "/Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schwarzstolz.png",
     "kind": "crest",
     "group": "Aldrimar / Kraehenmoor",
     "source": "Hauswappen"
@@ -1153,6 +1313,86 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "198f8ff8b65893",
+    "name": "clan an haeghra",
+    "url": "/Stammbäume/assets/images/houses/Blaithneach/clan-an-haeghra.png",
+    "kind": "crest",
+    "group": "Blaithneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "7f2ac574e53475",
+    "name": "clan ard nessa",
+    "url": "/Stammbäume/assets/images/houses/Blaithneach/clan-ard-nessa.png",
+    "kind": "crest",
+    "group": "Blaithneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "a8699c000666c1",
+    "name": "clan dal gairner",
+    "url": "/Stammbäume/assets/images/houses/Blaithneach/clan-dal-gairner.png",
+    "kind": "crest",
+    "group": "Blaithneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "0bf23294cae4b3",
+    "name": "clan faill cleirigh",
+    "url": "/Stammbäume/assets/images/houses/Blaithneach/clan-faill-cleirigh.png",
+    "kind": "crest",
+    "group": "Blaithneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "315f9c953acbe3",
+    "name": "clan mac ard ronain",
+    "url": "/Stammbäume/assets/images/houses/Blaithneach/clan-mac-ard-ronain.png",
+    "kind": "crest",
+    "group": "Blaithneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "b6a34f86ea1429",
+    "name": "clan sidhe magach",
+    "url": "/Stammbäume/assets/images/houses/Blaithneach/clan-sidhe-magach.png",
+    "kind": "crest",
+    "group": "Blaithneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "fc6f0adc5f8338",
+    "name": "clan ua eala",
+    "url": "/Stammbäume/assets/images/houses/Blaithneach/clan-ua-eala.png",
+    "kind": "crest",
+    "group": "Blaithneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "6b5dc2d3798575",
+    "name": "clan ua goidin",
+    "url": "/Stammbäume/assets/images/houses/Blaithneach/clan-ua-goidin.png",
+    "kind": "crest",
+    "group": "Blaithneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "2f9cb67a34760e",
+    "name": "clan ua suiste",
+    "url": "/Stammbäume/assets/images/houses/Blaithneach/clan-ua-suiste.png",
+    "kind": "crest",
+    "group": "Blaithneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "d792785ff1dff9",
+    "name": "clan ui abhrach",
+    "url": "/Stammbäume/assets/images/houses/Blaithneach/clan-ui-abhrach.png",
+    "kind": "crest",
+    "group": "Blaithneach",
+    "source": "Hauswappen"
+  },
+  {
     "id": "ab03223e843d5e",
     "name": "haus blodyn",
     "url": "/Stammbäume/assets/images/houses/Bl%C3%BCtenland/haus-blodyn.png",
@@ -1169,6 +1409,22 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "db8cda54052e93",
+    "name": "clan an bhaird",
+    "url": "/Stammbäume/assets/images/houses/Ceitheach/clan-an-bhaird.png",
+    "kind": "crest",
+    "group": "Ceitheach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "3caf0ac96c0788",
+    "name": "clan an morchoe",
+    "url": "/Stammbäume/assets/images/houses/Ceitheach/clan-an-morchoe.png",
+    "kind": "crest",
+    "group": "Ceitheach",
+    "source": "Hauswappen"
+  },
+  {
     "id": "713b91988e63f0",
     "name": "clan dal leite",
     "url": "/Stammbäume/assets/images/houses/Ceitheach/clan-dal-leite.png",
@@ -1177,9 +1433,33 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "2e35f83f0ee624",
+    "name": "clan faill mallacht eamhra",
+    "url": "/Stammbäume/assets/images/houses/Ceitheach/clan-faill-mallacht-eamhra.png",
+    "kind": "crest",
+    "group": "Ceitheach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "f9f1ee85c3887f",
+    "name": "clan faill ua eldath",
+    "url": "/Stammbäume/assets/images/houses/Ceitheach/clan-faill-ua-eldath.png",
+    "kind": "crest",
+    "group": "Ceitheach",
+    "source": "Hauswappen"
+  },
+  {
     "id": "0e53fc073795e5",
     "name": "clan mac tuirseach",
     "url": "/Stammbäume/assets/images/houses/Ceitheach/clan-mac-tuirseach.png",
+    "kind": "crest",
+    "group": "Ceitheach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "875759d478cd69",
+    "name": "clan mallacht seaghda",
+    "url": "/Stammbäume/assets/images/houses/Ceitheach/clan-mallacht-seaghda.png",
     "kind": "crest",
     "group": "Ceitheach",
     "source": "Hauswappen"
@@ -1196,6 +1476,22 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "id": "1645a533cc5d05",
     "name": "clan nic holloran",
     "url": "/Stammbäume/assets/images/houses/Ceitheach/clan-nic-holloran.png",
+    "kind": "crest",
+    "group": "Ceitheach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "f8835faa051cba",
+    "name": "clan tir an craobhan",
+    "url": "/Stammbäume/assets/images/houses/Ceitheach/clan-tir-an-craobhan.png",
+    "kind": "crest",
+    "group": "Ceitheach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "43a88ca16c8e40",
+    "name": "clan tir an tordarroch",
+    "url": "/Stammbäume/assets/images/houses/Ceitheach/clan-tir-an-tordarroch.png",
     "kind": "crest",
     "group": "Ceitheach",
     "source": "Hauswappen"
@@ -1225,11 +1521,547 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "d5ac64a190c5e2",
+    "name": "clan ard chulainn",
+    "url": "/Stammbäume/assets/images/houses/Dunfal/clan-ard-chulainn.png",
+    "kind": "crest",
+    "group": "Dunfal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "ac6d817ce5ac66",
+    "name": "clan dal aonghusa",
+    "url": "/Stammbäume/assets/images/houses/Dunfal/clan-dal-aonghusa.png",
+    "kind": "crest",
+    "group": "Dunfal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "6879bf3a59e00f",
+    "name": "clan dal birn",
+    "url": "/Stammbäume/assets/images/houses/Dunfal/clan-dal-birn.png",
+    "kind": "crest",
+    "group": "Dunfal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "a56154a8146e6e",
+    "name": "clan mac cein",
+    "url": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-cein.png",
+    "kind": "crest",
+    "group": "Dunfal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "76a687b813e431",
+    "name": "clan mac eachtrai",
+    "url": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-eachtrai.png",
+    "kind": "crest",
+    "group": "Dunfal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "f75804b4f7fe21",
+    "name": "clan mac sidhe ailella",
+    "url": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-sidhe-ailella.png",
+    "kind": "crest",
+    "group": "Dunfal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "593f0c6e5c8064",
+    "name": "clan na riangabra",
+    "url": "/Stammbäume/assets/images/houses/Dunfal/clan-na-riangabra.png",
+    "kind": "crest",
+    "group": "Dunfal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "d8d657c8df3c53",
+    "name": "clan nic nuadat",
+    "url": "/Stammbäume/assets/images/houses/Dunfal/clan-nic-nuadat.png",
+    "kind": "crest",
+    "group": "Dunfal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "25490ef177179b",
+    "name": "clan ruin morath",
+    "url": "/Stammbäume/assets/images/houses/Dunfal/clan-ruin-morath.png",
+    "kind": "crest",
+    "group": "Dunfal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "a776d96b1449ef",
+    "name": "clan ua anbhair",
+    "url": "/Stammbäume/assets/images/houses/Dunfal/clan-ua-anbhair.png",
+    "kind": "crest",
+    "group": "Dunfal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "3d4be154080a0e",
+    "name": "clan ua casur",
+    "url": "/Stammbäume/assets/images/houses/Dunfal/clan-ua-casur.png",
+    "kind": "crest",
+    "group": "Dunfal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "034eafbbb8e328",
+    "name": "clan ui duilb",
+    "url": "/Stammbäume/assets/images/houses/Dunfal/clan-ui-duilb.png",
+    "kind": "crest",
+    "group": "Dunfal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "2273f3a43d4f67",
+    "name": "sept ferbend",
+    "url": "/Stammbäume/assets/images/houses/Dunfal/sept-ferbend.png",
+    "kind": "crest",
+    "group": "Dunfal",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "7f7712cf7cdd29",
+    "name": "clan agnew",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-agnew.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "1995b68f477b25",
+    "name": "clan airdmhor",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-airdmhor.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "ec663ce0ea1b9a",
+    "name": "clan banlaoch",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-banlaoch.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "a5db59936ae0cd",
+    "name": "clan bhaird",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-bhaird.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "352e1ca4b16c81",
+    "name": "clan borthwick",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-borthwick.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "86e14f480425bc",
+    "name": "clan boyd",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-boyd.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "7c8790361f0521",
+    "name": "clan buadhtreun",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-buadhtreun.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "f8ca0e77f22e11",
+    "name": "clan cerneige",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-cerneige.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "5553ef29d0b77f",
+    "name": "clan culloch",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-culloch.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "ebbcd670cd6eb0",
+    "name": "clan dianaomh",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-dianaomh.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "33d2ffdf7505e4",
+    "name": "clan diuid",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-diuid.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "fddad79eb2b4f3",
+    "name": "clan dobhar",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-dobhar.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "3f075dd091114b",
+    "name": "clan drummond",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-drummond.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "3b182c03eca943",
+    "name": "clan dubglais",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-dubglais.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "389398346c57fb",
+    "name": "clan duff",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-duff.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "195235bb3ff630",
+    "name": "clan dundas",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-dundas.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "0fa26f61b3a3cd",
+    "name": "clan durachd",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-durachd.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "dfcad818e8b817",
+    "name": "clan elid",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-elid.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "7042022d9bbbcb",
+    "name": "clan eoghainn",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-eoghainn.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "80071f60e94fa6",
+    "name": "clan erskine",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-erskine.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "5400fbdc7ffae3",
+    "name": "clan ffearnach",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-ffearnach.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "bfa0558698aed7",
+    "name": "clan fiorghra",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-fiorghra.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "1c1f04eab01f66",
+    "name": "clan forsyth",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-forsyth.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "9929d6f64d518e",
+    "name": "clan grannd",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-grannd.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "f44a610def7ecd",
+    "name": "clan haig",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-haig.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "ddd57e0b620b1b",
+    "name": "clan lachlann",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-lachlann.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "928e0f871d2f1a",
+    "name": "clan lockart",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-lockart.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "42f689600ce657",
+    "name": "clan luthsach",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-luthsach.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "02fff6f9a63b1b",
+    "name": "clan muirgheal",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-muirgheal.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "7bb58480780ad3",
+    "name": "clan ness",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-ness.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "1067dc7b01f30b",
+    "name": "clan oglivy",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-oglivy.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "cda9d7d7252fc8",
+    "name": "clan stwatchn",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-stwatchn.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "e45d7d7d7ed8ec",
+    "name": "clan urquhart",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-urquhart.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "5aebc43c192400",
+    "name": "clan wemyss",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/clan-wemyss.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "5542508be238e5",
+    "name": "sept dubhair",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/sept-dubhair.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
     "id": "5612f05a20cce9",
     "name": "sept dubhan",
     "url": "/Stammbäume/assets/images/houses/Faelaorn/sept-dubhan.png",
     "kind": "crest",
     "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "1353ba5ec1afb5",
+    "name": "sept gaesa",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/sept-gaesa.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "a1b994d4e48a13",
+    "name": "sept grein",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/sept-grein.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "b094024c321638",
+    "name": "sept malairt",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/sept-malairt.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "186ab3645108f5",
+    "name": "sept treoir",
+    "url": "/Stammbäume/assets/images/houses/Faelaorn/sept-treoir.png",
+    "kind": "crest",
+    "group": "Faelaorn",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "d36c35a317f3ca",
+    "name": "clan aexewindr",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-aexewindr.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "2d2b71e91e98b7",
+    "name": "clan arngull",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-arngull.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "b9e7be8a906753",
+    "name": "clan draca",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-draca.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "833a95039e1de1",
+    "name": "clan fjargardr",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-fjargardr.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "a02eca9f73deb4",
+    "name": "clan geit",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-geit.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "86cb6ac7f4e561",
+    "name": "clan haming",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-haming.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "9af40f5acc6567",
+    "name": "clan helvandr",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-helvandr.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "dcf65bf81604fa",
+    "name": "clan hjort",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-hjort.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "e76ba77008a661",
+    "name": "clan hronulf",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-hronulf.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "0ebefe87f7cb1a",
+    "name": "clan orn",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-orn.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "df185546a73066",
+    "name": "clan ulfr",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-ulfr.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "117ef200a4823a",
+    "name": "clan ulvar",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-ulvar.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "7ab2445625f777",
+    "name": "clan valdruna",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-valdruna.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "e524aa87388e4f",
+    "name": "clan vingar",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-vingar.png",
+    "kind": "crest",
+    "group": "Fjordheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "52a1758c0d2449",
+    "name": "clan voetnar",
+    "url": "/Stammbäume/assets/images/houses/Fjordheim/clan-voetnar.png",
+    "kind": "crest",
+    "group": "Fjordheim",
     "source": "Hauswappen"
   },
   {
@@ -1601,6 +2433,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "78e058fc61b557",
+    "name": "haus gwyllt",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/haus-gwyllt.png",
+    "kind": "crest",
+    "group": "Klaueninsel",
+    "source": "Hauswappen"
+  },
+  {
     "id": "e70df9468f7101",
     "name": "haus morthwyll",
     "url": "/Stammbäume/assets/images/houses/Klaueninsel/haus-morthwyll.png",
@@ -1638,6 +2478,222 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "url": "/Stammbäume/assets/images/houses/Klaueninsel/haus-walwrs.png",
     "kind": "crest",
     "group": "Klaueninsel",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "34dedc62e25124",
+    "name": "haus arian",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-arian.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "8acd2b2618cb0e",
+    "name": "haus bevan",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-bevan.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "1b1bc29176952f",
+    "name": "haus bowen",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-bowen.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "28c8b613780a12",
+    "name": "haus hirschhorn",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-hirschhorn.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "7dd683eae62420",
+    "name": "haus mathgraig",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-mathgraig.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "1f3f0d6f7df55b",
+    "name": "haus morglan",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morglan.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "6b651fc2f00cd8",
+    "name": "haus morgwynt",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-morgwynt.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "7be7c2daf044d3",
+    "name": "haus parry",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-parry.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "a95807a6abcaa6",
+    "name": "haus penry",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-penry.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "81663409914ecd",
+    "name": "haus prys",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/haus-prys.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "0c257fd6228b41",
+    "name": "haus arian",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-arian.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew / revised-2026-10-05",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "ede0db97cdbefc",
+    "name": "haus bevan",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-bevan.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew / revised-2026-10-05",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "69d45101644e18",
+    "name": "haus bowen",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-bowen.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew / revised-2026-10-05",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "493f8842799831",
+    "name": "haus hirschhorn",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-hirschhorn.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew / revised-2026-10-05",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "5adf932b525efc",
+    "name": "haus parry",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-parry.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew / revised-2026-10-05",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "a06f0812470270",
+    "name": "haus penry",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-penry.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew / revised-2026-10-05",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "8c2a52b012a198",
+    "name": "haus prys",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/lynne-crew/revised-2026-10-05/haus-prys.png",
+    "kind": "crest",
+    "group": "Klaueninsel / lynne-crew / revised-2026-10-05",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "4241dd4f99e4f3",
+    "name": "haus ddraenen",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-ddraenen.png",
+    "kind": "crest",
+    "group": "Klaueninsel / parzifal-crew-2026-10-06",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "204c88628ed28b",
+    "name": "haus morlan",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-morlan.png",
+    "kind": "crest",
+    "group": "Klaueninsel / parzifal-crew-2026-10-06",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "4374c9c84ad7d4",
+    "name": "haus pluen",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-pluen.png",
+    "kind": "crest",
+    "group": "Klaueninsel / parzifal-crew-2026-10-06",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "1d41d77bb81f0d",
+    "name": "haus torawg",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/parzifal-crew-2026-10-06/haus-torawg.png",
+    "kind": "crest",
+    "group": "Klaueninsel / parzifal-crew-2026-10-06",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "09ff919cf62cf6",
+    "name": "haus cledrann",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/rhydian-crew/haus-cledrann.png",
+    "kind": "crest",
+    "group": "Klaueninsel / rhydian-crew",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "5fc33ca0da32ab",
+    "name": "haus gwernhelyd",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/rhydian-crew/haus-gwernhelyd.png",
+    "kind": "crest",
+    "group": "Klaueninsel / rhydian-crew",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "6fb692780f7bdb",
+    "name": "haus halenwych",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/rhydian-crew/haus-halenwych.png",
+    "kind": "crest",
+    "group": "Klaueninsel / rhydian-crew",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "95e4638ebf8732",
+    "name": "haus cledrann",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-cledrann.png",
+    "kind": "crest",
+    "group": "Klaueninsel / rhydian-new-families-2026-10-05",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "6debf539fda9d0",
+    "name": "haus gwernhelyd",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-gwernhelyd.png",
+    "kind": "crest",
+    "group": "Klaueninsel / rhydian-new-families-2026-10-05",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "0efb336737ce1f",
+    "name": "haus halenwych",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/rhydian-new-families-2026-10-05/haus-halenwych.png",
+    "kind": "crest",
+    "group": "Klaueninsel / rhydian-new-families-2026-10-05",
     "source": "Hauswappen"
   },
   {
@@ -2057,6 +3113,22 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "4967116a20c550",
+    "name": "Coeddu",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Coeddu.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "abf1f01bbda146",
+    "name": "Craigddu",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Craigddu.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
     "id": "bc18c4694acc07",
     "name": "Draenmelyn",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Draenmelyn.png",
@@ -2358,6 +3430,118 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "url": "/Stammbäume/assets/images/houses/Silberinsel/Silberpfad/haus-pyrth.png",
     "kind": "crest",
     "group": "Silberinsel / Silberpfad",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "0cf26b1e33d483",
+    "name": "clan bjerk",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-bjerk.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "82a59ccbaca874",
+    "name": "clan draugmar",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-draugmar.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "d070bb8755a590",
+    "name": "clan garnulf",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-garnulf.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "c861d49d27c011",
+    "name": "clan hjarning",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-hjarning.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "9c949dec840675",
+    "name": "clan hjorvik",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-hjorvik.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "53daf6c1b8efca",
+    "name": "clan hrodmar",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-hrodmar.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "c2c7d93e635f45",
+    "name": "clan hrothgar",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-hrothgar.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "d9b7541c73c04d",
+    "name": "clan iskarn",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-iskarn.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "d27cbaa692b65f",
+    "name": "clan knything",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-knything.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "ac6d97321be67d",
+    "name": "clan skath",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-skath.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "4ffec06152b8a4",
+    "name": "clan stanleagh",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-stanleagh.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "769c4b8d5e9f9d",
+    "name": "clan thirsk",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-thirsk.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "18aa36ae67ad3a",
+    "name": "clan vargul",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-vargul.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "dc29db257bebd0",
+    "name": "clan veknar",
+    "url": "/Stammbäume/assets/images/houses/Skjaerheim/clan-veknar.png",
+    "kind": "crest",
+    "group": "Skjaerheim",
     "source": "Hauswappen"
   },
   {
@@ -2753,6 +3937,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "17bc6b4c384500",
+    "name": "haus dyger",
+    "url": "/Stammbäume/assets/images/houses/Talgarth/Klaueninseln/haus-dyger.png",
+    "kind": "crest",
+    "group": "Talgarth / Klaueninseln",
+    "source": "Hauswappen"
+  },
+  {
     "id": "820ce6cbd1c815",
     "name": "haus thornwick",
     "url": "/Stammbäume/assets/images/houses/Talyndor/haus-thornwick.png",
@@ -2766,6 +3958,110 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "url": "/Stammbäume/assets/images/houses/Venalys/haus-falveri.png",
     "kind": "crest",
     "group": "Venalys",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "26f717a6507797",
+    "name": "haus balauric",
+    "url": "/Stammbäume/assets/images/houses/Vennyr/haus-balauric.png",
+    "kind": "crest",
+    "group": "Vennyr",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "3e8a26b46237b5",
+    "name": "haus blodeuwedd",
+    "url": "/Stammbäume/assets/images/houses/Vennyr/haus-blodeuwedd.png",
+    "kind": "crest",
+    "group": "Vennyr",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "49a23c77b1c213",
+    "name": "haus bochdew",
+    "url": "/Stammbäume/assets/images/houses/Vennyr/haus-bochdew.png",
+    "kind": "crest",
+    "group": "Vennyr",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "8ef140e82ec7fa",
+    "name": "haus caerdyn",
+    "url": "/Stammbäume/assets/images/houses/Vennyr/haus-caerdyn.png",
+    "kind": "crest",
+    "group": "Vennyr",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "3e587810596ae1",
+    "name": "haus crwynog",
+    "url": "/Stammbäume/assets/images/houses/Vennyr/haus-crwynog.png",
+    "kind": "crest",
+    "group": "Vennyr",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "05191bef69a140",
+    "name": "haus drewi",
+    "url": "/Stammbäume/assets/images/houses/Vennyr/haus-drewi.png",
+    "kind": "crest",
+    "group": "Vennyr",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "0a2632bd1d08bb",
+    "name": "haus gwanrhyd",
+    "url": "/Stammbäume/assets/images/houses/Vennyr/haus-gwanrhyd.png",
+    "kind": "crest",
+    "group": "Vennyr",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "c620badf6ec3a3",
+    "name": "haus gwenyen",
+    "url": "/Stammbäume/assets/images/houses/Vennyr/haus-gwenyen.png",
+    "kind": "crest",
+    "group": "Vennyr",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "c0b68f1d80e299",
+    "name": "haus morgant",
+    "url": "/Stammbäume/assets/images/houses/Vennyr/haus-morgant.png",
+    "kind": "crest",
+    "group": "Vennyr",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "6cc3612dfa33e7",
+    "name": "haus morgryn",
+    "url": "/Stammbäume/assets/images/houses/Vennyr/haus-morgryn.png",
+    "kind": "crest",
+    "group": "Vennyr",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "addcaacded742f",
+    "name": "haus morlais",
+    "url": "/Stammbäume/assets/images/houses/Vennyr/haus-morlais.png",
+    "kind": "crest",
+    "group": "Vennyr",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "dc83aba6d152d2",
+    "name": "haus serenoc",
+    "url": "/Stammbäume/assets/images/houses/Vennyr/haus-serenoc.png",
+    "kind": "crest",
+    "group": "Vennyr",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "de966953922479",
+    "name": "haus udgorn",
+    "url": "/Stammbäume/assets/images/houses/Vennyr/haus-udgorn.png",
+    "kind": "crest",
+    "group": "Vennyr",
     "source": "Hauswappen"
   },
   {
@@ -5169,6 +6465,78 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Kartenzeichen & Map-Pins"
   },
   {
+    "id": "b8659bbc9cab81",
+    "name": "tir na adharcach",
+    "url": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+    "kind": "region",
+    "group": "Aislearneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "7738dfb1760a7d",
+    "name": "tir na faela",
+    "url": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-faela.png",
+    "kind": "region",
+    "group": "Aislearneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "260db772d276d1",
+    "name": "tir na geach",
+    "url": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-geach.png",
+    "kind": "region",
+    "group": "Aislearneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "9cb82c6064e8cd",
+    "name": "tir na iomaire",
+    "url": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+    "kind": "region",
+    "group": "Aislearneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "31572c45749c0e",
+    "name": "tir na tirth",
+    "url": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-tirth.png",
+    "kind": "region",
+    "group": "Aislearneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "1aad5e26f95280",
+    "name": "blaithneach",
+    "url": "/Stammbäume/assets/images/regions/Blaithneach/blaithneach.png",
+    "kind": "region",
+    "group": "Blaithneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "8e515b7a077fd8",
+    "name": "tir na beatha",
+    "url": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-beatha.png",
+    "kind": "region",
+    "group": "Blaithneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "0111344f837e10",
+    "name": "tir na dilse",
+    "url": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-dilse.png",
+    "kind": "region",
+    "group": "Blaithneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "2e2a1bf8c54398",
+    "name": "tir na meinnear",
+    "url": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-meinnear.png",
+    "kind": "region",
+    "group": "Blaithneach",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
     "id": "04fdb2f246c164",
     "name": "ceitheach",
     "url": "/Stammbäume/assets/images/regions/Ceitheach/ceitheach.png",
@@ -5798,6 +7166,214 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "url": "/Stammbäume/assets/images/regions/Cenyr/Weidebucht/Melwas%20Au.png",
     "kind": "region",
     "group": "Cenyr / Weidebucht",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "e0de6a22b871e4",
+    "name": "dunfal",
+    "url": "/Stammbäume/assets/images/regions/Dunfal/dunfal.png",
+    "kind": "region",
+    "group": "Dunfal",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "7e635572d94332",
+    "name": "herrschaft dal aonghusa",
+    "url": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-dal-aonghusa.png",
+    "kind": "region",
+    "group": "Dunfal",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "5f114a3438fc35",
+    "name": "herrschaft dal birn",
+    "url": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-dal-birn.png",
+    "kind": "region",
+    "group": "Dunfal",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "ceff1125d649fd",
+    "name": "herrschaft fianna",
+    "url": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-fianna.png",
+    "kind": "region",
+    "group": "Dunfal",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "395308a3b4da02",
+    "name": "herrschaft mac cein",
+    "url": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-mac-cein.png",
+    "kind": "region",
+    "group": "Dunfal",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "86c4f6ae802b65",
+    "name": "herrschaft mac eachtrai",
+    "url": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-mac-eachtrai.png",
+    "kind": "region",
+    "group": "Dunfal",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "624789694e8d3d",
+    "name": "herrschaft mac sidhe ailella",
+    "url": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-mac-sidhe-ailella.png",
+    "kind": "region",
+    "group": "Dunfal",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "6f026dfcb9c1c1",
+    "name": "herrschaft na riangabra",
+    "url": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-na-riangabra.png",
+    "kind": "region",
+    "group": "Dunfal",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "cb568ae428e203",
+    "name": "herrschaft ruin morath",
+    "url": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-ruin-morath.png",
+    "kind": "region",
+    "group": "Dunfal",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "063bc007990630",
+    "name": "herrschaft ua anbhair",
+    "url": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-ua-anbhair.png",
+    "kind": "region",
+    "group": "Dunfal",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "1b848c13739dc5",
+    "name": "herrschaft ua casur",
+    "url": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-ua-casur.png",
+    "kind": "region",
+    "group": "Dunfal",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "67bcf164e28aff",
+    "name": "tir na fathach",
+    "url": "/Stammbäume/assets/images/regions/Dunfal/tir-na-fathach.png",
+    "kind": "region",
+    "group": "Dunfal",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "8196b9e32fa717",
+    "name": "tir na rithe",
+    "url": "/Stammbäume/assets/images/regions/Dunfal/tir-na-rithe.png",
+    "kind": "region",
+    "group": "Dunfal",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "4238518a3f118b",
+    "name": "faelaorn",
+    "url": "/Stammbäume/assets/images/regions/Faelaorn/faelaorn.png",
+    "kind": "region",
+    "group": "Faelaorn",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "8fe33db87df1fd",
+    "name": "tir na braigh",
+    "url": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-braigh.png",
+    "kind": "region",
+    "group": "Faelaorn",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "9e7edc6ba779d7",
+    "name": "tir na brann",
+    "url": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-brann.png",
+    "kind": "region",
+    "group": "Faelaorn",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "8c2fe428699ce7",
+    "name": "tir na damh",
+    "url": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+    "kind": "region",
+    "group": "Faelaorn",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "8540ee6205aa98",
+    "name": "tir na faerna",
+    "url": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-faerna.png",
+    "kind": "region",
+    "group": "Faelaorn",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "c99edac32932ec",
+    "name": "tir na mathgham",
+    "url": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-mathgham.png",
+    "kind": "region",
+    "group": "Faelaorn",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "b2bba6ba22df83",
+    "name": "tir na rann",
+    "url": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+    "kind": "region",
+    "group": "Faelaorn",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "8cb42fa5fe3070",
+    "name": "drachenzunge",
+    "url": "/Stammbäume/assets/images/regions/Fjordheim/drachenzunge.png",
+    "kind": "region",
+    "group": "Fjordheim",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "e9d0acbe58042e",
+    "name": "fjordheim",
+    "url": "/Stammbäume/assets/images/regions/Fjordheim/fjordheim.png",
+    "kind": "region",
+    "group": "Fjordheim",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "17264a252239af",
+    "name": "kragenkueste",
+    "url": "/Stammbäume/assets/images/regions/Fjordheim/kragenkueste.png",
+    "kind": "region",
+    "group": "Fjordheim",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "6609611d745a13",
+    "name": "langstrand",
+    "url": "/Stammbäume/assets/images/regions/Fjordheim/langstrand.png",
+    "kind": "region",
+    "group": "Fjordheim",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "bf0d83e3557657",
+    "name": "tiefenfjord",
+    "url": "/Stammbäume/assets/images/regions/Fjordheim/tiefenfjord.png",
+    "kind": "region",
+    "group": "Fjordheim",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "3b6027ac446a2a",
+    "name": "windtal",
+    "url": "/Stammbäume/assets/images/regions/Fjordheim/windtal.png",
+    "kind": "region",
+    "group": "Fjordheim",
     "source": "Orts- & Regionsbanner"
   },
   {
@@ -6494,6 +8070,46 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "url": "/Stammbäume/assets/images/regions/weisenfluh.png",
     "kind": "region",
     "group": "Orts- & Regionsbanner",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "5ef8606e02e119",
+    "name": "bjerk",
+    "url": "/Stammbäume/assets/images/regions/Skjaerheim/bjerk.png",
+    "kind": "region",
+    "group": "Skjaerheim",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "248aedbf648308",
+    "name": "hrothgar",
+    "url": "/Stammbäume/assets/images/regions/Skjaerheim/hrothgar.png",
+    "kind": "region",
+    "group": "Skjaerheim",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "e018f2f15f287e",
+    "name": "knything",
+    "url": "/Stammbäume/assets/images/regions/Skjaerheim/knything.png",
+    "kind": "region",
+    "group": "Skjaerheim",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "34e8e8ade3487e",
+    "name": "skjaerheim",
+    "url": "/Stammbäume/assets/images/regions/Skjaerheim/skjaerheim.png",
+    "kind": "region",
+    "group": "Skjaerheim",
+    "source": "Orts- & Regionsbanner"
+  },
+  {
+    "id": "4b9bf16c16e907",
+    "name": "stanleagh",
+    "url": "/Stammbäume/assets/images/regions/Skjaerheim/stanleagh.png",
+    "kind": "region",
+    "group": "Skjaerheim",
     "source": "Orts- & Regionsbanner"
   },
   {

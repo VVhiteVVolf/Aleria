@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "characterName": "[CHARAKTERNAME]",
+  "characterFolder": "Charaktere/Einzelcharaktere/[CHARAKTERNAME]",
+  "setId": "set-01",
+  "referenceImage": "[RELATIVER PFAD ZUM VERBINDLICHEN PORTRÄT]",
+  "characterDescription": "[IDENTITÄT, KLEIDUNG, FARBEN UND BESONDERHEITEN]",
+  "theme": "Allgemeine Reaktionen",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Oben links",
+      "emotion": "Neutral / Redend",
+      "gesture": "Offene Handflächen, lockere erklärende Gestik, aufmerksamer Blick."
+    },
+    {
+      "index": 2,
+      "position": "Oben Mitte",
+      "emotion": "Freundlich / Amüsiert",
+      "gesture": "Ehrliches leichtes Lächeln, eine Hand locker erhoben, entspannte Schultern."
+    },
+    {
+      "index": 3,
+      "position": "Oben rechts",
+      "emotion": "Nachdenklich",
+      "gesture": "Hand am Kinn, Blick leicht seitlich oder nach oben, zusammengezogene Brauen."
+    },
+    {
+      "index": 4,
+      "position": "Mitte links",
+      "emotion": "Skeptisch / Misstrauisch",
+      "gesture": "Eine Braue hochgezogen, Arme verschränkt oder eine Hand skeptisch angewinkelt."
+    },
+    {
+      "index": 5,
+      "position": "Mitte Mitte",
+      "emotion": "Überrascht / Verblüfft",
+      "gesture": "Geweitete Augen, leicht geöffneter Mund, beide Hände spontan angehoben."
+    },
+    {
+      "index": 6,
+      "position": "Mitte rechts",
+      "emotion": "Genervt / Missbilligend",
+      "gesture": "Halb geschlossene Augen, angespannter Mund, eine Hand abwinkend oder an der Hüfte."
+    },
+    {
+      "index": 7,
+      "position": "Unten links",
+      "emotion": "Entschlossen / Ernst",
+      "gesture": "Direkter Blick, aufrechte Haltung, eine Faust vor der Brust oder feste erklärende Handbewegung."
+    },
+    {
+      "index": 8,
+      "position": "Unten Mitte",
+      "emotion": "Verärgert / Konfrontativ",
+      "gesture": "Zusammengezogene Brauen, eine Hand deutlich zeigend, Oberkörper leicht vorgelehnt."
+    },
+    {
+      "index": 9,
+      "position": "Unten rechts",
+      "emotion": "Unsicher / Keine Ahnung",
+      "gesture": "Leicht schiefer Gesichtsausdruck, beide Hände im Shrug geöffnet, Schultern hochgezogen."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "[CHARAKTER]-[SET]_Bild1.png bis _Bild9.png",
+  "status": "vorbereitet"
+}

@@ -44,6 +44,14 @@ export const HORSE_BREEDING_LORE_CROSSINGS = Object.freeze([
     name: 'Tirashan',
     source: 'Pferdedossier Tirashan',
     note: 'Die gefestigte Linie verbindet die Waldgängigkeit des Curragh mit der Robustheit des Hest.'
+  },
+  {
+    mareId: 'herzogsschimmer',
+    sireId: 'ceffyl',
+    name: 'Ritterschimmer',
+    bestiaryId: 'ritterschimmer',
+    source: 'Festgelegte Zucht · Benennung vom 12. Oktober 2026',
+    note: 'Ritterschimmer ist die fest benannte Zucht aus Herzogsschimmer und Ceffyl. Sie verbindet das kräftige, repräsentative Schlachtross mit der eleganten, loyalen Ritterpferdelinie. Carreg, das Reitpferd von Sir Duncan Gafyr, gehört zu dieser Zucht.'
   }
 ]);
 

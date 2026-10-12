@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-12",
+  "characterName": "Asgeir Wolfshorn",
+  "setId": "set-02",
+  "stem": "asgeir-wolfshorn-kampf-set-02-grossaxt",
+  "theme": "Großaxt",
+  "referenceSource": "Unveränderter aktueller Nutzeranhang, lokal in Referenzen gesichert.",
+  "promptFile": "Prompts/asgeir-wolfshorn-kampf-set-02-grossaxt.txt",
+  "sheetFile": "Sheets/asgeir-wolfshorn-kampf-set-02-grossaxt-v2.png",
+  "outputFolder": "Output/set-02",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "framing": "Kopf bis Hüfte, Mimik im Fokus, Waffen dürfen den Rand verlassen",
+  "background": "Trainingsplatz im Draig-Burginnenhof, helle Steinmauern, rote Draig-Banner, Tageslicht",
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "category": "Angriff",
+      "emotion": "Kraftvoller Spalthieb",
+      "gesture": "Fierce focused eyes and clenched jaw; both hands on one shaft, preparation for controlled descending diagonal strike beside the head, face unobscured."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "category": "Angriff",
+      "emotion": "Entschlossener Seitwärtshieb",
+      "gesture": "Brief open-mouth exertion, deep-set brows; two separated hands drive one axe shaft laterally at lower chest height."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "category": "Angriff",
+      "emotion": "Beherrschter Aufwärtshieb",
+      "gesture": "Tight confident smile; both hands guide one diagonal shaft rising from hip toward outside shoulder, not through the face."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "category": "Abwehr",
+      "emotion": "Stabile Schaftparade",
+      "gesture": "Intense calm focused stare; two hands hold one continuous axe haft horizontally in front of upper chest, below chin, to parry."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "category": "Abwehr",
+      "emotion": "Wachsame hohe Deckung",
+      "gesture": "Alert eyes and tightened mouth; both hands on one diagonal haft beside the shoulder, raised defensive guard, shaft away from eyes."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "category": "Abwehr",
+      "emotion": "Standhaftes Ableiten",
+      "gesture": "Gritted teeth, protective shoulders; both hands angle the same shaft down and outward across lower torso to redirect a blow."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "category": "Neutral",
+      "emotion": "Gelassene Bereitschaft",
+      "gesture": "Neutral steady direct gaze; same axe upright beside body with two separated hands resting on haft."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "category": "Neutral",
+      "emotion": "Prüfender Blick",
+      "gesture": "Slightly lifted brow, eyes off to side; same axe held diagonally low in both hands, shoulders loose."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "category": "Neutral",
+      "emotion": "Ruhige Trainingspause",
+      "gesture": "Soft knowing half smile; one long axe at relaxed low carry in both hands, no shouting or strike, face fully visible."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "generationMode": "built-in image_gen",
+  "status": "erstellt, mit V3 zerlegt und visuell geprüft",
+  "styleCorrection": "13.10.2026: Nutzer verlangt Asgeirs hochgradig unveränderte Optik und künstlerischen Stil nach dem Originalanhang; allgemeines Anime-Preset und abweichende Rüstungsdarstellung sind nachrangig.",
+  "referenceImage": "Referenzen/asgeir-wolfshorn-nutzerreferenz.png",
+  "referenceSha256": "2355b6b888e26e3034c5f7e81081a15844f6ebab575f8a719f4213f4a2d1e285",
+  "referenceMechanism": "referenced_image_paths; originales Nutzerbild als erste Referenz",
+  "generatedAt": "2026-10-13",
+  "generationSourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a12c67-6d1d-7d71-9ae7-d9ba800fc264\\exec-4d3f6c11-6695-43b7-b7ee-028a0b15d56c.png",
+  "correctionPromptFile": "Prompts/asgeir-wolfshorn-kampf-set-02-grossaxt-griffkorrektur.txt",
+  "draftSheetFile": "Sheets/Entwuerfe/asgeir-wolfshorn-kampf-set-02-grossaxt-vor-griffkorrektur.png",
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-13",
+    "reviewedAvatars": 9,
+    "passed": true,
+    "checks": [
+      "Originalvorlage und Zeichenstil",
+      "3 Angriff / 3 Abwehr / 3 Neutral",
+      "lesbare Mimik",
+      "Waffenanzahl und Griff",
+      "quadratischer Ausschnitt",
+      "keine Nachbarbildreste oder Beschriftung"
+    ]
+  },
+  "avatarPixels": [
+    418,
+    418
+  ],
+  "inputImageFiles": [
+    "Referenzen/asgeir-wolfshorn-nutzerreferenz.png",
+    "Referenzen/asgeir-streitaxt-v3.png"
+  ],
+  "correctionInputImageFiles": [
+    "Sheets/Entwuerfe/asgeir-wolfshorn-kampf-set-02-grossaxt-vor-griffkorrektur.png",
+    "Referenzen/asgeir-wolfshorn-nutzerreferenz.png"
+  ]
+}

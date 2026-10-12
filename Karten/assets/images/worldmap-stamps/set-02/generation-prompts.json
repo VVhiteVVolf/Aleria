@@ -1,0 +1,767 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "status": "complete",
+  "stylePreset": "fantasy-worldmap-stamp",
+  "styleVersion": 2,
+  "tool": "built-in image_gen",
+  "transparentBackground": true,
+  "primaryStyleReference": "Karten/assets/images/worldmap-stamps/style-tests/01-gaelic-farmhouse-approved.png",
+  "promptTemplate": "Create ONE transparent Inkarnate worldmap stamp of [MOTIF].\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: [SUBJECT DESCRIPTION]. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.",
+  "additionalEdgeInstructions": "Match the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing from the supplied approved style reference only.",
+  "promptAssembly": "Replace [MOTIF] with label and [SUBJECT DESCRIPTION] with subject in promptTemplate, then append two newlines and additionalEdgeInstructions. Supply primaryStyleReference and transparent_background=true.",
+  "order": "Motifs 25–48, rows 3–4, left to right",
+  "assets": [
+    {
+      "index": 25,
+      "label": "Grabmal",
+      "file": "25-grabmal.png",
+      "subject": "A small ancient dolmen tomb: two squat upright grey stones supporting one broad uneven capstone, a deep simple dark opening. Only three or four chunky stone shapes",
+      "status": "generated",
+      "generationId": "exec-d2f5797f-2e31-4c44-8309-3c0f77e1a8eb",
+      "sha256": "fbefecaaa873c7212057eef33a04ec65b2605e3b0eba4d3851edf89e228c928f",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7806,
+        "alphaBoundingBox": [
+          0,
+          0,
+          1336,
+          1105
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 1,
+        "visibleBoundsAlphaAbove8": [
+          317,
+          304,
+          1075,
+          909
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 26,
+      "label": "Große Burg",
+      "file": "26-grosse-burg.png",
+      "subject": "A large friendly medieval castle reduced to one chunky central keep, four squat round corner towers and a short front gate wall. Warm ivory stone, simple terracotta conical roofs, a tiny ochre pennant. Only a few small slit windows",
+      "status": "generated",
+      "generationId": "exec-f2b80eff-0d76-4449-a8b8-a28922785912",
+      "sha256": "d615a28ecb59ceeafbf285145030dd5e1d8542009c7af7d28a9ed4ae54aadcc7",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6795,
+        "alphaBoundingBox": [
+          0,
+          0,
+          1344,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 1,
+        "visibleBoundsAlphaAbove8": [
+          229,
+          107,
+          1157,
+          1026
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 27,
+      "label": "Großes Weingut",
+      "file": "27-grosses-weingut.png",
+      "subject": "A compact grand winery: one broad cream manor with a generous terracotta roof, one short attached round tower, and three very short tidy rows of purple grapevines directly beside the building. Sparse toy-like architecture",
+      "status": "generated",
+      "generationId": "exec-7d31b361-16e2-46b2-a137-8cdc858eae0d",
+      "sha256": "d0bb5fda14e1918e4a8752ffb0eb8dde62eaff8c8dda08e646aca05706b35082",
+      "validation": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGBA",
+        "transparentFraction": 0.6307,
+        "alphaBoundingBox": [
+          73,
+          25,
+          1480,
+          1000
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          223,
+          139,
+          1383,
+          964
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 28,
+      "label": "Hafensiedlung",
+      "file": "28-hafensiedlung.png",
+      "subject": "A tiny harbor settlement: three chubby cream cottages with muted red roofs, a short chunky wooden pier and one small simple moored sailboat. Transparent gaps and no sea or water patch",
+      "status": "generated",
+      "generationId": "exec-79df9635-0179-46b8-9eac-fe33a2d79b6e",
+      "sha256": "a07791f0856f1df62c35d7c41c405cf2ae84ec3f2d4e05bdbacd15d02cd6267e",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6964,
+        "alphaBoundingBox": [
+          0,
+          21,
+          1352,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          229,
+          192,
+          1249,
+          984
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 29,
+      "label": "Druidenhain",
+      "file": "29-druidenhain.png",
+      "subject": "A druid grove: five small round-canopied olive-green trees arranged around one squat standing stone bearing a single simple spiral. Each canopy is one or two rounded masses, no individual leaves. Transparent gaps, no common ground base",
+      "status": "generated",
+      "generationId": "exec-e1cf5720-b879-47fe-9c65-77d789bdd069",
+      "sha256": "97c2dccc189c335d8304271070fcc5c3bce2f2c7142c0f135f49ef890703dc14",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6732,
+        "alphaBoundingBox": [
+          39,
+          37,
+          1309,
+          1121
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          203,
+          89,
+          1189,
+          1052
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 30,
+      "label": "Heerlager",
+      "file": "30-heerlager.png",
+      "subject": "A small military encampment: one broad ochre command tent with a tiny pennant, two small muted cream tents, and one spear rack. Bold simple fabric shapes, no soldiers or landscape",
+      "status": "generated",
+      "generationId": "exec-65de0df2-442f-44f8-b077-ff9cd35b35b5",
+      "sha256": "02b10cf23a952c2c149b65c6d9a29f41f477b504bf986273de2d6f7df3f88b28",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7351,
+        "alphaBoundingBox": [
+          49,
+          67,
+          1347,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          216,
+          172,
+          1250,
+          981
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 31,
+      "label": "Hain",
+      "file": "31-hain.png",
+      "subject": "A quiet little grove: one chubby broad-canopied green tree and two smaller companion trees, with two small grey stones nestled against the main trunk. Rounded treetop masses, no individual leaves, no ground patch",
+      "status": "generated",
+      "generationId": "exec-13fcf878-2b80-4802-b47d-765bc463bcf3",
+      "sha256": "d2a6f1ddcc6ee491f9be4551768d013171b829644c9fd905605ed40ce3131085",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6888,
+        "alphaBoundingBox": [
+          140,
+          69,
+          1303,
+          1101
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          197,
+          177,
+          1181,
+          975
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 32,
+      "label": "Besonderes Heiligtum",
+      "file": "32-besonderes-heiligtum.png",
+      "subject": "A special holy sanctuary: one cozy cream-stone chapel with a rounded blue-grey roof, a short round bell tower and a large simple arched doorway. A small sun disk over the door and three broad entrance steps, no landscape",
+      "status": "generated",
+      "generationId": "exec-df6d84c8-8744-487e-a8fa-9fb34b123cbe",
+      "sha256": "d5fcb74879cba573e70cad75160d20a4f97aef0aeba475a7f7824be8708c831f",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7729,
+        "alphaBoundingBox": [
+          0,
+          21,
+          1328,
+          1121
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          363,
+          135,
+          1032,
+          1020
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 33,
+      "label": "Höhle",
+      "file": "33-hoehle.png",
+      "subject": "A cave entrance made of only three large rounded grey rock masses surrounding one deep dark arched opening. Compact low silhouette, a few blunt pen marks, no mountain or extra boulders",
+      "status": "generated",
+      "generationId": "exec-122a9ba1-e4b5-4a94-946e-8b1b4c021c18",
+      "sha256": "657a84c0a2d09303ab8ffd07d1d47f66cb8fd191ef561b05026f9a673978b47f",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7651,
+        "alphaBoundingBox": [
+          0,
+          21,
+          1360,
+          1105
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          267,
+          283,
+          1134,
+          903
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 34,
+      "label": "Hügelgrab",
+      "file": "34-huegelgrab.png",
+      "subject": "An ancient burial mound: one compact low rounded olive-green earthen dome with a small doorway framed by two squat stones and a broad stone lintel. The mound itself is the whole motif, no surrounding ground",
+      "status": "generated",
+      "generationId": "exec-20d284f6-9aef-4c26-bddc-5f57004e05ea",
+      "sha256": "11a21854bdcd0f8ca5d63e3cc40e62f191ef5edc3c0e76c3de021a11d1923610",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7694,
+        "alphaBoundingBox": [
+          33,
+          55,
+          1305,
+          1112
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          249,
+          324,
+          1136,
+          905
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 35,
+      "label": "Heiße Quellen",
+      "file": "35-heisse-quellen.png",
+      "subject": "Two tiny adjacent hot-spring pools with simple rounded stone rims, muted turquoise water contained strictly inside the rims, and two thin hand-drawn curls of steam. The pools themselves are the motif, no surrounding ground or water",
+      "status": "generated",
+      "generationId": "exec-3eb93b1c-02d6-4a09-b997-09df7b5d3755",
+      "sha256": "00abb492626b3a58e801cdb5deff16fd7338641a5de58a98c9097a1856cae718",
+      "validation": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGBA",
+        "transparentFraction": 0.7747,
+        "alphaBoundingBox": [
+          0,
+          57,
+          1484,
+          984
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          323,
+          145,
+          1215,
+          880
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 36,
+      "label": "Grenzposten",
+      "file": "36-grenzposten.png",
+      "subject": "A small border checkpoint: one squat cream watch hut with an ochre roof, a tiny pennant, and a short raised wooden barrier beside it. Three simple principal shapes, no road or landscape",
+      "status": "generated",
+      "generationId": "exec-d8d78a08-bc3e-46a2-9def-9883b18fadaa",
+      "sha256": "50195d2e32e8fc5bea35a2b3f8a3d1c1b49387d05cb0e7c914efc0d7431bc5a9",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7956,
+        "alphaBoundingBox": [
+          0,
+          9,
+          1346,
+          1113
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          293,
+          181,
+          1176,
+          931
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 37,
+      "label": "Jägerlager",
+      "file": "37-jaegerlager.png",
+      "subject": "A hunter camp: one small warm ochre tent, one bow leaning against a simple rack, and a small pile of logs. Compact friendly shapes with a single little fir tree beside the tent, no animals or people",
+      "status": "generated",
+      "generationId": "exec-74542212-6e82-48b1-b322-2f75ecf89ca6",
+      "sha256": "592ac5e65e8b1062e1d396fe7e13ad63554cb0dc7e80ec9c1e747a0e8c34c9fd",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7765,
+        "alphaBoundingBox": [
+          27,
+          63,
+          1344,
+          1115
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          289,
+          218,
+          1085,
+          932
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 38,
+      "label": "Ritterliches Gut",
+      "file": "38-ritterliches-gut.png",
+      "subject": "A knight's small country manor: one chubby cream hall with a generous terracotta roof and one attached squat square stone tower with broad crenellations. A plain little shield over the arched entrance, no heraldic detail or landscape",
+      "status": "generated",
+      "generationId": "exec-143f3ece-374d-4356-87cc-a43f3c13c712",
+      "sha256": "cc1cfaeeaa92900ac0dc72b9fdfac539ed4db8a3dfdae0f67b531c4ea9f009db",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6757,
+        "alphaBoundingBox": [
+          0,
+          21,
+          1360,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          217,
+          219,
+          1180,
+          946
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 39,
+      "label": "Plantage",
+      "file": "39-plantage.png",
+      "subject": "A small grape plantation: one cozy ochre-roofed farm cottage, three short gently curved rows of simple green vines with a few oversized purple grape clusters. Transparent gaps between the rows, no field-colored base",
+      "status": "generated",
+      "generationId": "exec-7027cc81-00c0-4917-a112-414871cecc9d",
+      "sha256": "e03dc500ce9cab6936a7b29e0c838def9d24974f0b6a8cb454162fc7f7db9d0e",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7566,
+        "alphaBoundingBox": [
+          47,
+          27,
+          1350,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          306,
+          175,
+          1101,
+          1030
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 40,
+      "label": "Klostersiedlung",
+      "file": "40-klostersiedlung.png",
+      "subject": "A tiny monastery settlement: one simple cream chapel with a squat bell tower and two attached low buildings around a small open inner court. Muted blue-grey roofs, round arches, a small simple cross. Very few windows",
+      "status": "generated",
+      "generationId": "exec-29178586-78ae-43e4-bdf0-ab1df78f66f7",
+      "sha256": "64433a0139d06c95b9527aa0024c3a82657ec78dc78d7beabb10f9c0fdbee4ec",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7668,
+        "alphaBoundingBox": [
+          33,
+          35,
+          1315,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          258,
+          168,
+          1116,
+          985
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 41,
+      "label": "Lager",
+      "file": "41-lager.png",
+      "subject": "A simple campsite: ONE broad little blue-grey triangular tent with an ochre interior and a tiny three-log campfire directly beside it. Playful rounded tent corners, no smoke cloud, no terrain",
+      "status": "generated",
+      "generationId": "exec-8837771b-af1c-41e8-b1e5-33df1a8af9a9",
+      "sha256": "b020b9b44e8f70d9fa1633cf4b2cebee30e59be14672a23d7e2dd3f2a8b8cbcc",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.8451,
+        "alphaBoundingBox": [
+          0,
+          23,
+          1342,
+          1121
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          314,
+          270,
+          1045,
+          913
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 42,
+      "label": "Landgut",
+      "file": "42-landgut.png",
+      "subject": "A small country estate: one chubby pale-ochre cottage with a warm straw-colored roof, one simple round stone well and a small broad-canopied fruit tree. Only these three clear forms, transparent gaps and no field",
+      "status": "generated",
+      "generationId": "exec-ce1e042a-9ade-4f76-a033-048932d2c010",
+      "sha256": "c8249143b1451cb5b5e9181eac097e9b2b733e8eb8b08f3ecda52dc55fa749c4",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6752,
+        "alphaBoundingBox": [
+          0,
+          37,
+          1338,
+          1121
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          148,
+          190,
+          1276,
+          1000
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 43,
+      "label": "Leuchtturm",
+      "file": "43-leuchtturm.png",
+      "subject": "A friendly coastal lighthouse: one slightly tapered ivory tower with two tiny windows, a chunky blue-grey lantern cap and a red pennant. On a single small angular brown rock foot essential to supporting the tower. No sea, shore or light beam",
+      "status": "generated",
+      "generationId": "exec-32bcc02c-f8b3-4afd-9f70-1fdb0f5a1023",
+      "sha256": "1a368af2d881afa7772bc9504e78deae08ad32a37efcb809cf89fa77ac393726",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7927,
+        "alphaBoundingBox": [
+          23,
+          49,
+          1328,
+          1105
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          386,
+          72,
+          1001,
+          1079
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 44,
+      "label": "Magierturm",
+      "file": "44-magierturm.png",
+      "subject": "A whimsical wizard tower: one slightly crooked cream tower, an oversized floppy blue-grey conical roof with an ochre tip, two tiny windows and one arched door. A few chunky stones at its foot, no magic glow or landscape",
+      "status": "generated",
+      "generationId": "exec-7c562a97-5aa7-48c7-9a9b-731d6827359c",
+      "sha256": "27697971e18e22f243cc25eb1fdb2c1985cd82c681b1743b803ff2f4291aa1b7",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7844,
+        "alphaBoundingBox": [
+          106,
+          47,
+          1281,
+          1107
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          431,
+          98,
+          1020,
+          1056
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 45,
+      "label": "Handelssiedlung",
+      "file": "45-handelssiedlung.png",
+      "subject": "A small trading settlement: three chubby half-timbered cream houses with muted terracotta roofs gathered around one tiny ochre market awning. A single simple crate under the awning, no people or roads",
+      "status": "generated",
+      "generationId": "exec-499ad627-6114-42da-ae84-a4e26ca0f535",
+      "sha256": "43dc70834366b1d7a97b81e772d3b3c92e0d63cdad4fee733226817f29510a18",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7089,
+        "alphaBoundingBox": [
+          0,
+          69,
+          1265,
+          1107
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          167,
+          186,
+          1218,
+          935
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 46,
+      "label": "Clan Gut",
+      "file": "46-clan-gut.png",
+      "subject": "A Gaelic clan estate: one cozy broad timber clan hall with a large dark blue-grey thatched roof, low cream walls and an attached smaller round wing. A single simple teal clan banner beside its entrance, no tiny heraldic ornament",
+      "status": "generated",
+      "generationId": "exec-7d299df5-ce2a-4d34-8ad8-33611ea9bed9",
+      "sha256": "5c344b799c39592c46d8b28b15777bba6a91f0e17c9a3a611107234e166d8c07",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6714,
+        "alphaBoundingBox": [
+          19,
+          33,
+          1336,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          196,
+          194,
+          1239,
+          966
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 47,
+      "label": "Fianna Sitz",
+      "file": "47-fianna-sitz.png",
+      "subject": "A Fianna seat: a modest squat square cream-stone fortified hall with one short round corner tower and low broad crenellations. Warm ochre roof over a small attached porch, one simple teal pennant and a few tiny windows",
+      "status": "generated",
+      "generationId": "exec-c36d07e6-7950-4682-b711-cd6e5993ac60",
+      "sha256": "4e43243df9c05f79fd8c257b3523707ba0bd1b884cc87c6919051e696d243239",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6239,
+        "alphaBoundingBox": [
+          0,
+          22,
+          1366,
+          1121
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          192,
+          155,
+          1259,
+          970
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "index": 48,
+      "label": "Steg – Fähre",
+      "file": "48-steg-faehre.png",
+      "subject": "A ferry landing: one small rounded wooden ferry boat moored alongside a short L-shaped timber jetty. A pair of broad oars rests in the boat; only a few plank division strokes. No water, banks, shore or background",
+      "status": "generated",
+      "generationId": "exec-74486bb1-1d93-4386-ab57-f2dafdf8e4ba",
+      "sha256": "df5bfaf5d1e06e250f15770ae6f9c3aa336c0cedde8ef2f3b91942216d01ec48",
+      "validation": {
+        "width": 1375,
+        "height": 1144,
+        "mode": "RGBA",
+        "transparentFraction": 0.7537,
+        "alphaBoundingBox": [
+          0,
+          64,
+          1345,
+          1112
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          206,
+          212,
+          1175,
+          920
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    }
+  ],
+  "additionalVariants": {
+    "parentMotif": 28,
+    "directory": "harbor-variants",
+    "manifest": "harbor-variants/generation-prompts.json",
+    "count": 3,
+    "directions": [
+      "Osten/rechts",
+      "Norden/oben",
+      "S?den/unten"
+    ]
+  },
+  "completedAt": "2026-10-09",
+  "assetCount": 24,
+  "additionalVariantCount": 3,
+  "totalStampCount": 27,
+  "nextMotif": {
+    "index": 49,
+    "label": "Mine",
+    "status": "not-requested-in-this-batch"
+  },
+  "primaryStyleReferenceSha256": "cb49eb5e92bc28d42eadbcf6eb4927bef73f449c2a713c76d0b427990310b3bd",
+  "review": {
+    "lightPreview": "preview/overview-light.png",
+    "darkPreview": "preview/overview-dark.png",
+    "allMotifsReviewed": true,
+    "visibleHalos": false,
+    "clippedMotifs": false,
+    "styleReferenceMatched": "Approved farmhouse v2: simple playful silhouettes, chunky dark brown contours, flat watercolor fills, very low detail.",
+    "originalGeneratedAlphaPreserved": true
+  },
+  "alphaInspection": "All 27 stamp files contain genuine PNG alpha and fully transparent areas. Original generated alpha is preserved. Some originals have isolated alpha=1 remnants at the outer canvas edge; meaningful visible content (alpha>8) stays within the canvas margin. Light and dark composited previews show no visible outer halo."
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "status": "ready-for-review",
+  "label": "Dúnnean",
+  "worldRegion": "Uathneach",
+  "version": 1,
+  "tool": "built-in image_gen",
+  "stylePreset": "fantasy-worldmap-stamp",
+  "styleVersion": 2,
+  "transparentBackground": true,
+  "primaryStyleReference": "Karten/assets/images/worldmap-stamps/style-tests/01-gaelic-farmhouse-approved.png",
+  "geographyReference": "C:\\Users\\fhg_r\\Downloads\\Uathneach Städte\\2026-10-09 11_20_30-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+  "userBrief": "Dúnnean ist die Hauptstadt von Uathneach und eine der größten Städte und Metropolen des Albischen Volkes; gälisch mittelalterlich angehaucht.",
+  "approvedExtent": "Große Stadt über weite Teile der Landzunge, bis zur östlichen Bucht.",
+  "designAssumptions": [
+    "Nördliche Hochburg",
+    "Drei Stadtviertel mit stark vereinfachten Gebäuden",
+    "Südliches Haupttor zur vorhandenen Straße",
+    "Hafen in der östlichen Bucht"
+  ],
+  "file": "dunnean-v01.png",
+  "prompt": "Create ONE transparent Inkarnate worldmap stamp of Dúnnean – Gaelic capital city fitted to the supplied peninsula.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: Dunnean, capital of Uathneach and one of the largest cities of the Albic people: a sprawling fortified medieval Gaelic coastal metropolis. Convey its importance with a broad city silhouette and THREE visibly separate dense quarters totaling about 28 to 36 very simple chunky roofs, a northern hilltop citadel with a broad low keep and three stout round towers, and one larger civic hall. Gaelic medieval architecture: cream and pale-gray stone, some broad brown timber framing, rounded corners, steep simple slate-blue, muted terracotta and a few golden thatch roofs. The northern citadel is a stout Gaelic stronghold, with low broad forms. The residential buildings have almost blank walls and at most one tiny window each; no material microdetail. A gently curving outer stone wall with a few large round towers follows the peninsula. A SOUTH-facing main gate joins the existing road from the bottom center. An EAST-facing harbor is fitted into the concave bay at the right: a short curved quay attached to the town, two short piers extending right, and two tiny simple wooden boats. No harbor water painted into the stamp. The city spreads across most of the peninsula to the eastern bay, well beyond the red location marker. Open gaps between buildings stay transparent; only a very narrow main street and a tiny citadel courtyard may be filled. No continuous city floor or land platform. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style.\n\nREFERENCE ROLES AND GEOGRAPHIC FIT: Image 1 (the farmhouse) is the sole STYLE reference. Image 2 is the TARGET MAP GEOGRAPHY and placement reference, never a style or background reference. North is the top of image 2. Create the city as a transparent overlay intended for that exact north-up map area, maintaining its coastal orientation. The red diamond in image 2 marks a location only and does NOT define the city boundary. Do not draw this marker, map text, vegetation texture, land or sea. Use a landscape canvas with approximately the same 4:3 composition as image 2. Spread the city's foundation over the northern landmass; a narrow northern tip broadens southwest and southeast, and the right edge MUST have a conspicuous inward-curving bite that leaves room for the EASTERN BAY. Avoid a generic round, square or diamond-shaped city. For composition, using normalized coordinates of the target image: citadel centered around (57%,25%); main residential quarters around (37%,49%), (58%,51%) and (78%,44%); south gate centered near (49%,81%); harbor quay at (76%,65%) and piers reaching right toward (86%,65%). Bases of buildings and walls stay on land. The west wall follows the long diagonal coast inside the shoreline; the east wall bends INWARD to the bay, ending at the harbor. The southern wall joins the landward gate across the broad part of the peninsula. All buildings remain upright in the elevated three-quarter drawing style. Preserve comfortable transparent margins and make every wall, roof, mast and pier fully visible. Transparent exterior and transparent bay opening are essential.",
+  "validation": {
+    "width": 1435,
+    "height": 1096,
+    "mode": "RGBA",
+    "transparentFraction": 0.6284,
+    "visibleBoundsAlphaAbove8": [
+      225,
+      91,
+      1338,
+      1004
+    ],
+    "originalAlphaPreserved": true,
+    "transparentPixelCount": 988352,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "originalBytesPreserved": true
+  },
+  "generationId": "exec-5998bbce-d3c7-4243-aa83-18e551187fb6",
+  "sha256": "63b506e38c3978e0e221f51fecd60941fe199d82666b432c4986f2622a722519",
+  "review": {
+    "userApproved": false,
+    "edgeInspection": "Visually inspected on light and dark backgrounds; no visible outer halo or backdrop. Original generated alpha preserved.",
+    "geographyInspection": "Full-canvas overlay inspected at 845 x 646. Northern citadel, long western wall, east-facing bay harbor and southern road gate align plausibly with the chosen peninsula. Placement is a visual draft, not an Inkarnate import verification.",
+    "styleInspection": "Chunky dark-brown outlines, flat muted watercolor fills and very simple individual buildings. City scale conveyed through many small houses and enclosing walls.",
+    "placementPreview": "preview/placement-preview.png",
+    "lightBackgroundPreview": "preview/on-light.png",
+    "darkBackgroundPreview": "preview/on-dark.png",
+    "placementTransform": {
+      "x": 0,
+      "y": 0,
+      "width": 845,
+      "height": 646
+    },
+    "previewNote": "QA composites only; map label and red location marker belong to the original screenshot and are not part of the transparent stamp."
+  },
+  "referenceHashes": {
+    "primaryStyleReference": "cb49eb5e92bc28d42eadbcf6eb4927bef73f449c2a713c76d0b427990310b3bd",
+    "geographyReference": "806b4e0c51f7a439dfc2279c8cfc7dcc30397c5d795a3505877d5e496d80d7fd"
+  }
+}

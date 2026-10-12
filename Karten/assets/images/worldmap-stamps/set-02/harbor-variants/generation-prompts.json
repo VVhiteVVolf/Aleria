@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "status": "complete",
+  "parentMotif": 28,
+  "tool": "built-in image_gen",
+  "styleVersion": 2,
+  "transparentBackground": true,
+  "referenceImages": [
+    "Karten/assets/images/worldmap-stamps/style-tests/01-gaelic-farmhouse-approved.png",
+    "Karten/assets/images/worldmap-stamps/set-02/28-hafensiedlung.png"
+  ],
+  "promptTemplate": "Create ONE new orientation variant of the attached HARBOR SETTLEMENT, an isolated transparent Inkarnate map stamp. Use image 1, the APPROVED ROUND GAELIC FARMHOUSE, as the binding style reference. Use image 2, the EXISTING HARBOR SETTLEMENT, to preserve its three chubby cream cottages with terracotta roofs, chunky simple wooden pier and single little cream-sailed boat. Match these existing assets' simple playful atlas-doodle style, thick uneven dark-brown outlines, large rounded slightly wonky shapes, flat restrained watercolor colors and very low detail. Keep the exact same small-symbol detail level. Only a few short roof and plank marks. Same gently elevated three-quarter perspective, all buildings upright. Recompose the objects into the requested map direction, do not rotate the entire image.\n\nDIRECTION AND LAYOUT: [LAYOUT]\n\nKeep exactly three cottages, one simple pier and one sailboat. No additional props, landscape, ground patches, sea or water. Comfortable margin, no cropping. Transparent PNG with a genuine alpha channel, alpha=0 everywhere outside the objects and in open gaps. No shadows, glow, soft halos, backdrop, white outline, frame, pin shape, labels or compass arrows. Use solid pen-stroke cutout edges; no soft brown gradients around the objects.",
+  "assets": [
+    {
+      "id": "east",
+      "label": "Hafensiedlung – rechts/Osten",
+      "file": "28a-hafensiedlung-osten.png",
+      "layout": "EAST / RIGHT-facing harbor. Put the three cottages together on the LEFT half of the image. The pier starts at the right edge of the village and projects clearly HORIZONTALLY TO THE RIGHT, toward the right image edge. Place the sailboat alongside the outer right end of the pier. The main pier axis must read left-to-right on the page, not diagonally downward. Entire harbor opens to the RIGHT.",
+      "status": "generated",
+      "generationId": "exec-64996950-36b6-4bdd-a50e-2dda62d3ea05",
+      "sha256": "ccff1c5af8c0a4c855ad6b9de437bbb01eefe98611b05138f505baf118067c06",
+      "validation": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGBA",
+        "transparentFraction": 0.7076,
+        "alphaBoundingBox": [
+          33,
+          28,
+          1505,
+          1024
+        ],
+        "outerEdgeAlphaMax": 1,
+        "visibleBoundsAlphaAbove8": [
+          69,
+          168,
+          1503,
+          862
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "id": "north",
+      "label": "Hafensiedlung – Norden",
+      "file": "28b-hafensiedlung-norden.png",
+      "layout": "NORTH / UP-facing harbor. Put the three cottages in a low loose cluster in the LOWER third of the image. Leave a gap between them from which the pier extends clearly VERTICALLY UPWARD toward the TOP of the image, away behind the village. The pier must remain visible above the roofs and reach the upper third. Place the sailboat alongside its distant UPPER end, fully ABOVE the cottage cluster. The harbor opens to the TOP. The village is closest to the viewer, the mooring beyond it. Show sensible rear or side walls where needed; all cottages and the boat remain upright, their roofs and mast at the top. Do not rotate the illustration flat on the page.",
+      "status": "generated",
+      "generationId": "exec-d45ecab7-d501-432f-94c1-4c4ca4d80af3",
+      "sha256": "4565c9eaea0979e105353b1d28f73b94607e5d28ecaf2738a0ba950db707441b",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7021,
+        "alphaBoundingBox": [
+          33,
+          22,
+          1356,
+          1135
+        ],
+        "outerEdgeAlphaMax": 0,
+        "visibleBoundsAlphaAbove8": [
+          201,
+          61,
+          1192,
+          1076
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    },
+    {
+      "id": "south",
+      "label": "Hafensiedlung – Süden",
+      "file": "28c-hafensiedlung-sueden.png",
+      "layout": "SOUTH / DOWN-facing harbor. Put the three cottages together across the UPPER third of the image. The pier leaves the center of the village and projects clearly VERTICALLY DOWNWARD toward the BOTTOM of the image, toward the viewer. Place the sailboat alongside the outer LOWER end of the pier. The main pier axis must read top-to-bottom on the page rather than to the right. Entire harbor opens to the BOTTOM. All cottages and the boat remain upright.",
+      "status": "generated",
+      "generationId": "exec-deed209b-789b-48ed-8b68-141c33693d0e",
+      "sha256": "42db857705cd71e7be58080a4cb385705b035a33ab6948d4541fb529f42ad455",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7188,
+        "alphaBoundingBox": [
+          39,
+          51,
+          1356,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "visibleBoundsAlphaAbove8": [
+          213,
+          185,
+          1169,
+          1060
+        ],
+        "lightAndDarkPreviewReviewed": true
+      }
+    }
+  ],
+  "completedAt": "2026-10-09",
+  "assetCount": 3,
+  "promptAssembly": "Replace [LAYOUT] in promptTemplate with each asset layout; supply both referenceImages in order and transparent_background=true.",
+  "review": {
+    "orientations": "east/right, north/up, south/down; buildings upright",
+    "visibleHalos": false,
+    "originalGeneratedAlphaPreserved": true
+  }
+}

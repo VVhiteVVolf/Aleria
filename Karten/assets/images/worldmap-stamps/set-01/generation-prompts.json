@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "preset": "fantasy-worldmap-stamp",
+  "tool": "built-in image_gen",
+  "sourceOrder": "First two rows of user pin sheet, row-major left to right; verified against Karten/docs/location-symbol-types.json",
+  "styleReferences": [
+    "AleriaAlmanach/docs/art/references/fantasy-worldmap-stamp/01-castle-types.png",
+    "AleriaAlmanach/docs/art/references/fantasy-worldmap-stamp/02-walled-castle-settlement.png",
+    "AleriaAlmanach/docs/art/references/fantasy-worldmap-stamp/03-castle-variants.png"
+  ],
+  "commonPrompt": "Erstelle genau EINEN vollständig freigestellten Fantasy-Worldmap-Stamp: [MOTIV UND ARCHITEKTUR]. Berücksichtige [KULTUR, MATERIALIEN, FARBEN UND BESONDERE MERKMALE], soweit angegeben. Eine zusammengehörige Anlage, keine Motivsammlung, keine Vergleichstafel und keine Beschriftung.\n\nPERSPEKTIVE UND AUFBAU: Leicht isometrische Dreiviertel-Vogelperspektive, ungefähr 35–45 Grad von oben, mit nahezu parallelen Gebäudekanten und geringer perspektivischer Verkürzung. Dachflächen, Vorderseiten, eine Gebäudeseite und vorhandene Innenhöfe bleiben gut erkennbar. Alle Elemente folgen derselben Perspektive. Klare Hierarchie aus Hauptbauwerk und wenigen untergeordneten Teilen; markante Silhouette, auch als kleiner Kartenmarker lesbar. Vollständiges Motiv mittig mit etwa 5–8 Prozent transparentem Sicherheitsrand, keine abgeschnittenen Türme oder Dächer. Standardmäßig quadratische Arbeitsfläche; bei deutlich länglichem oder hohem Motiv Format anpassen, ohne die Architektur zu verzerren.\n\nZEICHENSTIL: Klassische handgezeichnete Fantasy-Kartenminiatur eines mittelalterlichen Strategie- oder Rollenspielatlas. Deutlich verspielt, charmant und leicht comichaft. Vereinfachte geometrische Baukörper, etwas überzeichnete Türme und Dächer, bewusst lebendige, stellenweise leicht schiefe Mauern und unregelmäßige Dachkanten. Mittelstarke dunkelbraune Tuschekonturen mit natürlicher Strichvariation; feinere Innenlinien und nur vereinzelte kurze Schraffuren. Geringer bis mittlerer Detailgrad: wenige gut platzierte Fenster, Tore und Zinnen, Mauerwerk durch einzelne Striche angedeutet, keine vollständig ausgezeichneten Stein- oder Dachziegelraster und keine winzigen Ornamentmassen.\n\nFARBE UND MATERIAL: Dezente Aquarellkolorierung in warmen Steingrautönen, Sand, Ocker, Erdbraun und gedämpftem Olivgrün, sparsame blaugraue Akzente. Motivbezogene Dach- oder Hausfarben bleiben gedeckt und matt. Dünne Lasuren, leicht ausgewaschene Farbflächen, dezente Pigmentunregelmäßigkeiten und feine Papierkörnung ausschließlich INNERHALB der illustrierten Objekte. Materialien durch wenige gemalte Flächen und zwei bis drei nahe Tonwerte andeuten. Lockere flache Schattierungen innerhalb der Baukörper, ohne realistisches Licht, Glanz oder plastische 3D-Modellierung.\n\nUMFANG: Nur die angefragte Architektur und unmittelbar zugehörige Mauern, Türme, kleine Hof- oder Wegstücke, einzelne Bäume und sparsame Dekorationen. Höfe nur als klar begrenzte bauliche Innenflächen, Wege nur kurz und konstruktionsgebunden; keine großzügige Bodenplatte, Insel, Landschaftsvignette oder Umgebung um die Anlage. Kleine Boden- oder Felsstücke nur, wenn sie unmittelbar eine Konstruktion tragen oder für ihre Lesbarkeit erforderlich sind. Keine weiträumigen Gras-, Erd-, Wald-, Berg-, Wasser-, Meeres- oder Lavaflächen, kein Himmel und keine dekorativen Wolken.\n\nFREISTELLUNG: Echtes transparentes PNG mit Alphakanal; Transparenz bei der Bilderzeugung ausdrücklich aktivieren. Alles außerhalb der tatsächlichen Motivsilhouette hat Alpha = 0, einschließlich freier Zwischenräume zwischen getrennten Gebäuden und Elementen, soweit dort kein ausdrücklich gezeichneter Hof oder Weg liegt. Saubere präzise Außenkanten; feine Kantenglättung nur unmittelbar an der Kontur, keine weichen Freistellungssäume oder auslaufenden Farbwaschungen. Kein weißer, grauer, farbiger oder pergamentartiger Hintergrund, kein gemaltes Schachbrett und keine Hintergrundtextur. Keine weißen Konturen oder Halos, Farbsäume, äußeren Schlagschatten, Bodenschatten, Kontaktschatten, Lichtscheine, Farbnebel oder dekorativen Flächen hinter dem Motiv.\n\nAUSSCHLÜSSE: Kein Fotorealismus, CGI oder 3D-Rendering; keine glatte Vektorgrafik, Hochglanz-Concept-Art, dramatische Perspektive oder komplexe Landschaft. Keine Texte, Zahlen, Rahmen, Raster oder Wasserzeichen. Die Referenzbilder dienen ausschließlich dem Zeichenstil und der Architekturlesbarkeit: ihre Hintergründe, Landschaftssockel, Schatten und Beschriftungen nicht übernehmen. Das Ergebnis zeigt nur den handgezeichneten, aquarellierten Stamp und lässt sich direkt auf eine bestehende Fantasy-Weltkarte setzen.",
+  "seriesInstructions": "Use case: stylized-concept. Asset type: Inkarnate worldmap custom stamp, one separate PNG asset. Verbindlich für diese Serie: KEIN tropfenförmiger Pin, KEIN Medaillon, KEINE Plakette, KEINE Beschriftung. Die Map-Pins bestimmen die Motivkategorie, nicht den Pin-Rahmen. Generiere ein frei geformtes eigenständiges Kartenobjekt mit echtem transparentem Hintergrund, in derselben Tusche-/Aquarellsprache wie die gespeicherten Referenzen. Keine fotorealistische malerische Ausarbeitung; vereinfachte handgezeichnete Miniatur. Standardformat quadratisch.",
+  "assets": [
+    {
+      "index": 1,
+      "label": "Ahnenbaum",
+      "file": "01-ahnenbaum.png",
+      "subject": "Ein einzelner ehrwürdiger Ahnenbaum mit kräftigem knorrigem Stamm, sichtbar verzweigten Wurzeln und einer runden, in wenige große Büschel gegliederten goldockerfarbenen Laubkrone. Freundliche stilisierte Eiche wie das erste Pin-Motiv. Nur der Baum; kein Erdfleck, kein Hain, keine Gebäude, keine Schrift und kein Leuchten.",
+      "specificInstruction": "",
+      "status": "rejected-style",
+      "generationId": "exec-3fa8892e-b082-4a58-b90a-97270822728e",
+      "sha256": "ffd28f32f4574527cc37dbff3f4a30bcaec3d7529cd2ebde7c7db3c1dc57532f",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGBA",
+        "transparentPixels": 730819,
+        "transparentFraction": 0.4647,
+        "alphaBoundingBox": [
+          0,
+          30,
+          1240,
+          1254
+        ],
+        "outerCanvasEdgesFullyTransparent": false
+      }
+    },
+    {
+      "index": 2,
+      "label": "Antike Ruine",
+      "file": "02-antike-ruine.png",
+      "subject": "Eine kleine antike Ruine aus sandgrauem Stein: zwei verwitterte Säulen tragen einen unvollständig erhaltenen Rundbogen; daneben eine abgebrochene Säulenbasis und wenige eng zugehörige Mauerreste. Klares Hauptmotiv Bogen, kein vollständiger Tempel, keine Landschaft.",
+      "specificInstruction": "",
+      "status": "rejected-style",
+      "generationId": "exec-b0a87680-91bc-4ad9-9698-74fb7563723b",
+      "sha256": "c7a8792114b11eaed5e6a04dbfd48c95ee052b817def25a6dbd5ad8250281034",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGBA",
+        "transparentPixels": 1030240,
+        "transparentFraction": 0.6552,
+        "alphaBoundingBox": [
+          23,
+          39,
+          1245,
+          1230
+        ],
+        "outerCanvasEdgesFullyTransparent": true
+      }
+    },
+    {
+      "index": 3,
+      "label": "Antikes Grab",
+      "file": "03-antikes-grab.png",
+      "subject": "Ein kleines antikes steinernes Mausoleum mit Dreiecksgiebel, zwei Frontsäulen, dunklem rechteckigem Zugang und wenigen breiten Eingangsstufen. Grauer verwitterter Stein, kompakter geschlossener Baukörper, ohne Friedhof oder große Bodenplatte.",
+      "specificInstruction": "",
+      "status": "rejected-style",
+      "generationId": "exec-8f45cf78-f59e-485d-8c1b-c61ee7804eac",
+      "sha256": "22b17d09430c8348092e927264288e9fb81032553ff4131c1a32651345ab2f66",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGBA",
+        "transparentPixels": 934521,
+        "transparentFraction": 0.5943,
+        "alphaBoundingBox": [
+          71,
+          23,
+          1234,
+          1222
+        ],
+        "outerCanvasEdgesFullyTransparent": true
+      }
+    },
+    {
+      "index": 4,
+      "label": "Anwesen",
+      "file": "04-anwesen.png",
+      "subject": "Ein stattliches, jedoch kompaktes ländliches Herrenhaus: heller zweigeschossiger verputzter Mittelbau, zwei kurze niedrigere Seitenflügel, gedeckte braune Walmdächer, zentrale Eingangstreppe und zwei kleine direkt am Haus stehende Sträucher. Kein Schloss, keine Maueranlage, kein Park.",
+      "specificInstruction": "",
+      "status": "rejected-style",
+      "generationId": "exec-03bc727c-f50c-4199-8da3-5ea8a6a1353a",
+      "sha256": "22d3df5dcae80a7d158ba4283529fc4a54cb15faa621241ca9d7e527d3130dd8",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGBA",
+        "transparentPixels": 1072891,
+        "transparentFraction": 0.6823,
+        "alphaBoundingBox": [
+          0,
+          29,
+          1222,
+          1254
+        ],
+        "outerCanvasEdgesFullyTransparent": false
+      }
+    },
+    {
+      "index": 5,
+      "label": "Ausgrabung",
+      "file": "05-ausgrabung.png",
+      "subject": "Eine kleine archäologische Ausgrabung: eine flache rechteckige freigelegte Steinfassung mit wenigen antiken Mauerresten, zwei hölzerne Stützen mit Querbalken und Seilzug, eine Schaufel und eine kleine Fundkiste. Nur eng begrenzte eigentliche Grube und Geräte, keinerlei ausgedehnte Erdfläche.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 6,
+      "label": "Außenposten",
+      "file": "06-aussenposten.png",
+      "subject": "Ein einzelner grauer mittelalterlicher Wachturm mit offenem Zinnenkranz, schmaler Tür und kurzer halbkreisförmiger Holzpalisade als kleinem geschütztem Vorbereich. Einfache bescheidene Grenzwacht, keine ausgedehnte Burg und kein Hügel als Untergrund.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 7,
+      "label": "Banditenlager",
+      "file": "07-banditenlager.png",
+      "subject": "Ein kleines verstecktes Banditenlager aus drei unregelmäßigen beigebraunen Zelten, einem kleinen Holzunterstand, zwei eng gruppierten Vorratskisten und einem runden Schild. Zwei einzelne Nadelbäume direkt hinter den Zelten rahmen die Anlage. Freie Zwischenräume transparent, kein Wald oder Waldboden.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 8,
+      "label": "Kleinstadt",
+      "file": "08-kleinstadt.png",
+      "subject": "Eine kompakte mittelalterliche Kleinstadt mit fünf charmant unregelmäßigen Fachwerkhäusern und einem etwas höheren zentralen Rathaus mit kleinem Turm und rotem Wimpel. Gedämpfte ziegelrote Dächer, heller Putz, vereinfachte Fenster, eine kurze enge gepflasterte Gasse. Keine Wehrmauer und keine großen offenen Bodenflächen.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 9,
+      "label": "Bauernhof",
+      "file": "09-bauernhof.png",
+      "subject": "Ein einzelner Bauernhof wie das Pin-Motiv: rustikales Wohnhaus mit ziegelrotem Dach, eine kleine Scheune und eine hölzerne Windmühle mit vier klar erkennbaren Flügeln; ein kurzer Zaunabschnitt. Drei zusammengehörige Gebäude, keine Feldlandschaft, keine Wiese.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 10,
+      "label": "Bauernsiedlung",
+      "file": "10-bauernsiedlung.png",
+      "subject": "Eine kleine bäuerliche Siedlung mit vier niedrigen Fachwerk- und Strohdachhäusern, kleiner zentraler Windmühle und wenigen eng am Haus gestapelten Getreidegarben. Freundlich und einfach, gedecktes Ocker und Terrakotta; keine ausgedehnten Äcker oder durchgehende Bodenplatte.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 11,
+      "label": "Monsterhort",
+      "file": "11-monsterhort.png",
+      "subject": "Ein kompakter Monsterhort: niedrige knorrige Felsöffnung wie ein dunkles maulartiges Versteck, darüber wenige kantige erdbraune Steine und verwachsene Wurzeln; tief im dunklen Eingang zwei winzige bernsteinfarbene Augen ohne Lichtschein. Kein Monster außerhalb, kein Bergmassiv und keine Umgebung.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 12,
+      "label": "Handelshof",
+      "file": "12-handelshof.png",
+      "subject": "Ein kleiner mittelalterlicher Handelshof: kompakter offener Fachwerkunterstand mit beigefarbener gestreifter Stoffmarkise, niedrigem Warentisch, zwei Fässern, ein paar gestapelten Kisten und einem angelehnten Wagenrad. Als baulicher Handelsplatz lesbar, keine Schildertexte und keine freie Hintergrundfläche.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 13,
+      "label": "Bergbausiedlung",
+      "file": "13-bergbausiedlung.png",
+      "subject": "Eine kleine Bergbausiedlung mit zwei rustikalen Holzhäusern, einem hölzern abgestützten Stolleneingang in einem kleinen unmittelbar zugehörigen Felsblock und einer kurzen Schiene mit beladenem Grubenwagen. Ein paar eng am Stollen liegende Steine; kein Bergzug und keine landschaftliche Bodenplatte.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 14,
+      "label": "Brauersiedlung",
+      "file": "14-brauersiedlung.png",
+      "subject": "Eine kleine Brauersiedlung: ein breites Fachwerk-Brauhaus mit zwei gemauerten Schornsteinen, drei kleinere Wohn- und Lagerhäuser, einige direkt an der Brauhauswand gestapelte Holzfässer und ein einzelner Hopfenrankbalken. Gedämpfte Ocker- und rotbraune Dächer, keine Rauchwolke, keine Felder.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 15,
+      "label": "Brückensiedlung",
+      "file": "15-brueckensiedlung.png",
+      "subject": "Eine steinerne Brücke mit zwei klar erkennbaren offenen Rundbögen und niedriger Brüstung, an jedem Ende ein kleines helles Torhaus mit rotbraunem Dach, zwei dicht angeschlossene Häuschen. Die Brücke ist das verbindende Hauptmotiv. Unter den Bögen vollständig transparent: kein Fluss, kein Wasser und keine Uferlandschaft.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 16,
+      "label": "Burgsiedlung",
+      "file": "16-burgsiedlung.png",
+      "subject": "Eine kleine Burgsiedlung mit schlichtem viereckigem steinernem Bergfried und Zinnenkranz, kurzer Wehrmauer und vier niedrigen Fachwerkhäusern mit gedeckten rotbraunen und olivfarbenen Dächern dicht an ihrem Fuß. Klein und überschaubar, keine Großburg und kein Landschaftssockel.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 17,
+      "label": "Diebesgilde",
+      "file": "17-diebesgilde.png",
+      "subject": "Ein verborgenes mittelalterliches Diebesgildenhaus: verwinkeltes dunkles Fachwerkgebäude mit zwei leicht schiefen spitzen Dachgiebeln, seitlicher Außentreppe, kleiner verschlossener Tür, hölzernem überhängendem Obergeschoss und zwei unscheinbaren Vorratskisten. Dunkles warmes Holz und schiefergraue Dächer, klare lesbare Konturen, keine Figuren.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 18,
+      "label": "Druidenhütte",
+      "file": "18-druidenhuette.png",
+      "subject": "Eine einzelne kleine runde Druidenhütte aus geflochtenen Ästen und Lehm, mit einem dicken moosgrünen grasbewachsenen Dach, rundlicher Holztür und drei kurzen rauen Trittsteinen. Zwei direkt hinter der Hütte stehende kleine Nadelbäume, ein knorriger Wurzelbogen am Eingang. Kein Waldboden, keine Waldkulisse und kein Rauch.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 19,
+      "label": "Festung",
+      "file": "19-festung.png",
+      "subject": "Eine kompakte robuste graue Festung mit vier gedrungenen quadratischen Zinnentürmen, dazwischen dicken Wehrmauern, einem breiten Torhaus und einem kleinen klar begrenzten steinernen Innenhof. Wenige Schießscharten, starke einfache Silhouette, ohne Wohnsiedlung oder Felsplateau.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 20,
+      "label": "Dunkle Festung",
+      "file": "20-dunkle-festung.png",
+      "subject": "Eine kleine düstere Fantasyfestung aus dunkelgrauem Stein mit asymmetrischem hohen Hauptturm, drei schmalen spitz bedachten Türmen, kompaktem Tor und kurzer zackiger Ringmauer. Sehr sparsame matte kupferrote Dachakzente, einige winzige dunkelrote Fenster ohne Leuchten. Keine Flammen, Rauch, Lava, Wolken oder Bergkulisse.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 21,
+      "label": "Berggipfel",
+      "file": "21-berggipfel.png",
+      "subject": "Ein einzelner schlanker markanter Berggipfel als freistehendes Kartenobjekt, aus drei bis vier stark vereinfachten kantigen blaugrauen Felsflächen mit kleiner matter heller Schneekappe und einem niedrigen kleinen Stein am Fuß. Keine weiteren Berge, keine Landschaft, keine Schrift oder Rune.",
+      "specificInstruction": "MOTIVAUSNAHME: Hier ist der ausdrücklich bestellte einzelne Berggipfel selbst das Hauptobjekt. Die allgemeine Vorgabe gegen Berge meint ausschließlich zusätzliche Umgebung. Den Gipfel vollständig freistellen, ohne Bodenfläche oder Nebel.",
+      "status": "pending"
+    },
+    {
+      "index": 22,
+      "label": "Hornlingslager",
+      "file": "22-hornlingslager.png",
+      "subject": "Ein kleines urtümliches Hornlingslager aus drei einfachen dunkelbraunen Fell- und Astzelten, deren Firste zwei stilisierte gebogene Hörner tragen, einer niedrigen krummen Holzpalisade, einem kleinen steinernen Feuerkreis und zwei direkt zugehörigen Tannen. Leicht wild und improvisiert, kein Menschen-Heerlager, keine Figuren, keine Rauchwolke, kein Waldboden.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 23,
+      "label": "Kaufmannssiedlung",
+      "file": "23-kaufmannssiedlung.png",
+      "subject": "Eine kompakte wohlhabende Kaufmannssiedlung mit vier zwei- bis dreigeschossigen schmalen Giebelhäusern, einem Lagerhaus mit kleinem Lastenkran, einem Marktstand und wenigen eng stehenden Fässern und Kisten. Hellockerfarbener Putz, dunkles Fachwerk, rostrote Dächer und eine kurze Pflastergasse; kein Hafenbecken oder Wasser.",
+      "specificInstruction": "",
+      "status": "pending"
+    },
+    {
+      "index": 24,
+      "label": "Schlachtfeld",
+      "file": "24-schlachtfeld.png",
+      "subject": "Ein kleiner symbolischer Schlachtfeld-Stamp aus einem gebrochenen hölzernen Wagenrad, zwei beschädigten Rundschilden, einem zerbrochenen Speer, zwei schräg stehenden Speeren und einem zerrissenen gedämpft rostroten Banner. Die wenigen Objekte als enges zusammengehöriges Überbleibsel einer Schlacht gruppieren, ohne Leichen, Blut, Landschaftsfläche oder Schlagschatten.",
+      "specificInstruction": "",
+      "status": "pending"
+    }
+  ],
+  "status": "stopped-by-user",
+  "stopReason": "Style rejected as far too detailed and not playful; later farmhouse test approved. Do not resume this batch automatically or reuse its prompts.",
+  "replacementStylePreset": "fantasy-worldmap-stamp, styleVersion 2"
+}

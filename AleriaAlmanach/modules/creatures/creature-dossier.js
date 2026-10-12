@@ -1,6 +1,8 @@
 import { resolveCombatProfile } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v4';
 import { getAttributeModifier, getEffectiveCombatAttribute } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
+import { CREATURE_IMAGE_LIBRARY } from './creature-images-model.js?v=20260919-creature-pages-v1';
+import { renderCreatureBestiaryReference } from './creature-bestiary-view.js?v=20261012-carreg-v1';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const signed = value => `${value >= 0 ? '+' : ''}${value}`;
@@ -25,9 +27,10 @@ export function renderCreatureDossier(creature, { includePortrait = true } = {})
   const actions = profile.actions.filter(action => ['weapon', 'technique', 'ability', 'spell', 'song', 'prayer'].includes(action.kind)
     && action.sourceId !== 'default-melee' && action.compatible !== false);
   const resourceNames = new Map(profile.resources.map(resource => [resource.id, resource.name]));
-  const portrait = /^https?:\/\//i.test(creature.portrait || '') ? creature.portrait : '';
+  const portrait = CREATURE_IMAGE_LIBRARY.normalizeImageUrl(creature.portrait) || '';
   return `<article class="creature-dossier" aria-label="Kreaturkarte ${escape(creature.name)}">
     <header class="creature-dossier-heading"><div><small>Bestiarium · ${escape(creature.size)} · Stufe ${creature.level}</small><h2>${escape(creature.name)}</h2><p>${escape(creature.habitat)}</p></div><strong>RK ${profile.totalDefense}</strong></header>
+    ${renderCreatureBestiaryReference(creature, escape)}
     <div class="creature-dossier-body">
       ${includePortrait && portrait ? `<figure><img src="${escape(portrait)}" alt="${escape(creature.name)}" decoding="async"><figcaption>${escape(creature.portraitCaption)}</figcaption></figure>` : ''}
       <div class="creature-dossier-content">

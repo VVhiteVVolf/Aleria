@@ -1,0 +1,68 @@
+{
+  "order": 9,
+  "slug": "moineal",
+  "label": "Moineal",
+  "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_21_26-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+  "userBrief": "Ausgeprägte Magierstadt, von den Stadttoren unten bei der Brücke bis oben ins Gebirge reichend.",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "status": "first-draft-ready",
+  "version": 1,
+  "tool": "built-in image_gen",
+  "stylePreset": "fantasy-worldmap-stamp",
+  "styleVersion": 2,
+  "transparentBackground": true,
+  "primaryStyleReference": "Karten/assets/images/worldmap-stamps/style-tests/01-gaelic-farmhouse-approved.png",
+  "file": "moineal-v01.png",
+  "designDescription": "An imposing Gaelic LOW-FANTASY mage city climbing uphill, with about 25 to 30 simple little town buildings on three linked levels. At the highest northern level: a broad academy hall and three distinct stout scholarly towers with generous blue-gray conical roofs, one small plain round observatory cap. Strong enclosing walls and a prominent paired southern gatehouse. Winding narrow internal stair-streets link levels. Magic identity is architectural and scholarly: no spell effects, crystals, floating buildings or luminous mist. Cream-gray masonry, slate and a little muted plum roofing. Keep the tiny atlas-symbol detail level",
+  "geographicLayout": "A mountain valley opens SOUTH toward an existing river bridge at roughly (64%,86%). City starts just NORTH of that bridge with its main gate around (61%,77%) and rises in a narrowing elongated footprint NORTH into the valley toward (52%,33%). Lower town around (56%,65%), middle quarter (51%,49%), academy upper quarter (51%,31%). Eastern wall follows the nearby river bend without crossing it; western edge leaves forested cliffs clear. Mountains form the surrounding map, not part of the stamp. Show architecture in a tapered stepped arrangement, no giant landscape or platform.",
+  "prompt": "Create ONE transparent Inkarnate worldmap stamp of Moineal — Gaelic town or city.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: An imposing Gaelic LOW-FANTASY mage city climbing uphill, with about 25 to 30 simple little town buildings on three linked levels. At the highest northern level: a broad academy hall and three distinct stout scholarly towers with generous blue-gray conical roofs, one small plain round observatory cap. Strong enclosing walls and a prominent paired southern gatehouse. Winding narrow internal stair-streets link levels. Magic identity is architectural and scholarly: no spell effects, crystals, floating buildings or luminous mist. Cream-gray masonry, slate and a little muted plum roofing. Keep the tiny atlas-symbol detail level. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nREFERENCE ROLES: Image 1 is the approved farmhouse, the PRIMARY STYLE reference. Image 2 is ONLY the north-up target MAP GEOGRAPHY and placement reference. Match the map's approximate canvas aspect ratio and layout. Colored diamond markers indicate location only, NOT a frame, emblem, background, or rigid city boundary. Never reproduce those markers, labels, terrain, mountain ranges, trees outside the settlement, river, sea, sky or background. Draw only the architecture and indispensable attached harbor elements. Buildings stand upright in the approved elevated three-quarter view while their footprint follows the north-up map. Keep all foundations on the indicated land; existing bridges remain part of the original map and should not be redrawn. Use the geographic directions below. Normalized positions are approximate centers, not exact requirements.\n\nGEOGRAPHIC LAYOUT: A mountain valley opens SOUTH toward an existing river bridge at roughly (64%,86%). City starts just NORTH of that bridge with its main gate around (61%,77%) and rises in a narrowing elongated footprint NORTH into the valley toward (52%,33%). Lower town around (56%,65%), middle quarter (51%,49%), academy upper quarter (51%,31%). Eastern wall follows the nearby river bend without crossing it; western edge leaves forested cliffs clear. Mountains form the surrounding map, not part of the stamp. Show architecture in a tapered stepped arrangement, no giant landscape or platform.\n\nTRANSPARENCY AND SIMPLICITY: Every exterior contour is a clean solid dark-brown pen stroke. Immediately outside it is fully transparent empty space, no brown gradient, blur, halo, glow, cast shadow or ground shadow. Free gaps and all water areas are transparent. Only small enclosed courtyards and narrow built streets may be filled; no continuous city ground plate. Do not add tiny surface marks to fill the canvas. All houses retain the farmhouse reference's playful simple shape language; cities may contain more houses but each stays equally simple.",
+  "geographyReferenceSize": [
+    656,
+    556
+  ],
+  "validation": {
+    "width": 1225,
+    "height": 1284,
+    "mode": "RGBA",
+    "transparentFraction": 0.709,
+    "transparentPixelCount": 1115259,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "visibleBoundsAlphaAbove8": [
+      329,
+      74,
+      1035,
+      1092
+    ],
+    "originalAlphaPreserved": true,
+    "originalBytesPreserved": true
+  },
+  "sourceImage": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11f40-a25b-73f1-8920-3ca29d7e34d6\\exec-8d0ce9e3-22ae-4fbe-a4fe-b59467820cf6.png",
+  "generationId": "exec-8d0ce9e3-22ae-4fbe-a4fe-b59467820cf6",
+  "sha256": "466223499d1f84f78917037b2e75f409d50f2f8cf3e9da212b5a8fb6bff0f2a8",
+  "review": {
+    "userApproved": false,
+    "batchFirstDraft": true,
+    "geographyReferenceInspected": true,
+    "preciseMapPlacementDeferred": true,
+    "optimizationDeferredByUser": true,
+    "note": "Erstentwurf auf Grundlage des freigegebenen Bauernhaus-Stils und des individuellen Kartenausschnitts. Keine Zwischenfreigabe erforderlich; individuelle Optimierung erfolgt spaeter.",
+    "lightAndDarkCompositeInspected": true,
+    "edgeInspection": "Auf heller und dunkler Vorschauunterlage visuell geprueft; keine sichtbaren aeusseren Halos oder Hintergrundrechtecke. Originaler Alphakanal unveraendert.",
+    "overviewLight": "../../batch-16-previews/overview-light.png",
+    "overviewDark": "../../batch-16-previews/overview-dark.png"
+  },
+  "referenceHashes": {
+    "primaryStyleReference": "cb49eb5e92bc28d42eadbcf6eb4927bef73f449c2a713c76d0b427990310b3bd",
+    "geographyReference": "bbf347127cf17ba53d33ea9f8468d0b3e47ec89113955159b57e714c91d8f28e"
+  }
+}

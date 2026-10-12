@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-11",
+  "characterName": "Owain Draig",
+  "setId": "set-04",
+  "theme": "Schalk und Schlagfertigkeit",
+  "referenceImage": "Referenzen/owain-draig-portraet.jpg",
+  "referenceSha256": "20ad9997b34c0ec48294b250a540e8a06390c997416bb7db68e784fde8846eda",
+  "promptFile": "Prompts/owain-draig-set-04-schalk-und-schlagfertigkeit.txt",
+  "sheetFile": "Sheets/owain-draig-set-04-schalk-und-schlagfertigkeit.png",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "emotion": "Kusszuwerfen",
+      "gesture": "A charming affectionate kiss sent to an unseen admirer: pursed lips, soft eyes, one gloved hand with fingertips just in front of his lips, palm angled outward as he blows the kiss. No hearts or added symbols."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "emotion": "Verschwiegenes Geheimnis",
+      "gesture": "An enigmatic small closed-mouth smile and knowing direct gaze; one gloved index finger held vertically against the center of his lips in a clear shushing gesture. The other fingers are naturally curled."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "emotion": "Gespielte Unschuld",
+      "gesture": "Comically innocent wide blue eyes and slightly pursed lips, brows lifted; shoulders raised and BOTH open hands held beside his shoulders in a clearly visible what-me shrug, five natural fingers per hand."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "emotion": "Ungläubiges Staunen",
+      "gesture": "Sudden incredulous surprise, eyes wide and mouth slightly rounded; one spread hand at the side of his cheek while the other recoils near the opposite shoulder, elbows kept inside the square."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "emotion": "Trockener Sarkasmus",
+      "gesture": "Half-lidded knowing eyes and a dry crooked smile; BOTH hands near shoulder height make clearly readable AIR QUOTES with the index and middle fingers slightly bent, the other fingers curled. No written quotation marks."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "emotion": "Theatralische Empörung",
+      "gesture": "Playfully offended, lifted inner brows and a dramatically open protesting mouth; one hand spread against his upper chest while the BACK of the other hand rests lightly against his forehead. Elegant exaggerated acting without changing face proportions."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "emotion": "Schadenfrohes Kichern",
+      "gesture": "Eyes narrowed with wicked amusement, shoulders slightly lifted; one loosely closed gloved hand lightly conceals a private snicker at his mouth, the other forearm tucked close to his ribs. A sly contained laugh, not a hearty open-mouth laugh."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "emotion": "Genervtes Augenrollen",
+      "gesture": "Eyes rolled upward, one brow high, lips pressed in a weary crooked line; one hand makes a small outward dismissive flick from the wrist with relaxed fingers. His other arm hangs easily, not a stop-palm pose."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "emotion": "Triumphierender Selbstspott",
+      "gesture": "A shameless self-aware cocky grin and raised eyebrow; one gloved THUMB points back at his own chest in an unmistakable yes-that-was-me gesture, with his other hand at his hip, within the upper-body framing."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "generationMode": "built-in image_gen",
+  "status": "erstellt, zerlegt und visuell geprüft",
+  "outputFolder": "Output/set-04",
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-11",
+    "reviewedAvatars": 9,
+    "passed": true
+  }
+}

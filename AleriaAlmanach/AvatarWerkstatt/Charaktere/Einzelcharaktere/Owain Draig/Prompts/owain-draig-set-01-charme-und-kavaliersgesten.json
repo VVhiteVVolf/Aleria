@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-11",
+  "characterName": "Owain Draig",
+  "setId": "set-01",
+  "theme": "Charme und Kavaliersgesten",
+  "referenceImage": "Referenzen/owain-draig-portraet.jpg",
+  "referenceSource": "Stammbäume\\assets\\images\\portraits\\haus-draig\\owain-draig.jpg",
+  "referenceSha256": "20ad9997b34c0ec48294b250a540e8a06390c997416bb7db68e784fde8846eda",
+  "promptFile": "Prompts/owain-draig-set-01-charme-und-kavaliersgesten.txt",
+  "sheetFile": "Sheets/owain-draig-set-01-charme-und-kavaliersgesten.png",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "emotion": "Charmante Begrüßung",
+      "gesture": "A welcoming, magnetic warm smile; one open hand raised near the chest, palm gently facing the visitor, relaxed shoulders."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "emotion": "Schmeichelndes Kompliment",
+      "gesture": "An appreciative soft smile and warm attentive eyes; slight head incline, one open palm indicating the unseen person courteously, the other hand at his own chest."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "emotion": "Flirtendes Augenzwinkern",
+      "gesture": "A playful knowing wink and asymmetric smile; fingertips lightly resting at his bearded chin, easy confident posture."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "emotion": "Schelmisches Zuflüstern",
+      "gesture": "A conspiratorial mischievous grin, eyes looking sideways; one cupped hand beside the mouth and a slight forward lean, never obscuring his face."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "emotion": "Herzliches Lachen",
+      "gesture": "A hearty attractive laugh with smiling narrowed eyes; shoulders relaxed, one hand resting against the lower ribs and the other loosely opened outward."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "emotion": "Galante Einladung",
+      "gesture": "An elegant inviting smile; one forearm sweeping gently outward to offer passage or an invitation to dance, open upward-facing palm, no partner shown."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "emotion": "Würdiger Dank",
+      "gesture": "A sincere appreciative smile, small respectful inclination of the head; one flat hand over the heart, the other arm relaxed."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "emotion": "Spielerische Herausforderung",
+      "gesture": "One eyebrow raised and a teasing confident smile; a relaxed hand makes a subtle beckoning gesture with naturally curled fingers, no rude gesture."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "emotion": "Aufrichtige Zuwendung",
+      "gesture": "An unusually tender earnest gaze and gentle closed-mouth smile; both hands extended slightly toward the unseen listener, palms open in a caring, reassuring offer."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "generationMode": "built-in image_gen",
+  "status": "erstellt, zerlegt und visuell geprüft",
+  "outputFolder": "Output/set-01",
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-11",
+    "reviewedAvatars": 9,
+    "passed": true
+  }
+}

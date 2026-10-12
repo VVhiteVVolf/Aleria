@@ -1,0 +1,873 @@
+{
+  "type": "aleria-creature-metadata-patch-plan",
+  "status": "local-draft",
+  "preparedAt": "2026-10-12T21:09:06.423Z",
+  "sourceReadAt": "2026-10-12T21:01:18.976Z",
+  "updates": [
+    {
+      "id": "companion-anaraut-gwrgi",
+      "name": "Gwrgi",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/vieh/haustiere/hunde/ponter",
+          "name": "Ponter",
+          "url": "/Bestiarium/tiere/vieh/haustiere/hunde/ponter/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-anaraut-merfyn",
+      "name": "Merfyn",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/ceffyl",
+          "name": "Ceffyl",
+          "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-cadfan-donn",
+      "name": "Donn",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/tirashan",
+          "name": "Tirashan",
+          "url": "/Bestiarium/tiere/pferde/tirashan/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-einion-greif",
+      "name": "Greif",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/rhyfel",
+          "name": "Rhyfel",
+          "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-eldfaxi",
+      "name": "Eldfaxi",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/hest",
+          "name": "Hest",
+          "url": "/Bestiarium/tiere/pferde/hest/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-galahad-sturmwind",
+      "name": "Sturmwind",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/drake",
+          "name": "Drake",
+          "url": "/Bestiarium/tiere/pferde/drake/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-gaul",
+      "name": "Gaul",
+      "expectedUpdateTime": "2026-10-11T19:48:25.665425Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/hest",
+          "name": "Hest",
+          "url": "/Bestiarium/tiere/pferde/hest/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-guinevere-scath",
+      "name": "Scath",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/vieh/haustiere/hunde/tryw",
+          "name": "Tryw",
+          "url": "/Bestiarium/tiere/vieh/haustiere/hunde/tryw/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-gwendolyn-flam",
+      "name": "Flam",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/ceffyl",
+          "name": "Ceffyl",
+          "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-heledd-mabli",
+      "name": "Mabli",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/vieh/haustiere/katzen/skjarn",
+          "name": "Skjarn",
+          "url": "/Bestiarium/tiere/vieh/haustiere/katzen/skjarn/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-idwal-drecksack",
+      "name": "Drecksack",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/equo",
+          "name": "Equo",
+          "url": "/Bestiarium/tiere/pferde/equo/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-mair-nia",
+      "name": "Nia",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/vieh/haustiere/hunde/bugail",
+          "name": "Bugail",
+          "url": "/Bestiarium/tiere/vieh/haustiere/hunde/bugail/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-mair-tiwlip",
+      "name": "Tiwlip",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/ceffyl",
+          "name": "Ceffyl",
+          "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-maredudd-cadarn",
+      "name": "Cadarn",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/ceffyl",
+          "name": "Ceffyl",
+          "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-meurig-emrys",
+      "name": "Emrys",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/ceffyl",
+          "name": "Ceffyl",
+          "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-oweta-heulwen",
+      "name": "Heulwen",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/rhyfel",
+          "name": "Rhyfel",
+          "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-rhiannon-mel",
+      "name": "Mél",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/rhyfel",
+          "name": "Rhyfel",
+          "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-steffan-guto",
+      "name": "Guto",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/vieh/haustiere/hunde/ponter",
+          "name": "Ponter",
+          "url": "/Bestiarium/tiere/vieh/haustiere/hunde/ponter/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-steffan-uther",
+      "name": "Uther",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/ceffyl",
+          "name": "Ceffyl",
+          "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-tanor",
+      "name": "Tanor",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/rhyfel",
+          "name": "Rhyfel",
+          "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-tegan-alaw",
+      "name": "Alaw",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/rhyfel",
+          "name": "Rhyfel",
+          "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-tegan-twm",
+      "name": "Twm",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/vieh/haustiere/hunde/brodgi",
+          "name": "Brodgi",
+          "url": "/Bestiarium/tiere/vieh/haustiere/hunde/brodgi/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-tudwal-ceiniog",
+      "name": "Ceiniog",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/rhyfel",
+          "name": "Rhyfel",
+          "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-uath",
+      "name": "Uath",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/pferde/rhyfel",
+          "name": "Rhyfel",
+          "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+        }
+      }
+    },
+    {
+      "id": "companion-ylva-freki",
+      "name": "Freki",
+      "expectedUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "updateMask": [
+        "bestiaryReference"
+      ],
+      "fields": {
+        "bestiaryReference": {
+          "id": "tiere/raubtiere/woelfe/gramnir",
+          "name": "Gramnir",
+          "url": "/Bestiarium/tiere/raubtiere/woelfe/gramnir/index.html"
+        }
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "id": "TTi084whHoSwVfIO6lsa",
+      "name": "Betty",
+      "species": "Langhaarige Hauskatze",
+      "reason": "Kein eindeutiges vorhandenes Art- oder Rasseprofil; Rasse nicht erfinden."
+    },
+    {
+      "id": "catalog-draig-lehensritter",
+      "name": "Draig Lehensritter",
+      "species": "Mensch",
+      "reason": "Mensch: ausgenommen"
+    },
+    {
+      "id": "catalog-draig-waffenknecht",
+      "name": "Draig Waffenknecht",
+      "species": "Mensch",
+      "reason": "Mensch: ausgenommen"
+    },
+    {
+      "id": "companion-cadfan-ciaran",
+      "name": "Cíaran",
+      "species": "Hund",
+      "reason": "Kein eindeutiges vorhandenes Art- oder Rasseprofil; Rasse nicht erfinden."
+    },
+    {
+      "id": "companion-gwendolyn-alwen",
+      "name": "Alwen",
+      "species": "Rotmilan",
+      "reason": "Kein eindeutiges vorhandenes Art- oder Rasseprofil; Rasse nicht erfinden."
+    },
+    {
+      "id": "companion-gwendolyn-olwen",
+      "name": "Olwen",
+      "species": "Rotmilan",
+      "reason": "Kein eindeutiges vorhandenes Art- oder Rasseprofil; Rasse nicht erfinden."
+    },
+    {
+      "id": "companion-idwal-distry",
+      "name": "Distry",
+      "species": "Rabe",
+      "reason": "Kein eindeutiges vorhandenes Art- oder Rasseprofil; Rasse nicht erfinden."
+    },
+    {
+      "id": "companion-maredudd-hari",
+      "name": "Hari",
+      "species": "Wachhund",
+      "reason": "Kein eindeutiges vorhandenes Art- oder Rasseprofil; Rasse nicht erfinden."
+    },
+    {
+      "id": "companion-tudwal-pryderi",
+      "name": "Pryderi",
+      "species": "Pfau",
+      "reason": "Kein eindeutiges vorhandenes Art- oder Rasseprofil; Rasse nicht erfinden."
+    },
+    {
+      "id": "plqTSIXrh6DZrPnsgOhi",
+      "name": "Æthel",
+      "species": "Eule",
+      "reason": "Kein eindeutiges vorhandenes Art- oder Rasseprofil; Rasse nicht erfinden."
+    }
+  ],
+  "builtinCoverage": [
+    {
+      "id": "catalog-schwarzer-zitteraal-raubritter",
+      "name": "Schwarzer Zitteraal Raubritter",
+      "species": "Mensch",
+      "bestiaryReference": null,
+      "exempt": true
+    },
+    {
+      "id": "catalog-schwarzer-zitteraal-schuetze",
+      "name": "Schwarzer Zitteraal Schütze",
+      "species": "Mensch",
+      "bestiaryReference": null,
+      "exempt": true
+    },
+    {
+      "id": "catalog-schwarzer-zitteraal-pluenderer",
+      "name": "Schwarzer Zitteraal Plünderer",
+      "species": "Mensch",
+      "bestiaryReference": null,
+      "exempt": true
+    },
+    {
+      "id": "catalog-draig-lehensritter",
+      "name": "Draig Lehensritter",
+      "species": "Mensch",
+      "bestiaryReference": null,
+      "exempt": true
+    },
+    {
+      "id": "catalog-draig-waffenknecht",
+      "name": "Draig Waffenknecht",
+      "species": "Mensch",
+      "bestiaryReference": null,
+      "exempt": true
+    },
+    {
+      "id": "catalog-draig-schuetze",
+      "name": "Draig Schütze",
+      "species": "Mensch",
+      "bestiaryReference": null,
+      "exempt": true
+    },
+    {
+      "id": "companion-tanor",
+      "name": "Tanor",
+      "species": "Rhyfel",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-eldfaxi",
+      "name": "Eldfaxi",
+      "species": "Hest-Mischling",
+      "bestiaryReference": {
+        "id": "tiere/pferde/hest",
+        "name": "Hest",
+        "url": "/Bestiarium/tiere/pferde/hest/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-gaul",
+      "name": "Gaul",
+      "species": "Hest",
+      "bestiaryReference": {
+        "id": "tiere/pferde/hest",
+        "name": "Hest",
+        "url": "/Bestiarium/tiere/pferde/hest/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-uath",
+      "name": "Uath",
+      "species": "Rhyfel",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "catalog-troll",
+      "name": "Landtroll",
+      "species": "Landtroll",
+      "bestiaryReference": {
+        "id": "wesen/trolle/landtroll",
+        "name": "Landtroll",
+        "url": "/Bestiarium/wesen/trolle/landtroll/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-ylva-freki",
+      "name": "Freki",
+      "species": "Gramnir · Nordwolf",
+      "bestiaryReference": {
+        "id": "tiere/raubtiere/woelfe/gramnir",
+        "name": "Gramnir",
+        "url": "/Bestiarium/tiere/raubtiere/woelfe/gramnir/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-idwal-distry",
+      "name": "Distry",
+      "species": "Rabe",
+      "bestiaryReference": null,
+      "exempt": false
+    },
+    {
+      "id": "companion-idwal-drecksack",
+      "name": "Drecksack",
+      "species": "Equo Pferd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/equo",
+        "name": "Equo",
+        "url": "/Bestiarium/tiere/pferde/equo/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-anaraut-merfyn",
+      "name": "Merfyn",
+      "species": "Ceffyl Hengst",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-anaraut-gwrgi",
+      "name": "Gwrgi",
+      "species": "Pontar Wachhund",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/hunde/ponter",
+        "name": "Ponter",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/ponter/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-galahad-sturmwind",
+      "name": "Sturmwind",
+      "species": "Drake-Pferd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/drake",
+        "name": "Drake",
+        "url": "/Bestiarium/tiere/pferde/drake/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-tegan-alaw",
+      "name": "Alaw",
+      "species": "Rhyfel-Pferd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-tegan-twm",
+      "name": "Twm",
+      "species": "Brodgi-Haushund",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/hunde/brodgi",
+        "name": "Brodgi",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/brodgi/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-gwendolyn-olwen",
+      "name": "Olwen",
+      "species": "Rotmilan",
+      "bestiaryReference": null,
+      "exempt": false
+    },
+    {
+      "id": "companion-gwendolyn-alwen",
+      "name": "Alwen",
+      "species": "Rotmilan",
+      "bestiaryReference": null,
+      "exempt": false
+    },
+    {
+      "id": "companion-gwendolyn-flam",
+      "name": "Flam",
+      "species": "Ceffyl-Pferd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-maredudd-cadarn",
+      "name": "Cadarn",
+      "species": "Ceffyl-Pferd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-maredudd-hari",
+      "name": "Hari",
+      "species": "Wachhund",
+      "bestiaryReference": null,
+      "exempt": false
+    },
+    {
+      "id": "companion-tudwal-ceiniog",
+      "name": "Ceiniog",
+      "species": "Rhyfel-Pferd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-tudwal-pryderi",
+      "name": "Pryderi",
+      "species": "Pfau",
+      "bestiaryReference": null,
+      "exempt": false
+    },
+    {
+      "id": "companion-cadfan-ciaran",
+      "name": "Cíaran",
+      "species": "Hund",
+      "bestiaryReference": null,
+      "exempt": false
+    },
+    {
+      "id": "companion-cadfan-donn",
+      "name": "Donn",
+      "species": "Tirashan-Pferd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/tirashan",
+        "name": "Tirashan",
+        "url": "/Bestiarium/tiere/pferde/tirashan/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-meurig-emrys",
+      "name": "Emrys",
+      "species": "Ceffyl-Pferd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-heledd-mabli",
+      "name": "Mabli",
+      "species": "Skjarn-Katze",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/katzen/skjarn",
+        "name": "Skjarn",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/skjarn/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-einion-greif",
+      "name": "Greif",
+      "species": "Rhyfel-Pferd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-steffan-guto",
+      "name": "Guto",
+      "species": "Ponter-Wachhund",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/hunde/ponter",
+        "name": "Ponter",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/ponter/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-steffan-uther",
+      "name": "Uther",
+      "species": "Ceffyl-Pferd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-rhiannon-mel",
+      "name": "Mél",
+      "species": "Rhyfel-Pferd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-mair-nia",
+      "name": "Nia",
+      "species": "Bugail-Hund",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/hunde/bugail",
+        "name": "Bugail",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/bugail/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-mair-tiwlip",
+      "name": "Tiwlip",
+      "species": "Ceffyl-Pferd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-oweta-heulwen",
+      "name": "Heulwen",
+      "species": "Rhyfel-Pferd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-guinevere-scath",
+      "name": "Scath",
+      "species": "Tryw-Jagdhündin",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/hunde/tryw",
+        "name": "Tryw",
+        "url": "/Bestiarium/tiere/vieh/haustiere/hunde/tryw/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-trevor-bwmbo",
+      "name": "Bwmbo",
+      "species": "Cenyric-Kater",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/katzen/cenyric",
+        "name": "Cenyric",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/cenyric/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-trevor-uffel",
+      "name": "Uffel",
+      "species": "Cenyric-Kater",
+      "bestiaryReference": {
+        "id": "tiere/vieh/haustiere/katzen/cenyric",
+        "name": "Cenyric",
+        "url": "/Bestiarium/tiere/vieh/haustiere/katzen/cenyric/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-trevor-struppi",
+      "name": "Struppi",
+      "species": "Rhyfel-Hengst",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-huw-dyreth",
+      "name": "Dyreth",
+      "species": "Rhyfel-Hengst",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "exempt": false
+    },
+    {
+      "id": "companion-tegwen-uffyrae",
+      "name": "Uffyrae",
+      "species": "Rhyfel-Stute",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "exempt": false
+    }
+  ],
+  "releaseNote": "Nur bestiaryReference mit Versionsvorbedingung aktualisieren. Keine vollständigen Kreaturbögen über bestehende Online-Dokumente importieren; keine LP, Ressourcen, Zustände, Besitzdaten oder Kampfverläufe verändern."
+}

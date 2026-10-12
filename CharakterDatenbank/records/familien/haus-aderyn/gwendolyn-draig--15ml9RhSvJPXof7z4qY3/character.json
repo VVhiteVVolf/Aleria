@@ -124,6 +124,7 @@
         "15ml9RhSvJPXof7z4qY3",
         "15ml9RhSvJPXof7z4qY3",
         "15ml9RhSvJPXof7z4qY3",
+        "15ml9RhSvJPXof7z4qY3",
         "3tQG5Y1HQiumAE7GY6Nn",
         "uiKiMFXC6OEWOdDenbiM",
         "uiKiMFXC6OEWOdDenbiM",
@@ -135,6 +136,11 @@
           "documentId": "15ml9RhSvJPXof7z4qY3",
           "createdAt": "2026-08-06T20:43:04.998Z",
           "updatedAt": "2026-08-09T07:47:38.856Z"
+        },
+        {
+          "documentId": "15ml9RhSvJPXof7z4qY3",
+          "createdAt": "",
+          "updatedAt": "2026-10-11T19:46:42.303Z"
         },
         {
           "documentId": "15ml9RhSvJPXof7z4qY3",
@@ -198,9 +204,10 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-05T22:55:55.677Z",
-    "sourceUpdatedAt": "2026-10-03T02:00:00.000Z",
+    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
+    "sourceUpdatedAt": "2026-10-11T19:46:42.303Z",
     "sourceDocumentIds": [
+      "15ml9RhSvJPXof7z4qY3",
       "15ml9RhSvJPXof7z4qY3",
       "15ml9RhSvJPXof7z4qY3",
       "15ml9RhSvJPXof7z4qY3",
@@ -210,7 +217,7 @@
       "XWJ6XXwvpESHR3zAXkJx",
       "XWJ6XXwvpESHR3zAXkJx"
     ],
-    "contentHash": "203df1f91342ddd17664c3fbc97f99d405f6c4ccbf475ba29c1a2e61ae1548b4"
+    "contentHash": "d5d5aa5f3f1bcb312cd7a94d53e910719d4671cb224c5665b5df43c304821238"
   },
   "local": {
     "notes": "",
@@ -1921,6 +1928,560 @@
         "status": "",
         "taxonomyPath": "",
         "updatedAt": "2026-08-09T07:47:38.856Z"
+      },
+      {
+        "id": "15ml9RhSvJPXof7z4qY3",
+        "name": "Gwendolyn Draig",
+        "inventory": {
+          "role": "Gräfin von Celtigerns Wacht · geb. Aderyn",
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon",
+              "label": "Waffen"
+            },
+            {
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "id": "armor"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "id": "potions",
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png"
+            },
+            {
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "label": "Dokumente"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges",
+              "id": "other"
+            }
+          ],
+          "characterId": "",
+          "carryValue": "Noch festlegen",
+          "items": [
+            {
+              "name": "Hauptwaffe",
+              "id": "item-mqu1vat1-0-w8ef",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "acquiredAt": "",
+              "type": "Waffe",
+              "icon": "*",
+              "imageFormat": "square",
+              "individualizedAt": "",
+              "image": "",
+              "itemDbKey": "",
+              "tags": "",
+              "category": "weapon",
+              "quantity": "1",
+              "equipped": false,
+              "imagePosition": "center",
+              "weight": "Noch festlegen",
+              "ownerCharacterId": "",
+              "ownerCharacterName": "",
+              "imageFit": "contain",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "combatDefinition": null,
+              "infoRows": [],
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "equipmentLink": null
+            },
+            {
+              "acquiredAt": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "id": "item-mqu1vat1-1-exvo",
+              "weight": "Noch festlegen",
+              "individualizedAt": "",
+              "category": "armor",
+              "quantity": "1",
+              "equipped": false,
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "image": "",
+              "itemDbKey": "",
+              "imagePosition": "center",
+              "tags": "",
+              "ownerCharacterId": "",
+              "ownerCharacterName": "",
+              "icon": "*",
+              "type": "Rüstung",
+              "imageFormat": "square",
+              "equipmentLink": null,
+              "combatDefinition": null,
+              "infoRows": [],
+              "imageFit": "contain",
+              "name": "Rüstung / Schutz"
+            },
+            {
+              "itemDbKey": "",
+              "tags": "",
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "id": "item-mqu1vat1-2-0fx2",
+              "itemStorageMode": "character",
+              "originItemDbKey": "",
+              "ownerCharacterName": "",
+              "icon": "*",
+              "individualizedAt": "",
+              "type": "Ausrüstung",
+              "equipped": false,
+              "quantity": "1",
+              "category": "equipment",
+              "name": "Reiseausrüstung",
+              "ownerCharacterId": "",
+              "imageFormat": "square",
+              "weight": "Noch festlegen",
+              "equipmentLink": null,
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "acquiredAt": "",
+              "infoRows": [],
+              "imagePosition": "center",
+              "imageFit": "contain",
+              "image": "",
+              "combatDefinition": null
+            },
+            {
+              "ownerCharacterId": "",
+              "category": "potions",
+              "imageFormat": "square",
+              "quantity": "1",
+              "equipped": false,
+              "ownerCharacterName": "",
+              "combatDefinition": null,
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "acquiredAt": "",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "imagePosition": "center",
+              "name": "Heil- oder Verbrauchsgut",
+              "image": "",
+              "weight": "Noch festlegen",
+              "type": "Trinktur",
+              "individualizedAt": "",
+              "icon": "*",
+              "id": "item-mqu1vat1-3-2lgm",
+              "imageFit": "contain",
+              "infoRows": [],
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "itemDbKey": "",
+              "tags": "",
+              "equipmentLink": null
+            },
+            {
+              "name": "Dokumente / Urkunden",
+              "combatDefinition": null,
+              "imagePosition": "center",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "acquiredAt": "",
+              "category": "documents",
+              "equipped": false,
+              "quantity": "1",
+              "type": "Dokument",
+              "itemDbKey": "",
+              "icon": "*",
+              "imageFormat": "square",
+              "image": "",
+              "tags": "",
+              "equipmentLink": null,
+              "ownerCharacterId": "",
+              "id": "item-mqu1vat1-4-ajrj",
+              "ownerCharacterName": "",
+              "imageFit": "contain",
+              "infoRows": [],
+              "weight": "Noch festlegen",
+              "individualizedAt": "",
+              "itemStorageMode": "character",
+              "originItemDbKey": "",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz."
+            },
+            {
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "infoRows": [],
+              "ownerCharacterId": "",
+              "combatDefinition": null,
+              "id": "item-mqu1vat1-5-5kao",
+              "itemDbKey": "",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "equipmentLink": null,
+              "ownerCharacterName": "",
+              "weight": "Noch festlegen",
+              "name": "Persönlicher Gegenstand",
+              "type": "Sonstiges",
+              "quantity": "1",
+              "equipped": false,
+              "category": "other",
+              "image": "",
+              "icon": "*",
+              "imageFormat": "square",
+              "acquiredAt": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "individualizedAt": "",
+              "tags": ""
+            },
+            {
+              "creatureId": "companion-gwendolyn-olwen",
+              "itemStorageMode": "character",
+              "originItemDbKey": "",
+              "registerCategory": "vieh",
+              "templateName": "Rotmilan",
+              "attributes": [],
+              "templateId": "",
+              "ownerCharacterId": "15ml9RhSvJPXof7z4qY3",
+              "ownerCharacterName": "Gwendolyn Draig",
+              "type": "Rotmilan",
+              "name": "Olwen",
+              "imagePosition": "center",
+              "instanceId": "gwendolyn-olwen",
+              "imageFormat": "portrait",
+              "individualizedAt": "2026-10-11T19:46:45.491Z",
+              "infoRows": [],
+              "imageFit": "contain",
+              "itemDbKey": "",
+              "id": "gwendolyn-olwen",
+              "description": "Der erste Rotmilan von Gwendolyn. Mittlerweile ziemlich alt und kurz vor dem Ende. Sie fliegt kaum noch. Aber wenn, dann zeigt sie, was sie noch drauf hat. Sie sitzt meistens auf dem Balkon von Gwendolyn und Galahad.",
+              "category": "companion",
+              "image": "https://i.imgur.com/4CNNfEa.png",
+              "quantity": "1"
+            },
+            {
+              "id": "gwendolyn-alwen",
+              "instanceId": "gwendolyn-alwen",
+              "imagePosition": "center",
+              "itemDbKey": "",
+              "individualizedAt": "2026-10-11T19:46:45.492Z",
+              "category": "companion",
+              "type": "Rotmilan",
+              "quantity": "1",
+              "templateId": "",
+              "attributes": [],
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "description": "Gwendolyns zweiter Milan. Tochter ihres ersten Milans, Olwen. Noch voller Energie; fliegt den halben Tag über der Burg herum.",
+              "creatureId": "companion-gwendolyn-alwen",
+              "registerCategory": "vieh",
+              "imageFit": "contain",
+              "templateName": "Rotmilan",
+              "imageFormat": "portrait",
+              "infoRows": [],
+              "image": "https://i.imgur.com/ISKbqc2.png",
+              "ownerCharacterName": "Gwendolyn Draig",
+              "ownerCharacterId": "15ml9RhSvJPXof7z4qY3",
+              "name": "Alwen"
+            },
+            {
+              "registerCategory": "pferde",
+              "id": "gwendolyn-flam",
+              "name": "Flam",
+              "templateName": "Ceffyl-Pferd",
+              "ownerCharacterId": "15ml9RhSvJPXof7z4qY3",
+              "itemDbKey": "",
+              "creatureId": "companion-gwendolyn-flam",
+              "type": "Ceffyl-Pferd",
+              "ownerCharacterName": "Gwendolyn Draig",
+              "imagePosition": "center",
+              "originItemDbKey": "",
+              "itemStorageMode": "character",
+              "attributes": [],
+              "templateId": "",
+              "category": "companion",
+              "quantity": "1",
+              "individualizedAt": "2026-10-11T19:46:45.492Z",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "image": "https://i.imgur.com/55FbPYH.jpeg",
+              "instanceId": "gwendolyn-flam",
+              "infoRows": [],
+              "description": "Das Ceffyl von Gwendolyn Draig. Ein herrisches Pferd. War schon bei den Rittern der Tafelrunde dabei."
+            }
+          ],
+          "moneyState": {
+            "gold": 0,
+            "silver": 0,
+            "totalCopper": 0,
+            "copper": 0
+          },
+          "portraitFormat": "portrait",
+          "portraitPosition": "top",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "title": "Charakter-Inventar",
+          "infoRows": [],
+          "companions": [
+            {
+              "attributes": [],
+              "name": "Olwen",
+              "role": "Gefährte",
+              "creatureId": "companion-gwendolyn-olwen",
+              "id": "companion-mqu1vat2-0-zz2n",
+              "infoRows": [],
+              "imageFit": "contain",
+              "species": "Rotmilan",
+              "summary": "Der erste Rotmilan von Gwendolyn. Mittlerweile ziemlich alt und kurz vor dem Ende. Sie fliegt kaum noch. Aber wenn, dann zeigt sie, was sie noch drauf hat. Sie sitzt meistens auf dem Balkon von Gwendolyn und Galahad.",
+              "inventoryItemId": "gwendolyn-olwen",
+              "status": "Gesund",
+              "description": "Der erste Rotmilan von Gwendolyn. Mittlerweile ziemlich alt und kurz vor dem Ende. Sie fliegt kaum noch. Aber wenn, dann zeigt sie, was sie noch drauf hat. Sie sitzt meistens auf dem Balkon von Gwendolyn und Galahad.",
+              "statusColor": "#5c7f20",
+              "image": "https://i.imgur.com/4CNNfEa.png",
+              "imageFormat": "portrait",
+              "imagePosition": "center"
+            },
+            {
+              "id": "companion-mqu1vat2-1-5e7l",
+              "name": "Alwen",
+              "role": "Gefährte",
+              "imageFit": "contain",
+              "infoRows": [],
+              "imagePosition": "center",
+              "description": "Gwendolyns zweiter Milan. Tochter ihres ersten Milans, Olwen. Noch voller Energie; fliegt den halben Tag über der Burg herum.",
+              "species": "Rotmilan",
+              "summary": "Gwendolyns zweiter Milan. Tochter ihres ersten Milans, Olwen. Noch voller Energie; fliegt den halben Tag über der Burg herum.",
+              "status": "Noch festlegen",
+              "attributes": [],
+              "image": "https://i.imgur.com/ISKbqc2.png",
+              "inventoryItemId": "gwendolyn-alwen",
+              "statusColor": "#5c7f20",
+              "creatureId": "companion-gwendolyn-alwen",
+              "imageFormat": "portrait"
+            },
+            {
+              "species": "Ceffyl-Pferd",
+              "summary": "Das Ceffyl von Gwendolyn Draig. Ein herrisches Pferd. War schon bei den Rittern der Tafelrunde dabei.",
+              "name": "Flam",
+              "role": "Reittier",
+              "creatureId": "companion-gwendolyn-flam",
+              "imagePosition": "center",
+              "id": "card-gwendolyn-flam",
+              "attributes": [],
+              "imageFit": "contain",
+              "description": "Das Ceffyl von Gwendolyn Draig. Ein herrisches Pferd. War schon bei den Rittern der Tafelrunde dabei.",
+              "status": "Gesund",
+              "infoRows": [],
+              "inventoryItemId": "gwendolyn-flam",
+              "imageFormat": "portrait",
+              "image": "https://i.imgur.com/55FbPYH.jpeg"
+            }
+          ],
+          "status": "Gesund",
+          "name": "Gwendolyn Draig",
+          "showInfoTable": false,
+          "equipmentQuiz": {
+            "updatedAt": "",
+            "resultText": "",
+            "open": false,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "step": 0,
+            "status": ""
+          },
+          "portraitFit": "cover",
+          "level": "Stufe",
+          "revision": 1791748002303,
+          "hitpoints": "TP / Zustand",
+          "moneyNotice": "",
+          "carryLabel": "Traglast",
+          "portrait": "https://i.imgur.com/ZX7jU9h.png",
+          "healthColor": "#5c7f20",
+          "attributes": [
+            {
+              "value": 8,
+              "label": "StA"
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ]
+        },
+        "updatedAt": "2026-10-11T19:46:42.303Z"
       },
       {
         "id": "15ml9RhSvJPXof7z4qY3",
@@ -10240,7 +10801,7 @@
   "character": {
     "id": "15ml9RhSvJPXof7z4qY3",
     "name": "Gwendolyn Draig",
-    "updatedAt": "2026-10-03T02:00:00.000Z",
+    "updatedAt": "2026-10-11T19:46:42.303Z",
     "combatProfile": {
       "abilities": [],
       "armorClass": {
@@ -11003,1907 +11564,21 @@
       "defenseBalanceVersion": 1
     },
     "inventory": {
-      "moneyState": {
-        "silver": 0,
-        "gold": 0,
-        "copper": 0,
-        "totalCopper": 0
-      },
-      "carryLabel": "Traglast",
       "role": "Gräfin von Celtigerns Wacht · geb. Aderyn",
-      "status": "Gesund",
-      "name": "Gwendolyn Draig",
-      "title": "Charakter-Inventar",
-      "items": [
-        {
-          "category": "weapon",
-          "quantity": "1",
-          "imageFormat": "square",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "icon": "*",
-          "id": "item-mqu1vat1-0-w8ef",
-          "name": "Hauptwaffe",
-          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
-          "imageFit": "contain",
-          "image": "",
-          "imagePosition": "center",
-          "type": "Waffe",
-          "weight": "Noch festlegen",
-          "infoRows": [],
-          "tags": "",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "infoRows": [],
-          "icon": "*",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "imageFit": "contain",
-          "description": "Rüstung, Kleidung oder magischer Schutz.",
-          "image": "",
-          "tags": "",
-          "type": "Rüstung",
-          "id": "item-mqu1vat1-1-exvo",
-          "quantity": "1",
-          "imagePosition": "center",
-          "imageFormat": "square",
-          "category": "armor",
-          "weight": "Noch festlegen",
-          "name": "Rüstung / Schutz",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
-          "type": "Ausrüstung",
-          "infoRows": [],
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "tags": "",
-          "image": "",
-          "imageFit": "contain",
-          "imagePosition": "center",
-          "name": "Reiseausrüstung",
-          "id": "item-mqu1vat1-2-0fx2",
-          "icon": "*",
-          "imageFormat": "square",
-          "weight": "Noch festlegen",
-          "quantity": "1",
-          "category": "equipment",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "name": "Heil- oder Verbrauchsgut",
-          "image": "",
-          "imagePosition": "center",
-          "id": "item-mqu1vat1-3-2lgm",
-          "quantity": "1",
-          "weight": "Noch festlegen",
-          "imageFormat": "square",
-          "category": "potions",
-          "tags": "",
-          "type": "Trinktur",
-          "infoRows": [],
-          "imageFit": "contain",
-          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
-          "icon": "*",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "icon": "*",
-          "imagePosition": "center",
-          "imageFit": "contain",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "weight": "Noch festlegen",
-          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
-          "infoRows": [],
-          "category": "documents",
-          "type": "Dokument",
-          "tags": "",
-          "image": "",
-          "quantity": "1",
-          "id": "item-mqu1vat1-4-ajrj",
-          "name": "Dokumente / Urkunden",
-          "imageFormat": "square",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
-          "name": "Persönlicher Gegenstand",
-          "id": "item-mqu1vat1-5-5kao",
-          "imagePosition": "center",
-          "infoRows": [],
-          "image": "",
-          "tags": "",
-          "imageFit": "contain",
-          "weight": "Noch festlegen",
-          "type": "Sonstiges",
-          "imageFormat": "square",
-          "quantity": "1",
-          "category": "other",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "icon": "*",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "acquiredAt": "",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "category": "weapon",
-          "combatDefinition": null,
-          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
-          "equipmentLink": null,
-          "equipped": false,
-          "icon": "*",
-          "id": "item-mshzfuja-0-li9n",
-          "image": "",
-          "imageFit": "contain",
-          "imageFormat": "square",
-          "imagePosition": "center",
-          "individualizedAt": "",
-          "infoRows": [],
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "name": "Hauptwaffe",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": "",
-          "quantity": "1",
-          "tags": "",
-          "type": "Waffe",
-          "weight": "Noch festlegen"
-        },
-        {
-          "acquiredAt": "",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "category": "armor",
-          "combatDefinition": null,
-          "description": "Rüstung, Kleidung oder magischer Schutz.",
-          "equipmentLink": null,
-          "equipped": false,
-          "icon": "*",
-          "id": "item-mshzfuja-1-utk6",
-          "image": "",
-          "imageFit": "contain",
-          "imageFormat": "square",
-          "imagePosition": "center",
-          "individualizedAt": "",
-          "infoRows": [],
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "name": "Rüstung / Schutz",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": "",
-          "quantity": "1",
-          "tags": "",
-          "type": "Rüstung",
-          "weight": "Noch festlegen"
-        },
-        {
-          "acquiredAt": "",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "category": "equipment",
-          "combatDefinition": null,
-          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
-          "equipmentLink": null,
-          "equipped": false,
-          "icon": "*",
-          "id": "item-mshzfuja-2-jwrl",
-          "image": "",
-          "imageFit": "contain",
-          "imageFormat": "square",
-          "imagePosition": "center",
-          "individualizedAt": "",
-          "infoRows": [],
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "name": "Reiseausrüstung",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": "",
-          "quantity": "1",
-          "tags": "",
-          "type": "Ausrüstung",
-          "weight": "Noch festlegen"
-        },
-        {
-          "acquiredAt": "",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "category": "potions",
-          "combatDefinition": null,
-          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
-          "equipmentLink": null,
-          "equipped": false,
-          "icon": "*",
-          "id": "item-mshzfuja-3-srq2",
-          "image": "",
-          "imageFit": "contain",
-          "imageFormat": "square",
-          "imagePosition": "center",
-          "individualizedAt": "",
-          "infoRows": [],
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "name": "Heil- oder Verbrauchsgut",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": "",
-          "quantity": "1",
-          "tags": "",
-          "type": "Trinktur",
-          "weight": "Noch festlegen"
-        },
-        {
-          "acquiredAt": "",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "category": "documents",
-          "combatDefinition": null,
-          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
-          "equipmentLink": null,
-          "equipped": false,
-          "icon": "*",
-          "id": "item-mshzfuja-4-1364",
-          "image": "",
-          "imageFit": "contain",
-          "imageFormat": "square",
-          "imagePosition": "center",
-          "individualizedAt": "",
-          "infoRows": [],
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "name": "Dokumente / Urkunden",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": "",
-          "quantity": "1",
-          "tags": "",
-          "type": "Dokument",
-          "weight": "Noch festlegen"
-        },
-        {
-          "acquiredAt": "",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "category": "other",
-          "combatDefinition": null,
-          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
-          "equipmentLink": null,
-          "equipped": false,
-          "icon": "*",
-          "id": "item-mshzfuja-5-iyuv",
-          "image": "",
-          "imageFit": "contain",
-          "imageFormat": "square",
-          "imagePosition": "center",
-          "individualizedAt": "",
-          "infoRows": [],
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "name": "Persönlicher Gegenstand",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": "",
-          "quantity": "1",
-          "tags": "",
-          "type": "Sonstiges",
-          "weight": "Noch festlegen"
-        },
-        {
-          "category": "weapon",
-          "quantity": "1",
-          "imageFormat": "square",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "icon": "*",
-          "id": "item-mqu1vat1-0-w8ef",
-          "name": "Hauptwaffe",
-          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
-          "imageFit": "contain",
-          "image": "",
-          "imagePosition": "center",
-          "type": "Waffe",
-          "weight": "Noch festlegen",
-          "infoRows": [],
-          "tags": "",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "infoRows": [],
-          "icon": "*",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "imageFit": "contain",
-          "description": "Rüstung, Kleidung oder magischer Schutz.",
-          "image": "",
-          "tags": "",
-          "type": "Rüstung",
-          "id": "item-mqu1vat1-1-exvo",
-          "quantity": "1",
-          "imagePosition": "center",
-          "imageFormat": "square",
-          "category": "armor",
-          "weight": "Noch festlegen",
-          "name": "Rüstung / Schutz",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
-          "type": "Ausrüstung",
-          "infoRows": [],
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "tags": "",
-          "image": "",
-          "imageFit": "contain",
-          "imagePosition": "center",
-          "name": "Reiseausrüstung",
-          "id": "item-mqu1vat1-2-0fx2",
-          "icon": "*",
-          "imageFormat": "square",
-          "weight": "Noch festlegen",
-          "quantity": "1",
-          "category": "equipment",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "name": "Heil- oder Verbrauchsgut",
-          "image": "",
-          "imagePosition": "center",
-          "id": "item-mqu1vat1-3-2lgm",
-          "quantity": "1",
-          "weight": "Noch festlegen",
-          "imageFormat": "square",
-          "category": "potions",
-          "tags": "",
-          "type": "Trinktur",
-          "infoRows": [],
-          "imageFit": "contain",
-          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
-          "icon": "*",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "icon": "*",
-          "imagePosition": "center",
-          "imageFit": "contain",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "weight": "Noch festlegen",
-          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
-          "infoRows": [],
-          "category": "documents",
-          "type": "Dokument",
-          "tags": "",
-          "image": "",
-          "quantity": "1",
-          "id": "item-mqu1vat1-4-ajrj",
-          "name": "Dokumente / Urkunden",
-          "imageFormat": "square",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
-          "name": "Persönlicher Gegenstand",
-          "id": "item-mqu1vat1-5-5kao",
-          "imagePosition": "center",
-          "infoRows": [],
-          "image": "",
-          "tags": "",
-          "imageFit": "contain",
-          "weight": "Noch festlegen",
-          "type": "Sonstiges",
-          "imageFormat": "square",
-          "quantity": "1",
-          "category": "other",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "icon": "*",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "category": "weapon",
-          "quantity": "1",
-          "imageFormat": "square",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "icon": "*",
-          "id": "item-mqu1vat1-0-w8ef",
-          "name": "Hauptwaffe",
-          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
-          "imageFit": "contain",
-          "image": "",
-          "imagePosition": "center",
-          "type": "Waffe",
-          "weight": "Noch festlegen",
-          "infoRows": [],
-          "tags": "",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "infoRows": [],
-          "icon": "*",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "imageFit": "contain",
-          "description": "Rüstung, Kleidung oder magischer Schutz.",
-          "image": "",
-          "tags": "",
-          "type": "Rüstung",
-          "id": "item-mqu1vat1-1-exvo",
-          "quantity": "1",
-          "imagePosition": "center",
-          "imageFormat": "square",
-          "category": "armor",
-          "weight": "Noch festlegen",
-          "name": "Rüstung / Schutz",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
-          "type": "Ausrüstung",
-          "infoRows": [],
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "tags": "",
-          "image": "",
-          "imageFit": "contain",
-          "imagePosition": "center",
-          "name": "Reiseausrüstung",
-          "id": "item-mqu1vat1-2-0fx2",
-          "icon": "*",
-          "imageFormat": "square",
-          "weight": "Noch festlegen",
-          "quantity": "1",
-          "category": "equipment",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "name": "Heil- oder Verbrauchsgut",
-          "image": "",
-          "imagePosition": "center",
-          "id": "item-mqu1vat1-3-2lgm",
-          "quantity": "1",
-          "weight": "Noch festlegen",
-          "imageFormat": "square",
-          "category": "potions",
-          "tags": "",
-          "type": "Trinktur",
-          "infoRows": [],
-          "imageFit": "contain",
-          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
-          "icon": "*",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "icon": "*",
-          "imagePosition": "center",
-          "imageFit": "contain",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "weight": "Noch festlegen",
-          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
-          "infoRows": [],
-          "category": "documents",
-          "type": "Dokument",
-          "tags": "",
-          "image": "",
-          "quantity": "1",
-          "id": "item-mqu1vat1-4-ajrj",
-          "name": "Dokumente / Urkunden",
-          "imageFormat": "square",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
-          "name": "Persönlicher Gegenstand",
-          "id": "item-mqu1vat1-5-5kao",
-          "imagePosition": "center",
-          "infoRows": [],
-          "image": "",
-          "tags": "",
-          "imageFit": "contain",
-          "weight": "Noch festlegen",
-          "type": "Sonstiges",
-          "imageFormat": "square",
-          "quantity": "1",
-          "category": "other",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "icon": "*",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "category": "weapon",
-          "quantity": "1",
-          "imageFormat": "square",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "icon": "*",
-          "id": "item-mqu1vat1-0-w8ef",
-          "name": "Hauptwaffe",
-          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
-          "imageFit": "contain",
-          "image": "",
-          "imagePosition": "center",
-          "type": "Waffe",
-          "weight": "Noch festlegen",
-          "infoRows": [],
-          "tags": "",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "infoRows": [],
-          "icon": "*",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "imageFit": "contain",
-          "description": "Rüstung, Kleidung oder magischer Schutz.",
-          "image": "",
-          "tags": "",
-          "type": "Rüstung",
-          "id": "item-mqu1vat1-1-exvo",
-          "quantity": "1",
-          "imagePosition": "center",
-          "imageFormat": "square",
-          "category": "armor",
-          "weight": "Noch festlegen",
-          "name": "Rüstung / Schutz",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
-          "type": "Ausrüstung",
-          "infoRows": [],
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "tags": "",
-          "image": "",
-          "imageFit": "contain",
-          "imagePosition": "center",
-          "name": "Reiseausrüstung",
-          "id": "item-mqu1vat1-2-0fx2",
-          "icon": "*",
-          "imageFormat": "square",
-          "weight": "Noch festlegen",
-          "quantity": "1",
-          "category": "equipment",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "name": "Heil- oder Verbrauchsgut",
-          "image": "",
-          "imagePosition": "center",
-          "id": "item-mqu1vat1-3-2lgm",
-          "quantity": "1",
-          "weight": "Noch festlegen",
-          "imageFormat": "square",
-          "category": "potions",
-          "tags": "",
-          "type": "Trinktur",
-          "infoRows": [],
-          "imageFit": "contain",
-          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
-          "icon": "*",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "icon": "*",
-          "imagePosition": "center",
-          "imageFit": "contain",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "weight": "Noch festlegen",
-          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
-          "infoRows": [],
-          "category": "documents",
-          "type": "Dokument",
-          "tags": "",
-          "image": "",
-          "quantity": "1",
-          "id": "item-mqu1vat1-4-ajrj",
-          "name": "Dokumente / Urkunden",
-          "imageFormat": "square",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
-          "name": "Persönlicher Gegenstand",
-          "id": "item-mqu1vat1-5-5kao",
-          "imagePosition": "center",
-          "infoRows": [],
-          "image": "",
-          "tags": "",
-          "imageFit": "contain",
-          "weight": "Noch festlegen",
-          "type": "Sonstiges",
-          "imageFormat": "square",
-          "quantity": "1",
-          "category": "other",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "icon": "*",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "category": "weapon",
-          "quantity": "1",
-          "imageFormat": "square",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "icon": "*",
-          "id": "item-mqu1vat1-0-w8ef",
-          "name": "Hauptwaffe",
-          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
-          "imageFit": "contain",
-          "image": "",
-          "imagePosition": "center",
-          "type": "Waffe",
-          "weight": "Noch festlegen",
-          "infoRows": [],
-          "tags": "",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "infoRows": [],
-          "icon": "*",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "imageFit": "contain",
-          "description": "Rüstung, Kleidung oder magischer Schutz.",
-          "image": "",
-          "tags": "",
-          "type": "Rüstung",
-          "id": "item-mqu1vat1-1-exvo",
-          "quantity": "1",
-          "imagePosition": "center",
-          "imageFormat": "square",
-          "category": "armor",
-          "weight": "Noch festlegen",
-          "name": "Rüstung / Schutz",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
-          "type": "Ausrüstung",
-          "infoRows": [],
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "value": 4,
-              "label": "Wert"
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "tags": "",
-          "image": "",
-          "imageFit": "contain",
-          "imagePosition": "center",
-          "name": "Reiseausrüstung",
-          "id": "item-mqu1vat1-2-0fx2",
-          "icon": "*",
-          "imageFormat": "square",
-          "weight": "Noch festlegen",
-          "quantity": "1",
-          "category": "equipment",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "name": "Heil- oder Verbrauchsgut",
-          "image": "",
-          "imagePosition": "center",
-          "id": "item-mqu1vat1-3-2lgm",
-          "quantity": "1",
-          "weight": "Noch festlegen",
-          "imageFormat": "square",
-          "category": "potions",
-          "tags": "",
-          "type": "Trinktur",
-          "infoRows": [],
-          "imageFit": "contain",
-          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
-          "icon": "*",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "value": 6,
-              "label": "Zuverlaessigkeit"
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "icon": "*",
-          "imagePosition": "center",
-          "imageFit": "contain",
-          "attributes": [
-            {
-              "label": "Schaden",
-              "value": 5
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "label": "Seltenheit",
-              "value": 2
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "label": "Handhabung",
-              "value": 5
-            }
-          ],
-          "weight": "Noch festlegen",
-          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
-          "infoRows": [],
-          "category": "documents",
-          "type": "Dokument",
-          "tags": "",
-          "image": "",
-          "quantity": "1",
-          "id": "item-mqu1vat1-4-ajrj",
-          "name": "Dokumente / Urkunden",
-          "imageFormat": "square",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        },
-        {
-          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
-          "name": "Persönlicher Gegenstand",
-          "id": "item-mqu1vat1-5-5kao",
-          "imagePosition": "center",
-          "infoRows": [],
-          "image": "",
-          "tags": "",
-          "imageFit": "contain",
-          "weight": "Noch festlegen",
-          "type": "Sonstiges",
-          "imageFormat": "square",
-          "quantity": "1",
-          "category": "other",
-          "attributes": [
-            {
-              "value": 5,
-              "label": "Schaden"
-            },
-            {
-              "label": "Schutz",
-              "value": 3
-            },
-            {
-              "label": "Wert",
-              "value": 4
-            },
-            {
-              "value": 2,
-              "label": "Seltenheit"
-            },
-            {
-              "label": "Zuverlaessigkeit",
-              "value": 6
-            },
-            {
-              "value": 5,
-              "label": "Handhabung"
-            }
-          ],
-          "icon": "*",
-          "acquiredAt": "",
-          "combatDefinition": null,
-          "equipmentLink": null,
-          "equipped": false,
-          "individualizedAt": "",
-          "itemDbKey": "",
-          "itemStorageMode": "character",
-          "originItemDbKey": "",
-          "ownerCharacterId": "",
-          "ownerCharacterName": ""
-        }
-      ],
-      "moneyNotice": "",
-      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
       "categories": [
         {
           "icon": "https://i.imgur.com/YaUQREQ.png",
-          "label": "Waffen",
-          "id": "weapon"
+          "id": "weapon",
+          "label": "Waffen"
         },
         {
+          "label": "Rüstung",
           "icon": "https://i.imgur.com/5qZtUiY.png",
-          "id": "armor",
-          "label": "Rüstung"
+          "id": "armor"
         },
         {
-          "label": "Ausrüstung",
           "id": "equipment",
+          "label": "Ausrüstung",
           "icon": "https://i.imgur.com/yMj2CQf.png"
         },
         {
@@ -12912,520 +11587,530 @@
           "icon": "https://i.imgur.com/gwujEaL.png"
         },
         {
-          "label": "Dokumente",
           "id": "documents",
-          "icon": "https://i.imgur.com/urdalGm.png"
-        },
-        {
-          "id": "other",
-          "label": "Sonstiges",
-          "icon": "https://i.imgur.com/lgeevvn.png"
-        },
-        {
-          "icon": "https://i.imgur.com/YaUQREQ.png",
-          "id": "weapon",
-          "label": "Waffen"
-        },
-        {
-          "icon": "https://i.imgur.com/yMj2CQf.png",
-          "id": "equipment",
-          "label": "Ausrüstung"
-        },
-        {
-          "icon": "https://i.imgur.com/gwujEaL.png",
-          "id": "potions",
-          "label": "Trinkturen"
-        },
-        {
           "icon": "https://i.imgur.com/urdalGm.png",
-          "id": "documents",
           "label": "Dokumente"
         },
         {
           "icon": "https://i.imgur.com/lgeevvn.png",
-          "id": "other",
-          "label": "Sonstiges"
-        },
-        {
-          "label": "Waffen",
-          "icon": "https://i.imgur.com/YaUQREQ.png",
-          "id": "weapon"
-        },
-        {
-          "id": "armor",
-          "label": "Rüstung",
-          "icon": "https://i.imgur.com/5qZtUiY.png"
-        },
-        {
-          "id": "documents",
-          "label": "Dokumente",
-          "icon": "https://i.imgur.com/urdalGm.png"
-        },
-        {
           "label": "Sonstiges",
-          "icon": "https://i.imgur.com/lgeevvn.png",
           "id": "other"
-        },
-        {
-          "id": "weapon",
-          "label": "Waffen",
-          "icon": "https://i.imgur.com/YaUQREQ.png"
-        },
-        {
-          "label": "Rüstung",
-          "icon": "https://i.imgur.com/5qZtUiY.png",
-          "id": "armor"
-        },
-        {
-          "id": "potions",
-          "icon": "https://i.imgur.com/gwujEaL.png",
-          "label": "Trinkturen"
         }
       ],
-      "level": "Stufe",
-      "infoRows": [
+      "characterId": "",
+      "carryValue": "Noch festlegen",
+      "items": [
         {
+          "name": "Hauptwaffe",
+          "id": "item-mqu1vat1-0-w8ef",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "acquiredAt": "",
+          "type": "Waffe",
           "icon": "*",
-          "label": "Status",
-          "value": "Gesund"
+          "imageFormat": "square",
+          "individualizedAt": "",
+          "image": "",
+          "itemDbKey": "",
+          "tags": "",
+          "category": "weapon",
+          "quantity": "1",
+          "equipped": false,
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "imageFit": "contain",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "combatDefinition": null,
+          "infoRows": [],
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "equipmentLink": null
         },
         {
+          "acquiredAt": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "id": "item-mqu1vat1-1-exvo",
+          "weight": "Noch festlegen",
+          "individualizedAt": "",
+          "category": "armor",
+          "quantity": "1",
+          "equipped": false,
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "image": "",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "tags": "",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
           "icon": "*",
-          "label": "TP / Zustand",
-          "value": "Noch festlegen"
+          "type": "Rüstung",
+          "imageFormat": "square",
+          "equipmentLink": null,
+          "combatDefinition": null,
+          "infoRows": [],
+          "imageFit": "contain",
+          "name": "Rüstung / Schutz"
         },
         {
+          "itemDbKey": "",
+          "tags": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "id": "item-mqu1vat1-2-0fx2",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "ownerCharacterName": "",
           "icon": "*",
-          "label": "Geld",
-          "value": "0 Gold, 0 Silber, 0 Kupfer"
+          "individualizedAt": "",
+          "type": "Ausrüstung",
+          "equipped": false,
+          "quantity": "1",
+          "category": "equipment",
+          "name": "Reiseausrüstung",
+          "ownerCharacterId": "",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "equipmentLink": null,
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "acquiredAt": "",
+          "infoRows": [],
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "image": "",
+          "combatDefinition": null
         },
         {
+          "ownerCharacterId": "",
+          "category": "potions",
+          "imageFormat": "square",
+          "quantity": "1",
+          "equipped": false,
+          "ownerCharacterName": "",
+          "combatDefinition": null,
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "acquiredAt": "",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "name": "Heil- oder Verbrauchsgut",
+          "image": "",
+          "weight": "Noch festlegen",
+          "type": "Trinktur",
+          "individualizedAt": "",
           "icon": "*",
-          "label": "Tragkapazität",
-          "value": "Noch festlegen"
+          "id": "item-mqu1vat1-3-2lgm",
+          "imageFit": "contain",
+          "infoRows": [],
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "itemDbKey": "",
+          "tags": "",
+          "equipmentLink": null
         },
         {
+          "name": "Dokumente / Urkunden",
+          "combatDefinition": null,
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "acquiredAt": "",
+          "category": "documents",
+          "equipped": false,
+          "quantity": "1",
+          "type": "Dokument",
+          "itemDbKey": "",
           "icon": "*",
-          "label": "Rolle",
-          "value": "Gräfin von Celtigerns Wacht · geb. Aderyn"
+          "imageFormat": "square",
+          "image": "",
+          "tags": "",
+          "equipmentLink": null,
+          "ownerCharacterId": "",
+          "id": "item-mqu1vat1-4-ajrj",
+          "ownerCharacterName": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "individualizedAt": "",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz."
         },
         {
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "infoRows": [],
+          "ownerCharacterId": "",
+          "combatDefinition": null,
+          "id": "item-mqu1vat1-5-5kao",
+          "itemDbKey": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "equipmentLink": null,
+          "ownerCharacterName": "",
+          "weight": "Noch festlegen",
+          "name": "Persönlicher Gegenstand",
+          "type": "Sonstiges",
+          "quantity": "1",
+          "equipped": false,
+          "category": "other",
+          "image": "",
           "icon": "*",
-          "label": "Fraktion",
-          "value": "Noch festlegen"
+          "imageFormat": "square",
+          "acquiredAt": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "individualizedAt": "",
+          "tags": ""
         },
         {
-          "icon": "*",
-          "label": "Aufenthalt",
-          "value": "Noch festlegen"
+          "creatureId": "companion-gwendolyn-olwen",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "registerCategory": "vieh",
+          "templateName": "Rotmilan",
+          "attributes": [],
+          "templateId": "",
+          "ownerCharacterId": "15ml9RhSvJPXof7z4qY3",
+          "ownerCharacterName": "Gwendolyn Draig",
+          "type": "Rotmilan",
+          "name": "Olwen",
+          "imagePosition": "center",
+          "instanceId": "gwendolyn-olwen",
+          "imageFormat": "portrait",
+          "individualizedAt": "2026-10-11T19:46:45.491Z",
+          "infoRows": [],
+          "imageFit": "contain",
+          "itemDbKey": "",
+          "id": "gwendolyn-olwen",
+          "description": "Der erste Rotmilan von Gwendolyn. Mittlerweile ziemlich alt und kurz vor dem Ende. Sie fliegt kaum noch. Aber wenn, dann zeigt sie, was sie noch drauf hat. Sie sitzt meistens auf dem Balkon von Gwendolyn und Galahad.",
+          "category": "companion",
+          "image": "https://i.imgur.com/4CNNfEa.png",
+          "quantity": "1"
         },
         {
-          "icon": "*",
-          "label": "Notiz",
-          "value": "Noch festlegen"
+          "id": "gwendolyn-alwen",
+          "instanceId": "gwendolyn-alwen",
+          "imagePosition": "center",
+          "itemDbKey": "",
+          "individualizedAt": "2026-10-11T19:46:45.492Z",
+          "category": "companion",
+          "type": "Rotmilan",
+          "quantity": "1",
+          "templateId": "",
+          "attributes": [],
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "description": "Gwendolyns zweiter Milan. Tochter ihres ersten Milans, Olwen. Noch voller Energie; fliegt den halben Tag über der Burg herum.",
+          "creatureId": "companion-gwendolyn-alwen",
+          "registerCategory": "vieh",
+          "imageFit": "contain",
+          "templateName": "Rotmilan",
+          "imageFormat": "portrait",
+          "infoRows": [],
+          "image": "https://i.imgur.com/ISKbqc2.png",
+          "ownerCharacterName": "Gwendolyn Draig",
+          "ownerCharacterId": "15ml9RhSvJPXof7z4qY3",
+          "name": "Alwen"
+        },
+        {
+          "registerCategory": "pferde",
+          "id": "gwendolyn-flam",
+          "name": "Flam",
+          "templateName": "Ceffyl-Pferd",
+          "ownerCharacterId": "15ml9RhSvJPXof7z4qY3",
+          "itemDbKey": "",
+          "creatureId": "companion-gwendolyn-flam",
+          "type": "Ceffyl-Pferd",
+          "ownerCharacterName": "Gwendolyn Draig",
+          "imagePosition": "center",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "attributes": [],
+          "templateId": "",
+          "category": "companion",
+          "quantity": "1",
+          "individualizedAt": "2026-10-11T19:46:45.492Z",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "image": "https://i.imgur.com/55FbPYH.jpeg",
+          "instanceId": "gwendolyn-flam",
+          "infoRows": [],
+          "description": "Das Ceffyl von Gwendolyn Draig. Ein herrisches Pferd. War schon bei den Rittern der Tafelrunde dabei."
         }
       ],
+      "moneyState": {
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0,
+        "copper": 0
+      },
+      "portraitFormat": "portrait",
+      "portraitPosition": "top",
       "money": "0 Gold, 0 Silber, 0 Kupfer",
-      "portrait": "https://i.imgur.com/ZX7jU9h.png",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "title": "Charakter-Inventar",
+      "infoRows": [],
+      "companions": [
+        {
+          "attributes": [],
+          "name": "Olwen",
+          "role": "Gefährte",
+          "creatureId": "companion-gwendolyn-olwen",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "infoRows": [],
+          "imageFit": "contain",
+          "species": "Rotmilan",
+          "summary": "Der erste Rotmilan von Gwendolyn. Mittlerweile ziemlich alt und kurz vor dem Ende. Sie fliegt kaum noch. Aber wenn, dann zeigt sie, was sie noch drauf hat. Sie sitzt meistens auf dem Balkon von Gwendolyn und Galahad.",
+          "inventoryItemId": "gwendolyn-olwen",
+          "status": "Gesund",
+          "description": "Der erste Rotmilan von Gwendolyn. Mittlerweile ziemlich alt und kurz vor dem Ende. Sie fliegt kaum noch. Aber wenn, dann zeigt sie, was sie noch drauf hat. Sie sitzt meistens auf dem Balkon von Gwendolyn und Galahad.",
+          "statusColor": "#5c7f20",
+          "image": "https://i.imgur.com/4CNNfEa.png",
+          "imageFormat": "portrait",
+          "imagePosition": "center"
+        },
+        {
+          "id": "companion-mqu1vat2-1-5e7l",
+          "name": "Alwen",
+          "role": "Gefährte",
+          "imageFit": "contain",
+          "infoRows": [],
+          "imagePosition": "center",
+          "description": "Gwendolyns zweiter Milan. Tochter ihres ersten Milans, Olwen. Noch voller Energie; fliegt den halben Tag über der Burg herum.",
+          "species": "Rotmilan",
+          "summary": "Gwendolyns zweiter Milan. Tochter ihres ersten Milans, Olwen. Noch voller Energie; fliegt den halben Tag über der Burg herum.",
+          "status": "Noch festlegen",
+          "attributes": [],
+          "image": "https://i.imgur.com/ISKbqc2.png",
+          "inventoryItemId": "gwendolyn-alwen",
+          "statusColor": "#5c7f20",
+          "creatureId": "companion-gwendolyn-alwen",
+          "imageFormat": "portrait"
+        },
+        {
+          "species": "Ceffyl-Pferd",
+          "summary": "Das Ceffyl von Gwendolyn Draig. Ein herrisches Pferd. War schon bei den Rittern der Tafelrunde dabei.",
+          "name": "Flam",
+          "role": "Reittier",
+          "creatureId": "companion-gwendolyn-flam",
+          "imagePosition": "center",
+          "id": "card-gwendolyn-flam",
+          "attributes": [],
+          "imageFit": "contain",
+          "description": "Das Ceffyl von Gwendolyn Draig. Ein herrisches Pferd. War schon bei den Rittern der Tafelrunde dabei.",
+          "status": "Gesund",
+          "infoRows": [],
+          "inventoryItemId": "gwendolyn-flam",
+          "imageFormat": "portrait",
+          "image": "https://i.imgur.com/55FbPYH.jpeg"
+        }
+      ],
+      "status": "Gesund",
+      "name": "Gwendolyn Draig",
+      "showInfoTable": false,
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "resultText": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0,
+        "status": ""
+      },
       "portraitFit": "cover",
+      "level": "Stufe",
+      "revision": 1791748002303,
+      "hitpoints": "TP / Zustand",
+      "moneyNotice": "",
+      "carryLabel": "Traglast",
+      "portrait": "https://i.imgur.com/ZX7jU9h.png",
+      "healthColor": "#5c7f20",
       "attributes": [
         {
-          "label": "StA",
-          "value": 8
+          "value": 8,
+          "label": "StA"
         },
         {
           "label": "Ges",
           "value": 6
         },
         {
-          "value": 7,
-          "label": "Kon"
+          "label": "Kon",
+          "value": 7
         },
         {
           "value": 5,
           "label": "Int"
         },
         {
-          "label": "Wei",
-          "value": 6
-        },
-        {
-          "value": 5,
-          "label": "Cha"
-        },
-        {
-          "label": "Kon",
-          "value": 7
-        },
-        {
-          "label": "Int",
-          "value": 5
-        },
-        {
-          "label": "Cha",
-          "value": 5
-        },
-        {
-          "value": 8,
-          "label": "StA"
-        },
-        {
           "value": 6,
           "label": "Wei"
         },
         {
-          "value": 6,
-          "label": "Ges"
+          "label": "Cha",
+          "value": 5
         }
-      ],
-      "carryValue": "Noch festlegen",
-      "portraitFormat": "portrait",
-      "portraitPosition": "top",
-      "healthColor": "#5c7f20",
-      "companions": [
-        {
-          "role": "Begleiter",
-          "infoRows": [],
-          "statusColor": "#5c7f20",
-          "summary": "Kurzbeschreibung des Gefährten.",
-          "name": "Reittier / Gefährte",
-          "imageFit": "cover",
-          "id": "companion-mqu1vat2-0-zz2n",
-          "description": "",
-          "status": "Gesund",
-          "imagePosition": "top",
-          "attributes": [
-            {
-              "label": "Schnelligkeit",
-              "value": 6
-            },
-            {
-              "label": "Ausdauer",
-              "value": 7
-            },
-            {
-              "label": "Staerke",
-              "value": 5
-            },
-            {
-              "label": "Agilitaet",
-              "value": 6
-            },
-            {
-              "label": "Sozialverhalten",
-              "value": 4
-            },
-            {
-              "value": 5,
-              "label": "Robustheit"
-            }
-          ],
-          "image": "",
-          "imageFormat": "landscape",
-          "species": "Tier oder Begleiter"
-        },
-        {
-          "status": "Noch festlegen",
-          "attributes": [
-            {
-              "label": "Schnelligkeit",
-              "value": 6
-            },
-            {
-              "value": 7,
-              "label": "Ausdauer"
-            },
-            {
-              "label": "Staerke",
-              "value": 5
-            },
-            {
-              "label": "Agilitaet",
-              "value": 6
-            },
-            {
-              "value": 4,
-              "label": "Sozialverhalten"
-            },
-            {
-              "value": 5,
-              "label": "Robustheit"
-            }
-          ],
-          "id": "companion-mqu1vat2-1-5e7l",
-          "statusColor": "#5c7f20",
-          "summary": "Besonderheit, Nutzen oder Bindung.",
-          "name": "Treuer Begleiter",
-          "description": "",
-          "role": "Gefährte",
-          "species": "Tier / Person",
-          "imagePosition": "top",
-          "imageFit": "cover",
-          "infoRows": [],
-          "imageFormat": "landscape",
-          "image": ""
-        },
-        {
-          "attributes": [
-            {
-              "label": "Schnelligkeit",
-              "value": 6
-            },
-            {
-              "label": "Ausdauer",
-              "value": 7
-            },
-            {
-              "label": "Staerke",
-              "value": 5
-            },
-            {
-              "label": "Agilitaet",
-              "value": 6
-            },
-            {
-              "label": "Sozialverhalten",
-              "value": 4
-            },
-            {
-              "label": "Robustheit",
-              "value": 5
-            }
-          ],
-          "description": "",
-          "id": "companion-mshzfuja-0-y62h",
-          "image": "",
-          "imageFit": "cover",
-          "imageFormat": "landscape",
-          "imagePosition": "top",
-          "infoRows": [],
-          "name": "Reittier / Gefährte",
-          "role": "Begleiter",
-          "species": "Tier oder Begleiter",
-          "status": "Gesund",
-          "statusColor": "#5c7f20",
-          "summary": "Kurzbeschreibung des Gefährten."
-        },
-        {
-          "attributes": [
-            {
-              "label": "Schnelligkeit",
-              "value": 6
-            },
-            {
-              "label": "Ausdauer",
-              "value": 7
-            },
-            {
-              "label": "Staerke",
-              "value": 5
-            },
-            {
-              "label": "Agilitaet",
-              "value": 6
-            },
-            {
-              "label": "Sozialverhalten",
-              "value": 4
-            },
-            {
-              "label": "Robustheit",
-              "value": 5
-            }
-          ],
-          "description": "",
-          "id": "companion-mshzfuja-1-8wyi",
-          "image": "",
-          "imageFit": "cover",
-          "imageFormat": "landscape",
-          "imagePosition": "top",
-          "infoRows": [],
-          "name": "Treuer Begleiter",
-          "role": "Gefährte",
-          "species": "Tier / Person",
-          "status": "Noch festlegen",
-          "statusColor": "#5c7f20",
-          "summary": "Besonderheit, Nutzen oder Bindung."
-        },
-        {
-          "description": "",
-          "statusColor": "#5c7f20",
-          "species": "Tier oder Begleiter",
-          "id": "companion-mqu1vat2-0-zz2n",
-          "infoRows": [],
-          "imageFormat": "landscape",
-          "imageFit": "cover",
-          "summary": "Kurzbeschreibung des Gefährten.",
-          "imagePosition": "top",
-          "name": "Reittier / Gefährte",
-          "status": "Gesund",
-          "role": "Begleiter",
-          "attributes": [
-            {
-              "label": "Schnelligkeit",
-              "value": 6
-            },
-            {
-              "label": "Ausdauer",
-              "value": 7
-            },
-            {
-              "label": "Staerke",
-              "value": 5
-            },
-            {
-              "value": 6,
-              "label": "Agilitaet"
-            },
-            {
-              "label": "Sozialverhalten",
-              "value": 4
-            },
-            {
-              "value": 5,
-              "label": "Robustheit"
-            }
-          ],
-          "image": ""
-        },
-        {
-          "imageFit": "cover",
-          "species": "Tier / Person",
-          "infoRows": [],
-          "imageFormat": "landscape",
-          "status": "Noch festlegen",
-          "id": "companion-mqu1vat2-1-5e7l",
-          "statusColor": "#5c7f20",
-          "imagePosition": "top",
-          "description": "",
-          "name": "Treuer Begleiter",
-          "attributes": [
-            {
-              "value": 6,
-              "label": "Schnelligkeit"
-            },
-            {
-              "value": 7,
-              "label": "Ausdauer"
-            },
-            {
-              "value": 5,
-              "label": "Staerke"
-            },
-            {
-              "label": "Agilitaet",
-              "value": 6
-            },
-            {
-              "value": 4,
-              "label": "Sozialverhalten"
-            },
-            {
-              "value": 5,
-              "label": "Robustheit"
-            }
-          ],
-          "summary": "Besonderheit, Nutzen oder Bindung.",
-          "role": "Gefährte",
-          "image": ""
-        },
-        {
-          "attributes": [
-            {
-              "value": 6,
-              "label": "Schnelligkeit"
-            },
-            {
-              "label": "Ausdauer",
-              "value": 7
-            },
-            {
-              "label": "Staerke",
-              "value": 5
-            },
-            {
-              "value": 6,
-              "label": "Agilitaet"
-            },
-            {
-              "label": "Sozialverhalten",
-              "value": 4
-            },
-            {
-              "label": "Robustheit",
-              "value": 5
-            }
-          ],
-          "infoRows": [],
-          "summary": "Kurzbeschreibung des Gefährten.",
-          "imageFit": "cover",
-          "imageFormat": "landscape",
-          "name": "Reittier / Gefährte",
-          "statusColor": "#5c7f20",
-          "role": "Begleiter",
-          "image": "",
-          "status": "Gesund",
-          "imagePosition": "top",
-          "species": "Tier oder Begleiter",
-          "description": "",
-          "id": "companion-mqu1vat2-0-zz2n"
-        },
-        {
-          "statusColor": "#5c7f20",
-          "attributes": [
-            {
-              "label": "Schnelligkeit",
-              "value": 6
-            },
-            {
-              "label": "Ausdauer",
-              "value": 7
-            },
-            {
-              "label": "Staerke",
-              "value": 5
-            },
-            {
-              "value": 6,
-              "label": "Agilitaet"
-            },
-            {
-              "label": "Sozialverhalten",
-              "value": 4
-            },
-            {
-              "value": 5,
-              "label": "Robustheit"
-            }
-          ],
-          "summary": "Besonderheit, Nutzen oder Bindung.",
-          "description": "",
-          "imagePosition": "top",
-          "species": "Tier / Person",
-          "status": "Noch festlegen",
-          "role": "Gefährte",
-          "imageFit": "cover",
-          "image": "",
-          "imageFormat": "landscape",
-          "name": "Treuer Begleiter",
-          "infoRows": [],
-          "id": "companion-mqu1vat2-1-5e7l"
-        }
-      ],
-      "equipmentQuiz": {
-        "step": 0,
-        "answers": [
-          ""
-        ],
-        "resultText": "",
-        "status": "",
-        "updatedAt": "",
-        "open": false
-      },
-      "hitpoints": "TP / Zustand",
-      "characterId": "builtin:gwendolyn-draig",
-      "revision": 1786261659133,
-      "showInfoTable": false
+      ]
     },
     "archived": false,
     "emotes": [
@@ -13806,8 +12491,8 @@
           "personId": "gwendolyn-aderyn",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-10-05T22:55:55.677Z",
-          "lastSyncedAt": "2026-10-05T22:55:55.677Z",
+          "importedAt": "2026-10-12T22:24:41.567Z",
+          "lastSyncedAt": "2026-10-12T22:24:41.567Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-aderyn&mode=view&person=gwendolyn-aderyn",
           "fingerprint": "{\"name\":\"Gwendolyn Aderyn\",\"title\":\"Gräfin von Celtigerns Wacht\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-aderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/gwendolyn-aderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"mifawi-illewod\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-illewod--mifawi-illewod\",\"name\":\"Mifawi Illewod\"},{\"personId\":\"catel-aderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--catel-aderyn\",\"name\":\"Catel Aderyn\"}],\"partners\":[{\"personId\":\"galahad-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--galahad-draig\",\"name\":\"Galahad Draig\"}],\"children\":[]}}"
         },
@@ -13816,8 +12501,8 @@
           "personId": "gwendolyn-aderyn",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-10-05T22:55:55.677Z",
-          "lastSyncedAt": "2026-10-05T22:55:55.677Z",
+          "importedAt": "2026-10-12T22:24:41.567Z",
+          "lastSyncedAt": "2026-10-12T22:24:41.567Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=gwendolyn-aderyn",
           "fingerprint": "{\"name\":\"Gwendolyn Aderyn\",\"title\":\"Gräfin von Celtigerns Wacht\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-aderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/gwendolyn-aderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"galahad-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--galahad-draig\",\"name\":\"Galahad Draig\"}],\"children\":[{\"personId\":\"anaraut-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--anaraut-draig\",\"name\":\"Anaraut Draig\"},{\"personId\":\"idwal-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--idwal-draig\",\"name\":\"Idwal Draig\"},{\"personId\":\"tudwal-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--tudwal-draig\",\"name\":\"Tudwal Draig\"},{\"personId\":\"neithon-1718-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--neithon-1718-draig\",\"name\":\"Neithon Draig\"},{\"personId\":\"isobel-1719-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--isobel-1719-draig\",\"name\":\"Isobel Draig\"},{\"personId\":\"rhiannon-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--rhiannon-draig\",\"name\":\"Rhiannon Draig\"},{\"personId\":\"gawain-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--gawain-draig\",\"name\":\"Gawain Draig\"},{\"personId\":\"guinevere-neidr\",\"type\":\"foster\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--guinevere-neidr\",\"name\":\"Guinevere Neidr\"}]}}"
         },
@@ -13826,8 +12511,8 @@
           "personId": "gwendolyn-aderyn",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-10-05T22:55:55.677Z",
-          "lastSyncedAt": "2026-10-05T22:55:55.677Z",
+          "importedAt": "2026-10-12T22:24:41.567Z",
+          "lastSyncedAt": "2026-10-12T22:24:41.567Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-neidr&mode=view&person=gwendolyn-aderyn",
           "fingerprint": "{\"name\":\"Gwendolyn Aderyn\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-aderyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/gwendolyn-aderyn.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"galahad-draig\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--galahad-draig\",\"name\":\"Galahad Draig\"}],\"children\":[{\"personId\":\"guinevere-neidr\",\"type\":\"foster\",\"legitimacy\":\"unknown\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--guinevere-neidr\",\"name\":\"Guinevere Neidr\"}]}}"
         }

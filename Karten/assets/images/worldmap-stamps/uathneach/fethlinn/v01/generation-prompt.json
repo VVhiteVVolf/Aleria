@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "status": "superseded",
+  "label": "Fethlinn",
+  "worldRegion": "Uathneach",
+  "version": 1,
+  "tool": "built-in image_gen",
+  "stylePreset": "fantasy-worldmap-stamp",
+  "styleVersion": 2,
+  "transparentBackground": true,
+  "primaryStyleReference": "Karten/assets/images/worldmap-stamps/style-tests/01-gaelic-farmhouse-approved.png",
+  "geographyReference": "C:\\Users\\fhg_r\\Downloads\\Uathneach Städte\\2026-10-09 11_20_35-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+  "userBrief": "Burg eines niederen Laird-Clans an der Küste; eine solide albische Festung mit zur Küste ausgerichtetem Hafen.",
+  "designAssumptions": [
+    "Kompakte Ringburg mit breitem Wohnturm und drei niedrigen Rundtürmen",
+    "Südliches Burgtor am vorhandenen schmalen Landzugang",
+    "Kleiner Hafen an der geschützten östlichen Küste zum Wasserarm",
+    "Vorhandene Brücke südöstlich bleibt frei"
+  ],
+  "file": "fethlinn-v01.png",
+  "prompt": "Create ONE transparent Inkarnate worldmap stamp of Fethlinn — a coastal Gaelic clan fortress with an east-facing harbor.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: Fethlinn, a solid coastal fortress of a minor Albic laird clan in a medieval Gaelic low-fantasy world. A compact irregular stone ring wall enclosing ONE broad stout three-storey Gaelic tower house with a few large crenellations and almost blank walls; an attached simple slate-blue-roofed hall, three low chunky round defensive towers, and one tiny service cottage. Heavy cream-gray masonry represented by flat color and very few marks. A small southern gate opens toward the existing narrow southern land neck. A modest working harbor is attached to the EAST coast: one small boathouse and quay, two short plain wooden landing piers extending right into the sheltered water channel, one tiny brown wooden sailboat with a single cream sail. Show the rank of a minor clan through a compact practical compound and few buildings. A small contained courtyard is permitted inside the walls. Muted slate-blue roofs, pale warm gray stone, brown doors and timber, a little ochre thatch. Keep every form broad, rounded and slightly wonky, as simple and playful as the approved farmhouse. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nREFERENCE ROLES AND GEOGRAPHIC FIT: Image 1 is the PRIMARY STYLE REFERENCE; match its very simple drawing language. Image 2 is ONLY the target map geography and placement guide. Create a transparent stamp intended to lie over this exact north-up screenshot. Preserve the screenshot's approximately 512:431 canvas aspect ratio and the described positions, rather than centering and enlarging the castle to fill the whole canvas. The land forms a rounded almost-island, with water north, west and east, a narrow land neck at the SOUTH, and an existing separate bridge further southeast. Follow the irregular rounded island footprint with the castle foundations safely INSIDE the beach line. Place the broad main keep around (49%,35%), hall around (59%,44%), west wall foundation around (29%,50%), east wall/quay around (78%,54%), SOUTH GATE at (56%,68%) leading toward the land neck at (56%,74%). Harbor piers extend RIGHT from around (78%,52%) toward (87%,52%) over the eastern water channel; the tiny boat sits alongside them. Northern wall foundations remain on land around (49%,27%), while upright tower tops naturally project above their bases. Entire castle plus harbor fits approximately within x=25% to 91% and y=13% to 73% of the canvas. Bottom quarter remains transparent so the original southeast bridge and southern roads are not obstructed. Do not draw or reproduce the screenshot's green diamond marker, map text, coastline, beach, land, grass, water, waves, background, existing bridge, or a floating foundation platform. The map is strictly a placement reference. Only the architecture, tiny attached quay and small boat are visible, with transparent water and surrounding gaps. No new bridge.\n\nMatch the approved farmhouse's clean hard cutout edges. Solid dark-brown pen contours with entirely transparent space immediately outside. NO blur, soft gradient, glow, halo or cast shadow. Fresh drawing in the approved farmhouse style.",
+  "validation": {
+    "width": 1367,
+    "height": 1151,
+    "mode": "RGBA",
+    "transparentPixelCount": 1201796,
+    "transparentFraction": 0.7638,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "visibleBoundsAlphaAbove8": [
+      269,
+      211,
+      1312,
+      832
+    ],
+    "originalAlphaPreserved": true,
+    "originalBytesPreserved": true
+  },
+  "sha256": "987ec3f5436e6e492b4057e2fe56e908e1cce80761c9f48f3cee57a1e1723402",
+  "generationId": "exec-a2a214aa-5464-4c4b-af15-85aa518e63ae",
+  "referenceHashes": {
+    "primaryStyleReference": "cb49eb5e92bc28d42eadbcf6eb4927bef73f449c2a713c76d0b427990310b3bd",
+    "geographyReference": "e613358c60436d6197d139dbc4867f6c72a4fe678ac3c7e10967bd55328b5afa"
+  },
+  "review": {
+    "userApproved": false,
+    "supersededBy": "../v02/fethlinn-v02.png",
+    "reason": "Western wall and boat did not fit the screenshot shoreline closely enough in the initial placement check."
+  }
+}

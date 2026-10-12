@@ -1,0 +1,908 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "status": "complete",
+  "stylePreset": "fantasy-worldmap-stamp",
+  "styleVersion": 2,
+  "tool": "built-in image_gen",
+  "useCase": "stylized-concept",
+  "transparentBackground": true,
+  "primaryStyleReference": "Karten/assets/images/worldmap-stamps/style-tests/01-gaelic-farmhouse-approved.png",
+  "promptTemplate": "Create ONE transparent Inkarnate worldmap stamp of [MOTIF].\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: [SUBJECT DESCRIPTION]. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.",
+  "additionalEdgeInstructions": "Match the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style.",
+  "promptAssembly": "Replace [MOTIF] with label and [SUBJECT DESCRIPTION] with subject. Append additionalEdgeInstructions. Pass primaryStyleReference as the actual visual reference, using the absolute workspace path.",
+  "order": "Original chart cells 97–119, rows 9–10, left to right.",
+  "orderNote": "The original chart contains two Schmuggel pins (109–110) and two Zerstoerte Kirche pins (115–116); both pairs are preserved as separate visual variants. The empty pin outlines from cell 120 onward are placeholders, not missing motifs.",
+  "assets": [
+    {
+      "index": 97,
+      "label": "Lagerplatz",
+      "file": "97-lagerplatz.png",
+      "subject": "A tiny woodland campsite: two small rounded ochre canvas tents, one simple small campfire made of three gray stones and a single orange flame, and two chunky fir trees immediately behind. Only these few attached camp elements, no people, ground, forest background, smoke or glow.",
+      "status": "complete",
+      "generationId": "exec-280a42f5-7bb4-4885-bbdb-852ebd566773",
+      "sha256": "fdd83dff5da4df08ce873467eacc595ce9e4bc1b5281eb9ac5f97881ff233d41",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7318,
+        "alphaBoundingBox": [
+          82,
+          53,
+          1283,
+          1109
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          222,
+          109,
+          1160,
+          995
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Lagerplatz.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A tiny woodland campsite: two small rounded ochre canvas tents, one simple small campfire made of three gray stones and a single orange flame, and two chunky fir trees immediately behind. Only these few attached camp elements, no people, ground, forest background, smoke or glow.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 98,
+      "label": "Schule",
+      "file": "98-schule.png",
+      "subject": "A small cozy village school: a squat cream building with a broad muted ochre gable roof, a tiny open bell turret, one doorway and two small windows. Above the door a simple dark-blue wooden sign bearing an open cream book symbol, no letters. Chunky playful architecture with almost plain walls, no yard or extra school objects.",
+      "status": "complete",
+      "generationId": "exec-9e9b0472-a616-49e9-8c92-8605ccbbf7c0",
+      "sha256": "69a3b10b710987952817293a5651ee0e6b2dad896ce6b795621d2edff2eeb67e",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7449,
+        "alphaBoundingBox": [
+          0,
+          20,
+          1350,
+          1111
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          283,
+          181,
+          1096,
+          974
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Schule.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A small cozy village school: a squat cream building with a broad muted ochre gable roof, a tiny open bell turret, one doorway and two small windows. Above the door a simple dark-blue wooden sign bearing an open cream book symbol, no letters. Chunky playful architecture with almost plain walls, no yard or extra school objects.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 99,
+      "label": "Friedhof",
+      "file": "99-friedhof.png",
+      "subject": "A tiny graveyard: one small cream chapel with a simple gray-blue gable roof and a little stone cross, three rounded pale gravestones clustered in front, and one short dark-green cypress beside the chapel. Gravestones plain or with one tiny cross, no names. Very simple rounded shapes, no graves dug into soil, ground, paths, fence or landscape.",
+      "status": "complete",
+      "generationId": "exec-b10699ca-d7d1-4890-ae5f-23f900222ff2",
+      "sha256": "e9d85471032746db54ebdb04f756667496e51ffe84bbba3159334a1adf57cc7b",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7574,
+        "alphaBoundingBox": [
+          0,
+          33,
+          1354,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          325,
+          179,
+          1045,
+          970
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Friedhof.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A tiny graveyard: one small cream chapel with a simple gray-blue gable roof and a little stone cross, three rounded pale gravestones clustered in front, and one short dark-green cypress beside the chapel. Gravestones plain or with one tiny cross, no names. Very simple rounded shapes, no graves dug into soil, ground, paths, fence or landscape.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 100,
+      "label": "Mühle",
+      "file": "100-muehle.png",
+      "subject": "One cozy round cream windmill tower, squat and slightly wonky, with a generous warm orange conical roof, one brown arched door and one tiny window. Exactly four broad simple cream-and-brown windmill sails attached to a central hub, each sail with only one or two crossbars. Entire sails visible, no flour sacks, terrain or scenery.",
+      "status": "complete",
+      "generationId": "exec-b436262b-b9c8-4791-9e82-cc78f9a35d67",
+      "sha256": "9f46f7fc533b539300d78c38eca6ceaf176fb114aadca8505d84b8db0bab45e9",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7063,
+        "alphaBoundingBox": [
+          0,
+          5,
+          1358,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          273,
+          89,
+          1121,
+          1000
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Mühle.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: One cozy round cream windmill tower, squat and slightly wonky, with a generous warm orange conical roof, one brown arched door and one tiny window. Exactly four broad simple cream-and-brown windmill sails attached to a central hub, each sail with only one or two crossbars. Entire sails visible, no flour sacks, terrain or scenery.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 101,
+      "label": "Münzpräger",
+      "file": "101-muenzpraeger.png",
+      "subject": "A small chubby mint workshop with cream walls, a broad slate-blue gable roof and a small chimney. One arched door, two tiny windows, one small blue hanging sign with a single simple gold coin symbol. A low bench immediately beside the doorway holds a short stack of three oversized gold coins and one small minting hammer. No tiny inscriptions, sparks, smoke, floor or landscape.",
+      "status": "complete",
+      "generationId": "exec-6a1886d2-d68e-4253-8e97-e13dc8b89f7e",
+      "sha256": "3a97db0555eb35e5964a29bd798376c2f19130a5ef5d4c248680dd69b3ca70c3",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6442,
+        "alphaBoundingBox": [
+          25,
+          55,
+          1342,
+          1129
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          201,
+          139,
+          1191,
+          1014
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Münzpräger.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A small chubby mint workshop with cream walls, a broad slate-blue gable roof and a small chimney. One arched door, two tiny windows, one small blue hanging sign with a single simple gold coin symbol. A low bench immediately beside the doorway holds a short stack of three oversized gold coins and one small minting hammer. No tiny inscriptions, sparks, smoke, floor or landscape.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 102,
+      "label": "Infernaler Schrein",
+      "file": "102-infernaler-schrein.png",
+      "subject": "A compact infernal shrine: a squat dark-charcoal stone arch with two short curved horn-shaped tips, enclosing one bold flat red-orange flame symbol above a small rectangular altar. Two chunky pillars and a single broad step, very few masonry marks. Playful fantasy symbol, no monster, people, skulls, gore, lava, light rays, glow, smoke, ground or scenery.",
+      "status": "complete",
+      "generationId": "exec-a68dcb56-cc02-400e-9922-5a6e0b39197c",
+      "sha256": "d4db7057a9483a608386c946c5914a148e09662cb076d48c497a121bba20dee5",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7752,
+        "alphaBoundingBox": [
+          51,
+          21,
+          1281,
+          1118
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          377,
+          183,
+          1033,
+          963
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Infernaler Schrein.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A compact infernal shrine: a squat dark-charcoal stone arch with two short curved horn-shaped tips, enclosing one bold flat red-orange flame symbol above a small rectangular altar. Two chunky pillars and a single broad step, very few masonry marks. Playful fantasy symbol, no monster, people, skulls, gore, lava, light rays, glow, smoke, ground or scenery.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 103,
+      "label": "Poststation",
+      "file": "103-poststation.png",
+      "subject": "A cozy small medieval posting house with cream walls, a few broad brown timbers and a large terracotta roof. One arched doorway and two little windows. A simple blue hanging sign with one golden postal horn symbol, and a tiny attached open timber canopy sheltering one tied parcel. No lettering, horses, people, streets or scenery.",
+      "status": "complete",
+      "generationId": "exec-36cfbb47-59e8-40e6-ae7b-1c82f67d6066",
+      "sha256": "93c9050cfedf143bb2f488257408cb178c6688ae18d1cd51d2a3d75e24fedf50",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7157,
+        "alphaBoundingBox": [
+          0,
+          19,
+          1297,
+          1121
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          213,
+          203,
+          1163,
+          958
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Poststation.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A cozy small medieval posting house with cream walls, a few broad brown timbers and a large terracotta roof. One arched doorway and two little windows. A simple blue hanging sign with one golden postal horn symbol, and a tiny attached open timber canopy sheltering one tied parcel. No lettering, horses, people, streets or scenery.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 104,
+      "label": "Quelle",
+      "file": "104-quelle.png",
+      "subject": "A tiny enclosed spring: a low semicircular arch of a few large rounded gray stones, topped by a very small simple stone cross. A short flat pale-turquoise stream emerges from the arch into ONE tiny attached shallow stone collecting bowl directly beneath it. Two small attached olive leaves at one side. All water confined to the spout and bowl, no pond, pool, stream beyond the bowl, ground or landscape. Compact playful rounded icon.",
+      "status": "complete",
+      "generationId": "exec-7fc61abe-59e3-4e2c-907d-d1ecab1fe570",
+      "sha256": "da9a326ad0f0b002fb3a290d7e16d15adc504ac7dbe47b1fea51c3907f904c7a",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.8106,
+        "alphaBoundingBox": [
+          82,
+          55,
+          1239,
+          1088
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          388,
+          217,
+          1094,
+          931
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Quelle.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A tiny enclosed spring: a low semicircular arch of a few large rounded gray stones, topped by a very small simple stone cross. A short flat pale-turquoise stream emerges from the arch into ONE tiny attached shallow stone collecting bowl directly beneath it. Two small attached olive leaves at one side. All water confined to the spout and bowl, no pond, pool, stream beyond the bowl, ground or landscape. Compact playful rounded icon.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 105,
+      "label": "Zelt",
+      "file": "105-zelt.png",
+      "subject": "One small plump medieval round pavilion tent, made of a few large muted terracotta-red, blue-green and cream fabric panels. A low wide pointed roof, one tiny triangular pennant on top, a dark arched entrance and two short simple support ropes. Chunky curved silhouette. No heraldry, writing, poles around the outside, floor or terrain.",
+      "status": "complete",
+      "generationId": "exec-35522f87-97e4-4883-b86f-6f269f529ab1",
+      "sha256": "81372ebffa5fd2eace9b9482be2a5382c4ba65d6582f81246300c46ec3a67471",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.749,
+        "alphaBoundingBox": [
+          0,
+          0,
+          1346,
+          1113
+        ],
+        "outerEdgeAlphaMax": 4,
+        "cornerAlphaMax": 3,
+        "visibleBoundingBox": [
+          268,
+          161,
+          1114,
+          962
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Zelt.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: One small plump medieval round pavilion tent, made of a few large muted terracotta-red, blue-green and cream fabric panels. A low wide pointed roof, one tiny triangular pennant on top, a dark arched entrance and two short simple support ropes. Chunky curved silhouette. No heraldry, writing, poles around the outside, floor or terrain.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 106,
+      "label": "Salzmine",
+      "file": "106-salzmine.png",
+      "subject": "A small salt-mine entrance in a squat rounded pale-gray rock outcrop, framed by two chunky wooden posts and a crossbeam. One dark arched opening. Three oversized white angular salt crystals immediately beside the entrance and one small wooden salt tub with a simple cream heap distinguish it from an ore mine. Very few stone marks, no mountain, ground, tracks or scenery.",
+      "status": "complete",
+      "generationId": "exec-ec01599a-f18a-45e5-8658-3775e22a8a05",
+      "sha256": "c862a95b859a2a79e51c77efbe1552b521ee98740a9c22ec897f090e0d8eba79",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.711,
+        "alphaBoundingBox": [
+          0,
+          17,
+          1358,
+          1127
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          277,
+          196,
+          1156,
+          944
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Salzmine.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A small salt-mine entrance in a squat rounded pale-gray rock outcrop, framed by two chunky wooden posts and a crossbeam. One dark arched opening. Three oversized white angular salt crystals immediately beside the entrance and one small wooden salt tub with a simple cream heap distinguish it from an ore mine. Very few stone marks, no mountain, ground, tracks or scenery.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 107,
+      "label": "Bogenschießstand",
+      "file": "107-bogenschiessstand.png",
+      "subject": "A compact archery practice stand: one large round straw target with simple cream, muted-red and blue rings on a two-legged wooden stand, one smaller similar target behind, and a single curved wooden bow leaning beside a squat quiver containing three bluntly drawn arrow shafts. Only a few large readable shapes, no people, ground, grass or backdrop.",
+      "status": "complete",
+      "generationId": "exec-809fc35c-3543-4d9a-9c96-543bbbb13d74",
+      "sha256": "ef22b1ecb368f3f617714f753c23648d791ac230e0cdd1b00d130ccf8603825e",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.675,
+        "alphaBoundingBox": [
+          0,
+          21,
+          1338,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          247,
+          214,
+          1194,
+          1049
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Bogenschießstand.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A compact archery practice stand: one large round straw target with simple cream, muted-red and blue rings on a two-legged wooden stand, one smaller similar target behind, and a single curved wooden bow leaning beside a squat quiver containing three bluntly drawn arrow shafts. Only a few large readable shapes, no people, ground, grass or backdrop.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 108,
+      "label": "Werft",
+      "file": "108-werft.png",
+      "subject": "A tiny medieval shipyard: one unfinished chunky brown wooden boat hull on two short timber trestles, with only four broad visible ribs and a rounded keel. A small simple wooden lifting crane stands immediately beside it, one beam, one rope and hook. No sails, water, quay, ground, scattered boards or elaborate rigging. Playful broad rounded forms.",
+      "status": "complete",
+      "generationId": "exec-b63436ff-f5c6-4369-bf9d-0885bca38013",
+      "sha256": "9b1fda7a165a6631c2def8f8c69ae9aca675982dada9756c03aaf09e00cb7dde",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7368,
+        "alphaBoundingBox": [
+          53,
+          57,
+          1338,
+          1123
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          296,
+          112,
+          1222,
+          1036
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Werft.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A tiny medieval shipyard: one unfinished chunky brown wooden boat hull on two short timber trestles, with only four broad visible ribs and a rounded keel. A small simple wooden lifting crane stands immediately beside it, one beam, one rope and hook. No sails, water, quay, ground, scattered boards or elaborate rigging. Playful broad rounded forms.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 109,
+      "label": "Schmuggel",
+      "file": "109-schmuggel-variante-1.png",
+      "subject": "First smuggler hideout variant: a low ochre-brown canvas canopy on two chunky posts, sheltering three closed wooden cargo crates and one small barrel. A very short attached wooden landing projects front-left with a small empty rowboat alongside. One little hanging unlit lantern on a canopy post. No people, weapons, water, shore, reeds or ground patch. Extremely simple broad shapes.",
+      "status": "complete",
+      "generationId": "exec-7257b265-bdb4-41e8-aaa4-7c7c830396d8",
+      "sha256": "d92027469e405a217f4127dec6e0a7a80e539aeb8bacc4515a38c4ea47bb9b81",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7415,
+        "alphaBoundingBox": [
+          0,
+          22,
+          1285,
+          1119
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          204,
+          180,
+          1156,
+          946
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Schmuggel.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: First smuggler hideout variant: a low ochre-brown canvas canopy on two chunky posts, sheltering three closed wooden cargo crates and one small barrel. A very short attached wooden landing projects front-left with a small empty rowboat alongside. One little hanging unlit lantern on a canopy post. No people, weapons, water, shore, reeds or ground patch. Extremely simple broad shapes.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 110,
+      "label": "Schmuggel",
+      "file": "110-schmuggel-variante-2.png",
+      "subject": "Second smuggler hideout variant, visibly distinct: a drooping olive-green canvas lean-to open toward the right, with two small closed cargo crates and a tied sack under it. A very short wooden landing extends to the right and a small empty rowboat lies on that side. Two tiny chunky reed clumps immediately beside the shelter. No people, weapons, water, shore or ground patch. Few large readable shapes.",
+      "status": "complete",
+      "variantOf": 109,
+      "generationId": "exec-d7a1bdc8-199c-4316-9ee1-81b8ed9b3b23",
+      "sha256": "820820d0bbbc6e8fa15f6a4545b5d8fdddbd74476b1254c6b16751e53c796c84",
+      "validation": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGBA",
+        "transparentFraction": 0.7498,
+        "alphaBoundingBox": [
+          89,
+          39,
+          1456,
+          894
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          197,
+          216,
+          1355,
+          795
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Schmuggel.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: Second smuggler hideout variant, visibly distinct: a drooping olive-green canvas lean-to open toward the right, with two small closed cargo crates and a tied sack under it. A very short wooden landing extends to the right and a small empty rowboat lies on that side. Two tiny chunky reed clumps immediately beside the shelter. No people, weapons, water, shore or ground patch. Few large readable shapes.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 111,
+      "label": "Schäbige Hütte",
+      "file": "111-schaebige-huette.png",
+      "subject": "One very small ramshackle wooden hut, a low slightly skewed box with rounded corners, brown timber walls, a sagging dull-ochre gable roof with one large dark patch, a crooked door and a single boarded square window. Two broad timber braces suggest repairs. Distinct from a round plaster farmhouse: rectangular wooden shack. No fine weathering, individual shingles, rubble, ground or scenery.",
+      "status": "complete",
+      "generationId": "exec-8c91c7ac-964d-475f-8f89-811d889b268d",
+      "sha256": "215e4164393d12e6780262b6b770532d4e6a67f3c25f31553e001ec874eab563",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7188,
+        "alphaBoundingBox": [
+          0,
+          69,
+          1360,
+          1105
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          240,
+          229,
+          1159,
+          942
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Schäbige Hütte.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: One very small ramshackle wooden hut, a low slightly skewed box with rounded corners, brown timber walls, a sagging dull-ochre gable roof with one large dark patch, a crooked door and a single boarded square window. Two broad timber braces suggest repairs. Distinct from a round plaster farmhouse: rectangular wooden shack. No fine weathering, individual shingles, rubble, ground or scenery.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 112,
+      "label": "Steinbruch",
+      "file": "112-steinbruch.png",
+      "subject": "A tiny stone quarry represented by a short stepped stack of five large pale sandstone blocks and a low cut stone face, with a simple small wooden lifting frame, one rope and hook. Two detached squared blocks at the base. A few big readable cubic shapes and very few cracks. All stone belongs to the compact quarry structure; no mountain, cliff scenery, ground patch or workers.",
+      "status": "complete",
+      "generationId": "exec-7dc47210-38f2-4003-8230-25161b252cf8",
+      "sha256": "9d6be1996e21548f1af49c3e79eb0523e41228d603634b566715c4a670f340f8",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7356,
+        "alphaBoundingBox": [
+          49,
+          19,
+          1328,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          262,
+          198,
+          1118,
+          928
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Steinbruch.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A tiny stone quarry represented by a short stepped stack of five large pale sandstone blocks and a low cut stone face, with a simple small wooden lifting frame, one rope and hook. Two detached squared blocks at the base. A few big readable cubic shapes and very few cracks. All stone belongs to the compact quarry structure; no mountain, cliff scenery, ground patch or workers.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 113,
+      "label": "Turnier",
+      "file": "113-turnier.png",
+      "subject": "A tiny medieval tournament site: one squat blue-and-cream round pavilion with a little pennant, a short wooden jousting barrier in front, and a simple freestanding banner pole displaying a blue shield with one gold chevron. A small plain round shield rests against the barrier. Few large shapes, no horses, riders, spectators, stands, ground, field or lettering.",
+      "status": "complete",
+      "generationId": "exec-e69e6024-8a33-42af-83b1-036da81ff045",
+      "sha256": "1e7e51227f19e1d6874cbc7397f7d47cf1c68bee4022eeaf501d871e0cdbdc71",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7167,
+        "alphaBoundingBox": [
+          23,
+          13,
+          1346,
+          1121
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          286,
+          125,
+          1169,
+          1026
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Turnier.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A tiny medieval tournament site: one squat blue-and-cream round pavilion with a little pennant, a short wooden jousting barrier in front, and a simple freestanding banner pole displaying a blue shield with one gold chevron. A small plain round shield rests against the barrier. Few large shapes, no horses, riders, spectators, stands, ground, field or lettering.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 114,
+      "label": "Zerstörte Brücke",
+      "file": "114-zerstoerte-bruecke.png",
+      "subject": "A broken small stone arch bridge shown in elevated three-quarter view: two chunky pale-gray stone ends face each other across a conspicuous missing middle span. The two surviving half arches and short broken parapets clearly suggest a bridge. Two small fallen blocks directly beside the abutments. Only a few broad masonry lines. Empty gap completely transparent, no water, riverbanks, ground or landscape.",
+      "status": "complete",
+      "generationId": "exec-7a9cab98-17c8-412c-8c00-0777f3671ce1",
+      "sha256": "025452b6a3d9cb5789f6f6eeee3b8ba4e263d7b7564185563fd427c83ff96861",
+      "validation": {
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGBA",
+        "transparentFraction": 0.7162,
+        "alphaBoundingBox": [
+          33,
+          69,
+          1492,
+          973
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          107,
+          205,
+          1440,
+          847
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Zerstörte Brücke.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A broken small stone arch bridge shown in elevated three-quarter view: two chunky pale-gray stone ends face each other across a conspicuous missing middle span. The two surviving half arches and short broken parapets clearly suggest a bridge. Two small fallen blocks directly beside the abutments. Only a few broad masonry lines. Empty gap completely transparent, no water, riverbanks, ground or landscape.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 115,
+      "label": "Zerstörte Kirche",
+      "file": "115-zerstoerte-kirche-variante-1.png",
+      "subject": "First ruined church variant: a completely roofless little cream-stone chapel with one surviving front bell gable and small stone cross, a wide arched doorway, a single empty side window and one broken low side wall. Two tiny olive ivy leaves attached to the wall. A few large chunky ruin shapes, no rubble field, gravestones, ground or landscape.",
+      "status": "complete",
+      "generationId": "exec-0adb7e0b-e9f0-4a38-aa7c-1b371bf4983c",
+      "sha256": "ad47962bbd40d1febd5bee4257f8993f39badae2cbf2e6ee7b73dd24e4786b58",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7762,
+        "alphaBoundingBox": [
+          49,
+          13,
+          1352,
+          1072
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          320,
+          130,
+          1079,
+          976
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Zerstörte Kirche.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: First ruined church variant: a completely roofless little cream-stone chapel with one surviving front bell gable and small stone cross, a wide arched doorway, a single empty side window and one broken low side wall. Two tiny olive ivy leaves attached to the wall. A few large chunky ruin shapes, no rubble field, gravestones, ground or landscape.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 116,
+      "label": "Zerstörte Kirche",
+      "file": "116-zerstoerte-kirche-variante-2.png",
+      "subject": "Second ruined church variant: a small cream-stone chapel with a short surviving square bell tower at the rear-right and a partly collapsed terracotta gable roof with one large missing section revealing two broad rafters. Front arched door and one empty round window, tiny cross on the bell tower. Visibly distinct from the roofless first church. No fine debris, ground, graves or landscape.",
+      "status": "complete",
+      "variantOf": 115,
+      "generationId": "exec-f3f15be4-9aea-4d45-854c-ef87d7ea2214",
+      "sha256": "690ef462e4ecf1be07e371f80871a4e081364a5b0eb1797772f32152675159f9",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7211,
+        "alphaBoundingBox": [
+          31,
+          33,
+          1305,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          299,
+          120,
+          1140,
+          1002
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Zerstörte Kirche.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: Second ruined church variant: a small cream-stone chapel with a short surviving square bell tower at the rear-right and a partly collapsed terracotta gable roof with one large missing section revealing two broad rafters. Front arched door and one empty round window, tiny cross on the bell tower. Visibly distinct from the roofless first church. No fine debris, ground, graves or landscape.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 117,
+      "label": "Zerstörtes Haus",
+      "file": "117-zerstoertes-haus.png",
+      "subject": "One ruined little half-timbered house: cream walls with a few broad dark-brown timbers, a large terracotta roof missing one whole side, a short surviving chimney and a broken front wall exposing the dark empty interior. One tilted wooden shutter and two fallen masonry blocks immediately at its foot. Chunky playful shapes, no intricate cracks, rubble field or terrain.",
+      "status": "complete",
+      "generationId": "exec-22850a51-3c3f-4694-acaa-a2f91cd1fb48",
+      "sha256": "8bfabb72b56a44a38eef618a4913b42617274f6f4e08bcc575c539a6a0d5ad39",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7105,
+        "alphaBoundingBox": [
+          0,
+          41,
+          1336,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          270,
+          173,
+          1122,
+          994
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Zerstörtes Haus.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: One ruined little half-timbered house: cream walls with a few broad dark-brown timbers, a large terracotta roof missing one whole side, a short surviving chimney and a broken front wall exposing the dark empty interior. One tilted wooden shutter and two fallen masonry blocks immediately at its foot. Chunky playful shapes, no intricate cracks, rubble field or terrain.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 118,
+      "label": "Ziegelbrenner",
+      "file": "118-ziegelbrenner.png",
+      "subject": "A tiny brickmaker's workshop: one squat rounded reddish-ochre brick kiln with a broad dark arched opening and short thick chimney, a small attached shelter with a warm terracotta roof, and a neat stack of four oversized rectangular red bricks beside it. Only four or five broad masonry lines on the kiln, no fire glow, smoke, workers, ground or scenery.",
+      "status": "complete",
+      "generationId": "exec-a1898132-dd5d-4f15-95bf-bfc094c11a0c",
+      "sha256": "5b7e72c45f8aac6cb520ff9cfec0ce7e320279a585bc62382f87a67e81690cad",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.7503,
+        "alphaBoundingBox": [
+          23,
+          35,
+          1360,
+          1119
+        ],
+        "outerEdgeAlphaMax": 0,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          261,
+          209,
+          1144,
+          937
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Ziegelbrenner.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A tiny brickmaker's workshop: one squat rounded reddish-ochre brick kiln with a broad dark arched opening and short thick chimney, a small attached shelter with a warm terracotta roof, and a neat stack of four oversized rectangular red bricks beside it. Only four or five broad masonry lines on the kiln, no fire glow, smoke, workers, ground or scenery.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    },
+    {
+      "index": 119,
+      "label": "Zirkus",
+      "file": "119-zirkus.png",
+      "subject": "One cheerful plump medieval circus big top, a broad low round tent with muted red and golden-cream panels, a central pointed roof and two smaller rounded side peaks. Three tiny triangular pennants and one dark wide arched entrance. A simple blue pennant accent. Few large fabric shapes, no lettering, performers, animals, wagons, fences, lights, ground or surrounding scenery.",
+      "status": "complete",
+      "generationId": "exec-6430be2e-8008-47cc-83bf-8bb1e5f7ba96",
+      "sha256": "36908ab5666c05ac689578d5f113a14d9bae6555d0c4071514d44011a29e1eb1",
+      "validation": {
+        "width": 1374,
+        "height": 1145,
+        "mode": "RGBA",
+        "transparentFraction": 0.6834,
+        "alphaBoundingBox": [
+          25,
+          55,
+          1352,
+          1145
+        ],
+        "outerEdgeAlphaMax": 1,
+        "cornerAlphaMax": 0,
+        "visibleBoundingBox": [
+          219,
+          125,
+          1152,
+          979
+        ],
+        "fullyDecoded": true,
+        "originalAlphaPreserved": true,
+        "visualReview": {
+          "lightBackground": "passed",
+          "darkBackground": "passed",
+          "visibleOuterHalo": false,
+          "clippedMotif": false
+        }
+      },
+      "fullPrompt": "Create ONE transparent Inkarnate worldmap stamp of Zirkus.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: One cheerful plump medieval circus big top, a broad low round tent with muted red and golden-cream panels, a central pointed roof and two smaller rounded side peaks. Three tiny triangular pennants and one dark wide arched entrance. A simple blue pennant accent. Few large fabric shapes, no lettering, performers, animals, wagons, fences, lights, ground or surrounding scenery.. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nMatch the supplied approved reference's clean hard cutout edges exactly. The dark-brown contour is a solid pen stroke. Immediately outside it is entirely transparent empty space. NO soft brown gradient, blur, glow or shadow around any contour, also none between buildings or under arches. Create a fresh drawing in the supplied approved farmhouse style."
+    }
+  ],
+  "primaryStyleReferenceSha256": "cb49eb5e92bc28d42eadbcf6eb4927bef73f449c2a713c76d0b427990310b3bd",
+  "completedAt": "2026-10-09",
+  "assetCount": 23,
+  "nextMotif": null,
+  "originalChartComplete": true,
+  "archive": "../Inkarnate-Stamps-97-119.zip",
+  "review": {
+    "lightPreview": "preview/overview-light.png",
+    "darkPreview": "preview/overview-dark.png",
+    "allAssetsVisuallyReviewed": true,
+    "visibleOuterHalos": false,
+    "clippedMotifs": false,
+    "alphaInspection": "Original generated RGBA PNGs preserved byte for byte. Transparent backgrounds and open gaps checked in light/dark composites. Some originals contain scattered very low alpha pixels outside the visible silhouette (outer edges at most alpha 4 in this set); no local alpha editing was applied. Visible bounds use alpha > 8 for the clipping check."
+  }
+}

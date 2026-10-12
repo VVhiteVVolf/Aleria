@@ -6,6 +6,7 @@ import { localBreedingInterpretation, createBreedingPrompt } from '../modules/ho
 import { loadHorseBreedingData } from '../modules/horse-breeding/horse-breeding-data.mjs';
 import {
   calculateFoal,
+  horseCrossingAnchor,
   horsePairKey,
   normalizeLegacyHorseCrossings
 } from '../modules/horse-breeding/horse-breeding-model.mjs';
@@ -30,18 +31,31 @@ test('breeding data joins all 27 Rossmarkt breeds with local horse dossiers', as
   await Promise.all(data.breeds.map(breed => access(new URL(breed.profileHref, pageDirectory))));
 });
 
-test('the five Rossmarkt names and two established lore crossings are complete and symmetric', async () => {
+test('the five Rossmarkt names and three registered lore crossings are complete and symmetric', async () => {
   const source = await readFile(new URL('../../Markt/Rossmarkt/Rossmarkt.html', import.meta.url), 'utf8');
   assert.deepEqual(extractRossmarktBreedingCrossings(source).map(entry => entry.name), [
     'Hochblut', 'Kronforst', 'Kronhest', 'Roh-Rhyfel', 'Edelsale'
   ]);
-  assert.equal(data.crossings.length, 7);
+  assert.equal(data.crossings.length, 8);
   assert.deepEqual(data.crossings.map(entry => entry.name), [
-    'Hochblut', 'Kronforst', 'Kronhest', 'Roh-Rhyfel', 'Edelsale', 'Brycing', 'Tirashan'
+    'Hochblut', 'Kronforst', 'Kronhest', 'Roh-Rhyfel', 'Edelsale', 'Brycing', 'Tirashan', 'Ritterschimmer'
   ]);
-  assert.equal(new Set(data.crossings.map(entry => horsePairKey(entry.mareId, entry.sireId))).size, 7);
+  assert.equal(new Set(data.crossings.map(entry => horsePairKey(entry.mareId, entry.sireId))).size, 8);
   assert.equal(horsePairKey('hest', 'ceffyl'), horsePairKey('ceffyl', 'hest'));
   assert.equal(data.crossings.find(entry => entry.name === 'Roh-Rhyfel').establishedBreed, 'Rhyfel');
+});
+
+test('Ritterschimmer is a durable named crossing with a stable Bestiarium anchor in either parent order', () => {
+  const crossing = data.crossings.find(entry => entry.bestiaryId === 'ritterschimmer');
+  assert.equal(horsePairKey(crossing.mareId, crossing.sireId), 'ceffyl|herzogsschimmer');
+  assert.equal(crossing.name, 'Ritterschimmer');
+  assert.match(crossing.note, /Carreg.*Sir Duncan Gafyr/);
+  const anchor = horseCrossingAnchor('ceffyl', 'herzogsschimmer');
+  assert.equal(horseCrossingAnchor('herzogsschimmer', 'ceffyl'), anchor);
+  const html = renderHorseBreedingPage(data);
+  assert.match(html, new RegExp(`id="${anchor}"`));
+  assert.match(html, /<h3>Ritterschimmer<\/h3>/);
+  assert.equal(calculateFoal(byId.get('ceffyl'), byId.get('herzogsschimmer'), { crossing, random: () => 0.5 }).crossing.name, 'Ritterschimmer');
 });
 
 test('the foal model preserves the Rossmarkt averaging, lifespan and price rules', () => {

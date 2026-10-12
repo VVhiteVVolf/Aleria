@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-11",
+  "characterName": "Owain Draig",
+  "setId": "set-02",
+  "theme": "Hof und Diplomatie",
+  "referenceImage": "Referenzen/owain-draig-portraet.jpg",
+  "referenceSource": "Stammbäume\\assets\\images\\portraits\\haus-draig\\owain-draig.jpg",
+  "referenceSha256": "20ad9997b34c0ec48294b250a540e8a06390c997416bb7db68e784fde8846eda",
+  "promptFile": "Prompts/owain-draig-set-02-hof-und-diplomatie.txt",
+  "sheetFile": "Sheets/owain-draig-set-02-hof-und-diplomatie-v2.png",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "emotion": "Souveränes Erklären",
+      "gesture": "Calm engaged speech with a slightly open mouth and attentive blue eyes; both hands held apart in a measured explanatory gesture, palms facing one another."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "emotion": "Nachdenkliches Abwägen",
+      "gesture": "Thoughtful, brows gently drawn together, gaze slightly sideways; one hand supporting the bearded chin, the other supporting that elbow."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "emotion": "Diplomatische Skepsis",
+      "gesture": "A restrained skeptical half-smile with one raised eyebrow; one arm folded across the torso, the other hand turned palm-up as if asking for clarification."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "emotion": "Aufmerksames Zuhören",
+      "gesture": "Mouth closed, perceptive steady gaze with a slight head incline; hands loosely clasped low in frame, composed upright posture."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "emotion": "Vertraulicher Rat",
+      "gesture": "Quiet serious counsel with sympathetic eyes; one hand angled beside his mouth, the other open and low to emphasize discretion, only a slight lean."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "emotion": "Feierliche Verkündung",
+      "gesture": "Noble confident public speech, mouth naturally open, brows lifted with conviction; one arm presented outward with a broad open palm, shoulders square."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "emotion": "Anerkennung",
+      "gesture": "A pleased respectful nod and small approving smile; one hand making a restrained open-fingered acknowledgment near shoulder height, no salute or props."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "emotion": "Höfliche Ablehnung",
+      "gesture": "An apologetic but firm closed-mouth smile and slightly knit brows; one hand gently raised palm-out, the other held open at his waist, no aggression."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "emotion": "Geistreiche Erwiderung",
+      "gesture": "An amused intelligent side-glance, bright eyes and a witty half-grin; one index finger slightly lifted near the chest as if finishing a clever remark, other hand relaxed."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "generationMode": "built-in image_gen",
+  "status": "erstellt, zerlegt und visuell geprüft",
+  "correctionPromptFile": "Prompts/owain-draig-set-02-hof-und-diplomatie-handschuhe-korrektur.txt",
+  "draftSheetFile": "Sheets/Entwuerfe/owain-draig-set-02-hof-und-diplomatie-v1.png",
+  "outputFolder": "Output/set-02",
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-11",
+    "reviewedAvatars": 9,
+    "passed": true
+  }
+}

@@ -1,0 +1,661 @@
+{
+  "createdAt": "2026-10-11",
+  "character": "Owain Draig",
+  "generationMode": "built-in image_gen",
+  "splitter": "AleriaAlmanach\\AvatarWerkstatt\\Werkzeuge\\Avatar Splitterer\\AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "operation": "Original V3 get_crops and crop_box methods, no GUI",
+  "sourcePortrait": "Referenzen/owain-draig-portraet.jpg",
+  "settings": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "sets": [
+    {
+      "setId": "set-01",
+      "theme": "Charme und Kavaliersgesten",
+      "sheet": "Sheets/owain-draig-set-01-charme-und-kavaliersgesten.png",
+      "sheetSha256": "6b418f4e1da4e9bc69a8ca411f59ea5fcc01f90a8441ef8c4d52645b7d2050a8",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Charmante Begrüßung",
+          "file": "Output/set-01/owain-draig-set-01-charme-und-kavaliersgesten_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "3480c762fdcab16592fc1388fec18ddd5fa3c0b884e8b483132e6dc54ea6c241"
+        },
+        {
+          "index": 2,
+          "emotion": "Schmeichelndes Kompliment",
+          "file": "Output/set-01/owain-draig-set-01-charme-und-kavaliersgesten_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "5c5b11ef3fdeb42829c202f912cd440e208ae158899e096c2f47b9ec7d1df83c"
+        },
+        {
+          "index": 3,
+          "emotion": "Flirtendes Augenzwinkern",
+          "file": "Output/set-01/owain-draig-set-01-charme-und-kavaliersgesten_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "109ba91ee612a23638dd3bf2d07a9e1f7fe050414637fc7151a551e57be15985"
+        },
+        {
+          "index": 4,
+          "emotion": "Schelmisches Zuflüstern",
+          "file": "Output/set-01/owain-draig-set-01-charme-und-kavaliersgesten_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "cf2b40d6fcab4c06b90b24cf215ef23e2d2fede70c28b65e638ba695436dc8c3"
+        },
+        {
+          "index": 5,
+          "emotion": "Herzliches Lachen",
+          "file": "Output/set-01/owain-draig-set-01-charme-und-kavaliersgesten_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "ddd97c2edb62c23e07f9027395c96649677fdea5ec54d7d163b174369f661970"
+        },
+        {
+          "index": 6,
+          "emotion": "Galante Einladung",
+          "file": "Output/set-01/owain-draig-set-01-charme-und-kavaliersgesten_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "14193f69227bf8417addf0ac55909e392b36593ae55e635b36e1e1e7b001c8e8"
+        },
+        {
+          "index": 7,
+          "emotion": "Würdiger Dank",
+          "file": "Output/set-01/owain-draig-set-01-charme-und-kavaliersgesten_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "cee9e47065e002a6b23fb40d7a825299711b5be63f53125606ccd31258102d74"
+        },
+        {
+          "index": 8,
+          "emotion": "Spielerische Herausforderung",
+          "file": "Output/set-01/owain-draig-set-01-charme-und-kavaliersgesten_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "9b7bdc1cce6d7beac14b7826560bf6d9fa9f306be98adcca2485845b3241d86a"
+        },
+        {
+          "index": 9,
+          "emotion": "Aufrichtige Zuwendung",
+          "file": "Output/set-01/owain-draig-set-01-charme-und-kavaliersgesten_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "3e8626e9bf8b673a03be3fe76c73ad609c4eb76de1d340d0d5c6c358bd640933"
+        }
+      ]
+    },
+    {
+      "setId": "set-02",
+      "theme": "Hof und Diplomatie",
+      "sheet": "Sheets/owain-draig-set-02-hof-und-diplomatie-v2.png",
+      "sheetSha256": "214b4e16fe3dd9f0636ed16e47dac9b8b905509d3fda27a09a0dff6357dbb77c",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Souveränes Erklären",
+          "file": "Output/set-02/owain-draig-set-02-hof-und-diplomatie_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "a474c5973b7425344a6b88e66bf4d568a267a325d4370d5ba9e31416cb5569ba"
+        },
+        {
+          "index": 2,
+          "emotion": "Nachdenkliches Abwägen",
+          "file": "Output/set-02/owain-draig-set-02-hof-und-diplomatie_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "08c672279907d636e863753b53bbd1872588c982e30f7e4e6e4ef3fd4bc0fa0f"
+        },
+        {
+          "index": 3,
+          "emotion": "Diplomatische Skepsis",
+          "file": "Output/set-02/owain-draig-set-02-hof-und-diplomatie_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "f04427ce6a938048374f3dbbb5e24989551023d25afa41fc69372212677c7118"
+        },
+        {
+          "index": 4,
+          "emotion": "Aufmerksames Zuhören",
+          "file": "Output/set-02/owain-draig-set-02-hof-und-diplomatie_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "c8532aa6f09a9d31e64faee8b7d445faf5c29f4a97decc7a9f99ae142569cfe5"
+        },
+        {
+          "index": 5,
+          "emotion": "Vertraulicher Rat",
+          "file": "Output/set-02/owain-draig-set-02-hof-und-diplomatie_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "7573f6615eed705d464ae9b6db1b7d029bfa2bff69410bd3d5c65c9f615fcc9e"
+        },
+        {
+          "index": 6,
+          "emotion": "Feierliche Verkündung",
+          "file": "Output/set-02/owain-draig-set-02-hof-und-diplomatie_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "068267aae63184842eaa20016c20c3bb4b193ce6b3c781a5955c7a3c74d8d33f"
+        },
+        {
+          "index": 7,
+          "emotion": "Anerkennung",
+          "file": "Output/set-02/owain-draig-set-02-hof-und-diplomatie_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "d8479b52a637e303fb02c6d018ea34f6ff2627c160c8ef13ed0030c10d26803b"
+        },
+        {
+          "index": 8,
+          "emotion": "Höfliche Ablehnung",
+          "file": "Output/set-02/owain-draig-set-02-hof-und-diplomatie_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "cd6dcdc8bf3b9ed14b9e7fc6cca47f7c2161cedcbc6441cd5b2db4e8865ae505"
+        },
+        {
+          "index": 9,
+          "emotion": "Geistreiche Erwiderung",
+          "file": "Output/set-02/owain-draig-set-02-hof-und-diplomatie_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "d02b6c015b2e5dbb96c0fbf80962e701068b552736d1bcb6fcc2de0d364f2445"
+        }
+      ]
+    },
+    {
+      "setId": "set-03",
+      "theme": "Ritterliche Autorität",
+      "sheet": "Sheets/owain-draig-set-03-ritterliche-autoritaet.png",
+      "sheetSha256": "af6a5882c0452ee42674e72c85363e94fae4e236ab91c48ba045abbb07d47fcf",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Entschlossener Befehl",
+          "file": "Output/set-03/owain-draig-set-03-ritterliche-autoritaet_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "d1a307b645c9acf55ea3a6defbf14be3bc6cee29d066ffbb46c50b403e34f3bc"
+        },
+        {
+          "index": 2,
+          "emotion": "Halt und Ruhe",
+          "file": "Output/set-03/owain-draig-set-03-ritterliche-autoritaet_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "1b4cef666070724729b8a8c9afd0fcb9966e0e33993ca43057af4932311178b4"
+        },
+        {
+          "index": 3,
+          "emotion": "Strenge Mahnung",
+          "file": "Output/set-03/owain-draig-set-03-ritterliche-autoritaet_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "ecf671959e97bfd80f8cb598b2c69d1e147ae3de96906256cfc67cec3da5aa5f"
+        },
+        {
+          "index": 4,
+          "emotion": "Unbeirrbare Herausforderung",
+          "file": "Output/set-03/owain-draig-set-03-ritterliche-autoritaet_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "2d9dbe1477cf7b341150d576a0279a3cfd8dc63cb8a9bdd11b806f25316c0ee4"
+        },
+        {
+          "index": 5,
+          "emotion": "Gerechter Zorn",
+          "file": "Output/set-03/owain-draig-set-03-ritterliche-autoritaet_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "fcfa46795cf1ba2b205bb831248cbc7b75cf6bf58822492f76e3613915c45711"
+        },
+        {
+          "index": 6,
+          "emotion": "Mitreißender Ruf",
+          "file": "Output/set-03/owain-draig-set-03-ritterliche-autoritaet_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "79300e9ed1760bf68e1cf8aa06ec334dd869552bea9c877c1ce00fc008c0fb4c"
+        },
+        {
+          "index": 7,
+          "emotion": "Ritterliches Ehrenwort",
+          "file": "Output/set-03/owain-draig-set-03-ritterliche-autoritaet_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "7ed71d09ce7ce19057e837a03579e295f560f13a0502727f1c2caf239eab9025"
+        },
+        {
+          "index": 8,
+          "emotion": "Last der Verantwortung",
+          "file": "Output/set-03/owain-draig-set-03-ritterliche-autoritaet_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "c0ded3fca06cb05d30bb963ff48054bfcb7a5e7c2dff8c07b475eaabb50b08b8"
+        },
+        {
+          "index": 9,
+          "emotion": "Beruhigende Zuversicht",
+          "file": "Output/set-03/owain-draig-set-03-ritterliche-autoritaet_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "0908883161d956c50eec782c3c4957f83259053e9c9da2e410449ccdcd1143cb"
+        }
+      ]
+    },
+    {
+      "setId": "set-04",
+      "theme": "Schalk und Schlagfertigkeit",
+      "sheet": "Sheets/owain-draig-set-04-schalk-und-schlagfertigkeit.png",
+      "sheetSha256": "8747781d38cc15ce5021d7525a749ccc0a005b89f70554307cd8608363fd3094",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Kusszuwerfen",
+          "file": "Output/set-04/owain-draig-set-04-schalk-und-schlagfertigkeit_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "5725aed192f024ff8193ca4cb217e0f65c7a445baa45fa94a40a9f70e7daef32"
+        },
+        {
+          "index": 2,
+          "emotion": "Verschwiegenes Geheimnis",
+          "file": "Output/set-04/owain-draig-set-04-schalk-und-schlagfertigkeit_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "5c2309c908397bd5373cde094ffb6c06c0ec6b276b021393667a7ae2b4f599ca"
+        },
+        {
+          "index": 3,
+          "emotion": "Gespielte Unschuld",
+          "file": "Output/set-04/owain-draig-set-04-schalk-und-schlagfertigkeit_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "fdb56ca5bc129a816861144238dea0a9d057959f86ca9abadc8a1d6369892838"
+        },
+        {
+          "index": 4,
+          "emotion": "Ungläubiges Staunen",
+          "file": "Output/set-04/owain-draig-set-04-schalk-und-schlagfertigkeit_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "fa0c1767974f7c52e1168261045687a93b7e1651a62f26309ec790b2e0f48b27"
+        },
+        {
+          "index": 5,
+          "emotion": "Trockener Sarkasmus",
+          "file": "Output/set-04/owain-draig-set-04-schalk-und-schlagfertigkeit_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "741c3d177dc502c0e576864a81c6859016e12cd5b81cb593cfcb387d29616e7a"
+        },
+        {
+          "index": 6,
+          "emotion": "Theatralische Empörung",
+          "file": "Output/set-04/owain-draig-set-04-schalk-und-schlagfertigkeit_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "db99c560f0d644cf39d10d2a6b6ead9f9dd83694c01af35d5360e7dccad892be"
+        },
+        {
+          "index": 7,
+          "emotion": "Schadenfrohes Kichern",
+          "file": "Output/set-04/owain-draig-set-04-schalk-und-schlagfertigkeit_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "17b9d45e055ebdf11718889bf7782eb6af4362cc939474d746d39de844dec35d"
+        },
+        {
+          "index": 8,
+          "emotion": "Genervtes Augenrollen",
+          "file": "Output/set-04/owain-draig-set-04-schalk-und-schlagfertigkeit_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "9dce74e49ec778e6974997783a2aec48f9bef80cfb74644ed298181ebaf74d2b"
+        },
+        {
+          "index": 9,
+          "emotion": "Triumphierender Selbstspott",
+          "file": "Output/set-04/owain-draig-set-04-schalk-und-schlagfertigkeit_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "56f5482a4f2b66ff08d82d48315e8f5f64dd8ab10fcf16e96a1fd2ebe5b1d918"
+        }
+      ],
+      "visualReview": {
+        "reviewedAt": "2026-10-11",
+        "reviewedAvatars": 9,
+        "passed": true
+      }
+    },
+    {
+      "setId": "set-05",
+      "theme": "Seltene persönliche Momente",
+      "sheet": "Sheets/owain-draig-set-05-seltene-persoenliche-momente.png",
+      "sheetSha256": "37bccc2e7b552b5fb59565aa527a8a3a9e3da8377f98398e3acf323c623c4c91",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Verlegen ertappt",
+          "file": "Output/set-05/owain-draig-set-05-seltene-persoenliche-momente_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "f46fa2120983ffbb20b089f2977a87815d24d0f4f2d171c19a52540b30635033"
+        },
+        {
+          "index": 2,
+          "emotion": "Stumme Ernüchterung",
+          "file": "Output/set-05/owain-draig-set-05-seltene-persoenliche-momente_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "72df0bf683e98b09911e7a2432b97601e4720377f3eb673de876861807ef0a5d"
+        },
+        {
+          "index": 3,
+          "emotion": "Stilles Bedauern",
+          "file": "Output/set-05/owain-draig-set-05-seltene-persoenliche-momente_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "b00d1304cec4cd1df18a5dbde765108ac97b16753be8d2f845ed1dac4868350a"
+        },
+        {
+          "index": 4,
+          "emotion": "Plötzliche Erkenntnis",
+          "file": "Output/set-05/owain-draig-set-05-seltene-persoenliche-momente_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "ed4d9e9abeedbc4faaf949ee5b49bf831a894173fc214f547ee712f3a96a0c71"
+        },
+        {
+          "index": 5,
+          "emotion": "Abwehrender Ekel",
+          "file": "Output/set-05/owain-draig-set-05-seltene-persoenliche-momente_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "fd34bf801a50e64f8463cd8269202ce1edbbfe5451c58ba3ec04ed76915ca088"
+        },
+        {
+          "index": 6,
+          "emotion": "Erschöpftes Gähnen",
+          "file": "Output/set-05/owain-draig-set-05-seltene-persoenliche-momente_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "6043b177d071db7696f4f4f8042fddefa142fa80be2ba9e4b5d931c129ce2a5e"
+        },
+        {
+          "index": 7,
+          "emotion": "Wachsames Horchen",
+          "file": "Output/set-05/owain-draig-set-05-seltene-persoenliche-momente_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "1bc219595eae320b1e4127812fdda6ea1d34bd4b17e0df0cbef3de36b756c78e"
+        },
+        {
+          "index": 8,
+          "emotion": "Echte Rührung",
+          "file": "Output/set-05/owain-draig-set-05-seltene-persoenliche-momente_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "31fec21ffe925d8080a6959dd49fa88a25c35d427c3a1dc35c3716165bfdfed0"
+        },
+        {
+          "index": 9,
+          "emotion": "Lautloses Gebet",
+          "file": "Output/set-05/owain-draig-set-05-seltene-persoenliche-momente_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "7805df977860c8e417f779245f32c68ca4cffd7bca13893d4de4f6a66ea381c8"
+        }
+      ],
+      "visualReview": {
+        "reviewedAt": "2026-10-11",
+        "reviewedAvatars": 9,
+        "passed": true
+      }
+    }
+  ],
+  "avatarCount": 45,
+  "visualReview": {
+    "reviewedAt": "2026-10-11",
+    "reviewedAvatars": 45,
+    "method": "Erste 27 Einzelbilder zuvor in drei Prüfübersichten angesehen; anschließend alle 18 Ergänzungen in zwei weiteren Prüfübersichten bei Originalgröße angesehen.",
+    "result": "Reihenfolge korrekt, konsistente Figur und Kleidung, Hände lesbar, keine sichtbaren Trennlinien oder Nachbarpanels, keine Beschriftung im Bild.",
+    "passed": true
+  }
+}

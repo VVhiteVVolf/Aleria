@@ -1,0 +1,68 @@
+{
+  "order": 11,
+  "slug": "dathuil",
+  "label": "Dathuil",
+  "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_21_41-Uathneach _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+  "userBrief": "Ähnlich wie Mhorcha: Flussstadt mit hölzerner Umwallung, ausgeprägter Burg und Hafenbereich.",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "status": "first-draft-ready",
+  "version": 1,
+  "tool": "built-in image_gen",
+  "stylePreset": "fantasy-worldmap-stamp",
+  "styleVersion": 2,
+  "transparentBackground": true,
+  "primaryStyleReference": "Karten/assets/images/worldmap-stamps/style-tests/01-gaelic-farmhouse-approved.png",
+  "file": "dathuil-v01.png",
+  "designDescription": "A Gaelic river town similar to Mhorcha, with a stout wooden palisade, a prominent pale stone castle, about 16 to 20 small chubby cottages, and a conspicuous river harbor. A broad low keep with two slate-roof towers stands at the northern rear; ochre thatch and muted terracotta roofs fill the lower town. Two low timber warehouses, two short piers and two tiny river craft face the waterfront. Plain warm brown logs shown with just a few strokes, blank walls and broad simple roofs",
+  "geographicLayout": "The town stands NORTHWEST of a diagonal river running from lower-left toward upper-right along the SOUTHEAST edge of the screenshot. Fit a diagonally stretched footprint following this riverbank, with castle around (49%,32%), houses around (48%,48%), southwest land gate around (34%,63%), and harbor on the SOUTHEAST/LOWER-RIGHT side around (65%,62%). Piers point DOWN-RIGHT into the river, unlike Mhorcha's directly east-facing docks. Do not put buildings on the pale opposite bank, and do not paint the forest or marsh.",
+  "prompt": "Create ONE transparent Inkarnate worldmap stamp of Dathuil — Gaelic town or city.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A Gaelic river town similar to Mhorcha, with a stout wooden palisade, a prominent pale stone castle, about 16 to 20 small chubby cottages, and a conspicuous river harbor. A broad low keep with two slate-roof towers stands at the northern rear; ochre thatch and muted terracotta roofs fill the lower town. Two low timber warehouses, two short piers and two tiny river craft face the waterfront. Plain warm brown logs shown with just a few strokes, blank walls and broad simple roofs. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nREFERENCE ROLES: Image 1 is the approved farmhouse, the PRIMARY STYLE reference. Image 2 is ONLY the north-up target MAP GEOGRAPHY and placement reference. Match the map's approximate canvas aspect ratio and layout. Colored diamond markers indicate location only, NOT a frame, emblem, background, or rigid city boundary. Never reproduce those markers, labels, terrain, mountain ranges, trees outside the settlement, river, sea, sky or background. Draw only the architecture and indispensable attached harbor elements. Buildings stand upright in the approved elevated three-quarter view while their footprint follows the north-up map. Keep all foundations on the indicated land; existing bridges remain part of the original map and should not be redrawn. Use the geographic directions below. Normalized positions are approximate centers, not exact requirements.\n\nGEOGRAPHIC LAYOUT: The town stands NORTHWEST of a diagonal river running from lower-left toward upper-right along the SOUTHEAST edge of the screenshot. Fit a diagonally stretched footprint following this riverbank, with castle around (49%,32%), houses around (48%,48%), southwest land gate around (34%,63%), and harbor on the SOUTHEAST/LOWER-RIGHT side around (65%,62%). Piers point DOWN-RIGHT into the river, unlike Mhorcha's directly east-facing docks. Do not put buildings on the pale opposite bank, and do not paint the forest or marsh.\n\nTRANSPARENCY AND SIMPLICITY: Every exterior contour is a clean solid dark-brown pen stroke. Immediately outside it is fully transparent empty space, no brown gradient, blur, halo, glow, cast shadow or ground shadow. Free gaps and all water areas are transparent. Only small enclosed courtyards and narrow built streets may be filled; no continuous city ground plate. Do not add tiny surface marks to fill the canvas. All houses retain the farmhouse reference's playful simple shape language; cities may contain more houses but each stays equally simple.",
+  "geographyReferenceSize": [
+    507,
+    437
+  ],
+  "validation": {
+    "width": 1351,
+    "height": 1164,
+    "mode": "RGBA",
+    "transparentFraction": 0.7249,
+    "transparentPixelCount": 1140003,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "visibleBoundsAlphaAbove8": [
+      259,
+      134,
+      1143,
+      956
+    ],
+    "originalAlphaPreserved": true,
+    "originalBytesPreserved": true
+  },
+  "sourceImage": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11f40-a25b-73f1-8920-3ca29d7e34d6\\exec-d2954250-2b56-4732-9a4d-96f80f423d22.png",
+  "generationId": "exec-d2954250-2b56-4732-9a4d-96f80f423d22",
+  "sha256": "8af10b66d877741d24d58bece7e789669cb7efe6a1fe235663bcef1a5f555a84",
+  "review": {
+    "userApproved": false,
+    "batchFirstDraft": true,
+    "geographyReferenceInspected": true,
+    "preciseMapPlacementDeferred": true,
+    "optimizationDeferredByUser": true,
+    "note": "Erstentwurf auf Grundlage des freigegebenen Bauernhaus-Stils und des individuellen Kartenausschnitts. Keine Zwischenfreigabe erforderlich; individuelle Optimierung erfolgt spaeter.",
+    "lightAndDarkCompositeInspected": true,
+    "edgeInspection": "Auf heller und dunkler Vorschauunterlage visuell geprueft; keine sichtbaren aeusseren Halos oder Hintergrundrechtecke. Originaler Alphakanal unveraendert.",
+    "overviewLight": "../../batch-16-previews/overview-light.png",
+    "overviewDark": "../../batch-16-previews/overview-dark.png"
+  },
+  "referenceHashes": {
+    "primaryStyleReference": "cb49eb5e92bc28d42eadbcf6eb4927bef73f449c2a713c76d0b427990310b3bd",
+    "geographyReference": "0f418f9d1fd94c3c9c11dc8bfbdfcc21b99f98bb9d760f06576e0fab072658f9"
+  }
+}

@@ -5,7 +5,8 @@ import { renderHorseBreedingPage } from '../modules/horse-breeding/horse-breedin
 const outputDirectory = new URL('../tiere/pferde/zuchtbuch/', import.meta.url);
 const outputFile = new URL('index.html', outputDirectory);
 const check = process.argv.includes('--check');
-const html = renderHorseBreedingPage(await loadHorseBreedingData());
+const data = await loadHorseBreedingData();
+const html = renderHorseBreedingPage(data);
 
 if (check) {
   const existing = (await readFile(outputFile, 'utf8')).replace(/\r\n/g, '\n');
@@ -17,4 +18,4 @@ if (check) {
   await writeFile(outputFile, html, 'utf8');
 }
 
-console.log(`${check ? 'Checked' : 'Built'} horse-breeding page with 27 breeds and 7 named crossings.`);
+console.log(`${check ? 'Checked' : 'Built'} horse-breeding page with ${data.breeds.length} breeds and ${data.crossings.length} named crossings.`);

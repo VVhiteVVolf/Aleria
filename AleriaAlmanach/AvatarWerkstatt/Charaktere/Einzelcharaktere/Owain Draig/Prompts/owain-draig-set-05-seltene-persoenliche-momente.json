@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-11",
+  "characterName": "Owain Draig",
+  "setId": "set-05",
+  "theme": "Seltene persönliche Momente",
+  "referenceImage": "Referenzen/owain-draig-portraet.jpg",
+  "referenceSha256": "20ad9997b34c0ec48294b250a540e8a06390c997416bb7db68e784fde8846eda",
+  "promptFile": "Prompts/owain-draig-set-05-seltene-persoenliche-momente.txt",
+  "sheetFile": "Sheets/owain-draig-set-05-seltene-persoenliche-momente.png",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "emotion": "Verlegen ertappt",
+      "gesture": "Caught off guard and briefly bashful: a restrained embarrassed smile, eyes glancing aside and a faint natural blush; one hooked gloved finger gently tugs the edge of his OWN red scarf away from his collar, other hand low. Keep the scarf design unchanged."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "emotion": "Stumme Ernüchterung",
+      "gesture": "A dignified facepalm of silent disbelief: one gloved palm rests diagonally on his forehead, fingers at the hairline, leaving an eye and the lower face visible; eyes lowered and mouth flat, shoulders subtly dropped."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "emotion": "Stilles Bedauern",
+      "gesture": "Genuine quiet regret, inner brows raised and mouth softened downward, gaze lowered; one gloved hand holds and gently fidgets with the opposite wrist cuff low at the chest. No object, no chin-touching."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "emotion": "Plötzliche Erkenntnis",
+      "gesture": "A sudden clear realization, eyes brightened and brows lifted with a small open aha mouth; one gloved index fingertip touches his own temple, other fingers naturally bent. No lightbulb, text or added symbols."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "emotion": "Abwehrender Ekel",
+      "gesture": "A believable restrained disgust reaction: nose slightly wrinkled, upper lip subtly raised and eyes narrowed; thumb and index finger gently pinch the bridge/tip of his nose, other hand drawn away with fingers relaxed. Preserve handsome adult face proportions, no grotesque distortion."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "emotion": "Erschöpftes Gähnen",
+      "gesture": "A genuinely tired yawn, eyes gently squeezed shut; one gloved hand courteously covers his open mouth while the other arm bends back in a compact stretch behind his head. Keep both complete hands and elbows within the cell."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "emotion": "Wachsames Horchen",
+      "gesture": "He has heard something unexpected: lips closed, brows focused and gaze sharply to the side; one gloved hand cupped immediately behind his ear and a slight head tilt toward the sound, the other hand lowered."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "emotion": "Echte Rührung",
+      "gesture": "Sincerely moved, a fragile warm smile with slightly glistening blue eyes and raised inner brows; one gloved fingertip gently wipes a tiny tear at the outer corner of one eye, other hand relaxed. No exaggerated crying or running streams of tears."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "emotion": "Lautloses Gebet",
+      "gesture": "A private solemn moment, eyes closed and face composed with earnest humility; BOTH gloved palms pressed flat together upright just below his mouth, fingers naturally aligned in a quiet prayer. No religious objects or added symbols."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "generationMode": "built-in image_gen",
+  "status": "erstellt, zerlegt und visuell geprüft",
+  "outputFolder": "Output/set-05",
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-11",
+    "reviewedAvatars": 9,
+    "passed": true
+  }
+}

@@ -1,5 +1,5 @@
 import { inventoryWithCreatureIdentity } from '../item-register/item-register-companions.js';
-import { inferCreatureGenus } from './creature-classification.js?v=20261011-creature-groups-v1';
+import { inferCreatureGenus } from './creature-classification.js?v=20261012-carreg-v1';
 
 export function isUnassignedCompanionCard(card = {}) {
   return ['Reittier / Gefährte', 'Treuer Begleiter'].includes(card.name)
@@ -18,10 +18,10 @@ export function attachCreatureToInventory(character, creature, now = new Date().
     card = inventory.companions.find(isUnassignedCompanionCard);
     const data = { name: creature.name, species: creature.species, image: creature.portrait,
       description: creature.notes, summary: creature.biography?.summary || creature.notes,
-      role: inferCreatureGenus(creature) === 'Pferde' ? 'Reittier' : 'Gefährte',
+      role: inferCreatureGenus(creature) === 'Pferde' ? 'Reittier' : 'Gefährte', status: 'Gesund',
       imageFormat: 'portrait', imageFit: 'contain', imagePosition: 'center', attributes: [], infoRows: [] };
     if (card) Object.assign(card, data);
-    else { card = { id: `card-${creature.itemOrigin?.instanceId}`, status: 'Gesund', ...data }; inventory.companions.push(card); }
+    else { card = { id: `card-${creature.itemOrigin?.instanceId}`, ...data }; inventory.companions.push(card); }
   }
   const item = inventory.items?.find(item => item.id === creature.itemOrigin?.inventoryItemId);
   if (card.creatureId === creature.id && card.inventoryItemId === item?.id

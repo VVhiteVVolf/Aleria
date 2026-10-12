@@ -32,6 +32,7 @@ function createCrossing(entry, enrichment = {}) {
     mareId: entry.mareId,
     sireId: entry.sireId,
     name: entry.name,
+    bestiaryId: entry.bestiaryId || '',
     source: entry.source,
     note: entry.note || enrichment.note || '',
     establishedBreed: entry.establishedBreed || enrichment.establishedBreed || ''
@@ -91,7 +92,7 @@ export async function loadHorseBreedingData() {
   });
 
   assert.equal(breeds.length, 27, 'Das Zuchtbuch benötigt alle 27 Rossmarkt-Rassen');
-  assert.equal(crossings.length, 7, 'Die sieben bisher benannten Kreuzungen sind unvollständig');
+  assert.equal(crossings.length, rossmarktCrossings.length + HORSE_BREEDING_LORE_CROSSINGS.length, 'Die registrierten benannten Kreuzungen sind unvollständig');
   assert.equal(new Set(crossings.map(entry => horsePairKey(entry.mareId, entry.sireId))).size, crossings.length, 'Doppelte benannte Kreuzung');
 
   return {

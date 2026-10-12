@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "preset": "fantasy-worldmap-stamp",
+  "receivedAt": "2026-10-09",
+  "description": "Drei unveränderte PNG-Originaluploads des Nutzers als dauerhafte Stilreferenzen. Keine Neugenerierung, Skalierung oder Freistellung der Referenzen.",
+  "usage": "Nur Zeichenstil, charmante Proportionen, Materialdarstellung und Architekturlesbarkeit verwenden. Hintergründe, Beschriftungen, Raster, Landschaftsflächen, Wolken, Wasser und äußere Schatten nicht in neue Stamps übernehmen. Die schriftlichen Regeln des Presets haben Vorrang.",
+  "images": [
+    {
+      "uploadOrder": 1,
+      "title": "Sechs Burgtypen",
+      "file": "01-castle-types.png",
+      "width": 4096,
+      "height": 3072,
+      "bytes": 5820380,
+      "sha256": "8bbf312102b6373317cd4b9d7d8927a4b6cd579738b301275b3ff7305fe326a9",
+      "source": "user-upload",
+      "unchangedOriginal": true
+    },
+    {
+      "uploadOrder": 2,
+      "title": "Ummauerte Burgsiedlung",
+      "file": "02-walled-castle-settlement.png",
+      "width": 4096,
+      "height": 3072,
+      "bytes": 19206261,
+      "sha256": "3703699e3eea4cb04b575577f3e411835a71f049201609894a89bf9f3333b2e3",
+      "source": "user-upload",
+      "unchangedOriginal": true
+    },
+    {
+      "uploadOrder": 3,
+      "title": "Zwanzig Burgvarianten",
+      "file": "03-castle-variants.png",
+      "width": 4096,
+      "height": 3277,
+      "bytes": 18057082,
+      "sha256": "c495ab2e90a0c693d7df135ffd8198bb3e67bb8988ce380e2cc877f8c0d7bf30",
+      "source": "user-upload",
+      "unchangedOriginal": true
+    }
+  ],
+  "approvedStyleReference": {
+    "projectPath": "Karten/assets/images/worldmap-stamps/style-tests/01-gaelic-farmhouse-approved.png",
+    "approvedAt": "2026-10-09",
+    "approvalQuote": "Exakt so! Speichere dir diesen Stil nun.",
+    "priority": "primary",
+    "promptManifest": "Karten/assets/images/worldmap-stamps/style-tests/approved-style.json",
+    "width": 1374,
+    "height": 1145,
+    "mode": "RGBA",
+    "sha256": "cb49eb5e92bc28d42eadbcf6eb4927bef73f449c2a713c76d0b427990310b3bd"
+  }
+}

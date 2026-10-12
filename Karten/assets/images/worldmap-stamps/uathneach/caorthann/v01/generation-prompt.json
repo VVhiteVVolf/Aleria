@@ -1,0 +1,68 @@
+{
+  "order": 16,
+  "slug": "caorthann",
+  "label": "Caorthann",
+  "geographyReference": "C:/Users/fhg_r/Downloads/Uathneach Städte/2026-10-09 11_53_42-Uathneach Alternativ _ Inkarnate - Create Fantasy Maps Online – Opera.png",
+  "userBrief": "Wirklich eindrucksvolle Hafenstadt.",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-09",
+  "status": "first-draft-ready",
+  "version": 1,
+  "tool": "built-in image_gen",
+  "stylePreset": "fantasy-worldmap-stamp",
+  "styleVersion": 2,
+  "transparentBackground": true,
+  "primaryStyleReference": "Karten/assets/images/worldmap-stamps/style-tests/01-gaelic-farmhouse-approved.png",
+  "file": "caorthann-v01.png",
+  "designDescription": "A truly impressive sprawling Gaelic harbor city, among the grandest seaports in this series, with about 32 to 38 VERY SIMPLE little buildings in three dense quarters. A long northern working waterfront of four chunky warehouses, four short piers, a shipyard hall and three small merchant sailing ships with simple cream sails. A commanding but compact harbor citadel, broad market hall and strong landward wall. City scale is expressed through width and many clean roof shapes, never microdetail. Cream stone, slate-blue and terracotta roofs, dark brown outlines and timber",
+  "geographicLayout": "The sea occupies the NORTH/TOP of the screenshot, with a gently undulating nearly horizontal shoreline across the upper-middle. Create a very BROAD east-west city entirely SOUTH of that shoreline, extending roughly from x=17% to x=88%. North-facing harbor/quay follows y around 43%, piers project UP into transparent sea; houses spread around (35%,59%), (55%,60%) and (74%,57%). Harbor citadel toward the eastern end around (78%,47%). Southern main gate faces the road at (47%,79%). Leave the small existing bridge at far LEFT free. Green location marker overlapping water is not a city boundary. No sea, shoreline, surrounding fields or forest in output.",
+  "prompt": "Create ONE transparent Inkarnate worldmap stamp of Caorthann — Gaelic town or city.\n\nUse the attached APPROVED ROUND GAELIC FARMHOUSE as the PRIMARY STYLE REFERENCE. Match its playful simplicity, chunky rounded proportions, slightly wonky hand-drawn dark-brown outlines and restrained flat watercolor coloring as closely as possible. Other references define the subject or architecture only. Keep exactly this SMALL MAP SYMBOL level of detail even though the output canvas is larger. This is a tiny charming atlas doodle, drawn with a few confident pen strokes and simple watercolor fills.\n\nSubject: A truly impressive sprawling Gaelic harbor city, among the grandest seaports in this series, with about 32 to 38 VERY SIMPLE little buildings in three dense quarters. A long northern working waterfront of four chunky warehouses, four short piers, a shipyard hall and three small merchant sailing ships with simple cream sails. A commanding but compact harbor citadel, broad market hall and strong landward wall. City scale is expressed through width and many clean roof shapes, never microdetail. Cream stone, slate-blue and terracotta roofs, dark brown outlines and timber. Reduce the subject to a few large, clear, slightly irregular shapes. For buildings, favor cozy, chubby proportions, generous simple roofs, almost plain walls and very few doors or windows. Adapt the architecture to the requested motif while retaining the approved cartoonish drawing language. Use the same gently elevated three-quarter map angle as the approved reference. Only a handful of short material marks. Dark-brown outlines carry the design. Warm muted natural colors, gentle paper grain inside the colored shapes only. Two flat tonal values per material, very little shading.\n\nShow ONLY the requested stamp and indispensable attached elements. No extra props or scenery. No individually rendered stones, planks, straw fibers or shingles. No intricate cracks, weathering spots, elaborate ornament, realistic surface rendering or 3D lighting. No extra detail invented to fill the large canvas. Prioritize the simple playful reference shapes above all else. Do not copy the farmhouse subject when another motif is requested.\n\nEntire motif visible, comfortable transparent margin. TRUE transparent PNG alpha background; Alpha = 0 outside the motif and in open gaps. No ground patch, scenery, shadow, colored backdrop, paper rectangle, pin frame, text, white outline or halo.\n\nREFERENCE ROLES: Image 1 is the approved farmhouse, the PRIMARY STYLE reference. Image 2 is ONLY the north-up target MAP GEOGRAPHY and placement reference. Match the map's approximate canvas aspect ratio and layout. Colored diamond markers indicate location only, NOT a frame, emblem, background, or rigid city boundary. Never reproduce those markers, labels, terrain, mountain ranges, trees outside the settlement, river, sea, sky or background. Draw only the architecture and indispensable attached harbor elements. Buildings stand upright in the approved elevated three-quarter view while their footprint follows the north-up map. Keep all foundations on the indicated land; existing bridges remain part of the original map and should not be redrawn. Use the geographic directions below. Normalized positions are approximate centers, not exact requirements.\n\nGEOGRAPHIC LAYOUT: The sea occupies the NORTH/TOP of the screenshot, with a gently undulating nearly horizontal shoreline across the upper-middle. Create a very BROAD east-west city entirely SOUTH of that shoreline, extending roughly from x=17% to x=88%. North-facing harbor/quay follows y around 43%, piers project UP into transparent sea; houses spread around (35%,59%), (55%,60%) and (74%,57%). Harbor citadel toward the eastern end around (78%,47%). Southern main gate faces the road at (47%,79%). Leave the small existing bridge at far LEFT free. Green location marker overlapping water is not a city boundary. No sea, shoreline, surrounding fields or forest in output.\n\nTRANSPARENCY AND SIMPLICITY: Every exterior contour is a clean solid dark-brown pen stroke. Immediately outside it is fully transparent empty space, no brown gradient, blur, halo, glow, cast shadow or ground shadow. Free gaps and all water areas are transparent. Only small enclosed courtyards and narrow built streets may be filled; no continuous city ground plate. Do not add tiny surface marks to fill the canvas. All houses retain the farmhouse reference's playful simple shape language; cities may contain more houses but each stays equally simple.",
+  "geographyReferenceSize": [
+    750,
+    546
+  ],
+  "validation": {
+    "width": 1470,
+    "height": 1070,
+    "mode": "RGBA",
+    "transparentFraction": 0.6439,
+    "transparentPixelCount": 1012772,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "visibleBoundsAlphaAbove8": [
+      69,
+      276,
+      1435,
+      899
+    ],
+    "originalAlphaPreserved": true,
+    "originalBytesPreserved": true
+  },
+  "sourceImage": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11f40-a25b-73f1-8920-3ca29d7e34d6\\exec-96e37c82-c3a8-42fe-99cd-9ef01dc76b40.png",
+  "generationId": "exec-96e37c82-c3a8-42fe-99cd-9ef01dc76b40",
+  "sha256": "16a2be6d9816266291205233ad9afb4fade5d532058353072884911e4159c746",
+  "review": {
+    "userApproved": false,
+    "batchFirstDraft": true,
+    "geographyReferenceInspected": true,
+    "preciseMapPlacementDeferred": true,
+    "optimizationDeferredByUser": true,
+    "note": "Erstentwurf auf Grundlage des freigegebenen Bauernhaus-Stils und des individuellen Kartenausschnitts. Keine Zwischenfreigabe erforderlich; individuelle Optimierung erfolgt spaeter.",
+    "lightAndDarkCompositeInspected": true,
+    "edgeInspection": "Auf heller und dunkler Vorschauunterlage visuell geprueft; keine sichtbaren aeusseren Halos oder Hintergrundrechtecke. Originaler Alphakanal unveraendert.",
+    "overviewLight": "../../batch-16-previews/overview-light.png",
+    "overviewDark": "../../batch-16-previews/overview-dark.png"
+  },
+  "referenceHashes": {
+    "primaryStyleReference": "cb49eb5e92bc28d42eadbcf6eb4927bef73f449c2a713c76d0b427990310b3bd",
+    "geographyReference": "be44bd84168c6a07308ad9ac52e117071e670b67eebd0a63b13732c0e524daad"
+  }
+}

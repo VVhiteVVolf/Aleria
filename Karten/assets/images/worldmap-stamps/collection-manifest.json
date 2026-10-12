@@ -1,0 +1,998 @@
+{
+  "schemaVersion": 1,
+  "completedAt": "2026-10-09",
+  "status": "complete",
+  "stylePreset": "fantasy-worldmap-stamp",
+  "styleVersion": 2,
+  "tool": "built-in image_gen",
+  "originalChartMotifCount": 119,
+  "additionalHarborVariantCount": 3,
+  "totalStampCount": 122,
+  "remainingMotifs": 0,
+  "ordering": "Original user chart, rows top to bottom and cells left to right. Preserve second Mine, Schmuggel and Zerstoerte Kirche cells as separate visual variants. Empty outlines from cell 120 onward are placeholders.",
+  "primaryStyleReference": "Karten/assets/images/worldmap-stamps/style-tests/01-gaelic-farmhouse-approved.png",
+  "primaryStyleReferenceSha256": "cb49eb5e92bc28d42eadbcf6eb4927bef73f449c2a713c76d0b427990310b3bd",
+  "archive": "Inkarnate-Stamps-Komplett-01-119-mit-Hafenvarianten.zip",
+  "assets": [
+    {
+      "index": 1,
+      "label": "Ahnenbaum",
+      "source": "set-01-v2/01-ahnenbaum.png",
+      "archiveFile": "stamps/01-ahnenbaum.png",
+      "sha256": "dd81f1bd2e01556078454a5493c3c7423fbc0873ed27069eea61bae809dcc6f5",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 2,
+      "label": "Antike Ruine",
+      "source": "set-01-v2/02-antike-ruine.png",
+      "archiveFile": "stamps/02-antike-ruine.png",
+      "sha256": "1e8bc2fcdc64e1dfb4a9e9be58a09a40be4186b8e1a8b4aa90a1df775e3a1c30",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 3,
+      "label": "Antikes Grab",
+      "source": "set-01-v2/03-antikes-grab.png",
+      "archiveFile": "stamps/03-antikes-grab.png",
+      "sha256": "311306a754bb854f758eacd436fcd3694bd8bc4f7cff82e9a180407322ac2952",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 4,
+      "label": "Anwesen",
+      "source": "set-01-v2/04-anwesen.png",
+      "archiveFile": "stamps/04-anwesen.png",
+      "sha256": "ee603d023d5d3454c4976273f2bbcb1800c80e666777546e1d7829524e738921",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 5,
+      "label": "Ausgrabung",
+      "source": "set-01-v2/05-ausgrabung.png",
+      "archiveFile": "stamps/05-ausgrabung.png",
+      "sha256": "05464c6e8a5289a7be80d7d5b73d330c5bfe2ffab0a4cc429db3ff0fc6b4b688",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 6,
+      "label": "Außenposten",
+      "source": "set-01-v2/06-aussenposten.png",
+      "archiveFile": "stamps/06-aussenposten.png",
+      "sha256": "b664e8729bcbef8ad37c98adf517baf932abf68315853280eb8da5723834eb6d",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 7,
+      "label": "Banditenlager",
+      "source": "set-01-v2/07-banditenlager.png",
+      "archiveFile": "stamps/07-banditenlager.png",
+      "sha256": "bffdce0dfd060818c76fb941977fdd4d4b205a36db7fdda4c1fc06fb43dab8ff",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 8,
+      "label": "Kleinstadt",
+      "source": "set-01-v2/08-kleinstadt.png",
+      "archiveFile": "stamps/08-kleinstadt.png",
+      "sha256": "d1176b9449bcbbca99e2b390c5f969ec2e17209f9382e5420f8880e764b73d04",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 9,
+      "label": "Bauernhof",
+      "source": "set-01-v2/09-bauernhof.png",
+      "archiveFile": "stamps/09-bauernhof.png",
+      "sha256": "e2bde49b534cb0fc8f59189403ec2e2aa7edfbc8905ac2c1eef9a5053bc3ae81",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 10,
+      "label": "Bauernsiedlung",
+      "source": "set-01-v2/10-bauernsiedlung.png",
+      "archiveFile": "stamps/10-bauernsiedlung.png",
+      "sha256": "2d83c990dad8e8b9288150c01b23512f74270291b4165fe1e81048b88effba70",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 11,
+      "label": "Monsterhort",
+      "source": "set-01-v2/11-monsterhort.png",
+      "archiveFile": "stamps/11-monsterhort.png",
+      "sha256": "75ce60856207473977e57a1597f9be48e2001d03f097b9a6e0057dd228b948b9",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 12,
+      "label": "Handelshof",
+      "source": "set-01-v2/12-handelshof.png",
+      "archiveFile": "stamps/12-handelshof.png",
+      "sha256": "38ef5947f191da9bfb89bb291078bac921b88f065e47bd5fc5feda7dcabb0e7f",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 13,
+      "label": "Bergbausiedlung",
+      "source": "set-01-v2/13-bergbausiedlung.png",
+      "archiveFile": "stamps/13-bergbausiedlung.png",
+      "sha256": "d94bd20bd79c35387b0d1ef1e176c224e77550e89d46c5a7fa4ed19c5482878d",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 14,
+      "label": "Brauersiedlung",
+      "source": "set-01-v2/14-brauersiedlung.png",
+      "archiveFile": "stamps/14-brauersiedlung.png",
+      "sha256": "a0f0f7f901f6cacac8bdaaf88a70ae37af0e97e71e6e072ab07908ddaa4c4681",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 15,
+      "label": "Brückensiedlung",
+      "source": "set-01-v2/15-brueckensiedlung.png",
+      "archiveFile": "stamps/15-brueckensiedlung.png",
+      "sha256": "cb87212e097ef0cfb13c89f557c2310747062abdf05956aed84b3363b750daf5",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 16,
+      "label": "Burgsiedlung",
+      "source": "set-01-v2/16-burgsiedlung.png",
+      "archiveFile": "stamps/16-burgsiedlung.png",
+      "sha256": "4df3398e0d37914ef701e43ec676eaf98751a49eae6974cf05b49cde64d28e74",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 17,
+      "label": "Diebesgilde",
+      "source": "set-01-v2/17-diebesgilde.png",
+      "archiveFile": "stamps/17-diebesgilde.png",
+      "sha256": "0ceb8ae224d865505f72dfbedf330d76974b6116f83bac3c0758c8197bc5c1b0",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 18,
+      "label": "Druidenhütte",
+      "source": "set-01-v2/18-druidenhuette.png",
+      "archiveFile": "stamps/18-druidenhuette.png",
+      "sha256": "a3c79bcac97b03fb39db91bae89c98964d78833da740625840c0d9808fed4996",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 19,
+      "label": "Festung",
+      "source": "set-01-v2/19-festung.png",
+      "archiveFile": "stamps/19-festung.png",
+      "sha256": "1d812045595fb2f84b20e9932a628ba29a52e477a86ec934bc59141862371509",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 20,
+      "label": "Dunkle Festung",
+      "source": "set-01-v2/20-dunkle-festung.png",
+      "archiveFile": "stamps/20-dunkle-festung.png",
+      "sha256": "7bdfa2cb31304566c7b68fdcebefb4927c79dc175efc929b28c7be709ef630fb",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 21,
+      "label": "Berggipfel",
+      "source": "set-01-v2/21-berggipfel.png",
+      "archiveFile": "stamps/21-berggipfel.png",
+      "sha256": "2a4a3e3172364140886e8569a9930be3b867f43c8133fca28e1989cb1426008e",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 22,
+      "label": "Hornlingslager",
+      "source": "set-01-v2/22-hornlingslager.png",
+      "archiveFile": "stamps/22-hornlingslager.png",
+      "sha256": "eab0874201876275ce7318034bb6ffe13f64ff4187d560cd662432bb24c344b1",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 23,
+      "label": "Kaufmannssiedlung",
+      "source": "set-01-v2/23-kaufmannssiedlung.png",
+      "archiveFile": "stamps/23-kaufmannssiedlung.png",
+      "sha256": "e30f09bd69915bb2afde17015b0ef4039a41c89d07199ae83e5c0e401e12ae7e",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 24,
+      "label": "Schlachtfeld",
+      "source": "set-01-v2/24-schlachtfeld.png",
+      "archiveFile": "stamps/24-schlachtfeld.png",
+      "sha256": "2495310fd94847b9905238a2185b42dc28c72e08cf03c60c37ad59c9bdd08cf7",
+      "promptManifest": "prompts/set-01-v2.json"
+    },
+    {
+      "index": 25,
+      "label": "Grabmal",
+      "source": "set-02/25-grabmal.png",
+      "archiveFile": "stamps/25-grabmal.png",
+      "sha256": "fbefecaaa873c7212057eef33a04ec65b2605e3b0eba4d3851edf89e228c928f",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 26,
+      "label": "Große Burg",
+      "source": "set-02/26-grosse-burg.png",
+      "archiveFile": "stamps/26-grosse-burg.png",
+      "sha256": "d615a28ecb59ceeafbf285145030dd5e1d8542009c7af7d28a9ed4ae54aadcc7",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 27,
+      "label": "Großes Weingut",
+      "source": "set-02/27-grosses-weingut.png",
+      "archiveFile": "stamps/27-grosses-weingut.png",
+      "sha256": "d0bb5fda14e1918e4a8752ffb0eb8dde62eaff8c8dda08e646aca05706b35082",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 28,
+      "label": "Hafensiedlung",
+      "source": "set-02/28-hafensiedlung.png",
+      "archiveFile": "stamps/28-hafensiedlung.png",
+      "sha256": "a07791f0856f1df62c35d7c41c405cf2ae84ec3f2d4e05bdbacd15d02cd6267e",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 29,
+      "label": "Druidenhain",
+      "source": "set-02/29-druidenhain.png",
+      "archiveFile": "stamps/29-druidenhain.png",
+      "sha256": "97c2dccc189c335d8304271070fcc5c3bce2f2c7142c0f135f49ef890703dc14",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 30,
+      "label": "Heerlager",
+      "source": "set-02/30-heerlager.png",
+      "archiveFile": "stamps/30-heerlager.png",
+      "sha256": "02b10cf23a952c2c149b65c6d9a29f41f477b504bf986273de2d6f7df3f88b28",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 31,
+      "label": "Hain",
+      "source": "set-02/31-hain.png",
+      "archiveFile": "stamps/31-hain.png",
+      "sha256": "d2a6f1ddcc6ee491f9be4551768d013171b829644c9fd905605ed40ce3131085",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 32,
+      "label": "Besonderes Heiligtum",
+      "source": "set-02/32-besonderes-heiligtum.png",
+      "archiveFile": "stamps/32-besonderes-heiligtum.png",
+      "sha256": "d5fcb74879cba573e70cad75160d20a4f97aef0aeba475a7f7824be8708c831f",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 33,
+      "label": "Höhle",
+      "source": "set-02/33-hoehle.png",
+      "archiveFile": "stamps/33-hoehle.png",
+      "sha256": "657a84c0a2d09303ab8ffd07d1d47f66cb8fd191ef561b05026f9a673978b47f",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 34,
+      "label": "Hügelgrab",
+      "source": "set-02/34-huegelgrab.png",
+      "archiveFile": "stamps/34-huegelgrab.png",
+      "sha256": "11a21854bdcd0f8ca5d63e3cc40e62f191ef5edc3c0e76c3de021a11d1923610",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 35,
+      "label": "Heiße Quellen",
+      "source": "set-02/35-heisse-quellen.png",
+      "archiveFile": "stamps/35-heisse-quellen.png",
+      "sha256": "00abb492626b3a58e801cdb5deff16fd7338641a5de58a98c9097a1856cae718",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 36,
+      "label": "Grenzposten",
+      "source": "set-02/36-grenzposten.png",
+      "archiveFile": "stamps/36-grenzposten.png",
+      "sha256": "50195d2e32e8fc5bea35a2b3f8a3d1c1b49387d05cb0e7c914efc0d7431bc5a9",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 37,
+      "label": "Jägerlager",
+      "source": "set-02/37-jaegerlager.png",
+      "archiveFile": "stamps/37-jaegerlager.png",
+      "sha256": "592ac5e65e8b1062e1d396fe7e13ad63554cb0dc7e80ec9c1e747a0e8c34c9fd",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 38,
+      "label": "Ritterliches Gut",
+      "source": "set-02/38-ritterliches-gut.png",
+      "archiveFile": "stamps/38-ritterliches-gut.png",
+      "sha256": "cc1cfaeeaa92900ac0dc72b9fdfac539ed4db8a3dfdae0f67b531c4ea9f009db",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 39,
+      "label": "Plantage",
+      "source": "set-02/39-plantage.png",
+      "archiveFile": "stamps/39-plantage.png",
+      "sha256": "e03dc500ce9cab6936a7b29e0c838def9d24974f0b6a8cb454162fc7f7db9d0e",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 40,
+      "label": "Klostersiedlung",
+      "source": "set-02/40-klostersiedlung.png",
+      "archiveFile": "stamps/40-klostersiedlung.png",
+      "sha256": "64433a0139d06c95b9527aa0024c3a82657ec78dc78d7beabb10f9c0fdbee4ec",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 41,
+      "label": "Lager",
+      "source": "set-02/41-lager.png",
+      "archiveFile": "stamps/41-lager.png",
+      "sha256": "b020b9b44e8f70d9fa1633cf4b2cebee30e59be14672a23d7e2dd3f2a8b8cbcc",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 42,
+      "label": "Landgut",
+      "source": "set-02/42-landgut.png",
+      "archiveFile": "stamps/42-landgut.png",
+      "sha256": "c8249143b1451cb5b5e9181eac097e9b2b733e8eb8b08f3ecda52dc55fa749c4",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 43,
+      "label": "Leuchtturm",
+      "source": "set-02/43-leuchtturm.png",
+      "archiveFile": "stamps/43-leuchtturm.png",
+      "sha256": "1a368af2d881afa7772bc9504e78deae08ad32a37efcb809cf89fa77ac393726",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 44,
+      "label": "Magierturm",
+      "source": "set-02/44-magierturm.png",
+      "archiveFile": "stamps/44-magierturm.png",
+      "sha256": "27697971e18e22f243cc25eb1fdb2c1985cd82c681b1743b803ff2f4291aa1b7",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 45,
+      "label": "Handelssiedlung",
+      "source": "set-02/45-handelssiedlung.png",
+      "archiveFile": "stamps/45-handelssiedlung.png",
+      "sha256": "43dc70834366b1d7a97b81e772d3b3c92e0d63cdad4fee733226817f29510a18",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 46,
+      "label": "Clan Gut",
+      "source": "set-02/46-clan-gut.png",
+      "archiveFile": "stamps/46-clan-gut.png",
+      "sha256": "5c344b799c39592c46d8b28b15777bba6a91f0e17c9a3a611107234e166d8c07",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 47,
+      "label": "Fianna Sitz",
+      "source": "set-02/47-fianna-sitz.png",
+      "archiveFile": "stamps/47-fianna-sitz.png",
+      "sha256": "4e43243df9c05f79fd8c257b3523707ba0bd1b884cc87c6919051e696d243239",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 48,
+      "label": "Steg – Fähre",
+      "source": "set-02/48-steg-faehre.png",
+      "archiveFile": "stamps/48-steg-faehre.png",
+      "sha256": "df5bfaf5d1e06e250f15770ae6f9c3aa336c0cedde8ef2f3b91942216d01ec48",
+      "promptManifest": "prompts/set-02.json"
+    },
+    {
+      "index": 49,
+      "label": "Mine",
+      "source": "set-03/49-mine.png",
+      "archiveFile": "stamps/49-mine.png",
+      "sha256": "66c7a98ef5ccf48c437ff9f181cc509ea5529cbf90048d70616591503e665b77",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 50,
+      "label": "Möwensang Standort",
+      "source": "set-03/50-moewensang-standort.png",
+      "archiveFile": "stamps/50-moewensang-standort.png",
+      "sha256": "ce3a72d7ce7c426ea5fec1ca74e02aab4e07cb6981f6b763cc703ff2b8fd3322",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 51,
+      "label": "Antike Grabstätte",
+      "source": "set-03/51-antike-grabstaette.png",
+      "archiveFile": "stamps/51-antike-grabstaette.png",
+      "sha256": "300d07bed7024cc7af1cccc3f3c7612c8231e3d22410edee0d7e1792324e72db",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 52,
+      "label": "Rosszucht Siedlung",
+      "source": "set-03/52-rosszucht-siedlung.png",
+      "archiveFile": "stamps/52-rosszucht-siedlung.png",
+      "sha256": "b3e8236a136a3b43314a20b31b4da419e9fe3bf6c2b96bd96f0b129245d2ae97",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 53,
+      "label": "Piratenversteck",
+      "source": "set-03/53-piratenversteck.png",
+      "archiveFile": "stamps/53-piratenversteck.png",
+      "sha256": "ab7b7809038526fea48bfd4f96e6426d22cd934ef9794414e57f0dfb4c9f8908",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 54,
+      "label": "Schiff",
+      "source": "set-03/54-schiff.png",
+      "archiveFile": "stamps/54-schiff.png",
+      "sha256": "a25c92bb1ef6076c7bf174cb8b3a51559e198e9a260c2f64f44edb172040a4c9",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 55,
+      "label": "Schiffswrack",
+      "source": "set-03/55-schiffswrack.png",
+      "archiveFile": "stamps/55-schiffswrack.png",
+      "sha256": "b92417b5a89460f992ea1e48b7df204703fac5e265617527534fa19c669ca655",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 56,
+      "label": "Schmiedstätte",
+      "source": "set-03/56-schmiedstaette.png",
+      "archiveFile": "stamps/56-schmiedstaette.png",
+      "sha256": "00c8e58f79098136c641a8213e9c0e5745c3144a2ff8753bd10d70231492b965",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 57,
+      "label": "Stadt",
+      "source": "set-03/57-stadt.png",
+      "archiveFile": "stamps/57-stadt.png",
+      "sha256": "db074aed667106cfe0d19568575ceaf0edea6c19436f067c1db80f40cf73aaa6",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 58,
+      "label": "Ruine",
+      "source": "set-03/58-ruine.png",
+      "archiveFile": "stamps/58-ruine.png",
+      "sha256": "cfdc19cc12fb701ffd73bb74dc6f5d3e7718be019d395774bac4b444b7764630",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 59,
+      "label": "Ländlicher Gasthof",
+      "source": "set-03/59-laendlicher-gasthof.png",
+      "archiveFile": "stamps/59-laendlicher-gasthof.png",
+      "sha256": "75f9593e6d6291db591c514222a005324300de069edeef0e0f0f538b3ab23a86",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 60,
+      "label": "Jagdhaus",
+      "source": "set-03/60-jagdhaus.png",
+      "archiveFile": "stamps/60-jagdhaus.png",
+      "sha256": "eb7a00ee844d7b3ba9c30f100cbcf05d061b8591e2dde2620f2c036807b42760",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 61,
+      "label": "Sumpfsiedlung",
+      "source": "set-03/61-sumpfsiedlung.png",
+      "archiveFile": "stamps/61-sumpfsiedlung.png",
+      "sha256": "0283de2f8c4b95fa9134f3cca842dd5ff0cc7dcad184276ab5a634703df6edbe",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 62,
+      "label": "Taverne",
+      "source": "set-03/62-taverne.png",
+      "archiveFile": "stamps/62-taverne.png",
+      "sha256": "35b3a8670267b2195d23a8a1554f21f90f52d6c84bfb65a78bd314b66439a386",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 63,
+      "label": "Turm",
+      "source": "set-03/63-turm.png",
+      "archiveFile": "stamps/63-turm.png",
+      "sha256": "893679c33faa6abb1812522ec81c99309914101b0b036577b8cf1f15bb0d96ed",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 64,
+      "label": "Turnierfeld",
+      "source": "set-03/64-turnierfeld.png",
+      "archiveFile": "stamps/64-turnierfeld.png",
+      "sha256": "2e0d3583c0a9d9bfc5082a4ba2b794f72845ff71d126866e2f81c5b2312666a1",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 65,
+      "label": "Unterwasser Stadt",
+      "source": "set-03/65-unterwasser-stadt.png",
+      "archiveFile": "stamps/65-unterwasser-stadt.png",
+      "sha256": "b6c88686424e31db5546c675a2c495e5ba28e62a72045657acea95ed5d93579d",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 66,
+      "label": "Verwunschener Wald",
+      "source": "set-03/66-verwunschener-wald.png",
+      "archiveFile": "stamps/66-verwunschener-wald.png",
+      "sha256": "3c0a29198995adfe6c681aba9100f6dfd75b804773d709ea49c767f7d1d44953",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 67,
+      "label": "Wahrzeichen",
+      "source": "set-03/67-wahrzeichen.png",
+      "archiveFile": "stamps/67-wahrzeichen.png",
+      "sha256": "874804ffb8dc932ece2809387e0bf25b33d2e62f2f9308465cae6c5e1280e30e",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 68,
+      "label": "Waldsiedlung",
+      "source": "set-03/68-waldsiedlung.png",
+      "archiveFile": "stamps/68-waldsiedlung.png",
+      "sha256": "950cb5e7c5c7be517f8c55e281ee7febbe6e3400408992ebb5b742c79748cb09",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 69,
+      "label": "Kleines Weingut",
+      "source": "set-03/69-kleines-weingut.png",
+      "archiveFile": "stamps/69-kleines-weingut.png",
+      "sha256": "72242ab7b96de8bdb871ddcee13e5e9aeaa4a4757a1e005132cf788d141228ed",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 70,
+      "label": "Windreiter Burg",
+      "source": "set-03/70-windreiter-burg.png",
+      "archiveFile": "stamps/70-windreiter-burg.png",
+      "sha256": "b5154d0f37ddaab643036eae8f1ba8112419f0a231f7f8b291de6889e8e0a389",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 71,
+      "label": "Wegschrein",
+      "source": "set-03/71-wegschrein.png",
+      "archiveFile": "stamps/71-wegschrein.png",
+      "sha256": "c346a7aefb01cfc76e01017fa698bee39f0c3cff6747fc4adc05316f6318d48d",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 72,
+      "label": "Viehweide",
+      "source": "set-03/72-viehweide.png",
+      "archiveFile": "stamps/72-viehweide.png",
+      "sha256": "bca60a48a4335f559a80fcd64f87249b91fc40a0cafe2467b9b8615a810cf435",
+      "promptManifest": "prompts/set-03.json"
+    },
+    {
+      "index": 73,
+      "label": "Ruinierte Siedlung",
+      "source": "set-04/73-ruinierte-siedlung.png",
+      "archiveFile": "stamps/73-ruinierte-siedlung.png",
+      "sha256": "d0b38559e60fc22f7a618710cf91f100ce60e835624428e4a477a36b413b6e61",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 74,
+      "label": "Ruinierter Turm",
+      "source": "set-04/74-ruinierter-turm.png",
+      "archiveFile": "stamps/74-ruinierter-turm.png",
+      "sha256": "4c5d309e4f074ef19c705c9f66f9ff2039ad667660b4692e2255d2d9989a3e8d",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 75,
+      "label": "Befestigte Siedlung",
+      "source": "set-04/75-befestigte-siedlung.png",
+      "archiveFile": "stamps/75-befestigte-siedlung.png",
+      "sha256": "0d85e5de91eb77115c65bd5e81a4b42addc7e381d70a8ecbe69ea9bd24831b91",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 76,
+      "label": "Dimensionaler Riss",
+      "source": "set-04/76-dimensionaler-riss.png",
+      "archiveFile": "stamps/76-dimensionaler-riss.png",
+      "sha256": "3ac0c337807b72e6f119c303271074fa21b45cae4ca2473ee563055c89c06085",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 77,
+      "label": "Obstplantage",
+      "source": "set-04/77-obstplantage.png",
+      "archiveFile": "stamps/77-obstplantage.png",
+      "sha256": "11027da442614fa0e3c582252d4d78e702de2074966a01647cf1cf75599c9644",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 78,
+      "label": "Okkulter Schrein",
+      "source": "set-04/78-okkulter-schrein.png",
+      "archiveFile": "stamps/78-okkulter-schrein.png",
+      "sha256": "46217674eace68ee3acb6687842eae8b1ba4ba3c69d5d0e2a6ab8f412ccde187",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 79,
+      "label": "Alte Ruine",
+      "source": "set-04/79-alte-ruine.png",
+      "archiveFile": "stamps/79-alte-ruine.png",
+      "sha256": "1d7652739b2d2023c84ebc5ae0ac4a7a121bd426d9e67f42b8b335216c468baa",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 80,
+      "label": "Waldschrat Hain",
+      "source": "set-04/80-waldschrat-hain.png",
+      "archiveFile": "stamps/80-waldschrat-hain.png",
+      "sha256": "50ff2432fdd4e96518a24361a3878f58a02a606a2fdc2630087fbaf2bd41cbf4",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 81,
+      "label": "Banditenversteck",
+      "source": "set-04/81-banditenversteck.png",
+      "archiveFile": "stamps/81-banditenversteck.png",
+      "sha256": "7e276dfc377c915635829baa7c167fe955645cff64c15ec44d127d688597ab33",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 82,
+      "label": "Schäbiges Bauernhaus",
+      "source": "set-04/82-schaebiges-bauernhaus.png",
+      "archiveFile": "stamps/82-schaebiges-bauernhaus.png",
+      "sha256": "a5635f7ad5c53e8deb173bea9d5230143730b0d7ff31080ccb79b0be3732ba6e",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 83,
+      "label": "Ländliches Heim",
+      "source": "set-04/83-laendliches-heim.png",
+      "archiveFile": "stamps/83-laendliches-heim.png",
+      "sha256": "a83a7e749aef3515ff61051fe43ef139ae7191c7f6e22c81c4e2bb1d1b2566ca",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 84,
+      "label": "Mine",
+      "source": "set-04/84-mine-variante-2.png",
+      "archiveFile": "stamps/84-mine-variante-2.png",
+      "sha256": "adc04f3f4d3f001ede5cab6394ff0a102bdec19ed8a5641d1f4c31c854e23404",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 85,
+      "label": "Galgen",
+      "source": "set-04/85-galgen.png",
+      "archiveFile": "stamps/85-galgen.png",
+      "sha256": "8a7bf999743a00a6bf78e8518668b40d60cad58a2eea494299b181aa6000d91e",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 86,
+      "label": "Fischer",
+      "source": "set-04/86-fischer.png",
+      "archiveFile": "stamps/86-fischer.png",
+      "sha256": "0caa14e433a4539180b3a948a23f098dfc0137c08aa250bf473dfa7c7345ab5e",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 87,
+      "label": "Wolken der Dämmerung",
+      "source": "set-04/87-wolken-der-daemmerung.png",
+      "archiveFile": "stamps/87-wolken-der-daemmerung.png",
+      "sha256": "69e694eeeefc126f1f01ea042e89e0c814e51abcce5f766fdc0727fc18f999f4",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 88,
+      "label": "Grube",
+      "source": "set-04/88-grube.png",
+      "archiveFile": "stamps/88-grube.png",
+      "sha256": "ae91f3a7b4bf56ef98c945a1c3b0eb53817a53f637f656f21440638cf43cf93b",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 89,
+      "label": "Heereslager",
+      "source": "set-04/89-heereslager.png",
+      "archiveFile": "stamps/89-heereslager.png",
+      "sha256": "178ff877c1da787505b49f367d02be7a45f60c046bf622e74c3b28ee4035c2aa",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 90,
+      "label": "Schrein",
+      "source": "set-04/90-schrein.png",
+      "archiveFile": "stamps/90-schrein.png",
+      "sha256": "20ffceb22cad4fcad0321d1de09d6d7916bdb66a7861365af122d5bd6bf048b4",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 91,
+      "label": "Hexenhütte",
+      "source": "set-04/91-hexenhuette.png",
+      "archiveFile": "stamps/91-hexenhuette.png",
+      "sha256": "34eb9ccd64db22cdb5508c05f6f1aa22dc35265dedd0e18d37382ded13eae1a5",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 92,
+      "label": "Holzfällerlager",
+      "source": "set-04/92-holzfaellerlager.png",
+      "archiveFile": "stamps/92-holzfaellerlager.png",
+      "sha256": "ca4a726b5ac04d51e6f6cb3015567f22b6db0768723fc5070ec21ed6cb2264e6",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 93,
+      "label": "Imker",
+      "source": "set-04/93-imker.png",
+      "archiveFile": "stamps/93-imker.png",
+      "sha256": "a2659924fc495d287c090c706f57e1422aa13596fba82eb68e7f5a8c9cbb0af9",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 94,
+      "label": "Handelskontor",
+      "source": "set-04/94-handelskontor.png",
+      "archiveFile": "stamps/94-handelskontor.png",
+      "sha256": "2fae669445fb57a3b39116fe888e0a8b57941a75de6dfd7ca6c3752c2e7a2bf6",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 95,
+      "label": "Kutscher",
+      "source": "set-04/95-kutscher.png",
+      "archiveFile": "stamps/95-kutscher.png",
+      "sha256": "38696c7331b91108b6c5b22b21db7fce0978cf4d035e0800bb2a76c5efa4a962",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 96,
+      "label": "Köhler",
+      "source": "set-04/96-koehler.png",
+      "archiveFile": "stamps/96-koehler.png",
+      "sha256": "961364c77870b2a3a72a45112191ac2465c37c66fad6d851cc26802e2a95b3b2",
+      "promptManifest": "prompts/set-04.json"
+    },
+    {
+      "index": 97,
+      "label": "Lagerplatz",
+      "source": "set-05/97-lagerplatz.png",
+      "archiveFile": "stamps/97-lagerplatz.png",
+      "sha256": "fdd83dff5da4df08ce873467eacc595ce9e4bc1b5281eb9ac5f97881ff233d41",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 98,
+      "label": "Schule",
+      "source": "set-05/98-schule.png",
+      "archiveFile": "stamps/98-schule.png",
+      "sha256": "69a3b10b710987952817293a5651ee0e6b2dad896ce6b795621d2edff2eeb67e",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 99,
+      "label": "Friedhof",
+      "source": "set-05/99-friedhof.png",
+      "archiveFile": "stamps/99-friedhof.png",
+      "sha256": "e9d85471032746db54ebdb04f756667496e51ffe84bbba3159334a1adf57cc7b",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 100,
+      "label": "Mühle",
+      "source": "set-05/100-muehle.png",
+      "archiveFile": "stamps/100-muehle.png",
+      "sha256": "9f46f7fc533b539300d78c38eca6ceaf176fb114aadca8505d84b8db0bab45e9",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 101,
+      "label": "Münzpräger",
+      "source": "set-05/101-muenzpraeger.png",
+      "archiveFile": "stamps/101-muenzpraeger.png",
+      "sha256": "3a97db0555eb35e5964a29bd798376c2f19130a5ef5d4c248680dd69b3ca70c3",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 102,
+      "label": "Infernaler Schrein",
+      "source": "set-05/102-infernaler-schrein.png",
+      "archiveFile": "stamps/102-infernaler-schrein.png",
+      "sha256": "d4db7057a9483a608386c946c5914a148e09662cb076d48c497a121bba20dee5",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 103,
+      "label": "Poststation",
+      "source": "set-05/103-poststation.png",
+      "archiveFile": "stamps/103-poststation.png",
+      "sha256": "93c9050cfedf143bb2f488257408cb178c6688ae18d1cd51d2a3d75e24fedf50",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 104,
+      "label": "Quelle",
+      "source": "set-05/104-quelle.png",
+      "archiveFile": "stamps/104-quelle.png",
+      "sha256": "da9a326ad0f0b002fb3a290d7e16d15adc504ac7dbe47b1fea51c3907f904c7a",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 105,
+      "label": "Zelt",
+      "source": "set-05/105-zelt.png",
+      "archiveFile": "stamps/105-zelt.png",
+      "sha256": "81372ebffa5fd2eace9b9482be2a5382c4ba65d6582f81246300c46ec3a67471",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 106,
+      "label": "Salzmine",
+      "source": "set-05/106-salzmine.png",
+      "archiveFile": "stamps/106-salzmine.png",
+      "sha256": "c862a95b859a2a79e51c77efbe1552b521ee98740a9c22ec897f090e0d8eba79",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 107,
+      "label": "Bogenschießstand",
+      "source": "set-05/107-bogenschiessstand.png",
+      "archiveFile": "stamps/107-bogenschiessstand.png",
+      "sha256": "ef22b1ecb368f3f617714f753c23648d791ac230e0cdd1b00d130ccf8603825e",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 108,
+      "label": "Werft",
+      "source": "set-05/108-werft.png",
+      "archiveFile": "stamps/108-werft.png",
+      "sha256": "9b1fda7a165a6631c2def8f8c69ae9aca675982dada9756c03aaf09e00cb7dde",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 109,
+      "label": "Schmuggel",
+      "source": "set-05/109-schmuggel-variante-1.png",
+      "archiveFile": "stamps/109-schmuggel-variante-1.png",
+      "sha256": "d92027469e405a217f4127dec6e0a7a80e539aeb8bacc4515a38c4ea47bb9b81",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 110,
+      "label": "Schmuggel",
+      "source": "set-05/110-schmuggel-variante-2.png",
+      "archiveFile": "stamps/110-schmuggel-variante-2.png",
+      "sha256": "820820d0bbbc6e8fa15f6a4545b5d8fdddbd74476b1254c6b16751e53c796c84",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 111,
+      "label": "Schäbige Hütte",
+      "source": "set-05/111-schaebige-huette.png",
+      "archiveFile": "stamps/111-schaebige-huette.png",
+      "sha256": "215e4164393d12e6780262b6b770532d4e6a67f3c25f31553e001ec874eab563",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 112,
+      "label": "Steinbruch",
+      "source": "set-05/112-steinbruch.png",
+      "archiveFile": "stamps/112-steinbruch.png",
+      "sha256": "9d6be1996e21548f1af49c3e79eb0523e41228d603634b566715c4a670f340f8",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 113,
+      "label": "Turnier",
+      "source": "set-05/113-turnier.png",
+      "archiveFile": "stamps/113-turnier.png",
+      "sha256": "1e7e51227f19e1d6874cbc7397f7d47cf1c68bee4022eeaf501d871e0cdbdc71",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 114,
+      "label": "Zerstörte Brücke",
+      "source": "set-05/114-zerstoerte-bruecke.png",
+      "archiveFile": "stamps/114-zerstoerte-bruecke.png",
+      "sha256": "025452b6a3d9cb5789f6f6eeee3b8ba4e263d7b7564185563fd427c83ff96861",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 115,
+      "label": "Zerstörte Kirche",
+      "source": "set-05/115-zerstoerte-kirche-variante-1.png",
+      "archiveFile": "stamps/115-zerstoerte-kirche-variante-1.png",
+      "sha256": "ad47962bbd40d1febd5bee4257f8993f39badae2cbf2e6ee7b73dd24e4786b58",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 116,
+      "label": "Zerstörte Kirche",
+      "source": "set-05/116-zerstoerte-kirche-variante-2.png",
+      "archiveFile": "stamps/116-zerstoerte-kirche-variante-2.png",
+      "sha256": "690ef462e4ecf1be07e371f80871a4e081364a5b0eb1797772f32152675159f9",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 117,
+      "label": "Zerstörtes Haus",
+      "source": "set-05/117-zerstoertes-haus.png",
+      "archiveFile": "stamps/117-zerstoertes-haus.png",
+      "sha256": "8bfabb72b56a44a38eef618a4913b42617274f6f4e08bcc575c539a6a0d5ad39",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 118,
+      "label": "Ziegelbrenner",
+      "source": "set-05/118-ziegelbrenner.png",
+      "archiveFile": "stamps/118-ziegelbrenner.png",
+      "sha256": "5b7e72c45f8aac6cb520ff9cfec0ce7e320279a585bc62382f87a67e81690cad",
+      "promptManifest": "prompts/set-05.json"
+    },
+    {
+      "index": 119,
+      "label": "Zirkus",
+      "source": "set-05/119-zirkus.png",
+      "archiveFile": "stamps/119-zirkus.png",
+      "sha256": "36908ab5666c05ac689578d5f113a14d9bae6555d0c4071514d44011a29e1eb1",
+      "promptManifest": "prompts/set-05.json"
+    }
+  ],
+  "additionalVariants": [
+    {
+      "parentIndex": 28,
+      "label": "Hafensiedlung – rechts/Osten",
+      "source": "set-02/harbor-variants/28a-hafensiedlung-osten.png",
+      "archiveFile": "stamps/28a-hafensiedlung-osten.png",
+      "sha256": "ccff1c5af8c0a4c855ad6b9de437bbb01eefe98611b05138f505baf118067c06",
+      "promptManifest": "prompts/harbor-variants.json"
+    },
+    {
+      "parentIndex": 28,
+      "label": "Hafensiedlung – Norden",
+      "source": "set-02/harbor-variants/28b-hafensiedlung-norden.png",
+      "archiveFile": "stamps/28b-hafensiedlung-norden.png",
+      "sha256": "4565c9eaea0979e105353b1d28f73b94607e5d28ecaf2738a0ba950db707441b",
+      "promptManifest": "prompts/harbor-variants.json"
+    },
+    {
+      "parentIndex": 28,
+      "label": "Hafensiedlung – Süden",
+      "source": "set-02/harbor-variants/28c-hafensiedlung-sueden.png",
+      "archiveFile": "stamps/28c-hafensiedlung-sueden.png",
+      "sha256": "42db857705cd71e7be58080a4cb385705b035a33ab6948d4541fb529f42ad455",
+      "promptManifest": "prompts/harbor-variants.json"
+    }
+  ],
+  "archivePartsManifest": "complete-archive-parts.json",
+  "archiveReconstructionScript": "Join-CompleteArchive.ps1"
+}

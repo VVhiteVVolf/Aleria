@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-12",
+  "characterName": "Asgeir Wolfshorn",
+  "setId": "set-01",
+  "stem": "asgeir-wolfshorn-kampf-set-01-doppelaexte",
+  "theme": "Zwei Einhandäxte",
+  "referenceSource": "Unveränderter aktueller Nutzeranhang, lokal in Referenzen gesichert.",
+  "promptFile": "Prompts/asgeir-wolfshorn-kampf-set-01-doppelaexte.txt",
+  "sheetFile": "Sheets/asgeir-wolfshorn-kampf-set-01-doppelaexte.png",
+  "outputFolder": "Output/set-01",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "framing": "Kopf bis Hüfte, Mimik im Fokus, Waffen dürfen den Rand verlassen",
+  "background": "Trainingsplatz im Draig-Burginnenhof, helle Steinmauern, rote Draig-Banner, Tageslicht",
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "category": "Angriff",
+      "emotion": "Entschlossener kurzer Hieb",
+      "gesture": "Focused narrowed eyes, clenched closed jaw; right-hand axe in a compact outward diagonal cut, left axe held close in reserve."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "category": "Angriff",
+      "emotion": "Kämpferischer Ruf",
+      "gesture": "Open mouth in a brief battle call, drawn brows; left-hand axe lifted beside shoulder for a descending cut, right axe lower and forward, two distinct grips."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "category": "Angriff",
+      "emotion": "Selbstsicherer Gegenangriff",
+      "gesture": "Small confident fierce grin; right axe sweeps laterally below face, left axe held beside ribs, torso modestly turned."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "category": "Abwehr",
+      "emotion": "Konzentrierte Kreuzparade",
+      "gesture": "Sharp concentrated gaze; independent short axe hafts crossed well below chin in a readable X guard, each hand grips its own haft, blades point away."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "category": "Abwehr",
+      "emotion": "Wachsames Abfangen",
+      "gesture": "Alert wide eyes, lips tight; left axe rises as outer side guard, right axe remains in front of lower chest, face clear."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "category": "Abwehr",
+      "emotion": "Zäher Rückzug",
+      "gesture": "Gritted teeth and knitted brows, shoulders pulled slightly back; both separate axes in a compact low protective guard."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "category": "Neutral",
+      "emotion": "Ruhige Kampfbereitschaft",
+      "gesture": "Neutral focused eyes, closed relaxed lips; both axes held low at opposite sides, shoulders level, upright posture."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "category": "Neutral",
+      "emotion": "Abschätzendes Beobachten",
+      "gesture": "One raised brow and sideways measuring look; right axe upright beside shoulder, left axe lowered at hip."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "category": "Neutral",
+      "emotion": "Gelöste Trainingspause",
+      "gesture": "Faint relaxed half smile, steady breathing; both hands still hold their own axes lowered, elbows easy, no attack in progress."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "generationMode": "built-in image_gen",
+  "status": "erstellt, mit V3 zerlegt und visuell geprüft",
+  "styleCorrection": "13.10.2026: Nutzer verlangt Asgeirs hochgradig unveränderte Optik und künstlerischen Stil nach dem Originalanhang; allgemeines Anime-Preset und abweichende Rüstungsdarstellung sind nachrangig.",
+  "referenceImage": "Referenzen/asgeir-wolfshorn-nutzerreferenz.png",
+  "referenceSha256": "2355b6b888e26e3034c5f7e81081a15844f6ebab575f8a719f4213f4a2d1e285",
+  "referenceMechanism": "referenced_image_paths; originales Nutzerbild als erste Referenz",
+  "generatedAt": "2026-10-13",
+  "generationSourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a12c67-6d1d-7d71-9ae7-d9ba800fc264\\exec-2256188f-9096-4f7b-bb55-1824b615e204.png",
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-13",
+    "reviewedAvatars": 9,
+    "passed": true,
+    "checks": [
+      "Originalvorlage und Zeichenstil",
+      "3 Angriff / 3 Abwehr / 3 Neutral",
+      "lesbare Mimik",
+      "Waffenanzahl und Griff",
+      "quadratischer Ausschnitt",
+      "keine Nachbarbildreste oder Beschriftung"
+    ]
+  },
+  "avatarPixels": [
+    418,
+    418
+  ],
+  "inputImageFiles": [
+    "Referenzen/asgeir-wolfshorn-nutzerreferenz.png",
+    "Referenzen/asgeir-handaxt-v1.png"
+  ]
+}

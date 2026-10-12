@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-12",
+  "characterName": "Asgeir Wolfshorn",
+  "setId": "set-03",
+  "stem": "asgeir-wolfshorn-kampf-set-03-axt-und-schild",
+  "theme": "Axt und Rundschild",
+  "referenceSource": "Unveränderter aktueller Nutzeranhang, lokal in Referenzen gesichert.",
+  "promptFile": "Prompts/asgeir-wolfshorn-kampf-set-03-axt-und-schild.txt",
+  "sheetFile": "Sheets/asgeir-wolfshorn-kampf-set-03-axt-und-schild-v2.png",
+  "outputFolder": "Output/set-03",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "framing": "Kopf bis Hüfte, Mimik im Fokus, Waffen dürfen den Rand verlassen",
+  "background": "Trainingsplatz im Draig-Burginnenhof, helle Steinmauern, rote Draig-Banner, Tageslicht",
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "category": "Angriff",
+      "emotion": "Vorstoß aus der Deckung",
+      "gesture": "Focused brows and set jaw; left shield in front of lower chest, right axe makes compact diagonal forward cut outside shield edge."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "category": "Angriff",
+      "emotion": "Entschlossener Hieb",
+      "gesture": "Open mouth short fighting call; right axe raised beside shoulder for overhead strike, left shield held low forward."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "category": "Angriff",
+      "emotion": "Sicherer Gegenhieb",
+      "gesture": "Small fierce confident grin; right axe sweeps out to his right below shoulder height while left shield protects left flank."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "category": "Abwehr",
+      "emotion": "Feste Schilddeckung",
+      "gesture": "Steady intense direct eyes; left shield raised to chest height, top rim below chin, right axe upright in reserve outside face."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "category": "Abwehr",
+      "emotion": "Wachsames Abwinkeln",
+      "gesture": "Eyes tracking an unseen attack to his left, lips compressed; left shield angled outward with believable forearm behind it, right axe close at hip."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "category": "Abwehr",
+      "emotion": "Zähes Standhalten",
+      "gesture": "Tensed jaw and determined brows; torso slightly recoils behind left shield covering chest, right axe kept clear beside shoulder."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "category": "Neutral",
+      "emotion": "Ruhiger Bereitschaftsstand",
+      "gesture": "Calm neutral focused expression; left shield relaxed near hip, right axe held low, upright torso."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "category": "Neutral",
+      "emotion": "Abschätzen des Gegenübers",
+      "gesture": "One raised eyebrow, sideways assessing eyes; shield upright at left side, right axe near shoulder, no swing."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "category": "Neutral",
+      "emotion": "Gelöste Wachsamkeit",
+      "gesture": "Faint relaxed half smile; shield and axe lowered while still securely held, shoulders easy, training break."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "generationMode": "built-in image_gen",
+  "status": "erstellt, mit V3 zerlegt und visuell geprüft",
+  "styleCorrection": "13.10.2026: Nutzer verlangt Asgeirs hochgradig unveränderte Optik und künstlerischen Stil nach dem Originalanhang; allgemeines Anime-Preset und abweichende Rüstungsdarstellung sind nachrangig.",
+  "referenceImage": "Referenzen/asgeir-wolfshorn-nutzerreferenz.png",
+  "referenceSha256": "2355b6b888e26e3034c5f7e81081a15844f6ebab575f8a719f4213f4a2d1e285",
+  "referenceMechanism": "referenced_image_paths; originales Nutzerbild als erste Referenz",
+  "generatedAt": "2026-10-13",
+  "generationSourceFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a12c67-6d1d-7d71-9ae7-d9ba800fc264\\exec-3dbd24f8-d23b-46d6-8c7c-8a76213bf478.png",
+  "correctionPromptFile": "Prompts/asgeir-wolfshorn-kampf-set-03-axt-und-schild-griffkorrektur.txt",
+  "draftSheetFile": "Sheets/Entwuerfe/asgeir-wolfshorn-kampf-set-03-axt-und-schild-vor-griffkorrektur.png",
+  "avatarCount": 9,
+  "cropCorrection": {
+    "reason": "Sichtprüfung: tatsächliche Bildzeilen wechseln bei y=414 und y=827; Übergangspixel und Nachbarbildreste durch individuelle V3-Kanten ausschließen. Kein Resampling.",
+    "gridY": [
+      0,
+      414,
+      827,
+      1254
+    ],
+    "cellSize": 410,
+    "adjustments": [
+      {
+        "left": 4,
+        "top": 2,
+        "right": -4,
+        "bottom": -2
+      },
+      {
+        "left": 4,
+        "top": 2,
+        "right": -4,
+        "bottom": -2
+      },
+      {
+        "left": 4,
+        "top": 2,
+        "right": -4,
+        "bottom": -2
+      },
+      {
+        "left": 4,
+        "top": 1,
+        "right": -4,
+        "bottom": -2
+      },
+      {
+        "left": 4,
+        "top": 1,
+        "right": -4,
+        "bottom": -2
+      },
+      {
+        "left": 4,
+        "top": 1,
+        "right": -4,
+        "bottom": -2
+      },
+      {
+        "left": 4,
+        "top": 2,
+        "right": -4,
+        "bottom": -15
+      },
+      {
+        "left": 4,
+        "top": 2,
+        "right": -4,
+        "bottom": -15
+      },
+      {
+        "left": 4,
+        "top": 2,
+        "right": -4,
+        "bottom": -15
+      }
+    ]
+  },
+  "visualReview": {
+    "reviewedAt": "2026-10-13",
+    "reviewedAvatars": 9,
+    "passed": true,
+    "checks": [
+      "Originalvorlage und Zeichenstil",
+      "3 Angriff / 3 Abwehr / 3 Neutral",
+      "lesbare Mimik",
+      "Waffenanzahl und Griff",
+      "quadratischer Ausschnitt",
+      "keine Nachbarbildreste oder Beschriftung"
+    ]
+  },
+  "avatarPixels": [
+    410,
+    410
+  ],
+  "inputImageFiles": [
+    "Referenzen/asgeir-wolfshorn-nutzerreferenz.png",
+    "Referenzen/asgeir-handaxt-v1.png",
+    "Referenzen/asgeir-rundschild-v1.png"
+  ],
+  "correctionInputImageFiles": [
+    "Sheets/Entwuerfe/asgeir-wolfshorn-kampf-set-03-axt-und-schild-vor-griffkorrektur.png",
+    "Referenzen/asgeir-wolfshorn-nutzerreferenz.png",
+    "Referenzen/draig-burghof-umgebungsreferenz.png"
+  ],
+  "backgroundReferenceRole": "Nur Draig-Burgarchitektur und Banner; keine Personenidentität daraus übernehmen."
+}

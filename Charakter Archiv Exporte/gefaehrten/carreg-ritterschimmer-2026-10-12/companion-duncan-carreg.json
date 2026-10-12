@@ -1,0 +1,699 @@
+{
+  "type": "aleria-creature",
+  "version": 6,
+  "exportedAt": "2026-10-12T21:41:49.901Z",
+  "creature": {
+    "schemaVersion": 6,
+    "entityType": "creature",
+    "itemOrigin": {
+      "instanceId": "duncan-carreg",
+      "inventoryItemId": "duncan-carreg",
+      "templateId": "",
+      "ownerCharacterId": "tmfBA2zPTc88EMMGkyyA",
+      "ownerCharacterName": "Duncan Gafyr",
+      "disposition": "owned"
+    },
+    "needsStatReview": false,
+    "name": "Carreg",
+    "type": "Tier",
+    "species": "Ritterschimmer",
+    "bestiaryReference": {
+      "id": "tiere/pferde/zuchtbuch/ritterschimmer",
+      "name": "Ritterschimmer",
+      "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-herzogsschimmer"
+    },
+    "classification": {
+      "genus": "Pferde",
+      "location": "Celtigerns Wacht",
+      "house": ""
+    },
+    "habitat": "Celtigerns Wacht · bei Sir Duncan Gafyr",
+    "challengeRating": 3,
+    "size": "Groß",
+    "level": 3,
+    "biography": {
+      "schemaVersion": 2,
+      "revision": 0,
+      "summary": "Carreg ist das Ritterschimmer-Reitpferd von Sir Duncan Gafyr. Die benannte Zucht vereint Herzogsschimmer und Ceffyl. Sein schieferdunkles Fell, die lange silberweiße Mähne und der helle Schweif stehen im Kontrast zur schwarz-goldenen Gafyr-Schabracke mit Widderwappen.",
+      "appearance": "Schieferdunkles Fell, lange silberweiße Mähne und silberweißer Schweif. Kräftiger, tragfähiger Körper mit aufrechter Haltung und aufmerksamem Blick. Braunes Lederzeug und schwarz-goldene Reitdecken mit den Widderwappen des Hauses Gafyr.",
+      "personality": "Stolz, aufmerksam und beherrscht. Verbindet die repräsentative Haltung des Herzogsschimmers mit der engen Reiterbindung des Ceffyl. Ein kräftiges Ritterpferd, das auf ruhige und erfahrene Führung anspricht.",
+      "history": "Carreg gehört Sir Duncan Gafyr. Seine Zucht aus Herzogsschimmer und Ceffyl trägt den festgelegten Namen Ritterschimmer und ist im Bestiarium-Zuchtbuch eingetragen.",
+      "bonds": "Besitzer und Reiter: Sir Duncan Gafyr.",
+      "habits": "",
+      "facts": [
+        {
+          "label": "Rasse / Zucht",
+          "value": "Ritterschimmer"
+        },
+        {
+          "label": "Abstammung",
+          "value": "Herzogsschimmer × Ceffyl"
+        },
+        {
+          "label": "Rolle",
+          "value": "Reittier"
+        },
+        {
+          "label": "Besitzer",
+          "value": "Sir Duncan Gafyr"
+        }
+      ],
+      "sections": [],
+      "quote": "",
+      "quoteBy": "",
+      "traitsTitle": "Persönlichkeit & Eigenschaften",
+      "connectionsTitle": "Verbindungen",
+      "traits": [
+        {
+          "icon": "",
+          "title": "Ritterpferd",
+          "detail": "Kräftiger, tragfähiger Körperbau; stolze Haltung und enge Bindung an einen vertrauten Reiter."
+        }
+      ],
+      "connections": [
+        {
+          "type": "connection",
+          "title": "",
+          "image": "",
+          "icon": "",
+          "imageFormat": "portrait",
+          "name": "Sir Duncan Gafyr",
+          "detail": "Besitzer und Reiter"
+        }
+      ]
+    },
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/companions/haus-gafyr/carreg.png",
+        "emotes": [],
+        "createdAt": "",
+        "updatedAt": ""
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "/AleriaAlmanach/assets/companions/haus-gafyr/carreg.png",
+    "avatars": [],
+    "portraitCaption": "Carreg · Ritterschimmer · Reitpferd von Sir Duncan Gafyr",
+    "templateId": "",
+    "instanceOrdinal": 0,
+    "combatProfile": {
+      "schemaVersion": 11,
+      "revision": 0,
+      "identity": {
+        "ancestry": "Ritterschimmer",
+        "archetype": "Tier",
+        "background": "Celtigerns Wacht · bei Sir Duncan Gafyr"
+      },
+      "templateSelections": {
+        "schemaVersion": 1,
+        "ancestryId": "",
+        "backgroundId": "",
+        "classId": "",
+        "attributeMethod": "",
+        "appliedAt": ""
+      },
+      "proficiencies": {
+        "armor": [],
+        "weapons": [],
+        "tools": [],
+        "languages": [],
+        "notes": ""
+      },
+      "progression": {
+        "level": 3,
+        "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [],
+        "experience": 0,
+        "nextLevelExperience": null,
+        "experienceReward": null,
+        "proficiencyBonusOverride": null
+      },
+      "attributes": [
+        {
+          "key": "strength",
+          "label": "Kraft",
+          "shortLabel": "KRF",
+          "score": 18,
+          "modifierOverride": null
+        },
+        {
+          "key": "dexterity",
+          "label": "Geschick",
+          "shortLabel": "GES",
+          "score": 14,
+          "modifierOverride": null
+        },
+        {
+          "key": "constitution",
+          "label": "Konstitution",
+          "shortLabel": "KON",
+          "score": 14,
+          "modifierOverride": null
+        },
+        {
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "shortLabel": "INT",
+          "score": 2,
+          "modifierOverride": null
+        },
+        {
+          "key": "wisdom",
+          "label": "Weisheit",
+          "shortLabel": "WEI",
+          "score": 12,
+          "modifierOverride": null
+        },
+        {
+          "key": "charisma",
+          "label": "Charisma",
+          "shortLabel": "CHA",
+          "score": 12,
+          "modifierOverride": null
+        }
+      ],
+      "hitPoints": {
+        "current": 35,
+        "temporary": 0,
+        "hitDie": 10,
+        "averagePerLevelOverride": null,
+        "maximumOverride": 35
+      },
+      "armorClass": {
+        "base": 10,
+        "dexterityMode": "full",
+        "dexterityCap": 2,
+        "shieldBonus": 0,
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "override": null,
+        "overrideMode": "total"
+      },
+      "combat": {
+        "movement": 18,
+        "initiativeBonus": 0,
+        "attackBonus": 0,
+        "damageBonus": 0,
+        "passivePerceptionBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "mounted": false
+      },
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "dexterity",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "constitution",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "intelligence",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "wisdom",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "charisma",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        }
+      ],
+      "skills": [
+        {
+          "id": "duncan-carreg-perception",
+          "name": "Wahrnehmung",
+          "attributeKey": "wisdom",
+          "proficiency": "trained",
+          "bonus": 0,
+          "notes": ""
+        }
+      ],
+      "weapons": [
+        {
+          "id": "duncan-carreg-natural",
+          "inventoryItemId": "",
+          "name": "Hufschlag",
+          "image": "",
+          "weaponProfileId": "",
+          "triggerRules": [],
+          "weaponType": "natural",
+          "training": "simple",
+          "damageFormula": "1d6",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf · 1,5 m",
+          "properties": "Naturwaffe",
+          "notes": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": true
+        },
+        {
+          "id": "default-unarmed-melee",
+          "inventoryItemId": "",
+          "name": "Nahkampf",
+          "image": "",
+          "weaponProfileId": "",
+          "triggerRules": [],
+          "weaponType": "unarmed",
+          "training": "simple",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
+        }
+      ],
+      "armorItems": [],
+      "resources": [
+        {
+          "id": "inspiration",
+          "name": "Inspiration",
+          "current": 0,
+          "maximum": 1,
+          "recovery": "manual",
+          "scope": "persistent",
+          "category": "",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "mana-focus",
+          "name": "Mana",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "magic",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "focus",
+          "name": "Fokus",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "focus",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "celestial-points",
+          "name": "Celestiale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "celestial",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "infernal-points",
+          "name": "Infernale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "infernal",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "pact-points",
+          "name": "Paktpunkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "pact",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "action",
+          "name": "Aktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "bonus-action",
+          "name": "Bonusaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "reaction",
+          "name": "Reaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "special-action",
+          "name": "Besondere Aktion",
+          "current": 2,
+          "maximum": 2,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "notes": ""
+        },
+        {
+          "id": "aura-focus",
+          "name": "Aura-Fokuspunkt",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "paymentRole": "universal-substitute",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "notes": ""
+        }
+      ],
+      "techniques": [],
+      "classTraining": {
+        "schemaVersion": 2,
+        "curriculumId": "",
+        "selections": [],
+        "techniqueSelections": []
+      },
+      "quirks": [],
+      "conditions": [],
+      "damageAffinities": [],
+      "abilities": [
+        {
+          "id": "duncan-carreg-ability-0",
+          "name": "Reittier",
+          "description": "Trägt einen geeigneten Reiter. Auf- und Absitzen sowie berittene Manöver verwenden die gemeinsame Reittier- und Aktionslogik.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "passive",
+          "delivery": "ability",
+          "resolutionType": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": false,
+          "target": "",
+          "range": "",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "effects": [],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        }
+      ],
+      "magic": {
+        "enabled": false,
+        "casterTier": "full",
+        "bypassResourceId": "",
+        "focusEnabled": false,
+        "focusResourceId": "focus",
+        "castingAttribute": "intelligence",
+        "spellAttackOverride": null,
+        "spellSaveDcOverride": null,
+        "manaResourceId": "mana-focus",
+        "slotResourceIds": [],
+        "notes": "",
+        "spells": []
+      },
+      "aura": {
+        "enabled": false,
+        "name": "Aura",
+        "domain": "",
+        "focusResourceId": "aura-focus",
+        "focusBypassCost": 1,
+        "notes": "",
+        "activeForm": {
+          "enabled": false,
+          "active": false,
+          "name": "Aktive Form",
+          "description": "",
+          "radius": "",
+          "target": "Selbst und gewählte Ziele",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        },
+        "latentPresence": {
+          "enabled": true,
+          "active": true,
+          "name": "Latente Präsenz",
+          "description": "",
+          "radius": "",
+          "target": "Umgebung, Verbündete und Gegner",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        }
+      },
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "notes": "Carreg ist das Ritterschimmer-Reitpferd von Sir Duncan Gafyr. Die benannte Zucht vereint Herzogsschimmer und Ceffyl. Sein schieferdunkles Fell, die lange silberweiße Mähne und der helle Schweif stehen im Kontrast zur schwarz-goldenen Gafyr-Schabracke mit Widderwappen."
+    },
+    "loot": {
+      "currency": "",
+      "notes": "Persönlicher Begleiter; kein festgelegter Handelswert.",
+      "items": [],
+      "revision": 0
+    },
+    "notes": "Carreg ist das Ritterschimmer-Reitpferd von Sir Duncan Gafyr. Die benannte Zucht vereint Herzogsschimmer und Ceffyl. Sein schieferdunkles Fell, die lange silberweiße Mähne und der helle Schweif stehen im Kontrast zur schwarz-goldenen Gafyr-Schabracke mit Widderwappen.",
+    "id": "companion-duncan-carreg"
+  }
+}

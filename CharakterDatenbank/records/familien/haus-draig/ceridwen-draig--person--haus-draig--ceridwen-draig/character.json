@@ -99,12 +99,12 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-05T22:55:55.677Z",
+    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
     "sourceUpdatedAt": "2026-09-03T23:41:38.267Z",
     "sourceDocumentIds": [
       "person--haus-draig--ceridwen-draig"
     ],
-    "contentHash": "f08024c2a96b624c1ef9a8b13eec0214b7b71a14851a07583fc7ea3d94ae6867"
+    "contentHash": "4ce349d3ae85e2ccc0bd37e394caff06b87fa5280eb849495b23249fe9f06bc4"
   },
   "local": {
     "notes": "",
@@ -269,8 +269,8 @@
           "personId": "ceridwen-draig",
           "releaseId": "",
           "publishedAt": "",
-          "importedAt": "2026-10-05T22:55:55.677Z",
-          "lastSyncedAt": "2026-10-05T22:55:55.677Z",
+          "importedAt": "2026-10-12T22:24:41.567Z",
+          "lastSyncedAt": "2026-10-12T22:24:41.567Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=ceridwen-draig",
           "fingerprint": "{\"name\":\"Ceridwen Draig\",\"title\":\"\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/ceridwen-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"mailgwin-wyrm\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--mailgwin-wyrm\",\"name\":\"Mailgwin Wyrm\"}],\"children\":[{\"personId\":\"shan-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--shan-wyrm\",\"name\":\"Shan Wyrm\"},{\"personId\":\"aelwyd-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--aelwyd-wyrm\",\"name\":\"Aelwyd Wyrm\"}]}}"
         }

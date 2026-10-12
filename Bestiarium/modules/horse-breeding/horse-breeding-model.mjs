@@ -28,6 +28,11 @@ export function indexHorseCrossings(crossings) {
   return new Map(crossings.map(crossing => [horsePairKey(crossing.mareId, crossing.sireId), crossing]));
 }
 
+export function horseCrossingAnchor(firstId, secondId) {
+  const pair = horsePairKey(firstId, secondId);
+  return pair ? `kreuzung-${pair.replace('|', '-mit-')}` : '';
+}
+
 const normalizeLegacyBreedName = value => String(value || '')
   .normalize('NFD')
   .replace(/[\u0300-\u036f]/g, '')

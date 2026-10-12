@@ -1,0 +1,842 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-10-12T21:09:06.423Z",
+  "character": {
+    "id": "0Sku8euk5jhlWebdsskI",
+    "name": "Trevor Gwyvern",
+    "title": "Prinz, Abergwint",
+    "fraktion": "Haus Gwyvern, Gwendolyns Ufer",
+    "profileLink": "",
+    "playerOwner": "patrick",
+    "aliases": [],
+    "archived": false,
+    "portrait": "https://64.media.tumblr.com/0a184bd30da4a703eed26d6c17ab5474/9478cbecf8647d84-84/s400x600/d34f06768533235c20460b20fc60c8568ad8ae04.pnj",
+    "emotesOverride": true,
+    "inventory": {
+      "carryLabel": "Traglast",
+      "role": "Prinz, Abergwint",
+      "level": "Haus Gwyvern, Gwendolyns Ufer",
+      "equipmentQuiz": {
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0,
+        "open": false,
+        "status": "",
+        "updatedAt": ""
+      },
+      "portraitFit": "cover",
+      "portrait": "https://64.media.tumblr.com/0a184bd30da4a703eed26d6c17ab5474/9478cbecf8647d84-84/s400x600/d34f06768533235c20460b20fc60c8568ad8ae04.pnj",
+      "portraitPosition": "top",
+      "title": "Charakter-Inventar",
+      "moneyNotice": "",
+      "hitpoints": "TP / Zustand",
+      "carryValue": "Noch festlegen",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "companions": [
+        {
+          "id": "companion-mqu1vat2-0-zz2n",
+          "image": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/bwmbo.png",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Bwmbo",
+          "species": "Cenyric-Kater",
+          "role": "Gefährte",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "summary": "Trevors frecher Cenyric-Schiffskater: orange getigert mit weißem Bauch, mächtigem Backenbart und zerzaustem Stirnschopf. Er ruht gelassen auf einer Kiste, bleibt dabei wachsam und selbstbewusst.",
+          "description": "Trevors frecher Cenyric-Schiffskater: orange getigert mit weißem Bauch, mächtigem Backenbart und zerzaustem Stirnschopf. Er ruht gelassen auf einer Kiste, bleibt dabei wachsam und selbstbewusst.",
+          "infoRows": [],
+          "attributes": [],
+          "creatureId": "companion-trevor-bwmbo",
+          "inventoryItemId": "trevor-bwmbo"
+        },
+        {
+          "id": "companion-mqu1vat2-1-5e7l",
+          "image": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/uffel.png",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Uffel",
+          "species": "Cenyric-Kater",
+          "role": "Gefährte",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "summary": "Alter, zäher Cenyric-Schiffskater mit verblasstem orangefarbenem Tigerfell, weißem Bauch und ausgeprägter Mähne. Ein Auge ist trüb. Uffel war schon an Bord, als Idwals Mannschaft die Tiefenwyrm übernahm, und ist einfach geblieben. Trevor ist heute sein Herrchen.",
+          "description": "Alter, zäher Cenyric-Schiffskater mit verblasstem orangefarbenem Tigerfell, weißem Bauch und ausgeprägter Mähne. Ein Auge ist trüb. Uffel war schon an Bord, als Idwals Mannschaft die Tiefenwyrm übernahm, und ist einfach geblieben. Trevor ist heute sein Herrchen.",
+          "infoRows": [],
+          "attributes": [],
+          "creatureId": "companion-trevor-uffel",
+          "inventoryItemId": "trevor-uffel"
+        },
+        {
+          "id": "card-trevor-struppi",
+          "name": "Struppi",
+          "species": "Rhyfel-Hengst",
+          "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/struppi.png",
+          "description": "Struppi ist Sir Trevor Gwyverns Rhyfel-Hengst: ein kupferbrauner Fuchs mit heller, zerzauster Mähne, breiter Blesse und frechem, aggressivem Auftreten.",
+          "summary": "Struppi ist Sir Trevor Gwyverns Rhyfel-Hengst: ein kupferbrauner Fuchs mit heller, zerzauster Mähne, breiter Blesse und frechem, aggressivem Auftreten.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-trevor-struppi",
+          "inventoryItemId": "trevor-struppi"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "name": "Trevor Gwyvern",
+      "portraitFormat": "portrait",
+      "healthColor": "#5c7f20",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "moneyState": {
+        "gold": 0,
+        "copper": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "infoRows": [],
+      "items": [
+        {
+          "id": "item-mqu1vat1-0-w8ef",
+          "category": "weapon",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Hauptwaffe",
+          "type": "Waffe",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-1-exvo",
+          "category": "armor",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Rüstung / Schutz",
+          "type": "Rüstung",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-2-0fx2",
+          "category": "equipment",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Reiseausrüstung",
+          "type": "Ausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-3-2lgm",
+          "category": "potions",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Heil- oder Verbrauchsgut",
+          "type": "Trinktur",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-4-ajrj",
+          "category": "documents",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Dokumente / Urkunden",
+          "type": "Dokument",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "item-mqu1vat1-5-5kao",
+          "category": "other",
+          "icon": "*",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "name": "Persönlicher Gegenstand",
+          "type": "Sonstiges",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "tags": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "trevor-bwmbo",
+          "instanceId": "trevor-bwmbo",
+          "creatureId": "companion-trevor-bwmbo",
+          "name": "Bwmbo",
+          "image": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/bwmbo.png",
+          "description": "Trevors frecher Cenyric-Schiffskater: orange getigert mit weißem Bauch, mächtigem Backenbart und zerzaustem Stirnschopf. Er ruht gelassen auf einer Kiste, bleibt dabei wachsam und selbstbewusst.",
+          "type": "Cenyric-Kater",
+          "category": "companion",
+          "registerCategory": "vieh",
+          "templateId": "",
+          "templateName": "Cenyric-Kater",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "0Sku8euk5jhlWebdsskI",
+          "ownerCharacterName": "Trevor Gwyvern",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-12T21:09:06.705Z"
+        },
+        {
+          "id": "trevor-uffel",
+          "instanceId": "trevor-uffel",
+          "creatureId": "companion-trevor-uffel",
+          "name": "Uffel",
+          "image": "/AleriaAlmanach/assets/ship-crews/idwals-schiffsmannschaft/companions/uffel.png",
+          "description": "Alter, zäher Cenyric-Schiffskater mit verblasstem orangefarbenem Tigerfell, weißem Bauch und ausgeprägter Mähne. Ein Auge ist trüb. Uffel war schon an Bord, als Idwals Mannschaft die Tiefenwyrm übernahm, und ist einfach geblieben. Trevor ist heute sein Herrchen.",
+          "type": "Cenyric-Kater",
+          "category": "companion",
+          "registerCategory": "vieh",
+          "templateId": "",
+          "templateName": "Cenyric-Kater",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "0Sku8euk5jhlWebdsskI",
+          "ownerCharacterName": "Trevor Gwyvern",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-12T21:09:06.709Z"
+        },
+        {
+          "id": "trevor-struppi",
+          "instanceId": "trevor-struppi",
+          "creatureId": "companion-trevor-struppi",
+          "name": "Struppi",
+          "image": "/AleriaAlmanach/assets/companions/haus-gwyvern/struppi.png",
+          "description": "Struppi ist Sir Trevor Gwyverns Rhyfel-Hengst: ein kupferbrauner Fuchs mit heller, zerzauster Mähne, breiter Blesse und frechem, aggressivem Auftreten.",
+          "type": "Rhyfel-Hengst",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Rhyfel-Hengst",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "0Sku8euk5jhlWebdsskI",
+          "ownerCharacterName": "Trevor Gwyvern",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-12T21:09:06.712Z"
+        }
+      ],
+      "status": "Gesund",
+      "revision": 1791839346715
+    },
+    "role": "Erster Maat",
+    "identity": {
+      "worldPersonId": "person--haus-gwyvern--trevor-gwyvern"
+    },
+    "bio": "Stellvertreter des Kapitäns und verantwortlich für die Umsetzung seiner Befehle im täglichen Schiffsbetrieb.",
+    "genealogy": {
+      "worldPersonId": "person--haus-gwyvern--trevor-gwyvern",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1719",
+      "death": "",
+      "houseId": "house-gwyvern",
+      "houseName": "Haus Gwyvern",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-gwyvern",
+          "personId": "trevor-gwyvern",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-06T03:18:40.327Z",
+          "lastSyncedAt": "2026-09-06T03:18:40.327Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwyvern&mode=view&person=trevor-gwyvern",
+          "fingerprint": "{\"name\":\"Trevor Gwyvern\",\"title\":\"\",\"birth\":\"1719\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwyvern\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwyvern/trevor-gwyvern.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"mervyn-gwyvern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwyvern--mervyn-gwyvern\",\"name\":\"Mervyn Gwyvern\"},{\"personId\":\"jeannae-aderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--jeannae-aderyn\",\"name\":\"Jeannae Aderyn\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "mervyn-gwyvern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwyvern--mervyn-gwyvern",
+            "name": "Mervyn Gwyvern"
+          },
+          {
+            "personId": "jeannae-aderyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-aderyn--jeannae-aderyn",
+            "name": "Jeannae Aderyn"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "currentLocation": "An Bord der Tiefenwyrm",
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1,
+    "imageSetsOverride": true,
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/9jBGlSR.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/hSrEqnM.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/gyj7ZX3.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/jB72DVy.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/8k9hoAe.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/FeRHbbk.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/rNSdkIl.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/TKwGPVh.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/fkQj8SW.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/7MYjXmX.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/eLWcFz3.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/gYG69Bx.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/KbBs6aU.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/jwyv0tK.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/kTHgpTz.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/khAm9Qo.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/xSVPdDA.png",
+        "label": "xSVPdDA"
+      },
+      {
+        "img": "https://i.imgur.com/aPrhmft.png",
+        "label": "aPrhmft"
+      },
+      {
+        "img": "https://i.imgur.com/h7jxjrr.png",
+        "label": "h7jxjrr"
+      },
+      {
+        "img": "https://i.imgur.com/Hic9TLv.png",
+        "label": "Hic9TLv"
+      },
+      {
+        "img": "https://i.imgur.com/r9ERkKK.png",
+        "label": "r9ERkKK"
+      },
+      {
+        "img": "https://i.imgur.com/RFry47n.png",
+        "label": "RFry47n"
+      },
+      {
+        "img": "https://i.imgur.com/VwGvi4m.png",
+        "label": "VwGvi4m"
+      },
+      {
+        "img": "https://i.imgur.com/MQm8odz.png",
+        "label": "MQm8odz"
+      },
+      {
+        "img": "https://i.imgur.com/yvgCtpL.png",
+        "label": "yvgCtpL"
+      },
+      {
+        "img": "https://i.imgur.com/ifjJIpi.png",
+        "label": "ifjJIpi"
+      },
+      {
+        "img": "https://i.imgur.com/9mv3Qhp.png",
+        "label": "9mv3Qhp"
+      },
+      {
+        "img": "https://i.imgur.com/sUoprlu.png",
+        "label": "sUoprlu"
+      },
+      {
+        "img": "https://i.imgur.com/Bqlwvm0.png",
+        "label": "Bqlwvm0"
+      },
+      {
+        "img": "https://i.imgur.com/Lpdr0OJ.png",
+        "label": "Lpdr0OJ"
+      },
+      {
+        "img": "https://i.imgur.com/qQPXnHg.png",
+        "label": "qQPXnHg"
+      },
+      {
+        "img": "https://i.imgur.com/gRT4Tqg.png",
+        "label": "gRT4Tqg"
+      },
+      {
+        "img": "https://i.imgur.com/Q2LSSA0.png",
+        "label": "Q2LSSA0"
+      }
+    ],
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://64.media.tumblr.com/0a184bd30da4a703eed26d6c17ab5474/9478cbecf8647d84-84/s400x600/d34f06768533235c20460b20fc60c8568ad8ae04.pnj",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/9jBGlSR.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/hSrEqnM.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/gyj7ZX3.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/jB72DVy.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/8k9hoAe.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/FeRHbbk.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/rNSdkIl.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/TKwGPVh.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/fkQj8SW.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/7MYjXmX.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/eLWcFz3.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/gYG69Bx.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/KbBs6aU.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/jwyv0tK.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/kTHgpTz.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/khAm9Qo.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/xSVPdDA.png",
+            "label": "xSVPdDA"
+          },
+          {
+            "img": "https://i.imgur.com/aPrhmft.png",
+            "label": "aPrhmft"
+          },
+          {
+            "img": "https://i.imgur.com/h7jxjrr.png",
+            "label": "h7jxjrr"
+          },
+          {
+            "img": "https://i.imgur.com/Hic9TLv.png",
+            "label": "Hic9TLv"
+          },
+          {
+            "img": "https://i.imgur.com/r9ERkKK.png",
+            "label": "r9ERkKK"
+          },
+          {
+            "img": "https://i.imgur.com/RFry47n.png",
+            "label": "RFry47n"
+          },
+          {
+            "img": "https://i.imgur.com/VwGvi4m.png",
+            "label": "VwGvi4m"
+          },
+          {
+            "img": "https://i.imgur.com/MQm8odz.png",
+            "label": "MQm8odz"
+          },
+          {
+            "img": "https://i.imgur.com/yvgCtpL.png",
+            "label": "yvgCtpL"
+          },
+          {
+            "img": "https://i.imgur.com/ifjJIpi.png",
+            "label": "ifjJIpi"
+          },
+          {
+            "img": "https://i.imgur.com/9mv3Qhp.png",
+            "label": "9mv3Qhp"
+          },
+          {
+            "img": "https://i.imgur.com/sUoprlu.png",
+            "label": "sUoprlu"
+          },
+          {
+            "img": "https://i.imgur.com/Bqlwvm0.png",
+            "label": "Bqlwvm0"
+          },
+          {
+            "img": "https://i.imgur.com/Lpdr0OJ.png",
+            "label": "Lpdr0OJ"
+          },
+          {
+            "img": "https://i.imgur.com/qQPXnHg.png",
+            "label": "qQPXnHg"
+          },
+          {
+            "img": "https://i.imgur.com/gRT4Tqg.png",
+            "label": "gRT4Tqg"
+          },
+          {
+            "img": "https://i.imgur.com/Q2LSSA0.png",
+            "label": "Q2LSSA0"
+          }
+        ],
+        "createdAt": "2026-09-24T19:19:32.754Z",
+        "updatedAt": "2026-09-24T19:19:32.754Z"
+      }
+    ],
+    "plotNode": "",
+    "taxonomyPath": "",
+    "origin": "",
+    "relevance": "",
+    "status": "",
+    "updatedAt": "2026-10-12T21:09:06.423Z"
+  }
+}
