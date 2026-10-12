@@ -14,12 +14,13 @@ async function change(extra = {}, actorId = ids[1]) {
 
 test('Zustände vor dem Kampf bleiben im Kampf wirksam und laufen ab', async () => {
   await resetScene();
+  const baseDefense = resolveCombatProfile(await record(ids[1])).totalDefense;
   await change();
   await startFight();
   let state = deriveCombatStateFromComments(await history()).get(ids[1]);
   assert.equal(state.temporaryConditions[0].durationModel.remainingActorComments, 2);
   const profile = overlayCombatHitPointState(resolveCombatProfile(await record(ids[1])), state);
-  assert.equal(profile.totalDefense, 17);
+  assert.equal(profile.totalDefense, baseDefense + 1);
   const action = await prepareAction({ actorIndex: 1 });
   await commitAction(action.payload || action);
   state = deriveCombatStateFromComments(await history()).get(ids[1]);

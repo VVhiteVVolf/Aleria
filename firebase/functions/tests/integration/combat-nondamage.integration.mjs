@@ -65,14 +65,16 @@ test('Expliziter Eigenschaden wird einmal gespeichert und lässt sich samt Resso
   await party.assertConsistent();
 });
 
-test('Rüstungsroutine verwendet auf Server und Vorschau dieselbe Grenze 11/12, auch nach Rückstufung', async () => {
+test('Schwere Rüstung bleibt auf Server und Vorschau ohne GES-Bonus, auch nach Stufenwechsel', async () => {
   for (const level of [11, 12, 11]) {
     const party = await createCombatParty(definitions);
     const target = await party.record('gawain');
     const armorItems = target.combatProfile.armorItems.map(item => ({ ...item, dexterityUnlockLevel: 6 }));
     await database.collection('characters').doc(target.id).update({ 'combatProfile.progression.level': level,
       'combatProfile.armorItems': armorItems });
-    const expected = level >= 12 ? 19 : 16;
+    // Defense balance from 2026-10-03: junior plate has RK 15 and never
+    // gains Dexterity, even when a legacy item still carries an unlock level.
+    const expected = 15;
     assert.equal((await profile(party, 'gawain')).totalDefense, expected);
     const prepared = await party.prepare({ actor: 'gildas', targets: ['gawain'], natural: 11 });
     const saved = resolution(await party.commit(prepared));
