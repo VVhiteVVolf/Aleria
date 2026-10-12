@@ -1,0 +1,1226 @@
+{
+  "schema": "aleria.offline-duel-audit",
+  "date": "2026-10-12",
+  "sourceHashes": [
+    {
+      "id": "person--haus-saethwyr--nudd-saethwyr",
+      "name": "Nudd Saethwyr",
+      "combatSha256": "ae15b34a27b91dfd130d3e6f8fbbd1b3b9a2be00d884303251375a7c12a7ba71"
+    },
+    {
+      "id": "oUlhJyX6C4Q69mtLS9u1",
+      "name": "Asgeir Wolfshorn",
+      "combatSha256": "2104e3b77e67bfd6e3a075c230e6c0812c13922794449972ea6447ee50871be3"
+    }
+  ],
+  "participants": [
+    {
+      "id": "person--haus-saethwyr--nudd-saethwyr",
+      "name": "Nudd Saethwyr",
+      "level": 6,
+      "maximumHitPoints": 73,
+      "defense": 15
+    },
+    {
+      "id": "oUlhJyX6C4Q69mtLS9u1",
+      "name": "Asgeir Wolfshorn",
+      "level": 7,
+      "maximumHitPoints": 108,
+      "defense": 15
+    }
+  ],
+  "assumptions": {
+    "rested": true,
+    "distanceMeters": 1.5,
+    "terrain": "Neutraler Nahkampf ohne Gelände- oder Überraschungsvorteile",
+    "criticalConsequences": "Aktuelle W20-Folgen, Beitragslimits, Nachschaden und Aufheben über gemeinsame Mechanik",
+    "liveWrites": false,
+    "initialLoadout": "long-axe",
+    "loadoutChangesDuringDuel": false
+  },
+  "policy": "Alle bezahlbaren Kombinationen bekannter Techniken und Fähigkeiten. Erwartungswert-Rangfolge; sechs verschiedene Pakete mit jeweils vier unabhängigen Stichproben einschließlich gegnerischer Antwort. Durchschnaufen wird als begrenzte Reserve bewertet. Beide Seiten kennen nur den aktuellen Stand. Keine Einsicht in zukünftige Duellwürfe. Begrenzte taktische Suche, kein mathematischer Nachweis einer global optimalen Strategie.",
+  "calibration": [
+    {
+      "loadout": "long-axe",
+      "wins": 4,
+      "meanRemainingHp": 65,
+      "duels": [
+        {
+          "seed": 2674696773,
+          "winner": "Asgeir Wolfshorn",
+          "rounds": 6,
+          "first": "Asgeir Wolfshorn",
+          "initiative": [
+            {
+              "index": 1,
+              "roll": 15,
+              "modifier": 1
+            },
+            {
+              "index": 0,
+              "roll": 4,
+              "modifier": 2
+            }
+          ],
+          "hp": [
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 1034165238,
+          "winner": "Asgeir Wolfshorn",
+          "rounds": 5,
+          "first": "Nudd Saethwyr",
+          "initiative": [
+            {
+              "index": 0,
+              "roll": 4,
+              "modifier": 2
+            },
+            {
+              "index": 1,
+              "roll": 2,
+              "modifier": 1
+            }
+          ],
+          "hp": [
+            0,
+            81
+          ]
+        },
+        {
+          "seed": 3688600999,
+          "winner": "Asgeir Wolfshorn",
+          "rounds": 5,
+          "first": "Asgeir Wolfshorn",
+          "initiative": [
+            {
+              "index": 1,
+              "roll": 17,
+              "modifier": 1
+            },
+            {
+              "index": 0,
+              "roll": 1,
+              "modifier": 2
+            }
+          ],
+          "hp": [
+            0,
+            62
+          ]
+        },
+        {
+          "seed": 2048069464,
+          "winner": "Asgeir Wolfshorn",
+          "rounds": 4,
+          "first": "Asgeir Wolfshorn",
+          "initiative": [
+            {
+              "index": 1,
+              "roll": 15,
+              "modifier": 1
+            },
+            {
+              "index": 0,
+              "roll": 1,
+              "modifier": 2
+            }
+          ],
+          "hp": [
+            0,
+            77
+          ]
+        }
+      ]
+    },
+    {
+      "loadout": "dual-axes",
+      "wins": 4,
+      "meanRemainingHp": 58.75,
+      "duels": [
+        {
+          "seed": 2674696773,
+          "winner": "Asgeir Wolfshorn",
+          "rounds": 9,
+          "first": "Asgeir Wolfshorn",
+          "initiative": [
+            {
+              "index": 1,
+              "roll": 15,
+              "modifier": 1
+            },
+            {
+              "index": 0,
+              "roll": 4,
+              "modifier": 2
+            }
+          ],
+          "hp": [
+            0,
+            47
+          ]
+        },
+        {
+          "seed": 1034165238,
+          "winner": "Asgeir Wolfshorn",
+          "rounds": 7,
+          "first": "Nudd Saethwyr",
+          "initiative": [
+            {
+              "index": 0,
+              "roll": 4,
+              "modifier": 2
+            },
+            {
+              "index": 1,
+              "roll": 2,
+              "modifier": 1
+            }
+          ],
+          "hp": [
+            0,
+            59
+          ]
+        },
+        {
+          "seed": 3688600999,
+          "winner": "Asgeir Wolfshorn",
+          "rounds": 5,
+          "first": "Asgeir Wolfshorn",
+          "initiative": [
+            {
+              "index": 1,
+              "roll": 17,
+              "modifier": 1
+            },
+            {
+              "index": 0,
+              "roll": 1,
+              "modifier": 2
+            }
+          ],
+          "hp": [
+            0,
+            71
+          ]
+        },
+        {
+          "seed": 2048069464,
+          "winner": "Asgeir Wolfshorn",
+          "rounds": 7,
+          "first": "Asgeir Wolfshorn",
+          "initiative": [
+            {
+              "index": 1,
+              "roll": 15,
+              "modifier": 1
+            },
+            {
+              "index": 0,
+              "roll": 1,
+              "modifier": 2
+            }
+          ],
+          "hp": [
+            0,
+            58
+          ]
+        }
+      ]
+    },
+    {
+      "loadout": "axe-shield",
+      "wins": 4,
+      "meanRemainingHp": 43.25,
+      "duels": [
+        {
+          "seed": 2674696773,
+          "winner": "Asgeir Wolfshorn",
+          "rounds": 10,
+          "first": "Asgeir Wolfshorn",
+          "initiative": [
+            {
+              "index": 1,
+              "roll": 15,
+              "modifier": 1
+            },
+            {
+              "index": 0,
+              "roll": 4,
+              "modifier": 2
+            }
+          ],
+          "hp": [
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 1034165238,
+          "winner": "Asgeir Wolfshorn",
+          "rounds": 10,
+          "first": "Nudd Saethwyr",
+          "initiative": [
+            {
+              "index": 0,
+              "roll": 4,
+              "modifier": 2
+            },
+            {
+              "index": 1,
+              "roll": 2,
+              "modifier": 1
+            }
+          ],
+          "hp": [
+            0,
+            44
+          ]
+        },
+        {
+          "seed": 3688600999,
+          "winner": "Asgeir Wolfshorn",
+          "rounds": 9,
+          "first": "Asgeir Wolfshorn",
+          "initiative": [
+            {
+              "index": 1,
+              "roll": 17,
+              "modifier": 1
+            },
+            {
+              "index": 0,
+              "roll": 1,
+              "modifier": 2
+            }
+          ],
+          "hp": [
+            0,
+            46
+          ]
+        },
+        {
+          "seed": 2048069464,
+          "winner": "Asgeir Wolfshorn",
+          "rounds": 7,
+          "first": "Asgeir Wolfshorn",
+          "initiative": [
+            {
+              "index": 1,
+              "roll": 15,
+              "modifier": 1
+            },
+            {
+              "index": 0,
+              "roll": 1,
+              "modifier": 2
+            }
+          ],
+          "hp": [
+            0,
+            82
+          ]
+        }
+      ]
+    }
+  ],
+  "count": 16,
+  "wins": {
+    "Nudd Saethwyr": 1,
+    "Asgeir Wolfshorn": 15,
+    "Unentschieden": 0
+  },
+  "meanRounds": 6.625,
+  "firstExample": {
+    "seed": 44714,
+    "winner": "Asgeir Wolfshorn",
+    "rounds": 5,
+    "first": "Nudd Saethwyr",
+    "initiative": [
+      {
+        "index": 0,
+        "roll": 13,
+        "modifier": 2
+      },
+      {
+        "index": 1,
+        "roll": 1,
+        "modifier": 1
+      }
+    ],
+    "hp": [
+      0,
+      71
+    ],
+    "turns": [
+      {
+        "round": 1,
+        "actor": "Nudd Saethwyr",
+        "actions": [
+          {
+            "action": "Unbeirrbare Wacht",
+            "actionId": "technique:nudd-unbeirrbare-wacht",
+            "roll": 6,
+            "hit": false,
+            "damage": 0,
+            "followUps": [],
+            "hpAfter": 108
+          },
+          {
+            "action": "Durchbruch des Grenzwächters",
+            "actionId": "technique:combat-style-drachentanz-cantref-grund-durchbruch",
+            "roll": 7,
+            "hit": false,
+            "damage": 0,
+            "followUps": [],
+            "hpAfter": 108
+          },
+          {
+            "action": "Kuss der Speerspitze",
+            "actionId": "technique:combat-style-drachentanz-cantref-jungdrache-kuss-der-speerspitze",
+            "roll": 6,
+            "hit": false,
+            "damage": 0,
+            "followUps": [],
+            "hpAfter": 108
+          }
+        ],
+        "hp": [
+          73,
+          108
+        ],
+        "temporaryHp": [
+          0,
+          0
+        ]
+      },
+      {
+        "round": 1,
+        "actor": "Asgeir Wolfshorn",
+        "actions": [
+          {
+            "action": "Berserkergang · Entfesselter Zorn",
+            "actionId": "ability:aldrimar-skjaldr-berserkergang",
+            "roll": 20,
+            "hit": true,
+            "damage": 0,
+            "followUps": [],
+            "hpAfter": 108
+          },
+          {
+            "action": "Tiefer Spaltbogen",
+            "actionId": "technique:combat-style-huskarl-skjaldr-wahl-10",
+            "roll": 7,
+            "hit": true,
+            "damage": 24,
+            "followUps": [],
+            "hpAfter": 49
+          }
+        ],
+        "hp": [
+          49,
+          108
+        ],
+        "temporaryHp": [
+          0,
+          11
+        ]
+      },
+      {
+        "round": 2,
+        "actor": "Nudd Saethwyr",
+        "actions": [
+          {
+            "action": "Durchschnaufen",
+            "actionId": "ability:martial-durchschnaufen",
+            "roll": 20,
+            "hit": true,
+            "damage": 0,
+            "followUps": [],
+            "hpAfter": 60
+          },
+          {
+            "action": "Wacht der langen Schuppe",
+            "actionId": "technique:combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe",
+            "roll": 12,
+            "hit": true,
+            "damage": 8,
+            "followUps": [],
+            "hpAfter": 108
+          },
+          {
+            "action": "Stoß an der Schaftlinie",
+            "actionId": "technique:combat-style-drachentanz-cantref-grund-linie",
+            "roll": 9,
+            "hit": true,
+            "damage": 10,
+            "followUps": [],
+            "hpAfter": 101
+          }
+        ],
+        "hp": [
+          60,
+          101
+        ],
+        "temporaryHp": [
+          0,
+          0
+        ]
+      },
+      {
+        "round": 2,
+        "actor": "Asgeir Wolfshorn",
+        "actions": [
+          {
+            "action": "Gebändigter Stand",
+            "actionId": "technique:combat-style-huskarl-skjaldr-grund-2",
+            "roll": 20,
+            "hit": true,
+            "damage": 0,
+            "followUps": [],
+            "hpAfter": 101
+          },
+          {
+            "action": "Tiefer Spaltbogen",
+            "actionId": "technique:combat-style-huskarl-skjaldr-wahl-10",
+            "roll": 6,
+            "hit": false,
+            "damage": 0,
+            "followUps": [],
+            "hpAfter": 60
+          },
+          {
+            "action": "Kurzer Axthieb",
+            "actionId": "technique:combat-style-huskarl-skjaldr-grund-1",
+            "roll": 18,
+            "hit": true,
+            "damage": 5,
+            "followUps": [],
+            "hpAfter": 55
+          }
+        ],
+        "hp": [
+          55,
+          101
+        ],
+        "temporaryHp": [
+          0,
+          0
+        ]
+      },
+      {
+        "round": 3,
+        "actor": "Nudd Saethwyr",
+        "actions": [
+          {
+            "action": "Verwurzelte Schuppe",
+            "actionId": "technique:combat-style-drachentanz-jungdrache-verwurzelte-schuppe",
+            "roll": 20,
+            "hit": true,
+            "damage": 0,
+            "followUps": [],
+            "hpAfter": 55
+          },
+          {
+            "action": "Stoß an der Schaftlinie",
+            "actionId": "technique:combat-style-drachentanz-cantref-grund-linie",
+            "roll": 17,
+            "hit": true,
+            "damage": 4,
+            "followUps": [],
+            "hpAfter": 97
+          },
+          {
+            "action": "Wacht der langen Schuppe",
+            "actionId": "technique:combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe",
+            "roll": 1,
+            "hit": false,
+            "damage": 0,
+            "followUps": [],
+            "critical": "Gestürzt",
+            "hpAfter": 97
+          }
+        ],
+        "hp": [
+          55,
+          97
+        ],
+        "temporaryHp": [
+          0,
+          0
+        ]
+      },
+      {
+        "round": 3,
+        "actor": "Asgeir Wolfshorn",
+        "actions": [
+          {
+            "action": "Axtbart zur Fessel",
+            "actionId": "technique:combat-style-huskarl-skjaldr-wahl-7",
+            "roll": 19,
+            "hit": true,
+            "damage": 11,
+            "followUps": [],
+            "hpAfter": 44
+          },
+          {
+            "action": "Kurzer Axthieb",
+            "actionId": "technique:combat-style-huskarl-skjaldr-grund-1",
+            "roll": 4,
+            "hit": false,
+            "damage": 0,
+            "followUps": [],
+            "hpAfter": 44
+          }
+        ],
+        "hp": [
+          44,
+          97
+        ],
+        "temporaryHp": [
+          0,
+          0
+        ]
+      },
+      {
+        "round": 4,
+        "actor": "Nudd Saethwyr",
+        "actions": [
+          {
+            "action": "Dreifache Pflicht · Saethwyr-Dreizack",
+            "actionId": "weapon:starter-cantref-spear",
+            "roll": 15,
+            "hit": true,
+            "damage": 11,
+            "followUps": [],
+            "hpAfter": 86
+          },
+          {
+            "action": "Wacht der langen Schuppe",
+            "actionId": "technique:combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe",
+            "roll": 6,
+            "hit": true,
+            "damage": 13,
+            "followUps": [],
+            "hpAfter": 73
+          }
+        ],
+        "hp": [
+          44,
+          73
+        ],
+        "temporaryHp": [
+          0,
+          0
+        ]
+      },
+      {
+        "round": 4,
+        "actor": "Asgeir Wolfshorn",
+        "actions": [
+          {
+            "action": "Durchschnaufen",
+            "actionId": "ability:martial-durchschnaufen",
+            "roll": 20,
+            "hit": true,
+            "damage": 0,
+            "followUps": [],
+            "hpAfter": 89
+          },
+          {
+            "action": "Axtbart zur Fessel",
+            "actionId": "technique:combat-style-huskarl-skjaldr-wahl-7",
+            "roll": 18,
+            "hit": true,
+            "damage": 26,
+            "followUps": [],
+            "hpAfter": 18
+          }
+        ],
+        "hp": [
+          18,
+          89
+        ],
+        "temporaryHp": [
+          0,
+          0
+        ]
+      },
+      {
+        "round": 5,
+        "actor": "Nudd Saethwyr",
+        "actions": [
+          {
+            "action": "Verwurzelte Schuppe",
+            "actionId": "technique:combat-style-drachentanz-jungdrache-verwurzelte-schuppe",
+            "roll": 20,
+            "hit": true,
+            "damage": 0,
+            "followUps": [],
+            "hpAfter": 18
+          },
+          {
+            "action": "Dreifache Pflicht · Saethwyr-Dreizack",
+            "actionId": "weapon:starter-cantref-spear",
+            "roll": 19,
+            "hit": true,
+            "damage": 12,
+            "followUps": [],
+            "hpAfter": 77
+          },
+          {
+            "action": "Wacht der langen Schuppe",
+            "actionId": "technique:combat-style-drachentanz-cantref-jungdrache-wacht-der-langen-schuppe",
+            "roll": 17,
+            "hit": true,
+            "damage": 6,
+            "followUps": [],
+            "hpAfter": 71
+          }
+        ],
+        "hp": [
+          18,
+          71
+        ],
+        "temporaryHp": [
+          0,
+          0
+        ]
+      },
+      {
+        "round": 5,
+        "actor": "Asgeir Wolfshorn",
+        "actions": [
+          {
+            "action": "Gebändigter Stand",
+            "actionId": "technique:combat-style-huskarl-skjaldr-grund-2",
+            "roll": 20,
+            "hit": true,
+            "damage": 0,
+            "followUps": [],
+            "hpAfter": 71
+          },
+          {
+            "action": "Langer Spalthieb",
+            "actionId": "technique:combat-style-huskarl-skjaldr-grund-3",
+            "roll": 14,
+            "hit": true,
+            "damage": 18,
+            "followUps": [],
+            "hpAfter": 0
+          }
+        ],
+        "hp": [
+          0,
+          71
+        ],
+        "temporaryHp": [
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "duels": [
+    {
+      "seed": 44714,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 5,
+      "first": "Nudd Saethwyr",
+      "initiative": [
+        {
+          "index": 0,
+          "roll": 13,
+          "modifier": 2
+        },
+        {
+          "index": 1,
+          "roll": 1,
+          "modifier": 1
+        }
+      ],
+      "hp": [
+        0,
+        71
+      ]
+    },
+    {
+      "seed": 1180137310,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 6,
+      "first": "Nudd Saethwyr",
+      "initiative": [
+        {
+          "index": 0,
+          "roll": 5,
+          "modifier": 2
+        },
+        {
+          "index": 1,
+          "roll": 1,
+          "modifier": 1
+        }
+      ],
+      "hp": [
+        0,
+        63
+      ]
+    },
+    {
+      "seed": 3834573071,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 6,
+      "first": "Asgeir Wolfshorn",
+      "initiative": [
+        {
+          "index": 1,
+          "roll": 19,
+          "modifier": 1
+        },
+        {
+          "index": 0,
+          "roll": 13,
+          "modifier": 2
+        }
+      ],
+      "hp": [
+        0,
+        11
+      ]
+    },
+    {
+      "seed": 2194041536,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 8,
+      "first": "Nudd Saethwyr",
+      "initiative": [
+        {
+          "index": 0,
+          "roll": 16,
+          "modifier": 2
+        },
+        {
+          "index": 1,
+          "roll": 11,
+          "modifier": 1
+        }
+      ],
+      "hp": [
+        0,
+        15
+      ]
+    },
+    {
+      "seed": 553510001,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 8,
+      "first": "Asgeir Wolfshorn",
+      "initiative": [
+        {
+          "index": 1,
+          "roll": 18,
+          "modifier": 1
+        },
+        {
+          "index": 0,
+          "roll": 13,
+          "modifier": 2
+        }
+      ],
+      "hp": [
+        0,
+        13
+      ]
+    },
+    {
+      "seed": 3207945762,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 10,
+      "first": "Nudd Saethwyr",
+      "initiative": [
+        {
+          "index": 0,
+          "roll": 15,
+          "modifier": 2
+        },
+        {
+          "index": 1,
+          "roll": 15,
+          "modifier": 1
+        }
+      ],
+      "hp": [
+        0,
+        6
+      ]
+    },
+    {
+      "seed": 1567414227,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 6,
+      "first": "Asgeir Wolfshorn",
+      "initiative": [
+        {
+          "index": 1,
+          "roll": 12,
+          "modifier": 1
+        },
+        {
+          "index": 0,
+          "roll": 1,
+          "modifier": 2
+        }
+      ],
+      "hp": [
+        0,
+        57
+      ]
+    },
+    {
+      "seed": 4221849988,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 4,
+      "first": "Asgeir Wolfshorn",
+      "initiative": [
+        {
+          "index": 1,
+          "roll": 19,
+          "modifier": 1
+        },
+        {
+          "index": 0,
+          "roll": 11,
+          "modifier": 2
+        }
+      ],
+      "hp": [
+        0,
+        56
+      ]
+    },
+    {
+      "seed": 2581318453,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 7,
+      "first": "Nudd Saethwyr",
+      "initiative": [
+        {
+          "index": 0,
+          "roll": 12,
+          "modifier": 2
+        },
+        {
+          "index": 1,
+          "roll": 1,
+          "modifier": 1
+        }
+      ],
+      "hp": [
+        0,
+        44
+      ]
+    },
+    {
+      "seed": 940786918,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 8,
+      "first": "Nudd Saethwyr",
+      "initiative": [
+        {
+          "index": 0,
+          "roll": 18,
+          "modifier": 2
+        },
+        {
+          "index": 1,
+          "roll": 1,
+          "modifier": 1
+        }
+      ],
+      "hp": [
+        0,
+        52
+      ]
+    },
+    {
+      "seed": 3595222679,
+      "winner": "Nudd Saethwyr",
+      "rounds": 7,
+      "first": "Nudd Saethwyr",
+      "initiative": [
+        {
+          "index": 0,
+          "roll": 16,
+          "modifier": 2
+        },
+        {
+          "index": 1,
+          "roll": 2,
+          "modifier": 1
+        }
+      ],
+      "hp": [
+        12,
+        0
+      ]
+    },
+    {
+      "seed": 1954691144,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 6,
+      "first": "Asgeir Wolfshorn",
+      "initiative": [
+        {
+          "index": 1,
+          "roll": 5,
+          "modifier": 1
+        },
+        {
+          "index": 0,
+          "roll": 2,
+          "modifier": 2
+        }
+      ],
+      "hp": [
+        0,
+        60
+      ]
+    },
+    {
+      "seed": 314159609,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 7,
+      "first": "Nudd Saethwyr",
+      "initiative": [
+        {
+          "index": 0,
+          "roll": 11,
+          "modifier": 2
+        },
+        {
+          "index": 1,
+          "roll": 3,
+          "modifier": 1
+        }
+      ],
+      "hp": [
+        0,
+        30
+      ]
+    },
+    {
+      "seed": 2968595370,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 6,
+      "first": "Asgeir Wolfshorn",
+      "initiative": [
+        {
+          "index": 1,
+          "roll": 15,
+          "modifier": 1
+        },
+        {
+          "index": 0,
+          "roll": 9,
+          "modifier": 2
+        }
+      ],
+      "hp": [
+        0,
+        48
+      ]
+    },
+    {
+      "seed": 1328063835,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 8,
+      "first": "Nudd Saethwyr",
+      "initiative": [
+        {
+          "index": 0,
+          "roll": 7,
+          "modifier": 2
+        },
+        {
+          "index": 1,
+          "roll": 1,
+          "modifier": 1
+        }
+      ],
+      "hp": [
+        0,
+        11
+      ]
+    },
+    {
+      "seed": 3982499596,
+      "winner": "Asgeir Wolfshorn",
+      "rounds": 4,
+      "first": "Asgeir Wolfshorn",
+      "initiative": [
+        {
+          "index": 1,
+          "roll": 19,
+          "modifier": 1
+        },
+        {
+          "index": 0,
+          "roll": 5,
+          "modifier": 2
+        }
+      ],
+      "hp": [
+        0,
+        103
+      ]
+    }
+  ],
+  "effectiveNuddEquipment": {
+    "weapons": [
+      {
+        "id": "starter-cantref-spear",
+        "name": "Dreifache Pflicht · Saethwyr-Dreizack",
+        "damageFormula": "1d10",
+        "attackBonus": 0,
+        "damageBonus": 1,
+        "triggerRules": [
+          {
+            "id": "nudd-trident-critical",
+            "name": "Drei scharfe Zinken",
+            "phase": "pre-damage",
+            "effects": {
+              "damageModifier": 2
+            },
+            "recipient": "actor",
+            "sourceRelation": "self",
+            "activation": "passive",
+            "frequency": "always",
+            "condition": "critical-hit",
+            "actionKinds": [
+              "weapon",
+              "technique"
+            ],
+            "weaponAttackOnly": true,
+            "description": "+2 Schaden bei kritischem Treffer; nicht verdoppelt."
+          },
+          {
+            "id": "nudd-trident-first-hit",
+            "name": "Pflichtspitze",
+            "phase": "pre-hit-damage",
+            "effects": {
+              "damageModifier": 1
+            },
+            "recipient": "actor",
+            "sourceRelation": "self",
+            "activation": "passive",
+            "frequency": "scene",
+            "condition": "would-hit",
+            "actionKinds": [
+              "weapon",
+              "technique"
+            ],
+            "weaponAttackOnly": true,
+            "description": "Erster erfolgreicher Dreizacktreffer je Szene: +1 Schaden, auch bei Speertechniken."
+          }
+        ]
+      },
+      {
+        "id": "nudd-saethwyr-knightly-sword",
+        "name": "Eidwacht · Saethwyr-Ritterschwert",
+        "damageFormula": "1d8",
+        "attackBonus": 1,
+        "damageBonus": 1,
+        "triggerRules": [
+          {
+            "id": "nudd-sword-opening",
+            "name": "Ruhige Eröffnung",
+            "phase": "pre-roll",
+            "effects": {
+              "attackModifier": 1
+            },
+            "recipient": "actor",
+            "sourceRelation": "self",
+            "activation": "passive",
+            "frequency": "scene",
+            "condition": "always",
+            "actionKinds": [
+              "weapon",
+              "technique"
+            ],
+            "weaponAttackOnly": true,
+            "description": "Erster Schwertangriff je Szene: +1 Angriff; auch ein Fehlschlag verbraucht den Zusatz."
+          },
+          {
+            "id": "nudd-sword-first-hit",
+            "name": "Eidstreue Schneide",
+            "phase": "pre-hit-damage",
+            "effects": {
+              "damageModifier": 1
+            },
+            "recipient": "actor",
+            "sourceRelation": "self",
+            "activation": "passive",
+            "frequency": "scene",
+            "condition": "would-hit",
+            "actionKinds": [
+              "weapon",
+              "technique"
+            ],
+            "weaponAttackOnly": true,
+            "description": "Erster erfolgreicher Schwerttreffer je Szene: +1 Schaden."
+          }
+        ]
+      }
+    ],
+    "armor": [
+      {
+        "id": "starter-cantref-chainmail",
+        "name": "Goldene Wacht · Saethwyr-Plattenrüstung",
+        "baseArmorClass": 15,
+        "damageProtection": {
+          "amount": 2,
+          "damageTypes": [
+            "hieb",
+            "stich"
+          ],
+          "name": "Saethwyr-Plattenschutz",
+          "excludedDamageTypes": []
+        },
+        "triggerRules": [
+          {
+            "id": "nudd-armor-first-hit",
+            "name": "Goldene Wacht",
+            "phase": "pre-hit-damage",
+            "effects": {
+              "damageReduction": 2
+            },
+            "recipient": "target",
+            "sourceRelation": "self",
+            "activation": "passive",
+            "frequency": "scene",
+            "condition": "would-hit",
+            "actionKinds": [
+              "weapon",
+              "technique"
+            ],
+            "weaponAttackOnly": true,
+            "damageTypes": [
+              "hieb",
+              "stich"
+            ],
+            "description": "Erster treffender Hieb-/Stich-Waffen- oder Technikangriff je Szene: zusätzlich −2 Schaden."
+          }
+        ]
+      }
+    ]
+  },
+  "reproduction": "node AleriaAlmanach/tools/combat-audit/run-nudd-asgeir-duel.mjs AleriaAlmanach/docs/combat/nudd-asgeir-duel-2026-10-12/fixtures.json .codex-temp/nudd-asgeir-repeat 16",
+  "validations": {
+    "itemImages": "Two 1254×1254 RGBA PNGs; alpha 0–255, transparent corners; production SHA-256 equals local files",
+    "mechanics": "New profile/equipment tests and shared artwork, class, weapon-budget and W20-critical regressions passed",
+    "browserServerParity": "All five new techniques resolve identically",
+    "liveState": "Release preserved every unrelated online field, current HP, resources, ability uses and existing possession IDs; no live duel writes"
+  }
+}
