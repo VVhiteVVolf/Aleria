@@ -12,6 +12,8 @@ const SPEAKER_PROFILE_STOPWORDS = new Set([
 
 let _speakerProfileAllCommentsCache = null;
 let _speakerProfileAllCommentsLoadedAt = 0;
+let _speakerProfileAllCommentsRequest = null;
+let _speakerProfileCommentsRevision = null;
 
 function normalizeSpeakerProfileName(value) {
   return normalizeSearchText(value || '');
@@ -63,6 +65,14 @@ function getCachedSpeakerProfileComments() {
 }
 
 async function loadSpeakerProfileComments(forceRefresh = false) {
+  if (!forceRefresh && _speakerProfileAllCommentsRequest) return _speakerProfileAllCommentsRequest;
+  const pending = readSpeakerProfileComments(forceRefresh);
+  if (forceRefresh) return pending;
+  _speakerProfileAllCommentsRequest = pending;
+  try { return await pending; } finally { _speakerProfileAllCommentsRequest = null; }
+}
+
+async function readSpeakerProfileComments(forceRefresh = false) {
   const now = Date.now();
   if (!forceRefresh && Array.isArray(_speakerProfileAllCommentsCache) && now - _speakerProfileAllCommentsLoadedAt < 60000) {
     return _speakerProfileAllCommentsCache;
@@ -70,8 +80,20 @@ async function loadSpeakerProfileComments(forceRefresh = false) {
   try {
     const backend = await getCommentBackend({ timeoutMs: 1400 });
     if (typeof backend.loadAllComments === 'function') {
+      let revision = null;
+      if (!forceRefresh && typeof backend.loadCommentActivity === 'function') {
+        try {
+          const threads = await backend.loadCommentActivity();
+          if (threads) revision = JSON.stringify(threads.map(thread => [thread.threadId, thread.commentCount, thread.capturedAt?.seconds, thread.capturedAt?.nanoseconds]).sort((a, b) => a[0].localeCompare(b[0])));
+        } catch { /* Keep the full-history path if the derived index is unavailable. */ }
+      }
+      if (revision && revision === _speakerProfileCommentsRevision && Array.isArray(_speakerProfileAllCommentsCache)) {
+        _speakerProfileAllCommentsLoadedAt = now;
+        return _speakerProfileAllCommentsCache;
+      }
       const comments = await backend.loadAllComments();
       _speakerProfileAllCommentsCache = Array.isArray(comments) ? comments : [];
+      _speakerProfileCommentsRevision = revision;
       _speakerProfileAllCommentsLoadedAt = now;
       return _speakerProfileAllCommentsCache;
     }

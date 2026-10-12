@@ -29,6 +29,9 @@ test('anonyme Sitzungen werden aufgebaut, ohne Zugangsdaten offenzulegen', async
     uid: 'anonymous-1',
     role: 'player',
     authenticated: true,
+    anonymous: false,
+    email: '',
+    emailVerified: false,
     canEditSharedContent: false,
     canModerate: false
   });

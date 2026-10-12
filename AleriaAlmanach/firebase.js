@@ -1,12 +1,14 @@
 ﻿    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-    import { getAuth, onIdTokenChanged, signInAnonymously }
+    import { getAuth, onIdTokenChanged, signInAnonymously, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, sendEmailVerification }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
     import { getFunctions, httpsCallable }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-functions.js";
     import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, limit, serverTimestamp, onSnapshot, doc, getDoc, setDoc, deleteDoc, writeBatch, runTransaction }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
     import { createFirebaseAuthSession }
-      from "./modules/auth/firebase-auth-session.js?v=20261010-auth-restore-v2";
+      from "./modules/auth/firebase-auth-session.js?v=20261012-account-v1";
+    import { createFirebaseAccountActions } from './modules/auth/firebase-account-actions.js';
+    import { createCommentActivityRepository } from './modules/comments/comment-activity-repository.js';
     import { compactMechanicalMetadata }
       from "./modules/combat/combat-resolution-storage.js?v=20260804-referee-v1";
     import { finalizeCommittedCommentNarration }
@@ -37,6 +39,13 @@
       notifyAppStatus(getFirebaseErrorMessage(error, 'Firebase-Anmeldung fehlgeschlagen. Änderungen können noch nicht online gespeichert werden.'));
     });
     const db  = getFirestore(app);
+    const commentActivity = createCommentActivityRepository({
+      readState: async () => (await getDoc(doc(db, 'comment_activity_meta', 'state'))).data(),
+      readThreads: async () => (await getDocs(collection(db, 'comment_activity'))).docs.map(record => record.data())
+    });
+    document.addEventListener('aleria:comments-updated', event => {
+      if (event.detail?.threadId && Array.isArray(event.detail.comments)) commentActivity.update(event.detail.threadId, event.detail.comments);
+    });
     const functions = getFunctions(app, 'europe-west1');
     const commitCombatCommentCallable = httpsCallable(functions, 'commitCombatComment', { timeout: 30000 });
     const commitSkillCommentCallable = httpsCallable(functions, 'commitSkillComment', { timeout: 30000 });
@@ -1177,6 +1186,10 @@
           );
           const take = Math.max(0, Number(n) || 0);
           if (!take) return [];
+          try {
+            const recent = await commentActivity.recent(take);
+            if (recent) return recent;
+          } catch (error) { console.warn('Aktivitätsübersicht noch nicht verfügbar; vollständiger Leseweg bleibt verfügbar.', error); }
           // Legacy imports can store ts as Timestamp, plain object, or string.
           // Firestore ordering across mixed field types is not a reliable activity order.
           const snap = await getDocs(collection(db, 'comments'));
@@ -1196,6 +1209,9 @@
           notifyAppStatus(getFirebaseErrorMessage(e, 'Kommentare konnten nicht vollständig exportiert werden.'));
           throw e;
         }
+      },
+      async loadCommentActivity() {
+        return commentActivity.load();
       },
       async loadAllCommentTurns() {
         try {
@@ -1450,6 +1466,7 @@
     };
 
     window._fbAuth = Object.freeze({
+      ...createFirebaseAccountActions({ auth, session: authSession, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, signInAnonymously, sendPasswordResetEmail, sendEmailVerification }),
       ready: authReady,
       getAccess: getFirebaseAccess,
       getIdToken: forceRefresh => authSession.getIdToken(forceRefresh)

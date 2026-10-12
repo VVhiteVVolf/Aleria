@@ -6,6 +6,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 const sourceRoot = resolve(root, 'AleriaAlmanach/modules');
 const targetRoot = resolve(root, 'firebase/functions/src/generated');
 const files = [
+  'comments/comment-activity-preview.js',
   'combat-critical/combat-critical-conditions.js',
   'combat-critical/combat-critical-lifecycle.js',
   'combat/combat-counter-resolution.js',

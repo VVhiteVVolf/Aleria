@@ -4,10 +4,11 @@
 // master branch via the GitHub API instead of writing to a database.
 //
 // Uses the shared server-side GitHub configuration and commit client.
-// Map publishing intentionally needs no browser login or publish key.
+// Access checks initially observe only; enforce after both users are mapped.
 // ALERIA_GITHUB_TOKEN stays on the server; other publishers retain their
 // own authentication rules.
 import { json, repositoryConfig, createGitHubClient } from './shared/github-publishing.mjs';
+import { checkPublisherAccess } from './shared/publisher-access.mjs';
 
 // Netlify/Lambda synchronous functions cap request bodies well under this,
 // so this is really about failing fast with a clear message rather than
@@ -201,6 +202,8 @@ export async function handler(event) {
       return json(200, { repository: config.repository, branch: config.branch });
     }
     if (event.httpMethod !== 'POST') return json(405, { message: 'Diese Methode wird nicht unterstützt.' });
+    const accessDenied = await checkPublisherAccess(event, 'map');
+    if (accessDenied) return accessDenied;
     if (Buffer.byteLength(event.body || '', 'utf8') > MAX_REQUEST_BYTES) {
       return json(413, { message: 'Das Speicherpaket ist zu groß (max. 6 MB). Für sehr große Kartenbilder bitte weiterhin eine HTTPS-Adresse einbinden statt eines lokalen Uploads.' });
     }

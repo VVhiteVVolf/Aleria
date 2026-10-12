@@ -68,6 +68,8 @@ test('export preserves mechanical data, old threads and comment identity without
   assert.deepEqual(exported.comments.map(comment => comment.id), ['first', 'second']);
   assert.deepEqual(exported.comments[1].combatResolution, mechanics);
   assert.equal(exported.summary.commentCount, 2);
+  assert(exported.threads.every(thread => !Object.hasOwn(thread, 'comments')));
+  assert.deepEqual(exported.comments.map(comment => comment.threadOrder), [1, 1]);
   assert(exported.threads.some(thread => thread.threadId.endsWith('old-page')));
   for (const key of ['createdBy', 'deleteCode', 'deleteCodeHash']) assert(!Object.hasOwn(exported.comments[1], key));
   const manifest = JSON.parse(snapshot.files.find(file => file.path === 'manifest.json').content);

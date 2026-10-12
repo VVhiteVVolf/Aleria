@@ -79,15 +79,19 @@ function readableHistory(entry, comments) {
 export function buildSceneBackupFiles({ modulePayload, comments, turns, threadId, backupId, requestedAt, capturedAt, moduleSource }) {
   validateSceneModule(modulePayload, threadId);
   const entry = modulePayload.entry;
+  const threadOrders = new Map();
   const ordered = sortSceneHistory(comments.filter(comment => belongsToModule(String(comment.entryId || ''), entry.id))
     .map(comment => ({ orderKey: timelineOrder(comment), comment })))
-    .map(({ comment }, index) => ({ ...publicRecord(comment), exportOrder: index + 1 }));
+    .map(({ comment }, index) => {
+      const threadOrder = (threadOrders.get(comment.entryId) || 0) + 1;
+      threadOrders.set(comment.entryId, threadOrder);
+      return { ...publicRecord(comment), exportOrder: index + 1, threadOrder };
+    });
   const commentTurns = turns.filter(turn => belongsToModule(String(turn.threadId || turn.id || ''), entry.id)).map(publicRecord);
   const threads = threadDescriptors(entry, ordered, commentTurns).map(descriptor => ({
     ...descriptor,
     turn: commentTurns.find(turn => (turn.threadId || turn.id) === descriptor.threadId) || null,
-    commentCount: ordered.filter(comment => comment.entryId === descriptor.threadId).length,
-    comments: ordered.filter(comment => comment.entryId === descriptor.threadId).map((comment, index) => ({ ...comment, threadOrder: index + 1 }))
+    commentCount: threadOrders.get(descriptor.threadId) || 0
   }));
   const commentsExport = {
     type: 'aleria-module-comments-export', version: 1, exportedAt: capturedAt,
@@ -114,6 +118,7 @@ export function buildSceneBackupFiles({ modulePayload, comments, turns, threadId
     moduleTitle: entry.title || '', requestedAt, capturedAt, moduleSource,
     summary: commentsExport.summary,
     omittedFields: [...PRIVATE_FIELDS],
+    commentStorage: 'Jeder Kommentar steht einmal in comments.json unter comments; threads ordnet die Kommentare über entryId zu.',
     assets: 'Bilder und Anhänge bleiben als Originalverweise erhalten; externe Dateien sind nicht in diesem Backup eingebettet.',
     files: contents.map(file => ({ path: file.path, bytes: Buffer.byteLength(file.content), sha256: createHash('sha256').update(file.content).digest('hex') }))
   };

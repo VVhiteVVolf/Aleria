@@ -8,6 +8,7 @@ export function normalizeAleriaRole(claims = {}) {
 export function createFirebaseAuthSession({ auth, onIdTokenChanged, signInAnonymously }) {
   let state = Object.freeze({ ready: false, user: null, uid: '', role: 'player', claims: {} });
   let startPromise = null;
+  let inspection = 0;
 
   function publish(user, tokenResult = null) {
     const claims = tokenResult?.claims && typeof tokenResult.claims === 'object' ? tokenResult.claims : {};
@@ -25,8 +26,10 @@ export function createFirebaseAuthSession({ auth, onIdTokenChanged, signInAnonym
   }
 
   async function inspect(user) {
+    const currentInspection = ++inspection;
     if (!user) return publish(null);
     const tokenResult = typeof user.getIdTokenResult === 'function' ? await user.getIdTokenResult() : null;
+    if (currentInspection !== inspection) return state;
     return publish(user, tokenResult);
   }
 
@@ -55,7 +58,7 @@ export function createFirebaseAuthSession({ auth, onIdTokenChanged, signInAnonym
             })
             .catch(reject);
         } else {
-          publish(null);
+          inspect(null);
         }
       }, reject);
     });
@@ -80,10 +83,18 @@ export function createFirebaseAuthSession({ auth, onIdTokenChanged, signInAnonym
       uid: state.uid,
       role: state.role,
       authenticated: !!state.user,
+      anonymous: !!state.user?.isAnonymous,
+      email: String(state.user?.email || ''),
+      emailVerified: !!state.user?.emailVerified,
       canEditSharedContent: ['editor', 'moderator', 'admin'].includes(state.role),
       canModerate: ['moderator', 'admin'].includes(state.role)
     });
   }
 
-  return Object.freeze({ start, requireUser, getIdToken, getAccess });
+  async function refresh() {
+    await start();
+    return inspect(auth.currentUser);
+  }
+
+  return Object.freeze({ start, requireUser, getIdToken, getAccess, refresh });
 }

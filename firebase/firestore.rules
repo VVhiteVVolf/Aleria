@@ -79,6 +79,16 @@ service cloud.firestore {
         && request.resource.data.text is string && request.resource.data.text.size() <= 10000;
     }
 
+    match /comment_activity/{threadId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /comment_activity_meta/{documentId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
     match /comments/{commentId} {
       allow read: if true;
       allow create: if false;

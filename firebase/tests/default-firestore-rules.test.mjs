@@ -42,6 +42,17 @@ test('öffentliche Spieldaten bleiben ohne Anmeldung lesbar', async () => {
   await assertSucceeds(getDoc(doc(environment.unauthenticatedContext().firestore(), 'characters/gawain')));
 });
 
+test('abgeleitete Kommentaraktivität ist lesbar, aber auch für Redakteure nicht schreibbar', async () => {
+  const reader = environment.unauthenticatedContext().firestore();
+  const editor = environment.authenticatedContext('editor', { aleriaRole: 'editor' }).firestore();
+  for (const path of ['comment_activity/thread', 'comment_activity_meta/state']) {
+    await environment.withSecurityRulesDisabled(context => setDoc(doc(context.firestore(), path), { ready: true }));
+    await assertSucceeds(getDoc(doc(reader, path)));
+    await assertFails(setDoc(doc(editor, path), { ready: false }));
+    await assertFails(deleteDoc(doc(editor, path)));
+  }
+});
+
 test('Szenenabschlüsse und GitHub-Erfolgsbelege können nicht vom Browser gefälscht werden', async () => {
   const player = environment.authenticatedContext('owner').firestore();
   const threadId = 'hearing::session:main';

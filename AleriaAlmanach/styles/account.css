@@ -1,0 +1,12 @@
+.account-open { margin: .65rem 0; padding: .4rem .85rem; font: inherit; cursor: pointer; }
+.account-dialog { box-sizing: border-box; width: min(31rem, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem); overflow: auto; padding: 1.25rem; border: 1px solid #ad9470; border-radius: .5rem; background: #f5eddf; color: #382d21; text-align: left; }
+.account-dialog::backdrop { background: rgb(25 20 15 / 65%); }
+.account-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.account-heading h2 { margin: 0; font-size: 1.35rem; }
+.account-dialog p { line-height: 1.5; }
+.account-dialog label { display: block; margin: .75rem 0; }
+.account-dialog input[type="email"], .account-dialog input[type="password"] { box-sizing: border-box; display: block; width: 100%; padding: .6rem; font: inherit; }
+.account-dialog button { padding: .5rem .75rem; margin: .25rem; font: inherit; cursor: pointer; }
+.account-dialog code { overflow-wrap: anywhere; }
+.account-dialog [hidden] { display: none; }
+.account-error { color: #8b251d; }

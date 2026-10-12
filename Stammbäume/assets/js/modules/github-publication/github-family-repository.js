@@ -1,4 +1,5 @@
 import { FamilyRevisionConflictError } from '../family-sync/family-sync-errors.js';
+import { publisherAuthHeaders } from '../../../../../shared/auth/publisher-auth-headers.mjs';
 
 const REGISTRY_URL = 'assets/data/published-families/registry.json';
 const PUBLISH_ENDPOINT = '/.netlify/functions/family-publisher';
@@ -55,7 +56,8 @@ export function createGitHubFamilyRepository({
     const payload = await fetchJson(endpoint, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        ...await publisherAuthHeaders()
       },
       body: JSON.stringify({
         skipDeploy: skipDeploy !== false,

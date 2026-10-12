@@ -163,9 +163,14 @@
 
     async publish(state) {
       if (!dataPath) throw new Error('Diese Karte hat noch keinen dataPath in der Registry/Config hinterlegt.');
+      let accessHeaders = {};
+      try {
+        const { publisherAuthHeaders } = await import('/shared/auth/publisher-auth-headers.mjs');
+        accessHeaders = await publisherAuthHeaders();
+      } catch { /* An optional account module must not interrupt existing publication. */ }
       const response = await fetch(PUBLISH_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', ...accessHeaders },
         body: JSON.stringify({ dataPath, state, expectedRevision: publishedRevision }),
       });
       const payload = await response.json().catch(() => ({}));

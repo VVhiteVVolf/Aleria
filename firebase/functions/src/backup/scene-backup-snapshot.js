@@ -8,7 +8,7 @@ function sectionMetadata(section) {
   return Object.fromEntries(['key', 'tab', 'desc', 'path', 'nodeId', 'iconUrl'].filter(key => section[key] !== undefined).map(key => [key, section[key]]));
 }
 
-function moduleFromStore(config, storedEntry, fallback) {
+export function moduleFromStore(config, storedEntry, fallback) {
   const moduleId = fallback.entry.id;
   const manifest = config?.moduleStoreManifest;
   if (manifest?.format === 'split-v1') {

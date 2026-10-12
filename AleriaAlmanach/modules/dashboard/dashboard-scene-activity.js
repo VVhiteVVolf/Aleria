@@ -1,6 +1,7 @@
 const ALMANACH_DASHBOARD_SCENE_ACTIVITY_MAX_AGE_MS = 30_000;
 
 let _almanachDashboardSceneComments = [];
+let _almanachDashboardSceneThreadCounts = null;
 let _almanachDashboardSceneActivity = new Map();
 let _almanachDashboardSceneActivityStatus = 'idle';
 let _almanachDashboardSceneActivityLoadedAt = 0;
@@ -68,7 +69,7 @@ function cleanAlmanachDashboardCommentExcerpt(value) {
     .trim();
 }
 
-function buildAlmanachDashboardSceneActivity(sections = [], comments = []) {
+function buildAlmanachDashboardSceneActivity(sections = [], comments = [], threadCounts = null) {
   const commentsByThread = new Map();
   (Array.isArray(comments) ? comments : []).forEach((comment, index) => {
     const threadId = String(comment?.entryId || '').trim();
@@ -98,7 +99,9 @@ function buildAlmanachDashboardSceneActivity(sections = [], comments = []) {
         entryId,
         threadId: latest.threadId,
         pageIndex: latest.pageIndex,
-        commentCount: threadComments.length,
+        commentCount: threadCounts
+          ? getAlmanachDashboardSceneThreads(entry).reduce((sum, thread) => sum + (threadCounts.get(thread.threadId) || 0), 0)
+          : threadComments.length,
         activityAt: latest.activityAt,
         authorName: speaker.name,
         authorPortrait: speaker.portrait,
@@ -159,7 +162,7 @@ function applyAlmanachDashboardSceneActivity(sections = []) {
 async function refreshAlmanachDashboardSceneActivity(sections = [], options = {}) {
   const isFresh = Date.now() - _almanachDashboardSceneActivityLoadedAt < ALMANACH_DASHBOARD_SCENE_ACTIVITY_MAX_AGE_MS;
   if (!options.force && isFresh) {
-    _almanachDashboardSceneActivity = buildAlmanachDashboardSceneActivity(sections, _almanachDashboardSceneComments);
+    _almanachDashboardSceneActivity = buildAlmanachDashboardSceneActivity(sections, _almanachDashboardSceneComments, _almanachDashboardSceneThreadCounts);
     _almanachDashboardSceneActivityStatus = 'ready';
     applyAlmanachDashboardSceneActivity(sections);
     return;
@@ -171,8 +174,17 @@ async function refreshAlmanachDashboardSceneActivity(sections = [], options = {}
       const backend = typeof getCommentBackend === 'function'
         ? await getCommentBackend()
         : null;
-      if (!backend?.loadAllComments) throw new Error('Kommentaraktivität ist nicht verfügbar.');
-      _almanachDashboardSceneComments = await backend.loadAllComments();
+      let activity = null;
+      try { activity = await backend?.loadCommentActivity?.(); }
+      catch (error) { console.warn('Kompakte Szenenaktivität noch nicht verfügbar.', error); }
+      if (activity) {
+        _almanachDashboardSceneThreadCounts = new Map(activity.map(thread => [thread.threadId, thread.commentCount]));
+        _almanachDashboardSceneComments = activity.flatMap(thread => thread.recentComments || []);
+      } else {
+        if (!backend?.loadAllComments) throw new Error('Kommentaraktivität ist nicht verfügbar.');
+        _almanachDashboardSceneComments = await backend.loadAllComments();
+        _almanachDashboardSceneThreadCounts = null;
+      }
       _almanachDashboardSceneActivityLoadedAt = Date.now();
     })().finally(() => {
       _almanachDashboardSceneActivityRequest = null;
@@ -181,7 +193,7 @@ async function refreshAlmanachDashboardSceneActivity(sections = [], options = {}
 
   try {
     await _almanachDashboardSceneActivityRequest;
-    _almanachDashboardSceneActivity = buildAlmanachDashboardSceneActivity(sections, _almanachDashboardSceneComments);
+    _almanachDashboardSceneActivity = buildAlmanachDashboardSceneActivity(sections, _almanachDashboardSceneComments, _almanachDashboardSceneThreadCounts);
     _almanachDashboardSceneActivityStatus = 'ready';
   } catch (error) {
     console.warn('dashboard scene activity load failed:', error);
@@ -194,6 +206,7 @@ function updateAlmanachDashboardSceneThread(event) {
   const threadId = String(event?.detail?.threadId || '').trim();
   const comments = Array.isArray(event?.detail?.comments) ? event.detail.comments : null;
   if (!threadId || !comments) return;
+  _almanachDashboardSceneThreadCounts?.set(threadId, comments.length);
   _almanachDashboardSceneComments = [
     ..._almanachDashboardSceneComments.filter(comment => String(comment?.entryId || '') !== threadId),
     ...comments
@@ -201,7 +214,7 @@ function updateAlmanachDashboardSceneThread(event) {
   _almanachDashboardSceneActivityLoadedAt = Date.now();
   if (!document.querySelector('[data-dashboard-scenes-panel]') || typeof getValidSections !== 'function') return;
   const sections = getValidSections();
-  _almanachDashboardSceneActivity = buildAlmanachDashboardSceneActivity(sections, _almanachDashboardSceneComments);
+  _almanachDashboardSceneActivity = buildAlmanachDashboardSceneActivity(sections, _almanachDashboardSceneComments, _almanachDashboardSceneThreadCounts);
   _almanachDashboardSceneActivityStatus = 'ready';
   applyAlmanachDashboardSceneActivity(sections);
 }

@@ -84,6 +84,14 @@ test('sortiert Szenen nach der jüngsten Kommentaraktivität', () => {
   assert.deepEqual(Array.from(sorted, item => item.entry.id), ['scene-new', 'scene-old']);
 });
 
+test('kompakte Aktivität behält die vollständige Kommentaranzahl der Sitzungsthreads', () => {
+  const context = createContext();
+  const activity = context.buildAlmanachDashboardSceneActivity(sections,
+    [{ id: 'latest', entryId: 'scene-new::session:court', activityAtClient: 3000 }],
+    new Map([['scene-new::session:court', 882]]));
+  assert.equal(activity.get('scene-new').commentCount, 882);
+});
+
 test('nutzt bei segmentierten Beiträgen die jüngste sichtbare Stimme', () => {
   const context = createContext();
   const activity = context.buildAlmanachDashboardSceneActivity(sections, [{

@@ -1,4 +1,5 @@
 import { assertValidFamily } from '../../Stammbäume/assets/js/domain/family-schema.js';
+import { checkPublisherAccess } from './shared/publisher-access.mjs';
 import { createFolderPathFromHouseProfile } from '../../Stammbäume/assets/js/domain/house-profile.js';
 import { assertMirroredCrossFamilyBatch } from '../../Stammbäume/assets/js/modules/family-sync/cross-family-sync-invariant.js';
 
@@ -338,6 +339,8 @@ export async function handler(event) {
       return json(200, { repository: config.repository, branch: config.branch });
     }
     if (event.httpMethod !== 'POST') return json(405, { message: 'Diese Methode wird nicht unterstützt.' });
+    const accessDenied = await checkPublisherAccess(event, 'family');
+    if (accessDenied) return accessDenied;
     if (Buffer.byteLength(event.body || '', 'utf8') > MAX_REQUEST_BYTES) {
       return json(413, { message: 'Das Speicherpaket ist zu groß. Bilder bitte als HTTPS-Adresse einbinden.' });
     }

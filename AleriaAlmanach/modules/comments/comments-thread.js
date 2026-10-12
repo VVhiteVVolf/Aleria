@@ -195,7 +195,14 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
 
   const backend = await getCommentBackend();
 
-  if (_commentLiveThreadId === entryId && _commentLiveUnsubscribe && !forceRefresh) {
+  if (_commentLiveThreadId === entryId && _commentLiveUnsubscribe && options.restartLive !== true) {
+    // The existing subscription already receives acknowledged writes. Reusing
+    // it avoids reading the entire scene again after each save/edit/delete.
+    if (forceRefresh && _commentCache[entryId]) {
+      applyPageTarget(_commentCache[entryId]);
+      renderCommentsToScroll(scroll, _commentCache[entryId]);
+      maybeAutoScrollComments(scroll, _commentCache[entryId]);
+    }
     loadCommentTurnIntoPage(entryId, forceRefresh);
     return;
   }
@@ -216,6 +223,9 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
       }
       if (typeof loadSidebarFeed === 'function') loadSidebarFeed();
     }, async error => {
+      // Firestore stops a listener permanently after an error. Let the next
+      // explicit reload establish a fresh one rather than reusing its handle.
+      if (_commentLiveThreadId === entryId) stopCommentLiveUpdates();
       if (typeof showFriendlyAppError === 'function') {
         showFriendlyAppError(error, 'Live-Kommentare konnten nicht geladen werden.');
       }

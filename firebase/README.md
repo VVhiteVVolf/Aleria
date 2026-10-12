@@ -1,6 +1,59 @@
-# Firebase-Backend der Aleria-Stammbäume
+# Firebase Backend von Aleria
 
-Dieses Verzeichnis enthält die isolierte Backend-Schicht für Familienakten. Die bestehende `(default)`-Firestore-Datenbank des Almanachs wird bewusst nicht verändert. Stammbäume verwenden ausschließlich die benannte Datenbank `family-trees`.
+Der aktive Almanach verwendet Firestore `(default)` für Kommentare, Szenenzüge, Charaktere, Kampfdaten und Online-Moduländerungen sowie Firebase Authentication für Nutzer und Rollen. Die aktive Stammbaum-Anwendung und die Karten veröffentlichen dagegen nach GitHub über Netlify Functions. Die unten beschriebene ältere Firebase-Familienarchitektur ist vorbereitet, aber nicht der aktuelle Speicherweg; eine Datenbank `family-trees` wurde beim Produktionsaudit am 12. Oktober 2026 nicht gefunden. Sie darf nicht allein aufgrund dieser älteren Anleitung angelegt werden.
+
+## Aktuelle Speicherwege und Sicherungen
+
+| Inhalt | Verbindlicher Speicherweg | Sicherung |
+| --- | --- | --- |
+| Website, statische Module, Welttexte und lokale Bilddateien | GitHub, ausgeliefert durch Netlify | Git-Verlauf; externe Bildadressen enthalten die Bilddatei nicht |
+| Veröffentlichte Stammbäume | `Stammbäume/assets/data/published-families` in GitHub | Registry, Familienakten und vorhandene Revisionsbackups; lokale Entwürfe erst nach Veröffentlichung enthalten |
+| Veröffentlichte Karten | jeweilige `Karten/.../data.json` in GitHub | Git-Verlauf; lokale Browserentwürfe erst nach Veröffentlichung enthalten |
+| Kommentare, Szenenzüge, Charaktere und Live-Ressourcen | Firebase `(default)` | private Vollsicherung; Szenenbackups enthalten nur das betreffende Modul und seine Kommentare/Züge |
+| Online-Moduländerungen | Firebase `module_store_entries` und Manifest | private Vollsicherung; betreffendes Modul auch im Szenenbackup |
+| Nutzer, Provider und Rollen | Firebase Authentication | privater Nutzerexport; niemals in das öffentliche GitHub-Backup aufnehmen |
+| Bilder bei externen Anbietern | jeweiliger Anbieter | weder Git noch Szenenexport sichern automatisch die Bilddateien |
+
+`backup-project.mjs` liest alle vorhandenen Firestore-Datenbanken samt Untercollections zu einem gemeinsamen Lesezeitpunkt, exportiert Authentication-Nutzer und den App-Storage-Bucket und verschlüsselt das Ergebnis vor dem Schreiben auf die Festplatte. Der Ordner `.private-backups` ist von Git ausgeschlossen. Tokens und Secret-Manager-Inhalte werden nicht exportiert. Auth-Nutzer und Storage werden innerhalb des Sicherungsfensters aufgenommen, ohne datenbankübergreifende Transaktion.
+
+```powershell
+node firebase/scripts/backup/backup-project.mjs
+node firebase/scripts/backup/verify-project-backup.mjs .private-backups/DATEINAME.aleria-backup
+```
+
+Der Schlüssel ist an das aktuelle Windows-Benutzerprofil gebunden. Eine Kopie allein auf einem anderen Datenträger ist deshalb noch keine auf einem anderen PC wiederherstellbare Sicherung. Für ein zusätzliches Ziel muss auch die sichere Schlüsselübergabe festgelegt werden. Der erste Wiederherstellungstest hat alle 4.005 Dokumente des Sicherungsstands vom 12. Oktober 2026 mit identischen Feldprüfsummen in einen isolierten lokalen Emulator geschrieben. Dabei wurden keine Kampfmechaniken ausgeführt und keine Produktionsdokumente geschrieben. Die vollständige Rückübertragung von Auth-Nutzern und Storage ist noch nicht als Wiederherstellungstest umgesetzt.
+
+Eine sichere Firestore-Probe erfolgt mit `FIRESTORE_EMULATOR_HOST=127.0.0.1:PORT` und `verify-project-backup.mjs DATEI --emulator`. Das Prüfwerkzeug akzeptiert ausschließlich lokale Emulatoradressen und schreibt in `demo-aleria-restore-check`. Eine produktive Wiederherstellung erfordert einen eigenen, geprüften Migrationsablauf; das Prüfwerkzeug ist dafür absichtlich nicht verwendbar.
+
+`backup-scene-from-project.mjs DATEI MODUL-ID` prüft einen Szenenexport aus einer solchen Vollsicherung mit dem tatsächlichen Browserimporter. Erst `--apply` legt die vier öffentlichen Dateien auf GitHub an. Dieser Vorgang beendet keine Sitzung und verändert keine Online-Daten. Automatische Sitzungsabschlüsse verwenden weiterhin `endSceneSession` und `writeSceneBackupToGitHub`. Jeder Kommentar steht einmal im Export; Thread-Zuordnung, historische Kommentare und vollständige Mechanikdaten bleiben erhalten.
+
+## Kommentaraktivität und Lesekosten
+
+`indexCommentActivity` schreibt abgeleitete Dokumente in `comment_activity`: vollständige Kommentaranzahl und höchstens 30 kurze Vorschauen je Thread. Der Browser verwendet sie erst nach `comment_activity_meta/state.ready`. Dashboard und Seitenleiste teilen eine Anfrage und einen Cache; bei fehlender Initialisierung oder Fehlern bleibt der bisherige vollständige Leseweg verfügbar. Szenen und Mechaniken verwenden weiterhin die vollständige Historie.
+
+Der Index liest bei einer Kommentaränderung den betroffenen Thread mit projizierten Feldern erneut. Das kostet weiterhin einen Read je Thread-Kommentar, spart aber die wiederholten Komplettabfragen bei Seitenaufrufen. Ein Zeitstempelvergleich verhindert, dass ein verspätetes Ereignis eine neuere Übersicht überschreibt. Die Initialisierung erfolgt erst nach dem Trigger-Deployment mit `node firebase/scripts/operations/backfill-comment-activity.mjs --apply`; sie schreibt ausschließlich die abgeleiteten Dokumente und den Bereitschaftsmarker.
+
+## Anmeldung und Veröffentlichungsrechte
+
+Die produktive Initialisierung am 12. Oktober 2026 umfasst 28 Thread-Zusammenfassungen mit zusammen 3.542 Kommentaren. Die erste Übersichtsabfrage liest 29 Dokumente einschließlich Bereitschaftsmarker statt 3.542 vollständiger Kommentardokumente. Das ist keine gemessene Gesamtreduktion aller Firestore-Kosten. Der Vergleich der Sicherungen vor und nach der Initialisierung hat alle 4.005 ursprünglichen Firestore-Dokumente mit unveränderten Feldern bestätigt.
+
+Die E-Mail/Passwort-Anmeldung im Almanach ist optional. „Diesen Browserzugang sichern“ verknüpft den anonymen Nutzer mit Zugangsdaten und erhält UID und vorhandene Custom Claims. „Mit bestehendem Konto anmelden“ wechselt zum gewählten Konto; es führt keine Nutzer zusammen und vergibt keine Rolle. Nach dem Abmelden wird für das Kommentieren ein neuer anonymer Zugang hergestellt. Passwörter werden nur an Firebase Auth übergeben und nicht selbst gespeichert.
+
+Karten- und Stammbaum-Publisher prüfen übermittelte Firebase-ID-Tokens. `ALERIA_PUBLISHER_ACCESS_MODE` steht standardmäßig auf `observe`: vorhandene Veröffentlichungen funktionieren weiter, protokolliert werden nur Prüfstatus und Berechtigungsentscheidung, keine Tokens, E-Mail-Adressen oder Nutzer-IDs. Erst nach getesteter Zuordnung beider Nutzer darf `enforce` aktiviert werden. Dann sind ausschließlich die serverseitigen Rollen `editor`, `moderator` und `admin` zugelassen. Ein Anzeigename identifiziert keinen Nutzer. Die anderen Publisher behalten ihre eigenen Zugriffsregeln.
+
+App Check wird nicht ohne Site-Key und beobachtete gültige Zugriffe erzwungen. Das würde bestehende Browser aussperren und ist kein Ersatz für Nutzerrechte.
+
+## Kosten und Veröffentlichungen
+
+`configure-cost-alerts.mjs --apply` verwaltet nur das Aleria-Budget mit 10 EUR pro Kalendermonat, ohne Verrechnung von Testguthaben. Warnschwellen: 20, 50, 80 und 100 Prozent sowie 100 Prozent prognostizierter Kosten. Bestehende andere Budgets werden erhalten. Budgetwarnungen sind kein Ausgabenlimit und stoppen keine Dienste. Das Konto wird dadurch nicht auf einen bezahlten Tarif umgestellt.
+
+Das im Konto angezeigte Google-Testguthaben endet am 3. November 2026. Für dauerhaften Betrieb muss der Kontoinhaber vor Ablauf den gewünschten Abrechnungsstatus prüfen. Firestore hat auf Blaze kein projektspezifisches hartes Kostenlimit. Die Warnung gilt nur für Aleria; ein weiteres Projekt im selben Abrechnungskonto ist davon getrennt.
+
+Netlify wird separat abgerechnet. Beim Audit war automatisches Nachkaufen ausgeschaltet. 97 erfolgreiche Produktionsdeployments im laufenden Abrechnungszeitraum entsprechen nach dem aktuellen Tarif rechnerisch 1.455 Deploy-Credits; dies ist keine Rechnung und kein verifizierter Kontostand. Produktive Veröffentlichungen bündeln. Reine Archiv- und Backup-Commits tragen `[skip ci]`, damit sie keinen Website-Deploy auslösen. Der tatsächliche verbleibende Creditstand muss im Netlify-Abrechnungsbereich geprüft werden.
+
+Der GitHub-Bestand enthält ungefähr 13,9 GB aktuelle Dateien, überwiegend Stammbaumbilder. Das ist eine Wartungs- und Übertragungsfrage. Keine Originale löschen, Bilder massenhaft umbenennen oder Git-Historie umschreiben, bevor Archivziel und sämtliche bestehenden Verweise geprüft sind.
+
+## Vorbereitete ältere Familienarchitektur
 
 ## Verantwortlichkeiten
 

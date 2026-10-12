@@ -122,7 +122,8 @@
   <link rel="stylesheet" href="./modules/organization-network/organization-network.css?v=20260909-newspaper-guilds-v1">
   <link rel="stylesheet" href="./modules/guild-services/guild-services.css?v=20261007-windreiter-v2">
   <!-- Firebase -->
-  <script type="module" src="./modules/auth/firebase-bootstrap.mjs?v=20261012-scene-backup-v2"></script>
+  <link rel="stylesheet" href="./styles/account.css?v=20261012-account-v1">
+  <script type="module" src="./modules/auth/firebase-bootstrap.mjs?v=20261012-account-activity-v1"></script>
   <script type="module" src="./modules/character-genealogy/genealogy-import-controller.js?v=20260903-genealogy-portrait-sync-v1"></script>
   <script src="../Fonts/Rheunwaith-Font-1.000/rheunwaith.js?v=2-gezeiten" defer></script>
   <script src="../Fonts/Karnrith-Font-2.000/karnrith.js?v=3" defer></script>
@@ -409,8 +410,8 @@
   <script src="./modules/backup/scene-backup-ui.js?v=20261012-scene-backup-v1" defer></script>
   <script src="./modules/comments/comments-turn.js?v=20261012-scene-backup-v1" defer></script>
   <script src="./modules/comments/comments-pagination.js?v=20260616-scene-timeline-pages-v1" defer></script>
-  <script src="./modules/comments/comments-thread.js?v=20260919-play-days-v1" defer></script>
-  <script src="./modules/dashboard/dashboard-scene-activity.js?v=20260830-dashboard-activity-v1" defer></script>
+  <script src="./modules/comments/comments-thread.js?v=20261012-live-reuse-v1" defer></script>
+  <script src="./modules/dashboard/dashboard-scene-activity.js?v=20261012-activity-v1" defer></script>
   <script src="./modules/scene-time/scene-time-events.js?v=20260919-play-days-v1" defer></script>
   <script src="./modules/scene-dice/scene-dice-events.js?v=20260802-dice-default-simple-v1" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-events.js?v=20260710-scene-inventory-v2" defer></script>
@@ -448,7 +449,7 @@
   <script src="./modules/aleria-gpt/aleria-gpt-context-builder.js?v=20260804-referee-v2" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-retrieval.js?v=20260803-system-audit-v1" defer></script>
   <script src="./modules/archive/archive-dashboard-insights.js?v=20260830-dashboard-activity-v1" defer></script>
-  <script src="./modules/speaker-profile/speaker-profile-stats.js?v=20260605-ai-context-v1" defer></script>
+  <script src="./modules/speaker-profile/speaker-profile-stats.js?v=20261012-activity-cache-v1" defer></script>
   <script src="./modules/speaker-profile/speaker-profile-render.js?v=20260605-netlify-ai-v1" defer></script>
   <script src="./modules/speaker-profile/speaker-profile-ai.js?v=20260606-ai-context-controls-v1" defer></script>
   <script src="./modules/speaker-profile/speaker-profile-choice.js?v=20260710-speaker-choice-v1" defer></script>
@@ -472,6 +473,7 @@
 <body class="almanach-app">
 
 <header class="almanach-header">
+  <div data-role="almanach-account"></div>
   <div class="header-pre">Aus den Archiven der Welt</div>
   <h1>Aleria Almanach</h1>
   <p class="header-subtitle">— Aufgezeichnet von Gelehrten, Abenteurern &amp; Augenzeugen —</p>

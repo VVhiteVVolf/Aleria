@@ -23,4 +23,6 @@ import { commitNarrativeComment } from './comments/commit-narrative-comment.js';
 
 initializeApp();
 
+export { indexCommentActivity } from './comments/comment-activity-index.js';
+
 export { commitCombatComment, commitCombatEncounter, commitEditCombatEncounterText, commitHerausforderung, commitInventoryTransfer, commitLootClaim, commitNarrativeComment, commitResetCombatParticipants, commitSceneRest, commitSkillComment, commitUndoMechanicalComment, finalizeCombatNarration, importBackupRecords, publishFamily, setAleriaRole, setFamilyMemberRole, uploadFamilyAsset };
