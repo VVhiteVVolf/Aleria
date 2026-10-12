@@ -20,7 +20,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "vennyr",
       "talyndor",
       "ceitheach",
-      "leitheach"
+      "blaithneach",
+      "leitheach",
+      "dunfal",
+      "aislearneach"
     ],
     "houseIds": [
       "haus-madryn",
@@ -269,6 +272,45 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-gormard",
       "haus-ua-fionnghal",
       "haus-dubhan",
+      "haus-dubglais",
+      "haus-cerneige",
+      "haus-airdmhor",
+      "haus-wemyss",
+      "haus-urquhart",
+      "haus-bhaird",
+      "haus-luthsach",
+      "haus-stwatchn",
+      "haus-lachlann",
+      "haus-drummond",
+      "haus-dundas",
+      "haus-ffearnach",
+      "haus-durachd",
+      "haus-eoghainn",
+      "haus-diuid",
+      "haus-lockart",
+      "haus-fiorghra",
+      "haus-ness",
+      "haus-haig",
+      "haus-banlaoch",
+      "haus-duff",
+      "haus-forsyth",
+      "sept-malairt",
+      "sept-dubhair",
+      "sept-grein",
+      "sept-gaesa",
+      "sept-treoir",
+      "haus-culloch",
+      "haus-borthwick",
+      "haus-erskine",
+      "haus-grannd",
+      "haus-buadhtreun",
+      "haus-muirgheal",
+      "haus-boyd",
+      "haus-elid",
+      "haus-agnew",
+      "haus-dianaomh",
+      "haus-dobhar",
+      "haus-oglivy",
       "haus-wolfshorn",
       "haus-vangandr",
       "haus-nachtjaeger",
@@ -432,6 +474,16 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-ua-nic-ceinselaig",
       "haus-tir-an-tordarroch",
       "haus-an-bhaird",
+      "haus-ronain",
+      "haus-suiste",
+      "haus-gairner",
+      "haus-cleirigh",
+      "haus-abhrach",
+      "haus-nessa",
+      "haus-goidin",
+      "haus-haeghra",
+      "haus-magach",
+      "haus-eala",
       "haus-ua-eirce",
       "haus-fiachrach",
       "haus-ruin-ua-laoch",
@@ -459,7 +511,39 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-laidir",
       "haus-tir-an-cuinn",
       "haus-amrhan",
-      "haus-airgid"
+      "haus-airgid",
+      "haus-chulainn",
+      "haus-ailella",
+      "haus-cein",
+      "haus-birn",
+      "haus-morath",
+      "haus-duilb",
+      "haus-nuadat",
+      "sept-ferbend",
+      "haus-anbhair",
+      "haus-casur",
+      "haus-aonghusa",
+      "haus-riangabra",
+      "haus-eachtrai",
+      "haus-morna",
+      "haus-coronach",
+      "haus-morgacht",
+      "haus-rioga",
+      "haus-ceallaigh",
+      "haus-fiachiontach",
+      "haus-tartarfhuil",
+      "haus-gaisgh",
+      "haus-luchdon",
+      "haus-fintain",
+      "haus-feannag",
+      "haus-durthacht",
+      "haus-fiantorc",
+      "haus-treada",
+      "haus-muileach",
+      "haus-ui-faill-duibhne",
+      "haus-uilebheist",
+      "haus-cnogan",
+      "sept-techtmar"
     ]
   },
   {
@@ -3615,10 +3699,54 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "countryId": "faelaorn",
     "regionId": "",
     "children": [
-      "faelaorn/tir-na-brann"
+      "faelaorn/tir-na-brann",
+      "faelaorn/tir-na-rann",
+      "faelaorn/tir-na-mathgham",
+      "faelaorn/tir-na-braigh",
+      "faelaorn/tir-na-faerna",
+      "faelaorn/tir-na-damh"
     ],
     "houseIds": [
-      "haus-dubhan"
+      "haus-dubhan",
+      "haus-dubglais",
+      "haus-cerneige",
+      "haus-airdmhor",
+      "haus-wemyss",
+      "haus-urquhart",
+      "haus-bhaird",
+      "haus-luthsach",
+      "haus-stwatchn",
+      "haus-lachlann",
+      "haus-drummond",
+      "haus-dundas",
+      "haus-ffearnach",
+      "haus-durachd",
+      "haus-eoghainn",
+      "haus-diuid",
+      "haus-lockart",
+      "haus-fiorghra",
+      "haus-ness",
+      "haus-haig",
+      "haus-banlaoch",
+      "haus-duff",
+      "haus-forsyth",
+      "sept-malairt",
+      "sept-dubhair",
+      "sept-grein",
+      "sept-gaesa",
+      "sept-treoir",
+      "haus-culloch",
+      "haus-borthwick",
+      "haus-erskine",
+      "haus-grannd",
+      "haus-buadhtreun",
+      "haus-muirgheal",
+      "haus-boyd",
+      "haus-elid",
+      "haus-agnew",
+      "haus-dianaomh",
+      "haus-dobhar",
+      "haus-oglivy"
     ]
   },
   {
@@ -3633,10 +3761,18 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "countryId": "faelaorn",
     "regionId": "tir-na-brann",
     "children": [
-      "faelaorn/tir-na-brann/tir-na-fuil"
+      "faelaorn/tir-na-brann/tir-na-fuil",
+      "faelaorn/tir-na-brann/sgurrfail",
+      "faelaorn/tir-na-brann/glenmohr",
+      "faelaorn/tir-na-brann/carnascal",
+      "faelaorn/tir-na-brann/drumrath"
     ],
     "houseIds": [
-      "haus-dubhan"
+      "haus-dubhan",
+      "haus-dubglais",
+      "haus-cerneige",
+      "haus-airdmhor",
+      "haus-wemyss"
     ]
   },
   {
@@ -3674,6 +3810,798 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-dubhan"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-brann/sgurrfail",
+    "parentId": "faelaorn/tir-na-brann",
+    "name": "Sgurrfàil",
+    "path": [
+      "Faelaorn",
+      "Tir na Brann",
+      "Sgurrfàil"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-brann",
+    "children": [],
+    "houseIds": [
+      "haus-dubglais"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-brann/glenmohr",
+    "parentId": "faelaorn/tir-na-brann",
+    "name": "Glenmohr",
+    "path": [
+      "Faelaorn",
+      "Tir na Brann",
+      "Glenmohr"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-brann",
+    "children": [],
+    "houseIds": [
+      "haus-cerneige"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-brann/carnascal",
+    "parentId": "faelaorn/tir-na-brann",
+    "name": "Carnascal",
+    "path": [
+      "Faelaorn",
+      "Tir na Brann",
+      "Carnascal"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-brann",
+    "children": [],
+    "houseIds": [
+      "haus-airdmhor"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-brann/drumrath",
+    "parentId": "faelaorn/tir-na-brann",
+    "name": "Drumrath",
+    "path": [
+      "Faelaorn",
+      "Tir na Brann",
+      "Drumrath"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-brann",
+    "children": [],
+    "houseIds": [
+      "haus-wemyss"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann",
+    "parentId": "faelaorn",
+    "name": "Tir na Rann",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/tir-na-rann.png",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [
+      "faelaorn/tir-na-rann/piobarach",
+      "faelaorn/tir-na-rann/invercalda",
+      "faelaorn/tir-na-rann/dun-liath",
+      "faelaorn/tir-na-rann/dun-grealach",
+      "faelaorn/tir-na-rann/dun-foirgneamh",
+      "faelaorn/tir-na-rann/caer-fionnach",
+      "faelaorn/tir-na-rann/clans-im-asyl"
+    ],
+    "houseIds": [
+      "haus-urquhart",
+      "haus-bhaird",
+      "haus-luthsach",
+      "haus-stwatchn",
+      "haus-lachlann",
+      "haus-drummond",
+      "haus-dundas",
+      "haus-ffearnach",
+      "haus-durachd",
+      "haus-eoghainn"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/piobarach",
+    "parentId": "faelaorn/tir-na-rann",
+    "name": "Piobarach",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Piobarach"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [],
+    "houseIds": [
+      "haus-urquhart",
+      "haus-bhaird",
+      "haus-luthsach"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/invercalda",
+    "parentId": "faelaorn/tir-na-rann",
+    "name": "Invercalda",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Invercalda"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [],
+    "houseIds": [
+      "haus-stwatchn"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/dun-liath",
+    "parentId": "faelaorn/tir-na-rann",
+    "name": "Dun Liath",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Dun Liath"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [],
+    "houseIds": [
+      "haus-lachlann"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/dun-grealach",
+    "parentId": "faelaorn/tir-na-rann",
+    "name": "Dun Grealach",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Dun Grealach"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [],
+    "houseIds": [
+      "haus-drummond"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/dun-foirgneamh",
+    "parentId": "faelaorn/tir-na-rann",
+    "name": "Dun Foirgneamh",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Dun Foirgneamh"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [],
+    "houseIds": [
+      "haus-dundas"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/caer-fionnach",
+    "parentId": "faelaorn/tir-na-rann",
+    "name": "Caer Fionnach",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Caer Fionnach"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [],
+    "houseIds": [
+      "haus-ffearnach"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/clans-im-asyl",
+    "parentId": "faelaorn/tir-na-rann",
+    "name": "Clans im Asyl",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Clans im Asyl"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [],
+    "houseIds": [
+      "haus-durachd",
+      "haus-eoghainn"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham",
+    "parentId": "faelaorn",
+    "name": "Tir na Mathgham",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/tir-na-mathgham.png",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [
+      "faelaorn/tir-na-mathgham/balgavrie",
+      "faelaorn/tir-na-mathgham/cnosbubh",
+      "faelaorn/tir-na-mathgham/lochcaeron",
+      "faelaorn/tir-na-mathgham/glenshear",
+      "faelaorn/tir-na-mathgham/tur-na-fala",
+      "faelaorn/tir-na-mathgham/caisteal-gorm",
+      "faelaorn/tir-na-mathgham/clans-im-asyl",
+      "faelaorn/tir-na-mathgham/exklaven"
+    ],
+    "houseIds": [
+      "haus-diuid",
+      "haus-lockart",
+      "haus-fiorghra",
+      "haus-ness",
+      "haus-haig",
+      "haus-banlaoch",
+      "haus-duff",
+      "haus-airdmhor",
+      "haus-forsyth"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/balgavrie",
+    "parentId": "faelaorn/tir-na-mathgham",
+    "name": "Balgavrie",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Balgavrie"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [],
+    "houseIds": [
+      "haus-diuid"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/cnosbubh",
+    "parentId": "faelaorn/tir-na-mathgham",
+    "name": "Cnosbubh",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Cnosbubh"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [],
+    "houseIds": [
+      "haus-lockart"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/lochcaeron",
+    "parentId": "faelaorn/tir-na-mathgham",
+    "name": "Lochcaeron",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Lochcaeron"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [],
+    "houseIds": [
+      "haus-fiorghra"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/glenshear",
+    "parentId": "faelaorn/tir-na-mathgham",
+    "name": "Glenshear",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Glenshear"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [],
+    "houseIds": [
+      "haus-ness"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/tur-na-fala",
+    "parentId": "faelaorn/tir-na-mathgham",
+    "name": "Tur na Fala",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Tur na Fala"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [],
+    "houseIds": [
+      "haus-haig"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/caisteal-gorm",
+    "parentId": "faelaorn/tir-na-mathgham",
+    "name": "Caisteal Gorm",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Caisteal Gorm"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [],
+    "houseIds": [
+      "haus-banlaoch"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/clans-im-asyl",
+    "parentId": "faelaorn/tir-na-mathgham",
+    "name": "Clans im Asyl",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Clans im Asyl"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [
+      "faelaorn/tir-na-mathgham/clans-im-asyl/balgavrie",
+      "faelaorn/tir-na-mathgham/clans-im-asyl/caisteal-gorm"
+    ],
+    "houseIds": [
+      "haus-duff",
+      "haus-airdmhor"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/clans-im-asyl/balgavrie",
+    "parentId": "faelaorn/tir-na-mathgham/clans-im-asyl",
+    "name": "Balgavrie",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Clans im Asyl",
+      "Balgavrie"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [],
+    "houseIds": [
+      "haus-duff"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/clans-im-asyl/caisteal-gorm",
+    "parentId": "faelaorn/tir-na-mathgham/clans-im-asyl",
+    "name": "Caisteal Gorm",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Clans im Asyl",
+      "Caisteal Gorm"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [],
+    "houseIds": [
+      "haus-airdmhor"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/exklaven",
+    "parentId": "faelaorn/tir-na-mathgham",
+    "name": "Exklaven",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Exklaven"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [
+      "faelaorn/tir-na-mathgham/exklaven/inverfay"
+    ],
+    "houseIds": [
+      "haus-forsyth"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/exklaven/inverfay",
+    "parentId": "faelaorn/tir-na-mathgham/exklaven",
+    "name": "Inverfay",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Exklaven",
+      "Inverfay"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [],
+    "houseIds": [
+      "haus-forsyth"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-braigh",
+    "parentId": "faelaorn",
+    "name": "Tir na Braigh",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/tir-na-braigh.png",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-braigh",
+    "children": [
+      "faelaorn/tir-na-braigh/eldrimuir",
+      "faelaorn/tir-na-braigh/morvay",
+      "faelaorn/tir-na-braigh/garadhain",
+      "faelaorn/tir-na-braigh/dun-uisge"
+    ],
+    "houseIds": [
+      "sept-malairt",
+      "sept-dubhair",
+      "sept-grein",
+      "sept-gaesa",
+      "sept-treoir",
+      "haus-culloch",
+      "haus-borthwick",
+      "haus-erskine",
+      "haus-grannd"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-braigh/eldrimuir",
+    "parentId": "faelaorn/tir-na-braigh",
+    "name": "Eldrimuir",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh",
+      "Eldrimuir"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-braigh",
+    "children": [],
+    "houseIds": [
+      "haus-culloch"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-braigh/morvay",
+    "parentId": "faelaorn/tir-na-braigh",
+    "name": "Morvay",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh",
+      "Morvay"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-braigh",
+    "children": [],
+    "houseIds": [
+      "haus-borthwick"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-braigh/garadhain",
+    "parentId": "faelaorn/tir-na-braigh",
+    "name": "Garadhain",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh",
+      "Garadhain"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-braigh",
+    "children": [],
+    "houseIds": [
+      "haus-erskine"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-braigh/dun-uisge",
+    "parentId": "faelaorn/tir-na-braigh",
+    "name": "Dun Uisge",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh",
+      "Dun Uisge"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-braigh",
+    "children": [],
+    "houseIds": [
+      "haus-grannd"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-faerna",
+    "parentId": "faelaorn",
+    "name": "Tir na Faerna",
+    "path": [
+      "Faelaorn",
+      "Tir na Faerna"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/tir-na-faerna.png",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-faerna",
+    "children": [
+      "faelaorn/tir-na-faerna/beinnstir",
+      "faelaorn/tir-na-faerna/culrain",
+      "faelaorn/tir-na-faerna/airdree",
+      "faelaorn/tir-na-faerna/ealach"
+    ],
+    "houseIds": [
+      "haus-buadhtreun",
+      "haus-durachd",
+      "haus-muirgheal",
+      "haus-boyd"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-faerna/beinnstir",
+    "parentId": "faelaorn/tir-na-faerna",
+    "name": "Beinnstir",
+    "path": [
+      "Faelaorn",
+      "Tir na Faerna",
+      "Beinnstir"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-faerna",
+    "children": [],
+    "houseIds": [
+      "haus-buadhtreun"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-faerna/culrain",
+    "parentId": "faelaorn/tir-na-faerna",
+    "name": "Culrain",
+    "path": [
+      "Faelaorn",
+      "Tir na Faerna",
+      "Culrain"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-faerna",
+    "children": [],
+    "houseIds": [
+      "haus-durachd"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-faerna/airdree",
+    "parentId": "faelaorn/tir-na-faerna",
+    "name": "Airdree",
+    "path": [
+      "Faelaorn",
+      "Tir na Faerna",
+      "Airdree"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-faerna",
+    "children": [],
+    "houseIds": [
+      "haus-muirgheal"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-faerna/ealach",
+    "parentId": "faelaorn/tir-na-faerna",
+    "name": "Ealach",
+    "path": [
+      "Faelaorn",
+      "Tir na Faerna",
+      "Ealach"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-faerna",
+    "children": [],
+    "houseIds": [
+      "haus-boyd"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh",
+    "parentId": "faelaorn",
+    "name": "Tir na Damh",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/tir-na-damh.png",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [
+      "faelaorn/tir-na-damh/carn-bruach",
+      "faelaorn/tir-na-damh/tighlean",
+      "faelaorn/tir-na-damh/dalriadh",
+      "faelaorn/tir-na-damh/torbhreac",
+      "faelaorn/tir-na-damh/maolnair",
+      "faelaorn/tir-na-damh/inverfay",
+      "faelaorn/tir-na-damh/inniscaer"
+    ],
+    "houseIds": [
+      "haus-eoghainn",
+      "haus-elid",
+      "haus-agnew",
+      "haus-duff",
+      "haus-dianaomh",
+      "haus-dobhar",
+      "haus-forsyth",
+      "haus-oglivy"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/carn-bruach",
+    "parentId": "faelaorn/tir-na-damh",
+    "name": "Càrn Bruach",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Càrn Bruach"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [],
+    "houseIds": [
+      "haus-eoghainn",
+      "haus-elid"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/tighlean",
+    "parentId": "faelaorn/tir-na-damh",
+    "name": "Tighlean",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Tighlean"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [],
+    "houseIds": [
+      "haus-agnew"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/dalriadh",
+    "parentId": "faelaorn/tir-na-damh",
+    "name": "Dalriadh",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Dalriadh"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [],
+    "houseIds": [
+      "haus-duff"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/torbhreac",
+    "parentId": "faelaorn/tir-na-damh",
+    "name": "Torbhreac",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Torbhreac"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [],
+    "houseIds": [
+      "haus-dianaomh"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/maolnair",
+    "parentId": "faelaorn/tir-na-damh",
+    "name": "Maolnair",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Maolnair"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [],
+    "houseIds": [
+      "haus-dobhar"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/inverfay",
+    "parentId": "faelaorn/tir-na-damh",
+    "name": "Inverfay",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Inverfay"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [],
+    "houseIds": [
+      "haus-forsyth"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/inniscaer",
+    "parentId": "faelaorn/tir-na-damh",
+    "name": "Inniscaer",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Inniscaer"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [],
+    "houseIds": [
+      "haus-oglivy"
     ]
   },
   {
@@ -6959,6 +7887,207 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
+    "id": "blaithneach",
+    "parentId": "",
+    "name": "Blaithneach",
+    "path": [
+      "Blaithneach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Blaithneach/blaithneach.png",
+    "countryId": "blaithneach",
+    "regionId": "",
+    "children": [
+      "blaithneach/tir-na-dilse",
+      "blaithneach/tir-na-beatha",
+      "blaithneach/tir-na-meinnear"
+    ],
+    "houseIds": [
+      "haus-dal-leite",
+      "haus-ronain",
+      "haus-suiste",
+      "haus-gairner",
+      "haus-cleirigh",
+      "haus-abhrach",
+      "haus-nessa",
+      "haus-goidin",
+      "haus-haeghra",
+      "haus-magach",
+      "haus-eala"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-dilse",
+    "parentId": "blaithneach",
+    "name": "Tir na Dílse",
+    "path": [
+      "Blaithneach",
+      "Tir na Dílse"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Blaithneach/tir-na-dilse.png",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-dilse",
+    "children": [
+      "blaithneach/tir-na-dilse/ardan",
+      "blaithneach/tir-na-dilse/eorach"
+    ],
+    "houseIds": [
+      "haus-dal-leite",
+      "haus-ronain",
+      "haus-suiste",
+      "haus-gairner",
+      "haus-cleirigh",
+      "haus-abhrach"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-dilse/ardan",
+    "parentId": "blaithneach/tir-na-dilse",
+    "name": "Ardán",
+    "path": [
+      "Blaithneach",
+      "Tir na Dílse",
+      "Ardán"
+    ],
+    "image": "",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-dilse",
+    "children": [],
+    "houseIds": [
+      "haus-dal-leite"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-dilse/eorach",
+    "parentId": "blaithneach/tir-na-dilse",
+    "name": "Eorach",
+    "path": [
+      "Blaithneach",
+      "Tir na Dílse",
+      "Eorach"
+    ],
+    "image": "",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-dilse",
+    "children": [],
+    "houseIds": [
+      "haus-ronain",
+      "haus-suiste",
+      "haus-gairner",
+      "haus-cleirigh",
+      "haus-abhrach"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-beatha",
+    "parentId": "blaithneach",
+    "name": "Tir na Beatha",
+    "path": [
+      "Blaithneach",
+      "Tir na Beatha"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Blaithneach/tir-na-beatha.png",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-beatha",
+    "children": [
+      "blaithneach/tir-na-beatha/sioran",
+      "blaithneach/tir-na-beatha/readlann"
+    ],
+    "houseIds": [
+      "haus-nessa",
+      "haus-goidin",
+      "haus-haeghra"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-beatha/sioran",
+    "parentId": "blaithneach/tir-na-beatha",
+    "name": "Sioran",
+    "path": [
+      "Blaithneach",
+      "Tir na Beatha",
+      "Sioran"
+    ],
+    "image": "",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-beatha",
+    "children": [],
+    "houseIds": [
+      "haus-nessa",
+      "haus-goidin"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-beatha/readlann",
+    "parentId": "blaithneach/tir-na-beatha",
+    "name": "Réadlann",
+    "path": [
+      "Blaithneach",
+      "Tir na Beatha",
+      "Réadlann"
+    ],
+    "image": "",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-beatha",
+    "children": [],
+    "houseIds": [
+      "haus-haeghra"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-meinnear",
+    "parentId": "blaithneach",
+    "name": "Tir na Méinnear",
+    "path": [
+      "Blaithneach",
+      "Tir na Méinnear"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Blaithneach/tir-na-meinnear.png",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-meinnear",
+    "children": [
+      "blaithneach/tir-na-meinnear/cairmor",
+      "blaithneach/tir-na-meinnear/cel-bearradh"
+    ],
+    "houseIds": [
+      "haus-magach",
+      "haus-eala"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-meinnear/cairmor",
+    "parentId": "blaithneach/tir-na-meinnear",
+    "name": "Cairmor",
+    "path": [
+      "Blaithneach",
+      "Tir na Méinnear",
+      "Cairmor"
+    ],
+    "image": "",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-meinnear",
+    "children": [],
+    "houseIds": [
+      "haus-magach"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-meinnear/cel-bearradh",
+    "parentId": "blaithneach/tir-na-meinnear",
+    "name": "Cel Bearradh",
+    "path": [
+      "Blaithneach",
+      "Tir na Méinnear",
+      "Cel Bearradh"
+    ],
+    "image": "",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-meinnear",
+    "children": [],
+    "houseIds": [
+      "haus-eala"
+    ]
+  },
+  {
     "id": "leitheach",
     "parentId": "",
     "name": "Leitheach",
@@ -7560,6 +8689,825 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-airgid"
+    ]
+  },
+  {
+    "id": "dunfal",
+    "parentId": "",
+    "name": "Dunfal",
+    "path": [
+      "Dunfal"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/dunfal.png",
+    "countryId": "dunfal",
+    "regionId": "",
+    "children": [
+      "dunfal/tir-na-rithe",
+      "dunfal/tir-na-fathach"
+    ],
+    "houseIds": [
+      "haus-chulainn",
+      "haus-ailella",
+      "haus-cein",
+      "haus-birn",
+      "haus-morath",
+      "haus-duilb",
+      "haus-nuadat",
+      "sept-ferbend",
+      "haus-anbhair",
+      "haus-casur",
+      "haus-aonghusa",
+      "haus-riangabra",
+      "haus-eachtrai"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-rithe",
+    "parentId": "dunfal",
+    "name": "Tir na Rithe",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/tir-na-rithe.png",
+    "countryId": "dunfal",
+    "regionId": "tir-na-rithe",
+    "children": [
+      "dunfal/tir-na-rithe/dunfal",
+      "dunfal/tir-na-rithe/herrschaft-der-mac-sidhe-ailella",
+      "dunfal/tir-na-rithe/herrschaft-der-mac-cein",
+      "dunfal/tir-na-rithe/herrschaft-der-dal-birn",
+      "dunfal/tir-na-rithe/herrschaft-der-ruin-morath",
+      "dunfal/tir-na-rithe/ausgestorbene-clans"
+    ],
+    "houseIds": [
+      "haus-chulainn",
+      "haus-ailella",
+      "haus-cein",
+      "haus-birn",
+      "haus-morath",
+      "haus-duilb"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-rithe/dunfal",
+    "parentId": "dunfal/tir-na-rithe",
+    "name": "Dunfal",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Dunfal"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-rithe",
+    "children": [],
+    "houseIds": [
+      "haus-chulainn"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-rithe/herrschaft-der-mac-sidhe-ailella",
+    "parentId": "dunfal/tir-na-rithe",
+    "name": "Herrschaft der Mac Sidhe’Ailella",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Herrschaft der Mac Sidhe’Ailella"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-mac-sidhe-ailella.png",
+    "countryId": "dunfal",
+    "regionId": "tir-na-rithe",
+    "children": [
+      "dunfal/tir-na-rithe/herrschaft-der-mac-sidhe-ailella/dunfal"
+    ],
+    "houseIds": [
+      "haus-ailella"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-rithe/herrschaft-der-mac-sidhe-ailella/dunfal",
+    "parentId": "dunfal/tir-na-rithe/herrschaft-der-mac-sidhe-ailella",
+    "name": "Dunfal",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Herrschaft der Mac Sidhe’Ailella",
+      "Dunfal"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-rithe",
+    "children": [],
+    "houseIds": [
+      "haus-ailella"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-rithe/herrschaft-der-mac-cein",
+    "parentId": "dunfal/tir-na-rithe",
+    "name": "Herrschaft der Mac’Céin",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Herrschaft der Mac’Céin"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-mac-cein.png",
+    "countryId": "dunfal",
+    "regionId": "tir-na-rithe",
+    "children": [
+      "dunfal/tir-na-rithe/herrschaft-der-mac-cein/dunfal"
+    ],
+    "houseIds": [
+      "haus-cein"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-rithe/herrschaft-der-mac-cein/dunfal",
+    "parentId": "dunfal/tir-na-rithe/herrschaft-der-mac-cein",
+    "name": "Dunfal",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Herrschaft der Mac’Céin",
+      "Dunfal"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-rithe",
+    "children": [],
+    "houseIds": [
+      "haus-cein"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-rithe/herrschaft-der-dal-birn",
+    "parentId": "dunfal/tir-na-rithe",
+    "name": "Herrschaft der Dál’Birn",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Herrschaft der Dál’Birn"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-dal-birn.png",
+    "countryId": "dunfal",
+    "regionId": "tir-na-rithe",
+    "children": [
+      "dunfal/tir-na-rithe/herrschaft-der-dal-birn/dunfal"
+    ],
+    "houseIds": [
+      "haus-birn"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-rithe/herrschaft-der-dal-birn/dunfal",
+    "parentId": "dunfal/tir-na-rithe/herrschaft-der-dal-birn",
+    "name": "Dunfal",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Herrschaft der Dál’Birn",
+      "Dunfal"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-rithe",
+    "children": [],
+    "houseIds": [
+      "haus-birn"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-rithe/herrschaft-der-ruin-morath",
+    "parentId": "dunfal/tir-na-rithe",
+    "name": "Herrschaft der Ruin’Morath",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Herrschaft der Ruin’Morath"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-ruin-morath.png",
+    "countryId": "dunfal",
+    "regionId": "tir-na-rithe",
+    "children": [
+      "dunfal/tir-na-rithe/herrschaft-der-ruin-morath/iarthar"
+    ],
+    "houseIds": [
+      "haus-morath"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-rithe/herrschaft-der-ruin-morath/iarthar",
+    "parentId": "dunfal/tir-na-rithe/herrschaft-der-ruin-morath",
+    "name": "Iarthar",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Herrschaft der Ruin’Morath",
+      "Iarthar"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-rithe",
+    "children": [],
+    "houseIds": [
+      "haus-morath"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-rithe/ausgestorbene-clans",
+    "parentId": "dunfal/tir-na-rithe",
+    "name": "Ausgestorbene Clans",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Ausgestorbene Clans"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-rithe",
+    "children": [
+      "dunfal/tir-na-rithe/ausgestorbene-clans/dunfal"
+    ],
+    "houseIds": [
+      "haus-duilb"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-rithe/ausgestorbene-clans/dunfal",
+    "parentId": "dunfal/tir-na-rithe/ausgestorbene-clans",
+    "name": "Dunfal",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Ausgestorbene Clans",
+      "Dunfal"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-rithe",
+    "children": [],
+    "houseIds": [
+      "haus-duilb"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-fathach",
+    "parentId": "dunfal",
+    "name": "Tir na Fathach",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/tir-na-fathach.png",
+    "countryId": "dunfal",
+    "regionId": "tir-na-fathach",
+    "children": [
+      "dunfal/tir-na-fathach/cradh-na-frinne",
+      "dunfal/tir-na-fathach/herrschaft-der-ua-anbhair",
+      "dunfal/tir-na-fathach/herrschaft-der-ua-casur",
+      "dunfal/tir-na-fathach/herrschaft-der-dal-aonghusa",
+      "dunfal/tir-na-fathach/herrschaft-der-na-riangabra",
+      "dunfal/tir-na-fathach/herrschaft-der-mac-eachtrai"
+    ],
+    "houseIds": [
+      "haus-nuadat",
+      "sept-ferbend",
+      "haus-anbhair",
+      "haus-casur",
+      "haus-aonghusa",
+      "haus-riangabra",
+      "haus-eachtrai"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-fathach/cradh-na-frinne",
+    "parentId": "dunfal/tir-na-fathach",
+    "name": "Cradh na Frinne",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Cradh na Frinne"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-fathach",
+    "children": [],
+    "houseIds": [
+      "haus-nuadat",
+      "sept-ferbend"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-fathach/herrschaft-der-ua-anbhair",
+    "parentId": "dunfal/tir-na-fathach",
+    "name": "Herrschaft der Ua’Anbhair",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Ua’Anbhair"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-ua-anbhair.png",
+    "countryId": "dunfal",
+    "regionId": "tir-na-fathach",
+    "children": [
+      "dunfal/tir-na-fathach/herrschaft-der-ua-anbhair/cradh-na-frinne"
+    ],
+    "houseIds": [
+      "haus-anbhair"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-fathach/herrschaft-der-ua-anbhair/cradh-na-frinne",
+    "parentId": "dunfal/tir-na-fathach/herrschaft-der-ua-anbhair",
+    "name": "Cradh na Frinne",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Ua’Anbhair",
+      "Cradh na Frinne"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-fathach",
+    "children": [],
+    "houseIds": [
+      "haus-anbhair"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-fathach/herrschaft-der-ua-casur",
+    "parentId": "dunfal/tir-na-fathach",
+    "name": "Herrschaft der Ua’Casur",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Ua’Casur"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-ua-casur.png",
+    "countryId": "dunfal",
+    "regionId": "tir-na-fathach",
+    "children": [
+      "dunfal/tir-na-fathach/herrschaft-der-ua-casur/cradh-na-frinne"
+    ],
+    "houseIds": [
+      "haus-casur"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-fathach/herrschaft-der-ua-casur/cradh-na-frinne",
+    "parentId": "dunfal/tir-na-fathach/herrschaft-der-ua-casur",
+    "name": "Cradh na Frinne",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Ua’Casur",
+      "Cradh na Frinne"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-fathach",
+    "children": [],
+    "houseIds": [
+      "haus-casur"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-fathach/herrschaft-der-dal-aonghusa",
+    "parentId": "dunfal/tir-na-fathach",
+    "name": "Herrschaft der Dál’Aonghusa",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Dál’Aonghusa"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-dal-aonghusa.png",
+    "countryId": "dunfal",
+    "regionId": "tir-na-fathach",
+    "children": [
+      "dunfal/tir-na-fathach/herrschaft-der-dal-aonghusa/cradh-na-frinne"
+    ],
+    "houseIds": [
+      "haus-aonghusa"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-fathach/herrschaft-der-dal-aonghusa/cradh-na-frinne",
+    "parentId": "dunfal/tir-na-fathach/herrschaft-der-dal-aonghusa",
+    "name": "Cradh na Frinne",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Dál’Aonghusa",
+      "Cradh na Frinne"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-fathach",
+    "children": [],
+    "houseIds": [
+      "haus-aonghusa"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-fathach/herrschaft-der-na-riangabra",
+    "parentId": "dunfal/tir-na-fathach",
+    "name": "Herrschaft der Na’Riangabra",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Na’Riangabra"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-na-riangabra.png",
+    "countryId": "dunfal",
+    "regionId": "tir-na-fathach",
+    "children": [
+      "dunfal/tir-na-fathach/herrschaft-der-na-riangabra/baile-begg"
+    ],
+    "houseIds": [
+      "haus-riangabra"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-fathach/herrschaft-der-na-riangabra/baile-begg",
+    "parentId": "dunfal/tir-na-fathach/herrschaft-der-na-riangabra",
+    "name": "Baile Begg",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Na’Riangabra",
+      "Baile Begg"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-fathach",
+    "children": [],
+    "houseIds": [
+      "haus-riangabra"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-fathach/herrschaft-der-mac-eachtrai",
+    "parentId": "dunfal/tir-na-fathach",
+    "name": "Herrschaft der Mac’Eachtrai",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Mac’Eachtrai"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-mac-eachtrai.png",
+    "countryId": "dunfal",
+    "regionId": "tir-na-fathach",
+    "children": [
+      "dunfal/tir-na-fathach/herrschaft-der-mac-eachtrai/athenry"
+    ],
+    "houseIds": [
+      "haus-eachtrai"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-fathach/herrschaft-der-mac-eachtrai/athenry",
+    "parentId": "dunfal/tir-na-fathach/herrschaft-der-mac-eachtrai",
+    "name": "Athenry",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Mac’Eachtrai",
+      "Athenry"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-fathach",
+    "children": [],
+    "houseIds": [
+      "haus-eachtrai"
+    ]
+  },
+  {
+    "id": "aislearneach",
+    "parentId": "",
+    "name": "Aislearneach",
+    "path": [
+      "Aislearneach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-ui-morna.png",
+    "countryId": "aislearneach",
+    "regionId": "",
+    "children": [
+      "aislearneach/tir-na-geach",
+      "aislearneach/tir-na-iomaire",
+      "aislearneach/tir-na-faela",
+      "aislearneach/tir-na-tirth",
+      "aislearneach/tir-na-adharcach"
+    ],
+    "houseIds": [
+      "haus-morna",
+      "haus-coronach",
+      "haus-morgacht",
+      "haus-rioga",
+      "haus-ceallaigh",
+      "haus-fiachiontach",
+      "haus-tartarfhuil",
+      "haus-gaisgh",
+      "haus-luchdon",
+      "haus-fintain",
+      "haus-feannag",
+      "haus-durthacht",
+      "haus-fiantorc",
+      "haus-treada",
+      "haus-muileach",
+      "haus-ui-faill-duibhne",
+      "haus-uilebheist",
+      "haus-cnogan",
+      "sept-techtmar"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-geach",
+    "parentId": "aislearneach",
+    "name": "Tir na Geach",
+    "path": [
+      "Aislearneach",
+      "Tir na Geach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/tir-na-geach.png",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-geach",
+    "children": [
+      "aislearneach/tir-na-geach/gaelan"
+    ],
+    "houseIds": [
+      "haus-morna",
+      "haus-coronach",
+      "haus-morgacht",
+      "haus-rioga"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-geach/gaelan",
+    "parentId": "aislearneach/tir-na-geach",
+    "name": "Gaelan",
+    "path": [
+      "Aislearneach",
+      "Tir na Geach",
+      "Gaelan"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-geach",
+    "children": [],
+    "houseIds": [
+      "haus-morna",
+      "haus-coronach",
+      "haus-morgacht",
+      "haus-rioga"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-iomaire",
+    "parentId": "aislearneach",
+    "name": "Tir na Iomaire",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-iomaire",
+    "children": [
+      "aislearneach/tir-na-iomaire/koldair",
+      "aislearneach/tir-na-iomaire/broch-an-traigh",
+      "aislearneach/tir-na-iomaire/broch-an-creig"
+    ],
+    "houseIds": [
+      "haus-ceallaigh",
+      "haus-fiachiontach",
+      "haus-tartarfhuil",
+      "haus-gaisgh",
+      "haus-luchdon"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-iomaire/koldair",
+    "parentId": "aislearneach/tir-na-iomaire",
+    "name": "Koldair",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Koldair"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-iomaire",
+    "children": [],
+    "houseIds": [
+      "haus-ceallaigh",
+      "haus-fiachiontach",
+      "haus-tartarfhuil"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-iomaire/broch-an-traigh",
+    "parentId": "aislearneach/tir-na-iomaire",
+    "name": "Broch an Traigh",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Broch an Traigh"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-iomaire",
+    "children": [],
+    "houseIds": [
+      "haus-gaisgh"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-iomaire/broch-an-creig",
+    "parentId": "aislearneach/tir-na-iomaire",
+    "name": "Broch an Creig",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Broch an Creig"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-iomaire",
+    "children": [],
+    "houseIds": [
+      "haus-luchdon"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-faela",
+    "parentId": "aislearneach",
+    "name": "Tir na Faela",
+    "path": [
+      "Aislearneach",
+      "Tir na Faela"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/tir-na-faela.png",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-faela",
+    "children": [
+      "aislearneach/tir-na-faela/croga",
+      "aislearneach/tir-na-faela/caetharlach"
+    ],
+    "houseIds": [
+      "haus-fintain",
+      "haus-feannag"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-faela/croga",
+    "parentId": "aislearneach/tir-na-faela",
+    "name": "Croga",
+    "path": [
+      "Aislearneach",
+      "Tir na Faela",
+      "Croga"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-faela",
+    "children": [],
+    "houseIds": [
+      "haus-fintain"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-faela/caetharlach",
+    "parentId": "aislearneach/tir-na-faela",
+    "name": "Caetharlach",
+    "path": [
+      "Aislearneach",
+      "Tir na Faela",
+      "Caetharlach"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-faela",
+    "children": [],
+    "houseIds": [
+      "haus-feannag"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-tirth",
+    "parentId": "aislearneach",
+    "name": "Tir na Tirth",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/tir-na-tirth.png",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-tirth",
+    "children": [
+      "aislearneach/tir-na-tirth/lorai",
+      "aislearneach/tir-na-tirth/athan",
+      "aislearneach/tir-na-tirth/cliath"
+    ],
+    "houseIds": [
+      "haus-durthacht",
+      "haus-fiantorc",
+      "haus-treada",
+      "haus-muileach",
+      "haus-ui-faill-duibhne"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-tirth/lorai",
+    "parentId": "aislearneach/tir-na-tirth",
+    "name": "Lorai",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth",
+      "Lorai"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-tirth",
+    "children": [],
+    "houseIds": [
+      "haus-durthacht",
+      "haus-fiantorc",
+      "haus-treada"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-tirth/athan",
+    "parentId": "aislearneach/tir-na-tirth",
+    "name": "Athan",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth",
+      "Athan"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-tirth",
+    "children": [],
+    "houseIds": [
+      "haus-muileach"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-tirth/cliath",
+    "parentId": "aislearneach/tir-na-tirth",
+    "name": "Cliath",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth",
+      "Cliath"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-tirth",
+    "children": [],
+    "houseIds": [
+      "haus-ui-faill-duibhne"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-adharcach",
+    "parentId": "aislearneach",
+    "name": "Tir na Adharcach",
+    "path": [
+      "Aislearneach",
+      "Tir na Adharcach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-adharcach",
+    "children": [
+      "aislearneach/tir-na-adharcach/foraoise"
+    ],
+    "houseIds": [
+      "haus-uilebheist",
+      "haus-cnogan",
+      "sept-techtmar"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-adharcach/foraoise",
+    "parentId": "aislearneach/tir-na-adharcach",
+    "name": "Foraoise",
+    "path": [
+      "Aislearneach",
+      "Tir na Adharcach",
+      "Foraoise"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-adharcach",
+    "children": [],
+    "houseIds": [
+      "haus-uilebheist",
+      "haus-cnogan",
+      "sept-techtmar"
     ]
   }
 ];
@@ -9701,6 +11649,902 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Ceanntire"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-amrhan&mode=view"
+  },
+  {
+    "id": "haus-chulainn",
+    "name": "Clan Ard’Chulainn",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Dunfal/clan-ard-chulainn.png",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Dunfal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-chulainn&mode=view"
+  },
+  {
+    "id": "haus-ailella",
+    "name": "Clan Mac Sidhe’Ailella",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Dunfal/clan-mac-sidhe-ailella.png",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Herrschaft der Mac Sidhe’Ailella",
+      "Dunfal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ailella&mode=view"
+  },
+  {
+    "id": "haus-cein",
+    "name": "Clan Mac’Céin",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Dunfal/clan-mac-cein.png",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Herrschaft der Mac’Céin",
+      "Dunfal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cein&mode=view"
+  },
+  {
+    "id": "haus-birn",
+    "name": "Clan Dál’Birn",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Dunfal/clan-dal-birn.png",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Herrschaft der Dál’Birn",
+      "Dunfal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-birn&mode=view"
+  },
+  {
+    "id": "haus-morath",
+    "name": "Clan Ruin’Morath",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Dunfal/clan-ruin-morath.png",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Herrschaft der Ruin’Morath",
+      "Iarthar"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-morath&mode=view"
+  },
+  {
+    "id": "haus-duilb",
+    "name": "Clan Ui’Duilb",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Dunfal/clan-ui-duilb.png",
+    "path": [
+      "Dunfal",
+      "Tir na Rithe",
+      "Ausgestorbene Clans",
+      "Dunfal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-duilb&mode=view"
+  },
+  {
+    "id": "haus-nuadat",
+    "name": "Clan Nic’Nuadat",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Dunfal/clan-nic-nuadat.png",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Cradh na Frinne"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-nuadat&mode=view"
+  },
+  {
+    "id": "haus-anbhair",
+    "name": "Clan Ua’Anbhair",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Dunfal/clan-ua-anbhair.png",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Ua’Anbhair",
+      "Cradh na Frinne"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-anbhair&mode=view"
+  },
+  {
+    "id": "haus-casur",
+    "name": "Clan Ua’Casur",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Dunfal/clan-ua-casur.png",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Ua’Casur",
+      "Cradh na Frinne"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-casur&mode=view"
+  },
+  {
+    "id": "haus-aonghusa",
+    "name": "Clan Dál’Aonghusa",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Dunfal/clan-dal-aonghusa.png",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Dál’Aonghusa",
+      "Cradh na Frinne"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-aonghusa&mode=view"
+  },
+  {
+    "id": "haus-riangabra",
+    "name": "Clan Na’Riangabra",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Dunfal/clan-na-riangabra.png",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Na’Riangabra",
+      "Baile Begg"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-riangabra&mode=view"
+  },
+  {
+    "id": "haus-eachtrai",
+    "name": "Clan Mac’Eachtrai",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Dunfal/clan-mac-eachtrai.png",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Herrschaft der Mac’Eachtrai",
+      "Athenry"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-eachtrai&mode=view"
+  },
+  {
+    "id": "sept-ferbend",
+    "name": "Sept Ferbend",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Dunfal/sept-ferbend.png",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Cradh na Frinne"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=sept-ferbend&mode=view"
+  },
+  {
+    "id": "haus-morna",
+    "name": "Clan Ui’Morna",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-ui-morna.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Geach",
+      "Gaelan"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-morna&mode=view"
+  },
+  {
+    "id": "haus-ceallaigh",
+    "name": "Clan Tir An’Ceallaigh",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-tir-an-ceallaigh.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Koldair"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ceallaigh&mode=view"
+  },
+  {
+    "id": "haus-fintain",
+    "name": "Clan Mac’Fintain",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-mac-fintain.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Faela",
+      "Croga"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-fintain&mode=view"
+  },
+  {
+    "id": "haus-durthacht",
+    "name": "Clan Mac’Durthacht",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-mac-durthacht.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth",
+      "Lorai"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-durthacht&mode=view"
+  },
+  {
+    "id": "haus-coronach",
+    "name": "Clan Ua’Coronach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-ua-coronach.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Geach",
+      "Gaelan"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-coronach&mode=view"
+  },
+  {
+    "id": "haus-morgacht",
+    "name": "Clan Na’Morgacht",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-na-morgacht.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Geach",
+      "Gaelan"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-morgacht&mode=view"
+  },
+  {
+    "id": "haus-rioga",
+    "name": "Clan An’Rioga",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-an-rioga.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Geach",
+      "Gaelan"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-rioga&mode=view"
+  },
+  {
+    "id": "haus-fiantorc",
+    "name": "Clan Ua’Fiáintorc",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-ua-fiaintorc.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth",
+      "Lorai"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-fiantorc&mode=view"
+  },
+  {
+    "id": "haus-treada",
+    "name": "Clan Ua’Tréada",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-ua-treada.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth",
+      "Lorai"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-treada&mode=view"
+  },
+  {
+    "id": "haus-muileach",
+    "name": "Clan Ua’Muileach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-ua-muileach.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth",
+      "Athan"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-muileach&mode=view"
+  },
+  {
+    "id": "haus-ui-faill-duibhne",
+    "name": "Clan Ui Faill Duibhne",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-ui-faill-duibhne.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth",
+      "Cliath"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ui-faill-duibhne&mode=view"
+  },
+  {
+    "id": "haus-feannag",
+    "name": "Clan An’Feannag",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-an-feannag.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Faela",
+      "Caetharlach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-feannag&mode=view"
+  },
+  {
+    "id": "haus-uilebheist",
+    "name": "Clan An’Uilebheist",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Adharcach",
+      "Foraoise"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view"
+  },
+  {
+    "id": "haus-cnogan",
+    "name": "Clan Nic’Cnogan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Adharcach",
+      "Foraoise"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cnogan&mode=view"
+  },
+  {
+    "id": "sept-techtmar",
+    "name": "Sept Techtmar",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/sept-techtmar.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Adharcach",
+      "Foraoise"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=sept-techtmar&mode=view"
+  },
+  {
+    "id": "haus-fiachiontach",
+    "name": "Clan Na’Fiachiontach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Koldair"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view"
+  },
+  {
+    "id": "haus-tartarfhuil",
+    "name": "Clan Dal’Tartarfhuil",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-dal-tartarfhuil.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Koldair"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-tartarfhuil&mode=view"
+  },
+  {
+    "id": "haus-gaisgh",
+    "name": "Clan An’Gaisgh",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Broch an Traigh"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-gaisgh&mode=view"
+  },
+  {
+    "id": "haus-luchdon",
+    "name": "Clan Na’Luchdon",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Broch an Creig"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view"
+  },
+  {
+    "id": "haus-nessa",
+    "name": "Clan Ard’Nessa",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Blaithneach/clan-ard-nessa.png",
+    "path": [
+      "Blaithneach",
+      "Tir na Beatha",
+      "Sioran"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-nessa&mode=view"
+  },
+  {
+    "id": "haus-goidin",
+    "name": "Clan Ua’Goidin",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Blaithneach/clan-ua-goidin.png",
+    "path": [
+      "Blaithneach",
+      "Tir na Beatha",
+      "Sioran"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-goidin&mode=view"
+  },
+  {
+    "id": "haus-haeghra",
+    "name": "Clan An’Haeghra",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Blaithneach/clan-an-haeghra.png",
+    "path": [
+      "Blaithneach",
+      "Tir na Beatha",
+      "Réadlann"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-haeghra&mode=view"
+  },
+  {
+    "id": "haus-ronain",
+    "name": "Clan Mac Ard’Ronain",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Blaithneach/clan-mac-ard-ronain.png",
+    "path": [
+      "Blaithneach",
+      "Tir na Dílse",
+      "Eorach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ronain&mode=view"
+  },
+  {
+    "id": "haus-suiste",
+    "name": "Clan Ua’Suiste",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Blaithneach/clan-ua-suiste.png",
+    "path": [
+      "Blaithneach",
+      "Tir na Dílse",
+      "Eorach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-suiste&mode=view"
+  },
+  {
+    "id": "haus-gairner",
+    "name": "Clan Dal’Gáirnér",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Blaithneach/clan-dal-gairner.png",
+    "path": [
+      "Blaithneach",
+      "Tir na Dílse",
+      "Eorach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-gairner&mode=view"
+  },
+  {
+    "id": "haus-cleirigh",
+    "name": "Clan Faill’ Cléirigh",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Blaithneach/clan-faill-cleirigh.png",
+    "path": [
+      "Blaithneach",
+      "Tir na Dílse",
+      "Eorach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cleirigh&mode=view"
+  },
+  {
+    "id": "haus-abhrach",
+    "name": "Clan Ui’Abhrach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Blaithneach/clan-ui-abhrach.png",
+    "path": [
+      "Blaithneach",
+      "Tir na Dílse",
+      "Eorach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-abhrach&mode=view"
+  },
+  {
+    "id": "haus-magach",
+    "name": "Clan Sidhe’Magach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Blaithneach/clan-sidhe-magach.png",
+    "path": [
+      "Blaithneach",
+      "Tir na Méinnear",
+      "Cairmor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-magach&mode=view"
+  },
+  {
+    "id": "haus-eala",
+    "name": "Clan Ua’Eala",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Blaithneach/clan-ua-eala.png",
+    "path": [
+      "Blaithneach",
+      "Tir na Méinnear",
+      "Cel Bearradh"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-eala&mode=view"
+  },
+  {
+    "id": "haus-urquhart",
+    "name": "Clan Ui Urquhart",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-urquhart.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Piobarach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-urquhart&mode=view"
+  },
+  {
+    "id": "haus-stwatchn",
+    "name": "Clan Ru Stwatchn",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-stwatchn.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Invercalda"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-stwatchn&mode=view"
+  },
+  {
+    "id": "haus-bhaird",
+    "name": "Clan Ó / Dál Bhaird",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-bhaird.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Piobarach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-bhaird&mode=view"
+  },
+  {
+    "id": "haus-luthsach",
+    "name": "Clan Ó / Dál Luthsach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-luthsach.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Piobarach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-luthsach&mode=view"
+  },
+  {
+    "id": "haus-lachlann",
+    "name": "Clan Breac Lachlann",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-lachlann.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Dun Liath"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-lachlann&mode=view"
+  },
+  {
+    "id": "haus-drummond",
+    "name": "Clan Breac Drummond",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-drummond.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Dun Grealach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-drummond&mode=view"
+  },
+  {
+    "id": "haus-dundas",
+    "name": "Clan Ó Dundas",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-dundas.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Dun Foirgneamh"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-dundas&mode=view"
+  },
+  {
+    "id": "haus-ffearnach",
+    "name": "Clan Mac Ffearnach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-ffearnach.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Caer Fionnach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ffearnach&mode=view"
+  },
+  {
+    "id": "haus-diuid",
+    "name": "Clan Mac Ard Diuid",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-diuid.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Balgavrie"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-diuid&mode=view"
+  },
+  {
+    "id": "haus-lockart",
+    "name": "Clan Ó Lockart",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-lockart.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Cnosbubh"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-lockart&mode=view"
+  },
+  {
+    "id": "haus-fiorghra",
+    "name": "Clan Tir An Fiorghra",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-fiorghra.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Lochcaeron"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-fiorghra&mode=view"
+  },
+  {
+    "id": "haus-ness",
+    "name": "Clan An Ness",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-ness.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Glenshear"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ness&mode=view"
+  },
+  {
+    "id": "haus-haig",
+    "name": "Clan Ó / Dál Haig",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-haig.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Tur na Fala"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-haig&mode=view"
+  },
+  {
+    "id": "haus-banlaoch",
+    "name": "Clan Nic Banlaoch",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-banlaoch.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Caisteal Gorm"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-banlaoch&mode=view"
+  },
+  {
+    "id": "haus-culloch",
+    "name": "Clan Mac Culloch",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-culloch.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh",
+      "Eldrimuir"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-culloch&mode=view"
+  },
+  {
+    "id": "haus-borthwick",
+    "name": "Clan Tir An Borthwick",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-borthwick.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh",
+      "Morvay"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-borthwick&mode=view"
+  },
+  {
+    "id": "haus-erskine",
+    "name": "Clan An Erskine",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-erskine.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh",
+      "Garadhain"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-erskine&mode=view"
+  },
+  {
+    "id": "haus-grannd",
+    "name": "Clan Na Grannd",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-grannd.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh",
+      "Dun Uisge"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-grannd&mode=view"
+  },
+  {
+    "id": "sept-malairt",
+    "name": "Sept Malairt",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/sept-malairt.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=sept-malairt&mode=view"
+  },
+  {
+    "id": "sept-dubhair",
+    "name": "Sept Dubhair",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/sept-dubhair.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=sept-dubhair&mode=view"
+  },
+  {
+    "id": "sept-grein",
+    "name": "Sept Gréin",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/sept-grein.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=sept-grein&mode=view"
+  },
+  {
+    "id": "sept-gaesa",
+    "name": "Sept Gaesa",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/sept-gaesa.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=sept-gaesa&mode=view"
+  },
+  {
+    "id": "sept-treoir",
+    "name": "Sept Treoir",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/sept-treoir.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=sept-treoir&mode=view"
+  },
+  {
+    "id": "haus-buadhtreun",
+    "name": "Clan Ard Buadhtreun",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-buadhtreun.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Faerna",
+      "Beinnstir"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-buadhtreun&mode=view"
+  },
+  {
+    "id": "haus-durachd",
+    "name": "Clan Tir An Durachd",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-durachd.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Faerna",
+      "Culrain"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-durachd&mode=view"
+  },
+  {
+    "id": "haus-muirgheal",
+    "name": "Clan Tir An Muirgheal",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-muirgheal.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Faerna",
+      "Airdree"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-muirgheal&mode=view"
+  },
+  {
+    "id": "haus-boyd",
+    "name": "Clan Na Boyd",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-boyd.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Faerna",
+      "Ealach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-boyd&mode=view"
+  },
+  {
+    "id": "haus-eoghainn",
+    "name": "Clan Tir An Ó Eoghainn",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-eoghainn.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Càrn Bruach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-eoghainn&mode=view"
+  },
+  {
+    "id": "haus-agnew",
+    "name": "Clan Ó Nic Agnew",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-agnew.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Tighlean"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-agnew&mode=view"
+  },
+  {
+    "id": "haus-duff",
+    "name": "Clan Ó Ard Duff",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-duff.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Dalriadh"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-duff&mode=view"
+  },
+  {
+    "id": "haus-dianaomh",
+    "name": "Clan Sid Ard Dianaomh",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-dianaomh.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Torbhreac"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-dianaomh&mode=view"
+  },
+  {
+    "id": "haus-dobhar",
+    "name": "Clan An Dobhar",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-dobhar.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Maolnair"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-dobhar&mode=view"
+  },
+  {
+    "id": "haus-forsyth",
+    "name": "Clan Ó Forsyth",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-forsyth.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Inverfay"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-forsyth&mode=view"
+  },
+  {
+    "id": "haus-elid",
+    "name": "Clan Ó Mall Elid",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-elid.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Càrn Bruach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-elid&mode=view"
+  },
+  {
+    "id": "haus-oglivy",
+    "name": "Clan Fir An Oglivy",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-oglivy.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Inniscaer"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-oglivy&mode=view"
+  },
+  {
+    "id": "haus-dubglais",
+    "name": "Clan Mac Dubglais",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-dubglais.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Brann",
+      "Sgurrfàil"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-dubglais&mode=view"
+  },
+  {
+    "id": "haus-cerneige",
+    "name": "Clan Tair Carnegie",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-cerneige.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Brann",
+      "Glenmohr"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cerneige&mode=view"
+  },
+  {
+    "id": "haus-airdmhor",
+    "name": "Clan Dál Airdmhor",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-airdmhor.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Brann",
+      "Carnascal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-airdmhor&mode=view"
+  },
+  {
+    "id": "haus-wemyss",
+    "name": "Clan Tir An Wemyss",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-wemyss.png",
+    "path": [
+      "Faelaorn",
+      "Tir na Brann",
+      "Drumrath"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-wemyss&mode=view"
   },
   {
     "id": "haus-gwyllach",

@@ -13,7 +13,6 @@ const initial={section:'regional',territoryId:'',houseId:'',category:'',search:'
 test('Country and county cards match the canonical family tree, including the original heraldry',()=>{
   const tree=buildRegistryFolderTree(FAMILY_REGISTRY);
   assert.deepEqual(regionalChildren('').map(n=>n.name).sort(),[...tree.folders.keys()].sort());
-  assert.equal(regionalChildren('').length,12);
   const counties=regionalChildren('cenyr');
   assert.equal(counties.length,9);assert.ok(counties.every(n=>n.image.startsWith('/Stammb')));
   assert.deepEqual(counties.map(n=>n.name).sort(),[...tree.folders.get('Cenyr').folders.keys()].sort());
