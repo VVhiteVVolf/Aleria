@@ -48,6 +48,8 @@ Nicht geheime Parameter haben voreingestellte Werte: `ALERIA_SCENE_BACKUP_GITHUB
 
 ## Prüfung
 
+Produktivprüfung am 12. Oktober 2026: Beide Funktionen und Regeln sind veröffentlicht. Ein temporärer Firebase-Testnutzer mit Editor-Claim hat den echten HTTPS-Abschluss zweimal aufgerufen; beide Antworten nannten denselben Auftrag. Der Hintergrundauftrag speicherte zwei Testkommentare und das Modul im ersten Versuch. Alle vier GitHub-Dateien, ihre Prüfsummen und das Entfernen technischer Verfasser-/Löschdaten wurden unabhängig über die öffentlichen Dateien bestätigt. Testnutzer, Testkommentare und Redestab-Fixture wurden anschließend entfernt; der [GitHub-Sicherungsstand](https://github.com/VVhiteVVolf/Aleria/tree/5296e4e14b6c662621320cf07761ad7b0700c8e1/AleriaAlmanach/backups/scenes/scene-backup-systemtest-20261012-81bd7f85-c65bd9c114/2026-10-12T12-17-04-504Z-38bf1dac-4dc3-4e05-9ffd-ef13f5f76934) bleibt als Beleg erhalten. 154 Backend-Tests und 17 Firestore-Regelprüfungen bestanden; Desktop- und Handyansicht wurden visuell geprüft.
+
 ```powershell
 npm --prefix firebase/functions test
 node --test AleriaAlmanach/tests/scene-backup-ui.test.mjs

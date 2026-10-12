@@ -821,7 +821,8 @@
         }, { merge: true });
       },
       async endSceneSession(threadId, modulePayload) {
-        await requireFirebaseUser();
+        // Pick up newly granted editing roles before the protected server call.
+        await authSession.getIdToken(true);
         const result = await endSceneSessionCallable({ threadId, modulePayload });
         return result.data;
       },
