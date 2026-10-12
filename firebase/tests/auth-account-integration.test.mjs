@@ -2,9 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import { initializeApp, deleteApp } from 'firebase/app';
-import { getAuth, connectAuthEmulator, onIdTokenChanged, signInAnonymously, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, sendEmailVerification } from 'firebase/auth';
+import { getAuth, connectAuthEmulator, onIdTokenChanged, signInAnonymously, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, sendEmailVerification, updateProfile, setPersistence, inMemoryPersistence, reload, checkActionCode, applyActionCode, verifyPasswordResetCode, confirmPasswordReset } from 'firebase/auth';
 import { createFirebaseAuthSession } from '../../AleriaAlmanach/modules/auth/firebase-auth-session.js';
 import { createFirebaseAccountActions } from '../../AleriaAlmanach/modules/auth/firebase-account-actions.js';
+import { createEmailActionController } from '../../AleriaAlmanach/modules/auth/email-action-controller.js';
 
 test('real Auth emulator: link keeps UID/claims, logout permits comments and login restores the same editor', async () => {
   const address = process.env.FIREBASE_AUTH_EMULATOR_HOST;
@@ -16,24 +17,39 @@ test('real Auth emulator: link keeps UID/claims, logout permits comments and log
   const auth = getAuth(app);
   connectAuthEmulator(auth, `http://${address}`, { disableWarnings: true });
   const session = createFirebaseAuthSession({ auth, onIdTokenChanged, signInAnonymously });
-  const actions = createFirebaseAccountActions({ auth, session, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, signInAnonymously, sendPasswordResetEmail, sendEmailVerification });
+  const actions = createFirebaseAccountActions({ auth, session, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, signInAnonymously, sendPasswordResetEmail, sendEmailVerification, updateProfile, setPersistence, browserLocalPersistence: inMemoryPersistence, reload });
   try {
     const original = await session.requireUser();
     await adminAuth.setCustomUserClaims(original.uid, { aleriaRole: 'editor' });
     await original.getIdToken(true); await session.refresh();
     assert.equal(session.getAccess().canEditSharedContent, true);
-    const secured = await actions.secureBrowserAccess('editor@example.test', 'emulator-only-password');
+    const secured = await actions.secureBrowserAccess('editor@example.test', 'emulator-only-password', { displayName: 'Gildenleiter', avatarId: 'gawain' });
     assert.equal(secured.uid, original.uid);
     assert.equal(secured.anonymous, false);
     assert.equal(secured.role, 'editor');
+    assert.equal(secured.displayName, 'Gildenleiter');
+    assert.match(secured.photoURL, /gawain-v1\.webp$/);
+    await actions.saveAccountProfile({ displayName: 'Spielername', avatarId: 'guinevere' });
+    assert.equal(session.getAccess().uid, original.uid);
+    assert.equal(session.getAccess().role, 'editor');
+    const emailActions = createEmailActionController({ auth, checkActionCode, applyActionCode, verifyPasswordResetCode, confirmPasswordReset });
+    const verificationLink = new URL(await adminAuth.generateEmailVerificationLink('editor@example.test'));
+    const verification = await emailActions.prepare('verifyEmail', verificationLink.searchParams.get('oobCode'));
+    await verification.complete();
+    await actions.refreshAccount();
+    assert.equal(session.getAccess().emailVerified, true);
+    await assert.rejects(emailActions.prepare('verifyEmail', verificationLink.searchParams.get('oobCode')));
+    const resetLink = new URL(await adminAuth.generatePasswordResetLink('editor@example.test'));
+    await (await emailActions.prepare('resetPassword', resetLink.searchParams.get('oobCode'))).complete('new-emulator-password');
     const guest = await actions.logout();
     assert.equal(guest.anonymous, true);
     assert.equal(guest.authenticated, true);
     assert.equal(guest.role, 'player');
-    await assert.rejects(actions.secureBrowserAccess('editor@example.test', 'emulator-only-password'), error => error.code === 'auth/email-already-in-use' || error.code === 'auth/credential-already-in-use');
+    await assert.rejects(actions.secureBrowserAccess('editor@example.test', 'new-emulator-password'), error => error.code === 'auth/email-already-in-use' || error.code === 'auth/credential-already-in-use');
     assert.equal(session.getAccess().uid, guest.uid);
-    const restored = await actions.login('editor@example.test', 'emulator-only-password');
+    const restored = await actions.login('editor@example.test', 'new-emulator-password');
     assert.equal(restored.uid, original.uid);
     assert.equal(restored.role, 'editor');
+    assert.equal(restored.displayName, 'Spielername');
   } finally { await deleteApp(app); await adminApp.delete(); }
 });

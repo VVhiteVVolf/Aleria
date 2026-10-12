@@ -1,6 +1,8 @@
+import { prepareAccountProfile } from './account-avatar-catalog.js';
+
 // Account changes use the existing Firebase session. Linking an anonymous
 // account preserves its UID and server-managed role; login never grants roles.
-export function createFirebaseAccountActions({ auth, session, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, signInAnonymously, sendPasswordResetEmail, sendEmailVerification }) {
+export function createFirebaseAccountActions({ auth, session, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, signInAnonymously, sendPasswordResetEmail, sendEmailVerification, updateProfile, setPersistence, browserLocalPersistence, reload }) {
   let pending = false;
   async function change(operation) {
     if (pending) throw new Error('Bitte warte, bis der aktuelle Vorgang abgeschlossen ist.');
@@ -8,16 +10,23 @@ export function createFirebaseAccountActions({ auth, session, EmailAuthProvider,
     try { return await operation(); } finally { pending = false; }
   }
   return Object.freeze({
-    secureBrowserAccess: (email, password) => change(async () => {
+    secureBrowserAccess: (email, password, profile) => change(async () => {
+      const prepared = prepareAccountProfile(profile);
       const user = await session.requireUser();
       if (!user.isAnonymous) throw new Error('Dieser Zugang ist bereits mit einem Konto verbunden.');
+      await setPersistence(auth, browserLocalPersistence);
       const result = await linkWithCredential(user, EmailAuthProvider.credential(email.trim(), password));
       if (result.user.uid !== user.uid) throw new Error('Die bestehende Nutzer-ID wurde nicht erhalten.');
-      await session.refresh();
+      try {
+        if (prepared) await updateProfile(result.user, prepared);
+      } catch {
+        throw new Error('Dein Konto wurde gesichert. Name oder Avatar konnten noch nicht gespeichert werden; ergänze sie in deinem Gildenpass.');
+      } finally { await session.refresh(); }
       return session.getAccess();
     }),
     login: (email, password) => change(async () => {
       await session.start();
+      await setPersistence(auth, browserLocalPersistence);
       await signInWithEmailAndPassword(auth, email.trim(), password);
       await session.refresh();
       return session.getAccess();
@@ -30,8 +39,29 @@ export function createFirebaseAccountActions({ auth, session, EmailAuthProvider,
       await session.refresh();
       return session.getAccess();
     }),
-    resetPassword: email => change(() => sendPasswordResetEmail(auth, email.trim())),
-    verifyEmail: () => change(async () => sendEmailVerification(await session.requireUser()))
+    saveAccountProfile: profile => change(async () => {
+      const prepared = prepareAccountProfile(profile);
+      if (!prepared) throw new Error('Bitte gib dein Profil an.');
+      const user = await session.requireUser();
+      if (user.isAnonymous) throw new Error('Sichere deinen Browserzugang zuerst mit E-Mail und Passwort.');
+      await updateProfile(user, prepared);
+      await session.refresh();
+      return session.getAccess();
+    }),
+    refreshAccount: () => change(async () => {
+      const user = await session.requireUser();
+      await reload(user);
+      await user.getIdToken(true);
+      await session.refresh();
+      return session.getAccess();
+    }),
+    resetPassword: email => change(() => { auth.languageCode = 'de'; return sendPasswordResetEmail(auth, email.trim()); }),
+    verifyEmail: () => change(async () => {
+      const user = await session.requireUser();
+      if (user.isAnonymous) throw new Error('Sichere deinen Browserzugang zuerst mit E-Mail und Passwort.');
+      auth.languageCode = 'de';
+      return sendEmailVerification(user);
+    })
   });
 }
 

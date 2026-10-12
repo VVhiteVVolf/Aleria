@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-12",
+  "generator": "Built-in image_gen",
+  "delivery": "WebP quality 85, original dimensions and alpha preserved. PNG originals retained locally under .tmp/account-art-originals. Browser assets total about 1.3 MB.",
+  "style": "Ulkige Fantasy-Comic-Karikaturen nach ausdrücklichem Nutzerwunsch; übersteuert den normalen Porträtstil. Originalporträts sind Identitätsreferenzen. Vier runde Avatare, Myrddin-Briefillustration und Drachenschlüssel.",
+  "references": {
+    "gawain": "Stammbäume/assets/images/portraits/haus-draig/gawain-draig.jpg",
+    "freya": "Stammbäume/assets/images/portraits/haus-skald/freya-skald.png",
+    "fenrir": "Stammbäume/assets/images/portraits/haus-varulv/fenrir-varulv.png",
+    "guinevere": "Stammbäume/assets/images/portraits/haus-draig/guinevere-neidr.jpg",
+    "myrddin": "Stammbäume/assets/images/portraits/haus-draig/myrddin-draig.jpg"
+  },
+  "assets": [
+    {
+      "id": "gawain",
+      "file": "gawain-v1.webp",
+      "originalFile": ".tmp/account-art-originals/gawain-v1.png",
+      "prompt": "Use case: illustration-story\nAsset type: square circular profile avatar for a playful fantasy tabletop RPG account picker.\nPrimary request: A hilarious affectionate caricature of Gawain Draig, based on reference Image 1 for identity only. Young adult human knight with very long wild flame-red hair, blue eyes, no beard, red scarf and dark armor. Huge cheeky toothy grin, one raised eyebrow, delightfully exaggerated cheeks and hair, confident lovable troublemaker.\nStyle: whimsical hand-drawn Dungeons-and-Dragons comedy comic, chunky dark brown outlines, expressive cartoon shapes, warm flat colors and simple cel shading; not the anime rendering of the reference.\nComposition: one face and tiny shoulders, head fills most of a perfect circular illustrated medallion, fully contained inside circle, warm terracotta background within circle and subtle ink rim. 1:1 square image. Readable at 64 pixels.\nConstraints: genuine transparent PNG outside the complete circle (alpha zero), opaque inside, no square backdrop, no letters, no text, no watermark, no extra characters, no cropped top of hair. Preserve recognizable hair/eye/clothing colors from reference."
+    },
+    {
+      "id": "freya",
+      "file": "freya-v1.webp",
+      "originalFile": ".tmp/account-art-originals/freya-v1.png",
+      "prompt": "Use case: illustration-story\nAsset type: square circular avatar for a humorous fantasy RPG account picker, a matching set with Image 2.\nInput images: Image 1 is Freya Skald's identity reference only. Image 2 supplies the cartoon linework and avatar medallion style only.\nPrimary request: An affectionate silly caricature of Freya Skald, a young adult blonde human bard knight with brown eyes, straight golden hair and bangs, gold armor and a blue cloak. Big delighted mischievous smile, one eye winking, round rosy cheeks, a playfully arched eyebrow. Exaggerated comic proportions; very expressive and charming.\nStyle: whimsical hand-drawn D&D comedy comic, chunky dark brown ink outlines, clean warm flat colors and simple cel shading, graphic cartoon face, no realistic skin rendering.\nComposition: close-up face and tiny shoulders, face dominates a perfect circular illustrated medallion, fully contained in circle, soft teal background within circle and subtle ink rim. Square 1:1, legible tiny.\nConstraints: true transparent PNG outside complete circle, opaque inside; no text, letters, watermark, extra people, hands or instruments. Keep the recognizable hair, gold armor and blue collar from reference."
+    },
+    {
+      "id": "fenrir",
+      "file": "fenrir-v1.webp",
+      "originalFile": ".tmp/account-art-originals/fenrir-v1.png",
+      "prompt": "Use case: illustration-story\nAsset type: square circular profile avatar, matching the playful RPG avatar set.\nInput images: Image 1 is Fenrir Varulv identity reference only. Image 2 is avatar style reference only.\nPrimary request: A funny affectionate caricature of Fenrir Varulv, human young adult warrior, tousled spiky blond hair, bright blue eyes, small blond chin beard, pale fur collar over russet red armor. Comically stubborn pout, one eyebrow raised impossibly high, puffed cheeks and tiny skeptical sideways glance; a grumpy warrior trying very hard not to laugh. Exaggerate expressive face in a lovable way.\nStyle: whimsical tabletop D&D comedy comic, bold dark brown outlines, warm flat colors, clean simple cel shading, expressive cartoon proportions matching Image 2.\nComposition: close-up face and tiny fur collar, face dominates a perfect circular medallion, smoky slate blue background inside circle and dark ink rim. 1:1 square. Recognizable at 64 pixels.\nConstraints: completely transparent PNG outside circle, opaque inside, no writing, watermark, hands, weapons, extra people or photorealism. Preserve reference hair, blue eyes, tiny beard, fur and russet collar."
+    },
+    {
+      "id": "guinevere",
+      "file": "guinevere-v1.webp",
+      "originalFile": ".tmp/account-art-originals/guinevere-v1.png",
+      "prompt": "Use case: illustration-story\nAsset type: square circular avatar for a playful D&D fantasy account picker.\nInput images: Image 1 identity reference for Guinevere Neidr. Image 2 cartoon avatar style reference only.\nPrimary request: A hilarious affectionate caricature of Guinevere Neidr, young adult human woman with chin-length auburn red bob, blue teal eyes, black leather armor with gold trim, a little ivory cape collar and gold snake ornament. A cheeky knowing smirk with a spectacular one-eyebrow lift, sideways eyes and adorably exaggerated expressive cheeks: she clearly has a cunning plan.\nStyle: warm whimsical tabletop fantasy comedy comic, chunky dark brown outlines, flat colors, simple cel shading, lovable cartoon exaggeration matching Image 2, no realistic skin.\nComposition: very close-up face, tiny shoulders, perfect circular medallion with sage green inner backdrop and dark ink rim; head fully inside circle. 1:1 square, legible at 64 pixels.\nConstraints: genuine transparent PNG outside circle, opaque inside. Keep auburn short bob, blue teal eyes and dark/gold collar identifiable. No text, watermark, hands, bow, extra people or square backdrop."
+    },
+    {
+      "id": "myrddin",
+      "file": "myrddin-v1.webp",
+      "originalFile": ".tmp/account-art-originals/myrddin-v1.png",
+      "prompt": "Use case: illustration-story\nAsset type: welcoming wizard illustration for a whimsical fantasy registration dialog and email confirmation landing page.\nInput images: Image 1 identity reference for Myrddin Draig only. Image 2 supplies the playful comic rendering only.\nPrimary request: Funny affectionate caricature of Myrddin Draig, a human adult wizard with long flowing silver white hair, blue eyes, clean-shaven face, dark midnight robe with subtle red curls and violet amulet. He has a huge satisfied goofy grin, dramatically raised eyebrows and a bit of magically frazzled hair. He proudly holds a sealed cream parchment envelope with a big purple wax seal, as if a very important spell has delivered the mail; other hand gives a small welcoming flourish, a few purple magic sparks.\nStyle: very playful D&D tabletop fantasy comedy comic, chunky dark brown ink outlines, exaggerated large head and small body, warm flat colors and simple cel shading matching Image 2. Cheerful whimsical absurdity, recognizable as Myrddin, not an elderly bearded generic wizard.\nComposition: single waist-up character centered, complete silhouette and both hands contained, no circular frame, 1:1 square.\nConstraints: genuine transparent PNG background everywhere outside figure and envelope, no background scene or floor or shadow, no letters/text on envelope, no writing or watermark, no extra people."
+    },
+    {
+      "id": "key",
+      "file": "key-v1.webp",
+      "originalFile": ".tmp/account-art-originals/key-v1.png",
+      "prompt": "Use case: illustration-story\nAsset type: tiny illustrated login button icon for a whimsical fantasy RPG website.\nPrimary request: One charmingly silly magical brass key, the round handle looks like a tiny friendly surprised dragon face with two stubby horns and googly eyes, key stem short with two chunky teeth. Slight jaunty diagonal tilt, a single small violet magic sparkle. This is an object icon, no character body.\nStyle: playful hand-drawn D&D comedy comic, thick uneven dark brown outlines, rounded exaggerated shapes, golden brass in only two or three flat warm tones, simple cel shading. Readable at 40 pixels, polished graphic silhouette.\nComposition: square 1:1, single icon centered with generous clear margin all around. No circular medallion.\nConstraints: true transparent PNG background, no floor, no shadows outside silhouette, no letters, no writing, no border, no watermark or extra objects."
+    }
+  ]
+}

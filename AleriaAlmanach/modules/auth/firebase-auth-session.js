@@ -39,7 +39,7 @@ export function createFirebaseAuthSession({ auth, onIdTokenChanged, signInAnonym
       let settled = false;
       let anonymousSignIn = null;
       const finish = value => {
-        if (!settled) {
+        if (!settled && value.user) {
           settled = true;
           resolve(value);
         }
@@ -51,11 +51,12 @@ export function createFirebaseAuthSession({ auth, onIdTokenChanged, signInAnonym
           // The first observer event follows restoration of the persisted
           // session. A null event is not a completed anonymous sign-in.
           anonymousSignIn ||= Promise.resolve().then(() => signInAnonymously(auth))
-            .then(result => inspect(result?.user || auth.currentUser))
-            .then(current => {
-              if (!current.user) throw new Error('Firebase konnte keine Anmeldung herstellen.');
-              finish(current);
+            .then(result => {
+              const currentUser = result?.user || auth.currentUser;
+              if (!currentUser) throw new Error('Firebase konnte keine Anmeldung herstellen.');
+              return inspect(currentUser);
             })
+            .then(finish)
             .catch(reject);
         } else {
           inspect(null);
@@ -86,6 +87,8 @@ export function createFirebaseAuthSession({ auth, onIdTokenChanged, signInAnonym
       anonymous: !!state.user?.isAnonymous,
       email: String(state.user?.email || ''),
       emailVerified: !!state.user?.emailVerified,
+      displayName: String(state.user?.displayName || ''),
+      photoURL: String(state.user?.photoURL || ''),
       canEditSharedContent: ['editor', 'moderator', 'admin'].includes(state.role),
       canModerate: ['moderator', 'admin'].includes(state.role)
     });

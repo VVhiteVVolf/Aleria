@@ -32,6 +32,8 @@ test('anonyme Sitzungen werden aufgebaut, ohne Zugangsdaten offenzulegen', async
     anonymous: false,
     email: '',
     emailVerified: false,
+    displayName: '',
+    photoURL: '',
     canEditSharedContent: false,
     canModerate: false
   });
@@ -84,4 +86,24 @@ test('authentication failures reject readiness and writes', async () => {
   });
   await assert.rejects(session.requireUser(), /network-request-failed/);
   assert.equal(session.getAccess().authenticated, false);
+});
+
+test('overlapping initial token inspections wait for the current user instead of finishing with empty state', async () => {
+  let listener;
+  const inspections = [];
+  const user = { uid: 'race-check', getIdTokenResult: () => new Promise(resolve => inspections.push(resolve)) };
+  const session = createFirebaseAuthSession({
+    auth: { currentUser: user },
+    onIdTokenChanged(_auth, next) { listener = next; queueMicrotask(() => next(null)); },
+    async signInAnonymously() { queueMicrotask(() => listener(user)); return { user }; }
+  });
+  let outcome = 'pending';
+  const pending = session.requireUser().then(value => { outcome = 'ready'; return value; }, error => { outcome = 'rejected'; throw error; });
+  pending.catch(() => {});
+  await new Promise(setImmediate);
+  inspections[0]({ claims: {} });
+  await new Promise(setImmediate);
+  assert.equal(outcome, 'pending');
+  inspections[1]({ claims: {} });
+  assert.equal(await pending, user);
 });

@@ -1,13 +1,14 @@
 ﻿    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-    import { getAuth, onIdTokenChanged, signInAnonymously, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, sendEmailVerification }
+    import { getAuth, onIdTokenChanged, signInAnonymously, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, sendEmailVerification, updateProfile, setPersistence, browserLocalPersistence, reload }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
     import { getFunctions, httpsCallable }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-functions.js";
     import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, limit, serverTimestamp, onSnapshot, doc, getDoc, setDoc, deleteDoc, writeBatch, runTransaction }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
     import { createFirebaseAuthSession }
-      from "./modules/auth/firebase-auth-session.js?v=20261012-account-v1";
+      from "./modules/auth/firebase-auth-session.js?v=20261012-guild-v2";
     import { createFirebaseAccountActions } from './modules/auth/firebase-account-actions.js';
+    import { firebasePublicConfig } from './modules/auth/firebase-public-config.js';
     import { createCommentActivityRepository } from './modules/comments/comment-activity-repository.js';
     import { compactMechanicalMetadata }
       from "./modules/combat/combat-resolution-storage.js?v=20260804-referee-v1";
@@ -21,16 +22,7 @@
     import { prepareInventoryCompanionWrites, saveLinkedCreature } from './modules/item-register/item-register-companion-firebase.js?v=20261006-regional-equipment-v2';
     import { parseModuleStoreRevision, getFirebaseModuleStoreRevision } from './modules/module-store/module-store-revision.js';
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyCgSej0WkSlkfAlySKZAdCyu4JjTNZEnYg",
-      authDomain: "aleriaprojekt.firebaseapp.com",
-      projectId: "aleriaprojekt",
-      storageBucket: "aleriaprojekt.firebasestorage.app",
-      messagingSenderId: "377039244960",
-      appId: "1:377039244960:web:27ab9971f25657224403c5"
-    };
-
-    const app = initializeApp(firebaseConfig);
+    const app = initializeApp(firebasePublicConfig);
     const auth = getAuth(app);
     const authSession = createFirebaseAuthSession({ auth, onIdTokenChanged, signInAnonymously });
     const authReady = authSession.start();
@@ -1466,7 +1458,7 @@
     };
 
     window._fbAuth = Object.freeze({
-      ...createFirebaseAccountActions({ auth, session: authSession, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, signInAnonymously, sendPasswordResetEmail, sendEmailVerification }),
+      ...createFirebaseAccountActions({ auth, session: authSession, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, signInAnonymously, sendPasswordResetEmail, sendEmailVerification, updateProfile, setPersistence, browserLocalPersistence, reload }),
       ready: authReady,
       getAccess: getFirebaseAccess,
       getIdToken: forceRefresh => authSession.getIdToken(forceRefresh)
