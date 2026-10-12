@@ -1,0 +1,102 @@
+{
+  "type": "aleria-module-comments-export",
+  "version": 1,
+  "exportedAt": "2026-10-12T12:17:07.229Z",
+  "source": {
+    "moduleId": "scene-backup-systemtest-20261012-81bd7f85",
+    "moduleTitle": "Szenenbackup – technischer Funktionstest",
+    "sectionKey": "system-tests",
+    "sectionTab": "Systemtests"
+  },
+  "summary": {
+    "threadCount": 2,
+    "commentCount": 2,
+    "turnCount": 1
+  },
+  "threads": [
+    {
+      "threadId": "scene-backup-systemtest-20261012-81bd7f85",
+      "kind": "entry-comments",
+      "pageIndex": null,
+      "pageTitle": "Modulkommentare",
+      "turn": null,
+      "commentCount": 0,
+      "comments": []
+    },
+    {
+      "threadId": "scene-backup-systemtest-20261012-81bd7f85::session:main",
+      "kind": "session",
+      "pageIndex": 0,
+      "pageTitle": "Backup-Test",
+      "turn": {
+        "id": "scene-backup-systemtest-20261012-81bd7f85::session:main",
+        "threadId": "scene-backup-systemtest-20261012-81bd7f85::session:main",
+        "current": "ended",
+        "updatedAt": "2026-10-12T12:17:04.504Z"
+      },
+      "commentCount": 2,
+      "comments": [
+        {
+          "entryId": "scene-backup-systemtest-20261012-81bd7f85::session:main",
+          "charName": "Sicherungstest",
+          "text": "Automatischer Funktionstest des Szenenbackups. Keine laufende Spielszene.",
+          "ts": {
+            "seconds": 1791807424,
+            "nanoseconds": 0
+          },
+          "orderKey": 1791807424148,
+          "id": "scene-backup-systemtest-20261012-81bd7f85-one",
+          "exportOrder": 1,
+          "threadOrder": 1
+        },
+        {
+          "entryId": "scene-backup-systemtest-20261012-81bd7f85::session:main",
+          "charName": "Sicherungstest",
+          "text": "Zweiter Testbeitrag: Reihenfolge und Vollständigkeit.",
+          "ts": {
+            "seconds": 1791807424,
+            "nanoseconds": 1
+          },
+          "orderKey": 1791807424149,
+          "id": "scene-backup-systemtest-20261012-81bd7f85-two",
+          "exportOrder": 2,
+          "threadOrder": 2
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "entryId": "scene-backup-systemtest-20261012-81bd7f85::session:main",
+      "charName": "Sicherungstest",
+      "text": "Automatischer Funktionstest des Szenenbackups. Keine laufende Spielszene.",
+      "ts": {
+        "seconds": 1791807424,
+        "nanoseconds": 0
+      },
+      "orderKey": 1791807424148,
+      "id": "scene-backup-systemtest-20261012-81bd7f85-one",
+      "exportOrder": 1
+    },
+    {
+      "entryId": "scene-backup-systemtest-20261012-81bd7f85::session:main",
+      "charName": "Sicherungstest",
+      "text": "Zweiter Testbeitrag: Reihenfolge und Vollständigkeit.",
+      "ts": {
+        "seconds": 1791807424,
+        "nanoseconds": 1
+      },
+      "orderKey": 1791807424149,
+      "id": "scene-backup-systemtest-20261012-81bd7f85-two",
+      "exportOrder": 2
+    }
+  ],
+  "commentTurns": [
+    {
+      "id": "scene-backup-systemtest-20261012-81bd7f85::session:main",
+      "threadId": "scene-backup-systemtest-20261012-81bd7f85::session:main",
+      "current": "ended",
+      "updatedAt": "2026-10-12T12:17:04.504Z"
+    }
+  ]
+}

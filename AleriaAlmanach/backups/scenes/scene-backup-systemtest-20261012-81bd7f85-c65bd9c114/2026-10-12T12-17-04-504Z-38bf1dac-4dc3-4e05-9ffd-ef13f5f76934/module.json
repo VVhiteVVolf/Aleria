@@ -1,0 +1,21 @@
+{
+  "type": "aleria-module",
+  "version": 2,
+  "section": {
+    "key": "system-tests",
+    "tab": "Systemtests",
+    "desc": "Technischer Backup-Test"
+  },
+  "entry": {
+    "id": "scene-backup-systemtest-20261012-81bd7f85",
+    "title": "Szenenbackup – technischer Funktionstest",
+    "pages": [
+      {
+        "sessionPage": true,
+        "commentThreadKey": "main",
+        "pageTitle": "Backup-Test",
+        "sessionIntro": "Eigenständiger Funktionstest ohne Verbindung zu einer Spielszene."
+      }
+    ]
+  }
+}

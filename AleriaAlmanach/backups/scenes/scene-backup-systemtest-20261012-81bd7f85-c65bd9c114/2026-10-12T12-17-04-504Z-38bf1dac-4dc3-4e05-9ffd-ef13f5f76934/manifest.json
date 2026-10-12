@@ -1,0 +1,42 @@
+{
+  "type": "aleria-scene-backup",
+  "version": 1,
+  "backupId": "38bf1dac-4dc3-4e05-9ffd-ef13f5f76934",
+  "threadId": "scene-backup-systemtest-20261012-81bd7f85::session:main",
+  "moduleId": "scene-backup-systemtest-20261012-81bd7f85",
+  "moduleTitle": "Szenenbackup – technischer Funktionstest",
+  "requestedAt": "2026-10-12T12:17:04.504Z",
+  "capturedAt": "2026-10-12T12:17:07.229Z",
+  "moduleSource": "browser-export",
+  "summary": {
+    "threadCount": 2,
+    "commentCount": 2,
+    "turnCount": 1
+  },
+  "omittedFields": [
+    "deleteCode",
+    "deleteCodeHash",
+    "deleteCodeVersion",
+    "createdBy",
+    "updatedBy",
+    "importedBy"
+  ],
+  "assets": "Bilder und Anhänge bleiben als Originalverweise erhalten; externe Dateien sind nicht in diesem Backup eingebettet.",
+  "files": [
+    {
+      "path": "module.json",
+      "bytes": 520,
+      "sha256": "c0ab9a6ef3b6640b54a208be9a0235434483be76807de0a143bda94d09469499"
+    },
+    {
+      "path": "comments.json",
+      "bytes": 3172,
+      "sha256": "2a074f5240ba79315f0c34d0333b11d0a241fcc4e7ecccafec58c60893f052a1"
+    },
+    {
+      "path": "history.md",
+      "bytes": 536,
+      "sha256": "c11dfb9647e62f48a496767dd71d85bfe81f0043de490834358c5b57c689648d"
+    }
+  ]
+}
