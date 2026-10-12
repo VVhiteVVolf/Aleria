@@ -30,7 +30,7 @@ window._fbAuth = { getAccess: session.getAccess, ...createFirebaseAccountActions
 mountAccountUi(document.querySelector('[data-role="almanach-account"]'));
 window.fixtureReady = session.start();
 window.fixtureRefresh = async () => { await auth.currentUser.getIdToken(true); await session.refresh(); };
-` }, bundle: true, format: 'esm', platform: 'browser', outfile: path.join(output, 'fixture.js'), logLevel: 'silent' });
+` }, bundle: true, format: 'esm', platform: 'browser', outfile: path.join(output, 'fixture.js'), logLevel: 'silent', plugins: [{ name: 'account-assets-module-location', setup(bundler) { bundler.onResolve({ filter: /account-avatar-catalog\.js$/ }, () => ({ path: '/AleriaAlmanach/modules/auth/account-avatar-catalog.js', external: true })); } }] });
 
 const server = createServer(async (request, response) => {
   try {
@@ -59,7 +59,7 @@ try {
   const original = await page.evaluate(() => window._fbAuth.getAccess());
   await adminAuth.setCustomUserClaims(original.uid, { aleriaRole: 'editor' });
   await page.evaluate(() => window.fixtureRefresh());
-  await page.getByRole('button', { name: /Abenteurer-Konto/ }).click();
+  await page.getByRole('button', { name: 'Registrieren', exact: true }).click();
   await page.screenshot({ path: path.join(output, 'registration-desktop.png') });
   const form = page.locator('[data-role="account-form"]');
   await form.locator('[name="email"]').fill('browser@example.test');
@@ -86,16 +86,17 @@ try {
   assert.equal(restored.role, 'editor');
   assert.equal(restored.displayName, 'Gildenfuchs');
   assert.equal(restored.photoURL, secured.photoURL);
-  await page.getByRole('button', { name: /Gildenfuchs/ }).click();
+  await page.getByRole('button', { name: 'Gildenpass öffnen', exact: true }).click();
   const profileForm = page.locator('[data-role="account-profile-form"]');
   await profileForm.locator('[name="displayName"]').fill('Neuer Gildenfuchs');
   await profileForm.locator('label').filter({ has: page.locator('[value="guinevere"]') }).click();
   await page.getByRole('button', { name: 'Gildenpass aktualisieren', exact: true }).click();
-  await page.getByRole('button', { name: /Neuer Gildenfuchs/ }).waitFor();
+  await page.locator('[data-role="account-button-name"]').filter({ hasText: 'Neuer Gildenfuchs' }).waitFor();
   assert.equal((await page.evaluate(() => window._fbAuth.getAccess())).uid, original.uid);
   await page.screenshot({ path: path.join(output, 'profile-mobile.png') });
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth || document.querySelector('dialog').scrollWidth > document.querySelector('dialog').clientWidth);
   assert.equal(overflow, false);
+  assert.equal(await page.locator('[data-role="almanach-account"] img:visible').evaluateAll(images => images.every(image => image.complete && image.naturalWidth > 0)), true);
   await page.getByRole('button', { name: 'Abmelden', exact: true }).click();
   await page.getByRole('button', { name: 'Gildenpass anlegen', exact: true }).waitFor();
   assert.equal((await page.evaluate(() => window._fbAuth.getAccess())).anonymous, true);

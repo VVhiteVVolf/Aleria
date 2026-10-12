@@ -1,7 +1,7 @@
-import { ACCOUNT_ART, ACCOUNT_AVATARS } from './account-avatar-catalog.js';
+import { ACCOUNT_ART, ACCOUNT_AVATARS, ACCOUNT_BUTTON_ART } from './account-avatar-catalog.js';
 
 export function accountButtonMarkup() {
-  return `<button type="button" data-action="open-account" class="account-open"><img data-role="account-button-avatar" src="${ACCOUNT_ART.key}" alt="" width="48" height="48"><span><strong data-role="account-button-title">Abenteurer-Konto</strong><small data-role="account-button-subtitle">Anmelden · Registrieren</small></span></button>`;
+  return `<div data-role="account-entry-points" class="account-entry-points"><button type="button" data-action="open-account" data-mode="login" class="account-open account-image-button" aria-label="Anmelden"><img src="${ACCOUNT_BUTTON_ART.login}" alt="Anmelden" width="360" height="120"></button><button type="button" data-action="open-account" data-mode="secure" class="account-open account-image-button" aria-label="Registrieren"><img src="${ACCOUNT_BUTTON_ART.register}" alt="Registrieren" width="360" height="120"></button></div><div data-role="account-profile-entry" class="account-profile-entry" hidden><button type="button" data-action="open-account" class="account-open account-image-button" aria-label="Gildenpass öffnen"><img src="${ACCOUNT_BUTTON_ART.pass}" alt="Gildenpass" width="360" height="120"></button><small data-role="account-button-name"></small></div>`;
 }
 
 export function accountDialogMarkup() {
@@ -15,14 +15,14 @@ export function accountDialogMarkup() {
       <p data-role="account-status" class="account-status"></p>
       <div data-role="account-identity" class="account-identity" hidden><p data-role="account-email"></p><p data-role="account-role"></p><details><summary>Mein Zugang</summary><p>Nutzer-ID: <code data-role="account-uid"></code></p><p>Deine Rechte gehören zur Nutzer-ID, nicht zum gewählten Namen oder Avatar.</p></details></div>
       <form data-role="account-form">
-        <fieldset data-role="account-modes" class="account-modes"><legend class="account-sr-only">Zugang wählen</legend><label><input type="radio" name="mode" value="secure" checked><span>Neu in der Gilde?<small>Registrieren</small></span></label><label><input type="radio" name="mode" value="login"><span>Schon einen Gildenpass?<small>Anmelden</small></span></label></fieldset>
+        <fieldset data-role="account-modes" class="account-modes"><legend class="account-sr-only">Zugang wählen</legend><label><input type="radio" name="mode" value="secure" checked><span class="account-mode-art"><img src="${ACCOUNT_BUTTON_ART.register}" alt="Registrieren" width="360" height="120"></span></label><label><input type="radio" name="mode" value="login"><span class="account-mode-art"><img src="${ACCOUNT_BUTTON_ART.login}" alt="Anmelden" width="360" height="120"></span></label></fieldset>
         <p data-role="account-hint" class="account-hint"></p>
         <label class="account-field">E-Mail<input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="dein.name@postrabe.de"></label>
         <label class="account-field">Passwort<input name="password" type="password" autocomplete="new-password" required minlength="6" placeholder="Mindestens 6 Zeichen"></label>
         <div data-role="registration-profile"></div>
         <p class="account-remember">Dein Gildenpass bleibt auf diesem Gerät angemeldet – bis du dich abmeldest oder Browserdaten löschst.</p>
         <label data-role="verification-choice" class="account-check"><input name="sendVerification" type="checkbox" checked> Myrddin darf mir eine Bestätigungsmail schicken.</label>
-        <button type="submit" data-role="account-submit" class="account-primary">Gildenpass anlegen</button>
+        <button type="submit" data-role="account-submit" class="account-image-submit" aria-label="Gildenpass anlegen"><img data-role="account-submit-image" src="${ACCOUNT_BUTTON_ART.register}" alt="Registrieren" width="360" height="120"></button>
         <button type="button" data-action="reset-password" class="account-link">Passwort vom Drachen gefressen?</button>
       </form>
       <form data-role="account-profile-form" hidden><div data-role="saved-profile"></div><button type="submit" class="account-primary">Gildenpass aktualisieren</button></form>

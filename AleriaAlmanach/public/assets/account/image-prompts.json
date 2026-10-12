@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-10-12",
   "generator": "Built-in image_gen",
-  "delivery": "WebP quality 85, original dimensions and alpha preserved. PNG originals retained locally under .tmp/account-art-originals. Browser assets total about 1.3 MB.",
+  "delivery": "WebP quality 85; original dimensions and alpha preserved. PNG originals retained locally under .tmp/account-art-originals. Nine browser assets total about 1.9 MB.",
   "style": "Ulkige Fantasy-Comic-Karikaturen nach ausdrücklichem Nutzerwunsch; übersteuert den normalen Porträtstil. Originalporträts sind Identitätsreferenzen. Vier runde Avatare, Myrddin-Briefillustration und Drachenschlüssel.",
   "references": {
     "gawain": "Stammbäume/assets/images/portraits/haus-draig/gawain-draig.jpg",
@@ -47,6 +47,24 @@
       "file": "key-v1.webp",
       "originalFile": ".tmp/account-art-originals/key-v1.png",
       "prompt": "Use case: illustration-story\nAsset type: tiny illustrated login button icon for a whimsical fantasy RPG website.\nPrimary request: One charmingly silly magical brass key, the round handle looks like a tiny friendly surprised dragon face with two stubby horns and googly eyes, key stem short with two chunky teeth. Slight jaunty diagonal tilt, a single small violet magic sparkle. This is an object icon, no character body.\nStyle: playful hand-drawn D&D comedy comic, thick uneven dark brown outlines, rounded exaggerated shapes, golden brass in only two or three flat warm tones, simple cel shading. Readable at 40 pixels, polished graphic silhouette.\nComposition: square 1:1, single icon centered with generous clear margin all around. No circular medallion.\nConstraints: true transparent PNG background, no floor, no shadows outside silhouette, no letters, no writing, no border, no watermark or extra objects."
+    },
+    {
+      "id": "button-login",
+      "file": "button-login-v1.webp",
+      "originalFile": ".tmp/account-art-originals/button-login-v1.png",
+      "prompt": "Use case: illustration-story\nAsset type: finished raster image of a whimsical fantasy RPG website login button, with lettering integrated into the drawing.\nPrimary request: ONE beautiful hand-drawn illustrated horizontal button. A chunky enchanted dark walnut wooden sign with rounded irregular corners, warm cream parchment inset and playful gold filigree. A tiny silly golden dragon face peeks over the left end and clutches an oversized brass key; it is part of the button silhouette. The right two-thirds of the plaque show exactly the single German word \"Anmelden\", large and exquisitely legible, dark brown friendly medieval storybook serif lettering. No subtitle.\nStyle: polished playful D&D fantasy comedy comic, thick dark ink contours, painterly warm flat tones, simple cel shading, tactile wood and parchment, whimsical asymmetry. Match the cartoon friendliness and colors of Image 1, which is a style and dragon-key motif reference only.\nComposition: WIDE LANDSCAPE aspect ratio 3:1. Full button centered with a little transparent margin on every side; everything contained, clearly readable as a clickable UI button even displayed at 230 px wide.\nConstraints: actual transparent PNG outside the sign and little dragon, no background rectangle, no floor, no outside drop shadow, no extra text, no watermarks. Exact text \"Anmelden\" and nothing else. Not a screenshot, draw the complete illustrated button asset."
+    },
+    {
+      "id": "button-register",
+      "file": "button-register-v1.webp",
+      "originalFile": ".tmp/account-art-originals/button-register-v1.png",
+      "prompt": "Use case: illustration-story\nAsset type: finished illustrated registration button, companion to Image 1.\nInput images: Image 1 defines the exact wooden plaque, cream parchment, gold trim, lettering and wide shape of the button set. Image 2 is Myrddin Draig's identity reference.\nPrimary request: ONE horizontal fantasy RPG image button matching Image 1. Same chunky walnut wood sign, cream parchment inset, gold filigree and dark friendly medieval storybook serif. Replace the little dragon at the left with a tiny comically frazzled silver-haired clean-shaven Myrddin Draig, blue eyes, midnight robe, huge silly satisfied grin, peeking over the left edge with a quill and sealed parchment. Keep his face small enough to leave most of the plaque for the lettering.\nText: exactly \"Registrieren\", very large and clear on one line on the right two-thirds, no subtitle.\nStyle: warm whimsical D&D comedy comic, chunky dark outlines, painterly flat colors and simple cel shading, beautifully illustrated wood and parchment. Keep the set cohesive.\nComposition: WIDE LANDSCAPE aspect ratio 3:1, full button and tiny wizard centered and contained with transparent margin on every edge, legible at 230 px wide.\nConstraints: genuine transparent PNG outside sign and wizard, no external shadow, square scene or background rectangle, no watermark, no extra text. Exactly \"Registrieren\"."
+    },
+    {
+      "id": "button-pass",
+      "file": "button-pass-v1.webp",
+      "originalFile": ".tmp/account-art-originals/button-pass-v1.png",
+      "prompt": "Use case: illustration-story\nAsset type: finished illustrated account button for a fantasy RPG site, same coherent set as Image 1.\nInput images: Image 1 is the matching login button style reference. Image 2 is Gawain Draig's identity reference.\nPrimary request: ONE beautiful wide horizontal wooden sign button, matching the walnut wood, gold filigree, warm cream parchment inset and large dark medieval storybook serif lettering in Image 1. On the left end a tiny hilarious red-haired blue-eyed clean-shaven Gawain Draig with a huge cheeky grin peeks over the edge, holding up a little parchment guild identification card with a small face doodle but NO writing. A glimpse of his red scarf and dark armor. The right two-thirds contain exactly the German word \"Gildenpass\", very large and crisply legible, on one line.\nStyle: hand-drawn playful D&D comedy comic, bold dark outlines, painterly warm flat colors, simple cel shading, lively expressive caricature, matching the other buttons.\nComposition: WIDE LANDSCAPE aspect ratio 3:1, complete centered sign and figure with slight transparent margin, readable at 230 pixels wide.\nConstraints: transparent PNG outside the complete button silhouette, no floor or outside shadow, no rectangular backdrop or watermark, no other writing. Exact text \"Gildenpass\"."
     }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-12",
+  "generator": "Built-in image_gen",
+  "file": "button-topic-board-v1.webp",
+  "originalFile": ".tmp/account-art-originals/button-topic-board-v1.png",
+  "delivery": "WebP quality 85; original dimensions and transparent alpha preserved.",
+  "references": [
+    {
+      "path": "AleriaAlmanach/public/assets/account/button-login-v1.webp",
+      "role": "Style reference; original PNG used during generation"
+    },
+    {
+      "path": "AleriaAlmanach/public/assets/topic-board/themenvorschlag-icon.png",
+      "role": "Quill, parchment and seal motif"
+    }
+  ],
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE finished illustrated image button for the sidebar of the Aleria fantasy roleplaying almanac, wide 3:1 canvas, true transparent PNG.\nInput image 1 is the STYLE and shape reference: match this cheerful comic wooden guild sign, warm walnut wood, chunky dark brown outlines, golden curled trim, cream parchment label, extremely readable dark brown lettering. Input image 2 is the MOTIF reference only: a writing quill, a sheet of parchment and a red wax seal. Do not copy its square background or frame.\nCreate the matching button for the topic suggestion board. On the LEFT about a quarter of the width: an oversized jaunty golden quill leaned over a little curled parchment with a bright red wax seal, playful chunky proportions and a couple of small hand-drawn ink sparks, with a tiny funny face on the inkwell. On the CENTER/RIGHT large cream parchment label, exact text: \"Themenwand\". Spell exactly T h e m e n w a n d in one line, bold friendly medieval serif, high contrast, no other text. Keep text large enough to read when entire asset is displayed 224px wide.\nComposition: long low horizontal wooden plaque with complete closed golden decorative frame, viewed straight on, all motif elements fully visible, margins around silhouette. Match image 1 as a coherent set but replace its dragon/key and its wording entirely with the writing motif and Themenwand. Whimsical DnD comedy comic with simplified hand-painted cel shading. No human, no scenery, no photo texture, no watermark. The entire image is the finished button, not a screenshot. TRUE alpha zero outside the illustrated silhouette, including open gaps; no colored backdrop, checkerboard, ground or cast shadow."
+}

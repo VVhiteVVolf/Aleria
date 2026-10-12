@@ -69,4 +69,5 @@ test('invalid names and external avatars are rejected before the existing browse
   assert.equal(auth.currentUser.isAnonymous, true);
   assert.deepEqual(calls, []);
   assert.equal(prepareAccountProfile({ displayName: '', avatarId: 'gawain' }).displayName, '');
+  assert.equal(new URL(prepareAccountProfile({ displayName: 'Lokal', avatarId: 'freya' }, 'null').photoURL).origin, 'https://dieweltvonaleria.netlify.app');
 });

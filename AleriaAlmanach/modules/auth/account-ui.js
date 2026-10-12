@@ -46,8 +46,13 @@ export function mountAccountUi(root, service = () => window._fbAuth) {
   }
   const profile = (target, field) => ({ displayName: target.elements.displayName.value, avatarId: target.elements[field].value });
   root.addEventListener('click', event => {
-    const action = event.target.closest('[data-action]')?.dataset.action;
-    if (action === 'open-account') { previousFocus = document.activeElement; message(''); render(); dialog.showModal(); }
+    const trigger = event.target.closest('[data-action]');
+    const action = trigger?.dataset.action;
+    if (action === 'open-account') {
+      previousFocus = document.activeElement;
+      if (trigger.dataset.mode) form.elements.mode.value = trigger.dataset.mode;
+      message(''); render(); dialog.showModal();
+    }
     if (action === 'close-account') dialog.close();
     if (action === 'logout') run(() => service().logout(), 'Gildenpass verstaut. Du kannst mit einem neuen Browserzugang weiter kommentieren.');
     if (action === 'verify-email') run(() => service().verifyEmail(), 'Myrddin hat den Postzauber gewirkt. Schau in dein E-Mail-Postfach, gegebenenfalls auch in den Spamordner.');

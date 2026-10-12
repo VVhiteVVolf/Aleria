@@ -35,7 +35,8 @@ if (process.argv.includes('--apply')) {
   const hash = value => createHash('sha256').update(value).digest('hex');
   for (const file of [actionPath, '/AleriaAlmanach/modules/auth/email-action-bootstrap.mjs', '/AleriaAlmanach/modules/auth/email-action-page.js', '/AleriaAlmanach/modules/auth/email-action-controller.js', '/AleriaAlmanach/public/assets/account/myrddin-v1.webp']) {
     const response = await fetch(`${origin}${file}?mail-setup-check=20261012`, { signal: AbortSignal.timeout(30000) });
-    if (!response.ok || hash(Buffer.from(await response.arrayBuffer())) !== hash(await readFile(new URL(`../../..${file}`, import.meta.url)))) throw new Error('Account mail page must be published and match the local source first.');
+    const canonical = value => file.endsWith('.webp') ? value : value.toString('utf8').replace(/\r\n/g, '\n');
+    if (!response.ok || hash(canonical(Buffer.from(await response.arrayBuffer()))) !== hash(canonical(await readFile(new URL(`../../..${file}`, import.meta.url))))) throw new Error('Account mail page must be published and match the local source first.');
   }
   await writeFile(new URL('../../../.tmp/firebase-health-20261012/account-mail-before.json', import.meta.url), JSON.stringify({ authorizedDomains: before.authorizedDomains, notification: { defaultLocale: before.notification?.defaultLocale, sendEmail: { callbackUri: notification.callbackUri, verifyEmailTemplate: notification.verifyEmailTemplate } } }, null, 2), { flag: 'wx' }).catch(error => { if (error.code !== 'EEXIST') throw error; });
   const domains = [...new Set([...(before.authorizedDomains || []), 'dieweltvonaleria.netlify.app'])];
