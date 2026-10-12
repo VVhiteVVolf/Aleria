@@ -1,0 +1,274 @@
+{
+  "type": "aleria-module",
+  "version": 2,
+  "entry": {
+    "id": "celtigerns-wacht-anhoerung",
+    "title": "Die Anhörung — Celtigerns Wacht",
+    "subtitle": "Eine Sitzung am letzten Tag der Woche",
+    "type": "Chronik · Thronsaalszene",
+    "category": "Celtigerns Wacht · Anhörung",
+    "moduleWidth": 100,
+    "moduleHeight": 100,
+    "image": "https://i.imgur.com/qTE9DA8.jpeg",
+    "stamp": "CELTIGERNS WACHT · GRAFSCHAFT · CENYR",
+    "icon": "📜",
+    "symbol": null,
+    "locked": false,
+    "appendCommentsPage": false,
+    "enablePageComments": true,
+    "sessionCast": [
+      "gwendolyn-draig",
+      "schreier-cw",
+      "meurig-draig",
+      "odyar-draig",
+      "sir-egon-gafyr"
+    ],
+    "sessionCastDetails": [
+      {
+        "schemaVersion": 1,
+        "id": "gwendolyn-draig",
+        "role": ""
+      },
+      {
+        "schemaVersion": 1,
+        "id": "schreier-cw",
+        "role": ""
+      },
+      {
+        "schemaVersion": 1,
+        "id": "meurig-draig",
+        "role": ""
+      },
+      {
+        "schemaVersion": 1,
+        "id": "odyar-draig",
+        "role": ""
+      },
+      {
+        "schemaVersion": 1,
+        "id": "sir-egon-gafyr",
+        "role": ""
+      }
+    ],
+    "pages": [
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "0",
+        "image": "https://i.imgur.com/qTE9DA8.jpeg",
+        "pageTitle": "I. — Der Thronsaal",
+        "description": "In der Grafschaft Celtigerns Wacht, wie in allen Landen des Königreiches Cenyr, gilt ein Gesetz, das König Parzifal I. Pendrag in den frühen Jahren seiner Herrschaft erließ: Jeder Landadlige ist verpflichtet, seinen Hof am letzten Tag der Woche dem Volk zu öffnen. Kein Tor bleibt geschlossen, kein Kanzler darf abweisen, keine Entschuldigung gilt — das Gesetz ist klar. Wer Land besitzt, schuldet denen, die auf ihm leben, Gehör.<br><br>Der Erlass trägt den Namen <em>Offenes Gericht</em> und ist einer der wenigen königlichen Beschlüsse, der in der Bevölkerung Cenyrs ohne Widerstand angenommen wurde — denn er kostet den einfachen Mann nichts und gibt ihm das Wertvollste, was ein Untertan begehren kann: die Möglichkeit, vor seinem Herrn zu stehen und zu sprechen.<br><br>Was an diesen Tagen verhandelt wird, ist so verschieden wie die Menschen, die durch das Tor treten. Grenzstreitigkeiten zwischen Bauern. Gnadengesuche von Verurteilten. Handelsanfragen von Kaufleuten. Klagen gegen Ritter, die ihren Stand missbraucht haben. Bitten um Hilfe in Notzeiten. Manchmal auch nichts weiter als der Wunsch, gehört zu werden — und das allein ist zuweilen mehr wert als jeder Urteilsspruch.<br><br>Heute ist dieser Tag. Der Thronsaal der Grafschaft Celtigerns Wacht liegt noch im Morgenfrieden. Die Wachen haben ihre Posten eingenommen, links und rechts entlang des roten Teppichs, der vom Eingangstor bis zur Thronstufe führt. Kerzen brennen in den Wandleuchtern. Das Banner des Hauses Draig hängt still.",
+        "quote": "Wer Land besitzt, schuldet denen, die auf ihm leben, Gehör.",
+        "quoteBy": "— Aus dem Erlass des Offenen Gerichts, Parzifal I. Pendrag",
+        "stats": [
+          [
+            "Grafschaft",
+            "Celtigerns Wacht · Königreich Cenyr"
+          ],
+          [
+            "Gesetz",
+            "Offenes Gericht — Erlass Parzifals I. Pendrag"
+          ],
+          [
+            "Pflicht",
+            "Jeder Landadlige öffnet seinen Hof am letzten Wochentag"
+          ],
+          [
+            "Themen",
+            "Grenzstreitigkeiten · Gnadengesuche · Verträge · Klagen"
+          ],
+          [
+            "Vorsitz heute",
+            "Gräfin Gwendolyn Draig, geb. Aderyn"
+          ],
+          [
+            "Berater",
+            "Meurig Draig · Justiziar · Odyar Draig · Kämmerer"
+          ]
+        ],
+        "sceneBlocks": [
+          {
+            "type": "intro",
+            "text": "Der Thronsaal der Grafschaft Celtigerns Wacht. Morgen. Der letzte Tag der Woche."
+          },
+          {
+            "type": "action",
+            "text": "Die großen Holztore stehen noch geschlossen. Dahinter, auf dem Platz vor der Burg, hat sich bereits eine Schlange gebildet — Bauern mit Hüten in den Händen, ein Händler mit einem Lederbeutel voller Schriftstücke, ein alter Mann der sich auf einen Stab stützt, eine Frau die ein Kind an der Hand hält. Sie alle warten. Sie alle kennen das Gesetz."
+          },
+          {
+            "type": "action",
+            "text": "Im Inneren nehmen die Wachen der Draig-Garde ihre Posten ein — je zehn Mann links und rechts entlang des roten Teppichs, Speere aufrecht, Blicke geradeaus. Ein Diener zündet die letzten Kerzen an. Ein anderer rollt eine Liste aus."
+          },
+          {
+            "type": "action",
+            "text": "Dann öffnen sich die Tore."
+          }
+        ]
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "1",
+        "image": "https://i.imgur.com/bzSqbN1.jpeg",
+        "pageTitle": "II. — Die Sitzung beginnt",
+        "description": "",
+        "sceneBlocks": [
+          {
+            "type": "intro",
+            "text": "Die Schlange der Bittsteller füllt langsam den Saal. Wachen halten die Abstände. Der Schreier tritt vor den Thron."
+          },
+          {
+            "type": "action",
+            "text": "Ein kräftiger Mann in Livree der Grafschaft tritt auf das Podest vor der Thronstufe und hebt seinen Stab."
+          },
+          {
+            "type": "speech",
+            "side": "left",
+            "name": "Schreier",
+            "avatar": "https://i.imgur.com/40xOUkz.png",
+            "text": "Im Namen des Grafen Galahad Draig, Herr der Grafschaft Celtigerns Wacht, Vasall der Krone Cenyrs — eröffnet seine Gräfin Gwendolyn Draig, geboren Aderyn, die heutige Sitzung des Offenen Gerichts. Sie spricht mit der Stimme des Grafen und ihrem Urteil ist Folge zu leisten. Zur Seite stehen ihr Justiziar Meurig Draig und Kämmerer Odyar Draig. Die Sitzung ist eröffnet."
+          },
+          {
+            "type": "action",
+            "text": "Der Stab trifft dreimal auf den Boden. Stille im Saal."
+          },
+          {
+            "type": "action",
+            "text": "Gwendolyn Draig nimmt den Thron ein — ruhig, ohne Eile, den Blick auf die Schlange vor ihr gerichtet. Zu ihrer Rechten stellt sich Meurig auf, die Hände hinter dem Rücken, das Gesicht ohne Regung. Zu ihrer Linken Odyar, eine lederne Mappe bereits aufgeschlagen."
+          },
+          {
+            "type": "speech",
+            "side": "right",
+            "name": "Gwendolyn Draig",
+            "avatar": "https://i.imgur.com/ZX7jU9h.png",
+            "text": "Schreier — den Ersten."
+          },
+          {
+            "type": "action",
+            "text": "Die Schlange setzt sich in Bewegung. Der erste Bittsteller tritt vor."
+          }
+        ]
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "2",
+        "image": "https://i.imgur.com/V7yIvsr.jpeg",
+        "pageTitle": "III. — Der Ritter, der Knecht und der Geldverleiher",
+        "sessionPage": true,
+        "sessionIntro": "Der erste Fall des Tages tritt vor den Thron. Noch ist kein Wort gefallen, nur das Rascheln von Stoff, das Klacken von Stiefeln und der Blick der Gräfin auf den nächsten Bittsteller.",
+        "sessionHint": "Führe hier das erste Bittgesuch als Szene fort.",
+        "sessionEmptyTitle": "Die erste Anhörung wartet",
+        "sessionEmptyText": "Noch ist der Saal still. Lass Gräfin, Schreier, Meurig, Odyar, Egon oder eigene Figuren den ersten Fall ausspielen.",
+        "sessionDateAleria": {
+          "year": null,
+          "month": null,
+          "day": null
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "3",
+        "image": "https://i.imgur.com/HNdY6x5.png",
+        "pageTitle": "IV. — Die Bradrhith",
+        "description": "",
+        "imageTall": true,
+        "sessionPage": true,
+        "sessionIntro": "Das nächste Gesuch wird aufgerufen. Stimmen hallen durch den Saal, während Schreiber, Wachen und Hofbeamte auf das neue Anliegen reagieren.",
+        "sessionHint": "Führe hier das zweite Bittgesuch als Szene fort.",
+        "sessionEmptyTitle": "Die zweite Anhörung ist offen",
+        "sessionEmptyText": "Hier kann der nächste Fall beginnen — als Rollenspielszene, Verhandlung oder kurzer Schlagabtausch vor dem Gericht.",
+        "sessionDateAleria": {
+          "year": null,
+          "month": null,
+          "day": null
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "5",
+        "image": "https://i.imgur.com/XTL0ZtE.png",
+        "pageTitle": "V. — Der Prinz der sich nicht Traut.",
+        "sessionPage": true,
+        "sessionIntro": "Die Sitzung schreitet voran. Müdigkeit liegt noch fern, doch jede neue Bitte verändert die Stimmung am Hof ein wenig.",
+        "sessionHint": "Führe hier das dritte Bittgesuch als Szene fort.",
+        "sessionEmptyTitle": "Die dritte Anhörung schweigt noch",
+        "sessionEmptyText": "Diese Sitzung ist bereit für ihren ersten Beitrag. Lass Figuren auftreten, widersprechen, urteilen oder das Geschehen kommentieren.",
+        "sessionDateAleria": {
+          "year": null,
+          "month": null,
+          "day": null
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "p-mqbkcety-hzio4",
+        "image": "https://i.imgur.com/UrJGH1P.png",
+        "imageWidth": 36,
+        "pageTitle": "VI. — Der Schwur der Isobeliten",
+        "description": "",
+        "enableComments": true,
+        "sessionPage": true,
+        "sessionIntro": "Seit der letzten <b>Sitzung </b>ist etwa <b>eine Stunde</b> vergangen. In dieser Zeit genoss der <b>Hof </b>gemeinsam mit seinen angereisten <b>Gästen </b>ein ausgedehntes Bankett, ehe man sich nun wieder in gewohnter Manier im Thronsaal versammelt.<br><!--EndFragment-->",
+        "sessionHint": "Führe diese Szene als Kommentar fort.",
+        "sessionEmptyTitle": "Die Szene ist offen",
+        "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+        "sessionDateAleria": {
+          "year": null,
+          "month": null,
+          "day": null
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "6",
+        "image": "https://i.imgur.com/t7T5c0D.jpeg",
+        "pageTitle": "VII. — Celtigerns Kirchen",
+        "sessionPage": true,
+        "sessionIntro": "Ein weiterer Fall wird vorgetragen. Vielleicht wird es lauter, vielleicht kälter, vielleicht politischer — der Rahmen steht, der Rest ist offen.",
+        "sessionHint": "Führe hier das vierte Bittgesuch als Szene fort.",
+        "sessionEmptyTitle": "Die vierte Anhörung ist noch leer",
+        "sessionEmptyText": "Noch hat niemand gesprochen. Hier kann ein neuer Streitfall, ein Gesuch oder ein Zwischenruf aus dem Saal beginnen.",
+        "sessionDateAleria": {
+          "year": null,
+          "month": null,
+          "day": null
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "7",
+        "image": "https://i.imgur.com/nzl1C2m.png",
+        "pageTitle": "VIII. — Ritter aus Leidenschaft",
+        "sessionPage": true,
+        "sessionIntro": "Der letzte offene Fall dieser Folge wartet. Der Hof ist versammelt, die Rollen stehen bereit, und die Szene kann von hier aus jede Richtung nehmen.",
+        "sessionHint": "Führe hier das fünfte Bittgesuch als Szene fort.",
+        "sessionEmptyTitle": "Die fünfte Anhörung ist bereit",
+        "sessionEmptyText": "Diese Bühne ist offen für den nächsten Fall. Nutze den festen Gerichtscast oder bringe neue Stimmen in den Saal.",
+        "sessionDateAleria": {
+          "year": 1740,
+          "month": 3,
+          "day": 9
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "commentThreadKey": "8",
+        "image": "https://i.imgur.com/PMpBmIi.png",
+        "pageTitle": "IX. — Zwei Seelen auf einer Welle",
+        "sessionPage": true,
+        "sessionIntro": "Noch ein Gesuch für diese Folge wird vorgetragen. Der Saal hat schon vieles gehört, doch ein einziger Fall kann die Stimmung des ganzen Tages noch kippen.",
+        "sessionHint": "Führe hier das sechste Bittgesuch als Szene fort.",
+        "sessionEmptyTitle": "Die sechste Anhörung wartet",
+        "sessionEmptyText": "Hier ist Platz für einen sechsten Fall vor dem Offenen Gericht — ruhig, hitzig, politisch oder ganz persönlich.",
+        "sessionDateAleria": {
+          "year": 1740,
+          "month": 3,
+          "day": 10
+        }
+      }
+    ],
+    "schemaVersion": 1,
+    "multipage": true
+  },
+  "section": {
+    "key": "szenen"
+  }
+}
