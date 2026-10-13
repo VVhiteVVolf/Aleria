@@ -10,7 +10,7 @@ const source = readFileSync(new URL('../modules/loading-screen/loading-screen.js
 const settle = () => new Promise(resolve => setImmediate(resolve));
 class Controller extends AbortController { constructor() { super(); setMaxListeners(30, this.signal); } }
 
-function screen({ reducedMotion = false, artFails = false, withSound = false } = {}) {
+function screen({ reducedMotion = false, artFails = false, withSound = false, deferSound = false } = {}) {
   const window = new EventTarget();
   const document = new EventTarget();
   const timers = new Map();
@@ -51,10 +51,14 @@ function screen({ reducedMotion = false, artFails = false, withSound = false } =
   window.clearTimeout = id => timers.delete(id);
   window.location = { reload() { window.reloaded = true; } };
   class Image { set src(value) { queueMicrotask(() => artFails ? this.onerror() : this.onload()); } }
-  const soundtrack = { starts: 0, toggles: 0, fades: 0,
-    tryAutoplay() { this.starts += 1; }, toggle() { this.toggles += 1; }, fadeOut() { this.fades += 1; }
+  const soundtrack = { starts: 0, toggles: 0, continues: 0,
+    tryAutoplay() { this.starts += 1; }, toggle() { this.toggles += 1; }, continueInAlmanach() { this.continues += 1; }
   };
-  const loadSoundModule = async () => ({ createLoadingScreenSound: () => soundtrack });
+  let finishSound;
+  const loadSoundModule = () => new Promise(resolve => {
+    finishSound = () => resolve({ createLoadingScreenSound: () => soundtrack });
+    if (!deferSound) finishSound();
+  });
   const context = vm.createContext({ window, document, AbortController: Controller, Image, console, loadSoundModule });
   const runnable = withSound ? source.replace(/import\('\.\/loading-screen-sound\.js\?[^']+'\)/, 'loadSoundModule()') : source;
   vm.runInContext(runnable, context);
@@ -68,7 +72,7 @@ function screen({ reducedMotion = false, artFails = false, withSound = false } =
     emit(window, 'almanach:initial-modules-settled', { offline });
     emit(document, 'aleria:characters-changed'); emit(document, 'aleria:creatures-changed');
   }
-  return { window, document, root, content, fields, target, emit, mount, click, tick, ready, timers, soundtrack };
+  return { window, document, root, content, fields, target, emit, mount, click, tick, ready, timers, soundtrack, finishSound: () => finishSound() };
 }
 
 test('the loading screen waits for all real milestones and only exits on user input', async () => {
@@ -130,21 +134,36 @@ test('offline data and decorative image errors do not deadlock the application',
   assert.match(ui.fields.detail.textContent, /Online-Daten/);
 });
 
-test('sound starts on mounting, retries on loading interactions, and fades on entry without restarting', async () => {
+test('sound starts on mounting, retries on loading interactions, and continues on entry without restarting', async () => {
   const ui = screen({ withSound: true }); ui.mount(); await settle();
   assert.equal(ui.soundtrack.starts, 1);
   ui.click();
   assert.equal(ui.soundtrack.starts, 2);
-  assert.equal(ui.soundtrack.fades, 0);
+  assert.equal(ui.soundtrack.continues, 0);
   ui.click(ui.fields.sound);
   assert.equal(ui.soundtrack.toggles, 1);
   assert.equal(ui.soundtrack.starts, 2);
   assert.notEqual(ui.root.dataset.state, 'leaving');
   ui.ready(); ui.click();
   assert.equal(ui.soundtrack.starts, 2);
-  assert.equal(ui.soundtrack.fades, 1);
+  assert.equal(ui.soundtrack.continues, 1);
   ui.tick(380);
   assert.equal(ui.root.removed, true);
+});
+
+test('a delayed music module keeps its manual control after the loading dialog was removed', async () => {
+  const ui = screen({ withSound: true, deferSound: true }); ui.mount(); await settle(); ui.ready();
+  ui.click(); ui.tick(380);
+  assert.equal(ui.root.removed, true);
+  ui.finishSound(); await settle();
+  assert.equal(ui.soundtrack.continues, 1);
+});
+
+test('a delayed music module does not start after navigating away', async () => {
+  const ui = screen({ withSound: true, deferSound: true }); ui.mount(); await settle();
+  ui.emit(ui.window, 'pagehide'); ui.finishSound(); await settle();
+  assert.equal(ui.soundtrack.starts, 0);
+  assert.equal(ui.soundtrack.continues, 0);
 });
 
 function soundEnvironment() {
@@ -164,21 +183,34 @@ function soundEnvironment() {
     setTimeout(fn, delay) { const key = ++id; timers.set(key, { at: now + delay, fn }); return key; },
     clearTimeout(key) { timers.delete(key); }
   });
-  const button = { setAttribute() {}, textContent: '', disabled: false };
+  function element() {
+    const node = new EventTarget();
+    Object.assign(node, { children: [], attrs: new Map(), textContent: '', disabled: false });
+    node.setAttribute = (name, value) => node.attrs.set(name, value);
+    node.remove = () => {
+      if (node.parent) node.parent.children.splice(node.parent.children.indexOf(node), 1);
+      node.parent = null;
+    };
+    node.append = child => { child.remove(); node.children.push(child); child.parent = node; };
+    return node;
+  }
+  const document = { body: element(), createElement: element };
+  platform.document = document;
+  const button = element();
   const sound = createLoadingScreenSound({ button, src: 'music.mp3' }, platform);
   function advance(ms, renderFrames = true) {
     now += ms;
     if (renderFrames) for (const [key, fn] of [...frames]) { frames.delete(key); fn(now); }
     for (const [key, timer] of [...timers]) if (timer.at <= now) { timers.delete(key); timer.fn(); }
   }
-  return { platform, audio, button, sound, advance };
+  return { platform, document, audio, button, sound, advance };
 }
 
 test('blocked autoplay leaves a working music button and can start after a gesture', async () => {
   const env = soundEnvironment(); env.audio.blocked = true;
   assert.equal(await env.sound.tryAutoplay(), false);
   assert.equal(env.button.disabled, false);
-  assert.match(env.button.textContent, /starten/);
+  assert.match(env.button.textContent, /einschalten/);
   env.audio.blocked = false; env.sound.toggle(); await settle(); env.advance(6000);
   assert.equal(env.audio.paused, false);
   assert.equal(env.audio.volume, .55);
@@ -207,7 +239,7 @@ test('automatic gesture retries respect manual muting, while the music button ca
   await env.sound.tryAutoplay(); env.audio.blocked = false;
   await env.sound.tryAutoplay(); env.advance(6000);
   assert.equal(env.audio.paused, false);
-  env.sound.toggle();
+  const stopping = env.sound.toggle(); env.advance(1800); await stopping;
   assert.equal(env.audio.paused, true);
   await env.sound.tryAutoplay();
   assert.equal(env.audio.paused, true);
@@ -221,7 +253,7 @@ test('automatic gesture retries respect manual muting, while the music button ca
 test('a browser pause resets the music control and allows a new user gesture to resume it', async () => {
   const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(2000);
   env.audio.paused = true; env.audio.dispatchEvent(new Event('pause'));
-  assert.match(env.button.textContent, /starten/);
+  assert.match(env.button.textContent, /einschalten/);
   assert.equal(env.audio.volume, 0);
   await env.sound.tryAutoplay(); env.advance(6000);
   assert.equal(env.audio.paused, false);
@@ -229,39 +261,91 @@ test('a browser pause resets the music control and allows a new user gesture to 
   env.sound.destroy();
 });
 
-test('entering fades the actual soundtrack progressively and releases the audio', async () => {
+test('only manual switching fades the actual soundtrack and keeps it available for resuming', async () => {
   const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(6000);
-  const ending = env.sound.fadeOut();
+  const ending = env.sound.toggle();
   env.advance(900);
   assert.ok(env.audio.volume > 0 && env.audio.volume < .55);
   assert.equal(env.audio.paused, false);
   env.advance(900); await ending;
   assert.equal(env.audio.volume, 0);
   assert.equal(env.audio.paused, true);
+  assert.equal(env.audio.released, undefined);
+  assert.equal(env.audio.src, 'music.mp3');
+  env.sound.destroy();
+});
+
+test('entry preserves playback and moves the same working music switch outside the loading dialog', async () => {
+  const env = soundEnvironment();
+  const loading = env.document.createElement('section'); loading.append(env.button);
+  await env.sound.tryAutoplay(); env.advance(2000);
+  const volume = env.audio.volume;
+  env.sound.continueInAlmanach(); env.sound.continueInAlmanach();
+  assert.equal(env.audio.paused, false);
+  assert.equal(env.audio.volume, volume);
+  assert.equal(env.audio.playCalls, 1);
+  assert.equal(loading.children.length, 0);
+  assert.equal(env.document.body.children.length, 1);
+  assert.equal(env.document.body.children[0].children[0], env.button);
+  env.advance(4000);
+  env.button.dispatchEvent(new Event('click')); env.advance(1800); await settle();
+  assert.equal(env.audio.paused, true);
+  assert.equal(env.button.attrs.get('aria-pressed'), 'false');
+  env.button.dispatchEvent(new Event('click')); await settle(); env.advance(6000);
+  assert.equal(env.audio.paused, false);
+  assert.equal(env.button.attrs.get('aria-pressed'), 'true');
+  env.platform.dispatchEvent(new Event('pagehide'));
+  assert.equal(env.audio.paused, true);
   assert.equal(env.audio.released, true);
-  assert.equal(env.audio.src, '');
+  assert.equal(env.document.body.children.length, 0);
+  env.button.dispatchEvent(new Event('click'));
+  assert.equal(env.audio.playCalls, 2);
+});
+
+test('entry can start previously blocked music, but respects a manual mute', async () => {
+  for (const muted of [false, true]) {
+    const env = soundEnvironment(); env.audio.blocked = true; await env.sound.tryAutoplay();
+    env.audio.blocked = false;
+    if (muted) { await env.sound.toggle(); const ending = env.sound.toggle(); env.advance(1800); await ending; }
+    env.sound.continueInAlmanach(); await settle();
+    assert.equal(env.audio.paused, muted);
+    env.sound.destroy();
+  }
+});
+
+test('re-enabling during manual fade-out cancels the old stop without cutting or resetting playback', async () => {
+  const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(6000);
+  const stopping = env.sound.toggle(); env.advance(900);
+  const volume = env.audio.volume;
+  await env.sound.toggle(); await stopping;
+  assert.equal(env.audio.paused, false);
+  assert.equal(env.audio.volume, volume);
+  env.advance(6000);
+  assert.equal(env.audio.volume, .55);
+  env.sound.destroy();
 });
 
 test('the soundtrack stops even if a background tab suspends animation frames', async () => {
   const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(6000);
-  const ending = env.sound.fadeOut(); env.advance(1850, false); await ending;
+  const ending = env.sound.toggle(); env.advance(1850, false); await ending;
   assert.equal(env.audio.paused, true);
   assert.equal(env.audio.volume, 0);
+  env.sound.destroy();
 });
 
 test('page navigation stops music immediately, including during a fade', async () => {
   const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(6000);
-  env.sound.fadeOut(); env.platform.dispatchEvent(new Event('pagehide')); await settle();
+  env.sound.toggle(); env.platform.dispatchEvent(new Event('pagehide')); await settle();
   assert.equal(env.audio.paused, true);
   assert.equal(env.audio.released, true);
 });
 
-test('entering during a pending play request cannot start music after cleanup', async () => {
+test('a pending play request cannot start music after navigation cleanup', async () => {
   const env = soundEnvironment();
   let finishPlay;
   env.audio.play = () => new Promise(resolve => { finishPlay = () => { env.audio.paused = false; resolve(); }; });
   const starting = env.sound.tryAutoplay();
-  await env.sound.fadeOut(); finishPlay(); await starting;
+  env.sound.destroy(); finishPlay(); await starting;
   assert.equal(env.audio.paused, true);
   assert.equal(env.audio.volume, 0);
   assert.equal(env.audio.released, true);

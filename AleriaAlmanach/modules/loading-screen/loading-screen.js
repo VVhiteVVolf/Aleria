@@ -82,7 +82,7 @@
     view.root.dataset.state = 'leaving';
     window.clearTimeout(slowTimer);
     lifetime.abort();
-    void sound?.fadeOut();
+    sound?.continueInAlmanach();
     window.setTimeout(() => {
       restoreContent();
       view.root.remove();
@@ -136,11 +136,18 @@
 
   function loadSound() {
     const button = view.root.querySelector('[data-loading-action="sound"]');
-    import('./loading-screen-sound.js?v=20261013-v2').then(({ createLoadingScreenSound }) => {
-      if (leaving || !view) return;
-      sound = createLoadingScreenSound({ button, src: view.root.dataset.loadingSound });
-      void sound.tryAutoplay();
+    const src = view.root.dataset.loadingSound;
+    const pendingLoad = new AbortController();
+    window.addEventListener('pagehide', () => pendingLoad.abort(), { once: true, signal: pendingLoad.signal });
+    import('./loading-screen-sound.js?v=20261013-v3').then(({ createLoadingScreenSound }) => {
+      const cancelled = pendingLoad.signal.aborted || (!leaving && (!view || view.root.hidden));
+      pendingLoad.abort();
+      if (cancelled) return;
+      sound = createLoadingScreenSound({ button, src });
+      if (leaving) sound.continueInAlmanach();
+      else void sound.tryAutoplay();
     }).catch(error => {
+      pendingLoad.abort();
       button.textContent = '♪ Musik nicht verfügbar';
       button.disabled = true;
       console.warn('Die Ladebildmusik konnte nicht vorbereitet werden:', error);
@@ -193,6 +200,7 @@
       if (root.dataset.loadingSound) loadSound();
       loadArtwork();
     } catch (error) {
+      sound?.destroy();
       restoreContent();
       root.hidden = true;
       lifetime.abort();

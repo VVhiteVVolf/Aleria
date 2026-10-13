@@ -55,11 +55,16 @@ im Kopf der Seite vorgeladen; sobald der Dialog existiert, wird Autoplay versuch
 Bei einer Browsersperre wird der Start bei einer passenden Interaktion im
 Ladebildschirm erneut versucht; zusätzlich bleibt der Musikschalter verfügbar.
 Manuelles Ausschalten wird bei weiteren Interaktionen respektiert.
-Der Ton blendet beim Start aus vollständiger Stille über sechs Sekunden ein und
-beim Betreten über 1800 ms aus.
-Danach werden Wiedergabe, Quelle und Listener vollständig freigegeben. Ein eigener
-Timer stoppt den Ton auch bei angehaltenen Animationsframes in Hintergrundtabs;
-`pagehide` beendet ihn sofort. Musik blockiert keinen Ladefortschritt.
+Der Ton blendet beim Start aus vollständiger Stille über sechs Sekunden ein.
+Auf ausdrücklichen Nutzerwunsch läuft er beim Betreten weiter. Derselbe Schalter
+wird in eine kompakte feste Steuerung unten rechts versetzt; seine Listener und
+das Audioelement gehören weiterhin ausschließlich dem Tonmodul. Nur manuelles
+Ausschalten blendet über 1800 ms aus und pausiert, erneutes Einschalten bleibt
+möglich. Ein eigener Timer beendet das Ausblenden auch bei angehaltenen
+Animationsframes in Hintergrundtabs. `pagehide` stoppt sofort und gibt Quelle,
+Listener und die feste Steuerung vollständig frei. Musik blockiert keinen
+Ladefortschritt. Ein verspätetes Tonmodul wird auch nach dem Eintritt eingebunden,
+nach `pagehide` jedoch nicht mehr gestartet.
 
 Animationen sind pausierbar und starten bei `prefers-reduced-motion` pausiert.
 Tab bleibt im Ladedialog. Das Freigeben selbst startet keine Firebase-Schreiboperation.
