@@ -1,5 +1,5 @@
 // Owns the soundtrack and its control for the lifetime of the Almanach page.
-export function createLoadingScreenSound({ button, src }, environment = window) {
+export function createLoadingScreenSound({ button, control, src }, environment = window) {
   const audio = new environment.Audio(src);
   const lifetime = new AbortController();
   audio.loop = true;
@@ -15,15 +15,17 @@ export function createLoadingScreenSound({ button, src }, environment = window) 
   let frame = null;
   let stopTimer = null;
   let resolveFade = null;
-  let persistentControl = null;
+  let entered = false;
 
   function render() {
     if (destroyed) return;
     const active = !manuallyStopped && (playing || pending);
+    const label = unavailable ? 'Musik nicht verfügbar' : active ? pending ? 'Musik startet … – ausschalten' : 'Musik ausschalten' : 'Musik einschalten';
     button.disabled = unavailable;
-    button.textContent = unavailable ? '♪ Musik nicht verfügbar' : active ? pending ? '♪ Musik startet …' : '♫ Musik ausschalten' : '♪ Musik einschalten';
+    button.setAttribute('data-sound-state', unavailable ? 'unavailable' : active ? pending ? 'pending' : 'playing' : 'muted');
     button.setAttribute('aria-pressed', String(active));
-    button.setAttribute('aria-label', active ? 'Almanach-Musik ausschalten' : 'Almanach-Musik einschalten');
+    button.setAttribute('aria-label', label);
+    button.setAttribute('title', label);
   }
 
   function cancelFade() {
@@ -105,16 +107,12 @@ export function createLoadingScreenSound({ button, src }, environment = window) 
     render();
   }
 
-  function continueInAlmanach() {
-    if (destroyed || persistentControl) return;
-    persistentControl = environment.document.createElement('div');
-    persistentControl.className = 'almanach-sound-control';
-    button.className = 'almanach-sound-control__button';
-    persistentControl.append(button);
-    environment.document.body.append(persistentControl);
+  function enterAlmanach() {
+    if (destroyed || entered) return;
+    entered = true;
+    environment.document.body.append(control);
     button.addEventListener('click', toggle, { signal: lifetime.signal });
-    // Entry is also a user gesture if the browser previously blocked autoplay.
-    void start();
+    return stop();
   }
 
   function destroy() {
@@ -127,7 +125,7 @@ export function createLoadingScreenSound({ button, src }, environment = window) 
     audio.removeAttribute('src');
     audio.load();
     lifetime.abort();
-    persistentControl?.remove();
+    control.remove();
   }
 
   audio.addEventListener('error', () => {
@@ -150,5 +148,5 @@ export function createLoadingScreenSound({ button, src }, environment = window) 
   }, { signal: lifetime.signal });
   environment.addEventListener('pagehide', destroy, { once: true, signal: lifetime.signal });
   render();
-  return Object.freeze({ tryAutoplay: start, toggle, continueInAlmanach, destroy });
+  return Object.freeze({ tryAutoplay: start, toggle, enterAlmanach, destroy });
 }

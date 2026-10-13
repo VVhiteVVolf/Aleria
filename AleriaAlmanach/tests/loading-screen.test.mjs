@@ -35,13 +35,13 @@ function screen({ reducedMotion = false, artFails = false, withSound = false, de
   const content = node();
   const target = node(); target.parent = content;
   content.querySelector = () => target;
-  const names = ['status', 'detail', 'hint', 'recovery', 'enter', 'pause', 'continue', 'progress', 'sound'];
+  const names = ['status', 'detail', 'hint', 'recovery', 'enter', 'pause', 'continue', 'progress', 'sound', 'sound-control'];
   const fields = Object.fromEntries(names.map(name => [name, node(['enter', 'pause', 'continue', 'sound'].includes(name) ? { loadingAction: name } : {})]));
   const steps = ['page', 'shell', 'modules', 'characters', 'creatures', 'art'].map(name => node({ loadingStep: name }));
   for (const field of [...Object.values(fields), ...steps]) field.parent = root;
   root.querySelector = selector => selector === 'progress' ? fields.progress
     : fields[selector.match(/data-loading-(?:action="([^"]+)"|([^\]]+))/)?.slice(1).find(Boolean)] ?? null;
-  root.querySelectorAll = selector => selector === 'button' ? [fields.pause, fields.enter, fields.continue] : steps;
+  root.querySelectorAll = selector => selector === 'button' ? [fields.pause, fields.sound, fields.enter, fields.continue] : steps;
   document.readyState = 'loading';
   document.documentElement = node();
   document.querySelector = selector => selector === '[data-loading-screen]' ? root : content;
@@ -51,12 +51,15 @@ function screen({ reducedMotion = false, artFails = false, withSound = false, de
   window.clearTimeout = id => timers.delete(id);
   window.location = { reload() { window.reloaded = true; } };
   class Image { set src(value) { queueMicrotask(() => artFails ? this.onerror() : this.onload()); } }
-  const soundtrack = { starts: 0, toggles: 0, continues: 0,
-    tryAutoplay() { this.starts += 1; }, toggle() { this.toggles += 1; }, continueInAlmanach() { this.continues += 1; }
+  const soundtrack = { starts: 0, toggles: 0, entries: 0,
+    tryAutoplay() { this.starts += 1; }, toggle() { this.toggles += 1; }, enterAlmanach() { this.entries += 1; }
   };
   let finishSound;
   const loadSoundModule = () => new Promise(resolve => {
-    finishSound = () => resolve({ createLoadingScreenSound: () => soundtrack });
+    finishSound = () => resolve({ createLoadingScreenSound: options => {
+      assert.equal(options.control, fields['sound-control']);
+      return soundtrack;
+    } });
     if (!deferSound) finishSound();
   });
   const context = vm.createContext({ window, document, AbortController: Controller, Image, console, loadSoundModule });
@@ -134,19 +137,19 @@ test('offline data and decorative image errors do not deadlock the application',
   assert.match(ui.fields.detail.textContent, /Online-Daten/);
 });
 
-test('sound starts on mounting, retries on loading interactions, and continues on entry without restarting', async () => {
+test('sound starts on mounting, retries on loading interactions, and receives the entry stop without restarting', async () => {
   const ui = screen({ withSound: true }); ui.mount(); await settle();
   assert.equal(ui.soundtrack.starts, 1);
   ui.click();
   assert.equal(ui.soundtrack.starts, 2);
-  assert.equal(ui.soundtrack.continues, 0);
+  assert.equal(ui.soundtrack.entries, 0);
   ui.click(ui.fields.sound);
   assert.equal(ui.soundtrack.toggles, 1);
   assert.equal(ui.soundtrack.starts, 2);
   assert.notEqual(ui.root.dataset.state, 'leaving');
   ui.ready(); ui.click();
   assert.equal(ui.soundtrack.starts, 2);
-  assert.equal(ui.soundtrack.continues, 1);
+  assert.equal(ui.soundtrack.entries, 1);
   ui.tick(380);
   assert.equal(ui.root.removed, true);
 });
@@ -156,14 +159,15 @@ test('a delayed music module keeps its manual control after the loading dialog w
   ui.click(); ui.tick(380);
   assert.equal(ui.root.removed, true);
   ui.finishSound(); await settle();
-  assert.equal(ui.soundtrack.continues, 1);
+  assert.equal(ui.soundtrack.entries, 1);
+  assert.equal(ui.soundtrack.starts, 0);
 });
 
 test('a delayed music module does not start after navigating away', async () => {
   const ui = screen({ withSound: true, deferSound: true }); ui.mount(); await settle();
   ui.emit(ui.window, 'pagehide'); ui.finishSound(); await settle();
   assert.equal(ui.soundtrack.starts, 0);
-  assert.equal(ui.soundtrack.continues, 0);
+  assert.equal(ui.soundtrack.entries, 0);
 });
 
 function soundEnvironment() {
@@ -197,20 +201,22 @@ function soundEnvironment() {
   const document = { body: element(), createElement: element };
   platform.document = document;
   const button = element();
-  const sound = createLoadingScreenSound({ button, src: 'music.mp3' }, platform);
+  button.textContent = 'existing SVG icon';
+  const control = element(); control.append(button);
+  const sound = createLoadingScreenSound({ button, control, src: 'music.mp3' }, platform);
   function advance(ms, renderFrames = true) {
     now += ms;
     if (renderFrames) for (const [key, fn] of [...frames]) { frames.delete(key); fn(now); }
     for (const [key, timer] of [...timers]) if (timer.at <= now) { timers.delete(key); timer.fn(); }
   }
-  return { platform, document, audio, button, sound, advance };
+  return { platform, document, audio, button, control, sound, advance };
 }
 
 test('blocked autoplay leaves a working music button and can start after a gesture', async () => {
   const env = soundEnvironment(); env.audio.blocked = true;
   assert.equal(await env.sound.tryAutoplay(), false);
   assert.equal(env.button.disabled, false);
-  assert.match(env.button.textContent, /einschalten/);
+  assert.match(env.button.attrs.get('aria-label'), /einschalten/);
   env.audio.blocked = false; env.sound.toggle(); await settle(); env.advance(6000);
   assert.equal(env.audio.paused, false);
   assert.equal(env.audio.volume, .55);
@@ -253,7 +259,7 @@ test('automatic gesture retries respect manual muting, while the music button ca
 test('a browser pause resets the music control and allows a new user gesture to resume it', async () => {
   const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(2000);
   env.audio.paused = true; env.audio.dispatchEvent(new Event('pause'));
-  assert.match(env.button.textContent, /einschalten/);
+  assert.match(env.button.attrs.get('aria-label'), /einschalten/);
   assert.equal(env.audio.volume, 0);
   await env.sound.tryAutoplay(); env.advance(6000);
   assert.equal(env.audio.paused, false);
@@ -261,7 +267,7 @@ test('a browser pause resets the music control and allows a new user gesture to 
   env.sound.destroy();
 });
 
-test('only manual switching fades the actual soundtrack and keeps it available for resuming', async () => {
+test('manual switching fades the actual soundtrack and keeps it available for resuming', async () => {
   const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(6000);
   const ending = env.sound.toggle();
   env.advance(900);
@@ -275,22 +281,28 @@ test('only manual switching fades the actual soundtrack and keeps it available f
   env.sound.destroy();
 });
 
-test('entry preserves playback and moves the same working music switch outside the loading dialog', async () => {
+test('entry fades the soundtrack automatically and retains the same accessible icon outside the loading dialog', async () => {
   const env = soundEnvironment();
-  const loading = env.document.createElement('section'); loading.append(env.button);
+  const loading = env.document.createElement('section'); loading.append(env.control);
   await env.sound.tryAutoplay(); env.advance(2000);
   const volume = env.audio.volume;
-  env.sound.continueInAlmanach(); env.sound.continueInAlmanach();
+  const ending = env.sound.enterAlmanach(); env.sound.enterAlmanach();
   assert.equal(env.audio.paused, false);
   assert.equal(env.audio.volume, volume);
   assert.equal(env.audio.playCalls, 1);
   assert.equal(loading.children.length, 0);
   assert.equal(env.document.body.children.length, 1);
   assert.equal(env.document.body.children[0].children[0], env.button);
-  env.advance(4000);
-  env.button.dispatchEvent(new Event('click')); env.advance(1800); await settle();
+  env.advance(900);
+  assert.ok(env.audio.volume > 0 && env.audio.volume < volume);
+  assert.equal(env.audio.paused, false);
+  env.advance(900); await ending;
   assert.equal(env.audio.paused, true);
+  assert.equal(env.audio.volume, 0);
   assert.equal(env.button.attrs.get('aria-pressed'), 'false');
+  assert.equal(env.button.attrs.get('data-sound-state'), 'muted');
+  assert.match(env.button.attrs.get('aria-label'), /einschalten/);
+  assert.equal(env.button.textContent, 'existing SVG icon');
   env.button.dispatchEvent(new Event('click')); await settle(); env.advance(6000);
   assert.equal(env.audio.paused, false);
   assert.equal(env.button.attrs.get('aria-pressed'), 'true');
@@ -302,15 +314,29 @@ test('entry preserves playback and moves the same working music switch outside t
   assert.equal(env.audio.playCalls, 2);
 });
 
-test('entry can start previously blocked music, but respects a manual mute', async () => {
+test('entry never starts previously blocked or manually muted music', async () => {
   for (const muted of [false, true]) {
     const env = soundEnvironment(); env.audio.blocked = true; await env.sound.tryAutoplay();
     env.audio.blocked = false;
     if (muted) { await env.sound.toggle(); const ending = env.sound.toggle(); env.advance(1800); await ending; }
-    env.sound.continueInAlmanach(); await settle();
-    assert.equal(env.audio.paused, muted);
+    const playCalls = env.audio.playCalls;
+    await env.sound.enterAlmanach(); await env.sound.tryAutoplay();
+    assert.equal(env.audio.paused, true);
+    assert.equal(env.audio.playCalls, playCalls);
     env.sound.destroy();
   }
+});
+
+test('entry during a pending autoplay request cancels it without late playback', async () => {
+  const env = soundEnvironment();
+  let finishPlay;
+  env.audio.play = () => new Promise(resolve => { finishPlay = () => { env.audio.paused = false; resolve(); }; });
+  const starting = env.sound.tryAutoplay();
+  await env.sound.enterAlmanach(); finishPlay(); await starting;
+  assert.equal(env.audio.paused, true);
+  assert.equal(env.audio.volume, 0);
+  assert.equal(env.button.attrs.get('data-sound-state'), 'muted');
+  env.sound.destroy();
 });
 
 test('re-enabling during manual fade-out cancels the old stop without cutting or resetting playback', async () => {
@@ -325,9 +351,9 @@ test('re-enabling during manual fade-out cancels the old stop without cutting or
   env.sound.destroy();
 });
 
-test('the soundtrack stops even if a background tab suspends animation frames', async () => {
+test('entry stops the soundtrack even if a background tab suspends animation frames', async () => {
   const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(6000);
-  const ending = env.sound.toggle(); env.advance(1850, false); await ending;
+  const ending = env.sound.enterAlmanach(); env.advance(1850, false); await ending;
   assert.equal(env.audio.paused, true);
   assert.equal(env.audio.volume, 0);
   env.sound.destroy();

@@ -82,7 +82,7 @@
     view.root.dataset.state = 'leaving';
     window.clearTimeout(slowTimer);
     lifetime.abort();
-    sound?.continueInAlmanach();
+    void sound?.enterAlmanach();
     window.setTimeout(() => {
       restoreContent();
       view.root.remove();
@@ -136,19 +136,22 @@
 
   function loadSound() {
     const button = view.root.querySelector('[data-loading-action="sound"]');
+    const control = view.root.querySelector('[data-loading-sound-control]');
     const src = view.root.dataset.loadingSound;
     const pendingLoad = new AbortController();
     window.addEventListener('pagehide', () => pendingLoad.abort(), { once: true, signal: pendingLoad.signal });
-    import('./loading-screen-sound.js?v=20261013-v3').then(({ createLoadingScreenSound }) => {
+    import('./loading-screen-sound.js?v=20261013-v4').then(({ createLoadingScreenSound }) => {
       const cancelled = pendingLoad.signal.aborted || (!leaving && (!view || view.root.hidden));
       pendingLoad.abort();
       if (cancelled) return;
-      sound = createLoadingScreenSound({ button, src });
-      if (leaving) sound.continueInAlmanach();
+      sound = createLoadingScreenSound({ button, control, src });
+      if (leaving) void sound.enterAlmanach();
       else void sound.tryAutoplay();
     }).catch(error => {
       pendingLoad.abort();
-      button.textContent = '♪ Musik nicht verfügbar';
+      button.setAttribute('data-sound-state', 'unavailable');
+      button.setAttribute('aria-label', 'Musik nicht verfügbar');
+      button.setAttribute('title', 'Musik nicht verfügbar');
       button.disabled = true;
       console.warn('Die Ladebildmusik konnte nicht vorbereitet werden:', error);
     });

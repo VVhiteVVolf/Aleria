@@ -6,9 +6,9 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>Aleria Almanach</title>
-<link rel="modulepreload" href="./modules/loading-screen/loading-screen-sound.js?v=20261013-v3">
-<script src="./modules/loading-screen/loading-screen.js?v=20261013-v7"></script>
-<link rel="stylesheet" href="./modules/loading-screen/loading-screen.css?v=20261013-v6">
+<link rel="modulepreload" href="./modules/loading-screen/loading-screen-sound.js?v=20261013-v4">
+<script src="./modules/loading-screen/loading-screen.js?v=20261013-v8"></script>
+<link rel="stylesheet" href="./modules/loading-screen/loading-screen.css?v=20261013-v7">
 <link rel="preload" as="image" href="./public/assets/loading-screen/gawain-stand-v4.webp">
 <link rel="preload" as="image" href="./public/assets/loading-screen/freya-stand-v4.webp">
 <link rel="icon" type="image/png" href="../IconOrdner/ReiterIcons/Platzhalter.png">
@@ -482,7 +482,15 @@
   <div class="almanach-loading__topline">
     <span class="almanach-loading__brand">✦ &nbsp; Geschichten aus Aleria</span>
     <div class="almanach-loading__controls">
-      <button class="almanach-loading__pause" type="button" data-loading-action="sound" aria-pressed="false" disabled>♪ Musik vorbereiten …</button>
+      <div class="almanach-sound-control" data-loading-sound-control>
+        <button class="almanach-sound-control__button" type="button" data-loading-action="sound" data-sound-state="pending" aria-pressed="false" aria-label="Musik wird vorbereitet" title="Musik wird vorbereitet" disabled>
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M10 5.5 5.5 9H2.5v6h3l4.5 3.5z" />
+            <g class="almanach-sound-control__waves"><path d="M14 8.5a5 5 0 0 1 0 7M17 5.5a9 9 0 0 1 0 13" /></g>
+            <path class="almanach-sound-control__mute" d="m15 9 6 6m0-6-6 6" />
+          </svg>
+        </button>
+      </div>
       <button class="almanach-loading__pause" type="button" data-loading-action="pause" aria-pressed="false">Ⅱ Animation pausieren</button>
     </div>
   </div>

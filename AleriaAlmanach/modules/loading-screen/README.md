@@ -56,15 +56,18 @@ Bei einer Browsersperre wird der Start bei einer passenden Interaktion im
 Ladebildschirm erneut versucht; zusätzlich bleibt der Musikschalter verfügbar.
 Manuelles Ausschalten wird bei weiteren Interaktionen respektiert.
 Der Ton blendet beim Start aus vollständiger Stille über sechs Sekunden ein.
-Auf ausdrücklichen Nutzerwunsch läuft er beim Betreten weiter. Derselbe Schalter
-wird in eine kompakte feste Steuerung unten rechts versetzt; seine Listener und
-das Audioelement gehören weiterhin ausschließlich dem Tonmodul. Nur manuelles
-Ausschalten blendet über 1800 ms aus und pausiert, erneutes Einschalten bleibt
-möglich. Ein eigener Timer beendet das Ausblenden auch bei angehaltenen
+Beim Betreten blendet er automatisch über 1800 ms aus und pausiert. Der Musikschalter
+ist ein eigenes SVG-Lautsprecher-Icon mit Schallwellen bzw. Stummsymbol. Die runde
+44-Pixel-Trefffläche sitzt von Anfang an per `position: fixed` rechts am Fensterrand,
+oberhalb der Statuszeile, und bewegt sich beim Scrollen nicht mit. Im Ladedialog
+bleibt sie in dessen Fokusbereich; beim Eintritt wechselt derselbe Container direkt
+an den Dokumentkörper. Listener und Audioelement gehören weiterhin ausschließlich
+dem Tonmodul. Manuelles Ausschalten blendet ebenfalls aus; erneutes Einschalten
+bleibt über das Icon möglich. Ein eigener Timer beendet das Ausblenden auch bei angehaltenen
 Animationsframes in Hintergrundtabs. `pagehide` stoppt sofort und gibt Quelle,
 Listener und die feste Steuerung vollständig frei. Musik blockiert keinen
-Ladefortschritt. Ein verspätetes Tonmodul wird auch nach dem Eintritt eingebunden,
-nach `pagehide` jedoch nicht mehr gestartet.
+Ladefortschritt. Ein verspätetes Tonmodul bindet nach dem Eintritt nur das stumme
+Bedienelement ein und startet keine Musik mehr; nach `pagehide` wird es verworfen.
 
 Animationen sind pausierbar und starten bei `prefers-reduced-motion` pausiert.
 Tab bleibt im Ladedialog. Das Freigeben selbst startet keine Firebase-Schreiboperation.
