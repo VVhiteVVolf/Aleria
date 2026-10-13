@@ -1,4 +1,5 @@
 import { describeEncounterOutcome, ENCOUNTER_REASON_LABELS } from '../combat/combat-encounter-outcome.js';
+import { reconcileEncounterSummaryMetrics } from '../combat/combat-encounter-summary.js';
 
 export function escapeEncounterMarkup(value) {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
@@ -7,8 +8,8 @@ export function escapeEncounterMarkup(value) {
 const escape = escapeEncounterMarkup;
 const hp = snapshot => snapshot?.current == null ? 'nicht erfasst' : `${snapshot.current}/${snapshot.maximum ?? '?'}`;
 
-export function renderEncounterSummary(event, { preview = false } = {}) {
-  const summary = event.summary;
+export function renderEncounterSummary(event, { preview = false, comments = [] } = {}) {
+  const summary = reconcileEncounterSummaryMetrics(event, comments);
   const reason = ENCOUNTER_REASON_LABELS[event.endReason] || '';
   const awards = event.experience?.awards || [];
   const rows = (summary?.participants || []).map(participant => `<tr>

@@ -131,6 +131,7 @@ export function advanceConditionForComment(condition = {}, ownerId = '', contrib
 
 export function advanceTemporaryConditionsForComment(states, comment = {}, options = {}) {
   if (!(states instanceof Map)) return states;
+  if (comment.combatEncounter || comment.combatStatus || comment.combatRulesRelease) return states;
   const actors = getCommentActorIds(comment);
   const eligibleByActor = options.conditionIdsByActor instanceof Map ? options.conditionIdsByActor : null;
   states.forEach((state, actorId) => {

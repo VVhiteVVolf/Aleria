@@ -4,11 +4,11 @@ import { grantCriticalTemporaryHitPoints } from './combat-critical-lifecycle.js'
 import { createWeaponDrop } from '../scene-items/scene-items-model.js';
 import { createPositionCondition } from '../combat-styles/martial-position-effects.js';
 import { refreshRuntimeCondition } from '../combat/combat-condition-lifecycle.js';
+import { getStoredCriticalConsequences, getCommentCombatResolutionGroups } from '../combat/combat-resolution-tree.js';
 
-export function createCriticalConsequence(resolution, { encounter, roll, id, actor, target, usedConsequenceKeys } = {}) {
-  const criticalAttack = getCriticalWeaponAttack(resolution);
+export function createCriticalConsequence(resolution, { encounter, roll, id, actor, target, usedConsequenceKeys, attack: selectedAttack } = {}) {
+  const criticalAttack = selectedAttack || getCriticalWeaponAttack(resolution);
   if (encounter?.criticalEffectsVersion !== 1 || !criticalAttack) return null;
-  if (!Number.isInteger(roll) || roll < 1 || roll > CRITICAL_CONSEQUENCE_DIE) throw new Error('Kritischer Nebeneffekt benötigt einen W20-Wert von 1 bis 20.');
   const failure = criticalAttack.criticalFailure === true;
   const key = failure ? `failure:${resolution.actorId}` : `hit:${resolution.actorId}:${resolution.targetId}`;
   if (usedConsequenceKeys?.has(key)) {
@@ -17,6 +17,7 @@ export function createCriticalConsequence(resolution, { encounter, roll, id, act
       : 'Weiterer kritischer Treffer: Kritschaden bleibt gültig; das Nebeneffekt-Limit gegen dieses Ziel ist erreicht.'];
     return null;
   }
+  if (!Number.isInteger(roll) || roll < 1 || roll > CRITICAL_CONSEQUENCE_DIE) throw new Error('Kritischer Nebeneffekt benötigt einen W20-Wert von 1 bis 20.');
   usedConsequenceKeys?.add(key);
   const effect = (failure ? CRITICAL_FAILURE_EFFECTS : CRITICAL_HIT_EFFECTS)[roll - 1];
   const affected = effect.recipient === 'actor' ? actor : target;
@@ -54,19 +55,20 @@ export function createCriticalConsequence(resolution, { encounter, roll, id, act
 // partial post is needed when an early attack disarms someone in a multiattack.
 export function applyCriticalConsequencesForComment(states, comment) {
   const events = [];
-  for (const segment of comment.commentSegments || []) {
-    for (const resolution of segment.combatResolutions || [segment.combatResolution]) {
-      const consequence = resolution?.criticalConsequence;
-      if (!consequence?.condition || !consequence.actorId) continue;
-      const granted = grantCriticalTemporaryHitPoints(states.get(consequence.actorId) || {}, consequence);
-      const state = granted.state;
-      if (granted.event) events.push(granted.event);
-      const conditions = state.temporaryConditions || [];
-      // Same named consequences refresh, rather than accumulating penalties.
-      states.set(consequence.actorId, { ...state, temporaryConditions: granted.condition.stanceGroup
-        ? refreshRuntimeCondition(conditions, granted.condition) : conditions
-        .filter(condition => !condition.criticalConsequence || condition.name !== consequence.condition.name)
-        .concat(granted.condition) });
+  for (const group of getCommentCombatResolutionGroups(comment)) {
+    for (const resolution of group) {
+      for (const consequence of getStoredCriticalConsequences(resolution)) {
+        if (!consequence.condition || !consequence.actorId) continue;
+        const granted = grantCriticalTemporaryHitPoints(states.get(consequence.actorId) || {}, consequence);
+        const state = granted.state;
+        if (granted.event) events.push(granted.event);
+        const conditions = state.temporaryConditions || [];
+        // Same named consequences refresh, rather than accumulating penalties.
+        states.set(consequence.actorId, { ...state, temporaryConditions: granted.condition.stanceGroup
+          ? refreshRuntimeCondition(conditions, granted.condition) : conditions
+          .filter(condition => !condition.criticalConsequence || condition.name !== consequence.condition.name)
+          .concat(granted.condition) });
+      }
     }
   }
   if (comment.combatEncounter?.operation === 'end') states.forEach((state, actorId) => {

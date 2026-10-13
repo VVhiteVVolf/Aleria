@@ -1,6 +1,7 @@
 import { normalizeCombatResourceCosts } from './combat-action-economy.js?v=20260905-resource-balance-v2';
 import { canUseEquippedCombatShield } from './combat-weapon-loadout.js';
 import { normalizeCombatEffects } from './combat-effect-model.js?v=20260928-equipment-art-v4';
+import { getCombatResolutionTree, getCommentCombatResolutionGroups } from './combat-resolution-tree.js';
 
 export const COMBAT_RULE_PHASES = Object.freeze([
   'pre-roll', 'pre-secondary-save', 'post-roll', 'post-hit', 'pre-damage', 'pre-hit-damage', 'on-damaged', 'post-damage',
@@ -399,22 +400,12 @@ export function markCombatRuleApplications(applications = [], usedFrequencyKeys 
 export function deriveCombatRuleFrequencyKeys(comments = []) {
   const keys = new Set();
   (Array.isArray(comments) ? comments : []).forEach(comment => {
-    (Array.isArray(comment?.commentSegments) ? comment.commentSegments : []).forEach(segment => {
-      const resolutions = Array.isArray(segment?.combatResolutions)
-        ? segment.combatResolutions
-        : [segment?.combatResolution];
-      resolutions.forEach(resolution => {
-        // Prepaid counter receipts own their rule ledger. Their once-per-scene/
-        // day uses must survive replay just like the initiating attack's uses.
-        // Counter chains are prohibited, so one explicit nested level suffices.
-        const applications = [resolution, ...(resolution?.counterAttacks || []).map(counter => counter.resolution)]
-          .flatMap(entry => Array.isArray(entry?.ruleApplications) ? entry.ruleApplications : []);
-        (Array.isArray(applications) ? applications : []).forEach(application => {
-          const storedKey = text(application.usedKey, 500);
-          if (storedKey) keys.add(storedKey);
-        });
-      });
-    });
+    for (const root of getCommentCombatResolutionGroups(comment).flat()) for (const { resolution } of getCombatResolutionTree(root)) {
+      for (const application of resolution.ruleApplications || []) {
+        const storedKey = text(application.usedKey, 500);
+        if (storedKey) keys.add(storedKey);
+      }
+    }
   });
   return keys;
 }

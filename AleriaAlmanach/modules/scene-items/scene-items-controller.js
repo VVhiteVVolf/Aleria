@@ -1,4 +1,5 @@
 import { renderSceneItemEvent } from './scene-items-ui.js';
+import { getResolutionSceneItemEvents } from '../combat/combat-resolution-tree.js';
 import { renderSceneItemComposer, mountSceneItemComposer, serializeSceneItemSegment, previewSceneItem, getSceneItemDraftForEditor, refreshSceneItemTemplates } from './scene-items-composer.js?v=20260928-equipment-art-v4';
 window.addEventListener('item-db-store-updated', refreshSceneItemTemplates);
 let dialog;
@@ -33,7 +34,7 @@ function renderDraft(draft) {
   try { return renderSceneItemEvent({ operation: 'place', sceneItemId: 'preview', item: previewSceneItem(draft), text: draft.sceneText || draft.description }); }
   catch { return '<p class="scene-item-help">Ergänze Name und Kurzbeschreibung für die Itemvorschau.</p>'; }
 }
-globalThis.AleriaSceneItems = Object.freeze({ renderEvent: renderSceneItemEvent, renderDraft,
+globalThis.AleriaSceneItems = Object.freeze({ renderEvent: renderSceneItemEvent, getResolutionEvents: getResolutionSceneItemEvents, renderDraft,
   renderComposer: renderSceneItemComposer, mountComposer: mountSceneItemComposer, serializeSegment: serializeSceneItemSegment,
   validateSubmission(segments) { for (const segment of segments) if (segment.kind === 'sceneitem') previewSceneItem(segment.sceneItemDraft); }
 });

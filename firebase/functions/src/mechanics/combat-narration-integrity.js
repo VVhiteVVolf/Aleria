@@ -1,3 +1,5 @@
+import { getAttackSequenceOutcome, getCombatResolutionTree } from '../generated/combat/combat-resolution-tree.js';
+
 function clean(value, maximum = 4000) {
   return String(value || '').replace(/\s+/g, ' ').trim().slice(0, maximum);
 }
@@ -21,10 +23,14 @@ function getNarrativeEffectMode(resolution = {}) {
   return 'attack';
 }
 
-export function buildServerCombatNarration(resolution = {}) {
+function buildPrimaryCombatNarration(resolution = {}) {
   const actor = clean(resolution.actorName, 160) || 'Die handelnde Figur';
   const target = clean(resolution.targetName, 160) || 'das Ziel';
   const attack = resolution.attack || {};
+  const sequence = getAttackSequenceOutcome(resolution);
+  if (sequence.count > 1) return sequence.hits === 0
+    ? `${actor} verfehlt ${target} mit der Angriffsfolge.`
+    : `${actor} führt eine Angriffsfolge gegen ${target} aus; ${sequence.hits < sequence.count ? 'ein Teil der Angriffe findet' : 'die Angriffe finden'} das Ziel.`;
   if (resolution.actionType === 'channeling') {
     const progress = resolution.actorChannelingSnapshot?.after || {};
     return `${actor} kanalisiert ${clean(progress.actionName, 160) || 'die Wirkung'} weiter (${Number(progress.progress) || 0}/${Number(progress.requiredComments) || 0}).`;
@@ -48,23 +54,37 @@ export function buildServerCombatNarration(resolution = {}) {
   return `${actor} trifft ${target}.`;
 }
 
+export function buildServerCombatNarration(resolution = {}) {
+  return getCombatResolutionTree(resolution).map(({ resolution: entry, path }) =>
+    `${path.length ? 'Gegenangriff: ' : ''}${buildPrimaryCombatNarration(entry)}`).join(' ');
+}
+
 export function findCombatNarrationContradictions(resolution = {}, narrationText = '') {
   const text = normalized(narrationText);
   if (!text) return ['empty'];
   const attack = resolution.attack || {};
   const effectMode = getNarrativeEffectMode(resolution);
   const issues = [];
+  const sequence = getAttackSequenceOutcome(resolution);
+  const counterNames = getCombatResolutionTree(resolution).filter(entry => entry.path.length)
+    .map(entry => normalized(entry.resolution.actorName)).filter(Boolean);
+  const attackText = text.split(/(?<=[.!?;])\s+/u).filter(sentence =>
+    !sentence.startsWith('gegenangriff:') && !counterNames.some(name => sentence.startsWith(name))).join(' ');
+  const rolledAttack = ['weapon-attack', 'spell-attack'].includes(resolution.resolutionMode || attack.resolutionMode);
   if (/\b(?:stirbt|stirbt\s+sofort|tot|tötet|enthauptet|verblutet)\b/u.test(text)) issues.push('unconfirmed-death');
   if (/\b(?:flieht|ergibt\s+sich|wird\s+bewusstlos|verliert\s+das\s+bewusstsein)\b/u.test(text)) issues.push('unconfirmed-reaction');
   if (resolution.actionType === 'channeling' && /\b(?:trifft|verfehlt|schaden|heilt|verwundet)\b/u.test(text)) issues.push('premature-channel-effect');
-  if (resolution.actionType !== 'channeling' && effectMode === 'attack' && attack.hit === false
-    && /\b(?:trifft|verwundet|durchbohrt|zerschmettert)\b/u.test(text)
-    && !/\b(?:trifft\s+nicht|nicht\s+getroffen|kein(?:en|e)?\s+treffer)\b/u.test(text)) {
+  if (resolution.actionType !== 'channeling' && (rolledAttack || effectMode === 'attack') && sequence.hits === 0
+    && /\b(?:trifft|verwundet|durchbohrt|zerschmettert)\b/u.test(attackText)
+    && !/\b(?:trifft\s+nicht|nicht\s+getroffen|kein(?:en|e)?\s+treffer)\b/u.test(attackText)) {
     issues.push('miss-described-as-hit');
   }
-  if (effectMode === 'attack' && attack.hit === true && /\b(?:verfehlt|geht\s+daneben|trifft\s+nicht)\b/u.test(text)) issues.push('hit-described-as-miss');
+  if ((rolledAttack || effectMode === 'attack') && sequence.hits > 0
+    && (sequence.hits === sequence.count ? /\b(?:verfehlt|geht\s+daneben|trifft\s+nicht)\b/u.test(attackText)
+      : /(?:alle\s+angriffe\s+verfehlen|kein(?:er|e)?\s+der\s+angriffe\s+trifft|vollständig\s+ins\s+leere)/u.test(attackText))) issues.push('hit-described-as-miss');
   const statedDamage = [...text.matchAll(/\b(\d{1,6})\s*(?:punkte?\s+)?schaden\b/gu)].map(match => Number(match[1]));
-  if (statedDamage.some(amount => amount !== Number(resolution.damage?.total || 0))) issues.push('wrong-damage-total');
+  const confirmedDamage = getCombatResolutionTree(resolution).map(({ resolution: r }) => Number(r.damage?.total || 0));
+  if (statedDamage.some(amount => !confirmedDamage.includes(amount))) issues.push('wrong-damage-total');
   return [...new Set(issues)];
 }
 

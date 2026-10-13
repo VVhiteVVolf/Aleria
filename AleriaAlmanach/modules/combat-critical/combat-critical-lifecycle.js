@@ -30,7 +30,8 @@ export function beginCriticalContribution(states, comment) {
 
 export function expireCriticalTemporaryHitPoints(states, comment, previousIds = criticalConditionIds(states)) {
   const events = [];
-  const contributors = getCommentActorIds(comment);
+  const contributors = comment.combatEncounter || comment.combatStatus || comment.combatRulesRelease || comment.sceneRest
+    ? new Set() : getCommentActorIds(comment);
   for (const [id, state] of states) {
     const expiring = (state.temporaryConditions || []).filter(c => c.criticalTemporaryOwned === true
       && (comment.combatEncounter?.operation === 'end' && c.durationModel?.encounterId === comment.combatEncounter.encounterId

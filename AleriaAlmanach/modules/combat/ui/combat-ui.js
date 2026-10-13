@@ -16,6 +16,8 @@ import { bindTargetPortraitFallback, optionLabel, renderSelectedTargetPortraits,
 import { renderCombatWeaponGrip } from './combat-weapon-grip-view.js';
 import { isSelfTargetAction } from '../combat-action-targeting.js';
 import { renderCounterConsequences } from './combat-counter-view.js';
+import { getStoredCriticalConsequences, getAttackSequenceOutcome } from '../combat-resolution-tree.js';
+import { summarizeRuleEffects } from './combat-rule-presentation.js';
 function escapeHtml(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -193,6 +195,8 @@ export function setCombatResolutionStatus(message, detail = '') {
 }
 
 function getEvaluationLabel(resolution) {
+  const sequence = getAttackSequenceOutcome(resolution);
+  if (sequence.count > 1) return `Angriffsfolge · ${sequence.hits}/${sequence.count} Treffer${sequence.criticalHits ? ' · kritisch' : ''}${sequence.failures ? ' · Patzer' : ''}`;
   const effectTypes = new Set((Array.isArray(resolution.effectResults) ? resolution.effectResults : [])
     .filter(result => result?.applied !== false)
     .map(result => String(result?.effect?.type || '')));
@@ -218,6 +222,8 @@ function getEvaluationLabel(resolution) {
 }
 
 function getEvaluationFallback(resolution) {
+  const sequence = getAttackSequenceOutcome(resolution);
+  if (sequence.count > 1) return `Die Angriffsfolge ist ausgewertet: ${sequence.hits} von ${sequence.count} Angriffen treffen.`;
   const effectTypes = new Set((Array.isArray(resolution.effectResults) ? resolution.effectResults : [])
     .filter(result => result?.applied !== false)
     .map(result => String(result?.effect?.type || '')));
@@ -257,25 +263,6 @@ function getNarrationSourceMeta(narration = {}) {
     return { key: 'system', label: 'Systemtext \u00b7 ohne KI', title: 'AleriaGPT war f\u00fcr diese Auswertung nicht verf\u00fcgbar oder wurde nicht aufgerufen.' };
   }
   return { key: 'stored', label: 'Gespeicherte Auswertung', title: 'Bei dieser \u00e4lteren Auswertung wurde die Textquelle noch nicht gespeichert.' };
-}
-
-function summarizeRuleEffects(effects = {}) {
-  const labels = [
-    ['attackModifier', 'Angriff'], ['defenseModifier', 'Verteidigung'],
-    ['savingThrowModifier', 'Rettung'], ['spellSaveDcModifier', 'Zauber-SG'],
-    ['damageModifier', 'Schaden'], ['damageReduction', 'Schadensreduktion'], ['damageReductionBypass', 'Schutz umgehen']
-  ];
-  const parts = labels
-    .filter(([key]) => Number(effects[key] || 0) !== 0)
-    .map(([key, label]) => `${label} ${Number(effects[key]) > 0 ? '+' : ''}${Number(effects[key])}`);
-  if (effects.rollMode && effects.rollMode !== 'normal') parts.push(effects.rollMode === 'advantage' ? 'Vorteil' : 'Nachteil');
-  if (effects.preventAdvantage) parts.push('Kein Vorteil');
-  if (effects.outcome && effects.outcome !== 'none') parts.push({
-    'force-hit': 'Treffer erzwungen', 'force-miss': 'Fehlschlag erzwungen',
-    'force-critical-hit': 'Kritischer Treffer erzwungen',
-    'force-save-success': 'Rettung erzwungen', 'force-save-failure': 'Rettungsfehlschlag erzwungen'
-  }[effects.outcome] || effects.outcome);
-  return parts.join(' \u00b7 ') || 'Ausl\u00f6ser angewandt';
 }
 
 function renderEffectResult(result = {}) {
@@ -342,9 +329,8 @@ export function renderCombatEvaluation(source = {}) {
     </details>`;
   }
   const attack = resolution.attack;
-  const state = attack.criticalFailure
-    ? 'failure'
-    : (attack.criticalSuccess ? 'critical' : (attack.hit ? 'hit' : 'miss'));
+  const sequence = getAttackSequenceOutcome(resolution);
+  const state = sequence.criticalHits ? 'critical' : sequence.hits ? 'hit' : sequence.failures ? 'failure' : 'miss';
   const narrationMeta = resolution.narration || {};
   const narrationSource = getNarrationSourceMeta(narrationMeta);
   const narration = String(narrationMeta.text || '').trim() || getEvaluationFallback(resolution);
@@ -380,9 +366,11 @@ export function renderCombatEvaluation(source = {}) {
   const secondarySaves = (Array.isArray(resolution.secondarySaves) ? resolution.secondarySaves : []).map(save => (
     `<span><b>${escapeHtml(String(save.attributeKey || 'Rettung').toUpperCase())}-Rettung ${escapeHtml(save.total)}</b> gegen SG ${escapeHtml(save.dc)} · ${save.succeeded ? 'gelungen' : 'misslungen'}</span>`
   )).join('');
-  const followUpAttacks = (Array.isArray(resolution.followUpAttacks) ? resolution.followUpAttacks : []).map(followUp => (
-    `<span><b>Folgeangriff ${escapeHtml(followUp.attack?.total ?? '—')}</b> gegen ${escapeHtml(followUp.attack?.targetDefense ?? '—')} · ${followUp.attack?.hit ? `Treffer${followUp.damage ? `, ${escapeHtml(followUp.damage.total)} Schaden` : ''}` : 'verfehlt'}</span>`
-  )).join('');
+  const followUpAttacks = (Array.isArray(resolution.followUpAttacks) ? resolution.followUpAttacks : []).map((followUp, index) => {
+    const followAttack = followUp.attack || {};
+    const outcome = followAttack.criticalFailure ? 'Kritischer Fehlschlag' : followAttack.criticalSuccess ? 'Kritischer Treffer' : followAttack.hit ? 'Treffer' : 'verfehlt';
+    return `<span><b>Folgeangriff ${index + 1}: ${escapeHtml(followAttack.total ?? '—')}</b> gegen ${escapeHtml(followAttack.targetDefense ?? '—')} · ${outcome}${followUp.damage ? `, ${escapeHtml(followUp.damage.total)} Schaden` : ''}${followAttack.diceResults?.length ? ` · W20 [${escapeHtml(followAttack.diceResults.join(', '))}] ${Number(followAttack.modifier) >= 0 ? '+' : ''}${escapeHtml(followAttack.modifier ?? 0)}` : ''}</span>`;
+  }).join('');
   const appliedCondition = resolution.targetConditionSnapshot?.applied?.name
     ? `<span>Zustand: <b>${escapeHtml(resolution.targetConditionSnapshot.applied.name)}</b></span>`
     : '';
@@ -410,9 +398,10 @@ export function renderCombatEvaluation(source = {}) {
         </div>
         ${narration ? `<p>${escapeHtml(narration)}</p>` : ''}
         ${renderCounterConsequences(resolution, { renderEffectResult, summarizeRuleEffects })}
-        ${resolution.criticalConsequence ? `<p class="combat-critical-consequence"><strong>W${resolution.criticalConsequence.version >= 2 ? 20 : 10} · ${escapeHtml(resolution.criticalConsequence.roll)} · ${escapeHtml(resolution.criticalConsequence.name)}</strong><br>${escapeHtml(resolution.criticalConsequence.actorName)}: ${escapeHtml(resolution.criticalConsequence.description)}</p>` : ''}
+        ${getStoredCriticalConsequences(resolution).map(consequence => `<p class="combat-critical-consequence"><strong>W${consequence.version >= 2 ? 20 : 10} · ${escapeHtml(consequence.roll)} · ${escapeHtml(consequence.name)}</strong><br>${escapeHtml(consequence.actorName)}: ${escapeHtml(consequence.description)}</p>`).join('')}
         <div class="combat-evaluation-mechanics">
           <span><b>${escapeHtml(attack.total)}</b> ${rollLabel} · ${escapeHtml(attack.notation || '')}</span>
+          ${attack.diceResults?.length ? `<span>${sequence.count > 1 ? 'Auftakt' : rollLabel}: W20 [${escapeHtml(attack.diceResults.join(', '))}] ${Number(attack.modifier) >= 0 ? '+' : ''}${escapeHtml(attack.modifier ?? 0)} · ${attack.criticalFailure ? 'Kritischer Fehlschlag' : attack.criticalSuccess ? 'Kritischer Treffer' : attack.hit ? 'Treffer' : 'verfehlt'}</span>` : ''}
           <span>gegen <b>${escapeHtml(attack.targetDefense)}</b> ${defenseLabel}</span>
           ${savingThrowMode ? `<span>Rettung ${attack.saveSucceeded ? 'gelungen' : 'misslungen'}${resolution.damage?.halvedBySave ? ' · halber Schaden' : ''}</span>` : ''}
           ${damage}

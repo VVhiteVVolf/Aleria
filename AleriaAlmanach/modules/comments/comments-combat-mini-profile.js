@@ -4,6 +4,7 @@ import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=
 
 const ROOT_SELECTOR = '[data-comment-combat-profile]';
 let activeRoot = null;
+let activeScrollTop = 0;
 let refreshQueued = false;
 const safeId = value => String(value || 'figur').replace(/[^a-zA-Z0-9_-]+/g, '-').slice(0, 90);
 
@@ -30,7 +31,7 @@ function closeProfile(root = activeRoot) {
   if (panel) panel.hidden = true;
   toggle?.setAttribute('aria-expanded', 'false');
   if (toggle) toggle.title = 'Kampfdaten anzeigen';
-  if (root === activeRoot) activeRoot = null;
+  if (root === activeRoot) { activeRoot = null; activeScrollTop = 0; }
 }
 
 function updateProfile() {
@@ -39,16 +40,18 @@ function updateProfile() {
   const options = context(root);
   const profile = globalThis.AleriaCombat?.getProfile?.(options.characterId, options);
   const panel = root.querySelector('[data-comment-combat-profile-panel]');
+  if (!panel) return;
   const history = globalThis.getCachedCommentsForThread?.(options.threadId) || [];
   panel.innerHTML = profile ? renderMiniCombatProfile(profile, root.dataset.combatDisplayName, {
     encounter: getActiveCombatEncounter(history),
     canManage: !!options.threadId && globalThis.getCurrentCommentThread?.()?.kind === 'session'
-  }) : '<p class="comment-combat-profile-empty">Kampfprofil noch nicht verfügbar. Öffne die Anzeige erneut, sobald die Figur geladen ist.</p>';
+  }) : '<p class="comment-combat-profile-empty" role="status">Kampfprofil wird geladen. Die Anzeige aktualisiert sich automatisch.</p>';
 }
 
 function openProfile(root) {
   if (activeRoot && activeRoot !== root) closeProfile();
   activeRoot = root;
+  activeScrollTop = 0;
   updateProfile();
   root.querySelector('[data-comment-combat-profile-panel]').hidden = false;
   root.classList.add('is-profile-open');
@@ -63,19 +66,23 @@ function scheduleRefresh() {
   requestAnimationFrame(() => {
     refreshQueued = false;
     if (!activeRoot) return;
+    const panel = activeRoot.querySelector('[data-comment-combat-profile-panel]');
+    const scroll = activeRoot.isConnected ? panel?.scrollTop || 0 : activeScrollTop;
+    const opened = new Set([...(panel?.querySelectorAll('details[open][data-profile-details-key]') || [])].map(details => details.dataset.profileDetailsKey));
     if (!activeRoot.isConnected) {
       const panelId = activeRoot.querySelector('[data-comment-combat-profile-panel]')?.id;
-      const replacement = document.getElementById(panelId)?.closest(ROOT_SELECTOR);
+      const identity = activeRoot.dataset;
+      const replacement = [...document.querySelectorAll(ROOT_SELECTOR)].find(root =>
+        ['combatActorId', 'combatThreadId', 'combatTimelineCommentId', 'combatTimelineSegmentIndex'].every(key => root.dataset[key] === identity[key]))
+        || document.getElementById(panelId)?.closest(ROOT_SELECTOR);
       activeRoot = null;
       if (replacement) openProfile(replacement);
-      return;
+    } else {
+      updateProfile();
     }
-    const panel = activeRoot.querySelector('[data-comment-combat-profile-panel]');
-    const scroll = panel.scrollTop;
-    const opened = [...panel.querySelectorAll('details')].map(details => details.open);
-    updateProfile();
-    panel.querySelectorAll('details').forEach((details, index) => { details.open = opened[index] || false; });
-    panel.scrollTop = scroll;
+    const refreshed = activeRoot?.querySelector('[data-comment-combat-profile-panel]');
+    refreshed?.querySelectorAll('details[data-profile-details-key]').forEach(details => { details.open = opened.has(details.dataset.profileDetailsKey); });
+    if (refreshed) { refreshed.scrollTop = scroll; activeScrollTop = refreshed.scrollTop; }
   });
 }
 
@@ -94,6 +101,13 @@ document.addEventListener('click', event => {
   }
   if (activeRoot && !activeRoot.contains(event.target) && !event.target.closest('.combat-status-dialog')) closeProfile();
 });
+
+// Detached nodes lose their layout and scroll offset before the comments-updated
+// event arrives. Remember the last visible position while the panel is attached.
+document.addEventListener('scroll', event => {
+  if (activeRoot?.isConnected && event.target?.matches?.('[data-comment-combat-profile-panel]')
+    && activeRoot.contains(event.target)) activeScrollTop = event.target.scrollTop;
+}, true);
 document.addEventListener('keydown', event => {
   if (event.key !== 'Escape' || !activeRoot || document.querySelector('.combat-status-dialog[open]')) return;
   const toggle = activeRoot.querySelector('[data-action="toggle-comment-combat-profile"]');
@@ -105,6 +119,7 @@ document.addEventListener('aleria:comments-updated', event => {
 });
 document.addEventListener('aleria:combat-profile-committed', scheduleRefresh);
 document.addEventListener('aleria:characters-changed', scheduleRefresh);
+document.addEventListener('aleria:creatures-changed', scheduleRefresh);
 document.addEventListener('error', event => {
   const image = event.target;
   if (!image?.matches?.('img[data-combat-image-fallback]') || !image.closest(`${ROOT_SELECTOR}, .combat-status-dialog`)) return;

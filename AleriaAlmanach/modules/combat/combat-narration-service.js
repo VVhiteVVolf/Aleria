@@ -15,6 +15,11 @@ function getNarrativeEffectMode(facts = {}) {
 }
 
 function fallbackNarration(facts = {}) {
+  if (facts.followUpAttacks?.length) {
+    const hits = [facts.attack, ...facts.followUpAttacks.map(entry => entry.attack)].filter(attack => attack?.hit).length;
+    return hits ? `${facts.actor} führt eine Angriffsfolge gegen ${facts.target} aus und findet dabei eine Öffnung.`
+      : `${facts.target} entgeht der Angriffsfolge von ${facts.actor}.`;
+  }
   if (facts.attack?.resolutionMode === 'channeling') {
     const progress = facts.actorChannelingSnapshot?.after;
     return `${facts.actor} kanalisiert ${progress?.actionName || 'die Wirkung'} weiter (${progress?.progress || 0}/${progress?.requiredComments || 0}).`;
@@ -108,7 +113,8 @@ function buildCombatNarrationQuery(facts = {}) {
     'Die Fakten sind unveränderlich. Erfinde keinen weiteren Angriff, keine Flucht, Verstümmelung, Bewusstlosigkeit, dauerhafte Verletzung oder Tod.',
     'Berücksichtige relevante Attribute, Zustände, Marotten, Ausrüstung, Ressourcen, Fähigkeiten, Magie und Notizen aus dem Pflichtkontext. Strukturierte Modifikatoren sind bereits verrechnet und dürfen nicht doppelt zählen.',
     'Greife Stil und Absicht der Kampfbeschreibung auf, ohne deren behauptetes Ergebnis zu übernehmen. Nenne keine Würfel, Formeln oder Zahlen. Ausgabe nur als Erzählertext.',
-    'Beschreibe nur, DASS getroffen/verfehlt wird, nie WO am Körper oder WIE genau - das legen die Spieler selbst in ihren eigenen Beiträgen fest.'
+    'Beschreibe nur, DASS getroffen/verfehlt wird, nie WO am Körper oder WIE genau - das legen die Spieler selbst in ihren eigenen Beiträgen fest.',
+    'Bei Angriffsfolgen alle bestätigten Einzelangriffe berücksichtigen: Ein verfehlter Auftakt bedeutet nicht, dass die gesamte Folge verfehlt. Gegenangriffe mit ihrer eigenen Figur und ihrem eigenen Ergebnis beschreiben.'
   ].join('\n');
   const payload = {
     actor: facts.actor,

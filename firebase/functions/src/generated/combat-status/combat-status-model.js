@@ -50,7 +50,8 @@ export function formatStatusDuration(condition = {}) {
 
 export function getCombatConditionGroups(profile = {}) {
   const temporaryIds = new Set((profile.temporaryConditions || []).map(condition => condition.id));
-  const conditions = (profile.conditions || profile.temporaryConditions || []).filter(condition => condition.active !== false);
+  const conditions = [...new Map([...(profile.conditions || []), ...(profile.temporaryConditions || [])]
+    .map(condition => [condition.id, condition])).values()].filter(condition => condition.active !== false);
   return {
     temporary: conditions.filter(condition => temporaryIds.has(condition.id)),
     permanent: conditions.filter(condition => !temporaryIds.has(condition.id))

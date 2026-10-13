@@ -218,7 +218,7 @@ export function renderCombatEncounterComment(comment = {}, index = 0) {
   return `${divider}<section class="combat-encounter-event" data-operation="${event.operation}">
     <header><img src="${COMBAT_ENCOUNTER_ICON_URL}" alt=""><span>${labels[event.operation]}</span><strong>${escapeMarkup(event.title)}</strong>${comment.id ? `<button type="button" class="combat-encounter-event-edit" data-action="edit-combat-encounter-text" data-comment-id="${escapeMarkup(comment.id)}" data-entry-id="${escapeMarkup(comment.entryId || '')}" data-title="${escapeMarkup(event.title)}" data-body="${escapeMarkup(event.body)}" title="Titel/Text bearbeiten" aria-label="Titel/Text bearbeiten">✎</button><button type="button" class="combat-encounter-event-delete" data-action="undo-mechanical-comment" data-comment-id="${escapeMarkup(comment.id)}" title="Löschen und zurücksetzen" aria-label="Löschen und zurücksetzen">×</button>` : ''}</header>
     ${event.body ? `<p>${escapeMarkup(event.body)}</p>` : ''}
-    ${event.operation === 'end' ? renderEncounterSummary(event) : ''}
+    ${event.operation === 'end' ? renderEncounterSummary(event, { comments: globalThis.getCachedCommentsForThread?.(comment.entryId) || [] }) : ''}
     ${renderRoster(event.participants)}
     ${awards ? `<div class="combat-encounter-awards"><strong>${event.experience.total} EP aus dem Sieg</strong><ul>${awards}</ul></div>` : ''}
     ${event.operation === 'end' && !awards ? '<small>Es wurden keine EP vergeben.</small>' : ''}

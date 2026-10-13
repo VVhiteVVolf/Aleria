@@ -9,6 +9,7 @@ const files = [
   'comments/comment-activity-preview.js',
   'combat-critical/combat-critical-conditions.js',
   'combat-critical/combat-critical-lifecycle.js',
+  'combat-critical/combat-critical-resolution.js',
   'combat/combat-counter-resolution.js',
   'combat/combat-technique-disarm.js',
   'combat/combat-damage-guard.js',

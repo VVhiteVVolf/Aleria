@@ -1,3 +1,5 @@
+import { getCombatResolutionTree, getCommentCombatResolutionGroups } from './combat-resolution-tree.js';
+export { getCommentCombatResolutionGroups as getEncounterResolutionGroups } from './combat-resolution-tree.js';
 // Persisted, bounded factual summaries. No DOM, profile writes or inferred story.
 const number = value => value != null && value !== '' && Number.isFinite(Number(value)) ? Math.max(0, Number(value)) : null;
 const text = (value, max = 180) => String(value || '').trim().slice(0, max);
@@ -32,13 +34,6 @@ export function captureEncounterSnapshot(profile = {}, runtime = {}) {
   });
 }
 
-export function getEncounterResolutionGroups(comment = {}) {
-  const segments = Array.isArray(comment.commentSegments) ? comment.commentSegments : [];
-  const groups = segments.map(segment => (segment.combatResolutions?.length ? segment.combatResolutions : [segment.combatResolution]).filter(Boolean));
-  if (groups.some(group => group.length)) return groups.filter(group => group.length);
-  return comment.combatResolution ? [[comment.combatResolution]] : [];
-}
-
 function addCost(metric, id, name, amount) {
   if (!metric || !(amount > 0)) return;
   const key = text(id);
@@ -47,9 +42,12 @@ function addCost(metric, id, name, amount) {
   metric.costs.set(key, previous);
 }
 
-function addReactionCosts(metrics, resolution, participatingIds) {
+function addReactionCosts(metrics, resolution, participatingIds, seen) {
   for (const snapshot of resolution.ruleResourceSnapshots || []) {
     if (!participatingIds.has(snapshot.sourceActorId)) continue;
+    const key = `${snapshot.sourceActorId}:${snapshot.applicationKey || ''}:${JSON.stringify([snapshot.before, snapshot.after])}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
     for (const before of snapshot.before || []) {
       if (before.scope === 'comment') continue;
       const after = snapshot.after?.find(resource => resource.id === before.id);
@@ -74,24 +72,28 @@ export function buildCombatEncounterSummary({ encounterId, participants = [], co
     }
     if (!inEncounter) continue;
     if (event?.encounterId === encounterId && event.operation === 'end') break;
-    for (const group of getEncounterResolutionGroups(comment)) {
+    for (const group of getCommentCombatResolutionGroups(comment)) {
       const relevant = group.filter(resolution => ids.has(resolution.actorId) || ids.has(resolution.targetId));
       if (!relevant.length) continue;
-      actionCount++;
       const actors = new Set();
-      for (const resolution of relevant) {
+      const reactionCosts = new Set();
+      for (const [rootIndex, root] of relevant.entries()) for (const { resolution, path } of getCombatResolutionTree(root)) {
+        if (!ids.has(resolution.actorId) && !ids.has(resolution.targetId)) continue;
+        const actionKey = `${resolution.actorId}:${path.length ? `counter:${rootIndex}:${path.join('.')}` : 'action'}`;
+        const newAction = !actors.has(actionKey);
+        if (newAction) { actionCount++; actors.add(actionKey); }
         const actor = ids.has(resolution.actorId) ? metrics.get(resolution.actorId) : null;
         if (actor) {
-          if (!actors.has(resolution.actorId)) { actor.actions++; actors.add(resolution.actorId); }
+          if (newAction) actor.actions++;
           actor.damage += number(resolution.damage?.total) || 0;
           for (const cost of resolution.resourceCosts || []) {
             if (cost.scope === 'comment') continue;
             addCost(actor, cost.resourceId, cost.name, number(cost.amount) || 0);
           }
         }
-        addReactionCosts(metrics, resolution, ids);
-        if (resolution.defeat?.occurred || resolution.attack?.criticalSuccess) {
-          highlights.push({ commentId: text(comment.id), actionName: text(resolution.actionName),
+        addReactionCosts(metrics, resolution, ids, reactionCosts);
+        if (resolution.defeat?.occurred || [resolution.attack, ...(resolution.followUpAttacks || []).map(f => f.attack)].some(a => a?.criticalSuccess && a.hit)) {
+          highlights.push({ commentId: text(comment.id), actionName: text(resolution.actionName || resolution.weapon?.name),
             actorName: text(resolution.actorName), targetName: text(resolution.targetName),
             type: resolution.defeat?.occurred ? 'defeat' : 'critical' });
         }
@@ -104,6 +106,18 @@ export function buildCombatEncounterSummary({ encounterId, participants = [], co
     actions: metrics.get(participant.actorId).actions, damage: metrics.get(participant.actorId).damage,
     costs: [...metrics.get(participant.actorId).costs.values()]
   })) });
+}
+
+// Read-only display correction for old bounded summaries. Original snapshots,
+// dice and stored summaries are retained; only confirmed receipt metrics are read.
+export function reconcileEncounterSummaryMetrics(event = {}, comments = []) {
+  if (!event.summary || !comments.some(c => c.combatEncounter?.encounterId === event.encounterId && c.combatEncounter.operation === 'start')) return event.summary;
+  const computed = buildCombatEncounterSummary({ encounterId: event.encounterId, participants: event.participants || [], comments });
+  return { ...event.summary, actionCount: computed.actionCount, highlights: computed.highlights,
+    participants: event.summary.participants.map(participant => {
+      const metric = computed.participants.find(p => p.actorId === participant.actorId);
+      return metric ? { ...participant, actions: metric.actions, damage: metric.damage, costs: metric.costs } : participant;
+    }) };
 }
 
 export function normalizeCombatEncounterSummary(value) {

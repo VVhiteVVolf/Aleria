@@ -270,7 +270,8 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
       reconcileConcentrationConditions(states, { pruneEmpty: true });
       continue;
     }
-    states.forEach((state, actorId) => {
+    // Managing the roster or ending an encounter is not a new contribution.
+    if (!comment.combatEncounter) states.forEach((state, actorId) => {
       if (Array.isArray(state.resources)) {
         states.set(actorId, { ...state, resources: resetCommentScopedResources(state.resources) });
       }

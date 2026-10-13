@@ -1,6 +1,7 @@
 import { getStatusIcon, STATUS_MODIFIERS, STATUS_ROLL_MODES } from './combat-status-catalog.js?v=20260906-effect-rolls-v1';
 import { getRollModeLabel } from '../combat/combat-roll-mode.js?v=20260906-effect-rolls-v1';
 import { formatStatusDuration } from './combat-status-model.js?v=20260906-effect-rolls-v1';
+import { summarizeRuleEffects } from '../combat/ui/combat-rule-presentation.js';
 
 export function escapeCombatMarkup(value) {
   return String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
@@ -15,6 +16,11 @@ export const renderCombatIcon = (source, fallback = '✦') => safeCombatImage(so
   ? `<img src="${e(source)}" data-combat-image-fallback="${e(fallback)}" alt="" loading="lazy" decoding="async">` : `<span class="combat-status-icon-fallback" aria-hidden="true">${e(fallback)}</span>`;
 
 export function renderCombatCondition(condition, { removable = false, temporary = false } = {}) {
+  const rules = (condition.triggerRules || []).filter(rule => rule.enabled !== false)
+    .map(rule => summarizeRuleEffects(rule.effects)).filter(label => label !== 'Auslöser angewandt');
+  const preparation = [condition.blockedResource ? `${({ action: 'Aktion', reaction: 'Reaktion', 'bonus-action': 'Bonusaktion' })[condition.blockedResource] || condition.blockedResource} gesperrt` : '',
+    condition.damageGuard?.charges > 0 ? `Nächster Treffer: −${condition.damageGuard.reduction} Schaden · ${condition.damageGuard.charges} Ladung` : '',
+    condition.counterAttack?.enabled ? 'Einmaliger Konter nach gegnerischem Fehlschlag' : '', ...rules].filter(Boolean).join(' · ');
   const modifiers = [...STATUS_MODIFIERS, ['strength', 'Kraft'], ['movement', 'Bewegung'], ['initiative', 'Initiative']].filter(([key]) => Number(condition.mechanics?.[key]))
     .map(([key, label]) => `${label} ${formatCombatModifier(condition.mechanics[key])}`).join(' · ');
   const rollModes = STATUS_ROLL_MODES.filter(([key]) => ['advantage', 'disadvantage'].includes(condition.mechanics?.[key]))
@@ -25,8 +31,9 @@ export function renderCombatCondition(condition, { removable = false, temporary 
     <span class="comment-combat-condition-icon">${renderCombatIcon(getStatusIcon(condition) || condition.icon)}</span>
     <div><strong>${e(condition.name)}</strong><small>${e(duration)}${condition.ward?.enabled ? ` · ${e(condition.ward.charges)} Abwehrladungen` : ''}</small>
       ${modifiers ? `<small class="comment-combat-condition-modifiers">${e(modifiers)}</small>` : ''}
+      ${preparation ? `<small class="comment-combat-condition-modifiers">${e(preparation)}</small>` : ''}
       ${condition.mechanics?.weaponBonusDamageFormula ? `<small class="comment-combat-condition-modifiers">Waffenschaden +${e(condition.mechanics.weaponBonusDamageFormula.replace(/d/gi, 'W'))}</small>` : ''}
       ${rollModes ? `<small class="comment-combat-condition-modifiers">${e(rollModes)}</small>` : ''}
-      ${condition.description || condition.source ? `<details><summary>Wirkung & Quelle</summary><p>${e(condition.description || '')}</p>${condition.source ? `<p>${e(condition.source)}</p>` : ''}</details>` : ''}
+      ${condition.description || condition.source ? `<details data-profile-details-key="condition:${e(condition.id)}"><summary>Wirkung & Quelle</summary><p>${e(condition.description || '')}</p>${condition.source ? `<p>${e(condition.source)}</p>` : ''}</details>` : ''}
     </div>${removable ? `<button type="button" data-action="remove-comment-combat-condition" data-condition-id="${e(condition.id)}" aria-label="${e(condition.name)} entfernen" title="Effekt entfernen">×</button>` : ''}</li>`;
 }

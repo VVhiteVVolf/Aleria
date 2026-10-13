@@ -63,6 +63,7 @@ import { getCombatSegmentMode, isCombatSegment, getEffectiveCombatSegmentKind } 
 import { createCombatProfileCache } from './combat-profile-cache.js';
 import { getCombatPreviewActorIds, createCombatTargetSummary } from './combat-composer-roster.js?v=20260928-equipment-art-v4';
 import { actionAllowsSelfTarget, getCombatTargetSelection, isSelfTargetAction } from './combat-action-targeting.js';
+import { getSceneCombatDocumentation } from '../combat-status/combat-scene-documentation.js';
 
 const profileResolver = new CombatProfileResolver();
 const resolutionService = new CombatResolutionService(new CombatDiceAdapter());
@@ -742,6 +743,7 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
     rollMode: segment.combatRollMode
   }, {
     container: stage,
+    encounter: stateContext.encounter,
     relationship: getCombatRelationship(actorCharacter, targetCharacter),
     distanceMeters: Number(segment.combatDistanceMeters) || 0,
     ruleSources,
@@ -867,6 +869,7 @@ async function handleSubmission(submission = {}) {
     cachedComments
   );
   const stateContext = {
+    encounter: getActiveCombatEncounter(cachedComments),
     sceneItems: deriveSceneItems(cachedComments),
     storedStates: getStoredCombatStates(submission.threadId || ''),
     workingStates: new Map(),
@@ -997,7 +1000,11 @@ document.addEventListener('input', event => {
 });
 
 let composerRefreshQueued = false;
-for (const name of ['aleria:comments-updated', 'aleria:combat-profile-committed', 'aleria:characters-changed', 'aleria:inventory-use-selection-changed']) document.addEventListener(name, () => {
+for (const name of ['aleria:comments-updated', 'aleria:combat-profile-committed', 'aleria:characters-changed', 'aleria:creatures-changed', 'aleria:inventory-use-selection-changed']) document.addEventListener(name, () => {
+  if (['aleria:combat-profile-committed', 'aleria:characters-changed', 'aleria:creatures-changed'].includes(name)) {
+    resolvedCombatProfileCache.clear();
+    resolvedCombatTargetCache = new WeakMap();
+  }
   if (composerRefreshQueued || !latestComposerContext?.list?.isConnected || latestComposerContext.list.closest('[aria-hidden="true"]')) return;
   composerRefreshQueued = true;
   requestAnimationFrame(() => {
@@ -1011,10 +1018,12 @@ globalThis.AleriaCombat = Object.freeze({
     const character = getCharacterById(characterId);
     if (!character) return null;
     const actorId = String(options.actorId || characterId || '');
-    return resolveActorProfile(character, {
+    const profile = resolveActorProfile(character, {
       actorId, storedStates: getStoredCombatStates(options.threadId || '', options),
       recoveryDayKey: options.threadId && !options.timelineCommentId ? getCombatRecoveryDayKey(options.threadId) : ''
     });
+    return { ...profile, sceneDocumentation: getSceneCombatDocumentation(profile,
+      globalThis.getCachedCommentsForThread?.(options.threadId || '') || [], options.threadId || '') };
   },
   mountComposer(list, context = {}) {
     mountComposers({

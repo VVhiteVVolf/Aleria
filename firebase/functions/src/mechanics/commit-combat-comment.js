@@ -2,7 +2,7 @@ import { prepareCombatEquipment, reserveCombatEquipment } from '../generated/com
 import { prepareCriticalCommentLifecycle } from './critical-comment-lifecycle.js';
 import { getActorsWithCombatPosts } from '../generated/combat/combat-weapon-loadout.js';
 import { randomUUID, randomInt } from 'node:crypto';
-import { createCriticalConsequence } from '../generated/combat-critical/combat-critical-model.js';
+import { attachCriticalConsequences } from '../generated/combat-critical/combat-critical-resolution.js';
 import { CRITICAL_CONSEQUENCE_DIE } from '../generated/combat-critical/combat-critical-catalog.js';
 import { deriveSceneItems, applySceneItemEvent, applyDroppedWeaponsToStates } from '../generated/scene-items/scene-items-model.js';
 import { applySceneItemInteraction } from '../generated/scene-items/scene-item-interaction.js';
@@ -212,7 +212,7 @@ export async function commitCombatCommentOperation(request, {
   const metadata = clonePayload(payload.metadata);
   const entries = combatSegments(metadata);
   // Stable across Firestore retries, never chosen by the submitting browser.
-  const criticalRolls = new Map(entries.map(entry => [`${entry.index}:${entry.targetIndex}`, rollCritical()]));
+  const criticalRolls = new Map();
   const inventoryEntries = inventorySegments(metadata);
   const skillEntries = skillSegments(metadata);
   if (!entryId || !text || (!entries.length && !inventoryEntries.length && !skillEntries.length)) {
@@ -474,6 +474,7 @@ export async function commitCombatCommentOperation(request, {
         description: String(segment.text || submitted.originalDescription || ''),
         rollMode: String(segment.combatAction?.rollMode || submitted.attack?.rollMode || 'normal')
       }, {
+        encounter,
         relationship: relationshipForActors(actorRecord, targetRecord, submitted.actorId, submitted.targetId, sceneActorTeams),
         distanceMeters,
         ruleSources,
@@ -489,12 +490,17 @@ export async function commitCombatCommentOperation(request, {
       resolution.multiTargetCount = targetCount;
       usedRuleFrequencyKeys = new Set(resolution.usedRuleFrequencyKeys || []);
       resolution.resolutionId = randomUUID();
-      const consequence = createCriticalConsequence(resolution, { encounter, usedConsequenceKeys,
-        roll: criticalRolls.get(`${index}:${targetIndex}`), id: `${commentRef.id}:${index}:${targetIndex}`,
+      const consequences = attachCriticalConsequences(resolution, { encounter, usedConsequenceKeys,
+        rollFor({ path, index: attackIndex }) {
+          const key = `${index}:${targetIndex}:${path.join('.')}:${attackIndex}`;
+          if (!criticalRolls.has(key)) criticalRolls.set(key, rollCritical());
+          return criticalRolls.get(key);
+        }, id: `${commentRef.id}:${index}:${targetIndex}`,
         actor: { ...actor, weaponUnavailable: actor.weaponUnavailable || pendingWeaponDrops.has(dropKey(actor)) },
         target: { ...target, weaponUnavailable: target.weaponUnavailable || pendingWeaponDrops.has(dropKey(target)) } });
-      if (consequence) resolution.criticalConsequence = consequence;
-      if (consequence?.sceneItemEvent) pendingWeaponDrops.add(`${consequence.sceneItemEvent.sourceActorId}:${consequence.sceneItemEvent.item.id}`);
+      for (const consequence of consequences) if (consequence.sceneItemEvent) {
+        pendingWeaponDrops.add(`${consequence.sceneItemEvent.sourceActorId}:${consequence.sceneItemEvent.item.id}`);
+      }
       resolution.serverValidated = true;
       resolution.validatedAt = new Date(nowClient).toISOString();
       resolution.narration = null;

@@ -6,6 +6,7 @@ import {
 import { normalizeEncounterSnapshot, normalizeCombatEncounterSummary, getEncounterResolutionGroups } from './combat-encounter-summary.js';
 import { ENCOUNTER_TYPE_LABELS, ENCOUNTER_OUTCOME_LABELS, ENCOUNTER_REASON_LABELS } from './combat-encounter-outcome.js';
 import { getCombatRulesRelease } from './combat-rules-release.js';
+import { getCombatResolutionTree } from './combat-resolution-tree.js';
 
 export const COMBAT_ENCOUNTER_EVENT_KIND = 'combat-encounter-event';
 export const COMBAT_ENCOUNTER_SCHEMA_VERSION = 2;
@@ -174,7 +175,8 @@ export function deriveCombatEncounterState(comments = []) {
       applyCombatResolutionToEncounters(encounters, { targetId: event.actorId,
         targetSnapshot: { hitPointsBefore: event.before?.current, hitPointsAfter: event.after?.current } });
     }
-    getCommentCombatResolutions(comment).forEach(resolution => applyCombatResolutionToEncounters(encounters, resolution));
+    getCommentCombatResolutions(comment).flatMap(getCombatResolutionTree)
+      .forEach(({ resolution }) => applyCombatResolutionToEncounters(encounters, resolution));
     // Conservatively invalidate an open preview after any further mechanical
     // contribution in the scene, including rests and resource use.
     if (!isCombatEncounterComment(comment) && !comment.importedHistoricalMechanics && (comment.serverValidatedMechanics || comment.serverCommitted || getCommentCombatResolutions(comment).length)) {

@@ -6,8 +6,13 @@ import { undoMechanicalCommentOperation } from '../src/mechanics/commit-undo-mec
 import { deriveSceneItems } from '../src/generated/scene-items/scene-items-model.js';
 import { findLaterMechanicalDependency } from '../src/mechanics/mechanical-comment-dependencies.js';
 import { commitNarrativeCommentOperation } from '../src/comments/commit-narrative-comment.js';
-import { deriveCombatStateFromComments } from '../src/generated/combat/combat-state-model.js';
+import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../src/generated/combat/combat-state-model.js';
 import { getActiveCombatEncounter } from '../src/generated/combat/combat-encounter-model.js';
+import { resolveCombatProfile } from '../../../AleriaAlmanach/modules/combat/combat-profile-resolver.js';
+import { CombatResolutionService } from '../../../AleriaAlmanach/modules/combat/combat-resolution-service.js';
+import { receipts } from '../../../AleriaAlmanach/tests/fixtures/jungdrache-fixtures.mjs';
+import { readFile } from 'node:fs/promises';
+import { getStoredCriticalConsequences } from '../src/generated/combat/combat-resolution-tree.js';
 
 const copy = value => value == null ? value : JSON.parse(JSON.stringify(value));
 function database(initial) {
@@ -105,6 +110,85 @@ test('critical HP loss at zero prevents further attacks and records defeat on th
  assert.equal(getActiveCombatEncounter(records(db)).participants.get('actor').status,'defeated');
 });
 const records=db=>[...db.data].filter(([key])=>key.startsWith('comments/')).map(([key,value])=>({id:key.split('/').at(-1),...value})).sort((a,b)=>a.orderKey-b.orderKey);
+
+for (const roll of [10, 12, 19]) test(`a critical prepared counter stores its own W20=${roll}, persists to the correct owner and undoes atomically`, async () => {
+  const db = fixture(1);
+  db.data.set('comments/prepared', { entryId: 'scene', orderKey: 2, serverValidatedMechanics: true,
+    combatStatus: { actorId: 'target', operation: 'add', after: { temporaryConditions: [{ id: 'counter', name: 'Vorbereitete Klaue', active: true,
+      durationModel: { kind: 'actor-comments', remainingActorComments: 1 }, counterAttack: { enabled: true } }] } } });
+  const actor = resolveCombatProfile(db.data.get('characters/actor'));
+  const target = overlayCombatHitPointState(resolveCombatProfile(db.data.get('characters/target')), deriveCombatStateFromComments(records(db)).get('target'));
+  const client = await new CombatResolutionService(receipts([2, 20])).resolveAttack({ actor, target });
+  assert.equal(client.counterAttacks[0].resolution.attack.criticalSuccess, true);
+  client.counterAttacks[0].resolution.criticalConsequence = { id: 'forged', roll: 99, actorId: 'actor' };
+  const segment = attack(2); segment.combatResolution = client;
+  const before = copy([...db.data]); let rolls = 0;
+  const saved = await commitCombatCommentOperation(request([segment]), { database: db, rollCritical: () => { rolls++; return roll; }, nowClient: 100 });
+  const root = saved.mechanics.commentSegments[0].combatResolution;
+  const counter = root.counterAttacks[0].resolution;
+  assert.equal(root.criticalConsequence, undefined);
+  assert.equal(counter.criticalConsequence.roll, roll);
+  assert.notEqual(counter.criticalConsequence.id, 'forged');
+  assert.equal(rolls, 1);
+  const replay = deriveCombatStateFromComments(records(db));
+  assert.equal(replay.get('actor').current, db.data.get('characters/actor').combatProfile.hitPoints.current);
+  if (roll === 10) {
+    assert.equal(counter.criticalConsequence.actorId, 'actor');
+    assert.equal(deriveSceneItems(records(db)).size, 1);
+    assert.equal(replay.get('actor').droppedWeapons[0].weaponId, 'sword');
+  }
+  if (roll === 19) {
+    assert.equal(counter.criticalConsequence.actorId, 'target');
+    assert.equal(db.data.get('characters/target').combatProfile.hitPoints.temporary, 2);
+    assert.equal(replay.get('target').temporary, 2);
+  }
+  await undoMechanicalCommentOperation({ auth, data: { entryId: 'scene', commentId: saved.id } }, { database: db });
+  for (const id of ['actor', 'target']) {
+    assert.equal(db.data.get(`characters/${id}`).combatProfile.hitPoints.current, 40);
+    assert.equal(db.data.get(`characters/${id}`).combatProfile.hitPoints.temporary || 0, 0);
+  }
+  assert.deepEqual(db.data.get('comments/start'), before.find(([key]) => key === 'comments/start')[1]);
+  assert.equal(deriveSceneItems(records(db)).size, 0);
+});
+
+test('a second hostile segment against a defeated training target rejects the entire transaction without paying or changing history', async () => {
+  const db = fixture(1);
+  db.data.get('comments/start').combatEncounter.combatType = 'training';
+  db.data.get('characters/target').combatProfile.hitPoints.current = 1;
+  const before = copy([...db.data]);
+  await assert.rejects(commit(db, [attack(15), attack(15)]), /bereits kampfunfähig/);
+  assert.deepEqual(copy([...db.data]), before);
+  const saved = await commit(db, [attack(15)]);
+  assert.equal(db.data.get('characters/target').combatProfile.hitPoints.current, 0);
+  const after = copy([...db.data]);
+  await assert.rejects(commit(db, [attack(15)]), /bereits kampfunfähig/);
+  assert.deepEqual(copy([...db.data]), after);
+  assert.ok(saved.id);
+});
+
+test('the server retains both critical categories in Vier Fänge while drawing only one W20 per allowed category', async () => {
+  const db = fixture(1);
+  const asgeir = JSON.parse(await readFile(new URL('../../../Charakter%20Archiv%20Exporte/asgeir-wolfshorn.json', import.meta.url), 'utf8')).character;
+  asgeir.id = 'actor';
+  asgeir.combatProfile.weapons.forEach(weapon => { weapon.equipped = weapon.id === 'asgeir-axt-rechts'; });
+  asgeir.combatProfile.combat.offHandWeaponId = 'asgeir-axt-links';
+  db.data.set('characters/actor', asgeir);
+  db.data.get('characters/target').combatProfile.hitPoints = { current: 400, maximumOverride: 400 };
+  const actor = resolveCombatProfile(asgeir, { actionId: 'technique:asgeir-vier-faenge' });
+  const target = resolveCombatProfile(db.data.get('characters/target'));
+  const client = await new CombatResolutionService(receipts([20, 1, 20, 1])).resolveAttack({ actor, target });
+  const segment = attack(20); segment.combatAction.profileActionId = actor.profileActionId; segment.combatResolution = client;
+  let rolls = 0;
+  const saved = await commitCombatCommentOperation(request([segment]), { database: db, nowClient: 100, rollCritical: () => { rolls++; return 3; } });
+  const resolution = saved.mechanics.commentSegments[0].combatResolution;
+  assert.equal(rolls, 2);
+  assert.deepEqual(getStoredCriticalConsequences(resolution).map(c => c.kind), ['hit', 'failure']);
+  assert.equal(resolution.followUpAttacks.length, 3);
+  assert.equal(resolution.mechanicNotes.filter(note => /Limit/.test(note)).length, 2);
+  const states = deriveCombatStateFromComments(records(db));
+  assert.ok(states.get('target').temporaryConditions.some(c => c.criticalConsequence));
+  assert.ok(states.get('actor').temporaryConditions.some(c => c.criticalConsequence));
+});
 
 test('published rules activate only future attacks in a legacy duel and protect earlier undo snapshots',async()=>{
   const db=fixture(0);

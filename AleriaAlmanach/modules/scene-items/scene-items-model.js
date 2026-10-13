@@ -1,12 +1,12 @@
+import { getResolutionSceneItemEvents, getCommentCombatResolutionGroups } from '../combat/combat-resolution-tree.js';
 // Scene circulation is an append-only projection, never a second stock ledger.
 export const PICKUP_RESOURCES = Object.freeze(['bonus-action', 'action', 'reaction', 'special-action', 'aura-focus']);
 const copy = value => JSON.parse(JSON.stringify(value));
 export function sceneItemEvents(comment = {}) {
   return [comment.sceneItemEvent, ...(comment.commentSegments || []).flatMap(segment => [
     segment.sceneItemEvent,
-    segment.inventoryUse?.sceneItemEvent,
-    ...(segment.combatResolutions || [segment.combatResolution]).flatMap(result => [result?.criticalConsequence?.sceneItemEvent, ...(result?.sceneItemEvents || [])])
-  ])].filter(Boolean);
+    segment.inventoryUse?.sceneItemEvent
+  ]), ...getCommentCombatResolutionGroups(comment).flat().flatMap(getResolutionSceneItemEvents)].filter(Boolean);
 }
 export function applySceneItemEvent(items, event) {
   if (!event?.sceneItemId) return items;

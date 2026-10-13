@@ -52,8 +52,13 @@ export function isCriticalWeaponResolution(resolution = {}) {
 }
 
 export function getCriticalWeaponAttack(resolution = {}) {
+  return getCriticalWeaponAttacks(resolution)[0]?.attack || null;
+}
+
+export function getCriticalWeaponAttacks(resolution = {}) {
   if (resolution.actionType !== 'attack' || resolution.resolutionMode !== 'weapon-attack'
-    || !['weapon', 'technique'].includes(resolution.profileActionKind)) return null;
+    || !['weapon', 'technique'].includes(resolution.profileActionKind)) return [];
   return [resolution.attack, ...(resolution.followUpAttacks || []).map(followUp => followUp.attack)]
-    .find(attack => attack?.criticalFailure === true || attack?.criticalSuccess === true && attack?.hit === true) || null;
+    .map((attack, index) => ({ attack, index }))
+    .filter(({ attack }) => attack?.criticalFailure === true || attack?.criticalSuccess === true && attack?.hit === true);
 }

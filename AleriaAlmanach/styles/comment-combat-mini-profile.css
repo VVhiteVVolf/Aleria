@@ -119,8 +119,8 @@
   inset: 0;
   z-index: 4;
   box-sizing: border-box;
-  display: grid;
-  grid-template-rows: auto auto auto auto minmax(0, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 0.42rem;
   padding: 1.15rem;
   overflow: hidden;
@@ -132,6 +132,11 @@
     linear-gradient(150deg, #293a33, #172621);
   box-shadow: 0 0 0 3px rgba(161, 143, 96, 0.1), 0 12px 28px rgba(24, 35, 28, 0.24);
 }
+
+.comment-combat-profile-panel > * { flex-shrink: 0; }
+.comment-combat-profile-activity { padding-left: 1.2rem; margin: 0.5rem 0; font-size: 0.8rem; line-height: 1.4; }
+.comment-combat-profile-activity li { margin-block: 0.55rem; }
+.comment-combat-profile-activity small { display: block; color: var(--mini-profile-muted); font-size: 0.72rem; }
 
 .comment-combat-profile-panel[hidden] {
   display: none;
