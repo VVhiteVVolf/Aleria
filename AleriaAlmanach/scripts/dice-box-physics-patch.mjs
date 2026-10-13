@@ -1,4 +1,5 @@
 import { readFile } from 'node:fs/promises';
+import { patchDiceBoxLifecycleSource } from './dice-box-lifecycle-patch.mjs';
 
 const WORKER_SOURCE_PATTERN = /const ml = "([A-Za-z0-9+/=]+)"/;
 const BOUNDARY_FUNCTION_PATTERN = /let me=\[\];const be=\(_,t\)=>\{.*?\},Oe=\(\)=>\{/s;
@@ -63,7 +64,7 @@ export function createDiceBoxPhysicsPlugin() {
     name: 'aleria-dice-box-physics',
     setup(build) {
       build.onLoad({ filter: /[\\/]@3d-dice[\\/]dice-box[\\/]dist[\\/]dice-box\.es\.js$/ }, async args => ({
-        contents: patchDiceBoxPhysicsSource(await readFile(args.path, 'utf8')),
+        contents: patchDiceBoxLifecycleSource(patchDiceBoxPhysicsSource(await readFile(args.path, 'utf8'))),
         loader: 'js'
       }));
     }

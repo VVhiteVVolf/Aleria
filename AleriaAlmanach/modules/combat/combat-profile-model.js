@@ -1,4 +1,5 @@
 import { conditionalWeaponModifier, conditionalSkillModifier, conditionalSaveModifier, personalWeaponAttribute } from './combat-personal-modifiers.js';
+import { isCombatProfileReadModel, freezeCombatProfileReadModel } from './combat-profile-read-model.js';
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
 import { reconcileFrekiTechniques } from '../creatures/catalog/freki-actions.js';
 import { normalizeSpellCatalogReference, resolveCatalogSpellSnapshot } from '../spell-catalog/spell-catalog.js';
@@ -1040,13 +1041,22 @@ export function getAttributeModifier(attribute = {}) {
   return Math.floor(((Number(attribute.score) || 10) - 10) / 2);
 }
 
+export function createCombatProfileReadModel(profile = {}) {
+  if (isCombatProfileReadModel(profile)) return profile;
+  return freezeCombatProfileReadModel({ ...profile, ...sanitizeCharacterCombatProfile(profile) });
+}
+
+function getCalculationProfile(profile) {
+  return isCombatProfileReadModel(profile) ? profile : sanitizeCharacterCombatProfile(profile);
+}
+
 export function getEffectiveCombatLevel(profile = {}) {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   return normalized.progression.level + normalized.progression.specialLevels;
 }
 
 export function getProficiencyBonus(profile = {}) {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   if (normalized.progression.proficiencyBonusOverride != null) return normalized.progression.proficiencyBonusOverride;
   return 2 + Math.floor((getEffectiveCombatLevel(normalized) - 1) / 4);
 }
@@ -1068,7 +1078,7 @@ export function normalizeCombatSpell(value = {}, manaResourceId = 'mana-focus') 
 }
 
 export function getEffectiveCombatAttribute(profile = {}, key = 'strength') {
-  return getAttribute(sanitizeCharacterCombatProfile(profile), key);
+  return getAttribute(getCalculationProfile(profile), key);
 }
 
 export function getCombatEffectAttributeModifier(profile = {}, effect = {}) {
@@ -1132,7 +1142,7 @@ function auraTargetAllowsRelation(target, relation) {
 }
 
 export function getAuraTargetMechanics(profile = {}, context = {}) {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   if (!normalized.aura.enabled) return sanitizeMechanicalModifiers();
   const relation = ['self', 'ally', 'enemy'].includes(context.relation) ? context.relation : 'enemy';
   const distance = context.distanceMeters == null || context.distanceMeters === '' ? null : Number(context.distanceMeters);
@@ -1157,7 +1167,7 @@ function sumMechanicalModifier(profile, key) {
 }
 
 export function getHitPointProgression(profile = {}) {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   const constitutionModifier = getAttributeModifier(getAttribute(normalized, 'constitution'));
   const standard = getStandardHitPointProgression({ ...normalized.hitPoints,
     level: getEffectiveCombatLevel(normalized), constitutionModifier });
@@ -1203,7 +1213,7 @@ function getAppliedDexterityModifier(modifier, mode, cap) {
 }
 
 export function getArmorClass(profile = {}) {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   if (normalized.armorClass.override != null && normalized.armorClass.overrideMode === 'total') {
     return normalized.armorClass.override - getBurningArmorPenalty(normalized);
   }
@@ -1234,7 +1244,7 @@ export function getArmorClass(profile = {}) {
 }
 
 export function getSavingThrowTotal(profile = {}, attributeKey, context = {}) {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   const key = getAttributeKey(attributeKey);
   const save = normalized.savingThrows.find(entry => entry.attributeKey === key);
   const proficiencyMultiplier = save?.expertise ? 2 : (save?.proficient ? 1 : 0);
@@ -1245,7 +1255,7 @@ export function getSavingThrowTotal(profile = {}, attributeKey, context = {}) {
 }
 
 export function getSkillTotal(profile = {}, skillOrId = {}) {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   const skill = typeof skillOrId === 'string'
     ? normalized.skills.find(entry => entry.id === skillOrId)
     : sanitizeSkill(skillOrId);
@@ -1258,7 +1268,7 @@ export function getSkillTotal(profile = {}, skillOrId = {}) {
 }
 
 export function getPassivePerception(profile = {}) {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   const perception = normalized.skills.find(skill => skill.id === 'default-skill-14')
     || normalized.skills.find(skill => /wahrnehm/i.test(skill.name));
   const perceptionTotal = perception
@@ -1274,7 +1284,7 @@ export function getPassivePerception(profile = {}) {
 }
 
 export function getActiveRollModes(profile = {}, key = 'attackRollMode') {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   return collectActiveMechanicalSources(normalized).map(mechanics => mechanics[key]).filter(mode => ROLL_MODES.has(mode) && mode !== 'normal');
 }
 
@@ -1289,7 +1299,7 @@ export function resolveSavingThrowRollMode(profile = {}, attributeKey, requested
 }
 
 export function getSavingThrowRollModes(profile = {}, attributeKey) {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   const key = getAttributeKey(attributeKey);
   const sources = collectActiveMechanicalSources(normalized);
   return sources.flatMap(mechanics => [
@@ -1301,20 +1311,20 @@ export function getSavingThrowRollModes(profile = {}, attributeKey) {
 // Sammelt alle aktiven Bonus-Schadenswürfel-Formeln (z.B. Rage-Schaden), die zusätzlich zur
 // regulären Waffen-/Technikformel gewürfelt werden, sobald ein Treffer bestätigt ist.
 export function getBonusDamageFormulas(profile = {}, { weaponAttack = !['spell', 'prayer', 'song', 'ability', 'consumable'].includes(profile.profileActionKind) } = {}) {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   return collectActiveMechanicalSources(normalized)
     .flatMap(mechanics => [mechanics.bonusDamageFormula, ...(weaponAttack ? [mechanics.weaponBonusDamageFormula] : [])])
     .filter(Boolean);
 }
 
 export function getUniversalDamageBonus(profile = {}) {
-  return collectActiveMechanicalSources(sanitizeCharacterCombatProfile(profile))
+  return collectActiveMechanicalSources(getCalculationProfile(profile))
     .filter(mechanics => mechanics.damageScope === 'all-effects')
     .reduce((total, mechanics) => total + (Number(mechanics.damage) || 0), 0);
 }
 
 export function getWeaponAttackModifier(profile = {}, weaponOrId = {}) {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   const weapon = typeof weaponOrId === 'string'
     ? normalized.weapons.find(entry => entry.id === weaponOrId)
     : sanitizeWeapon(weaponOrId);
@@ -1328,7 +1338,7 @@ export function getWeaponAttackModifier(profile = {}, weaponOrId = {}) {
 }
 
 export function getWeaponDamageModifier(profile = {}, weaponOrId = {}) {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   const weapon = typeof weaponOrId === 'string'
     ? normalized.weapons.find(entry => entry.id === weaponOrId)
     : sanitizeWeapon(weaponOrId);
@@ -1340,7 +1350,7 @@ export function getWeaponDamageModifier(profile = {}, weaponOrId = {}) {
 }
 
 export function getSpellcastingValues(profile = {}) {
-  const normalized = sanitizeCharacterCombatProfile(profile);
+  const normalized = getCalculationProfile(profile);
   const abilityModifier = getAttributeModifier(getAttribute(normalized, normalized.magic.castingAttribute));
   const proficiency = getProficiencyBonus(normalized);
   return {
@@ -1434,14 +1444,15 @@ export function resolveCharacterCombatProfile(character = {}) {
   const activeWeapon = profile.weapons.find(weapon => weapon.equipped) || profile.weapons[0] || sanitizeWeapon({});
   const equippedArmor = profile.armorItems.filter(item => item.equipped);
   const primaryArmor = equippedArmor[0] || profile.armorItems[0] || sanitizeArmor({});
-  const maximumHitPoints = getMaximumHitPoints(profile);
-  const totalDefense = getArmorClass(profile);
-  const spellcasting = getSpellcastingValues(profile);
+  const calculation = createCombatProfileReadModel(profile);
+  const maximumHitPoints = getMaximumHitPoints(calculation);
+  const totalDefense = getArmorClass(calculation);
+  const spellcasting = getSpellcastingValues(calculation);
   const dexterityModifier = getAttributeModifier(getAttribute(profile, 'dexterity'));
   return {
     ...profile,
-    effectiveLevel: getEffectiveCombatLevel(profile),
-    proficiencyBonus: getProficiencyBonus(profile),
+    effectiveLevel: getEffectiveCombatLevel(calculation),
+    proficiencyBonus: getProficiencyBonus(calculation),
     maximumHitPoints,
     currentHitPoints: profile.hitPoints.current ?? maximumHitPoints,
     temporaryHitPoints: profile.hitPoints.temporary,
@@ -1450,11 +1461,11 @@ export function resolveCharacterCombatProfile(character = {}) {
     armorRoutine: getArmorRoutine(profile),
     initiative: dexterityModifier + profile.combat.initiativeBonus + sumMechanicalModifier(profile, 'initiative'),
     movement: Math.max(0, profile.combat.movement + sumMechanicalModifier(profile, 'movement')),
-    passivePerception: getPassivePerception(profile),
+    passivePerception: getPassivePerception(calculation),
     weapon: activeWeapon,
     armor: primaryArmor,
-    attackModifier: getWeaponAttackModifier(profile, activeWeapon),
-    damageModifier: getWeaponDamageModifier(profile, activeWeapon),
+    attackModifier: getWeaponAttackModifier(calculation, activeWeapon),
+    damageModifier: getWeaponDamageModifier(calculation, activeWeapon),
     spellAttackModifier: spellcasting.attack,
     spellSaveDc: spellcasting.saveDc
   };

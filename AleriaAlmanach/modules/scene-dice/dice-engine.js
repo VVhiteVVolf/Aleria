@@ -10,6 +10,7 @@ function getAssetLocation() {
 export class DiceBoxEngine {
   constructor(container, settings = {}, callbacks = {}) {
     if (!container?.id) throw new Error('Der 3D-Würfelbereich wurde nicht gefunden.');
+    this.container = container;
     const assetLocation = getAssetLocation();
     const reducedMotion = settings.reducedMotion === true;
     const motion = getDiceMotionConfig(settings);
@@ -34,6 +35,7 @@ export class DiceBoxEngine {
 
   async init() {
     await this.box.init();
+    this.box.mount(this.container);
     return this;
   }
 
@@ -49,6 +51,12 @@ export class DiceBoxEngine {
 
   getRollResults() {
     return this.box.getRollResults();
+  }
+
+  mount(container) {
+    this.box.mount(container);
+    this.container = container;
+    return this;
   }
 
   clear() {

@@ -24,8 +24,14 @@ function applyRollContext(result, context) {
   return result;
 }
 
-class SceneDiceService {
-  constructor() {
+async function createEngine(container, settings, callbacks) {
+  const module = await import('./dice-engine.js?v=20261013-performance-v1');
+  return module.createDiceBoxEngine(container, settings, callbacks);
+}
+
+export class SceneDiceService {
+  constructor({ engineFactory = createEngine } = {}) {
+    this.engineFactory = engineFactory;
     this.history = new DiceHistoryRepository();
     this.parser = new DiceParserAdapter();
     this.pool = new SceneDicePool();
@@ -50,23 +56,31 @@ class SceneDiceService {
   }
 
   async prepare(container) {
-    if (container && this.engine && this.engineContainer && container !== this.engineContainer) {
-      this.engine.clear();
-      this.engine = null;
-      this.enginePromise = null;
-      container.replaceChildren();
-    }
+    if (this.busy) throw new Error('Ein Wurf läuft bereits.');
+    return this.#prepareEngine(container);
+  }
+
+  async #prepareEngine(container) {
     if (container) this.container = container;
     if (!this.settings.animationEnabled || this.engineError) return this.fallbackEngine;
-    if (this.engine) return this.engine;
+    if (this.engine) {
+      if (this.container !== this.engineContainer) {
+        this.engine.clear();
+        this.engine.mount(this.container);
+        this.engineContainer = this.container;
+      }
+      return this.engine;
+    }
     if (!this.container) throw new Error('Der 3D-Würfelbereich wurde nicht gefunden.');
     if (!this.enginePromise) {
-      this.enginePromise = import('./dice-engine.js?v=20260802-dice-audio-v1')
-        .then(module => module.createDiceBoxEngine(this.container, this.settings, {
+      const initialContainer = this.container;
+      this.enginePromise = Promise.resolve()
+        .then(() => this.engineFactory(initialContainer, this.settings, {
           onDieComplete: die => this.audio.playLanding(die)
         }))
         .then(engine => {
           this.engine = engine;
+          if (this.container !== initialContainer) engine.mount(this.container);
           this.engineContainer = this.container;
           return engine;
         })
@@ -86,7 +100,7 @@ class SceneDiceService {
       this.validate(notation);
       this.audio.startRoll(notation, this.settings);
       const engine = this.settings.animationEnabled
-        ? await this.prepare(container)
+        ? await this.#prepareEngine(container)
         : this.fallbackEngine;
       const result = applyRollContext(await this.parser.execute(notation, engine), context);
       result.visualMode = engine.isFallback ? 'text' : '3d';
@@ -114,6 +128,7 @@ class SceneDiceService {
   }
 
   clear() {
+    if (this.busy) return false;
     this.audio.cancelRoll();
     this.engine?.clear();
     this.fallbackEngine.clear();

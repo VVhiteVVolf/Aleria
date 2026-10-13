@@ -3,6 +3,7 @@ import {
   getAttributeModifier,
   getEffectiveCombatAttribute,
   getUniversalDamageBonus,
+  createCombatProfileReadModel,
   getEffectiveCombatLevel,
   getProficiencyBonus,
   getWeaponAttackModifier,
@@ -52,6 +53,7 @@ function withAutofilledCenyrProfile(character = {}) {
 }
 
 function buildCombatProfileActions(character, profile, options = {}) {
+  const calculation = createCombatProfileReadModel(profile);
   const manaResource = profile.resources.find(resource => resource.id === profile.magic?.manaResourceId)
     || profile.resources.find(resource => /mana|fokus/i.test(resource.name || ''))
     || null;
@@ -72,7 +74,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
   const weaponActions = profile.weapons
     .filter(weapon => weapon.name && weapon.damageFormula)
     .map(weapon => {
-      const values = getCombatWeaponAttackValues(profile, weapon);
+      const values = getCombatWeaponAttackValues(calculation, weapon);
       const equipped = weapon.id === activeWeapon?.id;
       const available = !usesWeaponLoadout || equipped || weapon.id === loadout.leftWeaponId;
       const attackWeapon = values.weapon;
@@ -104,8 +106,8 @@ function buildCombatProfileActions(character, profile, options = {}) {
     .filter(technique => technique.active && technique.name)
     .map(technique => {
       const weaponCompatible = !!activeWeapon && isTechniqueCompatibleWithWeapon(technique, activeWeapon);
-      const levelCompatible = getEffectiveCombatLevel(profile) >= Number(technique.minimumLevel || 1);
-      const weaponRules = resolveCenyrTechniqueWeaponRules(profile, technique, activeWeapon || {});
+      const levelCompatible = getEffectiveCombatLevel(calculation) >= Number(technique.minimumLevel || 1);
+      const weaponRules = resolveCenyrTechniqueWeaponRules(calculation, technique, activeWeapon || {});
       const huskarlError = getHuskarlTechniqueUnavailableReason(profile, technique)
         || (requiresPairedCombatWeapons(technique) && !loadout.dualWield ? 'Benötigt zwei gleichzeitig geführte Waffen.' : '')
         || (technique.followUpAttack?.alternateHands && (!loadout.dualWield || loadout.left?.weaponType !== 'axe' || loadout.right?.weaponType !== 'axe') ? 'Benoetigt zwei gleichzeitig gefuehrte Aexte.' : '');
@@ -115,20 +117,20 @@ function buildCombatProfileActions(character, profile, options = {}) {
       const scaling = getTechniqueDamageScaling(technique, profile);
       const versatileFormula = technique.damageModel?.mode === 'weapon-dice' && activeWeapon?.versatileDamageFormula
         ? resolveTechniqueDamageFormula(technique, { ...activeWeapon, damageFormula: activeWeapon.versatileDamageFormula }, profile) : '';
-      const saveAttribute = getEffectiveCombatAttribute(profile, technique.secondarySave?.dcAttributeKey);
+      const saveAttribute = getEffectiveCombatAttribute(calculation, technique.secondarySave?.dcAttributeKey);
       const secondarySaveDc = technique.secondarySave?.enabled
         ? technique.secondarySave.fixedDc ?? (Number(technique.secondarySave.dcBase || 8)
-          + (technique.secondarySave.addProficiency ? getProficiencyBonus(profile) : 0)
+          + (technique.secondarySave.addProficiency ? getProficiencyBonus(calculation) : 0)
           + getAttributeModifier(saveAttribute))
         : null;
-      const classModifiers = getCenyrClassActionModifiers(profile, {
+      const classModifiers = getCenyrClassActionModifiers(calculation, {
         technique,
         weapon: activeWeapon,
         hostileOpponentCount: options.hostileOpponentCount,
         charge: options.charge === true
       });
       const pathAction = getCenyrPathActionEffects(profile, { technique, weapon: activeWeapon });
-      const unscaledDamageModifier = getWeaponDamageModifier(profile, activeWeapon || {}) + Number(technique.damageBonus || 0) + classModifiers.damageBonus + weaponRules.damageBonus;
+      const unscaledDamageModifier = getWeaponDamageModifier(calculation, activeWeapon || {}) + Number(technique.damageBonus || 0) + classModifiers.damageBonus + weaponRules.damageBonus;
       const techniqueEffects = (technique.effects || []).map(effect => (
         pathAction.movementBonus && effect.type === 'move' && effect.target === 'self'
           ? { ...effect, movementMeters: Number(effect.movementMeters || 0) + pathAction.movementBonus }
@@ -157,7 +159,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
           properties: [activeWeapon?.properties, technique.tags].filter(Boolean).join(' · '),
           notes: [technique.description, technique.effect, technique.requirements].filter(Boolean).join('\n')
         },
-        attackModifier: getWeaponAttackModifier(profile, activeWeapon || {}) + Number(technique.attackBonus || 0) + classModifiers.attackBonus + weaponRules.attackBonus,
+        attackModifier: getWeaponAttackModifier(calculation, activeWeapon || {}) + Number(technique.attackBonus || 0) + classModifiers.attackBonus + weaponRules.attackBonus,
         damageModifier: getLightAttackDamageModifier(unscaledDamageModifier, technique.damageModel),
         criticalThreshold: Math.min(Number(technique.criticalThreshold) || 20, classModifiers.criticalThreshold || 20, weaponRules.criticalThreshold || 20),
         targetDefenseModifier: weaponRules.targetDefenseModifier + Number(classModifiers.targetDefenseModifier || 0),
@@ -210,8 +212,8 @@ function buildCombatProfileActions(character, profile, options = {}) {
           properties: ability.tags,
           notes: [ability.description, ability.requirements].filter(Boolean).join('\n')
         },
-        attackModifier: isSpell ? profile.spellAttackModifier : getWeaponAttackModifier(profile, activeWeapon || {}),
-        damageModifier: isSpell ? getUniversalDamageBonus(profile) : getWeaponDamageModifier(profile, activeWeapon || {}),
+        attackModifier: isSpell ? profile.spellAttackModifier : getWeaponAttackModifier(calculation, activeWeapon || {}),
+        damageModifier: isSpell ? getUniversalDamageBonus(calculation) : getWeaponDamageModifier(calculation, activeWeapon || {}),
         activationType: ability.activationType,
         costs: normalizeCombatResourceCosts(ability.costs),
         auraBypass: ability.auraBypass,
@@ -265,7 +267,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
         equipped: false
       },
       attackModifier: profile.spellAttackModifier,
-      damageModifier: getUniversalDamageBonus(profile),
+      damageModifier: getUniversalDamageBonus(calculation),
       activationType: spell.activationType,
       costs: normalizeCombatResourceCosts([...additionalCosts, manaCost].filter(Boolean)),
       auraBypass: spell.auraBypass,

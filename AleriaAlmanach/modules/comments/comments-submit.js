@@ -72,6 +72,7 @@ async function submitComment() {
 
   const deleteCode = COMMENT_DELETE_CODE;
   let backend = null;
+  let saveConfirmed = false;
 
   try {
     window.AleriaSceneItems?.validateSubmission?.(commentSegments);
@@ -126,6 +127,7 @@ async function submitComment() {
           commentMetadata = { ...commentMetadata, ...combatResult.commentMetadata };
         }
         if (combatResult.published) {
+          saveConfirmed = true;
           clearCommentDraft(threadId);
           closeCommentForm();
           requestCommentAutoScroll(threadId);
@@ -154,6 +156,7 @@ async function submitComment() {
       : (hasSkillTransaction && typeof backend.addSkillComment === 'function'
         ? await backend.addSkillComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata)
         : await backend.addComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata));
+    saveConfirmed = true;
     if (Array.isArray(saveResult?.profileUpdates) && saveResult.profileUpdates.length) {
       document.dispatchEvent(new CustomEvent('aleria:combat-profile-committed', {
         detail: { updates: saveResult.profileUpdates }
@@ -167,6 +170,18 @@ async function submitComment() {
     btn.textContent = 'Eintragen';
     _commentSubmitInFlight = false;
   } catch(e) {
+    if (saveConfirmed) {
+      // Rendering and feed refresh happen after the authoritative write. They
+      // must never turn that success into a retry or a second local write.
+      clearCommentDraft(threadId);
+      closeCommentForm();
+      btn.disabled = false;
+      btn.textContent = 'Eintragen';
+      _commentSubmitInFlight = false;
+      console.warn('comment saved; scene refresh failed:', e);
+      if (typeof showAppStatus === 'function') showAppStatus('Beitrag gespeichert. Die Szenenanzeige konnte noch nicht aktualisiert werden; bitte die Szene neu laden.', 'info');
+      return;
+    }
     const hasPersistentCombatTransaction = (commentMetadata.commentSegments || []).some(segment => (
       (['character', 'creature'].includes(segment?.combatResolution?.targetPersistence?.kind)
         && segment?.combatResolution?.targetPersistence?.recordId)

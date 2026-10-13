@@ -1,5 +1,9 @@
 // Delegated actions and scene persistence for the dice dialog.
 async function openSceneDiceDialog() {
+  if (window.AleriaSceneDice?.getEngineState?.().busy) {
+    if (typeof showAppStatus === 'function') showAppStatus('Ein Wurf läuft bereits.', 'info');
+    return;
+  }
   const thread = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread() : null;
   if (!thread || thread.kind !== 'session') {
     if (typeof showAppStatus === 'function') showAppStatus('Würfel sind nur in interaktiven Szenen verfügbar.', 'error');
