@@ -2,7 +2,7 @@ import { CREATURE_SHEET_PAGES, renderCreaturePages, renderCreaturePageTabs, crea
 import { createCreatureBiographyEditor, collectCreatureBiography } from './creature-biography-editor.js?v=20260925-creature-biography-v2';
 import { renderCreatureImages } from './creature-images-view.js?v=20260919-creature-pages-v1';
 import { createCreatureImagesEditor, collectCreatureImages } from './creature-images-editor.js?v=20260919-creature-pages-v1';
-import { normalizeCreatureImages } from './creature-images-model.js?v=20260919-creature-pages-v1';
+import { CREATURE_IMAGE_LIBRARY, normalizeCreatureImages } from './creature-images-model.js?v=20260919-creature-pages-v1';
 import { createImageLibraryAutosave } from '../image-library/image-library-autosave.js?v=20260919-creature-pages-v1';
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
@@ -143,13 +143,6 @@ function escapeHtml(value) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
-}
-
-function safeImageUrl(value) {
-  const source = String(value || '').trim();
-  if (!source) return '';
-  if (/^https?:\/\//i.test(source) || /^data:image\/(?:png|jpe?g|webp|gif);base64,/i.test(source)) return source;
-  return '';
 }
 
 function clone(value) {
@@ -310,7 +303,7 @@ function renderLibrary() {
 
 function renderCreatureCard(creature) {
   const profile = sanitizeCharacterCombatProfile(creature.combatProfile, { ensureRequiredSkills: false, ensureSpellSlots: false });
-  const portrait = safeImageUrl(creature.portrait);
+  const portrait = CREATURE_IMAGE_LIBRARY.normalizeImageUrl(creature.portrait, { allowData: true });
   const hp = getMaximumHitPoints(profile);
   const ac = getArmorClass(profile);
   const instanceLabel = creature.instanceOrdinal > 0
