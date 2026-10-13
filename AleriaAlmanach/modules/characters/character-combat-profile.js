@@ -54,6 +54,7 @@ import {
 } from '../character-equipment/character-equipment-sync.js?v=20260905-draig-equipment-v1';
 
 import { mountCharacterCombatStatus } from './character-combat-status.js?v=20260928-equipment-art-v4';
+import { renderCharacterGameplayGuideLink } from './gameplay-guide-link.js';
 
 let activeCharacter = null;
 let draftProfile = sanitizeCharacterCombatProfile({});
@@ -276,6 +277,7 @@ function renderIdentityAndProgression(profile) {
         <label><span>EP-Wert bei Niederlage</span><input type="number" min="0" max="999999999" data-combat-path="progression.experienceReward" value="${profile.progression.experienceReward ?? ''}" placeholder="automatisch nach Stufe"></label>
         <label><span>Kompetenz überschreiben</span><input type="number" min="-20" max="30" data-combat-path="progression.proficiencyBonusOverride" value="${profile.progression.proficiencyBonusOverride ?? ''}" placeholder="automatisch"></label>
         <div class="cp-sheet-level-seal"><span>Gesamtstufe</span><strong data-combat-derived="effective-level">1</strong><small>Kompetenz <b data-combat-derived="proficiency">+2</b></small></div>
+        ${renderCharacterGameplayGuideLink(activeCharacter)}
       </div>
     </section>`;
 }

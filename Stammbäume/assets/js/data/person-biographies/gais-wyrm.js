@@ -14,7 +14,7 @@ export const GAIS_WYRM_BIOGRAPHY = {
     { label: 'Ausbildung', value: 'Adjutant des Herolds von Haus Wyrm' },
     { label: 'Eltern', value: 'Padrig Wyrm und Sorcha Céin' },
     { label: 'Ritterväter', value: 'Zuerst Eiddon Wyrm, danach Padrig Wyrm' },
-    { label: 'Reittier', value: 'Mit Erlenglanz veredelter Ceffyl' }
+    { label: 'Reittier', value: 'Saithor · Edelsale-Hengst (Ceffyl × Sale)' }
   ],
   quote: 'Man vertritt sein Haus auch dann, wenn man nur um das Salz bittet.',
   quoteBy: 'Gais Wyrm, ganz im Sinne seiner Großmutter',
@@ -79,7 +79,7 @@ export const GAIS_WYRM_BIOGRAPHY = {
         title: 'Ein Pferd, das gesehen werden soll',
         position: 'afterWorks',
         mode: 'text',
-        text: '<p>Gais reitet einen <strong>mit Erlenglanz veredelten Ceffyl</strong>. Es ist ein gutes, kostbares Pferd und für seinen Reiter ein Gegenstand erheblichen Stolzes. Die elegante Veredelung passt zu Turnieren, einem sorgfältig vorbereiteten Auftritt und all jenen Gelegenheiten, bei denen ein junger Ritter schon beim Einreiten Eindruck machen möchte.</p><p>Für das unübersichtliche, rohe Gedränge eines echten Kampfes ist dieses Tier weniger geeignet. Gais kennt den Unterschied. Er schätzt sein Pferd trotzdem gerade wegen jener Eigenschaften, die anderen als Luxus erscheinen mögen. Ein Ross trägt für ihn nicht nur seinen Reiter, sondern auch dessen Ansehen. Über seine Abstammung und Qualität kann Gais ausführlicher sprechen, als ein flüchtiger Gesprächseinstieg gewöhnlich verlangt.</p>'
+        text: '<p>Gais reitet <strong>Saithor</strong>, einen schwarzen <strong>Edelsale-Hengst aus Ceffyl und Sale</strong>. Der edle Hals und die enge Reiterbindung des Ceffyl verbinden sich mit der nordischen Ausdauer und Zuverlässigkeit des Sale. Lange schwarze Mähne und dichter Fesselbehang geben dem Ross einen würdevollen Auftritt; schwarzes Lederzeug und eine schwarz-goldene Satteldecke passen zu seinem Reiter.</p><p>Saithor ist ein verlässliches Reitpferd, kein unverwundbarer Held. Gais achtet auf seine Kräfte und seine Ausbildung. Ein Ross trägt für ihn auch das Ansehen seines Hauses – selbst wenn es gelegentlich versucht, ein sorgfältig gefaltetes Taschentuch zu verspeisen.</p>'
       },
       {
         title: 'Was etwas wert ist',

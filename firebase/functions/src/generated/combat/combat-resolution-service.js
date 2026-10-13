@@ -327,7 +327,7 @@ export class CombatResolutionService {
     validateSpellCatalogTarget(actor.selectedAction, target);
     const structuredEffects = normalizeCombatEffects(actor.selectedAction?.effects || []).map(effect => effect.scaling === 'hit-die-and-tenth-maximum'
       ? { ...effect, formula: `1d${actor.hitPoints?.hitDie || 8}+${Math.ceil(actor.maximumHitPoints / 10)}` } : effect);
-    const actionEffects = structuredEffects.length ? structuredEffects : normalizeCombatEffects([{
+    const actionEffects = structuredEffects.length || actor.selectedAction?.nonDamaging ? structuredEffects : normalizeCombatEffects([{
       id: 'implicit-weapon-damage',
       type: 'damage',
       target: 'target',
@@ -876,6 +876,7 @@ export class CombatResolutionService {
       targetPersistence: target.persistence || null,
       weapon: { ...weapon },
       weaponGrip: actor.weaponGrip || 'one-handed',
+      ...(actor.selectedAction?.nonDamaging ? { nonDamaging: true } : {}),
       mechanicNotes: Array.isArray(actor.selectedAction?.mechanicNotes) ? actor.selectedAction.mechanicNotes.slice(0, 8) : [],
       secondarySaves,
       followUpAttacks,

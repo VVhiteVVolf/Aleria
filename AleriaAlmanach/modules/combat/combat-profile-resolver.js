@@ -140,6 +140,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
         id: `technique:${technique.id}`,
         sourceId: technique.id,
         kind: 'technique',
+        nonDamaging: technique.damageModel?.mode === 'none',
         requiresTwoHands: !!(technique.requiresTwoHands || technique.cenyrTraining?.requiresTwoHands || getHuskarlTechniqueRequirements(technique).requiresTwoHands),
         kindLabel: technique.activationType === 'reaction' ? 'Reaktion' : (technique.activationType === 'bonus-action' ? 'Bonusaktion' : 'Technik'),
         name: technique.name,
@@ -486,7 +487,7 @@ export function getCombatActorProblems(profile = {}) {
   if (profile.selectedAction?.kind === 'equipment-switch') return problems;
   if (!String(profile.weapon?.name || '').trim()) problems.push('weaponName');
   const hasStructuredEffects = Array.isArray(profile.selectedAction?.effects) && profile.selectedAction.effects.length > 0;
-  if (!hasStructuredEffects) {
+  if (!hasStructuredEffects && !profile.selectedAction?.nonDamaging) {
     try {
       parseDamageFormula(profile.weapon?.damageFormula);
     } catch {

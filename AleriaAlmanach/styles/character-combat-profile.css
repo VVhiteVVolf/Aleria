@@ -1733,3 +1733,20 @@ details[open] > summary > .cp-card-disclosure { transform: rotate(225deg); }
   .cp-spell-card-hero { grid-template-columns: 1fr; }
   .cp-spell-card-art { width: 92px; grid-row: 1; }
 }
+.cp-gameplay-guide-link {
+  display: grid;
+  place-items: center;
+  align-self: center;
+  justify-self: center;
+  width: min(100%, 104px);
+  aspect-ratio: 1;
+  padding: 4px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color .15s, border-color .15s;
+}
+.cp-gameplay-guide-link:hover { background: #bc924320; border-color: #b99b5e; }
+.cp-gameplay-guide-link:focus-visible { outline: 3px solid #b18435; outline-offset: 3px; }
+.cp-gameplay-guide-link img { display: block; width: 100%; height: auto; }
+@media (prefers-reduced-motion: reduce) { .cp-gameplay-guide-link { transition: none; } }

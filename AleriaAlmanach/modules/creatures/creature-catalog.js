@@ -6,6 +6,7 @@ import { DRAIG_PALACE_PETS } from './catalog/draig-palace-pets.js?v=20261013-pal
 import { GWYVERN_RHYFEL_COMPANIONS } from './catalog/gwyvern-rhyfel-companions.js?v=20261012-gwyvern-horses-v1';
 import { CARREG_CREATURE_SOURCE } from './catalog/duncan-carreg.js?v=20261013-eidwacht-v1';
 import { WOLFSHORN_COMPANIONS } from './catalog/wolfshorn-companions.js?v=20261013-eidwacht-v1';
+import { GAIS_COMPANION } from './catalog/gais-companion.js';
 import { DRAIG_RIDING_HORSES } from './catalog/draig-riding-horses.js?v=20261013-draig-horses-v2';
 import { TROLL_CREATURE_SOURCE } from './catalog/troll.js';
 import { FREKI_CREATURE_SOURCE } from './catalog/freki.js';
@@ -557,7 +558,7 @@ const BUILTIN_CREATURE_SOURCES = Object.freeze([
   }
 ]);
 
-const ALL_CREATURE_SOURCES = [...BUILTIN_CREATURE_SOURCES, TROLL_CREATURE_SOURCE, FREKI_CREATURE_SOURCE, CARREG_CREATURE_SOURCE, ...DRAIG_COMPANION_SOURCES, ...DRAIG_HOUSEHOLD_COMPANIONS, ...IDWAL_SHIP_CATS, ...GWYVERN_RHYFEL_COMPANIONS, ...WOLFSHORN_COMPANIONS, ...DRAIG_RIDING_HORSES, ...DRAIG_PALACE_PETS];
+const ALL_CREATURE_SOURCES = [...BUILTIN_CREATURE_SOURCES, TROLL_CREATURE_SOURCE, FREKI_CREATURE_SOURCE, CARREG_CREATURE_SOURCE, GAIS_COMPANION, ...DRAIG_COMPANION_SOURCES, ...DRAIG_HOUSEHOLD_COMPANIONS, ...IDWAL_SHIP_CATS, ...GWYVERN_RHYFEL_COMPANIONS, ...WOLFSHORN_COMPANIONS, ...DRAIG_RIDING_HORSES, ...DRAIG_PALACE_PETS];
 const BUILTIN_CREATURE_IDS = new Set(ALL_CREATURE_SOURCES.map(creature => creature.id));
 
 export function getBuiltinCreatureTemplates() {

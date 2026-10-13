@@ -80,6 +80,10 @@ export const HORSE_BREEDING_LORE_CROSSINGS = Object.freeze([
 ]);
 
 export const HORSE_BREEDING_CROSS_ENRICHMENTS = Object.freeze({
+  'ceffyl|sale': {
+    bestiaryId: 'edelsale',
+    note: 'Der bereits in der Rossmarkt-Kreuzungsmatrix benannte Edelsale verbindet die ritterliche Eleganz und Reiterbindung des Ceffyl mit der nordischen Ausdauer und Zuverlässigkeit des Sale. Sir Gais Wyrms schwarzer Hengst Rabenstolz gehört zu dieser Zucht; seine lange Mähne und der dichte schwarze Fesselbehang prägen seine Erscheinung.'
+  },
   'ceffyl|hest': {
     establishedBreed: 'Rhyfel',
     note: 'Aus dieser Verbindung ging später die gefestigte Rhyfel-Linie hervor.'

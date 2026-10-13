@@ -42,6 +42,7 @@ export const BESTIARY_PROFILES = Object.freeze([
   Object.freeze({"id":"tiere/pferde/tirashan","name":"Tirashan","genus":"Pferde"}),
   Object.freeze({"id":"tiere/pferde/xanathos","name":"Xanathos","genus":"Pferde"}),
   Object.freeze({"id":"tiere/pferde/zuchtbuch/edel-rhyfel","name":"Edel Rhyfel","genus":"Pferde","url":"/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-rhyfel"}),
+  Object.freeze({"id":"tiere/pferde/zuchtbuch/edelsale","name":"Edelsale","genus":"Pferde","url":"/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-sale"}),
   Object.freeze({"id":"tiere/pferde/zuchtbuch/eidwacht","name":"Eidwacht","genus":"Pferde","url":"/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-equo"}),
   Object.freeze({"id":"tiere/pferde/zuchtbuch/ritterschimmer","name":"Ritterschimmer","genus":"Pferde","url":"/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-herzogsschimmer"}),
   Object.freeze({"id":"tiere/pferde/zuchtbuch/sonnenlaeufer","name":"Sonnenläufer","genus":"Pferde","url":"/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-aurelianer-mit-ceffyl"}),

@@ -1,7 +1,7 @@
 import { readdir, readFile, writeFile, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { HORSE_BREEDING_LORE_CROSSINGS } from '../../Bestiarium/modules/horse-breeding/horse-breeding-registry.mjs';
+import { loadHorseBreedingData } from '../../Bestiarium/modules/horse-breeding/horse-breeding-data.mjs';
 import { horseCrossingAnchor } from '../../Bestiarium/modules/horse-breeding/horse-breeding-model.mjs';
 
 const root = fileURLToPath(new URL('../../Bestiarium/', import.meta.url));
@@ -30,7 +30,7 @@ async function collectProfiles(directory) {
 
 const profiles = await collectProfiles(root);
 const breedingPage = await readFile(path.join(root, 'tiere/pferde/zuchtbuch/index.html'), 'utf8');
-for (const crossing of HORSE_BREEDING_LORE_CROSSINGS.filter(entry => entry.bestiaryId)) {
+for (const crossing of (await loadHorseBreedingData()).crossings.filter(entry => entry.bestiaryId)) {
   if (!/^[a-z0-9-]+$/.test(crossing.bestiaryId)) throw new Error(`Ungültige Bestiarium-ID der Zucht: ${crossing.name}`);
   const anchor = horseCrossingAnchor(crossing.mareId, crossing.sireId);
   if (!breedingPage.includes(`id="${anchor}"`)) throw new Error('Zuchtbuch zuerst mit node Bestiarium/scripts/build-horse-breeding.mjs aktualisieren.');

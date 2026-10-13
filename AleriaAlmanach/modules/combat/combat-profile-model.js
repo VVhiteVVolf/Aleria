@@ -661,7 +661,7 @@ function sanitizeTechniqueFollowUp(value = {}) {
 function sanitizeTechniqueDamageModel(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
   return {
-    mode: source.mode === 'weapon-dice' ? 'weapon-dice' : 'fixed',
+    mode: ['weapon-dice', 'none'].includes(source.mode) ? source.mode : 'fixed',
     weaponDiceMultiplier: normalizeNumber(source.weaponDiceMultiplier, 1, 1, 8),
     bonusFormula: normalizeCombatDamageFormula(source.bonusFormula),
     ...(source.bonusModifier != null ? { bonusModifier: normalizeNumber(source.bonusModifier, 0, -20, 20) } : {}),

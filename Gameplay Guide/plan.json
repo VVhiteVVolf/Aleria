@@ -1,0 +1,25 @@
+{
+  "title": "Duellvorbereitung: Ylva und Sir Gais",
+  "stand": "2026-10-14",
+  "scope": "Allgemeine Nahkampftaktik, keine auf den jeweils anderen Gegner zugeschnittenen Vorteile.",
+  "decisions": [
+    {"character": "Ylva Wolfshorn", "decision": "Zwei persönliche Kontroll- und Abwehrtechniken ergänzen; kein zusätzlicher Schaden, kein neuer Stun.", "techniques": [
+      {"name": "Schafthebel", "cost": "Aktion + Reaktion", "effect": "Speer-Treffer ohne Schaden, danach KRF SG 14 gegen Entwaffnung. Körperwaffen erhalten den gemeinsamen Abschwächungseffekt statt zu verschwinden."},
+      {"name": "Aus der Angriffslinie", "cost": "Reaktion + Besondere Aktion", "effect": "Vorbereitung: einmal Nachteil für den nächsten eingehenden Waffen-/Technikangriff. Auch bei Fehlschlag verbraucht; endet spätestens am Ende des nächsten eigenen Beitrags."}
+    ]},
+    {"character": "Sir Gais Wyrm", "decision": "Keine zusätzlichen Kampftechniken. Sein vorhandenes Uchelwyr-/Jungdrachen-Arsenal deckt Kontrolle, Entwaffnung, Konter und Abwehr ab. Die begrenzenden Faktoren sind Trefferchance, Auslösebedingungen und Ressourcen."},
+    {"character": "Saithor", "decision": "Schwarzer Edelsale-Hengst mit Fesselbehang, Stufe 3, eigenem Kreaturbogen und Gais als Besitzer. Edelsale ist die vorhandene Ceffyl-Sale-Kreuzung. Name aus Rheunwaith: Saith + or. Keine pauschalen Kampfboni für den Reiter."}
+  ],
+  "integration": [
+    {"surface": "Charakterdaten, Import und Export", "implementation": "Persönliche Techniken nur auf Ylvas Profil. Keine Klassenfreigabe. Kanonische lokale Akten, Snapshot und Exportüberlagerungen synchron."},
+    {"surface": "Charakterbogen", "implementation": "Arsenal und Editor verwenden gemeinsamen Technikdatensatz. Transparenter, generierter Guide-Icon-Button neben Gesamtstufe bei Ylva und Gais."},
+    {"surface": "Liste und Arsenal", "implementation": "Gemeinsamer Action-Resolver liefert Beschreibung, Voraussetzungen, Kosten und explizit keinen direkten Schaden."},
+    {"surface": "Beitragsfenster und Zahlung", "implementation": "Reguläre Angriffs- und Rettungswürfe bei Schafthebel; automatische Selbstzielwahl für die Vorbereitung. Bestehende Ressourcenreservierung und Validierung wiederverwenden."},
+    {"surface": "Interaktive Szene und Miniansicht", "implementation": "Persönliche Techniken mit aktueller Verfügbarkeit sowie vorhandene Anzeige für Ressourcen, Entwaffnung, vorbereitete Wirkung, Verbrauch und Ablauf. Aktualisierung über bestehende Szenenereignisse."},
+    {"surface": "Server, Belege und Replay", "implementation": "Explizites damageModel none in gemeinsamem Modell und generierter Servermechanik. Keine automatischen Schadenswürfe oder Krittrefferfolgen bei Kontrolltreffern; Fehlschläge bleiben regelkonform. Vergangene Auswertungen werden nicht neu berechnet."},
+    {"surface": "Ross, Inventar und Bestiarium", "implementation": "Eine stabile Kreatur- und Inventaridentität. Verknüpfte Gefährtenkarte, Einzelstück, Porträt, Biografie, reales Zuchtbuchziel und Reittierauswahl. Technische IDs bleiben bei Umbenennung erhalten."},
+    {"surface": "Gameplay Guides", "implementation": "Je sechs automatisch kosten- und voraussetzungsgeprüfte Beitragsfolgen; aggressive, ausdauernde und kontrollierende Optionen, Waffenvergleich, Begleiter, Grenzen, Fazit. Responsiv, druckbar, Chibi-Bilder, zugängliche Bedienung. Generierte Werte und redaktionelle Taktik getrennt."}
+  ],
+  "validation": ["Gemeinsame Browser-/Servermechanik", "Kein Schaden bei Treffer, Fehlschlag und natürlicher 20", "Rettung verhindert Entwaffnung", "Waffenbindung und Selbstziel", "Einmalverbrauch und Ablauf", "Szenen-Replay", "Desktop und Mobilansichten", "Guide-Kosten und echte Begleiterverknüpfungen", "Idempotenter, eingegrenzter Datenabgleich"],
+  "releaseConstraints": ["Vor Online-Abgleich beide Figuren und Kreaturen frisch lesen.", "Nur persönliche Techniken, neue Ross-Verknüpfung und relevanten Biografieabschnitt aktualisieren.", "Aktuelle TP, Ressourcen, Zustände, bestehender Besitz und Kampfbelege erhalten.", "Servermechanik muss vor Nutzung der neuen Techniken verfügbar sein.", "Kein pauschaler Import vollständiger lokaler Charakterbögen über Live-Daten."]
+}

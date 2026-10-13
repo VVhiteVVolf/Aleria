@@ -25,6 +25,7 @@ export function getTechniqueDamageScaling(technique = {}, profile = {}) {
 
 export function describeTechniqueDamage(technique = {}, profile = {}) {
   const model = technique.damageModel || {};
+  if (model.mode === 'none') return 'Kein direkter Schaden';
   const base = model.mode === 'weapon-dice'
     ? `${requiresPairedCombatWeapons(technique) ? 'Würfel beider Waffen' : `${model.weaponDiceMultiplier || 1}× Waffenwürfel`}${model.baseDieCap ? ` (je höchstens W${model.baseDieCap})` : ''}${model.bonusWeaponDice ? ` + ${model.bonusWeaponDice} Waffen-Zusatzwürfel (je höchstens W${model.bonusWeaponDieCap})` : ''}${(model.weaponBonuses || []).map(group => ` + ${group.diceCount} Waffen-Zusatzwürfel (je höchstens W${group.dieCap})`).join('')}${model.bonusFormula ? ` + ${model.bonusFormula}` : ''}`
     : technique.damageFormula || 'Kein direkter Schaden';
@@ -33,6 +34,7 @@ export function describeTechniqueDamage(technique = {}, profile = {}) {
 }
 
 export function resolveTechniqueDamageFormula(technique = {}, weapon = {}, profile = {}) {
+  if (technique.damageModel?.mode === 'none') return '';
   if (technique.effects?.length && !technique.effects.some(effect => effect.type === 'damage') && !technique.damageFormula) return '';
   const model = technique.damageModel || {};
   const scaling = getFormulaParts(getTechniqueDamageScaling(technique, profile)?.formula);

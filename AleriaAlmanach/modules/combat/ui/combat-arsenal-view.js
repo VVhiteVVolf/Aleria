@@ -21,7 +21,7 @@ export function renderArsenalDetail(actor, choice) {
   const preview = { ...actor, selectedAction: action, weapon: action.weapon || actor.weapon, actionResolutionMode: action.resolutionMode, attackModifier: action.attackModifier ?? actor.attackModifier, damageModifier: action.damageModifier ?? actor.damageModifier };
   return `<div class="combat-arsenal-detail-body"><button type="button" class="combat-arsenal-back" data-action="back-to-arsenal">← Zur Übersicht</button><small>${escape(group)}</small><h3>${escape(label)}</h3>
     <div class="combat-arsenal-detail-costs"><span>Reguläre Kosten</span>${renderActionCosts(actor, action)}</div>
-    ${action.formula || action.kind === 'weapon' ? renderCombatValueStrip(preview) : ''}
+    ${action.formula || action.nonDamaging || action.kind === 'weapon' ? renderCombatValueStrip(preview) : ''}
     ${renderActionDetails(preview, { open: true })}
     ${action.compatible === false ? `<p class="combat-arsenal-blocked">${escape(action.disabledReason || 'Zurzeit nicht verfügbar')}</p>` : ''}
     </div><div class="combat-arsenal-detail-footer"><button type="button" data-action="choose-arsenal-action"${action.compatible === false ? ' disabled' : ''}>${action.compatible === false ? 'Derzeit nicht einsetzbar' : 'Handlung wählen →'}</button><small>Die Kosten reservierst du anschließend im Beitrag.</small></div>`;

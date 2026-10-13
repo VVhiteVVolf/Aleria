@@ -1,4 +1,5 @@
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js';
+import { renderPersonalTechniquesSummary } from './combat-personal-techniques-view.js';
 import { getCombatWeaponLoadout } from '../combat/combat-weapon-loadout.js';
 import { getCombatSupportEquipment } from '../combat/combat-support-equipment.js';
 import { summarizeRuleEffects } from '../combat/ui/combat-rule-presentation.js';
@@ -43,6 +44,7 @@ export function renderMiniCombatProfile(profile, displayName, options = {}) {
       ${abilities.length ? `<details data-profile-details-key="abilities"><summary>Begrenzte Fähigkeiten (${abilities.length})</summary><ul class="comment-combat-profile-resources">${abilities.map(ability => renderResource({ ...ability, current: ability.usesCurrent, maximum: ability.usesMaximum })).join('')}</ul></details>` : ''}
       ${documentation.limitedRules?.length ? `<details data-profile-details-key="item-rules"><summary>Begrenzte Ausrüstungseffekte (${documentation.limitedRules.length})</summary><ul class="comment-combat-conditions">${documentation.limitedRules.map(rule => `<li class="comment-combat-condition"><div><strong>${e(rule.name)}</strong><small>${e(rule.source)} · ${e(rule.period)}: ${rule.spent ? 'verbraucht' : 'verfügbar'}</small><small>${e(summarizeRuleEffects(rule.effects))}</small></div></li>`).join('')}</ul></details>` : ''}
     </section>
+    ${renderPersonalTechniquesSummary(profile)}
     <section class="comment-combat-profile-section"><div class="comment-combat-profile-section-head"><h4>Temporäre Effekte <span>${temporaryConditions.length}</span></h4>${canManage ? '<button type="button" data-action="add-comment-combat-condition">+ Hinzufügen</button>' : ''}</div>
       ${profile.concentration ? `<p class="comment-combat-profile-focus">◎ Konzentration: ${e(profile.concentration.name || profile.concentration.actionName || 'Aktiv')}</p>` : ''}
       ${profile.channeling ? `<p class="comment-combat-profile-focus">✦ Kanalisierung: ${e(profile.channeling.actionName || profile.channeling.name || 'Aktiv')}${profile.channeling.requiredComments ? ` · ${e(profile.channeling.progress || 0)}/${e(profile.channeling.requiredComments)} Beiträge` : ''}</p>` : ''}

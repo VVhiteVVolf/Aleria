@@ -60,5 +60,5 @@ export function getCriticalWeaponAttacks(resolution = {}) {
     || !['weapon', 'technique'].includes(resolution.profileActionKind)) return [];
   return [resolution.attack, ...(resolution.followUpAttacks || []).map(followUp => followUp.attack)]
     .map((attack, index) => ({ attack, index }))
-    .filter(({ attack }) => attack?.criticalFailure === true || attack?.criticalSuccess === true && attack?.hit === true);
+    .filter(({ attack }) => attack?.criticalFailure === true || !resolution.nonDamaging && attack?.criticalSuccess === true && attack?.hit === true);
 }

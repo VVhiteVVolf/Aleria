@@ -1,0 +1,101 @@
+// Local browser verification, never logs into or writes to Firebase.
+import assert from 'node:assert/strict';
+import { createServer } from 'node:http';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { resolve, sep, extname } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { sceneFixture } from './scene-fixture.mjs';
+const { chromium } = await import(process.argv[2] ? pathToFileURL(resolve(process.argv[2])).href : 'playwright');
+const root = fileURLToPath(new URL('../../', import.meta.url)), output = resolve(root, '.codex-temp/gameplay-guide');
+await mkdir(output, { recursive: true });
+const errors = [], missing = [], checks = [];
+const server = createServer(async (req,res) => {
+  try {
+    if (req.url === '/AleriaAlmanach/guide-scene-test.html') { res.setHeader('Content-Type','text/html;charset=utf-8'); res.end(sceneFixture); return; }
+    const path = resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname));
+    if (!path.startsWith(root)) { res.writeHead(403); res.end(); return; }
+    res.setHeader('Content-Type', ({'.html':'text/html;charset=utf-8','.js':'text/javascript;charset=utf-8','.mjs':'text/javascript;charset=utf-8','.css':'text/css','.json':'application/json','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2'})[extname(path)] || 'application/octet-stream');
+    res.end(path.endsWith('AleriaAlmanach' + sep + 'firebase.js') ? 'window._fbReady=true;' : await readFile(path));
+  } catch { res.statusCode = 404; res.end(); }
+});
+await new Promise(done => server.listen(0, '127.0.0.1', done));
+let browser;
+try {
+  browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_EXECUTABLE });
+  const context = await browser.newContext({ viewport: { width: 1440, height: 1100 } });
+  await context.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
+  const page = await context.newPage(); page.on('pageerror', e => errors.push(e.message));
+  page.on('response', response => { if (response.status() >= 400 && response.url().includes('Gameplay')) missing.push(response.url()); });
+  const origin = `http://127.0.0.1:${server.address().port}`;
+  for (const slug of ['ylva','gais']) {
+    await page.setViewportSize({width:1440,height:1100});
+    await page.goto(`${origin}/Gameplay%20Guide/${slug}.html`);
+    await page.locator('.hero-art img').evaluate(img => img.decode());
+    await page.screenshot({ path: `${output}/${slug}-desktop.png`, fullPage: true });
+    await page.getByRole('button',{name:'Kontrolle',exact:true}).click();
+    assert.equal(await page.locator('.combo:not([hidden])').count(),2);
+    await page.getByRole('button',{name:'Alle',exact:true}).click();
+    assert.equal(await page.locator('.combo:not([hidden])').count(),6);
+    await page.locator('.technique summary').first().click();
+    assert.equal(await page.locator('.technique[open]').count(),1);
+    for (const width of [390,740]) {
+      await page.setViewportSize({width,height:844});
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${slug}: overflow ${width}`);
+      await page.screenshot({path:`${output}/${slug}-${width}.png`,fullPage:true});
+    }
+    checks.push({slug,filters:true,details:true,mobile:true});
+  }
+  await page.addInitScript(() => { window._fbReady = true; window._fb = { loadCharacters:async()=>[], loadCreatures:async()=>[], loadComments:async()=>[], subscribeComments:()=>()=>{}, loadCommentTurn:async()=>null }; });
+  await page.setViewportSize({width:1440,height:1100});
+  await page.goto(`${origin}/AleriaAlmanach/AleriaAlmanach.html`,{waitUntil:'domcontentloaded'});
+  await page.waitForFunction(() => typeof window.loadCharacters === 'function' && !!window.AleriaCreatures);
+  await page.evaluate(async()=>{ window._charactersLoaded = false; await window.loadCharacters(); await window.AleriaCreatures.reload(); });
+  await page.getByRole('button',{name:'Aleria betreten',exact:true}).click();
+  for (const [slug,id] of [['ylva','bSYZYAEOwiRgy44f6OmO'],['gais','person--haus-wyrm--gais-wyrm']]) {
+    await page.evaluate(id=>{window.openCharProfile(id);window.switchCharTab('combat');},id);
+    const link = page.locator('#cp-tab-combat .cp-gameplay-guide-link');
+    await link.waitFor();
+    assert.equal(await link.getAttribute('href'), `/Gameplay%20Guide/${slug}.html`);
+    assert.match(await link.getAttribute('aria-label'), /Gameplay Guide/);
+    await link.locator('img').evaluate(img=>img.decode());
+    await link.scrollIntoViewIfNeeded(); await page.screenshot({path:`${output}/${slug}-bogen-button.png`});
+    if (slug === 'ylva') assert.match(await page.locator('#cp-tab-combat').innerText(), /Schafthebel/);
+    await page.setViewportSize({width:390,height:844});
+    await link.scrollIntoViewIfNeeded(); assert.ok(await link.isVisible());
+    await page.screenshot({path:`${output}/${slug}-bogen-button-mobile.png`});
+    await page.setViewportSize({width:1440,height:1100});
+  }
+  await page.evaluate(()=>window.switchCharTab('inventory'));
+  const horse = page.locator('#cp-tab-inventory .ci-companion-card').filter({hasText:'Saithor'}); assert.equal(await horse.count(),1);
+  await horse.click(); await page.locator('.ci-companion-modal').waitFor();
+  await page.locator('[data-ci-action="open-creature"][data-ci-creature-id="companion-gais-rabenstolz"]').click();
+  await page.locator('#creature-profile-overlay.open').waitFor();
+  assert.match(await page.locator('#creature-page-overview').innerText(), /Edelsale/);
+  await page.screenshot({path:`${output}/rabenstolz-bogen.png`});
+  await page.goto(`${origin}/AleriaAlmanach/guide-scene-test.html`);
+  await page.waitForFunction(()=>window.guideSceneReady);
+  const composer=page.locator('[data-combat-composer]');
+  assert.match(await composer.innerText(),/Schafthebel/);
+  assert.doesNotMatch(await composer.locator('.combat-action-values').innerText(),/1[Wd]/);
+  await composer.locator('[data-action="open-action-table"]').click();
+  await page.locator('[data-arsenal-card="technique:ylva-schafthebel"] [data-combat-action-option]').click();
+  assert.match(await page.locator('.combat-arsenal-detail').innerText(),/Kein Schaden/);
+  await page.locator('[data-action="close-action-table"]').click();
+  await page.evaluate(()=>window.selectGuideAction('ylva-aus-der-angriffslinie'));
+  assert.equal(await composer.locator('[data-combat-self-target]').count(),1);
+  assert.match(await composer.locator('.combat-action-values').innerText(),/Automatisch/);
+  await page.locator('[data-action="toggle-comment-combat-profile"]').click();
+  const panel=page.locator('[data-comment-combat-profile-panel]');
+  await panel.locator('[data-profile-details-key="personal-techniques"]').evaluate(el=>el.open=true);
+  const lever=panel.locator('li').filter({hasText:'Schafthebel'});
+  assert.match(await lever.innerText(),/Verfügbar/);
+  await page.evaluate(()=>window.applyGuidePreparation());
+  await panel.locator('li[data-condition-id^="ylva-aus-der-angriffslinie-"]').waitFor();
+  assert.match(await lever.innerText(),/Derzeit nicht verfügbar/);
+  await page.screenshot({path:`${output}/ylva-scene-prepared.png`});
+  await page.evaluate(()=>window.clearGuidePreparation());
+  await panel.getByText('Keine temporären Effekte',{exact:true}).waitFor();
+  assert.deepEqual(errors,[]); assert.deepEqual(missing,[]);
+  await writeFile(`${output}/browser-report.json`,JSON.stringify({checks,characterButtons:true,horseInventoryAndSheet:true,composerAndArsenal:true,miniSceneRefresh:true,errors,missing},null,2));
+  console.log(JSON.stringify({checks,errors,missing}));
+} finally { await browser?.close(); server.close(); }

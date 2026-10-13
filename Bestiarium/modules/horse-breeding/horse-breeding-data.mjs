@@ -32,7 +32,7 @@ function createCrossing(entry, enrichment = {}) {
     mareId: entry.mareId,
     sireId: entry.sireId,
     name: entry.name,
-    bestiaryId: entry.bestiaryId || '',
+    bestiaryId: entry.bestiaryId || enrichment.bestiaryId || '',
     source: entry.source,
     note: entry.note || enrichment.note || '',
     establishedBreed: entry.establishedBreed || enrichment.establishedBreed || ''

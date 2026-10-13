@@ -22,7 +22,7 @@ export function activationLabel(value = '') {
 export function getCombatDisplayStats(actor = {}, damagePreview = getCombatDamagePreview(actor)) {
   return {
     attack: actor.actionResolutionMode === 'automatic' ? 'Automatisch' : signedNumber(actor.attackModifier),
-    damage: (damagePreview?.notation || '—').toUpperCase().replace(/D/g, 'W'),
+    damage: actor.selectedAction?.nonDamaging ? 'Kein Schaden' : (damagePreview?.notation || '—').toUpperCase().replace(/D/g, 'W'),
     activation: activationLabel(actor.selectedAction?.activationType)
   };
 }
