@@ -1,0 +1,120 @@
+Use case: illustration-story. Create ONE square 1:1 expression and gesture sheet, EXACTLY three columns and three rows, nine EQUAL square tiles. Align the vertical boundaries precisely at one-third and two-thirds of width and horizontal boundaries precisely at one-third and two-thirds of height. Edge-to-edge panels with NO gutters, white lines, borders, labels, numbers, writing, captions, balloons or floating cartoon symbols. One character per tile, complete head and facial expression readable and never cut off; no element crossing into a neighboring tile.
+INPUT IMAGE 1 is the ORIGINAL USER PORTRAIT of this character. It is the sole binding source for face, hair, age, outfit, artistic linework, shading and palette. Preserve that exact identity and artistic rendering, not a generic anime redesign. No new spiky hair, square heroic jaw, gold medallion, new outfit or bright simplified anime style. This explicit identity/style requirement takes priority over generic art presets. Preserve subtle original facial proportions and detailed hair strands. Change only expressions, gestures and the current explicitly requested physical state.
+Continue the established location: training yard inside CASTLE DRAIG, pale stone courtyard walls with archway and crenellations, red banners with gold edging and the BLACK DRAGON around a PALE CASTLE, subdued timber practice rack and straw dummy in the distance, sandy packed ground, mild daylight. Same location and light throughout. The blue-and-gold banner in the original portrait is replaced by the established Draig yard. Background stays subordinate to face and upper-body gesture. No other people.
+NO WEAPONS anywhere: no axes, shields, trident, sword, belt weapon, scabbard or weapon handle. Hands are free and anatomical: two arms, two hands, five natural fingers with plausible joints and thumb positions. No extra limbs or melted fingers. No added props, jewelry, armor redesign or chibi deformation. The earlier combat 3 attack / 3 defend / 3 neutral layout does NOT apply to these new themed reaction sets.
+
+Charakter-Emotionssheet Master Prompt (9er Set)
+Take the provided portrait image as the ONLY reference for the character.
+Create a complete 3×3 expression and gesture sheet (9 panels) featuring the EXACT SAME character.
+Identity Preservation (Highest Priority)
+The character must remain 100% identical in every panel.
+Preserve exactly:
+Face shape and proportions
+Eyes, eyebrows and nose
+Hairstyle, hair volume and hairline
+Facial hair
+Armor, clothing, colors and accessories
+Age
+Art style
+Line quality
+Rendering quality
+Lighting
+Color palette
+Do NOT redesign, reinterpret or stylize the character differently.
+Every panel should feel like the same portrait with altered expressions and poses, not nine separate illustrations.
+
+Background Consistency
+Use the exact same background in every panel.
+Same environment
+Same lighting
+Same camera distance
+Same perspective
+No simplification
+No redesign
+The only changes should be the character’s expression, head angle (minor), gaze and body gesture.
+
+Composition
+Square overall format (1:1)
+3×3 grid
+Nine equally sized panels
+No white borders
+No text
+No captions
+No symbols
+No speech bubbles
+No props unless explicitly requested
+Character visible from chest to upper body in every panel
+Same camera angle and framing across all panels
+Minimal variation in rotation only when it supports the expression
+
+Expression Consistency
+This is NOT nine different drawings.
+It must look like the same portrait whose facial muscles and body language change naturally.
+Changes should primarily affect:
+Eyebrows
+Eyes
+Eyelids
+Mouth
+Jaw tension
+Head tilt
+Eye direction
+Avoid changing:
+Skull proportions
+Hair shape
+Armor proportions
+Clothing folds unnecessarily
+High character consistency is critical.
+
+Gesture Rules
+Every emotion must also be expressed through:
+Hands
+Arms
+Shoulders
+Head position
+Torso posture
+Eye direction
+Body language is more important than facial expression alone.
+Every panel should immediately communicate a usable RPG reaction.
+Avoid neutral filler poses.
+Every tile should have a clear storytelling purpose.
+No repeated gestures.
+
+Character Description
+Nudd Saethwyr, the exact young ADULT knight in Image 1: pale skin, long straight vivid red hair with the original falling parted fringe, brown-red eyes, small pointed red chin tuft, otherwise clean shaven, same youthful angular face. Original subdued silver/cream plate armor, thin gold edging, rounded pauldrons, dark high gorget, diamond-shaped central collar fitting, dark sleeves and brown leather gloves. Preserve his exact original anime linework, shading and proportions. Hair may be slightly disheveled by the fall but must retain the original cut and fringe. NO new bright heraldic tabard, cape, rosettes or armor redesign.
+This sheet is a restrained narrative recovery sequence after a fight, in reading order: FIRST TWO PANELS unmistakably unconscious, then gradually waking and raising himself over seven distinct stages. Clearly injured throughout with consistent small purple bruise on his left cheek, a small superficial brow scratch and tiny dried blood mark at one lip corner, dust on cheek/armor and modest scuffs; no gore or graphic wounds. Keep the injury locations the same in all panels. He is alive; unconscious does not mean dead.
+Composition override for this request: keep face and upper body prominent, medium upper-body close framing, but allow the physically necessary change from lying to propped-up to kneeling to standing. In lying panels show head, shoulders, chest, loose hand and adjacent courtyard ground from a gentle three-quarter overhead angle. Never depict an upright sleeping portrait as unconscious. In rising panels show supporting gloved palms, forearms, knee or thigh at the bottom edge as needed; legs and boots do not need to fit. No whole-body tiny person. No helper, pillow, bed, medical equipment or weapons. The relaxed unconscious poses explicitly override the master's standing/active-gesture rule; remaining seven poses show increasing bodily effort and pain.
+
+Theme
+Verletzt, bewusstlos und langsam aufrappeln
+
+Panel List
+Top Left
+Bewusstlos auf dem Rücken: UNCONSCIOUS: lying flat on his back on courtyard ground, head tilted gently to one side, BOTH eyes fully closed, brows and mouth slack, lips slightly parted, one gloved hand resting completely limp beside upper torso. No hand supporting the head, no deliberate action. Face unmistakably visible.
+Top Center
+Bewusstlos in Seitenlage: UNCONSCIOUS: lying loosely on his side on courtyard ground, face in clear three-quarter view toward camera, BOTH eyes completely closed, jaw relaxed, cheek resting near a slack forearm, the other gloved hand limp in front of chest. Body completely passive, not actively propping himself up.
+Top Right
+Benommenes Erwachen: Still lying low, one eye barely opening and the other narrowed, brow starting to tighten in discomfort, lips part on a faint breath; one gloved hand starts moving toward the ground near shoulder. Face drowsy and dazed, not fully alert.
+Middle Left
+Schmerzhaftes Anheben: He slowly raises head and shoulders onto one forearm on the ground, brow knitted, eyes half open and jaw tense; the free hand presses against bruised ribs over intact armor, body still close to the ground.
+Center
+Mühsames Aufstützen: Upper torso lifted farther with one gloved palm planted firmly on ground and supporting elbow nearly straight; other hand stays near lower ribs, eyes squeeze briefly in pain and teeth slightly clenched. Clear weight through the planted hand.
+Middle Right
+Auf Knien nach Atem ringen: Now low on one knee, upper body hunched but face visible, one elbow rests on the raised knee at bottom edge, other glove supports his sore side, mouth slightly open with labored breath and tired eyes.
+Bottom Left
+Unsicheres Hochdrücken: Half rising from the kneel, one gloved hand presses down on his own thigh for leverage, other hand extends slightly outward for balance, determined pained brows, teeth clenched. Body visibly lifting, not a repeated kneeling pose.
+Bottom Center
+Mühsames Aufstützen: Upper torso lifted farther with one gloved palm planted firmly on ground and supporting elbow nearly straight; other hand stays near lower ribs, eyes squeeze briefly in pain and teeth slightly clenched. Clear weight through the planted hand.
+Bottom Right
+Wieder Halt finden: Upright again with guarded stiff posture, face exhausted but resolute, one hand lightly at brow/temple and other across sore ribs; knees below frame, still injured and dusty, no sudden recovery or triumphant smile.
+
+Quality Goals
+Same person in all nine panels
+Same portrait identity
+Highly expressive but believable
+Strong hand acting
+Natural body language
+Consistent anatomy
+Consistent proportions
+Consistent rendering quality
+Anime style identical to the reference image
+Every panel suitable as an RPG reaction portrait

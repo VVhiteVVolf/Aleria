@@ -1,0 +1,672 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-10-13T15:22:26.903Z",
+  "character": {
+    "id": "6Gpz6nJaoL7yo9rFu85H",
+    "origin": "",
+    "role": "",
+    "currentLocation": "",
+    "createdAt": "2026-07-26T11:30:34.621Z",
+    "updatedAt": "2026-10-13T15:22:26.903Z",
+    "bio": "",
+    "genealogy": {
+      "houseId": "",
+      "portraitPlaceholder": "",
+      "worldPersonId": "",
+      "houseName": "",
+      "sex": "unknown",
+      "sources": [],
+      "birth": "",
+      "tags": [],
+      "relationships": {
+        "children": [],
+        "parents": [],
+        "partners": []
+      },
+      "death": "",
+      "familyRole": "",
+      "status": ""
+    },
+    "identity": {
+      "worldPersonId": ""
+    },
+    "title": "Adjutant des Justiziars des Grafen, Gwynthor",
+    "fraktion": "Haus Draig, Celtigerns Wacht",
+    "portrait": "https://i.imgur.com/jHmRBTD.png",
+    "profileLink": "",
+    "aliases": [],
+    "archived": false,
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/nRoal69.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/ZQVQw9f.png"
+      },
+      {
+        "img": "https://i.imgur.com/75B4Crm.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/emlXu0l.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/ItE3B0d.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/bU0igUQ.png"
+      },
+      {
+        "img": "https://i.imgur.com/mRL7INL.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/p3K97Ht.png"
+      },
+      {
+        "img": "https://i.imgur.com/5iVYgHL.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/pYxlhoh.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/HL4HNrD.png"
+      },
+      {
+        "img": "https://i.imgur.com/w0BfCCo.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/RWzBRD1.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/hKUDbAT.png"
+      },
+      {
+        "img": "https://i.imgur.com/YQQAUUF.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Ax85lRX.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/QhFWC9u.png"
+      },
+      {
+        "img": "https://i.imgur.com/0b3zl4q.png",
+        "label": ""
+      }
+    ],
+    "emotesOverride": true,
+    "playerOwner": "erdi",
+    "plotNode": "",
+    "taxonomyPath": "",
+    "relevance": "",
+    "name": "Neithon Draig",
+    "status": "",
+    "inventory": {
+      "healthColor": "#5c7f20",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "role": "Adjutant des Justiziars des Grafen, Gwynthor",
+      "portraitPosition": "top",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "portrait": "https://i.imgur.com/jHmRBTD.png",
+      "infoRows": [],
+      "portraitFit": "cover",
+      "companions": [
+        {
+          "species": "Eidwacht",
+          "summary": "Cador ist Neithon Draigs junger, bereits erwachsener Eidwacht aus Ceffyl und Equo. Owain schenkte ihm das Pferd zu seinem Ritterschlag. Sehnig, stoisch und militärisch diszipliniert, mit beigefarbenem Fell, das nach oben dunkler wird, und kurz geschnittener, geknoteter Mähne.",
+          "imagePosition": "center",
+          "status": "Gesund",
+          "name": "Cador",
+          "statusColor": "#5c7f20",
+          "role": "Reittier",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "imageFormat": "portrait",
+          "image": "/AleriaAlmanach/assets/companions/haus-draig/cador.png",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 8
+            },
+            {
+              "label": "Ausdauer",
+              "value": 8
+            },
+            {
+              "label": "Stärke",
+              "value": 7
+            },
+            {
+              "label": "Agilität",
+              "value": 8
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 9
+            },
+            {
+              "label": "Robustheit",
+              "value": 8
+            }
+          ],
+          "infoRows": [
+            {
+              "label": "Besitz",
+              "value": "Neithon Draig"
+            },
+            {
+              "label": "Geschenk",
+              "value": "Owain Draig, zum Ritterschlag"
+            },
+            {
+              "label": "Zucht",
+              "value": "Ceffyl × Equo"
+            }
+          ],
+          "imageFit": "contain",
+          "description": "Cador ist Neithon Draigs junger, bereits erwachsener Eidwacht aus Ceffyl und Equo. Owain schenkte ihm das Pferd zu seinem Ritterschlag. Sehnig, stoisch und militärisch diszipliniert, mit beigefarbenem Fell, das nach oben dunkler wird, und kurz geschnittener, geknoteter Mähne.",
+          "creatureId": "companion-neithon-cador",
+          "inventoryItemId": "neithon-cador"
+        },
+        {
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "species": "Tier / Person",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "imageFit": "cover",
+          "status": "Noch festlegen",
+          "imageFormat": "landscape",
+          "name": "Treuer Begleiter",
+          "role": "Gefährte",
+          "statusColor": "#5c7f20",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "image": "",
+          "imagePosition": "top"
+        }
+      ],
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment",
+          "label": "Ausrüstung"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente",
+          "id": "documents"
+        },
+        {
+          "label": "Sonstiges",
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "moneyNotice": "",
+      "name": "Neithon Draig",
+      "showInfoTable": false,
+      "carryValue": "Noch festlegen",
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "copper": 0,
+        "gold": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "items": [
+        {
+          "individualizedAt": "",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "tags": "",
+          "itemDbKey": "",
+          "acquiredAt": "",
+          "name": "Hauptwaffe",
+          "quantity": "1",
+          "icon": "*",
+          "image": "",
+          "imageFit": "contain",
+          "itemStorageMode": "character",
+          "infoRows": [],
+          "originItemDbKey": "",
+          "category": "weapon",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "id": "item-mqu1vat1-0-w8ef",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "type": "Waffe",
+          "ownerCharacterName": "",
+          "ownerCharacterId": ""
+        },
+        {
+          "type": "Rüstung",
+          "individualizedAt": "",
+          "id": "item-mqu1vat1-1-exvo",
+          "category": "armor",
+          "infoRows": [],
+          "image": "",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "quantity": "1",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "ownerCharacterName": "",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "imagePosition": "center",
+          "name": "Rüstung / Schutz",
+          "imageFormat": "square",
+          "ownerCharacterId": "",
+          "tags": "",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "acquiredAt": "",
+          "originItemDbKey": ""
+        },
+        {
+          "name": "Reiseausrüstung",
+          "image": "",
+          "icon": "*",
+          "originItemDbKey": "",
+          "itemStorageMode": "character",
+          "tags": "",
+          "individualizedAt": "",
+          "quantity": "1",
+          "imageFormat": "square",
+          "ownerCharacterName": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "infoRows": [],
+          "ownerCharacterId": "",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "type": "Ausrüstung",
+          "weight": "Noch festlegen",
+          "category": "equipment",
+          "id": "item-mqu1vat1-2-0fx2",
+          "itemDbKey": "",
+          "acquiredAt": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände."
+        },
+        {
+          "acquiredAt": "",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "type": "Trinktur",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "infoRows": [],
+          "category": "potions",
+          "ownerCharacterName": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "quantity": "1",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "icon": "*",
+          "imageFormat": "square",
+          "id": "item-mqu1vat1-3-2lgm",
+          "weight": "Noch festlegen",
+          "image": "",
+          "tags": "",
+          "individualizedAt": ""
+        },
+        {
+          "image": "",
+          "acquiredAt": "",
+          "itemDbKey": "",
+          "individualizedAt": "",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "originItemDbKey": "",
+          "infoRows": [],
+          "type": "Dokument",
+          "category": "documents",
+          "itemStorageMode": "character",
+          "ownerCharacterName": "",
+          "id": "item-mqu1vat1-4-ajrj",
+          "imageFormat": "square",
+          "quantity": "1",
+          "tags": "",
+          "name": "Dokumente / Urkunden",
+          "ownerCharacterId": "",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "imagePosition": "center",
+          "icon": "*",
+          "weight": "Noch festlegen"
+        },
+        {
+          "image": "",
+          "ownerCharacterName": "",
+          "ownerCharacterId": "",
+          "quantity": "1",
+          "id": "item-mqu1vat1-5-5kao",
+          "type": "Sonstiges",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "acquiredAt": "",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "infoRows": [],
+          "imageFit": "contain",
+          "itemDbKey": "",
+          "name": "Persönlicher Gegenstand",
+          "itemStorageMode": "character",
+          "individualizedAt": "",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*",
+          "originItemDbKey": "",
+          "category": "other"
+        },
+        {
+          "id": "neithon-cador",
+          "instanceId": "neithon-cador",
+          "creatureId": "companion-neithon-cador",
+          "name": "Cador",
+          "image": "/AleriaAlmanach/assets/companions/haus-draig/cador.png",
+          "description": "Cador ist Neithon Draigs junger, bereits erwachsener Eidwacht aus Ceffyl und Equo. Owain schenkte ihm das Pferd zu seinem Ritterschlag. Sehnig, stoisch und militärisch diszipliniert, mit beigefarbenem Fell, das nach oben dunkler wird, und kurz geschnittener, geknoteter Mähne.",
+          "type": "Eidwacht",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Eidwacht",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "6Gpz6nJaoL7yo9rFu85H",
+          "ownerCharacterName": "Neithon Draig",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 8
+            },
+            {
+              "label": "Ausdauer",
+              "value": 8
+            },
+            {
+              "label": "Stärke",
+              "value": 7
+            },
+            {
+              "label": "Agilität",
+              "value": 8
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 9
+            },
+            {
+              "label": "Robustheit",
+              "value": 8
+            }
+          ],
+          "infoRows": [],
+          "individualizedAt": "2026-10-13T15:22:27.247Z"
+        }
+      ],
+      "title": "Charakter-Inventar",
+      "characterId": "6Gpz6nJaoL7yo9rFu85H",
+      "portraitFormat": "portrait",
+      "hitpoints": "TP / Zustand",
+      "status": "Gesund",
+      "equipmentQuiz": {
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "updatedAt": "",
+        "resultText": "",
+        "open": false,
+        "status": "",
+        "step": 0
+      },
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "revision": 1791904947248
+    }
+  }
+}

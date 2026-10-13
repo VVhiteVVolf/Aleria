@@ -168,6 +168,11 @@
           "quadratischer Ausschnitt",
           "keine Nachbarbildreste oder Beschriftung"
         ]
+      },
+      "distribution": {
+        "Angriff": 3,
+        "Abwehr": 3,
+        "Neutral": 3
       }
     },
     {
@@ -324,20 +329,177 @@
           "quadratischer Ausschnitt",
           "keine Nachbarbildreste oder Beschriftung"
         ]
+      },
+      "distribution": {
+        "Angriff": 3,
+        "Abwehr": 3,
+        "Neutral": 3
       }
+    },
+    {
+      "setId": "set-03",
+      "theme": "Verletzt, bewusstlos und langsam aufrappeln",
+      "sheet": "Sheets/nudd-saethwyr-set-03-verletzt-bewusstlos-aufrappeln.png",
+      "sheetSha256": "252b10efcabafd600c472504678085266effe74adcfd3883c7b5fafecfb1f83c",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Bewusstlos auf dem Rücken",
+          "file": "Output/set-03/nudd-saethwyr-set-03-verletzt-bewusstlos-aufrappeln_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "7d8197ab5ab38451128bfd0f4839bd54f884fb4c688eebe43a145960f4e52be2",
+          "gesture": "UNCONSCIOUS: lying flat on his back on courtyard ground, head tilted gently to one side, BOTH eyes fully closed, brows and mouth slack, lips slightly parted, one gloved hand resting completely limp beside upper torso. No hand supporting the head, no deliberate action. Face unmistakably visible.",
+          "state": "bewusstlos"
+        },
+        {
+          "index": 2,
+          "emotion": "Bewusstlos in Seitenlage",
+          "file": "Output/set-03/nudd-saethwyr-set-03-verletzt-bewusstlos-aufrappeln_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "77b57c2f9db25114dfd1888ca5fa3c8a2160dbf3aed7b8ca3bdd6fa435f1ea71",
+          "gesture": "UNCONSCIOUS: lying loosely on his side on courtyard ground, face in clear three-quarter view toward camera, BOTH eyes completely closed, jaw relaxed, cheek resting near a slack forearm, the other gloved hand limp in front of chest. Body completely passive, not actively propping himself up.",
+          "state": "bewusstlos"
+        },
+        {
+          "index": 3,
+          "emotion": "Benommenes Erwachen",
+          "file": "Output/set-03/nudd-saethwyr-set-03-verletzt-bewusstlos-aufrappeln_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "758cb72cf2d78012119c9757dc1140cf276caa1ad23748fbdfd97ea44082d97c",
+          "gesture": "Still lying low, one eye barely opening and the other narrowed, brow starting to tighten in discomfort, lips part on a faint breath; one gloved hand starts moving toward the ground near shoulder. Face drowsy and dazed, not fully alert.",
+          "state": "aufrappeln"
+        },
+        {
+          "index": 4,
+          "emotion": "Schmerzhaftes Anheben",
+          "file": "Output/set-03/nudd-saethwyr-set-03-verletzt-bewusstlos-aufrappeln_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "71e94839a524ea13799bc4bb0da407555ba93951a58886bf876095b43b53be5f",
+          "gesture": "He slowly raises head and shoulders onto one forearm on the ground, brow knitted, eyes half open and jaw tense; the free hand presses against bruised ribs over intact armor, body still close to the ground.",
+          "state": "aufrappeln"
+        },
+        {
+          "index": 5,
+          "emotion": "Mühsames Aufstützen",
+          "file": "Output/set-03/nudd-saethwyr-set-03-verletzt-bewusstlos-aufrappeln_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "ee57580c41f443fec49c5cbf12466bd2b7b9aec0ef71ec9f5a6f5c7cbf67cb9d",
+          "gesture": "Upper torso lifted farther with one gloved palm planted firmly on ground and supporting elbow nearly straight; other hand stays near lower ribs, eyes squeeze briefly in pain and teeth slightly clenched. Clear weight through the planted hand.",
+          "state": "aufrappeln"
+        },
+        {
+          "index": 6,
+          "emotion": "Auf Knien nach Atem ringen",
+          "file": "Output/set-03/nudd-saethwyr-set-03-verletzt-bewusstlos-aufrappeln_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "07d2bff35426636d91a9b2e02c5f7510c30f623ebcc9ec815a00eef38c2d472d",
+          "gesture": "Now low on one knee, upper body hunched but face visible, one elbow rests on the raised knee at bottom edge, other glove supports his sore side, mouth slightly open with labored breath and tired eyes.",
+          "state": "aufrappeln"
+        },
+        {
+          "index": 7,
+          "emotion": "Unsicheres Hochdrücken",
+          "file": "Output/set-03/nudd-saethwyr-set-03-verletzt-bewusstlos-aufrappeln_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "8b74b7015193c63c1f4c6edc89062be31290e1aa6d040cfcb9a55e1b2b34ca42",
+          "gesture": "Half rising from the kneel, one gloved hand presses down on his own thigh for leverage, other hand extends slightly outward for balance, determined pained brows, teeth clenched. Body visibly lifting, not a repeated kneeling pose.",
+          "state": "aufrappeln"
+        },
+        {
+          "index": 8,
+          "emotion": "Taumelnd aufgerichtet",
+          "file": "Output/set-03/nudd-saethwyr-set-03-verletzt-bewusstlos-aufrappeln_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "4f1d31651c8e039e8ffba13688664cedb8c768f8a03a3f298babd554af707af9",
+          "gesture": "Nearly upright but bent at waist and unsteady, one hand presses sore ribs and the other reaches sideways for balance without touching a prop; unfocused narrowed eyes and grimacing mouth, shoulders uneven.",
+          "state": "aufrappeln"
+        },
+        {
+          "index": 9,
+          "emotion": "Wieder Halt finden",
+          "file": "Output/set-03/nudd-saethwyr-set-03-verletzt-bewusstlos-aufrappeln_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "eeb4e4eae1bb0bfa8a89227bed813fb66e5fbc8fe6bc06c73e12378943dd7df2",
+          "gesture": "Upright again with guarded stiff posture, face exhausted but resolute, one hand lightly at brow/temple and other across sore ribs; knees below frame, still injured and dusty, no sudden recovery or triumphant smile.",
+          "state": "aufrappeln"
+        }
+      ],
+      "visualReview": {
+        "reviewedAt": "2026-10-13",
+        "reviewedAvatars": 9,
+        "passed": true,
+        "method": "Alle neun exportierten PNGs in einer Prüfübersicht bei Originalgröße angesehen.",
+        "checks": [
+          "Vorlagenoptik und Zeichenstil",
+          "passende Mimik und Körperhaltung",
+          "keine Waffen",
+          "quadratische Ausschnitte ohne Nachbarbildreste",
+          "zwei bewusstlose Varianten und Aufrappeln"
+        ]
+      },
+      "weaponFree": true
     }
   ],
-  "avatarCount": 18,
+  "avatarCount": 27,
   "visualReview": {
     "reviewedAt": "2026-10-13",
-    "reviewedAvatars": 18,
-    "method": "Alle Einzelavatare in Prüfübersichten aus den tatsächlich exportierten PNGs bei Originalgröße angesehen; nach Kantenkorrektur erneute Prüfung des Schild-Sets.",
-    "passed": true
+    "reviewedAvatars": 27,
+    "passed": true,
+    "method": "Kampfsets zuvor vollständig geprüft; neues Reaktionsset anschließend separat anhand aller neun exportierten PNGs geprüft."
   },
-  "referenceSha256": "d9776a8c10b9b486c83c2aae5b62c3b4044a4b9466cc72323b0a69b87473c3c0",
-  "distributionPerSet": {
-    "Angriff": 3,
-    "Abwehr": 3,
-    "Neutral": 3
-  }
+  "referenceSha256": "d9776a8c10b9b486c83c2aae5b62c3b4044a4b9466cc72323b0a69b87473c3c0"
 }

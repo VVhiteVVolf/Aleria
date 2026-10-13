@@ -168,6 +168,11 @@
           "quadratischer Ausschnitt",
           "keine Nachbarbildreste oder Beschriftung"
         ]
+      },
+      "distribution": {
+        "Angriff": 3,
+        "Abwehr": 3,
+        "Neutral": 3
       }
     },
     {
@@ -324,6 +329,11 @@
           "quadratischer Ausschnitt",
           "keine Nachbarbildreste oder Beschriftung"
         ]
+      },
+      "distribution": {
+        "Angriff": 3,
+        "Abwehr": 3,
+        "Neutral": 3
       }
     },
     {
@@ -546,20 +556,168 @@
           "quadratischer Ausschnitt",
           "keine Nachbarbildreste oder Beschriftung"
         ]
+      },
+      "distribution": {
+        "Angriff": 3,
+        "Abwehr": 3,
+        "Neutral": 3
       }
+    },
+    {
+      "setId": "set-04",
+      "theme": "Peinlich berührt, ertappt und entschuldigend",
+      "sheet": "Sheets/asgeir-wolfshorn-set-04-verlegen-ertappt-entschuldigend-v3.png",
+      "sheetSha256": "2fe968ec4dbb73b3c8835d1a443313a098d1e8f5792843596b228321ae7ac5d6",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Trocken ertappt",
+          "file": "Output/set-04/asgeir-wolfshorn-set-04-verlegen-ertappt-entschuldigend_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "cf3a0d7b50dd398aea3ebc2b1b4d77316a59b7d21b75c6a47ee0d4dec684eaf2",
+          "gesture": "Brief sidelong glance, one brow slightly raised, jaw set and mouth closed in a flat awkward line; one bare hand rubs the back of his neck ONCE, other arm low, shoulders square. No blush or smile."
+        },
+        {
+          "index": 2,
+          "emotion": "Unbehagliches Schweigen",
+          "file": "Output/set-04/asgeir-wolfshorn-set-04-verlegen-ertappt-entschuldigend_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "46ca60dde39b3f237f17e970c49a5fa43635e03b2cb0d324d8e18f86e5962351",
+          "gesture": "Eyes look down and away, lips compressed; one loosely closed hand briefly rests against lower chin as he considers what to say, other hand low. Guarded adult expression, not a coy mouth-covering giggle."
+        },
+        {
+          "index": 3,
+          "emotion": "Knappe Rechtfertigung",
+          "file": "Output/set-04/asgeir-wolfshorn-set-04-verlegen-ertappt-entschuldigend_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "19ad5f47e3d97583c7ece0b7c8e05672d5e22127d4bb0e747f84ce3853dfa17d",
+          "gesture": "Direct slightly narrowed eyes, one mouth corner in an awkward dry grimace; one hand at hip, other empty hand makes a small palm-up explanatory gesture low at waist, no playful smile."
+        },
+        {
+          "index": 4,
+          "emotion": "Einräumen des Fehlers",
+          "file": "Output/set-04/asgeir-wolfshorn-set-04-verlegen-ertappt-entschuldigend_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "17a32fbdd84bb9681401d736ac7a8303998e1779e59a1c65a0efa1026e7f7f77",
+          "gesture": "Flat rueful expression, lips parted just enough for a brief admission; one open hand raised only to lower chest with fingers relaxed in a small fair-enough gesture, other arm hangs normally. No two-palmed pleading pose."
+        },
+        {
+          "index": 5,
+          "emotion": "Verlegenes Abwarten",
+          "file": "Output/set-04/asgeir-wolfshorn-set-04-verlegen-ertappt-entschuldigend_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "2dfa779ccadb11a263ebd245da9a0fafb8303d5101fb09fb73b11ff0c4bf8ae2",
+          "gesture": "Chin slightly lowered, eyes glance sideways, tight straight mouth; both arms crossed naturally below chest, shoulders level, visibly uncomfortable but composed, no blush."
+        },
+        {
+          "index": 6,
+          "emotion": "Genervt über sich selbst",
+          "file": "Output/set-04/asgeir-wolfshorn-set-04-verlegen-ertappt-entschuldigend_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "653cfc4eb31a5bfaa5de821b3699ba3c8ac600f2c763686f0f1c4f0642a5e424",
+          "gesture": "Eyes close briefly with a small frown and tense mouth; one hand presses against the brow/forehead in restrained self-reproach, other hand low, not a dramatic swoon."
+        },
+        {
+          "index": 7,
+          "emotion": "Ernste Entschuldigung",
+          "file": "Output/set-04/asgeir-wolfshorn-set-04-verlegen-ertappt-entschuldigend_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "1969a49e84df3c56514f8f586152286b45c24e720123e916b92523809241e97e",
+          "gesture": "Eyes meet the unseen other person with quiet sincerity, mouth gently open while apologizing, brows mostly level; one hand flat briefly on upper chest and a small respectful nod, other hand down. No imploring eyes or smile."
+        },
+        {
+          "index": 8,
+          "emotion": "Schuld eingestehen",
+          "file": "Output/set-04/asgeir-wolfshorn-set-04-verlegen-ertappt-entschuldigend_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "e00fa666c97c04854ea2ac158422ec279c8fc31a3ff8d162dd071b6e2e5fa093",
+          "gesture": "Sober steady gaze and closed rueful lips, chin slightly dipped; hands loosely clasp one wrist in front at waist, elbows relaxed, neither prayer nor pleading. Composed upright adult posture."
+        },
+        {
+          "index": 9,
+          "emotion": "Trockener Selbstspott",
+          "file": "Output/set-04/asgeir-wolfshorn-set-04-verlegen-ertappt-entschuldigend_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "4c2903d47f158a6ae48c2d186c2d70c03482b6119f127453e50de05e245b6a14",
+          "gesture": "A very small wry asymmetrical mouth corner, eyes steady and one brow raised; one thumb points briefly toward his own chest as if admitting that-one-was-on-me, other hand relaxed low. Restrained awkward humor, not flirtation."
+        }
+      ],
+      "visualReview": {
+        "reviewedAt": "2026-10-13",
+        "reviewedAvatars": 9,
+        "passed": true,
+        "method": "Alle neun exportierten PNGs in einer Prüfübersicht bei Originalgröße angesehen.",
+        "checks": [
+          "Vorlagenoptik und Zeichenstil",
+          "passende Mimik und Körperhaltung",
+          "keine Waffen",
+          "quadratische Ausschnitte ohne Nachbarbildreste",
+          "zurückhaltende Verlegenheit ohne starke Röte oder kokette Gestik"
+        ]
+      },
+      "weaponFree": true
     }
   ],
-  "avatarCount": 27,
+  "avatarCount": 36,
   "visualReview": {
     "reviewedAt": "2026-10-13",
-    "reviewedAvatars": 27,
-    "method": "Alle Einzelavatare in Prüfübersichten aus den tatsächlich exportierten PNGs bei Originalgröße angesehen; nach Kantenkorrektur erneute Prüfung des Schild-Sets.",
-    "passed": true
+    "reviewedAvatars": 36,
+    "passed": true,
+    "method": "Kampfsets zuvor vollständig geprüft; neues Reaktionsset anschließend separat anhand aller neun exportierten PNGs geprüft."
   },
-  "referenceSha256": "2355b6b888e26e3034c5f7e81081a15844f6ebab575f8a719f4213f4a2d1e285",
-  "distributionPerSet": {
-    "Angriff": 3,
-    "Abwehr": 3,
-    "Neutral": 3
-  }
+  "referenceSha256": "2355b6b888e26e3034c5f7e81081a15844f6ebab575f8a719f4213f4a2d1e285"
 }

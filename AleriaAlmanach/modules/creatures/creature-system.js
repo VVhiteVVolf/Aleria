@@ -19,8 +19,8 @@ import {
   sanitizeCharacterCombatProfile
 } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 import { openCombatEntryEditor } from '../combat/ui/combat-entry-editor.js?v=20260928-equipment-art-v4';
-import { renderCreatureDossier } from './creature-dossier.js?v=20261012-carreg-v1';
-import { renderCreatureBestiaryReference } from './creature-bestiary-view.js?v=20261012-carreg-v1';
+import { renderCreatureDossier } from './creature-dossier.js?v=20261013-draig-breeds-v2';
+import { renderCreatureBestiaryReference } from './creature-bestiary-view.js?v=20261013-draig-breeds-v2';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import {
   findSpellSlotResourceId,
@@ -38,13 +38,13 @@ import {
   makeCreatureExportPayload,
   normalizeCreatureImportPayload,
   sanitizeCreature
-} from './creature-model.js?v=20261012-carreg-v1';
+} from './creature-model.js?v=20261013-draig-breeds-v2';
 import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
   isBuiltinCreatureId
-} from './creature-catalog.js?v=20261012-carreg-v1';
-import { getCreatureClassification } from './creature-classification.js?v=20261012-carreg-v1';
+} from './creature-catalog.js?v=20261013-draig-horses-v2';
+import { getCreatureClassification } from './creature-classification.js?v=20261013-draig-breeds-v2';
 import { renderCreatureGroups } from './creature-library-view.js?v=20261011-creature-groups-v1';
 import { selectChangedSections } from '../characters/character-save-guard.js?v=20260808-character-storage-audit-v1';
 

@@ -1,0 +1,684 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-10-13T15:22:26.903Z",
+  "character": {
+    "id": "wnS8JOFUR3oS1izRzObH",
+    "genealogy": {
+      "houseId": "",
+      "status": "",
+      "worldPersonId": "",
+      "sex": "unknown",
+      "portraitPlaceholder": "",
+      "death": "",
+      "sources": [],
+      "birth": "",
+      "relationships": {
+        "partners": [],
+        "children": [],
+        "parents": []
+      },
+      "tags": [],
+      "houseName": "",
+      "familyRole": ""
+    },
+    "profileLink": "",
+    "inventory": {
+      "title": "Charakter-Inventar",
+      "moneyState": {
+        "silver": 0,
+        "totalCopper": 0,
+        "copper": 0,
+        "gold": 0
+      },
+      "name": "Isobel Draig",
+      "portrait": "https://i.imgur.com/S77sw31.png",
+      "portraitFormat": "portrait",
+      "portraitPosition": "top",
+      "companions": [
+        {
+          "role": "Reittier",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "statusColor": "#5c7f20",
+          "name": "Rhoslyn",
+          "imageFormat": "portrait",
+          "summary": "Rhoslyn ist Isobel Draigs strahlend weißer Erlenglanz: atemberaubend schön, elfenhaft und filigran, mit einer außergewöhnlich voluminösen Mähne. Ein königlich wirkendes Reitpferd mit feinen Bewegungen und sensibler Natur.",
+          "species": "Erlenglanz",
+          "imagePosition": "center",
+          "infoRows": [
+            {
+              "label": "Besitz",
+              "value": "Isobel Draig"
+            }
+          ],
+          "description": "Rhoslyn ist Isobel Draigs strahlend weißer Erlenglanz: atemberaubend schön, elfenhaft und filigran, mit einer außergewöhnlich voluminösen Mähne. Ein königlich wirkendes Reitpferd mit feinen Bewegungen und sensibler Natur.",
+          "imageFit": "contain",
+          "status": "Gesund",
+          "image": "/AleriaAlmanach/assets/companions/haus-draig/rhoslyn.png",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 9
+            },
+            {
+              "label": "Ausdauer",
+              "value": 3
+            },
+            {
+              "label": "Stärke",
+              "value": 2
+            },
+            {
+              "label": "Agilität",
+              "value": 9
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 2
+            },
+            {
+              "label": "Robustheit",
+              "value": 2
+            }
+          ],
+          "creatureId": "companion-isobel-rhoslyn",
+          "inventoryItemId": "isobel-rhoslyn"
+        },
+        {
+          "role": "Gefährte",
+          "imagePosition": "top",
+          "species": "Tier / Person",
+          "image": "",
+          "statusColor": "#5c7f20",
+          "name": "Treuer Begleiter",
+          "imageFormat": "landscape",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "imageFit": "cover",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "description": "",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "infoRows": [],
+          "status": "Noch festlegen"
+        }
+      ],
+      "portraitFit": "cover",
+      "items": [
+        {
+          "infoRows": [],
+          "acquiredAt": "",
+          "type": "Waffe",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "individualizedAt": "",
+          "id": "item-mqu1vat1-0-w8ef",
+          "ownerCharacterId": "",
+          "image": "",
+          "icon": "*",
+          "originItemDbKey": "",
+          "imageFit": "contain",
+          "category": "weapon",
+          "imagePosition": "center",
+          "tags": "",
+          "itemDbKey": "",
+          "name": "Hauptwaffe",
+          "ownerCharacterName": "",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "itemStorageMode": "character",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ]
+        },
+        {
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "itemDbKey": "",
+          "icon": "*",
+          "imagePosition": "center",
+          "itemStorageMode": "character",
+          "id": "item-mqu1vat1-1-exvo",
+          "infoRows": [],
+          "type": "Rüstung",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFit": "contain",
+          "originItemDbKey": "",
+          "imageFormat": "square",
+          "image": "",
+          "individualizedAt": "",
+          "acquiredAt": "",
+          "category": "armor",
+          "ownerCharacterId": "",
+          "ownerCharacterName": "",
+          "name": "Rüstung / Schutz",
+          "tags": "",
+          "weight": "Noch festlegen",
+          "quantity": "1"
+        },
+        {
+          "imageFit": "contain",
+          "itemStorageMode": "character",
+          "image": "",
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "weight": "Noch festlegen",
+          "ownerCharacterName": "",
+          "acquiredAt": "",
+          "imagePosition": "center",
+          "type": "Ausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "icon": "*",
+          "infoRows": [],
+          "tags": "",
+          "itemDbKey": "",
+          "id": "item-mqu1vat1-2-0fx2",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "name": "Reiseausrüstung",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "category": "equipment",
+          "imageFormat": "square"
+        },
+        {
+          "imageFormat": "square",
+          "tags": "",
+          "ownerCharacterName": "",
+          "id": "item-mqu1vat1-3-2lgm",
+          "itemStorageMode": "character",
+          "infoRows": [],
+          "acquiredAt": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "originItemDbKey": "",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "individualizedAt": "",
+          "image": "",
+          "category": "potions",
+          "ownerCharacterId": "",
+          "itemDbKey": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Trinktur",
+          "icon": "*",
+          "quantity": "1"
+        },
+        {
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "individualizedAt": "",
+          "tags": "",
+          "category": "documents",
+          "ownerCharacterId": "",
+          "imageFormat": "square",
+          "name": "Dokumente / Urkunden",
+          "ownerCharacterName": "",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "image": "",
+          "id": "item-mqu1vat1-4-ajrj",
+          "infoRows": [],
+          "itemDbKey": "",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "type": "Dokument",
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "icon": "*",
+          "acquiredAt": ""
+        },
+        {
+          "id": "item-mqu1vat1-5-5kao",
+          "type": "Sonstiges",
+          "quantity": "1",
+          "icon": "*",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "weight": "Noch festlegen",
+          "ownerCharacterName": "",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "imagePosition": "center",
+          "acquiredAt": "",
+          "category": "other",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "individualizedAt": "",
+          "ownerCharacterId": "",
+          "tags": "",
+          "image": "",
+          "infoRows": [],
+          "itemStorageMode": "character",
+          "name": "Persönlicher Gegenstand"
+        },
+        {
+          "id": "isobel-rhoslyn",
+          "instanceId": "isobel-rhoslyn",
+          "creatureId": "companion-isobel-rhoslyn",
+          "name": "Rhoslyn",
+          "image": "/AleriaAlmanach/assets/companions/haus-draig/rhoslyn.png",
+          "description": "Rhoslyn ist Isobel Draigs strahlend weißer Erlenglanz: atemberaubend schön, elfenhaft und filigran, mit einer außergewöhnlich voluminösen Mähne. Ein königlich wirkendes Reitpferd mit feinen Bewegungen und sensibler Natur.",
+          "type": "Erlenglanz",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Erlenglanz",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "wnS8JOFUR3oS1izRzObH",
+          "ownerCharacterName": "Isobel Draig",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 9
+            },
+            {
+              "label": "Ausdauer",
+              "value": 3
+            },
+            {
+              "label": "Stärke",
+              "value": 2
+            },
+            {
+              "label": "Agilität",
+              "value": 9
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 2
+            },
+            {
+              "label": "Robustheit",
+              "value": 2
+            }
+          ],
+          "infoRows": [],
+          "individualizedAt": "2026-10-13T15:22:27.240Z"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "hitpoints": "TP / Zustand",
+      "level": "Haus Draig, Celtigerns Wacht",
+      "status": "Gesund",
+      "equipmentQuiz": {
+        "step": 0,
+        "resultText": "",
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "open": false,
+        "status": ""
+      },
+      "role": "Adjutantin des Barden des Grafen, Gwynthor",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "carryValue": "Noch festlegen",
+      "showInfoTable": false,
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "characterId": "wnS8JOFUR3oS1izRzObH",
+      "healthColor": "#5c7f20",
+      "carryLabel": "Traglast",
+      "moneyNotice": "",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges",
+          "id": "other"
+        }
+      ],
+      "infoRows": [],
+      "revision": 1791904947243
+    },
+    "fraktion": "Haus Draig, Celtigerns Wacht",
+    "title": "Adjutantin des Barden des Grafen, Gwynthor",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "aliases": [],
+    "createdAt": "2026-07-26T11:29:26.897Z",
+    "emotesOverride": true,
+    "role": "",
+    "currentLocation": "",
+    "origin": "",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/XyCTZH2.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/pDNr9DP.png"
+      },
+      {
+        "img": "https://i.imgur.com/DhSMhn3.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/8l77UU3.png"
+      },
+      {
+        "img": "https://i.imgur.com/Ndth8Ch.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/moFXqEa.png"
+      },
+      {
+        "img": "https://i.imgur.com/C6cM5qX.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/THbSojb.png"
+      },
+      {
+        "img": "https://i.imgur.com/1Go0qPo.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/0L3P7Ry.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/6teDOIX.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/9OOTv8P.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/QJUbAWi.png"
+      },
+      {
+        "img": "https://i.imgur.com/KOiZiRi.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/rpvkkJ7.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/3dpIYsw.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/YLUaBYQ.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/6pv84ST.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/8nsKzjI.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/76vDE67.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/i6vdL6k.png"
+      },
+      {
+        "img": "https://i.imgur.com/qaGyuqh.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/NOpjY7F.png",
+        "label": ""
+      }
+    ],
+    "portrait": "https://i.imgur.com/S77sw31.png",
+    "archived": false,
+    "name": "Isobel Draig",
+    "status": "",
+    "playerOwner": "erdi",
+    "relevance": "",
+    "updatedAt": "2026-10-13T15:22:26.903Z",
+    "taxonomyPath": "",
+    "plotNode": "",
+    "bio": ""
+  }
+}

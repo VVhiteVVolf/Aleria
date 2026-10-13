@@ -1,0 +1,91 @@
+[
+  {
+    "parent": {
+      "id": "cadfan-draig",
+      "worldPersonId": "person--haus-draig--cadfan-draig",
+      "name": "Cadfan",
+      "title": "",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1696",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-draig/cadfan-draig.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-draig",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    "ancestors": [
+      {
+        "family": "haus-draig",
+        "parents": [
+          {
+            "id": "maredudd-draig",
+            "worldPersonId": "person--haus-draig--maredudd-draig",
+            "name": "Maredudd",
+            "title": "",
+            "sex": "male",
+            "status": "alive",
+            "birth": "1670",
+            "death": "",
+            "portrait": "assets/images/portraits/haus-draig/maredudd-draig.jpg",
+            "portraitPlaceholder": "auto",
+            "houseId": "house-draig",
+            "familyRole": "core",
+            "lineageRole": "branch",
+            "tags": [],
+            "notes": "",
+            "extensions": {}
+          },
+          {
+            "id": "alaw-grawn",
+            "worldPersonId": "person--haus-grawn--alaw-grawn",
+            "name": "Alaw Grawn",
+            "title": "",
+            "sex": "female",
+            "status": "dead",
+            "birth": "1676",
+            "death": "1720",
+            "portrait": "",
+            "portraitPlaceholder": "auto",
+            "houseId": "house-grawn",
+            "familyRole": "married",
+            "lineageRole": "branch",
+            "tags": [],
+            "notes": "",
+            "extensions": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "parent": {
+      "id": "wynonna-fiachrach",
+      "worldPersonId": "person--haus-fiachrach--wynonna-fiachrach",
+      "name": "Wynonna Fiachrach",
+      "title": "",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1700",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-draig/wynonna-fiachrach.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-fiachrach",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    "ancestors": [
+      {
+        "family": "haus-draig",
+        "parents": []
+      }
+    ]
+  }
+]

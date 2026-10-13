@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-13",
+  "published": false,
+  "assets": [
+    {
+      "name": "Lot",
+      "creatureId": "companion-rhys-lot",
+      "path": "/AleriaAlmanach/assets/companions/haus-draig/lot.png",
+      "source": "AleriaAlmanach/assets/companions/haus-draig/concepts/2026-10-13-rhys-kane-gethin-carys/rhys-edel-rhyfel.png",
+      "sha256": "739e1596bcbb6ee57e3459bfe572bc3df503d9136d29020480af93252ad5c9cb",
+      "width": 1024,
+      "height": 1536,
+      "performance": [
+        {
+          "label": "Schnelligkeit",
+          "value": 8
+        },
+        {
+          "label": "Ausdauer",
+          "value": 8
+        },
+        {
+          "label": "Stärke",
+          "value": 7
+        },
+        {
+          "label": "Agilität",
+          "value": 7
+        },
+        {
+          "label": "Sozialverhalten",
+          "value": 8
+        },
+        {
+          "label": "Robustheit",
+          "value": 8
+        }
+      ],
+      "performanceSource": "Erwartungswerte Rhyfel × Ceffyl, auf ganze Punkte gerundet"
+    },
+    {
+      "name": "Aelwyn",
+      "creatureId": "companion-kane-aelwyn",
+      "path": "/AleriaAlmanach/assets/companions/haus-draig/aelwyn.png",
+      "source": "AleriaAlmanach/assets/companions/haus-draig/concepts/2026-10-13-rhys-kane-gethin-carys/kane-rhyfel.png",
+      "sha256": "cf8fc191ba16b22fbd5a52ce15a5da17da7b58e8291046d2e33e2f4be55377a2",
+      "width": 1024,
+      "height": 1536,
+      "performance": [
+        {
+          "label": "Schnelligkeit",
+          "value": 6
+        },
+        {
+          "label": "Ausdauer",
+          "value": 7
+        },
+        {
+          "label": "Stärke",
+          "value": 6
+        },
+        {
+          "label": "Agilität",
+          "value": 6
+        },
+        {
+          "label": "Sozialverhalten",
+          "value": 6
+        },
+        {
+          "label": "Robustheit",
+          "value": 8
+        }
+      ],
+      "performanceSource": "Bestiarium: Rhyfel"
+    },
+    {
+      "name": "Alaw",
+      "creatureId": "companion-carys-alaw",
+      "path": "/AleriaAlmanach/assets/companions/haus-draig/alaw.png",
+      "source": "AleriaAlmanach/assets/companions/haus-draig/concepts/2026-10-13-rhys-kane-gethin-carys/carys-tirashan.png",
+      "sha256": "96cfb87a34de9d017f79d30a0e2e225db9c13a32d2b64f40ae7f0c474c81439f",
+      "width": 1024,
+      "height": 1536,
+      "performance": [
+        {
+          "label": "Schnelligkeit",
+          "value": 6
+        },
+        {
+          "label": "Ausdauer",
+          "value": 6
+        },
+        {
+          "label": "Stärke",
+          "value": 5
+        },
+        {
+          "label": "Agilität",
+          "value": 6
+        },
+        {
+          "label": "Sozialverhalten",
+          "value": 6
+        },
+        {
+          "label": "Robustheit",
+          "value": 7
+        }
+      ],
+      "performanceSource": "Bestiarium: Tirashan"
+    },
+    {
+      "name": "Vivian",
+      "creatureId": "companion-gethin-vivian",
+      "path": "/AleriaAlmanach/assets/companions/haus-draig/vivian.png",
+      "source": "AleriaAlmanach/assets/companions/haus-draig/concepts/2026-10-13-rhys-kane-gethin-carys/gethin-vivian-sonnenlaeufer-v2.png",
+      "sha256": "1c76ca5b609ad80717e1ba5065528581ac2fcf6ce0195b2752783295f50bec3b",
+      "width": 1024,
+      "height": 1536,
+      "performance": [
+        {
+          "label": "Schnelligkeit",
+          "value": 9
+        },
+        {
+          "label": "Ausdauer",
+          "value": 8
+        },
+        {
+          "label": "Stärke",
+          "value": 7
+        },
+        {
+          "label": "Agilität",
+          "value": 8
+        },
+        {
+          "label": "Sozialverhalten",
+          "value": 8
+        },
+        {
+          "label": "Robustheit",
+          "value": 8
+        }
+      ],
+      "performanceSource": "Erwartungswerte Ceffyl × Aurelianer, auf ganze Punkte gerundet"
+    }
+  ]
+}

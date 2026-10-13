@@ -31,18 +31,49 @@ test('breeding data joins all 27 Rossmarkt breeds with local horse dossiers', as
   await Promise.all(data.breeds.map(breed => access(new URL(breed.profileHref, pageDirectory))));
 });
 
-test('the five Rossmarkt names and three registered lore crossings are complete and symmetric', async () => {
+test('the five Rossmarkt names and six registered lore crossings are complete and symmetric', async () => {
   const source = await readFile(new URL('../../Markt/Rossmarkt/Rossmarkt.html', import.meta.url), 'utf8');
   assert.deepEqual(extractRossmarktBreedingCrossings(source).map(entry => entry.name), [
     'Hochblut', 'Kronforst', 'Kronhest', 'Roh-Rhyfel', 'Edelsale'
   ]);
-  assert.equal(data.crossings.length, 8);
+  assert.equal(data.crossings.length, 11);
   assert.deepEqual(data.crossings.map(entry => entry.name), [
-    'Hochblut', 'Kronforst', 'Kronhest', 'Roh-Rhyfel', 'Edelsale', 'Brycing', 'Tirashan', 'Ritterschimmer'
+    'Hochblut', 'Kronforst', 'Kronhest', 'Roh-Rhyfel', 'Edelsale', 'Brycing', 'Tirashan', 'Ritterschimmer', 'Eidwacht', 'Edel Rhyfel', 'Sonnenläufer'
   ]);
-  assert.equal(new Set(data.crossings.map(entry => horsePairKey(entry.mareId, entry.sireId))).size, 8);
+  assert.equal(new Set(data.crossings.map(entry => horsePairKey(entry.mareId, entry.sireId))).size, 11);
   assert.equal(horsePairKey('hest', 'ceffyl'), horsePairKey('ceffyl', 'hest'));
   assert.equal(data.crossings.find(entry => entry.name === 'Roh-Rhyfel').establishedBreed, 'Rhyfel');
+});
+
+test('Edel Rhyfel and Sonnenläufer retain their names and stable references in either parent order', () => {
+  for (const [id, name, parents] of [
+    ['edel-rhyfel', 'Edel Rhyfel', ['ceffyl', 'rhyfel']],
+    ['sonnenlaeufer', 'Sonnenläufer', ['aurelianer', 'ceffyl']]
+  ]) {
+    const crossing = data.crossings.find(entry => entry.bestiaryId === id);
+    assert.equal(crossing.name, name);
+    assert.equal(horsePairKey(crossing.mareId, crossing.sireId), horsePairKey(...parents));
+    const anchor = horseCrossingAnchor(...parents);
+    assert.equal(horseCrossingAnchor(parents[1], parents[0]), anchor);
+    assert.ok(renderHorseBreedingPage(data).includes(`id="${anchor}"`));
+    for (const [mare, sire] of [parents, [...parents].reverse()]) {
+      assert.equal(calculateFoal(byId.get(mare), byId.get(sire), { crossing, random: () => 0.5 }).crossing.name, name);
+    }
+  }
+});
+
+test('Eidwacht permanently names Ceffyl–Equo in either parent order and preserves Neithons gift history', () => {
+  const crossing = data.crossings.find(entry => entry.bestiaryId === 'eidwacht');
+  assert.equal(crossing.name, 'Eidwacht');
+  assert.equal(horsePairKey(crossing.mareId, crossing.sireId), 'ceffyl|equo');
+  assert.match(crossing.note, /ritterliche.*Disziplin/);
+  assert.match(crossing.note, /Owain Draig.*Ritterschlag/);
+  const anchor = horseCrossingAnchor('ceffyl', 'equo');
+  assert.equal(horseCrossingAnchor('equo', 'ceffyl'), anchor);
+  assert.ok(renderHorseBreedingPage(data).includes(`id="${anchor}"`));
+  for (const [mare, sire] of [['ceffyl', 'equo'], ['equo', 'ceffyl']]) {
+    assert.equal(calculateFoal(byId.get(mare), byId.get(sire), { crossing, random: () => 0.5 }).crossing.name, 'Eidwacht');
+  }
 });
 
 test('Ritterschimmer is a durable named crossing with a stable Bestiarium anchor in either parent order', () => {

@@ -1,0 +1,64 @@
+{
+  "status": "local-draft",
+  "published": false,
+  "preparedAt": "2026-10-13T13:50:25.792Z",
+  "owners": [
+    {
+      "id": "0caPdKpJoVazPUuu2KMu",
+      "name": "Hrolf Wolfshorn",
+      "slug": "hrolf",
+      "sourceUpdateTime": "2026-09-16T20:54:11.815181Z",
+      "localDatabasePath": "records/familien/haus-wolfshorn/hrolf-wolfshorn--0caPdKpJoVazPUuu2KMu/character.json",
+      "creatureIds": [
+        "companion-hrolf-skarn",
+        "companion-hrolf-myrk"
+      ]
+    },
+    {
+      "id": "wvBnM1mHYYXycW9nnza9",
+      "name": "Halvar Wolfshorn",
+      "slug": "halvar",
+      "sourceUpdateTime": "2026-09-26T14:20:10.731018Z",
+      "localDatabasePath": "records/familien/haus-wolfshorn/halvar-wolfshorn--wvBnM1mHYYXycW9nnza9/character.json",
+      "creatureIds": [
+        "companion-halvar-lund"
+      ]
+    },
+    {
+      "id": "oUlhJyX6C4Q69mtLS9u1",
+      "name": "Asgeir Wolfshorn",
+      "slug": "asgeir",
+      "sourceUpdateTime": "2026-10-13T11:52:16.741899Z",
+      "localDatabasePath": "records/familien/haus-wolfshorn/asgeir-wolfshorn--oUlhJyX6C4Q69mtLS9u1/character.json",
+      "creatureIds": [
+        "companion-asgeir-haeppchen"
+      ]
+    },
+    {
+      "id": "bSYZYAEOwiRgy44f6OmO",
+      "name": "Ylva Wolfshorn",
+      "slug": "ylva",
+      "sourceUpdateTime": "2026-10-06T05:51:37.987207Z",
+      "localDatabasePath": "records/familien/haus-wolfshorn/ylva-wolfshorn--bSYZYAEOwiRgy44f6OmO/character.json",
+      "creatureIds": [
+        "companion-ylva-silberkrone"
+      ]
+    }
+  ],
+  "creatureIds": [
+    "companion-hrolf-skarn",
+    "companion-hrolf-myrk",
+    "companion-halvar-lund",
+    "companion-asgeir-haeppchen",
+    "companion-ylva-silberkrone"
+  ],
+  "otherCharactersPreserved": 234,
+  "freki": {
+    "id": "companion-ylva-freki",
+    "preserved": true,
+    "relationship": "Enkel von Skarn"
+  },
+  "breedingNote": "Lund: Mischling, keine benannte Zucht. Hest und Tirashan als Abstammungsverweise; weitere Rassen möglich.",
+  "shieldNote": "Silberkrone trägt im Porträt den Wolfshorn-Schild. Ylvas Kampfausrüstung erhält dadurch keinen Schild und keinen zusätzlichen Bonus.",
+  "releaseNote": "Kein Push, keine Firebase-Schreibzugriffe. Vor Freigabe alle vier Besitzer und Kreaturen neu lesen; nur neue Gefährten atomar ergänzen. Online-IDs, Besitz, Live-Ressourcen und alte Kampfverläufe erhalten. Teil-Overlays nur für den lokalen Archivabgleich, keine Vollimporte über aktuelle Onlinefiguren."
+}

@@ -2,6 +2,7 @@ import { getStandardHitPointProgression } from '../../combat/combat-hit-point-pr
 
 // Species-specific starting profiles. Individual level and age remain explicit in the catalog.
 const PROFILES = {
+  wolf: { genus: 'Wölfe', limit: 2, size: 'Groß', scores: [14, 12, 12, 3, 14, 10], die: 8, movement: 12, attack: 'Biss', damage: '1d6', damageType: 'Stich', attribute: 'strength', abilities: [['Wölfische Sinne', 'Nimmt Witterung und Geräusche aufmerksam wahr. Wind, Entfernung und Deckung beeinflussen die nötigen Wahrnehmungsproben.']] },
   horse: { genus: 'Pferde', limit: 3, size: 'Groß', scores: [16, 14, 14, 2, 12, 10], die: 10, movement: 18, attack: 'Hufschlag', damage: '1d6', damageType: 'Wucht', attribute: 'strength', abilities: [['Reittier', 'Trägt einen geeigneten Reiter. Auf- und Absitzen sowie berittene Manöver verwenden die gemeinsame Reittier- und Aktionslogik.']] },
   dog: { genus: 'Hunde', limit: 4, size: 'Mittel', scores: [12, 14, 12, 3, 14, 10], die: 8, movement: 12, attack: 'Biss', damage: '1d6', damageType: 'Stich', attribute: 'strength', abilities: [['Spürnase', 'Kann vertraute Gerüche aufnehmen und einer Fährte folgen; Wind, Regen und fremde Gerüche beeinflussen die nötigen Proben.']] },
   lapdog: { genus: 'Hunde', limit: 4, size: 'Klein', scores: [6, 14, 10, 3, 12, 14], die: 6, movement: 9, attack: 'Biss', damage: '1d4', damageType: 'Stich', attribute: 'dexterity', abilities: [['Haushund', 'Sucht die Nähe vertrauter Menschen. Reagiert aufmerksam auf Stimmen und Musik.']] },

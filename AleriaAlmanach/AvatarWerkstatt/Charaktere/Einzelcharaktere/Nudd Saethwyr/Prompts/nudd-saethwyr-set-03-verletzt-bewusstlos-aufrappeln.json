@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-13",
+  "characterName": "Nudd Saethwyr",
+  "setId": "set-03",
+  "stem": "nudd-saethwyr-set-03-verletzt-bewusstlos-aufrappeln",
+  "theme": "Verletzt, bewusstlos und langsam aufrappeln",
+  "referenceImage": "Referenzen/nudd-saethwyr-nutzerreferenz.png",
+  "referenceSha256": "d9776a8c10b9b486c83c2aae5b62c3b4044a4b9466cc72323b0a69b87473c3c0",
+  "inputImageFiles": [
+    "Referenzen/nudd-saethwyr-nutzerreferenz.png"
+  ],
+  "promptFile": "Prompts/nudd-saethwyr-set-03-verletzt-bewusstlos-aufrappeln.txt",
+  "sheetFile": "Sheets/nudd-saethwyr-set-03-verletzt-bewusstlos-aufrappeln.png",
+  "outputFolder": "Output/set-03",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "generationMode": "built-in image_gen",
+  "status": "erstellt, mit V3 zerlegt und visuell geprüft",
+  "weaponFree": true,
+  "background": "Trainingsplatz im Draig-Burginnenhof, Tageslicht",
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "emotion": "Bewusstlos auf dem Rücken",
+      "gesture": "UNCONSCIOUS: lying flat on his back on courtyard ground, head tilted gently to one side, BOTH eyes fully closed, brows and mouth slack, lips slightly parted, one gloved hand resting completely limp beside upper torso. No hand supporting the head, no deliberate action. Face unmistakably visible.",
+      "state": "bewusstlos"
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "emotion": "Bewusstlos in Seitenlage",
+      "gesture": "UNCONSCIOUS: lying loosely on his side on courtyard ground, face in clear three-quarter view toward camera, BOTH eyes completely closed, jaw relaxed, cheek resting near a slack forearm, the other gloved hand limp in front of chest. Body completely passive, not actively propping himself up.",
+      "state": "bewusstlos"
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "emotion": "Benommenes Erwachen",
+      "gesture": "Still lying low, one eye barely opening and the other narrowed, brow starting to tighten in discomfort, lips part on a faint breath; one gloved hand starts moving toward the ground near shoulder. Face drowsy and dazed, not fully alert.",
+      "state": "aufrappeln"
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "emotion": "Schmerzhaftes Anheben",
+      "gesture": "He slowly raises head and shoulders onto one forearm on the ground, brow knitted, eyes half open and jaw tense; the free hand presses against bruised ribs over intact armor, body still close to the ground.",
+      "state": "aufrappeln"
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "emotion": "Mühsames Aufstützen",
+      "gesture": "Upper torso lifted farther with one gloved palm planted firmly on ground and supporting elbow nearly straight; other hand stays near lower ribs, eyes squeeze briefly in pain and teeth slightly clenched. Clear weight through the planted hand.",
+      "state": "aufrappeln"
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "emotion": "Auf Knien nach Atem ringen",
+      "gesture": "Now low on one knee, upper body hunched but face visible, one elbow rests on the raised knee at bottom edge, other glove supports his sore side, mouth slightly open with labored breath and tired eyes.",
+      "state": "aufrappeln"
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "emotion": "Unsicheres Hochdrücken",
+      "gesture": "Half rising from the kneel, one gloved hand presses down on his own thigh for leverage, other hand extends slightly outward for balance, determined pained brows, teeth clenched. Body visibly lifting, not a repeated kneeling pose.",
+      "state": "aufrappeln"
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "emotion": "Taumelnd aufgerichtet",
+      "gesture": "Nearly upright but bent at waist and unsteady, one hand presses sore ribs and the other reaches sideways for balance without touching a prop; unfocused narrowed eyes and grimacing mouth, shoulders uneven.",
+      "state": "aufrappeln"
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "emotion": "Wieder Halt finden",
+      "gesture": "Upright again with guarded stiff posture, face exhausted but resolute, one hand lightly at brow/temple and other across sore ribs; knees below frame, still injured and dusty, no sudden recovery or triumphant smile.",
+      "state": "aufrappeln"
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-13",
+    "reviewedAvatars": 9,
+    "passed": true,
+    "method": "Alle neun exportierten PNGs in einer Prüfübersicht bei Originalgröße angesehen.",
+    "checks": [
+      "Vorlagenoptik und Zeichenstil",
+      "passende Mimik und Körperhaltung",
+      "keine Waffen",
+      "quadratische Ausschnitte ohne Nachbarbildreste",
+      "zwei bewusstlose Varianten und Aufrappeln"
+    ]
+  },
+  "avatarPixels": [
+    418,
+    418
+  ],
+  "generatedAt": "2026-10-13"
+}

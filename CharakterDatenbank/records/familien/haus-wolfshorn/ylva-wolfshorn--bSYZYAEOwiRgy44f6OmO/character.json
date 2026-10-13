@@ -81,6 +81,7 @@
         "bSYZYAEOwiRgy44f6OmO",
         "bSYZYAEOwiRgy44f6OmO",
         "bSYZYAEOwiRgy44f6OmO",
+        "bSYZYAEOwiRgy44f6OmO",
         "bSYZYAEOwiRgy44f6OmO"
       ],
       "documents": [
@@ -103,6 +104,11 @@
           "documentId": "bSYZYAEOwiRgy44f6OmO",
           "createdAt": "2026-07-12T12:38:45.245Z",
           "updatedAt": "2026-09-26T12:00:00.000Z"
+        },
+        {
+          "documentId": "bSYZYAEOwiRgy44f6OmO",
+          "createdAt": "",
+          "updatedAt": "2026-10-13T13:50:25.792Z"
         }
       ]
     },
@@ -124,16 +130,17 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
-    "sourceUpdatedAt": "2026-10-03T02:00:00.000Z",
+    "sourceArchive": "Charakter Archiv Exporte/ylva-wolfshorn-gefaehrten-2026-10-13.json",
+    "sourceExportedAt": "2026-10-13T13:50:25.792Z",
+    "sourceUpdatedAt": "2026-10-13T13:50:25.792Z",
     "sourceDocumentIds": [
+      "bSYZYAEOwiRgy44f6OmO",
       "bSYZYAEOwiRgy44f6OmO",
       "bSYZYAEOwiRgy44f6OmO",
       "bSYZYAEOwiRgy44f6OmO",
       "bSYZYAEOwiRgy44f6OmO"
     ],
-    "contentHash": "f28f12e748c7513b8d2aa3518e08d5cdf4f9ec642dce4a1a9ca0a3d85faeed9d"
+    "contentHash": "b068f714d284a85239c2a659ead016f8af1f468aa45ec824cc0778e7562c0bc0"
   },
   "local": {
     "notes": "",
@@ -14492,6 +14499,566 @@
           ],
           "defenseBalanceVersion": 1
         }
+      },
+      {
+        "id": "bSYZYAEOwiRgy44f6OmO",
+        "name": "Ylva Wolfshorn",
+        "inventory": {
+          "portraitPosition": "top",
+          "carryValue": "Siehe Einzelgewichte",
+          "level": "Stufe 7",
+          "equipmentQuiz": {
+            "step": 0,
+            "open": false,
+            "status": "",
+            "resultText": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "updatedAt": ""
+          },
+          "characterId": "bSYZYAEOwiRgy44f6OmO",
+          "portraitFit": "cover",
+          "title": "Charakter-Inventar",
+          "name": "Ylva Wolfshorn",
+          "showInfoTable": false,
+          "items": [
+            {
+              "acquiredAt": "2026-09-22T12:00:00.000Z",
+              "equipmentLink": {
+                "schemaVersion": 1,
+                "kind": "weapon",
+                "combatEntryId": "ylva-langbogen"
+              },
+              "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO",
+              "individualizedAt": "",
+              "equipped": true,
+              "imageFormat": "square",
+              "description": "Ein ausdauernder Jagdbogen aus dunklem Holz, dessen Griff Ylvas Hand längst geformt hat.",
+              "templateId": "standard:waffen-rustungen:langbogen",
+              "valuation": {
+                "maxCopper": 1000,
+                "minCopper": 1000
+              },
+              "itemStorageMode": "character",
+              "tags": "Zweihändig · Munition",
+              "quantity": "1",
+              "id": "equipment-weapon-ylva-langbogen",
+              "type": "Waffe",
+              "originItemDbKey": "standard:waffen-rustungen:langbogen",
+              "icon": "",
+              "imagePosition": "center",
+              "itemDbKey": "",
+              "image": "https://i.imgur.com/hX1q2xf.png",
+              "attributes": [],
+              "ownerCharacterName": "Ylva Wolfshorn",
+              "category": "weapon",
+              "imageFit": "contain",
+              "infoRows": [],
+              "weight": "1 kg",
+              "combatDefinition": {
+                "kind": "weapon",
+                "triggerRules": [
+                  {
+                    "effects": {},
+                    "frequency": "always",
+                    "phase": "pre-damage",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "description": "Bei kritischem Treffer: −2 m Bewegung im nächsten eigenen Beitrag des Ziels, nicht stapelbar.",
+                    "condition": "critical-hit",
+                    "sourceRelation": "self",
+                    "recipient": "actor",
+                    "id": "wolfshorn-pinning-shot",
+                    "name": "Festnagelnder Schuss",
+                    "resultEffects": [
+                      {
+                        "type": "debuff",
+                        "target": "target",
+                        "on": "always",
+                        "condition": {
+                          "mechanics": {
+                            "movement": 0
+                          },
+                          "id": "martial-position-penalty",
+                          "durationModel": {
+                            "kind": "actor-comments",
+                            "remainingActorComments": 1
+                          },
+                          "active": true,
+                          "name": "Festnagelnder Schuss",
+                          "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                          "stanceGroup": "martial-position-penalty",
+                          "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                          "triggerRules": [
+                            {
+                              "id": "martial-position-penalty-once",
+                              "name": "Stellungseffekt",
+                              "phase": "pre-roll",
+                              "recipient": "actor",
+                              "sourceRelation": "self",
+                              "activation": "passive",
+                              "frequency": "comment",
+                              "actionKinds": [
+                                "weapon",
+                                "technique"
+                              ],
+                              "weaponAttackOnly": true,
+                              "condition": "always",
+                              "effects": {
+                                "attackModifier": -1
+                              },
+                              "resultEffects": [
+                                {
+                                  "id": "martial-position-penalty-consume",
+                                  "type": "remove-condition",
+                                  "target": "self",
+                                  "conditionId": "martial-position-penalty",
+                                  "on": "always"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "notes": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
+                      }
+                    ],
+                    "activation": "passive"
+                  }
+                ],
+                "weaponType": "bow",
+                "training": "martial",
+                "damageFormula": "1d8",
+                "versatileDamageFormula": "",
+                "damageType": "Stich",
+                "attackAttribute": "dexterity",
+                "proficient": true,
+                "attackBonus": 0,
+                "damageBonus": 1,
+                "range": "Fernkampf · 45 / 180 m",
+                "properties": "Zweihändig · Munition",
+                "notes": "+1 Waffenschaden. Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "requirements": "",
+                "aiInstructions": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
+              },
+              "registerCategory": "waffen",
+              "name": "Wolfshorn-Langbogen"
+            },
+            {
+              "itemDbKey": "",
+              "individualizedAt": "",
+              "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO",
+              "image": "",
+              "attributes": [],
+              "imagePosition": "center",
+              "originItemDbKey": "",
+              "category": "weapon",
+              "infoRows": [],
+              "imageFit": "contain",
+              "name": "Dornwacht · Wolfshorn-Jagdspeer",
+              "itemStorageMode": "character",
+              "quantity": "1",
+              "acquiredAt": "2026-09-22T12:00:00.000Z",
+              "valuation": {
+                "source": "Schätzung anhand des Handelsregisters",
+                "maxCopper": 200,
+                "minCopper": 200,
+                "notes": "Schlichte Gebrauchswaffe unter dem Preis einer großen Streitaxt."
+              },
+              "equipmentLink": {
+                "schemaVersion": 1,
+                "kind": "weapon",
+                "combatEntryId": "ylva-speer"
+              },
+              "id": "equipment-weapon-ylva-speer",
+              "combatDefinition": {
+                "kind": "weapon",
+                "triggerRules": [],
+                "weaponType": "spear",
+                "training": "simple",
+                "damageFormula": "1d8",
+                "versatileDamageFormula": "1d10",
+                "damageType": "Stich",
+                "attackAttribute": "strength",
+                "proficient": true,
+                "attackBonus": 0,
+                "damageBonus": 1,
+                "range": "Nahkampf · 1,5 m",
+                "properties": "Vielseitig",
+                "notes": "Sorgfältig ausbalancierter Grenzerspeer. +1 Waffenschaden. Ylvas persönliche Speerausbildung erlaubt ihr Geschicklichkeit.",
+                "requirements": "",
+                "aiInstructions": ""
+              },
+              "ownerCharacterName": "Ylva Wolfshorn",
+              "registerCategory": "waffen",
+              "tags": "Vielseitig",
+              "weight": "1,5 kg",
+              "imageFormat": "square",
+              "description": "Schlichter Eschenschaft mit breiter Blattspitze; hält Wild auf Abstand.",
+              "icon": "",
+              "equipped": false,
+              "type": "Waffe"
+            },
+            {
+              "imagePosition": "center",
+              "equipped": false,
+              "itemDbKey": "",
+              "weight": "1 kg",
+              "registerCategory": "waffen",
+              "image": "https://i.imgur.com/m8sI75k.png",
+              "id": "equipment-weapon-ylva-handaxt",
+              "name": "Wolfshorn-Handaxt",
+              "combatDefinition": {
+                "kind": "weapon",
+                "triggerRules": [],
+                "weaponType": "axe",
+                "training": "simple",
+                "damageFormula": "1d6",
+                "versatileDamageFormula": "",
+                "damageType": "Hieb",
+                "attackAttribute": "strength",
+                "proficient": true,
+                "attackBonus": 1,
+                "damageBonus": 0,
+                "range": "Nahkampf · 1,5 m",
+                "properties": "Leicht · Einhändig",
+                "notes": "Griffige, ausgewogene Grenzeraxt. +1 Angriff.",
+                "requirements": "",
+                "aiInstructions": ""
+              },
+              "quantity": "1",
+              "acquiredAt": "2026-09-22T12:00:00.000Z",
+              "itemStorageMode": "character",
+              "equipmentLink": {
+                "schemaVersion": 1,
+                "kind": "weapon",
+                "combatEntryId": "ylva-handaxt"
+              },
+              "category": "weapon",
+              "imageFit": "contain",
+              "infoRows": [],
+              "valuation": {
+                "maxCopper": 400,
+                "source": "Schätzung anhand des Handelsregisters",
+                "minCopper": 400,
+                "notes": "Schlichte Gebrauchswaffe unter dem Preis einer großen Streitaxt."
+              },
+              "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO",
+              "individualizedAt": "",
+              "type": "Waffe",
+              "originItemDbKey": "",
+              "icon": "",
+              "attributes": [],
+              "tags": "Leicht · Einhändig",
+              "ownerCharacterName": "Ylva Wolfshorn",
+              "imageFormat": "square",
+              "description": "Kurze Gebrauchsaxt für Unterholz, Lager und Nahkampf."
+            },
+            {
+              "acquiredAt": "2026-09-22T12:00:00.000Z",
+              "imagePosition": "center",
+              "quantity": "1",
+              "templateId": "standard:waffen-rustungen:verstaerkte-lederruestung",
+              "combatDefinition": {
+                "mechanics": {
+                  "saveModifiers": [
+                    {
+                      "kind": "poison",
+                      "bonus": 2
+                    }
+                  ]
+                },
+                "damageProtection": {
+                  "amount": 1,
+                  "name": "Grenzerleder",
+                  "damageTypes": [
+                    "hieb",
+                    "stich"
+                  ],
+                  "excludedDamageTypes": []
+                },
+                "triggerRules": [],
+                "armorKind": "armor",
+                "armorCategory": "medium",
+                "baseArmorClass": 14,
+                "armorClassBonus": 0,
+                "dexterityMode": "capped",
+                "dexterityCap": 2,
+                "dexterityUnlockLevel": 0,
+                "properties": "Mittlere Rüstung",
+                "notes": "Angelegt: −1 Hieb-/Stichschaden je Treffer und +2 auf Rettungswürfe gegen Gift. Kein zusätzlicher RK-Bonus.",
+                "kind": "armor"
+              },
+              "weight": "6 kg",
+              "type": "Rüstung",
+              "equipped": true,
+              "icon": "",
+              "registerCategory": "ruestungen",
+              "tags": "Mittlere Rüstung",
+              "image": "https://i.imgur.com/ZXpYbiv.png",
+              "valuation": {
+                "maxCopper": 800,
+                "minCopper": 800
+              },
+              "ownerCharacterName": "Ylva Wolfshorn",
+              "individualizedAt": "",
+              "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO",
+              "itemStorageMode": "character",
+              "attributes": [],
+              "id": "equipment-armor-ylva-leder",
+              "equipmentLink": {
+                "schemaVersion": 1,
+                "kind": "armor",
+                "combatEntryId": "ylva-leder"
+              },
+              "imageFormat": "square",
+              "description": "Bewegliches, verstärktes Leder unter einem wetterfesten Jagdmantel.",
+              "itemDbKey": "",
+              "name": "Verstärkte Jagdleder-Rüstung",
+              "infoRows": [],
+              "imageFit": "contain",
+              "originItemDbKey": "standard:waffen-rustungen:verstaerkte-lederruestung",
+              "category": "armor"
+            },
+            {
+              "type": "Munition",
+              "id": "ylva-pfeile",
+              "weight": "0,05 kg",
+              "valuation": {
+                "maxCopper": 1,
+                "minCopper": 1,
+                "source": "Schätzung"
+              },
+              "ownerCharacterName": "Ylva Wolfshorn",
+              "name": "Jagdpfeile",
+              "description": "Schlichte, wiederauffindbare Jagdpfeile. Ein Pfeil je Schuss; Rückgewinnung wird ausgespielt.",
+              "quantity": "30",
+              "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO",
+              "category": "equipment"
+            },
+            {
+              "instanceId": "ylva-freki",
+              "itemStorageMode": "character",
+              "category": "companion",
+              "image": "https://i.imgur.com/jO6WUgH.png",
+              "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO",
+              "individualizedAt": "2026-09-23T21:02:27.790Z",
+              "ownerCharacterName": "Ylva Wolfshorn",
+              "creatureId": "companion-ylva-freki",
+              "itemDbKey": "",
+              "quantity": "1",
+              "description": "Vom Clan Wolfshorn seit dem Welpenalter domestiziert und von Ylva zum Jagd- und Wachgefährten ausgebildet. Freki prüft Fremde schweigend, hält im Lager die windzugewandte Seite und folgt Ylvas knappen Handzeichen. Vertrauten begegnet er mit ruhiger Nähe; aufdringliche Hände weist er mit einem tiefen Knurren zurück. Er ist ausdauernd und eigensinnig, kein zahmes Schoßtier. In der Szene wird er als eigene Kreatur mit eigenen Aktionen geführt; seine Anwesenheit gibt Ylva keinen kostenlosen Zusatzangriff.",
+              "id": "ylva-freki",
+              "type": "Gramnir · Nordwolf",
+              "name": "Freki"
+            },
+            {
+              "name": "Wolfshorn-Saex",
+              "equipped": false,
+              "registerCategory": "waffen",
+              "combatDefinition": {
+                "kind": "weapon",
+                "triggerRules": [],
+                "weaponType": "dagger",
+                "training": "simple",
+                "damageFormula": "1d8",
+                "versatileDamageFormula": "",
+                "damageType": "Hieb",
+                "attackAttribute": "strength",
+                "proficient": true,
+                "attackBonus": 0,
+                "damageBonus": 0,
+                "range": "Nahkampf · 1,5 m",
+                "properties": "Einhändig",
+                "notes": "Nordisches einschneidiges Langmesser. 1W8 Grundschaden, einhändig geführt.",
+                "requirements": "",
+                "aiInstructions": ""
+              },
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "equipmentLink": {
+                "schemaVersion": 1,
+                "kind": "weapon",
+                "combatEntryId": "ylva-saex"
+              },
+              "attributes": [],
+              "originItemDbKey": "standard:waffen-rustungen:saex",
+              "ownerCharacterName": "Ylva Wolfshorn",
+              "instanceId": "equipment-weapon-ylva-saex",
+              "imageFormat": "square",
+              "description": "Ylvas einschneidiges Langmesser mit dunklem, geschnitztem Holzgriff, goldenen Ranken entlang des Klingenrückens und einem kleinen Wolfsmotiv am Griffabschluss.",
+              "quantity": "1",
+              "icon": "",
+              "image": "/AleriaAlmanach/public/assets/character-equipment/ylva-saex-v2.png",
+              "templateName": "Saex",
+              "type": "Saex · einschneidiges Langmesser",
+              "category": "weapon",
+              "valuation": {
+                "minCopper": 400,
+                "maxCopper": 400
+              },
+              "tags": "Einhändig",
+              "infoRows": [],
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "weight": "0,8 kg",
+              "templateId": "standard:waffen-rustungen:saex",
+              "id": "equipment-weapon-ylva-saex",
+              "acquiredAt": "2026-09-28T21:13:04.336Z",
+              "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO",
+              "individualizedAt": ""
+            },
+            {
+              "id": "ylva-silberkrone",
+              "instanceId": "ylva-silberkrone",
+              "creatureId": "companion-ylva-silberkrone",
+              "name": "Silberkrone",
+              "image": "/AleriaAlmanach/assets/companions/wolfshorn/silberkrone.png",
+              "description": "Silberkrone ist Ylvas sorgfältig gepflegte Hest-Stute, ein sauberer Schimmel mit strahlend silberner, geflochtener Mähne. Ihre außergewöhnliche Pflege fällt gerade angesichts ihrer sumpfigen Herkunft auf. Ylvas Wolfshorn-Schild hängt am Sattel.",
+              "type": "Hest-Stute",
+              "category": "companion",
+              "registerCategory": "pferde",
+              "templateId": "",
+              "templateName": "Hest-Stute",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO",
+              "ownerCharacterName": "Ylva Wolfshorn",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-10-13T13:50:26.372Z"
+            }
+          ],
+          "moneyNotice": "",
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "subtitle": "Ausrüstung und Gefährten des Clans Wolfshorn",
+          "role": "Skytte",
+          "status": "Gesund",
+          "portrait": "https://i.imgur.com/zQmDv85.png",
+          "carryLabel": "Traglast",
+          "portraitFormat": "portrait",
+          "infoRows": [],
+          "hitpoints": "75 / 75 TP",
+          "companions": [
+            {
+              "infoRows": [
+                {
+                  "value": "4",
+                  "label": "Stufe"
+                }
+              ],
+              "creatureId": "companion-ylva-freki",
+              "personality": "Wachsam, eigenwillig und Ylva eng verbunden. Fremden begegnet er zunächst auf Abstand.",
+              "name": "Freki",
+              "id": "ylva-freki-companion",
+              "role": "Jagd- und Wachgefährte",
+              "species": "Gramnir · Nordwolf",
+              "image": "https://i.imgur.com/jO6WUgH.png",
+              "summary": "Vom Clan Wolfshorn seit dem Welpenalter domestiziert und von Ylva zum Jagd- und Wachgefährten ausgebildet. Freki prüft Fremde schweigend, hält im Lager die windzugewandte Seite und folgt Ylvas knappen Handzeichen. Vertrauten begegnet er mit ruhiger Nähe; aufdringliche Hände weist er mit einem tiefen Knurren zurück. Er ist ausdauernd und eigensinnig, kein zahmes Schoßtier. In der Szene wird er als eigene Kreatur mit eigenen Aktionen geführt; seine Anwesenheit gibt Ylva keinen kostenlosen Zusatzangriff.",
+              "inventoryItemId": "ylva-freki"
+            },
+            {
+              "id": "card-ylva-silberkrone",
+              "name": "Silberkrone",
+              "species": "Hest-Stute",
+              "image": "/AleriaAlmanach/assets/companions/wolfshorn/silberkrone.png",
+              "description": "Silberkrone ist Ylvas sorgfältig gepflegte Hest-Stute, ein sauberer Schimmel mit strahlend silberner, geflochtener Mähne. Ihre außergewöhnliche Pflege fällt gerade angesichts ihrer sumpfigen Herkunft auf. Ylvas Wolfshorn-Schild hängt am Sattel.",
+              "summary": "Silberkrone ist Ylvas sorgfältig gepflegte Hest-Stute, ein sauberer Schimmel mit strahlend silberner, geflochtener Mähne. Ihre außergewöhnliche Pflege fällt gerade angesichts ihrer sumpfigen Herkunft auf. Ylvas Wolfshorn-Schild hängt am Sattel.",
+              "role": "Reittier",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-ylva-silberkrone",
+              "inventoryItemId": "ylva-silberkrone"
+            }
+          ],
+          "revision": 1791899426373,
+          "attributes": [
+            {
+              "value": 6,
+              "label": "KRF"
+            },
+            {
+              "label": "GES",
+              "value": 8.5
+            },
+            {
+              "value": 7,
+              "label": "KON"
+            },
+            {
+              "value": 4,
+              "label": "INT"
+            },
+            {
+              "value": 7,
+              "label": "WEI"
+            },
+            {
+              "label": "CHA",
+              "value": 6
+            }
+          ],
+          "categories": [
+            {
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon"
+            },
+            {
+              "id": "armor",
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung"
+            },
+            {
+              "id": "equipment",
+              "label": "Ausrüstung",
+              "icon": "https://i.imgur.com/yMj2CQf.png"
+            },
+            {
+              "label": "Trinkturen",
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "id": "potions"
+            },
+            {
+              "id": "documents",
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "label": "Sonstiges",
+              "id": "other",
+              "icon": "https://i.imgur.com/lgeevvn.png"
+            }
+          ],
+          "moneyState": {
+            "copper": 0,
+            "totalCopper": 0,
+            "silver": 0,
+            "gold": 0
+          },
+          "healthColor": "#5c7f20"
+        },
+        "updatedAt": "2026-10-13T13:50:25.792Z"
       }
     ]
   },
@@ -14501,7 +15068,7 @@
     "archived": false,
     "status": "",
     "emotesOverride": true,
-    "updatedAt": "2026-10-03T02:00:00.000Z",
+    "updatedAt": "2026-10-13T13:50:25.792Z",
     "title": "Edeldame, Hornhall",
     "plotNode": "",
     "identity": {
@@ -14987,6 +15554,31 @@
           "acquiredAt": "2026-09-28T21:13:04.336Z",
           "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO",
           "individualizedAt": ""
+        },
+        {
+          "id": "ylva-silberkrone",
+          "instanceId": "ylva-silberkrone",
+          "creatureId": "companion-ylva-silberkrone",
+          "name": "Silberkrone",
+          "image": "/AleriaAlmanach/assets/companions/wolfshorn/silberkrone.png",
+          "description": "Silberkrone ist Ylvas sorgfältig gepflegte Hest-Stute, ein sauberer Schimmel mit strahlend silberner, geflochtener Mähne. Ihre außergewöhnliche Pflege fällt gerade angesichts ihrer sumpfigen Herkunft auf. Ylvas Wolfshorn-Schild hängt am Sattel.",
+          "type": "Hest-Stute",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Hest-Stute",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "bSYZYAEOwiRgy44f6OmO",
+          "ownerCharacterName": "Ylva Wolfshorn",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-13T13:50:26.372Z"
         }
       ],
       "moneyNotice": "",
@@ -15016,9 +15608,26 @@
           "image": "https://i.imgur.com/jO6WUgH.png",
           "summary": "Vom Clan Wolfshorn seit dem Welpenalter domestiziert und von Ylva zum Jagd- und Wachgefährten ausgebildet. Freki prüft Fremde schweigend, hält im Lager die windzugewandte Seite und folgt Ylvas knappen Handzeichen. Vertrauten begegnet er mit ruhiger Nähe; aufdringliche Hände weist er mit einem tiefen Knurren zurück. Er ist ausdauernd und eigensinnig, kein zahmes Schoßtier. In der Szene wird er als eigene Kreatur mit eigenen Aktionen geführt; seine Anwesenheit gibt Ylva keinen kostenlosen Zusatzangriff.",
           "inventoryItemId": "ylva-freki"
+        },
+        {
+          "id": "card-ylva-silberkrone",
+          "name": "Silberkrone",
+          "species": "Hest-Stute",
+          "image": "/AleriaAlmanach/assets/companions/wolfshorn/silberkrone.png",
+          "description": "Silberkrone ist Ylvas sorgfältig gepflegte Hest-Stute, ein sauberer Schimmel mit strahlend silberner, geflochtener Mähne. Ihre außergewöhnliche Pflege fällt gerade angesichts ihrer sumpfigen Herkunft auf. Ylvas Wolfshorn-Schild hängt am Sattel.",
+          "summary": "Silberkrone ist Ylvas sorgfältig gepflegte Hest-Stute, ein sauberer Schimmel mit strahlend silberner, geflochtener Mähne. Ihre außergewöhnliche Pflege fällt gerade angesichts ihrer sumpfigen Herkunft auf. Ylvas Wolfshorn-Schild hängt am Sattel.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-ylva-silberkrone",
+          "inventoryItemId": "ylva-silberkrone"
         }
       ],
-      "revision": 1790629984336,
+      "revision": 1791899426373,
       "attributes": [
         {
           "value": 6,

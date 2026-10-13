@@ -1,0 +1,758 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-10-13T13:50:25.792Z",
+  "character": {
+    "id": "0caPdKpJoVazPUuu2KMu",
+    "inventory": {
+      "hitpoints": "TP / Zustand",
+      "level": "Stufe",
+      "portraitFit": "cover",
+      "healthColor": "#5c7f20",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "name": "Name des Charakters",
+      "moneyState": {
+        "silver": 0,
+        "copper": 0,
+        "gold": 0,
+        "totalCopper": 0
+      },
+      "showInfoTable": false,
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "equipmentQuiz": {
+        "open": false,
+        "status": "",
+        "resultText": "",
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0
+      },
+      "companions": [
+        {
+          "description": "Skarn ist Hrolfs gigantischer, 36 Jahre alter Gramnir und der Großvater von Freki. Noch immer erhaben, doch abgekämpft und deutlich altersschwach, steht er am Ende seines Lebens.",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "name": "Skarn",
+          "species": "Gramnir · Nordwolf",
+          "summary": "Skarn ist Hrolfs gigantischer, 36 Jahre alter Gramnir und der Großvater von Freki. Noch immer erhaben, doch abgekämpft und deutlich altersschwach, steht er am Ende seines Lebens.",
+          "imagePosition": "center",
+          "statusColor": "#9a7428",
+          "status": "Altersschwach",
+          "role": "Gefährte",
+          "infoRows": [],
+          "image": "/AleriaAlmanach/assets/companions/wolfshorn/skarn.png",
+          "attributes": [],
+          "id": "companion-mr47nzgg-0-c4qc",
+          "creatureId": "companion-hrolf-skarn",
+          "inventoryItemId": "hrolf-skarn"
+        },
+        {
+          "role": "Reittier",
+          "attributes": [],
+          "statusColor": "#5c7f20",
+          "id": "companion-mr47nzgg-1-4671",
+          "imagePosition": "center",
+          "infoRows": [],
+          "summary": "Myrk ist Hrolfs in die Jahre gekommener Hest-Hengst: zäh, kräftig, gehorsam und über alle Maßen treu. Der klobige, kantige Schecke ist ein gutes, stoisches Tier.",
+          "species": "Hest-Hengst",
+          "imageFormat": "portrait",
+          "description": "Myrk ist Hrolfs in die Jahre gekommener Hest-Hengst: zäh, kräftig, gehorsam und über alle Maßen treu. Der klobige, kantige Schecke ist ein gutes, stoisches Tier.",
+          "name": "Myrk",
+          "imageFit": "contain",
+          "image": "/AleriaAlmanach/assets/companions/wolfshorn/myrk.png",
+          "status": "Gesund",
+          "creatureId": "companion-hrolf-myrk",
+          "inventoryItemId": "hrolf-myrk"
+        }
+      ],
+      "infoRows": [
+        {
+          "icon": "*",
+          "label": "Status",
+          "value": "Gesund"
+        },
+        {
+          "label": "TP / Zustand",
+          "icon": "*",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "value": "0 Gold, 0 Silber, 0 Kupfer",
+          "label": "Geld"
+        },
+        {
+          "icon": "*",
+          "label": "Tragkapazität",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Rolle",
+          "icon": "*"
+        },
+        {
+          "icon": "*",
+          "label": "Fraktion",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "label": "Aufenthalt",
+          "value": "Noch festlegen"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Notiz",
+          "icon": "*"
+        }
+      ],
+      "portraitPosition": "top",
+      "title": "Charakter-Inventar",
+      "moneyNotice": "",
+      "carryLabel": "Traglast",
+      "role": "Rolle",
+      "characterId": "0caPdKpJoVazPUuu2KMu",
+      "carryValue": "Noch festlegen",
+      "portraitFormat": "portrait",
+      "status": "Gesund",
+      "items": [
+        {
+          "type": "Waffe",
+          "originItemDbKey": "",
+          "id": "item-mr47nzgg-0-kw69",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterName": "",
+          "imagePosition": "center",
+          "itemStorageMode": "character",
+          "imageFit": "contain",
+          "tags": "",
+          "individualizedAt": "",
+          "name": "Hauptwaffe",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "imageFormat": "square",
+          "infoRows": [],
+          "ownerCharacterId": "",
+          "acquiredAt": "",
+          "weight": "Noch festlegen",
+          "itemDbKey": "",
+          "image": "",
+          "category": "weapon",
+          "quantity": "1",
+          "icon": "*"
+        },
+        {
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "individualizedAt": "",
+          "icon": "*",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "weight": "Noch festlegen",
+          "category": "armor",
+          "itemStorageMode": "character",
+          "name": "Rüstung / Schutz",
+          "quantity": "1",
+          "tags": "",
+          "id": "item-mr47nzgg-1-4aqw",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "ownerCharacterName": "",
+          "imageFormat": "square",
+          "acquiredAt": "",
+          "ownerCharacterId": "",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "image": "",
+          "type": "Rüstung"
+        },
+        {
+          "weight": "Noch festlegen",
+          "ownerCharacterName": "",
+          "tags": "",
+          "type": "Ausrüstung",
+          "imageFormat": "square",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "imageFit": "contain",
+          "acquiredAt": "",
+          "ownerCharacterId": "",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "icon": "*",
+          "individualizedAt": "",
+          "quantity": "1",
+          "imagePosition": "center",
+          "category": "equipment",
+          "name": "Reiseausrüstung",
+          "id": "item-mr47nzgg-2-r7lf",
+          "itemStorageMode": "character",
+          "image": ""
+        },
+        {
+          "imageFormat": "square",
+          "originItemDbKey": "",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "id": "item-mr47nzgg-3-x3cb",
+          "individualizedAt": "",
+          "ownerCharacterName": "",
+          "imagePosition": "center",
+          "type": "Trinktur",
+          "imageFit": "contain",
+          "tags": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "itemStorageMode": "character",
+          "category": "potions",
+          "image": "",
+          "quantity": "1",
+          "acquiredAt": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "itemDbKey": "",
+          "icon": "*",
+          "infoRows": [],
+          "ownerCharacterId": "",
+          "weight": "Noch festlegen"
+        },
+        {
+          "category": "documents",
+          "icon": "*",
+          "quantity": "1",
+          "individualizedAt": "",
+          "acquiredAt": "",
+          "ownerCharacterName": "",
+          "imagePosition": "center",
+          "id": "item-mr47nzgg-4-98fe",
+          "infoRows": [],
+          "image": "",
+          "name": "Dokumente / Urkunden",
+          "originItemDbKey": "",
+          "tags": "",
+          "itemDbKey": "",
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "type": "Dokument",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "itemStorageMode": "character"
+        },
+        {
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "originItemDbKey": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "type": "Sonstiges",
+          "itemDbKey": "",
+          "tags": "",
+          "quantity": "1",
+          "category": "other",
+          "itemStorageMode": "character",
+          "ownerCharacterName": "",
+          "imagePosition": "center",
+          "name": "Persönlicher Gegenstand",
+          "image": "",
+          "icon": "*",
+          "imageFit": "contain",
+          "individualizedAt": "",
+          "acquiredAt": "",
+          "imageFormat": "square",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "id": "item-mr47nzgg-5-dujk"
+        },
+        {
+          "id": "hrolf-skarn",
+          "instanceId": "hrolf-skarn",
+          "creatureId": "companion-hrolf-skarn",
+          "name": "Skarn",
+          "image": "/AleriaAlmanach/assets/companions/wolfshorn/skarn.png",
+          "description": "Skarn ist Hrolfs gigantischer, 36 Jahre alter Gramnir und der Großvater von Freki. Noch immer erhaben, doch abgekämpft und deutlich altersschwach, steht er am Ende seines Lebens.",
+          "type": "Gramnir · Nordwolf",
+          "category": "companion",
+          "registerCategory": "vieh",
+          "templateId": "",
+          "templateName": "Gramnir · Nordwolf",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "0caPdKpJoVazPUuu2KMu",
+          "ownerCharacterName": "Hrolf Wolfshorn",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-13T13:50:26.290Z"
+        },
+        {
+          "id": "hrolf-myrk",
+          "instanceId": "hrolf-myrk",
+          "creatureId": "companion-hrolf-myrk",
+          "name": "Myrk",
+          "image": "/AleriaAlmanach/assets/companions/wolfshorn/myrk.png",
+          "description": "Myrk ist Hrolfs in die Jahre gekommener Hest-Hengst: zäh, kräftig, gehorsam und über alle Maßen treu. Der klobige, kantige Schecke ist ein gutes, stoisches Tier.",
+          "type": "Hest-Hengst",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Hest-Hengst",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "0caPdKpJoVazPUuu2KMu",
+          "ownerCharacterName": "Hrolf Wolfshorn",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-13T13:50:26.297Z"
+        }
+      ],
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen"
+        },
+        {
+          "label": "Dokumente",
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "label": "Sonstiges"
+        }
+      ],
+      "portrait": "https://i.imgur.com/3SWLL45.png",
+      "revision": 1791899426299
+    },
+    "aliases": [],
+    "imageSetsOverride": true,
+    "title": "Huskarlherr, Hornhall",
+    "status": "",
+    "plotNode": "",
+    "archived": false,
+    "role": "",
+    "activeImageSetId": "standard",
+    "emotes": [
+      {
+        "label": "Sc9IEjL",
+        "img": "https://i.imgur.com/Sc9IEjL.png"
+      },
+      {
+        "img": "https://i.imgur.com/iNPeOOy.png",
+        "label": "iNPeOOy"
+      },
+      {
+        "label": "ymPt3hb",
+        "img": "https://i.imgur.com/ymPt3hb.png"
+      },
+      {
+        "img": "https://i.imgur.com/cGw2FJA.png",
+        "label": "cGw2FJA"
+      },
+      {
+        "label": "Bpbb1aU",
+        "img": "https://i.imgur.com/Bpbb1aU.png"
+      },
+      {
+        "img": "https://i.imgur.com/Af7tQWP.png",
+        "label": "Af7tQWP"
+      },
+      {
+        "img": "https://i.imgur.com/jrJ2M7i.png",
+        "label": "jrJ2M7i"
+      },
+      {
+        "img": "https://i.imgur.com/GBGS4H2.png",
+        "label": "GBGS4H2"
+      },
+      {
+        "label": "E9Byj72",
+        "img": "https://i.imgur.com/E9Byj72.png"
+      },
+      {
+        "img": "https://i.imgur.com/kzFYQx8.png",
+        "label": "kzFYQx8"
+      },
+      {
+        "label": "VjwQ9H3",
+        "img": "https://i.imgur.com/VjwQ9H3.png"
+      },
+      {
+        "label": "MVgv4Nj",
+        "img": "https://i.imgur.com/MVgv4Nj.png"
+      },
+      {
+        "img": "https://i.imgur.com/UEuQoJx.png",
+        "label": "UEuQoJx"
+      },
+      {
+        "label": "wUD4Tjc",
+        "img": "https://i.imgur.com/wUD4Tjc.png"
+      },
+      {
+        "label": "spiOlY2",
+        "img": "https://i.imgur.com/spiOlY2.png"
+      },
+      {
+        "img": "https://i.imgur.com/rbHxGvu.png",
+        "label": "rbHxGvu"
+      },
+      {
+        "img": "https://i.imgur.com/sK8TgLZ.png",
+        "label": "sK8TgLZ"
+      },
+      {
+        "img": "https://i.imgur.com/jCt1IjP.png",
+        "label": "jCt1IjP"
+      }
+    ],
+    "currentLocation": "",
+    "bio": "Hrolf Wolfshorn ist ein aldrimarischer Huskarlherr, der gemeinsam mit seinem jüngeren Bruder Asgeir, seinem Sohn Halvar, seiner Tochter Ylva sowie seinem verbliebenen Hofstaat und einer Schar von zehn bis fünfzehn treu ergebenen Huskarlen um Aufnahme in den Dienst des Hauses Draig bittet. Einst war Hrolf Herr einer kleinen Grenzburg und Beschützer mehrerer Höfe, doch über viele Jahre rückte der Dunkelhain unaufhaltsam näher. Einer nach dem anderen wurden die Höfe aufgegeben, Felder verwilderten und ganze Familien verließen das Land, bis schließlich kaum noch Menschen blieben, deren Schutz seine Burg rechtfertigte. Von seinen Lehnsherren, den Vangandr, fühlte sich Hrolf im Stich gelassen. Weder Verstärkung noch Hilfe erreichten seine Grenzlande, während der Dunkelhain seine Heimat langsam verschlang.\n\nMit dem Niedergang seines Hofes zerbrach auch seine Familie. Als Nahrung und Hoffnung knapp wurden, verließ ihn seine Ehefrau Liv. Sie nahm etwa die Hälfte ihrer gemeinsamen Kinder mit sich und kehrte in den Norden Aldrimars zu ihrem eigenen Clan zurück. Hrolf kennt ihr heutiges Schicksal nicht. Bei ihm blieben lediglich Halvar, Ylva und Asgeir, die ihm trotz aller Entbehrungen die Treue hielten.\n\nSchließlich traf Hrolf die schwerste Entscheidung seines Lebens. Er gab seine Burg auf, führte die wenigen verbliebenen Familien, Handwerker und Krieger aus den sterbenden Grenzlanden fort und kehrte Aldrimar den Rücken. Verbittert über die Untätigkeit seiner Herren und überzeugt, dass seine Heimat keine Zukunft mehr bot, sucht er nun erstmals in seinem Leben einen neuen Lehnsherrn. Seine Reise führt ihn nach Celtigerns Wacht, wo er Gräfin Gwendolyn Draig nicht nur um eine neue Aufgabe bittet, sondern um eine neue Heimat für die letzten Menschen, die ihm noch folgen.",
+    "emotesOverride": true,
+    "name": "Hrolf Wolfshorn",
+    "relevance": "",
+    "portrait": "https://i.imgur.com/AQbbwo0.png",
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "updatedAt": "2026-09-04T15:15:15.284Z",
+        "createdAt": "2026-09-04T15:14:47.644Z",
+        "portrait": "https://i.imgur.com/AQbbwo0.png",
+        "emotes": [
+          {
+            "label": "Sc9IEjL",
+            "img": "https://i.imgur.com/Sc9IEjL.png"
+          },
+          {
+            "img": "https://i.imgur.com/iNPeOOy.png",
+            "label": "iNPeOOy"
+          },
+          {
+            "img": "https://i.imgur.com/ymPt3hb.png",
+            "label": "ymPt3hb"
+          },
+          {
+            "img": "https://i.imgur.com/cGw2FJA.png",
+            "label": "cGw2FJA"
+          },
+          {
+            "img": "https://i.imgur.com/Bpbb1aU.png",
+            "label": "Bpbb1aU"
+          },
+          {
+            "img": "https://i.imgur.com/Af7tQWP.png",
+            "label": "Af7tQWP"
+          },
+          {
+            "label": "jrJ2M7i",
+            "img": "https://i.imgur.com/jrJ2M7i.png"
+          },
+          {
+            "label": "GBGS4H2",
+            "img": "https://i.imgur.com/GBGS4H2.png"
+          },
+          {
+            "img": "https://i.imgur.com/E9Byj72.png",
+            "label": "E9Byj72"
+          },
+          {
+            "img": "https://i.imgur.com/kzFYQx8.png",
+            "label": "kzFYQx8"
+          },
+          {
+            "label": "VjwQ9H3",
+            "img": "https://i.imgur.com/VjwQ9H3.png"
+          },
+          {
+            "img": "https://i.imgur.com/MVgv4Nj.png",
+            "label": "MVgv4Nj"
+          },
+          {
+            "img": "https://i.imgur.com/UEuQoJx.png",
+            "label": "UEuQoJx"
+          },
+          {
+            "img": "https://i.imgur.com/wUD4Tjc.png",
+            "label": "wUD4Tjc"
+          },
+          {
+            "img": "https://i.imgur.com/spiOlY2.png",
+            "label": "spiOlY2"
+          },
+          {
+            "img": "https://i.imgur.com/rbHxGvu.png",
+            "label": "rbHxGvu"
+          },
+          {
+            "img": "https://i.imgur.com/sK8TgLZ.png",
+            "label": "sK8TgLZ"
+          },
+          {
+            "label": "jCt1IjP",
+            "img": "https://i.imgur.com/jCt1IjP.png"
+          }
+        ]
+      },
+      {
+        "portrait": "https://i.imgur.com/AQbbwo0.png",
+        "name": "Neuanfang - Bleiddorn - Set",
+        "updatedAt": "2026-09-04T15:15:12.274Z",
+        "id": "neuanfang-bleiddorn-set",
+        "createdAt": "2026-09-04T15:15:10.727Z",
+        "emotes": [
+          {
+            "label": "8xLP2Hy",
+            "img": "https://i.imgur.com/8xLP2Hy.png"
+          },
+          {
+            "img": "https://i.imgur.com/GGMwEip.png",
+            "label": "GGMwEip"
+          },
+          {
+            "img": "https://i.imgur.com/eOT3qHt.png",
+            "label": "eOT3qHt"
+          },
+          {
+            "img": "https://i.imgur.com/lPrZigG.png",
+            "label": "lPrZigG"
+          },
+          {
+            "label": "pcIv2t8",
+            "img": "https://i.imgur.com/pcIv2t8.png"
+          },
+          {
+            "img": "https://i.imgur.com/kdgKgVW.png",
+            "label": "kdgKgVW"
+          },
+          {
+            "img": "https://i.imgur.com/l99AbYH.png",
+            "label": "l99AbYH"
+          },
+          {
+            "label": "AYwszWQ",
+            "img": "https://i.imgur.com/AYwszWQ.png"
+          }
+        ]
+      }
+    ],
+    "taxonomyPath": "",
+    "playerOwner": "",
+    "profileLink": "",
+    "origin": "",
+    "createdAt": "2026-07-10T11:40:25.539Z",
+    "fraktion": "Clan Wolfshorn, Dämmergrund",
+    "imageSetSchemaVersion": 1,
+    "updatedAt": "2026-10-13T13:50:25.792Z"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "createdAt": "2026-10-13",
+  "stage": "Vier benannte Kreaturbögen mit lokalen Inventarverknüpfungen.",
+  "published": false,
+  "outputs": [
+    {
+      "file": "rhys-edel-rhyfel.png",
+      "generated": "exec-367bea29-42f5-42ce-a7cb-5682ad11242b.png",
+      "owner": "Rhys Draig",
+      "ownerId": "9hurPRtv2yMJTYkAARkl",
+      "name": "Lot",
+      "species": "Edel Rhyfel",
+      "bestiaryUrl": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-rhyfel",
+      "description": "Kräftiger mahagonibrauner Reitpferdetyp mit edler Ceffyl-Halslinie, schwarzem Langhaar und kleinem Stirnstern.",
+      "promptKey": "rhys",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "739e1596bcbb6ee57e3459bfe572bc3df503d9136d29020480af93252ad5c9cb",
+      "bestiaryReference": {
+        "id": "tiere/pferde/zuchtbuch/edel-rhyfel",
+        "name": "Edel Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-rhyfel"
+      },
+      "individualName": "Lot",
+      "creatureId": "companion-rhys-lot",
+      "selectedAsset": "/AleriaAlmanach/assets/companions/haus-draig/lot.png"
+    },
+    {
+      "file": "kane-rhyfel.png",
+      "generated": "exec-88ca131e-eae1-4786-a89e-410111c7e0e6.png",
+      "owner": "Kane Draig",
+      "ownerId": "HjDXMMexahez1G0rJrBE",
+      "name": "Aelwyn",
+      "species": "Rhyfel",
+      "bestiaryUrl": "/Bestiarium/tiere/pferde/rhyfel/index.html",
+      "description": "Schicker, gut gepflegter weißer Rhyfel mit ordentlich geflochtener Mähne.",
+      "promptKey": "kane",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "cf8fc191ba16b22fbd5a52ce15a5da17da7b58e8291046d2e33e2f4be55377a2",
+      "bestiaryReference": {
+        "id": "tiere/pferde/rhyfel",
+        "name": "Rhyfel",
+        "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+      },
+      "individualName": "Aelwyn",
+      "creatureId": "companion-kane-aelwyn",
+      "selectedAsset": "/AleriaAlmanach/assets/companions/haus-draig/aelwyn.png"
+    },
+    {
+      "file": "gethin-vivian-sonnenlaeufer-v2.png",
+      "generated": "exec-9eb15272-1178-4406-8c14-1d5139942885.png",
+      "owner": "Gethin Draig",
+      "ownerId": "6atOllMA637Z2VNAZAxf",
+      "name": "Vivian",
+      "nickname": "Vivi",
+      "gender": "Stute",
+      "species": "Sonnenläufer",
+      "bestiaryUrl": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-aurelianer-mit-ceffyl",
+      "description": "Beige Grundfarbe, nach unten zunehmend golden, goldene Hufe. Dichte weiße Mähne mit hellgoldenen Spitzen; hochmütige Diva-Allüren.",
+      "promptKey": "vivianRevision",
+      "loreEvidence": {
+        "threadId": "celtigerns-wacht-anhoerung::session:4",
+        "commentIds": [
+          "BDE7kPJIT26OW2RlnSLK",
+          "hApENwhqyDN3pxXBZpEs"
+        ],
+        "confirmedByUser": "Vivian als Sonnenläufer übernehmen",
+        "genealogyOnlyIdNotUsed": "person--haus-draig--gethin-1722-draig"
+      },
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1c76ca5b609ad80717e1ba5065528581ac2fcf6ce0195b2752783295f50bec3b",
+      "bestiaryReference": {
+        "id": "tiere/pferde/zuchtbuch/sonnenlaeufer",
+        "name": "Sonnenläufer",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-aurelianer-mit-ceffyl"
+      },
+      "individualName": "Vivian",
+      "creatureId": "companion-gethin-vivian",
+      "selectedAsset": "/AleriaAlmanach/assets/companions/haus-draig/vivian.png"
+    },
+    {
+      "file": "carys-tirashan.png",
+      "generated": "exec-bcb81cdb-c838-402d-b259-e25cc1eb2132.png",
+      "owner": "Carys Draig",
+      "ownerId": "yLJ0Rr5suTSLa42sL743",
+      "name": "Alaw",
+      "species": "Tirashan",
+      "bestiaryUrl": "/Bestiarium/tiere/pferde/tirashan/index.html",
+      "description": "Kompaktes, aufmerksames Waldreitpferd, mausbraunes Fell, dunkles Langhaar und dunkle Beine.",
+      "promptKey": "carys",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "96cfb87a34de9d017f79d30a0e2e225db9c13a32d2b64f40ae7f0c474c81439f",
+      "bestiaryReference": {
+        "id": "tiere/pferde/tirashan",
+        "name": "Tirashan",
+        "url": "/Bestiarium/tiere/pferde/tirashan/index.html"
+      },
+      "individualName": "Alaw",
+      "creatureId": "companion-carys-alaw",
+      "selectedAsset": "/AleriaAlmanach/assets/companions/haus-draig/alaw.png"
+    }
+  ],
+  "status": "named-and-linked-locally",
+  "namingDecision": {
+    "date": "2026-10-13",
+    "names": [
+      {
+        "name": "Lot",
+        "owner": "Rhys Draig"
+      },
+      {
+        "name": "Aelwyn",
+        "owner": "Kane Draig"
+      },
+      {
+        "name": "Alaw",
+        "owner": "Carys Draig"
+      },
+      {
+        "name": "Vivian",
+        "owner": "Gethin Draig"
+      }
+    ],
+    "source": "Nutzer benennt Rhys’ Pferd Lot und Kanes Pferd Aelwyn. Carys’ Pferd heißt nach ihrer Großmutter väterlicherseits Alaw Grawn: Alaw. Gethins Vivian (Vivi) ist durch die Anhörung belegt. Kreaturbögen und Besitzverknüpfungen gemäß dem bestehenden Auftrag."
+  }
+}

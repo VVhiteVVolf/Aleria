@@ -2,7 +2,7 @@ import { resolveCombatProfile } from '../combat/combat-profile-resolver.js?v=202
 import { getAttributeModifier, getEffectiveCombatAttribute } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
 import { CREATURE_IMAGE_LIBRARY } from './creature-images-model.js?v=20260919-creature-pages-v1';
-import { renderCreatureBestiaryReference } from './creature-bestiary-view.js?v=20261012-carreg-v1';
+import { renderCreatureBestiaryReference } from './creature-bestiary-view.js?v=20261013-draig-breeds-v2';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const signed = value => `${value >= 0 ? '+' : ''}${value}`;

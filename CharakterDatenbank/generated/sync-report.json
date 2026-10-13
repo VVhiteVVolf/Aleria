@@ -2,9 +2,9 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-10-12T22:24:41.567Z",
+  "sourceExportedAt": "2026-10-13T16:18:16.776Z",
   "summary": {
-    "sourceDocuments": 347,
+    "sourceDocuments": 358,
     "total": 238,
     "mergedSameNameGroups": 45,
     "familyLinked": 160,
@@ -1451,5 +1451,53 @@
       "ages": []
     }
   ],
-  "duplicateWorldPersonIds": []
+  "duplicateWorldPersonIds": [],
+  "scopedUpdates": [
+    {
+      "sourceArchives": [
+        "Charakter Archiv Exporte/hrolf-wolfshorn-gefaehrten-2026-10-13.json",
+        "Charakter Archiv Exporte/halvar-wolfshorn-gefaehrten-2026-10-13.json",
+        "Charakter Archiv Exporte/asgeir-wolfshorn-gefaehrten-2026-10-13.json",
+        "Charakter Archiv Exporte/ylva-wolfshorn-gefaehrten-2026-10-13.json"
+      ],
+      "exportedAt": "2026-10-13T13:50:25.792Z",
+      "characterIds": [
+        "0caPdKpJoVazPUuu2KMu",
+        "wvBnM1mHYYXycW9nnza9",
+        "oUlhJyX6C4Q69mtLS9u1",
+        "bSYZYAEOwiRgy44f6OmO"
+      ],
+      "note": "Fünf Wolfshorn-Gefährten ergänzt; vorhandene Besitztümer, Freki und sämtliche Kampfwerte erhalten. Alle 234 anderen Figuren unverändert."
+    },
+    {
+      "sourceArchives": [
+        "Charakter Archiv Exporte/isobel-draig-reitpferd-2026-10-13.json",
+        "Charakter Archiv Exporte/neithon-draig-reitpferd-2026-10-13.json",
+        "Charakter Archiv Exporte/odyar-draig-reitpferd-2026-10-13.json"
+      ],
+      "exportedAt": "2026-10-13T15:22:26.903Z",
+      "characterIds": [
+        "wnS8JOFUR3oS1izRzObH",
+        "6Gpz6nJaoL7yo9rFu85H",
+        "7VjIYgifnq4uqNNfjzcM"
+      ],
+      "note": "Rhoslyn, Cador und Morcant ergänzt; Besitz, Kampfprofile und Genealogie erhalten. Alle 235 übrigen Figuren unverändert."
+    },
+    {
+      "sourceArchives": [
+        "Charakter Archiv Exporte/rhys-draig-reitpferd-v2-2026-10-13.json",
+        "Charakter Archiv Exporte/kane-draig-reitpferd-v2-2026-10-13.json",
+        "Charakter Archiv Exporte/carys-draig-reitpferd-v2-2026-10-13.json",
+        "Charakter Archiv Exporte/gethin-draig-reitpferd-v2-2026-10-13.json"
+      ],
+      "exportedAt": "2026-10-13T16:18:16.776Z",
+      "characterIds": [
+        "9hurPRtv2yMJTYkAARkl",
+        "HjDXMMexahez1G0rJrBE",
+        "yLJ0Rr5suTSLa42sL743",
+        "6atOllMA637Z2VNAZAxf"
+      ],
+      "note": "Lot, Aelwyn, Alaw und Vivian ergänzt; Besitz, Kampfprofile und Genealogie erhalten. Alle 234 übrigen Figuren unverändert."
+    }
+  ]
 }

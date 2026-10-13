@@ -1,7 +1,7 @@
 import { escapeHtml } from '../book-shell/book-template-utils.mjs';
 import { horseCrossingAnchor } from './horse-breeding-model.mjs';
 
-const VERSION = '20261012-ritterschimmer-v1';
+const VERSION = '20261013-draig-breeds-v2';
 
 const safeJson = value => JSON.stringify(value).replace(/</g, '\\u003c').replace(/-->/g, '--\\u003e');
 

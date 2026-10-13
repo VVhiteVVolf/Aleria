@@ -1,0 +1,44 @@
+{
+  "status": "local-draft",
+  "published": false,
+  "preparedAt": "2026-10-13T15:22:26.903Z",
+  "owners": [
+    {
+      "id": "wnS8JOFUR3oS1izRzObH",
+      "name": "Isobel Draig",
+      "slug": "isobel",
+      "sourceUpdateTime": "2026-07-26T11:47:45.229251Z",
+      "localDatabasePath": "records/familien/haus-draig/isobel-draig--wnS8JOFUR3oS1izRzObH/character.json",
+      "creatureId": "companion-isobel-rhoslyn"
+    },
+    {
+      "id": "6Gpz6nJaoL7yo9rFu85H",
+      "name": "Neithon Draig",
+      "slug": "neithon",
+      "sourceUpdateTime": "2026-07-26T11:47:31.799579Z",
+      "localDatabasePath": "records/familien/haus-draig/neithon-draig--6Gpz6nJaoL7yo9rFu85H/character.json",
+      "creatureId": "companion-neithon-cador"
+    },
+    {
+      "id": "7VjIYgifnq4uqNNfjzcM",
+      "name": "Odyar Draig",
+      "slug": "odyar",
+      "sourceUpdateTime": "2026-07-26T10:49:56.067480Z",
+      "localDatabasePath": "records/familien/haus-draig/odyar-draig--7VjIYgifnq4uqNNfjzcM/character.json",
+      "creatureId": "companion-odyar-morcant"
+    }
+  ],
+  "creatureIds": [
+    "companion-isobel-rhoslyn",
+    "companion-neithon-cador",
+    "companion-odyar-morcant"
+  ],
+  "otherCharactersPreserved": 235,
+  "releaseNote": "Kein Push, keine Firebase-Schreibzugriffe. Vor Veröffentlichung Besitzer und Kreaturen neu lesen, neue Gefährten und Inventarverknüpfungen gemeinsam und versionsgeprüft ergänzen. Online-IDs, bestehenden Besitz, Live-Ressourcen und Kampfverläufe erhalten. Teil-Overlays ausschließlich lokale Archivbelege; vollständige Entwürfe nicht über aktuelle Onlinefiguren importieren.",
+  "validation": {
+    "testsPassed": 23,
+    "localBrowser": "Inventarkarten, Porträts, Kreaturbögen, Biografien, Bestiarium-Ziele und mobile Darstellung geprüft.",
+    "build": "Vite-Produktionsbuild erfolgreich",
+    "evidence": ".codex-temp/draig-three-horses-review/pruefbericht.json"
+  }
+}

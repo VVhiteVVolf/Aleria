@@ -1,14 +1,16 @@
-# Asgeir Wolfshorn – Kampfavatare
+# Asgeir Wolfshorn – Avatare
 
-3 9er-Sets, insgesamt **27 Einzelavatare**, fertiggestellt am 13. Oktober 2026. Verbindliche Grundlage ist das [unveränderte Nutzerporträt](Referenzen/asgeir-wolfshorn-nutzerreferenz.png). Gesicht und künstlerischer Stil richten sich nach diesem Originalbild.
+4 9er-Sets, insgesamt **36 Einzelavatare**, fertiggestellt am 13. Oktober 2026. Verbindliche Grundlage ist das [unveränderte Nutzerporträt](Referenzen/asgeir-wolfshorn-nutzerreferenz.png). Gesicht und künstlerischer Stil richten sich nach diesem Originalbild.
 
-In jedem Set stehen **oben drei angreifende**, **in der Mitte drei verteidigende** und **unten drei neutrale** Haltungen. Die Dateinummern `Bild01` bis `Bild09` folgen dieser Reihenfolge zeilenweise. Die neutralen Bilder zeigen Bereitschaft, Beobachtung oder eine kurze Pause. Mimik steht im Vordergrund; Waffen dürfen den Bildrand verlassen. Alle Avatare sind 1:1; jedes vollständige Sheet misst 1254×1254 Pixel.
+In den Kampfsets 01–03 stehen **oben drei angreifende**, **in der Mitte drei verteidigende** und **unten drei neutrale** Haltungen. Die Dateinummern `Bild01` bis `Bild09` folgen dieser Reihenfolge zeilenweise. Die neutralen Bilder zeigen Bereitschaft, Beobachtung oder eine kurze Pause. Mimik steht im Vordergrund; Waffen dürfen den Bildrand verlassen. Alle Avatare sind 1:1; jedes vollständige Sheet misst 1254×1254 Pixel.
 
 | Set | Bewaffnung / Thema | Sheet | Einzelavatare | PNG-Pixel |
 | --- | --- | --- | --- | --- |
 | set-01 | Zwei Einhandäxte | [9er-Sheet](Sheets/asgeir-wolfshorn-kampf-set-01-doppelaexte.png) | [9 PNGs](Output/set-01/) | 418×418 |
 | set-02 | Großaxt | [9er-Sheet](Sheets/asgeir-wolfshorn-kampf-set-02-grossaxt-v2.png) | [9 PNGs](Output/set-02/) | 418×418 |
 | set-03 | Axt und Rundschild | [9er-Sheet](Sheets/asgeir-wolfshorn-kampf-set-03-axt-und-schild-v2.png) | [9 PNGs](Output/set-03/) | 410×410 |
+| set-04 | Peinlich berührt, ertappt und entschuldigend (waffenfrei) | [9er-Sheet](Sheets/asgeir-wolfshorn-set-04-verlegen-ertappt-entschuldigend-v3.png) | [9 PNGs](Output/set-04/) | 418×418 |
+
 
 ## Vorlage, Ausrüstung und Darstellung
 
@@ -27,3 +29,11 @@ Die Einzelbilder unter [Output](Output/) wurden mit den unveränderten Zuschneid
 Die vollständigen finalen Sheets bleiben in [Sheets](Sheets/), abweichende Entwürfe getrennt in `Sheets/Entwuerfe`. `Verarbeitung` enthält Arbeitskopien und Zwischenexporte. Für die Nutzung gelten die geprüften PNGs unter `Output`.
 
 [Paket mit allen 27 Kampfavataren](Asgeir-Wolfshorn-27-Kampfavatare.zip) – inklusive finaler Sheets, Originalreferenz, Prompts und Manifest. Entwürfe und doppelte Arbeitskopien sind nicht Bestandteil des ZIPs. Die Prompts dokumentieren gegebenenfalls auch frühere Korrekturschritte, deren Entwurfsbilder nur im Charakterordner liegen.
+
+## Neues Reaktionsset set-04
+
+Asgeir zeigt trockene, zurückhaltende Verlegenheit, ertapptes Schweigen, knappe Rechtfertigung und eine ernste Entschuldigung. Die starke Röte und kokette Gestik des ersten Entwurfs wurden nach Nutzerfeedback entfernt; die Reaktionen behalten seine gewohnte reservierte Haltung. Gesicht, Haare, Sommersprossen, Fellmantel, Kettengeflecht und der originale gedämpfte Zeichenstil richten sich nach dem unveränderten Nutzerporträt.
+
+[Setbeschreibung und Reihenfolge](README-set-04.md) · [Neues Paket mit 9 Avataren](Asgeir-Wolfshorn-9-Verlegenheit-Entschuldigung.zip)
+
+Die 3/3/3-Aufteilung der Kampfsets gilt für dieses thematische Set nicht. Die bisherigen Bilder und ZIP-Pakete bleiben unverändert.

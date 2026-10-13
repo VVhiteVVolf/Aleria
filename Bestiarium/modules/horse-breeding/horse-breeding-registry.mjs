@@ -52,6 +52,30 @@ export const HORSE_BREEDING_LORE_CROSSINGS = Object.freeze([
     bestiaryId: 'ritterschimmer',
     source: 'Festgelegte Zucht · Benennung vom 12. Oktober 2026',
     note: 'Ritterschimmer ist die fest benannte Zucht aus Herzogsschimmer und Ceffyl. Sie verbindet das kräftige, repräsentative Schlachtross mit der eleganten, loyalen Ritterpferdelinie. Carreg, das Reitpferd von Sir Duncan Gafyr, gehört zu dieser Zucht.'
+  },
+  {
+    mareId: 'ceffyl',
+    sireId: 'equo',
+    name: 'Eidwacht',
+    bestiaryId: 'eidwacht',
+    source: 'Benannte Zucht aus Ceffyl und Equo · Auftrag vom 13. Oktober 2026',
+    note: 'Eidwacht verbindet die ritterliche Würde und enge Reiterbindung des Ceffyl mit der Disziplin, Formationsruhe und militärischen Zuverlässigkeit des Equo. Der Name spielt auf den ritterlichen Eid und die pflichtbewusste Wacht des Legionärpferdes an. Cador, Neithons junges, bereits erwachsenes Reitpferd, gehört zu dieser Zucht; Owain Draig schenkte es ihm zu seinem Ritterschlag.'
+  },
+  {
+    mareId: 'rhyfel',
+    sireId: 'ceffyl',
+    name: 'Edel Rhyfel',
+    bestiaryId: 'edel-rhyfel',
+    source: 'Festgelegte Zucht · Benennung vom 13. Oktober 2026',
+    note: 'Edel Rhyfel ist die fest benannte Zucht aus Rhyfel und Ceffyl. Sie verbindet den kräftigen, tragfähigen und wetterfesten Rhyfel-Körper mit der eleganteren Halslinie, dem feineren Haupt und der engen Reiterbindung des Ceffyl. Lot, Rhys Draigs Reitpferd, gehört zu dieser Zucht.'
+  },
+  {
+    mareId: 'ceffyl',
+    sireId: 'aurelianer',
+    name: 'Sonnenläufer',
+    bestiaryId: 'sonnenlaeufer',
+    source: 'Die Anhörung · Gethins Bericht über Vivian; bestätigt am 13. Oktober 2026',
+    note: 'Sonnenläufer bezeichnet die Zucht aus Ceffyl und Aurelianer. Sie verbindet die elegante, loyale Ritterpferdelinie des Ceffyl mit der goldenen Erscheinung und dem sensiblen Stolz des Aurelianers. Das beige Grundfell wird nach unten zunehmend golden und geht an den Beinen in sattes Gold über; auch die Hufe sind golden. Die dichte, voluminöse Mähne ist weiß und läuft in hellgoldene Spitzen aus. Gethin Draigs Stute Vivian, meist Vivi genannt, gehört zu dieser Zucht. In der Anhörung beschreibt er sie als außergewöhnlich gute Stute mit Diva-Allüren; ihr Name erinnert an eine heilige Meerjungfer der Dame des Sees.'
   }
 ]);
 

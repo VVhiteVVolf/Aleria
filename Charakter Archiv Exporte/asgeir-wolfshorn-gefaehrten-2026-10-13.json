@@ -1,0 +1,477 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-13T13:50:25.792Z",
+  "character": {
+    "id": "oUlhJyX6C4Q69mtLS9u1",
+    "name": "Asgeir Wolfshorn",
+    "inventory": {
+      "showInfoTable": false,
+      "items": [
+        {
+          "combatDefinition": {
+            "kind": "weapon",
+            "triggerRules": [],
+            "weaponType": "axe",
+            "training": "martial",
+            "damageFormula": "1d6",
+            "versatileDamageFormula": "",
+            "damageType": "Hieb",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 1,
+            "damageBonus": 1,
+            "range": "Nahkampf · 1,5 m",
+            "properties": "Leicht · Einhändig",
+            "notes": "Erprobte Wolfshorn-Schmiedearbeit: +1 Angriff und +1 Schaden mit dieser Axt.",
+            "requirements": "",
+            "aiInstructions": ""
+          },
+          "weight": "1 kg",
+          "name": "Wolfshorn-Axt · rechte Hand",
+          "quantity": "1",
+          "registerCategory": "waffen",
+          "itemStorageMode": "character",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "weapon",
+            "combatEntryId": "asgeir-axt-rechts"
+          },
+          "attributes": [],
+          "ownerCharacterName": "Asgeir Wolfshorn",
+          "id": "equipment-weapon-asgeir-axt-rechts",
+          "originItemDbKey": "",
+          "valuation": {
+            "maxCopper": 400,
+            "notes": "Schlichte Gebrauchswaffe unter dem Preis einer großen Streitaxt.",
+            "source": "Schätzung anhand des Handelsregisters",
+            "minCopper": 400
+          },
+          "equipped": true,
+          "imageFormat": "square",
+          "description": "Abgestimmte, solide Handaxt; keine magische Verstärkung.",
+          "icon": "",
+          "type": "Waffe",
+          "acquiredAt": "2026-09-22T12:00:00.000Z",
+          "imagePosition": "center",
+          "tags": "Leicht · Einhändig",
+          "itemDbKey": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "category": "weapon",
+          "image": "https://i.imgur.com/m8sI75k.png",
+          "individualizedAt": "",
+          "ownerCharacterId": "oUlhJyX6C4Q69mtLS9u1"
+        },
+        {
+          "id": "equipment-weapon-asgeir-axt-links",
+          "image": "https://i.imgur.com/m8sI75k.png",
+          "weight": "1 kg",
+          "attributes": [],
+          "equipped": false,
+          "originItemDbKey": "",
+          "ownerCharacterName": "Asgeir Wolfshorn",
+          "individualizedAt": "",
+          "ownerCharacterId": "oUlhJyX6C4Q69mtLS9u1",
+          "imagePosition": "center",
+          "valuation": {
+            "maxCopper": 400,
+            "notes": "Schlichte Gebrauchswaffe unter dem Preis einer großen Streitaxt.",
+            "source": "Schätzung anhand des Handelsregisters",
+            "minCopper": 400
+          },
+          "imageFormat": "square",
+          "description": "Zweite Axt für die gemeinsame Doppelaxtführung. Kein kostenloser zweiter Angriff.",
+          "tags": "Leicht · Einhändig",
+          "icon": "",
+          "itemStorageMode": "character",
+          "type": "Waffe",
+          "quantity": "1",
+          "itemDbKey": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "weapon",
+            "combatEntryId": "asgeir-axt-links"
+          },
+          "infoRows": [],
+          "imageFit": "contain",
+          "acquiredAt": "2026-09-22T12:00:00.000Z",
+          "category": "weapon",
+          "combatDefinition": {
+            "kind": "weapon",
+            "triggerRules": [],
+            "weaponType": "axe",
+            "training": "martial",
+            "damageFormula": "1d6",
+            "versatileDamageFormula": "",
+            "damageType": "Hieb",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 1,
+            "damageBonus": 1,
+            "range": "Nahkampf · 1,5 m",
+            "properties": "Leicht · Einhändig",
+            "notes": "Erprobte Wolfshorn-Schmiedearbeit: +1 Angriff und +1 Schaden mit dieser Axt.",
+            "requirements": "",
+            "aiInstructions": ""
+          },
+          "registerCategory": "waffen",
+          "name": "Wolfshorn-Axt · linke Hand"
+        },
+        {
+          "tags": "Schwer · Zweihändig",
+          "acquiredAt": "2026-09-22T12:00:00.000Z",
+          "itemDbKey": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "weapon",
+            "combatEntryId": "asgeir-grossaxt"
+          },
+          "type": "Waffe",
+          "templateId": "standard:waffen-rustungen:streitaxt",
+          "icon": "",
+          "category": "weapon",
+          "id": "equipment-weapon-asgeir-grossaxt",
+          "individualizedAt": "",
+          "ownerCharacterId": "oUlhJyX6C4Q69mtLS9u1",
+          "infoRows": [],
+          "imageFit": "contain",
+          "combatDefinition": {
+            "kind": "weapon",
+            "triggerRules": [
+              {
+                "phase": "pre-damage",
+                "resultEffects": [],
+                "condition": "critical-hit",
+                "effects": {
+                  "damageModifier": 2
+                },
+                "activation": "passive",
+                "frequency": "always",
+                "sourceRelation": "self",
+                "description": "Bei kritischem Treffer: +2 zusätzlicher Schaden, auch bei passenden Waffentechniken. Dieser Zusatz wird nicht verdoppelt.",
+                "actionKinds": [
+                  "weapon",
+                  "technique"
+                ],
+                "recipient": "actor",
+                "name": "Schwerer Wolfshieb",
+                "id": "wolfshorn-heavy-critical"
+              }
+            ],
+            "weaponType": "axe",
+            "training": "martial",
+            "damageFormula": "1d12",
+            "versatileDamageFormula": "",
+            "damageType": "Hieb",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "attackBonus": 0,
+            "damageBonus": 1,
+            "range": "Nahkampf · 1,5 m",
+            "properties": "Schwer · Zweihändig",
+            "notes": "+1 Waffenschaden. Bei kritischem Treffer +2 weiterer Schaden, nicht nochmals verdoppelt.",
+            "requirements": "",
+            "aiInstructions": ""
+          },
+          "registerCategory": "waffen",
+          "originItemDbKey": "standard:waffen-rustungen:streitaxt",
+          "weight": "3,5 kg",
+          "quantity": "1",
+          "imageFormat": "square",
+          "description": "Langer Eschenschaft und breite Schneide für kontrollierte Spalthiebe.",
+          "imagePosition": "center",
+          "attributes": [],
+          "valuation": {
+            "minCopper": 1300,
+            "maxCopper": 1300
+          },
+          "name": "Lange Wolfshorn-Streitaxt",
+          "image": "https://i.imgur.com/m8sI75k.png",
+          "equipped": false,
+          "itemStorageMode": "character",
+          "ownerCharacterName": "Asgeir Wolfshorn"
+        },
+        {
+          "weight": "20 kg",
+          "id": "equipment-armor-asgeir-schuppen",
+          "tags": "Mittlere Rüstung",
+          "icon": "",
+          "combatDefinition": {
+            "mechanics": {},
+            "damageProtection": {
+              "amount": 2,
+              "name": "Wolfshorn-Schuppen",
+              "damageTypes": [
+                "hieb",
+                "wucht"
+              ],
+              "excludedDamageTypes": []
+            },
+            "triggerRules": [],
+            "armorKind": "armor",
+            "armorCategory": "medium",
+            "baseArmorClass": 14,
+            "armorClassBonus": 0,
+            "dexterityMode": "capped",
+            "dexterityCap": 2,
+            "dexterityUnlockLevel": 0,
+            "properties": "Mittlere Rüstung",
+            "notes": "Angelegt: −2 Hieb-/Wuchtschaden je Treffer. Kein zusätzlicher RK-Bonus.",
+            "kind": "armor"
+          },
+          "image": "https://i.imgur.com/qzp1ns5.png",
+          "type": "Rüstung",
+          "originItemDbKey": "standard:waffen-rustungen:schuppenpanzer",
+          "registerCategory": "ruestungen",
+          "ownerCharacterName": "Asgeir Wolfshorn",
+          "quantity": "1",
+          "equipped": true,
+          "attributes": [],
+          "imagePosition": "center",
+          "itemStorageMode": "character",
+          "valuation": {
+            "minCopper": 2000,
+            "maxCopper": 2000
+          },
+          "name": "Wolfshorn-Schuppenpanzer",
+          "imageFormat": "square",
+          "description": "Überlappende Eisenschuppen auf festem Leder; für einen Huskarl gefertigt.",
+          "individualizedAt": "",
+          "ownerCharacterId": "oUlhJyX6C4Q69mtLS9u1",
+          "itemDbKey": "",
+          "templateId": "standard:waffen-rustungen:schuppenpanzer",
+          "imageFit": "contain",
+          "infoRows": [],
+          "acquiredAt": "2026-09-22T12:00:00.000Z",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "armor",
+            "combatEntryId": "asgeir-schuppen"
+          },
+          "category": "armor"
+        },
+        {
+          "imageFormat": "square",
+          "category": "armor",
+          "description": "Alternative zur zweiten Axt. Vor Schildtechniken anlegen und linke Axt wegstecken.",
+          "imageFit": "contain",
+          "infoRows": [],
+          "templateId": "standard:waffen-rustungen:rundschild",
+          "tags": "Schild · eine Hand",
+          "itemDbKey": "",
+          "acquiredAt": "2026-09-22T12:00:00.000Z",
+          "id": "equipment-armor-asgeir-rundschild",
+          "type": "Rüstung",
+          "combatDefinition": {
+            "kind": "armor",
+            "mechanics": {},
+            "damageProtection": null,
+            "triggerRules": [
+              {
+                "id": "wolfshorn-shield-catch",
+                "condition": "would-hit",
+                "sourceRelation": "self",
+                "phase": "pre-damage",
+                "name": "Abfangen",
+                "activation": "passive",
+                "effects": {
+                  "damageReduction": 2
+                },
+                "frequency": "comment",
+                "damageTypes": [
+                  "hieb",
+                  "stich",
+                  "wucht",
+                  "physisch"
+                ],
+                "description": "Der erste körperliche Treffer pro gegnerischem Beitrag verursacht 2 Schaden weniger. Nur solange der Schild geführt wird.",
+                "recipient": "target"
+              }
+            ],
+            "armorKind": "shield",
+            "armorCategory": "",
+            "baseArmorClass": null,
+            "armorClassBonus": 2,
+            "dexterityMode": "full",
+            "dexterityCap": 2,
+            "dexterityUnlockLevel": 0,
+            "properties": "Schild · eine Hand",
+            "notes": "Abfangen: Der erste körperliche Treffer pro gegnerischem Beitrag verursacht 2 Schaden weniger. Nur solange geführt."
+          },
+          "registerCategory": "ruestungen",
+          "icon": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "armor",
+            "combatEntryId": "asgeir-rundschild"
+          },
+          "individualizedAt": "",
+          "ownerCharacterId": "oUlhJyX6C4Q69mtLS9u1",
+          "equipped": false,
+          "image": "https://i.imgur.com/XpGJAGz.png",
+          "weight": "3 kg",
+          "originItemDbKey": "standard:waffen-rustungen:rundschild",
+          "attributes": [],
+          "quantity": "1",
+          "imagePosition": "center",
+          "ownerCharacterName": "Asgeir Wolfshorn",
+          "valuation": {
+            "minCopper": 30,
+            "maxCopper": 30
+          },
+          "itemStorageMode": "character",
+          "name": "Wolfshorn-Rundschild"
+        },
+        {
+          "id": "asgeir-haeppchen",
+          "instanceId": "asgeir-haeppchen",
+          "creatureId": "companion-asgeir-haeppchen",
+          "name": "Häppchen",
+          "image": "/AleriaAlmanach/assets/companions/wolfshorn/haeppchen.png",
+          "description": "Häppchen ist Asgeirs disziplinloser Hest-Schimmel. Gelangweilt und müde blickt das schwere Arbeitspferd in die Welt. Sein Name folgt Asgeirs makabrer Gewohnheit, seine Pferde nach ihrem befürchteten Ende zu nennen.",
+          "type": "Hest",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Hest",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "oUlhJyX6C4Q69mtLS9u1",
+          "ownerCharacterName": "Asgeir Wolfshorn",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-13T13:50:26.338Z"
+        }
+      ],
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "portrait": "https://i.imgur.com/tlufXWn.png",
+      "healthColor": "#5c7f20",
+      "infoRows": [],
+      "equipmentQuiz": {
+        "open": false,
+        "step": 0,
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "status": ""
+      },
+      "moneyState": {
+        "silver": 0,
+        "totalCopper": 0,
+        "gold": 0,
+        "copper": 0
+      },
+      "portraitPosition": "top",
+      "subtitle": "Ausrüstung und Gefährten des Clans Wolfshorn",
+      "portraitFormat": "portrait",
+      "level": "Stufe 7",
+      "companions": [
+        {
+          "id": "card-asgeir-haeppchen",
+          "name": "Häppchen",
+          "species": "Hest",
+          "image": "/AleriaAlmanach/assets/companions/wolfshorn/haeppchen.png",
+          "description": "Häppchen ist Asgeirs disziplinloser Hest-Schimmel. Gelangweilt und müde blickt das schwere Arbeitspferd in die Welt. Sein Name folgt Asgeirs makabrer Gewohnheit, seine Pferde nach ihrem befürchteten Ende zu nennen.",
+          "summary": "Häppchen ist Asgeirs disziplinloser Hest-Schimmel. Gelangweilt und müde blickt das schwere Arbeitspferd in die Welt. Sein Name folgt Asgeirs makabrer Gewohnheit, seine Pferde nach ihrem befürchteten Ende zu nennen.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-asgeir-haeppchen",
+          "inventoryItemId": "asgeir-haeppchen"
+        }
+      ],
+      "attributes": [
+        {
+          "value": 9,
+          "label": "KRF"
+        },
+        {
+          "value": 6.5,
+          "label": "GES"
+        },
+        {
+          "value": 8,
+          "label": "KON"
+        },
+        {
+          "value": 4,
+          "label": "INT"
+        },
+        {
+          "value": 5,
+          "label": "WEI"
+        },
+        {
+          "value": 6,
+          "label": "CHA"
+        }
+      ],
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung",
+          "id": "equipment"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen",
+          "id": "potions"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "label": "Sonstiges",
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "status": "Gesund",
+      "title": "Charakter-Inventar",
+      "carryLabel": "Traglast",
+      "moneyNotice": "",
+      "name": "Asgeir Wolfshorn",
+      "hitpoints": "94 / 94 TP",
+      "carryValue": "Siehe Einzelgewichte",
+      "role": "Skjaldr",
+      "revision": 1791899426340,
+      "characterId": "oUlhJyX6C4Q69mtLS9u1",
+      "portraitFit": "cover"
+    },
+    "updatedAt": "2026-10-13T13:50:25.792Z"
+  }
+}

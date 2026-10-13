@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-13",
+  "published": false,
+  "status": "named-and-linked-locally",
+  "outputs": [
+    {
+      "key": "isobel-erlenglanz",
+      "owner": "Isobel Draig",
+      "ownerId": "wnS8JOFUR3oS1izRzObH",
+      "species": "Erlenglanz",
+      "source": "C:/Users/fhg_r/.codex/generated_images/01a12c74-cdd4-7343-9e68-5feadb413017/exec-bb63967f-d76d-43ec-a4a7-daa75c6304c2.png",
+      "notes": "Atemberaubend schönes, elfenhaft filigranes weißes Pferd. Üppige lange Mähne ausdrücklich als individuelles Merkmal; kein Umbau des Rasseprofils.",
+      "file": "isobel-erlenglanz.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "7be83b84860451a35e0e9741142f531407a11c76f4ef9d6a16f8247f78d239cd",
+      "bestiaryReference": {
+        "id": "tiere/pferde/erlenglanz",
+        "name": "Erlenglanz",
+        "url": "/Bestiarium/tiere/pferde/erlenglanz/index.html"
+      },
+      "individualName": "Rhoslyn",
+      "creatureId": "companion-isobel-rhoslyn",
+      "selectedAsset": "/AleriaAlmanach/assets/companions/haus-draig/rhoslyn.png"
+    },
+    {
+      "key": "neithon-eidwacht",
+      "owner": "Neithon Draig",
+      "ownerId": "6Gpz6nJaoL7yo9rFu85H",
+      "species": "Eidwacht",
+      "source": "C:/Users/fhg_r/.codex/generated_images/01a12c74-cdd4-7343-9e68-5feadb413017/exec-85c3cb02-e04e-47fe-a517-7e30cbba958a.png",
+      "notes": "Jung, bereits erwachsen. Geschenk Owains zu Neithons Ritterschlag. Sehniger militärischer Körperbau, stoisch und diszipliniert; beige mit nach oben dunklerem Verlauf; kurze Knotenmähne. Benannte Zucht Ceffyl × Equo.",
+      "file": "neithon-eidwacht.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "abb6dd6fb8cdf9b71c4caed1f91950e1a3f0e8caa5c893de98816957cf04fd91",
+      "bestiaryReference": {
+        "id": "tiere/pferde/zuchtbuch/eidwacht",
+        "name": "Eidwacht",
+        "url": "/Bestiarium/tiere/pferde/zuchtbuch/index.html#kreuzung-ceffyl-mit-equo"
+      },
+      "individualName": "Cador",
+      "creatureId": "companion-neithon-cador",
+      "selectedAsset": "/AleriaAlmanach/assets/companions/haus-draig/cador.png"
+    },
+    {
+      "key": "odyar-ceffyl",
+      "owner": "Odyar Draig",
+      "ownerId": "7VjIYgifnq4uqNNfjzcM",
+      "species": "Ceffyl",
+      "source": "C:/Users/fhg_r/.codex/generated_images/01a12c74-cdd4-7343-9e68-5feadb413017/exec-c139df4d-76b3-47d0-ac96-4e4e6b9b5fd8.png",
+      "notes": "Sehr alter schwarzer Ceffyl, Bruder von Meurigs Emrys. Familienähnlichkeit in Kopf, Augen und Halslinie; schwarzes Haar mit grauen Spitzen.",
+      "file": "odyar-ceffyl.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "83d07273fde7ff827d6baf654a7a558b0bcfd10513e819601430a9a32b4d4997",
+      "bestiaryReference": {
+        "id": "tiere/pferde/ceffyl",
+        "name": "Ceffyl",
+        "url": "/Bestiarium/tiere/pferde/ceffyl/index.html"
+      },
+      "individualName": "Morcant",
+      "creatureId": "companion-odyar-morcant",
+      "selectedAsset": "/AleriaAlmanach/assets/companions/haus-draig/morcant.png"
+    }
+  ],
+  "emrysReference": {
+    "source": "https://i.imgur.com/DVqEI6P.jpeg",
+    "file": "references/emrys-meurig.jpeg"
+  },
+  "namingInstruction": "Eigennamen werden separat, eines nach dem anderen vergeben. Eidwacht ist ausschließlich der Zuchtname.",
+  "namingDecision": {
+    "date": "2026-10-13",
+    "names": [
+      {
+        "name": "Rhoslyn",
+        "owner": "Isobel Draig"
+      },
+      {
+        "name": "Cador",
+        "owner": "Neithon Draig"
+      },
+      {
+        "name": "Morcant",
+        "owner": "Odyar Draig"
+      }
+    ],
+    "source": "Nutzer benennt alle drei Pferde und beauftragt Kreaturbögen sowie Besitzverknüpfungen."
+  }
+}

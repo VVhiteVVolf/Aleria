@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-13",
+  "published": false,
+  "assets": [
+    {
+      "name": "Rhoslyn",
+      "creatureId": "companion-isobel-rhoslyn",
+      "path": "/AleriaAlmanach/assets/companions/haus-draig/rhoslyn.png",
+      "source": "AleriaAlmanach/assets/companions/haus-draig/concepts/2026-10-13/isobel-erlenglanz.png",
+      "sha256": "7be83b84860451a35e0e9741142f531407a11c76f4ef9d6a16f8247f78d239cd",
+      "width": 1024,
+      "height": 1536,
+      "performance": [
+        {
+          "label": "Schnelligkeit",
+          "value": 9
+        },
+        {
+          "label": "Ausdauer",
+          "value": 3
+        },
+        {
+          "label": "Stärke",
+          "value": 2
+        },
+        {
+          "label": "Agilität",
+          "value": 9
+        },
+        {
+          "label": "Sozialverhalten",
+          "value": 2
+        },
+        {
+          "label": "Robustheit",
+          "value": 2
+        }
+      ],
+      "performanceSource": "Bestiarium: Erlenglanz"
+    },
+    {
+      "name": "Cador",
+      "creatureId": "companion-neithon-cador",
+      "path": "/AleriaAlmanach/assets/companions/haus-draig/cador.png",
+      "source": "AleriaAlmanach/assets/companions/haus-draig/concepts/2026-10-13/neithon-eidwacht.png",
+      "sha256": "abb6dd6fb8cdf9b71c4caed1f91950e1a3f0e8caa5c893de98816957cf04fd91",
+      "width": 1024,
+      "height": 1536,
+      "performance": [
+        {
+          "label": "Schnelligkeit",
+          "value": 8
+        },
+        {
+          "label": "Ausdauer",
+          "value": 8
+        },
+        {
+          "label": "Stärke",
+          "value": 7
+        },
+        {
+          "label": "Agilität",
+          "value": 8
+        },
+        {
+          "label": "Sozialverhalten",
+          "value": 9
+        },
+        {
+          "label": "Robustheit",
+          "value": 8
+        }
+      ],
+      "performanceSource": "Erwartungswerte Ceffyl × Equo, auf ganze Punkte gerundet"
+    },
+    {
+      "name": "Morcant",
+      "creatureId": "companion-odyar-morcant",
+      "path": "/AleriaAlmanach/assets/companions/haus-draig/morcant.png",
+      "source": "AleriaAlmanach/assets/companions/haus-draig/concepts/2026-10-13/odyar-ceffyl.png",
+      "sha256": "83d07273fde7ff827d6baf654a7a558b0bcfd10513e819601430a9a32b4d4997",
+      "width": 1024,
+      "height": 1536,
+      "performance": [
+        {
+          "label": "Schnelligkeit",
+          "value": 4
+        },
+        {
+          "label": "Ausdauer",
+          "value": 3
+        },
+        {
+          "label": "Stärke",
+          "value": 4
+        },
+        {
+          "label": "Agilität",
+          "value": 4
+        },
+        {
+          "label": "Sozialverhalten",
+          "value": 10
+        },
+        {
+          "label": "Robustheit",
+          "value": 4
+        }
+      ],
+      "performanceSource": "Individuell altersgemindert gegenüber Ceffyl; keine Änderung des Rasseprofils"
+    }
+  ]
+}

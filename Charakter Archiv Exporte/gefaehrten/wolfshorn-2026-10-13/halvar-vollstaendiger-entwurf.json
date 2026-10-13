@@ -1,0 +1,790 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-10-13T13:50:25.792Z",
+  "character": {
+    "id": "wvBnM1mHYYXycW9nnza9",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "archived": false,
+    "plotNode": "",
+    "bio": "",
+    "emotesOverride": true,
+    "inventory": {
+      "carryLabel": "Traglast",
+      "level": "Stufe",
+      "portraitFormat": "portrait",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "status": "Gesund",
+      "companions": [
+        {
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "attributes": [],
+          "role": "Reittier",
+          "id": "companion-mr49cz9e-0-i688",
+          "imageFormat": "portrait",
+          "description": "Lund ist Halvars wachsames Waldpferd, ein Mischling mit Hest- und Tirashan-Abstammung. Die Linie ist unzuverlässig dokumentiert und kann weitere Rassen enthalten. Seine Aufmerksamkeit hat Halvar mehr als einmal das Leben gerettet.",
+          "infoRows": [],
+          "species": "Hest–Tirashan-Mischling",
+          "name": "Lund",
+          "image": "/AleriaAlmanach/assets/companions/wolfshorn/lund.png",
+          "summary": "Lund ist Halvars wachsames Waldpferd, ein Mischling mit Hest- und Tirashan-Abstammung. Die Linie ist unzuverlässig dokumentiert und kann weitere Rassen enthalten. Seine Aufmerksamkeit hat Halvar mehr als einmal das Leben gerettet.",
+          "creatureId": "companion-halvar-lund",
+          "inventoryItemId": "halvar-lund"
+        },
+        {
+          "image": "",
+          "statusColor": "#5c7f20",
+          "name": "Treuer Begleiter",
+          "infoRows": [],
+          "imagePosition": "top",
+          "id": "companion-mr49cz9e-1-puw7",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "role": "Gefährte",
+          "imageFormat": "landscape",
+          "species": "Tier / Person",
+          "description": "",
+          "status": "Noch festlegen",
+          "imageFit": "cover"
+        }
+      ],
+      "portraitPosition": "top",
+      "characterId": "wvBnM1mHYYXycW9nnza9",
+      "infoRows": [
+        {
+          "icon": "*",
+          "value": "Gesund",
+          "label": "Status"
+        },
+        {
+          "icon": "*",
+          "value": "Noch festlegen",
+          "label": "TP / Zustand"
+        },
+        {
+          "value": "0 Gold, 0 Silber, 0 Kupfer",
+          "icon": "*",
+          "label": "Geld"
+        },
+        {
+          "label": "Tragkapazität",
+          "value": "Noch festlegen",
+          "icon": "*"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Rolle",
+          "icon": "*"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Fraktion",
+          "icon": "*"
+        },
+        {
+          "icon": "*",
+          "value": "Noch festlegen",
+          "label": "Aufenthalt"
+        },
+        {
+          "icon": "*",
+          "value": "Noch festlegen",
+          "label": "Notiz"
+        }
+      ],
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "moneyState": {
+        "totalCopper": 0,
+        "silver": 0,
+        "gold": 0,
+        "copper": 0
+      },
+      "title": "Charakter-Inventar",
+      "hitpoints": "TP / Zustand",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "equipmentQuiz": {
+        "open": false,
+        "status": "",
+        "resultText": "",
+        "step": 0,
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      "name": "Name des Charakters",
+      "healthColor": "#5c7f20",
+      "portraitFit": "cover",
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen",
+          "id": "weapon"
+        },
+        {
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "label": "Sonstiges",
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "role": "Rolle",
+      "carryValue": "Noch festlegen",
+      "portrait": "https://i.imgur.com/tKPWO78.png",
+      "moneyNotice": "",
+      "items": [
+        {
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Hauptwaffe",
+          "quantity": "1",
+          "category": "weapon",
+          "ownerCharacterName": "",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "infoRows": [],
+          "icon": "*",
+          "ownerCharacterId": "",
+          "imageFit": "contain",
+          "type": "Waffe",
+          "imageFormat": "square",
+          "image": "",
+          "originItemDbKey": "",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "weight": "Noch festlegen",
+          "individualizedAt": "",
+          "acquiredAt": "",
+          "id": "item-mr49cz9e-0-zqqm",
+          "tags": "",
+          "itemStorageMode": "character"
+        },
+        {
+          "icon": "*",
+          "itemStorageMode": "character",
+          "ownerCharacterName": "",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "originItemDbKey": "",
+          "imageFit": "contain",
+          "name": "Rüstung / Schutz",
+          "individualizedAt": "",
+          "infoRows": [],
+          "weight": "Noch festlegen",
+          "tags": "",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "imageFormat": "square",
+          "ownerCharacterId": "",
+          "acquiredAt": "",
+          "quantity": "1",
+          "id": "item-mr49cz9e-1-pfwc",
+          "category": "armor",
+          "image": "",
+          "type": "Rüstung",
+          "itemDbKey": ""
+        },
+        {
+          "imagePosition": "center",
+          "infoRows": [],
+          "itemStorageMode": "character",
+          "individualizedAt": "",
+          "icon": "*",
+          "weight": "Noch festlegen",
+          "quantity": "1",
+          "category": "equipment",
+          "name": "Reiseausrüstung",
+          "originItemDbKey": "",
+          "id": "item-mr49cz9e-2-ybrf",
+          "acquiredAt": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterName": "",
+          "image": "",
+          "tags": "",
+          "type": "Ausrüstung",
+          "itemDbKey": "",
+          "imageFit": "contain",
+          "ownerCharacterId": "",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "imageFormat": "square"
+        },
+        {
+          "quantity": "1",
+          "name": "Heil- oder Verbrauchsgut",
+          "weight": "Noch festlegen",
+          "category": "potions",
+          "individualizedAt": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "image": "",
+          "imageFormat": "square",
+          "icon": "*",
+          "ownerCharacterName": "",
+          "imagePosition": "center",
+          "type": "Trinktur",
+          "id": "item-mr49cz9e-3-bnbh",
+          "itemDbKey": "",
+          "itemStorageMode": "character",
+          "acquiredAt": "",
+          "imageFit": "contain",
+          "originItemDbKey": "",
+          "tags": "",
+          "ownerCharacterId": ""
+        },
+        {
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "id": "item-mr49cz9e-4-58ix",
+          "type": "Dokument",
+          "tags": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "image": "",
+          "itemDbKey": "",
+          "individualizedAt": "",
+          "ownerCharacterId": "",
+          "quantity": "1",
+          "name": "Dokumente / Urkunden",
+          "acquiredAt": "",
+          "category": "documents",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "originItemDbKey": "",
+          "icon": "*",
+          "ownerCharacterName": "",
+          "infoRows": []
+        },
+        {
+          "icon": "*",
+          "infoRows": [],
+          "acquiredAt": "",
+          "imagePosition": "center",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "category": "other",
+          "itemDbKey": "",
+          "name": "Persönlicher Gegenstand",
+          "ownerCharacterName": "",
+          "weight": "Noch festlegen",
+          "tags": "",
+          "id": "item-mr49cz9e-5-cf1f",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "image": "",
+          "type": "Sonstiges",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "individualizedAt": ""
+        },
+        {
+          "id": "halvar-lund",
+          "instanceId": "halvar-lund",
+          "creatureId": "companion-halvar-lund",
+          "name": "Lund",
+          "image": "/AleriaAlmanach/assets/companions/wolfshorn/lund.png",
+          "description": "Lund ist Halvars wachsames Waldpferd, ein Mischling mit Hest- und Tirashan-Abstammung. Die Linie ist unzuverlässig dokumentiert und kann weitere Rassen enthalten. Seine Aufmerksamkeit hat Halvar mehr als einmal das Leben gerettet.",
+          "type": "Hest–Tirashan-Mischling",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Hest–Tirashan-Mischling",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "wvBnM1mHYYXycW9nnza9",
+          "ownerCharacterName": "Halvar Wolfshorn",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-13T13:50:26.313Z"
+        }
+      ],
+      "showInfoTable": false,
+      "revision": 1791899426315
+    },
+    "origin": "",
+    "role": "",
+    "portrait": "https://i.imgur.com/KTr3uiw.png",
+    "updatedAt": "2026-10-13T13:50:25.792Z",
+    "title": "Huskarl, Hornhall",
+    "createdAt": "2026-07-10T11:50:18.948Z",
+    "status": "",
+    "imageSetsOverride": true,
+    "taxonomyPath": "",
+    "name": "Halvar Wolfshorn",
+    "profileLink": "",
+    "activeImageSetId": "neues-standard-set",
+    "playerOwner": "",
+    "currentLocation": "",
+    "aliases": [],
+    "fraktion": "Clan Wolfshorn, Dämmergrund",
+    "relevance": "",
+    "genealogy": {
+      "status": "",
+      "relationships": {
+        "children": [],
+        "partners": [],
+        "parents": []
+      },
+      "familyRole": "",
+      "death": "",
+      "sources": [],
+      "sex": "unknown",
+      "houseName": "",
+      "houseId": "",
+      "tags": [],
+      "birth": "",
+      "worldPersonId": "",
+      "portraitPlaceholder": ""
+    },
+    "imageSets": [
+      {
+        "portrait": "https://i.imgur.com/KTr3uiw.png",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/q0dvlE2.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/pbxhYlg.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/x518LbR.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/eJT6weg.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/SMbU1jh.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/SUKeyig.png"
+          },
+          {
+            "img": "https://i.imgur.com/BQD3Z8P.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/sGqlznV.png"
+          },
+          {
+            "img": "https://i.imgur.com/NVZLoV1.png",
+            "label": ""
+          }
+        ],
+        "name": "Standard",
+        "createdAt": "2026-09-04T15:16:04.083Z",
+        "updatedAt": "2026-09-04T15:16:09.253Z",
+        "id": "standard"
+      },
+      {
+        "updatedAt": "2026-09-04T15:16:23.153Z",
+        "portrait": "https://i.imgur.com/KTr3uiw.png",
+        "createdAt": "2026-09-04T15:16:21.893Z",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/Mo5TQrS.png",
+            "label": "Mo5TQrS"
+          },
+          {
+            "img": "https://i.imgur.com/DvKVBC7.png",
+            "label": "DvKVBC7"
+          },
+          {
+            "img": "https://i.imgur.com/kcRAtav.png",
+            "label": "kcRAtav"
+          },
+          {
+            "img": "https://i.imgur.com/oc9ejTD.png",
+            "label": "oc9ejTD"
+          },
+          {
+            "img": "https://i.imgur.com/Jy8cLv6.png",
+            "label": "Jy8cLv6"
+          },
+          {
+            "img": "https://i.imgur.com/tV9ii1J.png",
+            "label": "tV9ii1J"
+          },
+          {
+            "label": "LBlhmj7",
+            "img": "https://i.imgur.com/LBlhmj7.png"
+          },
+          {
+            "img": "https://i.imgur.com/8ZdZSbK.png",
+            "label": "8ZdZSbK"
+          },
+          {
+            "label": "CETNPQb",
+            "img": "https://i.imgur.com/CETNPQb.png"
+          }
+        ],
+        "id": "bleiddorn-set",
+        "name": "Bleiddorn Set"
+      },
+      {
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/rZzjJzl.png",
+            "label": "rZzjJzl"
+          },
+          {
+            "label": "kC0NDfI",
+            "img": "https://i.imgur.com/kC0NDfI.png"
+          },
+          {
+            "label": "bSG4VFt",
+            "img": "https://i.imgur.com/bSG4VFt.png"
+          },
+          {
+            "img": "https://i.imgur.com/6r1ITIq.png",
+            "label": "6r1ITIq"
+          },
+          {
+            "label": "My5MctD",
+            "img": "https://i.imgur.com/My5MctD.png"
+          },
+          {
+            "label": "0uCRtf8",
+            "img": "https://i.imgur.com/0uCRtf8.png"
+          },
+          {
+            "label": "y2VsFHU",
+            "img": "https://i.imgur.com/y2VsFHU.png"
+          },
+          {
+            "label": "AXCcDj8",
+            "img": "https://i.imgur.com/AXCcDj8.png"
+          },
+          {
+            "img": "https://i.imgur.com/WnbhlzX.png",
+            "label": "WnbhlzX"
+          },
+          {
+            "img": "https://i.imgur.com/mPiOfC5.png",
+            "label": "mPiOfC5"
+          },
+          {
+            "img": "https://i.imgur.com/Ih7BVwU.png",
+            "label": "Ih7BVwU"
+          },
+          {
+            "label": "JJk8CKt",
+            "img": "https://i.imgur.com/JJk8CKt.png"
+          },
+          {
+            "img": "https://i.imgur.com/CzhgMU7.png",
+            "label": "CzhgMU7"
+          },
+          {
+            "img": "https://i.imgur.com/F824tYk.png",
+            "label": "F824tYk"
+          },
+          {
+            "label": "fozdcEy",
+            "img": "https://i.imgur.com/fozdcEy.png"
+          },
+          {
+            "label": "50vMwQr",
+            "img": "https://i.imgur.com/50vMwQr.png"
+          },
+          {
+            "label": "3rWApjj",
+            "img": "https://i.imgur.com/3rWApjj.png"
+          },
+          {
+            "label": "VxH3KZu",
+            "img": "https://i.imgur.com/VxH3KZu.png"
+          }
+        ],
+        "name": "Neues Standard Set",
+        "createdAt": "2026-09-26T14:20:04.012Z",
+        "updatedAt": "2026-09-26T14:20:04.012Z",
+        "id": "neues-standard-set",
+        "portrait": null
+      }
+    ],
+    "imageSetSchemaVersion": 1,
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/q0dvlE2.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/pbxhYlg.png"
+      },
+      {
+        "img": "https://i.imgur.com/x518LbR.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/eJT6weg.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/SMbU1jh.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/SUKeyig.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/BQD3Z8P.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/sGqlznV.png"
+      },
+      {
+        "img": "https://i.imgur.com/NVZLoV1.png",
+        "label": ""
+      }
+    ]
+  }
+}

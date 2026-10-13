@@ -1,0 +1,5371 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-10-13T13:50:25.792Z",
+  "character": {
+    "id": "oUlhJyX6C4Q69mtLS9u1",
+    "origin": "",
+    "imageSetSchemaVersion": 1,
+    "aliases": [],
+    "taxonomyPath": "",
+    "status": "",
+    "archived": false,
+    "combatProfile": {
+      "lastMechanicalCommentId": "KKyg25Beji1Qzco1o6w0",
+      "attributes": [
+        {
+          "score": 18,
+          "key": "strength",
+          "label": "Kraft",
+          "shortLabel": "KRF",
+          "modifierOverride": null
+        },
+        {
+          "score": 13,
+          "shortLabel": "GES",
+          "modifierOverride": null,
+          "key": "dexterity",
+          "label": "Geschick"
+        },
+        {
+          "shortLabel": "KON",
+          "label": "Konstitution",
+          "modifierOverride": null,
+          "score": 16,
+          "key": "constitution"
+        },
+        {
+          "score": 8,
+          "modifierOverride": null,
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "shortLabel": "INT"
+        },
+        {
+          "key": "wisdom",
+          "label": "Weisheit",
+          "modifierOverride": null,
+          "shortLabel": "WEI",
+          "score": 10
+        },
+        {
+          "label": "Charisma",
+          "modifierOverride": null,
+          "score": 12,
+          "shortLabel": "CHA",
+          "key": "charisma"
+        }
+      ],
+      "conditions": [],
+      "schemaVersion": 11,
+      "resources": [
+        {
+          "recoveryDayKey": "",
+          "maximum": 1,
+          "category": "",
+          "id": "inspiration",
+          "recovery": "manual",
+          "scope": "persistent",
+          "icon": "",
+          "name": "Inspiration",
+          "notes": "",
+          "current": 0
+        },
+        {
+          "maximum": 0,
+          "category": "magic",
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2",
+          "recovery": "day",
+          "id": "mana-focus",
+          "name": "Mana",
+          "scope": "persistent",
+          "icon": "",
+          "notes": "",
+          "current": 0
+        },
+        {
+          "category": "focus",
+          "recovery": "day",
+          "id": "focus",
+          "current": 0,
+          "scope": "persistent",
+          "maximum": 0,
+          "icon": "",
+          "notes": "",
+          "name": "Fokus",
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2"
+        },
+        {
+          "current": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "celestial",
+          "id": "celestial-points",
+          "notes": "",
+          "name": "Celestiale Punkte",
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2",
+          "icon": "",
+          "maximum": 0
+        },
+        {
+          "id": "infernal-points",
+          "name": "Infernale Punkte",
+          "current": 0,
+          "icon": "",
+          "recovery": "day",
+          "notes": "",
+          "maximum": 0,
+          "category": "infernal",
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2",
+          "scope": "persistent"
+        },
+        {
+          "category": "pact",
+          "recovery": "day",
+          "current": 0,
+          "id": "pact-points",
+          "maximum": 0,
+          "scope": "persistent",
+          "name": "Paktpunkte",
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "action",
+          "category": "action",
+          "recovery": "scene",
+          "current": 1,
+          "name": "Aktion",
+          "maximum": 1,
+          "scope": "comment",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "icon": "./public/assets/combat-profile-icons/action.png"
+        },
+        {
+          "id": "bonus-action",
+          "current": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "name": "Bonusaktion",
+          "maximum": 1,
+          "category": "action"
+        },
+        {
+          "id": "reaction",
+          "current": 1,
+          "name": "Reaktion",
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "category": "action"
+        },
+        {
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "notes": "",
+          "maximum": 2,
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2",
+          "scope": "persistent",
+          "name": "Besondere Aktion",
+          "recovery": "day",
+          "current": 2,
+          "id": "special-action",
+          "category": "action"
+        },
+        {
+          "scope": "persistent",
+          "id": "aura-focus",
+          "maximum": 0,
+          "notes": "",
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2",
+          "name": "Aura-Fokuspunkt",
+          "category": "action",
+          "paymentRole": "universal-substitute",
+          "current": 0,
+          "recovery": "day",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png"
+        },
+        {
+          "current": 0,
+          "recoveryDayKey": "",
+          "category": "spell-slot",
+          "scope": "persistent",
+          "id": "spell-slot-1",
+          "spellLevel": 1,
+          "name": "Zauberplatz I",
+          "recovery": "long-rest",
+          "maximum": 0,
+          "icon": "",
+          "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "icon": "",
+          "recoveryDayKey": "",
+          "category": "spell-slot",
+          "current": 0,
+          "name": "Zauberplatz II",
+          "recovery": "long-rest",
+          "maximum": 0,
+          "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "spellLevel": 2,
+          "scope": "persistent",
+          "id": "spell-slot-2"
+        },
+        {
+          "scope": "persistent",
+          "recoveryDayKey": "",
+          "spellLevel": 3,
+          "current": 0,
+          "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "id": "spell-slot-3",
+          "recovery": "long-rest",
+          "maximum": 0,
+          "name": "Zauberplatz III",
+          "category": "spell-slot",
+          "icon": ""
+        },
+        {
+          "category": "spell-slot",
+          "name": "Zauberplatz IV",
+          "recovery": "long-rest",
+          "maximum": 0,
+          "icon": "",
+          "id": "spell-slot-4",
+          "spellLevel": 4,
+          "current": 0,
+          "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recoveryDayKey": "",
+          "scope": "persistent"
+        },
+        {
+          "name": "Zauberplatz V",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 5,
+          "recoveryDayKey": "",
+          "recovery": "long-rest",
+          "current": 0,
+          "maximum": 0,
+          "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "id": "spell-slot-5",
+          "scope": "persistent"
+        },
+        {
+          "recoveryDayKey": "",
+          "recovery": "long-rest",
+          "current": 0,
+          "id": "spell-slot-6",
+          "icon": "",
+          "category": "spell-slot",
+          "name": "Zauberplatz VI",
+          "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "maximum": 0,
+          "scope": "persistent",
+          "spellLevel": 6
+        },
+        {
+          "maximum": 0,
+          "category": "spell-slot",
+          "recovery": "long-rest",
+          "id": "spell-slot-7",
+          "scope": "persistent",
+          "icon": "",
+          "recoveryDayKey": "",
+          "spellLevel": 7,
+          "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "name": "Zauberplatz VII",
+          "current": 0
+        },
+        {
+          "scope": "persistent",
+          "spellLevel": 8,
+          "recoveryDayKey": "",
+          "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "current": 0,
+          "icon": "",
+          "category": "spell-slot",
+          "maximum": 0,
+          "id": "spell-slot-8",
+          "name": "Zauberplatz VIII",
+          "recovery": "long-rest"
+        },
+        {
+          "recovery": "long-rest",
+          "icon": "",
+          "current": 0,
+          "name": "Zauberplatz IX",
+          "category": "spell-slot",
+          "id": "spell-slot-9",
+          "recoveryDayKey": "",
+          "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "spellLevel": 9,
+          "maximum": 0,
+          "scope": "persistent"
+        },
+        {
+          "recoveryDayKey": "",
+          "scope": "persistent",
+          "recovery": "long-rest",
+          "current": 0,
+          "category": "spell-slot",
+          "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "id": "spell-slot-10",
+          "maximum": 0,
+          "name": "Zauberplatz X",
+          "icon": "",
+          "spellLevel": 10
+        },
+        {
+          "category": "technique-use",
+          "recovery": "combat",
+          "maximum": 1,
+          "scope": "persistent",
+          "name": "Vier Fänge · Kampfnutzung",
+          "current": 0,
+          "icon": "",
+          "recoveryDayKey": "",
+          "id": "asgeir-four-fangs-use",
+          "notes": ""
+        }
+      ],
+      "armorClass": {
+        "base": 10,
+        "override": null,
+        "otherModifier": 0,
+        "magicModifier": 0,
+        "dexterityCap": 2,
+        "shieldBonus": 0,
+        "dexterityMode": "full",
+        "overrideMode": "total"
+      },
+      "notes": "Stufe 7 · Skjaldr. Standard-Array mit aldrimarischer Herkunft (+2 KRF, +1 KON); Stufe 4: +1 KRF, +1 KON. Durchschnittliche TP einschließlich zentralem Vitalitätszuschlag. 7 gelernte Huskarl-Techniken gemäß gemeinsamem Ausbildungsbudget. Kein Expertenpfad vor Stufe 9. Berserkergang gemäß gemeinsamer Skjaldr-Staffel; ein Einsatz täglich auf Stufe 7.",
+      "progression": {
+        "nextLevelExperience": null,
+        "specialLevels": 0,
+        "level": 7,
+        "actionPoolChoices": [],
+        "experienceReward": null,
+        "proficiencyBonusOverride": null,
+        "resourceRulesVersion": 2,
+        "experience": 0
+      },
+      "defenseBalanceVersion": 1,
+      "aura": {
+        "domain": "",
+        "focusBypassCost": 1,
+        "latentPresence": {
+          "allyMechanics": {
+            "maximumHitPoints": 0,
+            "spellAttack": 0,
+            "armorClass": 0,
+            "bonusDamageFormula": "",
+            "damage": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "savingThrowAdvantageAttributes": [],
+            "spellSaveDc": 0,
+            "movement": 0,
+            "savingThrow": 0,
+            "skill": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "passivePerception": 0,
+            "attack": 0,
+            "attackRollMode": "normal",
+            "initiative": 0
+          },
+          "radius": "",
+          "duration": "",
+          "enabled": true,
+          "aiInstructions": "",
+          "name": "Latente Präsenz",
+          "active": true,
+          "enemyMechanics": {
+            "savingThrowAdvantageAttributes": [],
+            "initiative": 0,
+            "attack": 0,
+            "passivePerception": 0,
+            "skill": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "spellAttack": 0,
+            "movement": 0,
+            "damage": 0,
+            "attackRollMode": "normal",
+            "maximumHitPoints": 0,
+            "bonusDamageFormula": "",
+            "armorClass": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "savingThrow": 0,
+            "spellSaveDc": 0
+          },
+          "selfMechanics": {
+            "savingThrowAdvantageAttributes": [],
+            "attackRollMode": "normal",
+            "movement": 0,
+            "armorClass": 0,
+            "spellSaveDc": 0,
+            "savingThrow": 0,
+            "maximumHitPoints": 0,
+            "attack": 0,
+            "passivePerception": 0,
+            "bonusDamageFormula": "",
+            "spellAttack": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "combatStartTemporaryHitPoints": 0,
+            "skill": 0,
+            "initiative": 0,
+            "damage": 0
+          },
+          "requirements": "",
+          "trigger": "",
+          "target": "Umgebung, Verbündete und Gegner",
+          "description": ""
+        },
+        "activeForm": {
+          "enemyMechanics": {
+            "passivePerception": 0,
+            "movement": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "attackRollMode": "normal",
+            "spellAttack": 0,
+            "armorClass": 0,
+            "bonusDamageFormula": "",
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrowAdvantageAttributes": [],
+            "damage": 0,
+            "initiative": 0,
+            "maximumHitPoints": 0,
+            "skill": 0,
+            "attack": 0,
+            "spellSaveDc": 0,
+            "savingThrow": 0
+          },
+          "allyMechanics": {
+            "attackRollMode": "normal",
+            "initiative": 0,
+            "bonusDamageFormula": "",
+            "spellAttack": 0,
+            "skill": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "damage": 0,
+            "maximumHitPoints": 0,
+            "savingThrowAdvantageAttributes": [],
+            "passivePerception": 0,
+            "spellSaveDc": 0,
+            "savingThrow": 0,
+            "armorClass": 0,
+            "movement": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attack": 0
+          },
+          "name": "Aktive Form",
+          "requirements": "",
+          "description": "",
+          "aiInstructions": "",
+          "radius": "",
+          "duration": "",
+          "enabled": false,
+          "active": false,
+          "trigger": "",
+          "target": "Selbst und gewählte Ziele",
+          "selfMechanics": {
+            "combatStartTemporaryHitPoints": 0,
+            "movement": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "spellAttack": 0,
+            "damage": 0,
+            "maximumHitPoints": 0,
+            "skill": 0,
+            "initiative": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "armorClass": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrow": 0,
+            "spellSaveDc": 0,
+            "bonusDamageFormula": "",
+            "attack": 0
+          }
+        },
+        "name": "Aura",
+        "focusResourceId": "aura-focus",
+        "enabled": false,
+        "notes": ""
+      },
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "abilities": [
+        {
+          "auraBypass": {
+            "allowed": true,
+            "replaces": "activation-costs-only",
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "usesMaximum": 1,
+          "recoveryDayKey": "",
+          "tags": "Skjaldr, Berserkergang",
+          "name": "Berserkergang · Entfesselter Zorn",
+          "usesCurrent": 1,
+          "active": true,
+          "id": "aldrimar-skjaldr-berserkergang",
+          "resolutionType": "automatic",
+          "recovery": "day",
+          "duration": "Bis Kampfende oder einem ruhigen eigenen Gesamtbeitrag",
+          "effects": [
+            {
+              "target": "self",
+              "on": "always",
+              "bonusAttribute": "constitution",
+              "type": "temporary-hit-points",
+              "id": "skjaldr-berserk-vitality",
+              "formula": "1d12"
+            },
+            {
+              "on": "always",
+              "target": "self",
+              "id": "skjaldr-berserk-mode",
+              "type": "apply-condition",
+              "condition": {
+                "name": "Berserkergang",
+                "berserk": {
+                  "survivalCharges": 1,
+                  "activity": false
+                },
+                "id": "skjaldr-berserk-state",
+                "icon": "../IconOrdner/Traits Icon/Berserker.png",
+                "duration": "Bis Kampfende oder einem ruhigen eigenen Gesamtbeitrag",
+                "description": "Berserkergang: +2 Kraft (einschließlich Attributsmodifikator), +1W4 Waffenschaden, -4 RK. Beim Aktivieren 1W12 + KON temporäre LP. Einmal je Aktivierung bei 0 LP auf 1 LP bleiben. Bis Kampfende oder einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden; 1 Anwendungen täglich.",
+                "mechanics": {
+                  "armorClass": -4,
+                  "strength": 2,
+                  "weaponBonusDamageFormula": "1d4"
+                },
+                "durationModel": {
+                  "kind": "combat"
+                },
+                "active": true
+              }
+            }
+          ],
+          "target": "Selbst",
+          "combatUsable": true,
+          "range": "Selbst",
+          "requirements": "Ab Stufe 6. Keine erneute Aktivierung während des Berserkergangs.",
+          "description": "Berserkergang: +2 Kraft (einschließlich Attributsmodifikator), +1W4 Waffenschaden, -4 RK. Beim Aktivieren 1W12 + KON temporäre LP. Einmal je Aktivierung bei 0 LP auf 1 LP bleiben. Bis Kampfende oder einem eigenen Gesamtbeitrag ohne Angriff und ohne erlittenen Schaden; 1 Anwendungen täglich.",
+          "delivery": "ability",
+          "activationType": "bonus-action",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "amount": 1,
+              "scope": "comment",
+              "name": "Bonusaktion"
+            },
+            {
+              "amount": 1,
+              "name": "Reaktion",
+              "resourceId": "reaction",
+              "scope": "comment"
+            }
+          ]
+        },
+        {
+          "recovery": "long-rest",
+          "description": "Regeneriere 1 eigenen Klassen-Trefferwürfel + 10 % der maximalen TP (aufgerundet), höchstens bis zum TP-Maximum. Kein KON-Bonus. Einmal pro langer Rast.",
+          "id": "martial-durchschnaufen",
+          "target": "Selbst",
+          "auraBypass": {
+            "allowed": false
+          },
+          "active": true,
+          "activationType": "bonus-action",
+          "minimumLevel": 1,
+          "usesCurrent": 1,
+          "usesMaximum": 1,
+          "tags": "Erholung · Lange Rast",
+          "name": "Durchschnaufen",
+          "costs": [
+            {
+              "id": "second-wind-bonus",
+              "scope": "comment",
+              "amount": 1,
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion"
+            }
+          ],
+          "range": "Selbst",
+          "effects": [
+            {
+              "on": "always",
+              "type": "healing",
+              "formula": "1d8",
+              "scaling": "hit-die-and-tenth-maximum",
+              "id": "second-wind-heal",
+              "target": "self"
+            }
+          ],
+          "resolutionType": "automatic",
+          "combatUsable": true,
+          "delivery": "ability"
+        },
+        {
+          "active": true,
+          "combatUsable": false,
+          "name": "Grenzer des Dunkelhains",
+          "id": "wolfshorn-asgeir-border-veteran",
+          "mechanics": {
+            "weaponModifiers": [
+              {
+                "damage": 1,
+                "attack": 0,
+                "weaponTypes": [
+                  "unarmed",
+                  "sword",
+                  "dagger",
+                  "axe",
+                  "mace",
+                  "spear",
+                  "polearm",
+                  "staff",
+                  "improvised"
+                ]
+              }
+            ],
+            "skillModifiers": [],
+            "saveModifiers": [
+              {
+                "bonus": 2,
+                "kind": "fear"
+              },
+              {
+                "bonus": 2,
+                "kind": "prone"
+              },
+              {
+                "kind": "forced-movement",
+                "bonus": 2
+              }
+            ],
+            "maximumHitPoints": 14
+          },
+          "activationType": "passive",
+          "description": "+14 maximale TP; +1 Nahkampfwaffenschaden, auch bei Techniken; +2 gegen Furcht, Niederwerfen und erzwungene Bewegung."
+        }
+      ],
+      "techniques": [
+        {
+          "spendAllRegularActions": true,
+          "active": true,
+          "minimumLevel": 7,
+          "effects": [
+            {
+              "type": "damage",
+              "target": "target",
+              "inheritWeaponDamageType": true,
+              "on": "hit"
+            }
+          ],
+          "maximumTargets": 1,
+          "activationType": "action",
+          "description": "Einmal pro Kampf. Verbraucht alle verbleibenden Aktionen, Bonusaktionen und Reaktionen, mindestens je eine. Vier getrennt gewürfelte Angriffe mit abwechselnden Doppeläxten gegen dasselbe Ziel. Treffen alle vier, kann das Ziel im nächsten eigenen Beitrag keine Aktion einsetzen; Bonusaktion und Reaktion bleiben verfügbar.",
+          "followUpAttack": {
+            "afterMiss": true,
+            "allHitsStun": true,
+            "repeatCount": 3,
+            "inheritWeapon": true,
+            "alternateHands": true,
+            "enabled": true
+          },
+          "weaponTypes": [
+            "axe"
+          ],
+          "cultureTraining": {
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresDualWield": true
+          },
+          "damageModel": {
+            "weaponDiceMultiplier": 1,
+            "mode": "weapon-dice"
+          },
+          "name": "Vier Fänge des Wolfshorns",
+          "auraBypass": {
+            "allowed": false
+          },
+          "category": "technique",
+          "id": "asgeir-vier-faenge",
+          "status": "confirmed",
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1,
+              "name": "Aktion",
+              "scope": "comment"
+            },
+            {
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment",
+              "resourceId": "bonus-action"
+            },
+            {
+              "scope": "comment",
+              "resourceId": "reaction",
+              "amount": 1,
+              "name": "Reaktion"
+            },
+            {
+              "resourceId": "asgeir-four-fangs-use",
+              "scope": "persistent",
+              "amount": 1,
+              "name": "Vier Fänge · Kampfnutzung"
+            }
+          ],
+          "trainingForm": "Persönliche Techniken"
+        },
+        {
+          "auraBypass": {
+            "cost": 1,
+            "resourceId": "aura-focus",
+            "allowed": true
+          },
+          "status": "confirmed",
+          "attackBonus": 0,
+          "effect": "Ein leichter Einzelhieb, noch ohne Berserkergang.",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "combatStyleId": "huskarl-waffenlehre",
+          "aiInstructions": "",
+          "name": "Kurzer Axthieb",
+          "secondarySave": {
+            "enabled": false
+          },
+          "active": true,
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "activationType": "bonus-action",
+          "target": "Ein Gegner",
+          "category": "technique",
+          "damageBonus": 0,
+          "cultureTraining": {
+            "requiresDualWield": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresShield": false,
+            "branchId": "skjaldr-flexible",
+            "schemaVersion": 1,
+            "requiresTwoHands": false,
+            "requiresMounted": false,
+            "cultureIds": [
+              "aldrimar"
+            ]
+          },
+          "live": true,
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-1-bonus-action-1",
+              "scope": "comment",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "resourceId": "bonus-action"
+            }
+          ],
+          "criticalThreshold": 20,
+          "damageFormula": "",
+          "effects": [
+            {
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "formula": "",
+              "on": "hit",
+              "inheritWeaponDamageType": true,
+              "damageType": "",
+              "type": "damage",
+              "id": "combat-style-huskarl-skjaldr-grund-1-weapon-damage",
+              "target": "target",
+              "magical": false
+            }
+          ],
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "trainingForm": "Stand des Schildes",
+          "compatibleWeaponIds": [],
+          "description": "Ein leichter Einzelhieb, noch ohne Berserkergang.",
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "id": "combat-style-huskarl-skjaldr-grund-1",
+          "cenyrTraining": {
+            "classWeaponProfiles": {},
+            "assignedSlotId": "",
+            "allowedClassIds": [],
+            "slotBands": [],
+            "weaponRuleSetId": "",
+            "uchelwyrCompatible": false,
+            "sourceStatus": "",
+            "selectedAtLevel": null,
+            "requiresMounted": false,
+            "designNotes": "",
+            "branchId": ""
+          },
+          "rollMode": "normal",
+          "mechanics": {},
+          "duration": "",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "range": "Waffenreichweite",
+          "maximumTargets": 1,
+          "minimumLevel": 1,
+          "damageType": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "lightAttack": true,
+            "baseDieCap": 4,
+            "bonusFormula": "",
+            "scalingSteps": [],
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDieCap": 12,
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "targetDefenseModifier": 0,
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "triggerRules": []
+        },
+        {
+          "status": "confirmed",
+          "effects": [
+            {
+              "condition": {
+                "id": "huskarl-deckung",
+                "tags": "Huskarl-Waffenlehre",
+                "name": "Feste Deckung",
+                "duration": "1 eigener Beitrag",
+                "armorStance": true,
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "mechanics": {
+                  "armorClass": 1
+                }
+              },
+              "id": "combat-style-huskarl-skjaldr-grund-2-condition",
+              "type": "buff",
+              "on": "always",
+              "target": "self",
+              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            }
+          ],
+          "targetDefenseModifier": 0,
+          "range": "Waffenreichweite",
+          "id": "combat-style-huskarl-skjaldr-grund-2",
+          "aiInstructions": "",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "attackBonus": 0,
+          "effect": "Schadenslose Deckung: +1 RK für einen eigenen Beitrag.",
+          "damageType": "",
+          "activationType": "reaction",
+          "target": "Selbst",
+          "damageBonus": 0,
+          "cenyrTraining": {
+            "requiresMounted": false,
+            "sourceStatus": "",
+            "selectedAtLevel": null,
+            "uchelwyrCompatible": false,
+            "slotBands": [],
+            "designNotes": "",
+            "branchId": "",
+            "assignedSlotId": "",
+            "classWeaponProfiles": {},
+            "weaponRuleSetId": "",
+            "allowedClassIds": []
+          },
+          "active": true,
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "name": "Gebändigter Stand",
+          "category": "technique",
+          "live": true,
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "rollMode": "normal",
+          "secondarySave": {
+            "enabled": false
+          },
+          "triggerRules": [],
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-2-reaction-1",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment",
+              "resourceId": "reaction"
+            }
+          ],
+          "description": "Schadenslose Deckung: +1 RK für einen eigenen Beitrag.",
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "damageFormula": "",
+          "compatibleWeaponIds": [],
+          "minimumLevel": 2,
+          "mechanics": {},
+          "combatStyleFormId": "huskarl-schildgrund",
+          "maximumTargets": 1,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "trainingForm": "Stand des Schildes",
+          "combatStyleId": "huskarl-waffenlehre",
+          "cultureTraining": {
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresShield": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "schemaVersion": 1,
+            "branchId": "skjaldr-flexible",
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "criticalThreshold": 20,
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": "aura-focus"
+          },
+          "damageModel": {
+            "scalingSteps": [],
+            "mode": "fixed"
+          },
+          "duration": ""
+        },
+        {
+          "damageModel": {
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 0,
+            "bonusFormula": "",
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "mode": "weapon-dice",
+            "weaponBonuses": []
+          },
+          "cenyrTraining": {
+            "slotBands": [],
+            "requiresMounted": false,
+            "sourceStatus": "",
+            "selectedAtLevel": null,
+            "assignedSlotId": "",
+            "branchId": "",
+            "uchelwyrCompatible": false,
+            "classWeaponProfiles": {},
+            "weaponRuleSetId": "",
+            "designNotes": "",
+            "allowedClassIds": []
+          },
+          "status": "confirmed",
+          "activationType": "action",
+          "targetDefenseModifier": 0,
+          "triggerRules": [],
+          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
+          "cultureTraining": {
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "slotBands": [
+              "foundation"
+            ],
+            "schemaVersion": 1,
+            "branchId": "skjaldr-greatAxe",
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresShield": false,
+            "requiresMounted": false,
+            "requiresDualWield": false,
+            "requiresTwoHands": true
+          },
+          "minimumLevel": 3,
+          "effect": "Ein kontrollierter Hieb mit der langen Streitaxt.",
+          "range": "Waffenreichweite",
+          "category": "technique",
+          "target": "Ein Gegner",
+          "active": true,
+          "weaponTypes": [
+            "axe"
+          ],
+          "description": "Ein kontrollierter Hieb mit der langen Streitaxt.",
+          "weaponLabel": "Lange Streitaxt",
+          "effects": [
+            {
+              "inheritWeaponDamageType": true,
+              "type": "damage",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "id": "combat-style-huskarl-skjaldr-grund-3-weapon-damage",
+              "magical": false,
+              "damageType": "",
+              "on": "hit",
+              "formula": "",
+              "target": "target"
+            }
+          ],
+          "aiInstructions": "",
+          "trainingForm": "Stand des Schildes",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "damageType": "",
+          "maximumTargets": 1,
+          "live": true,
+          "costs": [
+            {
+              "amount": 1,
+              "scope": "comment",
+              "name": "Aktion",
+              "resourceId": "action",
+              "id": "combat-style-huskarl-skjaldr-grund-3-action-1"
+            }
+          ],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "criticalThreshold": 20,
+          "duration": "",
+          "name": "Langer Spalthieb",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "allowed": true,
+            "cost": 1
+          },
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "combatStyleId": "huskarl-waffenlehre",
+          "compatibleWeaponIds": [],
+          "damageBonus": 0,
+          "attackBonus": 0,
+          "combatStyleFormId": "huskarl-schildgrund",
+          "rollMode": "normal",
+          "secondarySave": {
+            "enabled": false
+          },
+          "damageFormula": "",
+          "id": "combat-style-huskarl-skjaldr-grund-3"
+        },
+        {
+          "id": "combat-style-huskarl-skjaldr-grund-4",
+          "mechanics": {},
+          "combatStyleFormId": "huskarl-schildgrund",
+          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Trefferwurf mit beiden Waffenwürfeln; feste Boni einmal.",
+          "live": true,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "maximumTargets": 1,
+          "triggerRules": [],
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "costs": [
+            {
+              "amount": 1,
+              "name": "Aktion",
+              "resourceId": "action",
+              "scope": "comment",
+              "id": "combat-style-huskarl-skjaldr-grund-4-action-1"
+            },
+            {
+              "scope": "comment",
+              "id": "combat-style-huskarl-skjaldr-grund-4-reaction-2",
+              "name": "Reaktion",
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "name": "Doppelter Axtgriff",
+          "rollMode": "normal",
+          "attackBonus": 0,
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "minimumLevel": 4,
+          "cenyrTraining": {
+            "classWeaponProfiles": {},
+            "designNotes": "",
+            "sourceStatus": "",
+            "assignedSlotId": "",
+            "weaponRuleSetId": "",
+            "allowedClassIds": [],
+            "requiresMounted": false,
+            "slotBands": [],
+            "selectedAtLevel": null,
+            "uchelwyrCompatible": false,
+            "branchId": ""
+          },
+          "targetDefenseModifier": 0,
+          "duration": "",
+          "damageBonus": 0,
+          "criticalThreshold": 20,
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "trainingForm": "Stand des Schildes",
+          "damageType": "",
+          "effect": "Zwei geführte Äxte, ein gemeinsamer Technikwurf. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.",
+          "weaponTypes": [
+            "axe"
+          ],
+          "description": "Zwei geführte Äxte, ein gemeinsamer Technikwurf. Nach Treffer KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.",
+          "weaponLabel": "Zwei Äxte",
+          "activationType": "action",
+          "range": "Waffenreichweite",
+          "secondarySave": {
+            "failureCondition": {
+              "name": "Gebundene Waffenführung",
+              "tags": "Huskarl-Waffenlehre",
+              "duration": "1 eigener Beitrag",
+              "id": "combat-style-huskarl-skjaldr-grund-4-failed-save",
+              "mechanics": {
+                "attack": -1
+              },
+              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv."
+            },
+            "addProficiency": true,
+            "attributeKey": "strength",
+            "enabled": true,
+            "dcAttributeKey": "strength",
+            "dcBase": 8
+          },
+          "damageFormula": "",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-4-weapon-damage",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "magical": false,
+              "type": "damage",
+              "inheritWeaponDamageType": true,
+              "formula": "",
+              "on": "hit",
+              "target": "target",
+              "damageType": ""
+            }
+          ],
+          "status": "confirmed",
+          "category": "technique",
+          "cultureTraining": {
+            "branchId": "skjaldr-twinAxes",
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresShield": false,
+            "schemaVersion": 1,
+            "requiresTwoHands": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresDualWield": true,
+            "requiresMounted": false,
+            "slotBands": [
+              "foundation"
+            ]
+          },
+          "aiInstructions": "",
+          "active": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "damageModel": {
+            "bonusFormula": "",
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ],
+            "mode": "weapon-dice",
+            "bonusWeaponDieCap": 12,
+            "weaponDiceMultiplier": 1,
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0
+          },
+          "compatibleWeaponIds": [],
+          "target": "Ein Gegner"
+        },
+        {
+          "triggerRules": [],
+          "damageModel": {
+            "mode": "weapon-dice",
+            "bonusWeaponDice": 0,
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDieCap": 12,
+            "bonusFormula": "",
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ]
+          },
+          "requirements": "Einhandwaffe und Schild Schild aktiv geführt.",
+          "costs": [
+            {
+              "amount": 1,
+              "scope": "comment",
+              "id": "combat-style-huskarl-skjaldr-grund-5-action-1",
+              "name": "Aktion",
+              "resourceId": "action"
+            },
+            {
+              "resourceId": "bonus-action",
+              "id": "combat-style-huskarl-skjaldr-grund-5-bonus-action-2",
+              "scope": "comment",
+              "amount": 1,
+              "name": "Bonusaktion"
+            }
+          ],
+          "cultureTraining": {
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresDualWield": false,
+            "requiresShield": true,
+            "branchId": "skjaldr-shield",
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresMounted": false,
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresTwoHands": false
+          },
+          "id": "combat-style-huskarl-skjaldr-grund-5",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "cenyrTraining": {
+            "branchId": "",
+            "sourceStatus": "",
+            "allowedClassIds": [],
+            "weaponRuleSetId": "",
+            "slotBands": [],
+            "designNotes": "",
+            "selectedAtLevel": null,
+            "classWeaponProfiles": {},
+            "assignedSlotId": "",
+            "requiresMounted": false,
+            "uchelwyrCompatible": false
+          },
+          "minimumLevel": 5,
+          "maximumTargets": 1,
+          "rollMode": "normal",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "cost": 1,
+            "allowed": true
+          },
+          "duration": "",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "name": "Haken hinter den Schild",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace",
+            "spear"
+          ],
+          "live": true,
+          "effects": [
+            {
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "magical": false,
+              "id": "combat-style-huskarl-skjaldr-grund-5-weapon-damage",
+              "target": "target",
+              "formula": "",
+              "on": "hit",
+              "type": "damage",
+              "inheritWeaponDamageType": true,
+              "damageType": ""
+            }
+          ],
+          "trainingForm": "Stand des Schildes",
+          "description": "Ein Hieb aus der Schilddeckung; kein Berserkerbonus unter Stufe 6.",
+          "weaponLabel": "Einhandwaffe und Schild",
+          "target": "Ein Gegner",
+          "combatStyleId": "huskarl-waffenlehre",
+          "active": true,
+          "damageType": "",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "range": "Waffenreichweite",
+          "damageBonus": 0,
+          "activationType": "action",
+          "targetDefenseModifier": 0,
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "status": "confirmed",
+          "criticalThreshold": 20,
+          "attackBonus": 0,
+          "aiInstructions": "",
+          "category": "technique",
+          "mechanics": {},
+          "secondarySave": {
+            "enabled": false
+          },
+          "effect": "Ein Hieb aus der Schilddeckung; kein Berserkerbonus unter Stufe 6."
+        },
+        {
+          "effect": "Ein kräftiger Einzelhieb. Der Berserkergang muss separat aktiviert werden.",
+          "aiInstructions": "",
+          "effects": [
+            {
+              "type": "damage",
+              "on": "hit",
+              "inheritWeaponDamageType": true,
+              "formula": "",
+              "id": "combat-style-huskarl-skjaldr-grund-6-weapon-damage",
+              "target": "target",
+              "damageType": "",
+              "magical": false,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "description": "Ein kräftiger Einzelhieb. Der Berserkergang muss separat aktiviert werden.",
+          "weaponLabel": "Lange Streitaxt",
+          "duration": "",
+          "weaponTypes": [
+            "axe"
+          ],
+          "combatStyleFormId": "huskarl-schildgrund",
+          "status": "confirmed",
+          "combatStyleId": "huskarl-waffenlehre",
+          "secondarySave": {
+            "enabled": false
+          },
+          "range": "Waffenreichweite",
+          "live": true,
+          "rollMode": "normal",
+          "active": true,
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "activationType": "action",
+          "damageFormula": "",
+          "damageModel": {
+            "bonusFormula": "",
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ],
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 0,
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 6
+              },
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "mode": "weapon-dice",
+            "bonusWeaponDieCap": 12
+          },
+          "name": "Hieb des Schildbeißers",
+          "criticalThreshold": 20,
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "target": "Ein Gegner",
+          "category": "technique",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresShield": false,
+            "requiresMounted": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "branchId": "skjaldr-greatAxe",
+            "requiresDualWield": false,
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresTwoHands": true
+          },
+          "trainingForm": "Stand des Schildes",
+          "cenyrTraining": {
+            "classWeaponProfiles": {},
+            "sourceStatus": "",
+            "designNotes": "",
+            "allowedClassIds": [],
+            "assignedSlotId": "",
+            "weaponRuleSetId": "",
+            "branchId": "",
+            "uchelwyrCompatible": false,
+            "requiresMounted": false,
+            "selectedAtLevel": null,
+            "slotBands": []
+          },
+          "mechanics": {},
+          "compatibleWeaponIds": [],
+          "targetDefenseModifier": 0,
+          "damageType": "",
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "minimumLevel": 6,
+          "triggerRules": [],
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "costs": [
+            {
+              "amount": 1,
+              "id": "combat-style-huskarl-skjaldr-grund-6-action-1",
+              "name": "Aktion",
+              "scope": "comment",
+              "resourceId": "action"
+            },
+            {
+              "amount": 1,
+              "id": "combat-style-huskarl-skjaldr-grund-6-bonus-action-2",
+              "scope": "comment",
+              "name": "Bonusaktion",
+              "resourceId": "bonus-action"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-grund-6-reaction-3",
+              "name": "Reaktion",
+              "amount": 1,
+              "resourceId": "reaction",
+              "scope": "comment"
+            }
+          ],
+          "maximumTargets": 1,
+          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "id": "combat-style-huskarl-skjaldr-grund-6"
+        },
+        {
+          "id": "combat-style-huskarl-skjaldr-wahl-1",
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "target": "Ein Gegner",
+          "triggerRules": [],
+          "activationType": "bonus-action",
+          "active": true,
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "description": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "minimumLevel": 1,
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "status": "confirmed",
+          "damageModel": {
+            "weaponDiceMultiplier": 1,
+            "weaponBonuses": [],
+            "baseDieCap": 4,
+            "lightAttack": true,
+            "bonusWeaponDice": 0,
+            "mode": "weapon-dice",
+            "scalingSteps": [],
+            "bonusWeaponDieCap": 12,
+            "bonusFormula": ""
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "effects": [
+            {
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "magical": false,
+              "id": "combat-style-huskarl-skjaldr-wahl-1-weapon-damage",
+              "target": "target",
+              "formula": "",
+              "on": "hit",
+              "type": "damage",
+              "damageType": "",
+              "inheritWeaponDamageType": true
+            }
+          ],
+          "trainingForm": "Stand des Schildes",
+          "effect": "Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.",
+          "range": "Waffenreichweite",
+          "attackBonus": 0,
+          "combatStyleId": "huskarl-waffenlehre",
+          "compatibleWeaponIds": [],
+          "maximumTargets": 1,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "cultureTraining": {
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresDualWield": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "slotBands": [
+              "foundation"
+            ],
+            "branchId": "skjaldr-flexible",
+            "requiresTwoHands": false,
+            "requiresShield": false,
+            "requiresMounted": false,
+            "schemaVersion": 1
+          },
+          "category": "technique",
+          "costs": [
+            {
+              "amount": 1,
+              "name": "Bonusaktion",
+              "scope": "comment",
+              "id": "combat-style-huskarl-skjaldr-wahl-1-bonus-action-1",
+              "resourceId": "bonus-action"
+            }
+          ],
+          "live": true,
+          "mechanics": {},
+          "damageFormula": "",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "damageType": "",
+          "secondarySave": {
+            "enabled": false
+          },
+          "name": "Kurzer Bartzug",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "damageBonus": 0
+        },
+        {
+          "damageType": "",
+          "range": "Waffenreichweite",
+          "trainingForm": "Stand des Schildes",
+          "criticalThreshold": 20,
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "description": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.",
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "category": "technique",
+          "damageModel": {
+            "scalingSteps": [],
+            "mode": "fixed"
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "effects": [
+            {
+              "target": "self",
+              "condition": {
+                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "mechanics": {
+                  "armorClass": 1
+                },
+                "duration": "1 eigener Beitrag",
+                "id": "huskarl-deckung",
+                "armorStance": true,
+                "name": "Feste Deckung",
+                "tags": "Huskarl-Waffenlehre"
+              },
+              "on": "always",
+              "id": "combat-style-huskarl-skjaldr-wahl-2-condition",
+              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+              "type": "buff"
+            }
+          ],
+          "cultureTraining": {
+            "slotBands": [
+              "foundation"
+            ],
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "branchId": "skjaldr-flexible",
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "schemaVersion": 1,
+            "requiresMounted": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresShield": false
+          },
+          "minimumLevel": 1,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "compatibleWeaponIds": [],
+          "maximumTargets": 1,
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "triggerRules": [],
+          "attackBonus": 0,
+          "status": "confirmed",
+          "combatStyleId": "huskarl-waffenlehre",
+          "effect": "Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.",
+          "targetDefenseModifier": 0,
+          "costs": [
+            {
+              "amount": 1,
+              "id": "combat-style-huskarl-skjaldr-wahl-2-reaction-1",
+              "scope": "comment",
+              "name": "Reaktion",
+              "resourceId": "reaction"
+            }
+          ],
+          "active": true,
+          "mechanics": {},
+          "target": "Selbst",
+          "secondarySave": {
+            "enabled": false
+          },
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": "aura-focus"
+          },
+          "name": "Ruhige Axtdeckung",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "damageFormula": "",
+          "damageBonus": 0,
+          "activationType": "reaction",
+          "live": true,
+          "id": "combat-style-huskarl-skjaldr-wahl-2"
+        },
+        {
+          "active": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "name": "Schneide über den Schaft",
+          "target": "Ein Gegner",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "damageBonus": 0,
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "cost": 1,
+            "allowed": true
+          },
+          "live": true,
+          "costs": [
+            {
+              "scope": "comment",
+              "name": "Aktion",
+              "amount": 1,
+              "resourceId": "action",
+              "id": "combat-style-huskarl-skjaldr-wahl-3-action-1"
+            }
+          ],
+          "criticalThreshold": 20,
+          "damageFormula": "",
+          "targetDefenseModifier": 0,
+          "activationType": "action",
+          "status": "confirmed",
+          "effects": [
+            {
+              "formula": "",
+              "id": "combat-style-huskarl-skjaldr-wahl-3-weapon-damage",
+              "type": "damage",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "target": "target",
+              "magical": false,
+              "inheritWeaponDamageType": true,
+              "damageType": "",
+              "on": "hit"
+            }
+          ],
+          "attackBonus": 0,
+          "id": "combat-style-huskarl-skjaldr-wahl-3",
+          "effect": "Ein gezielter Einzelangriff mit der geführten Waffe.",
+          "secondarySave": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "range": "Waffenreichweite",
+          "trainingForm": "Stand des Schildes",
+          "damageModel": {
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 0,
+            "mode": "weapon-dice",
+            "weaponBonuses": [],
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ],
+            "bonusFormula": ""
+          },
+          "compatibleWeaponIds": [],
+          "weaponTypes": [
+            "axe"
+          ],
+          "minimumLevel": 2,
+          "category": "technique",
+          "weaponLabel": "Lange Streitaxt",
+          "description": "Ein gezielter Einzelangriff mit der geführten Waffe.",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "maximumTargets": 1,
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "triggerRules": [],
+          "cultureTraining": {
+            "slotBands": [
+              "foundation"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresShield": false,
+            "branchId": "skjaldr-greatAxe",
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresMounted": false,
+            "requiresDualWield": false,
+            "requiresTwoHands": true
+          },
+          "damageType": "",
+          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild."
+        },
+        {
+          "damageBonus": 0,
+          "damageType": "",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "trainingForm": "Stand des Schildes",
+          "mechanics": {},
+          "range": "Waffenreichweite",
+          "targetDefenseModifier": 0,
+          "category": "technique",
+          "minimumLevel": 2,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "maximumTargets": 1,
+          "compatibleWeaponIds": [],
+          "triggerRules": [],
+          "attackBonus": 0,
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "damageFormula": "",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-4-bonus-action-1",
+              "resourceId": "bonus-action",
+              "scope": "comment",
+              "name": "Bonusaktion",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "scope": "comment",
+              "amount": 1,
+              "name": "Reaktion",
+              "id": "combat-style-huskarl-skjaldr-wahl-4-reaction-2"
+            }
+          ],
+          "effects": [
+            {
+              "condition": {
+                "name": "Gesammelte Ruhe",
+                "duration": "1 eigener Beitrag",
+                "tags": "Huskarl-Waffenlehre",
+                "id": "huskarl-zielen",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "mechanics": {
+                  "attack": 1
+                },
+                "description": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht."
+              },
+              "type": "buff",
+              "id": "combat-style-huskarl-skjaldr-wahl-4-aim",
+              "notes": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
+              "target": "self",
+              "on": "always"
+            }
+          ],
+          "live": true,
+          "criticalThreshold": 20,
+          "name": "Zorn im Zaum",
+          "cultureTraining": {
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresDualWield": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "branchId": "skjaldr-flexible",
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "schemaVersion": 1,
+            "requiresMounted": false
+          },
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "target": "Selbst",
+          "damageModel": {
+            "scalingSteps": [],
+            "mode": "fixed"
+          },
+          "active": true,
+          "secondarySave": {
+            "enabled": false
+          },
+          "auraBypass": {
+            "cost": 1,
+            "resourceId": "aura-focus",
+            "allowed": true
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "combatStyleId": "huskarl-waffenlehre",
+          "id": "combat-style-huskarl-skjaldr-wahl-4",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "effect": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
+          "description": "Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.",
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "activationType": "bonus-action",
+          "status": "confirmed"
+        },
+        {
+          "triggerRules": [],
+          "costs": [
+            {
+              "name": "Aktion",
+              "resourceId": "action",
+              "id": "combat-style-huskarl-skjaldr-wahl-5-action-1",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "scope": "comment",
+              "amount": 1,
+              "id": "combat-style-huskarl-skjaldr-wahl-5-bonus-action-2",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion"
+            }
+          ],
+          "target": "Ein Gegner",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Trefferwurf mit beiden Waffenwürfeln; feste Boni einmal.",
+          "attackBonus": 1,
+          "active": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "minimumLevel": 3,
+          "cultureTraining": {
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresTwoHands": false,
+            "requiresDualWield": true,
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "branchId": "skjaldr-twinAxes",
+            "schemaVersion": 1,
+            "requiresMounted": false
+          },
+          "activationType": "action",
+          "compatibleWeaponIds": [],
+          "status": "confirmed",
+          "damageFormula": "",
+          "damageBonus": 0,
+          "targetDefenseModifier": 0,
+          "secondarySave": {
+            "enabled": false
+          },
+          "effect": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "trainingForm": "Stand des Schildes",
+          "live": true,
+          "combatStyleFormId": "huskarl-schildgrund",
+          "range": "Waffenreichweite",
+          "effects": [
+            {
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "on": "hit",
+              "formula": "",
+              "type": "damage",
+              "damageType": "",
+              "target": "target",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "id": "combat-style-huskarl-skjaldr-wahl-5-weapon-damage"
+            }
+          ],
+          "id": "combat-style-huskarl-skjaldr-wahl-5",
+          "weaponLabel": "Zwei Äxte",
+          "description": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "maximumTargets": 1,
+          "name": "Doppelter Kantenwechsel",
+          "weaponTypes": [
+            "axe"
+          ],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "damageType": "",
+          "criticalThreshold": 20,
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "damageModel": {
+            "bonusWeaponDieCap": 12,
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 0,
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "mode": "weapon-dice",
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "bonusFormula": ""
+          },
+          "category": "technique",
+          "mechanics": {}
+        },
+        {
+          "live": true,
+          "status": "confirmed",
+          "minimumLevel": 3,
+          "range": "Waffenreichweite",
+          "damageBonus": 0,
+          "effect": "keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "name": "Schritt des Schildbeißers",
+          "criticalThreshold": 20,
+          "category": "technique",
+          "triggerRules": [],
+          "trainingForm": "Stand des Schildes",
+          "active": true,
+          "target": "Selbst",
+          "damageType": "",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "attackBonus": 0,
+          "activationType": "bonus-action",
+          "id": "combat-style-huskarl-skjaldr-wahl-6",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "mechanics": {},
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-6-mobility",
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+              "on": "always",
+              "target": "self",
+              "type": "buff",
+              "condition": {
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "triggerRules": [
+                  {
+                    "recipient": "actor",
+                    "resultEffects": [
+                      {
+                        "on": "always",
+                        "target": "target",
+                        "type": "remove-condition",
+                        "id": "martial-position-guard-consume",
+                        "conditionId": "martial-position-guard"
+                      }
+                    ],
+                    "sourceRelation": "enemy",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "condition": "always",
+                    "phase": "pre-roll",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "name": "Stellungseffekt",
+                    "weaponAttackOnly": true,
+                    "id": "martial-position-guard-once"
+                  }
+                ],
+                "stanceGroup": "martial-position-guard",
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "mechanics": {
+                  "movement": 0
+                },
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "id": "martial-position-guard",
+                "active": true,
+                "name": "Sicherer Schritt",
+                "tags": "Huskarl-Waffenlehre"
+              }
+            }
+          ],
+          "cultureTraining": {
+            "requiresMounted": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "slotBands": [
+              "foundation"
+            ],
+            "branchId": "skjaldr-flexible",
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresShield": false,
+            "schemaVersion": 1
+          },
+          "compatibleWeaponIds": [],
+          "auraBypass": {
+            "cost": 1,
+            "resourceId": "aura-focus",
+            "allowed": true
+          },
+          "targetDefenseModifier": 0,
+          "damageModel": {
+            "scalingSteps": [],
+            "mode": "fixed"
+          },
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "id": "combat-style-huskarl-skjaldr-wahl-6-bonus-action-1",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "combatStyleId": "huskarl-waffenlehre",
+          "secondarySave": {
+            "enabled": false
+          },
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "description": "keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "maximumTargets": 1,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "damageFormula": ""
+        },
+        {
+          "damageBonus": 0,
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "category": "technique",
+          "id": "combat-style-huskarl-skjaldr-wahl-7",
+          "criticalThreshold": 20,
+          "effects": [
+            {
+              "inheritWeaponDamageType": true,
+              "type": "damage",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "magical": false,
+              "id": "combat-style-huskarl-skjaldr-wahl-7-weapon-damage",
+              "on": "hit",
+              "formula": "",
+              "damageType": "",
+              "target": "target"
+            }
+          ],
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "active": true,
+          "activationType": "action",
+          "effect": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "status": "confirmed",
+          "cultureTraining": {
+            "requiresMounted": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "schemaVersion": 1,
+            "requiresShield": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresDualWield": false,
+            "branchId": "skjaldr-flexible",
+            "requiresTwoHands": false,
+            "allowedClassIds": [
+              "skjaldr"
+            ]
+          },
+          "attackBonus": 0,
+          "combatStyleFormId": "huskarl-schildgrund",
+          "mechanics": {},
+          "costs": [
+            {
+              "amount": 1,
+              "name": "Aktion",
+              "scope": "comment",
+              "id": "combat-style-huskarl-skjaldr-wahl-7-action-1",
+              "resourceId": "action"
+            },
+            {
+              "scope": "comment",
+              "id": "combat-style-huskarl-skjaldr-wahl-7-reaction-2",
+              "name": "Reaktion",
+              "resourceId": "reaction",
+              "amount": 1
+            }
+          ],
+          "live": true,
+          "trainingForm": "Stand des Schildes",
+          "secondarySave": {
+            "enabled": true,
+            "dcAttributeKey": "strength",
+            "dcBase": 8,
+            "addProficiency": true,
+            "attributeKey": "strength",
+            "failureCondition": {
+              "triggerRules": [
+                {
+                  "recipient": "actor",
+                  "effects": {
+                    "attackModifier": -1
+                  },
+                  "phase": "pre-roll",
+                  "sourceRelation": "self",
+                  "name": "Stellungseffekt",
+                  "weaponAttackOnly": true,
+                  "activation": "passive",
+                  "frequency": "comment",
+                  "id": "martial-position-penalty-once",
+                  "resultEffects": [
+                    {
+                      "target": "self",
+                      "on": "always",
+                      "conditionId": "martial-position-penalty",
+                      "id": "martial-position-penalty-consume",
+                      "type": "remove-condition"
+                    }
+                  ],
+                  "actionKinds": [
+                    "weapon",
+                    "technique"
+                  ],
+                  "condition": "always"
+                }
+              ],
+              "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+              "mechanics": {
+                "movement": 0
+              },
+              "durationModel": {
+                "kind": "actor-comments",
+                "remainingActorComments": 1
+              },
+              "stanceGroup": "martial-position-penalty",
+              "name": "Gehemmter Schritt",
+              "tags": "Huskarl-Waffenlehre",
+              "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+              "id": "martial-position-penalty",
+              "active": true
+            }
+          },
+          "damageFormula": "",
+          "name": "Axtbart zur Fessel",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "targetDefenseModifier": 0,
+          "damageModel": {
+            "mode": "weapon-dice",
+            "bonusWeaponDice": 0,
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 6
+              }
+            ],
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "bonusFormula": ""
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "damageType": "",
+          "minimumLevel": 4,
+          "maximumTargets": 1,
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "compatibleWeaponIds": [],
+          "triggerRules": [],
+          "combatStyleId": "huskarl-waffenlehre",
+          "requirements": "Schwert, Axt oder Streitkolben"
+        },
+        {
+          "criticalThreshold": 20,
+          "secondarySave": {
+            "enabled": false
+          },
+          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
+          "costs": [
+            {
+              "scope": "comment",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "id": "combat-style-huskarl-skjaldr-wahl-8-bonus-action-1"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-8-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "triggerRules": [],
+          "damageModel": {
+            "scalingSteps": [],
+            "mode": "fixed"
+          },
+          "damageFormula": "",
+          "cultureTraining": {
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "branchId": "skjaldr-greatAxe",
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresMounted": false,
+            "requiresTwoHands": true,
+            "schemaVersion": 1,
+            "requiresShield": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresDualWield": false
+          },
+          "minimumLevel": 4,
+          "weaponTypes": [
+            "axe"
+          ],
+          "weaponLabel": "Lange Streitaxt",
+          "description": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.",
+          "damageType": "",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "name": "Hut am langen Schaft",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "mechanics": {},
+          "maximumTargets": 1,
+          "trainingForm": "Stand des Schildes",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "live": true,
+          "effects": [
+            {
+              "target": "self",
+              "id": "combat-style-huskarl-skjaldr-wahl-8-condition",
+              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+              "condition": {
+                "durationModel": {
+                  "remainingActorComments": 1,
+                  "kind": "actor-comments"
+                },
+                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "id": "huskarl-deckung",
+                "duration": "1 eigener Beitrag",
+                "armorStance": true,
+                "mechanics": {
+                  "armorClass": 2
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "name": "Feste Deckung"
+              },
+              "on": "always",
+              "type": "buff"
+            }
+          ],
+          "combatStyleId": "huskarl-waffenlehre",
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "target": "Selbst",
+          "targetDefenseModifier": 0,
+          "active": true,
+          "damageBonus": 0,
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "range": "Waffenreichweite",
+          "compatibleWeaponIds": [],
+          "id": "combat-style-huskarl-skjaldr-wahl-8",
+          "status": "confirmed",
+          "category": "technique",
+          "attackBonus": 0,
+          "activationType": "bonus-action",
+          "effect": "Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung."
+        },
+        {
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "branchId": "skjaldr-twinAxes",
+            "requiresTwoHands": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "requiresDualWield": true
+          },
+          "minimumLevel": 5,
+          "maximumTargets": 1,
+          "damageFormula": "",
+          "damageModel": {
+            "bonusFormula": "",
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "weaponDiceMultiplier": 1,
+            "weaponBonuses": [],
+            "mode": "weapon-dice",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "secondarySave": {
+            "dcBase": 8,
+            "addProficiency": true,
+            "failureCondition": {
+              "duration": "1 eigener Beitrag",
+              "name": "Gebundene Waffenführung",
+              "tags": "Huskarl-Waffenlehre",
+              "mechanics": {
+                "attack": -1
+              },
+              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
+              "id": "combat-style-huskarl-skjaldr-wahl-9-failed-save"
+            },
+            "dcAttributeKey": "strength",
+            "enabled": true,
+            "attributeKey": "strength"
+          },
+          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Trefferwurf mit beiden Waffenwürfeln; feste Boni einmal.",
+          "triggerRules": [],
+          "costs": [
+            {
+              "scope": "comment",
+              "resourceId": "action",
+              "id": "combat-style-huskarl-skjaldr-wahl-9-action-1",
+              "amount": 1,
+              "name": "Aktion"
+            },
+            {
+              "name": "Reaktion",
+              "resourceId": "reaction",
+              "scope": "comment",
+              "id": "combat-style-huskarl-skjaldr-wahl-9-reaction-2",
+              "amount": 1
+            }
+          ],
+          "damageType": "",
+          "trainingForm": "Stand des Schildes",
+          "combatStyleId": "huskarl-waffenlehre",
+          "id": "combat-style-huskarl-skjaldr-wahl-9",
+          "targetDefenseModifier": 0,
+          "weaponLabel": "Zwei Äxte",
+          "description": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
+          "weaponTypes": [
+            "axe"
+          ],
+          "category": "technique",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "range": "Waffenreichweite",
+          "effect": "Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.",
+          "compatibleWeaponIds": [],
+          "activationType": "action",
+          "damageBonus": 0,
+          "mechanics": {},
+          "combatStyleFormId": "huskarl-schildgrund",
+          "status": "confirmed",
+          "effects": [
+            {
+              "inheritWeaponDamageType": true,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "magical": false,
+              "on": "hit",
+              "id": "combat-style-huskarl-skjaldr-wahl-9-weapon-damage",
+              "formula": "",
+              "type": "damage",
+              "damageType": "",
+              "target": "target"
+            }
+          ],
+          "name": "Äxte am Waffenarm",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "attackBonus": 0,
+          "active": true,
+          "criticalThreshold": 20,
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "allowed": true,
+            "cost": 1
+          },
+          "target": "Ein Gegner",
+          "live": true
+        },
+        {
+          "compatibleWeaponIds": [],
+          "damageBonus": 0,
+          "range": "Waffenreichweite",
+          "live": true,
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "name": "Tiefer Spaltbogen",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "targetDefenseModifier": 0,
+          "category": "technique",
+          "attackBonus": 0,
+          "maximumTargets": 1,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "criticalThreshold": 20,
+          "damageType": "",
+          "status": "confirmed",
+          "combatStyleId": "huskarl-waffenlehre",
+          "minimumLevel": 5,
+          "id": "combat-style-huskarl-skjaldr-wahl-10",
+          "effect": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
+          "damageModel": {
+            "bonusFormula": "",
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ],
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDieCap": 12,
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 12
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "mode": "weapon-dice"
+          },
+          "costs": [
+            {
+              "resourceId": "action",
+              "id": "combat-style-huskarl-skjaldr-wahl-10-action-1",
+              "scope": "comment",
+              "name": "Aktion",
+              "amount": 1
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-10-special-action-2",
+              "name": "Besondere Aktion",
+              "resourceId": "special-action",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
+          "cultureTraining": {
+            "requiresDualWield": false,
+            "requiresTwoHands": true,
+            "schemaVersion": 1,
+            "requiresMounted": false,
+            "requiresShield": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "branchId": "skjaldr-greatAxe"
+          },
+          "triggerRules": [],
+          "weaponLabel": "Lange Streitaxt",
+          "description": "Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.",
+          "active": true,
+          "trainingForm": "Stand des Schildes",
+          "weaponTypes": [
+            "axe"
+          ],
+          "damageFormula": "",
+          "effects": [
+            {
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "formula": "",
+              "id": "combat-style-huskarl-skjaldr-wahl-10-weapon-damage",
+              "damageType": "",
+              "inheritWeaponDamageType": true,
+              "on": "hit",
+              "target": "target",
+              "type": "damage",
+              "magical": false
+            }
+          ],
+          "mechanics": {},
+          "combatStyleFormId": "huskarl-schildgrund",
+          "target": "Ein Gegner",
+          "secondarySave": {
+            "enabled": false
+          },
+          "activationType": "action"
+        },
+        {
+          "live": true,
+          "name": "Schild vor dem Zorn",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "damageBonus": 0,
+          "combatStyleId": "huskarl-waffenlehre",
+          "targetDefenseModifier": 0,
+          "effects": [
+            {
+              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+              "on": "always",
+              "target": "self",
+              "condition": {
+                "durationModel": {
+                  "remainingActorComments": 1,
+                  "kind": "actor-comments"
+                },
+                "id": "huskarl-deckung",
+                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "duration": "1 eigener Beitrag",
+                "armorStance": true,
+                "tags": "Huskarl-Waffenlehre",
+                "name": "Feste Deckung",
+                "mechanics": {
+                  "armorClass": 2
+                }
+              },
+              "type": "buff",
+              "id": "combat-style-huskarl-skjaldr-wahl-11-condition"
+            },
+            {
+              "type": "temporary-hit-points",
+              "notes": "Temporäre TP ersetzen nur einen niedrigeren vorhandenen Vorrat; sie werden nicht addiert.",
+              "on": "always",
+              "target": "self",
+              "formula": "1d4",
+              "id": "combat-style-huskarl-skjaldr-wahl-11-resolve"
+            }
+          ],
+          "costs": [
+            {
+              "amount": 1,
+              "scope": "comment",
+              "resourceId": "reaction",
+              "id": "combat-style-huskarl-skjaldr-wahl-11-reaction-1",
+              "name": "Reaktion"
+            },
+            {
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "scope": "persistent",
+              "amount": 1,
+              "id": "combat-style-huskarl-skjaldr-wahl-11-special-action-2"
+            }
+          ],
+          "maximumTargets": 1,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "secondarySave": {
+            "enabled": false
+          },
+          "attackBonus": 0,
+          "damageFormula": "",
+          "cultureTraining": {
+            "requiresTwoHands": false,
+            "requiresMounted": false,
+            "requiresDualWield": false,
+            "branchId": "skjaldr-shield",
+            "schemaVersion": 1,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "slotBands": [
+              "foundation"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresShield": true
+          },
+          "status": "confirmed",
+          "criticalThreshold": 20,
+          "damageType": "",
+          "category": "technique",
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "id": "combat-style-huskarl-skjaldr-wahl-11",
+          "effect": "+2 RK für einen eigenen Beitrag und 1W4 temporäre TP. Temporäre TP werden nicht addiert.",
+          "trainingForm": "Stand des Schildes",
+          "mechanics": {},
+          "activationType": "reaction",
+          "target": "Selbst",
+          "triggerRules": [],
+          "compatibleWeaponIds": [],
+          "active": true,
+          "combatStyleFormId": "huskarl-schildgrund",
+          "requirements": "Einhandwaffe und Schild Schild aktiv geführt.",
+          "minimumLevel": 6,
+          "weaponLabel": "Einhandwaffe und Schild",
+          "description": "+2 RK für einen eigenen Beitrag und 1W4 temporäre TP. Temporäre TP werden nicht addiert.",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace",
+            "spear"
+          ],
+          "range": "Waffenreichweite"
+        },
+        {
+          "maximumTargets": 1,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "weaponLabel": "Zwei Äxte",
+          "description": "Ein Einzelangriff. keine freie Bewegung. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "secondarySave": {
+            "enabled": false
+          },
+          "weaponTypes": [
+            "axe"
+          ],
+          "damageFormula": "",
+          "damageType": "",
+          "trainingForm": "Stand des Schildes",
+          "targetDefenseModifier": 0,
+          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Trefferwurf mit beiden Waffenwürfeln; feste Boni einmal.",
+          "id": "combat-style-huskarl-skjaldr-wahl-12",
+          "triggerRules": [],
+          "effects": [
+            {
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "formula": "",
+              "type": "damage",
+              "damageType": "",
+              "id": "combat-style-huskarl-skjaldr-wahl-12-weapon-damage",
+              "inheritWeaponDamageType": true,
+              "target": "target",
+              "magical": false
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-12-mobility",
+              "condition": {
+                "active": true,
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "triggerRules": [
+                  {
+                    "name": "Stellungseffekt",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "condition": "always",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "phase": "pre-roll",
+                    "id": "martial-position-guard-once",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "sourceRelation": "enemy",
+                    "resultEffects": [
+                      {
+                        "on": "always",
+                        "conditionId": "martial-position-guard",
+                        "target": "target",
+                        "id": "martial-position-guard-consume",
+                        "type": "remove-condition"
+                      }
+                    ],
+                    "weaponAttackOnly": true,
+                    "recipient": "actor"
+                  }
+                ],
+                "name": "Sicherer Schritt",
+                "tags": "Huskarl-Waffenlehre",
+                "stanceGroup": "martial-position-guard",
+                "mechanics": {
+                  "movement": 0
+                },
+                "id": "martial-position-guard",
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                }
+              },
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+              "type": "buff",
+              "target": "self",
+              "on": "hit"
+            }
+          ],
+          "costs": [
+            {
+              "resourceId": "action",
+              "name": "Aktion",
+              "scope": "comment",
+              "id": "combat-style-huskarl-skjaldr-wahl-12-action-1",
+              "amount": 1
+            },
+            {
+              "scope": "comment",
+              "id": "combat-style-huskarl-skjaldr-wahl-12-bonus-action-2",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "resourceId": "bonus-action"
+            }
+          ],
+          "combatStyleId": "huskarl-waffenlehre",
+          "minimumLevel": 6,
+          "damageModel": {
+            "bonusWeaponDieCap": 12,
+            "weaponBonuses": [
+              {
+                "dieCap": 4,
+                "diceCount": 1
+              }
+            ],
+            "weaponDiceMultiplier": 1,
+            "mode": "weapon-dice",
+            "bonusFormula": "",
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ],
+            "bonusWeaponDice": 0
+          },
+          "activationType": "action",
+          "status": "confirmed",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "cultureTraining": {
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresDualWield": true,
+            "requiresMounted": false,
+            "requiresTwoHands": false,
+            "branchId": "skjaldr-twinAxes",
+            "schemaVersion": 1,
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresShield": false,
+            "cultureIds": [
+              "aldrimar"
+            ]
+          },
+          "effect": "Ein Einzelangriff. keine freie Bewegung. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "attackBonus": 0,
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "target": "Ein Gegner",
+          "damageBonus": 0,
+          "compatibleWeaponIds": [],
+          "category": "technique",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Stand des Schildes",
+          "active": true,
+          "name": "Gerichteter Doppelhieb",
+          "range": "Waffenreichweite",
+          "mechanics": {},
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "criticalThreshold": 20,
+          "live": true
+        },
+        {
+          "description": "Ein gemeinsamer Angriff; bei Treffer +1 RK für einen eigenen Beitrag.",
+          "weaponLabel": "Zwei Äxte",
+          "duration": "",
+          "weaponTypes": [
+            "axe"
+          ],
+          "status": "confirmed",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "allowed": true,
+            "cost": 1
+          },
+          "cenyrTraining": {
+            "requiresMounted": false,
+            "selectedAtLevel": null,
+            "sourceStatus": "",
+            "assignedSlotId": "",
+            "designNotes": "",
+            "uchelwyrCompatible": false,
+            "slotBands": [],
+            "branchId": "",
+            "weaponRuleSetId": "",
+            "allowedClassIds": [],
+            "classWeaponProfiles": {}
+          },
+          "aiInstructions": "",
+          "minimumLevel": 7,
+          "range": "Waffenreichweite",
+          "requirements": "Zwei Äxte Zwei passende Waffen gleichzeitig in linker und rechter Hand. Ein gemeinsamer Trefferwurf mit beiden Waffenwürfeln; feste Boni einmal.",
+          "triggerRules": [],
+          "effect": "Ein gemeinsamer Angriff; bei Treffer +1 RK für einen eigenen Beitrag.",
+          "mechanics": {},
+          "target": "Ein Gegner",
+          "trainingForm": "Schritt des Huskarls",
+          "active": true,
+          "activationType": "action",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "damageModel": {
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "mode": "weapon-dice",
+            "weaponBonuses": [],
+            "weaponDiceMultiplier": 1,
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "bonusFormula": ""
+          },
+          "rollMode": "normal",
+          "combatStyleFormId": "huskarl-fester-schritt",
+          "name": "Gekreuzte Axtwende",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Schritt des Huskarls",
+          "costs": [
+            {
+              "resourceId": "action",
+              "scope": "comment",
+              "amount": 1,
+              "name": "Aktion",
+              "id": "combat-style-huskarl-skjaldr-grund-7-action-1"
+            },
+            {
+              "amount": 1,
+              "id": "combat-style-huskarl-skjaldr-grund-7-reaction-2",
+              "scope": "comment",
+              "name": "Reaktion",
+              "resourceId": "reaction"
+            }
+          ],
+          "compatibleWeaponIds": [],
+          "category": "technique",
+          "live": true,
+          "attackBonus": 0,
+          "id": "combat-style-huskarl-skjaldr-grund-7",
+          "combatStyleId": "huskarl-waffenlehre",
+          "cultureTraining": {
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresDualWield": true,
+            "schemaVersion": 1,
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "slotBands": [
+              "advanced"
+            ],
+            "requiresMounted": false,
+            "branchId": "skjaldr-twinAxes"
+          },
+          "damageType": "",
+          "targetDefenseModifier": 0,
+          "secondarySave": {
+            "enabled": false
+          },
+          "damageBonus": 0,
+          "criticalThreshold": 20,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "maximumTargets": 1,
+          "damageFormula": "",
+          "effects": [
+            {
+              "damageType": "",
+              "target": "target",
+              "magical": false,
+              "inheritWeaponDamageType": true,
+              "on": "hit",
+              "type": "damage",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "id": "combat-style-huskarl-skjaldr-grund-7-weapon-damage",
+              "formula": ""
+            },
+            {
+              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+              "target": "self",
+              "type": "buff",
+              "id": "combat-style-huskarl-skjaldr-grund-7-condition",
+              "condition": {
+                "name": "Feste Deckung",
+                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "durationModel": {
+                  "remainingActorComments": 1,
+                  "kind": "actor-comments"
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "mechanics": {
+                  "armorClass": 1
+                },
+                "armorStance": true,
+                "id": "huskarl-deckung",
+                "duration": "1 eigener Beitrag"
+              },
+              "on": "hit"
+            }
+          ]
+        },
+        {
+          "minimumLevel": 7,
+          "combatStyleFormId": "huskarl-fester-schritt",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "triggerRules": [],
+          "maximumTargets": 1,
+          "damageBonus": 0,
+          "combatStyleId": "huskarl-waffenlehre",
+          "costs": [
+            {
+              "resourceId": "action",
+              "id": "combat-style-huskarl-skjaldr-wahl-13-action-1",
+              "scope": "comment",
+              "amount": 1,
+              "name": "Aktion"
+            },
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-13-bonus-action-2",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment",
+              "resourceId": "bonus-action"
+            }
+          ],
+          "requirements": "Lange Streitaxt Beide Hände für eine Waffe frei; kein zugleich geführter Schild.",
+          "cultureTraining": {
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "requiresShield": false,
+            "schemaVersion": 1,
+            "branchId": "skjaldr-greatAxe",
+            "requiresTwoHands": true,
+            "requiresDualWield": false,
+            "slotBands": [
+              "advanced"
+            ],
+            "requiresMounted": false
+          },
+          "category": "technique",
+          "secondarySave": {
+            "enabled": false
+          },
+          "attackBonus": 1,
+          "effects": [
+            {
+              "magical": false,
+              "target": "target",
+              "damageType": "",
+              "id": "combat-style-huskarl-skjaldr-wahl-13-weapon-damage",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "inheritWeaponDamageType": true,
+              "on": "hit",
+              "formula": "",
+              "type": "damage"
+            }
+          ],
+          "trainingForm": "Schritt des Huskarls",
+          "damageType": "",
+          "compatibleWeaponIds": [],
+          "damageFormula": "",
+          "criticalThreshold": 20,
+          "range": "Waffenreichweite",
+          "effect": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ],
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "bonusFormula": "",
+            "bonusWeaponDieCap": 12,
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 0
+          },
+          "activationType": "action",
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "status": "confirmed",
+          "mechanics": {},
+          "name": "Schneidender Richtungswechsel",
+          "id": "combat-style-huskarl-skjaldr-wahl-13",
+          "targetDefenseModifier": 0,
+          "tags": "Huskarl-Waffenlehre · skjaldr · Schritt des Huskarls",
+          "active": true,
+          "weaponLabel": "Lange Streitaxt",
+          "description": "Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "weaponTypes": [
+            "axe"
+          ],
+          "target": "Ein Gegner",
+          "live": true
+        },
+        {
+          "damageType": "",
+          "combatStyleId": "huskarl-waffenlehre",
+          "category": "technique",
+          "criticalThreshold": 20,
+          "attackBonus": 0,
+          "targetDefenseModifier": 0,
+          "effects": [
+            {
+              "type": "temporary-hit-points",
+              "id": "combat-style-huskarl-skjaldr-wahl-14-resolve",
+              "formula": "1d6",
+              "notes": "Temporäre TP ersetzen nur einen niedrigeren vorhandenen Vorrat; sie werden nicht addiert.",
+              "on": "always",
+              "target": "self"
+            }
+          ],
+          "trainingForm": "Schritt des Huskarls",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skjaldr-wahl-14-bonus-action-1",
+              "resourceId": "bonus-action",
+              "amount": 1,
+              "name": "Bonusaktion",
+              "scope": "comment"
+            },
+            {
+              "scope": "persistent",
+              "resourceId": "special-action",
+              "amount": 1,
+              "id": "combat-style-huskarl-skjaldr-wahl-14-special-action-2",
+              "name": "Besondere Aktion"
+            }
+          ],
+          "maximumTargets": 1,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "requirements": "Schwert, Axt oder Streitkolben",
+          "combatStyleFormId": "huskarl-fester-schritt",
+          "damageFormula": "",
+          "triggerRules": [],
+          "damageBonus": 0,
+          "mechanics": {},
+          "secondarySave": {
+            "enabled": false
+          },
+          "minimumLevel": 7,
+          "active": true,
+          "range": "Waffenreichweite",
+          "target": "Selbst",
+          "cultureTraining": {
+            "branchId": "skjaldr-flexible",
+            "allowedClassIds": [
+              "skjaldr"
+            ],
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "schemaVersion": 1,
+            "slotBands": [
+              "advanced"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "requiresMounted": false
+          },
+          "weaponLabel": "Schwert, Axt oder Streitkolben",
+          "description": "1W6 temporäre TP; ersetzt nur einen niedrigeren Vorrat. Keine Heilung verlorener TP.",
+          "activationType": "bonus-action",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "mace"
+          ],
+          "live": true,
+          "compatibleWeaponIds": [],
+          "status": "confirmed",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "damageModel": {
+            "scalingSteps": [],
+            "mode": "fixed"
+          },
+          "effect": "1W6 temporäre TP; ersetzt nur einen niedrigeren Vorrat. Keine Heilung verlorener TP.",
+          "name": "Atem unter Spannung",
+          "tags": "Huskarl-Waffenlehre · skjaldr · Schritt des Huskarls",
+          "id": "combat-style-huskarl-skjaldr-wahl-14"
+        }
+      ],
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "proficient": true,
+          "bonus": 0,
+          "expertise": false
+        },
+        {
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0,
+          "attributeKey": "dexterity"
+        },
+        {
+          "attributeKey": "constitution",
+          "bonus": 0,
+          "expertise": false,
+          "proficient": true
+        },
+        {
+          "expertise": false,
+          "attributeKey": "intelligence",
+          "proficient": false,
+          "bonus": 0
+        },
+        {
+          "expertise": false,
+          "bonus": 0,
+          "proficient": false,
+          "attributeKey": "wisdom"
+        },
+        {
+          "bonus": 0,
+          "attributeKey": "charisma",
+          "expertise": false,
+          "proficient": false
+        }
+      ],
+      "revision": 1791888401542,
+      "magic": {
+        "manaResourceId": "mana-focus",
+        "slotResourceIds": [
+          "spell-slot-1",
+          "spell-slot-2",
+          "spell-slot-3",
+          "spell-slot-4",
+          "spell-slot-5",
+          "spell-slot-6",
+          "spell-slot-7",
+          "spell-slot-8",
+          "spell-slot-9",
+          "spell-slot-10"
+        ],
+        "spells": [],
+        "spellAttackOverride": null,
+        "spellSaveDcOverride": null,
+        "focusResourceId": "focus",
+        "notes": "",
+        "casterTier": "full",
+        "enabled": false,
+        "castingAttribute": "intelligence",
+        "bypassResourceId": "",
+        "focusEnabled": false
+      },
+      "weapons": [
+        {
+          "training": "martial",
+          "aiInstructions": "",
+          "damageBonus": 1,
+          "damageType": "Hieb",
+          "range": "Nahkampf · 1,5 m",
+          "triggerRules": [],
+          "requirements": "",
+          "attackBonus": 1,
+          "attackAttribute": "strength",
+          "proficient": true,
+          "inventoryItemId": "equipment-weapon-asgeir-axt-rechts",
+          "activationType": "action",
+          "costs": [
+            {
+              "amount": 1,
+              "name": "Aktion",
+              "resourceId": "action",
+              "id": "activation-action",
+              "scope": "comment"
+            }
+          ],
+          "id": "asgeir-axt-rechts",
+          "properties": "Leicht · Einhändig",
+          "equipped": true,
+          "effects": [],
+          "name": "Wolfshorn-Axt · rechte Hand",
+          "weaponType": "axe",
+          "damageFormula": "1d6",
+          "versatileDamageFormula": "",
+          "notes": "Erprobte Wolfshorn-Schmiedearbeit: +1 Angriff und +1 Schaden mit dieser Axt.",
+          "image": "https://i.imgur.com/m8sI75k.png",
+          "weaponProfileId": "",
+          "ammunition": null,
+          "auraBypass": {
+            "resourceId": "",
+            "allowed": true,
+            "cost": 1
+          }
+        },
+        {
+          "notes": "Erprobte Wolfshorn-Schmiedearbeit: +1 Angriff und +1 Schaden mit dieser Axt.",
+          "image": "https://i.imgur.com/m8sI75k.png",
+          "attackAttribute": "strength",
+          "weaponType": "axe",
+          "inventoryItemId": "equipment-weapon-asgeir-axt-links",
+          "properties": "Leicht · Einhändig",
+          "activationType": "action",
+          "aiInstructions": "",
+          "ammunition": null,
+          "auraBypass": {
+            "resourceId": "",
+            "cost": 1,
+            "allowed": true
+          },
+          "name": "Wolfshorn-Axt · linke Hand",
+          "damageFormula": "1d6",
+          "training": "martial",
+          "costs": [
+            {
+              "resourceId": "action",
+              "name": "Aktion",
+              "id": "activation-action",
+              "scope": "comment",
+              "amount": 1
+            }
+          ],
+          "damageType": "Hieb",
+          "requirements": "",
+          "effects": [],
+          "triggerRules": [],
+          "weaponProfileId": "",
+          "attackBonus": 1,
+          "range": "Nahkampf · 1,5 m",
+          "damageBonus": 1,
+          "proficient": true,
+          "versatileDamageFormula": "",
+          "id": "asgeir-axt-links",
+          "equipped": false
+        },
+        {
+          "name": "Lange Wolfshorn-Streitaxt",
+          "proficient": true,
+          "damageFormula": "1d12",
+          "attackAttribute": "strength",
+          "damageBonus": 1,
+          "triggerRules": [
+            {
+              "frequency": "always",
+              "activation": "passive",
+              "condition": "critical-hit",
+              "id": "wolfshorn-heavy-critical",
+              "actionKinds": [
+                "weapon",
+                "technique"
+              ],
+              "effects": {
+                "damageModifier": 2
+              },
+              "sourceRelation": "self",
+              "recipient": "actor",
+              "phase": "pre-damage",
+              "description": "Bei kritischem Treffer: +2 zusätzlicher Schaden, auch bei passenden Waffentechniken. Dieser Zusatz wird nicht verdoppelt.",
+              "resultEffects": [],
+              "name": "Schwerer Wolfshieb"
+            }
+          ],
+          "inventoryItemId": "equipment-weapon-asgeir-grossaxt",
+          "requirements": "",
+          "damageType": "Hieb",
+          "attackBonus": 0,
+          "versatileDamageFormula": "",
+          "range": "Nahkampf · 1,5 m",
+          "training": "martial",
+          "aiInstructions": "",
+          "effects": [],
+          "id": "asgeir-grossaxt",
+          "ammunition": null,
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "image": "https://i.imgur.com/m8sI75k.png",
+          "notes": "+1 Waffenschaden. Bei kritischem Treffer +2 weiterer Schaden, nicht nochmals verdoppelt.",
+          "weaponProfileId": "",
+          "costs": [
+            {
+              "name": "Aktion",
+              "resourceId": "action",
+              "scope": "comment",
+              "amount": 1,
+              "id": "activation-action"
+            }
+          ],
+          "weaponType": "axe",
+          "equipped": false,
+          "properties": "Schwer · Zweihändig",
+          "activationType": "action"
+        },
+        {
+          "inventoryItemId": "",
+          "damageFormula": "1d4",
+          "range": "Nahkampf",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "attackAttribute": "strength",
+          "damageBonus": 0,
+          "equipped": false,
+          "weaponType": "unarmed",
+          "attackBonus": 0,
+          "ammunition": null,
+          "auraBypass": {
+            "resourceId": "",
+            "cost": 1,
+            "allowed": true
+          },
+          "weaponProfileId": "",
+          "versatileDamageFormula": "",
+          "activationType": "action",
+          "training": "simple",
+          "costs": [
+            {
+              "amount": 1,
+              "scope": "comment",
+              "resourceId": "action",
+              "name": "Aktion",
+              "id": "activation-action"
+            }
+          ],
+          "damageType": "Wucht",
+          "triggerRules": [],
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "image": "",
+          "requirements": "",
+          "id": "default-unarmed-melee",
+          "aiInstructions": "",
+          "effects": [],
+          "proficient": true,
+          "name": "Nahkampf"
+        }
+      ],
+      "proficiencies": {
+        "languages": [],
+        "weapons": [
+          "simple",
+          "martial",
+          "axe",
+          "sword",
+          "mace"
+        ],
+        "tools": [
+          "Seemannschaft und Gefolgschaftsbrauchtum"
+        ],
+        "armor": [
+          "light",
+          "medium",
+          "heavy"
+        ],
+        "notes": ""
+      },
+      "armorItems": [
+        {
+          "notes": "Angelegt: −2 Hieb-/Wuchtschaden je Treffer. Kein zusätzlicher RK-Bonus.",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/asgeir-schuppenpanzer-v3.png",
+          "armorClassBonus": 0,
+          "name": "Wolfshorn-Schuppenpanzer",
+          "baseArmorClass": 14,
+          "id": "asgeir-schuppen",
+          "kind": "armor",
+          "properties": "Mittlere Rüstung",
+          "triggerRules": [],
+          "damageProtection": {
+            "damageTypes": [
+              "hieb",
+              "wucht"
+            ],
+            "name": "Wolfshorn-Schuppen",
+            "amount": 2
+          },
+          "armorCategory": "medium",
+          "dexterityMode": "capped",
+          "dexterityUnlockLevel": 0,
+          "inventoryItemId": "equipment-armor-asgeir-schuppen",
+          "dexterityCap": 2,
+          "equipped": true
+        },
+        {
+          "notes": "Abfangen: Der erste körperliche Treffer pro gegnerischem Beitrag verursacht 2 Schaden weniger. Nur solange geführt.",
+          "image": "https://i.imgur.com/XpGJAGz.png",
+          "id": "asgeir-rundschild",
+          "properties": "Schild · eine Hand",
+          "equipped": false,
+          "damageProtection": null,
+          "dexterityUnlockLevel": 0,
+          "dexterityMode": "full",
+          "inventoryItemId": "equipment-armor-asgeir-rundschild",
+          "name": "Wolfshorn-Rundschild",
+          "baseArmorClass": null,
+          "armorClassBonus": 2,
+          "triggerRules": [
+            {
+              "name": "Abfangen",
+              "frequency": "comment",
+              "id": "wolfshorn-shield-catch",
+              "condition": "would-hit",
+              "damageTypes": [
+                "hieb",
+                "stich",
+                "wucht",
+                "physisch"
+              ],
+              "effects": {
+                "damageReduction": 2
+              },
+              "recipient": "target",
+              "description": "Der erste körperliche Treffer pro gegnerischem Beitrag verursacht 2 Schaden weniger. Nur solange der Schild geführt wird.",
+              "activation": "passive",
+              "phase": "pre-damage",
+              "sourceRelation": "self"
+            }
+          ],
+          "kind": "shield",
+          "dexterityCap": 2
+        }
+      ],
+      "combat": {
+        "offHandWeaponId": "asgeir-axt-links",
+        "passivePerceptionBonus": 0,
+        "attackBonus": 0,
+        "initiativeBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "movement": 9,
+        "mounted": false,
+        "damageBonus": 0
+      },
+      "templateSelections": {
+        "schemaVersion": 1,
+        "backgroundId": "huskarl",
+        "appliedAt": "2026-09-22T12:00:00.000Z",
+        "ancestryId": "aldrimarer",
+        "classId": "skjaldr",
+        "attributeMethod": "standard-array"
+      },
+      "quirks": [
+        {
+          "duration": "",
+          "trigger": "",
+          "id": "starter-ancestry-aldrimarer-trait-1",
+          "aiInstructions": "",
+          "name": "Aldrimarische Widerstandskraft",
+          "limitations": "",
+          "active": true,
+          "tags": "Volk · Aldrimarer",
+          "target": "self",
+          "priority": 0,
+          "mechanics": {
+            "attackRollMode": "normal",
+            "passivePerception": 0,
+            "bonusDamageFormula": "",
+            "armorClass": 0,
+            "savingThrow": 0,
+            "spellSaveDc": 0,
+            "attack": 0,
+            "movement": 0,
+            "spellAttack": 0,
+            "maximumHitPoints": 0,
+            "damage": 0,
+            "initiative": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "savingThrowAdvantageAttributes": [],
+            "skill": 0
+          },
+          "stacking": "normal",
+          "appliesWhen": "Dauerhafte kulturelle Prägung",
+          "triggerRules": [],
+          "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
+          "type": "trait"
+        },
+        {
+          "id": "starter-background-huskarl-trait-1",
+          "stacking": "normal",
+          "triggerRules": [],
+          "trigger": "",
+          "limitations": "",
+          "mechanics": {
+            "spellSaveDc": 0,
+            "savingThrow": 0,
+            "skill": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "maximumHitPoints": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "savingThrowAdvantageAttributes": [],
+            "attack": 0,
+            "movement": 0,
+            "spellAttack": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "bonusDamageFormula": "",
+            "initiative": 0
+          },
+          "type": "trait",
+          "tags": "Hintergrund · Huskarl",
+          "name": "Aldrimarische Gefolgschaftstreue",
+          "aiInstructions": "",
+          "description": "Gefolgsmann eines aldrimarischen Jarls oder Königs, durch Eid und Sold gebunden, mit Kriegshandwerk und Gefolgschaftstreue vertraut.",
+          "priority": 0,
+          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+          "duration": "",
+          "active": true,
+          "target": "self"
+        }
+      ],
+      "identity": {
+        "archetype": "Skjaldr",
+        "ancestry": "Aldrimarer",
+        "background": "Huskarl"
+      },
+      "hitPoints": {
+        "hitDie": 12,
+        "maximumOverride": null,
+        "temporary": 0,
+        "current": 70,
+        "averagePerLevelOverride": null,
+        "vitality": {
+          "overrideAnchor": null,
+          "legacyIncrease": 4,
+          "version": 1
+        }
+      },
+      "classTraining": {
+        "schemaVersion": 2,
+        "selections": [
+          {
+            "selectionId": "huskarl-schildgrund",
+            "spentTechniqueSlotId": "",
+            "kind": "foundation",
+            "selectedAtLevel": 1
+          }
+        ],
+        "techniqueSelections": [
+          {
+            "selectedAtLevel": 1,
+            "techniqueId": "combat-style-huskarl-skjaldr-grund-1",
+            "slotId": "foundation-1"
+          },
+          {
+            "techniqueId": "combat-style-huskarl-skjaldr-grund-2",
+            "selectedAtLevel": 2,
+            "slotId": "foundation-2"
+          },
+          {
+            "selectedAtLevel": 3,
+            "slotId": "foundation-3",
+            "techniqueId": "combat-style-huskarl-skjaldr-grund-3"
+          },
+          {
+            "selectedAtLevel": 4,
+            "techniqueId": "combat-style-huskarl-skjaldr-grund-4",
+            "slotId": "foundation-4"
+          },
+          {
+            "slotId": "foundation-5",
+            "techniqueId": "combat-style-huskarl-skjaldr-grund-5",
+            "selectedAtLevel": 5
+          },
+          {
+            "slotId": "foundation-6",
+            "selectedAtLevel": 6,
+            "techniqueId": "combat-style-huskarl-skjaldr-grund-6"
+          },
+          {
+            "selectedAtLevel": 7,
+            "slotId": "advanced-1",
+            "techniqueId": "combat-style-huskarl-skjaldr-grund-7"
+          }
+        ],
+        "curriculumId": "aldrimar-skjaldr"
+      },
+      "damageAffinities": [],
+      "skills": [
+        {
+          "name": "Athletik",
+          "proficiency": "trained",
+          "id": "default-skill-1",
+          "bonus": 0,
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "attributeKey": "strength"
+        },
+        {
+          "name": "Akrobatik",
+          "proficiency": "none",
+          "notes": "",
+          "attributeKey": "dexterity",
+          "id": "default-skill-2",
+          "bonus": 0
+        },
+        {
+          "id": "default-skill-3",
+          "attributeKey": "dexterity",
+          "notes": "",
+          "proficiency": "none",
+          "name": "Fingerfertigkeit",
+          "bonus": 0
+        },
+        {
+          "proficiency": "none",
+          "name": "Heimlichkeit",
+          "id": "default-skill-4",
+          "attributeKey": "dexterity",
+          "notes": "",
+          "bonus": 0
+        },
+        {
+          "bonus": 0,
+          "notes": "",
+          "proficiency": "none",
+          "id": "default-skill-5",
+          "attributeKey": "intelligence",
+          "name": "Arkane Kunde"
+        },
+        {
+          "proficiency": "none",
+          "name": "Geschichte",
+          "notes": "",
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "id": "default-skill-6"
+        },
+        {
+          "name": "Nachforschungen",
+          "notes": "",
+          "bonus": 0,
+          "id": "default-skill-7",
+          "proficiency": "none",
+          "attributeKey": "intelligence"
+        },
+        {
+          "attributeKey": "intelligence",
+          "name": "Naturkunde",
+          "id": "default-skill-8",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "proficiency": "none",
+          "attributeKey": "intelligence",
+          "notes": "",
+          "name": "Religion",
+          "bonus": 0,
+          "id": "default-skill-9"
+        },
+        {
+          "attributeKey": "wisdom",
+          "bonus": 0,
+          "notes": "",
+          "name": "Heilkunde",
+          "id": "default-skill-10",
+          "proficiency": "none"
+        },
+        {
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "bonus": 0,
+          "id": "default-skill-11",
+          "proficiency": "trained",
+          "attributeKey": "wisdom",
+          "name": "Mit Tieren umgehen"
+        },
+        {
+          "name": "Motiv erkennen",
+          "notes": "",
+          "bonus": 0,
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "id": "default-skill-12"
+        },
+        {
+          "attributeKey": "wisdom",
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "name": "Überleben",
+          "bonus": 0,
+          "id": "default-skill-13",
+          "proficiency": "trained"
+        },
+        {
+          "name": "Wahrnehmung",
+          "bonus": 0,
+          "notes": "",
+          "proficiency": "none",
+          "attributeKey": "wisdom",
+          "id": "default-skill-14"
+        },
+        {
+          "name": "Auftreten",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "id": "default-skill-15",
+          "notes": "",
+          "bonus": 0
+        },
+        {
+          "id": "default-skill-16",
+          "bonus": 0,
+          "notes": "Ausbildung im Clan Wolfshorn",
+          "attributeKey": "charisma",
+          "name": "Einschüchtern",
+          "proficiency": "trained"
+        },
+        {
+          "bonus": 0,
+          "attributeKey": "charisma",
+          "notes": "",
+          "proficiency": "none",
+          "id": "default-skill-17",
+          "name": "Täuschen"
+        },
+        {
+          "notes": "",
+          "bonus": 0,
+          "proficiency": "none",
+          "id": "default-skill-18",
+          "attributeKey": "charisma",
+          "name": "Überreden"
+        },
+        {
+          "bonus": 0,
+          "attributeKey": "charisma",
+          "notes": "",
+          "proficiency": "none",
+          "name": "Flirten",
+          "id": "default-skill-19"
+        },
+        {
+          "name": "Körperbeherrschung",
+          "notes": "Ausbildung im Clan Wolfshorn",
+          "bonus": 0,
+          "id": "default-skill-20",
+          "proficiency": "trained",
+          "attributeKey": "constitution"
+        }
+      ]
+    },
+    "activeImageSetId": "kampf-set",
+    "portrait": "https://i.imgur.com/EgkPDzh.png",
+    "bio": "",
+    "title": "Huskarl, Hornhall",
+    "currentLocation": "",
+    "role": "",
+    "profileLink": "",
+    "name": "Asgeir Wolfshorn",
+    "emotes": [
+      {
+        "label": "",
+        "img": "https://i.imgur.com/YIT1sag.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Od7dokn.png"
+      },
+      {
+        "img": "https://i.imgur.com/Jrslqiw.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/FC6UHWX.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Q5JqMLJ.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/mMNydCg.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/ivHnQCV.png"
+      },
+      {
+        "img": "https://i.imgur.com/GHwLVKR.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/nfhdZbv.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/0hM6j8y.png"
+      },
+      {
+        "img": "https://i.imgur.com/T6QS1NT.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/TUzyqFR.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/OG6dnW1.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/UdgyIai.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/AgHS6FB.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/rG4kMX1.png"
+      },
+      {
+        "img": "https://i.imgur.com/VMNedeQ.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/xridME2.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/3HmspSR.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/ChIbEWr.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/PcyHCAi.png"
+      },
+      {
+        "img": "https://i.imgur.com/LVymlsv.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/N814mkK.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/EL0t6lS.png"
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/RhpYxT5.png"
+      },
+      {
+        "img": "https://i.imgur.com/C6K2MD0.png",
+        "label": ""
+      },
+      {
+        "label": "",
+        "img": "https://i.imgur.com/Uct9vx5.png"
+      }
+    ],
+    "relevance": "",
+    "playerOwner": "",
+    "createdAt": "2026-07-10T11:41:10.805Z",
+    "imageSetsOverride": true,
+    "fraktion": "Clan Wolfshorn, Dämmergrund",
+    "genealogy": {
+      "familyRole": "",
+      "birth": "",
+      "houseId": "",
+      "relationships": {
+        "partners": [],
+        "children": [],
+        "parents": []
+      },
+      "tags": [],
+      "worldPersonId": "",
+      "houseName": "",
+      "status": "",
+      "sex": "unknown",
+      "sources": [],
+      "portraitPlaceholder": "",
+      "death": ""
+    },
+    "inventory": {
+      "portrait": "https://i.imgur.com/tlufXWn.png",
+      "characterId": "oUlhJyX6C4Q69mtLS9u1",
+      "subtitle": "Ausrüstung und Gefährten des Clans Wolfshorn",
+      "moneyState": {
+        "silver": 0,
+        "copper": 0,
+        "gold": 0,
+        "totalCopper": 0,
+        "pfennig": 0
+      },
+      "moneyNotice": "",
+      "portraitFit": "cover",
+      "carryLabel": "Traglast",
+      "companions": [
+        {
+          "id": "card-asgeir-haeppchen",
+          "name": "Häppchen",
+          "species": "Hest",
+          "image": "/AleriaAlmanach/assets/companions/wolfshorn/haeppchen.png",
+          "description": "Häppchen ist Asgeirs disziplinloser Hest-Schimmel. Gelangweilt und müde blickt das schwere Arbeitspferd in die Welt. Sein Name folgt Asgeirs makabrer Gewohnheit, seine Pferde nach ihrem befürchteten Ende zu nennen.",
+          "summary": "Häppchen ist Asgeirs disziplinloser Hest-Schimmel. Gelangweilt und müde blickt das schwere Arbeitspferd in die Welt. Sein Name folgt Asgeirs makabrer Gewohnheit, seine Pferde nach ihrem befürchteten Ende zu nennen.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-asgeir-haeppchen",
+          "inventoryItemId": "asgeir-haeppchen"
+        }
+      ],
+      "showInfoTable": false,
+      "status": "Gesund",
+      "infoRows": [],
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon",
+          "label": "Waffen"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor",
+          "label": "Rüstung"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "level": "Stufe 7",
+      "equipmentQuiz": {
+        "updatedAt": "",
+        "status": "",
+        "open": false,
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": ""
+      },
+      "name": "Asgeir Wolfshorn",
+      "hitpoints": "94 / 94 TP",
+      "role": "Skjaldr",
+      "portraitPosition": "top",
+      "money": "0 Gold, 0 Silber, 0 Kupfer, 0 Eisenpfennig",
+      "portraitFormat": "portrait",
+      "carryValue": "Siehe Einzelgewichte",
+      "title": "Charakter-Inventar",
+      "attributes": [
+        {
+          "label": "KRF",
+          "value": 9
+        },
+        {
+          "label": "GES",
+          "value": 7
+        },
+        {
+          "label": "KON",
+          "value": 8
+        },
+        {
+          "label": "INT",
+          "value": 4
+        },
+        {
+          "label": "WEI",
+          "value": 5
+        },
+        {
+          "label": "CHA",
+          "value": 6
+        }
+      ],
+      "revision": 1791899426330,
+      "healthColor": "#5c7f20",
+      "items": [
+        {
+          "acquiredAt": "2026-09-22T12:00:00.000Z",
+          "imageFit": "contain",
+          "category": "weapon",
+          "equipmentLink": {
+            "kind": "weapon",
+            "combatEntryId": "asgeir-axt-rechts",
+            "schemaVersion": 1
+          },
+          "name": "Wolfshorn-Axt · rechte Hand",
+          "tags": "Leicht · Einhändig",
+          "image": "https://i.imgur.com/m8sI75k.png",
+          "type": "Waffe",
+          "value": {
+            "gold": 0,
+            "pfennig": 0,
+            "totalCopper": 0,
+            "copper": 0,
+            "silver": 0
+          },
+          "itemDbKey": "",
+          "imageFormat": "square",
+          "purchase": null,
+          "icon": "",
+          "description": "Abgestimmte, solide Handaxt; keine magische Verstärkung.",
+          "originItemDbKey": "",
+          "offerId": "",
+          "valuationNote": "",
+          "individualizedAt": "",
+          "equipped": true,
+          "creatureId": "",
+          "ownerCharacterName": "Asgeir Wolfshorn",
+          "combatDefinition": {
+            "triggerRules": [],
+            "attackBonus": 1,
+            "damageFormula": "1d6",
+            "requirements": "",
+            "proficient": true,
+            "notes": "Erprobte Wolfshorn-Schmiedearbeit: +1 Angriff und +1 Schaden mit dieser Axt.",
+            "kind": "weapon",
+            "versatileDamageFormula": "",
+            "properties": "Leicht · Einhändig",
+            "damageType": "Hieb",
+            "range": "Nahkampf · 1,5 m",
+            "weaponType": "axe",
+            "aiInstructions": "",
+            "damageBonus": 1,
+            "training": "martial",
+            "attackAttribute": "strength"
+          },
+          "registerCategory": "waffen",
+          "inventoryUseMode": "auto",
+          "quantity": "1",
+          "id": "equipment-weapon-asgeir-axt-rechts",
+          "imagePosition": "center",
+          "weight": "1 kg",
+          "valuation": {
+            "maxCopper": 400,
+            "source": "Schätzung anhand des Handelsregisters",
+            "notes": "Schlichte Gebrauchswaffe unter dem Preis einer großen Streitaxt.",
+            "minCopper": 400
+          },
+          "templateId": "",
+          "infoRows": [],
+          "instanceId": "equipment-weapon-asgeir-axt-rechts",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterId": "oUlhJyX6C4Q69mtLS9u1",
+          "templateName": "",
+          "flavorText": "",
+          "itemStorageMode": "character"
+        },
+        {
+          "category": "weapon",
+          "imageFit": "contain",
+          "type": "Waffe",
+          "id": "equipment-weapon-asgeir-axt-links",
+          "valuationNote": "",
+          "tags": "Leicht · Einhändig",
+          "purchase": null,
+          "name": "Wolfshorn-Axt · linke Hand",
+          "acquiredAt": "2026-09-22T12:00:00.000Z",
+          "itemDbKey": "",
+          "individualizedAt": "",
+          "equipped": false,
+          "value": {
+            "gold": 0,
+            "totalCopper": 0,
+            "copper": 0,
+            "pfennig": 0,
+            "silver": 0
+          },
+          "creatureId": "",
+          "templateName": "",
+          "image": "https://i.imgur.com/m8sI75k.png",
+          "itemStorageMode": "character",
+          "equipmentLink": {
+            "kind": "weapon",
+            "combatEntryId": "asgeir-axt-links",
+            "schemaVersion": 1
+          },
+          "icon": "",
+          "registerCategory": "waffen",
+          "description": "Zweite Axt für die gemeinsame Doppelaxtführung. Kein kostenloser zweiter Angriff.",
+          "combatDefinition": {
+            "aiInstructions": "",
+            "range": "Nahkampf · 1,5 m",
+            "proficient": true,
+            "triggerRules": [],
+            "requirements": "",
+            "damageBonus": 1,
+            "versatileDamageFormula": "",
+            "attackBonus": 1,
+            "weaponType": "axe",
+            "damageFormula": "1d6",
+            "damageType": "Hieb",
+            "kind": "weapon",
+            "training": "martial",
+            "notes": "Erprobte Wolfshorn-Schmiedearbeit: +1 Angriff und +1 Schaden mit dieser Axt.",
+            "properties": "Leicht · Einhändig",
+            "attackAttribute": "strength"
+          },
+          "ownerCharacterName": "Asgeir Wolfshorn",
+          "quantity": "1",
+          "imagePosition": "center",
+          "inventoryUseMode": "auto",
+          "offerId": "",
+          "valuation": {
+            "notes": "Schlichte Gebrauchswaffe unter dem Preis einer großen Streitaxt.",
+            "minCopper": 400,
+            "source": "Schätzung anhand des Handelsregisters",
+            "maxCopper": 400
+          },
+          "flavorText": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "originItemDbKey": "",
+          "instanceId": "equipment-weapon-asgeir-axt-links",
+          "templateId": "",
+          "weight": "1 kg",
+          "imageFormat": "square",
+          "ownerCharacterId": "oUlhJyX6C4Q69mtLS9u1",
+          "infoRows": []
+        },
+        {
+          "combatDefinition": {
+            "proficient": true,
+            "attackBonus": 0,
+            "kind": "weapon",
+            "notes": "+1 Waffenschaden. Bei kritischem Treffer +2 weiterer Schaden, nicht nochmals verdoppelt.",
+            "attackAttribute": "strength",
+            "training": "martial",
+            "versatileDamageFormula": "",
+            "damageType": "Hieb",
+            "requirements": "",
+            "aiInstructions": "",
+            "triggerRules": [
+              {
+                "resultEffects": [],
+                "enabled": true,
+                "recipient": "actor",
+                "id": "wolfshorn-heavy-critical",
+                "skillIds": [],
+                "radiusMeters": null,
+                "frequency": "always",
+                "actionKinds": [
+                  "weapon",
+                  "technique"
+                ],
+                "effects": {
+                  "rollMode": "normal",
+                  "outcome": "none",
+                  "damageReduction": 0,
+                  "defenseModifier": 0,
+                  "savingThrowModifier": 0,
+                  "skillModifier": 0,
+                  "spellSaveDcModifier": 0,
+                  "damageReductionBypass": 0,
+                  "attackModifier": 0,
+                  "damageModifier": 2
+                },
+                "priority": 0,
+                "activation": "passive",
+                "authority": "passive",
+                "actionScope": "",
+                "name": "Schwerer Wolfshieb",
+                "costs": [],
+                "requiredTargetTags": [],
+                "sourceRelation": "self",
+                "condition": "critical-hit",
+                "description": "Bei kritischem Treffer: +2 zusätzlicher Schaden, auch bei passenden Waffentechniken. Dieser Zusatz wird nicht verdoppelt.",
+                "consumeReaction": true,
+                "phase": "pre-damage"
+              }
+            ],
+            "weaponType": "axe",
+            "range": "Nahkampf · 1,5 m",
+            "damageFormula": "1d12",
+            "properties": "Schwer · Zweihändig",
+            "damageBonus": 1
+          },
+          "templateId": "standard:waffen-rustungen:streitaxt",
+          "valuationNote": "",
+          "name": "Lange Wolfshorn-Streitaxt",
+          "tags": "Schwer · Zweihändig",
+          "infoRows": [],
+          "registerCategory": "waffen",
+          "flavorText": "",
+          "image": "https://i.imgur.com/m8sI75k.png",
+          "originItemDbKey": "standard:waffen-rustungen:streitaxt",
+          "inventoryUseMode": "auto",
+          "value": {
+            "copper": 0,
+            "totalCopper": 0,
+            "pfennig": 0,
+            "silver": 0,
+            "gold": 0
+          },
+          "type": "Waffe",
+          "weight": "3,5 kg",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "templateName": "",
+          "instanceId": "equipment-weapon-asgeir-grossaxt",
+          "equipmentLink": {
+            "combatEntryId": "asgeir-grossaxt",
+            "schemaVersion": 1,
+            "kind": "weapon"
+          },
+          "icon": "",
+          "quantity": "1",
+          "itemDbKey": "",
+          "ownerCharacterId": "oUlhJyX6C4Q69mtLS9u1",
+          "itemStorageMode": "character",
+          "description": "Langer Eschenschaft und breite Schneide für kontrollierte Spalthiebe.",
+          "imagePosition": "center",
+          "equipped": false,
+          "ownerCharacterName": "Asgeir Wolfshorn",
+          "valuation": {
+            "minCopper": 1300,
+            "maxCopper": 1300
+          },
+          "offerId": "",
+          "creatureId": "",
+          "purchase": null,
+          "acquiredAt": "2026-09-22T12:00:00.000Z",
+          "id": "equipment-weapon-asgeir-grossaxt",
+          "individualizedAt": "",
+          "imageFit": "contain",
+          "category": "weapon",
+          "imageFormat": "square"
+        },
+        {
+          "imageFormat": "square",
+          "itemDbKey": "",
+          "equipped": true,
+          "itemStorageMode": "character",
+          "ownerCharacterId": "oUlhJyX6C4Q69mtLS9u1",
+          "imagePosition": "center",
+          "acquiredAt": "2026-09-22T12:00:00.000Z",
+          "id": "equipment-armor-asgeir-schuppen",
+          "registerCategory": "ruestungen",
+          "creatureId": "",
+          "purchase": null,
+          "combatDefinition": {
+            "armorCategory": "medium",
+            "dexterityMode": "capped",
+            "kind": "armor",
+            "mechanics": {
+              "damage": 0,
+              "skill": 0,
+              "armorClass": 0,
+              "movement": 0,
+              "spellAttack": 0,
+              "bonusDamageFormula": "",
+              "attackRollMode": "normal",
+              "attack": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "passivePerception": 0,
+              "savingThrowAdvantageAttributes": [],
+              "savingThrowDisadvantageAttributes": [],
+              "initiative": 0,
+              "savingThrow": 0,
+              "spellSaveDc": 0,
+              "maximumHitPoints": 0
+            },
+            "dexterityUnlockLevel": 0,
+            "notes": "Angelegt: −2 Hieb-/Wuchtschaden je Treffer. Kein zusätzlicher RK-Bonus.",
+            "baseArmorClass": 14,
+            "dexterityCap": 2,
+            "armorClassBonus": 0,
+            "properties": "Mittlere Rüstung",
+            "damageProtection": {
+              "excludedDamageTypes": [],
+              "name": "Wolfshorn-Schuppen",
+              "amount": 2,
+              "damageTypes": [
+                "hieb",
+                "wucht"
+              ]
+            },
+            "triggerRules": [],
+            "armorKind": "armor"
+          },
+          "description": "Überlappende Eisenschuppen auf festem Leder; für einen Huskarl gefertigt.",
+          "imageFit": "contain",
+          "category": "armor",
+          "inventoryUseMode": "auto",
+          "individualizedAt": "",
+          "infoRows": [],
+          "icon": "",
+          "originItemDbKey": "standard:waffen-rustungen:schuppenpanzer",
+          "value": {
+            "totalCopper": 0,
+            "silver": 0,
+            "copper": 0,
+            "gold": 0,
+            "pfennig": 0
+          },
+          "image": "/AleriaAlmanach/public/assets/character-equipment/asgeir-schuppenpanzer-v3.png",
+          "templateName": "",
+          "offerId": "",
+          "valuationNote": "",
+          "tags": "Mittlere Rüstung",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "name": "Wolfshorn-Schuppenpanzer",
+          "instanceId": "equipment-armor-asgeir-schuppen",
+          "quantity": "1",
+          "flavorText": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "armor",
+            "combatEntryId": "asgeir-schuppen"
+          },
+          "valuation": {
+            "minCopper": 2000,
+            "maxCopper": 2000
+          },
+          "ownerCharacterName": "Asgeir Wolfshorn",
+          "weight": "20 kg",
+          "templateId": "standard:waffen-rustungen:schuppenpanzer",
+          "type": "Rüstung"
+        },
+        {
+          "purchase": null,
+          "individualizedAt": "",
+          "imageFormat": "square",
+          "creatureId": "",
+          "category": "armor",
+          "imageFit": "contain",
+          "valuation": {
+            "minCopper": 30,
+            "maxCopper": 30
+          },
+          "weight": "3 kg",
+          "originItemDbKey": "standard:waffen-rustungen:rundschild",
+          "id": "equipment-armor-asgeir-rundschild",
+          "equipped": false,
+          "acquiredAt": "2026-09-22T12:00:00.000Z",
+          "description": "Alternative zur zweiten Axt. Vor Schildtechniken anlegen und linke Axt wegstecken.",
+          "imagePosition": "center",
+          "flavorText": "",
+          "quantity": "1",
+          "templateName": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "instanceId": "equipment-armor-asgeir-rundschild",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "kind": "armor",
+            "combatEntryId": "asgeir-rundschild"
+          },
+          "templateId": "standard:waffen-rustungen:rundschild",
+          "icon": "",
+          "ownerCharacterId": "oUlhJyX6C4Q69mtLS9u1",
+          "registerCategory": "ruestungen",
+          "combatDefinition": {
+            "armorClassBonus": 2,
+            "armorCategory": "",
+            "dexterityMode": "full",
+            "notes": "Abfangen: Der erste körperliche Treffer pro gegnerischem Beitrag verursacht 2 Schaden weniger. Nur solange geführt.",
+            "armorKind": "shield",
+            "damageProtection": null,
+            "mechanics": {
+              "spellAttack": 0,
+              "combatStartTemporaryHitPoints": 0,
+              "damage": 0,
+              "initiative": 0,
+              "savingThrow": 0,
+              "spellSaveDc": 0,
+              "bonusDamageFormula": "",
+              "armorClass": 0,
+              "savingThrowAdvantageAttributes": [],
+              "skill": 0,
+              "maximumHitPoints": 0,
+              "passivePerception": 0,
+              "attack": 0,
+              "movement": 0,
+              "attackRollMode": "normal",
+              "savingThrowDisadvantageAttributes": []
+            },
+            "kind": "armor",
+            "triggerRules": [
+              {
+                "radiusMeters": null,
+                "name": "Abfangen",
+                "id": "wolfshorn-shield-catch",
+                "actionScope": "",
+                "phase": "pre-damage",
+                "resultEffects": [],
+                "condition": "would-hit",
+                "requiredTargetTags": [],
+                "enabled": true,
+                "description": "Der erste körperliche Treffer pro gegnerischem Beitrag verursacht 2 Schaden weniger. Nur solange der Schild geführt wird.",
+                "skillIds": [],
+                "authority": "passive",
+                "costs": [],
+                "frequency": "comment",
+                "activation": "passive",
+                "priority": 0,
+                "sourceRelation": "self",
+                "damageTypes": [
+                  "hieb",
+                  "stich",
+                  "wucht",
+                  "physisch"
+                ],
+                "recipient": "target",
+                "consumeReaction": true,
+                "actionKinds": [],
+                "effects": {
+                  "damageModifier": 0,
+                  "attackModifier": 0,
+                  "damageReductionBypass": 0,
+                  "outcome": "none",
+                  "savingThrowModifier": 0,
+                  "defenseModifier": 0,
+                  "rollMode": "normal",
+                  "spellSaveDcModifier": 0,
+                  "damageReduction": 2,
+                  "skillModifier": 0
+                }
+              }
+            ],
+            "baseArmorClass": null,
+            "properties": "Schild · eine Hand",
+            "dexterityCap": 2,
+            "dexterityUnlockLevel": 0
+          },
+          "itemDbKey": "",
+          "infoRows": [],
+          "value": {
+            "silver": 0,
+            "copper": 0,
+            "pfennig": 0,
+            "totalCopper": 0,
+            "gold": 0
+          },
+          "image": "https://i.imgur.com/XpGJAGz.png",
+          "ownerCharacterName": "Asgeir Wolfshorn",
+          "type": "Rüstung",
+          "name": "Wolfshorn-Rundschild",
+          "offerId": "",
+          "tags": "Schild · eine Hand",
+          "valuationNote": "",
+          "itemStorageMode": "character",
+          "inventoryUseMode": "auto"
+        },
+        {
+          "id": "asgeir-haeppchen",
+          "instanceId": "asgeir-haeppchen",
+          "creatureId": "companion-asgeir-haeppchen",
+          "name": "Häppchen",
+          "image": "/AleriaAlmanach/assets/companions/wolfshorn/haeppchen.png",
+          "description": "Häppchen ist Asgeirs disziplinloser Hest-Schimmel. Gelangweilt und müde blickt das schwere Arbeitspferd in die Welt. Sein Name folgt Asgeirs makabrer Gewohnheit, seine Pferde nach ihrem befürchteten Ende zu nennen.",
+          "type": "Hest",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Hest",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "oUlhJyX6C4Q69mtLS9u1",
+          "ownerCharacterName": "Asgeir Wolfshorn",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-13T13:50:26.328Z"
+        }
+      ]
+    },
+    "emotesOverride": true,
+    "imageSets": [
+      {
+        "createdAt": "2026-09-04T15:16:56.347Z",
+        "updatedAt": "2026-09-04T15:16:59.644Z",
+        "id": "standard",
+        "emotes": [
+          {
+            "label": "",
+            "img": "https://i.imgur.com/YIT1sag.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/Od7dokn.png"
+          },
+          {
+            "img": "https://i.imgur.com/Jrslqiw.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/FC6UHWX.png"
+          },
+          {
+            "img": "https://i.imgur.com/Q5JqMLJ.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/mMNydCg.png"
+          },
+          {
+            "img": "https://i.imgur.com/ivHnQCV.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/GHwLVKR.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/nfhdZbv.png"
+          },
+          {
+            "img": "https://i.imgur.com/0hM6j8y.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/T6QS1NT.png"
+          },
+          {
+            "img": "https://i.imgur.com/TUzyqFR.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/OG6dnW1.png"
+          },
+          {
+            "img": "https://i.imgur.com/UdgyIai.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/AgHS6FB.png"
+          },
+          {
+            "img": "https://i.imgur.com/rG4kMX1.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/VMNedeQ.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/xridME2.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/3HmspSR.png"
+          },
+          {
+            "img": "https://i.imgur.com/ChIbEWr.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/PcyHCAi.png"
+          },
+          {
+            "img": "https://i.imgur.com/LVymlsv.png",
+            "label": ""
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/N814mkK.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/EL0t6lS.png"
+          },
+          {
+            "label": "",
+            "img": "https://i.imgur.com/RhpYxT5.png"
+          },
+          {
+            "img": "https://i.imgur.com/C6K2MD0.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/Uct9vx5.png",
+            "label": ""
+          }
+        ],
+        "portrait": "https://i.imgur.com/EgkPDzh.png",
+        "name": "Standard"
+      },
+      {
+        "id": "bleiddorn-set",
+        "name": "Bleiddorn Set",
+        "emotes": [
+          {
+            "label": "sUh3hov",
+            "img": "https://i.imgur.com/sUh3hov.png"
+          },
+          {
+            "img": "https://i.imgur.com/zYAbmSX.png",
+            "label": "zYAbmSX"
+          },
+          {
+            "img": "https://i.imgur.com/no3JEJG.png",
+            "label": "no3JEJG"
+          },
+          {
+            "img": "https://i.imgur.com/Rd8G32F.png",
+            "label": "Rd8G32F"
+          },
+          {
+            "label": "RmjGylE",
+            "img": "https://i.imgur.com/RmjGylE.png"
+          },
+          {
+            "img": "https://i.imgur.com/8Y6zAsE.png",
+            "label": "8Y6zAsE"
+          },
+          {
+            "img": "https://i.imgur.com/HzmYPaN.png",
+            "label": "HzmYPaN"
+          },
+          {
+            "img": "https://i.imgur.com/wkOEubz.png",
+            "label": "wkOEubz"
+          },
+          {
+            "label": "DYtcZaU",
+            "img": "https://i.imgur.com/DYtcZaU.png"
+          }
+        ],
+        "updatedAt": "2026-09-04T15:17:06.393Z",
+        "createdAt": "2026-09-04T15:17:05.003Z",
+        "portrait": "https://i.imgur.com/EgkPDzh.png"
+      },
+      {
+        "id": "neues-standard-set",
+        "emotes": [
+          {
+            "label": "7ibgFEB",
+            "img": "https://i.imgur.com/7ibgFEB.png"
+          },
+          {
+            "label": "MZves60",
+            "img": "https://i.imgur.com/MZves60.png"
+          },
+          {
+            "label": "Vi0StCe",
+            "img": "https://i.imgur.com/Vi0StCe.png"
+          },
+          {
+            "img": "https://i.imgur.com/wGaWu4T.png",
+            "label": "wGaWu4T"
+          },
+          {
+            "img": "https://i.imgur.com/QZmPtsS.png",
+            "label": "QZmPtsS"
+          },
+          {
+            "img": "https://i.imgur.com/J5DkPb6.png",
+            "label": "J5DkPb6"
+          },
+          {
+            "img": "https://i.imgur.com/IR1S1kD.png",
+            "label": "IR1S1kD"
+          },
+          {
+            "img": "https://i.imgur.com/MZ6tksT.png",
+            "label": "MZ6tksT"
+          },
+          {
+            "img": "https://i.imgur.com/KSXm4AW.png",
+            "label": "KSXm4AW"
+          },
+          {
+            "img": "https://i.imgur.com/3Iiyho0.png",
+            "label": "3Iiyho0"
+          },
+          {
+            "label": "OdTjazk",
+            "img": "https://i.imgur.com/OdTjazk.png"
+          },
+          {
+            "img": "https://i.imgur.com/hYSdjeY.png",
+            "label": "hYSdjeY"
+          },
+          {
+            "label": "iCDT2dy",
+            "img": "https://i.imgur.com/iCDT2dy.png"
+          },
+          {
+            "img": "https://i.imgur.com/95gloPV.png",
+            "label": "95gloPV"
+          },
+          {
+            "label": "dYJuOT9",
+            "img": "https://i.imgur.com/dYJuOT9.png"
+          },
+          {
+            "label": "6hduwqo",
+            "img": "https://i.imgur.com/6hduwqo.png"
+          },
+          {
+            "img": "https://i.imgur.com/ebyTGTR.png",
+            "label": "ebyTGTR"
+          },
+          {
+            "img": "https://i.imgur.com/CKNzKLq.png",
+            "label": "CKNzKLq"
+          },
+          {
+            "label": "bba1QsW",
+            "img": "https://i.imgur.com/bba1QsW.png"
+          },
+          {
+            "label": "vS14M4r",
+            "img": "https://i.imgur.com/vS14M4r.png"
+          },
+          {
+            "img": "https://i.imgur.com/z9hU3e7.png",
+            "label": "z9hU3e7"
+          },
+          {
+            "img": "https://i.imgur.com/Jzv0g4z.png",
+            "label": "Jzv0g4z"
+          },
+          {
+            "img": "https://i.imgur.com/bAfvocJ.png",
+            "label": "bAfvocJ"
+          },
+          {
+            "label": "E6Tt7vd",
+            "img": "https://i.imgur.com/E6Tt7vd.png"
+          },
+          {
+            "label": "mwFG8Nq",
+            "img": "https://i.imgur.com/mwFG8Nq.png"
+          },
+          {
+            "img": "https://i.imgur.com/hyQ2fmR.png",
+            "label": "hyQ2fmR"
+          },
+          {
+            "label": "fE0UaUD",
+            "img": "https://i.imgur.com/fE0UaUD.png"
+          },
+          {
+            "img": "https://i.imgur.com/iDBrukI.png",
+            "label": "iDBrukI"
+          },
+          {
+            "label": "wgQyy0R",
+            "img": "https://i.imgur.com/wgQyy0R.png"
+          },
+          {
+            "img": "https://i.imgur.com/aRYnjKD.png",
+            "label": "aRYnjKD"
+          },
+          {
+            "img": "https://i.imgur.com/bhbeAHN.png",
+            "label": "bhbeAHN"
+          },
+          {
+            "label": "6LBPUGW",
+            "img": "https://i.imgur.com/6LBPUGW.png"
+          },
+          {
+            "img": "https://i.imgur.com/CjcuO8n.png",
+            "label": "CjcuO8n"
+          },
+          {
+            "img": "https://i.imgur.com/I7VBF2v.png",
+            "label": "I7VBF2v"
+          },
+          {
+            "label": "Znu5m4w",
+            "img": "https://i.imgur.com/Znu5m4w.png"
+          },
+          {
+            "label": "u7lFa07",
+            "img": "https://i.imgur.com/u7lFa07.png"
+          },
+          {
+            "img": "https://i.imgur.com/y7K9FKH.png",
+            "label": "y7K9FKH"
+          }
+        ],
+        "updatedAt": "2026-10-13T11:51:39.979Z",
+        "createdAt": "2026-09-17T16:42:23.932Z",
+        "name": "Neues Standard Set",
+        "portrait": "https://i.imgur.com/EgkPDzh.png"
+      },
+      {
+        "name": "Kampf - Set",
+        "emotes": [
+          {
+            "label": "FEFYudZ",
+            "img": "https://i.imgur.com/FEFYudZ.png"
+          },
+          {
+            "label": "ImnKEpX",
+            "img": "https://i.imgur.com/ImnKEpX.png"
+          },
+          {
+            "label": "GH7zFVV",
+            "img": "https://i.imgur.com/GH7zFVV.png"
+          },
+          {
+            "img": "https://i.imgur.com/2p10hzY.png",
+            "label": "2p10hzY"
+          },
+          {
+            "img": "https://i.imgur.com/sGbpcSl.png",
+            "label": "sGbpcSl"
+          },
+          {
+            "img": "https://i.imgur.com/5qTbwX8.png",
+            "label": "5qTbwX8"
+          },
+          {
+            "label": "VDF3XIQ",
+            "img": "https://i.imgur.com/VDF3XIQ.png"
+          },
+          {
+            "img": "https://i.imgur.com/6jgK9kp.png",
+            "label": "6jgK9kp"
+          },
+          {
+            "label": "Z0pgTrI",
+            "img": "https://i.imgur.com/Z0pgTrI.png"
+          },
+          {
+            "img": "https://i.imgur.com/MVDravg.png",
+            "label": "MVDravg"
+          },
+          {
+            "label": "2COpoWQ",
+            "img": "https://i.imgur.com/2COpoWQ.png"
+          },
+          {
+            "label": "w4WzZLR",
+            "img": "https://i.imgur.com/w4WzZLR.png"
+          },
+          {
+            "img": "https://i.imgur.com/uGpteYF.png",
+            "label": "uGpteYF"
+          },
+          {
+            "img": "https://i.imgur.com/Etm7Azr.png",
+            "label": "Etm7Azr"
+          },
+          {
+            "img": "https://i.imgur.com/62R8qJ6.png",
+            "label": "62R8qJ6"
+          },
+          {
+            "img": "https://i.imgur.com/fH4gPaJ.png",
+            "label": "fH4gPaJ"
+          },
+          {
+            "img": "https://i.imgur.com/wWDDdqe.png",
+            "label": "wWDDdqe"
+          },
+          {
+            "img": "https://i.imgur.com/1y41PTq.png",
+            "label": "1y41PTq"
+          }
+        ],
+        "portrait": "https://i.imgur.com/EgkPDzh.png",
+        "id": "kampf-set",
+        "updatedAt": "2026-10-13T11:51:57.382Z",
+        "createdAt": "2026-10-12T22:35:40.021Z"
+      }
+    ],
+    "plotNode": "",
+    "identity": {
+      "worldPersonId": ""
+    },
+    "updatedAt": "2026-10-13T13:50:25.792Z"
+  }
+}
