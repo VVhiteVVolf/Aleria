@@ -2,34 +2,32 @@ import assert from 'node:assert/strict';
 import { resolveCombatProfile } from '../../AleriaAlmanach/modules/combat/combat-profile-resolver.js';
 import { withEquippedCombatWeapon } from '../../AleriaAlmanach/modules/combat/combat-equipment-state.js';
 import { getCombatMounts } from '../../AleriaAlmanach/modules/combat/combat-support-equipment.js';
-import { getCombatDamagePreview } from '../../AleriaAlmanach/modules/combat/combat-action-estimates.js';
 import { getBuiltinCreatureTemplates } from '../../AleriaAlmanach/modules/creatures/creature-catalog.js';
+import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
+import { findGuideRegistration } from './guide-registry.mjs';
+import { resolveGuideTaxonomy } from './guide-taxonomy.mjs';
+import { buildGuideArsenal } from './guide-arsenal-model.mjs';
+import { entryIcon, publicAsset } from './guide-assets.mjs';
+import { COST_LABELS } from './guide-format.mjs';
 
-export const COST_LABELS = { action: 'Aktion', 'bonus-action': 'Bonusaktion', reaction: 'Reaktion', 'special-action': 'Besondere Aktion' };
 export const diceText = text => String(text || '').replace(/(\d)d(\d)/g, '$1W$2');
-
-function actionSummary(profile, action, weapon, mounted) {
-  const selected = resolveCombatProfile(profile.character, { actionId: action.id, includeAiSnapshot: false });
-  const technique = selected.techniques?.find(t => t.id === action.sourceId);
-  const ability = selected.abilities?.find(a => a.id === action.sourceId);
-  return { id: action.id, name: action.name, costs: action.costs || [], compatible: action.compatible !== false,
-    mounted, weapon, damage: diceText(getCombatDamagePreview(selected)?.notation || 'Kein direkter Schaden'),
-    attack: selected.actionResolutionMode === 'automatic' ? 'Automatisch' : `${selected.attackModifier >= 0 ? '+' : ''}${selected.attackModifier}`,
-    description: technique?.description || ability?.description || '', effect: technique?.effect || '',
-    personal: /^Persönliche Techniken/.test(technique?.trainingForm || ''),
-    groups: (action.effects || []).map(e => e.condition?.stanceGroup).filter(Boolean) };
-}
 
 export function buildGuideModel(guide, character) {
   assert.equal(character.id, guide.id);
+  const registration = findGuideRegistration(character);
+  assert.ok(registration, `Guide fehlt im Register: ${character.id}`);
+  const taxonomy = resolveGuideTaxonomy(registration, character, FAMILY_REGISTRY);
+  const arsenal = buildGuideArsenal(guide, character);
+  for (const [name] of guide.techniques) assert.ok(arsenal.entries.some(entry => entry.name === name), `Taktische Einordnung ohne Arsenaleintrag: ${name}`);
   const mount = getCombatMounts(character)[0];
   const loadouts = guide.weaponIds.flatMap(weaponId => [false, ...(mount ? [true] : [])].map(mounted => {
     const equipped = withEquippedCombatWeapon(character, weaponId, '', { shieldId: '', mountId: mounted ? mount.id : '' });
     return { character: equipped, weaponId, mounted, profile: resolveCombatProfile(equipped, { includeAiSnapshot: false }) };
   }));
   const base = loadouts.find(l => l.weaponId === guide.weaponId && !l.mounted);
-  const pool = loadouts.flatMap(loadout => loadout.profile.actions.filter(a => ['technique', 'ability'].includes(a.kind) && a.compatible !== false)
-    .map(action => actionSummary(loadout, action, loadout.profile.weapon.name, loadout.mounted)));
+  const pool = arsenal.entries.filter(entry => ['technique','ability'].includes(entry.kind)).flatMap(entry => entry.variants
+    .filter(variant => guide.weaponIds.includes(variant.weaponId) && variant.grip === 'one-handed')
+    .map(variant => ({ ...variant, id: entry.id, name: entry.name, icon: entry.icon })));
   const byName = (name, mounted = false) => {
     const found = pool.find(a => a.name === name && a.mounted === mounted);
     assert.ok(found, `${guide.slug}: verfügbare Technik fehlt: ${name} (${mounted ? 'beritten' : 'zu Fuß'})`); return found;
@@ -52,18 +50,17 @@ export function buildGuideModel(guide, character) {
     return { ...copy, name: creature.name, image: copy.image || creature.portrait, species: creature.species, reference: creature.bestiaryReference,
       hp: p.maximumHitPoints, level: p.effectiveLevel, defense: p.totalDefense,
       actions: p.actions.filter(a => a.compatible !== false && ['technique', 'ability'].includes(a.kind))
-        .map(a => ({ name: a.name, costs: a.costs, description: p.techniques.find(t => t.id === a.sourceId)?.description || p.abilities.find(t => t.id === a.sourceId)?.description || '' })) };
+        .map(a => { const source = p.techniques.find(t => t.id === a.sourceId) || p.abilities.find(t => t.id === a.sourceId) || a;
+          return { name: a.name, icon: entryIcon(a.kind, source), costs: a.costs, description: source.description || '' }; }) };
   });
-  return { ...guide, level: base.profile.effectiveLevel, hp: base.profile.maximumHitPoints, defense: base.profile.totalDefense,
+  return { ...guide, name: registration.displayName || guide.name, taxonomy, arsenal,
+    level: base.profile.effectiveLevel, hp: base.profile.maximumHitPoints, defense: base.profile.totalDefense,
     attack: base.profile.attackModifier, resources: base.profile.resources.filter(r => Object.hasOwn(COST_LABELS, r.id)),
     recovery: `1W${base.profile.hitPoints.hitDie} + ${Math.ceil(base.profile.maximumHitPoints / 10)}`,
-    combos, companions, techniques: guide.techniques.map(([name, role, advice]) => ({ ...byName(name, role === 'Beritten'), role, advice })),
+    combos, companions,
     weapons: loadouts.filter(l => !l.mounted).map(l => ({ name: l.profile.weapon.name,
-      image: l.profile.weapon.image, attack: l.profile.attackModifier,
+      image: publicAsset(l.profile.weapon.image), attack: l.profile.attackModifier,
       formula: diceText(l.profile.weapon.damageFormula) + (l.profile.damageModifier >= 0 ? '+' : '') + l.profile.damageModifier })),
-    learnedCount: base.profile.techniques.length,
-    availableCount: base.profile.actions.filter(a => a.kind === 'technique' && a.compatible !== false).length,
-    allTechniques: pool.filter((a, i) => a.id.startsWith('technique:') && pool.findIndex(b => b.id === a.id) === i),
-    characterHref: character.profileLink || '/AleriaAlmanach/index.html'
+    characterHref: character.profileLink || '/AleriaAlmanach/AleriaAlmanach.html'
   };
 }

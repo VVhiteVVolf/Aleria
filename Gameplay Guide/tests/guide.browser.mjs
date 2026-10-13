@@ -25,7 +25,7 @@ try {
   const context = await browser.newContext({ viewport: { width: 1440, height: 1100 } });
   await context.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
   const page = await context.newPage(); page.on('pageerror', e => errors.push(e.message));
-  page.on('response', response => { if (response.status() >= 400 && response.url().includes('Gameplay')) missing.push(response.url()); });
+  page.on('response', response => { if (response.status() >= 400 && !response.url().endsWith('/favicon.ico')) missing.push(response.url()); });
   const origin = `http://127.0.0.1:${server.address().port}`;
   for (const slug of ['ylva','gais']) {
     await page.setViewportSize({width:1440,height:1100});
@@ -36,15 +36,67 @@ try {
     assert.equal(await page.locator('.combo:not([hidden])').count(),2);
     await page.getByRole('button',{name:'Alle',exact:true}).click();
     assert.equal(await page.locator('.combo:not([hidden])').count(),6);
-    await page.locator('.technique summary').first().click();
-    assert.equal(await page.locator('.technique[open]').count(),1);
+    const library = page.locator('[data-role="arsenal-library"]');
+    assert.ok(await library.locator('.cost img').count() > 20);
+    const search = library.locator('[data-role="arsenal-search"]');
+    await search.fill('unbekannte handlung xyz');
+    assert.ok(await library.locator('[data-role="arsenal-empty"]').isVisible());
+    await search.fill('');
+    const choices = await library.locator('[data-attack-id]').evaluateAll(nodes => nodes.map(n => n.dataset.attackId));
+    for (const id of choices) {
+      await library.locator(`[data-attack-id="${id}"]`).click();
+      assert.equal(await library.locator('[data-attack-id][aria-pressed="true"]').getAttribute('data-attack-id'),id);
+      assert.ok((await library.locator('[data-role="attack-preview"]').innerText()).length > 50);
+    }
+    if (slug === 'ylva') {
+      await search.fill('Schafthebel');
+      assert.equal(await library.locator('[data-arsenal-row]:not([hidden])').count(),1);
+      await library.getByRole('button',{name:/Schafthebel/}).click();
+      assert.match(await page.locator('#attack-preview').innerText(),/Kein direkter Schaden/);
+      assert.match(await page.locator('#attack-preview').innerText(),/KRF SG 14/);
+      await search.fill('');
+      await library.locator('[data-attack-id="technique:ylva-fallender-dorn"]').click();
+      const variant = library.locator('[data-action="select-variant"]');
+      await variant.selectOption('ylva-speer:foot:two-handed');
+      assert.match(await page.locator('#attack-preview').innerText(),/1W20 \+7/);
+      assert.match(await page.locator('#attack-preview').innerText(),/2W10\+5/);
+      await page.reload();
+      assert.equal(await page.locator('[data-action="select-variant"]').inputValue(),'ylva-speer:foot:two-handed');
+    } else {
+      await library.locator('[data-attack-id="technique:combat-style-drachentanz-sattelantritt"]').click();
+      assert.ok((await library.locator('[data-action="select-variant"] option').allTextContents()).every(text=>text.includes('beritten')));
+      await library.locator('[data-attack-id="technique:combat-style-drachentanz-jungdrache-lauernde-klaue"]').click();
+      assert.match(await page.locator('#attack-preview').innerText(),/Vorbereiteter Konter/);
+    }
+    await page.locator('#arsenal').screenshot({path:`${output}/${slug}-arsenal-desktop.png`});
     for (const width of [390,740]) {
       await page.setViewportSize({width,height:844});
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${slug}: overflow ${width}`);
       await page.screenshot({path:`${output}/${slug}-${width}.png`,fullPage:true});
     }
-    checks.push({slug,filters:true,details:true,mobile:true});
+    await page.setViewportSize({width:390,height:844});
+    await library.locator('[data-role="arsenal-category"]').selectOption('Passive Fähigkeiten & Herkunft');
+    await library.locator('[data-arsenal-row]:not([hidden]) button').first().click();
+    assert.match(await page.locator('#attack-preview').innerText(),/Passiv/);
+    await page.locator('#attack-preview').screenshot({path:`${output}/${slug}-preview-mobile.png`});
+    checks.push({slug,filters:true,selection:choices.length,mobile:true});
   }
+  await page.setViewportSize({width:1440,height:1100});
+  await page.goto(`${origin}/Gameplay%20Guide/index.html`);
+  await page.screenshot({path:`${output}/directory-desktop.png`,fullPage:true});
+  await page.getByRole('button',{name:/Haus Bleiddorn/}).click();
+  assert.equal(await page.locator('[data-guide-card]:not([hidden])').count(),1);
+  assert.equal(await page.locator('[data-guide-card]:not([hidden])').getAttribute('data-guide-card'),'ylva');
+  await page.getByRole('button',{name:/Alle Charaktere/}).click();
+  await page.locator('[data-role="directory-search"]').fill('Wyrm');
+  assert.equal(await page.locator('[data-guide-card]:not([hidden])').count(),1);
+  await page.getByRole('button',{name:/Alle Charaktere/}).click();
+  await page.getByRole('button',{name:'Gruppen',exact:true}).click();
+  assert.match(await page.locator('[data-directory-tree="group"]').innerText(),/keine zusätzlichen Gruppen/);
+  await page.getByRole('button',{name:'Häuser & Herkunft',exact:true}).click();
+  await page.setViewportSize({width:390,height:844});
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth + 1));
+  await page.screenshot({path:`${output}/directory-mobile.png`,fullPage:true});
   await page.addInitScript(() => { window._fbReady = true; window._fb = { loadCharacters:async()=>[], loadCreatures:async()=>[], loadComments:async()=>[], subscribeComments:()=>()=>{}, loadCommentTurn:async()=>null }; });
   await page.setViewportSize({width:1440,height:1100});
   await page.goto(`${origin}/AleriaAlmanach/AleriaAlmanach.html`,{waitUntil:'domcontentloaded'});

@@ -1,11 +1,7 @@
-const guides = new Map([
-  ['bSYZYAEOwiRgy44f6OmO', 'ylva'],
-  ['person--haus-wolfshorn--ylva-wolfshorn', 'ylva'],
-  ['person--haus-wyrm--gais-wyrm', 'gais']
-]);
+import { findGuideRegistration } from '../../../Gameplay Guide/modules/guide-registry.mjs';
 
 export function getCharacterGameplayGuide(character = {}) {
-  const slug = guides.get(character.id) || guides.get(character.genealogy?.worldPersonId);
+  const slug = findGuideRegistration(character)?.slug;
   return slug ? `/Gameplay%20Guide/${slug}.html` : '';
 }
 

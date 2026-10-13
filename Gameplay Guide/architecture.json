@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-10-14",
+  "directory": {
+    "registry": "modules/guide-registry.mjs",
+    "identity": "characterId und worldPersonId bleiben stabil; slug ist die dauerhafte öffentliche URL.",
+    "familySource": "Stammbäume/assets/js/data/families.registry.js",
+    "primary": "Bevorzugte familyId muss die Person enthalten. Vollständige Stammbaum-Hierarchie bleibt im Modell erhalten; Navigation zeigt Königreich, Grafschaft und Familie.",
+    "aliases": "familyAliasIds verweisen auf reale Herkunftsfamilien; Namen und Zuordnung kommen aus dem Familienregister.",
+    "secondary": "groupPaths: [{id, path: [{id, label}]}]. IDs sind stabil, Namen können sich ändern. Eine Figur kann mehreren Gruppen angehören.",
+    "familyFree": "Ohne Familienquelle wird der erste vollständig hinterlegte Gruppenpfad primär. Unzugeordnete Einträge brechen den Build mit verständlicher Meldung ab.",
+    "newGuide": "Registereintrag mit stabilen IDs, editorialModule und editorialExport hinzufügen. Der Build erzeugt Seite, Verzeichniskarte und Kategorien automatisch. Der Charakterbogen verwendet dasselbe leichte Register."
+  },
+  "arsenal": {
+    "source": "Kanonischer Charakter-Snapshot und gemeinsame Combat-Resolver; keine separate Regeln-Datenbank.",
+    "coverage": "Alle vorhandenen Waffen, erlernten Techniken, aktiven und passiven Fähigkeiten, Herkunftseigenschaften sowie unterstützte Magiehandlungen. Nicht ausführbare Einträge bleiben sichtbar.",
+    "variants": "Eigene Waffen, zu Fuß/beritten und unterstützte Griffarten. Kosten, Trefferwurf, Schaden, Heilung und Rettung werden beim Build aus der gemeinsamen Mechanik abgeleitet.",
+    "liveData": "Keine Schreibzugriffe und keine Live-Ressourcen. Der Guide dokumentiert den veröffentlichten Bogenstand. Historische Kämpfe und laufende Zustände bleiben unberührt.",
+    "selection": "Browserlokaler Modulzustand und teilbarer URL-Zustand mit technik/ausruestung. Keine Firebase-Abonnements, globalen States oder gespeicherten Ausrüstungswechsel.",
+    "rendering": "Statisches HTML mit eingebettetem, versioniertem Präsentationsmodell. Browser lädt nur kleine Auswahl-, Formatierungs- und Verzeichnismodule; keine Kampfengine und kein Familienregister.",
+    "icons": "Vorhandene Ressourcen-Icons und strukturierte Waffen-/Wirkungsicons; Würfel aus IconOrdner/Zauber Icons/Baldurs Gate/Würfel Icons. Eigene Aleria-Symbole für Tierverbundenheit, Wachsamkeit und Ausbildung. Keine Crusader-Kings-Icons: auch geerbte konfigurierte Trait-Icons werden am Guide-Adapter abgefangen und durch eigene Symbole ersetzt."
+  },
+  "validation": [
+    "Build und --check müssen identische Ausgaben liefern.",
+    "Arsenal vollständig gegenüber dem Charakter-Resolver; Kosten, besondere Folgen und Reittierbindung geprüft.",
+    "Alle Vorschaukarten, Filter, URL-Wiederherstellung, Icons und mobile Darstellung im Browser prüfen.",
+    "Familienfreie Gruppenpfade und Familienvorrang mit isolierten Testdaten prüfen.",
+    "Charakterbogen-Verknüpfungen und bestehende Szenenanzeige bleiben funktionsfähig."
+  ]
+}
