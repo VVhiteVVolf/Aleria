@@ -98,13 +98,15 @@
 
   function handleClick(event) {
     const action = event.target.closest('[data-loading-action]')?.dataset.loadingAction;
-    if (action === 'pause') { animationPaused = !animationPaused; render(); return; }
+    if (action === 'pause') { void sound?.tryAutoplay(); animationPaused = !animationPaused; render(); return; }
     if (action === 'sound') { sound?.toggle(); return; }
     if (action === 'reload') { window.location.reload(); return; }
+    if (!isReady() && action !== 'continue') void sound?.tryAutoplay();
     dismiss(action === 'continue');
   }
 
   function handleKeydown(event) {
+    if (!event.target.closest('button') && !['Enter', ' '].includes(event.key)) void sound?.tryAutoplay();
     if (event.key === 'Tab') {
       const buttons = [...view.root.querySelectorAll('button')].filter(button => !button.disabled && !button.hidden && !button.closest('[hidden]'));
       const first = buttons[0];
@@ -134,7 +136,7 @@
 
   function loadSound() {
     const button = view.root.querySelector('[data-loading-action="sound"]');
-    import('./loading-screen-sound.js?v=20261013-v1').then(({ createLoadingScreenSound }) => {
+    import('./loading-screen-sound.js?v=20261013-v2').then(({ createLoadingScreenSound }) => {
       if (leaving || !view) return;
       sound = createLoadingScreenSound({ button, src: view.root.dataset.loadingSound });
       void sound.tryAutoplay();
@@ -188,8 +190,8 @@
       });
       render();
       root.focus({ preventScroll: true });
-      loadArtwork();
       if (root.dataset.loadingSound) loadSound();
+      loadArtwork();
     } catch (error) {
       restoreContent();
       root.hidden = true;

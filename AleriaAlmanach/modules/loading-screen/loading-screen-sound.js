@@ -3,13 +3,14 @@ export function createLoadingScreenSound({ button, src }, environment = window) 
   const audio = new environment.Audio(src);
   const lifetime = new AbortController();
   audio.loop = true;
-  audio.preload = 'none';
+  audio.preload = 'auto';
   audio.volume = 0;
   let playing = false;
   let pending = false;
   let unavailable = false;
   let exiting = false;
   let destroyed = false;
+  let manuallyStopped = false;
   let operation = 0;
   let frame = null;
   let stopTimer = null;
@@ -18,7 +19,7 @@ export function createLoadingScreenSound({ button, src }, environment = window) 
   function render() {
     if (destroyed) return;
     button.disabled = unavailable || exiting;
-    button.textContent = unavailable ? '♪ Musik nicht verfügbar' : playing ? '♫ Musik an' : pending ? '♪ Musik startet …' : '♪ Musik starten';
+    button.textContent = unavailable ? '♪ Musik nicht verfügbar' : playing ? '♫ Musik ausschalten' : pending ? '♪ Musik startet …' : '♪ Musik starten';
     button.setAttribute('aria-pressed', String(playing));
     button.setAttribute('aria-label', playing ? 'Ladebildmusik ausschalten' : 'Ladebildmusik einschalten');
   }
@@ -54,18 +55,23 @@ export function createLoadingScreenSound({ button, src }, environment = window) 
   }
 
   async function start() {
-    if (destroyed || exiting || unavailable) return false;
+    if (destroyed || exiting || unavailable || manuallyStopped || pending) return false;
+    if (playing) return true;
     const current = ++operation;
+    cancelFade();
     pending = true;
     audio.volume = 0;
     render();
     try {
       await audio.play();
-      if (destroyed || exiting || current !== operation) { audio.pause(); return false; }
+      if (destroyed || exiting || current !== operation) {
+        if (destroyed || exiting || (!pending && !playing)) audio.pause();
+        return false;
+      }
       pending = false;
       playing = true;
       render();
-      void fadeTo(.55, 850);
+      void fadeTo(.55, 6000);
       return true;
     } catch {
       if (current === operation) { pending = false; playing = false; render(); }
@@ -76,6 +82,7 @@ export function createLoadingScreenSound({ button, src }, environment = window) 
   function toggle() {
     if (destroyed || exiting) return;
     if (playing || pending) {
+      manuallyStopped = true;
       operation += 1;
       cancelFade();
       audio.pause();
@@ -83,7 +90,10 @@ export function createLoadingScreenSound({ button, src }, environment = window) 
       playing = false;
       pending = false;
       render();
-    } else void start();
+    } else {
+      manuallyStopped = false;
+      void start();
+    }
   }
 
   async function fadeOut(duration = 1800) {
@@ -107,7 +117,23 @@ export function createLoadingScreenSound({ button, src }, environment = window) 
     lifetime.abort();
   }
 
-  audio.addEventListener('error', () => { unavailable = true; playing = false; pending = false; cancelFade(); render(); }, { signal: lifetime.signal });
+  audio.addEventListener('error', () => {
+    operation += 1;
+    unavailable = true;
+    playing = false;
+    pending = false;
+    cancelFade();
+    audio.pause();
+    audio.volume = 0;
+    render();
+  }, { signal: lifetime.signal });
+  audio.addEventListener('pause', () => {
+    if (destroyed || exiting || pending || !playing || !audio.paused) return;
+    playing = false;
+    cancelFade();
+    audio.volume = 0;
+    render();
+  }, { signal: lifetime.signal });
   environment.addEventListener('pagehide', destroy, { once: true, signal: lifetime.signal });
   render();
   return Object.freeze({ tryAutoplay: start, toggle, fadeOut, destroy });

@@ -50,9 +50,13 @@ Die finalen Webgrafiken liegen in `public/assets/loading-screen/`.
 
 `loading-screen-sound.js` besitzt ein eigenes Audioelement. Quelle ist die vom
 Nutzer bereitgestellte `Downloads/Ladebild musik.mpeg` (MP3, 219 Sekunden), als
-`ladebild-musik-v1.mp3` für das Web ohne Coverbild aufbereitet. Autoplay wird versucht;
-bei einer Browsersperre startet der Musikschalter den Ton durch eine Nutzergeste.
-Der Ton blendet beim Start über 850 ms ein und beim Betreten über 1800 ms aus.
+`ladebild-musik-v1.mp3` für das Web ohne Coverbild aufbereitet. Das Tonmodul wird
+im Kopf der Seite vorgeladen; sobald der Dialog existiert, wird Autoplay versucht.
+Bei einer Browsersperre wird der Start bei einer passenden Interaktion im
+Ladebildschirm erneut versucht; zusätzlich bleibt der Musikschalter verfügbar.
+Manuelles Ausschalten wird bei weiteren Interaktionen respektiert.
+Der Ton blendet beim Start aus vollständiger Stille über sechs Sekunden ein und
+beim Betreten über 1800 ms aus.
 Danach werden Wiedergabe, Quelle und Listener vollständig freigegeben. Ein eigener
 Timer stoppt den Ton auch bei angehaltenen Animationsframes in Hintergrundtabs;
 `pagehide` beendet ihn sofort. Musik blockiert keinen Ladefortschritt.

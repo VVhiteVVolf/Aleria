@@ -10,7 +10,7 @@ const source = readFileSync(new URL('../modules/loading-screen/loading-screen.js
 const settle = () => new Promise(resolve => setImmediate(resolve));
 class Controller extends AbortController { constructor() { super(); setMaxListeners(30, this.signal); } }
 
-function screen({ reducedMotion = false, artFails = false } = {}) {
+function screen({ reducedMotion = false, artFails = false, withSound = false } = {}) {
   const window = new EventTarget();
   const document = new EventTarget();
   const timers = new Map();
@@ -30,12 +30,13 @@ function screen({ reducedMotion = false, artFails = false } = {}) {
     return element;
   }
   const root = node({ loadingImages: 'one.webp two.webp' });
+  if (withSound) root.dataset.loadingSound = 'music.mp3';
   root.hidden = true;
   const content = node();
   const target = node(); target.parent = content;
   content.querySelector = () => target;
-  const names = ['status', 'detail', 'hint', 'recovery', 'enter', 'pause', 'continue', 'progress'];
-  const fields = Object.fromEntries(names.map(name => [name, node(['enter', 'pause', 'continue'].includes(name) ? { loadingAction: name } : {})]));
+  const names = ['status', 'detail', 'hint', 'recovery', 'enter', 'pause', 'continue', 'progress', 'sound'];
+  const fields = Object.fromEntries(names.map(name => [name, node(['enter', 'pause', 'continue', 'sound'].includes(name) ? { loadingAction: name } : {})]));
   const steps = ['page', 'shell', 'modules', 'characters', 'creatures', 'art'].map(name => node({ loadingStep: name }));
   for (const field of [...Object.values(fields), ...steps]) field.parent = root;
   root.querySelector = selector => selector === 'progress' ? fields.progress
@@ -50,8 +51,13 @@ function screen({ reducedMotion = false, artFails = false } = {}) {
   window.clearTimeout = id => timers.delete(id);
   window.location = { reload() { window.reloaded = true; } };
   class Image { set src(value) { queueMicrotask(() => artFails ? this.onerror() : this.onload()); } }
-  const context = vm.createContext({ window, document, AbortController: Controller, Image, console });
-  vm.runInContext(source, context);
+  const soundtrack = { starts: 0, toggles: 0, fades: 0,
+    tryAutoplay() { this.starts += 1; }, toggle() { this.toggles += 1; }, fadeOut() { this.fades += 1; }
+  };
+  const loadSoundModule = async () => ({ createLoadingScreenSound: () => soundtrack });
+  const context = vm.createContext({ window, document, AbortController: Controller, Image, console, loadSoundModule });
+  const runnable = withSound ? source.replace(/import\('\.\/loading-screen-sound\.js\?[^']+'\)/, 'loadSoundModule()') : source;
+  vm.runInContext(runnable, context);
   function emit(where, type, detail) { where.dispatchEvent(new CustomEvent(type, { detail })); }
   function mount() { document.readyState = 'interactive'; emit(document, 'readystatechange'); }
   function click(field = root) { const event = new Event('click'); Object.defineProperty(event, 'target', { value: field }); root.dispatchEvent(event); }
@@ -62,7 +68,7 @@ function screen({ reducedMotion = false, artFails = false } = {}) {
     emit(window, 'almanach:initial-modules-settled', { offline });
     emit(document, 'aleria:characters-changed'); emit(document, 'aleria:creatures-changed');
   }
-  return { window, document, root, content, fields, target, emit, mount, click, tick, ready, timers };
+  return { window, document, root, content, fields, target, emit, mount, click, tick, ready, timers, soundtrack };
 }
 
 test('the loading screen waits for all real milestones and only exits on user input', async () => {
@@ -124,13 +130,30 @@ test('offline data and decorative image errors do not deadlock the application',
   assert.match(ui.fields.detail.textContent, /Online-Daten/);
 });
 
+test('sound starts on mounting, retries on loading interactions, and fades on entry without restarting', async () => {
+  const ui = screen({ withSound: true }); ui.mount(); await settle();
+  assert.equal(ui.soundtrack.starts, 1);
+  ui.click();
+  assert.equal(ui.soundtrack.starts, 2);
+  assert.equal(ui.soundtrack.fades, 0);
+  ui.click(ui.fields.sound);
+  assert.equal(ui.soundtrack.toggles, 1);
+  assert.equal(ui.soundtrack.starts, 2);
+  assert.notEqual(ui.root.dataset.state, 'leaving');
+  ui.ready(); ui.click();
+  assert.equal(ui.soundtrack.starts, 2);
+  assert.equal(ui.soundtrack.fades, 1);
+  ui.tick(380);
+  assert.equal(ui.root.removed, true);
+});
+
 function soundEnvironment() {
   const platform = new EventTarget();
   const frames = new Map(); const timers = new Map();
   let now = 0; let id = 0; let audio;
   class Audio extends EventTarget {
     constructor(src) { super(); this.src = src; this.volume = 1; this.paused = true; audio = this; }
-    async play() { if (this.blocked) throw new Error('NotAllowedError'); this.paused = false; }
+    async play() { this.playCalls = (this.playCalls || 0) + 1; if (this.blocked) throw new Error('NotAllowedError'); this.paused = false; }
     pause() { this.paused = true; }
     removeAttribute() { this.src = ''; }
     load() { this.released = true; }
@@ -156,14 +179,58 @@ test('blocked autoplay leaves a working music button and can start after a gestu
   assert.equal(await env.sound.tryAutoplay(), false);
   assert.equal(env.button.disabled, false);
   assert.match(env.button.textContent, /starten/);
-  env.audio.blocked = false; env.sound.toggle(); await settle(); env.advance(900);
+  env.audio.blocked = false; env.sound.toggle(); await settle(); env.advance(6000);
+  assert.equal(env.audio.paused, false);
+  assert.equal(env.audio.volume, .55);
+  env.sound.destroy();
+});
+
+test('autoplay fades in slowly from silence, and repeated interactions do not restart it', async () => {
+  const env = soundEnvironment(); await env.sound.tryAutoplay();
+  assert.equal(env.audio.volume, 0);
+  assert.equal(env.audio.paused, false);
+  env.advance(1000);
+  assert.ok(env.audio.volume > 0 && env.audio.volume < .05);
+  const quietVolume = env.audio.volume;
+  await env.sound.tryAutoplay();
+  assert.equal(env.audio.playCalls, 1);
+  assert.equal(env.audio.volume, quietVolume);
+  env.advance(2000);
+  assert.equal(env.audio.volume, .275);
+  env.advance(3000);
+  assert.equal(env.audio.volume, .55);
+  env.sound.destroy();
+});
+
+test('automatic gesture retries respect manual muting, while the music button can resume', async () => {
+  const env = soundEnvironment(); env.audio.blocked = true;
+  await env.sound.tryAutoplay(); env.audio.blocked = false;
+  await env.sound.tryAutoplay(); env.advance(6000);
+  assert.equal(env.audio.paused, false);
+  env.sound.toggle();
+  assert.equal(env.audio.paused, true);
+  await env.sound.tryAutoplay();
+  assert.equal(env.audio.paused, true);
+  assert.equal(env.audio.playCalls, 2);
+  env.sound.toggle(); await settle();
+  assert.equal(env.audio.paused, false);
+  assert.equal(env.audio.volume, 0);
+  env.sound.destroy();
+});
+
+test('a browser pause resets the music control and allows a new user gesture to resume it', async () => {
+  const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(2000);
+  env.audio.paused = true; env.audio.dispatchEvent(new Event('pause'));
+  assert.match(env.button.textContent, /starten/);
+  assert.equal(env.audio.volume, 0);
+  await env.sound.tryAutoplay(); env.advance(6000);
   assert.equal(env.audio.paused, false);
   assert.equal(env.audio.volume, .55);
   env.sound.destroy();
 });
 
 test('entering fades the actual soundtrack progressively and releases the audio', async () => {
-  const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(900);
+  const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(6000);
   const ending = env.sound.fadeOut();
   env.advance(900);
   assert.ok(env.audio.volume > 0 && env.audio.volume < .55);
@@ -176,16 +243,27 @@ test('entering fades the actual soundtrack progressively and releases the audio'
 });
 
 test('the soundtrack stops even if a background tab suspends animation frames', async () => {
-  const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(900);
+  const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(6000);
   const ending = env.sound.fadeOut(); env.advance(1850, false); await ending;
   assert.equal(env.audio.paused, true);
   assert.equal(env.audio.volume, 0);
 });
 
 test('page navigation stops music immediately, including during a fade', async () => {
-  const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(900);
+  const env = soundEnvironment(); await env.sound.tryAutoplay(); env.advance(6000);
   env.sound.fadeOut(); env.platform.dispatchEvent(new Event('pagehide')); await settle();
   assert.equal(env.audio.paused, true);
+  assert.equal(env.audio.released, true);
+});
+
+test('entering during a pending play request cannot start music after cleanup', async () => {
+  const env = soundEnvironment();
+  let finishPlay;
+  env.audio.play = () => new Promise(resolve => { finishPlay = () => { env.audio.paused = false; resolve(); }; });
+  const starting = env.sound.tryAutoplay();
+  await env.sound.fadeOut(); finishPlay(); await starting;
+  assert.equal(env.audio.paused, true);
+  assert.equal(env.audio.volume, 0);
   assert.equal(env.audio.released, true);
 });
 
