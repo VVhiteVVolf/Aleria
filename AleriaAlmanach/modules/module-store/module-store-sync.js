@@ -567,11 +567,13 @@ function applyRemoteModuleStore(payload) {
 async function setupModuleStoreRemoteSync() {
   if (_moduleStoreRemoteSyncStarted) return;
   _moduleStoreRemoteSyncStarted = true;
+  let startupOffline = false;
 
   try {
     const ready = await waitForFirebaseReady();
     if (!ready || !window._fb?.loadModuleStore) {
       _moduleStoreRemoteSyncStarted = false;
+      startupOffline = true;
       updateFirebaseSyncStatus('offline', 'Online-Speicher nicht erreichbar. Änderungen bleiben lokal.');
       return;
     }
@@ -639,9 +641,14 @@ async function setupModuleStoreRemoteSync() {
     subscribeToModuleStoreUpdates();
   } catch (error) {
     _moduleStoreRemoteSyncStarted = false;
+    startupOffline = true;
     console.error('module store remote sync failed:', error);
     updateFirebaseSyncStatus('error', 'Online-Synchronisation fehlgeschlagen.');
     showFriendlyAppError(error, 'Almanach-Module konnten nicht online synchronisiert werden.');
+  } finally {
+    window.dispatchEvent(new CustomEvent('almanach:initial-modules-settled', {
+      detail: { offline: startupOffline }
+    }));
   }
 }
 

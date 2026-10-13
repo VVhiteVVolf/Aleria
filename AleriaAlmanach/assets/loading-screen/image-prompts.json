@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-13",
+  "tool": "built-in image_gen",
+  "style": "Explicit user request: playful comic chibi side-scrolling loading screen; character identity from existing portraits; clean anime lineart and cel shading from anime-scene-portrait preset.",
+  "prompts": [
+    {
+      "asset": "travellers-walk-v1",
+      "prompt": "Use case: illustration-story.\nAsset type: production transparent sprite atlas for an animated Aleria Almanach loading screen.\nCreate ONE square PNG sprite sheet, exactly FOUR equal columns and FOUR equal rows (16 equal square cells), preferably 1536 x 1536. No visible grid, labels, lettering or cell borders. TRUE transparent background in all empty pixels. Each cell contains ONE complete full-body chibi walking sprite facing to the RIGHT, shown in side / gentle three-quarter profile so identity remains clear. Every cell has generous empty margin, feet at exactly 91% of cell height. Keep each character's scale, outfit, face, body position and ground baseline identical across its four frames. The four columns form a natural looping WALK CYCLE: left foot forward, legs passing, right foot forward, legs passing with opposite arm. Arms swing subtly; the entire character is never cut off. Two-and-a-half heads tall, very cute, playful comic/anime, clean dark warm outlines, simple cel shading, restrained harmonious colors, Tales of Xillia / Frieren-inspired anime simplified to very expressive adorable chibis. This explicit chibi sprite format overrides normal portrait proportions.\nReference images are CHARACTER IDENTITY AND CLOTHING references only. Row 1 uses reference 1 Gawain Draig: cheerful energetic young man, long vivid orange-red tousled hair, blue eyes, huge sunny grin, dark dragon chest armor, red scarf trailing behind, dark boots, sheathed sword; lively leader stride.\nRow 2 uses reference 2 Freya Skald: long golden blonde hair, warm brown eyes, gentle happy smile, gold breastplate and shoulders, navy blue cape and blue skirt, brown boots, small wooden lute carried in front with both arms while strolling; lute retained in every frame.\nRow 3 uses reference 3 Guinevere Neidr: chin-length auburn-red bob, blue-green eyes, amused confident smile, charcoal armor with gold trim and small gold snake chest motif, pale cream hood/capelet, brown gloves and boots, bow and quiver on back.\nRow 4 uses reference 4 Fenrir Varulv: tousled short blonde hair, blue-gray eyes, tiny chin stubble, stoic slightly grumpy expression, stockier body, muted brick-red armor with white wolf chest motif, fluffy pale gray fur collar, dark brown boots, axe secured at hip. NO helmet, NO wolf ears.\nAll four frames within each row must portray the SAME character, with genuinely alternating foot poses. All characters travel RIGHT. Nothing from another row crosses a cell boundary. Flat uniform neutral daylight on the sprites; NO scenery, ground, shadows, effects, decorative stars, speech bubbles, background color or painted checkerboard. Crisp readable silhouettes at small size.",
+      "revisionPrompt": "Edit this transparent 4x4 chibi sprite atlas for a REAL loopable walk cycle. Preserve exactly the FOUR characters in their existing FOUR ROWS, identical identity, faces, hair, costumes, colors, outlines, clean cel shading, props, scale, placement, square canvas, 4x4 equal cell layout and TRUE alpha transparency. Keep all four full figures in each row and every silhouette within its own equal square cell. The current sheet repeats the stretched foot stance: fix ONLY the limb poses so the four frames are visibly different.\nCOLUMN 1: keep the original stretched step, RIGHT-facing, the foremost near boot extended to the RIGHT.\nCOLUMN 2: PASSING POSE, the near boot must now be directly BELOW THE HIP touching ground, rear boot lifted behind with sharply BENT KNEE. Feet close together, narrower leg silhouette than columns 1 and 3.\nCOLUMN 3: OPPOSITE CONTACT, the near boot must extend BEHIND to the LEFT, far boot extends RIGHT in front; reverse the swinging arms for Gawain, Guinevere and Fenrir.\nCOLUMN 4: OPPOSITE PASSING POSE, the far boot now directly below hip on the ground, near knee BENT and raised in front, near boot visibly OFF the ground. Again narrow feet together pose.\nApply these same column changes to ALL FOUR rows. Freya keeps holding her lute with both hands but alternates leg poses. Do not change the face or flip the whole sprite. Maintain consistent feet ground baseline in each row, about 92% of each cell's height. No background, no floor, no shadows, no extra symbols, NO labels or borders. Show clearly bent knees and WALKING motion.",
+      "references": [
+        "StammbÃ¤ume/assets/images/portraits/haus-draig/gawain-draig.jpg",
+        "StammbÃ¤ume/assets/images/portraits/haus-skald/freya-skald.png",
+        "StammbÃ¤ume/assets/images/portraits/haus-draig/guinevere-neidr.jpg",
+        "StammbÃ¤ume/assets/images/portraits/haus-varulv/fenrir-varulv.png"
+      ],
+      "layout": {
+        "columns": 4,
+        "rows": 4,
+        "rowOrder": [
+          "Gawain Draig",
+          "Freya Skald",
+          "Guinevere Neidr",
+          "Fenrir Varulv"
+        ]
+      }
+    },
+    {
+      "asset": "landscape-v1",
+      "prompt": "Use case: illustration-story. Asset type: a seamless horizontally repeating MIDGROUND landscape strip for a whimsical 2D chibi fantasy side-scrolling loading screen, ONE wide 3:1 horizontal PNG with TRUE transparent sky above the scenery. Side elevation / shallow storybook view, not top-down, no perspective road. Cute cozy comic fantasy with rounded slightly wonky forms, confident warm dark-brown hand-drawn outlines, simple flat cel-shaded pastel colors, matching the attached chibi sprites in a friendly storybook world, very few details. Landscape subject: a tiny golden-straw-roof cottage and little garden toward the LEFT quarter, round clusters of sage-green trees and soft rolling grassy hills through center, a quaint little wood-and-cream windmill with FOUR wooden blades toward the CENTER-RIGHT, a distant small cream-stone fairytale castle with three slate-blue towers toward RIGHT quarter. Leave generous empty spaces between landmarks so they arrive one after another while the strip scrolls. Only these buildings and trees, no characters, animals or lettering. Buildings mostly in the middle vertical 35%-78% of the canvas. A low continuous rolling green grass bank occupies the bottom 23% all the way across. The TOP 25% of the image must be EMPTY TRANSPARENT, and transparency follows every roof/tree/hill silhouette. Both leftmost and rightmost 8% edges contain only the same low grassy bank at matching height and color, NO cropped buildings or trees touching edges: make the strip tile invisibly horizontally. No sun, moon, stars, clouds, sky color, horizon backdrop, vignette, frame, shadow around silhouette, blur, checkerboard or text. The image will scroll behind separately animated foreground walking characters and over a changing day/night CSS sky. Keep the scene charming and intentionally simple, not realistic or intricate.",
+      "references": [
+        "travellers-walk-v1"
+      ]
+    },
+    {
+      "asset": "hills-v1",
+      "prompt": "Use case: illustration-story. Create ONE very wide 3:1 horizontal seamless fantasy distant landscape layer for the same playful 2D chibi side-scrolling scene as the attached reference. TRUE transparent PNG sky. ONLY a very simple silhouette panorama of soft rounded blue-sage mountains, pale blue-gray hills and tiny indistinct distant conifer clusters, soft warm dark outlines, flat pastel cel shading with only two tones per layer, calm cute comic storybook feeling. No buildings, people, animals, clouds, stars, sun, moon, text, no detailed rocks or foliage. A few big rounded peaks rise to roughly 40% canvas height; lower blue hills overlap in the bottom third and the muted sage land continues as a solid band to the bottom canvas edge. TOP 30% canvas fully transparent. Palette airy desaturated dusty teal and pale blue and soft lavender, much paler than the supplied foreground buildings reference, to keep the characters prominent. Both left and right edges finish at the EXACT same low hill height and muted sage color, with no peaks at either edge; seamlessly tile horizontally. No fog overlay, glow, drop shadows, paper rectangle or checkerboard, sharp clean illustration edges with real alpha. Match the friendly simplicity of the reference without copying the cottage or castle.",
+      "references": [
+        "landscape-v1"
+      ]
+    }
+  ],
+  "originals": "AleriaAlmanach/assets/loading-screen/source",
+  "webAssets": "AleriaAlmanach/public/assets/loading-screen",
+  "encoding": "WebP quality 88, method 6, original dimensions and alpha retained; no retouching."
+}

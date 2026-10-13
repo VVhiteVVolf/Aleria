@@ -6,6 +6,10 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>Aleria Almanach</title>
+<script src="./modules/loading-screen/loading-screen.js?v=20261013-v5"></script>
+<link rel="stylesheet" href="./modules/loading-screen/loading-screen.css?v=20261013-v5">
+<link rel="preload" as="image" href="./public/assets/loading-screen/gawain-stand-v4.webp">
+<link rel="preload" as="image" href="./public/assets/loading-screen/freya-stand-v4.webp">
 <link rel="icon" type="image/png" href="../IconOrdner/ReiterIcons/Platzhalter.png">
 <link rel="preconnect" href="https://i.imgur.com">
 <link rel="dns-prefetch" href="//i.imgur.com">
@@ -185,7 +189,7 @@
   <script src="./modules/session/session-focus.js?v=20260908-module-navigation-v1" defer></script>
   <script src="./modules/module-store/module-section-policy.js?v=20260826-section-policy-v1" defer></script>
   <script src="./modules/module-store/module-store-tree.js?v=20260703-category-icons-v1" defer></script>
-  <script src="./modules/module-store/module-store-sync.js?v=20261010-firebase-sync-v3" defer></script>
+  <script src="./modules/module-store/module-store-sync.js?v=20261013-startup-v1" defer></script>
   <script src="./modules/module-store/module-store-sections.js?v=20261005-group-overview-v1" defer></script>
   <script src="./modules/module-store/module-entry-write.js?v=20261005-group-edit-access-v1" defer></script>
   <script src="./modules/world-date/world-date-model.js?v=20260826-world-date-v1" defer></script>
@@ -473,6 +477,63 @@
 </head>
 <body class="almanach-app">
 
+<section class="almanach-loading" data-loading-screen data-state="loading" data-loading-images="./public/assets/loading-screen/gawain-stand-v4.webp ./public/assets/loading-screen/freya-stand-v4.webp ./public/assets/loading-screen/guinevere-stand-v4.webp ./public/assets/loading-screen/fenrir-stand-v4.webp ./public/assets/loading-screen/landscape-v1.webp ./public/assets/loading-screen/hills-v1.webp" data-loading-sound="./public/assets/loading-screen/ladebild-musik-v1.mp3" role="dialog" aria-modal="true" aria-labelledby="almanach-loading-title" aria-describedby="almanach-loading-status" aria-busy="true" tabindex="-1" hidden>
+  <div class="almanach-loading__topline">
+    <span class="almanach-loading__brand">✦ &nbsp; Geschichten aus Aleria</span>
+    <div class="almanach-loading__controls">
+      <button class="almanach-loading__pause" type="button" data-loading-action="sound" aria-pressed="false" disabled>♪ Musik vorbereiten …</button>
+      <button class="almanach-loading__pause" type="button" data-loading-action="pause" aria-pressed="false">Ⅱ Animation pausieren</button>
+    </div>
+  </div>
+  <div class="almanach-loading__heading">
+    <p class="almanach-loading__eyebrow">Eine kleine Reise, bevor es losgeht</p>
+    <h2 class="almanach-loading__title" id="almanach-loading-title">Aleria Almanach</h2>
+    <p class="almanach-loading__subtitle">Jede Geschichte beginnt mit einem Schritt.</p>
+  </div>
+  <div class="almanach-loading__scene" role="img" aria-label="Gawain führt die wandernde Chibi-Gruppe nach rechts an, gefolgt von Freya mit ihrer Laute und Guinevere mit ihrem Bogen. Mit etwas Abstand folgt Fenrir. Hügel, ein Bauernhaus, eine Windmühle und eine Burg ziehen vorbei; der Tag wechselt zu einer sternklaren Nacht.">
+    <div class="almanach-loading__night" aria-hidden="true"></div>
+    <div class="almanach-loading__sunset" aria-hidden="true"></div>
+    <div class="almanach-loading__stars" aria-hidden="true"></div>
+    <div class="almanach-loading__sun" aria-hidden="true"></div>
+    <div class="almanach-loading__moon" aria-hidden="true"></div>
+    <div class="almanach-loading__cloud" aria-hidden="true"></div>
+    <div class="almanach-loading__cloud almanach-loading__cloud--second" aria-hidden="true"></div>
+    <div class="almanach-loading__hills" aria-hidden="true"></div>
+    <div class="almanach-loading__landscape" aria-hidden="true"></div>
+    <div class="almanach-loading__road" aria-hidden="true"></div>
+    <div class="almanach-loading__party" aria-hidden="true">
+      <div class="almanach-loading__traveller almanach-loading__traveller--fenrir" data-loading-traveller="fenrir"></div>
+      <div class="almanach-loading__traveller almanach-loading__traveller--guinevere" data-loading-traveller="guinevere"></div>
+      <div class="almanach-loading__traveller almanach-loading__traveller--freya" data-loading-traveller="freya"></div>
+      <div class="almanach-loading__traveller almanach-loading__traveller--gawain" data-loading-traveller="gawain"></div>
+    </div>
+  </div>
+  <div class="almanach-loading__names" aria-hidden="true">Fenrir Varulv <span>· &nbsp; · &nbsp; ·</span> Guinevere Neidr <span>·</span> Freya Skald <span>·</span> Gawain Draig &nbsp; →</div>
+  <div class="almanach-loading__footer">
+    <div role="status" aria-live="polite" aria-atomic="true">
+      <h3 class="almanach-loading__status" id="almanach-loading-status" data-loading-status>Aleria erwacht …</h3>
+      <p class="almanach-loading__detail" data-loading-detail>Die Welt wird vorbereitet …</p>
+    </div>
+    <progress class="almanach-loading__progress" max="6" value="0" aria-label="Ladefortschritt des Almanachs"></progress>
+    <div class="almanach-loading__steps" aria-hidden="true">
+      <span data-loading-step="page">Seite</span>
+      <span data-loading-step="shell">Archiv</span>
+      <span data-loading-step="modules">Weltwissen</span>
+      <span data-loading-step="characters">Figuren</span>
+      <span data-loading-step="creatures">Kreaturen</span>
+      <span data-loading-step="art">Reisebilder</span>
+    </div>
+    <button class="almanach-loading__enter" type="button" data-loading-action="enter" disabled>Die Welt wird geladen …</button>
+    <p class="almanach-loading__hint" data-loading-hint>Unsere kleine Reise begleitet dich, bis alles bereit ist.</p>
+    <div class="almanach-loading__recovery" data-loading-recovery hidden>
+      <button type="button" data-loading-action="continue" hidden>Mit aktuellem Stand öffnen</button>
+      <button type="button" data-loading-action="reload">Neu laden</button>
+      <p>Du kannst weiter warten. Bei langsamer Verbindung laden noch fehlende Inhalte im Hintergrund nach.</p>
+    </div>
+  </div>
+</section>
+
+<div data-almanach-content>
 <header class="almanach-header">
   <div data-role="almanach-account"></div>
   <div class="header-pre">Aus den Archiven der Welt</div>
@@ -563,7 +624,7 @@
   </div>
 </div>
 
-<script src="./app.js?v=20260520-cleanup-v1" defer></script>
+<script src="./app.js?v=20261013-startup-v2" defer></script>
 <script src="./module-richtext.js?v=20260520-cleanup-v1" defer></script>
 <script src="./module-import-export.js?v=20260703-scene-module-editor-v1" defer></script>
 <script src="./modules/app/app-interactions.js?v=20260804-preview-debounce-v1" defer></script>
@@ -1780,4 +1841,5 @@
 
 
 
+</div>
 </body></html>
