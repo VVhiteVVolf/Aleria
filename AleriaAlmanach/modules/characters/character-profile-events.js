@@ -162,12 +162,18 @@ document.addEventListener('click', event => {
   handleCharacterProfileClick(event);
 });
 
-document.addEventListener('keydown', event => {
+function handleCharacterProfileKeydown(event) {
+  if (event.defaultPrevented || event.repeat || event.isComposing) return;
   if (event.key !== 'Enter' && event.key !== ' ') return;
   if (!event.target.closest('#char-profile-overlay')) return;
-  if (!getCharacterProfileActionTarget(event)) return;
+  // Native buttons already generate a click. Text fields must retain spaces
+  // and Enter; only the custom, focusable emote placeholder needs activation.
+  const target = getCharacterProfileActionTarget(event);
+  if (!target?.matches('[role="button"]')) return;
   handleCharacterProfileClick(event);
-});
+}
+
+document.addEventListener('keydown', handleCharacterProfileKeydown);
 
 document.addEventListener('input', event => {
   if (!event.target.closest('#char-profile-overlay')) return;

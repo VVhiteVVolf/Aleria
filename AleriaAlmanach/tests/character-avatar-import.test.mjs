@@ -201,11 +201,16 @@ test('grid updates keep existing image and label nodes when another slot changes
   };
   context.document.createElement = () => ({
     dataset: {}, writes: 0,
-    set innerHTML(html) { this.writes++; this.input = { value: html.match(/type="text" value="([^"]*)"/)?.[1] || '' }; },
-    querySelector() { return this.input; }
+    set innerHTML(html) {
+      this.writes++;
+      this.input = { value: html.match(/type="text" value="([^"]*)"/)?.[1] || '' };
+      this.image = html.includes('<img ') ? { dataset: { emoteSrc: html.match(/data-emote-src="([^"]*)"/)?.[1] } } : null;
+    },
+    querySelector(selector) { return selector === 'img' ? this.image : this.input; }
   });
   context.document.getElementById = id => id === 'cp-emote-grid' ? grid : null;
   vm.runInContext(fs.readFileSync(new URL('../modules/characters/character-profile.js', import.meta.url), 'utf8'), context);
+  vm.runInContext(fs.readFileSync(new URL('../modules/characters/character-media-editor.js', import.meta.url), 'utf8'), context);
   vm.runInContext(`_emoteSlots = [{ img: 'https://i.imgur.com/first.png', label: 'Name' }, null];`, context);
   context.updateCharacterAvatarImportSummary = () => {};
   context.escapeHtml = value => value;
@@ -217,4 +222,36 @@ test('grid updates keep existing image and label nodes when another slot changes
   assert.equal(grid.children[0].writes, 1);
   assert.equal(grid.children[0].input, originalInput);
   assert.equal(grid.children[1].writes, 2);
+  const originalImage = grid.children[0].image;
+  vm.runInContext(`_emoteSlots[0].label = 'Umbenannt';`, context);
+  context.renderEmoteGrid();
+  assert.equal(grid.children[0].writes, 1);
+  assert.equal(grid.children[0].image, originalImage);
+  assert.equal(grid.children[0].input, originalInput);
+  assert.equal(originalInput.value, 'Umbenannt');
+});
+
+test('spaces and Enter remain native in text fields and buttons; only emote placeholders get keyboard clicks', () => {
+  const { context, listeners } = loadImporter();
+  const opened = [];
+  context.openEmoteUrlInput = index => opened.push(index);
+  let prevented = 0;
+  const event = (key, role, repeat = false) => ({
+    key, repeat,
+    target: {
+      dataset: { charProfileAction: role === 'placeholder' ? 'open-emote-url' : 'update-emote-label', emoteIndex: '2' },
+      closest() { return this; },
+      matches() { return role === 'placeholder'; }
+    },
+    preventDefault() { prevented++; }
+  });
+  for (const role of ['input', 'button']) {
+    for (const key of [' ', 'Enter']) listeners.get('keydown')(event(key, role));
+  }
+  listeners.get('keydown')(event(' ', 'placeholder', true));
+  assert.equal(prevented, 0);
+  assert.deepEqual(opened, []);
+  listeners.get('keydown')(event('Enter', 'placeholder'));
+  assert.equal(prevented, 1);
+  assert.deepEqual(opened, [2]);
 });

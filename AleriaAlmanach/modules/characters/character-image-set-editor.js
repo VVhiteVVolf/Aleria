@@ -23,31 +23,53 @@ function syncActiveCharacterImageSetFromForm() {
   if (contentChanged) active.updatedAt = new Date().toISOString();
 }
 
-function renderCharacterImageSetTabs() {
+function renderCharacterImageSetTabs({ preserveNameInput = false } = {}) {
   const tabs = document.getElementById('cp-image-set-tabs');
   const nameInput = document.getElementById('cp-active-image-set-name');
   const deleteButton = document.getElementById('cp-delete-image-set');
   const active = getActiveCharacterImageSet();
   if (!tabs || !active) return;
-  tabs.innerHTML = _characterImageSets.map(set => `
-    <button type="button" role="tab" class="cp-image-set-tab${set.id === active.id ? ' active' : ''}"
-      aria-selected="${set.id === active.id ? 'true' : 'false'}"
-      data-char-profile-action="select-image-set" data-image-set-id="${escapeHtml(set.id)}">
-      <span>${escapeHtml(set.name)}</span>
-      <small>${set.emotes.length}/${CHARACTER_AVATAR_LIMIT}</small>
-    </button>
-  `).join('');
+  const existingTabs = new Map(Array.from(tabs.children, button => [button.dataset.imageSetId, button]));
+  const activeEmoteCount = _emoteSlots.filter(slot => slot?.img).length;
+  _characterImageSets.forEach((set, index) => {
+    const button = existingTabs.get(set.id) || document.createElement('button');
+    if (!existingTabs.has(set.id)) {
+      button.type = 'button';
+      button.className = 'cp-image-set-tab';
+      button.setAttribute('role', 'tab');
+      button.dataset.charProfileAction = 'select-image-set';
+      button.dataset.imageSetId = set.id;
+      button.innerHTML = '<span></span><small></small>';
+    }
+    const isActive = set.id === active.id;
+    if (button.classList.contains('active') !== isActive) button.classList.toggle('active', isActive);
+    const selected = String(isActive);
+    if (button.getAttribute('aria-selected') !== selected) button.setAttribute('aria-selected', selected);
+    const label = button.querySelector('span');
+    const count = button.querySelector('small');
+    const countText = `${isActive ? activeEmoteCount : set.emotes.length}/${CHARACTER_AVATAR_LIMIT}`;
+    if (label.textContent !== set.name) label.textContent = set.name;
+    if (count.textContent !== countText) count.textContent = countText;
+    if (tabs.children[index] !== button) tabs.insertBefore(button, tabs.children[index] || null);
+    existingTabs.delete(set.id);
+  });
+  existingTabs.forEach(button => button.remove());
   if (nameInput) {
-    if (nameInput.value !== active.name) nameInput.value = active.name;
-    nameInput.disabled = active.id === CHARACTER_IMAGE_SET_DEFAULT_ID;
-    nameInput.title = nameInput.disabled ? 'Das Standard-Set behält seinen festen Namen.' : '';
+    if (!preserveNameInput && nameInput.value !== active.name) nameInput.value = active.name;
+    const isStandard = active.id === CHARACTER_IMAGE_SET_DEFAULT_ID;
+    const title = isStandard ? 'Das Standard-Set behält seinen festen Namen.' : '';
+    if (nameInput.disabled !== isStandard) nameInput.disabled = isStandard;
+    if (nameInput.title !== title) nameInput.title = title;
   }
-  if (deleteButton) deleteButton.disabled = active.id === CHARACTER_IMAGE_SET_DEFAULT_ID;
+  if (deleteButton && deleteButton.disabled !== (active.id === CHARACTER_IMAGE_SET_DEFAULT_ID)) {
+    deleteButton.disabled = active.id === CHARACTER_IMAGE_SET_DEFAULT_ID;
+  }
 }
 
 function loadActiveCharacterImageSetIntoForm() {
   const active = getActiveCharacterImageSet();
   if (!active) return;
+  characterMediaEditor.resetPortraitPreview();
   const portraitField = document.getElementById('cp-portrait-url');
   if (portraitField) portraitField.value = active.portrait || '';
   _charPortraitUrl = active.portrait || null;
@@ -120,9 +142,10 @@ function renameActiveCharacterImageSet(value) {
     setCharacterAvatarImportStatus('Ein anderes Set trägt bereits diesen Namen.', true);
     return;
   }
+  if (active.name === name) return;
   active.name = name;
   active.updatedAt = new Date().toISOString();
-  renderCharacterImageSetTabs();
+  renderCharacterImageSetTabs({ preserveNameInput: true });
   scheduleCharacterImageLibraryPersistence('rename-image-set');
 }
 

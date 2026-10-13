@@ -14,12 +14,8 @@ function updateCharacterAvatarImportSummary() {
   const count = (_emoteSlots || []).filter(slot => slot?.img).length;
   const countNode = document.getElementById('cp-avatar-count');
   const limitNode = document.getElementById('cp-avatar-limit');
-  if (countNode) countNode.textContent = String(count);
-  if (limitNode) limitNode.textContent = String(CHARACTER_AVATAR_LIMIT);
-  if (typeof getActiveCharacterImageSet === 'function') {
-    const activeSet = getActiveCharacterImageSet();
-    if (activeSet) activeSet.emotes = normalizeCharacterImageSetEmotes((_emoteSlots || []).filter(Boolean));
-  }
+  if (countNode && countNode.textContent !== String(count)) countNode.textContent = String(count);
+  if (limitNode && limitNode.textContent !== String(CHARACTER_AVATAR_LIMIT)) limitNode.textContent = String(CHARACTER_AVATAR_LIMIT);
   if (typeof renderCharacterImageSetTabs === 'function') renderCharacterImageSetTabs();
 }
 

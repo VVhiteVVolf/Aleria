@@ -71,10 +71,10 @@ function syncPortraitDisplay(src, name) {
   const ph2  = document.getElementById('cp-portrait-thumb-ph');
 
   if (src) {
-    img1.src = src;
+    if (img1.getAttribute('src') !== src) img1.src = src;
     img1.style.display = 'block';
     ph1.style.display = 'none';
-    img2.src = src;
+    if (img2.getAttribute('src') !== src) img2.src = src;
     img2.style.display = 'block';
     ph2.style.display = 'none';
     return;
@@ -236,114 +236,11 @@ function closeCharProfile(options = {}) {
     if (!discard) return;
   }
   deactivateDialog('char-profile-overlay');
+  characterMediaEditor.dispose();
   _editingChar = null;
   _charPortraitUrl = null;
   _charProfileLoadedSnapshot = null;
   _pendingCharacterImport = null;
-}
-
-function previewPortraitUrl(url) {
-  const err = document.getElementById('cp-portrait-url-error');
-  if (!url) {
-    err.style.display = 'none';
-    syncPortraitDisplay(null, document.getElementById('cp-name').value || '?');
-    _charPortraitUrl = null;
-    scheduleCharacterImageLibraryPersistence('clear-portrait');
-    return;
-  }
-
-  const safeUrl = normalizeImageUrlForStorage(url);
-  if (!safeUrl) {
-    err.style.display = 'block';
-    _charPortraitUrl = null;
-    syncPortraitDisplay(null, document.getElementById('cp-name').value || '?');
-    return;
-  }
-
-  const img = new Image();
-  img.crossOrigin = 'anonymous';
-  img.addEventListener('load', () => {
-    const currentValue = normalizeImageUrlForStorage(document.getElementById('cp-portrait-url')?.value || '');
-    if (currentValue !== safeUrl) return;
-    err.style.display = 'none';
-    _charPortraitUrl = safeUrl;
-    syncPortraitDisplay(safeUrl, document.getElementById('cp-name').value || '?');
-    scheduleCharacterImageLibraryPersistence('portrait');
-  }, { once: true });
-  img.addEventListener('error', () => {
-    err.style.display = 'block';
-  }, { once: true });
-  img.src = safeUrl;
-}
-
-function openEmoteUrlInput(slotIndex) {
-  const url = prompt('Imgur-URL für Emote (z.B. https://i.imgur.com/xxxxx.png):');
-  if (!url) return;
-
-  const safeUrl = normalizeImageUrlForStorage(url);
-  if (!safeUrl) {
-    alert('Bitte eine gueltige http(s)-Bild-URL verwenden.');
-    return;
-  }
-
-  const img = new Image();
-  img.crossOrigin = 'anonymous';
-  img.addEventListener('load', () => {
-    const label = _emoteSlots[slotIndex]?.label || '';
-    _emoteSlots[slotIndex] = { img: safeUrl, label };
-    renderEmoteGrid();
-    scheduleCharacterImageLibraryPersistence('emote');
-  }, { once: true });
-  img.addEventListener('error', () => alert('Bild konnte nicht geladen werden. Bitte prüfe die URL.'), { once: true });
-  img.src = safeUrl;
-}
-
-function initEmoteSlots(existingEmotes) {
-  _emoteSlots = Array.from({ length: MAX_EMOTES }, (_, i) =>
-    (existingEmotes && existingEmotes[i]) ? { ...existingEmotes[i] } : null
-  );
-  renderEmoteGrid();
-}
-
-function renderEmoteGrid() {
-  const grid = document.getElementById('cp-emote-grid');
-  if (!grid) return;
-
-  _emoteSlots.forEach((slot, i) => {
-    const div = grid.children[i] || document.createElement('div');
-    const imageUrl = slot?.img || '';
-    const label = slot?.label || '';
-    if (div.dataset.imageUrl === imageUrl
-        && div.querySelector('.emote-label-input')?.value === label) return;
-    div.className = 'emote-slot';
-    div.dataset.imageUrl = imageUrl;
-    if (slot && slot.img) {
-      const safeLabel = escapeHtml(slot.label || '');
-      div.innerHTML = `
-        <img src="${sanitizeImageSrc(slot.img)}" alt="Emote ${i+1}" loading="lazy" decoding="async">
-        <span class="emote-image-error" role="status">Vorschau nicht ladbar · Link bleibt erhalten</span>
-        <button class="emote-remove-btn" type="button" data-char-profile-action="remove-emote" data-emote-index="${i}">✕</button>
-        <input class="emote-label-input" type="text" value="${safeLabel}"
-          placeholder="Label" maxlength="20"
-          data-char-profile-action="update-emote-label" data-emote-index="${i}">`;
-    } else {
-      div.innerHTML = `
-        <div class="emote-slot-placeholder" role="button" tabindex="0" data-char-profile-action="open-emote-url" data-emote-index="${i}" title="URL eingeben">
-          <span>+</span>
-        </div>
-        <input class="emote-label-input" type="text" value="${escapeHtml(label)}" placeholder="Label" maxlength="20"
-          data-char-profile-action="update-emote-label" data-emote-index="${i}">`;
-    }
-    if (!div.parentElement) grid.appendChild(div);
-  });
-  while (grid.children.length > _emoteSlots.length) grid.lastElementChild.remove();
-  updateCharacterAvatarImportSummary();
-}
-
-function removeEmote(i) {
-  _emoteSlots[i] = null;
-  renderEmoteGrid();
-  scheduleCharacterImageLibraryPersistence('remove-emote');
 }
 
 function setCharacterImageLibrarySaveStatus(message, isError = false) {
