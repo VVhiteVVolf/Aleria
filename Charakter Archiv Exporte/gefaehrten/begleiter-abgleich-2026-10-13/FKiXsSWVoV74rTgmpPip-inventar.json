@@ -1,0 +1,870 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-13T17:55:29.861Z",
+  "character": {
+    "id": "FKiXsSWVoV74rTgmpPip",
+    "name": "Fenrir Varulv",
+    "inventory": {
+      "characterId": "",
+      "portraitFit": "cover",
+      "companions": [
+        {
+          "imagePosition": "top",
+          "summary": "Alter, kriegsmüder Hest – reitet nicht schnell, aber ewig.",
+          "statusColor": "#7d7d74",
+          "name": "Gaul",
+          "imageFit": "cover",
+          "infoRows": [
+            {
+              "value": "Hest (betagt)",
+              "label": "Art"
+            },
+            {
+              "label": "Besitzer",
+              "value": "Fenrir Varulv"
+            },
+            {
+              "label": "Rolle",
+              "value": "Reittier"
+            },
+            {
+              "value": "Gaul · Kreaturenregister",
+              "label": "Kreaturbogen"
+            }
+          ],
+          "description": "Gaul ist ein alter, grauer Hest, der aussieht, als wäre er schon beim Schmieden des ersten Hufeisens dabei gewesen – und dabei eingeschlafen. Fenrir nennt ihn einfach Gaul, manchmal auch Klepper oder Fetti, je nach Laune und Alkoholpegel. Einen richtigen Namen hat das Tier nie bekommen, weil Fenrir sich nie sicher ist, ob er überhaupt sein eigenes Pferd aus dem Stall geholt hat oder einfach irgendeines der dreihundert anderen Viecher, die dort herumstehen.\n\nDas Pferd selbst scheint das nicht weiter zu stören. Es hat den resignierten Blick eines Wesens, das zu viele Winter gesehen hat und nur noch darauf wartet, dass das Leben endlich Feierabend macht. Meistens kaut Gaul stumpf auf dem Heu herum, das Fenrir ihm halbherzig ins Maul stopft, und glotzt dabei so leer, als hätte er das Denken längst ausgelagert. Angeblich soll er im Großen Krieg gedient haben, aber wenn das stimmt, dann vermutlich auf der Seite der Zuschauer. Er reitet nicht schnell, aber er reitet ewig – vermutlich der einzige Grund, warum Fenrir ihn noch nicht geschlachtet hat. Und wenn Fenrir mal droht, ihn auf den Spieß zu stecken, schaut Gaul nur gelangweilt und scheint zu denken: „Mach schon, ich hab Schlimmeres überlebt.\"",
+          "imageFormat": "landscape",
+          "id": "companion-mshybav3-0-bfxd",
+          "species": "Hest (betagt)",
+          "status": "Abgekämpft, aber unverwüstlich",
+          "image": "https://i.imgur.com/MCyuN1q.png",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 3
+            },
+            {
+              "label": "Ausdauer",
+              "value": 6
+            },
+            {
+              "label": "Staerke",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Agilitaet"
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 2
+            },
+            {
+              "value": 8,
+              "label": "Robustheit"
+            }
+          ],
+          "role": "Reittier",
+          "creatureId": "companion-gaul",
+          "inventoryItemId": "fenrir-gaul"
+        },
+        {
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "imageFit": "cover",
+          "infoRows": [],
+          "description": "",
+          "imageFormat": "landscape",
+          "image": "",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "role": "Gefährte",
+          "name": "Treuer Begleiter",
+          "imagePosition": "top",
+          "species": "Tier / Person",
+          "id": "companion-mshybav3-1-4y45",
+          "status": "Noch festlegen"
+        }
+      ],
+      "revision": 1791914130160,
+      "attributes": [
+        {
+          "value": 8,
+          "label": "StA"
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "categories": [
+        {
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "id": "weapon",
+          "label": "Waffen"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "id": "equipment",
+          "label": "Ausrüstung"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "id": "potions",
+          "label": "Trinkturen"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "showInfoTable": false,
+      "moneyState": {
+        "totalCopper": 0,
+        "silver": 0,
+        "gold": 0,
+        "copper": 0
+      },
+      "portraitFormat": "portrait",
+      "moneyNotice": "",
+      "portraitPosition": "top",
+      "equipmentQuiz": {
+        "open": false,
+        "step": 0,
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "status": "",
+        "resultText": ""
+      },
+      "carryValue": "Noch festlegen",
+      "title": "Charakter-Inventar",
+      "name": "Name des Charakters",
+      "level": "Stufe",
+      "role": "Rolle",
+      "hitpoints": "TP / Zustand",
+      "carryLabel": "Traglast",
+      "healthColor": "#5c7f20",
+      "status": "Gesund",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "items": [
+        {
+          "icon": "*",
+          "type": "Waffe",
+          "quantity": "1",
+          "itemDbKey": "",
+          "tags": "",
+          "originItemDbKey": "",
+          "image": "",
+          "individualizedAt": "",
+          "ownerCharacterId": "",
+          "id": "item-mshybav3-0-oynu",
+          "acquiredAt": "",
+          "equipped": false,
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "imageFormat": "square",
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "name": "Hauptwaffe",
+          "combatDefinition": null,
+          "weight": "Noch festlegen",
+          "ownerCharacterName": "",
+          "equipmentLink": null,
+          "infoRows": [],
+          "imageFit": "contain",
+          "category": "weapon",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "category": "armor",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "infoRows": [],
+          "itemStorageMode": "character",
+          "combatDefinition": null,
+          "weight": "Noch festlegen",
+          "id": "item-mshybav3-1-l83n",
+          "equipmentLink": null,
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "originItemDbKey": "",
+          "name": "Rüstung / Schutz",
+          "ownerCharacterName": "",
+          "equipped": false,
+          "quantity": "1",
+          "tags": "",
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "ownerCharacterId": "",
+          "imagePosition": "center",
+          "type": "Rüstung",
+          "icon": "*",
+          "acquiredAt": ""
+        },
+        {
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "category": "equipment",
+          "itemDbKey": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "type": "Ausrüstung",
+          "icon": "*",
+          "acquiredAt": "",
+          "tags": "",
+          "equipmentLink": null,
+          "ownerCharacterName": "",
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "itemStorageMode": "character",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "name": "Reiseausrüstung",
+          "originItemDbKey": "",
+          "image": "",
+          "quantity": "1",
+          "id": "item-mshybav3-2-vyx4",
+          "imagePosition": "center"
+        },
+        {
+          "name": "Heil- oder Verbrauchsgut",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "weight": "Noch festlegen",
+          "imagePosition": "center",
+          "combatDefinition": null,
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "imageFormat": "square",
+          "originItemDbKey": "",
+          "equipped": false,
+          "image": "",
+          "icon": "*",
+          "type": "Trinktur",
+          "itemDbKey": "",
+          "ownerCharacterName": "",
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "tags": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "acquiredAt": "",
+          "equipmentLink": null,
+          "category": "potions",
+          "id": "item-mshybav3-3-zrnj"
+        },
+        {
+          "tags": "",
+          "equipmentLink": null,
+          "type": "Dokument",
+          "equipped": false,
+          "combatDefinition": null,
+          "image": "",
+          "icon": "*",
+          "acquiredAt": "",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "imageFit": "contain",
+          "infoRows": [],
+          "category": "documents",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "id": "item-mshybav3-4-ej8h",
+          "originItemDbKey": "",
+          "name": "Dokumente / Urkunden",
+          "individualizedAt": "",
+          "ownerCharacterId": "",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "ownerCharacterName": ""
+        },
+        {
+          "itemStorageMode": "character",
+          "ownerCharacterName": "",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "tags": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "imageFormat": "square",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "type": "Sonstiges",
+          "infoRows": [],
+          "imageFit": "contain",
+          "combatDefinition": null,
+          "equipmentLink": null,
+          "icon": "*",
+          "category": "other",
+          "image": "",
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "equipped": false,
+          "imagePosition": "center",
+          "acquiredAt": "",
+          "name": "Persönlicher Gegenstand",
+          "id": "item-mshybav3-5-d5u9"
+        },
+        {
+          "ownerCharacterId": "FKiXsSWVoV74rTgmpPip",
+          "individualizedAt": "",
+          "equipped": true,
+          "originItemDbKey": "",
+          "itemDbKey": "",
+          "weight": "",
+          "equipmentLink": {
+            "kind": "weapon",
+            "schemaVersion": 1,
+            "combatEntryId": "fenrir-greataxe"
+          },
+          "itemStorageMode": "character",
+          "name": "Großaxt",
+          "quantity": "1",
+          "acquiredAt": "2026-08-08T22:04:30.880Z",
+          "ownerCharacterName": "Fenrir Varulv",
+          "imageFormat": "square",
+          "description": "Fenrirs schwerste Waffe, für den brachialen Alleinangriff.",
+          "category": "weapon",
+          "imageFit": "contain",
+          "infoRows": [],
+          "imagePosition": "center",
+          "type": "Waffe",
+          "image": "",
+          "attributes": [],
+          "icon": "",
+          "id": "equipment-weapon-fenrir-greataxe",
+          "tags": "Schwer · Zweihändig",
+          "combatDefinition": {
+            "training": "martial",
+            "properties": "Schwer · Zweihändig",
+            "requirements": "",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "notes": "Fenrirs schwerste Waffe, für den brachialen Alleinangriff.",
+            "versatileDamageFormula": "",
+            "range": "Nahkampf",
+            "damageType": "Hieb",
+            "aiInstructions": "",
+            "kind": "weapon",
+            "damageBonus": 0,
+            "attackBonus": 0,
+            "damageFormula": "1d12",
+            "weaponType": "axe"
+          }
+        },
+        {
+          "itemDbKey": "",
+          "attributes": [],
+          "ownerCharacterId": "FKiXsSWVoV74rTgmpPip",
+          "individualizedAt": "",
+          "description": "Grundlage für den Doppelhieb der Zwillingsäxte.",
+          "imageFormat": "square",
+          "equipped": false,
+          "tags": "Ein aufeinander abgestimmtes Paar · wird gemeinsam beidhändig geführt",
+          "ownerCharacterName": "Fenrir Varulv",
+          "weight": "",
+          "quantity": "1",
+          "equipmentLink": {
+            "kind": "weapon",
+            "combatEntryId": "fenrir-handaxe-pair",
+            "schemaVersion": 1
+          },
+          "type": "Waffe",
+          "icon": "",
+          "id": "equipment-weapon-fenrir-handaxe-pair",
+          "infoRows": [],
+          "imageFit": "contain",
+          "image": "",
+          "category": "weapon",
+          "acquiredAt": "2026-08-08T22:04:30.880Z",
+          "itemStorageMode": "character",
+          "originItemDbKey": "",
+          "imagePosition": "center",
+          "name": "Einhandäxte (Paar)",
+          "combatDefinition": {
+            "proficient": true,
+            "versatileDamageFormula": "",
+            "aiInstructions": "",
+            "properties": "Ein aufeinander abgestimmtes Paar · wird gemeinsam beidhändig geführt",
+            "training": "martial",
+            "notes": "Grundlage für den Doppelhieb der Zwillingsäxte.",
+            "attackAttribute": "strength",
+            "requirements": "",
+            "damageBonus": 0,
+            "attackBonus": 0,
+            "damageType": "Hieb",
+            "kind": "weapon",
+            "weaponType": "axe",
+            "range": "Nahkampf",
+            "damageFormula": "1d6"
+          }
+        },
+        {
+          "ownerCharacterName": "Fenrir Varulv",
+          "quantity": "1",
+          "combatDefinition": {
+            "properties": "Wurfwaffe · 3 Stück mitgeführt, Munition manuell nachhalten",
+            "range": "Nahkampf oder Wurf (9m)",
+            "proficient": true,
+            "requirements": "",
+            "training": "martial",
+            "damageFormula": "1d6",
+            "attackAttribute": "strength",
+            "damageType": "Hieb",
+            "notes": "Drei Wurfäxte im Gürtel, nachschleifen für den Kreiselwurf.",
+            "kind": "weapon",
+            "versatileDamageFormula": "",
+            "damageBonus": 0,
+            "attackBonus": 0,
+            "aiInstructions": "",
+            "weaponType": "axe"
+          },
+          "name": "Wurfaxt",
+          "equipmentLink": {
+            "kind": "weapon",
+            "combatEntryId": "fenrir-throwing-axe",
+            "schemaVersion": 1
+          },
+          "itemDbKey": "",
+          "weight": "",
+          "equipped": false,
+          "description": "Drei Wurfäxte im Gürtel, nachschleifen für den Kreiselwurf.",
+          "imageFormat": "square",
+          "attributes": [],
+          "image": "",
+          "tags": "Wurfwaffe · 3 Stück mitgeführt, Munition manuell nachhalten",
+          "id": "equipment-weapon-fenrir-throwing-axe",
+          "type": "Waffe",
+          "itemStorageMode": "character",
+          "icon": "",
+          "ownerCharacterId": "FKiXsSWVoV74rTgmpPip",
+          "individualizedAt": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "category": "weapon",
+          "acquiredAt": "2026-08-08T22:04:30.880Z",
+          "originItemDbKey": ""
+        },
+        {
+          "category": "weapon",
+          "infoRows": [],
+          "imageFit": "contain",
+          "ownerCharacterId": "FKiXsSWVoV74rTgmpPip",
+          "individualizedAt": "",
+          "weight": "",
+          "image": "",
+          "attributes": [],
+          "name": "Huskarl-Rundschild (Schildstoß)",
+          "equipmentLink": {
+            "kind": "weapon",
+            "combatEntryId": "fenrir-roundshield-bash",
+            "schemaVersion": 1
+          },
+          "originItemDbKey": "",
+          "equipped": false,
+          "id": "equipment-weapon-fenrir-roundshield-bash",
+          "combatDefinition": {
+            "requirements": "",
+            "training": "martial",
+            "weaponType": "shield",
+            "notes": "Derselbe Rundschild wie im Rüstungsteil, hier für den Schildstoß als Waffe erfasst.",
+            "damageType": "Wucht",
+            "damageFormula": "1d4",
+            "damageBonus": 0,
+            "attackBonus": 0,
+            "aiInstructions": "",
+            "attackAttribute": "strength",
+            "properties": "Offensiver Einsatz des Rundschilds · Rüstungsbonus siehe Rüstungsteil",
+            "proficient": true,
+            "kind": "weapon",
+            "versatileDamageFormula": "",
+            "range": "Nahkampf"
+          },
+          "itemStorageMode": "character",
+          "tags": "Offensiver Einsatz des Rundschilds · Rüstungsbonus siehe Rüstungsteil",
+          "imageFormat": "square",
+          "itemDbKey": "",
+          "description": "Derselbe Rundschild wie im Rüstungsteil, hier für den Schildstoß als Waffe erfasst.",
+          "imagePosition": "center",
+          "quantity": "1",
+          "icon": "",
+          "ownerCharacterName": "Fenrir Varulv",
+          "acquiredAt": "2026-08-08T22:04:30.880Z",
+          "type": "Waffe"
+        },
+        {
+          "equipmentLink": {
+            "kind": "armor",
+            "schemaVersion": 1,
+            "combatEntryId": "fenrir-scale-mail"
+          },
+          "itemStorageMode": "character",
+          "attributes": [],
+          "name": "Schuppenpanzer",
+          "description": "Schuppenpanzer der Skjaldr-Ausbildung",
+          "imageFormat": "square",
+          "infoRows": [],
+          "imageFit": "contain",
+          "combatDefinition": {
+            "armorClassBonus": 0,
+            "dexterityCap": 2,
+            "properties": "Schuppenpanzer der Skjaldr-Ausbildung",
+            "dexterityUnlockLevel": 0,
+            "dexterityMode": "capped",
+            "baseArmorClass": 14,
+            "armorKind": "armor",
+            "notes": "",
+            "armorCategory": "medium",
+            "kind": "armor"
+          },
+          "originItemDbKey": "",
+          "category": "armor",
+          "id": "equipment-armor-fenrir-scale-mail",
+          "imagePosition": "center",
+          "quantity": "1",
+          "image": "",
+          "tags": "Schuppenpanzer der Skjaldr-Ausbildung",
+          "icon": "",
+          "ownerCharacterId": "FKiXsSWVoV74rTgmpPip",
+          "individualizedAt": "",
+          "weight": "",
+          "acquiredAt": "2026-08-08T22:04:30.880Z",
+          "type": "Rüstung",
+          "itemDbKey": "",
+          "ownerCharacterName": "Fenrir Varulv",
+          "equipped": true
+        },
+        {
+          "attributes": [],
+          "originItemDbKey": "",
+          "equipped": true,
+          "image": "",
+          "itemDbKey": "",
+          "name": "Huskarl-Rundschild",
+          "imageFormat": "square",
+          "description": "Kann auch offensiv als Schildstoß eingesetzt werden (siehe Waffenteil und Technik).",
+          "itemStorageMode": "character",
+          "equipmentLink": {
+            "combatEntryId": "fenrir-roundshield",
+            "schemaVersion": 1,
+            "kind": "armor"
+          },
+          "id": "equipment-armor-fenrir-roundshield",
+          "individualizedAt": "",
+          "ownerCharacterId": "FKiXsSWVoV74rTgmpPip",
+          "quantity": "1",
+          "tags": "Rundschild der Huskarl-Ausbildung · +2 Rüstungsklasse",
+          "weight": "",
+          "acquiredAt": "2026-08-08T22:04:30.880Z",
+          "type": "Rüstung",
+          "category": "armor",
+          "icon": "",
+          "combatDefinition": {
+            "notes": "Kann auch offensiv als Schildstoß eingesetzt werden (siehe Waffenteil und Technik).",
+            "armorClassBonus": 2,
+            "properties": "Rundschild der Huskarl-Ausbildung · +2 Rüstungsklasse",
+            "armorKind": "shield",
+            "dexterityMode": "full",
+            "dexterityCap": 2,
+            "baseArmorClass": null,
+            "kind": "armor",
+            "dexterityUnlockLevel": 0
+          },
+          "imageFit": "contain",
+          "infoRows": [],
+          "imagePosition": "center",
+          "ownerCharacterName": "Fenrir Varulv"
+        },
+        {
+          "id": "fenrir-gaul",
+          "instanceId": "fenrir-gaul",
+          "creatureId": "companion-gaul",
+          "name": "Gaul",
+          "image": "https://i.imgur.com/HyaKYxH.png",
+          "description": "Gaul ist ein alter, grauer Hest, der aussieht, als wäre er schon beim Schmieden des ersten Hufeisens dabei gewesen – und dabei eingeschlafen. Fenrir nennt ihn einfach Gaul, manchmal auch Klepper oder Fetti, je nach Laune und Alkoholpegel. Einen richtigen Namen hat das Tier nie bekommen, weil Fenrir sich nie sicher ist, ob er überhaupt sein eigenes Pferd aus dem Stall geholt hat oder einfach irgendeines der dreihundert anderen Viecher, die dort herumstehen.\n\nDas Pferd selbst scheint das nicht weiter zu stören. Es hat den resignierten Blick eines Wesens, das zu viele Winter gesehen hat und nur noch darauf wartet, dass das Leben endlich Feierabend macht. Meistens kaut Gaul stumpf auf dem Heu herum, das Fenrir ihm halbherzig ins Maul stopft, und glotzt dabei so leer, als hätte er das Denken längst ausgelagert. Angeblich soll er im Großen Krieg gedient haben, aber wenn das stimmt, dann vermutlich auf der Seite der Zuschauer. Er reitet nicht schnell, aber er reitet ewig – vermutlich der einzige Grund, warum Fenrir ihn noch nicht geschlachtet hat. Und wenn Fenrir mal droht, ihn auf den Spieß zu stecken, schaut Gaul nur gelangweilt und scheint zu denken: „Mach schon, ich hab Schlimmeres überlebt.\"",
+          "type": "Hest",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Hest",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "FKiXsSWVoV74rTgmpPip",
+          "ownerCharacterName": "Fenrir Varulv",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-13T17:55:30.160Z"
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "infoRows": [
+        {
+          "label": "Status",
+          "icon": "*",
+          "value": "Gesund"
+        },
+        {
+          "label": "TP / Zustand",
+          "value": "Noch festlegen",
+          "icon": "*"
+        },
+        {
+          "label": "Geld",
+          "icon": "*",
+          "value": "0 Gold, 0 Silber, 0 Kupfer"
+        },
+        {
+          "label": "Tragkapazität",
+          "value": "Noch festlegen",
+          "icon": "*"
+        },
+        {
+          "icon": "*",
+          "value": "Noch festlegen",
+          "label": "Rolle"
+        },
+        {
+          "icon": "*",
+          "value": "Noch festlegen",
+          "label": "Fraktion"
+        },
+        {
+          "value": "Noch festlegen",
+          "label": "Aufenthalt",
+          "icon": "*"
+        },
+        {
+          "label": "Notiz",
+          "icon": "*",
+          "value": "Noch festlegen"
+        }
+      ],
+      "portrait": ""
+    },
+    "updatedAt": "2026-10-13T17:55:29.861Z"
+  }
+}

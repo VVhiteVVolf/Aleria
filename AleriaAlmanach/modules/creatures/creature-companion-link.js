@@ -7,6 +7,22 @@ export function isUnassignedCompanionCard(card = {}) {
     && ['Tier oder Begleiter', 'Tier / Person'].includes(card.species);
 }
 
+// Release a named companion without touching any other possession or live state.
+export function detachCreatureFromInventory(character, creatureId) {
+  if (!creatureId) throw new Error('Kreaturen-ID fehlt.');
+  const inventory = structuredClone(character.inventory || {});
+  const linkedItems = new Set((inventory.companions || []).filter(card => card.creatureId === creatureId)
+    .map(card => card.inventoryItemId).filter(Boolean));
+  if (inventory.companions) inventory.companions = inventory.companions.filter(card => card.creatureId !== creatureId);
+  if (inventory.items) inventory.items = inventory.items.filter(item => {
+    if (linkedItems.has(item.id) && item.creatureId && item.creatureId !== creatureId) {
+      throw new Error('Widersprüchliche Gefährtenverknüpfung.');
+    }
+    return item.creatureId !== creatureId && !linkedItems.has(item.id);
+  });
+  return inventory;
+}
+
 // Add a named animal or reuse its existing card. Empty starter cards carry no ownership.
 export function attachCreatureToInventory(character, creature, now = new Date().toISOString()) {
   const inventory = structuredClone(character.inventory || {});

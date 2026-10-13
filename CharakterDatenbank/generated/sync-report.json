@@ -2,9 +2,9 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-10-13T16:18:16.776Z",
+  "sourceExportedAt": "2026-10-13T17:55:29.861Z",
   "summary": {
-    "sourceDocuments": 358,
+    "sourceDocuments": 364,
     "total": 238,
     "mergedSameNameGroups": 45,
     "familyLinked": 160,
@@ -1498,6 +1498,26 @@
         "6atOllMA637Z2VNAZAxf"
       ],
       "note": "Lot, Aelwyn, Alaw und Vivian ergänzt; Besitz, Kampfprofile und Genealogie erhalten. Alle 234 übrigen Figuren unverändert."
+    },
+    {
+      "sourceArchives": [
+        "Charakter Archiv Exporte/gefaehrten/begleiter-abgleich-2026-10-13/ksJQe8Ai4KbRE9jOAvb7-inventar.json",
+        "Charakter Archiv Exporte/gefaehrten/begleiter-abgleich-2026-10-13/FKiXsSWVoV74rTgmpPip-inventar.json",
+        "Charakter Archiv Exporte/gefaehrten/begleiter-abgleich-2026-10-13/0Sku8euk5jhlWebdsskI-inventar.json",
+        "Charakter Archiv Exporte/gefaehrten/begleiter-abgleich-2026-10-13/wnS8JOFUR3oS1izRzObH-inventar.json",
+        "Charakter Archiv Exporte/gefaehrten/begleiter-abgleich-2026-10-13/yLJ0Rr5suTSLa42sL743-inventar.json",
+        "Charakter Archiv Exporte/gefaehrten/begleiter-abgleich-2026-10-13/ujMjNxdOs1pnR2jGNus4-inventar.json"
+      ],
+      "exportedAt": "2026-10-13T17:55:29.861Z",
+      "characterIds": [
+        "ksJQe8Ai4KbRE9jOAvb7",
+        "FKiXsSWVoV74rTgmpPip",
+        "0Sku8euk5jhlWebdsskI",
+        "wnS8JOFUR3oS1izRzObH",
+        "yLJ0Rr5suTSLa42sL743",
+        "ujMjNxdOs1pnR2jGNus4"
+      ],
+      "note": "Pompösa und Roisin ergänzt; bestehende Tierbesitzer verknüpft; Uffel ist besitzerloser Bordkater. Kampfprofile und übrige Figuren unverändert."
     }
   ]
 }

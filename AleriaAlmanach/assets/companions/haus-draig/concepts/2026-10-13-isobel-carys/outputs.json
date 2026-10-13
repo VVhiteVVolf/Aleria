@@ -1,0 +1,27 @@
+{
+  "selectedAt": "2026-10-13",
+  "mode": "built-in-imagegen",
+  "status": "named-and-linked",
+  "assets": [
+    {
+      "name": "Fürstin Pompösa von Samtpfote",
+      "id": "companion-isobel-pompoesa",
+      "owner": "Isobel Draig",
+      "file": "pompoesa.png",
+      "source": "isobel-lethin-samtkissen.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b496ec98fad8a5c6199d2450aa586a5ca0f76afe335ed5ea4a8e6e5176daaa9c"
+    },
+    {
+      "name": "Roisin",
+      "id": "companion-carys-roisin",
+      "owner": "Carys Draig",
+      "file": "roisin.png",
+      "source": "carys-trywydd-rhedwyr-jagdhund-anime-v2.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "0897192e4df809f109e499487d4ab3978f72dc9034eb94d6686da184f0f74cbd"
+    }
+  ]
+}

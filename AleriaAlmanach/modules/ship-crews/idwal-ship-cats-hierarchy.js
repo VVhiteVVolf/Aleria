@@ -1,4 +1,4 @@
-import { IDWAL_SHIP_CATS } from '../creatures/catalog/idwal-ship-cats.js?v=20261012-ship-cats-v1';
+import { IDWAL_SHIP_CATS } from '../creatures/catalog/idwal-ship-cats.js?v=20261013-crew-cat-v2';
 
 const TREE_ID = 'schiffskatzen';
 

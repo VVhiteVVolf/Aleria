@@ -50,10 +50,11 @@ test('genealogy imports identify both siblings separately from the existing Bron
   }
 });
 
-test('all three owners have unique bidirectional links and Trevor retains both ship cats', async () => {
-  const creatures = [...IDWAL_SHIP_CATS, ...GWYVERN_RHYFEL_COMPANIONS].map(sanitizeCreature);
+test('all three owners have unique bidirectional links and Trevor owns only Bwmbo as a ship cat', async () => {
+  const creatures = [...IDWAL_SHIP_CATS, ...GWYVERN_RHYFEL_COMPANIONS].map(sanitizeCreature).filter(c=>c.itemOrigin?.ownerCharacterId);
+  const snapshot = await read(new URL('../../CharakterDatenbank/generated/characters.snapshot.json', import.meta.url));
   for (const ownerId of [...new Set(creatures.map(c => c.itemOrigin.ownerCharacterId))]) {
-    const character = (await read(new URL(`charaktere/${ownerId}.json`, folder))).character;
+    const character = snapshot.characters.find(c=>c.id===ownerId);
     const views = inventoryCompanionViews(character.inventory, creatures);
     for (const creature of creatures.filter(c => c.itemOrigin.ownerCharacterId === ownerId)) {
       const card = views.filter(c => c.creatureId === creature.id);
@@ -63,7 +64,7 @@ test('all three owners have unique bidirectional links and Trevor retains both s
       assert.equal(item.ownerCharacterId, character.id);
       assert.deepEqual(attachCreatureToInventory(character, creature), character.inventory);
     }
-    if (ownerId === TREVOR_CHARACTER_ID) assert.deepEqual(views.filter(c => c.creatureId).map(c => c.name), ['Bwmbo', 'Uffel', 'Struppi']);
+    if (ownerId === TREVOR_CHARACTER_ID) assert.deepEqual(views.filter(c => c.creatureId).map(c => c.name), ['Bwmbo', 'Struppi']);
   }
   const backfill = await read(new URL('bestiarium-nachpflege.json', folder));
   assert.equal(backfill.updates.length, 25);
@@ -88,7 +89,7 @@ test('local character database exposes the new siblings while online inventories
     assert.equal(entry.contentHash, record.sync.contentHash);
   }
   const trevor = snapshot.characters.find(c => c.id === TREVOR_CHARACTER_ID);
-  assert.deepEqual(trevor.inventory.companions.filter(c => c.creatureId).map(c => c.name), ['Bwmbo', 'Uffel', 'Struppi']);
+  assert.deepEqual(trevor.inventory.companions.filter(c => c.creatureId).map(c => c.name), ['Bwmbo', 'Struppi']);
   const online = { id: TREVOR_CHARACTER_ID, name: 'Trevor Gwyvern', inventory: { items: [{ id: 'newer-possession' }] } };
   const merged = mergeCharacterDatabases([online], snapshot.characters);
   assert.deepEqual(merged.find(c => c.id === online.id).inventory, online.inventory);

@@ -1,0 +1,823 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-13T17:55:29.861Z",
+  "character": {
+    "id": "ksJQe8Ai4KbRE9jOAvb7",
+    "name": "Freya Skald",
+    "inventory": {
+      "portraitFit": "cover",
+      "characterId": "",
+      "companions": [
+        {
+          "image": "https://i.imgur.com/O7igyaP.png",
+          "role": "Reittier",
+          "id": "companion-mshyqs5m-0-y3py",
+          "imagePosition": "top",
+          "infoRows": [
+            {
+              "value": "Hest-Mischlingsstute",
+              "label": "Art"
+            },
+            {
+              "label": "Besitzer",
+              "value": "Freya Skald"
+            },
+            {
+              "label": "Rolle",
+              "value": "Reittier"
+            },
+            {
+              "label": "Kreaturbogen",
+              "value": "Eldfaxi · Kreaturenregister"
+            }
+          ],
+          "imageFit": "cover",
+          "species": "Hest-Mischlingsstute",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schnelligkeit"
+            },
+            {
+              "label": "Ausdauer",
+              "value": 8
+            },
+            {
+              "value": 6,
+              "label": "Staerke"
+            },
+            {
+              "label": "Agilitaet",
+              "value": 5
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 8
+            },
+            {
+              "label": "Robustheit",
+              "value": 7
+            }
+          ],
+          "statusColor": "#5c7f20",
+          "description": "Eldfaxi begleitet Freya seit über sechs Jahren, ein zäher Mischling mit starkem Einschlag des Hest – jener aldrimarischen Kaltblutrasse, die für ihren ruhigen Geist und unbeirrbaren Tritt bekannt ist. Sein Fell ist gescheckt, die Mähne dicht und dunkel wie Sturmwolken, und seine Augen tragen dieses eigenwillige Glitzern, das nur Tiere haben, die mehr denken als man ihnen zutraut.\n\nSeine liebenswerteste Eigenart: Eldfaxi summt. Nicht wirklich wie ein Mensch, eher ein tiefes, vibrierendes Brummen, sobald Freya zu singen beginnt – besonders dann, wenn sie schlecht gelaunt ist. Viele Wirte schwören, sie hätten in Tavernen schon Duette zwischen Frau und Pferd gehört. Freya behauptet, er könne keinen einzigen Ton halten – aber sie lächelt, wenn sie es sagt.",
+          "imageFormat": "landscape",
+          "name": "Eldfaxi",
+          "status": "Fröhlich & gesund",
+          "summary": "Fröhliche Hest-Mischlingsstute, die im Duett mit Freyas Gesang brummt.",
+          "creatureId": "companion-eldfaxi",
+          "inventoryItemId": "freya-eldfaxi"
+        },
+        {
+          "id": "companion-mshyqs5m-1-eqin",
+          "imagePosition": "top",
+          "role": "Gefährte",
+          "species": "Tier / Person",
+          "description": "",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "value": 5,
+              "label": "Staerke"
+            },
+            {
+              "value": 6,
+              "label": "Agilitaet"
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "value": 5,
+              "label": "Robustheit"
+            }
+          ],
+          "image": "",
+          "imageFormat": "landscape",
+          "statusColor": "#5c7f20",
+          "name": "Treuer Begleiter",
+          "status": "Noch festlegen",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "imageFit": "cover",
+          "infoRows": []
+        }
+      ],
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "icon": "https://i.imgur.com/gwujEaL.png",
+          "label": "Trinkturen",
+          "id": "potions"
+        },
+        {
+          "label": "Dokumente",
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png",
+          "id": "other"
+        }
+      ],
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "value": 5,
+          "label": "Int"
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "revision": 1791914130127,
+      "equipmentQuiz": {
+        "status": "",
+        "open": false,
+        "updatedAt": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "step": 0
+      },
+      "portraitPosition": "top",
+      "showInfoTable": false,
+      "moneyNotice": "",
+      "moneyState": {
+        "silver": 0,
+        "totalCopper": 0,
+        "gold": 0,
+        "copper": 0
+      },
+      "portrait": "",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "infoRows": [
+        {
+          "icon": "*",
+          "label": "Status",
+          "value": "Gesund"
+        },
+        {
+          "label": "TP / Zustand",
+          "value": "Noch festlegen",
+          "icon": "*"
+        },
+        {
+          "label": "Geld",
+          "icon": "*",
+          "value": "0 Gold, 0 Silber, 0 Kupfer"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Tragkapazität"
+        },
+        {
+          "value": "Noch festlegen",
+          "icon": "*",
+          "label": "Rolle"
+        },
+        {
+          "label": "Fraktion",
+          "icon": "*",
+          "value": "Noch festlegen"
+        },
+        {
+          "icon": "*",
+          "value": "Noch festlegen",
+          "label": "Aufenthalt"
+        },
+        {
+          "label": "Notiz",
+          "value": "Noch festlegen",
+          "icon": "*"
+        }
+      ],
+      "items": [
+        {
+          "image": "",
+          "combatDefinition": null,
+          "imageFit": "contain",
+          "infoRows": [],
+          "ownerCharacterName": "",
+          "tags": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "category": "weapon",
+          "type": "Waffe",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "id": "item-mshyqs5m-0-o2so",
+          "individualizedAt": "",
+          "ownerCharacterId": "",
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "imageFormat": "square",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "equipmentLink": null,
+          "acquiredAt": "",
+          "name": "Hauptwaffe",
+          "equipped": false
+        },
+        {
+          "acquiredAt": "",
+          "ownerCharacterName": "",
+          "id": "item-mshyqs5m-1-b5xe",
+          "originItemDbKey": "",
+          "equipmentLink": null,
+          "itemStorageMode": "character",
+          "tags": "",
+          "combatDefinition": null,
+          "weight": "Noch festlegen",
+          "category": "armor",
+          "icon": "*",
+          "infoRows": [],
+          "imageFit": "contain",
+          "type": "Rüstung",
+          "individualizedAt": "",
+          "ownerCharacterId": "",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "quantity": "1",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "equipped": false,
+          "name": "Rüstung / Schutz",
+          "image": ""
+        },
+        {
+          "tags": "",
+          "itemDbKey": "",
+          "equipped": false,
+          "combatDefinition": null,
+          "acquiredAt": "",
+          "imagePosition": "center",
+          "type": "Ausrüstung",
+          "icon": "*",
+          "image": "",
+          "id": "item-mshyqs5m-2-qsz3",
+          "quantity": "1",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "originItemDbKey": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "equipmentLink": null,
+          "name": "Reiseausrüstung",
+          "category": "equipment",
+          "individualizedAt": "",
+          "ownerCharacterId": "",
+          "itemStorageMode": "character",
+          "weight": "Noch festlegen",
+          "ownerCharacterName": "",
+          "imageFormat": "square",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände."
+        },
+        {
+          "imageFormat": "square",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "equipmentLink": null,
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "ownerCharacterName": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "imageFit": "contain",
+          "infoRows": [],
+          "combatDefinition": null,
+          "category": "potions",
+          "weight": "Noch festlegen",
+          "individualizedAt": "",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "",
+          "acquiredAt": "",
+          "quantity": "1",
+          "imagePosition": "center",
+          "type": "Trinktur",
+          "id": "item-mshyqs5m-3-brtu",
+          "image": "",
+          "originItemDbKey": "",
+          "icon": "*",
+          "equipped": false,
+          "tags": "",
+          "itemDbKey": ""
+        },
+        {
+          "icon": "*",
+          "type": "Dokument",
+          "imagePosition": "center",
+          "quantity": "1",
+          "combatDefinition": null,
+          "tags": "",
+          "itemStorageMode": "character",
+          "image": "",
+          "acquiredAt": "",
+          "id": "item-mshyqs5m-4-tcgb",
+          "equipped": false,
+          "ownerCharacterName": "",
+          "originItemDbKey": "",
+          "name": "Dokumente / Urkunden",
+          "equipmentLink": null,
+          "itemDbKey": "",
+          "imageFormat": "square",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "weight": "Noch festlegen",
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "documents"
+        },
+        {
+          "equipmentLink": null,
+          "weight": "Noch festlegen",
+          "category": "other",
+          "id": "item-mshyqs5m-5-uzcn",
+          "infoRows": [],
+          "imageFit": "contain",
+          "itemDbKey": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "type": "Sonstiges",
+          "imageFormat": "square",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "icon": "*",
+          "tags": "",
+          "combatDefinition": null,
+          "equipped": false,
+          "imagePosition": "center",
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "ownerCharacterName": "",
+          "itemStorageMode": "character",
+          "name": "Persönlicher Gegenstand",
+          "acquiredAt": "",
+          "quantity": "1",
+          "image": "",
+          "originItemDbKey": ""
+        },
+        {
+          "attributes": [],
+          "itemStorageMode": "character",
+          "imagePosition": "center",
+          "id": "equipment-weapon-freya-lute",
+          "ownerCharacterId": "ksJQe8Ai4KbRE9jOAvb7",
+          "individualizedAt": "",
+          "category": "weapon",
+          "image": "",
+          "infoRows": [],
+          "imageFit": "contain",
+          "originItemDbKey": "",
+          "name": "Laute",
+          "equipped": true,
+          "weight": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "combatEntryId": "freya-lute",
+            "kind": "weapon"
+          },
+          "imageFormat": "square",
+          "acquiredAt": "2026-08-08T22:04:01.153Z",
+          "description": "Freyas Laute, mit der sie ihre Zauber wirkt.",
+          "itemDbKey": "",
+          "tags": "Hauptcaster-Werkzeug · improvisierter Schlag bei Bedarf",
+          "combatDefinition": {
+            "damageBonus": 0,
+            "attackBonus": 0,
+            "requirements": "",
+            "notes": "Freyas Laute, mit der sie ihre Zauber wirkt.",
+            "versatileDamageFormula": "",
+            "weaponType": "arcane",
+            "damageType": "Wucht",
+            "attackAttribute": "charisma",
+            "training": "simple",
+            "range": "Nahkampf",
+            "aiInstructions": "",
+            "kind": "weapon",
+            "properties": "Hauptcaster-Werkzeug · improvisierter Schlag bei Bedarf",
+            "proficient": true,
+            "damageFormula": "1d4"
+          },
+          "type": "Waffe",
+          "quantity": "1",
+          "icon": "",
+          "ownerCharacterName": "Freya Skald"
+        },
+        {
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "weight": "",
+          "name": "Schwert",
+          "ownerCharacterId": "ksJQe8Ai4KbRE9jOAvb7",
+          "originItemDbKey": "",
+          "individualizedAt": "",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "imageFormat": "square",
+          "acquiredAt": "2026-08-08T22:04:01.153Z",
+          "description": "Sekundäre Skjoldr-Kampfweise · mit Schild geführt",
+          "equipped": false,
+          "ownerCharacterName": "Freya Skald",
+          "image": "",
+          "tags": "Sekundäre Skjoldr-Kampfweise · mit Schild geführt",
+          "type": "Waffe",
+          "combatDefinition": {
+            "weaponType": "sword",
+            "damageFormula": "1d8",
+            "notes": "",
+            "kind": "weapon",
+            "versatileDamageFormula": "",
+            "damageType": "Hieb",
+            "aiInstructions": "",
+            "range": "Nahkampf",
+            "requirements": "",
+            "attackBonus": 0,
+            "damageBonus": 0,
+            "attackAttribute": "strength",
+            "proficient": true,
+            "training": "martial",
+            "properties": "Sekundäre Skjoldr-Kampfweise · mit Schild geführt"
+          },
+          "icon": "",
+          "equipmentLink": {
+            "kind": "weapon",
+            "schemaVersion": 1,
+            "combatEntryId": "freya-sword"
+          },
+          "category": "weapon",
+          "id": "equipment-weapon-freya-sword",
+          "infoRows": [],
+          "imageFit": "contain",
+          "attributes": []
+        },
+        {
+          "acquiredAt": "2026-08-08T22:04:01.153Z",
+          "name": "Schild (Schildstoß)",
+          "category": "weapon",
+          "weight": "",
+          "equipmentLink": {
+            "kind": "weapon",
+            "schemaVersion": 1,
+            "combatEntryId": "freya-shield-bash"
+          },
+          "infoRows": [],
+          "imageFit": "contain",
+          "itemDbKey": "",
+          "ownerCharacterName": "Freya Skald",
+          "combatDefinition": {
+            "kind": "weapon",
+            "attackAttribute": "strength",
+            "proficient": true,
+            "requirements": "",
+            "properties": "Offensiver Einsatz des Schilds · Rüstungsbonus siehe Rüstungsteil",
+            "notes": "Derselbe Schild wie im Rüstungsteil, hier für den offensiven Einsatz erfasst.",
+            "range": "Nahkampf",
+            "training": "martial",
+            "damageFormula": "1d4",
+            "damageType": "Wucht",
+            "weaponType": "shield",
+            "versatileDamageFormula": "",
+            "aiInstructions": "",
+            "attackBonus": 0,
+            "damageBonus": 0
+          },
+          "image": "",
+          "type": "Waffe",
+          "id": "equipment-weapon-freya-shield-bash",
+          "equipped": false,
+          "itemStorageMode": "character",
+          "icon": "",
+          "attributes": [],
+          "tags": "Offensiver Einsatz des Schilds · Rüstungsbonus siehe Rüstungsteil",
+          "imagePosition": "center",
+          "ownerCharacterId": "ksJQe8Ai4KbRE9jOAvb7",
+          "individualizedAt": "",
+          "originItemDbKey": "",
+          "quantity": "1",
+          "imageFormat": "square",
+          "description": "Derselbe Schild wie im Rüstungsteil, hier für den offensiven Einsatz erfasst."
+        },
+        {
+          "attributes": [],
+          "imageFormat": "square",
+          "itemStorageMode": "character",
+          "combatDefinition": {
+            "armorClassBonus": 0,
+            "armorKind": "armor",
+            "properties": "Mittlere Rüstung",
+            "dexterityMode": "capped",
+            "notes": "",
+            "dexterityCap": 2,
+            "baseArmorClass": 14,
+            "dexterityUnlockLevel": 0,
+            "armorCategory": "medium",
+            "kind": "armor"
+          },
+          "description": "Leichte Rüstung der Skalden-Ausbildung",
+          "imagePosition": "center",
+          "quantity": "1",
+          "name": "Wattierter Waffenrock",
+          "equipped": true,
+          "originItemDbKey": "",
+          "ownerCharacterName": "Freya Skald",
+          "weight": "",
+          "acquiredAt": "2026-08-08T22:04:01.153Z",
+          "itemDbKey": "",
+          "equipmentLink": {
+            "schemaVersion": 1,
+            "combatEntryId": "freya-padded-armor",
+            "kind": "armor"
+          },
+          "image": "",
+          "icon": "",
+          "type": "Rüstung",
+          "infoRows": [],
+          "imageFit": "contain",
+          "id": "equipment-armor-freya-padded-armor",
+          "ownerCharacterId": "ksJQe8Ai4KbRE9jOAvb7",
+          "tags": "Leichte Rüstung der Skalden-Ausbildung",
+          "individualizedAt": "",
+          "category": "armor"
+        },
+        {
+          "imageFormat": "square",
+          "description": "Kann auch offensiv als Schildstoß eingesetzt werden (siehe Waffenteil).",
+          "quantity": "1",
+          "image": "",
+          "combatDefinition": {
+            "armorKind": "shield",
+            "dexterityCap": 2,
+            "properties": "Schild der Skjoldr-Zweitausbildung · +2 Rüstungsklasse",
+            "dexterityUnlockLevel": 0,
+            "notes": "Kann auch offensiv als Schildstoß eingesetzt werden (siehe Waffenteil).",
+            "armorClassBonus": 2,
+            "dexterityMode": "full",
+            "baseArmorClass": null,
+            "kind": "armor"
+          },
+          "acquiredAt": "2026-08-08T22:04:01.153Z",
+          "name": "Schild",
+          "id": "equipment-armor-freya-shield",
+          "equipped": true,
+          "equipmentLink": {
+            "combatEntryId": "freya-shield",
+            "schemaVersion": 1,
+            "kind": "armor"
+          },
+          "weight": "",
+          "itemStorageMode": "character",
+          "type": "Rüstung",
+          "category": "armor",
+          "itemDbKey": "",
+          "icon": "",
+          "ownerCharacterId": "ksJQe8Ai4KbRE9jOAvb7",
+          "ownerCharacterName": "Freya Skald",
+          "infoRows": [],
+          "imageFit": "contain",
+          "individualizedAt": "",
+          "originItemDbKey": "",
+          "attributes": [],
+          "tags": "Schild der Skjoldr-Zweitausbildung · +2 Rüstungsklasse",
+          "imagePosition": "center"
+        },
+        {
+          "id": "freya-eldfaxi",
+          "instanceId": "freya-eldfaxi",
+          "creatureId": "companion-eldfaxi",
+          "name": "Eldfaxi",
+          "image": "https://i.imgur.com/kCTOjgJ.png",
+          "description": "Eldfaxi begleitet Freya seit über sechs Jahren, ein zäher Mischling mit starkem Einschlag des Hest – jener aldrimarischen Kaltblutrasse, die für ihren ruhigen Geist und unbeirrbaren Tritt bekannt ist. Sein Fell ist gescheckt, die Mähne dicht und dunkel wie Sturmwolken, und seine Augen tragen dieses eigenwillige Glitzern, das nur Tiere haben, die mehr denken als man ihnen zutraut.\n\nSeine liebenswerteste Eigenart: Eldfaxi summt. Nicht wirklich wie ein Mensch, eher ein tiefes, vibrierendes Brummen, sobald Freya zu singen beginnt – besonders dann, wenn sie schlecht gelaunt ist. Viele Wirte schwören, sie hätten in Tavernen schon Duette zwischen Frau und Pferd gehört. Freya behauptet, er könne keinen einzigen Ton halten – aber sie lächelt, wenn sie es sagt.",
+          "type": "Hest-Mischling",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Hest-Mischling",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "ksJQe8Ai4KbRE9jOAvb7",
+          "ownerCharacterName": "Freya Skald",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-13T17:55:30.126Z"
+        }
+      ],
+      "hitpoints": "TP / Zustand",
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "carryValue": "Noch festlegen",
+      "portraitFormat": "portrait",
+      "name": "Name des Charakters",
+      "carryLabel": "Traglast",
+      "role": "Rolle",
+      "healthColor": "#5c7f20",
+      "status": "Gesund",
+      "level": "Stufe",
+      "title": "Charakter-Inventar"
+    },
+    "updatedAt": "2026-10-13T17:55:29.861Z"
+  }
+}
