@@ -154,7 +154,7 @@ test('sound starts on mounting, retries on loading interactions, and receives th
   assert.equal(ui.root.removed, true);
 });
 
-test('a delayed music module keeps its manual control after the loading dialog was removed', async () => {
+test('a delayed music module goes straight to entry cleanup after the loading dialog was removed', async () => {
   const ui = screen({ withSound: true, deferSound: true }); ui.mount(); await settle(); ui.ready();
   ui.click(); ui.tick(380);
   assert.equal(ui.root.removed, true);
@@ -281,7 +281,7 @@ test('manual switching fades the actual soundtrack and keeps it available for re
   env.sound.destroy();
 });
 
-test('entry fades the soundtrack automatically and retains the same accessible icon outside the loading dialog', async () => {
+test('entry fades the soundtrack automatically and removes the icon together with its media resources', async () => {
   const env = soundEnvironment();
   const loading = env.document.createElement('section'); loading.append(env.control);
   await env.sound.tryAutoplay(); env.advance(2000);
@@ -290,9 +290,8 @@ test('entry fades the soundtrack automatically and retains the same accessible i
   assert.equal(env.audio.paused, false);
   assert.equal(env.audio.volume, volume);
   assert.equal(env.audio.playCalls, 1);
-  assert.equal(loading.children.length, 0);
-  assert.equal(env.document.body.children.length, 1);
-  assert.equal(env.document.body.children[0].children[0], env.button);
+  assert.equal(loading.children[0], env.control);
+  assert.equal(env.document.body.children.length, 0, 'the loading control must never float over the Almanach');
   env.advance(900);
   assert.ok(env.audio.volume > 0 && env.audio.volume < volume);
   assert.equal(env.audio.paused, false);
@@ -303,15 +302,18 @@ test('entry fades the soundtrack automatically and retains the same accessible i
   assert.equal(env.button.attrs.get('data-sound-state'), 'muted');
   assert.match(env.button.attrs.get('aria-label'), /einschalten/);
   assert.equal(env.button.textContent, 'existing SVG icon');
-  env.button.dispatchEvent(new Event('click')); await settle(); env.advance(6000);
-  assert.equal(env.audio.paused, false);
-  assert.equal(env.button.attrs.get('aria-pressed'), 'true');
+  assert.equal(env.button.disabled, true);
+  assert.equal(loading.children.length, 0);
+  assert.equal(env.audio.released, true);
+  assert.equal(env.audio.src, '');
+  await env.sound.toggle(); await env.sound.tryAutoplay();
+  assert.equal(env.audio.paused, true);
   env.platform.dispatchEvent(new Event('pagehide'));
   assert.equal(env.audio.paused, true);
   assert.equal(env.audio.released, true);
   assert.equal(env.document.body.children.length, 0);
   env.button.dispatchEvent(new Event('click'));
-  assert.equal(env.audio.playCalls, 2);
+  assert.equal(env.audio.playCalls, 1);
 });
 
 test('entry never starts previously blocked or manually muted music', async () => {

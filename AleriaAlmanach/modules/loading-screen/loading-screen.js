@@ -140,7 +140,7 @@
     const src = view.root.dataset.loadingSound;
     const pendingLoad = new AbortController();
     window.addEventListener('pagehide', () => pendingLoad.abort(), { once: true, signal: pendingLoad.signal });
-    import('./loading-screen-sound.js?v=20261013-v4').then(({ createLoadingScreenSound }) => {
+    import('./loading-screen-sound.js?v=20261013-v5').then(({ createLoadingScreenSound }) => {
       const cancelled = pendingLoad.signal.aborted || (!leaving && (!view || view.root.hidden));
       pendingLoad.abort();
       if (cancelled) return;

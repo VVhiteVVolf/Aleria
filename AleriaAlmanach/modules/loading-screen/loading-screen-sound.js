@@ -1,4 +1,4 @@
-// Owns the soundtrack and its control for the lifetime of the Almanach page.
+// Owns the loading soundtrack, its control, and the final fade on entry.
 export function createLoadingScreenSound({ button, control, src }, environment = window) {
   const audio = new environment.Audio(src);
   const lifetime = new AbortController();
@@ -21,7 +21,7 @@ export function createLoadingScreenSound({ button, control, src }, environment =
     if (destroyed) return;
     const active = !manuallyStopped && (playing || pending);
     const label = unavailable ? 'Musik nicht verfügbar' : active ? pending ? 'Musik startet … – ausschalten' : 'Musik ausschalten' : 'Musik einschalten';
-    button.disabled = unavailable;
+    button.disabled = unavailable || entered;
     button.setAttribute('data-sound-state', unavailable ? 'unavailable' : active ? pending ? 'pending' : 'playing' : 'muted');
     button.setAttribute('aria-pressed', String(active));
     button.setAttribute('aria-label', label);
@@ -59,7 +59,7 @@ export function createLoadingScreenSound({ button, control, src }, environment =
   }
 
   async function start() {
-    if (destroyed || unavailable || manuallyStopped || pending) return false;
+    if (destroyed || entered || unavailable || manuallyStopped || pending) return false;
     if (playing && !stopping) return true;
     const current = ++operation;
     cancelFade();
@@ -85,7 +85,7 @@ export function createLoadingScreenSound({ button, control, src }, environment =
   }
 
   function toggle() {
-    if (destroyed || unavailable) return;
+    if (destroyed || entered || unavailable) return;
     if (!manuallyStopped && (playing || pending)) return stop();
     manuallyStopped = false;
     return start();
@@ -107,12 +107,11 @@ export function createLoadingScreenSound({ button, control, src }, environment =
     render();
   }
 
-  function enterAlmanach() {
+  async function enterAlmanach() {
     if (destroyed || entered) return;
     entered = true;
-    environment.document.body.append(control);
-    button.addEventListener('click', toggle, { signal: lifetime.signal });
-    return stop();
+    await stop();
+    destroy();
   }
 
   function destroy() {

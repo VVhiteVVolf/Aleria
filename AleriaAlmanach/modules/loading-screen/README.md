@@ -58,16 +58,16 @@ Manuelles Ausschalten wird bei weiteren Interaktionen respektiert.
 Der Ton blendet beim Start aus vollständiger Stille über sechs Sekunden ein.
 Beim Betreten blendet er automatisch über 1800 ms aus und pausiert. Der Musikschalter
 ist ein eigenes SVG-Lautsprecher-Icon mit Schallwellen bzw. Stummsymbol. Die runde
-44-Pixel-Trefffläche sitzt von Anfang an per `position: fixed` rechts am Fensterrand,
-oberhalb der Statuszeile, und bewegt sich beim Scrollen nicht mit. Im Ladedialog
-bleibt sie in dessen Fokusbereich; beim Eintritt wechselt derselbe Container direkt
-an den Dokumentkörper. Listener und Audioelement gehören weiterhin ausschließlich
-dem Tonmodul. Manuelles Ausschalten blendet ebenfalls aus; erneutes Einschalten
-bleibt über das Icon möglich. Ein eigener Timer beendet das Ausblenden auch bei angehaltenen
+44-Pixel-Trefffläche hat einen eigenen Platz ganz rechts in der festen Kopfzeile
+des Ladedialogs. Nur der Bereich darunter scrollt; die Kopfzeile bleibt stehen.
+Beim Betreten verschwindet der Schalter mit dem Ladebildschirm. Nach dem Ausblenden
+werden Audioquelle und Listener freigegeben. Listener und Audioelement gehören
+weiterhin ausschließlich dem Tonmodul. Manuelles Aus- und Einschalten bleibt während
+des Ladebildschirms möglich. Ein eigener Timer beendet das Ausblenden auch bei angehaltenen
 Animationsframes in Hintergrundtabs. `pagehide` stoppt sofort und gibt Quelle,
-Listener und die feste Steuerung vollständig frei. Musik blockiert keinen
-Ladefortschritt. Ein verspätetes Tonmodul bindet nach dem Eintritt nur das stumme
-Bedienelement ein und startet keine Musik mehr; nach `pagehide` wird es verworfen.
+Listener und die Steuerung vollständig frei. Musik blockiert keinen
+Ladefortschritt. Ein verspätetes Tonmodul wird nach dem Eintritt sofort freigegeben
+und startet keine Musik mehr; nach `pagehide` wird es verworfen.
 
 Animationen sind pausierbar und starten bei `prefers-reduced-motion` pausiert.
 Tab bleibt im Ladedialog. Das Freigeben selbst startet keine Firebase-Schreiboperation.
