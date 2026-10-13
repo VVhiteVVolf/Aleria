@@ -401,7 +401,7 @@ export function renderCombatEvaluation(source = {}) {
         ${getStoredCriticalConsequences(resolution).map(consequence => `<p class="combat-critical-consequence"><strong>W${consequence.version >= 2 ? 20 : 10} · ${escapeHtml(consequence.roll)} · ${escapeHtml(consequence.name)}</strong><br>${escapeHtml(consequence.actorName)}: ${escapeHtml(consequence.description)}</p>`).join('')}
         <div class="combat-evaluation-mechanics">
           <span><b>${escapeHtml(attack.total)}</b> ${rollLabel} · ${escapeHtml(attack.notation || '')}</span>
-          ${attack.diceResults?.length ? `<span>${sequence.count > 1 ? 'Auftakt' : rollLabel}: W20 [${escapeHtml(attack.diceResults.join(', '))}] ${Number(attack.modifier) >= 0 ? '+' : ''}${escapeHtml(attack.modifier ?? 0)} · ${attack.criticalFailure ? 'Kritischer Fehlschlag' : attack.criticalSuccess ? 'Kritischer Treffer' : attack.hit ? 'Treffer' : 'verfehlt'}</span>` : ''}
+          ${attack.diceResults?.length ? `<span>${sequence.count > 1 ? 'Auftakt' : rollLabel}: W20 [${escapeHtml(attack.diceResults.join(', '))}] ${Number(attack.modifier) >= 0 ? '+' : ''}${escapeHtml(attack.modifier ?? 0)} · ${savingThrowMode ? (attack.saveSucceeded ? 'gelungen' : 'misslungen') : attack.criticalFailure ? 'Kritischer Fehlschlag' : attack.criticalSuccess ? 'Kritischer Treffer' : attack.hit ? 'Treffer' : 'verfehlt'}</span>` : ''}
           <span>gegen <b>${escapeHtml(attack.targetDefense)}</b> ${defenseLabel}</span>
           ${savingThrowMode ? `<span>Rettung ${attack.saveSucceeded ? 'gelungen' : 'misslungen'}${resolution.damage?.halvedBySave ? ' · halber Schaden' : ''}</span>` : ''}
           ${damage}

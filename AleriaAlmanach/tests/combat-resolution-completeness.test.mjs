@@ -108,6 +108,14 @@ test('a partial four-hit sequence is labelled by all rolls, including a critical
   assert.match(renderCombatEvaluation({ combatResolution: r }), /Angriffsfolge · 1\/4 Treffer · kritisch/);
 });
 
+test('saving throw dice keep the target’s saving result instead of using attack hit/miss labels', () => {
+  const r = resolution('a', 'b', 15);
+  r.resolutionMode = 'saving-throw'; r.profileActionKind = 'spell';
+  r.attack = { ...r.attack, hit: false, resolutionMode: 'saving-throw', saveSucceeded: true };
+  assert.match(renderCombatEvaluation({ combatResolution: r }), /Rettungswurf: W20 \[15\].*gelungen/);
+  assert.doesNotMatch(renderCombatEvaluation({ combatResolution: r }), /W20 \[15\][^<]*verfehlt/);
+});
+
 test('training and duels reject damage against zero HP before any new die or payment; other scene policies remain explicit', async () => {
   const actor = fighter('Asgeir Wolfshorn');
   const target = { ...fighter('Gawain Draig'), currentHitPoints: 0 };
