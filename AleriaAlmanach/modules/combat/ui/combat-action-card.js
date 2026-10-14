@@ -105,7 +105,7 @@ export function renderActionDetails(actor = {}, { open = false } = {}) {
   const weaponNotes = String(action.weapon?.notes || entry.notes || '').split('\n')
     .filter(note => note && !sourceNotes.some(value => String(value).split('\n').includes(note))).join('\n');
   const fields = [
-    ['Beschreibung', entry.description], ['Wirkung', entry.effect], ['Voraussetzungen', entry.requirements],
+    ['Beschreibung', entry.description], ['Wirkung', entry.description?.includes(entry.effect) ? '' : entry.effect], ['Voraussetzungen', entry.requirements],
     ['Reichweite', action.range || entry.range], ['Ziel', entry.target], ['Dauer', action.duration || entry.duration],
     ['Waffenhinweise', weaponNotes], ['Besonderheiten', (action.mechanicNotes || []).join('\n')],
     ['Nicht verfügbar', action.compatible === false ? action.disabledReason : '']

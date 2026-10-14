@@ -2,7 +2,7 @@ import { resolveCombatProfile } from '../../AleriaAlmanach/modules/combat/combat
 import assert from 'node:assert/strict';
 import { withEquippedCombatWeapon } from '../../AleriaAlmanach/modules/combat/combat-equipment-state.js';
 import { getCombatMounts } from '../../AleriaAlmanach/modules/combat/combat-support-equipment.js';
-import { getCombatDamagePreview } from '../../AleriaAlmanach/modules/combat/combat-action-estimates.js';
+import { getCombatDamagePreview, getExplicitAttackSequencePreview } from '../../AleriaAlmanach/modules/combat/combat-action-estimates.js';
 import { getCombatFormPresentation } from '../../AleriaAlmanach/modules/combat-styles/combat-form-presentation.js';
 import { getBonusDamageFormulas, getUniversalDamageBonus } from '../../AleriaAlmanach/modules/combat/combat-profile-model.js';
 import { combineDamageFormulas, buildDamageNotation } from '../../AleriaAlmanach/modules/combat/rules/combat-mvp-rules.js';
@@ -31,6 +31,10 @@ function saveLabel(save) {
 function followUpSummary(profile) {
   const follow = profile.selectedAction.followUpAttack;
   if (!follow?.enabled) return null;
+  const sequence = getExplicitAttackSequencePreview(profile);
+  if (sequence.length) return { count: sequence.length - 1,
+    steps: sequence.slice(1).map((step, i) => ({ number: i + 2, attack: `1W20 ${signed(profile.attackModifier)}`, damage: dice(step.notation), damageIcon: dieIcon(step.notation) })),
+    note: 'Jeder Schlag hat einen eigenen Trefferwurf. Fehlschläge beenden die Folge nicht.' };
   const formula = follow.inheritWeapon ? profile.weapon.damageFormula : follow.damageFormula;
   if (!formula || follow.alternateHands) return { note: 'Weitere Einzelangriffe gemäß Techniktext; Werte hängen von der jeweils geführten Hand ab.' };
   const bonus = (follow.inheritDamageModifier === false ? getUniversalDamageBonus(profile) : profile.damageModifier) + Number(follow.damageBonus || 0);
@@ -67,6 +71,7 @@ function describeVariant(character, loadout, action) {
     damage: damage ? dice(damage.notation) : 'Kein direkter Schaden', damageType: damage?.damageType || '',
     damageIcon: damage ? dieIcon(damage.notation, damage.damageType) : '',
     healing: healingFormula, healingIcon: healingFormula ? dieIcon(healingFormula, 'healing') : '',
+    saveTiming: selected.secondarySave?.timing === 'after-sequence' ? 'Rettung nach der gesamten Folge · immer' : 'Rettung nach Treffer',
     save: saveLabel(selected.secondarySave), saveEffect: selected.secondarySave?.failureCondition?.description || '',
     followUp: followUpSummary(profile), counter: counter ? { save: saveLabel(counter.secondarySave), note: 'Gegenangriff erst nach dem beschriebenen Auslöser; Werte der dann geführten Waffe.' } : null,
     conditions, groups: (selected.effects || []).map(e => e.condition?.stanceGroup).filter(Boolean),

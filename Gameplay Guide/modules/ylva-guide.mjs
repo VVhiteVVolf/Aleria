@@ -1,8 +1,9 @@
+import { ylvaWeaponAdvice, ylvaWeaponCombos } from './ylva-weapon-guide.mjs';
 export const ylvaGuide = {
   reviewedAt: '2026-10-14',
   slug: 'ylva', id: 'bSYZYAEOwiRgy44f6OmO', name: 'Lady Ylva Bleiddorn / Wolfshorn', eyebrow: 'Grenzerin · Skytte',
   title: 'Speerführung zwischen Jagd und Grenzwacht',
-  intro: 'Ylva hält den Gegner mit Dornwacht auf Abstand und sucht die Öffnung für einen zweiten Stoß. Ihre Stärke liegt in präzisen Speerangriffen, einem großen TP-Vorrat und gezielter Kontrolle. Angriff, Entwaffnung und Abwehr beanspruchen häufig dieselbe Reaktion.',
+  intro: 'Ylva hält den Gegner mit Dornwacht auf Abstand und sucht die Öffnung für einen zweiten Stoß. Ihre Stärke liegt in präzisen Speerangriffen, einem großen TP-Vorrat und gezielter Kontrolle. Kurze Bonusangriffe ergänzen ihre Stöße; mehrteilige Angriffe, Entwaffnung und Abwehr konkurrieren um die Reaktion.',
   image: 'assets/ylva-chibi.png', imageAlt: 'Chibi-Ylva mit Dornwacht und einem Leckerli, dem skeptischen Freki und Silberkrone mit silbernen Zöpfen.',
   weaponId: 'ylva-speer', weaponIds: ['ylva-speer', 'ylva-saex', 'ylva-handaxt'],
   companionIds: ['companion-ylva-freki', 'companion-ylva-silberkrone'],
@@ -15,11 +16,12 @@ export const ylvaGuide = {
   },
   identity: 'Ihre persönliche Ausbildung erlaubt Geschicklichkeit für Speere und verbessert Bogen und Speer. Saex und Handaxt erhalten diese Ausbildungsboni nicht. Dieser Guide konzentriert sich auf Nahkampf; der Langbogen bleibt verstaut.',
   decisions: [
-    ['Ein günstiges Angriffsfenster?', 'Der fallende Dorn setzt die stärkste persönliche Spitze. Prüfe Reaktion und Besondere Aktion, bevor du dich festlegst.'],
+    ['Ein günstiges Angriffsfenster?', 'Zwei Dornen und Kurzer Jagdstoß nutzen alle regulären Ressourcen ohne Besondere Aktion. Brechender Dorn ist eine teurere Spitze mit möglicher Entwaffnung.'],
     ['Ein langer Kampf?', 'Speer am Wildpfad als günstige Grundlage. Durchschnaufen erst einsetzen, wenn ausreichend TP fehlen. Besondere Aktionen für entscheidende Momente behalten.'],
     ['Eine gefährliche gegnerische Waffe?', 'Schafthebel nimmt bewusst keinen Schaden mit. Er lohnt sich, wenn eine fallengelassene Waffe den gegnerischen Plan stärker stört als ein Treffer.']
   ],
   combos: [
+    ...ylvaWeaponCombos,
     { title: 'Die Öffnung für den zweiten Stoß', mode: 'aggressiv', actions: ['Der fallende Dorn'],
       text: 'Zwei getrennte Angriffe auf dasselbe Ziel. Trifft der erste, folgt GES SG 15: Nur bei Scheitern bekommt der unmittelbare zweite Angriff Vorteil und einen zusätzlichen Waffenwürfel. Nach einem verfehlten Auftakt folgt trotzdem ein normaler zweiter Angriff.',
       caution: 'Die Bonusaktion bleibt frei. Die Reaktion ist bereits bezahlt; keine zusätzliche Speerabwehr im selben Beitrag.' },
@@ -40,6 +42,7 @@ export const ylvaGuide = {
       caution: 'Temporäre TP werden nicht addiert. Positive RK-Haltungen stapeln sich nicht; die stärkste zählt. Die Besondere Aktion fehlt später für den fallenden Dorn.' }
   ],
   techniques: [
+    ...ylvaWeaponAdvice,
     ['Der fallende Dorn', 'Spitze', 'Starker Einsatz begrenzter Ressourcen. Besonders attraktiv, wenn beide Treffer Aussicht haben und das Ziel den GES-Rettungswurf schwer schafft.'],
     ['Speer am Wildpfad', 'Alltag', 'Solider Angriff mit nur einer Aktion. Hält die übrigen Ressourcen für Heilung oder Abwehr offen.'],
     ['Speer aus dem Knie', 'Alternative', 'Mechanisch sehr ähnlich zu Speer am Wildpfad. Eine andere Beschreibung bringt keinen zusätzlichen Angriff.'],
@@ -68,5 +71,5 @@ export const ylvaGuide = {
       joke: 'Silberkrone duldet Schlamm. Ungeflochtene Mähnen sind eine andere Angelegenheit.' }
   ],
   pitfalls: ['Der fallende Dorn und Speer gegen den Schritt konkurrieren um dieselbe Aktion und Reaktion.', 'Schafthebel verursacht keinen Schaden, auch wenn Dornwacht einen festen Schadensbonus besitzt.', 'Eine Reaktionssperre nimmt mehrere starke Speeroptionen. Ein einfacher Aktionsangriff bleibt möglich, sofern die Aktion frei ist.', 'Mehrere Vorteilsquellen stapeln sich nicht. Auch mit Vorteil bleibt jeder Trefferwurf ein eigener Wurf.', 'Durchschnaufen möglichst vor Kampfunfähigkeit einsetzen; bei 0 TP ist es keine gewöhnlich verfügbare Selbstrettung.'],
-  conclusion: 'Ylva funktioniert mit einem klaren Wechsel zwischen verlässlichen Einzelangriffen und gezielten Spitzen. Die persönlichen Kontrolloptionen öffnen andere Wege, bezahlen diese aber mit verlorenem Schaden oder einer Besonderen Aktion.'
+  conclusion: 'Ylva funktioniert mit einem klaren Wechsel zwischen verlässlichen Einzelangriffen und gezielten Spitzen. Ihre neuen Bonus- und Reaktionsangriffe erlauben mehrere Treffer pro Beitrag. Die Dreierfolge erzwingt die Rettung gegen den Feger, bindet dafür aber alle regulären Ressourcen. Gegen hohe Rüstung sind wenige kräftige Treffer häufig wertvoller als viele kleine.'
 };

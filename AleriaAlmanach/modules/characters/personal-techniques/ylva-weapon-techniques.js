@@ -69,7 +69,7 @@ export function createYlvaWeaponTechniques() {
       { sidearm: true, secondarySave: save(12, lock) }),
     technique('drei-dornen-ein-sturz', 'Drei Dornen, ein Sturz', [B, A, R],
       'Ylva stößt mit Dornwacht zu, setzt aus der Gegenrichtung nach und täuscht mit der freien Hand einen Griff nach dem Gegner an. Während dessen Deckung der Hand folgt, schwingt sie den Speerschaft tief herum und versucht, ihm die Füße unter dem Körper wegzufegen.',
-      'Drei getrennte Trefferwürfe, auch nach Fehlschlägen: 1W4; 1W8; 1W6 + voller Schadensbonus. Kein Ausbildungswürfel. Danach immer GES SG 18. Bei Scheitern: zu Boden gefegt; Ylva hat gegen dieses Ziel Vorteil bis zum Beginn ihres nächsten Beitrags, das Ziel keine Reaktion bis zum Beginn seines nächsten Beitrags. Kein zusätzlicher Bonusaktionsentzug.',
+      'Drei getrennte Trefferwürfe, auch nach Fehlschlägen: 1W4; 1W8; 1W6 + voller Schadensbonus. Kein Ausbildungswürfel. Danach immer GES SG 18. Bei Scheitern: zu Boden gefegt; Ylva hat gegen dieses Ziel Vorteil bis zum Ende ihres nächsten Beitrags, das Ziel keine Reaktion bis zum Beginn seines nächsten Beitrags. Kein zusätzlicher Bonusaktionsentzug.',
       { damageFormula: '1d4', damageModel: { mode: 'fixed', inheritDamageModifier: false, inheritBonusDamage: false, scalingSteps: [] },
         followUpAttack: { enabled: true, afterMiss: true, repeatCount: 2, steps: [
           { damageFormula: '1d8', inheritDamageModifier: false, inheritBonusDamage: false },
@@ -80,8 +80,8 @@ export function createYlvaWeaponTechniques() {
           duration: 'Bis zum Beginn des nächsten eigenen Beitrags', durationModel: startDuration }),
           attributeKey: 'dexterity', timing: 'after-sequence', requiresHit: false,
           actorFailureCondition: { id: 'ylva-feger-oeffnung', name: 'Öffnung nach dem Feger',
-            description: 'Vorteil ausschließlich gegen das gefegte Ziel bis zum Beginn von Ylvas nächstem Beitrag.',
-            duration: 'Bis zum Beginn des nächsten eigenen Beitrags', durationModel: startDuration, mechanics: {},
+            description: 'Vorteil ausschließlich gegen das gefegte Ziel bis zum Ende von Ylvas nächstem Beitrag.',
+            duration: 'Bis zum Ende des nächsten eigenen Beitrags', durationModel: nextDuration, mechanics: {},
             triggerRules: [{ id: 'ylva-feger-vorteil', name: 'Öffnung nach dem Feger', phase: 'pre-roll', recipient: 'actor',
               sourceRelation: 'self', activation: 'passive', frequency: 'always', condition: 'always',
               actionKinds: ['weapon', 'technique'], effects: { rollMode: 'advantage' } }] }

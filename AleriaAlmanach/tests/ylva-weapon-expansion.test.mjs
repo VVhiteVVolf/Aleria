@@ -62,7 +62,7 @@ test('triple fixed dice survive two-handed grip; ordinary two-strike sequence ha
   assert.equal(result.attack.hit,false); assert.equal(result.followUpAttacks[0].damage.notation,'1d8');
 });
 
-test('sweep is target-specific, survives unrelated posts, expires at each owners next start', async () => {
+test('sweep is target-specific, survives unrelated posts, target lock expires on start, advantage after the full next contribution', async () => {
   const actor=profile('drei-dornen-ein-sturz'), victim=target();
   const result=await new CombatResolutionService(receipts([2,2,2])).resolveAttack({actor,target:victim});
   const states=deriveCombatStateFromComments([{characterId:ylva.id,combatResolution:result}]);
@@ -76,7 +76,8 @@ test('sweep is target-specific, survives unrelated posts, expires at each owners
   assert.equal(states.get(ylva.id).temporaryConditions.length,1);
   beginCombatContribution(states,{characterId:gais.id}); assert.equal(states.get(gais.id).temporaryConditions.length,0);
   assert.equal(states.get(ylva.id).temporaryConditions.length,1);
-  beginCombatContribution(states,{characterId:ylva.id}); assert.equal(states.get(ylva.id).temporaryConditions.length,0);
+  beginCombatContribution(states,{characterId:ylva.id}); assert.equal(states.get(ylva.id).temporaryConditions.length,1);
+  advanceTemporaryConditionsForComment(states,{characterId:ylva.id}); assert.equal(states.get(ylva.id).temporaryConditions.length,0);
 });
 
 test('only contributing actors recover regular resources; administrative and historical boundaries do not recover', () => {

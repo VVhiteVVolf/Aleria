@@ -39,6 +39,9 @@ test(`${g.name}: legal action budgets, existing techniques, owned companions and
   if (g.slug === 'ylva') {
     assert.equal(model.name,'Lady Ylva Bleiddorn / Wolfshorn');
     assert.equal(model.taxonomy.path.at(-1).label,'Haus Bleiddorn / Wolfshorn');
+    const triple = model.arsenal.entries.find(e => e.id === 'technique:ylva-drei-dornen-ein-sturz').variants[0];
+    assert.deepEqual(triple.followUp.steps.map(s => s.damage), ['1W8','1W6+5']);
+    assert.equal(triple.save, 'GES SG 18'); assert.match(triple.saveTiming, /immer/);
     const lever = model.arsenal.entries.find(e => e.name === 'Schafthebel');
     assert.ok(lever.variants.every(v => v.damage === 'Kein direkter Schaden' && v.save === 'KRF SG 14'));
     assert.ok(lever.variants.every(v => v.weaponId === 'ylva-speer'));
@@ -66,7 +69,7 @@ test(`${g.name}: legal action budgets, existing techniques, owned companions and
     assert.equal(getCharacterGameplayGuide({identity:{worldPersonId:registration.worldPersonId}}),'/Gameplay%20Guide/gawain.html');
     assert.throws(()=>buildGuideModel({...g,permanentConditionIds:['transient-or-missing']},character),/Dauerhafter Regeleintrag fehlt/);
   }
-  assert.equal(model.combos.length, 6);
+  assert.equal(model.combos.length, g.combos.length);
   assert.equal(getCharacterGameplayGuide(character), `/Gameplay%20Guide/${g.slug}.html`);
   const html = renderGuide(model) + model.arsenal.entries.map(entry => renderActionPreview(entry,model.arsenal)).join('');
   assert.ok(html.includes('data-action="filter-style"')); assert.ok(!html.includes('onclick='));

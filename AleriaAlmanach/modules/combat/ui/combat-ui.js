@@ -363,9 +363,9 @@ export function renderCombatEvaluation(source = {}) {
     .flatMap(snapshot => (snapshot.changes || []).map(change => (
       `<span>${escapeHtml(snapshot.sourceActorName || 'Reaktion')} \u00b7 ${escapeHtml(change.name || 'Ressource')}: <b>${escapeHtml(change.before)}</b> &rarr; <b>${escapeHtml(change.after)}</b></span>`
     ))).join('');
-  const secondarySaves = (Array.isArray(resolution.secondarySaves) ? resolution.secondarySaves : []).map(save => (
-    `<span><b>${escapeHtml(String(save.attributeKey || 'Rettung').toUpperCase())}-Rettung ${escapeHtml(save.total)}</b> gegen SG ${escapeHtml(save.dc)} · ${save.succeeded ? 'gelungen' : 'misslungen'}</span>`
-  )).join('');
+  const secondarySaves = (Array.isArray(resolution.secondarySaves) ? resolution.secondarySaves : []).map(save => ({ afterSequence: save.timing === 'after-sequence', html: (
+    `<span><b>${escapeHtml(({strength:'KRF',dexterity:'GES',constitution:'KON',intelligence:'INT',wisdom:'WEI',charisma:'CHA'})[save.attributeKey] || 'Rettung')}-Rettung ${escapeHtml(save.total)}</b> gegen SG ${escapeHtml(save.dc)} · ${save.succeeded ? 'gelungen' : 'misslungen'}</span>`
+  ) }));
   const followUpAttacks = (Array.isArray(resolution.followUpAttacks) ? resolution.followUpAttacks : []).map((followUp, index) => {
     const followAttack = followUp.attack || {};
     const outcome = followAttack.criticalFailure ? 'Kritischer Fehlschlag' : followAttack.criticalSuccess ? 'Kritischer Treffer' : followAttack.hit ? 'Treffer' : 'verfehlt';
@@ -410,8 +410,9 @@ export function renderCombatEvaluation(source = {}) {
           ${resourceChanges}
           ${ammunitionUse}
           ${ruleResourceChanges}
+          ${secondarySaves.filter(s => !s.afterSequence).map(s => s.html).join('')}
           ${followUpAttacks}
-          ${secondarySaves}
+          ${secondarySaves.filter(s => s.afterSequence).map(s => s.html).join('')}
           ${appliedCondition}
           ${mechanicNotes}
           ${effectResults}

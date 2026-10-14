@@ -33,10 +33,12 @@ try {
     await page.goto(`${origin}/Gameplay%20Guide/${slug}.html`);
     await page.locator('.hero-art img').evaluate(img => img.decode());
     await page.screenshot({ path: `${output}/${slug}-desktop.png`, fullPage: true });
+    const allCount = await page.locator('.combo').count();
+    const controlCount = await page.locator('.combo[data-mode="kontrolle"]').count();
     await page.getByRole('button',{name:'Kontrolle',exact:true}).click();
-    assert.equal(await page.locator('.combo:not([hidden])').count(),2);
+    assert.equal(await page.locator('.combo:not([hidden])').count(),controlCount);
     await page.getByRole('button',{name:'Alle',exact:true}).click();
-    assert.equal(await page.locator('.combo:not([hidden])').count(),6);
+    assert.equal(await page.locator('.combo:not([hidden])').count(),allCount);
     const library = page.locator('[data-role="arsenal-library"]');
     assert.ok(await library.locator('.cost img').count() > 20);
     const search = library.locator('[data-role="arsenal-search"]');
@@ -50,6 +52,11 @@ try {
       assert.ok((await library.locator('[data-role="attack-preview"]').innerText()).length > 50);
     }
     if (slug === 'ylva') {
+      await library.locator('[data-attack-id="technique:ylva-drei-dornen-ein-sturz"]').click();
+      const tripleText = await page.locator('#attack-preview').innerText();
+      assert.match(tripleText,/1W8/); assert.match(tripleText,/1W6\+5/);
+      assert.match(tripleText,/Rettung nach der gesamten Folge/i); assert.match(tripleText,/GES SG 18/);
+      await page.locator('#attack-preview').screenshot({path:`${output}/ylva-triple-preview.png`});
       await search.fill('Schafthebel');
       assert.equal(await library.locator('[data-arsenal-row]:not([hidden])').count(),1);
       await library.getByRole('button',{name:/Schafthebel/}).click();
@@ -144,6 +151,9 @@ try {
   await page.locator('[data-arsenal-card="technique:ylva-schafthebel"] [data-combat-action-option]').click();
   assert.match(await page.locator('.combat-arsenal-detail').innerText(),/Kein Schaden/);
   await page.locator('[data-action="close-action-table"]').click();
+  await page.evaluate(()=>window.selectGuideAction('ylva-drei-dornen-ein-sturz'));
+  const sequenceValues=await composer.locator('.combat-action-values').innerText();
+  for(const formula of ['1W4','1W8','1W6+5']) assert.ok(sequenceValues.includes(formula));
   await page.evaluate(()=>window.selectGuideAction('ylva-aus-der-angriffslinie'));
   assert.equal(await composer.locator('[data-combat-self-target]').count(),1);
   assert.match(await composer.locator('.combat-action-values').innerText(),/Automatisch/);

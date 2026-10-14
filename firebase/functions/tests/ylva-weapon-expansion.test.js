@@ -44,6 +44,7 @@ test('new triple commits during an existing encounter; only own pools reset, his
   const state=deriveCombatStateFromComments([start,spent,{id:result.id,characterId:ylva.id,commentSegments:result.mechanics.commentSegments}]);
   for(const id of [ylva.id,gais.id]) assert.equal(state.get(id).resources.find(r=>r.id==='reaction').current,0);
   assert.equal(state.get(ylva.id).resources.find(r=>r.id==='special-action').current,resolveCombatProfile(ylva).resources.find(r=>r.id==='special-action').current);
-  assert.equal(state.get(ylva.id).temporaryConditions[0].durationModel.expiresAt,'actor-start');
+  assert.equal(state.get(ylva.id).temporaryConditions[0].durationModel.remainingActorComments,1);
+  assert.equal(state.get(ylva.id).temporaryConditions[0].durationModel.expiresAt,undefined);
   assert.equal(state.get(gais.id).temporaryConditions[0].blockedResource,'reaction');
 });

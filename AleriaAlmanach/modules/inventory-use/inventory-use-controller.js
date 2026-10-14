@@ -1,3 +1,4 @@
+import { beginCombatContribution } from '../combat/combat-contribution-start.js';
 import { renderInventoryUseComposer, inventoryUseSelection } from './inventory-use-composer.js';
 import { deriveSceneItems, applySceneItemEvent } from '../scene-items/scene-items-model.js';
 import { applySceneItemInteraction } from '../scene-items/scene-item-interaction.js?v=20260928-equipment-art-v4';
@@ -131,7 +132,7 @@ async function handleSubmission(submission = {}) {
   const history=globalThis.getCachedCommentsForThread?.(submission.threadId) || [];
   const sceneItems=deriveSceneItems(history);
   const states=deriveCombatStateFromComments(history);
-  for (const [id,state] of states) if (state.resources) states.set(id,{...state,resources:resetCommentScopedResources(state.resources)});
+  beginCombatContribution(states, { characterId: submission.characterId, commentSegments: segments });
   const usages = new Map();
   consumeSegments.forEach(segment => {
     const actor = getActorForSegment(segment, submission.characterId, actors);

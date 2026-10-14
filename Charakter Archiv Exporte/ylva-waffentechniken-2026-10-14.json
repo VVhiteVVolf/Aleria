@@ -1,0 +1,5099 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-14T19:00:46.364Z",
+  "character": {
+    "id": "bSYZYAEOwiRgy44f6OmO",
+    "name": "Ylva Wolfshorn",
+    "updatedAt": "2026-10-14T19:00:46.364Z",
+    "combatProfile": {
+      "cheats": {
+        "automaticCritical": false,
+        "enabled": false
+      },
+      "aura": {
+        "latentPresence": {
+          "selfMechanics": {
+            "spellSaveDc": 0,
+            "initiative": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attackRollMode": "normal",
+            "combatStartTemporaryHitPoints": 0,
+            "armorClass": 0,
+            "passivePerception": 0,
+            "damage": 0,
+            "savingThrowAdvantageAttributes": [],
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "attack": 0,
+            "skill": 0,
+            "bonusDamageFormula": "",
+            "savingThrow": 0,
+            "spellAttack": 0
+          },
+          "trigger": "",
+          "enabled": true,
+          "radius": "",
+          "aiInstructions": "",
+          "description": "",
+          "active": true,
+          "target": "Umgebung, Verbündete und Gegner",
+          "duration": "",
+          "name": "Latente Präsenz",
+          "allyMechanics": {
+            "savingThrow": 0,
+            "bonusDamageFormula": "",
+            "spellAttack": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "attackRollMode": "normal",
+            "skill": 0,
+            "movement": 0,
+            "damage": 0,
+            "initiative": 0,
+            "passivePerception": 0,
+            "savingThrowAdvantageAttributes": [],
+            "armorClass": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attack": 0,
+            "spellSaveDc": 0,
+            "maximumHitPoints": 0
+          },
+          "enemyMechanics": {
+            "damage": 0,
+            "passivePerception": 0,
+            "armorClass": 0,
+            "spellAttack": 0,
+            "maximumHitPoints": 0,
+            "savingThrow": 0,
+            "initiative": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "skill": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "attackRollMode": "normal",
+            "attack": 0,
+            "movement": 0,
+            "bonusDamageFormula": "",
+            "spellSaveDc": 0,
+            "savingThrowAdvantageAttributes": []
+          },
+          "requirements": ""
+        },
+        "name": "Aura",
+        "notes": "",
+        "focusResourceId": "aura-focus",
+        "domain": "",
+        "enabled": false,
+        "focusBypassCost": 1,
+        "activeForm": {
+          "requirements": "",
+          "allyMechanics": {
+            "damage": 0,
+            "spellSaveDc": 0,
+            "initiative": 0,
+            "movement": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowDisadvantageAttributes": [],
+            "armorClass": 0,
+            "passivePerception": 0,
+            "skill": 0,
+            "attack": 0,
+            "maximumHitPoints": 0,
+            "savingThrowAdvantageAttributes": [],
+            "combatStartTemporaryHitPoints": 0,
+            "spellAttack": 0,
+            "savingThrow": 0
+          },
+          "description": "",
+          "active": false,
+          "duration": "",
+          "target": "Selbst und gewählte Ziele",
+          "aiInstructions": "",
+          "trigger": "",
+          "enabled": false,
+          "name": "Aktive Form",
+          "enemyMechanics": {
+            "armorClass": 0,
+            "bonusDamageFormula": "",
+            "initiative": 0,
+            "spellSaveDc": 0,
+            "skill": 0,
+            "damage": 0,
+            "movement": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "savingThrowAdvantageAttributes": [],
+            "combatStartTemporaryHitPoints": 0,
+            "attack": 0,
+            "maximumHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "savingThrowDisadvantageAttributes": []
+          },
+          "radius": "",
+          "selfMechanics": {
+            "skill": 0,
+            "movement": 0,
+            "savingThrowAdvantageAttributes": [],
+            "attackRollMode": "normal",
+            "combatStartTemporaryHitPoints": 0,
+            "spellSaveDc": 0,
+            "attack": 0,
+            "spellAttack": 0,
+            "initiative": 0,
+            "savingThrow": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "damage": 0,
+            "maximumHitPoints": 0,
+            "bonusDamageFormula": "",
+            "passivePerception": 0,
+            "armorClass": 0
+          }
+        }
+      },
+      "techniques": [
+        {
+          "id": "ylva-fallender-dorn",
+          "maximumTargets": 1,
+          "description": "Ylva senkt Dornwacht unter die Deckung und zieht die Spitze in einen zweiten, steileren Stoß. (Zwei getrennte Speerangriffe. Nach dem ersten Treffer: Geschicklichkeitsrettungswurf SG 15. Bei Scheitern erhält der sofortige zweite Angriff Vorteil und einen zusätzlichen Waffenschadenswürfel. Sonst erfolgt er normal, auch wenn der erste Angriff verfehlt. Beide Angriffe sind bezahlt.)",
+          "effects": [
+            {
+              "on": "hit",
+              "target": "target",
+              "inheritWeaponDamageType": true,
+              "type": "damage"
+            }
+          ],
+          "trainingForm": "Persönliche Techniken",
+          "minimumLevel": 7,
+          "weaponTypes": [
+            "spear"
+          ],
+          "secondarySave": {
+            "fixedDc": 15,
+            "addProficiency": false,
+            "attributeKey": "dexterity",
+            "enabled": true
+          },
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1
+          },
+          "auraBypass": {
+            "allowed": false
+          },
+          "activationType": "action",
+          "name": "Der fallende Dorn",
+          "followUpAttack": {
+            "enabled": true,
+            "saveFailureBonus": true,
+            "repeatCount": 1,
+            "afterMiss": true,
+            "inheritWeapon": true
+          },
+          "active": true,
+          "costs": [
+            {
+              "name": "Aktion",
+              "amount": 1,
+              "resourceId": "action",
+              "scope": "comment"
+            },
+            {
+              "amount": 1,
+              "name": "Reaktion",
+              "scope": "comment",
+              "resourceId": "reaction"
+            },
+            {
+              "resourceId": "special-action",
+              "scope": "persistent",
+              "name": "Besondere Aktion",
+              "amount": 1
+            }
+          ],
+          "category": "technique",
+          "status": "confirmed",
+          "effect": "(Zwei getrennte Speerangriffe. Nach dem ersten Treffer: Geschicklichkeitsrettungswurf SG 15. Bei Scheitern erhält der sofortige zweite Angriff Vorteil und einen zusätzlichen Waffenschadenswürfel. Sonst erfolgt er normal, auch wenn der erste Angriff verfehlt. Beide Angriffe sind bezahlt.)"
+        },
+        {
+          "name": "Erster Jagdpfeil",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-1-weapon-damage",
+              "damageType": "",
+              "type": "damage",
+              "magical": false,
+              "formula": "",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "target": "target",
+              "on": "hit",
+              "inheritWeaponDamageType": true
+            }
+          ],
+          "cultureTraining": {
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresTwoHands": false,
+            "requiresShield": false,
+            "requiresDualWield": false,
+            "branchId": "skytte-bow",
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresMounted": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "schemaVersion": 1
+          },
+          "aiInstructions": "",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "damageType": "",
+          "cenyrTraining": {
+            "allowedClassIds": [],
+            "requiresMounted": false,
+            "slotBands": [],
+            "branchId": "",
+            "assignedSlotId": "",
+            "sourceStatus": "",
+            "designNotes": "",
+            "uchelwyrCompatible": false,
+            "weaponRuleSetId": "",
+            "selectedAtLevel": null,
+            "classWeaponProfiles": {}
+          },
+          "trainingForm": "Stand des Schildes",
+          "minimumLevel": 1,
+          "rollMode": "normal",
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "compatibleWeaponIds": [],
+          "duration": "",
+          "effect": "(Ein leichter Schuss auf ein einzelnes Ziel.)",
+          "status": "confirmed",
+          "secondarySave": {
+            "enabled": false
+          },
+          "damageFormula": "",
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "maximumTargets": 1,
+          "damageModel": {
+            "bonusWeaponDieCap": 12,
+            "bonusFormula": "",
+            "baseDieCap": 4,
+            "lightAttack": true,
+            "mode": "weapon-dice",
+            "bonusWeaponDice": 0,
+            "weaponBonuses": [],
+            "scalingSteps": [],
+            "weaponDiceMultiplier": 1
+          },
+          "damageBonus": 0,
+          "live": true,
+          "activationType": "bonus-action",
+          "weaponTypes": [
+            "bow"
+          ],
+          "active": true,
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "target": "Ein Gegner",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-1-bonus-action-1",
+              "name": "Bonusaktion",
+              "resourceId": "bonus-action",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "criticalThreshold": 20,
+          "description": "Ylva legt den Pfeil an, findet ihr Ziel und löst mit einer knappen Bewegung der Finger. (Ein leichter Schuss auf ein einzelnes Ziel.)",
+          "combatStyleId": "huskarl-waffenlehre",
+          "triggerRules": [],
+          "targetDefenseModifier": 0,
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "cost": 1,
+            "allowed": true
+          },
+          "range": "Waffenreichweite",
+          "category": "technique",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "attackBonus": 0,
+          "id": "combat-style-huskarl-skytte-grund-1"
+        },
+        {
+          "cultureTraining": {
+            "requiresTwoHands": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresMounted": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "branchId": "skytte-bow",
+            "requiresShield": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "schemaVersion": 1,
+            "requiresDualWield": false
+          },
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "trainingForm": "Stand des Schildes",
+          "minimumLevel": 2,
+          "live": true,
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "id": "combat-style-huskarl-skytte-grund-2",
+          "category": "technique",
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "damageBonus": 0,
+          "activationType": "bonus-action",
+          "combatStyleId": "huskarl-waffenlehre",
+          "targetDefenseModifier": 0,
+          "damageType": "",
+          "effect": "(Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.)",
+          "status": "confirmed",
+          "name": "Ruhiger Atem",
+          "criticalThreshold": 20,
+          "triggerRules": [],
+          "compatibleWeaponIds": [],
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-2-aim",
+              "notes": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
+              "on": "always",
+              "target": "self",
+              "condition": {
+                "description": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
+                "id": "huskarl-zielen",
+                "tags": "Huskarl-Waffenlehre",
+                "durationModel": {
+                  "remainingActorComments": 1,
+                  "kind": "actor-comments"
+                },
+                "mechanics": {
+                  "attack": 1
+                },
+                "name": "Gesammelte Ruhe",
+                "duration": "1 eigener Beitrag"
+              },
+              "type": "buff"
+            }
+          ],
+          "range": "Waffenreichweite",
+          "attackBonus": 0,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "damageFormula": "",
+          "secondarySave": {
+            "enabled": false
+          },
+          "weaponTypes": [
+            "bow"
+          ],
+          "combatStyleFormId": "huskarl-schildgrund",
+          "active": true,
+          "target": "Selbst",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "costs": [
+            {
+              "name": "Bonusaktion",
+              "amount": 1,
+              "id": "combat-style-huskarl-skytte-grund-2-bonus-action-1",
+              "resourceId": "bonus-action",
+              "scope": "comment"
+            },
+            {
+              "name": "Reaktion",
+              "scope": "comment",
+              "id": "combat-style-huskarl-skytte-grund-2-reaction-2",
+              "amount": 1,
+              "resourceId": "reaction"
+            }
+          ],
+          "maximumTargets": 1,
+          "description": "Ylva lässt den Atem ruhig ausströmen, bis Bogenhand und Blick auf derselben Linie liegen. (Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.)",
+          "mechanics": {}
+        },
+        {
+          "activationType": "action",
+          "costs": [
+            {
+              "amount": 1,
+              "id": "combat-style-huskarl-skytte-grund-3-action-1",
+              "scope": "comment",
+              "name": "Aktion",
+              "resourceId": "action"
+            }
+          ],
+          "damageType": "",
+          "cenyrTraining": {
+            "uchelwyrCompatible": false,
+            "branchId": "",
+            "selectedAtLevel": null,
+            "weaponRuleSetId": "",
+            "sourceStatus": "",
+            "classWeaponProfiles": {},
+            "designNotes": "",
+            "assignedSlotId": "",
+            "allowedClassIds": [],
+            "slotBands": [],
+            "requiresMounted": false
+          },
+          "minimumLevel": 3,
+          "trainingForm": "Stand des Schildes",
+          "requirements": "Speer",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "target": "Ein Gegner",
+          "secondarySave": {
+            "enabled": false
+          },
+          "active": true,
+          "damageFormula": "",
+          "weaponLabel": "Speer",
+          "range": "Waffenreichweite",
+          "name": "Speer am Wildpfad",
+          "damageModel": {
+            "weaponDiceMultiplier": 1,
+            "weaponBonuses": [],
+            "bonusFormula": "",
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "mode": "weapon-dice",
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "damageBonus": 0,
+          "id": "combat-style-huskarl-skytte-grund-3",
+          "category": "technique",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "aiInstructions": "",
+          "weaponTypes": [
+            "spear"
+          ],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "cultureTraining": {
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresShield": false,
+            "requiresTwoHands": false,
+            "branchId": "skytte-spear",
+            "schemaVersion": 1,
+            "slotBands": [
+              "foundation"
+            ],
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresDualWield": false
+          },
+          "duration": "",
+          "description": "Aus festem Stand stößt Ylva gerade vor und führt Dornwacht unmittelbar in ihre Deckung zurück. (Ein sicherer Speerstoß im Nahkampf.)",
+          "compatibleWeaponIds": [],
+          "combatStyleId": "huskarl-waffenlehre",
+          "triggerRules": [],
+          "mechanics": {},
+          "rollMode": "normal",
+          "criticalThreshold": 20,
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "targetDefenseModifier": 0,
+          "maximumTargets": 1,
+          "effect": "(Ein sicherer Speerstoß im Nahkampf.)",
+          "status": "confirmed",
+          "live": true,
+          "effects": [
+            {
+              "formula": "",
+              "on": "hit",
+              "type": "damage",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "target": "target",
+              "damageType": "",
+              "id": "combat-style-huskarl-skytte-grund-3-weapon-damage"
+            }
+          ],
+          "attackBonus": 0,
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes"
+        },
+        {
+          "rollMode": "normal",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "cost": 1,
+            "allowed": true
+          },
+          "damageModel": {
+            "bonusWeaponDice": 0,
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ],
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "weaponBonuses": [],
+            "bonusFormula": "",
+            "bonusWeaponDieCap": 12
+          },
+          "damageBonus": 0,
+          "duration": "",
+          "active": true,
+          "targetDefenseModifier": 0,
+          "target": "Ein Gegner",
+          "damageFormula": "",
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "secondarySave": {
+            "enabled": true,
+            "addProficiency": true,
+            "failureCondition": {
+              "name": "Gebundene Waffenführung",
+              "duration": "1 eigener Beitrag",
+              "tags": "Huskarl-Waffenlehre",
+              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
+              "id": "combat-style-huskarl-skytte-grund-4-failed-save",
+              "mechanics": {
+                "attack": -1
+              }
+            },
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "dcAttributeKey": "strength"
+          },
+          "triggerRules": [],
+          "live": true,
+          "activationType": "action",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "effects": [
+            {
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "id": "combat-style-huskarl-skytte-grund-4-weapon-damage",
+              "type": "damage",
+              "target": "target",
+              "damageType": "",
+              "formula": "",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "on": "hit"
+            }
+          ],
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "cenyrTraining": {
+            "requiresMounted": false,
+            "allowedClassIds": [],
+            "uchelwyrCompatible": false,
+            "designNotes": "",
+            "sourceStatus": "",
+            "assignedSlotId": "",
+            "branchId": "",
+            "weaponRuleSetId": "",
+            "selectedAtLevel": null,
+            "classWeaponProfiles": {},
+            "slotBands": []
+          },
+          "mechanics": {},
+          "attackBonus": 0,
+          "maximumTargets": 1,
+          "cultureTraining": {
+            "branchId": "skytte-sidearm",
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresDualWield": false,
+            "requiresTwoHands": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "schemaVersion": 1,
+            "requiresMounted": false,
+            "requiresShield": false
+          },
+          "range": "Waffenreichweite",
+          "status": "confirmed",
+          "effect": "(Nahkampftreffer mit Bindung: KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.)",
+          "compatibleWeaponIds": [],
+          "criticalThreshold": 20,
+          "requirements": "Schwert, Axt oder Sax",
+          "minimumLevel": 4,
+          "trainingForm": "Stand des Schildes",
+          "id": "combat-style-huskarl-skytte-grund-4",
+          "name": "Sax im Unterholz",
+          "description": "Ylva schließt die Entfernung und drängt mit der kurzen Schneide gegen den Waffenarm. (Nahkampftreffer mit Bindung: KRF-Rettungswurf gegen −1 Angriff für einen eigenen Beitrag.)",
+          "costs": [
+            {
+              "name": "Aktion",
+              "id": "combat-style-huskarl-skytte-grund-4-action-1",
+              "amount": 1,
+              "resourceId": "action",
+              "scope": "comment"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-grund-4-reaction-2",
+              "scope": "comment",
+              "amount": 1,
+              "resourceId": "reaction",
+              "name": "Reaktion"
+            }
+          ],
+          "combatStyleId": "huskarl-waffenlehre",
+          "damageType": "",
+          "category": "technique",
+          "aiInstructions": "",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ]
+        },
+        {
+          "attackBonus": 0,
+          "status": "confirmed",
+          "effect": "(Ein sorgfältig angesetzter Schuss; keine automatische Deckungsaufhebung.)",
+          "compatibleWeaponIds": [],
+          "damageType": "",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "secondarySave": {
+            "enabled": false
+          },
+          "damageFormula": "",
+          "triggerRules": [],
+          "description": "Ylva wartet auf die schmale Lücke zwischen den Hindernissen und schickt den Pfeil hindurch. (Ein sorgfältig angesetzter Schuss; keine automatische Deckungsaufhebung.)",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "targetDefenseModifier": 0,
+          "maximumTargets": 1,
+          "id": "combat-style-huskarl-skytte-grund-5",
+          "weaponTypes": [
+            "bow"
+          ],
+          "category": "technique",
+          "name": "Schuss durch die Lichtung",
+          "damageBonus": 0,
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 0,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "dieCap": 4,
+                "diceCount": 1
+              }
+            ],
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ],
+            "bonusWeaponDieCap": 12
+          },
+          "criticalThreshold": 20,
+          "activationType": "action",
+          "range": "Waffenreichweite",
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "target": "Ein Gegner",
+          "active": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "cost": 1,
+            "allowed": true
+          },
+          "minimumLevel": 5,
+          "trainingForm": "Stand des Schildes",
+          "mechanics": {},
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "live": true,
+          "effects": [
+            {
+              "formula": "",
+              "on": "hit",
+              "damageType": "",
+              "magical": false,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "id": "combat-style-huskarl-skytte-grund-5-weapon-damage",
+              "inheritWeaponDamageType": true,
+              "type": "damage",
+              "target": "target"
+            }
+          ],
+          "cultureTraining": {
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresMounted": false,
+            "schemaVersion": 1,
+            "branchId": "skytte-bow",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresDualWield": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresTwoHands": false,
+            "requiresShield": false
+          },
+          "costs": [
+            {
+              "amount": 1,
+              "scope": "comment",
+              "resourceId": "action",
+              "id": "combat-style-huskarl-skytte-grund-5-action-1",
+              "name": "Aktion"
+            },
+            {
+              "amount": 1,
+              "id": "combat-style-huskarl-skytte-grund-5-bonus-action-2",
+              "name": "Bonusaktion",
+              "scope": "comment",
+              "resourceId": "bonus-action"
+            }
+          ]
+        },
+        {
+          "status": "confirmed",
+          "effect": "(Ein kräftiger, einzelner Bogenschuss.)",
+          "attackBonus": 0,
+          "triggerRules": [],
+          "activationType": "action",
+          "damageType": "",
+          "name": "Grenzwächterschuss",
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresTwoHands": false,
+            "requiresShield": false,
+            "requiresDualWield": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresMounted": false,
+            "branchId": "skytte-bow",
+            "allowedClassIds": [
+              "skytte"
+            ]
+          },
+          "description": "Ylva zieht den Bogen bis an die Wange und legt ihr ganzes Gewicht in den gehaltenen Schuss. (Ein kräftiger, einzelner Bogenschuss.)",
+          "compatibleWeaponIds": [],
+          "combatStyleId": "huskarl-waffenlehre",
+          "weaponTypes": [
+            "bow"
+          ],
+          "category": "technique",
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "criticalThreshold": 20,
+          "trainingForm": "Stand des Schildes",
+          "minimumLevel": 6,
+          "range": "Waffenreichweite",
+          "damageFormula": "",
+          "aiInstructions": "",
+          "damageBonus": 0,
+          "damageModel": {
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 6
+              },
+              {
+                "dieCap": 4,
+                "diceCount": 1
+              }
+            ],
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "mode": "weapon-dice",
+            "bonusWeaponDice": 0,
+            "bonusFormula": "",
+            "bonusWeaponDieCap": 12,
+            "weaponDiceMultiplier": 1
+          },
+          "secondarySave": {
+            "enabled": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "target": "Ein Gegner",
+          "id": "combat-style-huskarl-skytte-grund-6",
+          "duration": "",
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "targetDefenseModifier": 0,
+          "active": true,
+          "mechanics": {},
+          "live": true,
+          "rollMode": "normal",
+          "cenyrTraining": {
+            "assignedSlotId": "",
+            "requiresMounted": false,
+            "branchId": "",
+            "allowedClassIds": [],
+            "slotBands": [],
+            "sourceStatus": "",
+            "designNotes": "",
+            "uchelwyrCompatible": false,
+            "classWeaponProfiles": {},
+            "selectedAtLevel": null,
+            "weaponRuleSetId": ""
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "maximumTargets": 1,
+          "costs": [
+            {
+              "name": "Aktion",
+              "scope": "comment",
+              "resourceId": "action",
+              "amount": 1,
+              "id": "combat-style-huskarl-skytte-grund-6-action-1"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-grund-6-bonus-action-2",
+              "amount": 1,
+              "scope": "comment",
+              "name": "Bonusaktion",
+              "resourceId": "bonus-action"
+            },
+            {
+              "name": "Reaktion",
+              "scope": "comment",
+              "amount": 1,
+              "id": "combat-style-huskarl-skytte-grund-6-reaction-3",
+              "resourceId": "reaction"
+            }
+          ],
+          "auraBypass": {
+            "cost": 1,
+            "resourceId": "aura-focus",
+            "allowed": true
+          },
+          "effects": [
+            {
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "formula": "",
+              "type": "damage",
+              "inheritWeaponDamageType": true,
+              "magical": false,
+              "damageType": "",
+              "target": "target",
+              "id": "combat-style-huskarl-skytte-grund-6-weapon-damage"
+            }
+          ],
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ]
+        },
+        {
+          "range": "Waffenreichweite",
+          "damageType": "",
+          "weaponTypes": [
+            "bow"
+          ],
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "triggerRules": [],
+          "criticalThreshold": 20,
+          "compatibleWeaponIds": [],
+          "effect": "(Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.)",
+          "status": "confirmed",
+          "description": "Kaum liegt der Pfeil auf der Sehne, lässt Ylva ihn aus kurzem Auszug schnellen. (Ein leichter Einzelangriff. Kein kostenloser Folgeangriff.)",
+          "activationType": "bonus-action",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "mechanics": {},
+          "costs": [
+            {
+              "amount": 1,
+              "scope": "comment",
+              "resourceId": "bonus-action",
+              "id": "combat-style-huskarl-skytte-wahl-1-bonus-action-1",
+              "name": "Bonusaktion"
+            }
+          ],
+          "live": true,
+          "combatStyleFormId": "huskarl-schildgrund",
+          "attackBonus": 0,
+          "damageFormula": "",
+          "secondarySave": {
+            "enabled": false
+          },
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "cultureTraining": {
+            "requiresShield": false,
+            "schemaVersion": 1,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresDualWield": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "branchId": "skytte-bow",
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresTwoHands": false
+          },
+          "active": true,
+          "minimumLevel": 1,
+          "trainingForm": "Stand des Schildes",
+          "combatStyleId": "huskarl-waffenlehre",
+          "target": "Ein Gegner",
+          "category": "technique",
+          "targetDefenseModifier": 0,
+          "followUpAttack": {
+            "enabled": false
+          },
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": "aura-focus"
+          },
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "name": "Pfeil auf kurze Distanz",
+          "id": "combat-style-huskarl-skytte-wahl-1",
+          "damageBonus": 0,
+          "damageModel": {
+            "bonusWeaponDice": 0,
+            "baseDieCap": 4,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [],
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "mode": "weapon-dice",
+            "lightAttack": true,
+            "weaponBonuses": []
+          },
+          "effects": [
+            {
+              "damageType": "",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "type": "damage",
+              "inheritWeaponDamageType": true,
+              "target": "target",
+              "id": "combat-style-huskarl-skytte-wahl-1-weapon-damage",
+              "formula": "",
+              "on": "hit",
+              "magical": false
+            }
+          ],
+          "maximumTargets": 1
+        },
+        {
+          "activationType": "reaction",
+          "range": "Waffenreichweite",
+          "damageFormula": "",
+          "damageType": "",
+          "secondarySave": {
+            "enabled": false
+          },
+          "name": "Sax in der Hut",
+          "cultureTraining": {
+            "branchId": "skytte-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "schemaVersion": 1,
+            "requiresTwoHands": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresShield": false,
+            "requiresDualWield": false
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "effects": [
+            {
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "id": "huskarl-deckung",
+                "armorStance": true,
+                "tags": "Huskarl-Waffenlehre",
+                "duration": "1 eigener Beitrag",
+                "name": "Feste Deckung",
+                "mechanics": {
+                  "armorClass": 1
+                },
+                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+              },
+              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+              "type": "buff",
+              "id": "combat-style-huskarl-skytte-wahl-2-condition"
+            }
+          ],
+          "attackBonus": 0,
+          "status": "confirmed",
+          "requirements": "Schwert, Axt oder Sax",
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "effect": "(Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.)",
+          "targetDefenseModifier": 0,
+          "trainingForm": "Stand des Schildes",
+          "minimumLevel": 1,
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-2-reaction-1",
+              "amount": 1,
+              "scope": "comment",
+              "name": "Reaktion",
+              "resourceId": "reaction"
+            }
+          ],
+          "id": "combat-style-huskarl-skytte-wahl-2",
+          "criticalThreshold": 20,
+          "description": "Ylva hält die kurze Schneide dicht vor dem Körper und folgt aufmerksam der gegnerischen Waffenhand. (Schadenslose Vorbereitung: +1 RK für einen eigenen Beitrag.)",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "category": "technique",
+          "compatibleWeaponIds": [],
+          "live": true,
+          "damageBonus": 0,
+          "damageModel": {
+            "mode": "fixed",
+            "scalingSteps": []
+          },
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "mechanics": {},
+          "maximumTargets": 1,
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": "aura-focus"
+          },
+          "triggerRules": [],
+          "target": "Selbst",
+          "combatStyleId": "huskarl-waffenlehre",
+          "active": true
+        },
+        {
+          "mechanics": {},
+          "name": "Speer aus dem Knie",
+          "weaponLabel": "Speer",
+          "active": true,
+          "damageType": "",
+          "id": "combat-style-huskarl-skytte-wahl-3",
+          "damageBonus": 0,
+          "damageModel": {
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 0,
+            "mode": "weapon-dice",
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDieCap": 12
+          },
+          "target": "Ein Gegner",
+          "category": "technique",
+          "targetDefenseModifier": 0,
+          "minimumLevel": 2,
+          "trainingForm": "Stand des Schildes",
+          "requirements": "Speer",
+          "combatStyleId": "huskarl-waffenlehre",
+          "activationType": "action",
+          "compatibleWeaponIds": [],
+          "range": "Waffenreichweite",
+          "secondarySave": {
+            "enabled": false
+          },
+          "damageFormula": "",
+          "criticalThreshold": 20,
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "status": "confirmed",
+          "effect": "(Ein gezielter Einzelangriff mit der geführten Waffe.)",
+          "live": true,
+          "cultureTraining": {
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "schemaVersion": 1,
+            "requiresShield": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "branchId": "skytte-spear",
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "cultureIds": [
+              "aldrimar"
+            ]
+          },
+          "attackBonus": 0,
+          "maximumTargets": 1,
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-3-weapon-damage",
+              "target": "target",
+              "magical": false,
+              "formula": "",
+              "damageType": "",
+              "type": "damage",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "inheritWeaponDamageType": true,
+              "on": "hit"
+            }
+          ],
+          "costs": [
+            {
+              "name": "Aktion",
+              "amount": 1,
+              "id": "combat-style-huskarl-skytte-wahl-3-action-1",
+              "resourceId": "action",
+              "scope": "comment"
+            }
+          ],
+          "combatStyleFormId": "huskarl-schildgrund",
+          "weaponTypes": [
+            "spear"
+          ],
+          "auraBypass": {
+            "cost": 1,
+            "resourceId": "aura-focus",
+            "allowed": true
+          },
+          "description": "Ylva sinkt in die Knie und schickt Dornwacht unter der hohen Deckung hindurch. (Ein gezielter Einzelangriff mit der geführten Waffe.)",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "triggerRules": [],
+          "followUpAttack": {
+            "enabled": false
+          }
+        },
+        {
+          "effect": "(Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.)",
+          "status": "confirmed",
+          "effects": [
+            {
+              "on": "always",
+              "target": "self",
+              "condition": {
+                "name": "Gesammelte Ruhe",
+                "duration": "1 eigener Beitrag",
+                "mechanics": {
+                  "attack": 1
+                },
+                "description": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
+                "durationModel": {
+                  "remainingActorComments": 1,
+                  "kind": "actor-comments"
+                },
+                "id": "huskarl-zielen",
+                "tags": "Huskarl-Waffenlehre"
+              },
+              "type": "buff",
+              "notes": "+1 Angriff für einen eigenen Beitrag; wiederholtes Vorbereiten erhöht den Bonus nicht.",
+              "id": "combat-style-huskarl-skytte-wahl-4-aim"
+            }
+          ],
+          "weaponTypes": [
+            "bow"
+          ],
+          "description": "Ylvas Blick folgt der Bewegung hinter dem Geäst, bis sie den nächsten freien Augenblick erkennt. (Schadenslose Vorbereitung: +1 Angriff für einen eigenen Beitrag.)",
+          "name": "Ziel zwischen den Zweigen",
+          "targetDefenseModifier": 0,
+          "mechanics": {},
+          "minimumLevel": 2,
+          "trainingForm": "Stand des Schildes",
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "attackBonus": 0,
+          "compatibleWeaponIds": [],
+          "combatStyleId": "huskarl-waffenlehre",
+          "damageType": "",
+          "activationType": "bonus-action",
+          "cultureTraining": {
+            "branchId": "skytte-bow",
+            "slotBands": [
+              "foundation"
+            ],
+            "schemaVersion": 1,
+            "requiresTwoHands": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresDualWield": false,
+            "requiresShield": false,
+            "cultureIds": [
+              "aldrimar"
+            ]
+          },
+          "category": "technique",
+          "secondarySave": {
+            "enabled": false
+          },
+          "damageFormula": "",
+          "range": "Waffenreichweite",
+          "target": "Selbst",
+          "live": true,
+          "criticalThreshold": 20,
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "cost": 1,
+            "allowed": true
+          },
+          "active": true,
+          "maximumTargets": 1,
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "triggerRules": [],
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "id": "combat-style-huskarl-skytte-wahl-4-bonus-action-1",
+              "scope": "comment",
+              "amount": 1
+            },
+            {
+              "name": "Reaktion",
+              "resourceId": "reaction",
+              "id": "combat-style-huskarl-skytte-wahl-4-reaction-2",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "id": "combat-style-huskarl-skytte-wahl-4",
+          "damageBonus": 0,
+          "damageModel": {
+            "scalingSteps": [],
+            "mode": "fixed"
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ]
+        },
+        {
+          "maximumTargets": 1,
+          "id": "combat-style-huskarl-skytte-wahl-5",
+          "compatibleWeaponIds": [],
+          "criticalThreshold": 20,
+          "secondarySave": {
+            "enabled": false
+          },
+          "damageFormula": "",
+          "targetDefenseModifier": 0,
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "damageModel": {
+            "weaponBonuses": [
+              {
+                "dieCap": 4,
+                "diceCount": 1
+              }
+            ],
+            "bonusWeaponDieCap": 12,
+            "bonusFormula": "",
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 0,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ]
+          },
+          "damageBonus": 0,
+          "target": "Ein Gegner",
+          "category": "technique",
+          "active": true,
+          "trainingForm": "Stand des Schildes",
+          "minimumLevel": 3,
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "live": true,
+          "effects": [
+            {
+              "formula": "",
+              "type": "damage",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "on": "hit",
+              "inheritWeaponDamageType": true,
+              "damageType": "",
+              "magical": false,
+              "target": "target",
+              "id": "combat-style-huskarl-skytte-wahl-5-weapon-damage"
+            }
+          ],
+          "description": "Ylva hält die Sehne gespannt und löst genau in dem Augenblick, in dem sich die Deckung hebt. (Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.)",
+          "damageType": "",
+          "range": "Waffenreichweite",
+          "cultureTraining": {
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresDualWield": false,
+            "schemaVersion": 1,
+            "requiresTwoHands": false,
+            "requiresShield": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "branchId": "skytte-bow"
+          },
+          "mechanics": {},
+          "weaponTypes": [
+            "bow"
+          ],
+          "triggerRules": [],
+          "activationType": "action",
+          "attackBonus": 1,
+          "combatStyleId": "huskarl-waffenlehre",
+          "costs": [
+            {
+              "scope": "comment",
+              "amount": 1,
+              "name": "Aktion",
+              "id": "combat-style-huskarl-skytte-wahl-5-action-1",
+              "resourceId": "action"
+            },
+            {
+              "resourceId": "bonus-action",
+              "id": "combat-style-huskarl-skytte-wahl-5-bonus-action-2",
+              "scope": "comment",
+              "name": "Bonusaktion",
+              "amount": 1
+            }
+          ],
+          "status": "confirmed",
+          "effect": "(Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.)",
+          "name": "Schuss auf die Öffnung"
+        },
+        {
+          "effect": "(keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.)",
+          "status": "confirmed",
+          "targetDefenseModifier": 0,
+          "requirements": "Schwert, Axt oder Sax",
+          "trainingForm": "Stand des Schildes",
+          "minimumLevel": 3,
+          "damageType": "",
+          "effects": [
+            {
+              "condition": {
+                "name": "Sicherer Schritt",
+                "stanceGroup": "martial-position-guard",
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "mechanics": {
+                  "movement": 0
+                },
+                "tags": "Huskarl-Waffenlehre",
+                "active": true,
+                "triggerRules": [
+                  {
+                    "phase": "pre-roll",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "condition": "always",
+                    "name": "Stellungseffekt",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "id": "martial-position-guard-once",
+                    "frequency": "comment",
+                    "resultEffects": [
+                      {
+                        "id": "martial-position-guard-consume",
+                        "type": "remove-condition",
+                        "conditionId": "martial-position-guard",
+                        "on": "always",
+                        "target": "target"
+                      }
+                    ],
+                    "weaponAttackOnly": true,
+                    "recipient": "actor",
+                    "activation": "passive",
+                    "sourceRelation": "enemy"
+                  }
+                ],
+                "id": "martial-position-guard",
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "durationModel": {
+                  "remainingActorComments": 1,
+                  "kind": "actor-comments"
+                }
+              },
+              "id": "combat-style-huskarl-skytte-wahl-6-mobility",
+              "on": "always",
+              "type": "buff",
+              "target": "self",
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
+            }
+          ],
+          "cultureTraining": {
+            "requiresTwoHands": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresShield": false,
+            "requiresDualWield": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "schemaVersion": 1,
+            "branchId": "skytte-sidearm",
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresMounted": false
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "attackBonus": 0,
+          "live": true,
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "damageFormula": "",
+          "secondarySave": {
+            "enabled": false
+          },
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "compatibleWeaponIds": [],
+          "activationType": "bonus-action",
+          "description": "Mit einem flachen Schritt verändert Ylva den Winkel ihrer Deckung und lässt den erwarteten Hieb ins Leere zielen. (keine freie Bewegung und kein automatisches Lösen aus dem Nahkampf. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.)",
+          "mechanics": {},
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "range": "Waffenreichweite",
+          "triggerRules": [],
+          "active": true,
+          "target": "Selbst",
+          "combatStyleId": "huskarl-waffenlehre",
+          "criticalThreshold": 20,
+          "damageBonus": 0,
+          "damageModel": {
+            "scalingSteps": [],
+            "mode": "fixed"
+          },
+          "maximumTargets": 1,
+          "id": "combat-style-huskarl-skytte-wahl-6",
+          "name": "Leiser Standortwechsel",
+          "costs": [
+            {
+              "amount": 1,
+              "resourceId": "bonus-action",
+              "id": "combat-style-huskarl-skytte-wahl-6-bonus-action-1",
+              "scope": "comment",
+              "name": "Bonusaktion"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "category": "technique",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "combatStyleFormId": "huskarl-schildgrund"
+        },
+        {
+          "secondarySave": {
+            "addProficiency": true,
+            "attributeKey": "strength",
+            "dcBase": 8,
+            "enabled": true,
+            "failureCondition": {
+              "tags": "Huskarl-Waffenlehre",
+              "name": "Gehemmter Schritt",
+              "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+              "stanceGroup": "martial-position-penalty",
+              "mechanics": {
+                "movement": 0
+              },
+              "triggerRules": [
+                {
+                  "effects": {
+                    "attackModifier": -1
+                  },
+                  "resultEffects": [
+                    {
+                      "on": "always",
+                      "target": "self",
+                      "conditionId": "martial-position-penalty",
+                      "type": "remove-condition",
+                      "id": "martial-position-penalty-consume"
+                    }
+                  ],
+                  "sourceRelation": "self",
+                  "id": "martial-position-penalty-once",
+                  "recipient": "actor",
+                  "phase": "pre-roll",
+                  "activation": "passive",
+                  "frequency": "comment",
+                  "name": "Stellungseffekt",
+                  "condition": "always",
+                  "actionKinds": [
+                    "weapon",
+                    "technique"
+                  ],
+                  "weaponAttackOnly": true
+                }
+              ],
+              "durationModel": {
+                "kind": "actor-comments",
+                "remainingActorComments": 1
+              },
+              "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+              "active": true,
+              "id": "martial-position-penalty"
+            },
+            "dcAttributeKey": "strength"
+          },
+          "attackBonus": 0,
+          "damageFormula": "",
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "aura-focus",
+            "cost": 1
+          },
+          "active": true,
+          "target": "Ein Gegner",
+          "live": true,
+          "mechanics": {},
+          "description": "Dornwacht trifft tief an die gegnerische Deckung und bringt Waffenhand und Stand aus dem Takt. (Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.)",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "activationType": "action",
+          "trainingForm": "Stand des Schildes",
+          "minimumLevel": 4,
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "requirements": "Speer",
+          "weaponTypes": [
+            "spear"
+          ],
+          "damageModel": {
+            "bonusWeaponDice": 0,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "bonusWeaponDieCap": 12,
+            "mode": "weapon-dice",
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "dieCap": 6,
+                "diceCount": 1
+              }
+            ],
+            "weaponDiceMultiplier": 1
+          },
+          "damageBonus": 0,
+          "category": "technique",
+          "range": "Waffenreichweite",
+          "effect": "(Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.)",
+          "status": "confirmed",
+          "compatibleWeaponIds": [],
+          "cultureTraining": {
+            "schemaVersion": 1,
+            "requiresDualWield": false,
+            "requiresTwoHands": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresMounted": false,
+            "requiresShield": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "slotBands": [
+              "foundation"
+            ],
+            "branchId": "skytte-spear"
+          },
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "weaponLabel": "Speer",
+          "id": "combat-style-huskarl-skytte-wahl-7",
+          "name": "Speer gegen den Schritt",
+          "costs": [
+            {
+              "name": "Aktion",
+              "amount": 1,
+              "resourceId": "action",
+              "id": "combat-style-huskarl-skytte-wahl-7-action-1",
+              "scope": "comment"
+            },
+            {
+              "scope": "comment",
+              "amount": 1,
+              "id": "combat-style-huskarl-skytte-wahl-7-reaction-2",
+              "resourceId": "reaction",
+              "name": "Reaktion"
+            }
+          ],
+          "targetDefenseModifier": 0,
+          "damageType": "",
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-7-weapon-damage",
+              "damageType": "",
+              "type": "damage",
+              "target": "target",
+              "magical": false,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "inheritWeaponDamageType": true,
+              "on": "hit",
+              "formula": ""
+            }
+          ],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "combatStyleId": "huskarl-waffenlehre",
+          "triggerRules": []
+        },
+        {
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "damageModel": {
+            "scalingSteps": [],
+            "mode": "fixed"
+          },
+          "damageBonus": 0,
+          "name": "Deckung im Unterholz",
+          "minimumLevel": 4,
+          "trainingForm": "Stand des Schildes",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "requirements": "Schwert, Axt oder Sax",
+          "costs": [
+            {
+              "amount": 1,
+              "name": "Bonusaktion",
+              "scope": "comment",
+              "id": "combat-style-huskarl-skytte-wahl-8-bonus-action-1",
+              "resourceId": "bonus-action"
+            },
+            {
+              "scope": "comment",
+              "id": "combat-style-huskarl-skytte-wahl-8-reaction-2",
+              "resourceId": "reaction",
+              "amount": 1,
+              "name": "Reaktion"
+            }
+          ],
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "id": "combat-style-huskarl-skytte-wahl-8",
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "active": true,
+          "secondarySave": {
+            "enabled": false
+          },
+          "maximumTargets": 1,
+          "damageFormula": "",
+          "target": "Selbst",
+          "compatibleWeaponIds": [],
+          "range": "Waffenreichweite",
+          "triggerRules": [],
+          "effects": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-8-condition",
+              "on": "always",
+              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+              "condition": {
+                "duration": "1 eigener Beitrag",
+                "tags": "Huskarl-Waffenlehre",
+                "mechanics": {
+                  "armorClass": 2
+                },
+                "id": "huskarl-deckung",
+                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "armorStance": true,
+                "name": "Feste Deckung",
+                "durationModel": {
+                  "remainingActorComments": 1,
+                  "kind": "actor-comments"
+                }
+              },
+              "target": "self",
+              "type": "buff"
+            }
+          ],
+          "attackBonus": 0,
+          "cultureTraining": {
+            "requiresDualWield": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresTwoHands": false,
+            "requiresShield": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "branchId": "skytte-sidearm",
+            "slotBands": [
+              "foundation"
+            ],
+            "schemaVersion": 1
+          },
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "activationType": "bonus-action",
+          "live": true,
+          "combatStyleId": "huskarl-waffenlehre",
+          "category": "technique",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "mechanics": {},
+          "description": "Ylva macht sich schmal hinter ihrer Waffe und hält die offenen Seiten geschlossen. (Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.)",
+          "damageType": "",
+          "criticalThreshold": 20,
+          "targetDefenseModifier": 0,
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "status": "confirmed",
+          "effect": "(Schadenslose Abwehr: +2 RK für einen eigenen Beitrag; ersetzt schwächere Deckung.)"
+        },
+        {
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "damageFormula": "",
+          "secondarySave": {
+            "attributeKey": "strength",
+            "addProficiency": true,
+            "dcBase": 8,
+            "enabled": true,
+            "failureCondition": {
+              "mechanics": {
+                "attack": -1
+              },
+              "id": "combat-style-huskarl-skytte-wahl-9-failed-save",
+              "description": "−1 Angriff für einen eigenen Beitrag nach misslungenem KRF-Rettungswurf; nicht additiv.",
+              "duration": "1 eigener Beitrag",
+              "tags": "Huskarl-Waffenlehre",
+              "name": "Gebundene Waffenführung"
+            },
+            "dcAttributeKey": "strength"
+          },
+          "triggerRules": [],
+          "maximumTargets": 1,
+          "costs": [
+            {
+              "amount": 1,
+              "resourceId": "action",
+              "name": "Aktion",
+              "id": "combat-style-huskarl-skytte-wahl-9-action-1",
+              "scope": "comment"
+            },
+            {
+              "amount": 1,
+              "name": "Reaktion",
+              "scope": "comment",
+              "resourceId": "reaction",
+              "id": "combat-style-huskarl-skytte-wahl-9-reaction-2"
+            }
+          ],
+          "description": "Ylva führt die kurze Schneide gegen den Waffenarm und stört dessen nächsten Ausholschwung. (Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.)",
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "cultureTraining": {
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "branchId": "skytte-sidearm",
+            "requiresTwoHands": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresMounted": false,
+            "requiresShield": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "schemaVersion": 1,
+            "requiresDualWield": false
+          },
+          "followUpAttack": {
+            "enabled": false
+          },
+          "target": "Ein Gegner",
+          "active": true,
+          "live": true,
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "attackBonus": 0,
+          "range": "Waffenreichweite",
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "compatibleWeaponIds": [],
+          "requirements": "Schwert, Axt oder Sax",
+          "damageType": "",
+          "trainingForm": "Stand des Schildes",
+          "minimumLevel": 5,
+          "mechanics": {},
+          "criticalThreshold": 20,
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "activationType": "action",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "effects": [
+            {
+              "formula": "",
+              "magical": false,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "id": "combat-style-huskarl-skytte-wahl-9-weapon-damage",
+              "on": "hit",
+              "inheritWeaponDamageType": true,
+              "damageType": "",
+              "type": "damage",
+              "target": "target"
+            }
+          ],
+          "targetDefenseModifier": 0,
+          "name": "Axt am Waffenarm",
+          "id": "combat-style-huskarl-skytte-wahl-9",
+          "combatStyleId": "huskarl-waffenlehre",
+          "effect": "(Nach Treffer KRF-Rettungswurf: bei Fehlschlag −1 Angriff für einen eigenen Beitrag.)",
+          "status": "confirmed",
+          "category": "technique",
+          "damageModel": {
+            "bonusWeaponDice": 0,
+            "weaponBonuses": [],
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ],
+            "mode": "weapon-dice",
+            "bonusFormula": "",
+            "weaponDiceMultiplier": 1
+          },
+          "damageBonus": 0
+        },
+        {
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "minimumLevel": 5,
+          "trainingForm": "Stand des Schildes",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "name": "Voller Jagdauszug",
+          "status": "confirmed",
+          "effect": "(Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.)",
+          "compatibleWeaponIds": [],
+          "category": "technique",
+          "combatStyleFormId": "huskarl-schildgrund",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 12
+              }
+            ],
+            "bonusWeaponDieCap": 12,
+            "bonusWeaponDice": 0,
+            "weaponDiceMultiplier": 1,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ]
+          },
+          "damageBonus": 0,
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": "aura-focus"
+          },
+          "effects": [
+            {
+              "on": "hit",
+              "inheritWeaponDamageType": true,
+              "formula": "",
+              "magical": false,
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "damageType": "",
+              "type": "damage",
+              "id": "combat-style-huskarl-skytte-wahl-10-weapon-damage",
+              "target": "target"
+            }
+          ],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "damageFormula": "",
+          "secondarySave": {
+            "enabled": false
+          },
+          "mechanics": {},
+          "targetDefenseModifier": 0,
+          "description": "Ylva spannt den Bogen mit ruhiger Kraft bis zum vollen Auszug und schickt den Pfeil mit Nachdruck ins Ziel. (Ein kraftvoller Einzelangriff mit Besonderer Aktion. Keine automatische Entwaffnung oder Rüstungszerstörung.)",
+          "combatStyleId": "huskarl-waffenlehre",
+          "target": "Ein Gegner",
+          "triggerRules": [],
+          "active": true,
+          "weaponTypes": [
+            "bow"
+          ],
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "damageType": "",
+          "cultureTraining": {
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresTwoHands": false,
+            "schemaVersion": 1,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresShield": false,
+            "requiresDualWield": false,
+            "requiresMounted": false,
+            "branchId": "skytte-bow",
+            "cultureIds": [
+              "aldrimar"
+            ]
+          },
+          "live": true,
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-10-action-1",
+              "amount": 1,
+              "scope": "comment",
+              "resourceId": "action",
+              "name": "Aktion"
+            },
+            {
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent",
+              "resourceId": "special-action",
+              "id": "combat-style-huskarl-skytte-wahl-10-special-action-2"
+            }
+          ],
+          "attackBonus": 0,
+          "activationType": "action",
+          "range": "Waffenreichweite",
+          "id": "combat-style-huskarl-skytte-wahl-10"
+        },
+        {
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "activationType": "reaction",
+          "live": true,
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "attackBonus": 0,
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "allowed": true,
+            "cost": 1
+          },
+          "effects": [
+            {
+              "notes": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+              "type": "buff",
+              "id": "combat-style-huskarl-skytte-wahl-11-condition",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "tags": "Huskarl-Waffenlehre",
+                "description": "+2 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "id": "huskarl-deckung",
+                "mechanics": {
+                  "armorClass": 2
+                },
+                "name": "Feste Deckung",
+                "armorStance": true,
+                "duration": "1 eigener Beitrag",
+                "durationModel": {
+                  "remainingActorComments": 1,
+                  "kind": "actor-comments"
+                }
+              }
+            },
+            {
+              "type": "temporary-hit-points",
+              "notes": "Temporäre TP ersetzen nur einen niedrigeren vorhandenen Vorrat; sie werden nicht addiert.",
+              "on": "always",
+              "formula": "1d4",
+              "target": "self",
+              "id": "combat-style-huskarl-skytte-wahl-11-resolve"
+            }
+          ],
+          "active": true,
+          "id": "combat-style-huskarl-skytte-wahl-11",
+          "target": "Selbst",
+          "mechanics": {},
+          "description": "Ylva schließt beide Hände um Dornwacht und stemmt sich hinter dem quer gehaltenen Schaft gegen den Druck. (+2 RK für einen eigenen Beitrag und 1W4 temporäre TP. Temporäre TP werden nicht addiert.)",
+          "weaponTypes": [
+            "spear"
+          ],
+          "category": "technique",
+          "triggerRules": [],
+          "secondarySave": {
+            "enabled": false
+          },
+          "targetDefenseModifier": 0,
+          "damageFormula": "",
+          "combatStyleId": "huskarl-waffenlehre",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "name": "Stand hinter dem Speer",
+          "damageModel": {
+            "scalingSteps": [],
+            "mode": "fixed"
+          },
+          "damageBonus": 0,
+          "compatibleWeaponIds": [],
+          "effect": "(+2 RK für einen eigenen Beitrag und 1W4 temporäre TP. Temporäre TP werden nicht addiert.)",
+          "status": "confirmed",
+          "range": "Waffenreichweite",
+          "weaponLabel": "Speer",
+          "criticalThreshold": 20,
+          "maximumTargets": 1,
+          "trainingForm": "Stand des Schildes",
+          "minimumLevel": 6,
+          "damageType": "",
+          "requirements": "Speer",
+          "costs": [
+            {
+              "scope": "comment",
+              "id": "combat-style-huskarl-skytte-wahl-11-reaction-1",
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1
+            },
+            {
+              "scope": "persistent",
+              "amount": 1,
+              "resourceId": "special-action",
+              "id": "combat-style-huskarl-skytte-wahl-11-special-action-2",
+              "name": "Besondere Aktion"
+            }
+          ],
+          "combatStyleFormId": "huskarl-schildgrund",
+          "cultureTraining": {
+            "branchId": "skytte-spear",
+            "requiresDualWield": false,
+            "requiresTwoHands": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "slotBands": [
+              "foundation"
+            ],
+            "requiresShield": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresMounted": false,
+            "schemaVersion": 1
+          }
+        },
+        {
+          "cultureTraining": {
+            "requiresDualWield": false,
+            "requiresTwoHands": false,
+            "branchId": "skytte-sidearm",
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresShield": false,
+            "slotBands": [
+              "foundation"
+            ],
+            "schemaVersion": 1,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "skytte"
+            ]
+          },
+          "combatStyleFormId": "huskarl-schildgrund",
+          "effects": [
+            {
+              "type": "damage",
+              "on": "hit",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "damageType": "",
+              "target": "target",
+              "formula": "",
+              "magical": false,
+              "id": "combat-style-huskarl-skytte-wahl-12-weapon-damage",
+              "inheritWeaponDamageType": true
+            },
+            {
+              "on": "hit",
+              "id": "combat-style-huskarl-skytte-wahl-12-mobility",
+              "condition": {
+                "triggerRules": [
+                  {
+                    "frequency": "comment",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "weaponAttackOnly": true,
+                    "id": "martial-position-guard-once",
+                    "condition": "always",
+                    "recipient": "actor",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "activation": "passive",
+                    "phase": "pre-roll",
+                    "name": "Stellungseffekt",
+                    "resultEffects": [
+                      {
+                        "conditionId": "martial-position-guard",
+                        "target": "target",
+                        "type": "remove-condition",
+                        "on": "always",
+                        "id": "martial-position-guard-consume"
+                      }
+                    ],
+                    "sourceRelation": "enemy"
+                  }
+                ],
+                "active": true,
+                "name": "Sicherer Schritt",
+                "tags": "Huskarl-Waffenlehre",
+                "description": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                "stanceGroup": "martial-position-guard",
+                "id": "martial-position-guard",
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "mechanics": {
+                  "movement": 0
+                },
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                }
+              },
+              "type": "buff",
+              "target": "self",
+              "notes": "Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags."
+            }
+          ],
+          "triggerRules": [],
+          "attackBonus": 0,
+          "target": "Ein Gegner",
+          "active": true,
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "combatStyleId": "huskarl-waffenlehre",
+          "activationType": "action",
+          "criticalThreshold": 20,
+          "id": "combat-style-huskarl-skytte-wahl-12",
+          "description": "Ylva schneidet durch die offene Flanke und zieht die Waffe dicht an sich zurück, um den Gegenschlag abzufangen. (Ein Einzelangriff. keine freie Bewegung. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.)",
+          "damageType": "",
+          "name": "Klinge am Wildwechsel",
+          "targetDefenseModifier": 0,
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "maximumTargets": 1,
+          "category": "technique",
+          "status": "confirmed",
+          "effect": "(Ein Einzelangriff. keine freie Bewegung. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags.)",
+          "mechanics": {},
+          "trainingForm": "Stand des Schildes",
+          "minimumLevel": 6,
+          "requirements": "Schwert, Axt oder Sax",
+          "damageFormula": "",
+          "range": "Waffenreichweite",
+          "secondarySave": {
+            "enabled": false
+          },
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": "aura-focus"
+          },
+          "damageBonus": 0,
+          "damageModel": {
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "bonusWeaponDieCap": 12,
+            "mode": "weapon-dice",
+            "bonusWeaponDice": 0,
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "formula": "1d8",
+                "level": 13
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ]
+          },
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "tags": "Huskarl-Waffenlehre · skytte · Stand des Schildes",
+          "compatibleWeaponIds": [],
+          "live": true,
+          "costs": [
+            {
+              "resourceId": "action",
+              "amount": 1,
+              "name": "Aktion",
+              "scope": "comment",
+              "id": "combat-style-huskarl-skytte-wahl-12-action-1"
+            },
+            {
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "scope": "comment",
+              "id": "combat-style-huskarl-skytte-wahl-12-bonus-action-2",
+              "amount": 1
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "damageType": "",
+              "on": "hit",
+              "type": "damage",
+              "magical": false,
+              "formula": "",
+              "target": "target",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik.",
+              "inheritWeaponDamageType": true,
+              "id": "combat-style-huskarl-skytte-grund-7-weapon-damage"
+            },
+            {
+              "id": "combat-style-huskarl-skytte-grund-7-condition",
+              "type": "buff",
+              "on": "hit",
+              "condition": {
+                "duration": "1 eigener Beitrag",
+                "description": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert.",
+                "name": "Feste Deckung",
+                "durationModel": {
+                  "remainingActorComments": 1,
+                  "kind": "actor-comments"
+                },
+                "mechanics": {
+                  "armorClass": 1
+                },
+                "armorStance": true,
+                "id": "huskarl-deckung",
+                "tags": "Huskarl-Waffenlehre"
+              },
+              "target": "self",
+              "notes": "+1 RK für einen eigenen Beitrag. Gleichartige Deckung wird erneuert, nicht addiert."
+            }
+          ],
+          "combatStyleId": "huskarl-waffenlehre",
+          "triggerRules": [],
+          "compatibleWeaponIds": [],
+          "aiInstructions": "",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "status": "confirmed",
+          "effect": "(Nahkampftreffer; danach +1 RK für einen eigenen Beitrag.)",
+          "auraBypass": {
+            "cost": 1,
+            "resourceId": "aura-focus",
+            "allowed": true
+          },
+          "rollMode": "normal",
+          "cultureTraining": {
+            "requiresDualWield": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "requiresMounted": false,
+            "branchId": "skytte-spear",
+            "schemaVersion": 1,
+            "slotBands": [
+              "advanced"
+            ],
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "requiresTwoHands": false,
+            "requiresShield": false
+          },
+          "damageBonus": 0,
+          "damageModel": {
+            "bonusWeaponDice": 0,
+            "bonusFormula": "",
+            "mode": "weapon-dice",
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ],
+            "weaponDiceMultiplier": 1,
+            "weaponBonuses": []
+          },
+          "duration": "",
+          "live": true,
+          "maximumTargets": 1,
+          "targetDefenseModifier": 0,
+          "weaponLabel": "Speer",
+          "tags": "Huskarl-Waffenlehre · skytte · Schritt des Huskarls",
+          "description": "Ylva stößt zur Mitte und lässt die Spitze anschließend zwischen sich und dem Gegner stehen. (Nahkampftreffer; danach +1 RK für einen eigenen Beitrag.)",
+          "combatStyleFormId": "huskarl-fester-schritt",
+          "trainingForm": "Schritt des Huskarls",
+          "minimumLevel": 7,
+          "category": "technique",
+          "requirements": "Speer",
+          "target": "Ein Gegner",
+          "active": true,
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "id": "combat-style-huskarl-skytte-grund-7",
+          "activationType": "action",
+          "cenyrTraining": {
+            "assignedSlotId": "",
+            "uchelwyrCompatible": false,
+            "branchId": "",
+            "sourceStatus": "",
+            "selectedAtLevel": null,
+            "weaponRuleSetId": "",
+            "designNotes": "",
+            "slotBands": [],
+            "allowedClassIds": [],
+            "requiresMounted": false,
+            "classWeaponProfiles": {}
+          },
+          "mechanics": {},
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-grund-7-action-1",
+              "resourceId": "action",
+              "scope": "comment",
+              "name": "Aktion",
+              "amount": 1
+            },
+            {
+              "resourceId": "reaction",
+              "id": "combat-style-huskarl-skytte-grund-7-reaction-2",
+              "scope": "comment",
+              "name": "Reaktion",
+              "amount": 1
+            }
+          ],
+          "weaponTypes": [
+            "spear"
+          ],
+          "attackBonus": 0,
+          "criticalThreshold": 20,
+          "name": "Abstand mit dem Speer",
+          "secondarySave": {
+            "enabled": false
+          },
+          "range": "Waffenreichweite",
+          "damageFormula": "",
+          "damageType": ""
+        },
+        {
+          "name": "Versetzter Grenzpfeil",
+          "costs": [
+            {
+              "scope": "comment",
+              "id": "combat-style-huskarl-skytte-wahl-13-action-1",
+              "amount": 1,
+              "name": "Aktion",
+              "resourceId": "action"
+            },
+            {
+              "name": "Bonusaktion",
+              "resourceId": "bonus-action",
+              "amount": 1,
+              "scope": "comment",
+              "id": "combat-style-huskarl-skytte-wahl-13-bonus-action-2"
+            }
+          ],
+          "attackBonus": 1,
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": "aura-focus"
+          },
+          "maximumTargets": 1,
+          "id": "combat-style-huskarl-skytte-wahl-13",
+          "cultureTraining": {
+            "branchId": "skytte-bow",
+            "requiresShield": false,
+            "slotBands": [
+              "advanced"
+            ],
+            "requiresTwoHands": false,
+            "requiresDualWield": false,
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "schemaVersion": 1,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "skytte"
+            ]
+          },
+          "mechanics": {},
+          "active": true,
+          "category": "technique",
+          "target": "Ein Gegner",
+          "weaponTypes": [
+            "bow"
+          ],
+          "effects": [
+            {
+              "target": "target",
+              "magical": false,
+              "formula": "",
+              "damageType": "",
+              "type": "damage",
+              "on": "hit",
+              "inheritWeaponDamageType": true,
+              "id": "combat-style-huskarl-skytte-wahl-13-weapon-damage",
+              "notes": "Verwendet die zur Laufzeit berechnete Schadensformel der Technik."
+            }
+          ],
+          "description": "Ylva versetzt die Bogenhand, täuscht die Schusslinie an und löst auf die neu entstandene Lücke. (Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.)",
+          "range": "Waffenreichweite",
+          "minimumLevel": 7,
+          "trainingForm": "Schritt des Huskarls",
+          "followUpAttack": {
+            "enabled": false
+          },
+          "combatStyleId": "huskarl-waffenlehre",
+          "requirements": "Langbogen, Jagdbogen oder Kurzbogen Wurfwaffe einsatzbereit bzw. passende Munition vorhanden; Waffenreichweite beachten.",
+          "secondarySave": {
+            "enabled": false
+          },
+          "live": true,
+          "damageFormula": "",
+          "criticalThreshold": 20,
+          "tags": "Huskarl-Waffenlehre · skytte · Schritt des Huskarls",
+          "weaponLabel": "Langbogen, Jagdbogen oder Kurzbogen",
+          "damageBonus": 0,
+          "damageModel": {
+            "bonusFormula": "",
+            "bonusWeaponDieCap": 12,
+            "weaponDiceMultiplier": 1,
+            "bonusWeaponDice": 0,
+            "mode": "weapon-dice",
+            "scalingSteps": [
+              {
+                "formula": "1d4",
+                "level": 7
+              },
+              {
+                "formula": "1d6",
+                "level": 9
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "formula": "1d10",
+                "level": 17
+              }
+            ],
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 4
+              }
+            ]
+          },
+          "combatStyleFormId": "huskarl-fester-schritt",
+          "damageType": "",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "triggerRules": [],
+          "compatibleWeaponIds": [],
+          "targetDefenseModifier": 0,
+          "effect": "(Ein sorgfältig vorbereiteter Einzelangriff mit +1 auf den Angriffswurf.)",
+          "status": "confirmed",
+          "activationType": "action"
+        },
+        {
+          "secondarySave": {
+            "enabled": false
+          },
+          "active": true,
+          "damageFormula": "",
+          "target": "Selbst",
+          "range": "Waffenreichweite",
+          "minimumLevel": 7,
+          "trainingForm": "Schritt des Huskarls",
+          "requirements": "Schwert, Axt oder Sax",
+          "compatibleWeaponIds": [],
+          "followUpAttack": {
+            "enabled": false
+          },
+          "damageType": "",
+          "costs": [
+            {
+              "id": "combat-style-huskarl-skytte-wahl-14-bonus-action-1",
+              "scope": "comment",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1
+            },
+            {
+              "amount": 1,
+              "name": "Besondere Aktion",
+              "scope": "persistent",
+              "resourceId": "special-action",
+              "id": "combat-style-huskarl-skytte-wahl-14-special-action-2"
+            }
+          ],
+          "weaponLabel": "Schwert, Axt oder Sax",
+          "mechanics": {},
+          "live": true,
+          "tags": "Huskarl-Waffenlehre · skytte · Schritt des Huskarls",
+          "id": "combat-style-huskarl-skytte-wahl-14",
+          "mechanicNotes": [
+            "Entwurf: Waffen-, Schild-, Reit- und Zustandsvoraussetzungen müssen bei der späteren Vergabe verbindlich geprüft werden."
+          ],
+          "damageBonus": 0,
+          "damageModel": {
+            "scalingSteps": [],
+            "mode": "fixed"
+          },
+          "maximumTargets": 1,
+          "triggerRules": [],
+          "weaponTypes": [
+            "sword",
+            "axe",
+            "dagger"
+          ],
+          "category": "technique",
+          "cultureTraining": {
+            "requiresShield": false,
+            "requiresDualWield": false,
+            "requiresMounted": false,
+            "allowedClassIds": [
+              "skytte"
+            ],
+            "cultureIds": [
+              "aldrimar"
+            ],
+            "schemaVersion": 1,
+            "branchId": "skytte-sidearm",
+            "requiresTwoHands": false,
+            "slotBands": [
+              "advanced"
+            ]
+          },
+          "combatStyleFormId": "huskarl-fester-schritt",
+          "status": "confirmed",
+          "effect": "(1W6 temporäre TP; ersetzt nur einen niedrigeren Vorrat. Keine Heilung verlorener TP.)",
+          "targetDefenseModifier": 0,
+          "activationType": "bonus-action",
+          "description": "Ylva beruhigt ihren Atem und sammelt die Kraft, den nächsten Anprall abzufangen. (1W6 temporäre TP; ersetzt nur einen niedrigeren Vorrat. Keine Heilung verlorener TP.)",
+          "name": "Atem des Fährtenlesers",
+          "effects": [
+            {
+              "formula": "1d6",
+              "id": "combat-style-huskarl-skytte-wahl-14-resolve",
+              "type": "temporary-hit-points",
+              "target": "self",
+              "notes": "Temporäre TP ersetzen nur einen niedrigeren vorhandenen Vorrat; sie werden nicht addiert.",
+              "on": "always"
+            }
+          ],
+          "criticalThreshold": 20,
+          "attackBonus": 0,
+          "combatStyleId": "huskarl-waffenlehre",
+          "auraBypass": {
+            "resourceId": "aura-focus",
+            "cost": 1,
+            "allowed": true
+          }
+        },
+        {
+          "active": true,
+          "minimumLevel": 7,
+          "status": "confirmed",
+          "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+          "category": "technique",
+          "weaponTypes": [
+            "spear"
+          ],
+          "maximumTargets": 1,
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "none"
+          },
+          "auraBypass": {
+            "allowed": false
+          },
+          "tags": "Persönlich · Ylva Wolfshorn · Kontrolle · Kein Schaden",
+          "id": "ylva-schafthebel",
+          "name": "Schafthebel",
+          "activationType": "action",
+          "costs": [
+            {
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Ylva schiebt den Speerschaft hinter die geführte Waffe und versucht, sie mit einer kurzen Drehung aus dem Griff zu hebeln. (Kein Schaden. Nach Treffer KRF SG 14 oder Entwaffnung; Aufheben und Waffenwechsel kosten ihre regulären Ressourcen.)",
+          "effect": "(Kein Schaden. Nach Treffer KRF SG 14 oder Entwaffnung; Aufheben und Waffenwechsel kosten ihre regulären Ressourcen.)",
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
+          "effects": [],
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "fixedDc": 14,
+            "addProficiency": false,
+            "failureCondition": {
+              "id": "ylva-schafthebel-entwaffnet",
+              "name": "Entwaffnet",
+              "description": "Die geführte Waffe liegt aufnehmbar in der Szene.",
+              "duration": "1 eigener Beitrag",
+              "disarm": true,
+              "mechanics": {}
+            }
+          }
+        },
+        {
+          "active": true,
+          "minimumLevel": 7,
+          "status": "confirmed",
+          "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+          "category": "technique",
+          "weaponTypes": [
+            "spear"
+          ],
+          "maximumTargets": 1,
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "none"
+          },
+          "auraBypass": {
+            "allowed": false
+          },
+          "tags": "Persönlich · Ylva Wolfshorn · Kontrolle · Kein Schaden",
+          "id": "ylva-aus-der-angriffslinie",
+          "name": "Aus der Angriffslinie",
+          "activationType": "reaction",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "description": "Ylva liest Schulter und Waffenhand des Gegners und nimmt ihren Körper aus der angekündigten Stoßbahn. (Einmal Nachteil auf den nächsten eingehenden Waffenangriff.)",
+          "effect": "(Einmal Nachteil auf den nächsten eingehenden Waffenangriff.)",
+          "target": "Selbst",
+          "range": "Selbst",
+          "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+          "requirements": "Ylvas persönliche Ausbildung; geführter Speer. Vor dem gegnerischen Angriff vorbereiten.",
+          "effects": [
+            {
+              "type": "buff",
+              "target": "self",
+              "on": "always",
+              "condition": {
+                "id": "ylva-aus-der-angriffslinie",
+                "name": "Aus der Angriffslinie",
+                "description": "Der nächste eingehende Waffen-/Technikangriff hat Nachteil; einmalig, auch bei Fehlschlag verbraucht.",
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "stanceGroup": "ylva-speerabwehr",
+                "mechanics": {},
+                "triggerRules": [
+                  {
+                    "id": "ylva-aus-der-angriffslinie-once",
+                    "name": "Aus der Angriffslinie",
+                    "phase": "pre-roll",
+                    "recipient": "target",
+                    "sourceRelation": "self",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "condition": "always",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "weaponAttackOnly": true,
+                    "effects": {
+                      "rollMode": "disadvantage"
+                    },
+                    "resultEffects": [
+                      {
+                        "id": "ylva-aus-der-angriffslinie-consume",
+                        "type": "remove-condition",
+                        "target": "target",
+                        "conditionId": "ylva-aus-der-angriffslinie",
+                        "on": "always"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "ylva-streifender-dorn",
+          "name": "Streifender Dorn",
+          "active": true,
+          "minimumLevel": 7,
+          "status": "confirmed",
+          "category": "technique",
+          "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+          "weaponTypes": [
+            "spear"
+          ],
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "activationType": "bonus-action",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Ylva lässt Dornwacht an der Deckung entlanggleiten und streift die Waffenhand, um den nächsten Hieb aus der Bahn zu bringen. (Trefferwurf −2; leichter Schaden: 1W4 + halber positiver Schadensbonus, abgerundet. Bei Treffer einmal −1 auf den nächsten Waffen-/Technikangriff des Ziels, spätestens bis Ende seines nächsten Beitrags.)",
+          "effect": "(Trefferwurf −2; leichter Schaden: 1W4 + halber positiver Schadensbonus, abgerundet. Bei Treffer einmal −1 auf den nächsten Waffen-/Technikangriff des Ziels, spätestens bis Ende seines nächsten Beitrags.)",
+          "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
+          "tags": "Persönlich · Ylva Wolfshorn",
+          "auraBypass": {
+            "allowed": false
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "target": "target",
+              "on": "hit"
+            },
+            {
+              "type": "debuff",
+              "target": "target",
+              "on": "hit",
+              "condition": {
+                "id": "martial-position-penalty",
+                "name": "Unsicherer Stand",
+                "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch bei Fehlschlag verbraucht. Verfällt am Ende des nächsten eigenen Beitrags.",
+                "stanceGroup": "martial-position-penalty",
+                "active": true,
+                "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 1
+                },
+                "mechanics": {
+                  "movement": 0
+                },
+                "triggerRules": [
+                  {
+                    "id": "martial-position-penalty-once",
+                    "name": "Stellungseffekt",
+                    "phase": "pre-roll",
+                    "recipient": "actor",
+                    "sourceRelation": "self",
+                    "activation": "passive",
+                    "frequency": "comment",
+                    "actionKinds": [
+                      "weapon",
+                      "technique"
+                    ],
+                    "weaponAttackOnly": true,
+                    "condition": "always",
+                    "effects": {
+                      "attackModifier": -1
+                    },
+                    "resultEffects": [
+                      {
+                        "id": "martial-position-penalty-consume",
+                        "type": "remove-condition",
+                        "target": "self",
+                        "conditionId": "martial-position-penalty",
+                        "on": "always"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "baseDieCap": 4,
+            "lightAttack": true,
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          },
+          "attackBonus": -2
+        },
+        {
+          "id": "ylva-kurzer-jagdstoss",
+          "name": "Kurzer Jagdstoß",
+          "active": true,
+          "minimumLevel": 7,
+          "status": "confirmed",
+          "category": "technique",
+          "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+          "weaponTypes": [
+            "spear"
+          ],
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "activationType": "bonus-action",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Aus der ruhenden Deckung schnellt Ylvas Speerspitze vor und kehrt sofort an ihre Seite zurück. (Leichter Angriff: 1W4 + halber positiver Schadensbonus, abgerundet. Kein zusätzlicher Effekt.)",
+          "effect": "(Leichter Angriff: 1W4 + halber positiver Schadensbonus, abgerundet. Kein zusätzlicher Effekt.)",
+          "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
+          "tags": "Persönlich · Ylva Wolfshorn",
+          "auraBypass": {
+            "allowed": false
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "target": "target",
+              "on": "hit"
+            }
+          ],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "baseDieCap": 4,
+            "lightAttack": true,
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          }
+        },
+        {
+          "id": "ylva-schaftfang-und-stoss",
+          "name": "Schaftfang und Stoß",
+          "active": true,
+          "minimumLevel": 7,
+          "status": "confirmed",
+          "category": "technique",
+          "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+          "weaponTypes": [
+            "spear"
+          ],
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "activationType": "bonus-action",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Ylva fängt die gegnerische Waffenführung am Schaft ab und stößt durch die entstandene Lücke. (1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 14: bei Scheitern einmal −2 auf den nächsten Waffen-/Technikangriff, spätestens bis Ende des nächsten eigenen Beitrags.)",
+          "effect": "(1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 14: bei Scheitern einmal −2 auf den nächsten Waffen-/Technikangriff, spätestens bis Ende des nächsten eigenen Beitrags.)",
+          "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
+          "tags": "Persönlich · Ylva Wolfshorn",
+          "auraBypass": {
+            "allowed": false
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "target": "target",
+              "on": "hit"
+            }
+          ],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "fixedDc": 14,
+            "addProficiency": false,
+            "failureCondition": {
+              "id": "martial-position-penalty",
+              "name": "Unsicherer Stand",
+              "description": "Der nächste eigene Waffen-/Technikangriff erhält −2 Angriff; auch bei Fehlschlag verbraucht. Verfällt am Ende des nächsten eigenen Beitrags.",
+              "stanceGroup": "martial-position-penalty",
+              "active": true,
+              "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+              "durationModel": {
+                "kind": "actor-comments",
+                "remainingActorComments": 1
+              },
+              "mechanics": {
+                "movement": 0
+              },
+              "triggerRules": [
+                {
+                  "id": "martial-position-penalty-once",
+                  "name": "Stellungseffekt",
+                  "phase": "pre-roll",
+                  "recipient": "actor",
+                  "sourceRelation": "self",
+                  "activation": "passive",
+                  "frequency": "comment",
+                  "actionKinds": [
+                    "weapon",
+                    "technique"
+                  ],
+                  "weaponAttackOnly": true,
+                  "condition": "always",
+                  "effects": {
+                    "attackModifier": -2
+                  },
+                  "resultEffects": [
+                    {
+                      "id": "martial-position-penalty-consume",
+                      "type": "remove-condition",
+                      "target": "self",
+                      "conditionId": "martial-position-penalty",
+                      "on": "always"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "ylva-brechender-dorn",
+          "name": "Brechender Dorn",
+          "active": true,
+          "minimumLevel": 7,
+          "status": "confirmed",
+          "category": "technique",
+          "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+          "weaponTypes": [
+            "spear"
+          ],
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "activationType": "bonus-action",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "description": "Mit einem tiefen Stoß treibt Ylva die Deckung auf, hakt den Schaft hinter die geführte Waffe und reißt sie mit einer Drehung aus dem Griff. (2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 14: bei Scheitern Entwaffnung. Körperwaffen bleiben erhalten und erhalten stattdessen −1 Angriff bis Ende des nächsten eigenen Beitrags.)",
+          "effect": "(2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 14: bei Scheitern Entwaffnung. Körperwaffen bleiben erhalten und erhalten stattdessen −1 Angriff bis Ende des nächsten eigenen Beitrags.)",
+          "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
+          "tags": "Persönlich · Ylva Wolfshorn",
+          "auraBypass": {
+            "allowed": false
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "target": "target",
+              "on": "hit"
+            }
+          ],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 12
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "fixedDc": 14,
+            "addProficiency": false,
+            "failureCondition": {
+              "id": "ylva-brechender-dorn-entwaffnet",
+              "name": "Entwaffnet",
+              "disarm": true,
+              "description": "Die geführte Waffe fällt aufnehmbar in die Szene.",
+              "duration": "1 eigener Beitrag",
+              "mechanics": {}
+            }
+          }
+        },
+        {
+          "id": "ylva-zwei-dornen",
+          "name": "Zwei Dornen",
+          "active": true,
+          "minimumLevel": 7,
+          "status": "confirmed",
+          "category": "technique",
+          "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+          "weaponTypes": [
+            "spear"
+          ],
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "activationType": "action",
+          "costs": [
+            {
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Ylva stößt kurz zur Mitte, zieht Dornwacht zurück und setzt einen zweiten Stoß aus einem anderen Winkel nach. (Zwei getrennte Trefferwürfe; je 1× Waffenwürfel + Schadensbonus, ohne Ausbildungswürfel. Der zweite Angriff folgt auch nach einem Fehlschlag.)",
+          "effect": "(Zwei getrennte Trefferwürfe; je 1× Waffenwürfel + Schadensbonus, ohne Ausbildungswürfel. Der zweite Angriff folgt auch nach einem Fehlschlag.)",
+          "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
+          "tags": "Persönlich · Ylva Wolfshorn",
+          "auraBypass": {
+            "allowed": false
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "target": "target",
+              "on": "hit"
+            }
+          ],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "scalingSteps": []
+          },
+          "followUpAttack": {
+            "enabled": true,
+            "afterMiss": true,
+            "inheritWeapon": true,
+            "repeatCount": 1
+          }
+        },
+        {
+          "id": "ylva-niederhaltender-stoss",
+          "name": "Niederhaltender Stoß",
+          "active": true,
+          "minimumLevel": 7,
+          "status": "confirmed",
+          "category": "technique",
+          "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+          "weaponTypes": [
+            "spear"
+          ],
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "activationType": "action",
+          "costs": [
+            {
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Ylva setzt die Spitze an und hält den Waffenarm unter Druck, ehe der Gegner zu einer schnellen Antwort ansetzen kann. (1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 14: bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
+          "effect": "(1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 14: bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
+          "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
+          "tags": "Persönlich · Ylva Wolfshorn",
+          "auraBypass": {
+            "allowed": false
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "target": "target",
+              "on": "hit"
+            }
+          ],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "fixedDc": 14,
+            "addProficiency": false,
+            "failureCondition": {
+              "id": "ylva-reaktion-gebunden",
+              "name": "Waffenarm gebunden",
+              "blockedResource": "reaction",
+              "description": "Keine Reaktion bis zum Ende des nächsten eigenen Beitrags.",
+              "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+              "durationModel": {
+                "kind": "actor-comments",
+                "remainingActorComments": 1
+              },
+              "mechanics": {}
+            }
+          }
+        },
+        {
+          "id": "ylva-kurzer-schneidenzug",
+          "name": "Kurzer Schneidenzug",
+          "active": true,
+          "minimumLevel": 7,
+          "status": "confirmed",
+          "category": "technique",
+          "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+          "weaponTypes": [
+            "dagger",
+            "axe"
+          ],
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "activationType": "bonus-action",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Ylva zieht die kurze Schneide knapp über die offene Flanke und nimmt die Hand wieder in Deckung. (Sax und Handaxt: 1W4 + halber positiver Schadensbonus, abgerundet. Kein zusätzlicher Effekt.)",
+          "effect": "(Sax und Handaxt: 1W4 + halber positiver Schadensbonus, abgerundet. Kein zusätzlicher Effekt.)",
+          "requirements": "Ylvas persönliche Ausbildung; geführter Sax oder geführte Handaxt.",
+          "tags": "Persönlich · Ylva Wolfshorn",
+          "auraBypass": {
+            "allowed": false
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "target": "target",
+              "on": "hit"
+            }
+          ],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "baseDieCap": 4,
+            "lightAttack": true,
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": []
+          }
+        },
+        {
+          "id": "ylva-rueckschnitt",
+          "name": "Rückschnitt",
+          "active": true,
+          "minimumLevel": 7,
+          "status": "confirmed",
+          "category": "technique",
+          "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+          "weaponTypes": [
+            "dagger",
+            "axe"
+          ],
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "activationType": "reaction",
+          "costs": [
+            {
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Ylva führt die zurückgezogene Klinge in einem engen Bogen erneut gegen den Gegner. (Sax oder Handaxt: 1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Eigenständiger Reaktionsangriff; kein vorausgehender gegnerischer Treffer nötig.)",
+          "effect": "(Sax oder Handaxt: 1× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Eigenständiger Reaktionsangriff; kein vorausgehender gegnerischer Treffer nötig.)",
+          "requirements": "Ylvas persönliche Ausbildung; geführter Sax oder geführte Handaxt.",
+          "tags": "Persönlich · Ylva Wolfshorn",
+          "auraBypass": {
+            "allowed": false
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "target": "target",
+              "on": "hit"
+            }
+          ],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          }
+        },
+        {
+          "id": "ylva-wolfsgriff",
+          "name": "Wolfsgriff",
+          "active": true,
+          "minimumLevel": 7,
+          "status": "confirmed",
+          "category": "technique",
+          "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+          "weaponTypes": [
+            "dagger",
+            "axe"
+          ],
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "activationType": "bonus-action",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "resourceId": "special-action",
+              "name": "Besondere Aktion",
+              "amount": 1,
+              "scope": "persistent"
+            }
+          ],
+          "description": "Ylva bindet mit der freien Hand den Waffenarm und treibt ihre kurze Schneide in die ungeschützte Seite. (Sax oder Handaxt: 2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 12: bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
+          "effect": "(Sax oder Handaxt: 2× Waffenwürfel + Ausbildungswürfel + Schadensbonus. Nach Treffer KRF SG 12: bei Scheitern keine Reaktion bis Ende des nächsten eigenen Beitrags.)",
+          "requirements": "Ylvas persönliche Ausbildung; geführter Sax oder geführte Handaxt.",
+          "tags": "Persönlich · Ylva Wolfshorn",
+          "auraBypass": {
+            "allowed": false
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "target": "target",
+              "on": "hit"
+            }
+          ],
+          "damageFormula": "",
+          "damageModel": {
+            "mode": "weapon-dice",
+            "weaponDiceMultiplier": 1,
+            "bonusFormula": "",
+            "weaponBonuses": [
+              {
+                "diceCount": 1,
+                "dieCap": 12
+              }
+            ],
+            "bonusWeaponDice": 0,
+            "bonusWeaponDieCap": 12,
+            "scalingSteps": [
+              {
+                "level": 7,
+                "formula": "1d4"
+              },
+              {
+                "level": 9,
+                "formula": "1d6"
+              },
+              {
+                "level": 13,
+                "formula": "1d8"
+              },
+              {
+                "level": 17,
+                "formula": "1d10"
+              }
+            ]
+          },
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "strength",
+            "fixedDc": 12,
+            "addProficiency": false,
+            "failureCondition": {
+              "id": "ylva-reaktion-gebunden",
+              "name": "Waffenarm gebunden",
+              "blockedResource": "reaction",
+              "description": "Keine Reaktion bis zum Ende des nächsten eigenen Beitrags.",
+              "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+              "durationModel": {
+                "kind": "actor-comments",
+                "remainingActorComments": 1
+              },
+              "mechanics": {}
+            }
+          }
+        },
+        {
+          "id": "ylva-drei-dornen-ein-sturz",
+          "name": "Drei Dornen, ein Sturz",
+          "active": true,
+          "minimumLevel": 7,
+          "status": "confirmed",
+          "category": "technique",
+          "trainingForm": "Persönliche Techniken · Ylva Wolfshorn",
+          "weaponTypes": [
+            "spear"
+          ],
+          "maximumTargets": 1,
+          "target": "Ein Gegner",
+          "range": "Waffenreichweite",
+          "activationType": "action",
+          "costs": [
+            {
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            },
+            {
+              "resourceId": "reaction",
+              "name": "Reaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "description": "Ylva stößt mit Dornwacht zu, setzt aus der Gegenrichtung nach und täuscht mit der freien Hand einen Griff nach dem Gegner an. Während dessen Deckung der Hand folgt, schwingt sie den Speerschaft tief herum und versucht, ihm die Füße unter dem Körper wegzufegen. (Drei getrennte Trefferwürfe, auch nach Fehlschlägen: 1W4; 1W8; 1W6 + voller Schadensbonus. Kein Ausbildungswürfel. Danach immer GES SG 18. Bei Scheitern: zu Boden gefegt; Ylva hat gegen dieses Ziel Vorteil bis zum Ende ihres nächsten Beitrags, das Ziel keine Reaktion bis zum Beginn seines nächsten Beitrags. Kein zusätzlicher Bonusaktionsentzug.)",
+          "effect": "(Drei getrennte Trefferwürfe, auch nach Fehlschlägen: 1W4; 1W8; 1W6 + voller Schadensbonus. Kein Ausbildungswürfel. Danach immer GES SG 18. Bei Scheitern: zu Boden gefegt; Ylva hat gegen dieses Ziel Vorteil bis zum Ende ihres nächsten Beitrags, das Ziel keine Reaktion bis zum Beginn seines nächsten Beitrags. Kein zusätzlicher Bonusaktionsentzug.)",
+          "requirements": "Ylvas persönliche Ausbildung; geführter Speer.",
+          "tags": "Persönlich · Ylva Wolfshorn",
+          "auraBypass": {
+            "allowed": false
+          },
+          "effects": [
+            {
+              "type": "damage",
+              "target": "target",
+              "on": "hit"
+            }
+          ],
+          "damageFormula": "1d4",
+          "damageModel": {
+            "mode": "fixed",
+            "inheritDamageModifier": false,
+            "inheritBonusDamage": false,
+            "scalingSteps": []
+          },
+          "followUpAttack": {
+            "enabled": true,
+            "afterMiss": true,
+            "repeatCount": 2,
+            "steps": [
+              {
+                "damageFormula": "1d8",
+                "inheritDamageModifier": false,
+                "inheritBonusDamage": false
+              },
+              {
+                "damageFormula": "1d6",
+                "inheritDamageModifier": true,
+                "inheritBonusDamage": false
+              }
+            ]
+          },
+          "secondarySave": {
+            "enabled": true,
+            "attributeKey": "dexterity",
+            "fixedDc": 18,
+            "addProficiency": false,
+            "failureCondition": {
+              "id": "ylva-zu-boden-gefegt",
+              "name": "Zu Boden gefegt",
+              "blockedResource": "reaction",
+              "description": "Keine Reaktion bis zum Beginn des nächsten eigenen Beitrags. Kein zusätzlicher Bonusaktionsentzug.",
+              "duration": "Bis zum Beginn des nächsten eigenen Beitrags",
+              "durationModel": {
+                "kind": "actor-comments",
+                "remainingActorComments": 1,
+                "expiresAt": "actor-start"
+              },
+              "mechanics": {}
+            },
+            "timing": "after-sequence",
+            "requiresHit": false,
+            "actorFailureCondition": {
+              "id": "ylva-feger-oeffnung",
+              "name": "Öffnung nach dem Feger",
+              "description": "Vorteil ausschließlich gegen das gefegte Ziel bis zum Ende von Ylvas nächstem Beitrag.",
+              "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+              "durationModel": {
+                "kind": "actor-comments",
+                "remainingActorComments": 1
+              },
+              "mechanics": {},
+              "triggerRules": [
+                {
+                  "id": "ylva-feger-vorteil",
+                  "name": "Öffnung nach dem Feger",
+                  "phase": "pre-roll",
+                  "recipient": "actor",
+                  "sourceRelation": "self",
+                  "activation": "passive",
+                  "frequency": "always",
+                  "condition": "always",
+                  "actionKinds": [
+                    "weapon",
+                    "technique"
+                  ],
+                  "effects": {
+                    "rollMode": "advantage"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "skills": [
+        {
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "id": "default-skill-1",
+          "proficiency": "trained",
+          "name": "Athletik",
+          "attributeKey": "strength",
+          "bonus": 0
+        },
+        {
+          "bonus": 0,
+          "name": "Akrobatik",
+          "notes": "",
+          "proficiency": "none",
+          "id": "default-skill-2",
+          "attributeKey": "dexterity"
+        },
+        {
+          "bonus": 0,
+          "attributeKey": "dexterity",
+          "id": "default-skill-3",
+          "name": "Fingerfertigkeit",
+          "proficiency": "none",
+          "notes": ""
+        },
+        {
+          "proficiency": "trained",
+          "notes": "Ausbildung im Clan Wolfshorn",
+          "attributeKey": "dexterity",
+          "name": "Heimlichkeit",
+          "bonus": 0,
+          "id": "default-skill-4"
+        },
+        {
+          "id": "default-skill-5",
+          "attributeKey": "intelligence",
+          "bonus": 0,
+          "proficiency": "none",
+          "notes": "",
+          "name": "Arkane Kunde"
+        },
+        {
+          "attributeKey": "intelligence",
+          "name": "Geschichte",
+          "proficiency": "none",
+          "bonus": 0,
+          "id": "default-skill-6",
+          "notes": ""
+        },
+        {
+          "bonus": 0,
+          "name": "Nachforschungen",
+          "proficiency": "none",
+          "attributeKey": "intelligence",
+          "notes": "",
+          "id": "default-skill-7"
+        },
+        {
+          "attributeKey": "intelligence",
+          "name": "Naturkunde",
+          "notes": "Ausbildung im Clan Wolfshorn",
+          "bonus": 0,
+          "proficiency": "trained",
+          "id": "default-skill-8"
+        },
+        {
+          "id": "default-skill-9",
+          "bonus": 0,
+          "proficiency": "none",
+          "name": "Religion",
+          "notes": "",
+          "attributeKey": "intelligence"
+        },
+        {
+          "notes": "",
+          "id": "default-skill-10",
+          "proficiency": "none",
+          "bonus": 0,
+          "name": "Heilkunde",
+          "attributeKey": "wisdom"
+        },
+        {
+          "id": "default-skill-11",
+          "bonus": 0,
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "name": "Mit Tieren umgehen",
+          "proficiency": "trained",
+          "attributeKey": "wisdom"
+        },
+        {
+          "id": "default-skill-12",
+          "notes": "",
+          "attributeKey": "wisdom",
+          "name": "Motiv erkennen",
+          "bonus": 0,
+          "proficiency": "none"
+        },
+        {
+          "attributeKey": "wisdom",
+          "proficiency": "trained",
+          "name": "Überleben",
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "bonus": 0,
+          "id": "default-skill-13"
+        },
+        {
+          "name": "Wahrnehmung",
+          "attributeKey": "wisdom",
+          "id": "default-skill-14",
+          "notes": "Ausbildung im Clan Wolfshorn",
+          "bonus": 0,
+          "proficiency": "trained"
+        },
+        {
+          "proficiency": "none",
+          "notes": "",
+          "id": "default-skill-15",
+          "name": "Auftreten",
+          "attributeKey": "charisma",
+          "bonus": 0
+        },
+        {
+          "bonus": 0,
+          "attributeKey": "charisma",
+          "name": "Einschüchtern",
+          "id": "default-skill-16",
+          "notes": "Geübt durch Stufe-1-Vorlage",
+          "proficiency": "trained"
+        },
+        {
+          "attributeKey": "charisma",
+          "name": "Täuschen",
+          "id": "default-skill-17",
+          "bonus": 0,
+          "proficiency": "none",
+          "notes": ""
+        },
+        {
+          "name": "Überreden",
+          "notes": "",
+          "attributeKey": "charisma",
+          "id": "default-skill-18",
+          "bonus": 0,
+          "proficiency": "none"
+        },
+        {
+          "bonus": 0,
+          "id": "default-skill-19",
+          "notes": "",
+          "proficiency": "none",
+          "attributeKey": "charisma",
+          "name": "Flirten"
+        },
+        {
+          "name": "Körperbeherrschung",
+          "id": "default-skill-20",
+          "notes": "",
+          "bonus": 0,
+          "proficiency": "none",
+          "attributeKey": "constitution"
+        }
+      ],
+      "notes": "Stufe 7 · Skytte. Standard-Array mit aldrimarischer Herkunft (+2 KRF, +1 KON); Stufe 4: +2 GES. Durchschnittliche TP einschließlich zentralem Vitalitätszuschlag. 5 gelernte Huskarl-Techniken gemäß gemeinsamem Ausbildungsbudget. Kein Expertenpfad vor Stufe 9. Freki wird als eigene Kreatur geführt.",
+      "attributes": [
+        {
+          "label": "Kraft",
+          "shortLabel": "KRF",
+          "score": 12,
+          "key": "strength",
+          "modifierOverride": null
+        },
+        {
+          "shortLabel": "GES",
+          "score": 17,
+          "modifierOverride": null,
+          "label": "Geschick",
+          "key": "dexterity"
+        },
+        {
+          "shortLabel": "KON",
+          "key": "constitution",
+          "score": 14,
+          "modifierOverride": null,
+          "label": "Konstitution"
+        },
+        {
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "score": 8,
+          "shortLabel": "INT",
+          "modifierOverride": null
+        },
+        {
+          "label": "Weisheit",
+          "shortLabel": "WEI",
+          "modifierOverride": null,
+          "score": 14,
+          "key": "wisdom"
+        },
+        {
+          "score": 12,
+          "modifierOverride": null,
+          "label": "Charisma",
+          "shortLabel": "CHA",
+          "key": "charisma"
+        }
+      ],
+      "revision": 1792000077000,
+      "abilities": [
+        {
+          "triggerRules": [],
+          "delivery": "ability",
+          "auraBypass": {
+            "resourceId": "",
+            "allowed": true,
+            "cost": 1
+          },
+          "activationType": "passive",
+          "mechanics": {
+            "spellAttack": 0,
+            "movement": 0,
+            "savingThrow": 0,
+            "attack": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "savingThrowAdvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "skill": 0,
+            "damage": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "armorClass": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "bonusDamageFormula": "",
+            "initiative": 0,
+            "spellSaveDc": 0
+          },
+          "tags": "Begleiter · Jagd",
+          "inventoryUseTrigger": {
+            "requireActualRecovery": true,
+            "restoreResources": [],
+            "enabled": false,
+            "itemTags": []
+          },
+          "channelComments": 0,
+          "combatUsable": false,
+          "damageType": "physisch",
+          "concentration": false,
+          "rollFormula": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "requirements": "",
+          "duration": "",
+          "costs": [],
+          "id": "starter-skytte-animal-companion",
+          "recoveryDayKey": "",
+          "usesMaximum": 0,
+          "aiInstructions": "Berücksichtige das Tier nur, wenn es in der Szene anwesend ist.",
+          "effects": [],
+          "description": "Freki, domestizierter Gramnir des Clans Wolfshorn, Stufe 4. Eigener Kreaturbogen und eigene Aktionen; muss in der Szene anwesend sein.",
+          "recovery": "none",
+          "usesCurrent": 0,
+          "target": "",
+          "range": "",
+          "resolutionType": "",
+          "name": "Tierbegleiter",
+          "active": true
+        },
+        {
+          "activationType": "bonus-action",
+          "usesMaximum": 1,
+          "combatUsable": true,
+          "range": "Selbst",
+          "minimumLevel": 1,
+          "target": "Selbst",
+          "active": true,
+          "description": "Regeneriere 1 eigenen Klassen-Trefferwürfel + 10 % der maximalen TP (aufgerundet), höchstens bis zum TP-Maximum. Kein KON-Bonus. Einmal pro langer Rast.",
+          "delivery": "ability",
+          "usesCurrent": 1,
+          "resolutionType": "automatic",
+          "id": "martial-durchschnaufen",
+          "auraBypass": {
+            "allowed": false
+          },
+          "costs": [
+            {
+              "id": "second-wind-bonus",
+              "amount": 1,
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "scope": "comment"
+            }
+          ],
+          "effects": [
+            {
+              "type": "healing",
+              "on": "always",
+              "target": "self",
+              "formula": "1d8",
+              "scaling": "hit-die-and-tenth-maximum",
+              "id": "second-wind-heal"
+            }
+          ],
+          "name": "Durchschnaufen",
+          "recovery": "long-rest",
+          "tags": "Erholung · Lange Rast"
+        },
+        {
+          "description": "+20 maximale TP; +2 Angriff und +1 Schaden mit Bogen und Speer, auch bei Techniken; +3 Wahrnehmung; +3 gegen Furcht; +2 gegen Niederwerfen und erzwungene Bewegung.",
+          "combatUsable": false,
+          "activationType": "passive",
+          "active": true,
+          "id": "wolfshorn-ylva-border-veteran",
+          "name": "Veteranin des Dunkelhains",
+          "mechanics": {
+            "saveModifiers": [
+              {
+                "bonus": 3,
+                "kind": "fear"
+              },
+              {
+                "kind": "prone",
+                "bonus": 2
+              },
+              {
+                "kind": "forced-movement",
+                "bonus": 2
+              }
+            ],
+            "maximumHitPoints": 20,
+            "weaponModifiers": [
+              {
+                "damage": 1,
+                "weaponTypes": [
+                  "bow",
+                  "spear"
+                ],
+                "attack": 2
+              }
+            ],
+            "skillModifiers": [
+              {
+                "bonus": 3,
+                "name": "Wahrnehmung"
+              }
+            ],
+            "dexterityWeaponTypes": [
+              "spear"
+            ]
+          }
+        }
+      ],
+      "combat": {
+        "mounted": false,
+        "damageBonus": 0,
+        "movement": 9,
+        "passivePerceptionBonus": 0,
+        "attackBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "initiativeBonus": 0
+      },
+      "conditions": [],
+      "lastMechanicalCommentId": "YKO0WT44iBjLNysm2wOM",
+      "progression": {
+        "actionPoolChoices": [],
+        "level": 7,
+        "experienceReward": null,
+        "resourceRulesVersion": 2,
+        "experience": 0,
+        "proficiencyBonusOverride": null,
+        "specialLevels": 0,
+        "nextLevelExperience": null
+      },
+      "defenseBalanceVersion": 1,
+      "magic": {
+        "focusResourceId": "focus",
+        "spellSaveDcOverride": null,
+        "bypassResourceId": "",
+        "casterTier": "full",
+        "manaResourceId": "mana-focus",
+        "slotResourceIds": [
+          "spell-slot-1",
+          "spell-slot-2",
+          "spell-slot-3",
+          "spell-slot-4",
+          "spell-slot-5",
+          "spell-slot-6",
+          "spell-slot-7",
+          "spell-slot-8",
+          "spell-slot-9",
+          "spell-slot-10"
+        ],
+        "focusEnabled": false,
+        "spellAttackOverride": null,
+        "spells": [],
+        "castingAttribute": "intelligence",
+        "notes": "",
+        "enabled": false
+      },
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "dexterity",
+          "bonus": 0,
+          "proficient": true,
+          "expertise": false
+        },
+        {
+          "expertise": false,
+          "bonus": 0,
+          "attributeKey": "constitution",
+          "proficient": false
+        },
+        {
+          "bonus": 0,
+          "expertise": false,
+          "attributeKey": "intelligence",
+          "proficient": false
+        },
+        {
+          "proficient": true,
+          "bonus": 0,
+          "attributeKey": "wisdom",
+          "expertise": false
+        },
+        {
+          "expertise": false,
+          "bonus": 0,
+          "attributeKey": "charisma",
+          "proficient": false
+        }
+      ],
+      "classTraining": {
+        "techniqueSelections": [
+          {
+            "techniqueId": "combat-style-huskarl-skytte-grund-1",
+            "selectedAtLevel": 1,
+            "slotId": "foundation-1"
+          },
+          {
+            "selectedAtLevel": 3,
+            "slotId": "foundation-2",
+            "techniqueId": "combat-style-huskarl-skytte-grund-3"
+          },
+          {
+            "selectedAtLevel": 4,
+            "slotId": "foundation-3",
+            "techniqueId": "combat-style-huskarl-skytte-grund-4"
+          },
+          {
+            "techniqueId": "combat-style-huskarl-skytte-grund-6",
+            "slotId": "foundation-4",
+            "selectedAtLevel": 6
+          },
+          {
+            "slotId": "advanced-1",
+            "techniqueId": "combat-style-huskarl-skytte-grund-7",
+            "selectedAtLevel": 7
+          }
+        ],
+        "schemaVersion": 2,
+        "selections": [
+          {
+            "selectionId": "huskarl-schildgrund",
+            "selectedAtLevel": 1,
+            "kind": "foundation",
+            "spentTechniqueSlotId": ""
+          }
+        ],
+        "curriculumId": "aldrimar-skytte"
+      },
+      "armorClass": {
+        "overrideMode": "total",
+        "shieldBonus": 0,
+        "base": 10,
+        "magicModifier": 0,
+        "dexterityMode": "full",
+        "otherModifier": 0,
+        "override": null,
+        "dexterityCap": 2
+      },
+      "hitPoints": {
+        "averagePerLevelOverride": null,
+        "vitality": {
+          "legacyIncrease": 3,
+          "version": 1,
+          "overrideAnchor": null
+        },
+        "current": 87,
+        "hitDie": 10,
+        "maximumOverride": null,
+        "temporary": 0
+      },
+      "schemaVersion": 11,
+      "damageAffinities": [],
+      "templateSelections": {
+        "classId": "skytte",
+        "backgroundId": "huskarl",
+        "appliedAt": "2026-09-22T12:00:00.000Z",
+        "schemaVersion": 1,
+        "ancestryId": "aldrimarer",
+        "attributeMethod": "standard-array"
+      },
+      "armorItems": [
+        {
+          "armorClassBonus": 0,
+          "equipped": true,
+          "baseArmorClass": 14,
+          "triggerRules": [],
+          "kind": "armor",
+          "dexterityMode": "capped",
+          "dexterityCap": 2,
+          "image": "/AleriaAlmanach/public/assets/character-equipment/ylva-jagdleder-v1.png",
+          "id": "ylva-leder",
+          "name": "Verstärkte Jagdleder-Rüstung",
+          "armorCategory": "medium",
+          "notes": "Angelegt: −1 Hieb-/Stichschaden je Treffer und +2 auf Rettungswürfe gegen Gift. Kein zusätzlicher RK-Bonus.",
+          "properties": "Mittlere Rüstung",
+          "damageProtection": {
+            "amount": 1,
+            "name": "Grenzerleder",
+            "damageTypes": [
+              "hieb",
+              "stich"
+            ]
+          },
+          "dexterityUnlockLevel": 0,
+          "inventoryItemId": "equipment-armor-ylva-leder",
+          "mechanics": {
+            "saveModifiers": [
+              {
+                "kind": "poison",
+                "bonus": 2
+              }
+            ]
+          }
+        }
+      ],
+      "proficiencies": {
+        "notes": "",
+        "tools": [
+          "Seemannschaft und Gefolgschaftsbrauchtum",
+          "Mit Tieren umgehen"
+        ],
+        "languages": [],
+        "armor": [
+          "light",
+          "medium"
+        ],
+        "weapons": [
+          "simple",
+          "bow",
+          "axe",
+          "spear"
+        ]
+      },
+      "quirks": [
+        {
+          "type": "trait",
+          "target": "self",
+          "mechanics": {
+            "maximumHitPoints": 0,
+            "attackRollMode": "normal",
+            "spellSaveDc": 0,
+            "damage": 0,
+            "initiative": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "armorClass": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "passivePerception": 0,
+            "savingThrowAdvantageAttributes": [],
+            "skill": 0,
+            "attack": 0,
+            "bonusDamageFormula": "",
+            "spellAttack": 0,
+            "savingThrow": 0,
+            "movement": 0
+          },
+          "active": true,
+          "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
+          "id": "starter-ancestry-aldrimarer-trait-1",
+          "tags": "Volk · Aldrimarer",
+          "name": "Aldrimarische Widerstandskraft",
+          "stacking": "normal",
+          "duration": "",
+          "priority": 0,
+          "aiInstructions": "",
+          "triggerRules": [],
+          "trigger": "",
+          "appliesWhen": "Dauerhafte kulturelle Prägung",
+          "limitations": ""
+        },
+        {
+          "description": "Gefolgsmann eines aldrimarischen Jarls oder Königs, durch Eid und Sold gebunden, mit Kriegshandwerk und Gefolgschaftstreue vertraut.",
+          "id": "starter-background-huskarl-trait-1",
+          "duration": "",
+          "target": "self",
+          "priority": 0,
+          "stacking": "normal",
+          "mechanics": {
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "damage": 0,
+            "spellSaveDc": 0,
+            "skill": 0,
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": [],
+            "maximumHitPoints": 0,
+            "savingThrow": 0,
+            "passivePerception": 0,
+            "armorClass": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "spellAttack": 0,
+            "attack": 0,
+            "initiative": 0,
+            "movement": 0
+          },
+          "active": true,
+          "limitations": "",
+          "type": "trait",
+          "trigger": "",
+          "triggerRules": [],
+          "name": "Aldrimarische Gefolgschaftstreue",
+          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+          "aiInstructions": "",
+          "tags": "Hintergrund · Huskarl"
+        },
+        {
+          "description": "+1 Angriff mit einem geführten Bogen, auch bei Bogentechniken. Klassenbonus wird automatisch berechnet; kein Gegenstandsbonus.",
+          "active": true,
+          "aiInstructions": "",
+          "target": "self",
+          "triggerRules": [],
+          "name": "Auge des Jägers",
+          "limitations": "",
+          "tags": "",
+          "id": "skytte-auge",
+          "appliesWhen": "",
+          "type": "quirk",
+          "stacking": "normal",
+          "duration": "",
+          "priority": 0,
+          "trigger": "",
+          "mechanics": {
+            "damage": 0,
+            "passivePerception": 0,
+            "skill": 0,
+            "savingThrowAdvantageAttributes": [],
+            "bonusDamageFormula": "",
+            "spellSaveDc": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "savingThrowDisadvantageAttributes": [],
+            "attackRollMode": "normal",
+            "initiative": 0,
+            "spellAttack": 0,
+            "attack": 0,
+            "savingThrow": 0,
+            "maximumHitPoints": 0,
+            "movement": 0,
+            "armorClass": 0
+          }
+        }
+      ],
+      "weapons": [
+        {
+          "id": "ylva-langbogen",
+          "notes": "+1 Waffenschaden. Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "ammunition": {
+            "reloadAfter": 0,
+            "required": true,
+            "amountPerUse": 1,
+            "inventoryItemId": "ylva-pfeile"
+          },
+          "effect": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "equipped": true,
+          "auraBypass": {
+            "resourceId": "",
+            "cost": 1,
+            "allowed": true
+          },
+          "costs": [
+            {
+              "id": "activation-action",
+              "scope": "comment",
+              "name": "Aktion",
+              "amount": 1,
+              "resourceId": "action"
+            }
+          ],
+          "activationType": "action",
+          "triggerRules": [
+            {
+              "effects": {},
+              "condition": "critical-hit",
+              "id": "wolfshorn-pinning-shot",
+              "frequency": "always",
+              "phase": "pre-damage",
+              "actionKinds": [
+                "weapon",
+                "technique"
+              ],
+              "resultEffects": [
+                {
+                  "target": "target",
+                  "notes": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                  "on": "always",
+                  "type": "debuff",
+                  "condition": {
+                    "triggerRules": [
+                      {
+                        "frequency": "comment",
+                        "effects": {
+                          "attackModifier": -1
+                        },
+                        "sourceRelation": "self",
+                        "weaponAttackOnly": true,
+                        "condition": "always",
+                        "phase": "pre-roll",
+                        "resultEffects": [
+                          {
+                            "type": "remove-condition",
+                            "on": "always",
+                            "conditionId": "martial-position-penalty",
+                            "target": "self",
+                            "id": "martial-position-penalty-consume"
+                          }
+                        ],
+                        "id": "martial-position-penalty-once",
+                        "activation": "passive",
+                        "recipient": "actor",
+                        "name": "Stellungseffekt",
+                        "actionKinds": [
+                          "weapon",
+                          "technique"
+                        ]
+                      }
+                    ],
+                    "duration": "Bis zum Ende des nächsten eigenen Beitrags",
+                    "active": true,
+                    "stanceGroup": "martial-position-penalty",
+                    "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+                    "name": "Festnagelnder Schuss",
+                    "id": "martial-position-penalty",
+                    "durationModel": {
+                      "kind": "actor-comments",
+                      "remainingActorComments": 1
+                    },
+                    "mechanics": {
+                      "movement": 0
+                    }
+                  }
+                }
+              ],
+              "activation": "passive",
+              "name": "Festnagelnder Schuss",
+              "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+              "sourceRelation": "self",
+              "recipient": "actor"
+            }
+          ],
+          "versatileDamageFormula": "",
+          "inventoryItemId": "equipment-weapon-ylva-langbogen",
+          "range": "Fernkampf · 45 / 180 m",
+          "damageFormula": "1d8",
+          "damageBonus": 1,
+          "attackAttribute": "dexterity",
+          "weaponType": "bow",
+          "weaponProfileId": "",
+          "training": "martial",
+          "proficient": true,
+          "requirements": "",
+          "description": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "aiInstructions": "Der nächste eigene Waffen-/Technikangriff erhält −1 Angriff; auch ein Fehlschlag verbraucht den Malus. Verfällt spätestens am Ende des nächsten eigenen Beitrags.",
+          "properties": "Zweihändig · Munition",
+          "name": "Wolfshorn-Langbogen",
+          "damageType": "Stich",
+          "attackBonus": 0,
+          "effects": [],
+          "image": "https://i.imgur.com/hX1q2xf.png"
+        },
+        {
+          "aiInstructions": "",
+          "auraBypass": {
+            "cost": 1,
+            "allowed": true,
+            "resourceId": ""
+          },
+          "equipped": false,
+          "image": "",
+          "ammunition": null,
+          "inventoryItemId": "equipment-weapon-ylva-speer",
+          "versatileDamageFormula": "1d10",
+          "damageBonus": 1,
+          "requirements": "",
+          "damageFormula": "1d8",
+          "activationType": "action",
+          "range": "Nahkampf · 1,5 m",
+          "weaponType": "spear",
+          "proficient": true,
+          "training": "simple",
+          "effects": [],
+          "weaponProfileId": "",
+          "damageType": "Stich",
+          "costs": [
+            {
+              "amount": 1,
+              "scope": "comment",
+              "name": "Aktion",
+              "resourceId": "action",
+              "id": "activation-action"
+            }
+          ],
+          "name": "Dornwacht · Wolfshorn-Jagdspeer",
+          "attackAttribute": "strength",
+          "attackBonus": 0,
+          "notes": "Sorgfältig ausbalancierter Grenzerspeer. +1 Waffenschaden. Ylvas persönliche Speerausbildung erlaubt ihr Geschicklichkeit.",
+          "properties": "Vielseitig",
+          "id": "ylva-speer",
+          "triggerRules": []
+        },
+        {
+          "damageFormula": "1d6",
+          "training": "simple",
+          "damageBonus": 0,
+          "name": "Wolfshorn-Handaxt",
+          "triggerRules": [],
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": ""
+          },
+          "aiInstructions": "",
+          "image": "https://i.imgur.com/m8sI75k.png",
+          "weaponProfileId": "",
+          "attackAttribute": "strength",
+          "ammunition": null,
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "damageType": "Hieb",
+          "inventoryItemId": "equipment-weapon-ylva-handaxt",
+          "versatileDamageFormula": "",
+          "attackBonus": 1,
+          "properties": "Leicht · Einhändig",
+          "equipped": false,
+          "notes": "Griffige, ausgewogene Grenzeraxt. +1 Angriff.",
+          "id": "ylva-handaxt",
+          "range": "Nahkampf · 1,5 m",
+          "effects": [],
+          "requirements": "",
+          "activationType": "action",
+          "proficient": true,
+          "weaponType": "axe"
+        },
+        {
+          "requirements": "",
+          "inventoryItemId": "",
+          "image": "",
+          "id": "default-unarmed-melee",
+          "training": "simple",
+          "ammunition": null,
+          "attackBonus": 0,
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "activationType": "action",
+          "effects": [],
+          "damageFormula": "1d4",
+          "name": "Nahkampf",
+          "triggerRules": [],
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "range": "Nahkampf",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "proficient": true,
+          "weaponProfileId": "",
+          "weaponType": "unarmed",
+          "equipped": false,
+          "costs": [
+            {
+              "amount": 1,
+              "id": "activation-action",
+              "scope": "comment",
+              "name": "Aktion",
+              "resourceId": "action"
+            }
+          ],
+          "damageBonus": 0,
+          "aiInstructions": "",
+          "versatileDamageFormula": ""
+        },
+        {
+          "equipped": false,
+          "ammunition": null,
+          "id": "ylva-saex",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/ylva-saex-v2.png",
+          "auraBypass": {
+            "allowed": true,
+            "cost": 1,
+            "resourceId": ""
+          },
+          "damageBonus": 0,
+          "attackAttribute": "strength",
+          "requirements": "",
+          "weaponProfileId": "",
+          "versatileDamageFormula": "",
+          "activationType": "action",
+          "proficient": true,
+          "range": "Nahkampf · 1,5 m",
+          "weaponType": "dagger",
+          "damageFormula": "1d8",
+          "inventoryItemId": "equipment-weapon-ylva-saex",
+          "effects": [],
+          "training": "simple",
+          "costs": [
+            {
+              "name": "Aktion",
+              "scope": "comment",
+              "amount": 1,
+              "id": "activation-action",
+              "resourceId": "action"
+            }
+          ],
+          "properties": "Einhändig",
+          "triggerRules": [],
+          "name": "Wolfshorn-Saex",
+          "attackBonus": 0,
+          "damageType": "Hieb",
+          "notes": "Nordisches einschneidiges Langmesser. 1W8 Grundschaden, einhändig geführt.",
+          "aiInstructions": ""
+        }
+      ],
+      "resources": [
+        {
+          "current": 0,
+          "notes": "",
+          "scope": "persistent",
+          "recovery": "manual",
+          "recoveryDayKey": "",
+          "id": "inspiration",
+          "category": "",
+          "icon": "",
+          "name": "Inspiration",
+          "maximum": 1
+        },
+        {
+          "notes": "",
+          "current": 0,
+          "scope": "persistent",
+          "icon": "",
+          "maximum": 0,
+          "category": "magic",
+          "name": "Mana",
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2",
+          "id": "mana-focus",
+          "recovery": "day"
+        },
+        {
+          "current": 0,
+          "name": "Fokus",
+          "category": "focus",
+          "icon": "",
+          "id": "focus",
+          "notes": "",
+          "recovery": "day",
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2",
+          "scope": "persistent",
+          "maximum": 0
+        },
+        {
+          "maximum": 0,
+          "icon": "",
+          "scope": "persistent",
+          "name": "Celestiale Punkte",
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2",
+          "id": "celestial-points",
+          "category": "celestial",
+          "recovery": "day",
+          "notes": "",
+          "current": 0
+        },
+        {
+          "maximum": 0,
+          "id": "infernal-points",
+          "scope": "persistent",
+          "notes": "",
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2",
+          "icon": "",
+          "category": "infernal",
+          "recovery": "day",
+          "current": 0,
+          "name": "Infernale Punkte"
+        },
+        {
+          "current": 0,
+          "id": "pact-points",
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2",
+          "name": "Paktpunkte",
+          "icon": "",
+          "notes": "",
+          "recovery": "day",
+          "category": "pact",
+          "scope": "persistent",
+          "maximum": 0
+        },
+        {
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "current": 1,
+          "id": "action",
+          "scope": "comment",
+          "name": "Aktion",
+          "recovery": "scene",
+          "category": "action",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "maximum": 1
+        },
+        {
+          "maximum": 1,
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "id": "bonus-action",
+          "category": "action",
+          "scope": "comment",
+          "recovery": "scene",
+          "name": "Bonusaktion",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "current": 1
+        },
+        {
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "current": 1,
+          "category": "action",
+          "scope": "comment",
+          "name": "Reaktion",
+          "id": "reaction",
+          "recovery": "scene",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt.",
+          "maximum": 1
+        },
+        {
+          "id": "special-action",
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "current": 2,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2",
+          "name": "Besondere Aktion",
+          "notes": "",
+          "maximum": 2
+        },
+        {
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "recoveryDayKey": "scene:modul-1781469771512::session:p-mqe96jum-izzv8:day-2",
+          "name": "Aura-Fokuspunkt",
+          "current": 0,
+          "notes": "",
+          "maximum": 0,
+          "category": "action",
+          "scope": "persistent",
+          "paymentRole": "universal-substitute",
+          "recovery": "day",
+          "id": "aura-focus"
+        },
+        {
+          "current": 0,
+          "icon": "",
+          "recoveryDayKey": "",
+          "spellLevel": 1,
+          "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "id": "spell-slot-1",
+          "name": "Zauberplatz I",
+          "recovery": "long-rest",
+          "category": "spell-slot",
+          "scope": "persistent",
+          "maximum": 0
+        },
+        {
+          "current": 0,
+          "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "name": "Zauberplatz II",
+          "scope": "persistent",
+          "spellLevel": 2,
+          "id": "spell-slot-2",
+          "recovery": "long-rest",
+          "recoveryDayKey": "",
+          "icon": "",
+          "category": "spell-slot",
+          "maximum": 0
+        },
+        {
+          "name": "Zauberplatz III",
+          "recovery": "long-rest",
+          "category": "spell-slot",
+          "icon": "",
+          "maximum": 0,
+          "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "current": 0,
+          "spellLevel": 3,
+          "recoveryDayKey": "",
+          "scope": "persistent",
+          "id": "spell-slot-3"
+        },
+        {
+          "scope": "persistent",
+          "spellLevel": 4,
+          "category": "spell-slot",
+          "recovery": "long-rest",
+          "current": 0,
+          "id": "spell-slot-4",
+          "maximum": 0,
+          "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "icon": "",
+          "name": "Zauberplatz IV",
+          "recoveryDayKey": ""
+        },
+        {
+          "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recoveryDayKey": "",
+          "spellLevel": 5,
+          "current": 0,
+          "id": "spell-slot-5",
+          "icon": "",
+          "scope": "persistent",
+          "maximum": 0,
+          "category": "spell-slot",
+          "name": "Zauberplatz V",
+          "recovery": "long-rest"
+        },
+        {
+          "id": "spell-slot-6",
+          "icon": "",
+          "maximum": 0,
+          "scope": "persistent",
+          "spellLevel": 6,
+          "name": "Zauberplatz VI",
+          "recovery": "long-rest",
+          "recoveryDayKey": "",
+          "current": 0,
+          "category": "spell-slot",
+          "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "icon": "",
+          "category": "spell-slot",
+          "recovery": "long-rest",
+          "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "current": 0,
+          "spellLevel": 7,
+          "id": "spell-slot-7",
+          "name": "Zauberplatz VII",
+          "recoveryDayKey": "",
+          "maximum": 0,
+          "scope": "persistent"
+        },
+        {
+          "spellLevel": 8,
+          "recoveryDayKey": "",
+          "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "category": "spell-slot",
+          "current": 0,
+          "recovery": "long-rest",
+          "name": "Zauberplatz VIII",
+          "maximum": 0,
+          "scope": "persistent",
+          "id": "spell-slot-8",
+          "icon": ""
+        },
+        {
+          "spellLevel": 9,
+          "id": "spell-slot-9",
+          "name": "Zauberplatz IX",
+          "recovery": "long-rest",
+          "icon": "",
+          "maximum": 0,
+          "category": "spell-slot",
+          "scope": "persistent",
+          "current": 0,
+          "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "recoveryDayKey": ""
+        },
+        {
+          "recoveryDayKey": "",
+          "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt.",
+          "maximum": 0,
+          "scope": "persistent",
+          "icon": "",
+          "spellLevel": 10,
+          "category": "spell-slot",
+          "name": "Zauberplatz X",
+          "current": 0,
+          "id": "spell-slot-10",
+          "recovery": "long-rest"
+        }
+      ],
+      "identity": {
+        "archetype": "Skytte",
+        "ancestry": "Aldrimarer",
+        "background": "Huskarl"
+      }
+    }
+  }
+}

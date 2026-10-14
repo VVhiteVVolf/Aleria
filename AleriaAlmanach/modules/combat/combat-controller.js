@@ -1,3 +1,4 @@
+import { getCommentActorIds } from './combat-condition-duration.js';
 import { beginCombatContribution, conditionsAtContributionStart } from './combat-contribution-start.js';
 import { applySkillRuntimeSnapshots } from '../skill-checks/skill-runtime-state.js';
 import { collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js';
@@ -893,6 +894,9 @@ async function handleSubmission(submission = {}) {
   );
   stateContext.workingStates = new Map(stateContext.storedStates);
   beginCombatContribution(stateContext.workingStates, { characterId: submission.characterId, commentSegments: segments });
+  for (const actorId of getCommentActorIds({ characterId: submission.characterId, commentSegments: segments })) {
+    if (Array.isArray(stateContext.workingStates.get(actorId)?.resources)) stateContext.commentResourceResetActors.add(actorId);
+  }
   beginCriticalContribution(stateContext.workingStates, { characterId: submission.characterId, commentSegments: segments });
 
   activateResolutionDialog();
