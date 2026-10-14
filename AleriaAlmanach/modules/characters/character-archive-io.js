@@ -34,6 +34,9 @@ async function refreshCharactersAfterArchiveWrite() {
 
 function normalizeCharacterImportPayload(parsed) {
   if (!parsed || typeof parsed !== 'object') throw new Error('Charakterdatei ist ungültig.');
+  if (parsed.mergeStrategy === 'merge-combat-techniques') {
+    throw new Error('Bitte wähle einen vollständigen Charakterexport. Technik-Abgleiche werden über die Charakterdatenbank eingespielt.');
+  }
   if (parsed.type === 'aleria-almanach-backup') {
     return {
       characters: Array.isArray(parsed.characters) ? parsed.characters : [],
