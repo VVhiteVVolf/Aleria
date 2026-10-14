@@ -1,3 +1,4 @@
+import { beginCombatContribution } from '../generated/combat/combat-contribution-start.js';
 import { beginCriticalContribution, criticalConditionIds, expireCriticalTemporaryHitPoints } from '../generated/combat-critical/combat-critical-lifecycle.js';
 import { applyCriticalConsequencesForComment } from '../generated/combat-critical/combat-critical-model.js';
 import { getCommentActorIds } from '../generated/combat/combat-condition-duration.js';
@@ -7,6 +8,7 @@ import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 // before their caller starts writing; HP changes join its existing transaction.
 export async function prepareCriticalCommentLifecycle({ database, transaction, states, metadata,
   records = new Map(), entries = new Map(), updates = new Map() }) {
+  beginCombatContribution(states, metadata);
   const previousIds = criticalConditionIds(states);
   const contributors = getCommentActorIds(metadata);
   const sources = new Map();

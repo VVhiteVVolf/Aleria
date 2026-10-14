@@ -1,3 +1,4 @@
+import { beginCombatContribution } from './combat-contribution-start.js';
 // Pure combat-state helpers.
 import { getLightAttackDamageModifier } from './combat-technique-damage.js';
 // This module is the single source of truth for damage application and for
@@ -271,18 +272,13 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
       reconcileConcentrationConditions(states, { pruneEmpty: true });
       continue;
     }
-    // Managing the roster or ending an encounter is not a new contribution.
-    if (!comment.combatEncounter) states.forEach((state, actorId) => {
-      if (Array.isArray(state.resources)) {
-        states.set(actorId, { ...state, resources: resetCommentScopedResources(state.resources) });
-      }
-    });
+    const isStopComment = stopCommentId && String(comment?.id || '') === stopCommentId;
+    if (isStopComment && stopSegmentIndex == null) break;
+    beginCombatContribution(states, comment);
     const conditionIdsBeforeComment = new Map([...states].map(([actorId, state]) => [
       String(actorId),
       new Set((Array.isArray(state?.temporaryConditions) ? state.temporaryConditions : []).map(condition => String(condition?.id || '')).filter(Boolean))
     ]));
-    const isStopComment = stopCommentId && String(comment?.id || '') === stopCommentId;
-    if (isStopComment && stopSegmentIndex == null) break;
     beginCriticalContribution(states, comment);
     const segments = Array.isArray(comment?.commentSegments) ? comment.commentSegments : [];
     const entries = segments.length
@@ -540,7 +536,10 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     actionSpellSaveDc: Number(profile.actionSpellSaveDc ?? profile.spellSaveDc ?? 10) + Number(temporaryMechanics.spellSaveDc || 0),
     movement: Math.max(0, Number(profile.movement || 0) + Number(temporaryMechanics.movement || 0)),
     initiative: Number(profile.initiative || 0) + Number(temporaryMechanics.initiative || 0),
-    ...(profile.selectedAction?.lightAttack ? {
+    ...(profile.selectedAction?.inheritDamageModifier === false ? {
+      unscaledDamageModifier: Number(profile.unscaledDamageModifier ?? profile.selectedAction.unscaledDamageModifier ?? 0) + temporaryDamageBonus + weaponStrengthDelta,
+      damageModifier: 0
+    } : profile.selectedAction?.lightAttack ? {
       unscaledDamageModifier: Number(profile.unscaledDamageModifier ?? profile.selectedAction.unscaledDamageModifier ?? 0) + temporaryDamageBonus + weaponStrengthDelta,
       damageModifier: getLightAttackDamageModifier(Number(profile.unscaledDamageModifier ?? profile.selectedAction.unscaledDamageModifier ?? 0) + temporaryDamageBonus + weaponStrengthDelta, profile.selectedAction)
     } : { damageModifier: Number(profile.damageModifier || 0) + temporaryDamageBonus + weaponStrengthDelta }),

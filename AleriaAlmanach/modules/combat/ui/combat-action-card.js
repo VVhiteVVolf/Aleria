@@ -1,5 +1,5 @@
 import { getSpellLevelLabel } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
-import { getCombatDamagePreview } from '../combat-action-estimates.js?v=20260928-equipment-art-v4';
+import { getCombatDamagePreview, getExplicitAttackSequencePreview } from '../combat-action-estimates.js?v=20260928-equipment-art-v4';
 import { getCombatFormPresentation } from '../../combat-styles/combat-form-presentation.js?v=20260909-dragon-parent-v2';
 
 function escapeHtml(value) {
@@ -20,9 +20,10 @@ export function activationLabel(value = '') {
 }
 
 export function getCombatDisplayStats(actor = {}, damagePreview = getCombatDamagePreview(actor)) {
+  const sequence = getExplicitAttackSequencePreview(actor);
   return {
     attack: actor.actionResolutionMode === 'automatic' ? 'Automatisch' : signedNumber(actor.attackModifier),
-    damage: actor.selectedAction?.nonDamaging ? 'Kein Schaden' : (damagePreview?.notation || '—').toUpperCase().replace(/D/g, 'W'),
+    damage: actor.selectedAction?.nonDamaging ? 'Kein Schaden' : (sequence.length ? sequence.map(step => step.notation).join(' → ') : damagePreview?.notation || '—').toUpperCase().replace(/D/g, 'W'),
     activation: activationLabel(actor.selectedAction?.activationType)
   };
 }

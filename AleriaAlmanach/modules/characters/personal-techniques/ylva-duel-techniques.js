@@ -1,5 +1,7 @@
 // Personal training, deliberately absent from every class and form catalog.
-export const YLVA_DUEL_OWNER_ID = 'bSYZYAEOwiRgy44f6OmO';
+import { createYlvaWeaponTechniques } from './ylva-weapon-techniques.js';
+import { YLVA_DUEL_OWNER_ID, describeYlvaTechniques } from './ylva-technique-prose.js';
+export { YLVA_DUEL_OWNER_ID } from './ylva-technique-prose.js';
 const cost = (resourceId, name) => ({ resourceId, name, amount: 1, scope: resourceId === 'special-action' ? 'persistent' : 'comment' });
 const action = cost('action', 'Aktion'), reaction = cost('reaction', 'Reaktion'), special = cost('special-action', 'Besondere Aktion');
 const duration = 'Bis zum Ende des nächsten eigenen Beitrags';
@@ -10,7 +12,7 @@ const base = { active: true, minimumLevel: 7, status: 'confirmed', trainingForm:
 const evadeId = 'ylva-aus-der-angriffslinie';
 
 export function createYlvaDuelTechniques() {
-  return [{ ...base, id: 'ylva-schafthebel', name: 'Schafthebel', activationType: 'action', costs: [action, reaction],
+  return describeYlvaTechniques([{ ...base, id: 'ylva-schafthebel', name: 'Schafthebel', activationType: 'action', costs: [action, reaction],
     description: 'Ylva hebelt mit ihrem Speerschaft die geführte Waffe aus dem Griff. Ein normaler Speer-Angriffswurf, aber kein Schaden. Nur nach Treffer: KRF-Rettungswurf SG 14. Bei Scheitern fällt die Waffe aufnehmbar in die Szene. Körperwaffen bleiben erhalten und erhalten stattdessen −1 Angriff im nächsten eigenen Beitrag.',
     effect: 'Kein Schaden. Nach Treffer KRF SG 14 oder Entwaffnung; Aufheben und Waffenwechsel kosten ihre regulären Ressourcen.',
     target: 'Ein Gegner', range: 'Waffenreichweite', requirements: 'Ylvas persönliche Ausbildung; geführter Speer.', effects: [],
@@ -28,7 +30,7 @@ export function createYlvaDuelTechniques() {
         actionKinds: ['weapon', 'technique'], weaponAttackOnly: true, effects: { rollMode: 'disadvantage' },
         resultEffects: [{ id: `${evadeId}-consume`, type: 'remove-condition', target: 'target', conditionId: evadeId, on: 'always' }] }]
     } }]
-  }];
+  }, ...createYlvaWeaponTechniques()]);
 }
 
 export function addYlvaDuelTechniques(character) {
@@ -36,5 +38,5 @@ export function addYlvaDuelTechniques(character) {
   const additions = createYlvaDuelTechniques();
   const ids = new Set(additions.map(t => t.id));
   return { ...character, combatProfile: { ...character.combatProfile,
-    techniques: [...(character.combatProfile.techniques || []).filter(t => !ids.has(t.id)), ...additions] } };
+    techniques: describeYlvaTechniques([...(character.combatProfile.techniques || []).filter(t => !ids.has(t.id)), ...additions]) } };
 }

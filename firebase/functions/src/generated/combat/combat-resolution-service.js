@@ -1,3 +1,4 @@
+import { resolveTechniqueSecondarySave } from './combat-technique-secondary-save.js';
 import { resolveFollowUpAttacks } from './combat-follow-up-resolution.js?v=20260928-equipment-art-v4';
 import { attachPreparedCounter } from './combat-counter-resolution.js';
 import { attachTechniqueDisarm } from './combat-technique-disarm.js';
@@ -468,7 +469,7 @@ export class CombatResolutionService {
       const baseEffectFormula = primaryDamageEffect.formula || (primaryDamageEffect.amount > 0 ? '' : weapon.damageFormula);
       // Aktive Boni wie Rage-Schaden hängen einen echten Extrawürfel an, statt einen festen
       // Zahlenbonus zu addieren - nur wenn es überhaupt eine Würfelformel zum Anhängen gibt.
-      const bonusDamageFormulas = (baseEffectFormula && primaryDamageEffect.target !== 'self') ? getBonusDamageFormulas(actor) : [];
+      const bonusDamageFormulas = (baseEffectFormula && primaryDamageEffect.target !== 'self' && actor.selectedAction?.inheritBonusDamage !== false) ? getBonusDamageFormulas(actor) : [];
       const effectFormula = combineDamageFormulas([baseEffectFormula, ...bonusDamageFormulas]);
       const primaryDamageBonus = (primaryDamageEffect.target === 'self' ? 0 : damageBonus)
         + getCombatEffectAttributeModifier(actor, primaryDamageEffect);
@@ -509,50 +510,12 @@ export class CombatResolutionService {
         };
       }
     }
-    const secondarySave = actor.selectedAction?.secondarySave;
-    if (attack.hit && secondarySave?.enabled && typeof this.dice.rollSavingThrow === 'function') {
-      const saveApplications = collectApplicableCombatRules({ phase: 'pre-secondary-save', actionKind, profileActionId,
-        sources: ruleSources, periods: rulePeriods, usedFrequencyKeys: usedRuleFrequencyKeys,
-        state: { ...ruleProfileState, saveAttribute: secondarySave.attributeKey } });
-      markCombatRuleApplications(saveApplications, usedRuleFrequencyKeys);
-      allRuleApplications.push(...saveApplications);
-      const savingThrowModifier = getSavingThrowTotal(target, secondarySave.attributeKey, secondarySave)
-        + mergeCombatRuleEffects(saveApplications).savingThrowModifier;
-      const savingThrowRoll = await this.dice.rollSavingThrow({
-        modifier: savingThrowModifier,
-        rollMode: resolveSavingThrowRollMode(target, secondarySave.attributeKey),
-        actorName: actor.name,
-        targetName: target.name,
-        container: options.container
-      });
-      const dc = Number(secondarySave.dc) || 8;
-      const succeeded = Number(savingThrowRoll.total) >= dc;
-      const saveResult = {
-        attributeKey: secondarySave.attributeKey,
-        dc,
-        naturalRoll: Number(savingThrowRoll.natural),
-        diceResults: Array.isArray(savingThrowRoll.dice) ? savingThrowRoll.dice.slice() : [],
-        keptDice: Array.isArray(savingThrowRoll.keptDice) ? savingThrowRoll.keptDice.slice() : [],
-        modifier: savingThrowModifier,
-        total: Number(savingThrowRoll.total),
-        succeeded,
-        rollId: savingThrowRoll.id || '',
-        visualMode: savingThrowRoll.visualMode || 'text'
-      };
-      secondarySaves.push(saveResult);
-      if (!succeeded && secondarySave.failureCondition?.name) {
-        appliedTemporaryCondition = {
-          ...secondarySave.failureCondition,
-          id: `${secondarySave.failureCondition.id || 'technique-condition'}-${createResolutionId()}`,
-          sourceConditionId: secondarySave.failureCondition.id || actor.profileActionId,
-          sourceActorId: actor.characterId,
-          source: actor.selectedAction?.name || actor.weapon?.name || 'Technik',
-          active: true,
-          durationModel: { kind: 'actor-comments', remainingActorComments: 1 },
-          remainingActorComments: 1
-        };
-      }
-    }
+    const saveContext = { dice: this.dice, actor, target, ruleSources, ruleProfileState, actionKind,
+      profileActionId, rulePeriods, usedRuleFrequencyKeys, options };
+    const primarySave = await resolveTechniqueSecondarySave({ ...saveContext, attack, timing: 'after-hit' });
+    if (primarySave.save) secondarySaves.push(primarySave.save);
+    allRuleApplications.push(...primarySave.applications);
+    appliedTemporaryCondition = primarySave.targetCondition;
     const followResult = await resolveFollowUpAttacks({ dice: this.dice, actor, target, weapon, attack, secondarySaves,
       ruleSources, ruleProfileState, actionKind, profileActionId, rulePeriods, usedRuleFrequencyKeys,
       profileRollModes, auraRollMode, targetAuraOnActor, actorAuraOnTarget, targetConditions: preWardTargetConditions, options });
@@ -560,6 +523,11 @@ export class CombatResolutionService {
     followRuleConflicts.push(...followResult.conflicts);
     allRuleApplications.push(...followResult.applications);
     preWardTargetConditions = followResult.conditions;
+    const sequenceSave = await resolveTechniqueSecondarySave({ ...saveContext,
+      attack: followUpAttacks.at(-1)?.attack || attack, timing: 'after-sequence' });
+    if (sequenceSave.save) secondarySaves.push(sequenceSave.save);
+    allRuleApplications.push(...sequenceSave.applications);
+    appliedTemporaryCondition ||= sequenceSave.targetCondition;
     if (actor.selectedAction?.followUpAttack?.allHitsStun && attack.hit && followUpAttacks.length === 3
       && followUpAttacks.every(result => result.attack.hit)) {
       appliedTemporaryCondition = { id: `four-fangs-${actor.characterId}`, sourceConditionId: 'four-fangs-stun',
@@ -587,6 +555,9 @@ export class CombatResolutionService {
       ? actor.temporaryConditions.map(condition => ({ ...condition }))
       : [];
     let actorConditions = existingActorConditions.map(normalizeRuntimeCondition);
+    for (const condition of [primarySave.actorCondition, sequenceSave.actorCondition].filter(Boolean)) {
+      actorConditions = refreshRuntimeCondition(actorConditions, normalizeRuntimeCondition(condition));
+    }
     const isAttackAttempt = !automaticMode && (resolutionMode === 'weapon-attack' || resolutionMode === 'spell-attack');
     if (isAttackAttempt) actorConditions = markBerserkActivity(actorConditions);
     const effectResults = [];

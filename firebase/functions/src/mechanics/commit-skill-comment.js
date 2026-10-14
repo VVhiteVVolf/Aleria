@@ -66,10 +66,7 @@ export const commitSkillComment = onCall({
     const sceneDay = getTrustedSceneDay(allHistory);
     const rulePeriods = { comment: ref.id, scene: entryId, day: `scene:${entryId}:day-${sceneDay}` };
     const historyStates = deriveCombatStateFromComments(allHistory.filter(isTrustedSceneContributionComment));
-    const workingStates = new Map([...historyStates].map(([actorId, state]) => [actorId, {
-      ...state,
-      resources: Array.isArray(state.resources) ? resetCommentScopedResources(state.resources) : state.resources
-    }]));
+    const workingStates = new Map(historyStates);
     const persistentUpdates = new Map();
     const lifecycle = await prepareCriticalCommentLifecycle({ database, transaction, states: workingStates,
       metadata: payload.metadata, updates: persistentUpdates });

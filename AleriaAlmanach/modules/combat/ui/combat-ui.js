@@ -410,8 +410,8 @@ export function renderCombatEvaluation(source = {}) {
           ${resourceChanges}
           ${ammunitionUse}
           ${ruleResourceChanges}
-          ${secondarySaves}
           ${followUpAttacks}
+          ${secondarySaves}
           ${appliedCondition}
           ${mechanicNotes}
           ${effectResults}

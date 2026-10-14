@@ -161,7 +161,9 @@ function buildCombatProfileActions(character, profile, options = {}) {
           notes: [technique.description, technique.effect, technique.requirements].filter(Boolean).join('\n')
         },
         attackModifier: getWeaponAttackModifier(calculation, activeWeapon || {}) + Number(technique.attackBonus || 0) + classModifiers.attackBonus + weaponRules.attackBonus,
-        damageModifier: getLightAttackDamageModifier(unscaledDamageModifier, technique.damageModel),
+        damageModifier: technique.damageModel?.inheritDamageModifier === false ? 0 : getLightAttackDamageModifier(unscaledDamageModifier, technique.damageModel),
+        inheritDamageModifier: technique.damageModel?.inheritDamageModifier !== false,
+        inheritBonusDamage: technique.damageModel?.inheritBonusDamage !== false,
         criticalThreshold: Math.min(Number(technique.criticalThreshold) || 20, classModifiers.criticalThreshold || 20, weaponRules.criticalThreshold || 20),
         targetDefenseModifier: weaponRules.targetDefenseModifier + Number(classModifiers.targetDefenseModifier || 0),
         maximumTargets: weaponRules.maximumTargets,

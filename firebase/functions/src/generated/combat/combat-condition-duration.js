@@ -35,6 +35,7 @@ export function normalizeConditionDuration(value = {}, fallbackText = '') {
       : (remainingActorComments > 0 ? 'actor-comments' : (remainingSceneComments > 0 ? 'scene-comments' : 'permanent')),
     remainingActorComments,
     remainingSceneComments,
+    ...(source.expiresAt === 'actor-start' ? { expiresAt: 'actor-start' } : {}),
     expiresOnRest: ['short-rest', 'long-rest'].includes(kind) ? kind : '',
     expiresOnDayChange: kind === 'day' || source.expiresOnDayChange === true,
     encounterId: text(source.encounterId, 180),
@@ -103,6 +104,7 @@ export function getCommentActorIds(comment = {}) {
 
 export function advanceConditionForComment(condition = {}, ownerId = '', contributingActorIds = new Set()) {
   const normalized = normalizeRuntimeCondition(condition);
+  if (normalized.durationModel.expiresAt === 'actor-start') return { condition: normalized, expired: false, reason: '' };
   if (!normalized.active) return { condition: normalized, expired: true, reason: 'inactive' };
   if (normalized.berserk) return advanceBerserkForComment(normalized, contributingActorIds.has(String(ownerId)));
   const duration = { ...normalized.durationModel };

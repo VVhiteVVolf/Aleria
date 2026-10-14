@@ -270,10 +270,7 @@ export async function commitCombatCommentOperation(request, {
       records.set(entry.key, snapshots[index].data() || {});
     });
 
-    const workingStates = new Map([...historyStates].map(([actorId, state]) => [actorId, {
-      ...state,
-      resources: Array.isArray(state.resources) ? resetCommentScopedResources(state.resources) : state.resources
-    }]));
+    const workingStates = new Map(historyStates);
     const workingInventories = new Map();
     const persistentUpdates = new Map();
     const lifecycle = await prepareCriticalCommentLifecycle({ database, transaction, states: workingStates, metadata,

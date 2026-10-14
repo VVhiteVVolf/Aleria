@@ -53,7 +53,7 @@ function getPrimaryDamagePreview(actor = {}, selectedEffect = null, secondary = 
   }
   const formula = primary?.formula || actor.weapon?.damageFormula;
   if (!formula) return null;
-  const formulas = [formula, ...(secondary ? [] : getBonusDamageFormulas(actor))];
+  const formulas = [formula, ...(secondary || actor.selectedAction?.inheritBonusDamage === false ? [] : getBonusDamageFormulas(actor))];
   const modifier = (secondary ? getUniversalDamageBonus(actor) : (Number(actor.damageModifier) || 0)) + getCombatEffectAttributeModifier(actor, primary);
   try {
     const combined = combineDamageFormulas(formulas);
@@ -81,6 +81,19 @@ export function getCombatDamagePreview(actor = {}) {
 
 export function estimateCombatDamage(actor = {}) {
   return getCombatDamagePreview(actor)?.average ?? null;
+}
+
+export function getExplicitAttackSequencePreview(actor = {}) {
+  const follow = actor.selectedAction?.followUpAttack;
+  if (!follow?.enabled || !follow.steps?.length) return [];
+  const primary = getCombatDamagePreview(actor);
+  const modifier = Number(actor.damageModifier || 0) + (actor.selectedAction.inheritDamageModifier === false
+    ? Number(actor.unscaledDamageModifier ?? actor.selectedAction.unscaledDamageModifier ?? 0) : 0);
+  return [primary, ...follow.steps.map(step => {
+    const formula = combineDamageFormulas([step.damageFormula, ...(step.inheritBonusDamage === false ? [] : getBonusDamageFormulas(actor))]);
+    const bonus = (step.inheritDamageModifier === false ? 0 : modifier) + Number(follow.damageBonus || 0);
+    return { notation: buildDamageNotation(formula, bonus), modifier: bonus, average: averageDamageFormula(formula, bonus) };
+  })].filter(Boolean);
 }
 
 export function formatCombatChance(chance) {

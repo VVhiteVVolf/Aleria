@@ -1,3 +1,5 @@
+import { YLVA_DUEL_OWNER_ID, describeYlvaTechniques } from '../characters/personal-techniques/ylva-technique-prose.js';
+import { normalizeConditionDuration } from './combat-condition-duration.js';
 import { conditionalWeaponModifier, conditionalSkillModifier, conditionalSaveModifier, personalWeaponAttribute } from './combat-personal-modifiers.js';
 import { isCombatProfileReadModel, freezeCombatProfileReadModel } from './combat-profile-read-model.js';
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
@@ -618,18 +620,24 @@ function sanitizeTechniqueSecondarySave(value = {}) {
     ...(source.fixedDc != null ? { fixedDc: normalizeNumber(source.fixedDc, 15, 1, 99) } : {}),
     dcAttributeKey: getAttributeKey(source.dcAttributeKey, 'strength'),
     addProficiency: normalizeBoolean(source.addProficiency, true),
-    failureCondition: {
-      ...(failure.stanceGroup ? { stanceGroup: normalizeText(failure.stanceGroup, 120) } : {}),
-      ...(failure.armorStance ? { armorStance: true } : {}),
-      ...(failure.disarm === true ? { disarm: true } : {}),
-      ...(['action', 'bonus-action', 'reaction'].includes(failure.blockedResource) ? { blockedResource: failure.blockedResource } : {}),
-      ...(failure.triggerRules?.length ? { triggerRules: sanitizeCombatTriggerRules(failure.triggerRules) } : {}),
-      id: normalizeId(failure.id, 'technique-save-condition'),
-      name: normalizeText(failure.name, 120),
-      duration: normalizeText(failure.duration, 160),
-      description: normalizeText(failure.description, 1200),
-      mechanics: sanitizeMechanicalModifiers(failure.mechanics)
-    }
+    ...(source.timing === 'after-sequence' ? { timing: 'after-sequence' } : {}),
+    ...(source.requiresHit === false ? { requiresHit: false } : {}),
+    failureCondition: sanitizeTechniqueSaveCondition(failure),
+    ...(source.actorFailureCondition ? { actorFailureCondition: sanitizeTechniqueSaveCondition(source.actorFailureCondition) } : {})
+  };
+}
+
+function sanitizeTechniqueSaveCondition(failure = {}) {
+  return {
+    ...(failure.stanceGroup ? { stanceGroup: normalizeText(failure.stanceGroup, 120) } : {}),
+    ...(failure.armorStance ? { armorStance: true } : {}),
+    ...(failure.triggerRules?.length ? { triggerRules: sanitizeCombatTriggerRules(failure.triggerRules) } : {}),
+    id: normalizeId(failure.id, 'technique-save-condition'), name: normalizeText(failure.name, 120),
+    duration: normalizeText(failure.duration, 160), description: normalizeText(failure.description, 1200),
+    mechanics: sanitizeMechanicalModifiers(failure.mechanics),
+    ...(failure.disarm === true ? { disarm: true } : {}),
+    ...(['action', 'bonus-action', 'reaction'].includes(failure.blockedResource) ? { blockedResource: failure.blockedResource } : {}),
+    ...(failure.durationModel ? { durationModel: normalizeConditionDuration(failure.durationModel) } : {})
   };
 }
 
@@ -637,6 +645,11 @@ function sanitizeTechniqueFollowUp(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
   return {
     enabled: normalizeBoolean(source.enabled),
+    ...(Array.isArray(source.steps) ? { steps: source.steps.slice(0, 5).map(step => ({
+      damageFormula: normalizeCombatDamageFormula(step.damageFormula),
+      inheritDamageModifier: step.inheritDamageModifier !== false,
+      inheritBonusDamage: step.inheritBonusDamage !== false
+    })).filter(step => step.damageFormula) } : {}),
     ...(source.afterMiss ? { afterMiss: true } : {}),
     ...(source.inheritWeapon ? { inheritWeapon: true } : {}),
     ...(source.alternateHands ? { alternateHands: true } : {}),
@@ -668,6 +681,8 @@ function sanitizeTechniqueDamageModel(value = {}) {
     bonusWeaponDice: normalizeNumber(source.bonusWeaponDice, 0, 0, 3),
     bonusWeaponDieCap: [4, 6, 8, 10, 12].includes(Number(source.bonusWeaponDieCap)) ? Number(source.bonusWeaponDieCap) : 12,
     ...(source.baseDieCap ? { baseDieCap: normalizeNumber(source.baseDieCap, 4, 4, 12) } : {}),
+    ...(source.inheritDamageModifier === false ? { inheritDamageModifier: false } : {}),
+    ...(source.inheritBonusDamage === false ? { inheritBonusDamage: false } : {}),
     ...(source.lightAttack ? { lightAttack: true } : {}),
     ...(Array.isArray(source.weaponBonuses) ? { weaponBonuses: sanitizeList(source.weaponBonuses, group => ({
       diceCount: normalizeNumber(group?.diceCount, 0, 0, 12),
@@ -1438,6 +1453,7 @@ export function resolveCharacterCombatProfile(character = {}) {
     ensureSpellSlots: character.entityType !== 'creature'
   });
   const profile = projectEquipmentArtwork({ ...character, combatProfile: sanitized }).combatProfile;
+  if (character.id === YLVA_DUEL_OWNER_ID) profile.techniques = describeYlvaTechniques(profile.techniques);
   profile.weapons = profile.weapons.map(weapon => ({
     ...weapon, attackAttribute: personalWeaponAttribute(profile, weapon)
   }));

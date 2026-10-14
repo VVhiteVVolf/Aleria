@@ -10,14 +10,16 @@ import { resolveCombatWard } from './combat-ward-resolution.js';
 export async function resolveFollowUpAttacks({ dice, actor, target, weapon, attack, secondarySaves,
   ruleSources, ruleProfileState, actionKind, profileActionId, rulePeriods, usedRuleFrequencyKeys,
   profileRollModes, auraRollMode, targetAuraOnActor, actorAuraOnTarget, targetConditions, options }) {
-    const followUp = actor.selectedAction?.followUpAttack;
+    const sequence = actor.selectedAction?.followUpAttack;
+    let followUp = sequence;
     const followUpAttacks = [];
     const followRuleConflicts = [];
     let allRuleApplications = [];
     let preWardTargetConditions = targetConditions;
-    const followUpRepeatCount = Math.max(1, Math.min(5, Number(followUp?.repeatCount) || 1));
-    if ((attack.hit || followUp?.afterMiss) && followUp?.enabled && (followUp.damageFormula || followUp.inheritWeapon)) {
+    const followUpRepeatCount = Math.max(1, Math.min(5, (sequence?.steps?.length || Number(followUp?.repeatCount)) || 1));
+    if ((attack.hit || followUp?.afterMiss) && followUp?.enabled && (followUp.steps?.length || followUp.damageFormula || followUp.inheritWeapon)) {
     for (let followUpIndex = 0; followUpIndex < followUpRepeatCount; followUpIndex += 1) {
+      followUp = { ...sequence, ...(sequence.steps?.[followUpIndex] || {}) };
       const loadout = getCombatWeaponLoadout(actor);
       const usedWeapon = followUp.alternateHands && followUpIndex % 2 === 0 ? loadout.left : loadout.right;
       const followWeapon = followUp.inheritWeapon ? (usedWeapon || weapon) : weapon;
@@ -95,7 +97,7 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
         const followBonusDamageFormulas = followFormula && followUp.inheritBonusDamage !== false ? getBonusDamageFormulas(actor) : [];
         followDamage = await dice.rollDamage({
           damageFormula: combineDamageFormulas([followFormula, ...(extraDie ? [`1d${extraDie}`] : []), ...followBonusDamageFormulas]),
-          bonus: (followUp.inheritDamageModifier === false ? getUniversalDamageBonus(actor) : Number(actor.damageModifier || 0) + damageDelta) + Number(followUp.damageBonus || 0)
+          bonus: (followUp.inheritDamageModifier === false ? (sequence.steps?.length ? 0 : getUniversalDamageBonus(actor)) : Number(actor.damageModifier || 0) + (actor.selectedAction?.inheritDamageModifier === false ? Number(actor.unscaledDamageModifier ?? actor.selectedAction.unscaledDamageModifier ?? 0) : 0) + damageDelta) + Number(followUp.damageBonus || 0)
             + Number(targetAuraOnActor.damage || 0)
             + followPostHitEffects.damageModifier + followPreDamageEffects.damageModifier + hitDamageEffects.damageModifier,
           critical: followAttack.criticalSuccess,

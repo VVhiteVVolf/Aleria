@@ -1,3 +1,4 @@
+import { beginCombatContribution, conditionsAtContributionStart } from './combat-contribution-start.js';
 import { applySkillRuntimeSnapshots } from '../skill-checks/skill-runtime-state.js';
 import { collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js';
 import { prepareCombatEquipment, reserveCombatEquipment } from './combat-equipment-preparation.js?v=20260928-equipment-art-v4';
@@ -288,7 +289,8 @@ function resolveActorProfile(character, options = {}) {
   if (shouldResetCommentResources) resetActors?.add(actorId);
   effectiveResources = recoverDailyCombatResources(effectiveResources, options.recoveryDayKey);
   const effectiveState = state || shouldResetCommentResources || options.recoveryDayKey
-    ? { ...(state || {}), resources: effectiveResources }
+    ? { ...(state || {}), resources: effectiveResources,
+      ...(shouldResetCommentResources && state?.temporaryConditions ? { temporaryConditions: conditionsAtContributionStart(state.temporaryConditions) } : {}) }
     : null;
   return reserveCombatEquipment(overlayCombatHitPointState(profile, effectiveState), prepared.preparation);
 }
@@ -890,6 +892,7 @@ async function handleSubmission(submission = {}) {
     stateContext.rulePeriods
   );
   stateContext.workingStates = new Map(stateContext.storedStates);
+  beginCombatContribution(stateContext.workingStates, { characterId: submission.characterId, commentSegments: segments });
   beginCriticalContribution(stateContext.workingStates, { characterId: submission.characterId, commentSegments: segments });
 
   activateResolutionDialog();
