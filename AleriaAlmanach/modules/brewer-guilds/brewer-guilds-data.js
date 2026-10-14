@@ -1532,6 +1532,1516 @@
         "commentThreadKey": "6"
       }
     ]
+  },
+  {
+    "id": "schwarzdorn-brauerei",
+    "title": "Die Schwarzdorn Brauerei",
+    "subtitle": "Maven Schwarzdorn · Met, Markt und Macht im Westen",
+    "type": "Brauerei & Brennerei",
+    "category": "Gilden & Zünfte · Brauer & Brenner",
+    "image": "../Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-schwarzdorn.png",
+    "icon": "✦",
+    "stamp": "HANDWERK · FAMILIE · HANDEL",
+    "multipage": true,
+    "appendCommentsPage": false,
+    "enablePageComments": true,
+    "pages": [
+      {
+        "pageTitle": "I. — Geirmundrs Anfang und der Bruch mit den Kampfgeborenen",
+        "image": "./public/assets/brewer-guilds/schwarzdorn-aufstieg.png",
+        "imageWidth": 38,
+        "imageFit": "contain",
+        "imagePosition": "center",
+        "description": "<p>Die <strong>Schwarzdorn Brauerei</strong> ist eine der beiden größten und mächtigsten Brauereien Aldrimars, die zusammen mit der Goldenglanz Brauerei den Markt für Bier, Met und Spirituosen dominiert.</p><p>Die <strong>Schwarzdorn Brauerei</strong> wurde von <em>Geirmundr Schwarzdorn</em> gegründet, der ursprünglich kein Adliger war. Gemeinsam mit seinen Verbündeten, dem Clan der <strong>Kampfgeborenen</strong>, übernahmen sie nach und nach die Kontrolle über lokale Bierbrauer und Methersteller. Während die Kampfgeborenen die Felder bestellten, die Ernten sicherten und die Arbeiter beschützten, kümmerten sich die Schwarzdorn um die Geschäftsführung und die Weiterentwicklung der Brauereien.</p>\n<p>Als beide Clans schließlich adlig wurden, lief die Partnerschaft eine Zeit lang gut. Doch der immense wirtschaftliche Erfolg der Schwarzdorn machte sie unabhängig, und sie begannen, die Kampfgeborenen aus dem Geschäft zu drängen. Die Schwarzdorn übernahmen deren Höfe, entzogen sich ihrem Schutz und expandierten eigenständig im gesamten <strong>Jarltum von Roriksheim</strong>. Dieser Verrat hinterließ tiefe Wunden, die bis heute nachwirken. Die <strong>Kampfgeborenen</strong> fühlen sich hintergangen und versuchen bis in die Gegenwart, der Schwarzdorn Brauerei zu schaden.</p>\n<p>In der Gegenwart hat sich die Schwarzdorn Brauerei als dominierende Macht im <strong>Westen Aldrimars</strong> etabliert. Sie pachten Höfe und kontrollieren die gesamte Versorgungskette von der Ernte bis zur Auslieferung. Ihre größten Feinde sind der <strong>Clan der Kampfgeborenen</strong> und die mächtige <strong>Goldenglanz Brauerei</strong> im Osten, mit der sie um die Vorherrschaft über den Bier- und Metmarkt Aldrimars kämpfen.</p>",
+        "commentSequence": []
+      },
+      {
+        "pageTitle": "II. — Maven und die Familie hinter der Brauerei",
+        "guildPage": true,
+        "image": "../Stammbäume/assets/images/portraits/haus-schwarzdorn/maven-schwarzdorn.png",
+        "imageFit": "contain",
+        "quote": "Wo das Bier fließt, fließt auch die Macht",
+        "stats": [
+          [
+            "Sitz des Clans",
+            "Rorikshall · Roriksheim"
+          ],
+          [
+            "Brauereileitung",
+            "Maven Schwarzdorn"
+          ],
+          [
+            "Clanoberhaupt",
+            "Tormund Schwarzdorn"
+          ],
+          [
+            "Mitgliederstärke",
+            "Hoch"
+          ],
+          [
+            "Marktgebiet",
+            "Westen Aldrimars"
+          ]
+        ],
+        "guild": {
+          "crestImage": "../Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-schwarzdorn.png",
+          "portraitFormat": "portrait",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 100,
+          "biographyTitle": "Brauerei, Clan und wirtschaftliche Macht",
+          "biographyText": "<p>Die <strong>Schwarzdorn Brauerei</strong> ist eine der beiden größten und mächtigsten Brauereien Aldrimars, die zusammen mit der Goldenglanz Brauerei den Markt für Bier, Met und Spirituosen dominiert.</p><p>Maven führt die Brauerei. Die heutige Clanführung liegt bei Tormund Schwarzdorn, Hesir seit 1721. Wirtschaftliche Leitung und Clanoberhaupt sind getrennte Rollen; die Formulierung der Goldenglanz-Überlieferung über Mavens Aufstieg an die Clanspitze wird vor diesem Hintergrund gelesen.</p>",
+          "abilitiesTitle": "Die Handschrift der Schwarzdorn",
+          "abilities": [
+            {
+              "title": "Die gesamte Versorgungskette",
+              "detail": "Gerstenhöfe, Imkereien, Brauhäuser, Lager und Tavernen bilden ein gemeinsames Wirtschaftsnetz.",
+              "icon": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png"
+            },
+            {
+              "title": "Met als Aushängeschild",
+              "detail": "Schwarzdorn Met und Stachelkrone stehen neben den Hausbieren Schwarzflut und Dornblut.",
+              "icon": "./public/assets/brewer-guilds/met-schwarzdorn.png"
+            },
+            {
+              "title": "Verdeckter Einfluss",
+              "detail": "Die Nachtfalter stützen die Interessen des Hauses außerhalb der handwerklichen Rangordnung.",
+              "icon": "../IconOrdner/Organisationsicons/Spionage.png"
+            }
+          ],
+          "historyTitle": "Geirmundrs Erbe",
+          "historyText": "<p>Geirmundr gilt als Gründer der Brauerei und des Clans. Die ursprüngliche Zusammenarbeit mit den Kampfgeborenen wurde durch Übernahmen und Verdrängung zur dauerhaften Feindschaft.</p>",
+          "worksTitle": "Handwerk und Leistungen",
+          "works": [
+            "Bier- und Metherstellung, Handel und Tavernenbetrieb",
+            "Gerstenbau, Imkerei und Wildfruchtversorgung",
+            "Fassmacherei, Alchemie, Schriftführung und Logistik"
+          ],
+          "triviaTitle": "Herkunft bleibt erkennbar",
+          "trivia": [
+            "Frostkamm bleibt ein Freiwinter-Bier im Schwarzdorn-Vertrieb.",
+            "Die Vorlage nennt keine Patrongötter oder persönlichen Inhaber der handwerklichen Ämter."
+          ],
+          "connectionsTitle": "Personen der Brauerei",
+          "connections": [
+            {
+              "name": "Maven Schwarzdorn",
+              "image": "../Stammbäume/assets/images/portraits/haus-schwarzdorn/maven-schwarzdorn.png",
+              "imageFormat": "portrait",
+              "detail": "Geboren 1693 · Leiterin der Schwarzdorn-Brauerei und Gildenoberhaupt laut Vorlage."
+            },
+            {
+              "name": "Modolf Schwarzdorn",
+              "image": "../Stammbäume/assets/images/portraits/haus-schwarzdorn/modolf-schwarzdorn.png",
+              "imageFormat": "portrait",
+              "detail": "Geboren 1697 · Mitglied des Brauereivorstands."
+            },
+            {
+              "name": "Thrand Schwarzdorn",
+              "image": "../Stammbäume/assets/images/portraits/haus-schwarzdorn/thrand-schwarzdorn.png",
+              "imageFormat": "portrait",
+              "detail": "Geboren 1695 · Mitglied des überlieferten Vorstands."
+            },
+            {
+              "name": "Fridthjof Freiwinter",
+              "image": "../Stammbäume/assets/images/portraits/haus-freiwinter/fridthjof-freiwinter.png",
+              "imageFormat": "portrait",
+              "detail": "Hesir der Freiwinter seit 1701 · In der Brauereivorlage als Fridthjolf und als Vorstandsmitglied geführt."
+            }
+          ],
+          "contractsTitle": "Partner und Rivalen",
+          "contracts": [
+            {
+              "title": "Freiwinter",
+              "text": "Teilhaber, westlicher Verbündeter und Herkunft des Frostkamm-Biers.",
+              "icon": "../Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-freiwinter.png"
+            },
+            {
+              "title": "Skogg und Feuerhaar",
+              "text": "Agrargüter, Honig und Wildfrüchte; Pachten und familiäre Verbindungen.",
+              "icon": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png"
+            },
+            {
+              "title": "Nachtfalter",
+              "text": "Verbündete Diebesbande; keine Stufe der Brauerausbildung.",
+              "icon": "../IconOrdner/Organisationsicons/Spionage.png"
+            }
+          ],
+          "documentsTitle": "Familienbücher",
+          "documents": [
+            {
+              "title": "Clan Schwarzdorn",
+              "text": "Familienrollen, Originalporträts und Verbindungen.",
+              "icon": "../Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-schwarzdorn.png",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-schwarzdorn&mode=view"
+            }
+          ],
+          "footer": "Wo das Bier fließt, fließt auch die Macht"
+        }
+      },
+      {
+        "pageTitle": "III. — Ämter, Ausbildung & Verantwortung",
+        "hierarchyPage": true,
+        "hierarchy": {
+          "layoutMode": "vertical",
+          "treeDisplayMode": "tabs",
+          "cardFontScale": 100,
+          "portraitScale": 75,
+          "chartScale": 90,
+          "eyebrow": "Zunftordnung",
+          "subtitle": "Schwarzdorn Brauerei",
+          "centerLabel": "Schwarzdorn Brauerei",
+          "emblem": "../Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-schwarzdorn.png",
+          "sideImage": "../Stammbäume/assets/images/houses/Aldrimar/Roriksheim/clan-schwarzdorn.png",
+          "organizationTitle": "Schwarzdorn Brauerei",
+          "motto": "Wo das Bier fließt, fließt auch die Macht",
+          "description": "<p>Die Vorlage benennt Maven als Gildenoberhaupt und vier Personen im Vorstand. Die unteren Handwerksränge sind überliefert, ihre Amtsinhaber jedoch offen. Gwelda wird in der Vorlage „Gwelda Schwarzdorn“ genannt; der Stammbaum führt eine Gwelda ohne gesicherten Herkunftsnamen oder eigenes Porträt.</p>",
+          "detailsTitle": "Zuständigkeiten",
+          "details": [],
+          "chartTitle": "Vom Hausoberhaupt zum Handwerk",
+          "chartIntro": "Die Ebenen zeigen die Verantwortung innerhalb der Zunft. Familiennachfolge und handwerkliche Ausbildung bleiben unterschiedliche Aufgaben.",
+          "levels": [
+            {
+              "label": "Gildenoberhaupt",
+              "nodes": [
+                {
+                  "title": "Gildenoberhaupt",
+                  "subtitle": "Maven Schwarzdorn",
+                  "portrait": "../Stammbäume/assets/images/portraits/haus-schwarzdorn/maven-schwarzdorn.png",
+                  "text": "Führt die Brauerei und ihre wirtschaftlichen Interessen."
+                }
+              ]
+            },
+            {
+              "label": "Vorstand",
+              "nodes": [
+                {
+                  "title": "Gwelda · Herkunft offen",
+                  "subtitle": "Vorstandsmitglied",
+                  "portrait": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png",
+                  "text": "Als Gwelda Schwarzdorn in der Brauereivorlage genannt; die genaue Familienzuordnung ist nicht gesichert."
+                },
+                {
+                  "title": "Modolf Schwarzdorn",
+                  "subtitle": "Vorstandsmitglied",
+                  "portrait": "../Stammbäume/assets/images/portraits/haus-schwarzdorn/modolf-schwarzdorn.png",
+                  "text": "Überliefertes Vorstandsmitglied."
+                },
+                {
+                  "title": "Thrand Schwarzdorn",
+                  "subtitle": "Vorstandsmitglied",
+                  "portrait": "../Stammbäume/assets/images/portraits/haus-schwarzdorn/thrand-schwarzdorn.png",
+                  "text": "Überliefertes Vorstandsmitglied."
+                },
+                {
+                  "title": "Fridthjof Freiwinter",
+                  "subtitle": "Vorstandsmitglied",
+                  "portrait": "../Stammbäume/assets/images/portraits/haus-freiwinter/fridthjof-freiwinter.png",
+                  "text": "Vertreter des beteiligten Clans Freiwinter; die Vorlage schreibt Fridthjolf."
+                }
+              ]
+            },
+            {
+              "label": "Brauermeister",
+              "nodes": [
+                {
+                  "title": "Brauermeister",
+                  "subtitle": "Amtsinhaber nicht benannt",
+                  "portrait": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png",
+                  "text": "Überlieferter Handwerksrang der Schwarzdorn Brauerei."
+                }
+              ]
+            },
+            {
+              "label": "Brauer Knecht",
+              "nodes": [
+                {
+                  "title": "Brauer Knecht",
+                  "subtitle": "Amtsinhaber nicht benannt",
+                  "portrait": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png",
+                  "text": "Überlieferter Handwerksrang der Schwarzdorn Brauerei."
+                }
+              ]
+            },
+            {
+              "label": "Brauer Geselle",
+              "nodes": [
+                {
+                  "title": "Brauer Geselle",
+                  "subtitle": "Amtsinhaber nicht benannt",
+                  "portrait": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png",
+                  "text": "Überlieferter Handwerksrang der Schwarzdorn Brauerei."
+                }
+              ]
+            },
+            {
+              "label": "Brauer Lehrling",
+              "nodes": [
+                {
+                  "title": "Brauer Lehrling",
+                  "subtitle": "Amtsinhaber nicht benannt",
+                  "portrait": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png",
+                  "text": "Überlieferter Handwerksrang der Schwarzdorn Brauerei."
+                }
+              ]
+            },
+            {
+              "label": "Handlanger",
+              "nodes": [
+                {
+                  "title": "Handlanger",
+                  "subtitle": "Amtsinhaber nicht benannt",
+                  "portrait": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png",
+                  "text": "Überlieferter Handwerksrang der Schwarzdorn Brauerei."
+                }
+              ]
+            }
+          ],
+          "footerNote": "Clanführung, Brauereivorstand und Handwerksausbildung besitzen eigene Verantwortlichkeiten."
+        }
+      },
+      {
+        "pageTitle": "IV. — Die Macht über Ernte, Fass und Ausschank",
+        "image": "./public/assets/brewer-guilds/schwarzdorn-handwerk.png",
+        "imageWidth": 38,
+        "imageFit": "contain",
+        "imagePosition": "center",
+        "description": "<p>Das Geschäftsmodell der <strong>Schwarzdorn Brauerei</strong> basiert auf einer konsequenten Kontrolle der gesamten Produktionskette, von der Rohstoffgewinnung bis hin zur Auslieferung. Gegründet aus bescheidenen Anfängen, begann die Expansion der Brauerei mit dem Erwerb und der Übernahme kleiner, lokaler Bierbrauereien und Methäuser. Durch geschickte Verhandlungen und ihre enge Verbindung zu den Kampfgeborenen sicherten sie sich früh Zugang zu landwirtschaftlichen Ressourcen wie Getreide und Honig, die für ihre Produktion essenziell waren.</p>\n<p>Mit zunehmendem Wohlstand begannen die Schwarzdorn, systematisch <strong>Land zu pachten</strong>, um eigenständige <strong>Höfe</strong>, <strong>Imkereien</strong> und <strong>Brauereien</strong> zu betreiben. Diese Strategie machte sie unabhängig von Zwischenhändlern und erlaubte ihnen, die Qualität ihrer Produkte streng zu kontrollieren. Heute ist die Schwarzdorn Brauerei im gesamten <strong>Westen Aldrimars</strong> aktiv und betreibt ein Netzwerk von Pachtbetrieben, das ihnen eine beinahe unerschöpfliche Versorgung mit Rohstoffen ermöglicht.</p>\n<p>Ihr langfristiges Ziel ist es, ein <strong>Monopol auf alkoholische Getränke</strong> in ganz Aldrimar aufzubauen. Dabei setzen sie auf ihren <strong>preisgekrönten Schwarzdorn Met</strong>, ein Getränk, das durch seine einzigartige Mischung aus Honig, Stachelbeeren und Kräutern berühmt wurde. Neben dem Met produzieren sie eine Vielzahl anderer alkoholischer Getränke, darunter Biere, Spirituosen und regionale Spezialitäten, um den Markt in allen Schichten der Gesellschaft abzudecken.</p>\n<p>Doch auf ihrem Weg zur Alleinherrschaft stehen ihnen mächtige Gegner im Weg. Die <strong>Kampfgeborenen</strong>, einstige Geschäftspartner, versuchen mit allen Mitteln, den Einfluss der Schwarzdorn zu schmälern. Gleichzeitig bedroht die <strong>Goldenglanz Brauerei</strong> im Osten ihre Expansionspläne und liefert sich mit ihnen einen erbitterten Kampf um die Vorherrschaft, insbesondere in der neutralen Hauptstadt <strong>Heldenwacht</strong>.</p>\n<p>Dieses aggressive Geschäftsmodell hat die Schwarzdorn Brauerei zu einer der mächtigsten Institutionen im Westen gemacht, aber auch Feinde auf allen Ebenen geschaffen. Ihr Erfolg ist eine Mischung aus wirtschaftlicher Raffinesse, geschickter Expansion und kompromissloser Durchsetzung ihrer Interessen.</p>",
+        "commentSequence": []
+      },
+      {
+        "pageTitle": "V. — Höfe, Imkereien und Tavernen im Westen",
+        "organizationNetworkPage": true,
+        "organizationNetwork": {
+          "title": "Vom Pachtland bis zum Schanktisch",
+          "introduction": "<p>Die <strong>Standorte der Schwarzdorn Brauerei</strong> erstrecken sich über den gesamten <strong>Westen Aldrimars</strong>, von kleinen, abgelegenen <strong>Höfen</strong> und <strong>Imkereien</strong> bis hin zu <strong>großen Siedlungen</strong> mit zentralen Produktionsstätten. Diese gepachteten Ländereien bilden das Rückgrat der Brauerei, indem sie eine kontinuierliche Versorgung mit den notwendigen Rohstoffen wie <strong>Gerste</strong>, <strong>Honig</strong>, <strong>Stachelbeeren</strong> und anderen Zutaten gewährleisten.</p>\n<p>Neben den Produktionsstandorten betreibt die Schwarzdorn Brauerei auch ein Netzwerk von <strong>Tavernen</strong>, die sowohl als Umschlagplätze für ihre Produkte dienen als auch als Treffpunkte für ihre <strong>Diebesgilde, die Nachtfalter</strong>. Diese Tavernen fungieren als Dreh- und Angelpunkte für die Verteilung ihrer Waren und bieten der Schwarzdorn-Familie zusätzliche Einnahmen durch die Kontrolle des Gastgewerbes. Gleichzeitig nutzen die Nachtfalter diese Lokale, um ihre Machenschaften zu koordinieren, Einfluss auszuweiten und die Sicherheit der Schwarzdorn-Interessen zu gewährleisten.</p>\n<p>Diese breite Verteilung von Standorten und der geschickte Einsatz ihrer Tavernen als Handels- und Machtzentren machen die Schwarzdorn Brauerei zu einem der einflussreichsten Akteure im Westen Aldrimars.</p>",
+          "reach": "Westen Aldrimars · Schwerpunkt Roriksheim",
+          "model": "Pachtbetriebe liefern Rohstoffe, zentrale Brauereien verarbeiten sie und Tavernen verteilen die Getränke.",
+          "note": "Die fünf benannten Pachtstandorte stehen in der Vorlage unter Rorikheim; die heutige regionale Schreibweise lautet Roriksheim. Genaue Betriebsgrößen werden nicht genannt. Export über Grindel ist bisher begrenzt und soll ausgebaut werden.",
+          "sites": [
+            {
+              "name": "Schwarzhof",
+              "region": "Roriksheim · Aldrimar",
+              "kind": "workshop",
+              "image": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png",
+              "description": "Benannter Standort auf gepachtetem Land im westlichen Versorgungsnetz."
+            },
+            {
+              "name": "Maltvik",
+              "region": "Roriksheim · Aldrimar",
+              "kind": "workshop",
+              "image": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png",
+              "description": "Benannter Standort auf gepachtetem Land im westlichen Versorgungsnetz."
+            },
+            {
+              "name": "Svartstedt",
+              "region": "Roriksheim · Aldrimar",
+              "kind": "workshop",
+              "image": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png",
+              "description": "Benannter Standort auf gepachtetem Land im westlichen Versorgungsnetz."
+            },
+            {
+              "name": "Rosenheim",
+              "region": "Roriksheim · Aldrimar",
+              "kind": "workshop",
+              "image": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png",
+              "description": "Benannter Standort auf gepachtetem Land im westlichen Versorgungsnetz."
+            },
+            {
+              "name": "Dornenfeld",
+              "region": "Roriksheim · Aldrimar",
+              "kind": "workshop",
+              "image": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png",
+              "description": "Benannter Standort auf gepachtetem Land im westlichen Versorgungsnetz."
+            }
+          ],
+          "footer": "In Kronental sind beide Brauereien auf jeweils einen Standort in Heldenwacht beschränkt; weitere Niederlassungen sind dort untersagt."
+        }
+      },
+      {
+        "pageTitle": "VI. — Das Stammsortiment · Met und Hausbiere",
+        "tradeCatalogPage": true,
+        "commentSequence": [],
+        "tradeCatalog": {
+          "title": "Das Stammsortiment · Met und Hausbiere",
+          "subtitle": "Schwarzdorn Met, Stachelkrone, Schwarzflut und Dornblut · Fünf freie Plätze",
+          "headerIcon": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png",
+          "noteIcon": "◈",
+          "noteTitle": "Glas / Krug · Flasche · Fass",
+          "noteText": "Krug 0,5 l · Flasche 1 l · Fass 50 l. Alle Preise in Kupfertalern.",
+          "categories": [
+            {
+              "id": "mead",
+              "label": "Met · Getränke"
+            },
+            {
+              "id": "beer",
+              "label": "Bier · Getränke"
+            }
+          ],
+          "allLabel": "Gesamtes Sortiment",
+          "searchPlaceholder": "Nach Name, Charakter oder Herkunft suchen …",
+          "filterLabel": "Suche",
+          "items": [
+            {
+              "id": "met-schwarzdorn",
+              "category": "mead",
+              "status": "available",
+              "title": "Schwarzdorn Met",
+              "subtitle": "Preisgekrönter Met · West-Aldrimar",
+              "image": "./public/assets/brewer-guilds/met-schwarzdorn.png",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageHeight": 420,
+              "badge": "Spitzenabfüllung",
+              "tags": [
+                "Honig",
+                "Waldbeeren",
+                "Geheime Kräuter"
+              ],
+              "descriptionTitle": "Charakter & Herkunft",
+              "description": "<p>Ein Getränk von solch <em>raffinierter Tiefe</em> und <em>geheimnisvoller Herkunft</em>, dass selbst die Stille innehält, wenn die Flasche entkorkt wird. Der <strong>Schwarzdorn Met</strong> ist keine einfache Spirituose – er ist ein <em>magischer Akt</em> in Flaschenform. Sein Ursprung liegt in den düsteren Hallen der <strong>Familie Schwarzdorn</strong>, tief im Westen <strong>Aldrimars</strong>, wo sich Magie und Braukunst zu einem <em>unheiligen Meisterwerk</em> vereinen.</p>\n<p>Die tiefviolette Flüssigkeit im Inneren ist <em>dickflüssig wie Blut und samtig wie Nacht</em>. Der erste Schluck? Ein betörender Tanz von <strong>Honig, dunklen Waldbeeren und geheimen Kräutern</strong>, die in einem alchemistischen Ritual gebunden wurden. Was süß beginnt, endet in einer leisen, herben Ahnung von Macht – <em>wie ein Kuss, den man nicht vergessen kann</em>.</p>\n<p>Sein Duft erinnert an <em>regennasse Erde, zerstoßene Kräuter und ein Versprechen, das besser ungesagt bleibt</em>. Der Abgang ist lang, schleichend, fast <em>manipulativ</em> – er bleibt, wenn alles andere verschwunden ist.</p>\n<p><em>Dieses Met ist kein Getränk für die Masse – es ist ein Genuss für <em>jene</em>, die <em>den Schatten nicht fürchten</em>, sondern ihn ehren.<br/> Für die <em>Wissenden</em>. Für die <em>Schwarzdorns dieser Welt</em>.</em></p>",
+              "featuresTitle": "Steckbrief",
+              "features": [],
+              "originTitle": "Herkunft",
+              "origin": "Schwarzdorn Brauerei · Westen Aldrimars",
+              "usageTitle": "Am Tisch",
+              "usageTags": [
+                "Ruhiger Abend",
+                "Festtafel"
+              ],
+              "priceTitle": "Ausschank & Gebinde",
+              "priceMin": "",
+              "priceMax": "",
+              "priceFill": 0,
+              "currencyCode": "KT",
+              "currencyLabel": "Kupfertaler",
+              "currencyIcon": "◈",
+              "priceOptions": [
+                {
+                  "label": "Krug",
+                  "unit": "0,5 l",
+                  "price": "7"
+                },
+                {
+                  "label": "Flasche",
+                  "unit": "1 l",
+                  "price": "14"
+                },
+                {
+                  "label": "Fass",
+                  "unit": "50 l",
+                  "price": "700"
+                }
+              ],
+              "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+              "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+              "conditions": "Stammsortiment des Hauses.",
+              "attributes": [],
+              "sealImage": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png"
+            },
+            {
+              "id": "met-stachelkrone",
+              "category": "mead",
+              "status": "available",
+              "title": "Stachelkrone",
+              "subtitle": "Leichter Hausmet · Schwarzdorn",
+              "image": "./public/assets/brewer-guilds/met-stachelkrone.png",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageHeight": 420,
+              "badge": "Hausmet",
+              "tags": [
+                "Leichter Honig",
+                "Mild",
+                "Langer Abend"
+              ],
+              "descriptionTitle": "Charakter & Herkunft",
+              "description": "<p><strong>Stachelkrone</strong> ist die leichtere, preisgünstigere Variante des traditionellen Schwarzdorn Mets – heller im Ton, weniger süß, mit nur leichtem Honigcharakter. Statt schwerem Rausch bietet sie eher einen sanften Schwips, der länger durchhält, ohne gleich die Beine wegzuziehen.</p>\n<p>Wird oft von Tavernen ausgeschenkt, die mit dem Namen Schwarzdorn werben wollen, ohne den vollen Preis aufrufen zu müssen. Für viele ist es der Einstieg in die Welt des Mets – für andere der treue Begleiter durch lange Abende, bei denen's eher um Menge als um Tiefe geht.</p>",
+              "featuresTitle": "Steckbrief",
+              "features": [],
+              "originTitle": "Herkunft",
+              "origin": "Schwarzdorn Brauerei · Westen Aldrimars",
+              "usageTitle": "Am Tisch",
+              "usageTags": [
+                "Leichter Honig",
+                "Mild",
+                "Langer Abend"
+              ],
+              "priceTitle": "Ausschank & Gebinde",
+              "priceMin": "",
+              "priceMax": "",
+              "priceFill": 0,
+              "currencyCode": "KT",
+              "currencyLabel": "Kupfertaler",
+              "currencyIcon": "◈",
+              "priceOptions": [
+                {
+                  "label": "Krug",
+                  "unit": "0,5 l",
+                  "price": "2"
+                },
+                {
+                  "label": "Flasche",
+                  "unit": "1 l",
+                  "price": "4"
+                },
+                {
+                  "label": "Fass",
+                  "unit": "50 l",
+                  "price": "200"
+                }
+              ],
+              "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+              "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+              "conditions": "Stammsortiment des Hauses.",
+              "attributes": [],
+              "sealImage": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png"
+            },
+            {
+              "id": "bier-schwarzflut",
+              "category": "beer",
+              "status": "available",
+              "title": "Schwarzflut",
+              "subtitle": "Dunkles Kräuterbier · Schwarzdorn",
+              "image": "./public/assets/brewer-guilds/bier-schwarzflut.png",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageHeight": 420,
+              "badge": "Hausbier",
+              "tags": [
+                "Röstmalz",
+                "Waldkräuter",
+                "Erdig"
+              ],
+              "descriptionTitle": "Charakter & Herkunft",
+              "description": "<p><strong>Schwarzflut</strong> ist ein tiefdunkles Kräuterbier der Schwarzdorn Brauerei – schwer, würzig und von dunklem Charakter. Der Geschmack ist malzig-bitter mit erdigen Noten, begleitet von einem Hauch waldiger Kräuter und fast rauchigem Abgang. Der Schaum ist fein, fast schwarz, die Textur dicht wie Nebel im Moor.</p>\n<p>Nichts für zwischendurch – Schwarzflut trinkt man langsam, nach einem langen Tag oder wenn der Regen seit Stunden gegen die Fenster hämmert. Manche sagen, es wärmt. Andere sagen, es kühlt das Gemüt. Beide haben recht.</p>",
+              "featuresTitle": "Steckbrief",
+              "features": [],
+              "originTitle": "Herkunft",
+              "origin": "Schwarzdorn Brauerei · Westen Aldrimars",
+              "usageTitle": "Am Tisch",
+              "usageTags": [
+                "Regentag",
+                "Herzhafte Speisen"
+              ],
+              "priceTitle": "Ausschank & Gebinde",
+              "priceMin": "",
+              "priceMax": "",
+              "priceFill": 0,
+              "currencyCode": "KT",
+              "currencyLabel": "Kupfertaler",
+              "currencyIcon": "◈",
+              "priceOptions": [
+                {
+                  "label": "Krug",
+                  "unit": "0,5 l",
+                  "price": "1,5"
+                },
+                {
+                  "label": "Flasche",
+                  "unit": "1 l",
+                  "price": "3"
+                },
+                {
+                  "label": "Fass",
+                  "unit": "50 l",
+                  "price": "150"
+                }
+              ],
+              "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+              "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+              "conditions": "Stammsortiment des Hauses.",
+              "attributes": [],
+              "sealImage": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png"
+            },
+            {
+              "id": "bier-dornblut",
+              "category": "beer",
+              "status": "available",
+              "title": "Dornblut",
+              "subtitle": "Einfaches, herbes Hausbier · Schwarzdorn",
+              "image": "./public/assets/brewer-guilds/bier-dornblut.png",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageHeight": 420,
+              "badge": "Hausbier",
+              "tags": [
+                "Rotbraun",
+                "Herb",
+                "Bodenständig"
+              ],
+              "descriptionTitle": "Charakter & Herkunft",
+              "description": "<p><strong>Dornblut</strong> ist das einfache Bier der Schwarzdorn Brauerei – günstig, herb, mit rotbraunem Ton und wenig Firlefanz. Schmeckt leicht metallisch, mit einer bitteren Spitze und kaum Schaum. Es füllt, löscht und wärmt – mehr will’s auch gar nicht.</p>\n<p>Beliebt bei Tagelöhnern, Söldnern und denen, die’s sich nicht leisten können, wählerisch zu sein. Wird in Krügen bestellt, selten in Flaschen, aber wenn doch – dann erkennt man’s am schlichten Etikett und dem ehrlichen Nachgeschmack.</p>",
+              "featuresTitle": "Steckbrief",
+              "features": [],
+              "originTitle": "Herkunft",
+              "origin": "Schwarzdorn Brauerei · Westen Aldrimars",
+              "usageTitle": "Am Tisch",
+              "usageTags": [
+                "Feierabend",
+                "Taverne"
+              ],
+              "priceTitle": "Ausschank & Gebinde",
+              "priceMin": "",
+              "priceMax": "",
+              "priceFill": 0,
+              "currencyCode": "KT",
+              "currencyLabel": "Kupfertaler",
+              "currencyIcon": "◈",
+              "priceOptions": [
+                {
+                  "label": "Krug",
+                  "unit": "0,5 l",
+                  "price": "0,5"
+                },
+                {
+                  "label": "Flasche",
+                  "unit": "1 l",
+                  "price": "1"
+                },
+                {
+                  "label": "Fass",
+                  "unit": "50 l",
+                  "price": "50"
+                }
+              ],
+              "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+              "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+              "conditions": "Stammsortiment des Hauses.",
+              "attributes": [],
+              "sealImage": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png"
+            },
+            {
+              "id": "beer-reserve-1",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 1",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            },
+            {
+              "id": "beer-reserve-2",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 2",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            },
+            {
+              "id": "beer-reserve-3",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 3",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            },
+            {
+              "id": "beer-reserve-4",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 4",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            },
+            {
+              "id": "beer-reserve-5",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 5",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            }
+          ],
+          "footerCards": []
+        }
+      },
+      {
+        "pageTitle": "VII. — Partnerbrauereien · Frostkamm der Freiwinter",
+        "tradeCatalogPage": true,
+        "commentSequence": [],
+        "tradeCatalog": {
+          "title": "Partnerbrauereien · Frostkamm der Freiwinter",
+          "subtitle": "Eigenständige Clanherkunft im Schwarzdorn-Vertrieb",
+          "headerIcon": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png",
+          "noteIcon": "◈",
+          "noteTitle": "Glas / Krug · Flasche · Fass",
+          "noteText": "Krug 0,5 l · Flasche 1 l · Fass 50 l. Alle Preise in Kupfertalern.",
+          "categories": [
+            {
+              "id": "beer",
+              "label": "Partnerbiere · Getränke"
+            }
+          ],
+          "allLabel": "Alle Partnerprodukte",
+          "searchPlaceholder": "Nach Name, Charakter oder Herkunft suchen …",
+          "filterLabel": "Suche",
+          "items": [
+            {
+              "id": "bier-frostkamm",
+              "category": "beer",
+              "status": "available",
+              "title": "Frostkamm",
+              "subtitle": "Helles Clanbier · Freiwinter",
+              "image": "./public/assets/brewer-guilds/bier-frostkamm.png",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageHeight": 420,
+              "badge": "Partnerprodukt",
+              "tags": [
+                "Schneebeere",
+                "Helles Malz",
+                "Kühler Nachklang"
+              ],
+              "descriptionTitle": "Charakter & Herkunft",
+              "description": "<p><strong>Frostkamm</strong> ist ein helles Bier mit ungewöhnlichem Ursprung: gebraut nach einem alten Rezept des Freiwinter-Clans, vertrieben aber unter dem Banner der Schwarzdorn Brauerei. Es kombiniert eine klare, helle Basis mit dem feinen Aroma der Schneebeere – leicht fruchtig, fast kühl im Abgang, mit einem Hauch frostiger Süße.</p>\n<p>Das Bier wirkt auf den ersten Schluck unscheinbar, entfaltet aber mit der Zeit seine Tiefe. Es ist trocken, leicht bitter, aber nie aufdringlich – wie der erste Windstoß nach einem langen Winter. Trinker sagen, man schmecke darin den kalten Stolz der Freiwinter – und das Geschäftssinn der Schwarzdorn.</p>",
+              "featuresTitle": "Steckbrief",
+              "features": [],
+              "originTitle": "Herkunft",
+              "origin": "Clan Freiwinter · Vertrieb durch die Schwarzdorn Brauerei",
+              "usageTitle": "Am Tisch",
+              "usageTags": [
+                "Schneebeere",
+                "Helles Malz",
+                "Kühler Nachklang"
+              ],
+              "priceTitle": "Ausschank & Gebinde",
+              "priceMin": "",
+              "priceMax": "",
+              "priceFill": 0,
+              "currencyCode": "KT",
+              "currencyLabel": "Kupfertaler",
+              "currencyIcon": "◈",
+              "priceOptions": [
+                {
+                  "label": "Krug",
+                  "unit": "0,5 l",
+                  "price": "4"
+                },
+                {
+                  "label": "Flasche",
+                  "unit": "1 l",
+                  "price": "8"
+                },
+                {
+                  "label": "Fass",
+                  "unit": "50 l",
+                  "price": "400"
+                }
+              ],
+              "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+              "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+              "conditions": "Eigenmarke des Clans Freiwinter nach dessen altem Rezept; Schwarzdorn übernimmt den Vertrieb. Die Clanherkunft bleibt erhalten.",
+              "attributes": [],
+              "sealImage": "./public/assets/brewer-guilds/schwarzdorn-brauzeichen.png"
+            }
+          ],
+          "footerCards": []
+        }
+      },
+      {
+        "pageTitle": "VIII. — Westliche Bündnisse und der Brauerkrieg",
+        "image": "./public/assets/brewer-guilds/schwarzdorn-buendnisse.png",
+        "imageWidth": 38,
+        "imageFit": "contain",
+        "imagePosition": "center",
+        "description": "<p><strong>Skogg</strong>:<br/> Ein wohlhabender und einflussreicher Clan, der über <strong>weite Ländereien</strong> und eine gut organisierte <strong>Agrarkultur</strong> verfügt. Die Skogg liefern <strong>Gerste</strong>, <strong>Honig</strong> und <strong>Früchte</strong> an die Schwarzdorn Brauerei und versichern diese Ländereien gegen Bedrohungen, indem sie sie mit <strong>Söldnern</strong> ausstatten. Obwohl ihre Ideale nicht immer mit denen der Schwarzdorn übereinstimmen, funktioniert die Kooperation dank ihrer <strong>wir</strong><strong>tschaftlichen Vernunft</strong> und durch <strong>Eheschließungen</strong>. Die Skogg haben zudem ihre eigene <strong>Gilde</strong>, die sie als unabhängige und wichtige Partner positioniert.</p>\n<p><strong>Feuerhaar</strong>:<br/> Ein weniger wohlhabender, aber <strong>strategisch wichtiger Clan</strong> im Norden. Die Feuerhaar-Clansleute sind spezialisiert auf die Lieferung von <strong>Wildfrüchten</strong>, die für den Schwarzdorn Met von Bedeutung sind, und haben zusätzlich <strong>Land an die Brauerei verpachtet</strong>. Sie sind eng mit den Schwarzdorn durch <strong>Eheschließungen</strong> verbunden und bleiben ein zuverlässiger, wenngleich nicht mächtiger Partner.</p>\n<p><strong>Freiwinter</strong>:<br/> Der Clan der Freiwinter ist nicht nur ein <strong>Partner</strong>, sondern auch ein <strong>Teilhaber</strong> der Schwarzdorn Brauerei. Sie spielen eine Schlüsselrolle, indem sie als <strong>Schutzschild</strong> gegen die Expansion des <strong>Goldenglanz Syndikats</strong> im Osten fungieren. Ihre Nähe zu den Schwarzdorn wird durch <strong>Ehen</strong> gestärkt, und sie sind aktiv in die Verteidigung der westlichen Interessen eingebunden.</p>\n<p><strong>Grindel</strong>:<br/> Ein <strong>Seefahrer-Clan</strong> an der Westküste, der über einen wichtigen <strong>Hafen</strong> verfügt, der für den Export der Schwarzdorn-Produkte essenziell ist. Obwohl der Export ins Ausland derzeit noch begrenzt ist, schmieden die Schwarzdorn und die Grindel <strong>langfristige Pläne</strong>, um neue Märkte zu erschließen. Der Clan bietet nicht nur maritime Expertise, sondern auch eine verlässliche Infrastruktur für den Handel.</p>\n<p><strong>Silberzunge</strong>:<br/> Ein <strong>reicher Clan</strong>, dessen Wohlstand auf <strong>Bergbau</strong> und <strong>weiten Ländereien</strong> basiert. Die Silberzungen unterstützen die Schwarzdorn Brauerei finanziell und logistisch, was sie zu einem wichtigen Verbündeten macht. Durch <strong>Eheschließungen</strong> sind die beiden Clans eng verbunden, und die Silberzungen profitieren ihrerseits von der wirtschaftlichen Macht der Schwarzdorn.</p><p><strong>Goldglanz Clan</strong>:<br/> Die <strong>Herren der Goldenglanz Brauerei</strong> und das Zentrum des <strong>Goldenglanz Syndikats</strong> sind die größten Rivalen der Schwarzdorn. Sie dominieren den Osten Aldrimars und arbeiten unermüdlich daran, ihren Einfluss auszudehnen. Ihr Ziel ist es, die Schwarzdorn Brauerei langfristig zu verdrängen und die Vorherrschaft im gesamten Königreich zu übernehmen.</p>\n<p><strong>Schattenherz Clan</strong>:<br/> Enge Verbündete des Goldglanz Clans und in direktem Konflikt mit den <strong>Freiwintern</strong>. Ihre benachbarten Städte sind regelmäßig Schauplätze für wirtschaftliche und politische Machtspiele. Die Schattenherzen fungieren als willige Unterstützer des Goldglanz Syndikats und verstärken dessen Macht im Osten.</p>\n<p><strong>Klingende Münze</strong>:<br/> Eine gerissene und opportunistische Organisation, die versucht, die <strong>Schwarzdorn Brauerei</strong> und die <strong>Goldenglanz Brauerei</strong> gegeneinander auszuspielen. Ihr Ziel ist es, beide geschwächten Kontrahenten am Ende aufzukaufen und die Kontrolle über den gesamten Markt für alkoholische Getränke zu übernehmen. Ihre geschickten Manipulationen machen sie zu einer unterschätzten, aber gefährlichen Bedrohung für beide Brauereien.</p>",
+        "commentSequence": []
+      }
+    ]
+  },
+  {
+    "id": "goldenglanz-brauerei",
+    "title": "Die Goldenglanz Brauerei",
+    "subtitle": "Clan Goldglanz · Honigbreu und Handelsmacht im Osten",
+    "type": "Brauerei & Brennerei",
+    "category": "Gilden & Zünfte · Brauer & Brenner",
+    "image": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldglanz.png",
+    "icon": "✦",
+    "stamp": "HANDWERK · FAMILIE · HANDEL",
+    "multipage": true,
+    "appendCommentsPage": false,
+    "enablePageComments": true,
+    "pages": [
+      {
+        "pageTitle": "I. — Der Aufstieg der östlichen Braumacht",
+        "image": "./public/assets/brewer-guilds/goldenglanz-aufstieg.png",
+        "imageWidth": 38,
+        "imageFit": "contain",
+        "imagePosition": "center",
+        "description": "<p>Die <strong>Goldglanz-Brauerei</strong> ist bekannt für ihr <strong>weltberühmtes Honigbreu</strong> und gilt als <strong>wirtschaftliche Macht</strong> im <strong>Osten Aldrimars</strong>, deren <strong>Geschick im Handel und Braukunst</strong> den <strong>Aufstieg des Clans</strong> begründete.</p><p>Nach dem <strong>Krieg der Prätendenten</strong> stieg <strong>König Galmar</strong> auf den Thron, der <strong>keiner der drei Fraktionen</strong> des Krieges angehörte und eine <strong>tiefe Abneigung</strong> gegenüber den <strong>alteingesessenen Clans Aldrimars</strong> hegte. Seine <strong>Machtübernahme</strong> hinterließ ein <strong>politisches Vakuum</strong>, das viele der <strong>großen Clans</strong> als <strong>Verlierer</strong> zurückließ. Doch <strong>ausgerechnet die Goldglanz</strong>, damals noch <strong>unbedeutend und ohne politischen Einfluss</strong>, profitierten von dieser <strong>unsicheren Lage</strong>. Galmar bevorzugte <strong>einheimische Zünfte und Gilden</strong> gegenüber den <strong>alteingesessenen Adelsfamilien</strong> und unterstützte so den <strong>Aufbau der Goldglanz-Brauerei</strong>, die sich im <strong>Osten Aldrimars</strong> schnell ausbreitete und an <strong>wirtschaftlicher Macht</strong> gewann.</p>\n<p>Währenddessen verlor die <strong>Schwarzdorn-Brauerei</strong> im <strong>Westen</strong> an Einfluss, da der <strong>Schwarzdorn-Clan</strong> nach dem Krieg <strong>geschwächt</strong> war und das <strong>Interesse an der Braukunst</strong> in ihren Reihen <strong>stark zurückging</strong>. Dieses <strong>Machtvakuum</strong> nutzten die <strong>Goldglanz</strong>, um ihre <strong>Fühler in den Osten auszustrecken</strong> und sich <strong>Marktanteile</strong> zu sichern. Doch die <strong>Ruhmeszeit</strong> der Goldglanz wurde herausgefordert, als <strong>Maven Schwarzdorn</strong> an die Spitze des <strong>Schwarzdorn-Clans</strong> trat und die <strong>Brauerei im Westen wieder erstarkte</strong>. Der <strong>Brauereikonflikt</strong> nahm erneut an <strong>Fahrt auf</strong>, und es entbrannte ein <strong>erbitterter Machtkampf</strong> um <strong>Marktanteile und Einfluss</strong>.</p>",
+        "commentSequence": []
+      },
+      {
+        "pageTitle": "II. — Die Goldglanz und ihr gemeinsamer Vorstand",
+        "guildPage": true,
+        "image": "../Stammbäume/assets/images/portraits/haus-goldglanz/wulfgar-1668-goldglanz.png",
+        "imageFit": "contain",
+        "stats": [
+          [
+            "Clansitz",
+            "Silberquell · Schimmerküste"
+          ],
+          [
+            "Gildenoberhaupt",
+            "Wulfgar Goldglanz"
+          ],
+          [
+            "Verbündeter Clan",
+            "Schattenherz"
+          ],
+          [
+            "Mitgliederstärke",
+            "Hoch"
+          ],
+          [
+            "Marktgebiet",
+            "Osten Aldrimars"
+          ]
+        ],
+        "guild": {
+          "crestImage": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldglanz.png",
+          "portraitFormat": "portrait",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 100,
+          "biographyTitle": "Goldglanz ist die Familie, Goldenglanz die Brauerei",
+          "biographyText": "<p>Die <strong>Goldglanz-Brauerei</strong> ist bekannt für ihr <strong>weltberühmtes Honigbreu</strong> und gilt als <strong>wirtschaftliche Macht</strong> im <strong>Osten Aldrimars</strong>, deren <strong>Geschick im Handel und Braukunst</strong> den <strong>Aufstieg des Clans</strong> begründete.</p><p>Der Clan trägt den Namen Goldglanz; die Brauereivorlage führt das Unternehmen als Goldenglanz. Die ausführliche Hierarchie nennt Wulfgar als Gildenoberhaupt, auch wenn die Kurzangabe zur Leitung offen bleibt. Gemeint ist der heute lebende Wulfgar, geboren 1668, nicht sein gleichnamiger Vorfahr.</p>",
+          "abilitiesTitle": "Die Handschrift der Goldenglanz",
+          "abilities": [
+            {
+              "title": "Honigbreu als Aushängeschild",
+              "detail": "Der goldene Met und sein leichteres Lichtgold tragen den Ruf des Hauses.",
+              "icon": "./public/assets/brewer-guilds/met-honigbreu.png"
+            },
+            {
+              "title": "Östliches Vertriebsnetz",
+              "detail": "Brauersiedlungen, Flusswege, Stadtlager und Tavernen verbinden Produktion und Absatz.",
+              "icon": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png"
+            },
+            {
+              "title": "Gemeinsame Interessen",
+              "detail": "Schattenherz stellt Standorte und Vorstandspersonen; das Syndikat führt den verdeckten Wettbewerb.",
+              "icon": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schattenherz.png"
+            }
+          ],
+          "historyTitle": "Aufstieg durch Handel und Braukunst",
+          "historyText": "<p>Die Überlieferung verbindet den Aufstieg der Brauerei mit König Galmars Förderung einheimischer Zünfte. Das politische Vakuum und die Schwäche der westlichen Konkurrenz öffneten dem Clan neue Märkte.</p>",
+          "worksTitle": "Handwerk und Leistungen",
+          "works": [
+            "Bier- und Metherstellung, Handel und Tavernenbetrieb",
+            "Vertrieb von Wein und Spirituosen ohne bislang benannte Einzelabfüllungen",
+            "Fassmacherei, Imkerei, Lagerhaltung und Schriftführung"
+          ],
+          "triviaTitle": "Zwei Namen und eine Herkunft",
+          "trivia": [
+            "Hjerte bleibt das dunkle Bier der Schattenherzen.",
+            "Ein Brauereimotto, Patrongötter und die persönlichen Handwerksmeister sind in der Vorlage offen."
+          ],
+          "connectionsTitle": "Personen des Vorstands",
+          "connections": [
+            {
+              "name": "Wulfgar Goldglanz",
+              "image": "../Stammbäume/assets/images/portraits/haus-goldglanz/wulfgar-1668-goldglanz.png",
+              "imageFormat": "portrait",
+              "detail": "Geboren 1668 · Gildenoberhaupt laut ausführlicher Brauereihierarchie."
+            },
+            {
+              "name": "Nvjar Goldglanz",
+              "image": "../Stammbäume/assets/images/portraits/haus-goldglanz/nvjar-goldglanz.png",
+              "imageFormat": "portrait",
+              "detail": "Geboren 1677 · Benanntes Vorstandsmitglied."
+            },
+            {
+              "name": "Tyrkir Goldglanz",
+              "image": "../Stammbäume/assets/images/portraits/haus-goldglanz/tyrkir-goldglanz.png",
+              "imageFormat": "portrait",
+              "detail": "Geboren 1688 · Mitglied des Brauereivorstands."
+            },
+            {
+              "name": "Urdin Goldglanz",
+              "image": "../Stammbäume/assets/images/portraits/haus-goldglanz/urdin-goldglanz.png",
+              "imageFormat": "portrait",
+              "detail": "Geboren 1696 · Benanntes Vorstandsmitglied."
+            },
+            {
+              "name": "Ulfrik Schattenherz",
+              "image": "../Stammbäume/assets/images/portraits/haus-kampfgeborene/ulfrik-schattenherz.png",
+              "imageFormat": "portrait",
+              "detail": "Thane der Schattenherzen seit 1711 · Mitglied des gemeinsamen Brauereivorstands."
+            },
+            {
+              "name": "Isbrand Schattenherz",
+              "image": "../Stammbäume/assets/images/portraits/haus-schattenherz/isbrand-schattenherz.png",
+              "imageFormat": "portrait",
+              "detail": "Erster Erbe der Schattenherzen · Mitglied des gemeinsamen Brauereivorstands."
+            }
+          ],
+          "contractsTitle": "Bündnis und verdeckter Wettbewerb",
+          "contracts": [
+            {
+              "title": "Clan Schattenherz",
+              "text": "Standorte, Land und exklusive Handelsverträge verbinden die beiden Clans.",
+              "icon": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schattenherz.png"
+            },
+            {
+              "title": "Goldenglanz Syndikat",
+              "text": "Verdeckter wirtschaftlicher Arm im Brauerkrieg; außerhalb der handwerklichen Rangfolge.",
+              "icon": "../IconOrdner/Organisationsicons/Spionage.png"
+            },
+            {
+              "title": "Kampfgeborene",
+              "text": "Die Vorlage beschreibt geheime Unterstützung gegen Schwarzdorn, während Goldenglanz nach außen neutral bleibt.",
+              "icon": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png"
+            }
+          ],
+          "documentsTitle": "Familienbücher",
+          "documents": [
+            {
+              "title": "Clan Goldglanz",
+              "text": "Familienrollen, Originalporträts und Verbindungen.",
+              "icon": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldglanz.png",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-goldglanz&mode=view"
+            },
+            {
+              "title": "Clan Schattenherz",
+              "text": "Die östlichen Bündnispartner und ihre Erben.",
+              "icon": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-schattenherz.png",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-schattenherz&mode=view"
+            }
+          ],
+          "footer": "Honigbreu, Handel und ein Bündnis im Osten."
+        }
+      },
+      {
+        "pageTitle": "III. — Ämter, Ausbildung & Verantwortung",
+        "hierarchyPage": true,
+        "hierarchy": {
+          "layoutMode": "vertical",
+          "treeDisplayMode": "tabs",
+          "cardFontScale": 100,
+          "portraitScale": 75,
+          "chartScale": 90,
+          "eyebrow": "Zunftordnung",
+          "subtitle": "Goldenglanz Brauerei",
+          "centerLabel": "Goldenglanz Brauerei",
+          "emblem": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldglanz.png",
+          "sideImage": "../Stammbäume/assets/images/houses/Aldrimar/Kraehenmoor/clan-goldglanz.png",
+          "organizationTitle": "Goldenglanz Brauerei",
+          "motto": "",
+          "description": "<p>Wulfgar führt die Zunft. Der Vorstand vereint Nvjar, Tyrkir und Urdin Goldglanz mit Ulfrik und Isbrand Schattenherz. Die folgenden handwerklichen Ränge besitzen keine überlieferten Amtsinhaber.</p>",
+          "detailsTitle": "Zuständigkeiten",
+          "details": [],
+          "chartTitle": "Vom Hausoberhaupt zum Handwerk",
+          "chartIntro": "Die Ebenen zeigen die Verantwortung innerhalb der Zunft. Familiennachfolge und handwerkliche Ausbildung bleiben unterschiedliche Aufgaben.",
+          "levels": [
+            {
+              "label": "Gildenoberhaupt",
+              "nodes": [
+                {
+                  "title": "Gildenoberhaupt",
+                  "subtitle": "Wulfgar Goldglanz",
+                  "portrait": "../Stammbäume/assets/images/portraits/haus-goldglanz/wulfgar-1668-goldglanz.png",
+                  "text": "In der ausführlichen Vorlage als Leiter genannt; geboren 1668."
+                }
+              ]
+            },
+            {
+              "label": "Vorstand",
+              "nodes": [
+                {
+                  "title": "Nvjar Goldglanz",
+                  "subtitle": "Vorstandsmitglied",
+                  "portrait": "../Stammbäume/assets/images/portraits/haus-goldglanz/nvjar-goldglanz.png",
+                  "text": "In der ausführlichen Brauereihierarchie als Vorstandsmitglied benannt."
+                },
+                {
+                  "title": "Tyrkir Goldglanz",
+                  "subtitle": "Vorstandsmitglied",
+                  "portrait": "../Stammbäume/assets/images/portraits/haus-goldglanz/tyrkir-goldglanz.png",
+                  "text": "In der ausführlichen Brauereihierarchie als Vorstandsmitglied benannt."
+                },
+                {
+                  "title": "Urdin Goldglanz",
+                  "subtitle": "Vorstandsmitglied",
+                  "portrait": "../Stammbäume/assets/images/portraits/haus-goldglanz/urdin-goldglanz.png",
+                  "text": "In der ausführlichen Brauereihierarchie als Vorstandsmitglied benannt."
+                },
+                {
+                  "title": "Ulfrik Schattenherz",
+                  "subtitle": "Vorstandsmitglied",
+                  "portrait": "../Stammbäume/assets/images/portraits/haus-kampfgeborene/ulfrik-schattenherz.png",
+                  "text": "In der ausführlichen Brauereihierarchie als Vorstandsmitglied benannt."
+                },
+                {
+                  "title": "Isbrand Schattenherz",
+                  "subtitle": "Vorstandsmitglied",
+                  "portrait": "../Stammbäume/assets/images/portraits/haus-schattenherz/isbrand-schattenherz.png",
+                  "text": "In der ausführlichen Brauereihierarchie als Vorstandsmitglied benannt."
+                }
+              ]
+            },
+            {
+              "label": "Brauermeister",
+              "nodes": [
+                {
+                  "title": "Brauermeister",
+                  "subtitle": "Amtsinhaber nicht benannt",
+                  "portrait": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+                  "text": "Überlieferter Handwerksrang der Goldenglanz Brauerei."
+                }
+              ]
+            },
+            {
+              "label": "Brauer Knecht",
+              "nodes": [
+                {
+                  "title": "Brauer Knecht",
+                  "subtitle": "Amtsinhaber nicht benannt",
+                  "portrait": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+                  "text": "Überlieferter Handwerksrang der Goldenglanz Brauerei."
+                }
+              ]
+            },
+            {
+              "label": "Brauer Geselle",
+              "nodes": [
+                {
+                  "title": "Brauer Geselle",
+                  "subtitle": "Amtsinhaber nicht benannt",
+                  "portrait": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+                  "text": "Überlieferter Handwerksrang der Goldenglanz Brauerei."
+                }
+              ]
+            },
+            {
+              "label": "Brauer Lehrling",
+              "nodes": [
+                {
+                  "title": "Brauer Lehrling",
+                  "subtitle": "Amtsinhaber nicht benannt",
+                  "portrait": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+                  "text": "Überlieferter Handwerksrang der Goldenglanz Brauerei."
+                }
+              ]
+            },
+            {
+              "label": "Handlanger",
+              "nodes": [
+                {
+                  "title": "Handlanger",
+                  "subtitle": "Amtsinhaber nicht benannt",
+                  "portrait": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+                  "text": "Überlieferter Handwerksrang der Goldenglanz Brauerei."
+                }
+              ]
+            }
+          ],
+          "footerNote": "Die Familien- und Bündnisrollen begründen keinen automatisch erworbenen Handwerksrang."
+        }
+      },
+      {
+        "pageTitle": "IV. — Von Honigbreu und der Macht des Ausschanks",
+        "image": "./public/assets/brewer-guilds/goldenglanz-handwerk.png",
+        "imageWidth": 38,
+        "imageFit": "contain",
+        "imagePosition": "center",
+        "description": "<p>Die <strong>Goldglanz Brauerzunft</strong> ist für die <strong>Herstellung, den Vertrieb und die Kontrolle</strong> von <strong>alkoholischen Getränken</strong> im <strong>Osten Aldrimars</strong> verantwortlich. Ihr <strong>Hauptprodukt</strong>, das <strong>weltberühmte Honigbreu</strong>, ist nur ein Teil ihres umfangreichen Sortiments, da sie auch <strong>Bier, Wein und Spirituosen</strong> vertreiben. Die Zunft besitzt in <strong>fast jedem Jarltum des Ostens</strong> <strong>gepachtete Brauersiedlungen</strong>, in denen die <strong>Produktion und Lagerung</strong> erfolgt. Zudem betreiben sie <strong>Standorte in vielen Städten</strong>, um die <strong>Logistik und den Handel</strong> zu koordinieren.</p>\n<p>Besonders stark vertreten sind sie im <strong>Tavernenwesen</strong>, da viele <strong>Gasthäuser und Schenken</strong> unter <strong>ihrer Kontrolle</strong> stehen oder von ihnen <strong>beliefert</strong> werden. Sie haben sich somit eine <strong>monopolartige Stellung</strong> im <strong>Vertrieb von Alkohol</strong> gesichert und kontrollieren <strong>große Teile des Marktes</strong> im Osten. Ihr <strong>wirtschaftlicher Einfluss</strong> reicht <strong>weit über Met hinaus</strong> und macht sie zu einem <strong>zentralen Akteur im Handel und gesellschaftlichen Leben</strong> der Region.</p>",
+        "commentSequence": []
+      },
+      {
+        "pageTitle": "V. — Brauersiedlungen und Tavernen im Osten",
+        "organizationNetworkPage": true,
+        "organizationNetwork": {
+          "title": "Brauorte, Flusswege und Schankstuben",
+          "introduction": "<p>Die <strong>Goldglanz-Brauerei</strong> verfügt über ein <strong>weitverzweigtes Netzwerk von Standorten</strong> im <strong>Osten Aldrimars</strong>, das ihnen <strong>wirtschaftliche Macht und Kontrolle</strong> über den <strong>Alkoholmarkt</strong> sichert. In <strong>fast jedem Jarltum des Ostens</strong> besitzen sie <strong>gepachtete Brauersiedlungen</strong>, die als <strong>Produktionsstätten und Lagerhäuser</strong> dienen und es ihnen ermöglichen, <strong>große Mengen an Honigbreu und anderen alkoholischen Getränken</strong> effizient zu produzieren und zu verteilen. Diese <strong>Brauersiedlungen</strong> sind <strong>strategisch nahe an Handelsrouten und Flüssen</strong> platziert, um eine <strong>schnelle und effektive Lieferung</strong> in die umliegenden Regionen zu gewährleisten.</p>\n<p>Darüber hinaus betreibt die <strong>Goldglanz-Brauerei</strong> <strong>Standorte in vielen Städten</strong>, die als <strong>Vertriebszentren und Handelsposten</strong> fungieren. Besonders <strong>Tavernen und Schenken</strong> stehen <strong>unter ihrer Kontrolle</strong> oder werden <strong>direkt von ihnen beliefert</strong>, was ihnen eine <strong>monopolartige Stellung</strong> im <strong>Tavernenwesen und Alkoholvertrieb</strong> sichert. Ihre <strong>Präsenz in den Städten</strong> ist <strong>stark und weitreichend</strong>, was ihnen nicht nur <strong>wirtschaftlichen Einfluss</strong>, sondern auch <strong>gesellschaftliche Macht</strong> verleiht. Im <strong>Jarltum Kronental</strong> jedoch, das als <strong>neutrale Zone</strong> gilt, dürfen sie <strong>keine Standorte</strong> betreiben, mit <strong>Ausnahme von Heldenwacht</strong>, wo sie <strong>einen Brauereistandort</strong> im Rahmen der <strong>Gildenvorschriften</strong> besitzen.</p>",
+          "reach": "Osten Aldrimars · Schwarzfenn und Krähenmoor",
+          "model": "Gepachtete Brauersiedlungen und städtische Vertriebsstellen versorgen das Tavernenwesen.",
+          "note": "Kronental bleibt neutral. Nur ein Brauereistandort pro Gilde in Heldenwacht ist zugelassen; dessen eigener Betriebsname fehlt. Weitere Tavernenplätze in Rabenfurt und Moortal sind unbenannt und werden nicht mit erfundenen Namen gefüllt.",
+          "sites": [
+            {
+              "name": "Goldquell",
+              "region": "Schwarzfenn · Aldrimar",
+              "kind": "workshop",
+              "image": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+              "description": "Benannte Brauersiedlung des östlichen Produktionsnetzes."
+            },
+            {
+              "name": "Gildstatt",
+              "region": "Schwarzfenn · Aldrimar",
+              "kind": "workshop",
+              "image": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+              "description": "Benannte Brauersiedlung des östlichen Produktionsnetzes."
+            },
+            {
+              "name": "Goldenglanz",
+              "region": "Krähenmoor · Aldrimar",
+              "kind": "workshop",
+              "image": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+              "description": "Benannte Brauersiedlung des östlichen Produktionsnetzes."
+            },
+            {
+              "name": "Edelstatt",
+              "region": "Krähenmoor · Aldrimar",
+              "kind": "workshop",
+              "image": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+              "description": "Benannte Brauersiedlung des östlichen Produktionsnetzes."
+            },
+            {
+              "name": "Honigberg",
+              "region": "Krähenmoor · Aldrimar",
+              "kind": "workshop",
+              "image": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+              "description": "Benannte Brauersiedlung des östlichen Produktionsnetzes."
+            },
+            {
+              "name": "Heldenwacht · Betriebsname offen",
+              "region": "Kronental · Aldrimar",
+              "kind": "branch",
+              "image": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+              "description": "Die für die Gilde zugelassene Ausnahme in der neutralen Hauptstadt."
+            },
+            {
+              "name": "Zur Goldenen Stute",
+              "region": "Schwarzfenn · Aldrimar",
+              "kind": "branch",
+              "image": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+              "description": "Benannte Taverne im Vertriebsnetz der Goldenglanz Brauerei."
+            },
+            {
+              "name": "Zum Goldenen Horn",
+              "region": "Schwarzfenn · Aldrimar",
+              "kind": "branch",
+              "image": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+              "description": "Benannte Taverne im Vertriebsnetz der Goldenglanz Brauerei."
+            },
+            {
+              "name": "Zum Glänzenden Kelch",
+              "region": "Krähenmoor · Aldrimar",
+              "kind": "branch",
+              "image": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+              "description": "Benannte Taverne im Vertriebsnetz der Goldenglanz Brauerei."
+            },
+            {
+              "name": "Zur Ewigen Münze",
+              "region": "Krähenmoor · Aldrimar",
+              "kind": "branch",
+              "image": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+              "description": "Benannte Taverne im Vertriebsnetz der Goldenglanz Brauerei."
+            }
+          ],
+          "footer": "Land und Standorte der Schattenherzen ergänzen das eigene Netz."
+        }
+      },
+      {
+        "pageTitle": "VI. — Das Stammsortiment · Honigbreu und Hausbiere",
+        "tradeCatalogPage": true,
+        "commentSequence": [],
+        "tradeCatalog": {
+          "title": "Das Stammsortiment · Honigbreu und Hausbiere",
+          "subtitle": "Honigbreu, Lichtgold, Kranzgold und Stillgold · Fünf freie Plätze",
+          "headerIcon": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+          "noteIcon": "◈",
+          "noteTitle": "Glas / Krug · Flasche · Fass",
+          "noteText": "Krug 0,5 l · Flasche 1 l · Fass 50 l. Alle Preise in Kupfertalern.",
+          "categories": [
+            {
+              "id": "mead",
+              "label": "Met · Getränke"
+            },
+            {
+              "id": "beer",
+              "label": "Bier · Getränke"
+            }
+          ],
+          "allLabel": "Gesamtes Sortiment",
+          "searchPlaceholder": "Nach Name, Charakter oder Herkunft suchen …",
+          "filterLabel": "Suche",
+          "items": [
+            {
+              "id": "met-honigbreu",
+              "category": "mead",
+              "status": "available",
+              "title": "Honigbreu Met",
+              "subtitle": "Preisgekrönter Met · Ost-Aldrimar",
+              "image": "./public/assets/brewer-guilds/met-honigbreu.png",
+              "imageFormat": "square",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageHeight": 420,
+              "badge": "Spitzenabfüllung",
+              "tags": [
+                "Honig",
+                "Sommerkräuter",
+                "Vanille"
+              ],
+              "descriptionTitle": "Charakter & Herkunft",
+              "description": "<p>Wenn der Schwarzdorn Met der dunkle Zaubertrank für nächtliche Intrigen ist, dann ist <strong>Honigbreu Met</strong> das <em>strahlende Gegenstück</em> – <em>ein Sonnenstrahl in Flaschenform</em>. Gebraut unter dem Siegel der <strong>Goldenglanz Brauerzunft</strong>, bringt dieser Met das Beste hervor, was Aldrimars goldene Täler zu bieten haben.</p>\n<p>Der erste Eindruck? <em>Ein Duft wie ein blühendes Sommerfeld</em> – warmer Honig, zarte Kräuter, ein Hauch von Vanille. Beim Trinken fließt er weich und süß über den Gaumen, entfaltet eine fruchtige Wärme, die an blühende Apfelhaine und frisch gebackenes Brot erinnert. Die <em>geheime Zutat</em>? Niemand weiß es genau – aber sie verleiht dem Trank eine <strong>magische Tiefe</strong>, die ihn von gewöhnlichem Met weit abhebt.</p>\n<p>Der <strong>Abgang</strong> ist lang und klar – <em>angenehm süß, fast musikalisch</em>. Er verweilt wie eine goldene Erinnerung auf der Zunge und macht Lust auf mehr.</p>\n<p><em>Honigbreu Met ist mehr als nur süßer Met – er ist <em>Fest, Feier und Licht</em> in einem Krug. Ein Getränk für <em>Friedensschlüsse, Gelage und Hochzeiten</em>, geschätzt in Hallen, in denen noch gelacht und gesungen wird.</em></p>",
+              "featuresTitle": "Steckbrief",
+              "features": [],
+              "originTitle": "Herkunft",
+              "origin": "Goldenglanz Brauerei · Osten Aldrimars",
+              "usageTitle": "Am Tisch",
+              "usageTags": [
+                "Hochzeit",
+                "Festtafel",
+                "Friedensschluss"
+              ],
+              "priceTitle": "Ausschank & Gebinde",
+              "priceMin": "",
+              "priceMax": "",
+              "priceFill": 0,
+              "currencyCode": "KT",
+              "currencyLabel": "Kupfertaler",
+              "currencyIcon": "◈",
+              "priceOptions": [
+                {
+                  "label": "Krug",
+                  "unit": "0,5 l",
+                  "price": "6"
+                },
+                {
+                  "label": "Flasche",
+                  "unit": "1 l",
+                  "price": "12"
+                },
+                {
+                  "label": "Fass",
+                  "unit": "50 l",
+                  "price": "600"
+                }
+              ],
+              "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+              "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+              "conditions": "Stammsortiment des Hauses.",
+              "attributes": [],
+              "sealImage": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png"
+            },
+            {
+              "id": "met-lichtgold",
+              "category": "mead",
+              "status": "available",
+              "title": "Honigbreu · Lichtgold",
+              "subtitle": "Leichter Hausmet · Goldenglanz",
+              "image": "./public/assets/brewer-guilds/met-lichtgold.png",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageHeight": 420,
+              "badge": "Hausmet",
+              "tags": [
+                "Frisch",
+                "Apfelartige Säure",
+                "Goldgelb"
+              ],
+              "descriptionTitle": "Charakter & Herkunft",
+              "description": "<p><strong>Honigbreu Lichtgold</strong> ist die leichtere, frischere Variante des klassischen Honigbreu – weniger süß, dafür mit einer feinen, fast apfelartigen Säure im Abgang. Der Met bleibt klar und goldgelb, läuft weich, ohne klebrig zu wirken, und wirkt angenehm kühl auf der Zunge.</p>\n<p>Getrunken wird er vor allem im Sommer, auf Höfen, Märkten oder bei höfischen Spielen – dort, wo der Rausch beiläufig und der Eindruck bleibend sein soll. Wer’s süßer mag, trinkt das Original. Wer Stil zeigen will, nimmt Lichtgold.</p>",
+              "featuresTitle": "Steckbrief",
+              "features": [],
+              "originTitle": "Herkunft",
+              "origin": "Goldenglanz Brauerei · Osten Aldrimars",
+              "usageTitle": "Am Tisch",
+              "usageTags": [
+                "Sommer",
+                "Höfische Spiele"
+              ],
+              "priceTitle": "Ausschank & Gebinde",
+              "priceMin": "",
+              "priceMax": "",
+              "priceFill": 0,
+              "currencyCode": "KT",
+              "currencyLabel": "Kupfertaler",
+              "currencyIcon": "◈",
+              "priceOptions": [
+                {
+                  "label": "Krug",
+                  "unit": "0,5 l",
+                  "price": "3"
+                },
+                {
+                  "label": "Flasche",
+                  "unit": "1 l",
+                  "price": "6"
+                },
+                {
+                  "label": "Fass",
+                  "unit": "50 l",
+                  "price": "300"
+                }
+              ],
+              "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+              "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+              "conditions": "Stammsortiment des Hauses.",
+              "attributes": [],
+              "sealImage": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png"
+            },
+            {
+              "id": "bier-kranzgold",
+              "category": "beer",
+              "status": "available",
+              "title": "Kranzgold",
+              "subtitle": "Helles Festbier · Goldenglanz",
+              "image": "./public/assets/brewer-guilds/bier-kranzgold.png",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageHeight": 420,
+              "badge": "Hausbier",
+              "tags": [
+                "Feinperlig",
+                "Mildes Malz",
+                "Florale Note"
+              ],
+              "descriptionTitle": "Charakter & Herkunft",
+              "description": "<p><strong>Kranzgold</strong> ist ein feinperliges, helles Festbier der Goldglanz-Brauerei – gebraut für besondere Anlässe, mit milder Malznote und goldklarem Körper. Es ist weicher als das übliche Lager, aber kräftiger im Nachgang, mit leicht süßlichem Anklang und floraler Note, ganz ohne den Met-Charakter des Hauses.</p>\n<p>Serviert wird es bei Hochzeiten, Ehrungen oder als Geschenk für verdiente Amtsträger. Wer Kranzgold ausschenkt, meint’s ernst – aber höflich. Ein Bier für den guten Eindruck, nicht für den Alltag.</p>",
+              "featuresTitle": "Steckbrief",
+              "features": [],
+              "originTitle": "Herkunft",
+              "origin": "Goldenglanz Brauerei · Osten Aldrimars",
+              "usageTitle": "Am Tisch",
+              "usageTags": [
+                "Hochzeit",
+                "Ehrung"
+              ],
+              "priceTitle": "Ausschank & Gebinde",
+              "priceMin": "",
+              "priceMax": "",
+              "priceFill": 0,
+              "currencyCode": "KT",
+              "currencyLabel": "Kupfertaler",
+              "currencyIcon": "◈",
+              "priceOptions": [
+                {
+                  "label": "Krug",
+                  "unit": "0,5 l",
+                  "price": "2,5"
+                },
+                {
+                  "label": "Flasche",
+                  "unit": "1 l",
+                  "price": "5"
+                },
+                {
+                  "label": "Fass",
+                  "unit": "50 l",
+                  "price": "250"
+                }
+              ],
+              "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+              "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+              "conditions": "Stammsortiment des Hauses.",
+              "attributes": [],
+              "sealImage": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png"
+            },
+            {
+              "id": "bier-stillgold",
+              "category": "beer",
+              "status": "available",
+              "title": "Stillgold",
+              "subtitle": "Einfaches helles Hausbier · Goldenglanz",
+              "image": "./public/assets/brewer-guilds/bier-stillgold.png",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageHeight": 420,
+              "badge": "Hausbier",
+              "tags": [
+                "Mild",
+                "Leicht",
+                "Durstlöscher"
+              ],
+              "descriptionTitle": "Charakter & Herkunft",
+              "description": "<p><strong>Stillgold</strong> ist das einfache, günstige Bier der Goldglanz-Brauerei – hell, schwach im Geschmack, mit wenig Schaum und kaum Nachhall. Es löscht den Durst, nicht mehr, nicht weniger. Mild, leicht süßlich, kaum Bitterkeit – dafür läuft’s schnell und ist billig zu haben.</p>\n<p>Wird vor allem in großen Tonkrügen ausgeschenkt, bei Hafenarbeitern, Tagelöhnern oder in Tavernen, wo Namen keine Rolle spielen. Kein Stolz, kein Prunk – nur ein Schluck Stillgold, damit der Tag weitergeht.</p>",
+              "featuresTitle": "Steckbrief",
+              "features": [],
+              "originTitle": "Herkunft",
+              "origin": "Goldenglanz Brauerei · Osten Aldrimars",
+              "usageTitle": "Am Tisch",
+              "usageTags": [
+                "Feierabend",
+                "Taverne"
+              ],
+              "priceTitle": "Ausschank & Gebinde",
+              "priceMin": "",
+              "priceMax": "",
+              "priceFill": 0,
+              "currencyCode": "KT",
+              "currencyLabel": "Kupfertaler",
+              "currencyIcon": "◈",
+              "priceOptions": [
+                {
+                  "label": "Krug",
+                  "unit": "0,5 l",
+                  "price": "0,5"
+                },
+                {
+                  "label": "Flasche",
+                  "unit": "1 l",
+                  "price": "1"
+                },
+                {
+                  "label": "Fass",
+                  "unit": "50 l",
+                  "price": "50"
+                }
+              ],
+              "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+              "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+              "conditions": "Stammsortiment des Hauses.",
+              "attributes": [],
+              "sealImage": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png"
+            },
+            {
+              "id": "beer-reserve-1",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 1",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            },
+            {
+              "id": "beer-reserve-2",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 2",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            },
+            {
+              "id": "beer-reserve-3",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 3",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            },
+            {
+              "id": "beer-reserve-4",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 4",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            },
+            {
+              "id": "beer-reserve-5",
+              "category": "beer",
+              "status": "planned",
+              "title": "Freier Sortimentsplatz 5",
+              "description": "",
+              "image": "",
+              "priceOptions": []
+            }
+          ],
+          "footerCards": []
+        }
+      },
+      {
+        "pageTitle": "VII. — Partnerbrauereien · Hjerte der Schattenherzen",
+        "tradeCatalogPage": true,
+        "commentSequence": [],
+        "tradeCatalog": {
+          "title": "Partnerbrauereien · Hjerte der Schattenherzen",
+          "subtitle": "Eigenständige Clanherkunft im östlichen Bündnis",
+          "headerIcon": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png",
+          "noteIcon": "◈",
+          "noteTitle": "Glas / Krug · Flasche · Fass",
+          "noteText": "Krug 0,5 l · Flasche 1 l · Fass 50 l. Alle Preise in Kupfertalern.",
+          "categories": [
+            {
+              "id": "beer",
+              "label": "Partnerbiere · Getränke"
+            }
+          ],
+          "allLabel": "Alle Partnerprodukte",
+          "searchPlaceholder": "Nach Name, Charakter oder Herkunft suchen …",
+          "filterLabel": "Suche",
+          "items": [
+            {
+              "id": "bier-hjerte",
+              "category": "beer",
+              "status": "available",
+              "title": "Hjerte",
+              "subtitle": "Dunkles Clanbier · Schattenherz",
+              "image": "./public/assets/brewer-guilds/bier-hjerte.png",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "imageHeight": 420,
+              "badge": "Partnerprodukt",
+              "tags": [
+                "Dunkles Malz",
+                "Rötlicher Schimmer",
+                "Schwerer Nachklang"
+              ],
+              "descriptionTitle": "Charakter & Herkunft",
+              "description": "<p><strong>Hjerte</strong> ist das dunkle Bier der Schattenherzen – tiefbraun, fast schwarz, mit rötlichem Schimmer im Licht. Es schmeckt malzig und schwer, mit feiner Bitternote und einem Hauch von etwas, das nicht jeder benennen kann – Kräuter? Eisen? Rauch?</p>\n<p>Hjerte wird selten offen ausgeschenkt. Wer es kennt, bestellt es leise – nicht wegen Scham, sondern weil es für sich spricht. Es wärmt, es bleibt, es schlägt tief – wie ein Schatten, der weiß, wo dein Herz sitzt.</p>",
+              "featuresTitle": "Steckbrief",
+              "features": [],
+              "originTitle": "Herkunft",
+              "origin": "Clan Schattenherz · Sortiment der Goldenglanz Brauerei",
+              "usageTitle": "Am Tisch",
+              "usageTags": [
+                "Dunkles Malz",
+                "Rötlicher Schimmer",
+                "Schwerer Nachklang"
+              ],
+              "priceTitle": "Ausschank & Gebinde",
+              "priceMin": "",
+              "priceMax": "",
+              "priceFill": 0,
+              "currencyCode": "KT",
+              "currencyLabel": "Kupfertaler",
+              "currencyIcon": "◈",
+              "priceOptions": [
+                {
+                  "label": "Krug",
+                  "unit": "0,5 l",
+                  "price": "3,5"
+                },
+                {
+                  "label": "Flasche",
+                  "unit": "1 l",
+                  "price": "7"
+                },
+                {
+                  "label": "Fass",
+                  "unit": "50 l",
+                  "price": "350"
+                }
+              ],
+              "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+              "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+              "conditions": "Eigenmarke des Clans Schattenherz; Teil des gemeinsamen Handelsnetzes. Der seltene offene Ausschank und die eigene Clanherkunft bleiben erhalten.",
+              "attributes": [],
+              "sealImage": "./public/assets/brewer-guilds/goldenglanz-brauzeichen.png"
+            }
+          ],
+          "footerCards": []
+        }
+      },
+      {
+        "pageTitle": "VIII. — Goldglanz, Schattenherz und der Brauerkrieg",
+        "image": "./public/assets/brewer-guilds/goldenglanz-buendnisse.png",
+        "imageWidth": 38,
+        "imageFit": "contain",
+        "imagePosition": "center",
+        "description": "<p>Heute ist <strong>Aldrimar</strong> in <strong>zwei Brauereireiche</strong> geteilt: <strong>Schwarzdorn</strong> kontrolliert den <strong>Westen</strong> und <strong>Goldglanz</strong> dominiert den <strong>Osten</strong>. Das <strong>Jarltum des Königs, Kronental</strong>, bildet eine <strong>neutrale Zone</strong>, in der <strong>keine Standorte</strong> von den <strong>beiden Brauereien</strong> aufgebaut werden dürfen. Eine <strong>Ausnahme</strong> bildet jedoch die <strong>Hauptstadt Heldenwacht</strong>, wo <strong>jeweils ein Brauereistandort pro Gilde</strong> erlaubt ist. Der <strong>Kampf um die Vorherrschaft</strong> in dieser <strong>neutralen Zone</strong> wird <strong>verdeckt</strong> und mit <strong>harter Bandagen</strong> ausgetragen.</p>\n<p><strong>Unter den Augen des Adels</strong> führen die <strong>Clans Schwarzdorn und Goldglanz</strong> diesen <strong>geheimen Krieg</strong> jedoch nicht mit <strong>Waffen</strong>, sondern durch <strong>Intrigen, Spionage und Sabotage</strong>. Ihre <strong>Diebesbanden</strong>, die <strong>Nachtfalter</strong> für Schwarzdorn und das <strong>Goldglanz-Syndikat</strong> für Goldglanz, führen den <strong>verdeckten Kampf</strong> um <strong>Einfluss und Macht</strong>. In diesen <strong>Bandenkriegen</strong> sind auch <strong>verbündete Clans</strong> involviert: <strong>Freiwinter</strong> steht auf der Seite der <strong>Schwarzdorn</strong>, während die <strong>Schattenherzen</strong> als <strong>Verbündete der Goldglanz</strong> agieren. Doch es gibt <strong>weitere Clans</strong>, die <strong>direkt oder indirekt</strong> in diesen <strong>Brauerei-Konflikt</strong> verwickelt sind, was den <strong>Brauerkrieg</strong> zu einer <strong>tiefgreifenden politischen Intrige</strong> macht, die <strong>Aldrimar</strong> nachhaltig beeinflusst.</p><p>Die <strong>Goldglanz-Brauerei</strong> pflegt <strong>strategische Kooperationen</strong> und nutzt <strong>geschickte Allianzen</strong>, um ihre <strong>wirtschaftliche Macht</strong> im <strong>Osten Aldrimars</strong> zu festigen und ihre <strong>Konkurrenz zu schwächen</strong>. Eine <strong>wichtige Partnerschaft</strong> haben sie mit den <strong>Schattenherzen</strong>, die ihnen <strong>Land und Platz</strong> zur <strong>Erweiterung ihrer Brauereistandorte</strong> bieten. Durch diese <strong>wirtschaftliche Zusammenarbeit</strong> sichern sich die <strong>Goldglanz</strong> <strong>strategische Standorte</strong> und <strong>versorgen</strong> die <strong>Schattenherzen</strong> im Gegenzug mit <strong>exklusiven Handelsverträgen und Unterstützung</strong> in ihren <strong>Territorien</strong>. Diese <strong>gegenseitige Förderung</strong> hat die <strong>wirtschaftliche Macht</strong> beider Clans gestärkt und ihre <strong>Einflusssphäre im Osten</strong> erheblich erweitert.</p>\n<p>Gleichzeitig nutzen die <strong>Goldglanz</strong> die <strong>Kampfgeborenen aus Rorikshall</strong>, um ihre <strong>Hauptkonkurrenten, die Schwarzdorn</strong>, zu schwächen. Die <strong>Kampfgeborenen</strong> sind <strong>Erzfeinde der Schwarzdorn</strong> und <strong>bekämpfen sie auf eigenem Boden</strong> in <strong>Rorikshall</strong>, was den <strong>Goldglanz</strong> die <strong>Möglichkeit</strong> gibt, ihre <strong>Rivalen zu untergraben</strong>, ohne <strong>offen in den Konflikt</strong> verwickelt zu sein. Dabei <strong>unterstützen</strong> sie die <strong>Kampfgeborenen heimlich</strong> mit <strong>Ressourcen und Informationen</strong>, während sie nach außen <strong>neutral</strong> bleiben und ihren <strong>Handel und Einfluss</strong> weiter ausbauen. Diese <strong>geschickte Manipulation</strong> der <strong>lokalen Fehden</strong> ermöglicht es den <strong>Goldglanz</strong>, die <strong>Schwarzdorn</strong> zu <strong>schwächen</strong>, ohne sich <strong>direkt zu exponieren</strong>, und <strong>ihre eigene Macht</strong> zu festigen.</p>\n<p>Ihre <strong>erbitterte Konkurrenz</strong> zur <strong>Schwarzdorn-Brauerei</strong> bleibt jedoch <strong>unverändert stark</strong>, da <strong>Schwarzdorn den Westen dominiert</strong> und die <strong>Goldglanz</strong> im <strong>Osten</strong> herausfordert. Der <strong>Konflikt</strong> wird durch <strong>wirtschaftliche Rivalität, politische Intrigen</strong> und <strong>verdeckte Auseinandersetzungen</strong> ausgetragen, doch durch die <strong>wirtschaftliche Allianz mit den Schattenherzen</strong> und die <strong>geschickte Ausnutzung der Kampfgeborenen</strong> halten die <strong>Goldglanz</strong> ihre <strong>Position im Osten</strong> und <strong>kämpfen weiterhin um die Vorherrschaft</strong> im <strong>Brauereigeschäft Aldrimars</strong>.</p>",
+        "commentSequence": []
+      }
+    ]
   }
 ];
   const tab = 'Gilden & Zünfte', category = 'Brauer & Brenner';

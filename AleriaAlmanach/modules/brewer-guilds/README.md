@@ -1,4 +1,4 @@
-# Teyrngarch und Penderyn
+# Brauer und Brenner · Teyrngarch, Penderyn, Schwarzdorn und Goldenglanz
 
 Die Module stehen unter **Gilden & Zünfte → Brauer & Brenner**, neben Gortach. Bekannte Getränke stehen untereinander im Template Handelsgut & Tiere. Partnerprodukte erhalten einen eigenen Katalog; jedes Stammsortiment enthält fünf noch unbelegte, kompakte Plätze.
 
@@ -20,7 +20,32 @@ Das Netzwerk-Template ergänzt die gewünschten Templates für die überlieferte
 
 ## Quellen und Familie
 
-`sources/*.html` bewahrt die beiden eingefügten Vorlagen unverändert. `sources/*.json` enthält ihre Textblöcke mit bereinigter Formatierung. Die Tests sichern sämtliche längeren Inhaltsabsätze. Die beiden Modelle ordnen diese Quellen vorhandenen Templates zu; `brewery-pages.mjs` kapselt gemeinsame Seitenerzeugung. `brewer-guilds-data.js` wird erzeugt, nicht manuell gepflegt. Die Registrierung ergänzt fehlende IDs, ohne vorhandene redaktionelle Bearbeitungen zu überschreiben.
+`sources/*.html` bewahrt die vier eingefügten Vorlagen unverändert. `sources/*.json` enthält ihre Textblöcke mit bereinigter Formatierung. Die Tests sichern sämtliche längeren Inhaltsabsätze. Die vier Modelle ordnen diese Quellen vorhandenen Templates zu; `brewery-pages.mjs` kapselt gemeinsame Seitenerzeugung. `brewer-guilds-data.js` wird erzeugt, nicht manuell gepflegt. Die Registrierung ergänzt fehlende IDs, ohne vorhandene redaktionelle Bearbeitungen zu überschreiben.
+
+## Aldrimar-Ergänzung vom 14. Oktober 2026
+
+Schwarzdorn und Goldenglanz erhalten jeweils acht Seiten: Ursprung, Gildenfamilie, Hierarchie, Betrieb, Standortnetz, Stammsortiment, Partnerbier und Bündnisse. Maven führt Schwarzdorns Brauerei; Tormund bleibt Clanoberhaupt. Die ausführliche Goldenglanz-Hierarchie benennt den lebenden Wulfgar Goldglanz (1668), Nvjar, Tyrkir und Urdin sowie Ulfrik und Isbrand Schattenherz. Handwerksämter werden nicht aus Familienrollen abgeleitet. Die ungesicherte Herkunft Gweldas wird sichtbar belassen; Fridthjolf wird anhand des Stammbaums als Fridthjof Freiwinter zugeordnet. Originalquellen bleiben erhalten.
+
+Frostkamm bleibt eine Freiwinter-Eigenmarke im Schwarzdorn-Vertrieb, Hjerte eine Schattenherz-Eigenmarke im östlichen Bündnis. Jedes Stammsortiment zeigt zwei Mets, zwei Hausbiere und fünf freie Plätze; jedes Partnersortiment enthält sein benanntes Clanbier. Unbenannte `??`-Produkte erzeugen keine Angebote. Die beiden Unternehmen stehen im Markt unter Brauer & Brenner, Roriksheim bzw. Krähenmoor.
+
+| Getränk | Krug 0,5 l · KT | Flasche 1 l · KT | Fass 50 l · KT |
+| --- | ---: | ---: | ---: |
+| Schwarzdorn Met | 7 | 14 | 700 |
+| Stachelkrone | 2 | 4 | 200 |
+| Frostkamm · Freiwinter | 4 | 8 | 400 |
+| Schwarzflut | 1,5 | 3 | 150 |
+| Dornblut | 0,5 | 1 | 50 |
+| Honigbreu Met | 6 | 12 | 600 |
+| Honigbreu · Lichtgold | 3 | 6 | 300 |
+| Hjerte · Schattenherz | 3,5 | 7 | 350 |
+| Kranzgold | 2,5 | 5 | 250 |
+| Stillgold | 0,5 | 1 | 50 |
+
+Die neuen Flaschenpreise folgen unverändert den Vorlagen. Met verwendet dieselben bestätigten Gebindegrößen wie Bier; `buildDrinkPricing` bleibt die gemeinsame Mengenberechnung. Die frühere Erhöhung der 22 vorhandenen Getränke wird nicht auf diese später hinzugefügten Quellen angewandt. Zehn Getränke erzeugen 30 neue Marktangebote; einschließlich Gortach umfasst der Brauereibestand nun 105 Angebote.
+
+Zehn Produktbilder und zwei originale Brauereizeichen wurden unverändert lokal übernommen. Honigbreu behält sein Quadratformat; Stillgold und Dornblut verwenden wie in den Vorlagen dasselbe Ausgangsbild. Sechs neue Szenen im Anime-Stil Tales of Xillia/Frieren zeigen Geirmundr, Maven, Thrand, Fridthjof, Wulfgar, Nvjar, Tyrkir, Urdin, Ulfrik und Isbrand anhand ihrer angesehenen Originalporträts. Die zusätzliche Hand im Goldenglanz-Betriebsbild wurde auf Nutzerhinweis entfernt. [aldrimar-image-prompts.json](aldrimar-image-prompts.json) dokumentiert Prompts, Referenzen, Originalbildadressen, Prüfsummen und die gewählte Korrekturfassung. Alle verwendeten Bilder liegen unter `public/assets/brewer-guilds/`.
+
+Die kaufbaren Anbietermodule benötigen zusätzlich ihre gespeicherten Quellen im Modulmanifest. `node firebase/scripts/content/publish-aldrimar-breweries.mjs` prüft die beiden neuen Quellen und alle 30 Angebote ohne Schreibzugriff. Nach Veröffentlichung der statischen Assets speichert derselbe Aufruf mit `--apply` ausschließlich die zwei Module und die dazugehörigen Manifestfelder, mit verschlüsselter Sicherung und Versionsbedingungen. Abweichende bereits gespeicherte Bearbeitungen führen zum Abbruch und müssen zuerst gezielt abgeglichen werden.
 
 Familienrollen, Originalwappen und Porträts stammen aus den Stammbäumen. Bei Teyrngarch widerspricht die kurze Angabe „Anführer: Gaenor“ der ausführlichen Rangordnung: Diese bindet das Gildenoberhaupt an das Hausoberhaupt Lugh. Die Darstellung folgt der ausführlichen Ordnung: Lugh an der Spitze, Gaenor als führender Familienbrauer, Gandwy als Geselle. Taredd und Sulwen erscheinen als Gründer ohne erfundene Jahreszahlen.
 

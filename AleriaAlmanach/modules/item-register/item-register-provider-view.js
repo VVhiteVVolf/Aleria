@@ -1,4 +1,4 @@
-import { registerLists, groupProviders } from './item-register-providers.js?v=20261007-provider-groups-v1';
+import { registerLists, groupProviders } from './item-register-providers.js?v=20261014-aldrimar-brewers-v1';
 import { escape, listEmblem } from './item-register-markup.js?v=20261007-provider-groups-v1';
 
 const emblem = entry => listEmblem({ images: [entry.image] });

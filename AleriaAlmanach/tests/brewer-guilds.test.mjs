@@ -50,14 +50,14 @@ test('Penderyn retains the protected house name ahead of the bottling name', () 
   assert.match(strings(entries[1]).join('\n'), /Haus- und Traditionsname/);
 });
 
-test('registration adds both guilds once and respects already edited modules', () => {
+test('registration adds all four guilds once and respects already edited modules', () => {
   const context = vm.createContext({ SECTIONS: [] });
   const script = readFileSync(new URL('brewer-guilds-data.js', root), 'utf8');
   vm.runInContext(script, context);
   context.SECTIONS[0].entries[0].title = 'Edited';
   vm.runInContext(script, context);
   assert.equal(context.SECTIONS.length, 1);
-  assert.equal(context.SECTIONS[0].entries.length, 2);
+  assert.equal(context.SECTIONS[0].entries.length, 4);
   assert.equal(context.SECTIONS[0].entries[0].title, 'Edited');
 });
 

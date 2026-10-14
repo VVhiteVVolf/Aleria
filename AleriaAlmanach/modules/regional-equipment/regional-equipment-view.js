@@ -1,5 +1,5 @@
 import { REGIONAL_EQUIPMENT_SECTION, REGIONAL_EQUIPMENT_LABEL, regionalTerritory, regionalChildren, regionalHouses, regionalHouse, regionalAncestors } from './regional-equipment-model.js?v=20261006-regional-equipment-v2';
-import { escape, results } from '../item-register/item-register-view.js?v=20261006-regional-equipment-v2';
+import { escape, results } from '../item-register/item-register-view.js?v=20261014-aldrimar-brewers-v1';
 const choose = (action, id, content, className = '') => `<button type="button" class="${className}" data-ir-action="${action}" data-id="${escape(id)}">${content}</button>`;
 const emblem = (entry, type) => entry.image ? `<img class="re-emblem re-emblem-${type}" src="${escape(entry.image)}" alt="${escape(entry.name)} – Wappen" loading="lazy" decoding="async">` : '<span class="re-no-emblem" aria-hidden="true">◇</span>';
 const countFor = (items, houseIds) => new Set(items.filter(item => houseIds.includes(item.houseArmor?.houseId)).map(item => item.houseArmor.houseId)).size;

@@ -1,9 +1,9 @@
 import { REGISTER_CATEGORIES, REGISTER_SECTIONS, categoryLabel, canManageCharacter } from './item-register-model.js?v=20261006-regional-equipment-v2';
 import { formatCopper, formatPrice, moneyTotal } from './item-register-money.js?v=20260919-shop-v1';
 import { resalePrice } from './item-register-trade.js?v=20261006-regional-equipment-v2';
-import { registerLists } from './item-register-providers.js?v=20261007-provider-groups-v1';
+import { registerLists } from './item-register-providers.js?v=20261014-aldrimar-brewers-v1';
 import { escape, safeImage, listEmblem } from './item-register-markup.js?v=20261007-provider-groups-v1';
-import { providerOverview, providerNavigation } from './item-register-provider-view.js?v=20261007-provider-groups-v1';
+import { providerOverview, providerNavigation } from './item-register-provider-view.js?v=20261014-aldrimar-brewers-v1';
 export { escape, safeImage };
 import { describeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
 

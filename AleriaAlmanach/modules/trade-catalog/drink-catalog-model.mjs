@@ -1,9 +1,11 @@
 import { toMinor } from '../item-register/item-register-money.js';
 
-// Editorial price derivation shared by the three brewery catalogues. Values are
+// Editorial price derivation shared by the brewery catalogues. Values are
 // calculated in integer Pfennige; the established register owns currency parsing.
+const brewedDrinkMeasure = Object.freeze({ servingMl: 500, bottleMl: 1000, caskMl: 50000, servingLabel: 'Krug', servingUnit: '0,5 l', bottleUnit: '1 l' });
 export const DRINK_MEASURES = Object.freeze({
-  beer: { servingMl: 500, bottleMl: 1000, caskMl: 50000, servingLabel: 'Krug', servingUnit: '0,5 l', bottleUnit: '1 l' },
+  beer: brewedDrinkMeasure,
+  mead: brewedDrinkMeasure,
   whisky: { servingMl: 40, bottleMl: 700, caskMl: 50000, servingLabel: 'Glas', servingUnit: '4 cl', bottleUnit: '0,7 l' }
 });
 

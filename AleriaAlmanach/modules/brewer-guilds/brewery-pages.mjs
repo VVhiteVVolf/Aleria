@@ -13,15 +13,16 @@ export function storyPage(title, asset, description) {
 }
 
 export function drinkItem(product, { mark, origin, kind = 'beer', priceBuilder = buildBreweryDrinkPricing }) {
+  const drinkKind = product.kind || kind;
   return {
-    id: product.id, category: kind, status: 'available', title: product.name,
+    id: product.id, category: drinkKind, status: 'available', title: product.name,
     subtitle: product.subtitle, image: `${ASSETS}/${product.id}.png`, imageFormat: product.imageFormat || 'portrait',
     imageFit: 'contain', imagePosition: 'center', imageHeight: 420,
-    badge: product.badge || (kind === 'beer' ? 'Hausbier' : 'Whisky'), tags: product.tags,
+    badge: product.badge || (drinkKind === 'whisky' ? 'Whisky' : drinkKind === 'mead' ? 'Hausmet' : 'Hausbier'), tags: product.tags,
     descriptionTitle: 'Charakter & Herkunft', description: product.description,
     featuresTitle: 'Steckbrief', features: [], originTitle: 'Herkunft', origin: product.origin || origin,
     usageTitle: 'Am Tisch', usageTags: product.occasions || product.tags,
-    ...priceBuilder(kind, product.servingCopper),
+    ...priceBuilder(drinkKind, product.servingCopper),
     conditionsTitle: 'Verfügbarkeit & Besonderheiten', conditions: product.conditions || 'Stammsortiment des Hauses.',
     attributes: [], sealImage: mark
   };
@@ -33,7 +34,7 @@ export function cataloguePage(title, products, options) {
     title, subtitle: options.subtitle, headerIcon: options.mark,
     noteIcon: '◈', noteTitle: 'Glas / Krug · Flasche · Fass',
     noteText: kind === 'beer' ? 'Krug 0,5 l · Flasche 1 l · Fass 50 l. Alle Preise in Kupfertalern.' : 'Glas 4 cl · Flasche 0,7 l · Fass 50 l. Alle Preise in Kupfertalern.',
-    categories: [{ id: kind, label: options.partner ? 'Partnerbiere · Getränke' : kind === 'beer' ? 'Bier · Getränke' : 'Whisky · Getränke' }],
+    categories: options.categories || [{ id: kind, label: options.partner ? 'Partnerbiere · Getränke' : kind === 'whisky' ? 'Whisky · Getränke' : kind === 'mead' ? 'Met · Getränke' : 'Bier · Getränke' }],
     allLabel: options.partner ? 'Alle Partnerprodukte' : 'Gesamtes Sortiment', searchPlaceholder: 'Nach Name, Charakter oder Herkunft suchen …', filterLabel: 'Suche',
     items: [...products.map(product => drinkItem(product, options)), ...(options.partner ? [] : reservedDrinkSlots(kind))], footerCards: []
   } };

@@ -1,0 +1,164 @@
+{
+  "createdAt": "2026-10-14",
+  "tool": "built-in image_gen",
+  "stylePreset": "anime-scene-portrait",
+  "aspectRatio": "2:3",
+  "originalAssets": [
+    {
+      "id": "schwarzdorn-brauzeichen",
+      "source": "https://i.imgur.com/q4sxt2b.png",
+      "width": 489,
+      "height": 510,
+      "sha256": "20af3fa7e3e79eed7bc78a66b2539ded8b852ed8d7939aaf0c5bca6d9ba6ca96"
+    },
+    {
+      "id": "met-schwarzdorn",
+      "source": "https://i.imgur.com/kKYCvvL.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "e7cc8e11a9d8bed83ba4f4593966441403f69527f7351e6002b02415bd829ca4"
+    },
+    {
+      "id": "met-stachelkrone",
+      "source": "https://i.imgur.com/nwnPmqu.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "16fd04e4dd33c7b69b1b64e49c53be8595ac5890a8ee783e256e0fcac4eb1631"
+    },
+    {
+      "id": "bier-frostkamm",
+      "source": "https://i.imgur.com/akAyGo6.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "10d9b4e5bb3584c403c5941bb8b41e92e4827cf797bb7dd1d21a10639a90e089"
+    },
+    {
+      "id": "bier-schwarzflut",
+      "source": "https://i.imgur.com/ZHX6TX3.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "94caa7c87ce1d8bc4af842b7ea51aeede4846049271a3962e67595bab62749d7"
+    },
+    {
+      "id": "bier-dornblut",
+      "source": "https://i.imgur.com/MaJ7Fj7.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "fe9b101ced271bd2b7dbd8d5f44d4160d28a0ce87bb2ca7c2cc881b8247a140a"
+    },
+    {
+      "id": "goldenglanz-brauzeichen",
+      "source": "https://i.imgur.com/5fEECK2.png",
+      "width": 482,
+      "height": 518,
+      "sha256": "b45a47f97619e0fad58bb02b7ace79cd11fa23745306c927ce658fa52c9a5d73"
+    },
+    {
+      "id": "met-honigbreu",
+      "source": "https://i.imgur.com/jcz12fF.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "2d6a5d3fc201b2692e39268dfdf3ee9a28fbf8f319098bb898130e7413946f55"
+    },
+    {
+      "id": "met-lichtgold",
+      "source": "https://i.imgur.com/RGStlMZ.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "64fe3c557c1f939a2cd48ee03da5c67f358fd01c4d401432a717538a45d90797"
+    },
+    {
+      "id": "bier-hjerte",
+      "source": "https://i.imgur.com/2gWWwhn.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "02ffc67a160639d4b6511fdc3a2443ae35854ffcee05adae5cf02993c388ccc6"
+    },
+    {
+      "id": "bier-kranzgold",
+      "source": "https://i.imgur.com/5JBxcQp.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "07ffa21b135c42a525070338fc5a5987f4978f3fcaa8d191dfa1b3d1ecb3ba15"
+    },
+    {
+      "id": "bier-stillgold",
+      "source": "https://i.imgur.com/MaJ7Fj7.png",
+      "width": 408,
+      "height": 612,
+      "sha256": "fe9b101ced271bd2b7dbd8d5f44d4160d28a0ce87bb2ca7c2cc881b8247a140a"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "schwarzdorn-aufstieg",
+      "file": "public/assets/brewer-guilds/schwarzdorn-aufstieg.png",
+      "references": [
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-schwarzdorn/geirmundr-schwarzdorn.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n\nUse case: illustration-story. Create ONE new vertical 2:3 scene illustration for an Aleria brewery module. The attached portraits are identity and clothing references, not compositions to copy.\nGeirmundr Schwarzdorn at the humble beginning of his brewery. Use reference 1 for his exact face, shoulder-length golden-blond hair, green eyes, short blond stubble, green tunic with gold plant embroidery, brown cloak and rose clasp. Show him three-quarter-length in a modest northern timber brewery courtyard, warmly inspecting a wooden brewing vat with a brass tasting mug. One barrel, an understated thatched brewhouse and a glimpse of barley in the distance. Quiet pride and entrepreneurial beginnings. No other identifiable family characters, no palace.\n\nKeep a quiet, uncluttered composition with only a few necessary props. Clear expressive anime faces, crisp linework and flat cel shading, simple soft anime surfaces. Natural colors; no sepia filter, no photorealism, no painterly texture, no realistic material rendering. No text, lettering, labels, watermarks or image borders. Full illustrated background, not transparent.",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11628-418c-7cd3-8e62-9abc9630f230\\exec-b38ed7f2-3f18-4695-a768-c32578b5e30d.png",
+      "selectedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11628-418c-7cd3-8e62-9abc9630f230\\exec-b38ed7f2-3f18-4695-a768-c32578b5e30d.png"
+    },
+    {
+      "id": "schwarzdorn-handwerk",
+      "file": "public/assets/brewer-guilds/schwarzdorn-handwerk.png",
+      "references": [
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-schwarzdorn/maven-schwarzdorn.png",
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-schwarzdorn/thrand-schwarzdorn.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n\nUse case: illustration-story. Create ONE new vertical 2:3 scene illustration for an Aleria brewery module. The attached portraits are identity and clothing references, not compositions to copy.\nMaven Schwarzdorn and Thrand Schwarzdorn inspect a delivery inside their brewery. Reference 1 is Maven: blonde hair in a high neat bun, sharp green eyes, composed authoritative face, dark emerald-green noble gown with gold trim and rose pendant. Reference 2 is Thrand: rugged light-brown/ash-blond hair and beard, stern face, dark green and brown armor with gold trim and a fur collar. Preserve both identities and clothes. Maven holds an open delivery ledger while Thrand points toward a sealed oak cask. A small bowl of gooseberries and a honey jar indicate the mead ingredients. Only these two people and a calm timber brewhouse background, late afternoon window light.\n\nKeep a quiet, uncluttered composition with only a few necessary props. Clear expressive anime faces, crisp linework and flat cel shading, simple soft anime surfaces. Natural colors; no sepia filter, no photorealism, no painterly texture, no realistic material rendering. No text, lettering, labels, watermarks or image borders. Full illustrated background, not transparent.",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11628-418c-7cd3-8e62-9abc9630f230\\exec-9ff66c39-6826-4202-b5e6-a4f7765892d2.png",
+      "selectedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11628-418c-7cd3-8e62-9abc9630f230\\exec-9ff66c39-6826-4202-b5e6-a4f7765892d2.png"
+    },
+    {
+      "id": "schwarzdorn-buendnisse",
+      "file": "public/assets/brewer-guilds/schwarzdorn-buendnisse.png",
+      "references": [
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-schwarzdorn/maven-schwarzdorn.png",
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-freiwinter/fridthjof-freiwinter.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n\nUse case: illustration-story. Create ONE new vertical 2:3 scene illustration for an Aleria brewery module. The attached portraits are identity and clothing references, not compositions to copy.\nMaven Schwarzdorn and Fridthjof Freiwinter discuss their western brewery alliance across a small oak table in a northern tavern. Reference 1 is Maven: exact blonde high bun, green eyes, dark green and gold noble gown, rose pendant, calculating calm. Reference 2 is Fridthjof: elderly man with blue eyes, long gray hair, generous curled gray moustache and beard, gold circlet with blue stones, blue and black fur cloak, gray tunic, wolf-medallion and gold chain. Preserve both identities. He places a plain sealed contract beside two modest drinking cups while Maven considers it. Show their faces clearly in three-quarter view. Restrained candlelight and one shuttered window, atmosphere of trust tempered by political calculation. No crowd, no weapons drawn.\n\nKeep a quiet, uncluttered composition with only a few necessary props. Clear expressive anime faces, crisp linework and flat cel shading, simple soft anime surfaces. Natural colors; no sepia filter, no photorealism, no painterly texture, no realistic material rendering. No text, lettering, labels, watermarks or image borders. Full illustrated background, not transparent.",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11628-418c-7cd3-8e62-9abc9630f230\\exec-dfa1e1a1-96df-40ed-95f6-31ee3f49d831.png",
+      "selectedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11628-418c-7cd3-8e62-9abc9630f230\\exec-dfa1e1a1-96df-40ed-95f6-31ee3f49d831.png"
+    },
+    {
+      "id": "goldenglanz-aufstieg",
+      "file": "public/assets/brewer-guilds/goldenglanz-aufstieg.png",
+      "references": [
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-goldglanz/wulfgar-1668-goldglanz.png",
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-goldglanz/nvjar-goldglanz.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n\nUse case: illustration-story. Create ONE new vertical 2:3 scene illustration for an Aleria brewery module. The attached portraits are identity and clothing references, not compositions to copy.\nWulfgar Goldglanz and Nvjar Goldglanz oversee the thriving eastern brewery courtyard. Reference 1 is elderly Wulfgar: long white-gray hair in a low ponytail, angular weathered face, gray moustache and pointed beard, dark brown and black noble robes with gold knotwork and a golden goblet emblem. Reference 2 is Nvjar: swept-back ash-gray shoulder-length hair, thin moustache and pointed beard, narrow sly eyes, brown-black clothes with gold scrollwork and one ornate golden shoulder plate, goblet emblem. Preserve both identities. Wulfgar holds a ledger while Nvjar gestures toward two neatly stacked casks and a loaded handcart. A simple northern timber brewery, warm clear morning light. These are contemporary overseers; do not depict them as named founders or as kings. Only two characters, restrained props.\n\nKeep a quiet, uncluttered composition with only a few necessary props. Clear expressive anime faces, crisp linework and flat cel shading, simple soft anime surfaces. Natural colors; no sepia filter, no photorealism, no painterly texture, no realistic material rendering. No text, lettering, labels, watermarks or image borders. Full illustrated background, not transparent.",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11628-418c-7cd3-8e62-9abc9630f230\\exec-f04a38bc-0df5-4c54-b85a-f2440822dde9.png",
+      "selectedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11628-418c-7cd3-8e62-9abc9630f230\\exec-f04a38bc-0df5-4c54-b85a-f2440822dde9.png"
+    },
+    {
+      "id": "goldenglanz-handwerk",
+      "file": "public/assets/brewer-guilds/goldenglanz-handwerk.png",
+      "references": [
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-goldglanz/tyrkir-goldglanz.png",
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-goldglanz/urdin-goldglanz.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n\nUse case: illustration-story. Create ONE new vertical 2:3 scene illustration for an Aleria brewery module. The attached portraits are identity and clothing references, not compositions to copy.\nTyrkir Goldglanz and Urdin Goldglanz examine a tasting of golden Honigbreu in a quiet eastern brewery hall. Reference 1 is Tyrkir: mature broad man with swept gray-blond hair, full short gray-blond beard, amber eyes, simple gold circlet, black noble robes and black fur collar with gold knotwork and goblet emblem. Reference 2 is Urdin: short light-brown hair and short beard, stern gray-green eyes, dark armor with gold trim, black fur collar and goblet emblem. Preserve their exact visual identities. Tyrkir lifts a small honey-colored tasting cup while Urdin studies the second cup; a honey pot, one apple and a closed cask occupy the table. They are board members inspecting the product, not invented master brewers. Warm window light, simple oak beams, no busy machinery or crowd.\n\nKeep a quiet, uncluttered composition with only a few necessary props. Clear expressive anime faces, crisp linework and flat cel shading, simple soft anime surfaces. Natural colors; no sepia filter, no photorealism, no painterly texture, no realistic material rendering. No text, lettering, labels, watermarks or image borders. Full illustrated background, not transparent.",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11628-418c-7cd3-8e62-9abc9630f230\\exec-46f04b3d-6a03-4131-9ea4-40f944a4d487.png",
+      "correction": {
+        "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11628-418c-7cd3-8e62-9abc9630f230\\exec-bba0c0fc-cee5-4fcf-928f-55dadb2cff78.png",
+        "prompt": "Edit only the anatomical defect in this image. The younger armored man on the right, Urdin Goldglanz, has an extra detached gloved hand/fist under his chin. REMOVE that entire gloved fist beneath his chin and its stray overlapping arm segment; restore his unobstructed lower beard, neck, black collar, gold-trimmed chest armor and fur where that hand was. Keep exactly one natural visible arm/hand for him: the existing gloved hand holding the small honey-colored tasting glass, with a continuous anatomically correct forearm connected to his near shoulder. His other arm rests naturally out of view behind the barrel/table; do not add a new visible hand. No hand touching his face. Preserve all other pixels/composition as closely as possible: both men's exact faces, hair, costumes, pose of the older man lifting his glass, all goblet heraldry, the cups, honey pot, apple, oak barrel, tavern windows and background, light, colors and the existing clean anime linework/cel shading. Remain one vertical 2:3 image with the same framing. No text or additional objects."
+      },
+      "selectedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11628-418c-7cd3-8e62-9abc9630f230\\exec-bba0c0fc-cee5-4fcf-928f-55dadb2cff78.png"
+    },
+    {
+      "id": "goldenglanz-buendnisse",
+      "file": "public/assets/brewer-guilds/goldenglanz-buendnisse.png",
+      "references": [
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-goldglanz/wulfgar-1668-goldglanz.png",
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-kampfgeborene/ulfrik-schattenherz.png",
+        "E:/Aleria/Stammbäume/assets/images/portraits/haus-schattenherz/isbrand-schattenherz.png"
+      ],
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n\nUse case: illustration-story. Create ONE new vertical 2:3 scene illustration for an Aleria brewery module. The attached portraits are identity and clothing references, not compositions to copy.\nAn intimate alliance meeting between Wulfgar Goldglanz, Ulfrik Schattenherz and Isbrand Schattenherz in a northern timber tavern. Reference 1 is Wulfgar: elderly angular gray-haired man, low ponytail, pointed gray beard, brown-black gold-trimmed robes and goblet emblem. Reference 2 is Ulfrik: elderly broad man with shoulder-length gray hair and full gray beard, stern face, dark circlet, black and gold armor, black fur collar, broken-heart breastplate emblem. Reference 3 is Isbrand: broad stocky blond man with a large blond beard, swept-back blond hair, dark headband with raven shield clasp, black and gold broken-heart armor and black fur collar, confident lively face. Keep all three distinctly recognizable and preserve attire. Wulfgar and Ulfrik discuss a rolled trading agreement on a small table; Isbrand listens with a wooden beer mug. Three faces readable in a compact triangular composition. A single warm lamp and softly suggested wooden wall, no crowd, no combat, no exaggerated sneaking.\n\nKeep a quiet, uncluttered composition with only a few necessary props. Clear expressive anime faces, crisp linework and flat cel shading, simple soft anime surfaces. Natural colors; no sepia filter, no photorealism, no painterly texture, no realistic material rendering. No text, lettering, labels, watermarks or image borders. Full illustrated background, not transparent.",
+      "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11628-418c-7cd3-8e62-9abc9630f230\\exec-0b2049b4-67cb-454f-bfa8-2eba482d38aa.png",
+      "selectedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a11628-418c-7cd3-8e62-9abc9630f230\\exec-0b2049b4-67cb-454f-bfa8-2eba482d38aa.png"
+    }
+  ]
+}

@@ -16,6 +16,8 @@ export const PROVIDER_REGIONS = Object.freeze({
   sonnenkueste: { id: 'sonnenkueste', label: 'Sonnenküste', realm: 'Königreich Cenyr', image: `${regionalArt}sonnenkueste.png` },
   'vortigerns-ruh': { id: 'vortigerns-ruh', label: 'Vortigerns Ruh', realm: 'Königreich Cenyr', image: `${regionalArt}vortigerns-ruh.png` },
   'tir-na-tonn': { id: 'tir-na-tonn', label: 'Tír na Tonn', realm: 'Fürstentum Leitheach', image: `${regionalArt}Leitheach/tir-na-tonn.png` },
+  roriksheim: { id: 'roriksheim', label: 'Roriksheim', realm: 'Königreich Aldrimar', image: `${regionalArt}aldrimar-roriksheim.png` },
+  kraehenmoor: { id: 'kraehenmoor', label: 'Krähenmoor', realm: 'Königreich Aldrimar', image: `${regionalArt}aldrimar-kraehenmoor.png` },
   unassigned: { id: 'unassigned', label: 'Ohne Ortszuordnung', realm: '', image: './public/assets/dashboard/compass.svg' }
 });
 
@@ -23,6 +25,8 @@ const directory = Object.freeze({
   'gortach-brauerei': { tradeId: 'brewers', regionId: 'tir-na-tonn', location: 'Broch an Ear' },
   'teyrngarch-brauerzunft': { tradeId: 'brewers', regionId: 'sonnenkueste', location: 'Aberon' },
   'penderyn-brauer-destillierzunft': { tradeId: 'brewers', regionId: 'vortigerns-ruh', location: 'Drakenburg' },
+  'schwarzdorn-brauerei': { tradeId: 'brewers', regionId: 'roriksheim', location: 'Rorikshall' },
+  'goldenglanz-brauerei': { tradeId: 'brewers', regionId: 'kraehenmoor', location: 'Silberquell · Schimmerküste' },
   'celtigerns-letzte-rast': { tradeId: 'inns', regionId: 'celtigerns-wacht', location: 'Gwynthor · Adelsdistrikt', image: `${gwynthorArt}celtigerns-letzte-rast.png` },
   'modul-1781474092957': { tradeId: 'inns', regionId: 'celtigerns-wacht', location: 'Gwynthor · Osttor & Hafen', image: `${gwynthorArt}krumme-kanne.png` },
   'zum-roten-drachen-taverne': { tradeId: 'inns', regionId: 'celtigerns-wacht', location: 'Morddwr · Llamreis Ankunft' },

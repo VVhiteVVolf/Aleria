@@ -1,6 +1,6 @@
 // Provider artwork is presentation metadata. It must not change offer IDs,
 // prices or the revisions used to validate a purchase.
-import { providerDirectoryEntry, providerImage, PROVIDER_TRADES } from './item-register-provider-directory.js?v=20261007-provider-groups-v1';
+import { providerDirectoryEntry, providerImage, PROVIDER_TRADES } from './item-register-provider-directory.js?v=20261014-aldrimar-brewers-v1';
 
 export function moduleProviders(entries = []) {
   return entries.filter(entry => entry?.id).map(entry => ({
