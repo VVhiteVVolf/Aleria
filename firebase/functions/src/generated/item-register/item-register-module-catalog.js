@@ -83,6 +83,7 @@ function tradeRows(page, pageIndex) {
     if (item.status === 'planned') return [];
     const category = (catalog.categories || []).find(value => value.id === item.category)?.label || item.category;
     const facts = [
+      { label: 'Portion / Einheit', value: text(item.unit) },
       { label: item.originTitle || 'Herkunft', value: text(item.origin) },
       { label: item.featuresTitle || 'Eigenschaften', value: (item.features || []).map(feature => text(feature.text)).filter(value => value && value !== 'Neue Eigenschaft').join(' · ') },
       { label: item.usageTitle || 'Verwendung', value: (item.usageTags || []).join(', ') },
@@ -90,7 +91,7 @@ function tradeRows(page, pageIndex) {
       { label: 'Preishinweis', value: text(item.priceNote) }
     ].filter(fact => fact.value);
     const row = { title: text(item.title), type: text(item.subtitle), category, description: text(item.description), details: '',
-      image: text(item.image), unit: '', availability: '', price: unique([text(item.priceMin), text(item.priceMax)]).join(' - '),
+      image: text(item.image), unit: text(item.unit), availability: '', price: unique([text(item.priceMin), text(item.priceMax)]).join(' - '),
       currency: text(item.currencyLabel || item.currencyCode), tags: unique([...(item.tags || []), ...(item.usageTags || [])]),
       attributes: item.attributes || [], facts, source: { kind: 'trade-catalog', pageIndex, pageTitle: text(page.pageTitle || page.title), itemId: text(item.id), itemIndex }
     };

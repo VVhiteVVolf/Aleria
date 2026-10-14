@@ -47,6 +47,7 @@ import { HOUSE_BIOGRAPHY as craigddu } from "../../../../Familien Häuser und Cl
 import { HOUSE_BIOGRAPHY as haus_cymrath_o_traethlan } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cymrath_OTraethlan/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_draenmelyn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Draenmelyn/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_dubhan_gwynthor } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Dubhan/haus.biography.mjs?v=gwendolyn-20260911h";
+import { HOUSE_BIOGRAPHY as haus_dubhdarach } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Dubhdarach/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_eneiniog } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Eneiniog/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_gelyn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gelyn/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_gostyn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gostyn/haus.biography.mjs?v=gwendolyn-20260911h";
@@ -56,9 +57,11 @@ import { HOUSE_BIOGRAPHY as haus_maerllys } from "../../../../Familien Häuser u
 import { HOUSE_BIOGRAPHY as haus_pendrwn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Pendrwn/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_rhyddid } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Rhyddid/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_sgrechiwr } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Sgrechiwr/haus.biography.mjs?v=gwendolyn-20260911h";
+import { HOUSE_BIOGRAPHY as haus_svathamar } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Svathamar/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_swyll } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Swyll/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_tlawd } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Tlawd/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_tonnarth } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Tonnarth/haus.biography.mjs?v=gwendolyn-20260911h";
+import { HOUSE_BIOGRAPHY as haus_trevoryn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Trevoryn/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_ysgrif } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Ysgrif/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_gwared } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Gwared/haus.biography.mjs?v=gwendolyn-20260911h";
 import { HOUSE_BIOGRAPHY as haus_madryn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Madryn/haus.biography.mjs?v=gwendolyn-20260911h";
@@ -118,6 +121,7 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-cymrath-o-traethlan": Object.freeze({ sourceRevision: 2, biography: haus_cymrath_o_traethlan, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-draenmelyn": Object.freeze({ sourceRevision: 9, biography: haus_draenmelyn, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-dubhan-gwynthor": Object.freeze({ sourceRevision: 4, biography: haus_dubhan_gwynthor, replacedDefaultFingerprints: Object.freeze(["1994:dc650542:ef5cf150","2101:f2d15aee:dcb6a848"]) }),
+  "haus-dubhdarach": Object.freeze({ sourceRevision: 1, biography: haus_dubhdarach, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-eneiniog": Object.freeze({ sourceRevision: 2, biography: haus_eneiniog, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-gelyn": Object.freeze({ sourceRevision: 2, biography: haus_gelyn, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-gostyn": Object.freeze({ sourceRevision: 2, biography: haus_gostyn, replacedDefaultFingerprints: Object.freeze([]) }),
@@ -127,9 +131,11 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-pendrwn": Object.freeze({ sourceRevision: 3, biography: haus_pendrwn, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-rhyddid": Object.freeze({ sourceRevision: 5, biography: haus_rhyddid, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-sgrechiwr": Object.freeze({ sourceRevision: 2, biography: haus_sgrechiwr, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-svathamar": Object.freeze({ sourceRevision: 1, biography: haus_svathamar, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-swyll": Object.freeze({ sourceRevision: 11, biography: haus_swyll, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-tlawd": Object.freeze({ sourceRevision: 2, biography: haus_tlawd, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-tonnarth": Object.freeze({ sourceRevision: 2, biography: haus_tonnarth, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-trevoryn": Object.freeze({ sourceRevision: 1, biography: haus_trevoryn, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-ysgrif": Object.freeze({ sourceRevision: 5, biography: haus_ysgrif, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-gwared": Object.freeze({ sourceRevision: 5, biography: haus_gwared, replacedDefaultFingerprints: Object.freeze(["1876:8604b629:944893af"]) }),
   "haus-madryn": Object.freeze({ sourceRevision: 2, biography: haus_madryn, replacedDefaultFingerprints: Object.freeze(["1537:d0eca67b:6d663881"]) }),

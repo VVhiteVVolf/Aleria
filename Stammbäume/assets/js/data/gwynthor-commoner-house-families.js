@@ -7,14 +7,17 @@ import { HOUSE_FALCHDYN_FAMILY } from './house-falchdyn-family.js';
 import { HOUSE_MAERLLYS_FAMILY } from './house-maerllys-family.js';
 import { HOUSE_PENDRWN_FAMILY } from './house-pendrwn-family.js';
 import { HOUSE_SWYLL_FAMILY } from './house-swyll-family.js';
-import { HOUSE_TONNARTH_FAMILY } from './house-tonnarth-family.js';
+import { HOUSE_TONNARTH_FAMILY } from './house-tonnarth-family.js?v=20261014-kanne-v2';
 import { HOUSE_YSGRIF_FAMILY } from './house-ysgrif-family.js';
 import { HOUSE_COEDDU_FAMILY } from './house-coeddu-family.js';
 import { HOUSE_CRAIGDDU_FAMILY } from './house-craigddu-family.js';
+import { KANNE_HOUSE_FAMILIES } from './krumme-kanne-families.js';
+import { KANNE_FAMILY_DEFINITIONS } from './krumme-kanne-family-people.js';
 
 const EMBLEM_ROOT = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor';
 
 export const GWYNTHOR_COMMONER_HOUSE_DEFINITIONS = Object.freeze([
+  ...KANNE_FAMILY_DEFINITIONS,
   Object.freeze({ slug: 'draenmelyn', title: 'Draenmelyn', file: 'Draenmelyn.png' }),
   Object.freeze({ slug: 'pendrwn', title: 'Pendrwn', file: 'Pendrwn.png' }),
   Object.freeze({ slug: 'swyll', title: 'Swyll', file: 'Swyll.png' }),
@@ -29,6 +32,7 @@ export const GWYNTHOR_COMMONER_HOUSE_DEFINITIONS = Object.freeze([
 ]);
 
 const DEVELOPED_FAMILIES = Object.freeze({
+  ...Object.fromEntries(KANNE_HOUSE_FAMILIES.map(family => [family.document.id.replace('haus-', ''), family])),
   aelmor: HOUSE_AELMOR_FAMILY,
   braglas: HOUSE_BRAGLAS_FAMILY,
   draenmelyn: HOUSE_DRAENMELYN_FAMILY,

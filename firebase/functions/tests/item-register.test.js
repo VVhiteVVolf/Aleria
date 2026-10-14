@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { commitItemRegisterOperation } from '../src/mechanics/commit-item-register.js';
 import { STANDARD_ITEMS, STANDARD_VERSION } from '../src/generated/item-register/item-register-standard.js';
 import { buildModuleOffers } from '../src/generated/item-register/item-register-module-catalog.js';
+import { buildModuleOffers as browserModuleOffers } from '../../../AleriaAlmanach/modules/item-register/item-register-module-catalog.js';
 
 const clone = value => value == null ? value : structuredClone(value);
 // Transaction harness rejects reads after writes and publishes only successful
@@ -42,6 +43,23 @@ function moduleDatabase(entry = menu()) {
   return database({ 'characters/gawain': record(), 'module_store_entries/taverne': {entryJson:JSON.stringify(entry)},
     'char_tabs/config': {moduleStoreManifest:{customSections:[{tab:'Kultur',entryIds:['taverne']}],entryOverrideIds:[],hiddenModuleIds:{}}} });
 }
+
+test('ported fixed-price portions keep their browser identity through the authoritative purchase', async () => {
+  const entry = { id: 'taverne', title: 'Krumme Kanne', pages: [{ tradeCatalogPage: true, tradeCatalog: {
+    categories: [{ id: 'speisen', label: 'Speisen' }], items: [
+      { id: 'suppe-klein', title: 'Haussuppe', subtitle: 'Speise', unit: 'Kleine Schüssel', category: 'speisen', priceMin: '0,7', currencyCode: 'KT', description: '<p>Gerstenbrühe mit Waldpilzen.</p>' },
+      { id: 'suppe-gross', title: 'Haussuppe', subtitle: 'Speise', unit: 'Große Schüssel', category: 'speisen', priceMin: '0,7', currencyCode: 'KT', description: '<p>Gerstenbrühe mit Waldpilzen.</p>' }
+    ]
+  } }] };
+  const offers = browserModuleOffers([entry], STANDARD_ITEMS);
+  assert.equal(offers.length, 2);
+  for (const offer of offers) {
+    const db = moduleDatabase(entry);
+    const result = await commitItemRegisterOperation(db, auth, purchase({ productId: offer.id, moduleId: offer.moduleId, sourceRevision: offer.sourceRevision, unitCopper: 0.7 }));
+    assert.equal(result.character.inventory.moneyState.totalCopper, 2999.3);
+    assert.match(result.character.inventory.items[0].description, new RegExp(offer.hiddenMeta.unit));
+  }
+});
 
 test('drink sizes preserve independent authoritative prices and never sell reserved slots', async () => {
   const entry = { id: 'taverne', title: 'Brauerei', pages: [{ tradeCatalogPage: true, tradeCatalog: {

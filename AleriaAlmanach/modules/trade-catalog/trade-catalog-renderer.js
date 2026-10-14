@@ -164,6 +164,7 @@ function buildTradePrice(item) {
       <h4>${escapeHtml(item.priceTitle)}</h4>
       <div class="trade-price-bar"><span style="width:${escapeHtml(`${priceFill}%`)};--trade-price-gradient-size:${escapeHtml(`${gradientSize}%`)}"></span></div>
       <strong class="trade-price-value">${coinPrice ?? price}</strong>
+      ${item.unit ? `<p>${escapeHtml(item.unit)}</p>` : ''}
       ${coinPrice ? '' : `<div class="trade-currency">${buildTradeCatalogSmallIcon(item.currencyIcon, 'trade-currency-icon')}<span>${escapeHtml(item.currencyLabel)}</span></div>`}
       ${item.priceNote ? `<p>${escapeHtml(item.priceNote)}</p>` : ''}
     </section>`;

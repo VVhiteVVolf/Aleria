@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-tonnarth",
-  "revision": 5,
-  "updatedAt": "2026-08-09T05:09:55.365Z",
+  "revision": 6,
+  "updatedAt": "2026-10-14T15:37:49.510Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -308,19 +308,25 @@
         "id": "mair-affair-tonnarth",
         "worldPersonId": "person--family-tree--mair-affair-tonnarth",
         "name": "Mair",
-        "title": "Affäre Gareth Tonnarths",
+        "title": "Rechnungsführerin der Krummen Kanne · Ehefrau Aedan Dubhdarachs",
         "sex": "female",
         "status": "alive",
         "birth": "1697",
         "death": "",
-        "portrait": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/mair.png",
         "portraitPlaceholder": "auto",
         "houseId": "",
         "familyRole": "affair",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Mutter von Gareths nicht ehelichem Sohn Caradog.",
-        "extensions": {}
+        "notes": "Mutter Caradog Tonnarths aus der beendeten Verbindung mit Gareth. Seit 1724 mit Aedan Dubhdarach aus Leitheach verheiratet; gemeinsame Kinder Neifion und Eirlys.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
       },
       {
         "id": "iorwerth-tonnarth",
@@ -629,19 +635,24 @@
         "id": "caradog-bastard-tonnarth",
         "worldPersonId": "person--haus-tonnarth--caradog-bastard-tonnarth",
         "name": "Caradog Tonnarth",
-        "title": "Bastard aus Gareths Affäre mit Mair",
+        "title": "Meier der Krummen Kanne",
         "sex": "male",
         "status": "alive",
         "birth": "1718",
         "death": "",
-        "portrait": "https://i.imgur.com/LK3q0UI.png",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/caradog.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-tonnarth",
         "familyRole": "bastard",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Nicht ehelicher Sohn Gareth Tonnarths und Mairs.",
+        "notes": "Sohn Gareth Tonnarths und Mairs, geboren 1718. Aedan Dubhdarachs Stiefsohn; älterer Halbbruder von Neifion und Eirlys. Organisiert Lieferhof, Transporte und Reparaturen der Kanne.",
         "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ],
           "biographyModule": {
             "schema": "aleria.biography-module",
             "schemaVersion": 1,
@@ -805,6 +816,78 @@
             }
           }
         }
+      },
+      {
+        "id": "aedan-dubhdarach-kanne",
+        "worldPersonId": "person--krumme-kanne--aedan-dubhdarach-kanne",
+        "name": "Aedan Dubhdarach",
+        "title": "Gleichberechtigter Mitinhaber · Einkauf & Gäste",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/references/aedan.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dubhdarach",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Seit 1724 mit Mair verheiratet. Vater von Neifion und Eirlys; Stiefvater Caradogs.\n\nDer Albe aus Leitheach lernte Merrik und Hrolf zwischen Feldlagern, Verwundetenwagen und gemeinsam überstandenen Schlachten kennen. Heute verhandelt er Lieferungen und bewahrt im Hinterzimmer die Ruhe. Höflich, aufmerksam und verschwiegen; erinnert sich erstaunlich genau an unbezahlte Zechen, ebenso genau aber an erwiesene Hilfe.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "neifion-dubhdarach-kanne",
+        "worldPersonId": "person--krumme-kanne--neifion-dubhdarach-kanne",
+        "name": "Neifion Dubhdarach",
+        "title": "Schreiberlehrling · Bei Mair",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/neifion.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dubhdarach",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Sohn Aedans und Mairs; Bruder von Eirlys, Halbbruder Caradogs.\n\nÜbt nach dem Unterricht Lieferlisten und einfache Abrechnungen. Hat Aedans dunkelbraune Locken und Mairs Beharrlichkeit geerbt. Verfasst heimlich erstaunlich bissige Beschreibungen der Stammgäste und nennt sie Schreibübungen.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "eirlys-dubhdarach-kanne",
+        "worldPersonId": "person--krumme-kanne--eirlys-dubhdarach-kanne",
+        "name": "Eirlys Dubhdarach",
+        "title": "Hauskind · Servietten & Geschichten",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1731",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/eirlys.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dubhdarach",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Tochter Aedans und Mairs; Neifions Schwester und Caradogs Halbschwester.\n\nFaltet gelegentlich mit Nestwen Servietten, bevorzugt aber Boote daraus. Fragt die Veteranen nach ihren Pferden statt nach ihren Siegen. Ihre kleinen Beiträge gehören zum Familienalltag, nicht zum Dienstplan.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
       }
     ],
     "partnerships": [
@@ -926,7 +1009,32 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "Gareths beendete Affäre mit Mair; aus ihr ging Caradog hervor.",
-        "extensions": {}
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "affair-gareth-mair-tonnarth",
+            "counterpartFamilyId": "haus-dubhdarach"
+          }
+        }
+      },
+      {
+        "id": "marriage-aedan-mair-kanne",
+        "participantIds": [
+          "aedan-dubhdarach-kanne",
+          "mair-affair-tonnarth"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1724",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Haushalt in der Krummen Kanne, Gwynthor.",
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "marriage-aedan-mair-kanne",
+            "counterpartFamilyId": "haus-dubhdarach"
+          }
+        }
       }
     ],
     "parentages": [
@@ -1175,6 +1283,36 @@
         "visibility": "public",
         "notes": "Nicht eheliches Kind aus Gareth Tonnarths Affäre mit Mair.",
         "extensions": {}
+      },
+      {
+        "id": "parentage-neifion-dubhdarach-kanne",
+        "childId": "neifion-dubhdarach-kanne",
+        "parentIds": [
+          "aedan-dubhdarach-kanne",
+          "mair-affair-tonnarth"
+        ],
+        "partnershipId": "marriage-aedan-mair-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-eirlys-dubhdarach-kanne",
+        "childId": "eirlys-dubhdarach-kanne",
+        "parentIds": [
+          "aedan-dubhdarach-kanne",
+          "mair-affair-tonnarth"
+        ],
+        "partnershipId": "marriage-aedan-mair-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
       }
     ],
     "houses": [
@@ -1183,34 +1321,46 @@
         "name": "Haus Tonnarth",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Tonnarth.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-maerllys",
         "name": "Haus Maerllys",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-unbekannt-great-aunt-eira-tonnarth",
         "name": "Unbekanntes Haus",
         "motto": "",
         "emblem": "",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-unbekannt-great-aunt-tegwen-tonnarth",
         "name": "Unbekanntes Haus",
         "motto": "",
         "emblem": "",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-unbekannt-aunt-anwen-tonnarth",
         "name": "Unbekanntes Haus",
         "motto": "",
         "emblem": "",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-dubhdarach",
+        "name": "Haus Dubhdarach",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Dubhdarach.png",
         "status": "active"
       }
     ],
@@ -1222,6 +1372,7 @@
         "linkType": "married-away",
         "parentPartnershipId": "marriage-eira-unknown-tonnarth",
         "parentPersonId": "",
+        "childIds": [],
         "houseId": "house-unbekannt-great-aunt-eira-tonnarth",
         "emblem": "",
         "emblemScale": 0.86,
@@ -1239,6 +1390,7 @@
         "linkType": "married-away",
         "parentPartnershipId": "marriage-tegwen-unknown-tonnarth",
         "parentPersonId": "",
+        "childIds": [],
         "houseId": "house-unbekannt-great-aunt-tegwen-tonnarth",
         "emblem": "",
         "emblemScale": 0.86,
@@ -1256,6 +1408,7 @@
         "linkType": "married-away",
         "parentPartnershipId": "marriage-anwen-unknown-tonnarth",
         "parentPersonId": "",
+        "childIds": [],
         "houseId": "house-unbekannt-aunt-anwen-tonnarth",
         "emblem": "",
         "emblemScale": 0.86,
@@ -1323,7 +1476,14 @@
         "frameScale": 1,
         "childIds": [],
         "targetFamilyId": "",
-        "notes": ""
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
       }
     },
     "presentation": {
@@ -1355,12 +1515,113 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 1,
+      "sourceRevision": 2,
       "registryManagedViewFields": [
         "focusPersonId",
         "limitGenerations"
       ],
-      "sourceNote": "Llewarch Tonnarth ist im Jahr 1740 fünfundzwanzig Jahre alt und besitzt vier unverheiratete Geschwister. Die konkrete Linie reicht nur bis zu seinem Großvater Idris; dessen Schwestern Eira und Tegwen sowie Llewarchs Tante Anwen sind mit direkten Zielhausknoten wegverheiratet. Madoc Tonnarth und Rhoswen Maerllys haben die drei Söhne Bryn, Emrys und Aled; ihre Ehe wird in der Maerllys-Gegenakte gespiegelt. Der ledige Onkel Gareth besitzt ausschließlich eine beendete Affäre mit Mair, aus der der eindeutig zugeordnete Bastard Caradog hervorging. Das vorgegebene Llewarch-Porträt wurde lokal gesichert."
+      "sourceNote": "Llewarch Tonnarth ist im Jahr 1740 fünfundzwanzig Jahre alt und besitzt vier unverheiratete Geschwister. Die konkrete Linie reicht nur bis zu seinem Großvater Idris; dessen Schwestern Eira und Tegwen sowie Llewarchs Tante Anwen sind mit direkten Zielhausknoten wegverheiratet. Madoc Tonnarth und Rhoswen Maerllys haben die drei Söhne Bryn, Emrys und Aled; ihre Ehe wird in der Maerllys-Gegenakte gespiegelt. Der ledige Onkel Gareth besitzt ausschließlich eine beendete Affäre mit Mair, aus der der eindeutig zugeordnete Bastard Caradog hervorging. Das vorgegebene Llewarch-Porträt wurde lokal gesichert.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Tonnarth",
+        "housePage": true,
+        "image": "",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "description": "Haus Tonnarth ist eine bürgerliche Familie aus Gwynthor.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Tonnarth"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            ""
+          ],
+          [
+            "Erbe",
+            ""
+          ],
+          [
+            "Lehnsherr",
+            "Haus Draig"
+          ],
+          [
+            "Ursprung",
+            ""
+          ],
+          [
+            "Schutzpatronin",
+            ""
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Tonnarth.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über das Haus",
+          "biographyText": "Haus Tonnarth ist eine bürgerliche Familie aus Gwynthor.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Geschichte",
+          "historyText": "Folgt …",
+          "worksTitle": "Hausgeschichte",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Folgt …"
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [
+            {
+              "name": "Haus Draig",
+              "detail": "Lehnsherr",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Tonnarth.png",
+              "title": "Haus Tonnarth · vollständige Hausseite",
+              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tonnarth"
+            }
+          ],
+          "footer": ""
+        }
+      },
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 1,
+        "toRevision": 2
+      }
     }
   }
 }

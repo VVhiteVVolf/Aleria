@@ -1,4 +1,5 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
+import { withKrummeKanneTonnarthLink } from './krumme-kanne-tonnarth-link.js?v=20261014-kanne-v2';
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import {
@@ -111,7 +112,7 @@ const MARRIED_AWAY_PEOPLE = Object.freeze(MARRIED_AWAY_RELATIONS.flatMap(relatio
   ];
 }));
 
-export const HOUSE_TONNARTH_FAMILY = Object.freeze({
+const TONNARTH_SOURCE_FAMILY = Object.freeze({
   ...BASE_FAMILY,
   houses: Object.freeze([
     ...BASE_FAMILY.houses,
@@ -297,3 +298,5 @@ export const HOUSE_TONNARTH_FAMILY = Object.freeze({
     sourceNote: 'Llewarch Tonnarth ist im Jahr 1740 fünfundzwanzig Jahre alt und besitzt vier unverheiratete Geschwister. Die konkrete Linie reicht nur bis zu seinem Großvater Idris; dessen Schwestern Eira und Tegwen sowie Llewarchs Tante Anwen sind mit direkten Zielhausknoten wegverheiratet. Madoc Tonnarth und Rhoswen Maerllys haben die drei Söhne Bryn, Emrys und Aled; ihre Ehe wird in der Maerllys-Gegenakte gespiegelt. Der ledige Onkel Gareth besitzt ausschließlich eine beendete Affäre mit Mair, aus der der eindeutig zugeordnete Bastard Caradog hervorging. Das vorgegebene Llewarch-Porträt wurde lokal gesichert.'
   })
 });
+
+export const HOUSE_TONNARTH_FAMILY = withKrummeKanneTonnarthLink(TONNARTH_SOURCE_FAMILY);

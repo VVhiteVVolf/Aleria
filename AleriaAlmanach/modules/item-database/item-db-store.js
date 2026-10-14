@@ -25,5 +25,5 @@ function itemDbExportDatabasePayload() {
 function itemDbBuildIndex() { return window.AleriaItemRegister?.getItems() || []; }
 function itemDbEnsureGlobalSync() {
   if (window.AleriaItemRegister) return Promise.resolve(window.AleriaItemRegister.ensure());
-  return import('../item-register/item-register-ui.js?v=20261014-aldrimar-brewers-v1').then(() => window.AleriaItemRegister?.ensure());
+  return import('../item-register/item-register-ui.js?v=20261014-kanne-v2').then(() => window.AleriaItemRegister?.ensure());
 }

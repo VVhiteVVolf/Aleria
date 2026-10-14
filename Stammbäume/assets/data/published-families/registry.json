@@ -1646,9 +1646,9 @@
           "kingdom": "assets/images/regions/koenigreich-cenyr.png"
         }
       },
-      "personCount": 25,
-      "revision": 5,
-      "updatedAt": "2026-08-09T05:09:55.365Z",
+      "personCount": 28,
+      "revision": 6,
+      "updatedAt": "2026-10-14T15:37:49.510Z",
       "link": "Stammbaum.html?family=haus-tonnarth&mode=view",
       "source": "github"
     },
@@ -1783,6 +1783,108 @@
       "revision": 1,
       "updatedAt": "2026-08-12T11:03:00.281Z",
       "link": "Stammbaum.html?family=tharn&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-trevoryn",
+      "familyId": "haus-trevoryn",
+      "title": "Haus Trevoryn",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Trevoryn.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 13,
+      "revision": 1,
+      "updatedAt": "2026-10-14T15:37:49.510Z",
+      "link": "Stammbaum.html?family=haus-trevoryn&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-svathamar",
+      "familyId": "haus-svathamar",
+      "title": "Haus Svathamar",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 10,
+      "revision": 1,
+      "updatedAt": "2026-10-14T15:37:49.510Z",
+      "link": "Stammbaum.html?family=haus-svathamar&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-dubhdarach",
+      "familyId": "haus-dubhdarach",
+      "title": "Haus Dubhdarach",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Dubhdarach.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 8,
+      "revision": 1,
+      "updatedAt": "2026-10-14T15:37:49.510Z",
+      "link": "Stammbaum.html?family=haus-dubhdarach&mode=view",
       "source": "github"
     }
   ]

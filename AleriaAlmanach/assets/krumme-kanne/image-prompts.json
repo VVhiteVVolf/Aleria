@@ -1,0 +1,437 @@
+{
+  "date": "2026-10-14",
+  "mode": "built-in image_gen",
+  "presets": "AleriaAlmanach/docs/art/image-style-presets.json",
+  "corrections": [
+    "Tesni: detached hand and tray removed, natural arm connection.",
+    "Both animals replaced by full-body shots at user request.",
+    "Beef stew: removed accidental copied emblem, plain bowl."
+  ],
+  "images": [
+    {
+      "id": "eirian",
+      "prompt": "Use case: illustration-story. Single character portrait for the Aleria fantasy tavern Die Krumme Kanne. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Reference image is Merrik, her brother, for family resemblance and the exact restrained mature anime drawing style. Create Eirian Trevoryn, a 42-year-old Cenyri woman, his slightly younger sister and Hrolf's wife, managing the tavern household. Same straight strong nose, similar jaw and slate blue eyes, red-auburn hair pinned in a practical braided bun, a few freckles, confident knowing half smile, age-appropriate subtle smile lines. Olive green wool dress, cream linen neckline and sleeves, modest brown waistcoat, brass key ring held near chest. Bust/upper body only, crop at waist, no full body, head fully visible. Warm simple wooden tavern office background and candlelight matching original portraits. One person, no text, no border.",
+      "references": [],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png"
+    },
+    {
+      "id": "mair",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 43-year-old red-haired Cenyri woman, deep green eyes, wavy copper hair tied low, mature round face, calm wry expression. Deep blue wool gown, cream linen collar, ledger and quill near chest. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/mair.png"
+    },
+    {
+      "id": "celyn",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 41-year-old Cenyri woman, curly deep copper hair under simple linen kerchief, warm brown eyes, broad friendly face, sturdy build. Russet dress, blue apron, small folded linen cloth held at chest. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/celyn.png"
+    },
+    {
+      "id": "delyth",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 27-year-old adult Cenyri tavern wench, chestnut-red thick braid, green eyes, angular nose, alert amused expression, sturdy voluptuous build and full bust. Wine-red laced bodice over cream blouse with tasteful low square neckline, practical apron, confident teasing smile. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/delyth.png"
+    },
+    {
+      "id": "tesni",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 20-year-old clearly adult Cenyri tavern wench, bright copper-red wavy bob, freckles, blue eyes, playful quick smile, petite rounded curvy build. Muted yellow laced bodice over cream blouse with modest sweetheart neckline, green apron, empty tray tucked against upper body. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/tesni.png"
+    },
+    {
+      "id": "tangwystl",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 31-year-old adult Cenyri tavern wench, abundant copper-red curls worn half up, warm brown eyes, rounded cheeks and small beauty mark beside mouth, broad voluptuous curvy figure and generous bust. Forest green laced bodice, ivory blouse with tasteful low neckline, rust apron, one hand on waist, knowing flirtatious grin. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/tangwystl.png"
+    },
+    {
+      "id": "tesni-anatomy-correction",
+      "prompt": "Edit only this portrait to correct the anatomy on image-right. Remove the wooden tray and the isolated floating hand gripping it. Replace that area with the woman's anatomically connected arm hanging naturally down her side: upper arm connected to her image-right shoulder under the existing white blouse sleeve, elbow and forearm aligned normally at her side, hand below the bottom crop. There must be exactly two arms, both connected to her shoulders, and no detached hands anywhere. Preserve her face, copper-red wavy bob, freckles, blue eyes, expression, bust and body shape, yellow laced bodice, white blouse, green apron, warm tavern background, lighting, framing, 2:3 aspect and clear clean anime lineart and cel shading exactly. No other changes.",
+      "references": [],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/tesni.png"
+    },
+    {
+      "id": "caradog",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 22-year-old Cenyri man, auburn curly hair, brown eyes, youthful square face, work-worn hands. Ochre wool vest over linen shirt, carpenter pencil and folded tally slip. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/caradog.png"
+    },
+    {
+      "id": "elidyr",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 35-year-old Cenyri man resembling Merrik: straight nose, blue-grey eyes, red hair shorter and tousled, neat red moustache rather than full beard, leaner face. Dark teal waistcoat, rolled linen sleeves, wooden tankard held at chest. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. For this relative also preserve clear family resemblance to the reference but give a distinct face. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/merrik.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/elidyr.png"
+    },
+    {
+      "id": "runa",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 34-year-old Aldrimar woman visibly related to Hrolf, strong cheekbones and broad nose, fair blonde braided crown, pale blue eyes, reserved smile. Slate blue wool dress, linen apron, folded room linen. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. For this relative also preserve clear family resemblance to the reference but give a distinct face. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/hrolf.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/runa.png"
+    },
+    {
+      "id": "nestwen",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 68-year-old elderly Cenyri woman, silver-grey braided hair with faint red traces, Merrik family straight nose and blue-grey eyes, warm wrinkles, spectacles held rather than worn. Plum wool shawl over linen dress, mending cloth. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. For this relative also preserve clear family resemblance to the reference but give a distinct face. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/merrik.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/nestwen.png"
+    },
+    {
+      "id": "ketil",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 38-year-old Aldrimar man resembling Hrolf, broad jaw and pale blue eyes, ash blonde hair tied short, blond stubble, serious calm expression, small old eyebrow scar. Grey wool tunic, brown leather jerkin, no drawn weapon. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. For this relative also preserve clear family resemblance to the reference but give a distinct face. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/hrolf.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/ketil.png"
+    },
+    {
+      "id": "fintan",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 28-year-old Albe man, dark brown curly hair, hazel green eyes, long expressive nose, slender build, clean shaven. Forest green vest over oatmeal shirt, cloth over shoulder. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/fintan.png"
+    },
+    {
+      "id": "awenna",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 26-year-old Cenyri woman, dark auburn hair in loose plait, brown eyes, long narrow face and thoughtful expression. Sage green dress, off-white apron, linen bundle. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/awenna.png"
+    },
+    {
+      "id": "llinos",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 21-year-old Cenyri woman, copper curls pinned up messily, clear green eyes, round freckled face, mischievous grin. Dusty blue work dress, brown apron, small oil lamp held securely. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/llinos.png"
+    },
+    {
+      "id": "heilyn",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 18-year-old Cenyri young man, unruly short red hair, blue eyes, lanky neck, earnest face. Patched brown vest over cream shirt, coil of carrying rope over shoulder. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/heilyn.png"
+    },
+    {
+      "id": "tadhg",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 48-year-old Albe master cook, dark brown wavy hair greying at temples, green-brown eyes, broad nose, heavy brows and short salt-and-pepper beard. Cream linen cook shirt, dark apron, wooden spoon at chest. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/tadhg.png"
+    },
+    {
+      "id": "alaw",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 24-year-old Cenyri woman, dark copper-red braided hair, brown eyes, strong eyebrows, focused smile. Faded green dress, linen cap and cream kitchen apron, small herb bunch. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/alaw.png"
+    },
+    {
+      "id": "iorath",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 19-year-old Cenyri young man, short curly russet hair, green eyes, broad youthful cheeks, hopeful grin. Rolled linen sleeves, charcoal-grey apron, clean wooden ladle. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/iorath.png"
+    },
+    {
+      "id": "gwern",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 32-year-old burly Cenyri man, short red hair, brown eyes, wide nose, thick red beard, gentle serious face. Dark green wool tunic and worn brown leather shoulder vest. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/gwern.png"
+    },
+    {
+      "id": "rhunel",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 29-year-old Cenyri man, long auburn fringe tied back, grey-green eyes, thin face, clean shaven, watchful expression. Navy wool hood folded back, plain leather vest, unlit lantern held at chest. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/rhunel.png"
+    },
+    {
+      "id": "styr",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 15-year-old adolescent boy, son of blonde broad-jawed Hrolf and red-haired Eirian; strawberry-blonde short hair, light blue eyes, youthful broad face, no beard. Simple muted teal tunic, clean linen collar, shy proud smile. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. For this relative also preserve clear family resemblance to the reference but give a distinct face. One person only, no text, no frame, no watermark. Natural connected anatomy, no detached limbs or floating hands.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/hrolf.png",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/styr.png"
+    },
+    {
+      "id": "heledd",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 10-year-old girl, daughter of Hrolf and Eirian; golden blonde hair in two braids, blue-grey eyes, round childish face, light freckles. Modest blue wool dress, cream collar, small dried flowers held at chest, innocent curious expression. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. For this relative also preserve clear family resemblance to the reference but give a distinct face. One person only, no text, no frame, no watermark. Natural connected anatomy, no detached limbs or floating hands.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/hrolf.png",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/heledd.png"
+    },
+    {
+      "id": "neifion",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 14-year-old adolescent boy, Aedan-like face and dark brown curls, clear green eyes from red-haired mother, slender youthful features, no facial hair. Brown vest and cream linen shirt, small notebook held at chest. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark. Natural connected anatomy, no detached limbs or floating hands.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/portraits/mair.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/neifion.png"
+    },
+    {
+      "id": "eirlys",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 9-year-old girl resembling Aedan, dark chestnut brown curly hair, warm brown eyes, round childish cheeks, shy delighted smile. Modest moss green wool dress, cream blouse, folded linen napkin at chest. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. One person only, no text, no frame, no watermark. Natural connected anatomy, no detached limbs or floating hands.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/portraits/mair.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/eirlys.png"
+    },
+    {
+      "id": "cadri",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 12-year-old Cenyri boy resembling Merrik and Celyn, curly auburn-red hair, blue-grey eyes, straight small nose, freckled youthful face. Simple mustard tunic, little wooden peg held at chest, thoughtful expression. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. For this relative also preserve clear family resemblance to the reference but give a distinct face. One person only, no text, no frame, no watermark. Natural connected anatomy, no detached limbs or floating hands.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/merrik.png",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/portraits/celyn.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/cadri.png"
+    },
+    {
+      "id": "enlli",
+      "prompt": "Use case: illustration-story. Single distinct character portrait for Die Krumme Kanne tavern. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: 6-year-old little Cenyri girl, Merrik family nose, bright copper red soft curls, warm brown eyes like mother Celyn, rounded child proportions, a missing baby tooth in cheerful smile. Modest russet wool dress over cream blouse, small cloth cat toy held close. Frame head and upper body only, crop at waist, no full body, complete head visible. Warm restrained wooden medieval tavern background, soft amber candlelight. Match reference image mature anime linework, simple cel shading and color palette. Reference is drawing style only; the subject must have the requested hair color, face, age and clothing. For this relative also preserve clear family resemblance to the reference but give a distinct face. One person only, no text, no frame, no watermark. Natural connected anatomy, no detached limbs or floating hands.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/merrik.png",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/portraits/celyn.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/enlli.png"
+    },
+    {
+      "id": "carreg",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. One five-year-old male Ponter dog, exact breed from reference: medium-sized lean alert cenyrish watchdog, upright ears, weatherproof muted grey-brown coat, amber eyes. Chest-up animal portrait by a wooden tavern back door, plain leather collar, calm attentive expression. Breed reference defines anatomy only, the other image defines clean anime style and warm tavern colors. Single animal head and upper body only in 2:3, natural anatomy. No text or watermark. Natural connected anatomy, no detached limbs or floating hands.",
+      "references": [
+        "E:/Aleria/Bestiarium/assets/pet-breeds/hunde/ponter.webp",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/carreg.png"
+    },
+    {
+      "id": "briwsion",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. One seven-year-old male Cenyric house cat, sturdy but not obese, medium short reddish-brown tabby fur, white bib, green eyes, small notch in left ear. Head and chest portrait sitting on a wooden tavern window sill, no food, self-important sleepy expression. Breed reference defines anatomy only, the other image defines clean anime style and warm tavern colors. Single animal head and upper body only in 2:3, natural anatomy. No text or watermark. Natural connected anatomy, no detached limbs or floating hands.",
+      "references": [
+        "E:/Aleria/Bestiarium/assets/pet-breeds/katzen/cenyric.webp",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/briwsion.png"
+    },
+    {
+      "id": "carreg-full-body",
+      "prompt": "Edit this animal illustration: zoom out and complete the SAME individual animal as a FULL-BODY SHOT. Entire head, both ears, torso, all legs, every paw and the complete tail must be inside the 2:3 image with comfortable space around the silhouette. Carreg, the lean male Ponter watchdog, stands calmly in three-quarter view on the stone floor by the tavern back door. Preserve his slate-grey, tan and cream coat markings, alert upright ears, amber eyes and plain brown leather collar. Show all four legs naturally. Preserve the same clean anime linework and cel-shading, warm tavern candlelight and simple wooden background. Full body, no cropped paws or tail, no other animals or people, no text.",
+      "references": [],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/carreg.png"
+    },
+    {
+      "id": "briwsion-full-body",
+      "prompt": "Edit this animal illustration: zoom out and complete the SAME individual animal as a FULL-BODY SHOT. Entire head, both ears, torso, all legs, every paw and the complete tail must be inside the 2:3 image with comfortable space around the silhouette. Briwsion the male Cenyric tabby sits upright on a broad wooden window bench with both forepaws and seated hind feet visible; his complete tail curls around one side. Preserve his reddish-gold tabby markings, white chest and muzzle, green eyes, small notch in the left ear and self-important sleepy expression. Preserve the same clean anime linework and cel-shading, warm tavern candlelight and simple wooden background. Full body, no cropped paws or tail, no other animals or people, no text.",
+      "references": [],
+      "file": "AleriaAlmanach/assets/krumme-kanne/portraits/briwsion.png"
+    },
+    {
+      "id": "nachtansicht",
+      "prompt": "Use case: illustration-story. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Exterior of Die Krumme Kanne at night in the eastern harbor district of Gwynthor. Preserve the architecture from the original exterior reference: tall narrow medieval timber-framed tavern, steep red tiled roof, warm plaster, overhanging upper story and crooked carved wooden tankard sign above its entrance. Quiet wet cobbled harbor lane, deep blue night sky, golden windows and one warm door lantern, distant suggestion of ship masts. A welcoming veterans tavern, no people, no animals, no lettering. Vertical architectural composition with the complete tavern entrance and most of the facade, no watercolor border. Quiet uncluttered composition. References define architecture only, translate into the clean anime scene style of the character reference. Not a portrait, no characters. 2:3 vertical room illustration.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/exterior-original.png",
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/rooms/nachtansicht.png"
+    },
+    {
+      "id": "schankraum",
+      "prompt": "Use case: illustration-story. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Still life interior of the tavern common room, no people. Dark oak bar on one side, a row of plain wooden tankards, a small candle, three sturdy communal tables and benches, worn timber beams and a modest stone hearth. Only one old plain round shield above the fireplace as quiet veteran memorabilia. Warm intimate amber lighting, enough space between tables, cozy rather than grand. Foreground empty table invites the viewer into the room. No text. Quiet uncluttered composition. References define anime drawing style and tavern palette only, draw the requested room. Not a portrait, no characters. 2:3 vertical room illustration.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/rooms/schankraum.png"
+    },
+    {
+      "id": "hinterzimmer",
+      "prompt": "Use case: illustration-story. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Still life of a quiet medieval tavern back room for private conversations, no people. One round oak table with three mismatched chairs, a folded wool cloak, one unmarked dice cup and two empty tankards. Closed wooden door, small leaded window with blue night beyond, one candle gives a restrained pool of light. Simple plaster and dark timber, discreet and lived in, not luxurious. No maps with text, no lettering. Quiet uncluttered composition. References define anime drawing style and tavern palette only, draw the requested room. Not a portrait, no characters. 2:3 vertical room illustration.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/rooms/hinterzimmer.png"
+    },
+    {
+      "id": "kueche",
+      "prompt": "Use case: illustration-story. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Still life of the small working kitchen of a medieval veterans tavern, no people. Stone cooking hearth with a hanging black pot, simple side spit ready over glowing coals, one chopping block with carrots and leek, two shelves with earthenware bowls and hanging herbs. Clear paths and tidy practical work surfaces. Warm hearth light and cool dawn window light. Intimate kitchen for a master cook and two helpers, not a palace kitchen. No text. Quiet uncluttered composition. References define anime drawing style and tavern palette only, draw the requested room. Not a portrait, no characters. 2:3 vertical room illustration.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/rooms/kueche.png"
+    },
+    {
+      "id": "drei-eichen",
+      "prompt": "Use case: illustration-story. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Still life of a small clean guest room called Die Drei Eichen in a medieval harbor tavern, no people. Two simple oak beds with pale linen and folded muted blue wool blankets, one small shared bedside chest, ceramic wash jug and basin, wooden shutters and a securely latched door. One leaded window showing deep blue night and a distant ship mast; small candle on safe stone dish. Modest roof beams, restful and warm. Entire vertical room composition. No text or lettering. Quiet uncluttered composition. References define anime drawing style and tavern palette only, draw the requested room. Not a portrait, no characters. 2:3 vertical room illustration.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/rooms/drei-eichen.png"
+    },
+    {
+      "id": "vorratskammer",
+      "prompt": "Use case: illustration-story. Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Still life of a small medieval tavern pantry and dry storeroom, no people or animals. A few neat flour sacks, stacked wooden root-vegetable crates, one cheese wheel on an upper shelf, sealed stoneware jars and two beer barrels. Simple tally board without writing, hanging oil lantern casts warm light. Deep narrow timber room, practical orderly arrangement and uncluttered foreground. No labels, no lettering. Quiet uncluttered composition. References define anime drawing style and tavern palette only, draw the requested room. Not a portrait, no characters. 2:3 vertical room illustration.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/references/aedan.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/rooms/vorratskammer.png"
+    },
+    {
+      "id": "lauchkaese",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Two thick slices of dark toasted rye bread covered with melted pale cheese and green leek rings, a small spoonful of golden apple-onion relish, on a small wooden trencher.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached inventory reference defines ONLY the hand-painted fantasy inventory rendering style; do not depict the reference weapon. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering.",
+      "references": [
+        "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/0c6e5905-f45f-455c-a736-537ca30b3ee9.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/lauchkaese.png"
+    },
+    {
+      "id": "rauchforelle",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Small earthenware plate with flaked smoked trout, pale apple slivers, dill sprigs and a dollop of thick cultured cream, a small rye crisp.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached inventory reference defines ONLY the hand-painted fantasy inventory rendering style; do not depict the reference weapon. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering.",
+      "references": [
+        "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/0c6e5905-f45f-455c-a736-537ca30b3ee9.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/rauchforelle.png"
+    },
+    {
+      "id": "gerstenbruehe",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Small rustic wooden bowl of clear amber vegetable broth with a few barley grains, brown mushroom slices and parsley, plain wooden spoon beside the bowl.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached inventory reference defines ONLY the hand-painted fantasy inventory rendering style; do not depict the reference weapon. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering.",
+      "references": [
+        "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/0c6e5905-f45f-455c-a736-537ca30b3ee9.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/gerstenbruehe.png"
+    },
+    {
+      "id": "merriks-rindertopf",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Deep brown beef stew with large tender beef cubes, carrot and parsnip pieces and barley in a dark earthenware bowl, one thick rye bread slice resting at the edge.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached inventory reference defines ONLY the hand-painted fantasy inventory rendering style; do not depict the reference weapon. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering.",
+      "references": [
+        "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/0c6e5905-f45f-455c-a736-537ca30b3ee9.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/merriks-rindertopf.png"
+    },
+    {
+      "id": "haferkuechlein",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Three small golden oat cakes stacked loosely on a wooden plate, white herb curd and a few pickled beet wedges, muted red and cream tones.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached inventory reference defines ONLY the hand-painted fantasy inventory rendering style; do not depict the reference weapon. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering.",
+      "references": [
+        "D:/0-KI Generierte/01 Bilder/01 - Items/Beispiele/0c6e5905-f45f-455c-a736-537ca30b3ee9.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/haferkuechlein.png"
+    },
+    {
+      "id": "merriks-rindertopf-plain-bowl",
+      "prompt": "Edit only the wooden bowl: completely remove the red dragon emblem, circular gold medallion and every gold or metal trim. Replace them with continuous plain dark wood matching the existing bowl grain and curvature. Preserve the beef stew, carrots, parsnips, barley, bread slice, serving composition, illustration style, square format and exact transparent alpha background. The bowl must be entirely undecorated plain wood, no symbols, no crest, no lettering. Change nothing else.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/food/merriks-rindertopf.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/merriks-rindertopf.png"
+    },
+    {
+      "id": "hrolfs-schweinebauch",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Two thick crisp roast pork belly slices with thin amber honey-mead glaze, pale caraway cabbage and mashed golden swede on a rustic wooden platter.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached food inventory image defines only the hand-painted rendering style. Do not copy its food; create the requested distinct dish. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering. Tableware MUST be plain wood or plain pottery. No coat of arms, no emblem, no medallion, no gold trim, no animal symbol. Illustrated brushwork and dark contours, no photographic rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/food/lauchkaese.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/hrolfs-schweinebauch.png"
+    },
+    {
+      "id": "aedans-lamm",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Herb-crusted lamb slices with dark pan juices, creamy white beans and two charred leek lengths on a simple cream earthenware plate.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached food inventory image defines only the hand-painted rendering style. Do not copy its food; create the requested distinct dish. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering. Tableware MUST be plain wood or plain pottery. No coat of arms, no emblem, no medallion, no gold trim, no animal symbol. Illustrated brushwork and dark contours, no photographic rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/food/lauchkaese.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/aedans-lamm.png"
+    },
+    {
+      "id": "huehnerpastete",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Individual round golden chicken-and-leek pie with a small broken opening revealing pale chicken, green leek and mushrooms, on a wooden plate.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached food inventory image defines only the hand-painted rendering style. Do not copy its food; create the requested distinct dish. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering. Tableware MUST be plain wood or plain pottery. No coat of arms, no emblem, no medallion, no gold trim, no animal symbol. Illustrated brushwork and dark contours, no photographic rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/food/lauchkaese.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/huehnerpastete.png"
+    },
+    {
+      "id": "blutwurst",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Three dark seared blood sausage rounds with crisp edges, golden apple-onion relish and one small barley flatbread on a rustic wooden trencher.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached food inventory image defines only the hand-painted rendering style. Do not copy its food; create the requested distinct dish. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering. Tableware MUST be plain wood or plain pottery. No coat of arms, no emblem, no medallion, no gold trim, no animal symbol. Illustrated brushwork and dark contours, no photographic rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/food/lauchkaese.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/blutwurst.png"
+    },
+    {
+      "id": "waldpilzgerste",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Creamy barley with several brown woodland mushroom caps, thyme and thin pale cheese shavings in a low earthenware bowl, no meat.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached food inventory image defines only the hand-painted rendering style. Do not copy its food; create the requested distinct dish. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering. Tableware MUST be plain wood or plain pottery. No coat of arms, no emblem, no medallion, no gold trim, no animal symbol. Illustrated brushwork and dark contours, no photographic rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/food/lauchkaese.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/waldpilzgerste.png"
+    },
+    {
+      "id": "ruebenauflauf",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Small dark ceramic baking dish of golden gratinated swede and onion with browned goat cheese top, small spoonful of herb cream, no meat.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached food inventory image defines only the hand-painted rendering style. Do not copy its food; create the requested distinct dish. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering. Tableware MUST be plain wood or plain pottery. No coat of arms, no emblem, no medallion, no gold trim, no animal symbol. Illustrated brushwork and dark contours, no photographic rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/food/lauchkaese.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/ruebenauflauf.png"
+    },
+    {
+      "id": "wurzelgemuesefladen",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Warm barley flatbread topped with rustic roasted carrot, parsnip and red beet chunks, chopped hazelnuts and green herb oil, no cheese or meat, on a wooden plate.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached food inventory image defines only the hand-painted rendering style. Do not copy its food; create the requested distinct dish. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering. Tableware MUST be plain wood or plain pottery. No coat of arms, no emblem, no medallion, no gold trim, no animal symbol. Illustrated brushwork and dark contours, no photographic rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/food/lauchkaese.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/wurzelgemuesefladen.png"
+    },
+    {
+      "id": "feuerhirsch",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Generous portion of spit-roasted venison haunch, browned fire-grilled crust with clear grill and char marks, one slice cut to show cooked interior, roasted roots and red lingonberries on an oval wooden platter. Only the plated cooked dish, no live deer or scenery.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached food inventory image defines only the hand-painted rendering style. Do not copy its food; create the requested distinct dish. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering. Tableware MUST be plain wood or plain pottery. No coat of arms, no emblem, no medallion, no gold trim, no animal symbol. Illustrated brushwork and dark contours, no photographic rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/food/lauchkaese.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/feuerhirsch.png"
+    },
+    {
+      "id": "hirschbraten",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Three thick slices of dark braised venison roast with glossy brown juniper gravy, two barley dumplings and purple apple red cabbage on a cream earthenware plate.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached food inventory image defines only the hand-painted rendering style. Do not copy its food; create the requested distinct dish. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering. Tableware MUST be plain wood or plain pottery. No coat of arms, no emblem, no medallion, no gold trim, no animal symbol. Illustrated brushwork and dark contours, no photographic rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/food/lauchkaese.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/hirschbraten.png"
+    },
+    {
+      "id": "wildschweinkeule",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: Sliced roast wild boar haunch with dark juniper herb crust and amber mustard-mead glaze, golden mashed swede and three braised woodland mushrooms on an oval wooden plate.. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured metal, leather, wood and cloth, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. Slight three-quarter view where appropriate; long weapons may run diagonally from lower-left handle to upper-right tip. TRUE transparent PNG alpha background; at most a very faint soft BLACK contact shadow immediately beneath the object. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects. The dish description above defines the design. The attached food inventory image defines only the hand-painted rendering style. Do not copy its food; create the requested distinct dish. This is an appetizing cooked food serving in medieval wooden or earthenware tableware. One isolated complete serving, three-quarter view, entire plate or bowl inside frame with clear margins, square 1:1 transparent PNG. No table, no backdrop, no person, no lettering. Tableware MUST be plain wood or plain pottery. No coat of arms, no emblem, no medallion, no gold trim, no animal symbol. Illustrated brushwork and dark contours, no photographic rendering.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/assets/krumme-kanne/food/lauchkaese.png"
+      ],
+      "file": "AleriaAlmanach/assets/krumme-kanne/food/wildschweinkeule.png"
+    }
+  ]
+}

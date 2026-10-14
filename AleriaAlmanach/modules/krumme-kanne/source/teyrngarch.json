@@ -1,0 +1,787 @@
+{
+  "id": "teyrngarch-brauerzunft",
+  "title": "Die Teyrngarch Brauerzunft",
+  "subtitle": "Mit Ähre gebraut, mit Ehre genossen!",
+  "type": "Brauerei & Brennerei",
+  "category": "Gilden & Zünfte · Brauer & Brenner",
+  "image": "../Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+  "icon": "✦",
+  "stamp": "HANDWERK · FAMILIE · HANDEL",
+  "multipage": true,
+  "appendCommentsPage": false,
+  "enablePageComments": true,
+  "pages": [
+    {
+      "pageTitle": "I. — Von der Ähre zum Adel",
+      "image": "./public/assets/brewer-guilds/teyrngarch-aufstieg.png",
+      "imageWidth": 38,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "description": "<p>Die <strong>Teyrngarch Brauerzunft</strong> ist eine der angesehensten und größten Brauereigilden im Königreich Cenyr. Über Jahre hinweg hat sich diese Gilde durch strategische Übernahmen und Expansion einen Namen gemacht. Im Zuge ihrer Geschichte hat sie kleinere Brauereien erfolgreich integriert und ihre Macht stetig vergrößert. Unter der Führung des Hauses Teyrngarch und mit der Unterstützung ihrer eigenen Diebesgilde hat sich die Brauerzunft über die Sonnenküste hinaus, ihrem Ursprungsgebiet, ausgebreitet. Heute erstreckt sich ihr Einfluss über alle Ecken des Königreichs und reicht weit über die ursprünglichen Grenzen hinaus. Die Teyrngarch Brauerzunft ist bekannt für ihre Durchsetzungskraft, ihren geschäftlichen Ehrgeiz und ihre Fähigkeit, neue Märkte zu erobern.</p><p>Die <strong>Teyrngarch</strong> haben sich ihren Platz im Adel des Königreiches Cenyr nicht durch heroische Taten oder glorreiche Abenteuer erkämpft, sondern durch ihren beispiellosen Erfolg als Bierbrauer. Ursprünglich wohlhabende Bürger, haben sie sich über Generationen hinweg durch geschäftlichen Weitblick und den wachsenden Einfluss in der Region der Sonnenküste einen Namen gemacht. Dank ihres stetig wachsenden Wohlstands und ihres Einflusses wurden sie schließlich in den Aberoner Adel der Sonnenküste aufgenommen.</p>\n<p>Heute zählen die Teyrngarch zu den wohlhabendsten und einflussreichsten Familien des Landes. Ihre Brauereien und Tavernen sind über das gesamte Königreich verstreut, und ihr preisgekröntes Bier, die „<strong><em>Goldhaube</em></strong>“, hat sogar den Status des Nationalbiers von Cenyr erlangt. Ihr Erfolg ist weniger der Tradition, sondern vielmehr ihrem geschickten Handelsverständnis und der breiten Verbreitung ihrer Brauereien zu verdanken. Die Teyrngarch stehen für wirtschaftliche Macht und Einfluss, die sie durch kluge Expansion und die Sicherung von Märkten über die Sonnenküste hinaus aufgebaut haben.</p>",
+      "commentSequence": []
+    },
+    {
+      "pageTitle": "II. — Das Haus hinter der Zunft",
+      "guildPage": true,
+      "image": "../Stammbäume/assets/images/portraits/haus-wylan/lugh-teyrngrach.jpg",
+      "imageFit": "contain",
+      "quote": "Mit Ähre gebraut, mit Ehre genossen!",
+      "stats": [
+        [
+          "Sitz",
+          "Aberon"
+        ],
+        [
+          "Hausoberhaupt",
+          "Lugh Teyrngarch"
+        ],
+        [
+          "Leitender Familienbrauer",
+          "Gaenor Teyrngarch"
+        ],
+        [
+          "Mitgliederstärke",
+          "Hoch"
+        ],
+        [
+          "Ruf",
+          "Expansionistisch · marktbeherrschend"
+        ]
+      ],
+      "guild": {
+        "crestImage": "../Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "portraitFormat": "portrait",
+        "sideWidth": 100,
+        "connectionPortraitHeight": 100,
+        "biographyTitle": "Familie, Handwerk & Macht",
+        "biographyText": "<p>Die <strong>Teyrngarch Brauerzunft</strong> ist eine der angesehensten und größten Brauereigilden im Königreich Cenyr. Über Jahre hinweg hat sich diese Gilde durch strategische Übernahmen und Expansion einen Namen gemacht. Im Zuge ihrer Geschichte hat sie kleinere Brauereien erfolgreich integriert und ihre Macht stetig vergrößert. Unter der Führung des Hauses Teyrngarch und mit der Unterstützung ihrer eigenen Diebesgilde hat sich die Brauerzunft über die Sonnenküste hinaus, ihrem Ursprungsgebiet, ausgebreitet. Heute erstreckt sich ihr Einfluss über alle Ecken des Königreichs und reicht weit über die ursprünglichen Grenzen hinaus. Die Teyrngarch Brauerzunft ist bekannt für ihre Durchsetzungskraft, ihren geschäftlichen Ehrgeiz und ihre Fähigkeit, neue Märkte zu erobern.</p><p>Taredd der Braumeister und Sulwen stehen am Anfang der Hausüberlieferung. Heute trägt Lugh Teyrngarch seit 1725 die Verantwortung für das Haus. Sein Sohn Gaenor verbindet die Stellung des ersten Erben mit dem Rang eines Teyrngarch Brauers; dessen Sohn Gandwy arbeitet als Brauer Geselle.</p>",
+        "abilitiesTitle": "Die Handschrift der Teyrngarch",
+        "abilities": [
+          {
+            "title": "Vom Feld bis zur Schankstube",
+            "detail": "Gerstenbauern, Mühlen, Fassbinder, Braumeister und Wirte bilden eine zusammenhängende Wirtschaft.",
+            "icon": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+          },
+          {
+            "title": "Goldhaube als Versprechen",
+            "detail": "Das Nationalbier Cenyrs trägt den Ruf der Zunft über die Sonnenküste hinaus.",
+            "icon": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+          },
+          {
+            "title": "Unnachgiebiger Wettbewerb",
+            "detail": "Ehen, Übernahmen und nötigenfalls die verborgene Diebesgilde sichern den Einfluss des Hauses.",
+            "icon": "../IconOrdner/Organisationsicons/Spionage.png"
+          }
+        ],
+        "historyTitle": "Aus Bürgern wurden Ritterfürsten",
+        "historyText": "<p>Die <strong>Teyrngarch</strong> haben sich ihren Platz im Adel des Königreiches Cenyr nicht durch heroische Taten oder glorreiche Abenteuer erkämpft, sondern durch ihren beispiellosen Erfolg als Bierbrauer. Ursprünglich wohlhabende Bürger, haben sie sich über Generationen hinweg durch geschäftlichen Weitblick und den wachsenden Einfluss in der Region der Sonnenküste einen Namen gemacht. Dank ihres stetig wachsenden Wohlstands und ihres Einflusses wurden sie schließlich in den Aberoner Adel der Sonnenküste aufgenommen.</p>\n<p>Heute zählen die Teyrngarch zu den wohlhabendsten und einflussreichsten Familien des Landes. Ihre Brauereien und Tavernen sind über das gesamte Königreich verstreut, und ihr preisgekröntes Bier, die „<strong><em>Goldhaube</em></strong>“, hat sogar den Status des Nationalbiers von Cenyr erlangt. Ihr Erfolg ist weniger der Tradition, sondern vielmehr ihrem geschickten Handelsverständnis und der breiten Verbreitung ihrer Brauereien zu verdanken. Die Teyrngarch stehen für wirtschaftliche Macht und Einfluss, die sie durch kluge Expansion und die Sicherung von Märkten über die Sonnenküste hinaus aufgebaut haben.</p>",
+        "worksTitle": "Leistungen der Zunft",
+        "works": [
+          "Bierherstellung und Qualitätssicherung",
+          "Tavernenbetrieb und Handel",
+          "Gersten- und Hopfenanbau auf eigenen und gepachteten Flächen",
+          "Fassbinderei, Mühlen und Versorgung der Brauhäuser"
+        ],
+        "triviaTitle": "Gesichter und Verbindungen",
+        "trivia": [
+          "Gaenors Rang als Familienbrauer ist eine fachliche Stellung; die oberste Leitung liegt bei Lugh.",
+          "Die Goldhaube ist das Feierbier des Hauses; Sonnenglanz begleitet den Frühmarkt."
+        ],
+        "connectionsTitle": "Drei Generationen am Brauhaus",
+        "connections": [
+          {
+            "name": "Lugh Teyrngarch",
+            "image": "../Stammbäume/assets/images/portraits/haus-wylan/lugh-teyrngrach.jpg",
+            "imageFormat": "portrait",
+            "detail": "Geboren 1669 · Haus- und Gildenoberhaupt seit 1725."
+          },
+          {
+            "name": "Gaenor Teyrngarch",
+            "image": "../Stammbäume/assets/images/portraits/haus-illewod/gaenor-teyrngarch.jpg",
+            "imageFormat": "portrait",
+            "detail": "Geboren 1694 · Erster Erbe und Teyrngarch Brauer; Sohn Lughs und Cariads."
+          },
+          {
+            "name": "Gandwy Teyrngarch",
+            "image": "../Stammbäume/assets/images/portraits/haus-teyrngarch/gandwy-teyrngarch.png",
+            "imageFormat": "portrait",
+            "detail": "Geboren 1720 · Brauer Geselle; Sohn Gaenors und Elens, Enkel Lughs."
+          }
+        ],
+        "contractsTitle": "Bündnisse & Konkurrenz",
+        "contracts": [
+          {
+            "title": "Haus Penderyn",
+            "text": "Eine über mehrere Generationen erneuerte Familien- und Handelspartnerschaft verbindet Bier und Whisky.",
+            "icon": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+          },
+          {
+            "title": "Aldrimarer Brauereizünfte",
+            "text": "Wirtschaftliche Konkurrenz; Heiratsverbindungen können den Wettbewerb begrenzen.",
+            "icon": "../IconOrdner/Organisationsicons/Diplomatie.png"
+          }
+        ],
+        "documentsTitle": "Familienbuch & Betriebsnetz",
+        "documents": [
+          {
+            "title": "Haus Teyrngarch O’Aberon",
+            "text": "Stammbaum, Originalporträts und Familienverbindungen.",
+            "icon": "../Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-teyrngarch&mode=view"
+          }
+        ],
+        "footer": "Mit Ähre gebraut, mit Ehre genossen!"
+      }
+    },
+    {
+      "pageTitle": "III. — Ämter, Ausbildung & Verantwortung",
+      "hierarchyPage": true,
+      "hierarchy": {
+        "layoutMode": "vertical",
+        "treeDisplayMode": "tabs",
+        "cardFontScale": 100,
+        "portraitScale": 75,
+        "chartScale": 90,
+        "eyebrow": "Zunftordnung",
+        "subtitle": "Teyrngarch Brauerzunft",
+        "centerLabel": "Teyrngarch Brauerzunft",
+        "emblem": "../Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "sideImage": "../Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+        "organizationTitle": "Teyrngarch Brauerzunft",
+        "motto": "Mit Ähre gebraut, mit Ehre genossen!",
+        "description": "<p>Das Haus bestimmt die Richtung; die Meister tragen die Verantwortung für ihr Handwerk. Die besondere Würde eines Teyrngarch Brauers setzt Geburt oder Einheirat in die Familie voraus.</p>",
+        "detailsTitle": "Zuständigkeiten",
+        "details": [],
+        "chartTitle": "Vom Hausoberhaupt zum Handwerk",
+        "chartIntro": "Die Ebenen zeigen die Verantwortung innerhalb der Zunft. Familiennachfolge und handwerkliche Ausbildung bleiben unterschiedliche Aufgaben.",
+        "levels": [
+          {
+            "label": "Gildenoberhaupt",
+            "nodes": [
+              {
+                "title": "Gildenoberhaupt",
+                "subtitle": "Lugh Teyrngarch",
+                "portrait": "../Stammbäume/assets/images/portraits/haus-wylan/lugh-teyrngrach.jpg",
+                "text": "<p>Das Oberhaupt der Gilde ist immer das Oberhaupt der Familie Teyrngarch. Diese Position wird innerhalb der Familie weitergegeben, entweder durch Erbschaft oder durch Heirat. Das Gildenoberhaupt übernimmt die vollständige Kontrolle über die strategische Ausrichtung der Gilde und die Entscheidungsgewalt über alle bedeutenden Geschäfte. Diese enge Verbindung zwischen der Familie und der Gilde gewährleistet, dass die wirtschaftlichen Interessen und der Einfluss der Teyrngarch nicht nur innerhalb ihrer Ländereien, sondern auch in den gepachteten Dörfern und Siedlungen, gewahrt bleiben.</p>"
+              }
+            ]
+          },
+          {
+            "label": "Teyrngarch Brauer",
+            "nodes": [
+              {
+                "title": "Teyrngarch Brauer",
+                "subtitle": "Gaenor Teyrngarch",
+                "portrait": "../Stammbäume/assets/images/portraits/haus-illewod/gaenor-teyrngarch.jpg",
+                "text": "<p>Der Teyrngarch Brauer ist ein Braumeister von außergewöhnlichem Rang, der nicht nur über große Erfahrung im Brauwesen verfügt, sondern auch über enge Verbindungen zur Familie Teyrngarch, der diese Gilde gehört. Diese Position ist besonders prestigeträchtig und kann nur auf zwei Wegen erreicht werden: Entweder wird man in die Familie Teyrngarch hineingeboren, oder man heiratet in die Familie ein. Teyrngarch Brauer genießen großes Ansehen und tragen maßgeblich dazu bei, die Traditionen und Werte der Familie und der Gilde zu wahren, während sie die Geschäfte und Expansion der Brauereien leiten.</p>"
+              }
+            ]
+          },
+          {
+            "label": "Brauer Zünftling",
+            "nodes": [
+              {
+                "title": "Brauer Zünftling",
+                "subtitle": "Standortleitung",
+                "portrait": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+                "text": "<p>Der Brauer Zünftling ist ein Brauermeister innerhalb der Teyrngarch Brauerzunft und gilt als hochrangiger Experte im Brauwesen. Er ist in der Regel für einen eigenen Standort verantwortlich, wo er den gesamten Brauprozess überwacht und die Organisation der Brauerei leitet. In manchen Fällen kann ein Brauer Zünftling auch unter einem noch höher gestellten Teyrngarch Brauer arbeiten, der über mehrere Standorte oder eine größere Region die Aufsicht führt. Der Brauer Zünftling genießt innerhalb der Gilde ein hohes Ansehen und trägt maßgeblich zum Erfolg der Brauereien bei.</p>"
+              }
+            ]
+          },
+          {
+            "label": "Brauer Knecht",
+            "nodes": [
+              {
+                "title": "Brauer Knecht",
+                "subtitle": "Voll ausgebildeter Brauer · Stellvertretung",
+                "portrait": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+                "text": "<p>Der Brauer Knecht ist ein voll ausgebildeter Brauer und fungiert als Stellvertreter eines Brauer Zünftlings. In dieser Position assistiert er dem Brauermeister bei den täglichen Aufgaben in der Brauerei und übernimmt wesentliche Teile des Brauprozesses. Der Brauer Knecht arbeitet eng mit anderen Knechten zusammen und sorgt dafür, dass die Abläufe in der Brauerei reibungslos funktionieren. Er besitzt das nötige Fachwissen, um den Betrieb zu unterstützen, und ist ein verlässlicher Helfer in der gesamten Produktion, von der Rohstoffverarbeitung bis zur Lagerung des fertigen Bieres.</p>"
+              }
+            ]
+          },
+          {
+            "label": "Brauer Geselle",
+            "nodes": [
+              {
+                "title": "Brauer Geselle",
+                "subtitle": "Gandwy Teyrngarch",
+                "portrait": "../Stammbäume/assets/images/portraits/haus-teyrngarch/gandwy-teyrngarch.png",
+                "text": "<p>Der Brauer Geselle ist der dritte Rang in der Gilde und stellt den Übergang von der Ausbildung zur eigenständigen Arbeit dar. Nachdem er als Lehrling die Grundlagen gelernt hat, übernimmt der Geselle nun größere Verantwortung in der Brauerei. Er arbeitet selbstständig an verschiedenen Prozessen der Bierherstellung, wie dem Brauen, der Gärung und der Abfüllung. Als Geselle ist er dafür bekannt, nicht nur sein Handwerk zu beherrschen, sondern auch in der Lage zu sein, jüngere Lehrlinge zu unterstützen und zu führen. Er wird weiterhin von den Meistern beaufsichtigt, aber genießt bereits mehr Vertrauen und Freiheit in seiner Arbeit.</p>"
+              }
+            ]
+          },
+          {
+            "label": "Brauer Lehrling",
+            "nodes": [
+              {
+                "title": "Brauer Lehrling",
+                "subtitle": "Ausbildung unter Aufsicht",
+                "portrait": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+                "text": "<p>Der Brauerlehrling ist der zweite Rang innerhalb der Gilde und wird ins Brauereiwesen der Teyrngarch eingeführt. In dieser Phase lernt der Lehrling die grundlegenden Prinzipien der Bierherstellung, angefangen bei der Auswahl der Zutaten bis hin zur Bedienung einfacher Brauwerkzeuge. Der Fokus liegt darauf, die ersten Schritte im Handwerk zu meistern, wobei erfahrene Brauer als Mentoren fungieren. Der Brauerlehrling übernimmt einfache Aufgaben unter Aufsicht und beginnt, ein grundlegendes Verständnis für die Traditionen und hohen Standards der Zunft zu entwickeln.</p>"
+              }
+            ]
+          },
+          {
+            "label": "Handlanger",
+            "nodes": [
+              {
+                "title": "Handlanger",
+                "subtitle": "Hilfsdienste & Versorgung",
+                "portrait": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+                "text": "<p>Der Handlanger ist der niedrigste Rang der Gilde und umfasst alle Mitarbeiter, die triviale oder tertiäre Dienste verrichten. Dies kann zum Beispiel ein Knecht sein, der als Wächter eingesetzt wird, oder ein Bauer, der in der Brauerei hilft. Der Rang dient hauptsächlich zur Registrierung dieser einfachsten Angestellten und gibt ihnen einen offiziellen Status innerhalb der Gilde.</p>"
+              }
+            ]
+          }
+        ],
+        "footerNote": "Hausoberhaupt: Lugh · leitender Familienbrauer: Gaenor · Geselle: Gandwy. Die genaue Hierarchie folgt der ausführlichen Zunftordnung der Vorlage."
+      }
+    },
+    {
+      "pageTitle": "IV. — Vom Gerstenfeld zum Schanktisch",
+      "image": "./public/assets/brewer-guilds/teyrngarch-handwerk.png",
+      "imageWidth": 38,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "description": "<p>Die <strong>Teyrngarch Brauerzunft</strong> ist weit mehr als eine einfache Brauerei – sie ist das Zentrum eines komplexen Netzwerks von Betrieben und gepachteten Ländereien, die verschiedene Rohstoffe und Materialien für ihre Brauproduktion bereitstellen. An der Spitze dieses Imperiums stehen die <strong>Teyrngarch</strong>, eine wohlhabende Familie, die nicht nur die Brauereien direkt leitet, sondern auch die Verwaltung und Kontrolle über die zugehörigen Betriebe und Ländereien ausübt.</p>\n<p>Der Betrieb beginnt bei den <strong>Gerstenfarmen</strong>, die einen der wichtigsten Rohstoffe für die Bierproduktion liefern. Diese Farmen befinden sich auf sowohl eigenen als auch gepachteten Ländereien, die die Teyrngarch von anderen Adligen und Landbesitzern übernommen haben. Auf diesen Pachtflächen wird auch Hopfen angebaut, um die Versorgung der Brauereien sicherzustellen. Zusätzlich werden <strong>Holzfässer</strong> von spezialisierten Handwerkern, den <strong>Fassbindern</strong>, hergestellt. Diese Fässer sind essentiell für die Lagerung des Biers und den Erhalt des Aromas.</p>\n<p>In den vielen gepachteten Ländereien werden nicht nur Rohstoffe wie Gerste und Hopfen angebaut, sondern auch <strong>sekundäre und tertiäre Güter</strong> produziert. Diese sind für den Betrieb der Brauereien und Tavernen von zentraler Bedeutung. Dazu gehören Handwerksbetriebe, die Werkzeuge und Ausrüstungen für die Brauereien herstellen, sowie Mühlen, die das Getreide für den Brauprozess verarbeiten. Holzverarbeitende Betriebe liefern das Material für Fässer und andere notwendige Strukturen.</p>\n<p>Die <strong>Brauereien selbst</strong> sind über das gesamte Land verteilt und stellen eine Vielzahl von Bieren her. Das <strong>preisgekrönte Bier „Goldhaube“</strong> ist das Aushängeschild der Teyrngarch Brauerzunft und genießt landesweite Anerkennung als Nationalbier von Cenyr. Es steht für Qualität und handwerkliche Exzellenz und ist ein Symbol für den wirtschaftlichen Erfolg der Familie. Neben der Goldhaube stellt die Zunft auch weitere Biersorten her, die eher dem herkömmlichen Geschmack entsprechen. Diese \"normalen\" Biere decken den alltäglichen Bedarf der Bevölkerung ab und sind weit verbreitet, um den Massenmarkt zu bedienen.</p>\n<p><strong>Der Aufgabenbereich der Teyrngarch Brauerzunft</strong> ist vielfältig. Sie überwacht die landwirtschaftlichen Betriebe, die die Rohstoffe liefern, leitet die Handwerksbetriebe, die für die Herstellung von Fässern und Ausrüstung zuständig sind, und sorgt für den reibungslosen Betrieb der Brauereien selbst. Gleichzeitig verwaltet sie die gepachteten Ländereien und sichert so eine kontinuierliche Versorgung der Brauereien. Das strategische Ziel der Gilde liegt in der Expansion und der Sicherung neuer Märkte, was durch die enge Verknüpfung mit der Diebesgilde des Hauses Teyrngarch zusätzlich unterstützt wird.</p>\n<p>Die Teyrngarch Brauerzunft ist daher nicht nur eine bedeutende Brauereiorganisation, sondern ein komplexes, gut vernetztes Unternehmen, das in viele wirtschaftliche Bereiche eingebunden ist.</p>",
+      "commentSequence": []
+    },
+    {
+      "pageTitle": "V. — Herrschaften, Pachten & Brauorte",
+      "organizationNetworkPage": true,
+      "organizationNetwork": {
+        "title": "Von Aberon in die Grafschaften",
+        "introduction": "<p>Unter dem Reiter <strong>Standorte</strong> der Teyrngarch Brauerzunft wird deutlich, dass die Gilde sowohl über eigene Herrschaften als auch über zahlreiche gepachtete Ländereien verfügt. Diese Standorte dienen dem Betrieb der Brauereien und der Produktion der notwendigen Rohstoffe für die Bierherstellung.</p>\n<p>Die <strong>Teyrngarch Herrschaften</strong> umfassen Gebiete, die sich direkt im Besitz der Familie befinden. Diese Ländereien werden vollständig der Brauereiwirtschaft gewidmet und dienen als zentrale Produktionsstätten. Hier werden unter der Leitung der <strong>Teyrngarch selbst</strong> oder unter der Aufsicht eines Teyrngarch Brauers die hochwertigsten Biere hergestellt, darunter das berühmte „Goldhaube“. Auf diesen Ländereien befinden sich nicht nur die Brauereien selbst, sondern auch die Farmen und Werkstätten, die für die Herstellung der Rohstoffe und der benötigten Ausrüstung zuständig sind.</p>\n<p>Daneben betreibt die Zunft zahlreiche <strong>gepachtete Ländereien</strong>, die von anderen Adligen übernommen wurden. Diese Pachtverträge erlauben es der Brauerzunft, in Regionen außerhalb ihrer ursprünglichen Einflusssphäre tätig zu werden und somit ihr Netz an Produktionsstätten erheblich auszudehnen. Diese Orte werden in der Regel von <strong>Braumeistern</strong> geleitet, die direkt der Teyrngarch Zunft unterstehen. In manchen Fällen übernehmen Teyrngarch Familienmitglieder selbst die Aufsicht über strategisch wichtige gepachtete Standorte, um den Einfluss der Familie in diesen Regionen zu sichern.</p>\n<p>Alle Standorte, ob auf den eigenen Herrschaften der Teyrngarch oder auf den gepachteten Ländereien, fallen unter den zentralen Betrieb der <strong>Teyrngarch Brauerei</strong>. Jeder dieser Orte spielt eine entscheidende Rolle in der Versorgung des Königreichs mit hochwertigen Bieren, und jeder Braumeister sorgt dafür, dass die Tradition und die Qualitätsstandards der Teyrngarch gewahrt bleiben.</p><p>Die Standorte der Brauerei sind verteilt auf Lehensherrschaften, die sich von kleineren Ortschaften wie Dörfern bis hin zu größeren Orten erstrecken. Diese Orte werden oft von anderen Adligen gepachtet, um die Brauereiwirtschaft der Teyrngarch auszuweiten. Einige Standorte gehören jedoch direkt zur Herrschaft der Familie Teyrngarch selbst. Da die Teyrngarch innerhalb ihres eigenen Lehens nur begrenzte Landflächen besitzen, haben sie in vielen anderen Regionen Dörfer und Siedlungen gepachtet. Diese dienen als wichtige Zentren für die Brauereiproduktion und den Handel, wodurch die Gilde ihre Expansion in entfernte Gebiete vorantreibt.</p>",
+        "reach": "Königreich Cenyr · Ursprung an der Sonnenküste",
+        "model": "Eigene Herrschaften und gepachtete Standorte werden durch die Zunftleitung verbunden.",
+        "note": "Die Überlieferung nennt die Orte und Regionen, ordnet jedoch nicht jeden Ort eindeutig Eigenbesitz oder Pacht zu.",
+        "sites": [
+          {
+            "name": "Aberon",
+            "region": "Sonnenküste",
+            "kind": "headquarters",
+            "image": "../Stammbäume/assets/images/houses/Sonnenküste/Gersteküste/haus-teyrngarch.png",
+            "description": "Ursprung und zentraler Sitz der Teyrngarch Brauerzunft."
+          },
+          {
+            "name": "Trefbrewyn",
+            "region": "Ährental",
+            "kind": "branch",
+            "image": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+            "description": "Überlieferter Standort im Brau- und Versorgungsnetz der Teyrngarch."
+          },
+          {
+            "name": "Bragdyddolwyn",
+            "region": "Ährental",
+            "kind": "branch",
+            "image": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+            "description": "Überlieferter Standort im Brau- und Versorgungsnetz der Teyrngarch."
+          },
+          {
+            "name": "Bragdyddol",
+            "region": "Graue Weite",
+            "kind": "branch",
+            "image": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+            "description": "Überlieferter Standort im Brau- und Versorgungsnetz der Teyrngarch."
+          },
+          {
+            "name": "Bragfonnor",
+            "region": "Weidebucht",
+            "kind": "branch",
+            "image": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+            "description": "Überlieferter Standort im Brau- und Versorgungsnetz der Teyrngarch."
+          },
+          {
+            "name": "Gwellbrwyd",
+            "region": "Weidebucht",
+            "kind": "branch",
+            "image": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+            "description": "Überlieferter Standort im Brau- und Versorgungsnetz der Teyrngarch."
+          },
+          {
+            "name": "Bragmellyn",
+            "region": "Sonnenküste",
+            "kind": "branch",
+            "image": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+            "description": "Überlieferter Standort im Brau- und Versorgungsnetz der Teyrngarch."
+          },
+          {
+            "name": "Bragwaul",
+            "region": "Sonnenküste",
+            "kind": "branch",
+            "image": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+            "description": "Überlieferter Standort im Brau- und Versorgungsnetz der Teyrngarch."
+          },
+          {
+            "name": "Bragwynfa",
+            "region": "Sonnenküste",
+            "kind": "branch",
+            "image": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+            "description": "Überlieferter Standort im Brau- und Versorgungsnetz der Teyrngarch."
+          },
+          {
+            "name": "Baglydd",
+            "region": "Sonnenküste",
+            "kind": "branch",
+            "image": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+            "description": "Überlieferter Standort im Brau- und Versorgungsnetz der Teyrngarch."
+          }
+        ],
+        "footer": "Aus eigenem Grund und fremden Pachten wächst ein zusammenhängendes Brauereinetz."
+      }
+    },
+    {
+      "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+      "tradeCatalogPage": true,
+      "commentSequence": [],
+      "tradeCatalog": {
+        "title": "Das Stammsortiment · Fünf Eigenbiere",
+        "subtitle": "Goldhaube, Hellwacht, Dämmerkrone, Hopfgold & Sonnenglanz",
+        "headerIcon": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+        "noteIcon": "◈",
+        "noteTitle": "Glas / Krug · Flasche · Fass",
+        "noteText": "Krug 0,5 l · Flasche 1 l · Fass 50 l. Alle Preise in Kupfertalern.",
+        "categories": [
+          {
+            "id": "beer",
+            "label": "Bier · Getränke"
+          }
+        ],
+        "allLabel": "Gesamtes Sortiment",
+        "searchPlaceholder": "Nach Name, Charakter oder Herkunft suchen …",
+        "filterLabel": "Suche",
+        "items": [
+          {
+            "id": "bier-goldhaube",
+            "category": "beer",
+            "status": "available",
+            "title": "Goldhaube",
+            "subtitle": "Preisgekröntes Nationalbier Cenyrs",
+            "image": "./public/assets/brewer-guilds/bier-goldhaube.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Nationalbier",
+            "tags": [
+              "Malz",
+              "Sommerblumen",
+              "Honig"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p>Ein Bier wie eine Hymne – <strong>Goldhaube</strong> erhebt sich nicht bloß in Krügen, sondern in <em>Herzen und Geschichten</em>. Gebraut von der edlen Familie <strong>Teyrngarch</strong>, ist es das Symbol <strong>höfischer Braukultur</strong> in ihrer reinsten Form.</p>\n<p>Schon der erste Blick auf das <strong>golden schimmernde Bier</strong> mit seiner feinperligen Krone lässt erahnen, dass hier keine gewöhnliche Gerste verwendet wurde. <strong>Sanft malzig</strong>, mit einem Hauch von <em>Sommerblumen</em>, schmiegt sich der Geschmack an den Gaumen. Ein <em>zarter Honigton</em> begleitet den Schluck, der in eine <strong>runde, leichte Bitterkeit</strong> mündet – edel, ausgewogen, wie eine höfische Melodie.</p>\n<p><strong>Goldhaube</strong> ist kein Trinkbier – es ist ein <strong>Feierbier</strong>. Ein Zeichen der <em>Verbindung, des Erfolgs, der Würde</em>. In großen Hallen gereicht, in kleinen Momenten genossen. Der perfekte Begleiter zu allem, was mit Brot, Käse oder Festgelage beginnt.</p>\n<p><em>\"Wenn Schwarzdorn flüstert und Honigbreu umgarnt – dann singt Goldhaube.\"</em></p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Aberon · Sonnenküste · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Festtafel",
+              "Brot & Käse"
+            ],
+            "priceTitle": "Ausschank & Gebinde",
+            "priceMin": "",
+            "priceMax": "",
+            "priceFill": 0,
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "8,5"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "17"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "850"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+            "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+            "conditions": "Stammsortiment des Hauses.",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+          },
+          {
+            "id": "bier-hellwacht",
+            "category": "beer",
+            "status": "available",
+            "title": "Hellwacht",
+            "subtitle": "Helles Hausbier · Teyrngarcher Eigenmarke",
+            "image": "./public/assets/brewer-guilds/bier-hellwacht.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausbier",
+            "tags": [
+              "Mildes Malz",
+              "Golden",
+              "Dezente Bittere"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p><strong>Hellwacht</strong> ist das klassische Aushängeschild der Teyrngarch Zunft – ein ehrliches, helles Bier mit goldener Farbe, klarer Note und stabiler Qualität. Es ist nicht ganz so edel wie die Goldhaube, aber nah dran: vollmundig, mild malzig, mit einer dezenten Bittere im Abgang. Ein Bier, das sich nicht versteckt, aber auch nicht aufdrängt.</p>\n<p>Es kostet etwas mehr als das übliche Tavernenzeug, dafür bekommt man ein sauberes Gebräu, das sowohl am Kamin als auch bei der Ratsversammlung bestehen kann. Wer keine Goldhaube will, aber trotzdem zeigen möchte, dass er Geschmack hat – greift zu Hellwacht.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Aberon · Sonnenküste · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Mildes Malz",
+              "Golden",
+              "Dezente Bittere"
+            ],
+            "priceTitle": "Ausschank & Gebinde",
+            "priceMin": "",
+            "priceMax": "",
+            "priceFill": 0,
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "2,6"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "5,2"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "260"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+            "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+            "conditions": "Stammsortiment des Hauses.",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+          },
+          {
+            "id": "bier-daemmerkrone",
+            "category": "beer",
+            "status": "available",
+            "title": "Dämmerkrone",
+            "subtitle": "Dunkles Röstbier · Teyrngarcher Eigenmarke",
+            "image": "./public/assets/brewer-guilds/bier-daemmerkrone.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausbier",
+            "tags": [
+              "Röstmalz",
+              "Dunkles Brot",
+              "Rauch"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p><strong>Dämmerkrone</strong> ist das dunkle Rückgrat im Sortiment der Teyrngarch Brauerzunft – ein rötlich-braunes Bier mit kräftigem Röstaroma, das sich irgendwo zwischen Stolz und Schwermut bewegt. Malzig, leicht nussig, mit Anklängen von dunklem Brot und einem Hauch Rauch.</p>\n<p>Es ist kein süffiges Zechbier, sondern eher etwas für den Abend – für Gespräche, Schweigen, oder das zweite nach einem langen Tag. Wer sonst Hellwacht trinkt, wird hier kurz schlucken. Wer Dämmerkrone versteht, bleibt dabei.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Aberon · Sonnenküste · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Abend",
+              "Herzhafte Speisen"
+            ],
+            "priceTitle": "Ausschank & Gebinde",
+            "priceMin": "",
+            "priceMax": "",
+            "priceFill": 0,
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "1,95"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "3,9"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "195"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+            "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+            "conditions": "Stammsortiment des Hauses.",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+          },
+          {
+            "id": "bier-hopfgold",
+            "category": "beer",
+            "status": "available",
+            "title": "Hopfgold",
+            "subtitle": "Leichtes helles Bier · Teyrngarcher Eigenmarke",
+            "image": "./public/assets/brewer-guilds/bier-hopfgold.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausbier",
+            "tags": [
+              "Strohgold",
+              "Frisch",
+              "Milder Hopfen"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p><strong>Hopfgold</strong> ist ein sehr helles, leichtes Bier mit klarem Charakter und einfacher Seele. Gebraut für den Durst, nicht fürs Grübeln – mit strohgelber Farbe, milder Kohlensäure und einer dezenten Hopfennote. Kein großes Gewese, kein schwerer Nachgang – dafür frisch, unkompliziert und ehrlich.</p>\n<p>Wird gern in Tavernen ausgeschenkt, wo viel getrunken, aber wenig gezahlt wird. Passt gut zu geröstetem Brot, Wurst, oder einfach einem langen Gespräch am Schanktresen. Wer Goldhaube nicht jeden Tag zahlen will, greift zu Hopfgold – und bleibt oft dabei.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Aberon · Sonnenküste · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Taverne",
+              "Wurst & Brot"
+            ],
+            "priceTitle": "Ausschank & Gebinde",
+            "priceMin": "",
+            "priceMax": "",
+            "priceFill": 0,
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "1,3"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "2,6"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "130"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+            "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+            "conditions": "Stammsortiment des Hauses.",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+          },
+          {
+            "id": "bier-sonnenglanz",
+            "category": "beer",
+            "status": "available",
+            "title": "Sonnenglanz",
+            "subtitle": "Helles Kräuterbier · Teyrngarcher Eigenmarke",
+            "image": "./public/assets/brewer-guilds/bier-sonnenglanz.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausbier",
+            "tags": [
+              "Kräuter",
+              "Blütenhonig",
+              "Leicht"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p><strong>Sonnenglanz</strong> ist ein leichtes, helles Bier mit feinem Kräuteraroma und einem Hauch von Blütenhonig. Es wird bevorzugt am Vormittag oder zu leichten Speisen getrunken – besonders beliebt bei Handwerkern, Kutschern und jenen, die zwar Durst, aber noch was vorhaben. Der milde Antrunk erinnert an frisches Gras und Kräuterwiese, gefolgt von einer sanften, fast süßlichen Note und einem kühlen, klaren Abgang.</p>\n<p>Ein ideales Bier für warme Tage, Brotzeitplatten oder das erste Krugerl beim Frühmarkt. Achtung: Trotz geringer Umdrehung trinkt es sich schneller leer, als man „noch eins“ sagen kann.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Aberon · Sonnenküste · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Frühmarkt",
+              "Brotzeit"
+            ],
+            "priceTitle": "Ausschank & Gebinde",
+            "priceMin": "",
+            "priceMax": "",
+            "priceFill": 0,
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "0,6"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "1,2"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "60"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+            "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+            "conditions": "Stammsortiment des Hauses.",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+          },
+          {
+            "id": "beer-reserve-1",
+            "category": "beer",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 1",
+            "description": "",
+            "image": "",
+            "priceOptions": []
+          },
+          {
+            "id": "beer-reserve-2",
+            "category": "beer",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 2",
+            "description": "",
+            "image": "",
+            "priceOptions": []
+          },
+          {
+            "id": "beer-reserve-3",
+            "category": "beer",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 3",
+            "description": "",
+            "image": "",
+            "priceOptions": []
+          },
+          {
+            "id": "beer-reserve-4",
+            "category": "beer",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 4",
+            "description": "",
+            "image": "",
+            "priceOptions": []
+          },
+          {
+            "id": "beer-reserve-5",
+            "category": "beer",
+            "status": "planned",
+            "title": "Freier Sortimentsplatz 5",
+            "description": "",
+            "image": "",
+            "priceOptions": []
+          }
+        ],
+        "footerCards": []
+      }
+    },
+    {
+      "pageTitle": "VII. — Partnerbrauereien · Eigene Herkunft",
+      "tradeCatalogPage": true,
+      "commentSequence": [],
+      "tradeCatalog": {
+        "title": "Partnerbrauereien · Eigene Herkunft",
+        "subtitle": "Kooperationsprodukte außerhalb des Teyrngarch-Stammsortiments",
+        "headerIcon": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+        "noteIcon": "◈",
+        "noteTitle": "Glas / Krug · Flasche · Fass",
+        "noteText": "Krug 0,5 l · Flasche 1 l · Fass 50 l. Alle Preise in Kupfertalern.",
+        "categories": [
+          {
+            "id": "beer",
+            "label": "Partnerbiere · Getränke"
+          }
+        ],
+        "allLabel": "Alle Partnerprodukte",
+        "searchPlaceholder": "Nach Name, Charakter oder Herkunft suchen …",
+        "filterLabel": "Suche",
+        "items": [
+          {
+            "id": "bier-hakenbraeu",
+            "category": "beer",
+            "status": "available",
+            "title": "Hakenbräu",
+            "subtitle": "Partnerbier · Rostiger Haken",
+            "image": "./public/assets/brewer-guilds/bier-hakenbraeu.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Partnerprodukt",
+            "tags": [
+              "Dunkel",
+              "Herb",
+              "Malz & Rauch"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p><strong>Hakenbräu</strong> ist das hauseigene Bier des Rostigen Hakens – <strong>nur hier gebraut, nur hier ausgeschenkt</strong>. Es ist ein dunkles, kräftiges Gebräu mit leicht metallischem Nachklang, den die Stammgäste liebevoll als „Rost“ bezeichnen. Im Vergleich zur helleren Hellwacht oder der edlen Goldhaube ist Hakenbräu herber, rauer und wirkt fast ein wenig rußig, als hätte es den Rauch des Brauerhauses selbst aufgesogen.</p>\n<p>Trotz – oder gerade wegen – seiner Eigenart ist es die <strong>drittbeliebteste Wahl</strong> unter den Gästen. Handwerker, Söldner, Händler und Stammkunden schätzen die ehrliche Stärke des Biers und seine klare Herkunft. Es kommt <strong>direkt aus den Fässern im Nebengebäude</strong>, frisch gezapft – manchmal noch warm vom Sudkessel.</p>\n<p>Wer es bestellt, zeigt: „<em>Ich trinke nicht, um zu glänzen. Ich trinke, weil ich dazugehöre.</em>“</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Die Hausbrauerei des Rostigen Hakens",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Dunkel",
+              "Herb",
+              "Malz & Rauch"
+            ],
+            "priceTitle": "Ausschank & Gebinde",
+            "priceMin": "",
+            "priceMax": "",
+            "priceFill": 0,
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "1,3"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "2,6"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "130"
+              }
+            ],
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+            "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+            "conditions": "Eigenständiges Hausbier des Rostigen Hakens; nur dort gebraut und ausgeschenkt. Flaschen- und Fasswerte gelten als Gebindereferenz vor Ort, nicht als überregionales Lieferangebot.",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+          }
+        ],
+        "footerCards": []
+      }
+    },
+    {
+      "pageTitle": "VIII. — Bündnisse, Märkte & Schatten",
+      "image": "./public/assets/brewer-guilds/teyrngarch-buendnisse.png",
+      "imageWidth": 38,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "description": "<p>Die <strong>Teyrngarch Brauerzunft</strong> hat drei etablierte Wege, wie sie mit Konkurrenz umgeht und Kooperationen aufbaut, um ihre Macht und ihren Einfluss im Königreich zu sichern.</p>\n<p>Der erste Weg ist durch <strong>Ehen und Partnerschaften</strong>. Diese Methode wird oft genutzt, um langfristige Beziehungen mit anderen wichtigen Gilden oder Adelsfamilien zu festigen. Ein herausragendes Beispiel ist die Partnerschaft mit den <strong>Penderyn</strong>, die sich als Destillerie auf die Herstellung von Spirituosen spezialisiert haben und somit keine direkte Konkurrenz darstellen. Durch die Ehe ist eine Partnerschaft entstanden, bei der beide Seiten voneinander profitieren. Ein weiteres Beispiel sind die Ehen mit den <strong>Aldrimarer Clans</strong>. Hier dient die Ehe als Mittel, um einen Waffenstillstand zu erkaufen und die Expansion der Aldrimarer nach Cenyr zu stoppen, womit die Teyrngarch ihre Expansion ungehindert fortsetzen können.</p>\n<p>Der zweite Weg besteht darin, <strong>kleinere Brauereien und Zünfte aufzukaufen</strong>. Bürgerliche oder Emporkömmlinge, die ihre eigenen Brauereien gegründet haben, sind oft nicht in der Lage, mit der Teyrngarch Brauerzunft zu konkurrieren, da die Zunft durch ihre schiere Größe und Kaufkraft dominiert. Diese Brauereien werden häufig in die Gilde integriert, was den Einfluss und die Kontrolle der Teyrngarch in den verschiedenen Regionen weiter stärkt.</p>\n<p>Die letzte Methode wird angewandt, wenn die ersten beiden Strategien nicht zum Erfolg führen. In diesen Fällen greift die Gilde auf ihre <strong>Diebesgilde</strong> zurück, die als eine Art Hammer fungiert. Offiziell wird die Diebesgilde hauptsächlich als Abwehrmittel gegen die „Klingende Münze“, eine große Kaufmannsgilde, genutzt, um deren Einfluss zu beschränken. Doch in einigen Fällen wird sie auch eingesetzt, um eigenwillige oder kleinere Brauereien durch gezielte Aktionen zu dominieren oder sie zur Kooperation oder zum Verkauf zu zwingen.</p>\n<p>Diese drei Wege ermöglichen es der Teyrngarch Brauerzunft, ihre Vorherrschaft im Königreich zu sichern und ihre Konkurrenz entweder durch Partnerschaften, Kauf oder Druck zu beseitigen.</p><p>Die Verbindung zu Penderyn trägt auch familiäre Gesichter: Mairwen Teyrngarch heiratete Gareth Penderyn, während Gwastad Teyrngarch mit Eilonwy Penderyn verbunden war. In der heutigen Generation erneuert die Verlobung Elinor Teyrngarchs mit Dwnn Penderyn diese Nähe.</p>",
+      "commentSequence": []
+    }
+  ]
+}

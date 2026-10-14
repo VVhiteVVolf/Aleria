@@ -313,7 +313,10 @@
           commonerHouse("ysgrif", "Ysgrif"),
           commonerHouse("falchdyn", "Falchdyn"),
           commonerHouse("coeddu", "Coeddu"),
-          commonerHouse("craigddu", "Craigddu", "craigddu")
+          commonerHouse("craigddu", "Craigddu", "craigddu"),
+          commonerHouse("trevoryn", "Trevoryn"),
+          commonerHouse("svathamar", "Svathamar"),
+          commonerHouse("dubhdarach", "Dubhdarach")
         ])
       })
     ]),
@@ -350,7 +353,7 @@
         wealth: "Solide",
         reputation: "Angesehen",
         influence: "Osttor & Hafen",
-        description: "Neutraler Treffpunkt für Veteranen, Söldner und Reisende zwischen Osttorbezirk und Hafenviertel."
+        description: "Beliebter Treffpunkt für Veteranen, Söldner und Reisende im Osten des Hafenviertels, an der Gasse zum Osttor. 1722 von den drei Feldkameraden Merrik Trevoryn, Hrolf Svathamar aus Rorikshall und Aedan Dubhdarach aus Leitheach gegründet."
       })
     ]),
 

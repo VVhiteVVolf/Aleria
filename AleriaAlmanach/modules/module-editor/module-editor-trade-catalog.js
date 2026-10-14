@@ -163,6 +163,7 @@ function buildTradeCatalogItemRows(items = [], mode = 'module') {
         ${buildTradeCatalogAttributeEditor(item, index, mode)}
         ${buildTradeCatalogTextarea('Herkunft', 'origin', item.origin, index, mode)}
         ${buildTradeCatalogInput('Verwendung, Komma-getrennt', 'usageTags', item.usageTags.join(', '), index, mode)}
+        ${buildTradeCatalogInput('Portion / Einheit beim Einzelpreis', 'unit', item.unit, index, mode)}
         ${buildTradeCatalogInput('Preis von', 'priceMin', item.priceMin, index, mode)}
         ${buildTradeCatalogInput('Preis bis', 'priceMax', item.priceMax, index, mode)}
         ${buildTradeCatalogTextarea('Verkaufsgrößen: Bezeichnung | Menge | Preis (eine Größe pro Zeile; ersetzt die Preisspanne)', 'priceOptions', (item.priceOptions || []).map(option => `${option.label} | ${option.unit} | ${option.price}`).join('\n'), index, mode)}
@@ -401,6 +402,7 @@ function collectTradeCatalogItems(block) {
     features: collectTradeCatalogFeatures(row),
     origin: getTrimmedFormValue(row, '.me-trade-item-origin'),
     usageTags: getTrimmedFormValue(row, '.me-trade-item-usageTags'),
+    unit: getTrimmedFormValue(row, '.me-trade-item-unit'),
     priceMin: getTrimmedFormValue(row, '.me-trade-item-priceMin'),
     priceMax: getTrimmedFormValue(row, '.me-trade-item-priceMax'),
     priceOptions: sanitizeTradeCatalogPriceOptions(getTrimmedFormValue(row, '.me-trade-item-priceOptions')),

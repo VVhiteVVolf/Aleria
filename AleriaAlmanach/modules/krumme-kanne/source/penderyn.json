@@ -1,0 +1,1141 @@
+{
+  "id": "penderyn-brauer-destillierzunft",
+  "title": "Die Penderyn Brauer- & Destillierzunft",
+  "subtitle": "Die Penderyn-Destillerie · Familienname und Brennkunst",
+  "type": "Brauerei & Brennerei",
+  "category": "Gilden & Zünfte · Brauer & Brenner",
+  "moduleWidth": 100,
+  "moduleHeight": 100,
+  "image": "../Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+  "stamp": "HANDWERK · FAMILIE · HANDEL",
+  "icon": "✦",
+  "symbol": null,
+  "locked": false,
+  "appendCommentsPage": false,
+  "enablePageComments": true,
+  "sessionCast": [],
+  "sessionCastDetails": [],
+  "pages": [
+    {
+      "schemaVersion": 1,
+      "image": "./public/assets/brewer-guilds/penderyn-erbe.png",
+      "imageWidth": 38,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "pageTitle": "I. — Ein Brennhaus wird zum Familienerbe",
+      "description": "<p>Die <strong>Penderyn Destillerie</strong> ist das Fundament des Hauses <strong>Penderyn</strong> und der Schlüssel zu ihrem Aufstieg in den Adelsstand. Einst einfache Destillateure in der Hauptstadt <strong>Mathragon</strong>, wurden die Penderyn durch den Erfolg ihres weltberühmten <strong>Penderyn Whiskeys</strong> in den Rang ritterlicher Herren erhoben. Heute zählt die Destillerie zu den renommiertesten im Königreich <strong>Cenyr</strong> und hat sich weit über die Landesgrenzen hinaus einen Namen gemacht. Ihr Whiskey gilt als einer der edelsten Tropfen des Reiches, geschätzt bei Adel und Feinschmeckern gleichermaßen.</p><p>Die Geschichte der Penderyn Destillerie beginnt bescheiden. Vor ihrer Erhebung in den Adelsstand war die Familie Penderyn lediglich eine kleine Gruppe von Destillateuren, die in <strong>Mathragon</strong> Whiskey herstellten. Ihr Talent für die Kunst der Destillation, verbunden mit einem tiefen Verständnis für das Handwerk, führte dazu, dass ihr Whiskey bald herausragende Qualität erreichte. Der Penderyn Whiskey wurde in Adelskreisen geschätzt und öffnete der Familie Türen, die für gewöhnliche Handwerker unzugänglich gewesen wären.</p>\n<p>Mit wachsendem Erfolg und Einfluss, gepaart mit kluger Führung, wurde die Familie schließlich in den Adelsstand erhoben und erlangte durch ihren Whiskey Reichtum und Macht. Die Destillerie selbst entwickelte sich zum Dreh- und Angelpunkt ihres neuen Status, und der <strong>Penderyn Whiskey</strong> avancierte zum Symbol für Qualität und Prestige. Ihr Whiskey wurde zum Stolz des Hauses, und durch ihn gelang es der Familie, sich in den oberen Kreisen Mathragons und des gesamten Königreichs zu etablieren.</p>\n<p>Trotz ihres Wohlstands hat die Familie Penderyn stets ihre Wurzeln in der Destillierkunst bewahrt. Sie sind auch heute noch direkt in die Überwachung und Führung ihrer Destillerie eingebunden und achten darauf, dass jede Flasche den hohen Standards entspricht, die ihren Ruf begründet haben.</p>"
+    },
+    {
+      "schemaVersion": 1,
+      "image": "../Stammbäume/assets/images/portraits/haus-penderyn/talfryn-penderyn.png",
+      "imageFit": "contain",
+      "pageTitle": "II. — Die Familie am Brennhaus",
+      "guildPage": true,
+      "stats": [
+        [
+          "Hauptsitz",
+          "Drakenburg · Vortigerns Ruh"
+        ],
+        [
+          "Produktion",
+          "Mathragon & Gwynthor"
+        ],
+        [
+          "Träger",
+          "Haus Penderyn"
+        ],
+        [
+          "Hausoberhaupt",
+          "Talfryn Penderyn"
+        ],
+        [
+          "Mitglieder",
+          "100–200"
+        ]
+      ],
+      "guild": {
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "portrait": "",
+        "sideWidth": 100,
+        "connectionPortraitHeight": 100,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Aus einem Handwerk wurde ein Haus",
+        "biographyText": "<p>Die <strong>Penderyn Destillerie</strong> ist das Fundament des Hauses <strong>Penderyn</strong> und der Schlüssel zu ihrem Aufstieg in den Adelsstand. Einst einfache Destillateure in der Hauptstadt <strong>Mathragon</strong>, wurden die Penderyn durch den Erfolg ihres weltberühmten <strong>Penderyn Whiskeys</strong> in den Rang ritterlicher Herren erhoben. Heute zählt die Destillerie zu den renommiertesten im Königreich <strong>Cenyr</strong> und hat sich weit über die Landesgrenzen hinaus einen Namen gemacht. Ihr Whiskey gilt als einer der edelsten Tropfen des Reiches, geschätzt bei Adel und Feinschmeckern gleichermaßen.</p><p>Die Brauer- und Destillierzunft führt die Überlieferung der Penderyn-Destillerie fort. Neben den Whiskys Penderyn und Rhagorol gehören Goldschuppen und Drachenblut als eigene Biere zum Stammsortiment. Brandhorn bleibt das Traditionsbier der Gochwyr vom „Zum Roten Drachen“, veredelt in Zusammenarbeit mit Penderyn. Biere der verbündeten Teyrngarch behalten ihre eigene Herkunft.</p>",
+        "abilitiesTitle": "Wofür die Penderyn stehen",
+        "abilities": [
+          {
+            "title": "Sorgfalt bis zur Abfüllung",
+            "detail": "Zutatenwahl, Destillation und Fassreife werden als zusammengehörendes Handwerk überwacht.",
+            "icon": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+          },
+          {
+            "title": "Der Familienname als Herkunft",
+            "detail": "Penderyn ist der geschützte Haus- und Traditionsname. Rhagorol wird als Zusatz einer Abfüllung geführt; die Herkunft Penderyn bleibt vorrangig.",
+            "icon": "../Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png"
+          },
+          {
+            "title": "Bewachte Wege",
+            "detail": "Die Drakenschluck Söldner schützen Brennhäuser, Reifekeller und Transporte.",
+            "icon": "../IconOrdner/Organisationsicons/Militär.png"
+          }
+        ],
+        "extraSections": [],
+        "historyTitle": "Islwyns Erbe",
+        "historyText": "<p>Islwyn Penderyn gründete die erste kleine Destillerie; Caoimhe Haeghra steht als Mitgründerin an seiner Seite in der Familienüberlieferung. Zwischen ihnen und den später datierten Generationen liegen nicht einzeln benannte Vorfahren.</p><p>Die Geschichte der Penderyn Destillerie beginnt bescheiden. Vor ihrer Erhebung in den Adelsstand war die Familie Penderyn lediglich eine kleine Gruppe von Destillateuren, die in <strong>Mathragon</strong> Whiskey herstellten. Ihr Talent für die Kunst der Destillation, verbunden mit einem tiefen Verständnis für das Handwerk, führte dazu, dass ihr Whiskey bald herausragende Qualität erreichte. Der Penderyn Whiskey wurde in Adelskreisen geschätzt und öffnete der Familie Türen, die für gewöhnliche Handwerker unzugänglich gewesen wären.</p>\n<p>Mit wachsendem Erfolg und Einfluss, gepaart mit kluger Führung, wurde die Familie schließlich in den Adelsstand erhoben und erlangte durch ihren Whiskey Reichtum und Macht. Die Destillerie selbst entwickelte sich zum Dreh- und Angelpunkt ihres neuen Status, und der <strong>Penderyn Whiskey</strong> avancierte zum Symbol für Qualität und Prestige. Ihr Whiskey wurde zum Stolz des Hauses, und durch ihn gelang es der Familie, sich in den oberen Kreisen Mathragons und des gesamten Königreichs zu etablieren.</p>\n<p>Trotz ihres Wohlstands hat die Familie Penderyn stets ihre Wurzeln in der Destillierkunst bewahrt. Sie sind auch heute noch direkt in die Überwachung und Führung ihrer Destillerie eingebunden und achten darauf, dass jede Flasche den hohen Standards entspricht, die ihren Ruf begründet haben.</p>",
+        "worksTitle": "Handwerk & Leistungen",
+        "works": [
+          "Penderyn und Penderyn · Rhagorol",
+          "Goldschuppen und Drachenblut · Eigene Hausbiere",
+          "Brandhorn · Kooperation mit den Gochwyr",
+          "Brauerei, Destillation, Fassherstellung und Reifekeller",
+          "Handel innerhalb Cenyrs und darüber hinaus"
+        ],
+        "triviaTitle": "Eine Familie mit weitem Netz",
+        "trivia": [
+          "Talfryn steht dem Haus seit 1724 vor. Seine Mutter Mairwen entstammt dem Haus Teyrngarch.",
+          "Aneurin ist der erste Erbe des Hauses. Daraus folgt kein automatisch erworbener Meisterrang."
+        ],
+        "quotesTitle": "Zitate",
+        "quotes": [],
+        "connectionsTitle": "Die heutige Familie",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Talfryn Penderyn",
+            "detail": "Geboren 1670 · Ritterfürst und Hausoberhaupt seit 1724; Sohn Gareths und Mairwen Teyrngarchs.",
+            "image": "../Stammbäume/assets/images/portraits/haus-penderyn/talfryn-penderyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Osian Penderyn",
+            "detail": "Geboren 1675 · Talfryns Bruder; Vater Steffans und Gethins. Sein Porträt begleitet die Überlieferung der älteren Familie.",
+            "image": "../Stammbäume/assets/images/portraits/haus-penderyn/osian-penderyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Aneurin Penderyn",
+            "detail": "Geboren 1698 · Erster Erbe, Sohn Talfryns und Bethanias. Vater von Rhon, Revelyn, Dwnn und Jinell.",
+            "image": "../Stammbäume/assets/images/portraits/haus-penderyn/aneurin-penderyn.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Familienbuch & Häuser",
+        "documents": [
+          {
+            "icon": "../Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+            "title": "Haus Penderyn O’Mathragon",
+            "text": "Stammbaum, Originalporträts und überlieferte Verbindungen.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-penderyn&mode=view"
+          }
+        ],
+        "footer": "Familienname, Brennkunst und Geduld im Fass.",
+        "crestImage": "../Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+        "portraitFormat": "portrait",
+        "contractsTitle": "Verbündete & Schutz",
+        "contracts": [
+          {
+            "icon": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png",
+            "title": "Teyrngarch Brauerzunft",
+            "text": "Bier und Whisky ergänzen sich im Handel. Ehen und die Verlobung Dwnns mit Elinor Teyrngarch verbinden beide Häuser.",
+            "link": ""
+          },
+          {
+            "icon": "./public/assets/brewer-guilds/bier-brandhorn.png",
+            "title": "Gochwyr · Zum Roten Drachen",
+            "text": "Für Brandhorn verbindet sich das alte Rauchmalz- und Wacholderrezept der Gochwyr mit der Brauführung der Penderyn-Destillerie.",
+            "link": ""
+          },
+          {
+            "icon": "../IconOrdner/Organisationsicons/Militär.png",
+            "title": "Drakenschluck Söldner",
+            "text": "Hauseigene Schutzgilde mit eigenem militärischem Auftrag; kein handwerklicher Rang im Brennhaus.",
+            "link": ""
+          }
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "pageTitle": "III. — Ämter, Ausbildung & Verantwortung",
+      "hierarchyPage": true,
+      "hierarchy": {
+        "layoutMode": "vertical",
+        "treeDisplayMode": "tabs",
+        "cardFontScale": 100,
+        "portraitScale": 75,
+        "chartScale": 90,
+        "eyebrow": "Zunftordnung",
+        "subtitle": "Penderyn Brauer- & Destillierzunft",
+        "centerLabel": "Penderyn Brauer- & Destillierzunft",
+        "emblem": "../Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+        "sideImage": "../Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+        "organizationTitle": "Penderyn Brauer- & Destillierzunft",
+        "motto": "Wissen. Gerechtigkeit. Balance.",
+        "description": "<p>Haus Penderyn trägt und beaufsichtigt die Zunft. Talfryn ist als Hausoberhaupt belegt; ein persönlicher Inhaber des Gildenführer- oder Destilleriemeisteramts ist nicht überliefert. Die folgenden Zuständigkeiten erläutern die genannten Handwerksränge, ohne Verwandten zusätzliche Ämter zuzuschreiben.</p>",
+        "detailsTitle": "Zuständigkeiten",
+        "details": [],
+        "quoteLabel": "Wahrspruch",
+        "quote": "",
+        "chartTitle": "Vom Hausoberhaupt zum Handwerk",
+        "chartIntro": "Die Ebenen zeigen die Verantwortung innerhalb der Zunft. Familiennachfolge und handwerkliche Ausbildung bleiben unterschiedliche Aufgaben.",
+        "trees": [
+          {
+            "id": "vom-hausoberhaupt-zum-handwerk",
+            "parentTreeId": "",
+            "label": "Vom Hausoberhaupt zum Handwerk",
+            "levels": [
+              {
+                "label": "Trägerschaft · Haus Penderyn",
+                "nodes": [
+                  {
+                    "portrait": "../Stammbäume/assets/images/portraits/haus-penderyn/talfryn-penderyn.png",
+                    "title": "Trägerschaft · Haus Penderyn",
+                    "subtitle": "Talfryn Penderyn",
+                    "text": "Hausoberhaupt seit 1724; trägt die familiäre Verantwortung für Besitz und Fortbestand."
+                  }
+                ]
+              },
+              {
+                "label": "Gildenführer",
+                "nodes": [
+                  {
+                    "portrait": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+                    "title": "Gildenführer",
+                    "subtitle": "Amtsinhaber nicht benannt",
+                    "text": "Koordiniert die Zunft, ihre Standorte und die Abstimmung mit dem Haus."
+                  }
+                ]
+              },
+              {
+                "label": "Destilleriemeister",
+                "nodes": [
+                  {
+                    "portrait": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+                    "title": "Destilleriemeister",
+                    "subtitle": "Leitung der Brennkunst",
+                    "text": "Verantwortet fachlich den Brennbetrieb, die Ausbildung und die Güte des Destillats."
+                  }
+                ]
+              },
+              {
+                "label": "Fassmeister",
+                "nodes": [
+                  {
+                    "portrait": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+                    "title": "Fassmeister",
+                    "subtitle": "Fasswirtschaft & Reife",
+                    "text": "Wacht über Herstellung, Auswahl, Zustand und Belegung der Fässer."
+                  }
+                ]
+              },
+              {
+                "label": "Fassbrenner",
+                "nodes": [
+                  {
+                    "portrait": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+                    "title": "Fassbrenner",
+                    "subtitle": "Ausführung am Fass",
+                    "text": "Bereitet die Fässer unter fachlicher Aufsicht vor und bearbeitet ihre Innenseiten mit Feuer."
+                  }
+                ]
+              },
+              {
+                "label": "Fassknecht",
+                "nodes": [
+                  {
+                    "portrait": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+                    "title": "Fassknecht",
+                    "subtitle": "Pflege, Transport & Hilfsarbeiten",
+                    "text": "Unterstützt die Fasswerkstatt und die Arbeit im Lager."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "levels": [
+          {
+            "label": "Trägerschaft · Haus Penderyn",
+            "nodes": [
+              {
+                "portrait": "../Stammbäume/assets/images/portraits/haus-penderyn/talfryn-penderyn.png",
+                "title": "Trägerschaft · Haus Penderyn",
+                "subtitle": "Talfryn Penderyn",
+                "text": "Hausoberhaupt seit 1724; trägt die familiäre Verantwortung für Besitz und Fortbestand."
+              }
+            ]
+          },
+          {
+            "label": "Gildenführer",
+            "nodes": [
+              {
+                "portrait": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+                "title": "Gildenführer",
+                "subtitle": "Amtsinhaber nicht benannt",
+                "text": "Koordiniert die Zunft, ihre Standorte und die Abstimmung mit dem Haus."
+              }
+            ]
+          },
+          {
+            "label": "Destilleriemeister",
+            "nodes": [
+              {
+                "portrait": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+                "title": "Destilleriemeister",
+                "subtitle": "Leitung der Brennkunst",
+                "text": "Verantwortet fachlich den Brennbetrieb, die Ausbildung und die Güte des Destillats."
+              }
+            ]
+          },
+          {
+            "label": "Fassmeister",
+            "nodes": [
+              {
+                "portrait": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+                "title": "Fassmeister",
+                "subtitle": "Fasswirtschaft & Reife",
+                "text": "Wacht über Herstellung, Auswahl, Zustand und Belegung der Fässer."
+              }
+            ]
+          },
+          {
+            "label": "Fassbrenner",
+            "nodes": [
+              {
+                "portrait": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+                "title": "Fassbrenner",
+                "subtitle": "Ausführung am Fass",
+                "text": "Bereitet die Fässer unter fachlicher Aufsicht vor und bearbeitet ihre Innenseiten mit Feuer."
+              }
+            ]
+          },
+          {
+            "label": "Fassknecht",
+            "nodes": [
+              {
+                "portrait": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+                "title": "Fassknecht",
+                "subtitle": "Pflege, Transport & Hilfsarbeiten",
+                "text": "Unterstützt die Fasswerkstatt und die Arbeit im Lager."
+              }
+            ]
+          }
+        ],
+        "footerNote": "Die fünf Zunftränge sind überliefert; ihre Zuständigkeiten sind hier ausgearbeitet. Die Drakenschluck Söldner stehen außerhalb dieser handwerklichen Rangfolge.",
+        "backLabel": "Zurueck zur Uebersicht",
+        "printLabel": "Akte drucken"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "image": "./public/assets/brewer-guilds/penderyn-handwerk.png",
+      "imageWidth": 38,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "pageTitle": "IV. — Die Kunst zwischen Feuer und Fass",
+      "description": "<p>Die <strong>Penderyn Destillerie</strong> verfolgt drei zentrale Aufgabenbereiche, die sich alle um die Herstellung und den Schutz ihres wertvollen Whiskeys drehen:</p>\n<p><strong>Destillation und Produktion des Penderyn Whiskeys</strong><br/> Der Hauptfokus der Destillerie liegt auf der Herstellung ihres weltbekannten Whiskeys. Der Destillationsprozess selbst ist über Generationen hinweg perfektioniert worden. Von der Auswahl der besten Zutaten bis hin zur Lagerung in speziellen Fässern – jeder Schritt ist von höchster Präzision geprägt. Die Familie Penderyn hat ihre Verfahren so optimiert, dass jede Charge des Whiskeys die gleiche Qualität und den unverwechselbaren Geschmack aufweist, der den Penderyn zu einem Markenzeichen gemacht hat. Besonders die Lagerung und Reifung des Whiskeys spielt eine zentrale Rolle, um das vollmundige Aroma zu erreichen, das Kenner so schätzen.</p>\n<p><strong>Vertrieb und Expansion</strong><br/> Obwohl die Destillerie in <strong>Cenyr</strong> noch nicht flächendeckend präsent ist, exportiert sie ihren Whiskey in alle Ecken des Königreichs und darüber hinaus. Die Vermarktung des Penderyn Whiskeys hat den Ruf der Familie gestärkt und ihre Verbindungen zu anderen einflussreichen Häusern und Märkten gefestigt. Die Penderyn sind ständig bemüht, neue Märkte zu erschließen, sei es im Königreich selbst oder in den angrenzenden Reichen. Dabei bleibt das Ziel, den Penderyn Whiskey als ein Synonym für Qualität und Prestige zu etablieren.</p><p>Insgesamt haben sich die <strong>Penderyn</strong> nicht nur als Meister in der Kunst der Whiskeyherstellung bewiesen, sondern auch als geschickte Händler und Beschützer ihres Erbes. Mit ihrem Whiskey, der Destillerie und ihrer Söldnergilde haben sie sich eine Stellung erarbeitet, die ihnen sowohl Macht als auch Respekt im Königreich verschafft hat.</p><p>Nach der Namensordnung des Comann Braich Alba ist <strong>Penderyn</strong> ein Haus- und Traditionsname: Er bezeichnet die Familie und ihre überlieferte Brennkunst. Das Haus führt daher seine Abfüllungen zuerst unter <strong>Penderyn</strong>. <strong>Rhagorol</strong> ergänzt diesen Herkunftsnamen als Bezeichnung einer einzelnen Abfüllung. Der Drache verweist auf Cenyr und die Heraldik des Hauses; er ersetzt den Herkunftsnamen nicht.</p>"
+    },
+    {
+      "schemaVersion": 1,
+      "pageTitle": "V. — Drakenburg, Mathragon & Gwynthor",
+      "organizationNetworkPage": true,
+      "organizationNetwork": {
+        "title": "Drei Orte, ein Familienname",
+        "introduction": "<p>Die <strong>Penderyn Destillerie</strong> hat ihren Hauptsitz in der <strong>Drakenburg</strong> in <strong>Vortigerns Ruh</strong>, wo ihre Lagerhallen und Reifekeller direkt neben den <strong>Drakenschluck Söldnern</strong> liegen. Ihre beiden Produktionsstandorte befinden sich in den Städten <strong>Mathragon</strong> und <strong>Gwynthor</strong>, wo der Penderyn Whiskey hergestellt wird. Derzeit reichen diese Anlagen aus, doch das Haus plant, in jeder Grafschaft von <strong>Cenyr</strong> neue Standorte zu errichten, um die Produktion und Reichweite zu erweitern.</p>",
+        "reach": "Cenyr · Export über die Landesgrenzen hinaus",
+        "model": "Verwaltung und Lager in der Drakenburg; Produktion in Mathragon und Gwynthor.",
+        "note": "Weitere Standorte in allen Grafschaften sind ein Vorhaben des Hauses. Sie werden nicht als bereits eröffnete Niederlassungen geführt.",
+        "footer": "Die geplante Expansion beginnt bei den bestehenden Brennhäusern.",
+        "sites": [
+          {
+            "name": "Drakenburg",
+            "region": "Vortigerns Ruh",
+            "kind": "headquarters",
+            "image": "../Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-penderyn.png",
+            "description": "Hauptsitz, Lagerhallen und Reifekeller neben den Drakenschluck Söldnern.",
+            "href": "",
+            "publicationHref": ""
+          },
+          {
+            "name": "Mathragon",
+            "region": "Königreich Cenyr",
+            "kind": "workshop",
+            "image": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+            "description": "Historischer Ursprung der Destillerie und einer der beiden Produktionsstandorte.",
+            "href": "",
+            "publicationHref": ""
+          },
+          {
+            "name": "Gwynthor",
+            "region": "Königreich Cenyr",
+            "kind": "workshop",
+            "image": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+            "description": "Zweiter Produktionsstandort; gemeinsam mit Mathragon trägt er den gegenwärtigen Bedarf.",
+            "href": "",
+            "publicationHref": ""
+          }
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "pageTitle": "VI. — Das Stammsortiment · Zwei Whiskys",
+      "tradeCatalogPage": true,
+      "tradeCatalog": {
+        "headerIcon": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+        "title": "Das Stammsortiment · Zwei Whiskys",
+        "subtitle": "Penderyn · Hausabfüllung & Rhagorol · Fünf freie Plätze",
+        "noteIcon": "◈",
+        "noteTitle": "Glas / Krug · Flasche · Fass",
+        "noteText": "Glas 4 cl · Flasche 0,7 l · Fass 50 l. Alle Preise in Kupfertalern.",
+        "allLabel": "Gesamtes Sortiment",
+        "searchPlaceholder": "Nach Name, Charakter oder Herkunft suchen …",
+        "filterLabel": "Suche",
+        "categories": [
+          {
+            "id": "whisky",
+            "label": "Whisky · Getränke"
+          }
+        ],
+        "items": [
+          {
+            "id": "whisky-penderyn",
+            "category": "whisky",
+            "status": "available",
+            "image": "./public/assets/brewer-guilds/whisky-penderyn.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausabfüllung",
+            "title": "Penderyn",
+            "subtitle": "Whisky des Hauses · Cenyr",
+            "tags": [
+              "Apfel & Birne",
+              "Schneebeere",
+              "Edler Rauch"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p>Ein Schluck <strong>Penderyn Whiskey</strong> ist wie das erste Kapitel eines alten Liedes, gesungen am Feuer der Legenden. Geboren aus den Reben des Hochlands und destilliert in den Hallen der <strong>Penderyn-Brennerei</strong>, erhebt sich dieser Whiskey wie ein <strong>ritterlicher Held</strong> – stolz, tiefgründig, unerschrocken.</p>\n<p>Sein <strong>Geschmacksprofil</strong> eröffnet mit <strong>klaren Noten von Apfel und Birne</strong>, getragen von einer <strong>sanften Süße der Schneebeere</strong> – eine seltene Frucht, Symbol der Reinheit und Verbundenheit mit dem alten Land. Doch was diesen Tropfen zum Epos erhebt, sind seine <strong>rauchigen Schatten</strong>, die durch jeden Schluck ziehen wie ein Nebel über dem Schlachtfeld – <em>nicht überwältigend, sondern edel und getragen</em>.</p>\n<p>Der Whiskey selbst glänzt <strong>bernsteinrot</strong>, warm wie ein Schwertgriff, das im Sonnenlicht ruht. Im Abgang bleibt er <strong>edel, würzig und seelenruhig</strong>, wie ein alter Krieger, der seine Geschichte erzählt, ohne sie aufzudrängen.</p>\n<p><em>\"Penderyn ist kein Getränk. Es ist ein Schwur in flüssiger Form.\"</em></p><p>Der Hauptwhisky trägt den Namen seiner Brennerei: <strong>Penderyn</strong>. Hausname und Herkunft stehen auf dem Etikett an erster Stelle.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Penderyn · Mathragon & Gwynthor · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Festtafel",
+              "Ruhiger Abend"
+            ],
+            "priceTitle": "Ausschank & Gebinde",
+            "priceFill": 0,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [
+              {
+                "label": "Glas",
+                "unit": "4 cl",
+                "price": "12"
+              },
+              {
+                "label": "Flasche",
+                "unit": "0,7 l",
+                "price": "210"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "15.000"
+              }
+            ],
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+            "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+            "conditions": "Stammsortiment des Hauses.",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+          },
+          {
+            "id": "whisky-rhagorol",
+            "category": "whisky",
+            "status": "available",
+            "image": "./public/assets/brewer-guilds/whisky-rhagorol.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausabfüllung",
+            "title": "Penderyn · Rhagorol",
+            "subtitle": "Frucht, Säure & rauchiger Nachklang · Cenyr",
+            "tags": [
+              "Apfel",
+              "Stachelbeere",
+              "Rauch"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p>Der <strong>Rhagorol</strong> ist kein gewöhnlicher Whiskey – er ist ein maskierter Gentleman, der sich mit einem süffisanten Grinsen in dein Herz stiehlt. Ein Tropfen, der nicht nur <strong>getrunken</strong>, sondern <strong>erlebt</strong> wird. Jede Facette seines Geschmacks ist wie der raffinierte Schliff eines Dolchs: präzise, verführerisch, und leicht gefährlich.</p>\n<p>Schon beim ersten Schluck tänzelt eine <strong>helle Säure</strong> auf der Zunge, frech wie ein Dieb im Morgengrauen. Die <strong>Apfelnoten</strong> eröffnen die Melodie, frisch und verspielt, doch dann – <strong>Stachelbeere.</strong> Eine Frucht mit Biss. Anders. Wild. Sie nimmt die Süße an der Hand und zerrt sie in dunklere Gassen. Hier wird nicht geschmeichelt. Hier wird verführt.</p>\n<p>Im Abgang bleibt ein <strong>rauchiger Schatten</strong> zurück, wie das Parfüm eines Spions, der längst verschwunden ist. Der Rhagorol gleicht einem Flirt mit Konsequenzen – aufregend, unvergesslich, ein wenig gefährlich.</p>\n<p><em>\"Rhagorol ist kein Whiskey für einen leichten Abend. Es ist der Drink für das letzte Wort, für das letzte Lächeln – bevor die Tür ins Dunkel aufschwingt.\"</em></p><p>Die vollständige Bezeichnung lautet <strong>Penderyn · Rhagorol</strong>: Penderyn nennt die Brennerei und Familientradition, Rhagorol diese Abfüllung. Der Zusatz bleibt dem Hausnamen auf dem Etikett untergeordnet.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Penderyn · Mathragon & Gwynthor · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Später Abend",
+              "Würzige Speisen"
+            ],
+            "priceTitle": "Ausschank & Gebinde",
+            "priceFill": 0,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [
+              {
+                "label": "Glas",
+                "unit": "4 cl",
+                "price": "6,5"
+              },
+              {
+                "label": "Flasche",
+                "unit": "0,7 l",
+                "price": "113,75"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "8.125"
+              }
+            ],
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+            "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+            "conditions": "Stammsortiment des Hauses.",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+          },
+          {
+            "id": "whisky-reserve-1",
+            "category": "whisky",
+            "status": "planned",
+            "image": "",
+            "imageFormat": "landscape",
+            "imageFit": "cover",
+            "imagePosition": "center",
+            "imageHeight": 220,
+            "badge": "",
+            "title": "Freier Sortimentsplatz 1",
+            "subtitle": "",
+            "tags": [],
+            "descriptionTitle": "Beschreibung",
+            "description": "",
+            "featuresTitle": "Eigenschaften",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "",
+            "usageTitle": "Verwendung",
+            "usageTags": [],
+            "priceTitle": "Preisspanne",
+            "priceFill": 58,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [],
+            "currencyCode": "KS",
+            "currencyLabel": "Kupferstueck",
+            "currencyIcon": "*",
+            "priceNote": "",
+            "conditionsTitle": "Kaufbedingungen",
+            "conditions": "",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": ""
+          },
+          {
+            "id": "whisky-reserve-2",
+            "category": "whisky",
+            "status": "planned",
+            "image": "",
+            "imageFormat": "landscape",
+            "imageFit": "cover",
+            "imagePosition": "center",
+            "imageHeight": 220,
+            "badge": "",
+            "title": "Freier Sortimentsplatz 2",
+            "subtitle": "",
+            "tags": [],
+            "descriptionTitle": "Beschreibung",
+            "description": "",
+            "featuresTitle": "Eigenschaften",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "",
+            "usageTitle": "Verwendung",
+            "usageTags": [],
+            "priceTitle": "Preisspanne",
+            "priceFill": 58,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [],
+            "currencyCode": "KS",
+            "currencyLabel": "Kupferstueck",
+            "currencyIcon": "*",
+            "priceNote": "",
+            "conditionsTitle": "Kaufbedingungen",
+            "conditions": "",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": ""
+          },
+          {
+            "id": "whisky-reserve-3",
+            "category": "whisky",
+            "status": "planned",
+            "image": "",
+            "imageFormat": "landscape",
+            "imageFit": "cover",
+            "imagePosition": "center",
+            "imageHeight": 220,
+            "badge": "",
+            "title": "Freier Sortimentsplatz 3",
+            "subtitle": "",
+            "tags": [],
+            "descriptionTitle": "Beschreibung",
+            "description": "",
+            "featuresTitle": "Eigenschaften",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "",
+            "usageTitle": "Verwendung",
+            "usageTags": [],
+            "priceTitle": "Preisspanne",
+            "priceFill": 58,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [],
+            "currencyCode": "KS",
+            "currencyLabel": "Kupferstueck",
+            "currencyIcon": "*",
+            "priceNote": "",
+            "conditionsTitle": "Kaufbedingungen",
+            "conditions": "",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": ""
+          },
+          {
+            "id": "whisky-reserve-4",
+            "category": "whisky",
+            "status": "planned",
+            "image": "",
+            "imageFormat": "landscape",
+            "imageFit": "cover",
+            "imagePosition": "center",
+            "imageHeight": 220,
+            "badge": "",
+            "title": "Freier Sortimentsplatz 4",
+            "subtitle": "",
+            "tags": [],
+            "descriptionTitle": "Beschreibung",
+            "description": "",
+            "featuresTitle": "Eigenschaften",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "",
+            "usageTitle": "Verwendung",
+            "usageTags": [],
+            "priceTitle": "Preisspanne",
+            "priceFill": 58,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [],
+            "currencyCode": "KS",
+            "currencyLabel": "Kupferstueck",
+            "currencyIcon": "*",
+            "priceNote": "",
+            "conditionsTitle": "Kaufbedingungen",
+            "conditions": "",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": ""
+          },
+          {
+            "id": "whisky-reserve-5",
+            "category": "whisky",
+            "status": "planned",
+            "image": "",
+            "imageFormat": "landscape",
+            "imageFit": "cover",
+            "imagePosition": "center",
+            "imageHeight": 220,
+            "badge": "",
+            "title": "Freier Sortimentsplatz 5",
+            "subtitle": "",
+            "tags": [],
+            "descriptionTitle": "Beschreibung",
+            "description": "",
+            "featuresTitle": "Eigenschaften",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "",
+            "usageTitle": "Verwendung",
+            "usageTags": [],
+            "priceTitle": "Preisspanne",
+            "priceFill": 58,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [],
+            "currencyCode": "KS",
+            "currencyLabel": "Kupferstueck",
+            "currencyIcon": "*",
+            "priceNote": "",
+            "conditionsTitle": "Kaufbedingungen",
+            "conditions": "",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": ""
+          }
+        ],
+        "footerCards": [],
+        "advisorTitle": "",
+        "advisorText": "",
+        "advisorImage": ""
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "commentThreadKey": "hausbiere",
+      "pageTitle": "VII. — Die Hausbiere · Goldschuppen & Drachenblut",
+      "tradeCatalogPage": true,
+      "tradeCatalog": {
+        "headerIcon": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+        "title": "Die Hausbiere · Goldschuppen & Drachenblut",
+        "subtitle": "Helles und dunkles Bier aus eigener Braukunst · Fünf freie Plätze",
+        "noteIcon": "◈",
+        "noteTitle": "Glas / Krug · Flasche · Fass",
+        "noteText": "Krug 0,5 l · Flasche 1 l · Fass 50 l. Alle Preise in Kupfertalern.",
+        "allLabel": "Gesamtes Sortiment",
+        "searchPlaceholder": "Nach Name, Charakter oder Herkunft suchen …",
+        "filterLabel": "Suche",
+        "categories": [
+          {
+            "id": "beer",
+            "label": "Bier · Getränke"
+          }
+        ],
+        "items": [
+          {
+            "id": "bier-goldschuppen",
+            "category": "beer",
+            "status": "available",
+            "image": "./public/assets/brewer-guilds/bier-goldschuppen.png",
+            "imageFormat": "square",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausbier",
+            "title": "Goldschuppen Bier",
+            "subtitle": "Helles Hausbier · Penderyn",
+            "tags": [
+              "Helles Malz",
+              "Vanille",
+              "Eiche"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p>Das Goldschuppen ist das standardisierte Helle der Penderyn-Destillerie, entstanden aus nüchterner Notwendigkeit und ehrgeizigem Stolz. Wer Whiskey brennt, kann nicht zulassen, dass allein die Teyrngarcher Brauerzunft den Biermarkt dominiert. Also brachte die Gilde ihr eigenes Helles hervor – nicht als Nebenspielerei, sondern als ernstzunehmende Antwort.</p>\n<p>Gebraut wird es mit hellem Gerstenmalz, sauber geführter Gärung und einer bewusst milden Hopfung. Der eigentliche Kniff liegt jedoch in der Reifung: Ein Teil des Suds ruht für kurze Zeit in ehemaligen Penderyn-Whiskeyfässern, bevor er mit dem frischen Bier verschnitten wird. Kein schwerer Fassgeschmack, kein aufdringliches Brennfeuer – nur ein Hauch von Eichenwärme und feiner Vanillenote, der dem Bier Tiefe verleiht, ohne es zu beschweren.</p>\n<p>Gedacht ist es als Alltagsbier mit Anspruch. Leicht genug für lange Abende, charakterstark genug, um neben großen Namen zu bestehen. In städtischen Gegenden längst ein Exportschlager – Tavernen in ganz Cenyr führen es mittlerweile selbstverständlich.</p>\n<p>Im Glas schimmert es wie eine einzelne, sonnenbeschienene Drachenschuppe – warm golden, klar, mit feinem, cremigem Schaum. Der erste Duft ist frisch: Getreide, ein Hauch Blütenhonig, darunter fast unmerklich die leise Spur von Eiche.</p>\n<p>Der erste Schluck ist weich. Kein Angriff, kein Aufplustern. Es legt sich an den Gaumen wie warmer Spätsommer. Leicht süßliches Malz, dann eine dezente, saubere Hopfenbittere, die nicht sticht, sondern trägt. Und dann – fast unbewusst – dieser feine Whiskey-Schatten: Vanille, ein Hauch Karamell, eine trockene Holznote im Nachklang.</p>\n<p>Es will dich nicht beeindrucken. Es will dich entspannen.<br>Ein Bier, das dich sitzen lässt, statt dich aufzurütteln.<br>Ein ruhiger Atemzug eines Drachen – nicht sein Feuer.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Penderyn-Destillerie · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Tavernenabend",
+              "Alltagsbier"
+            ],
+            "priceTitle": "Ausschank & Gebinde",
+            "priceFill": 0,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "2"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "4"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "200"
+              }
+            ],
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+            "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+            "conditions": "Stammsortiment des Hauses.",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+          },
+          {
+            "id": "bier-drachenblut",
+            "category": "beer",
+            "status": "available",
+            "image": "./public/assets/brewer-guilds/bier-drachenblut.png",
+            "imageFormat": "square",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausbier",
+            "title": "Drachenblut Bier",
+            "subtitle": "Dunkles, fassgereiftes Hausbier · Penderyn",
+            "tags": [
+              "Röstmalz",
+              "Toffee",
+              "Whiskeyfass"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p>Das Drachenblut ist das zweite große Standbein der Penderyn-Gilde – dunkler, kräftiger und eigenwilliger als die Goldschuppe. Sein Name ist kein Marketingtrick: Im richtigen Licht schimmert es tiefrotbraun, fast wie geronnenes Blut im Glas. Gebraut wird es aus stärker geröstetem Malz, mit längerer Maischeführung und deutlich höherem Stammwürzegehalt.</p>\n<p>Anders als die Goldschuppe ruht das Drachenblut länger in ehemaligen Whiskeyfässern. Nicht nur ein Hauch, sondern eine spürbare Reifung. Die Eiche darf arbeiten, der Restalkohol darf Tiefe entwickeln, die Röstnoten dürfen sich mit Vanille, dunklem Holz und einem Anflug von Rauch verbinden. Es ist kein bloßes Dunkelbier – es ist ein Hybrid aus Brau- und Brennkunst. In vielen Städten ist es mindestens so gefragt wie das helle Pendant, mancherorts sogar begehrter.</p>\n<p>Gedacht ist es nicht für den schnellen Durst. Es ist ein Bier für Abende, an denen Gespräche langsamer werden und die Kerzen tiefer brennen.</p>\n<p>Im Krug wirkt es schwer. Tief. Fast lebendig. Der Schaum ist dicht, cremig, leicht karamellfarben. Schon im Duft liegt geröstetes Malz, dunkle Schokolade, ein Hauch von Kaffee – und darunter diese warme, würzige Eiche.</p>\n<p>Der erste Schluck ist vollmundig. Malzsüße trifft auf sanfte Bittere, dann entfaltet sich die Fassreife: Vanille, Toffee, ein warmer Whiskey-Schleier, der sich wie Glut im Rachen ausbreitet. Es brennt nicht – es wärmt.</p>\n<p>Langsam. Nachhaltig.</p>\n<p>Das Drachenblut ist kein Atemzug.<br>Es ist die Glut im Inneren des Drachen.<br>Und wer es trinkt, spürt, wie es sich im Bauch niederlässt und dort bleibt.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Penderyn-Destillerie · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Ruhiger Abend",
+              "Herzhafte Speisen"
+            ],
+            "priceTitle": "Ausschank & Gebinde",
+            "priceFill": 0,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "4"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "8"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "400"
+              }
+            ],
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+            "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+            "conditions": "Stammsortiment des Hauses.",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+          },
+          {
+            "id": "beer-reserve-1",
+            "category": "beer",
+            "status": "planned",
+            "image": "",
+            "imageFormat": "landscape",
+            "imageFit": "cover",
+            "imagePosition": "center",
+            "imageHeight": 220,
+            "badge": "",
+            "title": "Freier Sortimentsplatz 1",
+            "subtitle": "",
+            "tags": [],
+            "descriptionTitle": "Beschreibung",
+            "description": "",
+            "featuresTitle": "Eigenschaften",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "",
+            "usageTitle": "Verwendung",
+            "usageTags": [],
+            "priceTitle": "Preisspanne",
+            "priceFill": 58,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [],
+            "currencyCode": "KS",
+            "currencyLabel": "Kupferstueck",
+            "currencyIcon": "*",
+            "priceNote": "",
+            "conditionsTitle": "Kaufbedingungen",
+            "conditions": "",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": ""
+          },
+          {
+            "id": "beer-reserve-2",
+            "category": "beer",
+            "status": "planned",
+            "image": "",
+            "imageFormat": "landscape",
+            "imageFit": "cover",
+            "imagePosition": "center",
+            "imageHeight": 220,
+            "badge": "",
+            "title": "Freier Sortimentsplatz 2",
+            "subtitle": "",
+            "tags": [],
+            "descriptionTitle": "Beschreibung",
+            "description": "",
+            "featuresTitle": "Eigenschaften",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "",
+            "usageTitle": "Verwendung",
+            "usageTags": [],
+            "priceTitle": "Preisspanne",
+            "priceFill": 58,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [],
+            "currencyCode": "KS",
+            "currencyLabel": "Kupferstueck",
+            "currencyIcon": "*",
+            "priceNote": "",
+            "conditionsTitle": "Kaufbedingungen",
+            "conditions": "",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": ""
+          },
+          {
+            "id": "beer-reserve-3",
+            "category": "beer",
+            "status": "planned",
+            "image": "",
+            "imageFormat": "landscape",
+            "imageFit": "cover",
+            "imagePosition": "center",
+            "imageHeight": 220,
+            "badge": "",
+            "title": "Freier Sortimentsplatz 3",
+            "subtitle": "",
+            "tags": [],
+            "descriptionTitle": "Beschreibung",
+            "description": "",
+            "featuresTitle": "Eigenschaften",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "",
+            "usageTitle": "Verwendung",
+            "usageTags": [],
+            "priceTitle": "Preisspanne",
+            "priceFill": 58,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [],
+            "currencyCode": "KS",
+            "currencyLabel": "Kupferstueck",
+            "currencyIcon": "*",
+            "priceNote": "",
+            "conditionsTitle": "Kaufbedingungen",
+            "conditions": "",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": ""
+          },
+          {
+            "id": "beer-reserve-4",
+            "category": "beer",
+            "status": "planned",
+            "image": "",
+            "imageFormat": "landscape",
+            "imageFit": "cover",
+            "imagePosition": "center",
+            "imageHeight": 220,
+            "badge": "",
+            "title": "Freier Sortimentsplatz 4",
+            "subtitle": "",
+            "tags": [],
+            "descriptionTitle": "Beschreibung",
+            "description": "",
+            "featuresTitle": "Eigenschaften",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "",
+            "usageTitle": "Verwendung",
+            "usageTags": [],
+            "priceTitle": "Preisspanne",
+            "priceFill": 58,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [],
+            "currencyCode": "KS",
+            "currencyLabel": "Kupferstueck",
+            "currencyIcon": "*",
+            "priceNote": "",
+            "conditionsTitle": "Kaufbedingungen",
+            "conditions": "",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": ""
+          },
+          {
+            "id": "beer-reserve-5",
+            "category": "beer",
+            "status": "planned",
+            "image": "",
+            "imageFormat": "landscape",
+            "imageFit": "cover",
+            "imagePosition": "center",
+            "imageHeight": 220,
+            "badge": "",
+            "title": "Freier Sortimentsplatz 5",
+            "subtitle": "",
+            "tags": [],
+            "descriptionTitle": "Beschreibung",
+            "description": "",
+            "featuresTitle": "Eigenschaften",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "",
+            "usageTitle": "Verwendung",
+            "usageTags": [],
+            "priceTitle": "Preisspanne",
+            "priceFill": 58,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [],
+            "currencyCode": "KS",
+            "currencyLabel": "Kupferstueck",
+            "currencyIcon": "*",
+            "priceNote": "",
+            "conditionsTitle": "Kaufbedingungen",
+            "conditions": "",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": ""
+          }
+        ],
+        "footerCards": [],
+        "advisorTitle": "",
+        "advisorText": "",
+        "advisorImage": ""
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "commentThreadKey": "kooperationsbiere",
+      "pageTitle": "VIII. — Kooperationsbier · Brandhorn",
+      "tradeCatalogPage": true,
+      "tradeCatalog": {
+        "headerIcon": "./public/assets/brewer-guilds/penderyn-brennzeichen.png",
+        "title": "Kooperationsbier · Brandhorn",
+        "subtitle": "Das Traditionsbier der Gochwyr in Zusammenarbeit mit Penderyn",
+        "noteIcon": "◈",
+        "noteTitle": "Glas / Krug · Flasche · Fass",
+        "noteText": "Krug 0,5 l · Flasche 1 l · Fass 50 l. Alle Preise in Kupfertalern.",
+        "allLabel": "Alle Partnerprodukte",
+        "searchPlaceholder": "Nach Name, Charakter oder Herkunft suchen …",
+        "filterLabel": "Suche",
+        "categories": [
+          {
+            "id": "beer",
+            "label": "Partnerbiere · Getränke"
+          }
+        ],
+        "items": [
+          {
+            "id": "bier-brandhorn",
+            "category": "beer",
+            "status": "available",
+            "image": "./public/assets/brewer-guilds/bier-brandhorn.png",
+            "imageFormat": "square",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Kooperationsbier",
+            "title": "Brandhorn Bier",
+            "subtitle": "Rauch- und Wacholderbier · Gochwyr × Penderyn",
+            "tags": [
+              "Rauchmalz",
+              "Wacholder",
+              "Harzig"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p>Das Brandhorn ist das Traditionsbier der Gochwyr vom „Zum Roten Drachen“, entstanden aus der Zeit, als die Taverne noch unter dem Zeichen des brennenden Geißbocks stand. In Zusammenarbeit mit der Penderyn-Destillerie wurde das alte Rezept veredelt, nicht verdrängt. Es bleibt ein Wirtshausbier – kräftig, bodenständig, eigenwillig – doch mit sauberer Führung und kontrollierter Gärung nach Gildenstandard.</p>\n<p>Gebraut mit Rauchmalz und veredelt durch eine dezente Wacholdergabe, trägt es eine harzig-würzige Wildnote in sich, die bewusst an Lagerfeuer, feuchte Wälder und knisterndes Holz erinnert. Keine Fassreifung wie bei den Drachenbieren – das Brandhorn bleibt ungezähmt. Es soll nicht glänzen, sondern brennen.</p>\n<p>Schon beim ersten Zug steigt dir eine warme, rauchige Schwere in die Nase – wie ein Abend am Feuer, wenn der Rauch in Kleidung und Haar kriecht. Dann kommt das Malz: voll, rund, leicht süßlich. Und gleich darauf dieser Wacholder – trocken, harzig, fast waldig.</p>\n<p>Es schmeckt nach Erde, nach Holz, nach Horn und Fell. Nach einem Becher, der auf einem groben Tisch abgestellt wird, während draußen der Wind pfeift. Kein höfisches Bier. Kein Stadtgeflüster.</p>\n<p>Das Brandhorn ist kein Getränk – es ist ein Wald im Becher.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Gochwyr · Zum Roten Drachen · Llamreis Ankunft · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Wirtshaus",
+              "Lagerfeuer"
+            ],
+            "priceTitle": "Ausschank & Gebinde",
+            "priceFill": 0,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "3"
+              },
+              {
+                "label": "Flasche",
+                "unit": "1 l",
+                "price": "6"
+              },
+              {
+                "label": "Fass",
+                "unit": "50 l",
+                "price": "300"
+              }
+            ],
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceNote": "Gebindepreise nach Inhalt zum Ausschanktarif. Ohne Mengenrabatt, Pfand oder Fracht.",
+            "conditionsTitle": "Verfügbarkeit & Besonderheiten",
+            "conditions": "Traditionsbier der Gochwyr vom „Zum Roten Drachen“, veredelt in Zusammenarbeit mit der Penderyn-Destillerie. Keine Fassreifung; die eigene Herkunft bleibt erhalten.",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+          }
+        ],
+        "footerCards": [],
+        "advisorTitle": "",
+        "advisorText": "",
+        "advisorImage": ""
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "commentThreadKey": "6",
+      "image": "./public/assets/brewer-guilds/penderyn-buendnisse.png",
+      "imageWidth": 38,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "pageTitle": "IX. — Verbündete, Schutz & Familienbande",
+      "description": "<p><strong>Schutz und Sicherung der Destillerie</strong><br/> Der Schutz der Destillerie und ihrer Interessen ist für die Penderyn von größter Bedeutung. Hier kommt ihre hauseigene Söldnergilde, die <strong>Drakenschluck Söldner</strong>, ins Spiel. Diese Söldner wurden eigens dafür gegründet, um die Destillerie, ihre Lagerhäuser und die Handelskarawanen zu bewachen, die den wertvollen Whiskey transportieren. Die Drakenschluck Söldner sind aber nicht nur Verteidiger, sondern werden auch eingesetzt, um konkurrierende Destillerien einzuschüchtern und feindliche Übernahmen abzuwehren. Ihre Präsenz garantiert, dass die Penderyn ihre Interessen auf dem Markt wahren und weiterhin die Vorherrschaft im Destilliergeschäft behaupten können.</p>\n<p>Zusätzlich zu ihren Aufgaben im Bereich der Destilleriesicherung bieten die Penderyn Söldner ihre Dienste auch anderen Gilden an, was zu einem weiteren Einnahmezweig für die Familie geführt hat. So sichern sie nicht nur den Erfolg der Penderyn Destillerie, sondern erweitern auch die Reichweite und den Einfluss des Hauses im ganzen Königreich.</p><p>Mairwen Teyrngarch war mit Gareth Penderyn verheiratet; ihr Sohn Talfryn führt heute das Haus. In der jüngeren Generation ist Dwnn Penderyn mit Elinor Teyrngarch verlobt. Die beiden Handwerke behalten dabei ihre eigenen Namen: Goldhaube bleibt ein Teyrngarch-Bier, Penderyn und Rhagorol bleiben Abfüllungen des Brennhauses.</p>"
+    }
+  ],
+  "schemaVersion": 1,
+  "multipage": true
+}

@@ -1501,6 +1501,7 @@ function sanitizeTradeCatalogItems(items = []) {
       badge: String(item?.badge || '').trim(),
       title: String(item?.title || item?.name || 'Neuer Eintrag').trim(),
       subtitle: String(item?.subtitle || item?.kind || '').trim(),
+      unit: String(item?.unit || '').trim(),
       tags: sanitizeTradeCatalogTags(item?.tags),
       descriptionTitle: String(item?.descriptionTitle || 'Beschreibung').trim(),
       description: String(item?.description || item?.text || '').trim(),
@@ -1526,7 +1527,7 @@ function sanitizeTradeCatalogItems(items = []) {
       sealImage: String(item?.sealImage || '').trim()
     }))
     .filter(item => item.image || item.title || item.description || item.origin || item.conditions)
-    .slice(0, 40);
+    .slice(0, 100);
 }
 
 function sanitizeTradeCatalogFooterCards(items = []) {
