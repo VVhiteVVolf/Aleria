@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
-import { ylvaGuide } from '../modules/ylva-guide.mjs';
 import { gaisGuide } from '../modules/gais-guide.mjs';
+import { GUIDE_REGISTRY } from '../modules/guide-registry.mjs';
 import { buildGuideModel } from '../modules/guide-model.mjs';
 import { renderGuide } from '../modules/guide-template.mjs';
 import { getCharacterGameplayGuide } from '../../AleriaAlmanach/modules/characters/gameplay-guide-link.js';
@@ -17,18 +17,25 @@ import { entryIcon, isCrusaderKingsIcon } from '../modules/guide-assets.mjs';
 const root = new URL('../../', import.meta.url);
 const { characters } = JSON.parse(await readFile(new URL('CharakterDatenbank/generated/characters.snapshot.json', root), 'utf8'));
 
-for (const g of [ylvaGuide, gaisGuide]) test(`${g.name}: legal action budgets, existing techniques, owned companions and working local links`, async () => {
+for (const registration of GUIDE_REGISTRY) {
+const g = (await import(`../modules/${registration.editorialModule}`))[registration.editorialExport];
+test(`${g.name}: legal action budgets, existing techniques, owned companions and working local links`, async () => {
   const character = characters.find(c => c.id === g.id);
+  const before = structuredClone(character);
   const model = buildGuideModel(g, character);
+  assert.deepEqual(character, before, 'A guide must not alter resources, equipment or saved combat data');
   const profile = resolveCombatProfile(character, { includeAiSnapshot: false });
   const ids = new Set(model.arsenal.entries.map(entry => entry.id));
   assert.equal(ids.size, model.arsenal.entries.length);
+  for (const entry of model.arsenal.entries.filter(e => e.kind === 'weapon')) {
+    assert.ok(entry.variants.every(v => `weapon:${v.weaponId}` === entry.id), `${entry.name}: misleading weapon loadout`);
+  }
   for (const [kind, entries] of [['weapon',profile.weapons],['technique',profile.techniques],['ability',profile.abilities],['trait',profile.quirks]]) {
     for (const entry of entries) assert.ok(ids.has(`${kind}:${entry.id}`), `Arsenal missing ${kind}: ${entry.name}`);
   }
   assert.deepEqual(model.taxonomy.path.slice(0,2).map(n => n.label), ['Cenyr','Celtigerns Wacht']);
   assert.equal(model.taxonomy.fullPath.length,5);
-  assert.equal(model.taxonomy.familyId, g.slug === 'ylva' ? 'haus-bleiddorn' : 'haus-wyrm');
+  assert.equal(model.taxonomy.familyId, registration.familyId);
   if (g.slug === 'ylva') {
     assert.equal(model.name,'Lady Ylva Bleiddorn / Wolfshorn');
     assert.equal(model.taxonomy.path.at(-1).label,'Haus Bleiddorn / Wolfshorn');
@@ -37,11 +44,27 @@ for (const g of [ylvaGuide, gaisGuide]) test(`${g.name}: legal action budgets, e
     assert.ok(lever.variants.every(v => v.weaponId === 'ylva-speer'));
     const double = model.arsenal.entries.find(e => e.name === 'Der fallende Dorn').variants.find(v => v.id === 'ylva-speer:foot:two-handed');
     assert.equal(double.attack,'1W20 +7'); assert.equal(double.damage,'1W10+5'); assert.equal(double.followUp.enhancedDamage,'2W10+5');
-  } else {
+  } else if (g.slug === 'gais') {
     const mounted = model.arsenal.entries.find(e => e.name === 'Sattelantritt');
     assert.ok(mounted.variants.length && mounted.variants.every(v => v.mounted));
     const counter = model.arsenal.entries.find(e => e.name === 'Lauernde Klaue');
     assert.ok(counter.variants.every(v => v.counter && v.attack === 'Automatisch' && v.damage === 'Kein direkter Schaden'));
+  } else if (g.slug === 'gawain') {
+    assert.equal(model.arsenal.entries.length,33);
+    const sword = model.arsenal.entries.find(e => e.id === 'weapon:gawain-draig-knightly-sword');
+    assert.equal(sword.variants.find(v => v.grip === 'two-handed').attack, '1W20 +4');
+    assert.equal(sword.variants.find(v => v.grip === 'two-handed').damage, '1W10+3');
+    const light = model.arsenal.entries.find(e => e.name === 'Erster Hieb des Jungdrachens');
+    assert.ok(light.variants.every(v => v.damage === '1W4+1'));
+    const perfume = model.arsenal.entries.find(e => e.name === 'Liebt Düfte');
+    const preview = renderActionPreview(perfume,model.arsenal);
+    assert.match(preview,/1× pro Tag/); assert.match(preview,/kein passendes Verbrauchsitem/); assert.match(preview,/Voraussetzungen/);
+    assert.ok(ids.has('condition:gawain-strenge-gerueche'));
+    const tanor = model.companions.find(c => c.id === 'companion-tanor');
+    assert.deepEqual(tanor.weaponActions.map(a => a.name), ['Tritt','Biss']);
+    assert.ok(tanor.weaponActions.every(a => a.damage === '1W4+3' && a.costs[0].resourceId === 'action'));
+    assert.equal(getCharacterGameplayGuide({identity:{worldPersonId:registration.worldPersonId}}),'/Gameplay%20Guide/gawain.html');
+    assert.throws(()=>buildGuideModel({...g,permanentConditionIds:['transient-or-missing']},character),/Dauerhafter Regeleintrag fehlt/);
   }
   assert.equal(model.combos.length, 6);
   assert.equal(getCharacterGameplayGuide(character), `/Gameplay%20Guide/${g.slug}.html`);
@@ -56,6 +79,7 @@ for (const g of [ylvaGuide, gaisGuide]) test(`${g.name}: legal action budgets, e
   }
   assert.equal(planGameplayGuideRelease(character), null, 'Repeated preparation must be a no-op');
 });
+}
 
 test('Guide-specific icon policy rejects inherited Crusader Kings icons', () => {
   for (const source of ['/IconOrdner/Traits%20Icon/Crusader.png','../IconOrdner/Cktraits/Trait_education.png','/IconOrdner/CK3%20icons%20alt/Martial.png']) {

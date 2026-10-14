@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { resolveCombatProfile } from '../../AleriaAlmanach/modules/combat/combat-profile-resolver.js';
 import { withEquippedCombatWeapon } from '../../AleriaAlmanach/modules/combat/combat-equipment-state.js';
 import { getCombatMounts } from '../../AleriaAlmanach/modules/combat/combat-support-equipment.js';
+import { getCombatDamagePreview } from '../../AleriaAlmanach/modules/combat/combat-action-estimates.js';
 import { getBuiltinCreatureTemplates } from '../../AleriaAlmanach/modules/creatures/creature-catalog.js';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
 import { findGuideRegistration } from './guide-registry.mjs';
@@ -49,6 +50,12 @@ export function buildGuideModel(guide, character) {
     const p = resolveCombatProfile(creature, { includeAiSnapshot: false });
     return { ...copy, name: creature.name, image: copy.image || creature.portrait, species: creature.species, reference: creature.bestiaryReference,
       hp: p.maximumHitPoints, level: p.effectiveLevel, defense: p.totalDefense,
+      weaponActions: p.actions.filter(a => a.kind === 'weapon' && a.compatible !== false && a.sourceId !== 'default-unarmed-melee').map(a => {
+        const resolved = resolveCombatProfile(creature, { actionId: a.id, includeAiSnapshot: false });
+        const damage = getCombatDamagePreview(resolved);
+        return { name: a.name, icon: entryIcon('weapon', resolved.weapon), costs: resolved.resourceCosts,
+          attack: `1W20 ${resolved.attackModifier >= 0 ? '+' : ''}${resolved.attackModifier}`, damage: diceText(damage.notation) };
+      }),
       actions: p.actions.filter(a => a.compatible !== false && ['technique', 'ability'].includes(a.kind))
         .map(a => { const source = p.techniques.find(t => t.id === a.sourceId) || p.abilities.find(t => t.id === a.sourceId) || a;
           return { name: a.name, icon: entryIcon(a.kind, source), costs: a.costs, description: source.description || '' }; }) };

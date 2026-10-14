@@ -13,7 +13,8 @@
   },
   "arsenal": {
     "source": "Kanonischer Charakter-Snapshot und gemeinsame Combat-Resolver; keine separate Regeln-Datenbank.",
-    "coverage": "Alle vorhandenen Waffen, erlernten Techniken, aktiven und passiven Fähigkeiten, Herkunftseigenschaften sowie unterstützte Magiehandlungen. Nicht ausführbare Einträge bleiben sichtbar.",
+    "coverage": "Alle vorhandenen Waffen, erlernten Techniken, aktiven und passiven Fähigkeiten, Herkunftseigenschaften sowie unterstützte Magiehandlungen. Nicht ausführbare Einträge bleiben sichtbar. permanentConditionIds ergänzt ausdrücklich geprüfte dauerhafte Regeleinträge; temporäre Kampfeffekte werden nicht übernommen. Passive Einträge zeigen Nutzungsgrenzen, Voraussetzungen und taktische Einordnung.",
+    "companions": "Eigene Waffenangriffe der vorhandenen Kreatur werden mit Namen, Kosten, Trefferwurf und Schaden aus dem gemeinsamen Resolver abgeleitet. Keine pauschalen Hufschläge oder kostenlosen Begleiterangriffe.",
     "variants": "Eigene Waffen, zu Fuß/beritten und unterstützte Griffarten. Kosten, Trefferwurf, Schaden, Heilung und Rettung werden beim Build aus der gemeinsamen Mechanik abgeleitet.",
     "liveData": "Keine Schreibzugriffe und keine Live-Ressourcen. Der Guide dokumentiert den veröffentlichten Bogenstand. Historische Kämpfe und laufende Zustände bleiben unberührt.",
     "selection": "Browserlokaler Modulzustand und teilbarer URL-Zustand mit technik/ausruestung. Keine Firebase-Abonnements, globalen States oder gespeicherten Ausrüstungswechsel.",

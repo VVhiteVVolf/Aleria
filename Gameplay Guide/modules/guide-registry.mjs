@@ -6,7 +6,10 @@ export const GUIDE_REGISTRY = Object.freeze([
     editorialModule: 'ylva-guide.mjs', editorialExport: 'ylvaGuide', groupPaths: [] },
   { slug: 'gais', characterId: 'person--haus-wyrm--gais-wyrm', worldPersonId: 'person--haus-wyrm--gais-wyrm',
     displayName: 'Sir Gais Wyrm', familyId: 'haus-wyrm', familyAliasIds: [],
-    editorialModule: 'gais-guide.mjs', editorialExport: 'gaisGuide', groupPaths: [] }
+    editorialModule: 'gais-guide.mjs', editorialExport: 'gaisGuide', groupPaths: [] },
+  { slug: 'gawain', characterId: 'q1QtSIug74FzzwUAqWrs', worldPersonId: 'person--haus-draig--gawain-draig',
+    displayName: 'Sir Gawain Draig', familyId: 'haus-draig', familyAliasIds: [],
+    editorialModule: 'gawain-guide.mjs', editorialExport: 'gawainGuide', groupPaths: [] }
 ]);
 
 export function findGuideRegistration(character = {}) {

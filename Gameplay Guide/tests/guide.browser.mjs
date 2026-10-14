@@ -5,6 +5,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { resolve, sep, extname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { sceneFixture } from './scene-fixture.mjs';
+import { GUIDE_REGISTRY } from '../modules/guide-registry.mjs';
 const { chromium } = await import(process.argv[2] ? pathToFileURL(resolve(process.argv[2])).href : 'playwright');
 const root = fileURLToPath(new URL('../../', import.meta.url)), output = resolve(root, '.codex-temp/gameplay-guide');
 await mkdir(output, { recursive: true });
@@ -27,7 +28,7 @@ try {
   const page = await context.newPage(); page.on('pageerror', e => errors.push(e.message));
   page.on('response', response => { if (response.status() >= 400 && !response.url().endsWith('/favicon.ico')) missing.push(response.url()); });
   const origin = `http://127.0.0.1:${server.address().port}`;
-  for (const slug of ['ylva','gais']) {
+  for (const {slug} of GUIDE_REGISTRY) {
     await page.setViewportSize({width:1440,height:1100});
     await page.goto(`${origin}/Gameplay%20Guide/${slug}.html`);
     await page.locator('.hero-art img').evaluate(img => img.decode());
@@ -62,11 +63,21 @@ try {
       assert.match(await page.locator('#attack-preview').innerText(),/2W10\+5/);
       await page.reload();
       assert.equal(await page.locator('[data-action="select-variant"]').inputValue(),'ylva-speer:foot:two-handed');
-    } else {
+    } else if (slug === 'gais') {
       await library.locator('[data-attack-id="technique:combat-style-drachentanz-sattelantritt"]').click();
       assert.ok((await library.locator('[data-action="select-variant"] option').allTextContents()).every(text=>text.includes('beritten')));
       await library.locator('[data-attack-id="technique:combat-style-drachentanz-jungdrache-lauernde-klaue"]').click();
       assert.match(await page.locator('#attack-preview').innerText(),/Vorbereiteter Konter/);
+    } else if (slug === 'gawain') {
+      await library.locator('[data-attack-id="weapon:gawain-draig-knightly-sword"]').click();
+      await library.locator('[data-action="select-variant"]').selectOption('gawain-draig-knightly-sword:foot:two-handed');
+      assert.match(await page.locator('#attack-preview').innerText(),/1W20 \+4/);
+      assert.match(await page.locator('#attack-preview').innerText(),/1W10\+3/);
+      await library.locator('[data-attack-id="ability:gawain-liebt-duefte"]').click();
+      assert.match(await page.locator('#attack-preview').innerText(),/1× pro Tag/);
+      assert.match(await page.locator('#attack-preview').innerText(),/kein passendes Verbrauchsitem/);
+      await library.locator('[data-attack-id="condition:gawain-strenge-gerueche"]').click();
+      assert.match(await page.locator('#attack-preview').innerText(),/Stinkend/);
     }
     await page.locator('#arsenal').screenshot({path:`${output}/${slug}-arsenal-desktop.png`});
     for (const width of [390,740]) {
@@ -103,7 +114,7 @@ try {
   await page.waitForFunction(() => typeof window.loadCharacters === 'function' && !!window.AleriaCreatures);
   await page.evaluate(async()=>{ window._charactersLoaded = false; await window.loadCharacters(); await window.AleriaCreatures.reload(); });
   await page.getByRole('button',{name:'Aleria betreten',exact:true}).click();
-  for (const [slug,id] of [['ylva','bSYZYAEOwiRgy44f6OmO'],['gais','person--haus-wyrm--gais-wyrm']]) {
+  for (const {slug,characterId:id} of GUIDE_REGISTRY) {
     await page.evaluate(id=>{window.openCharProfile(id);window.switchCharTab('combat');},id);
     const link = page.locator('#cp-tab-combat .cp-gameplay-guide-link');
     await link.waitFor();
@@ -117,7 +128,7 @@ try {
     await page.screenshot({path:`${output}/${slug}-bogen-button-mobile.png`});
     await page.setViewportSize({width:1440,height:1100});
   }
-  await page.evaluate(()=>window.switchCharTab('inventory'));
+  await page.evaluate(()=>{window.openCharProfile('person--haus-wyrm--gais-wyrm');window.switchCharTab('inventory');});
   const horse = page.locator('#cp-tab-inventory .ci-companion-card').filter({hasText:'Saithor'}); assert.equal(await horse.count(),1);
   await horse.click(); await page.locator('.ci-companion-modal').waitFor();
   await page.locator('[data-ci-action="open-creature"][data-ci-creature-id="companion-gais-rabenstolz"]').click();

@@ -1,4 +1,5 @@
 import { resolveCombatProfile } from '../../AleriaAlmanach/modules/combat/combat-profile-resolver.js';
+import assert from 'node:assert/strict';
 import { withEquippedCombatWeapon } from '../../AleriaAlmanach/modules/combat/combat-equipment-state.js';
 import { getCombatMounts } from '../../AleriaAlmanach/modules/combat/combat-support-equipment.js';
 import { getCombatDamagePreview } from '../../AleriaAlmanach/modules/combat/combat-action-estimates.js';
@@ -11,6 +12,11 @@ const dice = text => String(text || '').replace(/(\d)d(\d)/gi, '$1W$2');
 const signed = value => `${value >= 0 ? '+' : ''}${value}`;
 const attributes = { strength: 'KRF', dexterity: 'GES', constitution: 'KON', intelligence: 'INT', wisdom: 'WEI', charisma: 'CHA' };
 const kinds = { weapon: 'Waffenangriffe', technique: 'Kampftechniken', ability: 'Aktive Fähigkeiten', spell: 'Zauber', prayer: 'Gebete', song: 'Gesänge' };
+
+function usageLimit(source) {
+  const recovery = { 'long-rest': 'pro langer Rast', 'short-rest': 'pro kurzer Rast', day: 'pro Tag', scene: 'pro Szene' };
+  return source.usesMaximum > 0 ? `${source.usesMaximum}× ${recovery[source.recovery] || source.recovery || ''}`.trim() : '';
+}
 
 function sourceFor(profile, action) {
   const list = action.kind === 'weapon' ? profile.weapons : action.kind === 'technique' ? profile.techniques
@@ -66,7 +72,7 @@ function describeVariant(character, loadout, action) {
     conditions, groups: (selected.effects || []).map(e => e.condition?.stanceGroup).filter(Boolean),
     duration: source.duration || '', range: source.range || (profile.actionResolutionMode === 'automatic' ? '' : loadout.range),
     target: source.target || '', requirements: source.requirements || '',
-    uses: source.usesMaximum > 0 ? `${source.usesMaximum}× ${source.recovery === 'long-rest' ? 'pro langer Rast' : source.recovery === 'short-rest' ? 'pro kurzer Rast' : source.recovery || ''}` : '' };
+    uses: usageLimit(source) };
 }
 
 export function buildGuideArsenal(guide, character) {
@@ -78,6 +84,9 @@ export function buildGuideArsenal(guide, character) {
     const equipped = withEquippedCombatWeapon(character, weapon.id, '', { shieldId: '', mountId: mounted ? mount.id : '' });
     const profile = resolveCombatProfile(equipped, { includeAiSnapshot: false });
     for (const action of profile.actions.filter(a => Object.hasOwn(kinds, a.kind))) {
+      // The resolver lists every owned weapon even while another one is equipped.
+      // A weapon card must only offer loadouts for that actual weapon.
+      if (action.kind === 'weapon' && action.sourceId !== weapon.id) continue;
       const source = sourceFor(profile, action);
       if (!actions.has(action.id)) {
         const form = getCombatFormPresentation(source);
@@ -102,11 +111,21 @@ export function buildGuideArsenal(guide, character) {
       }
     }
   }
-  for (const [kind, entries] of [['ability', base.abilities], ['trait', base.quirks]]) for (const entry of entries) {
+  // Only explicitly reviewed permanent entries belong in a static guide, never live combat effects.
+  const permanentConditions = (guide.permanentConditionIds || []).map(id => {
+    const condition = base.conditions.find(c => c.id === id);
+    assert.ok(condition && condition.duration === 'Dauerhaft', `Dauerhafter Regeleintrag fehlt: ${id}`);
+    return condition;
+  });
+  for (const [kind, entries] of [['ability', base.abilities], ['trait', base.quirks], ['condition', permanentConditions]]) for (const entry of entries) {
     if (actions.has(`${kind}:${entry.id}`)) continue;
+    const passive = entry.activationType === 'passive' || ['trait', 'condition'].includes(kind);
     actions.set(`${kind}:${entry.id}`, { id: `${kind}:${entry.id}`, name: entry.name, kind,
-      category: entry.activationType === 'passive' || kind === 'trait' ? 'Passive Fähigkeiten & Herkunft' : 'Weitere Fähigkeiten',
-      form: '', icon: entryIcon(kind, entry), description: entry.description || '', effect: '', passive: entry.activationType === 'passive' || kind === 'trait',
+      category: passive ? 'Passive Fähigkeiten & Herkunft' : 'Weitere Fähigkeiten',
+      form: kind === 'condition' ? entry.source || 'Dauerhafter Regeleintrag' : '',
+      icon: entryIcon(kind, entry), description: entry.description || '', effect: '', passive,
+      advice: guide.techniques.find(([name]) => name === entry.name)?.[2] || '',
+      requirements: entry.requirements || '', uses: usageLimit(entry),
       active: entry.active !== false, variants: [], unavailableReason: entry.combatUsable === false ? 'Keine aktive Kampfhandlung' : '' });
   }
   const preferred = [...actions.values()].find(entry => entry.name === guide.techniques[0]?.[0]);
