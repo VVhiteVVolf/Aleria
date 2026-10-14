@@ -374,6 +374,10 @@ export function renderCombatEvaluation(source = {}) {
   const appliedCondition = resolution.targetConditionSnapshot?.applied?.name
     ? `<span>Zustand: <b>${escapeHtml(resolution.targetConditionSnapshot.applied.name)}</b></span>`
     : '';
+  const previousActorConditions = new Set((resolution.actorConditionSnapshot?.before || []).map(condition => condition.id));
+  const actorConditionChanges = (resolution.actorConditionSnapshot?.after || [])
+    .filter(condition => !previousActorConditions.has(condition.id))
+    .map(condition => `<span>Auf ${escapeHtml(resolution.actorName)}: <b>${escapeHtml(condition.name)}</b> · ${escapeHtml(condition.description || condition.duration || '')}</span>`).join('');
   const mechanicNotes = (Array.isArray(resolution.mechanicNotes) ? resolution.mechanicNotes : [])
     .map(note => `<span><b>Waffenregel:</b> ${escapeHtml(note)}</span>`).join('');
   const effectResults = (Array.isArray(resolution.effectResults) ? resolution.effectResults : []).map(renderEffectResult).filter(Boolean).join('');
@@ -414,6 +418,7 @@ export function renderCombatEvaluation(source = {}) {
           ${followUpAttacks}
           ${secondarySaves.filter(s => s.afterSequence).map(s => s.html).join('')}
           ${appliedCondition}
+          ${actorConditionChanges}
           ${mechanicNotes}
           ${effectResults}
           ${resolution.turnStart ? `<span><b>${escapeHtml(resolution.turnStart.name)} · Zugbeginn:</b> ${resolution.turnStart.suppressed ? 'durch Feuer unterdrückt' : `+${Number(resolution.turnStart.restored) || 0} LP${resolution.turnStart.roll?.notation ? ` (${escapeHtml(resolution.turnStart.roll.notation)})` : ''}`}</span>` : ''}

@@ -10,6 +10,7 @@ import { beginCombatContribution } from '../modules/combat/combat-contribution-s
 import { advanceTemporaryConditionsForComment } from '../modules/combat/combat-condition-duration.js';
 import { getCombatDamagePreview } from '../modules/combat/combat-action-estimates.js';
 import { receipts } from './fixtures/jungdrache-fixtures.mjs';
+import { renderCombatEvaluation } from '../modules/combat/ui/combat-ui.js';
 const { characters } = JSON.parse(await readFile(new URL('../../CharakterDatenbank/generated/characters.snapshot.json', import.meta.url)));
 export const ylva = addYlvaDuelTechniques(characters.find(c => c.id === 'bSYZYAEOwiRgy44f6OmO'));
 export const gais = characters.find(c => c.name === 'Gais Wyrm');
@@ -65,6 +66,9 @@ test('triple fixed dice survive two-handed grip; ordinary two-strike sequence ha
 test('sweep is target-specific, survives unrelated posts, target lock expires on start, advantage after the full next contribution', async () => {
   const actor=profile('drei-dornen-ein-sturz'), victim=target();
   const result=await new CombatResolutionService(receipts([2,2,2])).resolveAttack({actor,target:victim});
+  const html = renderCombatEvaluation({ combatResolution: result });
+  assert.ok(html.indexOf('Folgeangriff 2') < html.indexOf('GES-Rettung'));
+  assert.match(html, /Öffnung nach dem Feger/); assert.match(html, /bis zum Ende von Ylvas nächstem Beitrag/);
   const states=deriveCombatStateFromComments([{characterId:ylva.id,combatResolution:result}]);
   assert.equal(states.get(ylva.id).temporaryConditions.length,1);
   const buffed=overlayCombatHitPointState(profile('kurzer-jagdstoss'),{temporaryConditions:states.get(ylva.id).temporaryConditions});
