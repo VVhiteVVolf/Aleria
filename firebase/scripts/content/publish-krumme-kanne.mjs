@@ -2,6 +2,7 @@
 import { createRequire } from 'node:module';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { isDeepStrictEqual } from 'node:util';
 import { decodeFirestoreFields } from '../backup/firestore-value-codec.mjs';
 import { encryptProjectBackup } from '../backup/project-backup-crypto.mjs';
 import { completeKrummeKanne, KANNE_MODULE_ID } from '../../../AleriaAlmanach/modules/krumme-kanne/krumme-kanne-module.mjs';
@@ -69,5 +70,5 @@ await request(`${root}:commit`, { writes: [
 const after = decodeFirestoreFields((await request(url)).fields);
 if (after.entry !== null || after.entryJson !== entryJson) throw new Error('Rückleseprüfung des Moduls fehlgeschlagen.');
 for (const key of ['entryId', 'moduleKind', 'section', 'sectionIndex', 'entryIndex', 'schemaVersion'])
-  if (JSON.stringify(after[key]) !== JSON.stringify(data[key])) throw new Error(`Modulmetadaten verändert: ${key}`);
+  if (!isDeepStrictEqual(after[key], data[key])) throw new Error(`Modulmetadaten verändert: ${key}`);
 console.log(JSON.stringify({ applied: true, id: KANNE_MODULE_ID, pages: next.pages.length, tabs: next.pages[2].hierarchy.trees.length, verifiedAssets: assets.size, otherModulesWritten: 0, commentsWritten: 0, characterOrCombatWrites: 0, sha256: hash(entryJson) }));
