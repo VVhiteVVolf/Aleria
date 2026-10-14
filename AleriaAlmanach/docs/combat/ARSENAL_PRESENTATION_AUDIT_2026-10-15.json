@@ -1,0 +1,982 @@
+{
+  "version": 1,
+  "auditedAt": "2026-10-14T23:38:43.938Z",
+  "exclusion": "Sir Duncan",
+  "characters": [
+    {
+      "id": "6atOllMA637Z2VNAZAxf",
+      "name": "Gethin",
+      "level": 5,
+      "actions": 26,
+      "groups": [
+        {
+          "label": "Waffenangriffe",
+          "count": 2,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 1
+            },
+            {
+              "id": "unarmed",
+              "label": "Waffenlos & Naturwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Teulu · Drachentanz · Tanz des Jungdrachens",
+          "count": 22,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 7
+            },
+            {
+              "id": "universal",
+              "label": "Waffenübergreifend",
+              "count": 15
+            }
+          ]
+        },
+        {
+          "label": "Fähigkeiten",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Kampfzug",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FKiXsSWVoV74rTgmpPip",
+      "name": "Fenrir Varulv",
+      "level": 6,
+      "actions": 30,
+      "groups": [
+        {
+          "label": "Waffenangriffe",
+          "count": 5,
+          "weapons": [
+            {
+              "id": "paired",
+              "label": "Zwei Waffen",
+              "count": 1
+            },
+            {
+              "id": "two-handed",
+              "label": "Zweihandwaffen",
+              "count": 1
+            },
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 1
+            },
+            {
+              "id": "shield",
+              "label": "Waffe & Schild",
+              "count": 1
+            },
+            {
+              "id": "unarmed",
+              "label": "Waffenlos & Naturwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Skjaldr · Huskarl-Waffenlehre · Stand des Schildes",
+          "count": 18,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 16
+            },
+            {
+              "id": "universal",
+              "label": "Waffenübergreifend",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "label": "Skjaldr · Berserkerweg · Ausbildungsform",
+          "count": 4,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 3
+            },
+            {
+              "id": "shield",
+              "label": "Waffe & Schild",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Fähigkeiten",
+          "count": 2,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "label": "Kampfzug",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HjDXMMexahez1G0rJrBE",
+      "name": "Kane Draig",
+      "level": 5,
+      "actions": 26,
+      "groups": [
+        {
+          "label": "Waffenangriffe",
+          "count": 2,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 1
+            },
+            {
+              "id": "unarmed",
+              "label": "Waffenlos & Naturwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Teulu · Drachentanz · Tanz des Jungdrachens",
+          "count": 22,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 7
+            },
+            {
+              "id": "universal",
+              "label": "Waffenübergreifend",
+              "count": 15
+            }
+          ]
+        },
+        {
+          "label": "Fähigkeiten",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Kampfzug",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bSYZYAEOwiRgy44f6OmO",
+      "name": "Ylva Wolfshorn",
+      "level": 7,
+      "actions": 41,
+      "groups": [
+        {
+          "label": "Waffenangriffe",
+          "count": 5,
+          "weapons": [
+            {
+              "id": "ranged",
+              "label": "Fernkampf · Bogen & Schusswaffen",
+              "count": 1
+            },
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 2
+            },
+            {
+              "id": "spear",
+              "label": "Speer & Stangenwaffen",
+              "count": 1
+            },
+            {
+              "id": "unarmed",
+              "label": "Waffenlos & Naturwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Persönliche Techniken",
+          "count": 13,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 3
+            },
+            {
+              "id": "spear",
+              "label": "Speer & Stangenwaffen",
+              "count": 10
+            }
+          ]
+        },
+        {
+          "label": "Skytte · Huskarl-Waffenlehre · Stand des Schildes",
+          "count": 18,
+          "weapons": [
+            {
+              "id": "ranged",
+              "label": "Fernkampf · Bogen & Schusswaffen",
+              "count": 8
+            },
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 6
+            },
+            {
+              "id": "spear",
+              "label": "Speer & Stangenwaffen",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "label": "Skytte · Huskarl-Waffenlehre · Schritt des Huskarls",
+          "count": 3,
+          "weapons": [
+            {
+              "id": "ranged",
+              "label": "Fernkampf · Bogen & Schusswaffen",
+              "count": 1
+            },
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 1
+            },
+            {
+              "id": "spear",
+              "label": "Speer & Stangenwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Fähigkeiten",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Kampfzug",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ksJQe8Ai4KbRE9jOAvb7",
+      "name": "Freya Skald",
+      "level": 5,
+      "actions": 18,
+      "groups": [
+        {
+          "label": "Waffenangriffe",
+          "count": 4,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 1
+            },
+            {
+              "id": "shield",
+              "label": "Waffe & Schild",
+              "count": 1
+            },
+            {
+              "id": "unarmed",
+              "label": "Waffenlos & Naturwaffen",
+              "count": 1
+            },
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Skalde / Skalde · Huskarl-Waffenlehre · Stand des Schildes",
+          "count": 10,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 6
+            },
+            {
+              "id": "universal",
+              "label": "Waffenübergreifend",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "label": "Fähigkeiten",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Gesänge",
+          "count": 2,
+          "weapons": [
+            {
+              "id": "magic",
+              "label": "Magische Handlungen",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "label": "Kampfzug",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oUlhJyX6C4Q69mtLS9u1",
+      "name": "Asgeir Wolfshorn",
+      "level": 7,
+      "actions": 29,
+      "groups": [
+        {
+          "label": "Waffenangriffe",
+          "count": 4,
+          "weapons": [
+            {
+              "id": "two-handed",
+              "label": "Zweihandwaffen",
+              "count": 1
+            },
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 2
+            },
+            {
+              "id": "unarmed",
+              "label": "Waffenlos & Naturwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Persönliche Techniken",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Skjaldr · Huskarl-Waffenlehre · Stand des Schildes",
+          "count": 18,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 16
+            },
+            {
+              "id": "universal",
+              "label": "Waffenübergreifend",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "label": "Skjaldr · Huskarl-Waffenlehre · Schritt des Huskarls",
+          "count": 3,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "label": "Fähigkeiten",
+          "count": 2,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "label": "Kampfzug",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person--haus-draig--gethin-1722-draig",
+      "name": "Gethin Draig",
+      "level": 5,
+      "actions": 26,
+      "groups": [
+        {
+          "label": "Waffenangriffe",
+          "count": 2,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 1
+            },
+            {
+              "id": "unarmed",
+              "label": "Waffenlos & Naturwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Teulu · Drachentanz · Tanz des Jungdrachens",
+          "count": 22,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 7
+            },
+            {
+              "id": "universal",
+              "label": "Waffenübergreifend",
+              "count": 15
+            }
+          ]
+        },
+        {
+          "label": "Fähigkeiten",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Kampfzug",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person--haus-gafyr--gildas-gafyr",
+      "name": "Gildas Gafyr",
+      "level": 6,
+      "actions": 31,
+      "groups": [
+        {
+          "label": "Waffenangriffe",
+          "count": 3,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 2
+            },
+            {
+              "id": "unarmed",
+              "label": "Waffenlos & Naturwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Teulu · Drachentanz · Tanz des Jungdrachens",
+          "count": 26,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 9
+            },
+            {
+              "id": "universal",
+              "label": "Waffenübergreifend",
+              "count": 17
+            }
+          ]
+        },
+        {
+          "label": "Fähigkeiten",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Kampfzug",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person--haus-neidr--guinevere-neidr",
+      "name": "Guinevere Neidr",
+      "level": 5,
+      "actions": 33,
+      "groups": [
+        {
+          "label": "Waffenangriffe",
+          "count": 5,
+          "weapons": [
+            {
+              "id": "ranged",
+              "label": "Fernkampf · Bogen & Schusswaffen",
+              "count": 2
+            },
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 1
+            },
+            {
+              "id": "paired",
+              "label": "Zwei Waffen",
+              "count": 1
+            },
+            {
+              "id": "unarmed",
+              "label": "Waffenlos & Naturwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Helwyr · Drachentanz · Tanz des Jungdrachens",
+          "count": 26,
+          "weapons": [
+            {
+              "id": "ranged",
+              "label": "Fernkampf · Bogen & Schusswaffen",
+              "count": 6
+            },
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 5
+            },
+            {
+              "id": "universal",
+              "label": "Waffenübergreifend",
+              "count": 15
+            }
+          ]
+        },
+        {
+          "label": "Fähigkeiten",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Kampfzug",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person--haus-saethwyr--nudd-saethwyr",
+      "name": "Nudd Saethwyr",
+      "level": 6,
+      "actions": 37,
+      "groups": [
+        {
+          "label": "Waffenangriffe",
+          "count": 3,
+          "weapons": [
+            {
+              "id": "spear",
+              "label": "Speer & Stangenwaffen",
+              "count": 1
+            },
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 1
+            },
+            {
+              "id": "unarmed",
+              "label": "Waffenlos & Naturwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Persönliche Techniken",
+          "count": 5,
+          "weapons": [
+            {
+              "id": "spear",
+              "label": "Speer & Stangenwaffen",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "label": "Cantref · Drachentanz · Tanz des Jungdrachens",
+          "count": 27,
+          "weapons": [
+            {
+              "id": "spear",
+              "label": "Speer & Stangenwaffen",
+              "count": 10
+            },
+            {
+              "id": "universal",
+              "label": "Waffenübergreifend",
+              "count": 17
+            }
+          ]
+        },
+        {
+          "label": "Fähigkeiten",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Kampfzug",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "person--haus-wyrm--gais-wyrm",
+      "name": "Gais Wyrm",
+      "level": 5,
+      "actions": 35,
+      "groups": [
+        {
+          "label": "Waffenangriffe",
+          "count": 3,
+          "weapons": [
+            {
+              "id": "spear",
+              "label": "Speer & Stangenwaffen",
+              "count": 1
+            },
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 1
+            },
+            {
+              "id": "unarmed",
+              "label": "Waffenlos & Naturwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Persönliche Techniken",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "universal",
+              "label": "Waffenübergreifend",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Uchelwyr · Drachentanz · Tanz des Jungdrachens",
+          "count": 29,
+          "weapons": [
+            {
+              "id": "spear",
+              "label": "Speer & Stangenwaffen",
+              "count": 3
+            },
+            {
+              "id": "universal",
+              "label": "Waffenübergreifend",
+              "count": 26
+            }
+          ]
+        },
+        {
+          "label": "Fähigkeiten",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Kampfzug",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q1QtSIug74FzzwUAqWrs",
+      "name": "Gawain Draig",
+      "level": 5,
+      "actions": 27,
+      "groups": [
+        {
+          "label": "Waffenangriffe",
+          "count": 3,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 2
+            },
+            {
+              "id": "unarmed",
+              "label": "Waffenlos & Naturwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Teulu · Drachentanz · Tanz des Jungdrachens",
+          "count": 22,
+          "weapons": [
+            {
+              "id": "one-handed",
+              "label": "Einhandwaffen · Seitenwaffen",
+              "count": 7
+            },
+            {
+              "id": "universal",
+              "label": "Waffenübergreifend",
+              "count": 15
+            }
+          ]
+        },
+        {
+          "label": "Fähigkeiten",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Kampfzug",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "y7MBxDiAaesbWHBtmw5Q",
+      "name": "Rhiannon Draig",
+      "level": 6,
+      "actions": 14,
+      "groups": [
+        {
+          "label": "Waffenangriffe",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "unarmed",
+              "label": "Waffenlos & Naturwaffen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Fähigkeiten",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "label": "Zauber",
+          "count": 11,
+          "weapons": [
+            {
+              "id": "magic",
+              "label": "Magische Handlungen",
+              "count": 11
+            }
+          ]
+        },
+        {
+          "label": "Kampfzug",
+          "count": 1,
+          "weapons": [
+            {
+              "id": "other",
+              "label": "Sonstige Handlungen",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "totalActions": 373
+}

@@ -1,0 +1,179 @@
+{
+  "tool": "image_gen.imagegen",
+  "createdAt": "2026-10-15",
+  "style": "Baldur’s Gate · combat weapon crests",
+  "assets": [
+    {
+      "id": "bow",
+      "subject": "a single unmistakable longbow with taut bowstring and one diagonal arrow, ranged archery emblem",
+      "args": {
+        "prompt": "Create ONE polished game UI weapon-family crest icon for the Aleria character combat arsenal, in the hand-painted Baldur’s Gate 3 inventory/ability icon style. Square 1:1 transparent PNG, actual alpha outside the icon. Reference images show our existing tiny silver BG icons; use them only as a rendering and legibility reference. A compact antique bronze shield-shaped rim, dark muted teal opaque shield interior, a large readable ivory/silver weapon silhouette with restrained warm gold highlights, slight painted depth, clean dark outlines. The symbol fills the crest and reads instantly at 32–48 pixels. Front-facing centered, entire closed crest visible, generous 8% clear margins, no ornaments or detail noise, no lettering, no numbers, no labels, no scene, no external shadow, no halo, no background or checkerboard. Keep all visible weapon elements inside the crest. The shield is only a UI badge, not a family coat of arms. Subject: a single unmistakable longbow with taut bowstring and one diagonal arrow, ranged archery emblem",
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "E:/Aleria/IconOrdner/IconsCharakterbogen/BG Icons/Einhand.png",
+          "E:/Aleria/IconOrdner/IconsCharakterbogen/BG Icons/Fernkampf.png"
+        ]
+      },
+      "file": "IconOrdner/IconsCharakterbogen/Arsenal-Wappen/bow.png",
+      "runtimeFile": "AleriaAlmanach/public/assets/combat-arsenal-icons/bow.webp",
+      "alphaVerified": true
+    },
+    {
+      "id": "one-handed",
+      "subject": "a single short one-handed sword with compact crossguard, one-hand weapon emblem",
+      "args": {
+        "prompt": "Create ONE polished game UI weapon-family crest icon for the Aleria character combat arsenal, in the hand-painted Baldur’s Gate 3 inventory/ability icon style. Square 1:1 transparent PNG, actual alpha outside the icon. Reference images show our existing tiny silver BG icons; use them only as a rendering and legibility reference. A compact antique bronze shield-shaped rim, dark muted teal opaque shield interior, a large readable ivory/silver weapon silhouette with restrained warm gold highlights, slight painted depth, clean dark outlines. The symbol fills the crest and reads instantly at 32–48 pixels. Front-facing centered, entire closed crest visible, generous 8% clear margins, no ornaments or detail noise, no lettering, no numbers, no labels, no scene, no external shadow, no halo, no background or checkerboard. Keep all visible weapon elements inside the crest. The shield is only a UI badge, not a family coat of arms. Subject: a single short one-handed sword with compact crossguard, one-hand weapon emblem",
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "E:/Aleria/IconOrdner/IconsCharakterbogen/BG Icons/Einhand.png",
+          "E:/Aleria/IconOrdner/IconsCharakterbogen/BG Icons/Fernkampf.png"
+        ]
+      },
+      "file": "IconOrdner/IconsCharakterbogen/Arsenal-Wappen/one-handed.png",
+      "runtimeFile": "AleriaAlmanach/public/assets/combat-arsenal-icons/one-handed.webp",
+      "alphaVerified": true
+    },
+    {
+      "id": "spear",
+      "subject": "a single long spear with a clear leaf-shaped steel spearhead and straight wooden shaft, spear and lance emblem",
+      "args": {
+        "prompt": "Create ONE polished game UI weapon-family crest icon for the Aleria character combat arsenal, in the hand-painted Baldur’s Gate 3 inventory/ability icon style. Square 1:1 transparent PNG, actual alpha outside the icon. Reference images show our existing tiny silver BG icons; use them only as a rendering and legibility reference. A compact antique bronze shield-shaped rim, dark muted teal opaque shield interior, a large readable ivory/silver weapon silhouette with restrained warm gold highlights, slight painted depth, clean dark outlines. The symbol fills the crest and reads instantly at 32–48 pixels. Front-facing centered, entire closed crest visible, generous 8% clear margins, no ornaments or detail noise, no lettering, no numbers, no labels, no scene, no external shadow, no halo, no background or checkerboard. Keep all visible weapon elements inside the crest. The shield is only a UI badge, not a family coat of arms. Subject: a single long spear with a clear leaf-shaped steel spearhead and straight wooden shaft, spear and lance emblem",
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "E:/Aleria/IconOrdner/IconsCharakterbogen/BG Icons/Einhand.png",
+          "E:/Aleria/IconOrdner/IconsCharakterbogen/BG Icons/Fernkampf.png"
+        ]
+      },
+      "file": "IconOrdner/IconsCharakterbogen/Arsenal-Wappen/spear.png",
+      "runtimeFile": "AleriaAlmanach/public/assets/combat-arsenal-icons/spear.webp",
+      "alphaVerified": true
+    },
+    {
+      "id": "universal",
+      "subject": "three different weapons arranged as a compact fan: sword, axe and spear; no one weapon dominates, universal martial technique emblem",
+      "args": {
+        "prompt": "Create ONE polished game UI weapon-family crest icon for the Aleria character combat arsenal, in the hand-painted Baldur’s Gate 3 inventory/ability icon style. Square 1:1 transparent PNG, actual alpha outside the icon. Reference images show our existing tiny silver BG icons; use them only as a rendering and legibility reference. A compact antique bronze shield-shaped rim, dark muted teal opaque shield interior, a large readable ivory/silver weapon silhouette with restrained warm gold highlights, slight painted depth, clean dark outlines. The symbol fills the crest and reads instantly at 32–48 pixels. Front-facing centered, entire closed crest visible, generous 8% clear margins, no ornaments or detail noise, no lettering, no numbers, no labels, no scene, no external shadow, no halo, no background or checkerboard. Keep all visible weapon elements inside the crest. The shield is only a UI badge, not a family coat of arms. Subject: three different weapons arranged as a compact fan: sword, axe and spear; no one weapon dominates, universal martial technique emblem",
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "E:/Aleria/IconOrdner/IconsCharakterbogen/BG Icons/Einhand.png",
+          "E:/Aleria/IconOrdner/IconsCharakterbogen/BG Icons/Fernkampf.png"
+        ]
+      },
+      "file": "IconOrdner/IconsCharakterbogen/Arsenal-Wappen/universal.png",
+      "runtimeFile": "AleriaAlmanach/public/assets/combat-arsenal-icons/universal.webp",
+      "alphaVerified": true
+    },
+    {
+      "id": "two-handed",
+      "subject": "a broad long two-handed greatsword, oversized long grip and plain crossguard, two-hand weapon emblem",
+      "args": {
+        "prompt": "Create ONE polished game UI weapon-family crest icon for the Aleria character combat arsenal, in the hand-painted Baldur’s Gate 3 inventory/ability icon style. Square 1:1 transparent PNG, actual alpha outside the icon. Reference images show our existing tiny silver BG icons; use them only as a rendering and legibility reference. A compact antique bronze shield-shaped rim, dark muted teal opaque shield interior, a large readable ivory/silver weapon silhouette with restrained warm gold highlights, slight painted depth, clean dark outlines. The symbol fills the crest and reads instantly at 32–48 pixels. Front-facing centered, entire closed crest visible, generous 8% clear margins, no ornaments or detail noise, no lettering, no numbers, no labels, no scene, no external shadow, no halo, no background or checkerboard. Keep all visible weapon elements inside the crest. The shield is only a UI badge, not a family coat of arms. Subject: a broad long two-handed greatsword, oversized long grip and plain crossguard, two-hand weapon emblem",
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "C:/Users/fhg_r/.codex/generated_images/01a13204-781f-7f10-b5ac-914de6412b67/exec-fd907fcc-c808-4f2b-895f-0da58dd5197d.png"
+        ]
+      },
+      "file": "IconOrdner/IconsCharakterbogen/Arsenal-Wappen/two-handed.png",
+      "runtimeFile": "AleriaAlmanach/public/assets/combat-arsenal-icons/two-handed.webp",
+      "alphaVerified": true
+    },
+    {
+      "id": "unarmed",
+      "subject": "a clearly readable clenched bare fist in a leather wrist wrap, unarmed and natural combat emblem",
+      "args": {
+        "prompt": "Create ONE polished game UI weapon-family crest icon for the Aleria character combat arsenal, in the hand-painted Baldur’s Gate 3 inventory/ability icon style. Square 1:1 transparent PNG, actual alpha outside the icon. Reference images show our existing tiny silver BG icons; use them only as a rendering and legibility reference. A compact antique bronze shield-shaped rim, dark muted teal opaque shield interior, a large readable ivory/silver weapon silhouette with restrained warm gold highlights, slight painted depth, clean dark outlines. The symbol fills the crest and reads instantly at 32–48 pixels. Front-facing centered, entire closed crest visible, generous 8% clear margins, no ornaments or detail noise, no lettering, no numbers, no labels, no scene, no external shadow, no halo, no background or checkerboard. Keep all visible weapon elements inside the crest. The shield is only a UI badge, not a family coat of arms. Subject: a clearly readable clenched bare fist in a leather wrist wrap, unarmed and natural combat emblem",
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "C:/Users/fhg_r/.codex/generated_images/01a13204-781f-7f10-b5ac-914de6412b67/exec-fd907fcc-c808-4f2b-895f-0da58dd5197d.png"
+        ]
+      },
+      "file": "IconOrdner/IconsCharakterbogen/Arsenal-Wappen/unarmed.png",
+      "runtimeFile": "AleriaAlmanach/public/assets/combat-arsenal-icons/unarmed.webp",
+      "alphaVerified": true
+    },
+    {
+      "id": "shield",
+      "subject": "a small silver buckler with a sword tucked behind it, weapon-and-shield combat emblem",
+      "args": {
+        "prompt": "Create ONE polished game UI weapon-family crest icon for the Aleria character combat arsenal, in the hand-painted Baldur’s Gate 3 inventory/ability icon style. Square 1:1 transparent PNG, actual alpha outside the icon. Reference images show our existing tiny silver BG icons; use them only as a rendering and legibility reference. A compact antique bronze shield-shaped rim, dark muted teal opaque shield interior, a large readable ivory/silver weapon silhouette with restrained warm gold highlights, slight painted depth, clean dark outlines. The symbol fills the crest and reads instantly at 32–48 pixels. Front-facing centered, entire closed crest visible, generous 8% clear margins, no ornaments or detail noise, no lettering, no numbers, no labels, no scene, no external shadow, no halo, no background or checkerboard. Keep all visible weapon elements inside the crest. The shield is only a UI badge, not a family coat of arms. Subject: a small silver buckler with a sword tucked behind it, weapon-and-shield combat emblem",
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "C:/Users/fhg_r/.codex/generated_images/01a13204-781f-7f10-b5ac-914de6412b67/exec-fd907fcc-c808-4f2b-895f-0da58dd5197d.png"
+        ]
+      },
+      "file": "IconOrdner/IconsCharakterbogen/Arsenal-Wappen/shield.png",
+      "runtimeFile": "AleriaAlmanach/public/assets/combat-arsenal-icons/shield.webp",
+      "alphaVerified": true
+    },
+    {
+      "id": "magic",
+      "subject": "one simple upright staff with a small violet crystal and two restrained arcane sparks, spells and magical abilities emblem",
+      "args": {
+        "prompt": "Create ONE polished game UI weapon-family crest icon for the Aleria character combat arsenal, in the hand-painted Baldur’s Gate 3 inventory/ability icon style. Square 1:1 transparent PNG, actual alpha outside the icon. Reference images show our existing tiny silver BG icons; use them only as a rendering and legibility reference. A compact antique bronze shield-shaped rim, dark muted teal opaque shield interior, a large readable ivory/silver weapon silhouette with restrained warm gold highlights, slight painted depth, clean dark outlines. The symbol fills the crest and reads instantly at 32–48 pixels. Front-facing centered, entire closed crest visible, generous 8% clear margins, no ornaments or detail noise, no lettering, no numbers, no labels, no scene, no external shadow, no halo, no background or checkerboard. Keep all visible weapon elements inside the crest. The shield is only a UI badge, not a family coat of arms. Subject: one simple upright staff with a small violet crystal and two restrained arcane sparks, spells and magical abilities emblem",
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "C:/Users/fhg_r/.codex/generated_images/01a13204-781f-7f10-b5ac-914de6412b67/exec-fd907fcc-c808-4f2b-895f-0da58dd5197d.png"
+        ]
+      },
+      "file": "IconOrdner/IconsCharakterbogen/Arsenal-Wappen/magic.png",
+      "runtimeFile": "AleriaAlmanach/public/assets/combat-arsenal-icons/magic.webp",
+      "alphaVerified": true
+    },
+    {
+      "id": "axe",
+      "subject": "a single clearly readable compact one-handed battleaxe with one steel blade and a short wooden handle, axe weapon emblem",
+      "args": {
+        "prompt": "Create ONE polished game UI weapon-family crest icon for the Aleria character combat arsenal, in the hand-painted Baldur’s Gate 3 inventory/ability icon style. Square 1:1 transparent PNG, actual alpha outside the icon. Reference images show our existing tiny silver BG icons; use them only as a rendering and legibility reference. A compact antique bronze shield-shaped rim, dark muted teal opaque shield interior, a large readable ivory/silver weapon silhouette with restrained warm gold highlights, slight painted depth, clean dark outlines. The symbol fills the crest and reads instantly at 32–48 pixels. Front-facing centered, entire closed crest visible, generous 8% clear margins, no ornaments or detail noise, no lettering, no numbers, no labels, no scene, no external shadow, no halo, no background or checkerboard. Keep all visible weapon elements inside the crest. The shield is only a UI badge, not a family coat of arms. Subject: a single clearly readable compact one-handed battleaxe with one steel blade and a short wooden handle, axe weapon emblem",
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "E:/Aleria/IconOrdner/IconsCharakterbogen/Arsenal-Wappen/spear.png"
+        ]
+      },
+      "file": "IconOrdner/IconsCharakterbogen/Arsenal-Wappen/axe.png",
+      "runtimeFile": "AleriaAlmanach/public/assets/combat-arsenal-icons/axe.webp",
+      "alphaVerified": true
+    },
+    {
+      "id": "dagger",
+      "subject": "a single clearly readable short Sax dagger with one straight single-edged blade and a short dark handle, dagger and Sax weapon emblem",
+      "args": {
+        "prompt": "Create ONE polished game UI weapon-family crest icon for the Aleria character combat arsenal, in the hand-painted Baldur’s Gate 3 inventory/ability icon style. Square 1:1 transparent PNG, actual alpha outside the icon. Reference images show our existing tiny silver BG icons; use them only as a rendering and legibility reference. A compact antique bronze shield-shaped rim, dark muted teal opaque shield interior, a large readable ivory/silver weapon silhouette with restrained warm gold highlights, slight painted depth, clean dark outlines. The symbol fills the crest and reads instantly at 32–48 pixels. Front-facing centered, entire closed crest visible, generous 8% clear margins, no ornaments or detail noise, no lettering, no numbers, no labels, no scene, no external shadow, no halo, no background or checkerboard. Keep all visible weapon elements inside the crest. The shield is only a UI badge, not a family coat of arms. Subject: a single clearly readable short Sax dagger with one straight single-edged blade and a short dark handle, dagger and Sax weapon emblem",
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "E:/Aleria/IconOrdner/IconsCharakterbogen/Arsenal-Wappen/spear.png"
+        ]
+      },
+      "file": "IconOrdner/IconsCharakterbogen/Arsenal-Wappen/dagger.png",
+      "runtimeFile": "AleriaAlmanach/public/assets/combat-arsenal-icons/dagger.webp",
+      "alphaVerified": true
+    },
+    {
+      "id": "mace",
+      "subject": "a single clearly readable short one-handed steel flanged mace with a compact head, mace weapon emblem",
+      "args": {
+        "prompt": "Create ONE polished game UI weapon-family crest icon for the Aleria character combat arsenal, in the hand-painted Baldur’s Gate 3 inventory/ability icon style. Square 1:1 transparent PNG, actual alpha outside the icon. Reference images show our existing tiny silver BG icons; use them only as a rendering and legibility reference. A compact antique bronze shield-shaped rim, dark muted teal opaque shield interior, a large readable ivory/silver weapon silhouette with restrained warm gold highlights, slight painted depth, clean dark outlines. The symbol fills the crest and reads instantly at 32–48 pixels. Front-facing centered, entire closed crest visible, generous 8% clear margins, no ornaments or detail noise, no lettering, no numbers, no labels, no scene, no external shadow, no halo, no background or checkerboard. Keep all visible weapon elements inside the crest. The shield is only a UI badge, not a family coat of arms. Subject: a single clearly readable short one-handed steel flanged mace with a compact head, mace weapon emblem",
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "E:/Aleria/IconOrdner/IconsCharakterbogen/Arsenal-Wappen/spear.png"
+        ]
+      },
+      "file": "IconOrdner/IconsCharakterbogen/Arsenal-Wappen/mace.png",
+      "runtimeFile": "AleriaAlmanach/public/assets/combat-arsenal-icons/mace.webp",
+      "alphaVerified": true
+    },
+    {
+      "id": "paired",
+      "subject": "two compact handaxes crossed diagonally, two distinct short handles and steel blades, paired weapons emblem",
+      "args": {
+        "prompt": "Create ONE polished game UI weapon-family crest icon for the Aleria character combat arsenal, in the hand-painted Baldur’s Gate 3 inventory/ability icon style. Square 1:1 transparent PNG, actual alpha outside the icon. Reference images show our existing tiny silver BG icons; use them only as a rendering and legibility reference. A compact antique bronze shield-shaped rim, dark muted teal opaque shield interior, a large readable ivory/silver weapon silhouette with restrained warm gold highlights, slight painted depth, clean dark outlines. The symbol fills the crest and reads instantly at 32–48 pixels. Front-facing centered, entire closed crest visible, generous 8% clear margins, no ornaments or detail noise, no lettering, no numbers, no labels, no scene, no external shadow, no halo, no background or checkerboard. Keep all visible weapon elements inside the crest. The shield is only a UI badge, not a family coat of arms. Subject: two compact handaxes crossed diagonally, two distinct short handles and steel blades, paired weapons emblem",
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "E:/Aleria/IconOrdner/IconsCharakterbogen/Arsenal-Wappen/spear.png"
+        ]
+      },
+      "file": "IconOrdner/IconsCharakterbogen/Arsenal-Wappen/paired.png",
+      "runtimeFile": "AleriaAlmanach/public/assets/combat-arsenal-icons/paired.webp",
+      "alphaVerified": true
+    }
+  ]
+}

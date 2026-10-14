@@ -1,6 +1,8 @@
 import { getSpellLevelLabel } from '../combat-spell-slots.js?v=20260803-character-creation-v1';
 import { getCombatDamagePreview, getExplicitAttackSequencePreview, getPreparedCounterPreview } from '../combat-action-estimates.js?v=20260928-equipment-art-v4';
-import { getCombatFormPresentation } from '../../combat-styles/combat-form-presentation.js?v=20260909-dragon-parent-v2';
+import { getActionCategoryPresentation, compareArsenalChoices, getActionWeaponSections, getArsenalClassIds } from './combat-action-taxonomy.js';
+import { renderCombatStatIcon } from './combat-presentation-icons.js';
+import { combatTooltipAttributes } from './combat-presentation-markup.js';
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -56,11 +58,7 @@ function describeAction(actor, action = {}, sourceIndexes = null) {
   const entries = Array.isArray(sources) ? sources : [];
   if (sourceIndexes && !sourceIndexes.has(sources)) sourceIndexes.set(sources, new Map(entries.map(entry => [String(entry.id), entry])));
   const entry = (sourceIndexes ? sourceIndexes.get(sources).get(sourceId) : entries.find(source => String(source.id) === sourceId)) || action;
-  const form = action.kind === 'equipment-switch' ? null : getCombatFormPresentation(entry);
-  const group = action.kind === 'equipment-switch' ? 'Waffenwechsel'
-    : (form?.label || ({ weapon: 'Waffenangriffe', technique: 'Kampftechniken', ability: 'Fähigkeiten',
-      spell: 'Zauber', prayer: 'Gebete', song: 'Gesänge' })[action.kind] || action.kindLabel || 'Handlungen');
-  return { entry, group, groupKey: form?.key || `kind:${action.kind || 'action'}`, label: String(action.name || entry.name || 'Handlung'), minimumLevel: Number(entry.minimumLevel) || 0 };
+  return { entry, ...getActionCategoryPresentation(actor, action, entry), label: String(action.name || entry.name || 'Handlung'), minimumLevel: Number(entry.minimumLevel) || 0 };
 }
 
 export function getActionPresentation(actor = {}) {
@@ -76,20 +74,26 @@ export function getActionGroups(actor = {}) {
     if (!groups.has(presentation.groupKey)) groups.set(presentation.groupKey, []);
     groups.get(presentation.groupKey).push({ action, ...presentation });
   });
-  groups.forEach(actions => actions.sort((a, b) => a.minimumLevel - b.minimumLevel));
-  return groups;
+  groups.forEach(actions => actions.sort((a, b) => compareArsenalChoices(actor, a, b)));
+  const rank = choices => ({ weapon: 0, technique: choices[0].personal ? 1 : 2, ability: 3, spell: 4, prayer: 4, song: 4, 'equipment-switch': 5 })[choices[0].action.kind] ?? 6;
+  const classes = getArsenalClassIds(actor);
+  const classRank = choices => Math.min(...choices[0].classIds.map(id => { const index = classes.indexOf(id); return index < 0 ? classes.length : index; }), classes.length);
+  return new Map([...groups].sort(([, a], [, b]) => rank(a) - rank(b)
+    || classRank(a) - classRank(b)
+    || Math.min(...a.map(c => c.minimumLevel)) - Math.min(...b.map(c => c.minimumLevel))
+    || a[0].group.localeCompare(b[0].group, 'de')));
 }
 
 export function renderActionOptions(actor = {}, selectedId = '', groups = getActionGroups(actor)) {
-  return [...groups.values()].map(actions => {
-    const group = actions[0].group;
-    const options = actions.map(({ action, label }) => {
+  return [...groups.values()].flatMap(actions => getActionWeaponSections(actions).map(section => {
+    const group = `${actions[0].group} · ${section.weapon.label}`;
+    const options = section.choices.map(({ action, label }) => {
       const unavailable = action.compatible === false;
       const reason = unavailable ? action.disabledReason || 'Zurzeit nicht verfügbar' : '';
       return `<option value="${escapeHtml(action.id)}"${String(action.id) === String(selectedId) ? ' selected' : ''}${unavailable ? ' disabled' : ''}${reason ? ` title="${escapeHtml(reason)}"` : ''}>${escapeHtml(label)}${reason ? ` · ${escapeHtml(reason)}` : ''}</option>`;
     });
     return `<optgroup label="${escapeHtml(group)}">${options.join('')}</optgroup>`;
-  }).join('');
+  })).join('');
 }
 
 export function renderActionMetadata(actor = {}) {
@@ -118,7 +122,9 @@ export function renderActionDetails(actor = {}, { open = false } = {}) {
 }
 
 function renderValue(label, value, note = '', className = '') {
-  return `<div class="combat-action-value${className ? ` ${escapeHtml(className)}` : ''}"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong>${note ? `<small>${escapeHtml(note)}</small>` : ''}</div>`;
+  const kind = /Rettung|SG/.test(label) ? 'save' : /Schaden/.test(label) ? 'damage' : /Treffer/.test(label) ? 'attack' : '';
+  const help = label === 'Ø Schaden' ? 'Durchschnitt des normalen Haupttreffers mit aktiven Schadensboni. Ohne Krit, Folgetreffer, zielabhängige Eingriffe, Resistenzen und Schadensminderung.' : ({ attack: 'Bonus auf den W20-Trefferwurf mit der aktuellen Waffenführung.', damage: 'Schadensformel vor Rüstung und Resistenzen. Wirkung und Voraussetzungen stehen darunter.', save: 'Das Ziel besteht den Rettungswurf bei einem Ergebnis mindestens gleich dem SG.' }[kind] || `${label}: ${value}`);
+  return `<div class="combat-action-value${kind ? ` combat-action-value--${kind}` : ''}${className ? ` ${escapeHtml(className)}` : ''}" ${combatTooltipAttributes(help, { focusable: true })}><span>${kind ? renderCombatStatIcon(kind) : ''}${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong>${note ? `<small>${escapeHtml(note)}</small>` : ''}</div>`;
 }
 
 export function renderCombatValueStrip(actor = {}) {
@@ -135,7 +141,7 @@ export function renderCombatValueStrip(actor = {}) {
 
 function renderDamageAverage(damage) {
   const average = damage?.average;
-  return average == null ? '' : `<div class="combat-damage-average" title="Durchschnitt des normalen Haupttreffers mit aktiven Schadensboni. Ohne Krit, Folgetreffer, zielabhängige Eingriffe, Resistenzen und Schadensminderung.">${renderValue('Ø Schaden', average.toLocaleString('de-DE', { maximumFractionDigits: 2 }), 'Normaler Haupttreffer · vor Abwehr')}</div>`;
+  return average == null ? '' : `<div class="combat-damage-average">${renderValue('Ø Schaden', average.toLocaleString('de-DE', { maximumFractionDigits: 2 }), 'Normaler Haupttreffer · vor Abwehr')}</div>`;
 }
 
 export function renderMagicValueStrip(actor = {}) {

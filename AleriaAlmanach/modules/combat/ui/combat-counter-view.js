@@ -1,4 +1,4 @@
-import { escapeActionHtml as escape } from './combat-action-choice.js';
+import { escapeActionHtml as escape } from './combat-action-choice.js?v=20261015-arsenal-v1';
 import { describeStanceConsequences } from '../combat-stance-presentation.js';
 import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat-profile-model.js';
 

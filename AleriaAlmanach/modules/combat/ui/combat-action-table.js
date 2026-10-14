@@ -1,16 +1,16 @@
-﻿import { getActionGroups } from './combat-action-card.js?v=20260928-equipment-art-v4';
-import { escapeActionHtml as escape } from './combat-action-choice.js';
-import { arsenalFavorites, matchesArsenalChoice } from './combat-arsenal-model.js';
-import { renderArsenalCard, renderArsenalDetail, renderArsenalResources } from './combat-arsenal-view.js?v=20260928-equipment-art-v4';
+import { getActionGroups } from './combat-action-card.js?v=20261015-arsenal-v1';
+import { escapeActionHtml as escape } from './combat-action-choice.js?v=20261015-arsenal-v1';
+import { arsenalFavorites, matchesArsenalChoice, getArsenalSectionCounts } from './combat-arsenal-model.js?v=20261015-arsenal-v1';
+import { renderArsenalSections, renderArsenalNavigation, renderArsenalDetail, renderArsenalResources } from './combat-arsenal-view.js?v=20261015-arsenal-v1';
 
 export function renderActionTable(actor, selectedId, groups = getActionGroups(actor)) {
   const sections = [...groups.entries()].filter(([, actions]) => actions.length);
-  const navigation = [['all', 'Alle Handlungen', sections.reduce((sum, [, actions]) => sum + actions.length, 0)], ['favorites', '☆ Favoriten', 0], ...sections.map(([key, actions]) => [key, actions[0].group, actions.length])];
-  return `<header class="combat-action-table-header"><div><small>Dein Arsenal · ${escape(actor.name || 'Figur')}</small><h2>Deine nächste Handlung</h2><p>Bereich wählen. Möglichkeiten entdecken. Gezielt handeln.</p></div><button type="button" data-action="close-action-table" aria-label="Übersicht schließen">×</button></header>
+  const navigation = [['all', 'Alle Handlungen', sections.reduce((sum, [, actions]) => sum + actions.length, 0)], ['favorites', '☆ Favoriten', 0]];
+  return `<header class="combat-action-table-header"><div><small>Dein Arsenal · ${escape(actor.name || 'Figur')}</small><h2>Deine nächste Handlung</h2><p>Klasse & Kampfform → Waffenbereich → Technik</p></div><button type="button" data-action="close-action-table" aria-label="Übersicht schließen">×</button></header>
     <div class="combat-action-table-tools"><label>Arsenal durchsuchen<input type="search" data-combat-action-search placeholder="Name, Kampfform oder Wirkung …" autocomplete="off"></label><div class="combat-arsenal-resources" aria-label="Aktionsvorrat">${renderArsenalResources(actor)}</div>
     <div class="combat-arsenal-filters"><div role="group" aria-label="Handlungsart">${[['all', 'Alles'], ['attack', 'Angriff'], ['support', 'Schutz & Unterstützung'], ['special', 'Besondere Aktion']].map(([key, label]) => `<button type="button" data-arsenal-filter="${key}" aria-pressed="${key === 'all'}">${label}</button>`).join('')}</div><label><input type="checkbox" data-action="available-actions-only"> Nur einsetzbar <span title="Zeigt Handlungen mit erfüllten Ausrüstungs- und Klassenvoraussetzungen. Die Bezahlung wird beim Reservieren geprüft.">ⓘ</span></label></div></div>
-    <div class="combat-arsenal-workspace"><nav class="combat-arsenal-nav" aria-label="Arsenalbereiche"><small>Bereiche</small>${navigation.map(([key, label, count]) => `<button type="button" data-arsenal-section="${escape(key)}" aria-pressed="${key === 'all'}"><span>${escape(label)}</span><b data-arsenal-count>${count}</b></button>`).join('')}</nav>
-    <section class="combat-arsenal-results" aria-label="Handlungen"><div class="combat-arsenal-results-heading"><h3 data-arsenal-heading>Alle Handlungen</h3><span data-arsenal-result-count role="status"></span></div><div class="combat-arsenal-grid">${sections.flatMap(([, actions]) => actions.map(choice => renderArsenalCard(actor, choice, selectedId))).join('')}</div><p data-combat-action-empty hidden>Keine passende Handlung. Wähle einen anderen Bereich oder passe die Filter an.</p></section>
+    <div class="combat-arsenal-workspace"><nav class="combat-arsenal-nav" aria-label="Arsenalbereiche"><small>Bereiche</small>${navigation.map(([key, label, count]) => `<button type="button" data-arsenal-section="${escape(key)}" aria-pressed="${key === 'all'}"><span data-arsenal-label>${escape(label)}</span><b data-arsenal-count>${count}</b></button>`).join('')}${renderArsenalNavigation(groups)}</nav>
+    <section class="combat-arsenal-results" aria-label="Handlungen"><div class="combat-arsenal-results-heading"><h3 data-arsenal-heading>Alle Handlungen</h3><span data-arsenal-result-count role="status"></span></div><div class="combat-arsenal-grid">${renderArsenalSections(actor, groups, selectedId)}</div><p data-combat-action-empty hidden>Keine passende Handlung. Wähle einen anderen Bereich oder passe die Filter an.</p></section>
     <aside class="combat-arsenal-detail" aria-label="Handlungsdetails">${renderArsenalDetail(actor)}</aside></div>
     <footer>☆ Favoriten bleiben für diese Figur in diesem Browser gespeichert. Die Suche durchsucht immer das gesamte Arsenal.</footer>`;
 }
@@ -27,6 +27,7 @@ export function bindActionTable(composer, actor, select, onChoose) {
     dialog.setAttribute('aria-label', 'Handlung aus dem Arsenal auswählen');
     const groups = getActionGroups(actor);
     const choices = [...groups.values()].flat();
+    const choiceIndex = new Map(choices.map(choice => [choice.action.id, choice]));
     let storage;
     try { storage = composer.ownerDocument.defaultView.localStorage; } catch { /* Optional local preference. */ }
     const favorites = arsenalFavorites(actor, storage);
@@ -41,27 +42,30 @@ export function bindActionTable(composer, actor, select, onChoose) {
     const inspect = id => {
       inspectedId = id;
       cards.forEach(card => card.querySelector('[data-combat-action-option]').setAttribute('aria-pressed', String(card.dataset.arsenalCard === id)));
-      detail.innerHTML = renderArsenalDetail(actor, choices.find(choice => choice.action.id === id));
+      detail.innerHTML = renderArsenalDetail(actor, choiceIndex.get(id));
       detail.scrollTop = 0;
     };
     const refresh = () => {
       const visible = choices.filter(choice => matchesArsenalChoice(choice, state, actor));
       const ids = new Set(visible.map(choice => choice.action.id));
+      const counts = getArsenalSectionCounts(choices, state, actor);
+      const visibleSections = new Set(visible.flatMap(choice => [choice.groupKey, `${choice.groupKey}|weapon:${choice.weaponCategory.id}`]));
       cards.forEach(card => { card.hidden = !ids.has(card.dataset.arsenalCard); });
+      dialog.querySelectorAll('[data-arsenal-section-heading]').forEach(heading => { heading.hidden = !visibleSections.has(heading.dataset.arsenalSectionHeading); });
       dialog.querySelector('[data-combat-action-empty]').hidden = visible.length > 0;
       dialog.querySelector('[data-arsenal-result-count]').textContent = `${visible.length} ${visible.length === 1 ? 'Handlung' : 'Handlungen'}`;
       dialog.querySelectorAll('[data-arsenal-section]').forEach(button => {
         const section = button.dataset.arsenalSection;
         button.setAttribute('aria-pressed', String(!state.query.trim() && section === state.section));
-        button.querySelector('[data-arsenal-count]').textContent = choices.filter(choice => matchesArsenalChoice(choice, { ...state, query: '', section }, actor)).length;
+        button.querySelector('[data-arsenal-count]').textContent = counts.get(section) || 0;
       });
       const activeSection = [...dialog.querySelectorAll('[data-arsenal-section]')].find(button => button.dataset.arsenalSection === state.section);
-      dialog.querySelector('[data-arsenal-heading]').textContent = state.query.trim() ? 'Suchergebnisse · gesamtes Arsenal' : activeSection.querySelector('span').textContent;
+      dialog.querySelector('[data-arsenal-heading]').textContent = state.query.trim() ? 'Suchergebnisse · gesamtes Arsenal' : activeSection.querySelector('[data-arsenal-label]').textContent;
       dialog.querySelectorAll('[data-arsenal-filter]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.arsenalFilter === state.filter)));
       dialog.querySelectorAll('[data-arsenal-favorite]').forEach(button => {
         const selected = favorites.ids.has(button.dataset.arsenalFavorite);
         button.setAttribute('aria-pressed', String(selected)); button.textContent = selected ? '★' : '☆';
-        const name = choices.find(choice => choice.action.id === button.dataset.arsenalFavorite)?.label || 'Handlung';
+        const name = choiceIndex.get(button.dataset.arsenalFavorite)?.label || 'Handlung';
         button.setAttribute('aria-label', `${name}: ${selected ? 'Favorit entfernen' : 'als Favorit merken'}`);
         button.title = selected ? 'Favorit entfernen' : 'Favorit merken';
       });

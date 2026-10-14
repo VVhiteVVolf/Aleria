@@ -6,6 +6,7 @@ import { renderActionTable } from '../modules/combat/ui/combat-action-table.js';
 import { renderArsenalDetail } from '../modules/combat/ui/combat-arsenal-view.js';
 import { matchesArsenalChoice, arsenalFavorites } from '../modules/combat/ui/combat-arsenal-model.js';
 import { getActionGroups } from '../modules/combat/ui/combat-action-card.js';
+import { getActionWeaponSections } from '../modules/combat/ui/combat-action-taxonomy.js';
 import { resolveCombatProfile } from '../modules/combat/combat-profile-resolver.js';
 import { planCharacterArsenalRelease } from '../../firebase/functions/scripts/character-arsenal-release-model.mjs';
 
@@ -17,7 +18,9 @@ test('Liste und Arsenal enthalten dieselben Handlungen und eine Navigation pro B
     const actor = resolveCombatProfile(await load(slug));
     const table = renderActionTable(actor, actor.selectedAction.id);
     assert.deepEqual(choices(table),choices(renderActionPicker(actor,actor.selectedAction.id)));
-    assert.equal((table.match(/data-arsenal-section=/g)||[]).length,getActionGroups(actor).size + 2);
+    const groups = getActionGroups(actor);
+    const weaponSections = [...groups.values()].flatMap(getActionWeaponSections);
+    assert.equal((table.match(/data-arsenal-section=/g)||[]).length,groups.size + weaponSections.length + 2);
     assert.doesNotMatch(table, /<table|<th scope/);
     assert.ok(table.includes('data-action="available-actions-only"'));
     assert.doesNotMatch(table,/onclick=|oninput=/);

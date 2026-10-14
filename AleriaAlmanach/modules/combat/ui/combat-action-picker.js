@@ -1,7 +1,9 @@
-import { getActionGroups } from './combat-action-card.js?v=20260928-equipment-art-v4';
-import { escapeActionHtml as escapeHtml, renderActionCosts as renderCosts, renderActionChoice, filterActionChoices } from './combat-action-choice.js';
-import { bindActionTable } from './combat-action-table.js?v=20260928-equipment-art-v4';
-export { getActionCostPresentation } from './combat-action-choice.js';
+import { getActionGroups } from './combat-action-card.js?v=20261015-arsenal-v1';
+import { escapeActionHtml as escapeHtml, renderActionCosts as renderCosts, renderActionChoice, filterActionChoices } from './combat-action-choice.js?v=20261015-arsenal-v1';
+import { bindActionTable } from './combat-action-table.js?v=20261015-arsenal-v1';
+import { getActionWeaponSections } from './combat-action-taxonomy.js';
+import { renderWeaponCrest } from './combat-presentation-icons.js';
+export { getActionCostPresentation } from './combat-action-choice.js?v=20261015-arsenal-v1';
 
 export function renderActionPicker(actor = {}, selectedId = '', groups = getActionGroups(actor)) {
   const selected = [...groups.values()].flat().find(({ action }) => action.id === selectedId);
@@ -22,7 +24,7 @@ function renderGroup(actor, actions, selectedId) {
   const group = actions[0].group;
   return `<div role="group" aria-label="${escapeHtml(group)}" data-combat-action-group>
     <div class="combat-action-picker-group" aria-hidden="true"><span>${escapeHtml(group)}</span><span class="combat-action-group-count" data-combat-group-count>${actions.length}</span></div>
-    ${actions.map(choice => renderActionChoice(actor, choice, selectedId)).join('')}
+    ${getActionWeaponSections(actions).map(section => `<div role="group" aria-label="${escapeHtml(section.weapon.label)}" data-combat-action-group><div class="combat-action-picker-weapon">${renderWeaponCrest(section.weapon, { withLabel: true })}<span class="combat-action-group-count" data-combat-group-count>${section.choices.length}</span></div>${section.choices.map(choice => renderActionChoice(actor, choice, selectedId)).join('')}</div>`).join('')}
   </div>`;
 }
 
@@ -70,7 +72,8 @@ export function bindActionPicker(composer, actor = {}) {
   picker.addEventListener('toggle', () => {
     if (picker.open && picker.ownerDocument.activeElement === summary) search.focus({ preventScroll: true });
   });
-  composer.addEventListener('pointerdown', event => {
+  // Let the clicked control complete before closing a panel that can change page height.
+  composer.addEventListener('click', event => {
     if (!picker.contains(event.target)) picker.open = false;
   });
   picker.addEventListener('keydown', event => {
@@ -88,7 +91,8 @@ export function bindActionPicker(composer, actor = {}) {
     }
   });
   picker.addEventListener('focusout', event => {
-    if (event.relatedTarget && !picker.contains(event.relatedTarget)) picker.open = false;
+    const opensOverview = event.relatedTarget?.matches?.('[data-action="open-action-table"]');
+    if (event.relatedTarget && !picker.contains(event.relatedTarget) && !opensOverview) picker.open = false;
   });
   picker.addEventListener('error', event => {
     if (event.target.matches?.('[data-combat-picker-image]')) event.target.remove();

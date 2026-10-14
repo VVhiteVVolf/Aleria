@@ -1,4 +1,5 @@
 import { getCommentActorIds } from './combat-condition-duration.js';
+import { bindCombatTooltips } from './ui/combat-tooltips.js';
 import { beginCombatContribution, conditionsAtContributionStart } from './combat-contribution-start.js';
 import { applySkillRuntimeSnapshots } from '../skill-checks/skill-runtime-state.js';
 import { collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js';
@@ -56,7 +57,7 @@ import {
   mountCombatComposer,
   renderCombatEvaluation,
   setCombatResolutionStatus
-} from './ui/combat-ui.js?v=20260928-equipment-art-v4';
+} from './ui/combat-ui.js?v=20261015-arsenal-v1';
 import { filterCombatTargets } from './ui/combat-composer-view-state.js?v=20260928-equipment-art-v4';
 import {
   collectCombatTriggerRules,
@@ -1084,3 +1085,4 @@ globalThis.AleriaCombat = Object.freeze({
   narrateCommittedMechanics,
   renderEvaluation: renderCombatEvaluation
 });
+bindCombatTooltips(document);

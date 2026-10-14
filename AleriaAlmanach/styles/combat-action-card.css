@@ -1,3 +1,5 @@
+@import url('./combat-arsenal-taxonomy.css?v=20261015-arsenal-v1');
+
 .combat-composer { container-type: inline-size; }
 
 .combat-composer-profile { display: grid; gap: 0.15rem; text-align: right; }

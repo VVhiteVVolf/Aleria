@@ -7,17 +7,18 @@ import {
 import {
   activationLabel, getCombatDisplayStats, getMagicDisplayStats, renderWeaponLoadout, bindWeaponImageFallback,
   getActionGroups, renderActionOptions, renderActionMetadata, renderActionDetails, renderCombatValueStrip, renderMagicValueStrip
-} from './combat-action-card.js?v=20260928-equipment-art-v4';
+} from './combat-action-card.js?v=20261015-arsenal-v1';
 import { captureComposerViewState, restoreComposerViewState } from './combat-composer-view-state.js?v=20260928-equipment-art-v4';
 import { getActiveRollModes } from '../combat-profile-model.js?v=20260928-equipment-art-v4';
 import { renderAutomaticRollMode } from './combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
-import { bindActionPicker, renderActionPicker } from './combat-action-picker.js?v=20260928-equipment-art-v4';
+import { bindActionPicker, renderActionPicker } from './combat-action-picker.js?v=20261015-arsenal-v1';
 import { bindTargetPortraitFallback, optionLabel, renderSelectedTargetPortraits, renderTargetOptions } from './combat-target-picker.js?v=20260928-equipment-art-v4';
 import { renderCombatWeaponGrip } from './combat-weapon-grip-view.js';
 import { isSelfTargetAction } from '../combat-action-targeting.js';
 import { renderCounterConsequences } from './combat-counter-view.js';
 import { getStoredCriticalConsequences, getAttackSequenceOutcome } from '../combat-resolution-tree.js';
 import { summarizeRuleEffects } from './combat-rule-presentation.js';
+import { renderEvaluationStats } from './combat-evaluation-stats.js';
 function escapeHtml(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -401,9 +402,11 @@ export function renderCombatEvaluation(source = {}) {
           <strong>${escapeHtml(getEvaluationLabel(resolution))}</strong>
         </div>
         ${narration ? `<p>${escapeHtml(narration)}</p>` : ''}
+        ${resolution.actionName ? `<div class="combat-evaluation-action-name">${escapeHtml(resolution.actionName)}</div>` : ''}
+        ${renderEvaluationStats(resolution)}
         ${renderCounterConsequences(resolution, { renderEffectResult, summarizeRuleEffects })}
         ${getStoredCriticalConsequences(resolution).map(consequence => `<p class="combat-critical-consequence"><strong>W${consequence.version >= 2 ? 20 : 10} · ${escapeHtml(consequence.roll)} · ${escapeHtml(consequence.name)}</strong><br>${escapeHtml(consequence.actorName)}: ${escapeHtml(consequence.description)}</p>`).join('')}
-        <div class="combat-evaluation-mechanics">
+        <details class="combat-evaluation-ledger"><summary>Wurfdetails & Wirkungen</summary><div class="combat-evaluation-mechanics">
           <span><b>${escapeHtml(attack.total)}</b> ${rollLabel} · ${escapeHtml(attack.notation || '')}</span>
           ${attack.diceResults?.length ? `<span>${sequence.count > 1 ? 'Auftakt' : rollLabel}: W20 [${escapeHtml(attack.diceResults.join(', '))}] ${Number(attack.modifier) >= 0 ? '+' : ''}${escapeHtml(attack.modifier ?? 0)} · ${savingThrowMode ? (attack.saveSucceeded ? 'gelungen' : 'misslungen') : attack.criticalFailure ? 'Kritischer Fehlschlag' : attack.criticalSuccess ? 'Kritischer Treffer' : attack.hit ? 'Treffer' : 'verfehlt'}</span>` : ''}
           <span>gegen <b>${escapeHtml(attack.targetDefense)}</b> ${defenseLabel}</span>
@@ -425,7 +428,7 @@ export function renderCombatEvaluation(source = {}) {
           ${ruleConflicts}
           ${defeatNotice}
           ${ruleLedger}
-        </div>
+        </div></details>
         <div class="combat-evaluation-source" data-source="${narrationSource.key}" title="${escapeHtml(narrationSource.title)}">${escapeHtml(narrationSource.label)}</div>
       </div>
     </details>`;

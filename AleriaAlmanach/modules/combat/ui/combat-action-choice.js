@@ -1,8 +1,8 @@
 import { getActionPaymentCosts } from '../combat-action-economy.js?v=20260905-resource-balance-v2';
 import { getCombatResourceIconPresentation } from '../combat-resource-icons.js?v=20260803-composer-design-v1';
-export function escapeActionHtml(value) {
-  return String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
-}
+import { escapeCombatHtml as escapeActionHtml } from './combat-presentation-markup.js';
+import { renderWeaponCrest } from './combat-presentation-icons.js';
+export { escapeActionHtml };
 
 export function getActionCostPresentation(actor = {}, action = {}) {
   const selected = action.id === actor.selectedAction?.id ? actor.selectedAction : action;
@@ -21,11 +21,11 @@ export function renderActionCosts(actor, action) {
   return `<span class="combat-mini-costs" aria-label="${escapeActionHtml(label)}" title="${escapeActionHtml(label)}">${costs.map(({ amount, icon }) => `<span class="combat-mini-cost"><span class="combat-mini-cost-icon" aria-hidden="true"><b>${escapeActionHtml(icon.fallback)}</b>${icon.source ? `<img src="${escapeActionHtml(icon.source)}" alt="" loading="lazy" data-combat-picker-image>` : ''}</span><span aria-hidden="true">${amount}</span></span>`).join('') || 'Kostenlos'}</span>`;
 }
 
-export function renderActionChoice(actor, { action, label, group, minimumLevel, entry = {} }, selectedId, { detailed = false } = {}) {
+export function renderActionChoice(actor, { action, label, group, minimumLevel, entry = {}, weaponCategory = {} }, selectedId, { detailed = false } = {}) {
   const description = String(entry.effect || entry.description || action.weapon?.notes || '');
-  const searchText = `${group} ${label} ${description}`.toLocaleLowerCase('de');
+  const searchText = `${group} ${weaponCategory.label} ${weaponCategory.title} ${label} ${description}`.toLocaleLowerCase('de');
   return `<button type="button"${detailed ? '' : ' role="option" tabindex="-1"'} data-combat-action-option="${escapeActionHtml(action.id)}" data-search-text="${escapeActionHtml(searchText)}" ${detailed ? 'aria-pressed' : 'aria-selected'}="${action.id === selectedId}"${action.compatible === false ? ' disabled' : ''}>
-    <span>${escapeActionHtml(label)}${minimumLevel ? `<small class="combat-action-level">Ab Stufe ${minimumLevel}</small>` : ''}${detailed && description ? `<small class="combat-action-choice-description">${escapeActionHtml(description)}</small>` : ''}${action.compatible === false ? `<small>${escapeActionHtml(action.disabledReason || 'Zurzeit nicht verfügbar')}</small>` : ''}</span>${renderActionCosts(actor, action)}
+    ${renderWeaponCrest(weaponCategory)}<span class="combat-action-choice-copy">${escapeActionHtml(label)}${minimumLevel ? `<small class="combat-action-level">Ab Stufe ${minimumLevel}</small>` : ''}${detailed && description ? `<small class="combat-action-choice-description">${escapeActionHtml(description)}</small>` : ''}${action.compatible === false ? `<small>${escapeActionHtml(action.disabledReason || 'Zurzeit nicht verfügbar')}</small>` : ''}</span>${renderActionCosts(actor, action)}
   </button>`;
 }
 
@@ -39,7 +39,7 @@ export function filterActionChoices(root, value = '', { onlyAvailable = false } 
     const header = group.dataset.actionColumn != null ? root.querySelector(`th[data-action-column="${group.dataset.actionColumn}"]`) : group;
     if (header) {
       header.hidden = count === 0;
-      const badge = header.querySelector('[data-combat-group-count]');
+    const badge = header.querySelector(':scope > .combat-action-picker-group [data-combat-group-count], :scope > .combat-action-picker-weapon [data-combat-group-count]');
       if (badge) badge.textContent = String(count);
     }
   });
