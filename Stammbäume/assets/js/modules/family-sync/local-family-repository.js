@@ -1,4 +1,4 @@
-import { loadFamilyById, saveFamilyToLibrary } from '../../services/family-library.js?v=20261014-kanne-v2';
+import { loadFamilyById, saveFamilyToLibrary } from '../../services/family-library.js?v=20261014-kanne-v3';
 import { loadPersistedFamily, persistFamily } from '../../services/family-persistence.js';
 import { assertValidFamily } from '../../domain/family-schema.js';
 

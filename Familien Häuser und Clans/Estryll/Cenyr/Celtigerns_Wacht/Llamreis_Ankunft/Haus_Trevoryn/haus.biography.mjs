@@ -7,7 +7,7 @@ export const HOUSE_BIOGRAPHY = {
   "image": "../AleriaAlmanach/assets/krumme-kanne/references/merrik.png",
   "imageWidth": 30,
   "imageSquare": true,
-  "description": "Die Trevoryn sind eine einheimische Bürgerfamilie Gwynthors. Ihr heutiger Lebensmittelpunkt ist die Krumme Kanne im östlichen Hafenviertel. Merrik gehört zu den drei gleichberechtigten Inhabern; seine Schwester Eirian, sein Bruder Elidyr und seine Mutter Nestwen prägen den täglichen Betrieb ebenso wie seine Frau Celyn.",
+  "description": "Die Trevoryn sind im Hafenviertel Gwynthors verwurzelt. In der Krummen Kanne kennt man Merriks offenen Empfang, Eirians klirrenden Schlüsselbund und Elidyrs trockene Antworten am Tresen.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,11 +55,11 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über die Familie",
-    "biographyText": "Die Trevoryn sind eine einheimische Bürgerfamilie Gwynthors. Ihr heutiger Lebensmittelpunkt ist die Krumme Kanne im östlichen Hafenviertel. Merrik gehört zu den drei gleichberechtigten Inhabern; seine Schwester Eirian, sein Bruder Elidyr und seine Mutter Nestwen prägen den täglichen Betrieb ebenso wie seine Frau Celyn.",
+    "biographyText": "Die Trevoryn sind im Hafenviertel Gwynthors verwurzelt. In der Krummen Kanne kennt man Merriks offenen Empfang, Eirians klirrenden Schlüsselbund und Elidyrs trockene Antworten am Tresen.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Herkunft & Hausgeschichte",
-    "historyText": "Namen und Lebensdaten der Gründer sind unbekannt. Zwischen ihnen und Nestwens Familie liegen nicht einzeln überlieferte Generationen. Merrik kehrte 1720 aus dem Großen Krieg zurück. Zwei Jahre später eröffnete er mit Hrolf Svathamar und Aedan Dubhdarach die Krumme Kanne. Eirians Ehe mit Hrolf verbindet die Trevoryn seit 1723 mit den Svathamar.",
+    "historyText": "Die alten Gründer sind längst vergessen. Was die Familie heute zusammenhält, begann mit Merriks Heimkehr aus dem Großen Krieg. 1722 eröffnete er mit seinen Feldkameraden Hrolf und Aedan die Krumme Kanne; ein Jahr später heiratete Hrolf seine Schwester Eirian.",
     "worksTitle": "Hausgeschichte",
     "works": [],
     "extraSections": [
@@ -67,7 +67,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Die Familie verbindet Ortskenntnis mit verlässlicher Gastlichkeit. Eirian plant den Dienst, Elidyr führt den Tresen, Celyn verwaltet Vorräte und Wäsche. Nestwen hält in der Flickstube einen Platz für ihre Enkel frei. Die Kinder Cadri und Enlli gehören zum Haushalt; eine Erbfolge für Haus oder Schenke ist nicht festgelegt."
+        "text": "Celyn hält Vorratskammer und Wäschetruhe gefüllt, während Nestwen am Fenster flickt und Geschichten erzählt. Bei ihr finden Cadri und Enlli stets einen Platz. Im Zweifel stellen die Trevoryn erst einen Teller hin und fragen dann, was geschehen ist."
       }
     ],
     "triviaTitle": "Besonderheiten",

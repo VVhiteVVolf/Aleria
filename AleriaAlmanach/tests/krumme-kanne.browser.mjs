@@ -4,6 +4,7 @@ import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { resolve, relative, isAbsolute, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium } from '../../Stammbäume/node_modules/playwright-core/index.mjs';
+import { planKanneCharacters } from '../modules/krumme-kanne/krumme-kanne-characters.mjs';
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const output = resolve(root, `.tmp/krumme-kanne/browser-${Date.now()}`);
 await mkdir(output, { recursive: true });
@@ -85,11 +86,35 @@ try {
   await page.screenshot({ path: resolve(output, '05-importe.png') });
   await page.locator('#modal-overlay [data-trade-filter="all"]').click();
   assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').count(), 44);
+  await show(4);
+  assert.equal(await page.locator('#modal-overlay .guest-register-entry').count(), 16);
+  assert.equal(await page.locator('#modal-overlay .guest-register-name strong').filter({ hasText: 'Freier Platz' }).count(), 16);
+  await page.screenshot({ path: resolve(output, '05-gaestebuch.png') });
   for (let i = 5; i < 10; i++) { await show(i); await loadedArtwork(); }
+  const registerPlan = planKanneCharacters([], {});
+  const membership = await page.evaluate(plan => {
+    closeModal();
+    _characters = plan.entries.map(e => ({ id: e.id, ...e.data }));
+    _charTabs = ['Alle', ...plan.config.tabs];
+    _charTabMap = plan.config.map;
+    _charSubtabs = plan.config.subtabs;
+    _charSubtabMap = plan.config.subtabMap;
+    _activeCharTab = 'Die Krumme Kanne';
+    _activeCharSubtab = 'Alle';
+    setCharacterRegisterViewMode('collections');
+    return { count: getCharsForActiveTab().length,
+      families: buildCharacterRegisterFamilyBuckets(_characters).map(b => ({ key: b.key, count: b.chars.length })) };
+  }, registerPlan);
+  assert.equal(membership.count, 30);
+  for (const slug of ['trevoryn', 'svathamar', 'dubhdarach', 'tonnarth']) assert.ok(membership.families.find(b => b.key === `haus-${slug}`)?.count > 0);
+  assert.equal(await page.locator('#char-grid .char-card').count(), 30);
+  await page.evaluate(() => { _activeCharSubtab = 'Angestellte'; renderCharGrid(); });
+  assert.equal(await page.locator('#char-grid .char-card').count(), 13);
+  assert.match(await page.locator('#char-grid').innerText(), /Gorwyst/);
   for (const slug of ['trevoryn', 'svathamar', 'dubhdarach']) {
     await page.goto(`${origin}/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-${slug}`);
     await page.waitForFunction(id => window.HAEUSER_DATA?.meta?.id === id, `haus-${slug}`);
-    assert.match(await page.locator('body').innerText(), /Krumme Kanne/);
+    assert.match(await page.locator('body').innerText(), /Krummen? Kanne/);
     const loaded = await page.locator('img').evaluateAll(async images => {
       const own = images.filter(i => /\/B(?:%C3%BC|ü)rgerliche\/Gwynthor\/(?:Trevoryn|Svathamar|Dubhdarach)\.png/.test(decodeURI(i.src)));
       await Promise.all(own.map(i => { i.loading = 'eager'; return i.decode().catch(() => {}); }));

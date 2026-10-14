@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-trevoryn",
-  "revision": 1,
-  "updatedAt": "2026-10-14T15:37:49.510Z",
+  "revision": 2,
+  "updatedAt": "2026-10-14T16:37:45.782Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -92,7 +92,7 @@
         "id": "nestwen-trevoryn-kanne",
         "worldPersonId": "person--krumme-kanne--nestwen-trevoryn-kanne",
         "name": "Nestwen Trevoryn",
-        "title": "Wäschehüterin · Flickstube & Familienälteste",
+        "title": "Wäschehüterin · Flickstube",
         "sex": "female",
         "status": "alive",
         "birth": "1672",
@@ -103,7 +103,7 @@
         "familyRole": "married",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Mutter Merriks, Eirians und Elidyrs; Großmutter von Styr, Heledd, Cadri und Enlli.\n\nArbeitet nach eigenen Kräften am hellen Fenster, flickt Wäsche und passt auf die jüngeren Kinder auf. Hat ihren Sohn aus dem Krieg zurückbekommen und sich angewöhnt, immer einen Teller mehr aufzuheben. Darf als Einzige Hrolf mitten in einer Geschichte unterbrechen, um ihn an einen losen Knopf zu erinnern.",
+        "notes": "Nestwen flickt am hellen Fenster Wäsche und hütet die Geschichten der Familie. Seit Merrik aus dem Krieg heimkehrte, hebt sie immer einen Teller mehr auf. Hrolf unterbricht sie bedenkenlos, wenn wieder ein Knopf an seinem Rock hängt.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -116,7 +116,7 @@
         "id": "merrik-trevoryn-kanne",
         "worldPersonId": "person--krumme-kanne--merrik-trevoryn-kanne",
         "name": "Merrik Trevoryn",
-        "title": "Gleichberechtigter Mitinhaber · Ortskontakte",
+        "title": "Mitinhaber · Ortskontakte",
         "sex": "male",
         "status": "alive",
         "birth": "1696",
@@ -127,7 +127,7 @@
         "familyRole": "core",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Ehemann Celyns; Vater von Cadri und Enlli. Bruder Eirians und Elidyrs, Sohn Nestwens.\n\nGebürtiger Gwynthorer. Im Großen Krieg lernte er Hrolf und Aedan kennen. Er brachte die drei nach dem Frieden in seine Heimat und verhandelte 1722 den Kauf der Kanne. Kennt Hafenhandwerker, Veteranen und deren Familien beim Namen. Freundlich, aber bei gepanschtem Bier endet seine Geduld.",
+        "notes": "Merrik kennt im Hafenviertel jeden Handwerker und jeden zweiten Gast. Der rothaarige Kriegsveteran hält die Verbindung zur Stadt und empfängt alte Kameraden gern selbst; bei gepanschtem Bier versteht er keinen Spaß.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -140,7 +140,7 @@
         "id": "eirian-trevoryn-kanne",
         "worldPersonId": "person--krumme-kanne--eirian-trevoryn-kanne",
         "name": "Eirian Trevoryn",
-        "title": "Hausvögtin · Dienstpläne & Personal",
+        "title": "Hausvögtin · Personal & Dienstpläne",
         "sex": "female",
         "status": "alive",
         "birth": "1698",
@@ -151,7 +151,7 @@
         "familyRole": "core",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Merriks jüngere Schwester, Hrolfs Ehefrau; Mutter von Styr und Heledd.\n\nLeitet den Alltag im Auftrag aller drei Inhaber: Dienstplan, Löhne, Zimmerbelegung und Beschwerden. Eine gestrichene Schicht bemerkt sie ebenso schnell wie einen heimlich bedürftigen Gast. Ihr Schlüsselbund klappert selten; meist reicht ein Blick. Hrolf behauptet, er habe im Krieg weniger gefürchtete Befehle gehört.",
+        "notes": "Eirian teilt die Schichten ein, zahlt die Löhne aus und schlichtet die kleinen Streitigkeiten des Hauses. Wenn ihr Schlüsselbund am Tresen auftaucht, werden selbst die Wirte etwas aufmerksamer.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -164,7 +164,7 @@
         "id": "elidyr-trevoryn-kanne",
         "worldPersonId": "person--krumme-kanne--elidyr-trevoryn-kanne",
         "name": "Elidyr Trevoryn",
-        "title": "Schankwirtsmeister · Empfang & Ablauf",
+        "title": "Schankwirtsmeister · Tresen & Empfang",
         "sex": "male",
         "status": "alive",
         "birth": "1705",
@@ -175,7 +175,7 @@
         "familyRole": "core",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Jüngerer Bruder Merriks und Eirians; Onkel ihrer Kinder.\n\nSteht am Tresen, empfängt Gäste, verteilt Tische und dirigiert den Service. Kann sechs Bestellungen behalten, aber keinen Geburtstagsvers. Sein Humor wird trockener, je voller der Raum ist. Eine Beschwerde hört er bis zum Ende an; bei einem Griff nach einer Schankmagd ruft er sofort die Wache.",
+        "notes": "Elidyr empfängt die Gäste am Tresen und hält den Ausschank in Gang. Er behält sechs Bestellungen im Kopf und wird mit jedem vollen Tisch trockener im Ton. Eine Beschwerde hört er trotzdem bis zum Ende an.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -188,7 +188,7 @@
         "id": "celyn-trevoryn-kanne",
         "worldPersonId": "person--krumme-kanne--celyn-trevoryn-kanne",
         "name": "Celyn",
-        "title": "Vorratsmeisterin · Versorgung & Wäsche",
+        "title": "Vorratsmeisterin · Vorräte & Wäsche",
         "sex": "female",
         "status": "alive",
         "birth": "1699",
@@ -199,7 +199,7 @@
         "familyRole": "married",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Merriks Ehefrau; Mutter von Cadri und Enlli.\n\nVerantwortet Einkaufsliste, Lagerbestand, saubere Wäsche und die Absprachen mit der Küche. Riecht verdorbenes Korn, bevor der Sack offen ist, und spart am Schwund statt an Portionen. Bei ihr bekommt auch ein verspäteter Küchengehilfe erst etwas zu essen und dann seine Standpauke.",
+        "notes": "Celyn hält Vorratskammer und Wäschetruhe gefüllt. Sie riecht schlechtes Korn, bevor der Sack offen ist, und spart lieber am Schwund als an den Portionen. Wer verspätet zum Dienst kommt, bekommt erst etwas zu essen und dann seine Standpauke.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -212,7 +212,7 @@
         "id": "cadri-trevoryn-kanne",
         "worldPersonId": "person--krumme-kanne--cadri-trevoryn-kanne",
         "name": "Cadri Trevoryn",
-        "title": "Hauskind · Kleine Werkstatt bei Caradog",
+        "title": "Hauskind · Kleine Werkstatt",
         "sex": "male",
         "status": "alive",
         "birth": "1728",
@@ -223,7 +223,7 @@
         "familyRole": "core",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Sohn Merriks und Celyns; Enllis älterer Bruder.\n\nDarf nach dem Unterricht unter Aufsicht Hakenleisten und Holzkisten ausbessern. Möchte lieber Dinge bauen als Gäste bedienen. Seine jüngste Erfindung soll verhindern, dass der Kater auf Lieferscheinen schläft; sie wird bereits vom Kater benutzt.",
+        "notes": "Cadri verbringt freie Nachmittage bei Gorwyst im Hof und baut lieber, als Gäste zu bedienen. Seine neueste Erfindung soll den Kater von den Lieferscheinen fernhalten. Briwsion schläft bereits darauf.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -236,7 +236,7 @@
         "id": "enlli-trevoryn-kanne",
         "worldPersonId": "person--krumme-kanne--enlli-trevoryn-kanne",
         "name": "Enlli Trevoryn",
-        "title": "Hauskind · Katerfreundin ohne Dienstpflicht",
+        "title": "Hauskind · Katerfreundin",
         "sex": "female",
         "status": "alive",
         "birth": "1734",
@@ -247,7 +247,7 @@
         "familyRole": "core",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Tochter Merriks und Celyns; Cadris jüngere Schwester.\n\nHat in Nestwens Flickstube einen eigenen Hocker und betrachtet den Hauskater als ihren ältesten Kollegen. Erzählt ihm abends, welche Gäste freundlich waren. Besitzt keine Arbeitsschicht und darf weder an Herd noch Ausschank helfen.",
+        "notes": "Enlli hat einen eigenen Hocker in Nestwens Flickstube und hält Briwsion für den wichtigsten Bewohner der Kanne. Abends erzählt sie ihm, welche Gäste freundlich waren. Der Kater hört mit geschlossenen Augen zu.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -260,7 +260,7 @@
         "id": "hrolf-svathamar-kanne",
         "worldPersonId": "person--krumme-kanne--hrolf-svathamar-kanne",
         "name": "Hrolf Svathamar",
-        "title": "Gleichberechtigter Mitinhaber · Hausfrieden",
+        "title": "Mitinhaber · Hausfrieden",
         "sex": "male",
         "status": "alive",
         "birth": "1694",
@@ -271,7 +271,7 @@
         "familyRole": "core",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Ehemann Eirians; Vater von Styr und Heledd. Bruder Ketils und Runas; Merriks Schwager.\n\nKam aus Rorikshall und blieb nach dem Krieg bei seinen Kameraden. Sein lautes Lachen gehört zum Schankraum, seine Ruhe zu dessen Sicherheit. Befehligt die Wachen nur in ernsten Fällen; im Alltag führt Ketil die Schichten. Fällt kein Urteil über einen alten Feind, bevor dieser selbst gesprochen hat.",
+        "notes": "Hrolfs Lachen trägt bis auf die Gasse. Der Veteran aus Rorikshall sorgt dafür, dass auch ein voller Schankraum friedlich bleibt. Wird es ernst, genügt meist sein Aufstehen.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -284,7 +284,7 @@
         "id": "styr-svathamar-kanne",
         "worldPersonId": "person--krumme-kanne--styr-svathamar-kanne",
         "name": "Styr Svathamar",
-        "title": "Schanklehrling · Unter Elidyrs Aufsicht",
+        "title": "Schanklehrling",
         "sex": "male",
         "status": "alive",
         "birth": "1725",
@@ -295,7 +295,7 @@
         "familyRole": "core",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Sohn Hrolfs und Eirians; Heledds älterer Bruder.\n\nLernt Empfang, Rechnen und Bestellungen. Seine Schichten enden vor dem späten Zechenbetrieb. Hat Hrolfs kräftigen Bau und Eirians Blick für Unordnung. Hält sich für schwer zu durchschauen, vor allem dann, wenn er ein Tablett zu viel auflädt.",
+        "notes": "Styr lernt bei Elidyr Bestellungen und das Rechnen am Tresen. Er möchte längst so gelassen wirken wie sein Vater. Meist verrät ihn das eine Tablett, das er sich zu viel aufgeladen hat.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -308,7 +308,7 @@
         "id": "heledd-svathamar-kanne",
         "worldPersonId": "person--krumme-kanne--heledd-svathamar-kanne",
         "name": "Heledd Svathamar",
-        "title": "Hauskind · Tischblumen & Lesestunde",
+        "title": "Hauskind · Tischblumen",
         "sex": "female",
         "status": "alive",
         "birth": "1730",
@@ -319,7 +319,7 @@
         "familyRole": "core",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Tochter Hrolfs und Eirians; Styrs jüngere Schwester.\n\nHat einen eigenen Platz bei Nestwens Lesestunden und stellt gelegentlich die Tischblumen auf. Führt eine Liste der glaubwürdigsten Kriegsgeschichten; Hrolfs Berichte schneiden verdächtig gut ab. Keine feste Dienstschicht.",
+        "notes": "Heledd stellt gern Blumen auf die Tische und lauscht den Geschichten der Veteranen. In ihrem Heft sammelt sie die glaubwürdigsten davon. Hrolfs Berichte schneiden verdächtig gut ab.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -526,14 +526,16 @@
         "name": "Haus Trevoryn",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Trevoryn.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       },
       {
         "id": "house-svathamar",
         "name": "Haus Svathamar",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       }
     ],
     "cadetBranches": [],
@@ -619,7 +621,7 @@
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 1,
+      "sourceRevision": 2,
       "registryManagedDocumentFields": [
         "description"
       ],
@@ -632,7 +634,7 @@
         "image": "../AleriaAlmanach/assets/krumme-kanne/references/merrik.png",
         "imageWidth": 30,
         "imageSquare": true,
-        "description": "Die Trevoryn sind eine einheimische Bürgerfamilie Gwynthors. Ihr heutiger Lebensmittelpunkt ist die Krumme Kanne im östlichen Hafenviertel. Merrik gehört zu den drei gleichberechtigten Inhabern; seine Schwester Eirian, sein Bruder Elidyr und seine Mutter Nestwen prägen den täglichen Betrieb ebenso wie seine Frau Celyn.",
+        "description": "Die Trevoryn sind im Hafenviertel Gwynthors verwurzelt. In der Krummen Kanne kennt man Merriks offenen Empfang, Eirians klirrenden Schlüsselbund und Elidyrs trockene Antworten am Tresen.",
         "quote": "",
         "quoteBy": "",
         "commentSequence": [],
@@ -680,11 +682,11 @@
           "connectionPortraitHeight": 80,
           "connectionTextOffset": 0,
           "biographyTitle": "Über die Familie",
-          "biographyText": "Die Trevoryn sind eine einheimische Bürgerfamilie Gwynthors. Ihr heutiger Lebensmittelpunkt ist die Krumme Kanne im östlichen Hafenviertel. Merrik gehört zu den drei gleichberechtigten Inhabern; seine Schwester Eirian, sein Bruder Elidyr und seine Mutter Nestwen prägen den täglichen Betrieb ebenso wie seine Frau Celyn.",
+          "biographyText": "Die Trevoryn sind im Hafenviertel Gwynthors verwurzelt. In der Krummen Kanne kennt man Merriks offenen Empfang, Eirians klirrenden Schlüsselbund und Elidyrs trockene Antworten am Tresen.",
           "abilitiesTitle": "Einfluss und Aufgaben",
           "abilities": [],
           "historyTitle": "Herkunft & Hausgeschichte",
-          "historyText": "Namen und Lebensdaten der Gründer sind unbekannt. Zwischen ihnen und Nestwens Familie liegen nicht einzeln überlieferte Generationen. Merrik kehrte 1720 aus dem Großen Krieg zurück. Zwei Jahre später eröffnete er mit Hrolf Svathamar und Aedan Dubhdarach die Krumme Kanne. Eirians Ehe mit Hrolf verbindet die Trevoryn seit 1723 mit den Svathamar.",
+          "historyText": "Die alten Gründer sind längst vergessen. Was die Familie heute zusammenhält, begann mit Merriks Heimkehr aus dem Großen Krieg. 1722 eröffnete er mit seinen Feldkameraden Hrolf und Aedan die Krumme Kanne; ein Jahr später heiratete Hrolf seine Schwester Eirian.",
           "worksTitle": "Hausgeschichte",
           "works": [],
           "extraSections": [
@@ -692,7 +694,7 @@
               "position": "afterWorks",
               "mode": "text",
               "title": "Werte und Stellung",
-              "text": "Die Familie verbindet Ortskenntnis mit verlässlicher Gastlichkeit. Eirian plant den Dienst, Elidyr führt den Tresen, Celyn verwaltet Vorräte und Wäsche. Nestwen hält in der Flickstube einen Platz für ihre Enkel frei. Die Kinder Cadri und Enlli gehören zum Haushalt; eine Erbfolge für Haus oder Schenke ist nicht festgelegt."
+              "text": "Celyn hält Vorratskammer und Wäschetruhe gefüllt, während Nestwen am Fenster flickt und Geschichten erzählt. Bei ihr finden Cadri und Enlli stets einen Platz. Im Zweifel stellen die Trevoryn erst einen Teller hin und fragen dann, was geschehen ist."
             }
           ],
           "triviaTitle": "Besonderheiten",
@@ -725,6 +727,11 @@
           ],
           "footer": ""
         }
+      },
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 1,
+        "toRevision": 2
       }
     }
   }

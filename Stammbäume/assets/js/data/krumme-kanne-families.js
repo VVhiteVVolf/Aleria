@@ -1,6 +1,6 @@
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { createFamilyPerson, createMarriage, createParentages } from './family-record-builders.js';
-import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js?v=20261014-kanne-v2';
+import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js?v=20261014-kanne-v3';
 import { kanneFamilyPerson, KANNE_MARRIAGES, KANNE_FAMILY_DEFINITIONS } from './krumme-kanne-family-people.js';
 
 const emblem = name => `assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/${name}.png`;
@@ -44,7 +44,7 @@ function buildFamily(definition) {
     add('aedan', 'mair', 'neifion', 'eirlys', 'caradog');
     persons.push(createFamilyPerson({ id: 'gareth-tonnarth', worldPersonId: 'person--haus-tonnarth--gareth-tonnarth', name: 'Gareth Tonnarth', sex: 'male', birth: '1695', houseId: 'house-tonnarth', familyRole: 'affair', title: 'Caradogs leiblicher Vater', notes: 'Beendete Verbindung mit Mair; kein Ehemann Mairs und kein Angehöriger der Dubhdarach-Linie.' }));
     partnerships.push(createMarriage('affair-gareth-mair-tonnarth', 'gareth-tonnarth', pid('mair'), { type: 'affair', status: 'ended', notes: 'Gareths beendete Affäre mit Mair; aus ihr ging Caradog hervor.', extensions: { crossFamilyRelationship: { linkId: 'affair-gareth-mair-tonnarth', counterpartFamilyId: 'haus-tonnarth' } } }));
-    parentages.push(...createParentages([pid('caradog')], ['gareth-tonnarth', pid('mair')], 'affair-gareth-mair-tonnarth', { legitimacy: 'illegitimate' }));
+    parentages.push(...createParentages([pid('caradog')], ['gareth-tonnarth', pid('mair')], 'affair-gareth-mair-tonnarth', { legitimacy: 'legitimized', notes: 'Caradog wurde als Kind im Haus Tonnarth anerkannt.', extensions: { registryManagedFields: ['legitimacy', 'notes'] } }));
     marriage('aedan', 'haus-tonnarth'); roots = [pid('aedan')];
   }
   parentages.unshift(...createParentages(roots, base.partnerships[0].participantIds, base.lineage.founderPartnershipId, { type: 'claimed', certainty: 'unknown', notes: 'Abstammung über unbekannte Generationen, keine unmittelbare Elternschaft des historischen Gründerpaares.', extensions: { timeJumpId: base.timeJumps[0].id } }));
@@ -52,7 +52,7 @@ function buildFamily(definition) {
   return Object.freeze({ ...base, houses: [...base.houses, ...related], persons, partnerships, parentages,
     timeJumps: [{ ...base.timeJumps[0], childIds: roots, fromYear: '', toYear: slug === 'svathamar' ? '' : base.timeJumps[0].toYear, extensions: { preparedPlaceholder: false } }],
     view: { ...base.view, limitGenerations: false },
-    extensions: { blankFamily: false, sourceRevision: 1, registryManagedDocumentFields: ['description'], sourceNote: 'Nutzervorgaben zur Krummen Kanne vom 14.10.2026. Bekannte Personen und Porträts werden mit der Hausgemeinschaft geteilt. Unbekannte Gründer und Generationen bleiben ausdrücklich unbekannt; Mair, Gareth und Caradog behalten die bestehenden Tonnarth-Identitäten.' }
+    extensions: { blankFamily: false, sourceRevision: 2, registryManagedDocumentFields: ['description'], sourceNote: 'Nutzervorgaben zur Krummen Kanne vom 14.10.2026. Caradog bleibt Schreiber und Adjutant der Tiefenwyrm; sein Porträt und seine Anerkennung im Haus Tonnarth folgen seinem bestehenden Almanach-Profil. Personenidentitäten und Abstammung bleiben erhalten.' }
   });
 }
 

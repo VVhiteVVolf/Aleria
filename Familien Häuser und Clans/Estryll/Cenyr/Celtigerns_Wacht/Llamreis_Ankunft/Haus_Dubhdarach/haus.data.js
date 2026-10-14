@@ -67,8 +67,13 @@ window.HAEUSER_DATA = {
     "liege": "Haus Draig",
     "origin": "Leitheach · Albische Herkunft",
     "founding": "Unbekannt · Schenke gegründet 1722",
-    "people": "Familienhaushalt der Krummen Kanne",
+    "people": "Albisch-cenyrischer Haushalt",
     "wealth": "Gemeinsamer Schank- und Herbergsbetrieb",
+    "patron": "Stadt Gwynthor",
+    "knightingPatron": "—",
+    "milestoneOne": "1722 · Eröffnung der Krummen Kanne",
+    "milestoneTwo": "—",
+    "religion": "Bräuche der Heimat",
     "patronDeities": "",
     "allies": "Trevoryn · Svathamar · Dubhdarach",
     "enemies": ""
@@ -79,18 +84,18 @@ window.HAEUSER_DATA = {
   },
   "showMotto": false,
   "sections": {
-    "overview": "Die Dubhdarach sind eine albische Bürgerfamilie aus Leitheach mit einem heutigen Haushalt in Gwynthor. Aedan ist einer der drei Gründer der Krummen Kanne. Seine Frau Mair stammt aus der Stadt und führt die Rechnungen. Ihre gemeinsamen Kinder Neifion und Eirlys wachsen mit Mairs älterem Sohn Caradog Tonnarth in der Hausgemeinschaft auf.",
-    "history": "Ein unbekanntes Gründerpaar steht am Beginn der Familienakte. Die Generationen bis Aedan sind nicht einzeln überliefert. Im Großen Krieg schloss er Freundschaft mit Merrik und Hrolf; 1722 eröffneten sie die gemeinsame Schenke. Aedan und Mair heirateten 1724. Neifion wurde 1726, Eirlys 1731 geboren. Caradog stammt aus Mairs früherer, beendeter Verbindung mit Gareth Tonnarth.",
-    "traditions": "Aedans Verschwiegenheit und Mairs genaue Buchführung ergänzen sich. Neifion übt nach dem Unterricht Lieferlisten und Rechnungen, Eirlys faltet gelegentlich Servietten. Caradog organisiert als erwachsener Meier den Lieferhof. Er bleibt Tonnarth und Aedans Stiefsohn; aus der gemeinsamen Hausgemeinschaft wird keine erfundene leibliche Abstammung.\n\nDas Familienwappen: Ein schwarzer kahler Baum auf silbergrau bemalten Holzbrettern; unter seinen Ästen kniet die schwarze Silhouette eines betenden Mannes. Geschlossener Eisenrahmen mit keltischem Knotenband.",
+    "overview": "Mit Aedan Dubhdarach kam ein Stück Leitheach in die Krumme Kanne. Der höfliche Albe kümmert sich um Lieferanten und vertrauliche Gäste, während Mair über Kasse und Gästebuch wacht.",
+    "history": "Die Wurzeln der Dubhdarach liegen in Leitheach; die Namen ihrer frühen Gründer gingen verloren. Aedan lernte Merrik und Hrolf im Großen Krieg kennen und blieb nach dem Frieden bei ihnen. In Gwynthor fand er mit Mair auch eine Familie. Die beiden heirateten 1724.",
+    "traditions": "Neifion lernt bei Mair das Schreiben und Rechnen; Eirlys fragt den Gästen lieber Löcher in den Bauch. Liegt die Tiefenwyrm im Hafen, schaut auch Mairs ältester Sohn Caradog vorbei. Der Schreiber bringt Nachrichten mit, für die Aedan gern einen Becher bereitstellt.\n\nDas Familienwappen: Ein schwarzer kahler Baum auf silbergrau bemalten Holzbrettern; unter seinen Ästen kniet die schwarze Silhouette eines betenden Mannes. Geschlossener Eisenrahmen mit keltischem Knotenband.",
     "knighthood": "Die Familie besitzt bürgerlichen Rang. Der Kriegsdienst der Inhaber begründet keinen Adelstitel; ihr heutiges Ansehen beruht auf der Schenke und ihren Beziehungen in Gwynthor.",
-    "succession": "Für die Familie ist keine förmliche Erbfolge festgelegt. Die Krumme Kanne gehört weiterhin den drei gleichberechtigten Inhabern; familiäre Zugehörigkeit und betriebliche Zuständigkeit werden getrennt behandelt.",
+    "succession": "Noch führen die drei alten Kameraden die Kanne gemeinsam. Wer eines Tages ihre Plätze einnimmt, wird am Familientisch selten besprochen.",
     "holdings": "Anteil am gemeinsamen Schank- und Herbergsbetrieb der Krummen Kanne im Osten des Hafenviertels, an der Gasse Richtung Osttor. Die drei Inhaber gründeten das Haus 1722. Weiterer Grundbesitz ist nicht benannt.",
     "cultureReligion": "Leitheach · Albische Herkunft. Die Hausgemeinschaft verbindet cenyrische, aldrimarische und albische Gewohnheiten, besonders am gemeinsamen Herd. Ein bestimmter Schutzpatron der Familie ist nicht überliefert.",
-    "conflictsAlliances": "Die drei Gründer wurden im Großen Krieg Freunde. Seit dem Frieden halten sie zusammen. Eirian Trevoryns Ehe mit Hrolf verbindet zwei der Häuser; Aedans Ehe mit Mair verknüpft den Dubhdarach-Haushalt mit Caradogs bestehender Tonnarth-Verwandtschaft.",
+    "conflictsAlliances": "Die Freundschaft der drei Wirte überstand den Krieg. Eirians Ehe mit Hrolf und das gemeinsame Leben in der Kanne haben aus den Kameraden längst eine große Hausgemeinschaft gemacht.",
     "values": "Gastlichkeit, verlässliche Arbeit und Kameradschaft bestimmen den Alltag. Alte Frontzugehörigkeiten entscheiden nicht über den Empfang eines Gastes. Elidyr hört Beschwerden an; Ketil und die Wache sichern den Hausfrieden.",
-    "court": "Als Bürgerhaushalt unterhält die Familie keinen eigenen Hofstaat. Dienstplätze und Zuständigkeiten sind in den sechs wechselbaren Hierarchiereitern des Almanach-Moduls „Die Krumme Kanne“ ausgearbeitet.",
-    "familyTree": "Unbekannte Gründer → Zeitsprung über nicht einzeln überlieferte Generationen → heutige Familie. Die verlinkte Familienakte zeigt Ehen, Kinder und die bestehende Tonnarth-Verbindung mit gemeinsamen Personenidentitäten.",
-    "historicalFigures": "Die folgenden Personen gehören zur heutigen Familie und Hausgemeinschaft. Historische Gründernamen werden mangels Überlieferung nicht erfunden."
+    "court": "Eirian teilt die Schichten ein, Mair führt die Bücher und Celyn hütet die Vorräte. Gorwyst sorgt im Hof dafür, dass Fässer, Brennholz und Handwerker zur rechten Zeit ankommen.",
+    "familyTree": "Zwischen den vergessenen Gründern und der heutigen Familie liegen viele namenlose Generationen. Erst die Bewohner der Krummen Kanne geben der Überlieferung wieder Gesichter.",
+    "historicalFigures": "Diese Gesichter begegnen Gästen am Tresen, im Hof und am gemeinsamen Tisch."
   },
   "sectionTitles": {
     "knighthood": "4. Rittertum"
@@ -138,7 +143,7 @@ window.HAEUSER_DATA = {
       "format": "portrait"
     },
     "haus-figur-5": {
-      "src": "../AleriaAlmanach/assets/krumme-kanne/portraits/caradog.png",
+      "src": "https://i.imgur.com/LK3q0UI.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-dubhdarach&mode=view&person=caradog-bastard-tonnarth",
       "alt": "Caradog Tonnarth",
       "format": "portrait"
@@ -154,37 +159,37 @@ window.HAEUSER_DATA = {
     "entries": [
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Gleichberechtigter Mitinhaber · Einkauf & Gäste",
+        "role": "Mitinhaber · Einkauf & Gäste",
         "name": "Aedan Dubhdarach",
-        "description": "Seit 1724 mit Mair verheiratet. Vater von Neifion und Eirlys; Stiefvater Caradogs.\n\nDer Albe aus Leitheach lernte Merrik und Hrolf zwischen Feldlagern, Verwundetenwagen und gemeinsam überstandenen Schlachten kennen. Heute verhandelt er Lieferungen und bewahrt im Hinterzimmer die Ruhe. Höflich, aufmerksam und verschwiegen; erinnert sich erstaunlich genau an unbezahlte Zechen, ebenso genau aber an erwiesene Hilfe.",
+        "description": "Aedan verhandelt mit Lieferanten und empfängt Gäste im Hinterzimmer. Der höfliche Albe hört lieber zu, als selbst zu reden, und vergisst weder eine offene Zeche noch einen erwiesenen Gefallen.",
         "imageKey": "haus-figur-1"
       },
       {
         "group": "Familie & Hausgemeinschaft",
         "role": "Rechnungsführerin · Kasse & Gästebuch",
         "name": "Mair",
-        "description": "Aedans Ehefrau; Mutter Caradogs aus der beendeten Verbindung mit Gareth Tonnarth sowie von Neifion und Eirlys.\n\nWurde 1697 in Gwynthor geboren. Brachte ihren Sohn Caradog in die Ehe mit Aedan mit; 1726 und 1731 wurden Neifion und Eirlys geboren. Führt Kassenbuch und offene Rechnungen mit ruhiger Genauigkeit. Wer ihr einen Rechenfehler nachweist, bekommt ein ehrliches Dankeschön; wer ihn erfindet, eine zweite Rechnung.",
+        "description": "Mair führt Kassenbuch und Gästebuch mit ruhiger Hand. Eine vergessene Zeche entgeht ihr ebenso wenig wie ein Gast, der sein letztes Kupferstück dreimal umdreht. Ihr trockener Humor kommt meist erst mit der zweiten Rechnung zum Vorschein.",
         "imageKey": "haus-figur-2"
       },
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Schreiberlehrling · Bei Mair",
+        "role": "Schreiberlehrling",
         "name": "Neifion Dubhdarach",
-        "description": "Sohn Aedans und Mairs; Bruder von Eirlys, Halbbruder Caradogs.\n\nÜbt nach dem Unterricht Lieferlisten und einfache Abrechnungen. Hat Aedans dunkelbraune Locken und Mairs Beharrlichkeit geerbt. Verfasst heimlich erstaunlich bissige Beschreibungen der Stammgäste und nennt sie Schreibübungen.",
+        "description": "Neifion übt bei Mair Lieferlisten und Rechnungen. Hinter seinem braven Blick stecken bissige kleine Beschreibungen der Stammgäste. Er nennt sie Schreibübungen und hält sie lieber unter Verschluss.",
         "imageKey": "haus-figur-3"
       },
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Hauskind · Servietten & Geschichten",
+        "role": "Hauskind · Geschichtenhörerin",
         "name": "Eirlys Dubhdarach",
-        "description": "Tochter Aedans und Mairs; Neifions Schwester und Caradogs Halbschwester.\n\nFaltet gelegentlich mit Nestwen Servietten, bevorzugt aber Boote daraus. Fragt die Veteranen nach ihren Pferden statt nach ihren Siegen. Ihre kleinen Beiträge gehören zum Familienalltag, nicht zum Dienstplan.",
+        "description": "Eirlys faltet aus Nestwens Servietten lieber Boote als ordentliche Rechtecke. Die Veteranen fragt sie nach ihren Pferden und dem Essen im Lager. Ihre Schlachtensiege findet sie deutlich weniger interessant.",
         "imageKey": "haus-figur-4"
       },
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Meier · Lieferhof, Reparaturen & Vorratstransport",
+        "role": "Schreiber & Adjutant der Tiefenwyrm",
         "name": "Caradog Tonnarth",
-        "description": "Mairs Sohn von Gareth Tonnarth; Aedans Stiefsohn und älterer Halbbruder Neifions und Eirlys’.\n\nKam 1718 zur Welt und wuchs später mit seinen jüngeren Halbgeschwistern in der Kanne auf. Organisiert Liefertermine, Fasswechsel, Brennholz und Handwerker. Mag Aedan, nennt ihn jedoch erst nach einem zweiten Krug gelegentlich Vater. Fragt lieber zweimal nach, als eine Last auf der falschen Treppe abzustellen.",
+        "description": "Caradog führt Idwals Logbuch und unterstützt Cadell Ysgrif bei den Schriftstücken der Tiefenwyrm. Wenn das Schiff in Gwynthor liegt, schaut er bei seiner Mutter vorbei; Mair hält dann gern einen Platz für ihn frei.",
         "imageKey": "haus-figur-5"
       }
     ]

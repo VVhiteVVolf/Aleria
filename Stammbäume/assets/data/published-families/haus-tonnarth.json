@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-tonnarth",
-  "revision": 6,
-  "updatedAt": "2026-10-14T15:37:49.510Z",
+  "revision": 7,
+  "updatedAt": "2026-10-14T16:37:45.782Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -308,7 +308,7 @@
         "id": "mair-affair-tonnarth",
         "worldPersonId": "person--family-tree--mair-affair-tonnarth",
         "name": "Mair",
-        "title": "Rechnungsführerin der Krummen Kanne · Ehefrau Aedan Dubhdarachs",
+        "title": "Rechnungsführerin · Kasse & Gästebuch",
         "sex": "female",
         "status": "alive",
         "birth": "1697",
@@ -319,7 +319,7 @@
         "familyRole": "affair",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Mutter Caradog Tonnarths aus der beendeten Verbindung mit Gareth. Seit 1724 mit Aedan Dubhdarach aus Leitheach verheiratet; gemeinsame Kinder Neifion und Eirlys.",
+        "notes": "Mair führt Kassenbuch und Gästebuch mit ruhiger Hand. Eine vergessene Zeche entgeht ihr ebenso wenig wie ein Gast, der sein letztes Kupferstück dreimal umdreht. Ihr trockener Humor kommt meist erst mit der zweiten Rechnung zum Vorschein.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -635,18 +635,18 @@
         "id": "caradog-bastard-tonnarth",
         "worldPersonId": "person--haus-tonnarth--caradog-bastard-tonnarth",
         "name": "Caradog Tonnarth",
-        "title": "Meier der Krummen Kanne",
+        "title": "Schreiber & Adjutant der Tiefenwyrm",
         "sex": "male",
         "status": "alive",
         "birth": "1718",
         "death": "",
-        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/caradog.png",
+        "portrait": "https://i.imgur.com/LK3q0UI.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-tonnarth",
         "familyRole": "bastard",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Sohn Gareth Tonnarths und Mairs, geboren 1718. Aedan Dubhdarachs Stiefsohn; älterer Halbbruder von Neifion und Eirlys. Organisiert Lieferhof, Transporte und Reparaturen der Kanne.",
+        "notes": "Caradog führt Idwals Logbuch und unterstützt Cadell Ysgrif bei den Schriftstücken der Tiefenwyrm. Wenn das Schiff in Gwynthor liegt, schaut er bei seiner Mutter vorbei; Mair hält dann gern einen Platz für ihn frei.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -821,7 +821,7 @@
         "id": "aedan-dubhdarach-kanne",
         "worldPersonId": "person--krumme-kanne--aedan-dubhdarach-kanne",
         "name": "Aedan Dubhdarach",
-        "title": "Gleichberechtigter Mitinhaber · Einkauf & Gäste",
+        "title": "Mitinhaber · Einkauf & Gäste",
         "sex": "male",
         "status": "alive",
         "birth": "1695",
@@ -832,7 +832,7 @@
         "familyRole": "married",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Seit 1724 mit Mair verheiratet. Vater von Neifion und Eirlys; Stiefvater Caradogs.\n\nDer Albe aus Leitheach lernte Merrik und Hrolf zwischen Feldlagern, Verwundetenwagen und gemeinsam überstandenen Schlachten kennen. Heute verhandelt er Lieferungen und bewahrt im Hinterzimmer die Ruhe. Höflich, aufmerksam und verschwiegen; erinnert sich erstaunlich genau an unbezahlte Zechen, ebenso genau aber an erwiesene Hilfe.",
+        "notes": "Aedan verhandelt mit Lieferanten und empfängt Gäste im Hinterzimmer. Der höfliche Albe hört lieber zu, als selbst zu reden, und vergisst weder eine offene Zeche noch einen erwiesenen Gefallen.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -845,7 +845,7 @@
         "id": "neifion-dubhdarach-kanne",
         "worldPersonId": "person--krumme-kanne--neifion-dubhdarach-kanne",
         "name": "Neifion Dubhdarach",
-        "title": "Schreiberlehrling · Bei Mair",
+        "title": "Schreiberlehrling",
         "sex": "male",
         "status": "alive",
         "birth": "1726",
@@ -856,7 +856,7 @@
         "familyRole": "married",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Sohn Aedans und Mairs; Bruder von Eirlys, Halbbruder Caradogs.\n\nÜbt nach dem Unterricht Lieferlisten und einfache Abrechnungen. Hat Aedans dunkelbraune Locken und Mairs Beharrlichkeit geerbt. Verfasst heimlich erstaunlich bissige Beschreibungen der Stammgäste und nennt sie Schreibübungen.",
+        "notes": "Neifion übt bei Mair Lieferlisten und Rechnungen. Hinter seinem braven Blick stecken bissige kleine Beschreibungen der Stammgäste. Er nennt sie Schreibübungen und hält sie lieber unter Verschluss.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -869,7 +869,7 @@
         "id": "eirlys-dubhdarach-kanne",
         "worldPersonId": "person--krumme-kanne--eirlys-dubhdarach-kanne",
         "name": "Eirlys Dubhdarach",
-        "title": "Hauskind · Servietten & Geschichten",
+        "title": "Hauskind · Geschichtenhörerin",
         "sex": "female",
         "status": "alive",
         "birth": "1731",
@@ -880,7 +880,7 @@
         "familyRole": "married",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "Tochter Aedans und Mairs; Neifions Schwester und Caradogs Halbschwester.\n\nFaltet gelegentlich mit Nestwen Servietten, bevorzugt aber Boote daraus. Fragt die Veteranen nach ihren Pferden statt nach ihren Siegen. Ihre kleinen Beiträge gehören zum Familienalltag, nicht zum Dienstplan.",
+        "notes": "Eirlys faltet aus Nestwens Servietten lieber Boote als ordentliche Rechtecke. Die Veteranen fragt sie nach ihren Pferden und dem Essen im Lager. Ihre Schlachtensiege findet sie deutlich weniger interessant.",
         "extensions": {
           "registryManagedFields": [
             "title",
@@ -1281,8 +1281,13 @@
         "legitimacy": "legitimized",
         "certainty": "confirmed",
         "visibility": "public",
-        "notes": "Nicht eheliches Kind aus Gareth Tonnarths Affäre mit Mair.",
-        "extensions": {}
+        "notes": "Caradog wurde als Kind im Haus Tonnarth anerkannt.",
+        "extensions": {
+          "registryManagedFields": [
+            "legitimacy",
+            "notes"
+          ]
+        }
       },
       {
         "id": "parentage-neifion-dubhdarach-kanne",
@@ -1361,7 +1366,8 @@
         "name": "Haus Dubhdarach",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Dubhdarach.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {}
       }
     ],
     "cadetBranches": [
@@ -1515,7 +1521,7 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 2,
+      "sourceRevision": 3,
       "registryManagedViewFields": [
         "focusPersonId",
         "limitGenerations"
@@ -1619,8 +1625,8 @@
       },
       "registryTombstones": {},
       "registryUpgrade": {
-        "fromRevision": 1,
-        "toRevision": 2
+        "fromRevision": 2,
+        "toRevision": 3
       }
     }
   }

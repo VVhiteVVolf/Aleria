@@ -67,8 +67,13 @@ window.HAEUSER_DATA = {
     "liege": "Haus Draig",
     "origin": "Rorikshall · Aldrimar",
     "founding": "Unbekannt · Schenke gegründet 1722",
-    "people": "Familienhaushalt der Krummen Kanne",
+    "people": "Aldrimarisch-cenyrischer Haushalt",
     "wealth": "Gemeinsamer Schank- und Herbergsbetrieb",
+    "patron": "Stadt Gwynthor",
+    "knightingPatron": "—",
+    "milestoneOne": "1722 · Eröffnung der Krummen Kanne",
+    "milestoneTwo": "—",
+    "religion": "Bräuche der Heimat",
     "patronDeities": "",
     "allies": "Trevoryn · Svathamar · Dubhdarach",
     "enemies": ""
@@ -80,17 +85,17 @@ window.HAEUSER_DATA = {
   "showMotto": false,
   "sections": {
     "overview": "Die Svathamar sind eine bürgerliche Familie aus Rorikshall in Aldrimar. Hrolf fand nach dem Großen Krieg in Gwynthor ein neues Zuhause. Seine Geschwister Ketil und Runa folgten ihm; mit Eirian Trevoryn und den Kindern Styr und Heledd gehört er heute zur Hausgemeinschaft der Krummen Kanne.",
-    "history": "Der alte Ursprung des Hauses ist unbekannt und wird im Stammbaum durch ein Gründerpaar und einen Zeitsprung kenntlich gemacht. Auch die Namen der Eltern Hrolfs, Ketils und Runas sind nicht überliefert. Hrolf lernte Merrik und Aedan auf dem Schlachtfeld kennen. 1722 gründeten die drei die Kanne, 1723 heiratete Hrolf Merriks Schwester Eirian.",
-    "traditions": "Hrolfs Verantwortungsgefühl für den Hausfrieden, Ketils ruhige Wachführung und Runas Ordnungssinn geben der Familie ihr Gesicht in Gwynthor. Eirian führt als Hausvögtin den Dienstplan aller Bereiche. Styr lernt unter Aufsicht am Tresen, Heledd hat keine feste Dienstschicht. Die Familie behält ihre nordische Herkunft, ohne sich vom cenyrischen Haushalt abzusondern.\n\nDas Familienwappen: Ein schwarzer Berg mit einem zerfallenen schwarzen Turm auf eisblauem Holz. Ein geschlossener Eisenrahmen mit sparsamen nordischen Runen umgibt das Motiv.",
+    "history": "Von den frühen Svathamar erzählen nur noch wenige Geschichten. Hrolfs Weg führte aus Rorikshall in den Großen Krieg und mit seinen Kameraden weiter nach Gwynthor. Nach der Gründung der Kanne heiratete er Eirian Trevoryn; seine jüngeren Geschwister Ketil und Runa folgten ihm in die Stadt.",
+    "traditions": "Hrolf hält den Hausfrieden, Ketil wacht an der Tür und Runa über saubere Kammern. Eirian hält sie alle auf Trab. Styr übt sich am Tresen in der Gelassenheit seines Vaters; Heledd lauscht lieber dessen Heldengeschichten.\n\nDas Familienwappen: Ein schwarzer Berg mit einem zerfallenen schwarzen Turm auf eisblauem Holz. Ein geschlossener Eisenrahmen mit sparsamen nordischen Runen umgibt das Motiv.",
     "knighthood": "Die Familie besitzt bürgerlichen Rang. Der Kriegsdienst der Inhaber begründet keinen Adelstitel; ihr heutiges Ansehen beruht auf der Schenke und ihren Beziehungen in Gwynthor.",
-    "succession": "Für die Familie ist keine förmliche Erbfolge festgelegt. Die Krumme Kanne gehört weiterhin den drei gleichberechtigten Inhabern; familiäre Zugehörigkeit und betriebliche Zuständigkeit werden getrennt behandelt.",
+    "succession": "Noch führen die drei alten Kameraden die Kanne gemeinsam. Wer eines Tages ihre Plätze einnimmt, wird am Familientisch selten besprochen.",
     "holdings": "Anteil am gemeinsamen Schank- und Herbergsbetrieb der Krummen Kanne im Osten des Hafenviertels, an der Gasse Richtung Osttor. Die drei Inhaber gründeten das Haus 1722. Weiterer Grundbesitz ist nicht benannt.",
     "cultureReligion": "Rorikshall · Aldrimar. Die Hausgemeinschaft verbindet cenyrische, aldrimarische und albische Gewohnheiten, besonders am gemeinsamen Herd. Ein bestimmter Schutzpatron der Familie ist nicht überliefert.",
-    "conflictsAlliances": "Die drei Gründer wurden im Großen Krieg Freunde. Seit dem Frieden halten sie zusammen. Eirian Trevoryns Ehe mit Hrolf verbindet zwei der Häuser; Aedans Ehe mit Mair verknüpft den Dubhdarach-Haushalt mit Caradogs bestehender Tonnarth-Verwandtschaft.",
+    "conflictsAlliances": "Die Freundschaft der drei Wirte überstand den Krieg. Eirians Ehe mit Hrolf und das gemeinsame Leben in der Kanne haben aus den Kameraden längst eine große Hausgemeinschaft gemacht.",
     "values": "Gastlichkeit, verlässliche Arbeit und Kameradschaft bestimmen den Alltag. Alte Frontzugehörigkeiten entscheiden nicht über den Empfang eines Gastes. Elidyr hört Beschwerden an; Ketil und die Wache sichern den Hausfrieden.",
-    "court": "Als Bürgerhaushalt unterhält die Familie keinen eigenen Hofstaat. Dienstplätze und Zuständigkeiten sind in den sechs wechselbaren Hierarchiereitern des Almanach-Moduls „Die Krumme Kanne“ ausgearbeitet.",
-    "familyTree": "Unbekannte Gründer → Zeitsprung über nicht einzeln überlieferte Generationen → heutige Familie. Die verlinkte Familienakte zeigt Ehen, Kinder und die bestehende Tonnarth-Verbindung mit gemeinsamen Personenidentitäten.",
-    "historicalFigures": "Die folgenden Personen gehören zur heutigen Familie und Hausgemeinschaft. Historische Gründernamen werden mangels Überlieferung nicht erfunden."
+    "court": "Eirian teilt die Schichten ein, Mair führt die Bücher und Celyn hütet die Vorräte. Gorwyst sorgt im Hof dafür, dass Fässer, Brennholz und Handwerker zur rechten Zeit ankommen.",
+    "familyTree": "Zwischen den vergessenen Gründern und der heutigen Familie liegen viele namenlose Generationen. Erst die Bewohner der Krummen Kanne geben der Überlieferung wieder Gesichter.",
+    "historicalFigures": "Diese Gesichter begegnen Gästen am Tresen, im Hof und am gemeinsamen Tisch."
   },
   "sectionTitles": {
     "knighthood": "4. Rittertum"
@@ -160,44 +165,44 @@ window.HAEUSER_DATA = {
     "entries": [
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Gleichberechtigter Mitinhaber · Hausfrieden",
+        "role": "Mitinhaber · Hausfrieden",
         "name": "Hrolf Svathamar",
-        "description": "Ehemann Eirians; Vater von Styr und Heledd. Bruder Ketils und Runas; Merriks Schwager.\n\nKam aus Rorikshall und blieb nach dem Krieg bei seinen Kameraden. Sein lautes Lachen gehört zum Schankraum, seine Ruhe zu dessen Sicherheit. Befehligt die Wachen nur in ernsten Fällen; im Alltag führt Ketil die Schichten. Fällt kein Urteil über einen alten Feind, bevor dieser selbst gesprochen hat.",
+        "description": "Hrolfs Lachen trägt bis auf die Gasse. Der Veteran aus Rorikshall sorgt dafür, dass auch ein voller Schankraum friedlich bleibt. Wird es ernst, genügt meist sein Aufstehen.",
         "imageKey": "haus-figur-1"
       },
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Hausvögtin · Dienstpläne & Personal",
+        "role": "Hausvögtin · Personal & Dienstpläne",
         "name": "Eirian Trevoryn",
-        "description": "Merriks jüngere Schwester, Hrolfs Ehefrau; Mutter von Styr und Heledd.\n\nLeitet den Alltag im Auftrag aller drei Inhaber: Dienstplan, Löhne, Zimmerbelegung und Beschwerden. Eine gestrichene Schicht bemerkt sie ebenso schnell wie einen heimlich bedürftigen Gast. Ihr Schlüsselbund klappert selten; meist reicht ein Blick. Hrolf behauptet, er habe im Krieg weniger gefürchtete Befehle gehört.",
+        "description": "Eirian teilt die Schichten ein, zahlt die Löhne aus und schlichtet die kleinen Streitigkeiten des Hauses. Wenn ihr Schlüsselbund am Tresen auftaucht, werden selbst die Wirte etwas aufmerksamer.",
         "imageKey": "haus-figur-2"
       },
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Wachführer · Tür & Nachtplan",
+        "role": "Wachführer · Tür & Nachtwache",
         "name": "Ketil Svathamar",
-        "description": "Hrolfs jüngerer Bruder; Runas älterer Bruder.\n\nKam nach dem Krieg mit Hrolf nach Cenyr. Teilt die drei Wachplätze ein und führt den Hund bei Kontrollgängen. Spricht leise, was Betrunkene oft zu spät bemerken. Holt erst einen Stuhl, dann Hilfe, wenn ein Veteran aus einem schlechten Traum hochschreckt.",
+        "description": "Ketil führt die Hauswache und geht mit Carreg durch den Hof. Er spricht leise und greift spät, dann aber entschlossen ein. Schreckt ein alter Soldat aus dem Schlaf, holt er zuerst einen Stuhl.",
         "imageKey": "haus-figur-3"
       },
       {
         "group": "Familie & Hausgemeinschaft",
         "role": "Hausmeisterin · Zimmer & Kammern",
         "name": "Runa Svathamar",
-        "description": "Jüngere Schwester Hrolfs und Ketils.\n\nFolgte ihren Brüdern nach Gwynthor und leitet inzwischen Zimmerdienst und Hausreinigung unter Celyns Versorgungsplanung. Beurteilt Fremde zunächst nach deren Umgang mit nassen Stiefeln. Eine verlorene Geldbörse verwahrt sie sorgfältig; eine Ausrede für schmutzige Laken deutlich weniger.",
+        "description": "Runa sorgt für ordentliche Kammern, frische Laken und unbeschädigte Riegel. Gäste beurteilt sie zunächst nach ihrem Umgang mit nassen Stiefeln. Verlorene Geldbörsen verwahrt sie sorgfältiger als schlechte Ausreden.",
         "imageKey": "haus-figur-4"
       },
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Schanklehrling · Unter Elidyrs Aufsicht",
+        "role": "Schanklehrling",
         "name": "Styr Svathamar",
-        "description": "Sohn Hrolfs und Eirians; Heledds älterer Bruder.\n\nLernt Empfang, Rechnen und Bestellungen. Seine Schichten enden vor dem späten Zechenbetrieb. Hat Hrolfs kräftigen Bau und Eirians Blick für Unordnung. Hält sich für schwer zu durchschauen, vor allem dann, wenn er ein Tablett zu viel auflädt.",
+        "description": "Styr lernt bei Elidyr Bestellungen und das Rechnen am Tresen. Er möchte längst so gelassen wirken wie sein Vater. Meist verrät ihn das eine Tablett, das er sich zu viel aufgeladen hat.",
         "imageKey": "haus-figur-5"
       },
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Hauskind · Tischblumen & Lesestunde",
+        "role": "Hauskind · Tischblumen",
         "name": "Heledd Svathamar",
-        "description": "Tochter Hrolfs und Eirians; Styrs jüngere Schwester.\n\nHat einen eigenen Platz bei Nestwens Lesestunden und stellt gelegentlich die Tischblumen auf. Führt eine Liste der glaubwürdigsten Kriegsgeschichten; Hrolfs Berichte schneiden verdächtig gut ab. Keine feste Dienstschicht.",
+        "description": "Heledd stellt gern Blumen auf die Tische und lauscht den Geschichten der Veteranen. In ihrem Heft sammelt sie die glaubwürdigsten davon. Hrolfs Berichte schneiden verdächtig gut ab.",
         "imageKey": "haus-figur-6"
       }
     ]

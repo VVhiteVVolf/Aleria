@@ -1,0 +1,615 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-svathamar",
+  "revision": 2,
+  "updatedAt": "2026-10-14T16:37:45.782Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-svathamar",
+      "title": "Haus Svathamar",
+      "motto": "",
+      "description": "Bürgerliche Familie aus Rorikshall in Aldrimar, heute in Gwynthor ansässig. Hrolf blieb nach dem Großen Krieg bei seinen Kameraden; Ketil und Runa folgten ihm. Hrolf heiratete Eirian Trevoryn. Die unbekannte ältere Abstammung wird durch einen Zeitsprung von der belegten Familie getrennt.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-svathamar-gruender",
+        "worldPersonId": "person--haus-svathamar--haus-svathamar-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-svathamar",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historischer Ursprung des Hauses. Namen, Lebensdaten und die Generationen bis zum belegten Familienzweig sind unbekannt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-svathamar-gruenderin",
+        "worldPersonId": "person--haus-svathamar--haus-svathamar-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-svathamar",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historischer Ursprung des Hauses. Namen, Lebensdaten und die Generationen bis zum belegten Familienzweig sind unbekannt.",
+        "extensions": {}
+      },
+      {
+        "id": "vater-svathamar-kanne",
+        "worldPersonId": "person--haus-svathamar--vater-svathamar-kanne",
+        "name": "Unbekannter Vater",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-svathamar",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Vater Hrolfs, Ketils und Runas aus Rorikshall. Name und Lebensdaten unbekannt.",
+        "extensions": {}
+      },
+      {
+        "id": "mutter-svathamar-kanne",
+        "worldPersonId": "person--haus-svathamar--mutter-svathamar-kanne",
+        "name": "Unbekannte Mutter",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-svathamar",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Mutter der drei Svathamar-Geschwister. Name und Lebensdaten unbekannt.",
+        "extensions": {}
+      },
+      {
+        "id": "hrolf-svathamar-kanne",
+        "worldPersonId": "person--krumme-kanne--hrolf-svathamar-kanne",
+        "name": "Hrolf Svathamar",
+        "title": "Mitinhaber · Hausfrieden",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/references/hrolf.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-svathamar",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Hrolfs Lachen trägt bis auf die Gasse. Der Veteran aus Rorikshall sorgt dafür, dass auch ein voller Schankraum friedlich bleibt. Wird es ernst, genügt meist sein Aufstehen.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "ketil-svathamar-kanne",
+        "worldPersonId": "person--krumme-kanne--ketil-svathamar-kanne",
+        "name": "Ketil Svathamar",
+        "title": "Wachführer · Tür & Nachtwache",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1702",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/ketil.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-svathamar",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Ketil führt die Hauswache und geht mit Carreg durch den Hof. Er spricht leise und greift spät, dann aber entschlossen ein. Schreckt ein alter Soldat aus dem Schlaf, holt er zuerst einen Stuhl.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "runa-svathamar-kanne",
+        "worldPersonId": "person--krumme-kanne--runa-svathamar-kanne",
+        "name": "Runa Svathamar",
+        "title": "Hausmeisterin · Zimmer & Kammern",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1706",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/runa.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-svathamar",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Runa sorgt für ordentliche Kammern, frische Laken und unbeschädigte Riegel. Gäste beurteilt sie zunächst nach ihrem Umgang mit nassen Stiefeln. Verlorene Geldbörsen verwahrt sie sorgfältiger als schlechte Ausreden.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "eirian-trevoryn-kanne",
+        "worldPersonId": "person--krumme-kanne--eirian-trevoryn-kanne",
+        "name": "Eirian Trevoryn",
+        "title": "Hausvögtin · Personal & Dienstpläne",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-trevoryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Eirian teilt die Schichten ein, zahlt die Löhne aus und schlichtet die kleinen Streitigkeiten des Hauses. Wenn ihr Schlüsselbund am Tresen auftaucht, werden selbst die Wirte etwas aufmerksamer.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "styr-svathamar-kanne",
+        "worldPersonId": "person--krumme-kanne--styr-svathamar-kanne",
+        "name": "Styr Svathamar",
+        "title": "Schanklehrling",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/styr.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-svathamar",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Styr lernt bei Elidyr Bestellungen und das Rechnen am Tresen. Er möchte längst so gelassen wirken wie sein Vater. Meist verrät ihn das eine Tablett, das er sich zu viel aufgeladen hat.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "heledd-svathamar-kanne",
+        "worldPersonId": "person--krumme-kanne--heledd-svathamar-kanne",
+        "name": "Heledd Svathamar",
+        "title": "Hauskind · Tischblumen",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/heledd.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-svathamar",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Heledd stellt gern Blumen auf die Tische und lauscht den Geschichten der Veteranen. In ihrem Heft sammelt sie die glaubwürdigsten davon. Hrolfs Berichte schneiden verdächtig gut ab.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-svathamar-founders",
+        "participantIds": [
+          "haus-svathamar-gruender",
+          "haus-svathamar-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-eltern-svathamar-kanne",
+        "participantIds": [
+          "vater-svathamar-kanne",
+          "mutter-svathamar-kanne"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nicht mehr lebende Elterngeneration; genaue Lebensdaten unbekannt.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-hrolf-eirian-kanne",
+        "participantIds": [
+          "hrolf-svathamar-kanne",
+          "eirian-trevoryn-kanne"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1723",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Haushalt in der Krummen Kanne, Gwynthor.",
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "marriage-hrolf-eirian-kanne",
+            "counterpartFamilyId": "haus-trevoryn"
+          }
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-vater-svathamar-kanne",
+        "childId": "vater-svathamar-kanne",
+        "parentIds": [
+          "haus-svathamar-gruender",
+          "haus-svathamar-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-svathamar-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Abstammung über unbekannte Generationen, keine unmittelbare Elternschaft des historischen Gründerpaares.",
+        "extensions": {
+          "timeJumpId": "gap-svathamar-to-1694"
+        }
+      },
+      {
+        "id": "parentage-hrolf-svathamar-kanne",
+        "childId": "hrolf-svathamar-kanne",
+        "parentIds": [
+          "vater-svathamar-kanne",
+          "mutter-svathamar-kanne"
+        ],
+        "partnershipId": "marriage-eltern-svathamar-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-ketil-svathamar-kanne",
+        "childId": "ketil-svathamar-kanne",
+        "parentIds": [
+          "vater-svathamar-kanne",
+          "mutter-svathamar-kanne"
+        ],
+        "partnershipId": "marriage-eltern-svathamar-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-runa-svathamar-kanne",
+        "childId": "runa-svathamar-kanne",
+        "parentIds": [
+          "vater-svathamar-kanne",
+          "mutter-svathamar-kanne"
+        ],
+        "partnershipId": "marriage-eltern-svathamar-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-styr-svathamar-kanne",
+        "childId": "styr-svathamar-kanne",
+        "parentIds": [
+          "hrolf-svathamar-kanne",
+          "eirian-trevoryn-kanne"
+        ],
+        "partnershipId": "marriage-hrolf-eirian-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-heledd-svathamar-kanne",
+        "childId": "heledd-svathamar-kanne",
+        "parentIds": [
+          "hrolf-svathamar-kanne",
+          "eirian-trevoryn-kanne"
+        ],
+        "partnershipId": "marriage-hrolf-eirian-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-svathamar",
+        "name": "Haus Svathamar",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-trevoryn",
+        "name": "Haus Trevoryn",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Trevoryn.png",
+        "status": "active",
+        "extensions": {}
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "gap-svathamar-to-1694",
+        "parentPartnershipId": "marriage-haus-svathamar-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "vater-svathamar-kanne"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": "Nicht einzeln überlieferte Generationen",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-svathamar-founders",
+      "houseId": "house-svathamar",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-svathamar-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 2,
+      "registryManagedDocumentFields": [
+        "description"
+      ],
+      "sourceNote": "Nutzervorgaben zur Krummen Kanne vom 14.10.2026. Bekannte Personen und Porträts werden mit der Hausgemeinschaft geteilt. Unbekannte Gründer und Generationen bleiben ausdrücklich unbekannt; Mair, Gareth und Caradog behalten die bestehenden Tonnarth-Identitäten.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Svathamar",
+        "housePage": true,
+        "image": "../AleriaAlmanach/assets/krumme-kanne/references/hrolf.png",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "description": "Die Svathamar sind eine bürgerliche Familie aus Rorikshall in Aldrimar. Hrolf fand nach dem Großen Krieg in Gwynthor ein neues Zuhause. Seine Geschwister Ketil und Runa folgten ihm; mit Eirian Trevoryn und den Kindern Styr und Heledd gehört er heute zur Hausgemeinschaft der Krummen Kanne.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Svathamar"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor · Östliches Hafenviertel"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Hrolf Svathamar · Hausvertreter"
+          ],
+          [
+            "Erbe",
+            "Nicht festgelegt"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Draig"
+          ],
+          [
+            "Ursprung",
+            "Rorikshall · Aldrimar"
+          ],
+          [
+            "Schutzpatronin",
+            ""
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über die Familie",
+          "biographyText": "Die Svathamar sind eine bürgerliche Familie aus Rorikshall in Aldrimar. Hrolf fand nach dem Großen Krieg in Gwynthor ein neues Zuhause. Seine Geschwister Ketil und Runa folgten ihm; mit Eirian Trevoryn und den Kindern Styr und Heledd gehört er heute zur Hausgemeinschaft der Krummen Kanne.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Herkunft & Hausgeschichte",
+          "historyText": "Von den frühen Svathamar erzählen nur noch wenige Geschichten. Hrolfs Weg führte aus Rorikshall in den Großen Krieg und mit seinen Kameraden weiter nach Gwynthor. Nach der Gründung der Kanne heiratete er Eirian Trevoryn; seine jüngeren Geschwister Ketil und Runa folgten ihm in die Stadt.",
+          "worksTitle": "Hausgeschichte",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Hrolf hält den Hausfrieden, Ketil wacht an der Tür und Runa über saubere Kammern. Eirian hält sie alle auf Trab. Styr übt sich am Tresen in der Gelassenheit seines Vaters; Heledd lauscht lieber dessen Heldengeschichten."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [
+            {
+              "name": "Haus Trevoryn",
+              "detail": "Hausgemeinschaft der Krummen Kanne",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Trevoryn.png",
+              "imageFormat": "square"
+            },
+            {
+              "name": "Haus Dubhdarach",
+              "detail": "Hausgemeinschaft der Krummen Kanne",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Dubhdarach.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png",
+              "title": "Haus Svathamar · vollständige Hausseite",
+              "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-svathamar"
+            }
+          ],
+          "footer": ""
+        }
+      },
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 1,
+        "toRevision": 2
+      }
+    }
+  }
+}

@@ -15,7 +15,7 @@ const root = 'https://firestore.googleapis.com/v1/projects/aleriaprojekt/databas
 const headers = { Authorization: `Bearer ${access.access_token}`, 'x-goog-user-project': 'aleriaprojekt', 'Content-Type': 'application/json' };
 const source = new URL('../../../AleriaAlmanach/modules/krumme-kanne/source/', import.meta.url);
 const json = async name => JSON.parse(await readFile(new URL(name, source), 'utf8'));
-const original = await json('module-before.json');
+const original = await json('module-before-editorial.json');
 const next = completeKrummeKanne(original, await Promise.all(['teyrngarch.json', 'penderyn.json'].map(json)));
 const entryJson = JSON.stringify(next);
 const hash = value => createHash('sha256').update(value).digest('hex');

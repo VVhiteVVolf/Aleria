@@ -6,7 +6,6 @@ const MEMBERS = {
   svathamar: ['hrolf', 'ketil', 'runa', 'styr', 'heledd'],
   dubhdarach: ['aedan', 'neifion', 'eirlys']
 };
-const FEMALE = new Set(['eirian', 'nestwen', 'celyn', 'enlli', 'runa', 'heledd', 'eirlys', 'mair']);
 const MARRIED = new Set(['nestwen', 'celyn', 'mair']);
 const EXISTING = {
   mair: { id: 'mair-affair-tonnarth', worldPersonId: 'person--family-tree--mair-affair-tonnarth', houseId: '' },
@@ -20,10 +19,10 @@ export function kanneFamilyPerson(key, options = {}) {
   const id = `${key}-${surname}-kanne`;
   return createFamilyPerson({
     id, worldPersonId: `person--krumme-kanne--${id}`, houseId: surname ? `house-${surname}` : '',
-    ...EXISTING[key], name: p.name, birth: String(p.birth), sex: FEMALE.has(key) ? 'female' : 'male',
+    ...EXISTING[key], name: p.name, birth: String(p.birth), sex: p.sex,
     familyRole: MARRIED.has(key) ? 'married' : 'core', title: p.role,
-    notes: `${p.family}\n\n${p.biography}`,
-    portrait: `../AleriaAlmanach/assets/krumme-kanne/${['merrik', 'hrolf', 'aedan'].includes(key) ? 'references' : 'portraits'}/${key}.png`,
+    notes: p.biography,
+    portrait: p.portrait || `../AleriaAlmanach/assets/krumme-kanne/${['merrik', 'hrolf', 'aedan'].includes(key) ? 'references' : 'portraits'}/${key}.png`,
     extensions: { registryManagedFields: ['title', 'notes', 'portrait'] }, ...options
   });
 }

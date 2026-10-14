@@ -1,0 +1,2861 @@
+{
+  "id": "modul-1781474092957",
+  "title": "Die Krumme Kanne",
+  "subtitle": "Gwynthors Veteranenkneipe",
+  "type": "Story",
+  "category": "Gwynthor",
+  "moduleWidth": 100,
+  "moduleHeight": 100,
+  "image": "./assets/krumme-kanne/rooms/nachtansicht.png",
+  "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+  "icon": "",
+  "symbol": null,
+  "locked": false,
+  "appendCommentsPage": true,
+  "enablePageComments": true,
+  "sessionCast": [],
+  "sessionCastDetails": [],
+  "pages": [
+    {
+      "schemaVersion": 1,
+      "commentThreadKey": "0",
+      "image": "./assets/krumme-kanne/rooms/nachtansicht.png",
+      "imageWidth": 30,
+      "pageTitle": "Die Krumme Kanne",
+      "description": "<p>Im <strong>Osten des Hafenviertels von Gwynthor</strong>, an der Gasse Richtung Osttor, steht ein schmales Fachwerkhaus mit einem krummen hölzernen Krug über der Tür. <strong>Die Krumme Kanne</strong> ist eine beliebte Veteranen- und Söldnerkneipe: warmes Licht, kräftige Küche und Wirte, die den Großen Krieg vor zwanzig Jahren selbst erlebt haben.</p><p>Merrik Trevoryn, Hrolf Svathamar und Aedan Dubhdarach wurden auf dem Schlachtfeld Freunde. Nach dem Frieden beschlossen sie, zusammenzubleiben; 1722 eröffneten sie ihre gemeinsame Schenke. Heute finden hier alte Kameraden, Hafenleute, Reisende und jene Ritter Platz, die einen Abend ohne höfisches Zeremoniell verbringen möchten.</p>",
+      "quote": "",
+      "quoteBy": "",
+      "enableComments": true,
+      "commentDivider": true,
+      "imageTall": true,
+      "stats": [
+        [
+          "Gegründet",
+          "1722, 2 Jahre nach dem Krieg"
+        ],
+        [
+          "Standort",
+          "Östliches Hafenviertel, Gwynthor"
+        ],
+        [
+          "Besitzer",
+          "Bruderschaft der Krummen Kanne"
+        ],
+        [
+          "Bekannt für",
+          "Veteranen, Söldner und Reisende"
+        ],
+        [
+          "Küche",
+          "Cenyri, Aldrimarisch, Albisch"
+        ],
+        [
+          "Kapazität",
+          "Ca. 40 Gäste"
+        ],
+        [
+          "Besonderheit",
+          "Neutraler Treffpunkt ehemaliger Soldaten"
+        ],
+        [
+          "Wahrzeichen",
+          "Der hölzerne Krug über dem Eingang"
+        ]
+      ],
+      "commentSequence": [
+        {
+          "narrator": true,
+          "text": "Wer Geschichten über Schlachten hören möchte, findet hier Erzähler. Wer Geschichten über Schlachten erlebt hat, findet hier Kameraden."
+        }
+      ],
+      "imageFit": "cover",
+      "imagePosition": "center"
+    },
+    {
+      "schemaVersion": 1,
+      "commentThreadKey": "7",
+      "image": "https://i.imgur.com/DFLzBXn.png",
+      "imageWidth": 20,
+      "pageTitle": "Die Krumme Kanne · Haus & Inhaber",
+      "description": "<p>Im Osten des Hafenviertels von <strong>Gwynthor</strong>, an der Gasse Richtung Osttor, steht die Krumme Kanne. Ihr krummer Holzkrug verspricht kein vornehmes Haus, sondern eine warme Mahlzeit, ein ordentlich gefülltes Gefäß und Gesellschaft, in der niemand einen alten Feldzug erklären muss.</p><p>Merrik Trevoryn aus Gwynthor, Hrolf Svathamar aus <strong>Rorikshall in Aldrimar</strong> und der Albe Aedan Dubhdarach aus <strong>Leitheach</strong> fanden vor zwanzig Jahren im Großen Krieg zueinander. Auf dem Schlachtfeld wurden aus drei Männern verschiedener Herkunft Freunde. Als der Krieg 1720 endete, beschlossen sie, gemeinsam etwas aufzubauen, das länger halten sollte als das nächste Lager.</p><p>1722 legten sie ihren Sold zusammen und eröffneten die Kanne. Achtzehn Jahre später gehört die Veteranen- und Söldnerkneipe zu den beliebtesten Häusern Gwynthors. Hier sitzen Heimkehrer neben Hafenarbeitern, reisende Söldner neben Stadtwachen und gelegentlich ein Ritter, der für einen Abend nur Gast sein möchte. Die drei Inhaber bleiben gleichberechtigt; die gewachsene Hausgemeinschaft hält ihnen im Alltag den Rücken frei.</p>",
+      "quote": "Der Krieg machte uns zu Brüdern. Die Kanne gab uns ein Zuhause.",
+      "quoteBy": "— Aedan",
+      "commentDivider": true,
+      "imageTall": true,
+      "biographyPage": true,
+      "stats": [
+        [
+          "Name",
+          "Die Krumme Kanne"
+        ],
+        [
+          "Art",
+          "Veteranen- & Söldnerkneipe"
+        ],
+        [
+          "Gründung",
+          "1722 · zwei Jahre nach Kriegsende"
+        ],
+        [
+          "Standort",
+          "Östliches Hafenviertel, Gwynthor"
+        ],
+        [
+          "Inhaber",
+          "Merrik Trevoryn, Hrolf Svathamar, Aedan Dubhdarach"
+        ],
+        [
+          "Hausgemeinschaft",
+          "Drei Familien, Personal und zwei Haustiere"
+        ],
+        [
+          "Küche",
+          "Cenyrisch · Aldrimarisch · Albisch"
+        ],
+        [
+          "Gäste",
+          "Etwa 40 Plätze im Schankraum"
+        ]
+      ],
+      "biography": {
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "portrait": "",
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Aus Feldkameraden werden Wirte",
+        "biographyText": "<p>Im Osten des Hafenviertels von <strong>Gwynthor</strong>, an der Gasse Richtung Osttor, steht die Krumme Kanne. Ihr krummer Holzkrug verspricht kein vornehmes Haus, sondern eine warme Mahlzeit, ein ordentlich gefülltes Gefäß und Gesellschaft, in der niemand einen alten Feldzug erklären muss.</p><p>Merrik Trevoryn aus Gwynthor, Hrolf Svathamar aus <strong>Rorikshall in Aldrimar</strong> und der Albe Aedan Dubhdarach aus <strong>Leitheach</strong> fanden vor zwanzig Jahren im Großen Krieg zueinander. Auf dem Schlachtfeld wurden aus drei Männern verschiedener Herkunft Freunde. Als der Krieg 1720 endete, beschlossen sie, gemeinsam etwas aufzubauen, das länger halten sollte als das nächste Lager.</p><p>1722 legten sie ihren Sold zusammen und eröffneten die Kanne. Achtzehn Jahre später gehört die Veteranen- und Söldnerkneipe zu den beliebtesten Häusern Gwynthors. Hier sitzen Heimkehrer neben Hafenarbeitern, reisende Söldner neben Stadtwachen und gelegentlich ein Ritter, der für einen Abend nur Gast sein möchte. Die drei Inhaber bleiben gleichberechtigt; die gewachsene Hausgemeinschaft hält ihnen im Alltag den Rücken frei.</p>",
+        "abilitiesTitle": "Spezielles",
+        "abilities": [
+          {
+            "icon": "../IconOrdner/Cktraits/Trait_family_first.png",
+            "title": "Kameradschaft vor Herkunft",
+            "detail": "Wer einem anderen aus der Kanne geholfen hat, wird nicht vergessen. Alte Fronten bleiben vor der Tür; gezogene Waffen ebenfalls."
+          },
+          {
+            "icon": "../IconOrdner/Big Traits/Trait_gregarious.png",
+            "title": "Ein Platz bei den anderen",
+            "detail": "Neue Gäste werden am Tresen empfangen. Ein Tisch wird geteilt, bevor ein erschöpfter Heimkehrer allein in einer Ecke verschwindet."
+          },
+          {
+            "icon": "../IconOrdner/Big Traits/Trait_generous.png",
+            "title": "Die aufgeschriebene Schüssel",
+            "detail": "Mair führt eine kleine, diskrete Liste gestundeter Mahlzeiten. Die Inhaber entscheiden gemeinsam, welche Schulden eines Tages aus dem Buch verschwinden."
+          },
+          {
+            "icon": "../IconOrdner/Big Traits/Trait_just.png",
+            "title": "Derselbe Maßstab",
+            "detail": "Adel, Sold und Bekanntschaft erkaufen kein Recht auf grobe Hände oder Demütigungen. Elidyr hört Beschwerden an; Ketil setzt den Hausfrieden durch."
+          },
+          {
+            "icon": "../IconOrdner/Big Traits/Trait_diligent.png",
+            "title": "Drei Küchen, ein verlässlicher Herd",
+            "detail": "Tadhg kocht mit zwei festen Gehilfen. Rauch, Kräuter und deftige Sättigung gehören zusammen; jede Portion hat ihren eigenen Grund, auf der Karte zu stehen."
+          },
+          {
+            "icon": "../IconOrdner/Cktraits/Trait_scarred.png",
+            "title": "Was vom Krieg bleibt",
+            "detail": "Nicht jede Stille verlangt nach einer Geschichte. Ein geschützter Sitzplatz, ein leiser Empfang und ein unaufgeregter Becher Wasser helfen manchmal mehr als Fragen."
+          }
+        ],
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Merrik Trevoryn · 44 Jahre",
+            "text": "<p>Gebürtiger Gwynthorer. Im Großen Krieg lernte er Hrolf und Aedan kennen. Er brachte die drei nach dem Frieden in seine Heimat und verhandelte 1722 den Kauf der Kanne. Kennt Hafenhandwerker, Veteranen und deren Familien beim Namen. Freundlich, aber bei gepanschtem Bier endet seine Geduld.</p><p>Ehemann Celyns; Vater von Cadri und Enlli. Bruder Eirians und Elidyrs, Sohn Nestwens.</p>"
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Hrolf Svathamar · 46 Jahre",
+            "text": "<p>Kam aus Rorikshall und blieb nach dem Krieg bei seinen Kameraden. Sein lautes Lachen gehört zum Schankraum, seine Ruhe zu dessen Sicherheit. Befehligt die Wachen nur in ernsten Fällen; im Alltag führt Ketil die Schichten. Fällt kein Urteil über einen alten Feind, bevor dieser selbst gesprochen hat.</p><p>Ehemann Eirians; Vater von Styr und Heledd. Bruder Ketils und Runas; Merriks Schwager.</p>"
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Aedan Dubhdarach · 45 Jahre",
+            "text": "<p>Der Albe aus Leitheach lernte Merrik und Hrolf zwischen Feldlagern, Verwundetenwagen und gemeinsam überstandenen Schlachten kennen. Heute verhandelt er Lieferungen und bewahrt im Hinterzimmer die Ruhe. Höflich, aufmerksam und verschwiegen; erinnert sich erstaunlich genau an unbezahlte Zechen, ebenso genau aber an erwiesene Hilfe.</p><p>Seit 1724 mit Mair verheiratet. Vater von Neifion und Eirlys; Stiefvater Caradogs.</p>"
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Drei Familien unter einem Dach",
+            "text": "<p>Hrolf heiratete Merriks Schwester <strong>Eirian Trevoryn</strong>. Sie führt als Hausvögtin Personal und Dienstpläne; ihre Kinder sind <strong>Styr (15)</strong> und <strong>Heledd (10)</strong>. Hrolfs Geschwister <strong>Ketil (38)</strong> und <strong>Runa (34)</strong> tragen Verantwortung für Wache und Zimmer.</p><p>Aedan und <strong>Mair (43)</strong> sind seit 1724 verheiratet. Aus ihrer Ehe stammen <strong>Neifion (14)</strong> und <strong>Eirlys (9)</strong>. Mairs Sohn <strong>Caradog Tonnarth (22)</strong> aus ihrer früheren Verbindung mit Gareth Tonnarth ist Aedans Stiefsohn und der Meier der Kanne.</p><p>Merrik ist mit <strong>Celyn (41)</strong> verheiratet; ihre Kinder heißen <strong>Cadri (12)</strong> und <strong>Enlli (6)</strong>. Merriks Bruder <strong>Elidyr (35)</strong> führt den Tresen, seine Mutter <strong>Nestwen (68)</strong> hält in der Flickstube die Fäden zusammen. Jüngere Kinder gehören zur Hausgemeinschaft, nicht zum regulären Dienstplan.</p>"
+          }
+        ],
+        "historyTitle": "Geschichte & Ruf in Gwynthor",
+        "historyText": "<p>Der Große Krieg endete 1720. Während der folgenden zwei Jahre suchten die drei Freunde einen Ort, an dem ihre Ersparnisse und Fähigkeiten zusammenkommen konnten. Merriks Ortskenntnis führte sie zum Fachwerkhaus im östlichen Hafenviertel. Der schiefe Krug wurde nicht ersetzt: Er gab dem neuen Haus seinen Namen.</p><p>Anfangs bedienten die drei Gründer selbst, trugen Holz und schliefen zwischen ungestrichenen Wänden. Mit Familien und festem Personal wurde daraus eine verlässliche Schenke. Ihren Ruf verdankt sie weniger prunkvollen Festen als warmem Essen, vernünftigen Absprachen und Wirten, die einen schlechten Tag nicht mit schlechtem Charakter verwechseln.</p><p>Sir Roderic zählt zu ihren treuen Gästen. Auch Hywel Craigddu und andere Waffenknechte Gwynthors kehren nach dem Dienst ein. Vertrauliche Gespräche finden im Hinterzimmer statt; Streit wird nicht als Unterhaltung für den ganzen Schankraum geduldet.</p>",
+        "worksTitle": "Was das Haus ausmacht",
+        "works": [
+          "Drei gleichberechtigte Teilhaber, die wichtige Entscheidungen gemeinsam treffen.",
+          "Drei erwachsene Schankmägde mit eigenem Charakter: Delyth, Tesni und Tangwystl.",
+          "Ein eingespielter Haushalt mit eigenen Verantwortlichen für Schank, Küche, Zimmer, Vorräte und Hausfrieden.",
+          "Vier Vorspeisen, acht Hauptgerichte und drei wöchentliche Wildspezialitäten.",
+          "Die Schenke liegt im Osten des Hafenviertels; das Osttor ist die nahe Wegmarke.",
+          "Ein Ponter meldet den Lieferhof; ein Cenyric-Kater hält trockene Lagerräume frei."
+        ],
+        "triviaTitle": "Trivia",
+        "trivia": [
+          "Dies ist Sir Roderics Lieblingskneipe!",
+          "Nestwen hebt aus alter Gewohnheit einen zusätzlichen Teller auf.",
+          "Elidyr behält Bestellungen besser als Geburtstage; Mair vergisst keines von beidem.",
+          "Der Hauskater Briwsion hat mehr Sitzplätze als jeder zahlende Stammgast."
+        ],
+        "quotesTitle": "Zitate",
+        "quotes": [
+          "„Wenn du den Krieg erzählen willst, hören wir zu. Wenn nicht, gibt es trotzdem Suppe.“ — Merrik",
+          "„Drei Männer haben das Haus gekauft. Die anderen haben erst eine Kanne daraus gemacht.“ — Hrolf",
+          "„Eine offene Rechnung ist nicht immer eine unbezahlte Schuld.“ — Mair"
+        ],
+        "connectionsTitle": "Inhaber & Hausgemeinschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Merrik Trevoryn",
+            "detail": "Gleichberechtigter Mitinhaber · Ortskontakte",
+            "image": "./assets/krumme-kanne/references/merrik.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Hrolf Svathamar",
+            "detail": "Gleichberechtigter Mitinhaber · Hausfrieden",
+            "image": "./assets/krumme-kanne/references/hrolf.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Aedan Dubhdarach",
+            "detail": "Gleichberechtigter Mitinhaber · Einkauf & Gäste",
+            "image": "./assets/krumme-kanne/references/aedan.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "heading",
+            "title": "Verwaltung & Familie",
+            "detail": "Die einzelnen Personalplätze mit Alter, Herkunft und Biografie stehen in den sechs Hierarchiereitern."
+          },
+          {
+            "type": "connection",
+            "name": "Eirian Trevoryn",
+            "detail": "Hausvögtin · Dienstpläne & Personal · Merriks jüngere Schwester, Hrolfs Ehefrau; Mutter von Styr und Heledd.",
+            "image": "./assets/krumme-kanne/portraits/eirian.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Mair",
+            "detail": "Rechnungsführerin · Kasse & Gästebuch · Aedans Ehefrau; Mutter Caradogs aus der beendeten Verbindung mit Gareth Tonnarth sowie von Neifion und Eirlys.",
+            "image": "./assets/krumme-kanne/portraits/mair.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Celyn",
+            "detail": "Vorratsmeisterin · Versorgung & Wäsche · Merriks Ehefrau; Mutter von Cadri und Enlli.",
+            "image": "./assets/krumme-kanne/portraits/celyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Caradog Tonnarth",
+            "detail": "Meier · Lieferhof, Reparaturen & Vorratstransport · Mairs Sohn von Gareth Tonnarth; Aedans Stiefsohn und älterer Halbbruder Neifions und Eirlys’.",
+            "image": "./assets/krumme-kanne/portraits/caradog.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Nestwen Trevoryn",
+            "detail": "Wäschehüterin · Flickstube & Familienälteste · Mutter Merriks, Eirians und Elidyrs; Großmutter von Styr, Heledd, Cadri und Enlli.",
+            "image": "./assets/krumme-kanne/portraits/nestwen.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Dokumente & Aufzeichnungen",
+        "documents": [
+          {
+            "icon": "../IconOrdner/Cktraits/Trait_education_stewardship_3.png",
+            "title": "Kassenbuch & Hausordnung",
+            "text": "Mair führt Rechnungen und Gästebuch; Eirian Dienstpläne und Löhne. Der Lieferhof gehört zu Caradogs Verantwortung.",
+            "link": ""
+          }
+        ],
+        "footer": "„Der Krieg machte uns zu Brüdern. Die Kanne gab uns ein Zuhause.“"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "commentThreadKey": "p-mqhcf3q2-43lua",
+      "pageTitle": "✦ — Angestellte— ✦",
+      "hierarchyPage": true,
+      "hierarchy": {
+        "layoutMode": "vertical",
+        "treeDisplayMode": "tabs",
+        "cardFontScale": 95,
+        "portraitScale": 130,
+        "chartScale": 100,
+        "eyebrow": "Hierarchie",
+        "subtitle": "Die Krumme Kanne",
+        "centerLabel": "Struktur der Krummen Kanne",
+        "emblem": "./assets/krumme-kanne/references/kanne-schild.png",
+        "sideImage": "./assets/krumme-kanne/references/kanne-schild.png",
+        "organizationTitle": "DIE KRUMME KANNE",
+        "motto": "Kameradschaft. Diskretion. Ehrlichkeit.",
+        "description": "<p>Die Krumme Kanne liegt im Osten des Hafenviertels von Gwynthor. Die drei Inhaber stehen gleichberechtigt nebeneinander. Darunter führen benannte Verantwortliche klar abgegrenzte Bereiche; jeder gezeigte Platz gehört einer konkreten Person.</p>",
+        "detailsTitle": "Details",
+        "details": [
+          {
+            "icon": "*",
+            "label": "Gegründet",
+            "value": "1722 · nach dem Großen Krieg"
+          },
+          {
+            "icon": "*",
+            "label": "Standort",
+            "value": "Östliches Hafenviertel, Gwynthor"
+          },
+          {
+            "icon": "*",
+            "label": "Inhaber",
+            "value": "Merrik, Hrolf & Aedan · gleichberechtigt"
+          },
+          {
+            "icon": "*",
+            "label": "Hausgemeinschaft",
+            "value": "23 Erwachsene · 6 Kinder · 2 Tiere"
+          },
+          {
+            "icon": "*",
+            "label": "Küche",
+            "value": "1 Meisterkoch · 2 Kochgehilfen"
+          },
+          {
+            "icon": "*",
+            "label": "Sicherheit",
+            "value": "3 feste Wachplätze · Ponter"
+          },
+          {
+            "icon": "*",
+            "label": "Schankraum",
+            "value": "Etwa 40 Gäste · wechselnde Schichten"
+          }
+        ],
+        "quoteLabel": "Wahrspruch",
+        "quote": "<!--StartFragment-->„Unter diesem Dach zählt die Geschichte eines Menschen mehr als sein Titel.“<br><br><!--EndFragment-->",
+        "chartTitle": "Menschen der Krummen Kanne",
+        "chartIntro": "Die Reiter wechseln den angezeigten Bereich innerhalb dieser Seite. Mehrfach gezeigte Angehörige bleiben dieselben Personen. Dienstleitungen teilen Schichten ein; Kinder helfen nur altersgemäß und haben Zeit für Unterricht und Familie.",
+        "trees": [
+          {
+            "id": "fuehrung",
+            "label": "Führung",
+            "parentTreeId": "",
+            "levels": [
+              {
+                "label": "Drei gleichberechtigte Inhaber",
+                "nodes": [
+                  {
+                    "title": "Merrik Trevoryn",
+                    "subtitle": "Gleichberechtigter Mitinhaber · Ortskontakte · 44 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/references/merrik.png",
+                    "text": "<p>Ehemann Celyns; Vater von Cadri und Enlli. Bruder Eirians und Elidyrs, Sohn Nestwens.</p><p>Gebürtiger Gwynthorer. Im Großen Krieg lernte er Hrolf und Aedan kennen. Er brachte die drei nach dem Frieden in seine Heimat und verhandelte 1722 den Kauf der Kanne. Kennt Hafenhandwerker, Veteranen und deren Familien beim Namen. Freundlich, aber bei gepanschtem Bier endet seine Geduld.</p>"
+                  },
+                  {
+                    "title": "Hrolf Svathamar",
+                    "subtitle": "Gleichberechtigter Mitinhaber · Hausfrieden · 46 Jahre · Aldrimarer · Rorikshall",
+                    "portrait": "./assets/krumme-kanne/references/hrolf.png",
+                    "text": "<p>Ehemann Eirians; Vater von Styr und Heledd. Bruder Ketils und Runas; Merriks Schwager.</p><p>Kam aus Rorikshall und blieb nach dem Krieg bei seinen Kameraden. Sein lautes Lachen gehört zum Schankraum, seine Ruhe zu dessen Sicherheit. Befehligt die Wachen nur in ernsten Fällen; im Alltag führt Ketil die Schichten. Fällt kein Urteil über einen alten Feind, bevor dieser selbst gesprochen hat.</p>"
+                  },
+                  {
+                    "title": "Aedan Dubhdarach",
+                    "subtitle": "Gleichberechtigter Mitinhaber · Einkauf & Gäste · 45 Jahre · Albe · Leitheach",
+                    "portrait": "./assets/krumme-kanne/references/aedan.png",
+                    "text": "<p>Seit 1724 mit Mair verheiratet. Vater von Neifion und Eirlys; Stiefvater Caradogs.</p><p>Der Albe aus Leitheach lernte Merrik und Hrolf zwischen Feldlagern, Verwundetenwagen und gemeinsam überstandenen Schlachten kennen. Heute verhandelt er Lieferungen und bewahrt im Hinterzimmer die Ruhe. Höflich, aufmerksam und verschwiegen; erinnert sich erstaunlich genau an unbezahlte Zechen, ebenso genau aber an erwiesene Hilfe.</p>"
+                  }
+                ]
+              },
+              {
+                "label": "Verwaltung & Organisation",
+                "nodes": [
+                  {
+                    "title": "Eirian Trevoryn",
+                    "subtitle": "Hausvögtin · Dienstpläne & Personal · 42 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/eirian.png",
+                    "text": "<p>Merriks jüngere Schwester, Hrolfs Ehefrau; Mutter von Styr und Heledd.</p><p>Leitet den Alltag im Auftrag aller drei Inhaber: Dienstplan, Löhne, Zimmerbelegung und Beschwerden. Eine gestrichene Schicht bemerkt sie ebenso schnell wie einen heimlich bedürftigen Gast. Ihr Schlüsselbund klappert selten; meist reicht ein Blick. Hrolf behauptet, er habe im Krieg weniger gefürchtete Befehle gehört.</p>"
+                  },
+                  {
+                    "title": "Mair",
+                    "subtitle": "Rechnungsführerin · Kasse & Gästebuch · 43 Jahre · Cenyri · Gwynthor",
+                    "portrait": "./assets/krumme-kanne/portraits/mair.png",
+                    "text": "<p>Aedans Ehefrau; Mutter Caradogs aus der beendeten Verbindung mit Gareth Tonnarth sowie von Neifion und Eirlys.</p><p>Wurde 1697 in Gwynthor geboren. Brachte ihren Sohn Caradog in die Ehe mit Aedan mit; 1726 und 1731 wurden Neifion und Eirlys geboren. Führt Kassenbuch und offene Rechnungen mit ruhiger Genauigkeit. Wer ihr einen Rechenfehler nachweist, bekommt ein ehrliches Dankeschön; wer ihn erfindet, eine zweite Rechnung.</p>"
+                  },
+                  {
+                    "title": "Celyn",
+                    "subtitle": "Vorratsmeisterin · Versorgung & Wäsche · 41 Jahre · Cenyri · Gwynthor",
+                    "portrait": "./assets/krumme-kanne/portraits/celyn.png",
+                    "text": "<p>Merriks Ehefrau; Mutter von Cadri und Enlli.</p><p>Verantwortet Einkaufsliste, Lagerbestand, saubere Wäsche und die Absprachen mit der Küche. Riecht verdorbenes Korn, bevor der Sack offen ist, und spart am Schwund statt an Portionen. Bei ihr bekommt auch ein verspäteter Küchengehilfe erst etwas zu essen und dann seine Standpauke.</p>"
+                  }
+                ]
+              },
+              {
+                "label": "Meier · Hof und Betriebswege",
+                "nodes": [
+                  {
+                    "title": "Caradog Tonnarth",
+                    "subtitle": "Meier · Lieferhof, Reparaturen & Vorratstransport · 22 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/caradog.png",
+                    "text": "<p>Mairs Sohn von Gareth Tonnarth; Aedans Stiefsohn und älterer Halbbruder Neifions und Eirlys’.</p><p>Kam 1718 zur Welt und wuchs später mit seinen jüngeren Halbgeschwistern in der Kanne auf. Organisiert Liefertermine, Fasswechsel, Brennholz und Handwerker. Mag Aedan, nennt ihn jedoch erst nach einem zweiten Krug gelegentlich Vater. Fragt lieber zweimal nach, als eine Last auf der falschen Treppe abzustellen.</p>"
+                  }
+                ]
+              },
+              {
+                "label": "Schreibstube · Ausbildung",
+                "nodes": [
+                  {
+                    "title": "Neifion Dubhdarach",
+                    "subtitle": "Schreiberlehrling · Bei Mair · 14 Jahre · Albisch-cenyrische Familie",
+                    "portrait": "./assets/krumme-kanne/portraits/neifion.png",
+                    "text": "<p>Sohn Aedans und Mairs; Bruder von Eirlys, Halbbruder Caradogs.</p><p>Übt nach dem Unterricht Lieferlisten und einfache Abrechnungen. Hat Aedans dunkelbraune Locken und Mairs Beharrlichkeit geerbt. Verfasst heimlich erstaunlich bissige Beschreibungen der Stammgäste und nennt sie Schreibübungen.</p>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ausschank",
+            "label": "Ausschank",
+            "parentTreeId": "fuehrung",
+            "levels": [
+              {
+                "label": "Schankwirtsmeister · Empfang am Tresen",
+                "nodes": [
+                  {
+                    "title": "Elidyr Trevoryn",
+                    "subtitle": "Schankwirtsmeister · Empfang & Ablauf · 35 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/elidyr.png",
+                    "text": "<p>Jüngerer Bruder Merriks und Eirians; Onkel ihrer Kinder.</p><p>Steht am Tresen, empfängt Gäste, verteilt Tische und dirigiert den Service. Kann sechs Bestellungen behalten, aber keinen Geburtstagsvers. Sein Humor wird trockener, je voller der Raum ist. Eine Beschwerde hört er bis zum Ende an; bei einem Griff nach einer Schankmagd ruft er sofort die Wache.</p>"
+                  }
+                ]
+              },
+              {
+                "label": "Leitung des Tischdienstes",
+                "nodes": [
+                  {
+                    "title": "Delyth",
+                    "subtitle": "Erste Schankmagd · Tischdienst · 27 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/delyth.png",
+                    "text": "<p>Führt den Tischdienst, hält die Laufwege frei und weist Tesni, Tangwystl und Fintan ein. Weiß, wer seine Suppe langsam braucht und wer nur wichtig aussehen möchte. Kräftige Statur, ein keckes Lächeln und eine Zunge, die schneller ist als die meisten Hände. Steckt Trinkgeld für gemeinsame Mahlzeiten beiseite und wird empört, wenn man sie dafür großzügig nennt.</p>"
+                  }
+                ]
+              },
+              {
+                "label": "Bewirtung der Gäste · Drei weitere feste Plätze",
+                "nodes": [
+                  {
+                    "title": "Tesni",
+                    "subtitle": "Schankmagd · Getränke & Abräumen · 20 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/tesni.png",
+                    "text": "<p>Schnell mit Krügen und mit einem Lachen, das den Tresen erreicht, bevor sie selbst dort ist. Merkt sich Bestellungen über kleine Reime. Ein harmloser Flirt gehört für sie zum Abend; ungebetene Hände beantwortet sie mit einem Schritt zurück und einem Ruf nach Delyth. Singt Feldzuglieder ausschließlich beim Aufräumen.</p>"
+                  },
+                  {
+                    "title": "Tangwystl",
+                    "subtitle": "Schankmagd · Abendtische & Stammgäste · 31 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/tangwystl.png",
+                    "text": "<p>Kennt die Stammgäste und deren Ausreden beinahe auswendig. Breit gebaut, kupferlockig und mit großer Freude an zweideutigen Antworten. Ihr offener Charme macht die Runden länger, ihr gutes Gedächtnis die Zechen vollständig. Ein Flirt ist für sie eine Einladung zum Wortwechsel, kein Versprechen.</p>"
+                  },
+                  {
+                    "title": "Fintan",
+                    "subtitle": "Schankknecht · Speisen & Abenddienst · 28 Jahre · Albe · Leitheach",
+                    "portrait": "./assets/krumme-kanne/portraits/fintan.png",
+                    "text": "<p>Kam über einen von Aedans Fuhrleuten nach Gwynthor. Trägt schwere Platten ruhig durch den dichtesten Raum und hört mehr zu, als er spricht. Korrigiert albische Gerichtsnamen mit höflicher Beharrlichkeit; beim eigenen Rheunwaith darf dafür gelacht werden.</p>"
+                  }
+                ]
+              },
+              {
+                "label": "Schanklehre · Frühe Schicht",
+                "nodes": [
+                  {
+                    "title": "Styr Svathamar",
+                    "subtitle": "Schanklehrling · Unter Elidyrs Aufsicht · 15 Jahre · Aldrimarisch-cenyrische Familie",
+                    "portrait": "./assets/krumme-kanne/portraits/styr.png",
+                    "text": "<p>Sohn Hrolfs und Eirians; Heledds älterer Bruder.</p><p>Lernt Empfang, Rechnen und Bestellungen. Seine Schichten enden vor dem späten Zechenbetrieb. Hat Hrolfs kräftigen Bau und Eirians Blick für Unordnung. Hält sich für schwer zu durchschauen, vor allem dann, wenn er ein Tablett zu viel auflädt.</p>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "zimmer-versorgung",
+            "label": "Zimmer & Versorgung",
+            "parentTreeId": "fuehrung",
+            "levels": [
+              {
+                "label": "Vorräte und Versorgung",
+                "nodes": [
+                  {
+                    "title": "Celyn",
+                    "subtitle": "Vorratsmeisterin · Versorgung & Wäsche · 41 Jahre · Cenyri · Gwynthor",
+                    "portrait": "./assets/krumme-kanne/portraits/celyn.png",
+                    "text": "<p>Merriks Ehefrau; Mutter von Cadri und Enlli.</p><p>Verantwortet Einkaufsliste, Lagerbestand, saubere Wäsche und die Absprachen mit der Küche. Riecht verdorbenes Korn, bevor der Sack offen ist, und spart am Schwund statt an Portionen. Bei ihr bekommt auch ein verspäteter Küchengehilfe erst etwas zu essen und dann seine Standpauke.</p>"
+                  }
+                ]
+              },
+              {
+                "label": "Hausmeisterin · Zimmerdienst",
+                "nodes": [
+                  {
+                    "title": "Runa Svathamar",
+                    "subtitle": "Hausmeisterin · Zimmer & Kammern · 34 Jahre · Aldrimarerin · Rorikshall",
+                    "portrait": "./assets/krumme-kanne/portraits/runa.png",
+                    "text": "<p>Jüngere Schwester Hrolfs und Ketils.</p><p>Folgte ihren Brüdern nach Gwynthor und leitet inzwischen Zimmerdienst und Hausreinigung unter Celyns Versorgungsplanung. Beurteilt Fremde zunächst nach deren Umgang mit nassen Stiefeln. Eine verlorene Geldbörse verwahrt sie sorgfältig; eine Ausrede für schmutzige Laken deutlich weniger.</p>"
+                  }
+                ]
+              },
+              {
+                "label": "Zwei Mägde · Ein Hausbursche · Flickstube",
+                "nodes": [
+                  {
+                    "title": "Awenna",
+                    "subtitle": "Zimmermagd · Obere Kammern · 26 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/awenna.png",
+                    "text": "<p>Richtet Betten und Waschkrüge her und bemerkt beschädigte Riegel frühzeitig. Verleiht Nadeln, niemals ihren guten Kamm. Legt wortlos ein zweites Kissen bereit, wenn ein Gast wegen alter Wunden nicht flach schlafen kann.</p>"
+                  },
+                  {
+                    "title": "Llinos",
+                    "subtitle": "Hausmagd · Waschwasser & Schankstube · 21 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/llinos.png",
+                    "text": "<p>Sorgt für frisches Wasser, Scheuerarbeit und Lampenöl. Spricht beim Arbeiten mit dem Hauskater, als wäre er ein säumiger Kollege. Lernt bei Nestwen stopfen und besteht darauf, dass ihre ersten krummen Nähte besonders haltbar seien.</p>"
+                  },
+                  {
+                    "title": "Heilyn",
+                    "subtitle": "Hausbursche · Holz, Wasser & Botengänge · 18 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/heilyn.png",
+                    "text": "<p>Hilft Caradog beim Tragen, Runa beim Wasser und der Küche beim Holz. Möchte sich auf keine dieser Laufbahnen festlegen, solange jede einen anderen Vorteil verspricht. Legt für seine kranke Tante jede Woche einen Teil des Lohns zurück.</p>"
+                  },
+                  {
+                    "title": "Nestwen Trevoryn",
+                    "subtitle": "Wäschehüterin · Flickstube & Familienälteste · 68 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/nestwen.png",
+                    "text": "<p>Mutter Merriks, Eirians und Elidyrs; Großmutter von Styr, Heledd, Cadri und Enlli.</p><p>Arbeitet nach eigenen Kräften am hellen Fenster, flickt Wäsche und passt auf die jüngeren Kinder auf. Hat ihren Sohn aus dem Krieg zurückbekommen und sich angewöhnt, immer einen Teller mehr aufzuheben. Darf als Einzige Hrolf mitten in einer Geschichte unterbrechen, um ihn an einen losen Knopf zu erinnern.</p>"
+                  }
+                ]
+              },
+              {
+                "label": "Hauskinder · Gelegentliche Beiträge nach dem Unterricht",
+                "nodes": [
+                  {
+                    "title": "Cadri Trevoryn",
+                    "subtitle": "Hauskind · Kleine Werkstatt bei Caradog · 12 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/cadri.png",
+                    "text": "<p>Sohn Merriks und Celyns; Enllis älterer Bruder.</p><p>Darf nach dem Unterricht unter Aufsicht Hakenleisten und Holzkisten ausbessern. Möchte lieber Dinge bauen als Gäste bedienen. Seine jüngste Erfindung soll verhindern, dass der Kater auf Lieferscheinen schläft; sie wird bereits vom Kater benutzt.</p>"
+                  },
+                  {
+                    "title": "Heledd Svathamar",
+                    "subtitle": "Hauskind · Tischblumen & Lesestunde · 10 Jahre · Aldrimarisch-cenyrische Familie",
+                    "portrait": "./assets/krumme-kanne/portraits/heledd.png",
+                    "text": "<p>Tochter Hrolfs und Eirians; Styrs jüngere Schwester.</p><p>Hat einen eigenen Platz bei Nestwens Lesestunden und stellt gelegentlich die Tischblumen auf. Führt eine Liste der glaubwürdigsten Kriegsgeschichten; Hrolfs Berichte schneiden verdächtig gut ab. Keine feste Dienstschicht.</p>"
+                  },
+                  {
+                    "title": "Eirlys Dubhdarach",
+                    "subtitle": "Hauskind · Servietten & Geschichten · 9 Jahre · Albisch-cenyrische Familie",
+                    "portrait": "./assets/krumme-kanne/portraits/eirlys.png",
+                    "text": "<p>Tochter Aedans und Mairs; Neifions Schwester und Caradogs Halbschwester.</p><p>Faltet gelegentlich mit Nestwen Servietten, bevorzugt aber Boote daraus. Fragt die Veteranen nach ihren Pferden statt nach ihren Siegen. Ihre kleinen Beiträge gehören zum Familienalltag, nicht zum Dienstplan.</p>"
+                  },
+                  {
+                    "title": "Enlli Trevoryn",
+                    "subtitle": "Hauskind · Katerfreundin ohne Dienstpflicht · 6 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/enlli.png",
+                    "text": "<p>Tochter Merriks und Celyns; Cadris jüngere Schwester.</p><p>Hat in Nestwens Flickstube einen eigenen Hocker und betrachtet den Hauskater als ihren ältesten Kollegen. Erzählt ihm abends, welche Gäste freundlich waren. Besitzt keine Arbeitsschicht und darf weder an Herd noch Ausschank helfen.</p>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "kueche",
+            "label": "Küche",
+            "parentTreeId": "fuehrung",
+            "levels": [
+              {
+                "label": "Meisterkoch",
+                "nodes": [
+                  {
+                    "title": "Tadhg",
+                    "subtitle": "Meisterkoch · Herd & Speisekarte · 48 Jahre · Albe · Leitheach",
+                    "portrait": "./assets/krumme-kanne/portraits/tadhg.png",
+                    "text": "<p>Aedans alter Bekannter aus Leitheach. Verbindet albische Kräuter mit nordischem Rauch und cenyrischer Sättigungsküche. Hat nur zwei feste Gehilfen und besteht auf klarer Arbeitsteilung. Am Wildtag duldet er keine Gäste am Spieß, auch keine Mitinhaber.</p>"
+                  }
+                ]
+              },
+              {
+                "label": "Zwei feste Kochgehilfen",
+                "nodes": [
+                  {
+                    "title": "Alaw",
+                    "subtitle": "Kochgehilfin · Brühen, Gemüse & Brot · 24 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/alaw.png",
+                    "text": "<p>Führt Suppentopf, Gemüsevorbereitung und Fladenpfanne. Kann Tadhgs Schimpfen inzwischen nach Salzbedarf übersetzen. Probiert Kräutermischungen auf kleinen Brotresten aus und notiert Erfolge auf der Rückseite alter Lieferscheine.</p>"
+                  },
+                  {
+                    "title": "Iorath",
+                    "subtitle": "Kochgehilfe · Bratfeuer & Spülbank · 19 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/iorath.png",
+                    "text": "<p>Hält Glut und Spülbank in Gang und lernt den sicheren Umgang mit dem Bratspieß. Will irgendwann ein eigenes Gericht auf die Karte setzen. Bis dahin behauptet er, jeder angebrannte Rand gehöre zur nordischen Schule.</p>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sicherheit",
+            "label": "Sicherheit",
+            "parentTreeId": "fuehrung",
+            "levels": [
+              {
+                "label": "Wachführer · Erster von drei Wachplätzen",
+                "nodes": [
+                  {
+                    "title": "Ketil Svathamar",
+                    "subtitle": "Wachführer · Tür & Nachtplan · 38 Jahre · Aldrimarer · Rorikshall",
+                    "portrait": "./assets/krumme-kanne/portraits/ketil.png",
+                    "text": "<p>Hrolfs jüngerer Bruder; Runas älterer Bruder.</p><p>Kam nach dem Krieg mit Hrolf nach Cenyr. Teilt die drei Wachplätze ein und führt den Hund bei Kontrollgängen. Spricht leise, was Betrunkene oft zu spät bemerken. Holt erst einen Stuhl, dann Hilfe, wenn ein Veteran aus einem schlechten Traum hochschreckt.</p>"
+                  }
+                ]
+              },
+              {
+                "label": "Türdienst & Nachtwache · Zwei weitere Plätze",
+                "nodes": [
+                  {
+                    "title": "Gwern",
+                    "subtitle": "Türwächter · Frühe Schicht · 32 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/gwern.png",
+                    "text": "<p>Prüft den Eingang und begleitet Rausgeworfene bis zur Gasse. Ein ehemaliger Hafenarbeiter mit einer überraschenden Vorliebe für winzige Holzschnitzereien. Seine Hände wirken bedrohlicher als seine Stimme.</p>"
+                  },
+                  {
+                    "title": "Rhunel",
+                    "subtitle": "Nachtwächter · Hof & Hintertür · 29 Jahre · Cenyri",
+                    "portrait": "./assets/krumme-kanne/portraits/rhunel.png",
+                    "text": "<p>Hält Hintertür, Lieferhof und die ruhigen Stunden im Blick. Bemerkt ungewöhnliche Geräusche sofort, vergisst aber regelmäßig, wo er seinen eigenen Becher abgestellt hat. Vertraut dem Ponter, kontrolliert einen gemeldeten Schatten trotzdem selbst.</p>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "haustiere",
+            "label": "Haustiere",
+            "parentTreeId": "fuehrung",
+            "levels": [
+              {
+                "label": "Wachhund & Hauskater · Zwei feste Bewohner",
+                "nodes": [
+                  {
+                    "title": "Carreg",
+                    "subtitle": "Ponter · Cenyrischer Wachhund · 5 Jahre",
+                    "portrait": "./assets/krumme-kanne/portraits/carreg.png",
+                    "text": "<p>Ketils ausgebildeter Ponter bewacht Hof und Hintertür. Schlank, graubraun, mit aufgerichteten Ohren; meldet Veränderungen durch einen einzelnen klaren Laut. Sucht keinen Kampf und bleibt bei unruhigen Gästen dicht bei seinem Hundeführer. Die Kinder füttern ihn nur zusammen mit Ketil.</p><p><a href=\"../Bestiarium/tiere/vieh/haustiere/hunde/ponter/index.html\" target=\"_blank\" rel=\"noopener\">Bestiarium · Ponter</a></p>"
+                  },
+                  {
+                    "title": "Briwsion",
+                    "subtitle": "Cenyric · Hauskater & Mäusefänger · 7 Jahre",
+                    "portrait": "./assets/krumme-kanne/portraits/briwsion.png",
+                    "text": "<p>Ein gedrungener rotbraun getigerter Cenyric-Kater mit weißer Brust, eingerissenem linkem Ohr und grünen Augen. Kam als junger Mäusefänger mit einer Hafenlieferung und blieb. Hält die trockenen Lagerräume frei, schläft auf warmen Lieferscheinen und lässt sich von Enlli Geschichten erzählen. Lebensmittel und Küchenflächen bleiben katzenfrei.</p><p><a href=\"../Bestiarium/tiere/vieh/haustiere/katzen/cenyric/index.html\" target=\"_blank\" rel=\"noopener\">Bestiarium · Cenyric</a></p>"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "levels": [
+          {
+            "label": "Drei gleichberechtigte Inhaber",
+            "nodes": [
+              {
+                "title": "Merrik Trevoryn",
+                "subtitle": "Gleichberechtigter Mitinhaber · Ortskontakte · 44 Jahre · Cenyri",
+                "portrait": "./assets/krumme-kanne/references/merrik.png",
+                "text": "<p>Ehemann Celyns; Vater von Cadri und Enlli. Bruder Eirians und Elidyrs, Sohn Nestwens.</p><p>Gebürtiger Gwynthorer. Im Großen Krieg lernte er Hrolf und Aedan kennen. Er brachte die drei nach dem Frieden in seine Heimat und verhandelte 1722 den Kauf der Kanne. Kennt Hafenhandwerker, Veteranen und deren Familien beim Namen. Freundlich, aber bei gepanschtem Bier endet seine Geduld.</p>"
+              },
+              {
+                "title": "Hrolf Svathamar",
+                "subtitle": "Gleichberechtigter Mitinhaber · Hausfrieden · 46 Jahre · Aldrimarer · Rorikshall",
+                "portrait": "./assets/krumme-kanne/references/hrolf.png",
+                "text": "<p>Ehemann Eirians; Vater von Styr und Heledd. Bruder Ketils und Runas; Merriks Schwager.</p><p>Kam aus Rorikshall und blieb nach dem Krieg bei seinen Kameraden. Sein lautes Lachen gehört zum Schankraum, seine Ruhe zu dessen Sicherheit. Befehligt die Wachen nur in ernsten Fällen; im Alltag führt Ketil die Schichten. Fällt kein Urteil über einen alten Feind, bevor dieser selbst gesprochen hat.</p>"
+              },
+              {
+                "title": "Aedan Dubhdarach",
+                "subtitle": "Gleichberechtigter Mitinhaber · Einkauf & Gäste · 45 Jahre · Albe · Leitheach",
+                "portrait": "./assets/krumme-kanne/references/aedan.png",
+                "text": "<p>Seit 1724 mit Mair verheiratet. Vater von Neifion und Eirlys; Stiefvater Caradogs.</p><p>Der Albe aus Leitheach lernte Merrik und Hrolf zwischen Feldlagern, Verwundetenwagen und gemeinsam überstandenen Schlachten kennen. Heute verhandelt er Lieferungen und bewahrt im Hinterzimmer die Ruhe. Höflich, aufmerksam und verschwiegen; erinnert sich erstaunlich genau an unbezahlte Zechen, ebenso genau aber an erwiesene Hilfe.</p>"
+              }
+            ]
+          },
+          {
+            "label": "Verwaltung & Organisation",
+            "nodes": [
+              {
+                "title": "Eirian Trevoryn",
+                "subtitle": "Hausvögtin · Dienstpläne & Personal · 42 Jahre · Cenyri",
+                "portrait": "./assets/krumme-kanne/portraits/eirian.png",
+                "text": "<p>Merriks jüngere Schwester, Hrolfs Ehefrau; Mutter von Styr und Heledd.</p><p>Leitet den Alltag im Auftrag aller drei Inhaber: Dienstplan, Löhne, Zimmerbelegung und Beschwerden. Eine gestrichene Schicht bemerkt sie ebenso schnell wie einen heimlich bedürftigen Gast. Ihr Schlüsselbund klappert selten; meist reicht ein Blick. Hrolf behauptet, er habe im Krieg weniger gefürchtete Befehle gehört.</p>"
+              },
+              {
+                "title": "Mair",
+                "subtitle": "Rechnungsführerin · Kasse & Gästebuch · 43 Jahre · Cenyri · Gwynthor",
+                "portrait": "./assets/krumme-kanne/portraits/mair.png",
+                "text": "<p>Aedans Ehefrau; Mutter Caradogs aus der beendeten Verbindung mit Gareth Tonnarth sowie von Neifion und Eirlys.</p><p>Wurde 1697 in Gwynthor geboren. Brachte ihren Sohn Caradog in die Ehe mit Aedan mit; 1726 und 1731 wurden Neifion und Eirlys geboren. Führt Kassenbuch und offene Rechnungen mit ruhiger Genauigkeit. Wer ihr einen Rechenfehler nachweist, bekommt ein ehrliches Dankeschön; wer ihn erfindet, eine zweite Rechnung.</p>"
+              },
+              {
+                "title": "Celyn",
+                "subtitle": "Vorratsmeisterin · Versorgung & Wäsche · 41 Jahre · Cenyri · Gwynthor",
+                "portrait": "./assets/krumme-kanne/portraits/celyn.png",
+                "text": "<p>Merriks Ehefrau; Mutter von Cadri und Enlli.</p><p>Verantwortet Einkaufsliste, Lagerbestand, saubere Wäsche und die Absprachen mit der Küche. Riecht verdorbenes Korn, bevor der Sack offen ist, und spart am Schwund statt an Portionen. Bei ihr bekommt auch ein verspäteter Küchengehilfe erst etwas zu essen und dann seine Standpauke.</p>"
+              }
+            ]
+          },
+          {
+            "label": "Meier · Hof und Betriebswege",
+            "nodes": [
+              {
+                "title": "Caradog Tonnarth",
+                "subtitle": "Meier · Lieferhof, Reparaturen & Vorratstransport · 22 Jahre · Cenyri",
+                "portrait": "./assets/krumme-kanne/portraits/caradog.png",
+                "text": "<p>Mairs Sohn von Gareth Tonnarth; Aedans Stiefsohn und älterer Halbbruder Neifions und Eirlys’.</p><p>Kam 1718 zur Welt und wuchs später mit seinen jüngeren Halbgeschwistern in der Kanne auf. Organisiert Liefertermine, Fasswechsel, Brennholz und Handwerker. Mag Aedan, nennt ihn jedoch erst nach einem zweiten Krug gelegentlich Vater. Fragt lieber zweimal nach, als eine Last auf der falschen Treppe abzustellen.</p>"
+              }
+            ]
+          },
+          {
+            "label": "Schreibstube · Ausbildung",
+            "nodes": [
+              {
+                "title": "Neifion Dubhdarach",
+                "subtitle": "Schreiberlehrling · Bei Mair · 14 Jahre · Albisch-cenyrische Familie",
+                "portrait": "./assets/krumme-kanne/portraits/neifion.png",
+                "text": "<p>Sohn Aedans und Mairs; Bruder von Eirlys, Halbbruder Caradogs.</p><p>Übt nach dem Unterricht Lieferlisten und einfache Abrechnungen. Hat Aedans dunkelbraune Locken und Mairs Beharrlichkeit geerbt. Verfasst heimlich erstaunlich bissige Beschreibungen der Stammgäste und nennt sie Schreibübungen.</p>"
+              }
+            ]
+          }
+        ],
+        "footerNote": "„Der Krieg machte uns zu Brüdern. Die Kanne gab uns ein Zuhause.“",
+        "backLabel": "Zurueck zur Uebersicht",
+        "printLabel": "Akte drucken"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "commentThreadKey": "p-mqit2rii-e7e7i",
+      "imageWidth": 38,
+      "pageTitle": "✦ — Angebot — ✦",
+      "tradeCatalog": {
+        "headerIcon": "./assets/krumme-kanne/references/kanne-schild.png",
+        "title": "Güterregister",
+        "subtitle": "Speis & Trunk · Die Krumme Kanne",
+        "categories": [
+          {
+            "id": "speisen",
+            "label": "Standard Speisen"
+          },
+          {
+            "id": "getranke",
+            "label": "Standard Getränke"
+          },
+          {
+            "id": "besonderes-menu",
+            "label": "Hauseigene Speisen"
+          },
+          {
+            "id": "importierte-getraenke",
+            "label": "Importierte Getränke"
+          }
+        ],
+        "allLabel": "Alle Angebote",
+        "searchPlaceholder": "Gericht, Getränk oder Zutat suchen …",
+        "filterLabel": "Die Hauskarte",
+        "noteIcon": "♧",
+        "noteTitle": "Drei Küchen · Ein Herd",
+        "noteText": "Cenyrische Schüsseln, nordischer Rauch und albische Kräuter: Vier Vorspeisen und acht Hauptgerichte ergänzen die tägliche Karte. Drei besondere Wildgerichte gibt es jeweils nur an einem angekündigten Wochentag.",
+        "items": [
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "0,5",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-01",
+            "category": "speisen",
+            "title": "Eintopf des Tages",
+            "subtitle": "Speise",
+            "unit": "Pro Schüssel",
+            "image": "https://i.imgur.com/V5An4nq.png",
+            "imageFormat": "square",
+            "badge": "Aus der Hausküche",
+            "tags": [
+              "Standardküche"
+            ],
+            "description": "<p>Ein kräftiger, sättigender Eintopf auf Basis einer dicken Brühe, langsam gekocht mit grob geschnittenem Wurzelgemüse wie Karotten, Pastinaken und Sellerie. Linsen sorgen für Biss und Sämigkeit, während kleine, angebratene Speckwürfel dem Gericht eine herzhafte Note verleihen. Einfach, nahrhaft und ideal nach einem langen Tag auf der Straße. Wird heiß serviert in einer hölzernen Schale – Löffel inklusive.</p><p>In der Krummen Kanne gehört dieses Gericht zur einfachen Karte für den täglichen Hunger. Die Küche bereitet es portionsweise aus dem jeweiligen Tagesvorrat zu; die Schankmägde nennen auf Nachfrage die heutige Ausführung. Die angegebenen Beilagen gehören zur Portion, zusätzliche Bestellungen werden gesondert berechnet.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Schüssel"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "4",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-02",
+            "category": "speisen",
+            "title": "Geröstetes Fleisch",
+            "subtitle": "Speise",
+            "unit": "Pro Teller",
+            "image": "https://i.imgur.com/2K4MCGF.png",
+            "imageFormat": "square",
+            "badge": "Aus der Hausküche",
+            "tags": [
+              "Standardküche"
+            ],
+            "description": "<p>Saftiges Fleischstück, über offenem Feuer langsam gegart, bis es außen eine kräftige Röstaroma-Kruste trägt und innen zart bleibt. Dazu werden geschmorte Zwiebeln gereicht, in Fett und eigenem Saft karamellisiert. Begleitet wird das Gericht von zwei Scheiben geröstetem Bauernbrot – schlicht, sättigend, und ideal für hungrige Reisende. Serviert auf einem flachen Holzbrett, direkt aus der Pfanne.</p><p>In der Krummen Kanne gehört dieses Gericht zur einfachen Karte für den täglichen Hunger. Die Küche bereitet es portionsweise aus dem jeweiligen Tagesvorrat zu; die Schankmägde nennen auf Nachfrage die heutige Ausführung. Die angegebenen Beilagen gehören zur Portion, zusätzliche Bestellungen werden gesondert berechnet.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "0,1",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-03",
+            "category": "speisen",
+            "title": "Hafergrütze mit Schmalz",
+            "subtitle": "Speise",
+            "unit": "Pro Schüssel",
+            "image": "https://i.imgur.com/ZlFrksC.png",
+            "imageFormat": "square",
+            "badge": "Aus der Hausküche",
+            "tags": [
+              "Standardküche"
+            ],
+            "description": "<p>Grob geschroteter Hafer, langsam in Wasser und einer Prise Salz zu einer dickflüssigen Grütze aufgekocht. Obenauf ein kleiner Klecks Schmalz, der beim Servieren langsam zerläuft und dem Gericht eine herzhafte Tiefe verleiht. Einfaches, wärmendes Mahl, wie es in Hütten, Lagern und Tavernen gleichermaßen geschätzt wird. Deftig, nahrhaft – und genau richtig für den leeren Magen.</p><p>In der Krummen Kanne gehört dieses Gericht zur einfachen Karte für den täglichen Hunger. Die Küche bereitet es portionsweise aus dem jeweiligen Tagesvorrat zu; die Schankmägde nennen auf Nachfrage die heutige Ausführung. Die angegebenen Beilagen gehören zur Portion, zusätzliche Bestellungen werden gesondert berechnet.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Schüssel"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "1,1",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-04",
+            "category": "speisen",
+            "title": "Blutwurst & Kraut​",
+            "subtitle": "Speise",
+            "unit": "Pro Teller",
+            "image": "https://i.imgur.com/508vYQa.png",
+            "imageFormat": "landscape",
+            "badge": "Aus der Hausküche",
+            "tags": [
+              "Standardküche"
+            ],
+            "description": "<p>Zwei dicke Scheiben Blutwurst, in der Pfanne scharf angebraten, bis die Haut knusprig aufplatzt und das Innere weich und würzig bleibt. Dazu wird heißes Sauerkraut gereicht – mit Kümmel, Lorbeer und einem Hauch Apfelessig verfeinert. Ein deftiges Gericht für raue Tage, serviert auf einem flachen Teller mit dunklem Brot auf Wunsch. Rustikal, kräftig und beliebt bei jenen, die’s ehrlich mögen.</p><p>In der Krummen Kanne gehört dieses Gericht zur einfachen Karte für den täglichen Hunger. Die Küche bereitet es portionsweise aus dem jeweiligen Tagesvorrat zu; die Schankmägde nennen auf Nachfrage die heutige Ausführung. Die angegebenen Beilagen gehören zur Portion, zusätzliche Bestellungen werden gesondert berechnet.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "1,8",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-05",
+            "category": "speisen",
+            "title": "Gebackenes Huhn",
+            "subtitle": "Speise",
+            "unit": "Pro Teller",
+            "image": "https://i.imgur.com/JfVbk6H.png",
+            "imageFormat": "square",
+            "badge": "Aus der Hausküche",
+            "tags": [
+              "Standardküche"
+            ],
+            "description": "<p>Ein halbes Huhn, über offener Glut knusprig gebacken, mit goldbrauner Haut und kräftiger Würzung. Das Fleisch ist saftig, leicht rauchig im Geschmack, und wird begleitet von zwei dicken Scheiben Bauernbrot sowie einer Portion Hartkäse, grob geschnitten. Eine herzhafte, reichhaltige Mahlzeit – einfach, ehrlich und sättigend.</p><p>In der Krummen Kanne gehört dieses Gericht zur einfachen Karte für den täglichen Hunger. Die Küche bereitet es portionsweise aus dem jeweiligen Tagesvorrat zu; die Schankmägde nennen auf Nachfrage die heutige Ausführung. Die angegebenen Beilagen gehören zur Portion, zusätzliche Bestellungen werden gesondert berechnet.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller"
+            ],
+            "priceNote": "",
+            "conditions": "Saisonal und nur bei entsprechender Lieferung erhältlich."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "0,85",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-06",
+            "category": "speisen",
+            "title": "Bohneneintopf",
+            "subtitle": "Speise",
+            "unit": "Pro Schüssel",
+            "image": "https://i.imgur.com/Qc6RIks.png",
+            "imageFormat": "square",
+            "badge": "Aus der Hausküche",
+            "tags": [
+              "Standardküche"
+            ],
+            "description": "<p>Ein sämiger Eintopf aus weißen und braunen Bohnen, langsam geschmort mit fein gehacktem Lauch, Thymian und einer ordentlichen Portion gerösteter Speckwürfel. Die Brühe ist kräftig gewürzt, leicht rauchig im Geschmack und sättigend bis zum letzten Löffel. Serviert wird das Gericht mit zwei dicken Scheiben Bauernbrot – perfekt zum Tunken und Sattwerden. Herzhaft, deftig und ideal für kühle Abende.</p><p>In der Krummen Kanne gehört dieses Gericht zur einfachen Karte für den täglichen Hunger. Die Küche bereitet es portionsweise aus dem jeweiligen Tagesvorrat zu; die Schankmägde nennen auf Nachfrage die heutige Ausführung. Die angegebenen Beilagen gehören zur Portion, zusätzliche Bestellungen werden gesondert berechnet.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Schüssel"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "0,15",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-07",
+            "category": "speisen",
+            "title": "Geröstetes Bauernbrot",
+            "subtitle": "Speise",
+            "unit": "Pro Teller",
+            "image": "https://i.imgur.com/nZWyQPa.png",
+            "imageFormat": "square",
+            "badge": "Aus der Hausküche",
+            "tags": [
+              "Standardküche"
+            ],
+            "description": "<p>Zwei dicke Scheiben kräftiges Landbrot, über dem Feuer angeröstet, bis die Kruste leicht bricht und das Innere warm und weich bleibt. Je nach Wunsch bestrichen mit herzhaftem Salzschmalz oder aromatischem Knoblauchfett. Eine einfache, aber beliebte Beilage – perfekt zu einem Krug Bier oder als Stärkung zwischendurch. Rustikal, würzig, sättigend.</p><p>In der Krummen Kanne gehört dieses Gericht zur einfachen Karte für den täglichen Hunger. Die Küche bereitet es portionsweise aus dem jeweiligen Tagesvorrat zu; die Schankmägde nennen auf Nachfrage die heutige Ausführung. Die angegebenen Beilagen gehören zur Portion, zusätzliche Bestellungen werden gesondert berechnet.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "0,5",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-08",
+            "category": "speisen",
+            "title": "Frühstücksteller",
+            "subtitle": "Speise",
+            "unit": "Pro Teller",
+            "image": "https://i.imgur.com/wgQVjia.png",
+            "imageFormat": "square",
+            "badge": "Aus der Hausküche",
+            "tags": [
+              "Standardküche"
+            ],
+            "description": "<p>Ein deftiger Start in den Tag: knusprig gebratene Speckstreifen, ein frisch gebratenes Spiegelei mit leichtem Salzrand und gereifter Hartkäse, in dicken Streifen serviert. Einfach, nahrhaft und beliebt bei Reisenden und Handwerkern gleichermaßen.</p><p>Brot wird auf Wunsch separat gereicht und ist nicht im Preis enthalten.</p><p>In der Krummen Kanne gehört dieses Gericht zur einfachen Karte für den täglichen Hunger. Die Küche bereitet es portionsweise aus dem jeweiligen Tagesvorrat zu; die Schankmägde nennen auf Nachfrage die heutige Ausführung. Die angegebenen Beilagen gehören zur Portion, zusätzliche Bestellungen werden gesondert berechnet.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "2",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-09",
+            "category": "speisen",
+            "title": "Räucherfleisch",
+            "subtitle": "Speise",
+            "unit": "Pro Teller",
+            "image": "https://i.imgur.com/c2XjfdM.png",
+            "imageFormat": "square",
+            "badge": "Aus der Hausküche",
+            "tags": [
+              "Standardküche"
+            ],
+            "description": "<p>Dünn geschnittenes Räucherfleisch, kalt serviert, mit kräftigem, würzigem Aroma aus Buchenrauch und Salz. Begleitet wird die Platte von grünen Bohnen, zwei halbierten Zwiebeln und ein paar dünnen Brotscheiben. Eine herzhafte, einfache Speise – beliebt bei Jägern, Händlern und jedem, der’s kalt, deftig und ehrlich mag. Ideal zu einem Krug hellen Bieres oder Apfelmost.</p><p>In der Krummen Kanne gehört dieses Gericht zur einfachen Karte für den täglichen Hunger. Die Küche bereitet es portionsweise aus dem jeweiligen Tagesvorrat zu; die Schankmägde nennen auf Nachfrage die heutige Ausführung. Die angegebenen Beilagen gehören zur Portion, zusätzliche Bestellungen werden gesondert berechnet.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "3",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-10",
+            "category": "speisen",
+            "title": "Räucherfisch",
+            "subtitle": "Speise",
+            "unit": "Pro Teller",
+            "image": "https://i.imgur.com/14g3XgA.png",
+            "imageFormat": "square",
+            "badge": "Aus der Hausküche",
+            "tags": [
+              "Standardküche"
+            ],
+            "description": "<p>Ein ganzer Räucherfisch, über Buchenholz gegart, mit zartem Fleisch und feinem, salzigem Rauchgeschmack. Serviert mit leicht gedämpftem Lauch, einer Handvoll grüner Bohnen und einem Klecks hausgemachter Kräutersauce aus Dill, Petersilie und Schnittlauch. Eine fein gewürzte, aber bodenständige Mahlzeit – nahrhaft, frisch und besonders in Küstennähe sehr beliebt.</p><p>In der Krummen Kanne gehört dieses Gericht zur einfachen Karte für den täglichen Hunger. Die Küche bereitet es portionsweise aus dem jeweiligen Tagesvorrat zu; die Schankmägde nennen auf Nachfrage die heutige Ausführung. Die angegebenen Beilagen gehören zur Portion, zusätzliche Bestellungen werden gesondert berechnet.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "0,3",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-11",
+            "category": "speisen",
+            "title": "Sauergemüse",
+            "subtitle": "Speise",
+            "unit": "Pro Teller",
+            "image": "https://i.imgur.com/1sLGAIE.png",
+            "imageFormat": "square",
+            "badge": "Aus der Hausküche",
+            "tags": [
+              "Standardküche"
+            ],
+            "description": "<p>Eine bunte Auswahl an eingelegten Gemüsen: Gurkenscheiben, Karottenstreifen, rote Rüben und Zwiebelringe – alles in würziger Lake fermentiert, leicht sauer und kräftig im Geschmack. Gereicht mit einem Viertel Laib grobem Bauernbrot, das den kräftigen Essigton ausgleicht. Beliebt als kleine Mahlzeit oder Beilage zu deftigem Fleisch. Frisch, haltbar und voller Geschmack.</p><p>In der Krummen Kanne gehört dieses Gericht zur einfachen Karte für den täglichen Hunger. Die Küche bereitet es portionsweise aus dem jeweiligen Tagesvorrat zu; die Schankmägde nennen auf Nachfrage die heutige Ausführung. Die angegebenen Beilagen gehören zur Portion, zusätzliche Bestellungen werden gesondert berechnet.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "0,15",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-12",
+            "category": "getranke",
+            "title": "Dünnes gewä. Bier",
+            "subtitle": "Alkoholisches Getränk",
+            "unit": "Pro Krug",
+            "image": "https://i.imgur.com/mGrMfTt.png",
+            "imageFormat": "portrait",
+            "badge": "Am Tresen",
+            "tags": [
+              "Standardausschank"
+            ],
+            "description": "<p>Ein helles, stark verdünntes Gerstenbier, schwach im Geschmack, mit kaum wahrnehmbarem Hopfen. Günstig, leicht trüb und nur leicht alkoholisch – oft ausgeschenkt an Tagelöhner, Knappen oder Reisende mit wenig Münze. Mehr Durstlöscher als Genussmittel, dafür aber bekömmlich und sicherer als Brunnenwasser. Wird meist in einem groben Holzkrug serviert, ohne Schaumkrone.</p><p>Elidyr führt diesen Trunk im gewöhnlichen Ausschank der Kanne. Die angegebene Portion wird einzeln am Tisch oder direkt am Tresen gereicht. Wer eine bestimmte Herkunft oder Zunftabfüllung sucht, findet die namentlich geführten Biere und Whiskys unter „Importierte Getränke“.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Krug"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "0,5",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-13",
+            "category": "getranke",
+            "title": "Einfaches Starkbier",
+            "subtitle": "Alkoholisches Getränk",
+            "unit": "Pro Krug",
+            "image": "https://i.imgur.com/yh4qIxn.png",
+            "imageFormat": "portrait",
+            "badge": "Am Tresen",
+            "tags": [
+              "Standardausschank"
+            ],
+            "description": "<p>Ein dunkles, malzreiches Bier mit kräftigem Körper und leicht bitterer Note. Hergestellt aus geröstetem Getreide, mit einem Hauch Karamell und einer soliden Hopfenbasis. Wird kühl ausgeschenkt, mit dichter Schaumkrone im eisernen Krug. Beliebt bei Söldnern, Handwerkern und allen, die nach einem langen Tag etwas brauchen, das spürbar nachwirkt. Stark, sättigend und ehrlich gebraut – ohne Schnörkel, ohne Gnade.</p><p>Elidyr führt diesen Trunk im gewöhnlichen Ausschank der Kanne. Die angegebene Portion wird einzeln am Tisch oder direkt am Tresen gereicht. Wer eine bestimmte Herkunft oder Zunftabfüllung sucht, findet die namentlich geführten Biere und Whiskys unter „Importierte Getränke“.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Krug"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "1",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-14",
+            "category": "getranke",
+            "title": "Schlichter Honigmet",
+            "subtitle": "Alkoholisches Getränk",
+            "unit": "Pro Krug",
+            "image": "https://i.imgur.com/jvPNRu8.png",
+            "imageFormat": "portrait",
+            "badge": "Am Tresen",
+            "tags": [
+              "Standardausschank"
+            ],
+            "description": "<p>Ein goldener, klarer Met, süß im Geschmack, mit einem weichen Nachhall von Blütenhonig und einem Hauch Würze. Hergestellt aus einfachen Zutaten, ohne Firlefanz – doch mit Herz. Serviert im großen Humpen, leicht überschäumend, trinkt sich dieser Met wie ein Gruß aus sonnigen Tagen. Beliebt bei Bauern, Reisenden und solchen, die sich nach einem ehrlichen Tropfen sehnen, der Körper und Geist erwärmt.</p><p>Elidyr führt diesen Trunk im gewöhnlichen Ausschank der Kanne. Die angegebene Portion wird einzeln am Tisch oder direkt am Tresen gereicht. Wer eine bestimmte Herkunft oder Zunftabfüllung sucht, findet die namentlich geführten Biere und Whiskys unter „Importierte Getränke“.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Krug"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "0,6",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-15",
+            "category": "getranke",
+            "title": "Apfelwein",
+            "subtitle": "Alkoholisches Getränk",
+            "unit": "Pro Glas",
+            "image": "https://i.imgur.com/oFEsIDl.png",
+            "imageFormat": "portrait",
+            "badge": "Am Tresen",
+            "tags": [
+              "Standardausschank"
+            ],
+            "description": "<p>Ein klarer, herber Wein aus Äpfeln, wie ihn fast jede Region auf ihre eigene Weise keltert. Frisch gepresst, vergoren und in hölzernen Fässern gereift – dieser Trunk bringt den Geschmack von Herbstlaub, Obstgärten und alten Landwegen ins Glas. Leicht prickelnd auf der Zunge, dabei angenehm trocken. Getrunken aus einem einfachen Holzbecher, ist er der treue Begleiter für stille Abende wie auch für laute Tavernenrunden.</p><p>Elidyr führt diesen Trunk im gewöhnlichen Ausschank der Kanne. Die angegebene Portion wird einzeln am Tisch oder direkt am Tresen gereicht. Wer eine bestimmte Herkunft oder Zunftabfüllung sucht, findet die namentlich geführten Biere und Whiskys unter „Importierte Getränke“.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Glas"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "0,03",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-16",
+            "category": "getranke",
+            "title": "Wasser",
+            "subtitle": "Wasser",
+            "unit": "Pro Becher",
+            "image": "https://i.imgur.com/AaDqMUO.png",
+            "imageFormat": "portrait",
+            "badge": "Am Tresen",
+            "tags": [
+              "Standardausschank"
+            ],
+            "description": "<p>Klar, kühl und still – Wasser ist das schlichteste und zugleich kostbarste Getränk. In Krügen aus Holz oder Ton serviert, stammt es meist aus Brunnen, Quellen oder Regenfässern. In manchen Gegenden mit einem Hauch von Eisen oder Kalk im Geschmack, andernorts so frisch, als käme es direkt vom Gebirgsbach. Es löscht den Durst ohne Umstände – ehrlich, rein und unprätentiös.</p><p>Elidyr führt diesen Trunk im gewöhnlichen Ausschank der Kanne. Die angegebene Portion wird einzeln am Tisch oder direkt am Tresen gereicht. Wer eine bestimmte Herkunft oder Zunftabfüllung sucht, findet die namentlich geführten Biere und Whiskys unter „Importierte Getränke“.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Becher"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "1",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-17",
+            "category": "getranke",
+            "title": "Klosterbier",
+            "subtitle": "Alkoholisches Getränk",
+            "unit": "Pro Krug",
+            "image": "https://i.imgur.com/ZIRrEhf.png",
+            "imageFormat": "portrait",
+            "badge": "Am Tresen",
+            "tags": [
+              "Standardausschank"
+            ],
+            "description": "<p>Klosterbier stammt aus den nächstgelegenen Klöstern, in denen Mönche nicht nur beten, sondern auch brauen. Oft in kleinen Mengen hergestellt, landet es in regionalen Tavernen und Schankhäusern, wo es als ehrliches, kräftiges Bier geschätzt wird. Es ist meist günstiger als das Produkt großer Brauereien, aber deutlich sauberer und runder im Geschmack als das wässrige Kellerbräu einfacher Wirte.</p><p>Mitten zwischen Gebet und Handwerk gebraut, hat Klosterbier einen bodenständigen Ruf: schlicht, nahrhaft und überraschend beständig. Kein Festbier – aber ein Bier, das man trinken kann, ohne zu fluchen.</p><p>Elidyr führt diesen Trunk im gewöhnlichen Ausschank der Kanne. Die angegebene Portion wird einzeln am Tisch oder direkt am Tresen gereicht. Wer eine bestimmte Herkunft oder Zunftabfüllung sucht, findet die namentlich geführten Biere und Whiskys unter „Importierte Getränke“.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Krug"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "0,25",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-18",
+            "category": "getranke",
+            "title": "Kräuteraufguss (Tee)",
+            "subtitle": "Tee",
+            "unit": "Pro Tasse",
+            "image": "https://i.imgur.com/0mkuSb5.png",
+            "imageFormat": "portrait",
+            "badge": "Am Tresen",
+            "tags": [
+              "Standardausschank"
+            ],
+            "description": "<p>Ein dampfender Aufguss aus getrockneten Kräutern, oft mit Minze, Kamille, Thymian oder Fenchel verfeinert – je nachdem, was die Vorratskammer oder der Markt hergibt. Der Kräuteraufguss wird in einfachen Holz- oder Tonbechern gereicht und gilt als wärmendes, beruhigendes Getränk für Abende am Feuer oder kalte Morgenstunden. Nicht süß, nicht bitter – einfach wohltuend.</p><p>Elidyr führt diesen Trunk im gewöhnlichen Ausschank der Kanne. Die angegebene Portion wird einzeln am Tisch oder direkt am Tresen gereicht. Wer eine bestimmte Herkunft oder Zunftabfüllung sucht, findet die namentlich geführten Biere und Whiskys unter „Importierte Getränke“.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Tasse"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "1",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-19",
+            "category": "getranke",
+            "title": "Einfacher Branntwein",
+            "subtitle": "Hochprozentiger",
+            "unit": "Pro Glas",
+            "image": "https://i.imgur.com/e1Qv6Ct.png",
+            "imageFormat": "portrait",
+            "badge": "Am Tresen",
+            "tags": [
+              "Standardausschank"
+            ],
+            "description": "<p>Einfacher Branntwein ist genau das, wonach er klingt – lokal gebrannt, oft direkt beim Wirt, beim Bauern oder einem „versierten Bekannten“. Er wird aus allem hergestellt, was vergoren werden kann: Getreide, Obst, Weinreste – was eben da ist. Die Qualität schwankt gewaltig, aber der Effekt ist zuverlässig.</p><p>Man trinkt ihn selten aus Genuss, sondern weil man muss: zum Aufwärmen, Vergessen oder Durchhalten. In manchen Gegenden wird er als Medizin verkauft, in anderen einfach als „Stoff“. Brennt in der Kehle, zieht in den Kopf – und ist billig genug, um gefährlich zu sein.</p><p>Elidyr führt diesen Trunk im gewöhnlichen Ausschank der Kanne. Die angegebene Portion wird einzeln am Tisch oder direkt am Tresen gereicht. Wer eine bestimmte Herkunft oder Zunftabfüllung sucht, findet die namentlich geführten Biere und Whiskys unter „Importierte Getränke“.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Glas"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "1",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-20",
+            "category": "getranke",
+            "title": "Lokaler Kräuterschnaps",
+            "subtitle": "Hochprozentiger",
+            "unit": "Pro Glas",
+            "image": "https://i.imgur.com/E2plMP4.png",
+            "imageFormat": "portrait",
+            "badge": "Am Tresen",
+            "tags": [
+              "Standardausschank"
+            ],
+            "description": "<p>Lokaler Kräuterschnaps ist ein hausgemachter Schnaps, der mit dem versetzt wird, was Wiesen, Wälder und Gärten hergeben: Beifuß, Wermut, Wacholder, Angelika oder was der Großvater eben für heilkräftig hielt. Mal bitter, mal scharf, mal fast süß – je nachdem, wer ihn gemacht hat und wofür.</p><p>Getrunken wird er meist in kleinen Schlucken, oft „zur Verdauung“ oder „gegen das Wetter“, manchmal auch einfach zum Runterkommen. In der Taverne bestellt ihn meist der Ältere, der zu viel gesehen hat, oder der Krieger mit Magen aus Eisen. Nichts für Empfindliche – aber wer’s verträgt, schwört drauf.</p><p>Elidyr führt diesen Trunk im gewöhnlichen Ausschank der Kanne. Die angegebene Portion wird einzeln am Tisch oder direkt am Tresen gereicht. Wer eine bestimmte Herkunft oder Zunftabfüllung sucht, findet die namentlich geführten Biere und Whiskys unter „Importierte Getränke“.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Glas"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "1",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "standard-21",
+            "category": "getranke",
+            "title": "Kloster \"Spiritus\"",
+            "subtitle": "Hochprozentiger",
+            "unit": "Pro Glas",
+            "image": "https://i.imgur.com/w0pR8co.png",
+            "imageFormat": "portrait",
+            "badge": "Am Tresen",
+            "tags": [
+              "Standardausschank"
+            ],
+            "description": "<p>Kloster \"Spiritus\" ist der hochprozentige Bruder des Klosterbiers – gebrannt in kleinen Mengen, oft unter medizinischem Vorwand, mit dem Segen der Schrift und der Kunst der Destillation. Hergestellt wird er aus Wein, Kräutern oder Getreide, je nach Orden und Region. Klar, stark und rein – ein Destillat, das die Seele wärmt und den Körper schwanken lässt.</p><p>Er landet selten in den großen Handelsströmen, sondern eher in den Taschen von Heilkundigen, Händlern oder Wirten mit Verbindung zum Konvent. Günstiger als städtische Destillate, aber von höherer Qualität als der gepanschte Fusel der Landbevölkerung. Spiritus ist kein Luxus – aber ein ehrlicher Tropfen mit Geschichte.</p><p>Elidyr führt diesen Trunk im gewöhnlichen Ausschank der Kanne. Die angegebene Portion wird einzeln am Tisch oder direkt am Tresen gereicht. Wer eine bestimmte Herkunft oder Zunftabfüllung sucht, findet die namentlich geführten Biere und Whiskys unter „Importierte Getränke“.</p>",
+            "origin": "Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Glas"
+            ],
+            "priceNote": "",
+            "conditions": "Nach Tagesvorrat; die Schankmägde geben Auskunft."
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "0,7",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "lauchkaese",
+            "category": "besonderes-menu",
+            "title": "Warmer Lauchkäse auf Röstbrot",
+            "subtitle": "Vorspeise",
+            "unit": "Kleine Portion",
+            "image": "./assets/krumme-kanne/food/lauchkaese.png",
+            "imageFormat": "square",
+            "badge": "Vorspeise",
+            "tags": [
+              "Vorspeise",
+              "Fleischlos"
+            ],
+            "description": "<p>Cenyrischer Hartkäse, mit Lauch und Senfsaat geschmolzen, auf zwei dicken Scheiben geröstetem Roggenbrot. Dazu ein kleiner Klecks Apfelzwiebeln.</p><p>Der Käse wird mit einem Schuss hellem Bier glattgerührt. Erst danach kommen weich gedünsteter Lauch und grob zerstoßene Senfsaat hinzu. Tadhg zieht die Brote kurz an die Herdglut: Die Ränder sollen krachen, während die Mitte den geschmolzenen Käse aufsaugt.</p><p>Die Apfelzwiebeln bringen eine milde Säure gegen das Fett. Merrik bestellt diese Vorspeise gern für einen gemeinsam genutzten Tisch, an dem noch nicht alle angekommen sind. Zwei handfeste Schnitten lassen sich teilen, schmecken aber am besten, solange der Käse noch Fäden zieht.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Kleine Portion",
+              "Tägliche Hauskarte"
+            ],
+            "priceNote": "",
+            "conditions": "Täglich, solange der Vorrat reicht"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "1,5",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "rauchforelle",
+            "category": "besonderes-menu",
+            "title": "Leitheacher Rauchforelle mit Apfel",
+            "subtitle": "Vorspeise",
+            "unit": "Kleine Portion",
+            "image": "./assets/krumme-kanne/food/rauchforelle.png",
+            "imageFormat": "square",
+            "badge": "Vorspeise",
+            "tags": [
+              "Vorspeise"
+            ],
+            "description": "<p>Kalt geräucherte Forelle, fein gezupft, mit säuerlichem Apfel, Dill und einem Löffel Dickmilch. Aedans bevorzugter kleiner Auftakt.</p><p>Die Forelle wird nicht zu einer glatten Paste verarbeitet. Große, zarte Flocken behalten ihren eigenen Rauchgeschmack; die feinen Apfelstifte werden erst kurz vor dem Anrichten untergehoben. Dill und Dickmilch geben Frische, ohne den Fisch unter einer schweren Soße zu verstecken.</p><p>Aedan kennt diese Verbindung von Fisch, Obst und saurer Milch aus Leitheach. In der Kanne kommt ein Roggenknusper dazu, mit dem sich der letzte Rest aufnehmen lässt. Die kleine, kühl servierte Portion passt vor einen kräftigen Braten und ebenso zu einem hellen, herben Bier.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Kleine Portion",
+              "Tägliche Hauskarte"
+            ],
+            "priceNote": "",
+            "conditions": "Täglich, solange der Vorrat reicht"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "0,6",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "gerstenbruehe",
+            "category": "besonderes-menu",
+            "title": "Klare Gerstenbrühe der Heimkehrer",
+            "subtitle": "Vorspeise",
+            "unit": "Kleine Portion",
+            "image": "./assets/krumme-kanne/food/gerstenbruehe.png",
+            "imageFormat": "square",
+            "badge": "Vorspeise",
+            "tags": [
+              "Vorspeise",
+              "Fleischlos"
+            ],
+            "description": "<p>Eine klare Gemüsebrühe mit Gerste, Waldpilzen und Petersilie. Die kleine Schale wird besonders jenen empfohlen, die nach langer Reise noch keinen schweren Teller vertragen.</p><p>Alaw röstet die Pilze getrennt an, damit die Brühe klar bleibt und trotzdem nach Wald und Herdfeuer duftet. Die Gerste wird weich, behält aber einen kleinen Biss. Petersilie kommt unmittelbar vor dem Ausschöpfen hinein; eine kräftige Fleischbrühe wird für dieses Gericht ausdrücklich nicht verwendet.</p><p>Der Name stammt aus den ersten Jahren der Schenke. Merrik stellte erschöpften Kameraden zunächst eine solche kleine Schale hin, bevor er nach ihren Plänen fragte. Bis heute ist sie ein ruhiger Anfang für Gäste, die durchgefroren ankommen oder einen langen Abend mit etwas Leichtem beginnen möchten.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Kleine Portion",
+              "Tägliche Hauskarte"
+            ],
+            "priceNote": "",
+            "conditions": "Täglich, solange der Vorrat reicht"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "1,1",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "haferkuechlein",
+            "category": "besonderes-menu",
+            "title": "Rorikshaller Haferküchlein",
+            "subtitle": "Vorspeise",
+            "unit": "Kleine Portion",
+            "image": "./assets/krumme-kanne/food/haferkuechlein.png",
+            "imageFormat": "square",
+            "badge": "Vorspeise",
+            "tags": [
+              "Vorspeise",
+              "Fleischlos"
+            ],
+            "description": "<p>Drei herzhafte, in der Pfanne gebackene Haferküchlein mit Kümmel. Serviert mit Kräuterquark und eingelegter roter Rübe; Hrolfs Beitrag zur Brotzeit.</p><p>Die Küchlein werden aus grobem Hafer und einem kleinen Anteil Gerstenmehl geformt. In der heißen Pfanne bekommen sie braune Ränder und bleiben innen weich. Der Kümmel wird sparsam eingesetzt; ein leicht nussiger Getreidegeschmack soll neben dem Kräuterquark erkennbar bleiben.</p><p>Hrolf erinnert die kleine Mahlzeit an Rorikshall. Die eingelegten Rüben sind dagegen Celyns Beitrag: kühl, säuerlich und ein guter Gegenpol zum warmen Gebäck. Drei kleine Küchlein bilden eine Vorspeise, die auch mit den Fingern gegessen werden kann, wenn am Tisch gerade Karten oder Würfel liegen.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Kleine Portion",
+              "Tägliche Hauskarte"
+            ],
+            "priceNote": "",
+            "conditions": "Täglich, solange der Vorrat reicht"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "2,8",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "merriks-rindertopf",
+            "category": "besonderes-menu",
+            "title": "Merriks dunkler Rindertopf",
+            "subtitle": "Hauptspeise · Fleisch",
+            "unit": "Pro Teller",
+            "image": "./assets/krumme-kanne/food/merriks-rindertopf.png",
+            "imageFormat": "square",
+            "badge": "Hauptspeise",
+            "tags": [
+              "Hauptspeise"
+            ],
+            "description": "<p>Rindfleisch und Wurzelgemüse, langsam in dunklem Bier geschmort. Mit Graupen und einer dicken Scheibe Roggenbrot. Kräftige cenyrische Hausküche.</p><p>Das Fleisch wird portionsweise kräftig angebraten, bevor dunkles Bier den Bodensatz aus dem Topf löst. Möhren und Pastinaken ziehen langsam im Schmorsaft. Die Graupen binden einen Teil der Flüssigkeit, ohne daraus einen Brei zu machen; unter dem Deckel bleibt Zeit, bis sich das Rind mit dem Löffel teilen lässt.</p><p>Merrik besteht auf einer dunklen, herzhaften Soße und einem Brotstück, das mehr aushält als einen kurzen Kontakt mit der Schüssel. Leichte Malzbittere und süße Wurzeln halten sich die Waage. Das ist der Teller für einen Abend nach nassen Wegen, Hafendienst oder einer langen Wache.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller",
+              "Tägliche Hauskarte"
+            ],
+            "priceNote": "",
+            "conditions": "Täglich, solange der Vorrat reicht"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "3,2",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "hrolfs-schweinebauch",
+            "category": "besonderes-menu",
+            "title": "Hrolfs Met-Schweinebauch",
+            "subtitle": "Hauptspeise · Fleisch",
+            "unit": "Pro Teller",
+            "image": "./assets/krumme-kanne/food/hrolfs-schweinebauch.png",
+            "imageFormat": "square",
+            "badge": "Hauptspeise",
+            "tags": [
+              "Hauptspeise"
+            ],
+            "description": "<p>Knuspriger Schweinebauch mit einer dünnen Metglasur, Kümmelkohl und zerdrückten Steckrüben. Süßlich-rauchiger nordischer Einschlag, ohne den Teller in Honig zu ertränken.</p><p>Zuerst gart der Bauch langsam, damit das Fett zwischen den Fleischlagen weich wird. Erst zum Schluss wandert die Schwarte dicht an die Glut. Die dünne Metglasur wird mehrfach aufgestrichen und darf an den Rändern bräunen, aber nicht als klebrige Honigschicht auf dem Fleisch stehen.</p><p>Hrolf prüft die Kruste mit dem Messerrücken, bevor der Bauch in dicke Scheiben geschnitten wird. Kümmelkohl bringt Säure und Würze, der Steckrübenstampf nimmt Bratensaft und austretendes Fett auf. Wer den nordischen Teil der Hausküche kennenlernen möchte, beginnt meist mit diesem sättigenden Gericht.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller",
+              "Tägliche Hauskarte"
+            ],
+            "priceNote": "",
+            "conditions": "Täglich, solange der Vorrat reicht"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "3,6",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "aedans-lamm",
+            "category": "besonderes-menu",
+            "title": "Aedans Kräuterlamm",
+            "subtitle": "Hauptspeise · Fleisch",
+            "unit": "Pro Teller",
+            "image": "./assets/krumme-kanne/food/aedans-lamm.png",
+            "imageFormat": "square",
+            "badge": "Hauptspeise",
+            "tags": [
+              "Hauptspeise"
+            ],
+            "description": "<p>Lamm mit Thymian, Knoblauch und einem Hauch Wacholder, in dunklem Bratensaft. Dazu weiße Bohnen und gebratener Lauch nach Leitheacher Art.</p><p>Tadhg reibt das Lamm mit gehacktem Thymian und wenig zerdrücktem Wacholder ein. Der Knoblauch gart im Bratensaft mit, bis seine Schärfe einer milden Süße weicht. Die weißen Bohnen werden getrennt weichgezogen, damit sie ihre Form behalten und erst auf dem Teller die dunkle Soße aufnehmen.</p><p>Der Lauch wird an den Schnittflächen geröstet und bleibt im Inneren saftig. Aedan schätzt an diesem Leitheacher Gericht besonders den Duft der Kräuter, der selbst im geschäftigen Schankraum bemerkbar bleibt. Die Portion ist reichhaltig, schmeckt aber weniger schwer als die Bier- und Metgerichte seiner beiden Mitinhaber.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller",
+              "Tägliche Hauskarte"
+            ],
+            "priceNote": "",
+            "conditions": "Täglich, solange der Vorrat reicht"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "2,4",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "huehnerpastete",
+            "category": "besonderes-menu",
+            "title": "Hafenviertler Hühnerpastete",
+            "subtitle": "Hauptspeise · Fleisch",
+            "unit": "Pro Teller",
+            "image": "./assets/krumme-kanne/food/huehnerpastete.png",
+            "imageFormat": "square",
+            "badge": "Hauptspeise",
+            "tags": [
+              "Hauptspeise"
+            ],
+            "description": "<p>Eine kleine gedeckte Pastete mit Huhn, Lauch und Pilzen. Der mürbe Deckel wird erst beim Servieren aufgebrochen; darunter bleibt die Füllung saftig.</p><p>Unter dem mürben Deckel steckt eine helle Füllung aus gezupftem Hühnerfleisch, Lauchringen und angebratenen Pilzen. Ein wenig eingekochter Geflügelsud hält alles zusammen. Die Pasteten werden einzeln gebacken, damit jeder Gast einen vollständigen Deckel mit knusprigem Rand erhält.</p><p>Beim Aufbrechen entweicht ein deutlicher Duft nach Buttergebäck und warmem Lauch. Der Deckel lässt sich stückweise in die Füllung drücken; zusätzliche schwere Beilagen braucht die kleine Form nicht. Tangwystl empfiehlt, dem ersten Löffel einen Augenblick zu geben: Was außen schon essbar aussieht, kann unter der Kruste noch ordentlich dampfen.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller",
+              "Tägliche Hauskarte"
+            ],
+            "priceNote": "",
+            "conditions": "Täglich, solange der Vorrat reicht"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "2,1",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "blutwurst",
+            "category": "besonderes-menu",
+            "title": "Gebratene Blutwurst mit Apfelzwiebeln",
+            "subtitle": "Hauptspeise · Fleisch",
+            "unit": "Pro Teller",
+            "image": "./assets/krumme-kanne/food/blutwurst.png",
+            "imageFormat": "square",
+            "badge": "Hauptspeise",
+            "tags": [
+              "Hauptspeise"
+            ],
+            "description": "<p>Dicke Scheiben Blutwurst mit knusprigem Rand, dazu geschmorte Apfelzwiebeln und Gerstenfladen. Ein einfaches Gericht, das Tadhg mit nordischer Würzung und cenyrischem Brot verbindet.</p><p>Die Wurstscheiben werden erst aufgelegt, wenn die Pfanne richtig heiß ist. So entsteht eine feste, würzige Kruste, während das Innere weich bleibt. Nebenan schmoren Zwiebeln und Apfelstücke langsam in wenig Fett, bis sie goldgelb sind und ihre Süße mit einem Schuss Apfelessig ausgeglichen wird.</p><p>Der warme Gerstenfladen gehört zu dieser Hausfassung und nimmt den würzigen Bratensatz auf. Gegenüber der einfachen Blutwurst mit Kraut aus dem Standardsortiment stehen hier Frucht, Röstaromen und das nordisch gewürzte Brot im Vordergrund. Ein herbes Bier passt besonders gut zu dem kräftigen Teller.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller",
+              "Tägliche Hauskarte"
+            ],
+            "priceNote": "",
+            "conditions": "Täglich, solange der Vorrat reicht"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "1,6",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "waldpilzgerste",
+            "category": "besonderes-menu",
+            "title": "Leitheacher Waldpilzgerste",
+            "subtitle": "Hauptspeise · Fleischlos",
+            "unit": "Pro Teller",
+            "image": "./assets/krumme-kanne/food/waldpilzgerste.png",
+            "imageFormat": "square",
+            "badge": "Hauptspeise",
+            "tags": [
+              "Hauptspeise",
+              "Fleischlos"
+            ],
+            "description": "<p>Sämige Gerste mit gebratenen Waldpilzen, Thymian und etwas gereiftem Käse. In Gemüsebrühe gekocht, ohne Fleisch oder Speck.</p><p>Die Gerste köchelt in Gemüsebrühe, bis sie außen cremig wird und innen noch Widerstand hat. Die Pilze kommen aus einer zweiten Pfanne: trocken angeröstet, dann mit etwas Butter und Thymian geschwenkt. Ein Teil wird untergehoben, die schönsten Stücke liegen obenauf.</p><p>Gereifter Käse gibt Salz und Tiefe, ersetzt aber nicht den Eigengeschmack der Pilze. Tadhg richtet das Gericht in einer flachen Schale an, damit die heißen Körner etwas ausdampfen können. Diese Leitheacher Sättigungsküche ist eine vollwertige fleischlose Hauptmahlzeit; Speck und Fleischfond gehören auch als versteckte Würze nicht hinein.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller",
+              "Tägliche Hauskarte"
+            ],
+            "priceNote": "",
+            "conditions": "Täglich, solange der Vorrat reicht"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "1,8",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "ruebenauflauf",
+            "category": "besonderes-menu",
+            "title": "Überbackene Rüben mit Ziegenkäse",
+            "subtitle": "Hauptspeise · Fleischlos",
+            "unit": "Pro Teller",
+            "image": "./assets/krumme-kanne/food/ruebenauflauf.png",
+            "imageFormat": "square",
+            "badge": "Hauptspeise",
+            "tags": [
+              "Hauptspeise",
+              "Fleischlos"
+            ],
+            "description": "<p>Steckrüben, Zwiebeln und weicher Ziegenkäse unter einer goldenen Kruste. Dazu säuerliche Kräuterdickmilch; fleischlose Sättigungsküche aus der Kanne.</p><p>Dünne Steckrübenscheiben werden mit weich gedünsteten Zwiebeln geschichtet. Zwischen den Lagen zerbröckelt Iorath milden Ziegenkäse; der obere Teil darf im Ofen kräftiger bräunen. Unter der goldenen Kruste bleiben die Rüben saftig und nehmen die leichte Säure des Käses auf.</p><p>Die kalte Kräuterdickmilch wird daneben gereicht. So entscheidet jeder Gast selbst, ob er den Auflauf pur oder mit einem kühlen, frischen Löffel dazu essen möchte. Celyn lässt diese Portion besonders an Markttagen vorbereiten, wenn gute Rüben reichlich vorhanden sind. Fleisch, Speck und Bratenfett werden für das Gericht nicht verwendet.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller",
+              "Tägliche Hauskarte"
+            ],
+            "priceNote": "",
+            "conditions": "Täglich, solange der Vorrat reicht"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "1,4",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "wurzelgemuesefladen",
+            "category": "besonderes-menu",
+            "title": "Ofenwurzeln auf Gerstenfladen",
+            "subtitle": "Hauptspeise · Fleischlos",
+            "unit": "Pro Teller",
+            "image": "./assets/krumme-kanne/food/wurzelgemuesefladen.png",
+            "imageFormat": "square",
+            "badge": "Hauptspeise",
+            "tags": [
+              "Hauptspeise",
+              "Fleischlos"
+            ],
+            "description": "<p>Geröstete Möhren, Pastinaken und rote Rüben auf einem warmen Gerstenfladen, mit Haselnüssen und Kräuteröl. Ohne Fleisch, Käse oder Rahm zubereitet.</p><p>Möhren, Pastinaken und rote Rüben rösten mit wenig Öl am Ofenrand. Dabei werden ihre Kanten dunkel und süß, die Stücke bleiben jedoch als einzelne Gemüse erkennbar. Der Gerstenfladen wird erst kurz vor dem Servieren erwärmt, damit seine Unterseite fest genug für die reichliche Auflage bleibt.</p><p>Gehackte Haselnüsse sorgen für Biss, Petersilie und ein wenig Thymian für einen frischen Duft. Tadhg verwendet weder Käse noch Rahm oder tierisches Bratfett. Wer den Fladen aufrollt, bekommt beim ersten Bissen meist rote Finger; Delyth legt deshalb gern ein zusätzliches Leinentuch daneben.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller",
+              "Tägliche Hauskarte"
+            ],
+            "priceNote": "",
+            "conditions": "Täglich, solange der Vorrat reicht"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "6",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "feuerhirsch",
+            "category": "besonderes-menu",
+            "title": "Hirsch vom offenen Feuer",
+            "subtitle": "Wochenspezialität",
+            "unit": "Pro Teller",
+            "image": "./assets/krumme-kanne/food/feuerhirsch.png",
+            "imageFormat": "square",
+            "badge": "Wochenspezialität",
+            "tags": [
+              "Wochenspezialität"
+            ],
+            "description": "<p>Ein zerwirkter Hirsch wird langsam am Spieß über offenem Holzfeuer im Lieferhof gegart. Die Portion kommt mit rauchiger Kruste, Wacholder-Salz, gerösteten Wurzeln und Preiselbeeren. Hrolfs Feuerführung trifft auf Tadhgs albische Kräuter und cenyrische Beilagen.</p><p>Am Feuerabend wird der vorbereitete Hirsch im Lieferhof am Spieß langsam über Holzglut gedreht. Hrolf hält Flammen und Fleisch auf Abstand; die Hitze soll tief durchziehen, bevor die äußeren Stücke ihre kräftige Rauchkruste bekommen. Tadhg bestreicht das Wild mit Kräutern und Bratensaft, nicht mit einer schweren süßen Marinade.</p><p>Geschnitten wird in der Reihenfolge, in der die einzelnen Stücke fertig sind. Geröstete Wurzeln und Preiselbeeren verbinden cenyrische Beilagen mit albischer Würzung und nordischer Feuerküche. Der Abend wird nach der Lieferung angekündigt und findet höchstens einmal in der Woche statt. Ein fehlender Hirsch lässt sich weder durch einen Karteneintrag noch durch eine Reservierung herbeizaubern.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller",
+              "Angekündigter Wildtag"
+            ],
+            "priceNote": "",
+            "conditions": "Einmal pro Woche am angekündigten Feuerabend; nur nach Jagd- und Lieferglück"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "5,5",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "hirschbraten",
+            "category": "besonderes-menu",
+            "title": "Leitheacher Hirschbraten",
+            "subtitle": "Wochenspezialität",
+            "unit": "Pro Teller",
+            "image": "./assets/krumme-kanne/food/hirschbraten.png",
+            "imageFormat": "square",
+            "badge": "Wochenspezialität",
+            "tags": [
+              "Wochenspezialität"
+            ],
+            "description": "<p>Langsam geschmorter Hirschbraten in dunkler Bier-Wacholdersoße, mit Gerstenklößen und Apfelrotkohl. Der Wildbraten wird an einem eigenen Wochentag angeboten, nicht als täglicher Rest des Feuerhirsches.</p><p>Für den Bratentag wird ein eigenes Stück Wild vorbereitet und lange in Bier, Wurzelgemüse und zerdrücktem Wacholder geschmort. Der Sud wird anschließend passiert und eingekocht. Die dicken Scheiben sollen ihre Form behalten, sich unter der Gabel aber ohne Mühe teilen lassen.</p><p>Gerstenklöße nehmen die dunkle Soße auf; Apfelrotkohl bringt Säure und eine milde Fruchtnote. Tadhg betrachtet das langsame Schmoren als Leitheacher Gegenstück zu Hrolfs offenem Feuer. Der Braten steht an einem gesondert angekündigten Wochentag auf der Karte. Es handelt sich um eine eigene Zubereitung und nicht um übrig gebliebenes Fleisch vom Feuerabend.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller",
+              "Angekündigter Wildtag"
+            ],
+            "priceNote": "",
+            "conditions": "Einmal pro Woche am angekündigten Bratentag; begrenzte Portionen"
+          },
+          {
+            "status": "available",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 320,
+            "descriptionTitle": "Zubereitung & Geschmack",
+            "featuresTitle": "Auf dem Teller",
+            "features": [],
+            "originTitle": "Herkunft",
+            "usageTitle": "Am Tisch",
+            "priceTitle": "Preis & Portion",
+            "priceFill": 35,
+            "priceOptions": [],
+            "conditionsTitle": "Verfügbarkeit",
+            "attributes": [],
+            "priceMin": "5",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "id": "wildschweinkeule",
+            "category": "besonderes-menu",
+            "title": "Wildschweinkeule der drei Kameraden",
+            "subtitle": "Wochenspezialität",
+            "unit": "Pro Teller",
+            "image": "./assets/krumme-kanne/food/wildschweinkeule.png",
+            "imageFormat": "square",
+            "badge": "Wochenspezialität",
+            "tags": [
+              "Wochenspezialität"
+            ],
+            "description": "<p>Wildschweinkeule mit Wacholder und Waldkräutern, mit einer herben Met-Senfglasur bestrichen. Dazu cenyrischer Steckrübenstampf und geschmorte Waldpilze: Leitheach, Aldrimar und Cenyr auf einem Teller.</p><p>Die Keule wird mit Wacholder und gehackten Waldkräutern eingerieben und langsam gebraten. Gegen Ende kommt eine dünne Glasur aus herbem Met und zerstoßener Senfsaat hinzu. Sie soll am Fleisch haften und die Kruste würzen, ohne den kräftigen Wildgeschmack unter Süße zu begraben.</p><p>Dazu gibt es cenyrischen Steckrübenstampf und Pilze, die einen Teil des Bratensafts aufnehmen. Die drei Inhaber beanspruchen jeweils eine Zutat für ihre Heimat und streiten nur zum Vergnügen darüber, wem das fertige Gericht gehört. Der Keulentag wird einmal wöchentlich angekündigt; die Zahl der Portionen richtet sich nach der gelieferten Keule.</p>",
+            "origin": "Tadhgs Hausküche · Die Krumme Kanne · Gwynthor",
+            "usageTags": [
+              "Pro Teller",
+              "Angekündigter Wildtag"
+            ],
+            "priceNote": "",
+            "conditions": "Einmal pro Woche am angekündigten Keulentag; solange der Wildvorrat reicht"
+          },
+          {
+            "id": "teyrngarch-brauerzunft-bier-hopfgold",
+            "category": "importierte-getraenke",
+            "status": "available",
+            "title": "Hopfgold",
+            "subtitle": "Import · Bier",
+            "image": "./public/assets/brewer-guilds/bier-hopfgold.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausbier",
+            "tags": [
+              "Strohgold",
+              "Frisch",
+              "Milder Hopfen"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p><strong>Hopfgold</strong> ist ein sehr helles, leichtes Bier mit klarem Charakter und einfacher Seele. Gebraut für den Durst, nicht fürs Grübeln – mit strohgelber Farbe, milder Kohlensäure und einer dezenten Hopfennote. Kein großes Gewese, kein schwerer Nachgang – dafür frisch, unkompliziert und ehrlich.</p>\n<p>Wird gern in Tavernen ausgeschenkt, wo viel getrunken, aber wenig gezahlt wird. Passt gut zu geröstetem Brot, Wurst, oder einfach einem langen Gespräch am Schanktresen. Wer Goldhaube nicht jeden Tag zahlen will, greift zu Hopfgold – und bleibt oft dabei.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Aberon · Sonnenküste · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Taverne",
+              "Wurst & Brot"
+            ],
+            "priceTitle": "Ausschank in der Kanne",
+            "priceMin": "",
+            "priceMax": "",
+            "priceFill": 0,
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "1,3"
+              }
+            ],
+            "priceNote": "Ausschankpreis und Größe aus dem Sortiment: Die Teyrngarch Brauerzunft.",
+            "conditionsTitle": "Verfügbarkeit",
+            "conditions": "Reguläres Importsortiment. Ausschank nach Fass- und Flaschenvorrat; Elidyr nennt die aktuell geöffneten Abfüllungen.",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+          },
+          {
+            "id": "teyrngarch-brauerzunft-bier-hellwacht",
+            "category": "importierte-getraenke",
+            "status": "available",
+            "title": "Hellwacht",
+            "subtitle": "Import · Bier",
+            "image": "./public/assets/brewer-guilds/bier-hellwacht.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausbier",
+            "tags": [
+              "Mildes Malz",
+              "Golden",
+              "Dezente Bittere"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p><strong>Hellwacht</strong> ist das klassische Aushängeschild der Teyrngarch Zunft – ein ehrliches, helles Bier mit goldener Farbe, klarer Note und stabiler Qualität. Es ist nicht ganz so edel wie die Goldhaube, aber nah dran: vollmundig, mild malzig, mit einer dezenten Bittere im Abgang. Ein Bier, das sich nicht versteckt, aber auch nicht aufdrängt.</p>\n<p>Es kostet etwas mehr als das übliche Tavernenzeug, dafür bekommt man ein sauberes Gebräu, das sowohl am Kamin als auch bei der Ratsversammlung bestehen kann. Wer keine Goldhaube will, aber trotzdem zeigen möchte, dass er Geschmack hat – greift zu Hellwacht.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Aberon · Sonnenküste · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Mildes Malz",
+              "Golden",
+              "Dezente Bittere"
+            ],
+            "priceTitle": "Ausschank in der Kanne",
+            "priceMin": "",
+            "priceMax": "",
+            "priceFill": 0,
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "2,6"
+              }
+            ],
+            "priceNote": "Ausschankpreis und Größe aus dem Sortiment: Die Teyrngarch Brauerzunft.",
+            "conditionsTitle": "Verfügbarkeit",
+            "conditions": "Reguläres Importsortiment. Ausschank nach Fass- und Flaschenvorrat; Elidyr nennt die aktuell geöffneten Abfüllungen.",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+          },
+          {
+            "id": "teyrngarch-brauerzunft-bier-daemmerkrone",
+            "category": "importierte-getraenke",
+            "status": "available",
+            "title": "Dämmerkrone",
+            "subtitle": "Import · Bier",
+            "image": "./public/assets/brewer-guilds/bier-daemmerkrone.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausbier",
+            "tags": [
+              "Röstmalz",
+              "Dunkles Brot",
+              "Rauch"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p><strong>Dämmerkrone</strong> ist das dunkle Rückgrat im Sortiment der Teyrngarch Brauerzunft – ein rötlich-braunes Bier mit kräftigem Röstaroma, das sich irgendwo zwischen Stolz und Schwermut bewegt. Malzig, leicht nussig, mit Anklängen von dunklem Brot und einem Hauch Rauch.</p>\n<p>Es ist kein süffiges Zechbier, sondern eher etwas für den Abend – für Gespräche, Schweigen, oder das zweite nach einem langen Tag. Wer sonst Hellwacht trinkt, wird hier kurz schlucken. Wer Dämmerkrone versteht, bleibt dabei.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Aberon · Sonnenküste · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Abend",
+              "Herzhafte Speisen"
+            ],
+            "priceTitle": "Ausschank in der Kanne",
+            "priceMin": "",
+            "priceMax": "",
+            "priceFill": 0,
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "1,95"
+              }
+            ],
+            "priceNote": "Ausschankpreis und Größe aus dem Sortiment: Die Teyrngarch Brauerzunft.",
+            "conditionsTitle": "Verfügbarkeit",
+            "conditions": "Reguläres Importsortiment. Ausschank nach Fass- und Flaschenvorrat; Elidyr nennt die aktuell geöffneten Abfüllungen.",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+          },
+          {
+            "id": "teyrngarch-brauerzunft-bier-goldhaube",
+            "category": "importierte-getraenke",
+            "status": "available",
+            "title": "Goldhaube",
+            "subtitle": "Import · Bier",
+            "image": "./public/assets/brewer-guilds/bier-goldhaube.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Nationalbier",
+            "tags": [
+              "Malz",
+              "Sommerblumen",
+              "Honig"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p>Ein Bier wie eine Hymne – <strong>Goldhaube</strong> erhebt sich nicht bloß in Krügen, sondern in <em>Herzen und Geschichten</em>. Gebraut von der edlen Familie <strong>Teyrngarch</strong>, ist es das Symbol <strong>höfischer Braukultur</strong> in ihrer reinsten Form.</p>\n<p>Schon der erste Blick auf das <strong>golden schimmernde Bier</strong> mit seiner feinperligen Krone lässt erahnen, dass hier keine gewöhnliche Gerste verwendet wurde. <strong>Sanft malzig</strong>, mit einem Hauch von <em>Sommerblumen</em>, schmiegt sich der Geschmack an den Gaumen. Ein <em>zarter Honigton</em> begleitet den Schluck, der in eine <strong>runde, leichte Bitterkeit</strong> mündet – edel, ausgewogen, wie eine höfische Melodie.</p>\n<p><strong>Goldhaube</strong> ist kein Trinkbier – es ist ein <strong>Feierbier</strong>. Ein Zeichen der <em>Verbindung, des Erfolgs, der Würde</em>. In großen Hallen gereicht, in kleinen Momenten genossen. Der perfekte Begleiter zu allem, was mit Brot, Käse oder Festgelage beginnt.</p>\n<p><em>\"Wenn Schwarzdorn flüstert und Honigbreu umgarnt – dann singt Goldhaube.\"</em></p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Aberon · Sonnenküste · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Festtafel",
+              "Brot & Käse"
+            ],
+            "priceTitle": "Ausschank in der Kanne",
+            "priceMin": "",
+            "priceMax": "",
+            "priceFill": 0,
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "8,5"
+              }
+            ],
+            "priceNote": "Ausschankpreis und Größe aus dem Sortiment: Die Teyrngarch Brauerzunft.",
+            "conditionsTitle": "Verfügbarkeit",
+            "conditions": "Reguläres Importsortiment. Ausschank nach Fass- und Flaschenvorrat; Elidyr nennt die aktuell geöffneten Abfüllungen.",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/teyrngarch-brauzeichen.png"
+          },
+          {
+            "id": "penderyn-brauer-destillierzunft-bier-goldschuppen",
+            "category": "importierte-getraenke",
+            "status": "available",
+            "image": "./public/assets/brewer-guilds/bier-goldschuppen.png",
+            "imageFormat": "square",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausbier",
+            "title": "Goldschuppen Bier",
+            "subtitle": "Import · Bier",
+            "tags": [
+              "Helles Malz",
+              "Vanille",
+              "Eiche"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p>Das Goldschuppen ist das standardisierte Helle der Penderyn-Destillerie, entstanden aus nüchterner Notwendigkeit und ehrgeizigem Stolz. Wer Whiskey brennt, kann nicht zulassen, dass allein die Teyrngarcher Brauerzunft den Biermarkt dominiert. Also brachte die Gilde ihr eigenes Helles hervor – nicht als Nebenspielerei, sondern als ernstzunehmende Antwort.</p>\n<p>Gebraut wird es mit hellem Gerstenmalz, sauber geführter Gärung und einer bewusst milden Hopfung. Der eigentliche Kniff liegt jedoch in der Reifung: Ein Teil des Suds ruht für kurze Zeit in ehemaligen Penderyn-Whiskeyfässern, bevor er mit dem frischen Bier verschnitten wird. Kein schwerer Fassgeschmack, kein aufdringliches Brennfeuer – nur ein Hauch von Eichenwärme und feiner Vanillenote, der dem Bier Tiefe verleiht, ohne es zu beschweren.</p>\n<p>Gedacht ist es als Alltagsbier mit Anspruch. Leicht genug für lange Abende, charakterstark genug, um neben großen Namen zu bestehen. In städtischen Gegenden längst ein Exportschlager – Tavernen in ganz Cenyr führen es mittlerweile selbstverständlich.</p>\n<p>Im Glas schimmert es wie eine einzelne, sonnenbeschienene Drachenschuppe – warm golden, klar, mit feinem, cremigem Schaum. Der erste Duft ist frisch: Getreide, ein Hauch Blütenhonig, darunter fast unmerklich die leise Spur von Eiche.</p>\n<p>Der erste Schluck ist weich. Kein Angriff, kein Aufplustern. Es legt sich an den Gaumen wie warmer Spätsommer. Leicht süßliches Malz, dann eine dezente, saubere Hopfenbittere, die nicht sticht, sondern trägt. Und dann – fast unbewusst – dieser feine Whiskey-Schatten: Vanille, ein Hauch Karamell, eine trockene Holznote im Nachklang.</p>\n<p>Es will dich nicht beeindrucken. Es will dich entspannen.<br>Ein Bier, das dich sitzen lässt, statt dich aufzurütteln.<br>Ein ruhiger Atemzug eines Drachen – nicht sein Feuer.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Penderyn-Destillerie · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Tavernenabend",
+              "Alltagsbier"
+            ],
+            "priceTitle": "Ausschank in der Kanne",
+            "priceFill": 0,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "2"
+              }
+            ],
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceNote": "Ausschankpreis und Größe aus dem Sortiment: Die Penderyn Brauer- & Destillierzunft.",
+            "conditionsTitle": "Verfügbarkeit",
+            "conditions": "Reguläres Importsortiment. Ausschank nach Fass- und Flaschenvorrat; Elidyr nennt die aktuell geöffneten Abfüllungen.",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+          },
+          {
+            "id": "penderyn-brauer-destillierzunft-bier-drachenblut",
+            "category": "importierte-getraenke",
+            "status": "available",
+            "image": "./public/assets/brewer-guilds/bier-drachenblut.png",
+            "imageFormat": "square",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausbier",
+            "title": "Drachenblut Bier",
+            "subtitle": "Import · Bier",
+            "tags": [
+              "Röstmalz",
+              "Toffee",
+              "Whiskeyfass"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p>Das Drachenblut ist das zweite große Standbein der Penderyn-Gilde – dunkler, kräftiger und eigenwilliger als die Goldschuppe. Sein Name ist kein Marketingtrick: Im richtigen Licht schimmert es tiefrotbraun, fast wie geronnenes Blut im Glas. Gebraut wird es aus stärker geröstetem Malz, mit längerer Maischeführung und deutlich höherem Stammwürzegehalt.</p>\n<p>Anders als die Goldschuppe ruht das Drachenblut länger in ehemaligen Whiskeyfässern. Nicht nur ein Hauch, sondern eine spürbare Reifung. Die Eiche darf arbeiten, der Restalkohol darf Tiefe entwickeln, die Röstnoten dürfen sich mit Vanille, dunklem Holz und einem Anflug von Rauch verbinden. Es ist kein bloßes Dunkelbier – es ist ein Hybrid aus Brau- und Brennkunst. In vielen Städten ist es mindestens so gefragt wie das helle Pendant, mancherorts sogar begehrter.</p>\n<p>Gedacht ist es nicht für den schnellen Durst. Es ist ein Bier für Abende, an denen Gespräche langsamer werden und die Kerzen tiefer brennen.</p>\n<p>Im Krug wirkt es schwer. Tief. Fast lebendig. Der Schaum ist dicht, cremig, leicht karamellfarben. Schon im Duft liegt geröstetes Malz, dunkle Schokolade, ein Hauch von Kaffee – und darunter diese warme, würzige Eiche.</p>\n<p>Der erste Schluck ist vollmundig. Malzsüße trifft auf sanfte Bittere, dann entfaltet sich die Fassreife: Vanille, Toffee, ein warmer Whiskey-Schleier, der sich wie Glut im Rachen ausbreitet. Es brennt nicht – es wärmt.</p>\n<p>Langsam. Nachhaltig.</p>\n<p>Das Drachenblut ist kein Atemzug.<br>Es ist die Glut im Inneren des Drachen.<br>Und wer es trinkt, spürt, wie es sich im Bauch niederlässt und dort bleibt.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Penderyn-Destillerie · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Ruhiger Abend",
+              "Herzhafte Speisen"
+            ],
+            "priceTitle": "Ausschank in der Kanne",
+            "priceFill": 0,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [
+              {
+                "label": "Krug",
+                "unit": "0,5 l",
+                "price": "4"
+              }
+            ],
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceNote": "Ausschankpreis und Größe aus dem Sortiment: Die Penderyn Brauer- & Destillierzunft.",
+            "conditionsTitle": "Verfügbarkeit",
+            "conditions": "Reguläres Importsortiment. Ausschank nach Fass- und Flaschenvorrat; Elidyr nennt die aktuell geöffneten Abfüllungen.",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+          },
+          {
+            "id": "penderyn-brauer-destillierzunft-whisky-rhagorol",
+            "category": "importierte-getraenke",
+            "status": "available",
+            "image": "./public/assets/brewer-guilds/whisky-rhagorol.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausabfüllung",
+            "title": "Penderyn · Rhagorol",
+            "subtitle": "Import · Whisky",
+            "tags": [
+              "Apfel",
+              "Stachelbeere",
+              "Rauch"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p>Der <strong>Rhagorol</strong> ist kein gewöhnlicher Whiskey – er ist ein maskierter Gentleman, der sich mit einem süffisanten Grinsen in dein Herz stiehlt. Ein Tropfen, der nicht nur <strong>getrunken</strong>, sondern <strong>erlebt</strong> wird. Jede Facette seines Geschmacks ist wie der raffinierte Schliff eines Dolchs: präzise, verführerisch, und leicht gefährlich.</p>\n<p>Schon beim ersten Schluck tänzelt eine <strong>helle Säure</strong> auf der Zunge, frech wie ein Dieb im Morgengrauen. Die <strong>Apfelnoten</strong> eröffnen die Melodie, frisch und verspielt, doch dann – <strong>Stachelbeere.</strong> Eine Frucht mit Biss. Anders. Wild. Sie nimmt die Süße an der Hand und zerrt sie in dunklere Gassen. Hier wird nicht geschmeichelt. Hier wird verführt.</p>\n<p>Im Abgang bleibt ein <strong>rauchiger Schatten</strong> zurück, wie das Parfüm eines Spions, der längst verschwunden ist. Der Rhagorol gleicht einem Flirt mit Konsequenzen – aufregend, unvergesslich, ein wenig gefährlich.</p>\n<p><em>\"Rhagorol ist kein Whiskey für einen leichten Abend. Es ist der Drink für das letzte Wort, für das letzte Lächeln – bevor die Tür ins Dunkel aufschwingt.\"</em></p><p>Die vollständige Bezeichnung lautet <strong>Penderyn · Rhagorol</strong>: Penderyn nennt die Brennerei und Familientradition, Rhagorol diese Abfüllung. Der Zusatz bleibt dem Hausnamen auf dem Etikett untergeordnet.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Penderyn · Mathragon & Gwynthor · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Später Abend",
+              "Würzige Speisen"
+            ],
+            "priceTitle": "Ausschank in der Kanne",
+            "priceFill": 0,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [
+              {
+                "label": "Glas",
+                "unit": "4 cl",
+                "price": "6,5"
+              }
+            ],
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceNote": "Ausschankpreis und Größe aus dem Sortiment: Die Penderyn Brauer- & Destillierzunft.",
+            "conditionsTitle": "Verfügbarkeit",
+            "conditions": "Reguläres Importsortiment. Ausschank nach Fass- und Flaschenvorrat; Elidyr nennt die aktuell geöffneten Abfüllungen.",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+          },
+          {
+            "id": "penderyn-brauer-destillierzunft-whisky-penderyn",
+            "category": "importierte-getraenke",
+            "status": "available",
+            "image": "./public/assets/brewer-guilds/whisky-penderyn.png",
+            "imageFormat": "portrait",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageHeight": 420,
+            "badge": "Hausabfüllung",
+            "title": "Penderyn",
+            "subtitle": "Import · Whisky",
+            "tags": [
+              "Apfel & Birne",
+              "Schneebeere",
+              "Edler Rauch"
+            ],
+            "descriptionTitle": "Charakter & Herkunft",
+            "description": "<p>Ein Schluck <strong>Penderyn Whiskey</strong> ist wie das erste Kapitel eines alten Liedes, gesungen am Feuer der Legenden. Geboren aus den Reben des Hochlands und destilliert in den Hallen der <strong>Penderyn-Brennerei</strong>, erhebt sich dieser Whiskey wie ein <strong>ritterlicher Held</strong> – stolz, tiefgründig, unerschrocken.</p>\n<p>Sein <strong>Geschmacksprofil</strong> eröffnet mit <strong>klaren Noten von Apfel und Birne</strong>, getragen von einer <strong>sanften Süße der Schneebeere</strong> – eine seltene Frucht, Symbol der Reinheit und Verbundenheit mit dem alten Land. Doch was diesen Tropfen zum Epos erhebt, sind seine <strong>rauchigen Schatten</strong>, die durch jeden Schluck ziehen wie ein Nebel über dem Schlachtfeld – <em>nicht überwältigend, sondern edel und getragen</em>.</p>\n<p>Der Whiskey selbst glänzt <strong>bernsteinrot</strong>, warm wie ein Schwertgriff, das im Sonnenlicht ruht. Im Abgang bleibt er <strong>edel, würzig und seelenruhig</strong>, wie ein alter Krieger, der seine Geschichte erzählt, ohne sie aufzudrängen.</p>\n<p><em>\"Penderyn ist kein Getränk. Es ist ein Schwur in flüssiger Form.\"</em></p><p>Der Hauptwhisky trägt den Namen seiner Brennerei: <strong>Penderyn</strong>. Hausname und Herkunft stehen auf dem Etikett an erster Stelle.</p>",
+            "featuresTitle": "Steckbrief",
+            "features": [],
+            "originTitle": "Herkunft",
+            "origin": "Penderyn · Mathragon & Gwynthor · Königreich Cenyr",
+            "usageTitle": "Am Tisch",
+            "usageTags": [
+              "Festtafel",
+              "Ruhiger Abend"
+            ],
+            "priceTitle": "Ausschank in der Kanne",
+            "priceFill": 0,
+            "priceMin": "",
+            "priceMax": "",
+            "priceOptions": [
+              {
+                "label": "Glas",
+                "unit": "4 cl",
+                "price": "12"
+              }
+            ],
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "priceNote": "Ausschankpreis und Größe aus dem Sortiment: Die Penderyn Brauer- & Destillierzunft.",
+            "conditionsTitle": "Verfügbarkeit",
+            "conditions": "Reguläres Importsortiment. Ausschank nach Fass- und Flaschenvorrat; Elidyr nennt die aktuell geöffneten Abfüllungen.",
+            "attributesTitle": "Attribute",
+            "attributes": [],
+            "sealImage": "./public/assets/brewer-guilds/penderyn-brennzeichen.png"
+          }
+        ],
+        "footerCards": [
+          {
+            "icon": "◈",
+            "title": "Die drei Wildtage",
+            "text": "Feuerhirsch, Hirschbraten und Wildschweinkeule werden jeweils einmal wöchentlich angekündigt. Jagd- und Lieferglück bestimmen die Zahl der Portionen."
+          },
+          {
+            "icon": "♧",
+            "title": "Östliches Hafenviertel",
+            "text": "Merrik Trevoryn, Hrolf Svathamar und Aedan Dubhdarach · Gwynthor, an der Gasse Richtung Osttor."
+          },
+          {
+            "icon": "☷",
+            "title": "Bestellung & Rechnung",
+            "text": "Elidyr und die Schankmägde nehmen Bestellungen auf. Angegebene Portionen und Ausschankgrößen gelten pro Bestellung; zusätzliche Beilagen werden einzeln berechnet."
+          }
+        ]
+      },
+      "tradeCatalogPage": true
+    },
+    {
+      "schemaVersion": 1,
+      "commentThreadKey": "p-mqmnya3r-b5mh2",
+      "pageTitle": "✦ — Gästeverzeichnis — ✦",
+      "guestRegisterPage": true,
+      "guestRegister": {
+        "title": "Gästeverzeichnis",
+        "subtitle": "Gäste, Zimmer und Aufenthalte dokumentieren",
+        "location": "Taverne / Burg / Etablissement",
+        "portraitSize": 96,
+        "note": "Interne Notiz: Aufenthalte, Zahlung und Sonderwuensche regelmaessig pruefen.",
+        "sections": [
+          {
+            "id": "section-mqmnya3r-0-deog",
+            "title": "Personen 1-4",
+            "subtitle": "Aktuell einquartierte Gäste",
+            "guests": [
+              {
+                "id": "guest-mqmnya3r-0-21tb",
+                "portrait": "",
+                "portraitFit": "cover",
+                "portraitPosition": "top",
+                "name": "Neuer Gast",
+                "role": "Reisender Gast",
+                "status": "Einquartiert",
+                "descriptionTitle": "Aufenthalt",
+                "description": "Beschreibe Herkunft, Auftreten, Wuensche, Verhalten und relevante Beobachtungen.",
+                "sideTitle": "Unterkunft",
+                "infoRows": [
+                  {
+                    "label": "Herkunft",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Stand",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Begleitung",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Ankunft",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Status",
+                    "value": "Einquartiert"
+                  },
+                  {
+                    "label": "Zahlung",
+                    "value": "Offen"
+                  }
+                ],
+                "sideRows": [
+                  {
+                    "label": "Zimmer",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Etage",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Dauer",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Wuensche",
+                    "value": "Keine"
+                  }
+                ]
+              },
+              {
+                "id": "guest-mqmnya3r-1-jq50",
+                "portrait": "",
+                "portraitFit": "cover",
+                "portraitPosition": "top",
+                "name": "Weitere Person",
+                "role": "Begleitung oder Besucher",
+                "status": "Einquartiert",
+                "descriptionTitle": "Aufenthalt",
+                "description": "Beschreibe Herkunft, Auftreten, Wuensche, Verhalten und relevante Beobachtungen.",
+                "sideTitle": "Unterkunft",
+                "infoRows": [
+                  {
+                    "label": "Herkunft",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Stand",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Begleitung",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Ankunft",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Status",
+                    "value": "Einquartiert"
+                  },
+                  {
+                    "label": "Zahlung",
+                    "value": "Offen"
+                  }
+                ],
+                "sideRows": [
+                  {
+                    "label": "Zimmer",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Etage",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Dauer",
+                    "value": "Noch festlegen"
+                  },
+                  {
+                    "label": "Wuensche",
+                    "value": "Keine"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "section-mqmnya3r-1-vsu6",
+            "title": "Personen 5-8",
+            "subtitle": "Weitere Gäste oder spätere Anreisen",
+            "guests": []
+          }
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "commentThreadKey": "p-mqebyd61-gzeor",
+      "image": "./assets/krumme-kanne/rooms/schankraum.png",
+      "imageWidth": 30,
+      "pageTitle": "II. — Schankraum",
+      "sessionPage": true,
+      "sessionIntro": "Einleitung der Szene. Beschreibe Ort, Anlass und Stimmung. Der eigentliche Szenenverlauf entsteht später über Kommentare.",
+      "sessionHint": "Führe diese Szene als Kommentar fort.",
+      "sessionEmptyTitle": "Die Szene ist offen",
+      "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+      "sessionDateAleria": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "imageFit": "cover",
+      "imagePosition": "center",
+      "imageTall": true
+    },
+    {
+      "schemaVersion": 1,
+      "commentThreadKey": "p-mqebz3bn-1t56c",
+      "image": "./assets/krumme-kanne/rooms/hinterzimmer.png",
+      "imageWidth": 30,
+      "pageTitle": "III. — Hinterzimmer",
+      "imageTall": true,
+      "sessionPage": true,
+      "sessionIntro": "Einleitung der Szene. Beschreibe Ort, Anlass und Stimmung. Der eigentliche Szenenverlauf entsteht später über Kommentare.",
+      "sessionHint": "Führe diese Szene als Kommentar fort.",
+      "sessionEmptyTitle": "Die Szene ist offen",
+      "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+      "sessionDateAleria": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "imageFit": "cover",
+      "imagePosition": "center"
+    },
+    {
+      "schemaVersion": 1,
+      "commentThreadKey": "p-mqebzosx-5sot1",
+      "image": "./assets/krumme-kanne/rooms/kueche.png",
+      "imageWidth": 30,
+      "pageTitle": "IV. — Küche",
+      "sessionPage": true,
+      "sessionIntro": "Einleitung der Szene. Beschreibe Ort, Anlass und Stimmung. Der eigentliche Szenenverlauf entsteht später über Kommentare.",
+      "sessionHint": "Führe diese Szene als Kommentar fort.",
+      "sessionEmptyTitle": "Die Szene ist offen",
+      "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+      "sessionDateAleria": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "imageFit": "cover",
+      "imagePosition": "center",
+      "imageTall": true
+    },
+    {
+      "schemaVersion": 1,
+      "commentThreadKey": "p-mqec0evj-9dl4z",
+      "image": "./assets/krumme-kanne/rooms/vorratskammer.png",
+      "imageWidth": 30,
+      "pageTitle": "V. — Vorratskammer",
+      "sessionPage": true,
+      "sessionIntro": "Einleitung der Szene. Beschreibe Ort, Anlass und Stimmung. Der eigentliche Szenenverlauf entsteht später über Kommentare.",
+      "sessionHint": "Führe diese Szene als Kommentar fort.",
+      "sessionEmptyTitle": "Die Szene ist offen",
+      "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+      "sessionDateAleria": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "imageFit": "cover",
+      "imagePosition": "center",
+      "imageTall": true
+    },
+    {
+      "schemaVersion": 1,
+      "commentThreadKey": "p-mqec0s5w-gqlni",
+      "image": "./assets/krumme-kanne/rooms/drei-eichen.png",
+      "imageWidth": 30,
+      "pageTitle": "VI. — Gästezimmer · Die Drei Eichen",
+      "sessionPage": true,
+      "sessionIntro": "Die Drei Eichen ist die kleine Gästekammer unter dem Dach: zwei feste Holzbetten, ein sauberer Waschkrug und ein Riegel, der von innen schließt. Runa hält frische Laken bereit. Durch das Fenster hört man gedämpft den Hafen; das Stimmengewirr des Schankraums bleibt eine Etage tiefer.",
+      "sessionHint": "Führe diese Szene als Kommentar fort.",
+      "sessionEmptyTitle": "Die Szene ist offen",
+      "sessionEmptyText": "Hier kann die Szene im fertigen Modus beginnen.",
+      "sessionDateAleria": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "imageFit": "cover",
+      "imagePosition": "center",
+      "imageTall": true
+    }
+  ],
+  "schemaVersion": 1,
+  "multipage": true
+}

@@ -1,0 +1,738 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-trevoryn",
+  "revision": 2,
+  "updatedAt": "2026-10-14T16:37:45.782Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-trevoryn",
+      "title": "Haus Trevoryn",
+      "motto": "",
+      "description": "Einheimisches Bürgerhaus aus Gwynthor. Merrik, seine Schwester Eirian und sein Bruder Elidyr sind Kinder Nestwens. Merrik gründete 1722 mit seinen Feldkameraden die Krumme Kanne im östlichen Hafenviertel. Die frühere Hausgeschichte ist nicht einzeln überliefert.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Trevoryn.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-trevoryn-gruender",
+        "worldPersonId": "person--haus-trevoryn--haus-trevoryn-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-trevoryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historischer Ursprung des Hauses. Namen, Lebensdaten und die Generationen bis zum belegten Familienzweig sind unbekannt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-trevoryn-gruenderin",
+        "worldPersonId": "person--haus-trevoryn--haus-trevoryn-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-trevoryn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historischer Ursprung des Hauses. Namen, Lebensdaten und die Generationen bis zum belegten Familienzweig sind unbekannt.",
+        "extensions": {}
+      },
+      {
+        "id": "vater-trevoryn-kanne",
+        "worldPersonId": "person--haus-trevoryn--vater-trevoryn-kanne",
+        "name": "Unbekannter Vater",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-trevoryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Verstorbener Ehemann Nestwens und Vater Merriks, Eirians und Elidyrs. Name und Lebensdaten nicht überliefert; nicht mit dem historischen Gründer identisch.",
+        "extensions": {}
+      },
+      {
+        "id": "nestwen-trevoryn-kanne",
+        "worldPersonId": "person--krumme-kanne--nestwen-trevoryn-kanne",
+        "name": "Nestwen Trevoryn",
+        "title": "Wäschehüterin · Flickstube",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1672",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/nestwen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-trevoryn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Nestwen flickt am hellen Fenster Wäsche und hütet die Geschichten der Familie. Seit Merrik aus dem Krieg heimkehrte, hebt sie immer einen Teller mehr auf. Hrolf unterbricht sie bedenkenlos, wenn wieder ein Knopf an seinem Rock hängt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "merrik-trevoryn-kanne",
+        "worldPersonId": "person--krumme-kanne--merrik-trevoryn-kanne",
+        "name": "Merrik Trevoryn",
+        "title": "Mitinhaber · Ortskontakte",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/references/merrik.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-trevoryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Merrik kennt im Hafenviertel jeden Handwerker und jeden zweiten Gast. Der rothaarige Kriegsveteran hält die Verbindung zur Stadt und empfängt alte Kameraden gern selbst; bei gepanschtem Bier versteht er keinen Spaß.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "eirian-trevoryn-kanne",
+        "worldPersonId": "person--krumme-kanne--eirian-trevoryn-kanne",
+        "name": "Eirian Trevoryn",
+        "title": "Hausvögtin · Personal & Dienstpläne",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/eirian.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-trevoryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Eirian teilt die Schichten ein, zahlt die Löhne aus und schlichtet die kleinen Streitigkeiten des Hauses. Wenn ihr Schlüsselbund am Tresen auftaucht, werden selbst die Wirte etwas aufmerksamer.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "elidyr-trevoryn-kanne",
+        "worldPersonId": "person--krumme-kanne--elidyr-trevoryn-kanne",
+        "name": "Elidyr Trevoryn",
+        "title": "Schankwirtsmeister · Tresen & Empfang",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1705",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/elidyr.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-trevoryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Elidyr empfängt die Gäste am Tresen und hält den Ausschank in Gang. Er behält sechs Bestellungen im Kopf und wird mit jedem vollen Tisch trockener im Ton. Eine Beschwerde hört er trotzdem bis zum Ende an.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "celyn-trevoryn-kanne",
+        "worldPersonId": "person--krumme-kanne--celyn-trevoryn-kanne",
+        "name": "Celyn",
+        "title": "Vorratsmeisterin · Vorräte & Wäsche",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/celyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-trevoryn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Celyn hält Vorratskammer und Wäschetruhe gefüllt. Sie riecht schlechtes Korn, bevor der Sack offen ist, und spart lieber am Schwund als an den Portionen. Wer verspätet zum Dienst kommt, bekommt erst etwas zu essen und dann seine Standpauke.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "cadri-trevoryn-kanne",
+        "worldPersonId": "person--krumme-kanne--cadri-trevoryn-kanne",
+        "name": "Cadri Trevoryn",
+        "title": "Hauskind · Kleine Werkstatt",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1728",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/cadri.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-trevoryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Cadri verbringt freie Nachmittage bei Gorwyst im Hof und baut lieber, als Gäste zu bedienen. Seine neueste Erfindung soll den Kater von den Lieferscheinen fernhalten. Briwsion schläft bereits darauf.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "enlli-trevoryn-kanne",
+        "worldPersonId": "person--krumme-kanne--enlli-trevoryn-kanne",
+        "name": "Enlli Trevoryn",
+        "title": "Hauskind · Katerfreundin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1734",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/enlli.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-trevoryn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Enlli hat einen eigenen Hocker in Nestwens Flickstube und hält Briwsion für den wichtigsten Bewohner der Kanne. Abends erzählt sie ihm, welche Gäste freundlich waren. Der Kater hört mit geschlossenen Augen zu.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "hrolf-svathamar-kanne",
+        "worldPersonId": "person--krumme-kanne--hrolf-svathamar-kanne",
+        "name": "Hrolf Svathamar",
+        "title": "Mitinhaber · Hausfrieden",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/references/hrolf.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-svathamar",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Hrolfs Lachen trägt bis auf die Gasse. Der Veteran aus Rorikshall sorgt dafür, dass auch ein voller Schankraum friedlich bleibt. Wird es ernst, genügt meist sein Aufstehen.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "styr-svathamar-kanne",
+        "worldPersonId": "person--krumme-kanne--styr-svathamar-kanne",
+        "name": "Styr Svathamar",
+        "title": "Schanklehrling",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/styr.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-svathamar",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Styr lernt bei Elidyr Bestellungen und das Rechnen am Tresen. Er möchte längst so gelassen wirken wie sein Vater. Meist verrät ihn das eine Tablett, das er sich zu viel aufgeladen hat.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      },
+      {
+        "id": "heledd-svathamar-kanne",
+        "worldPersonId": "person--krumme-kanne--heledd-svathamar-kanne",
+        "name": "Heledd Svathamar",
+        "title": "Hauskind · Tischblumen",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/krumme-kanne/portraits/heledd.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-svathamar",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Heledd stellt gern Blumen auf die Tische und lauscht den Geschichten der Veteranen. In ihrem Heft sammelt sie die glaubwürdigsten davon. Hrolfs Berichte schneiden verdächtig gut ab.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "notes",
+            "portrait"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-trevoryn-founders",
+        "participantIds": [
+          "haus-trevoryn-gruender",
+          "haus-trevoryn-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-eltern-trevoryn-kanne",
+        "participantIds": [
+          "vater-trevoryn-kanne",
+          "nestwen-trevoryn-kanne"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Durch den Tod des Vaters beendet.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-merrik-celyn-kanne",
+        "participantIds": [
+          "merrik-trevoryn-kanne",
+          "celyn-trevoryn-kanne"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1725",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Haushalt in der Krummen Kanne, Gwynthor.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-hrolf-eirian-kanne",
+        "participantIds": [
+          "hrolf-svathamar-kanne",
+          "eirian-trevoryn-kanne"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1723",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Haushalt in der Krummen Kanne, Gwynthor.",
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "marriage-hrolf-eirian-kanne",
+            "counterpartFamilyId": "haus-svathamar"
+          }
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-vater-trevoryn-kanne",
+        "childId": "vater-trevoryn-kanne",
+        "parentIds": [
+          "haus-trevoryn-gruender",
+          "haus-trevoryn-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-trevoryn-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Abstammung über unbekannte Generationen, keine unmittelbare Elternschaft des historischen Gründerpaares.",
+        "extensions": {
+          "timeJumpId": "gap-trevoryn-to-1672"
+        }
+      },
+      {
+        "id": "parentage-merrik-trevoryn-kanne",
+        "childId": "merrik-trevoryn-kanne",
+        "parentIds": [
+          "vater-trevoryn-kanne",
+          "nestwen-trevoryn-kanne"
+        ],
+        "partnershipId": "marriage-eltern-trevoryn-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-eirian-trevoryn-kanne",
+        "childId": "eirian-trevoryn-kanne",
+        "parentIds": [
+          "vater-trevoryn-kanne",
+          "nestwen-trevoryn-kanne"
+        ],
+        "partnershipId": "marriage-eltern-trevoryn-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-elidyr-trevoryn-kanne",
+        "childId": "elidyr-trevoryn-kanne",
+        "parentIds": [
+          "vater-trevoryn-kanne",
+          "nestwen-trevoryn-kanne"
+        ],
+        "partnershipId": "marriage-eltern-trevoryn-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cadri-trevoryn-kanne",
+        "childId": "cadri-trevoryn-kanne",
+        "parentIds": [
+          "merrik-trevoryn-kanne",
+          "celyn-trevoryn-kanne"
+        ],
+        "partnershipId": "marriage-merrik-celyn-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-enlli-trevoryn-kanne",
+        "childId": "enlli-trevoryn-kanne",
+        "parentIds": [
+          "merrik-trevoryn-kanne",
+          "celyn-trevoryn-kanne"
+        ],
+        "partnershipId": "marriage-merrik-celyn-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-styr-svathamar-kanne",
+        "childId": "styr-svathamar-kanne",
+        "parentIds": [
+          "hrolf-svathamar-kanne",
+          "eirian-trevoryn-kanne"
+        ],
+        "partnershipId": "marriage-hrolf-eirian-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-heledd-svathamar-kanne",
+        "childId": "heledd-svathamar-kanne",
+        "parentIds": [
+          "hrolf-svathamar-kanne",
+          "eirian-trevoryn-kanne"
+        ],
+        "partnershipId": "marriage-hrolf-eirian-kanne",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-trevoryn",
+        "name": "Haus Trevoryn",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Trevoryn.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-svathamar",
+        "name": "Haus Svathamar",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png",
+        "status": "active",
+        "extensions": {}
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "gap-trevoryn-to-1672",
+        "parentPartnershipId": "marriage-haus-trevoryn-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "vater-trevoryn-kanne"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "1672",
+        "label": "Nicht einzeln überlieferte Generationen",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-trevoryn-founders",
+      "houseId": "house-trevoryn",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-trevoryn-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 2,
+      "registryManagedDocumentFields": [
+        "description"
+      ],
+      "sourceNote": "Nutzervorgaben zur Krummen Kanne vom 14.10.2026. Bekannte Personen und Porträts werden mit der Hausgemeinschaft geteilt. Unbekannte Gründer und Generationen bleiben ausdrücklich unbekannt; Mair, Gareth und Caradog behalten die bestehenden Tonnarth-Identitäten.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Trevoryn",
+        "housePage": true,
+        "image": "../AleriaAlmanach/assets/krumme-kanne/references/merrik.png",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "description": "Die Trevoryn sind im Hafenviertel Gwynthors verwurzelt. In der Krummen Kanne kennt man Merriks offenen Empfang, Eirians klirrenden Schlüsselbund und Elidyrs trockene Antworten am Tresen.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Trevoryn"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor · Östliches Hafenviertel"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Merrik Trevoryn · Hausvertreter"
+          ],
+          [
+            "Erbe",
+            "Nicht festgelegt"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Draig"
+          ],
+          [
+            "Ursprung",
+            "Gwynthor · Cenyr"
+          ],
+          [
+            "Schutzpatronin",
+            ""
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Trevoryn.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über die Familie",
+          "biographyText": "Die Trevoryn sind im Hafenviertel Gwynthors verwurzelt. In der Krummen Kanne kennt man Merriks offenen Empfang, Eirians klirrenden Schlüsselbund und Elidyrs trockene Antworten am Tresen.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Herkunft & Hausgeschichte",
+          "historyText": "Die alten Gründer sind längst vergessen. Was die Familie heute zusammenhält, begann mit Merriks Heimkehr aus dem Großen Krieg. 1722 eröffnete er mit seinen Feldkameraden Hrolf und Aedan die Krumme Kanne; ein Jahr später heiratete Hrolf seine Schwester Eirian.",
+          "worksTitle": "Hausgeschichte",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Celyn hält Vorratskammer und Wäschetruhe gefüllt, während Nestwen am Fenster flickt und Geschichten erzählt. Bei ihr finden Cadri und Enlli stets einen Platz. Im Zweifel stellen die Trevoryn erst einen Teller hin und fragen dann, was geschehen ist."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [
+            {
+              "name": "Haus Svathamar",
+              "detail": "Hausgemeinschaft der Krummen Kanne",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png",
+              "imageFormat": "square"
+            },
+            {
+              "name": "Haus Dubhdarach",
+              "detail": "Hausgemeinschaft der Krummen Kanne",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Dubhdarach.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Trevoryn.png",
+              "title": "Haus Trevoryn · vollständige Hausseite",
+              "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-trevoryn"
+            }
+          ],
+          "footer": ""
+        }
+      },
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 1,
+        "toRevision": 2
+      }
+    }
+  }
+}

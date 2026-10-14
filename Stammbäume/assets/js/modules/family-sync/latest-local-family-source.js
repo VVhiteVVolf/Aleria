@@ -2,7 +2,7 @@ import {
   listFamilyRecords,
   loadFamilyById,
   normalizeFamilyId
-} from '../../services/family-library.js?v=20261014-kanne-v2';
+} from '../../services/family-library.js?v=20261014-kanne-v3';
 
 function folderPathFromFamily(family, fallback = []) {
   const folderPath = family?.extensions?.registry?.folderPath;

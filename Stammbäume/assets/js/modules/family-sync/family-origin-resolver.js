@@ -1,4 +1,4 @@
-import { getRegisteredFamily } from '../../data/families.registry.js?v=20261014-kanne-v2';
+import { getRegisteredFamily } from '../../data/families.registry.js?v=20261014-kanne-v3';
 
 export function resolveProjectFamilyOrigin(familyId) {
   return getRegisteredFamily(String(familyId || ''))?.family || null;

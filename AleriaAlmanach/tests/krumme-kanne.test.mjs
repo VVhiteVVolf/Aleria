@@ -7,17 +7,21 @@ import { KANNE_PEOPLE, KANNE_PETS } from '../modules/krumme-kanne/krumme-kanne-r
 import { KANNE_DISHES } from '../modules/krumme-kanne/krumme-kanne-menu.mjs';
 import { buildModuleOffers } from '../modules/item-register/item-register-module-catalog.js';
 import { HOUSE_TONNARTH_FAMILY } from '../../Stammbäume/assets/js/data/house-tonnarth-family.js';
+import { expandKanneGuestRegister } from '../modules/krumme-kanne/krumme-kanne-guests.mjs';
+import { planKanneCharacters } from '../modules/krumme-kanne/krumme-kanne-characters.mjs';
 const json = async name => JSON.parse(await readFile(new URL(`../modules/krumme-kanne/source/${name}.json`, import.meta.url), 'utf8'));
 const original = await json('module-before');
+const released = await json('module-before-editorial');
 const catalogs = await Promise.all(['teyrngarch', 'penderyn'].map(json));
 const completed = completeKrummeKanne(original, catalogs);
 const originalBeforeEdit = structuredClone(original);
 
-test('Kanne content edit preserves identities, threads, guest register and scene clocks', () => {
+test('Kanne content edit preserves identities, threads and scene clocks', () => {
   assert.equal(completed.id, original.id);
   assert.equal(completed.pages.length, 10);
   assert.deepEqual(completed.pages.map(p => p.commentThreadKey), original.pages.map(p => p.commentThreadKey));
-  assert.deepEqual(completed.pages[4], original.pages[4]);
+  assert.equal(completed.pages[4].commentThreadKey, original.pages[4].commentThreadKey);
+  assert.deepEqual(completeKrummeKanne(released, catalogs).pages[3], released.pages[3]);
   assert.equal(completed.pages[1].image, original.pages[1].image);
   for (let i = 5; i < 10; i++) {
     for (const key of Object.keys(original.pages[i]).filter(k => !['image', 'imageWidth', 'imageSquare', 'imageTall', 'pageTitle', 'sessionIntro'].includes(k)))
@@ -33,12 +37,59 @@ test('six switchable departmental trees contain individuals, three equal founder
   assert.deepEqual(h.trees.map(t => t.label), ['Führung', 'Ausschank', 'Zimmer & Versorgung', 'Küche', 'Sicherheit', 'Haustiere']);
   assert.deepEqual(h.trees[0].levels[0].nodes.map(n => n.title), ['Merrik Trevoryn', 'Hrolf Svathamar', 'Aedan Dubhdarach']);
   const names = new Set(h.trees.flatMap(t => t.levels.flatMap(l => l.nodes.map(n => n.title))));
-  assert.deepEqual(names, new Set([...KANNE_PEOPLE, ...KANNE_PETS].map(p => p.name)));
+  assert.deepEqual(names, new Set([...KANNE_PEOPLE.filter(p => p.resident !== false), ...KANNE_PETS].map(p => p.name)));
+  assert.ok(!names.has('Caradog Tonnarth'));
+  const meier = h.trees[0].levels[2].nodes[0];
+  assert.equal(meier.title, 'Gorwyst');
+  assert.match(meier.portrait, /gorwyst.png$/);
   assert.equal(h.trees.find(t => t.id === 'kueche').levels.flatMap(l => l.nodes).length, 3);
   assert.equal(h.trees.find(t => t.id === 'sicherheit').levels.flatMap(l => l.nodes).length, 3);
   assert.equal(KANNE_PEOPLE.filter(p => /Schankmagd/.test(p.role)).length, 3);
   assert.deepEqual(KANNE_PEOPLE.filter(p => p.age < 18).map(p => p.age).sort((a,b) => a-b), [6, 9, 10, 12, 14, 15]);
   for (const person of KANNE_PEOPLE.filter(p => !p.family)) assert.equal(person.name.split(' ').length, 1);
+});
+
+test('guest book offers sixteen slots and retains named guests, portraits and existing IDs', () => {
+  const page = structuredClone(released.pages[4]);
+  const guest = page.guestRegister.sections[0].guests[0];
+  Object.assign(guest, { name: 'Alter Kamerad', portrait: 'portrait.png', description: 'Seine Geschichte.', status: 'Anwesend' });
+  const retained = structuredClone(guest);
+  const ids = page.guestRegister.sections.flatMap(s => s.guests.map(g => g.id));
+  expandKanneGuestRegister(page);
+  const guests = page.guestRegister.sections.flatMap(s => s.guests);
+  assert.equal(guests.length, 16);
+  assert.deepEqual(guests.find(g => g.id === retained.id), retained);
+  assert.ok(ids.every(id => guests.some(g => g.id === id)));
+  const once = structuredClone(page);
+  expandKanneGuestRegister(page);
+  assert.deepEqual(page, once);
+});
+
+test('register plan creates distinct individuals, links family projections and preserves Caradog and other groups', () => {
+  const id = 'person--haus-tonnarth--caradog-bastard-tonnarth';
+  const caradog = { id, name: 'Caradog Tonnarth', identity: { worldPersonId: id }, portrait: 'original.png',
+    title: 'Schreiber & Adjutant der Tiefenwyrm', biography: { existing: true }, inventory: { live: 7 },
+    genealogy: { worldPersonId: id, sources: [], relationships: { original: true } } };
+  const unrelated = { id: 'other-hrolf', name: 'Hrolf Wolfshorn', identity: { worldPersonId: 'other-hrolf' } };
+  const config = { tabs: ['Idwals Schiffsmannschaft'], map: { 'Idwals Schiffsmannschaft': [id] },
+    subtabs: {}, subtabMap: {}, moduleStoreManifest: { live: true } };
+  const before = structuredClone({ caradog, unrelated, config });
+  const plan = planKanneCharacters([caradog, unrelated], config, '2026-10-14T00:00:00Z');
+  assert.equal(plan.entries.filter(e => e.create).length, 29);
+  assert.equal(plan.entries.filter(e => !e.create).length, 1);
+  assert.deepEqual(Object.keys(plan.entries.find(e => e.key === 'caradog').patch), ['genealogy', 'updatedAt']);
+  assert.deepEqual(Object.keys(plan.entries.find(e => e.key === 'caradog').patch.genealogy), ['sources']);
+  assert.equal(plan.config.map['Die Krumme Kanne'].length, 30);
+  assert.deepEqual(plan.config.map['Idwals Schiffsmannschaft'], [id]);
+  assert.equal(plan.entries.find(e => e.key === 'hrolf').create, true);
+  assert.equal(plan.entries.find(e => e.key === 'eirian').data.genealogy.sources.length, 2);
+  assert.equal(plan.entries.find(e => e.key === 'mair').group, 'Dubhdarach');
+  assert.equal(plan.entries.find(e => e.key === 'gorwyst').data.genealogy.sources.length, 0);
+  assert.deepEqual({ caradog, unrelated, config }, before);
+  const published = plan.entries.map(e => e.create ? { id: e.id, ...e.data } : { ...caradog, genealogy: { ...caradog.genealogy, ...e.patch.genealogy } });
+  const again = planKanneCharacters(published, { ...config, ...plan.config }, '2026-10-15T00:00:00Z');
+  assert.ok(again.entries.every(e => !e.create && !e.patch));
+  assert.deepEqual(again.config, plan.config);
 });
 
 test('Mair and her adult son match the actual genealogy, and pets link to real breed profiles', async () => {

@@ -59,7 +59,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Herkunft & Hausgeschichte",
-    "historyText": "Der alte Ursprung des Hauses ist unbekannt und wird im Stammbaum durch ein Gründerpaar und einen Zeitsprung kenntlich gemacht. Auch die Namen der Eltern Hrolfs, Ketils und Runas sind nicht überliefert. Hrolf lernte Merrik und Aedan auf dem Schlachtfeld kennen. 1722 gründeten die drei die Kanne, 1723 heiratete Hrolf Merriks Schwester Eirian.",
+    "historyText": "Von den frühen Svathamar erzählen nur noch wenige Geschichten. Hrolfs Weg führte aus Rorikshall in den Großen Krieg und mit seinen Kameraden weiter nach Gwynthor. Nach der Gründung der Kanne heiratete er Eirian Trevoryn; seine jüngeren Geschwister Ketil und Runa folgten ihm in die Stadt.",
     "worksTitle": "Hausgeschichte",
     "works": [],
     "extraSections": [
@@ -67,7 +67,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Hrolfs Verantwortungsgefühl für den Hausfrieden, Ketils ruhige Wachführung und Runas Ordnungssinn geben der Familie ihr Gesicht in Gwynthor. Eirian führt als Hausvögtin den Dienstplan aller Bereiche. Styr lernt unter Aufsicht am Tresen, Heledd hat keine feste Dienstschicht. Die Familie behält ihre nordische Herkunft, ohne sich vom cenyrischen Haushalt abzusondern."
+        "text": "Hrolf hält den Hausfrieden, Ketil wacht an der Tür und Runa über saubere Kammern. Eirian hält sie alle auf Trab. Styr übt sich am Tresen in der Gelassenheit seines Vaters; Heledd lauscht lieber dessen Heldengeschichten."
       }
     ],
     "triviaTitle": "Besonderheiten",

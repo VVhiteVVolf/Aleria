@@ -7,7 +7,7 @@ import { HOUSE_FALCHDYN_FAMILY } from './house-falchdyn-family.js';
 import { HOUSE_MAERLLYS_FAMILY } from './house-maerllys-family.js';
 import { HOUSE_PENDRWN_FAMILY } from './house-pendrwn-family.js';
 import { HOUSE_SWYLL_FAMILY } from './house-swyll-family.js';
-import { HOUSE_TONNARTH_FAMILY } from './house-tonnarth-family.js?v=20261014-kanne-v2';
+import { HOUSE_TONNARTH_FAMILY } from './house-tonnarth-family.js?v=20261014-kanne-v3';
 import { HOUSE_YSGRIF_FAMILY } from './house-ysgrif-family.js';
 import { HOUSE_COEDDU_FAMILY } from './house-coeddu-family.js';
 import { HOUSE_CRAIGDDU_FAMILY } from './house-craigddu-family.js';

@@ -67,8 +67,13 @@ window.HAEUSER_DATA = {
     "liege": "Haus Draig",
     "origin": "Gwynthor · Cenyr",
     "founding": "Unbekannt · Schenke gegründet 1722",
-    "people": "Familienhaushalt der Krummen Kanne",
+    "people": "Cenyri",
     "wealth": "Gemeinsamer Schank- und Herbergsbetrieb",
+    "patron": "Stadt Gwynthor",
+    "knightingPatron": "—",
+    "milestoneOne": "1722 · Eröffnung der Krummen Kanne",
+    "milestoneTwo": "—",
+    "religion": "Bräuche der Heimat",
     "patronDeities": "",
     "allies": "Trevoryn · Svathamar · Dubhdarach",
     "enemies": ""
@@ -79,18 +84,18 @@ window.HAEUSER_DATA = {
   },
   "showMotto": false,
   "sections": {
-    "overview": "Die Trevoryn sind eine einheimische Bürgerfamilie Gwynthors. Ihr heutiger Lebensmittelpunkt ist die Krumme Kanne im östlichen Hafenviertel. Merrik gehört zu den drei gleichberechtigten Inhabern; seine Schwester Eirian, sein Bruder Elidyr und seine Mutter Nestwen prägen den täglichen Betrieb ebenso wie seine Frau Celyn.",
-    "history": "Namen und Lebensdaten der Gründer sind unbekannt. Zwischen ihnen und Nestwens Familie liegen nicht einzeln überlieferte Generationen. Merrik kehrte 1720 aus dem Großen Krieg zurück. Zwei Jahre später eröffnete er mit Hrolf Svathamar und Aedan Dubhdarach die Krumme Kanne. Eirians Ehe mit Hrolf verbindet die Trevoryn seit 1723 mit den Svathamar.",
-    "traditions": "Die Familie verbindet Ortskenntnis mit verlässlicher Gastlichkeit. Eirian plant den Dienst, Elidyr führt den Tresen, Celyn verwaltet Vorräte und Wäsche. Nestwen hält in der Flickstube einen Platz für ihre Enkel frei. Die Kinder Cadri und Enlli gehören zum Haushalt; eine Erbfolge für Haus oder Schenke ist nicht festgelegt.\n\nDas Familienwappen: Ein goldener aufrechter Fuchs auf dunkelgrün bemalten Holzbrettern, eingefasst von einem geschlossenen Eisenrahmen mit goldenem keltischem Knotenband.",
+    "overview": "Die Trevoryn sind im Hafenviertel Gwynthors verwurzelt. In der Krummen Kanne kennt man Merriks offenen Empfang, Eirians klirrenden Schlüsselbund und Elidyrs trockene Antworten am Tresen.",
+    "history": "Die alten Gründer sind längst vergessen. Was die Familie heute zusammenhält, begann mit Merriks Heimkehr aus dem Großen Krieg. 1722 eröffnete er mit seinen Feldkameraden Hrolf und Aedan die Krumme Kanne; ein Jahr später heiratete Hrolf seine Schwester Eirian.",
+    "traditions": "Celyn hält Vorratskammer und Wäschetruhe gefüllt, während Nestwen am Fenster flickt und Geschichten erzählt. Bei ihr finden Cadri und Enlli stets einen Platz. Im Zweifel stellen die Trevoryn erst einen Teller hin und fragen dann, was geschehen ist.\n\nDas Familienwappen: Ein goldener aufrechter Fuchs auf dunkelgrün bemalten Holzbrettern, eingefasst von einem geschlossenen Eisenrahmen mit goldenem keltischem Knotenband.",
     "knighthood": "Die Familie besitzt bürgerlichen Rang. Der Kriegsdienst der Inhaber begründet keinen Adelstitel; ihr heutiges Ansehen beruht auf der Schenke und ihren Beziehungen in Gwynthor.",
-    "succession": "Für die Familie ist keine förmliche Erbfolge festgelegt. Die Krumme Kanne gehört weiterhin den drei gleichberechtigten Inhabern; familiäre Zugehörigkeit und betriebliche Zuständigkeit werden getrennt behandelt.",
+    "succession": "Noch führen die drei alten Kameraden die Kanne gemeinsam. Wer eines Tages ihre Plätze einnimmt, wird am Familientisch selten besprochen.",
     "holdings": "Anteil am gemeinsamen Schank- und Herbergsbetrieb der Krummen Kanne im Osten des Hafenviertels, an der Gasse Richtung Osttor. Die drei Inhaber gründeten das Haus 1722. Weiterer Grundbesitz ist nicht benannt.",
     "cultureReligion": "Gwynthor · Cenyr. Die Hausgemeinschaft verbindet cenyrische, aldrimarische und albische Gewohnheiten, besonders am gemeinsamen Herd. Ein bestimmter Schutzpatron der Familie ist nicht überliefert.",
-    "conflictsAlliances": "Die drei Gründer wurden im Großen Krieg Freunde. Seit dem Frieden halten sie zusammen. Eirian Trevoryns Ehe mit Hrolf verbindet zwei der Häuser; Aedans Ehe mit Mair verknüpft den Dubhdarach-Haushalt mit Caradogs bestehender Tonnarth-Verwandtschaft.",
+    "conflictsAlliances": "Die Freundschaft der drei Wirte überstand den Krieg. Eirians Ehe mit Hrolf und das gemeinsame Leben in der Kanne haben aus den Kameraden längst eine große Hausgemeinschaft gemacht.",
     "values": "Gastlichkeit, verlässliche Arbeit und Kameradschaft bestimmen den Alltag. Alte Frontzugehörigkeiten entscheiden nicht über den Empfang eines Gastes. Elidyr hört Beschwerden an; Ketil und die Wache sichern den Hausfrieden.",
-    "court": "Als Bürgerhaushalt unterhält die Familie keinen eigenen Hofstaat. Dienstplätze und Zuständigkeiten sind in den sechs wechselbaren Hierarchiereitern des Almanach-Moduls „Die Krumme Kanne“ ausgearbeitet.",
-    "familyTree": "Unbekannte Gründer → Zeitsprung über nicht einzeln überlieferte Generationen → heutige Familie. Die verlinkte Familienakte zeigt Ehen, Kinder und die bestehende Tonnarth-Verbindung mit gemeinsamen Personenidentitäten.",
-    "historicalFigures": "Die folgenden Personen gehören zur heutigen Familie und Hausgemeinschaft. Historische Gründernamen werden mangels Überlieferung nicht erfunden."
+    "court": "Eirian teilt die Schichten ein, Mair führt die Bücher und Celyn hütet die Vorräte. Gorwyst sorgt im Hof dafür, dass Fässer, Brennholz und Handwerker zur rechten Zeit ankommen.",
+    "familyTree": "Zwischen den vergessenen Gründern und der heutigen Familie liegen viele namenlose Generationen. Erst die Bewohner der Krummen Kanne geben der Überlieferung wieder Gesichter.",
+    "historicalFigures": "Diese Gesichter begegnen Gästen am Tresen, im Hof und am gemeinsamen Tisch."
   },
   "sectionTitles": {
     "knighthood": "4. Rittertum"
@@ -166,51 +171,51 @@ window.HAEUSER_DATA = {
     "entries": [
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Gleichberechtigter Mitinhaber · Ortskontakte",
+        "role": "Mitinhaber · Ortskontakte",
         "name": "Merrik Trevoryn",
-        "description": "Ehemann Celyns; Vater von Cadri und Enlli. Bruder Eirians und Elidyrs, Sohn Nestwens.\n\nGebürtiger Gwynthorer. Im Großen Krieg lernte er Hrolf und Aedan kennen. Er brachte die drei nach dem Frieden in seine Heimat und verhandelte 1722 den Kauf der Kanne. Kennt Hafenhandwerker, Veteranen und deren Familien beim Namen. Freundlich, aber bei gepanschtem Bier endet seine Geduld.",
+        "description": "Merrik kennt im Hafenviertel jeden Handwerker und jeden zweiten Gast. Der rothaarige Kriegsveteran hält die Verbindung zur Stadt und empfängt alte Kameraden gern selbst; bei gepanschtem Bier versteht er keinen Spaß.",
         "imageKey": "haus-figur-1"
       },
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Vorratsmeisterin · Versorgung & Wäsche",
+        "role": "Vorratsmeisterin · Vorräte & Wäsche",
         "name": "Celyn",
-        "description": "Merriks Ehefrau; Mutter von Cadri und Enlli.\n\nVerantwortet Einkaufsliste, Lagerbestand, saubere Wäsche und die Absprachen mit der Küche. Riecht verdorbenes Korn, bevor der Sack offen ist, und spart am Schwund statt an Portionen. Bei ihr bekommt auch ein verspäteter Küchengehilfe erst etwas zu essen und dann seine Standpauke.",
+        "description": "Celyn hält Vorratskammer und Wäschetruhe gefüllt. Sie riecht schlechtes Korn, bevor der Sack offen ist, und spart lieber am Schwund als an den Portionen. Wer verspätet zum Dienst kommt, bekommt erst etwas zu essen und dann seine Standpauke.",
         "imageKey": "haus-figur-2"
       },
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Hausvögtin · Dienstpläne & Personal",
+        "role": "Hausvögtin · Personal & Dienstpläne",
         "name": "Eirian Trevoryn",
-        "description": "Merriks jüngere Schwester, Hrolfs Ehefrau; Mutter von Styr und Heledd.\n\nLeitet den Alltag im Auftrag aller drei Inhaber: Dienstplan, Löhne, Zimmerbelegung und Beschwerden. Eine gestrichene Schicht bemerkt sie ebenso schnell wie einen heimlich bedürftigen Gast. Ihr Schlüsselbund klappert selten; meist reicht ein Blick. Hrolf behauptet, er habe im Krieg weniger gefürchtete Befehle gehört.",
+        "description": "Eirian teilt die Schichten ein, zahlt die Löhne aus und schlichtet die kleinen Streitigkeiten des Hauses. Wenn ihr Schlüsselbund am Tresen auftaucht, werden selbst die Wirte etwas aufmerksamer.",
         "imageKey": "haus-figur-3"
       },
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Schankwirtsmeister · Empfang & Ablauf",
+        "role": "Schankwirtsmeister · Tresen & Empfang",
         "name": "Elidyr Trevoryn",
-        "description": "Jüngerer Bruder Merriks und Eirians; Onkel ihrer Kinder.\n\nSteht am Tresen, empfängt Gäste, verteilt Tische und dirigiert den Service. Kann sechs Bestellungen behalten, aber keinen Geburtstagsvers. Sein Humor wird trockener, je voller der Raum ist. Eine Beschwerde hört er bis zum Ende an; bei einem Griff nach einer Schankmagd ruft er sofort die Wache.",
+        "description": "Elidyr empfängt die Gäste am Tresen und hält den Ausschank in Gang. Er behält sechs Bestellungen im Kopf und wird mit jedem vollen Tisch trockener im Ton. Eine Beschwerde hört er trotzdem bis zum Ende an.",
         "imageKey": "haus-figur-4"
       },
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Wäschehüterin · Flickstube & Familienälteste",
+        "role": "Wäschehüterin · Flickstube",
         "name": "Nestwen Trevoryn",
-        "description": "Mutter Merriks, Eirians und Elidyrs; Großmutter von Styr, Heledd, Cadri und Enlli.\n\nArbeitet nach eigenen Kräften am hellen Fenster, flickt Wäsche und passt auf die jüngeren Kinder auf. Hat ihren Sohn aus dem Krieg zurückbekommen und sich angewöhnt, immer einen Teller mehr aufzuheben. Darf als Einzige Hrolf mitten in einer Geschichte unterbrechen, um ihn an einen losen Knopf zu erinnern.",
+        "description": "Nestwen flickt am hellen Fenster Wäsche und hütet die Geschichten der Familie. Seit Merrik aus dem Krieg heimkehrte, hebt sie immer einen Teller mehr auf. Hrolf unterbricht sie bedenkenlos, wenn wieder ein Knopf an seinem Rock hängt.",
         "imageKey": "haus-figur-5"
       },
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Hauskind · Kleine Werkstatt bei Caradog",
+        "role": "Hauskind · Kleine Werkstatt",
         "name": "Cadri Trevoryn",
-        "description": "Sohn Merriks und Celyns; Enllis älterer Bruder.\n\nDarf nach dem Unterricht unter Aufsicht Hakenleisten und Holzkisten ausbessern. Möchte lieber Dinge bauen als Gäste bedienen. Seine jüngste Erfindung soll verhindern, dass der Kater auf Lieferscheinen schläft; sie wird bereits vom Kater benutzt.",
+        "description": "Cadri verbringt freie Nachmittage bei Gorwyst im Hof und baut lieber, als Gäste zu bedienen. Seine neueste Erfindung soll den Kater von den Lieferscheinen fernhalten. Briwsion schläft bereits darauf.",
         "imageKey": "haus-figur-6"
       },
       {
         "group": "Familie & Hausgemeinschaft",
-        "role": "Hauskind · Katerfreundin ohne Dienstpflicht",
+        "role": "Hauskind · Katerfreundin",
         "name": "Enlli Trevoryn",
-        "description": "Tochter Merriks und Celyns; Cadris jüngere Schwester.\n\nHat in Nestwens Flickstube einen eigenen Hocker und betrachtet den Hauskater als ihren ältesten Kollegen. Erzählt ihm abends, welche Gäste freundlich waren. Besitzt keine Arbeitsschicht und darf weder an Herd noch Ausschank helfen.",
+        "description": "Enlli hat einen eigenen Hocker in Nestwens Flickstube und hält Briwsion für den wichtigsten Bewohner der Kanne. Abends erzählt sie ihm, welche Gäste freundlich waren. Der Kater hört mit geschlossenen Augen zu.",
         "imageKey": "haus-figur-7"
       }
     ]

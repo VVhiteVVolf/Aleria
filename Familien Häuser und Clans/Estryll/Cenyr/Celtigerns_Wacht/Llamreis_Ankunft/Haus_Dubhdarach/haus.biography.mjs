@@ -7,7 +7,7 @@ export const HOUSE_BIOGRAPHY = {
   "image": "../AleriaAlmanach/assets/krumme-kanne/references/aedan.png",
   "imageWidth": 30,
   "imageSquare": true,
-  "description": "Die Dubhdarach sind eine albische Bürgerfamilie aus Leitheach mit einem heutigen Haushalt in Gwynthor. Aedan ist einer der drei Gründer der Krummen Kanne. Seine Frau Mair stammt aus der Stadt und führt die Rechnungen. Ihre gemeinsamen Kinder Neifion und Eirlys wachsen mit Mairs älterem Sohn Caradog Tonnarth in der Hausgemeinschaft auf.",
+  "description": "Mit Aedan Dubhdarach kam ein Stück Leitheach in die Krumme Kanne. Der höfliche Albe kümmert sich um Lieferanten und vertrauliche Gäste, während Mair über Kasse und Gästebuch wacht.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,11 +55,11 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über die Familie",
-    "biographyText": "Die Dubhdarach sind eine albische Bürgerfamilie aus Leitheach mit einem heutigen Haushalt in Gwynthor. Aedan ist einer der drei Gründer der Krummen Kanne. Seine Frau Mair stammt aus der Stadt und führt die Rechnungen. Ihre gemeinsamen Kinder Neifion und Eirlys wachsen mit Mairs älterem Sohn Caradog Tonnarth in der Hausgemeinschaft auf.",
+    "biographyText": "Mit Aedan Dubhdarach kam ein Stück Leitheach in die Krumme Kanne. Der höfliche Albe kümmert sich um Lieferanten und vertrauliche Gäste, während Mair über Kasse und Gästebuch wacht.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Herkunft & Hausgeschichte",
-    "historyText": "Ein unbekanntes Gründerpaar steht am Beginn der Familienakte. Die Generationen bis Aedan sind nicht einzeln überliefert. Im Großen Krieg schloss er Freundschaft mit Merrik und Hrolf; 1722 eröffneten sie die gemeinsame Schenke. Aedan und Mair heirateten 1724. Neifion wurde 1726, Eirlys 1731 geboren. Caradog stammt aus Mairs früherer, beendeter Verbindung mit Gareth Tonnarth.",
+    "historyText": "Die Wurzeln der Dubhdarach liegen in Leitheach; die Namen ihrer frühen Gründer gingen verloren. Aedan lernte Merrik und Hrolf im Großen Krieg kennen und blieb nach dem Frieden bei ihnen. In Gwynthor fand er mit Mair auch eine Familie. Die beiden heirateten 1724.",
     "worksTitle": "Hausgeschichte",
     "works": [],
     "extraSections": [
@@ -67,7 +67,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Aedans Verschwiegenheit und Mairs genaue Buchführung ergänzen sich. Neifion übt nach dem Unterricht Lieferlisten und Rechnungen, Eirlys faltet gelegentlich Servietten. Caradog organisiert als erwachsener Meier den Lieferhof. Er bleibt Tonnarth und Aedans Stiefsohn; aus der gemeinsamen Hausgemeinschaft wird keine erfundene leibliche Abstammung."
+        "text": "Neifion lernt bei Mair das Schreiben und Rechnen; Eirlys fragt den Gästen lieber Löcher in den Bauch. Liegt die Tiefenwyrm im Hafen, schaut auch Mairs ältester Sohn Caradog vorbei. Der Schreiber bringt Nachrichten mit, für die Aedan gern einen Becher bereitstellt."
       }
     ],
     "triviaTitle": "Besonderheiten",
