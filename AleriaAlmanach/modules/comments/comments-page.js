@@ -9,7 +9,7 @@ const COMMENT_ACTION_ICONS = {
   rest: '../IconOrdner/Buttom Icons/Rasten.png',
   encounter: '../IconOrdner/Buttom Icons/Kampfstarter.png',
   poll: 'https://i.imgur.com/jeMqIr7.png',
-  herausforderung: './public/assets/herausforderung/challenge-v1.png',
+  herausforderung: '../IconOrdner/Buttom Icons/Herausforderung.png',
   fazit: '../IconOrdner/Buttom Icons/Fazit.png'
 };
 

@@ -1,0 +1,22 @@
+.ir-template-picker { display: grid; gap: 10px; min-width: 0; }
+.ir-template-help { margin: 0; color: #796550; font-size: 11px; line-height: 1.5; }
+.ir-template-filters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.ir-template-result-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 11px; }
+.ir-template-picker button { cursor: pointer; color: #594531; background: #fcf5e7; border: 1px solid #b49b7380; border-radius: 4px; padding: 8px; }
+.ir-template-picker button:focus-visible { outline: 2px solid #805533; outline-offset: 2px; }
+.ir-template-results { display: grid; gap: 5px; max-height: 290px; overflow-y: auto; list-style: none; padding: 3px; margin: 0; }
+.ir-template-results button { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; }
+.ir-template-results button[aria-pressed="true"] { background: #e8d9b8; border-color: #805533; }
+.ir-template-results button:hover { border-color: #805533; }
+.ir-template-results button > span:nth-child(2), .ir-template-selected-head > span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.ir-template-picker strong { display: block; font-size: 13px; }
+.ir-template-picker small { display: block; color: #796550; font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
+.ir-template-excerpt { display: block; margin-top: 3px; color: #796550; font-size: 11px; line-height: 1.4; }
+.ir-template-image { width: 48px; height: 48px; flex: 0 0 48px; object-fit: contain; border-radius: 4px; background: #e9dec9; }
+.ir-template-placeholder { display: grid; place-items: center; color: #a88d64; font-size: 26px; }
+.ir-template-empty { padding: 16px; font-size: 12px; line-height: 1.5; color: #796550; }
+.ir-template-selection { border: 1px solid #b49b7380; border-radius: 5px; padding: 12px; background: #eee1c7; min-width: 0; }
+.ir-template-selection p { margin: 8px 0; font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; white-space: pre-wrap; }
+.ir-template-selected-head { display: flex; gap: 10px; align-items: center; }
+.ir-template-selected-head .ir-template-image { width: 64px; height: 64px; flex-basis: 64px; }
+@media (max-width: 600px) { .ir-template-filters { grid-template-columns: minmax(0, 1fr); } }

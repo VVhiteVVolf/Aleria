@@ -1,7 +1,8 @@
 import { getSkillDefinition } from '../skill-checks/skill-check-model.js?v=20260928-equipment-art-v4';
+import { normalizeHerausforderungBenefits, validateHerausforderungBenefits } from './herausforderung-rewards.js?v=20261014-herausforderung-rewards-v2';
 
 export const HERAUSFORDERUNG_EVENT_KIND = 'herausforderung-event';
-export const HERAUSFORDERUNG_SCHEMA_VERSION = 2;
+export const HERAUSFORDERUNG_SCHEMA_VERSION = 3;
 export const MIN_HERAUSFORDERUNG_APPROACHES = 1;
 export const MAX_HERAUSFORDERUNG_APPROACHES = 6;
 export const HERAUSFORDERUNG_NARROW_FAILURE_MARGIN = 3;
@@ -26,6 +27,10 @@ export function getHerausforderungValidationIssues(event = {}) {
     const id = text(approach?.approachId, 40);
     if (id && ids.has(id)) issues.push({ index, field: 'label', message: 'Jeder Ansatz benötigt eine eigene ID.' });
     if (id) ids.add(id);
+    for (const field of ['rewards', 'partialEffects', 'failureEffects']) {
+      const error = validateHerausforderungBenefits(approach?.[field], { effectsOnly: field !== 'rewards' });
+      if (error) issues.push({ index, field, message: `Ansatz ${index + 1}: ${error}` });
+    }
   });
   return issues;
 }
@@ -58,7 +63,10 @@ export function normalizeHerausforderungApproach(value = {}, index = 0) {
     difficulty: integer(source.difficulty, 10, 1, 40),
     insight: text(source.insight, 2000),
     partialHint: text(source.partialHint, 2000),
-    failureConsequence: text(source.failureConsequence, 2000)
+    failureConsequence: text(source.failureConsequence, 2000),
+    rewards: normalizeHerausforderungBenefits(source.rewards),
+    partialEffects: normalizeHerausforderungBenefits(source.partialEffects),
+    failureEffects: normalizeHerausforderungBenefits(source.failureEffects)
   };
 }
 
@@ -127,6 +135,9 @@ export function collectHerausforderungApproaches(comments = []) {
         insight: approach.insight,
         partialHint: approach.partialHint,
         failureConsequence: approach.failureConsequence,
+        rewards: approach.rewards,
+        partialEffects: approach.partialEffects,
+        failureEffects: approach.failureEffects,
         authorId: '',
         authorKey,
         authorName: text(event.title, 180),

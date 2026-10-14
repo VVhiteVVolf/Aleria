@@ -1,0 +1,3660 @@
+{
+  "format": "aleria.herausforderung",
+  "version": 1,
+  "kind": "ai-template",
+  "instructions": {
+    "task": "Arbeite die Idee des Nutzers als Aleria-Herausforderung aus. Fülle ausschließlich challenge mit gültigen Daten. Gib ein JSON-Objekt mit format, version und challenge zurück, ohne Begleittext oder neue Felder.",
+    "workflow": [
+      "Die leere challenge ist eine Vorlage und noch nicht veröffentlichbar.",
+      "Beschreibe öffentlich nur die wahrnehmbare Situation. Jeder Ansatz benennt einen öffentlich sichtbaren Lösungsweg.",
+      "Fülle jeden Ansatz mit mindestens einer erlaubten Fertigkeits-ID, einer Schwierigkeit und einer verdeckten Erkenntnis. Verwende unterschiedliche approachId-Werte.",
+      "Der Nutzer importiert das Ergebnis als Entwurf, prüft es und veröffentlicht es ausdrücklich."
+    ],
+    "rules": [
+      "Ein bis sechs Ansätze; difficulty als ganze Zahl von 1 bis 40.",
+      "W20 + tatsächlicher Fertigkeitswert der Figur + Ansatzbonus gegen difficulty. Bevorzugte Fertigkeiten +2, alternative Fertigkeiten −2. Figurenwerte und persönliche Passiven nicht im Entwurf nachbauen.",
+      "Erfolg: insight aufdecken und Ansatz abschließen. Natürliche 20: kritischer Erfolg, auch unterhalb der Schwierigkeit. Natürliche 1: deutliches Scheitern; vorhandene Figurenregeln können Ergebnisse beeinflussen.",
+      "Bei 1–3 fehlenden Punkten: partialHint und partialEffects; bei mehr als 3 fehlenden Punkten: failureConsequence und failureEffects. Diese Ansätze bleiben offen.",
+      "rewards werden einmalig an die erfolgreiche Figur vergeben; ein kritischer Erfolg verdoppelt die Belohnung nicht automatisch. Andere Ansätze werden unabhängig ausgewertet.",
+      "Fehlschlagsfolgen werden pro Figur, Ansatz und Ergebnisstufe einmal angewendet. Wiederholungen stapeln dieselbe Folge nicht.",
+      "Gegenstände und Kupfertaler landen direkt im vorhandenen Inventar. Ein volles Inventar blockiert den gesamten Speichervorgang.",
+      "Belohnungen sind öffentlich sichtbar; verdeckte Erkenntnisse, Teilhinweise und Fehlschlagsfolgen erscheinen erst beim passenden Ergebnis.",
+      "Nur Spielleitung oder Redaktion darf Belohnungen und mechanische Folgen veröffentlichen."
+    ],
+    "syntax": {
+      "title": "Öffentlich, maximal 180 Zeichen.",
+      "publicDescription": "Öffentlich, erforderlich, maximal 4.000 Zeichen.",
+      "approach": {
+        "approachId": "Eindeutig, maximal 40 Zeichen.",
+        "label": "Öffentlich, maximal 160 Zeichen.",
+        "preferredSkills": "Array erlaubter skills.id-Werte.",
+        "difficulty": "Ganze Zahl 1–40.",
+        "insight": "Verdeckte Erkenntnis, erforderlich, maximal 2.000 Zeichen.",
+        "partialHint": "Optional, maximal 2.000 Zeichen.",
+        "failureConsequence": "Optional, maximal 2.000 Zeichen."
+      },
+      "rewards": {
+        "copper": "Zahl in Kupfertalern (KT), 0 bis 1.000.000.000, höchstens zwei Nachkommastellen. Taler meint Kupfertaler. 1 KT = 100 Eisenpfennig; 2.5 bedeutet 2,5 KT. Gold ist kein Eingabefeld.",
+        "items": "Maximal acht Referenzen aus itemTemplates. Nur template, moduleId, sourceRevision, title und quantity verwenden. Keine erfundenen IDs, product-Snapshots, Inventar-IDs oder Kampfdaten. Neue Gegenstände zuerst im Handelsregister anlegen.",
+        "effects": "Maximal vier Buffs."
+      },
+      "failureBundles": "partialEffects und failureEffects haben copper: 0, items: [] und höchstens vier effects. Geldverlust oder Gegenstandsverlust nicht erfinden; dafür sind diese Felder nicht vorgesehen.",
+      "quantity": "Ganze Zahl 1–9.999; Waffen und Rüstungen immer quantity: 1. Tiere sind keine Gegenstandsbelohnungen.",
+      "effect": {
+        "effectId": "Innerhalb der Ergebnisgruppe eindeutig, maximal 40 Zeichen.",
+        "presetId": "Eine erlaubte effectPresets.id oder leer für einen eigenen Effekt.",
+        "name": "Erforderlich, maximal 160 Zeichen.",
+        "description": "Erzählerische Beschreibung, maximal 1.600 Zeichen. Freitext erfindet keine zusätzliche Mechanik.",
+        "kind": "buff in rewards, debuff in Fehlschlagsfolgen.",
+        "durationKind": "Ein erlaubter durations.id-Wert.",
+        "durationAmount": "Bei actor-comments und scene-comments ganze Zahl 1–999, sonst 2 als Platzhalter.",
+        "mechanics": "Nur die unten aufgeführten modifierKeys und rollModeKeys. Ganzzahlige Boni/Mali −30 bis +30. Wurfarten: normal, advantage oder disadvantage. Eigene Wirkungsfelder werden nicht unterstützt."
+      },
+      "duration": "Neue Effekte verlieren im Vergabebeitrag keine Laufzeit. Eigene Beiträge, Szenenbeiträge, Rast und Kampfende nutzen die bestehenden Zustandsuhren."
+    },
+    "examples": {
+      "itemReference": {
+        "template": "standard:taverne:eintopf-des-tages",
+        "moduleId": "",
+        "sourceRevision": "",
+        "title": "Eintopf des Tages",
+        "quantity": 1
+      },
+      "buff": {
+        "effectId": "buff-1",
+        "presetId": "blessed",
+        "name": "Ermutigt",
+        "description": "+1 auf Fertigkeitsproben für zwei eigene Beiträge.",
+        "kind": "buff",
+        "durationKind": "actor-comments",
+        "durationAmount": 2,
+        "mechanics": {
+          "skill": 1
+        }
+      },
+      "debuff": {
+        "effectId": "debuff-1",
+        "presetId": "disadvantage",
+        "name": "Verunsichert",
+        "description": "Nachteil auf Angriffe und Fertigkeitsproben für einen eigenen Beitrag.",
+        "kind": "debuff",
+        "durationKind": "actor-comments",
+        "durationAmount": 1,
+        "mechanics": {
+          "attackRollMode": "disadvantage",
+          "skillRollMode": "disadvantage"
+        }
+      }
+    }
+  },
+  "catalog": {
+    "skills": [
+      {
+        "id": "persuasion",
+        "label": "Überzeugen"
+      },
+      {
+        "id": "intimidation",
+        "label": "Einschüchtern"
+      },
+      {
+        "id": "deception",
+        "label": "Täuschen"
+      },
+      {
+        "id": "performance",
+        "label": "Auftreten"
+      },
+      {
+        "id": "insight",
+        "label": "Motiv erkennen"
+      },
+      {
+        "id": "animal-handling",
+        "label": "Mit Tieren umgehen"
+      },
+      {
+        "id": "medicine",
+        "label": "Heilkunde"
+      },
+      {
+        "id": "investigation",
+        "label": "Nachforschungen"
+      },
+      {
+        "id": "religion",
+        "label": "Religion"
+      },
+      {
+        "id": "arcane-kunde",
+        "label": "Arkane Kunde"
+      },
+      {
+        "id": "history",
+        "label": "Geschichte"
+      },
+      {
+        "id": "nature",
+        "label": "Naturkunde"
+      },
+      {
+        "id": "survival",
+        "label": "Überleben"
+      },
+      {
+        "id": "sleight-of-hand",
+        "label": "Fingerfertigkeit"
+      },
+      {
+        "id": "acrobatics",
+        "label": "Akrobatik"
+      },
+      {
+        "id": "athletics",
+        "label": "Athletik"
+      },
+      {
+        "id": "seduction",
+        "label": "Flirten"
+      },
+      {
+        "id": "body-control",
+        "label": "Körperbeherrschung"
+      }
+    ],
+    "itemTemplates": [
+      {
+        "template": "standard:taverne:eintopf-des-tages",
+        "title": "Eintopf des Tages",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 0.9,
+          "maxCopper": 0.9
+        }
+      },
+      {
+        "template": "standard:taverne:geroestetes-fleisch",
+        "title": "Geröstetes Fleisch",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 4,
+          "maxCopper": 4
+        }
+      },
+      {
+        "template": "standard:taverne:hafergruetze",
+        "title": "Hafergrütze mit Schmalz",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 0.1,
+          "maxCopper": 0.1
+        }
+      },
+      {
+        "template": "standard:taverne:blutwurst-kraut",
+        "title": "Blutwurst & Kraut",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1.1,
+          "maxCopper": 1.1
+        }
+      },
+      {
+        "template": "standard:taverne:gebackenes-huhn",
+        "title": "Gebackenes Huhn",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1.8,
+          "maxCopper": 1.8
+        }
+      },
+      {
+        "template": "standard:taverne:bohneneintopf",
+        "title": "Bohneneintopf",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 0.85,
+          "maxCopper": 0.85
+        }
+      },
+      {
+        "template": "standard:taverne:bauernbrot",
+        "title": "Geröstetes Bauernbrot",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 0.35,
+          "maxCopper": 0.35
+        }
+      },
+      {
+        "template": "standard:taverne:fruehstuecksteller",
+        "title": "Frühstücksteller",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 0.5,
+          "maxCopper": 0.5
+        }
+      },
+      {
+        "template": "standard:taverne:raeucherfleisch",
+        "title": "Räucherfleisch",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2,
+          "maxCopper": 2
+        }
+      },
+      {
+        "template": "standard:taverne:raeucherfisch",
+        "title": "Räucherfisch",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 3,
+          "maxCopper": 3
+        }
+      },
+      {
+        "template": "standard:taverne:sauergemuese",
+        "title": "Sauergemüse",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 0.3,
+          "maxCopper": 0.3
+        }
+      },
+      {
+        "template": "standard:taverne:teigtaschen",
+        "title": "Teigtaschen",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 0.85,
+          "maxCopper": 0.85
+        }
+      },
+      {
+        "template": "standard:taverne:duennes-bier",
+        "title": "Dünnes gewässertes Bier",
+        "category": "getraenke",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 0.15,
+          "maxCopper": 0.15
+        }
+      },
+      {
+        "template": "standard:taverne:starkbier",
+        "title": "Einfaches Starkbier",
+        "category": "getraenke",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 0.5,
+          "maxCopper": 0.5
+        }
+      },
+      {
+        "template": "standard:taverne:honigmet",
+        "title": "Schlichter Honigmet",
+        "category": "getraenke",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:taverne:apfelwein",
+        "title": "Apfelwein",
+        "category": "getraenke",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 0.6,
+          "maxCopper": 0.6
+        }
+      },
+      {
+        "template": "standard:taverne:wasser",
+        "title": "Wasser",
+        "category": "getraenke",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 0.05,
+          "maxCopper": 0.05
+        }
+      },
+      {
+        "template": "standard:taverne:klosterbier",
+        "title": "Klosterbier",
+        "category": "getraenke",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:taverne:kraeuteraufguss",
+        "title": "Kräuteraufguss",
+        "category": "getraenke",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 0.25,
+          "maxCopper": 0.25
+        }
+      },
+      {
+        "template": "standard:taverne:branntwein",
+        "title": "Einfacher Branntwein",
+        "category": "getraenke",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 2
+        }
+      },
+      {
+        "template": "standard:taverne:kraeuterschnaps",
+        "title": "Lokaler Kräuterschnaps",
+        "category": "getraenke",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2,
+          "maxCopper": 3
+        }
+      },
+      {
+        "template": "standard:taverne:kloster-spiritus",
+        "title": "Kloster \"Spiritus\"",
+        "category": "getraenke",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 3,
+          "maxCopper": 5
+        }
+      },
+      {
+        "template": "standard:taverne:knechtfrass",
+        "title": "Knechtfraß",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:taverne:kurgrunden-teller",
+        "title": "Kurgrunden Teller",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 3,
+          "maxCopper": 3
+        }
+      },
+      {
+        "template": "standard:taverne:bardenmahl",
+        "title": "Bardenmahl",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 4,
+          "maxCopper": 4
+        }
+      },
+      {
+        "template": "standard:alchemist:daemmerlilie",
+        "title": "Dämmerlilie",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 10,
+          "maxCopper": 10
+        }
+      },
+      {
+        "template": "standard:alchemist:azurlilie",
+        "title": "Azurlilie",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 10,
+          "maxCopper": 10
+        }
+      },
+      {
+        "template": "standard:alchemist:blutlilie",
+        "title": "Blutlilie",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 10,
+          "maxCopper": 10
+        }
+      },
+      {
+        "template": "standard:alchemist:tollkirsche",
+        "title": "Tollkirsche",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 30,
+          "maxCopper": 30
+        }
+      },
+      {
+        "template": "standard:alchemist:todesgloeckchen",
+        "title": "Todesglöckchen",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 35,
+          "maxCopper": 35
+        }
+      },
+      {
+        "template": "standard:alchemist:wisperkraut",
+        "title": "Wisperkraut",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 100,
+          "maxCopper": 100
+        }
+      },
+      {
+        "template": "standard:alchemist:blutgras",
+        "title": "Blutgras",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 15,
+          "maxCopper": 15
+        }
+      },
+      {
+        "template": "standard:alchemist:schneebeere",
+        "title": "Schneebeere",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:alchemist:traumkorn",
+        "title": "Traumkorn",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:alchemist:aleriawurz",
+        "title": "Aleriawurz",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:alchemist:zornkappe",
+        "title": "Zornkappe",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 20,
+          "maxCopper": 20
+        }
+      },
+      {
+        "template": "standard:alchemist:fliegenpilz",
+        "title": "Fliegenpilz",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 15,
+          "maxCopper": 15
+        }
+      },
+      {
+        "template": "standard:alchemist:irrlichtling",
+        "title": "Irrlichtling",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:alchemist:aderpilz",
+        "title": "Aderpilz",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 100,
+          "maxCopper": 100
+        }
+      },
+      {
+        "template": "standard:alchemist:garnspinnengift",
+        "title": "Gift der Garnspinne",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 100,
+          "maxCopper": 100
+        }
+      },
+      {
+        "template": "standard:alchemist:trollblut",
+        "title": "Trollblut",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:alchemist:infernales-blut",
+        "title": "Infernales Blut",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 5000,
+          "maxCopper": 5000
+        }
+      },
+      {
+        "template": "standard:alchemist:sukkubus-extrakt",
+        "title": "Sukkubus-/Inkubus-Extrakt",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 15000,
+          "maxCopper": 15000
+        }
+      },
+      {
+        "template": "standard:alchemist:waldschrat-herz",
+        "title": "Waldschrat-Herz",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:alchemist:formwandler-herz",
+        "title": "Formwandler-Herz",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:alchemist:korrumpiertes-ahnenherz",
+        "title": "Korrumpiertes Ahnenherz",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 100000,
+          "maxCopper": 100000
+        }
+      },
+      {
+        "template": "standard:alchemist:nautiloiden-gehirn",
+        "title": "Nautiloiden-Gehirn",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 30000,
+          "maxCopper": 30000
+        }
+      },
+      {
+        "template": "standard:alchemist:trollherz",
+        "title": "Trollherz",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 20000,
+          "maxCopper": 20000
+        }
+      },
+      {
+        "template": "standard:alchemist:ektoplasma",
+        "title": "Ektoplasma",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:alchemist:kriecher-eier",
+        "title": "Höhlenkriecher-Eier",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 100,
+          "maxCopper": 100
+        }
+      },
+      {
+        "template": "standard:alchemist:heiltrank",
+        "title": "Heiltrank",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 20,
+          "maxCopper": 100
+        }
+      },
+      {
+        "template": "standard:alchemist:manatrank",
+        "title": "Manatrank",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 20,
+          "maxCopper": 100
+        }
+      },
+      {
+        "template": "standard:alchemist:ahnenbaumsaft",
+        "title": "Phiole mit Ahnenbaumsaft",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 400000,
+          "maxCopper": 400000
+        }
+      },
+      {
+        "template": "standard:alchemist:kriss",
+        "title": "Kriss",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 100,
+          "maxCopper": 100
+        }
+      },
+      {
+        "template": "standard:alchemist:smaragdflux",
+        "title": "Smaragdflux",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:alchemist:trollabsud",
+        "title": "Trollabsud",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 200,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:alchemist:tenebrium-bombe",
+        "title": "Tenebrium-Bombe",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 4000
+        }
+      },
+      {
+        "template": "standard:alchemist:sonne-shirazads",
+        "title": "Sonne Shirazads",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 200,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:arkanist:zauberstein",
+        "title": "Zauberstein",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 10000
+        }
+      },
+      {
+        "template": "standard:arkanist:seelenstein",
+        "title": "Seelenstein",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 10000
+        }
+      },
+      {
+        "template": "standard:arkanist:zauberschriftrolle",
+        "title": "Zauberschriftrolle",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 100,
+          "maxCopper": 10000
+        }
+      },
+      {
+        "template": "standard:arkanist:zauberdieb-amulett",
+        "title": "Zauberdieb Amulett",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:arkanist:seelenhaescher-gefaess",
+        "title": "Seelenhäscher Gefäß",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 10000,
+          "maxCopper": 100000
+        }
+      },
+      {
+        "template": "standard:arkanist:zaubergrimoire",
+        "title": "Zaubergrimoire",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:arkanist:verzaubertes-diadem",
+        "title": "Verzaubertes Diadem",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 100000
+        }
+      },
+      {
+        "template": "standard:arkanist:verzaubertes-amulett",
+        "title": "Verzaubertes Amulett",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 100000
+        }
+      },
+      {
+        "template": "standard:arkanist:verzauberter-ring",
+        "title": "Verzauberter Ring",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 100000
+        }
+      },
+      {
+        "template": "standard:arkanist:verzauberter-stab",
+        "title": "Verzauberter Stab",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 100000
+        }
+      },
+      {
+        "template": "standard:arkanist:tenebrium-ketten",
+        "title": "Tenebrium Ketten",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 5000,
+          "maxCopper": 5000
+        }
+      },
+      {
+        "template": "standard:arkanist:stuemperhaft-verzauberter-stab",
+        "title": "Stümperhaft verzauberter Stab",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:arkanist:grundlagen-der-magie",
+        "title": "Grundlagen der Magie I-VI",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:schwarzmarkt:kriss",
+        "title": "Kriss (Phiole)",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 200,
+          "maxCopper": 200
+        }
+      },
+      {
+        "template": "standard:schwarzmarkt:smaragdflux",
+        "title": "Smaragdflux (Phiole)",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:schwarzmarkt:blutstaub",
+        "title": "Blutstaub (Schale)",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 20,
+          "maxCopper": 20
+        }
+      },
+      {
+        "template": "standard:schwarzmarkt:traumkorn",
+        "title": "Traumkorn (Beutel)",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 50,
+          "maxCopper": 50
+        }
+      },
+      {
+        "template": "standard:schwarzmarkt:amoniten-grimoire",
+        "title": "Amoniten Grimoire",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:schwarzmarkt:schwarzer-seelenstein",
+        "title": "Schwarzer Seelenstein",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 5000,
+          "maxCopper": 5000
+        }
+      },
+      {
+        "template": "standard:schwarzmarkt:infernale-zauberrolle",
+        "title": "Infernale Zauberrolle",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 10000,
+          "maxCopper": 10000
+        }
+      },
+      {
+        "template": "standard:schwarzmarkt:opferdolch",
+        "title": "Infernaler Opferdolch",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 8000,
+          "maxCopper": 8000
+        }
+      },
+      {
+        "template": "standard:schwarzmarkt:daemmersphaere",
+        "title": "Dämmersphäre",
+        "category": "arkanes",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 100000000,
+          "maxCopper": 100000000
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:rucksack",
+        "title": "Rucksack",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 10,
+          "maxCopper": 10
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:wasserschlauch",
+        "title": "Wasserschlauch",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:bettrolle",
+        "title": "Bettrolle",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 3,
+          "maxCopper": 3
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:feuerstein-stahl",
+        "title": "Feuerstein & Stahl",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2,
+          "maxCopper": 2
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:fackel",
+        "title": "Fackel",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:laterne",
+        "title": "Laterne (einfach)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 8,
+          "maxCopper": 8
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:lampenoel",
+        "title": "Lampenöl (Flasche)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 4,
+          "maxCopper": 4
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:seil",
+        "title": "Seil (Hanf, 15m)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2,
+          "maxCopper": 2
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:kreide",
+        "title": "Kreide (weiß)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:notizbuch",
+        "title": "Notizbuch (klein)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 5,
+          "maxCopper": 5
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:feder-tinte",
+        "title": "Feder & Tinte",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:seife",
+        "title": "Seife",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:nadel-faden",
+        "title": "Nadel & Faden",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:kleidung-einfach",
+        "title": "Kleidung (einfach)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 10,
+          "maxCopper": 10
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:guertelbeutel",
+        "title": "Gürtelbeutel",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 3,
+          "maxCopper": 3
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:spiegel",
+        "title": "Spiegel (Metall)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 5,
+          "maxCopper": 5
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:kochgeschirr",
+        "title": "Kochgeschirr",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2,
+          "maxCopper": 2
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:essbesteck",
+        "title": "Essbesteck & Schale",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:rationen",
+        "title": "Rationen (1 Tag)",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 5,
+          "maxCopper": 10
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:zelt-klein",
+        "title": "Zelt (klein)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 100,
+          "maxCopper": 100
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:signalpfeife",
+        "title": "Signalpfeife",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 10,
+          "maxCopper": 10
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:verbandstoff",
+        "title": "Verbandstoff (Paket)",
+        "category": "alchemie",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 25,
+          "maxCopper": 25
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:kraeutermoerser",
+        "title": "Kräutermörser (klein)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 35,
+          "maxCopper": 35
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:holzkamm",
+        "title": "Holzkamm",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:leinentasche",
+        "title": "Leinentasche",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2,
+          "maxCopper": 2
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:holzloeffel",
+        "title": "Holzlöffel",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:tonbecher",
+        "title": "Tonbecher",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:holzschuessel",
+        "title": "Holzschüssel",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2,
+          "maxCopper": 2
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:trinkschlauch-klein",
+        "title": "Trinkschlauch (klein)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2,
+          "maxCopper": 2
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:leinenband",
+        "title": "Leinenband (5m)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:pergamentrolle",
+        "title": "Pergamentrolle (leer)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 3,
+          "maxCopper": 3
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:kieselsteinbeutel",
+        "title": "Kieselsteinbeutel",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:holzpfeife",
+        "title": "Holzpfeife",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2,
+          "maxCopper": 2
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:salzbeutel",
+        "title": "Salzbeutel (klein)",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 4,
+          "maxCopper": 4
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:holznadel",
+        "title": "Holznadel",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:talgkerze",
+        "title": "Talgkerze",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1,
+          "maxCopper": 1
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:holzspielwuerfel",
+        "title": "Holzspielwürfel (Set)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 3,
+          "maxCopper": 3
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:kraeutersaeckchen",
+        "title": "Kräutersäckchen",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2,
+          "maxCopper": 2
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:wetzstein",
+        "title": "Wetzstein",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 4,
+          "maxCopper": 4
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:holzfigur",
+        "title": "Holzfigur (klein)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 5,
+          "maxCopper": 5
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:stoffstreifen",
+        "title": "Stoffstreifen (10 Stk.)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 3,
+          "maxCopper": 3
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:wollmuetze",
+        "title": "Wollmütze",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 6,
+          "maxCopper": 6
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:lederflicken",
+        "title": "Lederflicken",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2,
+          "maxCopper": 2
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:holznadelspiel",
+        "title": "Holznadelspiel",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 4,
+          "maxCopper": 4
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:tonlampe",
+        "title": "Tonlampe",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 6,
+          "maxCopper": 6
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:reisepaket-klein",
+        "title": "Reisepaket (klein)",
+        "category": "speisen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 12,
+          "maxCopper": 12
+        }
+      },
+      {
+        "template": "standard:gemischtwarenhandler:holzstab",
+        "title": "Holzstab (1m)",
+        "category": "werkzeuge",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 3,
+          "maxCopper": 3
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:stahlschwert",
+        "title": "Stahlschwert",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 500,
+          "maxCopper": 500
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:langschwert",
+        "title": "Langschwert",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:dreizack",
+        "title": "Dreizack",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 800,
+          "maxCopper": 800
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:flegel",
+        "title": "Flegel",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 600,
+          "maxCopper": 600
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:streitaxt",
+        "title": "Streitaxt",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1300,
+          "maxCopper": 1300
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:rattenpruegel",
+        "title": "Rattenprügel",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 300,
+          "maxCopper": 300
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:ritterschwert",
+        "title": "Ritterschwert",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2000,
+          "maxCopper": 5000
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:hellebarde",
+        "title": "Hellebarde",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2000,
+          "maxCopper": 3000
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:armbrust",
+        "title": "Einfache Armbrust",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 400,
+          "maxCopper": 400
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:streitkolben",
+        "title": "Streitkolben",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 800,
+          "maxCopper": 800
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:kriegshammer",
+        "title": "Zweihand-Kriegshammer",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1500,
+          "maxCopper": 1500
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:morgenstern",
+        "title": "Morgenstern",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:lanze",
+        "title": "Lanze",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1200,
+          "maxCopper": 1200
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:einfacher-bogen",
+        "title": "Einfacher Bogen",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 100,
+          "maxCopper": 100
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:kurzbogen",
+        "title": "Kurzbogen",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 200,
+          "maxCopper": 200
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:langbogen",
+        "title": "Langbogen",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:lederruestung",
+        "title": "Lederrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 500,
+          "maxCopper": 500
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:verstaerkte-lederruestung",
+        "title": "Verstärkte Lederrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 800,
+          "maxCopper": 800
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:stoffruestung",
+        "title": "Stoffrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 50,
+          "maxCopper": 50
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:kettenruestung",
+        "title": "Kettenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 1000
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:schuppenpanzer",
+        "title": "Schuppenpanzer",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2000,
+          "maxCopper": 2000
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:stahlkuerass",
+        "title": "(Leder) Stahlkürass",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1200,
+          "maxCopper": 1200
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:ritterplatte",
+        "title": "Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 5000,
+          "maxCopper": 40000
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:fellruestung",
+        "title": "Fell/Pelz-Rüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 300,
+          "maxCopper": 300
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:ringpanzer",
+        "title": "Ringpanzer-Rüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 600,
+          "maxCopper": 600
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:brigantine",
+        "title": "Brigantine-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2000,
+          "maxCopper": 5000
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:lamellenpanzer",
+        "title": "Lamellenpanzer-Rüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 2000,
+          "maxCopper": 5000
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:turnierruestung",
+        "title": "Turnierrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 5000,
+          "maxCopper": 50000
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:wappenrock-ruestung",
+        "title": "Rüstung mit Wappenrock",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 1000,
+          "maxCopper": 10000
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:gambeson",
+        "title": "Verstärkter Gambeson",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 100,
+          "maxCopper": 100
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:rundschild",
+        "title": "Rundschild",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 30,
+          "maxCopper": 30
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:kite-schild",
+        "title": "Kite-Schild",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 100,
+          "maxCopper": 100
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:turmschild",
+        "title": "Turmschild",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 80,
+          "maxCopper": 80
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:buckler",
+        "title": "Buckler",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 15,
+          "maxCopper": 15
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:pavese",
+        "title": "Pavese",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 100,
+          "maxCopper": 100
+        }
+      },
+      {
+        "template": "standard:waffen-rustungen:saex",
+        "title": "Saex",
+        "category": "waffen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": {
+          "minCopper": 400,
+          "maxCopper": 400
+        }
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-almarch:jungritter",
+        "title": "Haus Almarch · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-almarch:ritter",
+        "title": "Haus Almarch · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-almarch:seniorritter",
+        "title": "Haus Almarch · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-althin:jungritter",
+        "title": "Haus Althin · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-althin:ritter",
+        "title": "Haus Althin · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-althin:seniorritter",
+        "title": "Haus Althin · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-annwyl:jungritter",
+        "title": "Haus Annwyl · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-annwyl:ritter",
+        "title": "Haus Annwyl · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-annwyl:seniorritter",
+        "title": "Haus Annwyl · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-ard-conbhron:jungritter",
+        "title": "Haus Ard Conbhrón · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-ard-conbhron:ritter",
+        "title": "Haus Ard Conbhrón · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-ard-conbhron:seniorritter",
+        "title": "Haus Ard Conbhrón · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-arwydd:jungritter",
+        "title": "Haus Arwydd · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-arwydd:ritter",
+        "title": "Haus Arwydd · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-arwydd:seniorritter",
+        "title": "Haus Arwydd · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-awenor:jungritter",
+        "title": "Haus Awenor · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-awenor:ritter",
+        "title": "Haus Awenor · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-awenor:seniorritter",
+        "title": "Haus Awenor · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-awenydd:jungritter",
+        "title": "Haus Awenydd · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-awenydd:ritter",
+        "title": "Haus Awenydd · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-awenydd:seniorritter",
+        "title": "Haus Awenydd · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-balchder:jungritter",
+        "title": "Haus Balchder · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-balchder:ritter",
+        "title": "Haus Balchder · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-balchder:seniorritter",
+        "title": "Haus Balchder · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-barus:jungritter",
+        "title": "Haus Barus · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-barus:ritter",
+        "title": "Haus Barus · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-barus:seniorritter",
+        "title": "Haus Barus · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-bleiddorn:jungritter",
+        "title": "Haus Bleiddorn · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-bleiddorn:ritter",
+        "title": "Haus Bleiddorn · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-bleiddorn:seniorritter",
+        "title": "Haus Bleiddorn · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-bradrhith:jungritter",
+        "title": "Haus Bradrhith · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-bradrhith:ritter",
+        "title": "Haus Bradrhith · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-bradrhith:seniorritter",
+        "title": "Haus Bradrhith · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-brinmarch:jungritter",
+        "title": "Haus Brinmarch · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-brinmarch:ritter",
+        "title": "Haus Brinmarch · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-brinmarch:seniorritter",
+        "title": "Haus Brinmarch · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-cenfig:jungritter",
+        "title": "Haus Cenfig · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-cenfig:ritter",
+        "title": "Haus Cenfig · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-cenfig:seniorritter",
+        "title": "Haus Cenfig · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-chwedlonol:jungritter",
+        "title": "Haus Chwedonol · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-chwedlonol:ritter",
+        "title": "Haus Chwedonol · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-chwedlonol:seniorritter",
+        "title": "Haus Chwedonol · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-cludwyr:jungritter",
+        "title": "Haus Cludwyr · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-cludwyr:ritter",
+        "title": "Haus Cludwyr · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-cludwyr:seniorritter",
+        "title": "Haus Cludwyr · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-coeddu:jungritter",
+        "title": "Haus Coeddu · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-coeddu:ritter",
+        "title": "Haus Coeddu · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-coeddu:seniorritter",
+        "title": "Haus Coeddu · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-coedvarn:jungritter",
+        "title": "Haus Coedvarn · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-coedvarn:ritter",
+        "title": "Haus Coedvarn · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-coedvarn:seniorritter",
+        "title": "Haus Coedvarn · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:craigddu:jungritter",
+        "title": "Haus Craigddu · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:craigddu:ritter",
+        "title": "Haus Craigddu · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:craigddu:seniorritter",
+        "title": "Haus Craigddu · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-cysgodion:jungritter",
+        "title": "Haus Cysgodion · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-cysgodion:ritter",
+        "title": "Haus Cysgodion · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-cysgodion:seniorritter",
+        "title": "Haus Cysgodion · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-daran:jungritter",
+        "title": "Haus Daran · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-daran:ritter",
+        "title": "Haus Daran · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-daran:seniorritter",
+        "title": "Haus Daran · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-draig:jungritter",
+        "title": "Haus Draig · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-draig:ritter",
+        "title": "Haus Draig · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-draig:seniorritter",
+        "title": "Haus Draig · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-dubhan-gwynthor:jungritter",
+        "title": "Haus Dubhan · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-dubhan-gwynthor:ritter",
+        "title": "Haus Dubhan · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-dubhan-gwynthor:seniorritter",
+        "title": "Haus Dubhan · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-edmy:jungritter",
+        "title": "Haus Edmy · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-edmy:ritter",
+        "title": "Haus Edmy · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-edmy:seniorritter",
+        "title": "Haus Edmy · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-eirfael:jungritter",
+        "title": "Haus Eirfael · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-eirfael:ritter",
+        "title": "Haus Eirfael · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-eirfael:seniorritter",
+        "title": "Haus Eirfael · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-eneiniog:jungritter",
+        "title": "Haus Eneiniog · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-eneiniog:ritter",
+        "title": "Haus Eneiniog · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-eneiniog:seniorritter",
+        "title": "Haus Eneiniog · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-falchdyn:jungritter",
+        "title": "Haus Falchdyn · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-falchdyn:ritter",
+        "title": "Haus Falchdyn · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-falchdyn:seniorritter",
+        "title": "Haus Falchdyn · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gafyr:jungritter",
+        "title": "Haus Gafyr · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gafyr:ritter",
+        "title": "Haus Gafyr · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gafyr:seniorritter",
+        "title": "Haus Gafyr · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-garrael:jungritter",
+        "title": "Haus Garrael · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-garrael:ritter",
+        "title": "Haus Garrael · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-garrael:seniorritter",
+        "title": "Haus Garrael · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gelyn:jungritter",
+        "title": "Haus Gelyn · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gelyn:ritter",
+        "title": "Haus Gelyn · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gelyn:seniorritter",
+        "title": "Haus Gelyn · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-ghorswyn:jungritter",
+        "title": "Haus Ghorswyn · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-ghorswyn:ritter",
+        "title": "Haus Ghorswyn · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-ghorswyn:seniorritter",
+        "title": "Haus Ghorswyn · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gostyn:jungritter",
+        "title": "Haus Gostyn · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gostyn:ritter",
+        "title": "Haus Gostyn · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gostyn:seniorritter",
+        "title": "Haus Gostyn · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwardin:jungritter",
+        "title": "Haus Gwardin · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwardin:ritter",
+        "title": "Haus Gwardin · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwardin:seniorritter",
+        "title": "Haus Gwardin · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwared:jungritter",
+        "title": "Haus Gwared · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwared:ritter",
+        "title": "Haus Gwared · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwared:seniorritter",
+        "title": "Haus Gwared · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwefrydd:jungritter",
+        "title": "Haus Gwefrydd · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwefrydd:ritter",
+        "title": "Haus Gwefrydd · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwefrydd:seniorritter",
+        "title": "Haus Gwefrydd · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwyllach:jungritter",
+        "title": "Haus Gwyllach · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwyllach:ritter",
+        "title": "Haus Gwyllach · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwyllach:seniorritter",
+        "title": "Haus Gwyllach · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwynrhos:jungritter",
+        "title": "Haus Gwynrhos · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwynrhos:ritter",
+        "title": "Haus Gwynrhos · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwynrhos:seniorritter",
+        "title": "Haus Gwynrhos · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwyntog:jungritter",
+        "title": "Haus Gwyntog · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwyntog:ritter",
+        "title": "Haus Gwyntog · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwyntog:seniorritter",
+        "title": "Haus Gwyntog · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwyvern:jungritter",
+        "title": "Haus Gwyvern · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwyvern:ritter",
+        "title": "Haus Gwyvern · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-gwyvern:seniorritter",
+        "title": "Haus Gwyvern · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-illysywen:jungritter",
+        "title": "Haus Illysywen · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-illysywen:ritter",
+        "title": "Haus Illysywen · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-illysywen:seniorritter",
+        "title": "Haus Illysywen · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-loer:jungritter",
+        "title": "Haus Loer · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-loer:ritter",
+        "title": "Haus Loer · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-loer:seniorritter",
+        "title": "Haus Loer · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-madryn:jungritter",
+        "title": "Haus Madryn · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-madryn:ritter",
+        "title": "Haus Madryn · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-madryn:seniorritter",
+        "title": "Haus Madryn · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-merek:jungritter",
+        "title": "Haus Merek · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-merek:ritter",
+        "title": "Haus Merek · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-merek:seniorritter",
+        "title": "Haus Merek · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-morveth:jungritter",
+        "title": "Haus Morveth · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-morveth:ritter",
+        "title": "Haus Morveth · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-morveth:seniorritter",
+        "title": "Haus Morveth · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-penwyn:jungritter",
+        "title": "Haus Penwyn · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-penwyn:ritter",
+        "title": "Haus Penwyn · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-penwyn:seniorritter",
+        "title": "Haus Penwyn · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-rhenna:jungritter",
+        "title": "Haus Rhenna · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-rhenna:ritter",
+        "title": "Haus Rhenna · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-rhenna:seniorritter",
+        "title": "Haus Rhenna · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-rhuddgar:jungritter",
+        "title": "Haus Rhuddgar · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-rhuddgar:ritter",
+        "title": "Haus Rhuddgar · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-rhuddgar:seniorritter",
+        "title": "Haus Rhuddgar · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-rhyddid:jungritter",
+        "title": "Haus Rhyddid · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-rhyddid:ritter",
+        "title": "Haus Rhyddid · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-rhyddid:seniorritter",
+        "title": "Haus Rhyddid · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-saethwyr:jungritter",
+        "title": "Haus Saethwyr · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-saethwyr:ritter",
+        "title": "Haus Saethwyr · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-saethwyr:seniorritter",
+        "title": "Haus Saethwyr · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-seldryn:jungritter",
+        "title": "Haus Seldryn · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-seldryn:ritter",
+        "title": "Haus Seldryn · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-seldryn:seniorritter",
+        "title": "Haus Seldryn · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-selog:jungritter",
+        "title": "Haus Selog · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-selog:ritter",
+        "title": "Haus Selog · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-selog:seniorritter",
+        "title": "Haus Selog · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-sgrechiwr:jungritter",
+        "title": "Haus Sgrechiwr · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-sgrechiwr:ritter",
+        "title": "Haus Sgrechiwr · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-sgrechiwr:seniorritter",
+        "title": "Haus Sgrechiwr · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-skellor:jungritter",
+        "title": "Haus Skellor · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-skellor:ritter",
+        "title": "Haus Skellor · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-skellor:seniorritter",
+        "title": "Haus Skellor · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-talinvyr:jungritter",
+        "title": "Haus Talinvyr · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-talinvyr:ritter",
+        "title": "Haus Talinvyr · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-talinvyr:seniorritter",
+        "title": "Haus Talinvyr · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-talmeirch:jungritter",
+        "title": "Haus Talmeirch · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-talmeirch:ritter",
+        "title": "Haus Talmeirch · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-talmeirch:seniorritter",
+        "title": "Haus Talmeirch · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-taranvyr:jungritter",
+        "title": "Haus Taranvyr · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-taranvyr:ritter",
+        "title": "Haus Taranvyr · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-taranvyr:seniorritter",
+        "title": "Haus Taranvyr · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-tawelgar:jungritter",
+        "title": "Haus Tawelgar · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-tawelgar:ritter",
+        "title": "Haus Tawelgar · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-tawelgar:seniorritter",
+        "title": "Haus Tawelgar · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-tirwyn:jungritter",
+        "title": "Haus Tirwyn · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-tirwyn:ritter",
+        "title": "Haus Tirwyn · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-tirwyn:seniorritter",
+        "title": "Haus Tirwyn · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-tlawd:jungritter",
+        "title": "Haus Tlawd · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-tlawd:ritter",
+        "title": "Haus Tlawd · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-tlawd:seniorritter",
+        "title": "Haus Tlawd · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-trydar:jungritter",
+        "title": "Haus Trydar · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-trydar:ritter",
+        "title": "Haus Trydar · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-trydar:seniorritter",
+        "title": "Haus Trydar · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-ui-talamh:jungritter",
+        "title": "Haus Ui Talamh · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-ui-talamh:ritter",
+        "title": "Haus Ui Talamh · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-ui-talamh:seniorritter",
+        "title": "Haus Ui Talamh · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-wyrm:jungritter",
+        "title": "Haus Wyrm · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-wyrm:ritter",
+        "title": "Haus Wyrm · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-wyrm:seniorritter",
+        "title": "Haus Wyrm · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-ymladd:jungritter",
+        "title": "Haus Ymladd · Jungritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-ymladd:ritter",
+        "title": "Haus Ymladd · Gestandener Ritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      },
+      {
+        "template": "standard:cenyr-ruestungen:haus-ymladd:seniorritter",
+        "title": "Haus Ymladd · Seniorritter-Plattenrüstung",
+        "category": "ruestungen",
+        "moduleId": "",
+        "sourceRevision": "",
+        "priceRange": null
+      }
+    ],
+    "effectPresets": [
+      {
+        "id": "advantage",
+        "name": "Vorteil",
+        "kind": "buff",
+        "description": "Vorteil auf Angriffe und Fertigkeitsproben für die angegebene Dauer. Ein gleichzeitig aktiver Nachteil hebt ihn auf.",
+        "mechanics": {
+          "attackRollMode": "advantage",
+          "skillRollMode": "advantage"
+        }
+      },
+      {
+        "id": "disadvantage",
+        "name": "Nachteil",
+        "kind": "debuff",
+        "description": "Nachteil auf Angriffe und Fertigkeitsproben für die angegebene Dauer. Ein gleichzeitig aktiver Vorteil hebt ihn auf.",
+        "mechanics": {
+          "attackRollMode": "disadvantage",
+          "skillRollMode": "disadvantage"
+        }
+      },
+      {
+        "id": "blessed",
+        "name": "Gesegnet",
+        "kind": "buff",
+        "description": "Ein Segen begleitet die Figur. Trage die vereinbarten Boni unten ein.",
+        "mechanics": {}
+      },
+      {
+        "id": "protected",
+        "name": "Geschützt",
+        "kind": "buff",
+        "description": "Vorübergehender Schutz. Rüstungsbonus nach Quelle eintragen.",
+        "mechanics": {}
+      },
+      {
+        "id": "bane",
+        "name": "Verflucht",
+        "kind": "debuff",
+        "description": "Ein Fluch beeinträchtigt die Figur. Mali nach Quelle eintragen.",
+        "mechanics": {}
+      },
+      {
+        "id": "poisoned",
+        "name": "Vergiftet",
+        "kind": "debuff",
+        "description": "Giftwirkung und gegebenenfalls Folgeschaden nach Quelle berücksichtigen.",
+        "mechanics": {}
+      },
+      {
+        "id": "burning",
+        "name": "Brennend",
+        "kind": "debuff",
+        "description": "Die Figur brennt. Folgeschaden und Löschbedingungen nach Quelle berücksichtigen.",
+        "mechanics": {}
+      },
+      {
+        "id": "bleeding",
+        "name": "Blutend",
+        "kind": "debuff",
+        "description": "Eine blutende Wunde. Folgeschaden und Versorgung nach Quelle berücksichtigen.",
+        "mechanics": {}
+      },
+      {
+        "id": "blinded",
+        "name": "Geblendet",
+        "kind": "condition",
+        "description": "Die Sicht ist beeinträchtigt. Einschränkungen nach Quelle berücksichtigen.",
+        "mechanics": {}
+      },
+      {
+        "id": "prone",
+        "name": "Liegend",
+        "kind": "condition",
+        "description": "Die Figur liegt am Boden und verliert im nächsten eigenen Beitrag ihre Bonusaktion. Kein Bewegungsabzug und kein Angriffsnachteil.",
+        "mechanics": {},
+        "blockedResource": "bonus-action"
+      },
+      {
+        "id": "restrained",
+        "name": "Festgesetzt",
+        "kind": "condition",
+        "description": "Die Figur ist festgesetzt. Befreiungsbedingungen nach Quelle berücksichtigen.",
+        "mechanics": {}
+      },
+      {
+        "id": "stunned",
+        "name": "Betäubt",
+        "kind": "condition",
+        "description": "Die Figur kann keine Kampfhandlungen ausführen. Mit „Abwarten / Zug aussetzen“ vergeht ihr eigener Kampfpost.",
+        "mechanics": {
+          "blocksActions": true
+        }
+      },
+      {
+        "id": "sleeping",
+        "name": "Schlafend",
+        "kind": "condition",
+        "description": "Die Figur schläft. Aufweckbedingungen nach Quelle berücksichtigen.",
+        "mechanics": {}
+      },
+      {
+        "id": "wet",
+        "name": "Nass",
+        "kind": "condition",
+        "description": "Die Figur ist durchnässt. Wechselwirkungen nach Quelle berücksichtigen.",
+        "mechanics": {}
+      }
+    ],
+    "durations": [
+      {
+        "id": "actor-comments",
+        "label": "Eigene Beiträge"
+      },
+      {
+        "id": "scene-comments",
+        "label": "Szenenbeiträge"
+      },
+      {
+        "id": "combat",
+        "label": "Bis zum Kampfende"
+      },
+      {
+        "id": "short-rest",
+        "label": "Bis zur nächsten Rast"
+      },
+      {
+        "id": "long-rest",
+        "label": "Bis zur langen Rast"
+      },
+      {
+        "id": "day",
+        "label": "Bis zum nächsten Szenentag"
+      },
+      {
+        "id": "permanent",
+        "label": "Bis zum Entfernen"
+      }
+    ],
+    "modifierKeys": [
+      {
+        "id": "attack",
+        "label": "Angriff"
+      },
+      {
+        "id": "damage",
+        "label": "Schaden"
+      },
+      {
+        "id": "armorClass",
+        "label": "Rüstungsklasse"
+      },
+      {
+        "id": "savingThrow",
+        "label": "Rettungswürfe"
+      },
+      {
+        "id": "skill",
+        "label": "Fertigkeiten"
+      },
+      {
+        "id": "spellAttack",
+        "label": "Zauberangriff"
+      },
+      {
+        "id": "spellSaveDc",
+        "label": "Zauber-SG"
+      }
+    ],
+    "rollModeKeys": [
+      {
+        "id": "attackRollMode",
+        "label": "Angriffe"
+      },
+      {
+        "id": "skillRollMode",
+        "label": "Fertigkeitsproben"
+      }
+    ]
+  },
+  "challenge": {
+    "kind": "herausforderung-event",
+    "schemaVersion": 3,
+    "title": "Neue Herausforderung",
+    "publicDescription": "",
+    "approaches": [
+      {
+        "approachId": "ansatz-1",
+        "label": "Ansatz 1",
+        "preferredSkills": [],
+        "difficulty": 10,
+        "insight": "",
+        "partialHint": "",
+        "failureConsequence": "",
+        "rewards": {
+          "copper": 0,
+          "items": [],
+          "effects": []
+        },
+        "partialEffects": {
+          "copper": 0,
+          "items": [],
+          "effects": []
+        },
+        "failureEffects": {
+          "copper": 0,
+          "items": [],
+          "effects": []
+        }
+      }
+    ]
+  }
+}

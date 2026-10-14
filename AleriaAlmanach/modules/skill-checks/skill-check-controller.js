@@ -2,6 +2,7 @@ import { sceneDiceService } from '../scene-dice/dice-service.js?v=20261013-perfo
 import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v4';
 import { createSceneSkillProfileResolver } from './skill-scene-profile.js?v=20260928-equipment-art-v4';
 import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
+import { formatHerausforderungRewardReceipt } from '../herausforderung/herausforderung-rewards.js?v=20261014-herausforderung-rewards-v2';
 import {
   SKILL_DEFINITIONS,
   buildSkillRollNotation,
@@ -666,6 +667,7 @@ function renderEvaluation(source = {}) {
   const outcomeLabel = HERAUSFORDERUNG_TIER_LABELS[resolution.herausforderungTier] || getOutcomeLabel(resolution.outcome);
   const sourceLabel = resolution.narration?.source === 'aleria-gpt' ? 'AleriaGPT-Auswertung' : 'Systemauswertung · ohne KI';
   const affinity = Number(resolution.affinityModifier || 0);
+  const rewardReceipt = formatHerausforderungRewardReceipt(resolution.herausforderungReward);
   const custom = Number(resolution.customModifier || 0);
   const ruleModifier = Number(resolution.ruleModifier || 0);
   const ruleLedger = (Array.isArray(resolution.ruleApplications) ? resolution.ruleApplications : []).map(rule => (
@@ -688,6 +690,7 @@ function renderEvaluation(source = {}) {
         ${ruleLedger}
         ${ruleCosts}
         ${abilityCosts}
+        ${rewardReceipt ? `<span class="skill-reward-receipt">${isSuccessfulSkillOutcome(resolution.outcome) ? 'Belohnung' : 'Folgen'}: <b>${escapeHtml(rewardReceipt)}</b></span>` : ''}
       </div>
       <div class="skill-evaluation-source">${escapeHtml(sourceLabel)}</div>
     </aside>`;

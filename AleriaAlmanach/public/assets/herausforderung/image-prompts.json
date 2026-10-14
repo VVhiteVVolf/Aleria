@@ -1,20 +1,50 @@
 {
   "createdAt": "2026-10-14",
   "tool": "built-in image_gen",
-  "style": "Original Baldur’s Gate inspired hand-painted ability icons",
+  "style": "Original Baldur’s Gate inspired hand-painted content icons",
   "transparentBackground": true,
+  "mainChallengeSymbol": "Existing ../IconOrdner/Buttom Icons/Herausforderung.png is preserved. The generated compass is only an approach icon.",
   "assets": [
     {
       "file": "challenge-v1.png",
+      "role": "approach",
       "prompt": "Use case: stylized-concept. Asset type: ONE original square fantasy RPG ability icon for a challenge editor. Subject: a large antique gold compass rose with a small ruby central gem and four strong points, on a deep burgundy circular enamel medallion, thin weathered brass rim. Hand-painted Baldur's Gate ability-icon aesthetic: dramatic chiaroscuro, sculptural gold highlights, brush-painted worn metal, rich dark red and amber, crisp readable silhouette at 32 pixels, restrained ornament. Centered, entire medallion visible, fills 85% square with clear transparent margin. True transparent PNG outside medallion. No letters, numbers, words, logo, scenery, external shadow, halo or glow. Original artwork, not a copied existing game icon."
     },
     {
       "file": "insight-v1.png",
+      "role": "insight",
       "prompt": "Use case: stylized-concept. ONE original square fantasy RPG ability icon. Subject: a single large stylized open golden eye with an emerald iris, sculpted antique brass eyelids, on deep burgundy circular enamel medallion with thin weathered brass rim. Hand-painted Baldur's Gate ability-icon aesthetic, dramatic chiaroscuro, brush-painted gold, rich dark red, gold and emerald, clear bold eye silhouette legible at 32 pixels, restrained ornament. Centered, entire medallion visible, fills 85% of square. True transparent PNG outside medallion, no outer glow, shadows, text, numbers, logos or scenery. This denotes secret insight, original art."
     },
     {
       "file": "attempt-v1.png",
+      "role": "attempt",
       "prompt": "Use case: stylized-concept. ONE original square fantasy RPG ability icon. Subject: one large twenty-sided ivory-and-gold gaming die, viewed three-quarter, clean triangular facets without any numerals, on a deep burgundy circular enamel medallion with thin weathered brass rim. Hand-painted Baldur's Gate ability-icon aesthetic: dramatic chiaroscuro, sculptural gold highlights, brush-painted worn metal, rich dark red and amber, crisp bold silhouette readable at 32 pixels, restrained ornament. Centered, entire medallion visible, fills 85% square with clear transparent margin. True transparent PNG outside medallion. No words, numbers, logos, scenery, external shadow, halo or glow. This denotes attempting a skill check. Original artwork."
+    },
+    {
+      "file": "items-v1.png",
+      "role": "items",
+      "prompt": "Use case: stylized-concept. ONE original square fantasy RPG ability icon. Hand-painted Baldur's Gate ability-icon aesthetic, dramatic chiaroscuro, sculptural antique gold highlights and brush-painted worn metal; rich deep burgundy, amber and jewel colors. A bold simple motif centered on a dark burgundy circular enamel medallion with thin weathered brass rim, readable at 32 pixels. Entire medallion visible, fills 85% square with clean transparent margin. True transparent PNG outside medallion. No letters, numbers, words, logos, scenery, outside glow, external shadows or copied game artwork. Subject: one small closed dark oak treasure chest with a strong antique gold clasp and two gold bands, three-quarter view; a readable chest silhouette, only a few details. Denotes reward items."
+    },
+    {
+      "file": "gold-v1.png",
+      "role": "Original gold variant retained; the editor uses copper-v1.png",
+      "prompt": "Use case: stylized-concept. ONE original square fantasy RPG ability icon. Hand-painted Baldur's Gate ability-icon aesthetic, dramatic chiaroscuro, sculptural antique gold highlights and brush-painted worn metal; rich deep burgundy, amber and jewel colors. A bold simple motif centered on a dark burgundy circular enamel medallion with thin weathered brass rim, readable at 32 pixels. Entire medallion visible, fills 85% square with clean transparent margin. True transparent PNG outside medallion. No letters, numbers, words, logos, scenery, outside glow, external shadows or copied game artwork. Subject: three large thick antique GOLD coins stacked unevenly, with a fourth upright coin displaying a simple sun engraving with no text. Strong warm gold highlights. Denotes gold rewards."
+    },
+    {
+      "file": "buff-v1.png",
+      "role": "buff",
+      "prompt": "Use case: stylized-concept. ONE original square fantasy RPG ability icon. Hand-painted Baldur's Gate ability-icon aesthetic, dramatic chiaroscuro, sculptural antique gold highlights and brush-painted worn metal; rich deep burgundy, amber and jewel colors. A bold simple motif centered on a dark burgundy circular enamel medallion with thin weathered brass rim, readable at 32 pixels. Entire medallion visible, fills 85% square with clean transparent margin. True transparent PNG outside medallion. No letters, numbers, words, logos, scenery, outside glow, external shadows or copied game artwork. Subject: an upright open golden gauntlet palm holding one brilliant emerald four-point star, subtly cupped fingers. Magic light stays inside the medallion. Denotes a blessing or beneficial buff."
+    },
+    {
+      "file": "debuff-v1.png",
+      "role": "debuff",
+      "prompt": "Use case: stylized-concept. ONE original square fantasy RPG ability icon. Hand-painted Baldur's Gate ability-icon aesthetic, dramatic chiaroscuro, sculptural antique gold highlights and brush-painted worn metal; rich deep burgundy, amber and jewel colors. A bold simple motif centered on a dark burgundy circular enamel medallion with thin weathered brass rim, readable at 32 pixels. Entire medallion visible, fills 85% square with clean transparent margin. True transparent PNG outside medallion. No letters, numbers, words, logos, scenery, outside glow, external shadows or copied game artwork. Subject: a single stylized bone skull with a diagonal crack and two small deep violet eye jewels, suspended above one down-pointing red rune shape. Strong dark red and amethyst accents. Denotes a curse or debuff."
+    },
+    {
+      "file": "copper-v1.png",
+      "role": "Kupfertaler reward",
+      "reference": "gold-v1.png",
+      "prompt": "Use case: precise-object-edit. Asset type: fantasy RPG content icon for a Kupfertaler reward field. Edit the provided original coin-medallion icon: change only the three coins from bright yellow gold to unmistakable reddish COPPER, dark warm bronze shadows, aged copper-orange highlights and subtle verdigris in engraving grooves. The coins must look copper rather than gold. Preserve the existing upright sun-engraved coin, two stacked horizontal coins, circular deep burgundy enamel backing, weathered brass outer rim, composition and hand-painted Baldur's Gate ability-icon aesthetic. Entire circular medallion centered within a square, fills about 85 percent, readable at 28 px. Preserve true transparent PNG alpha outside medallion. No text, numbers, scenery, external shadow or glow."
     }
   ]
 }

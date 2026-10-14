@@ -1,10 +1,11 @@
-import { normalizeHerausforderungEvent, MAX_HERAUSFORDERUNG_APPROACHES, getHerausforderungValidationIssues } from './herausforderung-model.js?v=20261014-herausforderung-v3';
-import { getApproachProgress, HERAUSFORDERUNG_TIER_LABELS } from './herausforderung-progress.js?v=20261014-herausforderung-v3';
+import { normalizeHerausforderungEvent, MAX_HERAUSFORDERUNG_APPROACHES, getHerausforderungValidationIssues } from './herausforderung-model.js?v=20261014-herausforderung-rewards-v2';
+import { getApproachProgress, HERAUSFORDERUNG_TIER_LABELS } from './herausforderung-progress.js?v=20261014-herausforderung-rewards-v2';
 import { SKILL_DEFINITIONS } from '../skill-checks/skill-check-model.js?v=20260928-equipment-art-v4';
+import { renderHerausforderungRewardEditor, rewardSummary, rewardReceiptSummary } from './herausforderung-rewards-ui.js?v=20261014-herausforderung-rewards-v2';
 
 const ASSET_ROOT = './public/assets/herausforderung/';
-export const HERAUSFORDERUNG_ICON_URL = `${ASSET_ROOT}challenge-v1.png`;
-const ICONS = { challenge: HERAUSFORDERUNG_ICON_URL, insight: `${ASSET_ROOT}insight-v1.png`, attempt: `${ASSET_ROOT}attempt-v1.png` };
+export const HERAUSFORDERUNG_ICON_URL = '../IconOrdner/Buttom Icons/Herausforderung.png';
+const ICONS = { challenge: HERAUSFORDERUNG_ICON_URL, approach: `${ASSET_ROOT}challenge-v1.png`, insight: `${ASSET_ROOT}insight-v1.png`, attempt: `${ASSET_ROOT}attempt-v1.png` };
 const DIFFICULTIES = [{ value: 5, label: 'Leicht' }, { value: 10, label: 'Normal' }, { value: 15, label: 'Anspruchsvoll' }, { value: 20, label: 'Schwer' }, { value: 25, label: 'Sehr schwer' }];
 const SKILL_GROUPS = [{ label: 'Gesellschaft', ids: ['persuasion', 'intimidation', 'deception', 'performance', 'insight', 'seduction'] }, { label: 'Wissen & Wildnis', ids: ['investigation', 'religion', 'arcane-kunde', 'history', 'nature', 'survival', 'animal-handling', 'medicine'] }, { label: 'Geschick & Körper', ids: ['sleight-of-hand', 'acrobatics', 'athletics', 'body-control'] }];
 
@@ -31,6 +32,7 @@ export function ensureHerausforderungDialog() {
         <div><small>Erzählerwerkstatt</small><h2 id="herausforderung-dialog-title">Eine Herausforderung gestalten</h2><p>Eine Situation. Mehrere Wege. Verborgene Erkenntnisse.</p></div>
         <button class="herausforderung-close" type="button" data-herausforderung-action="close" aria-label="Schließen">×</button>
       </header>
+      <nav class="herausforderung-exchange" aria-label="Herausforderung importieren und exportieren"><button type="button" data-herausforderung-exchange="ai-template">↓ KI-Vorlage + Anleitung</button><button type="button" data-herausforderung-exchange="draft">↓ Entwurf exportieren</button><button type="button" data-herausforderung-exchange="import">↑ JSON importieren</button><input type="file" accept=".json,application/json" data-herausforderung-import-file hidden></nav>
       <div class="herausforderung-body">
         <div class="herausforderung-editor">
           <section class="herausforderung-public herausforderung-fields" aria-labelledby="herausforderung-public-title">
@@ -67,7 +69,7 @@ export function renderApproachRows(approaches = [], activeIndex = 0) {
   if (!host) return;
   host.innerHTML = approaches.map((approach, index) => `
     <details class="herausforderung-approach" data-herausforderung-approach-row data-approach-index="${index}"${index === activeIndex ? ' open' : ''}>
-      <summary><span class="herausforderung-approach-number">${String(index + 1).padStart(2, '0')}</span><span class="herausforderung-summary-text"><strong data-approach-summary-label>${escapeMarkup(approach.label)}</strong><small data-approach-summary-skills>${skillSummary(approach)}</small></span><span class="herausforderung-difficulty-badge" data-approach-summary-difficulty>SG ${escapeMarkup(approach.difficulty)}</span><span class="herausforderung-chevron" aria-hidden="true">⌄</span></summary>
+      <summary>${icon('approach')}<span class="herausforderung-approach-number">${String(index + 1).padStart(2, '0')}</span><span class="herausforderung-summary-text"><strong data-approach-summary-label>${escapeMarkup(approach.label)}</strong><small data-approach-summary-skills>${skillSummary(approach)}</small></span><span class="herausforderung-difficulty-badge" data-approach-summary-difficulty>SG ${escapeMarkup(approach.difficulty)}</span><span class="herausforderung-chevron" aria-hidden="true">⌄</span></summary>
       <div class="herausforderung-approach-content herausforderung-fields">
         <div class="herausforderung-approach-toolbar"><span>${icon('insight')} Verdeckte Ergebnisse vorbereiten</span><button type="button" class="herausforderung-remove-approach" data-herausforderung-action="remove-approach" data-approach-index="${index}" aria-label="Ansatz ${index + 1} entfernen"${approaches.length === 1 ? ' disabled' : ''}>Entfernen ×</button></div>
         <div class="herausforderung-approach-basics"><label><span>Bezeichnung des Ansatzes · öffentlich</span><input maxlength="160" data-herausforderung-approach-index="${index}" data-herausforderung-field="label" value="${escapeMarkup(approach.label)}" placeholder="z. B. Spuren untersuchen"></label><label><span>Schwierigkeit (SG)</span><input type="number" min="1" max="40" step="1" data-herausforderung-approach-index="${index}" data-herausforderung-field="difficulty" value="${escapeMarkup(approach.difficulty)}"></label></div>
@@ -75,6 +77,7 @@ export function renderApproachRows(approaches = [], activeIndex = 0) {
         <fieldset class="herausforderung-skills"><legend>Passende Fertigkeiten <span>+2 auf diesen Ansatz</span></legend>${renderSkillCheckboxes(approach, index)}</fieldset>
         <label class="herausforderung-insight"><span>${icon('insight')} Erkenntnis bei Erfolg · verdeckt</span><textarea maxlength="2000" data-herausforderung-approach-index="${index}" data-herausforderung-field="insight" rows="3" placeholder="Welche Wahrheit wird bei Erfolg aufgedeckt?">${escapeMarkup(approach.insight)}</textarea></label>
         <details class="herausforderung-consequences"${approach.partialHint || approach.failureConsequence ? ' open' : ''}><summary>Teilhinweis & Konsequenz <small>Optional</small></summary><div><label><span>Knapp gescheitert · 1–3 Punkte fehlen</span><textarea maxlength="2000" data-herausforderung-approach-index="${index}" data-herausforderung-field="partialHint" rows="2" placeholder="Ein unvollständiger oder mehrdeutiger Hinweis.">${escapeMarkup(approach.partialHint)}</textarea></label><label><span>Deutlich gescheitert · mehr als 3 Punkte fehlen</span><textarea maxlength="2000" data-herausforderung-approach-index="${index}" data-herausforderung-field="failureConsequence" rows="2" placeholder="Eine erzählerische Komplikation ohne Erkenntnis.">${escapeMarkup(approach.failureConsequence)}</textarea></label></div></details>
+        ${renderHerausforderungRewardEditor(approach, index)}
       </div>
     </details>`).join('');
   root.querySelector('[data-herausforderung-count]').textContent = `${approaches.length} / ${MAX_HERAUSFORDERUNG_APPROACHES} Ansätze`;
@@ -106,14 +109,16 @@ export function showHerausforderungValidation(issues) {
   root?.querySelectorAll('[aria-invalid="true"]').forEach(field => field.removeAttribute('aria-invalid'));
   issues.forEach(issue => {
     const index = issue.index === undefined ? '' : `[data-herausforderung-approach-index="${issue.index}"]`;
-    const field = root?.querySelector(`[data-herausforderung-field="${issue.field}"]${index}`);
+    const field = root?.querySelector(`[data-herausforderung-field="${issue.field}"]${index}`) || root?.querySelector(`[data-hr-approach-index="${issue.index}"] [data-hr-section="${issue.field}"]`);
     field?.setAttribute('aria-invalid', 'true');
     field?.closest('[data-herausforderung-approach-row]')?.setAttribute('open', '');
+    if (field?.matches('[data-hr-section]')) { field.open = true; field.closest('[data-hr-editor]').open = true; }
   });
   const first = issues[0];
   if (first) {
     const index = first.index === undefined ? '' : `[data-herausforderung-approach-index="${first.index}"]`;
-    root?.querySelector(`[data-herausforderung-field="${first.field}"]${index}`)?.focus();
+    const target = root?.querySelector(`[data-herausforderung-field="${first.field}"]${index}`) || root?.querySelector(`[data-hr-approach-index="${first.index}"] [data-hr-section="${first.field}"] input`);
+    target?.focus();
   }
 }
 
@@ -126,7 +131,7 @@ export function setHerausforderungSubmitting(submitting) {
   const root = dialogRoot();
   if (!root) return;
   root.setAttribute('aria-busy', String(!!submitting));
-  root.querySelectorAll('button, input, textarea').forEach(element => {
+  root.querySelectorAll('button, input, textarea, select').forEach(element => {
     if (submitting) { element.dataset.previousDisabled = String(!!element.disabled); element.disabled = true; }
     else if (element.dataset.previousDisabled !== undefined) { element.disabled = element.dataset.previousDisabled === 'true'; delete element.dataset.previousDisabled; }
   });
@@ -140,7 +145,7 @@ export function renderHerausforderungComment(comment = {}, index = 0, { preview 
   const approaches = event.approaches.map((approach, approachIndex) => {
     const state = getApproachProgress(progress, comment.id, approach.approachId);
     if (state.solved) solvedCount++;
-    return `<li class="${state.solved ? 'is-solved' : ''}"><div class="herausforderung-path"><span class="herausforderung-path-number">${approachIndex + 1}</span><div><strong>${escapeMarkup(approach.label)}</strong><small>${skillSummary(approach)}${state.attempts ? ` · ${state.attempts} ${state.attempts === 1 ? 'Versuch' : 'Versuche'}` : ''}</small></div></div>${preview ? '<span class="herausforderung-preview-badge">Offen</span>' : state.solved ? `<span class="herausforderung-solved">${icon('insight')}Aufgedeckt</span>` : `<button type="button" class="herausforderung-button herausforderung-attempt-btn" data-herausforderung-action="attempt" data-comment-id="${escapeMarkup(comment.id || '')}" data-approach-id="${escapeMarkup(approach.approachId)}" aria-label="${escapeMarkup(approach.label)} versuchen">${icon('attempt')}<span>Versuchen</span></button>`}${!preview && state.attempts ? `<div class="herausforderung-result" data-tier="${escapeMarkup(state.tier)}"><small>${escapeMarkup(state.actorName)} · ${escapeMarkup(HERAUSFORDERUNG_TIER_LABELS[state.tier] || 'Versuch')}</small>${state.revealedText ? `<p>${escapeMarkup(state.revealedText)}</p>` : ''}${!state.solved ? '<small>Dieser Ansatz bleibt offen.</small>' : ''}</div>` : ''}</li>`;
+    return `<li class="${state.solved ? 'is-solved' : ''}"><div class="herausforderung-path"><span class="herausforderung-path-number">${approachIndex + 1}</span><div><strong>${escapeMarkup(approach.label)}</strong><small>${skillSummary(approach)}${state.attempts ? ` · ${state.attempts} ${state.attempts === 1 ? 'Versuch' : 'Versuche'}` : ''}</small></div></div>${preview ? '<span class="herausforderung-preview-badge">Offen</span>' : state.solved ? `<span class="herausforderung-solved">${icon('insight')}Aufgedeckt</span>` : `<button type="button" class="herausforderung-button herausforderung-attempt-btn" data-herausforderung-action="attempt" data-comment-id="${escapeMarkup(comment.id || '')}" data-approach-id="${escapeMarkup(approach.approachId)}" aria-label="${escapeMarkup(approach.label)} versuchen">${icon('attempt')}<span>Versuchen</span></button>`}${rewardSummary(approach.rewards) ? `<div class="herausforderung-reward-teaser">Belohnung: ${escapeMarkup(rewardSummary(approach.rewards))}</div>` : ''}${!preview && state.attempts ? `<div class="herausforderung-result" data-tier="${escapeMarkup(state.tier)}"><small>${escapeMarkup(state.actorName)} · ${escapeMarkup(HERAUSFORDERUNG_TIER_LABELS[state.tier] || 'Versuch')}</small>${state.revealedText ? `<p>${escapeMarkup(state.revealedText)}</p>` : ''}${rewardReceiptSummary(state.reward) ? `<p class="herausforderung-reward-receipt">${escapeMarkup(rewardReceiptSummary(state.reward))}</p>` : ''}${!state.solved ? '<small>Dieser Ansatz bleibt offen.</small>' : ''}</div>` : ''}</li>`;
   }).join('');
   return `${divider}<section class="herausforderung-event"><header>${icon('challenge')}<div><small>Herausforderung</small><strong>${escapeMarkup(event.title)}</strong></div><span class="herausforderung-event-progress">${solvedCount}/${event.approaches.length} aufgedeckt</span></header>${event.publicDescription ? `<p class="herausforderung-description">${escapeMarkup(event.publicDescription)}</p>` : ''}${approaches ? `<ul class="herausforderung-approach-list">${approaches}</ul>` : ''}</section>`;
 }

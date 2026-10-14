@@ -1,23 +1,7 @@
 import { HttpsError } from 'firebase-functions/v2/https';
-import { STANDARD_ITEMS } from '../generated/item-register/item-register-standard.js';
-import { normalizeOffer } from '../generated/item-register/item-register-model.js';
 import { buildSceneItemDefinition, sceneItemDraftFromTemplate } from '../generated/scene-items/scene-item-definition.js';
-import { resolveModuleProduct } from './item-register-module-source.js';
-
-export async function resolveSceneItemTemplate(database, transaction, draft) {
-  if (!draft.template) return null;
-  let template = STANDARD_ITEMS.find(item => item.id === draft.template);
-  if (!template && draft.moduleId) template = await resolveModuleProduct({ database, transaction, standards: STANDARD_ITEMS,
-    input: { moduleId: draft.moduleId, productId: draft.template, sourceRevision: draft.sourceRevision } });
-  if (!template && /^offer:[\w:.-]{1,210}$/.test(draft.template)) {
-    const snapshot = await transaction.get(database.collection('item_register_offers').doc(draft.template));
-    if (snapshot.exists) template = normalizeOffer({ ...snapshot.data(), id: snapshot.id }, STANDARD_ITEMS);
-  }
-  if (!template || template.archived || ['pferde', 'vieh'].includes(template.category)) {
-    throw new HttpsError('invalid-argument', 'Diese Registervorlage ist nicht als Szenengegenstand verfügbar.');
-  }
-  return template;
-}
+import { resolveRegisterItemTemplate } from './item-register-template.js';
+export const resolveSceneItemTemplate = resolveRegisterItemTemplate;
 
 export async function buildSceneItemSegments(database, transaction, segments, commentId) {
   const result = [];

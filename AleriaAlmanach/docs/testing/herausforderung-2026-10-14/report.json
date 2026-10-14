@@ -2,9 +2,9 @@
   "date": "2026-10-14",
   "feature": "Herausforderung",
   "verification": {
-    "scenarioMethod": "Real character sheets, browser resolver and server validator; isolated in-memory transaction store, deterministic W20 receipts; no production character or scene writes.",
+    "scenarioMethod": "Real character sheets, browser resolver and server validator; isolated in-memory validator tests and real Firestore emulator callable transactions, deterministic W20 receipts; no production character or scene writes.",
     "targetedTests": {
-      "passed": 53,
+      "passed": 29,
       "failed": 0
     },
     "serverTests": {
@@ -12,9 +12,9 @@
       "failed": 0
     },
     "frontendTests": {
-      "passed": 1481,
+      "passed": 1498,
       "failed": 4,
-      "total": 1485
+      "total": 1502
     },
     "existingFrontendFailures": [
       "character-database-sync: 367 linked documents vs 364 in the unchanged sync report",
@@ -38,12 +38,360 @@
         "failed save retry",
         "single submission",
         "direct skill/target selection",
-        "resolved approach lock"
+        "resolved approach lock",
+        "canonical Handelsregister list",
+        "distinct providers and category filters",
+        "price and source preview",
+        "empty search recovery",
+        "live catalog refresh retains selection",
+        "Kupfertaler input and receipt",
+        "AI template download",
+        "draft export and validated JSON import",
+        "reward and debuff serialization"
       ],
       "errors": [],
       "missing": []
     },
-    "productionBuild": "passed"
+    "productionBuild": "passed",
+    "firestoreIntegration": {
+      "passed": true,
+      "environment": "isolated Firestore emulator",
+      "fullInventoryPassed": true,
+      "simultaneousAwardPassed": true,
+      "idempotentCreationPassed": true,
+      "results": [
+        {
+          "scenario": "Die verschlossene Torwache",
+          "actor": "Gawain Draig",
+          "tier": "erfolg",
+          "total": 21,
+          "difficulty": 15,
+          "reward": {
+            "schemaVersion": 1,
+            "challengeId": "herausforderung:KvY5lI94Rf9BKsHCimou:main",
+            "tier": "erfolg",
+            "actorId": "q1QtSIug74FzzwUAqWrs",
+            "copper": 2,
+            "items": [
+              {
+                "id": "reward:2584402b60fcacda7da134ab665790b6429b7cf050b8ebb6e434e84b5036e573:0",
+                "templateId": "standard:waffen-rustungen:saex",
+                "name": "Saex",
+                "quantity": "1",
+                "image": "/AleriaAlmanach/public/assets/character-equipment/ylva-saex-v2.png"
+              }
+            ],
+            "effects": [
+              {
+                "id": "reward:2584402b60fcacda7da134ab665790b6429b7cf050b8ebb6e434e84b5036e573:buff",
+                "name": "Torermut",
+                "statusKind": "buff",
+                "mechanics": {
+                  "skill": 1
+                },
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 2,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": ""
+                }
+              }
+            ]
+          },
+          "historicalContributionUnchanged": true
+        },
+        {
+          "scenario": "Die verschlossene Torwache",
+          "actor": "Guinevere Neidr",
+          "tier": "erfolg",
+          "total": 18,
+          "difficulty": 15,
+          "reward": {
+            "schemaVersion": 1,
+            "challengeId": "herausforderung:R0qBmVoREIEWC6zEc0cH:main",
+            "tier": "erfolg",
+            "actorId": "person--haus-neidr--guinevere-neidr",
+            "copper": 2,
+            "items": [
+              {
+                "id": "reward:e2c029acdb2245e35b1c187725e8062b3f11f4ab79c6b8734bf5dc91ecb83438:0",
+                "templateId": "standard:waffen-rustungen:saex",
+                "name": "Saex",
+                "quantity": "1",
+                "image": "/AleriaAlmanach/public/assets/character-equipment/ylva-saex-v2.png"
+              }
+            ],
+            "effects": [
+              {
+                "id": "reward:e2c029acdb2245e35b1c187725e8062b3f11f4ab79c6b8734bf5dc91ecb83438:buff",
+                "name": "Torermut",
+                "statusKind": "buff",
+                "mechanics": {
+                  "skill": 1
+                },
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 2,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": ""
+                }
+              }
+            ]
+          },
+          "historicalContributionUnchanged": true
+        },
+        {
+          "scenario": "Spuren im Regen",
+          "actor": "Gawain Draig",
+          "tier": "knapp",
+          "total": 13,
+          "difficulty": 15,
+          "reward": {
+            "schemaVersion": 1,
+            "challengeId": "herausforderung:v5OxljMxUJcaePp2ih73:main",
+            "tier": "knapp",
+            "actorId": "q1QtSIug74FzzwUAqWrs",
+            "copper": 0,
+            "items": [],
+            "effects": [
+              {
+                "id": "reward:db49236532f4d6b8d01600594991454ccf3be6dbadd82b304ba646d14c354471:debuff",
+                "name": "Verunsichert",
+                "statusKind": "debuff",
+                "mechanics": {
+                  "skill": -1
+                },
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 2,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": ""
+                }
+              }
+            ]
+          },
+          "historicalContributionUnchanged": true
+        },
+        {
+          "scenario": "Spuren im Regen",
+          "actor": "Guinevere Neidr",
+          "tier": "knapp",
+          "total": 13,
+          "difficulty": 15,
+          "reward": {
+            "schemaVersion": 1,
+            "challengeId": "herausforderung:VoVcalCCtKMnWutZiHoD:main",
+            "tier": "knapp",
+            "actorId": "person--haus-neidr--guinevere-neidr",
+            "copper": 0,
+            "items": [],
+            "effects": [
+              {
+                "id": "reward:176273ba9a56d8e536bd9319aa0496e5339bdb624bc30818aea4ed71e1ed17ad:debuff",
+                "name": "Verunsichert",
+                "statusKind": "debuff",
+                "mechanics": {
+                  "skill": -1
+                },
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 2,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": ""
+                }
+              }
+            ]
+          },
+          "historicalContributionUnchanged": true
+        },
+        {
+          "scenario": "Die brüchige Zugbrücke",
+          "actor": "Gawain Draig",
+          "tier": "deutlich",
+          "total": 2,
+          "difficulty": 15,
+          "reward": {
+            "schemaVersion": 1,
+            "challengeId": "herausforderung:8szjk1Fj9ACPGVoVrxqz:main",
+            "tier": "deutlich",
+            "actorId": "q1QtSIug74FzzwUAqWrs",
+            "copper": 0,
+            "items": [],
+            "effects": [
+              {
+                "id": "reward:5849b1954e2dab33274df8f45b71d03bd63061c69cbcaa3d3c28b1eef8dc01e4:debuff",
+                "name": "Verunsichert",
+                "statusKind": "debuff",
+                "mechanics": {
+                  "armorClass": -1,
+                  "skillRollMode": "disadvantage"
+                },
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 2,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": ""
+                }
+              }
+            ]
+          },
+          "historicalContributionUnchanged": true
+        },
+        {
+          "scenario": "Die brüchige Zugbrücke",
+          "actor": "Guinevere Neidr",
+          "tier": "deutlich",
+          "total": 6,
+          "difficulty": 15,
+          "reward": {
+            "schemaVersion": 1,
+            "challengeId": "herausforderung:mApPOmw2sRE3CXTO3ES0:main",
+            "tier": "deutlich",
+            "actorId": "person--haus-neidr--guinevere-neidr",
+            "copper": 0,
+            "items": [],
+            "effects": [
+              {
+                "id": "reward:07d85c17a1af8fdefe030bbabe6b7816c3cc11b477ffa5c44c4e2c76fe59f9c3:debuff",
+                "name": "Verunsichert",
+                "statusKind": "debuff",
+                "mechanics": {
+                  "armorClass": -1,
+                  "skillRollMode": "disadvantage"
+                },
+                "durationModel": {
+                  "kind": "actor-comments",
+                  "remainingActorComments": 2,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": ""
+                }
+              }
+            ]
+          },
+          "historicalContributionUnchanged": true
+        },
+        {
+          "scenario": "Das versiegelte Runentor",
+          "actor": "Gawain Draig",
+          "tier": "kritischer-erfolg",
+          "total": 21,
+          "difficulty": 40,
+          "reward": {
+            "schemaVersion": 1,
+            "challengeId": "herausforderung:B8iEU3hP5OSgsuHOClXE:main",
+            "tier": "kritischer-erfolg",
+            "actorId": "q1QtSIug74FzzwUAqWrs",
+            "copper": 7,
+            "items": [
+              {
+                "id": "reward:0dd07e38379720b9f624d41d59159fa98af401a2e6988bdc39bb8cd63cef2610:0",
+                "templateId": "standard:taverne:eintopf-des-tages",
+                "name": "Eintopf des Tages",
+                "quantity": "2",
+                "image": "https://i.imgur.com/V5An4nq.png"
+              }
+            ],
+            "effects": [
+              {
+                "id": "reward:0dd07e38379720b9f624d41d59159fa98af401a2e6988bdc39bb8cd63cef2610:buff",
+                "name": "Torermut",
+                "statusKind": "buff",
+                "mechanics": {
+                  "armorClass": 2
+                },
+                "durationModel": {
+                  "kind": "long-rest",
+                  "remainingActorComments": 0,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "long-rest",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": ""
+                }
+              }
+            ]
+          },
+          "historicalContributionUnchanged": true
+        },
+        {
+          "scenario": "Das versiegelte Runentor",
+          "actor": "Guinevere Neidr",
+          "tier": "kritischer-erfolg",
+          "total": 25,
+          "difficulty": 40,
+          "reward": {
+            "schemaVersion": 1,
+            "challengeId": "herausforderung:wcbngBlKLaQQlwELDgm4:main",
+            "tier": "kritischer-erfolg",
+            "actorId": "person--haus-neidr--guinevere-neidr",
+            "copper": 7,
+            "items": [
+              {
+                "id": "reward:d8d6220bbfe5ca337b4c1d246220a7b363a2c94f66d0b3fdc31600b43370bdaf:0",
+                "templateId": "standard:taverne:eintopf-des-tages",
+                "name": "Eintopf des Tages",
+                "quantity": "2",
+                "image": "https://i.imgur.com/V5An4nq.png"
+              }
+            ],
+            "effects": [
+              {
+                "id": "reward:d8d6220bbfe5ca337b4c1d246220a7b363a2c94f66d0b3fdc31600b43370bdaf:buff",
+                "name": "Torermut",
+                "statusKind": "buff",
+                "mechanics": {
+                  "armorClass": 2
+                },
+                "durationModel": {
+                  "kind": "long-rest",
+                  "remainingActorComments": 0,
+                  "remainingSceneComments": 0,
+                  "expiresOnRest": "long-rest",
+                  "expiresOnDayChange": false,
+                  "encounterId": "",
+                  "concentrationOwnerId": "",
+                  "channelOwnerId": "",
+                  "label": ""
+                }
+              }
+            ]
+          },
+          "historicalContributionUnchanged": true
+        }
+      ]
+    }
   },
   "results": [
     {
@@ -151,6 +499,17 @@
       "outcome": "kritischer-erfolg"
     }
   ],
+  "currency": {
+    "unit": "Kupfertaler (KT)",
+    "field": "copper",
+    "pfennigPerCopper": 100
+  },
+  "aiExchange": {
+    "template": "../../../public/assets/herausforderung/ki-vorlage-v1.json",
+    "importMode": "validated unpublished draft",
+    "catalog": "current Handelsregister IDs"
+  },
+  "mainSymbol": "../../../../IconOrdner/Buttom Icons/Herausforderung.png",
   "icons": {
     "directory": "../../../public/assets/herausforderung",
     "provenance": "../../../public/assets/herausforderung/image-prompts.json",

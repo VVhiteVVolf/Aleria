@@ -1,12 +1,12 @@
 import { SCENE_ITEM_KINDS, SCENE_ITEM_AXES, sceneItemDraftFromTemplate, buildSceneItemDefinition } from './scene-item-definition.js';
 import { REGISTER_CATEGORIES } from '../item-register/item-register-model.js?v=20260928-equipment-art-v4';
+import { collectRegisterTemplates } from '../item-register/item-register-templates.js';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const categories = Object.fromEntries(REGISTER_CATEGORIES.map(category => [category.id, category.label]));
 const bindings = new WeakMap();
 export function sceneTemplates() {
   const snapshot = globalThis.AleriaItemRegister?.store.snapshot() || {};
-  return [...(snapshot.standards || []), ...(snapshot.offers || []).filter(item => item.moduleId || item.id?.startsWith('offer:'))]
-    .filter(item => !['pferde', 'vieh'].includes(item.category));
+  return collectRegisterTemplates(snapshot);
 }
 function templateOptions(selected) {
   const groups = new Map();

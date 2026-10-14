@@ -1,6 +1,6 @@
 import { renderSceneItemEvent } from './scene-items-ui.js';
 import { getResolutionSceneItemEvents } from '../combat/combat-resolution-tree.js';
-import { renderSceneItemComposer, mountSceneItemComposer, serializeSceneItemSegment, previewSceneItem, getSceneItemDraftForEditor, refreshSceneItemTemplates } from './scene-items-composer.js?v=20260928-equipment-art-v4';
+import { renderSceneItemComposer, mountSceneItemComposer, serializeSceneItemSegment, previewSceneItem, getSceneItemDraftForEditor, refreshSceneItemTemplates } from './scene-items-composer.js?v=20261014-herausforderung-rewards-v2';
 window.addEventListener('item-db-store-updated', refreshSceneItemTemplates);
 let dialog;
 function openCard(item, status = 'In der Szene') {

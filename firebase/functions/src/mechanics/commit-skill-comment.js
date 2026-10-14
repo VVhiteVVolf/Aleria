@@ -93,17 +93,25 @@ export const commitSkillComment = onCall({
       const values = { updatedAt: new Date(now).toISOString() };
       if (update.resources) values['combatProfile.resources'] = update.resources;
       if (update.abilities) values['combatProfile.abilities'] = update.abilities;
+      if (update.inventory) values.inventory = update.inventory;
+      if (update.equipment) {
+        values['combatProfile.weapons'] = update.equipment.weapons || [];
+        values['combatProfile.armorItems'] = update.equipment.armorItems || [];
+      }
+      values['combatProfile.lastMechanicalCommentId'] = ref.id;
       transaction.update(update.entry.ref, withProtectedRecordRevisions(
         update.record || {},
         values,
-        ['combatProfile'],
+        update.inventory ? ['combatProfile', 'inventory'] : ['combatProfile'],
         now
       ));
       return {
         kind: update.entry.kind,
         recordId: update.entry.recordId,
         resources: update.resources || null,
-        abilities: update.abilities || null
+        abilities: update.abilities || null,
+        inventory: update.inventory || null,
+        equipment: update.equipment || null
       };
     });
     profileUpdates.push(...criticalUpdates);

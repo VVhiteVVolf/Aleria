@@ -5,8 +5,8 @@ import {
   getHerausforderungValidationIssues,
   normalizeHerausforderungApproach,
   normalizeHerausforderungEvent
-} from './herausforderung-model.js?v=20261014-herausforderung-v3';
-import { collectHerausforderungProgress } from './herausforderung-progress.js?v=20261014-herausforderung-v3';
+} from './herausforderung-model.js?v=20261014-herausforderung-rewards-v2';
+import { collectHerausforderungProgress } from './herausforderung-progress.js?v=20261014-herausforderung-rewards-v2';
 import {
   ensureHerausforderungDialog,
   renderApproachRows,
@@ -15,12 +15,16 @@ import {
   setHerausforderungSubmitting,
   updateHerausforderungDraft,
   showHerausforderungValidation
-} from './herausforderung-ui.js?v=20261014-herausforderung-v3';
+} from './herausforderung-ui.js?v=20261014-herausforderung-rewards-v2';
+import { mountHerausforderungRewardEditor } from './herausforderung-rewards-ui.js?v=20261014-herausforderung-rewards-v2';
+import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261014-herausforderung-rewards-v2';
 
 let activeThreadId = '';
 let draftApproaches = [];
 let submitting = false;
 let renderProgress = new Map();
+let operationId = '';
+let submittedDraft = '';
 
 function defaultApproaches() {
   return [normalizeHerausforderungApproach({}, 0)];
@@ -28,7 +32,23 @@ function defaultApproaches() {
 
 function renderDialog(activeIndex = 0) {
   renderApproachRows(draftApproaches, activeIndex);
+  mountHerausforderungRewardEditor(document.getElementById('herausforderung-overlay'), { approaches: draftApproaches,
+    onChange: () => updateHerausforderungDraft(buildDraft()) });
+  mountHerausforderungExchange(document.getElementById('herausforderung-overlay'), { getDraft: buildDraft, onStatus: setHerausforderungStatus, onImport: importDraft });
   updateHerausforderungDraft(buildDraft());
+}
+
+function importDraft(event, issues) {
+  if (submitting || !activeThreadId) return;
+  const root = document.getElementById('herausforderung-overlay');
+  root.querySelector('[data-herausforderung-field="title"]').value = event.title;
+  root.querySelector('[data-herausforderung-field="publicDescription"]').value = event.publicDescription;
+  draftApproaches = event.approaches;
+  operationId = crypto.randomUUID();
+  submittedDraft = '';
+  renderDialog();
+  showHerausforderungValidation(issues);
+  setHerausforderungStatus(issues.length ? `Entwurf importiert. ${issues.length} Pflichtangaben bitte ergänzen.` : 'Entwurf importiert. Situation, Lösungswege und Belohnungen prüfen; danach ausdrücklich veröffentlichen.');
 }
 
 function openDialog() {
@@ -41,7 +61,10 @@ function openDialog() {
   activeThreadId = String(globalThis.getCurrentCommentThreadId?.() || '');
   if (!activeThreadId) return;
   draftApproaches = defaultApproaches();
+  operationId = crypto.randomUUID();
+  submittedDraft = '';
   const root = ensureHerausforderungDialog();
+  globalThis.AleriaItemRegister?.ensure?.();
   const title = root.querySelector('[data-herausforderung-field="title"]');
   const description = root.querySelector('[data-herausforderung-field="publicDescription"]');
   if (title) title.value = 'Herausforderung';
@@ -56,6 +79,8 @@ function closeDialog() {
   globalThis.deactivateDialog?.('herausforderung-overlay');
   activeThreadId = '';
   draftApproaches = [];
+  operationId = '';
+  submittedDraft = '';
 }
 
 function addApproach() {
@@ -109,6 +134,9 @@ async function submitEvent() {
     return;
   }
   const event = normalizeHerausforderungEvent(draft);
+  const fingerprint = JSON.stringify(event);
+  if (submittedDraft && submittedDraft !== fingerprint) operationId = crypto.randomUUID();
+  submittedDraft = fingerprint;
   const threadId = activeThreadId;
   submitting = true;
   let published = false;
@@ -120,6 +148,7 @@ async function submitEvent() {
       commentMode: 'herausforderung',
       commentKind: 'herausforderung-event',
       herausforderung: event,
+      operationId,
       orderKey: globalThis.getNextCommentOrderKey?.(threadId, null) ?? Date.now()
     });
     published = true;

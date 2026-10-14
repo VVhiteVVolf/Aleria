@@ -1,6 +1,8 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
+import { createHash } from 'node:crypto';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { getHerausforderungValidationIssues, normalizeHerausforderungEvent } from '../generated/herausforderung/herausforderung-model.js';
+import { assertHerausforderungRewardAuthority, prepareHerausforderungRewards } from './herausforderung-rewards.js';
 
 const MAX_COMMENT_BYTES = 700_000;
 
@@ -43,40 +45,56 @@ export const commitHerausforderung = onCall({
   const event = normalizeHerausforderungEvent(metadata.herausforderung);
   if (!entryId || !text) fail('invalid-argument', 'Kommentarbereich und Text sind erforderlich.');
   if (validationError) fail('invalid-argument', validationError);
+  assertHerausforderungRewardAuthority(event, request.auth);
 
   const database = getFirestore();
-  const ref = database.collection('comments').doc();
+  const operationId = clean(metadata.operationId, 80);
+  if (operationId && !/^[a-zA-Z0-9-]{8,80}$/.test(operationId)) fail('invalid-argument', 'Die Vorgangskennung ist ungültig.');
+  const fingerprint = createHash('sha256').update(JSON.stringify({ entryId, event: metadata.herausforderung })).digest('hex');
+  const operationKey = operationId ? 'challenge-' + createHash('sha256').update(request.auth.uid + '\u0000' + operationId).digest('hex') : '';
+  const ref = operationKey ? database.collection('comments').doc(operationKey) : database.collection('comments').doc();
   const now = Date.now();
-  await ref.create({
-    entryId,
-    charName: 'Erzähler',
-    charTitle: '',
-    portrait: null,
-    text,
-    deleteCodeHash: clean(payload.deleteCodeHash, 128),
-    deleteCodeVersion: 1,
-    narrator: true,
-    characterId: '',
-    avatarKind: 'narrator',
-    commentMode: 'herausforderung',
-    commentKind: 'herausforderung-event',
-    commentSegments: null,
-    herausforderung: event,
-    herausforderungTransaction: {
-      schemaVersion: 1,
-      transactionId: ref.id,
-      validatedBy: 'commitHerausforderung'
-    },
-    serverValidatedMechanics: true,
-    mechanicalAudit: true,
-    createdBy: request.auth.uid,
-    createdByRole: String(request.auth.token?.aleriaRole || 'player'),
-    orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : now,
-    createdAtClient: now,
-    activityAtClient: now,
-    activityAt: FieldValue.serverTimestamp(),
-    schemaVersion: 3,
-    ts: FieldValue.serverTimestamp()
+  await database.runTransaction(async transaction => {
+    if (operationKey) {
+      const existing = await transaction.get(ref);
+      if (existing.exists) {
+        if (existing.data().herausforderungFingerprint !== fingerprint) fail('failed-precondition', 'Dieser Vorgang wurde bereits mit anderem Inhalt gespeichert.');
+        return;
+      }
+    }
+    await prepareHerausforderungRewards(database, transaction, event);
+    transaction.create(ref, {
+      entryId,
+      charName: 'Erzähler',
+      charTitle: '',
+      portrait: null,
+      text,
+      deleteCodeHash: clean(payload.deleteCodeHash, 128),
+      deleteCodeVersion: 1,
+      narrator: true,
+      characterId: '',
+      avatarKind: 'narrator',
+      commentMode: 'herausforderung',
+      commentKind: 'herausforderung-event',
+      commentSegments: null,
+      herausforderung: event,
+      herausforderungFingerprint: fingerprint,
+      herausforderungTransaction: {
+        schemaVersion: 1,
+        transactionId: ref.id,
+        validatedBy: 'commitHerausforderung'
+      },
+      serverValidatedMechanics: true,
+      mechanicalAudit: true,
+      createdBy: request.auth.uid,
+      createdByRole: String(request.auth.token?.aleriaRole || 'player'),
+      orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : now,
+      createdAtClient: now,
+      activityAtClient: now,
+      activityAt: FieldValue.serverTimestamp(),
+      schemaVersion: 3,
+      ts: FieldValue.serverTimestamp()
+    });
   });
   return { id: ref.id };
 });

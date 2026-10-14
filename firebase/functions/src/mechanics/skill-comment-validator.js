@@ -17,6 +17,9 @@ import {
 } from '../generated/skill-checks/skill-check-model.js';
 import { classifyHerausforderungOutcome, collectHerausforderungApproaches } from '../generated/herausforderung/herausforderung-model.js';
 import { ProvidedDiceAdapter } from './provided-dice-adapter.js';
+import { benefitsForTier } from '../generated/herausforderung/herausforderung-rewards.js';
+import { applyHerausforderungRewardToAttempt, herausforderungEffectClaimId } from './herausforderung-rewards.js';
+import { getActiveCombatEncounter } from '../generated/combat/combat-encounter-model.js';
 
 const RECORD_KINDS = new Set(['character', 'creature']);
 
@@ -105,7 +108,9 @@ export async function validateSkillCommentSegments({
   usedRuleFrequencyKeys = new Set(),
   entryId = '',
   workingStates = new Map(),
-  persistentUpdates = new Map()
+  persistentUpdates = new Map(),
+  workingInventories = new Map(),
+  deferClaimWrites = false
 } = {}) {
   const entries = skillSegments(metadata);
   if (!entries.length) return {
@@ -118,6 +123,7 @@ export async function validateSkillCommentSegments({
     ...collectHerausforderungApproaches(challengeHistory)
   ];
   const encounterParties = getActiveCombatPartyMap(history);
+  const encounterId = getActiveCombatEncounter(history)?.encounterId || '';
   const revealed = collectRevealedChallengeIds(history);
   const challengeById = new Map(challenges.map(challenge => [String(challenge.id), challenge]));
   const descriptors = entries.flatMap(entry => {
@@ -354,17 +360,62 @@ export async function validateSkillCommentSegments({
       pendingClaims.push({ ref: claimRef, challenge, resolution });
     }
 
+    if (challenge?.source === 'herausforderung') {
+      const tier = resolution.herausforderungTier;
+      const benefits = benefitsForTier(challenge, tier);
+      const hasBenefits = !!(benefits?.copper || benefits?.items?.length || benefits?.effects?.length);
+      const success = isSuccessfulSkillOutcome(resolution.outcome);
+      const claimId = success ? herausforderungClaimId(challenge) : herausforderungEffectClaimId(challenge.id, actorDescriptor.actorId, tier);
+      let eligible = hasBenefits;
+      if (!success && hasBenefits) {
+        const ref = database.collection('herausforderung_effect_claims').doc(claimId);
+        const snapshot = await transaction.get(ref);
+        eligible = !snapshot.exists && !locallyClaimed.has(claimId);
+        if (eligible) { locallyClaimed.add(claimId); pendingClaims.push({ ref, challenge, resolution }); }
+        else resolution.herausforderungReward = { schemaVersion: 1, alreadyApplied: true, tier, actorId: actorDescriptor.actorId, challengeId: challenge.id, copper: 0, items: [], effects: [] };
+      }
+      if (eligible) {
+        if (!actorDescriptor.persistence.persistent && (benefits.copper || benefits.items?.length)) fail('failed-precondition', 'Gegenstände und Geld benötigen einen dauerhaften Inventarempfänger.');
+        const key = recordKey(actorDescriptor.persistence);
+        const update = persistentUpdates.get(key);
+        const grant = applyHerausforderungRewardToAttempt({ challenge, resolution, actor, profile,
+          state: workingStates.get(actorDescriptor.actorId) || {}, inventory: workingInventories.get(key) || update?.inventory || actorRecord.inventory || {},
+          equipment: update?.equipment || {}, identity: claimId, encounterId });
+        if (grant) {
+          resolution.herausforderungReward = grant.receipt;
+          if (grant.actorInventorySnapshot) resolution.actorInventorySnapshot = grant.actorInventorySnapshot;
+          if (grant.actorConditionSnapshot) resolution.actorConditionSnapshot = grant.actorConditionSnapshot;
+          const current = workingStates.get(actorDescriptor.actorId) || {};
+          workingStates.set(actorDescriptor.actorId, { ...current,
+            ...(grant.inventoryChanged ? { inventory: grant.inventory } : {}),
+            ...(grant.actorConditionSnapshot ? { temporaryConditions: grant.actorConditionSnapshot.after } : {}) });
+          if (grant.inventoryChanged) {
+            workingInventories.set(key, grant.inventory);
+            persistentUpdates.set(key, { ...(update || { entry: recordEntries.find(entry => entry.key === key), record: actorRecord }),
+              inventory: grant.inventory, equipment: { weapons: grant.combatProfile.weapons || [], armorItems: grant.combatProfile.armorItems || [] } });
+          }
+        }
+      }
+    }
+
     enhanced[entry.index] = { ...entry.segment, skillResolution: resolution };
   }
 
-  pendingClaims.forEach(claim => transaction.create(claim.ref, {
+  const claimWrites = pendingClaims.map(claim => ({ ref: claim.ref, data: {
     entryId: clean(entryId, 240),
     challengeId: claim.challenge.id,
     resolutionId: claim.resolution.resolutionId,
     resolvedBy: request.auth?.uid || '',
+    actorId: claim.resolution.actorId,
+    tier: claim.resolution.herausforderungTier || '',
     resolvedAt: new Date().toISOString()
-  }));
-  return { commentSegments: enhanced, usedRuleFrequencyKeys: usedKeys };
+  } }));
+  if (!deferClaimWrites) persistSkillChallengeClaims(transaction, claimWrites);
+  return { commentSegments: enhanced, usedRuleFrequencyKeys: usedKeys, claimWrites };
+}
+
+export function persistSkillChallengeClaims(transaction, claims = []) {
+  claims.forEach(claim => transaction.create(claim.ref, claim.data));
 }
 
 export const skillCommentValidatorInternals = Object.freeze({

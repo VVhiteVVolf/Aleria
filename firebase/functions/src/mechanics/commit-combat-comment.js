@@ -29,7 +29,7 @@ import {
 } from '../generated/inventory-use/inventory-use-model.js';
 import { ProvidedDiceAdapter } from './provided-dice-adapter.js';
 import { getTrustedSceneDay, isTrustedHerausforderungComment, isTrustedMechanicalComment, isTrustedSceneContributionComment, isTrustedSkillChallengeComment, sortSceneHistory } from './trusted-scene-history.js';
-import { skillSegments, validateSkillCommentSegments } from './skill-comment-validator.js';
+import { skillSegments, validateSkillCommentSegments, persistSkillChallengeClaims } from './skill-comment-validator.js';
 import { compactMechanicalSegmentsForStorage } from './mechanical-resolution-storage.js';
 
 const RECORD_KINDS = new Set(['character', 'creature']);
@@ -298,7 +298,9 @@ export async function commitCombatCommentOperation(request, {
       usedRuleFrequencyKeys,
       entryId,
       workingStates,
-      persistentUpdates
+      persistentUpdates,
+      workingInventories,
+      deferClaimWrites: true
     });
     enhancedSegments = validatedSkills.commentSegments;
     usedRuleFrequencyKeys = validatedSkills.usedRuleFrequencyKeys;
@@ -630,6 +632,7 @@ export async function commitCombatCommentOperation(request, {
 
     while (nextInventoryEntry < inventoryEntries.length) await resolveInventoryEntry(inventoryEntries[nextInventoryEntry++]);
     criticalLifecycle = lifecycle.finish({ ...metadata, commentSegments: enhancedSegments });
+    persistSkillChallengeClaims(transaction, validatedSkills.claimWrites);
     const mechanicalUndo = {};
     profileUpdates = [...persistentUpdates.values()].map(update => {
       const values = { updatedAt: new Date(nowClient).toISOString() };
