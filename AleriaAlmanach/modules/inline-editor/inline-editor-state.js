@@ -423,7 +423,7 @@ function cancelInlineModuleEdit() {
   renderPage(currentPage, 0);
 }
 
-function saveInlineModuleEdit() {
+async function saveInlineModuleEdit() {
   if (!_inlineModuleEdit?.draft) return;
   try {
     const context = _inlineModuleEdit;
@@ -463,7 +463,8 @@ function saveInlineModuleEdit() {
       else upsertCustomModule(section, entry);
     }
 
-    saveModuleStore();
+    if (saveModuleStore() === false) return;
+    await moduleStoreLocalPersistence.flush();
     _inlineModuleEdit = null;
     refreshAfterModuleChange(entry.id);
   } catch (error) {

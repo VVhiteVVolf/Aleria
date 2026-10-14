@@ -9,10 +9,10 @@ const clone = value => JSON.parse(JSON.stringify(value));
 function languageContext() {
   const storage = new Map();
   const context = vm.createContext({
-    console, TextEncoder, CustomEvent, setTimeout, clearTimeout,
+    console, crypto, TextEncoder, CustomEvent, setTimeout, clearTimeout,
     addEventListener() {}, dispatchEvent() {},
     document: { addEventListener() {}, getElementById: () => null, querySelectorAll: () => [], dispatchEvent() {} },
-    localStorage: { getItem: key => storage.get(key) || null, setItem: (key, value) => storage.set(key, value) },
+    localStorage: { getItem: key => storage.get(key) || null, setItem: (key, value) => storage.set(key, value), removeItem: key => storage.delete(key) },
     normalizeSearchText: value => String(value || '').toLowerCase(), normalizeCommentKind: value => value,
     invalidateArchiveSearchCache() {}, updateFirebaseSyncStatus() {}, renderAll() {}, showAppStatus() {},
     _inlineModuleEdit: { active: false },
@@ -32,8 +32,9 @@ function languageContext() {
     '../modules/language/language-script-display.js', '../modules/comments/comments-markup.js',
     '../modules/comments/comments-spell-fonts.js', '../modules/core/app-core.js',
     '../modules/module-editor/module-editor-cast-picker.js', '../modules/module-store/module-store-tree.js',
-    '../modules/module-store/module-store-sections.js', '../modules/module-store/module-store-sync.js'
+    '../modules/module-store/module-store-sections.js', '../modules/module-store/module-store-local.js', '../modules/module-store/module-store-sync.js'
   ]) vm.runInContext(readFileSync(new URL(source, import.meta.url), 'utf8'), context, { filename: source });
+  vm.runInContext('moduleStoreLocalPersistence.ready()', context);
   context.SECTIONS = [{ key: 'Sprachen', tab: 'Sprachen', entries: [context.createLaerelisLanguageEntry()] }];
   return context;
 }
@@ -64,7 +65,7 @@ test('Laerelis generated data and font match the supplied preview without losing
   assert.equal(context.sanitizeLanguageData(entry.pages[1].language).sections.length, 12);
 });
 
-test('all five Laerelis pages survive local and remote store loads, export and repeated normalization', () => {
+test('all five Laerelis pages survive local and remote store loads, export and repeated normalization', async () => {
   for (const source of ['local', 'remote']) {
     const context = languageContext();
     const entry = context.sanitizeModuleEntry(context.createLaerelisLanguageEntry());
@@ -73,8 +74,8 @@ test('all five Laerelis pages survive local and remote store loads, export and r
     const payload = { updatedAtClient: 250, entryOverrides: { [entry.id]: clone(entry) } };
     if (source === 'local') {
       context.localStorage.setItem('aleria-module-store-v1', JSON.stringify(payload));
-      context.loadModuleStore();
-    } else context.applyRemoteModuleStore(payload);
+      await context.loadModuleStore();
+    } else await context.applyRemoteModuleStore(payload);
     const loaded = context.findCurrentSectionByEntryId(entry.id).entry;
     assertComplete(loaded);
     assert.equal(loaded.pages[0].description, 'Eigener Auftakt');
@@ -86,7 +87,7 @@ test('all five Laerelis pages survive local and remote store loads, export and r
   }
 });
 
-test('dictionary, root register and name editors preserve every row and the selected Lichtfluss font', () => {
+test('dictionary, root register and name editors preserve every row and the selected Lichtfluss font', async () => {
   const context = languageContext();
   const entry = context.createLaerelisLanguageEntry();
   for (const page of [entry.pages[3], entry.pages[4]]) {
@@ -101,7 +102,7 @@ test('dictionary, root register and name editors preserve every row and the sele
   assert.match(context.buildScriptTableModuleEditorFields(entry.pages[3]), /value="laerelis" selected/);
 });
 
-test('Lichtfluss preserves plaintext and non-Laerelis scripts while rendering each digraph as one glyph', () => {
+test('Lichtfluss preserves plaintext and non-Laerelis scripts while rendering each digraph as one glyph', async () => {
   const context = languageContext();
   const input = 'Th DH sh nG ae 42 & < > 😀';
   const shown = context.getLanguageScriptDisplayText(input, 'laerelis');
@@ -117,7 +118,7 @@ test('Lichtfluss preserves plaintext and non-Laerelis scripts while rendering ea
   assert(!bubble.includes('<img'));
 });
 
-test('both Laerelis scene assets have the requested 2:3 portrait format', () => {
+test('both Laerelis scene assets have the requested 2:3 portrait format', async () => {
   const entry = languageContext().createLaerelisLanguageEntry();
   for (const path of [entry.pages[0].image, entry.pages[1].language.alphabetLayers[0].image]) {
     const png = readFileSync(new URL(`../${path}`, import.meta.url));

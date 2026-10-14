@@ -1,12 +1,12 @@
 (function () {
 // Startup publishes readiness only after the local archive has rendered.
-function startAlmanachPage() {
+async function startAlmanachPage() {
   try {
-    initPage();
+    await initPage();
     window.dispatchEvent(new CustomEvent('almanach:app-ready'));
   } catch (error) {
     window.dispatchEvent(new CustomEvent('almanach:startup-error'));
-    throw error;
+    console.error('Almanach startup failed:', error);
   }
 }
 

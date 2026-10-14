@@ -143,6 +143,21 @@ function getModuleStoreSerializedBytes(payload = getModuleStorePayload(Date.now(
   return getUtf8ByteLength(JSON.stringify(normalizeModuleStorePayload(payload)));
 }
 
+function getModuleStoreStorageSizes(payload) {
+  const normalized = normalizeModuleStorePayload(payload);
+  const entries = [...normalized.customSections.flatMap(section => section.entries || []),
+    ...Object.values(normalized.entryOverrides)];
+  const manifest = { ...normalized,
+    customSections: normalized.customSections.map(({ entries, ...section }) => ({
+      ...section, entryIds: (entries || []).map(entry => entry.id)
+    })), entryOverrides: Object.keys(normalized.entryOverrides) };
+  return {
+    bytes: getUtf8ByteLength(JSON.stringify(normalized)),
+    largestDocumentBytes: entries.reduce((largest, entry) => Math.max(largest,
+      getUtf8ByteLength(JSON.stringify(entry))), getUtf8ByteLength(JSON.stringify(manifest)))
+  };
+}
+
 function formatStorageBytes(bytes) {
   const value = Number(bytes) || 0;
   if (value >= 1024 * 1024) return `${(value / 1024 / 1024).toFixed(2)} MB`;
@@ -160,41 +175,42 @@ function updateModuleStoreSizePanel(payload = getModuleStorePayload(Date.now()))
   const panel = document.getElementById('me-module-store-size-panel');
   if (!panel) return;
   let bytes = 0;
+  let largestDocumentBytes = 0;
   try {
-    bytes = getModuleStoreSerializedBytes(payload);
+    ({ bytes, largestDocumentBytes } = getModuleStoreStorageSizes(payload));
   } catch (error) {
     console.warn('module store size calculation failed:', error);
   }
-  const state = getModuleStoreSizeState(bytes);
-  const percent = Math.min(100, Math.round((bytes / MODULE_STORE_FIREBASE_LIMIT_BYTES) * 100));
+  const state = getModuleStoreSizeState(largestDocumentBytes);
+  const percent = Math.min(100, Math.round((largestDocumentBytes / MODULE_STORE_FIREBASE_LIMIT_BYTES) * 100));
   const text = document.getElementById('me-module-store-size-text');
   const bar = document.getElementById('me-module-store-size-bar');
   const note = document.getElementById('me-module-store-size-note');
 
   panel.classList.toggle('warn', state === 'warn');
   panel.classList.toggle('danger', state === 'danger');
-  if (text) text.textContent = `${formatStorageBytes(bytes)} / ca. ${formatStorageBytes(MODULE_STORE_FIREBASE_LIMIT_BYTES)}`;
+  if (text) text.textContent = `Gesamt: ${formatStorageBytes(bytes)} · größter Eintrag: ${formatStorageBytes(largestDocumentBytes)} / ca. ${formatStorageBytes(MODULE_STORE_FIREBASE_LIMIT_BYTES)}`;
   if (bar) bar.style.width = `${percent}%`;
   if (note) {
     note.textContent = state === 'danger'
-      ? 'Kritisch nah am Firestore-Dokumentlimit. Vor weiteren grossen Importen unbedingt Vollbackup herunterladen.'
+      ? 'Ein einzelner Eintrag liegt nahe am Online-Limit. Große Module aufteilen und vorher ein Vollbackup herunterladen.'
       : state === 'warn'
-        ? 'Der Modul-Speicher wird gross. Vollbackup regelmaessig herunterladen und Masterimporte vorsichtig testen.'
-        : 'Zeigt die aktuelle Groesse des Modul-Speichers fuer Firebase an.';
+        ? 'Ein einzelner Eintrag wird groß. Vollbackups regelmäßig herunterladen.'
+        : 'Module werden einzeln online gespeichert. Das Online-Limit gilt je Eintrag, nicht für den Gesamtbestand.';
   }
 }
 
 function warnIfModuleStoreSizeIsHigh(payload = getModuleStorePayload(Date.now())) {
-  const bytes = getModuleStoreSerializedBytes(payload);
-  const state = getModuleStoreSizeState(bytes);
+  const { bytes, largestDocumentBytes } = getModuleStoreStorageSizes(payload);
+  const state = getModuleStoreSizeState(largestDocumentBytes);
   updateModuleStoreSizePanel(payload);
   if (state === 'danger') {
-    showAppStatus(`Modul-Speicher ist sehr gross (${formatStorageBytes(bytes)}). Bitte ein Vollbackup herunterladen.`, 'error', { timeout: 0 });
+    showAppStatus(`Ein Moduleintrag ist sehr groß (${formatStorageBytes(largestDocumentBytes)}). Bitte aufteilen und ein Vollbackup herunterladen.`, 'error', { timeout: 0 });
     if (typeof setModuleEditorStatus === 'function') {
-      setModuleEditorStatus(`Warnung: Modul-Speicher ist sehr gross (${formatStorageBytes(bytes)}). Vor weiteren Importen Vollbackup herunterladen.`, true);
+      setModuleEditorStatus(`Warnung: Ein Moduleintrag ist sehr groß (${formatStorageBytes(largestDocumentBytes)}). Vor weiteren Importen Vollbackup herunterladen.`, true);
     }
   } else if (state === 'warn' && document.getElementById('module-editor-overlay')?.classList.contains('active')) {
-    setModuleEditorStatus(`Hinweis: Modul-Speicher ist bereits ${formatStorageBytes(bytes)} gross. Vollbackups regelmaessig herunterladen.`);
+    setModuleEditorStatus(`Hinweis: Der größte Moduleintrag umfasst ${formatStorageBytes(largestDocumentBytes)}. Vollbackups regelmäßig herunterladen.`);
   }
   return { bytes, state };
 }
@@ -226,7 +242,7 @@ function getModuleStoreContentSignature(payload) {
 
 function readModuleStoreSyncMeta() {
   try {
-    const raw = localStorage.getItem(MODULE_STORE_SYNC_META_KEY);
+    const raw = moduleStoreLocalPersistence.read(MODULE_STORE_SYNC_META_KEY);
     return raw ? JSON.parse(raw) : null;
   } catch (error) {
     console.warn('module sync meta read failed:', error);
@@ -234,27 +250,47 @@ function readModuleStoreSyncMeta() {
   }
 }
 
-function writeModuleStoreSyncMeta(payload) {
-  try {
-    const normalized = normalizeModuleStorePayload(payload);
-    localStorage.setItem(MODULE_STORE_SYNC_META_KEY, JSON.stringify({
-      signature: getModuleStoreContentSignature(normalized),
-      updatedAtClient: getModuleStoreUpdatedAt(normalized),
-      syncedAt: Date.now()
-    }));
-  } catch (error) {
-    console.warn('module sync meta write failed:', error);
-  }
+async function getModuleStoreSyncSignature(payload) {
+  const bytes = new TextEncoder().encode(getModuleStoreContentSignature(payload));
+  const digest = await crypto.subtle.digest('SHA-256', bytes);
+  return `sha256:${Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, '0')).join('')}`;
 }
 
-function isLocalModuleStoreSynced(payload) {
+async function writeModuleStoreSyncMeta(payload, previousMeta = null) {
+  const normalized = normalizeModuleStorePayload(payload);
+  await moduleStoreLocalPersistence.write(MODULE_STORE_SYNC_META_KEY, JSON.stringify({
+    signature: await getModuleStoreSyncSignature(normalized),
+    updatedAtClient: previousMeta?.updatedAtClient ?? getModuleStoreUpdatedAt(normalized),
+    syncedAt: previousMeta?.syncedAt ?? Date.now()
+  }));
+}
+
+async function isLocalModuleStoreSynced(payload) {
   const meta = readModuleStoreSyncMeta();
   if (!meta?.signature) return false;
+  if (meta.signature.startsWith('sha256:')) return meta.signature === await getModuleStoreSyncSignature(payload);
   try {
     // Also recognize sync receipts written before canonical signatures.
     return getModuleStoreContentSignature(JSON.parse(meta.signature)) === getModuleStoreContentSignature(payload);
   } catch {
     return false;
+  }
+}
+
+async function getCurrentModuleStoreSyncState(remotePayload) {
+  // Hashing is asynchronous. Recheck the snapshot so an edit made during a
+  // digest cannot be replaced by the incoming online snapshot.
+  while (true) {
+    const localPayload = readLocalModuleStorePayload();
+    const signature = getModuleStoreContentSignature(localPayload);
+    const receipt = moduleStoreLocalPersistence.read(MODULE_STORE_SYNC_META_KEY);
+    const [localIsSynced, remoteIsSynced] = await Promise.all([
+      isLocalModuleStoreSynced(localPayload), isLocalModuleStoreSynced(remotePayload)
+    ]);
+    if (signature !== getModuleStoreContentSignature(readLocalModuleStorePayload())
+      || receipt !== moduleStoreLocalPersistence.read(MODULE_STORE_SYNC_META_KEY)) continue;
+    return { localPayload, localIsSynced, remoteIsSynced,
+      sameContent: signature === getModuleStoreContentSignature(remotePayload) };
   }
 }
 
@@ -346,8 +382,8 @@ async function resolveModuleStoreSyncConflict(choice) {
     if (choice === 'remote') {
       if (!confirm('Online-Stand laden?\n\nDein lokaler Modulstand wird durch den Online-Stand ersetzt. Vorher Backup empfohlen.')) return;
       applyModuleStorePayload(remotePayload);
-      writeLocalModuleStorePayload(remotePayload);
-      writeModuleStoreSyncMeta(remotePayload);
+      await writeLocalModuleStorePayload(remotePayload);
+      await writeModuleStoreSyncMeta(remotePayload);
       updateModuleStoreSizePanel(remotePayload);
       renderAll();
       updateFirebaseSyncStatus('synced', 'Online-Stand manuell übernommen.');
@@ -356,7 +392,7 @@ async function resolveModuleStoreSyncConflict(choice) {
       if (!confirm('Lokalen Stand behalten?\n\nDer lokale Modulstand wird nach Firebase geschrieben und überschreibt den Online-Modulstand. Vorher Backup empfohlen.')) return;
       updateFirebaseSyncStatus('syncing', 'Lokaler Stand wird online gespeichert...');
       await pushModuleStoreToFirebase(localPayload);
-      writeModuleStoreSyncMeta(localPayload);
+      await writeModuleStoreSyncMeta(localPayload);
       updateModuleStoreSizePanel(localPayload);
       updateFirebaseSyncStatus('synced', 'Lokaler Stand wurde online gespeichert.');
       showAppStatus('Lokaler Stand wurde online gespeichert.', 'success');
@@ -378,22 +414,22 @@ function getModuleStoreUpdatedAt(payload) {
 }
 
 function readLocalModuleStorePayload() {
-  const raw = localStorage.getItem(MODULE_STORE_KEY);
+  const raw = moduleStoreLocalPersistence.read(MODULE_STORE_KEY);
   return raw ? normalizeModuleStorePayload(JSON.parse(raw)) : normalizeModuleStorePayload(null);
 }
 
 function writeLocalModuleStorePayload(payload) {
-  localStorage.setItem(MODULE_STORE_KEY, JSON.stringify(normalizeModuleStorePayload(payload)));
+  return moduleStoreLocalPersistence.write(MODULE_STORE_KEY, JSON.stringify(normalizeModuleStorePayload(payload)));
 }
 
-function cleanupSyncedModuleStoreCache(options = {}) {
+async function cleanupSyncedModuleStoreCache(options = {}) {
   try {
     const localPayload = readLocalModuleStorePayload();
     if (!hasModuleStoreContent(localPayload)) return false;
     const meta = readModuleStoreSyncMeta();
-    if (!meta?.syncedAt || !isLocalModuleStoreSynced(localPayload)) return false;
+    if (!meta?.syncedAt || !await isLocalModuleStoreSynced(localPayload)) return false;
     if (!options.force && Date.now() - Number(meta.syncedAt) < MODULE_STORE_SYNCED_CACHE_MAX_AGE_MS) return false;
-    localStorage.removeItem(MODULE_STORE_KEY);
+    await moduleStoreLocalPersistence.write(MODULE_STORE_KEY, null);
     return true;
   } catch (error) {
     console.warn('synced module cache cleanup failed:', error);
@@ -422,39 +458,43 @@ function applyModuleStorePayload(payload) {
   return normalized;
 }
 
-function loadModuleStore() {
+async function loadModuleStore() {
   try {
+    await moduleStoreLocalPersistence.ready();
     applyModuleStorePayload(readLocalModuleStorePayload());
     const localPayload = readLocalModuleStorePayload();
+    const synced = await isLocalModuleStoreSynced(localPayload);
+    const meta = readModuleStoreSyncMeta();
+    if (meta?.signature && !meta.signature.startsWith('sha256:')) {
+      let baseline;
+      try { baseline = JSON.parse(meta.signature); }
+      catch { console.warn('Unreadable legacy sync receipt; keeping the module cache.'); }
+      if (baseline) await writeModuleStoreSyncMeta(baseline, meta);
+    }
     updateModuleStoreSizePanel(localPayload);
     if (hasModuleStoreContent(localPayload)) {
       updateFirebaseSyncStatus(
-        isLocalModuleStoreSynced(localPayload) ? 'synced' : 'local',
-        isLocalModuleStoreSynced(localPayload) ? 'Lokaler Cache entspricht dem letzten Online-Stand.' : 'Warte auf Online-Abgleich.'
+        synced ? 'synced' : 'local',
+        synced ? 'Lokaler Cache entspricht dem letzten Online-Stand.' : 'Warte auf Online-Abgleich.'
       );
     } else {
       updateFirebaseSyncStatus('idle', 'Noch keine lokalen Moduländerungen.');
     }
   } catch (error) {
     console.error('module store load failed:', error);
-    showAppStatus('Lokale Moduländerungen konnten nicht gelesen werden. Der gespeicherte Stand wurde ignoriert.', 'error');
+    showAppStatus('Lokale Moduländerungen konnten nicht gelesen werden. Bitte erneut laden; der gespeicherte Stand bleibt erhalten.', 'error', { timeout: 0 });
     updateFirebaseSyncStatus('error', 'Lokale Moduländerungen konnten nicht gelesen werden.');
-    _customSections = [];
-    _moduleSectionNodes = [];
-    _moduleNodeAssignments = {};
-    _entryOverrides = {};
-    _moduleSectionMoves = {};
-    _hiddenModuleIds = {};
-    _archiveDashboardInsights = [];
-    updateModuleStoreSizePanel();
+    // Do not turn an unreadable cache into an empty store that could be
+    // published over the user's existing data.
+    throw error;
   }
 }
 
-function cleanupLocalAlmanachStorage() {
+async function cleanupLocalAlmanachStorage() {
   const removedDrafts = typeof window.cleanupOldCommentDrafts === 'function'
     ? window.cleanupOldCommentDrafts(30)
     : 0;
-  const removedModuleCache = cleanupSyncedModuleStoreCache();
+  const removedModuleCache = await cleanupSyncedModuleStoreCache();
   if (removedDrafts || removedModuleCache) {
     const parts = [];
     if (removedDrafts) parts.push(`${removedDrafts} alte Entwuerfe`);
@@ -473,6 +513,7 @@ async function waitForFirebaseReady(timeoutMs = FIREBASE_READY_TIMEOUT_MS) {
 }
 
 async function pushModuleStoreToFirebase(payload) {
+  await moduleStoreLocalPersistence.flush();
   const ready = await waitForFirebaseReady();
   if (!ready || !window._fb?.saveModuleStore) {
     throw new Error('Firebase ist nicht erreichbar. Moduländerungen bleiben lokal gespeichert.');
@@ -492,8 +533,10 @@ function scheduleRemoteModuleStoreSave(payload) {
     _moduleStoreRemoteSaveTimer = null;
     try {
       await pushModuleStoreToFirebase(payload);
-      writeModuleStoreSyncMeta(payload);
-      updateFirebaseSyncStatus('synced', 'Letzte Moduländerung ist online.');
+      await writeModuleStoreSyncMeta(payload);
+      if (getModuleStoreContentSignature(payload) === getModuleStoreContentSignature(readLocalModuleStorePayload())) {
+        updateFirebaseSyncStatus('synced', 'Letzte Moduländerung ist online.');
+      }
     } catch (error) {
       console.error('remote module store save failed:', error);
       updateFirebaseSyncStatus('error', 'Nur lokal gespeichert.');
@@ -505,56 +548,78 @@ function scheduleRemoteModuleStoreSave(payload) {
 function saveModuleStore(options = {}) {
   try {
     const payload = getModuleStorePayload(options.updatedAtClient || Date.now());
-    writeLocalModuleStorePayload(payload);
+    clearTimeout(_moduleStoreRemoteSaveTimer);
+    _moduleStoreRemoteSaveTimer = null;
+    const commit = writeLocalModuleStorePayload(payload);
     _builtinLibraryCharactersCache = null;
     window.dispatchEvent(new CustomEvent('almanach:modules-changed'));
     warnIfModuleStoreSizeIsHigh(payload);
-    updateFirebaseSyncStatus('local', 'Moduländerung im Browser gesichert.');
-    if (options.remote !== false) scheduleRemoteModuleStoreSave(payload);
+    updateFirebaseSyncStatus('syncing', 'Moduländerung wird im Browser gesichert...');
+    commit.then(() => {
+      if (getModuleStoreContentSignature(payload) !== getModuleStoreContentSignature(readLocalModuleStorePayload())) return;
+      updateFirebaseSyncStatus('local', 'Moduländerung im Browser gesichert.');
+      if (options.remote !== false) scheduleRemoteModuleStoreSave(payload);
+    }).catch(reportModuleStoreLocalSaveError);
     return true;
   } catch (error) {
-    console.error('saveModuleStore failed:', error);
-    updateFirebaseSyncStatus('error', 'Lokaler Speicher nicht verfügbar.');
-    showAppStatus('Lokaler Speicher ist voll oder nicht verfügbar. Exportiere deine Änderungen als JSON.', 'error', { timeout: 0 });
-    if (typeof setModuleEditorStatus === 'function') {
-      setModuleEditorStatus('Lokaler Speicher ist voll oder nicht verfügbar. Exportiere deine Änderungen als JSON, bevor du weiterarbeitest.', true);
-    }
+    reportModuleStoreLocalSaveError(error);
     return false;
   }
 }
 
+function reportModuleStoreLocalSaveError(error) {
+  console.error('saveModuleStore failed:', error);
+  updateFirebaseSyncStatus('error', 'Lokaler Speicher nicht verfügbar.');
+  const message = error?.code === 'module-store-concurrent-write' ? error.message
+    : 'Lokaler Speicher ist voll oder nicht verfügbar. Exportiere deine Änderungen als JSON.';
+  showAppStatus(message, 'error', { timeout: 0 });
+  if (typeof setModuleEditorStatus === 'function') {
+    setModuleEditorStatus(message, true);
+  }
+}
+
+let moduleStoreRemoteApplyQueue = Promise.resolve();
+
 function applyRemoteModuleStore(payload) {
+  const apply = moduleStoreRemoteApplyQueue.catch(() => {}).then(() => processRemoteModuleStore(payload));
+  moduleStoreRemoteApplyQueue = apply;
+  return apply;
+}
+
+async function processRemoteModuleStore(payload) {
   const removedContentWasPruned = !!globalThis.AleriaModuleSectionPolicy?.hasRemovedContent?.(payload);
   if (!hasModuleStoreContent(payload) && !removedContentWasPruned) return;
   if (_inlineModuleEdit?.active) return;
 
   try {
     const remotePayload = normalizeModuleStorePayload(payload);
-    const localPayload = readLocalModuleStorePayload();
-    const sameContent = getModuleStoreContentSignature(remotePayload) === getModuleStoreContentSignature(localPayload);
+    const { localPayload, localIsSynced, remoteIsSynced, sameContent } = await getCurrentModuleStoreSyncState(remotePayload);
+    if (_inlineModuleEdit?.active) return;
 
     if (sameContent) {
-      writeModuleStoreSyncMeta(remotePayload);
+      await writeModuleStoreSyncMeta(remotePayload);
       _moduleStoreSyncConflict = null;
-      updateFirebaseSyncStatus('synced', 'Online-Stand aktuell.');
-      if (removedContentWasPruned) {
+      const stillCurrent = getModuleStoreContentSignature(remotePayload) === getModuleStoreContentSignature(readLocalModuleStorePayload());
+      if (stillCurrent) updateFirebaseSyncStatus('synced', 'Online-Stand aktuell.');
+      if (removedContentWasPruned && stillCurrent) {
         scheduleRemoteModuleStoreSave({ ...remotePayload, updatedAtClient: Date.now() });
       }
       return;
     }
-    if (hasModuleStoreContent(localPayload) && !isLocalModuleStoreSynced(localPayload)) {
-      if (isLocalModuleStoreSynced(remotePayload)) return;
+    if (hasModuleStoreContent(localPayload) && !localIsSynced) {
+      if (remoteIsSynced) return;
       showModuleStoreSyncConflict(localPayload, remotePayload);
       return;
     }
     applyModuleStorePayload(remotePayload);
-    writeLocalModuleStorePayload(remotePayload);
-    writeModuleStoreSyncMeta(remotePayload);
+    await writeLocalModuleStorePayload(remotePayload);
+    await writeModuleStoreSyncMeta(remotePayload);
     updateModuleStoreSizePanel(remotePayload);
     renderAll();
-    updateFirebaseSyncStatus('synced', 'Online-Stand übernommen.');
+    const stillCurrent = getModuleStoreContentSignature(remotePayload) === getModuleStoreContentSignature(readLocalModuleStorePayload());
+    if (stillCurrent) updateFirebaseSyncStatus('synced', 'Online-Stand übernommen.');
     showAppStatus('Almanach-Module wurden synchronisiert.', 'success');
-    if (removedContentWasPruned) {
+    if (removedContentWasPruned && stillCurrent) {
       scheduleRemoteModuleStoreSave({ ...remotePayload, updatedAtClient: Date.now() });
     }
   } catch (error) {
@@ -570,6 +635,7 @@ async function setupModuleStoreRemoteSync() {
   let startupOffline = false;
 
   try {
+    await moduleStoreLocalPersistence.ready();
     const ready = await waitForFirebaseReady();
     if (!ready || !window._fb?.loadModuleStore) {
       _moduleStoreRemoteSyncStarted = false;
@@ -582,19 +648,17 @@ async function setupModuleStoreRemoteSync() {
     const remoteSource = await window._fb.loadModuleStore();
     // Edits made while the request was running must participate in the
     // conflict check, rather than being replaced by the startup snapshot.
-    const localPayload = readLocalModuleStorePayload();
     const removedRemoteContentWasPruned = !!globalThis.AleriaModuleSectionPolicy?.hasRemovedContent?.(remoteSource);
     const remotePayload = normalizeModuleStorePayload(remoteSource);
+    const { localPayload, localIsSynced, remoteIsSynced, sameContent } = await getCurrentModuleStoreSyncState(remotePayload);
     const localHasContent = hasModuleStoreContent(localPayload);
     const remoteHasContent = hasModuleStoreContent(remotePayload);
     const localUpdated = getModuleStoreUpdatedAt(localPayload);
     const remoteUpdated = getModuleStoreUpdatedAt(remotePayload);
-    const sameContent = getModuleStoreContentSignature(remotePayload) === getModuleStoreContentSignature(localPayload);
 
     // An unchanged cache is never a new edit, even if its clock is ahead of the
     // online revision. Loading it must not republish an older set of modules.
-    const localIsSynced = isLocalModuleStoreSynced(localPayload);
-    const localCanPublish = localHasContent && !localIsSynced && isLocalModuleStoreSynced(remotePayload);
+    const localCanPublish = localHasContent && !localIsSynced && remoteIsSynced;
     if (localHasContent && remoteHasContent && !sameContent && !localIsSynced && !localCanPublish) {
       showModuleStoreSyncConflict(localPayload, remotePayload);
       subscribeToModuleStoreUpdates();
@@ -604,33 +668,34 @@ async function setupModuleStoreRemoteSync() {
     if (removedRemoteContentWasPruned && !remoteHasContent && !localHasContent) {
       const migratedPayload = { ...remotePayload, updatedAtClient: Date.now() };
       applyModuleStorePayload(migratedPayload);
-      writeLocalModuleStorePayload(migratedPayload);
+      await writeLocalModuleStorePayload(migratedPayload);
       await pushModuleStoreToFirebase(migratedPayload);
-      writeModuleStoreSyncMeta(migratedPayload);
+      await writeModuleStoreSyncMeta(migratedPayload);
       updateModuleStoreSizePanel(migratedPayload);
       updateFirebaseSyncStatus('synced', 'Entfernte Modulbereiche wurden online bereinigt.');
     } else if (remoteHasContent && !localCanPublish && (!localHasContent || localIsSynced || sameContent || !localUpdated || remoteUpdated >= localUpdated)) {
       applyModuleStorePayload(remotePayload);
-      writeLocalModuleStorePayload(remotePayload);
-      writeModuleStoreSyncMeta(remotePayload);
+      await writeLocalModuleStorePayload(remotePayload);
+      await writeModuleStoreSyncMeta(remotePayload);
       updateModuleStoreSizePanel(remotePayload);
       if (!sameContent) {
         renderAll();
         showAppStatus('Almanach-Module wurden vom Online-Speicher geladen.', 'success');
       }
       updateFirebaseSyncStatus('synced', 'Online-Stand geladen.');
-      if (removedRemoteContentWasPruned) {
+      if (removedRemoteContentWasPruned
+        && getModuleStoreContentSignature(remotePayload) === getModuleStoreContentSignature(readLocalModuleStorePayload())) {
         const migratedPayload = { ...remotePayload, updatedAtClient: Date.now() };
         applyModuleStorePayload(migratedPayload);
-        writeLocalModuleStorePayload(migratedPayload);
+        await writeLocalModuleStorePayload(migratedPayload);
         await pushModuleStoreToFirebase(migratedPayload);
-        writeModuleStoreSyncMeta(migratedPayload);
+        await writeModuleStoreSyncMeta(migratedPayload);
       }
     } else if (localHasContent && (localCanPublish || !remoteHasContent || !remoteUpdated || localUpdated > remoteUpdated)) {
       const publishPayload = { ...localPayload, updatedAtClient: Math.max(Date.now(), localUpdated, remoteUpdated + 1) };
-      writeLocalModuleStorePayload(publishPayload);
+      await writeLocalModuleStorePayload(publishPayload);
       await pushModuleStoreToFirebase(publishPayload);
-      writeModuleStoreSyncMeta(publishPayload);
+      await writeModuleStoreSyncMeta(publishPayload);
       updateModuleStoreSizePanel(publishPayload);
       updateFirebaseSyncStatus('synced', 'Lokaler Stand wurde online gespeichert.');
       if (!remoteHasContent) showAppStatus('Lokale Almanach-Module wurden online gespeichert.', 'success');

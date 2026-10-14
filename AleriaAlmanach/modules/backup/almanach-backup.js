@@ -242,6 +242,7 @@ async function buildFullAlmanachBackupPayload() {
     version: ALMANACH_BACKUP_SCHEMA_VERSION,
     exportedAt: new Date().toISOString(),
     moduleStore: cloneForBackup(getModuleStorePayload(Date.now())),
+    moduleStoreLocalRecovery: await moduleStoreLocalPersistence.readLegacyRecovery(),
     characters: cloneForBackup(characters || []),
     creatures: cloneForBackup(creatures || []),
     charTabs: cloneForBackup(charTabs || {
@@ -301,9 +302,9 @@ async function applyFullAlmanachBackup(payload) {
   updateFirebaseSyncStatus('syncing', 'Backup wird online eingespielt...');
 
   applyModuleStorePayload(backup.moduleStore);
-  writeLocalModuleStorePayload(backup.moduleStore);
+  await writeLocalModuleStorePayload(backup.moduleStore);
   await pushModuleStoreToFirebase(backup.moduleStore);
-  writeModuleStoreSyncMeta(backup.moduleStore);
+  await writeModuleStoreSyncMeta(backup.moduleStore);
   updateModuleStoreSizePanel(backup.moduleStore);
 
   if (backup.charTabs) {

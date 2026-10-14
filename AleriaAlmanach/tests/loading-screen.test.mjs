@@ -411,18 +411,18 @@ test('each human leg crosses from behind the other leg to in front during a full
   }
 });
 
-test('startup readiness is emitted after rendering, and a failed startup only emits an error', () => {
+test('startup readiness is emitted after rendering, and a failed startup only emits an error', async () => {
   const startup = readFileSync(new URL('../app.js', import.meta.url), 'utf8');
   for (const failed of [false, true]) {
     const events = []; let rendered = false;
-    const context = vm.createContext({ CustomEvent,
+    const context = vm.createContext({ CustomEvent, console: { error() {} },
       document: { readyState: 'complete' },
       window: { addEventListener() {}, dispatchEvent(event) { events.push([event.type, rendered]); } },
       clearTransientSearchInputsAfterBrowserRestore() {},
       initPage() { if (failed) throw new Error('startup'); rendered = true; }
     });
-    if (failed) assert.throws(() => vm.runInContext(startup, context), /startup/);
-    else vm.runInContext(startup, context);
+    vm.runInContext(startup, context);
+    await new Promise(resolve => setImmediate(resolve));
     assert.deepEqual(events, [[failed ? 'almanach:startup-error' : 'almanach:app-ready', !failed]]);
   }
 });

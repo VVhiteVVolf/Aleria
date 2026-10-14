@@ -10,10 +10,10 @@ const clone = value => JSON.parse(JSON.stringify(value));
 function moduleStore() {
   const storage = new Map();
   const context = vm.createContext({
-    console, TextEncoder, setTimeout, clearTimeout, CustomEvent,
+    console, crypto, TextEncoder, setTimeout, clearTimeout, CustomEvent,
     addEventListener() {}, dispatchEvent() {},
     document: { addEventListener() {}, getElementById: () => null, querySelectorAll: () => [] },
-    localStorage: { getItem: key => storage.get(key) || null, setItem: (key, value) => storage.set(key, value) },
+    localStorage: { getItem: key => storage.get(key) || null, setItem: (key, value) => storage.set(key, value), removeItem: key => storage.delete(key) },
     normalizeSearchText: value => String(value || '').toLowerCase(),
     invalidateArchiveSearchCache() {}, updateFirebaseSyncStatus() {}, renderAll() {}, showAppStatus() {},
     _inlineModuleEdit: { active: false }
@@ -28,8 +28,9 @@ function moduleStore() {
     '../modules/language/morgar/morgar-migration.js', '../modules/module-store/module-entry-migrations.js',
     '../modules/core/app-core.js', '../modules/module-editor/module-editor-cast-picker.js',
     '../modules/module-store/module-store-tree.js', '../modules/module-store/module-store-sections.js',
-    '../modules/module-store/module-store-sync.js'
+    '../modules/module-store/module-store-local.js', '../modules/module-store/module-store-sync.js'
   ]) vm.runInContext(readFileSync(new URL(source, import.meta.url), 'utf8'), context, { filename: source });
+  vm.runInContext('moduleStoreLocalPersistence.ready()', context);
   context.SECTIONS = [{ key: 'Sprachen', tab: 'Sprachen', entries: [context.createMorgarLanguageEntry()] }];
   return context;
 }
@@ -43,15 +44,15 @@ function assertCurrent(entry, pageCount = 5) {
   assert.equal(entry.pages[1].language.sections.filter(section => section.title === 'Morgorns Adelstitel und Kriegerkasten').length, 1);
 }
 
-test('the actual saved Morgar 2.0 receives the accepted terms on local and remote load', () => {
+test('the actual saved Morgar 2.0 receives the accepted terms on local and remote load', async () => {
   assert.equal(previous.pages[4].scriptTable.rows.length, 360);
   for (const source of ['local', 'remote']) {
     const context = moduleStore();
     const store = { updatedAtClient: 250, entryOverrides: { [previous.id]: clone(previous) } };
     if (source === 'local') {
       context.localStorage.setItem('aleria-module-store-v1', JSON.stringify(store));
-      context.loadModuleStore();
-    } else context.applyRemoteModuleStore(store);
+      await context.loadModuleStore();
+    } else await context.applyRemoteModuleStore(store);
     const entry = context.findCurrentSectionByEntryId(previous.id).entry;
     assertCurrent(entry);
     assert.match(entry.pages[4].scriptTable.archiveLabel, /Morgar 2\.1/);
@@ -62,7 +63,7 @@ test('the actual saved Morgar 2.0 receives the accepted terms on local and remot
   }
 });
 
-test('the terminology upgrade preserves custom text, covers, names, words and deliberately removed words', () => {
+test('the terminology upgrade preserves custom text, covers, names, words and deliberately removed words', async () => {
   const context = moduleStore();
   const edited = clone(previous);
   edited.pages[0].image = '../Bilder/eigene-halle.png';
@@ -94,25 +95,25 @@ test('the terminology upgrade preserves custom text, covers, names, words and de
   assert.deepEqual(clone(context.sanitizeModuleEntry(entry)), clone(entry));
 });
 
-test('the actual four-page/400-name local override loads, exports and reloads as Morgar 2.0', () => {
+test('the actual four-page/400-name local override loads, exports and reloads as Morgar 2.0', async () => {
   const context = moduleStore();
   assert.equal(legacy.pages.length, 4);
   assert.deepEqual(legacy.pages[2].nameList.groups.map(group => group.names.length), [200, 200]);
   const payload = { updatedAtClient: 123, entryOverrides: { [legacy.id]: clone(legacy) } };
   const before = JSON.stringify(payload);
   context.localStorage.setItem('aleria-module-store-v1', before);
-  context.loadModuleStore();
+  await context.loadModuleStore();
   assertCurrent(context.findCurrentSectionByEntryId(legacy.id).entry);
   assertCurrent(context.buildModuleExportPayload(legacy.id).entry);
   const saved = context.getModuleStorePayload(123);
   assertCurrent(saved.entryOverrides[legacy.id]);
   context.writeLocalModuleStorePayload(saved);
-  context.loadModuleStore();
+  await context.loadModuleStore();
   assertCurrent(context.findCurrentSectionByEntryId(legacy.id).entry);
   assert.equal(JSON.stringify(payload), before);
 });
 
-test('saved Morgar 2.0 receives the scene image without replacing current language edits or custom covers', () => {
+test('saved Morgar 2.0 receives the scene image without replacing current language edits or custom covers', async () => {
   const context = moduleStore();
   const saved = clone(context.createMorgarLanguageEntry());
   saved.image = saved.pages[0].image = '../Fonts/Karnrith-Font-2.000/Leseprobe.png';
@@ -127,18 +128,18 @@ test('saved Morgar 2.0 receives the scene image without replacing current langua
   assert.equal(saved.pages[2].nameList.groups[0].names[0], 'Eigenname');
 });
 
-test('a Firebase-delivered override and repeated old snapshots cannot reinstate the four-page entry', () => {
+test('a Firebase-delivered override and repeated old snapshots cannot reinstate the four-page entry', async () => {
   const context = moduleStore();
   const remote = { updatedAtClient: 200, entryOverrides: { [legacy.id]: clone(legacy) } };
-  context.applyRemoteModuleStore(remote);
+  await context.applyRemoteModuleStore(remote);
   assertCurrent(context.findCurrentSectionByEntryId(legacy.id).entry);
   assertCurrent(context.readLocalModuleStorePayload().entryOverrides[legacy.id]);
-  context.applyRemoteModuleStore({ ...remote, updatedAtClient: 300 });
+  await context.applyRemoteModuleStore({ ...remote, updatedAtClient: 300 });
   assertCurrent(context.findCurrentSectionByEntryId(legacy.id).entry);
   assert.equal(remote.entryOverrides[legacy.id].pages.length, 4);
 });
 
-test('migration retains placement, module metadata, comments, custom pages and unrelated records', () => {
+test('migration retains placement, module metadata, comments, custom pages and unrelated records', async () => {
   const context = moduleStore();
   const old = clone(legacy);
   old.stamp = 'Privates Hallenarchiv';
@@ -169,7 +170,7 @@ test('migration retains placement, module metadata, comments, custom pages and u
   assertCurrent(custom.customSections[0].entries[0]);
 });
 
-test('old 1.1 registers are replaced, while current edits and independently named copies are untouched', () => {
+test('old 1.1 registers are replaced, while current edits and independently named copies are untouched', async () => {
   const context = moduleStore();
   const old = clone(legacy);
   old.pages[2].pageTitle = 'III. — 200 Namen aus dem Morgar';

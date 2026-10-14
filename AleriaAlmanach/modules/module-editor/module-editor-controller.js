@@ -371,7 +371,8 @@ async function saveModuleFromEditor() {
       upsertCustomModule(section, entry);
     }
 
-    saveModuleStore();
+    if (saveModuleStore() === false) return;
+    await moduleStoreLocalPersistence.flush();
     if (typeof clearModuleEditorRecoveryDraft === 'function') clearModuleEditorRecoveryDraft(context);
     const pendingCommentImport = _moduleEditorPendingCommentImport;
     let importedCommentSummary = null;

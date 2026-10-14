@@ -755,16 +755,16 @@ function renderAll() {
   AleriaArchiveNavigation.mount({ activeTab: _activeTab, focusActiveTab: refocusArchiveTab });
 }
 
-function initPage() {
+async function initPage() {
   if (_appInitialized) return;
+  await loadModuleStore();
+  await cleanupLocalAlmanachStorage();
   _appInitialized = true;
   document.addEventListener('click', handleArchiveActionClick);
   document.addEventListener('change', handleArchiveActionChange);
   document.addEventListener('pointerover', handleArchiveEntryPreload);
   document.addEventListener('focusin', handleArchiveEntryPreload);
-  cleanupLocalAlmanachStorage();
   clearTransientSearchInputs();
-  loadModuleStore();
   renderAll();
   bindInlineModuleLivePreviewSync();
   clearArchiveSearchOnStartup();
