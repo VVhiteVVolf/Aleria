@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "characterName": "Skarn",
+  "characterFolder": "Charaktere/Einzelcharaktere/Skarn",
+  "setId": "set-01",
+  "referenceImage": "Referenzen/skarn-nutzerreferenz.png",
+  "characterDescription": "Skarn, Hrolf Wolfshorn's giant elderly Gramnir/North wolf, 36 years old, quiet and regal despite his age. Exactly the WOLF in the reference: large broad old muzzle, thick gray-brown and strongly silvered layered fur, pale cream-gray cheeks, muzzle, eyebrows and long thick chest/neck mane, dark gray-brown forehead ridge and ear backs, BLACK nose, BOTH amber/golden-brown eyes with the exact natural eye shape, worn/nicked upright triangular ears as pictured. Preserve his precise skull and jaw shape, fur markings, characteristic subtle downward mouth corners, silhouette, mature age and dignified expression. He remains a natural four-legged wolf, never humanoid. The user's actual illustration has delicate uneven dark outlines, finely separated fur tufts, muted gray-brown/cream colors and restrained layered illustration shading with subtle texture. Match it exactly, not a bright generic anime wolf, puppy, photorealistic animal or stylized pet. Do not make him younger, add blindness, new scars, ornaments, clothing, armor, collar or harness.",
+  "theme": "Ruhe und Würde im Burginnenhof",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "actualPixels": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Top Left",
+      "category": "Ruhig und würdevoll",
+      "emotion": "Ruhige Wachsamkeit",
+      "gesture": "Head level and nearly frontal, both amber eyes steady and attentive, ears naturally upright, mouth gently closed, broad furry chest settled. Watchful without tension or threat."
+    },
+    {
+      "index": 2,
+      "position": "Top Center",
+      "category": "Ruhig und würdevoll",
+      "emotion": "Gelassener Seitenblick",
+      "gesture": "A modest three-quarter head turn toward the viewer's right, relaxed half-lowered eyelids, calm sideways gaze and one ear slightly rotated outward, relaxed jaw. Same camera distance and full ears."
+    },
+    {
+      "index": 3,
+      "position": "Top Right",
+      "category": "Ruhig und würdevoll",
+      "emotion": "Erhabene Würde",
+      "gesture": "Head lifted slightly, chin raised with quiet noble bearing, eyes looking calmly into the middle distance, ears upright and chest naturally proud. No intimidating snarl or exaggerated anatomy."
+    },
+    {
+      "index": 4,
+      "position": "Middle Left",
+      "category": "Ruhig und würdevoll",
+      "emotion": "Gütige Ruhe",
+      "gesture": "Face near frontal with a tiny gentle head tilt, softened attentive eyes and relaxed ears, muzzle held loosely closed. Convey patient old-wolf warmth through eyes and posture, never a human smile."
+    },
+    {
+      "index": 5,
+      "position": "Center",
+      "category": "Ruhig und würdevoll",
+      "emotion": "Bedächtiges Mustern",
+      "gesture": "Skull level with a slight downward inclination, unhurried amber gaze under relaxed lids, one ear tracking slightly to the side, neck mane resting naturally. Reflective, wise and composed."
+    },
+    {
+      "index": 6,
+      "position": "Middle Right",
+      "category": "Ruhig und würdevoll",
+      "emotion": "Stille Zustimmung",
+      "gesture": "A small gentle downward dip of the head, eyes briefly softened in a slow blink, ears at relaxed neutral angles, chest quiet and stable. A subtle accepting body-language cue, not bowed fear."
+    },
+    {
+      "index": 7,
+      "position": "Bottom Left",
+      "category": "Ruhig und würdevoll",
+      "emotion": "Fernes Beobachten",
+      "gesture": "Head turned a little toward the viewer's right, eyes directed softly to a distant point just above eye level, ears aligned toward that direction, jaw relaxed. Quiet interest with no alert alarm."
+    },
+    {
+      "index": 8,
+      "position": "Bottom Center",
+      "category": "Ruhig und würdevoll",
+      "emotion": "Würdiges Ruhen",
+      "gesture": "Eyes peacefully almost closed during a slow rest, chin slightly lowered, heavy old neck/chest fur relaxed and upper shoulders settled. Keep dignified upright upper-body posture; not collapse, sleep on ground or full-body view."
+    },
+    {
+      "index": 9,
+      "position": "Bottom Right",
+      "category": "Ruhig und würdevoll",
+      "emotion": "Souveräne Gelassenheit",
+      "gesture": "A slight three-quarter turn back toward the viewer, head gently high, calm measured amber gaze and naturally upright ears with one subtly angled outward, mouth softly closed. Silent assurance and settled grandeur, different from the other poses."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "skarn-set-01-ruhe-und-wuerde-burghof_Bild01.png bis _Bild09.png",
+  "status": "erzeugt, mit V3 zerlegt und visuell geprüft",
+  "createdAt": "2026-10-14",
+  "stem": "skarn-set-01-ruhe-und-wuerde-burghof",
+  "referenceSha256": "5cb407e18096429d163366764f37c2c0e688cbbec6c226321e739f974ea287bd",
+  "inputImageFiles": [
+    "Referenzen/skarn-nutzerreferenz.png"
+  ],
+  "background": "Ruhiger Burginnenhof mit heller Steinmauer und steinernem Torbogen bei mildem Tageslicht.",
+  "framing": "Vollständiger Kopf mit Ohren, Halsmähne, Brust und obere Schultern; keine Ganzkörperansicht.",
+  "promptFile": "Prompts/skarn-set-01-ruhe-und-wuerde-burghof.txt",
+  "sheetFile": "Sheets/skarn-set-01-ruhe-und-wuerde-burghof.png",
+  "outputFolder": "Output/set-01",
+  "generationMode": "built-in image_gen",
+  "cropCorrection": {
+    "reason": "Feine helle Rasterübergänge: jede Zelle an allen vier Kanten um 2 Pixel nach innen korrigiert, ohne Skalierung.",
+    "gridY": [
+      0,
+      418,
+      836,
+      1254
+    ],
+    "adjustments": [
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      },
+      {
+        "left": 2,
+        "top": 2,
+        "right": -2,
+        "bottom": -2
+      }
+    ],
+    "cellSize": 414
+  },
+  "avatarCount": 9,
+  "avatarPixels": [
+    414,
+    414
+  ],
+  "visualReview": {
+    "reviewedAt": "2026-10-14",
+    "reviewedAvatars": 9,
+    "passed": true,
+    "method": "Alle tatsächlich exportierten PNGs bei Originalgröße in der Prüfübersicht angesehen.",
+    "checks": [
+      "Skarns Originalbild und dessen Zeichenstil",
+      "alter graubrauner Gramnir mit beiden bernsteinfarbenen Augen",
+      "ruhige, gelassene und erhabene Ausdrucksvarianten",
+      "Kopf, Halsmähne, Brust und obere Schultern im Fokus",
+      "Burginnenhof in allen Motiven",
+      "vollständige Ohren und natürliche Wolfsanatomie",
+      "saubere Kanten ohne Panelübergänge, Nachbarbilder oder Schrift"
+    ]
+  }
+}

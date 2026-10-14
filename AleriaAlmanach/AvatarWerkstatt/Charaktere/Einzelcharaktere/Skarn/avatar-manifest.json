@@ -1,0 +1,261 @@
+{
+  "createdAt": "2026-10-14",
+  "character": "Skarn",
+  "generationMode": "built-in image_gen",
+  "splitter": "AleriaAlmanach\\AvatarWerkstatt\\Werkzeuge\\Avatar Splitterer\\AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "operation": "Original V3 get_crops and crop_box methods, no GUI",
+  "sourcePortrait": "Referenzen/skarn-nutzerreferenz.png",
+  "settings": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "sets": [
+    {
+      "setId": "set-01",
+      "theme": "Ruhe und Würde im Burginnenhof",
+      "sheet": "Sheets/skarn-set-01-ruhe-und-wuerde-burghof.png",
+      "sheetSha256": "b021debb2b64b671eacb969ff14b98bdee46d4e7b7930e90ed7c458ac552ee83",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        414,
+        414
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Ruhige Wachsamkeit",
+          "file": "Output/set-01/skarn-set-01-ruhe-und-wuerde-burghof_Bild01.png",
+          "box": [
+            2,
+            2,
+            416,
+            416
+          ],
+          "sha256": "993753839db04cd7b23a7a0318650cdef0bd09e8e85c02f8f503fe7520f9a69c",
+          "category": "Ruhig und würdevoll",
+          "gesture": "Head level and nearly frontal, both amber eyes steady and attentive, ears naturally upright, mouth gently closed, broad furry chest settled. Watchful without tension or threat."
+        },
+        {
+          "index": 2,
+          "emotion": "Gelassener Seitenblick",
+          "file": "Output/set-01/skarn-set-01-ruhe-und-wuerde-burghof_Bild02.png",
+          "box": [
+            420,
+            2,
+            834,
+            416
+          ],
+          "sha256": "2164ea2a37b8617ec4ad9f79d5896314434ab6fbe6bb748f0b804c8c5953d507",
+          "category": "Ruhig und würdevoll",
+          "gesture": "A modest three-quarter head turn toward the viewer's right, relaxed half-lowered eyelids, calm sideways gaze and one ear slightly rotated outward, relaxed jaw. Same camera distance and full ears."
+        },
+        {
+          "index": 3,
+          "emotion": "Erhabene Würde",
+          "file": "Output/set-01/skarn-set-01-ruhe-und-wuerde-burghof_Bild03.png",
+          "box": [
+            838,
+            2,
+            1252,
+            416
+          ],
+          "sha256": "e992a08a6cf14471f46f4752a16827b431bb7904b296b4dd42c758e927b9eba9",
+          "category": "Ruhig und würdevoll",
+          "gesture": "Head lifted slightly, chin raised with quiet noble bearing, eyes looking calmly into the middle distance, ears upright and chest naturally proud. No intimidating snarl or exaggerated anatomy."
+        },
+        {
+          "index": 4,
+          "emotion": "Gütige Ruhe",
+          "file": "Output/set-01/skarn-set-01-ruhe-und-wuerde-burghof_Bild04.png",
+          "box": [
+            2,
+            420,
+            416,
+            834
+          ],
+          "sha256": "37b974eb59166e09a711c1ad8fb109508398bac620c488cf982996ad3b61d7c9",
+          "category": "Ruhig und würdevoll",
+          "gesture": "Face near frontal with a tiny gentle head tilt, softened attentive eyes and relaxed ears, muzzle held loosely closed. Convey patient old-wolf warmth through eyes and posture, never a human smile."
+        },
+        {
+          "index": 5,
+          "emotion": "Bedächtiges Mustern",
+          "file": "Output/set-01/skarn-set-01-ruhe-und-wuerde-burghof_Bild05.png",
+          "box": [
+            420,
+            420,
+            834,
+            834
+          ],
+          "sha256": "79b259a24914a2ddf3f18b256570676d9622ad991dc2a344434160490719040c",
+          "category": "Ruhig und würdevoll",
+          "gesture": "Skull level with a slight downward inclination, unhurried amber gaze under relaxed lids, one ear tracking slightly to the side, neck mane resting naturally. Reflective, wise and composed."
+        },
+        {
+          "index": 6,
+          "emotion": "Stille Zustimmung",
+          "file": "Output/set-01/skarn-set-01-ruhe-und-wuerde-burghof_Bild06.png",
+          "box": [
+            838,
+            420,
+            1252,
+            834
+          ],
+          "sha256": "2ac4c9a09918263e2e7d356794adf7d6f7ecc72faee33164210bbba40db0227a",
+          "category": "Ruhig und würdevoll",
+          "gesture": "A small gentle downward dip of the head, eyes briefly softened in a slow blink, ears at relaxed neutral angles, chest quiet and stable. A subtle accepting body-language cue, not bowed fear."
+        },
+        {
+          "index": 7,
+          "emotion": "Fernes Beobachten",
+          "file": "Output/set-01/skarn-set-01-ruhe-und-wuerde-burghof_Bild07.png",
+          "box": [
+            2,
+            838,
+            416,
+            1252
+          ],
+          "sha256": "676c74f7a4a35e5e6563812c83da55fc19253a0c4a6bc4b1c10c150047d0bbf1",
+          "category": "Ruhig und würdevoll",
+          "gesture": "Head turned a little toward the viewer's right, eyes directed softly to a distant point just above eye level, ears aligned toward that direction, jaw relaxed. Quiet interest with no alert alarm."
+        },
+        {
+          "index": 8,
+          "emotion": "Würdiges Ruhen",
+          "file": "Output/set-01/skarn-set-01-ruhe-und-wuerde-burghof_Bild08.png",
+          "box": [
+            420,
+            838,
+            834,
+            1252
+          ],
+          "sha256": "5ef52ed2dd0310a6a99dd4ff73ade89201eddf2d92e6ef99736cc89b8ab5ea30",
+          "category": "Ruhig und würdevoll",
+          "gesture": "Eyes peacefully almost closed during a slow rest, chin slightly lowered, heavy old neck/chest fur relaxed and upper shoulders settled. Keep dignified upright upper-body posture; not collapse, sleep on ground or full-body view."
+        },
+        {
+          "index": 9,
+          "emotion": "Souveräne Gelassenheit",
+          "file": "Output/set-01/skarn-set-01-ruhe-und-wuerde-burghof_Bild09.png",
+          "box": [
+            838,
+            838,
+            1252,
+            1252
+          ],
+          "sha256": "09b6472c51028df1ddf3a1a15d8717f61b37eb0b0cc98f6ed32622c327c1b7b1",
+          "category": "Ruhig und würdevoll",
+          "gesture": "A slight three-quarter turn back toward the viewer, head gently high, calm measured amber gaze and naturally upright ears with one subtly angled outward, mouth softly closed. Silent assurance and settled grandeur, different from the other poses."
+        }
+      ],
+      "cropCorrection": {
+        "reason": "Feine helle Rasterübergänge: jede Zelle an allen vier Kanten um 2 Pixel nach innen korrigiert, ohne Skalierung.",
+        "gridY": [
+          0,
+          418,
+          836,
+          1254
+        ],
+        "adjustments": [
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          },
+          {
+            "left": 2,
+            "top": 2,
+            "right": -2,
+            "bottom": -2
+          }
+        ],
+        "cellSize": 414
+      },
+      "visualReview": {
+        "reviewedAt": "2026-10-14",
+        "reviewedAvatars": 9,
+        "passed": true,
+        "method": "Alle tatsächlich exportierten PNGs bei Originalgröße in der Prüfübersicht angesehen.",
+        "checks": [
+          "Skarns Originalbild und dessen Zeichenstil",
+          "alter graubrauner Gramnir mit beiden bernsteinfarbenen Augen",
+          "ruhige, gelassene und erhabene Ausdrucksvarianten",
+          "Kopf, Halsmähne, Brust und obere Schultern im Fokus",
+          "Burginnenhof in allen Motiven",
+          "vollständige Ohren und natürliche Wolfsanatomie",
+          "saubere Kanten ohne Panelübergänge, Nachbarbilder oder Schrift"
+        ]
+      }
+    }
+  ],
+  "avatarCount": 9,
+  "visualReview": {
+    "reviewedAt": "2026-10-14",
+    "reviewedAvatars": 9,
+    "passed": true,
+    "method": "Alle tatsächlich exportierten PNGs bei Originalgröße in der Prüfübersicht angesehen.",
+    "checks": [
+      "Skarns Originalbild und dessen Zeichenstil",
+      "alter graubrauner Gramnir mit beiden bernsteinfarbenen Augen",
+      "ruhige, gelassene und erhabene Ausdrucksvarianten",
+      "Kopf, Halsmähne, Brust und obere Schultern im Fokus",
+      "Burginnenhof in allen Motiven",
+      "vollständige Ohren und natürliche Wolfsanatomie",
+      "saubere Kanten ohne Panelübergänge, Nachbarbilder oder Schrift"
+    ]
+  },
+  "referenceSha256": "5cb407e18096429d163366764f37c2c0e688cbbec6c226321e739f974ea287bd",
+  "background": "Ruhiger Burginnenhof mit heller Steinmauer und steinernem Torbogen bei mildem Tageslicht.",
+  "framing": "Vollständiger Kopf mit Ohren, Halsmähne, Brust und obere Schultern; keine Ganzkörperansicht."
+}
