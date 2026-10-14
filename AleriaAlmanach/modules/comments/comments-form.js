@@ -80,6 +80,21 @@ function openCommentFormAfter(commentId) {
   if (note) note.textContent = 'Antwort wird an der gewählten Stelle eingefügt';
 }
 
+// The comment composer owns its draft. Challenge features hand over a target;
+// they do not reach into segment state or synthesize DOM change events.
+function openCommentFormForSkillChallenge(challenge) {
+  const settings = window.AleriaSkillChecks?.getChallengeAttemptSettings?.(challenge);
+  if (!settings) return;
+  openCommentForm();
+  setCommentMode('charakter', { render: false, persist: false });
+  const segment = makeCommentSegment(settings.kind, '', null, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', settings);
+  const emptyDefault = _commentSegments.length === 1 && !_commentSegments[0].text.trim() && _commentSegments[0].mechanicMode === 'normal';
+  if (emptyDefault) _commentSegments = [segment];
+  else _commentSegments.push(segment);
+  _commentKind = settings.kind;
+  persistCommentDraft();
+}
+
 function closeCommentForm() {
   _commentFormInitialRenderToken += 1;
   window.AleriaCombat?.releaseComposer?.(document.getElementById('cf-segment-list'));

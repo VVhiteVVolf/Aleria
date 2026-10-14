@@ -1,6 +1,6 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
-import { MIN_HERAUSFORDERUNG_APPROACHES, normalizeHerausforderungEvent } from '../generated/herausforderung/herausforderung-model.js';
+import { getHerausforderungValidationIssues, normalizeHerausforderungEvent } from '../generated/herausforderung/herausforderung-model.js';
 
 const MAX_COMMENT_BYTES = 700_000;
 
@@ -24,12 +24,7 @@ function clonePayload(value) {
 }
 
 export function validateHerausforderungEvent(event = {}) {
-  if (!event.publicDescription) return 'Eine öffentliche Beschreibung ist erforderlich.';
-  if (event.approaches.length < MIN_HERAUSFORDERUNG_APPROACHES) return 'Mindestens ein Ansatz ist erforderlich.';
-  if (event.approaches.some(approach => !approach.preferredSkills.length || !approach.insight)) {
-    return 'Jeder Ansatz braucht mindestens eine passende Fertigkeit und eine verdeckte Erkenntnis.';
-  }
-  return null;
+  return getHerausforderungValidationIssues(event)[0]?.message || null;
 }
 
 export const commitHerausforderung = onCall({
@@ -44,9 +39,9 @@ export const commitHerausforderung = onCall({
   const entryId = clean(payload.entryId, 240);
   const text = clean(payload.text);
   const metadata = clonePayload(payload.metadata);
+  const validationError = validateHerausforderungEvent(metadata.herausforderung);
   const event = normalizeHerausforderungEvent(metadata.herausforderung);
   if (!entryId || !text) fail('invalid-argument', 'Kommentarbereich und Text sind erforderlich.');
-  const validationError = validateHerausforderungEvent(event);
   if (validationError) fail('invalid-argument', validationError);
 
   const database = getFirestore();

@@ -97,7 +97,7 @@ export class SkillResolutionService {
     const affinityModifier = challenge ? getChallengeAffinityModifier(challenge, settings.skillId) : 0;
     const baseModifier = skill.modifier + settings.customModifier + affinityModifier;
     const preModifier = baseModifier + preEffects.skillModifier;
-    const difficulty = Number.isFinite(Number(options.opposedDifficulty))
+    const difficulty = options.opposedDifficulty != null && Number.isFinite(Number(options.opposedDifficulty))
       ? Number(options.opposedDifficulty)
       : (challenge?.difficulty ?? settings.difficulty);
     const notation = buildSkillRollNotation(preModifier, rollMode);

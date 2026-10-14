@@ -1,19 +1,21 @@
-import { normalizeHerausforderungEvent } from './herausforderung-model.js?v=20260805-herausforderung-v2';
+import { normalizeHerausforderungEvent, MAX_HERAUSFORDERUNG_APPROACHES, getHerausforderungValidationIssues } from './herausforderung-model.js?v=20261014-herausforderung-v3';
+import { getApproachProgress, HERAUSFORDERUNG_TIER_LABELS } from './herausforderung-progress.js?v=20261014-herausforderung-v3';
 import { SKILL_DEFINITIONS } from '../skill-checks/skill-check-model.js?v=20260928-equipment-art-v4';
 
-export const HERAUSFORDERUNG_ICON_URL = '../IconOrdner/Buttom Icons/Herausforderung.png';
+const ASSET_ROOT = './public/assets/herausforderung/';
+export const HERAUSFORDERUNG_ICON_URL = `${ASSET_ROOT}challenge-v1.png`;
+const ICONS = { challenge: HERAUSFORDERUNG_ICON_URL, insight: `${ASSET_ROOT}insight-v1.png`, attempt: `${ASSET_ROOT}attempt-v1.png` };
+const DIFFICULTIES = [{ value: 5, label: 'Leicht' }, { value: 10, label: 'Normal' }, { value: 15, label: 'Anspruchsvoll' }, { value: 20, label: 'Schwer' }, { value: 25, label: 'Sehr schwer' }];
+const SKILL_GROUPS = [{ label: 'Gesellschaft', ids: ['persuasion', 'intimidation', 'deception', 'performance', 'insight', 'seduction'] }, { label: 'Wissen & Wildnis', ids: ['investigation', 'religion', 'arcane-kunde', 'history', 'nature', 'survival', 'animal-handling', 'medicine'] }, { label: 'Geschick & Körper', ids: ['sleight-of-hand', 'acrobatics', 'athletics', 'body-control'] }];
 
 function escapeMarkup(value) {
-  return String(value ?? '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
+  return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
+function icon(name, className = '') { return `<img class="herausforderung-icon ${className}" src="${ICONS[name]}" alt="" decoding="async">`; }
+function dialogRoot() { return document.getElementById('herausforderung-overlay'); }
 
 export function ensureHerausforderungDialog() {
-  let overlay = document.getElementById('herausforderung-overlay');
+  let overlay = dialogRoot();
   if (overlay) return overlay;
   overlay = document.createElement('div');
   overlay.id = 'herausforderung-overlay';
@@ -25,81 +27,122 @@ export function ensureHerausforderungDialog() {
   overlay.innerHTML = `
     <div class="scene-time-event-card herausforderung-card">
       <header class="herausforderung-head">
-        <span><img src="${HERAUSFORDERUNG_ICON_URL}" alt=""></span>
-        <div><small>Herausforderung</small><h2 id="herausforderung-dialog-title">Herausforderung anlegen</h2></div>
-        <button type="button" data-herausforderung-action="close" aria-label="Schließen">×</button>
+        ${icon('challenge', 'herausforderung-hero-icon')}
+        <div><small>Erzählerwerkstatt</small><h2 id="herausforderung-dialog-title">Eine Herausforderung gestalten</h2><p>Eine Situation. Mehrere Wege. Verborgene Erkenntnisse.</p></div>
+        <button class="herausforderung-close" type="button" data-herausforderung-action="close" aria-label="Schließen">×</button>
       </header>
       <div class="herausforderung-body">
-        <div class="herausforderung-fields">
-          <label><span>Titel</span><input data-herausforderung-field="title" maxlength="180" value="Herausforderung"></label>
-          <label class="wide"><span>Öffentliche Beschreibung</span><textarea data-herausforderung-field="publicDescription" rows="6" placeholder="Was alle Beteiligten sehen: Atmosphäre und offensichtliche Hinweise, keine verborgene Lösung."></textarea></label>
+        <div class="herausforderung-editor">
+          <section class="herausforderung-public herausforderung-fields" aria-labelledby="herausforderung-public-title">
+            <h3 id="herausforderung-public-title">01 <span>Die sichtbare Situation</span><small>Für alle sichtbar</small></h3>
+            <label><span>Titel</span><input data-herausforderung-field="title" maxlength="180" value="Herausforderung"></label>
+            <label><span>Öffentliche Beschreibung</span><textarea data-herausforderung-field="publicDescription" maxlength="4000" rows="3" placeholder="Was sehen, hören oder bemerken die Beteiligten?"></textarea></label>
+          </section>
+          <div class="herausforderung-section-title"><h3>02 <span>Wege zur Erkenntnis</span></h3><span data-herausforderung-count></span></div>
+          <div class="herausforderung-approaches" data-herausforderung-approaches></div>
+          <button type="button" class="herausforderung-button herausforderung-add-approach" data-herausforderung-action="add-approach"><span aria-hidden="true">＋</span> Weiteren Ansatz hinzufügen</button>
         </div>
-        <div class="herausforderung-approaches" data-herausforderung-approaches></div>
-        <button type="button" class="herausforderung-add-approach" data-herausforderung-action="add-approach">+ Ansatz hinzufügen</button>
-        <p class="herausforderung-status" data-herausforderung-status></p>
+        <aside class="herausforderung-sidebar">
+          <section class="herausforderung-rules"><h3>${icon('attempt')} So wird geprüft</h3><p><strong>W20 + Fertigkeit + Ansatzbonus</strong> gegen die Schwierigkeit.</p><div class="herausforderung-bonus"><span>Passende Fertigkeit <b>+2</b></span><span>Andere Fertigkeit <b>−2</b></span></div><ul><li><b>Erfolg:</b> Erkenntnis aufdecken, Ansatz abschließen.</li><li><b>1–3 Punkte darunter:</b> Teilhinweis, Ansatz bleibt offen.</li><li><b>Mehr als 3 darunter:</b> Konsequenz, Ansatz bleibt offen.</li><li><b>Natürliche 20 / 1:</b> kritischer Erfolg / deutlicher Fehlschlag.</li></ul><p>Figurenboni und aktive Regeln werden beim Eintragen berücksichtigt.</p></section>
+          <section class="herausforderung-preview"><h3>${icon('insight')} Öffentliche Vorschau</h3><p class="herausforderung-note">Verdeckte Texte erscheinen hier erst nach einem gewürfelten Ergebnis.</p><div data-herausforderung-preview></div></section>
+        </aside>
       </div>
-      <footer><button type="button" data-herausforderung-action="close">Abbrechen</button><button type="button" class="primary" data-herausforderung-action="submit">Eintragen</button></footer>
+      <footer class="herausforderung-footer"><p class="herausforderung-status" data-herausforderung-status role="status" aria-live="polite"></p><div><button type="button" class="herausforderung-button" data-herausforderung-action="close">Abbrechen</button><button type="button" class="herausforderung-button primary" data-herausforderung-action="submit">${icon('challenge')}<span data-herausforderung-submit-label>Veröffentlichen</span></button></div></footer>
     </div>`;
   document.body.appendChild(overlay);
   return overlay;
 }
 
-function renderSkillCheckboxes(approach, approachIndex) {
-  const preferred = new Set(Array.isArray(approach.preferredSkills) ? approach.preferredSkills : []);
-  return SKILL_DEFINITIONS.map(skill => `
-    <label class="herausforderung-skill-check">
-      <input type="checkbox" data-herausforderung-approach-index="${approachIndex}" data-herausforderung-field="preferredSkill" data-skill-id="${skill.id}"${preferred.has(skill.id) ? ' checked' : ''}>
-      ${escapeMarkup(skill.label)}
-    </label>`).join('');
+function renderSkillCheckboxes(approach, index) {
+  const preferred = new Set(approach.preferredSkills || []);
+  return SKILL_GROUPS.map(group => `<div class="herausforderung-skill-group"><span>${group.label}</span><div>${group.ids.map(id => {
+    const skill = SKILL_DEFINITIONS.find(entry => entry.id === id);
+    return `<label class="herausforderung-skill-check"><input type="checkbox" data-herausforderung-approach-index="${index}" data-herausforderung-field="preferredSkill" data-skill-id="${id}"${preferred.has(id) ? ' checked' : ''}><span>${escapeMarkup(skill.label)}</span></label>`;
+  }).join('')}</div></div>`).join('');
 }
 
-export function renderApproachRows(approaches = []) {
-  const host = document.querySelector('[data-herausforderung-approaches]');
+export function renderApproachRows(approaches = [], activeIndex = 0) {
+  const root = dialogRoot();
+  const host = root?.querySelector('[data-herausforderung-approaches]');
   if (!host) return;
-  if (!approaches.length) {
-    host.innerHTML = '<p class="herausforderung-empty">Noch kein Ansatz angelegt.</p>';
-    return;
-  }
   host.innerHTML = approaches.map((approach, index) => `
-    <fieldset class="herausforderung-approach" data-herausforderung-approach-row data-approach-index="${index}">
-      <legend>Ansatz ${index + 1}</legend>
-      <button type="button" class="herausforderung-remove-approach" data-herausforderung-action="remove-approach" data-approach-index="${index}" aria-label="Ansatz entfernen">×</button>
-      <label><span>Interne Bezeichnung</span><input data-herausforderung-approach-index="${index}" data-herausforderung-field="label" value="${escapeMarkup(approach.label)}" placeholder="z.B. Spuren untersuchen"></label>
-      <label><span>Schwierigkeit</span><input type="number" min="1" max="40" data-herausforderung-approach-index="${index}" data-herausforderung-field="difficulty" value="${Number(approach.difficulty) || 10}"></label>
-      <div class="herausforderung-skills wide"><span>Passende Fertigkeiten</span><div class="herausforderung-skills-list">${renderSkillCheckboxes(approach, index)}</div></div>
-      <label class="wide"><span>Verdeckte Erkenntnis (wird erst bei Erfolg gezeigt)</span><textarea data-herausforderung-approach-index="${index}" data-herausforderung-field="insight" rows="4" placeholder="Was aufgedeckt wird, wenn dieser Ansatz gelingt.">${escapeMarkup(approach.insight)}</textarea></label>
-      <label class="wide"><span>Teilhinweis bei knappem Scheitern (optional)</span><textarea data-herausforderung-approach-index="${index}" data-herausforderung-field="partialHint" rows="3" placeholder="Ein unvollständiger oder mehrdeutiger Hinweis. Der Ansatz bleibt danach für andere offen.">${escapeMarkup(approach.partialHint)}</textarea></label>
-      <label class="wide"><span>Konsequenz bei deutlichem Scheitern (optional)</span><textarea data-herausforderung-approach-index="${index}" data-herausforderung-field="failureConsequence" rows="3" placeholder="Eine erzählerische Komplikation ohne belastbare Erkenntnis.">${escapeMarkup(approach.failureConsequence)}</textarea></label>
-    </fieldset>`).join('');
+    <details class="herausforderung-approach" data-herausforderung-approach-row data-approach-index="${index}"${index === activeIndex ? ' open' : ''}>
+      <summary><span class="herausforderung-approach-number">${String(index + 1).padStart(2, '0')}</span><span class="herausforderung-summary-text"><strong data-approach-summary-label>${escapeMarkup(approach.label)}</strong><small data-approach-summary-skills>${skillSummary(approach)}</small></span><span class="herausforderung-difficulty-badge" data-approach-summary-difficulty>SG ${escapeMarkup(approach.difficulty)}</span><span class="herausforderung-chevron" aria-hidden="true">⌄</span></summary>
+      <div class="herausforderung-approach-content herausforderung-fields">
+        <div class="herausforderung-approach-toolbar"><span>${icon('insight')} Verdeckte Ergebnisse vorbereiten</span><button type="button" class="herausforderung-remove-approach" data-herausforderung-action="remove-approach" data-approach-index="${index}" aria-label="Ansatz ${index + 1} entfernen"${approaches.length === 1 ? ' disabled' : ''}>Entfernen ×</button></div>
+        <div class="herausforderung-approach-basics"><label><span>Bezeichnung des Ansatzes · öffentlich</span><input maxlength="160" data-herausforderung-approach-index="${index}" data-herausforderung-field="label" value="${escapeMarkup(approach.label)}" placeholder="z. B. Spuren untersuchen"></label><label><span>Schwierigkeit (SG)</span><input type="number" min="1" max="40" step="1" data-herausforderung-approach-index="${index}" data-herausforderung-field="difficulty" value="${escapeMarkup(approach.difficulty)}"></label></div>
+        <div class="herausforderung-difficulty-presets" role="group" aria-label="Schwierigkeitsstufen">${DIFFICULTIES.map(preset => `<button type="button" data-herausforderung-action="set-difficulty" data-approach-index="${index}" data-value="${preset.value}" aria-pressed="${Number(approach.difficulty) === preset.value}">${preset.label} <b>${preset.value}</b></button>`).join('')}</div>
+        <fieldset class="herausforderung-skills"><legend>Passende Fertigkeiten <span>+2 auf diesen Ansatz</span></legend>${renderSkillCheckboxes(approach, index)}</fieldset>
+        <label class="herausforderung-insight"><span>${icon('insight')} Erkenntnis bei Erfolg · verdeckt</span><textarea maxlength="2000" data-herausforderung-approach-index="${index}" data-herausforderung-field="insight" rows="3" placeholder="Welche Wahrheit wird bei Erfolg aufgedeckt?">${escapeMarkup(approach.insight)}</textarea></label>
+        <details class="herausforderung-consequences"${approach.partialHint || approach.failureConsequence ? ' open' : ''}><summary>Teilhinweis & Konsequenz <small>Optional</small></summary><div><label><span>Knapp gescheitert · 1–3 Punkte fehlen</span><textarea maxlength="2000" data-herausforderung-approach-index="${index}" data-herausforderung-field="partialHint" rows="2" placeholder="Ein unvollständiger oder mehrdeutiger Hinweis.">${escapeMarkup(approach.partialHint)}</textarea></label><label><span>Deutlich gescheitert · mehr als 3 Punkte fehlen</span><textarea maxlength="2000" data-herausforderung-approach-index="${index}" data-herausforderung-field="failureConsequence" rows="2" placeholder="Eine erzählerische Komplikation ohne Erkenntnis.">${escapeMarkup(approach.failureConsequence)}</textarea></label></div></details>
+      </div>
+    </details>`).join('');
+  root.querySelector('[data-herausforderung-count]').textContent = `${approaches.length} / ${MAX_HERAUSFORDERUNG_APPROACHES} Ansätze`;
+  root.querySelector('[data-herausforderung-action="add-approach"]').disabled = approaches.length >= MAX_HERAUSFORDERUNG_APPROACHES;
+}
+
+function skillSummary(approach) {
+  return escapeMarkup((approach.preferredSkills || []).map(id => SKILL_DEFINITIONS.find(skill => skill.id === id)?.label).filter(Boolean).join(' · ') || 'Fertigkeiten wählen');
+}
+
+export function updateHerausforderungDraft(event) {
+  const root = dialogRoot();
+  if (!root) return;
+  event.approaches.forEach((approach, index) => {
+    const row = root.querySelector(`[data-herausforderung-approach-row][data-approach-index="${index}"]`);
+    if (!row) return;
+    row.querySelector('[data-approach-summary-label]').textContent = approach.label || `Ansatz ${index + 1}`;
+    row.querySelector('[data-approach-summary-skills]').innerHTML = skillSummary(approach);
+    row.querySelector('[data-approach-summary-difficulty]').textContent = `SG ${approach.difficulty || '…'}`;
+    row.querySelectorAll('[data-herausforderung-action="set-difficulty"]').forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.value) === Number(approach.difficulty))));
+  });
+  root.querySelector('[data-herausforderung-preview]').innerHTML = renderHerausforderungComment({ herausforderung: event }, 0, { preview: true });
+  const issues = getHerausforderungValidationIssues(event);
+  setHerausforderungStatus(issues.length ? 'Situation, passende Fertigkeiten und Erkenntnisse vorbereiten.' : 'Bereit zur Veröffentlichung. Verdeckte Ergebnisse werden erst nach der Probe angezeigt.');
+}
+
+export function showHerausforderungValidation(issues) {
+  const root = dialogRoot();
+  root?.querySelectorAll('[aria-invalid="true"]').forEach(field => field.removeAttribute('aria-invalid'));
+  issues.forEach(issue => {
+    const index = issue.index === undefined ? '' : `[data-herausforderung-approach-index="${issue.index}"]`;
+    const field = root?.querySelector(`[data-herausforderung-field="${issue.field}"]${index}`);
+    field?.setAttribute('aria-invalid', 'true');
+    field?.closest('[data-herausforderung-approach-row]')?.setAttribute('open', '');
+  });
+  const first = issues[0];
+  if (first) {
+    const index = first.index === undefined ? '' : `[data-herausforderung-approach-index="${first.index}"]`;
+    root?.querySelector(`[data-herausforderung-field="${first.field}"]${index}`)?.focus();
+  }
 }
 
 export function setHerausforderungStatus(message = '', type = 'info') {
-  const output = document.querySelector('[data-herausforderung-status]');
-  if (!output) return;
-  output.dataset.status = type;
-  output.textContent = message;
+  const output = dialogRoot()?.querySelector('[data-herausforderung-status]');
+  if (output) { output.dataset.status = type; output.textContent = message; }
 }
 
 export function setHerausforderungSubmitting(submitting) {
-  const button = document.querySelector('[data-herausforderung-action="submit"]');
-  if (!button) return;
-  button.disabled = !!submitting;
-  button.textContent = submitting ? 'Wird gespeichert …' : 'Eintragen';
+  const root = dialogRoot();
+  if (!root) return;
+  root.setAttribute('aria-busy', String(!!submitting));
+  root.querySelectorAll('button, input, textarea').forEach(element => {
+    if (submitting) { element.dataset.previousDisabled = String(!!element.disabled); element.disabled = true; }
+    else if (element.dataset.previousDisabled !== undefined) { element.disabled = element.dataset.previousDisabled === 'true'; delete element.dataset.previousDisabled; }
+  });
+  root.querySelector('[data-herausforderung-submit-label]').textContent = submitting ? 'Wird veröffentlicht …' : 'Veröffentlichen';
 }
 
-export function renderHerausforderungComment(comment = {}, index = 0) {
+export function renderHerausforderungComment(comment = {}, index = 0, { preview = false, progress = new Map() } = {}) {
   const event = normalizeHerausforderungEvent(comment.herausforderung || comment);
   const divider = index > 0 ? '<div class="comment-divider"><span class="comment-divider-icon">*</span></div>' : '';
-  const approaches = event.approaches.map(approach => `
-    <li>
-      <span>${escapeMarkup(approach.label)}</span>
-      <button type="button" class="herausforderung-attempt-btn" data-herausforderung-action="attempt" data-comment-id="${escapeMarkup(String(comment.id || ''))}" data-approach-id="${escapeMarkup(approach.approachId)}" data-approach-label="${escapeMarkup(approach.label)}" data-herausforderung-title="${escapeMarkup(event.title)}">Diesen Ansatz versuchen</button>
-    </li>`).join('');
-  return `${divider}<section class="herausforderung-event">
-    <header><img src="${HERAUSFORDERUNG_ICON_URL}" alt=""><span>Herausforderung</span><strong>${escapeMarkup(event.title)}</strong></header>
-    ${event.publicDescription ? `<p>${escapeMarkup(event.publicDescription)}</p>` : ''}
-    ${approaches ? `<ul class="herausforderung-approach-list">${approaches}</ul>` : ''}
-  </section>`;
+  let solvedCount = 0;
+  const approaches = event.approaches.map((approach, approachIndex) => {
+    const state = getApproachProgress(progress, comment.id, approach.approachId);
+    if (state.solved) solvedCount++;
+    return `<li class="${state.solved ? 'is-solved' : ''}"><div class="herausforderung-path"><span class="herausforderung-path-number">${approachIndex + 1}</span><div><strong>${escapeMarkup(approach.label)}</strong><small>${skillSummary(approach)}${state.attempts ? ` · ${state.attempts} ${state.attempts === 1 ? 'Versuch' : 'Versuche'}` : ''}</small></div></div>${preview ? '<span class="herausforderung-preview-badge">Offen</span>' : state.solved ? `<span class="herausforderung-solved">${icon('insight')}Aufgedeckt</span>` : `<button type="button" class="herausforderung-button herausforderung-attempt-btn" data-herausforderung-action="attempt" data-comment-id="${escapeMarkup(comment.id || '')}" data-approach-id="${escapeMarkup(approach.approachId)}" aria-label="${escapeMarkup(approach.label)} versuchen">${icon('attempt')}<span>Versuchen</span></button>`}${!preview && state.attempts ? `<div class="herausforderung-result" data-tier="${escapeMarkup(state.tier)}"><small>${escapeMarkup(state.actorName)} · ${escapeMarkup(HERAUSFORDERUNG_TIER_LABELS[state.tier] || 'Versuch')}</small>${state.revealedText ? `<p>${escapeMarkup(state.revealedText)}</p>` : ''}${!state.solved ? '<small>Dieser Ansatz bleibt offen.</small>' : ''}</div>` : ''}</li>`;
+  }).join('');
+  return `${divider}<section class="herausforderung-event"><header>${icon('challenge')}<div><small>Herausforderung</small><strong>${escapeMarkup(event.title)}</strong></div><span class="herausforderung-event-progress">${solvedCount}/${event.approaches.length} aufgedeckt</span></header>${event.publicDescription ? `<p class="herausforderung-description">${escapeMarkup(event.publicDescription)}</p>` : ''}${approaches ? `<ul class="herausforderung-approach-list">${approaches}</ul>` : ''}</section>`;
 }
 
 export const herausforderungUiInternals = Object.freeze({ escapeMarkup });

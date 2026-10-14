@@ -288,7 +288,7 @@ export async function validateSkillCommentSegments({
     resolution.originalAttempt = clean(entry.segment.text, 5000);
     resolution.targetContribution = clean(challenge?.visibleText, 5000);
     if (challenge?.source === 'herausforderung') {
-      const tier = classifyHerausforderungOutcome({ natural: resolution.natural, total: resolution.total, difficulty: resolution.difficulty });
+      const tier = classifyHerausforderungOutcome(resolution);
       resolution.herausforderungTier = tier;
       const revealText = tier === 'kritischer-erfolg' || tier === 'erfolg'
         ? challenge.insight

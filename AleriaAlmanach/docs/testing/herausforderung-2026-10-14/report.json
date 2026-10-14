@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-14",
+  "feature": "Herausforderung",
+  "verification": {
+    "scenarioMethod": "Real character sheets, browser resolver and server validator; isolated in-memory transaction store, deterministic W20 receipts; no production character or scene writes.",
+    "targetedTests": {
+      "passed": 53,
+      "failed": 0
+    },
+    "serverTests": {
+      "passed": 165,
+      "failed": 0
+    },
+    "frontendTests": {
+      "passed": 1481,
+      "failed": 4,
+      "total": 1485
+    },
+    "existingFrontendFailures": [
+      "character-database-sync: 367 linked documents vs 364 in the unchanged sync report",
+      "idwal-ship-cats: missing companion owner reference",
+      "idwal-ship-cats: creature/inventory owner mismatch",
+      "wolfshorn-combat-sheets: archive profile compared with an older export"
+    ],
+    "unchangedFailureSources": "git diff --quiet HEAD -- CharakterDatenbank \"Charakter Archiv Exporte\" AleriaAlmanach/modules/creatures and the three test files returned success.",
+    "browser": {
+      "passed": true,
+      "viewports": [
+        "1440×1000",
+        "390×844"
+      ],
+      "checks": [
+        "field validation",
+        "secret-free preview",
+        "preserved approach fields",
+        "difficulty preset",
+        "mobile overflow",
+        "failed save retry",
+        "single submission",
+        "direct skill/target selection",
+        "resolved approach lock"
+      ],
+      "errors": [],
+      "missing": []
+    },
+    "productionBuild": "passed"
+  },
+  "results": [
+    {
+      "scenario": "Die verschlossene Torwache",
+      "actor": "Gawain Draig",
+      "actorId": "q1QtSIug74FzzwUAqWrs",
+      "skill": "Überzeugen",
+      "natural": 12,
+      "profileModifier": 6,
+      "affinityModifier": 2,
+      "ruleModifier": 1,
+      "total": 21,
+      "difficulty": 15,
+      "outcome": "erfolg"
+    },
+    {
+      "scenario": "Die verschlossene Torwache",
+      "actor": "Guinevere Neidr",
+      "actorId": "person--haus-neidr--guinevere-neidr",
+      "skill": "Überzeugen",
+      "natural": 12,
+      "profileModifier": 4,
+      "affinityModifier": 2,
+      "ruleModifier": 0,
+      "total": 18,
+      "difficulty": 15,
+      "outcome": "erfolg"
+    },
+    {
+      "scenario": "Spuren im Regen",
+      "actor": "Gawain Draig",
+      "actorId": "q1QtSIug74FzzwUAqWrs",
+      "skill": "Überleben",
+      "natural": 12,
+      "profileModifier": -1,
+      "affinityModifier": 2,
+      "ruleModifier": 0,
+      "total": 13,
+      "difficulty": 15,
+      "outcome": "knapp"
+    },
+    {
+      "scenario": "Spuren im Regen",
+      "actor": "Guinevere Neidr",
+      "actorId": "person--haus-neidr--guinevere-neidr",
+      "skill": "Überleben",
+      "natural": 10,
+      "profileModifier": 1,
+      "affinityModifier": 2,
+      "ruleModifier": 0,
+      "total": 13,
+      "difficulty": 15,
+      "outcome": "knapp"
+    },
+    {
+      "scenario": "Die brüchige Zugbrücke",
+      "actor": "Gawain Draig",
+      "actorId": "q1QtSIug74FzzwUAqWrs",
+      "skill": "Nachforschungen",
+      "natural": 5,
+      "profileModifier": -1,
+      "affinityModifier": -2,
+      "ruleModifier": 0,
+      "total": 2,
+      "difficulty": 15,
+      "outcome": "deutlich"
+    },
+    {
+      "scenario": "Die brüchige Zugbrücke",
+      "actor": "Guinevere Neidr",
+      "actorId": "person--haus-neidr--guinevere-neidr",
+      "skill": "Nachforschungen",
+      "natural": 5,
+      "profileModifier": 2,
+      "affinityModifier": -2,
+      "ruleModifier": 1,
+      "total": 6,
+      "difficulty": 15,
+      "outcome": "deutlich"
+    },
+    {
+      "scenario": "Das versiegelte Runentor",
+      "actor": "Gawain Draig",
+      "actorId": "q1QtSIug74FzzwUAqWrs",
+      "skill": "Nachforschungen",
+      "natural": 20,
+      "profileModifier": -1,
+      "affinityModifier": 2,
+      "ruleModifier": 0,
+      "total": 21,
+      "difficulty": 40,
+      "outcome": "kritischer-erfolg"
+    },
+    {
+      "scenario": "Das versiegelte Runentor",
+      "actor": "Guinevere Neidr",
+      "actorId": "person--haus-neidr--guinevere-neidr",
+      "skill": "Nachforschungen",
+      "natural": 20,
+      "profileModifier": 2,
+      "affinityModifier": 2,
+      "ruleModifier": 1,
+      "total": 25,
+      "difficulty": 40,
+      "outcome": "kritischer-erfolg"
+    }
+  ],
+  "icons": {
+    "directory": "../../../public/assets/herausforderung",
+    "provenance": "../../../public/assets/herausforderung/image-prompts.json",
+    "tool": "built-in image_gen",
+    "originalArtwork": true,
+    "alphaRange": [
+      0,
+      255
+    ]
+  }
+}

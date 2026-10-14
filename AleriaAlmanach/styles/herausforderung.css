@@ -1,1 +1,146 @@
-.herausforderung-card{width:min(1180px,96vw);max-height:94vh;display:flex;flex-direction:column;background:#f1e2bd;color:#3a230d;border:1px solid #8f681d}.herausforderung-head{display:grid;grid-template-columns:auto 1fr auto;gap:.75rem;align-items:center;padding:1rem 1.2rem;border-bottom:1px solid rgba(143,104,29,.35);background:linear-gradient(110deg,#2b1809,#4a160f);color:#e3c374}.herausforderung-head img{width:2.6rem;height:2.6rem;object-fit:contain}.herausforderung-head small,.herausforderung-head h2{display:block;margin:0;font-family:Cinzel,serif}.herausforderung-head small{letter-spacing:.18em;text-transform:uppercase}.herausforderung-head button{border:0;background:transparent;color:#e3c374;font-size:1.6rem}.herausforderung-body{overflow:auto;padding:1rem;display:grid;gap:.8rem}.herausforderung-fields{display:grid;gap:.65rem}.herausforderung-fields label{display:grid;gap:.25rem;font-family:Cinzel,serif;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase}.herausforderung-fields input,.herausforderung-fields textarea{width:100%;padding:.55rem;border:1px solid rgba(143,104,29,.45);background:#f8ebcb;color:#3a230d}.herausforderung-approaches{display:grid;gap:.7rem}.herausforderung-approach{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;padding:1rem;border:1px solid rgba(143,104,29,.45);background:rgba(255,255,255,.25)}.herausforderung-approach legend{font-family:Cinzel,serif;text-transform:uppercase;letter-spacing:.08em;padding:0 .3rem}.herausforderung-approach label{display:grid;gap:.25rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em}.herausforderung-approach input,.herausforderung-approach textarea{width:100%;padding:.5rem;border:1px solid rgba(143,104,29,.4);background:#f8ebcb;color:#3a230d}.herausforderung-approach .wide{grid-column:1/-1}.herausforderung-remove-approach{position:absolute;top:.5rem;right:.5rem;border:1px solid rgba(139,29,29,.5);background:transparent;color:#8b1d1d;width:1.6rem;height:1.6rem;line-height:1}.herausforderung-skills{display:grid;gap:.3rem}.herausforderung-skills-list{display:flex;flex-wrap:wrap;gap:.15rem 1rem}.herausforderung-skill-check{display:flex!important;align-items:center;gap:.35rem;text-transform:none!important;font-size:.72rem!important;letter-spacing:0!important}.herausforderung-skill-check input{width:auto!important}.herausforderung-add-approach{justify-self:start;padding:.5rem .8rem;border:1px dashed rgba(143,104,29,.6);background:transparent;color:#3a230d;font-family:Cinzel,serif}.herausforderung-card footer{display:flex;justify-content:flex-end;gap:.5rem;padding:.8rem 1rem;border-top:1px solid rgba(143,104,29,.35)}.herausforderung-card footer button{padding:.65rem 1rem;border:1px solid rgba(143,104,29,.5);background:#ead7aa;color:#3a230d;font-family:Cinzel,serif}.herausforderung-card footer .primary{background:#4a160f;color:#edd18a}.herausforderung-status{min-height:1.2em;margin:0;font-style:italic}.herausforderung-status[data-status=error]{color:#8b1d1d}.herausforderung-event{max-width:min(760px,92%);margin:1rem auto;padding:.85rem 1rem;border:1px solid rgba(103,27,25,.45);background:linear-gradient(110deg,rgba(80,18,16,.94),rgba(42,20,13,.94));color:#ead5a2;box-shadow:0 8px 20px rgba(43,20,7,.18)}.herausforderung-event header{display:grid;grid-template-columns:2rem auto 1fr;gap:.55rem;align-items:center;font-family:Cinzel,serif;text-transform:uppercase;letter-spacing:.08em}.herausforderung-event header img{width:2rem;height:2rem;object-fit:contain}.herausforderung-event header strong{text-align:right}.herausforderung-approach-list{list-style:none;margin:.65rem 0 0;padding:0;display:grid;gap:.4rem}.herausforderung-approach-list li{display:flex;justify-content:space-between;align-items:center;gap:.6rem;padding:.4rem .5rem;border:1px solid rgba(234,213,162,.18)}.herausforderung-attempt-btn{padding:.4rem .7rem;border:1px solid rgba(234,213,162,.4);background:transparent;color:#ead5a2;font-family:Cinzel,serif;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;cursor:pointer}.herausforderung-attempt-btn:hover{background:rgba(234,213,162,.15)}@media(max-width:760px){.herausforderung-card{width:96vw}}
+/* Challenge editor and published cards own their parchment / burgundy theme. */
+.herausforderung-overlay { padding: 20px; backdrop-filter: blur(5px); }
+.herausforderung-card {
+  --challenge-ink: #39281d; --challenge-muted: #75634e; --challenge-gold: #ad8750;
+  width: min(1180px, 100%); max-height: 94dvh; display: flex; flex-direction: column;
+  background: #f1e6cf; color: var(--challenge-ink); border: 1px solid #b99759;
+  border-radius: 12px; box-shadow: 0 28px 90px #100b08b3, inset 0 0 0 4px #f6e6bb33;
+  font-family: Georgia, serif;
+}
+.herausforderung-card *, .herausforderung-event * { box-sizing: border-box; }
+.herausforderung-head {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 18px; align-items: center;
+  padding: 23px 28px; background: radial-gradient(ellipse at 0 0, #633b24, transparent 65%), linear-gradient(115deg, #30211c, #4b2024);
+  border-bottom: 3px double #ad8750; color: #f1dfaf;
+}
+.herausforderung-icon { width: 28px; height: 28px; flex: 0 0 auto; object-fit: contain; }
+.herausforderung-head .herausforderung-hero-icon { width: 64px; height: 64px; }
+.herausforderung-head small { font: 11px Cinzel, Georgia, serif; letter-spacing: .2em; text-transform: uppercase; color: #d4ad6e; }
+.herausforderung-head h2 { margin: 6px 0; font: 24px Cinzel, Georgia, serif; color: #f1dfaf; letter-spacing: .01em; }
+.herausforderung-head p { margin: 0; font-size: 13px; color: #d2bfa5; }
+.herausforderung-close { width: 40px; height: 40px; border: 1px solid #ad875066; background: #ffffff08; border-radius: 6px; color: #efddb6; font-size: 25px; cursor: pointer; }
+.herausforderung-body { min-height: 0; overflow: auto; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 26px; padding: 24px 28px; scrollbar-color: #a27c42 #eadbc0; }
+.herausforderung-editor, .herausforderung-sidebar { min-width: 0; }
+.herausforderung-editor { display: grid; align-content: start; gap: 16px; }
+.herausforderung-card h3 { display: flex; align-items: center; gap: 10px; margin: 0; font: 14px Cinzel, Georgia, serif; color: #8b673c; }
+.herausforderung-card h3 span { color: #39281d; }
+.herausforderung-public h3 small { margin-left: auto; color: #75634e; font: 11px Georgia, serif; }
+.herausforderung-fields { display: grid; gap: 14px; }
+.herausforderung-fields label { display: grid; gap: 6px; font: 13px Georgia, serif; color: #493422; }
+.herausforderung-fields label > span { display: flex; align-items: center; gap: 7px; }
+.herausforderung-fields input, .herausforderung-fields textarea {
+  width: 100%; padding: 11px 12px; border: 1px solid #b69a705e; border-radius: 5px;
+  background: #fffaf0b8; color: #39281d; font: 14px/1.5 Georgia, serif; box-shadow: inset 0 1px 3px #3a260808;
+}
+.herausforderung-fields textarea { resize: vertical; min-height: 74px; }
+.herausforderung-fields input::placeholder, .herausforderung-fields textarea::placeholder { color: #877664; }
+.herausforderung-fields [aria-invalid="true"] { border-color: #a13e35; background-color: #fff0e7; }
+.herausforderung-section-title { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; }
+.herausforderung-section-title > span { color: #75634e; font-size: 12px; white-space: nowrap; }
+.herausforderung-approaches { display: grid; gap: 10px; }
+.herausforderung-approach { border: 1px solid #b49b73; border-radius: 7px; background: #fbf4e4; overflow: clip; }
+.herausforderung-approach > summary { display: flex; gap: 12px; align-items: center; padding: 14px 16px; cursor: pointer; list-style: none; background: #eaddc4; }
+.herausforderung-approach > summary::-webkit-details-marker { display: none; }
+.herausforderung-approach[open] > summary { border-bottom: 1px solid #b49b7366; }
+.herausforderung-approach-number { font: 19px Cinzel, Georgia, serif; color: #8d693d; }
+.herausforderung-summary-text { display: grid; gap: 4px; flex: 1; min-width: 0; }
+.herausforderung-summary-text strong { font: 15px Cinzel, Georgia, serif; overflow-wrap: anywhere; }
+.herausforderung-summary-text small { font-size: 12px; color: #75634e; }
+.herausforderung-difficulty-badge { flex: 0 0 auto; padding: 5px 8px; border: 1px solid #b49b73; border-radius: 4px; color: #694322; font-size: 12px; }
+.herausforderung-chevron { font-size: 18px; color: #8d693d; }
+.herausforderung-approach[open] .herausforderung-chevron { transform: rotate(180deg); }
+.herausforderung-approach-content { padding: 16px; }
+.herausforderung-approach-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.herausforderung-approach-toolbar > span { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #75634e; }
+.herausforderung-remove-approach { padding: 8px; min-height: 36px; background: transparent; border: 1px solid #a54c3733; border-radius: 4px; color: #853f30; cursor: pointer; font: 12px Georgia, serif; }
+.herausforderung-approach-basics { display: grid; grid-template-columns: minmax(0, 1fr) 125px; gap: 12px; }
+.herausforderung-difficulty-presets { display: flex; flex-wrap: wrap; gap: 6px; }
+.herausforderung-difficulty-presets button { padding: 7px 9px; border: 1px solid #b49b7366; border-radius: 4px; background: #efe2c8; color: #665038; font: 11px Georgia, serif; cursor: pointer; min-height: 32px; }
+.herausforderung-difficulty-presets button[aria-pressed="true"] { background: #51302b; color: #f3ddb0; border-color: #9b7845; }
+.herausforderung-skills { display: grid; gap: 11px; margin: 0; padding: 12px; min-width: 0; border: 1px solid #b49b7359; border-radius: 5px; }
+.herausforderung-skills legend { padding: 0 5px; font-size: 13px; color: #493422; }
+.herausforderung-skills legend span { color: #887257; font-size: 11px; margin-left: 6px; }
+.herausforderung-skill-group > span { display: block; margin-bottom: 6px; font-size: 11px; color: #887257; }
+.herausforderung-skill-group > div { display: flex; flex-wrap: wrap; gap: 6px; }
+.herausforderung-fields .herausforderung-skill-check { display: flex; position: relative; gap: 0; cursor: pointer; }
+.herausforderung-skill-check input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.herausforderung-skill-check span { display: block; padding: 8px 10px; border: 1px solid #b49b7380; border-radius: 4px; background: #f2e8d3; color: #594531; font-size: 12px; }
+.herausforderung-skill-check input:checked + span { background: #4a5140; color: #fff2c9; border-color: #75815a; box-shadow: inset 0 0 0 1px #c5b67c33; }
+.herausforderung-skill-check input:focus-visible + span { outline: 2px solid #805a2e; outline-offset: 2px; }
+.herausforderung-insight > span { color: #586047; }
+.herausforderung-consequences { border-top: 1px solid #b49b7359; padding-top: 12px; }
+.herausforderung-consequences > summary { cursor: pointer; color: #75634e; font-size: 13px; }
+.herausforderung-consequences small { margin-left: 8px; font-size: 11px; color: #927c60; }
+.herausforderung-consequences > div { display: grid; gap: 12px; padding-top: 14px; }
+.herausforderung-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 8px 14px; border: 1px solid #b49b73; border-radius: 5px; background: #eadbbf; color: #4a3425; font: 13px Cinzel, Georgia, serif; cursor: pointer; }
+.herausforderung-add-approach { justify-self: start; background: #f8efde; border-style: dashed; }
+.herausforderung-button.primary { background: linear-gradient(#6b3632, #492328); color: #f2dcad; border-color: #af8650; box-shadow: inset 0 0 0 2px #d7ad5a1a; }
+.herausforderung-button:hover, .herausforderung-close:hover, .herausforderung-remove-approach:hover { filter: brightness(1.12); }
+.herausforderung-card button:disabled { cursor: default; opacity: .45; filter: none; }
+.herausforderung-card :focus-visible, .herausforderung-event :focus-visible { outline: 2px solid #ad8750; outline-offset: 3px; }
+.herausforderung-sidebar { display: grid; align-content: start; gap: 20px; }
+.herausforderung-rules { padding: 18px; background: #e5d8be; border: 1px solid #b49b7366; border-radius: 7px; }
+.herausforderung-rules h3, .herausforderung-preview h3 { color: #493422; }
+.herausforderung-rules p, .herausforderung-rules li, .herausforderung-note { font: 12px/1.6 Georgia, serif; color: #6c5942; }
+.herausforderung-rules p:last-child { margin-bottom: 0; }
+.herausforderung-rules ul { padding-left: 18px; margin: 12px 0; }
+.herausforderung-rules li + li { margin-top: 7px; }
+.herausforderung-bonus { display: grid; gap: 5px; }
+.herausforderung-bonus span { display: flex; justify-content: space-between; padding: 6px 9px; border: 1px solid #b49b7359; border-radius: 4px; font-size: 12px; }
+.herausforderung-bonus b { color: #4a5140; }
+.herausforderung-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 15px 28px; border-top: 1px solid #b49b73; background: #e8d9ba; }
+.herausforderung-footer > div { display: flex; gap: 8px; flex: 0 0 auto; }
+.herausforderung-status { margin: 0; font: 12px/1.5 Georgia, serif; color: #75634e; }
+.herausforderung-status[data-status="error"] { color: #942d27; }
+.herausforderung-event { width: min(840px, 94%); margin: 18px auto; padding: 20px; border: 1px solid #a5804a; border-radius: 8px; background: radial-gradient(ellipse at 0 0, #583d2a, transparent 80%), #302323; color: #eddfc5; box-shadow: 0 8px 24px #25130926; font: 14px/1.6 Georgia, serif; }
+.herausforderung-event header { display: flex; gap: 12px; align-items: center; padding-bottom: 14px; border-bottom: 1px solid #c6a05b40; }
+.herausforderung-event header > .herausforderung-icon { width: 42px; height: 42px; }
+.herausforderung-event header > div { flex: 1; min-width: 0; }
+.herausforderung-event header small { display: block; color: #c6a05b; font: 10px Cinzel, Georgia, serif; text-transform: uppercase; letter-spacing: .16em; }
+.herausforderung-event header strong { display: block; color: #f4e4c1; font: 18px/1.4 Cinzel, Georgia, serif; overflow-wrap: anywhere; }
+.herausforderung-event-progress { color: #c7b696; font-size: 11px; white-space: nowrap; }
+.herausforderung-description { white-space: pre-wrap; overflow-wrap: anywhere; margin: 16px 0; }
+.herausforderung-approach-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.herausforderung-approach-list > li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 12px; border: 1px solid #c6a05b30; border-radius: 5px; background: #ffffff04; }
+.herausforderung-path { display: flex; align-items: center; gap: 12px; min-width: 0; flex: 1; }
+.herausforderung-path-number { color: #c6a05b; font: 17px Cinzel, Georgia, serif; }
+.herausforderung-path strong { display: block; font-size: 14px; overflow-wrap: anywhere; }
+.herausforderung-path small { display: block; color: #beaa8f; font-size: 11px; }
+.herausforderung-attempt-btn { color: #f3dfb3; border-color: #a5804a; background: #684137; font-size: 12px; }
+.herausforderung-solved { display: flex; align-items: center; gap: 6px; color: #c9d7ac; font-size: 12px; }
+.herausforderung-approach-list .is-solved { border-color: #87966a77; background: #76835912; }
+.herausforderung-result { flex: 0 0 100%; padding: 10px 12px; border-left: 2px solid #839162; background: #0000001a; }
+.herausforderung-result[data-tier="deutlich"] { border-left-color: #b36551; }
+.herausforderung-result[data-tier="knapp"] { border-left-color: #c6a05b; }
+.herausforderung-result small { color: #c7b696; font-size: 11px; }
+.herausforderung-result p { white-space: pre-wrap; overflow-wrap: anywhere; margin: 5px 0; }
+.herausforderung-preview .herausforderung-event { width: 100%; padding: 14px; margin: 12px 0 0; box-shadow: none; }
+.herausforderung-preview .herausforderung-event header { flex-wrap: wrap; gap: 8px; }
+.herausforderung-preview .herausforderung-event header strong { font-size: 15px; }
+.herausforderung-preview .herausforderung-event-progress { flex-basis: 100%; }
+.herausforderung-preview-badge { font-size: 10px; color: #c7b696; }
+@media (max-width: 960px) {
+  .herausforderung-body { grid-template-columns: minmax(0, 1fr); }
+  .herausforderung-sidebar { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .herausforderung-overlay { padding: 8px; }
+  .herausforderung-card { max-height: 97dvh; }
+  .herausforderung-head { padding: 16px; gap: 10px; }
+  .herausforderung-head .herausforderung-hero-icon { width: 42px; height: 42px; }
+  .herausforderung-head h2 { font-size: 17px; }
+  .herausforderung-head p { font-size: 11px; }
+  .herausforderung-body { padding: 16px; }
+  .herausforderung-sidebar { grid-template-columns: 1fr; }
+  .herausforderung-public h3 { flex-wrap: wrap; }
+  .herausforderung-public h3 small { margin-left: 0; }
+  .herausforderung-approach-basics { grid-template-columns: minmax(0, 1fr) 84px; }
+  .herausforderung-approach-content { padding: 12px; }
+  .herausforderung-footer { align-items: stretch; flex-direction: column; gap: 8px; padding: 12px 16px; }
+  .herausforderung-footer > div { justify-content: flex-end; }
+  .herausforderung-event { padding: 14px; }
+  .herausforderung-event header { flex-wrap: wrap; }
+  .herausforderung-event-progress { flex-basis: 100%; }
+  .herausforderung-path { flex-basis: 100%; }
+  .herausforderung-attempt-btn { margin-left: auto; }
+}

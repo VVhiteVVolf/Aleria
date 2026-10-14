@@ -1,8 +1,34 @@
+import { getSkillDefinition } from '../skill-checks/skill-check-model.js?v=20260928-equipment-art-v4';
+
 export const HERAUSFORDERUNG_EVENT_KIND = 'herausforderung-event';
 export const HERAUSFORDERUNG_SCHEMA_VERSION = 2;
 export const MIN_HERAUSFORDERUNG_APPROACHES = 1;
 export const MAX_HERAUSFORDERUNG_APPROACHES = 6;
 export const HERAUSFORDERUNG_NARROW_FAILURE_MARGIN = 3;
+export const HERAUSFORDERUNG_PREFERRED_MODIFIER = 2;
+export const HERAUSFORDERUNG_ALTERNATIVE_MODIFIER = -2;
+
+// Used by both the authoring dialog and the server before normalization.
+export function getHerausforderungValidationIssues(event = {}) {
+  event = event && typeof event === 'object' ? event : {};
+  const issues = [];
+  if (!String(event.publicDescription || '').trim()) issues.push({ field: 'publicDescription', message: 'Eine öffentliche Beschreibung ist erforderlich.' });
+  const approaches = Array.isArray(event.approaches) ? event.approaches : [];
+  if (!approaches.length) issues.push({ field: 'approaches', message: 'Mindestens ein Ansatz ist erforderlich.' });
+  if (approaches.length > MAX_HERAUSFORDERUNG_APPROACHES) issues.push({ field: 'approaches', message: 'Höchstens sechs Ansätze sind erlaubt.' });
+  const ids = new Set();
+  approaches.forEach((approach, index) => {
+    if (!Array.isArray(approach?.preferredSkills) || !approach.preferredSkills.some(skill => String(skill || '').trim())) issues.push({ index, field: 'preferredSkill', message: `Ansatz ${index + 1}: Mindestens eine passende Fertigkeit wählen.` });
+    else if (approach.preferredSkills.some(skill => !getSkillDefinition(skill))) issues.push({ index, field: 'preferredSkill', message: `Ansatz ${index + 1}: Eine gültige Fertigkeit wählen.` });
+    if (!String(approach?.insight || '').trim()) issues.push({ index, field: 'insight', message: `Ansatz ${index + 1}: Eine verdeckte Erkenntnis eintragen.` });
+    const difficulty = Number(approach?.difficulty ?? 10);
+    if (!Number.isInteger(difficulty) || difficulty < 1 || difficulty > 40) issues.push({ index, field: 'difficulty', message: `Ansatz ${index + 1}: Schwierigkeit als ganze Zahl von 1 bis 40 eintragen.` });
+    const id = text(approach?.approachId, 40);
+    if (id && ids.has(id)) issues.push({ index, field: 'label', message: 'Jeder Ansatz benötigt eine eigene ID.' });
+    if (id) ids.add(id);
+  });
+  return issues;
+}
 
 function text(value, maximum = 240) {
   return String(value || '').trim().slice(0, maximum);
@@ -36,7 +62,11 @@ export function normalizeHerausforderungApproach(value = {}, index = 0) {
   };
 }
 
-export function classifyHerausforderungOutcome({ natural = 0, total = 0, difficulty = 10 } = {}) {
+export function classifyHerausforderungOutcome({ natural = 0, total = 0, difficulty = 10, outcome = '' } = {}) {
+  if (outcome === 'critical-success') return 'kritischer-erfolg';
+  if (outcome === 'success') return 'erfolg';
+  if (outcome === 'critical-failure') return 'deutlich';
+  if (outcome === 'failure' && (Number(natural) === 20 || Number(total) >= Number(difficulty))) return 'deutlich';
   if (Number(natural) === 20) return 'kritischer-erfolg';
   if (Number(natural) === 1) return 'deutlich';
   if (Number(total) >= Number(difficulty)) return 'erfolg';
@@ -90,8 +120,8 @@ export function collectHerausforderungApproaches(comments = []) {
         segmentIndex: 0,
         difficulty: approach.difficulty,
         preferredSkills: approach.preferredSkills,
-        preferredModifier: 2,
-        alternativeModifier: -2,
+        preferredModifier: HERAUSFORDERUNG_PREFERRED_MODIFIER,
+        alternativeModifier: HERAUSFORDERUNG_ALTERNATIVE_MODIFIER,
         defenseMode: 'fixed',
         defenseSkillId: 'deception',
         insight: approach.insight,

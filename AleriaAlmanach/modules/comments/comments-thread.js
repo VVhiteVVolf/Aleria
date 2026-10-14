@@ -257,6 +257,7 @@ function renderCommentsToScroll(scroll, comments) {
     ? dedupeSceneTransitionComments(sortCommentsByTimeline(comments))
     : sortCommentsByTimeline(comments);
   window.AleriaSkillChecks?.setRenderContext?.(sortedComments);
+  window.AleriaHerausforderung?.setRenderContext?.(sortedComments);
   const threadId = getCommentPaginationThreadId(scroll);
   const pageInfo = getCommentPaginationWindow(sortedComments, threadId);
   const visibleComments = pageInfo.comments;

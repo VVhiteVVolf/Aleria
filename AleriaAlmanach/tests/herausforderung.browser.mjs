@@ -1,0 +1,115 @@
+import assert from 'node:assert/strict';
+import { createServer } from 'node:http';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { resolve, extname, sep } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { actors } from './support/herausforderung-scenarios.mjs';
+
+const { chromium } = await import(process.argv[2] ? pathToFileURL(resolve(process.argv[2])).href : 'playwright');
+const root = resolve(fileURLToPath(new URL('../../', import.meta.url)));
+const out = resolve(root, '.codex-temp/herausforderung');
+await mkdir(out, { recursive: true });
+const fixture = `<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./styles/scene-time.css"><link rel="stylesheet" href="./styles/skill-checks.css"><link rel="stylesheet" href="./styles/herausforderung.css">
+<style>body{margin:0;background:#302c25;font-family:Georgia;color:#ead9b8}main{padding:20px}#cf-segment-list{background:#f4e5c7;color:#39281d;padding:20px}*{box-sizing:border-box}</style>
+<body><main><button data-herausforderung-action="open">Herausforderung anlegen</button><div id="published"></div><div id="cf-segment-list"></div></main>
+<script>
+window.testHistory=[];window.testWrites=[];window.testFail=false;window.testCalls=0;
+window.getCurrentCommentThread=()=>({kind:'session'});window.getCurrentCommentThreadId=()=> 'isolated-browser';
+window.getCachedCommentsForThread=()=>window.testHistory;window.getAvailableCommentCharacters=()=>${JSON.stringify(actors)};
+window.getNextCommentOrderKey=()=>42;window.persistCommentDraft=()=>{};window.showAppStatus=()=>{};
+window.activateDialog=(id,options)=>{const el=document.getElementById(id);el.classList.add('active');el.setAttribute('aria-hidden','false');el.querySelector(options.initialFocus)?.focus()};
+window.deactivateDialog=id=>{const el=document.getElementById(id);el.classList.remove('active');el.setAttribute('aria-hidden','true')};
+window.getCommentBackend=async()=>({addHerausforderung:async(thread,text,code,metadata)=>{window.testCalls++;await new Promise(done=>setTimeout(done,80));if(window.testFail)throw Error('Test: Verbindung unterbrochen');window.testWrites.push({thread,text,metadata});window.testHistory.push({id:'challenge-'+window.testWrites.length,herausforderung:metadata.herausforderung})}});
+window.loadCommentsIntoPage=async()=>{AleriaHerausforderung.setRenderContext(testHistory);document.getElementById('published').innerHTML=testHistory.map(c=>AleriaHerausforderung.renderComment(c)).join('')};
+</script>
+<script type="module">
+await import('./modules/skill-checks/skill-check-controller.js');
+await import('./modules/herausforderung/herausforderung-controller.js');
+window.openCommentFormForSkillChallenge=challenge=>{window.testSettings=AleriaSkillChecks.getChallengeAttemptSettings(challenge);const segment={...window.testSettings,id:'attempt-segment',text:''};document.getElementById('cf-segment-list').innerHTML='<div data-segment-id="attempt-segment"><div data-segment-mechanics-host></div></div>';AleriaSkillChecks.mountComposer(document.getElementById('cf-segment-list'),{segments:[segment],selectedCharacterId:${JSON.stringify(actors[0].id)},threadId:'isolated-browser'});window.testSegment=segment;};
+window.testReady=true;
+</script></body></html>`;
+const types = { '.js': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.json': 'application/json', '.woff2': 'font/woff2' };
+const server = createServer(async (req, res) => {
+  try {
+    const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+    if (pathname === '/AleriaAlmanach/challenge-test.html') { res.setHeader('Content-Type', 'text/html; charset=utf-8'); res.end(fixture); return; }
+    const file = resolve(root, '.' + pathname);
+    if (!file.startsWith(root + sep)) { res.writeHead(403); res.end(); return; }
+    res.setHeader('Content-Type', types[extname(file)] || 'application/octet-stream');
+    res.end(await readFile(file));
+  } catch { res.writeHead(404); res.end(); }
+});
+await new Promise(done => server.listen(0, '127.0.0.1', done));
+let browser;
+try {
+  browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_EXECUTABLE });
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  const errors = [], missing = [];
+  page.on('pageerror', error => errors.push(error.message));
+  page.on('response', response => { if (response.status() >= 400 && response.url().startsWith('http://127.0.0.1')) missing.push(response.url()); });
+  await page.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
+  await page.goto(`http://127.0.0.1:${server.address().port}/AleriaAlmanach/challenge-test.html`);
+  await page.waitForFunction(() => window.testReady);
+  await page.locator('[data-herausforderung-action="open"]').click();
+  const overlay = page.locator('#herausforderung-overlay');
+  const field = name => overlay.locator(`[data-herausforderung-field="${name}"]`).first();
+  await overlay.locator('[data-herausforderung-action="submit"]').click();
+  assert.equal(await field('publicDescription').getAttribute('aria-invalid'), 'true');
+  await field('title').fill('Die verschlossene Torwache');
+  await field('publicDescription').fill('Regen zieht über die Zinnen. Die Wache versperrt Gawain und Guinevere den Weg.');
+  await field('label').fill('Mit der Wache verhandeln');
+  await overlay.locator('[data-skill-id="persuasion"]').check();
+  await overlay.locator('[data-herausforderung-action="set-difficulty"][data-value="15"]').click();
+  await field('insight').fill('GEHEIM: Die Wache erwartet das Losungswort Silbermorgen.');
+  assert.ok(!(await overlay.locator('[data-herausforderung-preview]').innerText()).includes('GEHEIM'));
+  await overlay.locator('[data-herausforderung-action="add-approach"]').click();
+  await overlay.locator('[data-herausforderung-action="remove-approach"][data-approach-index="1"]').click();
+  assert.equal(await field('label').inputValue(), 'Mit der Wache verhandeln');
+  assert.equal(await field('difficulty').inputValue(), '15');
+  assert.ok(await overlay.locator('[data-skill-id="persuasion"]').isChecked());
+  for (let index = 1; index < 6; index++) await overlay.locator('[data-herausforderung-action="add-approach"]').click();
+  assert.ok(await overlay.locator('[data-herausforderung-action="add-approach"]').isDisabled());
+  for (let index = 5; index > 0; index--) {
+    await overlay.locator(`[data-herausforderung-approach-row][data-approach-index="${index}"]`).evaluate(el => el.open = true);
+    await overlay.locator(`[data-herausforderung-action="remove-approach"][data-approach-index="${index}"]`).click();
+  }
+  await overlay.locator('.herausforderung-body').evaluate(el => el.scrollTop = 0);
+  await page.screenshot({ path: resolve(out, 'editor-desktop.png') });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await overlay.locator('.herausforderung-body').evaluate(el => el.scrollTop = 0);
+  assert.ok(await overlay.evaluate(el => el.scrollWidth <= el.clientWidth + 1));
+  await page.screenshot({ path: resolve(out, 'editor-mobile.png') });
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.evaluate(() => window.testFail = true);
+  await overlay.locator('[data-herausforderung-action="submit"]').click();
+  await overlay.locator('[data-herausforderung-status]').filter({ hasText: 'Verbindung unterbrochen' }).waitFor();
+  assert.equal(await field('label').inputValue(), 'Mit der Wache verhandeln');
+  await page.evaluate(() => window.testFail = false);
+  await overlay.locator('[data-herausforderung-action="submit"]').click();
+  await page.evaluate(() => document.querySelector('[data-herausforderung-action="submit"]').click());
+  await overlay.waitFor({ state: 'hidden' });
+  assert.equal(await page.evaluate(() => testWrites.length), 1, 'Double submission produces a single challenge');
+  assert.equal(await page.evaluate(() => testCalls), 2, 'One failure and one successful retry');
+  assert.ok(!(await page.locator('#published').innerText()).includes('GEHEIM'));
+  await page.locator('#published [data-herausforderung-action="attempt"]').click();
+  const settings = await page.evaluate(() => testSettings);
+  assert.equal(settings.mechanicMode, 'skill');
+  assert.equal(settings.skillId, 'persuasion');
+  assert.equal(settings.kind, 'speech');
+  assert.equal(await page.locator('[data-skill-input="targetChallengeId"]').inputValue(), settings.skillTargetChallengeId);
+  assert.equal(await page.locator('[data-skill-input="skillId"]').inputValue(), 'persuasion');
+  await page.screenshot({ path: resolve(out, 'attempt-desktop.png') });
+  await page.evaluate(async () => {
+    const target = AleriaHerausforderung.collectApproaches(testHistory)[0];
+    testHistory.push({ id: 'success', commentSegments: [{ skillResolution: { targetChallengeId: target.id, outcome: 'success', herausforderungTier: 'erfolg', actorName: 'Gawain Draig', revealedText: 'Die Wache erwartet das Losungswort Silbermorgen.' } }] });
+    await loadCommentsIntoPage();
+  });
+  assert.equal(await page.locator('#published [data-herausforderung-action="attempt"]').count(), 0);
+  assert.ok((await page.locator('#published').innerText()).includes('Aufgedeckt'));
+  await page.screenshot({ path: resolve(out, 'resolved-desktop.png') });
+  assert.deepEqual(errors, []);
+  assert.deepEqual(missing, []);
+  await writeFile(resolve(out, 'browser-result.json'), JSON.stringify({ passed: true, viewports: ['1440×1000', '390×844'], checks: ['field validation', 'secret-free preview', 'preserved approach fields', 'difficulty preset', 'mobile overflow', 'failed save retry', 'single submission', 'direct skill/target selection', 'resolved approach lock'], errors, missing }, null, 2));
+  console.log('Challenge browser checks passed; screenshots: ' + out);
+} finally { await browser?.close(); await new Promise(done => server.close(done)); }

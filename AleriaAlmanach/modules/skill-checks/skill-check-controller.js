@@ -19,7 +19,7 @@ import {
   resolveSkillModifier
 } from './skill-check-model.js?v=20260928-equipment-art-v4';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20260805-herausforderung-v2';
-import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20260928-equipment-art-v4';
+import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261014-herausforderung-v3';
 import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260928-equipment-art-v4';
 import { renderAutomaticRollMode } from '../combat/ui/combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
 
@@ -734,6 +734,12 @@ document.addEventListener('input', event => {
 });
 
 globalThis.AleriaSkillChecks = Object.freeze({
+  getChallengeAttemptSettings(challenge) {
+    const skillId = challenge?.preferredSkills?.find(id => SKILL_DEFINITIONS.some(skill => skill.id === id));
+    const kind = ['speech', 'shout', 'performance', 'thought', 'animal', 'interact', 'flirt'].find(value => getSkillsForCommentKind(value).some(skill => skill.id === skillId));
+    if (!kind || !challenge?.id) return null;
+    return { kind, mechanicMode: 'skill', skillId, skillTargetActorKey: challenge.authorKey, skillTargetChallengeId: challenge.id, skillDifficulty: challenge.difficulty };
+  },
   mountComposer(list, context = {}) {
     mountComposers({
       list,
